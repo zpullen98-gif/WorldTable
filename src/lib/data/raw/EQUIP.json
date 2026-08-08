@@ -1,0 +1,281 @@
+[
+  [
+    {
+      "__regexp__": {
+        "source": "dutch oven",
+        "flags": ""
+      }
+    },
+    "Dutch oven"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "cast[- ]iron|skillet",
+        "flags": ""
+      }
+    },
+    "Skillet"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "\\bwok\\b",
+        "flags": ""
+      }
+    },
+    "Wok"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "blender",
+        "flags": ""
+      }
+    },
+    "Blender"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "food processor|processor",
+        "flags": ""
+      }
+    },
+    "Food processor"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "stand mixer|dough hook|paddle",
+        "flags": ""
+      }
+    },
+    "Stand mixer"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "thermometer|°c until|internal",
+        "flags": ""
+      }
+    },
+    "Thermometer"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "springform",
+        "flags": ""
+      }
+    },
+    "Springform"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "ramekin",
+        "flags": ""
+      }
+    },
+    "Ramekins"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "steamer|bamboo basket",
+        "flags": ""
+      }
+    },
+    "Steamer"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "\\bgrill\\b|coals|charcoal",
+        "flags": ""
+      }
+    },
+    "Grill"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "smoker|smoke at|wood chips",
+        "flags": ""
+      }
+    },
+    "Smoker"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "mandoline",
+        "flags": ""
+      }
+    },
+    "Mandoline"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "piping bag|pipe ",
+        "flags": ""
+      }
+    },
+    "Piping bag"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "parchment",
+        "flags": ""
+      }
+    },
+    "Parchment"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "sheet pan|baking sheet|tray",
+        "flags": ""
+      }
+    },
+    "Sheet pan"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "mortar|pound(ed)? (to|into) a paste",
+        "flags": ""
+      }
+    },
+    "Mortar & pestle"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "tagine",
+        "flags": ""
+      }
+    },
+    "Tagine"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "donabe",
+        "flags": ""
+      }
+    },
+    "Donabe"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "torch",
+        "flags": ""
+      }
+    },
+    "Torch"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "ice cream (machine|maker)|churn",
+        "flags": ""
+      }
+    },
+    "Ice-cream churner"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "rolling pin|roll (the )?dough|roll out",
+        "flags": ""
+      }
+    },
+    "Rolling pin"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "tortilla press",
+        "flags": ""
+      }
+    },
+    "Tortilla press"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "pizza (stone|steel)|baking steel",
+        "flags": ""
+      }
+    },
+    "Pizza steel"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "sous vide|circulator",
+        "flags": ""
+      }
+    },
+    "Sous vide"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "water bath|bain-marie|bain marie",
+        "flags": ""
+      }
+    },
+    "Bain-marie"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "deep[- ]fry|oil for (deep )?frying|190°c|180°c oil",
+        "flags": ""
+      }
+    },
+    "Deep-fry pot"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "whetstone",
+        "flags": ""
+      }
+    },
+    "Whetstone"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "waffle",
+        "flags": ""
+      }
+    },
+    "Waffle iron"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "fine[- ]mesh|chinois|strain through",
+        "flags": ""
+      }
+    },
+    "Fine sieve"
+  ],
+  [
+    {
+      "__regexp__": {
+        "source": "box grater|grated|microplane|zest",
+        "flags": ""
+      }
+    },
+    "Grater / zester"
+  ]
+]

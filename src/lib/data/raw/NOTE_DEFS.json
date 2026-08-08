@@ -1,0 +1,189 @@
+[
+  [
+    "smoky",
+    {
+      "__regexp__": {
+        "source": "smoke|smoked|pimentón|chipotle|charcoal|mesquite|hickory|lapsang|char siu|pastrami|tea-smok",
+        "flags": ""
+      }
+    },
+    "wood-smoke running underneath",
+    "on a drift of smoke"
+  ],
+  [
+    "fiery",
+    {
+      "__regexp__": {
+        "source": "bird's eye|habanero|scotch bonnet|ghost pepper|extra chil|10 .*chil|8 .*chil|sichuan pepper|gochugaru|szechuan|vindaloo|jerk ",
+        "flags": ""
+      }
+    },
+    "real fire that builds and stays",
+    "on a slow, honest burn"
+  ],
+  [
+    "gently hot",
+    {
+      "__regexp__": {
+        "source": "chile|chili|chilli|jalape|serrano|cayenne|gochujang|harissa|'nduja|sambal|pepper flakes|aleppo|black pepper crust|peppercorn",
+        "flags": ""
+      }
+    },
+    "a warm current of chile",
+    "with warmth in the tail"
+  ],
+  [
+    "umami-deep",
+    {
+      "__regexp__": {
+        "source": "soy sauce|miso|fish sauce|dashi|anchov|parmesan|parmigiano|pecorino|katsuobushi|kombu|mushroom|tomato paste|oyster sauce|worcestershire|shrimp paste|belacan|bonito|xo ",
+        "flags": ""
+      }
+    },
+    "savory depth stacked from the pantry’s bass notes",
+    "finishing long and savory"
+  ],
+  [
+    "rich",
+    {
+      "__regexp__": {
+        "source": "cream|butter|coconut milk|mascarpone|egg yolk|belly|lard|ghee|cheese|marrow|foie|schmaltz|crème",
+        "flags": ""
+      }
+    },
+    "richness that coats and comforts",
+    "on a rich, rounded finish"
+  ],
+  [
+    "bright",
+    {
+      "__regexp__": {
+        "source": "lemon|lime|vinegar|tamarind|sumac|yogurt|pickled|verjus|kimchi|sauerkraut|amchur|preserved lemon|white wine",
+        "flags": ""
+      }
+    },
+    "acid holding everything up to the light",
+    "with a clean, bright snap"
+  ],
+  [
+    "sweet-edged",
+    {
+      "__regexp__": {
+        "source": "honey|brown sugar|palm sugar|mirin|maple|caramel|molasses|jaggery|piloncillo|hoisin|sweet soy|kecap|dates|raisin",
+        "flags": ""
+      }
+    },
+    "a sweet edge rounding the corners",
+    "trailing gentle sweetness"
+  ],
+  [
+    "herb-fresh",
+    {
+      "__regexp__": {
+        "source": "basil|cilantro|mint|dill|parsley|chives|tarragon|herbs|scallion|shiso",
+        "flags": ""
+      }
+    },
+    "fresh herbs arguing happily on top",
+    "lifted green at the very end"
+  ],
+  [
+    "earthy",
+    {
+      "__regexp__": {
+        "source": "cumin|lentil|beet|turmeric|root vegetable|celeriac|parsnip|buckwheat|rye|porcini|truffle|walnut",
+        "flags": ""
+      }
+    },
+    "an earthy, grounding base",
+    "settling low and earthy"
+  ],
+  [
+    "warm-spiced",
+    {
+      "__regexp__": {
+        "source": "cinnamon|cardamom|star anise|clove|allspice|garam|five-spice|baharat|ras el|nutmeg|berbere",
+        "flags": ""
+      }
+    },
+    "warm spice humming through the middle",
+    "fading in warm spice"
+  ],
+  [
+    "floral",
+    {
+      "__regexp__": {
+        "source": "saffron|rose|orange blossom|vanilla|lavender|elderflower|pandan|lychee",
+        "flags": ""
+      }
+    },
+    "a floral thread lifting the aroma",
+    "leaving a faint perfume"
+  ],
+  [
+    "briny",
+    {
+      "__regexp__": {
+        "source": "olive|caper|feta|oyster|clam|mussel|seaweed|nori|bottarga|cornichon|halloumi",
+        "flags": ""
+      }
+    },
+    "a briny, maritime salinity",
+    "ending saline and clean"
+  ],
+  [
+    "nutty-toasted",
+    {
+      "__regexp__": {
+        "source": "sesame|tahini|peanut|almond|hazelnut|pistachio|cashew|brown butter|toasted|browned butter|walnut",
+        "flags": ""
+      }
+    },
+    "toasted, nutty warmth throughout",
+    "closing toasted and warm"
+  ],
+  [
+    "tangy-ferment",
+    {
+      "__regexp__": {
+        "source": "kimchi|sauerkraut|fermented|sourdough|injera|natto|fish sauce|miso",
+        "flags": ""
+      }
+    },
+    "ferment tang with real depth behind it",
+    "with a lingering ferment tang"
+  ],
+  [
+    "charred",
+    {
+      "__regexp__": {
+        "source": "charred|blistered|grill|broil|blackened|burnt|leopard|coals",
+        "flags": ""
+      }
+    },
+    "char used as punctuation",
+    "with a bitter-edged char at the rim"
+  ],
+  [
+    "aromatic",
+    {
+      "__regexp__": {
+        "source": "lemongrass|galangal|makrut|ginger|garlic|curry leaves|shallot|kaffir",
+        "flags": ""
+      }
+    },
+    "aromatics blooming from the first bite",
+    "opening aromatic and staying there"
+  ],
+  [
+    "silky",
+    {
+      "__regexp__": {
+        "source": "custard|panna|silken|velout|purée|emulsif|ganache|curd",
+        "flags": ""
+      }
+    },
+    "a silken, spoon-slow texture",
+    "melting away silken"
+  ]
+]
