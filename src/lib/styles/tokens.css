@@ -28,6 +28,12 @@
 	--chili: #c08090;
 	--leaf: #8fa57f;
 
+	/* Solid accent surfaces (the "go" buttons, active pins) and the ink that
+	   sits on them. A pair, because white-on-gold fails AA in day service —
+	   each service picks a gold dark or light enough for its ink. */
+	--accent-solid: #c2a055;
+	--on-accent: #191612;
+
 	/* ---- depth ---- */
 	--shadow-card: 0 1px 0 rgba(0, 0, 0, 0.35);
 	--shadow-lift: 0 8px 24px rgba(0, 0, 0, 0.28);
@@ -78,9 +84,11 @@
 		--line-strong: #c8bda0;
 
 		--turmeric: #a5822f;
-		--turmeric-deep: #8a6d2e;
+		--turmeric-deep: #7a5f26; /* AA on tinted paper — #8a6d2e measured 4.43:1 */
 		--chili: #a04f63;
 		--leaf: #5f7a4e;
+		--accent-solid: #8a6b21; /* darker than --turmeric: white ink needs 4.5:1 */
+		--on-accent: #fffefb;
 
 		--shadow-card: 0 1px 0 rgba(37, 33, 26, 0.06);
 		--shadow-lift: 0 2px 10px rgba(37, 33, 26, 0.12);
@@ -106,9 +114,11 @@
 	--line-strong: #c8bda0;
 
 	--turmeric: #a5822f;
-	--turmeric-deep: #8a6d2e;
+	--turmeric-deep: #7a5f26; /* AA on tinted paper — #8a6d2e measured 4.43:1 */
 	--chili: #a04f63;
 	--leaf: #5f7a4e;
+	--accent-solid: #8a6b21; /* darker than --turmeric: white ink needs 4.5:1 */
+	--on-accent: #fffefb;
 
 	--shadow-card: 0 1px 0 rgba(37, 33, 26, 0.06);
 	--shadow-lift: 0 2px 10px rgba(37, 33, 26, 0.12);

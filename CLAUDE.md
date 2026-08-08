@@ -118,11 +118,28 @@ live in IndexedDB, never in the static data. Consequences worth knowing:
   149 are under 120. They cluster in the marquee world-cuisine chapters written
   first (Italian, French, Japanese, Chinese, Mexican — 10 of 10 each). This is
   authoring, not engineering. `noteChars` is on every record.
-- **Runtime offline** is unverified — the embedded dev browser never installs a
-  service worker. Needs a check in a real browser.
-- **GitHub Pages fallback**: adapter-static emits `200.html`; GH Pages serves
-  `404.html` for unknown paths. On deploy, copy 200.html to 404.html so direct
-  loads of client-only routes (family pages) work before the SW installs.
-- **Hardening sweep** (Phase 12): Playwright regression suite named for the
-  original's line numbers, data-parity harness against reference/, axe-core,
-  print PDFs.
+- **Content backfill** is the only remaining phase. The engineering is done.
+
+## Testing
+
+`npm test` (33 unit) · `npm run test:e2e` (24 Playwright: regressions named for
+the original's line numbers, offline in real Chromium, axe, print PDFs, and the
+parity harness that runs the archived original against our build output).
+
+Hard-won rules the suites encode — do not relearn these:
+
+- **e2e runs against `tools/serve.mjs`, never `vite preview`.** SvelteKit's
+  preview middleware serves only route-manifest files: the precached offline
+  shell 404s (whatever it is named — 200.html and fallback.html both), the SW
+  install fails, and the browser silently discards the registration. serve.mjs
+  behaves like the real static host. `npm run preview` uses it too.
+- **The offline shell ships as `shell.html`**, a postbuild copy of the adapter's
+  fallback, because servers treat the configured fallback file as internal
+  config. `404.html` is a third copy, for GitHub Pages.
+- **Never reuse a running preview server across a rebuild** — sirv-style
+  servers manifest files at startup and 404 new chunk hashes. Playwright always
+  starts its own (`reuseExistingServer: false`).
+- **Wait for `html[data-hydrated]`** (the layout stamps it from an effect)
+  before interacting: prerendered pages look alive long before listeners attach.
+- **`paths.relative: false` is load-bearing** — without it the SW registers
+  './sw.js', which 404s from any deep link.

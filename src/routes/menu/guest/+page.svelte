@@ -94,9 +94,9 @@
 		color: var(--ink);
 	}
 	.chip.go {
-		background: var(--turmeric);
-		border-color: var(--turmeric);
-		color: var(--paper);
+		background: var(--accent-solid);
+		border-color: var(--accent-solid);
+		color: var(--on-accent);
 	}
 	.chip:disabled {
 		opacity: 0.45;

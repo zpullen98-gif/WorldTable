@@ -15,6 +15,14 @@
 		void session.hydrate();
 	});
 
+	// Effects run only in the browser, after mount — which makes this a precise
+	// "hydration finished" marker. The e2e suite waits on it before typing:
+	// prerendered pages LOOK interactive long before Svelte's listeners attach,
+	// and a keystroke into that gap lands on a dead input.
+	$effect(() => {
+		document.documentElement.dataset.hydrated = 'true';
+	});
+
 	const MODES = [
 		{ href: '', label: 'Recipes' },
 		{ href: '/lexicon', label: 'Chef’s Lexicon' },

@@ -21,6 +21,17 @@ class SessionStore {
 		void saveSession($state.snapshot(this.#s) as SessionState);
 	}, 400);
 
+	/**
+	 * Immediate write, for single discrete actions — a pin, a tick, a saved
+	 * recipe. The debounce exists for the notes textarea's keystroke stream;
+	 * borrowing it for one-shot actions opened a 400ms window where pinning a
+	 * dish and immediately clicking a link lost the pin (pagehide flushing an
+	 * async IndexedDB write is not guaranteed to commit before teardown).
+	 */
+	#persistNow() {
+		void saveSession($state.snapshot(this.#s) as SessionState);
+	}
+
 	get ready() {
 		return this.#ready;
 	}
@@ -30,10 +41,16 @@ class SessionStore {
 		this.#s = await loadSession();
 		this.#ready = true;
 
-		// A tab closing mid-debounce would otherwise lose the last edit.
+		// A tab closing or navigating mid-debounce would otherwise lose the last
+		// edit. BOTH events, deliberately: visibilitychange covers tab switches
+		// and minimising, but Chromium does not reliably fire it on
+		// cross-document navigation — pin a dish and immediately click a link,
+		// and the pin evaporated. pagehide is the one that always fires on the
+		// way out.
 		window.addEventListener('visibilitychange', () => {
 			if (document.visibilityState === 'hidden') this.flush();
 		});
+		window.addEventListener('pagehide', () => this.flush());
 	}
 
 	flush() {
@@ -58,12 +75,12 @@ class SessionStore {
 		this.#s.menu = this.isPinned(slug)
 			? this.#s.menu.filter((s) => s !== slug)
 			: [...this.#s.menu, slug];
-		this.#persist();
+		this.#persistNow();
 	}
 
 	clearMenu() {
 		this.#s.menu = [];
-		this.#persist();
+		this.#persistNow();
 	}
 
 	/* ---- notes --------------------------------------------------------- */
@@ -92,12 +109,12 @@ class SessionStore {
 		this.#s.pantry = this.hasPantry(label)
 			? this.#s.pantry.filter((l) => l !== label)
 			: [...this.#s.pantry, label];
-		this.#persist();
+		this.#persistNow();
 	}
 
 	clearPantry() {
 		this.#s.pantry = [];
-		this.#persist();
+		this.#persistNow();
 	}
 
 	/* ---- shopping list ------------------------------------------------- */
@@ -111,12 +128,12 @@ class SessionStore {
 		if (cur.has(line)) cur.delete(line);
 		else cur.add(line);
 		this.#s.shoppingChecks[menuHash] = [...cur];
-		this.#persist();
+		this.#persistNow();
 	}
 
 	clearChecked(menuHash: string) {
 		delete this.#s.shoppingChecks[menuHash];
-		this.#persist();
+		this.#persistNow();
 	}
 
 	/* ---- cooked log ---------------------------------------------------- */
@@ -131,14 +148,14 @@ class SessionStore {
 
 	markCooked(slug: string) {
 		this.#s.cookedLog = [...this.#s.cookedLog, { slug, at: Date.now() }];
-		this.#persist();
+		this.#persistNow();
 	}
 
 	/** A mis-tap at the stove should be one more tap to undo. */
 	toggleCooked(slug: string) {
 		if (this.hasCooked(slug)) {
 			this.#s.cookedLog = this.#s.cookedLog.filter((e) => e.slug !== slug);
-			this.#persist();
+			this.#persistNow();
 		} else {
 			this.markCooked(slug);
 		}
@@ -152,12 +169,12 @@ class SessionStore {
 
 	addFamilyRecipe(r: Recipe) {
 		this.#s.familyRecipes = [...this.#s.familyRecipes, r];
-		this.#persist();
+		this.#persistNow();
 	}
 
 	removeFamilyRecipe(slug: string) {
 		this.#s.familyRecipes = this.#s.familyRecipes.filter((r) => r.slug !== slug);
-		this.#persist();
+		this.#persistNow();
 	}
 
 	/* ---- import / export ----------------------------------------------- */

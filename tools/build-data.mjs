@@ -191,7 +191,7 @@ R.forEach((r, i) => {
 		ingredients: r.i.map(toIngredient),
 		steps: r.m.map((text) => ({ text, durationSec: stepDuration(text) })),
 		note: r.p,
-		equipment: ov.equipment ?? deriveEquipment(blobs[i], EQUIP),
+		equipment: ov.equipment ?? deriveEquipment(r, EQUIP),
 		techniques,
 		flavor,
 		pairingId: internPairing(ov.pairing ?? derivePairing(r, blobs[i], CELLAR, BOTTLE_NOTES, flavor.tags)),

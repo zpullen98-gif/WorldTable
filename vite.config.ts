@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
+// vitest/config, not vite: same defineConfig plus typing for the `test` block.
+import { defineConfig } from 'vitest/config';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit';
 
 // Empty for local dev and `npm run preview`. GitHub Pages serves from a
@@ -8,6 +9,9 @@ import { SvelteKitPWA } from '@vite-pwa/sveltekit';
 const base = (process.env.BASE_PATH ?? '') as '' | `/${string}`;
 
 export default defineConfig({
+	test: {
+		include: ['src/**/*.test.ts']
+	},
 	plugins: [
 		sveltekit({
 			compilerOptions: {
@@ -22,12 +26,27 @@ export default defineConfig({
 			adapter: adapter({
 				pages: 'build',
 				assets: 'build',
-				fallback: '200.html',
+				/**
+				 * NOT 200.html: vite preview (and other servers following the
+				 * surge.sh convention) treat that exact filename as internal SPA
+				 * config and 404 direct requests for it — which silently killed
+				 * the service worker install, since the precache fetches it by
+				 * URL. A name no server has opinions about.
+				 */
+				fallback: 'fallback.html',
 				precompress: false,
 				strict: false
 			}),
 
-			paths: { base },
+			/**
+			 * relative: false is load-bearing for the PWA. With SvelteKit's
+			 * default relative paths, the vite-pwa virtual module registers
+			 * `new Workbox('./sw.js', { scope: './' })` — so a first visit that
+			 * lands on /recipe/x requests /recipe/sw.js (404) and the user never
+			 * gets offline capability unless they happen to visit the root.
+			 * Absolute paths register /sw.js with scope / from every page.
+			 */
+			paths: { base, relative: false },
 
 			prerender: {
 				// A dead internal link is a bug; a dead YouTube link is the
@@ -52,22 +71,39 @@ export default defineConfig({
 				globIgnores: ['**/node_modules/**', '**/*.woff'],
 				maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
 				/**
-				 * The SvelteKit integration adds every prerendered route to the
-				 * manifest on its own, which globPatterns cannot veto — that is
-				 * 1,070 HTML files and 13.5MB. Drop them here, at the last stage
-				 * the manifest passes through, keeping only 200.html: the shell
-				 * that navigateFallback serves offline and hydrates from the
-				 * cached JSON.
+				 * Supplying manifestTransforms REPLACES the SvelteKit plugin's own
+				 * transform, so this one must do that job too — and not doing it
+				 * was a total outage: the raw glob runs over .svelte-kit/output/,
+				 * so every entry arrived prefixed "client/", every precache fetch
+				 * 404'd, the install failed, and the browser discarded the
+				 * registration. The service worker never survived a single build
+				 * until this strip existed.
+				 *
+				 * The transform also drops the ~1,070 prerendered HTML pages
+				 * (13.5MB for content the navigateFallback reconstructs from
+				 * cached JSON) — prerendering and precaching are separate
+				 * decisions.
 				 */
 				manifestTransforms: [
 					async (entries) => {
-						const manifest = entries.filter(
-							(e) => !e.url.endsWith('.html') || e.url.endsWith('200.html')
-						);
+						const manifest = entries
+							.filter((e) => !e.url.includes('server/'))
+							.map((e) => ({ ...e, url: e.url.replace(/^\/?client\//, '') }))
+							.filter((e) => !e.url.endsWith('.html'));
 						return { manifest, warnings: [] };
 					}
 				],
-				navigateFallback: '/200.html',
+				/**
+				 * The offline shell. adapter-static writes it to build/ after the
+				 * glob has already run, so it cannot arrive via the manifest —
+				 * it is added explicitly, revisioned per build.
+				 */
+				additionalManifestEntries: [
+					// shell.html: postbuild copy of the adapter fallback, under a
+					// name no server middleware claims (see tools/postbuild.mjs).
+					{ url: 'shell.html', revision: String(Date.now()) }
+				],
+				navigateFallback: '/shell.html',
 				// Prerendered HTML is still served from the network when online;
 				// offline, the shell picks it up and hydrates from cached JSON.
 				navigateFallbackDenylist: [/^\/api\//],

@@ -91,16 +91,45 @@ check('service worker generated', () => {
 	return `${precached.length} entries`;
 });
 
+check('every precache entry exists on disk', () => {
+	// The check that was too weak once: a manifestTransform bug prefixed all 66
+	// entries with client/, every install fetch 404'd, and the service worker
+	// never survived a single build. Counting entries did not catch it; only
+	// resolving each URL against the build output does.
+	const missing = precached.filter((u) => {
+		const p = join(BUILD, decodeURIComponent(u.split('?')[0]).replace(/^\//, ''));
+		return !existsSync(p);
+	});
+	assert(missing.length === 0, `${missing.length} entries 404 at install: ${missing.slice(0, 3).join(', ')}`);
+	assert(!precached.some((u) => u.startsWith('client/') || u.includes('server/')), 'unstripped output-dir prefixes in manifest');
+	return `${precached.length} entries, all real`;
+});
+
+check('the offline shell itself is precached', () => {
+	assert(precached.some((u) => u.endsWith('shell.html')), 'shell.html missing from precache — offline navigation would fail');
+	return 'shell.html in manifest';
+});
+
+check('service worker registers with an absolute path', () => {
+	// SvelteKit's relative-paths default makes vite-pwa register './sw.js' —
+	// which resolves to /recipe/sw.js on a deep link and 404s, so a user whose
+	// first visit is a shared link never gets offline capability.
+	const chunks = walk(join(BUILD, '_app')).filter((f) => f.endsWith('.js'));
+	const registers = chunks.some((f) => readFileSync(f, 'utf8').includes('`/sw.js`'));
+	assert(registers, 'no absolute /sw.js registration found — check kit paths.relative');
+	return '/sw.js, scope /';
+});
+
 check('precache holds no prerendered HTML', () => {
-	const pages = precached.filter((u) => u.includes('.html') && !u.includes('200.html'));
+	const pages = precached.filter((u) => u.includes('.html') && !u.includes('shell.html'));
 	assert(pages.length === 0, `${pages.length} HTML pages precached: ${pages.slice(0, 3).join(', ')}`);
 	return 'none — navigateFallback reconstructs them';
 });
 
 check('offline navigation fallback wired', () => {
-	assert(/200\.html/.test(sw), 'no 200.html fallback in sw.js');
-	assert(existsSync(join(BUILD, '200.html')), '200.html not emitted');
-	return '200.html';
+	assert(/200\.html/.test(sw), 'no shell.html fallback in sw.js');
+	assert(existsSync(join(BUILD, 'shell.html')), 'shell.html not emitted');
+	return 'shell.html';
 });
 
 check('precache stays under 2 MB gzipped', () => {
