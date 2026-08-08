@@ -25846,8 +25846,9 @@
     "costTier": 1,
     "flavorTags": [
       "bright",
+      "rich",
       "smoky",
-      "rich"
+      "charred"
     ],
     "season": [
       1,
@@ -25865,7 +25866,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 179
+    "noteChars": 473
   },
   {
     "slug": "pennsylvania-dutch-chicken-corn-soup",
@@ -25892,9 +25893,10 @@
       "containsAlcohol": false,
       "confidence": "derived"
     },
-    "costTier": 2,
+    "costTier": 4,
     "flavorTags": [
-      "herb-fresh"
+      "herb-fresh",
+      "floral"
     ],
     "season": [
       6,
@@ -25907,7 +25909,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 166
+    "noteChars": 467
   },
   {
     "slug": "philadelphia-pepper-pot-soup",
@@ -25951,7 +25953,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 178
+    "noteChars": 487
   },
   {
     "slug": "sticky-buns",
@@ -25980,8 +25982,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "rich",
       "sweet-edged",
+      "rich",
       "warm-spiced"
     ],
     "season": [
@@ -25995,7 +25997,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 172
+    "noteChars": 495
   },
   {
     "slug": "chow-chow",
@@ -26090,7 +26092,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 153
+    "noteChars": 486
   },
   {
     "slug": "chicken-and-slippery-dumplings",
@@ -26120,7 +26122,8 @@
     "costTier": 1,
     "flavorTags": [
       "rich",
-      "herb-fresh"
+      "herb-fresh",
+      "charred"
     ],
     "season": [],
     "region": {
@@ -26128,7 +26131,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 160
+    "noteChars": 483
   },
   {
     "slug": "boardwalk-vinegar-fries",
@@ -26157,7 +26160,8 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "bright"
+      "bright",
+      "nutty-toasted"
     ],
     "season": [
       9,
@@ -26169,7 +26173,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 163
+    "noteChars": 474
   },
   {
     "slug": "delaware-peach-pie",
@@ -26308,7 +26312,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 165
+    "noteChars": 479
   },
   {
     "slug": "sussex-county-chicken-and-corn",
@@ -26398,7 +26402,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 157
+    "noteChars": 466
   },
   {
     "slug": "delaware-succotash",
@@ -26441,7 +26445,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 150
+    "noteChars": 482
   },
   {
     "slug": "eastern-shore-corn-pudding",
@@ -26485,7 +26489,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 168
+    "noteChars": 457
   },
   {
     "slug": "beer-battered-rockfish",
@@ -26514,7 +26518,8 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "bright"
+      "bright",
+      "earthy"
     ],
     "season": [
       1,
@@ -26528,7 +26533,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 155
+    "noteChars": 472
   },
   {
     "slug": "steamed-blue-crabs-with-old-bay",
@@ -26572,7 +26577,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 171
+    "noteChars": 480
   },
   {
     "slug": "maryland-crab-soup",
@@ -26615,7 +26620,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 171
+    "noteChars": 462
   },
   {
     "slug": "cream-of-crab-soup",
@@ -26659,7 +26664,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 155
+    "noteChars": 465
   },
   {
     "slug": "crab-imperial",
@@ -26691,7 +26696,7 @@
       "umami-deep",
       "rich",
       "bright",
-      "herb-fresh"
+      "charred"
     ],
     "season": [
       1,
@@ -26705,7 +26710,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 162
+    "noteChars": 481
   },
   {
     "slug": "baltimore-pit-beef",
@@ -26734,8 +26739,8 @@
     },
     "costTier": 3,
     "flavorTags": [
-      "charred",
       "smoky",
+      "charred",
       "gently hot",
       "aromatic"
     ],
@@ -26754,7 +26759,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 167
+    "noteChars": 482
   },
   {
     "slug": "smith-island-cake",
@@ -26927,7 +26932,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 169
+    "noteChars": 485
   },
   {
     "slug": "baltimore-snowball",
@@ -26966,7 +26971,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 177
+    "noteChars": 482
   },
   {
     "slug": "smithfield-ham-with-redeye-gravy",
@@ -26996,7 +27001,8 @@
     "costTier": 2,
     "flavorTags": [
       "rich",
-      "sweet-edged"
+      "sweet-edged",
+      "nutty-toasted"
     ],
     "season": [],
     "region": {
@@ -27004,7 +27010,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 165
+    "noteChars": 468
   },
   {
     "slug": "virginia-ham-biscuits",
@@ -27202,7 +27208,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "rich"
+      "rich",
+      "nutty-toasted"
     ],
     "season": [],
     "region": {
@@ -27210,7 +27217,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 160
+    "noteChars": 470
   },
   {
     "slug": "virginia-chess-pie",
@@ -27255,7 +27262,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 177
+    "noteChars": 476
   },
   {
     "slug": "virginia-peanut-pie",
@@ -27378,10 +27385,10 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "bright",
       "rich",
-      "herb-fresh",
-      "smoky"
+      "bright",
+      "smoky",
+      "herb-fresh"
     ],
     "season": [
       1,
@@ -27395,7 +27402,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 161
+    "noteChars": 492
   },
   {
     "slug": "pepperoni-rolls",
@@ -27529,7 +27536,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 175
+    "noteChars": 472
   },
   {
     "slug": "ramps-and-potatoes",
@@ -27692,7 +27699,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 173
+    "noteChars": 473
   },
   {
     "slug": "pawpaw-pudding",
@@ -27723,19 +27730,24 @@
     "flavorTags": [
       "rich",
       "warm-spiced",
-      "floral"
+      "floral",
+      "silky"
     ],
     "season": [
       5,
       6,
-      7
+      7,
+      9,
+      10,
+      11,
+      12
     ],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 162
+    "noteChars": 477
   },
   {
     "slug": "cornmeal-crusted-trout",
@@ -27765,8 +27777,8 @@
     "costTier": 2,
     "flavorTags": [
       "rich",
-      "gently hot",
       "bright",
+      "gently hot",
       "herb-fresh"
     ],
     "season": [
@@ -27785,7 +27797,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 155
+    "noteChars": 438
   },
   {
     "slug": "salt-rising-bread",
@@ -29737,7 +29749,7 @@
       "group": "The South"
     },
     "source": "guide",
-    "noteChars": 169
+    "noteChars": 470
   },
   {
     "slug": "alabama-lane-cake",
@@ -29805,8 +29817,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "aromatic",
       "smoky",
+      "aromatic",
       "rich",
       "warm-spiced"
     ],
@@ -29821,7 +29833,7 @@
       "group": "The South"
     },
     "source": "guide",
-    "noteChars": 168
+    "noteChars": 459
   },
   {
     "slug": "alabama-peach-and-pecan-cobbler",
@@ -29864,7 +29876,7 @@
       "group": "The South"
     },
     "source": "guide",
-    "noteChars": 150
+    "noteChars": 488
   },
   {
     "slug": "alabama-brunswick-stew",
@@ -29909,7 +29921,7 @@
       "group": "The South"
     },
     "source": "guide",
-    "noteChars": 173
+    "noteChars": 460
   },
   {
     "slug": "alabama-cornbread-dressing",
