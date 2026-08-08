@@ -22261,7 +22261,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 152
+    "noteChars": 493
   },
   {
     "slug": "steamers-with-drawn-butter",
@@ -22299,6 +22299,10 @@
       2,
       3,
       4,
+      6,
+      7,
+      8,
+      9,
       12
     ],
     "region": {
@@ -22306,7 +22310,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 150
+    "noteChars": 445
   },
   {
     "slug": "maine-wild-blueberry-pie",
@@ -22356,7 +22360,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 173
+    "noteChars": 477
   },
   {
     "slug": "whoopie-pies",
@@ -22445,7 +22449,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 155
+    "noteChars": 454
   },
   {
     "slug": "maine-lobster-stew",
@@ -22482,7 +22486,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 151
+    "noteChars": 466
   },
   {
     "slug": "saturday-night-baked-beans",
@@ -22557,7 +22561,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 170
+    "noteChars": 483
   },
   {
     "slug": "downeast-haddock-chowder",
@@ -22594,7 +22598,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 146
+    "noteChars": 476
   },
   {
     "slug": "maine-italian-sandwich",
@@ -22637,7 +22641,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 148
+    "noteChars": 474
   },
   {
     "slug": "apple-cider-donuts",
@@ -22666,8 +22670,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "rich",
-      "warm-spiced"
+      "warm-spiced",
+      "rich"
     ],
     "season": [
       6,
@@ -22682,7 +22686,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 167
+    "noteChars": 495
   },
   {
     "slug": "new-england-boiled-dinner",
@@ -22713,7 +22717,8 @@
     "flavorTags": [
       "earthy",
       "gently hot",
-      "rich"
+      "rich",
+      "floral"
     ],
     "season": [
       1,
@@ -22734,7 +22739,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 147
+    "noteChars": 485
   },
   {
     "slug": "cider-braised-pork-shoulder",
@@ -22779,7 +22784,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 155
+    "noteChars": 462
   },
   {
     "slug": "north-country-corn-chowder",
@@ -22822,7 +22827,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 155
+    "noteChars": 452
   },
   {
     "slug": "sugar-house-pancakes",
@@ -22895,8 +22900,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "rich",
       "briny",
+      "rich",
       "bright"
     ],
     "season": [
@@ -22915,7 +22920,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 156
+    "noteChars": 489
   },
   {
     "slug": "blueberry-buckle",
@@ -22958,7 +22963,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 163
+    "noteChars": 475
   },
   {
     "slug": "white-mountain-venison-stew",
@@ -23001,7 +23006,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 148
+    "noteChars": 440
   },
   {
     "slug": "maple-cream-pie",
@@ -23045,7 +23050,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 147
+    "noteChars": 480
   },
   {
     "slug": "farm-turkey-pot-pie",
@@ -23086,7 +23091,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 165
+    "noteChars": 462
   },
   {
     "slug": "vermont-maple-syrup-pie",
@@ -24826,9 +24831,9 @@
     },
     "costTier": 2,
     "flavorTags": [
+      "rich",
       "gently hot",
       "umami-deep",
-      "rich",
       "briny"
     ],
     "season": [
@@ -24842,7 +24847,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 171
+    "noteChars": 501
   },
   {
     "slug": "bagels-with-lox-and-schmear",
@@ -24892,7 +24897,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 172
+    "noteChars": 490
   },
   {
     "slug": "pastrami-on-rye",
@@ -24919,7 +24924,7 @@
       "containsAlcohol": false,
       "confidence": "derived"
     },
-    "costTier": 1,
+    "costTier": 2,
     "flavorTags": [
       "smoky",
       "earthy"
@@ -24930,7 +24935,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 161
+    "noteChars": 466
   },
   {
     "slug": "buffalo-wings",
@@ -24969,7 +24974,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 161
+    "noteChars": 472
   },
   {
     "slug": "beef-on-weck",
@@ -25012,7 +25017,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 158
+    "noteChars": 471
   },
   {
     "slug": "manhattan-clam-chowder",
@@ -25104,7 +25109,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 169
+    "noteChars": 484
   },
   {
     "slug": "egg-cream",
@@ -25141,7 +25146,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 158
+    "noteChars": 504
   },
   {
     "slug": "rochester-garbage-plate",
@@ -25171,8 +25176,8 @@
     "costTier": 2,
     "flavorTags": [
       "gently hot",
-      "rich",
       "earthy",
+      "rich",
       "warm-spiced"
     ],
     "season": [],
@@ -25181,7 +25186,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 163
+    "noteChars": 515
   },
   {
     "slug": "syracuse-salt-potatoes",
@@ -25296,7 +25301,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 151
+    "noteChars": 471
   },
   {
     "slug": "trenton-tomato-pie",
@@ -25341,7 +25346,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 163
+    "noteChars": 470
   },
   {
     "slug": "newark-italian-hot-dog",
@@ -25378,7 +25383,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 144
+    "noteChars": 481
   },
   {
     "slug": "jersey-sloppy-joe",
@@ -25407,8 +25412,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "smoky",
       "earthy",
+      "smoky",
       "rich",
       "sweet-edged"
     ],
@@ -25427,7 +25432,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 174
+    "noteChars": 482
   },
   {
     "slug": "jersey-tomato-salad",
@@ -25472,7 +25477,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 138
+    "noteChars": 437
   },
   {
     "slug": "salt-water-taffy",
@@ -25560,7 +25565,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 176
+    "noteChars": 466
   },
   {
     "slug": "rippers",
@@ -25591,13 +25596,19 @@
     "flavorTags": [
       "earthy"
     ],
-    "season": [],
+    "season": [
+      1,
+      2,
+      10,
+      11,
+      12
+    ],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 146
+    "noteChars": 462
   },
   {
     "slug": "jersey-shore-zeppole",
@@ -25634,7 +25645,7 @@
       "group": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 145
+    "noteChars": 467
   },
   {
     "slug": "philly-cheesesteak",

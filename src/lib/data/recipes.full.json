@@ -44899,7 +44899,7 @@
         "durationSec": null
       }
     ],
-    "note": "Maine means cold and mayonnaise-dressed; Connecticut means warm and buttered. The claw meat is sweeter than the tail — use both, and never drown either.",
+    "note": "Maine means cold and mayonnaise-dressed; Connecticut means warm and buttered — the border between them is real and patrolled. The claw meat is sweeter than the tail, so use both and never drown either: a proper roll is lobster with a suggestion of dressing, not salad with a rumor of lobster. The bun is a top-split New England frankfurter roll, buttered and griddled on its flat sides — the wrong bun is disqualifying in either state. Chips and a view of the water complete the specification.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -44982,11 +44982,13 @@
         "durationSec": null
       }
     ],
-    "note": "The broth is not garnish, it is procedure: swish each clam in it to rinse the last grit, then dip in butter. Any clam that stays shut goes in the bin.",
+    "note": "The broth is not garnish, it is procedure: swish each clam in it to rinse the last grit, then dip in butter — the two-cup ritual is the whole table manner of the dish. Any clam that stays shut goes in the bin, no appeals. Soft-shells purge best with a long soak in seawater-salty brine, some say with cornmeal. The broth itself gets drunk at the end, sand settled to the bottom, which is the closest thing a Maine clam feed has to a benediction.",
     "equipment": [
       "Steamer"
     ],
-    "techniques": [],
+    "techniques": [
+      "Brining & curing"
+    ],
     "flavor": {
       "tags": [
         "briny",
@@ -44997,7 +44999,13 @@
     },
     "pairingId": 35,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Brining & curing",
+          "url": "https://www.youtube.com/results?search_query=brining%20curing%20meat%20technique%20explained",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Steamers%20with%20Drawn%20Butter%20recipe",
@@ -45075,7 +45083,7 @@
         "durationSec": 14400
       }
     ],
-    "note": "Wild Maine berries are small, dark, and intense; the big cultivated ones carry more water and need an extra spoon of cornstarch. Never wash them until the moment they go in.",
+    "note": "Wild Maine berries are small, dark, and intense; the big cultivated ones carry more water and need an extra spoon of cornstarch — the recipe changes with the berry, and the wild ones barely need help. Never wash them until the moment they go in; water on stored berries is how mold wins. Maine harvests its wild barrens with rakes, a crop that was never planted by anyone — the pie is the state dessert by statute, one of the few pieces of pie legislation on any American book.",
     "equipment": [],
     "techniques": [
       "Pie crust & blind baking"
@@ -45274,7 +45282,7 @@
         "durationSec": null
       }
     ],
-    "note": "They are a three-week May crop and taste like asparagus crossed with green beans. Boil first, always — a quick saute alone is not enough to make them safe.",
+    "note": "They are a three-week May crop and taste like asparagus crossed with green beans — the coiled fronds of the ostrich fern, foraged along Maine riverbanks since long before anyone wrote it down. Boil first, always: a quick sauté alone is not enough to make them safe, and the boil also strips the bitterness. Then treat them simply — butter, garlic, lemon, salt. Rushing fiddleheads to the pan is the one mistake the season doesn't give you time to repeat.",
     "equipment": [
       "Skillet"
     ],
@@ -45364,7 +45372,7 @@
         "durationSec": null
       }
     ],
-    "note": "The old Maine rule is that lobster stew must age a day before serving — the butter and lobster essence marry into something the fresh pot cannot match.",
+    "note": "The old Maine rule is that lobster stew must age a day before serving — the butter and lobster essence marry into something the fresh pot cannot match, and the overnight rest is written into every coastal community cookbook since the 1800s. Cook the lobster meat gently in butter first; that infused butter is the stew's entire flavor engine. Milk and cream, salt, patience — nothing else. A stew this plain has nowhere to hide, which is exactly the Down East point.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -45548,11 +45556,14 @@
         "durationSec": null
       }
     ],
-    "note": "Yes, potato — it carries the sugar and coconut without any flavor of its own, a thrift-born trick from the 1870s that produces something better than the sum of its parts.",
+    "note": "Yes, potato — it carries the sugar and coconut without any flavor of its own, a thrift-born trick from the 1870s that produces something better than the sum of its parts; the mashed potato binds the filling into a fondant no one can reverse-engineer by taste. Named, the story goes, for a popular evangelist of the day. Chill the filling firm before dipping, and temper the chocolate or accept the streaks. Maine's candy counters still stock them beside the fudge, where they belong.",
     "equipment": [
       "Parchment"
     ],
-    "techniques": [],
+    "techniques": [
+      "Tempering chocolate",
+      "Tempering a custard"
+    ],
     "flavor": {
       "tags": [
         "rich",
@@ -45562,7 +45573,18 @@
     },
     "pairingId": 5,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Tempering chocolate",
+          "url": "https://www.youtube.com/results?search_query=tempering%20chocolate%20technique",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: Tempering a custard",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20temper%20eggs%20custard%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Needhams%20recipe",
@@ -45646,7 +45668,7 @@
         "durationSec": null
       }
     ],
-    "note": "A New England chowder is thickened by potato starch and patience, not flour. Resting it before serving is the difference between soup and chowder.",
+    "note": "A New England chowder is thickened by potato starch and patience, not flour — the potatoes shed what the pot needs, and resting it before serving is the difference between soup and chowder; the classic instruction is to make it in the morning for supper. Add the haddock late and let residual heat cook it in big flakes. Salt pork is the old foundation, evaporated milk the old enrichment, and a chowder that stands a day improves — the rare seafood dish that rewards waiting.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -45745,9 +45767,11 @@
         "durationSec": 600
       }
     ],
-    "note": "Invented in Portland in 1902 and unchanged since. The roll must be soft, the oil must be excessive, and it must be wrapped and rested before eating.",
+    "note": "Invented in Portland in 1902 and unchanged since — Giovanni Amato's cart fed dockworkers a soft roll of ham, cheese, and vegetables, and Maine has defended the formula ever since. The roll must be soft (crusty bread is a different, wrong sandwich), the oil must be excessive, and it must be wrapped and rested before eating so the oil and brine soak in. It is Maine's 'Italian' — a sandwich that exists nowhere in Italy and everywhere in Maine, which bothers exactly no one.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Brining & curing"
+    ],
     "flavor": {
       "tags": [
         "briny",
@@ -45757,7 +45781,13 @@
     },
     "pairingId": 9,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Brining & curing",
+          "url": "https://www.youtube.com/results?search_query=brining%20curing%20meat%20technique%20explained",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Maine%20Italian%20Sandwich%20recipe",
@@ -45859,17 +45889,17 @@
         "durationSec": null
       }
     ],
-    "note": "Unreduced cider makes a bland donut — the boiled-down syrup is the whole recipe. Every White Mountain orchard sells these in September and none of them skip that step.",
+    "note": "Unreduced cider makes a bland donut — the boiled-down syrup is the whole recipe, a cup of cider concentrated to a few spoonfuls of orchard essence; every White Mountain orchard sells these in September and none of them skip that step. The cake-donut batter should be soft and a little sticky, chilled so it can be handled. Fry, then straight into cinnamon sugar while hot enough that it sticks — a cooled donut sheds its coat, and an apple cider donut without the sugar jacket is out of uniform.",
     "equipment": [
       "Deep-fry pot"
     ],
     "techniques": [],
     "flavor": {
       "tags": [
-        "rich",
-        "warm-spiced"
+        "warm-spiced",
+        "rich"
       ],
-      "sentence": "Leads with richness that coats and comforts, warm spice humming through the middle."
+      "sentence": "Leads with warm spice humming through the middle, richness that coats and comforts."
     },
     "pairingId": 8,
     "films": {
@@ -45961,16 +45991,17 @@
         "durationSec": null
       }
     ],
-    "note": "Cook the beets apart or the whole dinner turns pink. Next-day leftovers get chopped and fried into red flannel hash — the point of making too much.",
+    "note": "Cook the beets apart or the whole dinner turns pink — they bleed into everything they simmer with, and a rose-tinted corned beef alarms even the tolerant. Next-day leftovers get chopped and fried into red flannel hash, which is the point of making too much; the hash is arguably the better meal and the beets finally get to dye everything on purpose. Add the vegetables in stages by density. This is Yankee thrift cooking that fed the region for two centuries and apologizes to no one.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
         "earthy",
         "gently hot",
-        "rich"
+        "rich",
+        "floral"
       ],
-      "sentence": "Leads with an earthy, grounding base, a warm current of chile, on a rich, rounded finish."
+      "sentence": "Leads with an earthy, grounding base, a warm current of chile, leaving a faint perfume."
     },
     "pairingId": 16,
     "films": {
@@ -46057,7 +46088,7 @@
         "durationSec": null
       }
     ],
-    "note": "Hard cider brings acid and orchard sweetness that wine cannot. If the sauce tastes thin at the end, reduce it hard before the butter goes in — never after.",
+    "note": "Hard cider brings acid and orchard sweetness that wine cannot — apples and pork being the oldest marriage in the northern larder. If the sauce tastes thin at the end, reduce it hard before the butter goes in — never after, because mounted butter breaks if you boil it. The dry cider matters; sweet cider turns the braise to dessert. Brown the shoulder patiently, give it its slow hours, and the sauce finishes as essence of orchard-and-pig, needing nothing else.",
     "equipment": [
       "Dutch oven"
     ],
@@ -46166,7 +46197,7 @@
         "durationSec": null
       }
     ],
-    "note": "The cobs hold as much flavor as the kernels; simmering them in the milk first is the whole difference between corn chowder and potato soup with corn in it.",
+    "note": "The cobs hold as much flavor as the kernels — simmering them in the milk first is the whole difference between corn chowder and potato soup with corn in it; scrape the stripped cobs with the back of the knife for the milky pulp too. Salt pork or bacon is the traditional foundation. Late-summer corn needs almost nothing else, which is the dish's argument: the chowder frame — pork, potato, dairy — exists to display whatever the field just handed you.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -46359,7 +46390,7 @@
         "durationSec": null
       }
     ],
-    "note": "Whole-belly clams, not strips: the belly carries the flavor and the strip is the compromise. Corn flour gives the sandy crust that plain wheat flour cannot.",
+    "note": "Whole-belly clams, not strips: the belly carries the flavor — briny, sweet, faintly mineral — and the strip is the compromise sold to people who fear the good part. Corn flour gives the sandy, craggy crust that plain wheat flour cannot. The oil must recover fast between batches, so fry few at a time. Born on the North Shore (Woodman's of Essex claims the 1916 invention) and perfected along every clam shack from there to Hampton Beach — eaten from a paper box, standing up, in the wind.",
     "equipment": [
       "Deep-fry pot"
     ],
@@ -46368,11 +46399,11 @@
     ],
     "flavor": {
       "tags": [
-        "rich",
         "briny",
+        "rich",
         "bright"
       ],
-      "sentence": "Leads with richness that coats and comforts, a briny, maritime salinity, with a clean, bright snap."
+      "sentence": "Leads with a briny, maritime salinity, richness that coats and comforts, with a clean, bright snap."
     },
     "pairingId": 35,
     "films": {
@@ -46468,7 +46499,7 @@
         "durationSec": 1200
       }
     ],
-    "note": "It is called a buckle because the heavy crumb topping makes the cake buckle as it bakes. Toss the berries in a spoon of the flour first if yours are large and wet.",
+    "note": "It is called a buckle because the heavy crumb topping makes the cake buckle as it bakes — the batter rises, the streusel bears down, and the surface folds into valleys that hold pockets of crumb. Toss the berries in a spoon of the flour first if yours are large and wet, or they sink to the bottom in a soggy stratum. Buckles, slumps, grunts and crisps are the whole New England family of fruit-and-batter improvisations; the buckle is the one that travels best to breakfast.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -46573,7 +46604,7 @@
         "durationSec": 2400
       }
     ],
-    "note": "Wild venison is lean to the point of austerity: the bacon fat, the juniper, and the long slow heat are all there to supply what the animal does not.",
+    "note": "Wild venison is lean to the point of austerity: the bacon fat, the juniper, and the long slow heat are all there to supply what the animal does not — fat, aromatics, and time being the three things a whitetail never carries. Never let it boil hard; lean meat toughens at a gallop. The juniper is the north-woods signature, resinous against the venison's iron. Deer camp cooking at its most honest: what the hunt provides, the pot completes.",
     "equipment": [],
     "techniques": [
       "Deglazing & pan sauces",
@@ -46692,7 +46723,7 @@
         "durationSec": 14400
       }
     ],
-    "note": "Use Grade A dark syrup — the pale early-season syrup vanishes into the dairy. Whisking through the first thick bubble is what cooks out the starch.",
+    "note": "Use Grade A dark syrup — the pale early-season syrup vanishes into the dairy, and the pie's whole argument is that maple should taste like maple. Whisking through the first thick bubble is what cooks out the starch; stop early and the filling tastes of raw cornstarch under all that sugar. New Hampshire sugarhouses run on exactly this pie every March, when the sap runs and the season justifies dessert twice a day. Unsweetened whipped cream on top — the pie brings sugar enough.",
     "equipment": [],
     "techniques": [
       "Tempering a custard",
@@ -46817,7 +46848,7 @@
         "durationSec": 2100
       }
     ],
-    "note": "The filling must be seasoned past the point that seems right in the pot — the pastry absorbs seasoning as it bakes and a timid gravy tastes like paste under a crust.",
+    "note": "The filling must be seasoned past the point that seems right in the pot — the pastry absorbs seasoning as it bakes and a timid gravy tastes like paste under a crust; salt until it argues back, then stop. Thicken it properly too: a pot pie filling should mound on a spoon before the lid ever goes on. Vent the crust generously. This is the after-Thanksgiving economy of every New England farm kitchen — the bird's second act, and for many families the better one.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -50853,7 +50884,7 @@
         "durationSec": 600
       }
     ],
-    "note": "The fold test is the whole New York standard: crisp enough to hold, pliable enough to bend. Low-moisture mozzarella, not fresh — fresh releases water and floods the slice.",
+    "note": "The fold test is the whole New York standard: crisp enough to hold, pliable enough to bend — a slice that cracks when folded is overbaked, one that flops is underdone, and the city judges in silence. Low-moisture mozzarella, not fresh: fresh releases water and floods the slice, which is why the corner slice shop and the Neapolitan purist buy different cheese. High heat, thin center, puffed rim, oil running down your wrist — eaten walking, folded, on a paper plate that did nothing to deserve this.",
     "equipment": [
       "Grater / zester"
     ],
@@ -50862,12 +50893,12 @@
     ],
     "flavor": {
       "tags": [
+        "rich",
         "gently hot",
         "umami-deep",
-        "rich",
         "briny"
       ],
-      "sentence": "Leads with a warm current of chile, savory depth stacked from the pantry’s bass notes, ending saline and clean."
+      "sentence": "Leads with richness that coats and comforts, a warm current of chile, ending saline and clean."
     },
     "pairingId": 2,
     "films": {
@@ -50960,7 +50991,7 @@
         "durationSec": null
       }
     ],
-    "note": "Lox is salt-cured, nova is cold-smoked, and New Yorkers argue about both. Slice the onion on a mandoline if you have one — thick onion bullies everything else on the bagel.",
+    "note": "Lox is salt-cured, nova is cold-smoked, and New Yorkers argue about both — lox is the older, saltier tradition from the belly, nova the gentler modern default, and asking for one when you mean the other marks you. Slice the onion on a mandoline if you have one; thick onion bullies everything else on the bagel. The bagel must be boiled-then-baked and dense enough to matter. Appetizing stores — the dairy-and-fish counters like Russ & Daughters — are the institution this plate comes from.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -51046,9 +51077,11 @@
         "durationSec": null
       }
     ],
-    "note": "Steam it, never microwave it: the steam melts the fat that carries the spice crust. And mustard alone — mayonnaise on pastrami is a hill New Yorkers will die on.",
+    "note": "Steam it, never microwave it: the steam melts the fat that carries the spice crust, which is why deli pastrami arrives glistening and home reheats arrive gray. Hand-sliced, thick, against the grain. And mustard alone — mayonnaise on pastrami is a hill New Yorkers will die on, and the deli counter will say so out loud. The pastrami itself is Romanian-Jewish immigrant genius: brisket brined, spiced, smoked and steamed until a tough cut becomes the city's monument.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Brining & curing"
+    ],
     "flavor": {
       "tags": [
         "smoky",
@@ -51058,7 +51091,13 @@
     },
     "pairingId": 28,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Brining & curing",
+          "url": "https://www.youtube.com/results?search_query=brining%20curing%20meat%20technique%20explained",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Pastrami%20on%20Rye%20recipe",
@@ -51131,7 +51170,7 @@
         "durationSec": null
       }
     ],
-    "note": "Born at the Anchor Bar in Buffalo in 1964. The sauce is only butter and cayenne pepper sauce — everything else is somebody else's wing. Blue cheese, never ranch.",
+    "note": "Born at the Anchor Bar in Buffalo in 1964 — Teressa Bellissimo frying wings for her son's friends after midnight, or so the founding legend runs. The sauce is only butter and cayenne pepper sauce; everything else is somebody else's wing, and 'Buffalo-style' with additives is fan fiction. Fry naked, no breading, until the skin crisps. Blue cheese, never ranch — in Buffalo this is not a preference but a citizenship requirement — and the celery exists to prove you tried.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -51218,7 +51257,7 @@
         "durationSec": null
       }
     ],
-    "note": "Western New York's own sandwich. The kummelweck salt is the seasoning for the meat — do not salt the beef again at the table, and keep the horseradish fierce.",
+    "note": "Western New York's own sandwich, and Buffalo's quieter masterpiece beside the wing. The kummelweck salt is the seasoning for the meat — coarse salt and caraway crusted on the roll — so do not salt the beef again at the table, and keep the horseradish fierce; the sandwich is calibrated around sinus-clearing doses. The top bun gets dipped in jus, the beef is sliced rare and thin, and the whole thing exists in a fifty-mile radius that considers exporting it unnecessary.",
     "equipment": [
       "Thermometer",
       "Grater / zester"
@@ -51430,7 +51469,7 @@
         "durationSec": null
       }
     ],
-    "note": "They are cakes pretending to be cookies, and they are iced on the flat bottom, not the domed top. Work fast — the fondant skins over in minutes and stops flowing smooth.",
+    "note": "They are cakes pretending to be cookies, and they are iced on the flat bottom, not the domed top — the drop-cake batter spreads into a dome, gets flipped, and the flat side becomes the canvas. Work fast: the fondant skins over in minutes and stops flowing smooth, so ice all the vanilla halves first, then all the chocolate. The cake should be lemon-scented and soft. New York's deli-counter icon — Seinfeld preached its racial-harmony sermon, but the bakeries were already believers.",
     "equipment": [
       "Sheet pan"
     ],
@@ -51509,7 +51548,7 @@
         "durationSec": null
       }
     ],
-    "note": "No egg, no cream, and nobody can explain the name. The seltzer must be hard and cold from a siphon; a gentle pour gives you chocolate milk with bubbles in it.",
+    "note": "No egg, no cream, and nobody can explain the name — the leading theories involve Yiddish echt or a lost egg-and-cream original, and Brooklyn has argued about it for a century without settling anything. The seltzer must be hard and cold, from a siphon if you can manage it; a gentle pour gives you chocolate milk with bubbles in it, not the white-capped, sinus-prickling fountain drink. Fox's U-Bet syrup is the canonical chocolate. Drink it immediately — an egg cream does not keep for even five minutes.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -51586,7 +51625,7 @@
         "durationSec": null
       }
     ],
-    "note": "Nick Tahou Hots invented it and students perfected the timing, which is late. Everything must be assembled hot and eaten immediately with a fork, mixing as you go.",
+    "note": "Nick Tahou Hots invented it and students perfected the timing, which is late — the Garbage Plate is Rochester's 2 a.m. institution, trademarked name and all, and every rival diner sells a 'trash plate' in tribute-by-legal-necessity. The architecture is fixed: home fries and macaroni salad as the foundation, meat on top, mustard and onions, and the meat hot sauce — a cumin-spiced fine-ground chili — over everything. Assembled hot, eaten immediately with a fork, mixing as you go. Regret is scheduled for morning.",
     "equipment": [
       "Grater / zester"
     ],
@@ -51594,11 +51633,11 @@
     "flavor": {
       "tags": [
         "gently hot",
-        "rich",
         "earthy",
+        "rich",
         "warm-spiced"
       ],
-      "sentence": "Leads with a warm current of chile, richness that coats and comforts, fading in warm spice."
+      "sentence": "Leads with a warm current of chile, an earthy, grounding base, fading in warm spice."
     },
     "pairingId": 34,
     "films": {
@@ -51854,7 +51893,7 @@
         "durationSec": null
       }
     ],
-    "note": "New Jersey's answer to poutine, born in 24-hour diners. Crispness is everything: undercook the fries and you get gravy soup with potatoes hiding in it.",
+    "note": "New Jersey's answer to poutine, born in 24-hour diners — mozzarella instead of curds, brown gravy over everything, and the state's diner density (highest in the nation) as the delivery system. Crispness is everything: undercook the fries and you get gravy soup with potatoes hiding in it, which is why the double-fry matters more here than anywhere. The gravy goes on at the last second, at the table if possible. Named for the post-club hours it was engineered to serve.",
     "equipment": [
       "Grill",
       "Grater / zester"
@@ -51955,7 +51994,7 @@
         "durationSec": 840
       }
     ],
-    "note": "Cheese under sauce is the distinction, and it works: the cheese browns against the dough while the tomato stays bright on top rather than steaming under a blanket.",
+    "note": "Cheese under sauce is the distinction, and it works: the cheese browns against the dough while the tomato stays bright on top rather than steaming under a blanket — the inversion is the whole invention. Trenton's tomato pie predates most of America's pizza vocabulary; Papa's Tomato Pies has served it since 1912, one of the country's oldest continuously running pizzerias. Crushed tomatoes, not sauce — the fruit should taste of itself. Thin, crisp, and fiercely local.",
     "equipment": [
       "Grater / zester"
     ],
@@ -52049,7 +52088,7 @@
         "durationSec": null
       }
     ],
-    "note": "Jimmy Buff's built this in 1932 and the architecture matters: potatoes go in first as the floor, or the grease soaks straight through the bread.",
+    "note": "Jimmy Buff's built this in 1932 and the architecture matters: potatoes go in first as the floor, or the grease soaks straight through the bread — the half-round of pizza bread is a vessel under real load. Deep-fried dogs, then peppers, onions and potatoes from the same oil, stacked in that order. It is a sandwich with a load-bearing wall, engineered by people who understood that structural failure means wearing your lunch. Newark's own, still made the same way at the original.",
     "equipment": [
       "Deep-fry pot"
     ],
@@ -52143,17 +52182,17 @@
         "durationSec": 1200
       }
     ],
-    "note": "Nothing like the ground-beef sandwich of the same name — this is a triple-decker deli sandwich from a Maplewood tavern. Drain the slaw hard or the whole tower goes to pieces.",
+    "note": "Nothing like the ground-beef sandwich of the same name — this is a triple-decker deli sandwich from a Maplewood tavern, built on thin rye with layered meats, Swiss, coleslaw and Russian dressing; the Town Hall Deli still claims the 1930s original. Drain the slaw hard or the whole tower goes to pieces — the dressing brings enough moisture, and wet slaw dissolves rye into pulp. Cut in quarters, held together by pressure and faith. North Jersey knows; everyone else gets corrected.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
-        "smoky",
         "earthy",
+        "smoky",
         "rich",
         "sweet-edged"
       ],
-      "sentence": "Leads with wood-smoke running underneath, an earthy, grounding base, trailing gentle sweetness."
+      "sentence": "Leads with an earthy, grounding base, wood-smoke running underneath, trailing gentle sweetness."
     },
     "pairingId": 28,
     "films": {
@@ -52236,7 +52275,7 @@
         "durationSec": null
       }
     ],
-    "note": "August only, and never refrigerated — cold murders the aroma compounds that make a Jersey tomato worth the wait. Salt first, dress second.",
+    "note": "August only, and never refrigerated — cold murders the aroma compounds that make a Jersey tomato worth the wait, and the fridge crime is unrecoverable. Salt first, dress second: the salt pulls the juices that become the dressing's base. The Jersey tomato's reputation is real — sandy soil, hot summers, and varieties bred for flavor over shipping. This salad is a monument to doing almost nothing at exactly the right moment of the year.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -52403,7 +52442,7 @@
         "durationSec": 3300
       }
     ],
-    "note": "New Jersey grows the cultivated blueberry — it was domesticated in Whitesbog in 1916. Make the crumb clumps far larger than looks sensible; they settle and shrink as they bake.",
+    "note": "New Jersey grows the cultivated blueberry — it was domesticated in Whitesbog in 1916, when Elizabeth White and Frederick Coville turned a wild pine-barrens crop into an industry, so the state's claim on this cake is botanical fact. Make the crumb clumps far larger than looks sensible; they settle and shrink as they bake, and timid crumbs vanish into the batter. Equal parts cake and crumb is the Jersey bakery ratio — the crumb is not a topping, it is the co-star.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -52484,7 +52523,7 @@
         "durationSec": null
       }
     ],
-    "note": "Rutt's Hut in Clifton grades them by time in the fryer: in-and-outer, ripper, weller, cremator. A true ripper has burst its casing and no further.",
+    "note": "Rutt's Hut in Clifton grades them by time in the fryer: in-and-outer, ripper, weller, cremator — a taxonomy of deep-fried hot dogs refined since 1928. A true ripper has burst its casing and no further: the tear lets the fat in and crisps the edges while the center stays juicy; the cremator is for people who want the dog to have a past. The house mustard-relish, yellow with chopped cabbage, is the mandatory finish. Eaten at the counter, standing, as designed.",
     "equipment": [
       "Deep-fry pot"
     ],
@@ -52577,7 +52616,7 @@
         "durationSec": null
       }
     ],
-    "note": "Boardwalk zeppole are choux, not yeasted — they must puff hollow. Fry a test one first: if it stays dense, the dough needs another egg beaten in.",
+    "note": "Boardwalk zeppole are choux, not yeasted — they must puff hollow, which is the entire textural point; fry a test one first, and if it stays dense the dough needs another egg beaten in. The paste should be glossy and drop reluctantly from the spoon. Fried to deep gold, buried in powdered sugar, served in a paper bag that becomes part of the experience — shake the bag, eat over it, wear some anyway. Saint's-festival food that the Shore adopted as a summer religion.",
     "equipment": [
       "Deep-fry pot"
     ],
