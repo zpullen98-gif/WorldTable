@@ -10913,7 +10913,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 176
+    "noteChars": 500
   },
   {
     "slug": "kaiserschmarrn",
@@ -11912,8 +11912,8 @@
     "flavorTags": [
       "bright",
       "herb-fresh",
-      "fiery",
-      "charred"
+      "charred",
+      "fiery"
     ],
     "season": [
       3,
@@ -11929,7 +11929,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 172
+    "noteChars": 481
   },
   {
     "slug": "mandazi",
@@ -28577,7 +28577,7 @@
       "group": "The South"
     },
     "source": "guide",
-    "noteChars": 170
+    "noteChars": 488
   },
   {
     "slug": "bog-style-chicken-and-rice",
@@ -28606,8 +28606,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "herb-fresh",
       "smoky",
+      "herb-fresh",
       "gently hot"
     ],
     "season": [],
@@ -28616,7 +28616,7 @@
       "group": "The South"
     },
     "source": "guide",
-    "noteChars": 177
+    "noteChars": 477
   },
   {
     "slug": "benne-wafers",
@@ -28833,7 +28833,7 @@
       "group": "The South"
     },
     "source": "guide",
-    "noteChars": 177
+    "noteChars": 493
   },
   {
     "slug": "vidalia-onion-casserole",
@@ -30316,7 +30316,7 @@
       "group": "The South"
     },
     "source": "guide",
-    "noteChars": 175
+    "noteChars": 464
   },
   {
     "slug": "comeback-fried-shrimp",
@@ -31077,7 +31077,7 @@
       "group": "The South"
     },
     "source": "guide",
-    "noteChars": 159
+    "noteChars": 480
   },
   {
     "slug": "mississippi-pecan-pralines",
@@ -31147,15 +31147,22 @@
     "flavorTags": [
       "rich",
       "gently hot",
-      "aromatic"
+      "aromatic",
+      "bright"
     ],
-    "season": [],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      12
+    ],
     "region": {
       "kind": "us",
       "group": "The South"
     },
     "source": "guide",
-    "noteChars": 155
+    "noteChars": 481
   },
   {
     "slug": "ozark-skillet-cornbread",
@@ -31873,8 +31880,8 @@
     "costTier": 2,
     "flavorTags": [
       "rich",
-      "herb-fresh",
-      "smoky"
+      "smoky",
+      "herb-fresh"
     ],
     "season": [
       6,
@@ -31887,7 +31894,7 @@
       "group": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 151
+    "noteChars": 452
   },
   {
     "slug": "indiana-fried-chicken-and-noodles",
@@ -31955,8 +31962,8 @@
     "costTier": 2,
     "flavorTags": [
       "rich",
-      "sweet-edged",
       "warm-spiced",
+      "sweet-edged",
       "floral"
     ],
     "season": [
@@ -31970,7 +31977,7 @@
       "group": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 158
+    "noteChars": 474
   },
   {
     "slug": "chicago-deep-dish-pizza",
@@ -32670,7 +32677,7 @@
       "group": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 174
+    "noteChars": 484
   },
   {
     "slug": "indiana-fried-catfish-and-cornbread",
@@ -32713,7 +32720,7 @@
       "group": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 158
+    "noteChars": 442
   },
   {
     "slug": "indiana-green-bean-casserole",
@@ -35442,7 +35449,7 @@
       "group": "The Plains"
     },
     "source": "guide",
-    "noteChars": 175
+    "noteChars": 494
   },
   {
     "slug": "south-dakota-walleye-and-chips",
@@ -36156,7 +36163,7 @@
       "group": "The Plains"
     },
     "source": "guide",
-    "noteChars": 178
+    "noteChars": 468
   },
   {
     "slug": "kansas-beef-and-noodles",
@@ -36581,7 +36588,7 @@
       "group": "The Plains"
     },
     "source": "guide",
-    "noteChars": 173
+    "noteChars": 481
   },
   {
     "slug": "oklahoma-fried-pies",

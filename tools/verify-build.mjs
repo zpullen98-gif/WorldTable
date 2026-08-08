@@ -127,7 +127,7 @@ check('precache holds no prerendered HTML', () => {
 });
 
 check('offline navigation fallback wired', () => {
-	assert(/200\.html/.test(sw), 'no shell.html fallback in sw.js');
+	assert(/shell\.html/.test(sw), 'no shell.html fallback in sw.js');
 	assert(existsSync(join(BUILD, 'shell.html')), 'shell.html not emitted');
 	return 'shell.html';
 });

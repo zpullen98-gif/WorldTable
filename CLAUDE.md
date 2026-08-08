@@ -114,11 +114,11 @@ live in IndexedDB, never in the static data. Consequences worth knowing:
 
 ## Known remaining work
 
-- **Content backfill** — the only remaining phase; the engineering is done.
-  320 of 970 "from the pass" notes are under 180 chars; 149 are under 120. They
-  cluster in the marquee world-cuisine chapters written first (Italian, French,
-  Japanese, Chinese, Mexican — 10 of 10 each). This is authoring, not
-  engineering. `noteChars` is on every record.
+- None planned. The content backfill completed 2026-08-08: all 320 thin "from
+  the pass" notes rewritten in src/lib/data/notes.json (the overlay keeps the
+  raw extraction byte-identical to the archived original). `npm run
+  report:notes` is the ledger and reads zero. New authoring goes through the
+  same overlay; the parity harness exempts overlaid slugs automatically.
 
 ## Testing
 
