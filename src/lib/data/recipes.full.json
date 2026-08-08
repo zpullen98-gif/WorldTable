@@ -37,7 +37,7 @@
         "durationSec": null
       }
     ],
-    "note": "The sauce breaks above ~65°C — work off the heat and the starch does the emulsifying for you.",
+    "note": "Three ingredients and nowhere to hide. The sauce is an emulsion of cheese, starch and rendered pepper oil, and it breaks above ~65°C — hotter, and pecorino's proteins seize into chewing-gum clumps around the strands. So the work happens off the heat, with warm pasta water, and the starch does the emulsifying for you. Rome's shepherds built the dish from the three things that survived months of transhumance; it remains the best proof in the repertoire of how far technique can carry a bare pantry.",
     "equipment": [
       "Grater / zester"
     ],
@@ -77,7 +77,7 @@
       "cheese-families",
       "pecorino-romano",
       "schwarzwalder-schinken-black-forest-ham",
-      "salt-and-perception"
+      "black-pepper-and-the-pepper-family"
     ],
     "pantryItems": [
       "Corn",
@@ -140,7 +140,7 @@
         "durationSec": null
       }
     ],
-    "note": "Milk isn't optional — its proteins keep the meat tender and mellow the acidity.",
+    "note": "Milk isn't optional — its proteins buffer the wine's acidity and keep three-hours-cooked meat tender instead of grainy, which is why the recipe the Accademia Italiana della Cucina deposited at Bologna's Chamber of Commerce in 1982 includes it without apology. The failure mode is impatience: a hard boil squeezes the meat dry, while the barest tremble of a simmer dissolves it into the sauce. And in Bologna it goes on tagliatelle — the ragù clings to a rough egg noodle in a way it never will to slick spaghetti.",
     "equipment": [],
     "techniques": [
       "Deglazing & pan sauces"
@@ -174,9 +174,9 @@
     },
     "lexiconTerms": [
       "lobster-hard-vs-soft-shell",
+      "wok-hei-and-stir-fry-discipline",
       "sweat-vs-saute-vs-sear",
-      "plating-and-the-finish",
-      "parmigiano-reggiano"
+      "plating-and-the-finish"
     ],
     "pantryItems": [
       "Beef",
@@ -240,7 +240,7 @@
         "durationSec": 480
       }
     ],
-    "note": "Wet, sparse toppings are why home pizza goes soggy — less is structural, not aesthetic.",
+    "note": "Wet, sparse toppings are why home pizza goes soggy — less is structural, not aesthetic, because a domestic oven gives you eight minutes where Naples gives ninety seconds, and every extra spoon of tomato is water the crust must boil off. The long cold ferment is where the flavor lives; the screaming-hot steel is what stands in for the wood floor. The tricolore of tomato, mozzarella and basil was, the story goes, assembled for Queen Margherita in 1889 — history or not, the restraint it teaches is real.",
     "equipment": [],
     "techniques": [
       "Fermentation"
@@ -248,10 +248,11 @@
     "flavor": {
       "tags": [
         "herb-fresh",
+        "rich",
         "briny",
         "charred"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, a briny, maritime salinity, with a bitter-edged char at the rim."
+      "sentence": "Leads with fresh herbs arguing happily on top, richness that coats and comforts, with a bitter-edged char at the rim."
     },
     "pairingId": 2,
     "films": {
@@ -279,10 +280,10 @@
       }
     },
     "lexiconTerms": [
+      "fermentation-in-bread-yeast-levain-preferments",
       "mozzarella-di-bufala-campana",
       "dehydrator-ferment-station-and-the-pantry-machines",
-      "zero-proof-cocktails-and-the-sober-bar",
-      "flavor-pairing-theory"
+      "zero-proof-cocktails-and-the-sober-bar"
     ],
     "pantryItems": [
       "Tomato",
@@ -339,10 +340,11 @@
         "durationSec": null
       }
     ],
-    "note": "Stir for creaminess, but stop at al dente — it keeps cooking on the plate.",
+    "note": "Stirring rubs starch off the grain — that, not cream, is where the creaminess comes from — but stop at al dente, because the rice keeps cooking on the plate and the texture Milan wants is all'onda, loose enough to move in waves when you shake the pan. The mantecatura is non-negotiable: cold butter and Parmigiano beaten in off the heat, an emulsion finished with your wrist. Milanese legend credits the saffron to a Duomo glassworker's apprentice in 1574, gilding his wedding rice with the pigment from his day job.",
     "equipment": [],
     "techniques": [
       "Deglazing & pan sauces",
+      "Building an emulsion",
       "Risotto method"
     ],
     "flavor": {
@@ -363,8 +365,8 @@
           "sub": "The skill inside this recipe"
         },
         {
-          "label": "Technique: Risotto method",
-          "url": "https://www.youtube.com/results?search_query=risotto%20technique%20mantecatura",
+          "label": "Technique: Building an emulsion",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20emulsify%20sauce%20technique",
           "sub": "The skill inside this recipe"
         }
       ],
@@ -447,7 +449,7 @@
         "durationSec": null
       }
     ],
-    "note": "The flour dredge isn't just for browning — it thickens the pan sauce.",
+    "note": "The flour dredge is doing three jobs: browning, protecting the thin cutlet from the pan's full violence, and — the quiet one — leaving starch behind to thicken the sauce the moment wine hits the fond. The sauce is built in minutes and ruined in seconds: swirl the final butter in off the heat, because on a boil it splits to grease. Piccata as Americans know it is an Italian-American amplification of veal piccata al limone — louder, brinier, and none the worse for the journey.",
     "equipment": [],
     "techniques": [
       "Deglazing & pan sauces",
@@ -489,7 +491,9 @@
     },
     "lexiconTerms": [
       "deglaze-and-fond",
-      "reverse-sear-and-the-gray-band"
+      "reverse-sear-and-the-gray-band",
+      "game-season-the-autumn-larder",
+      "the-global-pantry-what-has-no-season"
     ],
     "pantryItems": [
       "Chicken",
@@ -551,7 +555,7 @@
         "durationSec": null
       }
     ],
-    "note": "Cooking the pasta in the soup releases starch that turns broth into velvet.",
+    "note": "Cooking the pasta directly in the soup is the whole dish: the starch it sheds turns bean broth into velvet, which is why pasta boiled separately leaves you with beans in dishwater. The Parmigiano rind is the poor kitchen's stock cube, collagen and glutamate simmered back into service. This is cucina povera at its most instructive — and it punishes the make-ahead cook honestly, because the ditalini keep drinking broth as they stand. Eat it the day it's made, or hold the pasta back.",
     "equipment": [
       "Grater / zester"
     ],
@@ -580,10 +584,10 @@
       }
     },
     "lexiconTerms": [
-      "stocks-blanc-brun-broth-and-demi",
       "cabernet-sauvignon-and-the-bordeaux-blend",
-      "revenue-management-covers-turns-and-dayparts",
-      "third-party-delivery-economics"
+      "personal-guarantees-and-the-good-guy-clause",
+      "third-party-delivery-economics",
+      "zaatar-the-blend"
     ],
     "pantryItems": [
       "Onion",
@@ -646,7 +650,7 @@
         "durationSec": 1800
       }
     ],
-    "note": "Resting is the difference between clean layers and a delicious landslide.",
+    "note": "Resting is the difference between clean layers and a delicious landslide — the molten mozzarella and sauce need fifteen minutes to set from liquid back to structure, exactly like a lasagne. Salting the eggplant matters less for bitterness (modern varieties have had it bred out) than for collapsing the sponge: unsalted slices drink oil by the ladleful. Naples, Sicily and Parma all claim the dish; the safest position is to claim a second helping and stay out of it.",
     "equipment": [
       "Thermometer",
       "Deep-fry pot"
@@ -676,7 +680,7 @@
       }
     },
     "lexiconTerms": [
-      "resting-carryover-and-the-thermometer"
+      "peppers-and-eggplant-the-nightshade-late-summer"
     ],
     "pantryItems": [
       "Eggs",
@@ -736,12 +740,13 @@
         "durationSec": null
       }
     ],
-    "note": "A one-second dip. The biscuits finish softening in the fridge.",
+    "note": "A one-second dip, each side, no more — savoiardi are engineered to wick liquid by capillary action and they finish softening in the fridge; a soaked biscuit has already collapsed before assembly. The other trap is the mascarpone: at 75% fat it churns toward butter if overbeaten, so fold until just smooth and no further. For all its air of antiquity, tiramisù is younger than the moon landing — Treviso's Le Beccherie popularised it in the early 1970s, and the name promises what the espresso delivers: a pick-me-up.",
     "equipment": [
       "Bain-marie"
     ],
     "techniques": [
-      "The water bath"
+      "The water bath",
+      "Churning ice cream"
     ],
     "flavor": {
       "tags": [
@@ -755,6 +760,11 @@
         {
           "label": "Technique: The water bath",
           "url": "https://www.youtube.com/results?search_query=bain%20marie%20water%20bath%20baking%20technique",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: Churning ice cream",
+          "url": "https://www.youtube.com/results?search_query=ice%20cream%20churning%20technique",
           "sub": "The skill inside this recipe"
         }
       ],
@@ -771,9 +781,9 @@
     },
     "lexiconTerms": [
       "mascarpone",
+      "dry-off-dry-and-residual-sugar",
       "glassware-and-the-chill-law",
-      "growth-second-locations-licensing-and-exit",
-      "artichokes-the-twice-yearly-thistle"
+      "growth-second-locations-licensing-and-exit"
     ],
     "pantryItems": [
       "Eggs",
@@ -827,7 +837,7 @@
         "durationSec": 1500
       }
     ],
-    "note": "The dimples aren't decoration — they trap oil and stop giant tunnels forming.",
+    "note": "The dimples aren't decoration. They trap pools of oil that fry the crust from above, and they selectively degas the dough so it bakes level instead of ballooning into one giant tunnel — press to the bottom of the pan, with conviction. At 80% hydration the dough will feel alarmingly wet; that water is the open crumb. This is Liguria's bread, where olive oil is an ingredient measured in glugs, not a greasing agent — skimp on it and you've made a different, sadder bread.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -854,7 +864,7 @@
     "lexiconTerms": [
       "the-spritz-and-aperitivo-hour",
       "pour-cost-and-bar-economics",
-      "cash-flow-and-the-working-capital-trap",
+      "fermentation-in-bread-yeast-levain-preferments",
       "mussels-scallops-and-the-cold-water-winter"
     ],
     "pantryItems": [
@@ -913,19 +923,20 @@
         "durationSec": null
       }
     ],
-    "note": "Shrimp overcook in the time it takes to find your tongs — pull them early, always.",
+    "note": "Shrimp overcook in the time it takes to find your tongs — they're done at 50-something degrees and rubber by 70, so they leave the pan early and return only for the final minute, finishing in the sauce's gentler heat. The sauce itself is a butter mount: wine reduced, then cold butter swirled in off the boil so it emulsifies instead of splitting. The name is an Italian-American tautology — scampo is a langoustine, so 'shrimp scampi' really means shrimp cooked the way the old country cooked something better.",
     "equipment": [],
     "techniques": [
-      "Deglazing & pan sauces"
+      "Deglazing & pan sauces",
+      "Building an emulsion"
     ],
     "flavor": {
       "tags": [
+        "rich",
         "bright",
         "gently hot",
-        "rich",
         "herb-fresh"
       ],
-      "sentence": "Leads with acid holding everything up to the light, a warm current of chile, lifted green at the very end."
+      "sentence": "Leads with richness that coats and comforts, acid holding everything up to the light, lifted green at the very end."
     },
     "pairingId": 7,
     "films": {
@@ -933,6 +944,11 @@
         {
           "label": "Technique: Deglazing & pan sauces",
           "url": "https://www.youtube.com/results?search_query=pan%20sauce%20deglazing%20technique",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: Building an emulsion",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20emulsify%20sauce%20technique",
           "sub": "The skill inside this recipe"
         }
       ],
@@ -1001,7 +1017,7 @@
         "durationSec": null
       }
     ],
-    "note": "Pale gold outside, custard inside. Browning is a flavor choice — in Paris, it's a mistake.",
+    "note": "Pale gold outside, custard inside — browning is a flavor choice, and in Paris it's a mistake, because the Maillard notes bully the butter and eggs out of the room. The whole dish is heat management: rapid stirring makes the curds small and cream-fine, and the ten still seconds at the end knit them into a skin that can roll. This is the classic audition piece for a French kitchen precisely because there are three ingredients and nothing in the pan to hide behind.",
     "equipment": [],
     "techniques": [
       "Tempering a custard"
@@ -1042,8 +1058,8 @@
     "lexiconTerms": [
       "custards-anglaise-patissiere-and-curds",
       "nonstick-honestly",
-      "salt-and-perception",
-      "flavor-pairing-theory"
+      "wok-hei-and-stir-fry-discipline",
+      "salt-and-perception"
     ],
     "pantryItems": [
       "Eggs",
@@ -1103,7 +1119,7 @@
         "durationSec": null
       }
     ],
-    "note": "Reduce the wine by half before adding stock if you want a deeper, less boozy sauce.",
+    "note": "Reduce the wine by half before the stock goes in and the sauce arrives deeper and less boozy — raw wine needs long simmering to shed its edge, and the chicken will be done first. The dish was built for an old rooster whose sinew wanted hours of wet heat; supermarket thighs cook faster than the flavor develops, which is why the reduction has to do the work the bird no longer can. The finishing knob of butter isn't garnish: swirled in off the heat, it ties the sauce to a gloss.",
     "equipment": [],
     "techniques": [
       "Deglazing & pan sauces",
@@ -1145,9 +1161,9 @@
     },
     "lexiconTerms": [
       "plating-and-the-finish",
-      "wine-list-engineering-and-the-markup-question",
-      "aftertaste-finish-and-length",
-      "deglaze-and-fond"
+      "tempranillo-sangiovese-and-nebbiolo-the-food-wine-trinity",
+      "regional-pairing-and-the-hard-to-pair-list",
+      "wine-list-engineering-and-the-markup-question"
     ],
     "pantryItems": [
       "Chicken",
@@ -1213,7 +1229,7 @@
         "durationSec": null
       }
     ],
-    "note": "If the onions catch, deglaze with a splash of water and keep going — those dark patches are the soup.",
+    "note": "If the onions catch, deglaze with a splash of water and keep going — those dark patches dissolving off the pan floor ARE the soup. What you cannot do is hurry: caramelizing a kilo of onions to mahogany takes the better part of an hour, and high heat gives you bitter black edges on raw centers instead. Les Halles market workers ate this at dawn against the cold; the Gruyère lid broiled onto the bowl is the only roof the dish needs.",
     "equipment": [],
     "techniques": [
       "Deglazing & pan sauces"
@@ -1221,11 +1237,11 @@
     "flavor": {
       "tags": [
         "rich",
+        "charred",
         "bright",
-        "nutty-toasted",
-        "charred"
+        "sweet-edged"
       ],
-      "sentence": "Leads with richness that coats and comforts, acid holding everything up to the light, with a bitter-edged char at the rim."
+      "sentence": "Leads with richness that coats and comforts, char used as punctuation, trailing gentle sweetness."
     },
     "pairingId": 1,
     "films": {
@@ -1305,17 +1321,17 @@
         "durationSec": null
       }
     ],
-    "note": "Crowded vegetables steam. Separate batches taste like Provence; one batch tastes like cafeteria.",
+    "note": "Crowded vegetables steam; separate batches taste like Provence, one batch tastes like cafeteria. Each vegetable has its own water content and its own browning schedule, and only a solo turn in the pan gets eggplant creamy, zucchini nutty and peppers sweet before they meet. The reward for the patience is a dish genuinely better the next day, once the juices in the bottom of the pot have had a night to argue themselves into agreement.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
         "herb-fresh",
         "aromatic",
-        "warm-spiced",
-        "briny"
+        "rich",
+        "warm-spiced"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, aromatics blooming from the first bite, ending saline and clean."
+      "sentence": "Leads with fresh herbs arguing happily on top, aromatics blooming from the first bite, fading in warm spice."
     },
     "pairingId": 2,
     "films": {
@@ -1334,8 +1350,8 @@
     "lexiconTerms": [
       "jambon-de-bayonne-and-french-whole-muscle-hams",
       "riesling-the-sommeliers-secret-weapon",
-      "combi-ovens-and-steam",
-      "peppers-and-eggplant-the-nightshade-late-summer"
+      "peppers-and-eggplant-the-nightshade-late-summer",
+      "sweat-vs-saute-vs-sear"
     ],
     "pantryItems": [
       "Eggs",
@@ -1391,7 +1407,7 @@
         "durationSec": null
       }
     ],
-    "note": "Watch the milk solids: foam, then quiet, then brown. Quiet is your 10-second warning.",
+    "note": "Watch the milk solids: foam, then quiet, then brown — quiet is your ten-second warning before beurre noisette becomes beurre brûlé. The dredge-and-butter formula is the miller's wife's namesake trick (à la meunière, floured like her hands), and it made Julia Child's first meal in France, the one she credited with her conversion. Dry the fish obsessively; surface water is why fillets glue themselves to the pan and why crusts turn to paste.",
     "equipment": [],
     "techniques": [
       "Brown butter"
@@ -1427,8 +1443,8 @@
     },
     "lexiconTerms": [
       "the-nutty-register",
+      "fatty-vs-lean-fish",
       "pour-cost-and-bar-economics",
-      "growth-second-locations-licensing-and-exit",
       "the-oily-fish-calendar"
     ],
     "pantryItems": [
@@ -1486,7 +1502,7 @@
         "durationSec": null
       }
     ],
-    "note": "Batches, always. Gray meat makes gray stew.",
+    "note": "Batches, always — gray meat makes gray stew. A crowded pan drops below searing temperature, the beef exhales its moisture, and everything boils in its own juice instead of browning; the fond those batches leave behind is most of the sauce's spine. Burgundy's farmers built the dish to turn a workhorse cut and an open bottle into something aristocratic, and the finish still matters: mushrooms and pearl onions cooked separately and folded in late, so they arrive as themselves and not as casualties.",
     "equipment": [],
     "techniques": [
       "Deglazing & pan sauces",
@@ -1590,7 +1606,7 @@
         "durationSec": 1800
       }
     ],
-    "note": "A quiche is a custard in a crust. Treat it like crème brûlée, not a frittata.",
+    "note": "A quiche is a custard in a crust — treat it like crème brûlée, not a frittata. Pull it while the center still trembles; carryover sets it, and an extra five minutes turns silk into scrambled egg in a box. The blind bake is non-negotiable because pale pastry under wet custard never recovers. Lorraine's original had no cheese at all — lardons, cream and eggs only — so the Gruyère is a modern courtesy, welcome but on notice.",
     "equipment": [],
     "techniques": [
       "Tempering a custard",
@@ -1600,10 +1616,10 @@
     "flavor": {
       "tags": [
         "rich",
-        "warm-spiced",
-        "silky"
+        "silky",
+        "warm-spiced"
       ],
-      "sentence": "Leads with richness that coats and comforts, warm spice humming through the middle, melting away silken."
+      "sentence": "Leads with richness that coats and comforts, a silken, spoon-slow texture, fading in warm spice."
     },
     "pairingId": 9,
     "films": {
@@ -1690,7 +1706,7 @@
         "durationSec": null
       }
     ],
-    "note": "The first crêpe belongs to the cook. Every French grandmother agrees.",
+    "note": "The first crêpe belongs to the cook — every French grandmother agrees, and there is chemistry inside the folklore: the first one calibrates the pan's temperature and oil film, and it is nearly always wrong. The 30-minute rest matters just as much, letting the flour hydrate and the gluten relax so the batter runs paper-thin instead of pulling back. Once the edges lace and lift, you have your timing; from there it is a production line.",
     "equipment": [],
     "techniques": [
       "Crêpes"
@@ -1723,10 +1739,10 @@
       }
     },
     "lexiconTerms": [
+      "the-pairing-laws-salt-fat-acid-heat-sweet-bitter",
       "funding-sba-investors-and-the-capital-stack",
       "licenses-and-permits-the-operating-stack",
-      "the-tech-stack-pos-and-systems",
-      "umami-in-practice-the-stack"
+      "the-tech-stack-pos-and-systems"
     ],
     "pantryItems": [
       "Eggs",
@@ -1774,13 +1790,14 @@
         "durationSec": null
       }
     ],
-    "note": "Two thin torched layers beat one thick one — better crack, no burnt patches.",
+    "note": "Two thin torched layers beat one thick one — better crack, no burnt patches, because a deep bed of sugar scorches on top before the bottom melts. The custard itself is an exercise in restraint: yolks only, a water bath to hold the oven's violence at arm's length, and out at the barely-wobbly stage since carryover finishes the set. The point of the dish is contrast — cold silk under hot glass — which is why the torching happens at the last minute, never ahead.",
     "equipment": [
       "Ramekins",
       "Torch",
       "Bain-marie"
     ],
     "techniques": [
+      "Tempering a custard",
       "The brûlée torch",
       "The water bath"
     ],
@@ -1788,21 +1805,22 @@
       "tags": [
         "rich",
         "floral",
-        "charred"
+        "charred",
+        "silky"
       ],
-      "sentence": "Leads with richness that coats and comforts, a floral thread lifting the aroma, with a bitter-edged char at the rim."
+      "sentence": "Leads with richness that coats and comforts, a floral thread lifting the aroma, melting away silken."
     },
     "pairingId": 12,
     "films": {
       "techniques": [
         {
-          "label": "Technique: The brûlée torch",
-          "url": "https://www.youtube.com/results?search_query=creme%20brulee%20torch%20technique",
+          "label": "Technique: Tempering a custard",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20temper%20eggs%20custard%20technique",
           "sub": "The skill inside this recipe"
         },
         {
-          "label": "Technique: The water bath",
-          "url": "https://www.youtube.com/results?search_query=bain%20marie%20water%20bath%20baking%20technique",
+          "label": "Technique: The brûlée torch",
+          "url": "https://www.youtube.com/results?search_query=creme%20brulee%20torch%20technique",
           "sub": "The skill inside this recipe"
         }
       ],
@@ -1872,16 +1890,16 @@
         "durationSec": null
       }
     ],
-    "note": "Warm potatoes + vinaigrette is a technique you'll reuse for every potato salad forever.",
+    "note": "Warm potatoes drink vinaigrette — a technique you'll reuse for every potato salad forever, because starch cells open with heat and close as they cool, carrying the dressing in with them. The other law is compositional: a Niçoise is arranged, never tossed, so every element keeps its own temperature and texture. Nice's purists famously bar cooked vegetables entirely; the potato-and-bean version is the one the rest of the world won, but the anchovies and good oil-packed tuna are not negotiable anywhere.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
-        "briny",
         "umami-deep",
+        "briny",
         "bright"
       ],
-      "sentence": "Leads with a briny, maritime salinity, savory depth stacked from the pantry’s bass notes, with a clean, bright snap."
+      "sentence": "Leads with savory depth stacked from the pantry’s bass notes, a briny, maritime salinity, with a clean, bright snap."
     },
     "pairingId": 13,
     "films": {
@@ -1899,9 +1917,9 @@
     },
     "lexiconTerms": [
       "tuna-grades-akami-chutoro-otoro",
-      "searing-and-pan-technique",
       "blanch-and-shock",
-      "tuna-and-winter-fat"
+      "tuna-and-winter-fat",
+      "petty-paring-and-the-small-blades"
     ],
     "pantryItems": [
       "Tuna",
@@ -1992,12 +2010,7 @@
         "sub": "Japanese home cooking, patiently taught"
       }
     },
-    "lexiconTerms": [
-      "flat-iron",
-      "ice-and-dilution-the-invisible-ingredient",
-      "sweetness-as-seasoning",
-      "acids-vinegars-and-the-finishing-squeeze"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Tofu",
       "Scallion",
@@ -2070,7 +2083,7 @@
     "lexiconTerms": [
       "sake-fundamentals-the-polishing-ladder",
       "sake-service-and-pairing",
-      "startup-costs-the-real-number",
+      "baste-arroser-and-glaze",
       "the-hemisphere-flip"
     ],
     "pantryItems": [
@@ -2151,9 +2164,9 @@
     },
     "lexiconTerms": [
       "grass-fed-vs-grain-finished",
-      "tuna-grades-akami-chutoro-otoro",
       "revenue-management-covers-turns-and-dayparts",
-      "wild-salmon-the-run-calendar"
+      "wild-salmon-the-run-calendar",
+      "tuna-grades-akami-chutoro-otoro"
     ],
     "pantryItems": [
       "Salmon",
@@ -2240,9 +2253,9 @@
     },
     "lexiconTerms": [
       "roux-slurry-and-liaison",
+      "curry-powder-the-colonial-invention",
       "riesling-the-sommeliers-secret-weapon",
-      "chaat-masala",
-      "sweat-vs-saute-vs-sear"
+      "chaat-masala"
     ],
     "pantryItems": [
       "Chicken",
@@ -2329,9 +2342,9 @@
       }
     },
     "lexiconTerms": [
-      "whole-vs-ground-storage-and-the-six-month-rule",
-      "combi-ovens-and-steam",
-      "growth-second-locations-licensing-and-exit"
+      "flat-iron",
+      "acids-vinegars-and-the-finishing-squeeze",
+      "combi-ovens-and-steam"
     ],
     "pantryItems": [
       "Pork",
@@ -2428,9 +2441,8 @@
       }
     },
     "lexiconTerms": [
-      "the-three-heats-capsaicin-piperine-and-isothiocyanate",
+      "caramel-stages-and-sugar-work",
       "the-opening-soft-launch-and-the-first-90-days",
-      "the-equipment-philosophy-buy-once-buy-cheap-and-the-station-mind",
       "pour-cost-and-bar-economics"
     ],
     "pantryItems": [
@@ -2515,8 +2527,8 @@
     "lexiconTerms": [
       "crab-seasons-around-the-world",
       "pork-belly",
-      "steel-science-carbon-stainless-and-hrc",
-      "flavor-pairing-theory"
+      "wok-hei-and-stir-fry-discipline",
+      "regional-pairing-and-the-hard-to-pair-list"
     ],
     "pantryItems": [
       "Chicken",
@@ -2602,7 +2614,6 @@
       }
     },
     "lexiconTerms": [
-      "salt-types-and-when-each-wins",
       "chardonnay-the-shape-shifter"
     ],
     "pantryItems": [
@@ -2682,7 +2693,8 @@
       }
     },
     "lexiconTerms": [
-      "stocks-blanc-brun-broth-and-demi"
+      "stocks-blanc-brun-broth-and-demi",
+      "personal-guarantees-and-the-good-guy-clause"
     ],
     "pantryItems": [
       "Chicken",
@@ -2772,10 +2784,9 @@
       }
     },
     "lexiconTerms": [
-      "decanting-temperature-and-glassware",
-      "congruent-vs-contrast-the-master-key",
-      "temperature-and-perception",
-      "sashimi-grade-and-ikejime"
+      "sashimi-grade-and-ikejime",
+      "plating-and-the-finish",
+      "aftertaste-finish-and-length"
     ],
     "pantryItems": [
       "Salmon",
@@ -2836,7 +2847,7 @@
         "durationSec": null
       }
     ],
-    "note": "Day-old rice isn't tradition, it's chemistry — retrograded starch fries instead of steams.",
+    "note": "Day-old rice isn't tradition, it's chemistry — chilled overnight, the starch retrogrades into firm crystalline grains that fry and stay separate, where fresh rice steams into mush on contact. From there the dish is heat: the highest flame you own, rice pressed against the metal until it dances and smells toasty, soy added around the rim so it toasts on the steel before it touches a grain. Ninety seconds, and the pan does more of the cooking than the recipe does.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -2932,11 +2943,10 @@
         "durationSec": null
       }
     ],
-    "note": "Steeping the tofu in hot brine firms and seasons it so it survives the wok.",
+    "note": "Steeping the tofu in hot salted water firms and seasons it so it survives the wok — soft tofu handled cold shatters into curds before it reaches the table. The dish's engine is doubanjiang fried until the oil runs red, which is Sichuan's way of saying the paste is awake; the ground Sichuan peppercorn goes on at the end, where its citrus-electric numbing stays vivid. Named, the story goes, for the pockmarked grandmother — má pó — who sold it to Chengdu's oil porters.",
     "equipment": [],
     "techniques": [
       "Wok technique",
-      "Brining & curing",
       "Fermentation"
     ],
     "flavor": {
@@ -2957,8 +2967,8 @@
           "sub": "★ A canon film — verified"
         },
         {
-          "label": "Technique: Brining & curing",
-          "url": "https://www.youtube.com/results?search_query=brining%20curing%20meat%20technique%20explained",
+          "label": "Technique: Fermentation",
+          "url": "https://www.youtube.com/results?search_query=fermentation%20basics%20vegetables%20technique",
           "sub": "The skill inside this recipe"
         }
       ],
@@ -2975,9 +2985,9 @@
     },
     "lexiconTerms": [
       "sichuan-peppercorn-and-mala",
-      "the-brine-and-sea-register",
       "lobster-hard-vs-soft-shell",
-      "roux-slurry-and-liaison"
+      "roux-slurry-and-liaison",
+      "schwarzwalder-schinken-black-forest-ham"
     ],
     "pantryItems": [
       "Pork",
@@ -3036,7 +3046,7 @@
         "durationSec": null
       }
     ],
-    "note": "Shoulder over tenderloin — you want fat cap and char, not lean and dry.",
+    "note": "Shoulder over tenderloin — you want fat cap and char, not lean and dry, because the glaze's honey needs fat underneath to lacquer against, and the burnt edges are the prize the whole roast exists for. Brushing every ten minutes builds the coat in layers the way one thick slather never will. The red fermented tofu is the traditional colorant and a quiet umami engine; without it you'll still eat well, but the Cantonese barbecue-shop hue is its signature.",
     "equipment": [],
     "techniques": [
       "Fermentation"
@@ -3045,10 +3055,10 @@
       "tags": [
         "sweet-edged",
         "charred",
-        "smoky",
-        "warm-spiced"
+        "tangy-ferment",
+        "smoky"
       ],
-      "sentence": "Leads with a sweet edge rounding the corners, char used as punctuation, fading in warm spice."
+      "sentence": "Leads with a sweet edge rounding the corners, char used as punctuation, on a drift of smoke."
     },
     "pairingId": 9,
     "films": {
@@ -3071,7 +3081,7 @@
       }
     },
     "lexiconTerms": [
-      "tenderloin-filet-mignon",
+      "baharat-and-the-seven-spice-family",
       "chinese-five-spice",
       "building-the-working-spice-pantry",
       "serrated-slicers-and-the-long-blades"
@@ -3123,10 +3133,11 @@
         "durationSec": null
       }
     ],
-    "note": "Kung pao is sweet-sour-numbing in balance — taste the sauce before it hits the wok.",
+    "note": "Kung pao is sweet, sour and numbing in balance — taste the sauce before it hits the wok, because there is no adjusting a stir-fry after the fact. The chilies are sizzled until fragrant and mahogany, never black; scorched chilies turn the whole dish acrid. Velveting the thigh meat in soy, wine and cornstarch is what keeps it silk under high heat. The dish carries a Qing governor's title — gongbao, palace guardian — and the name survived even the era when politics tried to erase it.",
     "equipment": [],
     "techniques": [
-      "Wok technique"
+      "Wok technique",
+      "Velveting"
     ],
     "flavor": {
       "tags": [
@@ -3144,6 +3155,11 @@
           "label": "Technique: Wok technique",
           "url": "https://www.youtube.com/watch?v=n10xBmqehik",
           "sub": "★ A canon film — verified"
+        },
+        {
+          "label": "Technique: Velveting",
+          "url": "https://www.youtube.com/results?search_query=velveting%20meat%20chinese%20technique",
+          "sub": "The skill inside this recipe"
         }
       ],
       "search": {
@@ -3158,9 +3174,8 @@
       }
     },
     "lexiconTerms": [
-      "the-sour-template",
-      "sauvignon-blanc-and-the-aromatic-whites",
       "egg-whites-and-the-dry-shake",
+      "sauvignon-blanc-and-the-aromatic-whites",
       "sichuan-peppercorn-and-mala"
     ],
     "pantryItems": [
@@ -3219,7 +3234,7 @@
         "durationSec": null
       }
     ],
-    "note": "Baking soda velveting is the takeout secret — 15 minutes turns flank silk-soft.",
+    "note": "Baking-soda velveting is the takeout secret — fifteen minutes raises the meat's surface pH so its proteins can't knot tight, and flank turns silk-soft instead of chewy. Slice thin and against the grain; the soda can't rescue long fibers. Blanching the broccoli first means the stir-fry only has to finish it, so the florets stay green and snappy while the oyster-sauce gloss comes together in the last thirty seconds. The dish is Cantonese-American engineering, and none the lesser for it.",
     "equipment": [],
     "techniques": [
       "Velveting"
@@ -3227,10 +3242,10 @@
     "flavor": {
       "tags": [
         "aromatic",
-        "umami-deep",
-        "briny"
+        "briny",
+        "umami-deep"
       ],
-      "sentence": "Leads with aromatics blooming from the first bite, savory depth stacked from the pantry’s bass notes, ending saline and clean."
+      "sentence": "Leads with aromatics blooming from the first bite, a briny, maritime salinity, finishing long and savory."
     },
     "pairingId": 16,
     "films": {
@@ -3253,7 +3268,7 @@
       }
     },
     "lexiconTerms": [
-      "velveting-and-marinades",
+      "fillet-steak-loin-and-collar",
       "quatre-epices-and-the-european-baking-blends",
       "corn-sugar-against-the-clock",
       "flank-skirt-and-hanger"
@@ -3312,9 +3327,11 @@
         "durationSec": null
       }
     ],
-    "note": "Hot water kills gluten's bounce — that's why these roll thin without fighting back.",
+    "note": "Hot water kills gluten's bounce — that's why these roll thin without fighting back, where a cold-water dough would snap back like elastic and tear. The lamination is the other half: oil paste, roll, coil, flatten, so the pancake fries into distinct shattering layers instead of one dense disc. Press and rotate as it fries — the spin crisps the surface evenly, and it is the street-stall tell of someone who has made ten thousand of them.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Lamination"
+    ],
     "flavor": {
       "tags": [
         "herb-fresh",
@@ -3324,7 +3341,13 @@
     },
     "pairingId": 19,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Lamination",
+          "url": "https://www.youtube.com/watch?v=vpwY3nmLLaA",
+          "sub": "★ A canon film — verified"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Scallion%20Pancakes%20recipe",
@@ -3336,9 +3359,7 @@
         "sub": "regional Chinese technique, explained properly"
       }
     },
-    "lexiconTerms": [
-      "gluten-and-hydration"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Scallion",
       "Bread",
@@ -3388,7 +3409,7 @@
         "durationSec": null
       }
     ],
-    "note": "Boil wontons in water, not the broth — the flour would cloud your clean stock.",
+    "note": "Boil the wontons in water, not the broth — wrapper flour clouds a stock you spent hours keeping clean. The filling is beaten in one direction until sticky, which cross-links the proteins into the springy bite Cantonese cooks prize; lazily mixed filling crumbles. Float-plus-one-minute is the doneness rule. The name means 'swallowing clouds' in Cantonese, and that is the standard the folds are being asked to live up to.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -3414,8 +3435,7 @@
       }
     },
     "lexiconTerms": [
-      "chicories-and-bitter-greens",
-      "stocks-blanc-brun-broth-and-demi"
+      "chicories-and-bitter-greens"
     ],
     "pantryItems": [
       "Chicken",
@@ -3473,7 +3493,7 @@
         "durationSec": null
       }
     ],
-    "note": "The dish is a sauce ratio, not a recipe. Learn it once, riff forever.",
+    "note": "The dish is a sauce ratio, not a recipe — sesame paste, chili oil, soy, black vinegar, sugar and Sichuan pepper built in the bottom of each bowl, loosened with noodle water, learned once and riffed on forever. The crisp pork is a topping, not a sauce; its crunch against the slick noodles is the point. Named for the dan-dan shoulder pole Chengdu street vendors carried — noodles swinging from one end, sauce from the other — it was fast food a century before the term existed.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -3501,7 +3521,8 @@
     },
     "lexiconTerms": [
       "sesame-seeds-tahini-and-beyond",
-      "the-build-out-architects-permits-and-the-timeline"
+      "the-build-out-architects-permits-and-the-timeline",
+      "black-pepper-and-the-pepper-family"
     ],
     "pantryItems": [
       "Pork",
@@ -3561,7 +3582,7 @@
         "durationSec": null
       }
     ],
-    "note": "The hot-oil pour flash-cooks the aromatics. If it doesn't sizzle, the oil wasn't ready.",
+    "note": "The smoking-oil pour flash-cooks the raw ginger and scallion julienne in a half-second of contact — if it doesn't crackle violently, the oil wasn't ready and the aromatics just sit there raw. Discarding the steaming liquid matters: it carries the fish's muddier notes, which is also why the seasoned soy is poured around, not on, so the skin stays taut. This is the Cantonese test of a fish's freshness — ten minutes of steam and nowhere to hide.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -3588,7 +3609,8 @@
     "lexiconTerms": [
       "grilling-vs-barbecue-vs-smoking",
       "steaming-and-en-papillote",
-      "combi-ovens-and-steam"
+      "combi-ovens-and-steam",
+      "fatty-vs-lean-fish"
     ],
     "pantryItems": [
       "White fish",
@@ -3635,7 +3657,7 @@
         "durationSec": null
       }
     ],
-    "note": "Freeze the rinsed rice overnight first and it breaks down in half the time.",
+    "note": "Freeze the rinsed rice overnight and it breaks down in half the time — ice crystals shatter the grain from the inside, which is the entire trick. Congee wants indifference, not attention: the barest simmer, lid ajar, stirred just often enough to keep the bottom honest, until the grains burst into silk. Season it lightly and late; the bowl is a canvas, and the toppings — white pepper, fried shallots, chili crisp, a century egg for the brave — are where each eater signs it.",
     "equipment": [],
     "techniques": [
       "Congee"
@@ -3671,7 +3693,8 @@
     "lexiconTerms": [
       "t-bone-and-porterhouse",
       "cleavers-chinese-chef-vs-bone",
-      "ferment-funk-the-taste-of-time"
+      "taste-vs-aroma-the-retronasal-truth",
+      "bitterness-the-adult-taste"
     ],
     "pantryItems": [
       "Chicken",
@@ -3765,9 +3788,7 @@
     },
     "lexiconTerms": [
       "paprika-and-pimenton",
-      "funding-sba-investors-and-the-capital-stack",
-      "licenses-and-permits-the-operating-stack",
-      "the-tech-stack-pos-and-systems"
+      "chorizo-spanish-vs-mexican"
     ],
     "pantryItems": [
       "Chicken",
@@ -3866,8 +3887,8 @@
     "lexiconTerms": [
       "jamon-serrano",
       "mortar-and-pestle-molcajete-suribachi-granite",
-      "bitterness-the-adult-taste",
-      "herb-profiles-bright-vs-resinous"
+      "herb-profiles-bright-vs-resinous",
+      "startup-costs-the-real-number"
     ],
     "pantryItems": [
       "Ground meat",
@@ -3954,6 +3975,7 @@
     },
     "lexiconTerms": [
       "queso-oaxaca-quesillo",
+      "stocks-blanc-brun-broth-and-demi",
       "queso-fresco",
       "cabernet-sauvignon-and-the-bordeaux-blend"
     ],
@@ -4216,10 +4238,7 @@
       }
     },
     "lexiconTerms": [
-      "amari-and-the-bitter-liqueurs",
-      "grilling-vs-barbecue-vs-smoking",
-      "garnish-expression-twists-and-the-cherry-question",
-      "chicories-and-bitter-greens"
+      "garnish-expression-twists-and-the-cherry-question"
     ],
     "pantryItems": [
       "Pork",
@@ -4304,7 +4323,8 @@
       }
     },
     "lexiconTerms": [
-      "cotija"
+      "cotija",
+      "acids-vinegars-and-the-finishing-squeeze"
     ],
     "pantryItems": [
       "Chiles",
@@ -4398,8 +4418,9 @@
     },
     "lexiconTerms": [
       "monterey-jack-and-pepper-jack",
+      "egg-whites-and-the-dry-shake",
       "sauvignon-blanc-and-the-aromatic-whites",
-      "egg-whites-and-the-dry-shake"
+      "combi-ovens-and-steam"
     ],
     "pantryItems": [
       "Eggs",
@@ -4577,9 +4598,9 @@
     },
     "lexiconTerms": [
       "cinnamon-vs-cassia",
-      "butterfat-fluency-butter-cream-and-cultures",
       "the-three-heats-capsaicin-piperine-and-isothiocyanate",
-      "glassware-and-the-chill-law"
+      "bar-mise-and-the-three-step-reach",
+      "caramel-stages-and-sugar-work"
     ],
     "pantryItems": [
       "Eggs",
@@ -4660,10 +4681,10 @@
       }
     },
     "lexiconTerms": [
-      "fenugreek-seed-leaf-and-blue",
       "garam-masala",
       "butterfat-fluency-butter-cream-and-cultures",
-      "chaat-masala"
+      "chaat-masala",
+      "salamander-broiler-and-top-down-fire"
     ],
     "pantryItems": [
       "Chicken",
@@ -4754,8 +4775,7 @@
       }
     },
     "lexiconTerms": [
-      "the-souring-spices-amchur-loomi-anardana-and-tamarind",
-      "doneness-by-touch-sight-and-sound"
+      "the-souring-spices-amchur-loomi-anardana-and-tamarind"
     ],
     "pantryItems": [
       "Onion",
@@ -4849,8 +4869,8 @@
     "lexiconTerms": [
       "turmeric",
       "toasting-blooming-and-the-tadka-doctrine",
-      "floral-notes-and-perfume-dosage",
-      "pomegranate-and-quince-autumns-perfume"
+      "asafoetida-hing",
+      "texture-as-flavor"
     ],
     "pantryItems": [
       "Garlic",
@@ -4938,9 +4958,7 @@
       }
     },
     "lexiconTerms": [
-      "paneer",
-      "blanch-and-shock",
-      "herb-profiles-bright-vs-resinous"
+      "paneer"
     ],
     "pantryItems": [
       "Onion",
@@ -5215,7 +5233,8 @@
     },
     "lexiconTerms": [
       "cumin",
-      "whole-vs-ground-storage-and-the-six-month-rule"
+      "whole-vs-ground-storage-and-the-six-month-rule",
+      "acids-vinegars-and-the-finishing-squeeze"
     ],
     "pantryItems": [
       "Chiles",
@@ -5400,7 +5419,7 @@
       "acid-architecture",
       "t-bone-and-porterhouse",
       "cleavers-chinese-chef-vs-bone",
-      "the-pairing-laws-salt-fat-acid-heat-sweet-bitter"
+      "bitters-the-bars-spice-rack"
     ],
     "pantryItems": [
       "Chicken",
@@ -5589,7 +5608,9 @@
       }
     },
     "lexiconTerms": [
-      "the-sour-template"
+      "the-sour-template",
+      "growth-second-locations-licensing-and-exit",
+      "the-second-day-reheating-as-technique"
     ],
     "pantryItems": [
       "Chicken",
@@ -5692,7 +5713,8 @@
     },
     "lexiconTerms": [
       "curry-leaf",
-      "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime"
+      "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime",
+      "peppers-and-eggplant-the-nightshade-late-summer"
     ],
     "pantryItems": [
       "Chicken",
@@ -5783,10 +5805,10 @@
       }
     },
     "lexiconTerms": [
-      "round-fish-vs-flat-fish",
-      "the-brigade-de-cuisine",
       "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime",
-      "oysters-and-the-r-month-rule"
+      "mother-sauce-fish-stock-fumet",
+      "flavor-pairing-theory",
+      "fat-the-flavor-carrier"
     ],
     "pantryItems": [
       "Shrimp",
@@ -5874,11 +5896,7 @@
         "sub": "Thai flavor logic, taught from Bangkok roots"
       }
     },
-    "lexiconTerms": [
-      "the-nutty-register",
-      "floral-notes-and-perfume-dosage",
-      "pomegranate-and-quince-autumns-perfume"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Chicken",
       "Scallion",
@@ -6155,9 +6173,10 @@
       }
     },
     "lexiconTerms": [
-      "mortar-and-pestle-molcajete-suribachi-granite",
       "serrated-slicers-and-the-long-blades",
-      "garnish-expression-twists-and-the-cherry-question"
+      "mortar-and-pestle-molcajete-suribachi-granite",
+      "taste-vs-aroma-the-retronasal-truth",
+      "bitterness-the-adult-taste"
     ],
     "pantryItems": [
       "Shrimp",
@@ -6260,8 +6279,8 @@
       }
     },
     "lexiconTerms": [
-      "the-global-pantry-what-has-no-season",
       "lap-cheong-and-the-chinese-cured-pantry",
+      "chinese-five-spice",
       "cleavers-chinese-chef-vs-bone",
       "crab-seasons-around-the-world"
     ],
@@ -6532,10 +6551,9 @@
       }
     },
     "lexiconTerms": [
-      "decanting-temperature-and-glassware",
       "paprika-and-pimenton",
-      "temperature-and-perception",
-      "blanch-and-shock"
+      "quatre-epices-and-the-european-baking-blends",
+      "the-opening-soft-launch-and-the-first-90-days"
     ],
     "pantryItems": [
       "Garlic",
@@ -6888,10 +6906,10 @@
       }
     },
     "lexiconTerms": [
+      "the-chefs-knife-western-profile",
       "knife-anatomy-and-grinds",
       "knife-cuts-the-classical-ladder",
-      "the-chefs-knife-western-profile",
-      "petty-paring-and-the-small-blades"
+      "pressure-and-slow-cooking"
     ],
     "pantryItems": [
       "Scallion",
@@ -7155,10 +7173,9 @@
       }
     },
     "lexiconTerms": [
-      "oils-and-smoke-points",
-      "menu-economics-food-cost-yield-and-par",
+      "amari-and-the-bitter-liqueurs",
       "sesame-seeds-tahini-and-beyond",
-      "food-safety-the-chef-owners-non-negotiables"
+      "chicories-and-bitter-greens"
     ],
     "pantryItems": [
       "Eggs",
@@ -7405,9 +7422,9 @@
     },
     "lexiconTerms": [
       "starchy-vs-waxy-potatoes",
-      "the-sommeliers-service-ritual-and-floor-fluency",
-      "nonstick-honestly",
-      "decanting-temperature-and-glassware"
+      "decanting-temperature-and-glassware",
+      "temperature-and-perception",
+      "nonstick-honestly"
     ],
     "pantryItems": [
       "Eggs",
@@ -7591,9 +7608,9 @@
     },
     "lexiconTerms": [
       "the-sherry-spectrum",
-      "chile-flavor-beyond-heat",
-      "zero-proof-cocktails-and-the-sober-bar",
-      "asparagus-springs-starting-gun"
+      "chile-fluency-fresh-and-dried",
+      "brandy-cognac-armagnac-calvados-and-pisco",
+      "chile-flavor-beyond-heat"
     ],
     "pantryItems": [
       "Shrimp",
@@ -7688,9 +7705,8 @@
       }
     },
     "lexiconTerms": [
-      "costing-time-prep-lists-batch-and-cook-chill",
-      "shake-vs-stir-the-first-law",
-      "artichokes-the-twice-yearly-thistle"
+      "artichokes-the-twice-yearly-thistle",
+      "costing-time-prep-lists-batch-and-cook-chill"
     ],
     "pantryItems": [
       "Garlic",
@@ -7868,7 +7884,7 @@
     },
     "lexiconTerms": [
       "clove",
-      "melons-the-august-test"
+      "the-equipment-philosophy-buy-once-buy-cheap-and-the-station-mind"
     ],
     "pantryItems": [
       "Garlic",
@@ -8246,8 +8262,8 @@
     },
     "lexiconTerms": [
       "the-kitchen-torch",
-      "the-citrus-program",
       "shake-vs-stir-the-first-law",
+      "the-citrus-program",
       "citrus-in-winter"
     ],
     "pantryItems": [
@@ -8579,8 +8595,8 @@
       }
     },
     "lexiconTerms": [
-      "lamb-primals",
-      "alpage-cheeses-summer-milk"
+      "alpage-cheeses-summer-milk",
+      "lamb-primals"
     ],
     "pantryItems": [
       "Beef",
@@ -8772,8 +8788,7 @@
       }
     },
     "lexiconTerms": [
-      "tempering-eggs-and-chocolate",
-      "searing-and-pan-technique"
+      "stocks-blanc-brun-broth-and-demi"
     ],
     "pantryItems": [
       "Chicken",
@@ -8857,8 +8872,9 @@
       }
     },
     "lexiconTerms": [
-      "ice-and-dilution-the-invisible-ingredient",
-      "sweetness-as-seasoning"
+      "sweetness-as-seasoning",
+      "decanting-temperature-and-glassware",
+      "temperature-and-perception"
     ],
     "pantryItems": [
       "Eggs",
@@ -8948,7 +8964,10 @@
         "sub": "modern Greek cooking from Athens"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "riesling-the-sommeliers-secret-weapon",
+      "the-equipment-philosophy-buy-once-buy-cheap-and-the-station-mind"
+    ],
     "pantryItems": [
       "Garlic",
       "Potato",
@@ -9124,8 +9143,7 @@
     },
     "lexiconTerms": [
       "feta",
-      "clay-and-earthenware-tagine-donabe-cazuela",
-      "mozzarella-di-bufala-campana"
+      "clay-and-earthenware-tagine-donabe-cazuela"
     ],
     "pantryItems": [
       "Tomato",
@@ -9217,6 +9235,7 @@
     "lexiconTerms": [
       "tasso-and-cajun-andouille",
       "old-bay-creole-and-the-american-tins",
+      "sweetness-as-seasoning",
       "the-spritz-and-aperitivo-hour"
     ],
     "pantryItems": [
@@ -9303,8 +9322,8 @@
     },
     "lexiconTerms": [
       "ham-and-hock",
-      "tempranillo-sangiovese-and-nebbiolo-the-food-wine-trinity",
-      "menu-economics-food-cost-yield-and-par"
+      "black-pepper-and-the-pepper-family",
+      "serrated-slicers-and-the-long-blades"
     ],
     "pantryItems": [
       "Pork",
@@ -9390,7 +9409,9 @@
       }
     },
     "lexiconTerms": [
-      "tasso-and-cajun-andouille"
+      "tasso-and-cajun-andouille",
+      "flavor-pairing-theory",
+      "fat-the-flavor-carrier"
     ],
     "pantryItems": [
       "Chicken",
@@ -9485,9 +9506,7 @@
         "sub": "Cajun technique from a bayou-born chef"
       }
     },
-    "lexiconTerms": [
-      "poach-simmer-boil"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Shrimp",
       "Garlic",
@@ -9664,7 +9683,7 @@
       }
     },
     "lexiconTerms": [
-      "reservations-no-shows-and-the-book"
+      "herb-profiles-bright-vs-resinous"
     ],
     "pantryItems": [
       "Shrimp",
@@ -9757,9 +9776,9 @@
       }
     },
     "lexiconTerms": [
-      "cast-iron",
-      "salt-cod-and-the-preserved-fish-pantry",
       "oils-and-smoke-points",
+      "cast-iron",
+      "baharat-and-the-seven-spice-family",
       "building-the-working-spice-pantry"
     ],
     "pantryItems": [
@@ -9841,7 +9860,7 @@
       "mortadella-bologna",
       "teliszalami-hungarian-winter-salami",
       "scales-and-measuring-by-weight",
-      "provolone-dolce-and-piccante"
+      "mozzarella-di-bufala-campana"
     ],
     "pantryItems": [
       "Garlic",
@@ -9923,7 +9942,9 @@
       }
     },
     "lexiconTerms": [
-      "zero-proof-cocktails-and-the-sober-bar"
+      "zero-proof-cocktails-and-the-sober-bar",
+      "growth-second-locations-licensing-and-exit",
+      "the-second-day-reheating-as-technique"
     ],
     "pantryItems": [
       "Eggs",
@@ -10009,7 +10030,10 @@
         "sub": "Cajun technique from a bayou-born chef"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "caramel-stages-and-sugar-work",
+      "butterfat-fluency-butter-cream-and-cultures"
+    ],
     "pantryItems": [
       "Banana",
       "Butter",
@@ -10184,8 +10208,7 @@
     },
     "lexiconTerms": [
       "ribeye-prime-rib",
-      "sirloin-tri-tip-and-picanha",
-      "ice-and-dilution-the-invisible-ingredient"
+      "sirloin-tri-tip-and-picanha"
     ],
     "pantryItems": [
       "Beef",
@@ -10270,7 +10293,9 @@
         "sub": "the woman who taught the internet Korean food"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "blanch-and-shock"
+    ],
     "pantryItems": [
       "Beef",
       "Tofu",
@@ -10359,7 +10384,8 @@
     "lexiconTerms": [
       "absinthe-and-the-rinse",
       "by-the-glass-economics-coravin-and-corkage",
-      "sesame-seeds-tahini-and-beyond"
+      "sesame-seeds-tahini-and-beyond",
+      "sweetness-as-seasoning"
     ],
     "pantryItems": [
       "Beef",
@@ -10719,9 +10745,8 @@
       }
     },
     "lexiconTerms": [
-      "mother-sauce-fish-stock-fumet",
       "poach-simmer-boil",
-      "the-three-heats-capsaicin-piperine-and-isothiocyanate"
+      "mother-sauce-fish-stock-fumet"
     ],
     "pantryItems": [
       "Anchovy",
@@ -10804,7 +10829,8 @@
       }
     },
     "lexiconTerms": [
-      "short-ribs-english-vs-flanken"
+      "short-ribs-english-vs-flanken",
+      "stone-fruit-in-high-summer"
     ],
     "pantryItems": [
       "Beef",
@@ -10985,10 +11011,10 @@
       }
     },
     "lexiconTerms": [
-      "coriander-seed",
-      "smoke-char-and-the-burnt-edge",
       "round-fish-vs-flat-fish",
-      "star-anise"
+      "coriander-seed",
+      "star-anise",
+      "fennel-anise-and-the-licorice-line"
     ],
     "pantryItems": [
       "Chicken",
@@ -11084,7 +11110,7 @@
       "pate-and-terrine",
       "pate-en-croute",
       "rum-light-aged-agricole-and-funk",
-      "congruent-vs-contrast-the-master-key"
+      "salt-cod-and-the-preserved-fish-pantry"
     ],
     "pantryItems": [
       "Chicken",
@@ -11176,9 +11202,7 @@
         "sub": "Vietnamese home cooking from Da Nang"
       }
     },
-    "lexiconTerms": [
-      "smoked-fish-hot-vs-cold"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Pork",
       "Garlic",
@@ -11271,7 +11295,9 @@
       }
     },
     "lexiconTerms": [
-      "pork-belly"
+      "pork-belly",
+      "stone-fruit-in-high-summer",
+      "squash-summers-water-winters-starch"
     ],
     "pantryItems": [
       "Pork",
@@ -11370,10 +11396,9 @@
       }
     },
     "lexiconTerms": [
-      "acidity-the-backbone",
       "clay-and-earthenware-tagine-donabe-cazuela",
-      "stand-mixer-and-attachments",
-      "wild-salmon-the-run-calendar"
+      "wild-salmon-the-run-calendar",
+      "stand-mixer-and-attachments"
     ],
     "pantryItems": [
       "Beef",
@@ -11458,7 +11483,7 @@
       }
     },
     "lexiconTerms": [
-      "floral-notes-and-perfume-dosage"
+      "the-negroni-and-equal-parts-architecture"
     ],
     "pantryItems": [
       "Chicken",
@@ -11542,8 +11567,7 @@
       }
     },
     "lexiconTerms": [
-      "the-chart-of-accounts-and-4-week-periods",
-      "the-brigade-de-cuisine"
+      "the-chart-of-accounts-and-4-week-periods"
     ],
     "pantryItems": [
       "Ground meat",
@@ -11618,7 +11642,6 @@
       }
     },
     "lexiconTerms": [
-      "muddling-swizzling-and-built-drinks",
       "espresso-and-the-coffee-program"
     ],
     "pantryItems": [
@@ -12061,7 +12084,7 @@
       }
     },
     "lexiconTerms": [
-      "the-sommeliers-service-ritual-and-floor-fluency"
+      "baharat-and-the-seven-spice-family"
     ],
     "pantryItems": [
       "Onion",
@@ -12240,7 +12263,8 @@
       }
     },
     "lexiconTerms": [
-      "third-party-delivery-economics"
+      "third-party-delivery-economics",
+      "salt-cod-and-the-preserved-fish-pantry"
     ],
     "pantryItems": [
       "White fish",
@@ -12580,9 +12604,9 @@
     },
     "lexiconTerms": [
       "service-styles-and-front-of-house-fluency",
-      "absinthe-and-the-rinse",
       "syrups-simple-rich-oleo-and-the-house-program",
-      "artichokes-the-twice-yearly-thistle"
+      "absinthe-and-the-rinse",
+      "bitterness-the-adult-taste"
     ],
     "pantryItems": [
       "Mint",
@@ -12667,8 +12691,7 @@
       }
     },
     "lexiconTerms": [
-      "the-floral-pantry-rose-orange-blossom-and-mahleb",
-      "ff-and-e-smallwares-and-opening-inventory"
+      "the-floral-pantry-rose-orange-blossom-and-mahleb"
     ],
     "pantryItems": [
       "Orange",
@@ -12956,9 +12979,9 @@
       }
     },
     "lexiconTerms": [
-      "game-season-the-autumn-larder",
-      "american-cheese-defended",
       "west-country-farmhouse-cheddar",
+      "american-cheese-defended",
+      "alpage-cheeses-summer-milk",
       "monterey-jack-and-pepper-jack"
     ],
     "pantryItems": [
@@ -13042,7 +13065,8 @@
       }
     },
     "lexiconTerms": [
-      "pork-shoulder-butt-vs-picnic"
+      "pork-shoulder-butt-vs-picnic",
+      "oils-and-smoke-points"
     ],
     "pantryItems": [
       "Pork",
@@ -13124,7 +13148,8 @@
       }
     },
     "lexiconTerms": [
-      "pink-salt-nitrite-and-nitrate-the-science-straight"
+      "pink-salt-nitrite-and-nitrate-the-science-straight",
+      "frozen-dessert-machines-churners-and-pacojet"
     ],
     "pantryItems": [
       "Butter",
@@ -13383,7 +13408,9 @@
       }
     },
     "lexiconTerms": [
-      "apples-and-pears-the-autumn-keepers"
+      "apples-and-pears-the-autumn-keepers",
+      "the-three-heats-capsaicin-piperine-and-isothiocyanate",
+      "bar-mise-and-the-three-step-reach"
     ],
     "pantryItems": [
       "Eggs",
@@ -13473,7 +13500,6 @@
     },
     "lexiconTerms": [
       "tempering-eggs-and-chocolate",
-      "resting-carryover-and-the-thermometer",
       "vanilla",
       "the-nutty-register"
     ],
@@ -13724,7 +13750,9 @@
         "sub": "Istanbul’s table, generously taught"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "steel-science-carbon-stainless-and-hrc"
+    ],
     "pantryItems": [
       "Beef",
       "Lamb",
@@ -13985,7 +14013,6 @@
       }
     },
     "lexiconTerms": [
-      "tomatoes-the-argument-for-august",
       "custards-anglaise-patissiere-and-curds",
       "pink-salt-nitrite-and-nitrate-the-science-straight"
     ],
@@ -14064,9 +14091,7 @@
         "sub": "Istanbul’s table, generously taught"
       }
     },
-    "lexiconTerms": [
-      "chardonnay-the-shape-shifter"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Lamb",
@@ -14236,10 +14261,7 @@
         "sub": "Istanbul’s table, generously taught"
       }
     },
-    "lexiconTerms": [
-      "food-safety-the-chef-owners-non-negotiables",
-      "the-chefs-knife-western-profile"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Garlic",
@@ -14321,7 +14343,7 @@
       }
     },
     "lexiconTerms": [
-      "prime-cost-the-number-that-runs-the-building"
+      "chardonnay-the-shape-shifter"
     ],
     "pantryItems": [
       "Beef",
@@ -14413,9 +14435,7 @@
         "sub": "Istanbul’s table, generously taught"
       }
     },
-    "lexiconTerms": [
-      "sharpening-whetstones-burrs-and-the-truth-about-honing"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Lemon",
       "Butter",
@@ -14507,7 +14527,7 @@
       "allspice",
       "scotch-irish-and-world-whisky",
       "berries-the-late-spring-sprint",
-      "peas-favas-and-the-green-spring"
+      "asparagus-springs-starting-gun"
     ],
     "pantryItems": [
       "Chicken",
@@ -14596,7 +14616,8 @@
       }
     },
     "lexiconTerms": [
-      "peas-favas-and-the-green-spring"
+      "peas-favas-and-the-green-spring",
+      "taste-vs-aroma-the-retronasal-truth"
     ],
     "pantryItems": [
       "Liver & Offal",
@@ -14685,7 +14706,7 @@
     "lexiconTerms": [
       "mutton-and-hogget",
       "lamb-spring-hogget-and-mutton",
-      "toasting-blooming-and-the-tadka-doctrine",
+      "curry-powder-the-colonial-invention",
       "berries-the-late-spring-sprint"
     ],
     "pantryItems": [
@@ -14772,7 +14793,8 @@
       }
     },
     "lexiconTerms": [
-      "flank-skirt-and-hanger"
+      "flank-skirt-and-hanger",
+      "fillet-steak-loin-and-collar"
     ],
     "pantryItems": [
       "Beef",
@@ -14956,7 +14978,8 @@
       }
     },
     "lexiconTerms": [
-      "turmeric"
+      "turmeric",
+      "curry-powder-the-colonial-invention"
     ],
     "pantryItems": [
       "Beef",
@@ -15220,7 +15243,6 @@
       }
     },
     "lexiconTerms": [
-      "the-round-top-bottom-eye",
       "rum-light-aged-agricole-and-funk"
     ],
     "pantryItems": [
@@ -15298,7 +15320,9 @@
     },
     "lexiconTerms": [
       "the-liqueur-shelf-orange-maraschino-chartreuse-and-friends",
-      "the-pigs-calendar-winter-slaughter-and-the-curing-year"
+      "the-three-heats-capsaicin-piperine-and-isothiocyanate",
+      "the-sour-template",
+      "bar-mise-and-the-three-step-reach"
     ],
     "pantryItems": [
       "Lime",
@@ -15386,9 +15410,9 @@
       }
     },
     "lexiconTerms": [
+      "oysters-east-vs-west",
       "scotch-irish-and-world-whisky",
-      "smoke-char-and-the-burnt-edge",
-      "third-party-delivery-economics"
+      "west-country-farmhouse-cheddar"
     ],
     "pantryItems": [
       "Onion",
@@ -15647,7 +15671,7 @@
       }
     },
     "lexiconTerms": [
-      "confit"
+      "third-party-delivery-economics"
     ],
     "pantryItems": [
       "Chicken",
@@ -15899,7 +15923,7 @@
       }
     },
     "lexiconTerms": [
-      "cardamom-green-and-black"
+      "building-the-working-spice-pantry"
     ],
     "pantryItems": [
       "Garlic",
@@ -15996,8 +16020,8 @@
       }
     },
     "lexiconTerms": [
-      "feasibility-and-market-analysis",
-      "muddling-swizzling-and-built-drinks"
+      "muddling-swizzling-and-built-drinks",
+      "feasibility-and-market-analysis"
     ],
     "pantryItems": [
       "Beef",
@@ -16251,7 +16275,6 @@
       }
     },
     "lexiconTerms": [
-      "knife-cuts-the-classical-ladder",
       "american-country-ham",
       "old-bay-creole-and-the-american-tins",
       "bourbon-rye-and-american-whiskey"
@@ -16343,6 +16366,7 @@
     "lexiconTerms": [
       "marketing-and-the-regulars-math",
       "gluten-and-hydration",
+      "mozzarella-di-bufala-campana",
       "american-cheese-defended"
     ],
     "pantryItems": [
@@ -16502,7 +16526,6 @@
       }
     },
     "lexiconTerms": [
-      "melons-the-august-test",
       "nonstick-honestly"
     ],
     "pantryItems": [
@@ -16587,10 +16610,7 @@
         "sub": "Technique films from the South American kitchen"
       }
     },
-    "lexiconTerms": [
-      "alliums-harvest-cure-and-the-spring-exceptions",
-      "pink-salt-nitrite-and-nitrate-the-science-straight"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Ground meat",
       "White fish",
@@ -16860,7 +16880,8 @@
       }
     },
     "lexiconTerms": [
-      "steaming-and-en-papillote"
+      "steaming-and-en-papillote",
+      "line-slang-86-in-the-weeds-and-family-meal"
     ],
     "pantryItems": [
       "Chicken",
@@ -17047,7 +17068,11 @@
         "sub": "Technique films from the South American kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "asparagus-springs-starting-gun",
+      "alliums-harvest-cure-and-the-spring-exceptions",
+      "berries-the-late-spring-sprint"
+    ],
     "pantryItems": [
       "Beef",
       "Ground meat",
@@ -17317,9 +17342,10 @@
       }
     },
     "lexiconTerms": [
-      "the-pairing-laws-salt-fat-acid-heat-sweet-bitter",
+      "poach-simmer-boil",
       "teliszalami-hungarian-winter-salami",
-      "break-even-analysis"
+      "the-pairing-laws-salt-fat-acid-heat-sweet-bitter",
+      "amari-and-the-bitter-liqueurs"
     ],
     "pantryItems": [
       "Chicken",
@@ -17487,8 +17513,7 @@
       }
     },
     "lexiconTerms": [
-      "boning-fillet-and-the-butchery-blades",
-      "reverse-sear-and-the-gray-band"
+      "boning-fillet-and-the-butchery-blades"
     ],
     "pantryItems": [
       "Beef",
@@ -17583,7 +17608,8 @@
       }
     },
     "lexiconTerms": [
-      "ribs-baby-back-vs-spare-vs-st-louis"
+      "ribs-baby-back-vs-spare-vs-st-louis",
+      "blanch-and-shock"
     ],
     "pantryItems": [
       "Beef",
@@ -17679,8 +17705,7 @@
       }
     },
     "lexiconTerms": [
-      "sulguni",
-      "dry-off-dry-and-residual-sugar"
+      "sulguni"
     ],
     "pantryItems": [
       "Eggs",
@@ -17758,7 +17783,8 @@
       }
     },
     "lexiconTerms": [
-      "starchy-vs-waxy-potatoes"
+      "starchy-vs-waxy-potatoes",
+      "line-slang-86-in-the-weeds-and-family-meal"
     ],
     "pantryItems": [
       "Eggs",
@@ -17922,7 +17948,7 @@
       "kabanosy-and-the-kielbasa-family",
       "wild-mushrooms-the-forest-calendar",
       "liquor-license-economics",
-      "juniper"
+      "chile-fluency-fresh-and-dried"
     ],
     "pantryItems": [
       "Pork",
@@ -18008,10 +18034,9 @@
       }
     },
     "lexiconTerms": [
-      "beer-styles-the-two-family-map",
-      "fryer-setups-and-oil-management",
       "smoked-fish-hot-vs-cold",
-      "steaming-and-en-papillote"
+      "beer-styles-the-two-family-map",
+      "fryer-setups-and-oil-management"
     ],
     "pantryItems": [
       "Beef",
@@ -18090,7 +18115,8 @@
       }
     },
     "lexiconTerms": [
-      "startup-costs-the-real-number"
+      "startup-costs-the-real-number",
+      "grilling-vs-barbecue-vs-smoking"
     ],
     "pantryItems": [
       "Beef",
@@ -18528,10 +18554,7 @@
         "sub": "the British kitchen, drilled to standard"
       }
     },
-    "lexiconTerms": [
-      "champagne-and-the-methode",
-      "tasting-and-seasoning-like-a-chef"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Ground meat",
@@ -18776,7 +18799,10 @@
       }
     },
     "lexiconTerms": [
-      "knife-anatomy-and-grinds"
+      "the-chefs-knife-western-profile",
+      "knife-anatomy-and-grinds",
+      "knife-cuts-the-classical-ladder",
+      "pink-salt-nitrite-and-nitrate-the-science-straight"
     ],
     "pantryItems": [
       "Eggs",
@@ -18938,7 +18964,9 @@
         "sub": "Irish home cooking, brightly taught"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "fermentation-in-bread-yeast-levain-preferments"
+    ],
     "pantryItems": [
       "Butter",
       "Milk",
@@ -19014,10 +19042,9 @@
       }
     },
     "lexiconTerms": [
-      "foie-gras-torchon-mi-cuit-and-ethics-of-service",
-      "slicing-and-service-law",
-      "tea-service-and-pairing",
-      "hot-drinks-toddy-irish-coffee-and-the-warm-service"
+      "hot-drinks-toddy-irish-coffee-and-the-warm-service",
+      "asparagus-springs-starting-gun",
+      "alliums-harvest-cure-and-the-spring-exceptions"
     ],
     "pantryItems": [
       "Onion",
@@ -19099,7 +19126,9 @@
         "sub": "Irish home cooking, brightly taught"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "wild-salmon-the-run-calendar"
+    ],
     "pantryItems": [
       "Bacon",
       "Salmon",
@@ -19260,7 +19289,7 @@
       }
     },
     "lexiconTerms": [
-      "hot-drinks-toddy-irish-coffee-and-the-warm-service"
+      "amari-and-the-bitter-liqueurs"
     ],
     "pantryItems": [
       "Beef",
@@ -19344,7 +19373,7 @@
       }
     },
     "lexiconTerms": [
-      "wild-salmon-the-run-calendar",
+      "smoked-fish-hot-vs-cold",
       "bivalves-oysters-clams-mussels-scallops",
       "hearty-vs-tender-herbs"
     ],
@@ -19432,7 +19461,9 @@
         "sub": "Irish home cooking, brightly taught"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "poach-simmer-boil"
+    ],
     "pantryItems": [
       "Onion",
       "Scallion",
@@ -19511,8 +19542,8 @@
       }
     },
     "lexiconTerms": [
-      "mandoline-and-the-slicing-machines",
-      "the-pigs-calendar-winter-slaughter-and-the-curing-year"
+      "slicing-and-service-law",
+      "mandoline-and-the-slicing-machines"
     ],
     "pantryItems": [
       "Eggs",
@@ -19590,8 +19621,6 @@
       }
     },
     "lexiconTerms": [
-      "rinses-floats-and-layering",
-      "brassicas-and-frost-the-sweetening",
       "hot-drinks-toddy-irish-coffee-and-the-warm-service"
     ],
     "pantryItems": [
@@ -19681,12 +19710,7 @@
         "sub": "the Filipino kitchen’s great teacher"
       }
     },
-    "lexiconTerms": [
-      "black-pepper-and-the-pepper-family",
-      "allium-family",
-      "the-salame-family-milano-genoa-felino",
-      "beer-styles-the-two-family-map"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Chicken",
       "Garlic",
@@ -20036,7 +20060,9 @@
         "sub": "the Filipino kitchen’s great teacher"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "acid-architecture"
+    ],
     "pantryItems": [
       "Chicken",
       "Sausage",
@@ -20217,7 +20243,7 @@
     },
     "lexiconTerms": [
       "guanciale-jowl-and-lardo",
-      "beer-at-the-table-and-the-carbonation-advantage"
+      "grilling-vs-barbecue-vs-smoking"
     ],
     "pantryItems": [
       "Chicken",
@@ -20397,7 +20423,6 @@
       }
     },
     "lexiconTerms": [
-      "strainers-hawthorne-julep-and-the-double-strain",
       "casings-molds-and-the-curing-chamber",
       "microplane-graters-and-the-zest-doctrine"
     ],
@@ -20569,9 +20594,7 @@
         "sub": "German regional cooking, documented faithfully"
       }
     },
-    "lexiconTerms": [
-      "tempranillo-sangiovese-and-nebbiolo-the-food-wine-trinity"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Bacon",
@@ -20753,7 +20776,6 @@
       }
     },
     "lexiconTerms": [
-      "the-concept-and-business-plan",
       "kpis-and-the-daily-dashboard"
     ],
     "pantryItems": [
@@ -20840,8 +20862,8 @@
       }
     },
     "lexiconTerms": [
-      "caraway-and-nigella",
-      "beer-styles-the-two-family-map"
+      "beer-styles-the-two-family-map",
+      "caraway-and-nigella"
     ],
     "pantryItems": [
       "Pork",
@@ -21013,7 +21035,9 @@
         "sub": "German regional cooking, documented faithfully"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "the-brine-and-sea-register"
+    ],
     "pantryItems": [
       "Beef",
       "Pork",
@@ -21100,6 +21124,7 @@
       }
     },
     "lexiconTerms": [
+      "the-chefs-knife-western-profile",
       "knife-anatomy-and-grinds"
     ],
     "pantryItems": [
@@ -21186,7 +21211,8 @@
       }
     },
     "lexiconTerms": [
-      "apples-and-pears-the-autumn-keepers"
+      "apples-and-pears-the-autumn-keepers",
+      "acid-architecture"
     ],
     "pantryItems": [
       "Onion",
@@ -21277,7 +21303,10 @@
       }
     },
     "lexiconTerms": [
-      "sashimi-grade-and-ikejime"
+      "menu-economics-food-cost-yield-and-par",
+      "food-safety-the-chef-owners-non-negotiables",
+      "sashimi-grade-and-ikejime",
+      "sieves-chinois-tamis-and-food-mill"
     ],
     "pantryItems": [
       "Butter",
@@ -21354,7 +21383,9 @@
     },
     "lexiconTerms": [
       "legal-entity-and-partnership-agreements",
-      "tempering-eggs-and-chocolate"
+      "tempering-eggs-and-chocolate",
+      "brandy-cognac-armagnac-calvados-and-pisco",
+      "funding-sba-investors-and-the-capital-stack"
     ],
     "pantryItems": [
       "Eggs",
@@ -21434,7 +21465,7 @@
       }
     },
     "lexiconTerms": [
-      "kitchen-design-and-flow"
+      "break-even-analysis"
     ],
     "pantryItems": [
       "Pork",
@@ -21517,10 +21548,7 @@
         "sub": "Technique films from the Austrian kitchen"
       }
     },
-    "lexiconTerms": [
-      "kpis-and-the-daily-dashboard",
-      "oysters-and-the-r-month-rule"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Venison/Game",
@@ -21608,9 +21636,10 @@
       }
     },
     "lexiconTerms": [
-      "martini-and-manhattan-the-stirred-aristocrats",
-      "caraway-and-nigella",
-      "microplane-graters-and-the-zest-doctrine"
+      "floral-notes-and-perfume-dosage",
+      "pomegranate-and-quince-autumns-perfume",
+      "the-pairing-laws-salt-fat-acid-heat-sweet-bitter",
+      "caraway-and-nigella"
     ],
     "pantryItems": [
       "Beef",
@@ -21704,9 +21733,7 @@
         "sub": "Technique films from the Austrian kitchen"
       }
     },
-    "lexiconTerms": [
-      "menu-pricing-and-psychology"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Eggs",
@@ -21795,7 +21822,9 @@
         "sub": "Technique films from the Austrian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "melons-the-august-test"
+    ],
     "pantryItems": [
       "Ground meat",
       "Eggs",
@@ -22061,6 +22090,8 @@
       }
     },
     "lexiconTerms": [
+      "muddling-swizzling-and-built-drinks",
+      "hot-drinks-toddy-irish-coffee-and-the-warm-service",
       "apples-and-pears-the-autumn-keepers"
     ],
     "pantryItems": [
@@ -22142,7 +22173,10 @@
         "sub": "Technique films from the Austrian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "doneness-by-touch-sight-and-sound",
+      "tempering-eggs-and-chocolate"
+    ],
     "pantryItems": [
       "Eggs",
       "Dried fruit",
@@ -22414,7 +22448,6 @@
       }
     },
     "lexiconTerms": [
-      "brining-wet-dry-and-cures",
       "body-alcohol-and-weight-matching",
       "scales-and-measuring-by-weight"
     ],
@@ -22588,10 +22621,7 @@
         "sub": "Technique films from the Scandinavian kitchen"
       }
     },
-    "lexiconTerms": [
-      "sharpening-whetstones-burrs-and-the-truth-about-honing",
-      "cash-flow-and-the-working-capital-trap"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Anchovy",
       "Onion",
@@ -22682,8 +22712,7 @@
       }
     },
     "lexiconTerms": [
-      "proofing-oven-spring-and-the-crumb",
-      "kitchen-design-and-flow"
+      "proofing-oven-spring-and-the-crumb"
     ],
     "pantryItems": [
       "Corn",
@@ -22768,9 +22797,7 @@
         "sub": "Technique films from the Scandinavian kitchen"
       }
     },
-    "lexiconTerms": [
-      "dry-off-dry-and-residual-sugar"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Shrimp",
       "White fish",
@@ -22864,7 +22891,10 @@
         "sub": "Technique films from the Scandinavian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "syrups-simple-rich-oleo-and-the-house-program",
+      "zero-proof-cocktails-and-the-sober-bar"
+    ],
     "pantryItems": [
       "Eggs",
       "Butter",
@@ -23037,9 +23067,7 @@
         "sub": "Technique films from the Scandinavian kitchen"
       }
     },
-    "lexiconTerms": [
-      "port-madeira-and-the-fortified-sweets"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Shrimp",
       "Lemon",
@@ -23120,7 +23148,9 @@
         "sub": "Technique films from the Scandinavian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "salt-types-and-when-each-wins"
+    ],
     "pantryItems": [
       "Eggs",
       "Lemon",
@@ -23214,8 +23244,8 @@
       }
     },
     "lexiconTerms": [
-      "fermentation-and-pickling",
-      "fermentation-in-bread-yeast-levain-preferments"
+      "oysters-east-vs-west",
+      "kpis-and-the-daily-dashboard"
     ],
     "pantryItems": [
       "Bread",
@@ -23570,8 +23600,7 @@
       }
     },
     "lexiconTerms": [
-      "reverse-sear-and-the-gray-band",
-      "service-styles-and-front-of-house-fluency"
+      "reverse-sear-and-the-gray-band"
     ],
     "pantryItems": [
       "Beef",
@@ -23663,7 +23692,8 @@
       }
     },
     "lexiconTerms": [
-      "congruent-vs-contrast-the-master-key"
+      "congruent-vs-contrast-the-master-key",
+      "cardamom-green-and-black"
     ],
     "pantryItems": [
       "Ground meat",
@@ -23756,8 +23786,8 @@
       }
     },
     "lexiconTerms": [
-      "berbere-and-mitmita",
-      "the-brigade-de-cuisine"
+      "the-brigade-de-cuisine",
+      "berbere-and-mitmita"
     ],
     "pantryItems": [
       "Beef",
@@ -23835,9 +23865,7 @@
         "sub": "Technique films from the East African kitchen"
       }
     },
-    "lexiconTerms": [
-      "lobster-hard-vs-soft-shell"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Sweet potato",
       "Corn",
@@ -24249,8 +24277,8 @@
       }
     },
     "lexiconTerms": [
-      "spatchcock-butterfly",
-      "acidity-the-backbone"
+      "acidity-the-backbone",
+      "spatchcock-butterfly"
     ],
     "pantryItems": [
       "Chicken",
@@ -24335,10 +24363,7 @@
         "sub": "Technique films from the Portuguese kitchen"
       }
     },
-    "lexiconTerms": [
-      "the-repair-table-balancing-a-dish",
-      "liquor-license-economics"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Mussels/Clams",
       "Garlic",
@@ -24420,6 +24445,8 @@
     },
     "lexiconTerms": [
       "beer-at-the-table-and-the-carbonation-advantage",
+      "pork-loin-vs-tenderloin",
+      "beer-styles-the-two-family-map",
       "bay-leaf"
     ],
     "pantryItems": [
@@ -24504,7 +24531,6 @@
       }
     },
     "lexiconTerms": [
-      "jambon-de-bayonne-and-french-whole-muscle-hams",
       "port-madeira-and-the-fortified-sweets",
       "beer-at-the-table-and-the-carbonation-advantage"
     ],
@@ -24591,8 +24617,7 @@
       }
     },
     "lexiconTerms": [
-      "cephalopods-squid-octopus-cuttlefish",
-      "sharpening-whetstones-burrs-and-the-truth-about-honing"
+      "cephalopods-squid-octopus-cuttlefish"
     ],
     "pantryItems": [
       "Squid/Octopus",
@@ -24674,7 +24699,8 @@
       }
     },
     "lexiconTerms": [
-      "the-oily-fish-calendar"
+      "the-oily-fish-calendar",
+      "building-the-home-and-starting-bar"
     ],
     "pantryItems": [
       "Sardines",
@@ -25035,7 +25061,7 @@
     },
     "lexiconTerms": [
       "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime",
-      "curry-leaf"
+      "kitchen-design-and-flow"
     ],
     "pantryItems": [
       "Beef",
@@ -25213,9 +25239,7 @@
         "sub": "Technique films from the Indonesian kitchen"
       }
     },
-    "lexiconTerms": [
-      "the-repair-table-balancing-a-dish"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Tofu",
       "Eggs",
@@ -25303,6 +25327,7 @@
       }
     },
     "lexiconTerms": [
+      "the-sommeliers-service-ritual-and-floor-fluency",
       "turmeric"
     ],
     "pantryItems": [
@@ -25503,7 +25528,6 @@
     },
     "lexiconTerms": [
       "the-essential-smallwares",
-      "boning-fillet-and-the-butchery-blades",
       "the-chart-of-accounts-and-4-week-periods"
     ],
     "pantryItems": [
@@ -25596,8 +25620,6 @@
       }
     },
     "lexiconTerms": [
-      "terroir-and-old-world-vs-new-world",
-      "malbec-zinfandel-and-the-new-world-crowd-pleasers",
       "the-well-the-call-and-the-back-bar",
       "deep-and-shallow-frying"
     ],
@@ -25765,7 +25787,9 @@
         "sub": "Technique films from the Malaysian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "syrups-simple-rich-oleo-and-the-house-program"
+    ],
     "pantryItems": [
       "Anchovy",
       "Eggs",
@@ -26050,7 +26074,9 @@
       }
     },
     "lexiconTerms": [
-      "martini-and-manhattan-the-stirred-aristocrats"
+      "martini-and-manhattan-the-stirred-aristocrats",
+      "floral-notes-and-perfume-dosage",
+      "pomegranate-and-quince-autumns-perfume"
     ],
     "pantryItems": [
       "Shrimp",
@@ -26321,7 +26347,7 @@
       }
     },
     "lexiconTerms": [
-      "mise-en-place"
+      "ice-and-dilution-the-invisible-ingredient"
     ],
     "pantryItems": [
       "Eggs",
@@ -26401,10 +26427,7 @@
         "sub": "Technique films from the Malaysian kitchen"
       }
     },
-    "lexiconTerms": [
-      "the-pass-and-expediting",
-      "rinses-floats-and-layering"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Shrimp",
       "Onion",
@@ -26486,9 +26509,7 @@
         "sub": "Technique films from the Malaysian kitchen"
       }
     },
-    "lexiconTerms": [
-      "fennel-anise-and-the-licorice-line"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Corn",
       "Coconut",
@@ -26657,10 +26678,7 @@
         "sub": "Technique films from the Indonesian kitchen"
       }
     },
-    "lexiconTerms": [
-      "braising-and-stewing",
-      "tasting-and-seasoning-like-a-chef"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Chicken",
       "Garlic",
@@ -26747,10 +26765,10 @@
       }
     },
     "lexiconTerms": [
-      "ti-allowance-and-lease-negotiation",
-      "vendors-purchasing-and-negotiation",
       "the-aroma-compound-families",
-      "roots-and-the-storage-winter"
+      "roots-and-the-storage-winter",
+      "the-pigs-calendar-winter-slaughter-and-the-curing-year",
+      "teliszalami-hungarian-winter-salami"
     ],
     "pantryItems": [
       "Beef",
@@ -27091,7 +27109,8 @@
       }
     },
     "lexiconTerms": [
-      "mushroom-field-guide"
+      "mushroom-field-guide",
+      "roots-and-the-storage-winter"
     ],
     "pantryItems": [
       "Beef",
@@ -27448,7 +27467,7 @@
       }
     },
     "lexiconTerms": [
-      "dehydrator-ferment-station-and-the-pantry-machines"
+      "kitchen-design-and-flow"
     ],
     "pantryItems": [
       "Beef",
@@ -27538,8 +27557,8 @@
       }
     },
     "lexiconTerms": [
-      "creaming-foaming-and-cake-structure",
-      "building-flavor-in-layers"
+      "building-flavor-in-layers",
+      "infusion-steeping-flavor-into-fat-cream-and-syrup"
     ],
     "pantryItems": [
       "Eggs",
@@ -27621,7 +27640,9 @@
       }
     },
     "lexiconTerms": [
-      "mustard-seeds-yellow-brown-and-black"
+      "mustard-seeds-yellow-brown-and-black",
+      "martini-and-manhattan-the-stirred-aristocrats",
+      "startup-costs-the-real-number"
     ],
     "pantryItems": [
       "Lamb",
@@ -27711,9 +27732,10 @@
       }
     },
     "lexiconTerms": [
-      "oysters-east-vs-west",
       "malbec-zinfandel-and-the-new-world-crowd-pleasers",
-      "star-anise"
+      "the-sommeliers-service-ritual-and-floor-fluency",
+      "star-anise",
+      "fennel-anise-and-the-licorice-line"
     ],
     "pantryItems": [
       "Beef",
@@ -27894,10 +27916,7 @@
       }
     },
     "lexiconTerms": [
-      "lamination",
-      "the-org-chart-and-management-structure",
-      "health-inspections-and-crisis-management",
-      "fryer-setups-and-oil-management"
+      "lamination"
     ],
     "pantryItems": [
       "Lamb",
@@ -28055,9 +28074,7 @@
         "sub": "Technique films from the Caucasus & Central Asian kitchen"
       }
     },
-    "lexiconTerms": [
-      "legal-entity-and-partnership-agreements"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Pork",
@@ -28140,7 +28157,8 @@
       }
     },
     "lexiconTerms": [
-      "fenugreek-seed-leaf-and-blue"
+      "fenugreek-seed-leaf-and-blue",
+      "liquor-license-economics"
     ],
     "pantryItems": [
       "Liver & Offal",
@@ -28227,9 +28245,6 @@
       }
     },
     "lexiconTerms": [
-      "bar-mise-and-the-three-step-reach",
-      "pate-and-terrine",
-      "pate-en-croute",
       "fenugreek-seed-leaf-and-blue"
     ],
     "pantryItems": [
@@ -28317,7 +28332,9 @@
       }
     },
     "lexiconTerms": [
-      "head-cheese-and-the-aspic-arts"
+      "head-cheese-and-the-aspic-arts",
+      "oysters-and-the-r-month-rule",
+      "fenugreek-seed-leaf-and-blue"
     ],
     "pantryItems": [
       "Garlic",
@@ -28492,9 +28509,10 @@
       }
     },
     "lexiconTerms": [
-      "acids-vinegars-and-the-finishing-squeeze",
       "proofing-oven-spring-and-the-crumb",
-      "dehydrator-ferment-station-and-the-pantry-machines"
+      "dehydrator-ferment-station-and-the-pantry-machines",
+      "building-the-home-and-starting-bar",
+      "why-restaurants-fail-the-honest-list"
     ],
     "pantryItems": [
       "Bread",
@@ -28910,9 +28928,7 @@
       }
     },
     "lexiconTerms": [
-      "gluten-and-hydration",
-      "proofing-oven-spring-and-the-crumb",
-      "tipping-models-pools-tip-credits-and-service-charges"
+      "gluten-and-hydration"
     ],
     "pantryItems": [
       "Bread",
@@ -29146,7 +29162,6 @@
       }
     },
     "lexiconTerms": [
-      "lamination",
       "paneer"
     ],
     "pantryItems": [
@@ -29222,7 +29237,9 @@
         "sub": "bread science from the flour people"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "doneness-by-touch-sight-and-sound"
+    ],
     "pantryItems": [
       "Eggs",
       "Corn",
@@ -29316,9 +29333,7 @@
     },
     "lexiconTerms": [
       "syrah-grenache-and-the-rhone-school",
-      "allium-family",
-      "gruyere",
-      "the-salame-family-milano-genoa-felino"
+      "gruyere"
     ],
     "pantryItems": [
       "Onion",
@@ -29605,9 +29620,9 @@
     },
     "lexiconTerms": [
       "meringues-french-swiss-italian",
-      "sieves-chinois-tamis-and-food-mill",
       "the-pass-and-expediting",
-      "pancetta-tesa-and-arrotolata"
+      "sieves-chinois-tamis-and-food-mill",
+      "ff-and-e-smallwares-and-opening-inventory"
     ],
     "pantryItems": [
       "Pork",
@@ -29708,7 +29723,12 @@
         "sub": "the classical sauce repertoire, demonstrated"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "allium-family",
+      "the-salame-family-milano-genoa-felino",
+      "gin-and-the-botanical-family",
+      "highballs-and-the-collins-family"
+    ],
     "pantryItems": [
       "Eggs",
       "Chiles",
@@ -29801,9 +29821,9 @@
     },
     "lexiconTerms": [
       "scallops-dry-vs-wet-u-10",
+      "strainers-hawthorne-julep-and-the-double-strain",
       "sauvignon-blanc",
-      "chenin-blanc",
-      "boudin-noir-and-boudin-blanc"
+      "chenin-blanc"
     ],
     "pantryItems": [
       "Ground meat",
@@ -29894,9 +29914,8 @@
     },
     "lexiconTerms": [
       "knife-care-and-the-cutting-board-question",
-      "building-the-charcuterie-board",
-      "the-restaurant-p-and-l-line-by-line",
-      "round-fish-vs-flat-fish"
+      "round-fish-vs-flat-fish",
+      "building-the-charcuterie-board"
     ],
     "pantryItems": [
       "Anchovy",
@@ -29980,8 +29999,7 @@
       }
     },
     "lexiconTerms": [
-      "the-sherry-spectrum",
-      "the-chart-of-accounts-and-4-week-periods"
+      "the-sherry-spectrum"
     ],
     "pantryItems": [
       "Garlic",
@@ -30064,8 +30082,7 @@
       }
     },
     "lexiconTerms": [
-      "cotija",
-      "cash-flow-and-the-working-capital-trap"
+      "cotija"
     ],
     "pantryItems": [
       "Chicken",
@@ -30151,7 +30168,9 @@
         "sub": "the classical sauce repertoire, demonstrated"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "congruent-vs-contrast-the-master-key"
+    ],
     "pantryItems": [
       "Chicken",
       "Garlic",
@@ -30346,9 +30365,7 @@
       }
     },
     "lexiconTerms": [
-      "caramel-stages-and-sugar-work",
       "creaming-foaming-and-cake-structure",
-      "terroir-and-old-world-vs-new-world",
       "the-org-chart-and-management-structure"
     ],
     "pantryItems": [
@@ -30433,7 +30450,8 @@
       }
     },
     "lexiconTerms": [
-      "ricotta"
+      "ricotta",
+      "the-chart-of-accounts-and-4-week-periods"
     ],
     "pantryItems": [
       "Eggs",
@@ -30529,7 +30547,9 @@
       }
     },
     "lexiconTerms": [
-      "speck-alto-adige"
+      "speck-alto-adige",
+      "the-org-chart-and-management-structure",
+      "lobster-hard-vs-soft-shell"
     ],
     "pantryItems": [
       "Eggs",
@@ -30713,6 +30733,7 @@
     "lexiconTerms": [
       "akkawi-and-nabulsi",
       "ricotta",
+      "menu-economics-food-cost-yield-and-par",
       "the-floral-pantry-rose-orange-blossom-and-mahleb"
     ],
     "pantryItems": [
@@ -30793,9 +30814,7 @@
         "sub": "pastry precision with working-baker honesty"
       }
     },
-    "lexiconTerms": [
-      "tiki-and-the-rum-canon"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Corn",
       "Berries",
@@ -30874,7 +30893,6 @@
       }
     },
     "lexiconTerms": [
-      "roots-and-the-storage-winter",
       "mustard-seeds-yellow-brown-and-black"
     ],
     "pantryItems": [
@@ -31052,9 +31070,7 @@
         "sub": "pastry precision with working-baker honesty"
       }
     },
-    "lexiconTerms": [
-      "caramel-stages-and-sugar-work"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Dried fruit",
@@ -31146,8 +31162,9 @@
     },
     "lexiconTerms": [
       "malbec",
-      "short-ribs-english-vs-flanken",
-      "building-the-charcuterie-board"
+      "malbec-zinfandel-and-the-new-world-crowd-pleasers",
+      "oysters-and-the-r-month-rule",
+      "short-ribs-english-vs-flanken"
     ],
     "pantryItems": [
       "Beef"
@@ -31595,7 +31612,7 @@
       }
     },
     "lexiconTerms": [
-      "knife-care-and-the-cutting-board-question"
+      "searing-and-pan-technique"
     ],
     "pantryItems": [
       "Eggs",
@@ -31681,6 +31698,7 @@
       }
     },
     "lexiconTerms": [
+      "the-repair-table-balancing-a-dish",
       "tuna-grades-akami-chutoro-otoro"
     ],
     "pantryItems": [
@@ -31854,9 +31872,7 @@
         "sub": "Argentina’s asado brotherhood"
       }
     },
-    "lexiconTerms": [
-      "the-maillard-reaction"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Milk",
       "Sugar",
@@ -32007,7 +32023,8 @@
       }
     },
     "lexiconTerms": [
-      "sashimi-grade-and-ikejime"
+      "sashimi-grade-and-ikejime",
+      "congruent-vs-contrast-the-master-key"
     ],
     "pantryItems": [
       "Tuna",
@@ -32091,7 +32108,9 @@
     },
     "lexiconTerms": [
       "building-flavor-in-layers",
-      "pork-shoulder-butt-vs-picnic"
+      "pork-shoulder-butt-vs-picnic",
+      "prime-cost-the-number-that-runs-the-building",
+      "floral-notes-and-perfume-dosage"
     ],
     "pantryItems": [
       "Pork",
@@ -32175,7 +32194,8 @@
       }
     },
     "lexiconTerms": [
-      "casings-molds-and-the-curing-chamber"
+      "casings-molds-and-the-curing-chamber",
+      "the-pigs-calendar-winter-slaughter-and-the-curing-year"
     ],
     "pantryItems": [
       "Ground meat",
@@ -32516,7 +32536,6 @@
       }
     },
     "lexiconTerms": [
-      "baste-arroser-and-glaze",
       "spatchcock-butterfly"
     ],
     "pantryItems": [
@@ -32690,8 +32709,7 @@
       }
     },
     "lexiconTerms": [
-      "the-citrus-program",
-      "citrus-zest-juice-and-pith"
+      "sharpening-whetstones-burrs-and-the-truth-about-honing"
     ],
     "pantryItems": [
       "Ground meat",
@@ -32948,7 +32966,7 @@
     },
     "lexiconTerms": [
       "sheet-pans-racks-and-hotel-pans",
-      "terroir-and-old-world-vs-new-world"
+      "oysters-and-the-r-month-rule"
     ],
     "pantryItems": [
       "Ground meat",
@@ -33047,7 +33065,8 @@
     "lexiconTerms": [
       "sauvignon-blanc",
       "chenin-blanc",
-      "boudin-noir-and-boudin-blanc"
+      "boudin-noir-and-boudin-blanc",
+      "beer-at-the-table-and-the-carbonation-advantage"
     ],
     "pantryItems": [
       "Shrimp",
@@ -33222,7 +33241,10 @@
         "sub": "Cajun technique from a bayou-born chef"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "tasting-and-seasoning-like-a-chef",
+      "the-restaurant-p-and-l-line-by-line"
+    ],
     "pantryItems": [
       "Beef",
       "Eggs",
@@ -33412,7 +33434,8 @@
     "lexiconTerms": [
       "mirepoix-trinity-sofrito-and-friends",
       "the-pigs-calendar-winter-slaughter-and-the-curing-year",
-      "ham-and-hock"
+      "ham-and-hock",
+      "prime-cost-the-number-that-runs-the-building"
     ],
     "pantryItems": [
       "Beef",
@@ -33517,7 +33540,7 @@
       }
     },
     "lexiconTerms": [
-      "caramel-stages-and-sugar-work"
+      "resting-carryover-and-the-thermometer"
     ],
     "pantryItems": [
       "Butter",
@@ -33685,8 +33708,7 @@
     },
     "lexiconTerms": [
       "absinthe-and-the-rinse",
-      "the-old-fashioned-template",
-      "brandy-cognac-armagnac-calvados-and-pisco"
+      "the-old-fashioned-template"
     ],
     "pantryItems": [
       "Lemon",
@@ -33868,8 +33890,7 @@
       }
     },
     "lexiconTerms": [
-      "grills-and-smokers-kettle-kamado-offset-pellet",
-      "bitters-the-bars-spice-rack"
+      "grills-and-smokers-kettle-kamado-offset-pellet"
     ],
     "pantryItems": [
       "Pork",
@@ -34214,7 +34235,7 @@
       }
     },
     "lexiconTerms": [
-      "bar-mise-and-the-three-step-reach"
+      "dehydrator-ferment-station-and-the-pantry-machines"
     ],
     "pantryItems": [
       "Bacon",
@@ -34302,8 +34323,7 @@
       }
     },
     "lexiconTerms": [
-      "the-round-top-bottom-eye",
-      "ff-and-e-smallwares-and-opening-inventory"
+      "the-round-top-bottom-eye"
     ],
     "pantryItems": [
       "Eggs",
@@ -34394,9 +34414,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "umami-and-the-glutamate-pantry"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Corn",
@@ -34651,9 +34669,9 @@
       }
     },
     "lexiconTerms": [
+      "service-styles-and-front-of-house-fluency",
       "queso-oaxaca-quesillo",
-      "the-aroma-compound-families",
-      "smoke-char-and-the-burnt-edge"
+      "sharpening-whetstones-burrs-and-the-truth-about-honing"
     ],
     "pantryItems": [
       "Chicken",
@@ -34835,9 +34853,7 @@
         "sub": "the tested American repertoire"
       }
     },
-    "lexiconTerms": [
-      "personal-guarantees-and-the-good-guy-clause"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Onion",
@@ -35035,7 +35051,9 @@
     },
     "lexiconTerms": [
       "toasting-nuts-seeds-grains-and-coconut",
-      "fermentation-and-pickling"
+      "allium-family",
+      "the-salame-family-milano-genoa-felino",
+      "gin-and-the-botanical-family"
     ],
     "pantryItems": [
       "Onion",
@@ -35121,7 +35139,6 @@
       }
     },
     "lexiconTerms": [
-      "the-maillard-reaction",
       "insurance-the-policy-stack"
     ],
     "pantryItems": [
@@ -35213,8 +35230,7 @@
       }
     },
     "lexiconTerms": [
-      "menu-economics-food-cost-yield-and-par",
-      "the-concept-and-business-plan"
+      "melons-the-august-test"
     ],
     "pantryItems": [
       "Eggs",
@@ -35295,7 +35311,6 @@
       }
     },
     "lexiconTerms": [
-      "egg-whites-and-the-dry-shake",
       "umami-and-the-glutamate-pantry",
       "pate-and-terrine",
       "pate-en-croute"
@@ -35747,10 +35762,7 @@
         "sub": "Technique films from the Street Food Atlas kitchen"
       }
     },
-    "lexiconTerms": [
-      "tasting-vocabulary-and-palate-training",
-      "tomatoes-the-argument-for-august"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Onion",
       "Garlic",
@@ -35853,6 +35865,7 @@
       }
     },
     "lexiconTerms": [
+      "resting-carryover-and-the-thermometer",
       "queso-oaxaca-quesillo"
     ],
     "pantryItems": [
@@ -35954,8 +35967,9 @@
       }
     },
     "lexiconTerms": [
-      "line-slang-86-in-the-weeds-and-family-meal",
-      "rinses-floats-and-layering"
+      "rinses-floats-and-layering",
+      "the-pass-and-expediting",
+      "melons-the-august-test"
     ],
     "pantryItems": [
       "Chicken",
@@ -36055,7 +36069,8 @@
       }
     },
     "lexiconTerms": [
-      "oysters-east-vs-west"
+      "fryer-setups-and-oil-management",
+      "the-citrus-program"
     ],
     "pantryItems": [
       "Beef",
@@ -36231,10 +36246,7 @@
         "sub": "Technique films from the Street Food Atlas kitchen"
       }
     },
-    "lexiconTerms": [
-      "vendors-purchasing-and-negotiation",
-      "roots-and-the-storage-winter"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Milk",
       "Rice",
@@ -36683,9 +36695,7 @@
         "sub": "the science-first kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "umami-and-the-glutamate-pantry"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "White fish",
       "Anchovy",
@@ -36947,8 +36957,8 @@
     "lexiconTerms": [
       "west-country-farmhouse-cheddar",
       "stilton",
-      "aged-gouda",
-      "building-the-cheese-board-and-cave-basics"
+      "tasting-vocabulary-and-palate-training",
+      "aged-gouda"
     ],
     "pantryItems": [
       "Eggs",
@@ -37030,7 +37040,9 @@
         "sub": "the science-first kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "sharpening-whetstones-burrs-and-the-truth-about-honing"
+    ],
     "pantryItems": [
       "Tuna",
       "Eggs",
@@ -37221,8 +37233,6 @@
     },
     "lexiconTerms": [
       "asafoetida-hing",
-      "the-equipment-philosophy-buy-once-buy-cheap-and-the-station-mind",
-      "sieves-chinois-tamis-and-food-mill",
       "the-souring-spices-amchur-loomi-anardana-and-tamarind"
     ],
     "pantryItems": [
@@ -37416,10 +37426,7 @@
         "sub": "the tested American repertoire"
       }
     },
-    "lexiconTerms": [
-      "braising-and-stewing",
-      "the-equipment-philosophy-buy-once-buy-cheap-and-the-station-mind"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Ground meat",
@@ -37519,10 +37526,7 @@
       }
     },
     "lexiconTerms": [
-      "strip-new-york-strip",
-      "slicing-and-service-law",
-      "tea-service-and-pairing",
-      "responsible-service-and-the-law"
+      "strip-new-york-strip"
     ],
     "pantryItems": [
       "White fish",
@@ -37612,7 +37616,8 @@
     "lexiconTerms": [
       "tubers-roots-and-rhizomes",
       "shank-oxtail-and-cheek",
-      "mirepoix-trinity-sofrito-and-friends"
+      "mirepoix-trinity-sofrito-and-friends",
+      "roots-and-the-storage-winter"
     ],
     "pantryItems": [
       "Chicken",
@@ -37702,8 +37707,10 @@
       }
     },
     "lexiconTerms": [
+      "tea-service-and-pairing",
       "the-sommeliers-service-ritual-and-floor-fluency",
-      "feasibility-and-market-analysis"
+      "responsible-service-and-the-law",
+      "foie-gras-torchon-mi-cuit-and-ethics-of-service"
     ],
     "pantryItems": [
       "Chicken",
@@ -37788,9 +37795,7 @@
       }
     },
     "lexiconTerms": [
-      "taste-vs-aroma-the-retronasal-truth",
-      "body-alcohol-and-weight-matching",
-      "the-aroma-compound-families"
+      "body-alcohol-and-weight-matching"
     ],
     "pantryItems": [
       "Chicken",
@@ -38062,6 +38067,7 @@
     "lexiconTerms": [
       "cardamom-green-and-black",
       "nutmeg-and-mace",
+      "searing-and-pan-technique",
       "ginger-fresh-vs-dried"
     ],
     "pantryItems": [
@@ -38157,8 +38163,7 @@
     "lexiconTerms": [
       "bivalves-oysters-clams-mussels-scallops",
       "crab-vocabulary",
-      "wine-faults-corked-oxidized-reduced-and-friends",
-      "ferment-funk-the-taste-of-time"
+      "wine-faults-corked-oxidized-reduced-and-friends"
     ],
     "pantryItems": [
       "Shrimp",
@@ -38260,7 +38265,8 @@
     "lexiconTerms": [
       "pepperoni-honestly",
       "rice-cooker-and-donabe-rice",
-      "vodka-honestly"
+      "vodka-honestly",
+      "ff-and-e-smallwares-and-opening-inventory"
     ],
     "pantryItems": [
       "Beef",
@@ -38361,7 +38367,6 @@
     "lexiconTerms": [
       "pepperoni-honestly",
       "the-well-the-call-and-the-back-bar",
-      "mortadella-bologna",
       "vodka-honestly"
     ],
     "pantryItems": [
@@ -38649,10 +38654,10 @@
       }
     },
     "lexiconTerms": [
-      "whole-muscle-vs-fermented-salami-the-two-churches",
+      "tea-service-and-pairing",
+      "responsible-service-and-the-law",
       "shank-oxtail-and-cheek",
-      "slicing-and-service-law",
-      "tea-service-and-pairing"
+      "foie-gras-torchon-mi-cuit-and-ethics-of-service"
     ],
     "pantryItems": [
       "Beef",
@@ -38745,9 +38750,7 @@
         "sub": "regional Chinese technique, explained properly"
       }
     },
-    "lexiconTerms": [
-      "bar-mise-and-the-three-step-reach"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Pork",
       "Onion",
@@ -38950,7 +38953,9 @@
         "sub": "regional Chinese technique, explained properly"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "smoke-char-and-the-burnt-edge"
+    ],
     "pantryItems": [
       "Chicken",
       "Pork",
@@ -39043,8 +39048,7 @@
       }
     },
     "lexiconTerms": [
-      "strip-new-york-strip",
-      "taste-vs-aroma-the-retronasal-truth"
+      "strip-new-york-strip"
     ],
     "pantryItems": [
       "Scallion",
@@ -39230,7 +39234,6 @@
       }
     },
     "lexiconTerms": [
-      "curry-powder-the-colonial-invention",
       "the-well-the-call-and-the-back-bar"
     ],
     "pantryItems": [
@@ -39327,8 +39330,7 @@
       }
     },
     "lexiconTerms": [
-      "roasting-baking-and-carryover",
-      "the-owners-capstone-the-3-a-m-truths"
+      "roasting-baking-and-carryover"
     ],
     "pantryItems": [
       "Turkey",
@@ -39427,7 +39429,6 @@
       }
     },
     "lexiconTerms": [
-      "chinese-five-spice",
       "oysters-east-vs-west"
     ],
     "pantryItems": [
@@ -39513,7 +39514,7 @@
       }
     },
     "lexiconTerms": [
-      "dry-aging",
+      "gluten-and-hydration",
       "aged-gouda"
     ],
     "pantryItems": [
@@ -39686,8 +39687,7 @@
     "lexiconTerms": [
       "butchery-verbs-frenching-butterflying-tying",
       "line-slang-86-in-the-weeds-and-family-meal",
-      "annatto-achiote",
-      "the-global-pantry-what-has-no-season"
+      "annatto-achiote"
     ],
     "pantryItems": [
       "Chicken",
@@ -40050,8 +40050,8 @@
       }
     },
     "lexiconTerms": [
-      "culture-and-the-owners-job",
-      "the-global-pantry-what-has-no-season"
+      "the-global-pantry-what-has-no-season",
+      "umami-and-the-glutamate-pantry"
     ],
     "pantryItems": [
       "Pork",
@@ -40152,10 +40152,7 @@
         "sub": "the tested American repertoire"
       }
     },
-    "lexiconTerms": [
-      "baharat-and-the-seven-spice-family",
-      "line-slang-86-in-the-weeds-and-family-meal"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Pork",
@@ -40509,9 +40506,7 @@
         "sub": "Austin’s brisket king on fire and patience"
       }
     },
-    "lexiconTerms": [
-      "whole-muscle-vs-fermented-salami-the-two-churches"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Liver & Offal",
@@ -40611,7 +40606,10 @@
         "sub": "Austin’s brisket king on fire and patience"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "tea-service-and-pairing",
+      "responsible-service-and-the-law"
+    ],
     "pantryItems": [
       "Chicken",
       "Garlic",
@@ -40773,9 +40771,8 @@
       }
     },
     "lexiconTerms": [
-      "coriander-seed",
       "culture-and-the-owners-job",
-      "tomatoes-the-argument-for-august"
+      "coriander-seed"
     ],
     "pantryItems": [
       "Beef",
@@ -40953,9 +40950,7 @@
         "sub": "Austin’s brisket king on fire and patience"
       }
     },
-    "lexiconTerms": [
-      "black-pepper-and-the-pepper-family"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Chicken",
       "Pork",
@@ -41202,7 +41197,8 @@
       }
     },
     "lexiconTerms": [
-      "crab-vocabulary"
+      "crab-vocabulary",
+      "searing-and-pan-technique"
     ],
     "pantryItems": [
       "Crab",
@@ -41469,9 +41465,7 @@
         "sub": "fish cookery taught with a teacher’s clarity"
       }
     },
-    "lexiconTerms": [
-      "the-second-day-reheating-as-technique"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "White fish",
       "Onion",
@@ -41646,7 +41640,9 @@
         "sub": "fish cookery taught with a teacher’s clarity"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "steaming-and-en-papillote"
+    ],
     "pantryItems": [
       "White fish",
       "Garlic",
@@ -41729,8 +41725,8 @@
       }
     },
     "lexiconTerms": [
-      "syrah-grenache-and-the-rhone-school",
-      "toasting-blooming-and-the-tadka-doctrine"
+      "toasting-blooming-and-the-tadka-doctrine",
+      "syrah-grenache-and-the-rhone-school"
     ],
     "pantryItems": [
       "White fish",
@@ -41818,7 +41814,6 @@
       }
     },
     "lexiconTerms": [
-      "syrups-simple-rich-oleo-and-the-house-program",
       "brining-wet-dry-and-cures"
     ],
     "pantryItems": [
@@ -42002,10 +41997,7 @@
         "sub": "fish cookery taught with a teacher’s clarity"
       }
     },
-    "lexiconTerms": [
-      "smoked-fish-hot-vs-cold",
-      "the-old-fashioned-template"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Shrimp",
       "White fish",
@@ -42187,7 +42179,8 @@
       }
     },
     "lexiconTerms": [
-      "pressure-and-slow-cooking"
+      "pressure-and-slow-cooking",
+      "tasting-and-seasoning-like-a-chef"
     ],
     "pantryItems": [
       "Salmon",
@@ -42282,7 +42275,9 @@
         "sub": "fish cookery taught with a teacher’s clarity"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "fermentation-and-pickling"
+    ],
     "pantryItems": [
       "White fish",
       "Onion",
@@ -42465,8 +42460,7 @@
       }
     },
     "lexiconTerms": [
-      "spice-families-by-flavor",
-      "curry-powder-the-colonial-invention"
+      "curry-leaf"
     ],
     "pantryItems": [
       "White fish",
@@ -42557,7 +42551,9 @@
         "sub": "fish cookery taught with a teacher’s clarity"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "the-aroma-compound-families"
+    ],
     "pantryItems": [
       "Garlic",
       "Lemon",
@@ -42745,9 +42741,8 @@
       }
     },
     "lexiconTerms": [
-      "the-non-alcoholic-pairing-program",
-      "thermometers-and-the-instrument-cluster",
-      "doneness-by-touch-sight-and-sound"
+      "doneness-by-touch-sight-and-sound",
+      "boning-fillet-and-the-butchery-blades"
     ],
     "pantryItems": [
       "White fish",
@@ -42931,8 +42926,7 @@
     },
     "lexiconTerms": [
       "knife-cuts-the-classical-ladder",
-      "blenders-immersion-high-speed-and-food-processor",
-      "insurance-the-policy-stack"
+      "blenders-immersion-high-speed-and-food-processor"
     ],
     "pantryItems": [
       "Eggs",
@@ -43026,7 +43020,9 @@
       }
     },
     "lexiconTerms": [
-      "ganache-bloom-and-chocolate-craft"
+      "ganache-bloom-and-chocolate-craft",
+      "pate-and-terrine",
+      "pate-en-croute"
     ],
     "pantryItems": [
       "Eggs",
@@ -43127,9 +43123,9 @@
       }
     },
     "lexiconTerms": [
-      "the-chefs-knife-western-profile",
       "microplane-graters-and-the-zest-doctrine",
-      "meringues-french-swiss-italian"
+      "meringues-french-swiss-italian",
+      "citrus-zest-juice-and-pith"
     ],
     "pantryItems": [
       "Eggs",
@@ -43300,8 +43296,8 @@
     "lexiconTerms": [
       "frozen-dessert-machines-churners-and-pacojet",
       "infusion-steeping-flavor-into-fat-cream-and-syrup",
-      "lobster-new-shell-vs-hard-shell",
-      "knife-care-and-the-cutting-board-question"
+      "knife-care-and-the-cutting-board-question",
+      "lobster-new-shell-vs-hard-shell"
     ],
     "pantryItems": [
       "Eggs",
@@ -43485,10 +43481,10 @@
       }
     },
     "lexiconTerms": [
-      "sous-vide-hardware-circulators-sealers-and-safety-kit",
-      "why-restaurants-fail-the-honest-list",
       "food-safety-the-chef-owners-non-negotiables",
-      "pepperoni-honestly"
+      "sous-vide-hardware-circulators-sealers-and-safety-kit",
+      "pepperoni-honestly",
+      "citrus-zest-juice-and-pith"
     ],
     "pantryItems": [
       "Eggs",
@@ -43757,8 +43753,8 @@
       }
     },
     "lexiconTerms": [
-      "salamander-broiler-and-top-down-fire",
-      "toasting-nuts-seeds-grains-and-coconut"
+      "toasting-nuts-seeds-grains-and-coconut",
+      "malbec-zinfandel-and-the-new-world-crowd-pleasers"
     ],
     "pantryItems": [
       "Coconut",
@@ -43936,7 +43932,10 @@
         "sub": "pastry precision with working-baker honesty"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "proofing-oven-spring-and-the-crumb",
+      "knife-care-and-the-cutting-board-question"
+    ],
     "pantryItems": [
       "Eggs",
       "Coconut",
@@ -44100,8 +44099,7 @@
       }
     },
     "lexiconTerms": [
-      "building-the-home-and-starting-bar",
-      "acids-vinegars-and-the-finishing-squeeze"
+      "building-the-home-and-starting-bar"
     ],
     "pantryItems": [
       "Rice",
@@ -44181,9 +44179,9 @@
       }
     },
     "lexiconTerms": [
-      "frozen-dessert-machines-churners-and-pacojet",
-      "the-owners-capstone-the-3-a-m-truths",
-      "creaming-foaming-and-cake-structure"
+      "cash-flow-and-the-working-capital-trap",
+      "creaming-foaming-and-cake-structure",
+      "the-org-chart-and-management-structure"
     ],
     "pantryItems": [
       "Eggs",
@@ -44262,7 +44260,9 @@
         "sub": "pastry precision with working-baker honesty"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "creaming-foaming-and-cake-structure"
+    ],
     "pantryItems": [
       "Eggs",
       "Butter",
@@ -44344,8 +44344,7 @@
     },
     "lexiconTerms": [
       "the-opening-soft-launch-and-the-first-90-days",
-      "brassicas-and-frost-the-sweetening",
-      "the-owners-capstone-the-3-a-m-truths"
+      "brassicas-and-frost-the-sweetening"
     ],
     "pantryItems": [
       "Eggs",
@@ -44440,9 +44439,7 @@
         "sub": "pastry precision with working-baker honesty"
       }
     },
-    "lexiconTerms": [
-      "vendors-purchasing-and-negotiation"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Coconut",
@@ -44538,9 +44535,7 @@
         "sub": "pastry precision with working-baker honesty"
       }
     },
-    "lexiconTerms": [
-      "stone-fruit-in-high-summer"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Butter",
@@ -44618,9 +44613,7 @@
       }
     },
     "lexiconTerms": [
-      "gorgonzola-dolce-and-piccante",
-      "espresso-and-the-coffee-program",
-      "the-second-day-reheating-as-technique"
+      "espresso-and-the-coffee-program"
     ],
     "pantryItems": [
       "Chocolate/Cocoa",
@@ -45879,7 +45872,6 @@
       }
     },
     "lexiconTerms": [
-      "wine-faults-corked-oxidized-reduced-and-friends",
       "braising-and-stewing"
     ],
     "pantryItems": [
@@ -46182,9 +46174,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "strip-new-york-strip"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Mussels/Clams",
       "Corn",
@@ -47215,7 +47205,9 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "clove"
+    ],
     "pantryItems": [
       "Ham/Prosciutto",
       "Vinegar",
@@ -48310,9 +48302,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "feasibility-and-market-analysis"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "White fish",
       "Lemon",
@@ -48501,7 +48491,9 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "port-madeira-and-the-fortified-sweets"
+    ],
     "pantryItems": [
       "White fish",
       "Orange",
@@ -49688,6 +49680,7 @@
       }
     },
     "lexiconTerms": [
+      "the-concept-and-business-plan",
       "pecorino-romano"
     ],
     "pantryItems": [
@@ -49867,7 +49860,9 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "mise-en-place"
+    ],
     "pantryItems": [
       "Beef",
       "Ground meat",
@@ -50359,7 +50354,9 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "mortadella-bologna"
+    ],
     "pantryItems": [
       "Onion",
       "Tomato",
@@ -51572,7 +51569,9 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "smoke-char-and-the-burnt-edge"
+    ],
     "pantryItems": [
       "Pork",
       "Eggs",
@@ -52290,9 +52289,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "jamon-iberico-and-the-bellota-grades"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Onion",
@@ -53389,7 +53386,6 @@
       }
     },
     "lexiconTerms": [
-      "labor-scheduling-and-the-model",
       "mango-the-monsoon-herald"
     ],
     "pantryItems": [
@@ -53566,9 +53562,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "the-org-chart-and-management-structure"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Potato",
       "Apple",
@@ -55079,9 +55073,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "wok-hei-and-stir-fry-discipline"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Butter",
@@ -55302,9 +55294,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "reservations-no-shows-and-the-book"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Ham/Prosciutto",
       "Onion",
@@ -55489,9 +55479,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "texture-as-flavor"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Sugar",
@@ -55875,9 +55863,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "tasting-vocabulary-and-palate-training"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Chicken",
       "Onion",
@@ -57051,7 +57037,6 @@
       }
     },
     "lexiconTerms": [
-      "blenders-immersion-high-speed-and-food-processor",
       "sieves-chinois-tamis-and-food-mill"
     ],
     "pantryItems": [
@@ -57516,7 +57501,9 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "cash-flow-and-the-working-capital-trap"
+    ],
     "pantryItems": [
       "Pork",
       "Bell pepper",
@@ -57610,7 +57597,9 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "cash-flow-and-the-working-capital-trap"
+    ],
     "pantryItems": [
       "Pork",
       "Bell pepper",
@@ -57705,9 +57694,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "doneness-by-touch-sight-and-sound"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Bacon",
       "White fish",
@@ -58094,9 +58081,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "roasting-baking-and-carryover"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Ginger",
@@ -58986,9 +58971,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "chicken-anatomy-for-cooks"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Chicken",
       "Bacon",
@@ -59077,7 +59060,7 @@
       }
     },
     "lexiconTerms": [
-      "the-essential-smallwares"
+      "tasting-vocabulary-and-palate-training"
     ],
     "pantryItems": [
       "Chiles",
@@ -59279,9 +59262,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "game-season-the-autumn-larder"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Chicken",
       "Sausage",
@@ -59798,9 +59779,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "chicken-anatomy-for-cooks"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Chicken",
       "Garlic",
@@ -60475,9 +60454,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "the-essential-smallwares"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Stone fruit",
@@ -60725,9 +60702,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "meringues-french-swiss-italian"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Pork",
       "Ham/Prosciutto",
@@ -61171,10 +61146,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "citrus-zest-juice-and-pith",
-      "citrus-in-winter"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Orange",
@@ -62333,9 +62305,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "stone-fruit-in-high-summer"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Corn",
       "Stone fruit",
@@ -64483,7 +64453,6 @@
     },
     "lexiconTerms": [
       "mutton-and-hogget",
-      "pressure-and-slow-cooking",
       "lamb-spring-hogget-and-mutton"
     ],
     "pantryItems": [
@@ -64694,7 +64663,10 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "ferment-funk-the-taste-of-time",
+      "blenders-immersion-high-speed-and-food-processor"
+    ],
     "pantryItems": [
       "Garlic",
       "Celery",
@@ -65192,9 +65164,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "stone-fruit-in-high-summer"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Tomato",
       "Chiles",
@@ -65848,9 +65818,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "clove"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Ground meat",
@@ -66173,9 +66141,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "tubers-roots-and-rhizomes"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Ground meat",
       "Sausage",
@@ -66292,9 +66258,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "peppers-and-eggplant-the-nightshade-late-summer"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Bacon",
       "Eggs",
@@ -66575,9 +66539,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "west-country-farmhouse-cheddar"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Chicken",
       "Ground meat",
@@ -66775,8 +66737,8 @@
       }
     },
     "lexiconTerms": [
-      "pork-loin-vs-tenderloin",
-      "tenderloin-filet-mignon"
+      "tenderloin-filet-mignon",
+      "pork-loin-vs-tenderloin"
     ],
     "pantryItems": [
       "Pork",
@@ -67589,7 +67551,9 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "the-essential-smallwares"
+    ],
     "pantryItems": [
       "Beef",
       "Garlic",
@@ -68186,9 +68150,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "carbon-steel-pans"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Tomato",
       "Oregano",
@@ -69496,9 +69458,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "infusion-steeping-flavor-into-fat-cream-and-syrup"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Corn",
@@ -70079,9 +70039,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "poach-simmer-boil"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Sausage",
       "Onion",
@@ -70290,7 +70248,7 @@
       }
     },
     "lexiconTerms": [
-      "lamination"
+      "strip-new-york-strip"
     ],
     "pantryItems": [
       "Eggs",
@@ -71112,9 +71070,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "fatty-vs-lean-fish"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Lemon",
@@ -71524,8 +71480,8 @@
       }
     },
     "lexiconTerms": [
-      "pork-loin-vs-tenderloin",
-      "tenderloin-filet-mignon"
+      "tenderloin-filet-mignon",
+      "pork-loin-vs-tenderloin"
     ],
     "pantryItems": [
       "Pork",
@@ -71998,7 +71954,9 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "the-essential-smallwares"
+    ],
     "pantryItems": [
       "Eggs",
       "Corn",
@@ -72396,9 +72354,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "brassicas-and-frost-the-sweetening"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Dried fruit",
@@ -72488,8 +72444,8 @@
     },
     "lexiconTerms": [
       "garnish-expression-twists-and-the-cherry-question",
-      "the-liqueur-shelf-orange-maraschino-chartreuse-and-friends",
-      "the-old-fashioned-template"
+      "the-old-fashioned-template",
+      "the-liqueur-shelf-orange-maraschino-chartreuse-and-friends"
     ],
     "pantryItems": [
       "Lemon",
@@ -72706,10 +72662,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "berries-the-late-spring-sprint",
-      "peppers-and-eggplant-the-nightshade-late-summer"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Berries",
@@ -73099,9 +73052,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "baste-arroser-and-glaze"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Pork",
       "Ground meat",
@@ -73287,9 +73238,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "black-pepper-and-the-pepper-family"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Garlic",
       "Lemon",
@@ -73512,7 +73461,8 @@
       }
     },
     "lexiconTerms": [
-      "brisket-point-vs-flat"
+      "brisket-point-vs-flat",
+      "smoke-char-and-the-burnt-edge"
     ],
     "pantryItems": [
       "Beef",
@@ -73697,9 +73647,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "infusion-steeping-flavor-into-fat-cream-and-syrup"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Bacon",
       "Onion",
@@ -74053,9 +74001,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "prime-cost-the-number-that-runs-the-building"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Apple",
@@ -74260,9 +74206,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "reservations-no-shows-and-the-book"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Onion",
@@ -74903,9 +74847,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "mutton-and-hogget"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Lamb",
@@ -75188,9 +75130,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "game-season-the-autumn-larder"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Venison/Game",
       "Butter",
@@ -75684,9 +75624,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "fatty-vs-lean-fish"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Potato",
       "Lemon",
@@ -75909,9 +75847,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "tubers-roots-and-rhizomes"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Ground meat",
@@ -79233,7 +79169,8 @@
       }
     },
     "lexiconTerms": [
-      "casings-molds-and-the-curing-chamber"
+      "casings-molds-and-the-curing-chamber",
+      "feasibility-and-market-analysis"
     ],
     "pantryItems": [
       "Beef",
@@ -80401,9 +80338,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "alpage-cheeses-summer-milk"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Onion",
       "Garlic",
@@ -81090,9 +81025,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "chile-fluency-fresh-and-dried"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Chiles",
       "Corn",
@@ -81559,9 +81492,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "chile-fluency-fresh-and-dried"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Onion",
       "Garlic",
@@ -83779,9 +83710,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "dry-aging"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Ham/Prosciutto",
@@ -85108,9 +85037,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "fillet-steak-loin-and-collar"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Venison/Game",
       "Berries",
@@ -85216,9 +85143,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "deal-structures-and-the-investors-waterfall"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Onion",
@@ -86470,10 +86395,7 @@
       }
     },
     "lexiconTerms": [
-      "regional-pairing-and-the-hard-to-pair-list",
-      "herb-profiles-bright-vs-resinous",
-      "deglaze-and-fond",
-      "the-non-alcoholic-pairing-program"
+      "deglaze-and-fond"
     ],
     "pantryItems": [
       "Lamb",
@@ -86673,9 +86595,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "menu-pricing-and-psychology"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Beef",
       "Eggs",
@@ -86761,9 +86681,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "frozen-dessert-machines-churners-and-pacojet"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Potato",
       "Cream",
@@ -86866,8 +86784,8 @@
       }
     },
     "lexiconTerms": [
-      "jamon-serrano",
-      "jamon-iberico-and-the-bellota-grades"
+      "jamon-iberico-and-the-bellota-grades",
+      "jamon-serrano"
     ],
     "pantryItems": [
       "Ground meat",
@@ -86981,7 +86899,9 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "the-global-pantry-what-has-no-season"
+    ],
     "pantryItems": [
       "Onion",
       "Garlic",
@@ -87506,9 +87426,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "asparagus-springs-starting-gun"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Ground meat",
       "Garlic",
@@ -87611,7 +87529,7 @@
       }
     },
     "lexiconTerms": [
-      "brassicas-cole-crops"
+      "jambon-de-bayonne-and-french-whole-muscle-hams"
     ],
     "pantryItems": [
       "Beef",
@@ -88355,9 +88273,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "deal-structures-and-the-investors-waterfall"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Ground meat",
       "Eggs",
@@ -88821,9 +88737,7 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [
-      "toasting-nuts-seeds-grains-and-coconut"
-    ],
+    "lexiconTerms": [],
     "pantryItems": [
       "Eggs",
       "Cream",
@@ -89053,8 +88967,7 @@
     "lexiconTerms": [
       "short-ribs-english-vs-flanken",
       "pinot-noir",
-      "pinot-noir-and-burgundy",
-      "wine-faults-corked-oxidized-reduced-and-friends"
+      "pinot-noir-and-burgundy"
     ],
     "pantryItems": [
       "Beef",
@@ -89249,7 +89162,9 @@
         "sub": "the science-first American kitchen, one take, no cuts"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      "chicken-anatomy-for-cooks"
+    ],
     "pantryItems": [
       "Chicken",
       "Ground meat",
@@ -91366,6 +91281,7 @@
       }
     },
     "lexiconTerms": [
+      "game-season-the-autumn-larder",
       "juniper"
     ],
     "pantryItems": [

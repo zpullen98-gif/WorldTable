@@ -42,7 +42,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 93
+    "noteChars": 500
   },
   {
     "slug": "ragu-alla-bolognese",
@@ -85,7 +85,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 79
+    "noteChars": 513
   },
   {
     "slug": "pizza-margherita",
@@ -112,9 +112,10 @@
       "containsAlcohol": false,
       "confidence": "derived"
     },
-    "costTier": 1,
+    "costTier": 2,
     "flavorTags": [
       "herb-fresh",
+      "rich",
       "briny",
       "charred"
     ],
@@ -129,7 +130,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 87
+    "noteChars": 505
   },
   {
     "slug": "risotto-alla-milanese",
@@ -169,7 +170,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 74
+    "noteChars": 516
   },
   {
     "slug": "chicken-piccata",
@@ -196,7 +197,7 @@
       "containsAlcohol": true,
       "confidence": "derived"
     },
-    "costTier": 2,
+    "costTier": 3,
     "flavorTags": [
       "rich",
       "bright",
@@ -215,7 +216,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 69
+    "noteChars": 479
   },
   {
     "slug": "pasta-e-fagioli",
@@ -260,7 +261,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 75
+    "noteChars": 485
   },
   {
     "slug": "eggplant-parmigiana",
@@ -305,7 +306,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 73
+    "noteChars": 467
   },
   {
     "slug": "tiramisu",
@@ -342,7 +343,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 62
+    "noteChars": 517
   },
   {
     "slug": "rosemary-focaccia",
@@ -380,7 +381,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 77
+    "noteChars": 472
   },
   {
     "slug": "shrimp-scampi",
@@ -409,9 +410,9 @@
     },
     "costTier": 3,
     "flavorTags": [
+      "rich",
       "bright",
       "gently hot",
-      "rich",
       "herb-fresh"
     ],
     "season": [
@@ -426,7 +427,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 82
+    "noteChars": 511
   },
   {
     "slug": "the-french-omelette",
@@ -465,7 +466,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 90
+    "noteChars": 466
   },
   {
     "slug": "coq-au-vin",
@@ -509,7 +510,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 83
+    "noteChars": 480
   },
   {
     "slug": "soupe-a-loignon",
@@ -539,9 +540,9 @@
     "costTier": 3,
     "flavorTags": [
       "rich",
+      "charred",
       "bright",
-      "nutty-toasted",
-      "charred"
+      "sweet-edged"
     ],
     "season": [],
     "region": {
@@ -549,7 +550,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 101
+    "noteChars": 434
   },
   {
     "slug": "ratatouille",
@@ -576,12 +577,12 @@
       "containsAlcohol": false,
       "confidence": "derived"
     },
-    "costTier": 1,
+    "costTier": 2,
     "flavorTags": [
       "herb-fresh",
       "aromatic",
-      "warm-spiced",
-      "briny"
+      "rich",
+      "warm-spiced"
     ],
     "season": [
       6,
@@ -594,7 +595,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 96
+    "noteChars": 436
   },
   {
     "slug": "sole-meuniere",
@@ -640,7 +641,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 85
+    "noteChars": 442
   },
   {
     "slug": "boeuf-bourguignon",
@@ -686,7 +687,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 43
+    "noteChars": 500
   },
   {
     "slug": "quiche-lorraine",
@@ -716,8 +717,8 @@
     "costTier": 2,
     "flavorTags": [
       "rich",
-      "warm-spiced",
-      "silky"
+      "silky",
+      "warm-spiced"
     ],
     "season": [],
     "region": {
@@ -725,7 +726,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 77
+    "noteChars": 425
   },
   {
     "slug": "crepes",
@@ -769,7 +770,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 69
+    "noteChars": 437
   },
   {
     "slug": "creme-brulee",
@@ -800,7 +801,8 @@
     "flavorTags": [
       "rich",
       "floral",
-      "charred"
+      "charred",
+      "silky"
     ],
     "season": [],
     "region": {
@@ -808,7 +810,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 76
+    "noteChars": 463
   },
   {
     "slug": "salade-nicoise",
@@ -837,8 +839,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "briny",
       "umami-deep",
+      "briny",
       "bright"
     ],
     "season": [
@@ -852,7 +854,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 87
+    "noteChars": 505
   },
   {
     "slug": "miso-soup",
@@ -1306,7 +1308,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 90
+    "noteChars": 466
   },
   {
     "slug": "mapo-tofu",
@@ -1351,7 +1353,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 75
+    "noteChars": 470
   },
   {
     "slug": "char-siu-pork",
@@ -1382,8 +1384,8 @@
     "flavorTags": [
       "sweet-edged",
       "charred",
-      "smoky",
-      "warm-spiced"
+      "tangy-ferment",
+      "smoky"
     ],
     "season": [],
     "region": {
@@ -1391,7 +1393,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 71
+    "noteChars": 456
   },
   {
     "slug": "kung-pao-chicken",
@@ -1436,7 +1438,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 83
+    "noteChars": 485
   },
   {
     "slug": "beef-and-broccoli",
@@ -1466,8 +1468,8 @@
     "costTier": 2,
     "flavorTags": [
       "aromatic",
-      "umami-deep",
-      "briny"
+      "briny",
+      "umami-deep"
     ],
     "season": [
       1,
@@ -1486,7 +1488,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 79
+    "noteChars": 489
   },
   {
     "slug": "scallion-pancakes",
@@ -1524,7 +1526,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 83
+    "noteChars": 438
   },
   {
     "slug": "wonton-soup",
@@ -1571,7 +1573,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 78
+    "noteChars": 421
   },
   {
     "slug": "dan-dan-noodles",
@@ -1617,7 +1619,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 69
+    "noteChars": 477
   },
   {
     "slug": "steamed-fish-ginger-and-scallion",
@@ -1655,7 +1657,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 87
+    "noteChars": 446
   },
   {
     "slug": "chicken-congee",
@@ -1694,7 +1696,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 75
+    "noteChars": 476
   },
   {
     "slug": "tacos-de-pollo-asado",

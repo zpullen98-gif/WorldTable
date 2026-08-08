@@ -58,6 +58,18 @@ const OVERRIDES = existsSync(overridesPath)
 	? JSON.parse(readFileSync(overridesPath, 'utf8'))
 	: { recipes: {} };
 
+/**
+ * The backfill overlay: slug -> a rewritten "from the pass" note.
+ *
+ * The raw extraction stays byte-identical to the archived original (that is
+ * what verify:data proves); improved notes live here and are applied before
+ * the blobs are built, so flavor tags, seasons, cross-links and the search
+ * index all re-derive from the richer text — exactly the ripple the backfill
+ * is meant to cause, visible in the recipes.json diff.
+ */
+const notesPath = join(OUT, 'notes.json');
+const NOTES = existsSync(notesPath) ? JSON.parse(readFileSync(notesPath, 'utf8')) : {};
+
 // ── chapter classification ───────────────────────────────────────────────────
 // 52 US-rail chapters, 11 thematic Atlas chapters, 31 world cuisines = 94.
 const US_GROUP = new Map();
@@ -127,11 +139,26 @@ const recipeSlugs = qualifiedSlugs(
 );
 const lexSlugs = D.map((e) => slugify(e.t));
 
+/** Notes with the backfill overlay applied — the text the app actually ships. */
+const effNotes = R.map((r, i) => NOTES[recipeSlugs[i]] ?? r.p);
+
 /** Lowercased searchable blob per recipe, built once and reused by every rule. */
-const blobs = R.map((r) => `${r.n} ${r.c} ${r.i.join(' ')} ${r.m.join(' ')} ${r.p}`.toLowerCase());
+const blobs = R.map(
+	(r, i) => `${r.n} ${r.c} ${r.i.join(' ')} ${r.m.join(' ')} ${effNotes[i]}`.toLowerCase()
+);
 
 const pantryMap = derivePantryMap(R, blobs, PANTRY);
-const crosslinks = buildCrosslinks(R, recipeSlugs, D, lexSlugs, blobs);
+
+/**
+ * Cross-links score WITHOUT the note. A term should link to recipes that use
+ * it — in the name, the ingredients, the method — not to recipes whose margin
+ * commentary mentions it. Scoring prose made links follow note richness, which
+ * during the rolling backfill meant links followed backfill ORDER: the first
+ * chapters rewritten swept the links (Italian hit 9.1% the moment its ten
+ * notes landed). Method text is where technique terms actually live.
+ */
+const linkBlobs = R.map((r) => `${r.n} ${r.c} ${r.i.join(' ')} ${r.m.join(' ')}`.toLowerCase());
+const crosslinks = buildCrosslinks(R, recipeSlugs, D, lexSlugs, linkBlobs);
 
 /** The original's `isAmerican` (L3837): membership in any US rail region. */
 const AMERICAN = new Set(RAIL_REGIONS.flatMap(([, members]) => members));
@@ -183,14 +210,14 @@ R.forEach((r, i) => {
 		season: ov.season ?? deriveSeason(blobs[i], SEASON),
 		region,
 		source: 'guide',
-		noteChars: r.p.length
+		noteChars: effNotes[i].length
 	});
 
 	full.push({
 		slug,
 		ingredients: r.i.map(toIngredient),
 		steps: r.m.map((text) => ({ text, durationSec: stepDuration(text) })),
-		note: r.p,
+		note: effNotes[i],
 		equipment: ov.equipment ?? deriveEquipment(r, EQUIP),
 		techniques,
 		flavor,
@@ -379,9 +406,25 @@ if (worst && linkTotal > 0) {
 	);
 }
 
+// Overlay hygiene: a key that matches no slug is a silent no-op — the worst
+// kind of typo. And a backfilled note SHORTER than the bar defeats the point.
+{
+	const slugSet = new Set(recipeSlugs);
+	const unknown = Object.keys(NOTES).filter((k) => !slugSet.has(k));
+	if (unknown.length) {
+		problems.push(`notes.json keys matching no recipe slug: ${unknown.join(', ')}`);
+	}
+	const short = Object.entries(NOTES).filter(([, v]) => String(v).length < 180);
+	if (short.length) {
+		problems.push(
+			`backfilled notes under the 180-char bar: ${short.map(([k, v]) => `${k} (${String(v).length})`).join(', ')}`
+		);
+	}
+}
+
 // Note-length backfill tracker.
 const thin = index.filter((r) => r.noteChars < 180);
-console.log(`  notes under 180 chars: ${thin.length} of ${index.length}`);
+console.log(`  notes under 180 chars: ${thin.length} of ${index.length}  (backfilled: ${Object.keys(NOTES).length})`);
 
 console.log('');
 if (problems.length) {
