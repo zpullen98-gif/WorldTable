@@ -5,6 +5,7 @@
 	import { TOTALS } from '$lib/data';
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import { session } from '$lib/stores/session.svelte';
+	import UpdatePrompt from '$lib/components/UpdatePrompt.svelte';
 
 	let { children } = $props();
 
@@ -32,6 +33,7 @@
 
 <svelte:head>
 	<title>The World Table — Interactive Culinary Field Guide</title>
+	<link rel="manifest" href="{base}/manifest.webmanifest" />
 	<meta
 		name="description"
 		content="An interactive culinary compendium — {TOTALS.recipes} recipes across {TOTALS.chapters} chapters, a 479-term chef’s lexicon, pantry matching and a ten-semester path of study."
@@ -83,6 +85,8 @@
 <main id="main" tabindex="-1">
 	{@render children()}
 </main>
+
+<UpdatePrompt />
 
 <footer>
 	<div class="shell">

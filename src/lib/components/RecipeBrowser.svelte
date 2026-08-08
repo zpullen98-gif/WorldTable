@@ -1,10 +1,12 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
 	import { base } from '$app/paths';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import { chapters, recipes } from '$lib/data';
 	import { applyFilters, effectiveMonth } from '$lib/filter';
-	import { filtersFromURL, filtersToSearch } from '$lib/urlState';
+	import { filtersFromURL, filtersToSearch, EMPTY_FILTERS } from '$lib/urlState';
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import type { ChapterRef } from '$lib/types';
 	import RecipeCard from './RecipeCard.svelte';
@@ -13,11 +15,26 @@
 
 	let { chapter = null }: { chapter?: ChapterRef | null } = $props();
 
-	// Seeded from the URL so a shared link arrives with its filters applied.
-	// `chapter` is deliberately NOT read here — it comes from the route, and the
-	// derived `active` below tracks it. Capturing it into $state would freeze it
-	// at whatever chapter happened to mount first.
-	let filters = $state(filtersFromURL(page.url));
+	/**
+	 * Filters start empty and are seeded from the URL on the client.
+	 *
+	 * They cannot be read during prerender: a prerendered page is one file on
+	 * disk serving every query string, so SvelteKit throws on
+	 * `url.searchParams` there — correctly, since baking one set of filters into
+	 * the HTML would serve them to everyone. The prerendered page shows the
+	 * unfiltered chapter; hydration applies whatever the link asked for.
+	 *
+	 * `chapter` is deliberately not captured into state either — it comes from
+	 * the route, and the derived `active` below tracks it.
+	 */
+	let filters = $state({ ...EMPTY_FILTERS });
+
+	// Once, on mount — not a reactive effect. The write-back effect below pushes
+	// filters INTO the URL, so re-reading the URL reactively would have the two
+	// chasing each other every keystroke.
+	onMount(() => {
+		filters = filtersFromURL(page.url);
+	});
 
 	const active = $derived(chapter?.slug ?? null);
 	const effective = $derived({ ...filters, chapter: active });
@@ -37,6 +54,7 @@
 
 	// Mirror filters into the URL. replaceState so typing doesn't fill history.
 	$effect(() => {
+		if (!browser) return;
 		const search = filtersToSearch(filters);
 		const current = page.url.search;
 		if (search !== current) {
