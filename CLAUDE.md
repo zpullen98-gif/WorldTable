@@ -84,7 +84,7 @@ render function by name, stop.
   measurement says we don't have.
 - Prerendering and precaching are separate decisions. The service worker caches
   the shell + data + fonts (~1 MB gzip) and rebuilds pages from the
-  `200.html` navigation fallback. Never precache the 1,070 HTML files.
+  `shell.html` navigation fallback. Never precache the 1,070 HTML files.
 - Day/night are full token sets in `src/lib/styles/tokens.css`, not overrides on
   a body class. Service is read synchronously in `src/app.html` before first
   paint — that is the only reason preferences live in localStorage while
@@ -114,11 +114,11 @@ live in IndexedDB, never in the static data. Consequences worth knowing:
 
 ## Known remaining work
 
-- **Content backfill**: 320 of 970 "from the pass" notes are under 180 chars;
-  149 are under 120. They cluster in the marquee world-cuisine chapters written
-  first (Italian, French, Japanese, Chinese, Mexican — 10 of 10 each). This is
-  authoring, not engineering. `noteChars` is on every record.
-- **Content backfill** is the only remaining phase. The engineering is done.
+- **Content backfill** — the only remaining phase; the engineering is done.
+  320 of 970 "from the pass" notes are under 180 chars; 149 are under 120. They
+  cluster in the marquee world-cuisine chapters written first (Italian, French,
+  Japanese, Chinese, Mexican — 10 of 10 each). This is authoring, not
+  engineering. `noteChars` is on every record.
 
 ## Testing
 
