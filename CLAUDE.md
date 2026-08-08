@@ -91,6 +91,10 @@ render function by name, stop.
   everything else is in IndexedDB.
 - One `@media print` block, in `src/lib/styles/print.css`. The original had four
   scattered ones that disagreed.
+- Search options live in `src/lib/search-config.mjs`, imported by BOTH the
+  build-time indexer and the runtime loader. `MiniSearch.loadJS` silently
+  corrupts every lookup if its options drift from what the index was serialized
+  with — never fork them.
 
 ## Known remaining work
 
@@ -98,8 +102,6 @@ render function by name, stop.
   149 are under 120. They cluster in the marquee world-cuisine chapters written
   first (Italian, French, Japanese, Chinese, Mexican — 10 of 10 each). This is
   authoring, not engineering. `noteChars` is on every record.
-- **Search** is still a folded substring scan, so `ragu` also matches
-  *aspa**ragu**s*. MiniSearch with a build-time index is the fix.
 - **Runtime offline** is unverified — the embedded dev browser never installs a
   service worker. Needs a check in a real browser.
 - Cook mode, the quiz, family-recipe entry, and the printable guest menu from
