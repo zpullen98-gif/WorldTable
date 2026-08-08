@@ -23175,6 +23175,9 @@
       2,
       3,
       4,
+      6,
+      7,
+      8,
       9,
       10,
       11,
@@ -23185,7 +23188,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 176
+    "noteChars": 480
   },
   {
     "slug": "sugar-on-snow",
@@ -23222,7 +23225,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 127
+    "noteChars": 491
   },
   {
     "slug": "vermont-cheddar-soup",
@@ -23298,7 +23301,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 149
+    "noteChars": 463
   },
   {
     "slug": "maple-glazed-ham",
@@ -23327,10 +23330,10 @@
     },
     "costTier": 1,
     "flavorTags": [
+      "smoky",
       "bright",
       "sweet-edged",
-      "warm-spiced",
-      "smoky"
+      "warm-spiced"
     ],
     "season": [],
     "region": {
@@ -23338,7 +23341,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 156
+    "noteChars": 454
   },
   {
     "slug": "cheddar-and-chive-biscuits",
@@ -23368,7 +23371,8 @@
     "costTier": 2,
     "flavorTags": [
       "rich",
-      "herb-fresh"
+      "herb-fresh",
+      "sweet-edged"
     ],
     "season": [],
     "region": {
@@ -23376,7 +23380,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 131
+    "noteChars": 475
   },
   {
     "slug": "sugarhouse-baked-beans",
@@ -23413,7 +23417,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 154
+    "noteChars": 455
   },
   {
     "slug": "chicken-and-cheddar-pot-pie",
@@ -23459,7 +23463,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 163
+    "noteChars": 470
   },
   {
     "slug": "vermont-maple-brined-pork-chops",
@@ -23536,13 +23540,18 @@
       "briny",
       "rich"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8,
+      9
+    ],
     "region": {
       "kind": "us",
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 147
+    "noteChars": 473
   },
   {
     "slug": "boston-baked-beans",
@@ -23579,7 +23588,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 167
+    "noteChars": 479
   },
   {
     "slug": "boston-cream-pie",
@@ -23609,7 +23618,8 @@
     "costTier": 2,
     "flavorTags": [
       "rich",
-      "floral"
+      "floral",
+      "silky"
     ],
     "season": [
       6,
@@ -23622,7 +23632,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 179
+    "noteChars": 478
   },
   {
     "slug": "parker-house-rolls",
@@ -23708,7 +23718,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 158
+    "noteChars": 458
   },
   {
     "slug": "boston-brown-bread",
@@ -23752,7 +23762,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 151
+    "noteChars": 469
   },
   {
     "slug": "baked-scrod",
@@ -23864,7 +23874,7 @@
       "containsAlcohol": true,
       "confidence": "derived"
     },
-    "costTier": 1,
+    "costTier": 2,
     "flavorTags": [
       "warm-spiced"
     ],
@@ -23883,7 +23893,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 168
+    "noteChars": 469
   },
   {
     "slug": "yankee-pot-roast",
@@ -23931,7 +23941,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 135
+    "noteChars": 483
   },
   {
     "slug": "rhode-island-clear-clam-chowder",
@@ -23961,8 +23971,9 @@
     "costTier": 2,
     "flavorTags": [
       "briny",
+      "rich",
       "herb-fresh",
-      "rich"
+      "sweet-edged"
     ],
     "season": [
       6,
@@ -23975,7 +23986,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 174
+    "noteChars": 474
   },
   {
     "slug": "clam-cakes",
@@ -24012,7 +24023,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 171
+    "noteChars": 466
   },
   {
     "slug": "stuffies",
@@ -24087,9 +24098,9 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "fiery",
       "earthy",
-      "warm-spiced"
+      "warm-spiced",
+      "fiery"
     ],
     "season": [],
     "region": {
@@ -24097,7 +24108,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 179
+    "noteChars": 482
   },
   {
     "slug": "johnnycakes",
@@ -24210,7 +24221,7 @@
       "charred",
       "rich",
       "herb-fresh",
-      "gently hot"
+      "smoky"
     ],
     "season": [
       6,
@@ -24223,7 +24234,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 151
+    "noteChars": 497
   },
   {
     "slug": "doughboys",
@@ -24252,8 +24263,7 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "clean",
-      "simple"
+      "briny"
     ],
     "season": [],
     "region": {
@@ -24261,7 +24271,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 157
+    "noteChars": 473
   },
   {
     "slug": "snail-salad",
@@ -24292,8 +24302,8 @@
     "flavorTags": [
       "bright",
       "briny",
-      "gently hot",
-      "herb-fresh"
+      "aromatic",
+      "gently hot"
     ],
     "season": [
       1,
@@ -24307,7 +24317,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 164
+    "noteChars": 467
   },
   {
     "slug": "dynamite-sandwich",
@@ -24350,7 +24360,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 145
+    "noteChars": 460
   },
   {
     "slug": "new-haven-white-clam-apizza",
@@ -24400,7 +24410,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 170
+    "noteChars": 483
   },
   {
     "slug": "connecticut-hot-lobster-roll",
@@ -24487,7 +24497,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 171
+    "noteChars": 463
   },
   {
     "slug": "hartford-election-cake",
@@ -24571,7 +24581,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 160
+    "noteChars": 458
   },
   {
     "slug": "new-haven-tomato-pie",
@@ -24616,7 +24626,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 135
+    "noteChars": 466
   },
   {
     "slug": "fried-oysters-with-tartar",
@@ -24666,7 +24676,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 161
+    "noteChars": 474
   },
   {
     "slug": "connecticut-grinder",
@@ -24697,7 +24707,8 @@
     "flavorTags": [
       "rich",
       "bright",
-      "briny"
+      "briny",
+      "nutty-toasted"
     ],
     "season": [
       4,
@@ -24713,7 +24724,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 165
+    "noteChars": 466
   },
   {
     "slug": "nutmeg-apple-crisp",
@@ -24802,7 +24813,7 @@
       "group": "New England"
     },
     "source": "guide",
-    "noteChars": 171
+    "noteChars": 450
   },
   {
     "slug": "new-york-slice",
