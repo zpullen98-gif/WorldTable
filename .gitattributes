@@ -1,0 +1,12 @@
+# The archived original is ground truth. Never let git rewrite its line endings —
+# byte-identity with the source is what the extraction parity tests depend on.
+reference/world-table-v1.html -text
+
+# Committed data artifacts: keep LF so diffs stay readable across machines.
+*.json text eol=lf
+*.mjs  text eol=lf
+*.ts   text eol=lf
+*.js   text eol=lf
+*.svelte text eol=lf
+*.css  text eol=lf
+*.md   text eol=lf
