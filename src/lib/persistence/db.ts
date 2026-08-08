@@ -1,0 +1,99 @@
+/**
+ * Durable session state.
+ *
+ * The original persisted nothing at all — `localStorage` appears zero times in
+ * its 3957 lines. Pinned menus, family notes, pantry selections and user-added
+ * recipes all died on reload, and the only escape was copying a base64 blob out
+ * of a textarea by hand.
+ *
+ * IndexedDB rather than localStorage, for two reasons that only matter later but
+ * cost nothing now: family recipes are unbounded (and will eventually carry
+ * photos, which localStorage cannot hold at all), and IDB writes off the main
+ * thread, which matters when the notes field fires on every keystroke.
+ *
+ * Preferences are the deliberate exception — see stores/prefs.svelte.ts.
+ */
+import { get, set, del, createStore } from 'idb-keyval';
+import { browser } from '$app/environment';
+import type { Recipe } from '../types';
+import { CURRENT_VERSION, migrate } from './migrations';
+
+const store = browser ? createStore('world-table', 'state') : undefined;
+
+export interface SessionState {
+	schemaVersion: number;
+	/** Recipe slugs — never array indices. See the note below. */
+	menu: string[];
+	notes: Record<string, string>;
+	pantry: string[];
+	/** menuHash -> checked shopping-list line ids */
+	shoppingChecks: Record<string, string[]>;
+	cookedLog: Array<{ slug: string; at: number }>;
+	familyRecipes: Recipe[];
+	lastWrite: number;
+}
+
+export const EMPTY_SESSION: SessionState = {
+	schemaVersion: CURRENT_VERSION,
+	menu: [],
+	notes: {},
+	pantry: [],
+	shoppingChecks: {},
+	cookedLog: [],
+	familyRecipes: [],
+	lastWrite: 0
+};
+
+const KEY = 'session';
+
+export async function loadSession(): Promise<SessionState> {
+	if (!browser || !store) return structuredClone(EMPTY_SESSION);
+	let raw: unknown;
+	try {
+		raw = await get(KEY, store);
+	} catch {
+		return structuredClone(EMPTY_SESSION);
+	}
+	if (!raw) return structuredClone(EMPTY_SESSION);
+
+	try {
+		return migrate(raw as Partial<SessionState>);
+	} catch (err) {
+		// Never destroy data silently. Snapshot whatever we could not read under
+		// a timestamped key so it can be recovered by hand, then start clean.
+		try {
+			await set(`corrupt.${Date.now()}`, raw, store);
+		} catch {
+			/* if even that fails there is nothing more we can do */
+		}
+		console.error('[world-table] session unreadable, snapshotted and reset', err);
+		return structuredClone(EMPTY_SESSION);
+	}
+}
+
+export async function saveSession(state: SessionState): Promise<void> {
+	if (!browser || !store) return;
+	await set(KEY, { ...state, lastWrite: Date.now() }, store);
+}
+
+export async function clearSession(): Promise<void> {
+	if (!browser || !store) return;
+	await del(KEY, store);
+}
+
+/**
+ * Trailing-edge debounce. The notes textarea fires on every keystroke; writing
+ * IndexedDB per character is both wasteful and, on a slow disk, visible.
+ */
+export function debounce<T extends unknown[]>(fn: (...a: T) => void, ms: number) {
+	let t: ReturnType<typeof setTimeout> | undefined;
+	const wrapped = (...a: T) => {
+		if (t) clearTimeout(t);
+		t = setTimeout(() => fn(...a), ms);
+	};
+	wrapped.flush = (...a: T) => {
+		if (t) clearTimeout(t);
+		fn(...a);
+	};
+	return wrapped;
+}

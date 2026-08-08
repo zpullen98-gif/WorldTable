@@ -4,8 +4,15 @@
 	import { page } from '$app/state';
 	import { TOTALS } from '$lib/data';
 	import { prefs } from '$lib/stores/prefs.svelte';
+	import { session } from '$lib/stores/session.svelte';
 
 	let { children } = $props();
+
+	// One hydrate for the whole app. Views read `session.ready` and show their
+	// own skeleton rather than flashing an empty menu.
+	$effect(() => {
+		void session.hydrate();
+	});
 
 	const MODES = [
 		{ href: '', label: 'Recipes' },
@@ -57,7 +64,11 @@
 <nav class="modebar" data-print="hide" aria-label="Sections">
 	<div class="shell modebar-inner">
 		{#each MODES as m (m.href)}
-			<a class="modetab" class:on={isActive(m.href)} href="{base}{m.href || '/'}">{m.label}</a>
+			<a class="modetab" class:on={isActive(m.href)} href="{base}{m.href || '/'}">
+				{m.label}{#if m.href === '/menu' && session.menuCount}<span class="pill"
+						>{session.menuCount}</span
+					>{/if}
+			</a>
 		{/each}
 		<button
 			class="service"
@@ -165,6 +176,16 @@
 	.modetab.on {
 		color: var(--turmeric-deep);
 		border-bottom-color: var(--turmeric);
+	}
+	.pill {
+		display: inline-block;
+		margin-left: 5px;
+		background: var(--turmeric);
+		color: var(--paper);
+		border-radius: 999px;
+		padding: 0 6px;
+		font-size: 10px;
+		font-variant-numeric: lining-nums;
 	}
 
 	.service {

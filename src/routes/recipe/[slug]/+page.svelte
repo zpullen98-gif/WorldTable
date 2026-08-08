@@ -3,6 +3,7 @@
 	import { formatTime } from '$lib/data';
 	import { renderLine } from '$lib/scaling';
 	import { prefs } from '$lib/stores/prefs.svelte';
+	import { session } from '$lib/stores/session.svelte';
 	import { DIFFICULTY_LABEL } from '$lib/types';
 	import Ornament from '$lib/components/Ornament.svelte';
 
@@ -97,6 +98,14 @@
 			>
 			<button class:on={prefs.units === 'us'} onclick={() => prefs.setUnits('us')}>US</button>
 		</div>
+		<button
+			class="chip pin"
+			class:on={session.isPinned(r.slug)}
+			aria-pressed={session.isPinned(r.slug)}
+			onclick={() => session.togglePin(r.slug)}
+		>
+			{session.isPinned(r.slug) ? '📌 On the menu' : '📌 Add to menu'}
+		</button>
 		<button class="chip" onclick={() => window.print()}>Print</button>
 	</div>
 
@@ -173,6 +182,18 @@
 			<div><dt>Zero-Proof</dt><dd>{data.pairing.zeroProof}</dd></div>
 		</dl>
 		<p class="why">{data.pairing.why}</p>
+	</section>
+
+	<section class="notes" data-print="hide">
+		<label for="famnotes" class="sec">Family notes</label>
+		<p class="hint">Saved on this device and kept across visits — export from My Menu to move them.</p>
+		<textarea
+			id="famnotes"
+			rows="4"
+			placeholder="Your adjustments, stains, and marginalia…"
+			value={session.note(r.slug)}
+			oninput={(e) => session.setNote(r.slug, e.currentTarget.value)}
+		></textarea>
 	</section>
 
 	<section class="films" data-print="hide">
@@ -304,6 +325,31 @@
 	}
 	.chip:hover {
 		border-color: var(--turmeric);
+	}
+	.chip.on {
+		background: var(--turmeric);
+		border-color: var(--turmeric);
+		color: var(--paper);
+	}
+
+	.notes {
+		margin-top: 30px;
+	}
+	.notes .hint {
+		font-size: var(--t-micro);
+		color: var(--muted);
+		margin: -6px 0 8px;
+		font-style: italic;
+	}
+	.notes textarea {
+		width: 100%;
+		background: var(--card);
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		padding: 10px 12px;
+		resize: vertical;
+		font-size: 15px;
+		line-height: 1.55;
 	}
 
 	.cols {
