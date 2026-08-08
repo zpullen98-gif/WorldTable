@@ -894,7 +894,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 88
+    "noteChars": 469
   },
   {
     "slug": "chicken-teriyaki",
@@ -923,8 +923,8 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "umami-deep",
-      "sweet-edged"
+      "sweet-edged",
+      "umami-deep"
     ],
     "season": [],
     "region": {
@@ -932,7 +932,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 81
+    "noteChars": 421
   },
   {
     "slug": "onigiri",
@@ -969,7 +969,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 89
+    "noteChars": 466
   },
   {
     "slug": "japanese-curry",
@@ -1010,7 +1010,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 69
+    "noteChars": 484
   },
   {
     "slug": "gyoza",
@@ -1056,7 +1056,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 100
+    "noteChars": 428
   },
   {
     "slug": "oyakodon",
@@ -1095,7 +1095,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 81
+    "noteChars": 439
   },
   {
     "slug": "yakisoba",
@@ -1124,10 +1124,10 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "briny",
       "umami-deep",
-      "rich",
-      "bright"
+      "briny",
+      "bright",
+      "sweet-edged"
     ],
     "season": [
       1,
@@ -1141,7 +1141,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 82
+    "noteChars": 434
   },
   {
     "slug": "tamagoyaki",
@@ -1179,7 +1179,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 77
+    "noteChars": 465
   },
   {
     "slug": "weeknight-shoyu-ramen",
@@ -1219,7 +1219,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 98
+    "noteChars": 453
   },
   {
     "slug": "salmon-donburi",
@@ -1265,7 +1265,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 74
+    "noteChars": 457
   },
   {
     "slug": "perfect-fried-rice",
@@ -1726,8 +1726,8 @@
     "costTier": 1,
     "flavorTags": [
       "bright",
-      "smoky",
       "herb-fresh",
+      "smoky",
       "charred"
     ],
     "season": [
@@ -1745,7 +1745,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 85
+    "noteChars": 463
   },
   {
     "slug": "guacamole",
@@ -1775,8 +1775,8 @@
     "costTier": 1,
     "flavorTags": [
       "gently hot",
-      "bright",
-      "herb-fresh"
+      "herb-fresh",
+      "bright"
     ],
     "season": [
       3,
@@ -1792,7 +1792,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 87
+    "noteChars": 463
   },
   {
     "slug": "chicken-tinga",
@@ -1824,7 +1824,7 @@
       "smoky",
       "aromatic",
       "silky",
-      "sweet-edged"
+      "gently hot"
     ],
     "season": [
       4,
@@ -1840,7 +1840,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 105
+    "noteChars": 433
   },
   {
     "slug": "carne-asada",
@@ -1889,7 +1889,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 94
+    "noteChars": 426
   },
   {
     "slug": "enchiladas-verdes",
@@ -1918,10 +1918,10 @@
     },
     "costTier": 1,
     "flavorTags": [
+      "briny",
       "fiery",
       "rich",
-      "herb-fresh",
-      "briny"
+      "herb-fresh"
     ],
     "season": [
       6,
@@ -1934,7 +1934,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 86
+    "noteChars": 454
   },
   {
     "slug": "pozole-rojo",
@@ -1966,7 +1966,7 @@
       "gently hot",
       "aromatic",
       "bright",
-      "charred"
+      "sweet-edged"
     ],
     "season": [
       1,
@@ -1986,7 +1986,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 76
+    "noteChars": 508
   },
   {
     "slug": "elote",
@@ -2017,8 +2017,8 @@
     "flavorTags": [
       "rich",
       "bright",
-      "fiery",
-      "charred"
+      "smoky",
+      "fiery"
     ],
     "season": [
       6,
@@ -2031,7 +2031,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 88
+    "noteChars": 446
   },
   {
     "slug": "chiles-rellenos",
@@ -2070,7 +2070,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 72
+    "noteChars": 450
   },
   {
     "slug": "salsa-roja-de-molcajete",
@@ -2102,7 +2102,7 @@
       "gently hot",
       "aromatic",
       "herb-fresh",
-      "warm-spiced"
+      "smoky"
     ],
     "season": [
       6,
@@ -2115,7 +2115,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 70
+    "noteChars": 484
   },
   {
     "slug": "tres-leches",
@@ -2146,7 +2146,8 @@
     "flavorTags": [
       "rich",
       "warm-spiced",
-      "floral"
+      "floral",
+      "silky"
     ],
     "season": [],
     "region": {
@@ -2154,7 +2155,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 81
+    "noteChars": 459
   },
   {
     "slug": "butter-chicken",
@@ -2199,7 +2200,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 84
+    "noteChars": 481
   },
   {
     "slug": "chana-masala",
@@ -2228,8 +2229,8 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "aromatic",
       "bright",
+      "aromatic",
       "herb-fresh",
       "earthy"
     ],
@@ -2250,7 +2251,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 106
+    "noteChars": 490
   },
   {
     "slug": "dal-tadka",
@@ -2300,7 +2301,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 87
+    "noteChars": 494
   },
   {
     "slug": "palak-paneer",
@@ -2329,10 +2330,10 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "aromatic",
       "rich",
+      "aromatic",
       "gently hot",
-      "earthy"
+      "silky"
     ],
     "season": [
       3,
@@ -2350,7 +2351,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 82
+    "noteChars": 462
   },
   {
     "slug": "weeknight-chicken-biryani",
@@ -2381,8 +2382,8 @@
     "flavorTags": [
       "herb-fresh",
       "warm-spiced",
-      "rich",
-      "floral"
+      "floral",
+      "rich"
     ],
     "season": [
       9,
@@ -2395,7 +2396,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 99
+    "noteChars": 450
   },
   {
     "slug": "aloo-gobi",
@@ -2425,9 +2426,9 @@
     "costTier": 1,
     "flavorTags": [
       "earthy",
+      "warm-spiced",
       "gently hot",
-      "herb-fresh",
-      "warm-spiced"
+      "herb-fresh"
     ],
     "season": [
       1,
@@ -2446,7 +2447,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 97
+    "noteChars": 477
   },
   {
     "slug": "raita",
@@ -2475,9 +2476,9 @@
     },
     "costTier": 1,
     "flavorTags": [
+      "bright",
       "earthy",
       "gently hot",
-      "bright",
       "herb-fresh"
     ],
     "season": [
@@ -2490,7 +2491,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 84
+    "noteChars": 451
   },
   {
     "slug": "garlic-naan-stovetop",
@@ -2530,7 +2531,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 106
+    "noteChars": 444
   },
   {
     "slug": "tandoori-style-chicken",
@@ -2580,7 +2581,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 99
+    "noteChars": 497
   },
   {
     "slug": "kheer",
@@ -2609,10 +2610,10 @@
     },
     "costTier": 3,
     "flavorTags": [
+      "sweet-edged",
       "warm-spiced",
       "floral",
-      "nutty-toasted",
-      "sweet-edged"
+      "nutty-toasted"
     ],
     "season": [],
     "region": {
@@ -2620,7 +2621,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 91
+    "noteChars": 463
   },
   {
     "slug": "pad-thai",
@@ -2649,10 +2650,10 @@
     },
     "costTier": 2,
     "flavorTags": [
+      "umami-deep",
+      "sweet-edged",
       "herb-fresh",
-      "nutty-toasted",
-      "gently hot",
-      "umami-deep"
+      "nutty-toasted"
     ],
     "season": [
       6,
@@ -2665,7 +2666,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 91
+    "noteChars": 508
   },
   {
     "slug": "green-curry-gaeng-keow-wan",
@@ -2695,9 +2696,9 @@
     "costTier": 2,
     "flavorTags": [
       "rich",
-      "umami-deep",
-      "sweet-edged",
-      "herb-fresh"
+      "herb-fresh",
+      "gently hot",
+      "umami-deep"
     ],
     "season": [
       6,
@@ -2710,7 +2711,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 117
+    "noteChars": 484
   },
   {
     "slug": "tom-yum-goong",
@@ -2739,8 +2740,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "umami-deep",
       "aromatic",
+      "umami-deep",
       "gently hot",
       "herb-fresh"
     ],
@@ -2762,7 +2763,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 89
+    "noteChars": 489
   },
   {
     "slug": "larb-gai",
@@ -2792,9 +2793,9 @@
     "costTier": 1,
     "flavorTags": [
       "herb-fresh",
-      "gently hot",
       "umami-deep",
-      "tangy-ferment"
+      "tangy-ferment",
+      "gently hot"
     ],
     "season": [
       4,
@@ -2810,7 +2811,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 94
+    "noteChars": 490
   },
   {
     "slug": "pad-krapow-moo",
@@ -2841,8 +2842,8 @@
     "flavorTags": [
       "herb-fresh",
       "gently hot",
-      "umami-deep",
-      "aromatic"
+      "aromatic",
+      "umami-deep"
     ],
     "season": [],
     "region": {
@@ -2850,7 +2851,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 90
+    "noteChars": 480
   },
   {
     "slug": "massaman-curry",
@@ -2879,9 +2880,9 @@
     },
     "costTier": 3,
     "flavorTags": [
-      "rich",
       "warm-spiced",
       "umami-deep",
+      "rich",
       "sweet-edged"
     ],
     "season": [],
@@ -2890,7 +2891,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 102
+    "noteChars": 501
   },
   {
     "slug": "som-tum",
@@ -2935,7 +2936,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 73
+    "noteChars": 446
   },
   {
     "slug": "khao-pad-thai-fried-rice",
@@ -2985,7 +2986,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 99
+    "noteChars": 445
   },
   {
     "slug": "chicken-satay-peanut-sauce",
@@ -3017,7 +3018,7 @@
       "rich",
       "nutty-toasted",
       "earthy",
-      "umami-deep"
+      "charred"
     ],
     "season": [
       1,
@@ -3034,7 +3035,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 103
+    "noteChars": 436
   },
   {
     "slug": "mango-sticky-rice",
@@ -3076,7 +3077,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 68
+    "noteChars": 465
   },
   {
     "slug": "hummus",

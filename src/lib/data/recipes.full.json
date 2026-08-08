@@ -1976,7 +1976,7 @@
         "durationSec": null
       }
     ],
-    "note": "Boiled miso goes flat and gritty. It's a finishing seasoning, not an ingredient to cook.",
+    "note": "Boiled miso goes flat and gritty — its aroma compounds are volatile and its koji enzymes die, which is why it dissolves through a strainer off the boil, a finishing seasoning rather than an ingredient to cook. The real recipe here is the dashi underneath: kombu pulled before the simmer (boiled, it turns slimy and bitter), katsuobushi steeped a bare three minutes. Ichiban dashi takes less time than toast and is the difference between miso soup and salty cloud water.",
     "equipment": [],
     "techniques": [
       "Dashi"
@@ -2056,15 +2056,15 @@
         "durationSec": null
       }
     ],
-    "note": "Real teriyaki is a pan glaze, not a marinade — the sauce reduces onto crisp skin.",
+    "note": "Real teriyaki is a pan glaze, not a marinade — teri means luster, and the luster comes from soy, mirin and sake reducing onto already-crisp skin in the final minutes. Marinated first, the sugars burn before the skin ever crisps, which is the take-out version's chewy fate. Render the thighs patiently, drain the fat so the glaze grips instead of sliding, and pull it while the syrup still flows — it tightens as it cools.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
-        "umami-deep",
-        "sweet-edged"
+        "sweet-edged",
+        "umami-deep"
       ],
-      "sentence": "Leads with savory depth stacked from the pantry’s bass notes, a sweet edge rounding the corners."
+      "sentence": "Leads with a sweet edge rounding the corners, savory depth stacked from the pantry’s bass notes."
     },
     "pairingId": 14,
     "films": {
@@ -2131,7 +2131,7 @@
         "durationSec": null
       }
     ],
-    "note": "Compress just enough to hold. An onigiri should fall apart in the mouth, not in the hand.",
+    "note": "Compress just enough to hold — an onigiri should fall apart in the mouth, not in the hand, and the difference is three firm-but-gentle presses versus a squeeze that welds the grains into a plug. Wet, salted palms are the whole seasoning system: the salt lives on the surface where the tongue meets it first. Nori goes on at the last second so it snaps rather than sogs. This is Japan's oldest portable meal — samurai carried them into the field a thousand years ago.",
     "equipment": [],
     "techniques": [
       "Sushi rice & rolling"
@@ -2218,7 +2218,7 @@
         "durationSec": null
       }
     ],
-    "note": "Roux clumps in boiling liquid — kill the heat first, then melt it in.",
+    "note": "Roux clumps in boiling liquid — the flour's starch gels into a skin around each block before the center melts — so kill the heat, melt it through, then return to a simmer to thicken. The grated apple and splash of soy are the home cook's signature moves, sweetness and depth the box alone doesn't carry. Curry came to Japan via the British navy in the Meiji era and became kokumin-shoku, the national dish; ask any schoolchild their favorite dinner and this is the statistical answer.",
     "equipment": [
       "Grater / zester"
     ],
@@ -2315,7 +2315,7 @@
         "durationSec": null
       }
     ],
-    "note": "Fry–steam–fry is the whole game. The water finishes the filling; the second fry restores the crunch.",
+    "note": "Fry-steam-fry is the whole game: the first fry sets the base, the water steams the filling through, and the second fry — after the lid comes off and the water burns away — restores the shattering bottom. Squeezing the salted cabbage truly dry is the other hinge; skipped, that water ends up steaming the wrapper into glue from the inside. The pleats are one-sided on purpose, curving the dumpling so it stands on its crisp keel.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -2407,7 +2407,7 @@
         "durationSec": null
       }
     ],
-    "note": "The eggs should be three textures at once: set, soft, and raw. Aim for underdone.",
+    "note": "The eggs should be three textures at once — set at the edges, soft in the middle, glossy-raw on top — which is why they go in two stages and the heat dies while the second pour still trembles; the bowl finishes the cooking on the way to the table. Oyako means parent-and-child, the chicken and the egg in one bowl, a name whose dark little joke Japan has enjoyed since the 1890s. Barely beat the eggs: visible streaks of white are correct.",
     "equipment": [],
     "techniques": [
       "Dashi"
@@ -2498,17 +2498,17 @@
         "durationSec": null
       }
     ],
-    "note": "Sauce hitting hot steel, not noodles, is where the street-stall flavor comes from.",
+    "note": "Sauce hitting hot steel, not noodles, is where the street-stall flavor comes from — poured around the pan's edge, the Worcestershire-based blend scorches and caramelizes in the second before it reaches the food. That toasted tang is the taste of every Japanese festival midway. Loosen the noodles with a splash of water first, or they tear; and don't skip the beni shoga, whose pickled sharpness is the dish's off-switch for richness.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
-        "briny",
         "umami-deep",
-        "rich",
-        "bright"
+        "briny",
+        "bright",
+        "sweet-edged"
       ],
-      "sentence": "Leads with a briny, maritime salinity, savory depth stacked from the pantry’s bass notes, with a clean, bright snap."
+      "sentence": "Leads with savory depth stacked from the pantry’s bass notes, a briny, maritime salinity, trailing gentle sweetness."
     },
     "pairingId": 9,
     "films": {
@@ -2581,10 +2581,11 @@
         "durationSec": null
       }
     ],
-    "note": "Each layer glues to the last while still wet — patience loses, momentum wins.",
+    "note": "Each layer glues to the last while still wet — patience loses, momentum wins. Wait until a layer sets fully and the roll becomes a stack of loose crêpes; roll while the surface still shines and the layers fuse into one sliceable block. Straining the egg is the difference between silk and scramble. Every sushi counter is judged on this omelette — regulars traditionally order tamago first, because it announces exactly how careful the hands behind the counter are.",
     "equipment": [],
     "techniques": [
-      "Dashi"
+      "Dashi",
+      "Crêpes"
     ],
     "flavor": {
       "tags": [
@@ -2599,6 +2600,11 @@
         {
           "label": "Technique: Dashi",
           "url": "https://www.youtube.com/results?search_query=how%20to%20make%20dashi%20technique",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: Crêpes",
+          "url": "https://www.youtube.com/results?search_query=crepe%20technique%20how%20to",
           "sub": "The skill inside this recipe"
         }
       ],
@@ -2666,7 +2672,7 @@
         "durationSec": null
       }
     ],
-    "note": "Ramen is assembly, not soup-making: broth, tare, noodles, and toppings are four separate projects.",
+    "note": "Ramen is assembly, not soup-making: broth, tare, noodles and toppings are four separate projects that meet in the bowl, which is why the tare seasons the BOWL and not the pot — every serving lands calibrated instead of drifting saltier as the broth reduces. Noodles never cook in the broth; their starch would cloud in minutes what the kombu spent twenty building. Get the sequence right and a weeknight bowl stands shockingly close to the shop version.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -2750,7 +2756,7 @@
         "durationSec": null
       }
     ],
-    "note": "Body-temperature rice, cool fish — the temperature contrast is the luxury.",
+    "note": "Body-temperature rice, cool fish — the temperature contrast is the luxury, and it is the entire reason sushi rice is fanned rather than refrigerated; cold rice turns hard and dull as its starch retrogrades. Season the rice while warm so the vinegar penetrates. Slice the salmon against the grain in single confident strokes — sawing shreds the flesh — and if searing instead, two minutes a side leaves the center blushing, which is where the richness lives.",
     "equipment": [],
     "techniques": [
       "Sushi rice & rolling"
@@ -3750,7 +3756,7 @@
         "durationSec": null
       }
     ],
-    "note": "Double-stack thin tortillas — the inner one catches the juice, the outer stays whole.",
+    "note": "Double-stack thin tortillas — the inner one catches the juice, the outer one stays whole; taquerias figured out the failure mode centuries before the hand-wash station. Citrus marinades run on a clock: thirty minutes brightens, overnight works because chicken thighs forgive, but the acid is already denaturing the surface. Char hard, rest, chop. Then stop — onion, cilantro, lime is the complete street specification, and everything added past it is subtraction.",
     "equipment": [
       "Grill"
     ],
@@ -3760,11 +3766,11 @@
     "flavor": {
       "tags": [
         "bright",
-        "smoky",
         "herb-fresh",
+        "smoky",
         "charred"
       ],
-      "sentence": "Leads with acid holding everything up to the light, wood-smoke running underneath, with a bitter-edged char at the rim."
+      "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top, with a bitter-edged char at the rim."
     },
     "pairingId": 20,
     "films": {
@@ -3851,7 +3857,7 @@
         "durationSec": null
       }
     ],
-    "note": "Salt suppresses bitterness and makes avocado taste more like itself. Season past timid.",
+    "note": "Salt suppresses bitterness and makes avocado taste more like itself — season past timid, tasting as you go, because under-salted guacamole reads as bland fat. Grinding the onion, chile, cilantro and salt into a paste first is the molcajete method: it distributes the aromatics as flavor rather than as chunks. Leave real pieces of avocado. And the pit in the bowl does nothing — oxidation is an air problem, solved by plastic pressed to the surface, not folklore.",
     "equipment": [],
     "techniques": [
       "The molcajete"
@@ -3859,10 +3865,10 @@
     "flavor": {
       "tags": [
         "gently hot",
-        "bright",
-        "herb-fresh"
+        "herb-fresh",
+        "bright"
       ],
-      "sentence": "Leads with a warm current of chile, acid holding everything up to the light, lifted green at the very end."
+      "sentence": "Leads with a warm current of chile, fresh herbs arguing happily on top, with a clean, bright snap."
     },
     "pairingId": 21,
     "films": {
@@ -3947,7 +3953,7 @@
         "durationSec": null
       }
     ],
-    "note": "Frying the blended salsa concentrates it — a raw purée tastes like tomato juice, a fried one like Mexico.",
+    "note": "Frying the blended salsa is the step that makes it Mexican cooking — a raw purée tastes like tomato juice; seared in hot fat until it darkens and thickens, it concentrates into something with a past. The chipotles are smoked-then-dried jalapeños, so the dish carries fire and smoke without a grill. Simmer only until juicy — tinga on a tostada should sit, not soak — and remember the poaching broth is free flavor waiting to be used.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -3955,11 +3961,11 @@
         "smoky",
         "aromatic",
         "silky",
-        "sweet-edged"
+        "gently hot"
       ],
-      "sentence": "Leads with wood-smoke running underneath, aromatics blooming from the first bite, trailing gentle sweetness."
+      "sentence": "Leads with wood-smoke running underneath, aromatics blooming from the first bite, with warmth in the tail."
     },
-    "pairingId": 20,
+    "pairingId": 21,
     "films": {
       "techniques": [],
       "search": {
@@ -4033,7 +4039,7 @@
         "durationSec": null
       }
     ],
-    "note": "Skirt steak has an obvious grain — cut across it and it's butter, with it and it's a chew toy.",
+    "note": "Skirt steak has an obvious grain — cut across it and it's butter, with it and it's a chew toy; the muscle fibers run the width of the strip, so slicing means shortening them. The marinade runs on the same clock as all citrus: thirty minutes is seasoning, hours is surface mush. What the dish really wants is fire beyond your comfort zone — skirt is thin, so only violent heat can char the outside before the inside overshoots.",
     "equipment": [
       "Grill"
     ],
@@ -4125,17 +4131,17 @@
         "durationSec": 600
       }
     ],
-    "note": "The 5-second fry is non-negotiable — skipped, your enchiladas dissolve into casserole.",
+    "note": "The five-second fry waterproofs each tortilla — skip it and your enchiladas dissolve into casserole, because naked corn tortillas drink salsa until they surrender. Tomatillos are boiled just to olive-drab; past that they burst and turn bitter. Then the salsa is fried, like every serious Mexican sauce, until it deepens. Verdes are assembled and eaten, not held: ten minutes in the oven to marry, crema and queso fresco on top, and straight to the table.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
+        "briny",
         "fiery",
         "rich",
-        "herb-fresh",
-        "briny"
+        "herb-fresh"
       ],
-      "sentence": "Leads with real fire that builds and stays, richness that coats and comforts, ending saline and clean."
+      "sentence": "Leads with a briny, maritime salinity, real fire that builds and stays, lifted green at the very end."
     },
     "pairingId": 21,
     "films": {
@@ -4211,7 +4217,7 @@
         "durationSec": null
       }
     ],
-    "note": "Toast chilies until fragrant, never smoking — burnt chile is bitter forever.",
+    "note": "Toast the chilies until fragrant, never smoking — burnt chile is bitter forever, and no amount of simmering apologizes for it. Guajillo brings the color, ancho the raisin depth; strained and fried, they become the pot's red engine. The garnish bar is not optional: pozole arrives at the table half-finished by design, and the cabbage, radish, lime and oregano are each eater's own seasoning. The dish predates the conquest — hominy was sacred maize, and pozole was a feast food when Tenochtitlan still stood.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -4219,9 +4225,9 @@
         "gently hot",
         "aromatic",
         "bright",
-        "charred"
+        "sweet-edged"
       ],
-      "sentence": "Leads with a warm current of chile, aromatics blooming from the first bite, with a bitter-edged char at the rim."
+      "sentence": "Leads with a warm current of chile, aromatics blooming from the first bite, trailing gentle sweetness."
     },
     "pairingId": 21,
     "films": {
@@ -4294,7 +4300,7 @@
         "durationSec": null
       }
     ],
-    "note": "The mayo is glue and gloss — it's what makes the cheese and chile stick to every kernel.",
+    "note": "The mayo is glue and gloss — it's what makes the cheese and chile stick to every kernel, and its fat carries the chile's flavor in a way naked corn can't. Char matters more than cooking: the kernels are edible raw, so the flame's only job is blisters and smoke. Cotija is the right cheese because it refuses to melt, staying a salty crumble. This is Mexico City street food eaten standing up; the lime at the end is what makes the richness legal.",
     "equipment": [
       "Grill"
     ],
@@ -4303,10 +4309,10 @@
       "tags": [
         "rich",
         "bright",
-        "fiery",
-        "charred"
+        "smoky",
+        "fiery"
       ],
-      "sentence": "Leads with richness that coats and comforts, acid holding everything up to the light, with a bitter-edged char at the rim."
+      "sentence": "Leads with richness that coats and comforts, acid holding everything up to the light, on a slow, honest burn."
     },
     "pairingId": 21,
     "films": {
@@ -4381,12 +4387,13 @@
         "durationSec": null
       }
     ],
-    "note": "The flour dust is primer — egg batter slides straight off a naked chile.",
+    "note": "The flour dust is primer — egg batter slides straight off a naked chile, and the capeado is the dish: whites whipped to soft peaks, yolks folded back in, a soufflé worn as a jacket. Char the poblanos fully black and steam them in a bag; hesitant charring means peeling skin off raw flesh in shreds. Seed gently through the slit — the chile must stay whole to hold its molten heart. Basting the top as it fries sets the batter before you dare to flip.",
     "equipment": [
       "Deep-fry pot"
     ],
     "techniques": [
-      "Whipping a meringue"
+      "Whipping a meringue",
+      "The soufflé"
     ],
     "flavor": {
       "tags": [
@@ -4402,6 +4409,11 @@
         {
           "label": "Technique: Whipping a meringue",
           "url": "https://www.youtube.com/results?search_query=how%20to%20whip%20meringue%20stiff%20peaks%20technique",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: The soufflé",
+          "url": "https://www.youtube.com/results?search_query=souffle%20technique%20how%20to",
           "sub": "The skill inside this recipe"
         }
       ],
@@ -4471,7 +4483,7 @@
         "durationSec": null
       }
     ],
-    "note": "Char is the seasoning. A pale salsa needs a confession, not more salt.",
+    "note": "Char is the seasoning — a pale salsa needs a confession, not more salt. Blistering the tomatoes, chilies and garlic black in spots on dry metal builds the smoke the recipe otherwise has no source for. Grind chilies, garlic and salt first: the coarse salt is an abrasive that pulls the aromatics into paste before the wet tomatoes flood in. The molcajete's basalt leaves a texture no blender blade can counterfeit — a crush, not a purée — and today's salsa never sees the refrigerator.",
     "equipment": [
       "Skillet"
     ],
@@ -4484,9 +4496,9 @@
         "gently hot",
         "aromatic",
         "herb-fresh",
-        "warm-spiced"
+        "smoky"
       ],
-      "sentence": "Leads with a warm current of chile, aromatics blooming from the first bite, fading in warm spice."
+      "sentence": "Leads with a warm current of chile, aromatics blooming from the first bite, on a drift of smoke."
     },
     "pairingId": 21,
     "films": {
@@ -4571,20 +4583,29 @@
         "durationSec": null
       }
     ],
-    "note": "A fatless sponge is a sponge in the literal sense — butter cakes refuse to drink.",
+    "note": "A fatless sponge is a sponge in the literal sense — butter cakes refuse to drink, because fat waterproofs the crumb; the whipped-egg sponge is all open structure, and it swallows three milks without collapsing. Stab it everywhere and pour in stages, letting each addition find its level. The chill is structural: four hours turns soaked cake into cold custard-cake, which is the dessert's whole argument. Every Latin American bakery case runs on this physics.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Tempering a custard"
+    ],
     "flavor": {
       "tags": [
         "rich",
         "warm-spiced",
-        "floral"
+        "floral",
+        "silky"
       ],
-      "sentence": "Leads with richness that coats and comforts, warm spice humming through the middle, leaving a faint perfume."
+      "sentence": "Leads with richness that coats and comforts, warm spice humming through the middle, melting away silken."
     },
     "pairingId": 12,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Tempering a custard",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20temper%20eggs%20custard%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Tres%20Leches%20recipe",
@@ -4654,9 +4675,11 @@
         "durationSec": 300
       }
     ],
-    "note": "Kasuri methi (dried fenugreek leaf) is the flavor people can't name but always miss.",
+    "note": "Kasuri methi — dried fenugreek leaf, crushed between your palms into the finished sauce — is the flavor people can't name but always miss; without it this is just chicken in tomato cream. The char matters equally: murgh makhani was invented at Delhi's Moti Mahal in the 1950s as a way to revive day-old tandoori chicken in butter and tomato, so the smoky edges aren't garnish, they're the dish's origin story. Balance the tomatoes' acidity with sugar until the sauce stops arguing.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Tandoor breads"
+    ],
     "flavor": {
       "tags": [
         "rich",
@@ -4668,7 +4691,13 @@
     },
     "pairingId": 22,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Tandoor breads",
+          "url": "https://www.youtube.com/results?search_query=naan%20tandoor%20technique%20home%20oven",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Butter%20Chicken%20recipe",
@@ -4748,17 +4777,17 @@
         "durationSec": 900
       }
     ],
-    "note": "'The oil separating' is India's version of deglazing the fond — it's the doneness signal for every masala.",
+    "note": "The oil separating is India's version of reading the fond — when the masala pulls from the pan and fat beads at its edges, the water is gone and the onions and tomatoes have actually fried instead of stewed. Everything before that moment is preamble; everything after is assembly. Amchur, the dried-mango powder at the finish, is the sour spine street vendors use — lemon substitutes, but the funky-tart depth is the real signature. Mash a few chickpeas; they thicken the gravy from inside.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
-        "aromatic",
         "bright",
+        "aromatic",
         "herb-fresh",
         "earthy"
       ],
-      "sentence": "Leads with aromatics blooming from the first bite, acid holding everything up to the light, settling low and earthy."
+      "sentence": "Leads with acid holding everything up to the light, aromatics blooming from the first bite, settling low and earthy."
     },
     "pairingId": 2,
     "films": {
@@ -4832,7 +4861,7 @@
         "durationSec": null
       }
     ],
-    "note": "The tadka is added last because fat-bloomed spices lose their perfume in a long simmer.",
+    "note": "The tadka goes on last because fat-bloomed spices lose their perfume in a long simmer — the whole technique exists to deliver cumin, garlic and chili at the moment of maximum aroma, hot ghee poured hissing over the finished dal at the table. Seconds matter in the pan: bronzed garlic is nutty, brown garlic is bitter, and the difference is one breath. The lentils themselves want collapse, whisked until they can't decide if they're soup. Listen to the sizzle; that sound is the recipe working.",
     "equipment": [],
     "techniques": [
       "Tadka — blooming spices in fat"
@@ -4931,21 +4960,29 @@
         "durationSec": null
       }
     ],
-    "note": "Blanch-and-shock keeps chlorophyll bright. Long-simmered spinach turns army green.",
+    "note": "Blanch-and-shock keeps chlorophyll bright — sixty seconds in boiling water, straight into ice, and the purée stays emerald; long-simmered spinach turns army green because heat converts chlorophyll's magnesium out of the molecule. So the spinach joins the masala for only five minutes, at the end. Pan-frying the paneer first gives it a skin that survives the sauce. The cream and kasuri methi finish is what moves it from vegetable purée to Punjabi Sunday lunch.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Mole"
+    ],
     "flavor": {
       "tags": [
-        "aromatic",
         "rich",
+        "aromatic",
         "gently hot",
-        "earthy"
+        "silky"
       ],
-      "sentence": "Leads with aromatics blooming from the first bite, richness that coats and comforts, settling low and earthy."
+      "sentence": "Leads with richness that coats and comforts, aromatics blooming from the first bite, melting away silken."
     },
     "pairingId": 22,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Mole",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20make%20mole%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Palak%20Paneer%20recipe",
@@ -5021,7 +5058,7 @@
         "durationSec": 600
       }
     ],
-    "note": "70% rice is the whole exam — it finishes in the steam. Fully cooked rice becomes porridge upstairs.",
+    "note": "Seventy-percent rice is the whole exam — a parboiled grain should snap between the fingers, not squash, because it finishes cooking in the dum steam above the chicken; fully cooked rice becomes porridge upstairs. The sealed lid is the oven: trap the steam and the pot becomes a pressure chamber where saffron, birista and marinade juices distill through the layers. Dig from the bottom up at the table, so every serving carries the full stratigraphy.",
     "equipment": [],
     "techniques": [
       "Biryani & dum"
@@ -5030,10 +5067,10 @@
       "tags": [
         "herb-fresh",
         "warm-spiced",
-        "rich",
-        "floral"
+        "floral",
+        "rich"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, warm spice humming through the middle, leaving a faint perfume."
+      "sentence": "Leads with fresh herbs arguing happily on top, warm spice humming through the middle, on a rich, rounded finish."
     },
     "pairingId": 23,
     "films": {
@@ -5120,17 +5157,17 @@
         "durationSec": null
       }
     ],
-    "note": "This is a dry curry — steam to cook, then evaporate. A wet aloo gobi is a stew that lost its way.",
+    "note": "This is a dry curry — steam to cook, then evaporate; a wet aloo gobi is a stew that lost its way. The lid-on phase cooks the vegetables through, the lid-off phase burns off the water so the spices concentrate back onto them. Searing the cauliflower and potato first, until spotted brown, is what keeps them distinct instead of dissolving — the florets' brown spots are flavor the simmer can't provide. Garam masala at the end, always: it's a finishing perfume, not a base note.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
         "earthy",
+        "warm-spiced",
         "gently hot",
-        "herb-fresh",
-        "warm-spiced"
+        "herb-fresh"
       ],
-      "sentence": "Leads with an earthy, grounding base, a warm current of chile, fading in warm spice."
+      "sentence": "Leads with an earthy, grounding base, warm spice humming through the middle, lifted green at the very end."
     },
     "pairingId": 22,
     "films": {
@@ -5203,19 +5240,19 @@
         "durationSec": null
       }
     ],
-    "note": "Roast whole cumin in a dry pan, then grind — pre-ground is a photocopy of the smell.",
+    "note": "Roast whole cumin in a dry pan, then grind — pre-ground is a photocopy of the smell; the toasting rebuilds the volatile oils that left the jar months ago. Squeeze the cucumber like you mean it, because its water is the difference between raita and yogurt soup by the time dinner is served. The dish's job at the table is thermal: yogurt's proteins bind capsaicin in a way water can't, which is why it sits beside every fiery plate on the subcontinent.",
     "equipment": [
       "Grater / zester"
     ],
     "techniques": [],
     "flavor": {
       "tags": [
+        "bright",
         "earthy",
         "gently hot",
-        "bright",
         "herb-fresh"
       ],
-      "sentence": "Leads with an earthy, grounding base, a warm current of chile, lifted green at the very end."
+      "sentence": "Leads with acid holding everything up to the light, an earthy, grounding base, lifted green at the very end."
     },
     "pairingId": 22,
     "films": {
@@ -5288,7 +5325,7 @@
         "durationSec": null
       }
     ],
-    "note": "The water-slap makes the naan stick like a tandoor wall — that's how you get flame-kissed bubbles at home.",
+    "note": "The water-slap makes the naan stick like a tandoor wall — that's the entire trick: a wet underside welds to ripping-hot cast iron, and when you flip the whole pan over the flame the top blisters exactly as it would inside the clay oven's throat. Yogurt in the dough keeps it tender and slightly sour. Brush with garlic butter the second it leaves the pan, while the surface is still thirsty. Stack under a towel; naan hardens as it cools alone.",
     "equipment": [
       "Skillet"
     ],
@@ -5379,7 +5416,7 @@
         "durationSec": null
       }
     ],
-    "note": "Slashes let marinade and heat reach the bone — unslashed tandoori is just baked chicken in costume.",
+    "note": "Slashes to the bone let marinade and heat in — unslashed tandoori is just baked chicken in costume. The two-stage marinade is the classic sequence: salt, lemon and chili first to season the flesh, then the yogurt mix, whose lactic acid tenderizes gently where straight citrus would mush the surface. Mustard oil in the marinade is the northern signature, sharp and faintly wasabi-like. The broiler finish stands in for the tandoor's 480-degree throat: you want char at the ridges, not an even tan.",
     "equipment": [
       "Grill"
     ],
@@ -5481,21 +5518,29 @@
         "durationSec": null
       }
     ],
-    "note": "The browned milk solids on the pot wall are flavor — scrape them back in, don't fight them.",
+    "note": "The browned milk solids on the pot wall are flavor — scrape them back in, don't fight them; that slow toasting is where kheer gets its faint caramel depth, the same chemistry that makes rabri. Sugar goes in at the end because it interferes with the rice's softening if added early. The spoon-trail test is the doneness call: thick enough to hold a line, loose enough to relax on the plate. Every festival table on the subcontinent seats a version of this pudding.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Sugar stages & caramel"
+    ],
     "flavor": {
       "tags": [
+        "sweet-edged",
         "warm-spiced",
         "floral",
-        "nutty-toasted",
-        "sweet-edged"
+        "nutty-toasted"
       ],
-      "sentence": "Leads with warm spice humming through the middle, a floral thread lifting the aroma, trailing gentle sweetness."
+      "sentence": "Leads with a sweet edge rounding the corners, warm spice humming through the middle, closing toasted and warm."
     },
-    "pairingId": 12,
+    "pairingId": 24,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Sugar stages & caramel",
+          "url": "https://www.youtube.com/results?search_query=sugar%20stages%20caramel%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Kheer%20recipe",
@@ -5566,7 +5611,7 @@
         "durationSec": null
       }
     ],
-    "note": "Soak, don't boil, the noodles — they finish cooking in the sauce and stay chewy, not mushy.",
+    "note": "Soak, don't boil, the noodles — they finish cooking in the sauce and arrive chewy instead of mushy; boiled noodles have already spent their starch and can only overcook. The sauce is a three-way argument — tamarind sour, palm sugar sweet, fish sauce salt — settled in the pan before the noodles ever hear it. Work in batches: a crowded wok stews. The dish was standardised and promoted by the Thai government in the 1940s as an act of nation-building, which is why one noodle dish carries the country's name.",
     "equipment": [
       "Wok"
     ],
@@ -5575,14 +5620,14 @@
     ],
     "flavor": {
       "tags": [
+        "umami-deep",
+        "sweet-edged",
         "herb-fresh",
-        "nutty-toasted",
-        "gently hot",
-        "umami-deep"
+        "nutty-toasted"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, toasted, nutty warmth throughout, finishing long and savory."
+      "sentence": "Leads with savory depth stacked from the pantry’s bass notes, a sweet edge rounding the corners, closing toasted and warm."
     },
-    "pairingId": 24,
+    "pairingId": 17,
     "films": {
       "techniques": [
         {
@@ -5677,7 +5722,7 @@
         "durationSec": null
       }
     ],
-    "note": "'Cracking' the coconut cream — frying until oil separates — is the step that separates Thai kitchens from timid ones.",
+    "note": "Cracking the coconut cream — frying the paste in the can's thick top layer until the oil visibly splits out — is the step that separates Thai kitchens from timid ones. That separated fat is the cooking medium; paste simmered in whole coconut milk merely poaches, and the curry tastes boiled instead of fried. Green is the hottest of the classic pastes, its color from fresh chilies rather than dried. Basil goes in off the heat, where its anise perfume survives the trip to the table.",
     "equipment": [],
     "techniques": [
       "Pounding a curry paste"
@@ -5685,13 +5730,13 @@
     "flavor": {
       "tags": [
         "rich",
-        "umami-deep",
-        "sweet-edged",
-        "herb-fresh"
+        "herb-fresh",
+        "gently hot",
+        "umami-deep"
       ],
-      "sentence": "Leads with richness that coats and comforts, savory depth stacked from the pantry’s bass notes, lifted green at the very end."
+      "sentence": "Leads with richness that coats and comforts, fresh herbs arguing happily on top, finishing long and savory."
     },
-    "pairingId": 3,
+    "pairingId": 25,
     "films": {
       "techniques": [
         {
@@ -5778,19 +5823,19 @@
         "durationSec": null
       }
     ],
-    "note": "Lime juice boiled turns bitter and flat. Off-heat acid is the rule for the whole cuisine.",
+    "note": "Lime juice boiled turns bitter and flat — off-heat acid is the rule for the whole cuisine, and this soup is its clearest test: kill the flame, then season, and the broth stays electric. The aromatics are infrastructure, not food; lemongrass, galangal and makrut leaves are bruised, simmered and left in the bowl unchewed. Shrimp shells simmered into the stock are where the depth comes from. The name is the recipe — tom, to boil; yum, the hot-sour balance the last thirty seconds decides.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
-        "umami-deep",
         "aromatic",
+        "umami-deep",
         "gently hot",
         "herb-fresh"
       ],
-      "sentence": "Leads with savory depth stacked from the pantry’s bass notes, aromatics blooming from the first bite, lifted green at the very end."
+      "sentence": "Leads with aromatics blooming from the first bite, savory depth stacked from the pantry’s bass notes, lifted green at the very end."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [],
       "search": {
@@ -5870,19 +5915,19 @@
         "durationSec": null
       }
     ],
-    "note": "Khao khua is nutty perfume plus grip — it's why larb clings to lettuce instead of raining out.",
+    "note": "Khao khua — raw sticky rice toasted to deep gold and ground coarse — is nutty perfume plus grip: it's why larb clings to lettuce instead of raining out, and its faint smoke is the dish's backbone. Make it fresh; it fades in a jar within days. The chicken cooks with a splash of water, gently, because larb is a warm salad, not a stir-fry — dressed while warm so the meat drinks the lime and fish sauce. Mint by the handful, not the sprig. Isaan eats this with sticky rice and eats it daily.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
         "herb-fresh",
-        "gently hot",
         "umami-deep",
-        "tangy-ferment"
+        "tangy-ferment",
+        "gently hot"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, a warm current of chile, with a lingering ferment tang."
+      "sentence": "Leads with fresh herbs arguing happily on top, savory depth stacked from the pantry’s bass notes, with warmth in the tail."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [],
       "search": {
@@ -5951,7 +5996,7 @@
         "durationSec": null
       }
     ],
-    "note": "This is Thailand's 10-minute answer to a bad day. The egg's crispy lace edge is mandatory.",
+    "note": "This is Thailand's ten-minute answer to a bad day, and the crispy-laced fried egg on top is mandatory — its yolk is the sauce's co-signer. Press the pork into the screaming wok and let it sear; constant stirring stews it gray. Holy basil is the dish's name and soul, peppery and clove-like where sweet basil is soft — if you substitute, the dish forgives but notices. The fifteen-second garlic-chili fry at the start is where the heat infuses the oil that carries everything else.",
     "equipment": [
       "Wok"
     ],
@@ -5962,12 +6007,12 @@
       "tags": [
         "herb-fresh",
         "gently hot",
-        "umami-deep",
-        "aromatic"
+        "aromatic",
+        "umami-deep"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, a warm current of chile, opening aromatic and staying there."
+      "sentence": "Leads with fresh herbs arguing happily on top, a warm current of chile, finishing long and savory."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [
         {
@@ -6053,21 +6098,29 @@
         "durationSec": null
       }
     ],
-    "note": "Massaman is Thai-Persian fusion 300 years old — the warm spices aren't a mistake, they're the history.",
+    "note": "Massaman is Thai-Persian fusion three centuries old — the cinnamon, star anise and cardamom aren't a mistake, they're the history, carried into Ayutthaya by Muslim traders and folded into a coconut curry that still bears their name ('matsaman', the Muslim curry). It behaves like a braise, not a stir-fry: beef chuck wants its ninety minutes, and the potatoes drink the sauce as they finish. Balance at the end — tamarind, palm sugar, fish sauce — and let the roasted peanuts land last, still crunchy.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Braising"
+    ],
     "flavor": {
       "tags": [
-        "rich",
         "warm-spiced",
         "umami-deep",
+        "rich",
         "sweet-edged"
       ],
-      "sentence": "Leads with richness that coats and comforts, warm spice humming through the middle, trailing gentle sweetness."
+      "sentence": "Leads with warm spice humming through the middle, savory depth stacked from the pantry’s bass notes, trailing gentle sweetness."
     },
-    "pairingId": 16,
+    "pairingId": 1,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Braising",
+          "url": "https://www.youtube.com/results?search_query=braising%20technique%20explained",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Massaman%20Curry%20recipe",
@@ -6144,7 +6197,7 @@
         "durationSec": null
       }
     ],
-    "note": "Pound to bruise. Bruised cells drink dressing; chopped ones just wear it.",
+    "note": "Pound to bruise — bruised cells drink dressing; chopped ones just wear it. The mortar is the whole apparatus: one hand pestles while the other folds with a spoon, so every strand of green papaya gets both damage and dressing. Taste at the end and be honest — som tum should slap, hot-sour-funky-sweet in that order, and a polite version is a coleslaw. Green papaya is crunch with no agenda, which is exactly why it can carry that much aggression.",
     "equipment": [
       "Mortar & pestle"
     ],
@@ -6158,7 +6211,7 @@
       ],
       "sentence": "Leads with a warm current of chile, aromatics blooming from the first bite, trailing gentle sweetness."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [],
       "search": {
@@ -6238,7 +6291,7 @@
         "durationSec": null
       }
     ],
-    "note": "Jasmine + fish sauce is what makes it Thai, not Chinese — that and the lime you squeeze at the end.",
+    "note": "Jasmine rice and fish sauce are what make it Thai rather than Chinese — that, and the lime you squeeze over at the end, plus the prik nam pla alongside so each eater tunes their own salt and fire. The wok work is the same physics as every fried rice: day-old grains, maximum flame, press-flip-press so the rice toasts against the steel. The cucumber slices aren't garnish; they're the cooling system, and Thai plates almost always ship with one.",
     "equipment": [
       "Wok"
     ],
@@ -6253,7 +6306,7 @@
       ],
       "sentence": "Leads with savory depth stacked from the pantry’s bass notes, ferment tang with real depth behind it, with warmth in the tail."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [
         {
@@ -6338,7 +6391,7 @@
         "durationSec": null
       }
     ],
-    "note": "Fry the curry paste into the coconut milk first — the sauce goes from peanut butter dip to satay sauce.",
+    "note": "Fry the red curry paste into the cracked coconut milk first — that one step takes the sauce from peanut-butter dip to satay sauce, blooming the paste's chilies and aromatics in fat before the peanuts thicken everything. Turmeric in the marinade is why the skewers glow gold. Grill hot and fast, brushing with coconut milk to baste and flare the fire. The cucumber ajad on the side is structural: quick-pickled relief between rich bites.",
     "equipment": [
       "Grill"
     ],
@@ -6350,9 +6403,9 @@
         "rich",
         "nutty-toasted",
         "earthy",
-        "umami-deep"
+        "charred"
       ],
-      "sentence": "Leads with richness that coats and comforts, toasted, nutty warmth throughout, finishing long and savory."
+      "sentence": "Leads with richness that coats and comforts, toasted, nutty warmth throughout, with a bitter-edged char at the rim."
     },
     "pairingId": 3,
     "films": {
@@ -6436,7 +6489,7 @@
         "durationSec": null
       }
     ],
-    "note": "The salt isn't optional — Thai desserts run on the sweet-salty axis.",
+    "note": "The salt isn't optional — Thai desserts run on the sweet-salty axis, and the lightly salted coconut sauce is what keeps the dish from cloying. Steam the rice over cloth, never boil it: glutinous rice cooked in water bursts into paste, while steam leaves each grain whole and chewy. Pour the sweetened coconut milk over the rice while hot — the twenty-minute covered rest is when it drinks. Warm rice, cold mango: the season's best dessert is a temperature contrast.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -6446,7 +6499,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, toasted, nutty warmth throughout."
     },
-    "pairingId": 25,
+    "pairingId": 26,
     "films": {
       "techniques": [],
       "search": {
@@ -7071,7 +7124,7 @@
       ],
       "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top, with a bitter-edged char at the rim."
     },
-    "pairingId": 26,
+    "pairingId": 27,
     "films": {
       "techniques": [],
       "search": {
@@ -7946,7 +7999,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite, toasted, nutty warmth throughout, with a clean, bright snap."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [],
       "search": {
@@ -8133,7 +8186,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, warm spice humming through the middle."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -8767,7 +8820,7 @@
       ],
       "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [
         {
@@ -9038,7 +9091,7 @@
       ],
       "sentence": "Leads with fresh herbs arguing happily on top, acid holding everything up to the light, fading in warm spice."
     },
-    "pairingId": 26,
+    "pairingId": 27,
     "films": {
       "techniques": [],
       "search": {
@@ -9212,7 +9265,7 @@
       ],
       "sentence": "Leads with fresh herbs arguing happily on top, char used as punctuation."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -10010,7 +10063,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners, leaving a faint perfume."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -10996,7 +11049,7 @@
       ],
       "sentence": "Leads with fresh herbs arguing happily on top, warm spice humming through the middle, with a lingering ferment tang."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [],
       "search": {
@@ -11092,7 +11145,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite, a warm current of chile, with a bitter-edged char at the rim."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [],
       "search": {
@@ -11280,7 +11333,7 @@
       ],
       "sentence": "Leads with fresh herbs arguing happily on top, toasted, nutty warmth throughout, with warmth in the tail."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [],
       "search": {
@@ -11468,7 +11521,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite, real fire that builds and stays, trailing gentle sweetness."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [],
       "search": {
@@ -11552,7 +11605,7 @@
       ],
       "sentence": "Leads with savory depth stacked from the pantry’s bass notes, ferment tang with real depth behind it, on a slow, honest burn."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [],
       "search": {
@@ -11788,7 +11841,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite, savory depth stacked from the pantry’s bass notes, with a lingering ferment tang."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [
         {
@@ -11975,7 +12028,7 @@
       ],
       "sentence": "Leads with toasted, nutty warmth throughout, a sweet edge rounding the corners, settling low and earthy."
     },
-    "pairingId": 26,
+    "pairingId": 27,
     "films": {
       "techniques": [
         {
@@ -12421,7 +12474,7 @@
       ],
       "sentence": "Leads with fresh herbs arguing happily on top, an earthy, grounding base, opening aromatic and staying there."
     },
-    "pairingId": 26,
+    "pairingId": 27,
     "films": {
       "techniques": [
         {
@@ -13212,7 +13265,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -14160,7 +14213,7 @@
       ],
       "sentence": "Leads with acid holding everything up to the light, richness that coats and comforts, opening aromatic and staying there."
     },
-    "pairingId": 26,
+    "pairingId": 27,
     "films": {
       "techniques": [],
       "search": {
@@ -14328,7 +14381,7 @@
       ],
       "sentence": "Leads with char used as punctuation, fresh herbs arguing happily on top, settling low and earthy."
     },
-    "pairingId": 26,
+    "pairingId": 27,
     "films": {
       "techniques": [],
       "search": {
@@ -18623,7 +18676,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners, with a bitter-edged char at the rim."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [],
       "search": {
@@ -19447,7 +19500,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, fresh herbs arguing happily on top."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -20487,7 +20540,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a floral thread lifting the aroma, closing toasted and warm."
     },
-    "pairingId": 25,
+    "pairingId": 26,
     "films": {
       "techniques": [],
       "search": {
@@ -21973,7 +22026,7 @@
       ],
       "sentence": "Leads with a sweet edge rounding the corners, richness that coats and comforts, leaving a faint perfume."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -22871,7 +22924,7 @@
       ],
       "sentence": "Leads with warm spice humming through the middle, richness that coats and comforts."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -22962,7 +23015,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, acid holding everything up to the light."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -24007,7 +24060,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, warm spice humming through the middle."
     },
-    "pairingId": 25,
+    "pairingId": 26,
     "films": {
       "techniques": [],
       "search": {
@@ -25692,7 +25745,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, toasted, nutty warmth throughout, with a bitter-edged char at the rim."
     },
-    "pairingId": 25,
+    "pairingId": 26,
     "films": {
       "techniques": [],
       "search": {
@@ -25868,7 +25921,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, fresh herbs arguing happily on top, with warmth in the tail."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [
         {
@@ -25961,7 +26014,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite, acid holding everything up to the light, on a slow, honest burn."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [],
       "search": {
@@ -26059,7 +26112,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite, acid holding everything up to the light, on a slow, honest burn."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [],
       "search": {
@@ -26153,7 +26206,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, char used as punctuation."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [
         {
@@ -26242,7 +26295,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite, fresh herbs arguing happily on top, on a slow, honest burn."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [
         {
@@ -26413,7 +26466,7 @@
       ],
       "sentence": "Leads with a warm current of chile, acid holding everything up to the light, opening aromatic and staying there."
     },
-    "pairingId": 24,
+    "pairingId": 25,
     "films": {
       "techniques": [],
       "search": {
@@ -26495,7 +26548,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a floral thread lifting the aroma, trailing gentle sweetness."
     },
-    "pairingId": 25,
+    "pairingId": 26,
     "films": {
       "techniques": [],
       "search": {
@@ -27536,7 +27589,7 @@
       ],
       "sentence": "Leads with a sweet edge rounding the corners, richness that coats and comforts."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -27625,7 +27678,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite, an earthy, grounding base."
     },
-    "pairingId": 26,
+    "pairingId": 27,
     "films": {
       "techniques": [],
       "search": {
@@ -27711,7 +27764,7 @@
       ],
       "sentence": "Leads with a warm current of chile, acid holding everything up to the light, settling low and earthy."
     },
-    "pairingId": 26,
+    "pairingId": 27,
     "films": {
       "techniques": [
         {
@@ -27895,7 +27948,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, an earthy, grounding base, closing toasted and warm."
     },
-    "pairingId": 26,
+    "pairingId": 27,
     "films": {
       "techniques": [
         {
@@ -29223,7 +29276,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -29306,7 +29359,7 @@
       ],
       "sentence": "Leads with warm spice humming through the middle, richness that coats and comforts."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -30067,7 +30120,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, acid holding everything up to the light, lifted green at the very end."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [],
       "search": {
@@ -30247,7 +30300,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -30339,7 +30392,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a floral thread lifting the aroma, with a bitter-edged char at the rim."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -31045,7 +31098,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, acid holding everything up to the light, trailing gentle sweetness."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -31140,7 +31193,7 @@
       ],
       "sentence": "Leads with char used as punctuation, wood-smoke running underneath."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [
         {
@@ -32515,7 +32568,7 @@
       ],
       "sentence": "Leads with wood-smoke running underneath, char used as punctuation, opening aromatic and staying there."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [
         {
@@ -33411,7 +33464,7 @@
       ],
       "sentence": "Leads with wood-smoke running underneath, aromatics blooming from the first bite, on a rich, rounded finish."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [
         {
@@ -33519,7 +33572,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners, closing toasted and warm."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -34220,7 +34273,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a warm current of chile, opening aromatic and staying there."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -36764,7 +36817,7 @@
       ],
       "sentence": "Leads with savory depth stacked from the pantry’s bass notes, a briny, maritime salinity."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -36940,7 +36993,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, acid holding everything up to the light."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -37599,7 +37652,7 @@
       ],
       "sentence": "Leads with wood-smoke running underneath, acid holding everything up to the light, opening aromatic and staying there."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [],
       "search": {
@@ -38039,7 +38092,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite, richness that coats and comforts, with warmth in the tail."
     },
-    "pairingId": 26,
+    "pairingId": 27,
     "films": {
       "techniques": [
         {
@@ -39762,7 +39815,7 @@
       ],
       "sentence": "Leads with fresh herbs arguing happily on top, richness that coats and comforts, with a bitter-edged char at the rim."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [],
       "search": {
@@ -40229,7 +40282,7 @@
       ],
       "sentence": "Leads with wood-smoke running underneath, richness that coats and comforts, with a bitter-edged char at the rim."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [
         {
@@ -40318,7 +40371,7 @@
       ],
       "sentence": "Leads with char used as punctuation, a sweet edge rounding the corners, lifted green at the very end."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [],
       "search": {
@@ -40400,7 +40453,7 @@
       ],
       "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top, settling low and earthy."
     },
-    "pairingId": 26,
+    "pairingId": 27,
     "films": {
       "techniques": [],
       "search": {
@@ -40492,7 +40545,7 @@
       ],
       "sentence": "Leads with char used as punctuation, wood-smoke running underneath, with a clean, bright snap."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [],
       "search": {
@@ -41024,7 +41077,7 @@
       ],
       "sentence": "Leads with char used as punctuation, acid holding everything up to the light, on a drift of smoke."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [],
       "search": {
@@ -43364,7 +43417,7 @@
       ],
       "sentence": "Leads with a silken, spoon-slow texture, richness that coats and comforts, on a slow, honest burn."
     },
-    "pairingId": 25,
+    "pairingId": 26,
     "films": {
       "techniques": [
         {
@@ -43638,7 +43691,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners, leaving a faint perfume."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -43732,7 +43785,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, toasted, nutty warmth throughout, trailing gentle sweetness."
     },
-    "pairingId": 25,
+    "pairingId": 26,
     "films": {
       "techniques": [
         {
@@ -44328,7 +44381,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, toasted, nutty warmth throughout, settling low and earthy."
     },
-    "pairingId": 25,
+    "pairingId": 26,
     "films": {
       "techniques": [],
       "search": {
@@ -44425,7 +44478,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners, fading in warm spice."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [],
       "search": {
@@ -44510,7 +44563,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners, melting away silken."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -45851,7 +45904,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -45956,7 +46009,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, fresh herbs arguing happily on top."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -46486,7 +46539,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners, leaving a faint perfume."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -46710,7 +46763,7 @@
       ],
       "sentence": "Leads with a sweet edge rounding the corners, toasted, nutty warmth throughout, settling low and earthy."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [],
       "search": {
@@ -46887,7 +46940,7 @@
       ],
       "sentence": "Leads with a sweet edge rounding the corners."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [],
       "search": {
@@ -47092,7 +47145,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -50836,7 +50889,7 @@
       ],
       "sentence": "Leads with wood-smoke running underneath, an earthy, grounding base."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [],
       "search": {
@@ -51935,7 +51988,7 @@
       ],
       "sentence": "Leads with wood-smoke running underneath, an earthy, grounding base, trailing gentle sweetness."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [],
       "search": {
@@ -52842,7 +52895,7 @@
       ],
       "sentence": "Leads with acid holding everything up to the light, wood-smoke running underneath, on a rich, rounded finish."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [],
       "search": {
@@ -52943,7 +52996,7 @@
       ],
       "sentence": "Leads with fresh herbs arguing happily on top."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [],
       "search": {
@@ -53465,7 +53518,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, fresh herbs arguing happily on top."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [],
       "search": {
@@ -54935,7 +54988,7 @@
       ],
       "sentence": "Leads with char used as punctuation, wood-smoke running underneath, opening aromatic and staying there."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [],
       "search": {
@@ -55624,7 +55677,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -56333,7 +56386,7 @@
       ],
       "sentence": "Leads with acid holding everything up to the light, warm spice humming through the middle, trailing gentle sweetness."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -56537,7 +56590,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -56731,7 +56784,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -57231,7 +57284,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, warm spice humming through the middle, leaving a faint perfume."
     },
-    "pairingId": 25,
+    "pairingId": 26,
     "films": {
       "techniques": [],
       "search": {
@@ -60801,7 +60854,7 @@
       ],
       "sentence": "Leads with acid holding everything up to the light."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -61893,7 +61946,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a floral thread lifting the aroma, melting away silken."
     },
-    "pairingId": 25,
+    "pairingId": 26,
     "films": {
       "techniques": [
         {
@@ -62093,7 +62146,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners, leaving a faint perfume."
     },
-    "pairingId": 25,
+    "pairingId": 26,
     "films": {
       "techniques": [],
       "search": {
@@ -62507,7 +62560,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -64317,7 +64370,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, char used as punctuation, lifted green at the very end."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -65443,7 +65496,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -66238,7 +66291,7 @@
       ],
       "sentence": "Leads with fresh herbs arguing happily on top."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -66514,7 +66567,7 @@
       ],
       "sentence": "Leads with a sweet edge rounding the corners, acid holding everything up to the light, fading in warm spice."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [
         {
@@ -66716,7 +66769,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -67241,7 +67294,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, fresh herbs arguing happily on top."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [],
       "search": {
@@ -67721,7 +67774,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a warm current of chile, finishing long and savory."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -69337,7 +69390,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, acid holding everything up to the light, fading in warm spice."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -71459,7 +71512,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -73038,7 +73091,7 @@
       ],
       "sentence": "Leads with acid holding everything up to the light, a sweet edge rounding the corners."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -73125,7 +73178,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners, leaving a faint perfume."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
@@ -73435,7 +73488,7 @@
       ],
       "sentence": "Leads with wood-smoke running underneath, a sweet edge rounding the corners, with warmth in the tail."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [
         {
@@ -73633,7 +73686,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, fresh herbs arguing happily on top."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -76663,7 +76716,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -77312,7 +77365,7 @@
       ],
       "sentence": "Leads with savory depth stacked from the pantry’s bass notes, fresh herbs arguing happily on top."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [],
       "search": {
@@ -78264,7 +78317,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [],
       "search": {
@@ -78569,7 +78622,7 @@
       ],
       "sentence": "Leads with a warm current of chile, wood-smoke running underneath, with a clean, bright snap."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [
         {
@@ -79143,7 +79196,7 @@
       ],
       "sentence": "Leads with wood-smoke running underneath, a warm current of chile, opening aromatic and staying there."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [
         {
@@ -82898,7 +82951,7 @@
       ],
       "sentence": "Leads with wood-smoke running underneath, richness that coats and comforts."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [
         {
@@ -86763,7 +86816,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, warm spice humming through the middle, settling low and earthy."
     },
-    "pairingId": 28,
+    "pairingId": 23,
     "films": {
       "techniques": [
         {
@@ -87720,7 +87773,7 @@
       ],
       "sentence": "Leads with aromatics blooming from the first bite, char used as punctuation."
     },
-    "pairingId": 27,
+    "pairingId": 28,
     "films": {
       "techniques": [],
       "search": {
@@ -89535,7 +89588,7 @@
       ],
       "sentence": "Leads with char used as punctuation, aromatics blooming from the first bite, finishing long and savory."
     },
-    "pairingId": 23,
+    "pairingId": 30,
     "films": {
       "techniques": [],
       "search": {
@@ -91393,7 +91446,7 @@
       ],
       "sentence": "Leads with richness that coats and comforts, a sweet edge rounding the corners, leaving a faint perfume."
     },
-    "pairingId": 30,
+    "pairingId": 24,
     "films": {
       "techniques": [
         {
