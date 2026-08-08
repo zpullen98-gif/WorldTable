@@ -59,7 +59,16 @@ export interface Step {
  * everything else is derived from ingredient keywords at build time.
  */
 export interface DietFlags {
+	/** Authored by hand in the original corpus, and trusted. */
 	vegetarian: boolean;
+	/**
+	 * The literal reading: no animal product in any binding ingredient position.
+	 * Differs from `vegetarian` on ~22 dishes because the corpus is inconsistent
+	 * about substitution constructions — see tools/derive/diet.mjs.
+	 */
+	vegetarianStrict: boolean;
+	/** Animal products appear, but only in optional or "or" positions. */
+	vegetarianOption: boolean;
 	vegan: boolean;
 	containsMeat: boolean;
 	containsPork: boolean;
@@ -94,9 +103,12 @@ export interface FilmLink {
 }
 
 export interface Films {
+	/** A verified canon film of this exact dish, when one exists. */
 	dish?: FilmLink;
+	/** Always present: a search for the dish on film. */
+	search: FilmLink;
 	techniques: FilmLink[];
-	teacher?: FilmLink;
+	teacher: FilmLink;
 }
 
 /** The lightweight record shipped eagerly to render the 970-card grid. */
@@ -129,7 +141,8 @@ export interface RecipeDetail {
 	equipment: string[];
 	techniques: string[];
 	flavor: FlavorProfile;
-	pairing: Pairing;
+	/** Index into pairings.json — 41 distinct outcomes across 970 recipes. */
+	pairingId: number;
 	films: Films;
 	/** Slugs into the lexicon — scored at build time, not "first three hits". */
 	lexiconTerms: string[];

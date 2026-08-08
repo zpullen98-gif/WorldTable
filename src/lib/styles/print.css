@@ -1,0 +1,89 @@
+/**
+ * The letterpress sheet.
+ *
+ * The original scattered four separate `@media print` blocks across its
+ * stylesheet (L227, L405, L451, L522), each hiding a different set of chrome and
+ * none of them agreeing about type size. This is the one place print is decided.
+ *
+ * Everything here assumes ink on white paper: the night service's cream-on-brown
+ * would empty a cartridge and read worse.
+ */
+@media print {
+	:root {
+		--paper: #fff;
+		--paper-raised: #fff;
+		--card: #fff;
+		--ink: #14120f;
+		--ink-soft: #2c2822;
+		--muted: #5a5343;
+		--line: #b9b0a0;
+		--turmeric: #8a6d2e;
+		--turmeric-deep: #8a6d2e;
+	}
+
+	body {
+		background: #fff !important;
+		color: #14120f !important;
+		font-size: 11pt;
+		line-height: 1.45;
+	}
+
+	/* No grain, no shadow, no sticky chrome. */
+	body::before {
+		display: none !important;
+	}
+	* {
+		box-shadow: none !important;
+	}
+
+	[data-print='hide'],
+	nav,
+	.toolbar,
+	.modebar,
+	.skip,
+	button:not([data-print='keep']) {
+		display: none !important;
+	}
+
+	@page {
+		margin: 18mm 16mm;
+	}
+
+	h1,
+	h2,
+	h3 {
+		break-after: avoid;
+		page-break-after: avoid;
+	}
+
+	/* A step split across a page break is a step you miss at the stove. */
+	li,
+	.step,
+	.recipe-note,
+	figure,
+	table {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+
+	/* Ingredients set in two columns — the shape of a recipe card. */
+	.ingredients {
+		columns: 2;
+		column-gap: 10mm;
+	}
+	.ingredients li {
+		break-inside: avoid;
+	}
+
+	/* Expand the destination of real links; leave in-app anchors silent. */
+	a[href^='http']::after {
+		content: ' (' attr(href) ')';
+		font-size: 8.5pt;
+		color: #5a5343;
+		word-break: break-all;
+	}
+
+	abbr[title]::after {
+		content: ' (' attr(title) ')';
+	}
+}

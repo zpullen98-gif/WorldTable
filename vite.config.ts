@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 
 // Empty for local dev and `npm run preview`. GitHub Pages serves from a
 // subpath, so deploying there is just: BASE_PATH=/WorldTable npm run build
-const base = process.env.BASE_PATH ?? '';
+const base = (process.env.BASE_PATH ?? '') as '' | `/${string}`;
 
 export default defineConfig({
 	plugins: [

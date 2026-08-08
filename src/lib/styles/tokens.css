@@ -1,0 +1,126 @@
+/**
+ * The World Table — design tokens.
+ *
+ * Night service is the default (the original's paper #191612 / turmeric #C2A055).
+ * Day is not a handful of overrides on a body class as it was before, but a full
+ * parallel token set, so contrast, shadow depth, rule weight and grain opacity
+ * can each be tuned for the service they belong to instead of inheriting values
+ * chosen for the dark one.
+ *
+ * `prefers-color-scheme` picks the opening service; an explicit choice stamps
+ * data-service on <html> and wins in both directions.
+ */
+
+:root {
+	/* ---- ink & paper ---- */
+	--paper: #191612;
+	--paper-raised: #211d16;
+	--card: #211d16;
+	--ink: #eae2ce;
+	--ink-soft: #c9c0a8;
+	--muted: #9a907a;
+	--line: #3b3628;
+	--line-strong: #4d4735;
+
+	/* ---- accents ---- */
+	--turmeric: #c2a055;
+	--turmeric-deep: #d4b269;
+	--chili: #c08090;
+	--leaf: #8fa57f;
+
+	/* ---- depth ---- */
+	--shadow-card: 0 1px 0 rgba(0, 0, 0, 0.35);
+	--shadow-lift: 0 8px 24px rgba(0, 0, 0, 0.28);
+	--shadow-sheet: 0 24px 64px -24px rgba(0, 0, 0, 0.9);
+	--scrim: rgba(12, 10, 8, 0.62);
+
+	/* ---- paper grain ---- */
+	--grain-opacity: 0.05;
+	--grain-blend: overlay;
+
+	/* ---- type ---- */
+	--display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+	--text: 'EB Garamond', 'Iowan Old Style', Georgia, serif;
+
+	/* A 1.25 modular scale off a 16px base. Named by role, not by size, so a
+	   change of scale doesn't require touching every component. */
+	--t-micro: 0.6875rem; /* 11px  — eyebrows, tabs, counts */
+	--t-small: 0.8125rem; /* 13px  — captions, badges */
+	--t-body: 1rem; /* 16px  — running text */
+	--t-lede: 1.125rem; /* 18px  — intros */
+	--t-h4: 1.1875rem; /* 19px  — card titles */
+	--t-h3: 1.5rem; /* 24px  — section heads */
+	--t-h2: 1.875rem; /* 30px  — chapter heads */
+	--t-h1: clamp(2rem, 4.5vw, 2.9rem);
+
+	--tracking-eyebrow: 0.22em;
+	--tracking-tab: 0.08em;
+
+	/* ---- rhythm ---- */
+	--rule: 1px;
+	--radius: 2px;
+	--gap: 14px;
+	--measure: 66ch;
+
+	color-scheme: dark;
+}
+
+/* Day service — the illuminated page rather than the inverted one. */
+@media (prefers-color-scheme: light) {
+	:root:not([data-service='night']) {
+		--paper: #fefdf8;
+		--paper-raised: #fffefb;
+		--card: #fffefb;
+		--ink: #25211a;
+		--ink-soft: #453f33;
+		--muted: #7c7462;
+		--line: #ded5bd;
+		--line-strong: #c8bda0;
+
+		--turmeric: #a5822f;
+		--turmeric-deep: #8a6d2e;
+		--chili: #a04f63;
+		--leaf: #5f7a4e;
+
+		--shadow-card: 0 1px 0 rgba(37, 33, 26, 0.06);
+		--shadow-lift: 0 2px 10px rgba(37, 33, 26, 0.12);
+		--shadow-sheet: 0 24px 64px -28px rgba(37, 33, 26, 0.35);
+		--scrim: rgba(60, 54, 40, 0.34);
+
+		/* Grain reads much heavier on light paper — same texture, less of it. */
+		--grain-opacity: 0.035;
+		--grain-blend: multiply;
+
+		color-scheme: light;
+	}
+}
+
+:root[data-service='day'] {
+	--paper: #fefdf8;
+	--paper-raised: #fffefb;
+	--card: #fffefb;
+	--ink: #25211a;
+	--ink-soft: #453f33;
+	--muted: #7c7462;
+	--line: #ded5bd;
+	--line-strong: #c8bda0;
+
+	--turmeric: #a5822f;
+	--turmeric-deep: #8a6d2e;
+	--chili: #a04f63;
+	--leaf: #5f7a4e;
+
+	--shadow-card: 0 1px 0 rgba(37, 33, 26, 0.06);
+	--shadow-lift: 0 2px 10px rgba(37, 33, 26, 0.12);
+	--shadow-sheet: 0 24px 64px -28px rgba(37, 33, 26, 0.35);
+	--scrim: rgba(60, 54, 40, 0.34);
+
+	--grain-opacity: 0.035;
+	--grain-blend: multiply;
+
+	color-scheme: light;
+}
+
+:root[data-service='night'] {
+	color-scheme: dark;
+}
