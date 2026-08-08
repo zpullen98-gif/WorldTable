@@ -11107,17 +11107,17 @@
         "durationSec": null
       }
     ],
-    "note": "Charring the aromatics is pho's signature — sweet smoke in the broth that no shortcut replaces.",
+    "note": "Charring the onion and ginger is pho's signature — sweet smoke dissolved into the broth that no shortcut replaces; blacken them properly over open flame and don't apologize. Toast the spices until they wake. Then season the broth until it tastes complete ALONE, before it ever meets a noodle, because everything added later dilutes. The herb plate is the eater's half of the contract: pho arrives unfinished on purpose, and the table finishes it.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
         "herb-fresh",
         "warm-spiced",
-        "umami-deep",
-        "tangy-ferment"
+        "aromatic",
+        "umami-deep"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, warm spice humming through the middle, with a lingering ferment tang."
+      "sentence": "Leads with fresh herbs arguing happily on top, warm spice humming through the middle, finishing long and savory."
     },
     "pairingId": 30,
     "films": {
@@ -11201,19 +11201,19 @@
         "durationSec": null
       }
     ],
-    "note": "The architecture is contrast: warm/cool, rich/pickled, crisp/soft. Missing pickles collapses the whole thesis.",
+    "note": "The architecture is contrast — warm against cool, rich against pickled, crisp against soft — and missing pickles collapses the whole thesis; the do chua's sharpness is the load-bearing wall. The bread is the other non-negotiable: a true banh mi roll is light and shatter-crusted, rice flour thinning the wheat, the colonial baguette rebuilt for the tropics. Toast it hollow-hot. Whole cilantro sprigs, stems and all — chopped cilantro is a different, lesser herb.",
     "equipment": [
       "Grill"
     ],
     "techniques": [],
     "flavor": {
       "tags": [
+        "herb-fresh",
         "aromatic",
         "gently hot",
-        "herb-fresh",
         "charred"
       ],
-      "sentence": "Leads with aromatics blooming from the first bite, a warm current of chile, with a bitter-edged char at the rim."
+      "sentence": "Leads with fresh herbs arguing happily on top, aromatics blooming from the first bite, with a bitter-edged char at the rim."
     },
     "pairingId": 25,
     "films": {
@@ -11297,7 +11297,7 @@
         "durationSec": null
       }
     ],
-    "note": "It's a noodle salad, not a noodle soup — cold noodles, hot meat, cool herbs, and the sauce ties the room together.",
+    "note": "It's a noodle salad, not a noodle soup — cold noodles, hot meat, cool herbs, and the nuoc cham poured over at the table ties the room together; toss it like a salad and eat it like a race. The pork's marinade is engineered to burn a little: the sugar chars at the edges into the bitter-sweet crust that perfumes the whole bowl. Batches on the grill, never a crowd. The bowl is southern Vietnam's answer to lunch heat — everything about it works at ninety degrees in the shade.",
     "equipment": [
       "Grill"
     ],
@@ -11307,9 +11307,9 @@
         "herb-fresh",
         "aromatic",
         "nutty-toasted",
-        "umami-deep"
+        "charred"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, aromatics blooming from the first bite, finishing long and savory."
+      "sentence": "Leads with fresh herbs arguing happily on top, aromatics blooming from the first bite, with a bitter-edged char at the rim."
     },
     "pairingId": 9,
     "films": {
@@ -11391,7 +11391,7 @@
         "durationSec": null
       }
     ],
-    "note": "Two-second dip. The paper should still feel slightly stiff when you start rolling.",
+    "note": "Two-second dip — the paper should still feel slightly stiff when you start rolling, because it keeps softening from residual water and a fully soft sheet tears and welds to itself. Shrimp go pink-side-down first so the finished roll shows them off through the translucent skin; that window is the dish's signature. Roll tight, burrito-discipline. Goi cuon means 'salad roll', which is the honest name: this is a salad wearing rice paper, eaten for the dip as much as the roll.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -11484,7 +11484,7 @@
         "durationSec": null
       }
     ],
-    "note": "Bitter-edge caramel + fish sauce is the backbone of Vietnamese kho — sweet, salty, smoky, profound.",
+    "note": "Bitter-edged caramel plus fish sauce is the backbone of Vietnamese kho — sweet, salty, smoky, profound — and the caramel (nuoc mau) must go darker than feels safe, to the edge of burnt, or the dish tastes like candy instead of dinner. Stand back when the fish sauce hits; the pan will shout. Clay pot preferred but not required. Spoon the glaze over as it reduces, finish aggressive with black pepper, and accept that rice is not optional — the sauce demands it.",
     "equipment": [],
     "techniques": [
       "Sugar stages & caramel"
@@ -11579,21 +11579,29 @@
         "durationSec": null
       }
     ],
-    "note": "Mince lemongrass like you're angry at it — big pieces are woody splinters, fine mince is pure perfume.",
+    "note": "Mince the lemongrass like you're angry at it — big pieces are woody splinters, fine mince is pure perfume, and only the pale tender third of the stalk is worth the knife. The fish-sauce-and-sugar marinade is a caramelization kit: the sear should build sticky charred edges, so don't crowd the pan. The final splash of water deglazes those sugars into a glaze rather than leaving them on the pan. Fifteen minutes of marinade genuinely suffices; lemongrass works fast.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Deglazing & pan sauces"
+    ],
     "flavor": {
       "tags": [
         "aromatic",
+        "sweet-edged",
         "fiery",
-        "umami-deep",
-        "sweet-edged"
+        "umami-deep"
       ],
-      "sentence": "Leads with aromatics blooming from the first bite, real fire that builds and stays, trailing gentle sweetness."
+      "sentence": "Leads with aromatics blooming from the first bite, a sweet edge rounding the corners, finishing long and savory."
     },
     "pairingId": 25,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Deglazing & pan sauces",
+          "url": "https://www.youtube.com/results?search_query=pan%20sauce%20deglazing%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Lemongrass%20Chicken%20recipe",
@@ -11663,7 +11671,7 @@
         "durationSec": null
       }
     ],
-    "note": "This is the master sauce of the cuisine — learn the ratio (1:1:⅔:2) and you can dress a nation of dishes.",
+    "note": "This is the master sauce of the cuisine — learn the ratio (fish sauce, lime, sugar at 1:1:⅔, water at 2) and you can dress a nation of dishes: bun bowls, rolls, grilled anything, fried everything. Balance is the entire skill; adjust until no single note wins, and taste it with something bland, not off a spoon. Garlic and chili floating on the surface is the visual doneness test — they only float when the sugar is fully dissolved and the density is right.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -11740,7 +11748,7 @@
         "durationSec": null
       }
     ],
-    "note": "Robusta's brutal strength is the point — condensed milk was built to argue with it.",
+    "note": "Robusta's brutal strength is the point — condensed milk was built to argue with it, and the argument is the drink. Vietnam grows robusta almost exclusively, twice the caffeine and none of arabica's manners; French colonists brought coffee and canned milk stood in for scarce fresh, and the workaround outlived the empire. The phin's slow four-minute drip extracts it dense as espresso. Stir hard before the ice, or the bottom half is dessert and the top half is punishment.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -11810,19 +11818,19 @@
         "durationSec": null
       }
     ],
-    "note": "The wok should be hot enough that the greens hiss like rain on pavement. Anything gentler stews them.",
+    "note": "The wok should be hot enough that the greens hiss like rain on pavement — anything gentler stews them, and stewed morning glory goes limp and metallic. Ninety seconds total: garlic blasted ten seconds, greens tossed violently, sauce around the rim, out before the leaves weep. Split the hollow stems so they cook in the same window as the leaves. This is Vietnam's daily green — the test of a cook's fire more than of any recipe.",
     "equipment": [],
     "techniques": [
       "Wok technique"
     ],
     "flavor": {
       "tags": [
+        "aromatic",
         "umami-deep",
         "tangy-ferment",
-        "aromatic",
         "warm-spiced"
       ],
-      "sentence": "Leads with savory depth stacked from the pantry’s bass notes, ferment tang with real depth behind it, fading in warm spice."
+      "sentence": "Leads with aromatics blooming from the first bite, savory depth stacked from the pantry’s bass notes, fading in warm spice."
     },
     "pairingId": 6,
     "films": {
@@ -11897,26 +11905,32 @@
         "durationSec": 300
       }
     ],
-    "note": "Two ginger additions, two jobs: early ginger mellows into the sauce; late ginger keeps its bite.",
+    "note": "Two ginger additions, two jobs: the early smashed ginger mellows into the caramel sauce, sweet and rounded; the late julienne keeps its bite, fierce and clean at the end. That layering is the whole dish. The kho method is the same as the fish version — dark caramel, fish sauce, patient uncovered reduction to a glaze — because kho is a verb, not a recipe: to braise in caramel. Bone-in pieces reward the effort; the marrow feeds the sauce.",
     "equipment": [],
     "techniques": [
-      "Sugar stages & caramel"
+      "Sugar stages & caramel",
+      "Braising"
     ],
     "flavor": {
       "tags": [
         "aromatic",
-        "umami-deep",
         "sweet-edged",
+        "umami-deep",
         "tangy-ferment"
       ],
-      "sentence": "Leads with aromatics blooming from the first bite, savory depth stacked from the pantry’s bass notes, with a lingering ferment tang."
+      "sentence": "Leads with aromatics blooming from the first bite, a sweet edge rounding the corners, with a lingering ferment tang."
     },
-    "pairingId": 30,
+    "pairingId": 10,
     "films": {
       "techniques": [
         {
           "label": "Technique: Sugar stages & caramel",
           "url": "https://www.youtube.com/results?search_query=sugar%20stages%20caramel%20technique",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: Braising",
+          "url": "https://www.youtube.com/results?search_query=braising%20technique%20explained",
           "sub": "The skill inside this recipe"
         }
       ],
@@ -11987,21 +12001,23 @@
         "durationSec": null
       }
     ],
-    "note": "Grated onion melts into the sauce entirely — that body is the tagine's signature, no flour needed.",
+    "note": "Grated onion melts into the sauce entirely — that thick, glossy body is the tagine's signature, no flour needed; sliced onion would leave you with pieces where Morocco expects velvet. The preserved lemon is the dish's voice: rind only, slivered, its fermented salinity nothing like fresh lemon. Daqq is the name of the sauce's final texture, reduced until it clings. The conical lid — or a tight ordinary one — recycles the steam so the chicken braises in barely any added water.",
     "equipment": [
       "Grater / zester"
     ],
     "techniques": [
-      "The tagine"
+      "The tagine",
+      "Fermentation",
+      "Braising"
     ],
     "flavor": {
       "tags": [
-        "bright",
         "briny",
         "herb-fresh",
-        "aromatic"
+        "aromatic",
+        "earthy"
       ],
-      "sentence": "Leads with acid holding everything up to the light, a briny, maritime salinity, opening aromatic and staying there."
+      "sentence": "Leads with a briny, maritime salinity, fresh herbs arguing happily on top, settling low and earthy."
     },
     "pairingId": 20,
     "films": {
@@ -12009,6 +12025,11 @@
         {
           "label": "Technique: The tagine",
           "url": "https://www.youtube.com/results?search_query=tagine%20cooking%20technique",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: Fermentation",
+          "url": "https://www.youtube.com/results?search_query=fermentation%20basics%20vegetables%20technique",
           "sub": "The skill inside this recipe"
         }
       ],
@@ -12084,7 +12105,7 @@
         "durationSec": null
       }
     ],
-    "note": "Sweet-savory is Morocco's home key — the apricots should read as depth, not dessert. Balance with salt.",
+    "note": "Sweet-savory is Morocco's home key — the apricots should read as depth, not dessert, and salt is what holds the line; season the sauce properly and the honey becomes architecture instead of frosting. Lamb shoulder wants its two slow hours to spoon-tenderness. This is the mrouzia family of dishes, descended from banquet cooking where sugar and meat shared a pan centuries before anyone called it fusion. The almonds go on at the end, still crunchy — texture is the dish's last course.",
     "equipment": [],
     "techniques": [
       "The tagine"
@@ -12180,7 +12201,7 @@
         "durationSec": null
       }
     ],
-    "note": "Friday couscous is a ritual across the Maghreb — the broth-soaked mound matters more than any single vegetable.",
+    "note": "Friday couscous is a ritual across the Maghreb — the mosque, then the mound — and the broth-soaked grain matters more than any single vegetable; seven is tradition's number, but the spiced broth is the recipe. Fluff the couscous grain by grain with butter or smen; clumped couscous is the visible sign of a rushed hand. Serve it cratered like a volcano with the vegetables in and around, harissa thinned with broth on the side so each eater sets their own fire.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -12276,17 +12297,17 @@
         "durationSec": null
       }
     ],
-    "note": "The tedouira slurry gives harira its signature velvet — thin soup is missing the step, not the point.",
+    "note": "The tedouira — flour whisked into water and streamed in at the end — gives harira its signature velvet; thin harira is missing the step, not the point. The herb avalanche goes in last, cilantro and parsley by the double handful. This is the soup that breaks the Ramadan fast across Morocco, served with lemon and dates in a pairing older than anyone's grandmother: the date's sugar for the empty stomach, the soup's warmth for everything else. The celery leaves are flavor, not garnish.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
-        "earthy",
+        "herb-fresh",
         "bright",
         "sweet-edged",
-        "herb-fresh"
+        "earthy"
       ],
-      "sentence": "Leads with an earthy, grounding base, acid holding everything up to the light, lifted green at the very end."
+      "sentence": "Leads with fresh herbs arguing happily on top, acid holding everything up to the light, settling low and earthy."
     },
     "pairingId": 29,
     "films": {
@@ -12359,17 +12380,17 @@
         "durationSec": null
       }
     ],
-    "note": "Chermoula is Morocco's pesto — marinade, sauce, and dressing in one. Make double, always.",
+    "note": "Chermoula is Morocco's pesto — marinade, sauce and dressing in one, and you make double, always, because everything it touches improves. The three-way split is the method: a third marinates the fish, a third seasons the vegetables, a third arrives fresh at the table, so the same sauce shows up raw and cooked in one dish. Cumin and cilantro carry it; the cayenne is a suggestion, not a dare. The roasting vegetables build a rack for the fish and a side dish simultaneously.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
-        "bright",
         "herb-fresh",
-        "briny",
-        "gently hot"
+        "gently hot",
+        "bright",
+        "earthy"
       ],
-      "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top, with warmth in the tail."
+      "sentence": "Leads with fresh herbs arguing happily on top, a warm current of chile, settling low and earthy."
     },
     "pairingId": 10,
     "films": {
@@ -12448,7 +12469,7 @@
         "durationSec": null
       }
     ],
-    "note": "Moroccan 'salads' are mostly cooked and served in a mosaic of small plates — zaalouk anchors the table.",
+    "note": "Moroccan 'salads' are mostly cooked, served warm or room-temperature in a mosaic of small plates — and zaalouk anchors the table, eggplant and tomato reduced to a smoky jam thick enough to stand a spoon. The reduction is the recipe: keep cooking past 'sauce' to 'spread', because watery zaalouk is just ratatouille with doubts. Char the eggplants whole if you can; the smoke earns its place. Bread is the only utensil the dish recognizes.",
     "equipment": [
       "Grater / zester"
     ],
@@ -12527,7 +12548,7 @@
         "durationSec": null
       }
     ],
-    "note": "Poaching the raw meatballs in the sauce trades a browning step for tenderness — and one less pan.",
+    "note": "Poaching the raw meatballs in the sauce trades a browning step for tenderness — and one less pan; the kefta stay plush and the sauce takes their seasoning in exchange. Marble-size is correct: bigger kefta poach unevenly. The eggs cracked into the bubbling sauce at the end are the dish's flourish, whites just set, yolks molten, the tagine arriving at the table still sputtering. Bread only, no cutlery — the dish is designed for tearing and scooping, and a fork misses the point.",
     "equipment": [
       "Tagine",
       "Grater / zester"
@@ -12623,17 +12644,17 @@
         "durationSec": null
       }
     ],
-    "note": "Warm vegetables drink dressing — the same trick as the Niçoise potatoes, wearing a djellaba.",
+    "note": "Warm vegetables drink dressing — the same trick as the Niçoise potatoes, wearing a djellaba; toss the carrots with the cumin, lemon and oil straight from the colander and the seasoning penetrates instead of coating. The overnight rest is where good becomes serious. Cumin and carrot is one of the old reliable marriages of the spice road. Serve it room temperature among other little salads; cold from the fridge, half its perfume stays asleep.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
-        "herb-fresh",
         "bright",
-        "aromatic",
-        "gently hot"
+        "herb-fresh",
+        "earthy",
+        "aromatic"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, acid holding everything up to the light, with warmth in the tail."
+      "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top, opening aromatic and staying there."
     },
     "pairingId": 33,
     "films": {
@@ -12702,7 +12723,7 @@
         "durationSec": null
       }
     ],
-    "note": "The high pour aerates and cools — and hospitality is measured in the foam it leaves.",
+    "note": "The high pour aerates and cools — and hospitality is measured in the foam it leaves; a glass without its crown is a host without manners. Rinsing the gunpowder tea first discards the bitter dust so the sugar and mint argue only with clean leaves. The pour-and-return mixing ritual matters more than stirring ever could. Refusing the third glass is technically permitted and socially inadvisable — the proverb assigns the three glasses their meanings: gentle as life, strong as love, bitter as death.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -12779,7 +12800,7 @@
         "durationSec": 1200
       }
     ],
-    "note": "Five minutes, four ingredients, and it ends a heavy tagine like a window opening.",
+    "note": "Five minutes, four ingredients, and it ends a heavy tagine like a window opening — which is precisely its job; Moroccan meals close on freshness, not richness. Orange-blossom water is the ingredient that makes it Moroccan rather than merely fruit: a teaspoon of distilled perfume, and more is not better. Slice into wheels over a bowl so the juice is captured, not lost. The cinnamon goes on in stripes because the eyes eat first, even at the end of dinner.",
     "equipment": [],
     "techniques": [
       "The tagine"

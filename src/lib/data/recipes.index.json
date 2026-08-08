@@ -5327,8 +5327,8 @@
     "flavorTags": [
       "herb-fresh",
       "warm-spiced",
-      "umami-deep",
-      "tangy-ferment"
+      "aromatic",
+      "umami-deep"
     ],
     "season": [
       6,
@@ -5341,7 +5341,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 95
+    "noteChars": 446
   },
   {
     "slug": "banh-mi",
@@ -5370,9 +5370,9 @@
     },
     "costTier": 1,
     "flavorTags": [
+      "herb-fresh",
       "aromatic",
       "gently hot",
-      "herb-fresh",
       "charred"
     ],
     "season": [
@@ -5390,7 +5390,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 110
+    "noteChars": 463
   },
   {
     "slug": "bun-thit-nuong-vietnamese",
@@ -5422,7 +5422,7 @@
       "herb-fresh",
       "aromatic",
       "nutty-toasted",
-      "umami-deep"
+      "charred"
     ],
     "season": [
       1,
@@ -5442,7 +5442,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 114
+    "noteChars": 476
   },
   {
     "slug": "goi-cuon-summer-rolls",
@@ -5488,7 +5488,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 82
+    "noteChars": 476
   },
   {
     "slug": "ca-kho-to-caramel-fish",
@@ -5528,7 +5528,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 99
+    "noteChars": 462
   },
   {
     "slug": "lemongrass-chicken",
@@ -5558,9 +5558,9 @@
     "costTier": 1,
     "flavorTags": [
       "aromatic",
+      "sweet-edged",
       "fiery",
-      "umami-deep",
-      "sweet-edged"
+      "umami-deep"
     ],
     "season": [
       1,
@@ -5577,7 +5577,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 102
+    "noteChars": 466
   },
   {
     "slug": "nuoc-cham",
@@ -5622,7 +5622,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 105
+    "noteChars": 458
   },
   {
     "slug": "ca-phe-sua-da",
@@ -5660,7 +5660,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 83
+    "noteChars": 473
   },
   {
     "slug": "rau-muong-xao-toi",
@@ -5689,9 +5689,9 @@
     },
     "costTier": 1,
     "flavorTags": [
+      "aromatic",
       "umami-deep",
       "tangy-ferment",
-      "aromatic",
       "warm-spiced"
     ],
     "season": [
@@ -5711,7 +5711,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 101
+    "noteChars": 429
   },
   {
     "slug": "ga-kho-gung-ginger-chicken",
@@ -5741,8 +5741,8 @@
     "costTier": 1,
     "flavorTags": [
       "aromatic",
-      "umami-deep",
       "sweet-edged",
+      "umami-deep",
       "tangy-ferment"
     ],
     "season": [],
@@ -5751,7 +5751,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 96
+    "noteChars": 440
   },
   {
     "slug": "chicken-tagine-preserved-lemon-and-olives",
@@ -5780,10 +5780,10 @@
     },
     "costTier": 3,
     "flavorTags": [
-      "bright",
       "briny",
       "herb-fresh",
-      "aromatic"
+      "aromatic",
+      "earthy"
     ],
     "season": [
       1,
@@ -5797,7 +5797,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 98
+    "noteChars": 479
   },
   {
     "slug": "lamb-and-apricot-tagine",
@@ -5837,7 +5837,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 103
+    "noteChars": 485
   },
   {
     "slug": "seven-vegetable-couscous",
@@ -5889,7 +5889,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 111
+    "noteChars": 461
   },
   {
     "slug": "harira",
@@ -5918,10 +5918,10 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "earthy",
+      "herb-fresh",
       "bright",
       "sweet-edged",
-      "herb-fresh"
+      "earthy"
     ],
     "season": [
       1,
@@ -5940,7 +5940,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 101
+    "noteChars": 486
   },
   {
     "slug": "chermoula-roast-fish",
@@ -5969,10 +5969,10 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "bright",
       "herb-fresh",
-      "briny",
-      "gently hot"
+      "gently hot",
+      "bright",
+      "earthy"
     ],
     "season": [
       1,
@@ -5990,7 +5990,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 89
+    "noteChars": 474
   },
   {
     "slug": "zaalouk",
@@ -6040,7 +6040,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 103
+    "noteChars": 438
   },
   {
     "slug": "kefta-mkaouara",
@@ -6085,7 +6085,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 97
+    "noteChars": 480
   },
   {
     "slug": "moroccan-carrot-salad",
@@ -6114,10 +6114,10 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "herb-fresh",
       "bright",
-      "aromatic",
-      "gently hot"
+      "herb-fresh",
+      "earthy",
+      "aromatic"
     ],
     "season": [
       1,
@@ -6131,7 +6131,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 92
+    "noteChars": 444
   },
   {
     "slug": "atay-moroccan-mint-tea",
@@ -6168,7 +6168,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 84
+    "noteChars": 499
   },
   {
     "slug": "orange-and-cinnamon-salad",
@@ -6213,7 +6213,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 81
+    "noteChars": 457
   },
   {
     "slug": "buttermilk-fried-chicken",
