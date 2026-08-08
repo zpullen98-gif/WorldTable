@@ -20,6 +20,7 @@
 		{ href: '/lexicon', label: 'Chef’s Lexicon' },
 		{ href: '/pantry', label: 'Pantry Match' },
 		{ href: '/study', label: 'Path of Study' },
+		{ href: '/family', label: 'Family' },
 		{ href: '/menu', label: 'My Menu' }
 	];
 
@@ -29,7 +30,28 @@
 		if (href === '') return path === '/' || path.startsWith('/recipe') || path.startsWith('/chapter');
 		return path.startsWith(href);
 	}
+
+	/**
+	 * `/` focuses whichever search box the current view offers — the recipe
+	 * grid's, the lexicon's, the pantry's. One handler here rather than one per
+	 * view: they'd fight over the key, and this is exactly the shape of
+	 * scattered-listener code the rewrite exists to avoid.
+	 */
+	function onKeydown(e: KeyboardEvent) {
+		if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+		const t = e.target as HTMLElement;
+		if (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable)
+			return;
+		const box = document.querySelector<HTMLInputElement>('input[type="search"]');
+		if (box) {
+			e.preventDefault();
+			box.focus();
+			box.select();
+		}
+	}
 </script>
+
+<svelte:window onkeydown={onKeydown} />
 
 <svelte:head>
 	<title>The World Table — Interactive Culinary Field Guide</title>

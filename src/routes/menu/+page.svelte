@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { bySlug, formatTime, recipes, TOTALS } from '$lib/data';
+	import { bySlug, formatTime, recipeHref, recipes, TOTALS } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
 	import { buildExport, download, parseImport, describeImport } from '$lib/persistence/portable';
 	import Ornament from '$lib/components/Ornament.svelte';
@@ -9,7 +9,23 @@
 
 	const COURSE_ORDER = ['Starter', 'Salad', 'Soup', 'Main', 'Side', 'Bread', 'Dessert', 'Drink'];
 
-	const pinned = $derived(session.menu.map((s) => bySlug.get(s)).filter(Boolean));
+	// Pins resolve against the guide AND the family shelf. bySlug alone would
+	// silently drop a pinned family recipe from every list on this page.
+	const famBySlug = $derived(new Map(session.familyRecipes.map((r) => [r.slug, r])));
+	const pinned = $derived(
+		session.menu.map((s) => bySlug.get(s) ?? famBySlug.get(s)).filter(Boolean)
+	);
+
+	// Ingredient and step lookups with the same two-source resolution: guide
+	// recipes from the prerendered maps, family recipes from their own record.
+	const ingredientsOf = (slug: string): string[] =>
+		data.ingredients[slug] ??
+		famBySlug
+			.get(slug)
+			?.ingredients.filter((e) => e.kind === 'item')
+			.map((e) => (e as { kind: 'item'; text: string }).text) ??
+		[];
+	const stepsOf = (slug: string) => data.steps[slug] ?? famBySlug.get(slug)?.steps ?? [];
 
 	const stats = $derived.by(() => {
 		const list = pinned;
@@ -51,7 +67,7 @@
 	const shoppingList = $derived.by(() => {
 		const byAisle = new Map<string, Array<{ line: string; from: string }>>();
 		for (const r of pinned) {
-			for (const line of data.ingredients[r!.slug] ?? []) {
+			for (const line of ingredientsOf(r!.slug)) {
 				const aisle = aisleFor(line);
 				if (!byAisle.has(aisle)) byAisle.set(aisle, []);
 				byAisle.get(aisle)!.push({ line, from: r!.name });
@@ -73,11 +89,8 @@
 				slug: r!.slug,
 				// A step with no stated duration gets the original's 4-minute default,
 				// but here the UI knows it was a default rather than a measurement.
-				total: (data.steps[r!.slug] ?? []).reduce(
-					(n, s) => n + (s.durationSec ?? 240) / 60,
-					0
-				),
-				stated: (data.steps[r!.slug] ?? []).some((s) => s.durationSec !== null)
+				total: stepsOf(r!.slug).reduce((n, s) => n + (s.durationSec ?? 240) / 60, 0),
+				stated: stepsOf(r!.slug).some((s) => s.durationSec !== null)
 			}))
 			.sort((a, b) => b.total - a.total)
 	);
@@ -162,6 +175,7 @@
 			hidden
 		/>
 		<button class="chip" onclick={() => window.print()}>Print</button>
+		<a class="chip" href="{base}/menu/guest">Guest menu ▸</a>
 		{#if session.menu.length}
 			<button class="chip" onclick={() => session.clearMenu()}>Clear menu</button>
 		{/if}
@@ -187,7 +201,7 @@
 				<ul>
 					{#each g.items as r (r!.slug)}
 						<li>
-							<a href="{base}/recipe/{r!.slug}">{r!.name}</a>
+							<a href="{base}{recipeHref(r!)}">{r!.name}</a>
 							<span class="meta">{r!.chapter} · {formatTime(r!.minutes)}</span>
 							<button class="unpin" onclick={() => session.togglePin(r!.slug)} title="Remove">✕</button>
 						</li>
@@ -263,6 +277,7 @@
 		border-radius: var(--radius); cursor: pointer; font-size: 14px;
 	}
 	.chip:hover:not(:disabled) { border-color: var(--turmeric); }
+	a.chip { text-decoration: none; color: var(--ink); display: inline-flex; align-items: center; }
 	.chip:disabled { opacity: 0.45; cursor: default; }
 	select.chip { appearance: none; max-width: 280px; }
 	.msg { font-size: var(--t-small); color: var(--turmeric-deep); margin-bottom: 10px; }

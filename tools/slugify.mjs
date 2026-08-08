@@ -13,6 +13,7 @@
  * See qualifiedSlugs() for how that is resolved — deterministically, and without
  * depending on which one happens to come first in the array.
  */
+/** @param {string} input */
 export function slugify(input) {
 	return String(input)
 		.normalize('NFD')
@@ -34,10 +35,11 @@ export function slugify(input) {
  * the bare slug, so the result depends only on the set of items, never on their
  * order.
  *
- * @param items  the records to slug
- * @param key    item → the name to slug (e.g. r => r.n)
- * @param qualifier item → the discriminator (e.g. r => r.c)
- * @returns array of slugs, parallel to items
+ * @template T
+ * @param {T[]} items  the records to slug
+ * @param {(item: T) => string} key  item → the name to slug (e.g. r => r.n)
+ * @param {(item: T) => string} qualifier  item → the discriminator (e.g. r => r.c)
+ * @returns {string[]} slugs, parallel to items
  */
 export function qualifiedSlugs(items, key, qualifier) {
 	const bases = items.map((it) => slugify(key(it)));
@@ -52,6 +54,7 @@ export function qualifiedSlugs(items, key, qualifier) {
 	// A qualifier that doesn't actually disambiguate is a bug we want loudly, not
 	// a duplicate URL we discover in production.
 	const seen = new Set();
+	/** @type {string[]} */
 	const stillColliding = [];
 	slugs.forEach((s, i) => {
 		if (seen.has(s)) stillColliding.push(`${s} (${key(items[i])})`);

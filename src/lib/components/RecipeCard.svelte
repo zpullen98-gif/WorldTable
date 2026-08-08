@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import type { RecipeSummary } from '$lib/types';
-	import { formatTime } from '$lib/data';
+	import { formatTime, recipeHref } from '$lib/data';
 	import { DIFFICULTY_LABEL } from '$lib/types';
 
 	let { recipe }: { recipe: RecipeSummary } = $props();
 </script>
 
-<a class="card" href="{base}/recipe/{recipe.slug}" data-slug={recipe.slug}>
+<a class="card" href="{base}{recipeHref(recipe)}" data-slug={recipe.slug}>
 	<span class="tab">{recipe.chapter}</span>
 	<h3>{recipe.name}</h3>
 	<p class="sub">{recipe.flavorTags.slice(0, 3).join(' · ')}</p>

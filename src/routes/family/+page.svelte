@@ -1,0 +1,289 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+	import { COURSES, formatTime, recipeHref } from '$lib/data';
+	import { session } from '$lib/stores/session.svelte';
+	import { buildFamilyRecipe, validateDraft, type FamilyDraft } from '$lib/authoring';
+	import type { Course, Difficulty } from '$lib/types';
+	import Ornament from '$lib/components/Ornament.svelte';
+
+	let { data } = $props();
+
+	const blank = (): FamilyDraft => ({
+		name: '',
+		chapter: 'Family',
+		course: 'Main' as Course,
+		difficulty: 2 as Difficulty,
+		minutes: 45,
+		vegetarian: false,
+		ingredients: '',
+		method: '',
+		tip: ''
+	});
+
+	let draft = $state(blank());
+	let msg = $state('');
+
+	function save() {
+		const problem = validateDraft(draft);
+		if (problem) {
+			msg = problem;
+			return;
+		}
+		const recipe = buildFamilyRecipe($state.snapshot(draft), session.familyRecipes, data.pantry);
+		session.addFamilyRecipe(recipe);
+		msg = `“${recipe.name}” is in the guide — filed under ${recipe.chapter}.`;
+		draft = blank();
+	}
+
+	function remove(slug: string, name: string) {
+		if (confirm(`Remove “${name}” from the guide? Its notes stay until you clear them.`)) {
+			session.removeFamilyRecipe(slug);
+		}
+	}
+</script>
+
+<svelte:head><title>The Family Chapter — The World Table</title></svelte:head>
+
+<div class="shell view">
+	<header class="head">
+		<h1>The Family Chapter</h1>
+		<p class="lede">
+			The recipes that never made it into any book — Nonna’s Sunday sauce, the church-cookbook
+			casserole, the thing your father makes without measuring. Added here, they behave like any
+			other page of the guide: they appear in the grid, match in the pantry, pin to menus, and cook
+			in cook mode. Kept on this device; export a session file from My Menu to carry them.
+		</p>
+	</header>
+
+	<div class="cols">
+		<form
+			class="famform"
+			onsubmit={(e) => {
+				e.preventDefault();
+				save();
+			}}
+		>
+			<label>
+				<span class="sec">Dish name</span>
+				<input bind:value={draft.name} placeholder="e.g. Nonna’s Sunday Sauce" required />
+			</label>
+
+			<div class="row">
+				<label>
+					<span class="sec">Chapter</span>
+					<input bind:value={draft.chapter} placeholder="Family" />
+				</label>
+				<label>
+					<span class="sec">Course</span>
+					<select bind:value={draft.course}>
+						{#each COURSES as c (c)}<option value={c}>{c}</option>{/each}
+					</select>
+				</label>
+				<label>
+					<span class="sec">Difficulty</span>
+					<select bind:value={draft.difficulty}>
+						<option value={1}>Easy</option>
+						<option value={2}>Intermediate</option>
+						<option value={3}>Advanced</option>
+					</select>
+				</label>
+				<label class="mins">
+					<span class="sec">Minutes</span>
+					<input type="number" min="1" bind:value={draft.minutes} />
+				</label>
+			</div>
+
+			<label class="chip veg">
+				<input type="checkbox" bind:checked={draft.vegetarian} /> Vegetarian
+			</label>
+
+			<label>
+				<span class="sec">Ingredients — one per line</span>
+				<textarea
+					bind:value={draft.ingredients}
+					rows="7"
+					placeholder="400g spaghetti&#10;FOR THE SAUCE&#10;2 cans San Marzano tomatoes&#10;…"
+				></textarea>
+			</label>
+
+			<label>
+				<span class="sec">Method — one step per line</span>
+				<textarea
+					bind:value={draft.method}
+					rows="7"
+					placeholder="Brown the meat hard; don’t crowd the pan.&#10;Simmer 45 min, partially covered.&#10;…"
+				></textarea>
+			</label>
+
+			<label>
+				<span class="sec">From the pass — the family secret</span>
+				<input bind:value={draft.tip} placeholder="What the card in the drawer says that the book never did" />
+			</label>
+
+			<div class="acts">
+				<button type="submit" class="chip go">Add to the guide</button>
+				{#if msg}<p class="msg" aria-live="polite">{msg}</p>{/if}
+			</div>
+		</form>
+
+		<aside class="shelfed">
+			<h2 class="sec">On the shelf ({session.familyRecipes.length})</h2>
+			{#if session.familyRecipes.length}
+				<ul>
+					{#each session.familyRecipes as r (r.slug)}
+						<li>
+							<a href="{base}{recipeHref(r)}">{r.name}</a>
+							<span class="meta">{r.chapter} · {formatTime(r.minutes)}</span>
+							<button class="unpin" onclick={() => remove(r.slug, r.name)} title="Remove">✕</button>
+						</li>
+					{/each}
+				</ul>
+			{:else}
+				<p class="empty">Nothing yet — the drawer is open.</p>
+			{/if}
+			<Ornament seed="family-chapter" />
+		</aside>
+	</div>
+</div>
+
+<style>
+	.view {
+		padding: 26px 0 80px;
+		max-width: 1000px;
+	}
+	.head h1 {
+		font-size: var(--t-h2);
+		margin-bottom: 8px;
+	}
+
+	.cols {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+		gap: 34px;
+		margin-top: 24px;
+	}
+	@media (max-width: 760px) {
+		.cols {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.famform {
+		display: grid;
+		gap: 14px;
+	}
+	.famform label {
+		display: grid;
+		gap: 6px;
+	}
+	.row {
+		display: grid;
+		grid-template-columns: 1.4fr 1fr 1fr 0.7fr;
+		gap: 10px;
+	}
+	@media (max-width: 560px) {
+		.row {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	.sec {
+		font-size: var(--t-micro);
+		letter-spacing: var(--tracking-eyebrow);
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+
+	input,
+	select,
+	textarea {
+		background: var(--card);
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		padding: 9px 12px;
+		font-size: 15px;
+	}
+	textarea {
+		resize: vertical;
+		line-height: 1.55;
+	}
+
+	.chip {
+		border: 1px solid var(--line);
+		background: var(--card);
+		padding: 8px 14px;
+		border-radius: var(--radius);
+		cursor: pointer;
+		font-size: 14px;
+	}
+	.chip.veg {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		justify-self: start;
+	}
+	.chip.veg input {
+		accent-color: var(--leaf);
+	}
+	.chip.go {
+		background: var(--turmeric);
+		border-color: var(--turmeric);
+		color: var(--paper);
+		font-weight: 600;
+	}
+
+	.acts {
+		display: flex;
+		gap: 14px;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.msg {
+		font-size: var(--t-small);
+		color: var(--turmeric-deep);
+		font-style: italic;
+	}
+
+	.shelfed h2 {
+		border-bottom: 1px solid var(--line);
+		padding-bottom: 6px;
+		margin-bottom: 10px;
+		font-weight: 500;
+	}
+	.shelfed ul {
+		list-style: none;
+		display: grid;
+		gap: 6px;
+	}
+	.shelfed li {
+		display: flex;
+		gap: 8px;
+		align-items: baseline;
+	}
+	.shelfed a {
+		font-family: var(--display);
+		font-size: 17px;
+		text-decoration: none;
+	}
+	.shelfed a:hover {
+		color: var(--turmeric-deep);
+	}
+	.meta {
+		font-size: var(--t-micro);
+		color: var(--muted);
+	}
+	.unpin {
+		margin-left: auto;
+		background: none;
+		border: 0;
+		cursor: pointer;
+		color: var(--muted);
+	}
+	.unpin:hover {
+		color: var(--chili);
+	}
+	.empty {
+		color: var(--muted);
+		font-style: italic;
+	}
+</style>

@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { recipes, formatTime } from '$lib/data';
+	import { recipes, formatTime, recipeHref } from '$lib/data';
 	import { fold, effectiveMonth } from '$lib/filter';
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import { session } from '$lib/stores/session.svelte';
+	import type { Recipe } from '$lib/types';
 
 	let { data } = $props();
 
@@ -42,10 +43,15 @@
 		if (!selected.size) return [];
 		const need = Math.min(minMatches, selected.size);
 		const scored = [];
-		for (const r of recipes) {
+		// Family recipes match too — their pantryItems were derived with the same
+		// keyword tables when they were saved (see authoring.ts).
+		const pool = session.familyRecipes.length
+			? [...recipes, ...session.familyRecipes]
+			: recipes;
+		for (const r of pool) {
 			if (course && r.course !== course) continue;
 			if (vegOnly && !r.diet.vegetarian) continue;
-			const items = data.recipeItems[r.slug] ?? [];
+			const items = data.recipeItems[r.slug] ?? (r as Recipe).pantryItems ?? [];
 			const hits = items.filter((l) => selected.has(l));
 			if (!hits.length || hits.length < need) continue;
 			const missing = items.filter((l) => !selected.has(l)).slice(0, 4);
@@ -146,7 +152,7 @@
 				<ul class="results">
 					{#each results as m (m.r.slug)}
 						<li>
-							<a href="{base}/recipe/{m.r.slug}">
+							<a href="{base}{recipeHref(m.r)}">
 								<span class="nm">{m.r.name}</span>
 								<span class="meta">{m.r.chapter} · {formatTime(m.r.minutes)}</span>
 							</a>

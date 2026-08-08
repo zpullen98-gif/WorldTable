@@ -4,11 +4,12 @@
 	import { base } from '$app/paths';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
-	import { chapters, recipes } from '$lib/data';
+	import { chapters, chapterBySlug, recipes } from '$lib/data';
 	import { applyFilters, matches, effectiveMonth } from '$lib/filter';
 	import { ensureSearch, searchIds } from '$lib/search';
 	import { filtersFromURL, filtersToSearch, EMPTY_FILTERS } from '$lib/urlState';
 	import { prefs } from '$lib/stores/prefs.svelte';
+	import { session } from '$lib/stores/session.svelte';
 	import type { ChapterRef } from '$lib/types';
 	import RecipeCard from './RecipeCard.svelte';
 	import CuisineRail from './CuisineRail.svelte';
@@ -60,6 +61,14 @@
 	 * ingredient-aware — "lemongrass" finds Tom Yum by its ingredients, and
 	 * "ragu" no longer matches asparagus by substring accident.
 	 */
+	// Family recipes sit alongside the guide's 970 in every list below. They are
+	// not in the static search index, so under a query they are matched by the
+	// substring predicate (name/chapter) and appended after the ranked results.
+	const familyRecipes = $derived(session.familyRecipes);
+	const allRecipes = $derived(
+		familyRecipes.length ? [...recipes, ...familyRecipes] : recipes
+	);
+
 	const matchedAll = $derived.by(() => {
 		const rest = { ...filters, chapter: null };
 		const q = filters.q.trim();
@@ -67,12 +76,12 @@
 			const ids = searchIds(q);
 			if (ids) {
 				const noQ = { ...rest, q: '' };
-				return ids
-					.map((i) => recipes[i])
-					.filter((r) => r && matches(r, noQ, month));
+				const ranked = ids.map((i) => recipes[i]).filter((r) => r && matches(r, noQ, month));
+				const fam = familyRecipes.filter((r) => matches(r, rest, month));
+				return fam.length ? [...ranked, ...fam] : ranked;
 			}
 		}
-		return applyFilters(recipes, rest, month);
+		return applyFilters(allRecipes, rest, month);
 	});
 
 	const results = $derived(
@@ -83,6 +92,29 @@
 		const m = new Map<string, number>();
 		for (const r of matchedAll) m.set(r.chapterSlug, (m.get(r.chapterSlug) ?? 0) + 1);
 		return m;
+	});
+
+	// Chapters that exist only in the family shelf get a rail entry of their
+	// own, grouped under "The Family Chapter". A family chapter whose slug
+	// collides with a guide chapter (someone filing under "Italian") is skipped
+	// here — those recipes already count into the existing rail row.
+	const railChapters = $derived.by(() => {
+		if (!familyRecipes.length) return chapters;
+		const synthesized = new Map<string, ChapterRef>();
+		for (const r of familyRecipes) {
+			if (chapterBySlug.has(r.chapterSlug)) continue;
+			const existing = synthesized.get(r.chapterSlug);
+			if (existing) existing.count++;
+			else
+				synthesized.set(r.chapterSlug, {
+					name: r.chapter,
+					slug: r.chapterSlug,
+					kind: 'world',
+					group: 'The Family Chapter',
+					count: 1
+				});
+		}
+		return synthesized.size ? [...synthesized.values(), ...chapters] : chapters;
 	});
 
 	// Mirror filters into the URL. replaceState so typing doesn't fill history.
@@ -109,7 +141,7 @@
 <Toolbar bind:filters resultCount={results.length} onlucky={lucky} />
 
 <div class="shell wrap">
-	<CuisineRail {chapters} {active} counts={railCounts} />
+	<CuisineRail chapters={railChapters} {active} counts={railCounts} />
 
 	<div class="content">
 		<div class="meta-row">

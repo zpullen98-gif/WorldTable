@@ -52,6 +52,73 @@
 		revealed = false;
 	}
 	const card = $derived(deck.length ? deck[pos % deck.length] : null);
+
+	/* ---- quiz ----
+	 * Ported from qzAsk (L3082): ten questions a round, distractors drawn from
+	 * the SAME category when it has enough terms — telling hanger from flank is
+	 * the actual skill; telling hanger from crème anglaise is a giveaway.
+	 */
+	type Entry = (typeof data.lexicon)[number];
+	interface Question {
+		target: Entry;
+		options: Entry[];
+	}
+
+	const QUIZ_LENGTH = 10;
+	let quiz = $state<Question | null>(null);
+	let picked = $state<Entry | null>(null);
+	let qNum = $state(0);
+	let right = $state(0);
+	let verdict = $state('');
+
+	const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
+
+	function ask() {
+		// The round draws from the current filter, like the original — quiz what
+		// you're studying. Under 4 visible terms, widen to the whole lexicon.
+		const pool = shown.length >= 4 ? shown : data.lexicon;
+		const target = pick(pool);
+		const sameCat = pool.filter((e) => e.category === target.category && e.slug !== target.slug);
+		const others = new Map<string, Entry>([[target.slug, target]]);
+		while (others.size < 4) {
+			const cand = pick(sameCat.length >= 3 ? sameCat : pool);
+			others.set(cand.slug, cand);
+		}
+		quiz = { target, options: [...others.values()].sort(() => Math.random() - 0.5) };
+		picked = null;
+	}
+
+	function startQuiz() {
+		deck = [];
+		qNum = 0;
+		right = 0;
+		verdict = '';
+		ask();
+	}
+
+	function answer(o: Entry) {
+		if (picked) return; // already answered
+		picked = o;
+		if (o.slug === quiz!.target.slug) right++;
+		qNum++;
+	}
+
+	function nextQuestion() {
+		if (qNum >= QUIZ_LENGTH) {
+			// The original's verdict ladder, verbatim.
+			verdict =
+				right >= 9
+					? 'Chef-level. The pass is yours.'
+					: right >= 7
+						? 'Solid line cook — a few more services and it’s muscle memory.'
+						: right >= 5
+							? 'Stage complete — hit the flashcards on what you missed.'
+							: 'Back to prep, chef — filter the category and study before the next round.';
+			quiz = null;
+			return;
+		}
+		ask();
+	}
 </script>
 
 <svelte:head><title>The Chef’s Lexicon — The World Table</title></svelte:head>
@@ -80,8 +147,50 @@
 			{#each categories as c (c)}<option value={c}>{c}</option>{/each}
 		</select>
 		<button class="chip" onclick={shuffle}>Study mode ▸ flashcards</button>
+		<button class="chip" onclick={startQuiz}>Quiz me ▸ multiple choice</button>
 		<span class="count">{shown.length} of {data.lexicon.length} terms</span>
 	</div>
+
+	{#if verdict}
+		<div class="flash" role="status">
+			<p class="eyebrow">Round complete</p>
+			<p class="term">Final: {right} / {QUIZ_LENGTH}</p>
+			<p class="def">{verdict}</p>
+			<div class="flashtools">
+				<button class="chip" onclick={startQuiz}>New round ↦</button>
+				<button class="chip" onclick={() => (verdict = '')}>Close</button>
+			</div>
+		</div>
+	{:else if quiz}
+		<div class="flash">
+			<p class="eyebrow">{quiz.target.category} · question {Math.min(qNum + (picked ? 0 : 1), QUIZ_LENGTH)} of {QUIZ_LENGTH}</p>
+			<p class="def quizdef">
+				“{quiz.target.definition.slice(0, 180)}{quiz.target.definition.length > 180 ? '…' : ''}”
+			</p>
+			<div class="opts">
+				{#each quiz.options as o (o.slug)}
+					<button
+						class="opt"
+						class:right={picked && o.slug === quiz.target.slug}
+						class:wrong={picked?.slug === o.slug && o.slug !== quiz.target.slug}
+						disabled={!!picked && o.slug !== picked.slug && o.slug !== quiz.target.slug}
+						onclick={() => answer(o)}
+					>
+						{o.term}
+					</button>
+				{/each}
+			</div>
+			<div class="flashtools">
+				{#if picked}
+					<button class="chip" onclick={nextQuestion}>
+						{qNum >= QUIZ_LENGTH ? 'See result ↦' : 'Next question ↦'}
+					</button>
+				{/if}
+				<button class="chip" onclick={() => (quiz = null)}>Close</button>
+				<span class="count">Score: {right} / {qNum}</span>
+			</div>
+		</div>
+	{/if}
 
 	{#if card}
 		<div class="flash">
@@ -148,6 +257,17 @@
 	.flash .def { max-width: 62ch; margin: 0 auto 14px; color: var(--ink-soft); }
 	.flashtools { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; align-items: center; }
 	.flashtools .count { margin-left: 0; }
+
+	.quizdef { font-style: italic; }
+	.opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; max-width: 640px; margin: 0 auto 14px; }
+	.opt {
+		border: 1px solid var(--line); background: var(--paper); padding: 10px 14px;
+		border-radius: var(--radius); cursor: pointer; font-family: var(--display); font-size: 16px;
+	}
+	.opt:hover:not(:disabled) { border-color: var(--turmeric); }
+	.opt:disabled { opacity: 0.45; cursor: default; }
+	.opt.right { border-color: var(--leaf); color: var(--leaf); font-weight: 600; }
+	.opt.wrong { border-color: var(--chili); color: var(--chili); }
 
 	.lexgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--gap); }
 	.lexcard {

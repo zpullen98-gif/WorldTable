@@ -85,6 +85,29 @@ export async function loadCellar(): Promise<CellarBottle[]> {
 	return (await import('./data/cellar.json')).default as unknown as CellarBottle[];
 }
 
+/**
+ * The sommelier's safety net, used verbatim for family recipes (pairingId -1),
+ * whose dishes no decision tree has tasted. Same text as the original's final
+ * else branch (L3600 tail) — honest, and true of nearly any plate.
+ */
+export const DEFAULT_PAIRING: Pairing = {
+	pour: 'Champagne — when lost, bubbles',
+	alt: 'Cru Beaujolais, lightly chilled',
+	beer: 'Pilsner',
+	zeroProof: 'Sparkling water with citrus',
+	why: 'The universal donors: acid, bubbles, and low tannin rescue nearly any plate — the sommelier’s honest safety net.'
+};
+
+/**
+ * Where a recipe's page lives. Guide recipes have prerendered pages under
+ * /recipe/; family recipes are client-only under /family/ (their data is in
+ * IndexedDB — see routes/family/[slug]/+page.ts). Every link generator goes
+ * through here so the split lives in exactly one place.
+ */
+export function recipeHref(r: Pick<RecipeSummary, 'slug' | 'source'>): string {
+	return r.source === 'family' ? `/family/${r.slug}` : `/recipe/${r.slug}`;
+}
+
 /* ---- formatting ------------------------------------------------------ */
 
 /**

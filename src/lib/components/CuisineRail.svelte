@@ -37,7 +37,8 @@
 		}
 		for (const list of byGroup.values()) list.sort((a, b) => a.name.localeCompare(b.name));
 
-		const order = ['World Cuisines', 'The Atlases', ...US_ORDER];
+		// Family first — your own recipes outrank the printed ones.
+		const order = ['The Family Chapter', 'World Cuisines', 'The Atlases', ...US_ORDER];
 		return order
 			.filter((g) => byGroup.has(g))
 			.map((g) => ({ group: g, chapters: byGroup.get(g)! }));
