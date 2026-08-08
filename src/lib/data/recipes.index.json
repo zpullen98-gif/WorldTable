@@ -7589,9 +7589,9 @@
     },
     "costTier": 1,
     "flavorTags": [
+      "fiery",
       "umami-deep",
       "smoky",
-      "fiery",
       "charred"
     ],
     "season": [
@@ -7605,7 +7605,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 166
+    "noteChars": 489
   },
   {
     "slug": "egusi-soup",
@@ -7635,7 +7635,8 @@
     "costTier": 2,
     "flavorTags": [
       "silky",
-      "fiery"
+      "fiery",
+      "sweet-edged"
     ],
     "season": [
       3,
@@ -7653,7 +7654,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 140
+    "noteChars": 452
   },
   {
     "slug": "suya",
@@ -7680,7 +7681,7 @@
       "containsAlcohol": false,
       "confidence": "derived"
     },
-    "costTier": 2,
+    "costTier": 3,
     "flavorTags": [
       "nutty-toasted",
       "charred",
@@ -7698,7 +7699,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 140
+    "noteChars": 468
   },
   {
     "slug": "chicken-yassa",
@@ -7743,7 +7744,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 164
+    "noteChars": 492
   },
   {
     "slug": "mafe",
@@ -7773,9 +7774,9 @@
     "costTier": 3,
     "flavorTags": [
       "nutty-toasted",
-      "umami-deep",
       "rich",
-      "aromatic"
+      "fiery",
+      "umami-deep"
     ],
     "season": [
       1,
@@ -7793,7 +7794,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 134
+    "noteChars": 494
   },
   {
     "slug": "fufu",
@@ -7844,7 +7845,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 110
+    "noteChars": 485
   },
   {
     "slug": "kelewele",
@@ -7873,10 +7874,10 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "warm-spiced",
       "aromatic",
+      "warm-spiced",
       "nutty-toasted",
-      "gently hot"
+      "fiery"
     ],
     "season": [
       1,
@@ -7897,7 +7898,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 153
+    "noteChars": 494
   },
   {
     "slug": "thieboudienne",
@@ -7928,8 +7929,8 @@
     "flavorTags": [
       "umami-deep",
       "bright",
-      "gently hot",
-      "herb-fresh"
+      "herb-fresh",
+      "aromatic"
     ],
     "season": [
       1,
@@ -7947,7 +7948,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 157
+    "noteChars": 481
   },
   {
     "slug": "moin-moin",
@@ -7976,8 +7977,8 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "fiery",
-      "silky"
+      "silky",
+      "fiery"
     ],
     "season": [
       4,
@@ -7992,7 +7993,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 152
+    "noteChars": 481
   },
   {
     "slug": "puff-puff",
@@ -8029,7 +8030,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 160
+    "noteChars": 499
   },
   {
     "slug": "feijoada",
@@ -8058,8 +8059,8 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "rich",
       "smoky",
+      "rich",
       "warm-spiced",
       "aromatic"
     ],
@@ -8076,7 +8077,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 166
+    "noteChars": 487
   },
   {
     "slug": "pao-de-queijo",
@@ -8114,7 +8115,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 153
+    "noteChars": 493
   },
   {
     "slug": "moqueca-baiana",
@@ -8144,8 +8145,8 @@
     "costTier": 1,
     "flavorTags": [
       "rich",
-      "bright",
-      "herb-fresh"
+      "herb-fresh",
+      "tangy-ferment"
     ],
     "season": [
       1,
@@ -8162,7 +8163,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 175
+    "noteChars": 474
   },
   {
     "slug": "brigadeiro",
@@ -8233,6 +8234,9 @@
       "herb-fresh"
     ],
     "season": [
+      1,
+      2,
+      3,
       6,
       7,
       8,
@@ -8246,7 +8250,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 153
+    "noteChars": 498
   },
   {
     "slug": "lomo-saltado",
@@ -8275,9 +8279,9 @@
     },
     "costTier": 2,
     "flavorTags": [
+      "umami-deep",
       "bright",
       "herb-fresh",
-      "umami-deep",
       "aromatic"
     ],
     "season": [
@@ -8291,7 +8295,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 170
+    "noteChars": 457
   },
   {
     "slug": "aji-de-gallina",
@@ -8321,9 +8325,9 @@
     "costTier": 2,
     "flavorTags": [
       "earthy",
+      "briny",
       "nutty-toasted",
-      "umami-deep",
-      "rich"
+      "umami-deep"
     ],
     "season": [],
     "region": {
@@ -8331,7 +8335,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 167
+    "noteChars": 482
   },
   {
     "slug": "arepas",
@@ -8376,7 +8380,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 158
+    "noteChars": 477
   },
   {
     "slug": "bife-con-chimichurri",
@@ -8405,18 +8409,24 @@
     },
     "costTier": 3,
     "flavorTags": [
+      "bright",
       "herb-fresh",
       "charred",
-      "gently hot",
-      "bright"
+      "aromatic"
     ],
-    "season": [],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      12
+    ],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 162
+    "noteChars": 499
   },
   {
     "slug": "empanadas-saltenas",
@@ -8448,7 +8458,7 @@
       "rich",
       "briny",
       "gently hot",
-      "earthy"
+      "herb-fresh"
     ],
     "season": [],
     "region": {
@@ -8456,7 +8466,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 157
+    "noteChars": 499
   },
   {
     "slug": "pierogi-ruskie",
