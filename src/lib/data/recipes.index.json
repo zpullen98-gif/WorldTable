@@ -6686,7 +6686,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 143
+    "noteChars": 491
   },
   {
     "slug": "lahmacun",
@@ -6717,7 +6717,8 @@
     "flavorTags": [
       "bright",
       "herb-fresh",
-      "umami-deep"
+      "umami-deep",
+      "rich"
     ],
     "season": [
       1,
@@ -6735,7 +6736,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 138
+    "noteChars": 469
   },
   {
     "slug": "imam-bay-ld",
@@ -6767,7 +6768,7 @@
       "briny",
       "aromatic",
       "bright",
-      "herb-fresh"
+      "sweet-edged"
     ],
     "season": [
       1,
@@ -6785,7 +6786,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 173
+    "noteChars": 465
   },
   {
     "slug": "mercimek-corbas",
@@ -6815,9 +6816,9 @@
     "costTier": 2,
     "flavorTags": [
       "earthy",
+      "rich",
       "bright",
-      "umami-deep",
-      "rich"
+      "herb-fresh"
     ],
     "season": [
       1,
@@ -6835,7 +6836,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 144
+    "noteChars": 466
   },
   {
     "slug": "menemen",
@@ -6865,9 +6866,9 @@
     "costTier": 2,
     "flavorTags": [
       "rich",
+      "silky",
       "gently hot",
-      "briny",
-      "silky"
+      "briny"
     ],
     "season": [
       6,
@@ -6880,7 +6881,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 157
+    "noteChars": 475
   },
   {
     "slug": "k-ymal-pide",
@@ -6910,6 +6911,7 @@
     "costTier": 3,
     "flavorTags": [
       "rich",
+      "sweet-edged",
       "herb-fresh",
       "briny"
     ],
@@ -6924,7 +6926,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 160
+    "noteChars": 483
   },
   {
     "slug": "mant",
@@ -6969,7 +6971,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 149
+    "noteChars": 465
   },
   {
     "slug": "c-lb-r",
@@ -6998,10 +7000,10 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "rich",
       "bright",
-      "aromatic",
-      "herb-fresh"
+      "rich",
+      "herb-fresh",
+      "aromatic"
     ],
     "season": [],
     "region": {
@@ -7009,7 +7011,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 142
+    "noteChars": 457
   },
   {
     "slug": "izgara-kofte",
@@ -7048,7 +7050,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 123
+    "noteChars": 469
   },
   {
     "slug": "f-st-kl-baklava",
@@ -7078,9 +7080,9 @@
     "costTier": 2,
     "flavorTags": [
       "rich",
-      "sweet-edged",
       "nutty-toasted",
-      "bright"
+      "bright",
+      "sweet-edged"
     ],
     "season": [
       1,
@@ -7094,7 +7096,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 171
+    "noteChars": 487
   },
   {
     "slug": "jerk-chicken",
@@ -7141,7 +7143,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 126
+    "noteChars": 499
   },
   {
     "slug": "rice-and-peas",
@@ -7185,7 +7187,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 147
+    "noteChars": 455
   },
   {
     "slug": "curry-goat",
@@ -7214,9 +7216,10 @@
     },
     "costTier": 1,
     "flavorTags": [
+      "earthy",
       "aromatic",
       "fiery",
-      "earthy"
+      "charred"
     ],
     "season": [
       5,
@@ -7229,7 +7232,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 134
+    "noteChars": 476
   },
   {
     "slug": "ropa-vieja",
@@ -7274,7 +7277,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 155
+    "noteChars": 468
   },
   {
     "slug": "mofongo",
@@ -7327,7 +7330,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 138
+    "noteChars": 463
   },
   {
     "slug": "jamaican-beef-patties",
@@ -7367,7 +7370,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 129
+    "noteChars": 485
   },
   {
     "slug": "ackee-and-saltfish",
@@ -7410,7 +7413,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 131
+    "noteChars": 525
   },
   {
     "slug": "trinidad-doubles",
@@ -7439,8 +7442,8 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "earthy",
       "bright",
+      "earthy",
       "aromatic"
     ],
     "season": [
@@ -7455,7 +7458,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 139
+    "noteChars": 509
   },
   {
     "slug": "tostones",
@@ -7506,7 +7509,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 173
+    "noteChars": 478
   },
   {
     "slug": "rum-punch",
@@ -7557,7 +7560,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 150
+    "noteChars": 494
   },
   {
     "slug": "jollof-rice",
