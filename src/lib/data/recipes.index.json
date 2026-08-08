@@ -8495,7 +8495,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "rich"
+      "rich",
+      "charred"
     ],
     "season": [],
     "region": {
@@ -8503,7 +8504,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 145
+    "noteChars": 454
   },
   {
     "slug": "barszcz",
@@ -8533,9 +8534,9 @@
     "costTier": 3,
     "flavorTags": [
       "earthy",
-      "bright",
       "rich",
-      "herb-fresh"
+      "herb-fresh",
+      "warm-spiced"
     ],
     "season": [
       2,
@@ -8553,7 +8554,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 152
+    "noteChars": 440
   },
   {
     "slug": "chicken-paprikash",
@@ -8582,7 +8583,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "rich"
+      "rich",
+      "silky"
     ],
     "season": [
       6,
@@ -8595,7 +8597,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 163
+    "noteChars": 497
   },
   {
     "slug": "gulyas",
@@ -8644,7 +8646,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 170
+    "noteChars": 478
   },
   {
     "slug": "beef-stroganoff",
@@ -8686,7 +8688,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 177
+    "noteChars": 495
   },
   {
     "slug": "golubtsy",
@@ -8736,7 +8738,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 157
+    "noteChars": 516
   },
   {
     "slug": "adjaruli-khachapuri",
@@ -8774,7 +8776,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 151
+    "noteChars": 496
   },
   {
     "slug": "kartoffelpuffer-latkes",
@@ -8815,7 +8817,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 150
+    "noteChars": 458
   },
   {
     "slug": "syrniki",
@@ -8945,7 +8947,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 158
+    "noteChars": 484
   },
   {
     "slug": "sunday-roast-beef-and-yorkshire-puddings",
@@ -8974,6 +8976,7 @@
     },
     "costTier": 3,
     "flavorTags": [
+      "smoky",
       "rich"
     ],
     "season": [
@@ -8989,7 +8992,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 113
+    "noteChars": 486
   },
   {
     "slug": "shepherds-pie",
@@ -9018,8 +9021,8 @@
     },
     "costTier": 3,
     "flavorTags": [
-      "rich",
       "umami-deep",
+      "rich",
       "silky"
     ],
     "season": [
@@ -9033,7 +9036,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 147
+    "noteChars": 479
   },
   {
     "slug": "chicken-tikka-masala",
@@ -9125,7 +9128,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 173
+    "noteChars": 453
   },
   {
     "slug": "full-english-breakfast",
@@ -9252,7 +9255,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 178
+    "noteChars": 465
   },
   {
     "slug": "victoria-sponge",
@@ -9383,7 +9386,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 166
+    "noteChars": 467
   },
   {
     "slug": "soda-bread",
@@ -9420,7 +9423,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 176
+    "noteChars": 480
   },
   {
     "slug": "colcannon",
@@ -9505,7 +9508,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 178
+    "noteChars": 470
   },
   {
     "slug": "dublin-coddle",
@@ -9542,7 +9545,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 171
+    "noteChars": 480
   },
   {
     "slug": "beef-and-guinness-stew",
@@ -9572,7 +9575,8 @@
     "costTier": 2,
     "flavorTags": [
       "sweet-edged",
-      "silky"
+      "silky",
+      "charred"
     ],
     "season": [
       6,
@@ -9585,7 +9589,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 172
+    "noteChars": 457
   },
   {
     "slug": "seafood-chowder",
@@ -9632,7 +9636,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 150
+    "noteChars": 448
   },
   {
     "slug": "champ",
@@ -9707,7 +9711,8 @@
     "flavorTags": [
       "rich",
       "warm-spiced",
-      "sweet-edged"
+      "sweet-edged",
+      "nutty-toasted"
     ],
     "season": [],
     "region": {
@@ -9715,7 +9720,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 172
+    "noteChars": 445
   },
   {
     "slug": "irish-coffee",
@@ -10233,6 +10238,7 @@
     "flavorTags": [
       "rich",
       "umami-deep",
+      "sweet-edged",
       "herb-fresh"
     ],
     "season": [
@@ -10252,7 +10258,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 167
+    "noteChars": 466
   },
   {
     "slug": "kasespatzle",
@@ -10379,7 +10385,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 164
+    "noteChars": 472
   },
   {
     "slug": "currywurst",
@@ -10466,7 +10472,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 166
+    "noteChars": 467
   },
   {
     "slug": "schwabischer-kartoffelsalat",
@@ -10635,7 +10641,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 177
+    "noteChars": 469
   },
   {
     "slug": "wiener-schnitzel",
