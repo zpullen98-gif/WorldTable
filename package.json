@@ -11,7 +11,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"extract": "node tools/extract.mjs",
-		"verify:data": "node tools/verify-extraction.mjs"
+		"verify:data": "node tools/verify-extraction.mjs",
+		"build:data": "node tools/build-data.mjs"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.62.1",

@@ -1,0 +1,309 @@
+/**
+ * Dietary flags, derived from ingredient keywords.
+ *
+ * The original had exactly one dietary fact: a hand-authored `v` boolean. That
+ * is 970 rows of ground truth nobody had to create, so the build asserts our
+ * derived `vegetarian` against it and fails on any unexplained disagreement.
+ * Every disagreement is either a hole in these tables or a mistake in the source
+ * data, and both are worth seeing.
+ *
+ * Matching is done on the NARROW blob (name + ingredients), not the full text.
+ * Method steps and the "from the pass" note are prose: a note explaining that a
+ * dish is "usually served with lamb" must not make the dish contain lamb.
+ *
+ * Word-boundary matching throughout — a substring test makes "butter" match
+ * "butterfly the chicken", "ham" match "hamburger bun", and "crab" match
+ * "crabapple".
+ */
+
+const MEAT = [
+	'beef', 'veal', 'lamb', 'mutton', 'goat', 'pork', 'ham', 'bacon', 'pancetta',
+	'prosciutto', 'guanciale', 'lard', 'chorizo', 'chouriço', 'chourico',
+	'salami', 'sausage', 'chicken', 'turkey', 'duck', 'goose', 'quail',
+	'poussin', 'rabbit', 'venison', 'pheasant', 'partridge', 'squab',
+	'bison', 'elk', 'moose', 'brisket', 'oxtail', 'steak', 'ribeye', 'sirloin',
+	'chuck', 'short rib', 'pork belly', 'andouille', 'pepperoni',
+	'mortadella', 'capicola', 'bratwurst', 'kielbasa', 'linguica', 'spam',
+	'pastrami', 'corned beef', 'meat', 'meatball', 'mince', 'carnitas',
+	'carne asada', 'carne', 'barbacoa', 'al pastor', 'hot dog', 'frankfurter',
+	'ground beef', 'ground pork', 'ground lamb', 'schmaltz', 'suet', 'tallow',
+	'foie gras', 'liver', 'sweetbread', 'tripe', 'marrow', 'giblet',
+	'bone broth', 'beef stock', 'chicken stock', 'chicken broth', 'beef broth',
+	'merguez', 'boerewors', 'jamón', 'jamon', 'iberico', 'ibérico', 'wagyu',
+	'gelatin', 'gelatine', 'scrapple', 'goetta', 'livermush', 'knockwurst',
+	'pork roll', 'burnt ends', 'jerky', 'backstrap', 'tri-tip', 'flank',
+	'prime rib', 'pot roast', 'lardo', 'coppa', 'nduja', 'bresaola',
+	'pulled pork', 'rib tip', 'pig', 'hock', 'trotter', 'chitterling',
+	'bologna', 'braunschweiger', 'head cheese', 'sopressata', 'guanciale'
+];
+
+const PORK = [
+	'pork', 'ham', 'bacon', 'pancetta', 'prosciutto', 'guanciale', 'lard',
+	'chorizo', 'salami', 'pepperoni', 'mortadella', 'capicola', 'bratwurst',
+	'kielbasa', 'linguica', 'spam', 'andouille', 'pork belly', 'scrapple',
+	'goetta', 'livermush', 'knockwurst', 'pork roll', 'jamón', 'jamon',
+	'iberico', 'ibérico', 'lardo', 'speck', 'coppa', 'nduja'
+];
+
+const FISH = [
+	'fish', 'anchovy', 'anchovies', 'salmon', 'tuna', 'cod', 'haddock', 'halibut',
+	'snapper', 'branzino', 'sole', 'sea bass', 'tilapia', 'barramundi', 'trout',
+	'mackerel', 'sardine', 'herring', 'bonito', 'katsuobushi',
+	'bacalao', 'bacalhau', 'salt cod', 'fish sauce', 'nam pla', 'worcestershire',
+	'bottarga', 'roe', 'caviar', 'tobiko', 'ikura', 'uni', 'eel', 'unagi',
+	'dashi', 'niboshi', 'surimi', 'lox', 'gravlax', 'kipper', 'whitebait',
+	'monkfish', 'swordfish', 'grouper', 'catfish', 'pollock', 'mahi',
+	// Freshwater and regional names the US-state chapters lean on heavily.
+	'walleye', 'whitefish', 'rockfish', 'striped bass', 'perch', 'pike',
+	'bluefish', 'redfish', 'flounder', 'fluke', 'porgy', 'shad', 'smelt',
+	'lake trout', 'char', 'sturgeon', 'tilefish', 'wahoo', 'opah', 'escolar',
+	'skate', 'ray', 'bass', 'crappie', 'bluegill', 'menhaden'
+];
+
+const SHELLFISH = [
+	'shrimp', 'prawn', 'crab', 'lobster', 'crawfish', 'crayfish',
+	'scallop', 'oyster', 'clam', 'mussel',
+	'squid', 'calamari', 'octopus', 'cuttlefish', 'vongole',
+	'shrimp paste', 'belacan', 'oyster sauce', 'langoustine', 'krill', 'polvo',
+	// New England / Pacific Northwest shellfish the state chapters name directly.
+	'geoduck', 'whelk', 'scungilli', 'conch', 'abalone', 'periwinkle',
+	'quahog', 'littleneck', 'cherrystone', 'razor clam', 'cockle',
+	'barnacle', 'sea urchin', 'crawdad', 'spot prawn', 'dungeness'
+];
+
+const DAIRY = [
+	'milk', 'cream', 'butter', 'buttermilk', 'yogurt', 'yoghurt', 'cheese',
+	'parmesan', 'parmigiano', 'pecorino', 'mozzarella', 'ricotta', 'mascarpone',
+	'gruyère', 'gruyere', 'cheddar', 'feta', 'halloumi', 'paneer', 'cotija',
+	'crema', 'crème fraîche', 'creme fraiche', 'ghee', 'condensed milk',
+	'evaporated milk', 'sour cream', 'clotted cream', 'queso', 'brie',
+	'camembert', 'gorgonzola', 'stilton', 'manchego', 'provolone', 'burrata',
+	'quark', 'skyr', 'kefir', 'custard', 'ice cream', 'double cream'
+];
+
+const EGG = ['egg', 'eggs', 'egg yolk', 'egg yolks', 'egg white', 'egg whites', 'mayonnaise', 'mayo', 'aioli', 'meringue', 'custard'];
+
+const GLUTEN = [
+	'flour', 'bread', 'breadcrumbs', 'panko', 'pasta', 'spaghetti', 'noodle',
+	'noodles', 'tagliatelle', 'linguine', 'penne', 'rigatoni', 'orzo', 'couscous',
+	'semolina', 'farro', 'barley', 'bulgur', 'seitan', 'soy sauce', 'wheat',
+	'tortilla', 'pita', 'baguette', 'brioche', 'phyllo', 'filo', 'puff pastry',
+	'pastry', 'cracker', 'crackers', 'beer', 'udon', 'ramen', 'somen', 'lasagne',
+	'lasagna', 'gnocchi', 'dumpling wrappers', 'wonton', 'pierogi', 'roux',
+	'malt', 'rye', 'sourdough', 'croissant', 'biscuit', 'cake flour'
+];
+
+const NUTS = [
+	'almond', 'almonds', 'hazelnut', 'hazelnuts', 'walnut', 'walnuts', 'pecan',
+	'pecans', 'pistachio', 'pistachios', 'cashew', 'cashews', 'macadamia',
+	'pine nut', 'pine nuts', 'brazil nut', 'chestnut', 'chestnuts', 'praline',
+	'marzipan', 'frangipane', 'nutella', 'peanut', 'peanuts', 'peanut butter'
+];
+
+const ALCOHOL = [
+	'wine', 'red wine', 'white wine', 'beer', 'ale', 'stout', 'lager', 'brandy',
+	'cognac', 'rum', 'whisky', 'whiskey', 'bourbon', 'vodka', 'gin', 'tequila',
+	'mezcal', 'sherry', 'port', 'marsala', 'vermouth', 'sake', 'mirin',
+	'liqueur', 'kirsch', 'amaretto', 'grand marnier', 'cointreau', 'champagne',
+	'prosecco', 'cachaça', 'cachaca', 'pisco', 'shaoxing', 'soju', 'calvados',
+	'bitters', 'campari', 'aperol', 'absinthe', 'schnapps', 'grappa'
+];
+
+/**
+ * Vegetarian-safe exceptions. These strings contain a flagged keyword as a
+ * substring but do not carry the animal product — without them "coconut milk"
+ * reads as dairy, "vegetable stock" as meat stock, and "buttermilk substitute:
+ * soy milk" as both.
+ */
+const EXCEPTIONS = [
+	// dairy-shaped, not dairy
+	'coconut milk', 'coconut cream', 'almond milk', 'soy milk', 'oat milk',
+	'rice milk', 'cashew cream', 'peanut butter', 'almond butter', 'cocoa butter',
+	'shea butter', 'apple butter', 'nut butter', 'tahini butter', 'butter lettuce',
+	'butter bean', 'butter beans', 'buttercup', 'butternut', 'butterfly',
+	'buttermilk substitute', 'cream of tartar', 'creamed corn', 'ice cream machine',
+	'ice cream maker', 'cream soda',
+	// meat-shaped, not meat
+	'vegetable stock', 'vegetable broth', 'mushroom stock', 'chicken of the woods',
+	'hamburger bun', 'hamburger buns', 'chickpea', 'chickpeas', 'beefsteak tomato',
+	'beefsteak tomatoes', 'meaty mushroom', 'meat-free', 'meatless',
+	// fish-shaped, not fish
+	'fish-shaped', 'crabapple', 'crab apple', 'vegan fish sauce',
+	// Place names. "Cape Cod Cranberry Relish" is a vegetarian dish that was
+	// reading as fish purely because Cape Cod is named after the cod.
+	'cape cod', 'cod cranberry', 'codfish ball',
+	// "goat cheese" is not goat. Neither is head cheese, but that one IS meat,
+	// so it stays out of this list.
+	'goat cheese', 'goats cheese', "goat's cheese", 'goat curd',
+	// egg-shaped, not egg
+	'eggplant', 'eggplants', 'egg noodles'
+];
+
+const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/**
+ * Word-boundary matcher, tolerant of accents and of a trailing plural.
+ *
+ * The plural allowance is not cosmetic: without it "crab" fails to match
+ * "24 live blue crabs" and "hot dog" fails to match "4 hot dogs", which is
+ * exactly how Steamed Blue Crabs and the Seattle Dog were being reported as
+ * vegetarian.
+ */
+function makeMatcher(words) {
+	const alts = words
+		.slice()
+		.sort((a, b) => b.length - a.length)
+		.map(escape)
+		.join('|');
+	return new RegExp(`(?<![\\p{L}])(?:${alts})(?:e?s)?(?![\\p{L}])`, 'iu');
+}
+
+const RE = {
+	meat: makeMatcher(MEAT),
+	pork: makeMatcher(PORK),
+	fish: makeMatcher(FISH),
+	shellfish: makeMatcher(SHELLFISH),
+	dairy: makeMatcher(DAIRY),
+	egg: makeMatcher(EGG),
+	gluten: makeMatcher(GLUTEN),
+	nuts: makeMatcher(NUTS),
+	alcohol: makeMatcher(ALCOHOL)
+};
+
+const EXCEPTION_RE = makeMatcher(EXCEPTIONS);
+
+/** Blank out known-safe phrases before testing, so their substrings can't fire. */
+function scrub(text) {
+	return text.replace(new RegExp(EXCEPTION_RE.source, 'giu'), ' ');
+}
+
+/**
+ * Ingredient lines that only *offer* an animal product.
+ *
+ * The corpus consistently writes vegetarian-capable dishes as "1.2L hot chicken
+ * or veg stock", "120g suet or cold grated butter", "20g katsuobushi (or skip
+ * for vegan)", "Smoked salmon to serve". The authored `v` flag counts all of
+ * these as vegetarian, and it is right to: the dish has a stated meatless path.
+ *
+ * So an animal keyword is only binding when its own line offers no way out.
+ * This is checked per line rather than over the whole blob, because "or butter"
+ * appearing in line 7 says nothing about the pork in line 2.
+ */
+/** Things a vegetarian alternative is actually made of. Trailing `s?` matters —
+ *  without it "2 eggs per person, fried; or shredded chicken" has no recognised
+ *  meatless side. */
+const VEG_ALTERNATIVE =
+	/\b(?:veg|vegan|vegetable|vegetarian|shortening|butter|oil|kombu|shiitake|mushroom|agar|tofu|olive|paprika|cream|stiffener|egg|dhal|dal|lentil|chickpea|bean|potato|paneer|cheese|asparagus|spinach|cabbage|rice|noodle|salad|fruit|nut)s?\b/i;
+
+const OPTIONAL_MARKER =
+	/^\s*(?:optional|fillings?|to serve|for serving|garnish|serve with|toppings?)\b|\boptional\b|\bto serve\b|\bfor serving\b/i;
+
+function lineIsEscaped(line) {
+	// "Smoked salmon to serve", "Fillings: umeboshi, tuna-mayo, salmon flakes" —
+	// genuinely additive, the dish stands without them.
+	if (OPTIONAL_MARKER.test(line)) return true;
+
+	// Accompaniment lists: a run of foods with no quantity anywhere, e.g.
+	// "Grilled meats, roast chicken, fries, eggs — they all apply" or
+	// "Satay, gado-gado, noodles, grilled chicken, raw vegetables, your spoon".
+	// A line that names three or more things and measures none of them is
+	// telling you what to serve the sauce WITH, not what goes in it.
+	if (!/\d/.test(line) && line.split(/[,;]/).length >= 3) return true;
+
+	// "chicken or veg stock" offers a real meatless path; "100g bacon or spam"
+	// does not. So split on `or` and require some alternative that is BOTH free
+	// of animal keywords AND explicitly vegetarian-flavoured. Testing the whole
+	// line instead lets a stray "oil" anywhere in it excuse the bacon, and
+	// requiring only "animal-free" lets "1 small chicken or 6 thighs" through
+	// because "thighs" isn't a keyword.
+	//
+	// Note the asymmetry: animal keywords are tested against the SCRUBBED
+	// segment, but the vegetarian marker against the raw one. Scrubbing removes
+	// whole phrases like "vegetable broth" from the exceptions list, which would
+	// otherwise delete the very word ("vegetable") that proves the alternative
+	// is meatless — that is what made "250ml hot beef or vegetable broth" read
+	// as binding beef.
+	const segments = line.split(/\bor\b/i);
+	if (segments.length > 1) {
+		const escapes = segments.some((seg) => {
+			const lowered = seg.toLowerCase();
+			const scrubbed = scrub(lowered);
+			if (RE.meat.test(scrubbed) || RE.fish.test(scrubbed) || RE.shellfish.test(scrubbed))
+				return false;
+			return VEG_ALTERNATIVE.test(lowered);
+		});
+		if (escapes) return true;
+	}
+
+	// "2 tbsp dashi (kombu dashi keeps it vegetarian)" — a parenthetical that
+	// names a vegetarian route is a stated alternative, same as an "or".
+	const parentheticals = line.match(/\(([^)]*)\)/g) ?? [];
+	if (parentheticals.some((p) => /\bveg(?:an|etarians?)?\b/i.test(p))) return true;
+
+	return false;
+}
+
+export function deriveDiet(r, _fullBlob) {
+	// Ingredients + name only. Method prose and the "from the pass" note are
+	// commentary — a note saying a dish is "usually served with lamb" must not
+	// put lamb in the dish.
+	const lines = [r.n, ...r.i];
+
+	// Binding lines decide vegetarian status; every line still contributes to the
+	// literal "does this text mention X" flags, so an allergen is never hidden
+	// just because it was offered as an option.
+	const binding = lines.filter((l) => !lineIsEscaped(l)).map((l) => scrub(l.toLowerCase()));
+	const all = lines.map((l) => scrub(l.toLowerCase()));
+
+	const anyBinding = (re) => binding.some((l) => re.test(l));
+	const anyLine = (re) => all.some((l) => re.test(l));
+
+	const containsMeat = anyBinding(RE.meat);
+	const containsFish = anyBinding(RE.fish);
+	const containsShellfish = anyBinding(RE.shellfish);
+	const containsDairy = anyBinding(RE.dairy);
+	const containsEgg = anyBinding(RE.egg);
+
+	/**
+	 * Derived, literal, safety-first: no animal product in any binding position.
+	 *
+	 * This is NOT the flag the vegetarian filter uses. The authored `v` field is
+	 * a human judgement about the dish as presented, and the corpus applies it
+	 * inconsistently to substitution constructions — Mapo Tofu ("ground pork (or
+	 * shiitake for veg)") is authored non-vegetarian while Miso Soup
+	 * ("katsuobushi (or skip for vegan)") is authored vegetarian. Both readings
+	 * are defensible; neither is derivable from the text. So the build trusts the
+	 * human for `vegetarian` and uses this strict flag to catch the two things
+	 * that ARE unambiguous errors: an animal product with no stated alternative
+	 * in a dish marked vegetarian, and no animal product at all in a dish marked
+	 * otherwise. See the gates in build-data.mjs.
+	 */
+	const vegetarianStrict = !containsMeat && !containsFish && !containsShellfish;
+
+	// The authored flag, when we have it. deriveDiet is also called on
+	// user-added family recipes, which carry the same `v` field.
+	const vegetarian = typeof r.v === 'number' || typeof r.v === 'boolean'
+		? Boolean(r.v)
+		: vegetarianStrict;
+
+	return {
+		vegetarian,
+		vegetarianStrict,
+		vegan: vegetarianStrict && !containsDairy && !containsEgg,
+		/** True when animal products appear only in optional or "or" positions. */
+		vegetarianOption:
+			vegetarianStrict && (anyLine(RE.meat) || anyLine(RE.fish) || anyLine(RE.shellfish)),
+		containsMeat,
+		containsPork: anyBinding(RE.pork),
+		containsFish,
+		containsShellfish,
+		containsDairy,
+		containsEgg,
+		// Allergens are reported from ALL lines, escaped or not. Someone with a
+		// nut allergy needs to know the garnish exists.
+		containsGluten: anyLine(RE.gluten),
+		containsNuts: anyLine(RE.nuts),
+		containsAlcohol: anyLine(RE.alcohol),
+		confidence: 'derived'
+	};
+}

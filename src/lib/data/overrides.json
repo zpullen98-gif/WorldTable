@@ -1,0 +1,47 @@
+{
+  "_readme": [
+    "Human rulings that beat the derived values in tools/derive/*. Merged last by",
+    "build-data.mjs, and exempt from the diet gates.",
+    "",
+    "Every entry needs a `reason`. If you cannot write one, the fix belongs in the",
+    "keyword tables instead — an override is for a genuine judgement call, not for",
+    "silencing a bug."
+  ],
+
+  "recipes": {
+    "pimento-cheese": {
+      "reason": "Worcestershire contains anchovy, so containsFish stays true and the allergen line will say so. But the corpus, and ordinary American usage, treat pimento cheese as vegetarian. Following the author for the filter, keeping the fact for the label.",
+      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
+    },
+    "mississippi-comeback-sauce": {
+      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese: vegetarian by the author's call, containsFish reported honestly.",
+      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
+    },
+    "beer-cheese": {
+      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
+      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
+    },
+    "kentucky-beer-cheese-soup": {
+      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
+      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
+    },
+    "wisconsin-beer-cheese-soup": {
+      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
+      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
+    },
+
+    "kitsune-udon": {
+      "reason": "The broth line states the kombu-shiitake dashi option explicitly; a later line repeats plain 'dashi' for the aburaage without restating it. Per-line matching cannot carry the alternative across lines, so this is ruled by hand. Kitsune udon is traditionally and straightforwardly vegetarian-capable.",
+      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
+    },
+
+    "new-mexico-red-chile-enchiladas": {
+      "reason": "Ingredient reads only '500ml stock' with no qualifier. The author marked the dish non-vegetarian, which for a New Mexico red chile sauce means meat stock. Bare 'stock' is too ambiguous to add to the keyword tables without misfiring across the corpus, so it is ruled here.",
+      "diet": { "vegetarian": false, "containsMeat": true, "confidence": "reviewed" }
+    },
+    "arizona-sonoran-enchiladas": {
+      "reason": "Same bare '500ml stock' as new-mexico-red-chile-enchiladas, same ruling.",
+      "diet": { "vegetarian": false, "containsMeat": true, "confidence": "reviewed" }
+    }
+  }
+}
