@@ -3128,7 +3128,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 90
+    "noteChars": 481
   },
   {
     "slug": "falafel",
@@ -3158,9 +3158,9 @@
     "costTier": 1,
     "flavorTags": [
       "herb-fresh",
+      "earthy",
       "nutty-toasted",
-      "gently hot",
-      "earthy"
+      "gently hot"
     ],
     "season": [
       4,
@@ -3172,7 +3172,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 102
+    "noteChars": 508
   },
   {
     "slug": "shakshuka",
@@ -3217,7 +3217,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 98
+    "noteChars": 465
   },
   {
     "slug": "oven-chicken-shawarma",
@@ -3263,7 +3263,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 82
+    "noteChars": 434
   },
   {
     "slug": "tabbouleh",
@@ -3313,7 +3313,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 78
+    "noteChars": 466
   },
   {
     "slug": "fattoush",
@@ -3344,8 +3344,8 @@
     "flavorTags": [
       "bright",
       "herb-fresh",
-      "briny",
-      "sweet-edged"
+      "sweet-edged",
+      "briny"
     ],
     "season": [
       1,
@@ -3366,7 +3366,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 81
+    "noteChars": 488
   },
   {
     "slug": "kofta-kebabs",
@@ -3397,8 +3397,8 @@
     "flavorTags": [
       "bright",
       "herb-fresh",
-      "warm-spiced",
-      "charred"
+      "charred",
+      "warm-spiced"
     ],
     "season": [],
     "region": {
@@ -3406,7 +3406,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 91
+    "noteChars": 436
   },
   {
     "slug": "baba-ghanoush",
@@ -3435,8 +3435,8 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "nutty-toasted",
       "charred",
+      "nutty-toasted",
       "bright",
       "briny"
     ],
@@ -3457,7 +3457,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 77
+    "noteChars": 471
   },
   {
     "slug": "mujadara",
@@ -3500,7 +3500,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 71
+    "noteChars": 484
   },
   {
     "slug": "quick-baklava-rolls",
@@ -3546,7 +3546,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 91
+    "noteChars": 431
   },
   {
     "slug": "tortilla-espanola",
@@ -3575,7 +3575,8 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "briny"
+      "briny",
+      "silky"
     ],
     "season": [],
     "region": {
@@ -3583,7 +3584,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 94
+    "noteChars": 499
   },
   {
     "slug": "weeknight-paella",
@@ -3614,6 +3615,7 @@
     "flavorTags": [
       "floral",
       "smoky",
+      "sweet-edged",
       "aromatic"
     ],
     "season": [
@@ -3627,7 +3629,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 92
+    "noteChars": 499
   },
   {
     "slug": "gambas-al-ajillo",
@@ -3667,7 +3669,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 83
+    "noteChars": 438
   },
   {
     "slug": "patatas-bravas",
@@ -3701,13 +3703,18 @@
       "aromatic",
       "fiery"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8,
+      9
+    ],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 82
+    "noteChars": 488
   },
   {
     "slug": "gazpacho",
@@ -3752,7 +3759,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 89
+    "noteChars": 472
   },
   {
     "slug": "pan-con-tomate",
@@ -3781,8 +3788,8 @@
     },
     "costTier": 1,
     "flavorTags": [
-      "warm-spiced",
       "aromatic",
+      "warm-spiced",
       "briny",
       "charred"
     ],
@@ -3797,7 +3804,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 87
+    "noteChars": 438
   },
   {
     "slug": "albondigas-in-salsa-espanola",
@@ -3826,8 +3833,8 @@
     },
     "costTier": 4,
     "flavorTags": [
-      "aromatic",
       "nutty-toasted",
+      "aromatic",
       "smoky",
       "bright"
     ],
@@ -3842,7 +3849,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 82
+    "noteChars": 504
   },
   {
     "slug": "pollo-al-ajillo",
@@ -3882,7 +3889,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 103
+    "noteChars": 492
   },
   {
     "slug": "croquetas-de-jamon",
@@ -3920,7 +3927,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 96
+    "noteChars": 497
   },
   {
     "slug": "crema-catalana",
@@ -3949,8 +3956,8 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "rich",
       "warm-spiced",
+      "rich",
       "bright",
       "charred"
     ],
@@ -3970,7 +3977,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 111
+    "noteChars": 500
   },
   {
     "slug": "horiatiki-greek-salad",
@@ -4016,7 +4023,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 103
+    "noteChars": 462
   },
   {
     "slug": "tzatziki",
@@ -4046,9 +4053,9 @@
     "costTier": 2,
     "flavorTags": [
       "bright",
+      "aromatic",
       "herb-fresh",
-      "briny",
-      "aromatic"
+      "briny"
     ],
     "season": [
       6,
@@ -4060,7 +4067,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 63
+    "noteChars": 452
   },
   {
     "slug": "chicken-souvlaki",
@@ -4090,8 +4097,8 @@
     "costTier": 1,
     "flavorTags": [
       "charred",
-      "bright",
       "sweet-edged",
+      "bright",
       "briny"
     ],
     "season": [
@@ -4110,7 +4117,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 98
+    "noteChars": 482
   },
   {
     "slug": "moussaka",
@@ -4154,7 +4161,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 88
+    "noteChars": 478
   },
   {
     "slug": "spanakopita",
@@ -4183,9 +4190,9 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "rich",
       "herb-fresh",
-      "briny"
+      "briny",
+      "rich"
     ],
     "season": [
       3,
@@ -4199,7 +4206,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 86
+    "noteChars": 457
   },
   {
     "slug": "avgolemono",
@@ -4236,6 +4243,9 @@
       2,
       3,
       4,
+      5,
+      9,
+      10,
       12
     ],
     "region": {
@@ -4243,7 +4253,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 96
+    "noteChars": 463
   },
   {
     "slug": "briam",
@@ -4273,8 +4283,8 @@
     "costTier": 1,
     "flavorTags": [
       "briny",
-      "herb-fresh",
       "charred",
+      "herb-fresh",
       "aromatic"
     ],
     "season": [
@@ -4288,7 +4298,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 104
+    "noteChars": 471
   },
   {
     "slug": "greek-lemon-potatoes",
@@ -4334,7 +4344,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 95
+    "noteChars": 421
   },
   {
     "slug": "keftedes",
@@ -4363,10 +4373,10 @@
     },
     "costTier": 2,
     "flavorTags": [
-      "herb-fresh",
       "bright",
+      "herb-fresh",
       "earthy",
-      "warm-spiced"
+      "briny"
     ],
     "season": [
       1,
@@ -4380,7 +4390,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 97
+    "noteChars": 476
   },
   {
     "slug": "bougiourdi-baked-feta",
@@ -4411,6 +4421,7 @@
     "flavorTags": [
       "briny",
       "gently hot",
+      "rich",
       "charred"
     ],
     "season": [
@@ -4424,7 +4435,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 98
+    "noteChars": 458
   },
   {
     "slug": "chicken-and-andouille-gumbo",
@@ -4872,9 +4883,9 @@
     "costTier": 1,
     "flavorTags": [
       "tangy-ferment",
+      "briny",
       "nutty-toasted",
-      "gently hot",
-      "briny"
+      "gently hot"
     ],
     "season": [],
     "region": {
@@ -4882,7 +4893,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 80
+    "noteChars": 471
   },
   {
     "slug": "bulgogi",
@@ -4912,8 +4923,8 @@
     "costTier": 2,
     "flavorTags": [
       "umami-deep",
-      "aromatic",
       "sweet-edged",
+      "aromatic",
       "herb-fresh"
     ],
     "season": [
@@ -4929,7 +4940,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 90
+    "noteChars": 444
   },
   {
     "slug": "bibimbap",
@@ -4979,7 +4990,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 112
+    "noteChars": 508
   },
   {
     "slug": "japchae",
@@ -5026,7 +5037,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 95
+    "noteChars": 468
   },
   {
     "slug": "kimchi-jjigae",
@@ -5066,7 +5077,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 89
+    "noteChars": 449
   },
   {
     "slug": "korean-fried-chicken",
@@ -5106,7 +5117,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 91
+    "noteChars": 465
   },
   {
     "slug": "pajeon",
@@ -5146,7 +5157,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 82
+    "noteChars": 470
   },
   {
     "slug": "tteokbokki",
@@ -5175,9 +5186,9 @@
     },
     "costTier": 1,
     "flavorTags": [
+      "umami-deep",
       "herb-fresh",
       "fiery",
-      "umami-deep",
       "nutty-toasted"
     ],
     "season": [
@@ -5192,7 +5203,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 101
+    "noteChars": 496
   },
   {
     "slug": "la-galbi",
@@ -5238,7 +5249,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 100
+    "noteChars": 443
   },
   {
     "slug": "doenjang-jjigae",
@@ -5285,7 +5296,7 @@
       "group": "World Cuisines"
     },
     "source": "guide",
-    "noteChars": 98
+    "noteChars": 447
   },
   {
     "slug": "quick-pho-ga",

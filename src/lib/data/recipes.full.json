@@ -6572,9 +6572,11 @@
         "durationSec": null
       }
     ],
-    "note": "Hot chickpeas + ice water is the fluffiness hack — the temperature shock whips the tahini.",
+    "note": "Hot chickpeas plus ice water is the fluffiness hack — the temperature shock whips the tahini into a pale emulsion the way no amount of blending cold ingredients can. The baking-soda simmer matters too: it raises the pH so the chickpeas' pectin dissolves and they blend to silk instead of grit, shedding their skins as a bonus. Be generous with the tahini; hummus bi tahina is a sesame dish wearing a chickpea coat, and the timid-tahini version is why homemade so often disappoints.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Building an emulsion"
+    ],
     "flavor": {
       "tags": [
         "nutty-toasted",
@@ -6586,7 +6588,13 @@
     },
     "pairingId": 6,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Building an emulsion",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20emulsify%20sauce%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "dish": {
         "label": "Middle Eats’ silkiest hummus",
         "url": "https://www.youtube.com/watch?v=_1KYLNtXNEs",
@@ -6664,7 +6672,7 @@
         "durationSec": null
       }
     ],
-    "note": "Canned chickpeas make falafel that explodes into the oil. Dried-and-soaked is a law, not a preference.",
+    "note": "Canned chickpeas make falafel that explodes into the oil — dried-and-soaked is a law, not a preference, because cooked chickpeas carry water that flashes to steam inside the crust. The soaked-raw grind should look like coarse couscous and hold when squeezed. Baking powder goes in at the last minute for lift. Fry at a true 175°C: cooler and they drink oil, hotter and the crust browns before the raw chickpea center cooks. Egypt and the Levant both claim the invention; the argument is older than the fryer.",
     "equipment": [
       "Thermometer",
       "Deep-fry pot"
@@ -6675,11 +6683,11 @@
     "flavor": {
       "tags": [
         "herb-fresh",
+        "earthy",
         "nutty-toasted",
-        "gently hot",
-        "earthy"
+        "gently hot"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, toasted, nutty warmth throughout, settling low and earthy."
+      "sentence": "Leads with fresh herbs arguing happily on top, an earthy, grounding base, with warmth in the tail."
     },
     "pairingId": 19,
     "films": {
@@ -6764,7 +6772,7 @@
         "durationSec": null
       }
     ],
-    "note": "Thicken the sauce before the eggs go in — eggs poached in watery sauce turn the whole pan to soup.",
+    "note": "Thicken the sauce before the eggs go in — eggs poached in watery sauce turn the whole pan to soup, because they release moisture as they set. The spoon-well test is the gate: if a crater holds its shape, the sauce is ready to cradle. Cover the pan so the whites steam while the yolks stay molten, and pull it a minute early — the pan keeps cooking at the table, which is where this dish belongs, eaten straight from the skillet with bread doing the work of cutlery.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -6847,7 +6855,7 @@
         "durationSec": null
       }
     ],
-    "note": "The slice-then-broil step fakes the rotating spit — maximum crispy edges per bite.",
+    "note": "The slice-then-broil step fakes the rotating spit — a real shawarma cone crisps only at its carved surface, and re-crisping your slices in the pan juices recreates exactly that maximum-edge-per-bite economy. The marinade's warm spices — cinnamon, allspice, turmeric — are what tell your nose this is shawarma and not just roast chicken. Thighs only: the spit was never a lean-meat machine, and breast meat leaves the broiler as chalk.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -6932,7 +6940,7 @@
         "durationSec": null
       }
     ],
-    "note": "Real tabbouleh is a parsley salad with bulgur in it, not the other way around.",
+    "note": "Real tabbouleh is a parsley salad with bulgur in it, not the other way around — the Lebanese original counts the grain by spoonfuls. Two rules protect it: the parsley must be bone-dry before chopping (wet leaves bruise into paste), and the knife must be sharp, because crushed parsley tastes like lawn clippings. The bulgur never cooks; it swells in tomato juice and lemon, staying nubbly. Dress it sharper than feels polite — this salad is the acid on a rich table.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -7017,17 +7025,17 @@
         "durationSec": null
       }
     ],
-    "note": "Sumac is the identity of this salad — lemony, winey, brick-red. Don't sub it out.",
+    "note": "Sumac is the identity of this salad — lemony, winey, brick-red — and substituting it out leaves a pleasant chopped salad that has lost its passport. The fried pita is the second signature: fattoush belongs to the fattat family of dishes built on repurposed bread, and the shards must be salted like chips and added at the last second so they crackle against the vegetables. Pomegranate molasses in the dressing is optional and transformative — sweet-sour depth for one spoonful of effort.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
         "bright",
         "herb-fresh",
-        "briny",
-        "sweet-edged"
+        "sweet-edged",
+        "briny"
       ],
-      "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top, trailing gentle sweetness."
+      "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top, ending saline and clean."
     },
     "pairingId": 2,
     "films": {
@@ -7109,7 +7117,7 @@
         "durationSec": null
       }
     ],
-    "note": "Grate-and-squeeze the onion: flavor without the water that makes kofta fall off the skewer.",
+    "note": "Grate-and-squeeze the onion: flavor without the water that makes kofta slump off the skewer and fall through the grill. Kneading until tacky is the binder — the salt-dissolved proteins glue the meat to itself, no egg or breadcrumb needed. Twenty percent fat is structural; lean kofta is a meatloaf lollipop. The finger-dents aren't decoration either: they add surface for char and keep the cylinder gripping the flat skewer as it turns.",
     "equipment": [
       "Grill",
       "Grater / zester"
@@ -7119,10 +7127,10 @@
       "tags": [
         "bright",
         "herb-fresh",
-        "warm-spiced",
-        "charred"
+        "charred",
+        "warm-spiced"
       ],
-      "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top, with a bitter-edged char at the rim."
+      "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top, fading in warm spice."
     },
     "pairingId": 27,
     "films": {
@@ -7197,19 +7205,19 @@
         "durationSec": null
       }
     ],
-    "note": "The smoke IS the recipe. Un-charred eggplant makes tahini-flavored baby food.",
+    "note": "The smoke IS the recipe — un-charred eggplant makes tahini-flavored baby food. Burn the eggplants whole until fully collapsed; the blackened skin perfumes the flesh through and through, which is the entire flavor architecture of the dish. Draining the flesh afterward discards the bitter, watery liquid that would dilute everything. Then a fork, not a blender: baba ghanoush wants strands and texture, and a machine purées away the evidence that a fire was ever involved.",
     "equipment": [
       "Blender"
     ],
     "techniques": [],
     "flavor": {
       "tags": [
-        "nutty-toasted",
         "charred",
+        "nutty-toasted",
         "bright",
         "briny"
       ],
-      "sentence": "Leads with toasted, nutty warmth throughout, char used as punctuation, ending saline and clean."
+      "sentence": "Leads with char used as punctuation, toasted, nutty warmth throughout, ending saline and clean."
     },
     "pairingId": 6,
     "films": {
@@ -7288,7 +7296,7 @@
         "durationSec": null
       }
     ],
-    "note": "This peasant dish lives or dies on onion patience. Mahogany, not blond.",
+    "note": "This peasant dish lives or dies on onion patience — mahogany, not blond, because those twenty-five slow minutes are the only place its depth can come from; lentils and rice bring bulk, the onions bring the cuisine. Half get folded through, half go on top still crisp, and the contrast is the dish. Mujadara is medieval — it appears in Arabic cookbooks from the 13th century — and it remains the proof that three cheap ingredients plus discipline outrank ten expensive ones without it.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -7362,7 +7370,7 @@
         "durationSec": null
       }
     ],
-    "note": "Cold syrup + hot pastry = crisp. Hot syrup + hot pastry = soggy. It's physics, not opinion.",
+    "note": "Cold syrup over hot pastry equals crisp; hot syrup over hot pastry equals soggy — it's physics, not opinion, which is why the syrup is made first and cooled completely. Slice before baking, never after; baked phyllo shatters under a knife. Keep the unused sheets under a barely-damp towel as you work, because phyllo dries to tissue paper in minutes. The crackle when the syrup pours is the dish telling you the sequence was right.",
     "equipment": [],
     "techniques": [
       "Handling phyllo"
@@ -7450,18 +7458,27 @@
         "durationSec": null
       }
     ],
-    "note": "The plate-flip is a rite of passage. Commit fully — hesitation is how tortillas hit the floor.",
+    "note": "The plate-flip is a rite of passage — commit fully, hesitation is how tortillas hit the floor. Everything before it is oil management: the potatoes poach, never fry, going tender without color, and the ten-minute rest in the egg lets starch and custard agree before the pan. Spain's eternal argument is onion or no onion (con cebolla wins in most kitchens, including this one), but the jiggly center is not up for debate — sobremesa-warm, not hot, is how it's served everywhere from Cádiz to Bilbao.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Tempering a custard"
+    ],
     "flavor": {
       "tags": [
-        "briny"
+        "briny",
+        "silky"
       ],
-      "sentence": "Leads with a briny, maritime salinity."
+      "sentence": "Leads with a briny, maritime salinity, a silken, spoon-slow texture."
     },
     "pairingId": 6,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Tempering a custard",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20temper%20eggs%20custard%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Tortilla%20Espa%C3%B1ola%20recipe",
@@ -7528,7 +7545,7 @@
         "durationSec": 300
       }
     ],
-    "note": "Stirring makes risotto. Not stirring makes paella. The socarrat is the reward for restraint.",
+    "note": "Stirring makes risotto; not stirring makes paella — the socarrat, that crackling caramelized bottom crust, only forms on rice left alone against hot metal, and it is the reward for restraint. Bomba rice matters because it drinks three times its volume without bursting. The chorizo is heresy by Valencian law and delicious by every other jurisdiction; commit either way. Rotate the pan for even heat, listen for the faint crackle in the last ninety seconds, and rest it under a towel before serving.",
     "equipment": [
       "Grater / zester"
     ],
@@ -7540,6 +7557,7 @@
       "tags": [
         "floral",
         "smoky",
+        "sweet-edged",
         "aromatic"
       ],
       "sentence": "Leads with a floral thread lifting the aroma, wood-smoke running underneath, opening aromatic and staying there."
@@ -7633,7 +7651,7 @@
         "durationSec": null
       }
     ],
-    "note": "Starting garlic in cold oil is how you get 8 cloves of flavor with zero bitterness.",
+    "note": "Starting garlic in cold oil is how you get eight cloves of flavor with zero bitterness — the slow climb toasts it evenly to pale gold, while garlic dropped into hot oil goes from raw to acrid in seconds. The shrimp want less time than seems reasonable: forty-five seconds a side in oil that hot. But the true product of this tapa is the oil itself, garlicky, chili-warmed, sherry-splashed — the bread isn't a side, it's the second course.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -7714,7 +7732,7 @@
         "durationSec": null
       }
     ],
-    "note": "Double-frying is the same physics as great French fries: cook first, crust second.",
+    "note": "Double-frying is the same physics as great French fries: the first fry cooks the interior at low temperature, the second builds the shattering crust at high — and chilling between the two dries the surface so it crisps harder. The brava sauce is pimentón's showcase, sweet and hot paprika bloomed in oil; tomato-based versions are a Madrid-vs-everywhere argument, but the vinegar tang is universal. Sauce over, never under: drowned potatoes surrender the crunch you just engineered twice.",
     "equipment": [
       "Thermometer",
       "Deep-fry pot"
@@ -7817,7 +7835,7 @@
         "durationSec": null
       }
     ],
-    "note": "The oil emulsion is what separates gazpacho from cold salsa — don't skip the slow stream.",
+    "note": "The slow oil stream is what separates gazpacho from cold salsa — blended in gradually with the motor running, the oil emulsifies and the soup turns pale coral, creamy without a drop of cream. Stale bread is the ancient thickener; gazpacho descends from Roman and Moorish bread-and-vinegar soups that met the tomato only after the Columbian exchange. Season it again once cold: chill mutes both salt and acid, and a gazpacho seasoned warm tastes flat from the refrigerator.",
     "equipment": [],
     "techniques": [
       "Building an emulsion"
@@ -7906,7 +7924,7 @@
         "durationSec": null
       }
     ],
-    "note": "Four ingredients means zero hiding places. This dish is a quality test for all of them.",
+    "note": "Four ingredients means zero hiding places — this dish is a quality test for all of them, which is why Catalonia treats it as a barometer of any kitchen. The box-grater move is the technique worth stealing: grated dead-ripe tomato gives you pure pulp and leaves the skin behind in your hand, no blanching, no peeling. Ghost the garlic across the hot toast once, not five times; pa amb tomàquet whispers garlic where lesser breads shout it.",
     "equipment": [
       "Grill",
       "Grater / zester"
@@ -7914,12 +7932,12 @@
     "techniques": [],
     "flavor": {
       "tags": [
-        "warm-spiced",
         "aromatic",
+        "warm-spiced",
         "briny",
         "charred"
       ],
-      "sentence": "Leads with warm spice humming through the middle, aromatics blooming from the first bite, with a bitter-edged char at the rim."
+      "sentence": "Leads with aromatics blooming from the first bite, warm spice humming through the middle, with a bitter-edged char at the rim."
     },
     "pairingId": 2,
     "films": {
@@ -7987,17 +8005,17 @@
         "durationSec": null
       }
     ],
-    "note": "The flour coating browns into the fond that becomes your sauce. Nothing is wasted.",
+    "note": "The flour coating browns into the fond that becomes your sauce — nothing is wasted; the meatballs are rolled in flour, seared, and the crust they leave on the pan is the sauce's foundation. Brown, don't cook through: they finish their cooking in the simmer, staying juicy. The almond picada at the end is Spain's ancient answer to cornstarch — ground almonds, fried bread and garlic pounded together, thickening the sauce while seasoning it, a technique running straight back to medieval Catalan cooking.",
     "equipment": [],
     "techniques": [],
     "flavor": {
       "tags": [
-        "aromatic",
         "nutty-toasted",
+        "aromatic",
         "smoky",
         "bright"
       ],
-      "sentence": "Leads with aromatics blooming from the first bite, toasted, nutty warmth throughout, with a clean, bright snap."
+      "sentence": "Leads with toasted, nutty warmth throughout, aromatics blooming from the first bite, with a clean, bright snap."
     },
     "pairingId": 28,
     "films": {
@@ -8076,10 +8094,11 @@
         "durationSec": null
       }
     ],
-    "note": "Skin-on smashed garlic perfumes without burning — naked minced garlic would be charcoal by minute five.",
+    "note": "Skin-on smashed garlic perfumes without burning — naked minced garlic would be charcoal by minute five of the chicken's browning, but whole smashed cloves in their jackets toast gently into sweet confit you squeeze out at the table like treasure. The sherry deglaze is Andalusia in a splash: it lifts the fond and reduces with the chicken's juices into a garlicky glaze rather than a sauce. Small pieces, hard sear, bread on the table — this is Spanish grandmother food with nothing to prove.",
     "equipment": [],
     "techniques": [
-      "Confit"
+      "Confit",
+      "Deglazing & pan sauces"
     ],
     "flavor": {
       "tags": [
@@ -8096,6 +8115,11 @@
         {
           "label": "Technique: Confit",
           "url": "https://www.youtube.com/results?search_query=confit%20technique%20explained",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: Deglazing & pan sauces",
+          "url": "https://www.youtube.com/results?search_query=pan%20sauce%20deglazing%20technique",
           "sub": "The skill inside this recipe"
         }
       ],
@@ -8170,7 +8194,7 @@
         "durationSec": 120
       }
     ],
-    "note": "The béchamel should be almost too thick to stir — it loosens into molten cream inside the crust.",
+    "note": "The béchamel should be almost too thick to stir — it loosens into molten cream inside the crust, which is the entire trick of a croqueta: a sauce impersonating a solid just long enough to be fried. The fifteen minutes of stirring is where the flour taste cooks out. Double-breading builds a wall that holds the lava in, and small batches keep the oil at temperature — a crowded pot cools, and cool oil is how croquetas burst. Jamón scraps are the classic economy; the dish exists to waste nothing.",
     "equipment": [
       "Sheet pan",
       "Deep-fry pot"
@@ -8271,34 +8295,35 @@
         "durationSec": null
       }
     ],
-    "note": "Crème brûlée's older cousin: stovetop, citrus-and-cinnamon, and done in half the time — no oven, no water bath.",
+    "note": "Crème brûlée's older cousin — stovetop, citrus-and-cinnamon, done in half the time with no oven and no water bath, and Catalonia will tell you which came first. Cornstarch is the safety net that lets it thicken over direct flame where the French custard would curdle: first bubble, then straight off the heat. The infusion is the identity — lemon peel, orange peel, cinnamon — so give it its full fifteen minutes. Traditionally burnt with a hot iron on Saint Joseph's Day; a torch carries no penalty.",
     "equipment": [
       "Torch"
     ],
     "techniques": [
+      "Tempering a custard",
       "The brûlée torch",
       "The water bath"
     ],
     "flavor": {
       "tags": [
-        "rich",
         "warm-spiced",
+        "rich",
         "bright",
         "charred"
       ],
-      "sentence": "Leads with richness that coats and comforts, warm spice humming through the middle, with a bitter-edged char at the rim."
+      "sentence": "Leads with warm spice humming through the middle, richness that coats and comforts, with a bitter-edged char at the rim."
     },
     "pairingId": 11,
     "films": {
       "techniques": [
         {
-          "label": "Technique: The brûlée torch",
-          "url": "https://www.youtube.com/results?search_query=creme%20brulee%20torch%20technique",
+          "label": "Technique: Tempering a custard",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20temper%20eggs%20custard%20technique",
           "sub": "The skill inside this recipe"
         },
         {
-          "label": "Technique: The water bath",
-          "url": "https://www.youtube.com/results?search_query=bain%20marie%20water%20bath%20baking%20technique",
+          "label": "Technique: The brûlée torch",
+          "url": "https://www.youtube.com/results?search_query=creme%20brulee%20torch%20technique",
           "sub": "The skill inside this recipe"
         }
       ],
@@ -8376,7 +8401,7 @@
         "durationSec": null
       }
     ],
-    "note": "The tomato juice + oil + vinegar pooling at the bottom is the sauce. Bread goes in it. That's the meal.",
+    "note": "The tomato juice, oil and vinegar pooling at the bottom is the sauce — bread goes in it, and that's the meal; Greeks call the ritual papara and consider the bowl unfinished until it's wiped. No lettuce, ever: horiatiki means 'village-style', and the village didn't grow lettuce for salads. Salting the tomatoes first starts the weeping that builds the pool. The feta rides on top as a slab because crumbling it is how you tell a tourist kitchen from a Greek one.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -8458,7 +8483,7 @@
         "durationSec": null
       }
     ],
-    "note": "Watery tzatziki is a squeezing failure, never a recipe failure.",
+    "note": "Watery tzatziki is a squeezing failure, never a recipe failure — cucumber is 96% water and every gram you don't wring out ends up loosening the yogurt within the hour. Salt the gratings first so osmosis does half the strangling for you. The thirty-minute rest matters because raw grated garlic needs time to mellow and distribute; tzatziki eaten immediately bites, rested it hums. Full-fat yogurt only — this sauce's whole job is richness against char.",
     "equipment": [
       "Grater / zester"
     ],
@@ -8466,11 +8491,11 @@
     "flavor": {
       "tags": [
         "bright",
+        "aromatic",
         "herb-fresh",
-        "briny",
-        "aromatic"
+        "briny"
       ],
-      "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top, opening aromatic and staying there."
+      "sentence": "Leads with acid holding everything up to the light, aromatics blooming from the first bite, ending saline and clean."
     },
     "pairingId": 19,
     "films": {
@@ -8536,7 +8561,7 @@
         "durationSec": null
       }
     ],
-    "note": "Oregano + lemon + char is the entire flavor thesis of the Greek grill. Honey helps the char along.",
+    "note": "Oregano, lemon and char is the entire flavor thesis of the Greek grill, and the honey's job is helping the char along — its sugars caramelize at the corners faster than the meat alone would. Thighs, threaded snugly so they baste each other. Souvlaki is Greece's oldest fast food by an absurd margin: skewer-and-firedog sets survive from Bronze Age Santorini, seventeen centuries before anyone wrote a cookbook. Warm the pita over the same flame; it should smell faintly of the fire.",
     "equipment": [
       "Grill"
     ],
@@ -8544,11 +8569,11 @@
     "flavor": {
       "tags": [
         "charred",
-        "bright",
         "sweet-edged",
+        "bright",
         "briny"
       ],
-      "sentence": "Leads with char used as punctuation, acid holding everything up to the light, ending saline and clean."
+      "sentence": "Leads with char used as punctuation, a sweet edge rounding the corners, ending saline and clean."
     },
     "pairingId": 20,
     "films": {
@@ -8612,7 +8637,7 @@
         "durationSec": 2700
       }
     ],
-    "note": "Moussaka cut hot is soup. The 30-minute rest is written in stone on an island somewhere.",
+    "note": "Moussaka cut hot is soup — the thirty-minute rest is written in stone on an island somewhere, and it's the same physics as lasagne: molten béchamel and juicy ragù need time to set back into layers. The cinnamon stick in the meat is the signature; Greek cooking spices its meats the way others spice desserts, and this is the dish where you learn to stop flinching. Roasting the eggplant instead of frying isn't just lighter — fried eggplant brings oil the béchamel doesn't need.",
     "equipment": [
       "Grater / zester"
     ],
@@ -8712,7 +8737,7 @@
         "durationSec": 2700
       }
     ],
-    "note": "Wet spinach is the enemy of crisp phyllo. Squeeze, then squeeze again, then once more.",
+    "note": "Wet spinach is the enemy of crisp phyllo — squeeze, then squeeze again, then once more, because 500 grams of spinach hides a coffee cup of water and every drop steams the pastry from within. Score the top before baking; afterward the sheets shatter under the knife. Brushing every layer is what builds the shatter — each film of fat fries its sheet in place. The feta-dill-scallion trinity is fixed; the dish forgives nothing missing and needs nothing more.",
     "equipment": [],
     "techniques": [
       "Handling phyllo",
@@ -8720,11 +8745,11 @@
     ],
     "flavor": {
       "tags": [
-        "rich",
         "herb-fresh",
-        "briny"
+        "briny",
+        "rich"
       ],
-      "sentence": "Leads with richness that coats and comforts, fresh herbs arguing happily on top, ending saline and clean."
+      "sentence": "Leads with fresh herbs arguing happily on top, a briny, maritime salinity, on a rich, rounded finish."
     },
     "pairingId": 19,
     "films": {
@@ -8808,9 +8833,10 @@
         "durationSec": null
       }
     ],
-    "note": "Tempering is the technique; the reward is a soup thickened by nothing but egg, lemon, and nerve.",
+    "note": "Tempering is the technique; the reward is a soup thickened by nothing but egg, lemon and nerve. Whisk the hot broth into the eggs one ladle at a time — patience here is the entire recipe — then return it off the heat and never let it boil again, because boiled avgolemono is lemon-scented egg-drop soup. Done right it turns velvet, pale as ivory. The sauce version of the same trick dresses dolmades and artichokes; learn it once, use it across the whole cuisine.",
     "equipment": [],
     "techniques": [
+      "Rolling dolmas",
       "Tempering a custard"
     ],
     "flavor": {
@@ -8823,6 +8849,11 @@
     "pairingId": 30,
     "films": {
       "techniques": [
+        {
+          "label": "Technique: Rolling dolmas",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20roll%20dolmas%20grape%20leaves",
+          "sub": "The skill inside this recipe"
+        },
         {
           "label": "Technique: Tempering a custard",
           "url": "https://www.youtube.com/results?search_query=how%20to%20temper%20eggs%20custard%20technique",
@@ -8895,24 +8926,38 @@
         "durationSec": null
       }
     ],
-    "note": "Greek vegetable dishes use oil as an ingredient, not a coating. Lathera means 'the oily ones' — lean in.",
+    "note": "Greek vegetable dishes use oil as an ingredient, not a coating — lathera means 'the oily ones', and briam leans in with 150ml of it; that oil emulsifies with the grated tomato and vegetable juices into the syrupy pan sauce that IS the dish. The long bake is deliberate collapse: you want blistered edges and vegetables that have surrendered their borders to each other. Room temperature is the serving law, with feta and bread — hot briam hasn't finished becoming itself.",
     "equipment": [
       "Deep-fry pot",
       "Grater / zester"
     ],
-    "techniques": [],
+    "techniques": [
+      "Deglazing & pan sauces",
+      "Building an emulsion"
+    ],
     "flavor": {
       "tags": [
         "briny",
-        "herb-fresh",
         "charred",
+        "herb-fresh",
         "aromatic"
       ],
-      "sentence": "Leads with a briny, maritime salinity, fresh herbs arguing happily on top, opening aromatic and staying there."
+      "sentence": "Leads with a briny, maritime salinity, char used as punctuation, opening aromatic and staying there."
     },
     "pairingId": 2,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Deglazing & pan sauces",
+          "url": "https://www.youtube.com/results?search_query=pan%20sauce%20deglazing%20technique",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: Building an emulsion",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20emulsify%20sauce%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Briam%20recipe",
@@ -8983,7 +9028,7 @@
         "durationSec": null
       }
     ],
-    "note": "Braise-then-roast is the trick: the potatoes drink the lemon first, then crisp in what remains.",
+    "note": "Braise-then-roast is the trick: the potatoes drink the lemon-stock first, going creamy and seasoned to the center, then fry in the oil that remains once the liquid is gone — twenty more minutes for the bronzed, lacquered outside. The half-teaspoon of Dijon is the quiet binder holding lemon and oil together in the pan. Crowding is the failure mode: wedges stacked two-deep steam forever and never reach the frying phase.",
     "equipment": [],
     "techniques": [
       "Braising"
@@ -9076,7 +9121,7 @@
         "durationSec": null
       }
     ],
-    "note": "Mint is what makes them Greek. Skip it and you've made good meatballs from nowhere in particular.",
+    "note": "Mint is what makes them Greek — skip it and you've made good meatballs from nowhere in particular. The milk-soaked bread is a panade, holding moisture through the fry the way breadcrumbs alone can't, and the half-hour chill firms the mix so the balls hold their shape in the oil. Shallow-fried in olive oil to a deep crust, hit with lemon while hot — keftedes are mezze, built to be eaten by the handful an hour later at room temperature, and they're arguably better that way.",
     "equipment": [
       "Deep-fry pot",
       "Grater / zester"
@@ -9084,12 +9129,12 @@
     "techniques": [],
     "flavor": {
       "tags": [
-        "herb-fresh",
         "bright",
+        "herb-fresh",
         "earthy",
-        "warm-spiced"
+        "briny"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, acid holding everything up to the light, fading in warm spice."
+      "sentence": "Leads with acid holding everything up to the light, fresh herbs arguing happily on top, ending saline and clean."
     },
     "pairingId": 27,
     "films": {
@@ -9169,20 +9214,29 @@
         "durationSec": null
       }
     ],
-    "note": "Feta doesn't melt like mozzarella — it softens to a spreadable cloud. That's the texture you want.",
+    "note": "Feta doesn't melt like mozzarella — it softens to a spreadable cloud, and that's the texture you want; brined sheep's-milk cheese holds its structure where stretched-curd cheeses run. Bougiourdi is northern Greek taverna food, Thessaloniki's answer to the question of what to do with feta, a tomato and fifteen minutes. The chili is not optional — the name roughly promises a kick. Attack it molten, with bread; it stiffens as it cools and the moment passes.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Brining & curing"
+    ],
     "flavor": {
       "tags": [
         "briny",
         "gently hot",
+        "rich",
         "charred"
       ],
       "sentence": "Leads with a briny, maritime salinity, a warm current of chile, with a bitter-edged char at the rim."
     },
     "pairingId": 2,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Brining & curing",
+          "url": "https://www.youtube.com/results?search_query=brining%20curing%20meat%20technique%20explained",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Bougiourdi%20(Baked%20Feta)%20recipe",
@@ -10137,7 +10191,7 @@
         "durationSec": null
       }
     ],
-    "note": "Old, sour kimchi is the good stuff for frying — fresh kimchi is for eating cold.",
+    "note": "Old, sour kimchi is the good stuff for frying — fresh kimchi is for eating cold; fermentation past its crisp prime is exactly when the funk and acidity concentrate into something worth caramelizing. Frying it in the pork fat until the edges catch is where the flavor turns. The kimchi juice is the seasoning liquid, not a garnish — three tablespoons of it stain the rice through. Runny yolk on top, scissors on the nori, and Korea's definitive leftovers dish is complete.",
     "equipment": [],
     "techniques": [
       "Fermentation"
@@ -10145,11 +10199,11 @@
     "flavor": {
       "tags": [
         "tangy-ferment",
+        "briny",
         "nutty-toasted",
-        "gently hot",
-        "briny"
+        "gently hot"
       ],
-      "sentence": "Leads with ferment tang with real depth behind it, toasted, nutty warmth throughout, ending saline and clean."
+      "sentence": "Leads with ferment tang with real depth behind it, a briny, maritime salinity, with warmth in the tail."
     },
     "pairingId": 31,
     "films": {
@@ -10231,7 +10285,7 @@
         "durationSec": null
       }
     ],
-    "note": "Grated pear is Korea's ancient meat tenderizer — enzymes plus sweetness in one ingredient.",
+    "note": "Grated pear is Korea's ancient meat tenderizer — enzymes plus sweetness in one ingredient; the calpains in Asian pear soften the shaved beef while its sugar feeds the caramelization. Freeze the beef an hour first: firm meat shaves into the paper-thin slices the marinade needs. Then the crucial pan discipline — thin batches in a blazing pan, because crowded bulgogi boils in its own marinade and arrives gray. 'Fire meat' is the name; earn it.",
     "equipment": [
       "Grater / zester"
     ],
@@ -10239,11 +10293,11 @@
     "flavor": {
       "tags": [
         "umami-deep",
-        "aromatic",
         "sweet-edged",
+        "aromatic",
         "herb-fresh"
       ],
-      "sentence": "Leads with savory depth stacked from the pantry’s bass notes, aromatics blooming from the first bite, lifted green at the very end."
+      "sentence": "Leads with savory depth stacked from the pantry’s bass notes, a sweet edge rounding the corners, lifted green at the very end."
     },
     "pairingId": 16,
     "films": {
@@ -10320,7 +10374,7 @@
         "durationSec": null
       }
     ],
-    "note": "For dolsot-style: rub a hot stone or cast-iron bowl with sesame oil and let the rice crackle into a crust first.",
+    "note": "Season each namul alone — that is the discipline of the dish; vegetables cooked and dressed together taste beige, while separate seasoning keeps every spoke of the color wheel distinct until the moment of destruction. And destruction is the point: bibim means mix, and the arranged bowl is a photograph waiting to be eaten properly. For dolsot-style, rub a hot stone bowl with sesame oil and let the rice crackle into nurungji crust before anything else touches it — the crunch is half the dish's reputation.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -10409,7 +10463,7 @@
         "durationSec": null
       }
     ],
-    "note": "Separate sautéing keeps each color and texture distinct — japchae made in one pan tastes beige.",
+    "note": "Separate sautéing keeps each color and texture distinct — japchae made in one pan tastes beige, because everything shares its water and nothing browns. The dangmyeon are the other half: sweet-potato starch noodles that stay glassy and chewy where wheat noodles would slump, snipped a few times so the dish serves without a wrestling match. Gloved hands are the honest mixing tool. Royal-court food originally — the banquet dish that became everyone's holiday standard.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -10497,9 +10551,11 @@
         "durationSec": null
       }
     ],
-    "note": "The frying step turns sour kimchi's sharpness into depth. Boiled-only jjigae tastes thin.",
+    "note": "The frying step turns sour kimchi's sharpness into depth — boiled-only jjigae tastes thin, because the pork fat and the hard fry mellow the acid into something rounder before the water ever arrives. Then jjigae likes violence: a hard boil, not a polite simmer, is what emulsifies the fat and pastes into the broth's body. Over-the-hill kimchi is the correct kimchi. Tofu slides in last and gently, to arrive at the table as slabs rather than rubble.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Building an emulsion"
+    ],
     "flavor": {
       "tags": [
         "tangy-ferment",
@@ -10511,7 +10567,13 @@
     },
     "pairingId": 31,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Building an emulsion",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20emulsify%20sauce%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "dish": {
         "label": "Maangchi’s tongbaechu kimchi",
         "url": "https://www.youtube.com/watch?v=eTucCw1w6Ak",
@@ -10587,7 +10649,7 @@
         "durationSec": null
       }
     ],
-    "note": "Potato starch + double fry is why KFC (the Korean one) stays crisp under sauce for an hour.",
+    "note": "Potato starch plus the double fry is why Korean fried chicken stays crisp under sauce for an hour — starch crusts fry glassier than flour ones, and the two-stage fry (low to cook, rest, high to crust) drives out the moisture that would soften everything from inside. The thin, drippy batter is intentional: KFC's shell is a shatter, not a bread-crumb coat. Toss in sauce at the last moment, or serve it alongside and let each eater choose their own structural risk.",
     "equipment": [
       "Thermometer",
       "Deep-fry pot"
@@ -10686,7 +10748,7 @@
         "durationSec": null
       }
     ],
-    "note": "Ice water and minimal mixing = crisp. Warm water and enthusiasm = pancake sadness.",
+    "note": "Ice water and minimal mixing equal crisp; warm water and enthusiasm equal pancake sadness — cold suppresses gluten development, and lumps in the batter are a feature. The scallions aren't in the pancake, they ARE the pancake: laid like lumber and merely held together by batter. Press, don't flood. The classic pairing is pajeon and makgeolli on a rainy day — Koreans will tell you the sizzle of the pan sounds like rain, and the tradition is older than the explanation.",
     "equipment": [],
     "techniques": [],
     "flavor": {
@@ -10771,21 +10833,29 @@
         "durationSec": null
       }
     ],
-    "note": "The dish is done when the sauce clings — watery tteokbokki just means three more minutes of patience.",
+    "note": "The dish is done when the sauce clings — watery tteokbokki just means three more minutes of patience, because the rice cakes are shedding starch the whole time and the reduction finishes the job on its own schedule. Keep stirring the bottom; tteok weld themselves to a neglected pot. Anchovy stock under the gochujang is the street-cart depth most home versions miss. Royal-court tteokbokki was once a soy-braised dish; the fire-red version conquered Korea from Seoul's snack stalls in the 1950s.",
     "equipment": [],
-    "techniques": [],
+    "techniques": [
+      "Braising"
+    ],
     "flavor": {
       "tags": [
+        "umami-deep",
         "herb-fresh",
         "fiery",
-        "umami-deep",
         "nutty-toasted"
       ],
-      "sentence": "Leads with fresh herbs arguing happily on top, real fire that builds and stays, closing toasted and warm."
+      "sentence": "Leads with savory depth stacked from the pantry’s bass notes, fresh herbs arguing happily on top, closing toasted and warm."
     },
     "pairingId": 31,
     "films": {
-      "techniques": [],
+      "techniques": [
+        {
+          "label": "Technique: Braising",
+          "url": "https://www.youtube.com/results?search_query=braising%20technique%20explained",
+          "sub": "The skill inside this recipe"
+        }
+      ],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Tteokbokki%20recipe",
@@ -10852,7 +10922,7 @@
         "durationSec": null
       }
     ],
-    "note": "Flanken cut means each slice owns three little bone medallions — the meat nearest them is the prize.",
+    "note": "Flanken cut means each slice owns three little bone medallions — and the meat nearest them is the prize, richer and chewier where it worked against the bone. The cut is named for Los Angeles, where Korean immigrant butchers ran short ribs through the bandsaw crosswise and invented a faster galbi that Korea then imported back. Rinse off the bone dust, marinate long, grill violently short: thin meat plus high flame is the whole timing model.",
     "equipment": [
       "Grill",
       "Grater / zester"
@@ -10942,7 +11012,7 @@
         "durationSec": null
       }
     ],
-    "note": "Doenjang is Korea's miso but louder — funkier, chunkier, and it can take a real boil, unlike miso.",
+    "note": "Doenjang is Korea's miso but louder — funkier, chunkier, and it can take a real boil, unlike miso, whose delicacy dies at a simmer; that ruggedness is why this stew is Korea's daily default dinner, bubbling volcanic at the center of the table. Potato goes in first because it needs the head start. The anchovy-kelp stock underneath is quiet infrastructure — water works, but the stock is the difference between weeknight and someone's-grandmother.",
     "equipment": [],
     "techniques": [
       "Fermentation"
