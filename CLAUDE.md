@@ -96,6 +96,22 @@ render function by name, stop.
   corrupts every lookup if its options drift from what the index was serialized
   with — never fork them.
 
+## The Family Chapter — how user recipes work
+
+Family recipes carry the full Recipe shape (summary + detail in one object) and
+live in IndexedDB, never in the static data. Consequences worth knowing:
+
+- Their pages are `/family/[slug]` with `ssr = false` — there is nothing to
+  prerender and no server holding their data. Do NOT move family fallback into
+  the prerendered `/recipe/[slug]` route: its server-side 404 fires before any
+  browser-only lookup can run (this was tried; it broke direct loads in dev).
+- `recipeHref()` in data.ts is the only place that knows about the URL split.
+  Generate recipe links through it, never by hand.
+- `familySlug()` in authoring.ts refuses collisions with guide slugs so that
+  slug-keyed menu/notes resolution can never grab the wrong dish.
+- They are not in the static search index; under a query the browser matches
+  them by the substring predicate and appends them after ranked results.
+
 ## Known remaining work
 
 - **Content backfill**: 320 of 970 "from the pass" notes are under 180 chars;
@@ -104,5 +120,9 @@ render function by name, stop.
   authoring, not engineering. `noteChars` is on every record.
 - **Runtime offline** is unverified — the embedded dev browser never installs a
   service worker. Needs a check in a real browser.
-- Cook mode, the quiz, family-recipe entry, and the printable guest menu from
-  the original are not ported yet.
+- **GitHub Pages fallback**: adapter-static emits `200.html`; GH Pages serves
+  `404.html` for unknown paths. On deploy, copy 200.html to 404.html so direct
+  loads of client-only routes (family pages) work before the SW installs.
+- **Hardening sweep** (Phase 12): Playwright regression suite named for the
+  original's line numbers, data-parity harness against reference/, axe-core,
+  print PDFs.
