@@ -5,7 +5,8 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import { chapters, recipes } from '$lib/data';
-	import { applyFilters, effectiveMonth } from '$lib/filter';
+	import { applyFilters, matches, effectiveMonth } from '$lib/filter';
+	import { ensureSearch, searchIds } from '$lib/search';
 	import { filtersFromURL, filtersToSearch, EMPTY_FILTERS } from '$lib/urlState';
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import type { ChapterRef } from '$lib/types';
@@ -37,18 +38,50 @@
 	});
 
 	const active = $derived(chapter?.slug ?? null);
-	const effective = $derived({ ...filters, chapter: active });
-
 	const month = $derived(effectiveMonth(prefs.hemisphere));
-	const results = $derived(applyFilters(recipes, effective, month));
 
-	// Live per-chapter counts so the rail reflects the active filters rather
-	// than always showing the full corpus totals.
+	// The real index loads on the first keystroke; until it lands, the substring
+	// fallback in matches() keeps the input alive.
+	let searchReady = $state(false);
+	$effect(() => {
+		if (browser && filters.q.trim() && !searchReady) {
+			void ensureSearch().then(() => (searchReady = true));
+		}
+	});
+
+	/**
+	 * Everything matching the filters EXCEPT the chapter, computed once. The
+	 * grid narrows it by chapter; the rail counts group it by chapter. Deriving
+	 * both from one list means they cannot disagree — with two separate
+	 * applyFilters passes, a search path used by one and not the other would
+	 * show a rail count that doesn't match the grid.
+	 *
+	 * With a query and a ready index: tokenized, relevance-ordered, and
+	 * ingredient-aware — "lemongrass" finds Tom Yum by its ingredients, and
+	 * "ragu" no longer matches asparagus by substring accident.
+	 */
+	const matchedAll = $derived.by(() => {
+		const rest = { ...filters, chapter: null };
+		const q = filters.q.trim();
+		if (q && searchReady) {
+			const ids = searchIds(q);
+			if (ids) {
+				const noQ = { ...rest, q: '' };
+				return ids
+					.map((i) => recipes[i])
+					.filter((r) => r && matches(r, noQ, month));
+			}
+		}
+		return applyFilters(recipes, rest, month);
+	});
+
+	const results = $derived(
+		active ? matchedAll.filter((r) => r.chapterSlug === active) : matchedAll
+	);
+
 	const railCounts = $derived.by(() => {
 		const m = new Map<string, number>();
-		for (const r of applyFilters(recipes, { ...filters, chapter: null }, month)) {
-			m.set(r.chapterSlug, (m.get(r.chapterSlug) ?? 0) + 1);
-		}
+		for (const r of matchedAll) m.set(r.chapterSlug, (m.get(r.chapterSlug) ?? 0) + 1);
 		return m;
 	});
 

@@ -28,6 +28,8 @@ import { derivePairing } from './derive/pairing.mjs';
 import { deriveTechniques, deriveFilms } from './derive/films.mjs';
 import { buildCrosslinks } from './derive/crosslinks.mjs';
 import { derivePantryMap } from './derive/pantry.mjs';
+import MiniSearch from 'minisearch';
+import { miniOptions } from '../src/lib/search-config.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW = join(ROOT, 'src', 'lib', 'data', 'raw');
@@ -262,6 +264,33 @@ write('pantry.json', pantry);
 write('study.json', study);
 write('substitutions.json', substitutions);
 write('cellar.json', cellar);
+
+/**
+ * The search index, prebuilt so the browser never pays tokenization cost.
+ *
+ * Fields mirror the ORIGINAL's search surface — name + ingredients (RTEXT,
+ * L2746) — plus chapter and flavor tags. The grid's substring fallback covers
+ * only name/chapter/tags, which is how "lemongrass" went from 13 hits to 1
+ * until this index existed. Document ids are positions in the recipes array.
+ *
+ * Written compact, not pretty-printed: it is a machine artifact ~10x the size
+ * of any other data file, and nobody reviews a posting list by eye.
+ */
+const mini = new MiniSearch(miniOptions);
+mini.addAll(
+	R.map((r, i) => ({
+		id: i,
+		name: r.n,
+		chapter: r.c,
+		ingredients: r.i.join(' '),
+		flavor: index[i].flavorTags.join(' ')
+	}))
+);
+{
+	const json = JSON.stringify(mini);
+	writeFileSync(join(OUT, 'search-index.json'), json + '\n', 'utf8');
+	console.log(`  ${'search-index.json'.padEnd(24)} ${'970'.padStart(5)}  ${(json.length / 1024).toFixed(0).padStart(6)} KB`);
+}
 
 // ── gates ────────────────────────────────────────────────────────────────────
 const problems = [];

@@ -2,10 +2,7 @@
  * Schema migrations. Append-only: never edit a migration that has shipped, or
  * you change the meaning of data already sitting on someone's disk.
  */
-import type { SessionState } from './db';
-import { EMPTY_SESSION } from './db';
-
-export const CURRENT_VERSION = 1;
+import { CURRENT_VERSION, EMPTY_SESSION, type SessionState } from './state';
 
 type Migration = (state: Record<string, unknown>) => Record<string, unknown>;
 

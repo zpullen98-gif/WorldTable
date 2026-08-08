@@ -44,8 +44,8 @@
 								<button
 									class="mark"
 									aria-pressed={cooked.has(slug)}
-									onclick={() => !cooked.has(slug) && session.markCooked(slug)}
-									title={cooked.has(slug) ? 'Cooked' : 'Mark as cooked'}
+									onclick={() => session.toggleCooked(slug)}
+									title={cooked.has(slug) ? 'Cooked — tap to unmark' : 'Mark as cooked'}
 								>
 									{cooked.has(slug) ? '✓' : '○'}
 								</button>

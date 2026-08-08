@@ -59,12 +59,20 @@ export function parseImport(text: string): PortableFile {
 	return f as PortableFile;
 }
 
-/** What an import would change, shown before anything is written. */
-export function describeImport(incoming: SessionState, current: SessionState) {
-	const newPins = incoming.menu.filter((s) => !current.menu.includes(s)).length;
-	const newNotes = Object.keys(incoming.notes ?? {}).filter((k) => !(k in current.notes)).length;
-	const overwritten = Object.keys(incoming.notes ?? {}).filter(
-		(k) => k in current.notes && current.notes[k] !== incoming.notes[k]
+/**
+ * What an import would change, shown before anything is written.
+ *
+ * Every field is guarded: `incoming` is whatever a user's file claimed to be,
+ * and a hand-edited .wtjson missing `menu` must produce a summary, not a crash
+ * before the summary.
+ */
+export function describeImport(incoming: Partial<SessionState>, current: SessionState) {
+	const inMenu = incoming.menu ?? [];
+	const inNotes = incoming.notes ?? {};
+	const newPins = inMenu.filter((s) => !current.menu.includes(s)).length;
+	const newNotes = Object.keys(inNotes).filter((k) => !(k in current.notes)).length;
+	const overwritten = Object.keys(inNotes).filter(
+		(k) => k in current.notes && current.notes[k] !== inNotes[k]
 	).length;
 	const newPantry = (incoming.pantry ?? []).filter((l) => !current.pantry.includes(l)).length;
 	const newFamily = (incoming.familyRecipes ?? []).filter(

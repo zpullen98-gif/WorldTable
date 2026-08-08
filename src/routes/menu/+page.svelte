@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { bySlug, formatTime, TOTALS } from '$lib/data';
+	import { bySlug, formatTime, recipes, TOTALS } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
 	import { buildExport, download, parseImport, describeImport } from '$lib/persistence/portable';
 	import Ornament from '$lib/components/Ornament.svelte';
@@ -97,14 +97,44 @@
 		const file = (e.target as HTMLInputElement).files?.[0];
 		if (!file) return;
 		try {
-			const parsed = parseImport(await file.text());
+			const text = await file.text();
+
+			if (text.trim().startsWith('WT1.')) {
+				// A session code from the ORIGINAL app, saved to a text file. Its
+				// menu and notes are keyed by array index, so the importer resolves
+				// them against recipe order and names what it cannot place instead
+				// of dropping it silently.
+				const [{ importLegacyCode }, { loadPantry }] = await Promise.all([
+					import('$lib/persistence/migrations'),
+					import('$lib/data')
+				]);
+				const pantryLabels = new Set(
+					(await loadPantry()).flatMap((g) => g.items.map((it) => it.label))
+				);
+				const { state, unresolved } = importLegacyCode(
+					text,
+					recipes.map((r) => r.slug),
+					pantryLabels
+				);
+				const summary = describeImport(state, session.snapshot());
+				session.merge(state);
+				importMsg =
+					`Imported from the original edition — ${summary}.` +
+					(unresolved.length
+						? ` Could not place ${unresolved.length}: ${unresolved.slice(0, 3).join(', ')}${unresolved.length > 3 ? '…' : ''}`
+						: '');
+				return;
+			}
+
+			const parsed = parseImport(text);
 			const summary = describeImport(parsed.data, session.snapshot());
 			session.merge(parsed.data);
 			importMsg = `Imported — ${summary}.`;
 		} catch (err) {
 			importMsg = err instanceof Error ? err.message : 'That file could not be read.';
+		} finally {
+			if (fileInput) fileInput.value = '';
 		}
-		if (fileInput) fileInput.value = '';
 	}
 </script>
 
@@ -127,7 +157,7 @@
 		<input
 			bind:this={fileInput}
 			type="file"
-			accept=".wtjson,application/json"
+			accept=".wtjson,.txt,application/json,text/plain"
 			onchange={doImport}
 			hidden
 		/>

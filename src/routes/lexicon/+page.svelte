@@ -30,22 +30,28 @@
 		});
 	});
 
-	/* ---- flashcards ---- */
-	let deck = $state<number[]>([]);
+	/* ---- flashcards ----
+	 * The deck snapshots the ENTRIES, not indices into `shown`. `shown` is a
+	 * live derivation over the search box — with indices, shuffling and then
+	 * typing a character makes every index dangle or point at the wrong term.
+	 * A snapshot also matches how study decks behave physically: narrowing the
+	 * search mid-drill shouldn't reshuffle the cards in your hand.
+	 */
+	let deck = $state<typeof data.lexicon>([]);
 	let pos = $state(0);
 	let revealed = $state(false);
 
 	function shuffle() {
-		const idx = shown.map((_, i) => i);
-		for (let i = idx.length - 1; i > 0; i--) {
+		const cards = [...shown];
+		for (let i = cards.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
-			[idx[i], idx[j]] = [idx[j], idx[i]];
+			[cards[i], cards[j]] = [cards[j], cards[i]];
 		}
-		deck = idx;
+		deck = cards;
 		pos = 0;
 		revealed = false;
 	}
-	const card = $derived(deck.length ? shown[deck[pos % deck.length]] : null);
+	const card = $derived(deck.length ? deck[pos % deck.length] : null);
 </script>
 
 <svelte:head><title>The Chef’s Lexicon — The World Table</title></svelte:head>

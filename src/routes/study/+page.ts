@@ -1,6 +1,5 @@
 import { loadStudy, loadLexicon } from '$lib/data';
 import filmsJson from '$lib/data/raw/F.json';
-import teachersJson from '$lib/data/raw/TEACHERS.json';
 
 export const prerender = true;
 
@@ -34,7 +33,6 @@ export async function load() {
 	return {
 		study,
 		termName: Object.fromEntries(lexicon.map((e) => [e.slug, e.term])),
-		films,
-		teacherCount: Object.keys(teachersJson).length
+		films
 	};
 }

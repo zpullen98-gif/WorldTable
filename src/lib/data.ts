@@ -87,10 +87,13 @@ export async function loadCellar(): Promise<CellarBottle[]> {
 
 /* ---- formatting ------------------------------------------------------ */
 
-/** "45 min" / "2 h 30" — ported from the original's fmtTime (L1847). */
+/**
+ * "75 min" / "2 h" / "2 h 30 m" — ported exactly from fmtTime (L1847).
+ * The 90-minute threshold is deliberate: "75 min" scans faster on a card than
+ * "1 h 15 m", and the original got that right.
+ */
 export function formatTime(minutes: number): string {
-	if (minutes < 60) return `${minutes} min`;
-	const h = Math.floor(minutes / 60);
-	const m = minutes % 60;
-	return m ? `${h} h ${m}` : `${h} h`;
+	if (minutes < 90) return `${minutes} min`;
+	if (minutes % 60 === 0) return `${minutes / 60} h`;
+	return `${Math.floor(minutes / 60)} h ${minutes % 60} m`;
 }

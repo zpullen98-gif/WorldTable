@@ -134,6 +134,16 @@ class SessionStore {
 		this.#persist();
 	}
 
+	/** A mis-tap at the stove should be one more tap to undo. */
+	toggleCooked(slug: string) {
+		if (this.hasCooked(slug)) {
+			this.#s.cookedLog = this.#s.cookedLog.filter((e) => e.slug !== slug);
+			this.#persist();
+		} else {
+			this.markCooked(slug);
+		}
+	}
+
 	/* ---- family recipes ------------------------------------------------ */
 
 	get familyRecipes(): Recipe[] {

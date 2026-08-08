@@ -15,34 +15,14 @@
  */
 import { get, set, del, createStore } from 'idb-keyval';
 import { browser } from '$app/environment';
-import type { Recipe } from '../types';
-import { CURRENT_VERSION, migrate } from './migrations';
+import { EMPTY_SESSION, type SessionState } from './state';
+import { migrate } from './migrations';
+
+// Re-exported so existing consumers keep one import site.
+export { EMPTY_SESSION, CURRENT_VERSION } from './state';
+export type { SessionState } from './state';
 
 const store = browser ? createStore('world-table', 'state') : undefined;
-
-export interface SessionState {
-	schemaVersion: number;
-	/** Recipe slugs — never array indices. See the note below. */
-	menu: string[];
-	notes: Record<string, string>;
-	pantry: string[];
-	/** menuHash -> checked shopping-list line ids */
-	shoppingChecks: Record<string, string[]>;
-	cookedLog: Array<{ slug: string; at: number }>;
-	familyRecipes: Recipe[];
-	lastWrite: number;
-}
-
-export const EMPTY_SESSION: SessionState = {
-	schemaVersion: CURRENT_VERSION,
-	menu: [],
-	notes: {},
-	pantry: [],
-	shoppingChecks: {},
-	cookedLog: [],
-	familyRecipes: [],
-	lastWrite: 0
-};
 
 const KEY = 'session';
 
