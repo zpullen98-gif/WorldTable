@@ -27,10 +27,26 @@ export function ensureSearch(): Promise<void> {
 }
 
 /**
- * Relevance-ordered positions into the recipes array, or null while the index
- * is still on its way (caller falls back to the substring scan).
+ * Relevance-ordered positions into the recipes array, or null when the index
+ * cannot answer this query — the caller's signal to fall back to the substring
+ * scan. Null means "ask someone else"; [] means "asked, and there are none".
+ *
+ * The distinction is the whole point. processTerm drops single-character terms,
+ * so the index answers "c" with an empty ARRAY — and `if (ids)` in the caller
+ * is true for [], so the fallback was skipped and the grid rendered "Nothing on
+ * the pass" over a 970-recipe corpus on the first keystroke of every search.
+ * Checking `q.length > 1` here would not be equivalent: "a b" is two characters
+ * and still tokenizes to nothing.
  */
 export function searchIds(q: string): number[] | null {
 	if (!instance) return null;
+
+	// Ask the shared options whether any term survives tokenizing — never
+	// reimplement the rule, or this drifts from the index the way loadJS can.
+	const tokenize = miniOptions.tokenize ?? ((s: string) => s.split(/[\n\r\p{Z}\p{P}]+/u));
+	const process = miniOptions.processTerm ?? ((t: string) => t);
+	const answerable = tokenize(q, 'text').some((t: string) => Boolean(process(t, 'text')));
+	if (!answerable) return null;
+
 	return instance.search(q).map((r) => r.id as number);
 }

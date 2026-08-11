@@ -44,6 +44,23 @@ describe('search index semantics', () => {
 	});
 
 	/**
+	 * A query the index cannot answer must be distinguishable from a query it
+	 * answered with nothing.
+	 *
+	 * processTerm drops single-character terms, so MiniSearch returns [] for
+	 * "c" — and `if (ids)` is true for an empty array, so the grid's substring
+	 * fallback was skipped and "Nothing on the pass" rendered over 970 recipes
+	 * on the first keystroke of every search. Note "a b": two characters, still
+	 * nothing survives tokenizing, which is why a length check is not the fix.
+	 */
+	it('an unanswerable query is empty, and the caller can tell', () => {
+		expect(ids(mini, 'c')).toHaveLength(0);
+		expect(ids(mini, 'a b')).toHaveLength(0);
+		// And a real query is unaffected.
+		expect(ids(mini, 'ragu').length).toBeGreaterThan(0);
+	});
+
+	/**
 	 * The technique field, added with the technique pages. A dish that
 	 * demonstrates a skill must be findable by that skill's name from the main
 	 * search box — the word appears nowhere in its name or ingredients.

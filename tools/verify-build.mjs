@@ -178,10 +178,32 @@ check('precache holds no prerendered HTML', () => {
 	return 'none — navigateFallback reconstructs them';
 });
 
-check('offline navigation fallback wired', () => {
-	assert(/shell\.html/.test(sw), 'no shell.html fallback in sw.js');
+/**
+ * The check this replaced was `/shell\.html/.test(sw)` — which passes whether
+ * the fallback reads 'shell.html' or '/shell.html', and the difference between
+ * those two strings was the entire offline story on the deployed origin. A
+ * substring test cannot see a resolution bug; resolve it the way Workbox does.
+ */
+check('offline navigation fallback resolves to a precached URL', () => {
 	assert(existsSync(join(BUILD, 'shell.html')), 'shell.html not emitted');
-	return 'shell.html';
+
+	const m = sw.match(/createHandlerBoundToURL\(\s*["']([^"']+)["']\s*\)/);
+	assert(m, 'no createHandlerBoundToURL(...) in sw.js — navigateFallback is not wired at all');
+	const fallback = m[1];
+
+	// Workbox resolves the fallback AND every precache key against the service
+	// worker's own location. Reproduce that, at the base this build targets.
+	const swUrl = new URL(`https://example.test${BASE}/sw.js`);
+	const resolved = new URL(fallback, swUrl).href;
+	const precachedUrls = precached.map((u) => new URL(u, swUrl).href);
+
+	assert(
+		precachedUrls.includes(resolved),
+		`navigateFallback ${JSON.stringify(fallback)} resolves to ${resolved}, which is NOT in the ` +
+			`precache — createHandlerBoundToURL throws non-precached-url and the NavigationRoute ` +
+			`never registers, so the app has no offline navigation`
+	);
+	return `${fallback} -> ${resolved.replace('https://example.test', '')}`;
 });
 
 check('precache stays under 2 MB gzipped', () => {

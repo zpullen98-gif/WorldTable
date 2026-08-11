@@ -35,3 +35,53 @@ export const EMPTY_SESSION: SessionState = {
 	familyRecipes: [],
 	lastWrite: 0
 };
+
+/**
+ * Reconcile an imported session over the live one, field by field.
+ *
+ * Lives here as a pure function rather than inside the store because the store
+ * is a .svelte.ts runes module that a unit test cannot reach — and this is
+ * exactly the code that most needed a test. It shipped reconciling four of the
+ * six data fields: `cookedLog` and `shoppingChecks` fell through a bare
+ * `...incoming` spread, and since buildExport writes the FULL state, a genuine
+ * export always carries them present-and-empty. Importing a friend's menu
+ * therefore erased your entire Path of Study progress and every shopping tick,
+ * irrecoverably, with the confirmation banner reporting only what it gained.
+ *
+ * The rule: every field is named explicitly. Nothing is left to the spread.
+ */
+export function mergeSessions(
+	current: SessionState,
+	incoming: Partial<SessionState>
+): SessionState {
+	const cooked = new Map(current.cookedLog.map((e) => [e.slug, e]));
+	for (const e of incoming.cookedLog ?? []) {
+		// Union by slug, keeping the earliest time a dish was ever cooked.
+		const seen = cooked.get(e.slug);
+		if (!seen || e.at < seen.at) cooked.set(e.slug, e);
+	}
+
+	const shoppingChecks: SessionState['shoppingChecks'] = { ...current.shoppingChecks };
+	for (const [hash, lines] of Object.entries(incoming.shoppingChecks ?? {})) {
+		shoppingChecks[hash] = [...new Set([...(shoppingChecks[hash] ?? []), ...lines])];
+	}
+
+	return {
+		...current,
+		...incoming,
+		menu: [...new Set([...current.menu, ...(incoming.menu ?? [])])],
+		notes: { ...current.notes, ...(incoming.notes ?? {}) },
+		pantry: [...new Set([...current.pantry, ...(incoming.pantry ?? [])])],
+		shoppingChecks,
+		cookedLog: [...cooked.values()].sort((a, b) => a.at - b.at),
+		familyRecipes: [
+			...current.familyRecipes,
+			...(incoming.familyRecipes ?? []).filter(
+				(r) => !current.familyRecipes.some((e) => e.slug === r.slug)
+			)
+		],
+		// After the spread, never before: a hand-edited file must not be able to
+		// walk the schema marker backwards and re-trigger a migration.
+		schemaVersion: current.schemaVersion
+	};
+}

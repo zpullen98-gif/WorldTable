@@ -12,6 +12,7 @@
 import { browser } from '$app/environment';
 import type { Recipe, RecipeSummary } from '../types';
 import { EMPTY_SESSION, loadSession, saveSession, debounce, type SessionState } from '../persistence/db';
+import { mergeSessions } from '../persistence/state';
 
 class SessionStore {
 	#s = $state<SessionState>(structuredClone(EMPTY_SESSION));
@@ -188,20 +189,13 @@ class SessionStore {
 		this.#persist.flush();
 	}
 
+	/**
+	 * Merge an imported .wtjson over the live session. The reconciliation itself
+	 * is mergeSessions() in persistence/state.ts — a pure function so that a
+	 * unit test can reach it, which is what this code most needed.
+	 */
 	merge(incoming: Partial<SessionState>) {
-		this.#s = {
-			...this.#s,
-			...incoming,
-			menu: [...new Set([...this.#s.menu, ...(incoming.menu ?? [])])],
-			notes: { ...this.#s.notes, ...(incoming.notes ?? {}) },
-			pantry: [...new Set([...this.#s.pantry, ...(incoming.pantry ?? [])])],
-			familyRecipes: [
-				...this.#s.familyRecipes,
-				...(incoming.familyRecipes ?? []).filter(
-					(r) => !this.#s.familyRecipes.some((e) => e.slug === r.slug)
-				)
-			]
-		};
+		this.#s = mergeSessions(this.#s, incoming);
 		this.#persist.flush();
 	}
 }

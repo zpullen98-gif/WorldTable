@@ -56,7 +56,9 @@ const FISH = [
 	// Freshwater and regional names the US-state chapters lean on heavily.
 	'walleye', 'whitefish', 'rockfish', 'striped bass', 'perch', 'pike',
 	'bluefish', 'redfish', 'flounder', 'fluke', 'porgy', 'shad', 'smelt',
-	'lake trout', 'char', 'sturgeon', 'tilefish', 'wahoo', 'opah', 'escolar',
+	// 'arctic char', never bare 'char' — that flagged char siu pork and
+	// char kway teow as containing fish.
+	'lake trout', 'arctic char', 'lake char', 'sturgeon', 'tilefish', 'wahoo', 'opah', 'escolar',
 	'skate', 'ray', 'bass', 'crappie', 'bluegill', 'menhaden'
 ];
 
@@ -87,6 +89,12 @@ const GLUTEN = [
 	'flour', 'bread', 'breadcrumbs', 'panko', 'pasta', 'spaghetti', 'noodle',
 	'noodles', 'tagliatelle', 'linguine', 'penne', 'rigatoni', 'orzo', 'couscous',
 	'semolina', 'farro', 'barley', 'bulgur', 'seitan', 'soy sauce', 'wheat',
+	// Bare 'soy' as an ingredient means soy sauce, which is wheat-brewed. The
+	// corpus writes "4 tbsp soy" far more often than "soy sauce" — 27 recipes
+	// shipped containsGluten:false over an ingredient line naming it, and an
+	// empty allergen list renders no "Contains" block at all, which reads as
+	// "no allergens" rather than "we don't know". Whole soybeans are excepted.
+	'soy', 'hoisin', 'kecap manis', 'gochujang', 'teriyaki', 'miso',
 	'tortilla', 'pita', 'baguette', 'brioche', 'phyllo', 'filo', 'puff pastry',
 	'pastry', 'cracker', 'crackers', 'beer', 'udon', 'ramen', 'somen', 'lasagne',
 	'lasagna', 'gnocchi', 'dumpling wrappers', 'wonton', 'pierogi', 'roux',
@@ -119,6 +127,8 @@ const EXCEPTIONS = [
 	// dairy-shaped, not dairy
 	'coconut milk', 'coconut cream', 'almond milk', 'soy milk', 'oat milk',
 	'rice milk', 'cashew cream', 'peanut butter', 'almond butter', 'cocoa butter',
+	// soy-shaped, not soy sauce — the bean itself carries no wheat
+	'soybean', 'soybeans', 'soy bean', 'edamame', 'soy lecithin',
 	'shea butter', 'apple butter', 'nut butter', 'tahini butter', 'butter lettuce',
 	'butter bean', 'butter beans', 'buttercup', 'butternut', 'butterfly',
 	'buttermilk substitute', 'cream of tartar', 'creamed corn', 'ice cream machine',
@@ -139,7 +149,7 @@ const EXCEPTIONS = [
 	'eggplant', 'eggplants', 'egg noodles'
 ];
 
-const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const escape = (/** @type {string} */ s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 /**
  * Word-boundary matcher, tolerant of accents and of a trailing plural.
@@ -149,10 +159,11 @@ const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
  * exactly how Steamed Blue Crabs and the Seattle Dog were being reported as
  * vegetarian.
  */
+/** @param {string[]} words */
 function makeMatcher(words) {
 	const alts = words
 		.slice()
-		.sort((a, b) => b.length - a.length)
+		.sort((/** @type {string} */ a, /** @type {string} */ b) => b.length - a.length)
 		.map(escape)
 		.join('|');
 	return new RegExp(`(?<![\\p{L}])(?:${alts})(?:e?s)?(?![\\p{L}])`, 'iu');
@@ -173,6 +184,7 @@ const RE = {
 const EXCEPTION_RE = makeMatcher(EXCEPTIONS);
 
 /** Blank out known-safe phrases before testing, so their substrings can't fire. */
+/** @param {string} text */
 function scrub(text) {
 	return text.replace(new RegExp(EXCEPTION_RE.source, 'giu'), ' ');
 }
@@ -198,6 +210,7 @@ const VEG_ALTERNATIVE =
 const OPTIONAL_MARKER =
 	/^\s*(?:optional|fillings?|to serve|for serving|garnish|serve with|toppings?)\b|\boptional\b|\bto serve\b|\bfor serving\b/i;
 
+/** @param {string} line */
 function lineIsEscaped(line) {
 	// "Smoked salmon to serve", "Fillings: umeboshi, tuna-mayo, salmon flakes" —
 	// genuinely additive, the dish stands without them.
@@ -225,7 +238,7 @@ function lineIsEscaped(line) {
 	// as binding beef.
 	const segments = line.split(/\bor\b/i);
 	if (segments.length > 1) {
-		const escapes = segments.some((seg) => {
+		const escapes = segments.some((/** @type {string} */ seg) => {
 			const lowered = seg.toLowerCase();
 			const scrubbed = scrub(lowered);
 			if (RE.meat.test(scrubbed) || RE.fish.test(scrubbed) || RE.shellfish.test(scrubbed))
@@ -238,11 +251,15 @@ function lineIsEscaped(line) {
 	// "2 tbsp dashi (kombu dashi keeps it vegetarian)" — a parenthetical that
 	// names a vegetarian route is a stated alternative, same as an "or".
 	const parentheticals = line.match(/\(([^)]*)\)/g) ?? [];
-	if (parentheticals.some((p) => /\bveg(?:an|etarians?)?\b/i.test(p))) return true;
+	if (parentheticals.some((/** @type {string} */ p) => /\bveg(?:an|etarians?)?\b/i.test(p))) return true;
 
 	return false;
 }
 
+/**
+ * @param {{ n: string, i: string[], v?: number|boolean }} r
+ * @param {string} [_fullBlob]
+ */
 export function deriveDiet(r, _fullBlob) {
 	// Ingredients + name only. Method prose and the "from the pass" note are
 	// commentary — a note saying a dish is "usually served with lamb" must not
@@ -255,14 +272,27 @@ export function deriveDiet(r, _fullBlob) {
 	const binding = lines.filter((l) => !lineIsEscaped(l)).map((l) => scrub(l.toLowerCase()));
 	const all = lines.map((l) => scrub(l.toLowerCase()));
 
-	const anyBinding = (re) => binding.some((l) => re.test(l));
-	const anyLine = (re) => all.some((l) => re.test(l));
+	const anyBinding = (/** @type {RegExp} */ re) => binding.some((l) => re.test(l));
+	const anyLine = (/** @type {RegExp} */ re) => all.some((l) => re.test(l));
 
 	const containsMeat = anyBinding(RE.meat);
 	const containsFish = anyBinding(RE.fish);
 	const containsShellfish = anyBinding(RE.shellfish);
-	const containsDairy = anyBinding(RE.dairy);
-	const containsEgg = anyBinding(RE.egg);
+	/**
+	 * Dairy and egg are ALLERGENS, so they follow the allergen policy stated at
+	 * the bottom of this function — reported from all lines — not the vegetarian
+	 * `binding` policy.
+	 *
+	 * They used to read from `binding`, and the escape rule that produces it
+	 * only disqualifies a segment carrying meat/fish/shellfish. VEG_ALTERNATIVE
+	 * contains butter|cream|cheese|egg, so a dairy line licensed its OWN escape:
+	 * panna cotta shipped `vegan: true, containsDairy: false` above an
+	 * ingredient list reading "500ml cream + 150ml milk", and rendered no
+	 * "Contains" block at all. 32 of 124 vegan-flagged recipes named dairy or
+	 * egg in their own ingredients.
+	 */
+	const containsDairy = anyLine(RE.dairy);
+	const containsEgg = anyLine(RE.egg);
 
 	/**
 	 * Derived, literal, safety-first: no animal product in any binding position.

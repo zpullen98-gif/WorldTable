@@ -7,11 +7,16 @@ import AxeBuilder from '@axe-core/playwright';
  * is the bar; moderate/minor are reported in the failure output when the bar
  * is missed, so the fix starts from a list rather than a hunt.
  *
- * Readiness is `html[data-hydrated]` (via goto), never networkidle. Nine axe
- * runs racing five-wide against one static server meant "no request for 500ms"
- * could be delayed arbitrarily; axe would then be injected into a page being
- * torn down and die with "Unexpected end of JSON input" — a red suite that
- * said nothing about accessibility. Hydration is the signal this app actually
+ * Two things keep this suite honest under load. resultTypes:['violations'] stops
+ * axe returning a `passes` entry for every node it checked — on the 970-card
+ * grid that payload is enormous, and serialising it across CDP under five-way
+ * parallel load truncated the response, surfacing as axe dying with
+ * "Unexpected end of JSON input": a red suite that said nothing about
+ * accessibility. We only ever read `violations`.
+ *
+ * And readiness is `html[data-hydrated]` (via goto), never networkidle: with
+ * eleven axe runs racing five-wide against one static server, "no request for
+ * 500ms" can be delayed arbitrarily. Hydration is the signal this app actually
  * defines, and it is deterministic.
  */
 
@@ -36,6 +41,7 @@ for (const view of VIEWS) {
 
 		const results = await new AxeBuilder({ page })
 			.withTags(['wcag2a', 'wcag2aa'])
+			.options({ resultTypes: ['violations'] })
 			.analyze();
 
 		const serious = results.violations.filter(
@@ -51,9 +57,11 @@ test('axe: day service holds the same bar', async ({ page }) => {
 	// Day is the likelier contrast failure — light paper, gold accents.
 	await page.emulateMedia({ colorScheme: 'light' });
 	await goto(page, '/recipe/cacio-e-pepe');
-	await page.waitForLoadState('networkidle');
 
-	const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa']).analyze();
+	const results = await new AxeBuilder({ page })
+		.withTags(['wcag2a', 'wcag2aa'])
+		.options({ resultTypes: ['violations'] })
+		.analyze();
 	const serious = results.violations.filter(
 		(v) => v.impact === 'serious' || v.impact === 'critical'
 	);
@@ -68,6 +76,7 @@ test('cook mode is reachable and escapable by keyboard alone', async ({ page }) 
 	const results = await new AxeBuilder({ page })
 		.include('.cook')
 		.withTags(['wcag2a', 'wcag2aa'])
+		.options({ resultTypes: ['violations'] })
 		.analyze();
 	const serious = results.violations.filter(
 		(v) => v.impact === 'serious' || v.impact === 'critical'

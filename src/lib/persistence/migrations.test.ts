@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { migrate, importLegacyCode } from './migrations';
-import { CURRENT_VERSION } from './state';
+import { CURRENT_VERSION, mergeSessions, type SessionState } from './state';
 import { describeImport } from './portable';
 import { EMPTY_SESSION } from './state';
 
@@ -15,6 +15,62 @@ describe('migrate', () => {
 
 	it('refuses a future version without destroying it', () => {
 		expect(() => migrate({ schemaVersion: CURRENT_VERSION + 1 })).toThrow(/newer version/);
+	});
+});
+
+describe('mergeSessions — importing a .wtjson must not destroy what is already here', () => {
+	const live = (): SessionState => ({
+		...structuredClone(EMPTY_SESSION),
+		menu: ['cacio-e-pepe'],
+		cookedLog: [
+			{ slug: 'ragu-alla-bolognese', at: 1000 },
+			{ slug: 'carbonara', at: 2000 }
+		],
+		shoppingChecks: { abc123: ['Produce:0', 'Dairy:1'] }
+	});
+
+	/**
+	 * The regression that mattered: buildExport writes the FULL state, so a real
+	 * export always carries cookedLog and shoppingChecks present-and-empty. The
+	 * old merge let those fall through a bare spread and wipe the live values —
+	 * and flush() writes immediately, so nothing could be recovered.
+	 */
+	it('survives an import whose own cooked log and ticks are empty', () => {
+		const out = mergeSessions(live(), {
+			...structuredClone(EMPTY_SESSION),
+			menu: ['tom-yum-goong']
+		});
+		expect(out.cookedLog).toHaveLength(2);
+		expect(out.shoppingChecks.abc123).toEqual(['Produce:0', 'Dairy:1']);
+		expect(out.menu).toEqual(['cacio-e-pepe', 'tom-yum-goong']);
+	});
+
+	it('unions cooked dishes by slug, keeping the earliest date', () => {
+		const out = mergeSessions(live(), {
+			cookedLog: [
+				{ slug: 'carbonara', at: 500 },
+				{ slug: 'pad-thai', at: 3000 }
+			]
+		});
+		expect(out.cookedLog.map((e) => e.slug).sort()).toEqual([
+			'carbonara',
+			'pad-thai',
+			'ragu-alla-bolognese'
+		]);
+		expect(out.cookedLog.find((e) => e.slug === 'carbonara')?.at).toBe(500);
+	});
+
+	it('unions shopping ticks per menu hash instead of replacing them', () => {
+		const out = mergeSessions(live(), {
+			shoppingChecks: { abc123: ['Dairy:1', 'Meat:2'], other: ['Produce:0'] }
+		});
+		expect(out.shoppingChecks.abc123.sort()).toEqual(['Dairy:1', 'Meat:2', 'Produce:0']);
+		expect(out.shoppingChecks.other).toEqual(['Produce:0']);
+	});
+
+	it('refuses to let a hand-edited file walk the schema version backwards', () => {
+		const out = mergeSessions(live(), { schemaVersion: 0 } as Partial<SessionState>);
+		expect(out.schemaVersion).toBe(CURRENT_VERSION);
 	});
 });
 

@@ -103,9 +103,24 @@ export default defineConfig({
 					// name no server middleware claims (see tools/postbuild.mjs).
 					{ url: 'shell.html', revision: String(Date.now()) }
 				],
-				navigateFallback: '/shell.html',
-				// Prerendered HTML is still served from the network when online;
-				// offline, the shell picks it up and hydrates from cached JSON.
+				/**
+				 * RELATIVE, and load-bearing. Workbox resolves precache keys against
+				 * the service worker's own location, so on GitHub Pages the entry
+				 * above is cached as /WorldTable/shell.html — while a root-absolute
+				 * '/shell.html' resolves to the domain root, which was never
+				 * precached. createHandlerBoundToURL then throws non-precached-url
+				 * and the NavigationRoute is NEVER REGISTERED: the app shipped with
+				 * no offline navigation at all on the deployed origin, while every
+				 * e2e test stayed green because localhost:4173 serves from the root
+				 * where the two spellings happen to agree.
+				 */
+				navigateFallback: 'shell.html',
+				/**
+				 * Every navigation is answered from the precached shell, which then
+				 * hydrates from cached JSON — that is the documented design, and the
+				 * reason the 1,178 prerendered pages are deliberately NOT precached.
+				 * Prerendered HTML serves the first visit, before the worker installs.
+				 */
 				navigateFallbackDenylist: [/^\/api\//],
 				cleanupOutdatedCaches: true,
 				clientsClaim: true,
