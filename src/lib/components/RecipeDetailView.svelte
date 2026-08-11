@@ -233,6 +233,7 @@
 	{#if cooking}
 		<CookMode
 			name={r.name}
+			slug={r.slug}
 			steps={cookSteps}
 			onclose={() => (cooking = false)}
 			onfinish={() => session.markCooked(r.slug)}

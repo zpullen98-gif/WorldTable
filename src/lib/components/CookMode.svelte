@@ -2,14 +2,17 @@
 	import { onMount } from 'svelte';
 	import type { Step } from '$lib/types';
 	import { acquireWakeLock } from '$lib/wakeLock';
+	import { timers, formatClock } from '$lib/stores/timers.svelte';
 
 	let {
 		name,
+		slug,
 		steps,
 		onclose,
 		onfinish
 	}: {
 		name: string;
+		slug: string;
 		steps: Step[];
 		onclose: () => void;
 		onfinish?: () => void;
@@ -31,80 +34,46 @@
 	 */
 	let dialog = $state<HTMLDialogElement | null>(null);
 
-	/* ---- timer ----------------------------------------------------------
+	/* ---- timers ---------------------------------------------------------
 	 * Seeded from the step's precomputed durationSec (parsed at build time from
 	 * "simmer 20 min" phrasing — the original re-parsed it on every step render,
 	 * L3407). Steps with no stated duration offer no timer, rather than the
 	 * original's fabricated 4-minute default.
 	 *
-	 * A DEADLINE, never a decrementing counter. The old timer was
-	 * `setInterval(() => remaining -= 1, 1000)` and read no clock at all, so the
-	 * number on screen was the count of callbacks delivered — a backgrounded tab
-	 * (iOS suspends JS outright, Chrome throttles hard) lost real minutes and the
-	 * alarm never fired. A kitchen timer that under-reports is a burnt dish.
+	 * The clock itself lives in the shared store, not here, for one reason:
+	 * closing cook mode does not take the pot off the heat. A timer started on
+	 * step 3 keeps running while you read step 4, while you leave to check the
+	 * Lexicon, and across a reload — and rings wherever you are.
 	 */
-	let endsAt = $state<number | null>(null);
-	let remaining = $state<number | null>(null);
-	let running = $state(false);
-	let elapsed = $state(false);
-	let ticker: ReturnType<typeof setInterval> | undefined;
+	const stepTimer = $derived(timers.find(slug, i));
+	const stepSeconds = $derived(step?.durationSec ?? null);
+	const remaining = $derived(stepTimer ? timers.remaining(stepTimer) : stepSeconds);
+	const running = $derived(Boolean(stepTimer?.endsAt));
+	const elapsed = $derived(Boolean(stepTimer?.rang));
 
-	function clearTicker() {
-		if (ticker) clearInterval(ticker);
-		ticker = undefined;
-	}
+	const clock = $derived(remaining == null ? null : formatClock(remaining));
 
-	/** Recompute from the wall clock. Safe to call at any time, from anywhere. */
-	function sync() {
-		if (endsAt == null) return;
-		const left = Math.max(0, Math.ceil((endsAt - Date.now()) / 1000));
-		remaining = left;
-		if (left === 0) {
-			clearTicker();
-			running = false;
-			endsAt = null;
-			elapsed = true;
-		}
-	}
+	/** Other pots on other burners — visible without leaving the step you are on. */
+	const others = $derived(timers.active.filter((t) => t.id !== stepTimer?.id));
 
 	function startTimer() {
-		if (remaining == null || remaining <= 0) return;
-		endsAt = Date.now() + remaining * 1000;
-		running = true;
-		elapsed = false;
-		clearTicker();
-		// 250ms so the visible second ticks over promptly; correctness comes from
-		// the deadline, not the interval, so the rate is only about smoothness.
-		ticker = setInterval(sync, 250);
+		if (stepSeconds == null || stepSeconds <= 0) return;
+		timers.start({
+			label: `${name} · step ${i + 1}`,
+			seconds: stepTimer?.paused ?? stepSeconds,
+			recipeSlug: slug,
+			stepIndex: i
+		});
 	}
-
 	function pauseTimer() {
-		if (endsAt != null) remaining = Math.max(0, Math.ceil((endsAt - Date.now()) / 1000));
-		clearTicker();
-		running = false;
-		endsAt = null;
+		if (stepTimer) timers.pause(stepTimer.id);
 	}
-
+	function resumeTimer() {
+		if (stepTimer) timers.resume(stepTimer.id);
+	}
 	function resetTimer() {
-		clearTicker();
-		running = false;
-		endsAt = null;
-		elapsed = false;
-		remaining = step?.durationSec ?? null;
+		if (stepTimer) timers.dismiss(stepTimer.id);
 	}
-
-	// Step change resets the clock to the new step's duration.
-	$effect(() => {
-		void i;
-		resetTimer();
-	});
-
-	const clock = $derived.by(() => {
-		if (remaining == null) return null;
-		const m = Math.floor(remaining / 60);
-		const s = remaining % 60;
-		return `${m}:${String(s).padStart(2, '0')}`;
-	});
 
 	function next() {
 		if (!last) i += 1;
@@ -157,17 +126,11 @@
 			awake = true;
 		});
 
-		// Recompute the moment we are visible again, so a phone that slept shows
-		// the truth — including an alarm that fired while it was away.
-		const onVisible = () => {
-			if (document.visibilityState === 'visible') sync();
-		};
-		document.addEventListener('visibilitychange', onVisible);
-
+		// No visibilitychange handling here any more: the timer store owns the
+		// clock and resyncs itself, precisely so a running timer does not depend
+		// on this component still being mounted.
 		return () => {
 			destroyed = true;
-			document.removeEventListener('visibilitychange', onVisible);
-			clearTicker();
 			releaseLock?.();
 			releaseLock = null;
 			awake = false;
@@ -220,9 +183,11 @@
 		{#if clock !== null}
 			<span class="clock" class:alarm={elapsed}>{clock}</span>
 			{#if elapsed}
-				<button class="chip" onclick={resetTimer}>Time! Reset</button>
+				<button class="chip" onclick={resetTimer}>Time! Clear</button>
 			{:else if running}
 				<button class="chip" onclick={pauseTimer}>Pause</button>
+			{:else if stepTimer?.paused != null}
+				<button class="chip go" onclick={resumeTimer}>Resume</button>
 			{:else}
 				<button class="chip go" onclick={startTimer}>Start timer</button>
 			{/if}
@@ -233,6 +198,20 @@
 
 	{#if elapsed}
 		<p class="alarmnote" role="alert">Time is up.</p>
+	{/if}
+
+	{#if others.length}
+		<ul class="others" aria-label="Other timers running">
+			{#each others as t (t.id)}
+				<li class:rang={t.rang}>
+					<span class="olabel">{t.label}</span>
+					<span class="oclock">{t.rang ? 'Time' : formatClock(timers.remaining(t))}</span>
+					<button class="ox" onclick={() => timers.dismiss(t.id)} aria-label="Clear {t.label}">
+						✕
+					</button>
+				</li>
+			{/each}
+		</ul>
 	{/if}
 
 	<div class="nav">
@@ -374,6 +353,58 @@
 	.alarmnote {
 		font-size: var(--t-small);
 		color: var(--turmeric-deep);
+	}
+
+	/* The other pots. Quiet by design — the step you are on is the headline. */
+	.others {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+		justify-content: center;
+		max-width: 620px;
+	}
+	.others li {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		border: 1px solid var(--line);
+		border-left: 2px solid var(--turmeric);
+		border-radius: var(--radius);
+		padding: 4px 4px 4px 10px;
+		font-size: var(--t-small);
+		color: var(--muted);
+	}
+	.others li.rang {
+		border-color: var(--chili);
+		border-left-color: var(--chili);
+		color: var(--chili);
+	}
+	.olabel {
+		max-width: 20ch;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.oclock {
+		font-variant-numeric: tabular-nums;
+		color: var(--turmeric-deep);
+	}
+	.others li.rang .oclock {
+		color: var(--chili);
+	}
+	.ox {
+		border: 1px solid var(--line);
+		background: none;
+		color: inherit;
+		border-radius: var(--radius);
+		cursor: pointer;
+		width: 28px;
+		min-height: 28px;
+		font: inherit;
+	}
+	.ox:hover {
+		border-color: var(--turmeric);
 	}
 
 	.nav {

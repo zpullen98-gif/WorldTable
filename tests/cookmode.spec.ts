@@ -100,6 +100,66 @@ test.describe('modal semantics', () => {
 	});
 });
 
+test.describe('timers outlive the screen that started them', () => {
+	test('a timer keeps running after cook mode closes, and across a reload', async ({ page }) => {
+		await goto(page, '/recipe/coq-au-vin');
+		await page.evaluate(() => localStorage.removeItem('wt.timers.v1'));
+		await open(page);
+
+		// Walk to a step that states a duration and start its timer.
+		const dots = await page.locator('dialog.cook .dot').count();
+		for (let n = 0; n < dots; n++) {
+			await page.locator('dialog.cook .dot').nth(n).click();
+			if (await page.locator('dialog.cook .clock').count()) break;
+		}
+		await page.getByRole('button', { name: 'Start timer' }).click();
+
+		// Closing cook mode does not take the pot off the heat.
+		await page.getByRole('button', { name: 'Exit cook mode' }).click();
+		await expect(page.locator('dialog.cook')).toHaveCount(0);
+		await expect(page.locator('.bar .timer')).toHaveCount(1);
+		await expect(page.locator('.bar .timer .label')).toContainText('Coq au Vin');
+
+		// Nor does leaving the page, nor a reload: the deadline is persisted, so
+		// the clock picks up from wall time rather than restarting.
+		const before = await page.locator('.bar .clock').textContent();
+		await goto(page, '/lexicon');
+		await expect(page.locator('.bar .timer')).toHaveCount(1);
+
+		const toSec = (s: string) => {
+			const [m, x] = s.split(':').map(Number);
+			return m * 60 + x;
+		};
+		const after = await page.locator('.bar .clock').textContent();
+		expect(toSec(after!)).toBeLessThanOrEqual(toSec(before!));
+	});
+
+	test('several timers run at once, and an expired one asks to be dismissed', async ({ page }) => {
+		await goto(page, '/');
+		await page.evaluate(() => {
+			localStorage.setItem(
+				'wt.timers.v1',
+				JSON.stringify({
+					schemaVersion: 1,
+					timers: [
+						{ id: 'a', label: 'The braise', endsAt: Date.now() + 600_000, paused: null, rang: false },
+						{ id: 'b', label: 'Rice', endsAt: Date.now() + 1500, paused: null, rang: false }
+					]
+				})
+			);
+		});
+		await goto(page, '/');
+
+		await expect(page.locator('.bar .timer')).toHaveCount(2);
+		// The short one rings where you are, not only inside cook mode.
+		await expect(page.locator('.bar .timer.rang')).toHaveCount(1, { timeout: 8000 });
+		await expect(page.locator('.bar .timer.rang')).toContainText('Rice');
+
+		await page.getByRole('button', { name: 'Dismiss' }).click();
+		await expect(page.locator('.bar .timer')).toHaveCount(1);
+	});
+});
+
 test('the timer tracks wall time, not the number of callbacks it received', async ({ page }) => {
 	await goto(page, '/recipe/coq-au-vin');
 	await open(page);

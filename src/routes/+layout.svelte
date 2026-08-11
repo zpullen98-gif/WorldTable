@@ -6,6 +6,7 @@
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import { session } from '$lib/stores/session.svelte';
 	import UpdatePrompt from '$lib/components/UpdatePrompt.svelte';
+	import TimerBar from '$lib/components/TimerBar.svelte';
 
 	let { children } = $props();
 
@@ -117,6 +118,7 @@
 	{@render children()}
 </main>
 
+<TimerBar />
 <UpdatePrompt />
 
 <footer>
