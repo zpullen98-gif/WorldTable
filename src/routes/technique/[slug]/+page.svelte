@@ -45,6 +45,16 @@
 		</p>
 	</header>
 
+	{#if t.semesters.length}
+		<p class="taught">
+			On the Path of Study:
+			<!-- Separator as an expression: a literal ", " inside an {#if} loses its
+			     trailing space to Svelte's whitespace trimming. -->
+			{#each t.semesters as s, i (s.n)}<a href="{base}/study">Semester {s.n} — {s.title}</a
+				>{i < t.semesters.length - 1 ? ', ' : ''}{/each}
+		</p>
+	{/if}
+
 	{#if t.definition}
 		<section class="definition">
 			<p class="eyebrow">From the Lexicon — {t.lexiconTerm}</p>
@@ -75,7 +85,18 @@
 		<h2 class="sec">{chapter}</h2>
 		<ul class="grid">
 			{#each group as r (r.slug)}
-				<li><RecipeCard recipe={r} /></li>
+				<li class="slot">
+					<RecipeCard recipe={r} />
+					<button
+						class="mark"
+						data-print="hide"
+						aria-pressed={cooked.has(r.slug)}
+						aria-label="{cooked.has(r.slug) ? 'Cooked' : 'Mark as cooked'} — {r.name}"
+						onclick={() => session.toggleCooked(r.slug)}
+					>
+						{cooked.has(r.slug) ? '✓' : '○'}
+					</button>
+				</li>
 			{/each}
 		</ul>
 	{/each}
@@ -169,5 +190,41 @@
 		gap: var(--gap);
 		content-visibility: auto;
 		contain-intrinsic-size: auto 200px;
+	}
+
+	.taught {
+		font-size: var(--t-small);
+		color: var(--muted);
+		margin-bottom: 18px;
+	}
+
+	/* The card is one big link, so the cooked toggle sits above it rather than
+	   inside it — a button nested in an anchor is invalid and unclickable. */
+	.slot {
+		position: relative;
+	}
+	.mark {
+		position: absolute;
+		top: 6px;
+		right: 6px;
+		z-index: 2;
+		width: 30px;
+		height: 30px;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		background: var(--paper-raised);
+		color: var(--muted);
+		font: inherit;
+		font-size: var(--t-small);
+		line-height: 1;
+		cursor: pointer;
+	}
+	.mark:hover {
+		border-color: var(--turmeric);
+		color: var(--ink);
+	}
+	.mark[aria-pressed='true'] {
+		color: var(--turmeric-deep);
+		border-color: var(--turmeric);
 	}
 </style>

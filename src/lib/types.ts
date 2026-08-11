@@ -183,6 +183,8 @@ export interface Technique {
 	origin: 'original' | 'supplement';
 	/** How many distinct chapters demonstrate it — a breadth signal. */
 	chapters: number;
+	/** Semesters of the Path that teach this skill. Empty for 55 of the 103. */
+	semesters: { n: number; title: string }[];
 	recipes: string[];
 }
 
@@ -208,6 +210,11 @@ export interface StudySemester {
 	recipes: string[];
 	/** Lexicon slugs — the reading that explains why the dishes work. */
 	terms: string[];
+	/**
+	 * Skills this semester's dishes demonstrate, heaviest first. Derived from the
+	 * recipes, never authored, so it cannot drift from what the semester cooks.
+	 */
+	skills: { slug: string; label: string; dishes: number }[];
 }
 
 export interface Substitution {

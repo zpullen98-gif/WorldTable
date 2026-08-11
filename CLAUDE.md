@@ -17,7 +17,7 @@ npm run check          # svelte-check
 npm run extract        # re-lift the data literals out of reference/world-table-v1.html
 npm run verify:data    # 38 checks: counts, round-trip, char-sum, slugs, refs
 npm run build:data     # derive + emit src/lib/data/*.json  (gated, idempotent)
-npm run verify:build   # 12 checks against build/
+npm run verify:build   # 16 checks against build/
 npm run icons          # regenerate PWA icons
 npm run report:tech    # technique coverage ledger (--labels, or a chapter name)
 ```
@@ -135,6 +135,15 @@ ONE recipe while 27 braise.
 
 Coverage is 824 of 970 across 103 live labels, 76 anchored.
 
+The Path of Study joins the same way. `study.json` gains `skills` — derived from
+each semester's dishes, never authored, weighted by how many of them drill it —
+and `techniques.json` gains `semesters` for the reverse link. The weight is the
+point: the semester titled "The Braise" drills searing (4 dishes) above braising
+(2), because a braise IS sear-then-simmer, and the curriculum could not say so
+before. 48 of the 103 skills are taught somewhere on the Path; the other 55 are
+reachable only by browsing. A semester skill pointing at no technique page fails
+the build.
+
 **Techniques derive from `linkBlobs`, not `blobs`** — the note-free text, same
 as cross-links and for the same reason. Measurement before the change: 111 tags
 existed only because of note prose, 62 recipes were tagged solely by their
@@ -171,7 +180,7 @@ chapter name dumps its untagged recipes as working material.
 
 ## Testing
 
-`npm test` (34 unit) · `npm run test:e2e` (31 Playwright: regressions named for
+`npm test` (34 unit) · `npm run test:e2e` (34 Playwright: regressions named for
 the original's line numbers, offline in real Chromium, axe, print PDFs, and the
 parity harness that runs the archived original against our build output).
 

@@ -78,6 +78,49 @@ test('technique pages are real files, so a cold deep link works with no JavaScri
 	await ctx.close();
 });
 
+/**
+ * The Path of Study join.
+ *
+ * The curriculum shipped a reading list but no account of its own technique
+ * content, so the semester called "The Braise" could not say that it drills
+ * searing harder than braising — which it does, because a braise IS
+ * sear-then-simmer.
+ */
+test('a semester lists the skills its dishes drill, heaviest first', async ({ page }) => {
+	await goto(page, '/study');
+
+	const braise = page.locator('.semester').nth(3);
+	await expect(braise.locator('h2')).toHaveText('The Braise');
+
+	const skills = braise.locator('.skills a');
+	expect(await skills.count()).toBeGreaterThan(5);
+
+	// Derived weight, not authored order: searing outranks braising here.
+	await expect(skills.first()).toContainText('Searing');
+	await expect(skills.first()).toHaveAttribute('href', /\/technique\/searing-the-hard-crust$/);
+});
+
+test('a technique names the semesters that teach it', async ({ page }) => {
+	await goto(page, '/technique/braising');
+	await expect(page.locator('.taught')).toContainText('Semester 4 — The Braise');
+	// The separator regressed once to "Braise,Semester" under Svelte whitespace
+	// trimming; assert the space survives.
+	await expect(page.locator('.taught')).not.toContainText(',Semester');
+});
+
+test('a dish can be marked cooked from the technique page, and it sticks', async ({ page }) => {
+	await goto(page, '/technique/braising');
+	await expect(page.locator('.progress')).toContainText('0 marked cooked');
+
+	await page.locator('.mark').first().click();
+	await expect(page.locator('.progress')).toContainText('1 marked cooked');
+
+	// Structural actions write through immediately — no debounce to lose.
+	await goto(page, '/technique/braising');
+	await expect(page.locator('.progress')).toContainText('1 marked cooked');
+	await expect(page.locator('.mark[aria-pressed="true"]')).toHaveCount(1);
+});
+
 test('no technique page ships empty', async () => {
 	const empty = techniques.filter((t) => t.recipes.length === 0);
 	expect(empty, `empty technique pages: ${empty.map((t) => t.label).join(', ')}`).toHaveLength(0);

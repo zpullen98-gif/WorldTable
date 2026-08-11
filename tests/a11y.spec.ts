@@ -6,6 +6,13 @@ import AxeBuilder from '@axe-core/playwright';
  * axe-core over every view, in both services. Zero serious/critical violations
  * is the bar; moderate/minor are reported in the failure output when the bar
  * is missed, so the fix starts from a list rather than a hunt.
+ *
+ * Readiness is `html[data-hydrated]` (via goto), never networkidle. Nine axe
+ * runs racing five-wide against one static server meant "no request for 500ms"
+ * could be delayed arbitrarily; axe would then be injected into a page being
+ * torn down and die with "Unexpected end of JSON input" — a red suite that
+ * said nothing about accessibility. Hydration is the signal this app actually
+ * defines, and it is deterministic.
  */
 
 const VIEWS = [
@@ -26,7 +33,6 @@ for (const view of VIEWS) {
 		// slower still with the whole suite hammering one static server.
 		test.setTimeout(120_000);
 		await goto(page, view.path);
-		await page.waitForLoadState('networkidle');
 
 		const results = await new AxeBuilder({ page })
 			.withTags(['wcag2a', 'wcag2aa'])

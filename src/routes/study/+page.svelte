@@ -54,6 +54,17 @@
 					{/each}
 				</ul>
 
+				{#if s.skills.length}
+					<h3 class="sec">The skills it drills</h3>
+					<p class="skills">
+						{#each s.skills as k (k.slug)}
+							<a href="{base}/technique/{k.slug}">
+								{k.label}<span class="w">{k.dishes}</span>
+							</a>
+						{/each}
+					</p>
+				{/if}
+
 				{#if s.terms.length}
 					<h3 class="sec">The reading</h3>
 					<p class="terms">
@@ -163,6 +174,37 @@
 		color: var(--turmeric-deep);
 		font-size: 13px;
 		padding: 0 2px;
+	}
+
+	.skills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+	.skills a {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		font-size: var(--t-small);
+		color: var(--ink-soft);
+		text-decoration: none;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		padding: 3px 5px 3px 8px;
+		min-height: 26px;
+	}
+	.skills a:hover {
+		border-color: var(--turmeric);
+		color: var(--ink);
+	}
+	/* The weight: how many of this semester's dishes drill the skill. It is the
+	   whole point of deriving these — it shows where a semester really leans. */
+	.skills .w {
+		font-size: var(--t-micro);
+		color: var(--muted);
+		border-left: 1px solid var(--line);
+		padding-left: 6px;
+		font-variant-numeric: tabular-nums;
 	}
 
 	.terms {

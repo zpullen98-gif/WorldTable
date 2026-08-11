@@ -275,13 +275,39 @@ const pantry = PANTRY.map((g) => ({
 const nameToSlug = new Map(R.map((r, i) => [r.n, recipeSlugs[i]]));
 const termToSlug = new Map(D.map((e, i) => [e.t, lexSlugs[i]]));
 
-const study = STUDY.map((s, i) => ({
-	n: i + 1,
-	title: s.t,
-	description: s.d,
-	recipes: s.r.map((n) => nameToSlug.get(n)).filter(Boolean),
-	terms: s.x.map((t) => termToSlug.get(t)).filter(Boolean)
-}));
+/**
+ * The Path of Study, with the skills each semester actually teaches.
+ *
+ * The curriculum shipped with a reading list (Lexicon terms, authored) but no
+ * account of its own technique content — so the semester titled "The Braise"
+ * could not say that it drills searing harder than braising, which it does:
+ * four of its five dishes sear, and a braise IS sear-then-simmer.
+ *
+ * Derived, not authored, so it can never drift from the dishes. `dishes` is how
+ * many of that semester's recipes demonstrate the skill — the weight that makes
+ * a semester's real emphasis visible.
+ */
+const recipeTechniques = new Map(full.map((d) => [d.slug, d.techniques]));
+
+const study = STUDY.map((s, i) => {
+	const recipes = s.r.map((n) => nameToSlug.get(n)).filter(Boolean);
+	const counts = new Map();
+	for (const slug of recipes) {
+		for (const label of recipeTechniques.get(slug) ?? []) {
+			counts.set(label, (counts.get(label) ?? 0) + 1);
+		}
+	}
+	return {
+		n: i + 1,
+		title: s.t,
+		description: s.d,
+		recipes,
+		terms: s.x.map((t) => termToSlug.get(t)).filter(Boolean),
+		skills: [...counts.entries()]
+			.map(([label, dishes]) => ({ slug: slugify(label), label, dishes }))
+			.sort((a, b) => b.dishes - a.dishes || a.label.localeCompare(b.label))
+	};
+});
 
 const substitutions = SUBS.map(([term, advice]) => ({ term, advice }));
 
@@ -323,6 +349,15 @@ for (const d of full) {
  */
 const lexByAnchor = new Map(lexicon.map((e) => [e.slug, e]));
 
+/** The Path, inverted: which semesters teach this skill. Closes the loop both ways. */
+const semestersByLabel = new Map();
+for (const s of study) {
+	for (const skill of s.skills) {
+		if (!semestersByLabel.has(skill.label)) semestersByLabel.set(skill.label, []);
+		semestersByLabel.get(skill.label).push({ n: s.n, title: s.title });
+	}
+}
+
 const techniques = TECH_ALL.map((x, i) => {
 	const list = techRecipes.get(x.l) ?? [];
 	const anchor = LEXICON_ANCHOR[x.l] ?? null;
@@ -339,6 +374,8 @@ const techniques = TECH_ALL.map((x, i) => {
 		definition: term ? term.definition : null,
 		origin: i < TECH.length ? 'original' : 'supplement',
 		chapters: new Set(list.map((s) => chapterOfSlug.get(s))).size,
+		/** Semesters of the Path that teach this skill — empty for most of them. */
+		semesters: semestersByLabel.get(x.l) ?? [],
 		recipes: list
 	};
 })
@@ -549,6 +586,22 @@ if (worst && linkTotal > 0) {
 			`  techniques: ${tooThin.length} supplemental entries under 5 recipes — ${tooThin.map((x) => `${x.l} (${counts.get(x.l)})`).join(', ')}`
 		);
 	}
+
+	// A semester skill pointing at no technique page is a dead link in the
+	// curriculum — the one place a broken link is least forgivable.
+	const liveSlugs = new Set(techniques.map((t) => t.slug));
+	const dangling = study.flatMap((s) =>
+		s.skills.filter((k) => !liveSlugs.has(k.slug)).map((k) => `S${s.n} -> ${k.label}`)
+	);
+	if (dangling.length) {
+		problems.push(`Path skills pointing at no technique page: ${dangling.join(', ')}`);
+	}
+
+	const taught = new Set(study.flatMap((s) => s.skills.map((k) => k.slug)));
+	console.log(
+		`  path: ${taught.size} of ${techniques.length} skills are taught somewhere in the ten semesters ` +
+			`(${techniques.length - taught.size} reachable only by browsing)`
+	);
 
 	const deadOriginal = TECH.filter((x) => !counts.has(x.l)).map((x) => x.l);
 	const tagged = full.filter((d) => d.techniques.length).length;
