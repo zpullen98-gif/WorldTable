@@ -63,11 +63,29 @@ check('94 chapter pages prerendered', () => {
 	return String(n);
 });
 
+/**
+ * Asserted against techniques.json rather than a magic number: the table is
+ * meant to grow, and a check that has to be edited every time it grows is a
+ * check people learn to edit without reading.
+ */
+check('every live technique has a page', () => {
+	const techniques = JSON.parse(
+		readFileSync(join(ROOT, 'src', 'lib', 'data', 'techniques.json'), 'utf8')
+	);
+	const n = html.filter((f) => rel(f).startsWith('technique/')).length;
+	assert(n === techniques.length, `${techniques.length} techniques but ${n} pages`);
+	assert(
+		techniques.every((t) => t.recipes.length > 0),
+		'a technique shipped with no recipes'
+	);
+	return `${n} techniques`;
+});
+
 check('every mode has a page', () => {
-	for (const p of ['index.html', 'lexicon.html', 'pantry.html', 'study.html', 'menu.html']) {
+	for (const p of ['index.html', 'lexicon.html', 'pantry.html', 'study.html', 'menu.html', 'technique.html']) {
 		assert(existsSync(join(BUILD, p)), `missing ${p}`);
 	}
-	return '5 modes';
+	return '6 modes';
 });
 
 check('a deep link renders its dish without JavaScript', () => {

@@ -19,6 +19,7 @@ npm run verify:data    # 38 checks: counts, round-trip, char-sum, slugs, refs
 npm run build:data     # derive + emit src/lib/data/*.json  (gated, idempotent)
 npm run verify:build   # 12 checks against build/
 npm run icons          # regenerate PWA icons
+npm run report:tech    # technique coverage ledger (--labels, or a chapter name)
 ```
 
 Deploy to GitHub Pages with `BASE_PATH=/WorldTable npm run build`.
@@ -112,6 +113,50 @@ live in IndexedDB, never in the static data. Consequences worth knowing:
 - They are not in the static search index; under a query the browser matches
   them by the substring predicate and appends them after ranked results.
 
+## The technique spine — how skills map to recipes
+
+Two systems existed and never met. `raw/TECH.json` tagged recipes by keyword but
+was written around DISHES (Khachapuri shaping, Pierogi, Arepas), so it lit up
+401 of 970 and rendered nowhere but a YouTube link. Meanwhile the Lexicon holds
+45 hand-written technique definitions that reached almost nothing, because
+`crosslinks.mjs` caps a term at three recipes — "Braising & Stewing" linked to
+ONE recipe while 27 braise.
+
+`tools/derive/technique-table.mjs` marries them:
+
+- **SUPPLEMENT** appends the foundations the original omitted (searing,
+  sweating, steaming, blanching, proofing, rendering…). The raw table is deep
+  round-trip gated by verify:data, so it is never edited — improvements append.
+- **LEXICON_ANCHOR** maps a technique label to the Lexicon term that defines it.
+  It is hand-authored, not string-matched: "Tempering a custard" and "Tempering
+  chocolate" are one word apart and anchor to different halves of one entry.
+- `techniques.json` carries each label with the COMPLETE recipe list and a copy
+  of the anchored definition. Pages are `/technique/[slug]`, prerendered.
+
+Coverage is 824 of 970 across 103 live labels, 76 anchored.
+
+**Techniques derive from `linkBlobs`, not `blobs`** — the note-free text, same
+as cross-links and for the same reason. Measurement before the change: 111 tags
+existed only because of note prose, 62 recipes were tagged solely by their
+margin commentary, and the 320-note backfill had silently minted 50 tags. A
+recipe braises because its method braises. Removing the note also exposed four
+entries (Velveting, Mole, Tempering chocolate, Rolling dolmas) that had only
+ever fired on commentary.
+
+`deriveFilms` deliberately still uses the full blob and the ORIGINAL table. Film
+links are twelve curated canon URLs plus searches, not a claim about what a
+recipe demonstrates; re-cutting them would churn 970 link lists for nothing.
+
+Gates in build-data: a SUPPLEMENT entry tagging nothing fails the build (a
+keyword the corpus never says — the near-miss that left "Caramelizing onions"
+dead against a corpus that writes "Caramelize onion"). Entries over 150 recipes
+fail as too broad to distinguish. Anchor keys or values that resolve to nothing
+fail. The original's own dead entries are reported, not failed: Gnocchi and
+Boiling bagels never fire because this corpus has no gnocchi and no bagel.
+
+`npm run report:tech` is the ledger; `--labels` gives per-entry counts, a
+chapter name dumps its untagged recipes as working material.
+
 ## Known remaining work
 
 - None planned. The content backfill completed 2026-08-08: all 320 thin "from
@@ -119,10 +164,14 @@ live in IndexedDB, never in the static data. Consequences worth knowing:
   raw extraction byte-identical to the archived original). `npm run
   report:notes` is the ledger and reads zero. New authoring goes through the
   same overlay; the parity harness exempts overlaid slugs automatically.
+- 146 recipes still carry no technique tag, spread thin (no chapter has more
+  than five). Some are correct — a three-ingredient drink demonstrates nothing.
+  `npm run report:tech "<chapter>"` is the working material if the table is
+  widened further.
 
 ## Testing
 
-`npm test` (33 unit) · `npm run test:e2e` (24 Playwright: regressions named for
+`npm test` (34 unit) · `npm run test:e2e` (31 Playwright: regressions named for
 the original's line numbers, offline in real Chromium, axe, print PDFs, and the
 parity harness that runs the archived original against our build output).
 

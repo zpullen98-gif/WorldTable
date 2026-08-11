@@ -12,6 +12,8 @@ const VIEWS = [
 	{ path: '/', name: 'recipe grid' },
 	{ path: '/recipe/cacio-e-pepe', name: 'recipe page' },
 	{ path: '/lexicon', name: 'lexicon' },
+	{ path: '/technique', name: 'technique index' },
+	{ path: '/technique/braising', name: 'technique page' },
 	{ path: '/pantry', name: 'pantry match' },
 	{ path: '/study', name: 'path of study' },
 	{ path: '/family', name: 'family chapter' },

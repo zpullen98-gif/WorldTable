@@ -26,6 +26,7 @@
 	const MODES = [
 		{ href: '', label: 'Recipes' },
 		{ href: '/lexicon', label: 'Chef’s Lexicon' },
+		{ href: '/technique', label: 'Techniques' },
 		{ href: '/pantry', label: 'Pantry Match' },
 		{ href: '/study', label: 'Path of Study' },
 		{ href: '/family', label: 'Family' },

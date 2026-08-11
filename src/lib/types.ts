@@ -157,7 +157,32 @@ export interface LexiconEntry {
 	term: string;
 	category: string;
 	definition: string;
-	/** Recipe slugs that demonstrate this term. */
+	/** Recipe slugs that demonstrate this term — capped at 3 by crosslinks.mjs. */
+	recipes: string[];
+}
+
+/**
+ * A skill the guide teaches, with every recipe that demonstrates it.
+ *
+ * The complement to LexiconEntry: a term is capped at three recipes because it
+ * is a definition card, whereas a Technique carries the complete set — which is
+ * the whole point of the technique pages.
+ */
+export interface Technique {
+	slug: string;
+	label: string;
+	/** A search for studying this skill on film. */
+	query: string;
+	/** A verified canon film, where the original curated one. */
+	film: string | null;
+	/** The lexicon term that defines this skill, when one does. */
+	lexiconSlug: string | null;
+	lexiconTerm: string | null;
+	/** Copied from the lexicon at build time — see build-data.mjs for why. */
+	definition: string | null;
+	origin: 'original' | 'supplement';
+	/** How many distinct chapters demonstrate it — a breadth signal. */
+	chapters: number;
 	recipes: string[];
 }
 

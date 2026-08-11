@@ -4,6 +4,9 @@
 	import { renderLine } from '$lib/scaling';
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import { session } from '$lib/stores/session.svelte';
+	// The one slug implementation, so a technique href can never fork from the
+	// slug the build wrote into techniques.json.
+	import { slugify } from '$lib/slug';
 	import { DIFFICULTY_LABEL } from '$lib/types';
 	import Ornament from '$lib/components/Ornament.svelte';
 	import CookMode from '$lib/components/CookMode.svelte';
@@ -161,6 +164,15 @@
 			{#if d.equipment.length}
 				<h2 class="sec">Equipment</h2>
 				<p class="equip">{d.equipment.join(' · ')}</p>
+			{/if}
+
+			{#if d.techniques.length}
+				<h2 class="sec">The skills inside</h2>
+				<p class="skills">
+					{#each d.techniques as label (label)}
+						<a href="{base}/technique/{slugify(label)}">{label}</a>
+					{/each}
+				</p>
 			{/if}
 
 			{#if allergens.length}
@@ -461,6 +473,27 @@
 	.equip {
 		font-size: var(--t-small);
 		color: var(--muted);
+	}
+	.skills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+	.skills a {
+		font-size: var(--t-micro);
+		text-decoration: none;
+		color: var(--ink-soft);
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		padding: 3px 8px;
+		/* Kitchen-thumb target: the chip reads small but stays hittable. */
+		min-height: 26px;
+		display: inline-flex;
+		align-items: center;
+	}
+	.skills a:hover {
+		border-color: var(--turmeric);
+		color: var(--ink);
 	}
 	.reviewed {
 		font-size: var(--t-micro);

@@ -26,6 +26,7 @@ import { deriveFlavor } from './derive/flavor.mjs';
 import { deriveCost } from './derive/cost.mjs';
 import { derivePairing } from './derive/pairing.mjs';
 import { deriveTechniques, deriveFilms } from './derive/films.mjs';
+import { fullTechTable, LEXICON_ANCHOR, SUPPLEMENT } from './derive/technique-table.mjs';
 import { buildCrosslinks } from './derive/crosslinks.mjs';
 import { derivePantryMap } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
@@ -160,6 +161,23 @@ const pantryMap = derivePantryMap(R, blobs, PANTRY);
 const linkBlobs = R.map((r) => `${r.n} ${r.c} ${r.i.join(' ')} ${r.m.join(' ')}`.toLowerCase());
 const crosslinks = buildCrosslinks(R, recipeSlugs, D, lexSlugs, linkBlobs);
 
+/**
+ * Techniques score off linkBlobs — the same note-free text as cross-links, for
+ * the same reason, which measurement caught before this shipped: with the note
+ * in the blob, 111 tags existed ONLY because of note prose, 62 recipes were
+ * tagged solely by their margin commentary, and the 320-note backfill had
+ * silently minted 50 new tags. A recipe demonstrates braising because its
+ * method braises, not because someone wrote the word in the margin. Scoring
+ * prose would make the technique pages follow backfill order the way the
+ * cross-links once followed it into Italian.
+ *
+ * deriveFilms deliberately keeps the full blob and the ORIGINAL table below:
+ * film links are a curated set of twelve canon URLs plus searches, they are not
+ * a claim about what the recipe demonstrates, and re-cutting them here would
+ * churn 970 recipes' link lists for no gain.
+ */
+const TECH_ALL = fullTechTable(TECH);
+
 /** The original's `isAmerican` (L3837): membership in any US rail region. */
 const AMERICAN = new Set(RAIL_REGIONS.flatMap(([, members]) => members));
 const isAmerican = (c) => AMERICAN.has(c);
@@ -193,7 +211,7 @@ R.forEach((r, i) => {
 
 	const diet = { ...deriveDiet(r, blobs[i]), ...(ov.diet ?? {}) };
 	const flavor = deriveFlavor(blobs[i], NOTE_DEFS);
-	const techniques = deriveTechniques(blobs[i], TECH);
+	const techniques = ov.techniques ?? deriveTechniques(linkBlobs[i], TECH_ALL);
 
 	index.push({
 		slug,
@@ -273,6 +291,60 @@ const cellar = CELLAR.map((name) => ({
 	note: BOTTLE_NOTES[name] ?? ''
 }));
 
+/**
+ * The technique index — every label the table produces, with the COMPLETE set
+ * of recipes that demonstrate it.
+ *
+ * This is the mapping the guide never had. The Lexicon's technique entries are
+ * capped at three recipes each by crosslinks.mjs (right for a definition card's
+ * "see also", wrong as the only answer to "show me every braise"), so all 33
+ * technique terms together reached 72 of 970 recipes. Here "Braising" carries
+ * every recipe that braises, and borrows the Lexicon's prose to explain itself.
+ *
+ * Labels that tag nothing are dropped rather than shipped as empty pages. Five
+ * of the original's entries never fire against this corpus — Gnocchi and
+ * Boiling bagels because it contains no gnocchi and no bagel, which is not a
+ * bug, just a table written for a wider guide than the one that shipped.
+ */
+const chapterOfSlug = new Map(index.map((r) => [r.slug, r.chapter]));
+const techRecipes = new Map();
+for (const d of full) {
+	for (const label of d.techniques) {
+		if (!techRecipes.has(label)) techRecipes.set(label, []);
+		techRecipes.get(label).push(d.slug);
+	}
+}
+
+/**
+ * The anchored definition is COPIED here rather than looked up at render time.
+ * lexicon.json is 453KB; making a leaf page parse all of it to show one
+ * paragraph is the wrong trade on a phone, and the duplication is build-time
+ * derived data that no human edits. 45 definitions, ~35KB, gzipped to nothing.
+ */
+const lexByAnchor = new Map(lexicon.map((e) => [e.slug, e]));
+
+const techniques = TECH_ALL.map((x, i) => {
+	const list = techRecipes.get(x.l) ?? [];
+	const anchor = LEXICON_ANCHOR[x.l] ?? null;
+	const term = anchor ? lexByAnchor.get(anchor) : null;
+	return {
+		slug: slugify(x.l),
+		label: x.l,
+		query: x.q ?? '',
+		/** A verified canon film, where the original curated one. */
+		film: x.u ?? null,
+		/** The Lexicon term that defines this skill, when one does. */
+		lexiconSlug: anchor,
+		lexiconTerm: term ? term.term : null,
+		definition: term ? term.definition : null,
+		origin: i < TECH.length ? 'original' : 'supplement',
+		chapters: new Set(list.map((s) => chapterOfSlug.get(s))).size,
+		recipes: list
+	};
+})
+	.filter((t) => t.recipes.length)
+	.sort((a, b) => a.label.localeCompare(b.label));
+
 // ── emit ─────────────────────────────────────────────────────────────────────
 mkdirSync(OUT, { recursive: true });
 const write = (file, value) => {
@@ -291,6 +363,7 @@ write('pantry.json', pantry);
 write('study.json', study);
 write('substitutions.json', substitutions);
 write('cellar.json', cellar);
+write('techniques.json', techniques);
 
 /**
  * The search index, prebuilt so the browser never pays tokenization cost.
@@ -310,7 +383,8 @@ mini.addAll(
 		name: r.n,
 		chapter: r.c,
 		ingredients: r.i.join(' '),
-		flavor: index[i].flavorTags.join(' ')
+		flavor: index[i].flavorTags.join(' '),
+		technique: full[i].techniques.join(' ')
 	}))
 );
 {
@@ -419,6 +493,78 @@ if (worst && linkTotal > 0) {
 		problems.push(
 			`backfilled notes under the 180-char bar: ${short.map(([k, v]) => `${k} (${String(v).length})`).join(', ')}`
 		);
+	}
+}
+
+/**
+ * Technique-table hygiene.
+ *
+ * The original's dead entries are reported, not failed — five of them describe
+ * dishes this corpus does not contain, and that is the archived table's
+ * business, not ours. A SUPPLEMENT entry that tags nothing is our own mistake
+ * and fails the build: it means a keyword was written that the corpus never
+ * says, which is exactly the near-miss that left "Caramelizing onions" dead
+ * against a corpus that says "Caramelize onion".
+ */
+{
+	const bySlugTech = new Map();
+	for (const t of techniques) {
+		if (bySlugTech.has(t.slug)) {
+			problems.push(
+				`technique slug collision: "${t.label}" and "${bySlugTech.get(t.slug)}" both slugify to ${t.slug}`
+			);
+		}
+		bySlugTech.set(t.slug, t.label);
+	}
+
+	const labelSet = new Set(TECH_ALL.map((x) => x.l));
+	const lexSet = new Set(lexicon.map((e) => e.slug));
+	const badKeys = Object.keys(LEXICON_ANCHOR).filter((k) => !labelSet.has(k));
+	const badVals = Object.entries(LEXICON_ANCHOR).filter(([, v]) => !lexSet.has(v));
+	if (badKeys.length) {
+		problems.push(`LEXICON_ANCHOR keys matching no technique label: ${badKeys.join(', ')}`);
+	}
+	if (badVals.length) {
+		problems.push(
+			`LEXICON_ANCHOR values matching no lexicon slug: ${badVals.map(([k, v]) => `${k} -> ${v}`).join(', ')}`
+		);
+	}
+
+	const counts = new Map(techniques.map((t) => [t.label, t.recipes.length]));
+	const deadSupp = SUPPLEMENT.filter((x) => !counts.has(x.l));
+	if (deadSupp.length) {
+		problems.push(
+			`supplemental technique entries tagging nothing (keywords the corpus never says): ${deadSupp.map((x) => x.l).join(', ')}`
+		);
+	}
+	const tooWide = SUPPLEMENT.filter((x) => (counts.get(x.l) ?? 0) > 150);
+	if (tooWide.length) {
+		problems.push(
+			`supplemental entries too broad to be a distinguishing skill (>150 recipes): ${tooWide.map((x) => `${x.l} (${counts.get(x.l)})`).join(', ')}`
+		);
+	}
+	const tooThin = SUPPLEMENT.filter((x) => (counts.get(x.l) ?? 0) > 0 && counts.get(x.l) < 5);
+	if (tooThin.length) {
+		console.log(
+			`  techniques: ${tooThin.length} supplemental entries under 5 recipes — ${tooThin.map((x) => `${x.l} (${counts.get(x.l)})`).join(', ')}`
+		);
+	}
+
+	const deadOriginal = TECH.filter((x) => !counts.has(x.l)).map((x) => x.l);
+	const tagged = full.filter((d) => d.techniques.length).length;
+	const anchored = techniques.filter((t) => t.lexiconSlug).length;
+	console.log(
+		`\n  techniques: ${tagged} of ${index.length} recipes tagged (${index.length - tagged} untagged), ` +
+			`${techniques.length} live labels, ${anchored} anchored to a lexicon definition`
+	);
+	if (deadOriginal.length) {
+		console.log(`  techniques: ${deadOriginal.length} original entries never fire — ${deadOriginal.join(', ')}`);
+	}
+	const untaggedChapters = [...new Set(index.map((r) => r.chapter))].filter((c) =>
+		index.every((r, i) => r.chapter !== c || !full[i].techniques.length)
+	);
+	if (untaggedChapters.length) {
+		console.log(`  techniques: chapters with no tagged recipe at all — ${untaggedChapters.join(', ')}`);
 	}
 }
 
