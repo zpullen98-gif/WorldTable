@@ -207,3 +207,14 @@ Hard-won rules the suites encode — do not relearn these:
   before interacting: prerendered pages look alive long before listeners attach.
 - **`paths.relative: false` is load-bearing** — without it the SW registers
   './sw.js', which 404s from any deep link.
+- **`navigateFallback` must be RELATIVE (`'shell.html'`).** Workbox resolves
+  precache keys against the worker's own location, so under a base path a
+  root-absolute `'/shell.html'` points at the domain root, which was never
+  precached; `createHandlerBoundToURL` throws `non-precached-url`. The throw
+  lands AFTER `precacheAndRoute` and BEFORE `registerRoute(navigationRoute)`,
+  which is why this hid so well: the install listener is already attached, all
+  75 entries still cache, and only offline NAVIGATION is dead. Every e2e test
+  stayed green for months because localhost:4173 serves from the root, where
+  both spellings resolve identically. Only a based build can see it, which is
+  why verify:build now resolves the fallback against `BASE_PATH` and asserts
+  precache membership rather than grepping for the string.
