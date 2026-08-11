@@ -13,6 +13,14 @@ import { gzipSync } from 'node:zlib';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const BUILD = join(ROOT, 'build');
 
+/**
+ * The base the build under inspection was made with. Every absolute URL the app
+ * emits is prefixed by it, so a checker that assumes "" cannot verify a Pages
+ * build — it fails on the service worker path and, worse, passes everything
+ * else against output it never looked at properly.
+ */
+const BASE = process.env.BASE_PATH ?? '';
+
 const results = [];
 let failed = 0;
 
@@ -133,9 +141,35 @@ check('service worker registers with an absolute path', () => {
 	// which resolves to /recipe/sw.js on a deep link and 404s, so a user whose
 	// first visit is a shared link never gets offline capability.
 	const chunks = walk(join(BUILD, '_app')).filter((f) => f.endsWith('.js'));
-	const registers = chunks.some((f) => readFileSync(f, 'utf8').includes('`/sw.js`'));
-	assert(registers, 'no absolute /sw.js registration found — check kit paths.relative');
-	return '/sw.js, scope /';
+	const want = `\`${BASE}/sw.js\``;
+	const registers = chunks.some((f) => readFileSync(f, 'utf8').includes(want));
+	assert(registers, `no absolute ${BASE}/sw.js registration found — check kit paths.relative`);
+	return `${BASE}/sw.js, scope ${BASE || '/'}`;
+});
+
+/**
+ * Jekyll eats `_app/`. Without this file GitHub Pages deploys the HTML and
+ * 404s every script, stylesheet and font it references — a blank page that
+ * looks like a broken app rather than a missing dotfile.
+ */
+check('.nojekyll present for GitHub Pages', () => {
+	assert(existsSync(join(BUILD, '.nojekyll')), 'missing build/.nojekyll — Jekyll will strip _app/');
+	return 'Jekyll disabled';
+});
+
+/**
+ * Guards the false green that hid the base-path failure: `verify:build` was run
+ * against a stale build/ from an earlier, differently-based run and passed all
+ * sixteen checks while the actual build had errored out.
+ */
+check('the build on disk matches the base being verified', () => {
+	const page = readFileSync(join(BUILD, 'index.html'), 'utf8');
+	const assetRef = BASE ? `${BASE}/_app/` : '/_app/';
+	assert(
+		page.includes(assetRef),
+		`index.html has no ${assetRef} reference — build/ was made with a different BASE_PATH than ${JSON.stringify(BASE)}`
+	);
+	return `base ${JSON.stringify(BASE)}`;
 });
 
 check('precache holds no prerendered HTML', () => {

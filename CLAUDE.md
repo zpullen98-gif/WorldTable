@@ -17,12 +17,18 @@ npm run check          # svelte-check
 npm run extract        # re-lift the data literals out of reference/world-table-v1.html
 npm run verify:data    # 38 checks: counts, round-trip, char-sum, slugs, refs
 npm run build:data     # derive + emit src/lib/data/*.json  (gated, idempotent)
-npm run verify:build   # 16 checks against build/
+npm run verify:build   # 18 checks against build/
+npm run build:pages    # the GitHub Pages build (sets BASE_PATH correctly)
 npm run icons          # regenerate PWA icons
 npm run report:tech    # technique coverage ledger (--labels, or a chapter name)
 ```
 
-Deploy to GitHub Pages with `BASE_PATH=/WorldTable npm run build`.
+Deploy to GitHub Pages with `npm run build:pages` — never the raw env prefix.
+On Windows cmd it is a syntax error, and in Git Bash MSYS path conversion
+rewrites the leading slash to `C:/Program Files/Git/WorldTable`, which SvelteKit
+rejects with a message that never mentions your shell. CI does it for you
+(.github/workflows/pages.yml); `.nojekyll` is written by postbuild because
+Jekyll would otherwise strip `_app/` and serve a blank page.
 
 ## The data pipeline
 

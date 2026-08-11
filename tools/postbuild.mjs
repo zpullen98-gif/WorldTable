@@ -13,7 +13,7 @@
  *   404.html       — third copy; GitHub Pages serves it for unknown paths,
  *                    which is how client-only routes work there pre-install
  */
-import { copyFileSync, existsSync } from 'node:fs';
+import { copyFileSync, existsSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -27,4 +27,16 @@ if (!existsSync(src)) {
 
 copyFileSync(src, join(BUILD, 'shell.html'));
 copyFileSync(src, join(BUILD, '404.html'));
-console.log('  postbuild: shell.html + 404.html copied from fallback.html');
+
+/**
+ * .nojekyll — without it GitHub Pages serves nothing that works.
+ *
+ * Pages pipes the site through Jekyll by default, and Jekyll excludes every
+ * path beginning with an underscore. SvelteKit puts EVERY script, stylesheet
+ * and font in `_app/`, so the HTML deploys fine, 404s all of its own assets,
+ * and renders a blank page. The failure looks like a broken app rather than a
+ * missing config file, which is what makes it expensive.
+ */
+writeFileSync(join(BUILD, '.nojekyll'), '');
+
+console.log('  postbuild: shell.html + 404.html copied from fallback.html, .nojekyll written');

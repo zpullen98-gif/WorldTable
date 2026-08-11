@@ -1,0 +1,62 @@
+# Build and publish The World Table to GitHub Pages.
+#
+# build:pages sets BASE_PATH in-process rather than as a shell prefix — see
+# tools/build-pages.mjs for why that matters. verify:build runs with the SAME
+# base, because a checker that assumes "" cannot prove a based build: it fails
+# on the service worker path and passes everything else without looking.
+name: Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it half-published.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # The data pipeline is committed, so this asserts the committed JSON still
+      # matches what the archived original extracts to — a corrupted commit of
+      # recipes.full.json would otherwise deploy silently.
+      - run: npm run verify:data
+
+      - run: npm test
+
+      - run: npm run build:pages
+
+      - run: npm run verify:build
+        env:
+          BASE_PATH: /WorldTable
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

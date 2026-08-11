@@ -21,7 +21,8 @@
 		"test:e2e": "playwright test",
 		"preview:vite": "vite preview",
 		"report:notes": "node tools/report-notes.mjs",
-		"report:tech": "node tools/report-techniques.mjs"
+		"report:tech": "node tools/report-techniques.mjs",
+		"build:pages": "node tools/build-pages.mjs"
 	},
 	"devDependencies": {
 		"@axe-core/playwright": "^4.12.1",
