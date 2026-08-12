@@ -9,6 +9,7 @@
  * would match "butter" from a method step like "butter the dish", which is not
  * the same claim as "this recipe needs butter".
  */
+import { hasWord } from './season.mjs';
 export function derivePantryMap(R, _fullBlobs, PANTRY) {
 	const map = new Map();
 	const items = PANTRY.flatMap((g) => g.items);
@@ -17,7 +18,15 @@ export function derivePantryMap(R, _fullBlobs, PANTRY) {
 		const narrow = `${r.n} ${r.i.join(' ')}`.toLowerCase();
 		const labels = [];
 		for (const it of items) {
-			if (it.k.some((k) => narrow.includes(k))) labels.push(it.l);
+			// hasWord, not includes: a bare substring test made Sage match
+			// SAUsage (35 of its 42 recipes — Feijoada and Jambalaya were "sage
+			// recipes"), Corn match pepperCORNs, Peas match chickPEAS and Milk
+			// match butterMILK. Pantry Match answers "what can I cook from what
+			// is in the fridge", so a false match is a wasted trip to the kitchen.
+			//
+			// LEFT boundary only: the shelf is full of deliberate stems ("cherr"
+			// for cherry/cherries), which a right boundary would break.
+			if (it.k.some((k) => hasWord(narrow, k.toLowerCase()))) labels.push(it.l);
 		}
 		map.set(i, labels);
 	});

@@ -108,3 +108,86 @@ describe('convertLine', () => {
 		expect(convertLine('10cm piece kombu', 'us')).toBe('3.9 in piece kombu');
 	});
 });
+
+/**
+ * Things that are NOT quantities of the dish.
+ *
+ * Every case below was wrong in production, and every one of them prints a
+ * confident number a cook might act on. In a guide, a wrong number is the worst
+ * possible output: it looks like a measurement.
+ */
+describe('scaling leaves alone what does not scale', () => {
+	it('does not resize the pan', () => {
+		// "Butter a 23x33cm pan" was doubling to a 46x66cm pan. Both halves of
+		// the pair must be immune, including the first, which carries no unit.
+		expect(scaleLine('Butter a 23x33cm pan.', 2)).toBe('Butter a 23x33cm pan.');
+		expect(scaleLine('Press into a lined 20x20cm pan', 2)).toBe('Press into a lined 20x20cm pan');
+		expect(scaleLine('2 thick pork loin chops (2.5cm)', 2)).toBe('4 thick pork loin chops (2.5cm)');
+		expect(scaleLine('Oil for frying (cast iron, 2cm deep)', 2)).toBe(
+			'Oil for frying (cast iron, 2cm deep)'
+		);
+	});
+
+	it('does not lengthen a ferment', () => {
+		// Doubling a batch does not double the time it takes to sour.
+		expect(scaleLine('refrigerate 3–5 days, turning daily', 2)).toBe(
+			'refrigerate 3–5 days, turning daily'
+		);
+		// The range separator may be a word, not a dash.
+		expect(scaleLine('marinated 3 TO 5 DAYS in advance', 2)).toBe('marinated 3 TO 5 DAYS in advance');
+		expect(scaleLine('RESTED 2 days minimum', 2)).toBe('RESTED 2 days minimum');
+		// ...while the quantity on the same line still scales.
+		expect(scaleLine('1.5kg beef rump — marinated 3 TO 5 DAYS', 2)).toBe(
+			'3kg beef rump — marinated 3 TO 5 DAYS'
+		);
+	});
+
+	it('distinguishes "each" the per-unit size from "each" the distributive', () => {
+		// Per-unit: the count scales, the size of one does not.
+		expect(scaleLine('2 beef patties (200g each)', 2)).toBe('4 beef patties (200g each)');
+		expect(scaleLine('2 live lobsters, 600g each', 2)).toBe('4 live lobsters, 600g each');
+		// Distributive — "two tablespoons of each of these" — and must scale.
+		// 34 of the corpus's 40 "each" lines are this kind, so a blanket rule
+		// would do more damage than the bug.
+		expect(scaleLine('2 tbsp each soy and mirin, 1 tsp sugar', 2)).toBe(
+			'4 tbsp each soy and mirin, 2 tsp sugar'
+		);
+		expect(scaleLine('1 tsp each sugar, mirin, soy', 2)).toBe('2 tsp each sugar, mirin, soy');
+	});
+
+	it('does not resize a tin you cannot buy', () => {
+		expect(scaleLine('1 can (395g) sweetened condensed milk', 2)).toBe(
+			'2 can (395g) sweetened condensed milk'
+		);
+		expect(scaleLine('1 tin (400g) tomatoes', 2)).toBe('2 tin (400g) tomatoes');
+	});
+
+	/**
+	 * The guard rails. Each of these scaled CORRECTLY before the fix, and the
+	 * obvious implementations of it break them — a blanket "never scale inside
+	 * parentheses" rule breaks all four.
+	 */
+	it('still scales breakdowns, alternatives and equivalences', () => {
+		expect(scaleLine('500g bread flour (450g white + 50g whole wheat)', 2)).toBe(
+			'1000g bread flour (900g white + 100g whole wheat)'
+		);
+		expect(scaleLine('2 cans fava beans (or 400g dried, soaked)', 2)).toBe(
+			'4 cans fava beans (or 800g dried, soaked)'
+		);
+		expect(scaleLine('Juice of 6–8 limes (about 150ml)', 2)).toBe('Juice of 12–16 limes (about 300ml)');
+		expect(scaleLine('600g large prawns (keep 4 heads for the oil)', 2)).toBe(
+			'1200g large prawns (keep 8 heads for the oil)'
+		);
+	});
+});
+
+describe('conversion handles dimension pairs', () => {
+	it('converts both halves, not just the one carrying the unit', () => {
+		// "23x33cm" became "23x13 in" — a tin that does not exist.
+		expect(convertLine('Butter a 23x33cm pan.', 'us')).toBe('Butter a 9.1x13 in pan.');
+		expect(convertLine('a 20x20cm pan', 'us')).toBe('a 7.9x7.9 in pan');
+		expect(convertLine('Roll the dough to a 40x50cm rectangle', 'us')).toBe(
+			'Roll the dough to a 15.7x19.7 in rectangle'
+		);
+	});
+});

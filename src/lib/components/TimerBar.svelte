@@ -15,7 +15,8 @@
 </script>
 
 {#if list.length}
-	<div class="bar" role="status" aria-label="Kitchen timers">
+	<!-- App chrome: a printed recipe should not carry a countdown across it. -->
+	<div class="bar" role="status" aria-label="Kitchen timers" data-print="hide">
 		{#each list as t (t.id)}
 			{@const left = timers.remaining(t)}
 			<div class="timer" class:rang={t.rang}>

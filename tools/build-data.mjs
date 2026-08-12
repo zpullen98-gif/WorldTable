@@ -28,7 +28,7 @@ import { derivePairing } from './derive/pairing.mjs';
 import { deriveTechniques, deriveFilms } from './derive/films.mjs';
 import { fullTechTable, LEXICON_ANCHOR, SUPPLEMENT } from './derive/technique-table.mjs';
 import { buildCrosslinks } from './derive/crosslinks.mjs';
-import { derivePantryMap } from './derive/pantry.mjs';
+import { derivePantryMap, narrowBlob } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
 import { miniOptions } from '../src/lib/search-config.mjs';
 
@@ -159,6 +159,9 @@ const pantryMap = derivePantryMap(R, blobs, PANTRY);
  * notes landed). Method text is where technique terms actually live.
  */
 const linkBlobs = R.map((r) => `${r.n} ${r.c} ${r.i.join(' ')} ${r.m.join(' ')}`.toLowerCase());
+
+/** Name + ingredients only — the original's RTEXT. What the dish CONTAINS. */
+const narrowBlobs = R.map((r) => narrowBlob(r));
 const crosslinks = buildCrosslinks(R, recipeSlugs, D, lexSlugs, linkBlobs);
 
 /**
@@ -225,7 +228,10 @@ R.forEach((r, i) => {
 		diet,
 		costTier: ov.costTier ?? deriveCost(r, blobs[i]),
 		flavorTags: flavor.tags,
-		season: ov.season ?? deriveSeason(blobs[i], SEASON),
+		// Narrow text, like the original's RTEXT and like the pantry matcher:
+		// seasonality is about what is IN the dish. A note remarking that a stew
+		// "eats well against a peach salad" must not make it a summer recipe.
+		season: ov.season ?? deriveSeason(narrowBlobs[i], SEASON, PANTRY),
 		region,
 		source: 'guide',
 		noteChars: effNotes[i].length
@@ -619,6 +625,26 @@ if (worst && linkTotal > 0) {
 	if (untaggedChapters.length) {
 		console.log(`  techniques: chapters with no tagged recipe at all — ${untaggedChapters.join(', ')}`);
 	}
+}
+
+/**
+ * Seasonal produce that resolves to nothing.
+ *
+ * Reported, not failed: "Stone fruit" resolving to zero WAS a bug (the label is
+ * a category no recipe would ever write, and 29 dishes naming peaches, apricots
+ * and cherries had no season at all), but Brussels sprouts, Chard and Figs
+ * resolve to zero because this corpus genuinely contains none of them. The
+ * number moving is the signal worth watching.
+ */
+{
+	const deadProduce = Object.keys(SEASON).filter(
+		(label) => !narrowBlobs.some((b) => deriveSeason(b, { [label]: SEASON[label] }, PANTRY).length)
+	);
+	const seasoned = index.filter((r) => r.season.length).length;
+	console.log(
+		`\n  season: ${seasoned} of ${index.length} recipes carry peak months` +
+			(deadProduce.length ? `; ${deadProduce.length} produce keys match nothing — ${deadProduce.join(', ')}` : '')
+	);
 }
 
 // Note-length backfill tracker.

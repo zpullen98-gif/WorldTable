@@ -31,12 +31,7 @@
       "gently hot",
       "silky"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -758,13 +753,7 @@
       "rich",
       "bright"
     ],
-    "season": [
-      1,
-      2,
-      3,
-      4,
-      12
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -1001,6 +990,9 @@
       "warm-spiced"
     ],
     "season": [
+      6,
+      7,
+      8,
       9,
       10,
       11
@@ -1346,7 +1338,9 @@
       6,
       7,
       8,
-      9
+      9,
+      10,
+      11
     ],
     "region": {
       "kind": "world",
@@ -1560,13 +1554,11 @@
       "nutty-toasted"
     ],
     "season": [
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10
+      1,
+      2,
+      10,
+      11,
+      12
     ],
     "region": {
       "kind": "world",
@@ -1607,13 +1599,7 @@
       "bright",
       "sweet-edged"
     ],
-    "season": [
-      4,
-      5,
-      6,
-      9,
-      10
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -1827,13 +1813,10 @@
       "gently hot"
     ],
     "season": [
-      4,
-      5,
       6,
       7,
       8,
-      9,
-      10
+      9
     ],
     "region": {
       "kind": "world",
@@ -2239,7 +2222,6 @@
       2,
       3,
       4,
-      5,
       6,
       7,
       8,
@@ -2386,10 +2368,10 @@
       "rich"
     ],
     "season": [
-      9,
-      10,
-      11,
-      12
+      6,
+      7,
+      8,
+      9
     ],
     "region": {
       "kind": "world",
@@ -3116,11 +3098,6 @@
       2,
       3,
       4,
-      5,
-      6,
-      9,
-      10,
-      11,
       12
     ],
     "region": {
@@ -3162,11 +3139,7 @@
       "nutty-toasted",
       "gently hot"
     ],
-    "season": [
-      4,
-      5,
-      6
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -3490,11 +3463,7 @@
       "bright",
       "briny"
     ],
-    "season": [
-      4,
-      5,
-      6
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -3703,12 +3672,7 @@
       "aromatic",
       "fiery"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -3838,12 +3802,7 @@
       "smoky",
       "bright"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -4010,13 +3969,10 @@
       "bright"
     ],
     "season": [
-      4,
-      5,
       6,
       7,
       8,
-      9,
-      10
+      9
     ],
     "region": {
       "kind": "world",
@@ -4243,9 +4199,6 @@
       2,
       3,
       4,
-      5,
-      9,
-      10,
       12
     ],
     "region": {
@@ -4468,7 +4421,6 @@
       "charred"
     ],
     "season": [
-      6,
       7,
       8,
       9
@@ -4600,7 +4552,6 @@
       2,
       3,
       4,
-      5,
       12
     ],
     "region": {
@@ -4893,7 +4844,13 @@
       "nutty-toasted",
       "gently hot"
     ],
-    "season": [],
+    "season": [
+      1,
+      2,
+      10,
+      11,
+      12
+    ],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -5077,7 +5034,13 @@
       "herb-fresh",
       "fiery"
     ],
-    "season": [],
+    "season": [
+      1,
+      2,
+      10,
+      11,
+      12
+    ],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -5243,13 +5206,7 @@
       "nutty-toasted",
       "aromatic"
     ],
-    "season": [
-      4,
-      5,
-      6,
-      9,
-      10
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -5386,9 +5343,12 @@
       2,
       3,
       4,
+      5,
       6,
       7,
       8,
+      10,
+      11,
       12
     ],
     "region": {
@@ -5441,6 +5401,7 @@
       8,
       9,
       10,
+      11,
       12
     ],
     "region": {
@@ -5573,9 +5534,6 @@
       2,
       3,
       4,
-      6,
-      7,
-      8,
       12
     ],
     "region": {
@@ -5706,8 +5664,6 @@
       3,
       4,
       5,
-      6,
-      9,
       10,
       11,
       12
@@ -5837,7 +5793,11 @@
       "herb-fresh",
       "earthy"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8
+    ],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -5934,7 +5894,6 @@
       2,
       3,
       4,
-      5,
       6,
       7,
       8,
@@ -6497,12 +6456,6 @@
     "season": [
       1,
       2,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
       10,
       11,
       12
@@ -6635,12 +6588,7 @@
       "briny",
       "rich"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "American Table"
@@ -6680,7 +6628,11 @@
       "gently hot",
       "herb-fresh"
     ],
-    "season": [],
+    "season": [
+      7,
+      8,
+      9
+    ],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -7131,7 +7083,6 @@
       "smoky"
     ],
     "season": [
-      4,
       5,
       6,
       7,
@@ -7447,8 +7398,6 @@
       "aromatic"
     ],
     "season": [
-      4,
-      5,
       6,
       7,
       8
@@ -7551,8 +7500,6 @@
       7,
       8,
       9,
-      10,
-      11,
       12
     ],
     "region": {
@@ -7639,6 +7586,7 @@
       "sweet-edged"
     ],
     "season": [
+      2,
       3,
       4,
       5,
@@ -8149,14 +8097,10 @@
       "tangy-ferment"
     ],
     "season": [
-      1,
-      2,
-      3,
       6,
       7,
       8,
-      9,
-      12
+      9
     ],
     "region": {
       "kind": "world",
@@ -8234,9 +8178,6 @@
       "herb-fresh"
     ],
     "season": [
-      1,
-      2,
-      3,
       6,
       7,
       8,
@@ -8414,13 +8355,7 @@
       "charred",
       "aromatic"
     ],
-    "season": [
-      1,
-      2,
-      3,
-      4,
-      12
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -8979,14 +8914,7 @@
       "smoky",
       "rich"
     ],
-    "season": [
-      4,
-      5,
-      6,
-      9,
-      10,
-      11
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -9289,7 +9217,12 @@
       "floral",
       "silky"
     ],
-    "season": [],
+    "season": [
+      5,
+      6,
+      7,
+      8
+    ],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -9333,10 +9266,10 @@
       2,
       3,
       4,
+      5,
       6,
       7,
       8,
-      9,
       12
     ],
     "region": {
@@ -9376,11 +9309,7 @@
       "rich",
       "herb-fresh"
     ],
-    "season": [
-      4,
-      5,
-      6
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -9457,10 +9386,6 @@
     "season": [
       1,
       2,
-      4,
-      5,
-      6,
-      9,
       10,
       11,
       12
@@ -9668,13 +9593,7 @@
       "rich",
       "herb-fresh"
     ],
-    "season": [
-      1,
-      2,
-      10,
-      11,
-      12
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -9791,12 +9710,7 @@
       "gently hot",
       "umami-deep"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -9889,7 +9803,12 @@
     "season": [
       1,
       2,
-      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
       12
     ],
     "region": {
@@ -10021,12 +9940,7 @@
       "aromatic",
       "bright"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -10201,7 +10115,11 @@
       "floral",
       "nutty-toasted"
     ],
-    "season": [],
+    "season": [
+      10,
+      11,
+      12
+    ],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -10726,11 +10644,6 @@
       1,
       2,
       3,
-      4,
-      5,
-      6,
-      7,
-      8,
       9,
       10,
       11,
@@ -10863,12 +10776,7 @@
       "warm-spiced",
       "nutty-toasted"
     ],
-    "season": [
-      1,
-      2,
-      3,
-      12
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -10947,6 +10855,9 @@
       "floral"
     ],
     "season": [
+      6,
+      7,
+      8,
       9,
       10,
       11
@@ -11036,7 +10947,11 @@
     "flavorTags": [
       "rich"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8
+    ],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -11117,7 +11032,6 @@
       "earthy"
     ],
     "season": [
-      5,
       6,
       7,
       8
@@ -11161,12 +11075,7 @@
       "gently hot",
       "bright"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -11523,6 +11432,10 @@
       2,
       3,
       4,
+      5,
+      6,
+      7,
+      8,
       12
     ],
     "region": {
@@ -11782,9 +11695,6 @@
       2,
       3,
       4,
-      5,
-      6,
-      9,
       10,
       11,
       12
@@ -12044,8 +11954,6 @@
     "season": [
       1,
       2,
-      4,
-      5,
       6,
       7,
       8,
@@ -12314,7 +12222,8 @@
     "season": [
       6,
       7,
-      8
+      8,
+      9
     ],
     "region": {
       "kind": "world",
@@ -12692,8 +12601,6 @@
     "season": [
       1,
       2,
-      4,
-      5,
       6,
       7,
       8,
@@ -13026,9 +12933,6 @@
       6,
       7,
       8,
-      9,
-      10,
-      11,
       12
     ],
     "region": {
@@ -13400,7 +13304,11 @@
     "flavorTags": [
       "rich"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8
+    ],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -13525,9 +13433,6 @@
     "season": [
       1,
       2,
-      6,
-      7,
-      8,
       9,
       10,
       11,
@@ -13796,10 +13701,6 @@
       1,
       2,
       3,
-      5,
-      6,
-      7,
-      8,
       12
     ],
     "region": {
@@ -13934,12 +13835,7 @@
       "earthy",
       "nutty-toasted"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -14615,12 +14511,7 @@
       "warm-spiced",
       "rich"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -14665,6 +14556,9 @@
       2,
       3,
       4,
+      9,
+      10,
+      11,
       12
     ],
     "region": {
@@ -14752,14 +14646,10 @@
       "briny"
     ],
     "season": [
-      1,
-      2,
-      3,
       6,
       7,
       8,
-      9,
-      12
+      9
     ],
     "region": {
       "kind": "atlas",
@@ -14848,12 +14738,9 @@
       "silky"
     ],
     "season": [
-      1,
-      2,
       3,
       4,
-      5,
-      12
+      5
     ],
     "region": {
       "kind": "atlas",
@@ -15464,7 +15351,11 @@
       "floral",
       "sweet-edged"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8
+    ],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -15725,6 +15616,9 @@
       3,
       4,
       5,
+      7,
+      8,
+      9,
       10,
       11
     ],
@@ -15767,12 +15661,7 @@
       "rich",
       "gently hot"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -15890,7 +15779,12 @@
       "clean",
       "simple"
     ],
-    "season": [],
+    "season": [
+      9,
+      10,
+      11,
+      12
+    ],
     "region": {
       "kind": "world",
       "group": "World Cuisines"
@@ -16055,12 +15949,7 @@
       "herb-fresh",
       "charred"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Pacific"
@@ -16182,9 +16071,8 @@
       4,
       5,
       6,
-      9,
-      10,
-      11
+      7,
+      8
     ],
     "region": {
       "kind": "us",
@@ -16412,6 +16300,7 @@
       3,
       4,
       5,
+      6,
       9,
       10,
       11,
@@ -16554,12 +16443,7 @@
       "gently hot",
       "aromatic"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The South"
@@ -16826,12 +16710,7 @@
       "sweet-edged",
       "herb-fresh"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The South"
@@ -17137,15 +17016,10 @@
       "sweet-edged"
     ],
     "season": [
-      1,
-      2,
-      3,
-      4,
       6,
       7,
       8,
-      9,
-      12
+      9
     ],
     "region": {
       "kind": "us",
@@ -17425,12 +17299,7 @@
       "nutty-toasted",
       "rich"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -17470,7 +17339,12 @@
       "rich",
       "earthy"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8,
+      9
+    ],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -17548,12 +17422,7 @@
       "rich",
       "floral"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -17593,9 +17462,13 @@
       "bright"
     ],
     "season": [
+      4,
+      5,
       6,
       7,
-      8
+      8,
+      10,
+      11
     ],
     "region": {
       "kind": "atlas",
@@ -17775,9 +17648,10 @@
       "aromatic"
     ],
     "season": [
-      4,
-      5,
-      6
+      6,
+      7,
+      8,
+      9
     ],
     "region": {
       "kind": "atlas",
@@ -17819,8 +17693,6 @@
       "gently hot"
     ],
     "season": [
-      4,
-      5,
       6,
       7,
       8,
@@ -18223,14 +18095,15 @@
       "umami-deep"
     ],
     "season": [
-      4,
-      5,
+      1,
+      2,
       6,
       7,
       8,
       9,
       10,
-      11
+      11,
+      12
     ],
     "region": {
       "kind": "atlas",
@@ -18276,6 +18149,10 @@
       2,
       3,
       4,
+      5,
+      6,
+      9,
+      10,
       12
     ],
     "region": {
@@ -18593,6 +18470,7 @@
       8,
       9,
       10,
+      11,
       12
     ],
     "region": {
@@ -19198,11 +19076,11 @@
       "fiery"
     ],
     "season": [
-      4,
-      5,
-      6,
-      9,
-      10
+      1,
+      2,
+      10,
+      11,
+      12
     ],
     "region": {
       "kind": "atlas",
@@ -19244,13 +19122,10 @@
       "fiery"
     ],
     "season": [
-      4,
-      5,
       6,
       7,
       8,
-      9,
-      10
+      9
     ],
     "region": {
       "kind": "atlas",
@@ -19344,13 +19219,10 @@
       "umami-deep"
     ],
     "season": [
-      4,
-      5,
       6,
       7,
       8,
-      9,
-      10
+      9
     ],
     "region": {
       "kind": "atlas",
@@ -19438,7 +19310,11 @@
       "herb-fresh",
       "briny"
     ],
-    "season": [],
+    "season": [
+      9,
+      10,
+      11
+    ],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -19477,7 +19353,11 @@
       "sweet-edged",
       "herb-fresh"
     ],
-    "season": [],
+    "season": [
+      9,
+      10,
+      11
+    ],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -19517,7 +19397,11 @@
       "earthy",
       "umami-deep"
     ],
-    "season": [],
+    "season": [
+      7,
+      8,
+      9
+    ],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -19555,12 +19439,7 @@
       "rich",
       "herb-fresh"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -19789,10 +19668,6 @@
     "season": [
       1,
       2,
-      6,
-      7,
-      8,
-      9,
       10,
       11,
       12
@@ -19880,7 +19755,11 @@
       "umami-deep",
       "warm-spiced"
     ],
-    "season": [],
+    "season": [
+      9,
+      10,
+      11
+    ],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -19971,12 +19850,7 @@
       "rich",
       "aromatic"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -20109,9 +19983,7 @@
       6,
       7,
       8,
-      9,
-      10,
-      11
+      9
     ],
     "region": {
       "kind": "atlas",
@@ -20419,10 +20291,6 @@
       2,
       3,
       4,
-      6,
-      7,
-      8,
-      9,
       12
     ],
     "region": {
@@ -20693,14 +20561,10 @@
       "umami-deep"
     ],
     "season": [
-      1,
-      2,
-      3,
       6,
       7,
       8,
-      9,
-      12
+      9
     ],
     "region": {
       "kind": "atlas",
@@ -20790,13 +20654,7 @@
       "aromatic",
       "smoky"
     ],
-    "season": [
-      4,
-      5,
-      6,
-      9,
-      10
-    ],
+    "season": [],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -20836,15 +20694,7 @@
       "charred",
       "sweet-edged"
     ],
-    "season": [
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
+    "season": [],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -20884,12 +20734,7 @@
       "rich",
       "herb-fresh"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -20980,8 +20825,6 @@
       2,
       3,
       4,
-      10,
-      11,
       12
     ],
     "region": {
@@ -21028,10 +20871,6 @@
       3,
       4,
       5,
-      6,
-      7,
-      8,
-      9,
       10,
       11,
       12
@@ -21786,12 +21625,7 @@
       "charred",
       "sweet-edged"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -21869,12 +21703,7 @@
       "earthy",
       "floral"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -22035,12 +21864,7 @@
       "sweet-edged",
       "floral"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "atlas",
       "group": "The Atlases"
@@ -22084,10 +21908,7 @@
       3,
       4,
       5,
-      6,
-      9,
-      10,
-      11
+      6
     ],
     "region": {
       "kind": "atlas",
@@ -22250,10 +22071,6 @@
       2,
       3,
       4,
-      5,
-      6,
-      9,
-      10,
       12
     ],
     "region": {
@@ -22299,10 +22116,6 @@
       2,
       3,
       4,
-      6,
-      7,
-      8,
-      9,
       12
     ],
     "region": {
@@ -22438,10 +22251,6 @@
       2,
       3,
       4,
-      5,
-      6,
-      7,
-      8,
       12
     ],
     "region": {
@@ -22674,9 +22483,6 @@
       "rich"
     ],
     "season": [
-      6,
-      7,
-      8,
       9,
       10,
       11
@@ -22772,9 +22578,6 @@
       "sweet-edged"
     ],
     "season": [
-      6,
-      7,
-      8,
       9,
       10,
       11
@@ -22860,12 +22663,7 @@
       "sweet-edged",
       "fiery"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "New England"
@@ -23125,12 +22923,7 @@
       "rich",
       "earthy"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "New England"
@@ -23175,9 +22968,6 @@
       2,
       3,
       4,
-      6,
-      7,
-      8,
       9,
       10,
       11,
@@ -23497,12 +23287,7 @@
       "rich",
       "bright"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "New England"
@@ -23540,12 +23325,7 @@
       "briny",
       "rich"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "New England"
@@ -23882,10 +23662,6 @@
       1,
       2,
       3,
-      5,
-      6,
-      7,
-      8,
       12
     ],
     "region": {
@@ -23975,12 +23751,7 @@
       "herb-fresh",
       "sweet-edged"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "New England"
@@ -24399,10 +24170,6 @@
       2,
       3,
       4,
-      6,
-      7,
-      8,
-      9,
       12
     ],
     "region": {
@@ -25017,12 +24784,7 @@
       "clean",
       "simple"
     ],
-    "season": [
-      4,
-      5,
-      10,
-      11
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
@@ -25388,7 +25150,11 @@
     "flavorTags": [
       "charred"
     ],
-    "season": [],
+    "season": [
+      7,
+      8,
+      9
+    ],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
@@ -25429,14 +25195,10 @@
       "sweet-edged"
     ],
     "season": [
-      4,
-      5,
       6,
       7,
       8,
-      9,
-      10,
-      11
+      9
     ],
     "region": {
       "kind": "us",
@@ -25607,13 +25369,7 @@
     "flavorTags": [
       "earthy"
     ],
-    "season": [
-      1,
-      2,
-      10,
-      11,
-      12
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
@@ -25687,7 +25443,11 @@
     "flavorTags": [
       "rich"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8
+    ],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
@@ -25769,9 +25529,7 @@
       6,
       7,
       8,
-      9,
-      10,
-      11
+      9
     ],
     "region": {
       "kind": "us",
@@ -25942,12 +25700,7 @@
       "warm-spiced",
       "sweet-edged"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
@@ -26085,6 +25838,7 @@
       5,
       6,
       7,
+      8,
       12
     ],
     "region": {
@@ -26216,7 +25970,6 @@
       7,
       8,
       9,
-      10,
       12
     ],
     "region": {
@@ -26653,12 +26406,7 @@
       "herb-fresh",
       "aromatic"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
@@ -26703,6 +26451,9 @@
       2,
       3,
       4,
+      7,
+      8,
+      9,
       12
     ],
     "region": {
@@ -26749,9 +26500,6 @@
       2,
       3,
       4,
-      5,
-      10,
-      11,
       12
     ],
     "region": {
@@ -26921,12 +26669,7 @@
     "flavorTags": [
       "herb-fresh"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
@@ -27433,12 +27176,7 @@
     "flavorTags": [
       "rich"
     ],
-    "season": [
-      1,
-      2,
-      3,
-      12
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
@@ -27568,13 +27306,7 @@
       "bright",
       "rich"
     ],
-    "season": [
-      4,
-      5,
-      6,
-      9,
-      10
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
@@ -27733,15 +27465,7 @@
       "floral",
       "silky"
     ],
-    "season": [
-      5,
-      6,
-      7,
-      9,
-      10,
-      11,
-      12
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "Mid-Atlantic"
@@ -27873,7 +27597,6 @@
       "charred"
     ],
     "season": [
-      6,
       7,
       8,
       9
@@ -27920,7 +27643,6 @@
     "season": [
       1,
       2,
-      6,
       7,
       8,
       9,
@@ -28011,9 +27733,7 @@
       6,
       7,
       8,
-      9,
-      10,
-      11
+      9
     ],
     "region": {
       "kind": "us",
@@ -28314,12 +28034,7 @@
       "umami-deep",
       "aromatic"
     ],
-    "season": [
-      1,
-      2,
-      3,
-      12
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The South"
@@ -29079,7 +28794,11 @@
       "warm-spiced",
       "floral"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8
+    ],
     "region": {
       "kind": "us",
       "group": "The South"
@@ -29339,7 +29058,11 @@
       "briny",
       "aromatic"
     ],
-    "season": [],
+    "season": [
+      7,
+      8,
+      9
+    ],
     "region": {
       "kind": "us",
       "group": "The South"
@@ -29598,13 +29321,6 @@
       2,
       3,
       4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
       12
     ],
     "region": {
@@ -30392,7 +30108,11 @@
       "warm-spiced",
       "charred"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8
+    ],
     "region": {
       "kind": "us",
       "group": "The South"
@@ -31150,13 +30870,7 @@
       "aromatic",
       "bright"
     ],
-    "season": [
-      1,
-      2,
-      3,
-      4,
-      12
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The South"
@@ -31238,12 +30952,7 @@
       "silky",
       "bright"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The South"
@@ -31282,12 +30991,7 @@
       "gently hot",
       "umami-deep"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The South"
@@ -31370,14 +31074,7 @@
       "rich",
       "warm-spiced"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Midwest"
@@ -31456,7 +31153,13 @@
       "earthy",
       "nutty-toasted"
     ],
-    "season": [],
+    "season": [
+      1,
+      2,
+      10,
+      11,
+      12
+    ],
     "region": {
       "kind": "us",
       "group": "The Midwest"
@@ -31626,9 +31329,6 @@
       "warm-spiced"
     ],
     "season": [
-      6,
-      7,
-      8,
       9,
       10,
       11
@@ -32358,12 +32058,7 @@
     "flavorTags": [
       "rich"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Midwest"
@@ -32843,9 +32538,6 @@
       2,
       3,
       4,
-      6,
-      7,
-      8,
       9,
       10,
       11,
@@ -32937,6 +32629,10 @@
       1,
       2,
       3,
+      5,
+      6,
+      7,
+      8,
       12
     ],
     "region": {
@@ -33021,6 +32717,8 @@
       4,
       5,
       6,
+      7,
+      8,
       9,
       10,
       11
@@ -33063,12 +32761,7 @@
       "gently hot",
       "umami-deep"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Midwest"
@@ -33145,7 +32838,13 @@
       "rich",
       "tangy-ferment"
     ],
-    "season": [],
+    "season": [
+      1,
+      2,
+      10,
+      11,
+      12
+    ],
     "region": {
       "kind": "us",
       "group": "The Midwest"
@@ -33352,7 +33051,6 @@
       1,
       2,
       3,
-      5,
       6,
       7,
       8,
@@ -33680,12 +33378,7 @@
     "flavorTags": [
       "bright"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Midwest"
@@ -34597,12 +34290,7 @@
       "gently hot",
       "bright"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Midwest"
@@ -34810,6 +34498,9 @@
       "floral"
     ],
     "season": [
+      6,
+      7,
+      8,
       9,
       10,
       11
@@ -35235,6 +34926,9 @@
       "floral"
     ],
     "season": [
+      6,
+      7,
+      8,
       9,
       10,
       11
@@ -35649,14 +35343,15 @@
       "earthy"
     ],
     "season": [
-      4,
-      5,
+      1,
+      2,
       6,
       7,
       8,
       9,
       10,
-      11
+      11,
+      12
     ],
     "region": {
       "kind": "us",
@@ -35779,6 +35474,9 @@
       2,
       3,
       4,
+      6,
+      7,
+      8,
       12
     ],
     "region": {
@@ -36365,7 +36063,11 @@
       "warm-spiced",
       "charred"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8
+    ],
     "region": {
       "kind": "us",
       "group": "The Plains"
@@ -36621,7 +36323,11 @@
       "earthy",
       "warm-spiced"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8
+    ],
     "region": {
       "kind": "us",
       "group": "The Plains"
@@ -36787,12 +36493,7 @@
       "rich",
       "gently hot"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Plains"
@@ -37291,12 +36992,7 @@
       "earthy",
       "fiery"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Southwest"
@@ -38077,7 +37773,12 @@
       "aromatic",
       "fiery"
     ],
-    "season": [],
+    "season": [
+      6,
+      7,
+      8,
+      9
+    ],
     "region": {
       "kind": "us",
       "group": "The Southwest"
@@ -38163,9 +37864,6 @@
       2,
       3,
       4,
-      5,
-      10,
-      11,
       12
     ],
     "region": {
@@ -38683,9 +38381,7 @@
       6,
       7,
       8,
-      9,
-      10,
-      11
+      9
     ],
     "region": {
       "kind": "us",
@@ -39073,7 +38769,11 @@
     "flavorTags": [
       "rich"
     ],
-    "season": [],
+    "season": [
+      7,
+      8,
+      9
+    ],
     "region": {
       "kind": "us",
       "group": "The Southwest"
@@ -39122,7 +38822,6 @@
       7,
       8,
       9,
-      10,
       12
     ],
     "region": {
@@ -39294,12 +38993,7 @@
       "sweet-edged",
       "floral"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Southwest"
@@ -39381,12 +39075,7 @@
     "flavorTags": [
       "nutty-toasted"
     ],
-    "season": [
-      5,
-      6,
-      7,
-      8
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Southwest"
@@ -39423,12 +39112,7 @@
     "flavorTags": [
       "rich"
     ],
-    "season": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Mountain West"
@@ -39510,7 +39194,6 @@
       2,
       3,
       4,
-      5,
       6,
       7,
       8,
@@ -39554,12 +39237,7 @@
       "rich",
       "floral"
     ],
-    "season": [
-      5,
-      6,
-      7,
-      8
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Mountain West"
@@ -39608,7 +39286,6 @@
       7,
       8,
       9,
-      10,
       12
     ],
     "region": {
@@ -39691,12 +39368,7 @@
     "flavorTags": [
       "rich"
     ],
-    "season": [
-      5,
-      6,
-      7,
-      8
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Mountain West"
@@ -39817,7 +39489,6 @@
       "bright"
     ],
     "season": [
-      4,
       5,
       6,
       7,
@@ -39916,8 +39587,6 @@
       7,
       8,
       9,
-      10,
-      11,
       12
     ],
     "region": {
@@ -39959,12 +39628,7 @@
       "herb-fresh",
       "warm-spiced"
     ],
-    "season": [
-      4,
-      5,
-      10,
-      11
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Mountain West"
@@ -40489,10 +40153,6 @@
       2,
       3,
       4,
-      5,
-      6,
-      7,
-      8,
       12
     ],
     "region": {
@@ -40666,6 +40326,9 @@
       3,
       4,
       5,
+      9,
+      10,
+      11,
       12
     ],
     "region": {
@@ -40705,12 +40368,7 @@
       "clean",
       "simple"
     ],
-    "season": [
-      4,
-      5,
-      10,
-      11
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Pacific"
@@ -41148,7 +40806,6 @@
       2,
       3,
       4,
-      5,
       6,
       7,
       8,
@@ -41400,7 +41057,11 @@
       "herb-fresh",
       "umami-deep"
     ],
-    "season": [],
+    "season": [
+      9,
+      10,
+      11
+    ],
     "region": {
       "kind": "us",
       "group": "The Pacific"
@@ -41531,13 +41192,7 @@
       "bright",
       "sweet-edged"
     ],
-    "season": [
-      4,
-      5,
-      6,
-      9,
-      10
-    ],
+    "season": [],
     "region": {
       "kind": "us",
       "group": "The Pacific"
@@ -41889,9 +41544,7 @@
       6,
       7,
       8,
-      9,
-      10,
-      11
+      9
     ],
     "region": {
       "kind": "us",

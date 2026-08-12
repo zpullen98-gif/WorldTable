@@ -136,6 +136,9 @@ test.describe('timers outlive the screen that started them', () => {
 
 	test('several timers run at once, and an expired one asks to be dismissed', async ({ page }) => {
 		await goto(page, '/');
+		// One long-running, one whose deadline is already in the PAST. No wall-clock
+		// race: a deadline that passed while the tab was closed is restored as rung,
+		// which is the behaviour that answers "is the rice done?" after a reload.
 		await page.evaluate(() => {
 			localStorage.setItem(
 				'wt.timers.v1',
@@ -143,7 +146,7 @@ test.describe('timers outlive the screen that started them', () => {
 					schemaVersion: 1,
 					timers: [
 						{ id: 'a', label: 'The braise', endsAt: Date.now() + 600_000, paused: null, rang: false },
-						{ id: 'b', label: 'Rice', endsAt: Date.now() + 1500, paused: null, rang: false }
+						{ id: 'b', label: 'Rice', endsAt: Date.now() - 5_000, paused: null, rang: false }
 					]
 				})
 			);
@@ -151,8 +154,8 @@ test.describe('timers outlive the screen that started them', () => {
 		await goto(page, '/');
 
 		await expect(page.locator('.bar .timer')).toHaveCount(2);
-		// The short one rings where you are, not only inside cook mode.
-		await expect(page.locator('.bar .timer.rang')).toHaveCount(1, { timeout: 8000 });
+		// It rings where you are, not only inside cook mode.
+		await expect(page.locator('.bar .timer.rang')).toHaveCount(1);
 		await expect(page.locator('.bar .timer.rang')).toContainText('Rice');
 
 		await page.getByRole('button', { name: 'Dismiss' }).click();
