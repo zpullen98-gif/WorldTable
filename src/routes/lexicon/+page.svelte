@@ -114,6 +114,13 @@
 						: right >= 5
 							? 'Stage complete — hit the flashcards on what you missed.'
 							: 'Back to prep, chef — filter the category and study before the next round.';
+			// Contract with the OOT monorepo's shared/oot-log.js (hookTable).
+			if (typeof window !== 'undefined')
+				window.dispatchEvent(
+					new CustomEvent('oot:round-complete', {
+						detail: { kind: 'quiz', right, of: QUIZ_LENGTH }
+					})
+				);
 			quiz = null;
 			return;
 		}
