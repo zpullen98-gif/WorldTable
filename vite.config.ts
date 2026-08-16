@@ -122,6 +122,36 @@ export default defineConfig({
 				 * Prerendered HTML serves the first visit, before the worker installs.
 				 */
 				navigateFallbackDenylist: [/^\/api\//],
+				/**
+				 * /shared/ belongs to Outside Of Time, the site this build is a wing
+				 * of, and sits outside this project entirely — so the glob cannot see
+				 * it and the precache manifest can never list it. Without a rule here
+				 * the four shared scripts (config, auth, gate, return chip) are the
+				 * only same-origin requests this app makes that fail offline, which
+				 * would leave the wing unable to answer "is this reader signed in and
+				 * what have they paid for" on exactly the trip-and-tunnel journeys the
+				 * offline shell exists for.
+				 *
+				 * Runtime rather than additionalManifestEntries deliberately: precache
+				 * install is atomic, so listing a file this repo does not own would
+				 * mean a missing sibling directory costs the entire offline shell.
+				 * StaleWhileRevalidate caches on first use and degrades to nothing
+				 * worse than today if the files are absent.
+				 *
+				 * The cache name is prefixed oot- so the sibling wings' activate
+				 * handlers, which reap only their own prefix, leave it alone.
+				 */
+				runtimeCaching: [
+					{
+						urlPattern: ({ url, sameOrigin }) =>
+							sameOrigin && url.pathname.startsWith('/shared/'),
+						handler: 'StaleWhileRevalidate',
+						options: {
+							cacheName: 'oot-shared-v1',
+							expiration: { maxEntries: 16, maxAgeSeconds: 60 * 60 * 24 * 90 }
+						}
+					}
+				],
 				cleanupOutdatedCaches: true,
 				clientsClaim: true,
 				skipWaiting: false
