@@ -12,7 +12,7 @@
 import { browser } from '$app/environment';
 import type { Recipe, RecipeSummary } from '../types';
 import { EMPTY_SESSION, loadSession, saveSession, debounce, type SessionState } from '../persistence/db';
-import { mergeSessions } from '../persistence/state';
+import { mergeSessions, type MenuDish } from '../persistence/state';
 
 class SessionStore {
 	#s = $state<SessionState>(structuredClone(EMPTY_SESSION));
@@ -175,6 +175,27 @@ class SessionStore {
 
 	removeFamilyRecipe(slug: string) {
 		this.#s.familyRecipes = this.#s.familyRecipes.filter((r) => r.slug !== slug);
+		this.#persistNow();
+	}
+
+	/* ---- the kitchen's menu -------------------------------------------- */
+
+	get menuDishes(): MenuDish[] {
+		return this.#s.menuDishes;
+	}
+
+	addMenuDish(d: MenuDish) {
+		this.#s.menuDishes = [...this.#s.menuDishes, d];
+		this.#persistNow();
+	}
+
+	updateMenuDish(d: MenuDish) {
+		this.#s.menuDishes = this.#s.menuDishes.map((e) => (e.id === d.id ? d : e));
+		this.#persistNow();
+	}
+
+	removeMenuDish(id: string) {
+		this.#s.menuDishes = this.#s.menuDishes.filter((d) => d.id !== id);
 		this.#persistNow();
 	}
 

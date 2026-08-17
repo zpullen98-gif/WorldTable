@@ -78,6 +78,9 @@ export function describeImport(incoming: Partial<SessionState>, current: Session
 	const newFamily = (incoming.familyRecipes ?? []).filter(
 		(r) => !current.familyRecipes.some((e) => e.slug === r.slug)
 	).length;
+	const newDishes = (incoming.menuDishes ?? []).filter(
+		(d) => d && d.id && !(current.menuDishes ?? []).some((e) => e.id === d.id)
+	).length;
 
 	const parts: string[] = [];
 	if (newPins) parts.push(`${newPins} new pinned ${newPins === 1 ? 'dish' : 'dishes'}`);
@@ -85,5 +88,6 @@ export function describeImport(incoming: Partial<SessionState>, current: Session
 	if (overwritten) parts.push(`${overwritten} ${overwritten === 1 ? 'note' : 'notes'} replaced`);
 	if (newPantry) parts.push(`${newPantry} pantry ${newPantry === 1 ? 'item' : 'items'}`);
 	if (newFamily) parts.push(`${newFamily} family ${newFamily === 1 ? 'recipe' : 'recipes'}`);
+	if (newDishes) parts.push(`${newDishes} menu ${newDishes === 1 ? 'dish' : 'dishes'}`);
 	return parts.length ? parts.join(', ') : 'nothing new — this file matches what you already have';
 }

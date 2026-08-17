@@ -72,6 +72,44 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 		const out = mergeSessions(live(), { schemaVersion: 0 } as Partial<SessionState>);
 		expect(out.schemaVersion).toBe(CURRENT_VERSION);
 	});
+
+	/* The Kitchen's Menu rides the same rules: named in the merge, present in
+	 * the summary, and a pre-feature file (no menuDishes at all) changes nothing. */
+	const dish = (id: string, name: string, ts: number) => ({
+		id, name, section: 'Mains', description: '', ingredients: [], allergens: [], price: '', ts
+	});
+
+	it('keeps live menu dishes through an import that carries none', () => {
+		const mine = { ...live(), menuDishes: [dish('d-aaa', 'The Halibut', 100)] };
+		const out = mergeSessions(mine, { ...structuredClone(EMPTY_SESSION) });
+		expect(out.menuDishes).toHaveLength(1);
+	});
+
+	it('keeps live menu dishes through a PRE-FEATURE file with no menuDishes field', () => {
+		const mine = { ...live(), menuDishes: [dish('d-aaa', 'The Halibut', 100)] };
+		const legacy = structuredClone(EMPTY_SESSION) as Partial<SessionState>;
+		delete legacy.menuDishes;
+		const out = mergeSessions(mine, legacy);
+		expect(out.menuDishes).toHaveLength(1);
+	});
+
+	it('unions menu dishes by id, the newer edit winning', () => {
+		const mine = { ...live(), menuDishes: [dish('d-aaa', 'The Halibut', 100)] };
+		const out = mergeSessions(mine, {
+			menuDishes: [dish('d-aaa', 'The Halibut, renamed', 200), dish('d-bbb', 'The Duck', 50)]
+		});
+		expect(out.menuDishes).toHaveLength(2);
+		expect(out.menuDishes.find((d) => d.id === 'd-aaa')?.name).toBe('The Halibut, renamed');
+	});
+
+	it('describeImport counts incoming menu dishes', () => {
+		const mine = { ...live(), menuDishes: [dish('d-aaa', 'The Halibut', 100)] };
+		const summary = describeImport(
+			{ menuDishes: [dish('d-aaa', 'Same', 1), dish('d-bbb', 'The Duck', 2)] },
+			mine
+		);
+		expect(summary).toContain('1 menu dish');
+	});
 });
 
 describe('importLegacyCode (the WT1. base64 format)', () => {

@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import { bySlug, formatTime, recipeHref, recipes, TOTALS } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
+	import type { MenuDish } from '$lib/persistence/state';
 	import { buildExport, download, parseImport, describeImport } from '$lib/persistence/portable';
 	import Ornament from '$lib/components/Ornament.svelte';
 
@@ -97,6 +98,68 @@
 
 	/* ---- cellar --------------------------------------------------------- */
 	let bottle = $state('');
+
+	/* ---- the kitchen's menu --------------------------------------------- *
+	 * The menu the venue actually serves — not pinned guide recipes but the
+	 * house's own dishes, priced and allergen-marked. Kept in its own
+	 * SessionState field (a menu item is not a Recipe) and drilled at
+	 * /menu/quiz once four dishes exist.
+	 */
+	const ALLERGENS = [
+		'Gluten', 'Crustaceans', 'Eggs', 'Fish', 'Peanuts', 'Soy', 'Milk',
+		'Tree nuts', 'Celery', 'Mustard', 'Sesame', 'Sulphites', 'Lupin', 'Molluscs'
+	];
+
+	let dishForm = $state<null | {
+		id: string | null; name: string; section: string; description: string;
+		ingredients: string; allergens: string[]; price: string;
+	}>(null);
+
+	function mintDishId() {
+		let s = 'd-';
+		while (s.length < 10) s += Math.floor(Math.random() * 36).toString(36);
+		return s;
+	}
+	function newDish() {
+		dishForm = { id: null, name: '', section: '', description: '', ingredients: '', allergens: [], price: '' };
+	}
+	function editDish(d: MenuDish) {
+		dishForm = {
+			id: d.id, name: d.name, section: d.section, description: d.description,
+			ingredients: d.ingredients.join('\n'), allergens: [...d.allergens], price: d.price
+		};
+	}
+	function toggleAllergen(a: string) {
+		if (!dishForm) return;
+		const i = dishForm.allergens.indexOf(a);
+		if (i < 0) dishForm.allergens.push(a);
+		else dishForm.allergens.splice(i, 1);
+	}
+	function saveDish() {
+		if (!dishForm || !dishForm.name.trim()) return;
+		const rec: MenuDish = {
+			id: dishForm.id ?? mintDishId(),
+			name: dishForm.name.trim(),
+			section: dishForm.section.trim() || 'The Menu',
+			description: dishForm.description.trim(),
+			ingredients: dishForm.ingredients.split('\n').map((s) => s.trim()).filter(Boolean),
+			allergens: [...dishForm.allergens],
+			price: dishForm.price.trim(),
+			ts: Date.now()
+		};
+		if (dishForm.id) session.updateMenuDish(rec);
+		else session.addMenuDish(rec);
+		dishForm = null;
+	}
+	const dishSections = $derived.by(() => {
+		const m = new Map<string, MenuDish[]>();
+		for (const d of session.menuDishes) {
+			const k = d.section || 'The Menu';
+			if (!m.has(k)) m.set(k, []);
+			m.get(k)!.push(d);
+		}
+		return [...m.entries()].map(([section, items]) => ({ section, items }));
+	});
 
 	/* ---- import / export ------------------------------------------------ */
 	let importMsg = $state('');
@@ -266,6 +329,76 @@
 			{/if}
 		</section>
 	{/if}
+
+	<section class="kitchen">
+		<h2 class="sec">The Kitchen’s Menu</h2>
+		<p class="hint">
+			The menu the house actually serves — dish by dish, priced and allergen-marked. Saved on this
+			device and carried in the session export like everything else here.
+			{#if session.menuDishes.length >= 4}
+				<a href="{base}/menu/quiz">Drill this menu ▸</a>
+			{:else if session.menuDishes.length}
+				The drill opens at four dishes — {4 - session.menuDishes.length} more to go.
+			{/if}
+		</p>
+
+		{#if !dishForm}
+			<button class="chip" onclick={newDish}>Add a dish</button>
+		{:else}
+			<div class="dishform" data-print="hide">
+				<div class="frow">
+					<input placeholder="Dish name" bind:value={dishForm.name} aria-label="Dish name" />
+					<input placeholder="Section — Starters, Mains…" bind:value={dishForm.section} aria-label="Menu section" />
+					<input class="short" placeholder="Price" bind:value={dishForm.price} aria-label="Price" />
+				</div>
+				<textarea rows="2" placeholder="The menu description — what the guest reads." bind:value={dishForm.description} aria-label="Menu description"></textarea>
+				<textarea rows="3" placeholder="Ingredients, one per line." bind:value={dishForm.ingredients} aria-label="Ingredients, one per line"></textarea>
+				<div class="allergens" role="group" aria-label="Allergens">
+					{#each ALLERGENS as a (a)}
+						<label class="al">
+							<input type="checkbox" checked={dishForm.allergens.includes(a)} onchange={() => toggleAllergen(a)} />
+							{a}
+						</label>
+					{/each}
+				</div>
+				<div class="frow">
+					<button class="chip" onclick={saveDish} disabled={!dishForm.name.trim()}>
+						{dishForm.id ? 'Save the dish' : 'Add to the menu'}
+					</button>
+					<button class="chip" onclick={() => (dishForm = null)}>Cancel</button>
+				</div>
+			</div>
+		{/if}
+
+		{#if !session.menuDishes.length && !dishForm}
+			<p class="empty">
+				Nothing entered yet. Start with the dish the kitchen is proudest of — four dishes in, the
+				menu becomes drillable.
+			</p>
+		{/if}
+
+		{#each dishSections as g (g.section)}
+			<div class="dishgroup">
+				<h3 class="eyebrow">{g.section}</h3>
+				<ul class="dishes">
+					{#each g.items as d (d.id)}
+						<li>
+							<div class="dishline">
+								<span class="nm">{d.name}</span>
+								{#if d.price}<span class="pr">{d.price}</span>{/if}
+							</div>
+							{#if d.description}<p class="dd">{d.description}</p>{/if}
+							{#if d.allergens.length}<p class="da">Allergens: {d.allergens.join(', ')}</p>{/if}
+							<div class="dishtools" data-print="hide">
+								<button class="chip" onclick={() => editDish(d)}>Edit</button>
+								<button class="chip" onclick={() => session.removeMenuDish(d.id)}>Remove</button>
+							</div>
+						</li>
+					{/each}
+				</ul>
+			</div>
+		{/each}
+	</section>
 </div>
 
 <style>
@@ -314,4 +447,25 @@
 
 	.bottlenote { margin-top: 10px; font-style: italic; color: var(--ink-soft); max-width: var(--measure); }
 	.empty { padding: 60px 20px; text-align: center; color: var(--muted); font-style: italic; }
+
+	.kitchen .hint a { color: inherit; }
+	.dishform { display: grid; gap: 10px; margin: 12px 0 18px; max-width: 640px; }
+	.dishform .frow { display: flex; flex-wrap: wrap; gap: 8px; }
+	.dishform input, .dishform textarea {
+		border: 1px solid var(--line); background: var(--card); border-radius: var(--radius);
+		padding: 8px 12px; font-size: 14.5px; font-family: inherit; flex: 1; min-width: 140px;
+	}
+	.dishform .short { flex: 0 1 110px; min-width: 90px; }
+	.allergens { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+	.al { display: flex; gap: 6px; align-items: baseline; font-size: var(--t-small); cursor: pointer; }
+	.al input { accent-color: var(--leaf); }
+	.dishgroup { margin-bottom: 14px; }
+	.dishes { list-style: none; }
+	.dishes li { padding: 8px 0; border-bottom: 1px dotted var(--line); }
+	.dishline { display: flex; gap: 12px; align-items: baseline; }
+	.dishline .nm { font-family: var(--display); font-size: 18px; }
+	.dishline .pr { margin-left: auto; font-size: var(--t-small); color: var(--muted); font-variant-numeric: oldstyle-nums; }
+	.dishes .dd { font-size: 14.5px; color: var(--ink-soft); max-width: var(--measure); }
+	.dishes .da { font-size: var(--t-micro); color: var(--muted); }
+	.dishtools { display: flex; gap: 8px; margin-top: 6px; }
 </style>

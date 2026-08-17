@@ -12,6 +12,26 @@ import type { Recipe } from '../types';
 
 export const CURRENT_VERSION = 1;
 
+/**
+ * A dish on the venue's own menu — The Kitchen's Menu. Deliberately NOT a
+ * Recipe: recipes feed the pantry matcher, search and cook mode, and a menu
+ * item is a different thing (a price, a section, an allergen line — no method,
+ * no timings). Own sibling field, own shape.
+ */
+export interface MenuDish {
+	/** 'd-' + base36, minted at first save, never recomputed. */
+	id: string;
+	name: string;
+	/** Menu section — Starters, Mains… — and the quiz's distractor category. */
+	section: string;
+	description: string;
+	ingredients: string[];
+	allergens: string[];
+	price: string;
+	/** Last edit, ms epoch; the import-merge tiebreak. */
+	ts: number;
+}
+
 export interface SessionState {
 	schemaVersion: number;
 	/** Recipe slugs — never array indices. See stores/session.svelte.ts. */
@@ -22,6 +42,7 @@ export interface SessionState {
 	shoppingChecks: Record<string, string[]>;
 	cookedLog: Array<{ slug: string; at: number }>;
 	familyRecipes: Recipe[];
+	menuDishes: MenuDish[];
 	lastWrite: number;
 }
 
@@ -33,6 +54,7 @@ export const EMPTY_SESSION: SessionState = {
 	shoppingChecks: {},
 	cookedLog: [],
 	familyRecipes: [],
+	menuDishes: [],
 	lastWrite: 0
 };
 
@@ -80,6 +102,17 @@ export function mergeSessions(
 				(r) => !current.familyRecipes.some((e) => e.slug === r.slug)
 			)
 		],
+		// Union by dish id, the newer edit winning — same tiebreak the other
+		// wings' menu stores use. Named explicitly, per the rule above.
+		menuDishes: (() => {
+			const dishes = new Map((current.menuDishes ?? []).map((d) => [d.id, d]));
+			for (const d of incoming.menuDishes ?? []) {
+				if (!d || !d.id) continue;
+				const mine = dishes.get(d.id);
+				if (!mine || (d.ts ?? 0) > (mine.ts ?? 0)) dishes.set(d.id, d);
+			}
+			return [...dishes.values()];
+		})(),
 		// After the spread, never before: a hand-edited file must not be able to
 		// walk the schema marker backwards and re-trigger a migration.
 		schemaVersion: current.schemaVersion
