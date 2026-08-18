@@ -89,18 +89,27 @@
 
 	const drillable = $derived(dishes.filter((d) => kindsFor(d).length > 0));
 
+	/* One drillable dish would mean ten questions with one possible answer —
+	 * a guaranteed 'Chef-level' verdict that teaches nothing and logs a fake
+	 * clean round. Two is the floor, and the round never asks the same dish
+	 * twice in a row while an alternative exists. */
+	let lastTargetId = '';
+
 	function ask() {
-		const target = pick(drillable);
+		const pool = drillable.filter((d) => d.id !== lastTargetId);
+		const target = pick(pool.length ? pool : drillable);
+		lastTargetId = target.id;
 		quiz = pick(kindsFor(target));
 		picked = null;
 	}
 
 	function startQuiz() {
-		if (!enough || !drillable.length) return;
+		if (!enough || drillable.length < 2) return;
 		deck = null;
 		qNum = 0;
 		right = 0;
 		verdict = '';
+		lastTargetId = '';
 		ask();
 	}
 
@@ -162,11 +171,14 @@
 					? `${dishes.length} on the menu so far — add ${4 - dishes.length} more on `
 					: 'Enter the menu on '}<a href="{base}/menu">My Menu</a>.
 			</p>
-		{:else if !drillable.length}
+		{:else if drillable.length < 2 && !deck}
 			<p class="empty">
-				The dishes need descriptions, ingredients or prices before the menu can ask about them —
-				fill them in on <a href="{base}/menu">My Menu</a>.
+				The quiz needs at least two dishes with descriptions, ingredients or prices to ask about —
+				fill them in on <a href="{base}/menu">My Menu</a>. The flashcards work meanwhile.
 			</p>
+			<div class="tools">
+				<button class="chip" onclick={startDeck}>Study mode ▸ flashcards</button>
+			</div>
 		{:else}
 			{#if !quiz && !verdict && !deck}
 				<div class="tools">

@@ -81,6 +81,13 @@ export function describeImport(incoming: Partial<SessionState>, current: Session
 	const newDishes = (incoming.menuDishes ?? []).filter(
 		(d) => d && d.id && !(current.menuDishes ?? []).some((e) => e.id === d.id)
 	).length;
+	// An id match with a newer ts means the merge will REPLACE the live copy —
+	// the banner must say so, the way notes get their 'replaced' count.
+	const updatedDishes = (incoming.menuDishes ?? []).filter((d) => {
+		if (!d || !d.id) return false;
+		const mine = (current.menuDishes ?? []).find((e) => e.id === d.id);
+		return !!mine && (d.ts ?? 0) > (mine.ts ?? 0);
+	}).length;
 
 	const parts: string[] = [];
 	if (newPins) parts.push(`${newPins} new pinned ${newPins === 1 ? 'dish' : 'dishes'}`);
@@ -89,5 +96,6 @@ export function describeImport(incoming: Partial<SessionState>, current: Session
 	if (newPantry) parts.push(`${newPantry} pantry ${newPantry === 1 ? 'item' : 'items'}`);
 	if (newFamily) parts.push(`${newFamily} family ${newFamily === 1 ? 'recipe' : 'recipes'}`);
 	if (newDishes) parts.push(`${newDishes} menu ${newDishes === 1 ? 'dish' : 'dishes'}`);
+	if (updatedDishes) parts.push(`${updatedDishes} menu ${updatedDishes === 1 ? 'dish' : 'dishes'} updated`);
 	return parts.length ? parts.join(', ') : 'nothing new — this file matches what you already have';
 }

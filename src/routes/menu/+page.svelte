@@ -226,7 +226,10 @@
 	</header>
 
 	<div class="tools" data-print="hide">
-		<button class="chip" onclick={doExport} disabled={!session.menu.length && !session.pantry.length}
+		<button
+			class="chip"
+			onclick={doExport}
+			disabled={!session.menu.length && !session.pantry.length && !session.menuDishes.length}
 			>Export session</button
 		>
 		<button class="chip" onclick={() => fileInput?.click()}>Import session…</button>
