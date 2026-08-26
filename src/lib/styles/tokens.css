@@ -134,3 +134,17 @@
 :root[data-service='night'] {
 	color-scheme: dark;
 }
+
+/* ---------------------------------------------------------------------
+   The shared home bands (shared/oot-home.css, served from the monorepo)
+   carry no colour of their own. This maps the Table's palette onto them,
+   and because these are var() indirections they follow day/night service
+   automatically without a second block.
+   --------------------------------------------------------------------- */
+:root {
+	--oot-accent: var(--turmeric);
+	--oot-line: var(--line);
+	--oot-ink: var(--ink);
+	--oot-dim: var(--muted);
+	--oot-raise: var(--paper-raised);
+}

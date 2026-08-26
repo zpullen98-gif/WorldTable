@@ -24,13 +24,38 @@ export type { SessionState } from './state';
 
 const store = browser ? createStore('world-table', 'state') : undefined;
 
-const KEY = 'session';
+/* One record per person on a shared device.
+ *
+ * A venue buys one subscription and its staff share a sign-in, so a kitchen
+ * tablet would otherwise pool everyone's cooked marks and menus into one pile.
+ * shared/oot-profiles.js keeps a roster on the device and hands back a
+ * namespaced key; with nobody named it returns 'session' unchanged, so a
+ * kitchen that never uses profiles is unaffected and nothing has to migrate.
+ *
+ * Read at call time rather than captured once, because the answer changes the
+ * moment somebody else taps their name. */
+declare global {
+	interface Window {
+		OOT?: { profiles?: { key(base: string): string } };
+	}
+}
+
+const KEY_BASE = 'session';
+
+function KEY(): string {
+	try {
+		const p = browser && window.OOT && window.OOT.profiles;
+		return p ? p.key(KEY_BASE) : KEY_BASE;
+	} catch {
+		return KEY_BASE;
+	}
+}
 
 export async function loadSession(): Promise<SessionState> {
 	if (!browser || !store) return structuredClone(EMPTY_SESSION);
 	let raw: unknown;
 	try {
-		raw = await get(KEY, store);
+		raw = await get(KEY(), store);
 	} catch {
 		return structuredClone(EMPTY_SESSION);
 	}
@@ -53,12 +78,12 @@ export async function loadSession(): Promise<SessionState> {
 
 export async function saveSession(state: SessionState): Promise<void> {
 	if (!browser || !store) return;
-	await set(KEY, { ...state, lastWrite: Date.now() }, store);
+	await set(KEY(), { ...state, lastWrite: Date.now() }, store);
 }
 
 export async function clearSession(): Promise<void> {
 	if (!browser || !store) return;
-	await del(KEY, store);
+	await del(KEY(), store);
 }
 
 /**

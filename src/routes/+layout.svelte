@@ -24,14 +24,18 @@
 		document.documentElement.dataset.hydrated = 'true';
 	});
 
+	/* Ordered the way the home bands are, and labelled short enough that the bar
+	   does not wrap on a phone in a prep kitchen: seven long names became seven
+	   words. Nothing was removed, because every one of these is a destination a
+	   cook reaches for mid-service. */
 	const MODES = [
 		{ href: '', label: 'Recipes' },
-		{ href: '/lexicon', label: 'Chef’s Lexicon' },
-		{ href: '/technique', label: 'Techniques' },
-		{ href: '/pantry', label: 'Pantry Match' },
-		{ href: '/study', label: 'Path of Study' },
-		{ href: '/family', label: 'Family' },
-		{ href: '/menu', label: 'My Menu' }
+		{ href: '/study', label: 'Course' },
+		{ href: '/technique', label: 'Skills' },
+		{ href: '/lexicon', label: 'Lexicon' },
+		{ href: '/pantry', label: 'Pantry' },
+		{ href: '/menu', label: 'Our Menu' },
+		{ href: '/family', label: 'Family' }
 	];
 
 	const path = $derived(page.url.pathname.replace(base, '') || '/');
