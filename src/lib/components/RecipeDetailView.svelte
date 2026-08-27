@@ -253,8 +253,9 @@
 			name={r.name}
 			slug={r.slug}
 			steps={cookSteps}
+			standard={d.standard}
 			onclose={() => (cooking = false)}
-			onfinish={() => session.markCooked(r.slug)}
+			onfinish={(grade) => session.markCooked(r.slug, grade)}
 		/>
 	{/if}
 
@@ -584,7 +585,7 @@
 		margin-right: 6px;
 		font-variant: small-caps;
 		letter-spacing: 0.06em;
-		color: var(--turmeric);
+		color: var(--turmeric-deep);
 	}
 
 	.note {

@@ -5,6 +5,7 @@
 	import { TOTALS } from '$lib/data';
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import { session } from '$lib/stores/session.svelte';
+	import { repertoire, dueList } from '$lib/repertoire';
 	import UpdatePrompt from '$lib/components/UpdatePrompt.svelte';
 	import TimerBar from '$lib/components/TimerBar.svelte';
 
@@ -31,14 +32,24 @@
 	const MODES = [
 		{ href: '', label: 'Recipes' },
 		{ href: '/study', label: 'Course' },
+		{ href: '/repertoire', label: 'Repertoire' },
 		{ href: '/technique', label: 'Skills' },
 		{ href: '/lexicon', label: 'Lexicon' },
+		{ href: '/palate', label: 'Palate' },
 		{ href: '/pantry', label: 'Pantry' },
 		{ href: '/menu', label: 'Our Menu' },
 		{ href: '/family', label: 'Family' }
 	];
 
 	const path = $derived(page.url.pathname.replace(base, '') || '/');
+
+	/* The one number worth carrying in the chrome: how many dishes are past
+	   their re-cook. Same treatment as the menu's count — a pill, not a badge
+	   that nags, and absent entirely at zero. */
+	const dueCount = $derived.by(() => {
+		const now = Date.now();
+		return dueList(repertoire(session.cookedLog, now), now).length;
+	});
 
 	function isActive(href: string) {
 		if (href === '') return path === '/' || path.startsWith('/recipe') || path.startsWith('/chapter');
@@ -105,7 +116,7 @@
 			<a class="modetab" class:on={isActive(m.href)} href="{base}{m.href || '/'}">
 				{m.label}{#if m.href === '/menu' && session.menuCount}<span class="pill"
 						>{session.menuCount}</span
-					>{/if}
+					>{:else if m.href === '/repertoire' && dueCount}<span class="pill">{dueCount}</span>{/if}
 			</a>
 		{/each}
 		<button

@@ -52,6 +52,23 @@ export interface Step {
 	text: string;
 	/** Seconds, parsed from phrases like "simmer 20 min". Null when none found. */
 	durationSec: number | null;
+	/**
+	 * The step split into work and waiting — see tools/derive/service.mjs.
+	 *
+	 * `durationSec` above is the COOK MODE TIMER's number and is deliberately
+	 * untouched: it is the first duration in the step, which is what a timer
+	 * should count. These two are the whole step, and they are what a service
+	 * plan is built from. A dish's elapsed time is the sum of both; the cook is
+	 * only occupied for the first.
+	 *
+	 * Optional because family recipes are authored in the browser and carry
+	 * neither. Treat a missing split as all hands-on: the honest reading of a
+	 * step nobody has measured.
+	 */
+	handsOnSec?: number;
+	unattendedSec?: number;
+	/** True when the hands-on figure includes the four-minute default guess. */
+	estimated?: boolean;
 }
 
 /**
@@ -275,3 +292,32 @@ export const DIFFICULTY_LABEL: Record<Difficulty, string> = {
 	2: 'Intermediate',
 	3: 'Advanced'
 };
+
+/**
+ * The palate — tasting, diagnosing, and correcting a dish.
+ *
+ * Structure over the guide's own "Repair Table" and "Tasting Vocabulary"
+ * entries rather than new content; tools/derive/palate.mjs states exactly what
+ * is checked against what, and the build fails if the two drift apart.
+ */
+export interface PalateLever {
+	/** The correction, as an instruction. Gentlest first. */
+	move: string;
+	note: string;
+}
+
+export interface PalateFault {
+	slug: string;
+	label: string;
+	/** What it tastes like — the entry names the fault but never describes it. */
+	symptom: string;
+	levers: PalateLever[];
+}
+
+export interface Palate {
+	/** The two Flavor Atlas entries all of this is read out of. */
+	repair: { slug: string; term: string; definition: string };
+	protocol: { slug: string; term: string; definition: string };
+	metaRule: string;
+	faults: PalateFault[];
+}

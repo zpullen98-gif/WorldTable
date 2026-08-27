@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { goto } from './helpers';
+import { goto, seedSession } from './helpers';
 import AxeBuilder from '@axe-core/playwright';
 
 /**
@@ -86,3 +86,35 @@ test('cook mode is reachable and escapable by keyboard alone', async ({ page }) 
 	await page.keyboard.press('Escape');
 	await expect(page.locator('.cook')).toHaveCount(0);
 });
+
+/**
+ * The same bar, on pages that have something on them.
+ *
+ * The VIEWS sweep above runs with an empty session and therefore never renders
+ * the shopping list, the cellar picker, The Pass or The Repertoire — anything
+ * gated behind user data. That gap hid an unlabelled <select> on the menu page,
+ * which axe rates CRITICAL, for as long as the section existed.
+ */
+const SEEDED = [
+	{ path: '/menu', name: 'menu worksheet with a menu on it' },
+	{ path: '/repertoire', name: 'repertoire with dishes cooked' }
+];
+
+for (const view of SEEDED) {
+	test(`axe: ${view.name}`, async ({ page }) => {
+		test.setTimeout(120_000);
+		await seedSession(page);
+		await goto(page, view.path);
+		// The section under test only exists once the store has hydrated from IDB.
+		await page.locator('.plan li, .rows li').first().waitFor({ timeout: 15_000 });
+
+		const results = await new AxeBuilder({ page })
+			.withTags(['wcag2a', 'wcag2aa'])
+			.options({ resultTypes: ['violations'] })
+			.analyze();
+		const serious = results.violations.filter(
+			(v) => v.impact === 'serious' || v.impact === 'critical'
+		);
+		expect(serious.map((v) => `${v.id}: ${v.help} (${v.nodes.length} nodes)`)).toEqual([]);
+	});
+}

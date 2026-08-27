@@ -8,6 +8,17 @@
 
 	// Progress is real, because the cooked log now persists.
 	const cooked = $derived(new Set(session.cookedLog.map((e) => e.slug)));
+
+	/* How many times each dish has been made. The tick used to be the whole
+	   story, which made a dish cooked once look identical to one cooked five
+	   times — and now that un-ticking removes only the MOST RECENT cook (see
+	   session.toggleCooked), a bare ✓ that needed four taps to clear would be
+	   baffling. The count says why. */
+	const times = $derived.by(() => {
+		const m = new Map<string, number>();
+		for (const e of session.cookedLog) m.set(e.slug, (m.get(e.slug) ?? 0) + 1);
+		return m;
+	});
 	const total = $derived(data.study.reduce((n, s) => n + s.recipes.length, 0));
 	const done = $derived(
 		data.study.reduce((n, s) => n + s.recipes.filter((r) => cooked.has(r)).length, 0)
@@ -39,15 +50,25 @@
 					{#each s.recipes as slug (slug)}
 						{@const r = bySlug.get(slug)}
 						{#if r}
+							{@const n = times.get(slug) ?? 0}
 							<li class:done={cooked.has(slug)}>
 								<a href="{base}/recipe/{slug}">{r.name}</a>
 								<button
 									class="mark"
-									aria-pressed={cooked.has(slug)}
+									aria-pressed={n > 0}
 									onclick={() => session.toggleCooked(slug)}
-									title={cooked.has(slug) ? 'Cooked — tap to unmark' : 'Mark as cooked'}
+									aria-label={n === 0
+										? `Mark ${r.name} as cooked`
+										: n === 1
+											? `${r.name} cooked once — tap to undo`
+											: `${r.name} cooked ${n} times — tap to remove the most recent`}
+									title={n === 0
+										? 'Mark as cooked'
+										: n === 1
+											? 'Cooked once — tap to undo'
+											: `Cooked ${n} times — tap to remove the most recent`}
 								>
-									{cooked.has(slug) ? '✓' : '○'}
+									{n === 0 ? '○' : n === 1 ? '✓' : n}
 								</button>
 							</li>
 						{/if}

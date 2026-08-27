@@ -16,7 +16,8 @@ import type {
 	StudySemester,
 	Substitution,
 	CellarBottle,
-	Technique
+	Technique,
+	Palate
 } from './types';
 
 import indexJson from './data/recipes.index.json';
@@ -84,6 +85,14 @@ export async function loadSubstitutions(): Promise<Substitution[]> {
 
 export async function loadCellar(): Promise<CellarBottle[]> {
 	return (await import('./data/cellar.json')).default as unknown as CellarBottle[];
+}
+
+let palateCache: Palate | null = null;
+export async function loadPalate(): Promise<Palate> {
+	if (!palateCache) {
+		palateCache = (await import('./data/palate.json')).default as unknown as Palate;
+	}
+	return palateCache;
 }
 
 let techniqueCache: Technique[] | null = null;

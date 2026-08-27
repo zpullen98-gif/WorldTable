@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { Step } from '$lib/types';
+	import type { Step, DishStandard } from '$lib/types';
+	import type { Grade } from '$lib/repertoire';
+	import type { Palate } from '$lib/types';
+	import { loadPalate } from '$lib/data';
 	import { acquireWakeLock } from '$lib/wakeLock';
 	import { timers, formatClock } from '$lib/stores/timers.svelte';
 
@@ -8,14 +11,17 @@
 		name,
 		slug,
 		steps,
+		standard,
 		onclose,
 		onfinish
 	}: {
 		name: string;
 		slug: string;
 		steps: Step[];
+		/** When the dish has one, the last screen is a check against it. */
+		standard?: DishStandard;
 		onclose: () => void;
-		onfinish?: () => void;
+		onfinish?: (grade?: Grade) => void;
 	} = $props();
 
 	let i = $state(0);
@@ -81,9 +87,55 @@
 	function prev() {
 		if (i > 0) i -= 1;
 	}
+	/**
+	 * The pass.
+	 *
+	 * Cooking a dish and recording that you cooked it is attendance. The last
+	 * screen therefore asks the only question the guide is now able to ask: did
+	 * the plate match its standard? It is one tap, with the marks in front of
+	 * you, and it is what moves the re-cook interval — a miss brings the dish
+	 * back sooner (lib/repertoire.ts).
+	 *
+	 * Dishes without a standard skip it entirely rather than being asked to
+	 * self-grade against nothing.
+	 */
+	let grading = $state(false);
+
 	function finish() {
+		if (standard && !grading) {
+			grading = true;
+			return;
+		}
 		onfinish?.();
 		close();
+	}
+
+	/**
+	 * Taste and correct — the half of the pass a recipe never covers.
+	 *
+	 * A cook who has just admitted the plate was off is at the one moment the
+	 * repair table is worth anything, so it comes to them rather than living
+	 * three taps away on /palate. A plate that MET its standard skips it: there
+	 * is nothing to fix, and a screen that appears anyway teaches cooks to tap
+	 * through screens.
+	 *
+	 * The cook is recorded BEFORE the panel opens, not after. Closing the
+	 * dialog from here — the ✕, Escape, the phone ringing — must not be able to
+	 * lose the grade that was already given.
+	 */
+	let repairing = $state(false);
+	let palate = $state<Palate | null>(null);
+	let fault = $state<string | null>(null);
+
+	async function grade(g: Grade) {
+		onfinish?.(g);
+		if (g === 'met') {
+			close();
+			return;
+		}
+		repairing = true;
+		// Lazy: a cook who nails every plate never pays for palate.json.
+		palate = await loadPalate();
 	}
 
 	/**
@@ -174,6 +226,62 @@
 		were announced every few hundred milliseconds while the step text — the
 		entire content of the dialog — changed silently.
 	-->
+	{#if repairing}
+		<div class="pass live" aria-live="polite" aria-atomic="true">
+			<p class="eyebrow">{name} · what to reach for</p>
+			{#if standard}
+				<p class="passfault"><b>The usual cause here</b> {standard.fault}</p>
+			{/if}
+			{#if palate}
+				<p class="passq">Name the loudest fault.</p>
+				<div class="faultpick">
+					{#each palate.faults as f (f.slug)}
+						<button
+							class="chip"
+							class:on={fault === f.slug}
+							aria-pressed={fault === f.slug}
+							onclick={() => (fault = fault === f.slug ? null : f.slug)}
+						>
+							{f.label}
+						</button>
+					{/each}
+				</div>
+				{#each palate.faults.filter((f) => f.slug === fault) as f (f.slug)}
+					<p class="symptom">{f.symptom}</p>
+					<ol class="levers">
+						{#each f.levers as l, i (i)}
+							<li><b>{l.move}</b> <span>{l.note}</span></li>
+						{/each}
+					</ol>
+				{/each}
+				<p class="passnote">{palate.metaRule}</p>
+			{:else}
+				<p class="passnote">Fetching the repair table…</p>
+			{/if}
+			<div class="passbtns">
+				<button class="chip go" onclick={close}>Done</button>
+			</div>
+		</div>
+	{:else if grading}
+		<div class="pass live" aria-live="polite" aria-atomic="true">
+			<p class="eyebrow">{name} · the pass</p>
+			<p class="passq">How did it come out?</p>
+			<ul class="passmarks">
+				{#each standard?.marks ?? [] as mark, m (m)}
+					<li>{mark}</li>
+				{/each}
+			</ul>
+			<p class="passfault"><b>Where it goes wrong</b> {standard?.fault}</p>
+			<div class="passbtns">
+				<button class="chip go" onclick={() => grade('met')}>Met the standard</button>
+				<button class="chip" onclick={() => grade('close')}>Close</button>
+				<button class="chip" onclick={() => grade('missed')}>Missed it</button>
+			</div>
+			<p class="passnote">
+				An honest answer here is the whole point — it sets how soon this dish comes back.
+			</p>
+		</div>
+	{:else}
 	<div class="live" aria-live="polite" aria-atomic="true">
 		<p class="eyebrow">{name} · step {i + 1} of {steps.length}</p>
 		<p class="step" class:alarm={elapsed}>{step?.text}</p>
@@ -217,7 +325,9 @@
 	<div class="nav">
 		<button class="chip" onclick={prev} disabled={i === 0}>◀ Back</button>
 		{#if last}
-			<button class="chip go" onclick={finish}>Done — mark cooked ✓</button>
+			<button class="chip go" onclick={finish}>
+				{standard ? 'Done — check the plate ▸' : 'Done — mark cooked ✓'}
+			</button>
 		{:else}
 			<button class="chip go" onclick={next}>Next step ▶</button>
 		{/if}
@@ -234,6 +344,7 @@
 			></button>
 		{/each}
 	</div>
+	{/if}
 
 	{#if awake}
 		<p class="awake">☀ Screen staying awake while you cook</p>
@@ -241,6 +352,62 @@
 </dialog>
 
 <style>
+	/* The pass panel. Deliberately the same weight as a step rather than a
+	   celebration screen: it is the last piece of work, not a reward. */
+	.pass .passq {
+		font-size: var(--t-h3, 1.15rem);
+		margin: 6px 0 10px;
+	}
+	.passmarks {
+		margin: 0 0 10px;
+		padding-left: 1.1em;
+		line-height: 1.5;
+	}
+	.passmarks li {
+		margin-bottom: 4px;
+	}
+	.passfault {
+		margin: 0 0 14px;
+		opacity: 0.85;
+		line-height: 1.5;
+	}
+	.faultpick {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-bottom: 12px;
+	}
+	.faultpick .chip.on {
+		border-color: var(--turmeric-deep);
+		color: var(--turmeric-deep);
+	}
+	.pass .symptom {
+		margin: 0 0 8px;
+		color: var(--ink-soft);
+		line-height: 1.5;
+	}
+	.pass .levers {
+		margin: 0 0 12px;
+		padding-left: 1.4em;
+		line-height: 1.5;
+	}
+	.pass .levers li {
+		margin-bottom: 6px;
+	}
+	.pass .levers span {
+		opacity: 0.9;
+	}
+	.passbtns {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+	.passnote {
+		margin-top: 12px;
+		font-size: var(--t-small, 0.8125rem);
+		opacity: 0.7;
+	}
+
 	/*
 	 * `display: flex` below would otherwise beat the UA's
 	 * `dialog:not([open]) { display: none }`, leaving a CLOSED dialog painted

@@ -29,6 +29,8 @@ import { deriveTechniques, deriveFilms } from './derive/films.mjs';
 import { fullTechTable, LEXICON_ANCHOR, SUPPLEMENT } from './derive/technique-table.mjs';
 import { buildCrosslinks } from './derive/crosslinks.mjs';
 import { STANDARDS, MIN_MARKS, MAX_MARKS } from './derive/standards.mjs';
+import { buildPalate } from './derive/palate.mjs';
+import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
 import { derivePantryMap, narrowBlob } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
 import { miniOptions } from '../src/lib/search-config.mjs';
@@ -244,7 +246,9 @@ R.forEach((r, i) => {
 	full.push({
 		slug,
 		ingredients: r.i.map(toIngredient),
-		steps: r.m.map((text) => ({ text, durationSec: stepDuration(text) })),
+		// durationSec is the timer's number and is left exactly as it was; the
+		// service split is additive. See tools/derive/service.mjs.
+		steps: r.m.map((text) => ({ text, durationSec: stepDuration(text), ...stepService(text) })),
 		note: effNotes[i],
 		equipment: ov.equipment ?? deriveEquipment(r, EQUIP),
 		techniques,
@@ -405,6 +409,12 @@ const write = (file, value) => {
 };
 
 console.log('\n  build:data\n');
+/**
+ * The palate. Structure over the guide's own Repair Table rather than new
+ * content — see tools/derive/palate.mjs for what is checked against what.
+ */
+const { palate, problems: palateProblems } = buildPalate(lexicon);
+
 write('recipes.index.json', index);
 write('recipes.full.json', full);
 write('pairings.json', pairingTable);
@@ -415,6 +425,7 @@ write('study.json', study);
 write('substitutions.json', substitutions);
 write('cellar.json', cellar);
 write('techniques.json', techniques);
+write('palate.json', palate);
 
 /**
  * The search index, prebuilt so the browser never pays tokenization cost.
@@ -715,6 +726,48 @@ console.log('');
 		);
 	}
 }
+
+{
+	/**
+	 * The service split. A recipe that costs a cook NO time is not a slow
+	 * recipe, it is a parse failure — every stated number in it was read as a
+	 * wait and its real work carries no duration at all. That is exactly how
+	 * Kansas City barbecue ribs scored 475 minutes elapsed and zero of work
+	 * before stepService earned the default for unnamed work, so it is gated
+	 * rather than reported.
+	 */
+	const svc = full.map((r) => ({ slug: r.slug, ...recipeService(r.steps) }));
+
+	const idle = svc.filter((r) => r.handsOnMin <= 0);
+	if (idle.length) {
+		problems.push(
+			`recipes costing the cook no time at all (${idle.length}): ` +
+				idle.slice(0, 5).map((r) => r.slug).join(', ')
+		);
+	}
+
+	const impossible = svc.filter((r) => r.handsOnMin > r.elapsedMin);
+	if (impossible.length) {
+		problems.push(
+			`recipes whose hands-on time exceeds their elapsed time: ` +
+				impossible.slice(0, 5).map((r) => r.slug).join(', ')
+		);
+	}
+
+	const share = svc.map((r) => r.handsOnMin / r.elapsedMin).sort((a, b) => a - b);
+	const at = (q) => share[Math.floor(share.length * q)].toFixed(2);
+	const advance = svc.filter((r) => r.advance).length;
+	const elapsed = svc.map((r) => r.elapsedMin).sort((a, b) => a - b);
+	console.log(
+		`  service: median ${elapsed[Math.floor(elapsed.length / 2)]} min elapsed, ` +
+			`hands-on share p10 ${at(0.1)} / median ${at(0.5)} / p90 ${at(0.9)}`
+	);
+	console.log(
+		`  service: ${advance} recipes carry a wait of ${ADVANCE_MIN}+ min and cannot start inside a service`
+	);
+}
+
+problems.push(...palateProblems);
 
 if (problems.length) {
 	console.error('  BUILD GATE FAILED\n');

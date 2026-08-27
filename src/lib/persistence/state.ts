@@ -40,7 +40,13 @@ export interface SessionState {
 	pantry: string[];
 	/** menuHash -> checked shopping-list line ids */
 	shoppingChecks: Record<string, string[]>;
-	cookedLog: Array<{ slug: string; at: number }>;
+	/**
+	 * Every cook, not every dish — one entry per time the dish was made. The
+	 * timestamps drive the re-cook schedule in lib/repertoire.ts; the grade is
+	 * what the plate was against the dish's standard, absent on cooks recorded
+	 * before standards existed and on the 925 dishes that have none.
+	 */
+	cookedLog: Array<{ slug: string; at: number; grade?: 'met' | 'close' | 'missed' }>;
 	familyRecipes: Recipe[];
 	menuDishes: MenuDish[];
 	lastWrite: number;
@@ -76,11 +82,25 @@ export function mergeSessions(
 	current: SessionState,
 	incoming: Partial<SessionState>
 ): SessionState {
-	const cooked = new Map(current.cookedLog.map((e) => [e.slug, e]));
+	// Union by slug AND time, because the log is a log.
+	//
+	// This used to key on slug alone and keep the earliest cook, which was
+	// defensible while nothing read the timestamps: the log answered one
+	// question ("has this been cooked?") and one entry answered it. It is not
+	// defensible now. The re-cook schedule is built from how many times and how
+	// recently a dish was made, so collapsing four cooks into the FIRST one told
+	// the scheduler you last made the dish months before you did — importing a
+	// session aged your whole repertoire.
+	//
+	// Keying on slug|at makes re-importing your own export idempotent, which is
+	// what the old rule was really protecting, without discarding repeats.
+	const cooked = new Map(current.cookedLog.map((e) => [`${e.slug}|${e.at}`, e]));
 	for (const e of incoming.cookedLog ?? []) {
-		// Union by slug, keeping the earliest time a dish was ever cooked.
-		const seen = cooked.get(e.slug);
-		if (!seen || e.at < seen.at) cooked.set(e.slug, e);
+		if (!e || typeof e.slug !== 'string' || typeof e.at !== 'number') continue;
+		const key = `${e.slug}|${e.at}`;
+		const seen = cooked.get(key);
+		// Same cook on both sides: keep whichever one was actually graded.
+		if (!seen || (!seen.grade && e.grade)) cooked.set(key, e);
 	}
 
 	const shoppingChecks: SessionState['shoppingChecks'] = { ...current.shoppingChecks };

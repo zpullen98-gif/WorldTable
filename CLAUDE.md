@@ -172,6 +172,130 @@ Boiling bagels never fire because this corpus has no gnocchi and no bagel.
 `npm run report:tech` is the ledger; `--labels` gives per-entry counts, a
 chapter name dumps its untagged recipes as working material.
 
+## The repertoire — how repetition works
+
+`cookedLog` has stored `{slug, at}` on every cook since the first build, and
+until now nothing read the timestamp. `hasCooked()` collapsed the history to a
+boolean, the study page drew a tick, and the home band counted log entries. That
+is an attendance sheet: it recorded that you turned up, never whether you can
+still cook the dish.
+
+`src/lib/repertoire.ts` is the schedule, and it is PURE — same reason
+`mergeSessions()` is. A `.svelte.ts` runes module cannot be reached from a unit
+test, and scheduling is code that must be tested rather than eyeballed.
+
+- **The ladder is 14 / 35 / 90 / 180 / 365 days.** Kitchen intervals, not
+  flashcard ones: the unit of practice is a service or a weekend.
+- **The rung is earned, not counted.** Walking a dish's cooks in order, a plate
+  that `met` its standard climbs, `close` holds, `missed` drops back one. A
+  cook with no grade climbs — having no standard to check against is the guide's
+  gap, not the cook's failure. This is why the log must be read chronologically
+  and not merely counted.
+- **The due queue sorts by overdue-as-a-share-of-interval**, never by `dueAt`.
+  A fortnightly dish three weeks late outranks an annual one three weeks late;
+  sorting on the date says the opposite every time.
+- **The grade comes from cook mode's last screen**, with the dish's marks in
+  front of you. Without that, a re-cook queue is just a timer — it would nag
+  about a dish you nailed and let a ruined one sit for months.
+
+### Three things that were wrong before anything could read the log
+
+- **`cookedLog.length` is a count of COOKS, not dishes.** `markCooked` appends
+  on every finish, so a dish cooked three times counted as three. The home band
+  compared that number to the 45-dish curriculum — and compared the WHOLE log,
+  so 45 cooks of anything at all reported the ten-semester course complete. Use
+  `session.cookedDishes` (a Set) for progress, always.
+- **`toggleCooked` deleted every entry for the slug.** Invisible while a dish
+  was a boolean; now that repeats carry the schedule, un-ticking a dish cooked
+  four times destroyed four years of evidence. It removes the most recent cook
+  only — undo the mis-tap, not the history behind it.
+- **`mergeSessions` unioned by slug and kept the EARLIEST cook.** Correct while
+  nothing read timestamps, data loss the moment something did: importing a
+  session collapsed every repeat and backdated the survivor. It keys on
+  `slug|at` now, so re-importing your own export is still idempotent.
+
+## The palate — structure over the guide's own prose
+
+The Flavor Atlas already held the whole of this and it reached FIVE recipes.
+"The Repair Table: Balancing a Dish" is the seasoning chart every cook works
+from; "Tasting Vocabulary & Palate Training" is the protocol for building the
+palate that reads it. Both were filed among 479 lexicon terms, and
+`crosslinks.mjs` caps a term at three recipes, so the diagnostic chart surfaced
+beside a Filipino oxtail stew. Same shape as the technique spine: a good system
+nobody could reach.
+
+`tools/derive/palate.mjs` does NOT write a repair table. It parses the entry's
+labelled clauses (`TOO FLAT:`, `TOO SALTY:` …) and carries a structure over
+them — eight faults, levers ordered gentlest first. Only `symptom` is ours: the
+entry names each fault and never says what it tastes like.
+
+**That structure is a claim about the prose, so the build checks it three ways:**
+
+- every fault we carry must still appear as a labelled clause;
+- every lever's `token` must appear inside **its own** fault's clause — "TOO
+  SOUR" and "TOO SWEET" are one word apart with near-opposite fixes, so a lever
+  under the wrong fault is exactly the error that would read as plausible
+  forever;
+- **and the reverse** — a labelled clause the guide states that nothing carries
+  fails the build. If the entry ever gains a ninth fault, nobody has to notice
+  by eye.
+
+Rewrite the entry and the build names the levers you just invalidated.
+`src/lib/palate.test.ts` covers the other half — palate.mjs edited without
+re-running `build:data`, which the build gate cannot see because the app reads
+only the JSON.
+
+**Where it is used.** `/palate` is the chart as a page. The one that matters is
+cook mode: grade a plate `close` or `missed` and the repair table comes to you,
+alongside that dish's own authored `standard.fault`. A plate that `met` its
+standard skips it — a screen that appears anyway teaches cooks to tap through
+screens. The grade is recorded BEFORE the panel opens, so closing the dialog
+cannot lose it.
+
+## The pass — planning backwards, and what it needed first
+
+The Service Timeline was a printout: pinned dishes, total minutes, sorted
+longest first, captioned "start at the top and work down". Sorting is not
+scheduling. That order only holds for a cook who finishes one dish before
+starting the next — the one thing a pass never is — and **one number per dish
+cannot say when the cook is free**, so there was nothing to overlap with even in
+principle.
+
+### The measurement that was missing
+
+Elapsed time is not work. Coq au vin is 78 minutes elapsed and ~18 of hands;
+cacio e pepe is 17 elapsed and 16 of hands. The old timeline sized those two the
+same. `tools/derive/service.mjs` splits every step into hands-on and unattended
+seconds at build time (`handsOnSec`, `unattendedSec` on `Step`).
+
+- **The unit is the CLAUSE, not the step.** The median recipe has four steps and
+  each is compound: *"Deglaze with wine, add stock and herbs; return chicken,
+  simmer 45–60 min."*
+- **The governing verb is the nearest one BEFORE the duration.** That is how
+  these methods are written, and it is what decides
+  `"Bake 220°C 15 min or fry until blistered"` (bake governs: a wait) against
+  `"Grill or broil hot, 3–4 min per side"` (nothing governs, and 4 < 20: hands).
+- **Unstated work still costs time.** Only 34.5% of steps state a duration and
+  most of those are waits, so scoring stated time alone gave Kansas City
+  barbecue ribs 475 minutes elapsed and ZERO of work. A step earns the guide's
+  four-minute default when it holds work no duration was attached to. **550
+  recipes score zero hands-on without it** — the build gates on it.
+- `durationSec` is untouched. It is the cook-mode TIMER's number (the first
+  duration in the step); the split is additive.
+
+### The plan
+
+`src/lib/pass.ts` is pure and unit-tested. Times are **minutes before service**
+throughout, because the plan is anchored at its end — the only fixed point a
+kitchen has. Collisions are where two DIFFERENT dishes want hands at once; an
+unattended simmer is not a demand on anybody, and overlapping clashes merge so
+one busy stretch reports once. A dish carrying a wait of 240+ min is flagged to
+start the day before rather than given a start time at 05:31 (85 recipes).
+
+The honest limit, stated once on the page rather than as a badge on every row:
+**the waits are measured and the work is largely estimated.** A marker that
+fires on 15 of 17 rows distinguishes nothing.
+
 ## Known remaining work
 
 - None planned. The content backfill completed 2026-08-08: all 320 thin "from
@@ -186,9 +310,28 @@ chapter name dumps its untagged recipes as working material.
 
 ## Testing
 
-`npm test` (34 unit) · `npm run test:e2e` (34 Playwright: regressions named for
+`npm test` (127 unit) · `npm run test:e2e` (43 Playwright: regressions named for
 the original's line numbers, offline in real Chromium, axe, print PDFs, and the
 parity harness that runs the archived original against our build output).
+
+**Every a11y view was checked with an EMPTY session until 2026-08-27.** Whole
+sections were therefore never looked at — the shopping list, the cellar picker,
+The Pass, The Repertoire — and an unlabelled `<select>` (axe: CRITICAL) sat on
+the menu page for as long as the section existed. `seedSession()` in
+tests/helpers.ts puts a session in via `addInitScript` before page scripts run;
+the SEEDED block in a11y.spec.ts uses it. Proof it works: reintroduce the
+missing `aria-label` and the empty-session menu test still passes while the
+seeded one fails. **A page with no user data is not the page users have.**
+
+**One e2e test is currently RED and it is not a flake:** `axe: recipe grid has
+no serious violations`. `static/shared/oot-home.css` stacks `opacity: .6–.68`
+on top of already-muted text in six rules (`.oot-sec-head span`,
+`.oot-today-sub` and four more), which measures 2.32:1 to 3.17:1 against day
+service's paper where AA wants 4.5:1. It is a SHARED-layer defect — every wing
+renders those bands — so the fix belongs in the Outside Of Time monorepo and
+must be re-vendored here, not patched in this copy alone. Dimming already-dim
+text is the trap; a border weight or a different token carries "quieter"
+without taking the words away.
 
 Hard-won rules the suites encode — do not relearn these:
 

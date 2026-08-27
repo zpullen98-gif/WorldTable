@@ -13,6 +13,7 @@ import { browser } from '$app/environment';
 import type { Recipe, RecipeSummary } from '../types';
 import { EMPTY_SESSION, loadSession, saveSession, debounce, type SessionState } from '../persistence/db';
 import { mergeSessions, type MenuDish } from '../persistence/state';
+import { cookedSlugs, type CookEntry, type Grade } from '../repertoire';
 
 class SessionStore {
 	#s = $state<SessionState>(structuredClone(EMPTY_SESSION));
@@ -139,23 +140,62 @@ class SessionStore {
 
 	/* ---- cooked log ---------------------------------------------------- */
 
+	/**
+	 * Every cook, in the order they were recorded. Read it through
+	 * lib/repertoire.ts rather than counting it: entries are COOKS, and one dish
+	 * cooked three times is three of them.
+	 */
 	get cookedLog() {
 		return this.#s.cookedLog;
+	}
+
+	/** The distinct dishes cooked — what "progress" means everywhere. */
+	get cookedDishes(): Set<string> {
+		return cookedSlugs(this.#s.cookedLog);
+	}
+
+	get cookedCount() {
+		return this.cookedDishes.size;
 	}
 
 	hasCooked(slug: string) {
 		return this.#s.cookedLog.some((e) => e.slug === slug);
 	}
 
-	markCooked(slug: string) {
-		this.#s.cookedLog = [...this.#s.cookedLog, { slug, at: Date.now() }];
+	/** How many times this dish has been made. */
+	timesCooked(slug: string) {
+		return this.#s.cookedLog.filter((e) => e.slug === slug).length;
+	}
+
+	/**
+	 * Record a cook. The grade is what the plate was against the dish's
+	 * standard, and it is what moves the re-cook interval — see
+	 * lib/repertoire.ts. Dishes without a standard record no grade and simply
+	 * advance, because having nothing to check against is the guide's gap.
+	 */
+	markCooked(slug: string, grade?: Grade) {
+		const entry: CookEntry = grade ? { slug, at: Date.now(), grade } : { slug, at: Date.now() };
+		this.#s.cookedLog = [...this.#s.cookedLog, entry];
 		this.#persistNow();
 	}
 
-	/** A mis-tap at the stove should be one more tap to undo. */
+	/**
+	 * A mis-tap at the stove should be one more tap to undo — and undo the
+	 * MIS-TAP, not the history behind it.
+	 *
+	 * This used to drop every entry for the slug. That was invisible while a
+	 * dish was a boolean; now that repeats carry the schedule, un-ticking a dish
+	 * you had cooked four times silently deleted four years of evidence. It
+	 * removes the most recent cook only, so tapping it undoes exactly what the
+	 * last tap did.
+	 */
 	toggleCooked(slug: string) {
-		if (this.hasCooked(slug)) {
-			this.#s.cookedLog = this.#s.cookedLog.filter((e) => e.slug !== slug);
+		const last = this.#s.cookedLog.reduce(
+			(best, e, i) => (e.slug === slug && (best < 0 || e.at >= this.#s.cookedLog[best].at) ? i : best),
+			-1
+		);
+		if (last >= 0) {
+			this.#s.cookedLog = this.#s.cookedLog.filter((_, i) => i !== last);
 			this.#persistNow();
 		} else {
 			this.markCooked(slug);

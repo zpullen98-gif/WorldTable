@@ -12,7 +12,7 @@
 </script>
 
 <HomeBands
-	curriculumTotal={data.curriculumTotal}
+	curriculum={data.curriculum}
 	lexiconTotal={data.lexiconTotal}
 	techniqueTotal={data.techniqueTotal}
 	recipeTotal={data.recipeTotal}

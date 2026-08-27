@@ -18,7 +18,12 @@ export async function load() {
 	]);
 
 	return {
-		curriculumTotal: study.reduce((n, s) => n + s.recipes.length, 0),
+		// The slugs, in teaching order, not just the count. The home band has to
+		// know WHICH dishes are the course: it was measuring progress by counting
+		// the whole cooked log against 45, so cooking 45 dishes from anywhere in
+		// the book reported the curriculum complete. 45 strings, baked in at
+		// prerender time.
+		curriculum: study.flatMap((s) => s.recipes),
 		lexiconTotal: lexicon.length,
 		techniqueTotal: techniques.length,
 		recipeTotal: TOTALS.recipes

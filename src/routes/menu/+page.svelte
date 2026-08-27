@@ -5,6 +5,8 @@
 	import type { MenuDish } from '$lib/persistence/state';
 	import { buildExport, download, parseImport, describeImport } from '$lib/persistence/portable';
 	import Ornament from '$lib/components/Ornament.svelte';
+	import { onMount } from 'svelte';
+	import { buildPass, clockFor, formatClockTime, daysEarlier, DEFAULT_HANDS_MIN } from '$lib/pass';
 
 	let { data } = $props();
 
@@ -82,19 +84,87 @@
 	// leave stale ticks attached to lines that are no longer on the list.
 	const menuHash = $derived([...session.menu].sort().join('|'));
 
-	/* ---- service timeline ---------------------------------------------- */
-	const timeline = $derived.by(() =>
-		pinned
-			.map((r) => ({
-				name: r!.name,
-				slug: r!.slug,
-				// A step with no stated duration gets the original's 4-minute default,
-				// but here the UI knows it was a default rather than a measurement.
-				total: stepsOf(r!.slug).reduce((n, s) => n + (s.durationSec ?? 240) / 60, 0),
-				stated: stepsOf(r!.slug).some((s) => s.durationSec !== null)
-			}))
-			.sort((a, b) => b.total - a.total)
+	/* ---- the pass -------------------------------------------------------
+	 *
+	 * This was a printout: dish, total minutes, sorted longest first, captioned
+	 * "start at the top and work down". Sorting is not scheduling. That order
+	 * only holds for a cook who finishes one dish before starting the next, and
+	 * one number per dish could never say when the cook was free — so there was
+	 * nothing to overlap with even in principle.
+	 *
+	 * buildPass plans BACKWARDS from service so everything lands together, and
+	 * reads the per-step work split derived in tools/derive/service.mjs. The
+	 * scheduling itself is lib/pass.ts, pure and unit-tested.
+	 */
+	const plan = $derived.by(() =>
+		buildPass(
+			pinned.map((r) => ({ slug: r!.slug, name: r!.name, steps: stepsOf(r!.slug) }))
+		)
 	);
+
+	/* A fixed default rather than "an hour from now": this page is prerendered,
+	   and seeding state from the clock makes the served HTML disagree with the
+	   hydrated page for every visitor who is not in the build machine's hour. */
+	let serviceTime = $state('19:00');
+
+	const serviceAt = $derived.by(() => {
+		const [h, m] = serviceTime.split(':').map(Number);
+		const d = new Date(now);
+		d.setHours(h ?? 19, m ?? 0, 0, 0);
+		// A service time already past means tonight is done; plan for tomorrow.
+		if (d.getTime() < now) d.setDate(d.getDate() + 1);
+		return d;
+	});
+
+	/* ---- the clock ------------------------------------------------------
+	 * Only while the cook asks for it. An interval that runs on a page nobody
+	 * is cooking from is a battery cost for a number nobody is reading. */
+	let live = $state(false);
+	let now = $state(0);
+
+	onMount(() => {
+		now = Date.now();
+		const id = setInterval(() => {
+			if (live) now = Date.now();
+		}, 15_000);
+		return () => clearInterval(id);
+	});
+
+	function toggleLive() {
+		live = !live;
+		if (live) now = Date.now();
+	}
+
+	/** Minutes left until service. Negative once service has passed. */
+	const remainingMin = $derived(Math.round((serviceAt.getTime() - now) / 60_000));
+
+	/** How far behind the plan a cook starting now already is. */
+	const behindMin = $derived(Math.max(0, plan.lengthMin - remainingMin));
+
+	const startedAlready = (startsAtMin: number) => live && startsAtMin >= remainingMin;
+
+	/** The step that should be in hand right now. */
+	const currentStep = $derived(
+		live ? plan.steps.filter((s) => s.startsAtMin >= remainingMin).at(-1) : undefined
+	);
+
+	const guessedSteps = $derived(
+		plan.steps.filter((s) => s.estimated && s.handsOnMin === DEFAULT_HANDS_MIN).length
+	);
+
+	/** "A and B" · "A, B and C" — a clash can involve any number of dishes. */
+	function nameList(names: string[]) {
+		if (names.length < 2) return names[0] ?? '';
+		return `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`;
+	}
+
+	function whenLabel(startsAtMin: number) {
+		const at = clockFor(serviceAt, startsAtMin);
+		const days = daysEarlier(serviceAt, at);
+		const t = formatClockTime(at);
+		if (days === 0) return t;
+		return days === 1 ? `${t} · day before` : `${t} · ${days} days before`;
+	}
 
 	/* ---- cellar --------------------------------------------------------- */
 	let bottle = $state('');
@@ -305,24 +375,88 @@
 		</section>
 
 		<section class="timeline">
-			<h2 class="sec">Service Timeline</h2>
-			<p class="hint">Longest first — start at the top and work down.</p>
-			<ol>
-				{#each timeline as t (t.slug)}
-					<li>
-						<span class="nm">{t.name}</span>
-						<span class="mins">
-							{Math.round(t.total)} min
-							{#if !t.stated}<em title="No durations stated in the method">estimated</em>{/if}
+			<h2 class="sec">The Pass</h2>
+			<p class="hint">
+				Planned backwards so everything lands together. {plan.lengthMin} min from first move to
+				service, {plan.handsOnMin} min of it on your hands.
+			</p>
+			<!-- Said once, plainly, rather than as a badge on almost every row. The
+			     guide states a duration for about a third of its steps and most of
+			     those are waits, so the plan's WAITING is measured and its WORK is
+			     largely the four-minute default. A cook should know which half of
+			     this to trust. -->
+			<p class="hint soft">
+				Waits come from the method. Hands-on time is estimated for {guessedSteps} of
+				{plan.steps.length} steps — treat the shape as reliable and the minutes as a starting point.
+			</p>
+
+			<div class="passbar" data-print="hide">
+				<label class="svc">
+					Service at
+					<input type="time" bind:value={serviceTime} aria-label="Service time" />
+				</label>
+				<button class="chip" class:on={live} onclick={toggleLive} aria-pressed={live}>
+					{live ? '■ Stop the clock' : '▶ Start the clock'}
+				</button>
+				{#if live}
+					<span class="left" aria-live="polite">
+						{remainingMin >= 0 ? `${remainingMin} min to service` : `${-remainingMin} min past service`}
+					</span>
+				{/if}
+			</div>
+
+			{#if live && behindMin > 0}
+				<p class="behind" role="alert">
+					{behindMin} min behind — the plan needs {plan.lengthMin} min and there are {remainingMin}
+					left. Something has to come off the menu or service moves.
+				</p>
+			{/if}
+
+			{#each plan.dishes.filter((d) => d.advance) as d (d.slug)}
+				<p class="advance">
+					<b>{d.name}</b> carries a wait too long to fit inside a service — start it the day before.
+				</p>
+			{/each}
+
+			{#each plan.collisions as c, i (i)}
+				<p class="clash">
+					<b>{whenLabel(c.atMin)}</b> — {nameList(c.dishes)}
+					{c.dishes.length > 2 ? 'all want' : 'both want'} your hands for {c.minutes} min. Move one,
+					or get a second pair.
+				</p>
+			{/each}
+
+			<ol class="plan">
+				{#each plan.steps as s, i (s.slug + '-' + s.n)}
+					<li
+						class:past={startedAlready(s.startsAtMin) && currentStep !== s}
+						class:current={currentStep === s}
+					>
+						<span class="at">{whenLabel(s.startsAtMin)}</span>
+						<span class="what">
+							<b>{s.dish}</b>
+							<span class="txt">{s.text}</span>
+						</span>
+						<span class="cost">
+							{s.handsOnMin} min hands{#if s.unattendedMin}
+								· then {s.unattendedMin} free{/if}
 						</span>
 					</li>
 				{/each}
+				<li class="serviceline">
+					<span class="at">{formatClockTime(serviceAt)}</span>
+					<span class="what"><b>Service</b></span>
+					<span class="cost"></span>
+				</li>
 			</ol>
 		</section>
 
 		<section class="cellar" data-print="hide">
 			<h2 class="sec">The Cellar — cook to the bottle</h2>
-			<select bind:value={bottle} class="chip">
+			<!-- The placeholder option is not an accessible name: a screen reader
+			     announces the SELECTED value, so this read as "The Cellar" and then
+			     an unlabelled combobox. axe rates it critical. -->
+			<select bind:value={bottle} class="chip" aria-label="Cook to a bottle already open">
 				<option value="">Choose what’s already open…</option>
 				{#each data.cellar as b (b.slug)}<option value={b.name}>{b.name}</option>{/each}
 			</select>
@@ -443,10 +577,28 @@
 	.aisle .from { font-size: var(--t-micro); color: var(--muted); margin-left: auto; white-space: nowrap; }
 	.aisle li.checked .line { text-decoration: line-through; color: var(--muted); }
 
-	.timeline li { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: 1px dotted var(--line); }
-	.timeline .nm { font-family: var(--display); font-size: 17px; }
-	.timeline .mins { font-size: var(--t-small); color: var(--muted); font-variant-numeric: oldstyle-nums; }
-	.timeline em { font-style: italic; opacity: 0.7; margin-left: 4px; }
+	.timeline li { display: flex; gap: 12px; padding: 6px 0; border-bottom: 1px dotted var(--line); align-items: baseline; }
+	.timeline .at { flex: none; width: 9.5em; font-variant-numeric: tabular-nums; color: var(--muted); font-size: var(--t-small); }
+	.timeline .what { flex: 1; min-width: 0; }
+	.timeline .what b { font-family: var(--display); font-size: 17px; margin-right: 7px; }
+	.timeline .txt { color: var(--ink-soft); font-size: var(--t-small); }
+	.timeline .cost { flex: none; font-size: var(--t-small); color: var(--muted); font-variant-numeric: oldstyle-nums; text-align: right; }
+	/* The running step is marked by a rule and weight, not colour alone — a
+	   kitchen screen gets read at an angle, in steam, by somebody in a hurry. */
+	.timeline li.current { border-left: 3px solid var(--turmeric-deep); padding-left: 9px; background: var(--paper-raised); }
+	.timeline li.current .what b { color: var(--turmeric-deep); }
+	.timeline li.past .what, .timeline li.past .at, .timeline li.past .cost { opacity: 0.45; }
+	.timeline li.past .txt { text-decoration: line-through; }
+	.timeline .serviceline { border-bottom: 0; border-top: 1px solid var(--line); margin-top: 4px; padding-top: 8px; }
+	.timeline .serviceline b { color: var(--turmeric-deep); }
+	.passbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0 14px; }
+	.passbar .svc { font-size: var(--t-small); color: var(--ink-soft); }
+	.passbar input { font: inherit; padding: 5px 8px; border: 1px solid var(--line); background: var(--card, transparent); color: var(--ink); border-radius: var(--radius); }
+	.passbar .chip.on { border-color: var(--turmeric-deep); color: var(--turmeric-deep); }
+	.passbar .left { font-size: var(--t-small); color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+	.hint.soft { color: var(--muted); }
+	.clash, .advance, .behind { margin: 0 0 8px; padding: 8px 12px; border-left: 2px solid var(--turmeric-deep); background: var(--paper-raised); font-size: var(--t-small); line-height: 1.5; color: var(--ink); }
+	.behind { border-left-color: var(--ink); }
 
 	.bottlenote { margin-top: 10px; font-style: italic; color: var(--ink-soft); max-width: var(--measure); }
 	.empty { padding: 60px 20px; text-align: center; color: var(--muted); font-style: italic; }

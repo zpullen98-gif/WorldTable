@@ -45,7 +45,14 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 		expect(out.menu).toEqual(['cacio-e-pepe', 'tom-yum-goong']);
 	});
 
-	it('unions cooked dishes by slug, keeping the earliest date', () => {
+	/**
+	 * This test used to assert the opposite — union by slug, keep the EARLIEST
+	 * cook — and it was right to, while nothing read the timestamps. Once the
+	 * re-cook schedule started reading them (lib/repertoire.ts) that rule became
+	 * data loss: it threw away every repeat and backdated the survivor, so
+	 * importing a session reported your whole repertoire as older than it was.
+	 */
+	it('keeps every cook, so a dish made twice stays a dish made twice', () => {
 		const out = mergeSessions(live(), {
 			cookedLog: [
 				{ slug: 'carbonara', at: 500 },
@@ -54,10 +61,26 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 		});
 		expect(out.cookedLog.map((e) => e.slug).sort()).toEqual([
 			'carbonara',
+			'carbonara',
 			'pad-thai',
 			'ragu-alla-bolognese'
 		]);
-		expect(out.cookedLog.find((e) => e.slug === 'carbonara')?.at).toBe(500);
+		const carbonara = out.cookedLog.filter((e) => e.slug === 'carbonara').map((e) => e.at);
+		expect(carbonara.sort((a, b) => a - b)).toEqual([500, 2000]);
+	});
+
+	it('is idempotent — re-importing your own export adds nothing', () => {
+		const mine = live();
+		const out = mergeSessions(mine, structuredClone(mine));
+		expect(out.cookedLog).toHaveLength(2);
+	});
+
+	it('prefers the graded copy when both sides hold the same cook', () => {
+		const out = mergeSessions(live(), {
+			cookedLog: [{ slug: 'carbonara', at: 2000, grade: 'met' }]
+		});
+		expect(out.cookedLog).toHaveLength(2);
+		expect(out.cookedLog.find((e) => e.slug === 'carbonara')?.grade).toBe('met');
 	});
 
 	it('unions shopping ticks per menu hash instead of replacing them', () => {

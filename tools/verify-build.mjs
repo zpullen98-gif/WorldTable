@@ -89,11 +89,39 @@ check('every live technique has a page', () => {
 	return `${n} techniques`;
 });
 
-check('every mode has a page', () => {
-	for (const p of ['index.html', 'lexicon.html', 'pantry.html', 'study.html', 'menu.html', 'technique.html']) {
-		assert(existsSync(join(BUILD, p)), `missing ${p}`);
+/**
+ * Read the mode bar rather than a list kept alongside it.
+ *
+ * This check shipped as six hardcoded filenames and was already wrong: /family
+ * had been a mode for months and nothing here knew. A tab that 404s is the most
+ * visible failure the build can have, and the version of this check that could
+ * not see a new tab was the version that let one through — which is the exact
+ * argument the technique check twenty lines up makes about magic numbers.
+ */
+check('every mode in the bar has a page', () => {
+	const layout = readFileSync(join(ROOT, 'src', 'routes', '+layout.svelte'), 'utf8');
+	const open = layout.indexOf("const MODES = [");
+	assert(open >= 0, 'could not find the MODES array in +layout.svelte');
+	const close = layout.indexOf('];', open);
+	assert(close > open, 'MODES array is not terminated');
+
+	// String scanning, not a regex: the array is a literal list of literals,
+	// and a regex here would be one more thing to get subtly wrong.
+	const body = layout.slice(open, close);
+	const hrefs = [];
+	let at = body.indexOf("href: '");
+	while (at >= 0) {
+		const from = at + 7;
+		hrefs.push(body.slice(from, body.indexOf("'", from)));
+		at = body.indexOf("href: '", from);
 	}
-	return '6 modes';
+	assert(hrefs.length >= 6, `parsed only ${hrefs.length} modes — the array's shape changed`);
+
+	for (const href of hrefs) {
+		const file = href === '' ? 'index.html' : `${href.slice(1)}.html`;
+		assert(existsSync(join(BUILD, file)), `mode "${href || '/'}" has no page (${file})`);
+	}
+	return `${hrefs.length} modes`;
 });
 
 check('a deep link renders its dish without JavaScript', () => {

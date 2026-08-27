@@ -15,32 +15,57 @@
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { bySlug } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
+	import { repertoire, dueList, sinceLabel } from '$lib/repertoire';
 
 	interface Props {
-		/** Total dishes across the ten semesters, from study.json. */
-		curriculumTotal?: number;
+		/** The course's dish slugs, in teaching order, from study.json. */
+		curriculum?: string[];
 		lexiconTotal?: number;
 		techniqueTotal?: number;
 		recipeTotal?: number;
 	}
 	let {
-		curriculumTotal = 0,
+		curriculum = [],
 		lexiconTotal = 0,
 		techniqueTotal = 0,
 		recipeTotal = 0
 	}: Props = $props();
 
-	const cooked = $derived(session.cookedLog.length);
+	const curriculumTotal = $derived(curriculum.length);
+
+	/* Distinct dishes, not log entries.
+	   This band shipped reading `cookedLog.length` against the course total, and
+	   both halves of that were wrong: the log counts COOKS (markCooked appends on
+	   every finish, so one dish cooked three times counted as three) and it
+	   counts dishes from anywhere in the book, so 45 cooks of anything at all
+	   reported the ten-semester curriculum complete. */
+	const cookedDishes = $derived(session.cookedDishes);
+	const courseDone = $derived(curriculum.filter((slug) => cookedDishes.has(slug)).length);
+	const cooked = $derived(cookedDishes.size);
+
 	const menuCount = $derived(session.menuCount);
 	const dishes = $derived(session.menuDishes.length);
 	const pantry = $derived(session.pantry.length);
 
-	/* The Table has no scheduler, so "today" cannot mean "cards due". It means
-	   the next unfinished thing in the course, which is the honest equivalent
-	   and is what a cook actually wants: one dish, not a queue. */
+	/* There IS a scheduler now (lib/repertoire.ts), so "today" can mean what it
+	   means in the sibling wings: the thing most worth doing. A dish gone cold
+	   outranks a new one — re-cooking what you are losing beats adding to a list
+	   of things you cooked once. Failing that, the next dish in teaching order.
+	   One dish either way, never a queue. */
+	const due = $derived.by(() => {
+		const now = Date.now();
+		return dueList(repertoire(session.cookedLog, now), now);
+	});
+	const coldest = $derived(due[0]);
+	const coldestName = $derived(coldest ? (bySlug.get(coldest.slug)?.name ?? coldest.slug) : '');
+
+	const nextUp = $derived(curriculum.find((slug) => !cookedDishes.has(slug)));
+	const nextUpName = $derived(nextUp ? (bySlug.get(nextUp)?.name ?? nextUp) : '');
+
 	const started = $derived(cooked > 0);
-	const pct = $derived(curriculumTotal ? Math.round((cooked / curriculumTotal) * 100) : 0);
+	const pct = $derived(curriculumTotal ? Math.round((courseDone / curriculumTotal) * 100) : 0);
 </script>
 
 <div class="oot-band-host">
@@ -54,24 +79,34 @@
 					{#if !started}
 						Start the course. <span class="oot-today-n">{curriculumTotal}</span> dishes
 						across ten semesters, in teaching order.
-					{:else if cooked < curriculumTotal}
-						<span class="oot-today-n">{cooked}</span> of
-						<span class="oot-today-n">{curriculumTotal}</span> dishes cooked.
+					{:else if coldest}
+						Cook <a class="oot-today-dish" href="{base}/recipe/{coldest.slug}">{coldestName}</a>
+						again. Last made {sinceLabel(coldest.daysSince)}.
+					{:else if nextUp}
+						Next in teaching order:
+						<a class="oot-today-dish" href="{base}/recipe/{nextUp}">{nextUpName}</a>.
 					{:else}
-						The whole course is cooked. Now cook it again, faster.
+						Every dish on the course is cooked and none has gone cold.
 					{/if}
 				</div>
 				<div class="oot-today-sub">
 					{#if !started}
 						Semester one is knife work and fire. Mark a dish cooked when you have
 						actually made it, not when you have read it.
+					{:else if coldest}
+						{due.length === 1
+							? 'One dish is past its re-cook.'
+							: `${due.length} dishes are past their re-cook.`}
+						Check the plate against the standard this time.
+					{:else if nextUp}
+						{courseDone} of {curriculumTotal} cooked, and nothing is going cold.
 					{:else}
-						Pick up where the teaching order left off.
+						Cook it again faster, or take the repertoire out to the rest of the book.
 					{/if}
 				</div>
 			</div>
-			<a class="oot-chip oot-today-go" href="{base}/study">
-				{started ? 'Back to the course' : 'Open the course'}
+			<a class="oot-chip oot-today-go" href={coldest ? `${base}/repertoire` : `${base}/study`}>
+				{#if !started}Open the course{:else if coldest}What has gone cold{:else}Back to the course{/if}
 			</a>
 		</div>
 	</section>
@@ -84,6 +119,7 @@
 			<a href="{base}/study">Path of Study<small>Ten semesters, {curriculumTotal} dishes in teaching order</small></a>
 			<a href="{base}/technique">Techniques<small>{techniqueTotal} skills, and the dishes that drill each</small></a>
 			<a href="{base}/lexicon">Chef's Lexicon<small>{lexiconTotal} terms, with flashcards and a quiz</small></a>
+			<a href="{base}/palate">The Palate<small>Taste it, name the fault, pull the gentlest lever</small></a>
 			<a href="{base}/family">The Family Chapter<small>Add the dishes your kitchen actually cooks</small></a>
 		</div>
 	</section>
@@ -99,6 +135,11 @@
 					: `Opens at four dishes on My Menu — ${4 - dishes} to go`}</small
 			></a>
 			<a href="{base}/lexicon">Lexicon Quiz<small>Ten questions on the words a cook is expected to know</small></a>
+			<a href="{base}/repertoire">The Repertoire<small
+				>{due.length
+					? `${due.length} dish${due.length === 1 ? '' : 'es'} due a re-cook`
+					: 'What you can cook, and what is slipping'}</small
+			></a>
 			<a href="{base}/pantry">Pantry Match<small
 				>{pantry ? `${pantry} ingredients ticked` : 'What can you cook from what is in the walk-in'}</small
 			></a>
@@ -117,8 +158,13 @@
 			<div class="oot-meter-track"><div class="oot-meter-fill" style="width:{pct}%"></div></div>
 		</div>
 		<div class="oot-today-sub" style="margin-top:8px">
-			{cooked} dish{cooked === 1 ? '' : 'es'} marked cooked · {menuCount} pinned · {dishes} on the
-			house menu. Everything is kept in this browser; export it from My Menu.
+			{courseDone} of {curriculumTotal} on the course · {cooked} dish{cooked === 1 ? '' : 'es'} cooked
+			in all · {menuCount} pinned · {dishes} on the house menu. Everything is kept in this browser;
+			export it from My Menu.
+		</div>
+		<div class="oot-today-sub" style="margin-top:6px">
+			<a href="{base}/repertoire">The Repertoire</a> — every dish you have cooked, how long ago, and
+			what is due.
 		</div>
 	</section>
 
@@ -159,6 +205,11 @@
 		color: var(--muted, currentColor);
 		font-size: var(--t-small, 0.8125rem);
 		line-height: 1.4;
+	}
+	.oot-today-dish {
+		color: inherit;
+		text-decoration-color: var(--turmeric, currentColor);
+		text-underline-offset: 3px;
 	}
 	.oot-today-go {
 		text-decoration: none;
