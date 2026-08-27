@@ -148,6 +148,24 @@ export interface RecipeDetail {
 	lexiconTerms: string[];
 	/** Pantry item labels this recipe calls for. */
 	pantryItems: string[];
+	/**
+	 * What a correct plate looks like at the pass. AUTHORED, not derived — see
+	 * tools/derive/standards.mjs. Absent on dishes that have none yet, which is
+	 * most of them: test for the key, never render an empty block.
+	 */
+	standard?: DishStandard;
+}
+
+/**
+ * The one thing the guide never said. A recipe teaches a cook to MAKE a dish;
+ * this is how they know they got it right.
+ */
+export interface DishStandard {
+	slug: string;
+	/** 3–5 marks, checkable at the pan, in the order a cook would check them. */
+	marks: string[];
+	/** The commonest real failure, and what it looks like on the plate. */
+	fault: string;
 }
 
 export type Recipe = RecipeSummary & RecipeDetail;

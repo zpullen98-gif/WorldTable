@@ -199,6 +199,24 @@
 		</section>
 	</div>
 
+	<!-- Between the method and the note on purpose: how to make it, then how to
+	     know you got it right, then why it matters. Most dishes carry no standard
+	     yet, so the whole block is absent rather than rendered empty. -->
+	{#if d.standard}
+		<section class="standard">
+			<h2 class="sec">How it should come out</h2>
+			<ul class="marks">
+				{#each d.standard.marks as mark, i (i)}
+					<li>{mark}</li>
+				{/each}
+			</ul>
+			<p class="fault">
+				<span class="faultlabel">Where it goes wrong</span>
+				{d.standard.fault}
+			</p>
+		</section>
+	{/if}
+
 	<aside class="note recipe-note">
 		<p class="eyebrow">From the pass</p>
 		<p class="notebody">{d.note}</p>
@@ -532,6 +550,41 @@
 		border-radius: var(--radius);
 		padding: 1px 6px;
 		vertical-align: 2px;
+	}
+
+	/* The standard reads as a checklist, not prose: each mark is a thing to
+	   verify, so they get a marker and generous leading rather than the note's
+	   flowing paragraph. Turmeric is the note's colour; the standard uses the
+	   hairline rule so the two blocks do not compete beside each other. */
+	.standard {
+		margin-top: 30px;
+		border-top: 1px solid var(--line);
+		padding-top: 18px;
+	}
+	.marks {
+		margin: 10px 0 0;
+		padding-left: 1.1em;
+		list-style: square;
+	}
+	.marks li {
+		margin-bottom: 8px;
+		line-height: 1.6;
+	}
+	.marks li::marker {
+		color: var(--turmeric);
+	}
+	.fault {
+		margin-top: 14px;
+		font-size: var(--t-small);
+		color: var(--ink-soft);
+		line-height: 1.6;
+	}
+	.faultlabel {
+		display: inline-block;
+		margin-right: 6px;
+		font-variant: small-caps;
+		letter-spacing: 0.06em;
+		color: var(--turmeric);
 	}
 
 	.note {

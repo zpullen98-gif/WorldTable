@@ -18,6 +18,10 @@ thematic atlases from the Dessert Atlas to The Saucier. Alongside them:
 - **The Chef's Lexicon** — 479 terms with flashcards and a quiz
 - **The Techniques** — 103 skills, each listing every dish in the guide that
   demonstrates it, with the Lexicon's own definition of the skill
+- **The standard** — for the 45 dishes of the Path of Study, what a correct
+  plate looks like at the pass: three to five marks a cook can actually check,
+  and the commonest way the dish goes wrong. The guide teaches you to make a
+  dish; this is how you know you got it right.
 - **Pantry Match** — what you can cook from 177 ingredients, seasonally aware
 - **The Path of Study** — ten semesters, in teaching order, tracking what you
   have actually cooked and which skills that has drilled
@@ -66,7 +70,7 @@ npm run preview      # serve the build with real-host semantics
 
 | | |
 |---|---|
-| `npm test` | 34 unit tests |
+| `npm test` | 73 unit tests |
 | `npm run verify:data` | 38 checks — extraction round-trip, char-sums, slug uniqueness, referential integrity |
 | `npm run verify:build` | 18 checks against the built site |
 | `npm run test:e2e` | 27 Playwright specs — offline in real Chromium, axe, print, and a parity harness |

@@ -28,6 +28,7 @@ import { derivePairing } from './derive/pairing.mjs';
 import { deriveTechniques, deriveFilms } from './derive/films.mjs';
 import { fullTechTable, LEXICON_ANCHOR, SUPPLEMENT } from './derive/technique-table.mjs';
 import { buildCrosslinks } from './derive/crosslinks.mjs';
+import { STANDARDS, MIN_MARKS, MAX_MARKS } from './derive/standards.mjs';
 import { derivePantryMap, narrowBlob } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
 import { miniOptions } from '../src/lib/search-config.mjs';
@@ -207,6 +208,9 @@ function internPairing(p) {
 	return pairingIds.get(key);
 }
 
+/** Authored, not derived — see tools/derive/standards.mjs. */
+const standardBySlug = new Map(STANDARDS.map((x) => [x.slug, x]));
+
 R.forEach((r, i) => {
 	const slug = recipeSlugs[i];
 	const region = classifyChapter(r.c);
@@ -248,7 +252,11 @@ R.forEach((r, i) => {
 		pairingId: internPairing(ov.pairing ?? derivePairing(r, blobs[i], CELLAR, BOTTLE_NOTES, flavor.tags)),
 		films: deriveFilms(r, blobs[i], { F, TEACHERS, DISH_FILMS, TECH }, isAmerican),
 		lexiconTerms: crosslinks.recipeToTerms.get(slug) ?? [],
-		pantryItems: pantryMap.get(i) ?? []
+		pantryItems: pantryMap.get(i) ?? [],
+		// Absent rather than empty for the 925 dishes with no standard yet:
+		// the recipe page tests for the key, and an empty array would render
+		// an empty block.
+		...(standardBySlug.has(slug) ? { standard: standardBySlug.get(slug) } : {})
 	});
 });
 
@@ -652,6 +660,62 @@ const thin = index.filter((r) => r.noteChars < 180);
 console.log(`  notes under 180 chars: ${thin.length} of ${index.length}  (backfilled: ${Object.keys(NOTES).length})`);
 
 console.log('');
+/**
+ * Standards hygiene.
+ *
+ * A standard whose slug matches no recipe is our own mistake, exactly like a
+ * SUPPLEMENT entry that tags nothing: it means a slug was written that the
+ * corpus never had, and the block would silently never render. Fails the build.
+ *
+ * The mark count is gated too. Two marks is not a standard and six is a recipe,
+ * and the number is the one thing about this data that drifts without anybody
+ * noticing — a chef adding "one more thing to check" a dish at a time.
+ *
+ * A dish with NO standard is not an error. 45 of 970 are written; the rest are
+ * a rolling job and render without the block. What IS reported is a Path of
+ * Study dish missing one, because that is the teaching spine and the whole
+ * reason the field exists.
+ */
+{
+	const slugSet = new Set(recipeSlugs);
+	const orphans = STANDARDS.filter((x) => !slugSet.has(x.slug));
+	if (orphans.length) {
+		problems.push(
+			`standards for slugs no recipe has: ${orphans.map((x) => x.slug).join(', ')}`
+		);
+	}
+
+	const dupes = STANDARDS.map((x) => x.slug).filter((v, i, a) => a.indexOf(v) !== i);
+	if (dupes.length) problems.push(`duplicate standards: ${[...new Set(dupes)].join(', ')}`);
+
+	const badCount = STANDARDS.filter(
+		(x) => !Array.isArray(x.marks) || x.marks.length < MIN_MARKS || x.marks.length > MAX_MARKS
+	);
+	if (badCount.length) {
+		problems.push(
+			`standards outside ${MIN_MARKS}-${MAX_MARKS} marks: ` +
+				badCount.map((x) => `${x.slug} (${x.marks?.length ?? 0})`).join(', ')
+		);
+	}
+
+	const noFault = STANDARDS.filter((x) => !x.fault || !String(x.fault).trim());
+	if (noFault.length) {
+		problems.push(`standards with no stated fault: ${noFault.map((x) => x.slug).join(', ')}`);
+	}
+
+	// STUDY carries recipe NAMES; `study` above has already resolved them to
+	// slugs through nameToSlug, so read the derived value rather than mapping a
+	// second time and risking the two disagreeing.
+	const spine = [...new Set(study.flatMap((s) => s.recipes))];
+	const covered = new Set(STANDARDS.map((x) => x.slug));
+	const uncovered = spine.filter((x) => !covered.has(x));
+	if (uncovered.length) {
+		console.log(
+			`  note: ${uncovered.length} of ${spine.length} Path of Study dishes have no standard yet`
+		);
+	}
+}
+
 if (problems.length) {
 	console.error('  BUILD GATE FAILED\n');
 	for (const p of problems) console.error(`    ✗ ${p}\n`);
