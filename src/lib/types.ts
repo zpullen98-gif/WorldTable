@@ -321,3 +321,34 @@ export interface Palate {
 	metaRule: string;
 	faults: PalateFault[];
 }
+
+/**
+ * Menu economics — the bands and quadrants a costing sheet is scored against.
+ *
+ * Every number is the guide's own and is checked against the prose at build
+ * time; see tools/derive/economics.mjs for what is gated against what.
+ */
+export interface EconomicsBand {
+	key: string;
+	label: string;
+	lowPct: number;
+	highPct: number;
+	note: string;
+}
+
+export interface EconomicsQuadrant {
+	key: 'star' | 'plowhorse' | 'puzzle' | 'dog';
+	label: string;
+	popular: boolean;
+	profitable: boolean;
+	advice: string;
+}
+
+export interface Economics {
+	/** The lexicon entries all of this is read out of. */
+	entries: Record<string, { slug: string; term: string; definition: string }>;
+	bands: EconomicsBand[];
+	quadrants: EconomicsQuadrant[];
+	/** The guide's own warning about costing raw invoice prices. */
+	yieldWarning: string;
+}

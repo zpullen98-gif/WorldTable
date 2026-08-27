@@ -9,6 +9,7 @@
  * luck is not a foundation; a leaf module is.
  */
 import type { Recipe } from '../types';
+import type { CostLine } from '../costing';
 
 export const CURRENT_VERSION = 1;
 
@@ -49,7 +50,24 @@ export interface SessionState {
 	cookedLog: Array<{ slug: string; at: number; grade?: 'met' | 'close' | 'missed' }>;
 	familyRecipes: Recipe[];
 	menuDishes: MenuDish[];
+	/**
+	 * Costing for the venue's own dishes, keyed by MenuDish id.
+	 *
+	 * A sibling field rather than a member of MenuDish, deliberately. Dishes
+	 * merge by id with the newer `ts` winning, so folding costs into the dish
+	 * would let a colleague's edit to a description silently replace an evening
+	 * of costing work. These merge on their own terms.
+	 */
+	dishCosts: Record<string, DishCosting>;
 	lastWrite: number;
+}
+
+export interface DishCosting {
+	lines: CostLine[];
+	/** Covers sold in the period — menu engineering's popularity axis. */
+	sold?: number;
+	/** Last edit, ms epoch. The import-merge tiebreak. */
+	ts: number;
 }
 
 export const EMPTY_SESSION: SessionState = {
@@ -61,6 +79,7 @@ export const EMPTY_SESSION: SessionState = {
 	cookedLog: [],
 	familyRecipes: [],
 	menuDishes: [],
+	dishCosts: {},
 	lastWrite: 0
 };
 
@@ -132,6 +151,17 @@ export function mergeSessions(
 				if (!mine || (d.ts ?? 0) > (mine.ts ?? 0)) dishes.set(d.id, d);
 			}
 			return [...dishes.values()];
+		})(),
+		// Per dish id, the newer costing winning whole. Merging line-by-line across
+		// two sheets would invent a third sheet neither venue priced.
+		dishCosts: (() => {
+			const out: Record<string, DishCosting> = { ...(current.dishCosts ?? {}) };
+			for (const [id, costing] of Object.entries(incoming.dishCosts ?? {})) {
+				if (!costing || !Array.isArray(costing.lines)) continue;
+				const mine = out[id];
+				if (!mine || (costing.ts ?? 0) > (mine.ts ?? 0)) out[id] = costing;
+			}
+			return out;
 		})(),
 		// After the spread, never before: a hand-edited file must not be able to
 		// walk the schema marker backwards and re-trigger a migration.

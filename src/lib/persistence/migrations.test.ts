@@ -83,6 +83,49 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 		expect(out.cookedLog.find((e) => e.slug === 'carbonara')?.grade).toBe('met');
 	});
 
+	/**
+	 * dishCosts is the newest field, and the reason this file exists is that a
+	 * new field falling through a bare spread once destroyed every cooked mark
+	 * and shopping tick in the app. Named explicitly in mergeSessions; asserted
+	 * here.
+	 */
+	it('keeps a costing the incoming file does not carry', () => {
+		const mine = {
+			...live(),
+			dishCosts: {
+				'd-1': { lines: [{ id: 'c-1', item: 'Salmon', unitCost: 12, unit: 'kg', usedQty: 0.2, yieldPct: 45 }], ts: 100 }
+			}
+		};
+		const out = mergeSessions(mine, { ...structuredClone(EMPTY_SESSION), menu: ['tom-yum-goong'] });
+		expect(out.dishCosts['d-1'].lines).toHaveLength(1);
+		expect(out.dishCosts['d-1'].lines[0].yieldPct).toBe(45);
+	});
+
+	it('takes the newer costing per dish and leaves the others alone', () => {
+		const mine = {
+			...live(),
+			dishCosts: {
+				'd-1': { lines: [], sold: 10, ts: 100 },
+				'd-2': { lines: [], sold: 5, ts: 500 }
+			}
+		};
+		const out = mergeSessions(mine, {
+			dishCosts: {
+				'd-1': { lines: [], sold: 99, ts: 900 },
+				'd-2': { lines: [], sold: 1, ts: 200 }
+			}
+		});
+		expect(out.dishCosts['d-1'].sold).toBe(99);
+		expect(out.dishCosts['d-2'].sold).toBe(5);
+	});
+
+	it('ignores a costing with no lines array rather than trusting the file', () => {
+		const out = mergeSessions(live(), {
+			dishCosts: { 'd-9': { sold: 4 } } as never
+		});
+		expect(out.dishCosts['d-9']).toBeUndefined();
+	});
+
 	it('unions shopping ticks per menu hash instead of replacing them', () => {
 		const out = mergeSessions(live(), {
 			shoppingChecks: { abc123: ['Dairy:1', 'Meat:2'], other: ['Produce:0'] }

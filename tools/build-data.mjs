@@ -30,6 +30,7 @@ import { fullTechTable, LEXICON_ANCHOR, SUPPLEMENT } from './derive/technique-ta
 import { buildCrosslinks } from './derive/crosslinks.mjs';
 import { STANDARDS, MIN_MARKS, MAX_MARKS } from './derive/standards.mjs';
 import { buildPalate } from './derive/palate.mjs';
+import { buildEconomics } from './derive/economics.mjs';
 import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
 import { derivePantryMap, narrowBlob } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
@@ -415,6 +416,12 @@ console.log('\n  build:data\n');
  */
 const { palate, problems: palateProblems } = buildPalate(lexicon);
 
+/**
+ * Menu economics. Same treatment as the palate: the targets are the guide's and
+ * the build fails if the prose stops supporting them.
+ */
+const { economics, problems: economicsProblems } = buildEconomics(lexicon);
+
 write('recipes.index.json', index);
 write('recipes.full.json', full);
 write('pairings.json', pairingTable);
@@ -426,6 +433,7 @@ write('substitutions.json', substitutions);
 write('cellar.json', cellar);
 write('techniques.json', techniques);
 write('palate.json', palate);
+write('economics.json', economics);
 
 /**
  * The search index, prebuilt so the browser never pays tokenization cost.
@@ -768,6 +776,7 @@ console.log('');
 }
 
 problems.push(...palateProblems);
+problems.push(...economicsProblems);
 
 if (problems.length) {
 	console.error('  BUILD GATE FAILED\n');

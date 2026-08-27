@@ -96,8 +96,9 @@ test('cook mode is reachable and escapable by keyboard alone', async ({ page }) 
  * which axe rates CRITICAL, for as long as the section existed.
  */
 const SEEDED = [
-	{ path: '/menu', name: 'menu worksheet with a menu on it' },
-	{ path: '/repertoire', name: 'repertoire with dishes cooked' }
+	{ path: '/menu', name: 'menu worksheet with a menu on it', ready: '.plan li' },
+	{ path: '/repertoire', name: 'repertoire with dishes cooked', ready: '.rows li' },
+	{ path: '/menu/costing', name: 'costing sheet with dishes costed', ready: '.quadrants li' }
 ];
 
 for (const view of SEEDED) {
@@ -106,7 +107,10 @@ for (const view of SEEDED) {
 		await seedSession(page);
 		await goto(page, view.path);
 		// The section under test only exists once the store has hydrated from IDB.
-		await page.locator('.plan li, .rows li').first().waitFor({ timeout: 15_000 });
+		// Named per view rather than as one shared selector: a wait that matches
+		// some other page's markup would pass while the section under test never
+		// rendered, which is the failure this whole block exists to prevent.
+		await page.locator(view.ready).first().waitFor({ timeout: 15_000 });
 
 		const results = await new AxeBuilder({ page })
 			.withTags(['wcag2a', 'wcag2aa'])

@@ -43,7 +43,25 @@ export async function seedSession(page: Page, patch: Record<string, unknown> = {
 				{ slug: 'miso-soup', at: now - 18 * DAY }
 			],
 			familyRecipes: [],
-			menuDishes: [],
+			menuDishes: [
+				{ id: 'd-1', name: 'Chargrilled Salmon', section: 'Mains', description: '', ingredients: [], allergens: [], price: '24.00', ts: now },
+				{ id: 'd-2', name: 'Cacio e Pepe', section: 'Mains', description: '', ingredients: [], allergens: [], price: '16.00', ts: now }
+			],
+			dishCosts: {
+				'd-1': {
+					lines: [
+						{ id: 'c-1', item: 'Salmon fillet', unitCost: 12, unit: 'kg', usedQty: 0.2, yieldPct: 45 },
+						{ id: 'c-2', item: 'New potato', unitCost: 1.5, unit: 'kg', usedQty: 0.25, yieldPct: 80 }
+					],
+					sold: 120,
+					ts: now
+				},
+				'd-2': {
+					lines: [{ id: 'c-3', item: 'Pecorino', unitCost: 25, unit: 'kg', usedQty: 0.06, yieldPct: 100 }],
+					sold: 220,
+					ts: now
+				}
+			},
 			lastWrite: now,
 			...(extra as Record<string, unknown>)
 		};

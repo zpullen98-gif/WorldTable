@@ -296,6 +296,51 @@ The honest limit, stated once on the page rather than as a badge on every row:
 **the waits are measured and the work is largely estimated.** A marker that
 fires on 15 of 17 rows distinguishes nothing.
 
+## Menu economics — the costing sheet
+
+The starkest instance of the pattern in this file. The guide carries a whole
+restaurant-finance curriculum — 43 entries under "Restaurant Finance &
+Opening", plus "Menu Economics: Food Cost, Yield & Par" and "Costing Time" —
+and **fourteen of those 43 link to no recipe at all**, because crosslinks.mjs
+scores a term against dish text and "COGS Control: Inventory, Variance & Theft"
+has no dish. The least reachable content in the guide is what the paying venue
+needs most.
+
+`tools/derive/economics.mjs` carries the bands and the four menu-engineering
+quadrants, gated against the prose **in both directions**: the entry must still
+state the phrase, AND the numbers are read back out of that phrase and compared
+to the ones we ship. The first version only checked the phrase, and the hole was
+live — `lowPct` could be edited from 25 to 30 while the entry still said
+"25–35%" and the build passed, which would have scored every dish against a band
+the guide does not state.
+
+### Yield is not a refinement
+
+`src/lib/costing.ts` divides every line by its yield. The guide is blunt about
+why: *"a $12/kg fish at 45% yield is really $26/kg on the plate; costing raw
+invoice prices is the classic rookie bankruptcy."* A sheet that multiplies
+invoice price by quantity is not a simpler version of this — it is the specific
+error that closes restaurants, and it would look completely convincing. The
+worked example is a unit test.
+
+Two more things the sheet refuses to fake:
+
+- **An incomplete total is flagged, not silently shipped.** A plate cost that
+  drops an uncostable line reads as authority and is wrong in the direction that
+  makes a dish look more profitable than it is.
+- **Menu engineering leaves out dishes with no price or no sales count.** A dish
+  at the origin because nobody typed a number is not a dog. Popularity uses the
+  standard 70%-of-fair-share floor, not a median — a median forces half the menu
+  to be unpopular however evenly it sells.
+
+`/menu/costing` sits inside `<article class="sheet">`, the same contract as
+`/menu/quiz`: inside Outside Of Time this is a PAID surface and the monorepo's
+lock masks `article.sheet` children. An overlay alone is not a gate.
+
+`dishCosts` is a SIBLING of `menuDishes`, not a member. Dishes merge by id with
+the newer `ts` winning, so folding costs into the dish would let a colleague's
+edit to a description silently replace an evening of costing work.
+
 ## Known remaining work
 
 - None planned. The content backfill completed 2026-08-08: all 320 thin "from
@@ -310,7 +355,7 @@ fires on 15 of 17 rows distinguishes nothing.
 
 ## Testing
 
-`npm test` (127 unit) · `npm run test:e2e` (43 Playwright: regressions named for
+`npm test` (168 unit) · `npm run test:e2e` (44 Playwright: regressions named for
 the original's line numbers, offline in real Chromium, axe, print PDFs, and the
 parity harness that runs the archived original against our build output).
 

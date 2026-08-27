@@ -12,7 +12,7 @@
 import { browser } from '$app/environment';
 import type { Recipe, RecipeSummary } from '../types';
 import { EMPTY_SESSION, loadSession, saveSession, debounce, type SessionState } from '../persistence/db';
-import { mergeSessions, type MenuDish } from '../persistence/state';
+import { mergeSessions, type MenuDish, type DishCosting } from '../persistence/state';
 import { cookedSlugs, type CookEntry, type Grade } from '../repertoire';
 
 class SessionStore {
@@ -236,6 +236,38 @@ class SessionStore {
 
 	removeMenuDish(id: string) {
 		this.#s.menuDishes = this.#s.menuDishes.filter((d) => d.id !== id);
+		if (id in this.#s.dishCosts) {
+			const next = { ...this.#s.dishCosts };
+			delete next[id];
+			this.#s.dishCosts = next;
+		}
+		this.#persistNow();
+	}
+
+	/* ---- costing --------------------------------------------------------
+	 *
+	 * The venue's own numbers: what each line costs, what it yields, and how
+	 * many went out. Keyed by dish id and stored beside the dishes rather than
+	 * inside them — see the note on SessionState.dishCosts.
+	 */
+
+	costingFor(id: string): DishCosting {
+		return this.#s.dishCosts[id] ?? { lines: [], ts: 0 };
+	}
+
+	setCosting(id: string, costing: Omit<DishCosting, 'ts'>) {
+		this.#s.dishCosts = { ...this.#s.dishCosts, [id]: { ...costing, ts: Date.now() } };
+		this.#persistNow();
+	}
+
+	/** Removing a dish must not leave its costing behind to be re-adopted by a
+	 *  later dish that happens to mint the same id. Ids are random, but orphan
+	 *  data that nothing displays is how a session file grows forever. */
+	clearCosting(id: string) {
+		if (!(id in this.#s.dishCosts)) return;
+		const next = { ...this.#s.dishCosts };
+		delete next[id];
+		this.#s.dishCosts = next;
 		this.#persistNow();
 	}
 
