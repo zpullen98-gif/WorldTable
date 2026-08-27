@@ -263,6 +263,23 @@ class SessionStore {
 		}
 	}
 
+	/* ---- drills ----------------------------------------------------------
+	 *
+	 * No toggleDrilled. A cook can mis-tap at the stove and undo it; a drill
+	 * answer is evidence and there is nothing to take back.
+	 */
+
+	get drillLog() {
+		return this.#s.drillLog;
+	}
+
+	/** Recorded BEFORE any explanation is shown — closing the round must not
+	 *  lose the answer, the same rule cook mode's pass panel follows. */
+	markDrilled(slug: string, grade: Grade) {
+		this.#s.drillLog = [...this.#s.drillLog, { slug, at: Date.now(), grade }];
+		this.#persistNow();
+	}
+
 	/* ---- family recipes ------------------------------------------------ */
 
 	get familyRecipes(): Recipe[] {

@@ -442,3 +442,9 @@ export interface ServiceTrack {
 	cellar: Array<{ bottle: string; name: string; term: string | null }>;
 	untaught: string[];
 }
+
+/** Drill cards — see tools/derive/drills.mjs. Prompts ship REDACTED. */
+export interface Drills {
+	cards: import('./drill').DrillCard[];
+	categories: Record<string, number>;
+}

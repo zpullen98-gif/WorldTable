@@ -48,6 +48,16 @@ export interface SessionState {
 	 * before standards existed and on the 925 dishes that have none.
 	 */
 	cookedLog: Array<{ slug: string; at: number; grade?: 'met' | 'close' | 'missed' }>;
+	/**
+	 * Drill answers over lexicon terms. Deliberately the SAME shape as a cook,
+	 * so repertoire() consumes it with no adapter and the ladder is shared code
+	 * rather than copied code.
+	 *
+	 * A SIBLING of cookedLog, never merged into it: the mode bar's amber count
+	 * is computed from cookedLog, and folding 186 terms in would report "dishes
+	 * past their re-cook" in the chrome of every page while counting cheeses.
+	 */
+	drillLog: Array<{ slug: string; at: number; grade?: 'met' | 'close' | 'missed' }>;
 	familyRecipes: Recipe[];
 	menuDishes: MenuDish[];
 	/**
@@ -87,6 +97,7 @@ export const EMPTY_SESSION: SessionState = {
 	pantry: [],
 	shoppingChecks: {},
 	cookedLog: [],
+	drillLog: [],
 	familyRecipes: [],
 	menuDishes: [],
 	dishCosts: {},
@@ -146,6 +157,21 @@ export function mergeSessions(
 		pantry: [...new Set([...current.pantry, ...(incoming.pantry ?? [])])],
 		shoppingChecks,
 		cookedLog: [...cooked.values()].sort((a, b) => a.at - b.at),
+		// The same union as cookedLog above, for the same reason: keyed on
+		// slug|at so repeats survive an import, never on slug alone — that was
+		// the rule that collapsed every repeat and backdated the survivor.
+		drillLog: (() => {
+			const drilled = new Map(
+				(current.drillLog ?? []).map((e) => [`${e.slug}|${e.at}`, e])
+			);
+			for (const e of incoming.drillLog ?? []) {
+				if (!e || typeof e.slug !== 'string' || typeof e.at !== 'number') continue;
+				const key = `${e.slug}|${e.at}`;
+				const seen = drilled.get(key);
+				if (!seen || (!seen.grade && e.grade)) drilled.set(key, e);
+			}
+			return [...drilled.values()].sort((a, b) => a.at - b.at);
+		})(),
 		familyRecipes: [
 			...current.familyRecipes,
 			...(incoming.familyRecipes ?? []).filter(

@@ -64,6 +64,14 @@
 		{/if}
 	</ul>
 
+	<h2 class="sec">Drill it</h2>
+	<p class="secnote">
+		Ten questions over the track's terms — the definition with its own term taken out. Unlike the
+		menu drill it works on a fresh install, because it asks about the guide rather than about
+		dishes somebody still has to type in.
+	</p>
+	<p class="drillcta"><a class="chip" href="{base}/service/drill">Start a round</a></p>
+
 	<h2 class="sec">The track</h2>
 	<p class="secnote">
 		{track.modules.length} modules, {track.total} terms, each taught once and in this order.
@@ -234,6 +242,12 @@
 		font-size: var(--t-small);
 		line-height: 1.6;
 		color: var(--ink);
+	}
+	.drillcta {
+		margin-bottom: 6px;
+	}
+	.drillcta a {
+		text-decoration: none;
 	}
 	.untaught {
 		color: var(--ink-soft);

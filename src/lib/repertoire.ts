@@ -55,6 +55,16 @@ export interface CookEntry {
  */
 export const LADDER_DAYS = [14, 35, 90, 180, 365] as const;
 
+/**
+ * The ladder for a TERM rather than a dish.
+ *
+ * Tighter at the bottom and the same shape at the top. You can re-answer a
+ * question about Comté tomorrow; you cannot re-cook a coq au vin tomorrow, and
+ * the 14-day first rung exists because of that. Two days, then six, gets a
+ * server through a module in a working week.
+ */
+export const TERM_LADDER_DAYS = [2, 6, 14, 35, 90] as const;
+
 export const DAY_MS = 86_400_000;
 
 export type RepertoireState = 'fresh' | 'holding' | 'due' | 'cold';
@@ -84,13 +94,13 @@ export interface RepertoireEntry {
  * clean plates then a ruined one leaves you lower than three clean plates, and
  * the schedule has to say so.
  */
-function rungFor(entries: CookEntry[]): number {
+function rungFor(entries: CookEntry[], ladder: readonly number[]): number {
 	let rung = 0;
 	for (const e of entries) {
 		if (e.grade === 'missed') rung = Math.max(1, rung - 1);
 		else if (e.grade === 'close') rung = Math.max(1, rung);
 		else rung += 1;
-		rung = Math.min(rung, LADDER_DAYS.length);
+		rung = Math.min(rung, ladder.length);
 	}
 	return Math.max(1, rung);
 }
@@ -110,7 +120,18 @@ function stateFor(elapsedMs: number, intervalMs: number): RepertoireState {
  * would reorder the whole repertoire whenever a cook happened, which makes
  * both the UI and the tests jump around for no reason.
  */
-export function repertoire(log: CookEntry[], now: number): RepertoireEntry[] {
+export function repertoire(
+	log: CookEntry[],
+	now: number,
+	/**
+	 * Optional so the three existing call sites are untouched. A drill over
+	 * lexicon terms passes TERM_LADDER_DAYS; everything about the walk — missed
+	 * drops, close holds, ungraded climbs, floor 1, cap at ladder length — is
+	 * identical, which is the whole reason the scheduler is shared rather than
+	 * copied.
+	 */
+	ladder: readonly number[] = LADDER_DAYS
+): RepertoireEntry[] {
 	const bySlug = new Map<string, CookEntry[]>();
 	for (const e of log) {
 		if (!e || typeof e.slug !== 'string' || typeof e.at !== 'number') continue;
@@ -124,8 +145,8 @@ export function repertoire(log: CookEntry[], now: number): RepertoireEntry[] {
 		entries.sort((a, b) => a.at - b.at);
 		const first = entries[0].at;
 		const last = entries[entries.length - 1].at;
-		const rung = rungFor(entries);
-		const intervalDays = LADDER_DAYS[rung - 1];
+		const rung = rungFor(entries, ladder);
+		const intervalDays = ladder[rung - 1];
 		const elapsed = Math.max(0, now - last);
 		out.push({
 			slug,

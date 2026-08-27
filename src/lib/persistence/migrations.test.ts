@@ -142,6 +142,37 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 		expect(out.role).toBe('chef');
 	});
 
+	/**
+	 * drillLog is the newest field and repeats the cookedLog rules exactly,
+	 * because it is the same shape and the same failure modes apply: an export
+	 * always carries it present-and-empty, and keying on slug alone would
+	 * collapse every repeat answer and backdate the survivor.
+	 */
+	it('keeps drill answers an incoming session does not carry', () => {
+		const mine = {
+			...live(),
+			drillLog: [{ slug: 'riesling', at: 1000, grade: 'met' as const }]
+		};
+		const out = mergeSessions(mine, { ...structuredClone(EMPTY_SESSION), menu: ['tom-yum-goong'] });
+		expect(out.drillLog).toHaveLength(1);
+	});
+
+	it('keeps every drill answer, so a term answered twice stays answered twice', () => {
+		const mine = {
+			...live(),
+			drillLog: [{ slug: 'riesling', at: 1000, grade: 'missed' as const }]
+		};
+		const out = mergeSessions(mine, {
+			drillLog: [{ slug: 'riesling', at: 5000, grade: 'met' }]
+		});
+		expect(out.drillLog.map((e) => e.at)).toEqual([1000, 5000]);
+	});
+
+	it('is idempotent — re-importing your own drill history adds nothing', () => {
+		const mine = { ...live(), drillLog: [{ slug: 'comte', at: 42, grade: 'met' as const }] };
+		expect(mergeSessions(mine, structuredClone(mine)).drillLog).toHaveLength(1);
+	});
+
 	it('unions shopping ticks per menu hash instead of replacing them', () => {
 		const out = mergeSessions(live(), {
 			shoppingChecks: { abc123: ['Dairy:1', 'Meat:2'], other: ['Produce:0'] }

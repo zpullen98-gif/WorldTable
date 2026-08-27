@@ -33,6 +33,7 @@ import { buildPalate } from './derive/palate.mjs';
 import { buildEconomics } from './derive/economics.mjs';
 import { buildSanitation } from './derive/sanitation.mjs';
 import { buildServiceTrack } from './derive/service-track.mjs';
+import { buildDrills } from './derive/drills.mjs';
 import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
 import { derivePantryMap, narrowBlob } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
@@ -449,6 +450,13 @@ const { serviceTrack, problems: serviceTrackProblems } = buildServiceTrack(
 	index.map((r) => r.slug)
 );
 
+/**
+ * Drill prompts — the guide's definitions with the term redacted out of its own
+ * question, gated in both directions. Built from the service track's modules,
+ * so a term that leaves the track leaves the drill with it.
+ */
+const { drills, problems: drillProblems } = buildDrills(lexicon, serviceTrack.modules);
+
 write('recipes.index.json', index);
 write('recipes.full.json', full);
 write('pairings.json', pairingTable);
@@ -463,6 +471,7 @@ write('palate.json', palate);
 write('economics.json', economics);
 write('sanitation.json', sanitation);
 write('service-track.json', serviceTrack);
+write('drills.json', drills);
 
 /**
  * The search index, prebuilt so the browser never pays tokenization cost.
@@ -808,6 +817,7 @@ problems.push(...palateProblems);
 problems.push(...economicsProblems);
 problems.push(...sanitationProblems);
 problems.push(...serviceTrackProblems);
+problems.push(...drillProblems);
 
 if (problems.length) {
 	console.error('  BUILD GATE FAILED\n');

@@ -66,6 +66,15 @@
 			</a>
 		</li>
 		<li>
+			<a href="{base}/service/drill">
+				<h2>Drill the service track</h2>
+				<p>
+					Ten scored questions over the 186 terms of the front-of-house track, scheduled so a term
+					you miss comes back sooner. Works on a fresh install.
+				</p>
+			</a>
+		</li>
+		<li>
 			<a href="{base}/lexicon">
 				<h2>Lexicon flashcards</h2>
 				<p>
