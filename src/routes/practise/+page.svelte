@@ -12,11 +12,19 @@
 	import { base } from '$app/paths';
 	import { session } from '$lib/stores/session.svelte';
 	import { repertoire, dueList } from '$lib/repertoire';
+	import * as profiles from '$lib/profiles';
+	import { onMount } from 'svelte';
 
 	let { data } = $props();
 	const role = $derived(session.role);
 	const dishes = $derived(session.menuDishes.length);
 	const cooked = $derived(session.cookedDishes.size);
+
+	/* The board is offered only where it is the manager's device to read. The
+	   flag is the shared layer's and it is opt-in per device — the tablet on the
+	   pass is deliberately not the manager's. */
+	let manager = $state(false);
+	onMount(() => { manager = profiles.isManagerDevice(); });
 
 	const due = $derived.by(() => {
 		const now = Date.now();
@@ -95,6 +103,15 @@
 			</li>
 		{/if}
 	</ul>
+
+	{#if manager}
+		<h2 class="sec">For the manager</h2>
+		<p class="secnote">
+			Who has done the work of each station, on this device. Not who is qualified — that is yours to
+			judge from watching them cook.
+		</p>
+		<p><a class="chip" href="{base}/coverage">The coverage board</a></p>
+	{/if}
 </div>
 
 <style>
@@ -109,6 +126,23 @@
 		font-size: var(--t-lede);
 		color: var(--ink-soft);
 		max-width: var(--measure);
+	}
+	.sec {
+		font-family: var(--text);
+		font-size: var(--t-micro);
+		letter-spacing: var(--tracking-eyebrow);
+		text-transform: uppercase;
+		color: var(--muted);
+		border-bottom: 1px solid var(--line);
+		padding-bottom: 5px;
+		margin: 30px 0 10px;
+		font-weight: 500;
+	}
+	.secnote {
+		color: var(--ink-soft);
+		max-width: var(--measure);
+		font-size: var(--t-small);
+		margin-bottom: 12px;
 	}
 	.tiles {
 		list-style: none;

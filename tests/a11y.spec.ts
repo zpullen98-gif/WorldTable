@@ -105,7 +105,8 @@ test('cook mode is reachable and escapable by keyboard alone', async ({ page }) 
 const SEEDED = [
 	{ path: '/menu', name: 'menu worksheet with a menu on it', ready: '.plan li' },
 	{ path: '/repertoire', name: 'repertoire with dishes cooked', ready: '.rows li' },
-	{ path: '/menu/costing', name: 'costing sheet with dishes costed', ready: '.quadrants li' }
+	{ path: '/menu/costing', name: 'costing sheet with dishes costed', ready: '.quadrants li' },
+	{ path: '/coverage', name: 'coverage board with a cooked log', ready: '.people li' }
 ];
 
 for (const view of SEEDED) {

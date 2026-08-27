@@ -34,6 +34,7 @@ import { buildEconomics } from './derive/economics.mjs';
 import { buildSanitation } from './derive/sanitation.mjs';
 import { buildServiceTrack } from './derive/service-track.mjs';
 import { buildDrills } from './derive/drills.mjs';
+import { buildStations } from './derive/stations.mjs';
 import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
 import { derivePantryMap, narrowBlob } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
@@ -457,6 +458,14 @@ const { serviceTrack, problems: serviceTrackProblems } = buildServiceTrack(
  */
 const { drills, problems: drillProblems } = buildDrills(lexicon, serviceTrack.modules);
 
+/**
+ * The brigade's stations, and which technique belongs to which. The station
+ * list is gated against the guide's own Brigade entry; the map is gated in
+ * reverse, so a technique nobody accounts for fails the build rather than
+ * becoming a hole in the coverage board.
+ */
+const { stations, problems: stationProblems } = buildStations(lexicon, techniques);
+
 write('recipes.index.json', index);
 write('recipes.full.json', full);
 write('pairings.json', pairingTable);
@@ -472,6 +481,7 @@ write('economics.json', economics);
 write('sanitation.json', sanitation);
 write('service-track.json', serviceTrack);
 write('drills.json', drills);
+write('stations.json', stations);
 
 /**
  * The search index, prebuilt so the browser never pays tokenization cost.
@@ -818,6 +828,7 @@ problems.push(...economicsProblems);
 problems.push(...sanitationProblems);
 problems.push(...serviceTrackProblems);
 problems.push(...drillProblems);
+problems.push(...stationProblems);
 
 if (problems.length) {
 	console.error('  BUILD GATE FAILED\n');

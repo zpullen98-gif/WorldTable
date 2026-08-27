@@ -13,7 +13,7 @@
  *
  * Preferences are the deliberate exception — see stores/prefs.svelte.ts.
  */
-import { get, set, del, createStore } from 'idb-keyval';
+import { get, set, del, getMany, createStore } from 'idb-keyval';
 import { browser } from '$app/environment';
 import { EMPTY_SESSION, type SessionState } from './state';
 import { migrate } from './migrations';
@@ -90,6 +90,53 @@ export async function loadSession(): Promise<SessionState> {
 export async function saveSession(state: SessionState, key?: string): Promise<void> {
 	if (!browser || !store) return;
 	await set(key ?? KEY(), { ...state, lastWrite: Date.now() }, store);
+}
+
+/**
+ * Every person's session on this device, for the coverage board.
+ *
+ * This is possible, and I want to be exact about why, because the opposite was
+ * assumed for a while: profiles.key() is `base + '::' + id` — a deterministic,
+ * reconstructible string — and idb-keyval's store applies no key filter. So a
+ * manager device can read the whole roster's records without switching profile.
+ * shared/oot-pass.js already does this for two other wings.
+ *
+ * Which means "we only show coverage, not scores" is a CHOICE, not a technical
+ * limit, and the page must never claim otherwise. Writing "the app cannot see
+ * your answers" would be false, and the first engineer to read this file would
+ * overturn the whole policy on a bad premise.
+ *
+ * The choice: a shared kitchen tablet's roster is there so a brigade can share
+ * one device, not so a manager can read somebody's notes. This returns whole
+ * records because that is what the store holds; the caller takes coverage from
+ * them and nothing else.
+ */
+export async function loadAllSessions(
+	profiles: ReadonlyArray<{ id: string; name: string; legacy?: boolean }>
+): Promise<Array<{ id: string; name: string; session: SessionState }>> {
+	if (!browser || !store) return [];
+	// Standalone, or a device nobody has named: one unnamed person's record.
+	if (!profiles.length) {
+		const only = await loadSession();
+		return [{ id: 'solo', name: 'This device', session: only }];
+	}
+	const keys = profiles.map((p) => (p.legacy ? KEY_BASE : `${KEY_BASE}::${p.id}`));
+	let raw: unknown[];
+	try {
+		raw = await getMany(keys, store);
+	} catch {
+		return [];
+	}
+	return profiles.map((p, i) => {
+		let session: SessionState;
+		try {
+			session = raw[i] ? migrate(raw[i] as Partial<SessionState>) : structuredClone(EMPTY_SESSION);
+		} catch {
+			// One unreadable record must not take the whole board down.
+			session = structuredClone(EMPTY_SESSION);
+		}
+		return { id: p.id, name: p.name, session };
+	});
 }
 
 export async function clearSession(): Promise<void> {

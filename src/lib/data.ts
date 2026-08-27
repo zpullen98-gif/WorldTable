@@ -21,7 +21,8 @@ import type {
 	Economics,
 	Sanitation,
 	ServiceTrack,
-	Drills
+	Drills,
+	StationsData
 } from './types';
 
 import indexJson from './data/recipes.index.json';
@@ -89,6 +90,14 @@ export async function loadSubstitutions(): Promise<Substitution[]> {
 
 export async function loadCellar(): Promise<CellarBottle[]> {
 	return (await import('./data/cellar.json')).default as unknown as CellarBottle[];
+}
+
+let stationsCache: StationsData | null = null;
+export async function loadStations(): Promise<StationsData> {
+	if (!stationsCache) {
+		stationsCache = (await import('./data/stations.json')).default as unknown as StationsData;
+	}
+	return stationsCache;
 }
 
 let drillsCache: Drills | null = null;

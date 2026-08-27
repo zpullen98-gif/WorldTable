@@ -448,3 +448,19 @@ export interface Drills {
 	cards: import('./drill').DrillCard[];
 	categories: Record<string, number>;
 }
+
+/**
+ * The brigade's stations — see tools/derive/stations.mjs. The station list is
+ * the guide's own; the technique map is authored and gated in both directions.
+ */
+export interface StationsData {
+	stations: Array<{ key: string; name: string; techniques: string[] }>;
+	/** Dishes reachable per station, so a page can size it without techniques.json. */
+	dishes: Record<string, number>;
+	/** The guide's own words on the swing cook. */
+	tournant: string;
+	/** Cross-station literacy — counted separately, owned by nobody. */
+	foundation: string[];
+	/** Techniques the corpus does not actually drill. Never counted. */
+	undrilled: string[];
+}
