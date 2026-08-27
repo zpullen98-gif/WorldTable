@@ -28,6 +28,7 @@ const VIEWS = [
 	{ path: '/technique/braising', name: 'technique page' },
 	{ path: '/pantry', name: 'pantry match' },
 	{ path: '/study', name: 'path of study' },
+	{ path: '/safety', name: 'food safety' },
 	{ path: '/family', name: 'family chapter' },
 	{ path: '/menu', name: 'menu worksheet' }
 ];

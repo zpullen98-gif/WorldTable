@@ -9,6 +9,10 @@ import { SvelteKitPWA } from '@vite-pwa/sveltekit';
 const base = (process.env.BASE_PATH ?? '') as '' | `/${string}`;
 
 export default defineConfig({
+	// The safety page says when it was BUILT and deliberately never says
+	// "current as of": an offline-first app cannot know when a food code
+	// changed, and that label would manufacture confidence it has not earned.
+	define: { __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)) },
 	test: {
 		include: ['src/**/*.test.ts']
 	},

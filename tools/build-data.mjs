@@ -31,6 +31,7 @@ import { buildCrosslinks } from './derive/crosslinks.mjs';
 import { STANDARDS, MIN_MARKS, MAX_MARKS } from './derive/standards.mjs';
 import { buildPalate } from './derive/palate.mjs';
 import { buildEconomics } from './derive/economics.mjs';
+import { buildSanitation } from './derive/sanitation.mjs';
 import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
 import { derivePantryMap, narrowBlob } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
@@ -422,6 +423,19 @@ const { palate, problems: palateProblems } = buildPalate(lexicon);
  */
 const { economics, problems: economicsProblems } = buildEconomics(lexicon);
 
+/**
+ * Sanitation. Structure over the guide's two food-safety entries, and — the
+ * unusual part — over its SILENCES: each gap asserts both that the guide still
+ * names a practice and that it still states no figure for it, so nobody can
+ * quietly fill a gap with invented regulatory content. Ships no per-recipe
+ * hazard flag; see the module header for the five rules that were measured and
+ * refused.
+ */
+const { sanitation, problems: sanitationProblems } = buildSanitation(
+	lexicon,
+	index.map((r) => r.slug)
+);
+
 write('recipes.index.json', index);
 write('recipes.full.json', full);
 write('pairings.json', pairingTable);
@@ -434,6 +448,7 @@ write('cellar.json', cellar);
 write('techniques.json', techniques);
 write('palate.json', palate);
 write('economics.json', economics);
+write('sanitation.json', sanitation);
 
 /**
  * The search index, prebuilt so the browser never pays tokenization cost.
@@ -777,6 +792,7 @@ console.log('');
 
 problems.push(...palateProblems);
 problems.push(...economicsProblems);
+problems.push(...sanitationProblems);
 
 if (problems.length) {
 	console.error('  BUILD GATE FAILED\n');

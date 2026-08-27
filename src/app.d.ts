@@ -10,6 +10,12 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+	/**
+	 * Injected by vite.config.ts. The safety page states when it was BUILT and
+	 * never "current as of": an offline app cannot know when a food code changed.
+	 */
+	const __BUILD_DATE__: string;
 }
 
 export {};

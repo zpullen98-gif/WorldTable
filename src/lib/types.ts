@@ -352,3 +352,62 @@ export interface Economics {
 	/** The guide's own warning about costing raw invoice prices. */
 	yieldWarning: string;
 }
+
+/**
+ * Sanitation — the guide's food-safety entries, and its silences.
+ *
+ * Carried and gated by tools/derive/sanitation.mjs. Note what is NOT here:
+ * there is no per-recipe hazard type, because all five candidate hazard rules
+ * were measured unshippable and a gate in that module refuses any field naming
+ * recipes. See the module header before adding one.
+ */
+export interface SanitationClause {
+	key: string;
+	anchor: string;
+	text: string;
+}
+
+export interface SanitationFact {
+	key: string;
+	anchor: string;
+	/** The guide's own words, re-checked against the entry at build time. */
+	evidence: string;
+}
+
+export interface SanitationNumeric {
+	key: string;
+	label: string;
+	anchor: string;
+	evidence: string;
+	numbers: number[];
+}
+
+export interface SanitationConflict {
+	a: { anchor: string; term: string; evidence: string; numbers: number[] };
+	b: { anchor: string; term: string; evidence: string; numbers: number[] };
+}
+
+export interface SanitationGap {
+	key: string;
+	/** What the guide DOES name. */
+	named: string;
+	/** What it never states. */
+	gap: string;
+}
+
+export interface Sanitation {
+	entries: Record<string, { slug: string; term: string; definition: string }>;
+	clauses: SanitationClause[];
+	facts: SanitationFact[];
+	numeric: SanitationNumeric[];
+	/**
+	 * The guide's C/F pair disagrees with the app's own converter (4°C rounds to
+	 * 39°F; the guide writes 40°F). The pair is rendered as one opaque string and
+	 * never recomputed; the disagreement is gated so it cannot go stale.
+	 */
+	cf: { lowC: number; lowF: number; converted: number; disagrees: boolean };
+	/** The guide states two different danger windows. Disclosed, not resolved. */
+	conflict: SanitationConflict | null;
+	gaps: SanitationGap[];
+	framing: { jurisdiction: string } | null;
+}

@@ -4,6 +4,7 @@
 	import { renderLine } from '$lib/scaling';
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import { session } from '$lib/stores/session.svelte';
+	import { CHECKED, NOT_SCREENED, list } from '$lib/allergens';
 	// The one slug implementation, so a technique href can never fork from the
 	// slug the build wrote into techniques.json.
 	import { slugify } from '$lib/slug';
@@ -175,12 +176,27 @@
 				</p>
 			{/if}
 
-			{#if allergens.length}
-				<h2 class="sec">Contains</h2>
-				<p class="equip">{allergens.join(' · ')}</p>
-				{#if r.diet.confidence !== 'derived'}
-					<p class="reviewed">Reviewed by hand</p>
+			<!--
+				ALWAYS rendered, never gated on the list being non-empty.
+				101 of 970 recipes have all seven flags false and used to show
+				nothing at all — hummus among them, over a line reading "150g good
+				tahini". Silence read as "no allergens" when it meant "we did not
+				look", which is the one direction an allergen display must never
+				fail in. See src/lib/allergens.ts.
+			-->
+			<h2 class="sec">Allergen screen</h2>
+			<p class="equip">
+				{#if allergens.length}
+					<b>Found:</b> {allergens.join(' · ')}
+				{:else}
+					<b>None found</b> among the {CHECKED.length} screened.
 				{/if}
+			</p>
+			<p class="screened">
+				Screened for: {list(CHECKED)}. <b>Not screened:</b> {list(NOT_SCREENED)}.
+			</p>
+			{#if r.diet.confidence !== 'derived'}
+				<p class="reviewed">Reviewed by hand</p>
 			{/if}
 		</section>
 
@@ -514,6 +530,12 @@
 	.skills a:hover {
 		border-color: var(--turmeric);
 		color: var(--ink);
+	}
+	.screened {
+		margin-top: 5px;
+		font-size: var(--t-small);
+		color: var(--ink-soft);
+		line-height: 1.5;
 	}
 	.reviewed {
 		font-size: var(--t-micro);

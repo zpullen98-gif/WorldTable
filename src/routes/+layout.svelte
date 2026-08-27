@@ -36,6 +36,7 @@
 		{ href: '/technique', label: 'Skills' },
 		{ href: '/lexicon', label: 'Lexicon' },
 		{ href: '/palate', label: 'Palate' },
+		{ href: '/safety', label: 'Safety' },
 		{ href: '/pantry', label: 'Pantry' },
 		{ href: '/menu', label: 'Our Menu' },
 		{ href: '/family', label: 'Family' }

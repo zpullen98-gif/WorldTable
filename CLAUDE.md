@@ -341,6 +341,79 @@ lock masks `article.sheet` children. An overlay alone is not a gate.
 the newer `ts` winning, so folding costs into the dish would let a colleague's
 edit to a description silently replace an evening of costing work.
 
+## Sanitation — the guide's silences, made load-bearing
+
+The fifth and last time the reachability pattern appears, and the only one
+where the finding was to build LESS. The substrate is two entries: the
+food-safety entry is 701 characters and reached three recipes crosslinks.mjs
+picked on keyword score (key lime pie, pretzels, a tomato sauce); the
+inspections entry is 1,535 characters and reached nothing at all.
+
+**No per-recipe hazard flag exists, and one must not be added.** Five candidate
+rules were written and measured against the corpus, and all five failed across
+three adversarial lenses — 0 of 15 verdicts survived:
+
+- stated-temperature: 12 hits, precision **0/12** — every hit is correctly
+  cooked rare beef, medium salmon or a rested pork chop
+- raw-protein: flags a salmon hot-smoked to a probe-verified 60°C while MISSING
+  carbonara, caesar, aioli, hollandaise and lox. Recall ~44%
+- live-shellfish: flags shucked oysters going into a 190°C fryer, misses live
+  quahogs steamed open
+- cook-chill: not reproducible from its own spec; the count moves 6/8/9/11
+- preserve-uncooked: 3 of 6 hits vanish when the kill-verb list is widened
+
+**A missed hazard is worse than ten false ones, and these miss in that
+direction.** `assertNoRecipes()` in the module walks the shipped object and
+fails on any string that is a recipe slug or any field named recipes/hazards.
+Do not revive these by tuning a regex: a *corrected* undercooked-protein rule
+returns ZERO hits on this corpus. There is no hazard of that shape to find.
+
+### What is gated
+
+Clauses forward and reverse (parseRepairTable is reused, but only because it
+was measured on these two entries specifically: exactly 3 labels and 2, no
+false positives — it produces junk on other prose). Thirteen literal evidence
+substrings. Two numeric facts read back out of their own evidence in BOTH
+directions, closing economics.mjs's original hole from the start.
+
+Three gates are unusual enough to name:
+
+- **The disclosed conflict.** The guide states 4–60°C in one entry and
+  4.5–54.5°C in another and never reconciles them. The page discloses both
+  rather than picking, because picking is a safety judgement this app has no
+  standing to make. The gate's first draft was **unreachable** — pinning the
+  figures inside the evidence string meant a changed number read as a *deleted*
+  statement, so the "these must still differ" branch could never fire. The
+  anchor is number-free now and the numbers are read from the window before it.
+- **The C/F disagreement.** `4°C` rounds to 39°F; the guide writes 40°F. Safety
+  strings are therefore never passed through `convertLine` — which would turn
+  "4–60°C (40–140°F)" into a sentence with two different Fahrenheit ranges. The
+  DISAGREEMENT is gated, so a corrected guide forces the copy to change.
+- **The gaps.** Each asserts the guide still NAMES a practice and still states
+  NO figure for it (`ppm`, `critical limit`, `reheat to`, `defrost` must appear
+  in zero definitions). That second half makes filling a gap with invented
+  regulatory content fail the build rather than pass review.
+
+`readNumbers()` is deliberately NOT economics.mjs's `split(/[^0-9]+/)`, which
+reads `4.5–54.5°C` as [4, 5, 54, 5]. economics.mjs is left alone — its integers
+gate fine, and re-cutting a working gate to share a helper churns it for nothing.
+
+### The allergen screen
+
+Found while surveying this feature and fixed with it, because a safety-branded
+page next to a broken allergen display is worse than neither. The recipe page
+rendered `Contains` only when a flag was true, so **101 of 970 recipes showed
+nothing at all** — hummus among them, over a line reading "150g good tahini".
+Absence read as clearance. diet.mjs's own comment already stated the policy the
+display was breaking: an empty list "reads as 'no allergens' rather than 'we
+don't know'".
+
+The block now always renders and names both what was screened and what was not
+(sesame, soy, celery, mustard, sulphites, lupin, molluscs, peanuts — measured
+prevalence 157/95/78/72/40/38/30/0). Closing the vocabulary to all 14 is a
+diet.mjs project with its own keyword review and is deferred; `allergens.test.ts`
+asserts NOT_SCREENED stays non-empty so the day it lands, the copy must change.
+
 ## Known remaining work
 
 - None planned. The content backfill completed 2026-08-08: all 320 thin "from
@@ -355,7 +428,7 @@ edit to a description silently replace an evening of costing work.
 
 ## Testing
 
-`npm test` (168 unit) · `npm run test:e2e` (44 Playwright: regressions named for
+`npm test` (192 unit) · `npm run test:e2e` (45 Playwright: regressions named for
 the original's line numbers, offline in real Chromium, axe, print PDFs, and the
 parity harness that runs the archived original against our build output).
 

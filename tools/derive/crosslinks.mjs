@@ -16,6 +16,22 @@
  *   + 2  per distinct significant token shared
  *   - 3  a chapter already represented in this term's links (diversity penalty)
  */
+/**
+ * Terms that must reach NO recipe.
+ *
+ * Cross-links are scored on keyword overlap, which is the right instinct for a
+ * technique and the wrong one for safety guidance: the food-safety entry won
+ * key lime pie, pretzels and a tomato sauce, and printing those three beside
+ * danger-zone and cross-contamination guidance implies a relationship the score
+ * never established. An empty list renders nothing (the lexicon page already
+ * guards on length), which is the honest output. Enforced by a gate in
+ * tools/derive/sanitation.mjs, so this cannot quietly regress.
+ */
+const NO_CROSSLINK = new Set([
+	'food-safety-the-chef-owners-non-negotiables',
+	'health-inspections-and-crisis-management'
+]);
+
 const STOP = new Set([
 	'the', 'a', 'an', 'and', 'or', 'of', 'in', 'on', 'to', 'for', 'with', 'is',
 	'it', 'its', 'by', 'at', 'as', 'from', 'that', 'this', 'be', 'are', 'was',
@@ -82,7 +98,7 @@ export function buildCrosslinks(R, recipeSlugs, D, lexSlugs, blobs) {
 
 		termToRecipes.set(
 			termSlug,
-			picked.map((ri) => recipeSlugs[ri])
+			NO_CROSSLINK.has(termSlug) ? [] : picked.map((ri) => recipeSlugs[ri])
 		);
 	});
 
