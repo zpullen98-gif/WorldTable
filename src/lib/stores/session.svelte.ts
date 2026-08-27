@@ -11,7 +11,14 @@
  */
 import { browser } from '$app/environment';
 import type { Recipe, RecipeSummary } from '../types';
-import { EMPTY_SESSION, loadSession, saveSession, debounce, type SessionState } from '../persistence/db';
+import {
+	EMPTY_SESSION,
+	loadSession,
+	saveSession,
+	currentKey,
+	debounce,
+	type SessionState
+} from '../persistence/db';
 import { mergeSessions, type MenuDish, type DishCosting } from '../persistence/state';
 import { cookedSlugs, type CookEntry, type Grade } from '../repertoire';
 
@@ -19,8 +26,18 @@ class SessionStore {
 	#s = $state<SessionState>(structuredClone(EMPTY_SESSION));
 	#ready = $state(false);
 
+	/**
+	 * The storage key this state was loaded from.
+	 *
+	 * Held because a profile switch notifies AFTER the roster has already moved
+	 * on, so at that moment KEY() is the INCOMING person. Flushing without
+	 * naming a destination would write the outgoing person's edits into the
+	 * incoming person's record.
+	 */
+	#key = '';
+
 	#persist = debounce(() => {
-		void saveSession($state.snapshot(this.#s) as SessionState);
+		void saveSession($state.snapshot(this.#s) as SessionState, this.#key || undefined);
 	}, 400);
 
 	/**
@@ -31,7 +48,7 @@ class SessionStore {
 	 * async IndexedDB write is not guaranteed to commit before teardown).
 	 */
 	#persistNow() {
-		void saveSession($state.snapshot(this.#s) as SessionState);
+		void saveSession($state.snapshot(this.#s) as SessionState, this.#key || undefined);
 	}
 
 	get ready() {
@@ -41,6 +58,7 @@ class SessionStore {
 	async hydrate() {
 		if (!browser || this.#ready) return;
 		this.#s = await loadSession();
+		this.#key = currentKey();
 		this.#ready = true;
 
 		// A tab closing or navigating mid-debounce would otherwise lose the last
@@ -57,6 +75,49 @@ class SessionStore {
 
 	flush() {
 		this.#persist.flush();
+	}
+
+	/**
+	 * Somebody else tapped their name.
+	 *
+	 * hydrate() cannot do this: it early-returns on #ready, so the obvious
+	 * `onChange(() => session.hydrate())` is a silent no-op and the previous
+	 * person's cooked log simply stays in memory under the new person's name.
+	 *
+	 * Order matters. The pending write is flushed to the OUTGOING key first —
+	 * #key, not KEY(), because the roster has already moved — and only then is
+	 * the new record loaded. Idempotent, because onChange fires immediately on
+	 * registration: if the key has not actually changed there is nothing to do.
+	 */
+	async rehydrate() {
+		if (!browser) return;
+		const next = currentKey();
+		if (this.#ready && next === this.#key) return;
+		if (this.#ready) this.#persist.flush();
+		this.#ready = false;
+		this.#s = await loadSession();
+		this.#key = next;
+		this.#ready = true;
+	}
+
+	/* ---- role -----------------------------------------------------------
+	 *
+	 * What this person does, and therefore what the app suggests first. A
+	 * default, never a wall: no surface is hidden from anyone.
+	 *
+	 * It lives here rather than in prefs (raw localStorage, device-wide, read
+	 * synchronously by app.html — it would collapse all three roles to whoever
+	 * tapped last) and rather than in the profile's path map (write-once with
+	 * no unmark — a person who changed role would carry both stamps forever).
+	 */
+
+	get role() {
+		return this.#s.role;
+	}
+
+	setRole(role: SessionState['role']) {
+		this.#s.role = role;
+		this.#persistNow();
 	}
 
 	/* ---- menu ---------------------------------------------------------- */

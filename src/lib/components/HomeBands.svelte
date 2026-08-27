@@ -66,6 +66,28 @@
 
 	const started = $derived(cooked > 0);
 	const pct = $derived(curriculumTotal ? Math.round((courseDone / curriculumTotal) * 100) : 0);
+
+	/* ---- role ------------------------------------------------------------
+	 *
+	 * A default, never a wall. No tab is hidden and no surface is locked by it;
+	 * it changes which sentence Today opens with and what is offered first.
+	 *
+	 * The three are kept apart deliberately. A chef's work has NO end state, so
+	 * giving them a course percentage is the exact lie the old band told — it
+	 * reported the ten-semester course complete after 45 cooks of anything. The
+	 * student is the only role with fixed denominators (45 dishes, 48 taught
+	 * skills), so the student is the only role that gets a percentage.
+	 */
+	const role = $derived(session.role);
+
+	/** Dishes whose most recent cook actually met the standard — evidence, not
+	 *  attendance. The grade has been in cookedLog since the repertoire landed
+	 *  and no screen has ever read it. */
+	const metStandard = $derived.by(() => {
+		const last = new Map<string, string | undefined>();
+		for (const e of session.cookedLog) last.set(e.slug, e.grade);
+		return curriculum.filter((slug) => last.get(slug) === 'met').length;
+	});
 </script>
 
 <div class="oot-band-host">
@@ -73,6 +95,84 @@
 		<div class="oot-sec-head">
 			<h3>Today</h3><span>One dish, cooked properly, beats ten read about</span>
 		</div>
+		{#if !role}
+			<!-- The induction seed. The World Table has never asked who is using it,
+			     and the three audiences want different first sentences: a server is
+			     not served by "semester one is knife work and fire". -->
+			<div class="oot-today">
+				<div class="oot-today-main">
+					<div class="oot-today-line">What do you do?</div>
+					<div class="oot-today-sub">
+						This only changes what the app puts first. Nothing is hidden either way, and you can
+						change it whenever you like.
+					</div>
+					<div class="rolepick">
+						<button class="oot-chip" onclick={() => session.setRole('chef')}>
+							I run a kitchen<small>The pass, the costs, what has gone cold</small>
+						</button>
+						<button class="oot-chip" onclick={() => session.setRole('student')}>
+							I'm learning to cook<small>The ten-semester course, in teaching order</small>
+						</button>
+						<button class="oot-chip" onclick={() => session.setRole('server')}>
+							I work the floor<small>The menu, the words, what's in the dish</small>
+						</button>
+					</div>
+				</div>
+			</div>
+		{:else if role === 'server'}
+			<div class="oot-today">
+				<div class="oot-today-main">
+					<div class="oot-today-line">
+						{#if dishes >= 4}
+							<span class="oot-today-n">{dishes}</span> dishes on the house menu. Learn to say them.
+						{:else if dishes}
+							<span class="oot-today-n">{dishes}</span> dishes entered so far — the drill opens at four.
+						{:else}
+							The house menu is not in yet.
+						{/if}
+					</div>
+					<div class="oot-today-sub">
+						{#if dishes >= 4}
+							Name, section, allergen line, and what is poured with it. You are not expected to know
+							how it is cooked.
+						{:else}
+							Until it is, the Chef's Lexicon is the ground: cheese, charcuterie, wine and the bar.
+						{/if}
+					</div>
+				</div>
+				<a class="oot-chip oot-today-go" href={dishes >= 4 ? `${base}/menu/quiz` : `${base}/lexicon`}>
+					{dishes >= 4 ? 'Drill the menu' : "Open the Lexicon"}
+				</a>
+			</div>
+		{:else if role === 'chef'}
+			<div class="oot-today">
+				<div class="oot-today-main">
+					<div class="oot-today-line">
+						{#if coldest}
+							Cook <a class="oot-today-dish" href="{base}/recipe/{coldest.slug}">{coldestName}</a>
+							again. Last made {sinceLabel(coldest.daysSince)}.
+						{:else if !menuCount}
+							Nothing pinned, nothing due. The Pass plans a service once dishes are on the menu.
+						{:else}
+							Nothing has gone cold. {menuCount} dishes pinned for service.
+						{/if}
+					</div>
+					<div class="oot-today-sub">
+						{#if coldest}
+							{due.length === 1 ? 'One dish is' : `${due.length} dishes are`} past their re-cook. Check
+							the plate against the standard this time.
+						{:else}
+							{cooked} dish{cooked === 1 ? '' : 'es'} in the repertoire{dishes
+								? `, ${dishes} on the house menu`
+								: ''}.
+						{/if}
+					</div>
+				</div>
+				<a class="oot-chip oot-today-go" href={coldest ? `${base}/repertoire` : `${base}/menu`}>
+					{coldest ? 'What has gone cold' : 'The Pass'}
+				</a>
+			</div>
+		{:else}
 		<div class="oot-today">
 			<div class="oot-today-main">
 				<div class="oot-today-line">
@@ -99,9 +199,10 @@
 							: `${due.length} dishes are past their re-cook.`}
 						Check the plate against the standard this time.
 					{:else if nextUp}
-						{courseDone} of {curriculumTotal} cooked, and nothing is going cold.
+						{courseDone} of {curriculumTotal} cooked, {metStandard} of them met their standard.
 					{:else}
-						Cook it again faster, or take the repertoire out to the rest of the book.
+						All {curriculumTotal} cooked, {metStandard} met their standard. Cook the rest again
+						until they do.
 					{/if}
 				</div>
 			</div>
@@ -109,6 +210,16 @@
 				{#if !started}Open the course{:else if coldest}What has gone cold{:else}Back to the course{/if}
 			</a>
 		</div>
+		{/if}
+
+		{#if role}
+			<!-- Changing your mind must never be a hunt. It is a default, not an
+			     identity, and hiding the switch would make it feel like one. -->
+			<p class="rolenote">
+				Shown for <b>{role === 'chef' ? 'the kitchen' : role === 'server' ? 'the floor' : 'a student'}</b>.
+				<button class="linkish" onclick={() => session.setRole(undefined)}>Change</button>
+			</p>
+		{/if}
 	</section>
 
 	<section class="oot-sec">
@@ -153,14 +264,34 @@
 		<div class="oot-sec-head">
 			<h3>Record</h3><span>What you have cooked, and where it lives</span>
 		</div>
-		<div class="oot-meter">
-			<div class="oot-meter-top"><span>The course</span><b>{pct}%</b></div>
-			<div class="oot-meter-track"><div class="oot-meter-fill" style="width:{pct}%"></div></div>
-		</div>
+		<!-- A percentage needs a DENOMINATOR that means something.
+		     The student has one — 45 dishes, fixed and finishable — so the student
+		     gets the meter. A chef's work has no end state, and giving them a
+		     course percentage is exactly the lie this band used to tell: it
+		     reported the ten-semester course complete after 45 cooks of anything.
+		     A server is not on the course at all. Both get counts instead. -->
+		{#if role === 'student' || !role}
+			<div class="oot-meter">
+				<div class="oot-meter-top"><span>The course</span><b>{pct}%</b></div>
+				<div class="oot-meter-track"><div class="oot-meter-fill" style="width:{pct}%"></div></div>
+			</div>
+		{:else if role === 'chef'}
+			<div class="oot-meter-top">
+				<span>Gone cold</span><b>{due.length} of {cooked}</b>
+			</div>
+		{:else}
+			<div class="oot-meter-top">
+				<span>The house menu</span><b>{dishes} dish{dishes === 1 ? '' : 'es'}</b>
+			</div>
+		{/if}
 		<div class="oot-today-sub" style="margin-top:8px">
-			{courseDone} of {curriculumTotal} on the course · {cooked} dish{cooked === 1 ? '' : 'es'} cooked
-			in all · {menuCount} pinned · {dishes} on the house menu. Everything is kept in this browser;
-			export it from My Menu.
+			{#if role === 'server'}
+				{dishes} on the house menu · {menuCount} pinned.
+			{:else}
+				{courseDone} of {curriculumTotal} on the course · {cooked} dish{cooked === 1 ? '' : 'es'}
+				cooked in all · {menuCount} pinned · {dishes} on the house menu.
+			{/if}
+			Everything is kept in this browser; export it from My Menu.
 		</div>
 		<div class="oot-today-sub" style="margin-top:6px">
 			<a href="{base}/repertoire">The Repertoire</a> — every dish you have cooked, how long ago, and
@@ -213,6 +344,41 @@
 		color: var(--muted, currentColor);
 		font-size: var(--t-small, 0.8125rem);
 		line-height: 1.4;
+	}
+	.rolepick {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		margin-top: 12px;
+	}
+	.rolepick button {
+		text-align: left;
+		cursor: pointer;
+		font: inherit;
+	}
+	/* A token, not opacity. Dimming already-dim text is how the shared
+	   oot-home.css ended up at 2.32:1 against day service, and it is the one
+	   defect this file already renders. Not adding another. */
+	.rolepick small {
+		display: block;
+		margin-top: 3px;
+		font-size: var(--t-small, 0.8125rem);
+		color: var(--ink-soft, currentColor);
+	}
+	.rolenote {
+		margin-top: 12px;
+		font-size: var(--t-small, 0.8125rem);
+		color: var(--muted, currentColor);
+	}
+	.linkish {
+		background: none;
+		border: 0;
+		padding: 0;
+		font: inherit;
+		color: var(--turmeric-deep, currentColor);
+		cursor: pointer;
+		text-decoration: underline;
+		text-underline-offset: 2px;
 	}
 	.oot-today-dish {
 		color: inherit;

@@ -126,6 +126,22 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 		expect(out.dishCosts['d-9']).toBeUndefined();
 	});
 
+	/**
+	 * The cookedLog failure mode, exactly. buildExport writes the FULL state, so
+	 * a genuine .wtjson always carries `role` present-and-empty — and a bare
+	 * spread would let importing a colleague's menu silently un-set what you do.
+	 */
+	it('keeps your role when the incoming session has none', () => {
+		const mine = { ...live(), role: 'server' as const };
+		const out = mergeSessions(mine, { ...structuredClone(EMPTY_SESSION), menu: ['tom-yum-goong'] });
+		expect(out.role).toBe('server');
+	});
+
+	it('adopts a role when you have never set one', () => {
+		const out = mergeSessions(live(), { role: 'chef' });
+		expect(out.role).toBe('chef');
+	});
+
 	it('unions shopping ticks per menu hash instead of replacing them', () => {
 		const out = mergeSessions(live(), {
 			shoppingChecks: { abc123: ['Dairy:1', 'Meat:2'], other: ['Produce:0'] }

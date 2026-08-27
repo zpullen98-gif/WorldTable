@@ -59,6 +59,16 @@ export interface SessionState {
 	 * of costing work. These merge on their own terms.
 	 */
 	dishCosts: Record<string, DishCosting>;
+	/**
+	 * What this person does. Chosen once, changeable, and a DEFAULT rather than
+	 * a wall — it reorders what the app suggests and never hides a surface.
+	 *
+	 * Kept in the SESSION, which profiles.key() namespaces per person, and
+	 * deliberately not in prefs (raw localStorage, device-wide, read
+	 * synchronously by app.html) and not in the profile's path map (write-once,
+	 * no unmark — a person who changed role would carry both stamps forever).
+	 */
+	role?: 'chef' | 'student' | 'server';
 	lastWrite: number;
 }
 
@@ -80,6 +90,7 @@ export const EMPTY_SESSION: SessionState = {
 	familyRecipes: [],
 	menuDishes: [],
 	dishCosts: {},
+	role: undefined,
 	lastWrite: 0
 };
 
@@ -163,6 +174,11 @@ export function mergeSessions(
 			}
 			return out;
 		})(),
+		// Named explicitly, per the rule above. A genuine export writes the FULL
+		// state, so an incoming session always carries role present-and-empty —
+		// exactly how cookedLog and shoppingChecks were once wiped. Yours wins
+		// unless you have never set one.
+		role: current.role ?? incoming.role,
 		// After the spread, never before: a hand-edited file must not be able to
 		// walk the schema marker backwards and re-trigger a migration.
 		schemaVersion: current.schemaVersion

@@ -33,14 +33,16 @@ const store = browser ? createStore('world-table', 'state') : undefined;
  * kitchen that never uses profiles is unaffected and nothing has to migrate.
  *
  * Read at call time rather than captured once, because the answer changes the
- * moment somebody else taps their name. */
-declare global {
-	interface Window {
-		OOT?: { profiles?: { key(base: string): string } };
-	}
-}
-
+ * moment somebody else taps their name.
+ *
+ * The window.OOT declaration lives in src/lib/oot.d.ts — ONE declaration only.
+ * A second, narrower one used to sit here; two declarations of the same
+ * property do not merge into a union, they raise TS2717. */
 const KEY_BASE = 'session';
+
+export function currentKey(): string {
+	return KEY();
+}
 
 function KEY(): string {
 	try {
@@ -76,9 +78,18 @@ export async function loadSession(): Promise<SessionState> {
 	}
 }
 
-export async function saveSession(state: SessionState): Promise<void> {
+/**
+ * @param key where to write. Defaults to whoever is current — but a caller
+ * holding an outgoing person's state must pass THEIR key explicitly.
+ *
+ * That parameter exists because profile switching fires its listeners AFTER
+ * `data.current` has already moved (shared/oot-profiles.js switchTo). A store
+ * flushing its pending write on that signal, without saying where, would file
+ * the previous person's notes under the next person's name.
+ */
+export async function saveSession(state: SessionState, key?: string): Promise<void> {
 	if (!browser || !store) return;
-	await set(KEY(), { ...state, lastWrite: Date.now() }, store);
+	await set(key ?? KEY(), { ...state, lastWrite: Date.now() }, store);
 }
 
 export async function clearSession(): Promise<void> {

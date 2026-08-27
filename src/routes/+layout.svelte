@@ -5,6 +5,7 @@
 	import { TOTALS } from '$lib/data';
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import { session } from '$lib/stores/session.svelte';
+	import * as profiles from '$lib/profiles';
 	import { repertoire, dueList } from '$lib/repertoire';
 	import UpdatePrompt from '$lib/components/UpdatePrompt.svelte';
 	import TimerBar from '$lib/components/TimerBar.svelte';
@@ -16,6 +17,21 @@
 	$effect(() => {
 		void session.hydrate();
 	});
+
+	/**
+	 * Follow the person, not just the device.
+	 *
+	 * A shared kitchen tablet has a roster (shared/oot-profiles.js). Nothing in
+	 * this wing listened to it, so switching name mid-session left the previous
+	 * person's cooked log, menu and notes in memory: invisible while the app
+	 * showed no name, and wrong the moment Today greets somebody.
+	 *
+	 * onChange fires IMMEDIATELY on registration, which is why rehydrate() is
+	 * idempotent — it returns at once when the key has not moved. Standalone,
+	 * profiles.onChange is a no-op returning a no-op, so this wires
+	 * unconditionally and costs nothing.
+	 */
+	$effect(() => profiles.onChange(() => void session.rehydrate()));
 
 	// Effects run only in the browser, after mount — which makes this a precise
 	// "hydration finished" marker. The e2e suite waits on it before typing:

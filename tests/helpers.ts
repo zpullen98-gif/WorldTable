@@ -24,8 +24,13 @@ export async function goto(page: Page, path: string) {
  * addInitScript runs before any page script, so the store hydrates from this
  * rather than racing it.
  */
-export async function seedSession(page: Page, patch: Record<string, unknown> = {}) {
-	await page.addInitScript((extra) => {
+export async function seedSession(
+	page: Page,
+	patch: Record<string, unknown> = {},
+	profileId?: string
+) {
+	await page.addInitScript(
+		([extra, id]) => {
 		const DAY = 86_400_000;
 		const now = Date.now();
 		const state = {
@@ -65,11 +70,19 @@ export async function seedSession(page: Page, patch: Record<string, unknown> = {
 			lastWrite: now,
 			...(extra as Record<string, unknown>)
 		};
-		const open = indexedDB.open('world-table');
-		open.onupgradeneeded = () => open.result.createObjectStore('state');
-		open.onsuccess = () => {
-			const tx = open.result.transaction('state', 'readwrite');
-			tx.objectStore('state').put(state, 'session');
-		};
-	}, patch);
+			const open = indexedDB.open('world-table');
+			open.onupgradeneeded = () => open.result.createObjectStore('state');
+			open.onsuccess = () => {
+				const tx = open.result.transaction('state', 'readwrite');
+				// BOTH keys. db.ts KEY() returns the bare 'session' only while no
+				// non-legacy profile is current; the moment a roster exists it
+				// returns 'session::<id>' and a seed written only to the base key
+				// leaves every seeded test reading an EMPTY session — silently
+				// restoring the blind spot the SEEDED a11y block exists to close.
+				tx.objectStore('state').put(state, 'session');
+				if (id) tx.objectStore('state').put(state, 'session::' + id);
+			};
+		},
+		[patch, profileId ?? null] as [Record<string, unknown>, string | null]
+	);
 }
