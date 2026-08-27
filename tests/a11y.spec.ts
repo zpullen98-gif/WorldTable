@@ -33,6 +33,7 @@ const VIEWS = [
 	{ path: '/learn', name: 'learn hub' },
 	{ path: '/practise', name: 'practise hub' },
 	{ path: '/service', name: 'service hub' },
+	{ path: '/service/srv-room', name: 'service track module' },
 	{ path: '/family', name: 'family chapter' },
 	{ path: '/menu', name: 'menu worksheet' }
 ];

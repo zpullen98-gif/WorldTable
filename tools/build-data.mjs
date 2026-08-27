@@ -32,6 +32,7 @@ import { STANDARDS, MIN_MARKS, MAX_MARKS } from './derive/standards.mjs';
 import { buildPalate } from './derive/palate.mjs';
 import { buildEconomics } from './derive/economics.mjs';
 import { buildSanitation } from './derive/sanitation.mjs';
+import { buildServiceTrack } from './derive/service-track.mjs';
 import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
 import { derivePantryMap, narrowBlob } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
@@ -436,6 +437,18 @@ const { sanitation, problems: sanitationProblems } = buildSanitation(
 	index.map((r) => r.slug)
 );
 
+/**
+ * The service track. An authored teaching ORDER over the five front-of-house
+ * atlases, referencing terms by slug — no definition is copied. Gated forward
+ * (every reference resolves, exactly once) and in reverse (no front-of-house
+ * term is left out of the track).
+ */
+const { serviceTrack, problems: serviceTrackProblems } = buildServiceTrack(
+	lexicon,
+	cellar,
+	index.map((r) => r.slug)
+);
+
 write('recipes.index.json', index);
 write('recipes.full.json', full);
 write('pairings.json', pairingTable);
@@ -449,6 +462,7 @@ write('techniques.json', techniques);
 write('palate.json', palate);
 write('economics.json', economics);
 write('sanitation.json', sanitation);
+write('service-track.json', serviceTrack);
 
 /**
  * The search index, prebuilt so the browser never pays tokenization cost.
@@ -793,6 +807,7 @@ console.log('');
 problems.push(...palateProblems);
 problems.push(...economicsProblems);
 problems.push(...sanitationProblems);
+problems.push(...serviceTrackProblems);
 
 if (problems.length) {
 	console.error('  BUILD GATE FAILED\n');

@@ -411,3 +411,34 @@ export interface Sanitation {
 	gaps: SanitationGap[];
 	framing: { jurisdiction: string } | null;
 }
+
+/**
+ * The Service Track — an authored teaching ORDER over the five front-of-house
+ * atlases. Terms are referenced by slug only; the definitions stay in
+ * lexicon.json, which is already a lazy chunk. See tools/derive/service-track.mjs.
+ */
+export interface ServiceTermRef {
+	slug: string;
+	term: string;
+	category: string;
+}
+
+export interface ServiceModule {
+	key: string;
+	/** 1-based position in the teaching order. */
+	n: number;
+	title: string;
+	/** What a person can do after it — a claim that could be checked. */
+	outcome: string;
+	terms: ServiceTermRef[];
+}
+
+export interface ServiceTrack {
+	modules: ServiceModule[];
+	total: number;
+	fohTotal: number;
+	categories: Record<string, number>;
+	/** Cellar bottle -> the term that teaches it, or null where none does. */
+	cellar: Array<{ bottle: string; name: string; term: string | null }>;
+	untaught: string[];
+}
