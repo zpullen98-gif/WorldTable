@@ -47,16 +47,27 @@
 	   cook reaches for mid-service. */
 	const MODES = [
 		{ href: '', label: 'Today' },
-		{ href: '/study', label: 'Course' },
-		{ href: '/repertoire', label: 'Repertoire' },
-		{ href: '/technique', label: 'Skills' },
-		{ href: '/lexicon', label: 'Lexicon' },
-		{ href: '/palate', label: 'Palate' },
-		{ href: '/safety', label: 'Safety' },
-		{ href: '/pantry', label: 'Pantry' },
-		{ href: '/menu', label: 'Our Menu' },
-		{ href: '/family', label: 'Family' },
-		{ href: '/recipes', label: 'Recipes' }
+		{ href: '/learn', label: 'Learn' },
+		{ href: '/practise', label: 'Practise' },
+		{ href: '/service', label: 'Service' },
+		{ href: '/recipes', label: 'Library' }
+	];
+
+	/**
+	 * Which tab owns which path. A SEPARATE const, deliberately: anything shaped
+	 * like `href: '...'` inside the MODES literal is picked up by
+	 * verify-build.mjs's scanner and resolved to a page file, so a nested list
+	 * there would assert on files that can never exist.
+	 *
+	 * Order is longest-prefix-first where two tabs share a stem: /menu/quiz is
+	 * Practise (it is assessed) while /menu itself is Service, so the quiz must
+	 * be tested first or Service would claim it.
+	 */
+	const OWNS: Array<[string, string[]]> = [
+		['/practise', ['/practise', '/repertoire', '/menu/quiz']],
+		['/service', ['/service', '/menu']],
+		['/learn', ['/learn', '/study', '/technique', '/palate', '/safety']],
+		['/recipes', ['/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry']]
 	];
 
 	const path = $derived(page.url.pathname.replace(base, '') || '/');
@@ -70,19 +81,26 @@
 	});
 
 	/**
-	 * Which tab owns the current path.
+	 * The one tab that owns the current path.
 	 *
-	 * This was `path.startsWith(href)`, which is quietly wrong the moment two
-	 * routes share a prefix: '/recipes'.startsWith('/recipe') is TRUE, so the
-	 * library tab would light up on all 970 recipe pages and the recipe pages
-	 * would light two tabs at once. Prefix tests carry their trailing slash.
+	 * Resolved once rather than asked per tab, because "does this tab match"
+	 * answered independently is how two tabs light at the same time. The old
+	 * version tested `path.startsWith(href)`, which is quietly wrong the moment
+	 * two routes share a stem: '/recipes'.startsWith('/recipe') is TRUE.
 	 */
-	function isActive(href: string) {
-		if (href === '/recipes') {
-			return path === '/recipes' || path.startsWith('/recipe/') || path.startsWith('/chapter/');
+	const owner = $derived.by(() => {
+		if (path === '/') return '';
+		for (const [tab, prefixes] of OWNS) {
+			for (const prefix of prefixes) {
+				const stem = prefix.endsWith('/') ? prefix : prefix + '/';
+				if (path === prefix || path.startsWith(stem)) return tab;
+			}
 		}
-		if (href === '') return path === '/';
-		return path === href || path.startsWith(href + '/');
+		return null;
+	});
+
+	function isActive(href: string) {
+		return owner === href;
 	}
 
 	/**
@@ -143,9 +161,9 @@
 	<div class="shell modebar-inner">
 		{#each MODES as m (m.href)}
 			<a class="modetab" class:on={isActive(m.href)} href="{base}{m.href || '/'}">
-				{m.label}{#if m.href === '/menu' && session.menuCount}<span class="pill"
+				{m.label}{#if m.href === '/service' && session.menuCount}<span class="pill"
 						>{session.menuCount}</span
-					>{:else if m.href === '/repertoire' && dueCount}<span class="pill">{dueCount}</span>{/if}
+					>{:else if m.href === '/practise' && dueCount}<span class="pill">{dueCount}</span>{/if}
 			</a>
 		{/each}
 		<button
@@ -239,6 +257,25 @@
 		gap: 4px;
 		align-items: center;
 		overflow-x: auto;
+	}
+	/*
+	 * Room for the shared layer's return chip.
+	 *
+	 * Inside Outside Of Time, oot-bar.js pins a chip at position:fixed, top 10px,
+	 * left 10px, z-index 45 — over this bar, which is sticky at z-index 40 — and
+	 * under 600px it collapses to a round icon roughly 40px across. It therefore
+	 * sits on top of the FIRST tab, which after the cut to five is "Today", on
+	 * the view people land on.
+	 *
+	 * Applied unconditionally because there is no reliable marker to key it to:
+	 * data-oot-tier is REMOVED for paid visitors, so it cannot stand in for
+	 * "inside the monorepo". Standalone this costs a small indent on a bar that
+	 * already scrolls horizontally, which is the cheaper of the two mistakes.
+	 */
+	@media (max-width: 599px) {
+		.modebar-inner {
+			padding-left: 44px;
+		}
 	}
 	.modetab {
 		font-family: var(--text);

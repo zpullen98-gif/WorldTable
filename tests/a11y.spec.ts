@@ -30,6 +30,9 @@ const VIEWS = [
 	{ path: '/pantry', name: 'pantry match' },
 	{ path: '/study', name: 'path of study' },
 	{ path: '/safety', name: 'food safety' },
+	{ path: '/learn', name: 'learn hub' },
+	{ path: '/practise', name: 'practise hub' },
+	{ path: '/service', name: 'service hub' },
 	{ path: '/family', name: 'family chapter' },
 	{ path: '/menu', name: 'menu worksheet' }
 ];

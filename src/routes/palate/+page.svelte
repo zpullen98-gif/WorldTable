@@ -38,6 +38,16 @@
 		<p class="rule">{p.metaRule}</p>
 	</header>
 
+	<!--
+		Everything below the header sits inside <article class="sheet">, matching
+		/menu/quiz and /menu/costing. This is not styling: oot-locks.js masks
+		`article.sheet > *:not(h1):not(.crumbs):not(header)` on a locked route,
+		and a page with no sheet gives it nothing to make inert — the content is
+		delivered in clear behind an overlay a reader can dismiss. This route is
+		not in TABLE_FREE_ROUTES, so it is a locked route.
+	-->
+	<article class="sheet">
+
 	<h2 class="sec">The repair table</h2>
 	<p class="secnote">
 		Symptom first, then levers in order of gentleness. Work down a fault's list, not across —
@@ -83,6 +93,7 @@
 			<a href="{base}/lexicon#{p.repair.slug}">{p.repair.term}</a> in the Chef's Lexicon.
 		</p>
 	</section>
+	</article>
 </div>
 
 <style>

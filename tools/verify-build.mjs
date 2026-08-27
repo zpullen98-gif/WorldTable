@@ -115,7 +115,17 @@ check('every mode in the bar has a page', () => {
 		hrefs.push(body.slice(from, body.indexOf("'", from)));
 		at = body.indexOf("href: '", from);
 	}
-	assert(hrefs.length >= 6, `parsed only ${hrefs.length} modes — the array's shape changed`);
+	// A floor, not a count. Its job is to catch a MODES array the scanner failed
+	// to PARSE — zero hrefs would otherwise pass this check vacuously and then
+	// assert nothing in the loop below. It is not a claim about how many tabs
+	// the app should have, and the message must not say so: the bar went from
+	// ten to five deliberately, and a gate that reads as "you broke the parser"
+	// on correct code is a gate people learn to edit without reading.
+	assert(
+		hrefs.length >= 5,
+		`parsed only ${hrefs.length} modes — either the bar lost a tab, or the scanner ` +
+			'no longer recognises the MODES literal (it needs the exact declaration and single-quoted hrefs)'
+	);
 
 	for (const href of hrefs) {
 		const file = href === '' ? 'index.html' : `${href.slice(1)}.html`;

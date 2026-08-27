@@ -45,6 +45,16 @@
 		</p>
 	</header>
 
+	<!--
+		Everything below the header sits inside <article class="sheet">, matching
+		/menu/quiz and /menu/costing. This is not styling: oot-locks.js masks
+		`article.sheet > *:not(h1):not(.crumbs):not(header)` on a locked route,
+		and a page with no sheet gives it nothing to make inert — the content is
+		delivered in clear behind an overlay a reader can dismiss. This route is
+		not in TABLE_FREE_ROUTES, so it is a locked route.
+	-->
+	<article class="sheet">
+
 	{#if t.semesters.length}
 		<p class="taught">
 			On the Path of Study:
@@ -100,6 +110,7 @@
 			{/each}
 		</ul>
 	{/each}
+	</article>
 </div>
 
 <style>
