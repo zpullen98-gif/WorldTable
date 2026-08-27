@@ -87,7 +87,7 @@
 
 <article class="shell sheet">
 	<nav class="crumbs" data-print="hide">
-		<a href={base || '/'}>All chapters</a>
+		<a href="{base}/recipes">All chapters</a>
 		<span aria-hidden="true">›</span>
 		<a href="{base}/chapter/{r.chapterSlug}">{r.chapter}</a>
 	</nav>

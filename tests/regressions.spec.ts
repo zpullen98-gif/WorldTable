@@ -44,7 +44,7 @@ test('L2806 — typing in the Pantry filter keeps the hemisphere toggle', async 
 });
 
 test('L1913 — unaccented searches find their accented dishes', async ({ page }) => {
-	await goto(page, '/');
+	await goto(page, '/recipes');
 	const search = page.getByLabel('Search recipes');
 
 	await search.fill('ragu');
@@ -62,7 +62,7 @@ test('L1913 — unaccented searches find their accented dishes', async ({ page }
 });
 
 test('ingredient search finds dishes by what goes in them', async ({ page }) => {
-	await goto(page, '/');
+	await goto(page, '/recipes');
 	await page.getByLabel('Search recipes').fill('lemongrass');
 	// 13 in the corpus; the substring fallback found exactly 1.
 	await expect(page.locator('.card')).toHaveCount(13);
@@ -101,7 +101,7 @@ test('L3488 — a family recipe is visibly distinct and fully integrated', async
 	await expect(page.locator('.msg')).toContainText('Test Family Stew');
 
 	// In the grid, badged, linking into the client-only /family/ space.
-	await goto(page, '/?q=test family stew');
+	await goto(page, '/recipes?q=test family stew');
 	const card = page.locator('.card', { hasText: 'Test Family Stew' });
 	await expect(card).toBeVisible();
 	await expect(card.locator('.badge.fam')).toHaveText('Family');
@@ -151,7 +151,7 @@ test('deep link renders the dish before JavaScript runs', async ({ browser }) =>
 });
 
 test('the slash key focuses the search box', async ({ page }) => {
-	await goto(page, '/');
+	await goto(page, '/recipes');
 	await page.locator('body').press('/');
 	await expect(page.getByLabel('Search recipes')).toBeFocused();
 });

@@ -168,9 +168,17 @@
 		</div>
 	</section>
 
+	<!-- This band's body used to be the RecipeBrowser that followed it. With the
+	     grid at /recipes it needs a way in, or the heading announces 970 dishes
+	     and offers no route to them. -->
 	<section class="oot-sec">
 		<div class="oot-sec-head">
-			<h3>All {recipeTotal} recipes</h3><span>Every dish in the book, filterable</span>
+			<h3>The library</h3><span>When you want a dish rather than a lesson</span>
+		</div>
+		<div class="oot-grid-links">
+			<a href="{base}/recipes"
+				>All {recipeTotal} recipes<small>Every dish in the book, filterable by course, difficulty, diet and season</small></a
+			>
 		</div>
 	</section>
 </div>

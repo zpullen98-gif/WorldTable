@@ -21,7 +21,8 @@ import AxeBuilder from '@axe-core/playwright';
  */
 
 const VIEWS = [
-	{ path: '/', name: 'recipe grid' },
+	{ path: '/', name: 'today dashboard' },
+	{ path: '/recipes', name: 'recipe grid' },
 	{ path: '/recipe/cacio-e-pepe', name: 'recipe page' },
 	{ path: '/lexicon', name: 'lexicon' },
 	{ path: '/technique', name: 'technique index' },

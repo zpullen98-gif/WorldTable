@@ -30,7 +30,7 @@
 	   words. Nothing was removed, because every one of these is a destination a
 	   cook reaches for mid-service. */
 	const MODES = [
-		{ href: '', label: 'Recipes' },
+		{ href: '', label: 'Today' },
 		{ href: '/study', label: 'Course' },
 		{ href: '/repertoire', label: 'Repertoire' },
 		{ href: '/technique', label: 'Skills' },
@@ -39,7 +39,8 @@
 		{ href: '/safety', label: 'Safety' },
 		{ href: '/pantry', label: 'Pantry' },
 		{ href: '/menu', label: 'Our Menu' },
-		{ href: '/family', label: 'Family' }
+		{ href: '/family', label: 'Family' },
+		{ href: '/recipes', label: 'Recipes' }
 	];
 
 	const path = $derived(page.url.pathname.replace(base, '') || '/');
@@ -52,9 +53,20 @@
 		return dueList(repertoire(session.cookedLog, now), now).length;
 	});
 
+	/**
+	 * Which tab owns the current path.
+	 *
+	 * This was `path.startsWith(href)`, which is quietly wrong the moment two
+	 * routes share a prefix: '/recipes'.startsWith('/recipe') is TRUE, so the
+	 * library tab would light up on all 970 recipe pages and the recipe pages
+	 * would light two tabs at once. Prefix tests carry their trailing slash.
+	 */
 	function isActive(href: string) {
-		if (href === '') return path === '/' || path.startsWith('/recipe') || path.startsWith('/chapter');
-		return path.startsWith(href);
+		if (href === '/recipes') {
+			return path === '/recipes' || path.startsWith('/recipe/') || path.startsWith('/chapter/');
+		}
+		if (href === '') return path === '/';
+		return path === href || path.startsWith(href + '/');
 	}
 
 	/**

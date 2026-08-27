@@ -63,7 +63,7 @@ test('the whole app works with the network gone', async ({ page, context }) => {
 	await expect(page.locator('.lexcard')).toHaveCount(479);
 
 	// Search works offline (index is a precached chunk).
-	await goto(page, '/');
+	await goto(page, '/recipes');
 	await page.getByLabel('Search recipes').fill('lemongrass');
 	await expect(page.locator('.card')).toHaveCount(13);
 
@@ -84,7 +84,7 @@ test('no request ever leaves the origin', async ({ page }) => {
 		if (url.origin !== 'http://localhost:4173') external.push(req.url());
 	});
 
-	await goto(page, '/');
+	await goto(page, '/recipes');
 	await page.getByLabel('Search recipes').fill('ragu');
 	await goto(page, '/recipe/cacio-e-pepe');
 	await goto(page, '/lexicon');

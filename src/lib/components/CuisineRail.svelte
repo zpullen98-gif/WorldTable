@@ -70,7 +70,7 @@
 	<h2 class="eyebrow">Chapters</h2>
 	<ul>
 		<li>
-			<a class="all" class:on={!active} href={base || '/'}>All chapters</a>
+			<a class="all" class:on={!active} href="{base}/recipes">All chapters</a>
 		</li>
 		{#each groups as g (g.group)}
 			{@const isOpen = open.has(g.group)}
