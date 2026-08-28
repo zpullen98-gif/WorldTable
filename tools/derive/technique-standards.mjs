@@ -12,17 +12,17 @@
  * searing anything is doing the same measurable thing whether the pan holds
  * duck or aubergine, and that is assessable once, for all of it.
  *
- * 181 of the 970 remain unassessable and always will on this approach: 143
- * carry no technique tag at all, and the other 38 exercise only techniques too
+ * 173 of the 970 remain unassessable and always will on this approach: 143
+ * carry no technique tag at all, and the other 30 exercise only techniques too
  * rare in this corpus to be worth a standard. That is the honest ceiling rather
  * than a backlog, and it is gated below with everything else — the first
  * version of this sentence said 146 and 35, which were reasoned rather than
  * measured and were both wrong.
  *
- * The 46 techniques written here are every technique the corpus uses on 15 or
- * more recipes. They put a standard on 744 recipes that had none, taking the
- * assessable corpus from 45 to 789 of 970 — for 46 pieces of writing rather
- * than 744.
+ * The 50 techniques written here are every technique the corpus uses on 12 or
+ * more recipes. They put a standard on 752 recipes that had none, taking the
+ * assessable corpus from 45 to 797 of 970 — for 50 pieces of writing rather
+ * than 752.
  *
  * Those numbers are gated in build-data.mjs and read back out of this
  * comment. If a technique is added, a standard is written, or the corpus
@@ -66,16 +66,18 @@ export { MIN_MARKS, MAX_MARKS };
  * techniques written here — so the gate is tight, not slack, and the next
  * technique to cross 15 fails the build until somebody writes it.
  *
- * It has been 25. Dropping it to 15 is what produced the twenty standards added
- * below: the gate named them, they were written, and the gate went quiet. That
- * is the worklist maintaining itself, exactly as the header describes.
+ * It has been 25, then 15, now 12 — each drop made the gate name what it
+ * wanted, the standards were written, and the gate went quiet. That is the
+ * worklist maintaining itself, exactly as the header describes.
  *
- * The next step down is 14, and the returns thin out fast: 12 asks for four
- * more standards and 10 asks for none beyond those, because the corpus has a
- * gap between 12 recipes and 9. Anything below that is writing an assessment
- * for a technique the venue will meet a handful of times.
+ * BELOW 12 THE LADDER EFFECTIVELY ENDS. The corpus has a gap between 12
+ * recipes and 9, so 10 asks for nothing; 9 asks for one technique, 8 for two
+ * more, 7 for four more — all of them dishes-in-disguise (a specific bread, a
+ * specific broth) that a venue meets a handful of times and that a technique
+ * standard generalises badly over. If one of them ever matters, write it as a
+ * DISH standard on the recipes that carry it instead.
  */
-export const TECHNIQUE_GATE_MIN_RECIPES = 15;
+export const TECHNIQUE_GATE_MIN_RECIPES = 12;
 
 /**
  * How many technique standards a single recipe may carry.
@@ -184,6 +186,17 @@ export const TECHNIQUE_STANDARDS = [
 		],
 		fault: 'It was left alone for a moment while something else was attended to. Dry heat has no margin: the pieces against the metal go from fragrant to acrid inside a minute, and the bitterness cannot be picked back out of a ground mixture.'
 	},
+	{
+		slug: 'charring-over-open-flame',
+		marks: [
+			{ id: 'charring-over-open-flame#direct', text: 'The surface met the fiercest heat available — flame, a broiler, or bare hot metal — with nothing between them, and it shows as true blistering and blackening rather than gentle, even browning.' },
+			{ id: 'charring-over-open-flame#patches', text: 'The char matches the surface’s fate: where it will be eaten, black sits in patches over deep colour with every face having had its turn — and where the skin is to be peeled away, it may go to an even black, because the char there works on the flesh below and then leaves with the skin.' },
+			{ id: 'charring-over-open-flame#smoke', text: 'It smells of smoke and toasted surface with no acrid edge that stings the nose — acrid means it went past, and acrid does not cook out.' },
+			{ id: 'charring-over-open-flame#beneath', text: 'Just under the char it is cooked — softened, steaming, collapsed, or puffed, whichever the dish wants — because the flame did the surface and the trapped heat did the rest.' },
+			{ id: 'charring-over-open-flame#balance', text: 'A taste carries the smoke without mouthfuls of ash: the black that flakes away is a seasoning, not a layer.' }
+		],
+		fault: 'It was left on one face too long or held too close, so one side carbonised to ash while the rest stayed raw — and the smell turned acrid, which follows the dish through every later step and cannot be seasoned away.'
+	},
 	// ── Fat, and what comes out of it ────────────────────────────────
 	{
 		slug: 'rendering-fat-and-cooking-in-what-runs-out',
@@ -262,6 +275,17 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'deglazing-and-pan-sauces#after', text: 'Reduced first and seasoned afterwards, tasted at the consistency it will be served at rather than at the start.' }
 		],
 		fault: 'The pan was left to stand and go cold before anybody came back to it. Cold fond will not dissolve, so the scraping lifts nothing, and the sauce arrives thin and pale with the flavour it was supposed to carry still welded to the metal.'
+	},
+	{
+		slug: 'building-an-emulsion',
+		marks: [
+			{ id: 'building-an-emulsion#thickens', text: 'It visibly thickens as the fat goes in — heavier and more opaque than either part was alone, which is the emulsion announcing itself.' },
+			{ id: 'building-an-emulsion#pace', text: 'At no point is there a pool of free fat sitting ahead of the work: fat went in no faster than it disappeared into the body.' },
+			{ id: 'building-an-emulsion#gloss', text: 'Glossy and homogeneous, with no slick floating on top and no visible droplets standing apart in it.' },
+			{ id: 'building-an-emulsion#clings', text: 'It clings — coating what it is put on and holding a line, rather than running off and splitting into a puddle at the plate’s edge.' },
+			{ id: 'building-an-emulsion#stands', text: 'It survives standing: minutes later there is no ring of weeping liquid underneath and no film of fat breaking out on the surface.' }
+		],
+		fault: 'The fat went in faster than the shear could break it up, or the temperature drifted out of the range the method needs — it breaks into grease over a thin liquid, and whisking the broken thing harder does nothing. The rescue is a fresh base, with the broken sauce worked into it slowly, as if it were the fat.'
 	},
 	// ── Water, and heat carried by it ────────────────────────────────
 	{
@@ -543,6 +567,28 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'whipping-a-meringue#glossy', text: 'Glossy and smooth rather than chalky or dull, with no liquid gathering underneath it in the bowl.' }
 		],
 		fault: 'It was whipped past stiff peaks. A minute beyond glory the protein network tightens and tears, the foam turns grainy and matte, water weeps out beneath it, and folding that into anything gives a mixture that collapses on the way to the oven.'
+	},
+	{
+		slug: 'kneading-dough',
+		marks: [
+			{ id: 'kneading-dough#transformed', text: 'The work changed it: what began shaggy and rough is one smooth, cohesive mass, with nothing raggy hanging off it.' },
+			{ id: 'kneading-dough#surface', text: 'The surface has gone satin and barely tacky, releasing cleanly from hands and board instead of leaving a trail.' },
+			{ id: 'kneading-dough#degree', text: 'Worked to the point this dough asks for and no further — springy and elastic where structure is wanted, just brought together where tenderness is.' },
+			{ id: 'kneading-dough#inside', text: 'Torn or cut open, the inside is uniform: no dry streaks, no unmixed pockets, no core of flour that never met the water.' },
+			{ id: 'kneading-dough#rest', text: 'After its rest it rolls and shapes without snapping back. A dough that fights the pin needed more rest, not more force.' }
+		],
+		fault: 'Sticking was fought with flour instead of technique or patience, stroke after stroke, until the dough had taken in far more than the formula asked — it turns tight and dry under the hands, and bakes dense however well everything else goes.'
+	},
+	{
+		slug: 'icing-and-frosting',
+		marks: [
+			{ id: 'icing-and-frosting#cold', text: 'The temperatures were chosen, not defaulted: the bake fully cool where the finish is meant to sit on top of it, or both deliberately warm where the method wants the two to fuse — and the proof either way is a finish that stayed where it was put.' },
+			{ id: 'icing-and-frosting#smooth', text: 'Smooth on the tongue: no grit of undissolved sugar and no lumps of anything that was never fully worked in.' },
+			{ id: 'icing-and-frosting#consistency', text: 'The consistency matches the job — it spreads or pours the way the method intends, then holds the edge, swirl, or drip it was given.' },
+			{ id: 'icing-and-frosting#clean', text: 'The surface underneath is intact: covered rather than scrubbed, with no crumbs dragged through the finish and no torn patches showing.' },
+			{ id: 'icing-and-frosting#set', text: 'By serving it has settled into the finish the method wants — matte, glossy, or soft — and a cut comes away clean rather than pulling the top off with it.' }
+		],
+		fault: 'A finish meant to sit on top went on while the bake was still warm. The layer that touched first melted, slid, and soaked in; what is left sets greasy and streaked, and no amount of chilling afterwards puts that finish back.'
 	},
 	// ── Judgement: reading doneness and texture ──────────────────────
 	{

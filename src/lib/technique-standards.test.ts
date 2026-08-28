@@ -212,33 +212,33 @@ describe('the judgedBy join', () => {
 });
 
 describe('what this bought, measured against the shipped data', () => {
-	it('takes the assessable corpus from 45 to 789 of 970', () => {
+	it('takes the assessable corpus from 45 to 797 of 970', () => {
 		const dish = detail.filter((r) => r.standard).length;
 		const byTechnique = detail.filter((r) => r.judgedBy).length;
 		expect(dish).toBe(45);
-		expect(byTechnique).toBe(744);
-		expect(dish + byTechnique).toBe(789);
+		expect(byTechnique).toBe(752);
+		expect(dish + byTechnique).toBe(797);
 		expect(detail.length).toBe(970);
 	});
 
-	it('does it with 46 pieces of writing', () => {
-		expect(shipped.length).toBe(46);
+	it('does it with 50 pieces of writing', () => {
+		expect(shipped.length).toBe(50);
 	});
 
 	/**
 	 * The honest remainder, asserted so it cannot quietly drift to zero and take
-	 * the copy's honesty with it. 181 dishes can still only be recorded as
+	 * the copy's honesty with it. 173 dishes can still only be recorded as
 	 * cooked, and the recipe page renders no block at all for them.
 	 *
 	 * Split, because the two halves have different futures. 143 carry no
-	 * technique tag at all and no threshold will ever reach them; the other 38
-	 * exercise only techniques too rare in this corpus to be worth a standard,
-	 * and dropping the threshold below 15 is the lever if that ever changes.
+	 * technique tag at all and no threshold will ever reach them; the other 30
+	 * exercise only techniques too rare in this corpus to be worth a standard —
+	 * and below 12 the ladder effectively ends, per the module header.
 	 */
-	it('leaves 181 dishes with no standard of any kind', () => {
+	it('leaves 173 dishes with no standard of any kind', () => {
 		const none = detail.filter((r) => !r.standard && !r.judgedBy);
-		expect(none.length).toBe(181);
+		expect(none.length).toBe(173);
 		expect(none.filter((r) => !r.techniques?.length).length).toBe(143);
-		expect(none.filter((r) => r.techniques?.length).length).toBe(38);
+		expect(none.filter((r) => r.techniques?.length).length).toBe(30);
 	});
 });
