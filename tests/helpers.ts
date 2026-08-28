@@ -86,3 +86,70 @@ export async function seedSession(
 		[patch, profileId ?? null] as [Record<string, unknown>, string | null]
 	);
 }
+
+/**
+ * Put a HOUSE record on the page before it loads — the venue's half of the
+ * split that seedSession covers for the person.
+ *
+ * Exists because the transport spec needs a venue with a prep-backed costing,
+ * an item book and a waste log, and none of that lives in the session. Every
+ * .wtjson defect so far has been in exactly this record's travel arrangements.
+ */
+export async function seedHouse(page: Page, patch: Record<string, unknown> = {}) {
+	await page.addInitScript(
+		(extra) => {
+			// addInitScript re-runs on EVERY navigation, so without this switch a
+			// test that wipes the venue and reloads finds it resurrected by its
+			// own seed. The transport spec flips it before playing "site B".
+			if (localStorage.getItem('__wt_seed_off')) return;
+			const now = Date.now();
+			const record = {
+				schemaVersion: 1,
+				dishes: [
+					{ id: 'd1', name: 'Braised cheek', section: 'Mains', description: '', ingredients: [], allergens: [], price: '28', ts: now }
+				],
+				preps: [
+					{
+						id: 'p-demi', name: 'Demi-glace', batch: '1 x 20L pot', portions: 10, par: 20,
+						handsOnSec: 3600, unattendedSec: 32400, ts: now,
+						lines: [
+							{ id: 'a', item: 'Veal bones', unitCost: 20, unit: 'kg', usedQty: 1, yieldPct: 100 },
+							{ id: 'b', item: 'Mirepoix', unitCost: 10, unit: 'kg', usedQty: 1, yieldPct: 100 }
+						]
+					}
+				],
+				items: {
+					butter: { slug: 'butter', name: 'Butter', history: [
+						{ unitCost: 9.5, unit: 'kg', at: now - 86_400_000 },
+						{ unitCost: 6.4, unit: 'kg', at: now - 90 * 86_400_000 }
+					] }
+				},
+				waste: [
+					{ id: 'w-seed', at: now - 3_600_000, label: 'Demi-glace', qty: 2, reason: 'overprep', unitValue: 3 }
+				],
+				prepCounts: {}, eightySix: {}, absorbed: [], lastWrite: now,
+				dishCosts: {
+					d1: {
+						lines: [
+							{ id: 'l1', item: 'Beef cheek', unitCost: 18, unit: 'kg', usedQty: 0.25, yieldPct: 80 },
+							{ id: 'l2', item: 'Demi-glace', unitCost: 0, unit: 'portion', usedQty: 1, yieldPct: 100, prepId: 'p-demi' },
+							// STALE ON PURPOSE: the line stores 6.40 while the book holds
+							// 9.50, so the plate only costs 9.10 if the BOOK travelled and
+							// was followed. A wrong-but-plausible 8.95 means somebody made
+							// linked lines read their stored price again.
+							{ id: 'l3', item: 'Butter', itemSlug: 'butter', unitCost: 6.4, unit: 'kg', usedQty: 0.05, yieldPct: 100 }
+						],
+						sales: [], ts: now
+					}
+				},
+				...(extra as Record<string, unknown>)
+			};
+			const open = indexedDB.open('world-table');
+			open.onupgradeneeded = () => open.result.createObjectStore('state');
+			open.onsuccess = () => {
+				open.result.transaction('state', 'readwrite').objectStore('state').put(record, 'house');
+			};
+		},
+		patch
+	);
+}
