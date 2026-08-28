@@ -1,8 +1,7 @@
 # The World Table — session handoff
 
-Written 27 Aug 2026. Every number below was measured, not remembered. **Where a
-document and a file disagree, the file wins** — run the tool. This document was
-itself written because the previous handoff was stale in four places.
+Written 28 Aug 2026. **Every number below was measured, not remembered** — run
+the tool. Where a document and a file disagree, the file wins.
 
 `CLAUDE.md` is the architectural reference and is far more detailed. Read it
 second; read this first.
@@ -11,36 +10,34 @@ second; read this first.
 
 ## What this is
 
-A SvelteKit rewrite of a 1.5MB single-file culinary field guide, now becoming a
-**training app for professional kitchens**. It is one of five wings in the
-"Outside Of Time" subscription monorepo (`C:\Users\zpull\OutsideOfTime`), sold
-B2B to venues at $49.99/month, unlimited staff, one shared login.
+A SvelteKit rewrite of a 1.5MB single-file culinary field guide, now a
+**training app for professional kitchens**. One of five wings in the "Outside Of
+Time" subscription monorepo (`C:\Users\zpull\OutsideOfTime`), sold B2B to venues
+at **$49.99/month, unlimited staff, one shared login**.
 
-**Audience, decided by the owner: chefs, culinary students, AND servers.** That
-third one drove most of this session's work — front of house had nothing.
+**Audience, decided by the owner: chefs, culinary students, AND servers.**
 
 ## Repo state
 
 | | |
 |---|---|
-| WorldTable | branch `dish-standards`, **16 commits unpushed** (remote is `origin/master`), plus the technique-standards work below |
-| OutsideOfTime | branch `main`, HEAD `3ca8361e`, tree clean, **no git remote — never pushed** |
-| Tests | **447 unit** (30 files), **80 e2e** (80 pass — **the suite is green**) |
-| Gates | `npm run build:data` all pass · `npm run verify:build` **18/18** |
-| Precache | 1.39 MB gzipped against a 2.00 MB cap |
-| Routes | 24 · Derived JSON | 19 files |
+| WorldTable | branch `dish-standards`, **28 commits unpushed** (remote `origin/master`), tree clean |
+| OutsideOfTime | branch `main`, HEAD `53b31569`, tree clean, **no git remote — never pushed** |
+| Tests | **447 unit** (30 files) · **80 e2e** — **the whole suite is green** |
+| Gates | `build:data` all pass · `verify:build` **18/18** |
+| Precache | 1.43 MB gzipped against a 2.00 MB cap |
+| Routes | 27 · Derived JSON | 21 files |
 
-**There is no red test any more.** The shared-layer contrast defect that had
-been outstanding longest is fixed — see below.
+## The corpus
 
-## The corpus, by the numbers
+970 recipes · 94 chapters · 479 lexicon terms · 103 techniques · 45 dish
+standards · 26 technique standards · 355 marks · 6 calibration ladders · 176
+front-of-house terms · 27 service modules · 186 drill cards.
 
-970 recipes · 94 chapters · 479 lexicon terms · 103 techniques · **45 dish
-standards** · **26 technique standards** · course of 45 dishes over 10 semesters
-· 176 front-of-house terms · 27 service modules · 186 drill cards.
+**683 of 970 recipes are assessable** — 45 against a standard of their own, 638
+against the techniques they exercise. 287 carry neither.
 
-**683 of the 970 recipes can now be assessed** — 45 against a standard of their
-own, 638 against the techniques they exercise. 287 still carry neither.
+---
 
 ## Architecture
 
@@ -57,156 +54,220 @@ reference/world-table-v1.html
 **Never move derivation into a component.** A regex tweak must land as a
 reviewable diff over JSON, not as a behaviour change nobody can see.
 
-### The pattern this project runs on
+### The two kinds of work this repo does
 
-Six features were built the same way, and the seventh will be too:
+1. **Reachability** — the guide already contains the material and nobody can
+   reach it, because `crosslinks.mjs` caps a lexicon term at three recipes.
+   Instances: the technique spine, the palate repair table, menu economics, food
+   safety, the restaurant-finance curriculum, the 176 FOH terms.
+2. **Authored + gated** — the guide never said it, so it is written and held
+   down by gates. `standards.mjs`, `technique-standards.mjs`, `calibration.mjs`,
+   the technique table's `SUPPLEMENT`.
 
-> **The guide already contains the material, and nobody can reach it.**
-> `crosslinks.mjs` caps a lexicon term at three recipes, so the best content in
-> the book surfaces beside an arbitrary dish. The work is **structure + build
-> gates over existing prose**, not new writing.
-
-Instances found: the technique spine, the palate repair table, menu economics,
-food safety, the 43-entry restaurant-finance curriculum (**14 of which link to
-NO recipe**), and the 176 front-of-house terms. Expect it again.
-
-**The predicted seventh instance did not arrive.** The technique standards are
-the OTHER kind of work this repo does — authored from nothing and held down by
-gates, like `standards.mjs` and the technique table's `SUPPLEMENT`. The guide
-never said what correct execution looks like, so there was nothing to surface.
-Both kinds are live; do not assume the next job is a reachability problem.
+Do not assume the next job is the first kind.
 
 ### The gate discipline
 
-Every derive module is gated **in both directions**:
-
-- forward — the evidence must still be present in the guide
-- **reverse** — a thing the guide states that nothing carries fails the build
-
-The reverse half is what stops rot. And **any number shipped must be read back
-out of the prose that justifies it** — `economics.mjs` shipped with only the
-forward half working, so `lowPct` could drift 25→30 while the entry still said
-"25–35%".
+Every derive module is gated **in both directions**: forward (the evidence must
+still be in the guide) and **reverse** (a thing the guide states that nothing
+carries fails the build). Any number shipped must be **read back out of the prose
+that justifies it**.
 
 **A gate that cannot fail is worth nothing.** Prove every one by breaking
-something and reading the message.
+something and reading the message. This session found two gates that could never
+have fired — one sat above `const problems = []`, so every `problems.push` was a
+ReferenceError that only threw when a problem was *found*; with none, the build
+passed green.
+
+### Where state lives — the line that matters
+
+- **`session::<profileId>`** (per person): cooked log, drill log, calibration
+  log, notes, pantry, family recipes, the plan run.
+- **`house`** (device-wide, NEVER namespaced): the menu, preps, prep counts, the
+  86 board, dish costings, the tax setting.
+
+**A cooked mark is a fact about a PERSON. A menu, what is 86'd and what a plate
+costs are facts about the VENUE.** Precedent: `wt.timers.v1` carries no profile,
+because a pot on the heat belongs to the room.
+
+`persistence/state.ts` is deliberately a **leaf module** — db.ts and
+migrations.ts both import it precisely so they never import each other. Do not
+import a value back into it.
 
 ---
-
-## What was built this session, in order
-
-1. **The Repertoire** (`lib/repertoire.ts`) — spaced repetition over cooked
-   dishes. 14/35/90/180/365-day ladder where the rung is *earned*: cook mode's
-   last screen shows the dish's standard and asks met/close/missed.
-2. **The Palate** (`/palate`) — the guide's own repair table, reachable, and
-   offered inside cook mode when a plate is graded close or missed.
-3. **The Pass** (`lib/pass.ts`, on `/menu`) — back-timed service plan.
-   `tools/derive/service.mjs` splits every step into hands-on vs unattended.
-4. **The Costing Sheet** (`/menu/costing`) — yield-aware plate costing and menu
-   engineering over the venue's own dishes.
-5. **Food Safety** (`/safety`) — the guide's two entries plus a gated table of
-   its **silences**.
-6. **The front door** — the 970-card grid moved off `/` to `/recipes`.
-7. **Role** — chef / student / server, on the per-person profile.
-8. **Five tabs** — Today · Learn · Practise · Service · Library.
-9. **The Service Track** (`/service`) — 27 modules over all 176 FOH terms.
-10. **Scored drills** (`/service/drill`) — 10 questions, redacted prompts.
-11. **The Coverage Board** (`/coverage`) — who can hold which station.
-
-## Added after that handoff — technique standards
-
-`tools/derive/technique-standards.mjs` — **26 authored standards**, one for every
-technique the corpus uses on 25 or more recipes, in the same 3–5 marks + `fault`
-shape as a dish standard. They put a standard on **638 recipes that had none**.
-
-The distinction the copy is built around: **a dish standard is read at the pass,
-a technique standard is read at the pan** — while there is still something to be
-done about it. The recipe page says so in words, and the block is visually
-quieter, because a cook who mistakes the second for the first has been told the
-dish was assessed when only its method was. Cook mode's last screen now grades
-those 638 dishes too, so they enter the Repertoire ladder instead of recording
-attendance.
-
-- Recipes carry `judgedBy` — technique slugs, **ordered rarest-first** and capped
-  at two. Rarest-first is load-bearing and tested: the technique that applies to
-  fewest dishes says most about this one, and `judgedBy[0]` is what cook mode
-  grades. A dish standard always wins; a recipe never carries both.
-- The prose lives once in `technique-standards.json`, interned the way pairings
-  are, not copied into 638 recipes.
-- **Eight build gates, every one broken on purpose and its message read.** One
-  did not fire on the first attempt — the mutation was wrong, not the gate, which
-  is its own reminder to check which of the two you actually proved.
-- The module's headline numbers are **parsed back out of its own doc comment**
-  and compared to what the build measured, so the paragraph cannot drift the way
-  `economics.mjs` did.
-- 18 new unit tests (`src/lib/technique-standards.test.ts`), two of them proven
-  to fail by flipping the sort and by planting a dish name in a mark.
 
 ## Decisions not to reverse
 
 - **Certified stat keys stay unprefixed**; question ids are frozen; minting is
   additive. A changed id orphans progress.
-- **Rank II is FREE** (Codex).
+- **Mark ids are minted and ledgered** (`mark-ids.ledger.json`). A rename or a
+  drop fails the build; an add is silent; editing the wording is free.
 - **`matchSA` short-circuits on the model answer** — do not tidy it away.
 - **A false reject is worse than a scoring leak.**
-- **The archived original is the only content source**, except explicitly gated
-  authored exceptions (`SUPPLEMENT`, `STANDARDS`, and this session's derive
-  modules).
-- **No pictorial icons in the Codex.** New Codex features go in a new `codexN.js`.
-- **NO per-recipe hazard flags, ever.** Five candidate rules were measured and
-  all five were unshippable — 0 of 15 adversarial verdicts survived. The
-  stated-temperature rule scored **0/12**; the raw-protein rule flagged a
-  hot-smoked salmon while MISSING carbonara, caesar, aioli, hollandaise and lox.
-  A missed hazard is worse than ten false ones. `assertNoRecipes()` in
-  `sanitation.mjs` keeps this refused. **Do not revive by tuning a regex** — a
-  corrected rule returns ZERO hits on this corpus.
-- **The coverage board shows coverage, not scores** — bands, never percentages.
-  A percentage invites a threshold, a threshold invites a pass mark, and a pass
-  mark is certification. **But this is a CHOICE, not a limit**, and the copy says
-  so: a manager device CAN read every profile's whole record (`session::<id>` is
-  deterministic; `oot-pass.js` already does it for two other wings).
-- **Chef and student are not the same role.** The student has a denominator (45
-  dishes); a chef's work has no end state. Giving a chef a course percentage is
-  the exact bug the old home band shipped.
+- **NO per-recipe hazard flags, ever.** Five rules were measured, zero of fifteen
+  adversarial verdicts survived. `assertNoRecipes()` keeps this refused. **Do not
+  revive by tuning a regex** — a corrected rule returns ZERO hits.
+- **No allergen-exclusion filter**, ever. "Carries shellfish" costs ten seconds
+  when wrong; "shellfish free" over 7 of the statutory 14 is a clearance claim
+  the derivation cannot support.
+- **The guest card never prints allergen marks.** Those are a kitchen record;
+  printed, they read as a guarantee. A fixed line invites the conversation.
+- **The coverage board shows coverage, not scores** — bands, never percentages,
+  and never a count of what is left.
+- **No per-person number a manager reads** — waste by cook, step times by cook.
+  Each is a disciplinary instrument, and the data goes dishonest in a fortnight.
+- **Chef and student are not the same role.** A student has a denominator; a
+  chef's work has no end state.
+- **No CSV importer, ever.** The `.wtjson` is the single portability contract
+  with tested merge semantics.
+- **Do not build**: video, leaderboards, certification, more recipes, HACCP or
+  temperature logs (a single-device, freely-editable record would be adopted as
+  compliance evidence while being worthless as evidence), reference plate photos
+  (a photograph cannot say "the centre slumps once and stops"; the 355 marks can).
 
 ## Gotchas that cost real time
 
-- **Clear the service worker before verifying anything.** And when a new derived
-  JSON file appears, **restart the dev server** — its module graph is stale and
-  you get a 500 that looks like a code error. This happened three times.
-- **A `shared/*.js` edit is a ritual**: bump `SHARED_V`, re-inject the Table
-  (1,179 files), bump every wing's `?v=`, bump the four vanilla wing SW cache
-  names. None of the four is optional — they precache `/shared/` with
-  `ignoreSearch: true`. The Table needs no SW bump: it runtime-caches `/shared/`,
-  so there the `?v=` IS the cache key.
-- **Bash heredocs eat backslashes and backticks.** Regexes and template literals
-  written through `node <<'JS'` arrive mangled. Use the Write tool, or write the
-  code without escapes.
-- **`verify-build.mjs` string-scans `MODES`** — it needs the literal
-  `const MODES = [`, single-quoted `href: '`, and no nested array. The Today tab
-  must be `href: ''`, never `'/'` (which computes `.html`).
+- **Clear the service worker before verifying.** When a new derived JSON file
+  appears, **restart the dev server** — a stale module graph gives a 500 that
+  looks like a code error.
+- **A `shared/*` edit is a ritual.** For CSS specifically: `codex` and `ledger`
+  precache `oot-home.css` and match with `ignoreSearch: true`, so the `?v=` is
+  discarded and their SW cache names must be bumped. `pass` has no SW. `light`
+  and `almanac` do not reference it at all. The Table runtime-caches `/shared/`.
+- **Bash heredocs eat backticks and `$`.** Python patch scripts containing them
+  must be written to a FILE and run, never piped through `bash -c`. This bit
+  twice this session, once executing the Windows `at` command into a document.
+- **`verify-build.mjs` string-scans `MODES`** — keep `OWNS` a separate const.
 - **Five class names are a published paywall contract**: `ol.semesters`,
-  `li.semester`, `.lexcard`, `.def`, `.flash`. Renaming one fails OPEN (content
-  delivered free, no symptom); reusing one fails CLOSED.
-  `src/lib/navigation.test.ts` holds the line.
+  `li.semester`, `.lexcard`, `.def`, `.flash`. `navigation.test.ts` holds the line.
+- **`oot-locks.js` does a singular `querySelector('article.sheet')`** — one sheet
+  element per page.
 - **The e2e suite is structurally blind to a dead route** — `serve.mjs` answers
-  any unknown path with `shell.html` at 200. Only `verify:build` sees a missing
-  page; `tests/nav.spec.ts` covers the rest.
-- **`seedSession` must write both keys.** Once a profile exists, `KEY()` returns
-  `session::<id>` and a base-key-only seed silently reads empty.
+  any unknown path with `shell.html` at 200. Only `verify:build` sees it.
 - **Guards fire on legitimate change** — confirm the parser agrees with reality,
   then update. Do not edit a gate without reading it.
 
 ---
 
+## What was built this session
+
+A six-lens professional review (chef de cuisine, kitchen manager, chef patron,
+compliance, educator, service director) was run against the codebase and
+adversarially verified. Its ranked list was then worked through 1–12.
+
+**Safety and correctness**
+
+1. **The allergen truth pass.** `lineIsEscaped()` discards a whole ingredient
+   line, and `containsFish`/`containsShellfish` read from the escaped set — so
+   "chorizo optional" threw away the shrimp beside it, and a whole fried tilapia
+   shipped `containsFish: false` **and a Vegan badge**. Both flags now follow the
+   allergen policy the file already stated (dairy and egg were moved for the same
+   reason when panna cotta shipped vegan over "500ml cream"). +16 fish, +12
+   shellfish, 16 false vegan badges withdrawn, **zero change to any vegetarian
+   flag**. `/menu` and `/menu/quiz` render three states, always.
+2. **The house record could be wiped by a rollback.** `hydrate()` had no `else`,
+   so a record from a newer build left `#r` as `EMPTY_HOUSE` and the next write
+   put it over the top. Reproduced (`schemaVersion: 99` → two taps → `dishes: []`)
+   and fixed: a newer record is **blocked** — not read, never written over.
+3. **The coverage board's manager gate was copy, not code.** `people` was built
+   over the whole roster while a paragraph told a commis they were seeing only
+   their own coverage. The roster is narrowed **before any session is read** now.
+4. **The shared contrast defect** — three defects wearing one test failure:
+   opacity stacked on an already-muted token, an accent too light to be text
+   (3.53:1 where AA wants 4.5), and an entrance animation fading text through
+   every failing ratio on the way in.
+
+**Assessment**
+
+5. **26 technique standards**, covering every technique the corpus uses on 25+
+   recipes — 638 recipes gained a standard. Only **69 of 103** techniques add any
+   coverage; 34 are fully redundant.
+6. **Grade the mark, not the plate.** 355 marks carry frozen ledgered ids; the
+   pass screen's marks are tappable; the palate fault the cook names is kept
+   instead of dying with the dialog.
+7. **The calibration bench** — a triangle test, six ladders, six trials a run,
+   the app holding the answer.
+8. **House dishes are assessable**, and the self-declared tags structurally
+   cannot reach `/coverage`.
+
+**Service and money**
+
+9. **The Pass tells the truth** — course firing (everything used to land at
+   19:00:00), a real hands sweep against the crew in the room, and a clock that
+   survives a walk to the walk-in.
+10. **Preps** — cost the demi once. On the worked example the real number is
+    **9.30 a portion against a 6.00 guess**.
+11. **The prep board** — count the walk-in and the day back-times itself, through
+    the same `buildPass`.
+12. **Covers by week**, without the migration that would have broken it.
+13. **Three money bugs** — tax-inclusive pricing (contribution overstated by 3.00
+    and food cost understated 5.5 points on **every** dish), an import banner that
+    said "nothing new" before rewriting costings, and a sheet that could not print.
+14. **A sheet that adds up** — weighted food cost. On the worked case the mean is
+    32% and the weighted figure is **41.2%**.
+15. **A timer not attached to a recipe** — `timers.start` had exactly one call
+    site in the whole app.
+
+---
+
+## What's left, ranked
+
+1. **The item book.** `unitCost` is stored per line per dish and `editLine`
+   patches it in place, so the previous number does not exist anywhere — which
+   makes the guide's own advice (*"reprice quarterly against invoice creep;
+   menus that sleep bleed"*) structurally impossible to follow. Butter is free
+   text on fourteen lines in fourteen dishes.
+
+   Design: `items` keyed by slug with a capped price history, `CostLine.itemSlug?`,
+   a datalist that populates itself from what has already been typed so there is
+   no master-data chore, resolution to plain CostLines before `plateCost` exactly
+   as preps do, and — the part that matters — **history merged by UNION on the
+   timestamp**, because newer-wins-whole would discard every price change the
+   losing device recorded, which is the one thing the feature exists to keep.
+   NEVER mandatory: a one-off truffle stays free text, or a ten-minute costing
+   becomes an afternoon of master data and the sheet stops being opened.
+
+   The sentence that IS the feature: *"Butter is used in 14 dishes. 3 have moved
+   out of the 25–35% band."*
+2. **The waste log** — valued from `plateCost`, five reason codes, rolled up
+   venue-wide and **never per person**.
+3. **More technique standards.** The threshold IS the worklist: lower
+   `TECHNIQUE_GATE_MIN_RECIPES`, run `build:data`, and the reverse gate names
+   exactly what it wants. 20 asks for 13 more and reaches 745 of 824; 15 asks for
+   20 more and reaches 782.
+4. **The allergen vocabulary.** 99 of 970 recipes still carry no flag at all.
+   `allergens.test.ts` asserts `NOT_SCREENED` stays non-empty, so the day it
+   lands the copy is forced to change.
+5. **Yield tests.** Zero content, and the costing sheet depends on the number.
+6. **Repetition under load.** The Pass computes collisions; that is a drill.
+7. **The costing CSV** — one-way door, and see the no-importer rule above.
+
+## Open questions for the owner
+
+- **`oot-pass.js` already ships per-person accuracy % to two other wings**, so
+  "coverage, never scores" is inconsistent across the monorepo. Either the Table
+  matches the pass, or the pass is overreaching. Product call, not technical.
+- **Does the venue's own menu become the centre of gravity?** That is the line
+  between "we train your staff on the guide's food" and "on yours".
+- **Training app or management app?** Preps, the item book, the week, prime cost
+  and a waste log are a second product, bought by the operator rather than the
+  chef, competing for the same Service tab.
+- **Prime cost is stated three incompatible ways** in the guide (55–60 in the
+  entry `economics.mjs` ships, ~60–65 in Costing Time, 55–65 in the pro-forma)
+  and the build silently picks one. `sanitation.mjs` surfaces its analogous
+  conflict rather than choosing.
+- **15 authored-vegetarian recipes now carry a fish or shellfish flag** — dashi,
+  Worcestershire, fish sauce. Reported, not gated, because the authored flag is a
+  documented human judgement. A Vegetarian badge over a dish containing dashi is
+  a live product question.
+- **The certification pressure is coming.** A venue will ask for a printable,
+  dated training record. This product refuses on grounds worth keeping: nothing
+  here is witnessed, dated, signed or tamper-evident.
+
 ## BLOCKING DEPLOY
 
-**`table/` in the monorepo is a stale build.** It contains NONE of this
-session's routes — `/recipes`, `/learn`, `/practise`, `/service`, `/repertoire`,
-`/palate`, `/safety`, `/coverage`. The paywall patch (`3ca8361e`) makes them free
-*for when they land*; they do not resolve yet.
-
-The sync, per `OutsideOfTime/HANDOFF.md`, **in PowerShell not Git Bash**:
+**`table/` in the monorepo is a stale build.** It contains none of this session's
+routes. The sync, in PowerShell not Git Bash:
 
 ```
 $env:BASE_PATH='/table'; npm run build:pages
@@ -215,849 +276,16 @@ $env:BASE_PATH='/table'; npm run build:pages
 then the scope greps in `README.md:186-205`, copy into `table/`, re-inject
 (`node .scripts/inject-oot-bar.mjs` and `--check`). Order is load-bearing.
 
-Current versions (verified): shared scripts **v18**; `codex-v66`, `ledger-v38`,
-`firstlight-v45`, `cfl-v84`.
-
-Also unpushed: **WorldTable 15 commits**; BartendersLedger 3. **OutsideOfTime has
-no remote at all.**
-
-## The allergen truth pass — done, and why it mattered
-
-A six-lens professional review (chef de cuisine, kitchen manager, chef patron,
-compliance, educator, service director) found two places where **silence read as
-clearance**, and one where the app made an affirmative claim it could not support.
-
-**`lineIsEscaped()` discards an entire ingredient line**, and `containsFish` /
-`containsShellfish` read from the escaped set. Both escape routes silenced real
-allergens:
-
-- *Weeknight paella* — "Chicken thighs, chorizo optional (heresy but delicious),
-  shrimp". `OPTIONAL_MARKER` exists to excuse the chorizo. It threw away the
-  whole line, and **the shrimp with it**.
-- *Escabecheng Isda* — "1 whole tilapia, snapper or pompano (~800g), scored,
-  salted, and fried WHOLE in hot oil". The `or` rule found no keyword in
-  "pompano", matched `oil` in `VEG_ALTERNATIVE`, and escaped a whole fish. It
-  shipped `containsFish: false` **and painted a Vegan badge**.
-
-The precedent was already in the file: dairy and egg were moved to the all-lines
-reading when panna cotta shipped `vegan: true` over "500ml cream". Fish and
-shellfish were left behind, and the comment above them already claimed they had
-not been.
-
-**Measured effect** — `containsFish` +16, `containsShellfish` +12, blank allergen
-screens 101 → 99, **16 false Vegan badges withdrawn**, and `vegetarianStrict` /
-`vegetarian` changed on **exactly zero** recipes: the vegetarian filter did not
-move, because vegetarian status still reads binding lines only. That separation
-is asserted directly (`onigiri` is vegetarian-strict AND carries a fish allergen).
-
-Also landed:
-
-- **`vegan` is gated as an assertion.** 16 recipes shipped `vegan: true` and
-  `vegetarianOption: true` together — a contradiction in the data's own terms,
-  since `vegetarianOption` means an animal product IS named and merely escaped.
-  Nothing flagged vegan may now carry an animal word anywhere.
-- **`/menu` and `/menu/quiz` render three states, always.** A dish nobody had
-  marked used to render **nothing at all** on the screen a server reads at a
-  table. `MenuDish.allergensCheckedAt` is stamped by an explicit affirmation,
-  never by Save, because ticking every box correctly and ticking none look
-  identical in the record. An unmarked dish can no longer pose an allergen
-  question in the quiz.
-- **Vocabulary**: `pompano`, `mullet`, `sablefish`, `stockfish` — words `\bfish\b`
-  cannot reach from inside. All four are in the corpus and all four were caught
-  by a second word in the same recipe, which is luck, not cover.
-- **9 tests** (`src/lib/diet-escape.test.ts`), five of which fail if the flags go
-  back to the binding read. The first draft of the sweep failed on **"Cape Cod
-  Cranberry Relish"** — `\bcod\b` inside a place name — so it reads ingredients,
-  never names. Names carry geography; the build carries the food.
-
-**Reported, not gated:** 15 authored-vegetarian recipes now carry a fish or
-shellfish flag (dashi, Worcestershire, fish sauce). The authored `vegetarian`
-flag is a documented human judgement the build trusts, so this surfaces rather
-than fails — but a Vegetarian badge over a dish containing dashi is a live
-product question, not a derivation bug.
-
-## The house record — the shared-login fix
-
-**The bug.** `menuDishes` and `dishCosts` were fields of SessionState, and
-`db.ts KEY()` namespaces every session to `session::<profileId>`. A venue buys
-ONE subscription for unlimited staff, so the manager typed the menu once and
-every other person who tapped their own name got an empty one: `/menu/quiz`
-never opened (it needs four dishes), `/menu/costing` was blank, and the whole
-Service tab was empty **for exactly the people the subscription was sold for**.
-
-**The line now drawn.** A menu, what is 86'd, and what a plate costs are facts
-about the VENUE. A cooked mark is a fact about a PERSON. The precedent was
-already shipped: `wt.timers.v1` carries no profile in its key, because a pot on
-the heat belongs to the room.
-
-- `persistence/house.ts` — the record and its reconciliation as **pure
-  functions**, for the reason `mergeSessions()` is pure: a runes module is
-  unreachable from a test. `stores/house.svelte.ts` is a thin wrapper.
-- Flat `house` key in the same IndexedDB store, never namespaced.
-- **Migration is incremental**, not a roster sweep: each person's own first load
-  absorbs whatever their session still holds. A sweep would need the profile
-  list at startup and still miss anyone created later.
-- `absorbed[]` is the guard that matters. Without it the stale copy left in the
-  session re-adds a dish on every load, and **a dish that will not stay deleted
-  is worse than one never absorbed**. Verified in the browser: seed a legacy
-  menu, delete a dish, reload with the stale session copy still present — it
-  stays deleted.
-- **The 86 board** rides on the same record, open to everyone, because the
-  person who finds the last portion gone is whoever finds it. Struck by rule AND
-  weight AND the word `86` — never colour alone.
-- **No publish gate**, deliberately. There is no auth on a shared tablet —
-  `isManagerDevice()` is a per-device toggle anyone can flip — so a gate would
-  be false authority, and a draft/published split shows a fresh device an empty
-  editor over a live menu. `lastEditedBy` is attribution, never permission.
-- `eightySix` is **never exported**. Importing yesterday's .wtjson must not take
-  a dish off tonight's menu that came back on this morning.
-- `SessionState.menuDishes` / `dishCosts` survive as the **transport only** —
-  the .wtjson format is unchanged so existing files still import. No UI reads
-  them; the field carries a deprecation note saying so.
-- 11 tests (`persistence/house.test.ts`).
-
-**Verified end to end in the browser:** with the session record *deleted
-outright* — which is exactly what a second profile has — the menu renders, the
-costing sheet sees the dish, and the allergen three-state line from the previous
-fix is intact.
-
-## Grading the mark, not the plate
-
-**The bug.** Every cook was recorded as one of three words, so a commis could
-pull the sear early for four months with every plate faithfully logged and
-nobody — including him — able to name the drift. And the one moment the app
-captured a real diagnosis, the palate fault picker, was component state
-(`CookMode.svelte:136`) that died with the dialog.
-
-- **355 marks now carry frozen ids**, minted by `tools/mint-mark-ids.mjs` and
-  written into the prose files as `{ id, text }`. The mint WRAPS each string
-  literal without re-emitting it, so the prose cannot change — and it was
-  verified against a snapshot: **355 unique ids, zero text drift**.
-- **IDS, NEVER INDICES.** An index silently repoints four months of "mark 2 was
-  off" to a different sentence the day someone inserts a mark above it, and no
-  gate can see that happen. `tools/derive/mark-ids.ledger.json` is committed and
-  the build appends to it; a **rename or a drop fails the build**, an ADD is
-  silent, and editing a mark's wording is free. Same rule the Codex holds for
-  question ids. Both failure modes were broken on purpose and the message read.
-- `CookEntry` gains `off?: string[]` and `fault?: string`, both optional, so
-  every entry written before this stays valid — a January `close` has no
-  annotation, which is true, rather than an empty one, which would read as
-  "nothing was off".
-- **The pass screen's marks are tappable** (44px rows, glyph + weight + colour,
-  never colour alone). No extra screen: the marks were already there being read.
-  The three grade buttons are **untouched** — deriving a grade from tap count
-  would rewire the one input `repertoire.ts` runs on across 970 recipes, and
-  "one mark off" means different things on a 3-mark and a 5-mark standard.
-- **`mergeSessions` was silently discarding the new fields.** The tiebreak was
-  `!seen.grade && e.grade`, so an imported entry carrying marks AND a fault lost
-  to a bare local grade on the same `slug|at`. Now it prefers the richer entry.
-  The test for it fails against the old line.
-- **The read side**: one line above the standard — *"Across 4 graded cooks of
-  this dish, you marked Skin unbroken and dry to the eye off 3 times."* Shown
-  from the second annotated cook, because one miss is an evening, not a habit.
-  `markDrift()` and `faultHistogram()` are pure and tested; a graded cook with no
-  annotation counts in the denominator and contributes to no mark.
-
-Deliberately NOT built: any per-person number a manager reads. This is the
-cook's own record, on their own device, and it stays that way.
-
-## The Pass tells the truth — course firing and a real hands count
-
-**All three lies fixed.**
-
-**Lie 1: everything landed at one instant.** `buildPass` set every dish's
-`startsAtMin` to its own `elapsedMin`, so the amuse and the dessert were both
-planned for 19:00:00 — the starter sat under a lamp for twenty minutes and went
-out as a comp.
-
-- `PassDishInput` gains `course`; `PassDish` gains `firesAtMin` (0 for the first
-  course, NEGATIVE for later ones, because the whole module counts down).
-- `DEFAULT_COURSE_FIRING` covers **all ten** courses — with the first plate, with
-  the main (+25), after it (+55). A dish with an unknown or absent course fires
-  with the first plate: under-claiming, which is the safe direction for a plan.
-- **These are ours and the guide states no stagger.** The offsets are printed on
-  screen so a kitchen that plates differently can see the number it disagrees
-  with, and `buildPass` takes the map as an argument.
-- The bell moved INLINE. A "Service" row pinned to the bottom of the list read
-  as the end of the plan while showing a time earlier than the rows above it.
-  It now sits where it happens and says **First plates away**.
-
-**A live bug this uncovered.** `/menu`'s `COURSE_ORDER` listed **8 of the 10**
-courses — Breakfast (59 recipes) and Sauce (22) were missing, and `courses`
-FILTERS on that list. So pinning The French Omelette put it in no group and it
-vanished from the course breakdown entirely: **81 recipes could be pinned and
-then not be seen.** Fixed, and the firing map is gated against the corpus rather
-than against that list, so the same omission cannot happen twice.
-
-**Lie 2: a four-cook brigade got a solo cook's warnings.** A chef warned about
-clashes that are not real learns to ignore the ones that are.
-
-- A new pure `handsSweep()` emits `{fromMin, toMin, demand, dishes}` over the
-  hands-on windows; `clashesOver(steps, hands)` raises only where demand exceeds
-  the crew. Demand counts DISHES, not steps — a dish wants one pair of hands and
-  its steps cannot overlap themselves.
-- **`findCollisions` is untouched** and still populates `Pass.collisions`. Its
-  merge unions dish names across a widened stretch, so its `dishes.length` is
-  "dishes touched in this busy period", not "hands wanted now" — dividing THAT
-  by a crew size would invent clashes on a two-cook night and hide them on a
-  four-cook one.
-- The hands control is component state, persisted **nowhere**. A saved "who was
-  on" is one field from a rota and two from a timesheet.
-- Verified live: 4 dishes, 1 cook → *"Chicken Congee and Onigiri want 2 pairs of
-  hands for 12 min, and there is one."* 2 cooks → silent.
-
-`firesAtMin` shipped **negative zero** for the first course on the first pass —
-it survives into stored state and breaks `Object.is` while printing as `0`.
-Caught by a test, fixed at source.
-
-**Lie 3: the clock could not say where the time went, and did not survive a
-walk to the walk-in.** `live` and `serviceTime` were component `$state`, and
-"behind" was one subtraction against total plan length.
-
-- `SessionState.planRun` holds the service being cooked: the menu hash it
-  belongs to, the service time, when the clock started, and a tick per row. It
-  carries a hash so a different menu cannot inherit it, and it **expires after 18
-  hours** so last night's service is never resumed into "40 minutes behind".
-- Ticks store a TIMESTAMP rather than a boolean. That costs nothing and buys
-  both remaining features.
-- **Behind now names the dish.** Verified live: nothing ticked, *"765 min behind,
-  and you are on Pizza Margherita — Mix dough, rest 20 min…"*; tick that row and
-  it becomes *"141 min behind, and you are on Pizza Margherita — Divide into 4
-  balls; proof 2 h…"*. With nothing ticked the number degrades to exactly the
-  whole-plan subtraction it replaced, so a cook who never ticks loses nothing.
-- **Observed durations, for free.** Each consecutive tick pair times the earlier
-  step. `observedElapsed()` is pure and refuses to speak below 3 observations,
-  discards anything past 4x the estimate (the cook who ticked, walked away and
-  ticked again after service), and answers with the MEDIAN. Only steps with no
-  unattended time are observed at all — verified in the browser that Pizza
-  Margherita's 10-hour ferment and 2.75-hour proof correctly record NOTHING.
-  The copy says **"usually N min elapsed here"** and never "hands-on", because a
-  tick cannot tell a wait from the cook answering the phone.
-- The actuals key is `slug#index#stepCount`. Constant for the 970 frozen guide
-  recipes; a family recipe re-authored to a different length mints a new key and
-  its old observations are never read again — the discard, without a special case.
-
-**Verified after a full page reload:** the clock is still running and the ticked
-rows are restored.
-
-## The house's own dishes are assessable
-
-**The bug.** A gastropub paying $49.99 a month could only assess its staff on
-somebody else's coq au vin. `authoring.ts` set `techniques: []` on every family
-recipe, so a house dish never resolved `judgedBy`; `/family/[slug]` passed no
-`judged` prop, so cook mode skipped grading entirely and the ladder in
-`repertoire.ts` climbed on **pure attendance** for every dish a venue actually
-cooks.
-
-- `FamilyDraft` gains `techniques: string[]` and the form gains a picker over
-  **only the 26 techniques that have a standard written**. Bounding it to those
-  keeps the list readable AND guarantees a tick means something: a tick
-  resolving to no standard leaves the dish exactly where it started.
-- `resolveJudgedBy()` applies the same rule `build-data.mjs` runs over the 970 —
-  keep the ticks that name a standard, order **rarest first**, cap at two. The
-  cap is asserted equal to the build's `JUDGED_BY_MAX`, so the two cannot drift.
-- An author may tick four; the app shows two. The gap is deliberate: the cook
-  describes the dish, the app decides which two say most about it.
-- `/family/[slug]/+page.ts` resolves `judged` exactly as `/recipe/[slug]` does,
-  and the page passes it through to the view that already knew what to do with it.
-
-**Verified end to end in the browser.** A house dish ticked *Braising* and
-*Searing* saved `judgedBy: ["braising", "searing-the-hard-crust"]` — 27 recipes
-before 100, rarest first. Its page renders "How to tell it is going right" with
-both standards and 10 marks, and cook mode reaches *"HOUSE LAMB RUMP · THE PASS
-— How was the technique? Braising · this dish has no standard of its own yet"*
-with the tappable marks from the annotation work.
-
-### The safety property, and why it is structural
-
-These ticks are SELF-DECLARED, and on a shared tablet the author of a recipe and
-its cook are the same person — so a ticked box would BE self-credited station
-coverage if `/coverage` read it. **It cannot.** The board builds
-`recipesByTechnique` from `techniques.json`, the audited both-directions-gated
-table, and `techniquesTouched` looks cooks up by slug WITHIN those lists.
-`familySlug()` refuses to mint a slug the guide already holds, so a house dish
-can never appear in one.
-
-Both links are asserted. The first draft of that test looked for slugs starting
-`fam-` and would have passed against any codebase at all — family recipes are
-identified by `source === 'family'`, not a prefix.
-
-### The pointer, and the card a guest is actually handed
-
-`MenuDish.recipeSlug` — a POINTER, not a method. "A menu item is not a Recipe"
-still holds: the dish carries no steps, no quantities and no technique tags of
-its own. But one slug lets the lamb rump that goes out sixty times a week reach
-cook mode, the standard it is judged against, and the Repertoire. The form
-matches by NAME through a datalist, because a chef knows what the dish is called
-and not what its slug is; the worksheet row then offers "Cook Coq au Vin ▸".
-
-`/menu/guest` printed PINNED GUIDE RECIPES, so a venue that had entered, priced
-and allergen-marked its whole menu tapped Print and handed a guest a card
-listing Pizza Margherita — while the page's own empty state said it "sets itself
-from the dishes on your worksheet".
-
-- Two labelled tabs, the kitchen's menu default when it has dishes. Silently
-  repointing would have broken the dinner-party use it was built for.
-- Grouped by the sections the kitchen typed, with prices.
-- **An 86'd dish does not print.** Off tonight is not on tonight's card.
-- **The card carries NO allergen marks, by design.** Those marks are a kitchen
-  record; printed, they read to a guest as a guarantee the derivation cannot
-  make. A fixed, non-removable line invites the conversation instead: *"Before
-  you order, please tell us about any allergy or intolerance."*
-- The guest page carried the SAME 8-of-10 `COURSE_ORDER` bug as /menu, so a
-  pinned omelette was absent from the card too. Fixed.
-
-## The shared contrast defect — cleared
-
-It was three defects wearing one test failure, and only the first was the one
-described.
-
-**1. Opacity stacked on an already-muted colour.** Six rules in
-`shared/oot-home.css` set `opacity: .55–.68` on text that had just been given
-`color: var(--oot-dim)`. `--oot-dim` was chosen to MEET AA — it measures 4.55:1
-on day paper and 5.70:1 at night — and the very next line undid it, landing at
-2.33:1 and 2.97:1. The opacity is gone; the colour does the work it was picked
-for. **Do not put opacity back on text: if something must recede, give it a
-colour that recedes.** The done-path row now recedes to `--oot-dim` rather than
-to 55% of the ink, and the tick in `.oot-path-mark` is what actually says "done".
-
-That took the violation from 14 nodes to 6, and the rest was not opacity at all.
-
-**2. The accent was too light to be text.** `.oot-sec-head h3` is 12.5px
-uppercase at weight 600 — normal text to WCAG, which wants 4.5:1 (large needs
-18.66px AND bold). The Table's `--turmeric` measures **3.53:1** on its paper.
-Its `--turmeric-deep` measures **5.90:1**, and the Table already reserves it for
-exactly this kind of small label. The shared layer gained
-`--oot-accent-deep`, falling back to `--oot-accent` so a wing that omits it gets
-what it had before; `tokens.css` maps it to `--turmeric-deep`.
-
-**3. The entrance animation faded text through every failing ratio on the way
-in.** `@keyframes ootSecIn` animated `opacity: 0 → 1` on whole sections, so axe
-sampled the dashboard's muted text at 4.18–4.46:1 against colours that measure
-4.55–5.70 at rest. Those were real readings of a real frame — a reader on a slow
-device sees them too. The keyframe animates **transform only** now. The rise was
-the whole effect; the fade only ever cost legibility.
-
-### Re-vendoring, and a correction to the ritual
-
-`HANDOFF.md` says a shared edit means bumping **all four** vanilla wing SW cache
-names. For a CSS-only change that is wrong, and shipping it that way would have
-been four unnecessary cache invalidations:
-
-- `codex` and `ledger` precache `../shared/oot-home.css` (sw.js line 10) and
-  match with `ignoreSearch: true`, so the `?v=` is DISCARDED — `codex/sw.js:123`
-  says so itself. Both cache names bumped: **codex-v67**, **ledger-v39**.
-- `pass` references the CSS but has no service worker, so its `?v=` bump is enough.
-- **`light` and `almanac` do not reference this file at all.** They precache the
-  shared JS only. Left untouched at firstlight-v45 / cfl-v84.
-- The Table references it unversioned across 1,179 prerendered files and
-  runtime-caches `/shared/`, so it ships with the next build.
-
-The CSS `?v=` went 17 → **18**, which happens to align it with `SHARED_V`; they
-are separate tracks and were one apart.
-
-## Preps — the cost object
-
-**The bug.** A braise's sheet carried "Demi-glace, 6.00/L, 0.15 L, 100% yield".
-Nobody had ever costed the demi, and the same guess was retyped into every other
-dish that used it. On the seeded example — veal bones at a 25% yield, mirepoix,
-wine, over 10 portions — the real number is **9.30 a portion against a 6.00
-guess**. Every sauced dish was understated in the direction that flatters, which
-is exactly the error `plateCost`'s own `complete` flag exists to refuse.
-
-**Where it lives.** `Prep[]` on the **house record**, not in SessionState. The
-panel proposed it as a sibling of `menuDishes` — but that moved to the house
-record earlier in this session, and a prep is a venue fact for the same reason:
-what the demi costs belongs to the room, not to whoever holds the tablet.
-
-- Times are **SECONDS**. `PassStepInput` is `handsOnSec` and `handsOf()` divides
-  by 60, so a prep kept in minutes back-times to sixty times its length — a
-  two-hour stock claiming five days. The form types minutes and stores seconds.
-- `CostLine.prepId?` is the join. `resolveLines()` flattens prep-backed lines to
-  plain ones **at the call site**, so `costing.ts`'s primitives and their 38
-  tests keep seeing only arithmetic they already know.
-- **yieldPct is LOCKED to 100 on a resolved line, and that is a guard, not a
-  default.** The trim, the bones and the nine hours already happened inside the
-  prep and are already in its per-portion cost; a dish applying its own yield on
-  top would divide by the loss twice and overstate the plate.
-- **Depth is capped at one.** A prep referencing a prep is a graph and a graph
-  needs a cycle detector nobody will maintain, so a nested line makes the prep
-  incomplete rather than being resolved quietly.
-- **Deleting a prep leaves its dishes incomplete, never cheaper.** The remove
-  confirm names them.
-- `preps` is named explicitly in the import merge, not left to a spread —
-  `cookedLog` and `shoppingChecks` once fell through one and erased a Path of
-  Study.
-
-### Two bugs of my own, both about a number that looked right
-
-**Incompleteness was not propagating structurally.** `resolveLines` returned
-`complete: false` while still emitting a *costable* line, so `plateCost` on its
-own reported a confident total over a sauce nobody had finished costing — the
-propagation depended on every caller reading my flag. An unfinished prep now
-makes the LINE uncostable, which is the same refusal `plateCost` already applies
-to anything else it cannot price. Caught by a test.
-
-**The line table costed the raw line.** A prep-backed line stores `unitCost: 0`
-because its price comes from the prep, so the table printed **0.00** next to a
-total that was right. Money is read from the resolved line now, and the field is
-read-only on a prep row — typing over it there would be the retyped guess this
-whole object exists to end.
-
-## The prep board — back-timing the day
-
-The Pass back-times a service; nothing back-timed the morning that has to happen
-before it. On the floor that shows up at 8:20pm on a Saturday: the commis made
-"some" stock, because the prep list said "veal stock" with no number.
-
-**It is the same `buildPass`.** Back-timing is back-timing and a prep deadline is
-just a different anchor, so #4's scheduler pays off twice — including the hands
-sweep, which now answers "how many cooks are on PREP" as readily as it answered
-it for service. The times are the chef's own from the prep record, not the
-guide's 86%-estimated step durations.
-
-- `prepCounts` on the house record: `{ onHand, countedOn }` as a LOCAL
-  `YYYY-MM-DD`. A count is true for the day it was made and no longer — "12
-  portions of demi" from Tuesday tells you nothing on Thursday, so the board says
-  "counted 2026-01-05" rather than quietly believing it. Local and not
-  `toISOString`, or a count made at 22:00 in UTC+2 files under tomorrow.
-- `batchesNeeded()` = ceil((par − onHand) / portions). Two thirds of a batch of
-  stock is a batch of stock.
-- **An uncounted prep reads as none on hand**, which over-orders rather than
-  sending a section out short. The board says so in as many words rather than
-  letting the zero look like a measurement.
-- **Time is NOT multiplied by the batch count**, and that is a decision: two
-  batches of stock is usually one bigger pot, not two sittings. The batch count
-  sits beside the row so a kitchen that really does run it twice can see what it
-  is being told.
-
-**Verified in the browser.** Three preps, nothing counted: *"3 of 3 not counted
-today"*, demi at par 20 over 10 portions asks for **2 batches**, and the day
-back-times to *"3 preps · 95 min of hands · start at 06:00 to be ready by
-16:00"* — the demi's 10 hours starting first, the 25-minute crumb at 15:35.
-Count the demi at par and it drops off the plan, which collapses to *"1 prep ·
-20 min of hands · start at 15:40"*.
-
-**Still not built:** the waste log — valued from `plateCost`, five reason codes,
-rolled up venue-wide and **never per person**. That last part is not a detail:
-a per-cook waste number is a disciplinary instrument, and the data goes
-dishonest inside a fortnight.
-
-## The house record could be wiped by a rollback — fixed
-
-**Found while planning the costing week, and it was mine.** An adversarial pass
-over the migration plan turned up a live data-loss bug in the house record
-introduced earlier in this same session.
-
-`hydrate()` read the record behind `if (schemaVersion <= HOUSE_VERSION)` **and
-had no else.** A record written by a NEWER build failed that test, `#r` stayed
-`EMPTY_HOUSE`, and then the next write — `absorbSession`'s persist, or the first
-tap on the 86 board, which is the most-tapped write in the app — put that empty
-record straight over the top of it.
-
-**Menu, preps, costings, prep counts and the 86 board, gone.** On nothing worse
-than a rollback or a stale service worker — and `vite.config.ts:65` ships
-`registerType: 'prompt'` with `skipWaiting: false` ("never reload the page out
-from under a cook"), so a device serving an older bundle is the SHIPPED DESIGN,
-not an edge case.
-
-**Reproduced and fixed, both in the browser.** A record stamped
-`schemaVersion: 99` with a dish, a prep and an unknown `futureField`:
-
-- before the fix, two taps left `schemaVersion: 1`, `dishes: []`, `preps: []`
-- after it, everything survives untouched, `futureField` included
-
-`readHouse()` is the pure decision and it is tested: a newer record is
-**blocked** — not read, and never written over. Every mutator is a no-op while
-blocked, because the guard sits in `#persist()` rather than in each caller. An
-unreadable record blocks too: writing over what you cannot read is exactly how
-this was lost.
-
-`db.ts` had the right instinct all along and this had not followed it —
-`migrate()` throws on a newer version and `loadSession` snapshots before
-resetting, *"never destroy data silently"*. For a newer record the stronger
-answer is to write nothing at all, so downgrading and upgrading again is
-lossless, which is what `migrate()`'s own comment already promised.
-
-A chef on a blocked device sees a banner saying the tablet is behind and nothing
-has been lost — rather than an empty menu and no explanation.
-
-## Covers by week — and the migration that was not written
-
-`DishCosting.sold` was one integer with no date, and `setSold` wrote the whole
-record: **typing this week's covers destroyed last week's.** The guide's own
-stated cadence — *"calculate it WEEKLY… weekly prime cost turns a bleeding month
-into a bleeding week, caught while schedules and orders can still change"* — was
-impossible on the shape. Live data loss on a paid surface.
-
-**The obvious fix was the dangerous one, and an adversarial pass caught it.**
-Bumping `CURRENT_VERSION` 1 → 2 and folding `sold` into a week is what the plan
-called for; three things were wrong with it:
-
-1. **It targets the wrong record.** `migrate()` is called only from `db.ts:67`
-   and `:133`, both SessionState. Every costing surface reads the HOUSE record,
-   and `session.costingFor/setCosting` have **zero callers** in `src/routes`.
-2. **The bump is the hazard, not the safety.** v1 is the only version any build
-   has written, so `migrate()` has never thrown; the bump arms `db.ts`'s
-   corrupt-and-reset path for the first time.
-3. **`ts` is a WRITE stamp, not a count stamp.** `setCosting` restamps it on
-   every ingredient edit, so a venue that corrected a price this morning would
-   get March's covers filed into the current week.
-
-**So: no version bump, and no fold.** `sales: SalesWeek[]` is added alongside
-`sold`, `sold` is kept forever as the legacy figure and a forward-written mirror
-of the newest week, and everything normalises **on shape, not on version** at
-every boundary a costing enters. Pure and idempotent, so it never writes on load.
-
-**Verified in the browser.** A legacy venue's record — `{lines, sold: 120, ts}` —
-is **byte-identical on disk** after the update, no `sales` array written, and the
-menu-engineering board still ranks the dish off the mirrored 120. Then four weeks
-seeded, this week's covers retyped: the three prior weeks are untouched. Under
-the old code that one keystroke destroyed them.
-
-### The details that are load-bearing
-
-- **`weekStart` is a local `YYYY-MM-DD` string, not epoch ms.** Epoch-ms-of-local
-  -midnight is a function of the writing device's zone and shifts an hour across
-  DST, so one trading week acquires two keys and a union merge faithfully keeps
-  both — double-counting on the board. Same convention as `prepCounts.countedOn`.
-- **The Monday is anchored at NOON.** `setHours(0,0,0,0)` lands on a local
-  midnight that does not exist on transition days in Havana, Santiago, Asunción
-  and Cairo; it normalises forward to 01:00 and `setDate` carries that hour, so
-  one device mints two keys for one week. No DST shift is twelve hours.
-- **Previous weeks are walked by calendar days**, never by subtracting
-  `7 * 86_400_000`, which misses a stored key by an hour across a transition —
-  the week renders blank, the chef retypes it, and the record holds two entries.
-- **The current week is never captured** — not a module const, not a `$state`
-  seeded at init. `registerType: 'prompt'` with `skipWaiting: false` means a pass
-  tablet is open for days by design.
-- **`sales` unions by weekStart.** That single property is what makes it safe: an
-  import can only ADD. Same count on both sides keeps the OLDER stamp, so
-  re-importing your own export is a no-op. Different counts let the newer `at`
-  win and record the loser as `prev`, shown as a `*` beside the number.
-- **A stamp more than 24h ahead is treated as the oldest.** One tablet with a
-  dead RTC would otherwise own every week on every dish after one import.
-- **ONE merge implementation** (`mergeCostings`), called from both `adoptImport`
-  and `mergeSessions` — they had already drifted once.
-- **`FORMAT_VERSION` 2 → 3.** It is the only gate `parseImport` checks; left at
-  2, an old cached build accepts a sales file and its whole-record write drops
-  the history with a fresh newest ts that then wins on the way back.
-- The week functions live in `state.ts`, the **leaf module** — `mergeSessions`
-  needs them, and that file's own header explains why it must not import back.
-
-### Two tests that asserted the bug
-
-`migrations.test.ts` pinned `out.dishCosts['d-1'].sold === 99` — "the newer
-costing replaces the older WHOLE", on the exact field being reshaped. It would
-have kept passing against an implementation that still replaced whole. And
-"ignores a costing with no lines array" now describes discarding a covers-only
-record. Both rewritten, not deleted.
-
-`house.test.ts` passed `{}` for costs in **all five** `adoptImport` cases, so the
-loop that loses data on the live path had never been asserted on at all.
-
-**Accepted, named:** the undated legacy `sold` is superseded once a real week
-exists — an undated figure has no week to belong to, and keeping it would
-double-count. And `engineerMenu` is untouched: its conflation of a real 0 with
-"nobody counted" is a genuine pre-existing limit, and changing the ranking engine
-is a separate job with its own tests.
-
-## Three money bugs
-
-Two of them failed in the direction that makes a venue look profitable, which is
-the direction nobody questions. That is precisely why `plateCost.complete`
-refuses to report a total it could not finish; neither of these had a refusal.
-
-**(a) Every dish was costed against a price the venue never receives.**
-`dishEconomics` divides the plate cost by the price as typed. In a tax-inclusive
-market — most of the world — that price includes the tax. Verified live on an
-18.00 dish costing 5.00:
-
-| | Menu price | Food cost | Contribution |
-|---|---|---|---|
-| before | 18.00 | 27.8% | 13.00 |
-| after | **15.00 net** | **33.3%** | **10.00** |
-
-Contribution overstated by 3.00 and food cost understated by 5.5 points, on every
-dish at once.
-
-- One setting, **default off, and the rate is never inferred** from locale or
-  currency symbol: an inferred rate produces a completely plausible figure wrong
-  by exactly the tax rate, which is worse than the honest error it replaces.
-- **It lives on the HOUSE record, not the session** — an improvement on the
-  chef panel's plan, which put it per-profile and then had to warn that two staff
-  would see two food cost percentages for one dish. A tax regime is a fact about
-  the venue, so on the house record that problem does not exist.
-- The sheet **states what it is doing** either way, with the venue's own first
-  priced dish as the worked example.
-- The row label follows the number: with tax on it reads **Net revenue**, not
-  "Menu price". Calling net revenue the menu price is the same quiet wrongness
-  the setting exists to fix.
-
-**(b) The import banner never mentioned costings.** It counted pins, notes,
-pantry, family recipes and dishes and stopped — `dishCosts` appeared **zero**
-times in `portable.ts` — so a file whose dishes were byte-identical and whose
-covers differed printed *"nothing new — this file matches what you already have"*
-immediately before rewriting them. The same blind banner that once erased a Path
-of Study. It now counts, per week, what the merge will ADD and what it will
-REPLACE, and deliberately does not threaten a replacement the union will refuse.
-
-**(c) The costing sheet could not leave the office.** `data-print` appeared zero
-times on it and its table carries `min-width: 640px` inside an overflow scroller,
-so costing done at 11am could not go to the walk-in on a clipboard. Print rules
-drop the minimum, flatten the inputs to text and hide the controls.
-
-And the chef role button promises *"the pass, the costs, what has gone cold"*
-while routing only to two of the three: the costing sheet had **one** inbound
-link in the whole app, buried mid-page on /menu. The chef band now resolves its
-own promise.
-
-**Not built from this item:** the CSV export and the target-price strip. The CSV
-is worth stating as a rule rather than a task — **one-way door, no importer,
-ever**: the .wtjson is the single portability contract with tested merge
-semantics, and a second import path forks them with nothing behind it.
-
-## The coverage board — finished, and a gate that was only copy
-
-**The gate was a warning, not a gate.** `people` was built unconditionally from
-`profiles.list()` and `loadAllSessions()` over the WHOLE roster, and
-`manager = isManagerDevice()` only decided whether a paragraph rendered — a
-paragraph telling a commis on the pass tablet they were *"seeing only your own
-coverage"* while the page showed them everybody's. It did not merely fail to
-gate; it said the opposite of what it was doing.
-
-The roster is now narrowed **before any session is read**, so a non-manager
-device never loads anybody else's record at all. Reading less is a gate; not
-rendering what you already read is a curtain. The warning's copy is now true.
-
-**The board held three answers it never gave.** All three were already computable
-from data on the device:
-
-- **The worklist.** `gaps` has been computed at `stations.ts:145` since the board
-  shipped and rendered nowhere, so a chef learned Priya was at "some of it" and
-  not which two things to put her on next. Now: *"next: The bare simmer, Straining
-  & passing through a sieve"* — ordered by how many corpus recipes drill each, so
-  the top suggestion is the easiest to arrange on a Tuesday.
-- **Recency.** A technique cooked once three years ago read identically to one
-  cooked last night, which is exactly what a chef means by "can they still do
-  it". `coldTechniques()` reuses `repertoire()`'s own `dueAt` — same decay model,
-  no second clock. A technique is cold when EVERY dish the person cooked that
-  drills it is past its re-cook; one dish still in date keeps it warm, which is
-  how a cook actually holds a skill. Verified: a 900-day-old sear reads
-  **"2 gone cold"** beside a braise cooked this week.
-- **Thin cover.** *"Saucier and Rôtisseur have one person each"* — the risk a head
-  chef carries in their head and loses on precisely the morning it matters. A
-  count of NAMES, never a score. Suppressed entirely when nothing is covered,
-  because on a fresh device every station is uncovered and the line is noise.
-
-**No count of what is left, ever.** "2 of 10 remaining" is `bandFor`'s percentage
-with the division done in the reader's head, and it walks straight into the
-threshold this board exists to refuse.
-
-Also fixed: the limits block still claimed *"only 45 of the guide's 970 dishes
-state a standard"* — stale since the technique standards landed earlier in this
-session. It now reads 683, split 45 own / 638 by technique. And `/coverage`
-folded into `OWNS` under Service, so the tab lights at four o'clock — kept in the
-separate const, or `verify-build.mjs`'s MODES scanner resolves it to page files
-that cannot exist.
-
-## A timer that is not attached to a recipe
-
-`timers.start` had exactly **one call site in the whole app** — cook mode's. So
-the rice, the refire on table 12, the Barolo in the decanter and "check the fryer
-at twenty past" all went on a cook's phone, which is the thing this app was meant
-to replace, and the bar honestly showed two of the five pots actually running.
-
-- A `+` on the bar: free-text label capped at 24 characters, duration tapped from
-  3/5/10/20/40 or typed. **No store change needed** — `start()` already took
-  `{ label, seconds }` with `recipeSlug` and `stepIndex` optional.
-- **The affordance had to exist when nothing is running**, which the plan did not
-  account for: the bar rendered nothing at all when the list was empty, so a `+`
-  on it would have been invisible exactly when a cook needs it. It now renders a
-  small `+ Timer` chip always, and the full bar when timers exist.
-- **Rename**, the one store change. Labels were auto-generated `{dish} · step N`
-  and could not be changed, so three clocks on the bar were unreadable from two
-  metres in steam.
-- Timers are told apart by **when they go off**, not by renaming them for the
-  cook. Two pots called "T12" is a real situation, and the deadline both
-  disambiguates them and says which fires first.
-- **COUNTDOWN ONLY, and that is not a simplification.** `get active()` filters on
-  `endsAt != null || rang`, so a count-up timer would never appear in the bar at
-  all, and `#tick` stops the ticker when nothing carries an `endsAt`, so a lone
-  one would freeze on its first tick.
-
-**It says on its own face what it cannot do.** `ring()` is Web Audio with a
-documented *"audio is a courtesy, never a dependency"* catch, there is no OS
-notification, and there is no wake lock outside cook mode — so a long clock on a
-tablet locked at 9pm will not alert anybody and would still be believed. The
-form reads *"Rings only while the app is open on this device."*
-
-**Not built:** the cooling preset. It is only worth having if labelled with the
-guide's law, and doing that honestly means a NAMED gated field in
-`sanitation.mjs` — indexing `sanitation.json`'s numbers array would let a
-reworded guide sentence silently change the chips while every existing gate
-stayed green. A marginal feature is not worth a fragile gate.
-
-Four e2e tests rather than unit ones: the store is a runes module a vitest test
-cannot reach, the same reason `mergeSessions` and `repertoire.ts` are pure
-functions living outside their stores.
-
-## A sheet that adds up
-
-The sheet ranked dishes and never summed them. So when a chef says "our food
-cost is 31%", that is the arithmetic MEAN of the dish percentages — and the mean
-is not the number the venue runs at.
-
-Verified on the panel's own case: a plowhorse at 42% taking 100 covers beside a
-puzzle at 22% selling four. The mean is **32%**. The weighted figure — what left
-the walk-in over what came through the till — is **41.2%**. The mean flattered by
-nine points, and it flatters whenever the expensive dish is the popular one.
-
--  is pure and tested: weighted food cost, total contribution,
-  covers, menu mix per dish, and one Pareto line reporting the REAL count at the
-  REAL share rather than asserting 80/20.
-- A dish that sold none is **excluded, not counted as a zero** — it is no
-  evidence of a food cost and would drag a figure it had no part in.
-- The qualification is the point, and it is printed: *"computed over the 2 of 2
-  dishes carrying both a price and a covers count, for the week of 24–30 Aug"*.
-  An undated, unqualified weighted food cost is the most quotable wrong number
-  this app could produce.
-- Menu mix now sits on each quadrant row, so a dish's share of covers is beside
-  its quadrant rather than inferred.
-
-**Still outstanding on this item: the item book.** `unitCost` is stored per line
-per dish and `editLine` patches it in place, so the previous number does not
-exist anywhere — which makes the sheet's own advice, and the guide's own
-(*"reprice quarterly against invoice creep; menus that sleep bleed"*),
-structurally impossible to follow. Butter is free text on fourteen lines in
-fourteen dishes; change it on four and the sheet holds two prices for one
-ingredient with nothing to say which dishes are stale.
-
-The design is in the chef review: `items` keyed by slug carrying a capped price
-history, `CostLine.itemSlug?`, a datalist that populates itself from what has
-already been typed so there is no master-data chore, resolution to plain
-CostLines before `plateCost` exactly as preps do, and — the part that matters —
-history merged by **union on the timestamp**, because newer-wins-whole would
-discard every price change the losing device recorded, which is the one thing
-the feature exists to keep. NEVER mandatory: a one-off truffle stays free text,
-or a ten-minute costing becomes an afternoon of master data and the sheet stops
-being opened at all.
-
-The sentence that IS the feature, once it lands: *"Butter is used in 14 dishes.
-3 have moved out of the 25–35% band."*
-
-## The calibration bench
-
-Every cook-side measure in this product was the cook grading themselves. Servers
-had a scored, scheduled drill over 186 cards; cooks had nothing scored at all.
-
-Two cooks season the same dish differently, so the dish is a different dish
-depending on who is on, and the guest notices before the chef does. "This is
-under-seasoned", said for six months to somebody who genuinely cannot taste the
-difference at that concentration, is a **discrimination threshold and not an
-attitude problem** — no amount of telling fixes it, and nothing here could tell
-the two apart.
-
-**The instrument is a triangle test**: three cups, two the same, and the app
-holds the answer — the one thing a cook standing alone cannot do for themselves,
-and the only reason this is a feature rather than advice. The guide's own
-protocol entry asks for exactly this: taste comparatively, and taste single
-ingredients at their extremes, *"to calibrate the instruments"*.
-
-- **Six ladders** — salt, sweet, acid, bitter, umami, and flat-against-seasoned
-  drawn from the repair table — five levels each, narrowing.
-- **A run is six trials, never one.** A triangle test is a 1-in-3 guess, so a
-  single trial logged as "met" would be worth nothing — exactly the failure
-  `drill.ts`'s never-shorten-the-round rule exists to prevent. Five of six to
-  clear; a clean sweep by luck is 1 in 729.
-- The run is **laid out up front**, so the sequence cannot react to how the cook
-  is doing. An instrument that adapts mid-run is a staircase procedure and needs
-  its own estimator; the ladder narrows, the run does not.
-- **One log entry per RUN**, on `calibrationLog` — a THIRD sibling beside
-  `drillLog`, for its documented reason: the mode bar's amber count reads
-  `cookedLog`, and folding these in would report "dishes past their re-cook" in
-  the chrome of every page while counting salt. One slug per level
-  (`cal-salt-3`), so `TERM_LADDER_DAYS` reschedules each concentration with no
-  adapter, and the level reached is READ OFF the slugs cleared rather than stored
-  as a counter that can disagree with its own log.
-- **No number attached to a person.** The verdict is words; the level is a rung.
-- Kept off `/coverage`: calibration is knowledge of your own palate, not work
-  done on a station — the same line `stations.ts` already draws for drill answers.
-
-**The numbers are apparatus and the page says so**, in the disclosure style
-`sanitation.mjs` uses for its 4–60°C conflict. The guide states 5–8% for a wet
-brine and 2–3% for lacto-fermentation and **nothing at all about seasoning**, so
-these are ours: two cups chosen to be discriminable, not a statement of correct
-seasoning and never a house spec. The honest limit is stated too — it measures a
-palate only if the cups are built truthfully.
-
-### A gate that could not fail, again
-
-The first version of the shape gate sat beside the emit, **above**
-`const problems = []`. Every `problems.push` was therefore a ReferenceError —
-which only threw when a problem was actually FOUND. With none, the array was
-never touched and the build passed, green. It was found by breaking it, which is
-the only way it could have been found, and it is now below the declaration with
-that written above it.
-
-Both gates then fired properly: a level made easier than the one before it
-(*"salt level 4 is no harder than the one before it (gap 4 vs 1)"*) and a weight
-no scale reads (*"asks for 5.83"*). A third was added after the build sheet
-rendered "Jug one 3 of fine salt" — a quantity with no unit is not a build sheet,
-and the unit had been missed on one ladder of six.
-
-## What's left, ranked
-
-1. **More technique standards — and the threshold IS the worklist.** 26 are
-   written. To get the rest: lower `TECHNIQUE_GATE_MIN_RECIPES` in
-   `tools/derive/technique-standards.mjs`, run `npm run build:data`, and the
-   reverse gate names exactly which techniques it now wants. **20** asks for 13
-   more and reaches 745 of the 824 technique-tagged recipes; **15** asks for 20
-   more and reaches 782.
-
-   Correction to the previous ranking, which said 103 standards would cover 824:
-   **only 69 of the 103 techniques add any coverage at all.** The other 34 are
-   fully redundant — every recipe they touch is already covered by another
-   technique — so the job is bounded well below 103, and 23 of the 103 are
-   singletons where a technique standard would just be a dish standard.
-
-   Still outstanding: letting the coverage board say "to a standard" as a
-   measure rather than a floor. The standards now exist to support it; the board
-   has not been changed to use them.
-2. **The allergen vocabulary.** **101 of 970 recipes have no allergen flag at
-   all** — hummus among them, over a line reading "150g good tahini". The
-   display now says what it did NOT screen, so absence no longer reads as
-   clearance, but closing the vocabulary to all 14 is a `diet.mjs` project.
-   `allergens.test.ts` asserts `NOT_SCREENED` stays non-empty, so the day it
-   lands the copy is forced to change.
-3. ~~**The shared CSS contrast defect**~~ — **DONE.** Three defects, not one; see
-   the section above. The suite is green.
-4. **The prep list.** The Pass back-times *service*; nothing back-times the
-   *day*. The hard part (hands-on vs unattended per step) is already built.
-5. **Yield tests.** Zero content, and the costing sheet depends on the number.
-6. **Sensory calibration.** Salt at three concentrations. Cheapest high-value
-   item on the list.
-7. **Repetition under load.** The Pass already computes collisions; that is a
-   drill waiting to happen.
-
-**Do not build:** video, leaderboards, certification, more recipes.
-
-## Open question for the owner
-
-`oot-pass.js` already renders per-person **Name / Last studied / Streak /
-Answered / Owed / accuracy %** for two other wings. So "coverage, never scores"
-in the World Table is inconsistent with what the monorepo already ships to the
-same customers. Either the Table matches the pass, or the pass is overreaching.
-Product call, not a technical one.
-
-## A note on how this went
-
-The most valuable thing done repeatedly was **measuring before building** and
-**breaking every gate to prove it fires**. That caught, among others: a drill
-prompt that gave away its own answer via a near-spelling (`muenster` beside
-Munster — 25 of 186 cards); two techniques that would have credited a cook with
-work they never did (`The soufflé`'s only recipe mentions it as a *negative
-simile*); a nav gate that could never fail; and a prefs guard that passed
-against a file that demonstrably contained the word it was banning.
-
-Assume the same is true of anything in this document you have not re-run.
+Versions: shared scripts **v18**, `oot-home.css?v=18`; `codex-v67`,
+`ledger-v39`, `firstlight-v45`, `cfl-v84`.
+
+## A note on method
+
+The valuable habits, repeatedly: **measure before building**, **break every gate
+to prove it fires**, and **verify in the browser** — several defects this session
+were invisible to a green test suite and obvious on screen. When a mutation does
+not fire a gate, check whether the mutation or the gate is at fault; twice it was
+the mutation. And two tests were found asserting the bug they were meant to
+catch.
+
+Assume anything in this document you have not re-run is stale.
