@@ -102,6 +102,44 @@ describe('a technique standard is a checklist, not a method', () => {
 	 * dish names are the cheap provable case — distinctive enough that a hit is
 	 * a real hit rather than a common word collision.
 	 */
+	/**
+	 * The same constraint, one level tighter, and the half the module header
+	 * states without anything enforcing it: *"a mark that mentions the protein,
+	 * the fat, or the pan material has smuggled a dish into a technique and is
+	 * wrong for most of them"*.
+	 *
+	 * The dish-name check above only catches the 45 Path of Study titles. This
+	 * catches the far likelier slip — writing `searing` against a steak, or
+	 * `sweating` against onions — where no dish is named and the mark is still
+	 * false for the ninety-nine other recipes carrying the tag.
+	 *
+	 * A word is allowed when the TECHNIQUE ITSELF names it: sugar-stages may say
+	 * sugar, rubbing-fat-into-flour may say flour, whipping-a-meringue may talk
+	 * about whites. Anything else is a dish that got in.
+	 */
+	it('never names an ingredient or a vessel its own technique does not', () => {
+		const VOCAB = [
+			'beef', 'pork', 'chicken', 'duck', 'lamb', 'veal', 'bacon', 'steak',
+			'salmon', 'prawn', 'prawns', 'shrimp', 'tuna', 'cod',
+			'onion', 'onions', 'garlic', 'tomato', 'tomatoes', 'potato', 'potatoes',
+			'mushroom', 'mushrooms', 'carrot', 'carrots', 'aubergine', 'eggplant',
+			'rice', 'pasta', 'noodle', 'noodles',
+			'butter', 'cream', 'cheese', 'wine', 'stock', 'milk', 'honey',
+			'wok', 'skillet', 'saucepan', 'griddle', 'plancha'
+		];
+		const offenders: string[] = [];
+		for (const st of authored) {
+			const owned = st.slug.replace(/-/g, ' ');
+			const text = [...st.marks.map((m) => m.text), st.fault].join(' ').toLowerCase();
+			for (const w of VOCAB) {
+				if (new RegExp(`\\b${w}\\b`).test(text) && !owned.includes(w)) {
+					offenders.push(`${st.slug}: "${w}"`);
+				}
+			}
+		}
+		expect(offenders).toEqual([]);
+	});
+
 	it('never names a specific dish', () => {
 		const dishNames = detail
 			.filter((r) => r.standard)
@@ -174,25 +212,33 @@ describe('the judgedBy join', () => {
 });
 
 describe('what this bought, measured against the shipped data', () => {
-	it('takes the assessable corpus from 45 to 683 of 970', () => {
+	it('takes the assessable corpus from 45 to 789 of 970', () => {
 		const dish = detail.filter((r) => r.standard).length;
 		const byTechnique = detail.filter((r) => r.judgedBy).length;
 		expect(dish).toBe(45);
-		expect(byTechnique).toBe(638);
-		expect(dish + byTechnique).toBe(683);
+		expect(byTechnique).toBe(744);
+		expect(dish + byTechnique).toBe(789);
 		expect(detail.length).toBe(970);
 	});
 
-	it('does it with 26 pieces of writing', () => {
-		expect(shipped.length).toBe(26);
+	it('does it with 46 pieces of writing', () => {
+		expect(shipped.length).toBe(46);
 	});
 
 	/**
 	 * The honest remainder, asserted so it cannot quietly drift to zero and take
-	 * the copy's honesty with it. 287 dishes can still only be recorded as
+	 * the copy's honesty with it. 181 dishes can still only be recorded as
 	 * cooked, and the recipe page renders no block at all for them.
+	 *
+	 * Split, because the two halves have different futures. 143 carry no
+	 * technique tag at all and no threshold will ever reach them; the other 38
+	 * exercise only techniques too rare in this corpus to be worth a standard,
+	 * and dropping the threshold below 15 is the lever if that ever changes.
 	 */
-	it('leaves 287 dishes with no standard of any kind', () => {
-		expect(detail.filter((r) => !r.standard && !r.judgedBy).length).toBe(287);
+	it('leaves 181 dishes with no standard of any kind', () => {
+		const none = detail.filter((r) => !r.standard && !r.judgedBy);
+		expect(none.length).toBe(181);
+		expect(none.filter((r) => !r.techniques?.length).length).toBe(143);
+		expect(none.filter((r) => r.techniques?.length).length).toBe(38);
 	});
 });

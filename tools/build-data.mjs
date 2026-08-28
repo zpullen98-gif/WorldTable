@@ -1146,6 +1146,38 @@ problems.push(...palateProblems);
 			nAssessable: dish + gained,
 			nCorpus: full.length
 		};
+		/**
+		 * The ceiling sentence, gated the same way and for the same reason. It was
+		 * written first as "146 ... and the rest", both reasoned from other figures
+		 * rather than measured, and both wrong — 143 and 38. A number nobody can
+		 * re-run is a number that is already drifting.
+		 */
+		const ceiling = src.match(
+			/(\d+) of the (\d+) remain unassessable and always will on this approach: (\d+) carry no technique tag at all, and the other (\d+)/
+		);
+		if (!ceiling) {
+			problems.push(
+				'technique-standards.mjs: the ceiling sentence no longer parses, so its numbers cannot be checked'
+			);
+		} else {
+			const [, cUn, cCorpus, cUntagged, cTagged] = ceiling.map(Number);
+			const un = full.filter((r) => !r.standard && !r.judgedBy);
+			const cActual = {
+				cUn: un.length,
+				cCorpus: full.length,
+				cUntagged: un.filter((r) => !r.techniques?.length).length,
+				cTagged: un.filter((r) => r.techniques?.length).length
+			};
+			const cStated = { cUn, cCorpus, cUntagged, cTagged };
+			const cDrift = Object.keys(cActual).filter((k) => cActual[k] !== cStated[k]);
+			if (cDrift.length) {
+				problems.push(
+					'technique-standards.mjs ceiling sentence disagrees with the build: ' +
+						cDrift.map((k) => `${k} states ${cStated[k]}, measured ${cActual[k]}`).join('; ')
+				);
+			}
+		}
+
 		const drift = Object.keys(actual).filter((k) => actual[k] !== stated[k]);
 		if (drift.length) {
 			problems.push(
