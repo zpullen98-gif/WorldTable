@@ -368,6 +368,39 @@ Linking is **never mandatory**: a required link turns a ten-minute costing into
 an afternoon of master data and the sheet stops being opened. The datalist is
 the entire onboarding.
 
+### The waste log — `src/lib/waste.ts`, `tools/derive/waste.mjs`
+
+The guide asks for it by name and supplies the taxonomy across three entries, so
+the five reason codes are read out of prose rather than chosen: COGS Control
+names the leak meter (*"waste, portioning drift, unrecorded comps, or theft"*)
+and the villain, Prime Cost decomposes the COGS side, Pour Cost adds spillage.
+
+**The reverse gate is the one that matters.** It parses the guide's own leak
+list out of the entry and fails on any leak neither carried by a code nor
+declared in `EXCLUDED` — the direction a taxonomy rots in silently, and the half
+`economics.mjs` once shipped broken.
+
+Two refusals, both declared rather than omitted so the gate can tell them from
+gaps:
+
+- **No THEFT code.** The guide names theft and then answers it — *"systems, not
+  suspicion"*, and the goal is *"not a surveillance state"*. Theft is what
+  remains in the variance once the log has named everything it can.
+- **No vendor creep.** A price that moved, not a thing in a bin. The item book
+  has it; logging it here double-counts.
+
+**`WasteEntry` has no field for who binned it**, and `waste.test.ts` reads the
+source and fails if one appears. Waste-by-cook is a disciplinary instrument and
+the data goes dishonest inside a fortnight. `EightySix` carries `by` — a name,
+never a permission — because saying who took the halibut off blames nobody. The
+guide's *"not a surveillance state"* is itself gated, so the refusal cannot
+outlive its justification unnoticed.
+
+`unitValue` is a **snapshot** taken at log time, never recomputed: revaluing old
+bins at today's prices would make last quarter move whenever an item is
+repriced. Merged by **union on id and never capped** — the item book caps
+because an old price is dead weight, and old waste is the trend.
+
 ### House collections in the .wtjson
 
 They ride in a `house` block that is a **sibling of `data`**, never inside it.

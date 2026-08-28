@@ -22,13 +22,13 @@ at **$49.99/month, unlimited staff, one shared login**.
 
 | | |
 |---|---|
-| WorldTable | branch `dish-standards`, **34 commits unpushed** (remote `origin/master`), tree clean |
+| WorldTable | branch `dish-standards`, **37 commits unpushed** (remote `origin/master`), tree clean |
 | OutsideOfTime | branch `main`, HEAD `1a6f7d5e`, tree clean, **no git remote — never pushed** |
-| Tests | **502 unit** (32 files) · **80 e2e** — **the whole suite is green** |
+| Tests | **539 unit** (33 files) · **80 e2e** — **the whole suite is green** |
 | Gates | `build:data` all pass · `verify:build` **18/18** |
 | Precache | 1.44 MB gzipped against a 2.00 MB cap |
-| Routes | 27 · Derived JSON | 21 files |
-| Deploy | `table/` is **current** as of `1a6f7d5e`. No longer blocking. |
+| Routes | 28 · Derived JSON | 22 files |
+| Deploy | `table/` re-synced for `/menu/waste`. See below. |
 
 ## The corpus
 
@@ -86,7 +86,7 @@ passed green.
 - **`session::<profileId>`** (per person): cooked log, drill log, calibration
   log, notes, pantry, family recipes, the plan run.
 - **`house`** (device-wide, NEVER namespaced): the menu, preps, prep counts, the
-  86 board, dish costings, the tax setting, **the item book**.
+  86 board, dish costings, the tax setting, **the item book**, **the waste log**.
 
 **A cooked mark is a fact about a PERSON. A menu, what is 86'd and what a plate
 costs are facts about the VENUE.** Precedent: `wt.timers.v1` carries no profile,
@@ -148,6 +148,23 @@ import a value back into it.
   sheet — every dish is under the band before it is costed, so the headline was
   loudest when it had least to say. The wording is "is above", not "has moved
   out of": the book cannot show the price move caused the drift.
+- **A waste entry names no person, and there is no field for one.** Not a
+  display decision — waste-by-cook is a disciplinary instrument and the data
+  goes dishonest inside a fortnight, so a field that does not exist cannot be
+  surfaced later by somebody who did not read the header. `waste.test.ts` reads
+  the source and fails if one appears. `EightySix` carries `by` because saying
+  who took the halibut off blames nobody; that is the line.
+- **The waste log offers no code for THEFT**, though the guide names it as a
+  leak. The guide also answers it — *"systems, not suspicion"*, and the goal is
+  *"not a surveillance state"*. Theft is the part of the variance left once the
+  log has named everything it can, reached by counting and never by a button.
+  Vendor creep is refused too: it is a price that moved, and the item book
+  already carries it.
+- **A waste value is a SNAPSHOT, and the log is never capped.** Revaluing old
+  bins at today's prices would make last quarter move whenever somebody
+  reprices an item; capping would delete the year-on-year comparison the log
+  exists for. The item book caps because an old price is dead weight — old
+  waste is the trend.
 - **Linking a line to the book is never mandatory.** A required link turns a
   ten-minute costing into an afternoon of master data and the sheet stops being
   opened, which costs more than the missing history.
@@ -190,7 +207,7 @@ import a value back into it.
 
 ## What was built, most recent first
 
-### 29 Aug — the transport and the item book
+### 29 Aug — the transport, the item book, the waste log
 
 1. **The preps could not leave the tablet they were typed on** (`1e1ce4f`).
    `adoptImport` has taken a `preps` argument and merged it by id since preps
@@ -209,7 +226,13 @@ import a value back into it.
    1 is above the 25–35% band."* Usage follows preps AND the line's name, not
    just the link, or the headline understates worst on the day the book is
    newest.
-3. **`table/` replaced** (`1a6f7d5e`, in the monorepo). It was missing **eleven
+3. **The waste log** (`df9e60c`). `/menu/waste`, venue-wide, five reason codes
+   read out of three lexicon entries and gated in REVERSE against the guide's
+   own leak list — a leak it names that nothing carries fails the build. Theft
+   and vendor creep are declared refusals, not gaps. No person field anywhere,
+   enforced by a test that reads the source. Value snapshotted at log time;
+   merged by union on id and never capped.
+4. **`table/` replaced** (`1a6f7d5e`, in the monorepo). It was missing **eleven
    routes** — `costing`, `preps`, `prep-board`, and eight top-level ones. The
    scope assertion was run before copying; 126 stale content-hashed assets were
    dropped by replacing rather than copying over.
@@ -265,18 +288,16 @@ in the app).
    does not yet say which of them are on a stale number. The datalist plus
    auto-link makes this rare on new work and common on everything costed before
    the book existed.
-3. **The waste log** — valued from `plateCost`, five reason codes, rolled up
-   venue-wide and **never per person**.
-4. **More technique standards.** The threshold IS the worklist: lower
+3. **More technique standards.** The threshold IS the worklist: lower
    `TECHNIQUE_GATE_MIN_RECIPES`, run `build:data`, and the reverse gate names
    exactly what it wants. 20 asks for 13 more and reaches 745 of 824; 15 asks for
    20 more and reaches 782.
-5. **The allergen vocabulary.** 99 of 970 recipes still carry no flag at all.
+4. **The allergen vocabulary.** 99 of 970 recipes still carry no flag at all.
    `allergens.test.ts` asserts `NOT_SCREENED` stays non-empty, so the day it
    lands the copy is forced to change.
-6. **Yield tests.** Zero content, and the costing sheet depends on the number.
-7. **Repetition under load.** The Pass computes collisions; that is a drill.
-8. **The costing CSV** — one-way door, and see the no-importer rule above.
+5. **Yield tests.** Zero content, and the costing sheet depends on the number.
+6. **Repetition under load.** The Pass computes collisions; that is a drill.
+7. **The costing CSV** — one-way door, and see the no-importer rule above.
 
 ## Open questions for the owner
 
