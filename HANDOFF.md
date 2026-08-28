@@ -156,6 +156,13 @@ import a value back into it.
   up to a hundred dishes, so anything true of only some of them is false copy
   on the rest — and the way to catch it is to check the mark against the recipe
   set, never to reason about it.
+- **A compound technique name leaves some recipes matching only half of it, and
+  that is accepted.** `resting-meat-and-slicing-against-the-grain` covers 23
+  recipes; Pastrami on Rye is tagged for the slicing and buys the meat already
+  cooked, so the three resting marks read as not-applicable there. Weakening
+  them to cover one recipe would cost the other 22 their sharpest marks. If this
+  is ever revisited, split the technique in the table rather than softening the
+  standard.
 - **A waste entry names no person, and there is no field for one.** Not a
   display decision — waste-by-cook is a disciplinary instrument and the data
   goes dishonest inside a fortnight, so a field that does not exist cannot be
