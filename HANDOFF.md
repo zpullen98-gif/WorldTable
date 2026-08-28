@@ -25,7 +25,7 @@ third one drove most of this session's work — front of house had nothing.
 |---|---|
 | WorldTable | branch `dish-standards`, **16 commits unpushed** (remote is `origin/master`), plus the technique-standards work below |
 | OutsideOfTime | branch `main`, HEAD `3ca8361e`, tree clean, **no git remote — never pushed** |
-| Tests | **419 unit** (28 files), **80 e2e** (80 pass — **the suite is green**) |
+| Tests | **428 unit** (29 files), **80 e2e** (80 pass — **the suite is green**) |
 | Gates | `npm run build:data` all pass · `npm run verify:build` **18/18** |
 | Precache | 1.39 MB gzipped against a 2.00 MB cap |
 | Routes | 24 · Derived JSON | 19 files |
@@ -901,6 +901,50 @@ stayed green. A marginal feature is not worth a fragile gate.
 Four e2e tests rather than unit ones: the store is a runes module a vitest test
 cannot reach, the same reason `mergeSessions` and `repertoire.ts` are pure
 functions living outside their stores.
+
+## A sheet that adds up
+
+The sheet ranked dishes and never summed them. So when a chef says "our food
+cost is 31%", that is the arithmetic MEAN of the dish percentages — and the mean
+is not the number the venue runs at.
+
+Verified on the panel's own case: a plowhorse at 42% taking 100 covers beside a
+puzzle at 22% selling four. The mean is **32%**. The weighted figure — what left
+the walk-in over what came through the till — is **41.2%**. The mean flattered by
+nine points, and it flatters whenever the expensive dish is the popular one.
+
+-  is pure and tested: weighted food cost, total contribution,
+  covers, menu mix per dish, and one Pareto line reporting the REAL count at the
+  REAL share rather than asserting 80/20.
+- A dish that sold none is **excluded, not counted as a zero** — it is no
+  evidence of a food cost and would drag a figure it had no part in.
+- The qualification is the point, and it is printed: *"computed over the 2 of 2
+  dishes carrying both a price and a covers count, for the week of 24–30 Aug"*.
+  An undated, unqualified weighted food cost is the most quotable wrong number
+  this app could produce.
+- Menu mix now sits on each quadrant row, so a dish's share of covers is beside
+  its quadrant rather than inferred.
+
+**Still outstanding on this item: the item book.** `unitCost` is stored per line
+per dish and `editLine` patches it in place, so the previous number does not
+exist anywhere — which makes the sheet's own advice, and the guide's own
+(*"reprice quarterly against invoice creep; menus that sleep bleed"*),
+structurally impossible to follow. Butter is free text on fourteen lines in
+fourteen dishes; change it on four and the sheet holds two prices for one
+ingredient with nothing to say which dishes are stale.
+
+The design is in the chef review: `items` keyed by slug carrying a capped price
+history, `CostLine.itemSlug?`, a datalist that populates itself from what has
+already been typed so there is no master-data chore, resolution to plain
+CostLines before `plateCost` exactly as preps do, and — the part that matters —
+history merged by **union on the timestamp**, because newer-wins-whole would
+discard every price change the losing device recorded, which is the one thing
+the feature exists to keep. NEVER mandatory: a one-off truffle stays free text,
+or a ten-minute costing becomes an afternoon of master data and the sheet stops
+being opened at all.
+
+The sentence that IS the feature, once it lands: *"Butter is used in 14 dishes.
+3 have moved out of the 25–35% band."*
 
 ## What's left, ranked
 

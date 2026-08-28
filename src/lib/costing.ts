@@ -242,6 +242,94 @@ export function bandFor(pct: number | null, band: Band): BandVerdict {
 	return 'on';
 }
 
+/**
+ * What the whole menu adds up to.
+ *
+ * The sheet ranked dishes and never summed them, so when a chef says "our food
+ * cost is 31%" that is the arithmetic MEAN of the dish percentages — and the
+ * mean is not the number. The plowhorse at 42% is a third of covers and the
+ * puzzle at 22% sells four a week, so the figure the venue actually runs at is
+ * weighted by what sold, and it is worse than the mean nearly every time.
+ *
+ * Weighted food cost is Σ(plateCost × sold) ÷ Σ(price × sold): the money that
+ * left the walk-in over the money that came through the till. Everything here
+ * is over the dishes carrying BOTH a price and a covers count, and the caller
+ * must say so — an undated, unqualified weighted food cost is the most quotable
+ * wrong number this app could produce.
+ */
+export interface RollupDish {
+	id: string;
+	name: string;
+	plateCost: number;
+	price: number | null;
+	sold: number | null;
+}
+
+export interface MenuRollup {
+	/** Null when nothing carries both a price and a count. */
+	weightedFoodCostPct: number | null;
+	/** What the menu contributed over the period, in money. */
+	totalContribution: number;
+	covers: number;
+	/** How many dishes went into this, and how many exist. Print both. */
+	usable: number;
+	of: number;
+	/** Share of covers, by dish id — menu mix. */
+	mixPct: Map<string, number>;
+	/**
+	 * The smallest set of dishes that is most of the covers.
+	 *
+	 * Not a rule of thumb dressed as a finding: it reports the real count at the
+	 * real share rather than asserting 80/20.
+	 */
+	pareto: { dishes: number; of: number; pct: number } | null;
+}
+
+export function rollUpMenu(dishes: RollupDish[], paretoTarget = 0.7): MenuRollup {
+	const usable = dishes.filter(
+		(d) =>
+			d.price !== null &&
+			Number.isFinite(d.price) &&
+			d.price > 0 &&
+			d.sold !== null &&
+			Number.isFinite(d.sold) &&
+			// A dish that sold none contributes nothing and is not evidence of a
+			// food cost. It is counted as unusable rather than as a zero, so it
+			// cannot drag a weighted figure it had no part in.
+			(d.sold as number) > 0
+	) as Array<RollupDish & { price: number; sold: number }>;
+
+	const covers = usable.reduce((n, d) => n + d.sold, 0);
+	const cost = usable.reduce((n, d) => n + d.plateCost * d.sold, 0);
+	const revenue = usable.reduce((n, d) => n + d.price * d.sold, 0);
+
+	const mixPct = new Map<string, number>();
+	for (const d of usable) mixPct.set(d.id, covers > 0 ? (d.sold / covers) * 100 : 0);
+
+	let pareto: MenuRollup['pareto'] = null;
+	if (covers > 0 && usable.length > 1) {
+		const bySold = [...usable].sort((a, b) => b.sold - a.sold);
+		let running = 0;
+		let n = 0;
+		for (const d of bySold) {
+			running += d.sold;
+			n++;
+			if (running / covers >= paretoTarget) break;
+		}
+		pareto = { dishes: n, of: usable.length, pct: (running / covers) * 100 };
+	}
+
+	return {
+		weightedFoodCostPct: revenue > 0 ? (cost / revenue) * 100 : null,
+		totalContribution: revenue - cost,
+		covers,
+		usable: usable.length,
+		of: dishes.length,
+		mixPct,
+		pareto
+	};
+}
+
 export interface EngineeredDish {
 	id: string;
 	name: string;

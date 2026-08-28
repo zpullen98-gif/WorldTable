@@ -29,6 +29,7 @@
 		lineCost,
 		parsePrice,
 		money,
+		rollUpMenu,
 		resolveLines,
 		prepPortionCost,
 		netOfTax
@@ -229,6 +230,29 @@
 	);
 
 	const quadrantOf = (key: string) => data.economics.quadrants.find((q) => q.key === key)!;
+
+	/**
+	 * What the whole menu adds up to.
+	 *
+	 * The sheet ranked dishes and never summed them, so "our food cost is 31%"
+	 * was the arithmetic mean of the dish percentages. The plowhorse at 42% is a
+	 * third of covers and the puzzle at 22% sells four a week — the figure the
+	 * venue actually runs at is weighted by what sold.
+	 */
+	const rollup = $derived(
+		rollUpMenu(
+			dishes.map((d) => {
+				const e = economicsOf(d.id, d.price);
+				return {
+					id: d.id,
+					name: d.name,
+					plateCost: e.plateCost,
+					price: e.price,
+					sold: coversThisWeek(d.id) ?? house.costingFor(d.id).sold ?? null
+				};
+			})
+		)
+	);
 
 	/** Dishes with at least one costed line — the only ones with a real number. */
 	const costed = $derived(dishes.filter((d) => linesFor(d.id).length > 0));
@@ -551,6 +575,41 @@
 				{/each}
 			</ul>
 
+			<h2 class="sec">What the menu adds up to</h2>
+			{#if rollup.weightedFoodCostPct !== null}
+				<dl class="rollup">
+					<div>
+						<dt>Weighted food cost</dt>
+						<dd>{rollup.weightedFoodCostPct.toFixed(1)}%</dd>
+					</div>
+					<div>
+						<dt>Contribution</dt>
+						<dd>{symbolOf(dishes.find((d) => d.price)?.price ?? '')}{money(rollup.totalContribution)}</dd>
+					</div>
+					<div>
+						<dt>Covers</dt>
+						<dd>{rollup.covers}</dd>
+					</div>
+				</dl>
+				<!--
+					The qualification is the point. An undated, unqualified weighted food
+					cost is the most quotable wrong number this app could produce — so it
+					says which week it is, and over how many dishes.
+				-->
+				<p class="secnote">
+					Weighted by what actually sold, not the average of the dish percentages — which flatters
+					whenever the expensive dish is the popular one. Computed over the {rollup.usable} of
+					{rollup.of} dishes carrying both a price and a covers count, for the week of {weekLabel(
+						thisWeek
+					)}.
+					{#if rollup.pareto}
+						{rollup.pareto.dishes} of your {rollup.pareto.of} dishes are {rollup.pareto.pct.toFixed(
+							0
+						)}% of covers.
+					{/if}
+				</p>
+			{/if}
+
 			<h2 class="sec">Menu engineering</h2>
 			{#if engineered.length}
 				<p class="secnote">
@@ -564,7 +623,10 @@
 						<li>
 							<span class="qlabel" data-q={x.quadrant}>{q.label}</span>
 							<span class="qname">{x.name}</span>
-							<span class="qfig">{x.sold} sold · {money(x.contribution)} each</span>
+							<span class="qfig">
+								{x.sold} sold · {money(x.contribution)} each{#if rollup.mixPct.get(x.id)}{' '}
+									· {rollup.mixPct.get(x.id)!.toFixed(0)}% of covers{/if}
+							</span>
 							<span class="qadvice">{q.advice}</span>
 						</li>
 					{/each}
@@ -822,6 +884,24 @@
 	}
 	.taxstated {
 		margin: 0 0 14px;
+	}
+	.rollup {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px 28px;
+		margin: 0 0 8px;
+	}
+	.rollup dt {
+		font-size: var(--t-micro, 0.6875rem);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+	.rollup dd {
+		margin: 2px 0 0;
+		font-family: var(--display);
+		font-size: 1.4rem;
+		font-variant-numeric: tabular-nums;
 	}
 	.weeks {
 		display: flex;
