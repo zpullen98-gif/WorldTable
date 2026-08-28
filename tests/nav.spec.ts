@@ -58,6 +58,13 @@ test.describe('exactly one tab owns each route', () => {
 		['/service', 'Service'],
 		['/menu', 'Service'],
 		['/menu/costing', 'Service'],
+		// Added with the waste log, along with three siblings the list had never
+		// caught up with. /service OWNS the '/menu' prefix, so every sheet under
+		// it is Service — but nothing was asserting that for four of them.
+		['/menu/preps', 'Service'],
+		['/menu/prep-board', 'Service'],
+		['/menu/waste', 'Service'],
+		['/coverage', 'Service'],
 		['/recipes', 'Library'],
 		['/recipe/cacio-e-pepe', 'Library'],
 		['/chapter/italian', 'Library'],

@@ -24,7 +24,7 @@ at **$49.99/month, unlimited staff, one shared login**.
 |---|---|
 | WorldTable | branch `dish-standards`, **37 commits unpushed** (remote `origin/master`), tree clean |
 | OutsideOfTime | branch `main`, HEAD `1a6f7d5e`, tree clean, **no git remote — never pushed** |
-| Tests | **539 unit** (33 files) · **80 e2e** — **the whole suite is green** |
+| Tests | **539 unit** (33 files) · **84 e2e** — **the whole suite is green** |
 | Gates | `build:data` all pass · `verify:build` **18/18** |
 | Precache | 1.44 MB gzipped against a 2.00 MB cap |
 | Routes | 28 · Derived JSON | 22 files |
@@ -194,6 +194,13 @@ import a value back into it.
   any unknown path with `shell.html` at 200. Only `verify:build` sees it.
 - **Guards fire on legitimate change** — confirm the parser agrees with reality,
   then update. Do not edit a gate without reading it.
+- **The e2e suite serves `build/` and NEVER rebuilds it.** `playwright.config.ts`
+  says so at line 6 and it is still easy to miss: editing a component and
+  re-running `test:e2e` tests the previous build. This nearly got a live gate
+  written off as dead — a mutation to the layout's `OWNS` table left the nav
+  suite green, and it was only green because the change had not been built. It
+  fails four ways after `npm run build`. **When a mutation does not fire, check
+  whether the thing you mutated is what is running.**
 - **A monorepo sync leaves `build/` holding the `/table` build, and both
   `verify:build` and the e2e suite then fail on it.** `verify:build` reports
   "service worker registers with an absolute path — no absolute /sw.js
