@@ -42,6 +42,8 @@ import {
 	absorbSession,
 	adoptImport,
 	readHouse,
+	normaliseCosting,
+	weekStartOf,
 	removeDish as removeDishFrom,
 	removePrep as removePrepFrom,
 	dishesUsingPrep,
@@ -51,7 +53,8 @@ import {
 	type EightySix,
 	type Prep
 } from '../persistence/house';
-import type { MenuDish, DishCosting } from '../persistence/state';
+import type { MenuDish, DishCosting, SalesWeek } from '../persistence/state';
+import type { CostLine } from '../costing';
 
 export type { HouseRecord, EightySix, Prep };
 
@@ -162,16 +165,69 @@ class House {
 
 	/* ---- costing --------------------------------------------------------- */
 
+	/** Always normalised, so every caller sees the current shape whatever is on disk. */
 	costingFor(id: string): DishCosting {
-		return this.#r.dishCosts[id] ?? { lines: [], ts: 0 };
+		return normaliseCosting(this.#r.dishCosts[id]) ?? { lines: [], sales: [], ts: 0 };
 	}
 
-	setCosting(id: string, costing: Omit<DishCosting, 'ts'>) {
+	/**
+	 * A PATCH over the stored record, never a replacement.
+	 *
+	 * Belt and braces beside the required `sales` type: the type only protects
+	 * the call sites that exist today, and the patch protects the next field
+	 * anybody adds. The old whole-object write is how an ingredient edit would
+	 * have dropped a venue's covers history.
+	 *
+	 * `sold` is deliberately not accepted. It is derived — the newest week's
+	 * count, or the untouched legacy figure — and a writable `sold` beside a
+	 * writable `sales` is two sources of truth for one number.
+	 */
+	setCosting(id: string, patch: { lines?: CostLine[]; sales?: SalesWeek[] }) {
+		const cur = this.costingFor(id);
+		const sales = patch.sales ?? cur.sales;
 		this.#r = {
 			...this.#r,
-			dishCosts: { ...this.#r.dishCosts, [id]: { ...costing, ts: Date.now() } }
+			dishCosts: {
+				...this.#r.dishCosts,
+				[id]: {
+					...cur,
+					...(patch.lines ? { lines: patch.lines } : {}),
+					sales,
+					...(sales.length ? { sold: sales[0].count } : cur.sold !== undefined ? { sold: cur.sold } : {}),
+					ts: Date.now()
+				}
+			}
 		};
 		this.#persist();
+	}
+
+	/**
+	 * File a week's covers.
+	 *
+	 * The week defaults from a DEFAULT PARAMETER, evaluated at the instant of the
+	 * call — never from a module const, a $state seeded at init, or a $derived
+	 * with no tracked dependency. vite.config.ts ships `registerType: 'prompt'`
+	 * with `skipWaiting: false` so a pass tablet stays open for days by design,
+	 * and a captured week would file Thursday's covers under Monday of last week.
+	 */
+	setCovers(id: string, count: number, week: string = weekStartOf(new Date())) {
+		if (!Number.isFinite(count) || count < 0) return;
+		const cur = this.costingFor(id);
+		const rest = cur.sales.filter((w) => w.weekStart !== week);
+		const sales = [...rest, { weekStart: week, count: Math.round(count), at: Date.now() }].sort(
+			(a, b) => (a.weekStart < b.weekStart ? 1 : a.weekStart > b.weekStart ? -1 : 0)
+		);
+		this.setCosting(id, { sales });
+	}
+
+	/**
+	 * Clear one week. Filtering by weekStart, never `sales: []` and never by
+	 * omitting the key — one blur on an empty box would otherwise destroy every
+	 * week on the dish.
+	 */
+	clearCovers(id: string, week: string) {
+		const cur = this.costingFor(id);
+		this.setCosting(id, { sales: cur.sales.filter((w) => w.weekStart !== week) });
 	}
 
 	/* ---- import / export -------------------------------------------------- */

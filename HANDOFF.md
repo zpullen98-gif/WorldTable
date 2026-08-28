@@ -25,7 +25,7 @@ third one drove most of this session's work — front of house had nothing.
 |---|---|
 | WorldTable | branch `dish-standards`, **16 commits unpushed** (remote is `origin/master`), plus the technique-standards work below |
 | OutsideOfTime | branch `main`, HEAD `3ca8361e`, tree clean, **no git remote — never pushed** |
-| Tests | **383 unit** (26 files), **76 e2e** (76 pass — **the suite is green**) |
+| Tests | **403 unit** (27 files), **76 e2e** (76 pass — **the suite is green**) |
 | Gates | `npm run build:data` all pass · `npm run verify:build` **18/18** |
 | Precache | 1.39 MB gzipped against a 2.00 MB cap |
 | Routes | 24 · Derived JSON | 19 files |
@@ -681,6 +681,86 @@ lossless, which is what `migrate()`'s own comment already promised.
 
 A chef on a blocked device sees a banner saying the tablet is behind and nothing
 has been lost — rather than an empty menu and no explanation.
+
+## Covers by week — and the migration that was not written
+
+`DishCosting.sold` was one integer with no date, and `setSold` wrote the whole
+record: **typing this week's covers destroyed last week's.** The guide's own
+stated cadence — *"calculate it WEEKLY… weekly prime cost turns a bleeding month
+into a bleeding week, caught while schedules and orders can still change"* — was
+impossible on the shape. Live data loss on a paid surface.
+
+**The obvious fix was the dangerous one, and an adversarial pass caught it.**
+Bumping `CURRENT_VERSION` 1 → 2 and folding `sold` into a week is what the plan
+called for; three things were wrong with it:
+
+1. **It targets the wrong record.** `migrate()` is called only from `db.ts:67`
+   and `:133`, both SessionState. Every costing surface reads the HOUSE record,
+   and `session.costingFor/setCosting` have **zero callers** in `src/routes`.
+2. **The bump is the hazard, not the safety.** v1 is the only version any build
+   has written, so `migrate()` has never thrown; the bump arms `db.ts`'s
+   corrupt-and-reset path for the first time.
+3. **`ts` is a WRITE stamp, not a count stamp.** `setCosting` restamps it on
+   every ingredient edit, so a venue that corrected a price this morning would
+   get March's covers filed into the current week.
+
+**So: no version bump, and no fold.** `sales: SalesWeek[]` is added alongside
+`sold`, `sold` is kept forever as the legacy figure and a forward-written mirror
+of the newest week, and everything normalises **on shape, not on version** at
+every boundary a costing enters. Pure and idempotent, so it never writes on load.
+
+**Verified in the browser.** A legacy venue's record — `{lines, sold: 120, ts}` —
+is **byte-identical on disk** after the update, no `sales` array written, and the
+menu-engineering board still ranks the dish off the mirrored 120. Then four weeks
+seeded, this week's covers retyped: the three prior weeks are untouched. Under
+the old code that one keystroke destroyed them.
+
+### The details that are load-bearing
+
+- **`weekStart` is a local `YYYY-MM-DD` string, not epoch ms.** Epoch-ms-of-local
+  -midnight is a function of the writing device's zone and shifts an hour across
+  DST, so one trading week acquires two keys and a union merge faithfully keeps
+  both — double-counting on the board. Same convention as `prepCounts.countedOn`.
+- **The Monday is anchored at NOON.** `setHours(0,0,0,0)` lands on a local
+  midnight that does not exist on transition days in Havana, Santiago, Asunción
+  and Cairo; it normalises forward to 01:00 and `setDate` carries that hour, so
+  one device mints two keys for one week. No DST shift is twelve hours.
+- **Previous weeks are walked by calendar days**, never by subtracting
+  `7 * 86_400_000`, which misses a stored key by an hour across a transition —
+  the week renders blank, the chef retypes it, and the record holds two entries.
+- **The current week is never captured** — not a module const, not a `$state`
+  seeded at init. `registerType: 'prompt'` with `skipWaiting: false` means a pass
+  tablet is open for days by design.
+- **`sales` unions by weekStart.** That single property is what makes it safe: an
+  import can only ADD. Same count on both sides keeps the OLDER stamp, so
+  re-importing your own export is a no-op. Different counts let the newer `at`
+  win and record the loser as `prev`, shown as a `*` beside the number.
+- **A stamp more than 24h ahead is treated as the oldest.** One tablet with a
+  dead RTC would otherwise own every week on every dish after one import.
+- **ONE merge implementation** (`mergeCostings`), called from both `adoptImport`
+  and `mergeSessions` — they had already drifted once.
+- **`FORMAT_VERSION` 2 → 3.** It is the only gate `parseImport` checks; left at
+  2, an old cached build accepts a sales file and its whole-record write drops
+  the history with a fresh newest ts that then wins on the way back.
+- The week functions live in `state.ts`, the **leaf module** — `mergeSessions`
+  needs them, and that file's own header explains why it must not import back.
+
+### Two tests that asserted the bug
+
+`migrations.test.ts` pinned `out.dishCosts['d-1'].sold === 99` — "the newer
+costing replaces the older WHOLE", on the exact field being reshaped. It would
+have kept passing against an implementation that still replaced whole. And
+"ignores a costing with no lines array" now describes discarding a covers-only
+record. Both rewritten, not deleted.
+
+`house.test.ts` passed `{}` for costs in **all five** `adoptImport` cases, so the
+loop that loses data on the live path had never been asserted on at all.
+
+**Accepted, named:** the undated legacy `sold` is superseded once a real week
+exists — an undated figure has no week to belong to, and keeping it would
+double-count. And `engineerMenu` is untouched: its conflation of a real 0 with
+"nobody counted" is a genuine pre-existing limit, and changing the ranking engine
+is a separate job with its own tests.
 
 ## What's left, ranked
 

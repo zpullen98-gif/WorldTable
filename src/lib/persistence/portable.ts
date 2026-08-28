@@ -8,7 +8,18 @@
 import type { SessionState } from './db';
 
 export const FORMAT = 'world-table-session';
-export const FORMAT_VERSION = 2;
+/**
+ * 3, because covers became a history.
+ *
+ * This is the ONLY version gate parseImport actually checks. Left at 2, an old
+ * cached build accepts a sales-carrying file without complaint, adoptImport
+ * stores it, and the old whole-record writeLines then rewrites the costing as
+ * { lines, sold } and DROPS the array with a fresh newest ts -- which then wins
+ * on the way back and destroys the other device copy too. At 3 the old build
+ * refuses with the message it already has. The new build still reads every v2
+ * file ever written, because the gate only rejects NEWER.
+ */
+export const FORMAT_VERSION = 3;
 
 export interface PortableFile {
 	format: typeof FORMAT;

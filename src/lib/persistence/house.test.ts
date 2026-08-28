@@ -51,7 +51,7 @@ describe('absorbing a per-profile menu', () => {
 	it('takes up dishes and their costings', () => {
 		const out = absorbSession(fresh(), {
 			menuDishes: [dish('a'), dish('b')],
-			dishCosts: { a: { lines: [costLine()], ts: 5 } }
+			dishCosts: { a: { lines: [costLine()], sales: [], ts: 5 } }
 		});
 		expect(out.dishes.map((d) => d.id)).toEqual(['a', 'b']);
 		expect(out.dishCosts.a?.lines).toHaveLength(1);
@@ -97,7 +97,10 @@ describe('absorbing a per-profile menu', () => {
 
 describe('removing a dish', () => {
 	it('takes its costing and its 86 with it', () => {
-		let h = absorbSession(fresh(), { menuDishes: [dish('a')], dishCosts: { a: { lines: [], ts: 1 } } });
+		let h = absorbSession(fresh(), {
+			menuDishes: [dish('a')],
+			dishCosts: { a: { lines: [], sales: [], ts: 1 } }
+		});
 		h = { ...h, eightySix: { a: { at: 1 } } };
 		const out = removeDish(h, 'a');
 		expect(out.dishes).toEqual([]);
@@ -138,7 +141,9 @@ describe('what an export carries', () => {
 	it('carries the menu and the costings', () => {
 		const h = absorbSession(fresh(), {
 			menuDishes: [dish('a')],
-			dishCosts: { a: { lines: [], ts: 3 } }
+			// A real figure: normaliseCosting drops a costing carrying none at all,
+			// which is correct — an empty record is not a costing.
+			dishCosts: { a: { lines: [costLine()], sales: [], ts: 3 } }
 		});
 		const snap = houseSnapshot(h);
 		expect(snap.menuDishes.map((d) => d.id)).toEqual(['a']);

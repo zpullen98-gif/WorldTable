@@ -32,6 +32,8 @@
 		resolveLines,
 		prepPortionCost
 	} from '$lib/costing';
+	import { weekStartOf } from '$lib/persistence/house';
+	import { onMount } from 'svelte';
 
 	let { data } = $props();
 
@@ -74,6 +76,52 @@
 	 */
 	const resolvedFor = (id: string) => resolveLines(linesFor(id), house.preps).lines;
 
+	/**
+	 * The current week, and why it is not a constant.
+	 *
+	 * `clock` is $state and `thisWeek` derives from it, so the week is never
+	 * captured. vite.config.ts ships `registerType: 'prompt'` with
+	 * `skipWaiting: false` — "never reload the page out from under a cook" — so a
+	 * pass tablet is open for days by design, and a week frozen at page load
+	 * would quietly file Thursday's covers under a Monday that has passed.
+	 *
+	 * Resynced when the document becomes visible, the pattern already shipped in
+	 * timers.svelte.ts, and bumped after every write.
+	 */
+	let clock = $state(Date.now());
+	const thisWeek = $derived(weekStartOf(new Date(clock)));
+
+	onMount(() => {
+		const onVis = () => {
+			if (document.visibilityState === 'visible') clock = Date.now();
+		};
+		document.addEventListener('visibilitychange', onVis);
+		return () => document.removeEventListener('visibilitychange', onVis);
+	});
+
+	/** Covers filed for the current week, or null when nobody has counted it. */
+	const coversThisWeek = (id: string) =>
+		house.costingFor(id).sales.find((w) => w.weekStart === thisWeek)?.count ?? null;
+
+	/**
+	 * The weeks actually STORED, newest first — not a computed range of the last
+	 * four Mondays looked up one by one. A range hides a misfiled week (the
+	 * dead-battery tablet, the hour-off key), and hiding is what turns a visible
+	 * duplicate into silent loss.
+	 */
+	const priorWeeks = (id: string) =>
+		house.costingFor(id).sales.filter((w) => w.weekStart !== thisWeek).slice(0, 4);
+
+	/** Monday 5 Jan → "5–11 Jan", so the input says which week it is filing. */
+	function weekLabel(weekStart: string) {
+		const [y, m, d] = weekStart.split('-').map(Number);
+		const mon = new Date(y, m - 1, d, 12);
+		const sun = new Date(y, m - 1, d + 6, 12);
+		const f = (x: Date, withMonth: boolean) =>
+			withMonth ? `${x.getDate()} ${x.toLocaleString(undefined, { month: 'short' })}` : `${x.getDate()}`;
+		return `${f(mon, mon.getMonth() !== sun.getMonth())}–${f(sun, true)}`;
+	}
+
 	const prepOf = (l: CostLine) => (l.prepId ? house.prep(l.prepId) : undefined);
 	const perPortionOf = (l: CostLine) => {
 		const p = prepOf(l);
@@ -100,7 +148,10 @@
 	}
 
 	function writeLines(id: string, lines: CostLine[]) {
-		house.setCosting(id, { lines, sold: house.costingFor(id).sold });
+		// A patch. It used to pass `sold` back in, which meant an ingredient edit
+		// rewrote the covers figure too — the shape that would have dropped a
+		// whole history the moment covers became one.
+		house.setCosting(id, { lines });
 	}
 
 	function addLine(id: string) {
@@ -127,8 +178,18 @@
 		);
 	}
 
+	/**
+	 * File this week's covers.
+	 *
+	 * An empty box clears THIS WEEK only — never `sales: []`, never by omitting
+	 * the key. One blur on an empty field must not be able to destroy five weeks
+	 * of counting.
+	 */
 	function setSold(id: string, sold: number) {
-		house.setCosting(id, { lines: linesFor(id), sold: Number.isFinite(sold) ? sold : undefined });
+		if (Number.isFinite(sold)) house.setCovers(id, sold, thisWeek);
+		else house.clearCovers(id, thisWeek);
+		// A write that crossed midnight on a Sunday should correct its own label.
+		clock = Date.now();
 	}
 
 	const num = (e: Event) => Number.parseFloat((e.currentTarget as HTMLInputElement).value);
@@ -141,7 +202,11 @@
 				id: d.id,
 				name: d.name,
 				contribution: economicsOf(d.id, d.price).contribution,
-				sold: house.costingFor(d.id).sold ?? null
+				// This week if it has been counted, else the newest figure the record
+				// carries — which for a venue that predates weekly covers is its
+				// original undated number, mirrored by normaliseCosting. So the
+				// board does not go blank on update day for anybody.
+				sold: coversThisWeek(d.id) ?? house.costingFor(d.id).sold ?? null
 			}))
 		)
 	);
@@ -348,15 +413,36 @@
 										<a class="chip" href="{base}/menu/preps">+ Cost a prep first ▸</a>
 									{/if}
 									<label class="sold">
-										Sold this period
+										Covers, {weekLabel(thisWeek)}
 										<input
 											type="number"
 											min="0"
 											step="1"
-											value={house.costingFor(d.id).sold ?? ''}
+											aria-label="Covers for {d.name}, week of {thisWeek}"
+											value={coversThisWeek(d.id) ?? ''}
 											onchange={(ev) => setSold(d.id, num(ev))}
 										/>
 									</label>
+									{#if priorWeeks(d.id).length}
+										<!--
+											The weeks actually STORED, not a computed range of the last four
+											Mondays looked up one by one. A range hides a misfiled week — the
+											dead-battery tablet, the hour-off key — and hiding is what turns
+											a visible duplicate into silent loss.
+										-->
+										<p class="weeks">
+											{#each priorWeeks(d.id) as w, i (w.weekStart)}
+												{#if i > 0}<span class="weeksep" aria-hidden="true">·</span>{/if}
+												<span title={"Week of " + w.weekStart}>
+													{w.count}{#if w.prev !== undefined}<b
+															class="replaced"
+															title={"An import replaced " + w.prev}>*</b
+														>{/if}
+												</span>
+											{/each}
+											<span class="weeksnote">earlier weeks</span>
+										</p>
+									{/if}
 								</div>
 
 								<dl class="totals">
@@ -619,6 +705,25 @@
 		gap: 12px;
 		align-items: center;
 		margin-top: 12px;
+	}
+	.weeks {
+		display: flex;
+		gap: 10px;
+		align-items: baseline;
+		margin: 6px 0 0;
+		font-variant-numeric: tabular-nums;
+		color: var(--ink-soft);
+		font-size: var(--t-small, 0.8125rem);
+	}
+	.weeksep {
+		color: var(--muted);
+	}
+	.weeksnote {
+		font-variant-numeric: normal;
+		color: var(--muted);
+	}
+	.replaced {
+		color: var(--chili);
 	}
 	.sold {
 		font-size: var(--t-small);

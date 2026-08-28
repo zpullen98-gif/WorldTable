@@ -11,6 +11,19 @@
  * namespaces. See stores/house.svelte.ts for why that line is drawn where it is.
  */
 import type { MenuDish, DishCosting } from './state';
+/*
+ * These moved to state.ts, the LEAF module, and are re-exported here so the
+ * store and the pages keep one import site.
+ *
+ * They had to move: mergeSessions needs mergeCostings, and state.ts's own
+ * header explains why it must not import back — it is deliberately a leaf so
+ * db.ts and migrations.ts never form a cycle, and that cycle once "only
+ * worked because each side happened to touch the other's exports inside
+ * function bodies rather than at module-eval time". A costing merge living
+ * here would have rebuilt it.
+ */
+import { localDay, weekStartOf, recentWeeks, normaliseCosting, mergeCostings } from './state';
+export { localDay, weekStartOf, recentWeeks, normaliseCosting, mergeCostings, CLOCK_SKEW_MS } from './state';
 import type { CostLine } from '../costing';
 
 export const HOUSE_KEY = 'house';
@@ -159,7 +172,10 @@ export function absorbSession(
 		if (!d?.id || seen.has(d.id)) continue;
 		dishes = [...dishes, d];
 		absorbed = [...absorbed, d.id];
-		const c = mine.dishCosts?.[d.id];
+		// Normalised on the way in. Unconditional and gated only on the unseen
+		// dish id -- no ts comparison, because the house has no record for this
+		// dish at all when this fires.
+		const c = normaliseCosting(mine.dishCosts?.[d.id]);
 		if (c) costs = { ...costs, [d.id]: c };
 		seen.add(d.id);
 	}
@@ -188,10 +204,14 @@ export function adoptImport(
 	}
 	const nextDishes = [...byId.values()];
 
+	// THE LIVE IMPORT PATH, and the one that lost the data. This was a bare
+	// `nextCosts[id] = c` on a newer ts -- it would store null, a string, or a
+	// record from an older build straight into the venue live costings, and it
+	// replaced the WHOLE record, so a file carrying week 5 wiped weeks 1-4.
 	const nextCosts = { ...house.dishCosts };
 	for (const [id, c] of Object.entries(costs ?? {})) {
-		const mine = nextCosts[id];
-		if (!mine || (c?.ts ?? 0) > (mine.ts ?? 0)) nextCosts[id] = c;
+		const merged = mergeCostings(nextCosts[id], c);
+		if (merged) nextCosts[id] = merged;
 	}
 
 	// Named explicitly rather than left to a spread, the way every other field
@@ -245,12 +265,6 @@ export function batchesNeeded(prep: Prep, onHand: number): number {
 	if (short <= 0) return 0;
 	if (!Number.isFinite(prep.portions) || prep.portions <= 0) return 0;
 	return Math.ceil(short / prep.portions);
-}
-
-/** A local YYYY-MM-DD, so "today" means the kitchen's today and not UTC's. */
-export function localDay(d: Date): string {
-	const p = (n: number) => String(n).padStart(2, '0');
-	return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
 
 /** Removing a dish takes its costing and its 86 with it. */

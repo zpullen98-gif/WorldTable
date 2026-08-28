@@ -142,11 +142,67 @@ export interface SessionState {
 	lastWrite: number;
 }
 
+/**
+ * One week's covers for one dish.
+ *
+ * `weekStart` is a LOCAL Monday as 'YYYY-MM-DD', matching the convention this
+ * record already uses for `HouseRecord.prepCounts.countedOn` and for the same
+ * reason: two devices in one kitchen agree on the DATE even when their
+ * timezones and DST offsets do not. Epoch ms of local midnight does not survive
+ * a DST boundary or a tablet whose zone changes — it mints a SECOND key for one
+ * trading week, and a union merge faithfully keeps both, so the week is counted
+ * twice on the menu-engineering board.
+ */
+export interface SalesWeek {
+	/** Local Monday, 'YYYY-MM-DD'. Minted only by weekStartOf(). */
+	weekStart: string;
+	/**
+	 * Covers. 0 is a REAL figure — counted, sold none — and is never the same
+	 * thing as no entry at all. Absence means unknown, and only absence does.
+	 */
+	count: number;
+	/**
+	 * When this count was typed. The per-week merge tiebreak, and the ONLY
+	 * tiebreak for covers.
+	 *
+	 * Deliberately not DishCosting.ts: that is restamped by every write
+	 * including an ingredient edit routed through writeLines, so resolving a
+	 * covers disagreement against it lets the device that corrected a unit cost
+	 * at 19:00 overwrite the device that typed the covers at 17:00.
+	 */
+	at: number;
+	/**
+	 * Display only: the count an import replaced here. Never summed, never
+	 * ranked, never merged forward. It exists so a per-week overwrite is visible
+	 * at the number itself rather than only in a banner nobody re-reads.
+	 */
+	prev?: number;
+}
+
 export interface DishCosting {
 	lines: CostLine[];
-	/** Covers sold in the period — menu engineering's popularity axis. */
+	/**
+	 * Covers by week. REQUIRED, not optional.
+	 *
+	 * Required is load-bearing: an optional field satisfies the store's costing
+	 * literal structurally, so the compiler would name none of the call sites
+	 * and the first ingredient edit would silently drop the history — then stamp
+	 * a fresh newest `ts` on the emptied record, so the loss propagates on the
+	 * next import instead of being repaired by it.
+	 */
+	sales: SalesWeek[];
+	/**
+	 * The single undated figure this was before covers had weeks, kept forever
+	 * as a MIRROR of the newest week's count.
+	 *
+	 * Never deleted and never re-dated. It is what an existing venue's number
+	 * still reads as on update day — nothing moves on disk, and no board goes
+	 * blank — and what a build predating `sales` can still read out of the same
+	 * record. Derived, never taken from a caller: a writable `sold` beside a
+	 * writable `sales` is two sources of truth for one number.
+	 */
 	sold?: number;
-	/** Last edit, ms epoch. The import-merge tiebreak. */
+	/** Last edit, ms epoch. The import-merge tiebreak for LINES. */
 	ts: number;
 }
 
@@ -186,6 +242,162 @@ export const EMPTY_SESSION: SessionState = {
 	role: undefined,
 	lastWrite: 0
 };
+
+/** A local YYYY-MM-DD, so "today" means the kitchen's today and not UTC's. */
+export function localDay(d: Date): string {
+	const p = (n: number) => String(n).padStart(2, '0');
+	return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
+
+/**
+ * The local Monday a date falls in, as 'YYYY-MM-DD'.
+ *
+ * THE NOON ANCHOR IS NOT DECORATION. The version everyone writes is
+ * `setHours(0, 0, 0, 0)`, and it lands on a local midnight that DOES NOT EXIST
+ * on transition days in America/Havana, America/Santiago, America/Asuncion and
+ * Africa/Cairo. The Date normalises forward to 01:00, `setDate` then preserves
+ * that wall-clock hour, and a Sunday write and a Wednesday write in the same
+ * week on the same device mint two different keys. No DST shift is twelve
+ * hours, so local noon always exists and is never repeated.
+ */
+export function weekStartOf(d: Date = new Date()): string {
+	const n = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 12, 0, 0, 0);
+	// getDay() is 0 for Sunday; (day + 6) % 7 makes Monday 0.
+	n.setDate(n.getDate() - ((n.getDay() + 6) % 7));
+	return localDay(n);
+}
+
+/**
+ * The last `n` week-starts, newest first, walked by CALENDAR days.
+ *
+ * Never by subtracting 7 * 86_400_000: across a DST boundary that misses a
+ * stored key by exactly an hour, so a week that IS on disk renders blank, the
+ * chef retypes it, and the record ends up holding two entries for one week.
+ * pass.ts already rounds for the same reason.
+ */
+export function recentWeeks(n: number, from: Date = new Date()): string[] {
+	const out: string[] = [];
+	const cursor = new Date(from.getFullYear(), from.getMonth(), from.getDate(), 12, 0, 0, 0);
+	for (let i = 0; i < n; i++) {
+		out.push(weekStartOf(cursor));
+		cursor.setDate(cursor.getDate() - 7);
+	}
+	return out;
+}
+
+const validWeek = (w: unknown): w is SalesWeek =>
+	!!w &&
+	typeof w === 'object' &&
+	typeof (w as SalesWeek).weekStart === 'string' &&
+	/^\d{4}-\d{2}-\d{2}$/.test((w as SalesWeek).weekStart) &&
+	Number.isFinite((w as SalesWeek).count) &&
+	Number.isFinite((w as SalesWeek).at);
+
+/**
+ * Bring a costing from any shape this app has ever written into the current one.
+ *
+ * NORMALISATION ON SHAPE, NOT ON VERSION, and that is the whole design. Bumping
+ * `CURRENT_VERSION` would arm db.ts's corrupt-and-reset path for the first time
+ * in this app's life; bumping `HOUSE_VERSION` would arm the record-blocking path.
+ * This is pure and idempotent instead, so it is safe to run at every boundary a
+ * costing enters, needs no stamp, and never writes on load.
+ *
+ * Returns null only for something carrying NO typed figure at all. A costing
+ * with valid `sales` and no `lines` array is kept with `lines: []` — the old
+ * guard (`!Array.isArray(lines)` -> discard) would silently throw away exactly
+ * the record this change produces.
+ */
+export function normaliseCosting(raw: unknown): DishCosting | null {
+	if (!raw || typeof raw !== 'object') return null;
+	const c = raw as Partial<DishCosting>;
+	const lines = Array.isArray(c.lines) ? c.lines : [];
+	const sales = Array.isArray(c.sales) ? c.sales.filter(validWeek) : [];
+	// Test the VALUE, never the key: structuredClone preserves a key whose value
+	// is undefined, so `'sold' in c` is true for a field that was cleared. And
+	// never a truthiness test — 0 covers is the number a chef types precisely so
+	// the board calls a dish a dog.
+	const sold = Number.isFinite(c.sold) ? (c.sold as number) : undefined;
+	if (!lines.length && !sales.length && sold === undefined) return null;
+
+	sales.sort((a, b) => (a.weekStart < b.weekStart ? 1 : a.weekStart > b.weekStart ? -1 : 0));
+	return {
+		lines,
+		sales,
+		// The mirror. Newest week if there is one, else whatever undated figure
+		// this record already carried.
+		...(sales.length ? { sold: sales[0].count } : sold !== undefined ? { sold } : {}),
+		ts: Number.isFinite(c.ts) ? (c.ts as number) : 0
+	};
+}
+
+/** An incoming stamp this far ahead of us is a broken clock, not the future. */
+export const CLOCK_SKEW_MS = 24 * 60 * 60 * 1000;
+
+/**
+ * Merge two costings for one dish. ONE implementation, called from both the
+ * house import and the session transport merge — they have already drifted once.
+ *
+ * `sales` UNIONS by weekStart. That single property is what makes this change
+ * safe: a week present on one side only is always kept, so importing a file
+ * carrying week 5 can no longer replace local weeks 1-4, which is exactly what
+ * the old whole-record replace did.
+ *
+ * `lines` still merge WHOLE on the newer `ts`. The original rationale —
+ * "merging line-by-line across two sheets would invent a third sheet neither
+ * venue priced" — stays true for lines and becomes FALSE for sales, because two
+ * devices' week records are disjoint observations rather than competing sheets.
+ */
+export function mergeCostings(
+	mineRaw: unknown,
+	theirsRaw: unknown,
+	now: number = Date.now()
+): DishCosting | null {
+	const mine = normaliseCosting(mineRaw);
+	const theirs = normaliseCosting(theirsRaw);
+	if (!mine) return theirs;
+	if (!theirs) return mine;
+
+	const byWeek = new Map<string, SalesWeek>();
+	for (const w of mine.sales) byWeek.set(w.weekStart, w);
+	for (const w of theirs.sales) {
+		const ours = byWeek.get(w.weekStart);
+		if (!ours) {
+			byWeek.set(w.weekStart, w);
+			continue;
+		}
+		if (ours.count === w.count) {
+			// No disagreement. Keep the OLDER stamp deliberately, so the result is
+			// identical whichever direction the file travelled — order-independence
+			// is what makes re-importing your own export a no-op.
+			byWeek.set(w.weekStart, ours.at <= w.at ? ours : w);
+			continue;
+		}
+		// A stamp well ahead of this device is a dead RTC, not the future. Without
+		// this one tablet with a wrong clock would own every week on every dish
+		// after a single import, and beat every later correction.
+		const theirsIsNewer = w.at <= now + CLOCK_SKEW_MS && w.at > ours.at;
+		const winner = theirsIsNewer ? w : ours;
+		const loser = theirsIsNewer ? ours : w;
+		byWeek.set(w.weekStart, { ...winner, prev: loser.count });
+	}
+
+	const sales = [...byWeek.values()].sort((a, b) =>
+		a.weekStart < b.weekStart ? 1 : a.weekStart > b.weekStart ? -1 : 0
+	);
+	// Lines travel with the newer stamp, and the merged ts is the max — a record
+	// carrying the venue's newest lines under an older stamp stops propagating
+	// them to any third device.
+	const newer = theirs.ts > mine.ts ? theirs : mine;
+	return {
+		lines: newer.lines,
+		sales,
+		// An undated number from somebody else's file must never displace the
+		// venue's own undated number.
+		...(sales.length ? { sold: sales[0].count } : mine.sold !== undefined ? { sold: mine.sold } : {}),
+		ts: Math.max(mine.ts, theirs.ts)
+	};
+}
 
 /**
  * Reconcile an imported session over the live one, field by field.
@@ -282,12 +494,19 @@ export function mergeSessions(
 		})(),
 		// Per dish id, the newer costing winning whole. Merging line-by-line across
 		// two sheets would invent a third sheet neither venue priced.
+		// The transport copy of the same merge. ONE implementation, above in this
+		// file, called from here and from adoptImport -- these two
+		// have already drifted once, when the session grew an Array.isArray guard
+		// the house never got.
+		//
+		// The old guard discarded any costing with no lines array, which would
+		// silently throw away a covers-only record. mergeCostings guards on the
+		// fields it merges instead.
 		dishCosts: (() => {
 			const out: Record<string, DishCosting> = { ...(current.dishCosts ?? {}) };
 			for (const [id, costing] of Object.entries(incoming.dishCosts ?? {})) {
-				if (!costing || !Array.isArray(costing.lines)) continue;
-				const mine = out[id];
-				if (!mine || (costing.ts ?? 0) > (mine.ts ?? 0)) out[id] = costing;
+				const merged = mergeCostings(out[id], costing);
+				if (merged) out[id] = merged;
 			}
 			return out;
 		})(),

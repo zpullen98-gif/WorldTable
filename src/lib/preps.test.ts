@@ -181,8 +181,8 @@ describe('the prep on the house record', () => {
 				{ id: 'd-2', name: 'Salad', section: 'Starters', description: '', ingredients: [], allergens: [], price: '9', ts: 1 }
 			],
 			dishCosts: {
-				'd-1': { lines: [line({ id: 's', prepId: 'p-demi' })], ts: 1 },
-				'd-2': { lines: [line({ id: 'l', unitCost: 2 })], ts: 1 }
+				'd-1': { lines: [line({ id: 's', prepId: 'p-demi' })], sales: [], ts: 1 },
+				'd-2': { lines: [line({ id: 'l', unitCost: 2 })], sales: [], ts: 1 }
 			}
 		};
 		expect(dishesUsingPrep(h, 'p-demi').map((d) => d.name)).toEqual(['Braise']);

@@ -93,7 +93,11 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 		const mine = {
 			...live(),
 			dishCosts: {
-				'd-1': { lines: [{ id: 'c-1', item: 'Salmon', unitCost: 12, unit: 'kg', usedQty: 0.2, yieldPct: 45 }], ts: 100 }
+				'd-1': {
+					lines: [{ id: 'c-1', item: 'Salmon', unitCost: 12, unit: 'kg', usedQty: 0.2, yieldPct: 45 }],
+					sales: [],
+					ts: 100
+				}
 			}
 		};
 		const out = mergeSessions(mine, { ...structuredClone(EMPTY_SESSION), menu: ['tom-yum-goong'] });
@@ -101,29 +105,76 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 		expect(out.dishCosts['d-1'].lines[0].yieldPct).toBe(45);
 	});
 
-	it('takes the newer costing per dish and leaves the others alone', () => {
+	/**
+	 * REWRITTEN, because the version this replaced asserted the bug.
+	 *
+	 * It read `expect(out.dishCosts['d-1'].sold).toBe(99)` — pinning "the newer
+	 * costing replaces the older one WHOLE" as correct, on the very field that
+	 * became a history. That rule is right for a scalar and destructive for an
+	 * array: a sous who typed week 3 on the pass tablet, imported onto the head
+	 * chef's device with a newer ts, wiped weeks 1 and 2. The test would have
+	 * gone on passing against an implementation that still replaced whole.
+	 */
+	it('unions covers by week instead of replacing the record', () => {
 		const mine = {
 			...live(),
 			dishCosts: {
-				'd-1': { lines: [], sold: 10, ts: 100 },
-				'd-2': { lines: [], sold: 5, ts: 500 }
+				'd-1': {
+					lines: [],
+					sales: [
+						{ weekStart: '2026-01-05', count: 40, at: 100 },
+						{ weekStart: '2026-01-12', count: 50, at: 200 }
+					],
+					ts: 100
+				}
 			}
 		};
 		const out = mergeSessions(mine, {
 			dishCosts: {
-				'd-1': { lines: [], sold: 99, ts: 900 },
-				'd-2': { lines: [], sold: 1, ts: 200 }
+				'd-1': { lines: [], sales: [{ weekStart: '2026-01-19', count: 60, at: 900 }], ts: 900 }
 			}
 		});
-		expect(out.dishCosts['d-1'].sold).toBe(99);
-		expect(out.dishCosts['d-2'].sold).toBe(5);
+		const weeks = out.dishCosts['d-1'].sales.map((w) => w.weekStart);
+		expect(weeks, 'an import replaced the history instead of adding to it').toEqual([
+			'2026-01-19',
+			'2026-01-12',
+			'2026-01-05'
+		]);
 	});
 
-	it('ignores a costing with no lines array rather than trusting the file', () => {
-		const out = mergeSessions(live(), {
-			dishCosts: { 'd-9': { sold: 4 } } as never
+	it('lets the newer count win one week, and says what it replaced', () => {
+		const mine = {
+			...live(),
+			dishCosts: {
+				'd-1': { lines: [], sales: [{ weekStart: '2026-01-05', count: 40, at: 100 }], ts: 100 }
+			}
+		};
+		const out = mergeSessions(mine, {
+			dishCosts: {
+				'd-1': { lines: [], sales: [{ weekStart: '2026-01-05', count: 44, at: 900 }], ts: 900 }
+			}
 		});
-		expect(out.dishCosts['d-9']).toBeUndefined();
+		expect(out.dishCosts['d-1'].sales[0].count).toBe(44);
+		expect(out.dishCosts['d-1'].sales[0].prev, 'the replaced figure vanished').toBe(40);
+	});
+
+	/**
+	 * REWRITTEN for the same reason. The old name — "ignores a costing with no
+	 * lines array rather than trusting the file" — sounds exactly right and now
+	 * describes discarding the record this change produces: a covers-only
+	 * costing legitimately has no lines. Guard on the fields being merged.
+	 */
+	it('keeps a covers-only costing, and still refuses one carrying no figure', () => {
+		const withCovers = mergeSessions(live(), {
+			dishCosts: {
+				'd-9': { sales: [{ weekStart: '2026-01-05', count: 12, at: 1 }] }
+			} as never
+		});
+		expect(withCovers.dishCosts['d-9']?.sales).toHaveLength(1);
+		expect(withCovers.dishCosts['d-9']?.lines).toEqual([]);
+
+		const empty = mergeSessions(live(), { dishCosts: { 'd-8': {} } as never });
+		expect(empty.dishCosts['d-8']).toBeUndefined();
 	});
 
 	/**
