@@ -341,6 +341,48 @@ lock masks `article.sheet` children. An overlay alone is not a gate.
 the newer `ts` winning, so folding costs into the dish would let a colleague's
 edit to a description silently replace an evening of costing work.
 
+### The item book — `src/lib/items.ts`
+
+`unitCost` was stored per line per dish and `editLine` patched it in place, so
+the previous price did not exist anywhere and the guide's own *"reprice
+quarterly against invoice creep"* was structurally impossible to follow. The
+book is `HouseRecord.items`, keyed by `itemSlugOf(name)`, each holding up to
+`HISTORY_CAP` observations of `{ unitCost, unit, at }`.
+
+Four rules, none of them tidy-able:
+
+- **History is UNIONED, never newer-wins-whole**, and the union key is the whole
+  observation rather than `at` alone. The losing device's book holds price
+  changes the winner never observed. The cap is applied AFTER the union by a
+  total sort, so the merge is order-independent.
+- **An item-backed line keeps the dish's own `yieldPct`; a prep-backed line is
+  locked to 100.** A prep's trim already happened inside it; an item price is a
+  raw invoice price. Clearing the dish yield here would price the menu off gross
+  weight — the rookie bankruptcy above, reintroduced.
+- **Zero is not a price.** `addLine` mints a row at `unitCost: 0`.
+- **Usage follows preps AND the line's name**, not only `itemSlug`. Linking is
+  opt-in, so counting only linked lines understates the exposure worst on the day
+  the book is newest.
+
+Linking is **never mandatory**: a required link turns a ten-minute costing into
+an afternoon of master data and the sheet stops being opened. The datalist is
+the entire onboarding.
+
+### House collections in the .wtjson
+
+They ride in a `house` block that is a **sibling of `data`**, never inside it.
+`mergeSessions` spreads `...incoming` ahead of its named fields, so anything in
+`data` is copied into the per-profile `session::<profileId>` record — and a prep,
+a costing and an item price are facts about the VENUE. `menuDishes`/`dishCosts`
+sit in `data` only because they have a session-side legacy being absorbed.
+
+`buildExport`'s `house` and `adoptImport`'s `incoming` are **required
+arguments**. They were optional, and that is precisely why preps could not travel
+for their entire existence: the merge was written and tested, and neither call
+site ever passed one, because an omitted optional argument compiles in silence.
+`FORMAT_VERSION` stays at 3 — the criterion for a bump is a build that would
+DESTROY something, and an old build ignores an unknown top-level key.
+
 ## Sanitation — the guide's silences, made load-bearing
 
 The fifth and last time the reachability pattern appears, and the only one

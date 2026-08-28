@@ -1,7 +1,8 @@
 # The World Table — session handoff
 
-Written 28 Aug 2026. **Every number below was measured, not remembered** — run
-the tool. Where a document and a file disagree, the file wins.
+Written 28 Aug 2026, re-measured 29 Aug 2026. **Every number below was
+measured, not remembered** — run the tool. Where a document and a file
+disagree, the file wins.
 
 `CLAUDE.md` is the architectural reference and is far more detailed. Read it
 second; read this first.
@@ -21,12 +22,13 @@ at **$49.99/month, unlimited staff, one shared login**.
 
 | | |
 |---|---|
-| WorldTable | branch `dish-standards`, **28 commits unpushed** (remote `origin/master`), tree clean |
-| OutsideOfTime | branch `main`, HEAD `53b31569`, tree clean, **no git remote — never pushed** |
-| Tests | **447 unit** (30 files) · **80 e2e** — **the whole suite is green** |
+| WorldTable | branch `dish-standards`, **31 commits unpushed** (remote `origin/master`), tree clean |
+| OutsideOfTime | branch `main`, HEAD `1a6f7d5e`, tree clean, **no git remote — never pushed** |
+| Tests | **502 unit** (32 files) · **80 e2e** — **the whole suite is green** |
 | Gates | `build:data` all pass · `verify:build` **18/18** |
-| Precache | 1.43 MB gzipped against a 2.00 MB cap |
+| Precache | 1.44 MB gzipped against a 2.00 MB cap |
 | Routes | 27 · Derived JSON | 21 files |
+| Deploy | `table/` is **current** as of `1a6f7d5e`. No longer blocking. |
 
 ## The corpus
 
@@ -84,11 +86,19 @@ passed green.
 - **`session::<profileId>`** (per person): cooked log, drill log, calibration
   log, notes, pantry, family recipes, the plan run.
 - **`house`** (device-wide, NEVER namespaced): the menu, preps, prep counts, the
-  86 board, dish costings, the tax setting.
+  86 board, dish costings, the tax setting, **the item book**.
 
 **A cooked mark is a fact about a PERSON. A menu, what is 86'd and what a plate
 costs are facts about the VENUE.** Precedent: `wt.timers.v1` carries no profile,
 because a pot on the heat belongs to the room.
+
+**House collections travel in a `house` block that is a SIBLING of `data` in the
+.wtjson, never inside it.** `mergeSessions` spreads `...incoming` ahead of its
+named fields, so anything in `data` is copied into the per-profile record and
+persisted there. The menu and its costings sit in `data` only because they have
+a session-side legacy being absorbed out of it. `buildExport`'s `house` and
+`adoptImport`'s `incoming` are both **required arguments** — an omitted optional
+one is exactly how the preps went nowhere for their whole existence.
 
 `persistence/state.ts` is deliberately a **leaf module** — db.ts and
 migrations.ts both import it precisely so they never import each other. Do not
@@ -120,6 +130,27 @@ import a value back into it.
   chef's work has no end state.
 - **No CSV importer, ever.** The `.wtjson` is the single portability contract
   with tested merge semantics.
+- **Item price history is UNIONED, never newer-wins-whole**, and the union key is
+  the whole observation (`at|unitCost|unit`) rather than `at` alone. The losing
+  device's book holds price changes the winner never observed; discarding them
+  destroys the only thing the book exists to keep, silently, leaving something
+  plausible behind. The cap is applied AFTER the union by a total sort, so the
+  merge is order-independent and re-importing your own export is a no-op.
+- **An item-backed line keeps the dish's own yield; a prep-backed line is locked
+  to 100.** Not an inconsistency to tidy into a shared branch: a prep's trim
+  already happened inside it, an item price is a raw invoice price, and clearing
+  the dish yield would price the menu off gross weight.
+- **Zero is not a price.** `addLine` mints a row at `unitCost: 0`, so without the
+  guard, naming a fresh row records that the thing is free and every dish
+  following the book prices it at nothing.
+- **The item book counts only the OVER direction.** Counting `under` made a new
+  book shout "1 has moved out of the band" over a dish with one line on its
+  sheet — every dish is under the band before it is costed, so the headline was
+  loudest when it had least to say. The wording is "is above", not "has moved
+  out of": the book cannot show the price move caused the drift.
+- **Linking a line to the book is never mandatory.** A required link turns a
+  ten-minute costing into an afternoon of master data and the sheet stops being
+  opened, which costs more than the missing history.
 - **Do not build**: video, leaderboards, certification, more recipes, HACCP or
   temperature logs (a single-device, freely-editable record would be adopted as
   compliance evidence while being worthless as evidence), reference plate photos
@@ -149,98 +180,95 @@ import a value back into it.
 
 ---
 
-## What was built this session
+## What was built, most recent first
 
-A six-lens professional review (chef de cuisine, kitchen manager, chef patron,
-compliance, educator, service director) was run against the codebase and
-adversarially verified. Its ranked list was then worked through 1–12.
+### 29 Aug — the transport and the item book
 
-**Safety and correctness**
+1. **The preps could not leave the tablet they were typed on** (`1e1ce4f`).
+   `adoptImport` has taken a `preps` argument and merged it by id since preps
+   shipped, and nothing ever passed one — `houseSnapshot` emitted two fields and
+   both call sites called `adopt()` with two arguments. Measured on the worked
+   braise: **8.625 a plate at the first site, 5.625 and `complete: false` at the
+   second**, the sauce simply absent from the sum. `preps.test.ts` had a case
+   named "survives an import that mentions no preps at all", which was every
+   import there had ever been. `FORMAT_VERSION` stays at 3 — the criterion for a
+   bump is a build that would DESTROY something, and an old build ignores an
+   unknown top-level key.
+2. **The item book** (`4ac0a47`). `items` keyed by `itemSlugOf(name)` with a
+   24-entry price history, `CostLine.itemSlug`, a datalist that fills itself, and
+   resolution before `plateCost` exactly as preps do. The sentence, from the
+   venue's own numbers: *"Butter — 9.50/kg — +48.4% from 6.40. Used in 2 dishes.
+   1 is above the 25–35% band."* Usage follows preps AND the line's name, not
+   just the link, or the headline understates worst on the day the book is
+   newest.
+3. **`table/` replaced** (`1a6f7d5e`, in the monorepo). It was missing **eleven
+   routes** — `costing`, `preps`, `prep-board`, and eight top-level ones. The
+   scope assertion was run before copying; 126 stale content-hashed assets were
+   dropped by replacing rather than copying over.
 
-1. **The allergen truth pass.** `lineIsEscaped()` discards a whole ingredient
-   line, and `containsFish`/`containsShellfish` read from the escaped set — so
-   "chorizo optional" threw away the shrimp beside it, and a whole fried tilapia
-   shipped `containsFish: false` **and a Vegan badge**. Both flags now follow the
-   allergen policy the file already stated (dairy and egg were moved for the same
-   reason when panna cotta shipped vegan over "500ml cream"). +16 fish, +12
-   shellfish, 16 false vegan badges withdrawn, **zero change to any vegetarian
-   flag**. `/menu` and `/menu/quiz` render three states, always.
-2. **The house record could be wiped by a rollback.** `hydrate()` had no `else`,
-   so a record from a newer build left `#r` as `EMPTY_HOUSE` and the next write
-   put it over the top. Reproduced (`schemaVersion: 99` → two taps → `dishes: []`)
-   and fixed: a newer record is **blocked** — not read, never written over.
-3. **The coverage board's manager gate was copy, not code.** `people` was built
-   over the whole roster while a paragraph told a commis they were seeing only
-   their own coverage. The roster is narrowed **before any session is read** now.
-4. **The shared contrast defect** — three defects wearing one test failure:
-   opacity stacked on an already-muted token, an accent too light to be text
-   (3.53:1 where AA wants 4.5), and an entrance animation fading text through
-   every failing ratio on the way in.
+### 28 Aug — a six-lens review, worked through
 
-**Assessment**
+Condensed from the full write-up in `0e2eb4c`; every rationale below is also in
+the code it describes. Six professional lenses (chef de cuisine, kitchen
+manager, chef patron, compliance, educator, service director) run against the
+codebase and adversarially verified, then worked through 1–15.
 
-5. **26 technique standards**, covering every technique the corpus uses on 25+
-   recipes — 638 recipes gained a standard. Only **69 of 103** techniques add any
-   coverage; 34 are fully redundant.
-6. **Grade the mark, not the plate.** 355 marks carry frozen ledgered ids; the
-   pass screen's marks are tappable; the palate fault the cook names is kept
-   instead of dying with the dialog.
-7. **The calibration bench** — a triangle test, six ladders, six trials a run,
-   the app holding the answer.
-8. **House dishes are assessable**, and the self-declared tags structurally
-   cannot reach `/coverage`.
+**Safety and correctness.** The allergen truth pass — `lineIsEscaped()` discarded
+a whole ingredient line and the fish/shellfish tests read from the escaped set,
+so "chorizo optional" threw away the shrimp beside it and a whole fried tilapia
+shipped `containsFish: false` **and a Vegan badge**: +16 fish, +12 shellfish, 16
+false vegan badges withdrawn, zero vegetarian flags changed · the house record
+could be wiped by a rollback (`hydrate()` had no `else`; a newer record is now
+**blocked**, not read and never written over) · the coverage board's manager gate
+was copy rather than code · the shared contrast defect, three defects wearing one
+test failure (3.53:1 where AA wants 4.5, plus an animation fading text through
+every failing ratio on the way in).
 
-**Service and money**
+**Assessment.** 26 technique standards covering every technique used on 25+
+recipes, so **638 recipes gained a standard** — only 69 of 103 techniques add any
+coverage · grade the mark, not the plate (355 ledgered marks, tappable, and the
+named palate fault survives the dialog) · the calibration bench, six ladders and
+a triangle test with the app holding the answer · house dishes are assessable and
+their self-declared tags structurally cannot reach `/coverage`.
 
-9. **The Pass tells the truth** — course firing (everything used to land at
-   19:00:00), a real hands sweep against the crew in the room, and a clock that
-   survives a walk to the walk-in.
-10. **Preps** — cost the demi once. On the worked example the real number is
-    **9.30 a portion against a 6.00 guess**.
-11. **The prep board** — count the walk-in and the day back-times itself, through
-    the same `buildPass`.
-12. **Covers by week**, without the migration that would have broken it.
-13. **Three money bugs** — tax-inclusive pricing (contribution overstated by 3.00
-    and food cost understated 5.5 points on **every** dish), an import banner that
-    said "nothing new" before rewriting costings, and a sheet that could not print.
-14. **A sheet that adds up** — weighted food cost. On the worked case the mean is
-    32% and the weighted figure is **41.2%**.
-15. **A timer not attached to a recipe** — `timers.start` had exactly one call
-    site in the whole app.
-
+**Service and money.** The Pass tells the truth — course firing, a real hands
+sweep, a clock that survives the walk-in · preps, costing the demi once: **9.30 a
+portion against a 6.00 guess** · the prep board back-times the day through the
+same `buildPass` · covers by week · three money bugs, of which tax-inclusive
+pricing overstated contribution by 3.00 and understated food cost 5.5 points on
+**every** dish · weighted food cost, where the worked case is **41.2% against a
+32% mean** · a timer not attached to a recipe (`timers.start` had one call site
+in the app).
 ---
 
 ## What's left, ranked
 
-1. **The item book.** `unitCost` is stored per line per dish and `editLine`
-   patches it in place, so the previous number does not exist anywhere — which
-   makes the guide's own advice (*"reprice quarterly against invoice creep;
-   menus that sleep bleed"*) structurally impossible to follow. Butter is free
-   text on fourteen lines in fourteen dishes.
-
-   Design: `items` keyed by slug with a capped price history, `CostLine.itemSlug?`,
-   a datalist that populates itself from what has already been typed so there is
-   no master-data chore, resolution to plain CostLines before `plateCost` exactly
-   as preps do, and — the part that matters — **history merged by UNION on the
-   timestamp**, because newer-wins-whole would discard every price change the
-   losing device recorded, which is the one thing the feature exists to keep.
-   NEVER mandatory: a one-off truffle stays free text, or a ten-minute costing
-   becomes an afternoon of master data and the sheet stops being opened.
-
-   The sentence that IS the feature: *"Butter is used in 14 dishes. 3 have moved
-   out of the 25–35% band."*
-2. **The waste log** — valued from `plateCost`, five reason codes, rolled up
+1. **The e2e suite has never touched import or export.** `grep -rl` over
+   `tests/*.spec.ts` for the .wtjson path returns nothing, so the whole
+   transport — the thing that just turned out to have been broken since preps
+   shipped — is covered by unit tests alone. The unit tests could not have
+   caught the original defect either: it lived in the CALL SITES, and reverting
+   the page wiring left 460 tests green. It is caught now only because the
+   arguments were made required and `check` names them. An e2e that exports,
+   clears the record and re-imports would close it properly.
+2. **Lines that are not following the book.** A line keeps its own `unitCost`
+   until somebody links it, so a venue can hold butter at 6.40 on one dish and
+   9.50 in the book. The item book row knows which dishes reach the item; it
+   does not yet say which of them are on a stale number. The datalist plus
+   auto-link makes this rare on new work and common on everything costed before
+   the book existed.
+3. **The waste log** — valued from `plateCost`, five reason codes, rolled up
    venue-wide and **never per person**.
-3. **More technique standards.** The threshold IS the worklist: lower
+4. **More technique standards.** The threshold IS the worklist: lower
    `TECHNIQUE_GATE_MIN_RECIPES`, run `build:data`, and the reverse gate names
    exactly what it wants. 20 asks for 13 more and reaches 745 of 824; 15 asks for
    20 more and reaches 782.
-4. **The allergen vocabulary.** 99 of 970 recipes still carry no flag at all.
+5. **The allergen vocabulary.** 99 of 970 recipes still carry no flag at all.
    `allergens.test.ts` asserts `NOT_SCREENED` stays non-empty, so the day it
    lands the copy is forced to change.
-5. **Yield tests.** Zero content, and the costing sheet depends on the number.
-6. **Repetition under load.** The Pass computes collisions; that is a drill.
-7. **The costing CSV** — one-way door, and see the no-importer rule above.
+6. **Yield tests.** Zero content, and the costing sheet depends on the number.
+7. **Repetition under load.** The Pass computes collisions; that is a drill.
+8. **The costing CSV** — one-way door, and see the no-importer rule above.
 
 ## Open questions for the owner
 
@@ -264,28 +292,63 @@ adversarially verified. Its ranked list was then worked through 1–12.
   dated training record. This product refuses on grounds worth keeping: nothing
   here is witnessed, dated, signed or tamper-evident.
 
-## BLOCKING DEPLOY
+## Deploying to the monorepo
 
-**`table/` in the monorepo is a stale build.** It contains none of this session's
-routes. The sync, in PowerShell not Git Bash:
+**`table/` is current as of `1a6f7d5e` and nothing is blocking.** It had been
+stale enough to be missing eleven routes, so re-sync after any route change
+rather than assuming it followed.
+
+The procedure is written out in **`OutsideOfTime/README.md` "Rebuilding the
+World Table"** — that file, not this one, and the order is load-bearing. In
+short, and in PowerShell rather than Git Bash (MSYS rewrites the leading slash
+into a Windows path and SvelteKit rejects it with an error that never mentions
+your shell):
 
 ```
 $env:BASE_PATH='/table'; npm run build:pages
 ```
 
-then the scope greps in `README.md:186-205`, copy into `table/`, re-inject
-(`node .scripts/inject-oot-bar.mjs` and `--check`). Order is load-bearing.
+Then, before copying anything, the scope assertion — the README calls it the one
+step in the whole process that can break the entire product, and it is right,
+because a World Table worker at origin scope answers every navigation on the
+site from its own shell:
+
+```
+grep -rho 'sw\.js`,{scope:`[^`]*`' _app/immutable/   # must print scope:`/table/`
+```
+
+Then REPLACE `table/` (`rm -rf` and copy, not copy-over, or content-hashed
+chunks accumulate forever — 126 of them had), and re-inject with
+`node .scripts/inject-oot-bar.mjs` followed by `--check`, which exits non-zero
+if any page lacks the chip. 1,219 html files at the last run.
 
 Versions: shared scripts **v18**, `oot-home.css?v=18`; `codex-v67`,
-`ledger-v39`, `firstlight-v45`, `cfl-v84`.
+`ledger-v39`, `firstlight-v45`, `cfl-v84`. The Table's own copy of
+`shared/oot-home.css` is byte-identical to the monorepo's, so a rebuild does not
+regress the AA contrast fix — but check it, because the build copies its own.
 
 ## A note on method
 
 The valuable habits, repeatedly: **measure before building**, **break every gate
-to prove it fires**, and **verify in the browser** — several defects this session
+to prove it fires**, and **verify in the browser** — defects in both sessions
 were invisible to a green test suite and obvious on screen. When a mutation does
 not fire a gate, check whether the mutation or the gate is at fault; twice it was
-the mutation. And two tests were found asserting the bug they were meant to
-catch.
+the mutation. Tests have twice been found asserting the bug they were meant to
+catch, and once naming the universal case as an edge case.
+
+Two more, both earned on 29 Aug:
+
+**Break the CALL SITE, not only the function.** Reverting the page wiring to the
+exact original defect left **460 tests green**. The unit tests covered the merge
+perfectly and nothing covered whether anybody called it. When a feature spans a
+pure function and the two lines that invoke it, the invocation is where the bug
+will be — and the cheapest permanent gate is a REQUIRED argument, because an
+omitted optional one compiles in silence while `check` names every call site.
+
+**The browser is where wording fails.** The band sentence was correct code and a
+wrong claim: it announced that a dish had "moved out of the band" over a plaice
+whose sheet had one line on it, because every dish is under the band before it
+is costed — so the headline was loudest when it had least to say. No test would
+have called that wrong. It was obvious in one glance at the rendered page.
 
 Assume anything in this document you have not re-run is stale.
