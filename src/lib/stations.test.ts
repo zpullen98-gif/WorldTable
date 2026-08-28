@@ -6,7 +6,8 @@ import {
 	isTournant,
 	whoCanCover,
 	type Station,
-	type Attempt
+	type Attempt,
+	coldTechniques
 } from './stations';
 
 /**
@@ -167,5 +168,50 @@ describe('who can cover tonight', () => {
 		const row = whoCanCover('saucier', people)[0];
 		expect(row.touched).toBe(0);
 		expect(row.band).toBe('none');
+	});
+});
+
+describe('which techniques have gone cold', () => {
+	/**
+	 * "Can they still do it" is what a chef means by coverage, and the board had
+	 * no answer at all: a technique cooked once three years ago read identically
+	 * to one cooked last night.
+	 */
+	const DAY = 86_400_000;
+	const now = 1_800_000_000_000;
+	const byTech = new Map<string, string[]>([
+		['Braising', ['coq-au-vin', 'boeuf-bourguignon']],
+		['Searing', ['steak-frites']],
+		['Whipping', ['meringue']]
+	]);
+	const cooked = (slug: string, daysAgo: number) => ({
+		slug,
+		at: now - daysAgo * DAY,
+		grade: 'met' as const
+	});
+
+	it('says nothing about a technique never cooked — that is a gap, not a decay', () => {
+		const out = coldTechniques([cooked('coq-au-vin', 1)], ['Braising', 'Whipping'], byTech, now);
+		expect(out, 'an untouched technique was reported as cold').toEqual([]);
+	});
+
+	/** One dish still in date keeps the technique warm: the last time you did it counts. */
+	it('keeps a technique warm while any of its dishes is still in date', () => {
+		const log = [cooked('coq-au-vin', 900), cooked('boeuf-bourguignon', 1)];
+		expect(coldTechniques(log, ['Braising'], byTech, now)).toEqual([]);
+	});
+
+	it('calls it cold when every dish drilling it is past its re-cook', () => {
+		// One cook, years ago: the first rung is 14 days.
+		const log = [cooked('steak-frites', 900)];
+		expect(coldTechniques(log, ['Searing'], byTech, now)).toEqual(['Searing']);
+	});
+
+	it('leaves a technique cooked last night alone', () => {
+		expect(coldTechniques([cooked('steak-frites', 1)], ['Searing'], byTech, now)).toEqual([]);
+	});
+
+	it('is empty for a cook who has done nothing', () => {
+		expect(coldTechniques([], ['Braising', 'Searing'], byTech, now)).toEqual([]);
 	});
 });

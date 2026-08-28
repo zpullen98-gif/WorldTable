@@ -25,7 +25,7 @@ third one drove most of this session's work — front of house had nothing.
 |---|---|
 | WorldTable | branch `dish-standards`, **16 commits unpushed** (remote is `origin/master`), plus the technique-standards work below |
 | OutsideOfTime | branch `main`, HEAD `3ca8361e`, tree clean, **no git remote — never pushed** |
-| Tests | **414 unit** (28 files), **76 e2e** (76 pass — **the suite is green**) |
+| Tests | **419 unit** (28 files), **76 e2e** (76 pass — **the suite is green**) |
 | Gates | `npm run build:data` all pass · `npm run verify:build` **18/18** |
 | Precache | 1.39 MB gzipped against a 2.00 MB cap |
 | Routes | 24 · Derived JSON | 19 files |
@@ -816,6 +816,50 @@ own promise.
 is worth stating as a rule rather than a task — **one-way door, no importer,
 ever**: the .wtjson is the single portability contract with tested merge
 semantics, and a second import path forks them with nothing behind it.
+
+## The coverage board — finished, and a gate that was only copy
+
+**The gate was a warning, not a gate.** `people` was built unconditionally from
+`profiles.list()` and `loadAllSessions()` over the WHOLE roster, and
+`manager = isManagerDevice()` only decided whether a paragraph rendered — a
+paragraph telling a commis on the pass tablet they were *"seeing only your own
+coverage"* while the page showed them everybody's. It did not merely fail to
+gate; it said the opposite of what it was doing.
+
+The roster is now narrowed **before any session is read**, so a non-manager
+device never loads anybody else's record at all. Reading less is a gate; not
+rendering what you already read is a curtain. The warning's copy is now true.
+
+**The board held three answers it never gave.** All three were already computable
+from data on the device:
+
+- **The worklist.** `gaps` has been computed at `stations.ts:145` since the board
+  shipped and rendered nowhere, so a chef learned Priya was at "some of it" and
+  not which two things to put her on next. Now: *"next: The bare simmer, Straining
+  & passing through a sieve"* — ordered by how many corpus recipes drill each, so
+  the top suggestion is the easiest to arrange on a Tuesday.
+- **Recency.** A technique cooked once three years ago read identically to one
+  cooked last night, which is exactly what a chef means by "can they still do
+  it". `coldTechniques()` reuses `repertoire()`'s own `dueAt` — same decay model,
+  no second clock. A technique is cold when EVERY dish the person cooked that
+  drills it is past its re-cook; one dish still in date keeps it warm, which is
+  how a cook actually holds a skill. Verified: a 900-day-old sear reads
+  **"2 gone cold"** beside a braise cooked this week.
+- **Thin cover.** *"Saucier and Rôtisseur have one person each"* — the risk a head
+  chef carries in their head and loses on precisely the morning it matters. A
+  count of NAMES, never a score. Suppressed entirely when nothing is covered,
+  because on a fresh device every station is uncovered and the line is noise.
+
+**No count of what is left, ever.** "2 of 10 remaining" is `bandFor`'s percentage
+with the division done in the reader's head, and it walks straight into the
+threshold this board exists to refuse.
+
+Also fixed: the limits block still claimed *"only 45 of the guide's 970 dishes
+state a standard"* — stale since the technique standards landed earlier in this
+session. It now reads 683, split 45 own / 638 by technique. And `/coverage`
+folded into `OWNS` under Service, so the tab lights at four o'clock — kept in the
+separate const, or `verify-build.mjs`'s MODES scanner resolves it to page files
+that cannot exist.
 
 ## What's left, ranked
 

@@ -24,6 +24,10 @@
  * the consequences of being wrong.
  */
 
+// repertoire.ts does not import this module, so the direction is one-way and
+// there is no cycle. The decay model lives there and is not duplicated here.
+import { repertoire, type CookEntry } from './repertoire';
+
 export type StationKey =
 	| 'saucier'
 	| 'garde-manger'
@@ -164,6 +168,41 @@ export function isTournant(coverage: readonly StationCoverage[]): boolean {
  * The whole point of the board. Sorted by how much of the station a person has
  * actually done, then by how much of it they have done to a stated standard.
  */
+/**
+ * Which of a person's touched techniques have GONE COLD.
+ *
+ * "Can they still do it" is what a chef actually means, and the board had no
+ * answer: a technique cooked once three years ago read identically to one
+ * cooked last night. The decay model already exists one module away — this
+ * reuses repertoire()'s own dueAt rather than inventing a second clock.
+ *
+ * A technique is cold when EVERY dish the person has cooked that drills it is
+ * past its re-cook date. One dish still in date keeps the technique warm, which
+ * matches how a cook actually holds a skill: the last time you did it counts,
+ * not the average of every time.
+ *
+ * It reports a COUNT of cold techniques and never a remaining count. "2 of 10
+ * left" is bandFor's percentage with the division done in the reader's head,
+ * and it walks straight into the threshold this board exists to refuse.
+ */
+export function coldTechniques(
+	log: CookEntry[],
+	techniques: readonly string[],
+	recipesByTechnique: ReadonlyMap<string, readonly string[]>,
+	now: number
+): string[] {
+	const due = new Map(repertoire(log, now).map((e) => [e.slug, e.dueAt]));
+	const cold: string[] = [];
+	for (const t of techniques) {
+		const cooked = (recipesByTechnique.get(t) ?? []).filter((slug) => due.has(slug));
+		// Never cooked at all is a GAP, not a cold technique. Different answer,
+		// different remedy: one needs arranging, the other needs repeating.
+		if (!cooked.length) continue;
+		if (cooked.every((slug) => (due.get(slug) as number) <= now)) cold.push(t);
+	}
+	return cold;
+}
+
 export function whoCanCover(
 	station: StationKey,
 	people: ReadonlyArray<{ id: string; name: string; coverage: StationCoverage[] }>

@@ -71,7 +71,9 @@
 	 */
 	const OWNS: Array<[string, string[]]> = [
 		['/practise', ['/practise', '/repertoire', '/menu/quiz']],
-		['/service', ['/service', '/menu']],
+		// /coverage is Service: it is the question a chef asks at four o'clock,
+		// beside the menu and the pass, not something they are being taught.
+		['/service', ['/service', '/menu', '/coverage']],
 		['/learn', ['/learn', '/study', '/technique', '/palate', '/safety']],
 		['/recipes', ['/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry']]
 	];

@@ -25,7 +25,15 @@
 	import { base } from '$app/paths';
 	import * as profiles from '$lib/profiles';
 	import { loadAllSessions } from '$lib/persistence/db';
-	import { coverageFor, whoCanCover, isTournant, BAND_LABEL, type Station, type StationCoverage } from '$lib/stations';
+	import {
+		coverageFor,
+		whoCanCover,
+		coldTechniques,
+		isTournant,
+		BAND_LABEL,
+		type Station,
+		type StationCoverage
+	} from '$lib/stations';
 
 	let { data } = $props();
 
@@ -43,17 +51,89 @@
 		manager = profiles.isManagerDevice();
 		const list = profiles.list();
 		roster = list.length;
-		const sessions = await loadAllSessions(list.map((p) => ({ id: p.id, name: p.name, legacy: p.legacy })));
+
+		/**
+		 * THE GATE, WHICH USED TO BE COPY.
+		 *
+		 * `people` was built unconditionally from the whole roster and `manager`
+		 * only decided whether a warning rendered — a warning that told a commis
+		 * on the pass tablet they were "seeing only your own coverage" while the
+		 * page showed them everybody's. The page did not merely fail to gate; it
+		 * said the opposite of what it was doing.
+		 *
+		 * The roster is now narrowed BEFORE any session is read, so a non-manager
+		 * device never loads anybody else's record at all. Reading less is the
+		 * gate; not rendering what you already read is a curtain.
+		 */
+		const mine = profiles.current();
+		const visible = manager ? list : list.filter((p) => p.id === mine?.id);
+
+		const sessions = await loadAllSessions(
+			visible.map((p) => ({ id: p.id, name: p.name, legacy: p.legacy }))
+		);
 		people = sessions.map((s) => ({
 			id: s.id,
 			name: s.name,
 			// Cooks only. A drill answer is knowledge; a station is work.
 			coverage: coverageFor(s.session.cookedLog, stations, recipesByTechnique)
 		}));
+
+		const now = Date.now();
+		const cold = new Map<string, Map<string, string[]>>();
+		for (const s of sessions) {
+			const perStation = new Map<string, string[]>();
+			for (const st of stations) {
+				perStation.set(
+					st.key,
+					coldTechniques(s.session.cookedLog, st.techniques, recipesByTechnique, now)
+				);
+			}
+			cold.set(s.id, perStation);
+		}
+		coldBy = cold;
 		ready = true;
 	});
 
 	const tournants = $derived(people.filter((p) => isTournant(p.coverage)));
+
+	/**
+	 * How many of each person's touched techniques have gone cold, per station.
+	 *
+	 * Read from the same cooked logs the coverage came from. Computed here
+	 * rather than inside coverageFor because it is time-dependent and coverage
+	 * is not — a band does not change while the page is open, and a cold count
+	 * would.
+	 */
+	let coldBy = $state(new Map<string, Map<string, string[]>>());
+
+	/**
+	 * Stations exactly one person has touched.
+	 *
+	 * A COUNT OF NAMES, not a score. This is the risk a head chef carries in
+	 * their head and loses on precisely the morning it matters — the scenario
+	 * the page was built for and the one thing it never said.
+	 */
+	const thin = $derived(
+		stations
+			.map((st) => ({
+				name: st.name,
+				covers: whoCanCover(st.key, people).filter((c) => c.touched > 0)
+			}))
+			.filter((x) => x.covers.length === 1)
+	);
+	const uncovered = $derived(
+		stations.filter((st) => whoCanCover(st.key, people).every((c) => c.touched === 0))
+	);
+	/**
+	 * On a device where nobody has cooked anything, EVERY station is uncovered
+	 * and the line is noise rather than a risk. It is only a warning once some
+	 * of the pass is covered and some of it is not.
+	 */
+	const showRisk = $derived(uncovered.length < stations.length && (thin.length > 0 || uncovered.length > 0));
+
+	/** "a, b and c" — six things joined with "and" is not a sentence. */
+	const listOf = (xs: string[]) =>
+		xs.length <= 1 ? (xs[0] ?? '') : xs.slice(0, -1).join(', ') + ' and ' + xs[xs.length - 1];
 </script>
 
 <svelte:head><title>Coverage — The World Table</title></svelte:head>
@@ -78,6 +158,19 @@
 			</p>
 		{/if}
 
+		{#if showRisk}
+			<p class="thin">
+				{#if uncovered.length}
+					<b>{listOf(uncovered.map((s) => s.name))}</b>
+					{uncovered.length === 1 ? 'has' : 'have'} nobody at all.
+				{/if}
+				{#if thin.length}
+					<b>{listOf(thin.map((t) => t.name))}</b>
+					{thin.length === 1 ? 'has' : 'have'} one person each — {listOf([...new Set(thin.map((t) => t.covers[0].name))])}.
+				{/if}
+			</p>
+		{/if}
+
 		<h2 class="sec">Who can cover tonight</h2>
 		<p class="secnote">
 			Ordered by how much of each station a person has actually cooked. A name at zero is not a
@@ -93,11 +186,42 @@
 				</h3>
 				<ul class="people">
 					{#each covers as c (c.id)}
+						{@const cold = coldBy.get(c.id)?.get(s.key) ?? []}
+						{@const gaps = people.find((p) => p.id === c.id)?.coverage.find((x) => x.key === s.key)?.gaps ?? []}
 						<li>
 							<span class="who">{c.name}</span>
 							<span class="band" data-band={c.band}>{BAND_LABEL[c.band]}</span>
 							<span class="count">{c.touched} of {c.of}</span>
 							{#if c.met}<span class="met">{c.met} to a standard</span>{/if}
+							{#if cold.length}
+								<!-- "Can they still do it" is what a chef means, and the board had
+								     no answer: a technique cooked once three years ago read
+								     identically to one cooked last night. Same decay model as the
+								     Repertoire, no second clock. -->
+								<span class="cold">{cold.length} gone cold</span>
+							{/if}
+							{#if gaps.length}
+								<!--
+									The worklist. `gaps` has been computed since the board shipped and
+									rendered nowhere, so a chef learned Priya was at "some of it" and
+									not which two things to put her on next.
+
+									Ordered by how many corpus recipes drill each, most first, so the
+									top suggestion is the easiest to arrange on a Tuesday. Never a
+									count of what is left — that is a percentage with the division
+									done in the reader's head.
+								-->
+								<span class="next">
+									next: {[...gaps]
+										.sort(
+											(a, b) =>
+												(recipesByTechnique.get(b)?.length ?? 0) -
+												(recipesByTechnique.get(a)?.length ?? 0)
+										)
+										.slice(0, 2)
+										.join(', ')}
+								</span>
+							{/if}
 						</li>
 					{:else}
 						<li class="empty">Nobody on this device has cooked here.</li>
@@ -116,7 +240,8 @@
 		<div class="limits">
 			<p>
 				<b>It is coverage, not competence.</b> It counts the techniques a person has cooked a dish for.
-				It cannot see whether the plate was any good — only 45 of the guide's 970 dishes state a standard,
+				It cannot see whether the plate was any good on most dishes — 683 of the guide's 970 are now
+				assessable, 45 against a standard of their own and 638 against the techniques they exercise,
 				so “to a standard” is always a floor and never a measure.
 			</p>
 			<p>
@@ -246,6 +371,23 @@
 		color: var(--muted);
 	}
 	.count,
+	.thin {
+		border: 1px solid var(--line-strong);
+		border-left: 3px solid var(--chili);
+		border-radius: var(--radius);
+		padding: 10px 12px;
+		margin: 0 0 18px;
+		line-height: 1.55;
+	}
+	/* Real colours, never stacked opacity — see shared/oot-home.css. */
+	.cold {
+		color: var(--chili);
+	}
+	.next {
+		flex-basis: 100%;
+		color: var(--ink-soft);
+		font-size: var(--t-small, 0.8125rem);
+	}
 	.met {
 		font-size: var(--t-small);
 		color: var(--muted);
