@@ -186,6 +186,24 @@ class TimerStore {
 		return timer.id;
 	}
 
+	/**
+	 * Rename a running timer.
+	 *
+	 * Labels were auto-generated "{dish} - step N" and could not be changed, so
+	 * three clocks on the bar were unreadable from two metres in steam. The bar
+	 * is read at a distance, by somebody holding a pan.
+	 *
+	 * Trimmed and capped, because the bar is a fixed width and a label that
+	 * wraps to three lines pushes the clock off the edge — the one thing on the
+	 * row that has to stay readable.
+	 */
+	rename(id: string, label: string) {
+		const clean = label.trim().slice(0, 24);
+		if (!clean) return;
+		this.#timers = this.#timers.map((t) => (t.id === id ? { ...t, label: clean } : t));
+		this.#persist();
+	}
+
 	pause(id: string) {
 		this.#timers = this.#timers.map((t) =>
 			t.id === id && t.endsAt != null

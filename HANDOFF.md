@@ -25,7 +25,7 @@ third one drove most of this session's work — front of house had nothing.
 |---|---|
 | WorldTable | branch `dish-standards`, **16 commits unpushed** (remote is `origin/master`), plus the technique-standards work below |
 | OutsideOfTime | branch `main`, HEAD `3ca8361e`, tree clean, **no git remote — never pushed** |
-| Tests | **419 unit** (28 files), **76 e2e** (76 pass — **the suite is green**) |
+| Tests | **419 unit** (28 files), **80 e2e** (80 pass — **the suite is green**) |
 | Gates | `npm run build:data` all pass · `npm run verify:build` **18/18** |
 | Precache | 1.39 MB gzipped against a 2.00 MB cap |
 | Routes | 24 · Derived JSON | 19 files |
@@ -860,6 +860,47 @@ session. It now reads 683, split 45 own / 638 by technique. And `/coverage`
 folded into `OWNS` under Service, so the tab lights at four o'clock — kept in the
 separate const, or `verify-build.mjs`'s MODES scanner resolves it to page files
 that cannot exist.
+
+## A timer that is not attached to a recipe
+
+`timers.start` had exactly **one call site in the whole app** — cook mode's. So
+the rice, the refire on table 12, the Barolo in the decanter and "check the fryer
+at twenty past" all went on a cook's phone, which is the thing this app was meant
+to replace, and the bar honestly showed two of the five pots actually running.
+
+- A `+` on the bar: free-text label capped at 24 characters, duration tapped from
+  3/5/10/20/40 or typed. **No store change needed** — `start()` already took
+  `{ label, seconds }` with `recipeSlug` and `stepIndex` optional.
+- **The affordance had to exist when nothing is running**, which the plan did not
+  account for: the bar rendered nothing at all when the list was empty, so a `+`
+  on it would have been invisible exactly when a cook needs it. It now renders a
+  small `+ Timer` chip always, and the full bar when timers exist.
+- **Rename**, the one store change. Labels were auto-generated `{dish} · step N`
+  and could not be changed, so three clocks on the bar were unreadable from two
+  metres in steam.
+- Timers are told apart by **when they go off**, not by renaming them for the
+  cook. Two pots called "T12" is a real situation, and the deadline both
+  disambiguates them and says which fires first.
+- **COUNTDOWN ONLY, and that is not a simplification.** `get active()` filters on
+  `endsAt != null || rang`, so a count-up timer would never appear in the bar at
+  all, and `#tick` stops the ticker when nothing carries an `endsAt`, so a lone
+  one would freeze on its first tick.
+
+**It says on its own face what it cannot do.** `ring()` is Web Audio with a
+documented *"audio is a courtesy, never a dependency"* catch, there is no OS
+notification, and there is no wake lock outside cook mode — so a long clock on a
+tablet locked at 9pm will not alert anybody and would still be believed. The
+form reads *"Rings only while the app is open on this device."*
+
+**Not built:** the cooling preset. It is only worth having if labelled with the
+guide's law, and doing that honestly means a NAMED gated field in
+`sanitation.mjs` — indexing `sanitation.json`'s numbers array would let a
+reworded guide sentence silently change the chips while every existing gate
+stayed green. A marginal feature is not worth a fragile gate.
+
+Four e2e tests rather than unit ones: the store is a runes module a vitest test
+cannot reach, the same reason `mergeSessions` and `repertoire.ts` are pure
+functions living outside their stores.
 
 ## What's left, ranked
 
