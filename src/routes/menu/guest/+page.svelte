@@ -3,10 +3,52 @@
 	import { base } from '$app/paths';
 	import { bySlug } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
+	import { house } from '$lib/stores/house.svelte';
 
 	let { data } = $props();
 
-	const COURSE_ORDER = ['Starter', 'Salad', 'Soup', 'Main', 'Side', 'Bread', 'Dessert', 'Drink'];
+	/**
+	 * All TEN courses, not the eight this listed. Breakfast (59 recipes) and
+	 * Sauce (22) were missing, and `courses` filters on this list — so a pinned
+	 * omelette was silently absent from the card a guest was handed.
+	 */
+	const COURSE_ORDER = [
+		'Breakfast',
+		'Starter',
+		'Salad',
+		'Soup',
+		'Main',
+		'Side',
+		'Sauce',
+		'Bread',
+		'Dessert',
+		'Drink'
+	];
+
+	/**
+	 * Two menus, and the card must say which it is printing.
+	 *
+	 * This page printed PINNED GUIDE RECIPES only, so a venue that had entered,
+	 * priced and allergen-marked its whole menu tapped Print and handed a guest
+	 * a card listing Pizza Margherita. The house menu is the obvious default —
+	 * but silently repointing would break the dinner-party use this was built
+	 * for, so the pinned mode stays as a labelled choice.
+	 */
+	let mode = $state<'house' | 'pinned'>('house');
+	const houseDishes = $derived(house.dishes);
+	const showing = $derived(mode === 'house' && houseDishes.length ? 'house' : 'pinned');
+
+	/** The venue's own menu, in the sections the kitchen typed. */
+	const houseSections = $derived.by(() => {
+		const m = new Map<string, typeof houseDishes>();
+		for (const d of houseDishes) {
+			if (house.is86(d.id)) continue; // 86'd tonight is not on tonight's card
+			const key = d.section || 'The Menu';
+			if (!m.has(key)) m.set(key, []);
+			m.get(key)!.push(d);
+		}
+		return [...m.entries()].map(([section, items]) => ({ section, items }));
+	});
 
 	const famBySlug = $derived(new Map(session.familyRecipes.map((r) => [r.slug, r])));
 	const pinned = $derived(
@@ -41,12 +83,51 @@
 <div class="page">
 	<nav class="tools" data-print="hide">
 		<a class="chip" href="{base}/menu">← Back to the worksheet</a>
-		<button class="chip go" onclick={() => window.print()} disabled={!pinned.length}>
+		{#if houseDishes.length}
+			<button class="chip" class:on={showing === 'house'} onclick={() => (mode = 'house')}>
+				The kitchen's menu
+			</button>
+			<button class="chip" class:on={showing === 'pinned'} onclick={() => (mode = 'pinned')}>
+				Pinned from the guide
+			</button>
+		{/if}
+		<button
+			class="chip go"
+			onclick={() => window.print()}
+			disabled={showing === 'house' ? !houseSections.length : !pinned.length}
+		>
 			Print the menu
 		</button>
 	</nav>
 
-	{#if pinned.length}
+	{#if showing === 'house' && houseSections.length}
+		<article class="gm">
+			<h1>The World <span>Table</span></h1>
+			<p class="orn" aria-hidden="true">❦</p>
+
+			{#each houseSections as g (g.section)}
+				<h2>{g.section}</h2>
+				{#each g.items as d (d.id)}
+					<div class="dish">
+						<p class="name">{d.name}{#if d.price}<span class="price">{d.price}</span>{/if}</p>
+						{#if d.description}<p class="desc">{d.description}</p>{/if}
+					</div>
+				{/each}
+			{/each}
+
+			<p class="orn" aria-hidden="true">❧</p>
+			<!--
+				Fixed, and not removable. The card carries NO allergen marks: this
+				screen's marks are a kitchen record, and a printed list reads to a
+				guest as a guarantee the derivation cannot make. The invitation to
+				ask is the only honest thing a menu can say about an allergy.
+			-->
+			<p class="allergy">
+				Before you order, please tell us about any allergy or intolerance.
+			</p>
+			{#if dateline}<p class="date">{dateline}</p>{/if}
+		</article>
+	{:else if showing === 'pinned' && pinned.length}
 		<article class="gm">
 			<h1>The World <span>Table</span></h1>
 			<p class="orn" aria-hidden="true">❦</p>
@@ -62,16 +143,36 @@
 			{/each}
 
 			<p class="orn" aria-hidden="true">❧</p>
+			<p class="allergy">
+				Before you order, please tell us about any allergy or intolerance.
+			</p>
 			{#if dateline}<p class="date">{dateline}</p>{/if}
 		</article>
 	{:else}
 		<p class="empty" data-print="hide">
-			Nothing pinned yet — the guest menu sets itself from the dishes on your worksheet.
+			{#if showing === 'house'}
+				No dishes on the kitchen's menu yet — enter them on the worksheet and they print here.
+			{:else}
+				Nothing pinned yet — the guest menu sets itself from the dishes on your worksheet.
+			{/if}
 		</p>
 	{/if}
 </div>
 
 <style>
+	.chip.on {
+		font-weight: 700;
+	}
+	.price {
+		float: right;
+		font-variant-numeric: tabular-nums;
+	}
+	.allergy {
+		margin-top: 18px;
+		text-align: center;
+		font-size: 0.86rem;
+		font-style: italic;
+	}
 	.page {
 		max-width: 720px;
 		margin: 0 auto;

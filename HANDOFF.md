@@ -485,12 +485,30 @@ Both links are asserted. The first draft of that test looked for slugs starting
 `fam-` and would have passed against any codebase at all — family recipes are
 identified by `source === 'family'`, not a prefix.
 
-**Still outstanding on this item:** `MenuDish.recipeSlug` (a pointer, so a menu
-dish can reach the Pass, cook mode and the Repertoire), and repointing
-`/menu/guest`, which today prints PINNED GUIDE RECIPES — a venue that has
-entered, priced and allergen-marked its whole menu taps Print and hands a guest
-a card listing Pizza Margherita. Keep the pinned mode as a second labelled tab;
-silently repointing it would break the dinner-party use.
+### The pointer, and the card a guest is actually handed
+
+`MenuDish.recipeSlug` — a POINTER, not a method. "A menu item is not a Recipe"
+still holds: the dish carries no steps, no quantities and no technique tags of
+its own. But one slug lets the lamb rump that goes out sixty times a week reach
+cook mode, the standard it is judged against, and the Repertoire. The form
+matches by NAME through a datalist, because a chef knows what the dish is called
+and not what its slug is; the worksheet row then offers "Cook Coq au Vin ▸".
+
+`/menu/guest` printed PINNED GUIDE RECIPES, so a venue that had entered, priced
+and allergen-marked its whole menu tapped Print and handed a guest a card
+listing Pizza Margherita — while the page's own empty state said it "sets itself
+from the dishes on your worksheet".
+
+- Two labelled tabs, the kitchen's menu default when it has dishes. Silently
+  repointing would have broken the dinner-party use it was built for.
+- Grouped by the sections the kitchen typed, with prices.
+- **An 86'd dish does not print.** Off tonight is not on tonight's card.
+- **The card carries NO allergen marks, by design.** Those marks are a kitchen
+  record; printed, they read to a guest as a guarantee the derivation cannot
+  make. A fixed, non-removable line invites the conversation instead: *"Before
+  you order, please tell us about any allergy or intolerance."*
+- The guest page carried the SAME 8-of-10 `COURSE_ORDER` bug as /menu, so a
+  pinned omelette was absent from the card too. Fixed.
 
 ## What's left, ranked
 

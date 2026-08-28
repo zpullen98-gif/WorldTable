@@ -38,6 +38,17 @@ export interface MenuDish {
 	 * existed, which reads as not-checked, which is the safe default.
 	 */
 	allergensCheckedAt?: number;
+	/**
+	 * The guide or family recipe this dish is cooked from, if the kitchen has
+	 * said so.
+	 *
+	 * A POINTER, NOT A METHOD. "A menu item is not a Recipe" still holds — this
+	 * dish carries no steps, no ingredients-with-quantities and no technique
+	 * tags of its own. But one slug lets the lamb rump that goes out sixty times
+	 * a week reach cook mode, the standard it is judged against and the
+	 * Repertoire, instead of being a name and a price the app can do nothing with.
+	 */
+	recipeSlug?: string;
 	price: string;
 	/** Last edit, ms epoch; the import-merge tiebreak. */
 	ts: number;

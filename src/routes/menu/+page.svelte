@@ -345,6 +345,7 @@
 	let dishForm = $state<null | {
 		id: string | null; name: string; section: string; description: string;
 		ingredients: string; allergens: string[]; checked: boolean; price: string;
+		recipeSlug: string;
 	}>(null);
 
 	function mintDishId() {
@@ -353,13 +354,17 @@
 		return s;
 	}
 	function newDish() {
-		dishForm = { id: null, name: '', section: '', description: '', ingredients: '', allergens: [], checked: false, price: '' };
+		dishForm = {
+			id: null, name: '', section: '', description: '', ingredients: '',
+			allergens: [], checked: false, price: '', recipeSlug: ''
+		};
 	}
 	function editDish(d: MenuDish) {
 		dishForm = {
 			id: d.id, name: d.name, section: d.section, description: d.description,
 			ingredients: d.ingredients.join('\n'), allergens: [...d.allergens],
-			checked: Boolean(d.allergensCheckedAt), price: d.price
+			checked: Boolean(d.allergensCheckedAt), price: d.price,
+			recipeSlug: d.recipeSlug ?? ''
 		};
 	}
 	function toggleAllergen(a: string) {
@@ -368,6 +373,23 @@
 		if (i < 0) dishForm.allergens.push(a);
 		else dishForm.allergens.splice(i, 1);
 	}
+	/**
+	 * Recipes a menu dish can point at: the guide's 970 and this device's own.
+	 * Matched by NAME through a datalist, because a chef knows what the dish is
+	 * called and not what its slug is.
+	 */
+	const linkable = $derived([
+		...recipes.map((r) => ({ slug: r.slug, name: r.name })),
+		...session.familyRecipes.map((r) => ({ slug: r.slug, name: r.name }))
+	]);
+	const linkedSlug = $derived.by(() => {
+		const typed = dishForm?.recipeSlug?.trim().toLowerCase();
+		if (!typed) return '';
+		return linkable.find((r) => r.name.toLowerCase() === typed)?.slug ?? '';
+	});
+	const nameOfSlug = (slug: string) =>
+		linkable.find((r) => r.slug === slug)?.name ?? slug;
+
 	function saveDish() {
 		if (!dishForm || !dishForm.name.trim()) return;
 		const rec: MenuDish = {
@@ -382,6 +404,7 @@
 			// an edit that changes the build without re-ticking the box drops the
 			// dish back to "not marked", which is the answer that keeps people alive.
 			...(dishForm.checked ? { allergensCheckedAt: Date.now() } : {}),
+			...(linkedSlug ? { recipeSlug: linkedSlug } : {}),
 			price: dishForm.price.trim(),
 			ts: Date.now()
 		};
@@ -737,6 +760,27 @@
 					correctly and ticking none look identical in the record, so the only
 					thing that can tell them apart is somebody saying they looked.
 				-->
+				<label class="linkrow">
+					<span class="sec">Cooked from — optional</span>
+					<input
+						list="linkable-recipes"
+						bind:value={dishForm.recipeSlug}
+						placeholder="Start typing a recipe name…"
+					/>
+				</label>
+				<datalist id="linkable-recipes">
+					{#each linkable as r (r.slug)}<option value={r.name}></option>{/each}
+				</datalist>
+				<p class="techhint2">
+					{#if linkedSlug}
+						Linked. This dish can be cooked, timed and graded like any other.
+					{:else if dishForm.recipeSlug.trim()}
+						No recipe by that name — the dish saves without a link.
+					{:else}
+						Point it at a recipe and the dish reaches cook mode, its standard and the Repertoire.
+					{/if}
+				</p>
+
 				<label class="al affirm">
 					<input type="checkbox" bind:checked={dishForm.checked} />
 					I have checked the allergens on this dish against its build
@@ -791,6 +835,11 @@
 								<p class="da">No allergens marked on this dish</p>
 							{/if}
 							<div class="dishtools" data-print="hide">
+								{#if d.recipeSlug}
+									<a class="chip" href="{base}{recipeHref({ slug: d.recipeSlug } as never)}"
+										>Cook {nameOfSlug(d.recipeSlug)} ▸</a
+									>
+								{/if}
 								<button class="chip" onclick={() => house.toggle86(d.id)}>
 									{house.is86(d.id) ? 'Back on' : '86 it'}
 								</button>
@@ -917,6 +966,15 @@
 		align-items: center;
 		gap: 8px;
 		margin: 14px 0 6px;
+	}
+	.linkrow {
+		display: block;
+		margin-top: 10px;
+	}
+	.techhint2 {
+		margin: 4px 0 0;
+		color: var(--ink-soft);
+		font-size: var(--t-small, 0.8125rem);
 	}
 	.handslabel {
 		font-weight: 600;
