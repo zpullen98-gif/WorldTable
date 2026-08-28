@@ -25,7 +25,7 @@ third one drove most of this session's work — front of house had nothing.
 |---|---|
 | WorldTable | branch `dish-standards`, **16 commits unpushed** (remote is `origin/master`), plus the technique-standards work below |
 | OutsideOfTime | branch `main`, HEAD `3ca8361e`, tree clean, **no git remote — never pushed** |
-| Tests | **428 unit** (29 files), **80 e2e** (80 pass — **the suite is green**) |
+| Tests | **447 unit** (30 files), **80 e2e** (80 pass — **the suite is green**) |
 | Gates | `npm run build:data` all pass · `npm run verify:build` **18/18** |
 | Precache | 1.39 MB gzipped against a 2.00 MB cap |
 | Routes | 24 · Derived JSON | 19 files |
@@ -945,6 +945,66 @@ being opened at all.
 
 The sentence that IS the feature, once it lands: *"Butter is used in 14 dishes.
 3 have moved out of the 25–35% band."*
+
+## The calibration bench
+
+Every cook-side measure in this product was the cook grading themselves. Servers
+had a scored, scheduled drill over 186 cards; cooks had nothing scored at all.
+
+Two cooks season the same dish differently, so the dish is a different dish
+depending on who is on, and the guest notices before the chef does. "This is
+under-seasoned", said for six months to somebody who genuinely cannot taste the
+difference at that concentration, is a **discrimination threshold and not an
+attitude problem** — no amount of telling fixes it, and nothing here could tell
+the two apart.
+
+**The instrument is a triangle test**: three cups, two the same, and the app
+holds the answer — the one thing a cook standing alone cannot do for themselves,
+and the only reason this is a feature rather than advice. The guide's own
+protocol entry asks for exactly this: taste comparatively, and taste single
+ingredients at their extremes, *"to calibrate the instruments"*.
+
+- **Six ladders** — salt, sweet, acid, bitter, umami, and flat-against-seasoned
+  drawn from the repair table — five levels each, narrowing.
+- **A run is six trials, never one.** A triangle test is a 1-in-3 guess, so a
+  single trial logged as "met" would be worth nothing — exactly the failure
+  `drill.ts`'s never-shorten-the-round rule exists to prevent. Five of six to
+  clear; a clean sweep by luck is 1 in 729.
+- The run is **laid out up front**, so the sequence cannot react to how the cook
+  is doing. An instrument that adapts mid-run is a staircase procedure and needs
+  its own estimator; the ladder narrows, the run does not.
+- **One log entry per RUN**, on `calibrationLog` — a THIRD sibling beside
+  `drillLog`, for its documented reason: the mode bar's amber count reads
+  `cookedLog`, and folding these in would report "dishes past their re-cook" in
+  the chrome of every page while counting salt. One slug per level
+  (`cal-salt-3`), so `TERM_LADDER_DAYS` reschedules each concentration with no
+  adapter, and the level reached is READ OFF the slugs cleared rather than stored
+  as a counter that can disagree with its own log.
+- **No number attached to a person.** The verdict is words; the level is a rung.
+- Kept off `/coverage`: calibration is knowledge of your own palate, not work
+  done on a station — the same line `stations.ts` already draws for drill answers.
+
+**The numbers are apparatus and the page says so**, in the disclosure style
+`sanitation.mjs` uses for its 4–60°C conflict. The guide states 5–8% for a wet
+brine and 2–3% for lacto-fermentation and **nothing at all about seasoning**, so
+these are ours: two cups chosen to be discriminable, not a statement of correct
+seasoning and never a house spec. The honest limit is stated too — it measures a
+palate only if the cups are built truthfully.
+
+### A gate that could not fail, again
+
+The first version of the shape gate sat beside the emit, **above**
+`const problems = []`. Every `problems.push` was therefore a ReferenceError —
+which only threw when a problem was actually FOUND. With none, the array was
+never touched and the build passed, green. It was found by breaking it, which is
+the only way it could have been found, and it is now below the declaration with
+that written above it.
+
+Both gates then fired properly: a level made easier than the one before it
+(*"salt level 4 is no harder than the one before it (gap 4 vs 1)"*) and a weight
+no scale reads (*"asks for 5.83"*). A third was added after the build sheet
+rendered "Jug one 3 of fine salt" — a quantity with no unit is not a build sheet,
+and the unit had been missed on one ladder of six.
 
 ## What's left, ranked
 

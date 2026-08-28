@@ -108,6 +108,17 @@ export interface SessionState {
 	 * past their re-cook" in the chrome of every page while counting cheeses.
 	 */
 	drillLog: Array<{ slug: string; at: number; grade?: 'met' | 'close' | 'missed' }>;
+	/**
+	 * The calibration bench, and a THIRD sibling for the same documented
+	 * reason drillLog is a sibling of cookedLog: the mode bar amber count is
+	 * computed from cookedLog, and folding these in would report "dishes past
+	 * their re-cook" in the chrome of every page while counting salt.
+	 *
+	 * One slug per level (cal-salt-3), so repertoire()s TERM_LADDER_DAYS
+	 * reschedules each concentration on a real interval with no adapter, and
+	 * the level a person has reached is read off which slugs they cleared.
+	 */
+	calibrationLog: Array<{ slug: string; at: number; grade?: 'met' | 'close' | 'missed' }>;
 	familyRecipes: Recipe[];
 	/**
 	 * DEPRECATED as a live field — the menu moved to the device-wide house
@@ -236,6 +247,7 @@ export const EMPTY_SESSION: SessionState = {
 	stepActuals: {},
 	cookedLog: [],
 	drillLog: [],
+	calibrationLog: [],
 	familyRecipes: [],
 	menuDishes: [],
 	dishCosts: {},
@@ -474,6 +486,27 @@ export function mergeSessions(
 				if (!seen || (!seen.grade && e.grade)) drilled.set(key, e);
 			}
 			return [...drilled.values()].sort((a, b) => a.at - b.at);
+		})(),
+		/**
+		 * Named explicitly, per the rule above. A genuine export writes the FULL
+		 * state, so a session that predates the bench carries calibrationLog
+		 * present-and-empty — exactly how cookedLog and shoppingChecks were once
+		 * wiped by a bare spread.
+		 *
+		 * Unioned on slug|at like drillLog, because two devices' runs are
+		 * different runs, not competing versions of one.
+		 */
+		calibrationLog: (() => {
+			const done = new Map(
+				(current.calibrationLog ?? []).map((e) => [`${e.slug}|${e.at}`, e])
+			);
+			for (const e of incoming.calibrationLog ?? []) {
+				if (!e || typeof e.slug !== 'string' || typeof e.at !== 'number') continue;
+				const key = `${e.slug}|${e.at}`;
+				const seen = done.get(key);
+				if (!seen || (!seen.grade && e.grade)) done.set(key, e);
+			}
+			return [...done.values()].sort((a, b) => a.at - b.at);
 		})(),
 		familyRecipes: [
 			...current.familyRecipes,

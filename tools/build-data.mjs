@@ -40,6 +40,7 @@ import { buildSanitation } from './derive/sanitation.mjs';
 import { buildServiceTrack } from './derive/service-track.mjs';
 import { buildDrills } from './derive/drills.mjs';
 import { buildStations } from './derive/stations.mjs';
+import { LADDERS, CUPS, TRIALS, PASS_AT } from './derive/calibration.mjs';
 import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
 import { derivePantryMap, narrowBlob } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
@@ -532,6 +533,14 @@ write('sanitation.json', sanitation);
 write('service-track.json', serviceTrack);
 write('drills.json', drills);
 write('stations.json', stations);
+write('calibration.json', {
+	cups: CUPS,
+	trials: TRIALS,
+	passAt: PASS_AT,
+	ladders: LADDERS
+});
+
+
 
 /**
  * The search index, prebuilt so the browser never pays tokenization cost.
@@ -932,6 +941,83 @@ console.log('');
 	);
 	console.log(
 		`  service: ${advance} recipes carry a wait of ${ADVANCE_MIN}+ min and cannot start inside a service`
+	);
+}
+
+/**
+ * The calibration ladders — authored apparatus, gated on shape.
+ *
+ * Same treatment standards.mjs gets, for the same reason: nothing here derives
+ * from the guide, so nothing but a gate stops it drifting into a number that
+ * cannot be built with a kitchen scale or a gap nobody could ever hear.
+ *
+ * IT LIVES DOWN HERE BECAUSE IT HAS TO. The first version sat beside the emit,
+ * above `const problems = []` — so every `problems.push` was a ReferenceError,
+ * which only threw when a problem was actually FOUND. With none, the array was
+ * never touched and the build passed. A gate that could not report, sitting
+ * quietly green. It was found by breaking it, which is the only way it could
+ * have been found.
+ */
+{
+	const seen = new Set();
+	for (const ladder of LADDERS) {
+		// unit is in this list because it was MISSED on one ladder of six and the
+		// build sheet read "Jug one 3 of fine salt" -- a quantity with no unit is
+		// not a build sheet.
+		if (!ladder.taste || !ladder.label || !ladder.substance || !ladder.per || !ladder.unit) {
+			problems.push(`calibration ladder ${ladder.taste ?? '?'} is missing a field`);
+			continue;
+		}
+		if (seen.has(ladder.taste)) problems.push(`duplicate calibration ladder: ${ladder.taste}`);
+		seen.add(ladder.taste);
+
+		const levels = ladder.levels ?? [];
+		if (levels.length < 3) {
+			problems.push(`calibration ladder ${ladder.taste} has fewer than 3 levels`);
+		}
+
+		let previousGap = Infinity;
+		for (const [i, lv] of levels.entries()) {
+			if (lv.level !== i + 1) {
+				problems.push(`calibration ${ladder.taste} levels are not 1..n in order`);
+			}
+			const gap = Math.abs(lv.odd - lv.base);
+			if (!(gap > 0)) {
+				problems.push(`calibration ${ladder.taste} level ${lv.level} has two identical cups`);
+			}
+			// A LADDER MUST NARROW. If a later level were easier than an earlier
+			// one, clearing it would say less than the level below it and the whole
+			// ordering would be a lie.
+			if (gap >= previousGap) {
+				problems.push(
+					`calibration ${ladder.taste} level ${lv.level} is no harder than the one before it ` +
+						`(gap ${gap} vs ${previousGap})`
+				);
+			}
+			previousGap = gap;
+
+			// Buildable with a kitchen scale. 0.25 g is already generous.
+			for (const v of [lv.base, lv.odd]) {
+				if (Math.round(v * 4) !== v * 4) {
+					problems.push(
+						`calibration ${ladder.taste} level ${lv.level} asks for ${v}, which no kitchen scale reads`
+					);
+				}
+			}
+		}
+	}
+
+	// A run must be long enough that a clean sweep is not luck. Three cups is a
+	// 1-in-3 guess, so the odds of a perfect run by chance are 1/3^TRIALS.
+	if (TRIALS < 5) problems.push(`calibration runs are ${TRIALS} trials — too short to mean anything`);
+	if (PASS_AT > TRIALS) problems.push('calibration cannot be passed: PASS_AT exceeds TRIALS');
+	if (PASS_AT <= TRIALS / 2) {
+		problems.push(`calibration passes at ${PASS_AT} of ${TRIALS}, which is near the guess rate`);
+	}
+
+	console.log(
+		`  calibration: ${LADDERS.length} ladders, ${LADDERS.reduce((n, l) => n + l.levels.length, 0)} levels, ` +
+			`${PASS_AT} of ${TRIALS} to clear`
 	);
 }
 

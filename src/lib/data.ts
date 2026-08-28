@@ -155,6 +155,28 @@ export async function loadTechniques(): Promise<Technique[]> {
  * A separate file from techniques.json on purpose: that one is 119KB of
  * definitions and the recipe page needs none of it, only the marks.
  */
+let calibrationCache: unknown = null;
+/** The calibration ladders — authored apparatus, see tools/derive/calibration.mjs. */
+export async function loadCalibration() {
+	if (!calibrationCache) {
+		calibrationCache = (await import('./data/calibration.json')).default;
+	}
+	return calibrationCache as {
+		cups: number;
+		trials: number;
+		passAt: number;
+		ladders: Array<{
+			taste: string;
+			label: string;
+			substance: string;
+			unit: string;
+			per: string;
+			note: string;
+			levels: Array<{ level: number; base: number; odd: number }>;
+		}>;
+	};
+}
+
 let techniqueStandardCache: Map<string, TechniqueStandard> | null = null;
 export async function loadTechniqueStandards(): Promise<Map<string, TechniqueStandard>> {
 	if (!techniqueStandardCache) {

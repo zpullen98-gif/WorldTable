@@ -75,6 +75,16 @@
 			</a>
 		</li>
 		<li>
+			<a href="{base}/practise/calibrate">
+				<h2>Calibrate your palate</h2>
+				<p>
+					Three cups, two the same, and the app holds the answer. Six ladders that narrow until
+					you cannot tell them apart -- which is the number worth knowing, and the one thing you
+					cannot test alone.
+				</p>
+			</a>
+		</li>
+		<li>
 			<a href="{base}/service/drill">
 				<h2>Drill the service track</h2>
 				<p>

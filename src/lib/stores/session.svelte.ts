@@ -126,6 +126,23 @@ class SessionStore {
 		this.#persistNow();
 	}
 
+	/* ---- the calibration bench -------------------------------------------
+	 *
+	 * A third log beside drillLog, never folded into cookedLog: the mode bar
+	 * amber count reads cookedLog, and folding these in would report "dishes past
+	 * their re-cook" in the chrome of every page while counting salt.
+	 */
+
+	get calibrationLog() {
+		return this.#s.calibrationLog;
+	}
+
+	/** One entry per RUN, not per trial — a trial on its own means nothing. */
+	markCalibrated(slug: string, grade: 'met' | 'close' | 'missed') {
+		this.#s.calibrationLog = [...this.#s.calibrationLog, { slug, at: Date.now(), grade }];
+		this.#persistNow();
+	}
+
 	/* ---- menu ---------------------------------------------------------- */
 
 	get menu(): string[] {
