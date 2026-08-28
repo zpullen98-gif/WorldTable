@@ -1,0 +1,132 @@
+import { describe, it, expect } from 'vitest';
+import indexJson from './data/recipes.index.json';
+import fullJson from './data/recipes.full.json';
+
+import type { RecipeSummary, RecipeDetail } from './types';
+
+/**
+ * The escape rule, and the two things it must never do.
+ *
+ * `lineIsEscaped()` in tools/derive/diet.mjs drops an ingredient line that
+ * offers a real alternative, so that a dish with an optional fish filling can
+ * still read as vegetarian. That is correct, and vegetarian status still uses
+ * it. But `containsFish` and `containsShellfish` read from the ESCAPED set
+ * until this was measured, and the escape silenced allergens through both of
+ * its routes:
+ *
+ *   Weeknight paella — "Chicken thighs, chorizo optional (heresy but
+ *   delicious), shrimp". OPTIONAL_MARKER exists to excuse the chorizo. It threw
+ *   away the whole line, and the shrimp with it.
+ *
+ *   Escabecheng Isda — "1 whole tilapia, snapper or pompano (~800g), scored,
+ *   salted, and fried WHOLE in hot oil". The `or` rule found no keyword in
+ *   "pompano", matched `oil` in VEG_ALTERNATIVE, and escaped a whole fish. It
+ *   shipped containsFish:false AND a Vegan badge.
+ *
+ * dairy and egg were moved to the all-lines reading for exactly this reason
+ * when panna cotta shipped vegan:true over "500ml cream". These are the
+ * assertions that stop fish and shellfish going back.
+ */
+const recipes = indexJson as unknown as RecipeSummary[];
+const bySlug = new Map(recipes.map((r) => [r.slug, r]));
+const details = fullJson as unknown as RecipeDetail[];
+
+const FISH_WITNESS =
+	/\b(anchov(?:y|ies)|salmon|tuna|cod|haddock|halibut|snapper|tilapia|sardines?|mackerel|katsuobushi|bonito|dashi|fish sauce|nam pla|worcestershire)\b/i;
+const SHELLFISH_WITNESS =
+	/\b(shrimps?|prawns?|crabs?|lobsters?|scallops?|oysters?|clams?|mussels?|squid|calamari|octopus|langoustines?)\b/i;
+
+describe('an escape never silences an allergen', () => {
+	/**
+	 * The headline cases, named. A count-based assertion would pass again the
+	 * moment somebody re-broke it on different recipes.
+	 */
+	it('flags the shrimp in a paella whose line says "chorizo optional"', () => {
+		expect(bySlug.get('weeknight-paella')?.diet.containsShellfish).toBe(true);
+	});
+
+	it('flags the fish in a whole fried snapper, and refuses to call it vegan', () => {
+		const d = bySlug.get('escabecheng-isda')?.diet;
+		expect(d?.containsFish, 'a whole tilapia escaped through the `or` rule').toBe(true);
+		expect(d?.vegan, 'a Vegan badge over a whole fried fish').toBe(false);
+	});
+
+	it('flags the katsuobushi in miso soup even though it offers a vegan route', () => {
+		expect(bySlug.get('miso-soup')?.diet.containsFish).toBe(true);
+	});
+
+	/**
+	 * The sweep the named cases are examples of.
+	 *
+	 * Read the INGREDIENTS, never the name. The first draft of this test swept
+	 * recipe names and failed on "Cape Cod Cranberry Relish" — cod inside a
+	 * place name, in a bowl holding cranberries, sugar and an orange. Names carry
+	 * geography; the build carries the food.
+	 */
+	it('flags every recipe whose own build names a fish or shellfish', () => {
+		const missed: string[] = [];
+		for (const r of details) {
+			const text = r.ingredients
+				.map((i) => (typeof i === 'string' ? i : ((i as { text?: string }).text ?? '')))
+				.join(' | ');
+			const diet = bySlug.get(r.slug)?.diet;
+			if (!diet) continue;
+			if (FISH_WITNESS.test(text) && !diet.containsFish) missed.push(`${r.slug} (fish)`);
+			if (SHELLFISH_WITNESS.test(text) && !diet.containsShellfish)
+				missed.push(`${r.slug} (shellfish)`);
+		}
+		expect(missed).toEqual([]);
+	});
+});
+
+describe('the two policies stay separate', () => {
+	/**
+	 * The proof that moving the allergen flags did NOT move vegetarian status.
+	 * Onigiri's fillings line names tuna and salmon and is legitimately escaped,
+	 * so it is vegetarian-strict AND carries a fish allergen. If these two ever
+	 * agree on this recipe, one of the policies has swallowed the other.
+	 */
+	it('a dish can be vegetarian-strict and still carry a fish allergen', () => {
+		const d = bySlug.get('onigiri')?.diet;
+		expect(d?.containsFish, 'the allergen reads every line').toBe(true);
+		expect(d?.vegetarianStrict, 'vegetarian status still reads binding lines only').toBe(true);
+	});
+
+	it('keeps a real population on each side, so neither assertion is vacuous', () => {
+		const both = recipes.filter((r) => r.diet.vegetarianStrict && r.diet.containsFish);
+		expect(both.length).toBeGreaterThan(5);
+	});
+});
+
+describe('vegan is an assertion, not an omission', () => {
+	/**
+	 * `vegetarianOption` means BY DEFINITION that an animal product is named
+	 * somewhere in the text and merely escaped. 16 recipes shipped it alongside
+	 * `vegan: true`, and RecipeDetailView paints the badge straight off `vegan`.
+	 */
+	it('never claims vegan and vegetarian-option at once', () => {
+		const contradictory = recipes
+			.filter((r) => r.diet.vegan && r.diet.vegetarianOption)
+			.map((r) => r.slug);
+		expect(contradictory).toEqual([]);
+	});
+
+	it('never claims vegan over any animal flag', () => {
+		const lying = recipes
+			.filter(
+				(r) =>
+					r.diet.vegan &&
+					(r.diet.containsMeat ||
+						r.diet.containsFish ||
+						r.diet.containsShellfish ||
+						r.diet.containsDairy ||
+						r.diet.containsEgg)
+			)
+			.map((r) => r.slug);
+		expect(lying).toEqual([]);
+	});
+
+	it('still calls something vegan, or the rule has eaten the feature', () => {
+		expect(recipes.filter((r) => r.diet.vegan).length).toBeGreaterThan(50);
+	});
+});

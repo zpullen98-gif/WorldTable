@@ -3,7 +3,7 @@ import { STANDARDS, MIN_MARKS, MAX_MARKS } from '../../tools/derive/standards.mj
 import full from './data/recipes.full.json';
 import study from './data/study.json';
 
-import type { RecipeDetail } from './types';
+import type { RecipeDetail, StandardMark as Mark } from './types';
 
 /**
  * The standard — what a correct plate looks like — and the one failure the build
@@ -38,7 +38,7 @@ describe('the authored standards reached the shipped data', () => {
 	});
 
 	it('carries the marks and fault through unchanged', () => {
-		for (const s of STANDARDS as Array<{ slug: string; marks: string[]; fault: string }>) {
+		for (const s of STANDARDS as Array<{ slug: string; marks: Mark[]; fault: string }>) {
 			expect(bySlug.get(s.slug)?.standard?.marks).toEqual(s.marks);
 			expect(bySlug.get(s.slug)?.standard?.fault).toBe(s.fault);
 		}
@@ -48,9 +48,9 @@ describe('the authored standards reached the shipped data', () => {
 describe('a standard is a checklist, not a recipe', () => {
 	it(`gives every dish ${MIN_MARKS}–${MAX_MARKS} marks`, () => {
 		const bad = STANDARDS.filter(
-			(s: { slug: string; marks: string[] }) =>
+			(s: { slug: string; marks: Mark[] }) =>
 				s.marks.length < MIN_MARKS || s.marks.length > MAX_MARKS
-		).map((s: { slug: string; marks: string[] }) => `${s.slug} (${s.marks.length})`);
+		).map((s: { slug: string; marks: Mark[] }) => `${s.slug} (${s.marks.length})`);
 		expect(bad).toEqual([]);
 	});
 
@@ -68,8 +68,9 @@ describe('a standard is a checklist, not a recipe', () => {
 	it('does not smuggle method in as outcome', () => {
 		const instruction = /^(use|add|stir|heat|cook|season|place|remove|whisk|fold|pour|set) /i;
 		const offenders: string[] = [];
-		for (const s of STANDARDS as Array<{ slug: string; marks: string[] }>) {
-			for (const m of s.marks) if (instruction.test(m.trim())) offenders.push(`${s.slug}: ${m}`);
+		for (const s of STANDARDS as Array<{ slug: string; marks: Mark[] }>) {
+			for (const m of s.marks)
+				if (instruction.test(m.text.trim())) offenders.push(`${s.slug}: ${m.text}`);
 		}
 		expect(offenders).toEqual([]);
 	});
@@ -78,10 +79,10 @@ describe('a standard is a checklist, not a recipe', () => {
 		// A mark repeating its own recipe's note verbatim adds nothing; the note
 		// is already on the page directly beneath it.
 		const echoes: string[] = [];
-		for (const s of STANDARDS as Array<{ slug: string; marks: string[] }>) {
+		for (const s of STANDARDS as Array<{ slug: string; marks: Mark[] }>) {
 			const note = bySlug.get(s.slug)?.note ?? '';
 			for (const m of s.marks) {
-				const core = m.trim().replace(/[.;:—-].*$/, '').trim();
+				const core = m.text.trim().replace(/[.;:—-].*$/, '').trim();
 				if (core.length > 24 && note.includes(core)) echoes.push(`${s.slug}: ${core}`);
 			}
 		}

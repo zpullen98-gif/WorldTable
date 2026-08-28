@@ -2,7 +2,12 @@
 	import { base } from '$app/paths';
 	import { COURSES, formatTime, recipeHref } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
-	import { buildFamilyRecipe, validateDraft, type FamilyDraft } from '$lib/authoring';
+	import {
+		buildFamilyRecipe,
+		validateDraft,
+		FAMILY_TECHNIQUE_MAX,
+		type FamilyDraft
+	} from '$lib/authoring';
 	import type { Course, Difficulty } from '$lib/types';
 	import Ornament from '$lib/components/Ornament.svelte';
 
@@ -17,10 +22,33 @@
 		vegetarian: false,
 		ingredients: '',
 		method: '',
+		techniques: [],
 		tip: ''
 	});
 
 	let draft = $state(blank());
+
+	/**
+	 * The techniques offered are ONLY the 26 that have a standard written.
+	 *
+	 * Bounding the list to those does two things at once: it keeps the picker
+	 * short enough to read, and it guarantees a tick means something — a tick
+	 * resolving to no standard would leave the dish exactly where it started,
+	 * recorded as cooked and nothing more. Rarest first, so the most telling
+	 * ones are not buried under Searing.
+	 */
+	const offered = $derived(
+		[...data.standards].sort((a, b) => a.recipeCount - b.recipeCount)
+	);
+	const atCap = $derived(draft.techniques.length >= FAMILY_TECHNIQUE_MAX);
+
+	function toggleTechnique(slug: string) {
+		if (draft.techniques.includes(slug)) {
+			draft.techniques = draft.techniques.filter((x) => x !== slug);
+		} else if (!atCap) {
+			draft.techniques = [...draft.techniques, slug];
+		}
+	}
 	let msg = $state('');
 
 	function save() {
@@ -29,7 +57,12 @@
 			msg = problem;
 			return;
 		}
-		const recipe = buildFamilyRecipe($state.snapshot(draft), session.familyRecipes, data.pantry);
+		const recipe = buildFamilyRecipe(
+			$state.snapshot(draft),
+			session.familyRecipes,
+			data.pantry,
+			data.standards
+		);
 		session.addFamilyRecipe(recipe);
 		msg = `“${recipe.name}” is in the guide — filed under ${recipe.chapter}.`;
 		draft = blank();
@@ -115,6 +148,34 @@
 				></textarea>
 			</label>
 
+			<fieldset class="tech">
+				<legend class="sec">What it is judged on</legend>
+				<p class="techhint">
+					Pick up to {FAMILY_TECHNIQUE_MAX} techniques this dish exercises. The two most telling
+					are what cook mode grades the plate against — without them the app can only record
+					that it was cooked.
+				</p>
+				<div class="techlist">
+					{#each offered as t (t.slug)}
+						{@const on = draft.techniques.includes(t.slug)}
+						<label class="techopt" class:on>
+							<input
+								type="checkbox"
+								checked={on}
+								disabled={!on && atCap}
+								onchange={() => toggleTechnique(t.slug)}
+							/>
+							<span>{t.label}</span>
+						</label>
+					{/each}
+				</div>
+				{#if atCap}
+					<p class="techhint">
+						That is {FAMILY_TECHNIQUE_MAX} — untick one to choose another.
+					</p>
+				{/if}
+			</fieldset>
+
 			<label>
 				<span class="sec">From the pass — the family secret</span>
 				<input bind:value={draft.tip} placeholder="What the card in the drawer says that the book never did" />
@@ -147,6 +208,36 @@
 </div>
 
 <style>
+	.tech {
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+	.techhint {
+		margin: 4px 0 8px;
+		color: var(--ink-soft);
+		font-size: var(--t-small, 0.8125rem);
+		line-height: 1.5;
+	}
+	.techlist {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+		gap: 2px 14px;
+	}
+	/* 44px rows: this is filled in on a phone, in a kitchen. */
+	.techopt {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		min-height: 44px;
+		cursor: pointer;
+	}
+	.techopt.on {
+		font-weight: 600;
+	}
+	.techopt input:disabled + span {
+		color: var(--muted);
+	}
 	.view {
 		padding: 26px 0 80px;
 		max-width: 1000px;

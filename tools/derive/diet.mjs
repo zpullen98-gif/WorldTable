@@ -53,6 +53,11 @@ const FISH = [
 	'bottarga', 'roe', 'caviar', 'tobiko', 'ikura', 'uni', 'eel', 'unagi',
 	'dashi', 'niboshi', 'surimi', 'lox', 'gravlax', 'kipper', 'whitebait',
 	'monkfish', 'swordfish', 'grouper', 'catfish', 'pollock', 'mahi',
+	// Names that `\bfish\b` cannot reach from inside, and that carry no other
+	// listed token: a recipe whose only fish word is one of these would ship
+	// unflagged. All four are in the corpus today and all four are currently
+	// caught by a second word in the same recipe — which is luck, not cover.
+	'pompano', 'mullet', 'sablefish', 'stockfish',
 	// Freshwater and regional names the US-state chapters lean on heavily.
 	'walleye', 'whitefish', 'rockfish', 'striped bass', 'perch', 'pike',
 	'bluefish', 'redfish', 'flounder', 'fluke', 'porgy', 'shad', 'smelt',
@@ -276,8 +281,34 @@ export function deriveDiet(r, _fullBlob) {
 	const anyLine = (/** @type {RegExp} */ re) => all.some((l) => re.test(l));
 
 	const containsMeat = anyBinding(RE.meat);
-	const containsFish = anyBinding(RE.fish);
-	const containsShellfish = anyBinding(RE.shellfish);
+
+	/**
+	 * Fish and shellfish are ALLERGENS, so they follow the allergen policy —
+	 * every line, escaped or not — for exactly the reason dairy and egg do
+	 * below. They read from `binding` until this was measured, and the comment
+	 * above this block already claimed otherwise: "an allergen is never hidden
+	 * just because it was offered as an option." For these two it was not true,
+	 * and it failed through BOTH escape routes:
+	 *
+	 *   Weeknight paella — "Chicken thighs, chorizo optional (heresy but
+	 *   delicious), shrimp". OPTIONAL_MARKER was written to excuse the chorizo.
+	 *   It discards the whole line, and the SHRIMP went with it.
+	 *
+	 *   Escabecheng Isda — "1 whole tilapia, snapper or pompano (~800g),
+	 *   scored, salted, and fried WHOLE in hot oil". The `or` rule split the
+	 *   line, found "pompano" in no keyword list, matched `oil` in
+	 *   VEG_ALTERNATIVE from "fried WHOLE in hot oil", and escaped a whole fish.
+	 *   It shipped `containsFish: false` and a Vegan badge.
+	 *
+	 * The binding reading is kept for VEGETARIAN status, which is a different
+	 * question and one the escape answers correctly: a dish whose fish is
+	 * genuinely an optional filling does stand up without it. What the escape
+	 * must never do is silence the allergen.
+	 */
+	const bindingFish = anyBinding(RE.fish);
+	const bindingShellfish = anyBinding(RE.shellfish);
+	const containsFish = anyLine(RE.fish);
+	const containsShellfish = anyLine(RE.shellfish);
 	/**
 	 * Dairy and egg are ALLERGENS, so they follow the allergen policy stated at
 	 * the bottom of this function — reported from all lines — not the vegetarian
@@ -308,7 +339,14 @@ export function deriveDiet(r, _fullBlob) {
 	 * in a dish marked vegetarian, and no animal product at all in a dish marked
 	 * otherwise. See the gates in build-data.mjs.
 	 */
-	const vegetarianStrict = !containsMeat && !containsFish && !containsShellfish;
+	const vegetarianStrict = !containsMeat && !bindingFish && !bindingShellfish;
+
+	/**
+	 * True when animal products appear only in optional or "or" positions —
+	 * hoisted to a local because `vegan` below has to be able to refuse on it.
+	 */
+	const vegetarianOption =
+		vegetarianStrict && (anyLine(RE.meat) || containsFish || containsShellfish);
 
 	// The authored flag, when we have it. deriveDiet is also called on
 	// user-added family recipes, which carry the same `v` field.
@@ -319,10 +357,20 @@ export function deriveDiet(r, _fullBlob) {
 	return {
 		vegetarian,
 		vegetarianStrict,
-		vegan: vegetarianStrict && !containsDairy && !containsEgg,
-		/** True when animal products appear only in optional or "or" positions. */
-		vegetarianOption:
-			vegetarianStrict && (anyLine(RE.meat) || anyLine(RE.fish) || anyLine(RE.shellfish)),
+		/**
+		 * `!vegetarianOption` is the load-bearing clause, and without it the two
+		 * flags contradicted each other on 16 recipes: `vegetarianOption` means
+		 * BY DEFINITION that an animal product is named somewhere in the text,
+		 * and `vegan` is an affirmative claim that none is. Escabecheng Isda,
+		 * Banh Xeo and Mapo Tofu all shipped both, and RecipeDetailView paints
+		 * the badge straight off `vegan`.
+		 *
+		 * A dish with a stated meatless route is a vegan OPTION and the data
+		 * already says so in its own field. It is not vegan, and a guest reading
+		 * a badge is not reading the ingredient list.
+		 */
+		vegan: vegetarianStrict && !vegetarianOption && !containsDairy && !containsEgg,
+		vegetarianOption,
 		containsMeat,
 		containsPork: anyBinding(RE.pork),
 		containsFish,

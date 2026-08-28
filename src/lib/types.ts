@@ -171,17 +171,62 @@ export interface RecipeDetail {
 	 * most of them: test for the key, never render an empty block.
 	 */
 	standard?: DishStandard;
+	/**
+	 * Technique standards this dish is judged against instead, when it has no
+	 * dish standard of its own — slugs into technique-standards.json, ordered
+	 * most-specific-first and capped at two. Present on 638 of the 925 dishes
+	 * that carry no `standard`. Mutually exclusive with it, and gated as such.
+	 */
+	judgedBy?: string[];
 }
 
 /**
  * The one thing the guide never said. A recipe teaches a cook to MAKE a dish;
  * this is how they know they got it right.
  */
+/**
+ * One checkable mark, and the frozen id a cook's annotation points at.
+ *
+ * IDS, NEVER INDICES. "The crust mark was off" stored as index 2 is silently
+ * repointed to a different sentence the day somebody inserts a mark above it,
+ * and no gate can see that happen. The id is minted once by
+ * tools/mint-mark-ids.mjs and held by a ledger the build refuses to let shrink,
+ * which is the same rule the Codex holds for question ids.
+ */
+export interface StandardMark {
+	/** `<standard-slug>#<token>` — frozen at mint. Never recomputed. */
+	id: string;
+	text: string;
+}
+
 export interface DishStandard {
 	slug: string;
 	/** 3–5 marks, checkable at the pan, in the order a cook would check them. */
-	marks: string[];
+	marks: StandardMark[];
 	/** The commonest real failure, and what it looks like on the plate. */
+	fault: string;
+}
+
+/**
+ * What correct execution of a TECHNIQUE looks like, for the 925 dishes that
+ * have no standard of their own — see tools/derive/technique-standards.mjs.
+ *
+ * The difference from a DishStandard is where it is read. A dish standard is
+ * read at the pass, when the plate is done and the verdict is final; a
+ * technique standard is read at the pan, while there is still something to be
+ * done about it.
+ */
+export interface TechniqueStandard {
+	slug: string;
+	/** The technique's display label, carried so the recipe page need not load
+	 *  techniques.json (119KB) merely to name it. */
+	label: string;
+	/** How many recipes exercise this technique — the measure of how much of
+	 *  the corpus one piece of writing reaches. */
+	recipeCount: number;
+	/** 3–5 marks, checkable at the pan, in the order a cook would check them. */
+	marks: StandardMark[];
+	/** The commonest real failure, and the diagnosis. */
 	fault: string;
 }
 

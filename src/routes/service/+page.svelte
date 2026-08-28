@@ -21,10 +21,11 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { session } from '$lib/stores/session.svelte';
+	import { house } from '$lib/stores/house.svelte';
 	import { CHECKED, NOT_SCREENED, list } from '$lib/allergens';
 
 	let { data } = $props();
-	const dishes = $derived(session.menuDishes.length);
+	const dishes = $derived(house.dishes.length);
 	const track = $derived(data.track);
 </script>
 

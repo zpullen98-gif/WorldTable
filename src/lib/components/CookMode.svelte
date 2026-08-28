@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { Step, DishStandard } from '$lib/types';
+	import type { Step, DishStandard, TechniqueStandard } from '$lib/types';
 	import type { Grade } from '$lib/repertoire';
 	import type { Palate } from '$lib/types';
 	import { loadPalate } from '$lib/data';
@@ -12,16 +12,31 @@
 		slug,
 		steps,
 		standard,
+		standardLabel,
 		onclose,
-		onfinish
+		onfinish,
+		onannotate
 	}: {
 		name: string;
 		slug: string;
 		steps: Step[];
 		/** When the dish has one, the last screen is a check against it. */
-		standard?: DishStandard;
+		standard?: DishStandard | TechniqueStandard;
+		/**
+		 * Set only when `standard` is a TECHNIQUE standard standing in for a dish
+		 * that has none — the technique's name, so the question can say what is
+		 * actually being judged. A cook asked "how did it come out?" against a
+		 * technique's marks would reasonably think the dish had been assessed.
+		 */
+		standardLabel?: string;
 		onclose: () => void;
-		onfinish?: (grade?: Grade) => void;
+		onfinish?: (grade?: Grade, off?: string[]) => void;
+		/**
+		 * The fault, once the cook has named it. Separate from onfinish because
+		 * the ORDER is load-bearing: the cook is recorded before the repair panel
+		 * opens, and the fault is chosen after that.
+		 */
+		onannotate?: (fault: string) => void;
 	} = $props();
 
 	let i = $state(0);
@@ -127,8 +142,30 @@
 	let palate = $state<Palate | null>(null);
 	let fault = $state<string | null>(null);
 
+	/**
+	 * Which marks were off, by frozen mark id.
+	 *
+	 * The marks were already on this screen being read, so the annotation costs
+	 * the cook nothing extra: they run down the list, tap the ones that were
+	 * off, then tap a grade. No second screen — a screen that appears after
+	 * every plate teaches cooks to tap through screens, which is the same
+	 * reasoning that keeps the repair panel off a plate that MET its standard.
+	 *
+	 * The three grade buttons are untouched on purpose. Deriving the grade from
+	 * how many marks were tapped would silently rewire the one input
+	 * repertoire.ts runs on across 970 recipes, and "one mark off" means
+	 * different things on a 3-mark technique standard and a 5-mark dish one.
+	 */
+	let off = $state<string[]>([]);
+	function toggleMark(id: string) {
+		off = off.includes(id) ? off.filter((x) => x !== id) : [...off, id];
+	}
+
 	async function grade(g: Grade) {
-		onfinish?.(g);
+		// A plate that met its standard had nothing off, whatever was tapped on
+		// the way to saying so.
+		if (g === 'met') off = [];
+		onfinish?.(g, off);
 		if (g === 'met') {
 			close();
 			return;
@@ -240,7 +277,13 @@
 							class="chip"
 							class:on={fault === f.slug}
 							aria-pressed={fault === f.slug}
-							onclick={() => (fault = fault === f.slug ? null : f.slug)}
+							onclick={() => {
+								fault = fault === f.slug ? null : f.slug;
+								// Kept, not discarded. This was component state that died with
+								// the dialog — the one moment the app captures a real diagnosis
+								// and it threw it away.
+								if (fault) onannotate?.(fault);
+							}}
 						>
 							{f.label}
 						</button>
@@ -265,10 +308,31 @@
 	{:else if grading}
 		<div class="pass live" aria-live="polite" aria-atomic="true">
 			<p class="eyebrow">{name} · the pass</p>
-			<p class="passq">How did it come out?</p>
+			{#if standardLabel}
+				<!-- Naming the technique on its own line rather than folding it into the
+				     question: the labels are noun phrases ("Making a roux", "Knife cuts —
+				     dice, julienne, bias") and no single sentence reads well around all
+				     26 of them. -->
+				<p class="passq">How was the technique?</p>
+				<p class="passtech">{standardLabel} · this dish has no standard of its own yet</p>
+			{:else}
+				<p class="passq">How did it come out?</p>
+			{/if}
+			<p class="passhint">Tap anything that was off.</p>
 			<ul class="passmarks">
-				{#each standard?.marks ?? [] as mark, m (m)}
-					<li>{mark}</li>
+				{#each standard?.marks ?? [] as mark (mark.id)}
+					<li>
+						<button
+							type="button"
+							class="markrow"
+							class:on={off.includes(mark.id)}
+							aria-pressed={off.includes(mark.id)}
+							onclick={() => toggleMark(mark.id)}
+						>
+							<span class="markbox" aria-hidden="true">{off.includes(mark.id) ? '✕' : ''}</span>
+							<span>{mark.text}</span>
+						</button>
+					</li>
 				{/each}
 			</ul>
 			<p class="passfault"><b>Where it goes wrong</b> {standard?.fault}</p>
@@ -358,6 +422,14 @@
 		font-size: var(--t-h3, 1.15rem);
 		margin: 6px 0 10px;
 	}
+	/* A real colour token, not stacked opacity. The shared home CSS dims already
+	   muted text with opacity: .6 and lands at 2.32:1 against a 4.5:1 target;
+	   repeating that here would put the same defect on the pass screen. */
+	.passtech {
+		margin: -4px 0 10px;
+		font-size: var(--t-small, 0.8125rem);
+		color: var(--ink-soft);
+	}
 	.passmarks {
 		margin: 0 0 10px;
 		padding-left: 1.1em;
@@ -365,6 +437,50 @@
 	}
 	.passmarks li {
 		margin-bottom: 4px;
+	}
+	.passhint {
+		margin: 0 0 6px;
+		font-size: var(--t-small, 0.8125rem);
+		color: var(--ink-soft);
+	}
+	.passmarks li {
+		list-style: none;
+	}
+	/* 44px minimum, because this is tapped with one hand on a hot pan. The box
+	   carries the state as a glyph as well as a colour and a weight — a tick
+	   that only differs by hue is unreadable in a kitchen under sodium light. */
+	.markrow {
+		display: flex;
+		gap: 10px;
+		align-items: flex-start;
+		width: 100%;
+		min-height: 44px;
+		padding: 8px 6px;
+		border: 0;
+		background: none;
+		font: inherit;
+		color: inherit;
+		text-align: left;
+		cursor: pointer;
+	}
+	.markbox {
+		flex: none;
+		width: 22px;
+		height: 22px;
+		margin-top: 1px;
+		border: 1.5px solid var(--line-strong);
+		border-radius: 4px;
+		display: grid;
+		place-items: center;
+		font-size: 0.8rem;
+		line-height: 1;
+	}
+	.markrow.on {
+		font-weight: 600;
+	}
+	.markrow.on .markbox {
+		border-color: var(--chili);
+		color: var(--chili);
 	}
 	.passfault {
 		margin: 0 0 14px;

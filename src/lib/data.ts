@@ -22,7 +22,8 @@ import type {
 	Sanitation,
 	ServiceTrack,
 	Drills,
-	StationsData
+	StationsData,
+	TechniqueStandard
 } from './types';
 
 import indexJson from './data/recipes.index.json';
@@ -146,6 +147,22 @@ export async function loadTechniques(): Promise<Technique[]> {
 		techniqueCache = (await import('./data/techniques.json')).default as unknown as Technique[];
 	}
 	return techniqueCache;
+}
+
+/**
+ * The technique standards, keyed by slug for the `judgedBy` join.
+ *
+ * A separate file from techniques.json on purpose: that one is 119KB of
+ * definitions and the recipe page needs none of it, only the marks.
+ */
+let techniqueStandardCache: Map<string, TechniqueStandard> | null = null;
+export async function loadTechniqueStandards(): Promise<Map<string, TechniqueStandard>> {
+	if (!techniqueStandardCache) {
+		const rows = (await import('./data/technique-standards.json'))
+			.default as unknown as TechniqueStandard[];
+		techniqueStandardCache = new Map(rows.map((r) => [r.slug, r]));
+	}
+	return techniqueStandardCache;
 }
 
 /**

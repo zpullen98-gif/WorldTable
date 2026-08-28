@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { session } from '$lib/stores/session.svelte';
+	import { house } from '$lib/stores/house.svelte';
 	import type { MenuDish } from '$lib/persistence/state';
 
 	/* Drills over The Kitchen's Menu — the dishes entered on /menu. The quiz
@@ -33,7 +34,7 @@
 	let deckIdx = $state(0);
 	let revealed = $state(false);
 
-	const dishes = $derived(session.menuDishes);
+	const dishes = $derived(house.dishes);
 	const enough = $derived(dishes.length >= 4);
 
 	const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
@@ -74,9 +75,24 @@
 				target: d,
 				options: optionsFor(d)
 			});
-		const unique = d.allergens.find(
-			(a) => dishes.filter((x) => x.allergens.includes(a)).length === 1
-		);
+		/**
+		 * Only a dish somebody has actually checked may pose an allergen
+		 * question, and uniqueness is only meaningful across dishes that have
+		 * all been checked — an unmarked dish carrying the same allergen looks
+		 * like an absence, which is what would make the "unique" answer wrong.
+		 *
+		 * This refuses on the same ground kindsFor already refuses a non-unique
+		 * allergen: a question with a defensible-looking wrong answer is worse
+		 * than no question, and this is the one deck where the wrong answer gets
+		 * said out loud to a guest.
+		 */
+		const allChecked = dishes.every((x) => x.allergensCheckedAt);
+		const unique =
+			d.allergensCheckedAt && allChecked
+				? d.allergens.find(
+						(a) => dishes.filter((x) => x.allergens.includes(a)).length === 1
+					)
+				: undefined;
 		if (unique)
 			out.push({
 				kindLabel: 'The table asks — which dish carries it?',
@@ -234,8 +250,17 @@
 					{#if revealed}
 						{#if d.description}<p class="def">{d.description}</p>{/if}
 						{#if d.ingredients.length}<p class="def small">{d.ingredients.join(' · ')}</p>{/if}
+						<!-- Three states, never silence — the twin of the fix on /menu and
+						     on the recipe page. A server rehearsing off this card must not
+						     learn a blank as "none". -->
 						<p class="def small">
-							{#if d.allergens.length}Allergens: {d.allergens.join(', ')}.{/if}
+							{#if !d.allergensCheckedAt}
+								<b>Allergens not marked</b> — ask the kitchen before you answer this at a table.
+							{:else if d.allergens.length}
+								Allergens: {d.allergens.join(', ')}.
+							{:else}
+								No allergens marked on this dish.
+							{/if}
 							{#if d.price}&nbsp;{d.price}.{/if}
 						</p>
 					{:else}

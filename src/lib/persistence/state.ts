@@ -28,6 +28,16 @@ export interface MenuDish {
 	description: string;
 	ingredients: string[];
 	allergens: string[];
+	/**
+	 * Set only by an explicit "allergens checked" affirmation, never by Save —
+	 * ms epoch, and re-stamped each time it is affirmed.
+	 *
+	 * Without it `allergens: []` is ambiguous in the one direction an allergen
+	 * display must never be ambiguous: it means BOTH "this dish carries none"
+	 * and "nobody has looked yet". Undefined on every dish written before this
+	 * existed, which reads as not-checked, which is the safe default.
+	 */
+	allergensCheckedAt?: number;
 	price: string;
 	/** Last edit, ms epoch; the import-merge tiebreak. */
 	ts: number;
@@ -42,12 +52,41 @@ export interface SessionState {
 	/** menuHash -> checked shopping-list line ids */
 	shoppingChecks: Record<string, string[]>;
 	/**
+	 * The service currently being cooked, if any.
+	 *
+	 * `live` and `serviceTime` were component state, so walking to the walk-in
+	 * and coming back lost the clock entirely — on the one screen a cook is
+	 * standing in front of while something is on the heat.
+	 *
+	 * Ticks carry a TIMESTAMP rather than a boolean, which costs nothing and
+	 * buys two things: the alert can say where the time actually went, and each
+	 * consecutive pair is an observed duration.
+	 */
+	planRun?: PlanRun;
+	/**
+	 * Observed elapsed minutes per step, keyed `slug#index#stepCount`.
+	 *
+	 * The step count is IN the key on purpose. It is constant for the 970 frozen
+	 * guide recipes, so it costs them nothing; a family recipe re-authored to a
+	 * different length simply mints a new key and its old observations are never
+	 * read again. No special case, no stale actuals against a step that moved.
+	 */
+	stepActuals: Record<string, number[]>;
+	/**
 	 * Every cook, not every dish — one entry per time the dish was made. The
 	 * timestamps drive the re-cook schedule in lib/repertoire.ts; the grade is
 	 * what the plate was against the dish's standard, absent on cooks recorded
 	 * before standards existed and on the 925 dishes that have none.
 	 */
-	cookedLog: Array<{ slug: string; at: number; grade?: 'met' | 'close' | 'missed' }>;
+	cookedLog: Array<{
+		slug: string;
+		at: number;
+		grade?: 'met' | 'close' | 'missed';
+		/** Frozen mark ids that were off — see CookEntry in repertoire.ts. */
+		off?: string[];
+		/** The palate lever reached for, a slug into palate.json. */
+		fault?: string;
+	}>;
 	/**
 	 * Drill answers over lexicon terms. Deliberately the SAME shape as a cook,
 	 * so repertoire() consumes it with no adapter and the ladder is shared code
@@ -59,6 +98,16 @@ export interface SessionState {
 	 */
 	drillLog: Array<{ slug: string; at: number; grade?: 'met' | 'close' | 'missed' }>;
 	familyRecipes: Recipe[];
+	/**
+	 * DEPRECATED as a live field — the menu moved to the device-wide house
+	 * record (persistence/house.ts) because a venue buys ONE subscription for
+	 * unlimited staff and this key is namespaced per person.
+	 *
+	 * Kept because it is still the TRANSPORT: the .wtjson format carries the
+	 * menu inside the session object, every file written so far does, and a
+	 * format bump would strand them. Written by an import, read by an export,
+	 * absorbed once by the house record. No UI reads it.
+	 */
 	menuDishes: MenuDish[];
 	/**
 	 * Costing for the venue's own dishes, keyed by MenuDish id.
@@ -90,12 +139,34 @@ export interface DishCosting {
 	ts: number;
 }
 
+/** One service being cooked. See SessionState.planRun. */
+export interface PlanRun {
+	/** The pinned menu it belongs to — a different menu does not inherit it. */
+	menuHash: string;
+	serviceTime: string;
+	/** When the clock was started, so a run nobody closed expires on its own. */
+	startedAt: number;
+	/** Row key (`slug-n`) -> when it was ticked. */
+	ticks: Record<string, number>;
+}
+
+/**
+ * How long a forgotten run stays live.
+ *
+ * A cook who closes the tab mid-service and comes back in ten minutes wants the
+ * clock back. One who opens the app the following afternoon does not want last
+ * night's "40 minutes behind" — so the run expires rather than being resumed
+ * into a lie.
+ */
+export const RUN_MAX_AGE_MS = 18 * 60 * 60 * 1000;
+
 export const EMPTY_SESSION: SessionState = {
 	schemaVersion: CURRENT_VERSION,
 	menu: [],
 	notes: {},
 	pantry: [],
 	shoppingChecks: {},
+	stepActuals: {},
 	cookedLog: [],
 	drillLog: [],
 	familyRecipes: [],
@@ -141,7 +212,16 @@ export function mergeSessions(
 		const key = `${e.slug}|${e.at}`;
 		const seen = cooked.get(key);
 		// Same cook on both sides: keep whichever one was actually graded.
-		if (!seen || (!seen.grade && e.grade)) cooked.set(key, e);
+		// Prefer the RICHER entry, not merely the graded one.
+		//
+		// This used to be `!seen.grade && e.grade`, which was right when a grade
+		// was all an entry could carry. Now an entry can also carry which marks
+		// were off and which fault the cook named, and under the old test an
+		// imported entry holding all three lost to a bare local grade on the same
+		// slug|at — silently discarding the only part worth merging.
+		const richness = (x?: { grade?: unknown; off?: unknown[]; fault?: unknown }) =>
+			(x?.grade ? 4 : 0) + (x?.off?.length ? 2 : 0) + (x?.fault ? 1 : 0);
+		if (!seen || richness(e) > richness(seen)) cooked.set(key, e);
 	}
 
 	const shoppingChecks: SessionState['shoppingChecks'] = { ...current.shoppingChecks };

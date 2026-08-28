@@ -19,6 +19,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { session } from '$lib/stores/session.svelte';
+	import { house } from '$lib/stores/house.svelte';
 	import type { CostLine } from '$lib/costing';
 	import {
 		dishEconomics,
@@ -32,7 +33,7 @@
 
 	let { data } = $props();
 
-	const dishes = $derived(session.menuDishes);
+	const dishes = $derived(house.dishes);
 	const foodCostBand = $derived(data.economics.bands.find((b) => b.key === 'foodCost')!);
 
 	/** Which dish's sheet is open. One at a time — this is a long form. */
@@ -55,11 +56,11 @@
 	}
 
 	function linesFor(id: string): CostLine[] {
-		return session.costingFor(id).lines;
+		return house.costingFor(id).lines;
 	}
 
 	function writeLines(id: string, lines: CostLine[]) {
-		session.setCosting(id, { lines, sold: session.costingFor(id).sold });
+		house.setCosting(id, { lines, sold: house.costingFor(id).sold });
 	}
 
 	function addLine(id: string) {
@@ -87,7 +88,7 @@
 	}
 
 	function setSold(id: string, sold: number) {
-		session.setCosting(id, { lines: linesFor(id), sold: Number.isFinite(sold) ? sold : undefined });
+		house.setCosting(id, { lines: linesFor(id), sold: Number.isFinite(sold) ? sold : undefined });
 	}
 
 	const num = (e: Event) => Number.parseFloat((e.currentTarget as HTMLInputElement).value);
@@ -100,7 +101,7 @@
 				id: d.id,
 				name: d.name,
 				contribution: economicsOf(d.id, d.price).contribution,
-				sold: session.costingFor(d.id).sold ?? null
+				sold: house.costingFor(d.id).sold ?? null
 			}))
 		)
 	);
@@ -272,7 +273,7 @@
 											type="number"
 											min="0"
 											step="1"
-											value={session.costingFor(d.id).sold ?? ''}
+											value={house.costingFor(d.id).sold ?? ''}
 											onchange={(ev) => setSold(d.id, num(ev))}
 										/>
 									</label>

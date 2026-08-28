@@ -19,7 +19,13 @@ import {
 	debounce,
 	type SessionState
 } from '../persistence/db';
-import { mergeSessions, type MenuDish, type DishCosting } from '../persistence/state';
+import {
+	mergeSessions,
+	RUN_MAX_AGE_MS,
+	type MenuDish,
+	type DishCosting,
+	type PlanRun
+} from '../persistence/state';
 import { cookedSlugs, type CookEntry, type Grade } from '../repertoire';
 
 class SessionStore {
@@ -194,6 +200,91 @@ class SessionStore {
 		this.#persistNow();
 	}
 
+	/* ---- the service being cooked --------------------------------------
+	 *
+	 * `live` and `serviceTime` used to be component state, so walking to the
+	 * walk-in and coming back lost the clock — on the one screen a cook stands
+	 * in front of while something is on the heat.
+	 */
+
+	/**
+	 * The run, but ONLY if it belongs to this menu and has not gone stale.
+	 *
+	 * Both guards matter. A run inherited by a different menu would tick rows
+	 * that are not in it; a run resumed the following afternoon would open on
+	 * "40 minutes behind" for a service that finished last night.
+	 */
+	runFor(menuHash: string): PlanRun | null {
+		const r = this.#s.planRun;
+		if (!r || r.menuHash !== menuHash) return null;
+		if (Date.now() - r.startedAt > RUN_MAX_AGE_MS) return null;
+		return r;
+	}
+
+	startRun(menuHash: string, serviceTime: string) {
+		this.#s.planRun = { menuHash, serviceTime, startedAt: Date.now(), ticks: {} };
+		this.#persistNow();
+	}
+
+	endRun() {
+		this.#s.planRun = undefined;
+		this.#persistNow();
+	}
+
+	setRunServiceTime(serviceTime: string) {
+		if (!this.#s.planRun) return;
+		this.#s.planRun = { ...this.#s.planRun, serviceTime };
+		this.#persistNow();
+	}
+
+	/**
+	 * Tick a row, and return the ms since the previously ticked row.
+	 *
+	 * The caller decides whether that interval is worth recording — only it
+	 * knows whether the earlier step carried a wait, and a step with a wait
+	 * measures the wait rather than the work.
+	 */
+	tickRow(rowKey: string): number | null {
+		const r = this.#s.planRun;
+		if (!r) return null;
+		const now = Date.now();
+		const previous = Object.values(r.ticks).reduce((n, t) => Math.max(n, t), 0);
+		this.#s.planRun = { ...r, ticks: { ...r.ticks, [rowKey]: now } };
+		this.#persistNow();
+		return previous ? now - previous : null;
+	}
+
+	untickRow(rowKey: string) {
+		const r = this.#s.planRun;
+		if (!r || !(rowKey in r.ticks)) return;
+		const ticks = { ...r.ticks };
+		delete ticks[rowKey];
+		this.#s.planRun = { ...r, ticks };
+		this.#persistNow();
+	}
+
+	/* ---- what a step actually takes ------------------------------------- */
+
+	actualsFor(key: string): number[] {
+		return this.#s.stepActuals[key] ?? [];
+	}
+
+	/**
+	 * Keep the last 12 observations for a step and no more. A step cooked for
+	 * years should answer for how it goes NOW, not be anchored by a hundred
+	 * intervals from when the cook was learning it.
+	 */
+	recordStepActual(key: string, minutes: number) {
+		// Round FIRST, then refuse: an interval under thirty seconds rounds to
+		// zero, and a stored zero is a sample that can never mean anything but
+		// still takes a slot in the last-12 window.
+		const whole = Math.round(minutes);
+		if (!Number.isFinite(whole) || whole <= 0) return;
+		const next = [...this.actualsFor(key), whole].slice(-12);
+		this.#s.stepActuals = { ...this.#s.stepActuals, [key]: next };
+		this.#persistNow();
+	}
+
 	clearChecked(menuHash: string) {
 		delete this.#s.shoppingChecks[menuHash];
 		this.#persistNow();
@@ -234,9 +325,38 @@ class SessionStore {
 	 * lib/repertoire.ts. Dishes without a standard record no grade and simply
 	 * advance, because having nothing to check against is the guide's gap.
 	 */
-	markCooked(slug: string, grade?: Grade) {
+	markCooked(slug: string, grade?: Grade, off?: string[]) {
 		const entry: CookEntry = grade ? { slug, at: Date.now(), grade } : { slug, at: Date.now() };
+		// Absent rather than empty: a graded plate with no annotation has not
+		// been told nothing was off, it has been told nothing.
+		if (off?.length) entry.off = [...off];
 		this.#s.cookedLog = [...this.#s.cookedLog, entry];
+		this.#persistNow();
+	}
+
+	/**
+	 * Attach the named fault to the cook that was just recorded.
+	 *
+	 * A second call rather than a wider markCooked, because the order is
+	 * load-bearing: cook mode records the grade BEFORE opening the repair panel
+	 * so that closing the dialog — the ✕, Escape, the phone ringing — cannot
+	 * lose it. The fault is chosen after that, and this is how it catches up.
+	 *
+	 * Patches the most recent entry for the slug and no other. If there is none
+	 * it does nothing rather than inventing a cook that never happened.
+	 */
+	annotateLastCook(slug: string, patch: { fault?: string }) {
+		let idx = -1;
+		for (let i = this.#s.cookedLog.length - 1; i >= 0; i--) {
+			if (this.#s.cookedLog[i].slug === slug) {
+				idx = i;
+				break;
+			}
+		}
+		if (idx < 0) return;
+		const next = [...this.#s.cookedLog];
+		next[idx] = { ...next[idx], ...(patch.fault ? { fault: patch.fault } : {}) };
+		this.#s.cookedLog = next;
 		this.#persistNow();
 	}
 

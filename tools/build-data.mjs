@@ -29,6 +29,11 @@ import { deriveTechniques, deriveFilms } from './derive/films.mjs';
 import { fullTechTable, LEXICON_ANCHOR, SUPPLEMENT } from './derive/technique-table.mjs';
 import { buildCrosslinks } from './derive/crosslinks.mjs';
 import { STANDARDS, MIN_MARKS, MAX_MARKS } from './derive/standards.mjs';
+import {
+	TECHNIQUE_STANDARDS,
+	TECHNIQUE_GATE_MIN_RECIPES,
+	JUDGED_BY_MAX
+} from './derive/technique-standards.mjs';
 import { buildPalate } from './derive/palate.mjs';
 import { buildEconomics } from './derive/economics.mjs';
 import { buildSanitation } from './derive/sanitation.mjs';
@@ -405,6 +410,50 @@ const techniques = TECH_ALL.map((x, i) => {
 	.filter((t) => t.recipes.length)
 	.sort((a, b) => a.label.localeCompare(b.label));
 
+/**
+ * `judgedBy` — the technique standards a recipe is assessed against.
+ *
+ * 45 recipes carry a dish standard. The other 925 could be recorded as cooked
+ * and nothing more, and 782 of those exercise at least one technique that now
+ * has a written standard. This is the join that reaches them.
+ *
+ * A dish standard always wins. It is specific to the plate and it is read at
+ * the pass; a technique standard is the fallback for everything else, read at
+ * the pan. A recipe never carries both — see tools/derive/technique-standards.mjs.
+ *
+ * Ordered most-specific-first (ascending recipe count) and capped at
+ * JUDGED_BY_MAX. Slugs only: the prose lives once in technique-standards.json
+ * rather than being copied into 782 recipes, for the same reason the pairing
+ * table is interned.
+ */
+const techStandardSlugs = new Set(TECHNIQUE_STANDARDS.map((x) => x.slug));
+const techniqueRecipeCount = new Map(techniques.map((t) => [t.slug, t.recipes.length]));
+
+for (const r of full) {
+	if (r.standard) continue;
+	const judged = (r.techniques ?? [])
+		.map((label) => slugify(label))
+		.filter((s) => techStandardSlugs.has(s))
+		.sort((a, b) => techniqueRecipeCount.get(a) - techniqueRecipeCount.get(b))
+		.slice(0, JUDGED_BY_MAX);
+	// Absent rather than empty, matching `standard` above: the recipe page
+	// tests for the key and an empty array would render an empty block.
+	if (judged.length) r.judgedBy = judged;
+}
+
+/**
+ * Shipped with the label and the count alongside the prose so the recipe page
+ * can name the technique without importing techniques.json, which is 145KB and
+ * carries every definition in the table.
+ */
+const techniqueStandards = TECHNIQUE_STANDARDS.map((x) => ({
+	slug: x.slug,
+	label: techniques.find((t) => t.slug === x.slug)?.label ?? x.slug,
+	recipeCount: techniqueRecipeCount.get(x.slug) ?? 0,
+	marks: x.marks,
+	fault: x.fault
+})).sort((a, b) => b.recipeCount - a.recipeCount);
+
 // ── emit ─────────────────────────────────────────────────────────────────────
 mkdirSync(OUT, { recursive: true });
 const write = (file, value) => {
@@ -476,6 +525,7 @@ write('study.json', study);
 write('substitutions.json', substitutions);
 write('cellar.json', cellar);
 write('techniques.json', techniques);
+write('technique-standards.json', techniqueStandards);
 write('palate.json', palate);
 write('economics.json', economics);
 write('sanitation.json', sanitation);
@@ -570,6 +620,68 @@ if (judgement.length) {
 		`  diet: ${judgement.length} substitution judgement calls (reported, not gated) — ` +
 			`the corpus is inconsistent about "X (or Y for veg)"`
 	);
+}
+
+/**
+ * The vegan claim, gated — because it is an ASSERTION, not an omission.
+ *
+ * A missing allergen flag says "we did not find one". A Vegan badge says "there
+ * is none", to a guest who is not going to read the ingredient list underneath
+ * it. Those fail in opposite directions and only one of them is survivable.
+ *
+ * 16 recipes shipped `vegan: true` and `vegetarianOption: true` together, which
+ * is a contradiction in the data's own terms — `vegetarianOption` means an
+ * animal product IS named somewhere and only escaped. Escabecheng Isda, whose
+ * first ingredient is a whole tilapia fried in oil, painted a Vegan badge.
+ *
+ * So: nothing flagged vegan may carry an animal word anywhere in its text,
+ * escaped or not. Break this by dropping the `!vegetarianOption` clause in
+ * derive/diet.mjs and it names all 16.
+ */
+{
+	const veganLies = [];
+	R.forEach((r, i) => {
+		const slug = recipeSlugs[i];
+		const d = OVERRIDES.recipes?.[slug]?.diet ?? deriveDiet(r, blobs[i]);
+		if (!d.vegan) return;
+		const carries = [];
+		if (d.containsMeat) carries.push('meat');
+		if (d.containsFish) carries.push('fish');
+		if (d.containsShellfish) carries.push('shellfish');
+		if (d.containsDairy) carries.push('dairy');
+		if (d.containsEgg) carries.push('egg');
+		if (d.vegetarianOption) carries.push('vegetarianOption');
+		if (carries.length) veganLies.push(`${r.n} [${slug}] — ${carries.join(', ')}`);
+	});
+	if (veganLies.length) {
+		problems.push(
+			`${veganLies.length} recipes claim vegan while their own text names an animal product:\n` +
+				veganLies.map((x) => `      ${x}`).join('\n')
+		);
+	}
+
+	/**
+	 * The authored `vegetarian` flag is a human judgement the build trusts by
+	 * design (see derive/diet.mjs), so this is REPORTED, not gated — but it only
+	 * became visible once fish and shellfish started reading every line, and a
+	 * server reading a Vegetarian badge over a dish containing dashi or
+	 * Worcestershire is the exact conversation this product exists to prevent.
+	 */
+	const vegWithAnimal = [];
+	R.forEach((r, i) => {
+		const slug = recipeSlugs[i];
+		const d = OVERRIDES.recipes?.[slug]?.diet ?? deriveDiet(r, blobs[i]);
+		const authored = OVERRIDES.recipes?.[slug]?.diet ? d.vegetarian : Boolean(r.v);
+		if (authored && (d.containsFish || d.containsShellfish || d.containsMeat)) {
+			vegWithAnimal.push(r.n);
+		}
+	});
+	if (vegWithAnimal.length) {
+		console.log(
+			`  diet: ${vegWithAnimal.length} authored-vegetarian recipes carry a fish/shellfish/meat ` +
+				`allergen flag (reported, not gated) — ${vegWithAnimal.slice(0, 4).join(', ')}…`
+		);
+	}
 }
 
 // Cross-link concentration: the original always scanned from index 0, so links
@@ -824,6 +936,217 @@ console.log('');
 }
 
 problems.push(...palateProblems);
+
+/**
+ * The technique standards — gated in both directions, with the numbers in the
+ * module's own headline read back out of it.
+ *
+ * See tools/derive/technique-standards.mjs. Same shape rules as the dish
+ * standards, plus a reverse gate the dish standards cannot have: a DISH with no
+ * standard is a rolling job and not an error, but a TECHNIQUE the corpus leans
+ * on heavily with nothing written is a hole in the assessment of hundreds of
+ * recipes at once, and it should not be possible to add one quietly.
+ */
+{
+	const techBySlug = new Map(techniques.map((t) => [t.slug, t]));
+	const authored = new Set(TECHNIQUE_STANDARDS.map((x) => x.slug));
+
+	// FORWARD — a standard for a technique the table does not have means a slug
+	// was written that the corpus never had.
+	const orphans = TECHNIQUE_STANDARDS.filter((x) => !techBySlug.has(x.slug));
+	if (orphans.length) {
+		problems.push(
+			`technique standards for slugs no technique has: ${orphans.map((x) => x.slug).join(', ')}`
+		);
+	}
+
+	const dupes = TECHNIQUE_STANDARDS.map((x) => x.slug).filter((v, i, a) => a.indexOf(v) !== i);
+	if (dupes.length) {
+		problems.push(`duplicate technique standards: ${[...new Set(dupes)].join(', ')}`);
+	}
+
+	const badCount = TECHNIQUE_STANDARDS.filter(
+		(x) => !Array.isArray(x.marks) || x.marks.length < MIN_MARKS || x.marks.length > MAX_MARKS
+	);
+	if (badCount.length) {
+		problems.push(
+			`technique standards outside ${MIN_MARKS}-${MAX_MARKS} marks: ` +
+				badCount.map((x) => `${x.slug} (${x.marks?.length ?? 0})`).join(', ')
+		);
+	}
+
+	const noFault = TECHNIQUE_STANDARDS.filter((x) => !x.fault || !String(x.fault).trim());
+	if (noFault.length) {
+		problems.push(
+			`technique standards with no stated fault: ${noFault.map((x) => x.slug).join(', ')}`
+		);
+	}
+
+	// REVERSE — the half that stops rot. A SUPPLEMENT entry added later that
+	// tags 30 recipes must not be able to ship unassessable and unnoticed.
+	const unassessable = techniques
+		.filter((t) => t.recipes.length >= TECHNIQUE_GATE_MIN_RECIPES && !authored.has(t.slug))
+		.sort((a, b) => b.recipes.length - a.recipes.length);
+	if (unassessable.length) {
+		problems.push(
+			`techniques on ${TECHNIQUE_GATE_MIN_RECIPES}+ recipes with no standard written: ` +
+				unassessable.map((t) => `${t.slug} (${t.recipes.length})`).join(', ')
+		);
+	}
+
+	// The join must resolve, and it must never double up with a dish standard.
+	const unresolved = new Set();
+	for (const r of full) for (const s of r.judgedBy ?? []) if (!authored.has(s)) unresolved.add(s);
+	if (unresolved.size) {
+		problems.push(`judgedBy pointing at no technique standard: ${[...unresolved].join(', ')}`);
+	}
+
+	const both = full.filter((r) => r.standard && r.judgedBy);
+	if (both.length) {
+		problems.push(
+			`recipes carrying a dish standard AND technique standards: ${both
+				.map((r) => r.slug)
+				.join(', ')}`
+		);
+	}
+
+	/**
+	 * Read the numbers back out of the prose that justifies them.
+	 *
+	 * economics.mjs shipped with only the forward half of its gate working, so
+	 * `lowPct` could drift 25 -> 30 while the entry still read "25-35%". The
+	 * module's headline claim is therefore checked against what actually
+	 * happened, not merely asserted in a comment nobody re-runs.
+	 */
+	const src = readFileSync(new URL('./derive/technique-standards.mjs', import.meta.url), 'utf8')
+		.replace(/^[ \t]*\*[ \t]?/gm, ' ')
+		.replace(/\s+/g, ' ');
+	const claim = src.match(
+		/The (\d+) techniques written here are every technique the corpus uses on (\d+) or more recipes\. They put a standard on (\d+) recipes that had none, taking the assessable corpus from (\d+) to (\d+) of (\d+)/
+	);
+	if (!claim) {
+		problems.push(
+			'technique-standards.mjs: the headline paragraph no longer parses, so its numbers cannot be checked — restore the sentence or update this gate'
+		);
+	} else {
+		const [, nTech, nThreshold, nGained, nDish, nAssessable, nCorpus] = claim.map(Number);
+		const gained = full.filter((r) => r.judgedBy).length;
+		const dish = full.filter((r) => r.standard).length;
+		const stated = { nTech, nThreshold, nGained, nDish, nAssessable, nCorpus };
+		const actual = {
+			nTech: TECHNIQUE_STANDARDS.length,
+			nThreshold: TECHNIQUE_GATE_MIN_RECIPES,
+			nGained: gained,
+			nDish: dish,
+			nAssessable: dish + gained,
+			nCorpus: full.length
+		};
+		const drift = Object.keys(actual).filter((k) => actual[k] !== stated[k]);
+		if (drift.length) {
+			problems.push(
+				'technique-standards.mjs claims something the build disagrees with: ' +
+					drift.map((k) => `${k} states ${stated[k]}, measured ${actual[k]}`).join('; ')
+			);
+		}
+	}
+
+	console.log(
+		`  technique standards: ${TECHNIQUE_STANDARDS.length} written, judging ${
+			full.filter((r) => r.judgedBy).length
+		} recipes that carry no dish standard`
+	);
+}
+
+/**
+ * The mark-id ledger — what makes a mark id a PROMISE rather than a label.
+ *
+ * A cook's annotation records "the crust mark was off" as an id. The whole
+ * value of that record is that it still means the same sentence in March, so
+ * the id has to be something the build refuses to let move:
+ *
+ *   - dropped or renamed  -> FAIL. Every annotation pointing at it is orphaned,
+ *     and unlike a broken link there is no symptom: the record just quietly
+ *     stops matching anything and the histogram loses a row.
+ *   - added               -> appended, silently. Minting is additive; a new
+ *     mark is ordinary authoring and must not need a ceremony.
+ *
+ * This is the rule the Codex already holds for question ids, and the reason it
+ * holds it: a changed id orphans progress.
+ *
+ * The ledger is COMMITTED and the build writes to it. That is deliberate —
+ * `git diff` on this file is the review surface. An append is a new line; a
+ * rename is a delete plus an add, and the delete fails the build before it can
+ * ever reach the diff.
+ */
+{
+	const LEDGER = join(ROOT, 'tools', 'derive', 'mark-ids.ledger.json');
+
+	const allMarks = [
+		...STANDARDS.map((s) => ({ slug: s.slug, marks: s.marks, kind: 'dish' })),
+		...TECHNIQUE_STANDARDS.map((s) => ({ slug: s.slug, marks: s.marks, kind: 'technique' }))
+	];
+
+	const live = [];
+	for (const s of allMarks) {
+		const seen = new Set();
+		for (const m of s.marks) {
+			if (!m || typeof m !== 'object' || typeof m.id !== 'string' || !m.id) {
+				problems.push(
+					`${s.slug} has a mark with no id — run \`node tools/mint-mark-ids.mjs\``
+				);
+				continue;
+			}
+			if (typeof m.text !== 'string' || !m.text.trim()) {
+				problems.push(`${s.slug} has a mark id (${m.id}) with no text`);
+			}
+			// An id that does not carry its own standard's slug is a copy-paste
+			// that now points a cook's annotation at somebody else's dish.
+			if (!m.id.startsWith(`${s.slug}#`)) {
+				problems.push(`mark id ${m.id} does not belong to ${s.slug}`);
+			}
+			if (seen.has(m.id)) problems.push(`${s.slug} uses the mark id ${m.id} twice`);
+			seen.add(m.id);
+			live.push(m.id);
+		}
+	}
+
+	const dupes = live.filter((v, i, a) => a.indexOf(v) !== i);
+	if (dupes.length) {
+		problems.push(`mark ids used by more than one standard: ${[...new Set(dupes)].join(', ')}`);
+	}
+
+	const liveSet = new Set(live);
+	let ledgered = [];
+	if (existsSync(LEDGER)) {
+		try {
+			ledgered = JSON.parse(readFileSync(LEDGER, 'utf8')).ids ?? [];
+		} catch {
+			problems.push('mark-ids.ledger.json is unreadable — restore it from git rather than deleting it');
+		}
+	}
+
+	const orphaned = ledgered.filter((id) => !liveSet.has(id));
+	if (orphaned.length) {
+		problems.push(
+			`${orphaned.length} mark ids in the ledger no longer exist — a rename or a drop orphans ` +
+				`every annotation pointing at them. Restore the id (the TEXT is free to change), ` +
+				`or remove it from the ledger deliberately:\n` +
+				orphaned.map((id) => `      ${id}`).join('\n')
+		);
+	}
+
+	const minted = live.filter((id) => !ledgered.includes(id));
+	if (!problems.length) {
+		const next = [...ledgered, ...minted].sort();
+		writeFileSync(LEDGER, JSON.stringify({ ids: next }, null, 1) + '\n', 'utf8');
+		console.log(
+			`  mark ids: ${live.length} live, ${next.length} ledgered` +
+				(minted.length ? `, ${minted.length} newly minted` : '')
+		);
+	}
+}
+
+
 problems.push(...economicsProblems);
 problems.push(...sanitationProblems);
 problems.push(...serviceTrackProblems);

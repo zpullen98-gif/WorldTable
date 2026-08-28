@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { loadSubstitutions, DEFAULT_PAIRING } from '$lib/data';
+import { loadSubstitutions, loadTechniqueStandards, DEFAULT_PAIRING } from '$lib/data';
 
 /**
  * Family recipe pages are client-only, by necessity and by design.
@@ -27,6 +27,18 @@ export async function load({ params }) {
 		summary: recipe,
 		detail: recipe,
 		pairing: DEFAULT_PAIRING,
-		substitutions: await loadSubstitutions()
+		substitutions: await loadSubstitutions(),
+		/**
+		 * Resolved exactly as /recipe/[slug]/+page.ts does it, so a house dish
+		 * renders "How to tell it is going right" and cook mode has a written
+		 * standard to grade it against. Without this the ladder in repertoire.ts
+		 * climbed on pure attendance for every dish a venue actually cooks.
+		 */
+		judged: await (async () => {
+			const standards = await loadTechniqueStandards();
+			return (recipe.judgedBy ?? [])
+				.map((slug: string) => standards.get(slug))
+				.filter((x): x is NonNullable<typeof x> => x !== undefined);
+		})()
 	};
 }

@@ -11,13 +11,14 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { session } from '$lib/stores/session.svelte';
+	import { house } from '$lib/stores/house.svelte';
 	import { repertoire, dueList } from '$lib/repertoire';
 	import * as profiles from '$lib/profiles';
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
 	const role = $derived(session.role);
-	const dishes = $derived(session.menuDishes.length);
+	const dishes = $derived(house.dishes.length);
 	const cooked = $derived(session.cookedDishes.size);
 
 	/* The board is offered only where it is the manager's device to read. The

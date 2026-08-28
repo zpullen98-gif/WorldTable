@@ -17,6 +17,7 @@
 	import { base } from '$app/paths';
 	import { bySlug } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
+	import { house } from '$lib/stores/house.svelte';
 	import { repertoire, dueList, sinceLabel } from '$lib/repertoire';
 
 	interface Props {
@@ -46,7 +47,7 @@
 	const cooked = $derived(cookedDishes.size);
 
 	const menuCount = $derived(session.menuCount);
-	const dishes = $derived(session.menuDishes.length);
+	const dishes = $derived(house.dishes.length);
 	const pantry = $derived(session.pantry.length);
 
 	/* There IS a scheduler now (lib/repertoire.ts), so "today" can mean what it

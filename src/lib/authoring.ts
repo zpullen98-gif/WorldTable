@@ -25,6 +25,46 @@ export interface FamilyDraft {
 	/** One step per line. */
 	method: string;
 	tip: string;
+	/**
+	 * Technique-standard slugs the author ticked — what this dish is judged on.
+	 *
+	 * The picker is bounded to the 26 techniques that actually HAVE a standard
+	 * written, which both shortens the list and guarantees the grade means
+	 * something: a tick that resolves to no standard would put a dish back where
+	 * it started, recorded as cooked and nothing more.
+	 */
+	techniques: string[];
+}
+
+/**
+ * How many techniques an author may tick.
+ *
+ * Four, against the two that will actually be shown. The gap is deliberate: a
+ * cook ticking what the dish exercises is describing it, and the app decides
+ * which two of those say most. See resolveJudgedBy.
+ */
+export const FAMILY_TECHNIQUE_MAX = 4;
+
+/**
+ * The same resolution build-data.mjs runs over the 970, applied to one house
+ * dish: keep the ticks that name a written standard, order them RAREST FIRST
+ * because the technique applying to fewest dishes says most about this one, and
+ * cap at two.
+ *
+ * `judgedBy[0]` is what cook mode grades, so the order is load-bearing here for
+ * exactly the reason it is there.
+ */
+export const FAMILY_JUDGED_BY_MAX = 2;
+
+export function resolveJudgedBy(
+	ticked: readonly string[],
+	standards: ReadonlyArray<{ slug: string; recipeCount: number }>
+): string[] {
+	const bySlug = new Map(standards.map((s) => [s.slug, s]));
+	return [...new Set(ticked)]
+		.filter((slug) => bySlug.has(slug))
+		.sort((a, b) => bySlug.get(a)!.recipeCount - bySlug.get(b)!.recipeCount)
+		.slice(0, FAMILY_JUDGED_BY_MAX);
 }
 
 /** Same rule as the build pipeline's section detector (see build-data.mjs). */
@@ -78,9 +118,15 @@ export function validateDraft(d: FamilyDraft): string | null {
 export function buildFamilyRecipe(
 	draft: FamilyDraft,
 	existingFamily: Recipe[],
-	pantry: PantryGroup[]
+	pantry: PantryGroup[],
+	/** The 26 written technique standards, for resolving what this is judged on. */
+	standards: ReadonlyArray<{ slug: string; label: string; recipeCount: number }> = []
 ): Recipe {
 	const chapter = draft.chapter.trim() || 'Family';
+	const ticked = (draft.techniques ?? []).slice(0, FAMILY_TECHNIQUE_MAX);
+	const judgedBy = resolveJudgedBy(ticked, standards);
+	const labelOf = new Map(standards.map((x) => [x.slug, x.label]));
+	const techniqueLabels = ticked.map((slug) => labelOf.get(slug) ?? slug);
 	const ingredients = nonEmptyLines(draft.ingredients);
 	const method = nonEmptyLines(draft.method);
 	const note = draft.tip.trim();
@@ -134,7 +180,12 @@ export function buildFamilyRecipe(
 		steps: method.map((text) => ({ text, durationSec: stepDuration(text) })),
 		note,
 		equipment: [],
-		techniques: [],
+		// The author's ticked labels, for "THE SKILLS INSIDE" on the page. These
+		// are SELF-DECLARED and can never reach /coverage: the board is driven by
+		// techniques.json's audited recipe lists (coverage/+page.ts builds
+		// recipesByTechnique from them), and no family slug appears in one. That
+		// is a structural property, not a convention — see authoring.test.ts.
+		techniques: techniqueLabels,
 		flavor: {
 			tags: ['family'],
 			sentence: 'A dish of the house — the card in the drawer knows more than the guide does.'
@@ -156,6 +207,9 @@ export function buildFamilyRecipe(
 			}
 		},
 		lexiconTerms: [],
-		pantryItems
+		pantryItems,
+		// Absent rather than empty, matching the 970: the recipe page tests for
+		// the key, and an empty array would render a heading over nothing.
+		...(judgedBy.length ? { judgedBy } : {})
 	};
 }

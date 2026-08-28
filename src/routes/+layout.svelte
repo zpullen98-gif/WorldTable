@@ -5,6 +5,7 @@
 	import { TOTALS } from '$lib/data';
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import { session } from '$lib/stores/session.svelte';
+	import { house } from '$lib/stores/house.svelte';
 	import * as profiles from '$lib/profiles';
 	import { repertoire, dueList } from '$lib/repertoire';
 	import UpdatePrompt from '$lib/components/UpdatePrompt.svelte';
@@ -14,8 +15,13 @@
 
 	// One hydrate for the whole app. Views read `session.ready` and show their
 	// own skeleton rather than flashing an empty menu.
+	//
+	// The house record is device-wide and NOT profile-namespaced, so it does not
+	// re-read on a profile switch the way the session does — the menu does not
+	// change because somebody else tapped their name. See stores/house.svelte.ts.
 	$effect(() => {
 		void session.hydrate();
+		void house.hydrate();
 	});
 
 	/**

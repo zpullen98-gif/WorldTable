@@ -8,4 +8,5 @@
 	detail={data.detail}
 	pairing={data.pairing}
 	substitutions={data.substitutions}
+	judged={data.judged}
 />

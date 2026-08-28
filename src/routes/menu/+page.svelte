@@ -2,15 +2,45 @@
 	import { base } from '$app/paths';
 	import { bySlug, formatTime, recipeHref, recipes, TOTALS } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
+	import { house } from '$lib/stores/house.svelte';
 	import type { MenuDish } from '$lib/persistence/state';
 	import { buildExport, download, parseImport, describeImport } from '$lib/persistence/portable';
 	import Ornament from '$lib/components/Ornament.svelte';
 	import { onMount } from 'svelte';
-	import { buildPass, clockFor, formatClockTime, daysEarlier, DEFAULT_HANDS_MIN } from '$lib/pass';
+	import {
+		buildPass,
+		clashesOver,
+		clockFor,
+		formatClockTime,
+		daysEarlier,
+		DEFAULT_HANDS_MIN,
+		DEFAULT_COURSE_FIRING,
+		observedElapsed
+	} from '$lib/pass';
 
 	let { data } = $props();
 
-	const COURSE_ORDER = ['Starter', 'Salad', 'Soup', 'Main', 'Side', 'Bread', 'Dessert', 'Drink'];
+	/**
+	 * All TEN courses the corpus uses, in the order a menu reads.
+	 *
+	 * This listed eight. Breakfast (59 recipes) and Sauce (22) were missing, so
+	 * pinning The French Omelette put it in NO group and it vanished from the
+	 * course breakdown entirely — 81 recipes that could be pinned and then not
+	 * be seen. `courses` filters on this list, so anything absent is invisible
+	 * rather than merely last.
+	 */
+	const COURSE_ORDER = [
+		'Breakfast',
+		'Starter',
+		'Salad',
+		'Soup',
+		'Main',
+		'Side',
+		'Sauce',
+		'Bread',
+		'Dessert',
+		'Drink'
+	];
 
 	// Pins resolve against the guide AND the family shelf. bySlug alone would
 	// silently drop a pinned family recipe from every list on this page.
@@ -98,9 +128,46 @@
 	 */
 	const plan = $derived.by(() =>
 		buildPass(
-			pinned.map((r) => ({ slug: r!.slug, name: r!.name, steps: stepsOf(r!.slug) }))
+			pinned.map((r) => ({
+				slug: r!.slug,
+				name: r!.name,
+				course: r!.course,
+				steps: stepsOf(r!.slug)
+			}))
 		)
 	);
+
+	/**
+	 * How many pairs of hands are on tonight.
+	 *
+	 * Component state, persisted NOWHERE and deliberately so: a saved "who was
+	 * on" is one field away from a rota and two from a timesheet, and this app
+	 * does not keep records about people. It is a number for tonight's plan and
+	 * it goes when the page does.
+	 */
+	let hands = $state(1);
+
+	/**
+	 * Clashes against the crew actually in the room, not against a lone cook.
+	 *
+	 * `plan.collisions` is still built and still tested, but it is pairwise and
+	 * its merge unions dish names across a widened stretch — so its `dishes`
+	 * count is "dishes touched in this busy period", not "hands wanted now", and
+	 * dividing it by a crew size would invent clashes on a two-cook night and
+	 * hide them on a four-cook one. lib/pass.ts carries a separate sweep for
+	 * exactly this, and this reads that.
+	 */
+	const clashes = $derived(clashesOver(plan.steps, hands));
+	const coursesOf = $derived(new Map(pinned.map((r) => [r!.slug, r!.course])));
+
+	/**
+	 * Where the bell falls in the step list — the first step that begins at or
+	 * after the first plate leaves. Everything below it is a later course.
+	 */
+	const bellAt = $derived.by(() => {
+		const i = plan.steps.findIndex((s) => s.startsAtMin <= 0);
+		return i < 0 ? plan.steps.length : i;
+	});
 
 	/* A fixed default rather than "an hour from now": this page is prerendered,
 	   and seeding state from the clock makes the served HTML disagree with the
@@ -119,8 +186,44 @@
 	/* ---- the clock ------------------------------------------------------
 	 * Only while the cook asks for it. An interval that runs on a page nobody
 	 * is cooking from is a battery cost for a number nobody is reading. */
-	let live = $state(false);
+	/**
+	 * The clock is the RUN, not component state.
+	 *
+	 * `live` and `serviceTime` used to live in this component, so walking to the
+	 * walk-in and coming back lost both — on the one screen a cook is standing
+	 * in front of while something is on the heat. The run is stored, belongs to
+	 * one menu, and expires on its own so last night's service is never resumed
+	 * into a lie. See SessionState.planRun.
+	 */
+	const run = $derived(session.runFor(menuHash));
+	const live = $derived(Boolean(run));
+	const ticks = $derived(run?.ticks ?? {});
+	const rowKey = (st: { slug: string; n: number }) => `${st.slug}-${st.n}`;
+
+	/**
+	 * The actuals key carries the dish's STEP COUNT.
+	 *
+	 * Constant for the 970 frozen guide recipes, so it costs them nothing. A
+	 * family recipe re-authored to a different length mints a new key instead,
+	 * and its old observations are simply never read again — no special case and
+	 * no stale actuals pinned to a step that moved.
+	 */
+	const actualKey = (st: { slug: string; n: number }) =>
+		`${st.slug}#${st.n}#${stepsOf(st.slug).length}`;
+
 	let now = $state(0);
+
+	// Restore the service time from a run in progress, once, after hydration.
+	let restored = false;
+	$effect(() => {
+		if (restored || !session.ready) return;
+		restored = true;
+		const r = session.runFor(menuHash);
+		if (r) {
+			serviceTime = r.serviceTime;
+			now = Date.now();
+		}
+	});
 
 	onMount(() => {
 		now = Date.now();
@@ -131,15 +234,74 @@
 	});
 
 	function toggleLive() {
-		live = !live;
-		if (live) now = Date.now();
+		if (live) {
+			session.endRun();
+			return;
+		}
+		session.startRun(menuHash, serviceTime);
+		now = Date.now();
 	}
+
+	/**
+	 * Tick a row, and take the observation the tick pair just made for free.
+	 *
+	 * The interval belongs to the step that was ticked BEFORE this one — it is
+	 * the time between starting that step and starting this one. Only steps with
+	 * no unattended time are recorded: a step carrying a wait measures the wait,
+	 * not the work.
+	 */
+	function toggleTick(st: (typeof plan.steps)[number]) {
+		const key = rowKey(st);
+		if (ticks[key]) {
+			session.untickRow(key);
+			return;
+		}
+		let prev: (typeof plan.steps)[number] | null = null;
+		let prevAt = 0;
+		for (const other of plan.steps) {
+			const t = ticks[rowKey(other)];
+			if (t && t > prevAt) {
+				prevAt = t;
+				prev = other;
+			}
+		}
+		session.tickRow(key);
+		if (prev && prev.unattendedMin === 0) {
+			session.recordStepActual(actualKey(prev), (Date.now() - prevAt) / 60_000);
+		}
+	}
+
+	/**
+	 * What a step usually takes, once there is enough evidence to say.
+	 *
+	 * ELAPSED, never hands-on: a tick pair cannot tell a wait from the cook
+	 * answering the phone, and the copy says "elapsed here" for that reason.
+	 */
+	const observedFor = (st: (typeof plan.steps)[number]) =>
+		st.unattendedMin ? null : observedElapsed(session.actualsFor(actualKey(st)), st.handsOnMin);
 
 	/** Minutes left until service. Negative once service has passed. */
 	const remainingMin = $derived(Math.round((serviceAt.getTime() - now) / 60_000));
 
-	/** How far behind the plan a cook starting now already is. */
-	const behindMin = $derived(Math.max(0, plan.lengthMin - remainingMin));
+	/**
+	 * The step the cook should be on: the first one not yet ticked.
+	 *
+	 * With nothing ticked this is the first step, whose startsAtMin IS
+	 * plan.lengthMin — so the number degrades to exactly the whole-plan
+	 * subtraction it replaced, and a cook who never ticks loses nothing.
+	 */
+	const nextUnticked = $derived(plan.steps.find((st) => !ticks[rowKey(st)]));
+
+	/**
+	 * How far behind the plan the cook is — and, now, WHICH dish it went into.
+	 *
+	 * This was one subtraction against total plan length, so it could raise "22
+	 * min behind" and was physically incapable of naming the dish. A ticked row
+	 * gives a true position.
+	 */
+	const behindMin = $derived(
+		Math.max(0, (nextUnticked?.startsAtMin ?? plan.lengthMin) - remainingMin)
+	);
 
 	const startedAlready = (startsAtMin: number) => live && startsAtMin >= remainingMin;
 
@@ -182,7 +344,7 @@
 
 	let dishForm = $state<null | {
 		id: string | null; name: string; section: string; description: string;
-		ingredients: string; allergens: string[]; price: string;
+		ingredients: string; allergens: string[]; checked: boolean; price: string;
 	}>(null);
 
 	function mintDishId() {
@@ -191,12 +353,13 @@
 		return s;
 	}
 	function newDish() {
-		dishForm = { id: null, name: '', section: '', description: '', ingredients: '', allergens: [], price: '' };
+		dishForm = { id: null, name: '', section: '', description: '', ingredients: '', allergens: [], checked: false, price: '' };
 	}
 	function editDish(d: MenuDish) {
 		dishForm = {
 			id: d.id, name: d.name, section: d.section, description: d.description,
-			ingredients: d.ingredients.join('\n'), allergens: [...d.allergens], price: d.price
+			ingredients: d.ingredients.join('\n'), allergens: [...d.allergens],
+			checked: Boolean(d.allergensCheckedAt), price: d.price
 		};
 	}
 	function toggleAllergen(a: string) {
@@ -214,16 +377,21 @@
 			description: dishForm.description.trim(),
 			ingredients: dishForm.ingredients.split('\n').map((s) => s.trim()).filter(Boolean),
 			allergens: [...dishForm.allergens],
+			// Re-stamped on every affirmation rather than kept from the first one:
+			// the useful question at a table is how recently somebody looked, and
+			// an edit that changes the build without re-ticking the box drops the
+			// dish back to "not marked", which is the answer that keeps people alive.
+			...(dishForm.checked ? { allergensCheckedAt: Date.now() } : {}),
 			price: dishForm.price.trim(),
 			ts: Date.now()
 		};
-		if (dishForm.id) session.updateMenuDish(rec);
-		else session.addMenuDish(rec);
+		if (dishForm.id) house.updateDish(rec);
+		else house.addDish(rec);
 		dishForm = null;
 	}
 	const dishSections = $derived.by(() => {
 		const m = new Map<string, MenuDish[]>();
-		for (const d of session.menuDishes) {
+		for (const d of house.dishes) {
 			const k = d.section || 'The Menu';
 			if (!m.has(k)) m.set(k, []);
 			m.get(k)!.push(d);
@@ -236,7 +404,10 @@
 	let fileInput: HTMLInputElement | undefined = $state();
 
 	function doExport() {
-		download(buildExport(session.snapshot(), TOTALS.recipes));
+		// The menu and its costings live in the house record now; the .wtjson
+		// format is unchanged and still carries them inside the session object,
+		// because every file written so far does and a bump would strand them.
+		download(buildExport({ ...session.snapshot(), ...house.snapshot() }, TOTALS.recipes));
 	}
 
 	async function doImport(e: Event) {
@@ -262,8 +433,9 @@
 					recipes.map((r) => r.slug),
 					pantryLabels
 				);
-				const summary = describeImport(state, session.snapshot());
+				const summary = describeImport(state, { ...session.snapshot(), ...house.snapshot() });
 				session.merge(state);
+				house.adopt(state.menuDishes, state.dishCosts);
 				importMsg =
 					`Imported from the original edition — ${summary}.` +
 					(unresolved.length
@@ -273,8 +445,9 @@
 			}
 
 			const parsed = parseImport(text);
-			const summary = describeImport(parsed.data, session.snapshot());
+			const summary = describeImport(parsed.data, { ...session.snapshot(), ...house.snapshot() });
 			session.merge(parsed.data);
+			house.adopt(parsed.data.menuDishes, parsed.data.dishCosts);
 			importMsg = `Imported — ${summary}.`;
 		} catch (err) {
 			importMsg = err instanceof Error ? err.message : 'That file could not be read.';
@@ -299,7 +472,7 @@
 		<button
 			class="chip"
 			onclick={doExport}
-			disabled={!session.menu.length && !session.pantry.length && !session.menuDishes.length}
+			disabled={!session.menu.length && !session.pantry.length && !house.dishes.length}
 			>Export session</button
 		>
 		<button class="chip" onclick={() => fileInput?.click()}>Import session…</button>
@@ -407,8 +580,12 @@
 
 			{#if live && behindMin > 0}
 				<p class="behind" role="alert">
-					{behindMin} min behind — the plan needs {plan.lengthMin} min and there are {remainingMin}
-					left. Something has to come off the menu or service moves.
+					{behindMin} min behind{#if nextUnticked}, and you are on
+						<b>{nextUnticked.dish}</b> — {nextUnticked.text.replace(/[. \s]+$/, '')}.{:else}.
+						Every row is ticked, so the plan is done.{/if}
+					{#if !Object.keys(ticks).length}
+						Tick the rows as you start them and this can say which dish it went into.
+					{/if}
 				</p>
 			{/if}
 
@@ -418,20 +595,71 @@
 				</p>
 			{/each}
 
-			{#each plan.collisions as c, i (i)}
+			<div class="handsrow">
+				<span class="handslabel">Hands on tonight</span>
+				{#each [1, 2, 3, 4] as n (n)}
+					<button
+						class="chip"
+						class:on={hands === n}
+						aria-pressed={hands === n}
+						onclick={() => (hands = n)}>{n}</button
+					>
+				{/each}
+				<span class="handsnote">Not saved — it is tonight's number, not a rota.</span>
+			</div>
+
+			{#each clashes as c, i (i)}
 				<p class="clash">
-					<b>{whenLabel(c.atMin)}</b> — {nameList(c.dishes)}
-					{c.dishes.length > 2 ? 'all want' : 'both want'} your hands for {c.minutes} min. Move one,
-					or get a second pair.
+					<b>{whenLabel(c.fromMin)}</b> — {nameList(c.dishes)} want {c.demand} pairs of hands for
+					{c.fromMin - c.toMin} min, and there {hands === 1 ? 'is one' : `are ${hands}`}.
+					{c.demand - hands === 1 ? 'One more dish' : `${c.demand - hands} more dishes`} than the
+					crew can hold.
 				</p>
 			{/each}
 
+			<!--
+				The firing intervals, stated on screen rather than applied silently.
+				The guide says nothing about a stagger; these are ours, they are a
+				default and not a claim, and a kitchen that plates differently can
+				see the number it is disagreeing with.
+			-->
+			<p class="firing">
+				Firing {Object.entries(DEFAULT_COURSE_FIRING)
+					.filter(([c]) => plan.dishes.some((d) => coursesOf.get(d.slug) === c))
+					.map(([c, m]) => (m === 0 ? `${c} on the bell` : `${c} +${m} min`))
+					.join(' · ')}
+			</p>
+
 			<ol class="plan">
 				{#each plan.steps as s, i (s.slug + '-' + s.n)}
+					<!--
+						The bell sits WHERE IT HAPPENS, not at the bottom. Once later
+						courses fire after the first plate, a row pinned to the end of the
+						list reads as the end of the plan while showing a time earlier than
+						the rows above it.
+					-->
+					{#if bellAt === i}
+						<li class="serviceline">
+							<span class="at">{formatClockTime(serviceAt)}</span>
+							<span class="what"><b>First plates away</b></span>
+							<span class="cost"></span>
+						</li>
+					{/if}
 					<li
 						class:past={startedAlready(s.startsAtMin) && currentStep !== s}
 						class:current={currentStep === s}
+						class:ticked={Boolean(ticks[rowKey(s)])}
 					>
+						{#if live}
+							<button
+								type="button"
+								class="tick"
+								class:on={Boolean(ticks[rowKey(s)])}
+								aria-pressed={Boolean(ticks[rowKey(s)])}
+								aria-label="Started {s.dish}, step {s.n}"
+								onclick={() => toggleTick(s)}>{ticks[rowKey(s)] ? '✓' : ''}</button
+							>
+						{/if}
 						<span class="at">{whenLabel(s.startsAtMin)}</span>
 						<span class="what">
 							<b>{s.dish}</b>
@@ -439,15 +667,20 @@
 						</span>
 						<span class="cost">
 							{s.handsOnMin} min hands{#if s.unattendedMin}
-								· then {s.unattendedMin} free{/if}
+								· then {s.unattendedMin} free{/if}{#if observedFor(s)}
+								<!-- ELAPSED, never hands-on: a tick pair cannot tell a wait from
+								     the cook answering the phone. -->
+								· usually {observedFor(s)} min elapsed here{/if}
 						</span>
 					</li>
 				{/each}
-				<li class="serviceline">
-					<span class="at">{formatClockTime(serviceAt)}</span>
-					<span class="what"><b>Service</b></span>
-					<span class="cost"></span>
-				</li>
+				{#if bellAt >= plan.steps.length}
+					<li class="serviceline">
+						<span class="at">{formatClockTime(serviceAt)}</span>
+						<span class="what"><b>First plates away</b></span>
+						<span class="cost"></span>
+					</li>
+				{/if}
 			</ol>
 		</section>
 
@@ -473,10 +706,10 @@
 			The menu the house actually serves — dish by dish, priced and allergen-marked. Saved on this
 			device and carried in the session export like everything else here.
 			<a href="{base}/menu/costing">Cost this menu ▸</a>
-			{#if session.menuDishes.length >= 4}
+			{#if house.dishes.length >= 4}
 				<a href="{base}/menu/quiz">Drill this menu ▸</a>
-			{:else if session.menuDishes.length}
-				The drill opens at four dishes — {4 - session.menuDishes.length} more to go.
+			{:else if house.dishes.length}
+				The drill opens at four dishes — {4 - house.dishes.length} more to go.
 			{/if}
 		</p>
 
@@ -499,6 +732,15 @@
 						</label>
 					{/each}
 				</div>
+				<!--
+					A separate affirmation, not a side effect of Save. Ticking every box
+					correctly and ticking none look identical in the record, so the only
+					thing that can tell them apart is somebody saying they looked.
+				-->
+				<label class="al affirm">
+					<input type="checkbox" bind:checked={dishForm.checked} />
+					I have checked the allergens on this dish against its build
+				</label>
 				<div class="frow">
 					<button class="chip" onclick={saveDish} disabled={!dishForm.name.trim()}>
 						{dishForm.id ? 'Save the dish' : 'Add to the menu'}
@@ -508,7 +750,7 @@
 			</div>
 		{/if}
 
-		{#if !session.menuDishes.length && !dishForm}
+		{#if !house.dishes.length && !dishForm}
 			<p class="empty">
 				Nothing entered yet. Start with the dish the kitchen is proudest of — four dishes in, the
 				menu becomes drillable.
@@ -522,14 +764,38 @@
 					{#each g.items as d (d.id)}
 						<li>
 							<div class="dishline">
-								<span class="nm">{d.name}</span>
+								<span class="nm" class:off={house.is86(d.id)}>{d.name}</span>
+								{#if house.is86(d.id)}
+									<!-- Struck by rule AND weight AND a word, never colour alone: this
+									     is read at a glance across a pass, sometimes by someone who
+									     does not separate red from green. -->
+									<span class="eightysix">86</span>
+								{/if}
 								{#if d.price}<span class="pr">{d.price}</span>{/if}
 							</div>
 							{#if d.description}<p class="dd">{d.description}</p>{/if}
-							{#if d.allergens.length}<p class="da">Allergens: {d.allergens.join(', ')}</p>{/if}
+							<!--
+								ALWAYS rendered, never gated on the list being non-empty. This is
+								the screen a server reads standing at a table, and it used to show
+								NOTHING for a dish nobody had marked — silence reading as "no
+								allergens" when it meant "we did not look". The recipe page was
+								fixed for exactly this and the reason written down; this one was
+								missed. Three states, because an empty list alone cannot tell them
+								apart. See MenuDish.allergensCheckedAt.
+							-->
+							{#if !d.allergensCheckedAt}
+								<p class="da unchecked">Allergens not marked — ask the kitchen</p>
+							{:else if d.allergens.length}
+								<p class="da">Allergens: {d.allergens.join(', ')}</p>
+							{:else}
+								<p class="da">No allergens marked on this dish</p>
+							{/if}
 							<div class="dishtools" data-print="hide">
+								<button class="chip" onclick={() => house.toggle86(d.id)}>
+									{house.is86(d.id) ? 'Back on' : '86 it'}
+								</button>
 								<button class="chip" onclick={() => editDish(d)}>Edit</button>
-								<button class="chip" onclick={() => session.removeMenuDish(d.id)}>Remove</button>
+								<button class="chip" onclick={() => house.removeDish(d.id)}>Remove</button>
 							</div>
 						</li>
 					{/each}
@@ -613,6 +879,62 @@
 	}
 	.dishform .short { flex: 0 1 110px; min-width: 90px; }
 	.allergens { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+	/* The affirmation reads as a statement the user is making, so it sits
+	   apart from the grid of allergen boxes rather than inside it. */
+	.affirm { display: block; margin: 10px 0 0; }
+	/* A real colour token, never stacked opacity — the shared home CSS dims
+	   muted text with opacity and lands at 2.32:1 against a 4.5:1 target. */
+	.da.unchecked { color: var(--chili); font-weight: 600; }
+	.nm.off { text-decoration: line-through; opacity: 1; }
+	/* 44px, tapped one-handed beside a pan. State is a glyph and a weight, not
+	   a hue alone. */
+	.tick {
+		flex: none;
+		width: 30px;
+		height: 30px;
+		min-height: 30px;
+		margin-right: 8px;
+		border: 1.5px solid var(--line-strong);
+		border-radius: 6px;
+		background: none;
+		font: inherit;
+		color: var(--ink-soft);
+		cursor: pointer;
+		display: grid;
+		place-items: center;
+	}
+	.tick.on {
+		border-color: var(--turmeric-deep);
+		color: var(--turmeric-deep);
+		font-weight: 700;
+	}
+	.plan li.ticked .txt {
+		text-decoration: line-through;
+	}
+	.handsrow {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px;
+		margin: 14px 0 6px;
+	}
+	.handslabel {
+		font-weight: 600;
+	}
+	.handsnote,
+	.firing {
+		color: var(--ink-soft);
+		font-size: var(--t-small, 0.8125rem);
+	}
+	.firing {
+		margin: 10px 0 0;
+	}
+	.eightysix {
+		margin-left: 8px;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		color: var(--chili);
+	}
 	.al { display: flex; gap: 6px; align-items: baseline; font-size: var(--t-small); cursor: pointer; }
 	.al input { accent-color: var(--leaf); }
 	.dishgroup { margin-bottom: 14px; }

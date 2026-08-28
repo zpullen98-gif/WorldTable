@@ -42,6 +42,63 @@ export interface CookEntry {
 	slug: string;
 	at: number;
 	grade?: Grade;
+	/**
+	 * Which marks were off, as frozen mark ids — never indices, never the text.
+	 * See StandardMark in types.ts for why, and mark-ids.ledger.json for the
+	 * gate that keeps the promise.
+	 *
+	 * Optional, so every entry written before this existed stays valid: a cook
+	 * who graded a plate `close` in January simply has no annotation, which is
+	 * true, rather than an empty one, which would read as "nothing was off".
+	 */
+	off?: string[];
+	/** The palate lever the cook reached for — a slug into palate.json. */
+	fault?: string;
+}
+
+/**
+ * Which marks keep going wrong on one dish.
+ *
+ * Three words of grade told a cook their plate was off and nothing about WHAT,
+ * so a commis could pull the sear early for four months with every plate
+ * faithfully recorded and no way for anyone — including him — to name the
+ * drift. This is the read side of that.
+ *
+ * Counts entries, not sessions: a mark missed twice in one week and twice in
+ * March are the same evidence of a habit. Graded entries with no annotation are
+ * counted in the denominator and contribute nothing to the numerator, which is
+ * the honest treatment — they are cooks that happened, not marks that were met.
+ */
+export function markDrift(
+	log: CookEntry[],
+	slug: string
+): { graded: number; annotated: number; worst: Array<{ id: string; count: number }> } {
+	const mine = log.filter((e) => e.slug === slug && e.grade);
+	const counts = new Map<string, number>();
+	let annotated = 0;
+	for (const e of mine) {
+		if (!e.off?.length) continue;
+		annotated++;
+		for (const id of e.off) counts.set(id, (counts.get(id) ?? 0) + 1);
+	}
+	const worst = [...counts.entries()]
+		.map(([id, count]) => ({ id, count }))
+		.sort((a, b) => b.count - a.count || a.id.localeCompare(b.id));
+	return { graded: mine.length, annotated, worst };
+}
+
+/**
+ * Which palate levers a cook reaches for, across everything they have cooked.
+ *
+ * "You have reached for acid six times this month and salt never" is a sentence
+ * about a palate, not a dish, so this deliberately ignores slug.
+ */
+export function faultHistogram(log: CookEntry[]): Array<{ fault: string; count: number }> {
+	const counts = new Map<string, number>();
+	for (const e of log) if (e.fault) counts.set(e.fault, (counts.get(e.fault) ?? 0) + 1);
+	return [...counts.entries()]
+		.map(([fault, count]) => ({ fault, count }))
+		.sort((a, b) => b.count - a.count || a.fault.localeCompare(b.fault));
 }
 
 /**

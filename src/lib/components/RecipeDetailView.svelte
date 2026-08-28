@@ -8,22 +8,37 @@
 	// The one slug implementation, so a technique href can never fork from the
 	// slug the build wrote into techniques.json.
 	import { slugify } from '$lib/slug';
+	import { markDrift } from '$lib/repertoire';
 	import { DIFFICULTY_LABEL } from '$lib/types';
 	import Ornament from '$lib/components/Ornament.svelte';
 	import CookMode from '$lib/components/CookMode.svelte';
 
-	import type { Pairing, RecipeDetail, RecipeSummary, Substitution } from '$lib/types';
+	import type {
+		Pairing,
+		RecipeDetail,
+		RecipeSummary,
+		Substitution,
+		TechniqueStandard
+	} from '$lib/types';
 
 	let {
 		summary,
 		detail,
 		pairing,
-		substitutions
+		substitutions,
+		judged = []
 	}: {
 		summary: RecipeSummary;
 		detail: RecipeDetail;
 		pairing: Pairing;
 		substitutions: Substitution[];
+		/**
+		 * The technique standards this dish is judged against when it has none
+		 * of its own, already resolved from `detail.judgedBy` by the loader.
+		 * Defaults to empty so /family/[slug] — user recipes, which no build
+		 * ever tagged — can render this same view unchanged.
+		 */
+		judged?: TechniqueStandard[];
 	} = $props();
 
 	const r = $derived(summary);
@@ -50,6 +65,33 @@
 	});
 
 	let openSub = $state<number | null>(null);
+
+	/**
+	 * What keeps going wrong on THIS dish, for the cook who keeps getting it
+	 * wrong. One line, above the standard, so the answer sits directly over the
+	 * thing it is about.
+	 *
+	 * This is the read side of the annotation: three words of grade told a cook
+	 * their plate was off and never what, so nobody could name a drift. It is
+	 * deliberately the cook's OWN record and nobody else's — a per-person number
+	 * a manager reads is a disciplinary instrument, and the data goes dishonest
+	 * inside a fortnight.
+	 *
+	 * Shown from the second annotated cook, not the first: one miss is an
+	 * evening, and calling it a pattern would be the app inventing a habit.
+	 */
+	const drift = $derived.by(() => {
+		const marks = d.standard?.marks ?? judged.flatMap((t) => t.marks);
+		if (!marks.length) return null;
+		const { graded, annotated, worst } = markDrift(session.cookedLog, r.slug);
+		if (annotated < 2 || !worst.length || worst[0].count < 2) return null;
+		const hit = marks.find((m) => m.id === worst[0].id);
+		if (!hit) return null;
+		// The mark's opening clause: the marks are written surface-first, so the
+		// first clause is the identifying one and the rest is the how-to-check.
+		const short = hit.text.split(/[,;:—]/)[0].trim();
+		return { graded, count: worst[0].count, short };
+	});
 
 	const allergens = $derived.by(() => {
 		const f = r.diet;
@@ -216,20 +258,66 @@
 	</div>
 
 	<!-- Between the method and the note on purpose: how to make it, then how to
-	     know you got it right, then why it matters. Most dishes carry no standard
-	     yet, so the whole block is absent rather than rendered empty. -->
+	     know you got it right, then why it matters.
+
+	     Two kinds of answer, and the difference is stated rather than blurred. A
+	     DISH standard is this plate, judged at the pass. A TECHNIQUE standard is
+	     the craft the dish exercises, judged at the pan — offered only when the
+	     dish has no standard of its own, and labelled as the substitute it is. A
+	     cook who mistakes the second for the first has been told the dish was
+	     assessed when only its method was. 287 dishes have neither and render
+	     no block at all rather than an empty one. -->
 	{#if d.standard}
 		<section class="standard">
 			<h2 class="sec">How it should come out</h2>
+			{#if drift}
+				<p class="drift">
+					Across {drift.graded} graded {drift.graded === 1 ? 'cook' : 'cooks'} of this dish, you
+					marked <b>{drift.short}</b> off {drift.count} times.
+				</p>
+			{/if}
 			<ul class="marks">
-				{#each d.standard.marks as mark, i (i)}
-					<li>{mark}</li>
+				{#each d.standard.marks as mark (mark.id)}
+					<li>{mark.text}</li>
 				{/each}
 			</ul>
 			<p class="fault">
 				<span class="faultlabel">Where it goes wrong</span>
 				{d.standard.fault}
 			</p>
+		</section>
+	{:else if judged.length}
+		<section class="standard judged">
+			<h2 class="sec">How to tell it is going right</h2>
+			{#if drift}
+				<p class="drift">
+					Across {drift.graded} graded {drift.graded === 1 ? 'cook' : 'cooks'} of this dish, you
+					marked <b>{drift.short}</b> off {drift.count} times.
+				</p>
+			{/if}
+			<p class="judgedintro">
+				This dish has no standard of its own yet. It is judged on the {judged.length === 1
+					? 'technique'
+					: 'techniques'} it exercises — checked at the pan, while there is still something to be
+				done about it.
+			</p>
+			{#each judged as ts (ts.slug)}
+				<div class="judgedblock">
+					<p class="judgedlabel">
+						<a href="{base}/technique/{ts.slug}">{ts.label}</a>
+						<span class="judgedcount">{ts.recipeCount} recipes</span>
+					</p>
+					<ul class="marks">
+						{#each ts.marks as mark (mark.id)}
+							<li>{mark.text}</li>
+						{/each}
+					</ul>
+					<p class="fault">
+						<span class="faultlabel">Where it goes wrong</span>
+						{ts.fault}
+					</p>
+				</div>
+			{/each}
 		</section>
 	{/if}
 
@@ -269,9 +357,14 @@
 			name={r.name}
 			slug={r.slug}
 			steps={cookSteps}
-			standard={d.standard}
+			{...d.standard
+				? { standard: d.standard }
+				: judged.length
+					? { standard: judged[0], standardLabel: judged[0].label }
+					: {}}
 			onclose={() => (cooking = false)}
-			onfinish={(grade) => session.markCooked(r.slug, grade)}
+			onfinish={(grade, off) => session.markCooked(r.slug, grade, off)}
+			onannotate={(fault) => session.annotateLastCook(r.slug, { fault })}
 		/>
 	{/if}
 
@@ -583,6 +676,45 @@
 		margin-top: 30px;
 		border-top: 1px solid var(--line);
 		padding-top: 18px;
+	}
+
+	/* The technique block is deliberately quieter than a dish standard: it is a
+	   substitute, and it should not read as though this plate has been given a
+	   standard of its own. The intro carries that in words; the indent rule and
+	   the muted label carry it visually, so the distinction survives skimming. */
+	/* The cook's own record, so it reads as a note to self rather than a verdict
+	   handed down: same weight as the body, no alarm colour. */
+	.drift {
+		margin: 10px 0 0;
+		font-size: 0.94rem;
+		line-height: 1.6;
+		color: var(--ink-soft);
+	}
+	.judgedintro {
+		margin: 10px 0 0;
+		color: var(--muted);
+		font-size: 0.94rem;
+		line-height: 1.6;
+	}
+	.judgedblock {
+		margin-top: 18px;
+		padding-left: 14px;
+		border-left: 2px solid var(--line);
+	}
+	.judgedlabel {
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 8px;
+	}
+	.judgedlabel a {
+		font-weight: 600;
+		color: inherit;
+	}
+	.judgedcount {
+		color: var(--muted);
+		font-size: 0.82rem;
 	}
 	.marks {
 		margin: 10px 0 0;
