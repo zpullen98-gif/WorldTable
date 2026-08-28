@@ -40,7 +40,7 @@ const demi: CostablePrep = {
 
 describe('what a portion of a prep costs', () => {
 	it('divides the batch by the portions it makes', () => {
-		expect(prepPortionCost(demi)).toEqual({ perPortion: 3, complete: true });
+		expect(prepPortionCost(demi, {})).toEqual({ perPortion: 3, complete: true });
 	});
 
 	it('carries the prep own yield through — the trim happens here', () => {
@@ -49,7 +49,7 @@ describe('what a portion of a prep costs', () => {
 			...demi,
 			lines: [line({ id: 'a', unitCost: 20, usedQty: 1, yieldPct: 50 }), line({ id: 'b', unitCost: 10 })]
 		};
-		expect(prepPortionCost(trimmed).perPortion).toBe(5);
+		expect(prepPortionCost(trimmed, {}).perPortion).toBe(5);
 	});
 
 	/**
@@ -58,12 +58,12 @@ describe('what a portion of a prep costs', () => {
 	 */
 	it('is incomplete when any line in it is', () => {
 		const blank: CostablePrep = { ...demi, lines: [...demi.lines, line({ id: 'c', yieldPct: 0 })] };
-		expect(prepPortionCost(blank).complete).toBe(false);
+		expect(prepPortionCost(blank, {}).complete).toBe(false);
 	});
 
 	it('refuses to divide by no portions rather than returning Infinity', () => {
-		expect(prepPortionCost({ ...demi, portions: 0 })).toEqual({ perPortion: null, complete: false });
-		expect(prepPortionCost({ ...demi, portions: -4 }).perPortion).toBeNull();
+		expect(prepPortionCost({ ...demi, portions: 0 }, {})).toEqual({ perPortion: null, complete: false });
+		expect(prepPortionCost({ ...demi, portions: -4 }, {}).perPortion).toBeNull();
 	});
 
 	/**
@@ -73,7 +73,7 @@ describe('what a portion of a prep costs', () => {
 	 */
 	it('refuses a prep that references another prep', () => {
 		const nested: CostablePrep = { ...demi, lines: [...demi.lines, line({ id: 'n', prepId: 'p-other' })] };
-		expect(prepPortionCost(nested).complete).toBe(false);
+		expect(prepPortionCost(nested, {}).complete).toBe(false);
 	});
 });
 
@@ -81,7 +81,7 @@ describe('resolving a prep-backed line on a dish', () => {
 	const dishLines = [line({ id: 'meat', unitCost: 8, usedQty: 1 }), line({ id: 'sauce', prepId: 'p-demi', usedQty: 2 })];
 
 	it('prices the line from the prep, per portion', () => {
-		const { lines, complete } = resolveLines(dishLines, [demi]);
+		const { lines, complete } = resolveLines(dishLines, [demi], {});
 		expect(complete).toBe(true);
 		// 8 for the meat + 2 portions of demi at 3.00 = 14.
 		expect(plateCost(lines)).toEqual({ total: 14, complete: true });
@@ -97,13 +97,13 @@ describe('resolving a prep-backed line on a dish', () => {
 	 */
 	it('locks the yield at 100 so the loss is never counted twice', () => {
 		const doubled = [line({ id: 'sauce', prepId: 'p-demi', usedQty: 1, yieldPct: 50 })];
-		const { lines } = resolveLines(doubled, [demi]);
+		const { lines } = resolveLines(doubled, [demi], {});
 		expect(lines[0].yieldPct).toBe(100);
 		expect(plateCost(lines).total).toBe(3);
 	});
 
 	it('leaves ordinary purchase lines exactly as they were', () => {
-		const { lines } = resolveLines([line({ id: 'meat', unitCost: 8, yieldPct: 80 })], [demi]);
+		const { lines } = resolveLines([line({ id: 'meat', unitCost: 8, yieldPct: 80 })], [demi], {});
 		expect(lines[0].yieldPct).toBe(80);
 		expect(lines[0].unitCost).toBe(8);
 	});
@@ -114,19 +114,19 @@ describe('resolving a prep-backed line on a dish', () => {
 	 */
 	it('carries the prep incompleteness into the dish', () => {
 		const blank: CostablePrep = { ...demi, lines: [...demi.lines, line({ id: 'c', yieldPct: 0 })] };
-		const { lines, complete } = resolveLines(dishLines, [blank]);
+		const { lines, complete } = resolveLines(dishLines, [blank], {});
 		expect(complete, 'the dish reported complete over an uncosted sauce').toBe(false);
 		expect(plateCost(lines).complete).toBe(false);
 	});
 
 	it('refuses a line pointing at a prep that no longer exists', () => {
-		const { lines, complete } = resolveLines(dishLines, []);
+		const { lines, complete } = resolveLines(dishLines, [], {});
 		expect(complete).toBe(false);
 		expect(plateCost(lines).complete).toBe(false);
 	});
 
 	it('does not silently drop the deleted prep from the total', () => {
-		const { lines } = resolveLines(dishLines, []);
+		const { lines } = resolveLines(dishLines, [], {});
 		expect(lines).toHaveLength(2);
 	});
 });

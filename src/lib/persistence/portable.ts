@@ -181,6 +181,31 @@ export function describeImport(
 	 * own clause: re-costing one demi moves the plate cost of every dish that
 	 * pours it.
 	 */
+	/**
+	 * The item book. Counted in PRICES, not in items, because that is the unit
+	 * the merge works in and the unit the venue cares about: a file carrying six
+	 * new observations of butter is six chances to see the creep, and saying
+	 * "1 item" over it would undersell what is about to land.
+	 */
+	const mineByItem = current.items ?? {};
+	let newItems = 0;
+	let newPrices = 0;
+	for (const [slug, it] of Object.entries(incoming.items ?? {})) {
+		if (!it || !Array.isArray(it.history)) continue;
+		const mine = mineByItem[slug];
+		if (!mine) {
+			newItems++;
+			newPrices += it.history.length;
+			continue;
+		}
+		const seen = new Set(
+			(mine.history ?? []).map((p) => `${p?.at}|${p?.unitCost}|${p?.unit}`)
+		);
+		for (const p of it.history) {
+			if (p && !seen.has(`${p.at}|${p.unitCost}|${p.unit}`)) newPrices++;
+		}
+	}
+
 	const mineByPrep = new Map((current.preps ?? []).map((pr) => [pr.id, pr]));
 	let newPreps = 0;
 	let updatedPreps = 0;
@@ -206,5 +231,8 @@ export function describeImport(
 	if (newPreps) parts.push(`${newPreps} ${newPreps === 1 ? 'prep' : 'preps'}`);
 	if (updatedPreps)
 		parts.push(`${updatedPreps} ${updatedPreps === 1 ? 'prep' : 'preps'} re-costed`);
+	if (newItems) parts.push(`${newItems} ${newItems === 1 ? 'item' : 'items'}`);
+	if (newPrices)
+		parts.push(`${newPrices} ${newPrices === 1 ? 'price' : 'prices'} for the item book`);
 	return parts.length ? parts.join(', ') : 'nothing new — this file matches what you already have';
 }

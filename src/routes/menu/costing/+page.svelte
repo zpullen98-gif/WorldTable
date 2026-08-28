@@ -34,6 +34,13 @@
 		prepPortionCost,
 		netOfTax
 	} from '$lib/costing';
+	import {
+		itemSlugOf,
+		currentPrice,
+		previousPrice,
+		itemUsage,
+		type ItemUsage
+	} from '$lib/items';
 	import { weekStartOf } from '$lib/persistence/house';
 	import { onMount } from 'svelte';
 
@@ -76,7 +83,7 @@
 	 * line inside the demi understates every dish the sauce goes on, and that is
 	 * the error the `complete` flag exists to refuse, multiplied.
 	 */
-	const resolvedFor = (id: string) => resolveLines(linesFor(id), house.preps).lines;
+	const resolvedFor = (id: string) => resolveLines(linesFor(id), house.preps, house.pricedItems).lines;
 
 	/**
 	 * The current week, and why it is not a constant.
@@ -127,7 +134,7 @@
 	const prepOf = (l: CostLine) => (l.prepId ? house.prep(l.prepId) : undefined);
 	const perPortionOf = (l: CostLine) => {
 		const p = prepOf(l);
-		return p ? prepPortionCost(p) : null;
+		return p ? prepPortionCost(p, house.pricedItems) : null;
 	};
 
 	function addPrepLine(id: string, prepId: string) {
@@ -178,6 +185,165 @@
 			id,
 			linesFor(id).map((l) => (l.id === lineId ? { ...l, ...patch } : l))
 		);
+	}
+
+	/**
+	 * Rebuild one line wholesale.
+	 *
+	 * editLine cannot unlink: `{ itemSlug: undefined }` leaves the KEY in place,
+	 * structuredClone preserves a key whose value is undefined, and the line
+	 * would still read as book-backed to anything checking `'itemSlug' in l`.
+	 * state.ts learned the same lesson about `sold`.
+	 */
+	function rewriteLine(id: string, lineId: string, next: (l: CostLine) => CostLine) {
+		writeLines(
+			id,
+			linesFor(id).map((l) => (l.id === lineId ? next(l) : l))
+		);
+	}
+
+	/* ---- the item book ----------------------------------------------------
+	 *
+	 * THE WHOLE INTERACTION, because it is easy to get wrong in the direction
+	 * that makes the sheet stop being opened.
+	 *
+	 * A named line carrying a real price is in the book and follows the book.
+	 * Nobody is ever asked to set up master data first: the book is filled by
+	 * the costing somebody was doing anyway, and the datalist then offers the
+	 * spelling that already exists so one purchase does not become two.
+	 *
+	 * Following the book is what makes the feature worth having — repricing
+	 * butter once moves every dish that buys it, which is the thing that was
+	 * impossible before. Two dishes cannot buy the same butter at two prices; if
+	 * they genuinely are two butters, they get two names, and the datalist makes
+	 * that visible at the moment of typing. `unlink` is the escape hatch for the
+	 * one-off truffle, and it leaves the number that was on screen behind rather
+	 * than a zero.
+	 */
+
+	/** Committing a NAME. */
+	function commitItem(dishId: string, l: CostLine, name: string) {
+		const slug = itemSlugOf(name);
+		const known = slug ? house.item(slug) : undefined;
+		const price = currentPrice(known);
+
+		// Renaming a linked line onto something the book has never heard of
+		// unlinks it rather than dragging the old item's price along under a new
+		// word — the price on screen would then belong to neither name.
+		if (l.itemSlug && !known) {
+			rewriteLine(dishId, l.id, ({ itemSlug: _drop, ...rest }) => ({ ...rest, item: name }));
+			return;
+		}
+
+		if (price) {
+			// The book already knows this thing. Follow it — and take its price,
+			// because a line showing 6.40 beside a book that says 7.90 is the
+			// stale number this page exists to stop.
+			editLine(dishId, l.id, {
+				item: name,
+				itemSlug: slug,
+				unitCost: price.unitCost,
+				unit: price.unit
+			});
+			return;
+		}
+
+		// Unknown, or known but never priced. If this row already carries a real
+		// price it becomes the book's first observation and the row follows it.
+		editLine(dishId, l.id, { item: name });
+		if (l.unitCost > 0) {
+			house.recordItemPrice(name, l.unitCost, l.unit);
+			if (house.item(slug)) editLine(dishId, l.id, { itemSlug: slug });
+		}
+	}
+
+	/** Committing a PRICE. On a book-backed line this reprices every dish. */
+	function commitPrice(dishId: string, l: CostLine, unitCost: number) {
+		const name = l.item.trim();
+		if (!name || !Number.isFinite(unitCost) || unitCost <= 0) {
+			editLine(dishId, l.id, { unitCost });
+			return;
+		}
+		house.recordItemPrice(name, unitCost, l.unit);
+		const slug = itemSlugOf(name);
+		// unitCost is kept on the line as well as in the book. It is not read
+		// while the line is linked, and it is what the row falls back to the
+		// moment somebody unlinks — a row that unlinked to 0.00 would be worse
+		// than never having linked.
+		editLine(dishId, l.id, house.item(slug) ? { unitCost, itemSlug: slug } : { unitCost });
+	}
+
+	/** Committing a UNIT. */
+	function commitUnit(dishId: string, l: CostLine, unit: string) {
+		editLine(dishId, l.id, { unit });
+		if (!l.itemSlug) return;
+		const p = currentPrice(house.item(l.itemSlug));
+		// A purchase unit is part of what a price MEANS: 7.90 a kilo and 7.90 a
+		// case are not the same fact, so the pair is filed together.
+		if (p) house.recordItemPrice(l.item, p.unitCost, unit);
+	}
+
+	function unlinkLine(dishId: string, l: CostLine) {
+		const p = currentPrice(house.item(l.itemSlug ?? ''));
+		rewriteLine(dishId, l.id, ({ itemSlug: _drop, ...rest }) => ({
+			...rest,
+			// Keep the number that was on screen. The book keeps its history.
+			unitCost: p ? p.unitCost : rest.unitCost
+		}));
+	}
+
+	function linkLine(dishId: string, l: CostLine) {
+		const slug = itemSlugOf(l.item);
+		const p = currentPrice(house.item(slug));
+		if (!p) return;
+		editLine(dishId, l.id, { itemSlug: slug, unitCost: p.unitCost, unit: p.unit });
+	}
+
+	/** The book price a line COULD follow but is not following. */
+	const bookPriceFor = (l: CostLine) =>
+		l.itemSlug || !l.item.trim() ? null : currentPrice(house.item(itemSlugOf(l.item)));
+
+	/**
+	 * The book, with what each price actually reaches.
+	 *
+	 * The band verdict is computed here rather than in items.ts because it
+	 * depends on the price the venue typed and the tax setting, which are this
+	 * page's business and not that module's.
+	 */
+	const usage = $derived(
+		itemUsage(
+			house.items,
+			dishes.map((d) => ({
+				id: d.id,
+				lines: linesFor(d.id),
+				verdict: bandFor(economicsOf(d.id, d.price).foodCostPct, foodCostBand)
+			})),
+			house.preps
+		)
+	);
+
+	/** Only the rows worth reading: something the menu actually buys. */
+	const usedItems = $derived(usage.filter((u) => u.dishIds.length > 0));
+
+	const dishName = (id: string) => dishes.find((d) => d.id === id)?.name ?? 'a dish';
+
+	/** The venue's own currency mark, for figures that belong to no one dish. */
+	const menuSym = $derived(symbolOf(dishes.find((d) => d.price)?.price ?? ''));
+
+	/**
+	 * The sentence the book exists to say, built from the venue's own numbers.
+	 * Never invented: an item nothing has drifted on says so plainly.
+	 */
+	function usageLine(u: ItemUsage): string {
+		const n = u.dishIds.length;
+		const out = u.outOfBandIds.length;
+		const used = `Used in ${n} ${n === 1 ? 'dish' : 'dishes'}.`;
+		const band = `${foodCostBand.lowPct}–${foodCostBand.highPct}% band`;
+		if (!out) return `${used} None above the ${band}.`;
+		// "Above", not "moved out of". The book knows the price moved and it
+		// knows the dish is over — it does not know the first caused the second,
+		// and a sentence a chef reprices a menu from should not imply it.
+		return `${used} ${out} ${out === 1 ? 'is' : 'are'} above the ${band}.`;
 	}
 
 	/**
@@ -318,6 +484,14 @@
 			</p>
 		{/if}
 
+		<!--
+			Filled from what the venue has already typed. This IS the onboarding —
+			there is no master-data screen, and there is never going to be one.
+		-->
+		<datalist id="item-book">
+			{#each house.itemNames as n (n)}<option value={n}></option>{/each}
+		</datalist>
+
 		{#if !dishes.length}
 			<section class="empty">
 				<p>
@@ -396,20 +570,39 @@
 												number sitting next to a correct one, which is worse than
 												either.
 											-->
-											{@const rl = resolveLines([l], house.preps).lines[0]}
+											{@const rl = resolveLines([l], house.preps, house.pricedItems).lines[0]}
 											{@const per = trueUnitCost(rl.unitCost, rl.yieldPct)}
 											{@const total = lineCost(rl)}
+											{@const bp = bookPriceFor(l)}
 											<tr>
 												<td>
 													<input
+														list={l.prepId ? undefined : 'item-book'}
 														value={l.item}
 														placeholder="Salmon fillet"
 														aria-label="Ingredient"
 														onchange={(ev) =>
-															editLine(d.id, l.id, {
-																item: (ev.currentTarget as HTMLInputElement).value
-															})}
+															l.prepId
+																? editLine(d.id, l.id, {
+																		item: (ev.currentTarget as HTMLInputElement).value
+																	})
+																: commitItem(d.id, l, (ev.currentTarget as HTMLInputElement).value)}
 													/>
+													{#if l.itemSlug}
+														<button
+															class="book"
+															onclick={() => unlinkLine(d.id, l)}
+															title="Stop following the item book on this line. The price stays as it is now."
+															>follows the book ✕</button
+														>
+													{:else if bp}
+														<button
+															class="book use"
+															onclick={() => linkLine(d.id, l)}
+															title="Take the price the venue is paying, and follow it from here"
+															>book: {sym}{money(bp.unitCost)}/{bp.unit}</button
+														>
+													{/if}
 												</td>
 												<td>
 													{#if l.prepId}
@@ -424,6 +617,19 @@
 															readonly
 															title="From the prep — edit it on the Preps sheet"
 														/>
+													{:else if l.itemSlug}
+														<!-- Editable, and the edit goes to the BOOK. That is the whole
+														     feature: repricing butter here moves every dish that buys
+														     it, which is the thing that could not be done at all. -->
+														<input
+															type="number"
+															step="0.01"
+															min="0"
+															value={rl.unitCost}
+															aria-label="Cost per unit, from the item book"
+															title="From the item book — changing it reprices every dish that buys this"
+															onchange={(ev) => commitPrice(d.id, l, num(ev))}
+														/>
 													{:else}
 														<input
 															type="number"
@@ -431,7 +637,7 @@
 															min="0"
 															value={l.unitCost}
 															aria-label="Cost per unit"
-															onchange={(ev) => editLine(d.id, l.id, { unitCost: num(ev) })}
+															onchange={(ev) => commitPrice(d.id, l, num(ev))}
 														/>
 													{/if}
 												</td>
@@ -441,9 +647,7 @@
 														value={l.unit}
 														aria-label="Unit"
 														onchange={(ev) =>
-															editLine(d.id, l.id, {
-																unit: (ev.currentTarget as HTMLInputElement).value
-															})}
+															commitUnit(d.id, l, (ev.currentTarget as HTMLInputElement).value)}
 													/>
 												</td>
 												<td>
@@ -610,6 +814,56 @@
 				</p>
 			{/if}
 
+			<h2 class="sec">The item book</h2>
+			{#if usedItems.length}
+				<!--
+					The guide's instruction is "reprice quarterly against invoice creep;
+					menus that sleep bleed". Following it needs two things the sheet did
+					not have: the price before this one, and the list of dishes a change
+					reaches. Both are here, and neither is asked for — the book fills
+					itself from the costing.
+				-->
+				<p class="secnote">
+					What the venue buys, what it paid before, and which plates a price move reaches. Filled
+					from the sheet above as you cost; nothing here has to be set up first.
+				</p>
+				<ul class="itembook">
+					{#each usedItems as u (u.slug)}
+						<li>
+							<div class="ihead">
+								<span class="iname">{u.name}</span>
+								{#if u.current}
+									<span class="inow mono">{menuSym}{money(u.current.unitCost)}/{u.current.unit}</span>
+								{:else}
+									<span class="inow mono muted">not priced</span>
+								{/if}
+								{#if u.movePct !== null && u.previous}
+									<!-- The comparison is the feature. A percentage on its own is a
+									     claim; the number it moved FROM is the evidence for it. -->
+									<span class="imove" data-dir={u.movePct >= 0 ? 'up' : 'down'}>
+										{u.movePct >= 0 ? '+' : ''}{u.movePct.toFixed(1)}% from {menuSym}{money(
+											u.previous.unitCost
+										)}
+									</span>
+								{/if}
+							</div>
+							<p class="iuse">{usageLine(u)}</p>
+							{#if u.outOfBandIds.length}
+								<p class="idishes">
+									{u.outOfBandIds.map(dishName).join(', ')}
+								</p>
+							{/if}
+						</li>
+					{/each}
+				</ul>
+			{:else}
+				<p class="secnote">
+					Nothing in the book yet. Type an ingredient and a price on any sheet above and it starts
+					keeping the history — then the next dish that buys the same thing offers it back to you,
+					and repricing it once moves every plate it is on.
+				</p>
+			{/if}
+
 			<h2 class="sec">Menu engineering</h2>
 			{#if engineered.length}
 				<p class="secnote">
@@ -684,6 +938,92 @@
 		max-width: var(--measure);
 		font-size: var(--t-small);
 		margin-bottom: 14px;
+	}
+
+	/* ---- the item book ---------------------------------------------------- */
+
+	/*
+	 * The per-line marker. Small, but it must be legible at two metres on a pass
+	 * tablet like everything else here, so it is a button with real text rather
+	 * than an icon nobody can read — and never colour alone: "follows the book"
+	 * and "book:" say which state this is in words.
+	 */
+	.book {
+		display: block;
+		margin-top: 3px;
+		padding: 1px 5px;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		background: var(--paper-raised);
+		color: var(--ink-soft);
+		font-size: var(--t-micro);
+		line-height: 1.4;
+		cursor: pointer;
+	}
+	.book:hover,
+	.book:focus-visible {
+		color: var(--ink);
+		border-color: var(--ink-soft);
+	}
+	.book.use {
+		color: var(--turmeric-deep);
+		border-style: dashed;
+	}
+
+	.itembook {
+		list-style: none;
+		margin: 0 0 18px;
+		padding: 0;
+		display: grid;
+		gap: 8px;
+	}
+	.itembook li {
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		background: var(--card);
+		padding: 10px 12px;
+	}
+	.ihead {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 4px 10px;
+	}
+	.iname {
+		font-family: var(--display);
+		font-size: var(--t-lede);
+		color: var(--text);
+	}
+	.inow {
+		color: var(--text);
+	}
+	.inow.muted {
+		color: var(--ink-soft);
+	}
+	/*
+	 * The direction is carried by the SIGN, which is in the text itself, so the
+	 * colour is reinforcement and never the only cue. Same rule the verdicts
+	 * follow above.
+	 */
+	.imove {
+		font-size: var(--t-small);
+		color: var(--ink-soft);
+	}
+	.imove[data-dir='up'] {
+		color: var(--chili);
+		font-weight: 600;
+	}
+	.iuse {
+		margin: 4px 0 0;
+		font-size: var(--t-small);
+		color: var(--ink-soft);
+		max-width: var(--measure);
+	}
+	.idishes {
+		margin: 2px 0 0;
+		font-size: var(--t-micro);
+		color: var(--ink-soft);
+		max-width: var(--measure);
 	}
 	.warn,
 	.incomplete,

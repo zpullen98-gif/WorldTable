@@ -25,6 +25,7 @@ import type { MenuDish, DishCosting } from './state';
 import { localDay, weekStartOf, recentWeeks, normaliseCosting, mergeCostings } from './state';
 export { localDay, weekStartOf, recentWeeks, normaliseCosting, mergeCostings, CLOCK_SKEW_MS } from './state';
 import type { CostLine } from '../costing';
+import { mergeItems, type Item } from '../items';
 
 export const HOUSE_KEY = 'house';
 export const HOUSE_VERSION = 1;
@@ -84,6 +85,15 @@ export interface HouseRecord {
 	/** The venue's sub-recipes. See Prep. */
 	preps: Prep[];
 	/**
+	 * The item book, keyed by itemSlugOf(name). See items.ts.
+	 *
+	 * On the HOUSE record for the same reason the preps are: what the venue pays
+	 * for butter is a fact about the venue, not about whichever cook is holding
+	 * the tablet. A per-profile item book would give the head chef and the sous
+	 * two different plate costs for one dish.
+	 */
+	items: Record<string, Item>;
+	/**
 	 * Whether the menu prices this venue types include tax, and at what rate.
 	 *
 	 * ON THE HOUSE RECORD, not in the session, and that is a real improvement
@@ -121,6 +131,7 @@ export const EMPTY_HOUSE: HouseRecord = {
 	schemaVersion: HOUSE_VERSION,
 	dishes: [],
 	preps: [],
+	items: {},
 	prepCounts: {},
 	eightySix: {},
 	dishCosts: {},
@@ -244,11 +255,19 @@ export function adoptImport(
 		if (!mine || (p.ts ?? 0) > (mine.ts ?? 0)) prepById.set(p.id, p);
 	}
 
+	// UNION, never replace. mergeItems' own header has the argument: the losing
+	// device's book holds every price change IT recorded, and newer-wins-whole
+	// would destroy exactly the history the book exists to keep — silently, and
+	// leaving something plausible behind. Same conclusion mergeCostings reached
+	// about weeks of covers.
+	const nextItems = mergeItems(house.items, incoming.items);
+
 	return {
 		...house,
 		dishes: nextDishes,
 		dishCosts: nextCosts,
 		preps: [...prepById.values()],
+		items: nextItems,
 		absorbed: [...new Set([...house.absorbed, ...nextDishes.map((d) => d.id)])]
 	};
 }
@@ -339,8 +358,13 @@ export function houseSnapshot(house: HouseRecord): {
  */
 export interface HousePortable {
 	preps?: Prep[];
+	/**
+	 * The item book. Absent from every file written before it existed, which is
+	 * why it is optional HERE and required at every function that emits one.
+	 */
+	items?: Record<string, Item>;
 }
 
 export function housePortable(house: HouseRecord): HousePortable {
-	return { preps: house.preps };
+	return { preps: house.preps, items: house.items };
 }

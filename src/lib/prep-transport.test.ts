@@ -10,6 +10,7 @@ import {
 import { FORMAT, buildExport, parseImport, describeImport } from './persistence/portable';
 import { mergeSessions, EMPTY_SESSION, type SessionState } from './persistence/state';
 import { resolveLines, plateCost, type CostLine } from './costing';
+import { currentPrice, previousPrice, type Item } from './items';
 
 /**
  * A prep crossing the transport.
@@ -89,7 +90,7 @@ function roundTrip(h: HouseRecord) {
 }
 
 const costOf = (h: HouseRecord) => {
-	const { lines, complete } = resolveLines(h.dishCosts.d1.lines, h.preps);
+	const { lines, complete } = resolveLines(h.dishCosts.d1.lines, h.preps, {});
 	return { ...plateCost(lines), resolved: complete };
 };
 
@@ -244,5 +245,106 @@ describe('the banner says what the preps will do', () => {
 			{ ...structuredClone(demi), id: 'p-2' }
 		];
 		expect(describeImport({ preps: two }, current())).toContain('2 preps');
+	});
+});
+
+/**
+ * The item book crossing the same transport.
+ *
+ * Held to a harder standard than the preps, because a prep merges newer-wins by
+ * id and an item book must NOT: the losing device's copy holds every price
+ * change it recorded, and those are observations the winner never made. A merge
+ * that discarded them would leave a plausible, shorter history behind and
+ * destroy the one thing the book exists to keep.
+ */
+const T = 1_700_000_000_000;
+const DAY = 24 * 60 * 60 * 1000;
+
+const withBook = (h: HouseRecord, history: Array<[number, number]>): HouseRecord => ({
+	...h,
+	items: {
+		butter: {
+			slug: 'butter',
+			name: 'Butter',
+			history: history.map(([unitCost, at]) => ({ unitCost, unit: 'kg', at }))
+		}
+	}
+});
+
+describe('the item book crosses the transport', () => {
+	it('rides in the house block, not in the session block', () => {
+		const parsed = roundTrip(withBook(siteA(), [[7.9, T]]));
+		expect(parsed.house?.items?.butter.history).toHaveLength(1);
+		expect('items' in parsed.data).toBe(false);
+	});
+
+	/** The property the whole feature rests on. */
+	it('unions the history rather than letting the file win', () => {
+		const here = withBook(siteA(), [[7.9, T + 2 * DAY], [6.4, T]]);
+		const parsed = roundTrip(withBook(siteA(), [[8.5, T + 3 * DAY], [7.2, T + DAY]]));
+		const out = adoptImport(here, [], {}, parsed.house ?? {});
+		expect(out.items.butter.history.map((x) => x.unitCost)).toEqual([8.5, 7.9, 7.2, 6.4]);
+		expect(currentPrice(out.items.butter)?.unitCost).toBe(8.5);
+		expect(previousPrice(out.items.butter)?.unitCost).toBe(7.9);
+	});
+
+	it('re-importing your own export changes no price', () => {
+		const here = withBook(siteA(), [[7.9, T + DAY], [6.4, T]]);
+		const parsed = roundTrip(here);
+		const out = adoptImport(here, [], {}, parsed.house ?? {});
+		expect(out.items).toEqual(here.items);
+	});
+
+	it('leaves the book alone for a file written before it existed', () => {
+		const here = withBook(siteA(), [[7.9, T]]);
+		const out = adoptImport(here, [], {}, { preps: [] });
+		expect(out.items.butter.history).toHaveLength(1);
+	});
+
+	it('takes a book from a site that has one when this site does not', () => {
+		const parsed = roundTrip(withBook(siteA(), [[7.9, T]]));
+		const out = adoptImport(siteA(), [], {}, parsed.house ?? {});
+		expect(currentPrice(out.items.butter)?.unitCost).toBe(7.9);
+	});
+});
+
+describe('the banner says what the book will do', () => {
+	const current = (history: Array<[number, number]>) =>
+		({
+			...structuredClone(EMPTY_SESSION),
+			...houseSnapshot(siteA()),
+			...housePortable(withBook(siteA(), history))
+		}) as SessionState & { preps?: Prep[]; items?: Record<string, Item> };
+
+	it('counts an item the venue has never bought', () => {
+		const out = describeImport(
+			{ items: { saffron: { slug: 'saffron', name: 'Saffron', history: [{ unitCost: 30, unit: 'g', at: T }] } } },
+			current([[7.9, T]])
+		);
+		expect(out).toContain('1 item');
+		expect(out).toContain('1 price for the item book');
+	});
+
+	/** Counted in PRICES, because six new observations of butter is six chances
+	 *  to see the creep and "1 item" would undersell it. */
+	it('counts the prices, not the items', () => {
+		const out = describeImport(
+			{ items: { butter: { slug: 'butter', name: 'Butter', history: [
+				{ unitCost: 8.5, unit: 'kg', at: T + 3 * DAY },
+				{ unitCost: 8.2, unit: 'kg', at: T + 2 * DAY },
+				{ unitCost: 7.9, unit: 'kg', at: T }
+			] } } },
+			current([[7.9, T]])
+		);
+		expect(out).toContain('2 prices for the item book');
+		expect(out).not.toContain('1 item,');
+	});
+
+	it('stays quiet about a book that adds nothing', () => {
+		const out = describeImport(
+			{ items: { butter: { slug: 'butter', name: 'Butter', history: [{ unitCost: 7.9, unit: 'kg', at: T }] } } },
+			current([[7.9, T]])
+		);
+		expect(out).toBe('nothing new — this file matches what you already have');
 	});
 });

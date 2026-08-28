@@ -56,7 +56,8 @@ import {
 	type Prep
 } from '../persistence/house';
 import type { MenuDish, DishCosting, SalesWeek } from '../persistence/state';
-import type { CostLine } from '../costing';
+import type { CostLine, PricedItem } from '../costing';
+import { recordPrice, pricedItems, itemNames, type Item } from '../items';
 
 export type { HouseRecord, EightySix, Prep };
 
@@ -253,6 +254,48 @@ class House {
 	get preps(): Prep[] {
 		return this.#r.preps;
 	}
+
+	/* ---- the item book --------------------------------------------------- */
+
+	get items(): Record<string, Item> {
+		return this.#r.items;
+	}
+
+	/**
+	 * The book flattened to just the current price of each thing, which is all
+	 * resolveLines needs. Derived on read rather than stored: a second copy of a
+	 * price is a second thing that can be stale.
+	 */
+	get pricedItems(): Record<string, PricedItem> {
+		return pricedItems(this.#r.items);
+	}
+
+	/** Every name the venue has typed, for the datalist. */
+	get itemNames(): string[] {
+		return itemNames(this.#r.items);
+	}
+
+	item(slug: string): Item | undefined {
+		return this.#r.items[slug];
+	}
+
+	/**
+	 * File what this thing costs today.
+	 *
+	 * Called from the costing sheet whenever a price is committed against a
+	 * NAMED line — the book fills itself from work the venue was doing anyway,
+	 * which is the only reason it will ever have anything in it. recordPrice
+	 * decides whether the observation is worth keeping; see its header for the
+	 * three cases it declines.
+	 */
+	recordItemPrice(name: string, unitCost: number, unit: string) {
+		const next = recordPrice(this.#r.items, name, unitCost, unit, Date.now());
+		if (next === this.#r.items) return;
+		this.#r = { ...this.#r, items: next };
+		this.#persist();
+	}
+
+	/* ---- preps ------------------------------------------------------------ */
 
 	prep(id: string): Prep | undefined {
 		return this.#r.preps.find((p) => p.id === id);

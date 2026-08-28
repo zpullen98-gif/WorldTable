@@ -116,7 +116,7 @@
 	/** The prep being typed, costed live — the same function the list uses. */
 	const preview = $derived(
 		form
-			? prepPortionCost({ id: 'preview', portions: Number(form.portions) || 0, lines: form.lines })
+			? prepPortionCost({ id: 'preview', portions: Number(form.portions) || 0, lines: form.lines }, house.pricedItems)
 			: { perPortion: null, complete: false }
 	);
 </script>
@@ -149,7 +149,7 @@
 
 		<ul class="preps">
 			{#each house.preps as p (p.id)}
-				{@const cost = prepPortionCost(p)}
+				{@const cost = prepPortionCost(p, house.pricedItems)}
 				{@const used = house.dishesUsing(p.id)}
 				<li>
 					<div class="row">

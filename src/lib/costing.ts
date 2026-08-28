@@ -41,6 +41,31 @@ export interface CostLine {
 	 * already knows how to do.
 	 */
 	prepId?: string;
+	/**
+	 * This line's price comes from the ITEM BOOK — the venue's record of what it
+	 * pays for this thing, with the history behind it.
+	 *
+	 * OPTIONAL, PERMANENTLY. A line with no `itemSlug` prices itself from its own
+	 * `unitCost`, exactly as every line did before the book existed, and that is
+	 * not a migration gap left open: a one-off truffle must stay free text or a
+	 * ten-minute costing becomes an afternoon of master data. See items.ts.
+	 *
+	 * `prepId` wins if a line somehow carries both. A prep is a made thing with a
+	 * cost of its own, and it is the more specific claim.
+	 */
+	itemSlug?: string;
+}
+
+/**
+ * The priced part of an item — deliberately the minimum, for the same reason
+ * CostablePrep is: this file has no business knowing that an item also carries
+ * a name, a slug it was filed under and two years of history. items.ts owns
+ * that, and hands this down.
+ */
+export interface PricedItem {
+	slug: string;
+	unitCost: number;
+	unit: string;
 }
 
 /**
@@ -62,19 +87,51 @@ export interface CostablePrep {
  * with one blank line understates every dish that uses it at once — the same
  * error plateCost refuses, multiplied by however many plates the sauce goes on.
  */
-export function prepPortionCost(prep: CostablePrep): {
+export function prepPortionCost(
+	prep: CostablePrep,
+	items: Readonly<Record<string, PricedItem>>
+): {
 	perPortion: number | null;
 	complete: boolean;
 } {
 	// A prep referencing a prep is a graph, and a graph needs a cycle detector
 	// nobody will maintain. Depth is capped at one and the refusal is loud:
 	// the nested line cannot be costed, so the prep is incomplete.
+	//
+	// An ITEM inside a prep is not a graph and is resolved normally — butter in
+	// the demi is the case the book most needs to reach, because it is the one
+	// nobody can find by reading the dish sheets.
 	const nested = prep.lines.some((l) => l.prepId);
-	const { total, complete } = plateCost(prep.lines.filter((l) => !l.prepId));
+	const priced = prep.lines.filter((l) => !l.prepId).map((l) => priceFromBook(l, items));
+	const { total, complete } = plateCost(priced);
 	if (!Number.isFinite(prep.portions) || prep.portions <= 0) {
 		return { perPortion: null, complete: false };
 	}
 	return { perPortion: total / prep.portions, complete: complete && !nested };
+}
+
+/**
+ * Put the book's price on a line that points at the book.
+ *
+ * yieldPct IS LEFT ALONE, and that is the whole difference from a prep. A prep
+ * is locked to 100 because the trim, the bones and the reduction already
+ * happened inside it and are already in its per-portion cost. An item price is
+ * an INVOICE price for a raw purchase — the fish still has its frame on — so
+ * the dish's own yield is the only thing accounting for the bin, and clearing
+ * it here would price the whole menu off gross weight. That is the specific
+ * error the guide calls "the classic rookie bankruptcy", so the asymmetry is
+ * deliberate and must not be tidied into a shared branch.
+ *
+ * An item the book no longer holds costs NaN, so plateCost refuses the dish —
+ * the same refusal a missing prep gets, for the same reason. A line that
+ * silently reverted to its last stored price would be a number the venue could
+ * not account for.
+ */
+function priceFromBook(line: CostLine, items: Readonly<Record<string, PricedItem>>): CostLine {
+	if (!line.itemSlug) return line;
+	const it = items[line.itemSlug];
+	if (!it) return { ...line, unitCost: Number.NaN };
+	return { ...line, unitCost: it.unitCost, unit: it.unit };
 }
 
 /**
@@ -89,12 +146,21 @@ export function prepPortionCost(prep: CostablePrep): {
  */
 export function resolveLines(
 	lines: CostLine[],
-	preps: ReadonlyArray<CostablePrep>
+	preps: ReadonlyArray<CostablePrep>,
+	items: Readonly<Record<string, PricedItem>>
 ): { lines: CostLine[]; complete: boolean } {
 	const byId = new Map(preps.map((p) => [p.id, p]));
 	let complete = true;
-	const out = lines.map((l) => {
-		if (!l.prepId) return l;
+	const out = lines.map((raw) => {
+		const l = priceFromBook(raw, items);
+		if (!l.prepId) {
+			// An item the book has lost is uncostable, and the flag has to say so
+			// here: plateCost sees only a NaN and reports `complete: false`, but a
+			// caller reading THIS function's flag would otherwise be told the
+			// resolution went fine.
+			if (l.itemSlug && !Number.isFinite(l.unitCost)) complete = false;
+			return l;
+		}
 		const prep = byId.get(l.prepId);
 		if (!prep) {
 			// The prep was deleted out from under the dish. Uncostable, and it
@@ -102,7 +168,7 @@ export function resolveLines(
 			complete = false;
 			return { ...l, unitCost: Number.NaN, yieldPct: 100 };
 		}
-		const { perPortion, complete: prepComplete } = prepPortionCost(prep);
+		const { perPortion, complete: prepComplete } = prepPortionCost(prep, items);
 		// An incomplete prep makes the LINE uncostable, not merely this function
 		// unhappy. Returning a priced line beside a complete:false flag put the
 		// propagation at the mercy of whoever called us: plateCost() on its own
