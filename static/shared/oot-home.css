@@ -6,9 +6,16 @@
    brass, and the Table stays paper and turmeric, while the bones are identical.
    A wing opts in with one block:
 
-       :root { --oot-accent:var(--gold); --oot-line:rgba(201,162,39,.25);
+       :root { --oot-accent:var(--gold); --oot-accent-deep:var(--gold-deep);
+               --oot-line:rgba(201,162,39,.25);
                --oot-ink:var(--parch); --oot-dim:var(--ink-soft);
                --oot-raise:var(--bg2); }
+
+   --oot-accent-deep is the accent DARK ENOUGH TO READ AT LABEL SIZE. A mid-tone
+   accent that looks right as a rule, a tick or a border is usually too light as
+   12px text: the Table's turmeric measures 3.53:1 on its paper where AA wants
+   4.5, and its turmeric-deep measures 5.90:1. A wing that omits it falls back to
+   --oot-accent, which is what every wing did before this existed.
 
    Fallbacks are `currentColor` and transparent, so a wing that forgets the
    block gets something plain rather than something invisible. That matters:
@@ -36,12 +43,23 @@
   letter-spacing: .2em;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--oot-accent, currentColor);
+  /* The DEEP accent: this is 12.5px text, not a rule or a tick. At 600 weight it
+     is still "normal text" to WCAG (large needs 18.66px AND bold), so it owes
+     4.5:1 and the mid-tone accent only pays 3.53. */
+  color: var(--oot-accent-deep, var(--oot-accent, currentColor));
 }
+/* CONTRAST: --oot-dim is already the muted colour, and it was chosen to MEET
+   AA against the paper. Five rules below then stacked opacity .6-.68 on top of
+   it and one dimmed --oot-ink the same way, which took measured 4.55:1 down to
+   2.33:1 in day service and 5.70:1 down to 2.97:1 at night — the whole point of
+   the token, undone by the line after it.
+
+   Do not put opacity back on text. If something needs to recede, give it a
+   colour that recedes. The day-service margin is thin at 4.55:1, so a lighter
+   --oot-dim would fail on its own: measure before changing that token. */
 .oot-sec-head span {
   font-size: .82rem;
   font-style: italic;
-  opacity: .62;
   color: var(--oot-dim, currentColor);
 }
 
@@ -64,7 +82,6 @@
 .oot-today-sub {
   font-size: .84rem;
   margin-top: 4px;
-  opacity: .68;
   color: var(--oot-dim, currentColor);
 }
 /* A count a tired person reads across a room. */
@@ -138,11 +155,12 @@
 .oot-path-row:hover .oot-path-t { text-decoration: underline; }
 .oot-path-mark { color: var(--oot-accent, currentColor); font-size: .95rem; }
 .oot-path-t { color: var(--oot-ink, currentColor); }
-.oot-path-row.done .oot-path-t { opacity: .55; }
+/* Done recedes to the muted colour rather than to 55% of the ink. The tick
+   in .oot-path-mark is what actually says "done"; this is the echo. */
+.oot-path-row.done .oot-path-t { color: var(--oot-dim, currentColor); }
 .oot-path-mins {
   font-size: .74rem;
   font-variant-numeric: tabular-nums;
-  opacity: .6;
   color: var(--oot-dim, currentColor);
   white-space: nowrap;
 }
@@ -166,7 +184,6 @@
   font-size: .72rem;
   letter-spacing: .14em;
   text-transform: uppercase;
-  opacity: .6;
   color: var(--oot-dim, currentColor);
 }
 .oot-chip {
@@ -212,7 +229,6 @@
 }
 .oot-pass-stat span {
   font-size: .72rem;
-  opacity: .62;
   color: var(--oot-dim, currentColor);
 }
 .oot-pass-go { margin-left: auto; }
@@ -231,6 +247,14 @@
   .oot-sec:nth-of-type(4) { animation-delay: .12s; }
   .oot-sec:nth-of-type(5) { animation-delay: .16s; }
 }
-@keyframes ootSecIn { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+/* TRANSFORM ONLY, never opacity.
+
+   Fading a section in fades every word inside it through every contrast ratio
+   between nothing and correct, and axe samples mid-flight: it reported the
+   dashboard's muted text at 4.18-4.46:1 against colours that measure 4.55-5.70
+   at rest. Those were real readings of a real frame — a reader on a slow device
+   sees them too. The rise is the whole effect anyway; the fade only ever cost
+   legibility. */
+@keyframes ootSecIn { from { transform: translateY(7px); } to { transform: none; } }
 
 @media print { .oot-sec, .oot-today, .oot-pass { animation: none; break-inside: avoid; } }

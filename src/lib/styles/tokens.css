@@ -143,6 +143,10 @@
    --------------------------------------------------------------------- */
 :root {
 	--oot-accent: var(--turmeric);
+	/* The accent dark enough to read at label size. turmeric is 3.53:1 on day
+	   paper and turmeric-deep is 5.90:1; the shared layer uses this for its
+	   section headings, which are 12.5px uppercase and owe 4.5:1. */
+	--oot-accent-deep: var(--turmeric-deep);
 	--oot-line: var(--line);
 	--oot-ink: var(--ink);
 	--oot-dim: var(--muted);

@@ -25,16 +25,13 @@ third one drove most of this session's work — front of house had nothing.
 |---|---|
 | WorldTable | branch `dish-standards`, **16 commits unpushed** (remote is `origin/master`), plus the technique-standards work below |
 | OutsideOfTime | branch `main`, HEAD `3ca8361e`, tree clean, **no git remote — never pushed** |
-| Tests | **357 unit** (25 files), **76 e2e** (75 pass, 1 known red) |
+| Tests | **357 unit** (25 files), **76 e2e** (76 pass — **the suite is green**) |
 | Gates | `npm run build:data` all pass · `npm run verify:build` **18/18** |
 | Precache | 1.39 MB gzipped against a 2.00 MB cap |
 | Routes | 24 · Derived JSON | 19 files |
 
-**The one red test is pre-existing and not from this work.**
-`axe: today dashboard has no serious violations`. `static/shared/oot-home.css`
-stacks `opacity: .6–.68` on already-muted text in six rules, measuring 2.32:1 to
-3.17:1 where AA wants 4.5:1. It is a SHARED-layer defect — every wing renders
-those bands — so the fix belongs in the monorepo and must be re-vendored.
+**There is no red test any more.** The shared-layer contrast defect that had
+been outstanding longest is fixed — see below.
 
 ## The corpus, by the numbers
 
@@ -510,6 +507,55 @@ from the dishes on your worksheet".
 - The guest page carried the SAME 8-of-10 `COURSE_ORDER` bug as /menu, so a
   pinned omelette was absent from the card too. Fixed.
 
+## The shared contrast defect — cleared
+
+It was three defects wearing one test failure, and only the first was the one
+described.
+
+**1. Opacity stacked on an already-muted colour.** Six rules in
+`shared/oot-home.css` set `opacity: .55–.68` on text that had just been given
+`color: var(--oot-dim)`. `--oot-dim` was chosen to MEET AA — it measures 4.55:1
+on day paper and 5.70:1 at night — and the very next line undid it, landing at
+2.33:1 and 2.97:1. The opacity is gone; the colour does the work it was picked
+for. **Do not put opacity back on text: if something must recede, give it a
+colour that recedes.** The done-path row now recedes to `--oot-dim` rather than
+to 55% of the ink, and the tick in `.oot-path-mark` is what actually says "done".
+
+That took the violation from 14 nodes to 6, and the rest was not opacity at all.
+
+**2. The accent was too light to be text.** `.oot-sec-head h3` is 12.5px
+uppercase at weight 600 — normal text to WCAG, which wants 4.5:1 (large needs
+18.66px AND bold). The Table's `--turmeric` measures **3.53:1** on its paper.
+Its `--turmeric-deep` measures **5.90:1**, and the Table already reserves it for
+exactly this kind of small label. The shared layer gained
+`--oot-accent-deep`, falling back to `--oot-accent` so a wing that omits it gets
+what it had before; `tokens.css` maps it to `--turmeric-deep`.
+
+**3. The entrance animation faded text through every failing ratio on the way
+in.** `@keyframes ootSecIn` animated `opacity: 0 → 1` on whole sections, so axe
+sampled the dashboard's muted text at 4.18–4.46:1 against colours that measure
+4.55–5.70 at rest. Those were real readings of a real frame — a reader on a slow
+device sees them too. The keyframe animates **transform only** now. The rise was
+the whole effect; the fade only ever cost legibility.
+
+### Re-vendoring, and a correction to the ritual
+
+`HANDOFF.md` says a shared edit means bumping **all four** vanilla wing SW cache
+names. For a CSS-only change that is wrong, and shipping it that way would have
+been four unnecessary cache invalidations:
+
+- `codex` and `ledger` precache `../shared/oot-home.css` (sw.js line 10) and
+  match with `ignoreSearch: true`, so the `?v=` is DISCARDED — `codex/sw.js:123`
+  says so itself. Both cache names bumped: **codex-v67**, **ledger-v39**.
+- `pass` references the CSS but has no service worker, so its `?v=` bump is enough.
+- **`light` and `almanac` do not reference this file at all.** They precache the
+  shared JS only. Left untouched at firstlight-v45 / cfl-v84.
+- The Table references it unversioned across 1,179 prerendered files and
+  runtime-caches `/shared/`, so it ships with the next build.
+
+The CSS `?v=` went 17 → **18**, which happens to align it with `SHARED_V`; they
+are separate tracks and were one apart.
+
 ## What's left, ranked
 
 1. **More technique standards — and the threshold IS the worklist.** 26 are
@@ -534,8 +580,8 @@ from the dishes on your worksheet".
    clearance, but closing the vocabulary to all 14 is a `diet.mjs` project.
    `allergens.test.ts` asserts `NOT_SCREENED` stays non-empty, so the day it
    lands the copy is forced to change.
-3. **The shared CSS contrast defect** — the one red test, affecting all five
-   wings.
+3. ~~**The shared CSS contrast defect**~~ — **DONE.** Three defects, not one; see
+   the section above. The suite is green.
 4. **The prep list.** The Pass back-times *service*; nothing back-times the
    *day*. The hard part (hands-on vs unattended per step) is already built.
 5. **Yield tests.** Zero content, and the costing sheet depends on the number.
