@@ -729,6 +729,7 @@
 			The menu the house actually serves — dish by dish, priced and allergen-marked. Saved on this
 			device and carried in the session export like everything else here.
 			<a href="{base}/menu/costing">Cost this menu ▸</a>
+			<a href="{base}/menu/preps">Preps ▸</a>
 			{#if house.dishes.length >= 4}
 				<a href="{base}/menu/quiz">Drill this menu ▸</a>
 			{:else if house.dishes.length}

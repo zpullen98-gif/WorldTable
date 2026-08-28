@@ -11,6 +11,7 @@
  * namespaces. See stores/house.svelte.ts for why that line is drawn where it is.
  */
 import type { MenuDish, DishCosting } from './state';
+import type { CostLine } from '../costing';
 
 export const HOUSE_KEY = 'house';
 export const HOUSE_VERSION = 1;
@@ -21,9 +22,54 @@ export interface EightySix {
 	by?: string;
 }
 
+/**
+ * A prep — the thing a menu dish is built from and the sheet had no word for.
+ *
+ * WHY IT EXISTS. A braise's cost sheet carried a line reading "Demi-glace,
+ * 6.00/L, 0.15 L, 100% yield". Nobody had ever costed the demi — bones,
+ * mirepoix, wine, nine hours, a yield nearer 25% — and the same 6.00 guess was
+ * retyped into every other dish that used it, differently in some of them. Every
+ * sauced dish was understated in the direction that flatters, which is precisely
+ * the error `plateCost`'s `complete` flag exists to refuse.
+ *
+ * It lives on the HOUSE record and not in SessionState, for the same reason the
+ * menu and its costings do: what the demi costs is a fact about the venue, not
+ * about whichever cook is holding the tablet.
+ */
+export interface Prep {
+	/** 'p-' + base36, minted once at first save, never recomputed. */
+	id: string;
+	name: string;
+	/** Free text, display only: "1 x 20L pot", "2 gastros". */
+	batch: string;
+	/** Plate-portions one batch makes. The divisor — it must be > 0 to cost. */
+	portions: number;
+	/** How many portions to keep on hand. What the prep board counts against. */
+	par: number;
+	shelfLifeDays?: number;
+	/**
+	 * SECONDS, not minutes, and not negotiable.
+	 *
+	 * `PassStepInput` is handsOnSec/unattendedSec and `handsOf()` divides by 60,
+	 * so a prep stored in minutes back-times to SIXTY TIMES its real length —
+	 * a two-hour stock would claim five days. Seconds here means the prep board
+	 * can hand these straight to buildPass when it arrives.
+	 */
+	handsOnSec: number;
+	unattendedSec: number;
+	/** A station key from stations.json, when the kitchen works that way. */
+	station?: string;
+	lines: CostLine[];
+	/** A guide or family recipe this prep is made from, if there is one. */
+	recipeSlug?: string;
+	ts: number;
+}
+
 export interface HouseRecord {
 	schemaVersion: number;
 	dishes: MenuDish[];
+	/** The venue's sub-recipes. See Prep. */
+	preps: Prep[];
 	eightySix: Record<string, EightySix>;
 	dishCosts: Record<string, DishCosting>;
 	/**
@@ -41,6 +87,7 @@ export interface HouseRecord {
 export const EMPTY_HOUSE: HouseRecord = {
 	schemaVersion: HOUSE_VERSION,
 	dishes: [],
+	preps: [],
 	eightySix: {},
 	dishCosts: {},
 	absorbed: [],
@@ -87,7 +134,8 @@ export function absorbSession(
 export function adoptImport(
 	house: HouseRecord,
 	dishes: MenuDish[] | undefined,
-	costs: Record<string, DishCosting> | undefined
+	costs: Record<string, DishCosting> | undefined,
+	preps?: Prep[]
 ): HouseRecord {
 	const byId = new Map(house.dishes.map((d) => [d.id, d]));
 	for (const d of dishes ?? []) {
@@ -103,12 +151,43 @@ export function adoptImport(
 		if (!mine || (c?.ts ?? 0) > (mine.ts ?? 0)) nextCosts[id] = c;
 	}
 
+	// Named explicitly rather than left to a spread, the way every other field
+	// in a merge here is. cookedLog and shoppingChecks once fell through a bare
+	// one and erased a Path of Study.
+	const prepById = new Map(house.preps.map((p) => [p.id, p]));
+	for (const p of preps ?? []) {
+		if (!p?.id) continue;
+		const mine = prepById.get(p.id);
+		if (!mine || (p.ts ?? 0) > (mine.ts ?? 0)) prepById.set(p.id, p);
+	}
+
 	return {
 		...house,
 		dishes: nextDishes,
 		dishCosts: nextCosts,
+		preps: [...prepById.values()],
 		absorbed: [...new Set([...house.absorbed, ...nextDishes.map((d) => d.id)])]
 	};
+}
+
+/**
+ * Removing a prep leaves the dishes that used it INCOMPLETE rather than
+ * cheaper.
+ *
+ * resolveLines() reports a missing prep as uncostable, so the consuming dish
+ * loses its total instead of silently dropping the sauce off the plate cost.
+ * That is the whole point: a dish that quietly got cheaper is how a menu gets
+ * priced wrong.
+ */
+export function removePrep(house: HouseRecord, id: string): HouseRecord {
+	return { ...house, preps: house.preps.filter((p) => p.id !== id) };
+}
+
+/** Which menu dishes have a line pointing at this prep. */
+export function dishesUsingPrep(house: HouseRecord, prepId: string): MenuDish[] {
+	return house.dishes.filter((d) =>
+		(house.dishCosts[d.id]?.lines ?? []).some((l) => l.prepId === prepId)
+	);
 }
 
 /** Removing a dish takes its costing and its 86 with it. */

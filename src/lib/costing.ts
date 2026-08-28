@@ -32,6 +32,90 @@ export interface CostLine {
 	usedQty: number;
 	/** Usable share after trim, bone and cooking loss. 100 = no loss. */
 	yieldPct: number;
+	/**
+	 * This line is a PREP, not a purchase — its unit cost comes from what the
+	 * prep costs per portion rather than from an invoice.
+	 *
+	 * Resolved to a plain line by resolveLines() before anything reaches
+	 * plateCost, so every function below this one keeps seeing arithmetic it
+	 * already knows how to do.
+	 */
+	prepId?: string;
+}
+
+/**
+ * The costable part of a prep — deliberately the minimum, so costing.ts does
+ * not have to know that a prep also carries a station, a par and a shelf life.
+ * The full record lives in persistence/house.ts.
+ */
+export interface CostablePrep {
+	id: string;
+	/** Plate-portions one batch makes. The divisor, so it must be > 0. */
+	portions: number;
+	lines: CostLine[];
+}
+
+/**
+ * What one portion of a prep costs, and whether every line in it costed.
+ *
+ * `complete` matters more here than anywhere else in this file. A demi-glace
+ * with one blank line understates every dish that uses it at once — the same
+ * error plateCost refuses, multiplied by however many plates the sauce goes on.
+ */
+export function prepPortionCost(prep: CostablePrep): {
+	perPortion: number | null;
+	complete: boolean;
+} {
+	// A prep referencing a prep is a graph, and a graph needs a cycle detector
+	// nobody will maintain. Depth is capped at one and the refusal is loud:
+	// the nested line cannot be costed, so the prep is incomplete.
+	const nested = prep.lines.some((l) => l.prepId);
+	const { total, complete } = plateCost(prep.lines.filter((l) => !l.prepId));
+	if (!Number.isFinite(prep.portions) || prep.portions <= 0) {
+		return { perPortion: null, complete: false };
+	}
+	return { perPortion: total / prep.portions, complete: complete && !nested };
+}
+
+/**
+ * Flatten prep-backed lines into plain ones, and report whether anything was
+ * left uncosted along the way.
+ *
+ * yieldPct is LOCKED TO 100 for a resolved line, and that is the guard, not a
+ * default: the trim, the bones and the reduction already happened inside the
+ * prep and are already in its per-portion cost. Letting a dish apply its own
+ * yield on top would divide by the loss twice and quietly overstate the plate —
+ * the one direction of error this sheet is otherwise careful to refuse.
+ */
+export function resolveLines(
+	lines: CostLine[],
+	preps: ReadonlyArray<CostablePrep>
+): { lines: CostLine[]; complete: boolean } {
+	const byId = new Map(preps.map((p) => [p.id, p]));
+	let complete = true;
+	const out = lines.map((l) => {
+		if (!l.prepId) return l;
+		const prep = byId.get(l.prepId);
+		if (!prep) {
+			// The prep was deleted out from under the dish. Uncostable, and it
+			// must not silently vanish from the total.
+			complete = false;
+			return { ...l, unitCost: Number.NaN, yieldPct: 100 };
+		}
+		const { perPortion, complete: prepComplete } = prepPortionCost(prep);
+		// An incomplete prep makes the LINE uncostable, not merely this function
+		// unhappy. Returning a priced line beside a complete:false flag put the
+		// propagation at the mercy of whoever called us: plateCost() on its own
+		// would report a confident total over a sauce nobody had finished
+		// costing. Emitting NaN makes plateCost refuse it directly, which is the
+		// same refusal it already applies to any other line it cannot price.
+		if (perPortion === null || !prepComplete) {
+			complete = false;
+			return { ...l, unitCost: Number.NaN, yieldPct: 100 };
+		}
+		return { ...l, unitCost: perPortion, yieldPct: 100 };
+	});
+	return { lines: out, complete };
 }
 
 export interface Band {

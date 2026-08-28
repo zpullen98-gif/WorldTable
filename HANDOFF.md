@@ -25,7 +25,7 @@ third one drove most of this session's work — front of house had nothing.
 |---|---|
 | WorldTable | branch `dish-standards`, **16 commits unpushed** (remote is `origin/master`), plus the technique-standards work below |
 | OutsideOfTime | branch `main`, HEAD `3ca8361e`, tree clean, **no git remote — never pushed** |
-| Tests | **357 unit** (25 files), **76 e2e** (76 pass — **the suite is green**) |
+| Tests | **372 unit** (26 files), **76 e2e** (76 pass — **the suite is green**) |
 | Gates | `npm run build:data` all pass · `npm run verify:build` **18/18** |
 | Precache | 1.39 MB gzipped against a 2.00 MB cap |
 | Routes | 24 · Derived JSON | 19 files |
@@ -555,6 +555,60 @@ been four unnecessary cache invalidations:
 
 The CSS `?v=` went 17 → **18**, which happens to align it with `SHARED_V`; they
 are separate tracks and were one apart.
+
+## Preps — the cost object
+
+**The bug.** A braise's sheet carried "Demi-glace, 6.00/L, 0.15 L, 100% yield".
+Nobody had ever costed the demi, and the same guess was retyped into every other
+dish that used it. On the seeded example — veal bones at a 25% yield, mirepoix,
+wine, over 10 portions — the real number is **9.30 a portion against a 6.00
+guess**. Every sauced dish was understated in the direction that flatters, which
+is exactly the error `plateCost`'s own `complete` flag exists to refuse.
+
+**Where it lives.** `Prep[]` on the **house record**, not in SessionState. The
+panel proposed it as a sibling of `menuDishes` — but that moved to the house
+record earlier in this session, and a prep is a venue fact for the same reason:
+what the demi costs belongs to the room, not to whoever holds the tablet.
+
+- Times are **SECONDS**. `PassStepInput` is `handsOnSec` and `handsOf()` divides
+  by 60, so a prep kept in minutes back-times to sixty times its length — a
+  two-hour stock claiming five days. The form types minutes and stores seconds.
+- `CostLine.prepId?` is the join. `resolveLines()` flattens prep-backed lines to
+  plain ones **at the call site**, so `costing.ts`'s primitives and their 38
+  tests keep seeing only arithmetic they already know.
+- **yieldPct is LOCKED to 100 on a resolved line, and that is a guard, not a
+  default.** The trim, the bones and the nine hours already happened inside the
+  prep and are already in its per-portion cost; a dish applying its own yield on
+  top would divide by the loss twice and overstate the plate.
+- **Depth is capped at one.** A prep referencing a prep is a graph and a graph
+  needs a cycle detector nobody will maintain, so a nested line makes the prep
+  incomplete rather than being resolved quietly.
+- **Deleting a prep leaves its dishes incomplete, never cheaper.** The remove
+  confirm names them.
+- `preps` is named explicitly in the import merge, not left to a spread —
+  `cookedLog` and `shoppingChecks` once fell through one and erased a Path of
+  Study.
+
+### Two bugs of my own, both about a number that looked right
+
+**Incompleteness was not propagating structurally.** `resolveLines` returned
+`complete: false` while still emitting a *costable* line, so `plateCost` on its
+own reported a confident total over a sauce nobody had finished costing — the
+propagation depended on every caller reading my flag. An unfinished prep now
+makes the LINE uncostable, which is the same refusal `plateCost` already applies
+to anything else it cannot price. Caught by a test.
+
+**The line table costed the raw line.** A prep-backed line stores `unitCost: 0`
+because its price comes from the prep, so the table printed **0.00** next to a
+total that was right. Money is read from the resolved line now, and the field is
+read-only on a prep row — typing over it there would be the retyped guess this
+whole object exists to end.
+
+**Not built, and next in this order:** the prep board (back-time the DAY through
+the same `buildPass` with a 16:00 anchor and these chef-typed times rather than
+the 86%-estimated guide steps — the hard part is already built), batch counts
+from par minus a counted on-hand number, and a waste log valued from `plateCost`
+with five reason codes, rolled up venue-wide and **never per person**.
 
 ## What's left, ranked
 

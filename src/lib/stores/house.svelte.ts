@@ -42,13 +42,16 @@ import {
 	absorbSession,
 	adoptImport,
 	removeDish as removeDishFrom,
+	removePrep as removePrepFrom,
+	dishesUsingPrep,
 	houseSnapshot,
 	type HouseRecord,
-	type EightySix
+	type EightySix,
+	type Prep
 } from '../persistence/house';
 import type { MenuDish, DishCosting } from '../persistence/state';
 
-export type { HouseRecord, EightySix };
+export type { HouseRecord, EightySix, Prep };
 
 const store = browser ? createStore('world-table', 'state') : undefined;
 
@@ -154,9 +157,47 @@ class House {
 
 	/* ---- import / export -------------------------------------------------- */
 
-	adopt(dishes: MenuDish[] | undefined, costs: Record<string, DishCosting> | undefined) {
-		this.#r = adoptImport(this.#r, dishes, costs);
+	adopt(
+		dishes: MenuDish[] | undefined,
+		costs: Record<string, DishCosting> | undefined,
+		preps?: Prep[]
+	) {
+		this.#r = adoptImport(this.#r, dishes, costs, preps);
 		this.#persist();
+	}
+
+	/* ---- preps ------------------------------------------------------------
+	 *
+	 * The venue's sub-recipes. On the house record and not in the session for
+	 * the same reason the menu is: what the demi costs is a fact about the
+	 * venue, not about whoever is holding the tablet.
+	 */
+
+	get preps(): Prep[] {
+		return this.#r.preps;
+	}
+
+	prep(id: string): Prep | undefined {
+		return this.#r.preps.find((p) => p.id === id);
+	}
+
+	savePrep(p: Prep) {
+		const exists = this.#r.preps.some((x) => x.id === p.id);
+		this.#r = {
+			...this.#r,
+			preps: exists ? this.#r.preps.map((x) => (x.id === p.id ? p : x)) : [...this.#r.preps, p]
+		};
+		this.#persist();
+	}
+
+	removePrep(id: string) {
+		this.#r = removePrepFrom(this.#r, id);
+		this.#persist();
+	}
+
+	/** Which menu dishes would lose their total if this prep went. */
+	dishesUsing(id: string) {
+		return dishesUsingPrep(this.#r, id);
 	}
 
 	snapshot() {

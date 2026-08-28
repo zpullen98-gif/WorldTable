@@ -28,7 +28,9 @@
 		trueUnitCost,
 		lineCost,
 		parsePrice,
-		money
+		money,
+		resolveLines,
+		prepPortionCost
 	} from '$lib/costing';
 
 	let { data } = $props();
@@ -57,6 +59,44 @@
 
 	function linesFor(id: string): CostLine[] {
 		return house.costingFor(id).lines;
+	}
+
+	/**
+	 * The lines with every prep flattened into a plain purchase line.
+	 *
+	 * Resolved HERE, at the call site, rather than inside costing.ts — so
+	 * plateCost and its tests keep seeing only arithmetic they already know, and
+	 * the editable list above stays exactly what the venue typed.
+	 *
+	 * An unfinished prep comes back uncostable, which is deliberate: one blank
+	 * line inside the demi understates every dish the sauce goes on, and that is
+	 * the error the `complete` flag exists to refuse, multiplied.
+	 */
+	const resolvedFor = (id: string) => resolveLines(linesFor(id), house.preps).lines;
+
+	const prepOf = (l: CostLine) => (l.prepId ? house.prep(l.prepId) : undefined);
+	const perPortionOf = (l: CostLine) => {
+		const p = prepOf(l);
+		return p ? prepPortionCost(p) : null;
+	};
+
+	function addPrepLine(id: string, prepId: string) {
+		const p = house.prep(prepId);
+		if (!p) return;
+		writeLines(id, [
+			...linesFor(id),
+			{
+				id: mintLineId(),
+				item: p.name,
+				unitCost: 0,
+				unit: 'portion',
+				usedQty: 1,
+				// Locked at 100 by the resolver too; set here so the stored line
+				// never carries a yield that would look like it was applied.
+				yieldPct: 100,
+				prepId
+			}
+		]);
 	}
 
 	function writeLines(id: string, lines: CostLine[]) {
@@ -93,7 +133,7 @@
 
 	const num = (e: Event) => Number.parseFloat((e.currentTarget as HTMLInputElement).value);
 
-	const economicsOf = (id: string, price: string) => dishEconomics(linesFor(id), price);
+	const economicsOf = (id: string, price: string) => dishEconomics(resolvedFor(id), price);
 
 	const engineered = $derived(
 		engineerMenu(
@@ -195,8 +235,17 @@
 									</thead>
 									<tbody>
 										{#each linesFor(d.id) as l (l.id)}
-											{@const per = trueUnitCost(l.unitCost, l.yieldPct)}
-											{@const total = lineCost(l)}
+											<!--
+												Money is read from the RESOLVED line, never the stored one.
+												A prep-backed line stores unitCost 0 because its price comes
+												from the prep, so costing this row raw would print 0.00 in
+												the table while the total underneath was right — a wrong
+												number sitting next to a correct one, which is worse than
+												either.
+											-->
+											{@const rl = resolveLines([l], house.preps).lines[0]}
+											{@const per = trueUnitCost(rl.unitCost, rl.yieldPct)}
+											{@const total = lineCost(rl)}
 											<tr>
 												<td>
 													<input
@@ -210,14 +259,28 @@
 													/>
 												</td>
 												<td>
-													<input
-														type="number"
-														step="0.01"
-														min="0"
-														value={l.unitCost}
-														aria-label="Cost per unit"
-														onchange={(ev) => editLine(d.id, l.id, { unitCost: num(ev) })}
-													/>
+													{#if l.prepId}
+														<!-- Not editable, because it is not this sheet's number:
+														     it comes from the prep, and typing over it here would
+														     be the retyped guess this object exists to end. -->
+														<input
+															type="number"
+															step="0.01"
+															value={rl.unitCost}
+															aria-label="Cost per portion, from the prep"
+															readonly
+															title="From the prep — edit it on the Preps sheet"
+														/>
+													{:else}
+														<input
+															type="number"
+															step="0.01"
+															min="0"
+															value={l.unitCost}
+															aria-label="Cost per unit"
+															onchange={(ev) => editLine(d.id, l.id, { unitCost: num(ev) })}
+														/>
+													{/if}
 												</td>
 												<td>
 													<input
@@ -267,6 +330,23 @@
 
 								<div class="sheetfoot">
 									<button class="chip" onclick={() => addLine(d.id)}>+ Add an ingredient</button>
+									{#if house.preps.length}
+										<!-- The join that pays for the whole prep object: the sauce is
+										     costed once, here it is just chosen. -->
+										<select
+											class="chip"
+											aria-label="Add a prep to {d.name}"
+											onchange={(e) => {
+												if (e.currentTarget.value) addPrepLine(d.id, e.currentTarget.value);
+												e.currentTarget.value = '';
+											}}
+										>
+											<option value="">+ Add a prep…</option>
+											{#each house.preps as p (p.id)}<option value={p.id}>{p.name}</option>{/each}
+										</select>
+									{:else}
+										<a class="chip" href="{base}/menu/preps">+ Cost a prep first ▸</a>
+									{/if}
 									<label class="sold">
 										Sold this period
 										<input
