@@ -22,9 +22,9 @@ at **$49.99/month, unlimited staff, one shared login**.
 
 | | |
 |---|---|
-| WorldTable | branch `dish-standards`, **37 commits unpushed** (remote `origin/master`), tree clean |
+| WorldTable | branch `dish-standards`, **40 commits unpushed** (remote `origin/master`), tree clean |
 | OutsideOfTime | branch `main`, HEAD `1a6f7d5e`, tree clean, **no git remote — never pushed** |
-| Tests | **539 unit** (33 files) · **84 e2e** — **the whole suite is green** |
+| Tests | **540 unit** (33 files) · **84 e2e** — **the whole suite is green** |
 | Gates | `build:data` all pass · `verify:build` **18/18** |
 | Precache | 1.44 MB gzipped against a 2.00 MB cap |
 | Routes | 28 · Derived JSON | 22 files |
@@ -33,11 +33,13 @@ at **$49.99/month, unlimited staff, one shared login**.
 ## The corpus
 
 970 recipes · 94 chapters · 479 lexicon terms · 103 techniques · 45 dish
-standards · 26 technique standards · 355 marks · 6 calibration ladders · 176
+standards · 46 technique standards · 455 marks · 6 calibration ladders · 176
 front-of-house terms · 27 service modules · 186 drill cards.
 
-**683 of 970 recipes are assessable** — 45 against a standard of their own, 638
-against the techniques they exercise. 287 carry neither.
+**789 of 970 recipes are assessable** — 45 against a standard of their own, 744
+against the techniques they exercise. 181 carry neither: 143 have no technique
+tag at all, and 38 exercise only techniques too rare here to be worth a
+standard. That is the ceiling of this approach, not a backlog.
 
 ---
 
@@ -148,6 +150,12 @@ import a value back into it.
   sheet — every dish is under the band before it is costed, so the headline was
   loudest when it had least to say. The wording is "is above", not "has moved
   out of": the book cannot show the price move caused the drift.
+- **A technique mark may not name an ingredient or a vessel its own technique
+  does not name.** The file always said so and nothing enforced it; the test
+  that now does found two shipped standards in violation. A mark is read beside
+  up to a hundred dishes, so anything true of only some of them is false copy
+  on the rest — and the way to catch it is to check the mark against the recipe
+  set, never to reason about it.
 - **A waste entry names no person, and there is no field for one.** Not a
   display decision — waste-by-cook is a disciplinary instrument and the data
   goes dishonest inside a fortnight, so a field that does not exist cannot be
@@ -233,13 +241,20 @@ import a value back into it.
    1 is above the 25–35% band."* Usage follows preps AND the line's name, not
    just the link, or the headline understates worst on the day the book is
    newest.
-3. **The waste log** (`df9e60c`). `/menu/waste`, venue-wide, five reason codes
+3. **Twenty more technique standards** (`aedb2dc`). `TECHNIQUE_GATE_MIN_RECIPES`
+   25 → 15, the reverse gate named twenty techniques, they were written, the
+   gate went quiet. 26 → 46 standards, 130 → 230 marks, assessable corpus
+   683 → 789. Four of the new marks were not true of every recipe carrying
+   their tag and were caught by checking each against its recipe set; a new
+   test now forbids a mark naming an ingredient or vessel its own technique
+   does not, which caught two pre-existing standards as well.
+4. **The waste log** (`df9e60c`). `/menu/waste`, venue-wide, five reason codes
    read out of three lexicon entries and gated in REVERSE against the guide's
    own leak list — a leak it names that nothing carries fails the build. Theft
    and vendor creep are declared refusals, not gaps. No person field anywhere,
    enforced by a test that reads the source. Value snapshotted at log time;
    merged by union on id and never capped.
-4. **`table/` replaced** (`1a6f7d5e`, in the monorepo). It was missing **eleven
+5. **`table/` replaced** (`1a6f7d5e`, in the monorepo). It was missing **eleven
    routes** — `costing`, `preps`, `prep-board`, and eight top-level ones. The
    scope assertion was run before copying; 126 stale content-hashed assets were
    dropped by replacing rather than copying over.
@@ -295,10 +310,12 @@ in the app).
    does not yet say which of them are on a stale number. The datalist plus
    auto-link makes this rare on new work and common on everything costed before
    the book existed.
-3. **More technique standards.** The threshold IS the worklist: lower
-   `TECHNIQUE_GATE_MIN_RECIPES`, run `build:data`, and the reverse gate names
-   exactly what it wants. 20 asks for 13 more and reaches 745 of 824; 15 asks for
-   20 more and reaches 782.
+3. **More technique standards, if ever.** The threshold is still the worklist
+   and it now sits at 15. The returns have thinned: 12 asks for four more
+   (building an emulsion, charring over open flame, kneading dough, icing and
+   frosting) and 10 asks for nothing beyond those, because the corpus has a gap
+   between 12 recipes and 9. Below that it is writing assessment for techniques
+   a venue meets a handful of times. **This is close to done, not open.**
 4. **The allergen vocabulary.** 99 of 970 recipes still carry no flag at all.
    `allergens.test.ts` asserts `NOT_SCREENED` stays non-empty, so the day it
    lands the copy is forced to change.

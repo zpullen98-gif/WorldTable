@@ -368,6 +368,29 @@ Linking is **never mandatory**: a required link turns a ten-minute costing into
 an afternoon of master data and the sheet stops being opened. The datalist is
 the entire onboarding.
 
+### Technique standards — the threshold is the worklist
+
+`TECHNIQUE_GATE_MIN_RECIPES` in `tools/derive/technique-standards.mjs` is the
+load-bearing number: every technique on that many recipes MUST carry a standard
+or the build fails, naming each one by slug and count. Lowering it is how the
+remaining standards get written — drop it, read what the gate asks for, write
+those, commit. It has gone 25 → 15, which produced twenty standards and took the
+assessable corpus from 683 to 789 of 970.
+
+Two claims in that module's header are parsed back out of the comment and
+checked against the build: the headline paragraph and the ceiling sentence. A
+number in either that nobody can re-run is a number already drifting — the
+ceiling sentence shipped wrong the first time because it was reasoned from other
+figures rather than measured.
+
+**A mark must hold for EVERY recipe carrying the tag.** This is the constraint
+`standards.mjs` does not have, and it is easy to break by reasoning instead of
+checking: blanching demanded salted water when 7 of its 23 recipes never salt
+it, and the overnight rest demanded a cover when two of its recipes chill
+uncovered on purpose. `technique-standards.test.ts` forbids a mark naming an
+ingredient or vessel its own technique does not name; beyond that, check each
+mark against the actual recipe set.
+
 ### The waste log — `src/lib/waste.ts`, `tools/derive/waste.mjs`
 
 The guide asks for it by name and supplies the taxonomy across three entries, so
