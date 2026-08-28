@@ -177,6 +177,14 @@ import a value back into it.
   any unknown path with `shell.html` at 200. Only `verify:build` sees it.
 - **Guards fire on legitimate change** — confirm the parser agrees with reality,
   then update. Do not edit a gate without reading it.
+- **A monorepo sync leaves `build/` holding the `/table` build, and both
+  `verify:build` and the e2e suite then fail on it.** `verify:build` reports
+  "service worker registers with an absolute path — no absolute /sw.js
+  registration found", which reads exactly like a `paths.relative` regression and
+  is not one: the worker is correctly at `/table/sw.js`. The e2e suite serves the
+  same directory and collapses to a handful of passes over several minutes. Run
+  a plain `npm run build` to put the default base back before believing either.
+  Both were seen in this state on 29 Aug and both are clean after the rebuild.
 
 ---
 
