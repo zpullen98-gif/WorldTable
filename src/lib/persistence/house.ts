@@ -200,12 +200,21 @@ export function absorbSession(
  * Unlike absorbSession this ignores `absorbed`: an import is somebody choosing
  * to bring a menu in, and refusing a dish because a copy of it was deleted here
  * months ago would be obeying the wrong memory.
+ *
+ * `incoming` IS THE WHOLE HOUSE BLOCK AND IS REQUIRED, both deliberately. It
+ * used to be `preps?: Prep[]`, and that optional argument is the entire reason
+ * preps could not travel for as long as they existed: the parameter was added,
+ * the merge below was written and tested, and neither call site ever passed
+ * one — silently, because an omitted optional argument compiles. Required means
+ * the next collection added to HousePortable cannot repeat it; taking the block
+ * rather than a bare array means adding one does not touch this signature at
+ * all. Pass `{}` to mean "this file carried none", and say so on purpose.
  */
 export function adoptImport(
 	house: HouseRecord,
 	dishes: MenuDish[] | undefined,
 	costs: Record<string, DishCosting> | undefined,
-	preps?: Prep[]
+	incoming: HousePortable
 ): HouseRecord {
 	const byId = new Map(house.dishes.map((d) => [d.id, d]));
 	for (const d of dishes ?? []) {
@@ -229,7 +238,7 @@ export function adoptImport(
 	// in a merge here is. cookedLog and shoppingChecks once fell through a bare
 	// one and erased a Path of Study.
 	const prepById = new Map(house.preps.map((p) => [p.id, p]));
-	for (const p of preps ?? []) {
+	for (const p of incoming.preps ?? []) {
 		if (!p?.id) continue;
 		const mine = prepById.get(p.id);
 		if (!mine || (p.ts ?? 0) > (mine.ts ?? 0)) prepById.set(p.id, p);
@@ -300,4 +309,38 @@ export function houseSnapshot(house: HouseRecord): {
 	dishCosts: Record<string, DishCosting>;
 } {
 	return { menuDishes: house.dishes, dishCosts: house.dishCosts };
+}
+
+/**
+ * The house-owned collections that ride OUTSIDE the session object.
+ *
+ * WHY THIS IS SEPARATE FROM houseSnapshot. The menu and its costings sit inside
+ * the file's `data` block only because they have a session-side legacy
+ * (`SessionState.menuDishes`) that absorbSession is still taking up; every
+ * .wtjson ever written carries them there and moving them would strand the lot.
+ * Preps never had that legacy, and mergeSessions() spreads `...incoming` before
+ * its named fields — so a prep placed in `data` would be copied straight into
+ * the per-profile `session::<profileId>` record and persisted there. A prep is
+ * a fact about the VENUE. That is the one line this app does not cross.
+ *
+ * THIS EXISTED AS DEAD CODE UNTIL NOW. adoptImport() has taken a `preps`
+ * argument and merged it by id since preps shipped, and nothing ever passed
+ * one: houseSnapshot emitted two fields, and both live call sites in
+ * menu/+page.svelte called adopt() with two arguments. So a venue that costed
+ * its demi once — the whole point of preps — exported a file carrying none of
+ * them, and at the second site every prep-backed line resolved to NaN. Measured
+ * on the worked braise: 8.625 a plate at the first site, 5.625 and
+ * `complete: false` at the second, with the sauce simply gone from the
+ * arithmetic. `preps.test.ts` had a case named "survives an import that
+ * mentions no preps at all", which was every import there had ever been.
+ *
+ * `eightySix` stays out of both, for the reason houseSnapshot already gives:
+ * the board is true only for the room it is in, right now. A prep is a recipe.
+ */
+export interface HousePortable {
+	preps?: Prep[];
+}
+
+export function housePortable(house: HouseRecord): HousePortable {
+	return { preps: house.preps };
 }

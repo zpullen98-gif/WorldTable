@@ -49,6 +49,8 @@ import {
 	dishesUsingPrep,
 	localDay,
 	houseSnapshot,
+	housePortable,
+	type HousePortable,
 	type HouseRecord,
 	type EightySix,
 	type Prep
@@ -235,9 +237,9 @@ class House {
 	adopt(
 		dishes: MenuDish[] | undefined,
 		costs: Record<string, DishCosting> | undefined,
-		preps?: Prep[]
+		incoming: HousePortable
 	) {
-		this.#r = adoptImport(this.#r, dishes, costs, preps);
+		this.#r = adoptImport(this.#r, dishes, costs, incoming);
 		this.#persist();
 	}
 
@@ -315,6 +317,14 @@ class House {
 
 	snapshot() {
 		return houseSnapshot($state.snapshot(this.#r) as HouseRecord);
+	}
+
+	/**
+	 * The house-owned block that rides beside `data` rather than inside it.
+	 * See housePortable() for why the preps are not in snapshot().
+	 */
+	portable() {
+		return housePortable($state.snapshot(this.#r) as HouseRecord);
 	}
 }
 

@@ -111,17 +111,17 @@ describe('removing a dish', () => {
 
 describe('adopting an import', () => {
 	it('adds dishes it does not have', () => {
-		const out = adoptImport(fresh(), [dish('a'), dish('b')], {});
+		const out = adoptImport(fresh(), [dish('a'), dish('b')], {}, {});
 		expect(out.dishes.map((d) => d.id).sort()).toEqual(['a', 'b']);
 	});
 
 	it('lets the newer ts win per dish, and never invents a third version', () => {
-		const mine = adoptImport(fresh(), [dish('a', 100)], {});
-		const newer = adoptImport(mine, [{ ...dish('a', 200), name: 'Renamed' }], {});
+		const mine = adoptImport(fresh(), [dish('a', 100)], {}, {});
+		const newer = adoptImport(mine, [{ ...dish('a', 200), name: 'Renamed' }], {}, {});
 		expect(newer.dishes).toHaveLength(1);
 		expect(newer.dishes[0].name).toBe('Renamed');
 
-		const older = adoptImport(newer, [{ ...dish('a', 50), name: 'Stale' }], {});
+		const older = adoptImport(newer, [{ ...dish('a', 50), name: 'Stale' }], {}, {});
 		expect(older.dishes[0].name, 'an older file overwrote a newer dish').toBe('Renamed');
 	});
 
@@ -132,7 +132,7 @@ describe('adopting an import', () => {
 	 */
 	it('ignores the absorbed guard, because an import is a decision', () => {
 		const deleted = removeDish(absorbSession(fresh(), { menuDishes: [dish('a')] }), 'a');
-		const out = adoptImport(deleted, [dish('a', 999)], {});
+		const out = adoptImport(deleted, [dish('a', 999)], {}, {});
 		expect(out.dishes.map((d) => d.id)).toEqual(['a']);
 	});
 });

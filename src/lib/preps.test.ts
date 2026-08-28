@@ -148,18 +148,25 @@ describe('the prep on the house record', () => {
 	const fresh = (): HouseRecord => structuredClone(EMPTY_HOUSE);
 
 	it('is carried by an import, newer ts winning', () => {
-		const once = adoptImport(fresh(), [], {}, [prep()]);
+		const once = adoptImport(fresh(), [], {}, { preps: [prep()] });
 		expect(once.preps).toHaveLength(1);
-		const newer = adoptImport(once, [], {}, [prep({ ts: 200, name: 'Demi (new)' })]);
+		const newer = adoptImport(once, [], {}, { preps: [prep({ ts: 200, name: 'Demi (new)' })] });
 		expect(newer.preps).toHaveLength(1);
 		expect(newer.preps[0].name).toBe('Demi (new)');
-		const older = adoptImport(newer, [], {}, [prep({ ts: 50, name: 'Stale' })]);
+		const older = adoptImport(newer, [], {}, { preps: [prep({ ts: 50, name: 'Stale' })] });
 		expect(older.preps[0].name).toBe('Demi (new)');
 	});
 
-	it('survives an import that mentions no preps at all', () => {
-		const h = adoptImport(fresh(), [], {}, [prep()]);
-		expect(adoptImport(h, [], {}).preps).toHaveLength(1);
+	/**
+	 * Renamed, because the old name was "survives an import that mentions no
+	 * preps at all" and that described every import this app had ever done —
+	 * the exporter could not emit a prep, so the case it called an edge was the
+	 * only case there was. It is a genuine edge now: a .wtjson written before
+	 * the house block existed. See prep-transport.test.ts.
+	 */
+	it('survives a pre-house-block file, which mentions no preps', () => {
+		const h = adoptImport(fresh(), [], {}, { preps: [prep()] });
+		expect(adoptImport(h, [], {}, {}).preps).toHaveLength(1);
 	});
 
 	/**

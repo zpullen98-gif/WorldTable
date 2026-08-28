@@ -430,7 +430,13 @@
 		// The menu and its costings live in the house record now; the .wtjson
 		// format is unchanged and still carries them inside the session object,
 		// because every file written so far does and a bump would strand them.
-		download(buildExport({ ...session.snapshot(), ...house.snapshot() }, TOTALS.recipes));
+		//
+		// The preps ride in a sibling block instead. They have no session-side
+		// legacy to be stranded, and mergeSessions would otherwise copy them into
+		// the per-profile record on the way back in. See housePortable().
+		download(
+			buildExport({ ...session.snapshot(), ...house.snapshot() }, TOTALS.recipes, house.portable())
+		);
 	}
 
 	async function doImport(e: Event) {
@@ -456,9 +462,16 @@
 					recipes.map((r) => r.slug),
 					pantryLabels
 				);
-				const summary = describeImport(state, { ...session.snapshot(), ...house.snapshot() });
+				// A WT1 code predates preps entirely, so there is nothing to adopt —
+				// but `current` still carries them, so the banner counts against the
+				// same shape the .wtjson path uses.
+				const summary = describeImport(state, {
+					...session.snapshot(),
+					...house.snapshot(),
+					...house.portable()
+				});
 				session.merge(state);
-				house.adopt(state.menuDishes, state.dishCosts);
+				house.adopt(state.menuDishes, state.dishCosts, {});
 				importMsg =
 					`Imported from the original edition — ${summary}.` +
 					(unresolved.length
@@ -468,9 +481,15 @@
 			}
 
 			const parsed = parseImport(text);
-			const summary = describeImport(parsed.data, { ...session.snapshot(), ...house.snapshot() });
+			// The banner reads the two blocks as one view. `session.merge` below is
+			// deliberately given `parsed.data` ALONE — the preps must reach the
+			// house record and nothing else.
+			const summary = describeImport(
+				{ ...parsed.data, ...(parsed.house ?? {}) },
+				{ ...session.snapshot(), ...house.snapshot(), ...house.portable() }
+			);
 			session.merge(parsed.data);
-			house.adopt(parsed.data.menuDishes, parsed.data.dishCosts);
+			house.adopt(parsed.data.menuDishes, parsed.data.dishCosts, parsed.house ?? {});
 			importMsg = `Imported — ${summary}.`;
 		} catch (err) {
 			importMsg = err instanceof Error ? err.message : 'That file could not be read.';

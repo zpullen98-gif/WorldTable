@@ -6,6 +6,7 @@
  * openable in any editor if something ever goes wrong.
  */
 import type { SessionState } from './db';
+import type { HousePortable } from './house';
 
 export const FORMAT = 'world-table-session';
 /**
@@ -27,15 +28,51 @@ export interface PortableFile {
 	exportedAt: string;
 	app: { version: string; recipeCount: number };
 	data: SessionState;
+	/**
+	 * House-owned collections that never had a session-side legacy.
+	 *
+	 * A SIBLING OF `data`, not a member of it, and that placement is the whole
+	 * point. mergeSessions() spreads `...incoming` ahead of its named fields, so
+	 * anything added to `data` is copied into the per-profile
+	 * `session::<profileId>` record and persisted there. The menu and its
+	 * costings tolerate that because they are being absorbed OUT of the session
+	 * and every file ever written already carries them inside it. A prep has no
+	 * such history, and it is a fact about the venue.
+	 *
+	 * AND THIS IS WHY FORMAT_VERSION DOES NOT MOVE. The gate above rejects only
+	 * NEWER files, and the criterion it documents for a bump is a build that
+	 * would DESTROY something: v3 exists because an old build rewrote a costing
+	 * as { lines, sold } and dropped the sales array with a fresh newest ts. An
+	 * old build reading this file ignores an unknown top-level key completely —
+	 * parseImport checks format, version and data and nothing else, and neither
+	 * session.merge nor house.adopt is handed it. It loses the preps, which is
+	 * exactly what it does today; it destroys nothing, and re-exporting from it
+	 * cannot take a prep off the device that has one, because adoptImport merges
+	 * an absent list as no change. A bump would instead make the older tablet
+	 * refuse the venue's whole menu, which is strictly worse than the gap it
+	 * would be announcing.
+	 */
+	house?: HousePortable;
 }
 
-export function buildExport(state: SessionState, recipeCount: number): PortableFile {
+/**
+ * `house` is REQUIRED, for the reason adoptImport's `incoming` is. An optional
+ * third argument is what let the export ship without preps for their whole
+ * existence. The field on PortableFile stays optional because every file
+ * written before this one genuinely has none.
+ */
+export function buildExport(
+	state: SessionState,
+	recipeCount: number,
+	house: HousePortable
+): PortableFile {
 	return {
 		format: FORMAT,
 		version: FORMAT_VERSION,
 		exportedAt: new Date().toISOString(),
 		app: { version: '2.0.0', recipeCount },
-		data: state
+		data: state,
+		house
 	};
 }
 
@@ -77,7 +114,10 @@ export function parseImport(text: string): PortableFile {
  * and a hand-edited .wtjson missing `menu` must produce a summary, not a crash
  * before the summary.
  */
-export function describeImport(incoming: Partial<SessionState>, current: SessionState) {
+export function describeImport(
+	incoming: Partial<SessionState> & HousePortable,
+	current: SessionState & HousePortable
+) {
 	const inMenu = incoming.menu ?? [];
 	const inNotes = incoming.notes ?? {};
 	const newPins = inMenu.filter((s) => !current.menu.includes(s)).length;
@@ -131,6 +171,26 @@ export function describeImport(incoming: Partial<SessionState>, current: Session
 		}
 	}
 
+	/**
+	 * The preps, which could not be counted before because they could not
+	 * travel. Same rule as the dishes above: an id match with a newer `ts`
+	 * REPLACES the live copy, and the banner has to say so before the write —
+	 * this is the banner that once read "nothing new" over an evening of covers.
+	 *
+	 * A replaced prep is louder than a replaced dish and the count is worth its
+	 * own clause: re-costing one demi moves the plate cost of every dish that
+	 * pours it.
+	 */
+	const mineByPrep = new Map((current.preps ?? []).map((pr) => [pr.id, pr]));
+	let newPreps = 0;
+	let updatedPreps = 0;
+	for (const pr of incoming.preps ?? []) {
+		if (!pr || !pr.id) continue;
+		const mine = mineByPrep.get(pr.id);
+		if (!mine) newPreps++;
+		else if ((pr.ts ?? 0) > (mine.ts ?? 0)) updatedPreps++;
+	}
+
 	const parts: string[] = [];
 	if (newPins) parts.push(`${newPins} new pinned ${newPins === 1 ? 'dish' : 'dishes'}`);
 	if (newNotes) parts.push(`${newNotes} new ${newNotes === 1 ? 'note' : 'notes'}`);
@@ -143,5 +203,8 @@ export function describeImport(incoming: Partial<SessionState>, current: Session
 	if (weeksAdded) parts.push(`${weeksAdded} ${weeksAdded === 1 ? 'week' : 'weeks'} of covers`);
 	if (weeksReplaced)
 		parts.push(`${weeksReplaced} ${weeksReplaced === 1 ? 'week' : 'weeks'} of covers replaced`);
+	if (newPreps) parts.push(`${newPreps} ${newPreps === 1 ? 'prep' : 'preps'}`);
+	if (updatedPreps)
+		parts.push(`${updatedPreps} ${updatedPreps === 1 ? 'prep' : 'preps'} re-costed`);
 	return parts.length ? parts.join(', ') : 'nothing new — this file matches what you already have';
 }
