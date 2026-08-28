@@ -22,7 +22,7 @@ at **$49.99/month, unlimited staff, one shared login**.
 
 | | |
 |---|---|
-| WorldTable | branch `dish-standards`, **31 commits unpushed** (remote `origin/master`), tree clean |
+| WorldTable | branch `dish-standards`, **34 commits unpushed** (remote `origin/master`), tree clean |
 | OutsideOfTime | branch `main`, HEAD `1a6f7d5e`, tree clean, **no git remote — never pushed** |
 | Tests | **502 unit** (32 files) · **80 e2e** — **the whole suite is green** |
 | Gates | `build:data` all pass · `verify:build` **18/18** |
