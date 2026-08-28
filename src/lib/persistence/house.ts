@@ -84,6 +84,17 @@ export interface HouseRecord {
 	/** The venue's sub-recipes. See Prep. */
 	preps: Prep[];
 	/**
+	 * Whether the menu prices this venue types include tax, and at what rate.
+	 *
+	 * ON THE HOUSE RECORD, not in the session, and that is a real improvement
+	 * rather than a filing decision: a tax regime is a fact about the VENUE, so
+	 * putting it here means the head chef and the sous cannot see two different
+	 * food cost percentages for the same dish. Per-profile, they could.
+	 *
+	 * Default off and never inferred — see netOfTax().
+	 */
+	tax?: { inclusive: boolean; ratePct: number };
+	/**
 	 * What was counted in the walk-in, by prep id.
 	 *
 	 * A count is only true for the day it was made — "12 portions of demi" from

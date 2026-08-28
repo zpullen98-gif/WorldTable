@@ -25,7 +25,7 @@ third one drove most of this session's work — front of house had nothing.
 |---|---|
 | WorldTable | branch `dish-standards`, **16 commits unpushed** (remote is `origin/master`), plus the technique-standards work below |
 | OutsideOfTime | branch `main`, HEAD `3ca8361e`, tree clean, **no git remote — never pushed** |
-| Tests | **403 unit** (27 files), **76 e2e** (76 pass — **the suite is green**) |
+| Tests | **414 unit** (28 files), **76 e2e** (76 pass — **the suite is green**) |
 | Gates | `npm run build:data` all pass · `npm run verify:build` **18/18** |
 | Precache | 1.39 MB gzipped against a 2.00 MB cap |
 | Routes | 24 · Derived JSON | 19 files |
@@ -761,6 +761,61 @@ exists — an undated figure has no week to belong to, and keeping it would
 double-count. And `engineerMenu` is untouched: its conflation of a real 0 with
 "nobody counted" is a genuine pre-existing limit, and changing the ranking engine
 is a separate job with its own tests.
+
+## Three money bugs
+
+Two of them failed in the direction that makes a venue look profitable, which is
+the direction nobody questions. That is precisely why `plateCost.complete`
+refuses to report a total it could not finish; neither of these had a refusal.
+
+**(a) Every dish was costed against a price the venue never receives.**
+`dishEconomics` divides the plate cost by the price as typed. In a tax-inclusive
+market — most of the world — that price includes the tax. Verified live on an
+18.00 dish costing 5.00:
+
+| | Menu price | Food cost | Contribution |
+|---|---|---|---|
+| before | 18.00 | 27.8% | 13.00 |
+| after | **15.00 net** | **33.3%** | **10.00** |
+
+Contribution overstated by 3.00 and food cost understated by 5.5 points, on every
+dish at once.
+
+- One setting, **default off, and the rate is never inferred** from locale or
+  currency symbol: an inferred rate produces a completely plausible figure wrong
+  by exactly the tax rate, which is worse than the honest error it replaces.
+- **It lives on the HOUSE record, not the session** — an improvement on the
+  chef panel's plan, which put it per-profile and then had to warn that two staff
+  would see two food cost percentages for one dish. A tax regime is a fact about
+  the venue, so on the house record that problem does not exist.
+- The sheet **states what it is doing** either way, with the venue's own first
+  priced dish as the worked example.
+- The row label follows the number: with tax on it reads **Net revenue**, not
+  "Menu price". Calling net revenue the menu price is the same quiet wrongness
+  the setting exists to fix.
+
+**(b) The import banner never mentioned costings.** It counted pins, notes,
+pantry, family recipes and dishes and stopped — `dishCosts` appeared **zero**
+times in `portable.ts` — so a file whose dishes were byte-identical and whose
+covers differed printed *"nothing new — this file matches what you already have"*
+immediately before rewriting them. The same blind banner that once erased a Path
+of Study. It now counts, per week, what the merge will ADD and what it will
+REPLACE, and deliberately does not threaten a replacement the union will refuse.
+
+**(c) The costing sheet could not leave the office.** `data-print` appeared zero
+times on it and its table carries `min-width: 640px` inside an overflow scroller,
+so costing done at 11am could not go to the walk-in on a clipboard. Print rules
+drop the minimum, flatten the inputs to text and hide the controls.
+
+And the chef role button promises *"the pass, the costs, what has gone cold"*
+while routing only to two of the three: the costing sheet had **one** inbound
+link in the whole app, buried mid-page on /menu. The chef band now resolves its
+own promise.
+
+**Not built from this item:** the CSV export and the target-price strip. The CSV
+is worth stating as a rule rather than a task — **one-way door, no importer,
+ever**: the .wtjson is the single portability contract with tested merge
+semantics, and a second import path forks them with nothing behind it.
 
 ## What's left, ranked
 

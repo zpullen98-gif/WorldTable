@@ -100,6 +100,37 @@ export function describeImport(incoming: Partial<SessionState>, current: Session
 		return !!mine && (d.ts ?? 0) > (mine.ts ?? 0);
 	}).length;
 
+	/**
+	 * The costings, which this banner never mentioned.
+	 *
+	 * It counted pins, notes, pantry, family recipes and dishes and stopped —
+	 * so a file whose dishes are byte-identical and whose COVERS differ printed
+	 * "nothing new, this file matches what you already have" immediately before
+	 * an evening of counting was rewritten. Same blind banner that once erased a
+	 * Path of Study.
+	 *
+	 * Counted per week rather than per dish, because that is the unit the merge
+	 * actually works in: a week absent locally is ADDED, and a week present with
+	 * a different count is REPLACED.
+	 */
+	let weeksAdded = 0;
+	let weeksReplaced = 0;
+	let costedDishes = 0;
+	for (const [id, incomingCosting] of Object.entries(incoming.dishCosts ?? {})) {
+		const mine = current.dishCosts?.[id];
+		const theirWeeks = Array.isArray(incomingCosting?.sales) ? incomingCosting.sales : [];
+		if (!mine) {
+			if (theirWeeks.length || incomingCosting?.lines?.length) costedDishes++;
+			weeksAdded += theirWeeks.length;
+			continue;
+		}
+		for (const w of theirWeeks) {
+			const ours = (mine.sales ?? []).find((x) => x.weekStart === w.weekStart);
+			if (!ours) weeksAdded++;
+			else if (ours.count !== w.count && (w.at ?? 0) > (ours.at ?? 0)) weeksReplaced++;
+		}
+	}
+
 	const parts: string[] = [];
 	if (newPins) parts.push(`${newPins} new pinned ${newPins === 1 ? 'dish' : 'dishes'}`);
 	if (newNotes) parts.push(`${newNotes} new ${newNotes === 1 ? 'note' : 'notes'}`);
@@ -108,5 +139,9 @@ export function describeImport(incoming: Partial<SessionState>, current: Session
 	if (newFamily) parts.push(`${newFamily} family ${newFamily === 1 ? 'recipe' : 'recipes'}`);
 	if (newDishes) parts.push(`${newDishes} menu ${newDishes === 1 ? 'dish' : 'dishes'}`);
 	if (updatedDishes) parts.push(`${updatedDishes} menu ${updatedDishes === 1 ? 'dish' : 'dishes'} updated`);
+	if (costedDishes) parts.push(`${costedDishes} costed ${costedDishes === 1 ? 'dish' : 'dishes'}`);
+	if (weeksAdded) parts.push(`${weeksAdded} ${weeksAdded === 1 ? 'week' : 'weeks'} of covers`);
+	if (weeksReplaced)
+		parts.push(`${weeksReplaced} ${weeksReplaced === 1 ? 'week' : 'weeks'} of covers replaced`);
 	return parts.length ? parts.join(', ') : 'nothing new — this file matches what you already have';
 }

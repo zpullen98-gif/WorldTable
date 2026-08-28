@@ -207,6 +207,27 @@ export function dishEconomics(lines: CostLine[], rawPrice: string | number | nul
 }
 
 /**
+ * What a menu price is actually worth to the venue.
+ *
+ * In a tax-inclusive market — most of the world — the number on the menu
+ * includes the tax, and the venue never sees it. An 18.00 dish at 20% is 15.00
+ * of revenue: costing against the 18 overstates contribution by 3.00 and
+ * understates food cost by around five points, ON EVERY DISH, silently, in the
+ * direction that makes the whole menu look profitable. That is the same
+ * direction `plateCost.complete` exists to refuse, and this one had no alert.
+ *
+ * The rate is NEVER inferred from locale or currency symbol. An inferred rate
+ * produces a completely plausible figure wrong by exactly the tax rate, which is
+ * worse than the honest error it replaces — a venue can see a setting it did not
+ * turn on, and cannot see an assumption nobody told it about.
+ */
+export function netOfTax(price: number | null, ratePct: number | null | undefined): number | null {
+	if (price === null || !Number.isFinite(price)) return null;
+	if (!Number.isFinite(ratePct) || (ratePct as number) <= 0) return price;
+	return price / (1 + (ratePct as number) / 100);
+}
+
+/**
  * Where a percentage sits against a band.
  *
  * For food cost, lower is better and "under" is not a failure — but it is worth

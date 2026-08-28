@@ -30,7 +30,8 @@
 		parsePrice,
 		money,
 		resolveLines,
-		prepPortionCost
+		prepPortionCost,
+		netOfTax
 	} from '$lib/costing';
 	import { weekStartOf } from '$lib/persistence/house';
 	import { onMount } from 'svelte';
@@ -194,7 +195,23 @@
 
 	const num = (e: Event) => Number.parseFloat((e.currentTarget as HTMLInputElement).value);
 
-	const economicsOf = (id: string, price: string) => dishEconomics(resolvedFor(id), price);
+	/**
+	 * Costed on NET revenue.
+	 *
+	 * The typed price is what the guest pays. Where that includes tax the venue
+	 * never sees the tax, so costing against it overstates contribution and
+	 * understates food cost on every dish at once. Off unless a venue says so.
+	 */
+	const netPriceOf = (price: string) =>
+		house.tax.inclusive ? netOfTax(parsePrice(price), house.tax.ratePct) : parsePrice(price);
+	/** A worked example from the venue's own first priced dish, not an invented one. */
+	const sampleGross = $derived(dishes.find((d) => parsePrice(d.price) !== null)?.price ?? '18.00');
+	const sampleNet = $derived(
+		money(netOfTax(parsePrice(sampleGross), house.tax.ratePct) ?? 0)
+	);
+
+	const economicsOf = (id: string, price: string) =>
+		dishEconomics(resolvedFor(id), netPriceOf(price));
 
 	const engineered = $derived(
 		engineerMenu(
@@ -230,6 +247,53 @@
 	</header>
 
 	<article class="sheet">
+		<!--
+			Stated, not assumed. A venue that has not turned this on is costing
+			against the number on the menu, which is correct in a tax-exclusive
+			market and overstates contribution on every dish in a tax-inclusive
+			one. Either way it says which it is doing.
+		-->
+		<div class="taxrow" data-print="hide">
+			<label>
+				<input
+					type="checkbox"
+					checked={house.tax.inclusive}
+					onchange={(e) => house.setTax(e.currentTarget.checked, house.tax.ratePct || 20)}
+				/>
+				Menu prices include tax
+			</label>
+			{#if house.tax.inclusive}
+				<label>
+					at
+					<input
+						class="rate"
+						type="number"
+						min="0"
+						max="100"
+						step="0.5"
+						aria-label="Tax rate, percent"
+						value={house.tax.ratePct}
+						onchange={(e) => house.setTax(true, Number(e.currentTarget.value))}
+					/>
+					%
+				</label>
+			{/if}
+			<span class="taxnote">
+				{#if house.tax.inclusive}
+					Every figure below is computed on net revenue.
+				{:else}
+					Figures are computed on the price as typed. Turn this on if your menu prices include
+					tax — otherwise contribution reads high on every dish.
+				{/if}
+			</span>
+		</div>
+		{#if house.tax.inclusive}
+			<p class="taxstated">
+				Prices are tax-inclusive at {house.tax.ratePct}%. All figures are computed on net revenue —
+				an {sampleGross} menu price is {sampleNet} to the venue.
+			</p>
+		{/if}
+
 		{#if !dishes.length}
 			<section class="empty">
 				<p>
@@ -451,7 +515,10 @@
 										<dd>{sym}{money(e.plateCost)}</dd>
 									</div>
 									<div>
-										<dt>Menu price</dt>
+										<!-- The label follows the number. With tax on this row shows NET
+										     revenue, and calling that the menu price is the same class of
+										     quiet wrongness the setting exists to fix. -->
+										<dt>{house.tax.inclusive ? 'Net revenue' : 'Menu price'}</dt>
 										<dd>{e.price === null ? 'not set' : sym + money(e.price)}</dd>
 									</div>
 									<div>
@@ -645,6 +712,26 @@
 		font-size: var(--t-small);
 		min-width: 640px;
 	}
+
+	/* The sheet has to reach the walk-in on a clipboard. A 640px minimum
+	   inside an overflow scroller is a screen control, and on paper it just
+	   truncates: costing done in the office at 11am could not be carried. */
+	@media print {
+		.sheetbody {
+			overflow: visible;
+		}
+		table {
+			min-width: 0;
+			font-size: 9pt;
+		}
+		input {
+			border: 0 !important;
+			padding: 0 !important;
+			background: none !important;
+			-webkit-appearance: none;
+			appearance: none;
+		}
+	}
 	th {
 		text-align: left;
 		font-family: var(--text);
@@ -705,6 +792,36 @@
 		gap: 12px;
 		align-items: center;
 		margin-top: 12px;
+	}
+	.taxrow {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px 14px;
+		margin: 0 0 10px;
+	}
+	.taxrow label {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		min-height: 40px;
+	}
+	.rate {
+		border: 1px solid var(--line);
+		background: none;
+		padding: 6px 8px;
+		border-radius: var(--radius);
+		width: 6ch;
+		min-height: 36px;
+	}
+	.taxnote,
+	.taxstated {
+		color: var(--ink-soft);
+		font-size: var(--t-small, 0.8125rem);
+		line-height: 1.5;
+	}
+	.taxstated {
+		margin: 0 0 14px;
 	}
 	.weeks {
 		display: flex;

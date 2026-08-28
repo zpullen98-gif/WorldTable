@@ -275,6 +275,22 @@ class House {
 		return dishesUsingPrep(this.#r, id);
 	}
 
+	/* ---- tax ---------------------------------------------------------------
+	 *
+	 * A venue fact, so both staff read one number. Default off: an inferred rate
+	 * gives a plausible figure wrong by exactly the tax rate.
+	 */
+
+	get tax(): { inclusive: boolean; ratePct: number } {
+		return this.#r.tax ?? { inclusive: false, ratePct: 0 };
+	}
+
+	setTax(inclusive: boolean, ratePct: number) {
+		const rate = Number.isFinite(ratePct) && ratePct >= 0 ? ratePct : 0;
+		this.#r = { ...this.#r, tax: { inclusive, ratePct: rate } };
+		this.#persist();
+	}
+
 	/* ---- the walk-in count ------------------------------------------------
 	 *
 	 * A count is true for the day it was made and no longer. Stored with the

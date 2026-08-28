@@ -169,9 +169,19 @@
 						{/if}
 					</div>
 				</div>
-				<a class="oot-chip oot-today-go" href={coldest ? `${base}/repertoire` : `${base}/menu`}>
-					{coldest ? 'What has gone cold' : 'The Pass'}
-				</a>
+				<div class="chefgo">
+					<a class="oot-chip oot-today-go" href={coldest ? `${base}/repertoire` : `${base}/menu`}>
+						{coldest ? 'What has gone cold' : 'The Pass'}
+					</a>
+					<!--
+					  The role button promises "the pass, the COSTS, what has gone cold" and
+					  routed only to two of the three. The costing sheet had a single inbound
+					  link in the whole app, buried mid-page on /menu.
+					-->
+					{#if dishes}
+						<a class="oot-chip" href="{base}/menu/costing">The costs</a>
+					{/if}
+				</div>
 			</div>
 		{:else}
 		<div class="oot-today">
@@ -389,5 +399,11 @@
 	.oot-today-go {
 		text-decoration: none;
 		display: inline-block;
+	}
+	.chefgo {
+		display: flex;
+		gap: 8px;
+		flex-wrap: wrap;
+		align-items: center;
 	}
 </style>
