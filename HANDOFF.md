@@ -25,7 +25,7 @@ third one drove most of this session's work — front of house had nothing.
 |---|---|
 | WorldTable | branch `dish-standards`, **16 commits unpushed** (remote is `origin/master`), plus the technique-standards work below |
 | OutsideOfTime | branch `main`, HEAD `3ca8361e`, tree clean, **no git remote — never pushed** |
-| Tests | **372 unit** (26 files), **76 e2e** (76 pass — **the suite is green**) |
+| Tests | **378 unit** (26 files), **76 e2e** (76 pass — **the suite is green**) |
 | Gates | `npm run build:data` all pass · `npm run verify:build` **18/18** |
 | Precache | 1.39 MB gzipped against a 2.00 MB cap |
 | Routes | 24 · Derived JSON | 19 files |
@@ -604,11 +604,44 @@ total that was right. Money is read from the resolved line now, and the field is
 read-only on a prep row — typing over it there would be the retyped guess this
 whole object exists to end.
 
-**Not built, and next in this order:** the prep board (back-time the DAY through
-the same `buildPass` with a 16:00 anchor and these chef-typed times rather than
-the 86%-estimated guide steps — the hard part is already built), batch counts
-from par minus a counted on-hand number, and a waste log valued from `plateCost`
-with five reason codes, rolled up venue-wide and **never per person**.
+## The prep board — back-timing the day
+
+The Pass back-times a service; nothing back-timed the morning that has to happen
+before it. On the floor that shows up at 8:20pm on a Saturday: the commis made
+"some" stock, because the prep list said "veal stock" with no number.
+
+**It is the same `buildPass`.** Back-timing is back-timing and a prep deadline is
+just a different anchor, so #4's scheduler pays off twice — including the hands
+sweep, which now answers "how many cooks are on PREP" as readily as it answered
+it for service. The times are the chef's own from the prep record, not the
+guide's 86%-estimated step durations.
+
+- `prepCounts` on the house record: `{ onHand, countedOn }` as a LOCAL
+  `YYYY-MM-DD`. A count is true for the day it was made and no longer — "12
+  portions of demi" from Tuesday tells you nothing on Thursday, so the board says
+  "counted 2026-01-05" rather than quietly believing it. Local and not
+  `toISOString`, or a count made at 22:00 in UTC+2 files under tomorrow.
+- `batchesNeeded()` = ceil((par − onHand) / portions). Two thirds of a batch of
+  stock is a batch of stock.
+- **An uncounted prep reads as none on hand**, which over-orders rather than
+  sending a section out short. The board says so in as many words rather than
+  letting the zero look like a measurement.
+- **Time is NOT multiplied by the batch count**, and that is a decision: two
+  batches of stock is usually one bigger pot, not two sittings. The batch count
+  sits beside the row so a kitchen that really does run it twice can see what it
+  is being told.
+
+**Verified in the browser.** Three preps, nothing counted: *"3 of 3 not counted
+today"*, demi at par 20 over 10 portions asks for **2 batches**, and the day
+back-times to *"3 preps · 95 min of hands · start at 06:00 to be ready by
+16:00"* — the demi's 10 hours starting first, the 25-minute crumb at 15:35.
+Count the demi at par and it drops off the plan, which collapses to *"1 prep ·
+20 min of hands · start at 15:40"*.
+
+**Still not built:** the waste log — valued from `plateCost`, five reason codes,
+rolled up venue-wide and **never per person**. That last part is not a detail:
+a per-cook waste number is a disciplinary instrument, and the data goes
+dishonest inside a fortnight.
 
 ## What's left, ranked
 

@@ -730,6 +730,7 @@
 			device and carried in the session export like everything else here.
 			<a href="{base}/menu/costing">Cost this menu ▸</a>
 			<a href="{base}/menu/preps">Preps ▸</a>
+			<a href="{base}/menu/prep-board">The prep board ▸</a>
 			{#if house.dishes.length >= 4}
 				<a href="{base}/menu/quiz">Drill this menu ▸</a>
 			{:else if house.dishes.length}

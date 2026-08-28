@@ -1,6 +1,15 @@
 import { describe, it, expect } from 'vitest';
 import { prepPortionCost, resolveLines, plateCost, type CostLine, type CostablePrep } from './costing';
-import { adoptImport, removePrep, dishesUsingPrep, EMPTY_HOUSE, type HouseRecord, type Prep } from './persistence/house';
+import {
+	adoptImport,
+	removePrep,
+	dishesUsingPrep,
+	batchesNeeded,
+	localDay,
+	EMPTY_HOUSE,
+	type HouseRecord,
+	type Prep
+} from './persistence/house';
 
 /**
  * Preps — the thing a menu dish is built from, which the sheet had no word for.
@@ -180,5 +189,60 @@ describe('the prep on the house record', () => {
 		expect(removePrep(h, 'p-demi').preps).toEqual([]);
 		// The dish keeps its line — it goes uncostable, not cheaper.
 		expect(removePrep(h, 'p-demi').dishCosts['d-1'].lines).toHaveLength(1);
+	});
+});
+
+describe('how many batches the board asks for', () => {
+	const p = (over: Partial<Prep> = {}): Prep => ({
+		id: 'p-stock',
+		name: 'Veal stock',
+		batch: '1 x 20L',
+		portions: 8,
+		par: 20,
+		handsOnSec: 1800,
+		unattendedSec: 28800,
+		lines: [],
+		ts: 1,
+		...over
+	});
+
+	it('asks for nothing when the walk-in is at par', () => {
+		expect(batchesNeeded(p(), 20)).toBe(0);
+		expect(batchesNeeded(p(), 25)).toBe(0);
+	});
+
+	/** Two thirds of a batch of stock is a batch of stock. */
+	it('rounds a part-batch shortfall up to a whole pot', () => {
+		expect(batchesNeeded(p(), 19)).toBe(1);
+		expect(batchesNeeded(p(), 12)).toBe(1);
+		expect(batchesNeeded(p(), 11)).toBe(2);
+		expect(batchesNeeded(p(), 0)).toBe(3);
+	});
+
+	/**
+	 * An uncounted prep reads as none on hand, which over-orders rather than
+	 * sending a section out short. That is the safe direction for a prep board.
+	 */
+	it('treats a missing count as nothing on hand', () => {
+		expect(batchesNeeded(p(), Number.NaN)).toBe(3);
+	});
+
+	it('refuses to divide by a prep that makes no portions', () => {
+		expect(batchesNeeded(p({ portions: 0 }), 0)).toBe(0);
+	});
+});
+
+describe('the day a count belongs to', () => {
+	/**
+	 * Local, not UTC. A count made at 22:00 in a UTC+2 kitchen belongs to that
+	 * evening, and toISOString would file it under tomorrow.
+	 */
+	it('is the kitchen own day', () => {
+		const d = new Date(2026, 0, 5, 23, 30);
+		expect(localDay(d)).toBe('2026-01-05');
+	});
+
+	it('pads a single-digit month and day', () => {
+		expect(localDay(new Date(2026, 8, 9, 12, 0))).toBe('2026-09-09');
 	});
 });

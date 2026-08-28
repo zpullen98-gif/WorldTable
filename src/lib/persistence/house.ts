@@ -70,6 +70,15 @@ export interface HouseRecord {
 	dishes: MenuDish[];
 	/** The venue's sub-recipes. See Prep. */
 	preps: Prep[];
+	/**
+	 * What was counted in the walk-in, by prep id.
+	 *
+	 * A count is only true for the day it was made — "12 portions of demi" from
+	 * Tuesday tells you nothing on Thursday, and a board that treats it as
+	 * current sends a commis to make nothing. `countedOn` is a plain YYYY-MM-DD
+	 * so the board can say "counted yesterday" rather than quietly believing it.
+	 */
+	prepCounts: Record<string, { onHand: number; countedOn: string }>;
 	eightySix: Record<string, EightySix>;
 	dishCosts: Record<string, DishCosting>;
 	/**
@@ -88,6 +97,7 @@ export const EMPTY_HOUSE: HouseRecord = {
 	schemaVersion: HOUSE_VERSION,
 	dishes: [],
 	preps: [],
+	prepCounts: {},
 	eightySix: {},
 	dishCosts: {},
 	absorbed: [],
@@ -188,6 +198,26 @@ export function dishesUsingPrep(house: HouseRecord, prepId: string): MenuDish[] 
 	return house.dishes.filter((d) =>
 		(house.dishCosts[d.id]?.lines ?? []).some((l) => l.prepId === prepId)
 	);
+}
+
+/**
+ * How many batches to make, given what is on hand.
+ *
+ * Par and the count are both in PORTIONS; portions-per-batch is what turns the
+ * shortfall into a number of pots. Ceiling, because two thirds of a batch of
+ * stock is a batch of stock.
+ */
+export function batchesNeeded(prep: Prep, onHand: number): number {
+	const short = prep.par - (Number.isFinite(onHand) ? onHand : 0);
+	if (short <= 0) return 0;
+	if (!Number.isFinite(prep.portions) || prep.portions <= 0) return 0;
+	return Math.ceil(short / prep.portions);
+}
+
+/** A local YYYY-MM-DD, so "today" means the kitchen's today and not UTC's. */
+export function localDay(d: Date): string {
+	const p = (n: number) => String(n).padStart(2, '0');
+	return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
 
 /** Removing a dish takes its costing and its 86 with it. */

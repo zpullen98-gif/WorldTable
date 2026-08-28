@@ -44,6 +44,7 @@ import {
 	removeDish as removeDishFrom,
 	removePrep as removePrepFrom,
 	dishesUsingPrep,
+	localDay,
 	houseSnapshot,
 	type HouseRecord,
 	type EightySix,
@@ -198,6 +199,28 @@ class House {
 	/** Which menu dishes would lose their total if this prep went. */
 	dishesUsing(id: string) {
 		return dishesUsingPrep(this.#r, id);
+	}
+
+	/* ---- the walk-in count ------------------------------------------------
+	 *
+	 * A count is true for the day it was made and no longer. Stored with the
+	 * day so the board can say "counted yesterday" instead of believing it.
+	 */
+
+	countFor(id: string): { onHand: number; countedOn: string } | undefined {
+		return this.#r.prepCounts[id];
+	}
+
+	setCount(id: string, onHand: number) {
+		if (!Number.isFinite(onHand) || onHand < 0) return;
+		this.#r = {
+			...this.#r,
+			prepCounts: {
+				...this.#r.prepCounts,
+				[id]: { onHand: Math.round(onHand), countedOn: localDay(new Date()) }
+			}
+		};
+		this.#persist();
 	}
 
 	snapshot() {
