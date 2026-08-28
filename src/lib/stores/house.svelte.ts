@@ -57,7 +57,9 @@ import {
 } from '../persistence/house';
 import type { MenuDish, DishCosting, SalesWeek } from '../persistence/state';
 import type { CostLine, PricedItem } from '../costing';
-import { recordPrice, pricedItems, itemNames, type Item } from '../items';
+import { recordPrice, pricedItems, itemNames, currentPrice, type Item } from '../items';
+import { type WasteEntry } from '../waste';
+import { resolveLines, plateCost, prepPortionCost } from '../costing';
 
 export type { HouseRecord, EightySix, Prep };
 
@@ -292,6 +294,87 @@ class House {
 		const next = recordPrice(this.#r.items, name, unitCost, unit, Date.now());
 		if (next === this.#r.items) return;
 		this.#r = { ...this.#r, items: next };
+		this.#persist();
+	}
+
+	/* ---- the waste log ----------------------------------------------------- */
+
+	get waste(): WasteEntry[] {
+		return this.#r.waste;
+	}
+
+	/**
+	 * What one of a thing is worth RIGHT NOW, for snapshotting onto a waste entry.
+	 *
+	 * Null when it cannot be costed, and null is carried through to the entry
+	 * rather than collapsed to zero: a bin nobody could price is not a bin that
+	 * cost nothing, and the rollup reports the count separately for exactly that
+	 * reason.
+	 */
+	unitValueOf(src: { dishId?: string; prepId?: string; itemSlug?: string }): number | null {
+		if (src.dishId) {
+			const costing = this.costingFor(src.dishId);
+			const { lines } = resolveLines(costing.lines, this.#r.preps, this.pricedItems);
+			const { total, complete } = plateCost(lines);
+			// An incomplete plate is not a cheap plate. Valuing a half-costed dish
+			// would understate every bin of it, in the direction that flatters.
+			return complete && lines.length ? total : null;
+		}
+		if (src.prepId) {
+			const prep = this.#r.preps.find((p) => p.id === src.prepId);
+			if (!prep) return null;
+			const { perPortion, complete } = prepPortionCost(prep, this.pricedItems);
+			return complete ? perPortion : null;
+		}
+		if (src.itemSlug) {
+			return currentPrice(this.#r.items[src.itemSlug])?.unitCost ?? null;
+		}
+		return null;
+	}
+
+	/**
+	 * Log a bin.
+	 *
+	 * The value is snapshotted here and never recomputed — see waste.ts. There is
+	 * no argument for who did it, and there is no field on the record to put one
+	 * in even if a caller wanted to.
+	 */
+	logWaste(entry: {
+		label: string;
+		qty: number;
+		reason: string;
+		source?: { dishId?: string; prepId?: string; itemSlug?: string };
+	}): WasteEntry | null {
+		const label = entry.label.trim();
+		if (!label || !Number.isFinite(entry.qty) || entry.qty <= 0 || !entry.reason) return null;
+		const next: WasteEntry = {
+			id: 'w-' + Date.now().toString(36) + Math.floor(Math.random() * 1e6).toString(36),
+			at: Date.now(),
+			label,
+			qty: entry.qty,
+			reason: entry.reason,
+			unitValue: entry.source ? this.unitValueOf(entry.source) : null,
+			...(entry.source ? { source: entry.source } : {})
+		};
+		this.#r = { ...this.#r, waste: [next, ...this.#r.waste] };
+		this.#persist();
+		return next;
+	}
+
+	/**
+	 * Remove one entry.
+	 *
+	 * Deliberately a real delete and not a tombstone: a mis-tapped bin is a typo,
+	 * not history, and the log is only useful if people are willing to correct
+	 * it. The merge unions by id, so a deletion does not travel — a second device
+	 * that still holds the entry will bring it back on the next import. That is
+	 * the honest trade for never losing a bin, and it is the same shape as the
+	 * cooked log.
+	 */
+	removeWaste(id: string) {
+		const next = this.#r.waste.filter((w) => w.id !== id);
+		if (next.length === this.#r.waste.length) return;
+		this.#r = { ...this.#r, waste: next };
 		this.#persist();
 	}
 

@@ -206,6 +206,11 @@ export function describeImport(
 		}
 	}
 
+	// The waste log. Counted in ENTRIES, because that is the unit it merges in
+	// and an entry is one thing that went in one bin.
+	const mineWaste = new Set((current.waste ?? []).map((w) => w?.id));
+	const newWaste = (incoming.waste ?? []).filter((w) => w?.id && !mineWaste.has(w.id)).length;
+
 	const mineByPrep = new Map((current.preps ?? []).map((pr) => [pr.id, pr]));
 	let newPreps = 0;
 	let updatedPreps = 0;
@@ -234,5 +239,7 @@ export function describeImport(
 	if (newItems) parts.push(`${newItems} ${newItems === 1 ? 'item' : 'items'}`);
 	if (newPrices)
 		parts.push(`${newPrices} ${newPrices === 1 ? 'price' : 'prices'} for the item book`);
+	if (newWaste)
+		parts.push(`${newWaste} waste ${newWaste === 1 ? 'entry' : 'entries'}`);
 	return parts.length ? parts.join(', ') : 'nothing new — this file matches what you already have';
 }

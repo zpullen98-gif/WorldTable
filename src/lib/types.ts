@@ -399,6 +399,35 @@ export interface Economics {
 }
 
 /**
+ * The waste log's vocabulary.
+ *
+ * Carried and gated by tools/derive/waste.mjs. Note what is NOT here: there is
+ * no reason code for THEFT, and that is not an oversight — the guide answers
+ * theft with "systems, not suspicion" and warns against a surveillance state,
+ * and a bin with a THEFT button on it is the accusation made before the
+ * evidence. `excluded` carries it, and vendor creep, as refusals with reasons,
+ * so the reverse gate can tell a considered refusal from a quiet gap.
+ */
+export interface WasteReason {
+	key: string;
+	label: string;
+	/** The leak from the guide's own leak meter that this code accounts for. */
+	covers: string;
+	hint: string;
+	/** The phrase in the guide that this code is read out of. */
+	evidence: string;
+}
+
+export interface WasteVocabulary {
+	entries: Record<string, { slug: string; term: string; definition: string }>;
+	reasons: WasteReason[];
+	excluded: Array<{ key: string; covers: string; why: string }>;
+	/** The reason key the guide calls the most common cause. */
+	villain: string;
+	cultureNote: string;
+}
+
+/**
  * Sanitation — the guide's food-safety entries, and its silences.
  *
  * Carried and gated by tools/derive/sanitation.mjs. Note what is NOT here:

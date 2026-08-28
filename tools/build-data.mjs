@@ -37,6 +37,7 @@ import {
 import { buildPalate } from './derive/palate.mjs';
 import { buildEconomics } from './derive/economics.mjs';
 import { buildSanitation } from './derive/sanitation.mjs';
+import { buildWaste } from './derive/waste.mjs';
 import { buildServiceTrack } from './derive/service-track.mjs';
 import { buildDrills } from './derive/drills.mjs';
 import { buildStations } from './derive/stations.mjs';
@@ -477,6 +478,23 @@ const { palate, problems: palateProblems } = buildPalate(lexicon);
 const { economics, problems: economicsProblems } = buildEconomics(lexicon);
 
 /**
+ * The waste log's vocabulary. Five reason codes, each carrying the phrase in the
+ * guide that names it, and gated in REVERSE against the guide's own list of
+ * leaks — so a leak it names that nothing carries fails the build rather than
+ * quietly not existing. Theft and vendor creep are declared as refused rather
+ * than omitted; see the module header for why a bin with a THEFT button on it
+ * is the wrong instrument.
+ */
+const { waste, problems: wasteProblems } = buildWaste(lexicon);
+if (waste) {
+	console.log(
+		`  waste: ${waste.reasons.length} reason codes, ${waste.excluded.length} leaks refused (${waste.excluded
+			.map((e) => e.key)
+			.join(', ')}), villain "${waste.villain}"`
+	);
+}
+
+/**
  * Sanitation. Structure over the guide's two food-safety entries, and — the
  * unusual part — over its SILENCES: each gap asserts both that the guide still
  * names a practice and that it still states no figure for it, so nobody can
@@ -529,6 +547,7 @@ write('techniques.json', techniques);
 write('technique-standards.json', techniqueStandards);
 write('palate.json', palate);
 write('economics.json', economics);
+write('waste.json', waste);
 write('sanitation.json', sanitation);
 write('service-track.json', serviceTrack);
 write('drills.json', drills);
@@ -1234,6 +1253,7 @@ problems.push(...palateProblems);
 
 
 problems.push(...economicsProblems);
+problems.push(...wasteProblems);
 problems.push(...sanitationProblems);
 problems.push(...serviceTrackProblems);
 problems.push(...drillProblems);

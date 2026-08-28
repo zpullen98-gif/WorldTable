@@ -18,6 +18,7 @@ import type {
 	CellarBottle,
 	Technique,
 	Palate,
+	WasteVocabulary,
 	Economics,
 	Sanitation,
 	ServiceTrack,
@@ -126,6 +127,16 @@ export async function loadSanitation(): Promise<Sanitation> {
 }
 
 let economicsCache: Economics | null = null;
+let wasteCache: WasteVocabulary | null = null;
+
+/** The waste log's reason codes. Tiny, but gated — see tools/derive/waste.mjs. */
+export async function loadWaste(): Promise<WasteVocabulary> {
+	if (!wasteCache) {
+		wasteCache = (await import('./data/waste.json')).default as unknown as WasteVocabulary;
+	}
+	return wasteCache;
+}
+
 export async function loadEconomics(): Promise<Economics> {
 	if (!economicsCache) {
 		economicsCache = (await import('./data/economics.json')).default as unknown as Economics;

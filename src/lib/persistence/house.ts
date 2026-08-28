@@ -26,6 +26,7 @@ import { localDay, weekStartOf, recentWeeks, normaliseCosting, mergeCostings } f
 export { localDay, weekStartOf, recentWeeks, normaliseCosting, mergeCostings, CLOCK_SKEW_MS } from './state';
 import type { CostLine } from '../costing';
 import { mergeItems, type Item } from '../items';
+import { mergeWaste, type WasteEntry } from '../waste';
 
 export const HOUSE_KEY = 'house';
 export const HOUSE_VERSION = 1;
@@ -94,6 +95,15 @@ export interface HouseRecord {
 	 */
 	items: Record<string, Item>;
 	/**
+	 * What went in the bin, and why. Venue-wide and append-only.
+	 *
+	 * On the HOUSE record like the menu and the preps, and for a sharper reason
+	 * than either: a per-profile waste log IS waste-by-cook, which is the one
+	 * report this product refuses to be able to produce. `WasteEntry` also
+	 * carries no person field at all — see waste.ts.
+	 */
+	waste: WasteEntry[];
+	/**
 	 * Whether the menu prices this venue types include tax, and at what rate.
 	 *
 	 * ON THE HOUSE RECORD, not in the session, and that is a real improvement
@@ -132,6 +142,7 @@ export const EMPTY_HOUSE: HouseRecord = {
 	dishes: [],
 	preps: [],
 	items: {},
+	waste: [],
 	prepCounts: {},
 	eightySix: {},
 	dishCosts: {},
@@ -262,12 +273,18 @@ export function adoptImport(
 	// about weeks of covers.
 	const nextItems = mergeItems(house.items, incoming.items);
 
+	// UNION BY ID, and never capped. A waste entry is immutable — it records
+	// something that happened at a time — so there is nothing to prefer and
+	// nothing to drop. See mergeWaste.
+	const nextWaste = mergeWaste(house.waste, incoming.waste);
+
 	return {
 		...house,
 		dishes: nextDishes,
 		dishCosts: nextCosts,
 		preps: [...prepById.values()],
 		items: nextItems,
+		waste: nextWaste,
 		absorbed: [...new Set([...house.absorbed, ...nextDishes.map((d) => d.id)])]
 	};
 }
@@ -358,6 +375,8 @@ export function houseSnapshot(house: HouseRecord): {
  */
 export interface HousePortable {
 	preps?: Prep[];
+	/** The waste log. Absent from every file written before it existed. */
+	waste?: WasteEntry[];
 	/**
 	 * The item book. Absent from every file written before it existed, which is
 	 * why it is optional HERE and required at every function that emits one.
@@ -366,5 +385,5 @@ export interface HousePortable {
 }
 
 export function housePortable(house: HouseRecord): HousePortable {
-	return { preps: house.preps, items: house.items };
+	return { preps: house.preps, items: house.items, waste: house.waste };
 }

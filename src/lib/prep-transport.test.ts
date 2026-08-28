@@ -11,6 +11,7 @@ import { FORMAT, buildExport, parseImport, describeImport } from './persistence/
 import { mergeSessions, EMPTY_SESSION, type SessionState } from './persistence/state';
 import { resolveLines, plateCost, type CostLine } from './costing';
 import { currentPrice, previousPrice, type Item } from './items';
+import { rollUpWaste, type WasteEntry } from './waste';
 
 /**
  * A prep crossing the transport.
@@ -345,6 +346,81 @@ describe('the banner says what the book will do', () => {
 			{ items: { butter: { slug: 'butter', name: 'Butter', history: [{ unitCost: 7.9, unit: 'kg', at: T }] } } },
 			current([[7.9, T]])
 		);
+		expect(out).toBe('nothing new — this file matches what you already have');
+	});
+});
+
+/**
+ * The waste log crossing the transport.
+ *
+ * Unioned by id and never capped: an entry is immutable, so there is nothing to
+ * prefer and nothing to drop. The one thing that must never happen is a bin
+ * disappearing because the other device had not seen it.
+ */
+const bin = (over: Partial<WasteEntry> = {}): WasteEntry => ({
+	id: 'w-1',
+	at: T,
+	label: 'Demi-glace',
+	qty: 2,
+	reason: 'overprep',
+	unitValue: 3,
+	...over
+});
+
+const withWaste = (h: HouseRecord, log: WasteEntry[]): HouseRecord => ({ ...h, waste: log });
+
+describe('the waste log crosses the transport', () => {
+	it('rides in the house block, not in the session block', () => {
+		const parsed = roundTrip(withWaste(siteA(), [bin()]));
+		expect(parsed.house?.waste).toHaveLength(1);
+		expect('waste' in parsed.data).toBe(false);
+	});
+
+	it('unions rather than letting either side win', () => {
+		const here = withWaste(siteA(), [bin({ id: 'a', at: T }), bin({ id: 'b', at: T + DAY })]);
+		const parsed = roundTrip(withWaste(siteA(), [bin({ id: 'c', at: T + 2 * DAY }), bin({ id: 'b', at: T + DAY })]));
+		const out = adoptImport(here, [], {}, parsed.house ?? {});
+		expect(out.waste.map((w) => w.id)).toEqual(['c', 'b', 'a']);
+	});
+
+	it('re-importing your own export loses no bin', () => {
+		const here = withWaste(siteA(), [bin({ id: 'a' }), bin({ id: 'b', at: T + DAY })]);
+		const out = adoptImport(here, [], {}, roundTrip(here).house ?? {});
+		expect(out.waste).toHaveLength(2);
+	});
+
+	it('leaves the log alone for a file written before it existed', () => {
+		const here = withWaste(siteA(), [bin()]);
+		expect(adoptImport(here, [], {}, { preps: [] }).waste).toHaveLength(1);
+	});
+
+	/** The snapshot travels, so the second site values the bin identically. */
+	it('carries the value that was snapshotted, not a fresh one', () => {
+		const parsed = roundTrip(withWaste(siteA(), [bin({ qty: 4, unitValue: 3.1 })]));
+		const out = adoptImport(structuredClone(EMPTY_HOUSE), [], {}, parsed.house ?? {});
+		expect(rollUpWaste(out.waste, T - DAY, T + DAY).total).toBeCloseTo(12.4, 6);
+	});
+});
+
+describe('the banner says what the waste log will do', () => {
+	const current = (log: WasteEntry[]) =>
+		({
+			...structuredClone(EMPTY_SESSION),
+			...houseSnapshot(siteA()),
+			...housePortable(withWaste(siteA(), log))
+		}) as SessionState & { preps?: Prep[]; items?: Record<string, Item>; waste?: WasteEntry[] };
+
+	it('counts the entries this file would add', () => {
+		const out = describeImport({ waste: [bin({ id: 'x' }), bin({ id: 'y' })] }, current([bin({ id: 'z' })]));
+		expect(out).toContain('2 waste entries');
+	});
+
+	it('singularises', () => {
+		expect(describeImport({ waste: [bin({ id: 'x' })] }, current([]))).toContain('1 waste entry');
+	});
+
+	it('stays quiet about entries the venue already has', () => {
+		const out = describeImport({ waste: [bin({ id: 'z' })] }, current([bin({ id: 'z' })]));
 		expect(out).toBe('nothing new — this file matches what you already have');
 	});
 });
