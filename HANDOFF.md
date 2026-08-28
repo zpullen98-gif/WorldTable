@@ -25,7 +25,7 @@ third one drove most of this session's work — front of house had nothing.
 |---|---|
 | WorldTable | branch `dish-standards`, **16 commits unpushed** (remote is `origin/master`), plus the technique-standards work below |
 | OutsideOfTime | branch `main`, HEAD `3ca8361e`, tree clean, **no git remote — never pushed** |
-| Tests | **378 unit** (26 files), **76 e2e** (76 pass — **the suite is green**) |
+| Tests | **383 unit** (26 files), **76 e2e** (76 pass — **the suite is green**) |
 | Gates | `npm run build:data` all pass · `npm run verify:build` **18/18** |
 | Precache | 1.39 MB gzipped against a 2.00 MB cap |
 | Routes | 24 · Derived JSON | 19 files |
@@ -642,6 +642,45 @@ Count the demi at par and it drops off the plan, which collapses to *"1 prep ·
 rolled up venue-wide and **never per person**. That last part is not a detail:
 a per-cook waste number is a disciplinary instrument, and the data goes
 dishonest inside a fortnight.
+
+## The house record could be wiped by a rollback — fixed
+
+**Found while planning the costing week, and it was mine.** An adversarial pass
+over the migration plan turned up a live data-loss bug in the house record
+introduced earlier in this same session.
+
+`hydrate()` read the record behind `if (schemaVersion <= HOUSE_VERSION)` **and
+had no else.** A record written by a NEWER build failed that test, `#r` stayed
+`EMPTY_HOUSE`, and then the next write — `absorbSession`'s persist, or the first
+tap on the 86 board, which is the most-tapped write in the app — put that empty
+record straight over the top of it.
+
+**Menu, preps, costings, prep counts and the 86 board, gone.** On nothing worse
+than a rollback or a stale service worker — and `vite.config.ts:65` ships
+`registerType: 'prompt'` with `skipWaiting: false` ("never reload the page out
+from under a cook"), so a device serving an older bundle is the SHIPPED DESIGN,
+not an edge case.
+
+**Reproduced and fixed, both in the browser.** A record stamped
+`schemaVersion: 99` with a dish, a prep and an unknown `futureField`:
+
+- before the fix, two taps left `schemaVersion: 1`, `dishes: []`, `preps: []`
+- after it, everything survives untouched, `futureField` included
+
+`readHouse()` is the pure decision and it is tested: a newer record is
+**blocked** — not read, and never written over. Every mutator is a no-op while
+blocked, because the guard sits in `#persist()` rather than in each caller. An
+unreadable record blocks too: writing over what you cannot read is exactly how
+this was lost.
+
+`db.ts` had the right instinct all along and this had not followed it —
+`migrate()` throws on a newer version and `loadSession` snapshots before
+resetting, *"never destroy data silently"*. For a newer record the stronger
+answer is to write nothing at all, so downgrading and upgrading again is
+lossless, which is what `migrate()`'s own comment already promised.
+
+A chef on a blocked device sees a banner saying the tablet is behind and nothing
+has been lost — rather than an empty menu and no explanation.
 
 ## What's left, ranked
 

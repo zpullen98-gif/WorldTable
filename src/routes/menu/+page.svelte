@@ -723,6 +723,20 @@
 		</section>
 	{/if}
 
+	{#if house.blocked}
+		<!--
+			The record on this device was written by a NEWER build than the one
+			running. It is not read and, critically, nothing is written over it —
+			see readHouse() in persistence/house.ts. Saying so is the difference
+			between "my menu is gone" and "this tablet is behind".
+		-->
+		<p class="blocked" role="alert">
+			<b>This device is running an older version of the app than the one that saved your menu.</b>
+			Nothing has been lost and nothing will be overwritten — but the menu, preps and costings stay
+			hidden until this tablet updates. Reload, or close and reopen the app, to pick it up.
+		</p>
+	{/if}
+
 	<section class="kitchen">
 		<h2 class="sec">The Kitchen’s Menu</h2>
 		<p class="hint">
@@ -936,6 +950,14 @@
 	/* A real colour token, never stacked opacity — the shared home CSS dims
 	   muted text with opacity and lands at 2.32:1 against a 4.5:1 target. */
 	.da.unchecked { color: var(--chili); font-weight: 600; }
+	.blocked {
+		border: 1px solid var(--chili);
+		border-left-width: 3px;
+		border-radius: var(--radius);
+		padding: 12px 14px;
+		margin: 0 0 16px;
+		line-height: 1.55;
+	}
 	.nm.off { text-decoration: line-through; opacity: 1; }
 	/* 44px, tapped one-handed beside a pan. State is a glyph and a weight, not
 	   a hue alone. */

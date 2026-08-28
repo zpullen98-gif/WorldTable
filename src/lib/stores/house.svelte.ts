@@ -41,6 +41,7 @@ import {
 	EMPTY_HOUSE,
 	absorbSession,
 	adoptImport,
+	readHouse,
 	removeDish as removeDishFrom,
 	removePrep as removePrepFrom,
 	dishesUsingPrep,
@@ -59,9 +60,18 @@ const store = browser ? createStore('world-table', 'state') : undefined;
 class House {
 	#r = $state<HouseRecord>(structuredClone(EMPTY_HOUSE));
 	#ready = false;
+	/**
+	 * A record we must not overwrite — written by a newer build, or unreadable.
+	 * Every write is a no-op while this is set. See readHouse().
+	 */
+	#blocked = $state(false);
 
 	get ready() {
 		return this.#ready;
+	}
+	/** True when there is a record here this build must not touch. */
+	get blocked() {
+		return this.#blocked;
 	}
 	get dishes(): MenuDish[] {
 		return this.#r.dishes;
@@ -71,7 +81,9 @@ class House {
 	}
 
 	#persist() {
-		if (!browser || !store) return;
+		// The guard that makes the refusal real. Without it every mutator below
+		// would cheerfully write EMPTY_HOUSE over a record it could not read.
+		if (!browser || !store || this.#blocked) return;
 		this.#r.lastWrite = Date.now();
 		const by = profiles.currentName();
 		if (by) this.#r.lastEditedBy = by;
@@ -81,12 +93,18 @@ class House {
 	async hydrate() {
 		if (!browser || !store || this.#ready) return;
 		try {
-			const raw = (await get(HOUSE_KEY, store)) as HouseRecord | undefined;
-			if (raw && typeof raw.schemaVersion === 'number' && raw.schemaVersion <= HOUSE_VERSION) {
-				this.#r = { ...structuredClone(EMPTY_HOUSE), ...raw };
-			}
+			const { record, blocked } = readHouse(await get(HOUSE_KEY, store));
+			this.#r = record;
+			this.#blocked = blocked;
 		} catch {
-			/* an unreadable house record starts empty rather than taking the app down */
+			// We could not read it, so we do not know what is there — and writing
+			// over what you cannot read is how the record was lost before. Start
+			// empty AND refuse to persist.
+			this.#blocked = true;
+		}
+		if (this.#blocked) {
+			this.#ready = true;
+			return;
 		}
 		try {
 			const next = absorbSession(this.#r, await loadSession());

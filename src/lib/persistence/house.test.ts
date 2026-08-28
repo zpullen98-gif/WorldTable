@@ -1,6 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import {
 	EMPTY_HOUSE,
+	readHouse,
+	HOUSE_VERSION,
 	absorbSession,
 	adoptImport,
 	removeDish,
@@ -152,5 +154,58 @@ describe('what an export carries', () => {
 		const h: HouseRecord = { ...fresh(), eightySix: { a: { at: 1, by: 'Marcus' } } };
 		expect(Object.keys(houseSnapshot(h))).toEqual(['menuDishes', 'dishCosts']);
 		expect(JSON.stringify(houseSnapshot(h))).not.toContain('Marcus');
+	});
+});
+
+describe('a record this build must not touch', () => {
+	/**
+	 * THE BUG THIS EXISTS FOR, and it lost everything.
+	 *
+	 * hydrate() read the record behind `if (schemaVersion <= HOUSE_VERSION)` with
+	 * no else, so a record from a NEWER build failed the test, the store kept
+	 * EMPTY_HOUSE, and the next write — absorbSession's persist, or the first tap
+	 * on the 86 board — put that empty record over the top of it. Menu, preps,
+	 * costings, counts, gone, on a rollback or a stale service worker.
+	 *
+	 * vite.config.ts ships registerType: 'prompt' with skipWaiting: false, so a
+	 * device on an older bundle is the design, not an edge case.
+	 */
+	it('refuses a record written by a newer build', () => {
+		const future = { ...structuredClone(EMPTY_HOUSE), schemaVersion: HOUSE_VERSION + 1 };
+		const { blocked } = readHouse(future);
+		expect(blocked, 'a newer record would be read and then overwritten').toBe(true);
+	});
+
+	it('does not hand back the newer record content either', () => {
+		const future = {
+			...structuredClone(EMPTY_HOUSE),
+			schemaVersion: HOUSE_VERSION + 1,
+			dishes: [dish('a')]
+		};
+		// Reading fields this build does not understand is how a partial write
+		// gets made from a record that was refused.
+		expect(readHouse(future).record.dishes).toEqual([]);
+	});
+
+	it('reads a record at the current version normally', () => {
+		const now = { ...structuredClone(EMPTY_HOUSE), dishes: [dish('a')] };
+		const { record, blocked } = readHouse(now);
+		expect(blocked).toBe(false);
+		expect(record.dishes.map((d) => d.id)).toEqual(['a']);
+	});
+
+	it('reads a record that predates the version field', () => {
+		const ancient = { dishes: [dish('a')] };
+		const { record, blocked } = readHouse(ancient);
+		expect(blocked).toBe(false);
+		expect(record.dishes).toHaveLength(1);
+		// Everything the old record lacked is filled from defaults.
+		expect(record.preps).toEqual([]);
+		expect(record.prepCounts).toEqual({});
+	});
+
+	it('treats nothing on disk as a fresh start, not as a refusal', () => {
+		expect(readHouse(undefined)).toEqual({ record: structuredClone(EMPTY_HOUSE), blocked: false });
+		expect(readHouse(null).blocked).toBe(false);
 	});
 });

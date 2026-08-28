@@ -105,6 +105,39 @@ export const EMPTY_HOUSE: HouseRecord = {
 };
 
 /**
+ * What to do with whatever was on disk under the `house` key.
+ *
+ * THIS EXISTS BECAUSE THE FIRST VERSION LOST DATA. hydrate() read the record
+ * behind `if (schemaVersion <= HOUSE_VERSION)` and had no else, so a record
+ * written by a NEWER build failed the test, `#r` stayed EMPTY_HOUSE, and the
+ * next write — absorbSession's persist, or the first tap on the 86 board, which
+ * is the most-tapped write in the app — put that empty record over the top of
+ * it. A venue's menu, preps, costings, counts and 86 board, gone, on nothing
+ * more than a rollback or a stale service worker.
+ *
+ * That is not hypothetical here. vite.config.ts:65 sets `registerType: 'prompt'`
+ * with `skipWaiting: false` — "never reload the page out from under a cook" —
+ * so a device serving an older bundle for a while is the SHIPPED DESIGN.
+ *
+ * db.ts's session path already had the right instinct and this did not follow
+ * it: migrate() throws on a newer version and loadSession snapshots before
+ * resetting, "never destroy data silently". For a newer record the stronger
+ * answer is to write nothing at all — then downgrading and upgrading again is
+ * lossless, which is exactly what migrate()'s own comment promises.
+ *
+ * `blocked` means: do not read it, and never, ever write over it.
+ */
+export function readHouse(raw: unknown): { record: HouseRecord; blocked: boolean } {
+	const empty = structuredClone(EMPTY_HOUSE);
+	if (!raw || typeof raw !== 'object') return { record: empty, blocked: false };
+	const v = (raw as HouseRecord).schemaVersion;
+	// A record with no version at all predates the field: readable, and the
+	// spread below fills in whatever it lacks.
+	if (typeof v === 'number' && v > HOUSE_VERSION) return { record: empty, blocked: true };
+	return { record: { ...empty, ...(raw as HouseRecord) }, blocked: false };
+}
+
+/**
  * Take up whatever a per-profile session is still holding — once per dish id.
  *
  * This is the migration off `SessionState.menuDishes`, and it is deliberately
