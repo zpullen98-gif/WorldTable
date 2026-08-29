@@ -22,24 +22,33 @@ at **$49.99/month, unlimited staff, one shared login**.
 
 | | |
 |---|---|
-| WorldTable | branch `dish-standards`, **40 commits unpushed** (remote `origin/master`), tree clean |
+| WorldTable | branch `dish-standards`, **47 commits unpushed** (remote `origin/master`), tree clean |
 | OutsideOfTime | branch `main`, HEAD `1a6f7d5e`, tree clean, **no git remote — never pushed** |
-| Tests | **540 unit** (33 files) · **84 e2e** — **the whole suite is green** |
+| Tests | **565 unit** (35 files) · **87 e2e** — **the whole suite is green** |
 | Gates | `build:data` all pass · `verify:build` **18/18** |
 | Precache | 1.44 MB gzipped against a 2.00 MB cap |
-| Routes | 28 · Derived JSON | 22 files |
+| Routes | 29 · Derived JSON | 22 files |
 | Deploy | `table/` re-synced for `/menu/waste`. See below. |
 
 ## The corpus
 
 970 recipes · 94 chapters · 479 lexicon terms · 103 techniques · 45 dish
-standards · 46 technique standards · 455 marks · 6 calibration ladders · 176
+standards · 50 technique standards · 475 marks · 6 calibration ladders · 176
 front-of-house terms · 27 service modules · 186 drill cards.
 
-**789 of 970 recipes are assessable** — 45 against a standard of their own, 744
-against the techniques they exercise. 181 carry neither: 143 have no technique
-tag at all, and 38 exercise only techniques too rare here to be worth a
-standard. That is the ceiling of this approach, not a backlog.
+**797 of 970 recipes are assessable** — 45 against a standard of their own, 752
+against the techniques they exercise. 173 carry neither: 143 have no technique
+tag at all, and 30 exercise only techniques too rare here to be worth a
+standard. That is the ceiling of this approach, not a backlog — below a
+threshold of 12 the corpus gaps to 9, and what is down there is
+dishes-in-disguise better served by dish standards.
+
+**The allergen screen covers thirteen of the statutory fourteen.** Sesame,
+soy, peanuts, celery, mustard, molluscs and lupin joined gluten, dairy, egg,
+nuts, fish, shellfish (and alcohol). Sulphites stay unscreened FOR A REASON:
+the declaration threshold is a concentration, not an ingredient name, and a
+lexical rule would be the confident wrong answer. 60 recipes carry no flag and
+the block renders over every one of them saying what was not looked for.
 
 ---
 
@@ -229,6 +238,31 @@ import a value back into it.
 
 ## What was built, most recent first
 
+### 29-30 Aug — the worklist, finished
+
+Every numbered item on the previous handoff's list is done:
+
+1. **The transport e2e** (`b7b3870`) — export through the real button, wipe,
+   import through the real input, outcomes asserted (a 9.10 plate needs the
+   prep AND the book to have crossed AND the linked line to follow the book).
+   Proven against the original defect: reverting doExport fails it.
+2. **The last four technique standards** (`3975739`) — threshold 12; 50
+   standards, 475 marks, 797 assessable. Two of the four were wrong on first
+   writing and the recipe sets caught both (whole-charred eggplant; warm
+   icing on warm Texas sheet cake).
+3. **Yield tests, stale lines, the CSV** (`aaacc49`) — the item book carries
+   measured yields (union-merged, never defaulted to 100); itemUsage names
+   dishes holding an unlinked line at an old price; the costing sheet exports
+   one-way CSV with the week and tax basis stamped on every row.
+4. **The allergen vocabulary** (`7c1640b`) — thirteen of fourteen, and the
+   scrub hole fixed: nine recipes shipped containsNuts:false over "peanut
+   butter" lines, five shipped containsEgg:false over "egg noodles". Egg and
+   nuts now match raw lines; regression-pinned by name.
+5. **The firing drill** (`51a293e`) — /practise/firing, the pass's own firing
+   order under a 20-second clock, from the cook's pinned menu. The handoff
+   sentence needed one correction: collisions are reported, not resolved, so
+   the drillable truth is the ORDER.
+
 ### 29 Aug — the transport, the item book, the waste log
 
 1. **The preps could not leave the tablet they were typed on** (`1e1ce4f`).
@@ -303,32 +337,8 @@ in the app).
 
 ## What's left, ranked
 
-1. **The e2e suite has never touched import or export.** `grep -rl` over
-   `tests/*.spec.ts` for the .wtjson path returns nothing, so the whole
-   transport — the thing that just turned out to have been broken since preps
-   shipped — is covered by unit tests alone. The unit tests could not have
-   caught the original defect either: it lived in the CALL SITES, and reverting
-   the page wiring left 460 tests green. It is caught now only because the
-   arguments were made required and `check` names them. An e2e that exports,
-   clears the record and re-imports would close it properly.
-2. **Lines that are not following the book.** A line keeps its own `unitCost`
-   until somebody links it, so a venue can hold butter at 6.40 on one dish and
-   9.50 in the book. The item book row knows which dishes reach the item; it
-   does not yet say which of them are on a stale number. The datalist plus
-   auto-link makes this rare on new work and common on everything costed before
-   the book existed.
-3. **More technique standards, if ever.** The threshold is still the worklist
-   and it now sits at 15. The returns have thinned: 12 asks for four more
-   (building an emulsion, charring over open flame, kneading dough, icing and
-   frosting) and 10 asks for nothing beyond those, because the corpus has a gap
-   between 12 recipes and 9. Below that it is writing assessment for techniques
-   a venue meets a handful of times. **This is close to done, not open.**
-4. **The allergen vocabulary.** 99 of 970 recipes still carry no flag at all.
-   `allergens.test.ts` asserts `NOT_SCREENED` stays non-empty, so the day it
-   lands the copy is forced to change.
-5. **Yield tests.** Zero content, and the costing sheet depends on the number.
-6. **Repetition under load.** The Pass computes collisions; that is a drill.
-7. **The costing CSV** — one-way door, and see the no-importer rule above.
+The previous list is EMPTY — all seven items shipped (see above). What
+remains is what the deep pass surfaces, plus the standing questions below.
 
 ## Open questions for the owner
 

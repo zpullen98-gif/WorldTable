@@ -341,6 +341,28 @@ lock masks `article.sheet` children. An overlay alone is not a gate.
 the newer `ts` winning, so folding costs into the dish would let a colleague's
 edit to a description silently replace an evening of costing work.
 
+### The allergen screen — thirteen of fourteen
+
+`tools/derive/diet.mjs` screens every statutory allergen except sulphites,
+which are concentration-defined and therefore not lexically screenable — the
+refusal is documented in `src/lib/allergens.ts` and asserted non-empty by its
+test. THE SCRUB RULE: exception phrases ("coconut milk", "vegetable stock")
+are blanked before matching for dairy/gluten/fish/shellfish, whose exceptions
+are the point — but EGG, NUTS and all seven new allergens match RAW lines,
+because an exception written for the vegetarian logic ("peanut butter", "egg
+noodles") must never silence the allergen inside it. Nine recipes shipped
+containsNuts:false over peanut butter before this was measured. The closure
+test in allergens.test.ts forces derivation, display, types and the
+family-recipe literal to widen together.
+
+### The firing drill — `src/lib/firing-drill.ts`
+
+Questions are GENERATED from the cook's own pinned menu through buildPass,
+never authored: the right answer is the firing order the pass computed. Three
+distinct start times per question (ties have no defensible "first"), no
+zero-hands steps (a simmer is not a decision), timeout counts as wrong. The
+grade goes to the cook's own drillLog and nothing else reads it.
+
 ### The item book — `src/lib/items.ts`
 
 `unitCost` was stored per line per dish and `editLine` patched it in place, so

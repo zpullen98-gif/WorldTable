@@ -9,7 +9,9 @@
  * sommelier pairing, lexicon links) defaults to something true rather than
  * something invented.
  */
-import type { PantryGroup, Recipe, Course, Difficulty } from './types';
+import type { PantryGroup, Recipe, Course, Difficulty, DietFlags } from './types';
+// The guide's own allergen matcher, pure and importable — see the diet note below.
+import { deriveDiet } from '../../tools/derive/diet.mjs';
 import { bySlug } from './data';
 import { slugify } from './slug';
 
@@ -150,29 +152,21 @@ export function buildFamilyRecipe(
 		difficulty: draft.difficulty,
 		minutes: Math.round(draft.minutes),
 		serves: 4,
+		/**
+		 * The REAL screen, not a wall of hardcoded falses. This literal used to
+		 * set every contains* flag to false with confidence 'reviewed', and the
+		 * detail view then rendered "None found among the 14 screened — Reviewed
+		 * by hand" over ingredients nobody had screened: clearance language, with
+		 * a human endorsement stapled on, for a family recipe that could be
+		 * peanut brittle. diet.mjs is a pure module with no imports, so the same
+		 * matcher the guide's 970 recipes go through runs here on the author's
+		 * own ingredient lines. Only `vegetarian` stays the author's claim — that
+		 * is a judgement about the dish; the allergen flags are facts about the
+		 * text, and the text is right there.
+		 */
 		diet: {
-			// The author's own claim — for their own recipe, the best source there is.
-			vegetarian: draft.vegetarian,
-			vegetarianStrict: draft.vegetarian,
-			vegetarianOption: false,
-			vegan: false,
-			containsMeat: false,
-			containsPork: false,
-			containsFish: false,
-			containsShellfish: false,
-			containsDairy: false,
-			containsEgg: false,
-			containsGluten: false,
-			containsNuts: false,
-			containsAlcohol: false,
-			containsSesame: false,
-			containsSoy: false,
-			containsPeanut: false,
-			containsCelery: false,
-			containsMustard: false,
-			containsMollusc: false,
-			containsLupin: false,
-			confidence: 'reviewed'
+			...(deriveDiet({ n: draft.name, i: ingredients, v: draft.vegetarian }) as DietFlags),
+			confidence: 'derived'
 		},
 		costTier: 2,
 		flavorTags: ['family'],
