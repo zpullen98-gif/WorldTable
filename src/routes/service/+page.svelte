@@ -22,7 +22,17 @@
 	import { base } from '$app/paths';
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
-	import { CHECKED, NOT_SCREENED, list } from '$lib/allergens';
+	import { CHECKED, CHECKED_FLAGS, NOT_SCREENED, list } from '$lib/allergens';
+	import { recipes } from '$lib/data';
+
+	/**
+	 * COMPUTED, because the last version of this sentence hardcoded "101 of
+	 * 970" and the vocabulary then widened to thirteen — the number was stale
+	 * the moment the derivation moved, which is what hardcoded copy does.
+	 */
+	const emptyCount = recipes.filter(
+		(r) => !CHECKED_FLAGS.some((f) => r.diet[f as keyof typeof r.diet])
+	).length;
 
 	let { data } = $props();
 	const dishes = $derived(house.dishes.length);
@@ -106,8 +116,9 @@
 			<b>There is no allergen curriculum, and you must never answer an allergen question from this
 			app.</b>
 			The recipe screen checks {CHECKED.length} — {list(CHECKED)} — and explicitly does not screen
-			{list(NOT_SCREENED)}. A dish showing nothing means <i>we did not look</i>, not <i>clear</i>:
-			101 of 970 recipes are exactly that. Take allergen questions to the kitchen, every time.
+			{list(NOT_SCREENED)}. A dish showing nothing means <i>the text screen found nothing</i>, never
+			<i>clear</i>: {emptyCount} of {recipes.length} recipes read exactly that, and no text screen
+			sees a shared fryer or a dusted board. Take allergen questions to the kitchen, every time.
 		</p>
 	</div>
 

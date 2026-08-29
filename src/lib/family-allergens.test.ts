@@ -22,6 +22,7 @@ const draft = (over: Partial<FamilyDraft> = {}): FamilyDraft => ({
 	ingredients: '200g peanut butter\n300g sugar\n50g butter\n1 egg white',
 	method: 'Boil the sugar.\nStir in the rest.\nPour and set.',
 	tip: '',
+	techniques: [],
 	...over
 });
 

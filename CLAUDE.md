@@ -541,10 +541,12 @@ asserts NOT_SCREENED stays non-empty so the day it lands, the copy must change.
   raw extraction byte-identical to the archived original). `npm run
   report:notes` is the ledger and reads zero. New authoring goes through the
   same overlay; the parity harness exempts overlaid slugs automatically.
-- 146 recipes still carry no technique tag, spread thin (no chapter has more
+- 143 recipes still carry no technique tag, spread thin (no chapter has more
   than five). Some are correct — a three-ingredient drink demonstrates nothing.
   `npm run report:tech "<chapter>"` is the working material if the table is
-  widened further.
+  widened further. (This figure was 146 in an earlier version of this note and
+  in a draft comment, both times reasoned rather than measured; the build now
+  gates it in technique-standards.mjs's ceiling sentence.)
 
 ## Testing
 
