@@ -34,7 +34,7 @@ export const miniOptions = {
 		// prefix: "lemongr" already finds lemongrass while you type.
 		prefix: true,
 		// fuzzy 0.2 ≈ one edit per five letters: "brulee" reaches "brûlée",
-		// but "ragu" cannot reach "asparagus" — which is the point. The old
+		// but "ragu" cannot reach "asparagus", which is the point. The old
 		// substring scan matched anything containing the letters.
 		fuzzy: 0.2,
 		combineWith: 'AND',

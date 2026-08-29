@@ -140,7 +140,7 @@ const ADVANCE_MIN = 240;
 /**
  * Build the plan.
  *
- * Times are minutes BEFORE service throughout — the plan is anchored at its
+ * Times are minutes BEFORE service throughout: the plan is anchored at its
  * end, not its beginning, because that is the only fixed point a kitchen has.
  * Converting to clock times is the caller's job and belongs in one place.
  */

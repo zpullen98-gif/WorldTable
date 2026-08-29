@@ -10,7 +10,7 @@
  *
  *   1. A timer IS a deadline. `endsAt` is the truth; the number on screen is
  *      derived from Date.now() every tick. Throttle the tab, sleep the phone,
- *      block the main thread — the arithmetic does not care.
+ *      block the main thread: the arithmetic does not care.
  *   2. A timer outlives the screen that started it. It survives closing cook
  *      mode, navigating away, and a reload, because none of those things
  *      take the pot off the heat.

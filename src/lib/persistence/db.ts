@@ -79,7 +79,7 @@ export async function loadSession(): Promise<SessionState> {
 }
 
 /**
- * @param key where to write. Defaults to whoever is current — but a caller
+ * @param key where to write. Defaults to whoever is current, but a caller
  * holding an outgoing person's state must pass THEIR key explicitly.
  *
  * That parameter exists because profile switching fires its listeners AFTER

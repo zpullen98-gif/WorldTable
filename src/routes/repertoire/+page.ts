@@ -8,7 +8,7 @@ export const prerender = true;
  * are the curriculum and which one is next.
  *
  * Deliberately NOT recipes.full.json. The repertoire lists dishes by name and
- * links to them, and names live in the eagerly-shipped index — pulling the full
+ * links to them, and names live in the eagerly-shipped index: pulling the full
  * detail file in to read 45 `standard` keys would drag the whole 970-recipe
  * payload onto a page that draws a list.
  */

@@ -102,7 +102,7 @@ class SessionStore {
 	 * person's cooked log simply stays in memory under the new person's name.
 	 *
 	 * Order matters. The pending write is flushed to the OUTGOING key first:
-	 * #key, not KEY(), because the roster has already moved — and only then is
+	 * #key, not KEY(), because the roster has already moved, and only then is
 	 * the new record loaded. Idempotent, because onChange fires immediately on
 	 * registration: if the key has not actually changed there is nothing to do.
 	 */
@@ -148,7 +148,7 @@ class SessionStore {
 		return this.#s.calibrationLog;
 	}
 
-	/** One entry per RUN, not per trial — a trial on its own means nothing. */
+	/** One entry per RUN, not per trial: a trial on its own means nothing. */
 	markCalibrated(slug: string, grade: 'met' | 'close' | 'missed') {
 		this.#s.calibrationLog = [...this.#s.calibrationLog, { slug, at: Date.now(), grade }];
 		this.#persistNow();

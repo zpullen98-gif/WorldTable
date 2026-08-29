@@ -50,7 +50,7 @@
 
 	<h2 class="sec">The repair table</h2>
 	<p class="secnote">
-		Symptom first, then levers in order of gentleness. Work down a fault's list, not across —
+		Symptom first, then levers in order of gentleness. Work down a fault's list, not across:
 		the first lever is the one that is usually right.
 	</p>
 

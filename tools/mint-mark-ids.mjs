@@ -41,7 +41,7 @@ const STOP = new Set([
 ]);
 
 /**
- * A short human token from the mark's own opening words — `seam`, `cigar`,
+ * A short human token from the mark's own opening words: `seam`, `cigar`,
  * `wobble`. Read at a glance in a diff, which an index or a hash is not.
  */
 function tokenFor(text, used) {

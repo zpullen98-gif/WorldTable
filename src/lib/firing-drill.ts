@@ -8,7 +8,7 @@
  * (a quiz needs a defensible right answer). What the pass DOES compute, and
  * defends, is the firing order: which step starts when, back-timed so
  * everything lands together. Reading that order cold, fast, from your own
- * menu, is the trainable skill — and the shot clock is the load.
+ * menu, is the trainable skill, and the shot clock is the load.
  *
  * Everything here is derived from a Pass the caller already built, so the
  * drill trains against the venue's real menu and tonight's real plan, not an
@@ -117,7 +117,7 @@ export function firingQuestions(
  *
  * Thresholds match the calibration bench's spirit: met is a run you can trust,
  * close says the skill is forming, missed says read the plan again slowly. A
- * timeout counts as wrong — under load, not deciding IS a decision.
+ * timeout counts as wrong: under load, not deciding IS a decision.
  */
 export function gradeRun(correct: number, total: number): 'met' | 'close' | 'missed' {
 	if (total <= 0) return 'missed';

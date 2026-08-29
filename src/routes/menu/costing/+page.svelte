@@ -77,7 +77,7 @@
 	/**
 	 * The lines with every prep flattened into a plain purchase line.
 	 *
-	 * Resolved HERE, at the call site, rather than inside costing.ts — so
+	 * Resolved HERE, at the call site, rather than inside costing.ts, so
 	 * plateCost and its tests keep seeing only arithmetic they already know, and
 	 * the editable list above stays exactly what the venue typed.
 	 *
@@ -221,7 +221,7 @@
 	 * the costing somebody was doing anyway, and the datalist then offers the
 	 * spelling that already exists so one purchase does not become two.
 	 *
-	 * Following the book is what makes the feature worth having — repricing
+	 * Following the book is what makes the feature worth having: repricing
 	 * butter once moves every dish that buys it, which is the thing that was
 	 * impossible before. Two dishes cannot buy the same butter at two prices; if
 	 * they genuinely are two butters, they get two names, and the datalist makes
@@ -554,13 +554,13 @@
 					Every figure below is computed on net revenue.
 				{:else}
 					Figures are computed on the price as typed. Turn this on if your menu prices include
-					tax — otherwise contribution reads high on every dish.
+					tax: otherwise contribution reads high on every dish.
 				{/if}
 			</span>
 		</div>
 		{#if house.tax.inclusive}
 			<p class="taxstated">
-				Prices are tax-inclusive at {house.tax.ratePct}%. All figures are computed on net revenue —
+				Prices are tax-inclusive at {house.tax.ratePct}%. All figures are computed on net revenue:
 				an {sampleGross} menu price is {sampleNet} to the venue.
 			</p>
 		{/if}
@@ -761,7 +761,7 @@
 													{/if}
 												</td>
 												<td class="r mono">{per === null ? '-' : sym + money(per)}</td>
-												<td class="r mono">{total === null ? '—' : sym + money(total)}</td>
+												<td class="r mono">{total === null ? '-' : sym + money(total)}</td>
 												<td>
 													<button
 														class="x"
@@ -807,7 +807,7 @@
 									{#if priorWeeks(d.id).length}
 										<!--
 											The weeks actually STORED, not a computed range of the last four
-											Mondays looked up one by one. A range hides a misfiled week — the
+											Mondays looked up one by one. A range hides a misfiled week: the
 											dead-battery tablet, the hour-off key, and hiding is what turns
 											a visible duplicate into silent loss.
 										-->
@@ -849,7 +849,7 @@
 									<div>
 										<dt>Food cost</dt>
 										<dd data-verdict={verdict}>
-											{e.foodCostPct === null ? '—' : e.foodCostPct.toFixed(1) + '%'}
+											{e.foodCostPct === null ? '-' : e.foodCostPct.toFixed(1) + '%'}
 										</dd>
 									</div>
 									<div>
@@ -904,7 +904,7 @@
 					says which week it is, and over how many dishes.
 				-->
 				<p class="secnote">
-					Weighted by what actually sold, not the average of the dish percentages — which flatters
+					Weighted by what actually sold, not the average of the dish percentages, which flatters
 					whenever the expensive dish is the popular one. Computed over the {rollup.usable} of
 					{rollup.of} dishes carrying a price, a covers count and a complete costing:
 					{coversBasis.thisWeek} counted in the week of {weekLabel(thisWeek)}{coversBasis.carried
@@ -973,7 +973,7 @@
 								<p class="istale">
 									{u.staleDishIds.length}
 									{u.staleDishIds.length === 1 ? 'dish holds' : 'dishes hold'} an old number:
-									{u.staleDishIds.map(dishName).join(', ')} — open the sheet and take the book price.
+									{u.staleDishIds.map(dishName).join(', ')}: open the sheet and take the book price.
 								</p>
 							{/if}
 							<div class="iyield" data-print="hide">

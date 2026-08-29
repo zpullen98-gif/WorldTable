@@ -12,7 +12,7 @@
  * the targets live inside an IIFE, not at top level), slice the exact source span
  * of each target's initializer, and evaluate ONLY that expression in a locked-down
  * vm context. Every target initializer is a pure literal: no identifier
- * references, no calls — so nothing DOM-adjacent is ever executed. acorn only
+ * references, no calls, so nothing DOM-adjacent is ever executed. acorn only
  * parses the surrounding script; it never runs it.
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -189,7 +189,7 @@ export function extract(html) {
 
 	sites.sort((a, b) => a.pos - b.pos);
 
-	// Pass 2 — evaluate in source order into ONE shared sandbox. The sandbox
+	// Pass 2: evaluate in source order into ONE shared sandbox. The sandbox
 	// starts with a null prototype and never receives anything but the values we
 	// just extracted, so a reference can only ever resolve to prior pure data.
 	const sandbox = vm.createContext(Object.create(null));

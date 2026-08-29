@@ -74,7 +74,7 @@
 	 * it changes which sentence Today opens with and what is offered first.
 	 *
 	 * The three are kept apart deliberately. A chef's work has NO end state, so
-	 * giving them a course percentage is the exact lie the old band told — it
+	 * giving them a course percentage is the exact lie the old band told: it
 	 * reported the ten-semester course complete after 45 cooks of anything. The
 	 * student is the only role with fixed denominators (45 dishes, 48 taught
 	 * skills), so the student is the only role that gets a percentage.
@@ -127,7 +127,7 @@
 						{#if dishes >= 4}
 							<span class="oot-today-n">{dishes}</span> dishes on the house menu. Learn to say them.
 						{:else if dishes}
-							<span class="oot-today-n">{dishes}</span> dishes entered so far — the drill opens at four.
+							<span class="oot-today-n">{dishes}</span> dishes entered so far: the drill opens at four.
 						{:else}
 							The house menu is not in yet.
 						{/if}

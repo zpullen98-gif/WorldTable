@@ -7,7 +7,7 @@
  * Kept as pure functions so they are unit-testable, which the originals were not.
  *
  * Deliberately NOT replaced with structured quantity parsing. That is a large
- * project with a low ceiling here — the corpus writes quantities a dozen ways
+ * project with a low ceiling here: the corpus writes quantities a dozen ways
  * ("1 1/2 tsp", "½", "80/20", "180°C", "a confident ½-inch") and a parser that
  * handles all of them is strictly more code than a regex that rewrites in place.
  */
@@ -81,7 +81,7 @@ export function scaleLine(s: string, x: number): string {
 
 		// "1 can (395g)" states the size of ONE package. You cannot buy a 790g
 		// can. Restricted to package nouns because the general case is genuinely
-		// ambiguous — "Juice of 6-8 limes (about 150ml)" SHOULD scale, and so
+		// ambiguous: "Juice of 6-8 limes (about 150ml)" SHOULD scale, and so
 		// should "500g flour (450g white + 50g whole wheat)".
 		const open = str.lastIndexOf('(', off);
 		const closed = str.lastIndexOf(')', off);

@@ -5,7 +5,7 @@
  * least one flag was true. That is a display bug with a dangerous direction.
  *
  * MEASURED: 101 of 970 recipes have all seven displayed flags false and
- * therefore render NOTHING AT ALL. Hummus is one of them — over an ingredient
+ * therefore render NOTHING AT ALL. Hummus is one of them: over an ingredient
  * line reading "150g good tahini". So is mapo tofu, over soy. A reader who has
  * learned that this app lists allergens reads that silence as "no allergens",
  * when what it means is "this app did not look".

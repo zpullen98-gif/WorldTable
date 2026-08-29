@@ -1,5 +1,5 @@
 /**
- * build:pages — the production build as GitHub Pages serves it.
+ * build:pages, the production build as GitHub Pages serves it.
  *
  * A wrapper rather than an env prefix, for the same reason build-quick.mjs is
  * one, plus a worse one specific to this variable:

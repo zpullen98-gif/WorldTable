@@ -10,7 +10,7 @@
  * something invented.
  */
 import type { PantryGroup, Recipe, Course, Difficulty, DietFlags } from './types';
-// The guide's own allergen matcher, pure and importable — see the diet note below.
+// The guide's own allergen matcher, pure and importable; see the diet note below.
 import { deriveDiet } from '../../tools/derive/diet.mjs';
 import { bySlug } from './data';
 import { slugify } from './slug';
@@ -160,7 +160,7 @@ export function buildFamilyRecipe(
 		 * a human endorsement stapled on, for a family recipe that could be
 		 * peanut brittle. diet.mjs is a pure module with no imports, so the same
 		 * matcher the guide's 970 recipes go through runs here on the author's
-		 * own ingredient lines. Only `vegetarian` stays the author's claim — that
+		 * own ingredient lines. Only `vegetarian` stays the author's claim: that
 		 * is a judgement about the dish; the allergen flags are facts about the
 		 * text, and the text is right there.
 		 */

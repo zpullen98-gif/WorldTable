@@ -1,7 +1,7 @@
 import { defineConfig } from '@playwright/test';
 
 /**
- * E2E tests run against the PRODUCTION build served by vite preview — the same
+ * E2E tests run against the PRODUCTION build served by vite preview: the same
  * bytes a user gets, service worker included. Run `npm run build` first; the
  * webServer block only starts the static server, it does not rebuild.
  */

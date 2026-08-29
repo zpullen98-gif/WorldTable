@@ -97,7 +97,7 @@
 	// Chapters that exist only in the family shelf get a rail entry of their
 	// own, grouped under "The Family Chapter". A family chapter whose slug
 	// collides with a guide chapter (someone filing under "Italian") is skipped
-	// here — those recipes already count into the existing rail row.
+	// here: those recipes already count into the existing rail row.
 	const railChapters = $derived.by(() => {
 		if (!familyRecipes.length) return chapters;
 		const synthesized = new Map<string, ChapterRef>();

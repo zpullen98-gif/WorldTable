@@ -66,7 +66,7 @@
 	<header class="head">
 		<h1>The Repertoire</h1>
 		<p class="lede">
-			Not what you have read — what you can cook. Every dish you have made, how long ago, and which
+			Not what you have read. What you can cook. Every dish you have made, how long ago, and which
 			ones are slipping. A dish comes back on a schedule that widens each time the plate is right
 			and narrows when it is not.
 		</p>
@@ -253,7 +253,7 @@
 	}
 
 	/* One badge, three weights. Colour is not the only signal: each carries its
-	   own word — because a service pass is exactly where a red/amber-only cue
+	   own word, because a service pass is exactly where a red/amber-only cue
 	   fails, and so does anyone reading this in monochrome print. */
 	.badge {
 		flex: none;
@@ -267,7 +267,7 @@
 		white-space: nowrap;
 	}
 	/* --turmeric-deep, not --turmeric. The plain accent measures 3.53:1 on day
-	   service's paper, which fails AA at this size — the same defect the
+	   service's paper, which fails AA at this size, the same defect the
 	   recipe page's "where it goes wrong" label shipped with. The deep token
 	   exists precisely for accent text and is AA in both services. */
 	.coldbadge {

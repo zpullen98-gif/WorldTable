@@ -4,7 +4,7 @@
  * The guide states the whole method in "Menu Economics: Food Cost, Yield & Par"
  * and reaches three arbitrary recipes with it. This is that entry made to
  * compute, against the dishes a venue has already entered on The Kitchen's Menu
- * — which is the one place in this app that already knows a dish's price.
+ *, which is the one place in this app that already knows a dish's price.
  *
  * ## Yield is the entire point
  *
@@ -69,7 +69,7 @@ export interface PricedItem {
 }
 
 /**
- * The costable part of a prep — deliberately the minimum, so costing.ts does
+ * The costable part of a prep, deliberately the minimum, so costing.ts does
  * not have to know that a prep also carries a station, a par and a shelf life.
  * The full record lives in persistence/house.ts.
  */
@@ -454,7 +454,7 @@ export function engineerMenu(
 		sold: number | null;
 		/**
 		 * Same closure as RollupDish.costed, worse consequence here: an uncosted
-		 * dish's contribution is price minus NOTHING — the full menu price — so
+		 * dish's contribution is price minus NOTHING, the full menu price, so
 		 * the quadrant chart crowned dishes nobody had costed as the menu's top
 		 * stars AND inflated the mean every real dish was judged against.
 		 */

@@ -21,7 +21,7 @@
       "term": "The Pass & Expediting",
       "category": "The Professional Kitchen",
       "moduleId": "srv-room",
-      "prompt": "THE __ is the counter where plates leave the kitchen and the chef's standards are enforced one plate at a time — whoever runs it (chef or EXPEDITER/'expo') is air-traffic control: calling orders, sequencing stations so a table's dishes land together, wiping rims, checking temps, and bouncing anything sub-standard. The call-and-response language: 'FIRE table 12' (cook it now), 'ALL DAY' (the running total per item,…",
+      "prompt": "THE __ is the counter where plates leave the kitchen and the chef's standards are enforced one plate at a time; whoever runs it (chef or EXPEDITER/'expo') is air-traffic control: calling orders, sequencing stations so a table's dishes land together, wiping rims, checking temps, and bouncing anything sub-standard. The call-and-response language: 'FIRE table 12' (cook it now), 'ALL DAY' (the running total per item,…",
       "field": "category"
     },
     {
@@ -77,7 +77,7 @@
       "term": "Acidity (The Backbone)",
       "category": "Wine & Beverage",
       "moduleId": "srv-structure",
-      "prompt": "The mouthwatering freshness that makes wine feel alive — and the single most food-friendly trait a wine can have: acid cuts fat, lifts salt, and resets the palate between bites (high-acid wines are the kitchen's squeeze of lemon in a glass: Riesling, Sauvignon Blanc, Chablis, Champagne, Barbera, Chianti). The governing rule: THE WINE MUST BE AT LEAST AS ACIDIC AS THE DISH: a vinaigrette or tomato sauce makes a soft…",
+      "prompt": "The mouthwatering freshness that makes wine feel alive, and the single most food-friendly trait a wine can have: acid cuts fat, lifts salt, and resets the palate between bites (high-acid wines are the kitchen's squeeze of lemon in a glass: Riesling, Sauvignon Blanc, Chablis, Champagne, Barbera, Chianti). The governing rule: THE WINE MUST BE AT LEAST AS ACIDIC AS THE DISH: a vinaigrette or tomato sauce makes a soft…",
       "field": "category"
     },
     {
@@ -117,7 +117,7 @@
       "term": "Terroir & Old World vs. New World",
       "category": "Wine & Beverage",
       "moduleId": "srv-structure",
-      "prompt": "__: the argument that place is tasteable — soil, slope, climate, and tradition expressed in the glass; the entire logic of European labeling, where wines are named for WHERE (Chablis, Barolo, Sancerre) on the assumption you know the grape. NEW __ labels name the GRAPE (Napa Cabernet, Marlborough Sauvignon Blanc), historically riper, fruitier, oakier styles, though the stylistic border blurs more every vintage. For…",
+      "prompt": "__: the argument that place is tasteable: soil, slope, climate, and tradition expressed in the glass; the entire logic of European labeling, where wines are named for WHERE (Chablis, Barolo, Sancerre) on the assumption you know the grape. NEW __ labels name the GRAPE (Napa Cabernet, Marlborough Sauvignon Blanc), historically riper, fruitier, oakier styles, though the stylistic border blurs more every vintage. For…",
       "field": "category"
     },
     {
@@ -181,7 +181,7 @@
       "term": "Cabernet Sauvignon & the Bordeaux Blend",
       "category": "Wine & Beverage",
       "moduleId": "srv-cellar-reds",
-      "prompt": "The world's most planted noble red — blackcurrant, cedar, graphite, firm tannin, built for oak and age. Its homeland logic: __ __ it (Left Bank: Cab-led over gravel — Médoc, Pauillac) with MERLOT (Right Bank–led: plummy, supple — Pomerol, Saint-Émilion) plus Cab Franc and friends, each grape patching the others' weather risks — the __ as insurance policy that became a style. New World icons: Napa (riper, plusher),…",
+      "prompt": "The world's most planted noble red: blackcurrant, cedar, graphite, firm tannin, built for oak and age. Its homeland logic: __ __ it (Left Bank: Cab-led over gravel, Médoc, Pauillac) with MERLOT (Right Bank–led: plummy, supple, Pomerol, Saint-Émilion) plus Cab Franc and friends, each grape patching the others' weather risks: the __ as insurance policy that became a style. New World icons: Napa (riper, plusher),…",
       "field": "category"
     },
     {
@@ -197,7 +197,7 @@
       "term": "Syrah, Grenache & the Rhône School",
       "category": "Wine & Beverage",
       "moduleId": "srv-cellar-reds",
-      "prompt": "The __'s two voices. __ (northern __: Côte-Rôtie, Hermitage; 'Shiraz' in Australia's louder accent): blackberry, black pepper, olive, smoked meat, the wine that tastes like the grill it belongs next to (lamb, sausages, anything charred: match smoke with savory). __ (Garnacha in Spain): strawberry-spiced, high-alcohol warmth — the G in GSM blends and the engine of Châteauneuf-du-Pape and Priorat, brilliant with…",
+      "prompt": "The __'s two voices. __ (northern __: Côte-Rôtie, Hermitage; 'Shiraz' in Australia's louder accent): blackberry, black pepper, olive, smoked meat, the wine that tastes like the grill it belongs next to (lamb, sausages, anything charred: match smoke with savory). __ (Garnacha in Spain): strawberry-spiced, high-alcohol warmth: the G in GSM blends and the engine of Châteauneuf-du-Pape and Priorat, brilliant with…",
       "field": "category"
     },
     {
@@ -229,7 +229,7 @@
       "term": "Prosecco, Cava, Pét-Nat & the Sparkling Bench",
       "category": "Wine & Beverage",
       "moduleId": "srv-cellar-bubbles-fortified",
-      "prompt": "The rest of the bubble family, each its own method and margin. __: tank method (Charmat, refermented in steel, not bottle): fresh pear-blossom fruit, gentle price, the spritz's engine (a wine list's aperitivo cash flow). __: traditional method at Spanish prices — lees character, citrus-almond dryness, the best value bubbles-with-dinner on most lists. CRÉMANT (Alsace, Loire, Bourgogne): France's non-Champagne…",
+      "prompt": "The rest of the bubble family, each its own method and margin. __: tank method (Charmat, refermented in steel, not bottle): fresh pear-blossom fruit, gentle price, the spritz's engine (a wine list's aperitivo cash flow). __: traditional method at Spanish prices: lees character, citrus-almond dryness, the best value bubbles-with-dinner on most lists. CRÉMANT (Alsace, Loire, Bourgogne): France's non-Champagne…",
       "field": "category"
     },
     {
@@ -325,7 +325,7 @@
       "term": "Nebbiolo",
       "category": "The Grape Atlas",
       "moduleId": "srv-grape-atlas",
-      "prompt": "The fog grape of Piedmont (nebbia) and Italy's most demanding aristocrat — deceptively pale in the glass, then an ambush: tar and roses (the classic descriptor), dried cherry, licorice, and MASSIVE tannin-plus-acid structure that wants years and rewards decades. Barolo and Barbaresco are the twin crowns (village-level terroir obsession to rival Burgundy); Langhe __ is the honest early-drinking entry; Valtellina's…",
+      "prompt": "The fog grape of Piedmont (nebbia) and Italy's most demanding aristocrat: deceptively pale in the glass, then an ambush: tar and roses (the classic descriptor), dried cherry, licorice, and MASSIVE tannin-plus-acid structure that wants years and rewards decades. Barolo and Barbaresco are the twin crowns (village-level terroir obsession to rival Burgundy); Langhe __ is the honest early-drinking entry; Valtellina's…",
       "field": "category"
     },
     {
@@ -349,7 +349,7 @@
       "term": "Merlot",
       "category": "The Grape Atlas",
       "moduleId": "srv-grape-atlas",
-      "prompt": "Cabernet's plush sibling and victim of one movie too many — plum, black cherry, chocolate, and velvet where Cabernet is angles: softer tannin, earlier drinking, the approachable half of the Bordeaux blend. Its greatness is real: Pomerol's Right Bank (Pétrus is __) makes some of earth's most expensive wine from it, and Washington State's versions have quiet muscle. THE FOOD ROLE: everything Cabernet does but gentler:…",
+      "prompt": "Cabernet's plush sibling and victim of one movie too many: plum, black cherry, chocolate, and velvet where Cabernet is angles: softer tannin, earlier drinking, the approachable half of the Bordeaux blend. Its greatness is real: Pomerol's Right Bank (Pétrus is __) makes some of earth's most expensive wine from it, and Washington State's versions have quiet muscle. THE FOOD ROLE: everything Cabernet does but gentler:…",
       "field": "category"
     },
     {
@@ -357,7 +357,7 @@
       "term": "Malbec",
       "category": "The Grape Atlas",
       "moduleId": "srv-grape-atlas",
-      "prompt": "France's emigrant made Argentina's flag: inky purple, blackberry and plum, violet perfume, sweet spice, and plush tannin: power wearing velvet. Mendoza's high-altitude vineyards (sun plus cool nights) built the modern style; Cahors in southwest France keeps the rustic ancestral version (the 'black wine' — earthier, firmer); Salta's extreme-altitude bottles add floral lift. THE FOOD DOCTRINE is written in Argentina:…",
+      "prompt": "France's emigrant made Argentina's flag: inky purple, blackberry and plum, violet perfume, sweet spice, and plush tannin: power wearing velvet. Mendoza's high-altitude vineyards (sun plus cool nights) built the modern style; Cahors in southwest France keeps the rustic ancestral version (the 'black wine', earthier, firmer); Salta's extreme-altitude bottles add floral lift. THE FOOD DOCTRINE is written in Argentina:…",
       "field": "category"
     },
     {
@@ -397,7 +397,7 @@
       "term": "Beer at the Table & the Carbonation Advantage",
       "category": "Wine & Beverage",
       "moduleId": "srv-other-drinks",
-      "prompt": "__'s structural edge over wine at the __ is __ plus BITTERNESS plus lower alcohol — scrubbing, refreshing, and chili-safe where wine struggles: that is why the world's spiciest cuisines drink lager, why pilsner beside fried chicken competes with Champagne at a tenth the price, and why a saison can walk an entire tasting menu. The pairing grammar mirrors wine's: match INTENSITY (delicate dishes drown under imperial…",
+      "prompt": "__'s structural edge over wine at the __ is __ plus BITTERNESS plus lower alcohol: scrubbing, refreshing, and chili-safe where wine struggles: that is why the world's spiciest cuisines drink lager, why pilsner beside fried chicken competes with Champagne at a tenth the price, and why a saison can walk an entire tasting menu. The pairing grammar mirrors wine's: match INTENSITY (delicate dishes drown under imperial…",
       "field": "category"
     },
     {
@@ -445,7 +445,7 @@
       "term": "Cheese Families",
       "category": "Dairy, Cheese & Pantry",
       "moduleId": "srv-cheese-spine",
-      "prompt": "A working taxonomy for menus and boards: FRESH (mozzarella, ricotta, chèvre, paneer, queso fresco — no aging, eat now); BLOOMY RIND (brie, camembert — white Penicillium rind ripening inward); WASHED RIND (taleggio, époisses — brine/booze-washed, orange, gloriously stinky, meeker inside than the smell); SEMI-HARD to HARD (gouda, manchego, cheddar, gruyère, and the grating giants parmigiano and pecorino — crystalline…",
+      "prompt": "A working taxonomy for menus and boards: FRESH (mozzarella, ricotta, chèvre, paneer, queso fresco: no aging, eat now); BLOOMY RIND (brie, camembert: white Penicillium rind ripening inward); WASHED RIND (taleggio, époisses: brine/booze-washed, orange, gloriously stinky, meeker inside than the smell); SEMI-HARD to HARD (gouda, manchego, cheddar, gruyère, and the grating giants parmigiano and pecorino: crystalline…",
       "field": "all"
     },
     {
@@ -533,7 +533,7 @@
       "term": "Fontina Val d'Aosta",
       "category": "Cheese Atlas",
       "moduleId": "srv-cheese-italy",
-      "prompt": "Alpine raw cow's milk from Italy's mountainous northwest — earthy, nutty, with a faint mushroom must under a brushed rind, and one of the great melting cheeses of the world: the heart of fonduta (Italy's fondue, crowned with white truffle when the gods allow). Its meltability is textbook physics (moist, buttery, moderate acid), which is why '__-style' fills every panini case; the Danish and Swedish versions are…",
+      "prompt": "Alpine raw cow's milk from Italy's mountainous northwest: earthy, nutty, with a faint mushroom must under a brushed rind, and one of the great melting cheeses of the world: the heart of fonduta (Italy's fondue, crowned with white truffle when the gods allow). Its meltability is textbook physics (moist, buttery, moderate acid), which is why '__-style' fills every panini case; the Danish and Swedish versions are…",
       "field": "category"
     },
     {
@@ -549,7 +549,7 @@
       "term": "Brie de Meaux",
       "category": "Cheese Atlas",
       "moduleId": "srv-cheese-france",
-      "prompt": "THE __ — raw cow's milk, AOP, from the Île-de-France: a wide wheel under a bloomy Penicillium candidum rind, ripening from a chalky core outward to a supple, mushroomy, faintly ammoniated cream at peak. The supermarket '__' bears the name the way a postcard bears Paris. Serve at full room temperature (a cold __ is a mute __); the rind is part of the composition. À point (perfectly ripe, bulging at the cut but not…",
+      "prompt": "THE __, raw cow's milk, AOP, from the Île-de-France: a wide wheel under a bloomy Penicillium candidum rind, ripening from a chalky core outward to a supple, mushroomy, faintly ammoniated cream at peak. The supermarket '__' bears the name the way a postcard bears Paris. Serve at full room temperature (a cold __ is a mute __); the rind is part of the composition. À point (perfectly ripe, bulging at the cut but not…",
       "field": "category"
     },
     {
@@ -589,7 +589,7 @@
       "term": "Reblochon",
       "category": "Cheese Atlas",
       "moduleId": "srv-cheese-france",
-      "prompt": "Savoie's supple raw-milk wheel, born of tax evasion: farmers 're-milked' (reblocher) after the assessor left, and the rich second milking became this: nutty, fruity, gently funky under a rosy washed rind. It exists in the global mind for one dish: TARTIFLETTE — potatoes, lardons, onions, and a whole __ melted over the top, the ski-lodge casserole that justifies winter. Export versions are pasteurized; in Savoie, the…",
+      "prompt": "Savoie's supple raw-milk wheel, born of tax evasion: farmers 're-milked' (reblocher) after the assessor left, and the rich second milking became this: nutty, fruity, gently funky under a rosy washed rind. It exists in the global mind for one dish: TARTIFLETTE: potatoes, lardons, onions, and a whole __ melted over the top, the ski-lodge casserole that justifies winter. Export versions are pasteurized; in Savoie, the…",
       "field": "category"
     },
     {
@@ -637,7 +637,7 @@
       "term": "Raclette",
       "category": "Cheese Atlas",
       "moduleId": "srv-cheese-alpine-iberia",
-      "prompt": "Both a cheese and a verb: the Alpine half-wheel is faced to heat and the molten layer scraped (racler) over potatoes, cornichons, and pickled onions — Swiss and Savoyard winter ritual turned global restaurant theater. The cheese itself: semi-firm, washed-rind adjacent, engineered by tradition to melt smooth and stretch modest, with a beefy-fruity depth that plain melters lack. The pickles are not garnish but…",
+      "prompt": "Both a cheese and a verb: the Alpine half-wheel is faced to heat and the molten layer scraped (racler) over potatoes, cornichons, and pickled onions, Swiss and Savoyard winter ritual turned global restaurant theater. The cheese itself: semi-firm, washed-rind adjacent, engineered by tradition to melt smooth and stretch modest, with a beefy-fruity depth that plain melters lack. The pickles are not garnish but…",
       "field": "category"
     },
     {
@@ -677,7 +677,7 @@
       "term": "Serra da Estrela",
       "category": "Cheese Atlas",
       "moduleId": "srv-cheese-alpine-iberia",
-      "prompt": "Portugal's mountain treasure and one of cheese's great textures: raw sheep's milk coagulated NOT with animal rennet but with cardoon thistle flower, a vegetal rennet that leaves the paste spoonably soft and adds a faint artichoke bitterness under the sweet, oily richness. At peak (amanteigado — 'buttered'), you slice off the top and spoon the interior onto bread like a savory custard. Portugal's Christmas table…",
+      "prompt": "Portugal's mountain treasure and one of cheese's great textures: raw sheep's milk coagulated NOT with animal rennet but with cardoon thistle flower, a vegetal rennet that leaves the paste spoonably soft and adds a faint artichoke bitterness under the sweet, oily richness. At peak (amanteigado, 'buttered'), you slice off the top and spoon the interior onto bread like a savory custard. Portugal's Christmas table…",
       "field": "category"
     },
     {
@@ -789,7 +789,7 @@
       "term": "Monterey Jack & Pepper Jack",
       "category": "Cheese Atlas",
       "moduleId": "srv-cheese-world",
-      "prompt": "California's mission-era original — a buttery, high-moisture melter that quietly does more work in American kitchens than any cheese with a fancier passport: quesadillas, burgers, mac blends (its moisture loosens where cheddar tightens). __ __ arms it with chiles. The revelation is DRY __: wheels aged out (a WWI-era accident when shipments stalled) into a nutty, crystalline grating cheese that stands honest…",
+      "prompt": "California's mission-era original: a buttery, high-moisture melter that quietly does more work in American kitchens than any cheese with a fancier passport: quesadillas, burgers, mac blends (its moisture loosens where cheddar tightens). __ __ arms it with chiles. The revelation is DRY __: wheels aged out (a WWI-era accident when shipments stalled) into a nutty, crystalline grating cheese that stands honest…",
       "field": "category"
     },
     {
@@ -949,7 +949,7 @@
       "term": "Chorizo: Spanish vs. Mexican",
       "category": "Charcuterie Atlas",
       "moduleId": "srv-charc-iberia",
-      "prompt": "One word, two products, endless recipe accidents. __ __: pork cured or semi-cured with PIMENTÓN (smoked paprika — the flavor and the color), sliceable and eaten as-is or simmered into stews, its brick-red fat the treasure that stains rice and eggs (dulce = sweet paprika, picante = hot). __ __: FRESH raw sausage, vinegar-tangy and chile-forward, always cooked: crumbled for tacos, queso fundido, and __ con huevos.…",
+      "prompt": "One word, two products, endless recipe accidents. __ __: pork cured or semi-cured with PIMENTÓN (smoked paprika, the flavor and the color), sliceable and eaten as-is or simmered into stews, its brick-red fat the treasure that stains rice and eggs (dulce = sweet paprika, picante = hot). __ __: FRESH raw sausage, vinegar-tangy and chile-forward, always cooked: crumbled for tacos, queso fundido, and __ con huevos.…",
       "field": "category"
     },
     {
@@ -973,7 +973,7 @@
       "term": "Fuet & Salchichón",
       "category": "Charcuterie Atlas",
       "moduleId": "srv-charc-iberia",
-      "prompt": "Catalonia's snacking salames. __ ('whip'): the thin, fast-cured stick under its white mold jacket — sweet, mild, faintly nutty, eaten in coins by the meter at every Catalan gathering; Vic is its capital. __: the broader Spanish salame seasoned with black pepper instead of paprika, chorizo's un-red sibling, proof that Spain's sausage identity isn't only pimentón. Both are the approachable end of the board: low…",
+      "prompt": "Catalonia's snacking salames. __ ('whip'): the thin, fast-cured stick under its white mold jacket: sweet, mild, faintly nutty, eaten in coins by the meter at every Catalan gathering; Vic is its capital. __: the broader Spanish salame seasoned with black pepper instead of paprika, chorizo's un-red sibling, proof that Spain's sausage identity isn't only pimentón. Both are the approachable end of the board: low…",
       "field": "category"
     },
     {
@@ -1125,7 +1125,7 @@
       "term": "Pastirma & Sujuk",
       "category": "Charcuterie Atlas",
       "moduleId": "srv-charc-world",
-      "prompt": "The Ottoman curing school. __ (Turkey/Armenia — basturma): whole beef muscles salted, PRESSED (the name means 'pressed'), dried, then jacketed in çemen — a fenugreek-garlic-paprika paste that seasons, seals, and stains the slices crimson at the rim; eaten paper-thin, or fried with eggs into the breakfast of Kayseri. __ (__): the fermented, dried beef sausage of the same world (garlic, cumin, sumac-adjacent spice),…",
+      "prompt": "The Ottoman curing school. __ (Turkey/Armenia, basturma): whole beef muscles salted, PRESSED (the name means 'pressed'), dried, then jacketed in çemen: a fenugreek-garlic-paprika paste that seasons, seals, and stains the slices crimson at the rim; eaten paper-thin, or fried with eggs into the breakfast of Kayseri. __ (__): the fermented, dried beef sausage of the same world (garlic, cumin, sumac-adjacent spice),…",
       "field": "category"
     },
     {
@@ -1157,7 +1157,7 @@
       "term": "Scotch, Irish & World Whisky",
       "category": "Cocktail & Bar",
       "moduleId": "srv-bar-bottles",
-      "prompt": "The malt __ beyond the corn belt. __: malted barley, used barrels (nuance over vanilla), 3+ years in Scotland: SINGLE MALT (one distillery, pot stills) vs. BLENDED (malt + grain __ — the volume standard, unfairly snubbed); PEAT is a choice, not a definition: Islay's smoke-iodine (Laphroaig school) vs. unpeated Speyside's orchard-honey (Glenlivet school) are both __, and 'I don't like __' usually means 'I met peat…",
+      "prompt": "The malt __ beyond the corn belt. __: malted barley, used barrels (nuance over vanilla), 3+ years in Scotland: SINGLE MALT (one distillery, pot stills) vs. BLENDED (malt + grain __, the volume standard, unfairly snubbed); PEAT is a choice, not a definition: Islay's smoke-iodine (Laphroaig school) vs. unpeated Speyside's orchard-honey (Glenlivet school) are both __, and 'I don't like __' usually means 'I met peat…",
       "field": "category"
     },
     {
@@ -1221,7 +1221,7 @@
       "term": "The Liqueur Shelf: Orange, Maraschino, Chartreuse & Friends",
       "category": "Cocktail & Bar",
       "moduleId": "srv-bar-bottles",
-      "prompt": "The sweetened specialists that make classics classic. __ (the most-reached-for family): triple sec/dry curaçao. COINTREAU is the margarita and Sidecar's clean standard; GRAND MARNIER adds cognac's weight (the 'Cadillac' upcharge with an actual reason). __ (Luxardo): funky cherry-almond from whole crushed cherries — the Last Word, Aviation, Hemingway daiquiri's secret handshake; nothing like the neon jar. __: the…",
+      "prompt": "The sweetened specialists that make classics classic. __ (the most-reached-for family): triple sec/dry curaçao. COINTREAU is the margarita and Sidecar's clean standard; GRAND MARNIER adds cognac's weight (the 'Cadillac' upcharge with an actual reason). __ (Luxardo): funky cherry-almond from whole crushed cherries: the Last Word, Aviation, Hemingway daiquiri's secret handshake; nothing like the neon jar. __: the…",
       "field": "category"
     },
     {

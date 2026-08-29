@@ -169,7 +169,7 @@
 	}
 </script>
 
-<svelte:head><title>Drill the Menu — The World Table</title></svelte:head>
+<svelte:head><title>Drill the Menu: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<article class="sheet">
@@ -177,7 +177,7 @@
 		<p class="crumbs"><a href="{base}/menu">◂ My Menu</a></p>
 
 		<p class="lede">
-			The Kitchen’s Menu, drilled the way the lexicon is — descriptions, ingredients, prices and
+			The Kitchen’s Menu, drilled the way the lexicon is: descriptions, ingredients, prices and
 			allergens, asked the way a guest asks.
 		</p>
 
@@ -256,7 +256,7 @@
 						     learn a blank as "none". -->
 						<p class="def small">
 							{#if !d.allergensCheckedAt}
-								<b>Allergens not marked</b> — ask the kitchen before you answer this at a table.
+								<b>Allergens not marked</b>: ask the kitchen before you answer this at a table.
 							{:else if d.allergens.length}
 								Allergens: {d.allergens.join(', ')}.
 							{:else}
@@ -265,7 +265,7 @@
 							{#if d.price}&nbsp;{d.price}.{/if}
 						</p>
 					{:else}
-						<p class="def">Say the description, the build and the allergens — then flip.</p>
+						<p class="def">Say the description, the build and the allergens, then flip.</p>
 					{/if}
 					<div class="flashtools">
 						{#if revealed}

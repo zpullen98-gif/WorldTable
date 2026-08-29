@@ -372,7 +372,7 @@ export function houseSnapshot(house: HouseRecord): {
  * (`SessionState.menuDishes`) that absorbSession is still taking up; every
  * .wtjson ever written carries them there and moving them would strand the lot.
  * Preps never had that legacy, and mergeSessions() spreads `...incoming` before
- * its named fields — so a prep placed in `data` would be copied straight into
+ * its named fields, so a prep placed in `data` would be copied straight into
  * the per-profile `session::<profileId>` record and persisted there. A prep is
  * a fact about the VENUE. That is the one line this app does not cross.
  *

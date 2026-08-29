@@ -9,7 +9,7 @@
  * THIS IS THE ONLY DECLARATION OF window.OOT. There used to be a second, much
  * narrower one inside src/lib/persistence/db.ts, describing profiles as
  * `{ key(base: string): string }` and nothing else. Two declarations of the
- * same property do not merge into a union — TypeScript raises TS2717
+ * same property do not merge into a union: TypeScript raises TS2717
  * ("Subsequent property declarations must have the same type"), so adding a
  * wider one elsewhere is a compile error rather than a widening. Keep it here.
  *

@@ -13,7 +13,7 @@
  * ## What this module deliberately does NOT do
  *
  * It ships no per-recipe hazard flag of any kind. Five candidate rules were
- * written and measured — undercooked-protein by stated temperature and by
+ * written and measured: undercooked-protein by stated temperature and by
  * doneness word, raw-protein, live-shellfish, cook-chill, preserve-uncooked,
  * and all five failed. Not marginally: the stated-temperature rule scored 0 of
  * 12 (every hit was correctly-cooked rare beef or rested pork); the raw-protein

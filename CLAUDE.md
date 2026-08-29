@@ -69,7 +69,7 @@ keyword tables.
   inconsistent about "pork (or shiitake for veg)" constructions. The build gates
   only fail on unambiguous errors; see the long note in `tools/derive/diet.mjs`.
 
-## Two bugs fixed by the architecture — do not "re-fix" them
+## Two bugs fixed by the architecture: do not "re-fix" them
 
 The original bound `addEventListener` to function *values* that were later
 reassigned, so two features silently degraded on first interaction:
@@ -125,14 +125,14 @@ Two systems existed and never met. `raw/TECH.json` tagged recipes by keyword but
 was written around DISHES (Khachapuri shaping, Pierogi, Arepas), so it lit up
 401 of 970 and rendered nowhere but a YouTube link. Meanwhile the Lexicon holds
 45 hand-written technique definitions that reached almost nothing, because
-`crosslinks.mjs` caps a term at three recipes — "Braising & Stewing" linked to
+`crosslinks.mjs` caps a term at three recipes: "Braising & Stewing" linked to
 ONE recipe while 27 braise.
 
 `tools/derive/technique-table.mjs` marries them:
 
 - **SUPPLEMENT** appends the foundations the original omitted (searing,
   sweating, steaming, blanching, proofing, rendering…). The raw table is deep
-  round-trip gated by verify:data, so it is never edited — improvements append.
+  round-trip gated by verify:data, so it is never edited; improvements append.
 - **LEXICON_ANCHOR** maps a technique label to the Lexicon term that defines it.
   It is hand-authored, not string-matched: "Tempering a custard" and "Tempering
   chocolate" are one word apart and anchor to different halves of one entry.
@@ -214,7 +214,7 @@ test, and scheduling is code that must be tested rather than eyeballed.
   session collapsed every repeat and backdated the survivor. It keys on
   `slug|at` now, so re-importing your own export is still idempotent.
 
-## The palate — structure over the guide's own prose
+## The palate: structure over the guide's own prose
 
 The Flavor Atlas already held the whole of this and it reached FIVE recipes.
 "The Repair Table: Balancing a Dish" is the seasoning chart every cook works
@@ -406,7 +406,7 @@ ceiling sentence shipped wrong the first time because it was reasoned from other
 figures rather than measured.
 
 **Any field added to SessionState must be NAMED in mergeSessions**, or the
-next .wtjson import erases it — a genuine export always carries every key
+next .wtjson import erases it: a genuine export always carries every key
 present-and-empty. This has now bitten four times (cookedLog, shoppingChecks,
 stepActuals, planRun); deep-pass.test.ts pins the last two. The same rule
 holds for HouseRecord and adoptImport.
@@ -461,7 +461,7 @@ because an old price is dead weight, and old waste is the trend.
 
 They ride in a `house` block that is a **sibling of `data`**, never inside it.
 `mergeSessions` spreads `...incoming` ahead of its named fields, so anything in
-`data` is copied into the per-profile `session::<profileId>` record — and a prep,
+`data` is copied into the per-profile `session::<profileId>` record, and a prep,
 a costing and an item price are facts about the VENUE. `menuDishes`/`dishCosts`
 sit in `data` only because they have a session-side legacy being absorbed.
 

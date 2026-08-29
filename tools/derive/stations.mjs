@@ -158,7 +158,7 @@ export const STATION_MAP = {
 	"Frying the paste until the oil splits": ["saucier"],  // Unanimous. Declined the entremetier audit's addition: this is a sauce base, and the guide's brigade entry gives sauces to the saucier by name.
 	"Griddle & plancha work": ["rotisseur"],  // Contested. Entremetier audit disowned it: the definition sells the flat-top on 'smash burgers' entire physics', and the roster is cheesesteaks, reuben
 	"Grilling over live coals": ["rotisseur"],  // Unanimous.
-	"Hand-pulled noodles": ["patissier"],  // Contested. Same anchor as Fresh pasta — 'Gluten & Hydration', one recipe (lagman). Nothing in the entry is about broth or the boil; it is developing a
+	"Hand-pulled noodles": ["patissier"],  // Contested. Same anchor as Fresh pasta, 'Gluten & Hydration', one recipe (lagman). Nothing in the entry is about broth or the boil; it is developing a
 	"Handling phyllo": ["patissier"],  // Unanimous.
 	"Hollandaise": ["saucier"],  // Unanimous.
 	"Icing & frosting": ["patissier"],  // Unanimous.
@@ -172,7 +172,7 @@ export const STATION_MAP = {
 	"Letter-folding dough": ["patissier"],  // Unanimous.
 	"Low & slow smoking": ["rotisseur"],  // Unanimous.
 	"Making a roux": ["saucier"],  // Unanimous.
-	"Marinating: acid, salt and time": ["rotisseur"],  // Contested three ways. Both the garde-manger and the saucier audits disowned it; what is left is the fire cook, and the roster agrees — carne asada, je
+	"Marinating: acid, salt and time": ["rotisseur"],  // Contested three ways. Both the garde-manger and the saucier audits disowned it; what is left is the fire cook, and the roster agrees: carne asada, je
 	"Mashing & puréeing": ["entremetier"],  // Unanimous.
 	"Paella & socarrat": ["entremetier"],  // Unanimous.
 	"Pie crust & blind baking": ["patissier"],  // Unanimous.
@@ -186,7 +186,7 @@ export const STATION_MAP = {
 	"Risotto method": ["entremetier"],  // Unanimous.
 	"Roasting in a hot oven": ["rotisseur"],  // Unanimous.
 	"Rubbing fat into flour": ["patissier"],  // Unanimous.
-	"Salted water & the float test": ["entremetier", "poissonnier"],  // SPLIT per poissonnier audit — the fix that saves the fish station. It is the guide's only home for POACHING and court-bouillon, tagged semester 9 'Sea
+	"Salted water & the float test": ["entremetier", "poissonnier"],  // SPLIT per poissonnier audit, the fix that saves the fish station. It is the guide's only home for POACHING and court-bouillon, tagged semester 9 'Sea
 	"Salting to draw the water out": ["entremetier", "garde-manger"],  // SPLIT per garde-manger audit: same 'Brining: Wet, Dry & Cures' anchor as the two cures everyone agrees are cold-kitchen, and tzatziki, raita, horiatik
 	"Sautéing & the shallow fry": ["saucier"],  // Unanimous. Declined the entremetier audit's addition: the guide's own brigade entry reads 'SAUCIER (sauces/sautés)', and the guide's text outranks an 
 	"Scoring": ["patissier"],  // Contested. Rotisseur audit struck the fire half: the query is literally 'scoring bread dough technique', the anchor is Proofing/Oven Spring, and one g
@@ -237,7 +237,7 @@ export function buildStations(lexicon, techniques) {
 	for (const s of STATIONS) {
 		if (!entry.definition.includes(s.evidence)) {
 			problems.push(
-				`stations: the brigade entry no longer describes ${s.name} as ${JSON.stringify(s.evidence)} — ` +
+				`stations: the brigade entry no longer describes ${s.name} as ${JSON.stringify(s.evidence)}; ` +
 					'the station list is the guide\'s, not ours'
 			);
 		}
@@ -302,7 +302,7 @@ export function buildStations(lexicon, techniques) {
 	const orphans = techniques.filter((t) => !accounted.has(t.label)).map((t) => t.label);
 	if (orphans.length) {
 		problems.push(
-			`stations: ${orphans.length} technique(s) are accounted for nowhere — ` +
+			`stations: ${orphans.length} technique(s) are accounted for nowhere: ` +
 				orphans.slice(0, 5).join(', ')
 		);
 	}

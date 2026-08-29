@@ -1,7 +1,7 @@
 /**
  * Latin subsets only.
  *
- * The unsuffixed @fontsource entrypoints pull every subset the family ships —
+ * The unsuffixed @fontsource entrypoints pull every subset the family ships:
  * Cyrillic, Greek, Vietnamese, which came to 96 font files and 1.9MB, all of
  * it precached for offline and none of it reachable by this corpus. latin-ext
  * covers the accented dish names (Ragù, Niçoise, Crème Brûlée, Schwäbischer,

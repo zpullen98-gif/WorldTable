@@ -4,7 +4,7 @@
  * Lists every recipe whose shipped "from the pass" note (raw, or overlaid from
  * notes.json) is under the 180-char bar, grouped by chapter, thinnest chapters
  * first. Run with a chapter name to dump that chapter's full records: name,
- * ingredients, method, current note — which is the working material for
+ * ingredients, method, current note, which is the working material for
  * writing the replacement.
  */
 import { readFileSync, existsSync } from 'node:fs';
@@ -59,7 +59,7 @@ for (const r of thin) {
 	byChapter.get(r.chapter).push(r);
 }
 
-console.log(`\n  the backfill ledger — ${thin.length} of ${records.length} notes under 180 chars`);
+console.log(`\n  the backfill ledger: ${thin.length} of ${records.length} notes under 180 chars`);
 console.log(`  ${Object.keys(NOTES).length} already rewritten in notes.json\n`);
 
 const rows = [...byChapter.entries()].sort((a, b) => b[1].length - a[1].length);

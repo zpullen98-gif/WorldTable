@@ -230,7 +230,7 @@ export interface TechniqueStandard {
 	/** The technique's display label, carried so the recipe page need not load
 	 *  techniques.json (119KB) merely to name it. */
 	label: string;
-	/** How many recipes exercise this technique — the measure of how much of
+	/** How many recipes exercise this technique: the measure of how much of
 	 *  the corpus one piece of writing reaches. */
 	recipeCount: number;
 	/** 3–5 marks, checkable at the pan, in the order a cook would check them. */

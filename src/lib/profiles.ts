@@ -34,7 +34,7 @@ function api(): OotProfiles | null {
 	}
 }
 
-/** True when the shared layer is present — i.e. we are inside Outside Of Time. */
+/** True when the shared layer is present, i.e. we are inside Outside Of Time. */
 export function hasProfiles(): boolean {
 	return api() !== null;
 }
@@ -111,7 +111,7 @@ export function markPathStep(wing: string, stepId: string): boolean {
  * Follow the current profile.
  *
  * Fires IMMEDIATELY with current() on registration, so the handler must be
- * idempotent. Returns an unsubscribe — a no-op standalone, so callers can wire
+ * idempotent. Returns an unsubscribe, a no-op standalone, so callers can wire
  * it unconditionally.
  *
  * It will NOT fire when a profile is added or when a path step is marked in

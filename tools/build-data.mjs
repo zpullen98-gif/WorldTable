@@ -11,7 +11,7 @@
  * Output (src/lib/data/):
  *   recipes.index.json  : RecipeSummary[], shipped eagerly for the grid
  *   recipes.full.json   : RecipeDetail[], lazy + precached for offline
- *   chapters.json       — ChapterRef[], the cuisine rail
+ *   chapters.json       : ChapterRef[], the cuisine rail
  *   lexicon.json, pantry.json, study.json, substitutions.json, cellar.json
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
@@ -309,7 +309,7 @@ const termToSlug = new Map(D.map((e, i) => [e.t, lexSlugs[i]]));
  * The Path of Study, with the skills each semester actually teaches.
  *
  * The curriculum shipped with a reading list (Lexicon terms, authored) but no
- * account of its own technique content — so the semester titled "The Braise"
+ * account of its own technique content, so the semester titled "The Braise"
  * could not say that it drills searing harder than braising, which it does:
  * four of its five dishes sear, and a braise IS sear-then-simmer.
  *
@@ -651,7 +651,7 @@ if (judgement.length) {
 }
 
 /**
- * The vegan claim, gated — because it is an ASSERTION, not an omission.
+ * The vegan claim, gated, because it is an ASSERTION, not an omission.
  *
  * A missing allergen flag says "we did not find one". A Vegan badge says "there
  * is none", to a guest who is not going to read the ingredient list underneath
@@ -1043,7 +1043,7 @@ console.log('');
 problems.push(...palateProblems);
 
 /**
- * The technique standards — gated in both directions, with the numbers in the
+ * The technique standards: gated in both directions, with the numbers in the
  * module's own headline read back out of it.
  *
  * See tools/derive/technique-standards.mjs. Same shape rules as the dish
@@ -1244,7 +1244,7 @@ problems.push(...palateProblems);
 		for (const m of s.marks) {
 			if (!m || typeof m !== 'object' || typeof m.id !== 'string' || !m.id) {
 				problems.push(
-					`${s.slug} has a mark with no id — run \`node tools/mint-mark-ids.mjs\``
+					`${s.slug} has a mark with no id: run \`node tools/mint-mark-ids.mjs\``
 				);
 				continue;
 			}

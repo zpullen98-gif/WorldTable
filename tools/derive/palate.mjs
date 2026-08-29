@@ -216,7 +216,7 @@ export function buildPalate(lexicon) {
 			if (!hay.includes(lever.token)) {
 				problems.push(
 					`palate: "${f.key}" no longer mentions "${lever.token}" ` +
-						`(lever "${lever.move}") — the entry was rewritten under it`
+						`(lever "${lever.move}"): the entry was rewritten under it`
 				);
 			}
 		}

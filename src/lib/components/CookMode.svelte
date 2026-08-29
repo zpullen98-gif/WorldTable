@@ -342,7 +342,7 @@
 				<button class="chip" onclick={() => grade('missed')}>Missed it</button>
 			</div>
 			<p class="passnote">
-				An honest answer here is the whole point — it sets how soon this dish comes back.
+				An honest answer here is the whole point: it sets how soon this dish comes back.
 			</p>
 		</div>
 	{:else}

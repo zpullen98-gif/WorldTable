@@ -77,7 +77,7 @@ export async function seedSession(
 				// BOTH keys. db.ts KEY() returns the bare 'session' only while no
 				// non-legacy profile is current; the moment a roster exists it
 				// returns 'session::<id>' and a seed written only to the base key
-				// leaves every seeded test reading an EMPTY session — silently
+				// leaves every seeded test reading an EMPTY session: silently
 				// restoring the blind spot the SEEDED a11y block exists to close.
 				tx.objectStore('state').put(state, 'session');
 				if (id) tx.objectStore('state').put(state, 'session::' + id);
@@ -88,7 +88,7 @@ export async function seedSession(
 }
 
 /**
- * Put a HOUSE record on the page before it loads — the venue's half of the
+ * Put a HOUSE record on the page before it loads, the venue's half of the
  * split that seedSession covers for the person.
  *
  * Exists because the transport spec needs a venue with a prep-backed costing,

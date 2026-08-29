@@ -66,7 +66,7 @@
 										? 'Mark as cooked'
 										: n === 1
 											? 'Cooked once: tap to undo'
-											: `Cooked ${n} times — tap to remove the most recent`}
+											: `Cooked ${n} times: tap to remove the most recent`}
 								>
 									{n === 0 ? '○' : n === 1 ? '✓' : n}
 								</button>

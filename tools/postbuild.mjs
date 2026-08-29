@@ -29,7 +29,7 @@ copyFileSync(src, join(BUILD, 'shell.html'));
 copyFileSync(src, join(BUILD, '404.html'));
 
 /**
- * .nojekyll — without it GitHub Pages serves nothing that works.
+ * .nojekyll: without it GitHub Pages serves nothing that works.
  *
  * Pages pipes the site through Jekyll by default, and Jekyll excludes every
  * path beginning with an underscore. SvelteKit puts EVERY script, stylesheet

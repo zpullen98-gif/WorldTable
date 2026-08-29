@@ -142,11 +142,11 @@ export const TECHNIQUE_STANDARDS = [
 	{
 		slug: 'sauteing-and-the-shallow-fry',
 		marks: [
-			{ id: 'sauteing-and-the-shallow-fry#everything', text: 'Everything sits in a single layer with visible space between the pieces — nothing stacked, nothing touching, or the pan is too small for the quantity.' },
+			{ id: 'sauteing-and-the-shallow-fry#everything', text: 'Everything sits in a single layer with visible space between the pieces: nothing stacked, nothing touching, or the pan is too small for the quantity.' },
 			{ id: 'sauteing-and-the-shallow-fry#pieces', text: 'The pieces move freely and keep moving, sliding across the pan rather than sticking and tearing when the pan is worked.' },
 			{ id: 'sauteing-and-the-shallow-fry#light', text: 'Light even browning arrived at quickly: colour on most faces, not the deep crust of a sear and not grey.' },
 			{ id: 'sauteing-and-the-shallow-fry#thin', text: 'A thin film of fat with the food glossed by it: no pool left in the pan at the end, and nothing greasy on the fingers or the plate.' },
-			{ id: 'sauteing-and-the-shallow-fry#cooked', text: 'Cooked through but still firm, having spent only a few minutes in the pan — anything that has gone soft has been in there too long.' }
+			{ id: 'sauteing-and-the-shallow-fry#cooked', text: 'Cooked through but still firm, having spent only a few minutes in the pan: anything that has gone soft has been in there too long.' }
 		],
 		fault: 'Too much went in at once, the pan cooled, and the food released its water: what was meant to brown in three minutes stews for ten and comes out grey, slack and wet.'
 	},
@@ -182,7 +182,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'roasting-in-a-hot-oven#before', text: 'It came out BEFORE the target temperature, not at it. Carryover keeps driving the inside up by several degrees after it leaves the oven, and that rise is part of the cooking rather than an error in it.' },
 			{ id: 'roasting-in-a-hot-oven#coldest', text: 'The temperature was read at the coldest part rather than the easiest one to reach, and read again after the rest.' }
 		],
-		fault: 'The tray was crowded, or the oven was not truly up to heat. The food releases steam faster than a cool box can carry it away, so it sits pale and slack — and the extra minutes spent chasing colour take the inside well past where it should have stopped.'
+		fault: 'The tray was crowded, or the oven was not truly up to heat. The food releases steam faster than a cool box can carry it away, so it sits pale and slack, and the extra minutes spent chasing colour take the inside well past where it should have stopped.'
 	},
 	{
 		slug: 'dry-pan-toasting-spices-seeds-and-nuts',
@@ -210,7 +210,7 @@ export const TECHNIQUE_STANDARDS = [
 	{
 		slug: 'rendering-fat-and-cooking-in-what-runs-out',
 		marks: [
-			{ id: 'rendering-fat-and-cooking-in-what-runs-out#started', text: 'It started cold or low and came up slowly — fat that met a hot pan seizes and scorches before the inside can melt, and there is no recovering it.' },
+			{ id: 'rendering-fat-and-cooking-in-what-runs-out#started', text: 'It started cold or low and came up slowly: fat that met a hot pan seizes and scorches before the inside can melt, and there is no recovering it.' },
 			{ id: 'rendering-fat-and-cooking-in-what-runs-out#clear', text: 'The fat in the pan is clear and clean-smelling, pale to golden, with no dark sediment on the floor and nothing acrid in the steam.' },
 			{ id: 'rendering-fat-and-cooking-in-what-runs-out#left', text: 'What is left behind is crisp and deep gold with no soft pale fat still clinging to it and no black burnt edges.' },
 			{ id: 'rendering-fat-and-cooking-in-what-runs-out#real', text: 'There is a real volume of it: enough to film the pan floor and be poured off and kept, not a dry smear that never ran.' },
@@ -301,7 +301,7 @@ export const TECHNIQUE_STANDARDS = [
 		slug: 'the-bare-simmer-holding-liquid-below-the-boil',
 		marks: [
 			{ id: 'the-bare-simmer-holding-liquid-below-the-boil#surface', text: 'The surface is read rather than assumed: bubbles break slowly in one or two places, or the surface merely shivers, and it does not reach a rolling boil at any point.' },
-			{ id: 'the-bare-simmer-holding-liquid-below-the-boil#held', text: 'It was held there — the pot was watched and the heat adjusted rather than set once and left, and there is no tide mark up the pot wall from a boil-over.' },
+			{ id: 'the-bare-simmer-holding-liquid-below-the-boil#held', text: 'It was held there: the pot was watched and the heat adjusted rather than set once and left, and there is no tide mark up the pot wall from a boil-over.' },
 			{ id: 'the-bare-simmer-holding-liquid-below-the-boil#liquid', text: 'The liquid stayed as clear as it should be: no clouding from agitation, and no fat churned into an emulsion through it.' },
 			{ id: 'the-bare-simmer-holding-liquid-below-the-boil#whatever', text: 'Whatever is in the liquid is still intact: nothing shredded, broken up, or worried apart by movement.' },
 			{ id: 'the-bare-simmer-holding-liquid-below-the-boil#level', text: 'The level is roughly where the elapsed time should have left it; a large drop is the evidence that it ran hotter than this while nobody was looking.' }
@@ -325,7 +325,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'steaming-basket-leaf-and-lid#steam', text: 'Steam was running before the food went in: the water at a rolling boil and vapour coming steadily through the basket, rather than the whole thing warming up together.' },
 			{ id: 'steaming-basket-leaf-and-lid#nothing', text: 'Nothing touches the water at any point: the food sits clear of it throughout, and the level neither drops enough to boil dry nor rises enough to wet it.' },
 			{ id: 'steaming-basket-leaf-and-lid#stayed', text: 'The lid stayed on. Every lift costs the chamber its heat, and the number of lifts should be as close to none as the dish allows.' },
-			{ id: 'steaming-basket-leaf-and-lid#lifted', text: 'Lifted out, the surface is glossy and plump with its colour heightened rather than dulled — greens brighter than they went in, not olive.' },
+			{ id: 'steaming-basket-leaf-and-lid#lifted', text: 'Lifted out, the surface is glossy and plump with its colour heightened rather than dulled: greens brighter than they went in, not olive.' },
 			{ id: 'steaming-basket-leaf-and-lid#cooked', text: 'Cooked through with the shape intact: it yields at the centre without having slumped or split, and there is no more than a spoonful of clean condensate beneath it.' }
 		],
 		fault: 'The lid was loose or dripping and the condensate fell back onto the food, so it arrives waterlogged and pale with its seasoning washed down into the bottom of the dish.'
@@ -339,7 +339,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'braising#liquid2', text: 'The liquid has become a sauce: it has body, it coats the back of a spoon, and it tastes concentrated rather than thin and washed out.' },
 			{ id: 'braising#meat', text: 'The meat is moist and seasoned through to its centre, not dry fibres sitting inside a good sauce.' }
 		],
-		fault: 'The oven or the burner ran too hot and the liquid boiled, so the fibres tightened and squeezed their moisture out — it shreds dry into a thin greasy liquid, and more time makes it worse rather than better.'
+		fault: 'The oven or the burner ran too hot and the liquid boiled, so the fibres tightened and squeezed their moisture out: it shreds dry into a thin greasy liquid, and more time makes it worse rather than better.'
 	},
 	{
 		slug: 'keeping-the-cooking-liquid',
@@ -370,7 +370,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'blanching-and-shocking#rolling', text: 'A large volume at a hard rolling boil, and enough of it that adding the food barely interrupts it; a pot that goes quiet has started stewing rather than blanching.' },
 			{ id: 'blanching-and-shocking#short', text: 'Timed rather than watched, and short. This is an interruption in the cooking of something, not the cooking of it.' },
 			{ id: 'blanching-and-shocking#ready', text: 'The ice bath was made and standing beside the pot BEFORE anything went into the water, not started once the timer went off.' },
-			{ id: 'blanching-and-shocking#cold', text: 'It went straight into the ice water, fully submerged, and stayed until cold at the centre — a piece still warm inside is still cooking, and the arrest has not happened yet.' },
+			{ id: 'blanching-and-shocking#cold', text: 'It went straight into the ice water, fully submerged, and stayed until cold at the centre: a piece still warm inside is still cooking, and the arrest has not happened yet.' },
 			{ id: 'blanching-and-shocking#drained', text: 'Drained and dried afterwards rather than left sitting in water, so it does not carry that water into whatever it meets next.' }
 		],
 		fault: 'The ice bath was not ready, so the food sat draining in a colander while its own residual heat carried on cooking it. By the time it cooled it was a stage past where it was pulled, and exact arrest is the entire reason for blanching rather than simply boiling.'
@@ -427,7 +427,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'brining-and-curing#time', text: 'The time was measured against the weight and the thickness rather than the recipe’s convenience, and it stayed cold for all of it.' },
 			{ id: 'brining-and-curing#change', text: 'The change is visible and can be felt: the flesh is firmer than raw and its colour has deepened or gone more translucent, rather than still being slack and pale.' },
 			{ id: 'brining-and-curing#rinsed', text: 'Rinsed and dried as the recipe asks, and anything meant to crisp afterwards has a surface dry and tacky to the touch before it goes near heat.' },
-			{ id: 'brining-and-curing#cooked', text: 'Cooked and tasted, it is seasoned right through to the centre rather than merely salty at the surface — and not so salty that the dish cannot be eaten.' }
+			{ id: 'brining-and-curing#cooked', text: 'Cooked and tasted, it is seasoned right through to the centre rather than merely salty at the surface, and not so salty that the dish cannot be eaten.' }
 		],
 		fault: 'It sat in the brine well past its time because a few extra hours seemed harmless; the surface is over-salted and the texture has gone from firm to spongy and wet, and no cooking takes salt back out.'
 	},
@@ -483,7 +483,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'proofing-the-rise-before-the-oven#judged', text: 'Judged on volume against the container rather than on the clock: visibly grown, and grown by roughly the amount the recipe describes.' },
 			{ id: 'proofing-the-rise-before-the-oven#poke', text: 'The poke test agrees: a floured fingertip pressed a centimetre in leaves a dent that springs back slowly and only part of the way. Straight back means it is not ready; no spring at all means it has gone.' },
 			{ id: 'proofing-the-rise-before-the-oven#surface', text: 'The surface is domed, smooth, and slightly sheened: not cratered, wrinkled, or collapsed, and not skinned over and dry from proofing uncovered.' },
-			{ id: 'proofing-the-rise-before-the-oven#handled', text: 'Handled, it feels alive and airy — light for its size, with bubbles visible under the skin.' },
+			{ id: 'proofing-the-rise-before-the-oven#handled', text: 'Handled, it feels alive and airy: light for its size, with bubbles visible under the skin.' },
 			{ id: 'proofing-the-rise-before-the-oven#springs', text: 'It springs in the oven: the piece lifts in the first minutes and the scores open. A shape that does not move at all was proofed past its point before it went in.' }
 		],
 		fault: 'It was proofed to the clock in a kitchen colder or warmer than the recipe assumed: overproofed, it collapses as the blade touches it and bakes flat and dense with a sour edge; underproofed, it tears at the side and bakes tight.'
@@ -517,7 +517,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'creaming-butter-and-sugar#visibly', text: 'It has visibly paled, from yellow towards near-white, and grown in volume, and getting there took minutes rather than seconds.' },
 			{ id: 'creaming-butter-and-sugar#texture', text: 'The texture is light and aerated: a spoonful is fluffy and holds a soft peak rather than sitting dense on the spoon.' },
 			{ id: 'creaming-butter-and-sugar#rubbed', text: 'Rubbed between finger and thumb it is still faintly gritty with undissolved sugar, and not slick or oily.' },
-			{ id: 'creaming-butter-and-sugar#homogeneous', text: 'It is one homogeneous cream — not split, slackened, or separating into a greasy mass with liquid running out of it.' }
+			{ id: 'creaming-butter-and-sugar#homogeneous', text: 'It is one homogeneous cream: not split, slackened, or separating into a greasy mass with liquid running out of it.' }
 		],
 		fault: 'The butter was too warm, or it was beaten well past its point, so the fat softened and gave up the air it had taken: the mixture goes slack and oily and the cake bakes dense and greasy with a sunken middle.'
 	},
@@ -606,7 +606,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'the-wobble-and-the-skewer-testing-a-bake#tested', text: 'Tested at the true centre and the thickest point, not at the convenient edge: the edge is done long before the answer is.' },
 			{ id: 'the-wobble-and-the-skewer-testing-a-bake#skewer', text: 'The skewer comes out as the recipe describes, clean and dry or carrying the stated moist crumb, and it does the same on a second test in a different spot.' },
 			{ id: 'the-wobble-and-the-skewer-testing-a-bake#wobble', text: 'The wobble is read in motion: nudged, the centre moves as one set mass with a faint tremble, rather than a liquid ripple travelling across the surface.' },
-			{ id: 'the-wobble-and-the-skewer-testing-a-bake#other', text: 'The other signs agree with the test — risen and just shrinking from the sides, the top set and dry to a light touch with no wet gloss on it.' },
+			{ id: 'the-wobble-and-the-skewer-testing-a-bake#other', text: 'The other signs agree with the test: risen and just shrinking from the sides, the top set and dry to a light touch with no wet gloss on it.' },
 			{ id: 'the-wobble-and-the-skewer-testing-a-bake#pressed', text: 'Pressed lightly at the middle it springs back and leaves no lasting dent.' }
 		],
 		fault: 'It was judged on the clock and on how the edges looked, so a centre still liquid went to the rack and sank as it cooled, a dense wet seam under a perfectly browned top.'

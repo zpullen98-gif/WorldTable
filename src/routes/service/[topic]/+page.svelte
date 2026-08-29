@@ -18,7 +18,7 @@
 	const m = $derived(data.module);
 </script>
 
-<svelte:head><title>{m.title} — Service — The World Table</title></svelte:head>
+<svelte:head><title>{m.title}: Service: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<nav class="crumbs">

@@ -293,7 +293,7 @@
 	const nextUnticked = $derived(plan.steps.find((st) => !ticks[rowKey(st)]));
 
 	/**
-	 * How far behind the plan the cook is — and, now, WHICH dish it went into.
+	 * How far behind the plan the cook is, and, now, WHICH dish it went into.
 	 *
 	 * This was one subtraction against total plan length, so it could raise "22
 	 * min behind" and was physically incapable of naming the dish. A ticked row
@@ -462,7 +462,7 @@
 					recipes.map((r) => r.slug),
 					pantryLabels
 				);
-				// A WT1 code predates preps entirely, so there is nothing to adopt —
+				// A WT1 code predates preps entirely, so there is nothing to adopt,
 				// but `current` still carries them, so the banner counts against the
 				// same shape the .wtjson path uses.
 				const summary = describeImport(state, {
@@ -769,7 +769,7 @@
 			{#if house.dishes.length >= 4}
 				<a href="{base}/menu/quiz">Drill this menu ▸</a>
 			{:else if house.dishes.length}
-				The drill opens at four dishes — {4 - house.dishes.length} more to go.
+				The drill opens at four dishes: {4 - house.dishes.length} more to go.
 			{/if}
 		</p>
 

@@ -89,7 +89,11 @@
 		if (!hit) return null;
 		// The mark's opening clause: the marks are written surface-first, so the
 		// first clause is the identifying one and the rest is the how-to-check.
-		const short = hit.text.split(/[,;:—]/)[0].trim();
+		/* The em dash is escaped, not removed: it is a SEPARATOR this splits on,
+		   not punctuation this app writes. Every mark now reads with a colon or a
+		   comma, so the branch is dormant, but a mark that ever arrives with one
+		   should still split correctly. */
+		const short = hit.text.split(/[,;:\u2014]/)[0].trim();
 		return { graded, count: worst[0].count, short };
 	});
 

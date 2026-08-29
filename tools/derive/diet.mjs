@@ -164,7 +164,7 @@ const MOLLUSC = [
 ];
 
 /**
- * Zero hits in this corpus today, and screened anyway — the claim "screened
+ * Zero hits in this corpus today, and screened anyway: the claim "screened
  * for lupin, none found" is sound because lupin flour is always NAMED (there
  * is no dish that smuggles it the way dashi smuggles fish), which is what
  * separates this from the five hazard rules that were measured and refused.
@@ -385,7 +385,7 @@ export function deriveDiet(r, _fullBlob) {
 	const containsShellfish = anyLine(RE.shellfish);
 	/**
 	 * Dairy and egg are ALLERGENS, so they follow the allergen policy stated at
-	 * the bottom of this function — reported from all lines — not the vegetarian
+	 * the bottom of this function, reported from all lines, not the vegetarian
 	 * `binding` policy.
 	 *
 	 * They used to read from `binding`, and the escape rule that produces it

@@ -1,5 +1,5 @@
 <!--
-  Practise — everything in the app that is measured.
+  Practise: everything in the app that is measured.
 
   The distinction from Learn is not decorative. Learn is where you are told
   something; Practise is where the app finds out whether it stuck. Two of these

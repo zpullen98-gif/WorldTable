@@ -143,7 +143,7 @@ export function describeImport(
 	/**
 	 * The costings, which this banner never mentioned.
 	 *
-	 * It counted pins, notes, pantry, family recipes and dishes and stopped —
+	 * It counted pins, notes, pantry, family recipes and dishes and stopped,
 	 * so a file whose dishes are byte-identical and whose COVERS differ printed
 	 * "nothing new, this file matches what you already have" immediately before
 	 * an evening of counting was rewritten. Same blind banner that once erased a

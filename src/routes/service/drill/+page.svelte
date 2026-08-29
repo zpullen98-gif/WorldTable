@@ -149,7 +149,7 @@
 			</ul>
 			{#if picked}
 				<p class="after">
-					{picked === q.target.slug ? 'Right.' : `No — ${q.target.term}.`}
+					{picked === q.target.slug ? 'Right.' : `No, ${q.target.term}.`}
 					<a href="{base}/lexicon#{q.target.slug}">Read the entry</a>
 				</p>
 				<button class="chip go" onclick={next}>

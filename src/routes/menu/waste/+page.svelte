@@ -269,7 +269,7 @@
 						</div>
 						<!--
 							The bar is a second reading of a number that is already written
-							out, never the only one — same rule the verdicts follow.
+							out, never the only one: same rule the verdicts follow.
 						-->
 						<div class="bar"><span style="width:{Math.max(r.pct, r.money > 0 ? 2 : 0)}%"></span></div>
 					</li>
@@ -378,7 +378,7 @@
 		{:else}
 			<p class="empty">
 				Nothing logged in the week of {weekLabel(activeWeek)}. That is either a very good week or a
-				log nobody opened — and the guide is clear which is more common.
+				log nobody opened, and the guide is clear which is more common.
 			</p>
 		{/if}
 

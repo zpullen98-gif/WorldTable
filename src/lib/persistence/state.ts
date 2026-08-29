@@ -14,7 +14,7 @@ import type { CostLine } from '../costing';
 export const CURRENT_VERSION = 1;
 
 /**
- * A dish on the venue's own menu — The Kitchen's Menu. Deliberately NOT a
+ * A dish on the venue's own menu, The Kitchen's Menu. Deliberately NOT a
  * Recipe: recipes feed the pantry matcher, search and cook mode, and a menu
  * item is a different thing (a price, a section, an allergen line; no method,
  * no timings). Own sibling field, own shape.
@@ -42,7 +42,7 @@ export interface MenuDish {
 	 * The guide or family recipe this dish is cooked from, if the kitchen has
 	 * said so.
 	 *
-	 * A POINTER, NOT A METHOD. "A menu item is not a Recipe" still holds — this
+	 * A POINTER, NOT A METHOD. "A menu item is not a Recipe" still holds: this
 	 * dish carries no steps, no ingredients-with-quantities and no technique
 	 * tags of its own. But one slug lets the lamb rump that goes out sixty times
 	 * a week reach cook mode, the standard it is judged against and the
@@ -197,7 +197,7 @@ export interface DishCosting {
 	 *
 	 * Required is load-bearing: an optional field satisfies the store's costing
 	 * literal structurally, so the compiler would name none of the call sites
-	 * and the first ingredient edit would silently drop the history — then stamp
+	 * and the first ingredient edit would silently drop the history, then stamp
 	 * a fresh newest `ts` on the emptied record, so the loss propagates on the
 	 * next import instead of being repaired by it.
 	 */
@@ -219,7 +219,7 @@ export interface DishCosting {
 
 /** One service being cooked. See SessionState.planRun. */
 export interface PlanRun {
-	/** The pinned menu it belongs to — a different menu does not inherit it. */
+	/** The pinned menu it belongs to: a different menu does not inherit it. */
 	menuHash: string;
 	serviceTime: string;
 	/** When the clock was started, so a run nobody closed expires on its own. */
@@ -514,7 +514,7 @@ export function mergeSessions(
 				(r) => !current.familyRecipes.some((e) => e.slug === r.slug)
 			)
 		],
-		// Union by dish id, the newer edit winning — same tiebreak the other
+		// Union by dish id, the newer edit winning, same tiebreak the other
 		// wings' menu stores use. Named explicitly, per the rule above.
 		menuDishes: (() => {
 			const dishes = new Map((current.menuDishes ?? []).map((d) => [d.id, d]));

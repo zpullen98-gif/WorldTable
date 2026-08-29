@@ -39,7 +39,7 @@
 	 */
 	$effect(() => profiles.onChange(() => void session.rehydrate()));
 
-	// Effects run only in the browser, after mount — which makes this a precise
+	// Effects run only in the browser, after mount, which makes this a precise
 	// "hydration finished" marker. The e2e suite waits on it before typing:
 	// prerendered pages LOOK interactive long before Svelte's listeners attach,
 	// and a keystroke into that gap lands on a dead input.
@@ -272,7 +272,7 @@
 	 * Room for the shared layer's return chip.
 	 *
 	 * Inside Outside Of Time, oot-bar.js pins a chip at position:fixed, top 10px,
-	 * left 10px, z-index 45 — over this bar, which is sticky at z-index 40 — and
+	 * left 10px, z-index 45 (over this bar, which is sticky at z-index 40), and
 	 * under 600px it collapses to a round icon roughly 40px across. It therefore
 	 * sits on top of the FIRST tab, which after the cut to five is "Today", on
 	 * the view people land on.

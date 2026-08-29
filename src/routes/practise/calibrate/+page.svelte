@@ -73,7 +73,7 @@
 	const letter = (i: number) => String.fromCharCode(65 + i);
 </script>
 
-<svelte:head><title>Calibrate — The World Table</title></svelte:head>
+<svelte:head><title>Calibrate: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -116,7 +116,7 @@
 			<!--
 				The disclosure sanitation.mjs gives its 4-60°C conflict: say whose
 				number it is, where the number is. These are apparatus, two cups
-				chosen to be discriminable — not a statement of correct seasoning and
+				chosen to be discriminable: not a statement of correct seasoning and
 				not a house spec.
 			-->
 			<h2 class="sec">About the numbers</h2>

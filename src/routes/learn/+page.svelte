@@ -86,7 +86,7 @@
 		<li>
 			<a href="{base}/lexicon">
 				<h2>Chef's Lexicon</h2>
-				<p>{data.lexicon} terms — the words the rest of this app is written in.</p>
+				<p>{data.lexicon} terms: the words the rest of this app is written in.</p>
 			</a>
 		</li>
 	</ul>

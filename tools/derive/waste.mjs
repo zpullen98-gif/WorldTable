@@ -216,7 +216,7 @@ export function buildWaste(lexicon) {
 			.map((t) => t.trim().toLowerCase())
 			.filter(Boolean);
 		if (named.length < 2) {
-			problems.push(`waste: read only ${named.length} leak(s) out of the guide's list — parse is wrong`);
+			problems.push(`waste: read only ${named.length} leak(s) out of the guide's list: parse is wrong`);
 		}
 		const covered = new Set([
 			...REASONS.map((r) => r.covers.toLowerCase()),
@@ -249,7 +249,12 @@ export function buildWaste(lexicon) {
 	 * neither carried nor refused, and the gate's claim of closure was one
 	 * list short.
 	 */
-	const PRIME_PREFIX = 'COGS side \u2014';
+	/* The marker follows the prose. It was an em dash, escaped here so a search
+	   for the literal character would never have found it; the em dash sweep of
+	   29 Aug 2026 repunctuated the entry and this gate went looking for a string
+	   that no longer existed. A parser keyed on punctuation is a parser that a
+	   copy edit can break. */
+	const PRIME_PREFIX = 'COGS side:';
 	const pAt = entries.prime.definition.indexOf(PRIME_PREFIX);
 	if (pAt < 0) {
 		problems.push(

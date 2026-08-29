@@ -380,7 +380,7 @@
 	.used {
 		margin: 4px 0 0;
 	}
-	/* A real colour, never stacked opacity — see shared/oot-home.css. */
+	/* A real colour, never stacked opacity; see shared/oot-home.css. */
 	.incomplete {
 		color: var(--chili);
 	}

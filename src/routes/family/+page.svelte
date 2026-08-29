@@ -152,7 +152,7 @@
 				<legend class="sec">What it is judged on</legend>
 				<p class="techhint">
 					Pick up to {FAMILY_TECHNIQUE_MAX} techniques this dish exercises. The two most telling
-					are what cook mode grades the plate against — without them the app can only record
+					are what cook mode grades the plate against: without them the app can only record
 					that it was cooked.
 				</p>
 				<div class="techlist">

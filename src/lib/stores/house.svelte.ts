@@ -21,7 +21,7 @@
  * requirement here, and dishCosts grows without a bound worth guessing at.
  *
  * NO PUBLISH GATE, deliberately. An earlier design had a per-person draft and a
- * "publish to the house" button. There is no auth on a shared tablet —
+ * "publish to the house" button. There is no auth on a shared tablet:
  * `isManagerDevice()` is a per-device toggle anybody who finds the setting can
  * flip, so a gate would be false authority, and a draft/published split makes
  * a fresh device show an empty editor over a live menu. A kitchen whiteboard is
@@ -29,7 +29,7 @@
  * ATTRIBUTION, not authority: it records who, never who was allowed.
  *
  * The reconciliation lives in persistence/house.ts as pure functions, for the
- * reason mergeSessions() does — a runes module is unreachable from a test.
+ * reason mergeSessions() does: a runes module is unreachable from a test.
  */
 import { browser } from '$app/environment';
 import { get, set, createStore } from 'idb-keyval';

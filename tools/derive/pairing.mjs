@@ -108,7 +108,7 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 	)
 		return P('Junmai or Ginjo sake', 'Dry Riesling or Grüner Veltliner', 'Japanese rice lager',
 			'Cold green tea (sencha)',
-			'Umami bridges best with umami — sake’s amino depth shakes hands with dashi and soy where tannic wine would argue.');
+			'Umami bridges best with umami: sake’s amino depth shakes hands with dashi and soy where tannic wine would argue.');
 
 	if (
 		/\bfish\b(?!\s*sauce)/.test(t) ||
@@ -117,7 +117,7 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 		return P(
 			c === 'Greek' ? 'Assyrtiko' : 'Vermentino or Sauvignon Blanc',
 			'Albariño', 'Witbier', 'Sparkling water with citrus',
-			'Lean fish, bright acid, done — coastal whites built beside the same boats; the fresher the fish, the leaner the pour.'
+			'Lean fish, bright acid, done: coastal whites built beside the same boats; the fresher the fish, the leaner the pour.'
 		);
 
 	if (has('duck'))
@@ -187,7 +187,7 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 	if (has('mushroom', 'truffle', 'porcini', 'shiitake', 'risotto'))
 		return P('Nebbiolo (Langhe) or aged Pinot Noir', 'White Burgundy for cream-based versions',
 			'Dubbel', 'Roasted barley tea',
-			'Earth speaking to earth — forest-floor reds echo fungal depth; truffle and Nebbiolo literally share a hillside and a season.');
+			'Earth speaking to earth: forest-floor reds echo fungal depth; truffle and Nebbiolo literally share a hillside and a season.');
 
 	if (
 		has('cheese', 'gruyère', 'fondue', 'raclette', 'mac and', 'parmigiano', 'halloumi', 'paneer') &&
@@ -216,9 +216,9 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 	if (has('oyster sauce', 'fish sauce', 'soy sauce', 'miso', 'noodle'))
 		return P('Grüner Veltliner or dry Riesling', 'Champagne, or a cold lager', 'Crisp pilsner',
 			'Iced barley or jasmine tea',
-			'Soy, fish sauce, and oyster sauce stack savory depth — answer it with high-acid, low-oak whites that cut salt without adding weight.');
+			'Soy, fish sauce, and oyster sauce stack savory depth: answer it with high-acid, low-oak whites that cut salt without adding weight.');
 
 	return P('Champagne: when lost, bubbles', 'Cru Beaujolais, lightly chilled', 'Pilsner',
 		'Sparkling water with citrus',
-		'The universal donors: acid, bubbles, and low tannin rescue nearly any plate — the sommelier’s honest safety net.');
+		'The universal donors: acid, bubbles, and low tannin rescue nearly any plate: the sommelier’s honest safety net.');
 }

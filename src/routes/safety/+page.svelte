@@ -53,7 +53,7 @@
 			<p class="jurisdiction">
 				<b>Your jurisdiction governs.</b>
 				<i>“{s.framing.jurisdiction}”</i>
-				<span class="attrib">— {termOf('inspections')}</span>
+				<span class="attrib">{termOf('inspections')}</span>
 			</p>
 		{/if}
 		<p>
@@ -132,7 +132,7 @@
 	     cannot quietly fill one with invented regulatory content. -->
 	<h2 class="sec">What the guide names and does not state</h2>
 	<p class="secnote">
-		Read this as a list of places to look elsewhere — your jurisdiction, your inspector, your
+		Read this as a list of places to look elsewhere: your jurisdiction, your inspector, your
 		written plan. It is not a list of things that do not matter.
 	</p>
 	<ul class="gaps">

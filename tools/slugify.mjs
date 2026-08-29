@@ -10,7 +10,7 @@
  * Atlas, 75 min) are two genuinely different recipes for the same dish, spelled
  * differently. Both fold to `bun-thit-nuong`.
  *
- * See qualifiedSlugs() for how that is resolved — deterministically, and without
+ * See qualifiedSlugs() for how that is resolved: deterministically, and without
  * depending on which one happens to come first in the array.
  */
 /** @param {string} input */

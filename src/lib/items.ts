@@ -48,7 +48,7 @@ export interface ItemPrice {
  * One yield test: what went on the scale, and what was left when the trim,
  * bones and cooking loss had taken their share.
  *
- * The guide defines the number — *"usable product after trim and cooking — a
+ * The guide defines the number: *"usable product after trim and cooking: a
  * $12/kg fish at 45% yield is really $26/kg on the plate"*, and the knife
  * atlas calls yield percentage "literally a function of edge and angle", which
  * is to say a thing each venue MEASURES, because their knives, their cuts and
@@ -108,7 +108,7 @@ export const YIELD_CAP = 12;
 /**
  * The key an item is filed under.
  *
- * Lowercase, trimmed, inner whitespace collapsed — and DELIBERATELY NOTHING
+ * Lowercase, trimmed, inner whitespace collapsed, and DELIBERATELY NOTHING
  * ELSE. No accent folding, no punctuation stripping, no singularisation. A
  * normaliser clever enough to file "creme fraiche" and "crème fraîche" together
  * is also clever enough to file "cream" and "creams" together, and the venue
@@ -194,7 +194,7 @@ export function currentPrice(item: Item | undefined): ItemPrice | null {
 }
 
 /**
- * The price before the current one — the comparison the guide asks for.
+ * The price before the current one: the comparison the guide asks for.
  *
  * Skips entries that repeat the current figure: re-typing 7.90 in March after
  * 7.90 in January is not a price change, and showing it as "previous: 7.90"

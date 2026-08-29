@@ -27,7 +27,7 @@
  * belongs in `steps`, and a mark that tells the cook what to DO has failed to
  * say what to LOOK FOR.
  *
- * `fault` is the commonest real failure and what it looks like on the plate — a
+ * `fault` is the commonest real failure and what it looks like on the plate: a
  * diagnosis rather than a warning. "Browned, because the pan was too hot and the
  * eggs sat" teaches more than "do not overcook".
  *
@@ -67,7 +67,7 @@ export const STANDARDS = [
 		slug: "ratatouille",
 		marks: [
 			{ id: 'ratatouille#piece', text: "Every piece is still recognisable as its own vegetable at roughly 2cm; nothing has collapsed into a common pulp." },
-			{ id: 'ratatouille#spoon', text: "Spoon up a few pieces of each and the eggplant, zucchini and pepper all carry browned faces — the pan colour is on every vegetable, not just one, and none of it reads uniform grey." },
+			{ id: 'ratatouille#spoon', text: "Spoon up a few pieces of each and the eggplant, zucchini and pepper all carry browned faces: the pan colour is on every vegetable, not just one, and none of it reads uniform grey." },
 			{ id: 'ratatouille#eggplant', text: "Eggplant is creamy through with no squeak; zucchini yields but holds its square and has not watered out." },
 			{ id: 'ratatouille#liquid', text: "Liquid in the pot is a small amount of glossy, oil-slicked juice, not a thin wash; a spoon dragged across the bottom leaves a track that fills back slowly." },
 			{ id: 'ratatouille#taste', text: "Taste an eggplant cube and a piece of tomato back to back (both are seasoned, neither bland against the other), and the garlic and herbs taste cooked-sweet and perfumed with no raw grassy bite." }
@@ -127,7 +127,7 @@ export const STANDARDS = [
 			{ id: 'pasta-e-fagioli#broth', text: "Broth is opaque and velvety; no clear liquid separates out around the beans after a minute standing." },
 			{ id: 'pasta-e-fagioli#beans', text: "Most beans are still whole with their skins intact rather than the pot gone to paste, and the ditalini is still firm at the tooth when the bowl reaches the table: pasta is distinguishable from bean by bite." },
 			{ id: 'pasta-e-fagioli#surface', text: "Surface carries a slick of raw finishing oil, beaded and green-smelling rather than cooked in, with grated cheese that has not yet melted flat." },
-			{ id: 'pasta-e-fagioli#tasted', text: "Tasted at the bowl it needs no salt at the table and is not sharp with it — the rind and the finishing cheese are already in the total. Rosemary reads as background perfume, with no loose needles in the spoon." }
+			{ id: 'pasta-e-fagioli#tasted', text: "Tasted at the bowl it needs no salt at the table and is not sharp with it: the rind and the finishing cheese are already in the total. Rosemary reads as background perfume, with no loose needles in the spoon." }
 		],
 		fault: "It sat on the stove or was reheated, and the ditalini has drunk the broth: what arrives is a stiff bean porridge with soft grey pasta and no liquid left to call soup."
 	},
@@ -261,9 +261,9 @@ export const STANDARDS = [
 	{
 		slug: "pizza-margherita",
 		marks: [
-			{ id: 'pizza-margherita#risen', text: "The rim has risen to roughly a thumb's width and is brown-gold with scattered darker blisters across it. A home oven will not give Naples' full leopard char in six to eight minutes; what you do not accept is a flat, uniformly tan rim with no blistering anywhere — that is a steel that never got hot enough." },
+			{ id: 'pizza-margherita#risen', text: "The rim has risen to roughly a thumb's width and is brown-gold with scattered darker blisters across it. A home oven will not give Naples' full leopard char in six to eight minutes; what you do not accept is a flat, uniformly tan rim with no blistering anywhere: that is a steel that never got hot enough." },
 			{ id: 'pizza-margherita#slice', text: "A slice held by the rim tips but does not fold back on itself; the underside is spotted brown through the dry flour, with no raw white centre." },
-			{ id: 'pizza-margherita#toppings', text: "The toppings are sparse enough to read as separate things: bare dough visible between the pieces of mozzarella, tomato a thin skim rather than a lid. The centre is dry when it lands — no standing water, no ring of whey around the cheese." },
+			{ id: 'pizza-margherita#toppings', text: "The toppings are sparse enough to read as separate things: bare dough visible between the pieces of mozzarella, tomato a thin skim rather than a lid. The centre is dry when it lands: no standing water, no ring of whey around the cheese." },
 			{ id: 'pizza-margherita#torn', text: "Torn open, the rim is glossy and open with holes running up into the crust; a tight, even crumb in the rim means it was pressed flat during the stretch." },
 			{ id: 'pizza-margherita#basil', text: "The basil is bright green and merely wilted, never blackened or frazzled, and the mozzarella has just begun to spot and blister rather than browning into a sheet." }
 		],
@@ -468,7 +468,7 @@ export const STANDARDS = [
 		slug: "linguine-alle-vongole",
 		marks: [
 			{ id: 'linguine-alle-vongole#garlic', text: "Garlic slices are pale ivory in the sauce and still hold their shape; tan flecks mean the base was browned before the wine arrived." },
-			{ id: 'linguine-alle-vongole#shell', text: "Every shell on the plate is fully open — a shut clam is a fault, not a garnish — half in shell and half shucked through the pasta, and the meats are still plump enough to fill their shells rather than shrunk to grey nubs from sitting in the pan through the reduction." },
+			{ id: 'linguine-alle-vongole#shell', text: "Every shell on the plate is fully open (a shut clam is a fault, not a garnish), half in shell and half shucked through the pasta, and the meats are still plump enough to fill their shells rather than shrunk to grey nubs from sitting in the pan through the reduction." },
 			{ id: 'linguine-alle-vongole#sauce', text: "The sauce is emulsified, not oiled: it wears the strands with a cloudy gloss, and tilting the bowl leaves a clinging film rather than a clear ring of oil at the rim." },
 			{ id: 'linguine-alle-vongole#strand', text: "A strand bitten through shows a hairline of firmer paste at its centre and no white chalk core: the last three minutes happened in the pan, not the water." },
 			{ id: 'linguine-alle-vongole#nothing', text: "Nothing grits against the teeth in the final spoonful, proof the clams were purged and the liquor strained, and the bowl needs no salt at the table, because the salt came from the liquor." }

@@ -39,7 +39,7 @@
 	const track = $derived(data.track);
 </script>
 
-<svelte:head><title>Service — The World Table</title></svelte:head>
+<svelte:head><title>Service: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">

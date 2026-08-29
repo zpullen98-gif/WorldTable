@@ -1,5 +1,5 @@
 /**
- * The Service Track — the front of house, given an order.
+ * The Service Track: the front of house, given an order.
  *
  * The largest measured gap in the guide. 176 terms across five atlases (Cheese
  * 46, Charcuterie 41, Cocktail & Bar 38, Wine & Beverage 34, The Grape Atlas 17
@@ -238,7 +238,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-cheese-spine",
 		title: "The Board: Formula and Families",
-		outcome: "You can build or explain a board — 3-5 cheeses spanning milk, texture and volume, 30-50g a head, always at room temperature an hour out — and place any cheese into fresh / bloomy / washed / semi-hard-to-hard / blue. You know why halloumi holds its shape and gruyère flows.",
+		outcome: "You can build or explain a board (3-5 cheeses spanning milk, texture and volume, 30-50g a head, always at room temperature an hour out) and place any cheese into fresh / bloomy / washed / semi-hard-to-hard / blue. You know why halloumi holds its shape and gruyère flows.",
 		termSlugs: [
 			"cheese-families",
 			"building-the-cheese-board-and-cave-basics"

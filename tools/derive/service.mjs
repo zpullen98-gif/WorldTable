@@ -1,7 +1,7 @@
 /**
  * The pass: how long a dish takes, and how much of that you are actually busy.
  *
- * The Service Timeline shipped as a printout — pinned dishes, total minutes,
+ * The Service Timeline shipped as a printout: pinned dishes, total minutes,
  * sorted longest first, with the advice "start at the top and work down". That
  * advice is only correct for a cook who never overlaps two dishes, which is the
  * opposite of what a pass is. It also had nothing to overlap WITH, because one

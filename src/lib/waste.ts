@@ -48,7 +48,7 @@ export interface WasteEntry {
 	at: number;
 	/** What it was, as the kitchen would say it. Kept even if the dish is deleted. */
 	label: string;
-	/** Plates, portions, or purchase units — whichever the source is counted in. */
+	/** Plates, portions, or purchase units: whichever the source is counted in. */
 	qty: number;
 	/** A `key` from waste.json's reason codes. */
 	reason: string;
@@ -177,7 +177,7 @@ export function rollUpWaste(
  * covers and `mergeItems` about prices: two devices hold disjoint observations,
  * not competing records.
  *
- * NOT CAPPED, unlike the item book. An old price is dead weight — nobody
+ * NOT CAPPED, unlike the item book. An old price is dead weight: nobody
  * reprices against 2019, but old waste is the trend, and the only reason to
  * keep a log across a year is to be able to say "last October we binned half
  * this". Bounding it would delete the answer to the question it exists for.

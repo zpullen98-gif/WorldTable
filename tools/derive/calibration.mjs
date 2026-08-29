@@ -25,7 +25,7 @@
  * cannot do for themselves.
  *
  * The guide's own protocol entry is the anchor and it asks for exactly this:
- * taste COMPARATIVELY, and taste single ingredients at their extremes — "to
+ * taste COMPARATIVELY, and taste single ingredients at their extremes: "to
  * calibrate the instruments".
  *
  * THE LADDER NARROWS, THE RUN DOES NOT. Each level is a fixed pair, and a run

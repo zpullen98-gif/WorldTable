@@ -23,7 +23,7 @@ thematic atlases from the Dessert Atlas to The Saucier. Alongside them:
   and the commonest way the dish goes wrong. The guide teaches you to make a
   dish; this is how you know you got it right.
 - **Pantry Match**: what you can cook from 177 ingredients, seasonally aware
-- **The Path of Study** — ten semesters, in teaching order, tracking what you
+- **The Path of Study**: ten semesters, in teaching order, tracking what you
   have actually cooked and which skills that has drilled
 - **Cook mode**: step-by-step, timers parsed from the method text, screen kept
   awake

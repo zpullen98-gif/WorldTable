@@ -213,7 +213,7 @@ check('the build on disk matches the base being verified', () => {
 check('precache holds no prerendered HTML', () => {
 	const pages = precached.filter((u) => u.includes('.html') && !u.includes('shell.html'));
 	assert(pages.length === 0, `${pages.length} HTML pages precached: ${pages.slice(0, 3).join(', ')}`);
-	return 'none — navigateFallback reconstructs them';
+	return 'none: navigateFallback reconstructs them';
 });
 
 /**
