@@ -44,6 +44,24 @@ export interface ItemPrice {
 	at: number;
 }
 
+/**
+ * One yield test: what went on the scale, and what was left when the trim,
+ * bones and cooking loss had taken their share.
+ *
+ * The guide defines the number — *"usable product after trim and cooking — a
+ * $12/kg fish at 45% yield is really $26/kg on the plate"* — and the knife
+ * atlas calls yield percentage "literally a function of edge and angle", which
+ * is to say a thing each venue MEASURES, because their knives, their cuts and
+ * their suppliers are not anyone else's. Quantities are in the item's own
+ * purchase unit.
+ */
+export interface ItemYield {
+	grossQty: number;
+	usableQty: number;
+	/** ms epoch. */
+	at: number;
+}
+
 export interface Item {
 	/** itemSlugOf(name), and the key it is filed under. */
 	slug: string;
@@ -51,6 +69,12 @@ export interface Item {
 	name: string;
 	/** Newest first. Never empty for a live item. */
 	history: ItemPrice[];
+	/**
+	 * Yield tests, newest first. Optional because every record written before
+	 * they existed lacks the key — and an item that is never trimmed (salt,
+	 * flour) will simply never have one.
+	 */
+	yields?: ItemYield[];
 }
 
 /**
@@ -73,6 +97,13 @@ export const HISTORY_CAP = 24;
  * past a fumbled keystroke and nowhere near a delivery.
  */
 export const CORRECTION_WINDOW_MS = 5 * 60 * 1000;
+
+/**
+ * How many yield tests one item keeps. Fewer than prices: a yield moves when
+ * the knife work or the supplier changes, not with the market, and the guide's
+ * advice is to re-test occasionally rather than continuously.
+ */
+export const YIELD_CAP = 12;
 
 /**
  * The key an item is filed under.
@@ -104,6 +135,56 @@ const validPrice = (p: unknown): p is ItemPrice =>
 	(p as ItemPrice).unitCost >= 0 &&
 	typeof (p as ItemPrice).unit === 'string' &&
 	Number.isFinite((p as ItemPrice).at);
+
+const validYield = (y: unknown): y is ItemYield =>
+	!!y &&
+	typeof y === 'object' &&
+	Number.isFinite((y as ItemYield).grossQty) &&
+	(y as ItemYield).grossQty > 0 &&
+	Number.isFinite((y as ItemYield).usableQty) &&
+	(y as ItemYield).usableQty >= 0 &&
+	(y as ItemYield).usableQty <= (y as ItemYield).grossQty &&
+	Number.isFinite((y as ItemYield).at);
+
+const sortYields = (h: ItemYield[]): ItemYield[] =>
+	[...h].sort((a, b) => b.at - a.at || b.usableQty - a.usableQty || b.grossQty - a.grossQty);
+
+/**
+ * The yield the venue last measured, as the percentage the costing line wants.
+ * Null when nothing was ever put on the scale — never a default of 100, because
+ * an assumed yield is exactly the number this book exists to replace.
+ */
+export function measuredYieldPct(item: Item | undefined): number | null {
+	if (!item) return null;
+	const h = sortYields((item.yields ?? []).filter(validYield));
+	if (!h.length) return null;
+	return (h[0].usableQty / h[0].grossQty) * 100;
+}
+
+/**
+ * File a yield test. Same contract as recordPrice: pure, returns a new record,
+ * refuses what cannot be true. `usableQty > grossQty` is refused because a
+ * line's yield divides a cost — the sheet caps at 100% — and a thing that
+ * gains weight in cooking is a PREP with portions, not a line with a yield.
+ */
+export function recordYield(
+	items: Record<string, Item>,
+	name: string,
+	grossQty: number,
+	usableQty: number,
+	at: number
+): Record<string, Item> {
+	const slug = itemSlugOf(name);
+	if (!slug) return items;
+	const entry = { grossQty, usableQty, at };
+	if (!validYield(entry)) return items;
+	const existing = items[slug];
+	// A yield test on an unknown item mints it, priceless. The book can know
+	// how a thing trims before it knows what it costs.
+	const base: Item = existing ?? { slug, name, history: [] };
+	const yields = sortYields([entry, ...(base.yields ?? []).filter(validYield)]).slice(0, YIELD_CAP);
+	return { ...items, [slug]: { ...base, name: existing ? base.name : name, yields } };
+}
 
 /** What the venue is paying now. Null for an item carrying no usable price. */
 export function currentPrice(item: Item | undefined): ItemPrice | null {
@@ -222,8 +303,16 @@ export function mergeItems(
 		const ours = out[slug];
 		if (!ours) {
 			const history = sortHistory(incoming.history.filter(validPrice)).slice(0, HISTORY_CAP);
-			if (!history.length) continue;
-			out[slug] = { slug, name: incoming.name ?? slug, history };
+			const yields = sortYields((incoming.yields ?? []).filter(validYield)).slice(0, YIELD_CAP);
+			// An item can arrive knowing only its yield: a venue that weighed the
+			// fish before it ever typed a price still made an observation.
+			if (!history.length && !yields.length) continue;
+			out[slug] = {
+				slug,
+				name: incoming.name ?? slug,
+				history,
+				...(yields.length ? { yields } : {})
+			};
 			continue;
 		}
 		const seen = new Map<string, ItemPrice>();
@@ -231,6 +320,13 @@ export function mergeItems(
 			seen.set(`${p.at}|${p.unitCost}|${p.unit}`, p);
 		}
 		const history = sortHistory([...seen.values()]).slice(0, HISTORY_CAP);
+		// Yields union exactly as prices do, and for the same reason: two
+		// devices' tests are disjoint observations, not competing records.
+		const ySeen = new Map<string, ItemYield>();
+		for (const y of [...(ours.yields ?? []), ...(incoming.yields ?? [])].filter(validYield)) {
+			ySeen.set(`${y.at}|${y.grossQty}|${y.usableQty}`, y);
+		}
+		const yields = sortYields([...ySeen.values()]).slice(0, YIELD_CAP);
 		// The name follows the NEWEST observation, so a venue that corrected a
 		// spelling on one device sees the correction on the other rather than
 		// whichever device happened to import.
@@ -240,7 +336,7 @@ export function mergeItems(
 			theirsNewest && (!oursNewest || theirsNewest.at > oursNewest.at)
 				? (incoming.name ?? ours.name)
 				: ours.name;
-		out[slug] = { slug, name, history };
+		out[slug] = { slug, name, history, ...(yields.length ? { yields } : {}) };
 	}
 	return out;
 }
@@ -277,6 +373,16 @@ export interface ItemUsage {
 	dishIds: string[];
 	/** Of those, the ones whose food cost now sits ABOVE the band. See below. */
 	outOfBandIds: string[];
+	/**
+	 * Dishes holding this item on an UNLINKED line whose stored price is not
+	 * what the book says the venue pays. A linked line can never be stale — it
+	 * follows the book by construction — so every entry here is a line that
+	 * predates the book, or one somebody unlinked and forgot. This is the list
+	 * the guide's "reprice quarterly" instruction actually needs.
+	 */
+	staleDishIds: string[];
+	/** The venue's measured yield for this item, when a test has been run. */
+	yieldPct: number | null;
 }
 
 /**
@@ -306,7 +412,7 @@ export function itemUsage(
 	preps: ReadonlyArray<{ id: string; lines: CostLine[] }>
 ): ItemUsage[] {
 	const prepById = new Map(preps.map((p) => [p.id, p]));
-	const bySlug = new Map<string, { ids: Set<string>; out: Set<string> }>();
+	const bySlug = new Map<string, { ids: Set<string>; out: Set<string>; stale: Set<string> }>();
 
 	const slugsOf = (l: CostLine) => (l.itemSlug ? [l.itemSlug] : l.item ? [itemSlugOf(l.item)] : []);
 
@@ -320,10 +426,21 @@ export function itemUsage(
 				}
 			}
 		}
+		// Stale detection wants the LINE, not just the slug it reached.
+		const staleHere = new Set<string>();
+		for (const l of d.lines) {
+			if (l.prepId || l.itemSlug) continue; // prep lines and linked lines cannot be stale
+			const slug = l.item ? itemSlugOf(l.item) : '';
+			if (!slug) continue;
+			const current = currentPrice(items[slug]);
+			if (current && l.unitCost !== current.unitCost) staleHere.add(slug);
+		}
+
 		for (const slug of reached) {
 			let e = bySlug.get(slug);
-			if (!e) bySlug.set(slug, (e = { ids: new Set(), out: new Set() }));
+			if (!e) bySlug.set(slug, (e = { ids: new Set(), out: new Set(), stale: new Set() }));
 			e.ids.add(d.id);
+			if (staleHere.has(slug)) e.stale.add(d.id);
 			// ONLY 'over', and this was measured on screen rather than reasoned
 			// about. Counting 'under' too made a brand-new book announce
 			// "1 has moved out of the band" over a plaice whose sheet had one
@@ -351,7 +468,9 @@ export function itemUsage(
 				previous: previousPrice(item),
 				movePct: priceMovePct(item),
 				dishIds: [...(e?.ids ?? [])],
-				outOfBandIds: [...(e?.out ?? [])]
+				outOfBandIds: [...(e?.out ?? [])],
+				staleDishIds: [...(e?.stale ?? [])],
+				yieldPct: measuredYieldPct(item)
 			};
 		})
 		.sort((a, b) => b.dishIds.length - a.dishIds.length || a.name.localeCompare(b.name));

@@ -38,9 +38,11 @@
 		itemSlugOf,
 		currentPrice,
 		previousPrice,
+		measuredYieldPct,
 		itemUsage,
 		type ItemUsage
 	} from '$lib/items';
+	import { costingCsv, csvFilename } from '$lib/costing-csv';
 	import { weekStartOf } from '$lib/persistence/house';
 	import { onMount } from 'svelte';
 
@@ -302,6 +304,56 @@
 	/** The book price a line COULD follow but is not following. */
 	const bookPriceFor = (l: CostLine) =>
 		l.itemSlug || !l.item.trim() ? null : currentPrice(house.item(itemSlugOf(l.item)));
+
+	/**
+	 * The measured yield a line could adopt. Offered on ANY line naming a
+	 * tested item, linked or not — the yield is about the knife work, not the
+	 * price — but only when it differs from what the line already says, because
+	 * a chip repeating the current value is furniture.
+	 */
+	const bookYieldFor = (l: CostLine): number | null => {
+		if (l.prepId || !l.item.trim()) return null;
+		const y = measuredYieldPct(house.item(l.itemSlug ?? itemSlugOf(l.item)));
+		if (y === null) return null;
+		return Math.abs(y - l.yieldPct) < 0.5 ? null : y;
+	};
+
+	/** Per-row yield test entry: which item's mini-form is open, and its fields. */
+	let yieldForm = $state<{ slug: string; gross: number | null; usable: number | null } | null>(null);
+
+	function logYieldTest(name: string) {
+		if (!yieldForm || yieldForm.gross === null || yieldForm.usable === null) return;
+		house.recordItemYield(name, yieldForm.gross, yieldForm.usable);
+		yieldForm = null;
+	}
+
+	/**
+	 * The sheet as a CSV. One-way by decision — the .wtjson is the only import
+	 * path this app will ever have — and cut for the person who does not run
+	 * the app: the accountant, the partner, the bank.
+	 */
+	function downloadCsv() {
+		const csv = costingCsv(
+			dishes.map((d) => ({
+				id: d.id,
+				name: d.name,
+				price: d.price,
+				lines: linesFor(d.id),
+				sold: house.costingFor(d.id).sales.find((w) => w.weekStart === thisWeek)?.count ?? null
+			})),
+			house.preps,
+			house.pricedItems,
+			house.tax.inclusive ? house.tax : undefined,
+			thisWeek
+		);
+		const blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8' });
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement('a');
+		a.href = url;
+		a.download = csvFilename();
+		a.click();
+		URL.revokeObjectURL(url);
+	}
 
 	/**
 	 * The book, with what each price actually reaches.
@@ -670,6 +722,14 @@
 														aria-label="Yield percent"
 														onchange={(ev) => editLine(d.id, l.id, { yieldPct: num(ev) })}
 													/>
+													{#if bookYieldFor(l) !== null}
+														<button
+															class="book use"
+															onclick={() => editLine(d.id, l.id, { yieldPct: Math.round(bookYieldFor(l)!) })}
+															title="Apply the yield the venue measured for this item"
+															>measured: {bookYieldFor(l)!.toFixed(0)}%</button
+														>
+													{/if}
 												</td>
 												<td class="r mono">{per === null ? '—' : sym + money(per)}</td>
 												<td class="r mono">{total === null ? '—' : sym + money(total)}</td>
@@ -780,6 +840,12 @@
 			</ul>
 
 			<h2 class="sec">What the menu adds up to</h2>
+			<p data-print="hide">
+				<button class="chip" onclick={downloadCsv}
+					title="The sheet as a file a spreadsheet opens. One way — nothing imports from CSV, ever."
+					>Download the sheet (CSV)</button
+				>
+			</p>
 			{#if rollup.weightedFoodCostPct !== null}
 				<dl class="rollup">
 					<div>
@@ -853,6 +919,54 @@
 									{u.outOfBandIds.map(dishName).join(', ')}
 								</p>
 							{/if}
+							{#if u.staleDishIds.length}
+								<!--
+									The list the reprice instruction actually needs: unlinked lines
+									still holding a number the book has moved past. A linked line
+									cannot appear here — it follows the book by construction.
+								-->
+								<p class="istale">
+									{u.staleDishIds.length}
+									{u.staleDishIds.length === 1 ? 'dish holds' : 'dishes hold'} an old number:
+									{u.staleDishIds.map(dishName).join(', ')} — open the sheet and take the book price.
+								</p>
+							{/if}
+							<div class="iyield" data-print="hide">
+								{#if u.yieldPct !== null}
+									<span>Measured yield {u.yieldPct.toFixed(0)}%</span>
+								{/if}
+								{#if yieldForm?.slug === u.slug}
+									<input
+										type="number"
+										min="0"
+										step="0.01"
+										placeholder="weighed in"
+										aria-label="Gross quantity, as purchased"
+										bind:value={yieldForm.gross}
+									/>
+									<input
+										type="number"
+										min="0"
+										step="0.01"
+										placeholder="usable"
+										aria-label="Usable quantity after trim"
+										bind:value={yieldForm.usable}
+									/>
+									<button
+										class="book use"
+										disabled={!yieldForm.gross || yieldForm.usable === null || yieldForm.usable > yieldForm.gross}
+										onclick={() => logYieldTest(u.name)}>log it</button
+									>
+									<button class="book" onclick={() => (yieldForm = null)}>cancel</button>
+								{:else}
+									<button
+										class="book"
+										onclick={() => (yieldForm = { slug: u.slug, gross: null, usable: null })}
+										title="Weigh it as it arrives, weigh what is usable after trim, and the book keeps the ratio"
+										>{u.yieldPct === null ? 'log a yield test' : 'retest'}</button
+									>
+								{/if}
+							</div>
 						</li>
 					{/each}
 				</ul>
@@ -1024,6 +1138,31 @@
 		font-size: var(--t-micro);
 		color: var(--ink-soft);
 		max-width: var(--measure);
+	}
+	/* Stale is a call to action, so it carries the accent that is AA for text. */
+	.istale {
+		margin: 4px 0 0;
+		font-size: var(--t-small);
+		color: var(--turmeric-deep);
+		max-width: var(--measure);
+	}
+	.iyield {
+		margin-top: 5px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 6px;
+		font-size: var(--t-small);
+		color: var(--ink-soft);
+	}
+	.iyield input {
+		width: 6.5rem;
+		font: inherit;
+		padding: 2px 5px;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		background: var(--paper-raised);
+		color: var(--text);
 	}
 	.warn,
 	.incomplete,

@@ -57,7 +57,7 @@ import {
 } from '../persistence/house';
 import type { MenuDish, DishCosting, SalesWeek } from '../persistence/state';
 import type { CostLine, PricedItem } from '../costing';
-import { recordPrice, pricedItems, itemNames, currentPrice, type Item } from '../items';
+import { recordPrice, recordYield, pricedItems, itemNames, currentPrice, type Item } from '../items';
 import { type WasteEntry } from '../waste';
 import { resolveLines, plateCost, prepPortionCost } from '../costing';
 
@@ -292,6 +292,17 @@ class House {
 	 */
 	recordItemPrice(name: string, unitCost: number, unit: string) {
 		const next = recordPrice(this.#r.items, name, unitCost, unit, Date.now());
+		if (next === this.#r.items) return;
+		this.#r = { ...this.#r, items: next };
+		this.#persist();
+	}
+
+	/**
+	 * File a yield test against an item. Pure rules live in recordYield —
+	 * including the refusals — so this is a thin write, like recordItemPrice.
+	 */
+	recordItemYield(name: string, grossQty: number, usableQty: number) {
+		const next = recordYield(this.#r.items, name, grossQty, usableQty, Date.now());
 		if (next === this.#r.items) return;
 		this.#r = { ...this.#r, items: next };
 		this.#persist();
