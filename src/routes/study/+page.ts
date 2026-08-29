@@ -20,9 +20,9 @@ const ROOM: Array<{ key: keyof typeof filmsJson; kind: string; title: string; bl
 	{ key: 'pepinGalantine', kind: 'Butchery', title: 'Pépin’s Chicken Galantine', blurb: 'A whole chicken deboned in minutes, then rebuilt as a galantine — the knife lesson every cook should watch twice.' },
 	{ key: 'ccdFriedRice', kind: 'The Wok', title: 'How to Make Any Fried Rice', blurb: 'Chinese Cooking Demystified’s framework film — one technique, three flavors, and the logic to improvise from what you have.' },
 	{ key: 'htkPadThai', kind: 'Street Noodles', title: 'Pailin’s Best Pad Thai', blurb: 'The complete tutorial — tamarind balance, noodle timing, and the wok choreography of Thailand’s most famous dish.' },
-	{ key: 'middleEatsHummus', kind: 'The Levant', title: 'Middle Eats’ Smoothest Hummus', blurb: 'An obsessive pursuit of silk — chickpea skins, tahini order, ice water — that settles the texture question for good.' },
+	{ key: 'middleEatsHummus', kind: 'The Levant', title: 'Middle Eats’ Smoothest Hummus', blurb: 'An obsessive pursuit of silk (chickpea skins, tahini order, ice water) that settles the texture question for good.' },
 	{ key: 'weissmanStarter', kind: 'Bread · Wild Yeast', title: 'Weissman’s Sourdough Starter', blurb: 'The starter guide that launched a million jars — feeding ratios, timing, and what a ready levain actually looks like.' },
-	{ key: 'panlasangAdobo', kind: 'The Braise', title: 'Panlasang Pinoy’s Killer Adobo', blurb: 'The Philippines’ national dish from its most trusted teacher — soy, vinegar, garlic, and the reduction that lacquers the chicken.' }
+	{ key: 'panlasangAdobo', kind: 'The Braise', title: 'Panlasang Pinoy’s Killer Adobo', blurb: 'The Philippines’ national dish from its most trusted teacher: soy, vinegar, garlic, and the reduction that lacquers the chicken.' }
 ];
 
 export async function load() {

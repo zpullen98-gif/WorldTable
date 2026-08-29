@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.chapter.name} — The World Table</title>
+	<title>{data.chapter.name} | The World Table</title>
 </svelte:head>
 
 <RecipeBrowser chapter={data.chapter} />

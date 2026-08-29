@@ -15,7 +15,7 @@
  *     while (others.size < 4) { others.set(pick(…)) }
  *
  * It survives only because `pool` falls back to all 479 terms. Point the same
- * loop at a DUE QUEUE — which is what a scheduled drill asks from — and two
+ * loop at a DUE QUEUE, which is what a scheduled drill asks from, and two
  * things break at once: a server with four due cheeses gets the same four
  * buttons every question, and a queue of three spins that `while` forever.
  *
@@ -27,7 +27,7 @@
  *
  * `optionsFor` never loops waiting for luck. It shuffles a candidate list and
  * takes from it, so it returns in bounded time even when the field is smaller
- * than the round needs — it returns fewer options rather than hanging, and
+ * than the round needs: it returns fewer options rather than hanging, and
  * `buildRound` drops a question it cannot field.
  */
 
@@ -146,7 +146,7 @@ export function buildRound(
 export function verdictFor(right: number, of: number = ROUND_LENGTH): string {
 	if (of !== ROUND_LENGTH) return `${right} of ${of}`;
 	if (right >= 9) return 'Service standard';
-	if (right >= 7) return 'Solid — you would not be caught out';
+	if (right >= 7) return 'Solid. You would not be caught out';
 	if (right >= 5) return 'Halfway. Read the module again';
 	return 'Not yet. This is what the track is for';
 }

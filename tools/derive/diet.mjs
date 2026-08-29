@@ -61,7 +61,7 @@ const FISH = [
 	// Freshwater and regional names the US-state chapters lean on heavily.
 	'walleye', 'whitefish', 'rockfish', 'striped bass', 'perch', 'pike',
 	'bluefish', 'redfish', 'flounder', 'fluke', 'porgy', 'shad', 'smelt',
-	// 'arctic char', never bare 'char' — that flagged char siu pork and
+	// 'arctic char', never bare 'char'; that flagged char siu pork and
 	// char kway teow as containing fish.
 	'lake trout', 'arctic char', 'lake char', 'sturgeon', 'tilefish', 'wahoo', 'opah', 'escolar',
 	'skate', 'ray', 'bass', 'crappie', 'bluegill', 'menhaden'
@@ -273,7 +273,7 @@ const OPTIONAL_MARKER =
 
 /** @param {string} line */
 function lineIsEscaped(line) {
-	// "Smoked salmon to serve", "Fillings: umeboshi, tuna-mayo, salmon flakes" —
+	// "Smoked salmon to serve", "Fillings: umeboshi, tuna-mayo, salmon flakes":
 	// genuinely additive, the dish stands without them.
 	if (OPTIONAL_MARKER.test(line)) return true;
 
@@ -323,7 +323,7 @@ function lineIsEscaped(line) {
  */
 export function deriveDiet(r, _fullBlob) {
 	// Ingredients + name only. Method prose and the "from the pass" note are
-	// commentary — a note saying a dish is "usually served with lamb" must not
+	// commentary: a note saying a dish is "usually served with lamb" must not
 	// put lamb in the dish.
 	const lines = [r.n, ...r.i];
 
@@ -358,17 +358,17 @@ export function deriveDiet(r, _fullBlob) {
 
 	/**
 	 * Fish and shellfish are ALLERGENS, so they follow the allergen policy —
-	 * every line, escaped or not — for exactly the reason dairy and egg do
+	 * every line, escaped or not, for exactly the reason dairy and egg do
 	 * below. They read from `binding` until this was measured, and the comment
 	 * above this block already claimed otherwise: "an allergen is never hidden
 	 * just because it was offered as an option." For these two it was not true,
 	 * and it failed through BOTH escape routes:
 	 *
-	 *   Weeknight paella — "Chicken thighs, chorizo optional (heresy but
+	 *   Weeknight paella: "Chicken thighs, chorizo optional (heresy but
 	 *   delicious), shrimp". OPTIONAL_MARKER was written to excuse the chorizo.
 	 *   It discards the whole line, and the SHRIMP went with it.
 	 *
-	 *   Escabecheng Isda — "1 whole tilapia, snapper or pompano (~800g),
+	 *   Escabecheng Isda: "1 whole tilapia, snapper or pompano (~800g),
 	 *   scored, salted, and fried WHOLE in hot oil". The `or` rule split the
 	 *   line, found "pompano" in no keyword list, matched `oil` in
 	 *   VEG_ALTERNATIVE from "fried WHOLE in hot oil", and escaped a whole fish.
@@ -397,7 +397,7 @@ export function deriveDiet(r, _fullBlob) {
 	 * egg in their own ingredients.
 	 */
 	const containsDairy = anyLine(RE.dairy);
-	// Raw, not scrubbed — see the `raw` comment above. Dairy stays scrubbed
+	// Raw, not scrubbed; see the `raw` comment above. Dairy stays scrubbed
 	// because its exceptions ("coconut milk") are the point; egg's exception
 	// ("egg noodles") was hiding the allergen it names.
 	const containsEgg = anyRaw(RE.egg);
@@ -407,7 +407,7 @@ export function deriveDiet(r, _fullBlob) {
 	 *
 	 * This is NOT the flag the vegetarian filter uses. The authored `v` field is
 	 * a human judgement about the dish as presented, and the corpus applies it
-	 * inconsistently to substitution constructions — Mapo Tofu ("ground pork (or
+	 * inconsistently to substitution constructions: Mapo Tofu ("ground pork (or
 	 * shiitake for veg)") is authored non-vegetarian while Miso Soup
 	 * ("katsuobushi (or skip for vegan)") is authored vegetarian. Both readings
 	 * are defensible; neither is derivable from the text. So the build trusts the

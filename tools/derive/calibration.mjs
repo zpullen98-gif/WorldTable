@@ -1,5 +1,5 @@
 /**
- * The calibration bench — apparatus, not doctrine.
+ * The calibration bench: apparatus, not doctrine.
  *
  * AUTHORED, NOT DERIVED, and the most important thing on this page is what it
  * is NOT. The guide states 5–8% for a wet brine and 2–3% for lacto-fermentation
@@ -16,12 +16,12 @@
  * different dish depending on who is on, and the guest notices before the chef
  * does. "This is under-seasoned", said for six months to somebody who genuinely
  * cannot taste the difference at that concentration, is a discrimination
- * threshold and not an attitude problem — no amount of telling fixes it, and
+ * threshold and not an attitude problem; no amount of telling fixes it, and
  * nothing in this app could tell the two apart. Servers get a scored, scheduled
  * drill over 186 cards; cooks got nothing scored at all.
  *
  * THE INSTRUMENT is a triangle test: three cups, two the same, one different,
- * and the app holds the answer — which is the one thing a cook standing alone
+ * and the app holds the answer, which is the one thing a cook standing alone
  * cannot do for themselves.
  *
  * The guide's own protocol entry is the anchor and it asks for exactly this:
@@ -31,7 +31,7 @@
  * THE LADDER NARROWS, THE RUN DOES NOT. Each level is a fixed pair, and a run
  * is a fixed number of trials at ONE level. Narrowing the gap inside a run is a
  * staircase procedure, which needs its own estimator and is not what
- * repertoire.ts does — a level is a slug, cleared or not, and the ladder is the
+ * repertoire.ts does: a level is a slug, cleared or not, and the ladder is the
  * spacing between levels.
  */
 
@@ -98,7 +98,7 @@ export const LADDERS = [
 		substance: 'white wine vinegar',
 		unit: 'ml',
 		per: '1 litre of water',
-		note: 'Millilitres, not grams, and the same vinegar in both jugs — two acids is a different question.',
+		note: 'Millilitres, not grams, and the same vinegar in both jugs: two acids is a different question.',
 		levels: [
 			{ level: 1, base: 4, odd: 8 },
 			{ level: 2, base: 5.5, odd: 8 },

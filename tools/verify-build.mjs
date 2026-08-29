@@ -38,7 +38,7 @@ const assert = (cond, msg) => {
 };
 
 if (!existsSync(BUILD)) {
-	console.error('\n  no build/ directory — run `npm run build` first\n');
+	console.error('\n  no build/ directory: run `npm run build` first\n');
 	process.exit(1);
 }
 
@@ -191,7 +191,7 @@ check('service worker registers with an absolute path', () => {
  * looks like a broken app rather than a missing dotfile.
  */
 check('.nojekyll present for GitHub Pages', () => {
-	assert(existsSync(join(BUILD, '.nojekyll')), 'missing build/.nojekyll — Jekyll will strip _app/');
+	assert(existsSync(join(BUILD, '.nojekyll')), 'missing build/.nojekyll: Jekyll will strip _app/');
 	return 'Jekyll disabled';
 });
 
@@ -255,7 +255,7 @@ check('precache stays under 2 MB gzipped', () => {
 		gz += gzipSync(b).length;
 	}
 	// Fall back to the whole non-HTML payload if URL matching missed (the plugin
-	// may prefix entries) — the point is to notice growth, not to be clever.
+	// may prefix entries); the point is to notice growth, not to be clever.
 	if (gz === 0) {
 		for (const f of files) {
 			if (extname(f) === '.html' || extname(f) === '.woff') continue;

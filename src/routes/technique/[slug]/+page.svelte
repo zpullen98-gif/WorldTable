@@ -28,7 +28,7 @@
 	const done = $derived(list.filter((r) => cooked.has(r.slug)).length);
 </script>
 
-<svelte:head><title>{t.label} — The World Table</title></svelte:head>
+<svelte:head><title>{t.label}: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<nav class="crumbs" data-print="hide">
@@ -67,7 +67,7 @@
 
 	{#if t.definition}
 		<section class="definition">
-			<p class="eyebrow">From the Lexicon — {t.lexiconTerm}</p>
+			<p class="eyebrow">From the Lexicon, {t.lexiconTerm}</p>
 			<p class="body">{t.definition}</p>
 			<a class="more" href="{base}/lexicon#{t.lexiconSlug}">Read it in the Lexicon →</a>
 		</section>
@@ -76,7 +76,7 @@
 	<section class="film" data-print="hide">
 		{#if t.film}
 			<a href={t.film} target="_blank" rel="noopener">
-				<span class="lbl">★ A canon film — verified</span>
+				<span class="lbl">★ A canon film, verified</span>
 				<span class="sub">Watch this technique done properly</span>
 			</a>
 		{:else if t.query}
@@ -210,7 +210,7 @@
 	}
 
 	/* The card is one big link, so the cooked toggle sits above it rather than
-	   inside it — a button nested in an anchor is invalid and unclickable. */
+	   inside it: a button nested in an anchor is invalid and unclickable. */
 	.slot {
 		position: relative;
 	}

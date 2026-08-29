@@ -22,12 +22,12 @@ thematic atlases from the Dessert Atlas to The Saucier. Alongside them:
   plate looks like at the pass: three to five marks a cook can actually check,
   and the commonest way the dish goes wrong. The guide teaches you to make a
   dish; this is how you know you got it right.
-- **Pantry Match** — what you can cook from 177 ingredients, seasonally aware
+- **Pantry Match**: what you can cook from 177 ingredients, seasonally aware
 - **The Path of Study** — ten semesters, in teaching order, tracking what you
   have actually cooked and which skills that has drilled
 - **Cook mode** — step-by-step, timers parsed from the method text, screen kept
   awake
-- **The menu worksheet** — a checkable shopping list, a service timeline, a
+- **The menu worksheet**: a checkable shopping list, a service timeline, a
   printable guest menu, and session export/import
 - **The Family Chapter** — your own recipes, first-class alongside the guide's
 
@@ -37,20 +37,20 @@ of it persistent.
 ## The interesting part
 
 This is a complete rewrite of a 1.5MB single-file HTML original, which stays in
-the repo as `reference/world-table-v1.html` — committed byte-identical and
+the repo as `reference/world-table-v1.html`, committed byte-identical and
 pinned in `.gitattributes` so git can never rewrite it. It is the only source of
 truth for content.
 
 ```
 reference/world-table-v1.html
-  -> tools/extract.mjs      acorn AST-slice + vm — 15 inline JS literals out
+  -> tools/extract.mjs      acorn AST-slice + vm: 15 inline JS literals out
   -> tools/build-data.mjs   + tools/derive/* — everything computed once
   -> the app imports only the derived JSON
 ```
 
 **Every regex that used to run at render time runs at build time now.** Diet
 flags, seasonality, equipment, flavour, cost, pairings, technique tags, lexicon
-cross-links, the search index — all computed once and committed as reviewable
+cross-links, the search index: all computed once and committed as reviewable
 JSON. Tuning a keyword table shows up as a diff you can read, instead of a
 behaviour change nobody can see.
 

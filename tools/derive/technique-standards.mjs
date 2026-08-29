@@ -28,7 +28,7 @@
  * comment. If a technique is added, a standard is written, or the corpus
  * changes, the build fails here until this paragraph is true again.
  *
- * WHERE IT IS JUDGED — the distinction that shapes the copy. A dish standard is
+ * WHERE IT IS JUDGED: the distinction that shapes the copy. A dish standard is
  * read at the pass, when the plate is finished and the verdict is final. A
  * technique standard is read AT THE PAN, while there is still something to be
  * done about it. A mark that can only be checked after the dish is plated
@@ -101,12 +101,12 @@ export const TECHNIQUE_STANDARDS = [
 		slug: 'searing-the-hard-crust',
 		marks: [
 			{ id: 'searing-the-hard-crust#keeps', text: 'The pan keeps a hard, steady sizzle from the moment the food lands and does not fall quiet; silence within the first half minute means the pan lost its heat and the surface is now steaming rather than browning.' },
-			{ id: 'searing-the-hard-crust#releases', text: 'It releases itself when tested — slide a thin edge under and it lifts without tearing. Anything that grips the pan has not formed a crust yet and is not ready to be moved.' },
+			{ id: 'searing-the-hard-crust#releases', text: 'It releases itself when tested: slide a thin edge under and it lifts without tearing. Anything that grips the pan has not formed a crust yet and is not ready to be moved.' },
 			{ id: 'searing-the-hard-crust#deep', text: 'Deep even brown across the whole face, edge to edge, when it is turned under the light: no pale ring left around a browned centre, and no black patches that taste bitter on their own.' },
 			{ id: 'searing-the-hard-crust#floor', text: 'The pan floor carries a dry browned layer that dissolves and lifts the moment liquid hits it — not a wet grey film, and not black flecks that stay put and stay bitter.' },
-			{ id: 'searing-the-hard-crust#browned', text: 'Cut into it: the browned band is thin, a few millimetres at most, sitting straight on top of correctly cooked interior — a thick grey collar under the crust means the heat was too low for too long.' }
+			{ id: 'searing-the-hard-crust#browned', text: 'Cut into it: the browned band is thin, a few millimetres at most, sitting straight on top of correctly cooked interior; a thick grey collar under the crust means the heat was too low for too long.' }
 		],
-		fault: 'The pan was not hot enough, or too much went in at once, so the food released its water and sat in it — the surface goes grey and steams, it sticks when moved, and the crust that eventually forms arrives over an interior already cooked through.'
+		fault: 'The pan was not hot enough, or too much went in at once, so the food released its water and sat in it: the surface goes grey and steams, it sticks when moved, and the crust that eventually forms arrives over an interior already cooked through.'
 	},
 	{
 		slug: 'sweating-aromatics-soft-never-browned',
@@ -124,9 +124,9 @@ export const TECHNIQUE_STANDARDS = [
 		marks: [
 			{ id: 'griddle-and-plancha-work#full', text: 'Full contact with the metal: the food lies flat, with no dome in the middle and no curled edge lifting it away, so browning reaches the entire face rather than a ring of it.' },
 			{ id: 'griddle-and-plancha-work#contact', text: 'Contact is immediate and audible, and the food stays where it is put rather than sliding around in a slick of its own released liquid.' },
-			{ id: 'griddle-and-plancha-work#cooked', text: 'The cooked face is an unbroken sheet of even colour — the whole surface browned, not a pattern of marks with pale ground between them, and not a dark centre with pale corners.' },
+			{ id: 'griddle-and-plancha-work#cooked', text: 'The cooked face is an unbroken sheet of even colour: the whole surface browned, not a pattern of marks with pale ground between them, and not a dark centre with pale corners.' },
 			{ id: 'griddle-and-plancha-work#metal', text: 'The metal around the food is dry: no spreading wet patch steaming out from under it, nothing weeping onto the surface and boiling there.' },
-			{ id: 'griddle-and-plancha-work#turned', text: 'Turned once or twice and no more, and lifted while the crust is still brown — a piece flipped repeatedly never holds heat long enough to build one.' }
+			{ id: 'griddle-and-plancha-work#turned', text: 'Turned once or twice and no more, and lifted while the crust is still brown: a piece flipped repeatedly never holds heat long enough to build one.' }
 		],
 		fault: 'The surface was crowded and its temperature crashed, so everything gave up its water at once and stewed on the metal — pale, damp, grey at the edges, and stuck fast where the crust never got the chance to form.'
 	},
@@ -135,7 +135,7 @@ export const TECHNIQUE_STANDARDS = [
 		marks: [
 			{ id: 'sauteing-and-the-shallow-fry#everything', text: 'Everything sits in a single layer with visible space between the pieces — nothing stacked, nothing touching, or the pan is too small for the quantity.' },
 			{ id: 'sauteing-and-the-shallow-fry#pieces', text: 'The pieces move freely and keep moving, sliding across the pan rather than sticking and tearing when the pan is worked.' },
-			{ id: 'sauteing-and-the-shallow-fry#light', text: 'Light even browning arrived at quickly — colour on most faces, not the deep crust of a sear and not grey.' },
+			{ id: 'sauteing-and-the-shallow-fry#light', text: 'Light even browning arrived at quickly: colour on most faces, not the deep crust of a sear and not grey.' },
 			{ id: 'sauteing-and-the-shallow-fry#thin', text: 'A thin film of fat with the food glossed by it: no pool left in the pan at the end, and nothing greasy on the fingers or the plate.' },
 			{ id: 'sauteing-and-the-shallow-fry#cooked', text: 'Cooked through but still firm, having spent only a few minutes in the pan — anything that has gone soft has been in there too long.' }
 		],
@@ -157,7 +157,7 @@ export const TECHNIQUE_STANDARDS = [
 		slug: 'the-broiler-heat-from-above',
 		marks: [
 			{ id: 'the-broiler-heat-from-above#lit', text: 'The element is fully lit and the compartment is hot before anything goes under it. A broiler switched on with the food already in place browns nothing for several minutes and then burns it in one.' },
-			{ id: 'the-broiler-heat-from-above#distance', text: 'The distance was set before the dish went in, not adjusted afterwards with a hot dish in one hand — how close it sits is the only heat control this method has.' },
+			{ id: 'the-broiler-heat-from-above#distance', text: 'The distance was set before the dish went in, not adjusted afterwards with a hot dish in one hand: how close it sits is the only heat control this method has.' },
 			{ id: 'the-broiler-heat-from-above#watched', text: 'Somebody stayed with it for the whole time. The window between pale and bitter is tens of seconds, and nothing under a broiler is ever safe to walk away from.' },
 			{ id: 'the-broiler-heat-from-above#even', text: 'The surface has coloured evenly right across, having been turned at least once — every grill has a hot corner and none of them say where it is.' },
 			{ id: 'the-broiler-heat-from-above#beneath', text: 'What is underneath is no further cooked than when it went in. Top heat is there to finish a surface, and anything that came out hotter all the way through was reheated rather than glazed.' }
@@ -169,7 +169,7 @@ export const TECHNIQUE_STANDARDS = [
 		marks: [
 			{ id: 'roasting-in-a-hot-oven#preheated', text: 'The oven was fully up to heat before anything went in, given time beyond the indicator light rather than judged by it.' },
 			{ id: 'roasting-in-a-hot-oven#room', text: 'Every piece has air around it. Nothing touches its neighbour and nothing is packed to the edge of the tray, because crowded food steams itself in its own moisture and never browns.' },
-			{ id: 'roasting-in-a-hot-oven#even', text: 'Colour is even across the whole tray, the tray having been turned at least once — no pale row at the back and no dark row at the front.' },
+			{ id: 'roasting-in-a-hot-oven#even', text: 'Colour is even across the whole tray, the tray having been turned at least once: no pale row at the back and no dark row at the front.' },
 			{ id: 'roasting-in-a-hot-oven#before', text: 'It came out BEFORE the target temperature, not at it. Carryover keeps driving the inside up by several degrees after it leaves the oven, and that rise is part of the cooking rather than an error in it.' },
 			{ id: 'roasting-in-a-hot-oven#coldest', text: 'The temperature was read at the coldest part rather than the easiest one to reach, and read again after the rest.' }
 		],
@@ -178,24 +178,24 @@ export const TECHNIQUE_STANDARDS = [
 	{
 		slug: 'dry-pan-toasting-spices-seeds-and-nuts',
 		marks: [
-			{ id: 'dry-pan-toasting-spices-seeds-and-nuts#bare', text: 'A single layer on dry metal with nothing added — no fat, and nothing else sharing the pan or the tray and competing for the heat.' },
-			{ id: 'dry-pan-toasting-spices-seeds-and-nuts#motion', text: 'It is kept moving — shaken, stirred, or turned. Anything left still scorches on the face touching the metal while the rest of it is barely warm.' },
+			{ id: 'dry-pan-toasting-spices-seeds-and-nuts#bare', text: 'A single layer on dry metal with nothing added: no fat, and nothing else sharing the pan or the tray and competing for the heat.' },
+			{ id: 'dry-pan-toasting-spices-seeds-and-nuts#motion', text: 'It is kept moving: shaken, stirred, or turned. Anything left still scorches on the face touching the metal while the rest of it is barely warm.' },
 			{ id: 'dry-pan-toasting-spices-seeds-and-nuts#nose', text: 'It is judged by smell before sight: once it is fragrant there are seconds left, not minutes, and the nose reaches that point well before the colour does.' },
 			{ id: 'dry-pan-toasting-spices-seeds-and-nuts#decanted', text: 'It leaves the pan the instant it is done, onto a cold surface. A hot pan keeps toasting whatever stays in it, and carryover here is the difference between done and ruined.' },
-			{ id: 'dry-pan-toasting-spices-seeds-and-nuts#even', text: 'The colour is even and light rather than patchy, with nothing black at the edges — one scorched piece taints the whole quantity it is ground into.' }
+			{ id: 'dry-pan-toasting-spices-seeds-and-nuts#even', text: 'The colour is even and light rather than patchy, with nothing black at the edges: one scorched piece taints the whole quantity it is ground into.' }
 		],
 		fault: 'It was left alone for a moment while something else was attended to. Dry heat has no margin: the pieces against the metal go from fragrant to acrid inside a minute, and the bitterness cannot be picked back out of a ground mixture.'
 	},
 	{
 		slug: 'charring-over-open-flame',
 		marks: [
-			{ id: 'charring-over-open-flame#direct', text: 'The surface met the fiercest heat available — flame, a broiler, or bare hot metal — with nothing between them, and it shows as true blistering and blackening rather than gentle, even browning.' },
-			{ id: 'charring-over-open-flame#patches', text: 'The char matches the surface’s fate: where it will be eaten, black sits in patches over deep colour with every face having had its turn — and where the skin is to be peeled away, it may go to an even black, because the char there works on the flesh below and then leaves with the skin.' },
+			{ id: 'charring-over-open-flame#direct', text: 'The surface met the fiercest heat available (flame, a broiler, or bare hot metal) with nothing between them, and it shows as true blistering and blackening rather than gentle, even browning.' },
+			{ id: 'charring-over-open-flame#patches', text: 'The char matches the surface’s fate: where it will be eaten, black sits in patches over deep colour with every face having had its turn, and where the skin is to be peeled away, it may go to an even black, because the char there works on the flesh below and then leaves with the skin.' },
 			{ id: 'charring-over-open-flame#smoke', text: 'It smells of smoke and toasted surface with no acrid edge that stings the nose — acrid means it went past, and acrid does not cook out.' },
 			{ id: 'charring-over-open-flame#beneath', text: 'Just under the char it is cooked — softened, steaming, collapsed, or puffed, whichever the dish wants — because the flame did the surface and the trapped heat did the rest.' },
 			{ id: 'charring-over-open-flame#balance', text: 'A taste carries the smoke without mouthfuls of ash: the black that flakes away is a seasoning, not a layer.' }
 		],
-		fault: 'It was left on one face too long or held too close, so one side carbonised to ash while the rest stayed raw — and the smell turned acrid, which follows the dish through every later step and cannot be seasoned away.'
+		fault: 'It was left on one face too long or held too close, so one side carbonised to ash while the rest stayed raw, and the smell turned acrid, which follows the dish through every later step and cannot be seasoned away.'
 	},
 	// ── Fat, and what comes out of it ────────────────────────────────
 	{
@@ -213,12 +213,12 @@ export const TECHNIQUE_STANDARDS = [
 		slug: 'the-coat-before-the-fry-dredge-crumb-batter',
 		marks: [
 			{ id: 'the-coat-before-the-fry-dredge-crumb-batter#coat', text: 'The coat is continuous before it goes anywhere near the fat: held up to the light, no bare patch of food shows through anywhere, seams and thin edges included.' },
-			{ id: 'the-coat-before-the-fry-dredge-crumb-batter#bonded', text: 'It is bonded rather than resting on top — a gentle shake sheds loose dust only, and the coat does not slide off as a sheet when the piece is handled.' },
+			{ id: 'the-coat-before-the-fry-dredge-crumb-batter#bonded', text: 'It is bonded rather than resting on top: a gentle shake sheds loose dust only, and the coat does not slide off as a sheet when the piece is handled.' },
 			{ id: 'the-coat-before-the-fry-dredge-crumb-batter#bubbles', text: 'It bubbles hard and steadily from the moment it enters the fat, and the bubbling visibly slows as it finishes; those bubbles are the surface water leaving, and a quiet entry means the fat is too cool.' },
 			{ id: 'the-coat-before-the-fry-dredge-crumb-batter#drained', text: 'Out and drained, it is an even gold-brown all over and it is still crisp several minutes later on a rack — a coat that softens within a minute of coming out never lost its water.' },
 			{ id: 'the-coat-before-the-fry-dredge-crumb-batter#broken', text: 'Broken open, there is no paste of raw flour under the crust and no hollow gap where the coat has lifted away from the food.' }
 		],
-		fault: 'The fat was below temperature or the pan was crowded, so the coat drank fat instead of sealing against it — it comes out pale and heavy, greasy to the fingers, and slumps off the food as it cools.'
+		fault: 'The fat was below temperature or the pan was crowded, so the coat drank fat instead of sealing against it: it comes out pale and heavy, greasy to the fingers, and slumps off the food as it cools.'
 	},
 	{
 		slug: 'frying-the-paste-until-the-oil-splits',
@@ -229,12 +229,12 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'frying-the-paste-until-the-oil-splits#smell', text: 'The smell has turned from sharp and raw to round and fragrant, with no raw bite left from any of the aromatics that went into it.' },
 			{ id: 'frying-the-paste-until-the-oil-splits#nothing', text: 'Nothing has caught: no black specks through the paste, no bitterness, and a pan floor that is browned but not burnt.' }
 		],
-		fault: 'It was taken off as soon as it smelled good, before the fat separated — the raw edge of the aromatics is still in it, and the finished dish tastes thin and sharp no matter how long it simmers afterwards.'
+		fault: 'It was taken off as soon as it smelled good, before the fat separated; the raw edge of the aromatics is still in it, and the finished dish tastes thin and sharp no matter how long it simmers afterwards.'
 	},
 	{
 		slug: 'making-a-roux',
 		marks: [
-			{ id: 'making-a-roux#stage', text: 'Taken to the stage the dish named and no further, judged against that colour — pale, blond, or brown to brick — and it got there slowly enough to have coloured evenly.' },
+			{ id: 'making-a-roux#stage', text: 'Taken to the stage the dish named and no further, judged against that colour (pale, blond, or brown to brick), and it got there slowly enough to have coloured evenly.' },
 			{ id: 'making-a-roux#smooth', text: 'It is smooth and mobile: a paste with no dry pockets of flour and no lumps, loosening as it warms rather than sitting stiff in the pan.' },
 			{ id: 'making-a-roux#raw-flour', text: 'The raw-flour smell has gone and been replaced by the toasted, biscuity smell of its stage, with nothing acrid behind it.' },
 			{ id: 'making-a-roux#black', text: 'No black specks anywhere. One scorched fleck condemns the batch — it cannot be stirred back in and it will be tasted in the finished sauce.' },
@@ -249,10 +249,10 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'deep-frying#temperature', text: 'The oil was at temperature before anything went in, measured rather than guessed, and the vessel is no more than two-thirds full.' },
 			{ id: 'deep-frying#dry', text: 'Everything went in dry. Surfaces are patted down and any coating is not dripping, because water hitting hot oil erupts and is the one accident this technique actually has.' },
 			{ id: 'deep-frying#recovers', text: 'The oil recovers between batches. It is back at temperature before the next load goes in rather than falling further with each one.' },
-			{ id: 'deep-frying#bubbles', text: 'A steady vigorous bubbling that slows as it finishes — the bubbles are the food’s own water leaving, so a piece that has gone quiet has stopped drying out and is done.' },
+			{ id: 'deep-frying#bubbles', text: 'A steady vigorous bubbling that slows as it finishes: the bubbles are the food’s own water leaving, so a piece that has gone quiet has stopped drying out and is done.' },
 			{ id: 'deep-frying#salted', text: 'Seasoned or finished in the first seconds out of the oil, while the surface is still hot and will hold what lands on it. Anything applied to a cooled crust sits on top and falls off.' }
 		],
-		fault: 'Too much went in at once and the oil temperature collapsed. The crust forms slowly while the food sits in warm fat absorbing it rather than shedding steam, and it comes out heavy and greasy instead of crisp — which no amount of draining afterwards will fix.'
+		fault: 'Too much went in at once and the oil temperature collapsed. The crust forms slowly while the food sits in warm fat absorbing it rather than shedding steam, and it comes out heavy and greasy instead of crisp, which no amount of draining afterwards will fix.'
 	},
 	{
 		slug: 'draining-fried-food-a-rack-never-paper',
@@ -263,13 +263,13 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'draining-fried-food-a-rack-never-paper#crisp', text: 'A minute later the underside is still as crisp as the top — no soft flat patch where it has been sitting.' },
 			{ id: 'draining-fried-food-a-rack-never-paper#single', text: 'Nothing is stacked or piled while hot, however tempting it is to keep it together. A pile steams itself soft from the inside out.' }
 		],
-		fault: 'It was drained on paper, or piled up to keep warm. Steam leaving the food has nowhere to go but back into the crust, so the underside softens within a minute — the crispness the frying just bought is gone before the plate reaches the table.'
+		fault: 'It was drained on paper, or piled up to keep warm. Steam leaving the food has nowhere to go but back into the crust, so the underside softens within a minute: the crispness the frying just bought is gone before the plate reaches the table.'
 	},
 	{
 		slug: 'deglazing-and-pan-sauces',
 		marks: [
 			{ id: 'deglazing-and-pan-sauces#fond', text: 'The pan still holds its fond. Nothing has been rinsed, wiped, or soaked, and the browned layer is intact on the floor.' },
-			{ id: 'deglazing-and-pan-sauces#fat', text: 'Excess fat was poured off first and the browned layer left behind — the fat is not the flavour and a sauce carrying all of it will not come together.' },
+			{ id: 'deglazing-and-pan-sauces#fat', text: 'Excess fat was poured off first and the browned layer left behind; the fat is not the flavour and a sauce carrying all of it will not come together.' },
 			{ id: 'deglazing-and-pan-sauces#lifts', text: 'The liquid went into a still-hot pan and the floor came clean: scraped while it bubbles, the base goes from stuck brown to bare metal and the sauce darkens as it takes it up.' },
 			{ id: 'deglazing-and-pan-sauces#brown', text: 'The fond was brown and not black. A burnt floor dissolves into bitterness that cannot be seasoned out, and is better washed away than deglazed.' },
 			{ id: 'deglazing-and-pan-sauces#after', text: 'Reduced first and seasoned afterwards, tasted at the consistency it will be served at rather than at the start.' }
@@ -279,7 +279,7 @@ export const TECHNIQUE_STANDARDS = [
 	{
 		slug: 'building-an-emulsion',
 		marks: [
-			{ id: 'building-an-emulsion#thickens', text: 'It visibly thickens as the fat goes in — heavier and more opaque than either part was alone, which is the emulsion announcing itself.' },
+			{ id: 'building-an-emulsion#thickens', text: 'It visibly thickens as the fat goes in, heavier and more opaque than either part was alone, which is the emulsion announcing itself.' },
 			{ id: 'building-an-emulsion#pace', text: 'At no point is there a pool of free fat sitting ahead of the work: fat went in no faster than it disappeared into the body.' },
 			{ id: 'building-an-emulsion#gloss', text: 'Glossy and homogeneous, with no slick floating on top and no visible droplets standing apart in it.' },
 			{ id: 'building-an-emulsion#clings', text: 'It clings — coating what it is put on and holding a line, rather than running off and splitting into a puddle at the plate’s edge.' },
@@ -308,7 +308,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'salted-water-and-the-float-test#nothing', text: 'Nothing is stuck to the bottom of the pot or welded to itself, and the water has not thickened into a cloudy sludge.' },
 			{ id: 'salted-water-and-the-float-test#drained', text: 'Drained on a bite rather than on the clock: resistance at the centre, with no chalky raw core.' }
 		],
-		fault: 'The pot was too small and the water unsalted, so it never recovered its boil — the food sat in slack water, went gummy at the surface, and comes out bland in a way that no sauce afterwards can fix.'
+		fault: 'The pot was too small and the water unsalted, so it never recovered its boil: the food sat in slack water, went gummy at the surface, and comes out bland in a way that no sauce afterwards can fix.'
 	},
 	{
 		slug: 'steaming-basket-leaf-and-lid',
@@ -325,9 +325,9 @@ export const TECHNIQUE_STANDARDS = [
 		slug: 'braising',
 		marks: [
 			{ id: 'braising#pieces', text: 'The pieces went into the liquid already deep brown on their faces, and the pot floor gave up its fond to that liquid rather than keeping it.' },
-			{ id: 'braising#liquid', text: 'The liquid comes partway up the pieces and stays there for the whole cook — not submerged, not run dry — and it never boils: the surface trembles and no more.' },
+			{ id: 'braising#liquid', text: 'The liquid comes partway up the pieces and stays there for the whole cook (not submerged, not run dry), and it never boils: the surface trembles and no more.' },
 			{ id: 'braising#went', text: 'It went long enough for the collagen to convert: a fork twists in it with almost no resistance, and the piece still lifts out whole rather than falling into shreds.' },
-			{ id: 'braising#liquid2', text: 'The liquid has become a sauce — it has body, it coats the back of a spoon, and it tastes concentrated rather than thin and washed out.' },
+			{ id: 'braising#liquid2', text: 'The liquid has become a sauce: it has body, it coats the back of a spoon, and it tastes concentrated rather than thin and washed out.' },
 			{ id: 'braising#meat', text: 'The meat is moist and seasoned through to its centre, not dry fibres sitting inside a good sauce.' }
 		],
 		fault: 'The oven or the burner ran too hot and the liquid boiled, so the fibres tightened and squeezed their moisture out — it shreds dry into a thin greasy liquid, and more time makes it worse rather than better.'
@@ -404,9 +404,9 @@ export const TECHNIQUE_STANDARDS = [
 		slug: 'marinating-acid-salt-and-time',
 		marks: [
 			{ id: 'marinating-acid-salt-and-time#contact', text: 'Contact is total: every surface is wetted, and the pieces are not welded into a clump with dry faces where they pressed together.' },
-			{ id: 'marinating-acid-salt-and-time#stated', text: 'The stated time was kept and kept cold — read against a clock, because this is the one technique where longer is a different result rather than a safer one.' },
+			{ id: 'marinating-acid-salt-and-time#stated', text: 'The stated time was kept and kept cold, read against a clock, because this is the one technique where longer is a different result rather than a safer one.' },
 			{ id: 'marinating-acid-salt-and-time#worked', text: 'It worked at the surface and no further: cut a piece and the marinade’s colour stops a few millimetres in. A protein gone opaque and chalky to the centre before any heat reached it has been cooked by the acid.' },
-			{ id: 'marinating-acid-salt-and-time#texture', text: 'The texture is still springy and whole — not mushy, mealy, or fraying at the surface when it is lifted.' },
+			{ id: 'marinating-acid-salt-and-time#texture', text: 'The texture is still springy and whole, not mushy, mealy, or fraying at the surface when it is lifted.' },
 			{ id: 'marinating-acid-salt-and-time#next', text: 'Where the next step browns it, the surface was patted dry first: a wet surface cannot brown, and the marinade’s sugars will scorch before the food colours.' }
 		],
 		fault: 'It was left well beyond the stated time on the assumption that more is better, so acid and salt worked through the thin edges — those cook to cotton and read grainy while the thick centre tastes of nothing at all.'
@@ -420,7 +420,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'brining-and-curing#rinsed', text: 'Rinsed and dried as the recipe asks, and anything meant to crisp afterwards has a surface dry and tacky to the touch before it goes near heat.' },
 			{ id: 'brining-and-curing#cooked', text: 'Cooked and tasted, it is seasoned right through to the centre rather than merely salty at the surface — and not so salty that the dish cannot be eaten.' }
 		],
-		fault: 'It sat in the brine well past its time because a few extra hours seemed harmless — the surface is over-salted and the texture has gone from firm to spongy and wet, and no cooking takes salt back out.'
+		fault: 'It sat in the brine well past its time because a few extra hours seemed harmless; the surface is over-salted and the texture has gone from firm to spongy and wet, and no cooking takes salt back out.'
 	},
 	{
 		slug: 'chilling-to-firm-the-fridge-as-binder',
@@ -438,7 +438,7 @@ export const TECHNIQUE_STANDARDS = [
 		slug: 'salting-to-draw-the-water-out',
 		marks: [
 			{ id: 'salting-to-draw-the-water-out#even', text: 'Salted evenly over every surface rather than tipped on in one place and tossed once.' },
-			{ id: 'salting-to-draw-the-water-out#drains', text: 'Laid out so the water has somewhere to go — a colander, a rack, or a sieve over a bowl, never a flat dish where it sits back in what it gave up.' },
+			{ id: 'salting-to-draw-the-water-out#drains', text: 'Laid out so the water has somewhere to go: a colander, a rack, or a sieve over a bowl, never a flat dish where it sits back in what it gave up.' },
 			{ id: 'salting-to-draw-the-water-out#visible', text: 'Given real time, and there is visible liquid to show for it: a pool underneath, a drip, or a wrung handful.' },
 			{ id: 'salting-to-draw-the-water-out#removed', text: 'That liquid is removed. It is squeezed, blotted or poured away, and the food is dry to the touch before it goes anywhere near heat.' },
 			{ id: 'salting-to-draw-the-water-out#seasoned', text: 'The dish is seasoned knowing salt has already gone on, tasted before any more is added.' }
@@ -454,7 +454,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'fermentation#covered', text: 'Everything is under the liquid or under a cover, as the method requires — nothing solid left sitting dry in the air to spoil while the rest works.' },
 			{ id: 'fermentation#stopped', text: 'Judged by taste and behaviour and then STOPPED — chilled, baked, or refrigerated at the point wanted, rather than left running because the stated hours had not elapsed.' }
 		],
-		fault: 'It was run on the clock in a kitchen colder or warmer than the recipe assumed. Fermentation is a rate and not a duration, so the same number of hours gives an under-developed ferment in a cold room and a slack, over-soured one in a warm one — and only tasting it would have said which.'
+		fault: 'It was run on the clock in a kitchen colder or warmer than the recipe assumed. Fermentation is a rate and not a duration, so the same number of hours gives an under-developed ferment in a cold room and a slack, over-soured one in a warm one, and only tasting it would have said which.'
 	},
 	{
 		slug: 'the-overnight-rest-letting-a-dish-marry',
@@ -477,15 +477,15 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'proofing-the-rise-before-the-oven#handled', text: 'Handled, it feels alive and airy — light for its size, with bubbles visible under the skin.' },
 			{ id: 'proofing-the-rise-before-the-oven#springs', text: 'It springs in the oven: the piece lifts in the first minutes and the scores open. A shape that does not move at all was proofed past its point before it went in.' }
 		],
-		fault: 'It was proofed to the clock in a kitchen colder or warmer than the recipe assumed — overproofed, it collapses as the blade touches it and bakes flat and dense with a sour edge; underproofed, it tears at the side and bakes tight.'
+		fault: 'It was proofed to the clock in a kitchen colder or warmer than the recipe assumed: overproofed, it collapses as the blade touches it and bakes flat and dense with a sour edge; underproofed, it tears at the side and bakes tight.'
 	},
 	{
 		slug: 'resting-dough-the-pause-that-does-the-work',
 		marks: [
-			{ id: 'resting-dough-the-pause-that-does-the-work#actually', text: 'It actually rested, covered, for the time stated — not cut short because the rest of the schedule was tight.' },
+			{ id: 'resting-dough-the-pause-that-does-the-work#actually', text: 'It actually rested, covered, for the time stated, not cut short because the rest of the schedule was tight.' },
 			{ id: 'resting-dough-the-pause-that-does-the-work#rolls', text: 'It rolls and shapes without fighting: it stays where it is put, and it does not spring back or shrink on the bench between passes.' },
 			{ id: 'resting-dough-the-pause-that-does-the-work#surface', text: 'The surface is smooth and supple rather than dry, cracked, or skinned over.' },
-			{ id: 'resting-dough-the-pause-that-does-the-work#temperature', text: 'It is at the temperature the next step needs — cold where the fat must stay solid, cool and relaxed where it must be rolled thin.' },
+			{ id: 'resting-dough-the-pause-that-does-the-work#temperature', text: 'It is at the temperature the next step needs: cold where the fat must stay solid, cool and relaxed where it must be rolled thin.' },
 			{ id: 'resting-dough-the-pause-that-does-the-work#baked', text: 'Baked, it holds the dimensions it was shaped to rather than shrinking back from the edges of the tin or the rim of the dish.' }
 		],
 		fault: 'The rest was skipped or shortened, so the gluten was still tight — the dough fought the pin and sprang back thick and uneven, then shrank down the sides of the tin in the oven.'
@@ -533,7 +533,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'rubbing-fat-into-flour#minimal', text: 'Liquid added last and only enough to bring it together: pressed, it just holds, with no wet patch and nothing sticking to the hand.' },
 			{ id: 'rubbing-fat-into-flour#rested', text: 'Rested cold before it is rolled or shaped, so the gluten relaxes and the fat firms again after being handled.' }
 		],
-		fault: 'The fat was too warm, or it was rubbed until the mixture looked uniform. Once the fat has melted into the flour there are no solid pieces left to steam apart in the oven, so the bake is sandy or tough instead of flaky — and nothing done later puts those layers back.'
+		fault: 'The fat was too warm, or it was rubbed until the mixture looked uniform. Once the fat has melted into the flour there are no solid pieces left to steam apart in the oven, so the bake is sandy or tough instead of flaky, and nothing done later puts those layers back.'
 	},
 	{
 		slug: 'pie-crust-and-blind-baking',
@@ -544,7 +544,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'pie-crust-and-blind-baking#dry', text: 'The weights come out and the base gets dry heat of its own before anything wet arrives. Pale and damp is not baked, and a filling will not finish it.' },
 			{ id: 'pie-crust-and-blind-baking#releases', text: 'The edges are set and coloured and the shell releases from the tin rather than gripping it.' }
 		],
-		fault: 'It went in warm, or the weights only filled the middle. The sides slump down the tin before the pastry sets, so the case is shallower than it should be, the filling overflows it, and the base is still raw underneath — the soggy bottom, arrived at three ways at once.'
+		fault: 'It went in warm, or the weights only filled the middle. The sides slump down the tin before the pastry sets, so the case is shallower than it should be, the filling overflows it, and the base is still raw underneath: the soggy bottom, arrived at three ways at once.'
 	},
 	{
 		slug: 'folding-keeping-the-air-in',
@@ -553,7 +553,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'folding-keeping-the-air-in#slackened', text: 'The two mixtures were brought closer before being combined — a little of the light one worked into the heavy one first, so the rest is not beaten flat trying to move it.' },
 			{ id: 'folding-keeping-the-air-in#folded', text: 'Folded and not stirred: a broad implement down through the middle, across the base, up and over, with the bowl turned between strokes.' },
 			{ id: 'folding-keeping-the-air-in#stopped', text: 'Stopped the moment the streaks disappear. It is still visibly aerated and holds its shape briefly when the spoon lifts away.' },
-			{ id: 'folding-keeping-the-air-in#straight', text: 'Into the tin and into the oven straight away — a batter left standing on the bench gives back the air it was built for.' }
+			{ id: 'folding-keeping-the-air-in#straight', text: 'Into the tin and into the oven straight away: a batter left standing on the bench gives back the air it was built for.' }
 		],
 		fault: 'It was stirred until it looked perfectly smooth. Every stroke past the point where the streaks vanish knocks out air that cannot be put back, so the bake comes out dense and short of the tin, and often wet through the middle where there was no structure to hold it.'
 	},
@@ -600,13 +600,13 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'the-wobble-and-the-skewer-testing-a-bake#other', text: 'The other signs agree with the test — risen and just shrinking from the sides, the top set and dry to a light touch with no wet gloss on it.' },
 			{ id: 'the-wobble-and-the-skewer-testing-a-bake#pressed', text: 'Pressed lightly at the middle it springs back and leaves no lasting dent.' }
 		],
-		fault: 'It was judged on the clock and on how the edges looked, so a centre still liquid went to the rack and sank as it cooled — a dense wet seam under a perfectly browned top.'
+		fault: 'It was judged on the clock and on how the edges looked, so a centre still liquid went to the rack and sank as it cooled, a dense wet seam under a perfectly browned top.'
 	},
 	{
 		slug: 'knife-cuts-dice-julienne-bias',
 		marks: [
 			{ id: 'knife-cuts-dice-julienne-bias#three', text: 'Take any three pieces from anywhere in the pile: they match closely enough in every dimension that you would have to measure them to argue otherwise.' },
-			{ id: 'knife-cuts-dice-julienne-bias#faces', text: 'The cut faces are flat and clean rather than ragged or crushed — leaves and herbs are cut through, not bruised, and the board carries no dark smear where they were.' },
+			{ id: 'knife-cuts-dice-julienne-bias#faces', text: 'The cut faces are flat and clean rather than ragged or crushed; leaves and herbs are cut through, not bruised, and the board carries no dark smear where they were.' },
 			{ id: 'knife-cuts-dice-julienne-bias#stated', text: 'The stated size is the actual size, held against a rule or a known reference rather than called about right.' },
 			{ id: 'knife-cuts-dice-julienne-bias#everything', text: 'Everything in the pile is the shape that was asked for: no wedges, no half pieces, and no offcuts swept in to avoid waste.' },
 			{ id: 'knife-cuts-dice-julienne-bias#cook', text: 'They cook evenly, which is the entire point — at the end of cooking nothing is still raw and nothing has collapsed.' }
@@ -622,7 +622,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'mashing-and-pureeing#nothing', text: 'Nothing separates on the plate: no water or fat weeping out into a ring within a minute of serving.' },
 			{ id: 'mashing-and-pureeing#colour', text: 'The colour is even throughout, with no streaks of unincorporated fat, liquid, or seasoning at the edges of the bowl.' }
 		],
-		fault: 'A starchy ingredient met a high-speed blade, so the cells burst and released their starch — what should be light comes out as an elastic glue that lifts off the spoon in one mass.'
+		fault: 'A starchy ingredient met a high-speed blade, so the cells burst and released their starch: what should be light comes out as an elastic glue that lifts off the spoon in one mass.'
 	},
 	{
 		slug: 'resting-meat-and-slicing-against-the-grain',
@@ -631,7 +631,7 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'resting-meat-and-slicing-against-the-grain#coldest', text: 'The probe went into the coldest likely part rather than the easiest one to reach — the reading that matters is the lowest one, not the first one.' },
 			{ id: 'resting-meat-and-slicing-against-the-grain#rested', text: 'Rested for a time matched to its size, somewhere warm, and not cut into partway through to see how it is doing.' },
 			{ id: 'resting-meat-and-slicing-against-the-grain#dry', text: 'The board is nearly dry when it is finally cut. A spreading pool means it was cut too early, and that liquid should have stayed inside.' },
-			{ id: 'resting-meat-and-slicing-against-the-grain#across', text: 'The grain was found and the knife went ACROSS it, so the fibres are cut short — and the blade was sharp enough that the slices hold together rather than tearing.' }
+			{ id: 'resting-meat-and-slicing-against-the-grain#across', text: 'The grain was found and the knife went ACROSS it, so the fibres are cut short, and the blade was sharp enough that the slices hold together rather than tearing.' }
 		],
 		fault: 'It was cut straight off the heat, usually because everything else was ready. The muscle is still contracted and the juice still driven to the centre, so it runs out onto the board — the meat is drier than it ever needed to be, and the flavour that left it is sitting in a puddle under the knife.'
 	},
@@ -655,6 +655,6 @@ export const TECHNIQUE_STANDARDS = [
 			{ id: 'sugar-stages-and-caramel#stopped', text: 'Stopped decisively at the point wanted: off the heat and into the next liquid or onto a cold surface, rather than left to coast in a hot pan.' },
 			{ id: 'sugar-stages-and-caramel#clear', text: 'The result is clear and smooth rather than grainy, cloudy, or seized into a solid mass.' }
 		],
-		fault: 'It was stirred after coming to the boil, or a stray crystal from the side of the pan fell back in. One crystal seeds the whole pan and the syrup turns grainy within seconds — and once sugar has crystallised the only cure is more water and starting the whole thing again.'
+		fault: 'It was stirred after coming to the boil, or a stray crystal from the side of the pan fell back in. One crystal seeds the whole pan and the syrup turns grainy within seconds, and once sugar has crystallised the only cure is more water and starting the whole thing again.'
 	}
 ];

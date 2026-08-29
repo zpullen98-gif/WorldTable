@@ -6,7 +6,7 @@
  * bottom. Reordering the else-if chain silently changes what 970 dishes pour.
  *
  * The only structural change is that the recipe's flavor tags are passed in
- * rather than recomputed via `flavorFor(r)` — the original called it inside a
+ * rather than recomputed via `flavorFor(r)`: the original called it inside a
  * function that itself ran over the whole array, so the tags were derived
  * hundreds of times per render.
  */
@@ -66,19 +66,19 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 					: c === 'Thai' || c === 'Vietnamese' || c === 'Malaysian'
 						? 'Limeade or young coconut'
 						: 'Agua fresca or iced jasmine tea',
-			'Sugar, cold, and low alcohol are the fire code — sweetness tames capsaicin while acid resets the palate; tannin would fan the flames.'
+			'Sugar, cold, and low alcohol are the fire code: sweetness tames capsaicin while acid resets the palate; tannin would fan the flames.'
 		);
 	}
 
 	/* ---- regional + ingredient tree ---- */
 	if (has('oyster,', 'oysters') && !has('rocky mountain', 'calf fries', 'testicle'))
-		return P('Muscadet or Chablis', 'Fino Sherry or Champagne', 'Dry stout — the old alliance',
+		return P('Muscadet or Chablis', 'Fino Sherry or Champagne', 'Dry stout, the old alliance',
 			'Cucumber-mint sparkling water',
 			'Brine wants saline, steely whites: merroir meeting minerality, with bubbles or stout as the classic dissents.');
 
 	if (has('clam', 'mussel', 'vongole', 'octopus', 'polvo', 'squid', 'calamari', 'cuttlefish'))
 		return P('Albariño or Muscadet', 'Assyrtiko or Vermentino', 'Witbier', 'Sparkling water with lemon',
-			'The Atlantic’s whites beside the sea’s own liquor — salinity in sympathy, acid keeping everything bright.');
+			'The Atlantic’s whites beside the sea’s own liquor: salinity in sympathy, acid keeping everything bright.');
 
 	if (has('anchov', 'sardine', 'salt cod', 'bacalao', 'bacalhau'))
 		return P('Fino or Manzanilla Sherry', 'Muscadet or dry Riesling', 'Pilsner', 'Sparkling water with lemon',
@@ -142,7 +142,7 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 	) {
 		if (tag('smoky') || has('barbecue', 'bbq', 'smoked'))
 			return P('Zinfandel (old-vine)', 'Shiraz or Malbec', 'Smoked porter', 'Cherry cola, honestly',
-				'Barbecue’s sweet-smoke wants jammy fruit that shakes hands with the sauce — dry austere reds argue with sugar and lose.');
+				'Barbecue’s sweet-smoke wants jammy fruit that shakes hands with the sauce; dry austere reds argue with sugar and lose.');
 		if (has('braise', 'stew', 'wine', 'bourguignon', 'ragù', 'ragu', 'birria', 'goulash'))
 			return P('Syrah (northern Rhône) or Nebbiolo', 'The braising wine itself, better bottle',
 				'Belgian dubbel', 'Beet & blackcurrant shrub',
@@ -176,7 +176,7 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 			has('roast', 'butter', 'cream', 'tarragon') ? 'Chardonnay (village Burgundy)' : 'Pinot Noir or Gamay',
 			has('tomato', 'olive', 'paprika') ? 'Chianti or Barbera' : 'Chenin Blanc',
 			'Bière de garde', 'Verbena iced tea',
-			'Chicken is wine’s most agreeable partner — match the SAUCE, not the bird: cream to oak, tomato to Sangiovese’s acid, herbs to Loire whites.'
+			'Chicken is wine’s most agreeable partner. Match the SAUCE, not the bird: cream to oak, tomato to Sangiovese’s acid, herbs to Loire whites.'
 		);
 
 	if (has('tomato', 'marinara', 'puttanesca', 'arrabbiata', 'pizza', 'caprese'))
@@ -218,7 +218,7 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 			'Iced barley or jasmine tea',
 			'Soy, fish sauce, and oyster sauce stack savory depth — answer it with high-acid, low-oak whites that cut salt without adding weight.');
 
-	return P('Champagne — when lost, bubbles', 'Cru Beaujolais, lightly chilled', 'Pilsner',
+	return P('Champagne: when lost, bubbles', 'Cru Beaujolais, lightly chilled', 'Pilsner',
 		'Sparkling water with citrus',
 		'The universal donors: acid, bubbles, and low tannin rescue nearly any plate — the sommelier’s honest safety net.');
 }

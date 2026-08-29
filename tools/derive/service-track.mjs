@@ -64,7 +64,7 @@ export const FOH_TOTAL = 176;
  * The five deliberately absent are absent because the guide does not teach them:
  * `barbera` (the only Piedmont entry is Nebbiolo, a different grape),
  * `muscadet` (the one match is an entry about the fruit), `gewurztraminer`,
- * `sauternes`, and `rose` — for which the guide has one passing clause inside
+ * `sauternes`, and `rose`, for which the guide has one passing clause inside
  * grenache-garnacha and nothing else. Anchoring any of them would be inventing
  * a lesson.
  */
@@ -177,7 +177,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-cellar-reds",
 		title: "The Reds You Will Pour",
-		outcome: "Three sentences each on the Bordeaux blend, Pinot Noir, the Rhône school, the Tempranillo/Sangiovese/Nebbiolo food-wine trinity, and the New World crowd-pleasers — and you can steer a table off Cabernet when the plate is chile or delicate fish.",
+		outcome: "Three sentences each on the Bordeaux blend, Pinot Noir, the Rhône school, the Tempranillo/Sangiovese/Nebbiolo food-wine trinity, and the New World crowd-pleasers; and you can steer a table off Cabernet when the plate is chile or delicate fish.",
 		termSlugs: [
 			"cabernet-sauvignon-and-the-bordeaux-blend",
 			"pinot-noir-and-burgundy",
@@ -310,7 +310,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-cheese-world",
 		title: "The Levant, South Asia and the Americas",
-		outcome: "You can serve and describe paneer, labneh, the Mexican trio and the American four without apology or condescension — including why American cheese is engineered the way it is.",
+		outcome: "You can serve and describe paneer, labneh, the Mexican trio and the American four without apology or condescension, including why American cheese is engineered the way it is.",
 		termSlugs: [
 			"paneer",
 			"akkawi-and-nabulsi",
@@ -370,7 +370,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-charc-france",
 		title: "The French Charcuterie",
-		outcome: "You can serve pâté, terrine and pâté en croûte at the right thickness with a hot wet knife, explain boudin noir to a hesitant table, and handle a foie gras order — including the ethics question — without improvising an answer.",
+		outcome: "You can serve pâté, terrine and pâté en croûte at the right thickness with a hot wet knife, explain boudin noir to a hesitant table, and handle a foie gras order, including the ethics question, without improvising an answer.",
 		termSlugs: [
 			"jambon-de-bayonne-and-french-whole-muscle-hams",
 			"saucisson-sec",
@@ -410,7 +410,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-bar-bottles",
 		title: "What Is in the Bottle",
-		outcome: "For any well or call order you can say what the spirit is made from, roughly what it tastes like, and what it substitutes for — across whiskey, Scotch/Irish/world whisky, gin, vodka, rum, tequila and mezcal, brandy, vermouth, amari, the liqueur shelf, bitters and absinthe.",
+		outcome: "For any well or call order you can say what the spirit is made from, roughly what it tastes like, and what it substitutes for, across whiskey, Scotch/Irish/world whisky, gin, vodka, rum, tequila and mezcal, brandy, vermouth, amari, the liqueur shelf, bitters and absinthe.",
 		termSlugs: [
 			"bourbon-rye-and-american-whiskey",
 			"scotch-irish-and-world-whisky",
@@ -488,7 +488,7 @@ export const SERVER_MODULES = [
  * server track that said "contains" or "clear" about a dish would be read at a
  * table, out loud, to a guest. The guide has no allergen curriculum — measured
  * across all 479 definitions, exactly two mention allergens and only one states
- * a rule — so there is nothing here to build one out of.
+ * a rule, so there is nothing here to build one out of.
  */
 function assertNoVerdict(obj, recipeSlugs, problems) {
 	const BANNED = new Set(['allergens', 'contains', 'clear', 'safe', 'screened', 'recipes']);
@@ -505,7 +505,7 @@ function assertNoVerdict(obj, recipeSlugs, problems) {
 			for (const [k, v] of Object.entries(node)) {
 				if (BANNED.has(k)) {
 					problems.push(
-						`service-track: shipped object carries a "${k}" field at ${path} — ` +
+						`service-track: shipped object carries a "${k}" field at ${path}; ` +
 							'this track must not deliver an allergen verdict'
 					);
 				}
@@ -533,7 +533,7 @@ export function buildServiceTrack(lexicon, cellar, recipeSlugList = []) {
 			problems.push(`service-track: the lexicon no longer has a "${category}" category`);
 		} else if (actual !== expected) {
 			problems.push(
-				`service-track: "${category}" holds ${actual} terms, the track was built against ${expected} — ` +
+				`service-track: "${category}" holds ${actual} terms, the track was built against ${expected}; ` +
 					're-check the module that owns the difference before changing this number'
 			);
 		}
@@ -554,7 +554,7 @@ export function buildServiceTrack(lexicon, cellar, recipeSlugList = []) {
 				problems.push(`service-track: ${m.key} references "${slug}", which is not a lexicon term`);
 			}
 			const first = seen.get(slug);
-			if (first) problems.push(`service-track: "${slug}" is taught twice — ${first} and ${m.key}`);
+			if (first) problems.push(`service-track: "${slug}" is taught twice: ${first} and ${m.key}`);
 			else seen.set(slug, m.key);
 		}
 		if (!m.termSlugs.length) {

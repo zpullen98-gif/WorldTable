@@ -51,7 +51,7 @@
 	const dishes = $derived(house.dishes);
 	const foodCostBand = $derived(data.economics.bands.find((b) => b.key === 'foodCost')!);
 
-	/** Which dish's sheet is open. One at a time — this is a long form. */
+	/** Which dish's sheet is open. One at a time: this is a long form. */
 	let openId = $state<string | null>(null);
 
 	function mintLineId() {
@@ -115,7 +115,7 @@
 		house.costingFor(id).sales.find((w) => w.weekStart === thisWeek)?.count ?? null;
 
 	/**
-	 * The weeks actually STORED, newest first — not a computed range of the last
+	 * The weeks actually STORED, newest first, not a computed range of the last
 	 * four Mondays looked up one by one. A range hides a misfiled week (the
 	 * dead-battery tablet, the hour-off key), and hiding is what turns a visible
 	 * duplicate into silent loss.
@@ -238,7 +238,7 @@
 
 		// Renaming a linked line onto something the book has never heard of
 		// unlinks it rather than dragging the old item's price along under a new
-		// word — the price on screen would then belong to neither name.
+		// word: the price on screen would then belong to neither name.
 		if (l.itemSlug && !known) {
 			rewriteLine(dishId, l.id, ({ itemSlug: _drop, ...rest }) => ({ ...rest, item: name }));
 			return;
@@ -315,7 +315,7 @@
 	/**
 	 * The measured yield a line could adopt. Offered on ANY line naming a
 	 * tested item, linked or not — the yield is about the knife work, not the
-	 * price — but only when it differs from what the line already says, because
+	 * price, but only when it differs from what the line already says, because
 	 * a chip repeating the current value is furniture.
 	 */
 	const bookYieldFor = (l: CostLine): number | null => {
@@ -336,7 +336,7 @@
 
 	/**
 	 * The sheet as a CSV. One-way by decision — the .wtjson is the only import
-	 * path this app will ever have — and cut for the person who does not run
+	 * path this app will ever have, and cut for the person who does not run
 	 * the app: the accountant, the partner, the bank.
 	 */
 	function downloadCsv() {
@@ -501,7 +501,7 @@
 		return { thisWeek, carried };
 	});
 
-	/** Dishes with at least one costed line — the only ones with a real number. */
+	/** Dishes with at least one costed line, the only ones with a real number. */
 	const costed = $derived(dishes.filter((d) => linesFor(d.id).length > 0));
 </script>
 
@@ -647,7 +647,7 @@
 												Money is read from the RESOLVED line, never the stored one.
 												A prep-backed line stores unitCost 0 because its price comes
 												from the prep, so costing this row raw would print 0.00 in
-												the table while the total underneath was right — a wrong
+												the table while the total underneath was right, a wrong
 												number sitting next to a correct one, which is worse than
 												either.
 											-->
@@ -760,7 +760,7 @@
 														>
 													{/if}
 												</td>
-												<td class="r mono">{per === null ? '—' : sym + money(per)}</td>
+												<td class="r mono">{per === null ? '-' : sym + money(per)}</td>
 												<td class="r mono">{total === null ? '—' : sym + money(total)}</td>
 												<td>
 													<button
@@ -808,7 +808,7 @@
 										<!--
 											The weeks actually STORED, not a computed range of the last four
 											Mondays looked up one by one. A range hides a misfiled week — the
-											dead-battery tablet, the hour-off key — and hiding is what turns
+											dead-battery tablet, the hour-off key, and hiding is what turns
 											a visible duplicate into silent loss.
 										-->
 										<p class="weeks">
@@ -861,12 +861,12 @@
 								{#if verdict === 'over'}
 									<p class="verdictnote">
 										Above the guide's {foodCostBand.lowPct}–{foodCostBand.highPct}% band. Cut cost or
-										raise price — the guide's order is to reprice against invoice creep before
+										raise price. The guide's order is to reprice against invoice creep before
 										touching the recipe.
 									</p>
 								{:else if verdict === 'under'}
 									<p class="verdictnote">
-										Below {foodCostBand.lowPct}%. Usually an incomplete sheet rather than a triumph —
+										Below {foodCostBand.lowPct}%. Usually an incomplete sheet rather than a triumph;
 										check nothing is missing before congratulating yourself.
 									</p>
 								{/if}
@@ -900,7 +900,7 @@
 				</dl>
 				<!--
 					The qualification is the point. An undated, unqualified weighted food
-					cost is the most quotable wrong number this app could produce — so it
+					cost is the most quotable wrong number this app could produce, so it
 					says which week it is, and over how many dishes.
 				-->
 				<p class="secnote">

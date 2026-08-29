@@ -26,13 +26,13 @@
 		<p class="lede">
 			{#if role === 'chef'}
 				No syllabus to finish. {data.techniques} skills, {data.anchored} of them with the definition that
-				explains why they work — and a course underneath if you want a route through them.
+				explains why they work, and a course underneath if you want a route through them.
 			{:else if role === 'server'}
 				The kitchen's side of the menu. You do not need to cook it, but knowing how it is made is
 				most of knowing how to sell it.
 			{:else}
 				{data.semesters} semesters, {data.courseDishes} dishes, in teaching order. Underneath them are
-				{data.taught} of the guide's {data.techniques} skills — the course is those skills wearing dishes.
+				{data.taught} of the guide's {data.techniques} skills: the course is those skills wearing dishes.
 			{/if}
 		</p>
 	</header>

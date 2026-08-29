@@ -11,7 +11,7 @@
  * The guide is blunt about it: "a $12/kg fish at 45% yield is really $26/kg on
  * the plate; costing raw invoice prices is the classic rookie bankruptcy." A
  * costing sheet that multiplies invoice price by quantity is not a simplified
- * version of this — it is the specific error that closes restaurants, and it
+ * version of this: it is the specific error that closes restaurants, and it
  * would look completely convincing on screen. So yield is not an optional
  * refinement here; it divides every line, and a line defaults to 100% only
  * because saying so out loud is better than hiding the assumption.
@@ -33,7 +33,7 @@ export interface CostLine {
 	/** Usable share after trim, bone and cooking loss. 100 = no loss. */
 	yieldPct: number;
 	/**
-	 * This line is a PREP, not a purchase — its unit cost comes from what the
+	 * This line is a PREP, not a purchase: its unit cost comes from what the
 	 * prep costs per portion rather than from an invoice.
 	 *
 	 * Resolved to a plain line by resolveLines() before anything reaches
@@ -57,7 +57,7 @@ export interface CostLine {
 }
 
 /**
- * The priced part of an item — deliberately the minimum, for the same reason
+ * The priced part of an item, deliberately the minimum, for the same reason
  * CostablePrep is: this file has no business knowing that an item also carries
  * a name, a slug it was filed under and two years of history. items.ts owns
  * that, and hands this down.
@@ -328,7 +328,7 @@ export function bandFor(pct: number | null, band: Band): BandVerdict {
  * Weighted food cost is Σ(plateCost × sold) ÷ Σ(price × sold): the money that
  * left the walk-in over the money that came through the till. Everything here
  * is over the dishes carrying BOTH a price and a covers count, and the caller
- * must say so — an undated, unqualified weighted food cost is the most quotable
+ * must say so; an undated, unqualified weighted food cost is the most quotable
  * wrong number this app could produce.
  */
 export interface RollupDish {

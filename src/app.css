@@ -103,7 +103,7 @@ textarea {
 	border-radius: 1px;
 }
 
-/* Native controls follow the service — fixes dropdowns and scrollbars. */
+/* Native controls follow the service: fixes dropdowns and scrollbars. */
 select option {
 	background: var(--card);
 	color: var(--ink);

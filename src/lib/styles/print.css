@@ -66,7 +66,7 @@
 		page-break-inside: avoid;
 	}
 
-	/* Ingredients set in two columns — the shape of a recipe card. */
+	/* Ingredients set in two columns, the shape of a recipe card. */
 	.ingredients {
 		columns: 2;
 		column-gap: 10mm;

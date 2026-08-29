@@ -18,7 +18,7 @@
 	 *
 	 * The rice. The refire on table 12. The Barolo that needs forty minutes in
 	 * the decanter. None of those are recipe steps, and `timers.start` had
-	 * exactly ONE call site in the whole app — cook mode's — so every cook on
+	 * exactly ONE call site in the whole app, cook mode's, so every cook on
 	 * the line used their phone, which is the thing this was meant to replace,
 	 * and the bar honestly showed two of the five pots actually running.
 	 *

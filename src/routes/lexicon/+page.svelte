@@ -14,7 +14,7 @@
 	 * The L2506 bug, structurally impossible here.
 	 *
 	 * The original bound `lexQ.addEventListener('input', renderLex)` to the FIRST
-	 * definition of renderLex; the enhanced version at L2839 — the one that draws
+	 * definition of renderLex; the enhanced version at L2839, the one that draws
 	 * the recipe cross-links — only ever ran on the initial paint. So the moment
 	 * you typed a character, every cross-link vanished.
 	 *
@@ -74,7 +74,7 @@
 	const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
 
 	function ask() {
-		// The round draws from the current filter, like the original — quiz what
+		// The round draws from the current filter, like the original: quiz what
 		// you're studying. Under 4 visible terms, widen to the whole lexicon.
 		const pool = shown.length >= 4 ? shown : data.lexicon;
 		const target = pick(pool);

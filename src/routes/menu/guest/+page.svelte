@@ -204,7 +204,7 @@
 		cursor: default;
 	}
 
-	/* The card itself is always ink-on-white — it is a physical object being
+	/* The card itself is always ink-on-white: it is a physical object being
 	   previewed, and previewing it in night service would lie about the print. */
 	.gm {
 		background: #fff;

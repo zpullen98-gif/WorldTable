@@ -70,7 +70,7 @@ export const STANDARDS = [
 			{ id: 'ratatouille#spoon', text: "Spoon up a few pieces of each and the eggplant, zucchini and pepper all carry browned faces — the pan colour is on every vegetable, not just one, and none of it reads uniform grey." },
 			{ id: 'ratatouille#eggplant', text: "Eggplant is creamy through with no squeak; zucchini yields but holds its square and has not watered out." },
 			{ id: 'ratatouille#liquid', text: "Liquid in the pot is a small amount of glossy, oil-slicked juice, not a thin wash; a spoon dragged across the bottom leaves a track that fills back slowly." },
-			{ id: 'ratatouille#taste', text: "Taste an eggplant cube and a piece of tomato back to back — both are seasoned, neither bland against the other — and the garlic and herbs taste cooked-sweet and perfumed with no raw grassy bite." }
+			{ id: 'ratatouille#taste', text: "Taste an eggplant cube and a piece of tomato back to back (both are seasoned, neither bland against the other), and the garlic and herbs taste cooked-sweet and perfumed with no raw grassy bite." }
 		],
 		fault: "Everything went into one crowded pan, the vegetables released their water and stewed instead of browning, so the dish arrives grey and slack in a thin pool with the zucchini gone to pulp."
 	},
@@ -79,7 +79,7 @@ export const STANDARDS = [
 		marks: [
 			{ id: 'chicken-piccata#cutlets', text: "Cutlets of even thickness, around 1cm, golden edge to edge on both faces with no pale patches of unbrowned flour." },
 			{ id: 'chicken-piccata#sauce', text: "Sauce is the brown of lifted fond rather than floury-pale, the pan floor scraped clean, and nothing on the plate tastes of raw flour." },
-			{ id: 'chicken-piccata#sauce2', text: "Sauce is opaque and glossy, coats the back of a spoon and holds together on the plate — no yellow butter ring creeping out at the rim." },
+			{ id: 'chicken-piccata#sauce2', text: "Sauce is opaque and glossy, coats the back of a spoon and holds together on the plate: no yellow butter ring creeping out at the rim." },
 			{ id: 'chicken-piccata#roughly', text: "Roughly two tablespoons per cutlet, clinging to the meat rather than pooling: cut at the thickest point the chicken is just opaque with clear juice, and the coating is still on the cutlet rather than shed into the sauce." },
 			{ id: 'chicken-piccata#sharp', text: "Sharp before rich — lemon and caper brine land first, the butter behind them — and nobody reaches for more lemon at the table." }
 		],
@@ -92,7 +92,7 @@ export const STANDARDS = [
 			{ id: 'salade-nicoise#beans', text: "Beans are bright green and snap when bent, not olive-drab and floppy." },
 			{ id: 'salade-nicoise#halve', text: "Halve a potato: the interior is glossy and seasoned to the centre, not dry and white under a merely wet skin." },
 			{ id: 'salade-nicoise#halve2', text: "Halve an egg: white fully set, yolk bright and just tacky at the middle, no grey-green ring at the boundary." },
-			{ id: 'salade-nicoise#tasted', text: "Tasted on its own the vinaigrette is sharp enough to sting, and it stays joined through service — the platter floor carries a light gloss, not a split pool under the potatoes." }
+			{ id: 'salade-nicoise#tasted', text: "Tasted on its own the vinaigrette is sharp enough to sting, and it stays joined through service: the platter floor carries a light gloss, not a split pool under the potatoes." }
 		],
 		fault: "The potatoes were dressed after they went cold, so the vinaigrette slides straight off them into a puddle under the platter and the salad reads bland while the bottom of the dish is oily."
 	},
@@ -107,7 +107,7 @@ export const STANDARDS = [
 			{ id: 'miso-soup#tofu', text: "Tofu cubes arrive whole and hot through, not broken into curds by stirring; wakame is fully unfurled and silky rather than rubbery or leathery." },
 			{ id: 'miso-soup#enough', text: "Hot enough to steam but sippable straight from the bowl without a spoon, around 75°C, and the miso still smells sweet and malty at the nose — flat and merely salty means it went back to the boil." }
 		],
-		fault: "The pot was brought back to a boil after the miso went in, so the aroma has blown off and what arrives is gritty salt water — the dashi's work erased in the last thirty seconds."
+		fault: "The pot was brought back to a boil after the miso went in, so the aroma has blown off and what arrives is gritty salt water, the dashi's work erased in the last thirty seconds."
 	},
 	{
 		slug: "soupe-a-loignon",
@@ -136,9 +136,9 @@ export const STANDARDS = [
 		marks: [
 			{ id: 'barszcz#deep', text: "Deep luminous garnet; a spoonful held to the light reads red-purple, not brick, brown or dusty pink." },
 			{ id: 'barszcz#strained', text: "The strained version is genuinely clear — light passes through the bowl with no cloud or sediment; the blended version is uniformly smooth with no fibrous beet threads." },
-			{ id: 'barszcz#nothing', text: "Nothing rides the surface and nothing strays into the bowl: no fat beads, no scum, no loose allspice berry or bay fragment — the only solids present are the ones put there deliberately." },
+			{ id: 'barszcz#nothing', text: "Nothing rides the surface and nothing strays into the bowl: no fat beads, no scum, no loose allspice berry or bay fragment; the only solids present are the ones put there deliberately." },
 			{ id: 'barszcz#enough', text: "Hot enough to steam but off the boil: a spoon of sour cream stirred through blends to an even pink without curdling into flecks or beading at the rim." },
-			{ id: 'barszcz#sour', text: "Sour first and hard enough to tighten the jaw, sugar arriving a beat behind to round it, salt last — if the first spoon reads sweet earth before it reads sour, it is not barszcz yet." }
+			{ id: 'barszcz#sour', text: "Sour first and hard enough to tighten the jaw, sugar arriving a beat behind to round it, salt last; if the first spoon reads sweet earth before it reads sour, it is not barszcz yet." }
 		],
 		fault: "The vinegar went in early and the pot kept boiling, so the soup arrives a dull brownish brick with the sourness cooked flat, tasting merely of sweet earth."
 	},
@@ -470,8 +470,8 @@ export const STANDARDS = [
 			{ id: 'linguine-alle-vongole#garlic', text: "Garlic slices are pale ivory in the sauce and still hold their shape; tan flecks mean the base was browned before the wine arrived." },
 			{ id: 'linguine-alle-vongole#shell', text: "Every shell on the plate is fully open — a shut clam is a fault, not a garnish — half in shell and half shucked through the pasta, and the meats are still plump enough to fill their shells rather than shrunk to grey nubs from sitting in the pan through the reduction." },
 			{ id: 'linguine-alle-vongole#sauce', text: "The sauce is emulsified, not oiled: it wears the strands with a cloudy gloss, and tilting the bowl leaves a clinging film rather than a clear ring of oil at the rim." },
-			{ id: 'linguine-alle-vongole#strand', text: "A strand bitten through shows a hairline of firmer paste at its centre and no white chalk core — the last three minutes happened in the pan, not the water." },
-			{ id: 'linguine-alle-vongole#nothing', text: "Nothing grits against the teeth in the final spoonful — proof the clams were purged and the liquor strained — and the bowl needs no salt at the table, because the salt came from the liquor." }
+			{ id: 'linguine-alle-vongole#strand', text: "A strand bitten through shows a hairline of firmer paste at its centre and no white chalk core: the last three minutes happened in the pan, not the water." },
+			{ id: 'linguine-alle-vongole#nothing', text: "Nothing grits against the teeth in the final spoonful, proof the clams were purged and the liquor strained, and the bowl needs no salt at the table, because the salt came from the liquor." }
 		],
 		fault: "A broken or watery sauce, from finishing the pasta in the water and pouring the clam liquor over it at the end rather than tossing the two together over heat — the oil separates into a slick at the rim and the pasta sits in clam water instead of wearing it."
 	},
@@ -484,7 +484,7 @@ export const STANDARDS = [
 			{ id: 'miso-glazed-black-cod#white', text: "White and glistening to the centre with the fat visibly running, and no dry chalky seam sitting under the crust." },
 			{ id: 'miso-glazed-black-cod#bite', text: "A bite taken from the middle, with no glaze on it, still tastes salted and faintly sweet — an unseasoned centre means the fish went in at 24 hours, not 48 to 72." }
 		],
-		fault: "Black before it is cooked, because the excess marinade was left on and the fillet sat too close to the element — bitter carbon on top, cool untransformed flesh under it."
+		fault: "Black before it is cooked, because the excess marinade was left on and the fillet sat too close to the element: bitter carbon on top, cool untransformed flesh under it."
 	},
 	{
 		slug: "whole-grilled-fish-with-ladolemono",
@@ -506,7 +506,7 @@ export const STANDARDS = [
 			{ id: 'calamari-fritti#ring', text: "A ring parts in a single bite with no rebound against the teeth, the flesh inside white and moist rather than chalky." },
 			{ id: 'calamari-fritti#undersides', text: "Undersides as crisp as tops with a dry plate under the pile, salt clinging to the crust and none loose in the bottom of the bowl, and the plate on the table within five minutes of the fryer — nothing waiting under a lamp." }
 		],
-		fault: "The oil fell below 190°C because too much went in at once — the coating drinks fat instead of setting, and the squid stews long enough in the lukewarm bath to tighten, so the same bite is both greasy and rubbery."
+		fault: "The oil fell below 190°C because too much went in at once: the coating drinks fat instead of setting, and the squid stews long enough in the lukewarm bath to tighten, so the same bite is both greasy and rubbery."
 	},
 
 	// ── 10. The Restaurateur's Capstone ───────────────────────────────
@@ -541,7 +541,7 @@ export const STANDARDS = [
 			{ id: 'salt-baked-whole-fish#tail', text: "The tail end is as moist as the shoulder — evenness is the whole claim of the crust, and a dry tail says the pack was thin at that end." },
 			{ id: 'salt-baked-whole-fish#taste', text: "Taste at the belly seam first: that is where salt gets in if the skin was nicked, and one blown bite there condemns the fish." }
 		],
-		fault: "Salt packed into the cavity as well as over the fish — it cures straight through the thin belly wall while the crust is doing its work, and the fillet arrives brined rather than steamed."
+		fault: "Salt packed into the cavity as well as over the fish: it cures straight through the thin belly wall while the crust is doing its work, and the fillet arrives brined rather than steamed."
 	},
 	{
 		slug: "baked-alaska",

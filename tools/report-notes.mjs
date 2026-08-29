@@ -3,7 +3,7 @@
  *
  * Lists every recipe whose shipped "from the pass" note (raw, or overlaid from
  * notes.json) is under the 180-char bar, grouped by chapter, thinnest chapters
- * first. Run with a chapter name to dump that chapter's full records — name,
+ * first. Run with a chapter name to dump that chapter's full records: name,
  * ingredients, method, current note — which is the working material for
  * writing the replacement.
  */

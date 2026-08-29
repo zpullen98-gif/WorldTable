@@ -175,14 +175,14 @@ export interface RecipeDetail {
 	/** Pantry item labels this recipe calls for. */
 	pantryItems: string[];
 	/**
-	 * What a correct plate looks like at the pass. AUTHORED, not derived — see
+	 * What a correct plate looks like at the pass. AUTHORED, not derived; see
 	 * tools/derive/standards.mjs. Absent on dishes that have none yet, which is
 	 * most of them: test for the key, never render an empty block.
 	 */
 	standard?: DishStandard;
 	/**
 	 * Technique standards this dish is judged against instead, when it has no
-	 * dish standard of its own — slugs into technique-standards.json, ordered
+	 * dish standard of its own: slugs into technique-standards.json, ordered
 	 * most-specific-first and capped at two. Present on 638 of the 925 dishes
 	 * that carry no `standard`. Mutually exclusive with it, and gated as such.
 	 */
@@ -203,7 +203,7 @@ export interface RecipeDetail {
  * which is the same rule the Codex holds for question ids.
  */
 export interface StandardMark {
-	/** `<standard-slug>#<token>` — frozen at mint. Never recomputed. */
+	/** `<standard-slug>#<token>`, frozen at mint. Never recomputed. */
 	id: string;
 	text: string;
 }
@@ -218,7 +218,7 @@ export interface DishStandard {
 
 /**
  * What correct execution of a TECHNIQUE looks like, for the 925 dishes that
- * have no standard of their own — see tools/derive/technique-standards.mjs.
+ * have no standard of their own: see tools/derive/technique-standards.mjs.
  *
  * The difference from a DishStandard is where it is read. A dish standard is
  * read at the pass, when the plate is done and the verdict is final; a
@@ -270,7 +270,7 @@ export interface Technique {
 	/** Copied from the lexicon at build time — see build-data.mjs for why. */
 	definition: string | null;
 	origin: 'original' | 'supplement';
-	/** How many distinct chapters demonstrate it — a breadth signal. */
+	/** How many distinct chapters demonstrate it, a breadth signal. */
 	chapters: number;
 	/** Semesters of the Path that teach this skill. Empty for 55 of the 103. */
 	semesters: { n: number; title: string }[];
@@ -363,7 +363,7 @@ export interface PalateLever {
 export interface PalateFault {
 	slug: string;
 	label: string;
-	/** What it tastes like — the entry names the fault but never describes it. */
+	/** What it tastes like: the entry names the fault but never describes it. */
 	symptom: string;
 	levers: PalateLever[];
 }
@@ -411,7 +411,7 @@ export interface Economics {
  * The waste log's vocabulary.
  *
  * Carried and gated by tools/derive/waste.mjs. Note what is NOT here: there is
- * no reason code for THEFT, and that is not an oversight — the guide answers
+ * no reason code for THEFT, and that is not an oversight: the guide answers
  * theft with "systems, not suspicion" and warns against a surveillance state,
  * and a bin with a THEFT button on it is the accusation made before the
  * evidence. `excluded` carries it, and vendor creep, as refusals with reasons,
@@ -496,7 +496,7 @@ export interface Sanitation {
 }
 
 /**
- * The Service Track — an authored teaching ORDER over the five front-of-house
+ * The Service Track: an authored teaching ORDER over the five front-of-house
  * atlases. Terms are referenced by slug only; the definitions stay in
  * lexicon.json, which is already a lazy chunk. See tools/derive/service-track.mjs.
  */

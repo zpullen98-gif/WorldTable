@@ -3,7 +3,7 @@
 
   This was the home page. The World Table opened onto 970 cards, which is a
   superb way to FIND a dish and the reason the app read as a collection rather
-  than as training. The grid is unchanged and un-demoted — it is still the best
+  than as training. The grid is unchanged and un-demoted; it is still the best
   thing in the app for what it is for — it simply is not the front door.
 
   RecipeBrowser is deliberately rendered untouched: the 94 chapter pages render
@@ -15,11 +15,11 @@
 	import { TOTALS } from '$lib/data';
 </script>
 
-<svelte:head><title>All Recipes — The World Table</title></svelte:head>
+<svelte:head><title>All Recipes · The World Table</title></svelte:head>
 
 <!--
 	The page's own h1. The layout renders the site name as an h1 ONLY on '/', so
-	without this the library had no first-level heading at all — it inherited one
+	without this the library had no first-level heading at all; it inherited one
 	from the home page it used to be. RecipeBrowser's own heading is an h2 that
 	names the current chapter or filter, which is the level below this and stays
 	where it is: the 94 chapter pages render the same component.

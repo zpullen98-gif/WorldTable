@@ -5,7 +5,7 @@
  *
  * `unitCost` is stored per line per dish, and `editLine` patches it in place.
  * So when butter goes from 6.40 to 7.90, the 6.40 does not exist anywhere
- * afterwards — not on the line, not on the dish, not in the record. The guide's
+ * afterwards: not on the line, not on the dish, not in the record. The guide's
  * own advice in "Menu Economics" is *"reprice quarterly against invoice creep;
  * menus that sleep bleed"*, and following it was structurally impossible: there
  * was nothing to compare this quarter against. Worse, butter is free text, so
@@ -83,7 +83,7 @@ export interface Item {
  * 24 is six years of the quarterly repricing the guide asks for, or two years
  * of monthly. The cap exists because this record lives on a shared tablet and
  * grows forever otherwise; it discards the OLDEST, which are the least useful
- * — nobody reprices against 2019.
+ * because nobody reprices against 2019.
  */
 export const HISTORY_CAP = 24;
 
@@ -151,7 +151,7 @@ const sortYields = (h: ItemYield[]): ItemYield[] =>
 
 /**
  * The yield the venue last measured, as the percentage the costing line wants.
- * Null when nothing was ever put on the scale — never a default of 100, because
+ * Null when nothing was ever put on the scale, never a default of 100, because
  * an assumed yield is exactly the number this book exists to replace.
  */
 export function measuredYieldPct(item: Item | undefined): number | null {
@@ -258,8 +258,8 @@ export function recordPrice(
 	const newest = history[0];
 
 	if (newest && newest.unitCost === unitCost && newest.unit === unit) {
-		// Nothing moved. Keep the name fresh — the venue may have fixed its
-		// capitalisation — and leave the history exactly as it was.
+		// Nothing moved. Keep the name fresh, the venue may have fixed its
+		// capitalisation, and leave the history exactly as it was.
 		if (existing && existing.name === name) return items;
 		// `...existing` carries the yields. Both of this function's return paths
 		// rebuilt the item as {slug, name, history} in draft, so committing ANY
@@ -387,7 +387,7 @@ export interface ItemUsage {
 	/**
 	 * Dishes holding this item on an UNLINKED line whose stored price is not
 	 * what the book says the venue pays. A linked line can never be stale — it
-	 * follows the book by construction — so every entry here is a line that
+	 * follows the book by construction, so every entry here is a line that
 	 * predates the book, or one somebody unlinked and forgot. This is the list
 	 * the guide's "reprice quarterly" instruction actually needs.
 	 */

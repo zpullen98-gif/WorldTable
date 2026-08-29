@@ -4,7 +4,7 @@
  *
  * They used to: db needed migrate(), migrations needed EMPTY_SESSION. That
  * cycle only worked because each side happened to touch the other's exports
- * inside function bodies rather than at module-eval time — one hoisted constant
+ * inside function bodies rather than at module-eval time; one hoisted constant
  * later and the app would throw at import time. Depending on evaluation-order
  * luck is not a foundation; a leaf module is.
  */
@@ -29,7 +29,7 @@ export interface MenuDish {
 	ingredients: string[];
 	allergens: string[];
 	/**
-	 * Set only by an explicit "allergens checked" affirmation, never by Save —
+	 * Set only by an explicit "allergens checked" affirmation, never by Save;
 	 * ms epoch, and re-stamped each time it is affirmed.
 	 *
 	 * Without it `allergens: []` is ambiguous in the one direction an allergen
@@ -66,7 +66,7 @@ export interface SessionState {
 	 * The service currently being cooked, if any.
 	 *
 	 * `live` and `serviceTime` were component state, so walking to the walk-in
-	 * and coming back lost the clock entirely — on the one screen a cook is
+	 * and coming back lost the clock entirely, on the one screen a cook is
 	 * standing in front of while something is on the heat.
 	 *
 	 * Ticks carry a TIMESTAMP rather than a boolean, which costs nothing and
@@ -121,7 +121,7 @@ export interface SessionState {
 	calibrationLog: Array<{ slug: string; at: number; grade?: 'met' | 'close' | 'missed' }>;
 	familyRecipes: Recipe[];
 	/**
-	 * DEPRECATED as a live field — the menu moved to the device-wide house
+	 * DEPRECATED as a live field: the menu moved to the device-wide house
 	 * record (persistence/house.ts) because a venue buys ONE subscription for
 	 * unlimited staff and this key is namespaced per person.
 	 *
@@ -142,7 +142,7 @@ export interface SessionState {
 	dishCosts: Record<string, DishCosting>;
 	/**
 	 * What this person does. Chosen once, changeable, and a DEFAULT rather than
-	 * a wall — it reorders what the app suggests and never hides a surface.
+	 * a wall; it reorders what the app suggests and never hides a surface.
 	 *
 	 * Kept in the SESSION, which profiles.key() namespaces per person, and
 	 * deliberately not in prefs (raw localStorage, device-wide, read
@@ -168,7 +168,7 @@ export interface SalesWeek {
 	/** Local Monday, 'YYYY-MM-DD'. Minted only by weekStartOf(). */
 	weekStart: string;
 	/**
-	 * Covers. 0 is a REAL figure — counted, sold none — and is never the same
+	 * Covers. 0 is a REAL figure (counted, sold none) and is never the same
 	 * thing as no entry at all. Absence means unknown, and only absence does.
 	 */
 	count: number;
@@ -207,7 +207,7 @@ export interface DishCosting {
 	 * as a MIRROR of the newest week's count.
 	 *
 	 * Never deleted and never re-dated. It is what an existing venue's number
-	 * still reads as on update day — nothing moves on disk, and no board goes
+	 * still reads as on update day, nothing moves on disk, and no board goes
 	 * blank — and what a build predating `sales` can still read out of the same
 	 * record. Derived, never taken from a caller: a writable `sold` beside a
 	 * writable `sales` is two sources of truth for one number.
@@ -348,7 +348,7 @@ export const CLOCK_SKEW_MS = 24 * 60 * 60 * 1000;
 
 /**
  * Merge two costings for one dish. ONE implementation, called from both the
- * house import and the session transport merge — they have already drifted once.
+ * house import and the session transport merge; they have already drifted once.
  *
  * `sales` UNIONS by weekStart. That single property is what makes this change
  * safe: a week present on one side only is always kept, so importing a file
@@ -436,7 +436,7 @@ export function mergeSessions(
 	// question ("has this been cooked?") and one entry answered it. It is not
 	// defensible now. The re-cook schedule is built from how many times and how
 	// recently a dish was made, so collapsing four cooks into the FIRST one told
-	// the scheduler you last made the dish months before you did — importing a
+	// the scheduler you last made the dish months before you did; importing a
 	// session aged your whole repertoire.
 	//
 	// Keying on slug|at makes re-importing your own export idempotent, which is
@@ -544,7 +544,7 @@ export function mergeSessions(
 			return out;
 		})(),
 		/**
-		 * stepActuals and planRun, named at last. This function's own rule —
+		 * stepActuals and planRun, named at last. This function's own rule,
 		 * "every field is named explicitly, nothing is left to the spread" —
 		 * shipped with two fields still falling through `...incoming`: every
 		 * genuine .wtjson carries stepActuals (EMPTY_SESSION always has the key,

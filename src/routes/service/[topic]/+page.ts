@@ -3,7 +3,7 @@ import { loadServiceTrack, loadLexicon } from '$lib/data';
 
 export const prerender = true;
 
-/** One page per module — 27 of them, all known at build time. */
+/** One page per module, 27 of them, all known at build time. */
 export async function entries() {
 	const track = await loadServiceTrack();
 	return track.modules.map((m) => ({ topic: m.key }));

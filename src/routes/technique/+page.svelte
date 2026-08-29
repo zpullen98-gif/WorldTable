@@ -4,7 +4,7 @@
 	let { data } = $props();
 
 	// Anchored techniques carry a Lexicon definition; the rest are the guide's
-	// particulars — a shaping, a vessel, one dish's one move. Both are worth a
+	// particulars: a shaping, a vessel, one dish's one move. Both are worth a
 	// page, but they are not the same kind of thing and shouldn't be one list.
 	const foundations = $derived(
 		data.techniques.filter((t) => t.anchored).sort((a, b) => b.count - a.count)
@@ -14,7 +14,7 @@
 	);
 </script>
 
-<svelte:head><title>The Techniques — The World Table</title></svelte:head>
+<svelte:head><title>The Techniques · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">

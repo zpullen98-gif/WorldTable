@@ -112,7 +112,7 @@
 	}
 
 	/**
-	 * `/` focuses whichever search box the current view offers — the recipe
+	 * `/` focuses whichever search box the current view offers: the recipe
 	 * grid's, the lexicon's, the pantry's. One handler here rather than one per
 	 * view: they'd fight over the key, and this is exactly the shape of
 	 * scattered-listener code the rewrite exists to avoid.

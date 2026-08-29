@@ -1,5 +1,5 @@
 <!--
-  Food Safety — the guide's two entries, carried whole, and its silences.
+  Food Safety: the guide's two entries, carried whole, and its silences.
 
   This page is deliberately the SMALLEST feature on this branch, and it is the
   only one where that was the finding rather than the constraint. Five candidate
@@ -58,7 +58,7 @@
 		{/if}
 		<p>
 			Nothing here is saved. This is not a HACCP plan, a compliance record or an inspection log, and
-			it does not train or certify anyone to any standard — food-handler certification is an
+			it does not train or certify anyone to any standard; food-handler certification is an
 			accredited instrument and this is not one. Your written plan and your logs live elsewhere.
 		</p>
 	</section>
@@ -75,7 +75,7 @@
 				<dt>{n.label}</dt>
 				<dd>
 					<span class="fig">{n.evidence}</span>
-					<span class="attrib">— {termOf(n.anchor)}</span>
+					<span class="attrib">{termOf(n.anchor)}</span>
 				</dd>
 			</div>
 		{/each}
@@ -92,7 +92,7 @@
 		<h2 class="sec">Where the guide disagrees with itself</h2>
 		<p class="secnote">
 			Two entries state two different danger windows. The guide does not reconcile them, and
-			neither do we — picking a winner would be a safety judgement this app has no standing to make.
+			neither do we: picking a winner would be a safety judgement this app has no standing to make.
 		</p>
 		<ul class="conflict">
 			<li>
@@ -101,7 +101,7 @@
 			</li>
 			<li>
 				<span class="fig">{s.conflict.b.numbers[0]}–{s.conflict.b.numbers[1]}°C</span>
-				<span class="attrib">— {s.conflict.b.term}</span>
+				<span class="attrib">{s.conflict.b.term}</span>
 			</li>
 		</ul>
 	{/if}

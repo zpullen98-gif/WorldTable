@@ -1,5 +1,5 @@
 <!--
-  Service — the front of house, given an order for the first time.
+  Service, the front of house, given an order for the first time.
 
   176 terms across five atlases, and until now no route through any of them: the
   Path of Study reads 39 lexicon terms and NONE is front-of-house; the technique
@@ -27,7 +27,7 @@
 
 	/**
 	 * COMPUTED, because the last version of this sentence hardcoded "101 of
-	 * 970" and the vocabulary then widened to thirteen — the number was stale
+	 * 970" and the vocabulary then widened to thirteen; the number was stale
 	 * the moment the derivation moved, which is what hardcoded copy does.
 	 */
 	const emptyCount = recipes.filter(

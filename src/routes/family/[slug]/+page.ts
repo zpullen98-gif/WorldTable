@@ -4,7 +4,7 @@ import { loadSubstitutions, loadTechniqueStandards, DEFAULT_PAIRING } from '$lib
 /**
  * Family recipe pages are client-only, by necessity and by design.
  *
- * Their data lives in this device's IndexedDB — there is nothing to prerender
+ * Their data lives in this device's IndexedDB; there is nothing to prerender
  * and no server to render it. With ssr off, the dev server and the static
  * fallback both hand the route straight to the browser, where the session is.
  * This is exactly the case the service worker's navigateFallback exists for.

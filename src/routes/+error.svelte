@@ -5,7 +5,7 @@
   skipWaiting off, and UpdatePrompt.svelte explains why: an update that seizes
   the page mid-braise, with wet hands, is worse than an update that waits. The
   consequence is that an already-installed client keeps booting the OLD bundle
-  until somebody accepts the prompt — and that bundle's route manifest does not
+  until somebody accepts the prompt, and that bundle's route manifest does not
   contain routes added after it was cached.
 
   Both static hosts answer an unknown path with the precached shell at 200

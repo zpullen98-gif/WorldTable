@@ -67,7 +67,7 @@ export interface CookEntry {
  * Counts entries, not sessions: a mark missed twice in one week and twice in
  * March are the same evidence of a habit. Graded entries with no annotation are
  * counted in the denominator and contribute nothing to the numerator, which is
- * the honest treatment — they are cooks that happened, not marks that were met.
+ * the honest treatment: they are cooks that happened, not marks that were met.
  */
 export function markDrift(
 	log: CookEntry[],
@@ -173,7 +173,7 @@ function stateFor(elapsedMs: number, intervalMs: number): RepertoireState {
 /**
  * Fold the cooked log into one record per dish.
  *
- * Sorted by slug so the output is stable — a Map iterated in insertion order
+ * Sorted by slug so the output is stable: a Map iterated in insertion order
  * would reorder the whole repertoire whenever a cook happened, which makes
  * both the UI and the tests jump around for no reason.
  */
@@ -240,7 +240,7 @@ export function dueList(entries: RepertoireEntry[], now: number): RepertoireEntr
 }
 
 /**
- * Unique dishes cooked — the count every reader in the app actually wanted.
+ * Unique dishes cooked, the count every reader in the app actually wanted.
  *
  * `cookedLog.length` counts COOKS, and markCooked appends on every finish, so
  * the home band read "3 of 45 dishes cooked" after one dish was cooked three

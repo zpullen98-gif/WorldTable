@@ -39,7 +39,7 @@
 
 /**
  * Supplemental entries, same shape as raw/TECH.json:
- *   k — lowercase substring keywords, matched against the method-anchored blob
+ *   k: lowercase substring keywords, matched against the method-anchored blob
  *   l — the user-facing label (sentence case, no trailing period)
  *   q — a YouTube search for studying the technique on film
  *
@@ -49,7 +49,7 @@ export const SUPPLEMENT = [
 	// ── dry heat ─────────────────────────────────────────────────────────────
 	{
 		k: ['sear', 'brown the meat', 'brown the meats', 'brown meat', 'brown the beef', 'brown lamb', 'brown the chicken', 'brown the pork', 'brown all sides', 'brown all over', 'browned hard', 'brown hard', 'until crusted', 'in batches, browning'],
-		l: 'Searing — the hard crust',
+		l: 'Searing: the hard crust',
 		q: 'searing technique crust dry pan'
 	},
 	{
@@ -67,18 +67,18 @@ export const SUPPLEMENT = [
 		l: 'Charring over open flame',
 		q: 'charring vegetables chilies over flame technique'
 	},
-	{ k: ['broil'], l: 'The broiler — heat from above', q: 'broiler technique top down heat' },
+	{ k: ['broil'], l: 'The broiler: heat from above', q: 'broiler technique top down heat' },
 	{ k: ['griddle', 'plancha'], l: 'Griddle & plancha work', q: 'griddle plancha flat top technique' },
 	{
 		k: ['dry-toast', 'toast spices', 'toast chilies', 'toast the dried chile', 'toast the nuts', 'toast the hazelnuts', 'toast the walnuts', 'toast the sesame', 'toast peanuts', 'toast the pepper', 'toasted and ground', 'in a dry pan until', 'toasted ground rice', 'lightly toasted'],
-		l: 'Dry-pan toasting — spices, seeds and nuts',
+		l: 'Dry-pan toasting: spices, seeds and nuts',
 		q: 'toasting spices dry pan technique'
 	},
 
 	// ── fat ──────────────────────────────────────────────────────────────────
 	{
 		k: ['sweat the', 'sweat onion', 'sweat vegetables', 'sweated', 'sweat leeks', 'sweat shallots', 'sweat until', 'without color', 'soften onion', 'soften the onion', 'soften peppers', 'soften vegetables'],
-		l: 'Sweating aromatics — soft, never browned',
+		l: 'Sweating aromatics: soft, never browned',
 		q: 'sweating aromatics technique without colour'
 	},
 	{
@@ -88,17 +88,17 @@ export const SUPPLEMENT = [
 	},
 	{
 		k: ['render the ', 'render bacon', 'render lardons', 'render pancetta', 'rendered fat', 'the fat renders', 'rendered crisp', 'until it renders', 'has rendered', 'in the bacon fat', 'in the drippings', 'in the rendered'],
-		l: 'Rendering fat — and cooking in what runs out',
+		l: 'Rendering fat: and cooking in what runs out',
 		q: 'rendering fat bacon lardons technique'
 	},
 	{
 		k: ['dredge', 'dredging', 'double-breaded', 'dust in flour', 'coat in flour', 'press the crumb', 'in the batter', 'for breading', 'beer batter'],
-		l: 'The coat before the fry — dredge, crumb, batter',
+		l: 'The coat before the fry: dredge, crumb, batter',
 		q: 'breading dredging standard breading procedure'
 	},
 	{
 		k: ['drain on a rack', 'never paper', 'drain upright'],
-		l: 'Draining fried food — a rack, never paper',
+		l: 'Draining fried food: a rack, never paper',
 		q: 'draining fried food rack technique crisp'
 	},
 	{
@@ -110,12 +110,12 @@ export const SUPPLEMENT = [
 	// ── water, steam and stock ───────────────────────────────────────────────
 	{
 		k: ['steam ', 'steamer', 'steam-', 'steam.', 'steam,', 'and steamed'],
-		l: 'Steaming — basket, leaf and lid',
+		l: 'Steaming: basket, leaf and lid',
 		q: 'steaming technique basket en papillote'
 	},
 	{
 		k: ['poach', 'never boil', 'bare simmer', 'barely simmer', 'at a whisper', 'lazy bubbles'],
-		l: 'The bare simmer — holding liquid below the boil',
+		l: 'The bare simmer: holding liquid below the boil',
 		q: 'poaching simmering temperature technique'
 	},
 	{
@@ -135,7 +135,7 @@ export const SUPPLEMENT = [
 	},
 	{
 		k: ['skim the', 'skimming', 'skim,', 'skimmed'],
-		l: 'Skimming — foam, fat and a clear broth',
+		l: 'Skimming: foam, fat and a clear broth',
 		q: 'skimming stock foam technique clear broth'
 	},
 	{
@@ -150,7 +150,7 @@ export const SUPPLEMENT = [
 	},
 
 	// ── time, salt and cold ──────────────────────────────────────────────────
-	{ k: ['marinate', 'marinade'], l: 'Marinating — acid, salt and time', q: 'marinating technique acid salt time' },
+	{ k: ['marinate', 'marinade'], l: 'Marinating: acid, salt and time', q: 'marinating technique acid salt time' },
 	{
 		k: ['squeezed dry', 'grated and squeezed', 'squeeze in a towel', 'drain in a colander', 'squeezed bone-dry', 'squeeze the salted', 'salt the tomatoes', 'salt the slices', 'salt the grated cucumber', 'salt the cabbage', 'salt eggplant', 'salted cabbage'],
 		l: 'Salting to draw the water out',
@@ -158,12 +158,12 @@ export const SUPPLEMENT = [
 	},
 	{
 		k: ['chill until firm', 'chill on a tray', 'chill firm', 'chill to firm', 'chill for slicing', 'chill before slicing', 'for thin slicing', 'chill 30 min', 'chill 20 min'],
-		l: 'Chilling to firm — the fridge as binder',
+		l: 'Chilling to firm: the fridge as binder',
 		q: 'chilling dough firm before slicing technique'
 	},
 	{
 		k: ['rest overnight', 'overnight in the fridge', 'flavors marry', 'rest a day', 'better the next day', 'better after a night', 'flavors meld', 'flavors to meld'],
-		l: 'The overnight rest — letting a dish marry',
+		l: 'The overnight rest: letting a dish marry',
 		q: 'why stews taste better the next day'
 	},
 	// Macerating was measured and cut: "macerat" plus six phrasings reached 5
@@ -173,7 +173,7 @@ export const SUPPLEMENT = [
 	// ── knife, hand and finish ───────────────────────────────────────────────
 	{
 		k: ['fine dice', 'small dice', 'diced fine', 'diced small', 'cm dice', 'julienne', 'matchstick', 'batons', 'half-moon', 'sliced paper-thin', 'slice paper-thin', 'shaved thin', 'on the bias', 'into coins'],
-		l: 'Knife cuts — dice, julienne, bias',
+		l: 'Knife cuts: dice, julienne, bias',
 		q: 'classical knife cuts brunoise julienne technique'
 	},
 	{
@@ -195,12 +195,12 @@ export const SUPPLEMENT = [
 	// ── bakery and pastry ────────────────────────────────────────────────────
 	{
 		k: [' proof ', 'until doubled', 'rise 1', 'rise 90 min', 'rise 45 min', 'rise 40 min', 'rise 30 min', 'rise, covered', 'rise in a warm place', 'until puffy', 'until it crowns'],
-		l: 'Proofing — the rise before the oven',
+		l: 'Proofing: the rise before the oven',
 		q: 'proofing dough oven spring technique'
 	},
 	{
 		k: ['rest the dough', 'rest the batter', 'dough; rest', 'dough, rest', 'dough. rest', 'dough and rest', 'dough. chill', 'dough and chill', 'batter. rest', 'autolyse'],
-		l: 'Resting dough — the pause that does the work',
+		l: 'Resting dough: the pause that does the work',
 		q: 'resting dough autolyse gluten relax technique'
 	},
 	{
@@ -210,7 +210,7 @@ export const SUPPLEMENT = [
 	},
 	{
 		k: ['fold in the flour', 'fold in flour', 'fold flour', 'fold in the dry', 'fold in dry', 'fold in the sifted', 'fold in gently', 'fold in whipped', 'fold in the whipped', 'until just combined'],
-		l: 'Folding — keeping the air in',
+		l: 'Folding: keeping the air in',
 		q: 'folding batter technique keep air'
 	},
 	{
@@ -225,7 +225,7 @@ export const SUPPLEMENT = [
 	},
 	{
 		k: ['wobble', 'jiggle', 'barely trembles', 'faint tremble', 'with a tremble', 'still sways', 'skewer comes', 'the tester', 'hollow-sounding', 'hollow knock', 'sound hollow', 'spring back', 'until springy'],
-		l: 'The wobble & the skewer — testing a bake',
+		l: 'The wobble & the skewer: testing a bake',
 		q: 'how to tell when a bake is done technique'
 	},
 	{
@@ -252,7 +252,7 @@ export const LEXICON_ANCHOR = {
 	'Brining & curing': 'brining-wet-dry-and-cures',
 	'Curing gravlax': 'brining-wet-dry-and-cures',
 	'Making a roux': 'roux-slurry-and-liaison',
-	'Béchamel — the mother sauce': 'roux-slurry-and-liaison',
+	'Béchamel: the mother sauce': 'roux-slurry-and-liaison',
 	'Reducing a sauce': 'reduction-nappe-and-mounting',
 	'Beurre blanc': 'reduction-nappe-and-mounting',
 	'Building an emulsion': 'emulsions',
@@ -306,43 +306,43 @@ export const LEXICON_ANCHOR = {
 
 	// ── the rest ─────────────────────────────────────────────────────────────
 	Velveting: 'velveting-and-marinades',
-	'Tadka — blooming spices in fat': 'infusion-steeping-flavor-into-fat-cream-and-syrup',
+	'Tadka: blooming spices in fat': 'infusion-steeping-flavor-into-fat-cream-and-syrup',
 	Falafel: 'deep-and-shallow-frying',
 	Churros: 'deep-and-shallow-frying',
 	Injera: 'fermentation-and-pickling',
 
 	// ── the supplement ───────────────────────────────────────────────────────
-	'Searing — the hard crust': 'searing-and-pan-technique',
+	'Searing: the hard crust': 'searing-and-pan-technique',
 	'Roasting in a hot oven': 'roasting-baking-and-carryover',
 	'Grilling over live coals': 'grilling-vs-barbecue-vs-smoking',
 	'Charring over open flame': 'the-maillard-reaction',
-	'The broiler — heat from above': 'salamander-broiler-and-top-down-fire',
+	'The broiler: heat from above': 'salamander-broiler-and-top-down-fire',
 	'Griddle & plancha work': 'comal-plancha-and-griddles',
-	'Dry-pan toasting — spices, seeds and nuts': 'toasting-nuts-seeds-grains-and-coconut',
-	'Sweating aromatics — soft, never browned': 'sweat-vs-saute-vs-sear',
+	'Dry-pan toasting: spices, seeds and nuts': 'toasting-nuts-seeds-grains-and-coconut',
+	'Sweating aromatics: soft, never browned': 'sweat-vs-saute-vs-sear',
 	'Sautéing & the shallow fry': 'sweat-vs-saute-vs-sear',
-	'The coat before the fry — dredge, crumb, batter': 'deep-and-shallow-frying',
-	'Draining fried food — a rack, never paper': 'fryer-setups-and-oil-management',
-	'Steaming — basket, leaf and lid': 'steaming-and-en-papillote',
-	'The bare simmer — holding liquid below the boil': 'poach-simmer-boil',
+	'The coat before the fry: dredge, crumb, batter': 'deep-and-shallow-frying',
+	'Draining fried food: a rack, never paper': 'fryer-setups-and-oil-management',
+	'Steaming: basket, leaf and lid': 'steaming-and-en-papillote',
+	'The bare simmer: holding liquid below the boil': 'poach-simmer-boil',
 	'Salted water & the float test': 'poach-simmer-boil',
 	'Blanching & shocking': 'blanch-and-shock',
 	'Straining & passing through a sieve': 'sieves-chinois-tamis-and-food-mill',
-	'Skimming — foam, fat and a clear broth': 'consomme-and-clarification',
+	'Skimming: foam, fat and a clear broth': 'consomme-and-clarification',
 	'Keeping the cooking liquid': 'stocks-blanc-brun-broth-and-demi',
-	'Marinating — acid, salt and time': 'velveting-and-marinades',
+	'Marinating: acid, salt and time': 'velveting-and-marinades',
 	'Salting to draw the water out': 'brining-wet-dry-and-cures',
-	'The overnight rest — letting a dish marry': 'the-second-day-reheating-as-technique',
-	'Knife cuts — dice, julienne, bias': 'knife-cuts-the-classical-ladder',
+	'The overnight rest: letting a dish marry': 'the-second-day-reheating-as-technique',
+	'Knife cuts: dice, julienne, bias': 'knife-cuts-the-classical-ladder',
 	'Mashing & puréeing': 'blenders-immersion-high-speed-and-food-processor',
 	'Resting meat & slicing against the grain': 'resting-carryover-and-the-thermometer',
-	'Proofing — the rise before the oven': 'proofing-oven-spring-and-the-crumb',
-	'Resting dough — the pause that does the work': 'gluten-and-hydration',
+	'Proofing: the rise before the oven': 'proofing-oven-spring-and-the-crumb',
+	'Resting dough: the pause that does the work': 'gluten-and-hydration',
 	'Creaming butter & sugar': 'creaming-foaming-and-cake-structure',
-	'Folding — keeping the air in': 'creaming-foaming-and-cake-structure',
+	'Folding: keeping the air in': 'creaming-foaming-and-cake-structure',
 	'Rubbing fat into flour': 'blind-baking-and-pie-doctrine',
 	'Egg wash & the baker’s shine': 'baste-arroser-and-glaze',
-	'The wobble & the skewer — testing a bake': 'doneness-by-touch-sight-and-sound'
+	'The wobble & the skewer: testing a bake': 'doneness-by-touch-sight-and-sound'
 };
 
 /**

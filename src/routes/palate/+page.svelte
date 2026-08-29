@@ -1,5 +1,5 @@
 <!--
-  The Palate — taste, diagnose, correct.
+  The Palate: taste, diagnose, correct.
 
   None of the content here is new. The guide has always carried "The Repair
   Table: Balancing a Dish" and "Tasting Vocabulary & Palate Training", and both
@@ -9,7 +9,7 @@
 
   This page is that chart, shaped for a cook holding a spoon. The eight faults
   and their levers are checked against the entry's own prose at build time —
-  see tools/derive/palate.mjs — so the page cannot quietly drift from the guide.
+  see tools/derive/palate.mjs, so the page cannot quietly drift from the guide.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';

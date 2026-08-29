@@ -1,5 +1,5 @@
 /**
- * The house record — what belongs to the ROOM rather than to the person
+ * The house record: what belongs to the ROOM rather than to the person
  * holding the tablet.
  *
  * WHY THIS EXISTS. A venue buys one subscription for unlimited staff, and
@@ -190,8 +190,8 @@ class House {
 	 * anybody adds. The old whole-object write is how an ingredient edit would
 	 * have dropped a venue's covers history.
 	 *
-	 * `sold` is deliberately not accepted. It is derived — the newest week's
-	 * count, or the untouched legacy figure — and a writable `sold` beside a
+	 * `sold` is deliberately not accepted. It is derived: the newest week's
+	 * count, or the untouched legacy figure, and a writable `sold` beside a
 	 * writable `sales` is two sources of truth for one number.
 	 */
 	setCosting(id: string, patch: { lines?: CostLine[]; sales?: SalesWeek[] }) {
@@ -244,7 +244,7 @@ class House {
 
 	/**
 	 * Clear one week. Filtering by weekStart, never `sales: []` and never by
-	 * omitting the key — one blur on an empty box would otherwise destroy every
+	 * omitting the key: one blur on an empty box would otherwise destroy every
 	 * week on the dish.
 	 */
 	clearCovers(id: string, week: string) {
@@ -394,7 +394,7 @@ class House {
 	 *
 	 * Deliberately a real delete and not a tombstone: a mis-tapped bin is a typo,
 	 * not history, and the log is only useful if people are willing to correct
-	 * it. The merge unions by id, so a deletion does not travel — a second device
+	 * it. The merge unions by id, so a deletion does not travel: a second device
 	 * that still holds the entry will bring it back on the next import. That is
 	 * the honest trade for never losing a bin, and it is the same shape as the
 	 * cooked log.

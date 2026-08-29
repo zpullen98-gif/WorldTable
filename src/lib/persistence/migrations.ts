@@ -17,7 +17,7 @@ export function migrate(raw: Partial<SessionState>): SessionState {
 	let version = typeof raw.schemaVersion === 'number' ? raw.schemaVersion : 0;
 
 	if (version > CURRENT_VERSION) {
-		// Written by a newer build. Refuse rather than guess — and critically,
+		// Written by a newer build. Refuse rather than guess, and critically,
 		// refuse without overwriting, so downgrading and upgrading again is safe.
 		throw new Error(
 			`session was written by a newer version (v${version} > v${CURRENT_VERSION})`

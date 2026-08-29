@@ -34,7 +34,7 @@ export const ANCHORS = {
  * Bands the sheet scores against.
  *
  * `evidence` is the substring the entry must still contain. Kept as the literal
- * phrase rather than a reconstructed one — an en dash and a hyphen look
+ * phrase rather than a reconstructed one: an en dash and a hyphen look
  * identical in a diff and would make this gate pass on the wrong text.
  */
 export const BANDS = [
@@ -106,7 +106,7 @@ export function buildEconomics(lexicon) {
 		const text = entries[b.anchor].definition;
 		if (!text.includes(b.evidence)) {
 			problems.push(
-				`economics: "${entries[b.anchor].term}" no longer states ${JSON.stringify(b.evidence)} — ` +
+				`economics: "${entries[b.anchor].term}" no longer states ${JSON.stringify(b.evidence)}; ` +
 					`the ${b.label} band of ${b.lowPct}–${b.highPct}% is now unsupported`
 			);
 			continue;
@@ -120,7 +120,7 @@ export function buildEconomics(lexicon) {
 		// said "25–35%", and the build passed. The sheet would then have scored
 		// every dish against a band the guide does not state, which is the exact
 		// failure this module exists to prevent.
-		// Split on runs of non-digits — no escape sequences to get wrong, which
+		// Split on runs of non-digits: no escape sequences to get wrong, which
 		// the first version of this line did get wrong.
 		const ints = b.evidence.split(/[^0-9]+/).filter(Boolean).map(Number);
 		if (ints.length < 2) {

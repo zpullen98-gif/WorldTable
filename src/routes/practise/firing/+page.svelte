@@ -130,7 +130,7 @@
 	const q = $derived(run ? run.questions[run.at] : null);
 </script>
 
-<svelte:head><title>The Firing Drill — The World Table</title></svelte:head>
+<svelte:head><title>The Firing Drill | The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -158,7 +158,7 @@
 		{:else if done}
 			<div class="result" data-grade={done.grade}>
 				<p class="score">
-					{done.correct} of {done.total} — <b>{done.grade}</b>
+					{done.correct} of {done.total}: <b>{done.grade}</b>
 				</p>
 				{#if done.grade === 'met'}
 					<p>You read the plan the way the pass wrote it. Come back when the menu changes.</p>
@@ -219,7 +219,7 @@
 		{:else}
 			<p class="intro">
 				{QUESTIONS_PER_RUN} questions from tonight's plan, {SECONDS_PER_QUESTION} seconds each. A
-				timeout is a wrong answer — on the line, not deciding is a decision.
+				timeout is a wrong answer; on the line, not deciding is a decision.
 			</p>
 			<button class="primary" onclick={start}>Start</button>
 		{/if}
@@ -248,7 +248,7 @@
 		font-size: var(--t-lede);
 		color: var(--text);
 	}
-	/* Urgency is carried by the NUMBER falling, reinforced by weight — never by
+	/* Urgency is carried by the NUMBER falling, reinforced by weight, never by
 	   colour alone. */
 	.clock.urgent {
 		font-weight: 700;

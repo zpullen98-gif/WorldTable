@@ -98,7 +98,7 @@
 		if (!form) return;
 		form.lines = [
 			...form.lines,
-			// NaN, not 0 — the costing sheet's rule: an untyped line is uncostable,
+			// NaN, not 0. The costing sheet's rule: an untyped line is uncostable,
 			// not a completed free ingredient.
 			{ id: mintId('l-'), item: '', unitCost: Number.NaN, unit: 'kg', usedQty: 0, yieldPct: 100 }
 		];
@@ -183,7 +183,7 @@
 	);
 </script>
 
-<svelte:head><title>Preps — The World Table</title></svelte:head>
+<svelte:head><title>Preps | The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -296,7 +296,7 @@
 								<td><input type="number" step="0.01" value={l.usedQty} onchange={(e) => editLine(l.id, { usedQty: num(e.currentTarget.value) })} /></td>
 								<td><input type="number" step="1" value={l.yieldPct} onchange={(e) => editLine(l.id, { yieldPct: num(e.currentTarget.value) })} /></td>
 								<td>
-									<span class="lc">{lineCost(l) === null ? '—' : money(lineCost(l)!)}</span>
+									<span class="lc">{lineCost(l) === null ? '-' : money(lineCost(l)!)}</span>
 									<button class="chip" onclick={() => dropLine(l.id)}>✕</button>
 								</td>
 							</tr>

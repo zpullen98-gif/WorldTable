@@ -136,8 +136,8 @@ describe('the verdict ladder', () => {
 	it.each([
 		[10, 'Service standard'],
 		[9, 'Service standard'],
-		[8, 'Solid — you would not be caught out'],
-		[7, 'Solid — you would not be caught out'],
+		[8, 'Solid. You would not be caught out'],
+		[7, 'Solid. You would not be caught out'],
 		[5, 'Halfway. Read the module again'],
 		[4, 'Not yet. This is what the track is for'],
 		[0, 'Not yet. This is what the track is for']

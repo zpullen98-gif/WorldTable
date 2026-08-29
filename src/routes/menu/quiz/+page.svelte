@@ -78,7 +78,7 @@
 		/**
 		 * Only a dish somebody has actually checked may pose an allergen
 		 * question, and uniqueness is only meaningful across dishes that have
-		 * all been checked — an unmarked dish carrying the same allergen looks
+		 * all been checked: an unmarked dish carrying the same allergen looks
 		 * like an absence, which is what would make the "unique" answer wrong.
 		 *
 		 * This refuses on the same ground kindsFor already refuses a non-unique
@@ -184,7 +184,7 @@
 		{#if !enough}
 			<p class="empty">
 				The drill opens at four dishes. {dishes.length
-					? `${dishes.length} on the menu so far — add ${4 - dishes.length} more on `
+					? `${dishes.length} on the menu so far: add ${4 - dishes.length} more on `
 					: 'Enter the menu on '}<a href="{base}/menu">My Menu</a>.
 			</p>
 		{:else if drillable.length < 2 && !deck}

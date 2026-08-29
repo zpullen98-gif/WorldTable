@@ -1,11 +1,11 @@
 /**
- * The waste log's vocabulary — read out of the guide, not invented.
+ * The waste log's vocabulary, read out of the guide, not invented.
  *
  * The guide asks for this feature by name: *"waste logs (what died in the
  * walk-in, and why — over-prepping is the most common villain)"*. It also
  * supplies the taxonomy, in three entries rather than one:
  *
- *  - COGS Control names the leak meter itself — *"the VARIANCE between them is
+ *  - COGS Control names the leak meter itself: *"the VARIANCE between them is
  *    your leak meter: waste, portioning drift, unrecorded comps, or theft"* —
  *    and the villain.
  *  - Prime Cost decomposes the COGS side as *"pricing, portioning, waste,
@@ -135,7 +135,7 @@ export const VILLAIN = 'overprep';
 /**
  * The reason there is no person on a waste entry.
  *
- * Gated because it is the justification for a STRUCTURAL refusal — `WasteEntry`
+ * Gated because it is the justification for a STRUCTURAL refusal: `WasteEntry`
  * has no field for who logged it, so no report can grow one later. If the guide
  * stops saying this, the refusal has lost its anchor and somebody should be
  * made to argue for it again rather than inheriting it.
@@ -175,7 +175,7 @@ export function buildWaste(lexicon) {
 		const text = entries[r.anchor].definition;
 		if (!text.includes(r.evidence)) {
 			problems.push(
-				`waste: "${entries[r.anchor].term}" no longer states ${JSON.stringify(r.evidence)} — ` +
+				`waste: "${entries[r.anchor].term}" no longer states ${JSON.stringify(r.evidence)}; ` +
 					`the "${r.label}" reason code is now unsupported`
 			);
 		}
@@ -183,7 +183,7 @@ export function buildWaste(lexicon) {
 
 	if (!entries.cogs.definition.includes(CULTURE_EVIDENCE)) {
 		problems.push(
-			`waste: the guide no longer says ${JSON.stringify(CULTURE_EVIDENCE)} — that phrase is the ` +
+			`waste: the guide no longer says ${JSON.stringify(CULTURE_EVIDENCE)}; that phrase is the ` +
 				'justification for a waste entry carrying no person, so the refusal now needs re-arguing'
 		);
 	}
@@ -225,7 +225,7 @@ export function buildWaste(lexicon) {
 		for (const leak of named) {
 			if (!covered.has(leak)) {
 				problems.push(
-					`waste: the guide names "${leak}" as a leak and nothing carries it — add a reason code ` +
+					`waste: the guide names "${leak}" as a leak and nothing carries it; add a reason code ` +
 						'or declare it in EXCLUDED with a reason'
 				);
 			}
@@ -245,7 +245,7 @@ export function buildWaste(lexicon) {
 	/**
 	 * The reverse gate's SECOND walk: Prime Cost's own decomposition of the
 	 * COGS side. The first version walked only the COGS entry's leak meter, so
-	 * "pricing" — which Prime Cost names and the leak meter does not — was
+	 * "pricing", which Prime Cost names and the leak meter does not, was
 	 * neither carried nor refused, and the gate's claim of closure was one
 	 * list short.
 	 */

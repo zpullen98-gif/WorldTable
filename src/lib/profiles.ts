@@ -42,7 +42,7 @@ export function hasProfiles(): boolean {
 /**
  * Everyone on this device.
  *
- * NOTE: the shared implementation returns `data.list.slice()` — a SHALLOW copy
+ * NOTE: the shared implementation returns `data.list.slice()`, a SHALLOW copy
  * over live profile objects. Never assign to a member of a returned profile:
  * it mutates the in-memory roster with no write and no notification, appears to
  * persist, survives navigation, and is silently clobbered by the next real
@@ -92,7 +92,7 @@ export function pathDone(wing: string, stepId: string, id?: string): boolean {
  *
  * WRITE-ONCE: the shared implementation returns false if the step is already
  * set, and there is no unmark. Anything that can legitimately change — a
- * person's role, for instance — must NOT be stored here, or they would carry
+ * person's role, for instance, must NOT be stored here, or they would carry
  * every value they ever chose and nothing could say which is current.
  *
  * The write can also fail silently: the roster is one localStorage key shared

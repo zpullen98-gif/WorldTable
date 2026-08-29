@@ -7,7 +7,7 @@
  *
  * Everything is keyed by SLUG. The original stored array indices (MENU at
  * L2931, NOTES at L2916), so adding one family recipe — which pushes onto the
- * recipe array — silently repointed every saved reference to a different dish.
+ * recipe array, silently repointed every saved reference to a different dish.
  */
 import { browser } from '$app/environment';
 import type { Recipe, RecipeSummary } from '../types';
@@ -421,7 +421,7 @@ class SessionStore {
 		return this.#s.drillLog;
 	}
 
-	/** Recorded BEFORE any explanation is shown — closing the round must not
+	/** Recorded BEFORE any explanation is shown: closing the round must not
 	 *  lose the answer, the same rule cook mode's pass panel follows. */
 	markDrilled(slug: string, grade: Grade) {
 		this.#s.drillLog = [...this.#s.drillLog, { slug, at: Date.now(), grade }];
@@ -514,7 +514,7 @@ class SessionStore {
 
 	/**
 	 * Merge an imported .wtjson over the live session. The reconciliation itself
-	 * is mergeSessions() in persistence/state.ts — a pure function so that a
+	 * is mergeSessions() in persistence/state.ts, a pure function so that a
 	 * unit test can reach it, which is what this code most needed.
 	 */
 	merge(incoming: Partial<SessionState>) {

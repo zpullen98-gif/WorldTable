@@ -18,8 +18,8 @@
  * *"not a surveillance state"*.
  *
  * A field that does not exist cannot be added to a report later by somebody who
- * did not read this comment. `EightySix` carries `by` — a name, never a
- * permission — because saying who took the halibut off is useful and blames
+ * did not read this comment. `EightySix` carries `by`, a name, never a
+ * permission, because saying who took the halibut off is useful and blames
  * nobody. That is the line.
  *
  * ## The value is a SNAPSHOT
@@ -147,7 +147,7 @@ export function rollUpWaste(
 			count: s.count,
 			pct: total > 0 ? (s.money / total) * 100 : 0
 		}))
-		// Money first, then count, then key — a total order, so two reasons that
+		// Money first, then count, then key, a total order, so two reasons that
 		// cost the same amount do not swap places between renders.
 		.sort((a, b) => b.money - a.money || b.count - a.count || (a.reason < b.reason ? -1 : 1));
 

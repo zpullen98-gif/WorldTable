@@ -174,7 +174,7 @@ export function describeImport(
 	/**
 	 * The preps, which could not be counted before because they could not
 	 * travel. Same rule as the dishes above: an id match with a newer `ts`
-	 * REPLACES the live copy, and the banner has to say so before the write —
+	 * REPLACES the live copy, and the banner has to say so before the write:
 	 * this is the banner that once read "nothing new" over an evening of covers.
 	 *
 	 * A replaced prep is louder than a replaced dish and the count is worth its

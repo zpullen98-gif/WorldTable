@@ -1,5 +1,5 @@
 <!--
-  The service drill — the first thing in this app that measures a server.
+  The service drill, the first thing in this app that measures a server.
 
   Ten questions, always. The verdict ladder in lib/drill.ts is absolute counts,
   so a shortened round would clear its top rung on fewer right answers and log a

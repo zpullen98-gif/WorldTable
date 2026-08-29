@@ -74,8 +74,8 @@ keyword tables.
 The original bound `addEventListener` to function *values* that were later
 reassigned, so two features silently degraded on first interaction:
 
-- **L2506** — typing in the lexicon search stripped every recipe cross-link.
-- **L2806** — typing in the pantry filter destroyed the hemisphere toggle.
+- **L2506**: typing in the lexicon search stripped every recipe cross-link.
+- **L2806**: typing in the pantry filter destroyed the hemisphere toggle.
 
 `$derived` recomputes from state; there is no reference to go stale. Both sites
 carry a comment saying so. If you find yourself adding a listener that calls a
@@ -94,16 +94,16 @@ render function by name, stop.
   `shell.html` navigation fallback. Never precache the 1,070 HTML files.
 - Day/night are full token sets in `src/lib/styles/tokens.css`, not overrides on
   a body class. Service is read synchronously in `src/app.html` before first
-  paint — that is the only reason preferences live in localStorage while
+  paint: that is the only reason preferences live in localStorage while
   everything else is in IndexedDB.
 - One `@media print` block, in `src/lib/styles/print.css`. The original had four
   scattered ones that disagreed.
 - Search options live in `src/lib/search-config.mjs`, imported by BOTH the
   build-time indexer and the runtime loader. `MiniSearch.loadJS` silently
   corrupts every lookup if its options drift from what the index was serialized
-  with — never fork them.
+  with. Never fork them.
 
-## The Family Chapter — how user recipes work
+## The Family Chapter: how user recipes work
 
 Family recipes carry the full Recipe shape (summary + detail in one object) and
 live in IndexedDB, never in the static data. Consequences worth knowing:
@@ -202,7 +202,7 @@ test, and scheduling is code that must be tested rather than eyeballed.
 
 - **`cookedLog.length` is a count of COOKS, not dishes.** `markCooked` appends
   on every finish, so a dish cooked three times counted as three. The home band
-  compared that number to the 45-dish curriculum — and compared the WHOLE log,
+  compared that number to the 45-dish curriculum, and compared the WHOLE log,
   so 45 cooks of anything at all reported the ten-semester course complete. Use
   `session.cookedDishes` (a Set) for progress, always.
 - **`toggleCooked` deleted every entry for the slug.** Invisible while a dish
@@ -232,11 +232,11 @@ entry names each fault and never says what it tastes like.
 **That structure is a claim about the prose, so the build checks it three ways:**
 
 - every fault we carry must still appear as a labelled clause;
-- every lever's `token` must appear inside **its own** fault's clause — "TOO
+- every lever's `token` must appear inside **its own** fault's clause: "TOO
   SOUR" and "TOO SWEET" are one word apart with near-opposite fixes, so a lever
   under the wrong fault is exactly the error that would read as plausible
   forever;
-- **and the reverse** — a labelled clause the guide states that nothing carries
+- **and the reverse**: a labelled clause the guide states that nothing carries
   fails the build. If the entry ever gains a ninth fault, nobody has to notice
   by eye.
 
@@ -279,14 +279,14 @@ seconds at build time (`handsOnSec`, `unattendedSec` on `Step`).
   most of those are waits, so scoring stated time alone gave Kansas City
   barbecue ribs 475 minutes elapsed and ZERO of work. A step earns the guide's
   four-minute default when it holds work no duration was attached to. **550
-  recipes score zero hands-on without it** — the build gates on it.
+  recipes score zero hands-on without it**; the build gates on it.
 - `durationSec` is untouched. It is the cook-mode TIMER's number (the first
   duration in the step); the split is additive.
 
 ### The plan
 
 `src/lib/pass.ts` is pure and unit-tested. Times are **minutes before service**
-throughout, because the plan is anchored at its end — the only fixed point a
+throughout, because the plan is anchored at its end, the only fixed point a
 kitchen has. Collisions are where two DIFFERENT dishes want hands at once; an
 unattended simmer is not a demand on anybody, and overlapping clashes merge so
 one busy stretch reports once. A dish carrying a wait of 240+ min is flagged to
@@ -299,7 +299,7 @@ fires on 15 of 17 rows distinguishes nothing.
 ## Menu economics — the costing sheet
 
 The starkest instance of the pattern in this file. The guide carries a whole
-restaurant-finance curriculum — 43 entries under "Restaurant Finance &
+restaurant-finance curriculum, 43 entries under "Restaurant Finance &
 Opening", plus "Menu Economics: Food Cost, Yield & Par" and "Costing Time" —
 and **fourteen of those 43 link to no recipe at all**, because crosslinks.mjs
 scores a term against dish text and "COGS Control: Inventory, Variance & Theft"
@@ -348,14 +348,14 @@ which are concentration-defined and therefore not lexically screenable — the
 refusal is documented in `src/lib/allergens.ts` and asserted non-empty by its
 test. THE SCRUB RULE: exception phrases ("coconut milk", "vegetable stock")
 are blanked before matching for dairy/gluten/fish/shellfish, whose exceptions
-are the point — but EGG, NUTS and all seven new allergens match RAW lines,
+are the point, but EGG, NUTS and all seven new allergens match RAW lines,
 because an exception written for the vegetarian logic ("peanut butter", "egg
 noodles") must never silence the allergen inside it. Nine recipes shipped
 containsNuts:false over peanut butter before this was measured. The closure
 test in allergens.test.ts forces derivation, display, types and the
 family-recipe literal to widen together.
 
-### The firing drill — `src/lib/firing-drill.ts`
+### The firing drill: `src/lib/firing-drill.ts`
 
 Questions are GENERATED from the cook's own pinned menu through buildPass,
 never authored: the right answer is the firing order the pass computed. Three
@@ -439,7 +439,7 @@ declared in `EXCLUDED` — the direction a taxonomy rots in silently, and the ha
 Two refusals, both declared rather than omitted so the gate can tell them from
 gaps:
 
-- **No THEFT code.** The guide names theft and then answers it — *"systems, not
+- **No THEFT code.** The guide names theft and then answers it: *"systems, not
   suspicion"*, and the goal is *"not a surveillance state"*. Theft is what
   remains in the variance once the log has named everything it can.
 - **No vendor creep.** A price that moved, not a thing in a bin. The item book
@@ -482,7 +482,7 @@ inspections entry is 1,535 characters and reached nothing at all.
 
 **No per-recipe hazard flag exists, and one must not be added.** Five candidate
 rules were written and measured against the corpus, and all five failed across
-three adversarial lenses — 0 of 15 verdicts survived:
+three adversarial lenses; 0 of 15 verdicts survived:
 
 - stated-temperature: 12 hits, precision **0/12** — every hit is correctly
   cooked rare beef, medium salmon or a rested pork chop
@@ -526,7 +526,7 @@ Three gates are unusual enough to name:
   regulatory content fail the build rather than pass review.
 
 `readNumbers()` is deliberately NOT economics.mjs's `split(/[^0-9]+/)`, which
-reads `4.5–54.5°C` as [4, 5, 54, 5]. economics.mjs is left alone — its integers
+reads `4.5–54.5°C` as [4, 5, 54, 5]. economics.mjs is left alone; its integers
 gate fine, and re-cutting a working gate to share a helper churns it for nothing.
 
 ### The allergen screen
@@ -540,7 +540,7 @@ display was breaking: an empty list "reads as 'no allergens' rather than 'we
 don't know'".
 
 The block now always renders and names both what was screened and what was not
-(sesame, soy, celery, mustard, sulphites, lupin, molluscs, peanuts — measured
+(sesame, soy, celery, mustard, sulphites, lupin, molluscs, peanuts: measured
 prevalence 157/95/78/72/40/38/30/0). Closing the vocabulary to all 14 is a
 diet.mjs project with its own keyword review and is deferred; `allergens.test.ts`
 asserts NOT_SCREENED stays non-empty so the day it lands, the copy must change.
@@ -567,7 +567,7 @@ parity harness that runs the archived original against our build output).
 
 **Every a11y view was checked with an EMPTY session until 2026-08-27.** Whole
 sections were therefore never looked at — the shopping list, the cellar picker,
-The Pass, The Repertoire — and an unlabelled `<select>` (axe: CRITICAL) sat on
+The Pass, The Repertoire; and an unlabelled `<select>` (axe: CRITICAL) sat on
 the menu page for as long as the section existed. `seedSession()` in
 tests/helpers.ts puts a session in via `addInitScript` before page scripts run;
 the SEEDED block in a11y.spec.ts uses it. Proof it works: reintroduce the
@@ -578,7 +578,7 @@ seeded one fails. **A page with no user data is not the page users have.**
 no serious violations`. `static/shared/oot-home.css` stacks `opacity: .6–.68`
 on top of already-muted text in six rules (`.oot-sec-head span`,
 `.oot-today-sub` and four more), which measures 2.32:1 to 3.17:1 against day
-service's paper where AA wants 4.5:1. It is a SHARED-layer defect — every wing
+service's paper where AA wants 4.5:1. It is a SHARED-layer defect: every wing
 renders those bands — so the fix belongs in the Outside Of Time monorepo and
 must be re-vendored here, not patched in this copy alone. Dimming already-dim
 text is the trap; a border weight or a different token carries "quieter"
@@ -599,7 +599,7 @@ Hard-won rules the suites encode — do not relearn these:
   starts its own (`reuseExistingServer: false`).
 - **Wait for `html[data-hydrated]`** (the layout stamps it from an effect)
   before interacting: prerendered pages look alive long before listeners attach.
-- **`paths.relative: false` is load-bearing** — without it the SW registers
+- **`paths.relative: false` is load-bearing**; without it the SW registers
   './sw.js', which 404s from any deep link.
 - **`navigateFallback` must be RELATIVE (`'shell.html'`).** Workbox resolves
   precache keys against the worker's own location, so under a base path a

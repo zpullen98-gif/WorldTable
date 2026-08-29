@@ -17,7 +17,7 @@ export function ensureSearch(): Promise<void> {
 	if (instance || !browser) return Promise.resolve();
 	loading ??= Promise.all([import('minisearch'), import('./data/search-index.json')]).then(
 		([MS, idx]) => {
-			// loadJS must receive the exact options the index was built with —
+			// loadJS must receive the exact options the index was built with,
 			// which is why they live in the shared search-config module.
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			instance = MS.default.loadJS(idx.default as any, miniOptions as any);
@@ -41,7 +41,7 @@ export function ensureSearch(): Promise<void> {
 export function searchIds(q: string): number[] | null {
 	if (!instance) return null;
 
-	// Ask the shared options whether any term survives tokenizing — never
+	// Ask the shared options whether any term survives tokenizing; never
 	// reimplement the rule, or this drifts from the index the way loadJS can.
 	const tokenize = miniOptions.tokenize ?? ((s: string) => s.split(/[\n\r\p{Z}\p{P}]+/u));
 	const process = miniOptions.processTerm ?? ((t: string) => t);

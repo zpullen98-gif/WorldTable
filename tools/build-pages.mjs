@@ -5,7 +5,7 @@
  * one, plus a worse one specific to this variable:
  *
  *   `BASE_PATH=/WorldTable npm run build` is a syntax error on Windows cmd, and
- *   in Git Bash MSYS path conversion rewrites the leading slash — the value
+ *   in Git Bash MSYS path conversion rewrites the leading slash; the value
  *   arrives as "C:/Program Files/Git/WorldTable" and SvelteKit rejects it with
  *   a message about root-relative paths that never mentions your shell. The
  *   documented deploy command silently could not work on this machine.

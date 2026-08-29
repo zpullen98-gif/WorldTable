@@ -119,7 +119,7 @@ class TimerStore {
 	constructor() {
 		if (!browser) return;
 		// Resync the instant the tab is visible again, so a phone that slept shows
-		// the truth — including an alarm that fired while it was away.
+		// the truth, including an alarm that fired while it was away.
 		document.addEventListener('visibilitychange', () => {
 			if (document.visibilityState === 'visible') this.#tick();
 		});
@@ -194,7 +194,7 @@ class TimerStore {
 	 * is read at a distance, by somebody holding a pan.
 	 *
 	 * Trimmed and capped, because the bar is a fixed width and a label that
-	 * wraps to three lines pushes the clock off the edge — the one thing on the
+	 * wraps to three lines pushes the clock off the edge, the one thing on the
 	 * row that has to stay readable.
 	 */
 	rename(id: string, label: string) {
@@ -271,7 +271,7 @@ class TimerStore {
 			const payload: Persisted = { schemaVersion: VERSION, timers: this.#timers };
 			localStorage.setItem(KEY, JSON.stringify(payload));
 		} catch {
-			/* private mode / quota — a timer is not worth breaking a render for */
+			/* private mode / quota: a timer is not worth breaking a render for */
 		}
 	}
 }

@@ -2,7 +2,7 @@ import { loadStudy, loadTechniques, loadLexicon } from '$lib/data';
 
 export const prerender = true;
 
-/** Counts only — the hub names what each destination holds, never ships it. */
+/** Counts only: the hub names what each destination holds, never ships it. */
 export async function load() {
 	const [study, techniques, lexicon] = await Promise.all([
 		loadStudy(),

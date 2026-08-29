@@ -22,7 +22,7 @@
  *
  * The PROSE is the original's. What is ours is the STRUCTURE: splitting one
  * paragraph into eight faults, naming the levers, and ordering them the way the
- * entry says to apply them — gentlest first.
+ * entry says to apply them, gentlest first.
  *
  * That structure is a claim about the prose, so the build checks it:
  *
@@ -91,7 +91,7 @@ export const FAULTS = [
 		symptom: 'The flavours are all present and none of them arrives. Tastes like a photograph of the dish.',
 		levers: [
 			{ move: 'Salt', token: 'salt', note: 'Always first. Most flat dishes are unsalted dishes.' },
-			{ move: 'Acid', token: 'acid', note: 'If it is already salted, this is the next lever — not more salt.' },
+			{ move: 'Acid', token: 'acid', note: 'If it is already salted, this is the next lever, not more salt.' },
 			{ move: 'Umami', token: 'umami', note: 'If it is salted and bright and still flat. The three-axis check ends here.' }
 		]
 	},

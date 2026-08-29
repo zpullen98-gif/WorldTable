@@ -58,7 +58,7 @@
 	 * show a rail count that doesn't match the grid.
 	 *
 	 * With a query and a ready index: tokenized, relevance-ordered, and
-	 * ingredient-aware — "lemongrass" finds Tom Yum by its ingredients, and
+	 * ingredient-aware: "lemongrass" finds Tom Yum by its ingredients, and
 	 * "ragu" no longer matches asparagus by substring accident.
 	 */
 	// Family recipes sit alongside the guide's 970 in every list below. They are

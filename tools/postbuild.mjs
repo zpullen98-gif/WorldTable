@@ -21,7 +21,7 @@ const BUILD = join(dirname(fileURLToPath(import.meta.url)), '..', 'build');
 const src = join(BUILD, 'fallback.html');
 
 if (!existsSync(src)) {
-	console.error('postbuild: build/fallback.html missing — did the adapter run?');
+	console.error('postbuild: build/fallback.html missing. Did the adapter run?');
 	process.exit(1);
 }
 

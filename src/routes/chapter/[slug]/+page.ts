@@ -15,7 +15,7 @@ export async function load({ params }) {
 	if (chapter) return { chapter };
 
 	// A chapter that exists only because family recipes were filed under it
-	// ("Family", "Nonna's Kitchen"). No prerendered page — synthesized from the
+	// ("Family", "Nonna's Kitchen"). No prerendered page, synthesized from the
 	// session, same pattern as the recipe route.
 	if (browser) {
 		const { session } = await import('$lib/stores/session.svelte');

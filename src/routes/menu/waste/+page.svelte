@@ -8,7 +8,7 @@
 	import { onMount } from 'svelte';
 
 	/**
-	 * The waste log — what died in the walk-in, and why.
+	 * The waste log: what died in the walk-in, and why.
 	 *
 	 * The guide asks for it by name and supplies the taxonomy; the five reason
 	 * codes are gated against its prose in tools/derive/waste.mjs. What this page
@@ -187,7 +187,7 @@
 	const valueOf = (w: WasteEntry) => entryValue(w);
 </script>
 
-<svelte:head><title>The Waste Log — The World Table</title></svelte:head>
+<svelte:head><title>The Waste Log | The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -208,7 +208,7 @@
 
 		<!--
 			The comparison is the point. The guide asserts a most-common cause, so a
-			venue's own log can confirm it or contradict it — and a chef will not do
+			venue's own log can confirm it or contradict it, and a chef will not do
 			that arithmetic in their head, which is to say never.
 		-->
 		{#if headline}
@@ -238,7 +238,7 @@
 					dishes costed and counted this week", which parses as though none of
 					the dishes had been costed. The denominator is money, not a count of
 					dishes, and the count is the qualification rather than the subject.
-					Hidden entirely at zero — a 0.0% share is not a finding, it is the
+					Hidden entirely at zero: a 0.0% share is not a finding, it is the
 					absence of one, and the total beside it already says so.
 				-->
 				<span class="share"

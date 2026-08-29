@@ -4,7 +4,7 @@
  * The counterpart to report-notes.mjs. Lists how much of the corpus carries a
  * technique tag, which chapters are darkest, and which table entries never
  * fire. Run with a chapter name to dump that chapter's untagged recipes with
- * their full method text — the working material for writing new keywords.
+ * their full method text, the working material for writing new keywords.
  *
  *   node tools/report-techniques.mjs
  *   node tools/report-techniques.mjs "Rhode Island"

@@ -119,7 +119,7 @@
 	 * This was a printout: dish, total minutes, sorted longest first, captioned
 	 * "start at the top and work down". Sorting is not scheduling. That order
 	 * only holds for a cook who finishes one dish before starting the next, and
-	 * one number per dish could never say when the cook was free — so there was
+	 * one number per dish could never say when the cook was free, so there was
 	 * nothing to overlap with even in principle.
 	 *
 	 * buildPass plans BACKWARDS from service so everything lands together, and
@@ -151,7 +151,7 @@
 	 * Clashes against the crew actually in the room, not against a lone cook.
 	 *
 	 * `plan.collisions` is still built and still tested, but it is pairwise and
-	 * its merge unions dish names across a widened stretch — so its `dishes`
+	 * its merge unions dish names across a widened stretch, so its `dishes`
 	 * count is "dishes touched in this busy period", not "hands wanted now", and
 	 * dividing it by a crew size would invent clashes on a two-cook night and
 	 * hide them on a four-cook one. lib/pass.ts carries a separate sweep for
@@ -190,7 +190,7 @@
 	 * The clock is the RUN, not component state.
 	 *
 	 * `live` and `serviceTime` used to live in this component, so walking to the
-	 * walk-in and coming back lost both — on the one screen a cook is standing
+	 * walk-in and coming back lost both, on the one screen a cook is standing
 	 * in front of while something is on the heat. The run is stored, belongs to
 	 * one menu, and expires on its own so last night's service is never resumed
 	 * into a lie. See SessionState.planRun.
@@ -205,7 +205,7 @@
 	 *
 	 * Constant for the 970 frozen guide recipes, so it costs them nothing. A
 	 * family recipe re-authored to a different length mints a new key instead,
-	 * and its old observations are simply never read again — no special case and
+	 * and its old observations are simply never read again: no special case and
 	 * no stale actuals pinned to a step that moved.
 	 */
 	const actualKey = (st: { slug: string; n: number }) =>
@@ -245,7 +245,7 @@
 	/**
 	 * Tick a row, and take the observation the tick pair just made for free.
 	 *
-	 * The interval belongs to the step that was ticked BEFORE this one — it is
+	 * The interval belongs to the step that was ticked BEFORE this one: it is
 	 * the time between starting that step and starting this one. Only steps with
 	 * no unattended time are recorded: a step carrying a wait measures the wait,
 	 * not the work.
@@ -287,7 +287,7 @@
 	 * The step the cook should be on: the first one not yet ticked.
 	 *
 	 * With nothing ticked this is the first step, whose startsAtMin IS
-	 * plan.lengthMin — so the number degrades to exactly the whole-plan
+	 * plan.lengthMin, so the number degrades to exactly the whole-plan
 	 * subtraction it replaced, and a cook who never ticks loses nothing.
 	 */
 	const nextUnticked = $derived(plan.steps.find((st) => !ticks[rowKey(st)]));
@@ -490,7 +490,7 @@
 			);
 			session.merge(parsed.data);
 			house.adopt(parsed.data.menuDishes, parsed.data.dishCosts, parsed.house ?? {});
-			importMsg = `Imported — ${summary}.`;
+			importMsg = `Imported: ${summary}.`;
 		} catch (err) {
 			importMsg = err instanceof Error ? err.message : 'That file could not be read.';
 		} finally {
@@ -603,7 +603,7 @@
 			     this to trust. -->
 			<p class="hint soft">
 				Waits come from the method. Hands-on time is estimated for {guessedSteps} of
-				{plan.steps.length} steps — treat the shape as reliable and the minutes as a starting point.
+				{plan.steps.length} steps. Treat the shape as reliable and the minutes as a starting point.
 			</p>
 
 			<div class="passbar" data-print="hide">
@@ -648,12 +648,12 @@
 						onclick={() => (hands = n)}>{n}</button
 					>
 				{/each}
-				<span class="handsnote">Not saved — it is tonight's number, not a rota.</span>
+				<span class="handsnote">Not saved: it is tonight's number, not a rota.</span>
 			</div>
 
 			{#each clashes as c, i (i)}
 				<p class="clash">
-					<b>{whenLabel(c.fromMin)}</b> — {nameList(c.dishes)} want {c.demand} pairs of hands for
+					<b>{whenLabel(c.fromMin)}</b>, {nameList(c.dishes)} want {c.demand} pairs of hands for
 					{c.fromMin - c.toMin} min, and there {hands === 1 ? 'is one' : `are ${hands}`}.
 					{c.demand - hands === 1 ? 'One more dish' : `${c.demand - hands} more dishes`} than the
 					crew can hold.
@@ -746,7 +746,7 @@
 	{#if house.blocked}
 		<!--
 			The record on this device was written by a NEWER build than the one
-			running. It is not read and, critically, nothing is written over it —
+			running. It is not read and, critically, nothing is written over it:
 			see readHouse() in persistence/house.ts. Saying so is the difference
 			between "my menu is gone" and "this tablet is behind".
 		-->
@@ -782,7 +782,7 @@
 					<input placeholder="Section — Starters, Mains…" bind:value={dishForm.section} aria-label="Menu section" />
 					<input class="short" placeholder="Price" bind:value={dishForm.price} aria-label="Price" />
 				</div>
-				<textarea rows="2" placeholder="The menu description — what the guest reads." bind:value={dishForm.description} aria-label="Menu description"></textarea>
+				<textarea rows="2" placeholder="The menu description, what the guest reads." bind:value={dishForm.description} aria-label="Menu description"></textarea>
 				<textarea rows="3" placeholder="Ingredients, one per line." bind:value={dishForm.ingredients} aria-label="Ingredients, one per line"></textarea>
 				<div class="allergens" role="group" aria-label="Allergens">
 					{#each ALLERGENS as a (a)}
@@ -949,7 +949,7 @@
 	.timeline .what b { font-family: var(--display); font-size: 17px; margin-right: 7px; }
 	.timeline .txt { color: var(--ink-soft); font-size: var(--t-small); }
 	.timeline .cost { flex: none; font-size: var(--t-small); color: var(--muted); font-variant-numeric: oldstyle-nums; text-align: right; }
-	/* The running step is marked by a rule and weight, not colour alone — a
+	/* The running step is marked by a rule and weight, not colour alone: a
 	   kitchen screen gets read at an angle, in steam, by somebody in a hurry. */
 	.timeline li.current { border-left: 3px solid var(--turmeric-deep); padding-left: 9px; background: var(--paper-raised); }
 	.timeline li.current .what b { color: var(--turmeric-deep); }
@@ -981,7 +981,7 @@
 	/* The affirmation reads as a statement the user is making, so it sits
 	   apart from the grid of allergen boxes rather than inside it. */
 	.affirm { display: block; margin: 10px 0 0; }
-	/* A real colour token, never stacked opacity — the shared home CSS dims
+	/* A real colour token, never stacked opacity: the shared home CSS dims
 	   muted text with opacity and lands at 2.32:1 against a 4.5:1 target. */
 	.da.unchecked { color: var(--chili); font-weight: 600; }
 	.blocked {

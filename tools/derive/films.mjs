@@ -1,5 +1,5 @@
 /**
- * Film school links — ported from `videoFor` (L3931) and the technique table.
+ * Film school links: ported from `videoFor` (L3931) and the technique table.
  *
  * The original duplicated the twelve canon YouTube URLs in two places (the
  * Screening Room markup at L622-633 and the `F` map at L3786) so they could
@@ -39,7 +39,7 @@ export function deriveFilms(r, blob, { TEACHERS, DISH_FILMS, TECH }, isAmerican 
 		out.techniques.push({
 			label: `Technique: ${x.l}`,
 			url: x.u || YT(x.q),
-			sub: x.u ? '★ A canon film — verified' : 'The skill inside this recipe'
+			sub: x.u ? '★ A canon film, verified' : 'The skill inside this recipe'
 		});
 	}
 

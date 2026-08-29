@@ -14,7 +14,7 @@
  *
  * It ships no per-recipe hazard flag of any kind. Five candidate rules were
  * written and measured — undercooked-protein by stated temperature and by
- * doneness word, raw-protein, live-shellfish, cook-chill, preserve-uncooked —
+ * doneness word, raw-protein, live-shellfish, cook-chill, preserve-uncooked,
  * and all five failed. Not marginally: the stated-temperature rule scored 0 of
  * 12 (every hit was correctly-cooked rare beef or rested pork); the raw-protein
  * rule flagged a salmon hot-smoked to a probe-verified 60°C while MISSING
@@ -52,7 +52,7 @@ export const ANCHORS = {
  *
  * NOT economics.mjs's `split(/[^0-9]+/)`. That helper is correct for the
  * integer percentages it gates, and reading `4.5–54.5°C` with it gives
- * [4, 5, 54, 5] — measured, not supposed. Here the decimals are the difference
+ * [4, 5, 54, 5]: measured, not supposed. Here the decimals are the difference
  * between two danger-zone ceilings 5.5°C apart, so they have to survive.
  * economics.mjs is deliberately left alone; re-cutting a working gate to share
  * a helper churns a passing gate for nothing.
@@ -134,7 +134,7 @@ export const NUMERIC = [
  *
  * Disclosed rather than resolved. Shipping one window silently argues with the
  * other entry; picking a winner is a safety judgement this module has no
- * standing to make. Gated both ways — the second statement must still exist,
+ * standing to make. Gated both ways: the second statement must still exist,
  * and the two windows must still DIFFER, so the disclosure cannot go stale.
  */
 export const CONFLICT = {
@@ -156,7 +156,7 @@ export const CONFLICT = {
 /**
  * The guide's own C/F pair does not agree with the app's converter: 4°C rounds
  * to 39°F and the parenthetical says 40°F. The pair therefore ships as one
- * opaque string and is never recomputed — and the DISAGREEMENT is gated, so
+ * opaque string and is never recomputed, and the DISAGREEMENT is gated, so
  * that if the guide is ever corrected the page copy is forced to change rather
  * than leaving a stale claim on screen.
  */
@@ -165,7 +165,7 @@ export const CF_PAIR = { lowC: 4, lowF: 40 };
 /**
  * What the guide names and does not state.
  *
- * `named` must still be present — the gap is about a real practice the guide
+ * `named` must still be present: the gap is about a real practice the guide
  * raises. `absent` tokens must appear in ZERO lexicon definitions, which is the
  * half that matters: it makes filling a gap with invented content fail the
  * build rather than pass review.
@@ -196,7 +196,7 @@ export const GAPS = [
 		key: 'thawing',
 		named: 'raw below ready-to-eat in storage',
 		namedAnchor: 'safety',
-		// 'thaw' joined the absent list — the except below names it, and an
+		// 'thaw' joined the absent list: the except below names it, and an
 		// except whose token is never scanned is dead code wearing a promise.
 		absent: ['defrost', 'thaw'],
 		// One entry says "thaw" of frozen prawns. It is a shopping note, not a
@@ -243,7 +243,7 @@ function assertNoRecipes(obj, recipeSlugs, problems) {
 		if (typeof node === 'string') {
 			if (recipeSlugs.has(node)) {
 				problems.push(
-					`sanitation: ${path} names the recipe "${node}" — this feature must not name recipes; ` +
+					`sanitation: ${path} names the recipe "${node}". This feature must not name recipes; ` +
 						'every per-recipe hazard rule was measured unshippable'
 				);
 			}
@@ -427,7 +427,7 @@ export function buildSanitation(lexicon, recipeSlugList = []) {
 	const framingFact = facts.find((f) => f.key === FRAMING.jurisdictionFact);
 	if (!framingFact) {
 		problems.push(
-			'sanitation: the jurisdiction clause has gone from the guide — the page cannot carry its required framing'
+			'sanitation: the jurisdiction clause has gone from the guide; the page cannot carry its required framing'
 		);
 	}
 

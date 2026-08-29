@@ -54,9 +54,9 @@
 	--t-small: 0.8125rem; /* 13px  — captions, badges */
 	--t-body: 1rem; /* 16px  — running text */
 	--t-lede: 1.125rem; /* 18px  — intros */
-	--t-h4: 1.1875rem; /* 19px  — card titles */
+	--t-h4: 1.1875rem; /* 19px  card titles */
 	--t-h3: 1.5rem; /* 24px  — section heads */
-	--t-h2: 1.875rem; /* 30px  — chapter heads */
+	--t-h2: 1.875rem; /* 30px: chapter heads */
 	--t-h1: clamp(2rem, 4.5vw, 2.9rem);
 
 	--tracking-eyebrow: 0.22em;

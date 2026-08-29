@@ -11,7 +11,7 @@
  * photos, which localStorage cannot hold at all), and IDB writes off the main
  * thread, which matters when the notes field fires on every keystroke.
  *
- * Preferences are the deliberate exception — see stores/prefs.svelte.ts.
+ * Preferences are the deliberate exception: see stores/prefs.svelte.ts.
  */
 import { get, set, del, getMany, createStore } from 'idb-keyval';
 import { browser } from '$app/environment';

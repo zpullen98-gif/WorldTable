@@ -17,7 +17,7 @@
  * The port matched the SEASON key as a literal string. That works for "Asparagus"
  * and fails for every label that is a CATEGORY rather than a word a recipe would
  * ever use: "Stone fruit" appears in no recipe on earth, so 31 dishes naming
- * peaches, apricots, plums and cherries had no season at all — a peach cobbler
+ * peaches, apricots, plums and cherries had no season at all: a peach cobbler
  * read as available in December.
  *
  * The original matched against the pantry shelf's keyword lists (PAN_INDEX,
@@ -80,7 +80,7 @@ function matchesProduce(blob, produce, PANTRY) {
  * Left-boundary match: the keyword must start a word, but need not finish one.
  *
  * The shelf is full of deliberate stems — "cherr" is written to catch cherry and
- * cherries — so a right boundary would break it. A LEFT boundary is what stops
+ * cherries, so a right boundary would break it. A LEFT boundary is what stops
  * "sage" matching "sausage" and "corn" matching "peppercorns".
  *
  * @param {string} text

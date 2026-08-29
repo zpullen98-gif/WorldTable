@@ -52,7 +52,7 @@
 
 	/* There IS a scheduler now (lib/repertoire.ts), so "today" can mean what it
 	   means in the sibling wings: the thing most worth doing. A dish gone cold
-	   outranks a new one — re-cooking what you are losing beats adding to a list
+	   outranks a new one: re-cooking what you are losing beats adding to a list
 	   of things you cooked once. Failing that, the next dish in teaching order.
 	   One dish either way, never a queue. */
 	const due = $derived.by(() => {
@@ -305,7 +305,7 @@
 			Everything is kept in this browser; export it from My Menu.
 		</div>
 		<div class="oot-today-sub" style="margin-top:6px">
-			<a href="{base}/repertoire">The Repertoire</a> — every dish you have cooked, how long ago, and
+			<a href="{base}/repertoire">The Repertoire</a>, every dish you have cooked, how long ago, and
 			what is due.
 		</div>
 	</section>

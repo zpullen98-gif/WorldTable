@@ -1,5 +1,5 @@
 /**
- * Drill prompts — the guide's own definitions, with the answer taken out.
+ * Drill prompts: the guide's own definitions, with the answer taken out.
  *
  * A term's definition very often opens with the term: "À LA CARTE: dishes
  * priced and fired individually…". Asking "which term does this define?" over
@@ -11,8 +11,8 @@
  * Two reasons, both measured.
  *
  * The lexicon's own quiz truncates its prompt with `.slice(0, 180)`. Across the
- * 176 front-of-house definitions, ZERO are 180 characters or shorter — the
- * shortest is 443, the median 678, the longest 1,335 — so that slice would cut
+ * 176 front-of-house definitions, ZERO are 180 characters or shorter; the
+ * shortest is 443, the median 678, the longest 1,335, so that slice would cut
  * every single front-of-house prompt mid-sentence, and often mid-word. A drill
  * that asks half a question is not a drill.
  *
@@ -33,10 +33,18 @@ export const PROMPT_MAX = 420;
 /** A redaction that eats more than this much of the prompt is not a question. */
 export const MAX_REDACTED_SHARE = 0.3;
 
-export const REDACTION = '——';
+/* The blank a drill leaves where the term should go.
+   It was two em dashes. The product is being scrubbed of em dashes, and a
+   redaction glyph is the one place where a global sweep would do real damage:
+   it is not punctuation, it is the answer slot, and rewriting it per sentence
+   would leave 366 drills with inconsistent blanks. Changed here, once, and
+   regenerated. Two characters wide on purpose, because PROMPT_MAX clips the
+   built prompt by length and a wider glyph would silently truncate the longer
+   ones somewhere new. */
+export const REDACTION = '__';
 
 /**
- * The significant words of a term — what must not survive in its own prompt.
+ * The significant words of a term: what must not survive in its own prompt.
  *
  * Accents are folded because the corpus writes both "Gewürztraminer" and
  * "Gewurztraminer", and a redaction that misses the accented spelling leaves

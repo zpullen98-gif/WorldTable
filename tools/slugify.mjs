@@ -28,7 +28,7 @@ export function slugify(input) {
 /**
  * Assign a stable slug to every item, qualifying collisions by a second field.
  *
- * The naive fix — append -2 to whichever came second — makes the slug a function
+ * The naive fix (append -2 to whichever came second) makes the slug a function
  * of array position, so reordering the data silently breaks saved bookmarks and
  * every persisted reference. Instead, when a base slug is claimed by more than
  * one item, *all* claimants get qualified with their discriminator. Nobody keeps

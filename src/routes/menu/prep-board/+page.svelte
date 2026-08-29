@@ -7,7 +7,7 @@
 	import Ornament from '$lib/components/Ornament.svelte';
 
 	/**
-	 * The prep board — back-timing the DAY, not the service.
+	 * The prep board: back-timing the DAY, not the service.
 	 *
 	 * The Pass back-times a service; nothing back-timed the morning that has to
 	 * happen before it. On the floor the missing entity shows up as 8:20pm on a
@@ -15,7 +15,7 @@
 	 * stock" with no number, and it is gone.
 	 *
 	 * Two things make this cheap to build. The scheduler is the SAME buildPass
-	 * the service plan uses — back-timing is back-timing, and a prep deadline is
+	 * the service plan uses: back-timing is back-timing, and a prep deadline is
 	 * just a different anchor. And the times are the chef's own from the prep
 	 * record, not the guide's 86%-estimated step durations, so the plan is made
 	 * of numbers somebody in this kitchen actually typed.
@@ -229,7 +229,7 @@
 
 				{#each plan.dishes.filter((d) => d.advance) as d (d.slug)}
 					<p class="clash">
-						<b>{d.name}</b> carries a wait too long to fit inside a prep day — start it the day before.
+						<b>{d.name}</b> carries a wait too long to fit inside a prep day. Start it the day before.
 					</p>
 				{/each}
 

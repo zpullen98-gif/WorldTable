@@ -125,7 +125,7 @@ export default defineConfig({
 				/**
 				 * RELATIVE, and load-bearing. Workbox resolves precache keys against
 				 * the service worker's own location, so on GitHub Pages the entry
-				 * above is cached as /WorldTable/shell.html — while a root-absolute
+				 * above is cached as /WorldTable/shell.html, while a root-absolute
 				 * '/shell.html' resolves to the domain root, which was never
 				 * precached. createHandlerBoundToURL then throws non-precached-url
 				 * and the NavigationRoute is NEVER REGISTERED: the app shipped with
@@ -143,7 +143,7 @@ export default defineConfig({
 				navigateFallbackDenylist: [/^\/api\//],
 				/**
 				 * /shared/ belongs to Outside Of Time, the site this build is a wing
-				 * of, and sits outside this project entirely — so the glob cannot see
+				 * of, and sits outside this project entirely, so the glob cannot see
 				 * it and the precache manifest can never list it. Without a rule here
 				 * the four shared scripts (config, auth, gate, return chip) are the
 				 * only same-origin requests this app makes that fail offline, which

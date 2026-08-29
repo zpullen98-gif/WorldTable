@@ -61,7 +61,7 @@
 										? `Mark ${r.name} as cooked`
 										: n === 1
 											? `${r.name} cooked once — tap to undo`
-											: `${r.name} cooked ${n} times — tap to remove the most recent`}
+											: `${r.name} cooked ${n} times: tap to remove the most recent`}
 									title={n === 0
 										? 'Mark as cooked'
 										: n === 1

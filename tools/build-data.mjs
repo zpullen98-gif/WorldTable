@@ -421,7 +421,7 @@ const techniques = TECH_ALL.map((x, i) => {
  *
  * A dish standard always wins. It is specific to the plate and it is read at
  * the pass; a technique standard is the fallback for everything else, read at
- * the pan. A recipe never carries both — see tools/derive/technique-standards.mjs.
+ * the pan. A recipe never carries both; see tools/derive/technique-standards.mjs.
  *
  * Ordered most-specific-first (ascending recipe count) and capped at
  * JUDGED_BY_MAX. Slugs only: the prose lives once in technique-standards.json
@@ -495,7 +495,7 @@ if (waste) {
 }
 
 /**
- * Sanitation. Structure over the guide's two food-safety entries, and — the
+ * Sanitation. Structure over the guide's two food-safety entries, and, the
  * unusual part — over its SILENCES: each gap asserts both that the guide still
  * names a practice and that it still states no figure for it, so nobody can
  * quietly fill a gap with invented regulatory content. Ships no per-recipe
@@ -509,7 +509,7 @@ const { sanitation, problems: sanitationProblems } = buildSanitation(
 
 /**
  * The service track. An authored teaching ORDER over the five front-of-house
- * atlases, referencing terms by slug — no definition is copied. Gated forward
+ * atlases, referencing terms by slug; no definition is copied. Gated forward
  * (every reference resolves, exactly once) and in reverse (no front-of-house
  * term is left out of the track).
  */
@@ -565,7 +565,7 @@ write('calibration.json', {
  * The search index, prebuilt so the browser never pays tokenization cost.
  *
  * Fields mirror the ORIGINAL's search surface — name + ingredients (RTEXT,
- * L2746) — plus chapter and flavor tags. The grid's substring fallback covers
+ * L2746), plus chapter and flavor tags. The grid's substring fallback covers
  * only name/chapter/tags, which is how "lemongrass" went from 13 hits to 1
  * until this index existed. Document ids are positions in the recipes array.
  *
@@ -605,7 +605,7 @@ const problems = [];
  *      geoduck, whelk, carnitas and hot dogs as missing words.
  *
  * The large middle class — the corpus disagreeing with itself about whether
- * "pork (or shiitake for veg)" counts — is reported, not failed. See the note in
+ * "pork (or shiitake for veg)" counts, is reported, not failed. See the note in
  * derive/diet.mjs.
  */
 const gateA = [];
@@ -738,7 +738,7 @@ if (worst && linkTotal > 0) {
 	);
 }
 
-// Overlay hygiene: a key that matches no slug is a silent no-op — the worst
+// Overlay hygiene: a key that matches no slug is a silent no-op, the worst
 // kind of typo. And a backfilled note SHORTER than the bar defeats the point.
 {
 	const slugSet = new Set(recipeSlugs);
@@ -804,12 +804,12 @@ if (worst && linkTotal > 0) {
 	const tooThin = SUPPLEMENT.filter((x) => (counts.get(x.l) ?? 0) > 0 && counts.get(x.l) < 5);
 	if (tooThin.length) {
 		console.log(
-			`  techniques: ${tooThin.length} supplemental entries under 5 recipes — ${tooThin.map((x) => `${x.l} (${counts.get(x.l)})`).join(', ')}`
+			`  techniques: ${tooThin.length} supplemental entries under 5 recipes: ${tooThin.map((x) => `${x.l} (${counts.get(x.l)})`).join(', ')}`
 		);
 	}
 
 	// A semester skill pointing at no technique page is a dead link in the
-	// curriculum — the one place a broken link is least forgivable.
+	// curriculum, the one place a broken link is least forgivable.
 	const liveSlugs = new Set(techniques.map((t) => t.slug));
 	const dangling = study.flatMap((s) =>
 		s.skills.filter((k) => !liveSlugs.has(k.slug)).map((k) => `S${s.n} -> ${k.label}`)
@@ -858,7 +858,7 @@ if (worst && linkTotal > 0) {
 	const seasoned = index.filter((r) => r.season.length).length;
 	console.log(
 		`\n  season: ${seasoned} of ${index.length} recipes carry peak months` +
-			(deadProduce.length ? `; ${deadProduce.length} produce keys match nothing — ${deadProduce.join(', ')}` : '')
+			(deadProduce.length ? `; ${deadProduce.length} produce keys match nothing: ${deadProduce.join(', ')}` : '')
 	);
 }
 
@@ -876,7 +876,7 @@ console.log('');
  *
  * The mark count is gated too. Two marks is not a standard and six is a recipe,
  * and the number is the one thing about this data that drifts without anybody
- * noticing — a chef adding "one more thing to check" a dish at a time.
+ * noticing, a chef adding "one more thing to check" a dish at a time.
  *
  * A dish with NO standard is not an error. 45 of 970 are written; the rest are
  * a rolling job and render without the block. What IS reported is a Path of
@@ -1181,7 +1181,7 @@ problems.push(...palateProblems);
 		/**
 		 * The same measured numbers, EMITTED, so no page ever hardcodes them
 		 * again. The coverage board shipped "683 ... 45 ... 638" in its limits
-		 * copy and the corpus moved twice underneath it — a page number that is
+		 * copy and the corpus moved twice underneath it: a page number that is
 		 * not computed or emitted-and-gated is a page number already drifting.
 		 */
 		writeFileSync(

@@ -77,7 +77,7 @@ const REGEX_TAG = '__regexp__';
 /**
  * Realm-safe RegExp test. `instanceof RegExp` compares against the *calling*
  * realm's RegExp, and everything we extract was constructed inside a vm context
- * with its own intrinsics — so instanceof is false for every one of the 31 EQUIP
+ * with its own intrinsics, so instanceof is false for every one of the 31 EQUIP
  * rules and every NOTE_DEFS pattern, and they serialize to `{}`. Silent, total
  * loss of the regexes. Object.prototype.toString reads the internal slot and is
  * immune to which realm built the value.
@@ -154,7 +154,7 @@ export function charSum(value) {
 }
 
 export function extract(html) {
-	// Pass 1 — locate every target's initializer and record its source span.
+	// Pass 1: locate every target's initializer and record its source span.
 	// We keep them in document order because four of the fifteen are NOT pure
 	// literals: DISH_FILMS and TECH reference F and TEACHERS by identifier
 	// (L3842, L3854). Evaluating in source order means a reference is always

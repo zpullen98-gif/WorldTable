@@ -64,7 +64,7 @@
 			data.standards
 		);
 		session.addFamilyRecipe(recipe);
-		msg = `“${recipe.name}” is in the guide — filed under ${recipe.chapter}.`;
+		msg = `“${recipe.name}” is in the guide, filed under ${recipe.chapter}.`;
 		draft = blank();
 	}
 
@@ -140,7 +140,7 @@
 			</label>
 
 			<label>
-				<span class="sec">Method — one step per line</span>
+				<span class="sec">Method: one step per line</span>
 				<textarea
 					bind:value={draft.method}
 					rows="7"

@@ -97,7 +97,7 @@ export function cleared(right: number, passAt: number): boolean {
 }
 
 /**
- * What a run says, in words. No number attached to a person — it is a rung.
+ * What a run says, in words. No number attached to a person: it is a rung.
  */
 export function verdictFor(right: number, of: number, passAt: number): string {
 	if (right >= of) return 'Every one. That level is yours';

@@ -185,7 +185,7 @@ export function buildFamilyRecipe(
 		// are SELF-DECLARED and can never reach /coverage: the board is driven by
 		// techniques.json's audited recipe lists (coverage/+page.ts builds
 		// recipesByTechnique from them), and no family slug appears in one. That
-		// is a structural property, not a convention — see authoring.test.ts.
+		// is a structural property, not a convention; see authoring.test.ts.
 		techniques: techniqueLabels,
 		flavor: {
 			tags: ['family'],

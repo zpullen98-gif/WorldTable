@@ -37,7 +37,7 @@
 		}
 		for (const list of byGroup.values()) list.sort((a, b) => a.name.localeCompare(b.name));
 
-		// Family first — your own recipes outrank the printed ones.
+		// Family first: your own recipes outrank the printed ones.
 		const order = ['The Family Chapter', 'World Cuisines', 'The Atlases', ...US_ORDER];
 		return order
 			.filter((g) => byGroup.has(g))

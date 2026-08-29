@@ -16,7 +16,7 @@ import type { MenuDish, DishCosting } from './state';
  * store and the pages keep one import site.
  *
  * They had to move: mergeSessions needs mergeCostings, and state.ts's own
- * header explains why it must not import back — it is deliberately a leaf so
+ * header explains why it must not import back: it is deliberately a leaf so
  * db.ts and migrations.ts never form a cycle, and that cycle once "only
  * worked because each side happened to touch the other's exports inside
  * function bodies rather than at module-eval time". A costing merge living
@@ -66,7 +66,7 @@ export interface Prep {
 	 * SECONDS, not minutes, and not negotiable.
 	 *
 	 * `PassStepInput` is handsOnSec/unattendedSec and `handsOf()` divides by 60,
-	 * so a prep stored in minutes back-times to SIXTY TIMES its real length —
+	 * so a prep stored in minutes back-times to SIXTY TIMES its real length:
 	 * a two-hour stock would claim five days. Seconds here means the prep board
 	 * can hand these straight to buildPass when it arrives.
 	 */
@@ -107,7 +107,7 @@ export interface HouseRecord {
 	 * On the HOUSE record like the menu and the preps, and for a sharper reason
 	 * than either: a per-profile waste log IS waste-by-cook, which is the one
 	 * report this product refuses to be able to produce. `WasteEntry` also
-	 * carries no person field at all — see waste.ts.
+	 * carries no person field at all: see waste.ts.
 	 */
 	waste: WasteEntry[];
 	/**
@@ -118,13 +118,13 @@ export interface HouseRecord {
 	 * putting it here means the head chef and the sous cannot see two different
 	 * food cost percentages for the same dish. Per-profile, they could.
 	 *
-	 * Default off and never inferred — see netOfTax().
+	 * Default off and never inferred. See netOfTax().
 	 */
 	tax?: { inclusive: boolean; ratePct: number };
 	/**
 	 * What was counted in the walk-in, by prep id.
 	 *
-	 * A count is only true for the day it was made — "12 portions of demi" from
+	 * A count is only true for the day it was made: "12 portions of demi" from
 	 * Tuesday tells you nothing on Thursday, and a board that treats it as
 	 * current sends a commis to make nothing. `countedOn` is a plain YYYY-MM-DD
 	 * so the board can say "counted yesterday" rather than quietly believing it.
@@ -163,7 +163,7 @@ export const EMPTY_HOUSE: HouseRecord = {
  * THIS EXISTS BECAUSE THE FIRST VERSION LOST DATA. hydrate() read the record
  * behind `if (schemaVersion <= HOUSE_VERSION)` and had no else, so a record
  * written by a NEWER build failed the test, `#r` stayed EMPTY_HOUSE, and the
- * next write — absorbSession's persist, or the first tap on the 86 board, which
+ * next write, absorbSession's persist, or the first tap on the 86 board, which
  * is the most-tapped write in the app — put that empty record over the top of
  * it. A venue's menu, preps, costings, counts and 86 board, gone, on nothing
  * more than a rollback or a stale service worker.
@@ -234,7 +234,7 @@ export function absorbSession(
  * used to be `preps?: Prep[]`, and that optional argument is the entire reason
  * preps could not travel for as long as they existed: the parameter was added,
  * the merge below was written and tested, and neither call site ever passed
- * one — silently, because an omitted optional argument compiles. Required means
+ * one, silently, because an omitted optional argument compiles. Required means
  * the next collection added to HousePortable cannot repeat it; taking the block
  * rather than a bare array means adding one does not touch this signature at
  * all. Pass `{}` to mean "this file carried none", and say so on purpose.
@@ -275,7 +275,7 @@ export function adoptImport(
 
 	// UNION, never replace. mergeItems' own header has the argument: the losing
 	// device's book holds every price change IT recorded, and newer-wins-whole
-	// would destroy exactly the history the book exists to keep — silently, and
+	// would destroy exactly the history the book exists to keep, silently, and
 	// leaving something plausible behind. Same conclusion mergeCostings reached
 	// about weeks of covers.
 	const nextItems = mergeItems(house.items, incoming.items);
@@ -396,7 +396,7 @@ export interface HousePortable {
 	waste?: WasteEntry[];
 	/**
 	 * The tax regime. Without it a second tablet showed different food-cost
-	 * verdicts for the same dish — the one inconsistency the setting was moved
+	 * verdicts for the same dish, the one inconsistency the setting was moved
 	 * to the house record to prevent, resurrected at the transport boundary.
 	 */
 	tax?: { inclusive: boolean; ratePct: number };

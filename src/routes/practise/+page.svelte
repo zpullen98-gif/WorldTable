@@ -33,7 +33,7 @@
 	});
 </script>
 
-<svelte:head><title>Practise — The World Table</title></svelte:head>
+<svelte:head><title>Practise: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -69,7 +69,7 @@
 					{#if dishes >= 4}
 						{dishes} dishes from the house menu, drilled like the canon.
 					{:else}
-						Opens at four dishes on the house menu — {4 - dishes} to go.
+						Opens at four dishes on the house menu, {4 - dishes} to go.
 					{/if}
 				</p>
 			</a>

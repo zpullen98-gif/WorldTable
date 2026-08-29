@@ -16,7 +16,7 @@
 	 * The calibration bench.
 	 *
 	 * Every cook-side measure in this product is the cook grading themselves.
-	 * This is the one thing a cook standing alone genuinely cannot do — hold the
+	 * This is the one thing a cook standing alone genuinely cannot do: hold the
 	 * answer — and it is the only reason this is a feature rather than advice.
 	 *
 	 * The guide's own protocol entry asks for exactly this: taste COMPARATIVELY,
@@ -115,7 +115,7 @@
 
 			<!--
 				The disclosure sanitation.mjs gives its 4-60°C conflict: say whose
-				number it is, where the number is. These are apparatus — two cups
+				number it is, where the number is. These are apparatus, two cups
 				chosen to be discriminable — not a statement of correct seasoning and
 				not a house spec.
 			-->

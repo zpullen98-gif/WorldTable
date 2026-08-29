@@ -57,14 +57,14 @@
 
 	/* ---- timers ---------------------------------------------------------
 	 * Seeded from the step's precomputed durationSec (parsed at build time from
-	 * "simmer 20 min" phrasing — the original re-parsed it on every step render,
+	 * "simmer 20 min" phrasing; the original re-parsed it on every step render,
 	 * L3407). Steps with no stated duration offer no timer, rather than the
 	 * original's fabricated 4-minute default.
 	 *
 	 * The clock itself lives in the shared store, not here, for one reason:
 	 * closing cook mode does not take the pot off the heat. A timer started on
 	 * step 3 keeps running while you read step 4, while you leave to check the
-	 * Lexicon, and across a reload — and rings wherever you are.
+	 * Lexicon, and across a reload, and rings wherever you are.
 	 */
 	const stepTimer = $derived(timers.find(slug, i));
 	const stepSeconds = $derived(step?.durationSec ?? null);
@@ -108,7 +108,7 @@
 	 * Cooking a dish and recording that you cooked it is attendance. The last
 	 * screen therefore asks the only question the guide is now able to ask: did
 	 * the plate match its standard? It is one tap, with the marks in front of
-	 * you, and it is what moves the re-cook interval — a miss brings the dish
+	 * you, and it is what moves the re-cook interval: a miss brings the dish
 	 * back sooner (lib/repertoire.ts).
 	 *
 	 * Dishes without a standard skip it entirely rather than being asked to
@@ -126,7 +126,7 @@
 	}
 
 	/**
-	 * Taste and correct — the half of the pass a recipe never covers.
+	 * Taste and correct, the half of the pass a recipe never covers.
 	 *
 	 * A cook who has just admitted the plate was off is at the one moment the
 	 * repair table is worth anything, so it comes to them rather than living
@@ -195,7 +195,7 @@
 
 	onMount(() => {
 		// Where focus came from, so it can go back there. A modal <dialog> does
-		// this itself, but we unmount on close, so restore it deliberately —
+		// this itself, but we unmount on close, so restore it deliberately;
 		// otherwise focus lands on <body> and a keyboard user loses their place.
 		const opener = document.activeElement as HTMLElement | null;
 		dialog?.showModal();
@@ -280,7 +280,7 @@
 							onclick={() => {
 								fault = fault === f.slug ? null : f.slug;
 								// Kept, not discarded. This was component state that died with
-								// the dialog — the one moment the app captures a real diagnosis
+								// the dialog, the one moment the app captures a real diagnosis
 								// and it threw it away.
 								if (fault) onannotate?.(fault);
 							}}

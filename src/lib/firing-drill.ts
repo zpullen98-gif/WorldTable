@@ -1,10 +1,10 @@
 /**
- * The firing drill — repetition under load, built from the cook's own menu.
+ * The firing drill: repetition under load, built from the cook's own menu.
  *
  * The handoff line that specified this feature is one sentence: "The Pass
  * computes collisions; that is a drill." The insight holds with one
  * correction: a collision is the MOMENT worth rehearsing, but the pass only
- * reports collisions — it does not resolve them, so they cannot be quizzed
+ * reports collisions; it does not resolve them, so they cannot be quizzed
  * (a quiz needs a defensible right answer). What the pass DOES compute, and
  * defends, is the firing order: which step starts when, back-timed so
  * everything lands together. Reading that order cold, fast, from your own
@@ -79,7 +79,7 @@ export function firingQuestions(
 	}
 	const starts = [...byStart.keys()];
 	// .length, because starts is an array here. This shipped as .size in draft
-	// — undefined < 3 is false — so the refusal never fired and a too-small
+	// (undefined < 3 is false), so the refusal never fired and a too-small
 	// pass crashed downstream instead of returning []. The test caught it.
 	if (starts.length < 3) return [];
 
@@ -87,7 +87,7 @@ export function firingQuestions(
 
 	const out: FiringQuestion[] = [];
 	for (let i = 0; i < count; i++) {
-		// Three DISTINCT start times per question — see usable()'s tie note.
+		// Three DISTINCT start times per question: see usable()'s tie note.
 		const chosen: number[] = [];
 		const remaining = [...starts];
 		while (chosen.length < 3) {

@@ -3,7 +3,7 @@ import { loadTechniques } from '$lib/data';
 export const prerender = true;
 
 /**
- * The index ships labels and counts only — never the recipe slug arrays.
+ * The index ships labels and counts only, never the recipe slug arrays.
  *
  * A prerendered load return is serialized into the page's HTML, so returning
  * the full technique records would inline every one of the ~4,000 slug strings

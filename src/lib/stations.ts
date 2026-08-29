@@ -1,5 +1,5 @@
 /**
- * Station coverage — who can hold which section of the line.
+ * Station coverage: who can hold which section of the line.
  *
  * The question a kitchen manager actually asks at four in the afternoon is not
  * "what did Devon score on cheese". It is "my saucier just called in sick, who
@@ -10,14 +10,14 @@
  * Coverage is computed from what the app already records. A person cooks a
  * dish; the dish drills techniques (techniques.json carries the complete recipe
  * list per technique); each technique belongs to a station. So a cooked log
- * already contains a station map — it has since the technique spine landed, and
+ * already contains a station map; it has since the technique spine landed, and
  * nothing has ever read it that way.
  *
  * ## What this deliberately does NOT say
  *
  * It never says somebody IS a saucier, is qualified, is signed off, or is
  * certified. It reports how much of a station's work a person has actually
- * done, in counts, and leaves the judgement where it belongs — with the chef
+ * done, in counts, and leaves the judgement where it belongs, with the chef
  * who has watched them work. The bands are descriptive ("most of it") and never
  * a verdict ("competent"). That is the same line the safety feature drew and it
  * holds here for the same reason: an app that appears to certify somebody owns

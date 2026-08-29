@@ -73,7 +73,7 @@
 	 *
 	 * This is the read side of the annotation: three words of grade told a cook
 	 * their plate was off and never what, so nobody could name a drift. It is
-	 * deliberately the cook's OWN record and nobody else's — a per-person number
+	 * deliberately the cook's OWN record and nobody else's: a per-person number
 	 * a manager reads is a disciplinary instrument, and the data goes dishonest
 	 * inside a fortnight.
 	 *

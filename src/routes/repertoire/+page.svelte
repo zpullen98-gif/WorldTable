@@ -1,5 +1,5 @@
 <!--
-  The Repertoire — the cooked log, finally read.
+  The Repertoire: the cooked log, finally read.
 
   Everything on this page has been sitting in IndexedDB since the first build.
   `cookedLog` stored a timestamp on every cook and no screen ever looked at one:
@@ -36,7 +36,7 @@
 	/**
 	 * Name and link for a cooked slug.
 	 *
-	 * Family recipes are not in the static index — they live in the session and
+	 * Family recipes are not in the static index: they live in the session and
 	 * their pages are /family/[slug]. recipeHref() is the only thing that knows
 	 * about that split, so the link goes through it rather than being built by
 	 * hand here.
@@ -117,7 +117,7 @@
 		{:else}
 			<h2 class="sec">Nothing is due</h2>
 			<p class="secnote">
-				Every dish you have cooked is still inside its interval. Add one — the course is the
+				Every dish you have cooked is still inside its interval. Add one: the course is the
 				shortest way to a repertoire that holds.
 			</p>
 		{/if}
@@ -252,7 +252,7 @@
 		font-variant-numeric: oldstyle-nums;
 	}
 
-	/* One badge, three weights. Colour is not the only signal — each carries its
+	/* One badge, three weights. Colour is not the only signal: each carries its
 	   own word — because a service pass is exactly where a red/amber-only cue
 	   fails, and so does anyone reading this in monochrome print. */
 	.badge {
@@ -276,7 +276,7 @@
 	}
 	/* The three states differ by BORDER weight, never by fading the text.
 	   These shipped as opacity: 0.85 and 0.55 over --muted, which measured
-	   3.41:1 and 2.07:1 against day-service paper — the second one barely
+	   3.41:1 and 2.07:1 against day-service paper, the second one barely
 	   visible. Dimming is a tempting way to build hierarchy and it is the one
 	   that costs legibility first; a hairline border says "quieter" without
 	   taking the words away. */

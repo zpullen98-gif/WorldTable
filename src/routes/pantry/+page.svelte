@@ -20,7 +20,7 @@
 	 *
 	 * The original bound `panQ.addEventListener('input', buildShelf)` to the
 	 * FIRST buildShelf. The v3 replacement at L3272 added the seasonal markers,
-	 * the ingredient blurb and the hemisphere toggle — so typing a single
+	 * the ingredient blurb and the hemisphere toggle, so typing a single
 	 * character into the ingredient filter reverted the shelf to the old version
 	 * and destroyed the toggle outright.
 	 *
@@ -43,7 +43,7 @@
 		if (!selected.size) return [];
 		const need = Math.min(minMatches, selected.size);
 		const scored = [];
-		// Family recipes match too — their pantryItems were derived with the same
+		// Family recipes match too: their pantryItems were derived with the same
 		// keyword tables when they were saved (see authoring.ts).
 		const pool = session.familyRecipes.length
 			? [...recipes, ...session.familyRecipes]
@@ -72,7 +72,7 @@
 	];
 </script>
 
-<svelte:head><title>Pantry Match — The World Table</title></svelte:head>
+<svelte:head><title>Pantry Match | The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -165,7 +165,7 @@
 				</ul>
 			{:else}
 				<p class="empty">
-					Select a few ingredients from the shelf — proteins and produce steer the match hardest.
+					Select a few ingredients from the shelf; proteins and produce steer the match hardest.
 					The more you tick, the smarter the ranking.
 				</p>
 			{/if}

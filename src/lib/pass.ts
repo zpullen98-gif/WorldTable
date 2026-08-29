@@ -5,7 +5,7 @@
  * sorted longest first, under the advice "start at the top and work down".
  * Sorting is not scheduling. That ordering is only right for a cook who
  * finishes one dish before starting the next, which is the one thing a pass
- * never is, and a single number per dish cannot say when the cook is free — so
+ * never is, and a single number per dish cannot say when the cook is free, so
  * there was nothing to overlap with even in principle.
  *
  * This plans backwards from service instead. Everything lands together, which
@@ -56,7 +56,7 @@ export interface PassDish {
 	/**
 	 * When this dish LANDS, in minutes before the first plate leaves.
 	 *
-	 * 0 for the first course and NEGATIVE for later ones — a main firing 25
+	 * 0 for the first course and NEGATIVE for later ones: a main firing 25
 	 * minutes into service lands at -25. Negative reads oddly until you
 	 * remember the whole module counts down: service is the origin, not the
 	 * end of time.
@@ -109,7 +109,7 @@ export const DEFAULT_HANDS_MIN = 4;
  * two dishes nobody would ever work at the same moment.
  *
  * EVERY COURSE MUST APPEAR. /menu's own COURSE_ORDER lists 8 of the 10 the
- * corpus uses — it omits Breakfast (59 recipes) and Sauce (22) — so a map built
+ * corpus uses; it omits Breakfast (59 recipes) and Sauce (22), so a map built
  * from that list would drop 81 recipes onto an undefined anchor. There is a
  * test that fails if a Course value is missing here.
  */
@@ -154,7 +154,7 @@ export function buildPass(
 	for (const d of dishes) {
 		// Minutes after the first plate that this one is wanted. An unknown or
 		// absent course fires with the first plate rather than at some invented
-		// interval — under-claiming, which is the safe direction for a plan.
+		// interval, under-claiming, which is the safe direction for a plan.
 		const fireAfter = firing[d.course ?? ''] ?? 0;
 		const elapsedMin = d.steps.reduce((n, s) => n + handsOf(s) + waitOf(s), 0);
 		const handsOnMin = d.steps.reduce((n, s) => n + handsOf(s), 0);
@@ -213,7 +213,7 @@ export function buildPass(
  * reading "start at the top and work down" discovers the clash at the moment it
  * happens; a plan that back-times can say it in advance.
  *
- * Steps with no hands-on time cannot collide — an unattended simmer is not a
+ * Steps with no hands-on time cannot collide: an unattended simmer is not a
  * demand on anybody. Overlaps are merged so one busy stretch reports once
  * rather than once per pair.
  */
@@ -258,7 +258,7 @@ export function findCollisions(steps: PassStep[]): Collision[] {
  * widened stretch, so `collision.dishes.length` is "dishes touched anywhere in
  * this busy period", not "dishes wanting hands at this instant". Dividing that
  * by a crew size would suppress real clashes on a four-cook morning and invent
- * them on a two-cook one — the exact failure that teaches a chef to ignore the
+ * them on a two-cook one, the exact failure that teaches a chef to ignore the
  * warnings that are real. So this is a separate sweep and findCollisions is
  * left exactly as it was.
  *

@@ -4,7 +4,7 @@
  * The original built this lazily into `window.REC_PANT` the first time you used
  * Pantry Match (L2778), scanning 970 recipes × 177 items on the main thread.
  *
- * Matching deliberately uses the NARROW text — name + ingredients only — because
+ * Matching deliberately uses the NARROW text (name + ingredients only) because
  * that is what the original's `RTEXT` (L2746) contained. Using the full blob
  * would match "butter" from a method step like "butter the dish", which is not
  * the same claim as "this recipe needs butter".

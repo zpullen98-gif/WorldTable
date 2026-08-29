@@ -1,5 +1,5 @@
 /**
- * Cost tier 1-4 — ported from `costFor` (L3320), minus the `R.indexOf(r)` scan.
+ * Cost tier 1-4, ported from `costFor` (L3320), minus the `R.indexOf(r)` scan.
  */
 export function deriveCost(r, blob) {
 	let s = 1;
