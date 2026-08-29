@@ -8,11 +8,26 @@ import { SvelteKitPWA } from '@vite-pwa/sveltekit';
 // subpath, so deploying there is just: BASE_PATH=/WorldTable npm run build
 const base = (process.env.BASE_PATH ?? '') as '' | `/${string}`;
 
+// Built into Outside Of Time, this app is one wing of a single installable
+// product and must point at that product's manifest at the origin root, or the
+// browser offers a second, competing install from every recipe page. Built on
+// its own it keeps its own. MANIFEST_HREF is what says which.
+const manifestHref = process.env.MANIFEST_HREF ?? `${base}/manifest.webmanifest`;
+// The home-screen label follows the same fact. iOS reads this meta rather than
+// the manifest on older versions, so a wing labelled "World Table" would put a
+// second, differently named icon on the phone of somebody who installed the
+// whole product.
+const appName = process.env.APP_NAME ?? 'World Table';
+
 export default defineConfig({
 	// The safety page says when it was BUILT and deliberately never says
 	// "current as of": an offline-first app cannot know when a food code
 	// changed, and that label would manufacture confidence it has not earned.
-	define: { __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)) },
+	define: {
+		__BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)),
+		__MANIFEST_HREF__: JSON.stringify(manifestHref),
+		__APP_NAME__: JSON.stringify(appName)
+	},
 	test: {
 		include: ['src/**/*.test.ts']
 	},

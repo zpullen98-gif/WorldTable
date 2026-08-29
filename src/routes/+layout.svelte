@@ -135,7 +135,9 @@
 
 <svelte:head>
 	<title>The World Table — Interactive Culinary Field Guide</title>
-	<link rel="manifest" href="{base}/manifest.webmanifest" />
+	<link rel="manifest" href={__MANIFEST_HREF__} />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-title" content={__APP_NAME__} />
 	<meta
 		name="description"
 		content="An interactive culinary compendium — {TOTALS.recipes} recipes across {TOTALS.chapters} chapters, a 479-term chef’s lexicon, pantry matching and a ten-semester path of study."

@@ -25,10 +25,21 @@ if (base !== '' && !/^\/[^/]/.test(base)) {
 	process.exit(1);
 }
 
-const env = { ...process.env, BASE_PATH: base };
+/* Outside Of Time serves this app at /table as one wing of a single installable
+   product, so that build must link the product's manifest at the origin root and
+   put the product's name on a home-screen icon. Both values start with a slash or
+   contain a space, which is exactly the class of value this wrapper exists to keep
+   away from a shell, so they are derived here rather than documented as an env
+   prefix somebody will paste into Git Bash. Either can still be overridden. */
+const isOotWing = base === '/table';
+const manifestHref =
+	process.env.MANIFEST_HREF ?? (isOotWing ? '/manifest.webmanifest' : `${base}/manifest.webmanifest`);
+const appName = process.env.APP_NAME ?? (isOotWing ? 'Outside Of Time' : 'World Table');
+
+const env = { ...process.env, BASE_PATH: base, MANIFEST_HREF: manifestHref, APP_NAME: appName };
 const opts = { stdio: 'inherit', env, shell: process.platform === 'win32' };
 
-console.log(`\n  build:pages — base ${JSON.stringify(base)}\n`);
+console.log(`\n  build:pages: base ${JSON.stringify(base)}, manifest ${JSON.stringify(manifestHref)}, name ${JSON.stringify(appName)}\n`);
 
 const build = spawnSync('npx', ['vite', 'build'], opts);
 if (build.status !== 0) process.exit(build.status ?? 1);

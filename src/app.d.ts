@@ -16,6 +16,14 @@ declare global {
 	 * never "current as of": an offline app cannot know when a food code changed.
 	 */
 	const __BUILD_DATE__: string;
+
+	/**
+	 * Also injected by vite.config.ts. Which manifest this build links, and what
+	 * a home-screen icon made from it is called. Both differ between the
+	 * standalone World Table and the World Table as a wing of Outside Of Time.
+	 */
+	const __MANIFEST_HREF__: string;
+	const __APP_NAME__: string;
 }
 
 export {};
