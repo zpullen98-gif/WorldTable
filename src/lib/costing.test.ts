@@ -135,7 +135,7 @@ describe('scoring against the guide’s band', () => {
 });
 
 describe('menu engineering', () => {
-	const d = (id: string, contribution: number, sold: number) => ({ id, name: id, contribution, sold });
+	const d = (id: string, contribution: number, sold: number) => ({ id, name: id, contribution, sold, costed: true });
 
 	it('sorts four dishes into the guide’s four quadrants', () => {
 		// Mean contribution is 10. Fair share is 100 sold; the floor is 70.
@@ -176,10 +176,14 @@ describe('menu engineering', () => {
 
 	it('leaves out dishes nobody priced or counted — the origin is not a dog', () => {
 		const out = engineerMenu([
-			{ id: 'priced', name: 'priced', contribution: 10, sold: 40 },
-			{ id: 'noprice', name: 'noprice', contribution: null, sold: 40 },
-			{ id: 'nosales', name: 'nosales', contribution: 10, sold: null },
-			{ id: 'zero', name: 'zero', contribution: 10, sold: 0 }
+			{ id: 'priced', name: 'priced', contribution: 10, sold: 40, costed: true },
+			{ id: 'noprice', name: 'noprice', contribution: null, sold: 40, costed: true },
+			{ id: 'nosales', name: 'nosales', contribution: 10, sold: null, costed: true },
+			{ id: 'zero', name: 'zero', contribution: 10, sold: 0, costed: true },
+			// An uncosted dish's contribution is the FULL menu price — it used to
+			// be crowned a star for having no cost sheet. The origin is not a
+			// dog, and a blank sheet is not a margin.
+			{ id: 'uncosted', name: 'uncosted', contribution: 24, sold: 90, costed: false }
 		]);
 		expect(out.map((x) => x.id)).toEqual(['priced']);
 	});
@@ -192,7 +196,7 @@ describe('menu engineering', () => {
 
 	it('returns nothing at all rather than a chart of one imaginary dish', () => {
 		expect(engineerMenu([])).toEqual([]);
-		expect(engineerMenu([{ id: 'a', name: 'a', contribution: null, sold: null }])).toEqual([]);
+		expect(engineerMenu([{ id: 'a', name: 'a', contribution: null, sold: null, costed: true }])).toEqual([]);
 	});
 });
 

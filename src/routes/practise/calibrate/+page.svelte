@@ -45,9 +45,16 @@
 		done = false;
 	}
 
+	/** What assistive tech hears per trial — the visual state swap was silent. */
+	let announce = $state('');
+
 	function answer(cup: number) {
 		if (done || !ladder) return;
 		answers = [...answers, cup];
+		announce =
+			answers.length >= run.length
+				? 'Run finished — the verdict is on screen.'
+				: `Trial ${answers.length} recorded. Trial ${answers.length + 1} of ${run.length}.`;
 		if (answers.length >= run.length) {
 			// ONE entry per RUN, never per trial: a single triangle trial is a
 			// 1-in-3 guess and logging it as "met" would be worth nothing.
@@ -171,9 +178,18 @@
 			</div>
 		{/if}
 	</article>
+	<p class="srlive" aria-live="polite">{announce}</p>
 </div>
 
 <style>
+	.srlive {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		margin: 0;
+	}
 	.head {
 		padding: 26px 0 10px;
 	}

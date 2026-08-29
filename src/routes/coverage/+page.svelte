@@ -24,6 +24,9 @@
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import * as profiles from '$lib/profiles';
+	// Emitted by build-data from the same measurement the technique-standards
+	// gate checks — this copy hardcoded 683/45/638 and the corpus moved twice.
+	import ASSESS from '$lib/data/assessability.json';
 	import { loadAllSessions } from '$lib/persistence/db';
 	import {
 		coverageFor,
@@ -240,9 +243,10 @@
 		<div class="limits">
 			<p>
 				<b>It is coverage, not competence.</b> It counts the techniques a person has cooked a dish for.
-				It cannot see whether the plate was any good on most dishes — 683 of the guide's 970 are now
-				assessable, 45 against a standard of their own and 638 against the techniques they exercise,
-				so “to a standard” is always a floor and never a measure.
+				It cannot see whether the plate was any good on most dishes — {ASSESS.assessable} of the guide’s {ASSESS.corpus} are now assessable, {ASSESS.dishStandards} against a standard of their own and {ASSESS.byTechnique} against the techniques they exercise, so “to a standard” is always a floor and never a measure.assessable} of the
+				guide's {ASSESS.corpus} are now assessable, {ASSESS.dishStandards} against a standard of
+				their own and {ASSESS.byTechnique} against the techniques they exercise, so “to a standard”
+				is always a floor and never a measure.
 			</p>
 			<p>
 				<b>It is not a training record and must not be used as one.</b> Nothing here is dated, exported

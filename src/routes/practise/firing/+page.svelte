@@ -63,6 +63,13 @@
 	let timer: ReturnType<typeof setInterval> | undefined;
 	onMount(() => () => clearInterval(timer));
 
+	/** Focus target after answering — the options disable, and a keyboard user's
+	 *  focus otherwise falls to the body with the drill still running. */
+	let nextBtn = $state<HTMLButtonElement | null>(null);
+	/** What assistive tech hears. The clock is deliberately NOT live — a region
+	 *  announcing every second drowns the question it times. */
+	let announce = $state('');
+
 	function startClock() {
 		clearInterval(timer);
 		secondsLeft = SECONDS_PER_QUESTION;
@@ -84,6 +91,11 @@
 		clearInterval(timer);
 		run.picked = i;
 		const q = run.questions[run.at];
+		const winner = q.options[q.answer];
+		announce =
+			(i === q.answer ? 'Right. ' : i === -1 ? 'Time. ' : 'Wrong. ') +
+			`${winner.dish} starts first, at T minus ${winner.startsAtMin} minutes.`;
+		queueMicrotask(() => nextBtn?.focus());
 		if (i === q.answer) run.correct += 1;
 		else if (q.gapMin <= 5) {
 			// Name the tight calls at the end — a miss by two minutes teaches
@@ -168,9 +180,7 @@
 		{:else if run && q}
 			<div class="clockrow">
 				<span class="qcount">{run.at + 1} of {run.questions.length}</span>
-				<span class="clock mono" class:urgent={secondsLeft <= 5} aria-live="polite"
-					>{secondsLeft}s</span
-				>
+				<span class="clock mono" class:urgent={secondsLeft <= 5}>{secondsLeft}s</span>
 			</div>
 			<h2 class="ask">Which starts first?</h2>
 			<div class="options">
@@ -190,16 +200,22 @@
 						<span class="odish">{o.dish}</span>
 						<span class="otext">{o.text}</span>
 						{#if run.picked !== null}
-							<span class="owhen mono">T−{o.startsAtMin} min</span>
+							<!-- The verdict in words beside the border: "first" on the answer,
+							     the time on all three, so nothing rides on colour alone. -->
+							<span class="owhen mono"
+								>T−{o.startsAtMin} min{#if i === q.answer}
+									· first{/if}</span
+							>
 						{/if}
 					</button>
 				{/each}
 			</div>
 			{#if run.picked !== null}
-				<button class="primary" onclick={next}>
+				<button class="primary" bind:this={nextBtn} onclick={next}>
 					{run.at + 1 >= run.questions.length ? 'The verdict' : 'Next'}
 				</button>
 			{/if}
+			<p class="srlive" aria-live="polite">{announce}</p>
 		{:else}
 			<p class="intro">
 				{QUESTIONS_PER_RUN} questions from tonight's plan, {SECONDS_PER_QUESTION} seconds each. A
@@ -330,5 +346,13 @@
 	}
 	.mono {
 		font-variant-numeric: tabular-nums;
+	}
+	.srlive {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		margin: 0;
 	}
 </style>

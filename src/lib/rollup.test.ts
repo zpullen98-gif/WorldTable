@@ -13,7 +13,8 @@ const d = (id: string, plateCost: number, price: number | null, sold: number | n
 	name: id,
 	plateCost,
 	price,
-	sold
+	sold,
+	costed: true
 });
 
 describe('weighted food cost', () => {

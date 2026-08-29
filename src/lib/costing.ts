@@ -241,8 +241,16 @@ export function plateCost(lines: CostLine[]): { total: number; complete: boolean
 export function parsePrice(raw: string | number | null | undefined): number | null {
 	if (typeof raw === 'number') return Number.isFinite(raw) ? raw : null;
 	if (!raw) return null;
-	const cleaned = String(raw)
-		.replace(/[^\d.,-]/g, '')
+	let cleaned = String(raw).replace(/[^\d.,-]/g, '');
+	// The full European form: dots as thousands, comma as decimals. "1.500,00"
+	// used to survive the comma rule as "1.500.00" and parseFloat took 1.5 —
+	// fifteen hundred became one-and-a-half, silently, on every dish priced
+	// that way. When a comma-decimal tail is present the dots are provably
+	// thousands separators and are stripped FIRST. A bare "1.500" with no
+	// comma stays 1.5: without the comma the string is genuinely ambiguous,
+	// and guessing a thousand-fold correction is worse than taking it as read.
+	if (/,\d{2}$/.test(cleaned)) cleaned = cleaned.replace(/\./g, '');
+	cleaned = cleaned
 		.replace(/,(\d{2})$/, '.$1') // 14,50 -> 14.50
 		.replace(/,/g, '');
 	if (!cleaned || !/\d/.test(cleaned)) return null;
@@ -329,11 +337,27 @@ export interface RollupDish {
 	plateCost: number;
 	price: number | null;
 	sold: number | null;
+	/**
+	 * Whether the plate cost is a real, complete number. REQUIRED, because the
+	 * hole it closes was silent: a dish with no lines at all reads
+	 * `plateCost: 0, complete: true` out of plateCost([]) — an empty sum is a
+	 * finished sum — and entered the weighted figure as a free plate, dragging
+	 * the venue's food cost DOWN for every popular dish nobody had costed yet.
+	 * The caller computes it as `lines.length > 0 && complete`.
+	 */
+	costed: boolean;
 }
 
 export interface MenuRollup {
 	/** Null when nothing carries both a price and a count. */
 	weightedFoodCostPct: number | null;
+	/**
+	 * Dishes that sold this period but could not enter the figure because
+	 * their costing is missing or incomplete. PRINT THIS: a weighted food cost
+	 * that silently skipped the plowhorse is the same lie plateCost.complete
+	 * exists to refuse, at menu scale.
+	 */
+	uncosted: number;
 	/** What the menu contributed over the period, in money. */
 	totalContribution: number;
 	covers: number;
@@ -352,7 +376,7 @@ export interface MenuRollup {
 }
 
 export function rollUpMenu(dishes: RollupDish[], paretoTarget = 0.7): MenuRollup {
-	const usable = dishes.filter(
+	const selling = dishes.filter(
 		(d) =>
 			d.price !== null &&
 			Number.isFinite(d.price) &&
@@ -364,6 +388,8 @@ export function rollUpMenu(dishes: RollupDish[], paretoTarget = 0.7): MenuRollup
 			// cannot drag a weighted figure it had no part in.
 			(d.sold as number) > 0
 	) as Array<RollupDish & { price: number; sold: number }>;
+	const usable = selling.filter((d) => d.costed);
+	const uncosted = selling.length - usable.length;
 
 	const covers = usable.reduce((n, d) => n + d.sold, 0);
 	const cost = usable.reduce((n, d) => n + d.plateCost * d.sold, 0);
@@ -387,6 +413,7 @@ export function rollUpMenu(dishes: RollupDish[], paretoTarget = 0.7): MenuRollup
 
 	return {
 		weightedFoodCostPct: revenue > 0 ? (cost / revenue) * 100 : null,
+		uncosted,
 		totalContribution: revenue - cost,
 		covers,
 		usable: usable.length,
@@ -420,10 +447,23 @@ export interface EngineeredDish {
  * origin because nobody typed a number is not a dog.
  */
 export function engineerMenu(
-	dishes: Array<{ id: string; name: string; contribution: number | null; sold: number | null }>
+	dishes: Array<{
+		id: string;
+		name: string;
+		contribution: number | null;
+		sold: number | null;
+		/**
+		 * Same closure as RollupDish.costed, worse consequence here: an uncosted
+		 * dish's contribution is price minus NOTHING — the full menu price — so
+		 * the quadrant chart crowned dishes nobody had costed as the menu's top
+		 * stars AND inflated the mean every real dish was judged against.
+		 */
+		costed: boolean;
+	}>
 ): EngineeredDish[] {
 	const usable = dishes.filter(
-		(d): d is { id: string; name: string; contribution: number; sold: number } =>
+		(d): d is { id: string; name: string; contribution: number; sold: number; costed: true } =>
+			d.costed &&
 			d.contribution !== null &&
 			Number.isFinite(d.contribution) &&
 			d.sold !== null &&

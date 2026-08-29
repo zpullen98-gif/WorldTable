@@ -63,6 +63,11 @@
       "key": "vendor-creep",
       "covers": "vendor creep",
       "why": "A price that moved, not a thing in the bin. The item book already carries it, and logging it here would double-count."
+    },
+    {
+      "key": "pricing",
+      "covers": "pricing",
+      "why": "Prime Cost names it in the COGS decomposition and it is a menu problem, not a bin: a wrong price wastes margin, never food. The costing sheet and menu engineering are its instruments."
     }
   ],
   "villain": "overprep",

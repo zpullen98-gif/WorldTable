@@ -162,7 +162,11 @@ export function redact(definition, term) {
 	out += original.slice(cursor);
 
 	const clipped =
-		out.length > PROMPT_MAX ? out.slice(0, PROMPT_MAX).replace(/s+S*$/, '') + '…' : out;
+		// \s and \S, with their backslashes. This shipped as /s+S*$/ — literal
+		// letters — so the trim-back-to-a-word-boundary guard never fired once,
+		// and every clipped prompt could end mid-word. A gate that could not
+		// fail, in miniature.
+		out.length > PROMPT_MAX ? out.slice(0, PROMPT_MAX).replace(/\s+\S*$/, '') + '…' : out;
 	return {
 		prompt: clipped,
 		hiddenShare: original.length ? hidden / original.length : 0,

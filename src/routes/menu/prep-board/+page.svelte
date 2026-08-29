@@ -31,6 +31,15 @@
 	let now = $state(0);
 	onMount(() => {
 		now = Date.now();
+		// Resynced when the tab comes back — a pass tablet is open for days by
+		// design (registerType: 'prompt'), and a board that froze "today" at
+		// mount treats yesterday's walk-in count as this morning's after
+		// midnight. Same pattern the costing sheet and the waste log use.
+		const resync = () => {
+			if (!document.hidden) now = Date.now();
+		};
+		document.addEventListener('visibilitychange', resync);
+		return () => document.removeEventListener('visibilitychange', resync);
 	});
 
 	const today = $derived(localDay(new Date(now || Date.now())));
@@ -50,7 +59,24 @@
 			const count = house.countFor(p.id);
 			const stale = !count || count.countedOn !== today;
 			const onHand = count?.onHand ?? 0;
-			return { prep: p, onHand, stale, countedOn: count?.countedOn, batches: batchesNeeded(p, onHand) };
+			/**
+			 * BATCHES ARE COMPUTED ON ZERO WHEN THE COUNT IS STALE. The warning
+			 * copy has said "an uncounted prep is treated as none on hand" since
+			 * this board shipped, and the code believed yesterday's number anyway —
+			 * which is exactly the failure countFor's own record documents: a
+			 * count is only true for the day it was made, and a board that treats
+			 * Tuesday's twelve portions as current sends a commis to make nothing.
+			 * The input still shows the old figure (the easiest starting point for
+			 * a recount), the meta names the day it came from, and the batch math
+			 * trusts only today.
+			 */
+			return {
+				prep: p,
+				onHand,
+				stale,
+				countedOn: count?.countedOn,
+				batches: batchesNeeded(p, stale ? 0 : onHand)
+			};
 		})
 	);
 
@@ -153,13 +179,26 @@
 								min="0"
 								value={r.onHand}
 								aria-label="Portions of {r.prep.name} on hand"
-								onchange={(e) => house.setCount(r.prep.id, Number(e.currentTarget.value))}
+								onchange={(e) => {
+								// An emptied field is not a count of zero: Number('') === 0,
+								// so one blur on a cleared box used to file "counted today,
+								// none on hand" — a real count nobody made. Empty removes
+								// the count instead, which the board honestly shows as
+								// "never counted".
+								const v = e.currentTarget.value.trim();
+								if (v === '') house.clearCount(r.prep.id);
+								else house.setCount(r.prep.id, Number(v));
+							}}
 							/>
 						</label>
 						<span class="meta">
 							par {r.prep.par}
 							{#if r.stale}
-								· <b class="warnish">{r.countedOn ? `counted ${r.countedOn}` : 'never counted'}</b>
+								· <b class="warnish"
+									>{r.countedOn
+										? `counted ${r.countedOn} — treated as none until counted today`
+										: 'never counted'}</b
+								>
 							{/if}
 							{#if r.batches > 0}
 								· <b>make {r.batches} {r.batches === 1 ? 'batch' : 'batches'}</b>

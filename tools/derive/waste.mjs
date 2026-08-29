@@ -117,6 +117,11 @@ export const EXCLUDED = [
 		key: 'vendor-creep',
 		covers: 'vendor creep',
 		why: 'A price that moved, not a thing in the bin. The item book already carries it, and logging it here would double-count.'
+	},
+	{
+		key: 'pricing',
+		covers: 'pricing',
+		why: 'Prime Cost names it in the COGS decomposition and it is a menu problem, not a bin: a wrong price wastes margin, never food. The costing sheet and menu engineering are its instruments.'
 	}
 ];
 
@@ -237,10 +242,43 @@ export function buildWaste(lexicon) {
 		}
 	}
 
-	// Prime Cost names the same decomposition; if it stops, EXCLUDED's
-	// vendor-creep entry is arguing with a sentence that is not there.
-	if (!entries.prime.definition.includes('vendor creep')) {
-		problems.push('waste: Prime Cost no longer names vendor creep, which EXCLUDED cites');
+	/**
+	 * The reverse gate's SECOND walk: Prime Cost's own decomposition of the
+	 * COGS side. The first version walked only the COGS entry's leak meter, so
+	 * "pricing" — which Prime Cost names and the leak meter does not — was
+	 * neither carried nor refused, and the gate's claim of closure was one
+	 * list short.
+	 */
+	const PRIME_PREFIX = 'COGS side \u2014';
+	const pAt = entries.prime.definition.indexOf(PRIME_PREFIX);
+	if (pAt < 0) {
+		problems.push(
+			`waste: Prime Cost no longer contains ${JSON.stringify(PRIME_PREFIX)}, so its decomposition cannot be walked`
+		);
+	} else {
+		const pTail = entries.prime.definition.slice(pAt + PRIME_PREFIX.length);
+		const pNamed = pTail
+			.split(';')[0]
+			.split(/,/)
+			.map((t) => t.replace(/\([^)]*\)/g, '').trim().toLowerCase())
+			.filter(Boolean);
+		const pCovered = new Set([
+			...REASONS.map((r) => r.covers.toLowerCase()),
+			...EXCLUDED.map((e) => e.covers.toLowerCase()),
+			// Prime's single words for what the leak meter phrases: its "waste" is
+			// the meter's "waste", its "portioning" the meter's "portioning
+			// drift", its "theft" the meter's "theft".
+			'waste',
+			'portioning',
+			'theft'
+		]);
+		for (const leak of pNamed) {
+			if (!pCovered.has(leak)) {
+				problems.push(
+					`waste: Prime Cost decomposes the COGS side into "${leak}" and nothing carries or refuses it`
+				);
+			}
+		}
 	}
 
 	return {

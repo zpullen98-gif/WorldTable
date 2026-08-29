@@ -62,9 +62,9 @@ export { MIN_MARKS, MAX_MARKS };
 
 /**
  * The threshold that makes the reverse gate fire. Every technique at or above
- * this many recipes must appear below. Currently 15, which is exactly the 46
+ * this many recipes must appear below. Currently 12, which is exactly the 50
  * techniques written here — so the gate is tight, not slack, and the next
- * technique to cross 15 fails the build until somebody writes it.
+ * technique to cross 12 fails the build until somebody writes it.
  *
  * It has been 25, then 15, now 12 — each drop made the gate name what it
  * wanted, the standards were written, and the gate went quiet. That is the

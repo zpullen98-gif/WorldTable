@@ -92,6 +92,13 @@ class House {
 		// The guard that makes the refusal real. Without it every mutator below
 		// would cheerfully write EMPTY_HOUSE over a record it could not read.
 		if (!browser || !store || this.#blocked) return;
+		// And the hydration guard: a mutation that lands before hydrate() has
+		// read the disk would otherwise persist EMPTY_HOUSE-plus-one-tap OVER
+		// the venue's real record — the same wipe readHouse() exists to prevent,
+		// arriving through timing instead of versioning. Skipping the write
+		// loses at most that one pre-hydration tap; hydrate() then installs the
+		// disk record. One tap lost beats a venue lost.
+		if (!this.#ready) return;
 		this.#r.lastWrite = Date.now();
 		const by = profiles.currentName();
 		if (by) this.#r.lastEditedBy = by;
@@ -199,7 +206,17 @@ class House {
 					...(patch.lines ? { lines: patch.lines } : {}),
 					sales,
 					...(sales.length ? { sold: sales[0].count } : cur.sold !== undefined ? { sold: cur.sold } : {}),
-					ts: Date.now()
+					/**
+					 * Restamped ONLY by a lines write. `ts` is the merge tiebreak for
+					 * LINES (mergeCostings takes them whole from the newer record), and
+					 * covers already resolve per-week on SalesWeek.at — so a covers-only
+					 * write restamping ts let a pass tablet holding last week's lines
+					 * beat the office laptop's fresh re-costing in BOTH merge
+					 * directions, just because somebody typed a covers number at 22:00.
+					 * The hazard was closed one way (lines edits cannot beat covers,
+					 * which is why SalesWeek.at exists) and open the other.
+					 */
+					ts: patch.lines ? Date.now() : cur.ts
 				}
 			}
 		};
@@ -438,6 +455,15 @@ class House {
 
 	countFor(id: string): { onHand: number; countedOn: string } | undefined {
 		return this.#r.prepCounts[id];
+	}
+
+	/** Remove a count outright — an emptied field, not a count of zero. */
+	clearCount(id: string) {
+		if (!(id in this.#r.prepCounts)) return;
+		const prepCounts = { ...this.#r.prepCounts };
+		delete prepCounts[id];
+		this.#r = { ...this.#r, prepCounts };
+		this.#persist();
 	}
 
 	setCount(id: string, onHand: number) {

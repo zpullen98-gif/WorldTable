@@ -593,7 +593,8 @@
 			<h2 class="sec">The Pass</h2>
 			<p class="hint">
 				Planned backwards so everything lands together. {plan.lengthMin} min from first move to
-				service, {plan.handsOnMin} min of it on your hands.
+				service; {plan.handsOnMin} min of hands across the menu — dishes overlap, so the hands can
+				legitimately sum past the span.
 			</p>
 			<!-- Said once, plainly, rather than as a badge on almost every row. The
 			     guide states a duration for about a third of its steps and most of
@@ -880,7 +881,20 @@
 									{house.is86(d.id) ? 'Back on' : '86 it'}
 								</button>
 								<button class="chip" onclick={() => editDish(d)}>Edit</button>
-								<button class="chip" onclick={() => house.removeDish(d.id)}>Remove</button>
+								<button
+									class="chip"
+									onclick={() => {
+										// One tap destroyed the dish, its costing lines AND its whole
+										// covers history, unconfirmed — while removing a PREP already
+										// asked. Same precedent, same wording weight.
+										if (
+											confirm(
+												`Remove “${d.name}”? Its costing lines and covers history go with it.`
+											)
+										)
+											house.removeDish(d.id);
+									}}>Remove</button
+								>
 							</div>
 						</li>
 					{/each}

@@ -168,7 +168,14 @@
 	function addLine(id: string) {
 		writeLines(id, [
 			...linesFor(id),
-			{ id: mintLineId(), item: '', unitCost: 0, unit: 'kg', usedQty: 0, yieldPct: 100 }
+			/**
+			 * unitCost is minted NaN, not 0. Zero read as "a completed free
+			 * ingredient": lineCost(0 × qty) = 0, complete stayed true, and a
+			 * sheet full of untyped lines showed a confident cheap plate. NaN is
+			 * what the sheet already refuses loudly — the number input renders it
+			 * as an empty box, which is exactly what an untyped price is.
+			 */
+			{ id: mintLineId(), item: '', unitCost: Number.NaN, unit: 'kg', usedQty: 0, yieldPct: 100 }
 		]);
 	}
 
@@ -434,16 +441,20 @@
 
 	const engineered = $derived(
 		engineerMenu(
-			dishes.map((d) => ({
-				id: d.id,
-				name: d.name,
-				contribution: economicsOf(d.id, d.price).contribution,
-				// This week if it has been counted, else the newest figure the record
-				// carries — which for a venue that predates weekly covers is its
-				// original undated number, mirrored by normaliseCosting. So the
-				// board does not go blank on update day for anybody.
-				sold: coversThisWeek(d.id) ?? house.costingFor(d.id).sold ?? null
-			}))
+			dishes.map((d) => {
+				const e = economicsOf(d.id, d.price);
+				return {
+					id: d.id,
+					name: d.name,
+					contribution: e.contribution,
+					// This week if it has been counted, else the newest figure the record
+					// carries — which for a venue that predates weekly covers is its
+					// original undated number, mirrored by normaliseCosting. So the
+					// board does not go blank on update day for anybody.
+					sold: coversThisWeek(d.id) ?? house.costingFor(d.id).sold ?? null,
+					costed: linesFor(d.id).length > 0 && e.complete
+				};
+			})
 		)
 	);
 
@@ -466,11 +477,29 @@
 					name: d.name,
 					plateCost: e.plateCost,
 					price: e.price,
-					sold: coversThisWeek(d.id) ?? house.costingFor(d.id).sold ?? null
+					sold: coversThisWeek(d.id) ?? house.costingFor(d.id).sold ?? null,
+					costed: linesFor(d.id).length > 0 && e.complete
 				};
 			})
 		)
 	);
+
+	/**
+	 * How many of the rollup's counts actually came from THIS week, and how
+	 * many are the fallback (an earlier week, or the pre-weekly undated
+	 * mirror). The fallback is deliberate — no board goes blank on update day —
+	 * but the label used to say "for the week of X" over all of it, which made
+	 * the fallback a lie instead of a kindness. Now the sentence says both.
+	 */
+	const coversBasis = $derived.by(() => {
+		let thisWeek = 0;
+		let carried = 0;
+		for (const d of dishes) {
+			if (coversThisWeek(d.id) !== undefined && coversThisWeek(d.id) !== null) thisWeek++;
+			else if ((house.costingFor(d.id).sold ?? null) !== null) carried++;
+		}
+		return { thisWeek, carried };
+	});
 
 	/** Dishes with at least one costed line — the only ones with a real number. */
 	const costed = $derived(dishes.filter((d) => linesFor(d.id).length > 0));
@@ -785,10 +814,18 @@
 										<p class="weeks">
 											{#each priorWeeks(d.id) as w, i (w.weekStart)}
 												{#if i > 0}<span class="weeksep" aria-hidden="true">·</span>{/if}
+												<!-- The meaning lived only in title attributes, which touch
+												     devices never show and screen readers rarely read. The
+												     visible form stays compact; the full sentence rides in
+												     visually-hidden text. -->
 												<span title={"Week of " + w.weekStart}>
+													<span class="sr">week of {w.weekStart}:</span>
 													{w.count}{#if w.prev !== undefined}<b
 															class="replaced"
-															title={"An import replaced " + w.prev}>*</b
+															title={"An import replaced " + w.prev}
+															><span aria-hidden="true">*</span><span class="sr"
+																>— an import replaced {w.prev}</span
+															></b
 														>{/if}
 												</span>
 											{/each}
@@ -869,9 +906,17 @@
 				<p class="secnote">
 					Weighted by what actually sold, not the average of the dish percentages — which flatters
 					whenever the expensive dish is the popular one. Computed over the {rollup.usable} of
-					{rollup.of} dishes carrying both a price and a covers count, for the week of {weekLabel(
-						thisWeek
-					)}.
+					{rollup.of} dishes carrying a price, a covers count and a complete costing —
+					{coversBasis.thisWeek} counted in the week of {weekLabel(thisWeek)}{coversBasis.carried
+						? `, ${coversBasis.carried} carried forward from their newest earlier count`
+						: ''}.
+					{#if rollup.uncosted}
+						<b
+							>{rollup.uncosted}
+							{rollup.uncosted === 1 ? 'dish that sold is' : 'dishes that sold are'} not in this
+							figure — no complete costing.</b
+						>
+					{/if}
 					{#if rollup.pareto}
 						{rollup.pareto.dishes} of your {rollup.pareto.of} dishes are {rollup.pareto.pct.toFixed(
 							0

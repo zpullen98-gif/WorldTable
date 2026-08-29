@@ -278,6 +278,15 @@ export function adoptImport(
 	// nothing to drop. See mergeWaste.
 	const nextWaste = mergeWaste(house.waste, incoming.waste);
 
+	/**
+	 * Tax adopts only into a venue that has never set it. A tax regime has no
+	 * timestamp to arbitrate with, and an import silently FLIPPING the basis
+	 * of every percentage on the costing sheet is worse than the drift it
+	 * would fix — a venue that has set it once can see its own setting; a
+	 * fresh tablet cannot see what it never had.
+	 */
+	const nextTax = house.tax ?? incoming.tax;
+
 	return {
 		...house,
 		dishes: nextDishes,
@@ -285,6 +294,7 @@ export function adoptImport(
 		preps: [...prepById.values()],
 		items: nextItems,
 		waste: nextWaste,
+		...(nextTax ? { tax: nextTax } : {}),
 		absorbed: [...new Set([...house.absorbed, ...nextDishes.map((d) => d.id)])]
 	};
 }
@@ -378,6 +388,12 @@ export interface HousePortable {
 	/** The waste log. Absent from every file written before it existed. */
 	waste?: WasteEntry[];
 	/**
+	 * The tax regime. Without it a second tablet showed different food-cost
+	 * verdicts for the same dish — the one inconsistency the setting was moved
+	 * to the house record to prevent, resurrected at the transport boundary.
+	 */
+	tax?: { inclusive: boolean; ratePct: number };
+	/**
 	 * The item book. Absent from every file written before it existed, which is
 	 * why it is optional HERE and required at every function that emits one.
 	 */
@@ -385,5 +401,5 @@ export interface HousePortable {
 }
 
 export function housePortable(house: HouseRecord): HousePortable {
-	return { preps: house.preps, items: house.items, waste: house.waste };
+	return { preps: house.preps, items: house.items, waste: house.waste, ...(house.tax ? { tax: house.tax } : {}) };
 }

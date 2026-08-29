@@ -71,8 +71,11 @@ export function costingCsv(
 				cell(e.price),
 				cell(e.plateCost),
 				// Words, not booleans: "no" in a spreadsheet reads; "FALSE" gets
-				// re-typed as a formula error by every tool that opens it.
-				cell(e.complete ? 'yes' : 'no — lines missing'),
+				// re-typed as a formula error by every tool that opens it. And a
+				// dish with NO lines is named separately from one with broken
+				// lines — plateCost([]) reports complete, which is true of the
+				// sum and false of the dish.
+				cell(lines.length === 0 ? 'no — never costed' : e.complete ? 'yes' : 'no — lines missing'),
 				cell(e.foodCostPct),
 				cell(e.contribution),
 				cell(d.sold),

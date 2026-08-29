@@ -196,7 +196,9 @@ export const GAPS = [
 		key: 'thawing',
 		named: 'raw below ready-to-eat in storage',
 		namedAnchor: 'safety',
-		absent: ['defrost'],
+		// 'thaw' joined the absent list — the except below names it, and an
+		// except whose token is never scanned is dead code wearing a promise.
+		absent: ['defrost', 'thaw'],
 		// One entry says "thaw" of frozen prawns. It is a shopping note, not a
 		// method, and the allowance is gated so it cannot quietly become one.
 		except: { token: 'thaw', slug: 'shrimp-sizing-and-prawn-confusion' },

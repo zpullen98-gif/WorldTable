@@ -206,7 +206,10 @@ export function previousPrice(item: Item | undefined): ItemPrice | null {
 	const h = sortHistory(item.history.filter(validPrice));
 	const now = h[0];
 	if (!now) return null;
-	return h.slice(1).find((p) => p.unitCost !== now.unitCost) ?? null;
+	// SAME UNIT only. 7.90/kg against 8.00/case is not a 1.3% rise — a unit
+	// change re-bases the whole series, and the honest previous price is the
+	// last different figure quoted in the unit the venue buys in NOW.
+	return h.slice(1).find((p) => p.unit === now.unit && p.unitCost !== now.unitCost) ?? null;
 }
 
 /** The move from the previous price to the current one, as a percentage. */
@@ -258,7 +261,12 @@ export function recordPrice(
 		// Nothing moved. Keep the name fresh — the venue may have fixed its
 		// capitalisation — and leave the history exactly as it was.
 		if (existing && existing.name === name) return items;
-		return { ...items, [slug]: { slug, name, history } };
+		// `...existing` carries the yields. Both of this function's return paths
+		// rebuilt the item as {slug, name, history} in draft, so committing ANY
+		// price wiped every yield test the venue had run — recordYield preserved
+		// prices, and the mirror was never checked. The reprice is the single
+		// most common book operation; the yield tests are the rarest data in it.
+		return { ...items, [slug]: { ...existing, slug, name, history } };
 	}
 
 	const entry: ItemPrice = { unitCost, unit, at };
@@ -267,7 +275,10 @@ export function recordPrice(
 			? [entry, ...history.slice(1)]
 			: [entry, ...history];
 
-	return { ...items, [slug]: { slug, name, history: sortHistory(next).slice(0, HISTORY_CAP) } };
+	return {
+		...items,
+		[slug]: { ...(existing ?? {}), slug, name, history: sortHistory(next).slice(0, HISTORY_CAP) }
+	};
 }
 
 /**

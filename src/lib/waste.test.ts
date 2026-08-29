@@ -184,8 +184,10 @@ describe('the vocabulary is the guide\'s', () => {
 		]);
 	});
 
-	it('refuses theft and vendor creep, with a reason on each', () => {
-		expect(waste.excluded.map((x) => x.key)).toEqual(['theft', 'vendor-creep']);
+	it('refuses theft, vendor creep and pricing, with a reason on each', () => {
+		// pricing joined when the reverse gate grew its second walk over Prime
+		// Cost's decomposition — a menu problem, not a bin, and now said so.
+		expect(waste.excluded.map((x) => x.key)).toEqual(['theft', 'vendor-creep', 'pricing']);
 		for (const x of waste.excluded) expect(x.why.length).toBeGreaterThan(40);
 	});
 

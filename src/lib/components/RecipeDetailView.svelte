@@ -163,14 +163,25 @@
 	<div class="tools" data-print="hide">
 		<div class="group" role="group" aria-label="Scale the recipe">
 			{#each SCALES as s (s.x)}
-				<button class:on={scale === s.x} onclick={() => (scale = s.x)}>{s.label}</button>
+				<!-- aria-pressed, because the .on class was the ONLY carrier of the
+				     selected state — a screen reader heard four identical buttons
+				     with no way to tell which scale the recipe was showing at. -->
+				<button class:on={scale === s.x} aria-pressed={scale === s.x} onclick={() => (scale = s.x)}
+					>{s.label}</button
+				>
 			{/each}
 		</div>
 		<div class="group" role="group" aria-label="Units">
-			<button class:on={prefs.units === 'metric'} onclick={() => prefs.setUnits('metric')}
-				>Metric</button
+			<button
+				class:on={prefs.units === 'metric'}
+				aria-pressed={prefs.units === 'metric'}
+				onclick={() => prefs.setUnits('metric')}>Metric</button
 			>
-			<button class:on={prefs.units === 'us'} onclick={() => prefs.setUnits('us')}>US</button>
+			<button
+				class:on={prefs.units === 'us'}
+				aria-pressed={prefs.units === 'us'}
+				onclick={() => prefs.setUnits('us')}>US</button
+			>
 		</div>
 		<button class="chip" onclick={() => (cooking = true)}>Cook mode ▸</button>
 		<button
@@ -199,6 +210,7 @@
 									class="subbtn"
 									data-print="hide"
 									aria-expanded={openSub === i}
+									aria-label="Show the substitution for this ingredient"
 									onclick={() => (openSub = openSub === i ? null : i)}
 									title="Substitution">⇄</button
 								>

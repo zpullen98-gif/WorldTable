@@ -543,6 +543,32 @@ export function mergeSessions(
 			}
 			return out;
 		})(),
+		/**
+		 * stepActuals and planRun, named at last. This function's own rule —
+		 * "every field is named explicitly, nothing is left to the spread" —
+		 * shipped with two fields still falling through `...incoming`: every
+		 * genuine .wtjson carries stepActuals (EMPTY_SESSION always has the key,
+		 * and buildExport writes the full state), so importing a colleague's
+		 * file replaced the cook's observed step timings wholesale — the numbers
+		 * every back-timed plan is built from — and the banner counted nothing.
+		 * Same failure that erased a Path of Study, two fields along.
+		 *
+		 * stepActuals unions per key and keeps recordStepActual's last-12 window;
+		 * newest observations win the slice, matching the store. planRun stays
+		 * LOCAL: a run is one device's live service clock, like the 86 board —
+		 * importing a file exported mid-service must not install someone else's
+		 * "40 minutes behind" over tonight's.
+		 */
+		stepActuals: (() => {
+			const out: SessionState['stepActuals'] = { ...current.stepActuals };
+			for (const [k, arr] of Object.entries(incoming.stepActuals ?? {})) {
+				if (!Array.isArray(arr)) continue;
+				const nums = arr.filter((n) => typeof n === 'number' && Number.isFinite(n) && n > 0);
+				out[k] = [...(out[k] ?? []), ...nums].slice(-12);
+			}
+			return out;
+		})(),
+		planRun: current.planRun,
 		// Named explicitly, per the rule above. A genuine export writes the FULL
 		// state, so an incoming session always carries role present-and-empty —
 		// exactly how cookedLog and shoppingChecks were once wiped. Yours wins

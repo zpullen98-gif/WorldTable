@@ -113,7 +113,11 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-allergens",
 		title: "What We Screened and What We Did Not",
-		outcome: "You never answer an allergen question from the app. You can say which seven allergens this guide derives (gluten, dairy, egg, nuts, fish, shellfish, alcohol), name the eight of the UK/EU 14 it does not (sesame, soy, celery, mustard, sulphites, lupin, molluscs, peanuts), and you know that a recipe showing nothing means \"we did not look\", not \"clear\" — because 101 of 970 recipes are exactly that.",
+		// Worded to survive the vocabulary: an earlier version enumerated "seven
+		// derived, eight not, 101 of 970 empty" and all three went stale when the
+		// screen widened to thirteen. The one stable fact is the refusal and its
+		// reason.
+		outcome: "You never answer an allergen question from the app. You can say what the recipe screen is — a text screen over the ingredient lines, which by design cannot see a shared fryer, a dusted board, or a supplier’s label — and you know that a dish showing nothing means the screen found nothing, never that the dish is clear. The screen itself names what it checked and what it did not, on every recipe.",
 		termSlugs: [
 			"food-safety-the-chef-owners-non-negotiables"
 		]
@@ -480,7 +484,7 @@ export const SERVER_MODULES = [
  * Refuse a per-dish allergen verdict, structurally.
  *
  * The same shape as sanitation.mjs's assertNoRecipes, and for a sharper reason:
- * the recipe screen checks seven allergens and declares eight unscreened, and a
+ * the recipe screen names what it checked and what it did not, and a
  * server track that said "contains" or "clear" about a dish would be read at a
  * table, out loud, to a guest. The guide has no allergen curriculum — measured
  * across all 479 definitions, exactly two mention allergens and only one states

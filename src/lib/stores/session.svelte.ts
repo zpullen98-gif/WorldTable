@@ -61,8 +61,19 @@ class SessionStore {
 		return this.#ready;
 	}
 
+	/**
+	 * Plain field, NOT $state, and that is the fix: hydrate()'s guard used to
+	 * read #ready — a $state — so the layout $effect that calls hydrate()
+	 * subscribed to it, and every profile switch (rehydrate flips #ready
+	 * false→true) re-ran the effect mid-switch, racing a second loadSession
+	 * against rehydrate's own. Started-ness is not reactive state; nothing
+	 * renders from it.
+	 */
+	#started = false;
+
 	async hydrate() {
-		if (!browser || this.#ready) return;
+		if (!browser || this.#started) return;
+		this.#started = true;
 		this.#s = await loadSession();
 		this.#key = currentKey();
 		this.#ready = true;
@@ -467,7 +478,11 @@ class SessionStore {
 	 */
 
 	costingFor(id: string): DishCosting {
-		return this.#s.dishCosts[id] ?? { lines: [], ts: 0 };
+		// `sales` present, because DishCosting made it REQUIRED for the stated
+		// reason: an optional field satisfies the literal structurally and the
+		// compiler names no call site. This fallback predated that change and
+		// was the one literal the requirement never reached.
+		return this.#s.dishCosts[id] ?? { lines: [], sales: [], ts: 0 };
 	}
 
 	setCosting(id: string, costing: Omit<DishCosting, 'ts'>) {

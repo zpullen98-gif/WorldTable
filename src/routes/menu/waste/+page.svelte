@@ -44,9 +44,18 @@
 
 	const WEEKS = 8;
 	const weeks = $derived(recentWeeks(WEEKS, new Date(clock)));
-	let week = $state(weekStartOf(new Date()));
-	/** A week that scrolled off the window would render an empty page forever. */
-	const activeWeek = $derived(weeks.includes(week) ? week : weeks[0]);
+	/**
+	 * Null until the cook PICKS a week, and the default follows the clock. The
+	 * first version seeded state from weekStartOf(new Date()) at load — so a
+	 * tablet open across Sunday midnight stayed pinned to the old week, and a
+	 * bin logged after the boundary landed in the new week and vanished from
+	 * the page that had just confirmed it. An explicit pick is a choice and
+	 * sticks; a default is not and must not.
+	 */
+	let pickedWeek = $state<string | null>(null);
+	const activeWeek = $derived(
+		pickedWeek && weeks.includes(pickedWeek) ? pickedWeek : weekStartOf(new Date(clock))
+	);
 
 	const weekBounds = (w: string) => {
 		const [y, m, d] = w.split('-').map(Number);
@@ -148,9 +157,18 @@
 		!!labelFor().trim() && Number.isFinite(form.qty) && form.qty > 0 && !!reason
 	);
 
+	/** Read back after each log — the only confirmation used to be a new row
+	 *  appearing further down the page, which assistive tech never hears and a
+	 *  cook mid-rush never scrolls to check. */
+	let logged = $state('');
+
 	function submit() {
 		if (!canLog) return;
-		house.logWaste({ label: labelFor(), qty: form.qty, reason, source: sourceOf() });
+		const label = labelFor();
+		const entry = house.logWaste({ label, qty: form.qty, reason, source: sourceOf() });
+		logged = entry
+			? `Logged — ${label}, ${entry.qty} × ${REASONS.find((r) => r.key === entry.reason)?.label ?? entry.reason}.`
+			: '';
 		reset();
 		clock = Date.now();
 	}
@@ -200,7 +218,10 @@
 		<div class="weekbar" data-print="hide">
 			<label>
 				<span class="sr">Week</span>
-				<select bind:value={week}>
+				<select
+					value={activeWeek}
+					onchange={(ev) => (pickedWeek = (ev.currentTarget as HTMLSelectElement).value)}
+				>
 					{#each weeks as w (w)}
 						<option value={w}>Week of {weekLabel(w)}</option>
 					{/each}
@@ -327,10 +348,15 @@
 			</div>
 		</form>
 
-		<p class="hint">{REASONS.find((r) => r.key === reason)?.hint ?? ''}</p>
+		<p class="hint" aria-live="polite">{REASONS.find((r) => r.key === reason)?.hint ?? ''}</p>
+		{#if logged}
+			<p class="logged" aria-live="polite">{logged}</p>
+		{/if}
 
 		{#if inWeek.length}
-			<h2 class="sec">This week, entry by entry</h2>
+			<!-- Named by the week on show, because "this week" was a lie the moment
+			     an earlier week was selected. -->
+			<h2 class="sec">Week of {weekLabel(activeWeek)}, entry by entry</h2>
 			<ul class="entries">
 				{#each inWeek as w (w.id)}
 					<li>
@@ -351,8 +377,8 @@
 			</ul>
 		{:else}
 			<p class="empty">
-				Nothing logged this week. That is either a very good week or a log nobody opened — and the
-				guide is clear which is more common.
+				Nothing logged in the week of {weekLabel(activeWeek)}. That is either a very good week or a
+				log nobody opened — and the guide is clear which is more common.
 			</p>
 		{/if}
 
@@ -511,6 +537,12 @@
 		margin: 6px 0 0;
 		font-size: var(--t-small);
 		color: var(--ink-soft);
+		max-width: var(--measure);
+	}
+	.logged {
+		margin: 6px 0 0;
+		font-size: var(--t-small);
+		color: var(--turmeric-deep);
 		max-width: var(--measure);
 	}
 	.entries li {

@@ -1178,6 +1178,21 @@ problems.push(...palateProblems);
 			}
 		}
 
+		/**
+		 * The same measured numbers, EMITTED, so no page ever hardcodes them
+		 * again. The coverage board shipped "683 ... 45 ... 638" in its limits
+		 * copy and the corpus moved twice underneath it — a page number that is
+		 * not computed or emitted-and-gated is a page number already drifting.
+		 */
+		writeFileSync(
+			new URL('../src/lib/data/assessability.json', import.meta.url),
+			JSON.stringify(
+				{ corpus: actual.nCorpus, dishStandards: actual.nDish, byTechnique: actual.nGained, assessable: actual.nAssessable },
+				null,
+				'\t'
+			) + '\n'
+		);
+
 		const drift = Object.keys(actual).filter((k) => actual[k] !== stated[k]);
 		if (drift.length) {
 			problems.push(
@@ -1284,6 +1299,14 @@ problems.push(...palateProblems);
 }
 
 
+/*
+ * Pushed ABOVE the mark-id ledger block, deliberately. These six lived after
+ * it, so a build failing on any of them had already appended newly minted ids
+ * to the committed ledger — and an abandoned edit then left phantom ids whose
+ * honest retraction would itself fail the build. The ledger's guard is
+ * `!problems.length`; it only means "every gate passed" if every gate has
+ * already spoken.
+ */
 problems.push(...economicsProblems);
 problems.push(...wasteProblems);
 problems.push(...sanitationProblems);
