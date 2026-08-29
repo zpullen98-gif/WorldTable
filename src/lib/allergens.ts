@@ -26,31 +26,33 @@
  * day the vocabulary is genuinely closed, the copy is forced to change.
  */
 
-/** The seven the recipe page derives and displays. */
+/** The fourteen the recipe page derives and displays, less the one it cannot. */
 export const CHECKED = [
 	'gluten',
 	'dairy',
 	'egg',
 	'nuts',
+	'peanuts',
 	'fish',
 	'shellfish',
+	'molluscs',
+	'soy',
+	'sesame',
+	'celery',
+	'mustard',
+	'lupin',
 	'alcohol'
 ] as const;
 
 /**
- * Named on the UK/EU list of 14 and NOT derived here. Listed explicitly so the
- * page can say so rather than imply their absence.
+ * Still not derived, and now for a reason rather than a backlog: the sulphite
+ * declaration threshold is a CONCENTRATION (10mg/kg), not an ingredient name,
+ * and no ingredient line states how the wine was made. A lexical rule here
+ * would be the confident wrong answer — the shape the hazard-rule survey
+ * measured five times and refused five times. Listed so the page keeps saying
+ * so rather than implying absence.
  */
-export const NOT_SCREENED = [
-	'sesame',
-	'soy',
-	'celery',
-	'mustard',
-	'sulphites',
-	'lupin',
-	'molluscs separately',
-	'peanuts separately'
-] as const;
+export const NOT_SCREENED = ['sulphites'] as const;
 
 /** The diet-flag keys the seven above correspond to, for the closure test. */
 export const CHECKED_FLAGS = [
@@ -58,8 +60,15 @@ export const CHECKED_FLAGS = [
 	'containsDairy',
 	'containsEgg',
 	'containsNuts',
+	'containsPeanut',
 	'containsFish',
 	'containsShellfish',
+	'containsMollusc',
+	'containsSoy',
+	'containsSesame',
+	'containsCelery',
+	'containsMustard',
+	'containsLupin',
 	'containsAlcohol'
 ] as const;
 

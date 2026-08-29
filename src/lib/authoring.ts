@@ -165,6 +165,13 @@ export function buildFamilyRecipe(
 			containsGluten: false,
 			containsNuts: false,
 			containsAlcohol: false,
+			containsSesame: false,
+			containsSoy: false,
+			containsPeanut: false,
+			containsCelery: false,
+			containsMustard: false,
+			containsMollusc: false,
+			containsLupin: false,
 			confidence: 'reviewed'
 		},
 		costTier: 2,

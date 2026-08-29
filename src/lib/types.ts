@@ -96,6 +96,15 @@ export interface DietFlags {
 	containsGluten: boolean;
 	containsNuts: boolean;
 	containsAlcohol: boolean;
+	containsSesame: boolean;
+	containsSoy: boolean;
+	/** The statutory list separates peanuts from tree nuts; so does this. */
+	containsPeanut: boolean;
+	containsCelery: boolean;
+	containsMustard: boolean;
+	/** And molluscs from crustaceans. containsShellfish still covers both. */
+	containsMollusc: boolean;
+	containsLupin: boolean;
 	/** 'derived' = keywords only; 'reviewed'/'override' = a human ruled on it. */
 	confidence: 'derived' | 'reviewed' | 'override';
 }

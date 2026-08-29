@@ -123,6 +123,55 @@ const ALCOHOL = [
 ];
 
 /**
+ * The rest of the statutory fourteen, screened at last.
+ *
+ * Same construction as FISH and SHELLFISH: names as the corpus writes them,
+ * word-boundary matched. The direction of error is chosen deliberately —
+ * "carries celery" costs ten seconds when wrong, so mirepoix flags celery and
+ * mustard greens flag mustard, because the statutory categories are broad and
+ * a guest who reacts does not care which part of the plant it was.
+ *
+ * SULPHITES ARE DELIBERATELY ABSENT and stay on the not-screened list: the
+ * declaration threshold is a CONCENTRATION (10mg/kg), not an ingredient name,
+ * and no ingredient line says how much metabisulphite the winemaker used. A
+ * lexical rule would be the confident wrong answer — the exact shape the
+ * hazard-rule survey measured and refused.
+ */
+const SESAME = [
+	'sesame', 'tahini', 'benne', "za'atar", 'za\u2019atar', 'zaatar', 'gomashio',
+	'halva', 'hummus', 'furikake'
+];
+
+const SOY = [
+	'soy', 'soya', 'soybean', 'tofu', 'miso', 'tempeh', 'edamame', 'doenjang',
+	'gochujang', 'hoisin', 'tamari', 'natto', 'kecap manis', 'teriyaki', 'yuba',
+	'douchi', 'ssamjang'
+];
+
+/** A refinement of NUTS, because the statutory list separates them. */
+const PEANUT = ['peanut', 'peanuts', 'groundnut', 'satay'];
+
+const CELERY = ['celery', 'celeriac'];
+
+const MUSTARD = ['mustard', 'dijon'];
+
+/** A refinement of SHELLFISH: the molluscs alone, crustaceans excluded. */
+const MOLLUSC = [
+	'squid', 'calamari', 'octopus', 'cuttlefish', 'clam', 'mussel', 'oyster',
+	'scallop', 'snail', 'escargot', 'abalone', 'whelk', 'conch', 'periwinkle',
+	'geoduck', 'quahog', 'littleneck', 'cherrystone', 'razor clam', 'cockle',
+	'scungilli', 'vongole', 'polvo', 'oyster sauce'
+];
+
+/**
+ * Zero hits in this corpus today, and screened anyway — the claim "screened
+ * for lupin, none found" is sound because lupin flour is always NAMED (there
+ * is no dish that smuggles it the way dashi smuggles fish), which is what
+ * separates this from the five hazard rules that were measured and refused.
+ */
+const LUPIN = ['lupin', 'lupini'];
+
+/**
  * Vegetarian-safe exceptions. These strings contain a flagged keyword as a
  * substring but do not carry the animal product — without them "coconut milk"
  * reads as dairy, "vegetable stock" as meat stock, and "buttermilk substitute:
@@ -183,7 +232,14 @@ const RE = {
 	egg: makeMatcher(EGG),
 	gluten: makeMatcher(GLUTEN),
 	nuts: makeMatcher(NUTS),
-	alcohol: makeMatcher(ALCOHOL)
+	alcohol: makeMatcher(ALCOHOL),
+	sesame: makeMatcher(SESAME),
+	soy: makeMatcher(SOY),
+	peanut: makeMatcher(PEANUT),
+	celery: makeMatcher(CELERY),
+	mustard: makeMatcher(MUSTARD),
+	mollusc: makeMatcher(MOLLUSC),
+	lupin: makeMatcher(LUPIN)
 };
 
 const EXCEPTION_RE = makeMatcher(EXCEPTIONS);
@@ -276,9 +332,27 @@ export function deriveDiet(r, _fullBlob) {
 	// just because it was offered as an option.
 	const binding = lines.filter((l) => !lineIsEscaped(l)).map((l) => scrub(l.toLowerCase()));
 	const all = lines.map((l) => scrub(l.toLowerCase()));
+	/**
+	 * UNSCRUBBED, for the allergens whose exceptions contain them.
+	 *
+	 * The scrub exists so "coconut milk" is not dairy and "vegetable stock" is
+	 * not meat — but it blanks the WHOLE phrase, and several exception phrases
+	 * carry a different allergen inside them. Measured: NINE recipes shipped
+	 * `containsNuts: false` over an ingredient line reading "peanut butter"
+	 * (Kare-Kare, Virginia Peanut Soup, the Peanut Satay master among them),
+	 * and five shipped `containsEgg: false` over "egg noodles" — the phrase was
+	 * excepted so egg noodles would not read as egg for VEGETARIAN purposes,
+	 * which is a different question from whether they contain egg. Same failure
+	 * as panna cotta shipping vegan over "500ml cream", one layer down.
+	 *
+	 * The word-boundary matcher keeps raw matching safe: \begg\b cannot reach
+	 * inside "eggplant", and no bare nut word appears in "butternut".
+	 */
+	const raw = lines.map((l) => l.toLowerCase());
 
 	const anyBinding = (/** @type {RegExp} */ re) => binding.some((l) => re.test(l));
 	const anyLine = (/** @type {RegExp} */ re) => all.some((l) => re.test(l));
+	const anyRaw = (/** @type {RegExp} */ re) => raw.some((l) => re.test(l));
 
 	const containsMeat = anyBinding(RE.meat);
 
@@ -323,7 +397,10 @@ export function deriveDiet(r, _fullBlob) {
 	 * egg in their own ingredients.
 	 */
 	const containsDairy = anyLine(RE.dairy);
-	const containsEgg = anyLine(RE.egg);
+	// Raw, not scrubbed — see the `raw` comment above. Dairy stays scrubbed
+	// because its exceptions ("coconut milk") are the point; egg's exception
+	// ("egg noodles") was hiding the allergen it names.
+	const containsEgg = anyRaw(RE.egg);
 
 	/**
 	 * Derived, literal, safety-first: no animal product in any binding position.
@@ -380,8 +457,15 @@ export function deriveDiet(r, _fullBlob) {
 		// Allergens are reported from ALL lines, escaped or not. Someone with a
 		// nut allergy needs to know the garnish exists.
 		containsGluten: anyLine(RE.gluten),
-		containsNuts: anyLine(RE.nuts),
+		containsNuts: anyRaw(RE.nuts),
 		containsAlcohol: anyLine(RE.alcohol),
+		containsSesame: anyRaw(RE.sesame),
+		containsSoy: anyRaw(RE.soy),
+		containsPeanut: anyRaw(RE.peanut),
+		containsCelery: anyRaw(RE.celery),
+		containsMustard: anyRaw(RE.mustard),
+		containsMollusc: anyRaw(RE.mollusc),
+		containsLupin: anyRaw(RE.lupin),
 		confidence: 'derived'
 	};
 }

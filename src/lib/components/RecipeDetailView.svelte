@@ -100,8 +100,15 @@
 		if (f.containsDairy) list.push('dairy');
 		if (f.containsEgg) list.push('egg');
 		if (f.containsNuts) list.push('nuts');
+		if (f.containsPeanut) list.push('peanuts');
 		if (f.containsFish) list.push('fish');
 		if (f.containsShellfish) list.push('shellfish');
+		if (f.containsMollusc) list.push('molluscs');
+		if (f.containsSoy) list.push('soy');
+		if (f.containsSesame) list.push('sesame');
+		if (f.containsCelery) list.push('celery');
+		if (f.containsMustard) list.push('mustard');
+		if (f.containsLupin) list.push('lupin');
 		if (f.containsAlcohol) list.push('alcohol');
 		return list;
 	});

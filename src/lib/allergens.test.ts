@@ -53,14 +53,50 @@ describe('absence must never read as clearance', () => {
 		expect(empty.length).toBeGreaterThan(50);
 	});
 
-	it('hummus is one of them, and so must never be shown as allergen-free', () => {
+	/**
+	 * Hummus WAS the poster case for this file: 150g of tahini and an empty
+	 * screen. The vocabulary closed and it now flags sesame — which this test
+	 * pins, because hummus silently losing its sesame flag again is the single
+	 * most on-the-nose regression this module could have.
+	 */
+	it('hummus flags sesame now, and that must never come back off', () => {
 		const hummus = recipes.find((r) => r.slug === 'hummus');
-		expect(hummus, 'the corpus no longer has hummus; pick another empty-flag dish').toBeDefined();
-		const diet = hummus!.diet;
-		const found = CHECKED_FLAGS.filter((f) => diet[f as keyof typeof diet]);
-		// It contains tahini. The screen finds nothing, which is exactly why the
-		// block must still render and say what it did not look for.
+		expect(hummus, 'the corpus no longer has hummus').toBeDefined();
+		expect(hummus!.diet.containsSesame).toBe(true);
+	});
+
+	/**
+	 * The empty path still needs a named resident so the always-render rule
+	 * keeps a concrete face. Ratatouille carries none of the thirteen screened
+	 * allergens — and the block must still render over it, saying what was not
+	 * looked for, because sulphites remain unscreenable by ingredient text.
+	 */
+	it('ratatouille shows the empty path, and is never shown as allergen-free', () => {
+		const dish = recipes.find((r) => r.slug === 'ratatouille');
+		expect(dish, 'the corpus no longer has ratatouille; pick another empty-flag dish').toBeDefined();
+		const found = CHECKED_FLAGS.filter((f) => dish?.diet[f as keyof typeof dish.diet]);
 		expect(found).toEqual([]);
-		expect(NOT_SCREENED).toContain('sesame');
+		expect(NOT_SCREENED).toContain('sulphites');
+	});
+
+	/**
+	 * The scrub-hole regression pins. Nine recipes shipped containsNuts: false
+	 * over lines reading "peanut butter" because the phrase was blanked to
+	 * protect the DAIRY flag; five shipped containsEgg: false over "egg
+	 * noodles". Raw-line matching fixed both — these keep it fixed.
+	 */
+	it('peanut butter is nuts and peanuts, whatever the dairy scrub thinks', () => {
+		const kk = recipes.find((r) => r.slug === 'kare-kare');
+		expect(kk).toBeDefined();
+		expect(kk!.diet.containsNuts).toBe(true);
+		expect(kk!.diet.containsPeanut).toBe(true);
+	});
+
+	it('egg noodles contain egg, whatever the vegetarian logic needs', () => {
+		const noodles = recipes.filter((r) =>
+			r.diet.containsEgg === false &&
+			/egg noodle/i.test(JSON.stringify(r))
+		);
+		expect(noodles.map((r) => r.slug)).toEqual([]);
 	});
 });
