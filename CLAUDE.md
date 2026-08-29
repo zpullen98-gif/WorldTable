@@ -405,6 +405,17 @@ number in either that nobody can re-run is a number already drifting — the
 ceiling sentence shipped wrong the first time because it was reasoned from other
 figures rather than measured.
 
+**Any field added to SessionState must be NAMED in mergeSessions**, or the
+next .wtjson import erases it — a genuine export always carries every key
+present-and-empty. This has now bitten four times (cookedLog, shoppingChecks,
+stepActuals, planRun); deep-pass.test.ts pins the last two. The same rule
+holds for HouseRecord and adoptImport.
+
+**A page number is computed, emitted-and-gated, or absent.** Hardcoded counts
+in copy drifted three times in one review (coverage board, service page, the
+service-track card). `assessability.json` exists precisely so pages can import
+the measured numbers the gates already check.
+
 **A mark must hold for EVERY recipe carrying the tag.** This is the constraint
 `standards.mjs` does not have, and it is easy to break by reasoning instead of
 checking: blanching demanded salted water when 7 of its 23 recipes never salt

@@ -22,12 +22,12 @@ at **$49.99/month, unlimited staff, one shared login**.
 
 | | |
 |---|---|
-| WorldTable | branch `dish-standards`, **47 commits unpushed** (remote `origin/master`), tree clean |
+| WorldTable | branch `dish-standards`, **56 commits unpushed** (remote `origin/master`), tree clean |
 | OutsideOfTime | branch `main`, HEAD `1a6f7d5e`, tree clean, **no git remote — never pushed** |
-| Tests | **565 unit** (35 files) · **87 e2e** — **the whole suite is green** |
+| Tests | **583 unit** (37 files) · **87 e2e** — **the whole suite is green** |
 | Gates | `build:data` all pass · `verify:build` **18/18** |
 | Precache | 1.44 MB gzipped against a 2.00 MB cap |
-| Routes | 29 · Derived JSON | 22 files |
+| Routes | 29 · Derived JSON | 23 files (`assessability.json` joined) |
 | Deploy | `table/` re-synced for `/menu/waste`. See below. |
 
 ## The corpus
@@ -238,6 +238,31 @@ import a value back into it.
 
 ## What was built, most recent first
 
+### 30 Aug — the deep pass
+
+A six-lens multi-agent review (state, money, copy, a11y, chef-workflow, gates)
+with adversarial verification: 47 findings raised, 45 survived refutation, 44
+fixed across three commits (`014a03d`, `a603819`, and the family-screen fix
+`f0eadf1` found by hand while it ran), one declined (`noteChars` rides in the
+eager index unread by any route — ~3KB pre-gzip, not worth churning the
+extract parity for). The kind of thing it caught, worth remembering:
+
+- **Two more fields fell through mergeSessions' spread** (stepActuals,
+  planRun) — the same failure the function's own header documents, two fields
+  along. The rule is now genuinely closed, and the lesson stands: any field
+  added to SessionState MUST be named in mergeSessions or the next import
+  erases it.
+- **Covers writes restamped the LINES merge tiebreak**, so typing a covers
+  number could beat a fresh re-costing in both merge directions.
+- **plateCost([]) is complete** — an empty sum is a finished sum — so uncosted
+  dishes entered the weighted figure as free plates and menu engineering
+  crowned them stars. `costed` is now a required input on both.
+- **The prep board believed yesterday's count while claiming it did not.**
+  When copy and code disagree, the recorded design intent picks the side.
+- **Numbers hardcoded into page copy drift** — found three times (coverage
+  board, service page, service-track card). The rule now: a page number is
+  computed, emitted-and-gated, or absent.
+
 ### 29-30 Aug — the worklist, finished
 
 Every numbered item on the previous handoff's list is done:
@@ -337,8 +362,9 @@ in the app).
 
 ## What's left, ranked
 
-The previous list is EMPTY — all seven items shipped (see above). What
-remains is what the deep pass surfaces, plus the standing questions below.
+The previous list is EMPTY — all seven items shipped, and the deep pass that
+followed is applied. Nothing is queued. What remains is the standing product
+questions below, and whatever the next session measures.
 
 ## Open questions for the owner
 
