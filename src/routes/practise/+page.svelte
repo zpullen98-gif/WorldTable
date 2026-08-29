@@ -75,6 +75,15 @@
 			</a>
 		</li>
 		<li>
+			<a href="{base}/practise/firing">
+				<h2>The firing drill</h2>
+				<p>
+					Your pinned menu, back-timed by The Pass, and twenty seconds to say what fires first.
+					Reading the plan cold is the skill; the clock is the load.
+				</p>
+			</a>
+		</li>
+		<li>
 			<a href="{base}/practise/calibrate">
 				<h2>Calibrate your palate</h2>
 				<p>
