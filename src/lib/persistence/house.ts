@@ -72,11 +72,18 @@ export interface Prep {
 	 */
 	handsOnSec: number;
 	unattendedSec: number;
-	/** A station key from stations.json, when the kitchen works that way. */
+	/**
+	 * A station name, when the kitchen works that way. Free display text — the
+	 * preps form offers the guide's station names and nothing joins on a key.
+	 *
+	 * (A `recipeSlug` field lived beside this one for a while: declared,
+	 * documented, displayed nowhere, settable nowhere. It was removed rather
+	 * than wired because nothing consumed it — a dead field on a venue record
+	 * is an invitation to build the wrong feature to justify it. Old records
+	 * carrying it are untouched; the transport moves whole prep objects.)
+	 */
 	station?: string;
 	lines: CostLine[];
-	/** A guide or family recipe this prep is made from, if there is one. */
-	recipeSlug?: string;
 	ts: number;
 }
 
