@@ -11,7 +11,7 @@
  * Method steps and the "from the pass" note are prose: a note explaining that a
  * dish is "usually served with lamb" must not make the dish contain lamb.
  *
- * Word-boundary matching throughout — a substring test makes "butter" match
+ * Word-boundary matching throughout: a substring test makes "butter" match
  * "butterfly the chicken", "ham" match "hamburger bun", and "crab" match
  * "crabapple".
  */
@@ -56,7 +56,7 @@ const FISH = [
 	// Names that `\bfish\b` cannot reach from inside, and that carry no other
 	// listed token: a recipe whose only fish word is one of these would ship
 	// unflagged. All four are in the corpus today and all four are currently
-	// caught by a second word in the same recipe — which is luck, not cover.
+	// caught by a second word in the same recipe, which is luck, not cover.
 	'pompano', 'mullet', 'sablefish', 'stockfish',
 	// Freshwater and regional names the US-state chapters lean on heavily.
 	'walleye', 'whitefish', 'rockfish', 'striped bass', 'perch', 'pike',
@@ -95,7 +95,7 @@ const GLUTEN = [
 	'noodles', 'tagliatelle', 'linguine', 'penne', 'rigatoni', 'orzo', 'couscous',
 	'semolina', 'farro', 'barley', 'bulgur', 'seitan', 'soy sauce', 'wheat',
 	// Bare 'soy' as an ingredient means soy sauce, which is wheat-brewed. The
-	// corpus writes "4 tbsp soy" far more often than "soy sauce" — 27 recipes
+	// corpus writes "4 tbsp soy" far more often than "soy sauce": 27 recipes
 	// shipped containsGluten:false over an ingredient line naming it, and an
 	// empty allergen list renders no "Contains" block at all, which reads as
 	// "no allergens" rather than "we don't know". Whole soybeans are excepted.
@@ -126,7 +126,7 @@ const ALCOHOL = [
  * The rest of the statutory fourteen, screened at last.
  *
  * Same construction as FISH and SHELLFISH: names as the corpus writes them,
- * word-boundary matched. The direction of error is chosen deliberately —
+ * word-boundary matched. The direction of error is chosen deliberately:
  * "carries celery" costs ten seconds when wrong, so mirepoix flags celery and
  * mustard greens flag mustard, because the statutory categories are broad and
  * a guest who reacts does not care which part of the plant it was.
@@ -134,7 +134,7 @@ const ALCOHOL = [
  * SULPHITES ARE DELIBERATELY ABSENT and stay on the not-screened list: the
  * declaration threshold is a CONCENTRATION (10mg/kg), not an ingredient name,
  * and no ingredient line says how much metabisulphite the winemaker used. A
- * lexical rule would be the confident wrong answer — the exact shape the
+ * lexical rule would be the confident wrong answer: the exact shape the
  * hazard-rule survey measured and refused.
  */
 const SESAME = [
@@ -173,7 +173,7 @@ const LUPIN = ['lupin', 'lupini'];
 
 /**
  * Vegetarian-safe exceptions. These strings contain a flagged keyword as a
- * substring but do not carry the animal product — without them "coconut milk"
+ * substring but do not carry the animal product: without them "coconut milk"
  * reads as dairy, "vegetable stock" as meat stock, and "buttermilk substitute:
  * soy milk" as both.
  */
@@ -181,7 +181,7 @@ const EXCEPTIONS = [
 	// dairy-shaped, not dairy
 	'coconut milk', 'coconut cream', 'almond milk', 'soy milk', 'oat milk',
 	'rice milk', 'cashew cream', 'peanut butter', 'almond butter', 'cocoa butter',
-	// soy-shaped, not soy sauce — the bean itself carries no wheat
+	// soy-shaped, not soy sauce: the bean itself carries no wheat
 	'soybean', 'soybeans', 'soy bean', 'edamame', 'soy lecithin',
 	'shea butter', 'apple butter', 'nut butter', 'tahini butter', 'butter lettuce',
 	'butter bean', 'butter beans', 'buttercup', 'butternut', 'butterfly',
@@ -262,7 +262,7 @@ function scrub(text) {
  * This is checked per line rather than over the whole blob, because "or butter"
  * appearing in line 7 says nothing about the pork in line 2.
  */
-/** Things a vegetarian alternative is actually made of. Trailing `s?` matters —
+/** Things a vegetarian alternative is actually made of. Trailing `s?` matters:
  *  without it "2 eggs per person, fried; or shredded chicken" has no recognised
  *  meatless side. */
 const VEG_ALTERNATIVE =
@@ -278,7 +278,7 @@ function lineIsEscaped(line) {
 	if (OPTIONAL_MARKER.test(line)) return true;
 
 	// Accompaniment lists: a run of foods with no quantity anywhere, e.g.
-	// "Grilled meats, roast chicken, fries, eggs — they all apply" or
+	// "Grilled meats, roast chicken, fries, eggs: they all apply" or
 	// "Satay, gado-gado, noodles, grilled chicken, raw vegetables, your spoon".
 	// A line that names three or more things and measures none of them is
 	// telling you what to serve the sauce WITH, not what goes in it.
@@ -295,7 +295,7 @@ function lineIsEscaped(line) {
 	// segment, but the vegetarian marker against the raw one. Scrubbing removes
 	// whole phrases like "vegetable broth" from the exceptions list, which would
 	// otherwise delete the very word ("vegetable") that proves the alternative
-	// is meatless — that is what made "250ml hot beef or vegetable broth" read
+	// is meatless: that is what made "250ml hot beef or vegetable broth" read
 	// as binding beef.
 	const segments = line.split(/\bor\b/i);
 	if (segments.length > 1) {
@@ -309,7 +309,7 @@ function lineIsEscaped(line) {
 		if (escapes) return true;
 	}
 
-	// "2 tbsp dashi (kombu dashi keeps it vegetarian)" — a parenthetical that
+	// "2 tbsp dashi (kombu dashi keeps it vegetarian)": a parenthetical that
 	// names a vegetarian route is a stated alternative, same as an "or".
 	const parentheticals = line.match(/\(([^)]*)\)/g) ?? [];
 	if (parentheticals.some((/** @type {string} */ p) => /\bveg(?:an|etarians?)?\b/i.test(p))) return true;
@@ -336,11 +336,11 @@ export function deriveDiet(r, _fullBlob) {
 	 * UNSCRUBBED, for the allergens whose exceptions contain them.
 	 *
 	 * The scrub exists so "coconut milk" is not dairy and "vegetable stock" is
-	 * not meat — but it blanks the WHOLE phrase, and several exception phrases
+	 * not meat, but it blanks the WHOLE phrase, and several exception phrases
 	 * carry a different allergen inside them. Measured: NINE recipes shipped
 	 * `containsNuts: false` over an ingredient line reading "peanut butter"
 	 * (Kare-Kare, Virginia Peanut Soup, the Peanut Satay master among them),
-	 * and five shipped `containsEgg: false` over "egg noodles" — the phrase was
+	 * and five shipped `containsEgg: false` over "egg noodles": the phrase was
 	 * excepted so egg noodles would not read as egg for VEGETARIAN purposes,
 	 * which is a different question from whether they contain egg. Same failure
 	 * as panna cotta shipping vegan over "500ml cream", one layer down.
@@ -357,7 +357,7 @@ export function deriveDiet(r, _fullBlob) {
 	const containsMeat = anyBinding(RE.meat);
 
 	/**
-	 * Fish and shellfish are ALLERGENS, so they follow the allergen policy —
+	 * Fish and shellfish are ALLERGENS, so they follow the allergen policy:
 	 * every line, escaped or not, for exactly the reason dairy and egg do
 	 * below. They read from `binding` until this was measured, and the comment
 	 * above this block already claimed otherwise: "an allergen is never hidden
@@ -419,7 +419,7 @@ export function deriveDiet(r, _fullBlob) {
 	const vegetarianStrict = !containsMeat && !bindingFish && !bindingShellfish;
 
 	/**
-	 * True when animal products appear only in optional or "or" positions —
+	 * True when animal products appear only in optional or "or" positions:
 	 * hoisted to a local because `vegan` below has to be able to refuse on it.
 	 */
 	const vegetarianOption =

@@ -1,5 +1,5 @@
 /**
- * report-notes.mjs — the backfill's progress bar.
+ * report-notes.mjs: the backfill's progress bar.
  *
  * Lists every recipe whose shipped "from the pass" note (raw, or overlaid from
  * notes.json) is under the 180-char bar, grouped by chapter, thinnest chapters

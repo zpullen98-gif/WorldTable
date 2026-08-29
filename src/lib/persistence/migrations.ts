@@ -68,7 +68,7 @@ export function importLegacyCode(
 	try {
 		payload = JSON.parse(atob(trimmed.slice(4)));
 	} catch {
-		throw new Error('Session code is not readable — it may have been truncated in transit');
+		throw new Error('Session code is not readable: it may have been truncated in transit');
 	}
 
 	const unresolved: string[] = [];

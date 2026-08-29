@@ -12,16 +12,16 @@
  * something was attempted. A cook who has made one French omelette has not
  * learned the omelette, and nothing in the app could tell the difference. A
  * stated standard is what turns a recipe into something a cook can be assessed
- * against — by themselves, honestly, which is the only assessment an offline app
+ * against, by themselves, honestly, which is the only assessment an offline app
  * can offer.
  *
  * WHAT A MARK IS. Something the cook standing at the pan can verify without
  * asking anyone: seen, heard, felt, measured or timed. Ordered the way it is
- * actually checked — surface, then structure, then interior, then seasoning.
+ * actually checked: surface, then structure, then interior, then seasoning.
  * Three to five per dish; the build fails outside that range, because two marks
  * is not a standard and six is a recipe.
  *
- * WHAT A MARK IS NOT. Not "tastes good". Not the flavour prose — every recipe
+ * WHAT A MARK IS NOT. Not "tastes good". Not the flavour prose: every recipe
  * already carries a `note` that gestures at the standard, and a mark that is
  * that sentence rearranged is worth nothing. Not method: "use a nonstick pan"
  * belongs in `steps`, and a mark that tells the cook what to DO has failed to
@@ -35,7 +35,7 @@
  * teaching happens and where a standard changes what the app can do. The other
  * 925 recipes are a rolling job; a dish with no standard renders without the
  * block and is not an error. A standard whose slug matches no recipe IS an
- * error and fails the build — same reasoning as a SUPPLEMENT entry that tags
+ * error and fails the build, same reasoning as a SUPPLEMENT entry that tags
  * nothing: it means we wrote a slug the corpus never had.
  */
 
@@ -46,9 +46,9 @@ export const STANDARDS = [
 		marks: [
 			{ id: 'the-french-omelette#uniform', text: "Uniform pale blond over the whole surface, seam and both ends included; turn it under the light and no tan or freckled patch appears anywhere." },
 			{ id: 'the-french-omelette#cigar-shaped', text: "Cigar-shaped, closed at both ends, seam underneath; it holds its roll on the plate and does not slacken open." },
-			{ id: 'the-french-omelette#skin', text: "Skin unbroken and dry to the eye — no curd bursting through a tear, and no butter or water weeping into a ring around it within thirty seconds of plating." },
+			{ id: 'the-french-omelette#skin', text: "Skin unbroken and dry to the eye: no curd bursting through a tear, and no butter or water weeping into a ring around it within thirty seconds of plating." },
 			{ id: 'the-french-omelette#cream-fine', text: "Cut across it: cream-fine moist curds top to bottom with no ropey white streaks of unbeaten albumen, the set base no thicker than a coin, and when the plate is tilted the centre slumps once and stops rather than running." },
-			{ id: 'the-french-omelette#seasoned', text: "Seasoned evenly through — first bite and last taste the same, with no grains of salt sitting on the outside and no flat unsalted mouthful in the middle." }
+			{ id: 'the-french-omelette#seasoned', text: "Seasoned evenly through: first bite and last taste the same, with no grains of salt sitting on the outside and no flat unsalted mouthful in the middle." }
 		],
 		fault: "The pan ran hot and the eggs were left to sit between stirs, so the omelette comes up freckled tan on the seam side with the curds fused into one rubbery sheet instead of custard."
 	},
@@ -57,11 +57,11 @@ export const STANDARDS = [
 		marks: [
 			{ id: 'cacio-e-pepe#even', text: "Even gloss along every strand; no chalky white grit on the pasta, no cheese welded to the tongs or fused to the bottom of the bowl." },
 			{ id: 'cacio-e-pepe#lift', text: "Lift a forkful and the sauce hangs on it; the sauce is still loose and glossy when the bowl reaches the table, and the emptied bowl keeps a thin clinging film rather than a watery pool that separates within a minute." },
-			{ id: 'cacio-e-pepe#pepper', text: "Pepper is cracked coarse enough that individual fragments are visible in the sauce, and it is worked through the coating rather than dusted over the top — no dry black powder left on the surface." },
+			{ id: 'cacio-e-pepe#pepper', text: "Pepper is cracked coarse enough that individual fragments are visible in the sauce, and it is worked through the coating rather than dusted over the top. No dry black powder left on the surface." },
 			{ id: 'cacio-e-pepe#bitten', text: "Bitten, a strand resists at the centre with no chalky raw core." },
 			{ id: 'cacio-e-pepe#fully', text: "Fully seasoned from the pecorino alone: nothing is reached for at the table, and it is not so salty it sends you to the water glass." }
 		],
-		fault: "The cheese met heat — the paste was built with boiling water or tossed in a pan still on the flame — and the pecorino has seized into stringy pellets sitting in a thin grey puddle."
+		fault: "The cheese met heat, the paste was built with boiling water or tossed in a pan still on the flame, and the pecorino has seized into stringy pellets sitting in a thin grey puddle."
 	},
 	{
 		slug: "ratatouille",
@@ -81,9 +81,9 @@ export const STANDARDS = [
 			{ id: 'chicken-piccata#sauce', text: "Sauce is the brown of lifted fond rather than floury-pale, the pan floor scraped clean, and nothing on the plate tastes of raw flour." },
 			{ id: 'chicken-piccata#sauce2', text: "Sauce is opaque and glossy, coats the back of a spoon and holds together on the plate: no yellow butter ring creeping out at the rim." },
 			{ id: 'chicken-piccata#roughly', text: "Roughly two tablespoons per cutlet, clinging to the meat rather than pooling: cut at the thickest point the chicken is just opaque with clear juice, and the coating is still on the cutlet rather than shed into the sauce." },
-			{ id: 'chicken-piccata#sharp', text: "Sharp before rich — lemon and caper brine land first, the butter behind them — and nobody reaches for more lemon at the table." }
+			{ id: 'chicken-piccata#sharp', text: "Sharp before rich (lemon and caper brine land first, the butter behind them) and nobody reaches for more lemon at the table." }
 		],
-		fault: "The final butter went in over live heat and the sauce split — a greasy yellow slick with the capers stranded in it, and cutlets sitting in oil instead of wearing a glaze."
+		fault: "The final butter went in over live heat and the sauce split: a greasy yellow slick with the capers stranded in it, and cutlets sitting in oil instead of wearing a glaze."
 	},
 	{
 		slug: "salade-nicoise",
@@ -102,10 +102,10 @@ export const STANDARDS = [
 		slug: "miso-soup",
 		marks: [
 			{ id: 'miso-soup#judge', text: "Judge the dashi before any miso goes near it: clear pale gold, you can see the bottom of the pot through it, and savoury enough to drink unseasoned. If it tastes like hot water, no amount of miso will rescue the bowl." },
-			{ id: 'miso-soup#nothing', text: "Nothing solid strayed through — no scum, no shreds of kombu or katsuobushi, no undissolved lumps of miso, no grit on the tongue." },
+			{ id: 'miso-soup#nothing', text: "Nothing solid strayed through: no scum, no shreds of kombu or katsuobushi, no undissolved lumps of miso, no grit on the tongue." },
 			{ id: 'miso-soup#finished', text: "The finished bowl is an even cloudy tan and stays even for the first minute or two, not a clear layer sitting above a sludge of settled miso." },
 			{ id: 'miso-soup#tofu', text: "Tofu cubes arrive whole and hot through, not broken into curds by stirring; wakame is fully unfurled and silky rather than rubbery or leathery." },
-			{ id: 'miso-soup#enough', text: "Hot enough to steam but sippable straight from the bowl without a spoon, around 75°C, and the miso still smells sweet and malty at the nose — flat and merely salty means it went back to the boil." }
+			{ id: 'miso-soup#enough', text: "Hot enough to steam but sippable straight from the bowl without a spoon, around 75°C, and the miso still smells sweet and malty at the nose. Flat and merely salty means it went back to the boil." }
 		],
 		fault: "The pot was brought back to a boil after the miso went in, so the aroma has blown off and what arrives is gritty salt water, the dashi's work erased in the last thirty seconds."
 	},
@@ -116,7 +116,7 @@ export const STANDARDS = [
 			{ id: 'soupe-a-loignon#kilo', text: "The kilo of raw onions has collapsed to roughly a fifth of its volume: a jammy tangle with no rings still holding their shape." },
 			{ id: 'soupe-a-loignon#broth', text: "Broth is dark and clean-bodied, just filming the back of a spoon; never gluey, never pale, and with no raw-flour taste." },
 			{ id: 'soupe-a-loignon#gruy', text: "The Gruyère lid is bronzed and blistered, sealed to the rim of the bowl, and lifts off in one sheet with the crouton beneath it still holding under spoon pressure rather than dissolved to mush." },
-			{ id: 'soupe-a-loignon#sweet', text: "Sweet first, beef-savoury behind it, and no bitterness in the finish — a scorched edge at the back of the throat is the tell that the hour was rushed." }
+			{ id: 'soupe-a-loignon#sweet', text: "Sweet first, beef-savoury behind it, and no bitterness in the finish: a scorched edge at the back of the throat is the tell that the hour was rushed." }
 		],
 		fault: "The heat was pushed to save the hour, so the onions carry black scorched shreds around pale undercooked centres and the finished bowl tastes bitter where it should taste sweet."
 	},
@@ -125,17 +125,17 @@ export const STANDARDS = [
 		marks: [
 			{ id: 'pasta-e-fagioli#ladled', text: "Ladled, it falls in a slow ribbon and mounds slightly in the bowl rather than spreading flat to the rim." },
 			{ id: 'pasta-e-fagioli#broth', text: "Broth is opaque and velvety; no clear liquid separates out around the beans after a minute standing." },
-			{ id: 'pasta-e-fagioli#beans', text: "Most beans are still whole with their skins intact rather than the pot gone to paste, and the ditalini is still firm at the tooth when the bowl reaches the table — pasta is distinguishable from bean by bite." },
+			{ id: 'pasta-e-fagioli#beans', text: "Most beans are still whole with their skins intact rather than the pot gone to paste, and the ditalini is still firm at the tooth when the bowl reaches the table: pasta is distinguishable from bean by bite." },
 			{ id: 'pasta-e-fagioli#surface', text: "Surface carries a slick of raw finishing oil, beaded and green-smelling rather than cooked in, with grated cheese that has not yet melted flat." },
 			{ id: 'pasta-e-fagioli#tasted', text: "Tasted at the bowl it needs no salt at the table and is not sharp with it — the rind and the finishing cheese are already in the total. Rosemary reads as background perfume, with no loose needles in the spoon." }
 		],
-		fault: "It sat on the stove or was reheated, and the ditalini has drunk the broth — what arrives is a stiff bean porridge with soft grey pasta and no liquid left to call soup."
+		fault: "It sat on the stove or was reheated, and the ditalini has drunk the broth: what arrives is a stiff bean porridge with soft grey pasta and no liquid left to call soup."
 	},
 	{
 		slug: "barszcz",
 		marks: [
 			{ id: 'barszcz#deep', text: "Deep luminous garnet; a spoonful held to the light reads red-purple, not brick, brown or dusty pink." },
-			{ id: 'barszcz#strained', text: "The strained version is genuinely clear — light passes through the bowl with no cloud or sediment; the blended version is uniformly smooth with no fibrous beet threads." },
+			{ id: 'barszcz#strained', text: "The strained version is genuinely clear: light passes through the bowl with no cloud or sediment; the blended version is uniformly smooth with no fibrous beet threads." },
 			{ id: 'barszcz#nothing', text: "Nothing rides the surface and nothing strays into the bowl: no fat beads, no scum, no loose allspice berry or bay fragment; the only solids present are the ones put there deliberately." },
 			{ id: 'barszcz#enough', text: "Hot enough to steam but off the boil: a spoon of sour cream stirred through blends to an even pink without curdling into flecks or beading at the rim." },
 			{ id: 'barszcz#sour', text: "Sour first and hard enough to tighten the jaw, sugar arriving a beat behind to round it, salt last; if the first spoon reads sweet earth before it reads sour, it is not barszcz yet." }
@@ -254,7 +254,7 @@ export const STANDARDS = [
 			{ id: 'rosemary-focaccia#slab', text: "The slab is level: no more than a finger's width between the high points and the dimple floors, and no single dome risen across the middle." },
 			{ id: 'rosemary-focaccia#lift', text: "Lift a corner with a spatula. The base releases clean, is fried gold, and rattles on the pan; no dough sticks and there is no pale wet patch." },
 			{ id: 'rosemary-focaccia#face', text: "The cut face stands about 3cm from a 20x30cm pan, with holes of many sizes running right to the edges; the crumb is glossy and springs back, and there is no dense seam along the bottom." },
-			{ id: 'rosemary-focaccia#corner', text: "Eat a corner plain. It is seasoned all the way through, not just on the salted top, and the olive oil reads as flavour — green and peppery — not as grease left on the fingers." }
+			{ id: 'rosemary-focaccia#corner', text: "Eat a corner plain. It is seasoned all the way through, not just on the salted top, and the olive oil reads as flavour, green and peppery, not as grease left on the fingers." }
 		],
 		fault: "The pan rise is given the printed hour rather than the state: in a cool kitchen the dough is still sluggish and short of the corners when it goes in, so it bakes tight and low, the dimples close over during the spring, and the crumb comes out uniform and bready instead of open."
 	},
@@ -272,7 +272,7 @@ export const STANDARDS = [
 	{
 		slug: "country-sourdough-loaf",
 		marks: [
-			{ id: 'country-sourdough-loaf#score', text: "The score has opened and lifted a raised ear, and the loaf has burst nowhere else — no blowout at the side, no split creeping around the base. It went up where it was told, not out." },
+			{ id: 'country-sourdough-loaf#score', text: "The score has opened and lifted a raised ear, and the loaf has burst nowhere else: no blowout at the side, no split creeping around the base. It went up where it was told, not out." },
 			{ id: 'country-sourdough-loaf#crust', text: "The crust is deep mahogany over the whole dome and down the sides with no pale, soft band around the foot; the opened cut face may read lighter but must be dry and set, never doughy. Cooled, the crust is rigid under a press and the base sounds hollow under a knock." },
 			{ id: 'country-sourdough-loaf#board', text: "On the board the loaf stands at least half as tall as it is wide, shoulders rounded, not spread to a disc." },
 			{ id: 'country-sourdough-loaf#crumb', text: "The crumb is irregular with glossy hole walls from top to bottom and no dense stripe along the base; a finger press springs back and leaves no dent or tack." },
@@ -285,7 +285,7 @@ export const STANDARDS = [
 		marks: [
 			{ id: 'baguette-de-tradition#three', text: "Three to five slashes have each raised a distinct ear, overlapping by about a third, so they read as one continuous seam down the loaf rather than a ladder of separate rungs." },
 			{ id: 'baguette-de-tradition#crust', text: "The crust is thin and russet-gold with a faint sheen rather than a matte, floury dullness; the loaf crackles audibly on the rack as it cools, and squeezed it cracks and sheds shards onto the board." },
-			{ id: 'baguette-de-tradition#body', text: "The body is straight and even in diameter with tapered points, and the underside seam is closed — no blowout on the flank or the base." },
+			{ id: 'baguette-de-tradition#body', text: "The body is straight and even in diameter with tapered points, and the underside seam is closed, no blowout on the flank or the base." },
 			{ id: 'baguette-de-tradition#loaf', text: "Each loaf weighs roughly 230–250g baked and feels light for its size; a heavy loaf for its length means it went in underproofed or came out short of colour." },
 			{ id: 'baguette-de-tradition#crumb', text: "The crumb is cream rather than white, irregular, with glossy hole walls. A cottony, chalk-white crumb means the poolish or the bulk was cut short." }
 		],
@@ -296,7 +296,7 @@ export const STANDARDS = [
 	{
 		slug: "crepes",
 		marks: [
-			{ id: 'crepes#cooked', text: "The cooked face is lace-mottled — irregular brown blotches over pale gold; the second side is barely coloured and matte, and that side faces in." },
+			{ id: 'crepes#cooked', text: "The cooked face is lace-mottled: irregular brown blotches over pale gold; the second side is barely coloured and matte, and that side faces in." },
 			{ id: 'crepes#full', text: "The crêpe is a full circle out to the pan's edge and even across it, under 2mm and translucent when held to the light, with no thick lip where the batter stalled." },
 			{ id: 'crepes#folds', text: "It folds into quarters without cracking: the lacy edge is crisp, the body supple, never leathery." },
 			{ id: 'crepes#stacked', text: "Stacked crêpes peel apart one at a time without fusing or tearing, and chew soft with no rubber." },
@@ -309,20 +309,20 @@ export const STANDARDS = [
 		marks: [
 			{ id: 'creme-brulee#sugar', text: "The sugar is one unbroken amber sheet edge to edge, right up to the ramekin wall: no black scorched spots, no white grains left unmelted." },
 			{ id: 'creme-brulee#back', text: "The back of a spoon breaks it in a single crack and the shards come away large; the sugar layer is under 2mm." },
-			{ id: 'creme-brulee#nudged', text: "Nudged at the end of the bake, the custard moves as one slow mass under a set surface — no loose ripple or liquid slack at the centre, and no ramekin that has stopped moving altogether. Chilled, it is set edge to edge with nothing sloshing." },
+			{ id: 'creme-brulee#nudged', text: "Nudged at the end of the bake, the custard moves as one slow mass under a set surface: no loose ripple or liquid slack at the centre, and no ramekin that has stopped moving altogether. Chilled, it is set edge to edge with nothing sloshing." },
 			{ id: 'creme-brulee#first', text: "The first spoonful leaves a clean-walled trench that holds its shape, with no watery pool collecting in it and no grain or bubbles in the custard." },
 			{ id: 'creme-brulee#custard', text: "The custard is still fridge-cold to the spoon while the caramel over it is warm; if both are the same temperature, it was torched too early." }
 		],
-		fault: "It is baked to firm instead of to the wobble — held in until nothing moves at all, so carryover pushes it past the set: the custard puffs, tightens grainy at the edges and weeps a ring of watery whey that pools in the first spoonful."
+		fault: "It is baked to firm instead of to the wobble: held in until nothing moves at all, so carryover pushes it past the set: the custard puffs, tightens grainy at the edges and weeps a ring of watery whey that pools in the first spoonful."
 	},
 	{
 		slug: "panna-cotta",
 		marks: [
-			{ id: 'panna-cotta#unmolds', text: "It unmolds in one piece with sharp, defined edges top and bottom and smooth sides — no drag marks, no torn skin, no collapsed shoulder." },
+			{ id: 'panna-cotta#unmolds', text: "It unmolds in one piece with sharp, defined edges top and bottom and smooth sides: no drag marks, no torn skin, no collapsed shoulder." },
 			{ id: 'panna-cotta#stands', text: "It stands ten minutes at room temperature without slumping or throwing off liquid: the loose end of the set is a shiver, not a spread." },
 			{ id: 'panna-cotta#spoon', text: "The spoon goes through with no resistance and no snap, and the cut wall sags gently rather than standing square." },
 			{ id: 'panna-cotta#melts', text: "It melts at body heat and is gone: nothing left to chew, no rubbery skin to work through, no film on the palate." },
-			{ id: 'panna-cotta#vanilla', text: "Vanilla seeds are spread through the whole cross-section rather than banded at the top, and the cut face is one even ivory — no paler, waxier layer along the plate side." }
+			{ id: 'panna-cotta#vanilla', text: "Vanilla seeds are spread through the whole cross-section rather than banded at the top, and the cut face is one even ivory: no paler, waxier layer along the plate side." }
 		],
 		fault: "It is poured hot and left undisturbed to set, so it separates as it chills: the seeds sink to what becomes the top and the fat rises to what becomes the plate side, leaving a pale waxy layer there that coats the mouth before the cream ever arrives."
 	},
@@ -332,7 +332,7 @@ export const STANDARDS = [
 			{ id: 'tarte-au-citron#surface', text: "The surface is mirror-flat and one even deep yellow: no bubbles risen through it, no crazed or wrinkled skin, no browned rim where the curd met the pastry." },
 			{ id: 'tarte-au-citron#lift', text: "Lift a slice on the knife: the base carries its own weight without drooping, and the underside is an even biscuit brown right to the centre with no pale, damp patch." },
 			{ id: 'tarte-au-citron#knife', text: "A hot knife leaves a clean vertical cut face, glossy and square, and it has not crept or slumped after five minutes on the plate." },
-			{ id: 'tarte-au-citron#curd', text: "The curd is silk on the tongue — no grain, no thread of cooked egg, no specks of zest caught in it — and the cut face is glossy rather than dull and matte." },
+			{ id: 'tarte-au-citron#curd', text: "The curd is silk on the tongue (no grain, no thread of cooked egg, no specks of zest caught in it), and the cut face is glossy rather than dull and matte." },
 			{ id: 'tarte-au-citron#sour', text: "Sour arrives before sweet and the swallow makes the mouth water. If the sugar lands first, it does not go out." }
 		],
 		fault: "The curd is pushed past 82°C, or cooked over direct heat instead of the bain-marie: it scrambles at the pan wall, and even strained it sets dull and grainy and weeps a thin syrup onto the surface overnight."
@@ -342,7 +342,7 @@ export const STANDARDS = [
 		marks: [
 			{ id: 'profiteroles-pate-a-choux-master#oven', text: "Before the oven: the batter falls from the spoon in a slow V rather than a blob or a ribbon, and each piped mound holds a defined dome that settles under a wet finger without spreading toward its neighbour." },
 			{ id: 'profiteroles-pate-a-choux-master#puff', text: "Each puff is round and roughly double its piped height, with no baked-on peak and no flat sunken side; the tray reads as one size." },
-			{ id: 'profiteroles-pate-a-choux-master#colour', text: "Colour is even gold-brown over the dome and carries down to the crease where it meets the base — a blond, soft-looking waist there means it came out early." },
+			{ id: 'profiteroles-pate-a-choux-master#colour', text: "Colour is even gold-brown over the dome and carries down to the crease where it meets the base: a blond, soft-looking waist there means it came out early." },
 			{ id: 'profiteroles-pate-a-choux-master#minutes', text: "Ten minutes on the rack and nothing has sunk or gone soft: pressed at the side the wall resists, then cracks. Split one and it is a single hollow cavity with a few wisps of webbing, walls dry to the touch, no wet dough sitting in the base." },
 			{ id: 'profiteroles-pate-a-choux-master#ganache', text: "The ganache coats the back of a spoon and drapes over the stack in one glossy sheet; two minutes under it, the shells still crack." }
 		],
@@ -459,10 +459,10 @@ export const STANDARDS = [
 			{ id: 'cantonese-steamed-fish#near', text: "Before it goes near the steamer: eyes clear and domed rather than sunken and cloudy, gills wet and red, the flesh springing back when pressed, and the smell nothing but clean seawater. This is the one fault that cannot be corrected downstream, so it is checked first and out loud." },
 			{ id: 'cantonese-steamed-fish#chopstick', text: "A chopstick into the thickest part behind the head meets no resistance, and the flesh parts from the backbone in whole sheets. At the bone it reads just-set white, faintly translucent, never chalky and never pink." },
 			{ id: 'cantonese-steamed-fish#steaming', text: "The steaming liquid has been poured off: no grey pool under the fish. The seasoned soy sits clear around it, at a level below the flesh, so the skin stays unglazed." },
-			{ id: 'cantonese-steamed-fish#aromatics', text: "The aromatics were cooked by the oil, not the steam — ginger julienne curled and translucent at the tips, scallion greens collapsed and shining, and there was an audible crackle at the pour. Slack raw-green shreds sitting in oil mean the oil went on below smoking." },
+			{ id: 'cantonese-steamed-fish#aromatics', text: "The aromatics were cooked by the oil, not the steam: ginger julienne curled and translucent at the tips, scallion greens collapsed and shining, and there was an audible crackle at the pour. Slack raw-green shreds sitting in oil mean the oil went on below smoking." },
 			{ id: 'cantonese-steamed-fish#whole', text: "Whole and unbroken on the platter: skin intact from head to tail, no flesh torn where the fish was lifted off the steaming plate, head to the guest of honour. A bite from the middle of the fillet tastes of fish first; the soy registers only when the flesh is dragged through it." }
 		],
-		fault: "It is steamed to the timer instead of to the chopstick and comes out ninety seconds long — the fillet shreds into dry cotton fibre when lifted, and a milky pool of squeezed-out juice spreads under the fish and dilutes the soy."
+		fault: "It is steamed to the timer instead of to the chopstick and comes out ninety seconds long; the fillet shreds into dry cotton fibre when lifted, and a milky pool of squeezed-out juice spreads under the fish and dilutes the soy."
 	},
 	{
 		slug: "linguine-alle-vongole",
@@ -473,7 +473,7 @@ export const STANDARDS = [
 			{ id: 'linguine-alle-vongole#strand', text: "A strand bitten through shows a hairline of firmer paste at its centre and no white chalk core: the last three minutes happened in the pan, not the water." },
 			{ id: 'linguine-alle-vongole#nothing', text: "Nothing grits against the teeth in the final spoonful, proof the clams were purged and the liquor strained, and the bowl needs no salt at the table, because the salt came from the liquor." }
 		],
-		fault: "A broken or watery sauce, from finishing the pasta in the water and pouring the clam liquor over it at the end rather than tossing the two together over heat — the oil separates into a slick at the rim and the pasta sits in clam water instead of wearing it."
+		fault: "A broken or watery sauce, from finishing the pasta in the water and pouring the clam liquor over it at the end rather than tossing the two together over heat; the oil separates into a slick at the rim and the pasta sits in clam water instead of wearing it."
 	},
 	{
 		slug: "miso-glazed-black-cod",
@@ -482,18 +482,18 @@ export const STANDARDS = [
 			{ id: 'miso-glazed-black-cod#thin', text: "A thin skin of glaze, wiped and not rinsed: no clods of scraped miso baked hard onto the fillet, and equally no washed-looking bare patches that took no colour at all." },
 			{ id: 'miso-glazed-black-cod#flesh', text: "The flesh breaks into large petals a centimetre thick under the edge of a spoon, the fillet lying flat rather than buckled, with no white curd of albumin squeezed out along the seams." },
 			{ id: 'miso-glazed-black-cod#white', text: "White and glistening to the centre with the fat visibly running, and no dry chalky seam sitting under the crust." },
-			{ id: 'miso-glazed-black-cod#bite', text: "A bite taken from the middle, with no glaze on it, still tastes salted and faintly sweet — an unseasoned centre means the fish went in at 24 hours, not 48 to 72." }
+			{ id: 'miso-glazed-black-cod#bite', text: "A bite taken from the middle, with no glaze on it, still tastes salted and faintly sweet: an unseasoned centre means the fish went in at 24 hours, not 48 to 72." }
 		],
 		fault: "Black before it is cooked, because the excess marinade was left on and the fillet sat too close to the element: bitter carbon on top, cool untransformed flesh under it."
 	},
 	{
 		slug: "whole-grilled-fish-with-ladolemono",
 		marks: [
-			{ id: 'whole-grilled-fish-with-ladolemono#skin', text: "Skin whole from gill to tail, striped with dark bars, and the grate clean when the fish comes off — nothing of the fish left welded to the bars." },
+			{ id: 'whole-grilled-fish-with-ladolemono#skin', text: "Skin whole from gill to tail, striped with dark bars, and the grate clean when the fish comes off: nothing of the fish left welded to the bars." },
 			{ id: 'whole-grilled-fish-with-ladolemono#dorsal', text: "The dorsal fin pulls out with no resistance before the fish leaves the coals, and the reading holds up when it is opened: at the shoulder the flesh is opaque and slips off the pin bones, and the line along the spine has set from red to pale grey." },
 			{ id: 'whole-grilled-fish-with-ladolemono#fillet', text: "The top fillet lifts away in one piece and the backbone comes out whole, leaving the underside fillet intact." },
 			{ id: 'whole-grilled-fish-with-ladolemono#ladolemono', text: "The ladolemono reaches the plate as one liquid: cloudy, loose enough to pour, thick enough to coat, and spooned over within a minute of the whisk. Clear oil floating on a lemon layer means it was made ahead and sat." },
-			{ id: 'whole-grilled-fish-with-ladolemono#piece', text: "A piece of fish eaten before any sauce touches it is already seasoned to the middle, skin and cavity both — the ladolemono is bringing acid and oil, not the salt." }
+			{ id: 'whole-grilled-fish-with-ladolemono#piece', text: "A piece of fish eaten before any sauce touches it is already seasoned to the middle, skin and cavity both: the ladolemono is bringing acid and oil, not the salt." }
 		],
 		fault: "Turned before it let go: half the skin stays on the grate, the flank tears open, and the exposed flesh dries over the coals through the second half of the cook."
 	},
@@ -504,7 +504,7 @@ export const STANDARDS = [
 			{ id: 'calamari-fritti#pale', text: "Pale straw gold, never tan. The dredge sits as a lacy film that still shows the shape of the ring beneath it, with no shaggy clumps of loose flour fried alongside." },
 			{ id: 'calamari-fritti#rings', text: "Rings hold an open curl and the tentacles are frilled and separate; a fused clump on the rack means the batch went in crowded." },
 			{ id: 'calamari-fritti#ring', text: "A ring parts in a single bite with no rebound against the teeth, the flesh inside white and moist rather than chalky." },
-			{ id: 'calamari-fritti#undersides', text: "Undersides as crisp as tops with a dry plate under the pile, salt clinging to the crust and none loose in the bottom of the bowl, and the plate on the table within five minutes of the fryer — nothing waiting under a lamp." }
+			{ id: 'calamari-fritti#undersides', text: "Undersides as crisp as tops with a dry plate under the pile, salt clinging to the crust and none loose in the bottom of the bowl, and the plate on the table within five minutes of the fryer, nothing waiting under a lamp." }
 		],
 		fault: "The oil fell below 190°C because too much went in at once: the coating drinks fat instead of setting, and the squid stews long enough in the lukewarm bath to tighten, so the same bite is both greasy and rubbery."
 	},
@@ -515,30 +515,30 @@ export const STANDARDS = [
 		marks: [
 			{ id: 'sauce-espagnole-and-demi-glace#roux', text: "The roux before the stock goes in: café-au-lait to hazelnut brown, smelling of toasted nuts, with no black specks and no acrid catch at the back of the nose. Burnt roux cannot be skimmed, strained or reduced out afterwards, so it is stopped here." },
 			{ id: 'sauce-espagnole-and-demi-glace#ladle', text: "A ladle drawn across the surface comes up dry: no fat eyes, no grey scum, and no ring of it on the pot wall stirred back in." },
-			{ id: 'sauce-espagnole-and-demi-glace#passed', text: "Passed through fine mesh and smooth on the lip — no specks of mirepoix, no herb, no grain from the roux." },
+			{ id: 'sauce-espagnole-and-demi-glace#passed', text: "Passed through fine mesh and smooth on the lip: no specks of mirepoix, no herb, no grain from the roux." },
 			{ id: 'sauce-espagnole-and-demi-glace#coats', text: "It coats the back of a spoon and holds a finger-drawn line without closing, and the film on the spoon reads deep translucent brown against the light rather than grey or muddy. Chilled demi-glace sets firm enough to cut into cubes that keep their edges." },
-			{ id: 'sauce-espagnole-and-demi-glace#tastes', text: "It tastes of roasted bone with no chalk of raw flour anywhere in it, and it is deliberately short of salt — seasoned to the palate now, it becomes brine when the demi is reduced by half." }
+			{ id: 'sauce-espagnole-and-demi-glace#tastes', text: "It tastes of roasted bone with no chalk of raw flour anywhere in it, and it is deliberately short of salt: seasoned to the palate now, it becomes brine when the demi is reduced by half." }
 		],
-		fault: "Skimming was let go in the first half hour, so fat and albumin were reduced back into the sauce — it comes out cloudy, greasy on the lip, and tasting of scorched flour instead of roasted bone."
+		fault: "Skimming was let go in the first half hour, so fat and albumin were reduced back into the sauce: it comes out cloudy, greasy on the lip, and tasting of scorched flour instead of roasted bone."
 	},
 	{
 		slug: "dry-brined-roast-turkey-with-real-gravy",
 		marks: [
 			{ id: 'dry-brined-roast-turkey-with-real-gravy#skin', text: "Skin uniformly deep brown, taut and dry enough to click under a fingernail, unbroken over the breast where the herb butter went under." },
 			{ id: 'dry-brined-roast-turkey-with-real-gravy#bird', text: "The bird came out on two thermometer readings, not a time: 65°C at the deepest part of the breast and 74°C at the thigh joint, the probe kept off the bone." },
-			{ id: 'dry-brined-roast-turkey-with-real-gravy#carved', text: "Carved at a full 45 minutes — a slice weeps at the cut edge and the board stays nearly dry. A flood on the board says the bird was cut early." },
+			{ id: 'dry-brined-roast-turkey-with-real-gravy#carved', text: "Carved at a full 45 minutes: a slice weeps at the cut edge and the board stays nearly dry. A flood on the board says the bird was cut early." },
 			{ id: 'dry-brined-roast-turkey-with-real-gravy#breast', text: "Breast slices hold together coming off the knife and read moist white through their whole thickness; at the thigh the meat pulls easily from the bone and the juices there run clear rather than pink." },
 			{ id: 'dry-brined-roast-turkey-with-real-gravy#slice', text: "A slice of breast eaten alone, no gravy, is seasoned to its centre. The gravy is strained, coats a spoon, and carries no fat slick on top and no floury edge underneath." }
 		],
-		fault: "The bird is timed rather than probed and the breast rides up to thigh temperature — white meat comes off the knife in dry crumbling slabs, and the gravy ends up doing the work the roast was meant to do."
+		fault: "The bird is timed rather than probed and the breast rides up to thigh temperature: white meat comes off the knife in dry crumbling slabs, and the gravy ends up doing the work the roast was meant to do."
 	},
 	{
 		slug: "salt-baked-whole-fish",
 		marks: [
 			{ id: 'salt-baked-whole-fish#salt', text: "Before the salt goes on: skin whole and unbroken, no knife nicks along the flank or at the vent, and the cavity holding lemon and herbs only. Not one grain of salt goes inside the fish." },
-			{ id: 'salt-baked-whole-fish#dome', text: "The dome comes out hard, matte and pale, still sealed to the tray, with no split that steamed open and no browned damp patch where the pack ran thin — and it breaks into slabs under a spoon handle, the skin lifting away stuck to the crust and leaving the flesh clean, unmarked and carrying no salt grains." },
+			{ id: 'salt-baked-whole-fish#dome', text: "The dome comes out hard, matte and pale, still sealed to the tray, with no split that steamed open and no browned damp patch where the pack ran thin, and it breaks into slabs under a spoon handle, the skin lifting away stuck to the crust and leaving the flesh clean, unmarked and carrying no salt grains." },
 			{ id: 'salt-baked-whole-fish#skewer', text: "A skewer into the thickest part, held five seconds, comes out warm on the lip: cold means it goes back in before the crust is touched, hot means it has gone past." },
-			{ id: 'salt-baked-whole-fish#tail', text: "The tail end is as moist as the shoulder — evenness is the whole claim of the crust, and a dry tail says the pack was thin at that end." },
+			{ id: 'salt-baked-whole-fish#tail', text: "The tail end is as moist as the shoulder: evenness is the whole claim of the crust, and a dry tail says the pack was thin at that end." },
 			{ id: 'salt-baked-whole-fish#taste', text: "Taste at the belly seam first: that is where salt gets in if the skin was nicked, and one blown bite there condemns the fish." }
 		],
 		fault: "Salt packed into the cavity as well as over the fish: it cures straight through the thin belly wall while the crust is doing its work, and the fillet arrives brined rather than steamed."
@@ -552,7 +552,7 @@ export const STANDARDS = [
 			{ id: 'baked-alaska#knife', text: "Cut with a hot knife, the face shows three bands with hard borders: hot toasted shell, ice cream holding its own edge, cake beneath. A melted ring under the meringue and the oven won." },
 			{ id: 'baked-alaska#beads', text: "No beads of syrup on the meringue and no liquid on the plate a minute after service, and the cake base is still dry enough to lift the slice on a spatula." }
 		],
-		fault: "The meringue goes onto ice cream that has softened at the surface, or goes on still warm from the syrup — the two meet as slush, the dome slides and the seal splits at the base, and the slice arrives as cream soup under browned foam."
+		fault: "The meringue goes onto ice cream that has softened at the surface, or goes on still warm from the syrup: the two meet as slush, the dome slides and the seal splits at the base, and the slice arrives as cream soup under browned foam."
 	},
 ];
 

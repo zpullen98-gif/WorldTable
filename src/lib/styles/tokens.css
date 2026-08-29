@@ -1,5 +1,5 @@
 /**
- * The World Table — design tokens.
+ * The World Table: design tokens.
  *
  * Night service is the default (the original's paper #191612 / turmeric #C2A055).
  * Day is not a handful of overrides on a body class as it was before, but a full
@@ -29,7 +29,7 @@
 	--leaf: #8fa57f;
 
 	/* Solid accent surfaces (the "go" buttons, active pins) and the ink that
-	   sits on them. A pair, because white-on-gold fails AA in day service —
+	   sits on them. A pair, because white-on-gold fails AA in day service:
 	   each service picks a gold dark or light enough for its ink. */
 	--accent-solid: #c2a055;
 	--on-accent: #191612;
@@ -50,12 +50,12 @@
 
 	/* A 1.25 modular scale off a 16px base. Named by role, not by size, so a
 	   change of scale doesn't require touching every component. */
-	--t-micro: 0.6875rem; /* 11px  — eyebrows, tabs, counts */
-	--t-small: 0.8125rem; /* 13px  — captions, badges */
-	--t-body: 1rem; /* 16px  — running text */
+	--t-micro: 0.6875rem; /* 11px: eyebrows, tabs, counts */
+	--t-small: 0.8125rem; /* 13px  : captions, badges */
+	--t-body: 1rem; /* 16px: running text */
 	--t-lede: 1.125rem; /* 18px  — intros */
 	--t-h4: 1.1875rem; /* 19px  card titles */
-	--t-h3: 1.5rem; /* 24px  — section heads */
+	--t-h3: 1.5rem; /* 24px  : section heads */
 	--t-h2: 1.875rem; /* 30px: chapter heads */
 	--t-h1: clamp(2rem, 4.5vw, 2.9rem);
 
@@ -71,7 +71,7 @@
 	color-scheme: dark;
 }
 
-/* Day service — the illuminated page rather than the inverted one. */
+/* Day service: the illuminated page rather than the inverted one. */
 @media (prefers-color-scheme: light) {
 	:root:not([data-service='night']) {
 		--paper: #fefdf8;
@@ -84,7 +84,7 @@
 		--line-strong: #c8bda0;
 
 		--turmeric: #a5822f;
-		--turmeric-deep: #7a5f26; /* AA on tinted paper — #8a6d2e measured 4.43:1 */
+		--turmeric-deep: #7a5f26; /* AA on tinted paper: #8a6d2e measured 4.43:1 */
 		--chili: #a04f63;
 		--leaf: #5f7a4e;
 		--accent-solid: #8a6b21; /* darker than --turmeric: white ink needs 4.5:1 */
@@ -95,7 +95,7 @@
 		--shadow-sheet: 0 24px 64px -28px rgba(37, 33, 26, 0.35);
 		--scrim: rgba(60, 54, 40, 0.34);
 
-		/* Grain reads much heavier on light paper — same texture, less of it. */
+		/* Grain reads much heavier on light paper, same texture, less of it. */
 		--grain-opacity: 0.035;
 		--grain-blend: multiply;
 
@@ -114,7 +114,7 @@
 	--line-strong: #c8bda0;
 
 	--turmeric: #a5822f;
-	--turmeric-deep: #7a5f26; /* AA on tinted paper — #8a6d2e measured 4.43:1 */
+	--turmeric-deep: #7a5f26; /* AA on tinted paper: #8a6d2e measured 4.43:1 */
 	--chili: #a04f63;
 	--leaf: #5f7a4e;
 	--accent-solid: #8a6b21; /* darker than --turmeric: white ink needs 4.5:1 */

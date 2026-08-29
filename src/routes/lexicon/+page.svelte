@@ -15,7 +15,7 @@
 	 *
 	 * The original bound `lexQ.addEventListener('input', renderLex)` to the FIRST
 	 * definition of renderLex; the enhanced version at L2839, the one that draws
-	 * the recipe cross-links — only ever ran on the initial paint. So the moment
+	 * the recipe cross-links, only ever ran on the initial paint. So the moment
 	 * you typed a character, every cross-link vanished.
 	 *
 	 * `$derived` recomputes from state. There is no function reference held by a
@@ -32,7 +32,7 @@
 
 	/* ---- flashcards ----
 	 * The deck snapshots the ENTRIES, not indices into `shown`. `shown` is a
-	 * live derivation over the search box — with indices, shuffling and then
+	 * live derivation over the search box: with indices, shuffling and then
 	 * typing a character makes every index dangle or point at the wrong term.
 	 * A snapshot also matches how study decks behave physically: narrowing the
 	 * search mid-drill shouldn't reshuffle the cards in your hand.
@@ -55,7 +55,7 @@
 
 	/* ---- quiz ----
 	 * Ported from qzAsk (L3082): ten questions a round, distractors drawn from
-	 * the SAME category when it has enough terms — telling hanger from flank is
+	 * the SAME category when it has enough terms: telling hanger from flank is
 	 * the actual skill; telling hanger from crème anglaise is a giveaway.
 	 */
 	type Entry = (typeof data.lexicon)[number];
@@ -110,10 +110,10 @@
 				right >= 9
 					? 'Chef-level. The pass is yours.'
 					: right >= 7
-						? 'Solid line cook — a few more services and it’s muscle memory.'
+						? 'Solid line cook: a few more services and it’s muscle memory.'
 						: right >= 5
-							? 'Stage complete — hit the flashcards on what you missed.'
-							: 'Back to prep, chef — filter the category and study before the next round.';
+							? 'Stage complete: hit the flashcards on what you missed.'
+							: 'Back to prep, chef: filter the category and study before the next round.';
 			// Contract with the OOT monorepo's shared/oot-log.js (hookTable).
 			if (typeof window !== 'undefined')
 				window.dispatchEvent(
@@ -128,13 +128,13 @@
 	}
 </script>
 
-<svelte:head><title>The Chef’s Lexicon — The World Table</title></svelte:head>
+<svelte:head><title>The Chef’s Lexicon: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
 		<h1>The Chef’s Lexicon</h1>
 		<p class="lede">
-			A working culinary dictionary for the climb from cook to chef to restaurateur — cuts and how
+			A working culinary dictionary for the climb from cook to chef to restaurateur: cuts and how
 			to treat them, the fish counter decoded, every technique from a proper sear to sous vide,
 			pastry science, and the language of the professional kitchen.
 		</p>
@@ -145,7 +145,7 @@
 			<input
 				bind:value={q}
 				type="search"
-				placeholder="Search a term — try “hanger”, “maillard”, or “86”"
+				placeholder="Search a term: try “hanger”, “maillard”, or “86”"
 				aria-label="Search the lexicon"
 			/>
 		</div>
@@ -235,7 +235,7 @@
 	</div>
 
 	{#if !shown.length}
-		<p class="empty">No terms match. Widen the search — the kitchen is large.</p>
+		<p class="empty">No terms match. Widen the search: the kitchen is large.</p>
 	{/if}
 </div>
 

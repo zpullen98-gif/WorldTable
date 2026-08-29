@@ -2,11 +2,11 @@
  * The waste log's vocabulary, read out of the guide, not invented.
  *
  * The guide asks for this feature by name: *"waste logs (what died in the
- * walk-in, and why — over-prepping is the most common villain)"*. It also
+ * walk-in, and why: over-prepping is the most common villain)"*. It also
  * supplies the taxonomy, in three entries rather than one:
  *
  *  - COGS Control names the leak meter itself: *"the VARIANCE between them is
- *    your leak meter: waste, portioning drift, unrecorded comps, or theft"* —
+ *    your leak meter: waste, portioning drift, unrecorded comps, or theft"*,
  *    and the villain.
  *  - Prime Cost decomposes the COGS side as *"pricing, portioning, waste,
  *    theft, vendor creep"*.
@@ -25,7 +25,7 @@
  * pride, not a surveillance state"*. A bin with a THEFT button on it is
  * suspicion, it is the accusation made before the evidence, and nobody has
  * ever logged their own. Theft is what remains in the variance once the log
- * has accounted for everything it can name — which is exactly how the guide
+ * has accounted for everything it can name, which is exactly how the guide
  * frames it, and the only honest way to reach it.
  *
  * **Vendor creep** is named by Prime Cost and belongs to the item book: it is a
@@ -49,7 +49,7 @@ export const ANCHORS = {
  *
  * `covers` names the leak-meter term this code accounts for, and the reverse
  * gate uses it. `evidence` is the literal substring its anchor must still
- * contain — literal, not reconstructed, because an en dash and a hyphen look
+ * contain: literal, not reconstructed, because an en dash and a hyphen look
  * identical in a diff.
  *
  * Order is deliberate and is the guide's claim, not alphabetical: the villain
@@ -87,7 +87,7 @@ export const REASONS = [
 		anchor: 'cogs',
 		covers: 'unrecorded comps',
 		evidence: 'unrecorded comps',
-		hint: 'Went out and was not paid for — sent back, remade, or given away.'
+		hint: 'Went out and was not paid for: sent back, remade, or given away.'
 	},
 	{
 		key: 'spilled',

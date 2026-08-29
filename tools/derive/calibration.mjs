@@ -7,7 +7,7 @@
  * guide's, they are not a statement of correct seasoning, and they are not a
  * house spec. They are two cups chosen to be DISCRIMINABLE at a stated
  * difficulty, the way an eye chart's letters are chosen to be legible at a
- * distance — the chart is not an opinion about what you should be reading.
+ * distance: the chart is not an opinion about what you should be reading.
  *
  * Same disclosure treatment sanitation.mjs gives its 4–60°C conflict: say whose
  * number it is, on the page, where the number is.
@@ -42,7 +42,7 @@ export const CUPS = 3;
  * Trials in a run, and the reason it is never one.
  *
  * A triangle test has a 1-in-3 guess rate, so a single trial logged as "met"
- * says almost nothing — that is precisely the failure drill.ts's
+ * says almost nothing: that is precisely the failure drill.ts's
  * never-shorten-the-round rule exists to prevent. Six trials at chance is a
  * 1-in-729 run of luck for a clean sweep.
  */
@@ -58,7 +58,7 @@ export const PASS_AT = 5;
  * water, mixed until dissolved. Levels narrow: level 1 is a gap most people
  * find obvious, level 5 is close to the limit of trained discrimination.
  *
- * Kitchen-practical on purpose — whole or half grams into a litre, because a
+ * Kitchen-practical on purpose: whole or half grams into a litre, because a
  * kitchen scale reads to 1 g and a cook is not going to weigh 0.02 g.
  */
 export const LADDERS = [
@@ -68,7 +68,7 @@ export const LADDERS = [
 		substance: 'fine salt',
 		unit: 'g',
 		per: '1 litre of water',
-		note: 'The one that ends the most arguments. Mix both jugs fully — undissolved salt at the bottom is a different test.',
+		note: 'The one that ends the most arguments. Mix both jugs fully: undissolved salt at the bottom is a different test.',
 		levels: [
 			{ level: 1, base: 3, odd: 6 },
 			{ level: 2, base: 4, odd: 6 },
@@ -143,7 +143,7 @@ export const LADDERS = [
 		substance: 'fine salt',
 		unit: 'g',
 		per: '1 litre of unsalted stock',
-		note: 'The one that is actually the job. Same stock in both jugs — a different batch is a different test, and the repair table calls a flat plate the commonest fault there is.',
+		note: 'The one that is actually the job. Same stock in both jugs: a different batch is a different test, and the repair table calls a flat plate the commonest fault there is.',
 		levels: [
 			{ level: 1, base: 0, odd: 5 },
 			{ level: 2, base: 2, odd: 5 },
@@ -154,6 +154,6 @@ export const LADDERS = [
 	}
 ];
 
-/** `cal-<taste>-<level>` — the slug a cleared level is logged under. */
+/** `cal-<taste>-<level>`: the slug a cleared level is logged under. */
 /** @param {string} taste @param {number} level */
 export const slugFor = (taste, level) => `cal-${taste}-${level}`;

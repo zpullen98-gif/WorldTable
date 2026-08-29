@@ -20,7 +20,7 @@
 
 	/* Date.now() inside the derivation rather than a ticking clock. It
 	   recomputes whenever the log changes, which is the only event that can
-	   actually move a dish between states while the page is open — the
+	   actually move a dish between states while the page is open: the
 	   alternative is an interval firing all day to redraw a schedule measured
 	   in weeks. */
 	const all = $derived.by(() => repertoire(session.cookedLog, Date.now()));
@@ -60,7 +60,7 @@
 	}
 </script>
 
-<svelte:head><title>The Repertoire — The World Table</title></svelte:head>
+<svelte:head><title>The Repertoire: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -82,7 +82,7 @@
 	{#if !all.length}
 		<section class="empty">
 			<p>
-				Nothing cooked yet. The repertoire fills itself — mark a dish cooked when you have actually
+				Nothing cooked yet. The repertoire fills itself: mark a dish cooked when you have actually
 				made it, and it starts keeping the schedule for you.
 			</p>
 			<p>
@@ -165,7 +165,7 @@
 		<h2 class="sec">How the schedule works</h2>
 		<p class="secnote">
 			Five rungs. A plate that meets its standard climbs one, a close plate holds, a missed one
-			drops back — so the interval is earned rather than counted. Dishes with no standard yet
+			drops back, so the interval is earned rather than counted. Dishes with no standard yet
 			simply climb: having nothing to check against is the guide's gap, not yours.
 		</p>
 		<ol class="rungs">

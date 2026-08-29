@@ -1,5 +1,5 @@
 /**
- * Equipment list — ported from `equipFor` (L3331). EQUIP is 31 [RegExp, label]
+ * Equipment list: ported from `equipFor` (L3331). EQUIP is 31 [RegExp, label]
  * pairs. The original ran all 31 regexes on every modal open; this runs them
  * once per recipe at build time.
  *
@@ -10,7 +10,7 @@
  *   the full text was this port's first mistake: a "from the pass" note that
  *   merely mentions a blender is not a recipe that needs one.
  * - The list caps at 6, as the original's `.slice(0,6)` does.
- * - The original then did `.map(([n])=>n)` — destructuring the FIRST element of
+ * - The original then did `.map(([n])=>n)`: destructuring the FIRST element of
  *   each pair, which is the RegExp, so its equipment line rendered regex
  *   sources like "/dutch oven/". That is a display bug in the original and is
  *   deliberately NOT reproduced: we keep its match semantics and emit the

@@ -1,10 +1,10 @@
 /**
- * The World Table — data model.
+ * The World Table: data model.
  *
  * The original stored nine terse keys per recipe (n/c/k/d/t/v/i/m/p) and guessed
  * everything else with regexes at render time, ~970 times per keystroke. Here the
  * authored fields keep their meaning under readable names, and every derived
- * field is computed once by `npm run build:data` and committed as JSON — so a
+ * field is computed once by `npm run build:data` and committed as JSON, so a
  * regex tweak shows up as a reviewable diff instead of a behaviour change nobody
  * can see.
  */
@@ -53,7 +53,7 @@ export interface Step {
 	/** Seconds, parsed from phrases like "simmer 20 min". Null when none found. */
 	durationSec: number | null;
 	/**
-	 * The step split into work and waiting — see tools/derive/service.mjs.
+	 * The step split into work and waiting: see tools/derive/service.mjs.
 	 *
 	 * `durationSec` above is the COOK MODE TIMER's number and is deliberately
 	 * untouched: it is the first duration in the step, which is what a timer
@@ -81,7 +81,7 @@ export interface DietFlags {
 	/**
 	 * The literal reading: no animal product in any binding ingredient position.
 	 * Differs from `vegetarian` on ~22 dishes because the corpus is inconsistent
-	 * about substitution constructions — see tools/derive/diet.mjs.
+	 * about substitution constructions; see tools/derive/diet.mjs.
 	 */
 	vegetarianStrict: boolean;
 	/** Animal products appear, but only in optional or "or" positions. */
@@ -154,7 +154,7 @@ export interface RecipeSummary {
 	season: number[];
 	region: { kind: RegionKind; group: string };
 	source: 'guide' | 'family';
-	/** Length of the "from the pass" note — drives the backfill report. */
+	/** Length of the "from the pass" note: drives the backfill report. */
 	noteChars: number;
 }
 
@@ -167,10 +167,10 @@ export interface RecipeDetail {
 	equipment: string[];
 	techniques: string[];
 	flavor: FlavorProfile;
-	/** Index into pairings.json — 41 distinct outcomes across 970 recipes. */
+	/** Index into pairings.json: 41 distinct outcomes across 970 recipes. */
 	pairingId: number;
 	films: Films;
-	/** Slugs into the lexicon — scored at build time, not "first three hits". */
+	/** Slugs into the lexicon: scored at build time, not "first three hits". */
 	lexiconTerms: string[];
 	/** Pantry item labels this recipe calls for. */
 	pantryItems: string[];
@@ -246,7 +246,7 @@ export interface LexiconEntry {
 	term: string;
 	category: string;
 	definition: string;
-	/** Recipe slugs that demonstrate this term — capped at 3 by crosslinks.mjs. */
+	/** Recipe slugs that demonstrate this term: capped at 3 by crosslinks.mjs. */
 	recipes: string[];
 }
 
@@ -254,7 +254,7 @@ export interface LexiconEntry {
  * A skill the guide teaches, with every recipe that demonstrates it.
  *
  * The complement to LexiconEntry: a term is capped at three recipes because it
- * is a definition card, whereas a Technique carries the complete set — which is
+ * is a definition card, whereas a Technique carries the complete set, which is
  * the whole point of the technique pages.
  */
 export interface Technique {
@@ -267,7 +267,7 @@ export interface Technique {
 	/** The lexicon term that defines this skill, when one does. */
 	lexiconSlug: string | null;
 	lexiconTerm: string | null;
-	/** Copied from the lexicon at build time — see build-data.mjs for why. */
+	/** Copied from the lexicon at build time: see build-data.mjs for why. */
 	definition: string | null;
 	origin: 'original' | 'supplement';
 	/** How many distinct chapters demonstrate it, a breadth signal. */
@@ -297,7 +297,7 @@ export interface StudySemester {
 	description: string;
 	/** Recipe slugs, in teaching order. */
 	recipes: string[];
-	/** Lexicon slugs — the reading that explains why the dishes work. */
+	/** Lexicon slugs: the reading that explains why the dishes work. */
 	terms: string[];
 	/**
 	 * Skills this semester's dishes demonstrate, heaviest first. Derived from the
@@ -338,7 +338,7 @@ export const EMPTY_FILTERS: FilterState = {
 	season: false
 };
 
-/** "Under 40 min" — the original's threshold, kept. */
+/** "Under 40 min": the original's threshold, kept. */
 export const QUICK_MINUTES = 40;
 
 export const DIFFICULTY_LABEL: Record<Difficulty, string> = {
@@ -348,7 +348,7 @@ export const DIFFICULTY_LABEL: Record<Difficulty, string> = {
 };
 
 /**
- * The palate — tasting, diagnosing, and correcting a dish.
+ * The palate: tasting, diagnosing, and correcting a dish.
  *
  * Structure over the guide's own "Repair Table" and "Tasting Vocabulary"
  * entries rather than new content; tools/derive/palate.mjs states exactly what
@@ -377,7 +377,7 @@ export interface Palate {
 }
 
 /**
- * Menu economics — the bands and quadrants a costing sheet is scored against.
+ * Menu economics, the bands and quadrants a costing sheet is scored against.
  *
  * Every number is the guide's own and is checked against the prose at build
  * time; see tools/derive/economics.mjs for what is gated against what.
@@ -437,7 +437,7 @@ export interface WasteVocabulary {
 }
 
 /**
- * Sanitation — the guide's food-safety entries, and its silences.
+ * Sanitation: the guide's food-safety entries, and its silences.
  *
  * Carried and gated by tools/derive/sanitation.mjs. Note what is NOT here:
  * there is no per-recipe hazard type, because all five candidate hazard rules
@@ -511,7 +511,7 @@ export interface ServiceModule {
 	/** 1-based position in the teaching order. */
 	n: number;
 	title: string;
-	/** What a person can do after it — a claim that could be checked. */
+	/** What a person can do after it, a claim that could be checked. */
 	outcome: string;
 	terms: ServiceTermRef[];
 }
@@ -526,14 +526,14 @@ export interface ServiceTrack {
 	untaught: string[];
 }
 
-/** Drill cards — see tools/derive/drills.mjs. Prompts ship REDACTED. */
+/** Drill cards: see tools/derive/drills.mjs. Prompts ship REDACTED. */
 export interface Drills {
 	cards: import('./drill').DrillCard[];
 	categories: Record<string, number>;
 }
 
 /**
- * The brigade's stations — see tools/derive/stations.mjs. The station list is
+ * The brigade's stations: see tools/derive/stations.mjs. The station list is
  * the guide's own; the technique map is authored and gated in both directions.
  */
 export interface StationsData {
@@ -542,7 +542,7 @@ export interface StationsData {
 	dishes: Record<string, number>;
 	/** The guide's own words on the swing cook. */
 	tournant: string;
-	/** Cross-station literacy — counted separately, owned by nobody. */
+	/** Cross-station literacy: counted separately, owned by nobody. */
 	foundation: string[];
 	/** Techniques the corpus does not actually drill. Never counted. */
 	undrilled: string[];

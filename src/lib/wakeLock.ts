@@ -6,7 +6,7 @@
  * cook-mode entry, re-acquired when the tab becomes visible again (the browser
  * silently releases it on tab switch), and released on exit.
  *
- * Returns a release function, or null where the API is unavailable — the
+ * Returns a release function, or null where the API is unavailable: the
  * caller shows its "screen staying awake" indicator only on success, so the
  * user is never promised something the browser didn't grant.
  */
@@ -20,7 +20,7 @@ export async function acquireWakeLock(): Promise<(() => void) | null> {
 		try {
 			sentinel = await navigator.wakeLock.request('screen');
 		} catch {
-			// Low battery, permissions policy, or an OS that says no — all fine.
+			// Low battery, permissions policy, or an OS that says no, all fine.
 			sentinel = null;
 		}
 	};

@@ -32,7 +32,7 @@
 	 * The techniques offered are ONLY the 26 that have a standard written.
 	 *
 	 * Bounding the list to those does two things at once: it keeps the picker
-	 * short enough to read, and it guarantees a tick means something — a tick
+	 * short enough to read, and it guarantees a tick means something: a tick
 	 * resolving to no standard would leave the dish exactly where it started,
 	 * recorded as cooked and nothing more. Rarest first, so the most telling
 	 * ones are not buried under Searing.
@@ -75,13 +75,13 @@
 	}
 </script>
 
-<svelte:head><title>The Family Chapter — The World Table</title></svelte:head>
+<svelte:head><title>The Family Chapter: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
 		<h1>The Family Chapter</h1>
 		<p class="lede">
-			The recipes that never made it into any book — Nonna’s Sunday sauce, the church-cookbook
+			The recipes that never made it into any book: Nonna’s Sunday sauce, the church-cookbook
 			casserole, the thing your father makes without measuring. Added here, they behave like any
 			other page of the guide: they appear in the grid, match in the pantry, pin to menus, and cook
 			in cook mode. Kept on this device; export a session file from My Menu to carry them.
@@ -131,7 +131,7 @@
 			</label>
 
 			<label>
-				<span class="sec">Ingredients — one per line</span>
+				<span class="sec">Ingredients: one per line</span>
 				<textarea
 					bind:value={draft.ingredients}
 					rows="7"
@@ -171,13 +171,13 @@
 				</div>
 				{#if atCap}
 					<p class="techhint">
-						That is {FAMILY_TECHNIQUE_MAX} — untick one to choose another.
+						That is {FAMILY_TECHNIQUE_MAX}: untick one to choose another.
 					</p>
 				{/if}
 			</fieldset>
 
 			<label>
-				<span class="sec">From the pass — the family secret</span>
+				<span class="sec">From the pass: the family secret</span>
 				<input bind:value={draft.tip} placeholder="What the card in the drawer says that the book never did" />
 			</label>
 
@@ -200,7 +200,7 @@
 					{/each}
 				</ul>
 			{:else}
-				<p class="empty">Nothing yet — the drawer is open.</p>
+				<p class="empty">Nothing yet: the drawer is open.</p>
 			{/if}
 			<Ornament seed="family-chapter" />
 		</aside>

@@ -1,5 +1,5 @@
 /**
- * Ingredient text rewriting — servings scaling and metric↔US conversion.
+ * Ingredient text rewriting: servings scaling and metric↔US conversion.
  *
  * Both are ported verbatim from the original (`scaleLine` L2898, `fmtNum` L2892,
  * `convertLine` L3180). They are well-tuned and the guards are hard-won: the
@@ -73,7 +73,7 @@ export function scaleLine(s: string, x: number): string {
 		// "Butter a 23x33cm pan" was doubling to a 46x66cm pan.
 		if (/^\s*(?:[x×]\s*\d+(?:[.]\d+)?\s*)*(?:cm|mm|inch|inches|")/i.test(rest)) return m;
 
-		// "600g each", "(200g each)" — a per-unit size, so the COUNT scales and
+		// "600g each", "(200g each)": a per-unit size, so the COUNT scales and
 		// this does not. But "2 tbsp each soy and mirin" is distributive ("two of
 		// each") and must scale, which is what the trailing-word lookahead
 		// separates: 34 of the corpus's 40 "each" lines are the distributive kind.
@@ -109,7 +109,7 @@ export function convertLine(s: string, units: 'metric' | 'us'): string {
 		)
 		.replace(/(\d+(?:\.\d+)?)\s*L\b/g, (_m, v) => `${Math.round(v * 1.057 * 10) / 10} qt`)
 		// The original emitted a bare "F" here, losing the degree sign it had
-		// just consumed from "°C". Restored — 180°C should read 356°F.
+		// just consumed from "°C". Restored: 180°C should read 356°F.
 		.replace(/(\d+(?:\.\d+)?)\s*°?C\b/g, (_m, v) => `${Math.round((v * 9) / 5 + 32)}°F`)
 		/**
 		 * Dimension pairs BEFORE the single-value rule, or the single rule takes

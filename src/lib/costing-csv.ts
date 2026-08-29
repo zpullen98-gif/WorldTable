@@ -2,13 +2,13 @@
  * The costing sheet as a file a spreadsheet can open.
  *
  * ONE-WAY, PERMANENTLY. There is no CSV importer and there is never going to
- * be one — the `.wtjson` is the single portability contract, with merge
+ * be one: the `.wtjson` is the single portability contract, with merge
  * semantics that are tested, and a second import path is a second set of merge
  * bugs. This file exists because the person who asks for the sheet is often
  * not the person who runs the app: an accountant, a partner, a bank. They get
  * the numbers; the numbers do not come back this way.
  *
- * Raw numbers, no currency symbols — a symbol turns a number into a string in
+ * Raw numbers, no currency symbols: a symbol turns a number into a string in
  * every spreadsheet tool, which breaks the one thing the recipient wants to do
  * with it. The qualification travels as COLUMNS (week, tax basis, complete),
  * not as a footnote, because a CSV has nowhere else to keep it and an
@@ -73,9 +73,9 @@ export function costingCsv(
 				// Words, not booleans: "no" in a spreadsheet reads; "FALSE" gets
 				// re-typed as a formula error by every tool that opens it. And a
 				// dish with NO lines is named separately from one with broken
-				// lines — plateCost([]) reports complete, which is true of the
+				// lines: plateCost([]) reports complete, which is true of the
 				// sum and false of the dish.
-				cell(lines.length === 0 ? 'no — never costed' : e.complete ? 'yes' : 'no — lines missing'),
+				cell(lines.length === 0 ? 'no: never costed' : e.complete ? 'yes' : 'no: lines missing'),
 				cell(e.foodCostPct),
 				cell(e.contribution),
 				cell(d.sold),

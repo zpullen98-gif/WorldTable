@@ -16,7 +16,7 @@
 	 * the most common villain, so a venue's own log can agree or disagree.
 	 *
 	 * VENUE-WIDE AND NEVER PER PERSON. There is no name on an entry and no field
-	 * to put one in — see waste.ts. Nothing on this page can be filtered, sorted
+	 * to put one in. See waste.ts. Nothing on this page can be filtered, sorted
 	 * or grouped by who, because the record does not know.
 	 *
 	 * Everything below the H1 sits inside ONE <article class="sheet">:
@@ -46,7 +46,7 @@
 	const weeks = $derived(recentWeeks(WEEKS, new Date(clock)));
 	/**
 	 * Null until the cook PICKS a week, and the default follows the clock. The
-	 * first version seeded state from weekStartOf(new Date()) at load — so a
+	 * first version seeded state from weekStartOf(new Date()) at load, so a
 	 * tablet open across Sunday midnight stayed pinned to the old week, and a
 	 * bin logged after the boundary landed in the new week and vanished from
 	 * the page that had just confirmed it. An explicit pick is a choice and
@@ -70,7 +70,7 @@
 	};
 
 	/**
-	 * What the kitchen actually cooked that week, at cost — the denominator the
+	 * What the kitchen actually cooked that week, at cost: the denominator the
 	 * guide measures variance against. Only the dishes carrying BOTH a costing
 	 * and a covers count for the week can contribute, and the page says so
 	 * rather than quoting a share against a number nobody can see.
@@ -115,7 +115,7 @@
 	 * `reason` starts EMPTY and the default comes from a derived, rather than
 	 * seeding the state object from `data`. Reading a prop during state
 	 * initialisation captures its first value, which is harmless on a prerendered
-	 * page and still a warning — and this repo holds at zero. The select takes
+	 * page and still a warning, and this repo holds at zero. The select takes
 	 * its value from the derived and writes back to the state.
 	 */
 	let form = $state({ kind: 'dish' as SourceKind, ref: '', label: '', qty: 1, reason: '' });
@@ -157,7 +157,7 @@
 		!!labelFor().trim() && Number.isFinite(form.qty) && form.qty > 0 && !!reason
 	);
 
-	/** Read back after each log — the only confirmation used to be a new row
+	/** Read back after each log: the only confirmation used to be a new row
 	 *  appearing further down the page, which assistive tech never hears and a
 	 *  cook mid-rush never scrolls to check. */
 	let logged = $state('');
@@ -167,7 +167,7 @@
 		const label = labelFor();
 		const entry = house.logWaste({ label, qty: form.qty, reason, source: sourceOf() });
 		logged = entry
-			? `Logged — ${label}, ${entry.qty} × ${REASONS.find((r) => r.key === entry.reason)?.label ?? entry.reason}.`
+			? `Logged: ${label}, ${entry.qty} × ${REASONS.find((r) => r.key === entry.reason)?.label ?? entry.reason}.`
 			: '';
 		reset();
 		clock = Date.now();
@@ -193,7 +193,7 @@
 	<header class="head">
 		<h1>The Waste Log</h1>
 		<p class="lede">
-			What died in the walk-in, and why. Venue-wide, never by person — the numbers are the
+			What died in the walk-in, and why. Venue-wide, never by person: the numbers are the
 			kitchen's craft pride, not a surveillance state.
 		</p>
 		<nav class="tools" data-print="hide">
@@ -342,7 +342,7 @@
 
 			<div class="submit">
 				<span class="prev mono" aria-live="polite">
-					{#if preview !== null}{sym}{money(preview)}{:else if sourceOf()}not costed{:else}—{/if}
+					{#if preview !== null}{sym}{money(preview)}{:else if sourceOf()}not costed{:else}–{/if}
 				</span>
 				<button type="submit" disabled={!canLog}>Log it</button>
 			</div>
@@ -395,7 +395,7 @@
 		<p class="secnote">
 			It has no code for theft, which the guide names as a leak and then answers with
 			<em>“systems, not suspicion”</em>. Theft is what is left in the variance once this log has
-			named everything it can — reached by counting, never by a button.
+			named everything it can, reached by counting, never by a button.
 		</p>
 
 		<h2 class="sec">The reading</h2>

@@ -212,12 +212,12 @@ describe('the judgedBy join', () => {
 });
 
 describe('what this bought, measured against the shipped data', () => {
-	it('takes the assessable corpus from 45 to 797 of 970', () => {
+	it('takes the assessable corpus from 45 to 796 of 970', () => {
 		const dish = detail.filter((r) => r.standard).length;
 		const byTechnique = detail.filter((r) => r.judgedBy).length;
 		expect(dish).toBe(45);
-		expect(byTechnique).toBe(752);
-		expect(dish + byTechnique).toBe(797);
+		expect(byTechnique).toBe(751);
+		expect(dish + byTechnique).toBe(796);
 		expect(detail.length).toBe(970);
 	});
 
@@ -235,10 +235,10 @@ describe('what this bought, measured against the shipped data', () => {
 	 * exercise only techniques too rare in this corpus to be worth a standard —
 	 * and below 12 the ladder effectively ends, per the module header.
 	 */
-	it('leaves 173 dishes with no standard of any kind', () => {
+	it('leaves 174 dishes with no standard of any kind', () => {
 		const none = detail.filter((r) => !r.standard && !r.judgedBy);
-		expect(none.length).toBe(173);
+		expect(none.length).toBe(174);
 		expect(none.filter((r) => !r.techniques?.length).length).toBe(143);
-		expect(none.filter((r) => r.techniques?.length).length).toBe(30);
+		expect(none.filter((r) => r.techniques?.length).length).toBe(31);
 	});
 });

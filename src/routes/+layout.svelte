@@ -17,7 +17,7 @@
 	// own skeleton rather than flashing an empty menu.
 	//
 	// The house record is device-wide and NOT profile-namespaced, so it does not
-	// re-read on a profile switch the way the session does — the menu does not
+	// re-read on a profile switch the way the session does: the menu does not
 	// change because somebody else tapped their name. See stores/house.svelte.ts.
 	$effect(() => {
 		void session.hydrate();
@@ -33,7 +33,7 @@
 	 * showed no name, and wrong the moment Today greets somebody.
 	 *
 	 * onChange fires IMMEDIATELY on registration, which is why rehydrate() is
-	 * idempotent — it returns at once when the key has not moved. Standalone,
+	 * idempotent: it returns at once when the key has not moved. Standalone,
 	 * profiles.onChange is a no-op returning a no-op, so this wires
 	 * unconditionally and costs nothing.
 	 */
@@ -81,7 +81,7 @@
 	const path = $derived(page.url.pathname.replace(base, '') || '/');
 
 	/* The one number worth carrying in the chrome: how many dishes are past
-	   their re-cook. Same treatment as the menu's count — a pill, not a badge
+	   their re-cook. Same treatment as the menu's count: a pill, not a badge
 	   that nags, and absent entirely at zero. */
 	const dueCount = $derived.by(() => {
 		const now = Date.now();
@@ -134,13 +134,13 @@
 <svelte:window onkeydown={onKeydown} />
 
 <svelte:head>
-	<title>The World Table — Interactive Culinary Field Guide</title>
+	<title>The World Table: Interactive Culinary Field Guide</title>
 	<link rel="manifest" href={__MANIFEST_HREF__} />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-title" content={__APP_NAME__} />
 	<meta
 		name="description"
-		content="An interactive culinary compendium — {TOTALS.recipes} recipes across {TOTALS.chapters} chapters, a 479-term chef’s lexicon, pantry matching and a ten-semester path of study."
+		content="An interactive culinary compendium: {TOTALS.recipes} recipes across {TOTALS.chapters} chapters, a 479-term chef’s lexicon, pantry matching and a ten-semester path of study."
 	/>
 </svelte:head>
 
@@ -156,7 +156,7 @@
 				<a href={base || '/'}>The World <em>Table</em></a>
 			</svelte:element>
 			<p class="eyebrow">
-				An interactive culinary compendium — every dish serves four unless noted
+				An interactive culinary compendium: every dish serves four unless noted
 			</p>
 		</div>
 		<dl class="counts">

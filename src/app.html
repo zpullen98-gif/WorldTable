@@ -14,7 +14,7 @@
 			 * This is the single reason preferences live in localStorage rather than
 			 * in the IndexedDB store with everything else: IndexedDB is async, so a
 			 * theme kept there paints the default service first and corrects itself
-			 * a frame later — a flash of the wrong page on every cold load.
+			 * a frame later, a flash of the wrong page on every cold load.
 			 */
 			try {
 				var p = JSON.parse(localStorage.getItem('wt.prefs.v1') || '{}');

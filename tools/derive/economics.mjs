@@ -1,10 +1,10 @@
 /**
- * Menu economics — the numbers a venue is actually bought for.
+ * Menu economics: the numbers a venue is actually bought for.
  *
  * Fourth time this pattern has appeared, and the starkest. The guide carries a
- * complete restaurant-finance curriculum — 43 entries under "Restaurant Finance
+ * complete restaurant-finance curriculum: 43 entries under "Restaurant Finance
  * & Opening", plus "Menu Economics: Food Cost, Yield & Par" and "Costing Time"
- * under The Professional Kitchen — and FOURTEEN of those 43 link to no recipe
+ * under The Professional Kitchen, and FOURTEEN of those 43 link to no recipe
  * at all, because crosslinks.mjs scores a term against dish text and a term
  * like "COGS Control: Inventory, Variance & Theft" has no dish. The least
  * reachable content in the whole guide is the content the paying buyer needs
@@ -54,7 +54,7 @@ export const BANDS = [
 		lowPct: 55,
 		highPct: 60,
 		evidence: 'target 55–60% of sales for full service',
-		note: 'COGS plus total labour — the number operators live by.'
+		note: 'COGS plus total labour: the number operators live by.'
 	}
 ];
 
@@ -66,7 +66,7 @@ export const BANDS = [
  */
 export const QUADRANTS = [
 	{ key: 'star', label: 'Star', popular: true, profitable: true, advice: 'Protect it. Do not touch the recipe, the price, or its place on the page.' },
-	{ key: 'plowhorse', label: 'Plowhorse', popular: true, profitable: false, advice: 'Sells well and earns little. Cut cost or nudge price — never both at once.' },
+	{ key: 'plowhorse', label: 'Plowhorse', popular: true, profitable: false, advice: 'Sells well and earns little. Cut cost or nudge price: never both at once.' },
 	{ key: 'puzzle', label: 'Puzzle', popular: false, profitable: true, advice: 'Earns well and nobody orders it. Rename, redescribe, or move it up the page.' },
 	{ key: 'dog', label: 'Dog', popular: false, profitable: false, advice: 'Neither sells nor earns. Cut it, unless it is there for a reason you can name.' }
 ];

@@ -1,17 +1,17 @@
 /**
- * technique-table.mjs — the supplemental technique table, and the Lexicon anchors.
+ * technique-table.mjs: the supplemental technique table, and the Lexicon anchors.
  *
  * ## Why a supplement instead of editing the table
  *
  * `raw/TECH.json` is lifted from the archived original and is deep round-trip
- * gated by verify:data — editing it would break the proof that the extraction is
+ * gated by verify:data; editing it would break the proof that the extraction is
  * lossless. So the original's 75 entries stay untouched and improvements are
  * *appended* here, where they read as a reviewable diff of intent rather than as
  * a mutation of the ground truth.
  *
  * ## What the original's table is, and what it is not
  *
- * It is a good table of DISHES — Khachapuri shaping, Arepas, Pierogi, Injera.
+ * It is a good table of DISHES: Khachapuri shaping, Arepas, Pierogi, Injera.
  * It is nearly silent on the FOUNDATIONS every recipe actually demonstrates:
  * searing, roasting, steaming, blanching, sweating, pickling, proofing. That is
  * why it tagged only 401 of 970 recipes, why 569 carried no technique at all,
@@ -19,7 +19,7 @@
  *
  * ## The Lexicon already wrote the definitions
  *
- * The guide carries 45 hand-written technique definitions — 33 under
+ * The guide carries 45 hand-written technique definitions: 33 under
  * "Techniques: Heat & Precision" and "Techniques: Knife & Prep", 12 more under
  * "Baking & Pastry Science". They are excellent, and until now they reached
  * almost nothing: crosslinks.mjs caps a term at 3 recipes (inherited from the
@@ -40,8 +40,8 @@
 /**
  * Supplemental entries, same shape as raw/TECH.json:
  *   k: lowercase substring keywords, matched against the method-anchored blob
- *   l — the user-facing label (sentence case, no trailing period)
- *   q — a YouTube search for studying the technique on film
+ *   l: the user-facing label (sentence case, no trailing period)
+ *   q: a YouTube search for studying the technique on film
  *
  * Filled by the widening pass; see tools/report-techniques.mjs for the ledger.
  */
@@ -240,7 +240,7 @@ export const SUPPLEMENT = [
  *
  * Only where the Lexicon genuinely explains that skill. A dish-specific label
  * with no matching definition (Pierogi, Mole, Khachapuri shaping) is left
- * unanchored on purpose — its page shows the recipes and no borrowed prose.
+ * unanchored on purpose: its page shows the recipes and no borrowed prose.
  * Several labels share an anchor, which is correct: Jerk, Asado fire and
  * Low & slow smoking are three fires and one doctrine.
  */
@@ -350,7 +350,7 @@ export const LEXICON_ANCHOR = {
  * original order, then the supplement.
  *
  * Order matters to deriveFilms, which slices the first one or two hits into
- * film links — keeping the original entries first means a recipe that already
+ * film links: keeping the original entries first means a recipe that already
  * had film links keeps exactly the ones it had.
  */
 export function fullTechTable(TECH) {

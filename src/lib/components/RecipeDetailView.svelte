@@ -35,8 +35,8 @@
 		/**
 		 * The technique standards this dish is judged against when it has none
 		 * of its own, already resolved from `detail.judgedBy` by the loader.
-		 * Defaults to empty so /family/[slug] — user recipes, which no build
-		 * ever tagged — can render this same view unchanged.
+		 * Defaults to empty so /family/[slug] (user recipes, which no build
+		 * ever tagged) can render this same view unchanged.
 		 */
 		judged?: TechniqueStandard[];
 	} = $props();
@@ -130,7 +130,7 @@
 </script>
 
 <svelte:head>
-	<title>{r.name} — The World Table</title>
+	<title>{r.name}: The World Table</title>
 	<meta name="description" content={d.flavor.sentence} />
 </svelte:head>
 
@@ -164,7 +164,7 @@
 		<div class="group" role="group" aria-label="Scale the recipe">
 			{#each SCALES as s (s.x)}
 				<!-- aria-pressed, because the .on class was the ONLY carrier of the
-				     selected state — a screen reader heard four identical buttons
+				     selected state: a screen reader heard four identical buttons
 				     with no way to tell which scale the recipe was showing at. -->
 				<button class:on={scale === s.x} aria-pressed={scale === s.x} onclick={() => (scale = s.x)}
 					>{s.label}</button
@@ -240,7 +240,7 @@
 			<!--
 				ALWAYS rendered, never gated on the list being non-empty.
 				101 of 970 recipes have all seven flags false and used to show
-				nothing at all — hummus among them, over a line reading "150g good
+				nothing at all, hummus among them, over a line reading "150g good
 				tahini". Silence read as "no allergens" when it meant "we did not
 				look", which is the one direction an allergen display must never
 				fail in. See src/lib/allergens.ts.
@@ -281,7 +281,7 @@
 
 	     Two kinds of answer, and the difference is stated rather than blurred. A
 	     DISH standard is this plate, judged at the pass. A TECHNIQUE standard is
-	     the craft the dish exercises, judged at the pan — offered only when the
+	     the craft the dish exercises, judged at the pan: offered only when the
 	     dish has no standard of its own, and labelled as the substitute it is. A
 	     cook who mistakes the second for the first has been told the dish was
 	     assessed when only its method was. 287 dishes have neither and render
@@ -317,7 +317,7 @@
 			<p class="judgedintro">
 				This dish has no standard of its own yet. It is judged on the {judged.length === 1
 					? 'technique'
-					: 'techniques'} it exercises — checked at the pan, while there is still something to be
+					: 'techniques'} it exercises: checked at the pan, while there is still something to be
 				done about it.
 			</p>
 			{#each judged as ts (ts.slug)}
@@ -351,7 +351,7 @@
 		<dl>
 			<div><dt>The Pour</dt><dd>{pairing.pour}</dd></div>
 			<div><dt>Also Right</dt><dd>{pairing.alt}</dd></div>
-			{#if pairing.beer !== '—'}
+			{#if pairing.beer !== '–'}
 				<div><dt>From the Taps</dt><dd>{pairing.beer}</dd></div>
 			{/if}
 			<div><dt>Zero-Proof</dt><dd>{pairing.zeroProof}</dd></div>
@@ -361,7 +361,7 @@
 
 	<section class="notes" data-print="hide">
 		<label for="famnotes" class="sec">Family notes</label>
-		<p class="hint">Saved on this device and kept across visits — export from My Menu to move them.</p>
+		<p class="hint">Saved on this device and kept across visits: export from My Menu to move them.</p>
 		<textarea
 			id="famnotes"
 			rows="4"

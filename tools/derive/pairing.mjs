@@ -1,5 +1,5 @@
 /**
- * Wine / beer / zero-proof pairing — ported from `pairingFull` (L3600).
+ * Wine / beer / zero-proof pairing: ported from `pairingFull` (L3600).
  *
  * Transcribed faithfully, including branch order, which is load-bearing: dessert
  * and drink short-circuit first, then fire, then the ingredient tree top to
@@ -23,28 +23,28 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 	if (k === 'Dessert') {
 		if (has('chocolate', 'cocoa'))
 			return P('Banyuls or Ruby Port', 'PX Sherry', 'Imperial stout', 'Espresso',
-				'Chocolate wants fortified sweetness or roast-bitter contrast — the wine must out-sweet the plate, or oppose it entirely.');
+				'Chocolate wants fortified sweetness or roast-bitter contrast: the wine must out-sweet the plate, or oppose it entirely.');
 		if (has('citrus', 'lemon', 'lime', 'passion'))
 			return P('Moscato d’Asti', 'Late-harvest Riesling', 'Witbier', 'Sparkling elderflower',
-				'Citrus desserts need a wine sweeter than they are, with acid enough to keep up — light, frothy, and low-proof wins.');
+				'Citrus desserts need a wine sweeter than they are, with acid enough to keep up: light, frothy, and low-proof wins.');
 		if (has('caramel', 'toffee', 'butterscotch', 'dulce', 'maple'))
 			return P('Tawny Port', 'PX Sherry or bourbon', 'Barleywine', 'Cold-brew coffee',
 				'Caramel echoing caramel: oxidative aging built the same flavors into the glass that the pan built into the plate.');
 		if (has('coconut', 'mango', 'pineapple', 'tropical', 'banana'))
 			return P('Demi-sec Champagne', 'Off-dry Chenin (Vouvray)', 'Fruited sour', 'Coconut water with lime',
-				'Tropical sweetness wants bubbles or Chenin’s honeyed acid — richness met with lift, not more weight.');
+				'Tropical sweetness wants bubbles or Chenin’s honeyed acid: richness met with lift, not more weight.');
 		return P('Sauternes', 'Demi-sec Champagne', 'Belgian tripel', 'Jasmine tea',
 			'The sweetness rule is absolute: the pour must be sweeter than the plate, and acid keeps it from cloying.');
 	}
 
 	if (k === 'Drink')
-		return P('It is the pour', 'Serve alongside something salty and fried', '—',
+		return P('It is the pour', 'Serve alongside something salty and fried', '-',
 			'Already zero-proof unless you made it otherwise',
-			'This is the glass, not the plate — judge it on temperature, dilution, and balance, and let the food do the answering.');
+			'This is the glass, not the plate: judge it on temperature, dilution, and balance, and let the food do the answering.');
 
 	if (k === 'Breakfast')
-		return P('Mimosa (weekends only)', 'Cava, straight', '—', 'Fresh orange juice & café au lait',
-			'Morning food wants brightness and bubbles, or honest coffee — nothing that argues before noon.');
+		return P('Mimosa (weekends only)', 'Cava, straight', '-', 'Fresh orange juice & café au lait',
+			'Morning food wants brightness and bubbles, or honest coffee: nothing that argues before noon.');
 
 	/* ---- fire first ---- */
 	if (
@@ -82,20 +82,20 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 
 	if (has('anchov', 'sardine', 'salt cod', 'bacalao', 'bacalhau'))
 		return P('Fino or Manzanilla Sherry', 'Muscadet or dry Riesling', 'Pilsner', 'Sparkling water with lemon',
-			'Salt-cured fish wants a bone-dry, saline partner — Sherry and Atlantic whites answer the cure without fighting it.');
+			'Salt-cured fish wants a bone-dry, saline partner: Sherry and Atlantic whites answer the cure without fighting it.');
 
 	if (has('scallop', 'shrimp', 'prawn', 'crab', 'lobster', 'crawfish'))
 		return P(
 			has('butter', 'cream') ? 'Barrel-aged Chardonnay (Meursault style)' : 'Albariño',
 			'Champagne', 'Pilsner or witbier', 'White grape & tonic',
 			has('butter', 'cream')
-				? 'Butter-dressed shellfish climbs a weight class — oak-and-cream Chardonnay matches it richness for richness.'
-				: 'Shellfish sweetness meets acid, salinity, and bubbles — precision instruments for delicate meat.'
+				? 'Butter-dressed shellfish climbs a weight class: oak-and-cream Chardonnay matches it richness for richness.'
+				: 'Shellfish sweetness meets acid, salinity, and bubbles, precision instruments for delicate meat.'
 		);
 
 	if (k === 'Salad' && has('tuna', 'anchov', 'niçoise'))
 		return P('Provence rosé', 'Bandol rosé or Vermentino', 'Bière blanche', 'Citron pressé',
-			'The Niçoise law: the salad and the pink wine grew up on the same coast — salt, oil, and sun answered in kind.');
+			'The Niçoise law: the salad and the pink wine grew up on the same coast: salt, oil, and sun answered in kind.');
 
 	if (has('salmon', 'tuna'))
 		return P('Pinot Noir (Willamette or Burgundy)', 'Chilled Gamay (cru Beaujolais)', 'Saison',
@@ -122,7 +122,7 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 
 	if (has('duck'))
 		return P('Pinot Noir (the classic)', 'Cru Beaujolais (Morgon)', 'Belgian dubbel', 'Black cherry spritz',
-			'Acid and silk against duck fat — the oldest marriage in Burgundy, with Gamay as its cheerful younger witness.');
+			'Acid and silk against duck fat: the oldest marriage in Burgundy, with Gamay as its cheerful younger witness.');
 
 	if (has('lamb'))
 		return P(
@@ -132,7 +132,7 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 					? 'Syrah or Grenache/GSM'
 					: 'Cabernet or Rioja Reserva',
 			'Malbec', 'Porter', 'Pomegranate spritz',
-			'Lamb’s sweet grass-fat wants structure — tannin from Cabernet, smoke-echo from Rioja’s oak, or Syrah’s pepper for the spiced routes.'
+			'Lamb’s sweet grass-fat wants structure: tannin from Cabernet, smoke-echo from Rioja’s oak, or Syrah’s pepper for the spiced routes.'
 		);
 
 	if (
@@ -146,14 +146,14 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 		if (has('braise', 'stew', 'wine', 'bourguignon', 'ragù', 'ragu', 'birria', 'goulash'))
 			return P('Syrah (northern Rhône) or Nebbiolo', 'The braising wine itself, better bottle',
 				'Belgian dubbel', 'Beet & blackcurrant shrub',
-				'Long-cooked beef trades bite for depth — savory, structured reds echo the pot; and pouring the braise’s own region is law.');
+				'Long-cooked beef trades bite for depth: savory, structured reds echo the pot; and pouring the braise’s own region is law.');
 		if (has('burger', 'cheeseburger', 'patty melt', 'sloppy joe', 'loose meat'))
 			return P('Cabernet Sauvignon or Malbec', 'Zinfandel or Tempranillo', 'IPA or amber ale',
 				'Root beer, no apology',
-				'A burger is seared beef plus fat plus bread — tannic reds do the steakhouse work, and a hop-bitter IPA scrubs the griddle richness between bites.');
+				'A burger is seared beef plus fat plus bread: tannic reds do the steakhouse work, and a hop-bitter IPA scrubs the griddle richness between bites.');
 		return P('Cabernet Sauvignon or Malbec', 'Tempranillo (Rioja Reserva)', 'Amber ale',
 			'Sparkling water, make room',
-			'Tannin binds to seared protein and fat — each bite softens the wine, each sip resets the palate: the steakhouse equation.');
+			'Tannin binds to seared protein and fat: each bite softens the wine, each sip resets the palate: the steakhouse equation.');
 	}
 
 	if (
@@ -168,7 +168,7 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 					? 'Chenin Blanc (Vouvray sec)'
 					: 'Riesling or Grenache',
 			'Cru Beaujolais', 'Farmhouse saison', 'Cloudy apple juice, chilled',
-			'Pork loves fruit and gentle sweetness — orchard-note whites and low-tannin reds flatter it where heavy oak flattens.'
+			'Pork loves fruit and gentle sweetness: orchard-note whites and low-tannin reds flatter it where heavy oak flattens.'
 		);
 
 	if (has('chicken', 'turkey', 'poussin'))
@@ -182,7 +182,7 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 	if (has('tomato', 'marinara', 'puttanesca', 'arrabbiata', 'pizza', 'caprese'))
 		return P('Chianti Classico or Barbera d’Alba', 'Vermentino for the lighter plates',
 			'Italian pilsner', 'San Pellegrino Sanbittèr',
-			'Tomato’s acid demands equal acid — Italian reds evolved beside the sauce, and the regional pairing is the safest law in wine.');
+			'Tomato’s acid demands equal acid: Italian reds evolved beside the sauce, and the regional pairing is the safest law in wine.');
 
 	if (has('mushroom', 'truffle', 'porcini', 'shiitake', 'risotto'))
 		return P('Nebbiolo (Langhe) or aged Pinot Noir', 'White Burgundy for cream-based versions',
@@ -193,18 +193,18 @@ export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 		has('cheese', 'gruyère', 'fondue', 'raclette', 'mac and', 'parmigiano', 'halloumi', 'paneer') &&
 		(k === 'Main' || k === 'Starter')
 	)
-		return P('Alpine white (dry Riesling, Grüner)', 'Champagne — bubbles scrub richness',
+		return P('Alpine white (dry Riesling, Grüner)', 'Champagne: bubbles scrub richness',
 			'Bière de garde', 'Sparkling apple',
-			'Melted cheese coats; acid and carbonation scrub — high-cut whites and Champagne keep the fondue from winning.');
+			'Melted cheese coats; acid and carbonation scrub: high-cut whites and Champagne keep the fondue from winning.');
 
 	if (k === 'Salad' || (tag('herb-fresh') && r.v))
 		return P('Sauvignon Blanc (Sancerre)', 'Grüner Veltliner', 'Berliner weisse', 'Cucumber-lime water',
-			'Green plates want green wines — vinaigrette’s acid meets its match, and the difficult vegetables surrender to Grüner.');
+			'Green plates want green wines: vinaigrette’s acid meets its match, and the difficult vegetables surrender to Grüner.');
 
 	if (k === 'Soup')
 		return P(
 			has('cream', 'bisque', 'chowder') ? 'Chardonnay (lightly oaked)' : 'Fino or Amontillado Sherry',
-			'Grüner Veltliner', 'Saison', 'The soup is the drink — sparkling water beside',
+			'Grüner Veltliner', 'Saison', 'The soup is the drink, sparkling water beside',
 			'Broths love Sherry’s savory echo (consommé’s old partner); cream soups climb to gentle oak. Weight to weight, always.'
 		);
 

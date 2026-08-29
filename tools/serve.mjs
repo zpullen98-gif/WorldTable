@@ -1,9 +1,9 @@
 /**
- * A plain static file server over build/ — because `vite preview` is NOT one.
+ * A plain static file server over build/, because `vite preview` is NOT one.
  *
  * SvelteKit's preview middleware serves from its route manifest: prerendered
- * pages and hashed assets resolve, but any HTML file that is not a route —
- * including the offline shell the service worker must precache BY URL — 404s
+ * pages and hashed assets resolve, but any HTML file that is not a route:
+ * including the offline shell the service worker must precache BY URL, 404s
  * even though it sits right there on disk. Under vite preview the service
  * worker can never finish installing, which made the offline suite fail
  * against a build that works perfectly on a real host.

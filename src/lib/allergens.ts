@@ -13,7 +13,7 @@
  * diet.mjs already states the policy the display was breaking, in its own
  * words: an empty list "reads as 'no allergens' rather than 'we don't know'".
  *
- * The honest fix is not to widen the vocabulary today — that is a diet.mjs
+ * The honest fix is not to widen the vocabulary today: that is a diet.mjs
  * project with a keyword-table review across 970 recipes and its own build
  * gates. It is to stop absence reading as clearance in the meantime, by naming
  * what was screened and what was not. Rough prevalence of the unscreened, by
@@ -22,7 +22,7 @@
  *
  * `allergens.test.ts` asserts that every `contains*` key diet.mjs produces is
  * named in one of these two lists, so widening the derivation without widening
- * the display fails the build — and that NOT_SCREENED stays non-empty, so the
+ * the display fails the build, and that NOT_SCREENED stays non-empty, so the
  * day the vocabulary is genuinely closed, the copy is forced to change.
  */
 
@@ -48,7 +48,7 @@ export const CHECKED = [
  * Still not derived, and now for a reason rather than a backlog: the sulphite
  * declaration threshold is a CONCENTRATION (10mg/kg), not an ingredient name,
  * and no ingredient line states how the wine was made. A lexical rule here
- * would be the confident wrong answer — the shape the hazard-rule survey
+ * would be the confident wrong answer, the shape the hazard-rule survey
  * measured five times and refused five times. Listed so the page keeps saying
  * so rather than implying absence.
  */

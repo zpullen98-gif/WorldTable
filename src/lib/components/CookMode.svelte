@@ -24,7 +24,7 @@
 		standard?: DishStandard | TechniqueStandard;
 		/**
 		 * Set only when `standard` is a TECHNIQUE standard standing in for a dish
-		 * that has none — the technique's name, so the question can say what is
+		 * that has none: the technique's name, so the question can say what is
 		 * actually being judged. A cook asked "how did it come out?" against a
 		 * technique's marks would reasonably think the dish had been assessed.
 		 */
@@ -51,7 +51,7 @@
 	 * OVER cook mode. On a phone the ✕ sat under a mode tab, and tapping it
 	 * navigated you out of the recipe mid-braise, losing the step and the timer.
 	 * The top layer is not part of that contest, so showModal() fixes it at the
-	 * root — and brings focus containment, focus return, and Escape with it.
+	 * root, and brings focus containment, focus return, and Escape with it.
 	 */
 	let dialog = $state<HTMLDialogElement | null>(null);
 
@@ -74,7 +74,7 @@
 
 	const clock = $derived(remaining == null ? null : formatClock(remaining));
 
-	/** Other pots on other burners — visible without leaving the step you are on. */
+	/** Other pots on other burners: visible without leaving the step you are on. */
 	const others = $derived(timers.active.filter((t) => t.id !== stepTimer?.id));
 
 	function startTimer() {
@@ -135,7 +135,7 @@
 	 * through screens.
 	 *
 	 * The cook is recorded BEFORE the panel opens, not after. Closing the
-	 * dialog from here — the ✕, Escape, the phone ringing — must not be able to
+	 * dialog from here (the ✕, Escape, the phone ringing) must not be able to
 	 * lose the grade that was already given.
 	 */
 	let repairing = $state(false);
@@ -147,7 +147,7 @@
 	 *
 	 * The marks were already on this screen being read, so the annotation costs
 	 * the cook nothing extra: they run down the list, tap the ones that were
-	 * off, then tap a grade. No second screen — a screen that appears after
+	 * off, then tap a grade. No second screen: a screen that appears after
 	 * every plate teaches cooks to tap through screens, which is the same
 	 * reasoning that keeps the repair panel off a plate that MET its standard.
 	 *
@@ -177,7 +177,7 @@
 
 	/**
 	 * The single exit. Closes the top-layer dialog AND tells the parent to
-	 * unmount us — driven explicitly rather than through the dialog's `close`
+	 * unmount us, driven explicitly rather than through the dialog's `close`
 	 * event, which did not reach the prop and left a closed dialog mounted with
 	 * focus stranded on the ✕.
 	 */
@@ -244,7 +244,7 @@
 <dialog
 	bind:this={dialog}
 	class="cook"
-	aria-label="Cook mode — {name}"
+	aria-label="Cook mode: {name}"
 	data-print="hide"
 	onkeydown={onKeydown}
 	oncancel={(e) => {
@@ -260,8 +260,8 @@
 		One live region for the thing that changes, marked atomic so a screen
 		reader announces "Step 2 of 4, sweat the soffritto…" as a unit. The clock
 		used to be the only live region in here, which meant the ticking seconds
-		were announced every few hundred milliseconds while the step text — the
-		entire content of the dialog — changed silently.
+		were announced every few hundred milliseconds while the step text, the
+		entire content of the dialog, changed silently.
 	-->
 	{#if repairing}
 		<div class="pass live" aria-live="polite" aria-atomic="true">
@@ -310,7 +310,7 @@
 			<p class="eyebrow">{name} · the pass</p>
 			{#if standardLabel}
 				<!-- Naming the technique on its own line rather than folding it into the
-				     question: the labels are noun phrases ("Making a roux", "Knife cuts —
+				     question: the labels are noun phrases ("Making a roux", "Knife cuts:
 				     dice, julienne, bias") and no single sentence reads well around all
 				     26 of them. -->
 				<p class="passq">How was the technique?</p>
@@ -364,7 +364,7 @@
 				<button class="chip go" onclick={startTimer}>Start timer</button>
 			{/if}
 		{:else}
-			<span class="notimer">No stated time on this step — trust your senses.</span>
+			<span class="notimer">No stated time on this step: trust your senses.</span>
 		{/if}
 	</div>
 
@@ -390,7 +390,7 @@
 		<button class="chip" onclick={prev} disabled={i === 0}>◀ Back</button>
 		{#if last}
 			<button class="chip go" onclick={finish}>
-				{standard ? 'Done — check the plate ▸' : 'Done — mark cooked ✓'}
+				{standard ? 'Done, check the plate ▸' : 'Done, mark cooked ✓'}
 			</button>
 		{:else}
 			<button class="chip go" onclick={next}>Next step ▶</button>
@@ -447,7 +447,7 @@
 		list-style: none;
 	}
 	/* 44px minimum, because this is tapped with one hand on a hot pan. The box
-	   carries the state as a glyph as well as a colour and a weight — a tick
+	   carries the state as a glyph as well as a colour and a weight: a tick
 	   that only differs by hue is unreadable in a kitchen under sodium light. */
 	.markrow {
 		display: flex;
@@ -551,7 +551,7 @@
 		/*
 		 * `safe center` and overflow are the landscape fix. A fixed, centred flex
 		 * box cannot be scrolled by the document, so on a long step at 568x320 the
-		 * Back/Next row was centred straight out of the viewport and unreachable —
+		 * Back/Next row was centred straight out of the viewport and unreachable:
 		 * no forward, no back, and a ✕ that (before the dialog) navigated away.
 		 */
 		justify-content: safe center;
@@ -638,7 +638,7 @@
 		color: var(--turmeric-deep);
 	}
 
-	/* The other pots. Quiet by design — the step you are on is the headline. */
+	/* The other pots. Quiet by design: the step you are on is the headline. */
 	.others {
 		list-style: none;
 		display: flex;
@@ -723,7 +723,7 @@
 		justify-content: center;
 		max-width: 400px;
 	}
-	/* 9px of ink, 24px of target — a wet fingertip is not 9px wide. */
+	/* 9px of ink, 24px of target: a wet fingertip is not 9px wide. */
 	.dot {
 		width: 24px;
 		height: 24px;

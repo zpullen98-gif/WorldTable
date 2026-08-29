@@ -4,7 +4,7 @@
 	import { house } from '$lib/stores/house.svelte';
 	import type { MenuDish } from '$lib/persistence/state';
 
-	/* Drills over The Kitchen's Menu — the dishes entered on /menu. The quiz
+	/* Drills over The Kitchen's Menu: the dishes entered on /menu. The quiz
 	 * engine is the lexicon page's, ported: ten a round, distractors from the
 	 * same menu section when it has enough dishes, the same verdict ladder, the
 	 * same oot:round-complete contract.
@@ -95,7 +95,7 @@
 				: undefined;
 		if (unique)
 			out.push({
-				kindLabel: 'The table asks — which dish carries it?',
+				kindLabel: 'The table asks: which dish carries it?',
 				prompt: unique,
 				target: d,
 				options: optionsFor(d)
@@ -105,7 +105,7 @@
 
 	const drillable = $derived(dishes.filter((d) => kindsFor(d).length > 0));
 
-	/* One drillable dish would mean ten questions with one possible answer —
+	/* One drillable dish would mean ten questions with one possible answer:
 	 * a guaranteed 'Chef-level' verdict that teaches nothing and logs a fake
 	 * clean round. Two is the floor, and the round never asks the same dish
 	 * twice in a row while an alternative exists. */
@@ -143,10 +143,10 @@
 				right >= 9
 					? 'Chef-level. The pass is yours.'
 					: right >= 7
-						? 'Solid line cook — a few more services and it’s muscle memory.'
+						? 'Solid line cook: a few more services and it’s muscle memory.'
 						: right >= 5
-							? 'Stage complete — hit the flashcards on what you missed.'
-							: 'Back to prep, chef — read the menu again before the next round.';
+							? 'Stage complete: hit the flashcards on what you missed.'
+							: 'Back to prep, chef; read the menu again before the next round.';
 			// Contract with the OOT monorepo's shared/oot-log.js (hookTable).
 			if (typeof window !== 'undefined')
 				window.dispatchEvent(
@@ -189,7 +189,7 @@
 			</p>
 		{:else if drillable.length < 2 && !deck}
 			<p class="empty">
-				The quiz needs at least two dishes it can ask about — a dish counts once it has a
+				The quiz needs at least two dishes it can ask about: a dish counts once it has a
 				description, two or more ingredient lines, or a price no other dish on the menu shares.
 				Fill them in on My Menu<a href="{base}/menu">My Menu</a>. The flashcards work meanwhile.
 			</p>
@@ -251,7 +251,7 @@
 					{#if revealed}
 						{#if d.description}<p class="def">{d.description}</p>{/if}
 						{#if d.ingredients.length}<p class="def small">{d.ingredients.join(' · ')}</p>{/if}
-						<!-- Three states, never silence — the twin of the fix on /menu and
+						<!-- Three states, never silence, the twin of the fix on /menu and
 						     on the recipe page. A server rehearsing off this card must not
 						     learn a blank as "none". -->
 						<p class="def small">

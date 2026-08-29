@@ -129,7 +129,7 @@ export async function loadSanitation(): Promise<Sanitation> {
 let economicsCache: Economics | null = null;
 let wasteCache: WasteVocabulary | null = null;
 
-/** The waste log's reason codes. Tiny, but gated — see tools/derive/waste.mjs. */
+/** The waste log's reason codes. Tiny, but gated: see tools/derive/waste.mjs. */
 export async function loadWaste(): Promise<WasteVocabulary> {
 	if (!wasteCache) {
 		wasteCache = (await import('./data/waste.json')).default as unknown as WasteVocabulary;
@@ -167,7 +167,7 @@ export async function loadTechniques(): Promise<Technique[]> {
  * definitions and the recipe page needs none of it, only the marks.
  */
 let calibrationCache: unknown = null;
-/** The calibration ladders — authored apparatus, see tools/derive/calibration.mjs. */
+/** The calibration ladders: authored apparatus, see tools/derive/calibration.mjs. */
 export async function loadCalibration() {
 	if (!calibrationCache) {
 		calibrationCache = (await import('./data/calibration.json')).default;
@@ -201,20 +201,20 @@ export async function loadTechniqueStandards(): Promise<Map<string, TechniqueSta
 /**
  * The sommelier's safety net, used verbatim for family recipes (pairingId -1),
  * whose dishes no decision tree has tasted. Same text as the original's final
- * else branch (L3600 tail) — honest, and true of nearly any plate.
+ * else branch (L3600 tail), honest, and true of nearly any plate.
  */
 export const DEFAULT_PAIRING: Pairing = {
-	pour: 'Champagne — when lost, bubbles',
+	pour: 'Champagne: when lost, bubbles',
 	alt: 'Cru Beaujolais, lightly chilled',
 	beer: 'Pilsner',
 	zeroProof: 'Sparkling water with citrus',
-	why: 'The universal donors: acid, bubbles, and low tannin rescue nearly any plate — the sommelier’s honest safety net.'
+	why: 'The universal donors: acid, bubbles, and low tannin rescue nearly any plate, the sommelier’s honest safety net.'
 };
 
 /**
  * Where a recipe's page lives. Guide recipes have prerendered pages under
  * /recipe/; family recipes are client-only under /family/ (their data is in
- * IndexedDB — see routes/family/[slug]/+page.ts). Every link generator goes
+ * IndexedDB: see routes/family/[slug]/+page.ts). Every link generator goes
  * through here so the split lives in exactly one place.
  */
 export function recipeHref(r: Pick<RecipeSummary, 'slug' | 'source'>): string {
@@ -224,7 +224,7 @@ export function recipeHref(r: Pick<RecipeSummary, 'slug' | 'source'>): string {
 /* ---- formatting ------------------------------------------------------ */
 
 /**
- * "75 min" / "2 h" / "2 h 30 m" — ported exactly from fmtTime (L1847).
+ * "75 min" / "2 h" / "2 h 30 m", ported exactly from fmtTime (L1847).
  * The 90-minute threshold is deliberate: "75 min" scans faster on a card than
  * "1 h 15 m", and the original got that right.
  */

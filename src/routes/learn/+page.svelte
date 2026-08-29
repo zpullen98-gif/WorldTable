@@ -1,5 +1,5 @@
 <!--
-  Learn — the taught path, for whichever kitchen you stand in.
+  Learn: the taught path, for whichever kitchen you stand in.
 
   A hub rather than a surface. It holds nothing of its own; it is the answer to
   "there are ten tabs and I do not know which one is for me", which is the thing
@@ -18,7 +18,7 @@
 	const role = $derived(session.role);
 </script>
 
-<svelte:head><title>Learn — The World Table</title></svelte:head>
+<svelte:head><title>Learn: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">

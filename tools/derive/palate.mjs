@@ -46,7 +46,7 @@ export const PROTOCOL_ANCHOR = 'tasting-vocabulary-and-palate-training';
 /**
  * Split the Repair Table's prose into its labelled clauses.
  *
- * The entry writes each fault as `LABEL: what to do.` — shouted label, colon,
+ * The entry writes each fault as `LABEL: what to do.`, shouted label, colon,
  * clause, full stop. Parsed rather than hand-copied so the authored table below
  * holds no duplicated prose that could rot out of sync with the source.
  *
@@ -75,7 +75,7 @@ export function parseRepairTable(definition) {
 /**
  * The eight faults, gentlest lever first.
  *
- * `symptom` is ours — the entry names the fault but never says what it tastes
+ * `symptom` is ours: the entry names the fault but never says what it tastes
  * like, and "too flat" means nothing to a cook who has not yet learned to hear
  * it. Everything in `levers` is the entry's, restated as an instruction.
  *
@@ -102,7 +102,7 @@ export const FAULTS = [
 		symptom: 'It reaches for the water glass before the second bite.',
 		levers: [
 			{ move: 'Dilute', token: 'dilute', note: 'Unsalted liquid, or more of the base.' },
-			{ move: 'Bulk it out', token: 'bulk', note: 'Starch or cream — volume the salt has to spread through.' },
+			{ move: 'Bulk it out', token: 'bulk', note: 'Starch or cream: volume the salt has to spread through.' },
 			{ move: 'Counter it', token: 'counter', note: 'Acid and a touch of sugar bend the perception. The potato trick mostly just dilutes.' }
 		]
 	},
@@ -114,7 +114,7 @@ export const FAULTS = [
 		levers: [
 			{ move: 'Fat', token: 'fat', note: 'Buffers rather than removes.' },
 			{ move: 'Sweetness', token: 'sweetness', note: 'The other buffer. Below the threshold of tasting sweet.' },
-			{ move: 'Baking soda', token: 'baking soda', note: 'Neutralises chemically. Pinches only — it eats brightness along with the fault.' },
+			{ move: 'Baking soda', token: 'baking soda', note: 'Neutralises chemically. Pinches only: it eats brightness along with the fault.' },
 			{ move: 'Time', token: 'time', note: 'Mellows on its own, if you have any.' }
 		]
 	},
@@ -125,7 +125,7 @@ export const FAULTS = [
 		symptom: 'Cloying by the third mouthful, and nothing cuts through it.',
 		levers: [
 			{ move: 'Acid', token: 'acid', note: 'Cuts.' },
-			{ move: 'Salt', token: 'salt', note: 'Reframes — the same sugar reads as seasoning rather than dessert.' },
+			{ move: 'Salt', token: 'salt', note: 'Reframes: the same sugar reads as seasoning rather than dessert.' },
 			{ move: 'Bitterness', token: 'bitterness', note: 'Opposes it directly. Coffee, cocoa, char.' },
 			{ move: 'Heat', token: 'heat', note: 'Distracts from it.' }
 		]
@@ -169,7 +169,7 @@ export const FAULTS = [
 		slug: 'muddy',
 		key: 'MUDDY/OVER-DEEP',
 		label: 'Muddy',
-		symptom: 'Deep, brown, and indistinct — every layer present and none of them legible.',
+		symptom: 'Deep, brown, and indistinct: every layer present and none of them legible.',
 		levers: [
 			{ move: 'Brightness at the top', token: 'brightness', note: 'Fresh herb, zest, raw allium. The finishing register, applied as medicine.' }
 		]
@@ -182,7 +182,7 @@ export const FAULTS = [
  * mode's repair panel show it, and they must not drift.
  */
 export const META_RULE =
-	'Adjust in small moves and taste after each one. Fix the loudest fault first — most complicated problems are one lever pulled twice.';
+	'Adjust in small moves and taste after each one. Fix the loudest fault first: most complicated problems are one lever pulled twice.';
 
 /**
  * Build the shipped record, checking the authored structure against the prose.

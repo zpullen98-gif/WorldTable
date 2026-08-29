@@ -1,9 +1,9 @@
 /**
  * The Service Track — the front of house, given an order.
  *
- * The largest measured gap in the guide. 176 terms across five atlases — Cheese
+ * The largest measured gap in the guide. 176 terms across five atlases (Cheese
  * 46, Charcuterie 41, Cocktail & Bar 38, Wine & Beverage 34, The Grape Atlas 17
- * — and a server has no route through any of them. Fifty-six of those 176 reach
+ * , and a server has no route through any of them. Fifty-six of those 176 reach
  * ZERO recipes (Cheese 22, Charcuterie 14, Grape 13, Wine 5, Cocktail 2), so
  * crosslinks cannot surface them either. The Path of Study reads 39 lexicon
  * terms and NONE is front-of-house; the technique table anchors 47 and NONE is
@@ -19,7 +19,7 @@
  *
  * ## What is authored and what is checked
  *
- * The ORDER is authored — it is the whole contribution, and it is a claim about
+ * The ORDER is authored: it is the whole contribution, and it is a claim about
  * teaching, not about data. Everything else is gated:
  *
  *   - every term slug must resolve, and none may appear twice
@@ -37,7 +37,7 @@
  *
  * The draft order taught `zero-proof-cocktails-and-the-sober-bar` and
  * `the-spritz-and-aperitivo-hour` at module 3, while the entries their prose
- * depends on — oleo saccharum, the dry shake, the citrus program — are taught at
+ * depends on (oleo saccharum, the dry shake, the citrus program) are taught at
  * module 27. Both moved to 27. And a `srv-pour` module carried no terms at all;
  * it was a drill, and drills are not content.
  */
@@ -92,7 +92,7 @@ export const CELLAR_UNTAUGHT = ['barbera', 'muscadet', 'gewurztraminer', 'sauter
  * Twenty-seven modules over 186 term references, covering all 176
  * front-of-house terms exactly once. It opens on the room rather than on wine,
  * because a server on their first shift needs the words the kitchen shouts
- * before they need the Grape Atlas — and it ends on bar craft, which most
+ * before they need the Grape Atlas, and it ends on bar craft, which most
  * servers never need and every server-bartender does.
  *
  * `outcome` is what a person can do after the module, written as a claim that
@@ -102,7 +102,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-room",
 		title: "The Room's Vocabulary",
-		outcome: "You can act on \"86 the halibut\", say \"behind\" without thinking, and name who is working the pass. The guide keeps MENU FORMAT and SERVICE SCHOOL as two separate axes — a room runs one of each, not one of seven — so you can state both for your room. It does not teach ticket anatomy: 'dupe' is glossed in four words inside a single definition, and there is no fire or all-day sequencing anywhere in the guide, so reading a ticket is something your room teaches you and this track does not pretend to.",
+		outcome: "You can act on \"86 the halibut\", say \"behind\" without thinking, and name who is working the pass. The guide keeps MENU FORMAT and SERVICE SCHOOL as two separate axes (a room runs one of each, not one of seven) so you can state both for your room. It does not teach ticket anatomy: 'dupe' is glossed in four words inside a single definition, and there is no fire or all-day sequencing anywhere in the guide, so reading a ticket is something your room teaches you and this track does not pretend to.",
 		termSlugs: [
 			"service-styles-and-front-of-house-fluency",
 			"line-slang-86-in-the-weeds-and-family-meal",
@@ -117,7 +117,7 @@ export const SERVER_MODULES = [
 		// derived, eight not, 101 of 970 empty" and all three went stale when the
 		// screen widened to thirteen. The one stable fact is the refusal and its
 		// reason.
-		outcome: "You never answer an allergen question from the app. You can say what the recipe screen is — a text screen over the ingredient lines, which by design cannot see a shared fryer, a dusted board, or a supplier’s label — and you know that a dish showing nothing means the screen found nothing, never that the dish is clear. The screen itself names what it checked and what it did not, on every recipe.",
+		outcome: "You never answer an allergen question from the app. You can say what the recipe screen is (a text screen over the ingredient lines, which by design cannot see a shared fryer, a dusted board, or a supplier’s label), and you know that a dish showing nothing means the screen found nothing, never that the dish is clear. The screen itself names what it checked and what it did not, on every recipe.",
 		termSlugs: [
 			"food-safety-the-chef-owners-non-negotiables"
 		]
@@ -133,7 +133,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-bottle",
 		title: "The Bottle at the Table",
-		outcome: "You can present, open, and pour a bottle without ceremony, and you know the taste pour exists to check for FAULTS and not preference. You can identify corked (wet cardboard), oxidized (bruised apple), and reduced (struck match — wait, it may blow off), and you replace a corked bottle graciously without arguing. You serve whites at 7-13°C and reds at 15-18°C.",
+		outcome: "You can present, open, and pour a bottle without ceremony, and you know the taste pour exists to check for FAULTS and not preference. You can identify corked (wet cardboard), oxidized (bruised apple), and reduced (struck match: wait, it may blow off), and you replace a corked bottle graciously without arguing. You serve whites at 7-13°C and reds at 15-18°C.",
 		termSlugs: [
 			"wine-faults-corked-oxidized-reduced-and-friends",
 			"the-sommeliers-service-ritual-and-floor-fluency",
@@ -157,7 +157,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-pairing-laws",
 		title: "The Two Games and the Switches",
-		outcome: "For any pairing you can say in one sentence whether it is CONGRUENT (echo the dish) or CONTRAST (oppose it), and which switch is doing the work — salt loves acid and bubbles, fat wants cutting acid or matching richness, food acid demands equal wine acid, chile is inflamed by alcohol and tannin, sweet dishes need sweeter wine, bitter stacks with tannin, umami makes tannin harsh.",
+		outcome: "For any pairing you can say in one sentence whether it is CONGRUENT (echo the dish) or CONTRAST (oppose it), and which switch is doing the work: salt loves acid and bubbles, fat wants cutting acid or matching richness, food acid demands equal wine acid, chile is inflamed by alcohol and tannin, sweet dishes need sweeter wine, bitter stacks with tannin, umami makes tannin harsh.",
 		termSlugs: [
 			"congruent-vs-contrast-the-master-key",
 			"the-pairing-laws-salt-fat-acid-heat-sweet-bitter",
@@ -167,7 +167,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-cellar-whites",
 		title: "The Whites You Will Pour",
-		outcome: "Three sentences on Chardonnay, Sauvignon Blanc and Riesling — what it is, what it tastes like, what dish it loves — and you know Riesling is the answer to chile heat and Chardonnay's oak level must match the butter level.",
+		outcome: "Three sentences on Chardonnay, Sauvignon Blanc and Riesling (what it is, what it tastes like, what dish it loves) and you know Riesling is the answer to chile heat and Chardonnay's oak level must match the butter level.",
 		termSlugs: [
 			"chardonnay-the-shape-shifter",
 			"sauvignon-blanc-and-the-aromatic-whites",
@@ -200,7 +200,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-grape-atlas",
 		title: "The Grape Atlas (Deep Reference)",
-		outcome: "For any varietal on the list you can name where it comes from, what it smells like and what it does at the table — the depth that separates a server who recites the by-the-glass list from one who sells off it.",
+		outcome: "For any varietal on the list you can name where it comes from, what it smells like and what it does at the table: the depth that separates a server who recites the by-the-glass list from one who sells off it.",
 		termSlugs: [
 			"riesling",
 			"chardonnay",
@@ -281,7 +281,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-cheese-alpine-iberia",
 		title: "Alpine and Iberian",
-		outcome: "You can sell the melting cheeses on their physics (Gruyère, Fontina, Raclette) and place the sheep's-milk Iberians — Manchego, Idiazábal, Serra da Estrela — plus Cabrales as the blue that outguns Roquefort.",
+		outcome: "You can sell the melting cheeses on their physics (Gruyère, Fontina, Raclette) and place the sheep's-milk Iberians (Manchego, Idiazábal, Serra da Estrela) plus Cabrales as the blue that outguns Roquefort.",
 		termSlugs: [
 			"gruyere",
 			"emmentaler",
@@ -296,7 +296,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-cheese-isles-north",
 		title: "Britain, the Low Countries and the Cold Edge",
-		outcome: "You can explain what \"West Country Farmhouse\" protects, sell Stilton with honey, place aged Gouda's crystals with Parmigiano's, and handle the four that behave unlike any of them — feta, halloumi, brunost, sulguni.",
+		outcome: "You can explain what \"West Country Farmhouse\" protects, sell Stilton with honey, place aged Gouda's crystals with Parmigiano's, and handle the four that behave unlike any of them: feta, halloumi, brunost, sulguni.",
 		termSlugs: [
 			"west-country-farmhouse-cheddar",
 			"stilton",
@@ -327,7 +327,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-charc-craft",
 		title: "The Charcuterie Board: Two Churches, One Slicer",
-		outcome: "You can build a board — 3-5 meats spanning silk, salame, spreadable and a wildcard, 60-90g a head — you slice whole-muscle translucent and salame in 2-3mm coins on a slight bias, everything at room temperature 20-30 minutes out and cut as close to service as possible, and you can tell a guest which of the two crafts they are eating.",
+		outcome: "You can build a board (3-5 meats spanning silk, salame, spreadable and a wildcard, 60-90g a head), you slice whole-muscle translucent and salame in 2-3mm coins on a slight bias, everything at room temperature 20-30 minutes out and cut as close to service as possible, and you can tell a guest which of the two crafts they are eating.",
 		termSlugs: [
 			"whole-muscle-vs-fermented-salami-the-two-churches",
 			"slicing-and-service-law",
@@ -401,7 +401,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-charc-producer",
 		title: "How It Was Cured (Reference)",
-		outcome: "You can answer a guest who asks about nitrites without repeating a myth, and you understand what the curing chamber is doing — enough to know when to hand the question to the chef rather than answer it.",
+		outcome: "You can answer a guest who asks about nitrites without repeating a myth, and you understand what the curing chamber is doing: enough to know when to hand the question to the chef rather than answer it.",
 		termSlugs: [
 			"pink-salt-nitrite-and-nitrate-the-science-straight",
 			"casings-molds-and-the-curing-chamber"
@@ -429,7 +429,7 @@ export const SERVER_MODULES = [
 	{
 		key: "srv-bar-templates",
 		title: "The Cocktail Templates",
-		outcome: "You can answer \"what's in it?\" for anything a guest orders by name, because you know the seven templates every classic collapses into — sour, old fashioned, the stirred aristocrats, highball/collins, equal-parts negroni, tiki, and the hot drinks.",
+		outcome: "You can answer \"what's in it?\" for anything a guest orders by name, because you know the seven templates every classic collapses into: sour, old fashioned, the stirred aristocrats, highball/collins, equal-parts negroni, tiki, and the hot drinks.",
 		termSlugs: [
 			"the-sour-template",
 			"the-old-fashioned-template",
@@ -486,7 +486,7 @@ export const SERVER_MODULES = [
  * The same shape as sanitation.mjs's assertNoRecipes, and for a sharper reason:
  * the recipe screen names what it checked and what it did not, and a
  * server track that said "contains" or "clear" about a dish would be read at a
- * table, out loud, to a guest. The guide has no allergen curriculum — measured
+ * table, out loud, to a guest. The guide has no allergen curriculum: measured
  * across all 479 definitions, exactly two mention allergens and only one states
  * a rule, so there is nothing here to build one out of.
  */
@@ -496,7 +496,7 @@ function assertNoVerdict(obj, recipeSlugs, problems) {
 	const walk = (node, path) => {
 		if (typeof node === 'string') {
 			if (recipeSlugs.has(node)) {
-				problems.push(`service-track: ${path} names the recipe "${node}" — this track is about terms`);
+				problems.push(`service-track: ${path} names the recipe "${node}": this track is about terms`);
 			}
 			return;
 		}
@@ -567,7 +567,7 @@ export function buildServiceTrack(lexicon, cellar, recipeSlugList = []) {
 	const orphans = [...fohSlugs].filter((s) => !placed.has(s));
 	if (orphans.length) {
 		problems.push(
-			`service-track: ${orphans.length} front-of-house term(s) belong to no module — ` +
+			`service-track: ${orphans.length} front-of-house term(s) belong to no module: ` +
 				orphans.slice(0, 5).join(', ')
 		);
 	}
@@ -588,7 +588,7 @@ export function buildServiceTrack(lexicon, cellar, recipeSlugList = []) {
 		}
 		if (bySlug.has(bottle) || CELLAR_ANCHOR[bottle]) {
 			problems.push(
-				`service-track: "${bottle}" is listed as untaught and now has a lesson — move it out of CELLAR_UNTAUGHT`
+				`service-track: "${bottle}" is listed as untaught and now has a lesson: move it out of CELLAR_UNTAUGHT`
 			);
 		}
 	}

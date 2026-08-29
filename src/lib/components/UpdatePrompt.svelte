@@ -40,7 +40,7 @@
 	</div>
 {:else if offlineReady}
 	<div class="toast" role="status">
-		<p>Ready to cook offline — the whole guide is on this device now.</p>
+		<p>Ready to cook offline: the whole guide is on this device now.</p>
 		<div class="acts"><button onclick={() => (offlineReady = false)}>Good</button></div>
 	</div>
 {/if}

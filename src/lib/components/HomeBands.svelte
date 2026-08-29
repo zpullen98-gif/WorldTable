@@ -81,7 +81,7 @@
 	 */
 	const role = $derived(session.role);
 
-	/** Dishes whose most recent cook actually met the standard — evidence, not
+	/** Dishes whose most recent cook actually met the standard: evidence, not
 	 *  attendance. The grade has been in cookedLog since the repertoire landed
 	 *  and no screen has ever read it. */
 	const metStandard = $derived.by(() => {
@@ -254,7 +254,7 @@
 			<a href="{base}/menu/quiz">Drill the Menu<small
 				>{dishes >= 4
 					? `Your ${dishes} dishes, drilled like the canon`
-					: `Opens at four dishes on My Menu — ${4 - dishes} to go`}</small
+					: `Opens at four dishes on My Menu, ${4 - dishes} to go`}</small
 			></a>
 			<a href="{base}/lexicon">Lexicon Quiz<small>Ten questions on the words a cook is expected to know</small></a>
 			<a href="{base}/repertoire">The Repertoire<small
@@ -276,7 +276,7 @@
 			<h3>Record</h3><span>What you have cooked, and where it lives</span>
 		</div>
 		<!-- A percentage needs a DENOMINATOR that means something.
-		     The student has one — 45 dishes, fixed and finishable — so the student
+		     The student has one (45 dishes, fixed and finishable) so the student
 		     gets the meter. A chef's work has no end state, and giving them a
 		     course percentage is exactly the lie this band used to tell: it
 		     reported the ten-semester course complete after 45 cooks of anything.

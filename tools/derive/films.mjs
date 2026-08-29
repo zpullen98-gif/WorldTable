@@ -23,7 +23,7 @@ export function deriveFilms(r, blob, { TEACHERS, DISH_FILMS, TECH }, isAmerican 
 	const out = { techniques: [] };
 
 	const dish = DISH_FILMS.find((d) => d.m.some((m) => nl.includes(m)));
-	if (dish) out.dish = { label: dish.t, url: dish.u, sub: '★ A canon film — verified' };
+	if (dish) out.dish = { label: dish.t, url: dish.u, sub: '★ A canon film: verified' };
 
 	out.search = {
 		label: 'This dish, cooked on camera',

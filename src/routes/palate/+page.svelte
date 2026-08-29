@@ -8,7 +8,7 @@
   other terms and surfaced next to a Filipino oxtail stew.
 
   This page is that chart, shaped for a cook holding a spoon. The eight faults
-  and their levers are checked against the entry's own prose at build time —
+  and their levers are checked against the entry's own prose at build time:
   see tools/derive/palate.mjs, so the page cannot quietly drift from the guide.
 -->
 <script lang="ts">
@@ -19,20 +19,20 @@
 
 	/* Open the fault you are actually tasting; the rest stay shut. A chart you
 	   read at the pass wants one answer visible, not eight. Nothing is open at
-	   first — the meta-rule says find the LOUDEST fault, and pre-opening one
+	   first: the meta-rule says find the LOUDEST fault, and pre-opening one
 	   would be the page making that call for you. */
 	let open = $state<string | null>(null);
 	const toggle = (slug: string) => (open = open === slug ? null : slug);
 </script>
 
-<svelte:head><title>The Palate — The World Table</title></svelte:head>
+<svelte:head><title>The Palate: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
 		<h1>The Palate</h1>
 		<p class="lede">
 			A recipe tells you what to do; the palate tells you what you did. This is the guide's own
-			repair table — taste the dish, name the loudest fault, and pull the gentlest lever that
+			repair table: taste the dish, name the loudest fault, and pull the gentlest lever that
 			answers it.
 		</p>
 		<p class="rule">{p.metaRule}</p>
@@ -42,7 +42,7 @@
 		Everything below the header sits inside <article class="sheet">, matching
 		/menu/quiz and /menu/costing. This is not styling: oot-locks.js masks
 		`article.sheet > *:not(h1):not(.crumbs):not(header)` on a locked route,
-		and a page with no sheet gives it nothing to make inert — the content is
+		and a page with no sheet gives it nothing to make inert: the content is
 		delivered in clear behind an overlay a reader can dismiss. This route is
 		not in TABLE_FREE_ROUTES, so it is a locked route.
 	-->

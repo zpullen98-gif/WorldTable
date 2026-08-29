@@ -3,13 +3,13 @@
  * (tools/build-data.mjs) and the runtime loader (src/lib/search.ts).
  *
  * It lives in one file because MiniSearch.loadJS requires the EXACT options the
- * index was serialized with — a drifted processTerm silently corrupts every
+ * index was serialized with: a drifted processTerm silently corrupts every
  * lookup rather than erroring. Plain .mjs so Node can import it directly
  * without a TS loader.
  */
 
 /** NFD-fold: strip combining marks so "ragu" matches "Ragù". Same folding as
- *  the slug generator and the filter fallback — one rule everywhere.
+ *  the slug generator and the filter fallback, one rule everywhere.
  *  @param {string} s */
 export const fold = (s) =>
 	s
@@ -24,7 +24,7 @@ export const miniOptions = {
 	// what a recipe DOES, so "braise" should reach all 27 braises from the main
 	// search box and not only from /technique.
 	fields: ['name', 'chapter', 'ingredients', 'flavor', 'technique'],
-	// Nothing stored — the id indexes straight into the recipes array.
+	// Nothing stored: the id indexes straight into the recipes array.
 	storeFields: [],
 	processTerm: (/** @type {string} */ term) => {
 		const t = fold(term);

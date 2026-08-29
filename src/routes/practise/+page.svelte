@@ -22,7 +22,7 @@
 	const cooked = $derived(session.cookedDishes.size);
 
 	/* The board is offered only where it is the manager's device to read. The
-	   flag is the shared layer's and it is opt-in per device — the tablet on the
+	   flag is the shared layer's and it is opt-in per device: the tablet on the
 	   pass is deliberately not the manager's. */
 	let manager = $state(false);
 	onMount(() => { manager = profiles.isManagerDevice(); });
@@ -41,7 +41,7 @@
 		<p class="lede">
 			{#if due.length}
 				{due.length} dish{due.length === 1 ? '' : 'es'} past their re-cook. Everything here is
-				measured — by you against a standard, or by the app against your own menu.
+				measured: by you against a standard, or by the app against your own menu.
 			{:else}
 				Everything here is measured, rather than read. Nothing is due right now.
 			{/if}
@@ -106,7 +106,7 @@
 			<a href="{base}/lexicon">
 				<h2>Lexicon flashcards</h2>
 				<p>
-					{data.lexicon} terms, with a quiz. Not scored and not scheduled yet — turn a card and judge
+					{data.lexicon} terms, with a quiz. Not scored and not scheduled yet: turn a card and judge
 					yourself.
 				</p>
 			</a>
@@ -127,7 +127,7 @@
 	{#if manager}
 		<h2 class="sec">For the manager</h2>
 		<p class="secnote">
-			Who has done the work of each station, on this device. Not who is qualified — that is yours to
+			Who has done the work of each station, on this device. Not who is qualified: that is yours to
 			judge from watching them cook.
 		</p>
 		<p><a class="chip" href="{base}/coverage">The coverage board</a></p>

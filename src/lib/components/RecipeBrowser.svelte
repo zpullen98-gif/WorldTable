@@ -22,16 +22,16 @@
 	 *
 	 * They cannot be read during prerender: a prerendered page is one file on
 	 * disk serving every query string, so SvelteKit throws on
-	 * `url.searchParams` there — correctly, since baking one set of filters into
+	 * `url.searchParams` there: correctly, since baking one set of filters into
 	 * the HTML would serve them to everyone. The prerendered page shows the
 	 * unfiltered chapter; hydration applies whatever the link asked for.
 	 *
-	 * `chapter` is deliberately not captured into state either — it comes from
+	 * `chapter` is deliberately not captured into state either: it comes from
 	 * the route, and the derived `active` below tracks it.
 	 */
 	let filters = $state({ ...EMPTY_FILTERS });
 
-	// Once, on mount — not a reactive effect. The write-back effect below pushes
+	// Once, on mount: not a reactive effect. The write-back effect below pushes
 	// filters INTO the URL, so re-reading the URL reactively would have the two
 	// chasing each other every keystroke.
 	onMount(() => {
@@ -53,7 +53,7 @@
 	/**
 	 * Everything matching the filters EXCEPT the chapter, computed once. The
 	 * grid narrows it by chapter; the rail counts group it by chapter. Deriving
-	 * both from one list means they cannot disagree — with two separate
+	 * both from one list means they cannot disagree: with two separate
 	 * applyFilters passes, a search path used by one and not the other would
 	 * show a rail count that doesn't match the grid.
 	 *

@@ -40,7 +40,7 @@ export const SECONDS_PER_QUESTION = 20;
  * Steps a question may use: hands-on steps with distinct start times.
  *
  * Zero-hands steps are excluded because "when does the simmer start" is not a
- * decision anybody makes under pressure — the pan does not need you. Ties are
+ * decision anybody makes under pressure: the pan does not need you. Ties are
  * excluded per-question rather than globally: two steps starting at the same
  * minute have no defensible "first", so they never appear together.
  */
@@ -63,7 +63,7 @@ export function canDrill(pass: Pass): boolean {
  *
  * `rand` is injected (0..1) so tests are deterministic and the runtime passes
  * Math.random. Sampling is by distinct start time first, then a step within
- * each time — so a dish with many steps cannot crowd a question with itself.
+ * each time, so a dish with many steps cannot crowd a question with itself.
  */
 export function firingQuestions(
 	pass: Pass,

@@ -1,8 +1,8 @@
 /**
- * The waste log — what died, why, and what it was worth.
+ * The waste log: what died, why, and what it was worth.
  *
  * The guide asks for it by name: *"waste logs (what died in the walk-in, and
- * why — over-prepping is the most common villain)"*. The reason codes are not
+ * why: over-prepping is the most common villain)"*. The reason codes are not
  * invented here; `tools/derive/waste.mjs` reads them out of the guide's own
  * leak meter and fails the build if the prose stops naming one.
  *
@@ -27,7 +27,7 @@
  * `unitValue` is what one of the thing was worth AT THE MOMENT IT WAS LOGGED,
  * stored on the entry rather than recomputed. Revaluing March's binned demi at
  * today's butter price would make last quarter's waste move every time somebody
- * reprices an item — the trend, which is the only reason to keep a log this
+ * reprices an item, the trend, which is the only reason to keep a log this
  * long, would be an artefact of the item book rather than a record of what
  * happened. It also means a dish deleted next month does not silently zero out
  * the waste it caused.
@@ -54,7 +54,7 @@ export interface WasteEntry {
 	reason: string;
 	/**
 	 * What ONE of them was worth when this was logged. Null when the thing could
-	 * not be costed at the time, which is kept as null rather than 0 — a bin
+	 * not be costed at the time, which is kept as null rather than 0: a bin
 	 * nobody could price is not a bin that cost nothing.
 	 */
 	unitValue: number | null;
@@ -90,7 +90,7 @@ export interface WasteRollup {
 	/**
 	 * Entries in the window that carry no value. PRINT THIS. A total that
 	 * silently skips four unpriced bins reads as authority and is wrong in the
-	 * direction that makes the kitchen look tidier than it is — the same refusal
+	 * direction that makes the kitchen look tidier than it is: the same refusal
 	 * `plateCost.complete` exists to make.
 	 */
 	unvalued: number;
@@ -111,7 +111,7 @@ export interface WasteRollup {
 /**
  * Roll the log up over a window. Venue-wide, by reason, never by person.
  *
- * `from`/`to` are ms epoch and the window is half-open — `[from, to)` — so
+ * `from`/`to` are ms epoch and the window is half-open (`[from, to)`) so
  * consecutive weeks cannot both claim an entry logged exactly at midnight.
  */
 export function rollUpWaste(
@@ -156,7 +156,7 @@ export function rollUpWaste(
 		unvalued,
 		total,
 		byReason,
-		// A reason with no money attached is not the "biggest line" — it is an
+		// A reason with no money attached is not the "biggest line"; it is an
 		// unpriced one, and calling it the top would answer "where is the money
 		// going" with a row that has no money in it.
 		top: byReason.find((r) => r.money > 0) ?? null,
@@ -170,15 +170,15 @@ export function rollUpWaste(
 /**
  * Merge two logs. UNION BY ID.
  *
- * An entry is immutable once written — it records something that happened at a
- * time — so there is no conflict to resolve and nothing to prefer. Union is the
+ * An entry is immutable once written: it records something that happened at a
+ * time, so there is no conflict to resolve and nothing to prefer. Union is the
  * only rule that cannot lose a bin, and losing bins is how a log stops being
  * evidence of anything. Same conclusion `mergeCostings` reached about weeks of
  * covers and `mergeItems` about prices: two devices hold disjoint observations,
  * not competing records.
  *
  * NOT CAPPED, unlike the item book. An old price is dead weight — nobody
- * reprices against 2019 — but old waste is the trend, and the only reason to
+ * reprices against 2019, but old waste is the trend, and the only reason to
  * keep a log across a year is to be able to say "last October we binned half
  * this". Bounding it would delete the answer to the question it exists for.
  */
@@ -196,8 +196,8 @@ export function mergeWaste(
 /**
  * The sentence the log exists to be able to say.
  *
- * The guide asserts a most-common cause — *"over-prepping is the most common
- * villain"* — which means a venue's own log can either confirm it or contradict
+ * The guide asserts a most-common cause: *"over-prepping is the most common
+ * villain"*: which means a venue's own log can either confirm it or contradict
  * it, and both are worth reading. A log that only listed totals would leave the
  * chef to do that comparison in their head, which is to say never.
  *
@@ -212,7 +212,7 @@ export function wasteHeadline(
 	const top = rollup.top;
 	const pct = top.pct.toFixed(0);
 	if (top.reason === villain) {
-		return `${labelOf(top.reason)} is ${pct}% of what you threw away — the guide's most common villain, and yours.`;
+		return `${labelOf(top.reason)} is ${pct}% of what you threw away, the guide's most common villain, and yours.`;
 	}
-	return `${labelOf(top.reason)} is your biggest line at ${pct}%, ahead of ${labelOf(villain)} — which the guide calls the most common villain.`;
+	return `${labelOf(top.reason)} is your biggest line at ${pct}%, ahead of ${labelOf(villain)}, which the guide calls the most common villain.`;
 }

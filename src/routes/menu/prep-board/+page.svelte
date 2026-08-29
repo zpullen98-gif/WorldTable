@@ -31,7 +31,7 @@
 	let now = $state(0);
 	onMount(() => {
 		now = Date.now();
-		// Resynced when the tab comes back — a pass tablet is open for days by
+		// Resynced when the tab comes back: a pass tablet is open for days by
 		// design (registerType: 'prompt'), and a board that froze "today" at
 		// mount treats yesterday's walk-in count as this morning's after
 		// midnight. Same pattern the costing sheet and the waste log use.
@@ -62,7 +62,7 @@
 			/**
 			 * BATCHES ARE COMPUTED ON ZERO WHEN THE COUNT IS STALE. The warning
 			 * copy has said "an uncounted prep is treated as none on hand" since
-			 * this board shipped, and the code believed yesterday's number anyway —
+			 * this board shipped, and the code believed yesterday's number anyway:
 			 * which is exactly the failure countFor's own record documents: a
 			 * count is only true for the day it was made, and a board that treats
 			 * Tuesday's twelve portions as current sends a commis to make nothing.
@@ -86,7 +86,7 @@
 	/**
 	 * The plan.
 	 *
-	 * One step per prep — the make is the step, and its hands-on and unattended
+	 * One step per prep: the make is the step, and its hands-on and unattended
 	 * seconds are the chef's own. No course, so every prep lands on the same
 	 * anchor: a prep deadline is a deadline, not a stagger.
 	 *
@@ -123,7 +123,7 @@
 	const hours = (sec: number) => (sec >= 3600 ? `${Math.round(sec / 360) / 10} h` : `${Math.round(sec / 60)} min`);
 </script>
 
-<svelte:head><title>The Prep Board — The World Table</title></svelte:head>
+<svelte:head><title>The Prep Board: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -164,7 +164,7 @@
 			{#if uncounted.length}
 				<p class="warn">
 					{uncounted.length} of {rows.length} not counted today. An uncounted prep is treated as
-					<b>none on hand</b>, which will over-order rather than send a section out short — but count
+					<b>none on hand</b>, which will over-order rather than send a section out short, but count
 					it and the board stops guessing.
 				</p>
 			{/if}
@@ -182,7 +182,7 @@
 								onchange={(e) => {
 								// An emptied field is not a count of zero: Number('') === 0,
 								// so one blur on a cleared box used to file "counted today,
-								// none on hand" — a real count nobody made. Empty removes
+								// none on hand", a real count nobody made. Empty removes
 								// the count instead, which the board honestly shows as
 								// "never counted".
 								const v = e.currentTarget.value.trim();
@@ -196,7 +196,7 @@
 							{#if r.stale}
 								· <b class="warnish"
 									>{r.countedOn
-										? `counted ${r.countedOn} — treated as none until counted today`
+										? `counted ${r.countedOn}: treated as none until counted today`
 										: 'never counted'}</b
 								>
 							{/if}
@@ -212,7 +212,7 @@
 
 			<h2 class="sec">The day</h2>
 			{#if !toMake.length}
-				<p class="empty">Nothing to make — everything is at or above par.</p>
+				<p class="empty">Nothing to make: everything is at or above par.</p>
 			{:else}
 				<p class="startline">
 					{toMake.length}
@@ -222,7 +222,7 @@
 
 				{#each clashes as c, i (i)}
 					<p class="clash">
-						<b>{whenLabel(c.fromMin)}</b> — {c.dishes.join(' and ')} want {c.demand} pairs of hands for
+						<b>{whenLabel(c.fromMin)}</b>: {c.dishes.join(' and ')} want {c.demand} pairs of hands for
 						{c.fromMin - c.toMin} min, and there {hands === 1 ? 'is one' : `are ${hands}`}.
 					</p>
 				{/each}
@@ -330,7 +330,7 @@
 		color: var(--ink-soft);
 		font-size: var(--t-small, 0.8125rem);
 	}
-	/* Real colours, never stacked opacity — see shared/oot-home.css. */
+	/* Real colours, never stacked opacity; see shared/oot-home.css. */
 	.warn,
 	.warnish,
 	.clash {

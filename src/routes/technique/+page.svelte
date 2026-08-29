@@ -21,7 +21,7 @@
 		<h1>The Techniques</h1>
 		<p class="lede">
 			The guide read sideways. Every dish here is filed by cuisine and by course, but a cook does
-			not level up a cuisine at a time — they level up a skill at a time. These are the skills,
+			not level up a cuisine at a time; they level up a skill at a time. These are the skills,
 			each with every recipe in the guide that demonstrates it.
 		</p>
 		<p class="progress">
@@ -31,7 +31,7 @@
 
 	<h2 class="sec">The foundations</h2>
 	<p class="secnote">
-		The moves the whole guide is built on. Each one carries its Lexicon definition — the
+		The moves the whole guide is built on. Each one carries its Lexicon definition, the
 		<i>why</i> underneath the what.
 	</p>
 	<ul class="grid">

@@ -1,5 +1,5 @@
 <!--
-  The Costing Sheet — what a plate costs, and what the menu earns.
+  The Costing Sheet: what a plate costs, and what the menu earns.
 
   The guide has always carried this. "Menu Economics: Food Cost, Yield & Par"
   states food cost percent, contribution margin, par levels and the four
@@ -9,7 +9,7 @@
   The least reachable content in the guide is what the paying venue needs most.
 
   So this is that entry made to compute, against the dishes a venue has already
-  entered on The Kitchen's Menu — the one place in the app that knows a price.
+  entered on The Kitchen's Menu, the one place in the app that knows a price.
 
   Everything below the H1 sits inside <article class="sheet"> deliberately:
   inside Outside Of Time this is a PAID surface, and the monorepo's lock masks
@@ -92,7 +92,7 @@
 	 *
 	 * `clock` is $state and `thisWeek` derives from it, so the week is never
 	 * captured. vite.config.ts ships `registerType: 'prompt'` with
-	 * `skipWaiting: false` — "never reload the page out from under a cook" — so a
+	 * `skipWaiting: false`, "never reload the page out from under a cook", so a
 	 * pass tablet is open for days by design, and a week frozen at page load
 	 * would quietly file Thursday's covers under a Monday that has passed.
 	 *
@@ -160,7 +160,7 @@
 
 	function writeLines(id: string, lines: CostLine[]) {
 		// A patch. It used to pass `sold` back in, which meant an ingredient edit
-		// rewrote the covers figure too — the shape that would have dropped a
+		// rewrote the covers figure too: the shape that would have dropped a
 		// whole history the moment covers became one.
 		house.setCosting(id, { lines });
 	}
@@ -172,7 +172,7 @@
 			 * unitCost is minted NaN, not 0. Zero read as "a completed free
 			 * ingredient": lineCost(0 × qty) = 0, complete stayed true, and a
 			 * sheet full of untyped lines showed a confident cheap plate. NaN is
-			 * what the sheet already refuses loudly — the number input renders it
+			 * what the sheet already refuses loudly: the number input renders it
 			 * as an empty box, which is exactly what an untyped price is.
 			 */
 			{ id: mintLineId(), item: '', unitCost: Number.NaN, unit: 'kg', usedQty: 0, yieldPct: 100 }
@@ -245,7 +245,7 @@
 		}
 
 		if (price) {
-			// The book already knows this thing. Follow it — and take its price,
+			// The book already knows this thing. Follow it, and take its price,
 			// because a line showing 6.40 beside a book that says 7.90 is the
 			// stale number this page exists to stop.
 			editLine(dishId, l.id, {
@@ -277,7 +277,7 @@
 		const slug = itemSlugOf(name);
 		// unitCost is kept on the line as well as in the book. It is not read
 		// while the line is linked, and it is what the row falls back to the
-		// moment somebody unlinks — a row that unlinked to 0.00 would be worse
+		// moment somebody unlinks: a row that unlinked to 0.00 would be worse
 		// than never having linked.
 		editLine(dishId, l.id, house.item(slug) ? { unitCost, itemSlug: slug } : { unitCost });
 	}
@@ -314,7 +314,7 @@
 
 	/**
 	 * The measured yield a line could adopt. Offered on ANY line naming a
-	 * tested item, linked or not — the yield is about the knife work, not the
+	 * tested item, linked or not: the yield is about the knife work, not the
 	 * price, but only when it differs from what the line already says, because
 	 * a chip repeating the current value is furniture.
 	 */
@@ -335,7 +335,7 @@
 	}
 
 	/**
-	 * The sheet as a CSV. One-way by decision — the .wtjson is the only import
+	 * The sheet as a CSV. One-way by decision: the .wtjson is the only import
 	 * path this app will ever have, and cut for the person who does not run
 	 * the app: the accountant, the partner, the bank.
 	 */
@@ -400,7 +400,7 @@
 		const band = `${foodCostBand.lowPct}–${foodCostBand.highPct}% band`;
 		if (!out) return `${used} None above the ${band}.`;
 		// "Above", not "moved out of". The book knows the price moved and it
-		// knows the dish is over — it does not know the first caused the second,
+		// knows the dish is over; it does not know the first caused the second,
 		// and a sentence a chef reprices a menu from should not imply it.
 		return `${used} ${out} ${out === 1 ? 'is' : 'are'} above the ${band}.`;
 	}
@@ -408,7 +408,7 @@
 	/**
 	 * File this week's covers.
 	 *
-	 * An empty box clears THIS WEEK only — never `sales: []`, never by omitting
+	 * An empty box clears THIS WEEK only: never `sales: []`, never by omitting
 	 * the key. One blur on an empty field must not be able to destroy five weeks
 	 * of counting.
 	 */
@@ -448,7 +448,7 @@
 					name: d.name,
 					contribution: e.contribution,
 					// This week if it has been counted, else the newest figure the record
-					// carries — which for a venue that predates weekly covers is its
+					// carries, which for a venue that predates weekly covers is its
 					// original undated number, mirrored by normaliseCosting. So the
 					// board does not go blank on update day for anybody.
 					sold: coversThisWeek(d.id) ?? house.costingFor(d.id).sold ?? null,
@@ -465,7 +465,7 @@
 	 *
 	 * The sheet ranked dishes and never summed them, so "our food cost is 31%"
 	 * was the arithmetic mean of the dish percentages. The plowhorse at 42% is a
-	 * third of covers and the puzzle at 22% sells four a week — the figure the
+	 * third of covers and the puzzle at 22% sells four a week: the figure the
 	 * venue actually runs at is weighted by what sold.
 	 */
 	const rollup = $derived(
@@ -487,7 +487,7 @@
 	/**
 	 * How many of the rollup's counts actually came from THIS week, and how
 	 * many are the fallback (an earlier week, or the pre-weekly undated
-	 * mirror). The fallback is deliberate — no board goes blank on update day —
+	 * mirror). The fallback is deliberate, no board goes blank on update day,
 	 * but the label used to say "for the week of X" over all of it, which made
 	 * the fallback a lie instead of a kindness. Now the sentence says both.
 	 */
@@ -505,7 +505,7 @@
 	const costed = $derived(dishes.filter((d) => linesFor(d.id).length > 0));
 </script>
 
-<svelte:head><title>The Costing Sheet — The World Table</title></svelte:head>
+<svelte:head><title>The Costing Sheet: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -566,7 +566,7 @@
 		{/if}
 
 		<!--
-			Filled from what the venue has already typed. This IS the onboarding —
+			Filled from what the venue has already typed. This IS the onboarding:
 			there is no master-data screen, and there is never going to be one.
 		-->
 		<datalist id="item-book">
@@ -576,7 +576,7 @@
 		{#if !dishes.length}
 			<section class="empty">
 				<p>
-					Nothing to cost yet. The sheet works from the dishes on The Kitchen's Menu — the ones
+					Nothing to cost yet. The sheet works from the dishes on The Kitchen's Menu, the ones
 					your house actually serves, with their prices.
 				</p>
 				<p><a class="chip" href="{base}/menu">Enter the menu</a></p>
@@ -587,7 +587,7 @@
 			<p class="warn">
 				<b>Yield first.</b>
 				{data.economics.entries.menu.definition.includes('45% yield')
-					? 'A $12/kg fish at 45% yield is really $26/kg on the plate —'
+					? 'A $12/kg fish at 45% yield is really $26/kg on the plate:'
 					: ''}
 				{data.economics.yieldWarning}.
 			</p>
@@ -623,7 +623,7 @@
 							<div class="sheetbody">
 								{#if !e.complete}
 									<p class="incomplete" role="alert">
-										One or more lines cannot be costed — a yield of zero, or a missing number. The
+										One or more lines cannot be costed: a yield of zero, or a missing number. The
 										total below leaves them out, so it is lower than the real plate cost.
 									</p>
 								{/if}
@@ -696,7 +696,7 @@
 															value={rl.unitCost}
 															aria-label="Cost per portion, from the prep"
 															readonly
-															title="From the prep — edit it on the Preps sheet"
+															title="From the prep: edit it on the Preps sheet"
 														/>
 													{:else if l.itemSlug}
 														<!-- Editable, and the edit goes to the BOOK. That is the whole
@@ -708,7 +708,7 @@
 															min="0"
 															value={rl.unitCost}
 															aria-label="Cost per unit, from the item book"
-															title="From the item book — changing it reprices every dish that buys this"
+															title="From the item book: changing it reprices every dish that buys this"
 															onchange={(ev) => commitPrice(d.id, l, num(ev))}
 														/>
 													{:else}
@@ -824,7 +824,7 @@
 															class="replaced"
 															title={"An import replaced " + w.prev}
 															><span aria-hidden="true">*</span><span class="sr"
-																>— an import replaced {w.prev}</span
+																>: an import replaced {w.prev}</span
 															></b
 														>{/if}
 												</span>
@@ -854,7 +854,7 @@
 									</div>
 									<div>
 										<dt>Contribution</dt>
-										<dd>{e.contribution === null ? '—' : sym + money(e.contribution)}</dd>
+										<dd>{e.contribution === null ? '-' : sym + money(e.contribution)}</dd>
 									</div>
 								</dl>
 
@@ -879,7 +879,7 @@
 			<h2 class="sec">What the menu adds up to</h2>
 			<p data-print="hide">
 				<button class="chip" onclick={downloadCsv}
-					title="The sheet as a file a spreadsheet opens. One way — nothing imports from CSV, ever."
+					title="The sheet as a file a spreadsheet opens. One way: nothing imports from CSV, ever."
 					>Download the sheet (CSV)</button
 				>
 			</p>
@@ -906,7 +906,7 @@
 				<p class="secnote">
 					Weighted by what actually sold, not the average of the dish percentages — which flatters
 					whenever the expensive dish is the popular one. Computed over the {rollup.usable} of
-					{rollup.of} dishes carrying a price, a covers count and a complete costing —
+					{rollup.of} dishes carrying a price, a covers count and a complete costing:
 					{coversBasis.thisWeek} counted in the week of {weekLabel(thisWeek)}{coversBasis.carried
 						? `, ${coversBasis.carried} carried forward from their newest earlier count`
 						: ''}.
@@ -914,7 +914,7 @@
 						<b
 							>{rollup.uncosted}
 							{rollup.uncosted === 1 ? 'dish that sold is' : 'dishes that sold are'} not in this
-							figure — no complete costing.</b
+							figure, no complete costing.</b
 						>
 					{/if}
 					{#if rollup.pareto}
@@ -931,7 +931,7 @@
 					The guide's instruction is "reprice quarterly against invoice creep;
 					menus that sleep bleed". Following it needs two things the sheet did
 					not have: the price before this one, and the list of dishes a change
-					reaches. Both are here, and neither is asked for — the book fills
+					reaches. Both are here, and neither is asked for: the book fills
 					itself from the costing.
 				-->
 				<p class="secnote">
@@ -968,7 +968,7 @@
 								<!--
 									The list the reprice instruction actually needs: unlinked lines
 									still holding a number the book has moved past. A linked line
-									cannot appear here — it follows the book by construction.
+									cannot appear here: it follows the book by construction.
 								-->
 								<p class="istale">
 									{u.staleDishIds.length}
@@ -1018,7 +1018,7 @@
 			{:else}
 				<p class="secnote">
 					Nothing in the book yet. Type an ingredient and a price on any sheet above and it starts
-					keeping the history — then the next dish that buys the same thing offers it back to you,
+					keeping the history, then the next dish that buys the same thing offers it back to you,
 					and repricing it once moves every plate it is on.
 				</p>
 			{/if}
@@ -1026,7 +1026,7 @@
 			<h2 class="sec">Menu engineering</h2>
 			{#if engineered.length}
 				<p class="secnote">
-					Popularity against profit, ranked by what each dish actually contributes — because
+					Popularity against profit, ranked by what each dish actually contributes: because
 					dollars pay rent and percentages do not. Needs a price and a sold count; {costed.length}
 					of {dishes.length} dishes are costed.
 				</p>
@@ -1104,7 +1104,7 @@
 	/*
 	 * The per-line marker. Small, but it must be legible at two metres on a pass
 	 * tablet like everything else here, so it is a button with real text rather
-	 * than an icon nobody can read — and never colour alone: "follows the book"
+	 * than an icon nobody can read, and never colour alone: "follows the book"
 	 * and "book:" say which state this is in words.
 	 */
 	.book {

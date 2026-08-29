@@ -4,7 +4,7 @@
   This page is deliberately the SMALLEST feature on this branch, and it is the
   only one where that was the finding rather than the constraint. Five candidate
   per-recipe hazard rules were written and measured against the corpus, and all
-  five were unshippable — the stated-temperature rule scored 0 of 12, the
+  five were unshippable: the stated-temperature rule scored 0 of 12, the
   raw-protein rule flagged a hot-smoked salmon while missing carbonara, caesar,
   aioli, hollandaise and lox. A missed hazard is worse than ten false ones, and
   those rules miss in that direction. So there is no per-recipe flag here, and
@@ -16,8 +16,8 @@
   would be adopted as compliance evidence while being worthless as evidence.
 
   It also does not import renderLine or convertLine. The guide's own C/F pair
-  disagrees with this app's converter — 4°C rounds to 39°F and the guide writes
-  40°F — so safety strings are rendered exactly as written and never converted.
+  disagrees with this app's converter: 4°C rounds to 39°F and the guide writes
+  40°F, so safety strings are rendered exactly as written and never converted.
   src/lib/sanitation.test.ts asserts both halves of that.
 
   It does not print (data-print="hide" on the root, plus a print-only line): a
@@ -35,13 +35,13 @@
 	const termOf = (anchor: string) => s.entries[anchor]?.term ?? '';
 </script>
 
-<svelte:head><title>Food Safety — The World Table</title></svelte:head>
+<svelte:head><title>Food Safety: The World Table</title></svelte:head>
 
 <div class="shell view" data-print="hide">
 	<header class="head">
 		<h1>Food Safety</h1>
 		<p class="lede">
-			The guide's food-safety and inspections entries, carried whole. This is the guide's text — not
+			The guide's food-safety and inspections entries, carried whole. This is the guide's text: not
 			law, not a code, and not a plan.
 		</p>
 	</header>
@@ -97,7 +97,7 @@
 		<ul class="conflict">
 			<li>
 				<span class="fig">{s.conflict.a.evidence}</span>
-				<span class="attrib">— {s.conflict.a.term}</span>
+				<span class="attrib">{s.conflict.a.term}</span>
 			</li>
 			<li>
 				<span class="fig">{s.conflict.b.numbers[0]}–{s.conflict.b.numbers[1]}°C</span>

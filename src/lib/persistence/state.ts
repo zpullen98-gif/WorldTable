@@ -1,5 +1,5 @@
 /**
- * The persisted session's shape — in its own module, imported by BOTH db.ts and
+ * The persisted session's shape: in its own module, imported by BOTH db.ts and
  * migrations.ts, precisely so those two never import each other.
  *
  * They used to: db needed migrate(), migrations needed EMPTY_SESSION. That
@@ -16,14 +16,14 @@ export const CURRENT_VERSION = 1;
 /**
  * A dish on the venue's own menu — The Kitchen's Menu. Deliberately NOT a
  * Recipe: recipes feed the pantry matcher, search and cook mode, and a menu
- * item is a different thing (a price, a section, an allergen line — no method,
+ * item is a different thing (a price, a section, an allergen line; no method,
  * no timings). Own sibling field, own shape.
  */
 export interface MenuDish {
 	/** 'd-' + base36, minted at first save, never recomputed. */
 	id: string;
 	name: string;
-	/** Menu section — Starters, Mains… — and the quiz's distractor category. */
+	/** Menu section (Starters, Mains…) and the quiz's distractor category. */
 	section: string;
 	description: string;
 	ingredients: string[];
@@ -56,7 +56,7 @@ export interface MenuDish {
 
 export interface SessionState {
 	schemaVersion: number;
-	/** Recipe slugs — never array indices. See stores/session.svelte.ts. */
+	/** Recipe slugs, never array indices. See stores/session.svelte.ts. */
 	menu: string[];
 	notes: Record<string, string>;
 	pantry: string[];
@@ -84,7 +84,7 @@ export interface SessionState {
 	 */
 	stepActuals: Record<string, number[]>;
 	/**
-	 * Every cook, not every dish — one entry per time the dish was made. The
+	 * Every cook, not every dish: one entry per time the dish was made. The
 	 * timestamps drive the re-cook schedule in lib/repertoire.ts; the grade is
 	 * what the plate was against the dish's standard, absent on cooks recorded
 	 * before standards existed and on the 925 dishes that have none.
@@ -93,7 +93,7 @@ export interface SessionState {
 		slug: string;
 		at: number;
 		grade?: 'met' | 'close' | 'missed';
-		/** Frozen mark ids that were off — see CookEntry in repertoire.ts. */
+		/** Frozen mark ids that were off; see CookEntry in repertoire.ts. */
 		off?: string[];
 		/** The palate lever reached for, a slug into palate.json. */
 		fault?: string;
@@ -147,7 +147,7 @@ export interface SessionState {
 	 * Kept in the SESSION, which profiles.key() namespaces per person, and
 	 * deliberately not in prefs (raw localStorage, device-wide, read
 	 * synchronously by app.html) and not in the profile's path map (write-once,
-	 * no unmark — a person who changed role would carry both stamps forever).
+	 * no unmark: a person who changed role would carry both stamps forever).
 	 */
 	role?: 'chef' | 'student' | 'server';
 	lastWrite: number;
@@ -160,7 +160,7 @@ export interface SessionState {
  * record already uses for `HouseRecord.prepCounts.countedOn` and for the same
  * reason: two devices in one kitchen agree on the DATE even when their
  * timezones and DST offsets do not. Epoch ms of local midnight does not survive
- * a DST boundary or a tablet whose zone changes — it mints a SECOND key for one
+ * a DST boundary or a tablet whose zone changes: it mints a SECOND key for one
  * trading week, and a union merge faithfully keeps both, so the week is counted
  * twice on the menu-engineering board.
  */
@@ -208,7 +208,7 @@ export interface DishCosting {
 	 *
 	 * Never deleted and never re-dated. It is what an existing venue's number
 	 * still reads as on update day, nothing moves on disk, and no board goes
-	 * blank — and what a build predating `sales` can still read out of the same
+	 * blank, and what a build predating `sales` can still read out of the same
 	 * record. Derived, never taken from a caller: a writable `sold` beside a
 	 * writable `sales` is two sources of truth for one number.
 	 */
@@ -233,7 +233,7 @@ export interface PlanRun {
  *
  * A cook who closes the tab mid-service and comes back in ten minutes wants the
  * clock back. One who opens the app the following afternoon does not want last
- * night's "40 minutes behind" — so the run expires rather than being resumed
+ * night's "40 minutes behind", so the run expires rather than being resumed
  * into a lie.
  */
 export const RUN_MAX_AGE_MS = 18 * 60 * 60 * 1000;
@@ -316,7 +316,7 @@ const validWeek = (w: unknown): w is SalesWeek =>
  * costing enters, needs no stamp, and never writes on load.
  *
  * Returns null only for something carrying NO typed figure at all. A costing
- * with valid `sales` and no `lines` array is kept with `lines: []` — the old
+ * with valid `sales` and no `lines` array is kept with `lines: []`; the old
  * guard (`!Array.isArray(lines)` -> discard) would silently throw away exactly
  * the record this change produces.
  */
@@ -327,7 +327,7 @@ export function normaliseCosting(raw: unknown): DishCosting | null {
 	const sales = Array.isArray(c.sales) ? c.sales.filter(validWeek) : [];
 	// Test the VALUE, never the key: structuredClone preserves a key whose value
 	// is undefined, so `'sold' in c` is true for a field that was cleared. And
-	// never a truthiness test — 0 covers is the number a chef types precisely so
+	// never a truthiness test: 0 covers is the number a chef types precisely so
 	// the board calls a dish a dog.
 	const sold = Number.isFinite(c.sold) ? (c.sold as number) : undefined;
 	if (!lines.length && !sales.length && sold === undefined) return null;
@@ -355,9 +355,9 @@ export const CLOCK_SKEW_MS = 24 * 60 * 60 * 1000;
  * carrying week 5 can no longer replace local weeks 1-4, which is exactly what
  * the old whole-record replace did.
  *
- * `lines` still merge WHOLE on the newer `ts`. The original rationale —
+ * `lines` still merge WHOLE on the newer `ts`. The original rationale,
  * "merging line-by-line across two sheets would invent a third sheet neither
- * venue priced" — stays true for lines and becomes FALSE for sales, because two
+ * venue priced", stays true for lines and becomes FALSE for sales, because two
  * devices' week records are disjoint observations rather than competing sheets.
  */
 export function mergeCostings(
@@ -380,7 +380,7 @@ export function mergeCostings(
 		}
 		if (ours.count === w.count) {
 			// No disagreement. Keep the OLDER stamp deliberately, so the result is
-			// identical whichever direction the file travelled — order-independence
+			// identical whichever direction the file travelled: order-independence
 			// is what makes re-importing your own export a no-op.
 			byWeek.set(w.weekStart, ours.at <= w.at ? ours : w);
 			continue;
@@ -397,7 +397,7 @@ export function mergeCostings(
 	const sales = [...byWeek.values()].sort((a, b) =>
 		a.weekStart < b.weekStart ? 1 : a.weekStart > b.weekStart ? -1 : 0
 	);
-	// Lines travel with the newer stamp, and the merged ts is the max — a record
+	// Lines travel with the newer stamp, and the merged ts is the max: a record
 	// carrying the venue's newest lines under an older stamp stops propagating
 	// them to any third device.
 	const newer = theirs.ts > mine.ts ? theirs : mine;
@@ -415,7 +415,7 @@ export function mergeCostings(
  * Reconcile an imported session over the live one, field by field.
  *
  * Lives here as a pure function rather than inside the store because the store
- * is a .svelte.ts runes module that a unit test cannot reach — and this is
+ * is a .svelte.ts runes module that a unit test cannot reach, and this is
  * exactly the code that most needed a test. It shipped reconciling four of the
  * six data fields: `cookedLog` and `shoppingChecks` fell through a bare
  * `...incoming` spread, and since buildExport writes the FULL state, a genuine
@@ -453,7 +453,7 @@ export function mergeSessions(
 		// was all an entry could carry. Now an entry can also carry which marks
 		// were off and which fault the cook named, and under the old test an
 		// imported entry holding all three lost to a bare local grade on the same
-		// slug|at — silently discarding the only part worth merging.
+		// slug|at: silently discarding the only part worth merging.
 		const richness = (x?: { grade?: unknown; off?: unknown[]; fault?: unknown }) =>
 			(x?.grade ? 4 : 0) + (x?.off?.length ? 2 : 0) + (x?.fault ? 1 : 0);
 		if (!seen || richness(e) > richness(seen)) cooked.set(key, e);
@@ -473,7 +473,7 @@ export function mergeSessions(
 		shoppingChecks,
 		cookedLog: [...cooked.values()].sort((a, b) => a.at - b.at),
 		// The same union as cookedLog above, for the same reason: keyed on
-		// slug|at so repeats survive an import, never on slug alone — that was
+		// slug|at so repeats survive an import, never on slug alone: that was
 		// the rule that collapsed every repeat and backdated the survivor.
 		drillLog: (() => {
 			const drilled = new Map(
@@ -490,7 +490,7 @@ export function mergeSessions(
 		/**
 		 * Named explicitly, per the rule above. A genuine export writes the FULL
 		 * state, so a session that predates the bench carries calibrationLog
-		 * present-and-empty — exactly how cookedLog and shoppingChecks were once
+		 * present-and-empty: exactly how cookedLog and shoppingChecks were once
 		 * wiped by a bare spread.
 		 *
 		 * Unioned on slug|at like drillLog, because two devices' runs are
@@ -545,17 +545,17 @@ export function mergeSessions(
 		})(),
 		/**
 		 * stepActuals and planRun, named at last. This function's own rule,
-		 * "every field is named explicitly, nothing is left to the spread" —
+		 * "every field is named explicitly, nothing is left to the spread":
 		 * shipped with two fields still falling through `...incoming`: every
 		 * genuine .wtjson carries stepActuals (EMPTY_SESSION always has the key,
 		 * and buildExport writes the full state), so importing a colleague's
-		 * file replaced the cook's observed step timings wholesale — the numbers
-		 * every back-timed plan is built from — and the banner counted nothing.
+		 * file replaced the cook's observed step timings wholesale: the numbers
+		 * every back-timed plan is built from, and the banner counted nothing.
 		 * Same failure that erased a Path of Study, two fields along.
 		 *
 		 * stepActuals unions per key and keeps recordStepActual's last-12 window;
 		 * newest observations win the slice, matching the store. planRun stays
-		 * LOCAL: a run is one device's live service clock, like the 86 board —
+		 * LOCAL: a run is one device's live service clock, like the 86 board;
 		 * importing a file exported mid-service must not install someone else's
 		 * "40 minutes behind" over tonight's.
 		 */
@@ -570,7 +570,7 @@ export function mergeSessions(
 		})(),
 		planRun: current.planRun,
 		// Named explicitly, per the rule above. A genuine export writes the FULL
-		// state, so an incoming session always carries role present-and-empty —
+		// state, so an incoming session always carries role present-and-empty,
 		// exactly how cookedLog and shoppingChecks were once wiped. Yours wins
 		// unless you have never set one.
 		role: current.role ?? incoming.role,

@@ -1,5 +1,5 @@
 /**
- * verify-build.mjs — assert the shipped build's contract.
+ * verify-build.mjs: assert the shipped build's contract.
  *
  * Run after `npm run build`. These are the properties that are easy to break by
  * accident and expensive to notice: the precache quietly swallowing 1,000 HTML
@@ -16,7 +16,7 @@ const BUILD = join(ROOT, 'build');
 /**
  * The base the build under inspection was made with. Every absolute URL the app
  * emits is prefixed by it, so a checker that assumes "" cannot verify a Pages
- * build — it fails on the service worker path and, worse, passes everything
+ * build: it fails on the service worker path and, worse, passes everything
  * else against output it never looked at properly.
  */
 const BASE = process.env.BASE_PATH ?? '';
@@ -95,7 +95,7 @@ check('every live technique has a page', () => {
  * This check shipped as six hardcoded filenames and was already wrong: /family
  * had been a mode for months and nothing here knew. A tab that 404s is the most
  * visible failure the build can have, and the version of this check that could
- * not see a new tab was the version that let one through — which is the exact
+ * not see a new tab was the version that let one through, which is the exact
  * argument the technique check twenty lines up makes about magic numbers.
  */
 check('every mode in the bar has a page', () => {
@@ -116,14 +116,14 @@ check('every mode in the bar has a page', () => {
 		at = body.indexOf("href: '", from);
 	}
 	// A floor, not a count. Its job is to catch a MODES array the scanner failed
-	// to PARSE — zero hrefs would otherwise pass this check vacuously and then
+	// to PARSE: zero hrefs would otherwise pass this check vacuously and then
 	// assert nothing in the loop below. It is not a claim about how many tabs
 	// the app should have, and the message must not say so: the bar went from
 	// ten to five deliberately, and a gate that reads as "you broke the parser"
 	// on correct code is a gate people learn to edit without reading.
 	assert(
 		hrefs.length >= 5,
-		`parsed only ${hrefs.length} modes — either the bar lost a tab, or the scanner ` +
+		`parsed only ${hrefs.length} modes: either the bar lost a tab, or the scanner ` +
 			'no longer recognises the MODES literal (it needs the exact declaration and single-quoted hrefs)'
 	);
 
@@ -170,24 +170,24 @@ check('every precache entry exists on disk', () => {
 });
 
 check('the offline shell itself is precached', () => {
-	assert(precached.some((u) => u.endsWith('shell.html')), 'shell.html missing from precache — offline navigation would fail');
+	assert(precached.some((u) => u.endsWith('shell.html')), 'shell.html missing from precache: offline navigation would fail');
 	return 'shell.html in manifest';
 });
 
 check('service worker registers with an absolute path', () => {
-	// SvelteKit's relative-paths default makes vite-pwa register './sw.js' —
+	// SvelteKit's relative-paths default makes vite-pwa register './sw.js',
 	// which resolves to /recipe/sw.js on a deep link and 404s, so a user whose
 	// first visit is a shared link never gets offline capability.
 	const chunks = walk(join(BUILD, '_app')).filter((f) => f.endsWith('.js'));
 	const want = `\`${BASE}/sw.js\``;
 	const registers = chunks.some((f) => readFileSync(f, 'utf8').includes(want));
-	assert(registers, `no absolute ${BASE}/sw.js registration found — check kit paths.relative`);
+	assert(registers, `no absolute ${BASE}/sw.js registration found: check kit paths.relative`);
 	return `${BASE}/sw.js, scope ${BASE || '/'}`;
 });
 
 /**
  * Jekyll eats `_app/`. Without this file GitHub Pages deploys the HTML and
- * 404s every script, stylesheet and font it references — a blank page that
+ * 404s every script, stylesheet and font it references, a blank page that
  * looks like a broken app rather than a missing dotfile.
  */
 check('.nojekyll present for GitHub Pages', () => {
@@ -205,7 +205,7 @@ check('the build on disk matches the base being verified', () => {
 	const assetRef = BASE ? `${BASE}/_app/` : '/_app/';
 	assert(
 		page.includes(assetRef),
-		`index.html has no ${assetRef} reference — build/ was made with a different BASE_PATH than ${JSON.stringify(BASE)}`
+		`index.html has no ${assetRef} reference: build/ was made with a different BASE_PATH than ${JSON.stringify(BASE)}`
 	);
 	return `base ${JSON.stringify(BASE)}`;
 });
@@ -217,7 +217,7 @@ check('precache holds no prerendered HTML', () => {
 });
 
 /**
- * The check this replaced was `/shell\.html/.test(sw)` — which passes whether
+ * The check this replaced was `/shell\.html/.test(sw)`, which passes whether
  * the fallback reads 'shell.html' or '/shell.html', and the difference between
  * those two strings was the entire offline story on the deployed origin. A
  * substring test cannot see a resolution bug; resolve it the way Workbox does.
@@ -226,7 +226,7 @@ check('offline navigation fallback resolves to a precached URL', () => {
 	assert(existsSync(join(BUILD, 'shell.html')), 'shell.html not emitted');
 
 	const m = sw.match(/createHandlerBoundToURL\(\s*["']([^"']+)["']\s*\)/);
-	assert(m, 'no createHandlerBoundToURL(...) in sw.js — navigateFallback is not wired at all');
+	assert(m, 'no createHandlerBoundToURL(...) in sw.js: navigateFallback is not wired at all');
 	const fallback = m[1];
 
 	// Workbox resolves the fallback AND every precache key against the service
@@ -238,7 +238,7 @@ check('offline navigation fallback resolves to a precached URL', () => {
 	assert(
 		precachedUrls.includes(resolved),
 		`navigateFallback ${JSON.stringify(fallback)} resolves to ${resolved}, which is NOT in the ` +
-			`precache — createHandlerBoundToURL throws non-precached-url and the NavigationRoute ` +
+			`precache: createHandlerBoundToURL throws non-precached-url and the NavigationRoute ` +
 			`never registers, so the app has no offline navigation`
 	);
 	return `${fallback} -> ${resolved.replace('https://example.test', '')}`;
@@ -286,7 +286,7 @@ check('no third-party resource references', () => {
 check('fonts are latin subsets only', () => {
 	const woff2 = files.filter((f) => extname(f) === '.woff2');
 	assert(woff2.length > 0, 'no woff2 emitted');
-	assert(woff2.length <= 16, `${woff2.length} font files — a non-latin subset has crept back in`);
+	assert(woff2.length <= 16, `${woff2.length} font files: a non-latin subset has crept back in`);
 	return `${woff2.length} files`;
 });
 

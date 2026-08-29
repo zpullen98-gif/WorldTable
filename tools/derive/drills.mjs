@@ -90,7 +90,7 @@ const fold = (s) =>
  *
  * This exists because of a leak found by reading a real prompt on screen: the
  * Munster card redacted "Munster" and left "the mild American muenster that
- * borrowed the name" — with Munster sitting in the option list underneath.
+ * borrowed the name": with Munster sitting in the option list underneath.
  * Exact matching cannot see that, and across the deck 25 of 186 cards leaked
  * the same way: roqueforti beside Roquefort, manchega beside Manchego, sucuk
  * beside Sujuk, campania beside Campana.
@@ -139,7 +139,7 @@ export function redact(definition, term) {
 	 *
 	 * The first version built a regex per significant word with a plural and
 	 * possessive suffix group. That handled the possessive and missed the
-	 * near-spelling — and there is no suffix pattern that catches one. Walking
+	 * near-spelling, and there is no suffix pattern that catches one. Walking
 	 * the tokens once lets exact matches and near-spellings share a decision. */
 	/** @type {Array<[number, number]>} */
 	const spans = [];
@@ -170,7 +170,7 @@ export function redact(definition, term) {
 	out += original.slice(cursor);
 
 	const clipped =
-		// \s and \S, with their backslashes. This shipped as /s+S*$/ — literal
+		// \s and \S, with their backslashes. This shipped as /s+S*$/, literal
 		// letters — so the trim-back-to-a-word-boundary guard never fired once,
 		// and every clipped prompt could end mid-word. A gate that could not
 		// fail, in miniature.
@@ -212,7 +212,7 @@ export function buildDrills(lexicon, modules) {
 		);
 		if (leaked.length) {
 			problems.push(
-				`drills: "${entry.term}" leaks ${JSON.stringify(leaked)} into its own prompt — ` +
+				`drills: "${entry.term}" leaks ${JSON.stringify(leaked)} into its own prompt: ` +
 					'the answer is visible in the question'
 			);
 		}
@@ -221,7 +221,7 @@ export function buildDrills(lexicon, modules) {
 		if (hiddenShare > MAX_REDACTED_SHARE) {
 			problems.push(
 				`drills: redacting "${entry.term}" eats ${(hiddenShare * 100).toFixed(0)}% of its prompt ` +
-					`(limit ${MAX_REDACTED_SHARE * 100}%) — the term is too much of its own definition to ask about`
+					`(limit ${MAX_REDACTED_SHARE * 100}%): the term is too much of its own definition to ask about`
 			);
 		}
 
@@ -232,7 +232,7 @@ export function buildDrills(lexicon, modules) {
 	 *
 	 * Same CATEGORY by preference, so a round cannot be answered by topic alone.
 	 * But the track pulls in ten supporting terms from outside the five atlases,
-	 * and one of those categories contributes a single drillable term — it can
+	 * and one of those categories contributes a single drillable term: it can
 	 * field nothing. Rather than fail the build over a card that is perfectly
 	 * askable, or silently let the drill hang looking for a fourth option, the
 	 * FIELD is decided here and shipped: category, else module, else the whole
@@ -258,7 +258,7 @@ export function buildDrills(lexicon, modules) {
 
 	// The only genuinely fatal case: a deck too small to field one question.
 	if (cards.length < 4) {
-		problems.push(`drills: only ${cards.length} cards — a round cannot field four options`);
+		problems.push(`drills: only ${cards.length} cards: a round cannot field four options`);
 	}
 
 	console.log(

@@ -1,5 +1,5 @@
 /**
- * Turning a filled-in form into a real Recipe — the Family Chapter.
+ * Turning a filled-in form into a real Recipe, the Family Chapter.
  *
  * A family recipe carries the SAME shape as a guide recipe, so every view
  * (grid, pantry match, menu, cook mode) handles it without special cases. The
@@ -28,7 +28,7 @@ export interface FamilyDraft {
 	method: string;
 	tip: string;
 	/**
-	 * Technique-standard slugs the author ticked — what this dish is judged on.
+	 * Technique-standard slugs the author ticked: what this dish is judged on.
 	 *
 	 * The picker is bounded to the 26 techniques that actually HAVE a standard
 	 * written, which both shortens the list and guarantees the grade means
@@ -87,7 +87,7 @@ function stepDuration(text: string): number | null {
 }
 
 /**
- * A slug that collides with nothing — not the 970 guide recipes, not the other
+ * A slug that collides with nothing: not the 970 guide recipes, not the other
  * family recipes. Guide collisions get a "-family" qualifier (your Elote and
  * the guide's Elote are different dishes); further collisions count up.
  */
@@ -155,7 +155,7 @@ export function buildFamilyRecipe(
 		/**
 		 * The REAL screen, not a wall of hardcoded falses. This literal used to
 		 * set every contains* flag to false with confidence 'reviewed', and the
-		 * detail view then rendered "None found among the 14 screened — Reviewed
+		 * detail view then rendered "None found among the 14 screened; reviewed
 		 * by hand" over ingredients nobody had screened: clearance language, with
 		 * a human endorsement stapled on, for a family recipe that could be
 		 * peanut brittle. diet.mjs is a pure module with no imports, so the same
@@ -189,7 +189,7 @@ export function buildFamilyRecipe(
 		techniques: techniqueLabels,
 		flavor: {
 			tags: ['family'],
-			sentence: 'A dish of the house — the card in the drawer knows more than the guide does.'
+			sentence: 'A dish of the house: the card in the drawer knows more than the guide does.'
 		},
 		// -1 = "no sommelier ruling"; the recipe page substitutes the universal
 		// donor pairing. See DEFAULT_PAIRING in data.ts.

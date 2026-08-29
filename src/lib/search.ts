@@ -3,7 +3,7 @@
  *
  * The serialized MiniSearch index is a large machine artifact that nothing on
  * first paint needs, so it loads on the first keystroke. Until it arrives, the
- * grid falls back to the cheap substring scan over name/chapter/tags — the
+ * grid falls back to the cheap substring scan over name/chapter/tags: the
  * input never goes dead, it just gets sharper a moment later.
  */
 import { browser } from '$app/environment';
@@ -28,11 +28,11 @@ export function ensureSearch(): Promise<void> {
 
 /**
  * Relevance-ordered positions into the recipes array, or null when the index
- * cannot answer this query — the caller's signal to fall back to the substring
+ * cannot answer this query: the caller's signal to fall back to the substring
  * scan. Null means "ask someone else"; [] means "asked, and there are none".
  *
  * The distinction is the whole point. processTerm drops single-character terms,
- * so the index answers "c" with an empty ARRAY — and `if (ids)` in the caller
+ * so the index answers "c" with an empty ARRAY, and `if (ids)` in the caller
  * is true for [], so the fallback was skipped and the grid rendered "Nothing on
  * the pass" over a 970-recipe corpus on the first keystroke of every search.
  * Checking `q.length > 1` here would not be equivalent: "a b" is two characters

@@ -1,7 +1,7 @@
 /**
  * Durable session state.
  *
- * The original persisted nothing at all — `localStorage` appears zero times in
+ * The original persisted nothing at all: `localStorage` appears zero times in
  * its 3957 lines. Pinned menus, family notes, pantry selections and user-added
  * recipes all died on reload, and the only escape was copying a base64 blob out
  * of a textarea by hand.
@@ -35,7 +35,7 @@ const store = browser ? createStore('world-table', 'state') : undefined;
  * Read at call time rather than captured once, because the answer changes the
  * moment somebody else taps their name.
  *
- * The window.OOT declaration lives in src/lib/oot.d.ts — ONE declaration only.
+ * The window.OOT declaration lives in src/lib/oot.d.ts: ONE declaration only.
  * A second, narrower one used to sit here; two declarations of the same
  * property do not merge into a union, they raise TS2717. */
 const KEY_BASE = 'session';
@@ -96,8 +96,8 @@ export async function saveSession(state: SessionState, key?: string): Promise<vo
  * Every person's session on this device, for the coverage board.
  *
  * This is possible, and I want to be exact about why, because the opposite was
- * assumed for a while: profiles.key() is `base + '::' + id` — a deterministic,
- * reconstructible string — and idb-keyval's store applies no key filter. So a
+ * assumed for a while: profiles.key() is `base + '::' + id`: a deterministic,
+ * reconstructible string) and idb-keyval's store applies no key filter. So a
  * manager device can read the whole roster's records without switching profile.
  * shared/oot-pass.js already does this for two other wings.
  *

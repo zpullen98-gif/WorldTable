@@ -1,5 +1,5 @@
 /**
- * Palate profile — ported from `flavorFor` (L3547) with the O(n) `R.indexOf(r)`
+ * Palate profile: ported from `flavorFor` (L3547) with the O(n) `R.indexOf(r)`
  * lookup removed; the caller passes the text blob it already has.
  *
  * NOTE_DEFS entries arrive as [tag, RegExp, midPhrase, finishPhrase].
@@ -28,7 +28,7 @@ export function deriveFlavor(blob, NOTE_DEFS) {
 		return {
 			tags: ['clean', 'simple'],
 			sentence:
-				'A quiet dish that lets its main ingredient speak — season well and stand aside.'
+				'A quiet dish that lets its main ingredient speak: season well and stand aside.'
 		};
 	}
 

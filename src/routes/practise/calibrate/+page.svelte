@@ -17,7 +17,7 @@
 	 *
 	 * Every cook-side measure in this product is the cook grading themselves.
 	 * This is the one thing a cook standing alone genuinely cannot do: hold the
-	 * answer — and it is the only reason this is a feature rather than advice.
+	 * answer, and it is the only reason this is a feature rather than advice.
 	 *
 	 * The guide's own protocol entry asks for exactly this: taste COMPARATIVELY,
 	 * and taste single ingredients at their extremes, "to calibrate the
@@ -45,7 +45,7 @@
 		done = false;
 	}
 
-	/** What assistive tech hears per trial — the visual state swap was silent. */
+	/** What assistive tech hears per trial: the visual state swap was silent. */
 	let announce = $state('');
 
 	function answer(cup: number) {
@@ -53,7 +53,7 @@
 		answers = [...answers, cup];
 		announce =
 			answers.length >= run.length
-				? 'Run finished — the verdict is on screen.'
+				? 'Run finished: the verdict is on screen.'
 				: `Trial ${answers.length} recorded. Trial ${answers.length + 1} of ${run.length}.`;
 		if (answers.length >= run.length) {
 			// ONE entry per RUN, never per trial: a single triangle trial is a
@@ -79,7 +79,7 @@
 	<header class="head">
 		<h1>Calibrate</h1>
 		<p class="lede">
-			Three cups. Two are the same, one is not, and the app knows which — the one thing you cannot
+			Three cups. Two are the same, one is not, and the app knows which: the one thing you cannot
 			do for yourself standing at a bench alone.
 		</p>
 		<nav class="tools" data-print="hide">
@@ -145,7 +145,7 @@
 				</p>
 				<p class="note">{ladder.note}</p>
 				<p class="note">
-					Pour three cups — two from one jug, one from the other — and shuffle them so you do not
+					Pour three cups (two from one jug, one from the other) and shuffle them so you do not
 					know which is which. Then tap the odd one.
 				</p>
 			</div>
@@ -156,7 +156,7 @@
 				{/each}
 			</div>
 			<p class="note">
-				No feedback until the run ends — being told after each cup would let you learn the cups
+				No feedback until the run ends: being told after each cup would let you learn the cups
 				rather than the taste.
 			</p>
 		{:else}
@@ -168,7 +168,7 @@
 					<li class:hit={answers[i] === t.odd}>
 						Trial {i + 1}: the odd cup was <b>{letter(t.odd)}</b>{answers[i] === t.odd
 							? ''
-							: ` — you said ${letter(answers[i])}`}
+							: `: you said ${letter(answers[i])}`}
 					</li>
 				{/each}
 			</ol>

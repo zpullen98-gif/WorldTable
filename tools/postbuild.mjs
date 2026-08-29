@@ -2,15 +2,15 @@
  * Post-build: make the offline shell precachable, and GitHub Pages deployable.
  *
  * The service worker must precache the SPA shell BY URL to serve navigations
- * offline — but SvelteKit's preview middleware (and some hosts) treat the
+ * offline, but SvelteKit's preview middleware (and some hosts) treat the
  * configured fallback file as internal routing config and 404 direct requests
  * for it, whatever it is named. First 200.html, then fallback.html: both on
  * disk, both refused by the server, both silently failing the SW install.
  *
  * So the shell ships under a name no middleware owns:
- *   fallback.html  — the adapter's output; the server's business
- *   shell.html     — byte-identical copy; the service worker's business
- *   404.html       — third copy; GitHub Pages serves it for unknown paths,
+ *   fallback.html  : the adapter's output; the server's business
+ *   shell.html     : byte-identical copy; the service worker's business
+ *   404.html       : third copy; GitHub Pages serves it for unknown paths,
  *                    which is how client-only routes work there pre-install
  */
 import { copyFileSync, existsSync, writeFileSync } from 'node:fs';

@@ -30,7 +30,7 @@
 				bind:this={searchEl}
 				bind:value={filters.q}
 				type="search"
-				placeholder="Search a dish or an ingredient — try “lemongrass”"
+				placeholder="Search a dish or an ingredient: try “lemongrass”"
 				aria-label="Search recipes"
 			/>
 		</div>

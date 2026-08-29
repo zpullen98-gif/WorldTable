@@ -23,7 +23,7 @@ npm run icons          # regenerate PWA icons
 npm run report:tech    # technique coverage ledger (--labels, or a chapter name)
 ```
 
-Deploy to GitHub Pages with `npm run build:pages` — never the raw env prefix.
+Deploy to GitHub Pages with `npm run build:pages`, never the raw env prefix.
 On Windows cmd it is a syntax error, and in Git Bash MSYS path conversion
 rewrites the leading slash to `C:/Program Files/Git/WorldTable`, which SvelteKit
 rejects with a message that never mentions your shell. CI does it for you
@@ -55,7 +55,7 @@ keyword tables.
 ### Gotchas that already bit once
 
 - **Realm-safe type checks.** Values from `vm.runInNewContext` carry that realm's
-  prototypes. `instanceof RegExp` is false for all of them — it silently
+  prototypes. `instanceof RegExp` is false for all of them: it silently
   serialized 31 EQUIP rules and 17 NOTE_DEFS to `{}`. Use
   `Object.prototype.toString.call(v)`.
 - **Slugs are chapter-qualified on collision.** "Bun Thit Nuong" (Vietnamese) and
@@ -83,7 +83,7 @@ render function by name, stop.
 
 ## Conventions
 
-- Prerendered pages must not read `url.searchParams` — one file on disk serves
+- Prerendered pages must not read `url.searchParams`: one file on disk serves
   every query string. Seed filter state from the URL in `onMount`, not reactively
   (the URL write-back effect would chase it).
 - The grid ships all 970 DOM nodes with `content-visibility: auto`. No
@@ -108,7 +108,7 @@ render function by name, stop.
 Family recipes carry the full Recipe shape (summary + detail in one object) and
 live in IndexedDB, never in the static data. Consequences worth knowing:
 
-- Their pages are `/family/[slug]` with `ssr = false` — there is nothing to
+- Their pages are `/family/[slug]` with `ssr = false`: there is nothing to
   prerender and no server holding their data. Do NOT move family fallback into
   the prerendered `/recipe/[slug]` route: its server-side 404 fires before any
   browser-only lookup can run (this was tried; it broke direct loads in dev).
@@ -119,7 +119,7 @@ live in IndexedDB, never in the static data. Consequences worth knowing:
 - They are not in the static search index; under a query the browser matches
   them by the substring predicate and appends them after ranked results.
 
-## The technique spine — how skills map to recipes
+## The technique spine: how skills map to recipes
 
 Two systems existed and never met. `raw/TECH.json` tagged recipes by keyword but
 was written around DISHES (Khachapuri shaping, Pierogi, Arepas), so it lit up
@@ -141,8 +141,8 @@ ONE recipe while 27 braise.
 
 Coverage is 824 of 970 across 103 live labels, 76 anchored.
 
-The Path of Study joins the same way. `study.json` gains `skills` — derived from
-each semester's dishes, never authored, weighted by how many of them drill it —
+The Path of Study joins the same way. `study.json` gains `skills` (derived from
+each semester's dishes, never authored, weighted by how many of them drill it)
 and `techniques.json` gains `semesters` for the reverse link. The weight is the
 point: the semester titled "The Braise" drills searing (4 dishes) above braising
 (2), because a braise IS sear-then-simmer, and the curriculum could not say so
@@ -150,7 +150,7 @@ before. 48 of the 103 skills are taught somewhere on the Path; the other 55 are
 reachable only by browsing. A semester skill pointing at no technique page fails
 the build.
 
-**Techniques derive from `linkBlobs`, not `blobs`** — the note-free text, same
+**Techniques derive from `linkBlobs`, not `blobs`**: the note-free text, same
 as cross-links and for the same reason. Measurement before the change: 111 tags
 existed only because of note prose, 62 recipes were tagged solely by their
 margin commentary, and the 320-note backfill had silently minted 50 tags. A
@@ -163,7 +163,7 @@ links are twelve curated canon URLs plus searches, not a claim about what a
 recipe demonstrates; re-cutting them would churn 970 link lists for nothing.
 
 Gates in build-data: a SUPPLEMENT entry tagging nothing fails the build (a
-keyword the corpus never says — the near-miss that left "Caramelizing onions"
+keyword the corpus never says: the near-miss that left "Caramelizing onions"
 dead against a corpus that writes "Caramelize onion"). Entries over 150 recipes
 fail as too broad to distinguish. Anchor keys or values that resolve to nothing
 fail. The original's own dead entries are reported, not failed: Gnocchi and
@@ -172,7 +172,7 @@ Boiling bagels never fire because this corpus has no gnocchi and no bagel.
 `npm run report:tech` is the ledger; `--labels` gives per-entry counts, a
 chapter name dumps its untagged recipes as working material.
 
-## The repertoire — how repetition works
+## The repertoire: how repetition works
 
 `cookedLog` has stored `{slug, at}` on every cook since the first build, and
 until now nothing read the timestamp. `hasCooked()` collapsed the history to a
@@ -180,7 +180,7 @@ boolean, the study page drew a tick, and the home band counted log entries. That
 is an attendance sheet: it recorded that you turned up, never whether you can
 still cook the dish.
 
-`src/lib/repertoire.ts` is the schedule, and it is PURE — same reason
+`src/lib/repertoire.ts` is the schedule, and it is PURE: same reason
 `mergeSessions()` is. A `.svelte.ts` runes module cannot be reached from a unit
 test, and scheduling is code that must be tested rather than eyeballed.
 
@@ -188,14 +188,14 @@ test, and scheduling is code that must be tested rather than eyeballed.
   flashcard ones: the unit of practice is a service or a weekend.
 - **The rung is earned, not counted.** Walking a dish's cooks in order, a plate
   that `met` its standard climbs, `close` holds, `missed` drops back one. A
-  cook with no grade climbs — having no standard to check against is the guide's
+  cook with no grade climbs: having no standard to check against is the guide's
   gap, not the cook's failure. This is why the log must be read chronologically
   and not merely counted.
 - **The due queue sorts by overdue-as-a-share-of-interval**, never by `dueAt`.
   A fortnightly dish three weeks late outranks an annual one three weeks late;
   sorting on the date says the opposite every time.
 - **The grade comes from cook mode's last screen**, with the dish's marks in
-  front of you. Without that, a re-cook queue is just a timer — it would nag
+  front of you. Without that, a re-cook queue is just a timer: it would nag
   about a dish you nailed and let a ruined one sit for months.
 
 ### Three things that were wrong before anything could read the log
@@ -208,7 +208,7 @@ test, and scheduling is code that must be tested rather than eyeballed.
 - **`toggleCooked` deleted every entry for the slug.** Invisible while a dish
   was a boolean; now that repeats carry the schedule, un-ticking a dish cooked
   four times destroyed four years of evidence. It removes the most recent cook
-  only — undo the mis-tap, not the history behind it.
+  only: undo the mis-tap, not the history behind it.
 - **`mergeSessions` unioned by slug and kept the EARLIEST cook.** Correct while
   nothing read timestamps, data loss the moment something did: importing a
   session collapsed every repeat and backdated the survivor. It keys on
@@ -226,7 +226,7 @@ nobody could reach.
 
 `tools/derive/palate.mjs` does NOT write a repair table. It parses the entry's
 labelled clauses (`TOO FLAT:`, `TOO SALTY:` …) and carries a structure over
-them — eight faults, levers ordered gentlest first. Only `symptom` is ours: the
+them: eight faults, levers ordered gentlest first. Only `symptom` is ours: the
 entry names each fault and never says what it tastes like.
 
 **That structure is a claim about the prose, so the build checks it three ways:**
@@ -241,23 +241,23 @@ entry names each fault and never says what it tastes like.
   by eye.
 
 Rewrite the entry and the build names the levers you just invalidated.
-`src/lib/palate.test.ts` covers the other half — palate.mjs edited without
+`src/lib/palate.test.ts` covers the other half: palate.mjs edited without
 re-running `build:data`, which the build gate cannot see because the app reads
 only the JSON.
 
 **Where it is used.** `/palate` is the chart as a page. The one that matters is
 cook mode: grade a plate `close` or `missed` and the repair table comes to you,
 alongside that dish's own authored `standard.fault`. A plate that `met` its
-standard skips it — a screen that appears anyway teaches cooks to tap through
+standard skips it: a screen that appears anyway teaches cooks to tap through
 screens. The grade is recorded BEFORE the panel opens, so closing the dialog
 cannot lose it.
 
-## The pass — planning backwards, and what it needed first
+## The pass: planning backwards, and what it needed first
 
 The Service Timeline was a printout: pinned dishes, total minutes, sorted
 longest first, captioned "start at the top and work down". Sorting is not
 scheduling. That order only holds for a cook who finishes one dish before
-starting the next — the one thing a pass never is — and **one number per dish
+starting the next, the one thing a pass never is, and **one number per dish
 cannot say when the cook is free**, so there was nothing to overlap with even in
 principle.
 
@@ -296,11 +296,11 @@ The honest limit, stated once on the page rather than as a badge on every row:
 **the waits are measured and the work is largely estimated.** A marker that
 fires on 15 of 17 rows distinguishes nothing.
 
-## Menu economics — the costing sheet
+## Menu economics: the costing sheet
 
 The starkest instance of the pattern in this file. The guide carries a whole
 restaurant-finance curriculum, 43 entries under "Restaurant Finance &
-Opening", plus "Menu Economics: Food Cost, Yield & Par" and "Costing Time" —
+Opening", plus "Menu Economics: Food Cost, Yield & Par" and "Costing Time";
 and **fourteen of those 43 link to no recipe at all**, because crosslinks.mjs
 scores a term against dish text and "COGS Control: Inventory, Variance & Theft"
 has no dish. The least reachable content in the guide is what the paying venue
@@ -310,7 +310,7 @@ needs most.
 quadrants, gated against the prose **in both directions**: the entry must still
 state the phrase, AND the numbers are read back out of that phrase and compared
 to the ones we ship. The first version only checked the phrase, and the hole was
-live — `lowPct` could be edited from 25 to 30 while the entry still said
+live: `lowPct` could be edited from 25 to 30 while the entry still said
 "25–35%" and the build passed, which would have scored every dish against a band
 the guide does not state.
 
@@ -319,7 +319,7 @@ the guide does not state.
 `src/lib/costing.ts` divides every line by its yield. The guide is blunt about
 why: *"a $12/kg fish at 45% yield is really $26/kg on the plate; costing raw
 invoice prices is the classic rookie bankruptcy."* A sheet that multiplies
-invoice price by quantity is not a simpler version of this — it is the specific
+invoice price by quantity is not a simpler version of this: it is the specific
 error that closes restaurants, and it would look completely convincing. The
 worked example is a unit test.
 
@@ -330,7 +330,7 @@ Two more things the sheet refuses to fake:
   makes a dish look more profitable than it is.
 - **Menu engineering leaves out dishes with no price or no sales count.** A dish
   at the origin because nobody typed a number is not a dog. Popularity uses the
-  standard 70%-of-fair-share floor, not a median — a median forces half the menu
+  standard 70%-of-fair-share floor, not a median: a median forces half the menu
   to be unpopular however evenly it sells.
 
 `/menu/costing` sits inside `<article class="sheet">`, the same contract as
@@ -341,10 +341,10 @@ lock masks `article.sheet` children. An overlay alone is not a gate.
 the newer `ts` winning, so folding costs into the dish would let a colleague's
 edit to a description silently replace an evening of costing work.
 
-### The allergen screen — thirteen of fourteen
+### The allergen screen: thirteen of fourteen
 
 `tools/derive/diet.mjs` screens every statutory allergen except sulphites,
-which are concentration-defined and therefore not lexically screenable — the
+which are concentration-defined and therefore not lexically screenable: the
 refusal is documented in `src/lib/allergens.ts` and asserted non-empty by its
 test. THE SCRUB RULE: exception phrases ("coconut milk", "vegetable stock")
 are blanked before matching for dairy/gluten/fish/shellfish, whose exceptions
@@ -363,7 +363,7 @@ distinct start times per question (ties have no defensible "first"), no
 zero-hands steps (a simmer is not a decision), timeout counts as wrong. The
 grade goes to the cook's own drillLog and nothing else reads it.
 
-### The item book — `src/lib/items.ts`
+### The item book: `src/lib/items.ts`
 
 `unitCost` was stored per line per dish and `editLine` patched it in place, so
 the previous price did not exist anywhere and the guide's own *"reprice
@@ -380,7 +380,7 @@ Four rules, none of them tidy-able:
 - **An item-backed line keeps the dish's own `yieldPct`; a prep-backed line is
   locked to 100.** A prep's trim already happened inside it; an item price is a
   raw invoice price. Clearing the dish yield here would price the menu off gross
-  weight — the rookie bankruptcy above, reintroduced.
+  weight, the rookie bankruptcy above, reintroduced.
 - **Zero is not a price.** `addLine` mints a row at `unitCost: 0`.
 - **Usage follows preps AND the line's name**, not only `itemSlug`. Linking is
   opt-in, so counting only linked lines understates the exposure worst on the day
@@ -390,18 +390,18 @@ Linking is **never mandatory**: a required link turns a ten-minute costing into
 an afternoon of master data and the sheet stops being opened. The datalist is
 the entire onboarding.
 
-### Technique standards — the threshold is the worklist
+### Technique standards: the threshold is the worklist
 
 `TECHNIQUE_GATE_MIN_RECIPES` in `tools/derive/technique-standards.mjs` is the
 load-bearing number: every technique on that many recipes MUST carry a standard
 or the build fails, naming each one by slug and count. Lowering it is how the
-remaining standards get written — drop it, read what the gate asks for, write
+remaining standards get written: drop it, read what the gate asks for, write
 those, commit. It has gone 25 → 15, which produced twenty standards and took the
 assessable corpus from 683 to 789 of 970.
 
 Two claims in that module's header are parsed back out of the comment and
 checked against the build: the headline paragraph and the ceiling sentence. A
-number in either that nobody can re-run is a number already drifting — the
+number in either that nobody can re-run is a number already drifting: the
 ceiling sentence shipped wrong the first time because it was reasoned from other
 figures rather than measured.
 
@@ -424,7 +424,7 @@ uncovered on purpose. `technique-standards.test.ts` forbids a mark naming an
 ingredient or vessel its own technique does not name; beyond that, check each
 mark against the actual recipe set.
 
-### The waste log — `src/lib/waste.ts`, `tools/derive/waste.mjs`
+### The waste log: `src/lib/waste.ts`, `tools/derive/waste.mjs`
 
 The guide asks for it by name and supplies the taxonomy across three entries, so
 the five reason codes are read out of prose rather than chosen: COGS Control
@@ -433,7 +433,7 @@ and the villain, Prime Cost decomposes the COGS side, Pour Cost adds spillage.
 
 **The reverse gate is the one that matters.** It parses the guide's own leak
 list out of the entry and fails on any leak neither carried by a code nor
-declared in `EXCLUDED` — the direction a taxonomy rots in silently, and the half
+declared in `EXCLUDED`: the direction a taxonomy rots in silently, and the half
 `economics.mjs` once shipped broken.
 
 Two refusals, both declared rather than omitted so the gate can tell them from
@@ -447,14 +447,14 @@ gaps:
 
 **`WasteEntry` has no field for who binned it**, and `waste.test.ts` reads the
 source and fails if one appears. Waste-by-cook is a disciplinary instrument and
-the data goes dishonest inside a fortnight. `EightySix` carries `by` — a name,
-never a permission — because saying who took the halibut off blames nobody. The
+the data goes dishonest inside a fortnight. `EightySix` carries `by` (a name,
+never a permission) because saying who took the halibut off blames nobody. The
 guide's *"not a surveillance state"* is itself gated, so the refusal cannot
 outlive its justification unnoticed.
 
 `unitValue` is a **snapshot** taken at log time, never recomputed: revaluing old
 bins at today's prices would make last quarter move whenever an item is
-repriced. Merged by **union on id and never capped** — the item book caps
+repriced. Merged by **union on id and never capped**: the item book caps
 because an old price is dead weight, and old waste is the trend.
 
 ### House collections in the .wtjson
@@ -469,10 +469,10 @@ sit in `data` only because they have a session-side legacy being absorbed.
 arguments**. They were optional, and that is precisely why preps could not travel
 for their entire existence: the merge was written and tested, and neither call
 site ever passed one, because an omitted optional argument compiles in silence.
-`FORMAT_VERSION` stays at 3 — the criterion for a bump is a build that would
+`FORMAT_VERSION` stays at 3: the criterion for a bump is a build that would
 DESTROY something, and an old build ignores an unknown top-level key.
 
-## Sanitation — the guide's silences, made load-bearing
+## Sanitation: the guide's silences, made load-bearing
 
 The fifth and last time the reachability pattern appears, and the only one
 where the finding was to build LESS. The substrate is two entries: the
@@ -484,7 +484,7 @@ inspections entry is 1,535 characters and reached nothing at all.
 rules were written and measured against the corpus, and all five failed across
 three adversarial lenses; 0 of 15 verdicts survived:
 
-- stated-temperature: 12 hits, precision **0/12** — every hit is correctly
+- stated-temperature: 12 hits, precision **0/12**: every hit is correctly
   cooked rare beef, medium salmon or a rested pork chop
 - raw-protein: flags a salmon hot-smoked to a probe-verified 60°C while MISSING
   carbonara, caesar, aioli, hollandaise and lox. Recall ~44%
@@ -503,7 +503,7 @@ returns ZERO hits on this corpus. There is no hazard of that shape to find.
 
 Clauses forward and reverse (parseRepairTable is reused, but only because it
 was measured on these two entries specifically: exactly 3 labels and 2, no
-false positives — it produces junk on other prose). Thirteen literal evidence
+false positives: it produces junk on other prose). Thirteen literal evidence
 substrings. Two numeric facts read back out of their own evidence in BOTH
 directions, closing economics.mjs's original hole from the start.
 
@@ -512,12 +512,12 @@ Three gates are unusual enough to name:
 - **The disclosed conflict.** The guide states 4–60°C in one entry and
   4.5–54.5°C in another and never reconciles them. The page discloses both
   rather than picking, because picking is a safety judgement this app has no
-  standing to make. The gate's first draft was **unreachable** — pinning the
+  standing to make. The gate's first draft was **unreachable**: pinning the
   figures inside the evidence string meant a changed number read as a *deleted*
   statement, so the "these must still differ" branch could never fire. The
   anchor is number-free now and the numbers are read from the window before it.
 - **The C/F disagreement.** `4°C` rounds to 39°F; the guide writes 40°F. Safety
-  strings are therefore never passed through `convertLine` — which would turn
+  strings are therefore never passed through `convertLine`, which would turn
   "4–60°C (40–140°F)" into a sentence with two different Fahrenheit ranges. The
   DISAGREEMENT is gated, so a corrected guide forces the copy to change.
 - **The gaps.** Each asserts the guide still NAMES a practice and still states
@@ -534,7 +534,7 @@ gate fine, and re-cutting a working gate to share a helper churns it for nothing
 Found while surveying this feature and fixed with it, because a safety-branded
 page next to a broken allergen display is worse than neither. The recipe page
 rendered `Contains` only when a flag was true, so **101 of 970 recipes showed
-nothing at all** — hummus among them, over a line reading "150g good tahini".
+nothing at all**, hummus among them, over a line reading "150g good tahini".
 Absence read as clearance. diet.mjs's own comment already stated the policy the
 display was breaking: an empty list "reads as 'no allergens' rather than 'we
 don't know'".
@@ -553,7 +553,7 @@ asserts NOT_SCREENED stays non-empty so the day it lands, the copy must change.
   report:notes` is the ledger and reads zero. New authoring goes through the
   same overlay; the parity harness exempts overlaid slugs automatically.
 - 143 recipes still carry no technique tag, spread thin (no chapter has more
-  than five). Some are correct — a three-ingredient drink demonstrates nothing.
+  than five). Some are correct: a three-ingredient drink demonstrates nothing.
   `npm run report:tech "<chapter>"` is the working material if the table is
   widened further. (This figure was 146 in an earlier version of this note and
   in a draft comment, both times reasoned rather than measured; the build now
@@ -566,7 +566,7 @@ the original's line numbers, offline in real Chromium, axe, print PDFs, and the
 parity harness that runs the archived original against our build output).
 
 **Every a11y view was checked with an EMPTY session until 2026-08-27.** Whole
-sections were therefore never looked at — the shopping list, the cellar picker,
+sections were therefore never looked at: the shopping list, the cellar picker,
 The Pass, The Repertoire; and an unlabelled `<select>` (axe: CRITICAL) sat on
 the menu page for as long as the section existed. `seedSession()` in
 tests/helpers.ts puts a session in via `addInitScript` before page scripts run;
@@ -579,22 +579,22 @@ no serious violations`. `static/shared/oot-home.css` stacks `opacity: .6–.68`
 on top of already-muted text in six rules (`.oot-sec-head span`,
 `.oot-today-sub` and four more), which measures 2.32:1 to 3.17:1 against day
 service's paper where AA wants 4.5:1. It is a SHARED-layer defect: every wing
-renders those bands — so the fix belongs in the Outside Of Time monorepo and
+renders those bands, so the fix belongs in the Outside Of Time monorepo and
 must be re-vendored here, not patched in this copy alone. Dimming already-dim
 text is the trap; a border weight or a different token carries "quieter"
 without taking the words away.
 
-Hard-won rules the suites encode — do not relearn these:
+Hard-won rules the suites encode; do not relearn these:
 
 - **e2e runs against `tools/serve.mjs`, never `vite preview`.** SvelteKit's
   preview middleware serves only route-manifest files: the precached offline
-  shell 404s (whatever it is named — 200.html and fallback.html both), the SW
+  shell 404s (whatever it is named, 200.html and fallback.html both), the SW
   install fails, and the browser silently discards the registration. serve.mjs
   behaves like the real static host. `npm run preview` uses it too.
 - **The offline shell ships as `shell.html`**, a postbuild copy of the adapter's
   fallback, because servers treat the configured fallback file as internal
   config. `404.html` is a third copy, for GitHub Pages.
-- **Never reuse a running preview server across a rebuild** — sirv-style
+- **Never reuse a running preview server across a rebuild**: sirv-style
   servers manifest files at startup and 404 new chunk hashes. Playwright always
   starts its own (`reuseExistingServer: false`).
 - **Wait for `html[data-hydrated]`** (the layout stamps it from an effect)

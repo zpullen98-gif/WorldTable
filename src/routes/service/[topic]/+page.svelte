@@ -7,7 +7,7 @@
 
   Class names are .svcterm and .svcdef, deliberately NOT .lexcard or .def. Those
   two are a published paywall contract in the monorepo's oot-locks.js, keyed to
-  the tier attribute with NO route scope — reusing one here would blur this page
+  the tier attribute with NO route scope: reusing one here would blur this page
   for free visitors on a route that was never meant to be gated that way.
   src/lib/navigation.test.ts asserts they stay where they are.
 -->

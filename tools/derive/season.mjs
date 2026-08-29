@@ -3,7 +3,7 @@
  *
  * The original computed this lazily at runtime by scanning all 970 recipe texts
  * for every seasonal produce name the moment you ticked "Peak this month"
- * (`computeSeasonIdx`, L3304) — and never invalidated the cache when a family
+ * (`computeSeasonIdx`, L3304), and never invalidated the cache when a family
  * recipe was added (L3469), so new dishes could never appear under the filter.
  * Storing the months per recipe makes the filter an array intersection and the
  * staleness bug structurally impossible.
@@ -41,7 +41,7 @@ export function deriveSeason(blob, SEASON, PANTRY) {
 }
 
 /**
- * Built once per build, not once per recipe — 970 x 45 lookups otherwise.
+ * Built once per build, not once per recipe: 970 x 45 lookups otherwise.
  * @type {Map<string, string[]> | null}
  */
 let shelfIndex = null;
@@ -69,7 +69,7 @@ function matchesProduce(blob, produce, PANTRY) {
 	const keywords = shelfKeywords(produce, PANTRY);
 	if (keywords?.length) return keywords.some((k) => hasWord(blob, k.toLowerCase()));
 
-	// Not on the shelf — compound keys like "Squash/Pumpkin" match on either half.
+	// Not on the shelf: compound keys like "Squash/Pumpkin" match on either half.
 	return produce
 		.split('/')
 		.map((s) => s.trim().toLowerCase())
@@ -79,7 +79,7 @@ function matchesProduce(blob, produce, PANTRY) {
 /**
  * Left-boundary match: the keyword must start a word, but need not finish one.
  *
- * The shelf is full of deliberate stems — "cherr" is written to catch cherry and
+ * The shelf is full of deliberate stems: "cherr" is written to catch cherry and
  * cherries, so a right boundary would break it. A LEFT boundary is what stops
  * "sage" matching "sausage" and "corn" matching "peppercorns".
  *

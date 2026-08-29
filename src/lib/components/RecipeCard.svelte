@@ -35,8 +35,8 @@
 			transform 0.12s ease,
 			border-color 0.12s ease;
 
-		/* Off-screen cards keep their DOM node — so find-in-page, print and the
-		   accessibility tree all still see 970 recipes — but cost no layout or
+		/* Off-screen cards keep their DOM node, so find-in-page, print and the
+		   accessibility tree all still see 970 recipes, but cost no layout or
 		   paint. This is why the grid needs no virtualisation. */
 		content-visibility: auto;
 		contain-intrinsic-size: auto 172px;

@@ -3,7 +3,7 @@
  *
  * The original (L2821) did:
  *     for (let ri = 0; ri < R.length && hits.length < 3; ri++) ...
- * — always scanning from index 0 and stopping at three hits. Index 0 is Cacio e
+ * Always scanning from index 0 and stopping at three hits. Index 0 is Cacio e
  * Pepe, so the first chapter in the array (Italian) won almost every link by
  * position rather than by relevance. The build gate in build-data.mjs asserts no
  * chapter takes more than 8% of all links, which is what turns this from a fix

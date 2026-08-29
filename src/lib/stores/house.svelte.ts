@@ -23,7 +23,7 @@
  * NO PUBLISH GATE, deliberately. An earlier design had a per-person draft and a
  * "publish to the house" button. There is no auth on a shared tablet —
  * `isManagerDevice()` is a per-device toggle anybody who finds the setting can
- * flip — so a gate would be false authority, and a draft/published split makes
+ * flip, so a gate would be false authority, and a draft/published split makes
  * a fresh device show an empty editor over a live menu. A kitchen whiteboard is
  * not drafted. Edits are immediate and shared, and `lastEditedBy` is
  * ATTRIBUTION, not authority: it records who, never who was allowed.
@@ -69,7 +69,7 @@ class House {
 	#r = $state<HouseRecord>(structuredClone(EMPTY_HOUSE));
 	#ready = false;
 	/**
-	 * A record we must not overwrite — written by a newer build, or unreadable.
+	 * A record we must not overwrite: written by a newer build, or unreadable.
 	 * Every write is a no-op while this is set. See readHouse().
 	 */
 	#blocked = $state(false);
@@ -94,7 +94,7 @@ class House {
 		if (!browser || !store || this.#blocked) return;
 		// And the hydration guard: a mutation that lands before hydrate() has
 		// read the disk would otherwise persist EMPTY_HOUSE-plus-one-tap OVER
-		// the venue's real record — the same wipe readHouse() exists to prevent,
+		// the venue's real record, the same wipe readHouse() exists to prevent,
 		// arriving through timing instead of versioning. Skipping the write
 		// loses at most that one pre-hydration tap; hydrate() then installs the
 		// disk record. One tap lost beats a venue lost.
@@ -112,7 +112,7 @@ class House {
 			this.#r = record;
 			this.#blocked = blocked;
 		} catch {
-			// We could not read it, so we do not know what is there — and writing
+			// We could not read it, so we do not know what is there, and writing
 			// over what you cannot read is how the record was lost before. Start
 			// empty AND refuse to persist.
 			this.#blocked = true;
@@ -209,7 +209,7 @@ class House {
 					/**
 					 * Restamped ONLY by a lines write. `ts` is the merge tiebreak for
 					 * LINES (mergeCostings takes them whole from the newer record), and
-					 * covers already resolve per-week on SalesWeek.at — so a covers-only
+					 * covers already resolve per-week on SalesWeek.at, so a covers-only
 					 * write restamping ts let a pass tablet holding last week's lines
 					 * beat the office laptop's fresh re-costing in BOTH merge
 					 * directions, just because somebody typed a covers number at 22:00.
@@ -227,7 +227,7 @@ class House {
 	 * File a week's covers.
 	 *
 	 * The week defaults from a DEFAULT PARAMETER, evaluated at the instant of the
-	 * call — never from a module const, a $state seeded at init, or a $derived
+	 * call: never from a module const, a $state seeded at init, or a $derived
 	 * with no tracked dependency. vite.config.ts ships `registerType: 'prompt'`
 	 * with `skipWaiting: false` so a pass tablet stays open for days by design,
 	 * and a captured week would file Thursday's covers under Monday of last week.
@@ -302,7 +302,7 @@ class House {
 	 * File what this thing costs today.
 	 *
 	 * Called from the costing sheet whenever a price is committed against a
-	 * NAMED line — the book fills itself from work the venue was doing anyway,
+	 * NAMED line: the book fills itself from work the venue was doing anyway,
 	 * which is the only reason it will ever have anything in it. recordPrice
 	 * decides whether the observation is worth keeping; see its header for the
 	 * three cases it declines.
@@ -315,8 +315,8 @@ class House {
 	}
 
 	/**
-	 * File a yield test against an item. Pure rules live in recordYield —
-	 * including the refusals — so this is a thin write, like recordItemPrice.
+	 * File a yield test against an item. Pure rules live in recordYield,
+	 * including the refusals, so this is a thin write, like recordItemPrice.
 	 */
 	recordItemYield(name: string, grossQty: number, usableQty: number) {
 		const next = recordYield(this.#r.items, name, grossQty, usableQty, Date.now());
@@ -363,7 +363,7 @@ class House {
 	/**
 	 * Log a bin.
 	 *
-	 * The value is snapshotted here and never recomputed — see waste.ts. There is
+	 * The value is snapshotted here and never recomputed; see waste.ts. There is
 	 * no argument for who did it, and there is no field on the record to put one
 	 * in even if a caller wanted to.
 	 */
@@ -457,7 +457,7 @@ class House {
 		return this.#r.prepCounts[id];
 	}
 
-	/** Remove a count outright — an emptied field, not a count of zero. */
+	/** Remove a count outright: an emptied field, not a count of zero. */
 	clearCount(id: string) {
 		if (!(id in this.#r.prepCounts)) return;
 		const prepCounts = { ...this.#r.prepCounts };

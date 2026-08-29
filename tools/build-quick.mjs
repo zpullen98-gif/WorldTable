@@ -1,5 +1,5 @@
 /**
- * build:quick — the full build minus ~1,450 prerendered detail pages.
+ * build:quick: the full build minus ~1,450 prerendered detail pages.
  *
  * A wrapper script rather than an npm env prefix because `WT_FULL_PRERENDER=0
  * vite build` is a syntax error on Windows cmd, and this project lives on

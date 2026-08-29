@@ -1,8 +1,8 @@
 /**
- * The calibration bench — a triangle test a cook can run alone.
+ * The calibration bench, a triangle test a cook can run alone.
  *
  * Three cups, two the same, one different. The app holds the answer, which is
- * the one thing a cook standing alone cannot do for themselves — and the whole
+ * the one thing a cook standing alone cannot do for themselves, and the whole
  * reason this is a feature rather than advice.
  *
  * The concentrations are AUTHORED APPARATUS and live in
@@ -47,7 +47,7 @@ export interface Trial {
 /**
  * Lay out a trial.
  *
- * `rand` is injected so a test can pin the layout — an instrument whose
+ * `rand` is injected so a test can pin the layout: an instrument whose
  * randomness cannot be held still cannot be tested at all.
  */
 export function layOutTrial(cups: number, rand: () => number = Math.random): Trial {
@@ -59,7 +59,7 @@ export function layOutTrial(cups: number, rand: () => number = Math.random): Tri
  * A whole run, laid out at once.
  *
  * Laid out UP FRONT rather than trial by trial so the sequence cannot be
- * influenced by how the cook is doing — an instrument that adapts to the
+ * influenced by how the cook is doing; an instrument that adapts to the
  * subject mid-run is a staircase procedure, which needs its own estimator and
  * is not what this is.
  */
@@ -71,7 +71,7 @@ export function layOutRun(
 	return Array.from({ length: Math.max(1, Math.floor(trials)) }, () => layOutTrial(cups, rand));
 }
 
-/** `cal-<taste>-<level>` — one slug per level, the way a drill card is one slug. */
+/** `cal-<taste>-<level>`: one slug per level, the way a drill card is one slug. */
 export const slugFor = (taste: string, level: number) => `cal-${taste}-${level}`;
 
 /** Read a slug back. Returns null for anything that is not one of ours. */
@@ -101,7 +101,7 @@ export function cleared(right: number, passAt: number): boolean {
  */
 export function verdictFor(right: number, of: number, passAt: number): string {
 	if (right >= of) return 'Every one. That level is yours';
-	if (cleared(right, passAt)) return 'Cleared — the next level is closer together';
+	if (cleared(right, passAt)) return 'Cleared. The next level is closer together';
 	if (right <= Math.ceil(of / 3)) return 'That is guessing. Try the level below';
 	return 'Not yet. Same level again, rested';
 }

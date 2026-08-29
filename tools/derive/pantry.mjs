@@ -19,7 +19,7 @@ export function derivePantryMap(R, _fullBlobs, PANTRY) {
 		const labels = [];
 		for (const it of items) {
 			// hasWord, not includes: a bare substring test made Sage match
-			// SAUsage (35 of its 42 recipes — Feijoada and Jambalaya were "sage
+			// SAUsage (35 of its 42 recipes: Feijoada and Jambalaya were "sage
 			// recipes"), Corn match pepperCORNs, Peas match chickPEAS and Milk
 			// match butterMILK. Pantry Match answers "what can I cook from what
 			// is in the fridge", so a false match is a wasted trip to the kitchen.

@@ -4,7 +4,7 @@
     "build-data.mjs, and exempt from the diet gates.",
     "",
     "Every entry needs a `reason`. If you cannot write one, the fix belongs in the",
-    "keyword tables instead — an override is for a genuine judgement call, not for",
+    "keyword tables instead: an override is for a genuine judgement call, not for",
     "silencing a bug."
   ],
 

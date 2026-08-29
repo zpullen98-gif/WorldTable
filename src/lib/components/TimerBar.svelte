@@ -5,7 +5,7 @@
 	 * What is still on the heat, everywhere in the app.
 	 *
 	 * Cook mode owns the timer for the step you are looking at; this owns every
-	 * timer once you have walked away from it — which is the whole point, since
+	 * timer once you have walked away from it, which is the whole point, since
 	 * closing cook mode does not take the pot off the stove.
 	 *
 	 * It renders nothing at all when nothing is running, so it costs a mounted

@@ -1,5 +1,5 @@
 /**
- * The pass — getting several dishes to land at the same moment.
+ * The pass: getting several dishes to land at the same moment.
  *
  * The Service Timeline was a printout: pinned dishes, total minutes each,
  * sorted longest first, under the advice "start at the top and work down".
@@ -31,7 +31,7 @@ export interface PassDishInput {
 	steps: PassStepInput[];
 	/**
 	 * Which course this is, so it can fire when it is actually eaten. A dish
-	 * with no course falls to 0 — it lands with the first plate, which is what
+	 * with no course falls to 0: it lands with the first plate, which is what
 	 * every dish did before firing existed.
 	 */
 	course?: string;
@@ -90,7 +90,7 @@ export interface Pass {
 /**
  * The guide's default for work nobody timed (tools/derive/service.mjs keeps the
  * same number). Exported so the UI can tell a figure that is ENTIRELY a guess
- * from one that merely includes it — marking every row "estimated" told a cook
+ * from one that merely includes it: marking every row "estimated" told a cook
  * nothing, because almost every step has some unnamed work in it.
  */
 export const DEFAULT_HANDS_MIN = 4;
@@ -104,7 +104,7 @@ export const DEFAULT_HANDS_MIN = 4;
  * number so a kitchen that plates differently can say so.
  *
  * WHY IT EXISTS. Every dish used to land at one instant, so the amuse and the
- * dessert were both planned for 19:00:00 — the starter sat under a lamp for
+ * dessert were both planned for 19:00:00: the starter sat under a lamp for
  * twenty minutes and went out as a comp, and the plan reported clashes between
  * two dishes nobody would ever work at the same moment.
  *

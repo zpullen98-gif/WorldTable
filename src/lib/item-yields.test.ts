@@ -153,7 +153,7 @@ describe('the costing CSV — one way, and qualified on every row', () => {
 	it('says incomplete in words a spreadsheet will not mangle', () => {
 		const csv = costingCsv(dishes, [], {}, undefined, '2026-08-24');
 		const rows = csv.trim().split('\r\n');
-		expect(rows[2]).toContain('no — lines missing');
+		expect(rows[2]).toContain('no: lines missing');
 		expect(rows[1]).toContain('as typed');
 	});
 

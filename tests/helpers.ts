@@ -4,7 +4,7 @@ import type { Page } from '@playwright/test';
  * Navigate and wait for hydration. A prerendered page renders complete HTML
  * long before Svelte attaches a single listener; interacting inside that gap
  * types into dead inputs and clicks buttons wired to nothing. The layout
- * stamps data-hydrated from a browser-only effect — the earliest moment
+ * stamps data-hydrated from a browser-only effect: the earliest moment
  * interaction is real.
  */
 export async function goto(page: Page, path: string) {
@@ -17,7 +17,7 @@ export async function goto(page: Page, path: string) {
  *
  * Every a11y view was checked with an EMPTY session, which meant whole sections
  * were never looked at: the shopping list, the cellar picker, The Pass, The
- * Repertoire. That is how an unlabelled <select> — a CRITICAL violation — sat
+ * Repertoire. That is how an unlabelled <select>, a CRITICAL violation, sat
  * on the menu page without the suite noticing. A page with no user data is not
  * the page users have.
  *

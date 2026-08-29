@@ -6,8 +6,8 @@
  * this is the code that most needs one. The store is a thin wrapper that reads,
  * calls these, and writes.
  *
- * WHAT THE RECORD IS. The venue's facts — the menu, what is 86'd, and what a
- * plate costs — kept under a flat `house` key that profiles.key() never
+ * WHAT THE RECORD IS. The venue's facts: the menu, what is 86'd, and what a
+ * plate costs) kept under a flat `house` key that profiles.key() never
  * namespaces. See stores/house.svelte.ts for why that line is drawn where it is.
  */
 import type { MenuDish, DishCosting } from './state';
@@ -38,11 +38,11 @@ export interface EightySix {
 }
 
 /**
- * A prep — the thing a menu dish is built from and the sheet had no word for.
+ * A prep: the thing a menu dish is built from and the sheet had no word for.
  *
  * WHY IT EXISTS. A braise's cost sheet carried a line reading "Demi-glace,
- * 6.00/L, 0.15 L, 100% yield". Nobody had ever costed the demi — bones,
- * mirepoix, wine, nine hours, a yield nearer 25% — and the same 6.00 guess was
+ * 6.00/L, 0.15 L, 100% yield". Nobody had ever costed the demi: bones,
+ * mirepoix, wine, nine hours, a yield nearer 25%, and the same 6.00 guess was
  * retyped into every other dish that used it, differently in some of them. Every
  * sauced dish was understated in the direction that flatters, which is precisely
  * the error `plateCost`'s `complete` flag exists to refuse.
@@ -57,7 +57,7 @@ export interface Prep {
 	name: string;
 	/** Free text, display only: "1 x 20L pot", "2 gastros". */
 	batch: string;
-	/** Plate-portions one batch makes. The divisor — it must be > 0 to cost. */
+	/** Plate-portions one batch makes. The divisor: it must be > 0 to cost. */
 	portions: number;
 	/** How many portions to keep on hand. What the prep board counts against. */
 	par: number;
@@ -73,12 +73,12 @@ export interface Prep {
 	handsOnSec: number;
 	unattendedSec: number;
 	/**
-	 * A station name, when the kitchen works that way. Free display text — the
+	 * A station name, when the kitchen works that way. Free display text: the
 	 * preps form offers the guide's station names and nothing joins on a key.
 	 *
 	 * (A `recipeSlug` field lived beside this one for a while: declared,
 	 * documented, displayed nowhere, settable nowhere. It was removed rather
-	 * than wired because nothing consumed it — a dead field on a venue record
+	 * than wired because nothing consumed it: a dead field on a venue record
 	 * is an invitation to build the wrong feature to justify it. Old records
 	 * carrying it are untouched; the transport moves whole prep objects.)
 	 */
@@ -136,7 +136,7 @@ export interface HouseRecord {
 	 * Dish ids already taken up from a per-profile session, so absorption
 	 * happens ONCE per dish. Without it, a dish deleted from the house record is
 	 * resurrected on the next load by the stale copy still sitting in whichever
-	 * session originally held it — and a dish that will not stay deleted is
+	 * session originally held it, and a dish that will not stay deleted is
 	 * worse than one that was never absorbed.
 	 */
 	absorbed: string[];
@@ -164,18 +164,18 @@ export const EMPTY_HOUSE: HouseRecord = {
  * behind `if (schemaVersion <= HOUSE_VERSION)` and had no else, so a record
  * written by a NEWER build failed the test, `#r` stayed EMPTY_HOUSE, and the
  * next write, absorbSession's persist, or the first tap on the 86 board, which
- * is the most-tapped write in the app — put that empty record over the top of
+ * is the most-tapped write in the app: put that empty record over the top of
  * it. A venue's menu, preps, costings, counts and 86 board, gone, on nothing
  * more than a rollback or a stale service worker.
  *
  * That is not hypothetical here. vite.config.ts:65 sets `registerType: 'prompt'`
- * with `skipWaiting: false` — "never reload the page out from under a cook" —
+ * with `skipWaiting: false`, "never reload the page out from under a cook",
  * so a device serving an older bundle for a while is the SHIPPED DESIGN.
  *
  * db.ts's session path already had the right instinct and this did not follow
  * it: migrate() throws on a newer version and loadSession snapshots before
  * resetting, "never destroy data silently". For a newer record the stronger
- * answer is to write nothing at all — then downgrading and upgrading again is
+ * answer is to write nothing at all: then downgrading and upgrading again is
  * lossless, which is exactly what migrate()'s own comment promises.
  *
  * `blocked` means: do not read it, and never, ever write over it.
@@ -191,7 +191,7 @@ export function readHouse(raw: unknown): { record: HouseRecord; blocked: boolean
 }
 
 /**
- * Take up whatever a per-profile session is still holding — once per dish id.
+ * Take up whatever a per-profile session is still holding, once per dish id.
  *
  * This is the migration off `SessionState.menuDishes`, and it is deliberately
  * incremental rather than a one-shot sweep of the roster. A sweep needs the
@@ -280,8 +280,8 @@ export function adoptImport(
 	// about weeks of covers.
 	const nextItems = mergeItems(house.items, incoming.items);
 
-	// UNION BY ID, and never capped. A waste entry is immutable — it records
-	// something that happened at a time — so there is nothing to prefer and
+	// UNION BY ID, and never capped. A waste entry is immutable: it records
+	// something that happened at a time, so there is nothing to prefer and
 	// nothing to drop. See mergeWaste.
 	const nextWaste = mergeWaste(house.waste, incoming.waste);
 
@@ -289,7 +289,7 @@ export function adoptImport(
 	 * Tax adopts only into a venue that has never set it. A tax regime has no
 	 * timestamp to arbitrate with, and an import silently FLIPPING the basis
 	 * of every percentage on the costing sheet is worse than the drift it
-	 * would fix — a venue that has set it once can see its own setting; a
+	 * would fix: a venue that has set it once can see its own setting; a
 	 * fresh tablet cannot see what it never had.
 	 */
 	const nextTax = house.tax ?? incoming.tax;
@@ -380,7 +380,7 @@ export function houseSnapshot(house: HouseRecord): {
  * argument and merged it by id since preps shipped, and nothing ever passed
  * one: houseSnapshot emitted two fields, and both live call sites in
  * menu/+page.svelte called adopt() with two arguments. So a venue that costed
- * its demi once — the whole point of preps — exported a file carrying none of
+ * its demi once, the whole point of preps, exported a file carrying none of
  * them, and at the second site every prep-backed line resolved to NaN. Measured
  * on the worked braise: 8.625 a plate at the first site, 5.625 and
  * `complete: false` at the second, with the sauce simply gone from the

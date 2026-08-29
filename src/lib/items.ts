@@ -1,5 +1,5 @@
 /**
- * The item book — what the venue buys, and what it has cost over time.
+ * The item book: what the venue buys, and what it has cost over time.
  *
  * ## Why this exists
  *
@@ -20,7 +20,7 @@
  *
  * A one-off truffle stays free text. If linking an item were required, a
  * ten-minute costing would become an afternoon of master data and the sheet
- * would stop being opened at all — which costs the venue far more than the
+ * would stop being opened at all, which costs the venue far more than the
  * missing history ever could. The book fills itself from what has already been
  * typed: the datalist is the entire onboarding.
  *
@@ -49,7 +49,7 @@ export interface ItemPrice {
  * bones and cooking loss had taken their share.
  *
  * The guide defines the number — *"usable product after trim and cooking — a
- * $12/kg fish at 45% yield is really $26/kg on the plate"* — and the knife
+ * $12/kg fish at 45% yield is really $26/kg on the plate"*, and the knife
  * atlas calls yield percentage "literally a function of edge and angle", which
  * is to say a thing each venue MEASURES, because their knives, their cuts and
  * their suppliers are not anyone else's. Quantities are in the item's own
@@ -71,7 +71,7 @@ export interface Item {
 	history: ItemPrice[];
 	/**
 	 * Yield tests, newest first. Optional because every record written before
-	 * they existed lacks the key — and an item that is never trimmed (salt,
+	 * they existed lacks the key, and an item that is never trimmed (salt,
 	 * flour) will simply never have one.
 	 */
 	yields?: ItemYield[];
@@ -113,7 +113,7 @@ export const YIELD_CAP = 12;
  * normaliser clever enough to file "creme fraiche" and "crème fraîche" together
  * is also clever enough to file "cream" and "creams" together, and the venue
  * cannot see it happening or undo it. The datalist is what stops one purchase
- * becoming two spellings, because it offers the spelling that already exists —
+ * becoming two spellings, because it offers the spelling that already exists,
  * and a chef choosing from a list is a better deduplicator than a regex
  * guessing at what they meant.
  */
@@ -164,7 +164,7 @@ export function measuredYieldPct(item: Item | undefined): number | null {
 /**
  * File a yield test. Same contract as recordPrice: pure, returns a new record,
  * refuses what cannot be true. `usableQty > grossQty` is refused because a
- * line's yield divides a cost — the sheet caps at 100% — and a thing that
+ * line's yield divides a cost, the sheet caps at 100%, and a thing that
  * gains weight in cooking is a PREP with portions, not a line with a yield.
  */
 export function recordYield(
@@ -206,7 +206,7 @@ export function previousPrice(item: Item | undefined): ItemPrice | null {
 	const h = sortHistory(item.history.filter(validPrice));
 	const now = h[0];
 	if (!now) return null;
-	// SAME UNIT only. 7.90/kg against 8.00/case is not a 1.3% rise — a unit
+	// SAME UNIT only. 7.90/kg against 8.00/case is not a 1.3% rise: a unit
 	// change re-bases the whole series, and the honest previous price is the
 	// last different figure quoted in the unit the venue buys in NOW.
 	return h.slice(1).find((p) => p.unit === now.unit && p.unitCost !== now.unitCost) ?? null;
@@ -236,7 +236,7 @@ export function priceMovePct(item: Item | undefined): number | null {
  *  - A cost that is not a positive number is not filed at all. ZERO IS EXCLUDED
  *    deliberately and not as sloppiness about falsiness: addLine() mints a line
  *    at unitCost 0, so the moment somebody types "Butter" into a fresh row the
- *    book would otherwise record that butter costs nothing — and then every
+ *    book would otherwise record that butter costs nothing, and then every
  *    other dish that follows the book would price its butter at zero. "The
  *    price of butter fell to zero" is the kind of fact this book must never
  *    assert. A genuinely free ingredient needs no price history.
@@ -263,7 +263,7 @@ export function recordPrice(
 		if (existing && existing.name === name) return items;
 		// `...existing` carries the yields. Both of this function's return paths
 		// rebuilt the item as {slug, name, history} in draft, so committing ANY
-		// price wiped every yield test the venue had run — recordYield preserved
+		// price wiped every yield test the venue had run: recordYield preserved
 		// prices, and the mirror was never checked. The reprice is the single
 		// most common book operation; the yield tests are the rarest data in it.
 		return { ...items, [slug]: { ...existing, slug, name, history } };
@@ -287,7 +287,7 @@ export function recordPrice(
  * History is UNIONED, never replaced. Newer-wins-whole is the obvious rule and
  * it is precisely wrong here: the losing device's copy holds every price change
  * IT recorded, and those are observations the winner never made. Discarding
- * them destroys the only thing this feature exists to keep — and it would do it
+ * them destroys the only thing this feature exists to keep, and it would do it
  * silently, leaving a plausible, shorter history that looks completely fine.
  * `mergeCostings` reached the same conclusion about weeks of covers, for the
  * same reason: two devices' records are disjoint observations, not competing
@@ -297,7 +297,7 @@ export function recordPrice(
  * the brief, and it loses data in one narrow case: two devices that stamped
  * DIFFERENT prices in the same millisecond, where one silently wins. That is
  * the exact failure the union exists to prevent, so an observation is its
- * price, its unit and its time together — identical ones collapse, and
+ * price, its unit and its time together: identical ones collapse, and
  * different ones both survive.
  *
  * Order-independent, and that is load-bearing: the cap is applied after the
@@ -386,7 +386,7 @@ export interface ItemUsage {
 	outOfBandIds: string[];
 	/**
 	 * Dishes holding this item on an UNLINKED line whose stored price is not
-	 * what the book says the venue pays. A linked line can never be stale — it
+	 * what the book says the venue pays. A linked line can never be stale: it
 	 * follows the book by construction, so every entry here is a line that
 	 * predates the book, or one somebody unlinked and forgot. This is the list
 	 * the guide's "reprice quarterly" instruction actually needs.
@@ -402,13 +402,13 @@ export interface ItemUsage {
  * USAGE FOLLOWS PREPS. Butter in the demi is butter in every dish the demi is
  * poured over, and answering "which dishes does this price move?" with only the
  * lines that name it directly would miss exactly the dishes that are hardest to
- * find by eye — which is the whole reason the sheet needed this. Depth is one,
+ * find by eye, which is the whole reason the sheet needed this. Depth is one,
  * matching prepPortionCost's cap: a prep referencing a prep is a graph, and a
  * graph needs a cycle detector nobody will maintain.
  *
  * USAGE ALSO FOLLOWS THE NAME, not only `itemSlug`. Linking is opt-in and always
  * will be, so counting only linked lines would make the headline sentence read
- * "Butter is used in 1 dish" on a menu with fourteen — understating exactly the
+ * "Butter is used in 1 dish" on a menu with fourteen, understating exactly the
  * exposure the venue opened the page to see, and understating it worst on the
  * day the book is newest and least linked. A line reading "Butter" is a line
  * that buys butter whether or not anybody has told the sheet so.
@@ -455,7 +455,7 @@ export function itemUsage(
 			// ONLY 'over', and this was measured on screen rather than reasoned
 			// about. Counting 'under' too made a brand-new book announce
 			// "1 has moved out of the band" over a plaice whose sheet had one
-			// line on it — every dish is under the band before it is fully
+			// line on it: every dish is under the band before it is fully
 			// costed, so the headline was at its loudest exactly when it had the
 			// least to say. 'unknown' is excluded for the same reason: a dish
 			// nobody has priced has not drifted.

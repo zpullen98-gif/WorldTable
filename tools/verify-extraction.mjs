@@ -1,5 +1,5 @@
 /**
- * verify-extraction.mjs — prove the emitted JSON is a lossless image of the
+ * verify-extraction.mjs: prove the emitted JSON is a lossless image of the
  * literals still sitting in reference/world-table-v1.html.
  *
  * Run after any change to extract.mjs, and in CI. Exits non-zero on any failure.
@@ -41,7 +41,7 @@ function check(label, fn) {
 
 const readRaw = (name) => reviveRegex(JSON.parse(readFileSync(join(RAW, `${name}.json`), 'utf8')));
 
-// Fresh extraction straight from the archived original — this is the reference
+// Fresh extraction straight from the archived original: this is the reference
 // side of every comparison below.
 const live = extract(readFileSync(SOURCE, 'utf8'));
 
@@ -119,7 +119,7 @@ check('recipe value domains', () => {
 	return 'all 970 in domain';
 });
 
-// ── 5. Slug uniqueness — the primary-key guarantee ───────────────────────────
+// ── 5. Slug uniqueness: the primary-key guarantee ───────────────────────────
 check('970 recipe slugs unique (chapter-qualified)', () => {
 	const slugs = qualifiedSlugs(
 		R,
@@ -194,7 +194,7 @@ check('SEASON keys vs pantry shelf (informational)', () => {
 	const labels = new Set(PANTRY.flatMap((g) => g.items.map((it) => it.l)));
 	// SEASON keys are produce names, some compound ("Squash/Pumpkin"). A key
 	// resolves if any slash-separated part matches a pantry label. The 8 that
-	// don't are seasonal produce with no shelf entry — not an error, but worth
+	// don't are seasonal produce with no shelf entry, not an error, but worth
 	// keeping visible: they can only ever drive recipe seasonality, never a
 	// pantry tick. Phase 3 decides whether to add them to the shelf.
 	const unresolved = Object.keys(SEASON).filter(

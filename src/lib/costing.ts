@@ -22,7 +22,7 @@
 
 export interface CostLine {
 	id: string;
-	/** What it is — free text, matching how the venue buys it. */
+	/** What it is: free text, matching how the venue buys it. */
 	item: string;
 	/** What one purchase unit costs, as invoiced. */
 	unitCost: number;
@@ -42,7 +42,7 @@ export interface CostLine {
 	 */
 	prepId?: string;
 	/**
-	 * This line's price comes from the ITEM BOOK — the venue's record of what it
+	 * This line's price comes from the ITEM BOOK: the venue's record of what it
 	 * pays for this thing, with the history behind it.
 	 *
 	 * OPTIONAL, PERMANENTLY. A line with no `itemSlug` prices itself from its own
@@ -84,7 +84,7 @@ export interface CostablePrep {
  * What one portion of a prep costs, and whether every line in it costed.
  *
  * `complete` matters more here than anywhere else in this file. A demi-glace
- * with one blank line understates every dish that uses it at once — the same
+ * with one blank line understates every dish that uses it at once: the same
  * error plateCost refuses, multiplied by however many plates the sauce goes on.
  */
 export function prepPortionCost(
@@ -98,7 +98,7 @@ export function prepPortionCost(
 	// nobody will maintain. Depth is capped at one and the refusal is loud:
 	// the nested line cannot be costed, so the prep is incomplete.
 	//
-	// An ITEM inside a prep is not a graph and is resolved normally — butter in
+	// An ITEM inside a prep is not a graph and is resolved normally: butter in
 	// the demi is the case the book most needs to reach, because it is the one
 	// nobody can find by reading the dish sheets.
 	const nested = prep.lines.some((l) => l.prepId);
@@ -116,13 +116,13 @@ export function prepPortionCost(
  * yieldPct IS LEFT ALONE, and that is the whole difference from a prep. A prep
  * is locked to 100 because the trim, the bones and the reduction already
  * happened inside it and are already in its per-portion cost. An item price is
- * an INVOICE price for a raw purchase — the fish still has its frame on — so
+ * an INVOICE price for a raw purchase (the fish still has its frame on), so
  * the dish's own yield is the only thing accounting for the bin, and clearing
  * it here would price the whole menu off gross weight. That is the specific
  * error the guide calls "the classic rookie bankruptcy", so the asymmetry is
  * deliberate and must not be tidied into a shared branch.
  *
- * An item the book no longer holds costs NaN, so plateCost refuses the dish —
+ * An item the book no longer holds costs NaN, so plateCost refuses the dish,
  * the same refusal a missing prep gets, for the same reason. A line that
  * silently reverted to its last stored price would be a number the venue could
  * not account for.
@@ -141,7 +141,7 @@ function priceFromBook(line: CostLine, items: Readonly<Record<string, PricedItem
  * yieldPct is LOCKED TO 100 for a resolved line, and that is the guard, not a
  * default: the trim, the bones and the reduction already happened inside the
  * prep and are already in its per-portion cost. Letting a dish apply its own
- * yield on top would divide by the loss twice and quietly overstate the plate —
+ * yield on top would divide by the loss twice and quietly overstate the plate:
  * the one direction of error this sheet is otherwise careful to refuse.
  */
 export function resolveLines(
@@ -217,7 +217,7 @@ export function lineCost(line: CostLine): number | null {
  * Plate cost, and whether every line contributed.
  *
  * `complete` is false when any line could not be costed. A total that silently
- * skips two unpriced ingredients is worse than no total — it reads as authority
+ * skips two unpriced ingredients is worse than no total: it reads as authority
  * and is simply wrong, which is how a dish gets priced.
  */
 export function plateCost(lines: CostLine[]): { total: number; complete: boolean } {
@@ -243,7 +243,7 @@ export function parsePrice(raw: string | number | null | undefined): number | nu
 	if (!raw) return null;
 	let cleaned = String(raw).replace(/[^\d.,-]/g, '');
 	// The full European form: dots as thousands, comma as decimals. "1.500,00"
-	// used to survive the comma rule as "1.500.00" and parseFloat took 1.5 —
+	// used to survive the comma rule as "1.500.00" and parseFloat took 1.5:
 	// fifteen hundred became one-and-a-half, silently, on every dish priced
 	// that way. When a comma-decimal tail is present the dots are provably
 	// thousands separators and are stripped FIRST. A bare "1.500" with no
@@ -283,7 +283,7 @@ export function dishEconomics(lines: CostLine[], rawPrice: string | number | nul
 /**
  * What a menu price is actually worth to the venue.
  *
- * In a tax-inclusive market — most of the world — the number on the menu
+ * In a tax-inclusive market, most of the world, the number on the menu
  * includes the tax, and the venue never sees it. An 18.00 dish at 20% is 15.00
  * of revenue: costing against the 18 overstates contribution by 3.00 and
  * understates food cost by around five points, ON EVERY DISH, silently, in the
@@ -292,7 +292,7 @@ export function dishEconomics(lines: CostLine[], rawPrice: string | number | nul
  *
  * The rate is NEVER inferred from locale or currency symbol. An inferred rate
  * produces a completely plausible figure wrong by exactly the tax rate, which is
- * worse than the honest error it replaces — a venue can see a setting it did not
+ * worse than the honest error it replaces: a venue can see a setting it did not
  * turn on, and cannot see an assumption nobody told it about.
  */
 export function netOfTax(price: number | null, ratePct: number | null | undefined): number | null {
@@ -304,7 +304,7 @@ export function netOfTax(price: number | null, ratePct: number | null | undefine
 /**
  * Where a percentage sits against a band.
  *
- * For food cost, lower is better and "under" is not a failure — but it is worth
+ * For food cost, lower is better and "under" is not a failure, but it is worth
  * saying, because the guide's other warning is that underpricing is the
  * commonest form of restaurant self-harm, and an implausibly low food cost is
  * usually an incomplete recipe rather than a triumph.
@@ -320,7 +320,7 @@ export function bandFor(pct: number | null, band: Band): BandVerdict {
  * What the whole menu adds up to.
  *
  * The sheet ranked dishes and never summed them, so when a chef says "our food
- * cost is 31%" that is the arithmetic MEAN of the dish percentages — and the
+ * cost is 31%" that is the arithmetic MEAN of the dish percentages, and the
  * mean is not the number. The plowhorse at 42% is a third of covers and the
  * puzzle at 22% sells four a week, so the figure the venue actually runs at is
  * weighted by what sold, and it is worse than the mean nearly every time.
@@ -340,8 +340,8 @@ export interface RollupDish {
 	/**
 	 * Whether the plate cost is a real, complete number. REQUIRED, because the
 	 * hole it closes was silent: a dish with no lines at all reads
-	 * `plateCost: 0, complete: true` out of plateCost([]) — an empty sum is a
-	 * finished sum — and entered the weighted figure as a free plate, dragging
+	 * `plateCost: 0, complete: true` out of plateCost([]): an empty sum is a
+	 * finished sum, and entered the weighted figure as a free plate, dragging
 	 * the venue's food cost DOWN for every popular dish nobody had costed yet.
 	 * The caller computes it as `lines.length > 0 && complete`.
 	 */
@@ -364,7 +364,7 @@ export interface MenuRollup {
 	/** How many dishes went into this, and how many exist. Print both. */
 	usable: number;
 	of: number;
-	/** Share of covers, by dish id — menu mix. */
+	/** Share of covers, by dish id: menu mix. */
 	mixPct: Map<string, number>;
 	/**
 	 * The smallest set of dishes that is most of the covers.
@@ -438,7 +438,7 @@ export interface EngineeredDish {
  *
  * Thresholds are the standard ones rather than anything invented here. Profit
  * is measured against the MEAN contribution of the menu. Popularity is measured
- * against 70% of an equal share — with N dishes, a dish selling its fair share
+ * against 70% of an equal share: with N dishes, a dish selling its fair share
  * would take 1/N of covers, and the convention is that anything clearing 70% of
  * that counts as popular. A median would look more natural and is wrong: it
  * forces half the menu to be unpopular however evenly it sells.

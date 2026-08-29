@@ -148,7 +148,7 @@ describe('the sentence the log exists to say', () => {
 	it('agrees with the guide when the venue agrees with it', () => {
 		const r = rollUpWaste([e({ id: 'a', reason: 'overprep', qty: 4, unitValue: 3 })], T, T + DAY);
 		expect(wasteHeadline(r, waste.villain, labelOf)).toBe(
-			"Over-prepped is 100% of what you threw away — the guide's most common villain, and yours."
+			"Over-prepped is 100% of what you threw away, the guide's most common villain, and yours."
 		);
 	});
 

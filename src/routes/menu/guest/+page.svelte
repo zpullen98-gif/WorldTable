@@ -9,7 +9,7 @@
 
 	/**
 	 * All TEN courses, not the eight this listed. Breakfast (59 recipes) and
-	 * Sauce (22) were missing, and `courses` filters on this list — so a pinned
+	 * Sauce (22) were missing, and `courses` filters on this list, so a pinned
 	 * omelette was silently absent from the card a guest was handed.
 	 */
 	const COURSE_ORDER = [
@@ -30,7 +30,7 @@
 	 *
 	 * This page printed PINNED GUIDE RECIPES only, so a venue that had entered,
 	 * priced and allergen-marked its whole menu tapped Print and handed a guest
-	 * a card listing Pizza Margherita. The house menu is the obvious default —
+	 * a card listing Pizza Margherita. The house menu is the obvious default,
 	 * but silently repointing would break the dinner-party use this was built
 	 * for, so the pinned mode stays as a labelled choice.
 	 */
@@ -65,7 +65,7 @@
 	const descriptionOf = (slug: string) =>
 		data.flavor[slug] ?? famBySlug.get(slug)?.flavor.sentence ?? '';
 
-	// The date is stamped client-side. During prerender there is no "tonight" —
+	// The date is stamped client-side. During prerender there is no "tonight":
 	// a build-machine timestamp baked into the HTML would be confidently wrong
 	// on every table it was ever set on.
 	let dateline = $state('');
@@ -78,7 +78,7 @@
 	});
 </script>
 
-<svelte:head><title>Guest Menu — The World Table</title></svelte:head>
+<svelte:head><title>Guest Menu: The World Table</title></svelte:head>
 
 <div class="page">
 	<nav class="tools" data-print="hide">
@@ -151,9 +151,9 @@
 	{:else}
 		<p class="empty" data-print="hide">
 			{#if showing === 'house'}
-				No dishes on the kitchen's menu yet — enter them on the worksheet and they print here.
+				No dishes on the kitchen's menu yet: enter them on the worksheet and they print here.
 			{:else}
-				Nothing pinned yet — the guest menu sets itself from the dishes on your worksheet.
+				Nothing pinned yet: the guest menu sets itself from the dishes on your worksheet.
 			{/if}
 		</p>
 	{/if}

@@ -25,7 +25,7 @@
 	 *
 	 * This listed eight. Breakfast (59 recipes) and Sauce (22) were missing, so
 	 * pinning The French Omelette put it in NO group and it vanished from the
-	 * course breakdown entirely — 81 recipes that could be pinned and then not
+	 * course breakdown entirely: 81 recipes that could be pinned and then not
 	 * be seen. `courses` filters on this list, so anything absent is invisible
 	 * rather than merely last.
 	 */
@@ -161,7 +161,7 @@
 	const coursesOf = $derived(new Map(pinned.map((r) => [r!.slug, r!.course])));
 
 	/**
-	 * Where the bell falls in the step list — the first step that begins at or
+	 * Where the bell falls in the step list: the first step that begins at or
 	 * after the first plate leaves. Everything below it is a later course.
 	 */
 	const bellAt = $derived.by(() => {
@@ -314,7 +314,7 @@
 		plan.steps.filter((s) => s.estimated && s.handsOnMin === DEFAULT_HANDS_MIN).length
 	);
 
-	/** "A and B" · "A, B and C" — a clash can involve any number of dishes. */
+	/** "A and B" · "A, B and C": a clash can involve any number of dishes. */
 	function nameList(names: string[]) {
 		if (names.length < 2) return names[0] ?? '';
 		return `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`;
@@ -332,7 +332,7 @@
 	let bottle = $state('');
 
 	/* ---- the kitchen's menu --------------------------------------------- *
-	 * The menu the venue actually serves — not pinned guide recipes but the
+	 * The menu the venue actually serves: not pinned guide recipes but the
 	 * house's own dishes, priced and allergen-marked. Kept in its own
 	 * SessionState field (a menu item is not a Recipe) and drilled at
 	 * /menu/quiz once four dishes exist.
@@ -473,7 +473,7 @@
 				session.merge(state);
 				house.adopt(state.menuDishes, state.dishCosts, {});
 				importMsg =
-					`Imported from the original edition — ${summary}.` +
+					`Imported from the original edition: ${summary}.` +
 					(unresolved.length
 						? ` Could not place ${unresolved.length}: ${unresolved.slice(0, 3).join(', ')}${unresolved.length > 3 ? '…' : ''}`
 						: '');
@@ -482,7 +482,7 @@
 
 			const parsed = parseImport(text);
 			// The banner reads the two blocks as one view. `session.merge` below is
-			// deliberately given `parsed.data` ALONE — the preps must reach the
+			// deliberately given `parsed.data` ALONE: the preps must reach the
 			// house record and nothing else.
 			const summary = describeImport(
 				{ ...parsed.data, ...(parsed.house ?? {}) },
@@ -499,7 +499,7 @@
 	}
 </script>
 
-<svelte:head><title>My Menu — The World Table</title></svelte:head>
+<svelte:head><title>My Menu: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -535,7 +535,7 @@
 
 	{#if !stats}
 		<p class="empty">
-			Nothing pinned yet — open any recipe and tap “Add to menu”. A balanced draft usually wants a
+			Nothing pinned yet: open any recipe and tap “Add to menu”. A balanced draft usually wants a
 			starter or two, mains with a vegetarian option, a side, and one dessert.
 		</p>
 	{:else}
@@ -593,7 +593,7 @@
 			<h2 class="sec">The Pass</h2>
 			<p class="hint">
 				Planned backwards so everything lands together. {plan.lengthMin} min from first move to
-				service; {plan.handsOnMin} min of hands across the menu — dishes overlap, so the hands can
+				service; {plan.handsOnMin} min of hands across the menu: dishes overlap, so the hands can
 				legitimately sum past the span.
 			</p>
 			<!-- Said once, plainly, rather than as a badge on almost every row. The
@@ -624,7 +624,7 @@
 			{#if live && behindMin > 0}
 				<p class="behind" role="alert">
 					{behindMin} min behind{#if nextUnticked}, and you are on
-						<b>{nextUnticked.dish}</b> — {nextUnticked.text.replace(/[. \s]+$/, '')}.{:else}.
+						<b>{nextUnticked.dish}</b>: {nextUnticked.text.replace(/[. \s]+$/, '')}.{:else}.
 						Every row is ticked, so the plan is done.{/if}
 					{#if !Object.keys(ticks).length}
 						Tick the rows as you start them and this can say which dish it went into.
@@ -634,7 +634,7 @@
 
 			{#each plan.dishes.filter((d) => d.advance) as d (d.slug)}
 				<p class="advance">
-					<b>{d.name}</b> carries a wait too long to fit inside a service — start it the day before.
+					<b>{d.name}</b> carries a wait too long to fit inside a service: start it the day before.
 				</p>
 			{/each}
 
@@ -728,7 +728,7 @@
 		</section>
 
 		<section class="cellar" data-print="hide">
-			<h2 class="sec">The Cellar — cook to the bottle</h2>
+			<h2 class="sec">The Cellar: cook to the bottle</h2>
 			<!-- The placeholder option is not an accessible name: a screen reader
 			     announces the SELECTED value, so this read as "The Cellar" and then
 			     an unlabelled combobox. axe rates it critical. -->
@@ -752,7 +752,7 @@
 		-->
 		<p class="blocked" role="alert">
 			<b>This device is running an older version of the app than the one that saved your menu.</b>
-			Nothing has been lost and nothing will be overwritten — but the menu, preps and costings stay
+			Nothing has been lost and nothing will be overwritten, but the menu, preps and costings stay
 			hidden until this tablet updates. Reload, or close and reopen the app, to pick it up.
 		</p>
 	{/if}
@@ -760,7 +760,7 @@
 	<section class="kitchen">
 		<h2 class="sec">The Kitchen’s Menu</h2>
 		<p class="hint">
-			The menu the house actually serves — dish by dish, priced and allergen-marked. Saved on this
+			The menu the house actually serves: dish by dish, priced and allergen-marked. Saved on this
 			device and carried in the session export like everything else here.
 			<a href="{base}/menu/costing">Cost this menu ▸</a>
 			<a href="{base}/menu/preps">Preps ▸</a>
@@ -779,7 +779,7 @@
 			<div class="dishform" data-print="hide">
 				<div class="frow">
 					<input placeholder="Dish name" bind:value={dishForm.name} aria-label="Dish name" />
-					<input placeholder="Section — Starters, Mains…" bind:value={dishForm.section} aria-label="Menu section" />
+					<input placeholder="Section: Starters, Mains…" bind:value={dishForm.section} aria-label="Menu section" />
 					<input class="short" placeholder="Price" bind:value={dishForm.price} aria-label="Price" />
 				</div>
 				<textarea rows="2" placeholder="The menu description, what the guest reads." bind:value={dishForm.description} aria-label="Menu description"></textarea>
@@ -798,7 +798,7 @@
 					thing that can tell them apart is somebody saying they looked.
 				-->
 				<label class="linkrow">
-					<span class="sec">Cooked from — optional</span>
+					<span class="sec">Cooked from: optional</span>
 					<input
 						list="linkable-recipes"
 						bind:value={dishForm.recipeSlug}
@@ -812,7 +812,7 @@
 					{#if linkedSlug}
 						Linked. This dish can be cooked, timed and graded like any other.
 					{:else if dishForm.recipeSlug.trim()}
-						No recipe by that name — the dish saves without a link.
+						No recipe by that name: the dish saves without a link.
 					{:else}
 						Point it at a recipe and the dish reaches cook mode, its standard and the Repertoire.
 					{/if}
@@ -833,7 +833,7 @@
 
 		{#if !house.dishes.length && !dishForm}
 			<p class="empty">
-				Nothing entered yet. Start with the dish the kitchen is proudest of — four dishes in, the
+				Nothing entered yet. Start with the dish the kitchen is proudest of: four dishes in, the
 				menu becomes drillable.
 			</p>
 		{/if}
@@ -858,14 +858,14 @@
 							<!--
 								ALWAYS rendered, never gated on the list being non-empty. This is
 								the screen a server reads standing at a table, and it used to show
-								NOTHING for a dish nobody had marked — silence reading as "no
+								NOTHING for a dish nobody had marked: silence reading as "no
 								allergens" when it meant "we did not look". The recipe page was
 								fixed for exactly this and the reason written down; this one was
 								missed. Three states, because an empty list alone cannot tell them
 								apart. See MenuDish.allergensCheckedAt.
 							-->
 							{#if !d.allergensCheckedAt}
-								<p class="da unchecked">Allergens not marked — ask the kitchen</p>
+								<p class="da unchecked">Allergens not marked: ask the kitchen</p>
 							{:else if d.allergens.length}
 								<p class="da">Allergens: {d.allergens.join(', ')}</p>
 							{:else}
@@ -885,7 +885,7 @@
 									class="chip"
 									onclick={() => {
 										// One tap destroyed the dish, its costing lines AND its whole
-										// covers history, unconfirmed — while removing a PREP already
+										// covers history, unconfirmed, while removing a PREP already
 										// asked. Same precedent, same wording weight.
 										if (
 											confirm(

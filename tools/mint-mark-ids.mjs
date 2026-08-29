@@ -3,7 +3,7 @@
  *
  * WHY IDS AND NEVER INDICES. A cook's annotation says "the crust mark was off".
  * Stored as an index, inserting a mark at position 2 silently repoints four
- * months of history to a different sentence, and no gate can see it happen —
+ * months of history to a different sentence, and no gate can see it happen:
  * the array is still the same length it should be and every entry still points
  * at something. Stored as an id bound to the sentence, an insert is free, an
  * edit to the wording is free, and a DROP is loud.
@@ -15,7 +15,7 @@
  * prose. It finds each `marks: [` block, walks it with a string-aware scanner,
  * and WRAPS each string literal with `{ id: '…', text: <the original bytes> }`
  * without re-emitting the literal. The mark text cannot change because it is
- * never rewritten — and build-data compares the parsed text against a snapshot
+ * never rewritten; and build-data compares the parsed text against a snapshot
  * anyway.
  *
  * ADDITIVE ONLY. A mark that already has an id is left exactly as it is. Run it
@@ -81,7 +81,7 @@ function literalsIn(src, open) {
 			}
 			spans.push({ start, end: i + 1 });
 		} else if (c === '{') {
-			// Already minted — skip the whole object so its text is untouched.
+			// Already minted: skip the whole object so its text is untouched.
 			let d = 1;
 			i++;
 			while (i < src.length && d > 0) {

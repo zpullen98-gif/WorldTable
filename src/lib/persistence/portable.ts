@@ -2,7 +2,7 @@
  * Import / export as a real file.
  *
  * The original's "session code" was a base64 blob you copied out of a textarea
- * by hand (L3501). This writes plain JSON — diffable, hand-editable, and
+ * by hand (L3501). This writes plain JSON: diffable, hand-editable, and
  * openable in any editor if something ever goes wrong.
  */
 import type { SessionState } from './db';
@@ -43,7 +43,7 @@ export interface PortableFile {
 	 * NEWER files, and the criterion it documents for a bump is a build that
 	 * would DESTROY something: v3 exists because an old build rewrote a costing
 	 * as { lines, sold } and dropped the sales array with a fresh newest ts. An
-	 * old build reading this file ignores an unknown top-level key completely —
+	 * old build reading this file ignores an unknown top-level key completely:
 	 * parseImport checks format, version and data and nothing else, and neither
 	 * session.merge nor house.adopt is handed it. It loses the preps, which is
 	 * exactly what it does today; it destroys nothing, and re-exporting from it
@@ -132,7 +132,7 @@ export function describeImport(
 	const newDishes = (incoming.menuDishes ?? []).filter(
 		(d) => d && d.id && !(current.menuDishes ?? []).some((e) => e.id === d.id)
 	).length;
-	// An id match with a newer ts means the merge will REPLACE the live copy —
+	// An id match with a newer ts means the merge will REPLACE the live copy:
 	// the banner must say so, the way notes get their 'replaced' count.
 	const updatedDishes = (incoming.menuDishes ?? []).filter((d) => {
 		if (!d || !d.id) return false;
@@ -241,5 +241,5 @@ export function describeImport(
 		parts.push(`${newPrices} ${newPrices === 1 ? 'price' : 'prices'} for the item book`);
 	if (newWaste)
 		parts.push(`${newWaste} waste ${newWaste === 1 ? 'entry' : 'entries'}`);
-	return parts.length ? parts.join(', ') : 'nothing new — this file matches what you already have';
+	return parts.length ? parts.join(', ') : 'nothing new, this file matches what you already have';
 }

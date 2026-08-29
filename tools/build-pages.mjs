@@ -20,7 +20,7 @@ const base = process.env.BASE_PATH ?? '/WorldTable';
 
 if (base !== '' && !/^\/[^/]/.test(base)) {
 	console.error(
-		`build:pages: BASE_PATH must be empty or start with "/" and not end with one — got ${JSON.stringify(base)}`
+		`build:pages: BASE_PATH must be empty or start with "/" and not end with one: got ${JSON.stringify(base)}`
 	);
 	process.exit(1);
 }

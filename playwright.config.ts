@@ -16,7 +16,7 @@ export default defineConfig({
 	 * specs install service workers, the parity harness loads the 1.5MB archived
 	 * original, and every one of them talks to a SINGLE Node static server. At
 	 * ten workers the failures moved around the suite run to run: print, then
-	 * offline, then a timer — which is the signature of contention rather than
+	 * offline, then a timer, which is the signature of contention rather than
 	 * of any one broken test. Four keeps it honest and costs ~20 seconds.
 	 */
 	workers: 4,

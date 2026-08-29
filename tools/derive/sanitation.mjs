@@ -1,12 +1,12 @@
 /**
- * Sanitation — the guide's food-safety entries, and its silences.
+ * Sanitation: the guide's food-safety entries, and its silences.
  *
  * Fifth and last time this pattern appears in the guide, and the only time it
  * comes with a reason to build LESS rather than more.
  *
  * The substrate is two entries. "Food Safety: The Chef-Owner's Non-Negotiables"
  * is 701 characters and reaches three recipes that crosslinks.mjs picked on
- * keyword score — key lime pie, pretzels and a tomato sauce, none of them
+ * keyword score: key lime pie, pretzels and a tomato sauce, none of them
  * hazard-relevant. "Health Inspections & Crisis Management" is 1,535 characters
  * and reaches nothing at all. That is everything the guide has to say.
  *
@@ -35,7 +35,7 @@
  * 2. Carries the guide's numbers with two-way gates so they cannot drift.
  * 3. Makes the guide's SILENCES load-bearing. GAPS asserts both that the guide
  *    still NAMES a practice and that it still states NO figure for it. That
- *    second half is what stops anybody — including a later me — from quietly
+ *    second half is what stops anybody, including a later me, from quietly
  *    filling a gap with invented regulatory content.
  */
 
@@ -84,11 +84,11 @@ export const CLAUSES = [
 /**
  * Claims that sit outside the shouted-label grammar, so the clause parser
  * cannot see them. Each `evidence` is the LITERAL substring, never a
- * reconstructed one — an em dash and a hyphen look identical in a diff.
+ * reconstructed one: an em dash and a hyphen look identical in a diff.
  */
 export const FACTS = [
 	{ key: 'twoHourRule', anchor: 'safety', evidence: 'the two-hour rule governs everything left in it' },
-	{ key: 'coolingMethod', anchor: 'safety', evidence: 'shallow pans, ice baths — never a stockpot straight into the walk-in' },
+	{ key: 'coolingMethod', anchor: 'safety', evidence: 'shallow pans, ice baths: never a stockpot straight into the walk-in' },
 	{ key: 'haccp', anchor: 'safety', evidence: 'HACCP is the systematized version: identify hazards, control critical points, document' },
 	{ key: 'allergenProtocol', anchor: 'safety', evidence: 'Allergen protocol is service-critical and legal-critical' },
 	{ key: 'notGlamour', anchor: 'safety', evidence: 'None of this is glamour; all of it is the license to do the glamorous parts' },
@@ -98,7 +98,7 @@ export const FACTS = [
 	{ key: 'duringVisit', anchor: 'inspections', evidence: 'accompany professionally, correct on the spot what can be, never argue, get every finding in writing' },
 	{ key: 'afterVisit', anchor: 'inspections', evidence: 'fix, document, retrain at pre-shift, and treat repeat findings as management failures, not staff ones' },
 	{ key: 'illnessComplaint', anchor: 'inspections', evidence: 'take it seriously and kindly, gather specifics, preserve records and product' },
-	{ key: 'selfReport', anchor: 'inspections', evidence: 'call the insurer and — if credible — the health department yourself' },
+	{ key: 'selfReport', anchor: 'inspections', evidence: 'call the insurer and, if credible, the health department yourself' },
 	{ key: 'coverUp', anchor: 'inspections', evidence: 'the cover-up is always worse than the event' }
 ];
 
@@ -107,7 +107,7 @@ export const FACTS = [
  * the figures we ship must read back out of it in order.
  *
  * economics.mjs shipped with only the first half working, and the hole was
- * live — `lowPct` could drift from 25 to 30 while the prose still said 25–35%.
+ * live: `lowPct` could drift from 25 to 30 while the prose still said 25–35%.
  * Here the same hole ships a wrong danger-zone bound.
  */
 export const NUMERIC = [
@@ -256,7 +256,7 @@ function assertNoRecipes(obj, recipeSlugs, problems) {
 		if (typeof node === 'object') {
 			for (const [k, v] of Object.entries(node)) {
 				if (BANNED.has(k)) {
-					problems.push(`sanitation: shipped object carries a "${k}" field at ${path} — refused by design`);
+					problems.push(`sanitation: shipped object carries a "${k}" field at ${path}, refused by design`);
 				}
 				walk(v, path ? `${path}.${k}` : k);
 			}
@@ -303,7 +303,7 @@ export function buildSanitation(lexicon, recipeSlugList = []) {
 		clauses.push({ key: c.key, anchor: c.anchor, text });
 	}
 
-	// The reverse check — a clause the guide states that nothing carries. If the
+	// The reverse check: a clause the guide states that nothing carries. If the
 	// guide ever gains a sixth discipline, nobody has to notice by eye.
 	const carried = new Set(CLAUSES.map((c) => `${c.anchor}:${c.key}`));
 	for (const anchor of ['safety', 'inspections']) {
@@ -319,7 +319,7 @@ export function buildSanitation(lexicon, recipeSlugList = []) {
 	for (const f of FACTS) {
 		if (!entries[f.anchor].definition.includes(f.evidence)) {
 			problems.push(
-				`sanitation: "${entries[f.anchor].term}" no longer states ${JSON.stringify(f.evidence)} — ` +
+				`sanitation: "${entries[f.anchor].term}" no longer states ${JSON.stringify(f.evidence)}: ` +
 					`the ${f.key} claim is now unsupported`
 			);
 			continue;
@@ -377,7 +377,7 @@ export function buildSanitation(lexicon, recipeSlugList = []) {
 			}
 			if (an[0] === bn[0] && an[1] === bn[1]) {
 				problems.push(
-					'sanitation: the two danger-zone statements no longer differ — the disclosed conflict is stale'
+					'sanitation: the two danger-zone statements no longer differ: the disclosed conflict is stale'
 				);
 			} else {
 				conflict = {
@@ -437,7 +437,7 @@ export function buildSanitation(lexicon, recipeSlugList = []) {
 		if (entry && Array.isArray(entry.recipes) && entry.recipes.length) {
 			problems.push(
 				`sanitation: ${entry.slug} is carrying inferred recipe crosslinks (${entry.recipes.join(', ')}); ` +
-					'safety entries must not — they were picked on keyword score, not relevance'
+					'safety entries must not: they were picked on keyword score, not relevance'
 			);
 		}
 	}

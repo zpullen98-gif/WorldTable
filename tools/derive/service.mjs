@@ -17,14 +17,14 @@
  *
  * ## How a duration is classified
  *
- * A step is not atomic — the median recipe has four of them, and each is a
+ * A step is not atomic: the median recipe has four of them, and each is a
  * compound instruction that usually mixes both kinds of time:
  *
  *   "Deglaze with wine, add stock and herbs; return chicken, simmer 45–60 min."
  *
  * So the unit here is the CLAUSE, not the step. Each stated duration is
  * classified by the verb that governs it, and the governing verb is the nearest
- * one BEFORE the duration — which is how these methods are written, and what
+ * one BEFORE the duration: which is how these methods are written, and what
  * makes the difference on lines like:
  *
  *   "Bake 220°C 15 min or fry until blistered"   -> bake governs: unattended
@@ -41,7 +41,7 @@
  * overwhelmingly the hands-on work: "Peel the membrane and coat both racks in
  * the rub", "divide into 8 balls", "cut between the bones". Scoring only stated
  * durations gave Kansas City barbecue ribs 475 minutes elapsed and ZERO minutes
- * of work — every stated number in it is a wait. So a step also earns the
+ * of work: every stated number in it is a wait. So a step also earns the
  * original's four-minute default when it holds active work no duration was
  * attached to. That default is a guess and is labelled as one; the alternative
  * was a schedule that thinks ribs cook themselves.
@@ -57,7 +57,7 @@ export const DEFAULT_ACTIVE_MIN = 4;
 /** With no verb either side, this long or more reads as a wait. */
 export const LONG_WAIT_MIN = 20;
 
-/** A block this long cannot be fitted into a service — it starts the day before. */
+/** A block this long cannot be fitted into a service: it starts the day before. */
 export const ADVANCE_MIN = 240;
 
 /** The parser is the original's, widened to find EVERY duration in a clause. */
@@ -71,7 +71,7 @@ export const UNATTENDED =
 export const ACTIVE =
 	/\b(sear|saut|fry|whisk|stir|knead|chop|dice|mince|slice|cut|mount|toss|flip|brown|deglaz|assembl|plate|fold|beat|blend|grate|shape|roll|wrap|pipe|garnish|season|strain|carve|arrange|dress|toast|temper|emulsif|scrape|skim|brush|coat|peel|trim|spread|layer|stuff|fill|form|press|pound|sift|cream|portion|ladle|spoon|sprinkle|squeeze|zest|crush|shuck|rub)/gi;
 
-/** Match positions for a global regex, reset each time — lastIndex is shared state. */
+/** Match positions for a global regex, reset each time: lastIndex is shared state. */
 function positions(re, text) {
 	re.lastIndex = 0;
 	return [...text.matchAll(re)].map((m) => m.index);

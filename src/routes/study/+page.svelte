@@ -11,7 +11,7 @@
 
 	/* How many times each dish has been made. The tick used to be the whole
 	   story, which made a dish cooked once look identical to one cooked five
-	   times — and now that un-ticking removes only the MOST RECENT cook (see
+	   times; and now that un-ticking removes only the MOST RECENT cook (see
 	   session.toggleCooked), a bare ✓ that needed four taps to clear would be
 	   baffling. The count says why. */
 	const times = $derived.by(() => {
@@ -25,13 +25,13 @@
 	);
 </script>
 
-<svelte:head><title>The Path of Study — The World Table</title></svelte:head>
+<svelte:head><title>The Path of Study: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
 		<h1>The Path of Study</h1>
 		<p class="lede">
-			A guided curriculum — ten semesters from first omelette to restaurateur’s capstone. Each
+			A guided curriculum, ten semesters from first omelette to restaurateur’s capstone. Each
 			course lists its dishes in teaching order and the Lexicon reading that explains <i>why</i> they
 			work. Cook in sequence; the techniques compound.
 		</p>
@@ -60,12 +60,12 @@
 									aria-label={n === 0
 										? `Mark ${r.name} as cooked`
 										: n === 1
-											? `${r.name} cooked once — tap to undo`
+											? `${r.name} cooked once: tap to undo`
 											: `${r.name} cooked ${n} times: tap to remove the most recent`}
 									title={n === 0
 										? 'Mark as cooked'
 										: n === 1
-											? 'Cooked once — tap to undo'
+											? 'Cooked once: tap to undo'
 											: `Cooked ${n} times — tap to remove the most recent`}
 								>
 									{n === 0 ? '○' : n === 1 ? '✓' : n}
@@ -102,7 +102,7 @@
 		<Ornament seed="screening-room" />
 		<h2>The Screening Room</h2>
 		<p class="lede">
-			Twelve films worth studying frame by frame — a canon of technique on camera. Every recipe in
+			Twelve films worth studying frame by frame, a canon of technique on camera. Every recipe in
 			the guide also carries its own <em>Film school</em> links.
 		</p>
 		<div class="reel">
@@ -219,7 +219,7 @@
 		color: var(--ink);
 	}
 	/* The weight: how many of this semester's dishes drill the skill. It is the
-	   whole point of deriving these — it shows where a semester really leans. */
+	   whole point of deriving these: it shows where a semester really leans. */
 	.skills .w {
 		font-size: var(--t-micro);
 		color: var(--muted);

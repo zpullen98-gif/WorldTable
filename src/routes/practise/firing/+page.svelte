@@ -15,7 +15,7 @@
 	import { onMount } from 'svelte';
 
 	/**
-	 * The firing drill — repetition under load.
+	 * The firing drill: repetition under load.
 	 *
 	 * Built from the cook's own pinned menu through the same buildPass the
 	 * worksheet uses, so the order being drilled is the order tonight actually
@@ -63,10 +63,10 @@
 	let timer: ReturnType<typeof setInterval> | undefined;
 	onMount(() => () => clearInterval(timer));
 
-	/** Focus target after answering — the options disable, and a keyboard user's
+	/** Focus target after answering: the options disable, and a keyboard user's
 	 *  focus otherwise falls to the body with the drill still running. */
 	let nextBtn = $state<HTMLButtonElement | null>(null);
-	/** What assistive tech hears. The clock is deliberately NOT live — a region
+	/** What assistive tech hears. The clock is deliberately NOT live: a region
 	 *  announcing every second drowns the question it times. */
 	let announce = $state('');
 
@@ -98,10 +98,10 @@
 		queueMicrotask(() => nextBtn?.focus());
 		if (i === q.answer) run.correct += 1;
 		else if (q.gapMin <= 5) {
-			// Name the tight calls at the end — a miss by two minutes teaches
+			// Name the tight calls at the end: a miss by two minutes teaches
 			// something a miss by an hour does not.
 			run.tightMisses.push(
-				`${q.options[q.answer].dish} — starts ${q.gapMin} min ahead. A tight call.`
+				`${q.options[q.answer].dish}: starts ${q.gapMin} min ahead. A tight call.`
 			);
 		}
 	}
@@ -117,7 +117,7 @@
 				tight: run.tightMisses
 			};
 			// One slug for the whole drill, like the calibration bench's ladder
-			// slugs — the drill log is the cook's own record, read by no one else.
+			// slugs: the drill log is the cook's own record, read by no one else.
 			session.markDrilled('drill-firing-order', grade as 'met' | 'close' | 'missed');
 			run = null;
 			return;
@@ -136,7 +136,7 @@
 	<header class="head">
 		<h1>The Firing Drill</h1>
 		<p class="lede">
-			Your own menu, back-timed by The Pass — and {SECONDS_PER_QUESTION} seconds to say what fires
+			Your own menu, back-timed by The Pass, and {SECONDS_PER_QUESTION} seconds to say what fires
 			first. Reading the plan cold is the skill; the clock is the load.
 		</p>
 		<nav class="tools" data-print="hide">
@@ -150,7 +150,7 @@
 
 		{#if !ready}
 			<p class="empty">
-				Not enough on the menu to drill yet — pin dishes until the plan holds at least three
+				Not enough on the menu to drill yet: pin dishes until the plan holds at least three
 				hands-on steps at different times. The drill builds from your pinned menu, not from an
 				invented one, because the order worth rehearsing is tonight's.
 			</p>
@@ -163,7 +163,7 @@
 				{#if done.grade === 'met'}
 					<p>You read the plan the way the pass wrote it. Come back when the menu changes.</p>
 				{:else if done.grade === 'close'}
-					<p>Forming. The misses below were the tight calls — those are the ones service punishes.</p>
+					<p>Forming. The misses below were the tight calls: those are the ones service punishes.</p>
 				{:else}
 					<p>
 						Read tonight's plan slowly on the worksheet first, then come back to it at speed. The

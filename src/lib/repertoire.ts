@@ -1,5 +1,5 @@
 /**
- * The Repertoire — what you can actually cook, and what has gone cold.
+ * The Repertoire: what you can actually cook, and what has gone cold.
  *
  * The guide could always tell you how to make a dish. Since the standards
  * landed it can tell you whether the plate was right. What it could not do is
@@ -19,7 +19,7 @@
  *
  * ## Why the interval responds to the grade
  *
- * A queue that only counts days is still outcome-detached — it would nag you
+ * A queue that only counts days is still outcome-detached: it would nag you
  * about a dish you nailed and let one you ruined sit for months. The ladder
  * therefore moves on evidence: a plate that met its standard earns a longer
  * interval, one that missed drops back down. That is Leitner, in a kitchen's
@@ -35,7 +35,7 @@ export type Grade = 'met' | 'close' | 'missed';
  *
  * Optional deliberately: every entry written before this feature has no grade,
  * and a session that predates it must keep working untouched. An ungraded cook
- * ADVANCES the ladder (see `rungFor`) — the absence of a standard to check
+ * ADVANCES the ladder (see `rungFor`): the absence of a standard to check
  * against is the guide's gap, not the cook's failure.
  */
 export interface CookEntry {
@@ -43,7 +43,7 @@ export interface CookEntry {
 	at: number;
 	grade?: Grade;
 	/**
-	 * Which marks were off, as frozen mark ids — never indices, never the text.
+	 * Which marks were off, as frozen mark ids: never indices, never the text.
 	 * See StandardMark in types.ts for why, and mark-ids.ledger.json for the
 	 * gate that keeps the promise.
 	 *
@@ -52,7 +52,7 @@ export interface CookEntry {
 	 * true, rather than an empty one, which would read as "nothing was off".
 	 */
 	off?: string[];
-	/** The palate lever the cook reached for — a slug into palate.json. */
+	/** The palate lever the cook reached for, a slug into palate.json. */
 	fault?: string;
 }
 
@@ -61,7 +61,7 @@ export interface CookEntry {
  *
  * Three words of grade told a cook their plate was off and nothing about WHAT,
  * so a commis could pull the sear early for four months with every plate
- * faithfully recorded and no way for anyone — including him — to name the
+ * faithfully recorded and no way for anyone, including him, to name the
  * drift. This is the read side of that.
  *
  * Counts entries, not sessions: a mark missed twice in one week and twice in
@@ -182,8 +182,8 @@ export function repertoire(
 	now: number,
 	/**
 	 * Optional so the three existing call sites are untouched. A drill over
-	 * lexicon terms passes TERM_LADDER_DAYS; everything about the walk — missed
-	 * drops, close holds, ungraded climbs, floor 1, cap at ladder length — is
+	 * lexicon terms passes TERM_LADDER_DAYS; everything about the walk: missed
+	 * drops, close holds, ungraded climbs, floor 1, cap at ladder length) is
 	 * identical, which is the whole reason the scheduler is shared rather than
 	 * copied.
 	 */

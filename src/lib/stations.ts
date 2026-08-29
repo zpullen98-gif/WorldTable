@@ -46,7 +46,7 @@ export interface Station {
 	techniques: string[];
 }
 
-/** One cook or one drill answer — the shape both logs already use. */
+/** One cook or one drill answer: the shape both logs already use. */
 export interface Attempt {
 	slug: string;
 	at: number;
@@ -65,7 +65,7 @@ export interface StationCoverage {
 	/**
 	 * Techniques where the most recent attempt on a dish drilling it MET the
 	 * dish's standard. Only 45 of 970 dishes carry one, so this is always a
-	 * floor rather than a measure — it is reported, never used to gate a band.
+	 * floor rather than a measure: it is reported, never used to gate a band.
 	 */
 	met: number;
 	band: Band;
@@ -96,7 +96,7 @@ export const BAND_LABEL: Record<Band, string> = {
 /**
  * Which techniques a person has touched, from what they have cooked.
  *
- * `recipesByTechnique` is techniques.json's own complete list — the same data
+ * `recipesByTechnique` is techniques.json's own complete list: the same data
  * the technique pages render, so a technique is "touched" by exactly the dishes
  * the app already says demonstrate it.
  */
@@ -104,7 +104,7 @@ export function techniquesTouched(
 	attempts: readonly Attempt[],
 	recipesByTechnique: ReadonlyMap<string, readonly string[]>
 ): Map<string, 'met' | 'close' | 'missed' | 'ungraded'> {
-	// Most recent attempt per dish — an old failure that was later put right
+	// Most recent attempt per dish: an old failure that was later put right
 	// should not hold a technique down forever.
 	const latest = new Map<string, Attempt>();
 	for (const a of attempts) {
@@ -154,7 +154,7 @@ export function coverageFor(
 /**
  * The swing cook.
  *
- * The guide calls the tournant "the swing cook who works every station — often
+ * The guide calls the tournant "the swing cook who works every station, often
  * the best pure cook in the building". It is the one label here worth earning,
  * and it is earned by covering all six rather than by scoring anything.
  */
@@ -173,7 +173,7 @@ export function isTournant(coverage: readonly StationCoverage[]): boolean {
  *
  * "Can they still do it" is what a chef actually means, and the board had no
  * answer: a technique cooked once three years ago read identically to one
- * cooked last night. The decay model already exists one module away — this
+ * cooked last night. The decay model already exists one module away: this
  * reuses repertoire()'s own dueAt rather than inventing a second clock.
  *
  * A technique is cold when EVERY dish the person has cooked that drills it is

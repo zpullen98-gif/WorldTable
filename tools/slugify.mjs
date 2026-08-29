@@ -1,5 +1,5 @@
 /**
- * slugify — the URL primary key for recipes and lexicon terms.
+ * slugify: the URL primary key for recipes and lexicon terms.
  *
  * NFD-normalize then strip combining marks so "Ragù" → "ragu" and "Crème Brûlée"
  * → "creme-brulee". The same folding is used by the search tokenizer, which is

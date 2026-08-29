@@ -12,24 +12,24 @@ Open it on a phone, add it to your home screen, and it works on a plane.
 
 ## What's in it
 
-970 recipes across 94 chapters — 31 world cuisines, all 52 US states, and 11
+970 recipes across 94 chapters: 31 world cuisines, all 52 US states, and 11
 thematic atlases from the Dessert Atlas to The Saucier. Alongside them:
 
-- **The Chef's Lexicon** — 479 terms with flashcards and a quiz
-- **The Techniques** — 103 skills, each listing every dish in the guide that
+- **The Chef's Lexicon**: 479 terms with flashcards and a quiz
+- **The Techniques**: 103 skills, each listing every dish in the guide that
   demonstrates it, with the Lexicon's own definition of the skill
-- **The standard** — for the 45 dishes of the Path of Study, what a correct
+- **The standard**: for the 45 dishes of the Path of Study, what a correct
   plate looks like at the pass: three to five marks a cook can actually check,
   and the commonest way the dish goes wrong. The guide teaches you to make a
   dish; this is how you know you got it right.
 - **Pantry Match**: what you can cook from 177 ingredients, seasonally aware
 - **The Path of Study** — ten semesters, in teaching order, tracking what you
   have actually cooked and which skills that has drilled
-- **Cook mode** — step-by-step, timers parsed from the method text, screen kept
+- **Cook mode**: step-by-step, timers parsed from the method text, screen kept
   awake
 - **The menu worksheet**: a checkable shopping list, a service timeline, a
   printable guest menu, and session export/import
-- **The Family Chapter** — your own recipes, first-class alongside the guide's
+- **The Family Chapter**: your own recipes, first-class alongside the guide's
 
 Scale any recipe, convert its units, pin it, annotate it. All of it offline, all
 of it persistent.
@@ -44,7 +44,7 @@ truth for content.
 ```
 reference/world-table-v1.html
   -> tools/extract.mjs      acorn AST-slice + vm: 15 inline JS literals out
-  -> tools/build-data.mjs   + tools/derive/* — everything computed once
+  -> tools/build-data.mjs   + tools/derive/*: everything computed once
   -> the app imports only the derived JSON
 ```
 
@@ -71,9 +71,9 @@ npm run preview      # serve the build with real-host semantics
 | | |
 |---|---|
 | `npm test` | 73 unit tests |
-| `npm run verify:data` | 38 checks — extraction round-trip, char-sums, slug uniqueness, referential integrity |
+| `npm run verify:data` | 38 checks: extraction round-trip, char-sums, slug uniqueness, referential integrity |
 | `npm run verify:build` | 18 checks against the built site |
-| `npm run test:e2e` | 27 Playwright specs — offline in real Chromium, axe, print, and a parity harness |
+| `npm run test:e2e` | 27 Playwright specs: offline in real Chromium, axe, print, and a parity harness |
 | `npm run report:tech` | technique coverage ledger |
 
 The parity harness is the one worth knowing about: it loads the archived
@@ -85,7 +85,7 @@ as an oracle across all 970 recipes, and asserts the rewrite agrees.
 SvelteKit 2 · Svelte 5 runes · TypeScript · `adapter-static` · `@vite-pwa/sveltekit`
 
 Four runtime dependencies: `minisearch`, `idb-keyval`, and two self-hosted font
-families. No CDN, no analytics, no third-party request of any kind — a build
+families. No CDN, no analytics, no third-party request of any kind: a build
 check enforces it.
 
 Deploys itself to GitHub Pages on every push to `master`
@@ -95,6 +95,6 @@ tests and the build checks.
 ## Architecture notes
 
 `CLAUDE.md` documents the conventions in depth, including the decisions that
-look like bugs and are not — why all 970 cards render as real DOM, why the
+look like bugs and are not: why all 970 cards render as real DOM, why the
 offline shell ships under a third filename, why search options live in exactly
 one file, and what breaks if you move derivation back into a component.

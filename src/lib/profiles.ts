@@ -1,5 +1,5 @@
 /**
- * The shared roster, as far as this wing needs it — and a working answer when
+ * The shared roster, as far as this wing needs it, and a working answer when
  * it is not there at all.
  *
  * `window.OOT.profiles` is installed by the monorepo. The standalone build has
@@ -12,7 +12,7 @@
  * answering for whoever was there when this module first evaluated.
  *
  * Only the members this wing actually uses are re-exported. `subscribe` is
- * deliberately absent because it does not exist on OOT.profiles — the real name
+ * deliberately absent because it does not exist on OOT.profiles: the real name
  * is `onChange`, and calling the wrong one is a TypeError that would surface
  * only inside the monorepo and never in standalone dev or the e2e suite.
  */
@@ -23,7 +23,7 @@ import { browser } from '$app/environment';
  *
  * Wrapped in try/catch because a hardened browser can throw on `window.OOT`
  * access itself, and losing the roster is survivable where throwing during
- * boot is not — the same defensiveness shared/oot-profiles.js applies to its
+ * boot is not: the same defensiveness shared/oot-profiles.js applies to its
  * own localStorage reads.
  */
 function api(): OotProfiles | null {
@@ -68,7 +68,7 @@ export function currentName(): string | null {
 /**
  * Is this the manager's device?
  *
- * False standalone, and false by default in the monorepo — it is opt-in per
+ * False standalone, and false by default in the monorepo: it is opt-in per
  * device, because the tablet on the pass is not the manager's.
  */
 export function isManagerDevice(): boolean {
@@ -91,7 +91,7 @@ export function pathDone(wing: string, stepId: string, id?: string): boolean {
  * Mark an induction step.
  *
  * WRITE-ONCE: the shared implementation returns false if the step is already
- * set, and there is no unmark. Anything that can legitimately change — a
+ * set, and there is no unmark. Anything that can legitimately change: a
  * person's role, for instance, must NOT be stored here, or they would carry
  * every value they ever chose and nothing could say which is current.
  *

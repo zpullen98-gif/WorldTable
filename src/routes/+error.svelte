@@ -10,7 +10,7 @@
 
   Both static hosts answer an unknown path with the precached shell at 200
   (tools/serve.mjs, and GitHub Pages via 404.html), so a deep link to a new
-  route does not 404 — it resolves, hydrates, and lands here. Without this file
+  route does not 404: it resolves, hydrates, and lands here. Without this file
   that is SvelteKit's default error page wearing the World Table's chrome,
   which tells a cook nothing and looks like the app is broken.
 
@@ -24,7 +24,7 @@
 	let updating = $state(false);
 
 	onMount(() => {
-		// Ask the worker to look for a new version. This does not seize the page —
+		// Ask the worker to look for a new version. This does not seize the page;
 		// it makes UpdatePrompt's banner appear, which is the user's choice to take.
 		void navigator.serviceWorker
 			?.getRegistration()
@@ -39,7 +39,7 @@
 	});
 </script>
 
-<svelte:head><title>Not here — The World Table</title></svelte:head>
+<svelte:head><title>Not here: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<h1>{page.status === 404 ? 'Nothing at this address' : 'Something went wrong'}</h1>
@@ -52,7 +52,7 @@
 		{#if updating}
 			<p class="note">
 				Checking for a newer version. If one is found, the banner at the top of the screen will
-				offer it — the app never updates itself out from under you mid-service.
+				offer it: the app never updates itself out from under you mid-service.
 			</p>
 		{/if}
 	{:else}

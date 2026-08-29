@@ -14,7 +14,7 @@
   exactly what their own induction still has to teach.
 
   Class names here are deliberately NOT .lexcard, .def, .flash, .semester or
-  .semesters — those five are a published paywall contract keyed to the tier
+  .semesters: those five are a published paywall contract keyed to the tier
   attribute with no route scope, and reusing one would blur this page for free
   visitors. src/lib/navigation.test.ts holds that line.
 -->
@@ -45,7 +45,7 @@
 	<header class="head">
 		<h1>Service</h1>
 		<p class="lede">
-			{track.fohTotal} terms — cheese, charcuterie, the bar, wine and the grapes — in the order a
+			{track.fohTotal} terms (cheese, charcuterie, the bar, wine and the grapes) in the order a
 			floor learns them. Start at the room and the words the kitchen shouts; the Grape Atlas can
 			wait for week three.
 		</p>
@@ -77,7 +77,7 @@
 
 	<h2 class="sec">Drill it</h2>
 	<p class="secnote">
-		Ten questions over the track's terms — the definition with its own term taken out. Unlike the
+		Ten questions over the track's terms: the definition with its own term taken out. Unlike the
 		menu drill it works on a fresh install, because it asks about the guide rather than about
 		dishes somebody still has to type in.
 	</p>
@@ -115,7 +115,7 @@
 		<p>
 			<b>There is no allergen curriculum, and you must never answer an allergen question from this
 			app.</b>
-			The recipe screen checks {CHECKED.length} — {list(CHECKED)} — and explicitly does not screen
+			The recipe screen checks {CHECKED.length}, {list(CHECKED)}, and explicitly does not screen
 			{list(NOT_SCREENED)}. A dish showing nothing means <i>the text screen found nothing</i>, never
 			<i>clear</i>: {emptyCount} of {recipes.length} recipes read exactly that, and no text screen
 			sees a shared fryer or a dusted board. Take allergen questions to the kitchen, every time.
@@ -126,7 +126,7 @@
 		<h2 class="sec">Bottles the guide has no lesson for</h2>
 		<p class="secnote">
 			The cellar carries {track.cellar.length} bottles and {track.untaught.length} of them have no
-			entry behind them — so the track does not pretend to teach them.
+			entry behind them, so the track does not pretend to teach them.
 		</p>
 		<p class="untaught">{track.untaught.join(' · ')}</p>
 	{/if}

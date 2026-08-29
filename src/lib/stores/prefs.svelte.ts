@@ -1,5 +1,5 @@
 /**
- * Preferences — the only thing kept in localStorage.
+ * Preferences: the only thing kept in localStorage.
  *
  * Everything else (menu, notes, pantry, family recipes) lives in IndexedDB via
  * the stores alongside this one. These four live here for one reason: they must
@@ -92,7 +92,7 @@ class PrefsStore {
 		try {
 			localStorage.setItem(KEY, JSON.stringify(this.#state));
 		} catch {
-			/* private mode / quota — preferences are not worth breaking a render for */
+			/* private mode / quota: preferences are not worth breaking a render for */
 		}
 	}
 }

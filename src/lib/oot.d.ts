@@ -2,7 +2,7 @@
  * The Outside Of Time shared layer, as this wing sees it.
  *
  * `window.OOT` is installed by the monorepo's shared/*.js scripts and is ABSENT
- * in the standalone build — static/shared/ here carries only oot-home.css. So
+ * in the standalone build: static/shared/ here carries only oot-home.css. So
  * every member is optional and every caller must cope with the whole object
  * being undefined. src/lib/profiles.ts is the only place that reads it.
  *
@@ -10,7 +10,7 @@
  * narrower one inside src/lib/persistence/db.ts, describing profiles as
  * `{ key(base: string): string }` and nothing else. Two declarations of the
  * same property do not merge into a union — TypeScript raises TS2717
- * ("Subsequent property declarations must have the same type") — so adding a
+ * ("Subsequent property declarations must have the same type"), so adding a
  * wider one elsewhere is a compile error rather than a widening. Keep it here.
  *
  * Names are copied from the export block of shared/oot-profiles.js. `switch` is
@@ -41,7 +41,7 @@ interface OotProfiles {
 	/** Namespaces a storage key to the current person. Read at CALL time. */
 	key(base: string): string;
 	pathDone(wing: string, stepId: string, id?: string): boolean;
-	/** Returns false if the step was already marked — there is no unmark. */
+	/** Returns false if the step was already marked; there is no unmark. */
 	markPathStep(wing: string, stepId: string): boolean;
 	pathProgress(wing: string, id?: string): number;
 	isManagerDevice(): boolean;
@@ -56,7 +56,7 @@ interface OotProfiles {
 	 * the current profile. Returns an unsubscribe. Handlers must be idempotent.
 	 *
 	 * It does NOT fire when a profile is added, renamed, or when a path step is
-	 * marked in another tab — only when `current` itself changed.
+	 * marked in another tab: only when `current` itself changed.
 	 */
 	onChange(fn: (p: OotProfile | null) => void): () => void;
 	switch(id: string): boolean;

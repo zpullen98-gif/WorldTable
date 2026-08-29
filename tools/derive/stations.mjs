@@ -8,15 +8,15 @@
  * ## The stations are the guide's, not ours
  *
  * `the-brigade-de-cuisine` names them: SAUCIER, GARDE MANGER, PÂTISSIER,
- * POISSONNIER, RÔTISSEUR/GRILLARDIN, ENTREMETIER — plus TOURNANT, "the swing
+ * POISSONNIER, RÔTISSEUR/GRILLARDIN, ENTREMETIER, plus TOURNANT, "the swing
  * cook who works every station", which is not a station but a description of
  * somebody who covers all six. Every station below is gated against that entry:
  * invent one the guide does not name and the build stops.
  *
  * ## The map is authored, and it is a claim about work rather than cuisine
  *
- * Three independent mappings were made — classically, as a modern flattened
- * kitchen actually runs, and by what you would teach together — and every
+ * Three independent mappings were made: classically, as a modern flattened
+ * kitchen actually runs, and by what you would teach together, and every
  * station's roster was then audited adversarially for techniques wrongly on it
  * and techniques missing from it. Where the three disagreed, the disagreement
  * is recorded rather than averaged away.
@@ -35,11 +35,11 @@
  * Techniques the coverage board must NOT count, because the corpus does not
  * actually drill them.
  *
- * Both were found by auditing the map, not by reading the labels — and both
+ * Both were found by auditing the map, not by reading the labels, and both
  * would have credited a cook with something they have never done, which is the
  * one failure a coverage board cannot survive.
  *
- *   The soufflé      — one recipe, milanesa-a-la-napolitana, a breaded fried
+ *   The soufflé      : one recipe, milanesa-a-la-napolitana, a breaded fried
  *                      cutlet. The only appearance of the word is a NEGATIVE
  *                      SIMILE: "milanesa crust should be a jacket, not a
  *                      soufflé". Nothing in the guide drills a soufflé, sweet
@@ -64,7 +64,7 @@ export const UNDRILLED = {
  *
  * Cross-station literacy. Counting them toward one station tells a manager
  * nothing about who can cover whom, which is the only question this board
- * exists to answer — so they are reported separately.
+ * exists to answer, so they are reported separately.
  *
  *   Sweating aromatics  98 recipes, the second-largest technique in the file
  *                       against a median of 8. Everyone sweats an onion.
@@ -115,7 +115,7 @@ export const TOURNANT_EVIDENCE = 'TOURNANT (the swing cook who works every stati
  * Technique -> station. Authored, and a claim about WORK rather than cuisine.
  *
  * Built from three independent mappings, classical, modern-flattened, and
- * teach-together — reconciled against a per-station adversarial audit. Where
+ * teach-together, reconciled against a per-station adversarial audit. Where
  * the three disagreed the note records what decided it; where a real kitchen
  * genuinely splits a technique it carries two stations and says why.
  */
@@ -127,7 +127,7 @@ export const STATION_MAP = {
 	"Biryani & dum": ["entremetier"],  // Unanimous. A sealed rice pot; the meat is a garnish inside it.
 	"Blanching & shocking": ["entremetier", "garde-manger"],  // SPLIT per garde-manger audit: entremetier owns the pot, but 8 of 23 recipes are cold plates (salade-nicoise, gado-gado, pkhali-trio, maine-lobster-rol
 	"Braising": ["saucier"],  // Contested. Entremetier audit struck it: the definition says 'the strained liquid IS the sauce; reduce and mount it', and only 3 of 27 recipes are veg
-	"Brining & curing": ["garde-manger"],  // Contested. Training wanted a rotisseur half; the rotisseur audit disowned it — only 3 of 30 recipes are fire work. Single.
+	"Brining & curing": ["garde-manger"],  // Contested. Training wanted a rotisseur half; the rotisseur audit disowned it: only 3 of 30 recipes are fire work. Single.
 	"Brown butter": ["saucier"],  // Unanimous.
 	"Building an emulsion": ["garde-manger", "saucier"],  // SPLIT per two audits: the definition names both families in one breath. Hot line (hollandaise, beurre-blanc, vongole) vs cold rail (caesar, green godd
 	"Butchery basics": ["rotisseur"],  // Contested. Garde-manger audit struck it: the guide's brigade entry defines that station as 'cold kitchen: salads, charcuterie, terrines' and never men
@@ -137,7 +137,7 @@ export const STATION_MAP = {
 	"Choux pastry": ["patissier"],  // Unanimous.
 	"Churning ice cream": ["patissier"],  // Unanimous.
 	"Churros": ["patissier"],  // Unanimous. I declined the audit's rotisseur half: the frying definition here is boilerplate shared verbatim by five techniques, so it cannot discrimin
-	"Confit": ["saucier"],  // Contested — all three lenses were wrong. Garde-manger audit struck it: no definition, and the three recipes (pollo-al-ajillo, torta-ahogada, mission-s
+	"Confit": ["saucier"],  // Contested: all three lenses were wrong. Garde-manger audit struck it: no definition, and the three recipes (pollo-al-ajillo, torta-ahogada, mission-s
 	"Congee": ["entremetier"],  // Unanimous. Soup and starch in one pot.
 	"Creaming butter & sugar": ["patissier"],  // Unanimous.
 	"Crêpes": ["patissier"],  // Contested. Filed by the guide under semester 6, Pastry Fundamentals; entremetier audit struck the savoury claim as resting on two of five recipes.
@@ -146,15 +146,15 @@ export const STATION_MAP = {
 	"Deep frying": ["rotisseur"],  // Contested. The friturier sub-chain is imported (the guide's brigade entry names no fry cook) but the entremetier audit equally refuted the veg stati
 	"Deglazing & pan sauces": ["saucier"],  // Unanimous.
 	"Draining fried food: a rack, never paper": ["rotisseur"],  // Follows the fryer. Anchored to 'Fryer Setups & Oil Management'; oil husbandry has to sit with whoever owns the oil.
-	"Dry-pan toasting: spices, seeds and nuts": ["saucier"],  // Unanimous. Declined the pastry audit's second station — it flagged its own weakness (4 of 17 recipes).
+	"Dry-pan toasting: spices, seeds and nuts": ["saucier"],  // Unanimous. Declined the pastry audit's second station: it flagged its own weakness (4 of 17 recipes).
 	"Egg wash & the baker’s shine": ["patissier"],  // Unanimous.
-	"Empanada folding": ["patissier"],  // Contested. Two of three lenses said pastry; garde-manger audit struck its own claim — one recipe, no definition, and the same hands as pierogi and ple
+	"Empanada folding": ["patissier"],  // Contested. Two of three lenses said pastry; garde-manger audit struck its own claim: one recipe, no definition, and the same hands as pierogi and ple
 	"Falafel": ["rotisseur"],  // Contested. Entremetier audit struck it: the query field is literally 'falafel frying technique' and the anchor is Deep & Shallow Frying. The chickpea 
-	"Fermentation": ["garde-manger", "patissier"],  // SPLIT. The definition covers both kingdoms explicitly — lacto-ferments and koji against yeast and levain — and 10 of 18 recipes are leavened doughs. T
+	"Fermentation": ["garde-manger", "patissier"],  // SPLIT. The definition covers both kingdoms explicitly, lacto-ferments and koji against yeast and levain, and 10 of 18 recipes are leavened doughs. T
 	"Filleting fish": ["poissonnier"],  // Contested. Poissonnier audit struck the garde-manger half as double-counting: the meat/poultry side of that same lexicon entry already has its own tec
 	"Flambé": ["saucier"],  // Unanimous.
 	"Folding: keeping the air in": ["patissier"],  // Unanimous.
-	"Fresh pasta": ["patissier"],  // Contested, and the sharpest call on the board. Entremetier audit struck it: the anchor is 'Gluten & Hydration' — the same baker's entry that anchors K
+	"Fresh pasta": ["patissier"],  // Contested, and the sharpest call on the board. Entremetier audit struck it: the anchor is 'Gluten & Hydration', the same baker's entry that anchors K
 	"Frying the paste until the oil splits": ["saucier"],  // Unanimous. Declined the entremetier audit's addition: this is a sauce base, and the guide's brigade entry gives sauces to the saucier by name.
 	"Griddle & plancha work": ["rotisseur"],  // Contested. Entremetier audit disowned it: the definition sells the flat-top on 'smash burgers' entire physics', and the roster is cheesesteaks, reuben
 	"Grilling over live coals": ["rotisseur"],  // Unanimous.
@@ -191,19 +191,19 @@ export const STATION_MAP = {
 	"Sautéing & the shallow fry": ["saucier"],  // Unanimous. Declined the entremetier audit's addition: the guide's own brigade entry reads 'SAUCIER (sauces/sautés)', and the guide's text outranks an 
 	"Scoring": ["patissier"],  // Contested. Rotisseur audit struck the fire half: the query is literally 'scoring bread dough technique', the anchor is Proofing/Oven Spring, and one g
 	"Searing: the hard crust": ["saucier"],  // Unanimous. The pan sear, then deglaze; grill searing lives under Grilling.
-	"Shaping by hand": ["patissier"],  // Contested, and the one place two audits collided. Garde-manger's audit disowned it — of 43 recipes not one is a salad, terrine or charcuterie item, an
+	"Shaping by hand": ["patissier"],  // Contested, and the one place two audits collided. Garde-manger's audit disowned it: of 43 recipes not one is a salad, terrine or charcuterie item, an
 	"Shucking shellfish": ["poissonnier"],  // Contested. Both the poissonnier and garde-manger audits struck the cold half: all 8 recipes cook the shellfish, and the guide's only raw shellfish dis
 	"Skimming: foam, fat and a clear broth": ["entremetier", "saucier"],  // SPLIT per saucier audit: the anchor is 'Consommé & Clarification', the soup cook's exam, but sauce-veloute and sauce-espagnole-and-demi-glace sit in
 	"Soaking dried goods back to life": ["entremetier"],  // Unanimous. Declined the pastry audit's addition; it flagged that one as its own weakest.
 	"Sourdough starter": ["patissier"],  // Unanimous.
-	"Steaming: basket, leaf and lid": ["entremetier", "poissonnier"],  // SPLIT per two audits, and only one lens caught it. The definition names both halves — 'Cantonese fish, dim sum, couscous, tamales' plus EN PAPILLOTE —
+	"Steaming: basket, leaf and lid": ["entremetier", "poissonnier"],  // SPLIT per two audits, and only one lens caught it. The definition names both halves, 'Cantonese fish, dim sum, couscous, tamales' plus EN PAPILLOTE,
 	"Straining & passing through a sieve": ["patissier", "saucier"],  // SPLIT. The entremetier audit struck the veg claim (one line about potatoes) and named both real owners: chinois on demi-glace and gravy for the saucie
 	"Sugar stages & caramel": ["patissier", "saucier"],  // SPLIT per two audits. Its ONLY semester tag is 4, 'The Braise', not Pastry Fundamentals, and five of sixteen recipes are savoury caramel bases (ca-kho
-	"Sushi rice & rolling": ["garde-manger"],  // Contested. Unanimous across lenses; I declined the garde-manger audit's own offer of an entremetier half — three recipes, all cold assembly, and the s
+	"Sushi rice & rolling": ["garde-manger"],  // Contested. Unanimous across lenses; I declined the garde-manger audit's own offer of an entremetier half: three recipes, all cold assembly, and the s
 	"Tadka: blooming spices in fat": ["saucier"],  // Unanimous. A finishing sauce poured at the pass.
 	"Tandoor breads": ["patissier", "rotisseur"],  // SPLIT per two audits: three of four recipes are meat in the clay oven (tandoori chicken, tikka masala, nihari) and only garlic-naan is dough. The fire
 	"Tempering a custard": ["patissier"],  // Contested. Saucier audit struck it: 18 of 21 recipes are pastry, half the definition is chocolate tempering, and the saucier's real share of this skil
-	"The bare simmer: holding liquid below the boil": ["entremetier", "saucier"],  // SPLIT. The entremetier audit called its absence the worst hole on the board — it is the only technique in all 103 whose definition names the poaching 
+	"The bare simmer: holding liquid below the boil": ["entremetier", "saucier"],  // SPLIT. The entremetier audit called its absence the worst hole on the board: it is the only technique in all 103 whose definition names the poaching 
 	"The broiler: heat from above": ["rotisseur"],  // Unanimous.
 	"The brûlée torch": ["patissier"],  // Unanimous.
 	"The coat before the fry: dredge, crumb, batter": ["rotisseur", "saucier"],  // SPLIT, and the saucier half was a hole all three lenses missed. Semester 3 is 'The Sauté Station & Pan Sauces' and the list opens chicken-piccata, sol
@@ -229,7 +229,7 @@ export function buildStations(lexicon, techniques) {
 	const problems = [];
 	const entry = lexicon.find((e) => e.slug === BRIGADE_ANCHOR);
 	if (!entry) {
-		problems.push(`stations: no lexicon entry "${BRIGADE_ANCHOR}" — the stations are its own`);
+		problems.push(`stations: no lexicon entry "${BRIGADE_ANCHOR}": the stations are its own`);
 		return { stations: null, problems };
 	}
 
@@ -273,7 +273,7 @@ export function buildStations(lexicon, techniques) {
 		if (!same) {
 			problems.push(
 				`stations: "${label}" was excluded because its only recipe does not drill it, and its ` +
-					`recipe list has changed (${t.recipes.join(', ')}) — re-make the judgement rather than ` +
+					`recipe list has changed (${t.recipes.join(', ')}): re-make the judgement rather than ` +
 					'leaving a real technique uncounted'
 			);
 		}
@@ -318,7 +318,7 @@ export function buildStations(lexicon, techniques) {
 	}));
 	for (const s of stations) {
 		if (!s.techniques.length) {
-			problems.push(`stations: ${s.name} owns no technique — a station nobody can cover is not a station`);
+			problems.push(`stations: ${s.name} owns no technique: a station nobody can cover is not a station`);
 		}
 	}
 

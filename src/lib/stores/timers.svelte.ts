@@ -1,9 +1,9 @@
 /**
- * Kitchen timers — several at once, and none of them lying to you.
+ * Kitchen timers: several at once, and none of them lying to you.
  *
  * A real braise runs three clocks: the pot, the rice, the thing resting. Cook
  * mode used to offer exactly one, only while it was open, and it counted
- * setInterval callbacks rather than reading a clock — so a backgrounded phone
+ * setInterval callbacks rather than reading a clock, so a backgrounded phone
  * (iOS suspends JS outright) lost real minutes and never rang.
  *
  * Two rules follow from that, and everything here is built on them:
@@ -26,7 +26,7 @@ const VERSION = 1;
 
 export interface KitchenTimer {
 	id: string;
-	/** What is on the heat — shown in the bar, and spoken by the alarm text. */
+	/** What is on the heat: shown in the bar, and spoken by the alarm text. */
 	label: string;
 	/** Wall-clock deadline. Null while paused. */
 	endsAt: number | null;
@@ -52,7 +52,7 @@ function read(): KitchenTimer[] {
 		const parsed = JSON.parse(raw) as Persisted;
 		if (typeof parsed?.schemaVersion === 'number' && parsed.schemaVersion > VERSION) return [];
 		const list = Array.isArray(parsed?.timers) ? parsed.timers : [];
-		// A timer whose deadline passed while the tab was closed has rung — we
+		// A timer whose deadline passed while the tab was closed has rung: we
 		// just were not there to hear it. Surface it rather than dropping it, so
 		// "is the rice done?" has an answer after a reload.
 		const now = Date.now();
@@ -69,7 +69,7 @@ function read(): KitchenTimer[] {
  * it works from a service-worker-cached page with nothing else loaded.
  *
  * Browsers refuse to start an AudioContext without a user gesture, so the
- * context is created lazily on the first START — which is itself a tap. That
+ * context is created lazily on the first START, which is itself a tap. That
  * is also why the alarm cannot be "helpfully" pre-armed on page load: it would
  * be created suspended and never ring.
  */
@@ -90,7 +90,7 @@ function ring() {
 	try {
 		void ctx.resume();
 		const now = ctx.currentTime;
-		// Three rising blips — carries across a noisy kitchen without being a
+		// Three rising blips: carries across a noisy kitchen without being a
 		// klaxon, and is distinct from a phone notification.
 		for (let n = 0; n < 3; n++) {
 			const osc = ctx.createOscillator();
@@ -106,7 +106,7 @@ function ring() {
 			osc.stop(t + 0.26);
 		}
 	} catch {
-		/* audio is a courtesy, never a dependency — the bar still shows the alarm */
+		/* audio is a courtesy, never a dependency: the bar still shows the alarm */
 	}
 }
 
@@ -129,7 +129,7 @@ class TimerStore {
 		 *
 		 * Autoplay policy means an AudioContext created without a gesture starts
 		 * suspended and never makes a sound. Starting a timer is a gesture and
-		 * arms it — but a timer RESTORED from a reload has had no gesture, so a
+		 * arms it, but a timer RESTORED from a reload has had no gesture, so a
 		 * braise resumed after a refresh would have rung silently. Any tap or key
 		 * counts, so in practice the alarm is armed long before it is needed.
 		 */
@@ -150,7 +150,7 @@ class TimerStore {
 		return this.#timers.some((t) => t.rang);
 	}
 
-	/** Seconds left on a timer, derived — never stored, never decremented. */
+	/** Seconds left on a timer, derived, never stored, never decremented. */
 	remaining(t: KitchenTimer): number {
 		if (t.paused != null) return t.paused;
 		if (t.endsAt == null) return 0;

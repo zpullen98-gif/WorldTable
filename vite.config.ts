@@ -48,7 +48,7 @@ export default defineConfig({
 				/**
 				 * NOT 200.html: vite preview (and other servers following the
 				 * surge.sh convention) treat that exact filename as internal SPA
-				 * config and 404 direct requests for it — which silently killed
+				 * config and 404 direct requests for it, which silently killed
 				 * the service worker install, since the precache fetches it by
 				 * URL. A name no server has opinions about.
 				 */
@@ -60,7 +60,7 @@ export default defineConfig({
 			/**
 			 * relative: false is load-bearing for the PWA. With SvelteKit's
 			 * default relative paths, the vite-pwa virtual module registers
-			 * `new Workbox('./sw.js', { scope: './' })` — so a first visit that
+			 * `new Workbox('./sw.js', { scope: './' })`, so a first visit that
 			 * lands on /recipe/x requests /recipe/sw.js (404) and the user never
 			 * gets offline capability unless they happen to visit the root.
 			 * Absolute paths register /sw.js with scope / from every page.
@@ -70,7 +70,17 @@ export default defineConfig({
 			prerender: {
 				// A dead internal link is a bug; a dead YouTube link is the
 				// internet's problem. Fail the build on ours only.
-				handleHttpError: 'fail',
+				//
+				// The single exception is the manifest. Built as a wing of
+				// Outside Of Time this app deliberately links the product's
+				// manifest at the origin root, which is outside `base`, so the
+				// crawler reports it as an internal link that does not begin
+				// with base. It is not this build's file and it is not this
+				// build's job to serve it. Everything else still fails.
+				handleHttpError: ({ path, message }) => {
+					if (path === manifestHref) return;
+					throw new Error(message);
+				},
 				handleMissingId: 'fail'
 			}
 		}),
@@ -81,7 +91,7 @@ export default defineConfig({
 			manifest: false, // static/manifest.webmanifest is the source
 			workbox: {
 				/**
-				 * Precache the shell, the data and the fonts — NOT the ~1,500
+				 * Precache the shell, the data and the fonts, NOT the ~1,500
 				 * prerendered HTML pages, which would be ~20MB for content the
 				 * navigateFallback already reconstructs from cached JSON.
 				 * Prerendering and precaching are separate decisions.
@@ -91,7 +101,7 @@ export default defineConfig({
 				maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
 				/**
 				 * Supplying manifestTransforms REPLACES the SvelteKit plugin's own
-				 * transform, so this one must do that job too — and not doing it
+				 * transform, so this one must do that job too, and not doing it
 				 * was a total outage: the raw glob runs over .svelte-kit/output/,
 				 * so every entry arrived prefixed "client/", every precache fetch
 				 * 404'd, the install failed, and the browser discarded the
@@ -100,7 +110,7 @@ export default defineConfig({
 				 *
 				 * The transform also drops the ~1,070 prerendered HTML pages
 				 * (13.5MB for content the navigateFallback reconstructs from
-				 * cached JSON) — prerendering and precaching are separate
+				 * cached JSON): prerendering and precaching are separate
 				 * decisions.
 				 */
 				manifestTransforms: [
@@ -114,7 +124,7 @@ export default defineConfig({
 				],
 				/**
 				 * The offline shell. adapter-static writes it to build/ after the
-				 * glob has already run, so it cannot arrive via the manifest —
+				 * glob has already run, so it cannot arrive via the manifest:
 				 * it is added explicitly, revisioned per build.
 				 */
 				additionalManifestEntries: [
@@ -136,7 +146,7 @@ export default defineConfig({
 				navigateFallback: 'shell.html',
 				/**
 				 * Every navigation is answered from the precached shell, which then
-				 * hydrates from cached JSON — that is the documented design, and the
+				 * hydrates from cached JSON: that is the documented design, and the
 				 * reason the 1,178 prerendered pages are deliberately NOT precached.
 				 * Prerendered HTML serves the first visit, before the worker installs.
 				 */

@@ -47,7 +47,7 @@ export interface DrillQuestion {
 	options: DrillCard[];
 }
 
-/** Ten, always. See the verdict ladder — a short round inflates the verdict. */
+/** Ten, always. See the verdict ladder: a short round inflates the verdict. */
 export const ROUND_LENGTH = 10;
 
 export const OPTIONS_PER_QUESTION = 4;
@@ -80,7 +80,7 @@ export function fieldFor(target: DrillCard, all: readonly DrillCard[]): DrillCar
 
 /**
  * One question. Returns null when the deck cannot field enough options, which
- * a caller should skip rather than paper over — a question with two buttons is
+ * a caller should skip rather than paper over: a question with two buttons is
  * not a question.
  */
 export function optionsFor(
@@ -97,7 +97,7 @@ export function optionsFor(
 /**
  * A round.
  *
- * `due` is asked first — that is the point of scheduling it. The round is then
+ * `due` is asked first: that is the point of scheduling it. The round is then
  * topped up from cards never drilled at all, and only then from the rest. It is
  * NEVER shortened to fit: a three-question round scoring 3/3 clears the top
  * rung of the verdict ladder below and logs a clean sweep that did not happen.

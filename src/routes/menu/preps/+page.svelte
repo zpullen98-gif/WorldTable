@@ -6,11 +6,11 @@
 	import Ornament from '$lib/components/Ornament.svelte';
 
 	/**
-	 * The preps — what the menu is actually built from.
+	 * The preps: what the menu is actually built from.
 	 *
 	 * A braise's sheet carried "Demi-glace, 6.00/L, 0.15 L, 100% yield". Nobody
-	 * had ever costed the demi — bones, mirepoix, wine, nine hours, a yield
-	 * nearer 25% — and the same guess was retyped into every other dish that
+	 * had ever costed the demi: bones, mirepoix, wine, nine hours, a yield
+	 * nearer 25%, and the same guess was retyped into every other dish that
 	 * used it, differently in some. Every sauced dish was understated in the
 	 * direction that flatters. This is the entity that was missing.
 	 *
@@ -63,12 +63,12 @@
 			shelfLifeDays: p.shelfLifeDays ?? 0,
 			// Stored in SECONDS and typed in minutes. The store is the seconds so
 			// the prep board can hand these straight to buildPass, whose
-			// PassStepInput is handsOnSec — a prep kept in minutes would back-time
+			// PassStepInput is handsOnSec: a prep kept in minutes would back-time
 			// to sixty times its length.
 			handsOnMin: Math.round(p.handsOnSec / 60),
 			unattendedMin: Math.round(p.unattendedSec / 60),
 			// Carried through the form. The field was displayed on the prep board
-			// and settable NOWHERE — reachable only by hand-editing a .wtjson —
+			// and settable NOWHERE, reachable only by hand-editing a .wtjson,
 			// and an edit round-trip silently dropped whatever a file had put in.
 			station: p.station ?? '',
 			lines: [...p.lines]
@@ -109,7 +109,7 @@
 	 * The engine honoured itemSlug inside a prep from the day the book shipped
 	 * (prepPortionCost runs priceFromBook over every non-prep line, and the
 	 * book's own header calls butter-in-the-demi the case it most needs to
-	 * reach) — but this editor was a bare input, so a prep's butter was a
+	 * reach), but this editor was a bare input, so a prep's butter was a
 	 * free-text price typed a second time: the retyped-guess failure the Prep
 	 * entity exists to end, one layer down. Same handlers as the costing
 	 * sheet, against the same book.
@@ -150,7 +150,7 @@
 		editLine(l.id, house.item(slug) ? { unitCost, itemSlug: slug } : { unitCost });
 	}
 
-	/** The book price shown for a linked line — the stored number is a fallback. */
+	/** The book price shown for a linked line: the stored number is a fallback. */
 	const bookCost = (l: CostLine) =>
 		l.itemSlug ? (currentPrice(house.item(l.itemSlug))?.unitCost ?? l.unitCost) : l.unitCost;
 	function editLine(lineId: string, patch: Partial<CostLine>) {
@@ -175,7 +175,7 @@
 
 	const num = (v: string) => (v.trim() === '' ? Number.NaN : Number(v));
 
-	/** The prep being typed, costed live — the same function the list uses. */
+	/** The prep being typed, costed live: the same function the list uses. */
 	const preview = $derived(
 		form
 			? prepPortionCost({ id: 'preview', portions: Number(form.portions) || 0, lines: form.lines }, house.pricedItems)
@@ -251,7 +251,7 @@
 			<div class="editor">
 				<div class="frow">
 					<input bind:value={form.name} placeholder="Demi-glace" aria-label="Prep name" />
-					<input bind:value={form.batch} placeholder="Batch — 1 × 20L pot" aria-label="Batch" />
+					<input bind:value={form.batch} placeholder="Batch: 1 × 20L pot" aria-label="Batch" />
 					<select bind:value={form.station} aria-label="Station">
 						<option value="">No station</option>
 						{#each data.stationNames as n (n)}<option value={n}>{n}</option>{/each}
@@ -310,7 +310,7 @@
 						<b>{money(preview.perPortion)} a portion</b> across {form.portions} portions.
 					{:else}
 						<b class="incomplete">Not fully costed.</b>
-						A prep with a line the sheet cannot price makes every dish that uses it incomplete too —
+						A prep with a line the sheet cannot price makes every dish that uses it incomplete too:
 						which is the point, and better than a total that is quietly wrong.
 					{/if}
 				</p>

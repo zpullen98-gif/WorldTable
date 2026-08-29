@@ -3,7 +3,7 @@
 
   Ten questions, always. The verdict ladder in lib/drill.ts is absolute counts,
   so a shortened round would clear its top rung on fewer right answers and log a
-  clean sweep that never happened — the menu drill guards the same way with its
+  clean sweep that never happened; the menu drill guards the same way with its
   two-drillable-dish floor. When the due queue is short the round is topped up
   from terms never drilled, never trimmed.
 
@@ -11,7 +11,7 @@
   guide's own 186 shipped cards rather than dishes the venue has to type in.
 
   Everything below the h1 sits in exactly ONE <article class="sheet">. That is
-  the paywall contract — oot-locks.js does querySelector('article.sheet'),
+  the paywall contract: oot-locks.js does querySelector('article.sheet'),
   SINGULAR, so a page with none is protected by a dismissible overlay alone and
   a page with two leaves the second reachable by keyboard and screen reader.
 -->
@@ -54,7 +54,7 @@
 
 	/**
 	 * The answer is recorded HERE, before the explanation is shown and before
-	 * anything advances — the rule cook mode's pass panel follows. Closing the
+	 * anything advances, the rule cook mode's pass panel follows. Closing the
 	 * page mid-round must not lose what was already answered.
 	 */
 	function answer(slug: string) {
@@ -79,7 +79,7 @@
 	/**
 	 * One dispatch per finished round, matching the two existing sites the
 	 * monorepo's oot-log.js already consumes. markStudied() is an existing
-	 * profiles method — no shared-file edit.
+	 * profiles method: no shared-file edit.
 	 */
 	function finish() {
 		if (!round) return;
@@ -96,7 +96,7 @@
 	}
 </script>
 
-<svelte:head><title>Drill the track — The World Table</title></svelte:head>
+<svelte:head><title>Drill the track: The World Table</title></svelte:head>
 
 <div class="shell view">
 	<nav class="crumbs"><a href="{base}/service">Service</a></nav>
@@ -110,7 +110,7 @@
 			</p>
 			<p class="note">
 				{#if due.length}
-					{due.length} term{due.length === 1 ? ' is' : 's are'} due — they go first.
+					{due.length} term{due.length === 1 ? ' is' : 's are'} due: they go first.
 				{:else if everDrilled.size}
 					Nothing due. The round will draw terms you have not answered yet.
 				{:else}
@@ -220,7 +220,7 @@
 	.opt:hover:enabled {
 		border-color: var(--turmeric-deep);
 	}
-	/* Right and wrong carry a word in the line below as well as a border — the
+	/* Right and wrong carry a word in the line below as well as a border: the
 	   verdict must not depend on colour alone. */
 	.opt.right {
 		border-color: var(--turmeric-deep);

@@ -1,5 +1,5 @@
 /**
- * build-data.mjs — turn the raw extracted literals into the typed JSON the app
+ * build-data.mjs: turn the raw extracted literals into the typed JSON the app
  * actually ships.
  *
  * This is where every regex that used to run at render time runs instead: once,
@@ -9,8 +9,8 @@
  * 970-element array to paint a grid.
  *
  * Output (src/lib/data/):
- *   recipes.index.json  — RecipeSummary[], shipped eagerly for the grid
- *   recipes.full.json   — RecipeDetail[], lazy + precached for offline
+ *   recipes.index.json  : RecipeSummary[], shipped eagerly for the grid
+ *   recipes.full.json   : RecipeDetail[], lazy + precached for offline
  *   chapters.json       — ChapterRef[], the cuisine rail
  *   lexicon.json, pantry.json, study.json, substitutions.json, cellar.json
  */
@@ -80,7 +80,7 @@ const OVERRIDES = existsSync(overridesPath)
  * The raw extraction stays byte-identical to the archived original (that is
  * what verify:data proves); improved notes live here and are applied before
  * the blobs are built, so flavor tags, seasons, cross-links and the search
- * index all re-derive from the richer text — exactly the ripple the backfill
+ * index all re-derive from the richer text, exactly the ripple the backfill
  * is meant to cause, visible in the recipes.json diff.
  */
 const notesPath = join(OUT, 'notes.json');
@@ -136,7 +136,7 @@ const toIngredient = (line) =>
  * Ported from `stepDur` (L3407), with one deliberate change: the original
  * returned a default of 4 (minutes) when no duration was found, which the
  * service timeline then treated as a real measurement. Here "no duration stated"
- * is null, and the timeline supplies its own default — so the UI can tell the
+ * is null, and the timeline supplies its own default, so the UI can tell the
  * difference between "4 minutes" and "we guessed".
  */
 function stepDuration(text) {
@@ -155,7 +155,7 @@ const recipeSlugs = qualifiedSlugs(
 );
 const lexSlugs = D.map((e) => slugify(e.t));
 
-/** Notes with the backfill overlay applied — the text the app actually ships. */
+/** Notes with the backfill overlay applied: the text the app actually ships. */
 const effNotes = R.map((r, i) => NOTES[recipeSlugs[i]] ?? r.p);
 
 /** Lowercased searchable blob per recipe, built once and reused by every rule. */
@@ -167,7 +167,7 @@ const pantryMap = derivePantryMap(R, blobs, PANTRY);
 
 /**
  * Cross-links score WITHOUT the note. A term should link to recipes that use
- * it — in the name, the ingredients, the method — not to recipes whose margin
+ * it (in the name, the ingredients, the method) not to recipes whose margin
  * commentary mentions it. Scoring prose made links follow note richness, which
  * during the rolling backfill meant links followed backfill ORDER: the first
  * chapters rewritten swept the links (Italian hit 9.1% the moment its ten
@@ -175,12 +175,12 @@ const pantryMap = derivePantryMap(R, blobs, PANTRY);
  */
 const linkBlobs = R.map((r) => `${r.n} ${r.c} ${r.i.join(' ')} ${r.m.join(' ')}`.toLowerCase());
 
-/** Name + ingredients only — the original's RTEXT. What the dish CONTAINS. */
+/** Name + ingredients only: the original's RTEXT. What the dish CONTAINS. */
 const narrowBlobs = R.map((r) => narrowBlob(r));
 const crosslinks = buildCrosslinks(R, recipeSlugs, D, lexSlugs, linkBlobs);
 
 /**
- * Techniques score off linkBlobs — the same note-free text as cross-links, for
+ * Techniques score off linkBlobs, the same note-free text as cross-links, for
  * the same reason, which measurement caught before this shipped: with the note
  * in the blob, 111 tags existed ONLY because of note prose, 62 recipes were
  * tagged solely by their margin commentary, and the 320-note backfill had
@@ -222,7 +222,7 @@ function internPairing(p) {
 	return pairingIds.get(key);
 }
 
-/** Authored, not derived — see tools/derive/standards.mjs. */
+/** Authored, not derived: see tools/derive/standards.mjs. */
 const standardBySlug = new Map(STANDARDS.map((x) => [x.slug, x]));
 
 R.forEach((r, i) => {
@@ -314,7 +314,7 @@ const termToSlug = new Map(D.map((e, i) => [e.t, lexSlugs[i]]));
  * four of its five dishes sear, and a braise IS sear-then-simmer.
  *
  * Derived, not authored, so it can never drift from the dishes. `dishes` is how
- * many of that semester's recipes demonstrate the skill — the weight that makes
+ * many of that semester's recipes demonstrate the skill, the weight that makes
  * a semester's real emphasis visible.
  */
 const recipeTechniques = new Map(full.map((d) => [d.slug, d.techniques]));
@@ -348,7 +348,7 @@ const cellar = CELLAR.map((name) => ({
 }));
 
 /**
- * The technique index — every label the table produces, with the COMPLETE set
+ * The technique index: every label the table produces, with the COMPLETE set
  * of recipes that demonstrate it.
  *
  * This is the mapping the guide never had. The Lexicon's technique entries are
@@ -358,7 +358,7 @@ const cellar = CELLAR.map((name) => ({
  * every recipe that braises, and borrows the Lexicon's prose to explain itself.
  *
  * Labels that tag nothing are dropped rather than shipped as empty pages. Five
- * of the original's entries never fire against this corpus — Gnocchi and
+ * of the original's entries never fire against this corpus: Gnocchi and
  * Boiling bagels because it contains no gnocchi and no bagel, which is not a
  * bug, just a table written for a wider guide than the one that shipped.
  */
@@ -404,7 +404,7 @@ const techniques = TECH_ALL.map((x, i) => {
 		definition: term ? term.definition : null,
 		origin: i < TECH.length ? 'original' : 'supplement',
 		chapters: new Set(list.map((s) => chapterOfSlug.get(s))).size,
-		/** Semesters of the Path that teach this skill — empty for most of them. */
+		/** Semesters of the Path that teach this skill: empty for most of them. */
 		semesters: semestersByLabel.get(x.l) ?? [],
 		recipes: list
 	};
@@ -413,7 +413,7 @@ const techniques = TECH_ALL.map((x, i) => {
 	.sort((a, b) => a.label.localeCompare(b.label));
 
 /**
- * `judgedBy` — the technique standards a recipe is assessed against.
+ * `judgedBy`: the technique standards a recipe is assessed against.
  *
  * 45 recipes carry a dish standard. The other 925 could be recorded as cooked
  * and nothing more, and 782 of those exercise at least one technique that now
@@ -467,7 +467,7 @@ const write = (file, value) => {
 console.log('\n  build:data\n');
 /**
  * The palate. Structure over the guide's own Repair Table rather than new
- * content — see tools/derive/palate.mjs for what is checked against what.
+ * content: see tools/derive/palate.mjs for what is checked against what.
  */
 const { palate, problems: palateProblems } = buildPalate(lexicon);
 
@@ -480,7 +480,7 @@ const { economics, problems: economicsProblems } = buildEconomics(lexicon);
 /**
  * The waste log's vocabulary. Five reason codes, each carrying the phrase in the
  * guide that names it, and gated in REVERSE against the guide's own list of
- * leaks — so a leak it names that nothing carries fails the build rather than
+ * leaks: so a leak it names that nothing carries fails the build rather than
  * quietly not existing. Theft and vendor creep are declared as refused rather
  * than omitted; see the module header for why a bin with a THEFT button on it
  * is the wrong instrument.
@@ -496,7 +496,7 @@ if (waste) {
 
 /**
  * Sanitation. Structure over the guide's two food-safety entries, and, the
- * unusual part — over its SILENCES: each gap asserts both that the guide still
+ * unusual part, over its SILENCES: each gap asserts both that the guide still
  * names a practice and that it still states no figure for it, so nobody can
  * quietly fill a gap with invented regulatory content. Ships no per-recipe
  * hazard flag; see the module header for the five rules that were measured and
@@ -520,7 +520,7 @@ const { serviceTrack, problems: serviceTrackProblems } = buildServiceTrack(
 );
 
 /**
- * Drill prompts — the guide's definitions with the term redacted out of its own
+ * Drill prompts: the guide's definitions with the term redacted out of its own
  * question, gated in both directions. Built from the service track's modules,
  * so a term that leaves the track leaves the drill with it.
  */
@@ -564,7 +564,7 @@ write('calibration.json', {
 /**
  * The search index, prebuilt so the browser never pays tokenization cost.
  *
- * Fields mirror the ORIGINAL's search surface — name + ingredients (RTEXT,
+ * Fields mirror the ORIGINAL's search surface: name + ingredients (RTEXT,
  * L2746), plus chapter and flavor tags. The grid's substring fallback covers
  * only name/chapter/tags, which is how "lemongrass" went from 13 hits to 1
  * until this index existed. Document ids are positions in the recipes array.
@@ -594,17 +594,17 @@ const problems = [];
 
 /**
  * The 970-row test. Those hand-authored `v` booleans are ground truth nobody had
- * to create, so we run the keyword tables against them — but we only fail on the
+ * to create, so we run the keyword tables against them, but we only fail on the
  * two classes of disagreement that are unambiguously *errors*, not judgement:
  *
  *   A. Marked vegetarian, yet an animal product appears with no stated
  *      alternative anywhere in the ingredients. Someone filtering for vegetarian
  *      would be served meat.
  *   B. Marked non-vegetarian, yet no animal keyword appears at all. Almost
- *      always a hole in the tables — this is what surfaced walleye, whitefish,
+ *      always a hole in the tables: this is what surfaced walleye, whitefish,
  *      geoduck, whelk, carnitas and hot dogs as missing words.
  *
- * The large middle class — the corpus disagreeing with itself about whether
+ * The large middle class: the corpus disagreeing with itself about whether
  * "pork (or shiitake for veg)" counts, is reported, not failed. See the note in
  * derive/diet.mjs.
  */
@@ -639,13 +639,13 @@ if (gateA.length) {
 }
 if (gateB.length) {
 	problems.push(
-		`${gateB.length} marked non-vegetarian but no animal keyword matched — likely a gap in the keyword tables:\n` +
+		`${gateB.length} marked non-vegetarian but no animal keyword matched, likely a gap in the keyword tables:\n` +
 			gateB.map((d) => `      ${d.name} (${d.chapter})\n        ${d.ingredients.slice(0, 160)}`).join('\n')
 	);
 }
 if (judgement.length) {
 	console.log(
-		`  diet: ${judgement.length} substitution judgement calls (reported, not gated) — ` +
+		`  diet: ${judgement.length} substitution judgement calls (reported, not gated): ` +
 			`the corpus is inconsistent about "X (or Y for veg)"`
 	);
 }
@@ -658,7 +658,7 @@ if (judgement.length) {
  * it. Those fail in opposite directions and only one of them is survivable.
  *
  * 16 recipes shipped `vegan: true` and `vegetarianOption: true` together, which
- * is a contradiction in the data's own terms — `vegetarianOption` means an
+ * is a contradiction in the data's own terms: `vegetarianOption` means an
  * animal product IS named somewhere and only escaped. Escabecheng Isda, whose
  * first ingredient is a whole tilapia fried in oil, painted a Vegan badge.
  *
@@ -679,7 +679,7 @@ if (judgement.length) {
 		if (d.containsDairy) carries.push('dairy');
 		if (d.containsEgg) carries.push('egg');
 		if (d.vegetarianOption) carries.push('vegetarianOption');
-		if (carries.length) veganLies.push(`${r.n} [${slug}] — ${carries.join(', ')}`);
+		if (carries.length) veganLies.push(`${r.n} [${slug}]: ${carries.join(', ')}`);
 	});
 	if (veganLies.length) {
 		problems.push(
@@ -690,7 +690,7 @@ if (judgement.length) {
 
 	/**
 	 * The authored `vegetarian` flag is a human judgement the build trusts by
-	 * design (see derive/diet.mjs), so this is REPORTED, not gated — but it only
+	 * design (see derive/diet.mjs), so this is REPORTED, not gated, but it only
 	 * became visible once fish and shellfish started reading every line, and a
 	 * server reading a Vegetarian badge over a dish containing dashi or
 	 * Worcestershire is the exact conversation this product exists to prevent.
@@ -707,7 +707,7 @@ if (judgement.length) {
 	if (vegWithAnimal.length) {
 		console.log(
 			`  diet: ${vegWithAnimal.length} authored-vegetarian recipes carry a fish/shellfish/meat ` +
-				`allergen flag (reported, not gated) — ${vegWithAnimal.slice(0, 4).join(', ')}…`
+				`allergen flag (reported, not gated): ${vegWithAnimal.slice(0, 4).join(', ')}…`
 		);
 	}
 }
@@ -757,7 +757,7 @@ if (worst && linkTotal > 0) {
 /**
  * Technique-table hygiene.
  *
- * The original's dead entries are reported, not failed — five of them describe
+ * The original's dead entries are reported, not failed: five of them describe
  * dishes this corpus does not contain, and that is the archived table's
  * business, not ours. A SUPPLEMENT entry that tags nothing is our own mistake
  * and fails the build: it means a keyword was written that the corpus never
@@ -832,13 +832,13 @@ if (worst && linkTotal > 0) {
 			`${techniques.length} live labels, ${anchored} anchored to a lexicon definition`
 	);
 	if (deadOriginal.length) {
-		console.log(`  techniques: ${deadOriginal.length} original entries never fire — ${deadOriginal.join(', ')}`);
+		console.log(`  techniques: ${deadOriginal.length} original entries never fire: ${deadOriginal.join(', ')}`);
 	}
 	const untaggedChapters = [...new Set(index.map((r) => r.chapter))].filter((c) =>
 		index.every((r, i) => r.chapter !== c || !full[i].techniques.length)
 	);
 	if (untaggedChapters.length) {
-		console.log(`  techniques: chapters with no tagged recipe at all — ${untaggedChapters.join(', ')}`);
+		console.log(`  techniques: chapters with no tagged recipe at all: ${untaggedChapters.join(', ')}`);
 	}
 }
 
@@ -926,7 +926,7 @@ console.log('');
 {
 	/**
 	 * The service split. A recipe that costs a cook NO time is not a slow
-	 * recipe, it is a parse failure — every stated number in it was read as a
+	 * recipe, it is a parse failure: every stated number in it was read as a
 	 * wait and its real work carries no duration at all. That is exactly how
 	 * Kansas City barbecue ribs scored 475 minutes elapsed and zero of work
 	 * before stepService earned the default for unnamed work, so it is gated
@@ -964,14 +964,14 @@ console.log('');
 }
 
 /**
- * The calibration ladders — authored apparatus, gated on shape.
+ * The calibration ladders, authored apparatus, gated on shape.
  *
  * Same treatment standards.mjs gets, for the same reason: nothing here derives
  * from the guide, so nothing but a gate stops it drifting into a number that
  * cannot be built with a kitchen scale or a gap nobody could ever hear.
  *
  * IT LIVES DOWN HERE BECAUSE IT HAS TO. The first version sat beside the emit,
- * above `const problems = []` — so every `problems.push` was a ReferenceError,
+ * above `const problems = []`, so every `problems.push` was a ReferenceError,
  * which only threw when a problem was actually FOUND. With none, the array was
  * never touched and the build passed. A gate that could not report, sitting
  * quietly green. It was found by breaking it, which is the only way it could
@@ -1028,7 +1028,7 @@ console.log('');
 
 	// A run must be long enough that a clean sweep is not luck. Three cups is a
 	// 1-in-3 guess, so the odds of a perfect run by chance are 1/3^TRIALS.
-	if (TRIALS < 5) problems.push(`calibration runs are ${TRIALS} trials — too short to mean anything`);
+	if (TRIALS < 5) problems.push(`calibration runs are ${TRIALS} trials, too short to mean anything`);
 	if (PASS_AT > TRIALS) problems.push('calibration cannot be passed: PASS_AT exceeds TRIALS');
 	if (PASS_AT <= TRIALS / 2) {
 		problems.push(`calibration passes at ${PASS_AT} of ${TRIALS}, which is near the guess rate`);
@@ -1056,7 +1056,7 @@ problems.push(...palateProblems);
 	const techBySlug = new Map(techniques.map((t) => [t.slug, t]));
 	const authored = new Set(TECHNIQUE_STANDARDS.map((x) => x.slug));
 
-	// FORWARD — a standard for a technique the table does not have means a slug
+	// FORWARD: a standard for a technique the table does not have means a slug
 	// was written that the corpus never had.
 	const orphans = TECHNIQUE_STANDARDS.filter((x) => !techBySlug.has(x.slug));
 	if (orphans.length) {
@@ -1087,7 +1087,7 @@ problems.push(...palateProblems);
 		);
 	}
 
-	// REVERSE — the half that stops rot. A SUPPLEMENT entry added later that
+	// REVERSE, the half that stops rot. A SUPPLEMENT entry added later that
 	// tags 30 recipes must not be able to ship unassessable and unnoticed.
 	const unassessable = techniques
 		.filter((t) => t.recipes.length >= TECHNIQUE_GATE_MIN_RECIPES && !authored.has(t.slug))
@@ -1131,7 +1131,7 @@ problems.push(...palateProblems);
 	);
 	if (!claim) {
 		problems.push(
-			'technique-standards.mjs: the headline paragraph no longer parses, so its numbers cannot be checked — restore the sentence or update this gate'
+			'technique-standards.mjs: the headline paragraph no longer parses, so its numbers cannot be checked; restore the sentence or update this gate'
 		);
 	} else {
 		const [, nTech, nThreshold, nGained, nDish, nAssessable, nCorpus] = claim.map(Number);
@@ -1149,7 +1149,7 @@ problems.push(...palateProblems);
 		/**
 		 * The ceiling sentence, gated the same way and for the same reason. It was
 		 * written first as "146 ... and the rest", both reasoned from other figures
-		 * rather than measured, and both wrong — 143 and 38. A number nobody can
+		 * rather than measured, and both wrong, 143 and 38. A number nobody can
 		 * re-run is a number that is already drifting.
 		 */
 		const ceiling = src.match(
@@ -1210,7 +1210,7 @@ problems.push(...palateProblems);
 }
 
 /**
- * The mark-id ledger — what makes a mark id a PROMISE rather than a label.
+ * The mark-id ledger: what makes a mark id a PROMISE rather than a label.
  *
  * A cook's annotation records "the crust mark was off" as an id. The whole
  * value of that record is that it still means the same sentence in March, so
@@ -1225,7 +1225,7 @@ problems.push(...palateProblems);
  * This is the rule the Codex already holds for question ids, and the reason it
  * holds it: a changed id orphans progress.
  *
- * The ledger is COMMITTED and the build writes to it. That is deliberate —
+ * The ledger is COMMITTED and the build writes to it. That is deliberate:
  * `git diff` on this file is the review surface. An append is a new line; a
  * rename is a delete plus an add, and the delete fails the build before it can
  * ever reach the diff.
@@ -1273,14 +1273,14 @@ problems.push(...palateProblems);
 		try {
 			ledgered = JSON.parse(readFileSync(LEDGER, 'utf8')).ids ?? [];
 		} catch {
-			problems.push('mark-ids.ledger.json is unreadable — restore it from git rather than deleting it');
+			problems.push('mark-ids.ledger.json is unreadable: restore it from git rather than deleting it');
 		}
 	}
 
 	const orphaned = ledgered.filter((id) => !liveSet.has(id));
 	if (orphaned.length) {
 		problems.push(
-			`${orphaned.length} mark ids in the ledger no longer exist — a rename or a drop orphans ` +
+			`${orphaned.length} mark ids in the ledger no longer exist: a rename or a drop orphans ` +
 				`every annotation pointing at them. Restore the id (the TEXT is free to change), ` +
 				`or remove it from the ledger deliberately:\n` +
 				orphaned.map((id) => `      ${id}`).join('\n')
@@ -1302,7 +1302,7 @@ problems.push(...palateProblems);
 /*
  * Pushed ABOVE the mark-id ledger block, deliberately. These six lived after
  * it, so a build failing on any of them had already appended newly minted ids
- * to the committed ledger — and an abandoned edit then left phantom ids whose
+ * to the committed ledger, and an abandoned edit then left phantom ids whose
  * honest retraction would itself fail the build. The ledger's guard is
  * `!problems.length`; it only means "every gate passed" if every gate has
  * already spoken.

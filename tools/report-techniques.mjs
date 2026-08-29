@@ -1,5 +1,5 @@
 /**
- * report-techniques.mjs — the technique widening's progress bar.
+ * report-techniques.mjs: the technique widening's progress bar.
  *
  * The counterpart to report-notes.mjs. Lists how much of the corpus carries a
  * technique tag, which chapters are darkest, and which table entries never
@@ -49,7 +49,7 @@ if (arg === '--labels') {
 		anchored: LEXICON_ANCHOR[x.l] ? '⚓' : '  '
 	})).sort((a, b) => b.n - a.n);
 
-	console.log(`\n  ${TABLE.length} entries — ${TECH.length} original, ${SUPPLEMENT.length} supplemental\n`);
+	console.log(`\n  ${TABLE.length} entries: ${TECH.length} original, ${SUPPLEMENT.length} supplemental\n`);
 	for (const r of rows) {
 		console.log(
 			`  ${String(r.n).padStart(4)}  ${r.anchored}  ${r.label.padEnd(38)} ${r.origin === 'supplement' ? '+' : ''}`
@@ -85,7 +85,7 @@ R.forEach((r, i) => {
 	if (!tags[i].length) e.untagged++;
 });
 
-console.log(`\n  the technique ledger — ${tagged} of ${R.length} recipes tagged, ${R.length - tagged} dark`);
+console.log(`\n  the technique ledger: ${tagged} of ${R.length} recipes tagged, ${R.length - tagged} dark`);
 console.log(`  ${TABLE.length} entries (${SUPPLEMENT.length} supplemental), ${Object.keys(LEXICON_ANCHOR).length} anchored to a lexicon definition\n`);
 
 const rows = [...byChapter.entries()]

@@ -237,7 +237,7 @@ describe('the banner says what the preps will do', () => {
 
 	it('stays quiet about a prep that is not newer', () => {
 		const out = describeImport({ preps: [{ ...structuredClone(demi), ts: 10 }] }, current());
-		expect(out).toBe('nothing new — this file matches what you already have');
+		expect(out).toBe('nothing new, this file matches what you already have');
 	});
 
 	it('pluralises', () => {
@@ -346,7 +346,7 @@ describe('the banner says what the book will do', () => {
 			{ items: { butter: { slug: 'butter', name: 'Butter', history: [{ unitCost: 7.9, unit: 'kg', at: T }] } } },
 			current([[7.9, T]])
 		);
-		expect(out).toBe('nothing new — this file matches what you already have');
+		expect(out).toBe('nothing new, this file matches what you already have');
 	});
 });
 
@@ -421,6 +421,6 @@ describe('the banner says what the waste log will do', () => {
 
 	it('stays quiet about entries the venue already has', () => {
 		const out = describeImport({ waste: [bin({ id: 'z' })] }, current([bin({ id: 'z' })]));
-		expect(out).toBe('nothing new — this file matches what you already have');
+		expect(out).toBe('nothing new, this file matches what you already have');
 	});
 });

@@ -1,5 +1,5 @@
 /**
- * extract.mjs — lift the inline data literals out of reference/world-table-v1.html
+ * extract.mjs: lift the inline data literals out of reference/world-table-v1.html
  * into versioned JSON, losslessly.
  *
  * Why not regex-to-JSON: the literals are valid JS but NOT valid JSON. `R` uses
@@ -11,7 +11,7 @@
  * So: let acorn do the lexing. We parse each <script>, walk the FULL ast (four of
  * the targets live inside an IIFE, not at top level), slice the exact source span
  * of each target's initializer, and evaluate ONLY that expression in a locked-down
- * vm context. Every target initializer is a pure literal — no identifier
+ * vm context. Every target initializer is a pure literal: no identifier
  * references, no calls — so nothing DOM-adjacent is ever executed. acorn only
  * parses the surrounding script; it never runs it.
  */
@@ -52,7 +52,7 @@ const TARGETS = [
  * SUBS=50, EQUIP=31 and SEASON=45 were each reported one off during planning.
  * Checked directly: SUBS has 50 well-formed [term, advice] pairs with no
  * duplicate terms; EQUIP has 31 `[/re/, label]` pairs on L3330; SEASON has 45
- * keys, 45 of them unique — so nothing collapsed on the way through. These are
+ * keys, 45 of them unique, so nothing collapsed on the way through. These are
  * the real numbers.
  */
 export const EXPECTED = {
@@ -97,7 +97,7 @@ export function toSerializable(value) {
 	return value;
 }
 
-/** Inverse of toSerializable — used by the verifier and the derive pipeline. */
+/** Inverse of toSerializable: used by the verifier and the derive pipeline. */
 export function reviveRegex(value) {
 	if (Array.isArray(value)) return value.map(reviveRegex);
 	if (value && typeof value === 'object') {
@@ -125,7 +125,7 @@ export function scriptBlocks(html) {
 
 /**
  * Sum of the length of every string in a value tree, plus a count of non-string
- * leaves. This is the invariant that catches silent truncation — count checks
+ * leaves. This is the invariant that catches silent truncation: count checks
  * alone will happily pass on a record whose `p` note lost its last sentence.
  */
 export function charSum(value) {
@@ -167,7 +167,7 @@ export function extract(html) {
 			ast = acorn.parse(code, { ecmaVersion: 2022, sourceType: 'script' });
 		} catch (err) {
 			// A block we can't parse is a block we can't trust. Surface it rather
-			// than silently skipping — a missed target is a data-loss bug.
+			// than silently skipping: a missed target is a data-loss bug.
 			throw new Error(`acorn failed to parse a <script> block: ${err.message}`);
 		}
 
@@ -230,7 +230,7 @@ function main() {
 		const b = charSum(revived);
 		if (a.chars !== b.chars || a.leaves !== b.leaves) {
 			throw new Error(
-				`${name}: round-trip lost data — ` +
+				`${name}: round-trip lost data: ` +
 					`${a.chars}/${a.leaves} chars/leaves in, ${b.chars}/${b.leaves} out`
 			);
 		}

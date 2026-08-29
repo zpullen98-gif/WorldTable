@@ -9,7 +9,7 @@
 	const t = $derived(data.technique);
 
 	// Slugs resolve against the eager index rather than travelling in the
-	// payload. filter(Boolean) because a technique is data and bySlug is data —
+	// payload. filter(Boolean) because a technique is data and bySlug is data:
 	// if they ever disagree the page should thin out, not throw.
 	const list = $derived(t.recipes.map((s) => bySlug.get(s)).filter((r) => r !== undefined));
 
@@ -49,7 +49,7 @@
 		Everything below the header sits inside <article class="sheet">, matching
 		/menu/quiz and /menu/costing. This is not styling: oot-locks.js masks
 		`article.sheet > *:not(h1):not(.crumbs):not(header)` on a locked route,
-		and a page with no sheet gives it nothing to make inert — the content is
+		and a page with no sheet gives it nothing to make inert: the content is
 		delivered in clear behind an overlay a reader can dismiss. This route is
 		not in TABLE_FREE_ROUTES, so it is a locked route.
 	-->
@@ -60,7 +60,7 @@
 			On the Path of Study:
 			<!-- Separator as an expression: a literal ", " inside an {#if} loses its
 			     trailing space to Svelte's whitespace trimming. -->
-			{#each t.semesters as s, i (s.n)}<a href="{base}/study">Semester {s.n} — {s.title}</a
+			{#each t.semesters as s, i (s.n)}<a href="{base}/study">Semester {s.n}: {s.title}</a
 				>{i < t.semesters.length - 1 ? ', ' : ''}{/each}
 		</p>
 	{/if}
@@ -101,7 +101,7 @@
 						class="mark"
 						data-print="hide"
 						aria-pressed={cooked.has(r.slug)}
-						aria-label="{cooked.has(r.slug) ? 'Cooked' : 'Mark as cooked'} — {r.name}"
+						aria-label="{cooked.has(r.slug) ? 'Cooked' : 'Mark as cooked'}, {r.name}"
 						onclick={() => session.toggleCooked(r.slug)}
 					>
 						{cooked.has(r.slug) ? '✓' : '○'}

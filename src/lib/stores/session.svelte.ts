@@ -1,12 +1,12 @@
 /**
- * The persisted session — menu, notes, pantry, cooked log, family recipes.
+ * The persisted session: menu, notes, pantry, cooked log, family recipes.
  *
  * One store rather than five, because they share a single IndexedDB record and
  * a single debounce; splitting them would mean five concurrent writes racing to
  * the same key on every mutation.
  *
  * Everything is keyed by SLUG. The original stored array indices (MENU at
- * L2931, NOTES at L2916), so adding one family recipe — which pushes onto the
+ * L2931, NOTES at L2916), so adding one family recipe, which pushes onto the
  * recipe array, silently repointed every saved reference to a different dish.
  */
 import { browser } from '$app/environment';
@@ -47,7 +47,7 @@ class SessionStore {
 	}, 400);
 
 	/**
-	 * Immediate write, for single discrete actions — a pin, a tick, a saved
+	 * Immediate write, for single discrete actions: a pin, a tick, a saved
 	 * recipe. The debounce exists for the notes textarea's keystroke stream;
 	 * borrowing it for one-shot actions opened a 400ms window where pinning a
 	 * dish and immediately clicking a link lost the pin (pagehide flushing an
@@ -63,7 +63,7 @@ class SessionStore {
 
 	/**
 	 * Plain field, NOT $state, and that is the fix: hydrate()'s guard used to
-	 * read #ready — a $state — so the layout $effect that calls hydrate()
+	 * read #ready, a $state, so the layout $effect that calls hydrate()
 	 * subscribed to it, and every profile switch (rehydrate flips #ready
 	 * false→true) re-ran the effect mid-switch, racing a second loadSession
 	 * against rehydrate's own. Started-ness is not reactive state; nothing
@@ -81,7 +81,7 @@ class SessionStore {
 		// A tab closing or navigating mid-debounce would otherwise lose the last
 		// edit. BOTH events, deliberately: visibilitychange covers tab switches
 		// and minimising, but Chromium does not reliably fire it on
-		// cross-document navigation — pin a dish and immediately click a link,
+		// cross-document navigation: pin a dish and immediately click a link,
 		// and the pin evaporated. pagehide is the one that always fires on the
 		// way out.
 		window.addEventListener('visibilitychange', () => {
@@ -101,7 +101,7 @@ class SessionStore {
 	 * `onChange(() => session.hydrate())` is a silent no-op and the previous
 	 * person's cooked log simply stays in memory under the new person's name.
 	 *
-	 * Order matters. The pending write is flushed to the OUTGOING key first —
+	 * Order matters. The pending write is flushed to the OUTGOING key first:
 	 * #key, not KEY(), because the roster has already moved — and only then is
 	 * the new record loaded. Idempotent, because onChange fires immediately on
 	 * registration: if the key has not actually changed there is nothing to do.
@@ -123,9 +123,9 @@ class SessionStore {
 	 * default, never a wall: no surface is hidden from anyone.
 	 *
 	 * It lives here rather than in prefs (raw localStorage, device-wide, read
-	 * synchronously by app.html — it would collapse all three roles to whoever
+	 * synchronously by app.html: it would collapse all three roles to whoever
 	 * tapped last) and rather than in the profile's path map (write-once with
-	 * no unmark — a person who changed role would carry both stamps forever).
+	 * no unmark: a person who changed role would carry both stamps forever).
 	 */
 
 	get role() {
@@ -231,7 +231,7 @@ class SessionStore {
 	/* ---- the service being cooked --------------------------------------
 	 *
 	 * `live` and `serviceTime` used to be component state, so walking to the
-	 * walk-in and coming back lost the clock — on the one screen a cook stands
+	 * walk-in and coming back lost the clock: on the one screen a cook stands
 	 * in front of while something is on the heat.
 	 */
 
@@ -268,7 +268,7 @@ class SessionStore {
 	/**
 	 * Tick a row, and return the ms since the previously ticked row.
 	 *
-	 * The caller decides whether that interval is worth recording — only it
+	 * The caller decides whether that interval is worth recording: only it
 	 * knows whether the earlier step carried a wait, and a step with a wait
 	 * measures the wait rather than the work.
 	 */
@@ -329,7 +329,7 @@ class SessionStore {
 		return this.#s.cookedLog;
 	}
 
-	/** The distinct dishes cooked — what "progress" means everywhere. */
+	/** The distinct dishes cooked: what "progress" means everywhere. */
 	get cookedDishes(): Set<string> {
 		return cookedSlugs(this.#s.cookedLog);
 	}
@@ -349,7 +349,7 @@ class SessionStore {
 
 	/**
 	 * Record a cook. The grade is what the plate was against the dish's
-	 * standard, and it is what moves the re-cook interval — see
+	 * standard, and it is what moves the re-cook interval: see
 	 * lib/repertoire.ts. Dishes without a standard record no grade and simply
 	 * advance, because having nothing to check against is the guide's gap.
 	 */
@@ -367,7 +367,7 @@ class SessionStore {
 	 *
 	 * A second call rather than a wider markCooked, because the order is
 	 * load-bearing: cook mode records the grade BEFORE opening the repair panel
-	 * so that closing the dialog — the ✕, Escape, the phone ringing — cannot
+	 * so that closing the dialog (the ✕, Escape, the phone ringing) cannot
 	 * lose it. The fault is chosen after that, and this is how it catches up.
 	 *
 	 * Patches the most recent entry for the slug and no other. If there is none
@@ -389,7 +389,7 @@ class SessionStore {
 	}
 
 	/**
-	 * A mis-tap at the stove should be one more tap to undo — and undo the
+	 * A mis-tap at the stove should be one more tap to undo, and undo the
 	 * MIS-TAP, not the history behind it.
 	 *
 	 * This used to drop every entry for the slug. That was invisible while a
@@ -474,7 +474,7 @@ class SessionStore {
 	 *
 	 * The venue's own numbers: what each line costs, what it yields, and how
 	 * many went out. Keyed by dish id and stored beside the dishes rather than
-	 * inside them — see the note on SessionState.dishCosts.
+	 * inside them; see the note on SessionState.dishCosts.
 	 */
 
 	costingFor(id: string): DishCosting {
