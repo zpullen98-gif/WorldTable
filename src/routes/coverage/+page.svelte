@@ -1,5 +1,5 @@
 <!--
-  The coverage board — who can hold which section of the line.
+  The coverage board: who can hold which section of the line.
 
   This page answers one question and refuses several others.
 
@@ -12,7 +12,7 @@
   and the counts are raw. A chef judges competence by watching somebody work;
   this board tells them where to look.
 
-  ON READING OTHER PEOPLE'S DATA — and this is the part to be exact about,
+  ON READING OTHER PEOPLE'S DATA, and this is the part to be exact about,
   because the opposite was assumed for a while. A manager device CAN read every
   profile's whole record: the storage key is `session::<id>`, deterministic and
   reconstructible, and the shared layer already does this for two other wings.
@@ -25,7 +25,7 @@
 	import { base } from '$app/paths';
 	import * as profiles from '$lib/profiles';
 	// Emitted by build-data from the same measurement the technique-standards
-	// gate checks — this copy hardcoded 683/45/638 and the corpus moved twice.
+	// gate checks: this copy hardcoded 683/45/638 and the corpus moved twice.
 	import ASSESS from '$lib/data/assessability.json';
 	import { loadAllSessions } from '$lib/persistence/db';
 	import {
@@ -59,7 +59,7 @@
 		 * THE GATE, WHICH USED TO BE COPY.
 		 *
 		 * `people` was built unconditionally from the whole roster and `manager`
-		 * only decided whether a warning rendered — a warning that told a commis
+		 * only decided whether a warning rendered, a warning that told a commis
 		 * on the pass tablet they were "seeing only your own coverage" while the
 		 * page showed them everybody's. The page did not merely fail to gate; it
 		 * said the opposite of what it was doing.
@@ -104,7 +104,7 @@
 	 *
 	 * Read from the same cooked logs the coverage came from. Computed here
 	 * rather than inside coverageFor because it is time-dependent and coverage
-	 * is not — a band does not change while the page is open, and a cold count
+	 * is not: a band does not change while the page is open, and a cold count
 	 * would.
 	 */
 	let coldBy = $state(new Map<string, Map<string, string[]>>());
@@ -113,7 +113,7 @@
 	 * Stations exactly one person has touched.
 	 *
 	 * A COUNT OF NAMES, not a score. This is the risk a head chef carries in
-	 * their head and loses on precisely the morning it matters — the scenario
+	 * their head and loses on precisely the morning it matters, the scenario
 	 * the page was built for and the one thing it never said.
 	 */
 	const thin = $derived(
@@ -134,18 +134,18 @@
 	 */
 	const showRisk = $derived(uncovered.length < stations.length && (thin.length > 0 || uncovered.length > 0));
 
-	/** "a, b and c" — six things joined with "and" is not a sentence. */
+	/** "a, b and c": six things joined with "and" is not a sentence. */
 	const listOf = (xs: string[]) =>
 		xs.length <= 1 ? (xs[0] ?? '') : xs.slice(0, -1).join(', ') + ' and ' + xs[xs.length - 1];
 </script>
 
-<svelte:head><title>Coverage — The World Table</title></svelte:head>
+<svelte:head><title>Coverage: The World Table</title></svelte:head>
 
 <div class="shell view" data-print="hide">
 	<header class="head">
 		<h1>Coverage</h1>
 		<p class="lede">
-			Who has done the work of each station, on this device. Not who is qualified — that is yours to
+			Who has done the work of each station, on this device. Not who is qualified; that is yours to
 			judge, from watching them cook.
 		</p>
 	</header>
@@ -156,7 +156,7 @@
 		{#if !manager}
 			<p class="warn">
 				This is not marked as a manager's device, so you are seeing only your own coverage. The
-				tablet on the pass is not the manager's — that distinction is the shared layer's, and it is
+				tablet on the pass is not the manager's; that distinction is the shared layer's, and it is
 				deliberate.
 			</p>
 		{/if}
@@ -169,7 +169,7 @@
 				{/if}
 				{#if thin.length}
 					<b>{listOf(thin.map((t) => t.name))}</b>
-					{thin.length === 1 ? 'has' : 'have'} one person each — {listOf([...new Set(thin.map((t) => t.covers[0].name))])}.
+					{thin.length === 1 ? 'has' : 'have'} one person each: {listOf([...new Set(thin.map((t) => t.covers[0].name))])}.
 				{/if}
 			</p>
 		{/if}
@@ -177,7 +177,7 @@
 		<h2 class="sec">Who can cover tonight</h2>
 		<p class="secnote">
 			Ordered by how much of each station a person has actually cooked. A name at zero is not a
-			mistake — <b>nobody can cover this</b> is the most useful thing this board can tell you.
+			mistake. <b>Nobody can cover this</b> is the most useful thing this board can tell you.
 		</p>
 
 		{#each stations as s (s.key)}
@@ -211,7 +211,7 @@
 
 									Ordered by how many corpus recipes drill each, most first, so the
 									top suggestion is the easiest to arrange on a Tuesday. Never a
-									count of what is left — that is a percentage with the division
+									count of what is left, and that is a percentage with the division
 									done in the reader's head.
 								-->
 								<span class="next">
@@ -235,7 +235,7 @@
 
 		{#if tournants.length}
 			<h2 class="sec">The tournant</h2>
-			<p class="secnote">“{data.stations.tournant})” — the guide's own words.</p>
+			<p class="secnote">“{data.stations.tournant})”, the guide's own words.</p>
 			<p class="tournant">{tournants.map((p) => p.name).join(', ')}</p>
 		{/if}
 
@@ -243,7 +243,7 @@
 		<div class="limits">
 			<p>
 				<b>It is coverage, not competence.</b> It counts the techniques a person has cooked a dish for.
-				It cannot see whether the plate was any good on most dishes — {ASSESS.assessable} of the guide’s {ASSESS.corpus} are now assessable, {ASSESS.dishStandards} against a standard of their own and {ASSESS.byTechnique} against the techniques they exercise, so “to a standard” is always a floor and never a measure.assessable} of the
+				It cannot see whether the plate was any good on most dishes: {ASSESS.assessable} of the guide’s {ASSESS.corpus} are now assessable, {ASSESS.dishStandards} against a standard of their own and {ASSESS.byTechnique} against the techniques they exercise, so “to a standard” is always a floor and never a measure.assessable} of the
 				guide's {ASSESS.corpus} are now assessable, {ASSESS.dishStandards} against a standard of
 				their own and {ASSESS.byTechnique} against the techniques they exercise, so “to a standard”
 				is always a floor and never a measure.
@@ -255,22 +255,22 @@
 			</p>
 			<p>
 				<b>It shows coverage because we chose to, not because we must.</b> This device can read every
-				profile's whole session — the key is reconstructible and the shared layer already does it
+				profile's whole session: the key is reconstructible and the shared layer already does it
 				elsewhere. Answers, notes and family recipes are not shown here because a shared tablet exists
 				so a brigade can share a device, not so a manager can read somebody's notebook.
 			</p>
 			{#if data.stations.foundation.length}
 				<p>
 					<b>Three techniques belong to everyone, so they count for nobody:</b>
-					{data.stations.foundation.join(', ')}. They appear across every station — knowing who has
+					{data.stations.foundation.join(', ')}. They appear across every station, so knowing who has
 					sweated an onion tells you nothing about who can cover the sauce.
 				</p>
 			{/if}
 			{#if data.stations.undrilled.length}
 				<p>
 					<b>Two are excluded because the guide does not actually drill them:</b>
-					{data.stations.undrilled.join(' and ')}. Their only recipes mention them in passing — a
-					negative simile and a parchment lid — and crediting a cook for either would be a lie.
+					{data.stations.undrilled.join(' and ')}. Their only recipes mention them in passing: a
+					negative simile and a parchment lid, and crediting a cook for either would be a lie.
 				</p>
 			{/if}
 			<p>
@@ -383,7 +383,7 @@
 		margin: 0 0 18px;
 		line-height: 1.55;
 	}
-	/* Real colours, never stacked opacity — see shared/oot-home.css. */
+	/* Real colours, never stacked opacity: see shared/oot-home.css. */
 	.cold {
 		color: var(--chili);
 	}
