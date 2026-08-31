@@ -18,6 +18,7 @@
         "Keeping the cooking liquid",
         "Making a roux",
         "Pounding a curry paste",
+        "Ramen broth",
         "Reducing a sauce",
         "Rendering fat: and cooking in what runs out",
         "Sautéing & the shallow fry",
@@ -73,6 +74,7 @@
         "Letter-folding dough",
         "Pie crust & blind baking",
         "Pierogi",
+        "Pleating dumplings",
         "Proofing: the rise before the oven",
         "Resting dough: the pause that does the work",
         "Rubbing fat into flour",
@@ -150,12 +152,12 @@
     }
   ],
   "dishes": {
-    "saucier": 562,
-    "garde-manger": 141,
-    "patissier": 507,
-    "poissonnier": 95,
-    "rotisseur": 310,
-    "entremetier": 322
+    "saucier": 604,
+    "garde-manger": 169,
+    "patissier": 570,
+    "poissonnier": 121,
+    "rotisseur": 330,
+    "entremetier": 380
   },
   "tournant": "TOURNANT (the swing cook who works every station",
   "foundation": [
@@ -164,7 +166,6 @@
     "The overnight rest: letting a dish marry"
   ],
   "undrilled": [
-    "The soufflé",
-    "Pleating dumplings"
+    "The soufflé"
   ]
 }

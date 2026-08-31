@@ -12,17 +12,17 @@
  * searing anything is doing the same measurable thing whether the pan holds
  * duck or aubergine, and that is assessable once, for all of it.
  *
- * 174 of the 976 remain unassessable and always will on this approach: 143
- * carry no technique tag at all, and the other 31 exercise only techniques too
+ * 188 of the 1060 remain unassessable and always will on this approach: 154
+ * carry no technique tag at all, and the other 34 exercise only techniques too
  * rare in this corpus to be worth a standard. That is the honest ceiling rather
  * than a backlog, and it is gated below with everything else: the first
  * version of this sentence said 146 and 35, which were reasoned rather than
  * measured and were both wrong.
  *
- * The 50 techniques written here are every technique the corpus uses on 12 or
- * more recipes. They put a standard on 757 recipes that had none, taking the
- * assessable corpus from 45 to 802 of 976: for 50 pieces of writing rather
- * than 757.
+ * The 51 techniques written here are every technique the corpus uses on 12 or
+ * more recipes. They put a standard on 827 recipes that had none, taking the
+ * assessable corpus from 45 to 872 of 1060: for 51 pieces of writing rather
+ * than 827.
  *
  * These were 752 and 797 until the em dash sweep of 29 Aug 2026. Exactly one
  * recipe moved: kulfi, whose first ingredient read "1.5L whole milk - reduced
@@ -105,6 +105,17 @@ export const TECHNIQUE_GATE_MIN_RECIPES = 12;
 export const JUDGED_BY_MAX = 2;
 
 export const TECHNIQUE_STANDARDS = [
+	{
+		slug: 'pleating-dumplings',
+		marks: [
+			{ id: 'pleating-dumplings#seal', text: 'The seam is closed along its whole length with no gap at either end of the pleat run: hold one up to the light and no filling shows through the join. A dumpling that opens in the water was sealed against a wet or floured rim.' },
+			{ id: 'pleating-dumplings#rim', text: 'The rim is clean and dry where it meets itself. Filling smeared onto the sealing edge is the single most common cause of a burst, and it cannot be wiped off once the dough has taken it up.' },
+			{ id: 'pleating-dumplings#even', text: 'The pleats are even in size and count across the batch, so every piece holds the same weight of filling and cooks in the same time. A tray that ranges from eight folds to eighteen will not finish together.' },
+			{ id: 'pleating-dumplings#centre', text: 'The wrapper is thicker at the centre than at the rim, so the base carries the filling without tearing while the pleated edge stays fine enough to eat. A disc rolled evenly flat splits at the bottom.' },
+			{ id: 'pleating-dumplings#stands', text: 'It stands up on its own base without slumping, and the pleats still read as pleats after cooking rather than having relaxed into a smooth seam.' }
+		],
+		fault: 'The rim was wet, floured or smeared with filling, so the seal never took: the dumpling opens in the pot, the filling leaves, and what surfaces is a slack empty wrapper in cloudy water. Uneven pleat counts across a tray compound it, because the batch stops finishing at the same moment.'
+	},
 	// ── Heat against a surface ───────────────────────────────────────
 	{
 		slug: 'searing-the-hard-crust',

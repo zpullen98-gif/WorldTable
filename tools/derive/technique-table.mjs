@@ -46,6 +46,16 @@
  * Filled by the widening pass; see tools/report-techniques.mjs for the ledger.
  */
 export const SUPPLEMENT = [
+	/* The extracted table matches 'pleat the', 'pleating' and 'pleated', which
+	   between them caught one recipe: a christmas pudding, where the pleat is
+	   the parchment lid on a steamed basin. A cook shaping a jiaozi writes
+	   "pleat one side only" or "16 to 18 pleats". This entry is what lets the
+	   Dumpling Atlas be seen, and the extracted half stays untouched. */
+	{
+		k: ['pleats', 'pleat one', 'pleat all', 'pleat three', 'pleat 8', 'pleat 6', 'gather the rim'],
+		l: 'Pleating dumplings',
+		q: 'dumpling pleating technique jiaozi fold'
+	},
 	// ── dry heat ─────────────────────────────────────────────────────────────
 	{
 		k: ['sear', 'brown the meat', 'brown the meats', 'brown meat', 'brown the beef', 'brown lamb', 'brown the chicken', 'brown the pork', 'brown all sides', 'brown all over', 'browned hard', 'brown hard', 'until crusted', 'in batches, browning'],
@@ -354,5 +364,16 @@ export const LEXICON_ANCHOR = {
  * had film links keeps exactly the ones it had.
  */
 export function fullTechTable(TECH) {
-	return [...TECH, ...SUPPLEMENT];
+	/* Merged by label, not concatenated. A SUPPLEMENT entry that repeats an
+	   extracted label is WIDENING it: raw/TECH.json is proved against the sealed
+	   original, so a keyword list that turned out too narrow has to be extended
+	   from this side. Two entries for one technique would otherwise collide on
+	   the slug, which the build rightly refuses. */
+	const byLabel = new Map();
+	for (const t of [...TECH, ...SUPPLEMENT]) {
+		const prev = byLabel.get(t.l);
+		if (prev) prev.k = [...new Set([...prev.k, ...t.k])];
+		else byLabel.set(t.l, { ...t, k: [...t.k] });
+	}
+	return [...byLabel.values()];
 }

@@ -193,6 +193,17 @@ const EXCEPTIONS = [
 	'beefsteak tomatoes', 'meaty mushroom', 'meat-free', 'meatless',
 	// fish-shaped, not fish
 	'fish-shaped', 'crabapple', 'crab apple', 'vegan fish sauce',
+	// Shellfish-shaped, not shellfish. King oyster is a mushroom, and the
+	// vegetable-led cooking that cuts its stem into rounds calls the result a
+	// scallop because that is what it looks like on the plate.
+	'king oyster', 'king oyster mushroom', 'king oyster mushrooms',
+	'oyster mushroom', 'oyster mushrooms', 'mushroom scallop', 'mushroom scallops',
+	'vegan scallop', 'vegan scallops', 'oyster sauce substitute',
+	'king oyster scallop', 'king oyster scallops', 'oyster scallops',
+	// Dashi is on the fish list because almost every dashi is bonito. These two
+	// are the exceptions that define themselves by leaving it out.
+	'kombu dashi', 'shojin dashi', 'shiitake dashi', 'vegetarian dashi',
+	'vegan dashi', 'mushroom xo',
 	// Place names. "Cape Cod Cranberry Relish" is a vegetarian dish that was
 	// reading as fish purely because Cape Cod is named after the cod.
 	'cape cod', 'cod cranberry', 'codfish ball',

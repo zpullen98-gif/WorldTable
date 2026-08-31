@@ -2,7 +2,7 @@
   {
     "slug": "searing-the-hard-crust",
     "label": "Searing: the hard crust",
-    "recipeCount": 100,
+    "recipeCount": 106,
     "marks": [
       {
         "id": "searing-the-hard-crust#keeps",
@@ -30,7 +30,7 @@
   {
     "slug": "sweating-aromatics-soft-never-browned",
     "label": "Sweating aromatics: soft, never browned",
-    "recipeCount": 98,
+    "recipeCount": 102,
     "marks": [
       {
         "id": "sweating-aromatics-soft-never-browned#colour",
@@ -86,7 +86,7 @@
   {
     "slug": "proofing-the-rise-before-the-oven",
     "label": "Proofing: the rise before the oven",
-    "recipeCount": 55,
+    "recipeCount": 58,
     "marks": [
       {
         "id": "proofing-the-rise-before-the-oven#judged",
@@ -112,65 +112,9 @@
     "fault": "It was proofed to the clock in a kitchen colder or warmer than the recipe assumed: overproofed, it collapses as the blade touches it and bakes flat and dense with a sour edge; underproofed, it tears at the side and bakes tight."
   },
   {
-    "slug": "knife-cuts-dice-julienne-bias",
-    "label": "Knife cuts: dice, julienne, bias",
-    "recipeCount": 50,
-    "marks": [
-      {
-        "id": "knife-cuts-dice-julienne-bias#three",
-        "text": "Take any three pieces from anywhere in the pile: they match closely enough in every dimension that you would have to measure them to argue otherwise."
-      },
-      {
-        "id": "knife-cuts-dice-julienne-bias#faces",
-        "text": "The cut faces are flat and clean rather than ragged or crushed; leaves and herbs are cut through, not bruised, and the board carries no dark smear where they were."
-      },
-      {
-        "id": "knife-cuts-dice-julienne-bias#stated",
-        "text": "The stated size is the actual size, held against a rule or a known reference rather than called about right."
-      },
-      {
-        "id": "knife-cuts-dice-julienne-bias#everything",
-        "text": "Everything in the pile is the shape that was asked for: no wedges, no half pieces, and no offcuts swept in to avoid waste."
-      },
-      {
-        "id": "knife-cuts-dice-julienne-bias#cook",
-        "text": "They cook evenly, which is the entire point: at the end of cooking nothing is still raw and nothing has collapsed."
-      }
-    ],
-    "fault": "The knife was dull, or the vegetable was never squared off first, so the pieces vary: the small ones are mush by the time the large ones are cooked, and the dish has two textures where it wanted one."
-  },
-  {
-    "slug": "the-wobble-and-the-skewer-testing-a-bake",
-    "label": "The wobble & the skewer: testing a bake",
-    "recipeCount": 48,
-    "marks": [
-      {
-        "id": "the-wobble-and-the-skewer-testing-a-bake#tested",
-        "text": "Tested at the true centre and the thickest point, not at the convenient edge: the edge is done long before the answer is."
-      },
-      {
-        "id": "the-wobble-and-the-skewer-testing-a-bake#skewer",
-        "text": "The skewer comes out as the recipe describes, clean and dry or carrying the stated moist crumb, and it does the same on a second test in a different spot."
-      },
-      {
-        "id": "the-wobble-and-the-skewer-testing-a-bake#wobble",
-        "text": "The wobble is read in motion: nudged, the centre moves as one set mass with a faint tremble, rather than a liquid ripple travelling across the surface."
-      },
-      {
-        "id": "the-wobble-and-the-skewer-testing-a-bake#other",
-        "text": "The other signs agree with the test: risen and just shrinking from the sides, the top set and dry to a light touch with no wet gloss on it."
-      },
-      {
-        "id": "the-wobble-and-the-skewer-testing-a-bake#pressed",
-        "text": "Pressed lightly at the middle it springs back and leaves no lasting dent."
-      }
-    ],
-    "fault": "It was judged on the clock and on how the edges looked, so a centre still liquid went to the rack and sank as it cooled, a dense wet seam under a perfectly browned top."
-  },
-  {
     "slug": "steaming-basket-leaf-and-lid",
     "label": "Steaming: basket, leaf and lid",
-    "recipeCount": 47,
+    "recipeCount": 57,
     "marks": [
       {
         "id": "steaming-basket-leaf-and-lid#steam",
@@ -196,9 +140,93 @@
     "fault": "The lid was loose or dripping and the condensate fell back onto the food, so it arrives waterlogged and pale with its seasoning washed down into the bottom of the dish."
   },
   {
+    "slug": "knife-cuts-dice-julienne-bias",
+    "label": "Knife cuts: dice, julienne, bias",
+    "recipeCount": 56,
+    "marks": [
+      {
+        "id": "knife-cuts-dice-julienne-bias#three",
+        "text": "Take any three pieces from anywhere in the pile: they match closely enough in every dimension that you would have to measure them to argue otherwise."
+      },
+      {
+        "id": "knife-cuts-dice-julienne-bias#faces",
+        "text": "The cut faces are flat and clean rather than ragged or crushed; leaves and herbs are cut through, not bruised, and the board carries no dark smear where they were."
+      },
+      {
+        "id": "knife-cuts-dice-julienne-bias#stated",
+        "text": "The stated size is the actual size, held against a rule or a known reference rather than called about right."
+      },
+      {
+        "id": "knife-cuts-dice-julienne-bias#everything",
+        "text": "Everything in the pile is the shape that was asked for: no wedges, no half pieces, and no offcuts swept in to avoid waste."
+      },
+      {
+        "id": "knife-cuts-dice-julienne-bias#cook",
+        "text": "They cook evenly, which is the entire point: at the end of cooking nothing is still raw and nothing has collapsed."
+      }
+    ],
+    "fault": "The knife was dull, or the vegetable was never squared off first, so the pieces vary: the small ones are mush by the time the large ones are cooked, and the dish has two textures where it wanted one."
+  },
+  {
+    "slug": "salted-water-and-the-float-test",
+    "label": "Salted water & the float test",
+    "recipeCount": 54,
+    "marks": [
+      {
+        "id": "salted-water-and-the-float-test#water",
+        "text": "The water was salted before anything went in, and tasting it confirms it: seasoned on the tongue, with the salt dissolved rather than sitting on the pot floor."
+      },
+      {
+        "id": "salted-water-and-the-float-test#enough",
+        "text": "There is enough water, hot enough, that the pot returns to its boil quickly after the food goes in and never stops moving."
+      },
+      {
+        "id": "salted-water-and-the-float-test#dish",
+        "text": "Where the dish uses the float as its signal, the signal is obeyed: the pieces rise and they come out then, not several minutes later once something else was finished."
+      },
+      {
+        "id": "salted-water-and-the-float-test#nothing",
+        "text": "Nothing is stuck to the bottom of the pot or welded to itself, and the water has not thickened into a cloudy sludge."
+      },
+      {
+        "id": "salted-water-and-the-float-test#drained",
+        "text": "Drained on a bite rather than on the clock: resistance at the centre, with no chalky raw core."
+      }
+    ],
+    "fault": "The pot was too small and the water unsalted, so it never recovered its boil: the food sat in slack water, went gummy at the surface, and comes out bland in a way that no sauce afterwards can fix."
+  },
+  {
+    "slug": "the-wobble-and-the-skewer-testing-a-bake",
+    "label": "The wobble & the skewer: testing a bake",
+    "recipeCount": 51,
+    "marks": [
+      {
+        "id": "the-wobble-and-the-skewer-testing-a-bake#tested",
+        "text": "Tested at the true centre and the thickest point, not at the convenient edge: the edge is done long before the answer is."
+      },
+      {
+        "id": "the-wobble-and-the-skewer-testing-a-bake#skewer",
+        "text": "The skewer comes out as the recipe describes, clean and dry or carrying the stated moist crumb, and it does the same on a second test in a different spot."
+      },
+      {
+        "id": "the-wobble-and-the-skewer-testing-a-bake#wobble",
+        "text": "The wobble is read in motion: nudged, the centre moves as one set mass with a faint tremble, rather than a liquid ripple travelling across the surface."
+      },
+      {
+        "id": "the-wobble-and-the-skewer-testing-a-bake#other",
+        "text": "The other signs agree with the test: risen and just shrinking from the sides, the top set and dry to a light touch with no wet gloss on it."
+      },
+      {
+        "id": "the-wobble-and-the-skewer-testing-a-bake#pressed",
+        "text": "Pressed lightly at the middle it springs back and leaves no lasting dent."
+      }
+    ],
+    "fault": "It was judged on the clock and on how the edges looked, so a centre still liquid went to the rack and sank as it cooled, a dense wet seam under a perfectly browned top."
+  },
+  {
     "slug": "marinating-acid-salt-and-time",
     "label": "Marinating: acid, salt and time",
-    "recipeCount": 47,
+    "recipeCount": 50,
     "marks": [
       {
         "id": "marinating-acid-salt-and-time#contact",
@@ -224,9 +252,37 @@
     "fault": "It was left well beyond the stated time on the assumption that more is better, so acid and salt worked through the thin edges: those cook to cotton and read grainy while the thick centre tastes of nothing at all."
   },
   {
+    "slug": "straining-and-passing-through-a-sieve",
+    "label": "Straining & passing through a sieve",
+    "recipeCount": 49,
+    "marks": [
+      {
+        "id": "straining-and-passing-through-a-sieve#nothing",
+        "text": "Nothing solid got through: a finger drawn through what came out finds no fibre, seed, skin, curd, or grit."
+      },
+      {
+        "id": "straining-and-passing-through-a-sieve#dish",
+        "text": "Where the dish wants body it was worked through rather than left to drip, and the solids left in the mesh are spent and dry rather than still holding liquid worth having."
+      },
+      {
+        "id": "straining-and-passing-through-a-sieve#judged",
+        "text": "It is judged on the tongue rather than by eye: smooth, with no residual grain left behind after the mouthful has gone."
+      },
+      {
+        "id": "straining-and-passing-through-a-sieve#mesh",
+        "text": "The mesh was fine enough for the job and held its shape, and nothing bypassed it by going over the rim."
+      },
+      {
+        "id": "straining-and-passing-through-a-sieve#yield",
+        "text": "The yield is close to what went in less the spent solids: not half of it abandoned in the sieve because it stopped running and nobody pushed."
+      }
+    ],
+    "fault": "It was pushed through a mesh too coarse for it, or the sieve was overloaded and slopped at the rim, so the fibres it was meant to remove are in the finished sauce and it reads grainy on the tongue."
+  },
+  {
     "slug": "rendering-fat-and-cooking-in-what-runs-out",
     "label": "Rendering fat: and cooking in what runs out",
-    "recipeCount": 45,
+    "recipeCount": 46,
     "marks": [
       {
         "id": "rendering-fat-and-cooking-in-what-runs-out#started",
@@ -252,9 +308,37 @@
     "fault": "The heat was raised to hurry it along, so the outside seized and browned before the interior fat could melt; very little runs out, and the solids come out burnt on the outside and rubbery within."
   },
   {
+    "slug": "the-bare-simmer-holding-liquid-below-the-boil",
+    "label": "The bare simmer: holding liquid below the boil",
+    "recipeCount": 46,
+    "marks": [
+      {
+        "id": "the-bare-simmer-holding-liquid-below-the-boil#surface",
+        "text": "The surface is read rather than assumed: bubbles break slowly in one or two places, or the surface merely shivers, and it does not reach a rolling boil at any point."
+      },
+      {
+        "id": "the-bare-simmer-holding-liquid-below-the-boil#held",
+        "text": "It was held there: the pot was watched and the heat adjusted rather than set once and left, and there is no tide mark up the pot wall from a boil-over."
+      },
+      {
+        "id": "the-bare-simmer-holding-liquid-below-the-boil#liquid",
+        "text": "The liquid stayed as clear as it should be: no clouding from agitation, and no fat churned into an emulsion through it."
+      },
+      {
+        "id": "the-bare-simmer-holding-liquid-below-the-boil#whatever",
+        "text": "Whatever is in the liquid is still intact: nothing shredded, broken up, or worried apart by movement."
+      },
+      {
+        "id": "the-bare-simmer-holding-liquid-below-the-boil#level",
+        "text": "The level is roughly where the elapsed time should have left it; a large drop is the evidence that it ran hotter than this while nobody was looking."
+      }
+    ],
+    "fault": "It was brought to a boil and then left on the same heat, so it churned for the whole cook: the liquid clouded, the fat emulsified into it, and the solids broke apart into the broth."
+  },
+  {
     "slug": "mashing-and-pureeing",
     "label": "Mashing & puréeing",
-    "recipeCount": 44,
+    "recipeCount": 46,
     "marks": [
       {
         "id": "mashing-and-pureeing#smooth",
@@ -282,7 +366,7 @@
   {
     "slug": "shaping-by-hand",
     "label": "Shaping by hand",
-    "recipeCount": 43,
+    "recipeCount": 44,
     "marks": [
       {
         "id": "shaping-by-hand#pieces",
@@ -308,37 +392,37 @@
     "fault": "The dough was worked past its point or shaped without a rest, so it fought back: the pieces spring out of shape on the tray and bake tight, uneven, and torn along the surface."
   },
   {
-    "slug": "the-bare-simmer-holding-liquid-below-the-boil",
-    "label": "The bare simmer: holding liquid below the boil",
-    "recipeCount": 41,
+    "slug": "brining-and-curing",
+    "label": "Brining & curing",
+    "recipeCount": 40,
     "marks": [
       {
-        "id": "the-bare-simmer-holding-liquid-below-the-boil#surface",
-        "text": "The surface is read rather than assumed: bubbles break slowly in one or two places, or the surface merely shivers, and it does not reach a rolling boil at any point."
+        "id": "brining-and-curing#fully",
+        "text": "Fully committed either way: in a wet brine nothing floats clear of the liquid, and in a dry cure every face carries salt, seams and cavities included."
       },
       {
-        "id": "the-bare-simmer-holding-liquid-below-the-boil#held",
-        "text": "It was held there: the pot was watched and the heat adjusted rather than set once and left, and there is no tide mark up the pot wall from a boil-over."
+        "id": "brining-and-curing#time",
+        "text": "The time was measured against the weight and the thickness rather than the recipe’s convenience, and it stayed cold for all of it."
       },
       {
-        "id": "the-bare-simmer-holding-liquid-below-the-boil#liquid",
-        "text": "The liquid stayed as clear as it should be: no clouding from agitation, and no fat churned into an emulsion through it."
+        "id": "brining-and-curing#change",
+        "text": "The change is visible and can be felt: the flesh is firmer than raw and its colour has deepened or gone more translucent, rather than still being slack and pale."
       },
       {
-        "id": "the-bare-simmer-holding-liquid-below-the-boil#whatever",
-        "text": "Whatever is in the liquid is still intact: nothing shredded, broken up, or worried apart by movement."
+        "id": "brining-and-curing#rinsed",
+        "text": "Rinsed and dried as the recipe asks, and anything meant to crisp afterwards has a surface dry and tacky to the touch before it goes near heat."
       },
       {
-        "id": "the-bare-simmer-holding-liquid-below-the-boil#level",
-        "text": "The level is roughly where the elapsed time should have left it; a large drop is the evidence that it ran hotter than this while nobody was looking."
+        "id": "brining-and-curing#cooked",
+        "text": "Cooked and tasted, it is seasoned right through to the centre rather than merely salty at the surface, and not so salty that the dish cannot be eaten."
       }
     ],
-    "fault": "It was brought to a boil and then left on the same heat, so it churned for the whole cook: the liquid clouded, the fat emulsified into it, and the solids broke apart into the broth."
+    "fault": "It sat in the brine well past its time because a few extra hours seemed harmless; the surface is over-salted and the texture has gone from firm to spongy and wet, and no cooking takes salt back out."
   },
   {
     "slug": "griddle-and-plancha-work",
     "label": "Griddle & plancha work",
-    "recipeCount": 38,
+    "recipeCount": 39,
     "marks": [
       {
         "id": "griddle-and-plancha-work#full",
@@ -364,65 +448,9 @@
     "fault": "The surface was crowded and its temperature crashed, so everything gave up its water at once and stewed on the metal: pale, damp, grey at the edges, and stuck fast where the crust never got the chance to form."
   },
   {
-    "slug": "salted-water-and-the-float-test",
-    "label": "Salted water & the float test",
-    "recipeCount": 38,
-    "marks": [
-      {
-        "id": "salted-water-and-the-float-test#water",
-        "text": "The water was salted before anything went in, and tasting it confirms it: seasoned on the tongue, with the salt dissolved rather than sitting on the pot floor."
-      },
-      {
-        "id": "salted-water-and-the-float-test#enough",
-        "text": "There is enough water, hot enough, that the pot returns to its boil quickly after the food goes in and never stops moving."
-      },
-      {
-        "id": "salted-water-and-the-float-test#dish",
-        "text": "Where the dish uses the float as its signal, the signal is obeyed: the pieces rise and they come out then, not several minutes later once something else was finished."
-      },
-      {
-        "id": "salted-water-and-the-float-test#nothing",
-        "text": "Nothing is stuck to the bottom of the pot or welded to itself, and the water has not thickened into a cloudy sludge."
-      },
-      {
-        "id": "salted-water-and-the-float-test#drained",
-        "text": "Drained on a bite rather than on the clock: resistance at the centre, with no chalky raw core."
-      }
-    ],
-    "fault": "The pot was too small and the water unsalted, so it never recovered its boil: the food sat in slack water, went gummy at the surface, and comes out bland in a way that no sauce afterwards can fix."
-  },
-  {
-    "slug": "straining-and-passing-through-a-sieve",
-    "label": "Straining & passing through a sieve",
-    "recipeCount": 36,
-    "marks": [
-      {
-        "id": "straining-and-passing-through-a-sieve#nothing",
-        "text": "Nothing solid got through: a finger drawn through what came out finds no fibre, seed, skin, curd, or grit."
-      },
-      {
-        "id": "straining-and-passing-through-a-sieve#dish",
-        "text": "Where the dish wants body it was worked through rather than left to drip, and the solids left in the mesh are spent and dry rather than still holding liquid worth having."
-      },
-      {
-        "id": "straining-and-passing-through-a-sieve#judged",
-        "text": "It is judged on the tongue rather than by eye: smooth, with no residual grain left behind after the mouthful has gone."
-      },
-      {
-        "id": "straining-and-passing-through-a-sieve#mesh",
-        "text": "The mesh was fine enough for the job and held its shape, and nothing bypassed it by going over the rim."
-      },
-      {
-        "id": "straining-and-passing-through-a-sieve#yield",
-        "text": "The yield is close to what went in less the spent solids: not half of it abandoned in the sieve because it stopped running and nobody pushed."
-      }
-    ],
-    "fault": "It was pushed through a mesh too coarse for it, or the sieve was overloaded and slopped at the rim, so the fibres it was meant to remove are in the finished sauce and it reads grainy on the tongue."
-  },
-  {
     "slug": "grilling-over-live-coals",
     "label": "Grilling over live coals",
-    "recipeCount": 35,
+    "recipeCount": 37,
     "marks": [
       {
         "id": "grilling-over-live-coals#fire",
@@ -476,37 +504,9 @@
     "fault": "Too much went in at once, the pan cooled, and the food released its water: what was meant to brown in three minutes stews for ten and comes out grey, slack and wet."
   },
   {
-    "slug": "brining-and-curing",
-    "label": "Brining & curing",
-    "recipeCount": 32,
-    "marks": [
-      {
-        "id": "brining-and-curing#fully",
-        "text": "Fully committed either way: in a wet brine nothing floats clear of the liquid, and in a dry cure every face carries salt, seams and cavities included."
-      },
-      {
-        "id": "brining-and-curing#time",
-        "text": "The time was measured against the weight and the thickness rather than the recipe’s convenience, and it stayed cold for all of it."
-      },
-      {
-        "id": "brining-and-curing#change",
-        "text": "The change is visible and can be felt: the flesh is firmer than raw and its colour has deepened or gone more translucent, rather than still being slack and pale."
-      },
-      {
-        "id": "brining-and-curing#rinsed",
-        "text": "Rinsed and dried as the recipe asks, and anything meant to crisp afterwards has a surface dry and tacky to the touch before it goes near heat."
-      },
-      {
-        "id": "brining-and-curing#cooked",
-        "text": "Cooked and tasted, it is seasoned right through to the centre rather than merely salty at the surface, and not so salty that the dish cannot be eaten."
-      }
-    ],
-    "fault": "It sat in the brine well past its time because a few extra hours seemed harmless; the surface is over-salted and the texture has gone from firm to spongy and wet, and no cooking takes salt back out."
-  },
-  {
     "slug": "frying-the-paste-until-the-oil-splits",
     "label": "Frying the paste until the oil splits",
-    "recipeCount": 27,
+    "recipeCount": 31,
     "marks": [
       {
         "id": "frying-the-paste-until-the-oil-splits#being",
@@ -530,6 +530,174 @@
       }
     ],
     "fault": "It was taken off as soon as it smelled good, before the fat separated; the raw edge of the aromatics is still in it, and the finished dish tastes thin and sharp no matter how long it simmers afterwards."
+  },
+  {
+    "slug": "fermentation",
+    "label": "Fermentation",
+    "recipeCount": 31,
+    "marks": [
+      {
+        "id": "fermentation#warmth",
+        "text": "Held somewhere with a steady temperature it can actually work at, chosen on purpose rather than wherever there happened to be room."
+      },
+      {
+        "id": "fermentation#activity",
+        "text": "There is visible activity before it is called started: bubbles, rise, or movement in the liquid. A ferment showing nothing after its first hours is not slow, it is not going."
+      },
+      {
+        "id": "fermentation#smell",
+        "text": "It smells clean: sour, yeasty, or alcoholic, with nothing putrid, and with nothing fuzzy or coloured growing where air meets it."
+      },
+      {
+        "id": "fermentation#covered",
+        "text": "Everything is under the liquid or under a cover, as the method requires: nothing solid left sitting dry in the air to spoil while the rest works."
+      },
+      {
+        "id": "fermentation#stopped",
+        "text": "Judged by taste and behaviour and then STOPPED: chilled, baked, or refrigerated at the point wanted, rather than left running because the stated hours had not elapsed."
+      }
+    ],
+    "fault": "It was run on the clock in a kitchen colder or warmer than the recipe assumed. Fermentation is a rate and not a duration, so the same number of hours gives an under-developed ferment in a cold room and a slack, over-soured one in a warm one, and only tasting it would have said which."
+  },
+  {
+    "slug": "resting-dough-the-pause-that-does-the-work",
+    "label": "Resting dough: the pause that does the work",
+    "recipeCount": 30,
+    "marks": [
+      {
+        "id": "resting-dough-the-pause-that-does-the-work#actually",
+        "text": "It actually rested, covered, for the time stated, not cut short because the rest of the schedule was tight."
+      },
+      {
+        "id": "resting-dough-the-pause-that-does-the-work#rolls",
+        "text": "It rolls and shapes without fighting: it stays where it is put, and it does not spring back or shrink on the bench between passes."
+      },
+      {
+        "id": "resting-dough-the-pause-that-does-the-work#surface",
+        "text": "The surface is smooth and supple rather than dry, cracked, or skinned over."
+      },
+      {
+        "id": "resting-dough-the-pause-that-does-the-work#temperature",
+        "text": "It is at the temperature the next step needs: cold where the fat must stay solid, cool and relaxed where it must be rolled thin."
+      },
+      {
+        "id": "resting-dough-the-pause-that-does-the-work#baked",
+        "text": "Baked, it holds the dimensions it was shaped to rather than shrinking back from the edges of the tin or the rim of the dish."
+      }
+    ],
+    "fault": "The rest was skipped or shortened, so the gluten was still tight: the dough fought the pin and sprang back thick and uneven, then shrank down the sides of the tin in the oven."
+  },
+  {
+    "slug": "keeping-the-cooking-liquid",
+    "label": "Keeping the cooking liquid",
+    "recipeCount": 29,
+    "marks": [
+      {
+        "id": "keeping-the-cooking-liquid#actually",
+        "text": "It was actually kept: the liquid went into a container rather than down the drain, and the volume saved is enough to be worth using."
+      },
+      {
+        "id": "keeping-the-cooking-liquid#clean",
+        "text": "It is clean: strained of solids and grit, and not clouded with the debris of whatever broke up in it."
+      },
+      {
+        "id": "keeping-the-cooking-liquid#tastes",
+        "text": "It tastes of what it cooked and tastes concentrated rather than washed out, and it is not so salty or so bitter that the only honest use is the bin."
+      },
+      {
+        "id": "keeping-the-cooking-liquid#cooled",
+        "text": "It was cooled quickly and stored cold, not left standing warm on the stove to be dealt with later."
+      },
+      {
+        "id": "keeping-the-cooking-liquid#used",
+        "text": "Used, it does the job the dish gives it (carrying flavour into a sauce, loosening the dish, or setting when chilled) rather than merely adding water back."
+      }
+    ],
+    "fault": "The pot was left to cool slowly on the stove and only strained the next day, so it soured overnight: what should have been the best ingredient in the dish goes in the bin, and the recipe gets water instead."
+  },
+  {
+    "slug": "blanching-and-shocking",
+    "label": "Blanching & shocking",
+    "recipeCount": 29,
+    "marks": [
+      {
+        "id": "blanching-and-shocking#rolling",
+        "text": "A large volume at a hard rolling boil, and enough of it that adding the food barely interrupts it; a pot that goes quiet has started stewing rather than blanching."
+      },
+      {
+        "id": "blanching-and-shocking#short",
+        "text": "Timed rather than watched, and short. This is an interruption in the cooking of something, not the cooking of it."
+      },
+      {
+        "id": "blanching-and-shocking#ready",
+        "text": "The ice bath was made and standing beside the pot BEFORE anything went into the water, not started once the timer went off."
+      },
+      {
+        "id": "blanching-and-shocking#cold",
+        "text": "It went straight into the ice water, fully submerged, and stayed until cold at the centre: a piece still warm inside is still cooking, and the arrest has not happened yet."
+      },
+      {
+        "id": "blanching-and-shocking#drained",
+        "text": "Drained and dried afterwards rather than left sitting in water, so it does not carry that water into whatever it meets next."
+      }
+    ],
+    "fault": "The ice bath was not ready, so the food sat draining in a colander while its own residual heat carried on cooking it. By the time it cooled it was a stage past where it was pulled, and exact arrest is the entire reason for blanching rather than simply boiling."
+  },
+  {
+    "slug": "resting-meat-and-slicing-against-the-grain",
+    "label": "Resting meat & slicing against the grain",
+    "recipeCount": 29,
+    "marks": [
+      {
+        "id": "resting-meat-and-slicing-against-the-grain#before",
+        "text": "It came off the heat BEFORE the target temperature, measured with a probe rather than by time, because carryover keeps driving the inside up after it is out."
+      },
+      {
+        "id": "resting-meat-and-slicing-against-the-grain#coldest",
+        "text": "The probe went into the coldest likely part rather than the easiest one to reach: the reading that matters is the lowest one, not the first one."
+      },
+      {
+        "id": "resting-meat-and-slicing-against-the-grain#rested",
+        "text": "Rested for a time matched to its size, somewhere warm, and not cut into partway through to see how it is doing."
+      },
+      {
+        "id": "resting-meat-and-slicing-against-the-grain#dry",
+        "text": "The board is nearly dry when it is finally cut. A spreading pool means it was cut too early, and that liquid should have stayed inside."
+      },
+      {
+        "id": "resting-meat-and-slicing-against-the-grain#across",
+        "text": "The grain was found and the knife went ACROSS it, so the fibres are cut short, and the blade was sharp enough that the slices hold together rather than tearing."
+      }
+    ],
+    "fault": "It was cut straight off the heat, usually because everything else was ready. The muscle is still contracted and the juice still driven to the centre, so it runs out onto the board; the meat is drier than it ever needed to be, and the flavour that left it is sitting in a puddle under the knife."
+  },
+  {
+    "slug": "egg-wash-and-the-bakers-shine",
+    "label": "Egg wash & the baker’s shine",
+    "recipeCount": 28,
+    "marks": [
+      {
+        "id": "egg-wash-and-the-bakers-shine#applied",
+        "text": "Applied thin and even over every surface that will show, with no bare patches and no ridges or brush lines standing in it."
+      },
+      {
+        "id": "egg-wash-and-the-bakers-shine#nothing",
+        "text": "Nothing pooled: no wash run down into the seams, collected in the corners, or welded to the tray around the base."
+      },
+      {
+        "id": "egg-wash-and-the-bakers-shine#glued",
+        "text": "It has not glued shut what needs to move: layers, scores, and cut edges are still free to open in the heat."
+      },
+      {
+        "id": "egg-wash-and-the-bakers-shine#baked",
+        "text": "Baked, the finish is even and glossy across the whole piece and deep gold rather than patchy, with no darker bands where the wash sat heavy."
+      },
+      {
+        "id": "egg-wash-and-the-bakers-shine#shine",
+        "text": "The shine is on the outside only: nothing inside the piece tastes of egg."
+      }
+    ],
+    "fault": "The wash went on heavy and ran into the scores and down to the tray, so the piece baked sealed along its seams, browned unevenly, and carries dark rubbery ridges where the egg collected."
   },
   {
     "slug": "making-a-roux",
@@ -588,93 +756,37 @@
     "fault": "The oven or the burner ran too hot and the liquid boiled, so the fibres tightened and squeezed their moisture out: it shreds dry into a thin greasy liquid, and more time makes it worse rather than better."
   },
   {
-    "slug": "resting-dough-the-pause-that-does-the-work",
-    "label": "Resting dough: the pause that does the work",
-    "recipeCount": 27,
-    "marks": [
-      {
-        "id": "resting-dough-the-pause-that-does-the-work#actually",
-        "text": "It actually rested, covered, for the time stated, not cut short because the rest of the schedule was tight."
-      },
-      {
-        "id": "resting-dough-the-pause-that-does-the-work#rolls",
-        "text": "It rolls and shapes without fighting: it stays where it is put, and it does not spring back or shrink on the bench between passes."
-      },
-      {
-        "id": "resting-dough-the-pause-that-does-the-work#surface",
-        "text": "The surface is smooth and supple rather than dry, cracked, or skinned over."
-      },
-      {
-        "id": "resting-dough-the-pause-that-does-the-work#temperature",
-        "text": "It is at the temperature the next step needs: cold where the fat must stay solid, cool and relaxed where it must be rolled thin."
-      },
-      {
-        "id": "resting-dough-the-pause-that-does-the-work#baked",
-        "text": "Baked, it holds the dimensions it was shaped to rather than shrinking back from the edges of the tin or the rim of the dish."
-      }
-    ],
-    "fault": "The rest was skipped or shortened, so the gluten was still tight: the dough fought the pin and sprang back thick and uneven, then shrank down the sides of the tin in the oven."
-  },
-  {
-    "slug": "egg-wash-and-the-bakers-shine",
-    "label": "Egg wash & the baker’s shine",
-    "recipeCount": 27,
-    "marks": [
-      {
-        "id": "egg-wash-and-the-bakers-shine#applied",
-        "text": "Applied thin and even over every surface that will show, with no bare patches and no ridges or brush lines standing in it."
-      },
-      {
-        "id": "egg-wash-and-the-bakers-shine#nothing",
-        "text": "Nothing pooled: no wash run down into the seams, collected in the corners, or welded to the tray around the base."
-      },
-      {
-        "id": "egg-wash-and-the-bakers-shine#glued",
-        "text": "It has not glued shut what needs to move: layers, scores, and cut edges are still free to open in the heat."
-      },
-      {
-        "id": "egg-wash-and-the-bakers-shine#baked",
-        "text": "Baked, the finish is even and glossy across the whole piece and deep gold rather than patchy, with no darker bands where the wash sat heavy."
-      },
-      {
-        "id": "egg-wash-and-the-bakers-shine#shine",
-        "text": "The shine is on the outside only: nothing inside the piece tastes of egg."
-      }
-    ],
-    "fault": "The wash went on heavy and ran into the scores and down to the tray, so the piece baked sealed along its seams, browned unevenly, and carries dark rubbery ridges where the egg collected."
-  },
-  {
-    "slug": "keeping-the-cooking-liquid",
-    "label": "Keeping the cooking liquid",
+    "slug": "roasting-in-a-hot-oven",
+    "label": "Roasting in a hot oven",
     "recipeCount": 26,
     "marks": [
       {
-        "id": "keeping-the-cooking-liquid#actually",
-        "text": "It was actually kept: the liquid went into a container rather than down the drain, and the volume saved is enough to be worth using."
+        "id": "roasting-in-a-hot-oven#preheated",
+        "text": "The oven was fully up to heat before anything went in, given time beyond the indicator light rather than judged by it."
       },
       {
-        "id": "keeping-the-cooking-liquid#clean",
-        "text": "It is clean: strained of solids and grit, and not clouded with the debris of whatever broke up in it."
+        "id": "roasting-in-a-hot-oven#room",
+        "text": "Every piece has air around it. Nothing touches its neighbour and nothing is packed to the edge of the tray, because crowded food steams itself in its own moisture and never browns."
       },
       {
-        "id": "keeping-the-cooking-liquid#tastes",
-        "text": "It tastes of what it cooked and tastes concentrated rather than washed out, and it is not so salty or so bitter that the only honest use is the bin."
+        "id": "roasting-in-a-hot-oven#even",
+        "text": "Colour is even across the whole tray, the tray having been turned at least once: no pale row at the back and no dark row at the front."
       },
       {
-        "id": "keeping-the-cooking-liquid#cooled",
-        "text": "It was cooled quickly and stored cold, not left standing warm on the stove to be dealt with later."
+        "id": "roasting-in-a-hot-oven#before",
+        "text": "It came out BEFORE the target temperature, not at it. Carryover keeps driving the inside up by several degrees after it leaves the oven, and that rise is part of the cooking rather than an error in it."
       },
       {
-        "id": "keeping-the-cooking-liquid#used",
-        "text": "Used, it does the job the dish gives it (carrying flavour into a sauce, loosening the dish, or setting when chilled) rather than merely adding water back."
+        "id": "roasting-in-a-hot-oven#coldest",
+        "text": "The temperature was read at the coldest part rather than the easiest one to reach, and read again after the rest."
       }
     ],
-    "fault": "The pot was left to cool slowly on the stove and only strained the next day, so it soured overnight: what should have been the best ingredient in the dish goes in the bin, and the recipe gets water instead."
+    "fault": "The tray was crowded, or the oven was not truly up to heat. The food releases steam faster than a cool box can carry it away, so it sits pale and slack, and the extra minutes spent chasing colour take the inside well past where it should have stopped."
   },
   {
     "slug": "chilling-to-firm-the-fridge-as-binder",
     "label": "Chilling to firm: the fridge as binder",
-    "recipeCount": 25,
+    "recipeCount": 26,
     "marks": [
       {
         "id": "chilling-to-firm-the-fridge-as-binder#went",
@@ -728,9 +840,37 @@
     "fault": "The butter was too warm, or it was beaten well past its point, so the fat softened and gave up the air it had taken: the mixture goes slack and oily and the cake bakes dense and greasy with a sunken middle."
   },
   {
+    "slug": "draining-fried-food-a-rack-never-paper",
+    "label": "Draining fried food: a rack, never paper",
+    "recipeCount": 24,
+    "marks": [
+      {
+        "id": "draining-fried-food-a-rack-never-paper#staged",
+        "text": "The rack was in place before the first thing went into the oil, not fetched afterwards while food waited in a spider over the pot."
+      },
+      {
+        "id": "draining-fried-food-a-rack-never-paper#air",
+        "text": "It lands on a rack with air moving underneath it. Anything set down on paper or a flat plate traps its own steam against its base."
+      },
+      {
+        "id": "draining-fried-food-a-rack-never-paper#salted",
+        "text": "Salted within seconds of landing, while it is still hot enough to take seasoning."
+      },
+      {
+        "id": "draining-fried-food-a-rack-never-paper#crisp",
+        "text": "A minute later the underside is still as crisp as the top: no soft flat patch where it has been sitting."
+      },
+      {
+        "id": "draining-fried-food-a-rack-never-paper#single",
+        "text": "Nothing is stacked or piled while hot, however tempting it is to keep it together. A pile steams itself soft from the inside out."
+      }
+    ],
+    "fault": "It was drained on paper, or piled up to keep warm. Steam leaving the food has nowhere to go but back into the crust, so the underside softens within a minute: the crispness the frying just bought is gone before the plate reaches the table."
+  },
+  {
     "slug": "deglazing-and-pan-sauces",
     "label": "Deglazing & pan sauces",
-    "recipeCount": 23,
+    "recipeCount": 24,
     "marks": [
       {
         "id": "deglazing-and-pan-sauces#fond",
@@ -756,60 +896,116 @@
     "fault": "The pan was left to stand and go cold before anybody came back to it. Cold fond will not dissolve, so the scraping lifts nothing, and the sauce arrives thin and pale with the flavour it was supposed to carry still welded to the metal."
   },
   {
-    "slug": "blanching-and-shocking",
-    "label": "Blanching & shocking",
-    "recipeCount": 23,
+    "slug": "tempering-a-custard",
+    "label": "Tempering a custard",
+    "recipeCount": 24,
     "marks": [
       {
-        "id": "blanching-and-shocking#rolling",
-        "text": "A large volume at a hard rolling boil, and enough of it that adding the food barely interrupts it; a pot that goes quiet has started stewing rather than blanching."
+        "id": "tempering-a-custard#gradual",
+        "text": "The hot liquid went into the eggs a little at a time with constant whisking, and only then did everything go back to the pot."
       },
       {
-        "id": "blanching-and-shocking#short",
-        "text": "Timed rather than watched, and short. This is an interruption in the cooking of something, not the cooking of it."
+        "id": "tempering-a-custard#gentle",
+        "text": "The heat under it stayed gentle throughout and it was never allowed to boil."
       },
       {
-        "id": "blanching-and-shocking#ready",
-        "text": "The ice bath was made and standing beside the pot BEFORE anything went into the water, not started once the timer went off."
+        "id": "tempering-a-custard#corners",
+        "text": "Stirred continuously and right into the corners of the pan, where it thickens first and sets unnoticed."
       },
       {
-        "id": "blanching-and-shocking#cold",
-        "text": "It went straight into the ice water, fully submerged, and stayed until cold at the centre: a piece still warm inside is still cooking, and the arrest has not happened yet."
+        "id": "tempering-a-custard#coats",
+        "text": "Judged by behaviour: it thickens enough to coat the back of a spoon and hold a clean line when a finger is drawn through it."
       },
       {
-        "id": "blanching-and-shocking#drained",
-        "text": "Drained and dried afterwards rather than left sitting in water, so it does not carry that water into whatever it meets next."
+        "id": "tempering-a-custard#early",
+        "text": "Taken off before it looks finished, and strained. Residual heat carries it the rest of the way, and a custard held on the heat until it looks right arrives past right."
       }
     ],
-    "fault": "The ice bath was not ready, so the food sat draining in a colander while its own residual heat carried on cooking it. By the time it cooled it was a stage past where it was pulled, and exact arrest is the entire reason for blanching rather than simply boiling."
+    "fault": "The hot liquid went in too fast, or the pot went back over full heat to save time. The yolks set into threads before they could thicken smoothly, and a scrambled custard does not come back; straining hides a little of it and nothing hides the rest."
   },
   {
-    "slug": "resting-meat-and-slicing-against-the-grain",
-    "label": "Resting meat & slicing against the grain",
+    "slug": "reducing-a-sauce",
+    "label": "Reducing a sauce",
     "recipeCount": 23,
     "marks": [
       {
-        "id": "resting-meat-and-slicing-against-the-grain#before",
-        "text": "It came off the heat BEFORE the target temperature, measured with a probe rather than by time, because carryover keeps driving the inside up after it is out."
+        "id": "reducing-a-sauce#simmer",
+        "text": "A steady simmer with the surface moving, never a rolling boil that throws it up the sides and scorches what is left on the base."
       },
       {
-        "id": "resting-meat-and-slicing-against-the-grain#coldest",
-        "text": "The probe went into the coldest likely part rather than the easiest one to reach: the reading that matters is the lowest one, not the first one."
+        "id": "reducing-a-sauce#nappe",
+        "text": "Judged by behaviour rather than the clock: it coats the back of a spoon and holds a clean line when a finger is drawn through it."
       },
       {
-        "id": "resting-meat-and-slicing-against-the-grain#rested",
-        "text": "Rested for a time matched to its size, somewhere warm, and not cut into partway through to see how it is doing."
+        "id": "reducing-a-sauce#visible",
+        "text": "The drop in volume is visible against the side of the pan: there is a line to see, not a guess about whether anything has happened."
       },
       {
-        "id": "resting-meat-and-slicing-against-the-grain#dry",
-        "text": "The board is nearly dry when it is finally cut. A spreading pool means it was cut too early, and that liquid should have stayed inside."
+        "id": "reducing-a-sauce#after",
+        "text": "Seasoned at the end and not the beginning, because salt concentrates at exactly the rate everything else does."
       },
       {
-        "id": "resting-meat-and-slicing-against-the-grain#across",
-        "text": "The grain was found and the knife went ACROSS it, so the fibres are cut short, and the blade was sharp enough that the slices hold together rather than tearing."
+        "id": "reducing-a-sauce#clean",
+        "text": "Nothing is catching underneath: a spoon drawn across the base comes up clean, with no browned film building where the heat is fiercest."
       }
     ],
-    "fault": "It was cut straight off the heat, usually because everything else was ready. The muscle is still contracted and the juice still driven to the centre, so it runs out onto the board; the meat is drier than it ever needed to be, and the flavour that left it is sitting in a puddle under the knife."
+    "fault": "It was seasoned at the start and then reduced by half. The salt concentrated along with everything else, so the sauce reaches perfect body and is too salty to serve. And the only remedy is to dilute it and reduce it all over again."
+  },
+  {
+    "slug": "skimming-foam-fat-and-a-clear-broth",
+    "label": "Skimming: foam, fat and a clear broth",
+    "recipeCount": 23,
+    "marks": [
+      {
+        "id": "skimming-foam-fat-and-a-clear-broth#below",
+        "text": "It is held below a rolling boil for the whole time. Agitation drives fat and fine protein into the liquid as an emulsion, and nothing skimmed afterwards will take them back out."
+      },
+      {
+        "id": "skimming-foam-fat-and-a-clear-broth#foam",
+        "text": "The grey foam that rises in the first minutes is lifted off and discarded rather than stirred back in."
+      },
+      {
+        "id": "skimming-foam-fat-and-a-clear-broth#edge",
+        "text": "Fat is taken from the surface where it gathers, the pot moved off the centre of the heat if that is what it takes to collect it in one place."
+      },
+      {
+        "id": "skimming-foam-fat-and-a-clear-broth#clearer",
+        "text": "The liquid is visibly clearer at the end than it was at the start: it is possible to see down into it."
+      },
+      {
+        "id": "skimming-foam-fat-and-a-clear-broth#out",
+        "text": "Nothing lifted off goes back in. What was skimmed is discarded, not tipped back once the ladle is full."
+      }
+    ],
+    "fault": "The pot was allowed to boil, usually while something else was being attended to. Fat and protein emulsify into the liquid under agitation and cannot be lifted off afterwards, so the finished broth stays cloudy and greasy however patiently it is skimmed from then on."
+  },
+  {
+    "slug": "soaking-dried-goods-back-to-life",
+    "label": "Soaking dried goods back to life",
+    "recipeCount": 23,
+    "marks": [
+      {
+        "id": "soaking-dried-goods-back-to-life#submerged",
+        "text": "Fully submerged with room to swell: the level is well above everything at the start and still above it at the end."
+      },
+      {
+        "id": "soaking-dried-goods-back-to-life#time",
+        "text": "Given the full time, and judged by what is in the bowl rather than by the hours on the clock."
+      },
+      {
+        "id": "soaking-dried-goods-back-to-life#centre",
+        "text": "Tested at the CENTRE of the largest piece, cut or pressed. Anything with a hard dry core will still have one after cooking, because the outside softens first and stops the water getting further in."
+      },
+      {
+        "id": "soaking-dried-goods-back-to-life#water",
+        "text": "The soaking water was dealt with on purpose: kept because it holds flavour, or thrown away because it holds what should not be eaten, but never simply left undecided."
+      },
+      {
+        "id": "soaking-dried-goods-back-to-life#drained",
+        "text": "Drained before it is used, so the dish does not silently gain all the water that came with it."
+      }
+    ],
+    "fault": "Too little water, or too little time. The pieces swell until they are packed tight against each other and the ones in the middle never fully take up water; they will not soften later in the dish either, so the finished plate has hard pieces scattered through it."
   },
   {
     "slug": "the-broiler-heat-from-above",
@@ -840,34 +1036,6 @@
     "fault": "It was treated as an oven setting: food in, timer set, cook walks away. Radiant heat from above has no gentle phase, so the surface goes from pale to bitter inside a minute while the inside is untouched, and there is no stage in between to catch."
   },
   {
-    "slug": "roasting-in-a-hot-oven",
-    "label": "Roasting in a hot oven",
-    "recipeCount": 22,
-    "marks": [
-      {
-        "id": "roasting-in-a-hot-oven#preheated",
-        "text": "The oven was fully up to heat before anything went in, given time beyond the indicator light rather than judged by it."
-      },
-      {
-        "id": "roasting-in-a-hot-oven#room",
-        "text": "Every piece has air around it. Nothing touches its neighbour and nothing is packed to the edge of the tray, because crowded food steams itself in its own moisture and never browns."
-      },
-      {
-        "id": "roasting-in-a-hot-oven#even",
-        "text": "Colour is even across the whole tray, the tray having been turned at least once: no pale row at the back and no dark row at the front."
-      },
-      {
-        "id": "roasting-in-a-hot-oven#before",
-        "text": "It came out BEFORE the target temperature, not at it. Carryover keeps driving the inside up by several degrees after it leaves the oven, and that rise is part of the cooking rather than an error in it."
-      },
-      {
-        "id": "roasting-in-a-hot-oven#coldest",
-        "text": "The temperature was read at the coldest part rather than the easiest one to reach, and read again after the rest."
-      }
-    ],
-    "fault": "The tray was crowded, or the oven was not truly up to heat. The food releases steam faster than a cool box can carry it away, so it sits pale and slack, and the extra minutes spent chasing colour take the inside well past where it should have stopped."
-  },
-  {
     "slug": "deep-frying",
     "label": "Deep frying",
     "recipeCount": 22,
@@ -894,118 +1062,6 @@
       }
     ],
     "fault": "Too much went in at once and the oil temperature collapsed. The crust forms slowly while the food sits in warm fat absorbing it rather than shedding steam, and it comes out heavy and greasy instead of crisp, which no amount of draining afterwards will fix."
-  },
-  {
-    "slug": "draining-fried-food-a-rack-never-paper",
-    "label": "Draining fried food: a rack, never paper",
-    "recipeCount": 22,
-    "marks": [
-      {
-        "id": "draining-fried-food-a-rack-never-paper#staged",
-        "text": "The rack was in place before the first thing went into the oil, not fetched afterwards while food waited in a spider over the pot."
-      },
-      {
-        "id": "draining-fried-food-a-rack-never-paper#air",
-        "text": "It lands on a rack with air moving underneath it. Anything set down on paper or a flat plate traps its own steam against its base."
-      },
-      {
-        "id": "draining-fried-food-a-rack-never-paper#salted",
-        "text": "Salted within seconds of landing, while it is still hot enough to take seasoning."
-      },
-      {
-        "id": "draining-fried-food-a-rack-never-paper#crisp",
-        "text": "A minute later the underside is still as crisp as the top: no soft flat patch where it has been sitting."
-      },
-      {
-        "id": "draining-fried-food-a-rack-never-paper#single",
-        "text": "Nothing is stacked or piled while hot, however tempting it is to keep it together. A pile steams itself soft from the inside out."
-      }
-    ],
-    "fault": "It was drained on paper, or piled up to keep warm. Steam leaving the food has nowhere to go but back into the crust, so the underside softens within a minute: the crispness the frying just bought is gone before the plate reaches the table."
-  },
-  {
-    "slug": "reducing-a-sauce",
-    "label": "Reducing a sauce",
-    "recipeCount": 22,
-    "marks": [
-      {
-        "id": "reducing-a-sauce#simmer",
-        "text": "A steady simmer with the surface moving, never a rolling boil that throws it up the sides and scorches what is left on the base."
-      },
-      {
-        "id": "reducing-a-sauce#nappe",
-        "text": "Judged by behaviour rather than the clock: it coats the back of a spoon and holds a clean line when a finger is drawn through it."
-      },
-      {
-        "id": "reducing-a-sauce#visible",
-        "text": "The drop in volume is visible against the side of the pan: there is a line to see, not a guess about whether anything has happened."
-      },
-      {
-        "id": "reducing-a-sauce#after",
-        "text": "Seasoned at the end and not the beginning, because salt concentrates at exactly the rate everything else does."
-      },
-      {
-        "id": "reducing-a-sauce#clean",
-        "text": "Nothing is catching underneath: a spoon drawn across the base comes up clean, with no browned film building where the heat is fiercest."
-      }
-    ],
-    "fault": "It was seasoned at the start and then reduced by half. The salt concentrated along with everything else, so the sauce reaches perfect body and is too salty to serve. And the only remedy is to dilute it and reduce it all over again."
-  },
-  {
-    "slug": "soaking-dried-goods-back-to-life",
-    "label": "Soaking dried goods back to life",
-    "recipeCount": 22,
-    "marks": [
-      {
-        "id": "soaking-dried-goods-back-to-life#submerged",
-        "text": "Fully submerged with room to swell: the level is well above everything at the start and still above it at the end."
-      },
-      {
-        "id": "soaking-dried-goods-back-to-life#time",
-        "text": "Given the full time, and judged by what is in the bowl rather than by the hours on the clock."
-      },
-      {
-        "id": "soaking-dried-goods-back-to-life#centre",
-        "text": "Tested at the CENTRE of the largest piece, cut or pressed. Anything with a hard dry core will still have one after cooking, because the outside softens first and stops the water getting further in."
-      },
-      {
-        "id": "soaking-dried-goods-back-to-life#water",
-        "text": "The soaking water was dealt with on purpose: kept because it holds flavour, or thrown away because it holds what should not be eaten, but never simply left undecided."
-      },
-      {
-        "id": "soaking-dried-goods-back-to-life#drained",
-        "text": "Drained before it is used, so the dish does not silently gain all the water that came with it."
-      }
-    ],
-    "fault": "Too little water, or too little time. The pieces swell until they are packed tight against each other and the ones in the middle never fully take up water; they will not soften later in the dish either, so the finished plate has hard pieces scattered through it."
-  },
-  {
-    "slug": "fermentation",
-    "label": "Fermentation",
-    "recipeCount": 22,
-    "marks": [
-      {
-        "id": "fermentation#warmth",
-        "text": "Held somewhere with a steady temperature it can actually work at, chosen on purpose rather than wherever there happened to be room."
-      },
-      {
-        "id": "fermentation#activity",
-        "text": "There is visible activity before it is called started: bubbles, rise, or movement in the liquid. A ferment showing nothing after its first hours is not slow, it is not going."
-      },
-      {
-        "id": "fermentation#smell",
-        "text": "It smells clean: sour, yeasty, or alcoholic, with nothing putrid, and with nothing fuzzy or coloured growing where air meets it."
-      },
-      {
-        "id": "fermentation#covered",
-        "text": "Everything is under the liquid or under a cover, as the method requires: nothing solid left sitting dry in the air to spoil while the rest works."
-      },
-      {
-        "id": "fermentation#stopped",
-        "text": "Judged by taste and behaviour and then STOPPED: chilled, baked, or refrigerated at the point wanted, rather than left running because the stated hours had not elapsed."
-      }
-    ],
-    "fault": "It was run on the clock in a kitchen colder or warmer than the recipe assumed. Fermentation is a rate and not a duration, so the same number of hours gives an under-developed ferment in a cold room and a slack, over-soured one in a warm one, and only tasting it would have said which."
   },
   {
     "slug": "rubbing-fat-into-flour",
@@ -1064,93 +1120,9 @@
     "fault": "It was stirred until it looked perfectly smooth. Every stroke past the point where the streaks vanish knocks out air that cannot be put back, so the bake comes out dense and short of the tin, and often wet through the middle where there was no structure to hold it."
   },
   {
-    "slug": "skimming-foam-fat-and-a-clear-broth",
-    "label": "Skimming: foam, fat and a clear broth",
-    "recipeCount": 21,
-    "marks": [
-      {
-        "id": "skimming-foam-fat-and-a-clear-broth#below",
-        "text": "It is held below a rolling boil for the whole time. Agitation drives fat and fine protein into the liquid as an emulsion, and nothing skimmed afterwards will take them back out."
-      },
-      {
-        "id": "skimming-foam-fat-and-a-clear-broth#foam",
-        "text": "The grey foam that rises in the first minutes is lifted off and discarded rather than stirred back in."
-      },
-      {
-        "id": "skimming-foam-fat-and-a-clear-broth#edge",
-        "text": "Fat is taken from the surface where it gathers, the pot moved off the centre of the heat if that is what it takes to collect it in one place."
-      },
-      {
-        "id": "skimming-foam-fat-and-a-clear-broth#clearer",
-        "text": "The liquid is visibly clearer at the end than it was at the start: it is possible to see down into it."
-      },
-      {
-        "id": "skimming-foam-fat-and-a-clear-broth#out",
-        "text": "Nothing lifted off goes back in. What was skimmed is discarded, not tipped back once the ladle is full."
-      }
-    ],
-    "fault": "The pot was allowed to boil, usually while something else was being attended to. Fat and protein emulsify into the liquid under agitation and cannot be lifted off afterwards, so the finished broth stays cloudy and greasy however patiently it is skimmed from then on."
-  },
-  {
-    "slug": "tempering-a-custard",
-    "label": "Tempering a custard",
-    "recipeCount": 21,
-    "marks": [
-      {
-        "id": "tempering-a-custard#gradual",
-        "text": "The hot liquid went into the eggs a little at a time with constant whisking, and only then did everything go back to the pot."
-      },
-      {
-        "id": "tempering-a-custard#gentle",
-        "text": "The heat under it stayed gentle throughout and it was never allowed to boil."
-      },
-      {
-        "id": "tempering-a-custard#corners",
-        "text": "Stirred continuously and right into the corners of the pan, where it thickens first and sets unnoticed."
-      },
-      {
-        "id": "tempering-a-custard#coats",
-        "text": "Judged by behaviour: it thickens enough to coat the back of a spoon and hold a clean line when a finger is drawn through it."
-      },
-      {
-        "id": "tempering-a-custard#early",
-        "text": "Taken off before it looks finished, and strained. Residual heat carries it the rest of the way, and a custard held on the heat until it looks right arrives past right."
-      }
-    ],
-    "fault": "The hot liquid went in too fast, or the pot went back over full heat to save time. The yolks set into threads before they could thicken smoothly, and a scrambled custard does not come back; straining hides a little of it and nothing hides the rest."
-  },
-  {
-    "slug": "pie-crust-and-blind-baking",
-    "label": "Pie crust & blind baking",
-    "recipeCount": 18,
-    "marks": [
-      {
-        "id": "pie-crust-and-blind-baking#cold",
-        "text": "The shell goes into the oven cold and the oven is fully up to heat, so the structure sets before the fat has time to melt out of it."
-      },
-      {
-        "id": "pie-crust-and-blind-baking#corners",
-        "text": "Lined and weighted right into the corners rather than heaped in the middle, so the sides are held against the tin as the fat softens."
-      },
-      {
-        "id": "pie-crust-and-blind-baking#docked",
-        "text": "Docked where it is not meant to puff, and the base stays flat rather than lifting into a dome under its own steam."
-      },
-      {
-        "id": "pie-crust-and-blind-baking#dry",
-        "text": "The weights come out and the base gets dry heat of its own before anything wet arrives. Pale and damp is not baked, and a filling will not finish it."
-      },
-      {
-        "id": "pie-crust-and-blind-baking#releases",
-        "text": "The edges are set and coloured and the shell releases from the tin rather than gripping it."
-      }
-    ],
-    "fault": "It went in warm, or the weights only filled the middle. The sides slump down the tin before the pastry sets, so the case is shallower than it should be, the filling overflows it, and the base is still raw underneath: the soggy bottom, arrived at three ways at once."
-  },
-  {
     "slug": "dry-pan-toasting-spices-seeds-and-nuts",
     "label": "Dry-pan toasting: spices, seeds and nuts",
-    "recipeCount": 17,
+    "recipeCount": 20,
     "marks": [
       {
         "id": "dry-pan-toasting-spices-seeds-and-nuts#bare",
@@ -1176,9 +1148,65 @@
     "fault": "It was left alone for a moment while something else was attended to. Dry heat has no margin: the pieces against the metal go from fragrant to acrid inside a minute, and the bitterness cannot be picked back out of a ground mixture."
   },
   {
+    "slug": "pie-crust-and-blind-baking",
+    "label": "Pie crust & blind baking",
+    "recipeCount": 20,
+    "marks": [
+      {
+        "id": "pie-crust-and-blind-baking#cold",
+        "text": "The shell goes into the oven cold and the oven is fully up to heat, so the structure sets before the fat has time to melt out of it."
+      },
+      {
+        "id": "pie-crust-and-blind-baking#corners",
+        "text": "Lined and weighted right into the corners rather than heaped in the middle, so the sides are held against the tin as the fat softens."
+      },
+      {
+        "id": "pie-crust-and-blind-baking#docked",
+        "text": "Docked where it is not meant to puff, and the base stays flat rather than lifting into a dome under its own steam."
+      },
+      {
+        "id": "pie-crust-and-blind-baking#dry",
+        "text": "The weights come out and the base gets dry heat of its own before anything wet arrives. Pale and damp is not baked, and a filling will not finish it."
+      },
+      {
+        "id": "pie-crust-and-blind-baking#releases",
+        "text": "The edges are set and coloured and the shell releases from the tin rather than gripping it."
+      }
+    ],
+    "fault": "It went in warm, or the weights only filled the middle. The sides slump down the tin before the pastry sets, so the case is shallower than it should be, the filling overflows it, and the base is still raw underneath: the soggy bottom, arrived at three ways at once."
+  },
+  {
+    "slug": "salting-to-draw-the-water-out",
+    "label": "Salting to draw the water out",
+    "recipeCount": 19,
+    "marks": [
+      {
+        "id": "salting-to-draw-the-water-out#even",
+        "text": "Salted evenly over every surface rather than tipped on in one place and tossed once."
+      },
+      {
+        "id": "salting-to-draw-the-water-out#drains",
+        "text": "Laid out so the water has somewhere to go: a colander, a rack, or a sieve over a bowl, never a flat dish where it sits back in what it gave up."
+      },
+      {
+        "id": "salting-to-draw-the-water-out#visible",
+        "text": "Given real time, and there is visible liquid to show for it: a pool underneath, a drip, or a wrung handful."
+      },
+      {
+        "id": "salting-to-draw-the-water-out#removed",
+        "text": "That liquid is removed. It is squeezed, blotted or poured away, and the food is dry to the touch before it goes anywhere near heat."
+      },
+      {
+        "id": "salting-to-draw-the-water-out#seasoned",
+        "text": "The dish is seasoned knowing salt has already gone on, tasted before any more is added."
+      }
+    ],
+    "fault": "It went into the dish still wet, and was salted again out of habit. The water it was carrying dilutes and steams whatever it meets, so the result is watery and over-seasoned at once, and those are two faults that cannot be corrected in the same direction."
+  },
+  {
     "slug": "the-overnight-rest-letting-a-dish-marry",
     "label": "The overnight rest: letting a dish marry",
-    "recipeCount": 17,
+    "recipeCount": 18,
     "marks": [
       {
         "id": "the-overnight-rest-letting-a-dish-marry#cooled",
@@ -1232,32 +1260,60 @@
     "fault": "It was whipped past stiff peaks. A minute beyond glory the protein network tightens and tears, the foam turns grainy and matte, water weeps out beneath it, and folding that into anything gives a mixture that collapses on the way to the oven."
   },
   {
-    "slug": "salting-to-draw-the-water-out",
-    "label": "Salting to draw the water out",
+    "slug": "charring-over-open-flame",
+    "label": "Charring over open flame",
     "recipeCount": 16,
     "marks": [
       {
-        "id": "salting-to-draw-the-water-out#even",
-        "text": "Salted evenly over every surface rather than tipped on in one place and tossed once."
+        "id": "charring-over-open-flame#direct",
+        "text": "The surface met the fiercest heat available (flame, a broiler, or bare hot metal) with nothing between them, and it shows as true blistering and blackening rather than gentle, even browning."
       },
       {
-        "id": "salting-to-draw-the-water-out#drains",
-        "text": "Laid out so the water has somewhere to go: a colander, a rack, or a sieve over a bowl, never a flat dish where it sits back in what it gave up."
+        "id": "charring-over-open-flame#patches",
+        "text": "The char matches the surface’s fate: where it will be eaten, black sits in patches over deep colour with every face having had its turn, and where the skin is to be peeled away, it may go to an even black, because the char there works on the flesh below and then leaves with the skin."
       },
       {
-        "id": "salting-to-draw-the-water-out#visible",
-        "text": "Given real time, and there is visible liquid to show for it: a pool underneath, a drip, or a wrung handful."
+        "id": "charring-over-open-flame#smoke",
+        "text": "It smells of smoke and toasted surface with no acrid edge that stings the nose: acrid means it went past, and acrid does not cook out."
       },
       {
-        "id": "salting-to-draw-the-water-out#removed",
-        "text": "That liquid is removed. It is squeezed, blotted or poured away, and the food is dry to the touch before it goes anywhere near heat."
+        "id": "charring-over-open-flame#beneath",
+        "text": "Just under the char it is cooked (softened, steaming, collapsed, or puffed, whichever the dish wants) because the flame did the surface and the trapped heat did the rest."
       },
       {
-        "id": "salting-to-draw-the-water-out#seasoned",
-        "text": "The dish is seasoned knowing salt has already gone on, tasted before any more is added."
+        "id": "charring-over-open-flame#balance",
+        "text": "A taste carries the smoke without mouthfuls of ash: the black that flakes away is a seasoning, not a layer."
       }
     ],
-    "fault": "It went into the dish still wet, and was salted again out of habit. The water it was carrying dilutes and steams whatever it meets, so the result is watery and over-seasoned at once, and those are two faults that cannot be corrected in the same direction."
+    "fault": "It was left on one face too long or held too close, so one side carbonised to ash while the rest stayed raw, and the smell turned acrid, which follows the dish through every later step and cannot be seasoned away."
+  },
+  {
+    "slug": "kneading-dough",
+    "label": "Kneading dough",
+    "recipeCount": 15,
+    "marks": [
+      {
+        "id": "kneading-dough#transformed",
+        "text": "The work changed it: what began shaggy and rough is one smooth, cohesive mass, with nothing raggy hanging off it."
+      },
+      {
+        "id": "kneading-dough#surface",
+        "text": "The surface has gone satin and barely tacky, releasing cleanly from hands and board instead of leaving a trail."
+      },
+      {
+        "id": "kneading-dough#degree",
+        "text": "Worked to the point this dough asks for and no further: springy and elastic where structure is wanted, just brought together where tenderness is."
+      },
+      {
+        "id": "kneading-dough#inside",
+        "text": "Torn or cut open, the inside is uniform: no dry streaks, no unmixed pockets, no core of flour that never met the water."
+      },
+      {
+        "id": "kneading-dough#rest",
+        "text": "After its rest it rolls and shapes without snapping back. A dough that fights the pin needed more rest, not more force."
+      }
+    ],
+    "fault": "Sticking was fought with flour instead of technique or patience, stroke after stroke, until the dough had taken in far more than the formula asked; it turns tight and dry under the hands, and bakes dense however well everything else goes."
   },
   {
     "slug": "sugar-stages-and-caramel",
@@ -1316,60 +1372,32 @@
     "fault": "The fat went in faster than the shear could break it up, or the temperature drifted out of the range the method needs: it breaks into grease over a thin liquid, and whisking the broken thing harder does nothing. The rescue is a fresh base, with the broken sauce worked into it slowly, as if it were the fat."
   },
   {
-    "slug": "charring-over-open-flame",
-    "label": "Charring over open flame",
-    "recipeCount": 13,
+    "slug": "pleating-dumplings",
+    "label": "Pleating dumplings",
+    "recipeCount": 12,
     "marks": [
       {
-        "id": "charring-over-open-flame#direct",
-        "text": "The surface met the fiercest heat available (flame, a broiler, or bare hot metal) with nothing between them, and it shows as true blistering and blackening rather than gentle, even browning."
+        "id": "pleating-dumplings#seal",
+        "text": "The seam is closed along its whole length with no gap at either end of the pleat run: hold one up to the light and no filling shows through the join. A dumpling that opens in the water was sealed against a wet or floured rim."
       },
       {
-        "id": "charring-over-open-flame#patches",
-        "text": "The char matches the surface’s fate: where it will be eaten, black sits in patches over deep colour with every face having had its turn, and where the skin is to be peeled away, it may go to an even black, because the char there works on the flesh below and then leaves with the skin."
+        "id": "pleating-dumplings#rim",
+        "text": "The rim is clean and dry where it meets itself. Filling smeared onto the sealing edge is the single most common cause of a burst, and it cannot be wiped off once the dough has taken it up."
       },
       {
-        "id": "charring-over-open-flame#smoke",
-        "text": "It smells of smoke and toasted surface with no acrid edge that stings the nose: acrid means it went past, and acrid does not cook out."
+        "id": "pleating-dumplings#even",
+        "text": "The pleats are even in size and count across the batch, so every piece holds the same weight of filling and cooks in the same time. A tray that ranges from eight folds to eighteen will not finish together."
       },
       {
-        "id": "charring-over-open-flame#beneath",
-        "text": "Just under the char it is cooked (softened, steaming, collapsed, or puffed, whichever the dish wants) because the flame did the surface and the trapped heat did the rest."
+        "id": "pleating-dumplings#centre",
+        "text": "The wrapper is thicker at the centre than at the rim, so the base carries the filling without tearing while the pleated edge stays fine enough to eat. A disc rolled evenly flat splits at the bottom."
       },
       {
-        "id": "charring-over-open-flame#balance",
-        "text": "A taste carries the smoke without mouthfuls of ash: the black that flakes away is a seasoning, not a layer."
+        "id": "pleating-dumplings#stands",
+        "text": "It stands up on its own base without slumping, and the pleats still read as pleats after cooking rather than having relaxed into a smooth seam."
       }
     ],
-    "fault": "It was left on one face too long or held too close, so one side carbonised to ash while the rest stayed raw, and the smell turned acrid, which follows the dish through every later step and cannot be seasoned away."
-  },
-  {
-    "slug": "kneading-dough",
-    "label": "Kneading dough",
-    "recipeCount": 13,
-    "marks": [
-      {
-        "id": "kneading-dough#transformed",
-        "text": "The work changed it: what began shaggy and rough is one smooth, cohesive mass, with nothing raggy hanging off it."
-      },
-      {
-        "id": "kneading-dough#surface",
-        "text": "The surface has gone satin and barely tacky, releasing cleanly from hands and board instead of leaving a trail."
-      },
-      {
-        "id": "kneading-dough#degree",
-        "text": "Worked to the point this dough asks for and no further: springy and elastic where structure is wanted, just brought together where tenderness is."
-      },
-      {
-        "id": "kneading-dough#inside",
-        "text": "Torn or cut open, the inside is uniform: no dry streaks, no unmixed pockets, no core of flour that never met the water."
-      },
-      {
-        "id": "kneading-dough#rest",
-        "text": "After its rest it rolls and shapes without snapping back. A dough that fights the pin needed more rest, not more force."
-      }
-    ],
-    "fault": "Sticking was fought with flour instead of technique or patience, stroke after stroke, until the dough had taken in far more than the formula asked; it turns tight and dry under the hands, and bakes dense however well everything else goes."
+    "fault": "The rim was wet, floured or smeared with filling, so the seal never took: the dumpling opens in the pot, the filling leaves, and what surfaces is a slack empty wrapper in cloudy water. Uneven pleat counts across a tray compound it, because the batch stops finishing at the same moment."
   },
   {
     "slug": "icing-and-frosting",

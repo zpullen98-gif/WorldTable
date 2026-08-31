@@ -49,6 +49,13 @@
     "count": 10
   },
   {
+    "name": "Bread Atlas",
+    "slug": "bread-atlas",
+    "kind": "atlas",
+    "group": "The Atlases",
+    "count": 10
+  },
+  {
     "name": "Breakfast Atlas",
     "slug": "breakfast-atlas",
     "kind": "atlas",
@@ -126,6 +133,13 @@
     "count": 30
   },
   {
+    "name": "Dumpling Atlas",
+    "slug": "dumpling-atlas",
+    "kind": "atlas",
+    "group": "The Atlases",
+    "count": 10
+  },
+  {
     "name": "East African",
     "slug": "east-african",
     "kind": "world",
@@ -144,7 +158,7 @@
     "slug": "fermentation-atlas",
     "kind": "atlas",
     "group": "The Atlases",
-    "count": 4
+    "count": 10
   },
   {
     "name": "Filipino",
@@ -448,6 +462,13 @@
     "count": 10
   },
   {
+    "name": "Offal & the Whole Animal",
+    "slug": "offal-and-the-whole-animal",
+    "kind": "atlas",
+    "group": "The Atlases",
+    "count": 10
+  },
+  {
     "name": "Ohio",
     "slug": "ohio",
     "kind": "us",
@@ -480,6 +501,13 @@
     "slug": "pennsylvania",
     "kind": "us",
     "group": "Mid-Atlantic",
+    "count": 10
+  },
+  {
+    "name": "Pickle & Condiment Atlas",
+    "slug": "pickle-and-condiment-atlas",
+    "kind": "atlas",
+    "group": "The Atlases",
     "count": 10
   },
   {
@@ -557,7 +585,7 @@
     "slug": "stock-and-fond-atlas",
     "kind": "atlas",
     "group": "The Atlases",
-    "count": 2
+    "count": 10
   },
   {
     "name": "Street Food Atlas",
@@ -595,8 +623,29 @@
     "count": 10
   },
   {
+    "name": "The Cure",
+    "slug": "the-cure",
+    "kind": "atlas",
+    "group": "The Atlases",
+    "count": 10
+  },
+  {
+    "name": "The Rice Bowl",
+    "slug": "the-rice-bowl",
+    "kind": "atlas",
+    "group": "The Atlases",
+    "count": 10
+  },
+  {
     "name": "The Saucier",
     "slug": "the-saucier",
+    "kind": "atlas",
+    "group": "The Atlases",
+    "count": 10
+  },
+  {
+    "name": "The Vegetable-Led Plate",
+    "slug": "the-vegetable-led-plate",
     "kind": "atlas",
     "group": "The Atlases",
     "count": 10

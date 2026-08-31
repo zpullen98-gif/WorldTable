@@ -15,7 +15,16 @@ const KENJI = {
 
 /** Technique labels a recipe demonstrates, from the TECH keyword table. */
 export function deriveTechniques(blob, TECH) {
-	return TECH.filter((x) => x.k.some((k) => blob.includes(k.toLowerCase()))).map((x) => x.l);
+	/* Deduped by label. The table is TECH plus SUPPLEMENT, and a label may now
+	   appear in both: widening a keyword list for an extracted technique has to
+	   happen on the authored side, because raw/TECH.json is proved against the
+	   sealed original and editing it is a content change. Two entries matching
+	   the same recipe are one technique, not two. */
+	return [
+		...new Set(
+			TECH.filter((x) => x.k.some((k) => blob.includes(k.toLowerCase()))).map((x) => x.l)
+		)
+	];
 }
 
 export function deriveFilms(r, blob, { TEACHERS, DISH_FILMS, TECH }, isAmerican = () => false) {

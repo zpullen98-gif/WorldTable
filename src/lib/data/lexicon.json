@@ -116,7 +116,7 @@
     "recipes": [
       "squash-casserole",
       "newark-italian-hot-dog",
-      "rosemary-focaccia"
+      "hyderabadi-dum-biryani"
     ]
   },
   {
@@ -157,9 +157,9 @@
     "category": "Beef Cuts & Grades",
     "definition": "Diet shapes the fat. Grass-fed beef is leaner, yellower-fatted, and mineral-forward: cooks faster and less forgivingly. Grain-finished cattle (the feedlot norm) marble heavier and taste sweeter and more 'classically beefy' to most palates. Neither is the moral or culinary winner in all cases; a chef should know both, source deliberately, and adjust doneness targets down for grass-fed.",
     "recipes": [
+      "duck-prosciutto",
       "onigiri",
-      "beef-and-broccoli",
-      "carne-asada"
+      "beef-and-broccoli"
     ]
   },
   {
@@ -223,6 +223,7 @@
     "category": "Pork, Lamb & Poultry",
     "definition": "The face and the fat, cured. GUANCIALE is cured pork jowl: silkier and funkier than pancetta, the non-negotiable soul of carbonara and amatriciana. American smoked JOWL BACON does the same work with a drawl. LARDO is pure back fat cured with herbs (Colonnata's marble-basin version is legend), shaved translucent over warm bread. Fat, the Italians insist, is a cut of meat, and they are right.",
     "recipes": [
+      "guanciale",
       "sizzling-sisig",
       "spaghetti-alla-carbonara"
     ]
@@ -276,6 +277,7 @@
     "category": "Pork, Lamb & Poultry",
     "definition": "To cook and preserve in fat: canonically duck legs salted overnight, then poached submerged in duck fat at ~90°C until spoon-tender, stored under that fat where they keep (and improve) for weeks. The technique generalizes: garlic confit, tomato confit, tuna confit. Low temperature plus fat's moisture barrier equals tenderness without drying, the ancestral sous vide. Crisp the skin in a pan before serving; the fat is reusable treasure.",
     "recipes": [
+      "confit-duck-leg",
       "pollo-al-ajillo"
     ]
   },
@@ -303,7 +305,7 @@
     "recipes": [
       "quick-pho-ga",
       "salsa-verde-italian",
-      "sole-meuniere"
+      "fumet-de-poisson"
     ]
   },
   {
@@ -378,7 +380,8 @@
     "category": "Fish & Shellfish",
     "definition": "WET scallops are treated with STP (a phosphate soak): they're whiter, heavier with water, weep in the pan, and refuse to brown. DRY scallops are untreated: ivory-to-pinkish, sticky, and they sear to a proper crust. The size code counts per pound: U-10 means under ten to the pound (huge); 20/30 means twenty to thirty. Buy dry, pat them arid, oil the pan not the scallop, and grant them 90 undisturbed seconds a side.",
     "recipes": [
-      "beurre-blanc"
+      "beurre-blanc",
+      "king-oyster-scallops"
     ]
   },
   {
@@ -452,9 +455,9 @@
     "category": "Fish & Shellfish",
     "definition": "Two different products sharing a word. HOT-SMOKED (kippers, smoked mackerel, hot-smoked salmon): cooked through at 60–80°C: flaky, opaque, ready to eat warm or cold. COLD-SMOKED (lox-style salmon, finnan haddie): smoke applied under ~30°C after curing; the flesh stays silky and translucent-raw. Cold smoking without proper curing is a food-safety tightrope; hot smoking is a weekend skill. Both begin with a cure, because salt came before smoke.",
     "recipes": [
+      "cold-smoked-salmon",
       "fish-and-chips",
-      "seafood-chowder",
-      "beurre-blanc"
+      "seafood-chowder"
     ]
   },
   {
@@ -572,7 +575,8 @@
     "category": "Vegetables & Produce",
     "definition": "Underground is not one category. TRUE ROOTS: carrot, parsnip, beet, radish, celeriac: sweetening in cold storage as starch converts to sugar (post-frost parsnips are candy). TUBERS: potato, sweet potato, yam (true yams and sweet potatoes are unrelated; American 'yams' are sweet potatoes), cassava/yuca, taro, the world's calorie backbone. RHIZOMES: ginger, turmeric, galangal, aromatic stems, not roots, grated and pounded into the flavor bases of Asia. Peel ginger with a spoon; the skin is thinnest where the flavor is strongest.",
     "recipes": [
-      "sancocho-de-siete-carnes"
+      "sancocho-de-siete-carnes",
+      "leeks-vinaigrette"
     ]
   },
   {
@@ -701,9 +705,9 @@
     "category": "Techniques: Heat & Precision",
     "definition": "Two preserved-sour families the menu should distinguish. QUICK PICKLING: vinegar, sugar, salt poured over: sour today, no microbes involved. LACTO-FERMENTATION: salt (2–3% by weight) suppresses bad microbes while lactobacillus converts sugars to lactic acid (sauerkraut, kimchi, real dill pickles, curtido), living sour with depth vinegar can't fake. Adjacent kingdoms: KOJI (Aspergillus mold on rice/barley) powers miso, soy sauce, and modern dry-age shortcuts; yeast ferments bread and beer; SCOBYs make kombucha and vinegar itself. Ferments are how a restaurant builds house flavor no supplier can sell the competition.",
     "recipes": [
+      "full-sour-dill-pickles",
       "shashlik",
-      "pescado-a-la-veracruzana",
-      "baechu-kimchi"
+      "pescado-a-la-veracruzana"
     ]
   },
   {
@@ -741,7 +745,9 @@
     "category": "Techniques: Heat & Precision",
     "definition": "Stock clarified to crystal transparency using a RAFT: egg whites, ground meat, and mirepoix whisked into cold stock, then heated gently: the proteins coagulate into a floating filter that captures every particle while the meat re-fortifies flavor. Ladled out through the raft's vent hole, the result is a soup so clear you read the bowl's maker's mark, with more flavor than it has any right to. The modern shortcuts (ice filtration through a frozen block, agar clarification) earn their place, but the raft remains the classical exam: patience, temperature control, and protein chemistry in one pot.",
     "recipes": [
-      "barszcz"
+      "barszcz",
+      "chicken-consomme-raft-method",
+      "tomato-water-consomme"
     ]
   },
   {
@@ -813,8 +819,8 @@
     "definition": "Three ways of painting with heat. BASTING: spooning pan juices or fat over roasting food: flavor and sheen, though evidence says its moisture claims are romance; it mostly speeds surface cooking and pleases the cook. ARROSER: the French pan ritual: tilting the pan and spoon-showering foaming butter, garlic, and thyme over a steak or fish in its final minute: aroma infusion plus a butterfat crust. GLAZING: painting reduced sauces (teriyaki, barbecue, honey-mustard) in THIN repeated coats late in cooking so sugars lacquer instead of burn, the huli huli and yakitori law. Sugar burns at the temperature meat browns; timing is the technique.",
     "recipes": [
       "vermont-maple-brined-pork-chops",
-      "chicken-teriyaki",
-      "char-siu-pork"
+      "king-oyster-scallops",
+      "chicken-teriyaki"
     ]
   },
   {
@@ -1147,9 +1153,9 @@
     "category": "Cheese Atlas",
     "definition": "Raw cow's milk, Emilia-Romagna, DOP-protected and made essentially unchanged for 800 years, the 'king of cheeses' and the umami keystone of the Western pantry. Aged 12–36+ months; the crunchy crystals are tyrosine, a badge of age, not salt. 24-month is the all-rounder; 36-month turns deep and brothy. Break it with the almond-shaped knife (never slice: the crag holds aroma), grate it fresh only, and simmer every rind you ever produce in a soup or ragù: the rind is a stock cube the cheese throws in free.",
     "recipes": [
-      "ragu-alla-bolognese",
-      "risotto-alla-milanese",
-      "pasta-e-fagioli"
+      "ravioli-del-plin",
+      "milanese-saffron-risotto",
+      "ragu-alla-bolognese"
     ]
   },
   {
@@ -1549,7 +1555,10 @@
     "term": "Prosciutto di Parma & San Daniele",
     "category": "Charcuterie Atlas",
     "definition": "Italy's twin crown hams: hind legs cured with sea salt ONLY (no nitrites, by consortium law) and air-dried 12–36 months: Parma from Emilia's valleys, sweet and delicate, its rind fire-branded with the ducal crown; San Daniele from Friuli's alpine-adriatic crosswinds, pressed flatter ('guitar-shaped'), a shade darker and sweeter still. Slice tissue-thin at the last moment: the fat must melt at lip temperature, which is the entire tasting experience. With melon or figs it is summer's law; draped over hot pizza after the oven, not before, it is technique.",
-    "recipes": []
+    "recipes": [
+      "xo-sauce",
+      "duck-prosciutto"
+    ]
   },
   {
     "slug": "culatello-di-zibello",
@@ -1634,7 +1643,9 @@
     "term": "Bresaola della Valtellina",
     "category": "Charcuterie Atlas",
     "definition": "The board's lean voice: beef (top round) salt-cured with wine and spice, air-dried in Lombardy's alpine Valtellina until wine-dark, dense, and sweetly mineral. Where pork charcuterie speaks in fat, bresaola speaks in pure meat: sliced carpaccio-thin, dressed only with olive oil, lemon, cracked pepper, and arugula-parmesan if the kitchen insists. It is the entry point for guests wary of 'cured meat', the athlete's antipasto, and the template for the whole air-dried-beef family: Swiss Bündnerfleisch, Turkish pastirma's cousin lineage, and every modern chef's duck or venison 'prosciutto' experiment.",
-    "recipes": []
+    "recipes": [
+      "bresaola"
+    ]
   },
   {
     "slug": "jamon-serrano",
@@ -1751,9 +1762,9 @@
     "category": "Charcuterie Atlas",
     "definition": "France's two soft sausages, opposite in color and temperament. BOUDIN NOIR: blood sausage with onions and warm spice, seared until the skin crackles and classically plated with sautéed apples ('boudin aux pommes', the sweet-iron pairing that defines it). BOUDIN BLANC: no blood at all; a delicate white emulsion of pork (or chicken, veal) with milk, eggs, and quatre-épices, poached then browned in butter; Rethel's IGP version is the benchmark. Louisiana's Cajun boudin (rice-loaded, eaten squeezed from the casing at gas stations) is the emigrant cousin who found a bayou and thrived; all three belong in one entry because the word traveled.",
     "recipes": [
+      "boudin-noir-aux-pommes",
       "boeuf-bourguignon",
-      "beurre-blanc",
-      "new-orleans-bbq-shrimp"
+      "beurre-blanc"
     ]
   },
   {
@@ -1773,7 +1784,9 @@
     "category": "Charcuterie Atlas",
     "definition": "The gateway drug of home curing: a duck breast salted 24 hours, rinsed, peppered, wrapped in cheesecloth, and hung in the refrigerator two to three weeks until it loses ~30% weight: rosy, dense, its fat cap curing into something between lardo and prosciutto. No casings, no cultures, no curing chamber: just salt, cold air, and patience, which makes it the standard first project for every charcuterie student and a legitimately board-worthy result. Slice paper-thin across the breast; serve with something bitter or sharp (frisée, pickled cherries). One breast teaches the entire logic of whole-muscle curing in three weeks.",
     "recipes": [
-      "zongzi"
+      "duck-prosciutto",
+      "zongzi",
+      "xo-sauce"
     ]
   },
   {
@@ -1885,8 +1898,8 @@
     "definition": "All dry charcuterie belongs to one of two crafts. WHOLE-MUSCLE: an intact muscle (prosciutto, coppa, lomo, bresaola, duck breast) salted and dried: the microbiological risk is mostly at the surface, drying is the main event, and it is where every student should start. FERMENTED SALAMI: ground meat and fat, salt, spices, curing salt, and starter cultures stuffed into casings: a controlled fermentation drops the pH (the tang) BEFORE drying, and pH plus water activity (aW below ~0.85–0.91 depending on style) are the twin safety gates, measured, not guessed. The first church needs patience; the second needs instruments. Respecting the difference is the entire craft's first lesson.",
     "recipes": [
       "jian-bing",
-      "ragu-alla-bolognese",
-      "ratatouille"
+      "bresaola",
+      "ragu-alla-bolognese"
     ]
   },
   {
@@ -1895,9 +1908,9 @@
     "category": "Charcuterie Atlas",
     "definition": "CURE #1 (pink salt, 6.25% sodium nitrite): for short cures and anything smoked or cooked: bacon, pastrami, sausages; nitrite blocks Clostridium botulinum, fixes the rosy color, and builds 'cured' flavor. CURE #2 (nitrite + nitrate): for long dry cures; the nitrate is a time-release reservoir that bacteria slowly convert to nitrite over months of salami and ham aging. Both are dyed pink to prevent tragic salt mix-ups and used in grams per kilo, weighed on a scale, never eyeballed. 'Uncured' supermarket bacon uses celery-powder nitrate, the same chemistry wearing a garden costume. Respect the numbers and this is settled, safe science; wing it and it is the one place in cooking where confidence can genuinely hurt someone.",
     "recipes": [
+      "grilled-veal-sweetbreads",
       "buttermilk-biscuits",
-      "menemen",
-      "scones-with-jam-and-clotted-cream"
+      "menemen"
     ]
   },
   {
@@ -1938,7 +1951,10 @@
     "term": "Tannin",
     "category": "Wine & Beverage",
     "definition": "The drying, grippy sensation from grape skins, seeds, stems, and oak, texture, not taste: it binds your saliva's proteins, which is exactly why tannic reds (young Cabernet, Nebbiolo, Syrah) transform beside fatty, proteinous food: the steak's fat and protein occupy the tannin, the wine turns silkier, and both improve. The first pairing law hides here: BIG TANNIN WANTS FAT AND PROTEIN. The corollary warnings: tannin + fish oil can turn metallic; tannin + chili heat amplifies burn; tannin + salt fights. When a guest says a red is 'too dry,' they usually mean tannic. And the fix is on the plate, not in the cellar.",
-    "recipes": []
+    "recipes": [
+      "full-sour-dill-pickles",
+      "half-sour-dills-in-salt-brine"
+    ]
   },
   {
     "slug": "acidity-the-backbone",
@@ -1946,7 +1962,9 @@
     "category": "Wine & Beverage",
     "definition": "The mouthwatering freshness that makes wine feel alive, and the single most food-friendly trait a wine can have: acid cuts fat, lifts salt, and resets the palate between bites (high-acid wines are the kitchen's squeeze of lemon in a glass: Riesling, Sauvignon Blanc, Chablis, Champagne, Barbera, Chianti). The governing rule: THE WINE MUST BE AT LEAST AS ACIDIC AS THE DISH: a vinaigrette or tomato sauce makes a soft wine taste flabby and dead, while a bright wine sails through. When a pairing 'just works,' acid is usually the quiet engineer; when in doubt at the pass, reach for the higher-acid bottle.",
     "recipes": [
-      "frango-piri-piri"
+      "fresh-soybean-tempeh",
+      "quick-pickled-red-onions",
+      "torshi-makhlut"
     ]
   },
   {
@@ -2032,7 +2050,8 @@
     "definition": "The heartbreak grape: thin-skinned, site-obsessed, and at its peak (the Côte d'Or's village-premier-grand cru ladder) the most transparent expression of terroir in red wine: cherry, forest floor, silk tannin, high acid. That structure makes it the SOMMELIER'S SWISS ARMY KNIFE: the red that crosses to fish (salmon, tuna), loves duck, mushrooms, and roast chicken, and rescues 'one bottle for the whole table' negotiations nightly. New World fluency: Willamette (nervy), Sonoma Coast, Central Otago (dark and plush). If the food list leans poultry, pork, mushroom, and fatty fish, Pinot's the by-the-glass workhorse; price it like the friend it is.",
     "recipes": [
       "boeuf-bourguignon",
-      "oregon-pinot-noir-braised-short-ribs"
+      "oregon-pinot-noir-braised-short-ribs",
+      "boudin-noir-aux-pommes"
     ]
   },
   {
@@ -2136,9 +2155,9 @@
     "category": "Wine & Beverage",
     "definition": "Wines strengthened with spirit, built to end evenings. PORT (Douro): RUBY and LBV (fruit-forward, ready), TAWNY (barrel-aged to caramel-fig: the 10/20/30-year ladder; serve slightly cool), VINTAGE (declared years, decades of cellar, decanted off sediment), Stilton's statutory partner and chocolate's rare wine ally (sweeter than the dessert: the law holds). MADEIRA: heated and oxidized ON PURPOSE (estufagem): effectively immortal once opened, running Sercial (dry) to Malmsey (rich), history in a glass (it crossed oceans as ballast and improved). SAUTERNES, Tokaji, ice wine and the late-harvest school complete the sweet flight: botrytis 'noble rot' concentrating nectar, foie gras and blue cheese pairings that predate every trend. Dessert wine sells by the OUNCE beautifully; a fortified list is high-margin patience in bottles.",
     "recipes": [
+      "chicken-liver-parfait",
       "halo-halo",
-      "francesinha",
-      "cape-cod-cranberry-relish"
+      "francesinha"
     ]
   },
   {
@@ -2301,7 +2320,7 @@
     "recipes": [
       "mapo-tofu",
       "biang-biang-mian",
-      "kung-pao-chicken"
+      "momo-kathmandu-style"
     ]
   },
   {
@@ -2321,9 +2340,9 @@
     "category": "Spice Atlas",
     "definition": "The seed of the cilantro plant and its complete opposite in character: where the leaf is polarizing and soapy-bright, the seed is universally gentle: floral, citrusy (linalool, the same molecule as lavender and Earl Grey's bergamot cousin), warmly nutty when toasted. It is the diplomat of spice blends: garam masala, dhana jeera, ras el hanout, sausage seasonings, and gin's botanicals all lean on it as the harmonizer that makes louder spices agree. Crush it coarse for crusts (coriander-crusted salmon, pastrami's signature bark) where its pop matters. Indian kitchens buy it by the kilo for a reason: it is the volume knob that adds body without adding argument.",
     "recipes": [
-      "quick-pho-ga",
-      "sate-ayam",
-      "braai-boerewors-with-chakalaka"
+      "zhoug-akhdar",
+      "brined-whole-roast-cauliflower",
+      "quick-pho-ga"
     ]
   },
   {
@@ -2333,8 +2352,8 @@
     "definition": "Two pods, two personalities, one name. GREEN cardamom, the world's third-priciest spice, is high-perfume: eucalyptus, citrus, floral menthol; it scents chai, kheer, Scandinavian baking (Sweden's per-capita habit is legendary: see the kanelbullar), Turkish coffee, and biryani. BLACK cardamom is its smoked, camphorous big cousin, dried over fire, meant for SAVORY depth: dal makhani, pho broth (star player), Sichuan braises; never swap them. Technique: bruise green pods and infuse whole (fish them out), or grind the inner seeds only: the husk is cellulose. Ground cardamom dies fast; whole pods keep their secret for a year.",
     "recipes": [
       "nihari",
-      "ackee-and-saltfish",
-      "gomen-wat"
+      "zhoug-akhdar",
+      "hyderabadi-dum-biryani"
     ]
   },
   {
@@ -2376,9 +2395,9 @@
     "category": "Spice Atlas",
     "definition": "The eight-pointed pod that perfumes East and Southeast Asia's great broths: pho's signature aromatic, red-braised pork's licorice depth, five-spice's dominant voice, and the secret one-pod upgrade to Western beef braises and tomato sauces (it amplifies meaty flavors via its anethole–umami synergy; French chefs slip one into onions for that reason and remove the evidence). Whole pods infuse and retrieve; ground it is loud and fast-fading. It is licorice-adjacent but warmer and more resinous than European anise: the two share anethole, not personality. One or two pods per pot is the law; star anise never learned the meaning of 'background' and must be supervised accordingly.",
     "recipes": [
+      "pho-bo-broth",
       "massaman-curry",
-      "quick-pho-ga",
-      "lagman"
+      "quick-pho-ga"
     ]
   },
   {
@@ -2387,9 +2406,9 @@
     "category": "Spice Atlas",
     "definition": "The anethole family, arranged by volume. FENNEL SEED: the gentlest: sweet, hay-green, the signature of Italian sausage, finocchiona (see the charcuterie wing), taralli, and the panch-phoron chorus; toasted, it is the after-dinner mukhwas digestif of India. ANISE SEED: sharper, the flavor of pastis, ouzo, sambuca, and pizzelle, the Mediterranean's licorice thread. Then the outliers: LICORICE ROOT itself (glycyrrhizin: fifty times sweeter than sugar, a different molecule entirely) and star anise (previous entry) carrying the flavor east. Kitchen intel: fennel pollen, the flower's dust, is the luxury whisper version chefs dust on pork and fish; and the licorice line divides guests absolutely, so deploy it labeled, never ambushed.",
     "recipes": [
+      "pho-bo-broth",
       "massaman-curry",
-      "quick-pho-ga",
-      "lagman"
+      "quick-pho-ga"
     ]
   },
   {
@@ -2409,9 +2428,9 @@
     "category": "Spice Atlas",
     "definition": "The world's most expensive spice: the three hand-picked stigmas of a crocus flower (roughly 150 flowers per gram, harvested at dawn), tasting of honey, hay, and iron-sea brightness, dyeing everything it touches imperial gold. It powers paella, risotto alla milanese, bouillabaisse and its rouille, Persian tahdig and sholeh zard, Indian biryani and kheer, Swedish lussekatter. Technique is extraction: BLOOM threads in warm (not boiling) water, stock, or milk for 15+ minutes (or the Persian move, grind with a pinch of sugar first), then add liquid and threads both; tossing dry threads into a pot wastes half your money. Buy threads, never powder (the most adulterated spice on earth: powder hides everything); real saffron stains slowly and smells of honey-hay, and 'cheap saffron' is a contradiction the market resolves against you.",
     "recipes": [
+      "milanese-saffron-risotto",
       "risotto-alla-milanese",
-      "weeknight-chicken-biryani",
-      "kheer"
+      "weeknight-chicken-biryani"
     ]
   },
   {
@@ -2530,8 +2549,9 @@
     "category": "Spice Atlas",
     "definition": "The spice with the worst first impression in the pantry, a dried gum resin whose raw smell earned it the name 'devil's dung', and one of cooking's great transformations: BLOOMED for seconds in hot fat, the sulfurous funk converts into a savory allium depth uncannily like sautéed onion-garlic. That chemistry made it the backbone of India's onion-and-garlic-free traditions (Jain and many Brahmin kitchens) and the invisible umami in countless dals, sambars, and tadkas: a pinch, no more, always into the oil first. Buy compounded powder (cut with flour: pure resin is industrial-strength), keep it sealed twice (it will cologne your entire spice drawer), and deploy it as the answer to 'how is this vegetarian dal so savory?' Because hing, that's how.",
     "recipes": [
-      "vada-pav",
-      "dal-tadka"
+      "aam-ka-achar",
+      "moong-dal-khichdi",
+      "vada-pav"
     ]
   },
   {
@@ -2542,7 +2562,7 @@
     "recipes": [
       "kare-kare",
       "hallacas",
-      "tacos-al-pastor-home-trompo"
+      "arroz-con-pollo"
     ]
   },
   {
@@ -2619,7 +2639,7 @@
     "recipes": [
       "butter-chicken",
       "aloo-gobi",
-      "japanese-curry"
+      "hyderabadi-dum-biryani"
     ]
   },
   {
@@ -2699,9 +2719,9 @@
     "category": "Spice Atlas",
     "definition": "Europe's warm-spice shorthand, savory and sweet. QUATRE ÉPICES: France's four (white or black pepper, nutmeg, clove, ginger (cinnamon sneaking in as an unofficial fifth)) is the charcuterie wing's quiet seasoner: pâté de campagne, boudin blanc, terrines, and pain d'épices. The sweet cousins across borders: British MIXED SPICE (cinnamon-nutmeg-allspice-forward: Christmas pudding, hot cross buns), American PUMPKIN SPICE (the same idea with marketing), German LEBKUCHENGEWÜRZ (gingerbread's cathedral: adds cardamom, coriander, anise), Dutch SPECULAAS (white pepper's return to dessert, the windmill cookie's secret). One family, one lesson: cinnamon-clove-nutmeg-ginger-allspice is Europe's shared warm chord, and each nation's blend is just the mix at a different point on the same dial: memorize the chord, and you can improvise any of them from open jars.",
     "recipes": [
-      "beef-and-broccoli",
-      "garlic-naan-stovetop",
-      "hummus"
+      "boudin-noir-aux-pommes",
+      "pork-rillettes",
+      "beef-and-broccoli"
     ]
   },
   {
@@ -3082,7 +3102,7 @@
     "recipes": [
       "sauce-tomate-classical",
       "apple-butter",
-      "laugenbrezeln"
+      "nixtamal-corn-tortillas"
     ]
   },
   {
@@ -3349,7 +3369,8 @@
     "definition": "Water is 20–25% of a finished cocktail, and ice is how it gets there: dilution isn't a side effect; it is a MEASURED INGREDIENT (a 'perfect' undiluted Manhattan is just cold booze; the water opens it like the whisky wing's splash). The working physics: chilling and dilution are the SAME event (melting ice absorbs heat): more surface area = faster both. The formats by job: standard 1.25\" cubes (the all-purpose shake and stir), the BIG CUBE/sphere (slow-melting: the Old Fashioned's long game), CRUSHED/pebble (maximum dilution by design: juleps, tiki, swizzles: drinks SPEC'D for it), and hand-cut CLEAR ice (directional freezing: a cooler in the freezer freezes top-down, pushing cloudy air out the bottom: the home method for bar-clear slabs; clarity is aesthetics plus density's slower melt). Doctrine: fresh hard ice from a closed bin (freezer ice absorbs freezer smells; taste yours and weep), fill vessels FULL (more ice melts SLOWER; half-filled shakers over-dilute), and never re-use shaking ice. The cheapest upgrade in drinks is taking water seriously.",
     "recipes": [
       "kaya-toast",
-      "sauerkraut-the-two-ingredient-ferment"
+      "sauerkraut-the-two-ingredient-ferment",
+      "bresaola"
     ]
   },
   {
@@ -3450,7 +3471,8 @@
     "definition": "The precision garnishes of the liquid itself. The RINSE (the absinthe entry's technique, generalized): a quarter-ounce swirled to coat the chilled glass and discarded, perfume without participation (Sazerac's absinthe, a mezcal rinse smoking a margarita's glass, Fernet rinsing a Toronto). The FLOAT: a final layer poured gently over a spoon's back to rest on top. Dark rum crowning a mai tai or hurricane (the drinker tilts through it), red wine lava-lamping a New York Sour (the sour family's most photogenic member), cream on an Irish coffee (poured over a HOT spoon, per the recipe wing's Buena Vista ritual). LAYERING at full theater: density stacking (sugar content = weight, heaviest liqueurs first: the pousse-café and B-52's grenadine-to-cream physics). The unifying principle: cocktails are built in three dimensions; surface aromatics (bitters on foam, expressed oils, rinsed vapors) reach the nose before the straw reaches the drink, and the bartender who designs the first ten seconds of a drink's aroma is plating for the face.",
     "recipes": [
       "tamales-rojos",
-      "preserved-lemons"
+      "preserved-lemons",
+      "levain-boule"
     ]
   },
   {
@@ -3600,8 +3622,8 @@
     "definition": "The capstone shopping list: maximum canon per bottle. THE CORE SIX that unlock the templates: a bourbon or rye (Old Fashioned, sour, Manhattan half), a London dry gin (Martini, Negroni, Collins), a white rum (daiquiri), a blanco tequila (margarita), sweet AND dry vermouth (small bottles, refrigerated, the entry's law), and Angostura. THE SECOND WAVE: Campari (the Negroni completes), orange liqueur (margarita and sidecar upgrade), a Jamaican or aged rum (the mai tai conversation begins), orange bitters, absinthe or Herbsaint (the rinse shelf), one amaro of your choosing (the after-dinner door). The supporting cast from this module: jigger, Boston shaker + Hawthorne + fine strainer, mixing glass + spoon + julep, Y-peeler for twists (the equipment wing's smallwares crossing over), fresh citrus bought weekly not monthly, rich syrup in the fridge, big-cube trays, and chilled coupes standing by. The philosophy, one final time: DEPTH over breadth. Twelve bottles used fluently outpour a hundred used decoratively (the equipment wing's station mind, verbatim), every classic you master is a template that teaches five more, and the home bar is the apprenticeship for the professional one: same specs, same discipline, same hospitality; smaller rail, and the guests already love you. Salud, sláinte, cin cin: the bar is open.",
     "recipes": [
       "jian-dui",
-      "sardinhas-assadas",
-      "country-sourdough-loaf"
+      "salt-cod-home-cured",
+      "sardinhas-assadas"
     ]
   },
   {
@@ -3786,9 +3808,9 @@
     "category": "Restaurant Finance & Opening",
     "definition": "The most clarifying number in the plan: the sales level where you stop losing money. THE MATH: Fixed Costs ÷ Contribution Margin % = break-even sales. Fixed costs: rent, salaries, insurance, loan payments, utilities' base (what you pay at zero covers). Contribution margin: 1 − variable cost % (COGS + hourly labor + other costs that scale with sales; if variable costs are 65%, each sales dollar contributes 35 cents to fixed costs). Example: $45k monthly fixed ÷ 0.35 = ~$129k monthly break-even ≈ $4,300/day. Now translate to OPERATIONS: at a $55 average check, that's ~78 covers a day, every day. The power move is exactly that translation: a break-even expressed in covers-per-day is a number the whole team can see, chase, and celebrate crossing ('we break even at 80 covers' turns the host stand into the CFO's office). Run it before signing the lease (the rent that moves break-even beyond plausible traffic is a pre-written obituary) and re-run it whenever costs shift; knowing your daily number is the difference between managing a restaurant and hoping at one.",
     "recipes": [
+      "hyderabadi-dum-biryani",
       "creme-brulee",
-      "perfect-fried-rice",
-      "wiener-schnitzel"
+      "perfect-fried-rice"
     ]
   },
   {
@@ -3799,7 +3821,7 @@
     "recipes": [
       "molten-chocolate-cake",
       "eastern-nc-whole-hog-barbecue",
-      "lexington-style-pork-shoulder"
+      "pocket-pita"
     ]
   },
   {
@@ -3910,7 +3932,11 @@
     "term": "Reservations, No-Shows & the Book",
     "category": "Restaurant Finance & Opening",
     "definition": "Managing the promise economy. THE PLATFORM CHOICE: OpenTable-class (network demand, per-cover fees that compound forever) vs. Resy/Tock-class vs. direct-booking emphasis: whatever the mix, drive bookings to YOUR channels over time (the tech entry's data-ownership law: the guest who books direct is yours; the one who books through a network is rented). NO-SHOWS, the quiet thief (industry rates run 10–20% unmanaged): confirmations automated (SMS day-before halves it), CREDIT CARD HOLDS with disclosed no-show fees for prime slots (normalized post-2020; guests accept it when it's clear), deposits or full PREPAYMENT for tasting menus and large parties (Tock's model: the kitchen buys fish against those books), and a graded response (first offense forgiven graciously, repeaters flagged in the guest notes). THE BOOK AS CRAFT: pacing covers to kitchen capacity (a fully-booked 7:30 and an empty 6:15 is self-sabotage: slot inventory deliberately), overbooking calibrated to your no-show data (airline math, hospitality stakes), walk-in space PROTECTED (the bar and a few tables: spontaneity is a demand channel and a neighborhood covenant), and waitlist flow that converts. The guest-notes goldmine: allergies, occasions, preferences, history. The reservation system is the regulars entry's memory; used warmly, it's why they say 'they know us here.'",
-    "recipes": []
+    "recipes": [
+      "levain-boule",
+      "torshi-makhlut",
+      "milanese-saffron-risotto"
+    ]
   },
   {
     "slug": "third-party-delivery-economics",
@@ -3975,7 +4001,8 @@
     "definition": "The invisible system that runs the visible ones. CULTURE, defined operationally: what the team does when no manager watches, and it is TAUGHT by example, not posters: the owner who tastes everything teaches standards; the owner who thanks the dish pit teaches respect; the owner who shortcuts a Tuesday teaches that Saturdays are optional too. THE MODERN COVENANT: the industry's old brigade brutality is dying of its own costs (the turnover entry's math is also an ethics receipt); the kitchens winning the labor market run on high standards WITH high dignity: clear expectations, real feedback, zero tolerance for harassment (the EPLI entry's premiums agree), sane hours where the model allows, and mental-health awareness in an industry that historically ate its own. THE OWNER'S ACTUAL JOB, staged: at opening: everywhere, doing everything (the first-90 entry); at stability: working ON the business over IN it (the org entry's delegation: if you can't leave for two weeks, you own a job, not a business); always: guardian of standards, allocator of capital, keeper of the concept's WHY, and chief example. THE FOUNDER'S HEALTH CLAUSE: the restaurant that consumes its owner completely tends to consume itself next; sustainable excellence beats heroic burnout, in cooking and in ownership alike. Build the place you'd want to work; it's also, not coincidentally, the place guests want to be.",
     "recipes": [
       "smash-burger",
-      "braai-boerewors-with-chakalaka"
+      "braai-boerewors-with-chakalaka",
+      "black-tea-kombucha"
     ]
   },
   {
@@ -4158,9 +4185,9 @@
     "category": "The Flavor Atlas",
     "definition": "The technique wing sorts herbs by WHEN (tender late, hearty early); this sorts them by WHAT they say. THE BRIGHT REGISTER (tender, water-fleshed): parsley's clean green (the neutral brightener: when 'something fresh' is the note, parsley is the answer), cilantro's citrus-soap divide (genetic, real, plan menus accordingly), basil's anise-clove sweetness, mint's cool lift, dill's grassy-anise (the Nordic and Persian signature), chervil's whisper, tarragon's licorice authority (the French exception: tender but LOUD). THE RESINOUS REGISTER (woody, oil-armored): rosemary's pine, thyme's earthy hum (the background herb: it deepens without announcing), oregano's peppery punch (dried often BEATS fresh: concentrated and classical), sage's musky butter-mate, bay's quiet tea-nutmeg, marjoram as oregano's gentle cousin. Composition rule: resinous herbs harmonize in the base; bright herbs argue on top, and the finishing handful is usually two brights (parsley-mint, cilantro-basil) because brightness likes company.",
     "recipes": [
+      "zhoug-akhdar",
       "guacamole",
-      "shrimp-creole",
-      "quick-pho-ga"
+      "shrimp-creole"
     ]
   },
   {
@@ -4302,7 +4329,7 @@
     "recipes": [
       "masala-dosa",
       "umm-ali",
-      "chicken-congee"
+      "vollkornbrot-with-rye-soaker"
     ]
   },
   {
@@ -4355,9 +4382,9 @@
     "category": "The Seasonal Larder",
     "definition": "Peaches, nectarines, apricots, plums, and cherries, the drupe family, run the shortest, sweetest arc in the produce year: cherries fire first (late May–June north), apricots close behind, peaches and nectarines own July–August, plums carry into September. The pedigree map: apricots and peaches are Chinese natives that walked the Silk Road (Persia lent the peach its Latin name by mistake); today's benchmarks are Georgia and California peaches, French Bergeron apricots, Alsatian mirabelles and quetsches, Japan's giftwrapped white peaches, Spain's Calanda. The buying law: stone fruit ripens in AROMA and give, not color, and a great peach is a ten-day local event: it does not ship. Kitchen notes: under-ripe stone fruit is for grilling and roasting (heat finishes what the tree didn't); the pit carries almond-bitter noyaux perfume (crack a few into the jam). Southern summer flips it all to December–February: Chile and South Africa fill northern winters at the cost of the perfume.",
     "recipes": [
+      "aam-ka-achar",
       "pizza-margherita",
-      "la-galbi",
-      "goi-cuon-summer-rolls"
+      "la-galbi"
     ]
   },
   {
@@ -4505,7 +4532,7 @@
     "recipes": [
       "sibirskie-pelmeni",
       "sancocho-de-siete-carnes",
-      "shchi"
+      "leeks-vinaigrette"
     ]
   },
   {
@@ -4681,7 +4708,7 @@
     "recipes": [
       "hoppin-john",
       "idaho-lentil-soup",
-      "chicken-piccata"
+      "fond-de-legumes"
     ]
   },
   {
@@ -4705,7 +4732,8 @@
     "definition": "The aromatic extrovert: pungent, grassy, and unmistakable: gooseberry, grapefruit, cut grass, and in New Zealand's Marlborough style, a passionfruit exuberance that redefined the grape in a generation. The old homes are the Loire (Sancerre and Pouilly-Fumé: flinty, restrained, the dignified versions) and Bordeaux (blended with Sémillon, sometimes oaked); the new world runs from Marlborough's tropics to Chile's coastal zones and South Africa's herbal middle path. THE FOOD LOGIC: its high acid and green register make it the VEGETABLE whisperer, asparagus and artichoke (the wine-killers) meet their match here, and the classic goat-cheese partner (Sancerre and crottin is a terroir marriage: same villages). Also right: herb-sauced fish, ceviche, salads with vinaigrette (acid meeting acid), and anything with cilantro or green chile. Wrong: heavy cream, red meat, oak-seeking dishes. Serve cold, drink young: this grape sells freshness.",
     "recipes": [
       "beurre-blanc",
-      "new-orleans-bbq-shrimp"
+      "new-orleans-bbq-shrimp",
+      "fond-blanc-de-volaille"
     ]
   },
   {
@@ -4715,7 +4743,8 @@
     "definition": "The Loire's chameleon and wine's great undervalued grape: screaming acidity wrapped in honey, quince, chamomile, and wet wool (a compliment, in context), capable of every style from sparkling (Crémant de Loire) through bone-dry (Savennières' austere greatness) to off-dry (Vouvray's crowd-pleasing tension) to centuries-aging dessert wines (Coteaux du Layon). South Africa grows more than France now; old-vine Chenin from Swartland is the modern insider's buy: sunnier fruit, same spine. THE FOOD RANGE tracks the sweetness dial: dry Chenin handles roast chicken, pork with apples, and cream-sauced fish with its acid; off-dry versions are the pairing engine's second answer to gentle heat and the classic match for pork belly and Southeast Asian salads; sweet Chenins meet blue cheese and fruit desserts. The buying decode: Vouvray 'sec' is dry, 'demi-sec' off-dry; the label's fine print is the whole pairing.",
     "recipes": [
       "beurre-blanc",
-      "new-orleans-bbq-shrimp"
+      "new-orleans-bbq-shrimp",
+      "fond-blanc-de-volaille"
     ]
   },
   {
@@ -4725,7 +4754,8 @@
     "definition": "The heartbreak grape (thin-skinned, site-obsessed, impossible to grow well and unforgettable when someone does): red cherry, raspberry, forest floor, and a silk texture with acid brightness and gentle tannin that makes it the most FOOD-FLEXIBLE red in the cellar. Burgundy is the homeland and the reference (village names, not grape names, on labels: Gevrey, Volnay, Chambolle); Oregon's Willamette is the new-world benchmark; Central Otago, Sonoma Coast, and Germany (Spätburgunder) complete the map. THE PAIRING DOCTRINE this guide leans on: Pinot is the RED that crosses to fish, salmon and tuna's classic partner, and duck's soulmate (acid against fat, silk against silk); mushrooms and truffles meet their earth-echo here; roast chicken, pork tenderloin, and beef bourguignon (Burgundy with Burgundy: regional law) round the list. Avoid with: big char, heavy spice, aggressive sauces that bully its subtlety. Serve slightly cool; the delicacy is the point.",
     "recipes": [
       "oregon-pinot-noir-braised-short-ribs",
-      "boeuf-bourguignon"
+      "boeuf-bourguignon",
+      "boudin-noir-aux-pommes"
     ]
   },
   {

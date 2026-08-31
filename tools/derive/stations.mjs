@@ -46,17 +46,20 @@
  *                      or savoury, and a manager reading that box would believe
  *                      their pastry cook had been tested on the most
  *                      collapse-prone item in the repertoire.
- *   Pleating dumplings: one recipe, christmas-pudding, where the pleat is the
- *                      parchment-and-foil lid over a steamed basin. The label
- *                      describes a dumpling; the data describes a pudding.
+ *   Pleating dumplings: WAS excluded here. Its only recipe was christmas-pudding,
+ *                      where the pleat is the parchment-and-foil lid over a
+ *                      steamed basin: the label described a dumpling and the
+ *                      data described a pudding. The Dumpling Atlas of 31 Aug
+ *                      2026 gave it ten recipes that genuinely pleat, so the
+ *                      judgement was re-made and the exclusion lifted, which is
+ *                      exactly what the gate below exists to force.
  *
  * `recipes` is gated exactly: if the corpus ever gains a real soufflé, the
  * build fails and forces this judgement to be made again rather than leaving a
  * genuine technique permanently uncounted.
  */
 export const UNDRILLED = {
-	'The soufflé': ['milanesa-a-la-napolitana'],
-	'Pleating dumplings': ['christmas-pudding']
+	'The soufflé': ['milanesa-a-la-napolitana']
 };
 
 /**
@@ -142,13 +145,15 @@ export const STATION_MAP = {
 	"Creaming butter & sugar": ["patissier"],  // Unanimous.
 	"Crêpes": ["patissier"],  // Contested. Filed by the guide under semester 6, Pastry Fundamentals; entremetier audit struck the savoury claim as resting on two of five recipes.
 	"Curing gravlax": ["garde-manger"],  // Unanimous.
-	"Dashi": ["entremetier"],  // Contested. Saucier audit struck it: semester 2 'Stocks, Soups & the Simmer', and its seven recipes are soups, an egg dish, a rice bowl and three noodl
+	"Dashi": ["entremetier"],
+	"Ramen broth": ["saucier"],  // New. Carried nothing until the Stock & Fond Atlas added a tonkotsu; it is a stock held at a rolling boil to emulsify collagen and fat on purpose, which is saucier work and the deliberate exception to every other rule in that chapter.  // Contested. Saucier audit struck it: semester 2 'Stocks, Soups & the Simmer', and its seven recipes are soups, an egg dish, a rice bowl and three noodl
 	"Deep frying": ["rotisseur"],  // Contested. The friturier sub-chain is imported (the guide's brigade entry names no fry cook) but the entremetier audit equally refuted the veg stati
 	"Deglazing & pan sauces": ["saucier"],  // Unanimous.
 	"Draining fried food: a rack, never paper": ["rotisseur"],  // Follows the fryer. Anchored to 'Fryer Setups & Oil Management'; oil husbandry has to sit with whoever owns the oil.
 	"Dry-pan toasting: spices, seeds and nuts": ["saucier"],  // Unanimous. Declined the pastry audit's second station: it flagged its own weakness (4 of 17 recipes).
 	"Egg wash & the baker’s shine": ["patissier"],  // Unanimous.
 	"Empanada folding": ["patissier"],  // Contested. Two of three lenses said pastry; garde-manger audit struck its own claim: one recipe, no definition, and the same hands as pierogi and ple
+	"Pleating dumplings": ["patissier"],  // New, and filed beside Empanada folding for the same reason: in this brigade mapping the shaping of a filled dough is pastry work, whatever cuisine it comes from. The Dumpling Atlas made it real.
 	"Falafel": ["rotisseur"],  // Contested. Entremetier audit struck it: the query field is literally 'falafel frying technique' and the anchor is Deep & Shallow Frying. The chickpea 
 	"Fermentation": ["garde-manger", "patissier"],  // SPLIT. The definition covers both kingdoms explicitly, lacto-ferments and koji against yeast and levain, and 10 of 18 recipes are leavened doughs. T
 	"Filleting fish": ["poissonnier"],  // Contested. Poissonnier audit struck the garde-manger half as double-counting: the meat/poultry side of that same lexicon entry already has its own tec

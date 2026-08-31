@@ -33,8 +33,13 @@ const details = fullJson as unknown as RecipeDetail[];
 
 const FISH_WITNESS =
 	/\b(anchov(?:y|ies)|salmon|tuna|cod|haddock|halibut|snapper|tilapia|sardines?|mackerel|katsuobushi|bonito|dashi|fish sauce|nam pla|worcestershire)\b/i;
+/* oyster mushroom and king oyster are fungi, and the scallop shape cut from
+   a king oyster stem is still a mushroom. The lookahead keeps a real oyster
+   failing this test while letting the vegetable-led chapter say what it is. */
 const SHELLFISH_WITNESS =
-	/\b(shrimps?|prawns?|crabs?|lobsters?|scallops?|oysters?|clams?|mussels?|squid|calamari|octopus|langoustines?)\b/i;
+	/\b(shrimps?|prawns?|crabs?|lobsters?|scallops?(?! cut from| from a king)|oysters?(?! mushrooms?)|clams?|mussels?|squid|calamari|octopus|langoustines?)\b/i;
+/* Ingredient lines that name a shellfish only to say the dish has none. */
+const SHELLFISH_EXEMPT = /\b(king oyster|oyster mushrooms?)\b/i;
 
 describe('an escape never silences an allergen', () => {
 	/**
@@ -72,7 +77,7 @@ describe('an escape never silences an allergen', () => {
 			const diet = bySlug.get(r.slug)?.diet;
 			if (!diet) continue;
 			if (FISH_WITNESS.test(text) && !diet.containsFish) missed.push(`${r.slug} (fish)`);
-			if (SHELLFISH_WITNESS.test(text) && !diet.containsShellfish)
+			if (SHELLFISH_WITNESS.test(text) && !SHELLFISH_EXEMPT.test(text) && !diet.containsShellfish)
 				missed.push(`${r.slug} (shellfish)`);
 		}
 		expect(missed).toEqual([]);
