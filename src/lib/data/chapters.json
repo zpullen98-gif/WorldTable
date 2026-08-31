@@ -24,6 +24,14 @@
     "count": 10
   },
   {
+    "name": "Aotearoa & Maori",
+    "slug": "aotearoa-and-maori",
+    "kind": "world",
+    "group": "Oceania",
+    "subgroup": "Aotearoa New Zealand",
+    "count": 10
+  },
+  {
     "name": "Argentine",
     "slug": "argentine",
     "kind": "world",
@@ -45,6 +53,14 @@
     "kind": "us",
     "group": "United States",
     "subgroup": "The South",
+    "count": 10
+  },
+  {
+    "name": "Australian",
+    "slug": "australian",
+    "kind": "world",
+    "group": "Oceania",
+    "subgroup": "Australia",
     "count": 10
   },
   {
@@ -120,6 +136,14 @@
     "count": 10
   },
   {
+    "name": "Canadian",
+    "slug": "canadian",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "Canada",
+    "count": 10
+  },
+  {
     "name": "Cantonese",
     "slug": "cantonese",
     "kind": "world",
@@ -168,6 +192,14 @@
     "count": 10
   },
   {
+    "name": "Cuban",
+    "slug": "cuban",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "Cuba",
+    "count": 10
+  },
+  {
     "name": "Delaware",
     "slug": "delaware",
     "kind": "us",
@@ -208,11 +240,27 @@
     "count": 10
   },
   {
+    "name": "Egyptian",
+    "slug": "egyptian",
+    "kind": "world",
+    "group": "Africa",
+    "subgroup": "Egypt",
+    "count": 10
+  },
+  {
     "name": "Emilia-Romagna",
     "slug": "emilia-romagna",
     "kind": "world",
     "group": "Europe",
     "subgroup": "Italy",
+    "count": 10
+  },
+  {
+    "name": "Emulsions & Pan Sauces",
+    "slug": "emulsions-and-pan-sauces",
+    "kind": "atlas",
+    "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
@@ -256,6 +304,14 @@
     "count": 10
   },
   {
+    "name": "Garde Manger",
+    "slug": "garde-manger",
+    "kind": "atlas",
+    "group": "The Atlases",
+    "subgroup": null,
+    "count": 10
+  },
+  {
     "name": "Georgia",
     "slug": "georgia",
     "kind": "us",
@@ -277,6 +333,14 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Germany",
+    "count": 10
+  },
+  {
+    "name": "Ghanaian",
+    "slug": "ghanaian",
+    "kind": "world",
+    "group": "Africa",
+    "subgroup": "Ghana",
     "count": 10
   },
   {
@@ -592,6 +656,14 @@
     "count": 10
   },
   {
+    "name": "Nigerian",
+    "slug": "nigerian",
+    "kind": "world",
+    "group": "Africa",
+    "subgroup": "Nigeria",
+    "count": 10
+  },
+  {
     "name": "Noodle Atlas",
     "slug": "noodle-atlas",
     "kind": "atlas",
@@ -669,6 +741,30 @@
     "kind": "us",
     "group": "United States",
     "subgroup": "The Pacific",
+    "count": 10
+  },
+  {
+    "name": "Pacific Islands",
+    "slug": "pacific-islands",
+    "kind": "world",
+    "group": "Oceania",
+    "subgroup": "The Pacific Islands",
+    "count": 10
+  },
+  {
+    "name": "Pasta & Fresh Dough",
+    "slug": "pasta-and-fresh-dough",
+    "kind": "atlas",
+    "group": "The Atlases",
+    "subgroup": null,
+    "count": 10
+  },
+  {
+    "name": "Pastry Foundations",
+    "slug": "pastry-foundations",
+    "kind": "atlas",
+    "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
@@ -752,6 +848,14 @@
     "count": 20
   },
   {
+    "name": "Senegalese",
+    "slug": "senegalese",
+    "kind": "world",
+    "group": "Africa",
+    "subgroup": "Senegal",
+    "count": 10
+  },
+  {
     "name": "Sichuan",
     "slug": "sichuan",
     "kind": "world",
@@ -773,6 +877,14 @@
     "kind": "atlas",
     "group": "The Atlases",
     "subgroup": null,
+    "count": 10
+  },
+  {
+    "name": "South African",
+    "slug": "south-african",
+    "kind": "world",
+    "group": "Africa",
+    "subgroup": "South Africa",
     "count": 10
   },
   {

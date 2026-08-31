@@ -64,7 +64,12 @@ const FISH = [
 	// 'arctic char', never bare 'char'; that flagged char siu pork and
 	// char kway teow as containing fish.
 	'lake trout', 'arctic char', 'lake char', 'sturgeon', 'tilefish', 'wahoo', 'opah', 'escolar',
-	'skate', 'ray', 'bass', 'crappie', 'bluegill', 'menhaden'
+	'skate', 'ray', 'bass', 'crappie', 'bluegill', 'menhaden',
+	// South African, West African and Australasian names. Every one of these
+	// arrived with a chapter and none was in the table: a reader avoiding fish
+	// would have been told a snoek braai contains none.
+	'snoek', 'panla', 'koobi', 'kapenta', 'yellowtail kingfish', 'hoki',
+	'kahawai', 'terakihi', 'tarakihi', 'kingklip', 'galjoen', 'maasbanker'
 ];
 
 const SHELLFISH = [
@@ -75,7 +80,13 @@ const SHELLFISH = [
 	// New England / Pacific Northwest shellfish the state chapters name directly.
 	'geoduck', 'whelk', 'scungilli', 'conch', 'abalone', 'periwinkle',
 	'quahog', 'littleneck', 'cherrystone', 'razor clam', 'cockle',
-	'barnacle', 'sea urchin', 'crawdad', 'spot prawn', 'dungeness'
+	'barnacle', 'sea urchin', 'crawdad', 'spot prawn', 'dungeness',
+	// Maori, Pacific and Australian names for shellfish the table already knew
+	// under other words: paua is abalone, kina is sea urchin, a Moreton Bay bug
+	// is a slipper lobster, yeet is a fermented sea snail. Without these an
+	// allergen line reads empty, which a reader takes to mean safe.
+	'paua', 'p\u0101ua', 'kina', 'moreton bay bug', 'bay bug', 'balmain bug',
+	'yeet', 'toheroa', 'pipi', 'tuatua', 'marron', 'yabby', 'moreton bay bugs'
 ];
 
 const DAIRY = [
@@ -195,6 +206,11 @@ const EXCEPTIONS = [
 	// marrow is not, and the offal list catches that through 'bone', so only
 	// the vegetable forms are masked here.
 	'marrow squash', 'vegetable marrow', 'marrowfat pea', 'marrowfat peas',
+	// Lamb's lettuce is mache, a salad leaf. So is lamb's ear.
+	"lamb's lettuce", 'lambs lettuce', "lamb's ear", 'lambs ear',
+	// Coconut meat is the flesh of a coconut. The MEAT list carries a bare
+	// 'meat' for mince and meatballs, and it caught a watermelon drink.
+	'coconut meat', 'coconut flesh', 'nut meat', 'meat of the coconut',
 	// fish-shaped, not fish
 	'fish-shaped', 'crabapple', 'crab apple', 'vegan fish sauce',
 	// Shellfish-shaped, not shellfish. King oyster is a mushroom, and the

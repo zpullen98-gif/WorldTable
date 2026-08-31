@@ -74,9 +74,16 @@ export const ATLAS_OF_CHAPTERS = {
 	},
 	Africa: {
 		Morocco: ['Moroccan'],
+		Egypt: ['Egyptian'],
 		Ethiopia: ['Ethiopian'],
 		'East Africa': ['East African'],
-		'West Africa': ['West African']
+		Nigeria: ['Nigerian'],
+		Ghana: ['Ghanaian'],
+		Senegal: ['Senegalese'],
+		/* The catch-all that predates the country chapters. It stays because it
+		   holds ten recipes from countries that still have none of their own. */
+		'West Africa': ['West African'],
+		'South Africa': ['South African']
 	},
 	'The Americas': {
 		Mexico: ['Mexican', 'Oaxacan', 'Yucatecan'],
@@ -84,7 +91,16 @@ export const ATLAS_OF_CHAPTERS = {
 		Brazil: ['Brazilian'],
 		Argentina: ['Argentine'],
 		'South America': ['South American'],
-		'The Caribbean': ['Caribbean']
+		Cuba: ['Cuban'],
+		/* Thirteen nations in ten recipes. Cuba is out; the rest are still
+		   waiting, and this entry is the honest record of that. */
+		'The Caribbean': ['Caribbean'],
+		Canada: ['Canadian']
+	},
+	Oceania: {
+		Australia: ['Australian'],
+		'Aotearoa New Zealand': ['Aotearoa & Maori'],
+		'The Pacific Islands': ['Pacific Islands']
 	},
 	'United States': {
 		'New England': [
@@ -141,6 +157,7 @@ export const CONTINENT_ORDER = [
 	'Asia',
 	'Africa',
 	'The Americas',
+	'Oceania',
 	'United States',
 	'The Atlases'
 ];

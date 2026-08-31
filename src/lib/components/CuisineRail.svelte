@@ -30,6 +30,7 @@
 		'Asia',
 		'Africa',
 		'The Americas',
+		'Oceania',
 		'United States',
 		'The Atlases'
 	];

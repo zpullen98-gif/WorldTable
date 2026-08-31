@@ -82,8 +82,8 @@
     "definition": "The 'butcher's cuts': thin, loose-grained belly muscles with wildly concentrated flavor. FLANK: lean, wide, the fajita and stir-fry standard. SKIRT (inside/outside): fattier, deeper, the true carne asada cut. HANGER: hangs off the diaphragm, one per animal, so tender-funky the butcher historically kept it. All three obey the same laws: marinate or salt, blast with high heat to medium-rare MAX, rest, and slice thin against their very obvious grain.",
     "recipes": [
       "carne-asada",
-      "beef-and-broccoli",
-      "ropa-vieja"
+      "vaca-frita",
+      "beef-and-broccoli"
     ]
   },
   {
@@ -115,8 +115,8 @@
     "definition": "The rear leg: big, lean, cheap, and unforgiving. TOP ROUND makes roast beef and London broil (slice paper-thin: thickness is its enemy); BOTTOM ROUND braises or cures into bresaola; EYE OF ROUND looks like tenderloin and eats like a tire unless roasted gently and shaved. The round teaches the master's lesson: the knife and the slicing angle can rescue what the muscle withholds.",
     "recipes": [
       "begun-bhaja",
-      "squash-casserole",
-      "newark-italian-hot-dog"
+      "damper",
+      "hawawshi"
     ]
   },
   {
@@ -291,7 +291,8 @@
     "definition": "RENDERING is melting animal fat out of its tissue over gentle heat; the cracklings (gribenes, chicharrones, duck skin crisps) are the by-product bonus. SCHMALTZ is rendered chicken (or goose) fat, the flavor spine of matzo balls, chopped liver, and honest fried onions. A kitchen that saves its fat (bacon, duck, beef trim) cooks better and cheaper than one that buys flavor in bottles. Strain, label, refrigerate.",
     "recipes": [
       "matzo-ball-soup",
-      "tlayuda-con-asiento-y-tasajo"
+      "tlayuda-con-asiento-y-tasajo",
+      "dibi"
     ]
   },
   {
@@ -307,9 +308,9 @@
     "category": "Fish & Shellfish",
     "definition": "The two body plans behind all fish butchery. ROUND FISH (salmon, bass, snapper) swim upright and yield two fillets, one per side. FLAT FISH (sole, halibut, flounder, turbot) lie on the seabed, both eyes migrated to one side, and yield four fillets: two large from the top, two small from the bottom. Different filleting strokes, different portioning math, and the flatfish's fifth 'cut', the collar-fringed frill, is a delicacy the trade keeps.",
     "recipes": [
+      "sea-trout-filleted-and-cured",
       "quick-pho-ga",
-      "salsa-verde-italian",
-      "fumet-de-poisson"
+      "salsa-verde-italian"
     ]
   },
   {
@@ -318,9 +319,9 @@
     "category": "Fish & Shellfish",
     "definition": "FILLET: the boneless side. STEAK: a crosscut through the bone (salmon steaks, halibut steaks): bone-in cooks juicier. LOIN: the thick top quadrant of large fish like tuna and swordfish, portioned like beef. COLLAR (kama): the fatty arc behind the gills: the richest bite on the fish, long a chef's secret and now a menu star (grilled hamachi kama). PIN BONES are the fine lateral bones tweezed from fillets; run a finger tip-to-tail and it will find every one.",
     "recipes": [
+      "kangaroo-loin-with-mountain-pepperberry",
       "beef-and-broccoli",
-      "carne-asada",
-      "ropa-vieja"
+      "carne-asada"
     ]
   },
   {
@@ -417,9 +418,9 @@
     "category": "Fish & Shellfish",
     "definition": "HARD-SHELL lobsters (winter) are packed full, more meat per pound, better shippers, higher price. NEW-SHELL/soft-shell (post-molt, summer) are sweeter and more tender but water-filled and fragile, the New Englander's local secret. The green TOMALLEY is the liver (delicious, eat sparingly); red ROE means a female. Kill swiftly (knife through the head), don't overboil, and know the knuckle meat is the sweetest bite on the animal.",
     "recipes": [
+      "lolo-first-and-second-pressing",
       "ragu-alla-bolognese",
-      "mapo-tofu",
-      "pavlova"
+      "mapo-tofu"
     ]
   },
   {
@@ -723,7 +724,11 @@
     "term": "Emulsions",
     "category": "Techniques: Heat & Precision",
     "definition": "Fat and water convinced to coexist as droplets, held by an emulsifier (egg-yolk lecithin, mustard, starch, or sheer agitation): the physics behind mayonnaise, hollandaise, vinaigrette, beurre blanc, aioli, and glossy pan sauces. The universal method: add fat SLOWLY to the water phase while shearing hard; the universal failure: too fast, too hot, or too cold, and it 'breaks' into grease. The universal rescue: start fresh with a new yolk (or a spoon of water/mustard) and whisk the broken sauce INTO it. Pasta's starchy water emulsifying oil and butter into clinging sauce is the same trick; Italian kitchens just never named it.",
-    "recipes": []
+    "recipes": [
+      "hollandaise-and-the-two-ways-it-splits",
+      "sauce-bearnaise",
+      "beurre-blanc-the-cold-butter-mount"
+    ]
   },
   {
     "slug": "reduction-nappe-and-mounting",
@@ -871,9 +876,9 @@
     "category": "Techniques: Knife & Prep",
     "definition": "Three pan verbs distinguished by heat and intent. SWEAT: low heat, a little fat, often a lid or parchment; vegetables soften and release moisture WITHOUT color (the start of risotto, velouté, most braises where onion flavor should be sweet, not roasty). SAUTÉ: medium-high, food 'jumping' (sauter) in a wide pan: light browning, fast cooking, constant motion. SEAR: maximum heat, zero motion: deep crust, Maillard at full roar. Recipes say 'cook the onions' and mean one of three different flavors; knowing which one the dish needs is the difference between following recipes and cooking.",
     "recipes": [
-      "ragu-alla-bolognese",
-      "ratatouille",
-      "japanese-curry"
+      "the-deglazed-pan-sauce-white-wine-and-shallot",
+      "flambe-pan-sauce-brandy-and-green-peppercorn",
+      "ragu-alla-bolognese"
     ]
   },
   {
@@ -953,7 +958,7 @@
     "recipes": [
       "sauce-tomate-classical",
       "tarte-au-citron",
-      "cacio-e-pepe"
+      "cooked-meringue-italian-and-swiss"
     ]
   },
   {
@@ -1211,9 +1216,9 @@
     "category": "Cheese Atlas",
     "definition": "'Recooked': traditionally not a cheese at all but a by-product: whey left from cheesemaking reheated until its remaining proteins flock into sweet, fluffy curds. Fresh ricotta (sheep's-whey Roman ricotta is the benchmark) bears no resemblance to the grainy supermarket tub: seek basket ricotta or make it (whole milk + acid, 20 minutes). Drain it overnight for cannoli and fillings: wet ricotta is the assassin of Sicilian pastry. RICOTTA SALATA is the pressed, salted, aged version: snowy, firm, grated over pasta alla Norma.",
     "recipes": [
+      "ravioli-di-ricotta-the-seal",
       "cannoli-siciliani",
-      "tortelli-derbetta-di-parma",
-      "pasta-alla-norma"
+      "tortelli-derbetta-di-parma"
     ]
   },
   {
@@ -1926,8 +1931,8 @@
     "definition": "CURE #1 (pink salt, 6.25% sodium nitrite): for short cures and anything smoked or cooked: bacon, pastrami, sausages; nitrite blocks Clostridium botulinum, fixes the rosy color, and builds 'cured' flavor. CURE #2 (nitrite + nitrate): for long dry cures; the nitrate is a time-release reservoir that bacteria slowly convert to nitrite over months of salami and ham aging. Both are dyed pink to prevent tragic salt mix-ups and used in grams per kilo, weighed on a scale, never eyeballed. 'Uncured' supermarket bacon uses celery-powder nitrate, the same chemistry wearing a garden costume. Respect the numbers and this is settled, safe science; wing it and it is the one place in cooking where confidence can genuinely hurt someone.",
     "recipes": [
       "grilled-veal-sweetbreads",
-      "buttermilk-biscuits",
-      "menemen"
+      "terrine-de-campagne",
+      "chicken-liver-parfait-butter-emulsion-method"
     ]
   },
   {
@@ -2035,7 +2040,7 @@
     "recipes": [
       "cioppino",
       "cong-shao-hai-shen",
-      "ragu-alla-bolognese"
+      "sauce-bearnaise"
     ]
   },
   {
@@ -2173,8 +2178,8 @@
     "definition": "Wines strengthened with spirit, built to end evenings. PORT (Douro): RUBY and LBV (fruit-forward, ready), TAWNY (barrel-aged to caramel-fig: the 10/20/30-year ladder; serve slightly cool), VINTAGE (declared years, decades of cellar, decanted off sediment), Stilton's statutory partner and chocolate's rare wine ally (sweeter than the dessert: the law holds). MADEIRA: heated and oxidized ON PURPOSE (estufagem): effectively immortal once opened, running Sercial (dry) to Malmsey (rich), history in a glass (it crossed oceans as ballast and improved). SAUTERNES, Tokaji, ice wine and the late-harvest school complete the sweet flight: botrytis 'noble rot' concentrating nectar, foie gras and blue cheese pairings that predate every trend. Dessert wine sells by the OUNCE beautifully; a fortified list is high-margin patience in bottles.",
     "recipes": [
       "chicken-liver-parfait",
-      "halo-halo",
-      "francesinha"
+      "chicken-liver-parfait-butter-emulsion-method",
+      "halo-halo"
     ]
   },
   {
@@ -2196,7 +2201,7 @@
     "recipes": [
       "cholar-dal",
       "muhammara",
-      "crepes"
+      "cream-reduction-the-sauce-that-may-boil"
     ]
   },
   {
@@ -2359,7 +2364,7 @@
     "recipes": [
       "zhoug-akhdar",
       "brined-whole-roast-cauliflower",
-      "arachuvitta-sambar"
+      "dukkah"
     ]
   },
   {
@@ -2379,9 +2384,9 @@
     "category": "Spice Atlas",
     "definition": "Most 'cinnamon' isn't. TRUE CEYLON cinnamon (Sri Lanka): papery multi-layered quills, delicate, citrus-floral, low in coumarin: the choice for Mexican canela (tres leches, horchata, mole), where its subtlety is structural. CASSIA (most US/Asian market 'cinnamon': Indonesian, Chinese, Saigon): thick single-scroll bark, hotter, sweeter, louder: right for cinnamon rolls, five-spice, and pho, where volume is the job. Neither is 'fake'; they are different instruments. Sticks infuse braises and syrups and come out; ground goes stale in months (the sniff test: no tingle, no purchase). The pro move for baking: freshly grind cassia and it stops tasting like memory and starts tasting like fire-sweet bark.",
     "recipes": [
+      "mutton-bunny-chow",
       "tres-leches",
-      "weeknight-chicken-biryani",
-      "massaman-curry"
+      "weeknight-chicken-biryani"
     ]
   },
   {
@@ -2392,7 +2397,7 @@
     "recipes": [
       "pan-con-tomate",
       "lao-beijing-zhajiangmian",
-      "pollo-al-ajillo"
+      "ragout-de-boulettes"
     ]
   },
   {
@@ -2456,9 +2461,9 @@
     "category": "Spice Atlas",
     "definition": "The orchid fruit and the second-priciest spice, hand-pollinated (every commercial bean, one flower, one human thumb, one morning), cured for months into leathery pods packing hundreds of aroma compounds beyond vanillin. The fluency: MADAGASCAR/BOURBON: classic creamy-rich; TAHITIAN: floral, cherry-anise, dessert-forward; MEXICAN: the original, woody-spiced. Formats by job: whole beans split-and-scraped for custards (the seeds are the visible signature; steep the spent pod in sugar: vanilla sugar is free money); PASTE for seed-flecked convenience; pure EXTRACT for batters (alcohol-borne aroma bakes in); imitation vanillin is one note of a chord: fine in high-heat, high-sugar contexts, hollow in cold creams. 'Plain vanilla' is history's greatest slander; treat it as a spice, not a default.",
     "recipes": [
+      "vanilla-souffle-on-a-patissiere-base",
       "creme-brulee",
-      "chocolate-chip-cookies",
-      "vanillekipferl"
+      "chocolate-chip-cookies"
     ]
   },
   {
@@ -2557,7 +2562,7 @@
     "recipes": [
       "cullen-skink",
       "sarde-a-beccafico-alla-palermitana",
-      "bacalhau-a-bras"
+      "moros-y-cristianos"
     ]
   },
   {
@@ -2738,7 +2743,7 @@
     "recipes": [
       "boudin-noir-aux-pommes",
       "pork-rillettes",
-      "beef-and-broccoli"
+      "terrine-de-campagne"
     ]
   },
   {
@@ -2766,7 +2771,9 @@
     "term": "Dukkah",
     "category": "Spice Atlas",
     "definition": "Egypt's nut-and-spice crumble, 'to pound': toasted hazelnuts (or almonds, chickpeas) crushed coarse with toasted sesame, coriander, cumin, salt, and pepper into something between a spice blend and a snack; traditionally eaten by dunking bread first in olive oil, then in dukkah, a three-part breakfast older than the pyramids' neighborhood cafés. The modern kitchen adopted it as a TEXTURE spice: crusted on seared tuna and lamb, showered over roasted carrots, hummus, avocado toast, soft eggs, and grain bowls: anywhere a dish needs crunch, toast, and warm spice in one move. The formula generalizes (pistachio-fennel dukkah, walnut-urfa versions) and keeps for weeks airtight. It completes a thought this atlas keeps having: spices are not only flavors; they are textures, and dukkah is the proof you can eat by the spoonful.",
-    "recipes": []
+    "recipes": [
+      "dukkah"
+    ]
   },
   {
     "slug": "old-bay-creole-and-the-american-tins",
@@ -2887,9 +2894,9 @@
     "category": "Knife & Equipment Atlas",
     "definition": "The metallurgy every knife decision hides. CARBON STEEL: takes the keenest edge, sharpens easily, and RUSTS. It develops a blue-gray PATINA (a protective, badge-of-use oxide; force one with mustard or citrus) but demands wipe-dry discipline; onions and acid will taste metallic until the patina settles. STAINLESS: chromium armor, low maintenance, slightly tougher to sharpen to the same bite; modern powder steels (VG-10, SG2/R2, S35VN) close the gap at a price. HRC (Rockwell hardness): ~54–58 = tough, flexible, frequent quick honing (German school); 60–65 = holds an edge for weeks but CHIPS instead of rolling (Japanese school). The trade triangle to memorize, hardness vs. toughness vs. corrosion resistance: every knife is a chosen compromise, and knowing which compromise you bought is knowing how to treat it.",
     "recipes": [
+      "the-deglazed-pan-sauce-white-wine-and-shallot",
       "banh-xeo",
-      "pizza-margherita",
-      "lahmacun"
+      "pizza-margherita"
     ]
   },
   {
@@ -2944,7 +2951,7 @@
     "recipes": [
       "banh-xeo",
       "ohio-goetta",
-      "pizza-margherita"
+      "the-deglazed-pan-sauce-white-wine-and-shallot"
     ]
   },
   {
@@ -2964,7 +2971,9 @@
     "category": "Knife & Equipment Atlas",
     "definition": "The workhorse of the modern professional kitchen: an aluminum (or copper) core bonded wall-to-wall inside stainless skins: stainless for durability and non-reactivity (wine, tomato, cream sauces welcome), the core for even, responsive heat that plain stainless can't dream of. It is the FOND factory: food sticks by design, browns deeply, and releases when the crust is ready, then deglazes into pan sauces (the deglaze entry's entire economy runs on this pan). Technique that ends the 'everything sticks' complaint: preheat properly (water drop should skitter as a mercury bead, the Leidenfrost test), then oil, then food, then patience. Buy fully-clad (not disc-bottom, whose walls scorch), a 10–12\" skillet and a 3–4qt saucier as the core pair, and know that this is the pan category where buy-it-for-life pricing is genuinely rational.",
     "recipes": [
-      "gui-hua-nuomi-ou"
+      "gui-hua-nuomi-ou",
+      "hollandaise-and-the-two-ways-it-splits",
+      "the-deglazed-pan-sauce-white-wine-and-shallot"
     ]
   },
   {
@@ -3411,7 +3420,7 @@
     "recipes": [
       "beurre-blanc",
       "matzo-ball-soup",
-      "creme-brulee"
+      "beurre-blanc-the-cold-butter-mount"
     ]
   },
   {
@@ -3431,9 +3440,9 @@
     "category": "Cocktail & Bar",
     "definition": "The gentle-violence techniques. MUDDLING: pressing (not pulverizing) ingredients in the glass or tin: mint is PRESSED to release oils (shredded mint turns bitter and gritty: the mojito and julep law: spank the bouquet, don't murder it), citrus wedges and sugar are crushed with intent (caipirinha, old-fashioned's fruit era), berries flattened. The SWIZZLE: the Caribbean's rotary technique: a swizzle stick (traditionally the bois lélé branch) spun between palms in a crushed-ice drink until the glass FROSTS: the Queen's Park Swizzle's genre. BUILT drinks: assembled directly in the serving glass over ice, no tin at all (highballs, G&Ts, spritzes, the Negroni's lazy-correct variant) where a gentle stir replaces machinery. The spectrum, named: built (gentlest) → stirred → swizzled → shaken (most violent) → blended (the frozen wing); matching agitation to the drink's ingredients is the whole of technique, and the guest tastes the match.",
     "recipes": [
+      "salade-composee-built-in-layers",
       "thieboudienne",
-      "moqueca-baiana",
-      "apfelstrudel"
+      "moqueca-baiana"
     ]
   },
   {
@@ -3622,9 +3631,9 @@
     "category": "Cocktail & Bar",
     "definition": "The kitchen's mise en place doctrine, rebuilt at the rail. The station's law: everything used in service within THREE STEPS and one reach: jiggers and spoons in the same slot every shift (muscle memory is speed), the speed rail's bottle order memorized like a keyboard, tins and strainers staged in pairs, the juice program's bottles dated and rail-ready (the citrus entry's par system), syrups labeled in squeeze bottles (the plating wing's line-work tools moonlighting), garnish tray stocked and covered, ice bins FULL at open (running for ice mid-rush is the bar's walk of shame). Pre-service checklist culture: chilled glassware racked (the chill law at scale), vermouth fresh (the entry's refrigeration law), egg whites or aquafaba portioned, the well faced and full. Service discipline: work clean AS you go (a wiped rail between rounds), close-out standards (burn the ice, wash the tins, date the juices, restock to par for the opener: the person you're setting up is tomorrow's you). The transferable thesis, one last time: a bar station and a sauté station are the same organism: mise, reach, repetition, and respect for the next shift; master one and you can read the other at a glance.",
     "recipes": [
+      "lasagne-sheets-laminated-egg-dough",
       "tres-leches",
-      "apple-pie",
-      "rum-punch"
+      "apple-pie"
     ]
   },
   {
@@ -3656,7 +3665,8 @@
     "definition": "Before a dollar moves, the concept must be one sentence a stranger repeats correctly: cuisine, price point, service style, and the reason it wins its block ('wood-fired Gulf seafood, $$$, 60 seats, the only raw bar in the neighborhood'). The business plan translates it for money: concept and menu, market analysis, competitive positioning, management team (investors fund OPERATORS: your résumé is collateral), full financial projections, and the ask. The discipline is the point more than the document: writing it exposes the fantasy math early, while it's still free to fix. The one-page version matters most: every lease, loan, and hire will be negotiated by someone who read only that page. And the concept test that predicts survival: does it work on a rainy Tuesday in February, or only on opening night?",
     "recipes": [
       "mate",
-      "new-haven-white-clam-apizza"
+      "new-haven-white-clam-apizza",
+      "beurre-blanc-the-cold-butter-mount"
     ]
   },
   {
@@ -3898,9 +3908,9 @@
     "category": "Restaurant Finance & Opening",
     "definition": "The most emotionally and legally charged money in the building. THE US LANDSCAPE: TIP CREDIT states allow a lower cash wage (federal floor $2.13) where tips bridge to minimum, with strict rules (the credit dies if tips fall short, and non-tipped work hours are regulated); several states (California, Washington, others) require full minimum wage BEFORE tips. TIP POOLING: legal among customarily tipped staff; MANAGERS AND OWNERS MAY NEVER TOUCH THE POOL (federal law, ruinous penalties, the most common violation in the industry); back-of-house inclusion is allowed only where no tip credit is taken. The structural choices: traditional tipping (server-keeps, plus tip-outs to support staff: transparent percentages, in writing), full pools (team culture, requires trust and clear math), SERVICE CHARGES (a mandatory % that is legally the RESTAURANT'S revenue: distributable as wages, taxed differently, must be disclosed clearly to guests): the vehicle behind most 'hospitality included' and back-of-house equity experiments, with real gains (wage stability, kitchen parity) and real risks (guest confusion, server flight in tipping markets). The counsel: whatever the model, document it, disclose it, apply it identically, and have an employment lawyer bless it; tip litigation is the industry's most preventable catastrophe.",
     "recipes": [
+      "green-salad-dressed-at-the-pass",
       "country-ham-with-redeye-gravy",
-      "manoushe-zaatar",
-      "ajiaco-santafereno"
+      "manoushe-zaatar"
     ]
   },
   {
@@ -4006,8 +4016,8 @@
     "definition": "Who runs what, and what it costs. THE INDEPENDENT'S CORE: GM (the business's daily CEO: floor, P&L, people; pay well, this hire is half your outcome), EXECUTIVE CHEF or KM (the brigade entry's summit: menu, kitchen labor, COGS ownership), and the second tier as volume justifies: AGM/service manager, sous chefs (the succession bench), bar manager (the pour-cost entry's steward), events/catering lead. THE STRUCTURAL CHOICES: chef-owner wearing the exec hat (saves salary, costs bandwidth; the owner's-job entry warns), the operating-partner model (equity slices buying GM-level commitment: align the deal-structure entry's terms), and the discipline of REAL job descriptions with REAL authority: a manager accountable for labor % must control the schedule; responsibility without levers is theater. THE SALARY MATH: management payroll is the fixed-labor floor from the labor entry; right-size titles to revenue ($2M restaurants don't need directors), and remember exempt-status law (salaried 'managers' who mostly cook and clean below the duties test are overtime lawsuits deferred). THE MEETINGS RHYTHM: weekly manager meeting with the dashboard (numbers, staffing, 86 list, guest feedback), pre-shift daily (the family-meal entry's other half), and quarterly deep reviews. Structure follows strategy: build the chart the concept needs, staff it with people who could run their own, and give them enough rope to prove it, because the growth entry requires a bench you've already built.",
     "recipes": [
       "basque-burnt-cheesecake",
-      "pavlova",
-      "molten-chocolate-cake"
+      "green-salad-dressed-at-the-pass",
+      "pavlova"
     ]
   },
   {
@@ -4342,8 +4352,8 @@
     "definition": "The modern steakhouse's quiet revolution, solving the classic sear's oldest flaw: the GRAY BAND, the overcooked ring between crust and rosy center left by high heat traveling inward. THE METHOD, inverted: cook LOW first (oven at 120°C, or the smoker, or sous vide, until the interior sits 10–15°C below target), rest briefly, then sear at maximum violence for 60–90 seconds a side; the surface, already dried by the low oven, browns almost instantly with no time to overshoot the interior. RESULTS: edge-to-edge even doneness, a crust the equal of any classical sear, a wider timing window (the low phase is nearly unhurriable), and a built-in dry-brine effect. BEST FOR: thick steaks and chops (under 3cm, classical searing still wins on simplicity), roasts (the low-then-blast strategy from the roasting entry is this technique at scale), and anything where 'perfectly pink throughout' is the promise. The name is new; the physics (gentle heat for the inside, fierce heat for the outside, never asking one fire to do both jobs) is the oldest wisdom in this wing wearing a fresh apron.",
     "recipes": [
       "awaze-tibs",
-      "chicken-piccata",
-      "sole-meuniere"
+      "kangaroo-loin-with-mountain-pepperberry",
+      "chicken-piccata"
     ]
   },
   {
@@ -4429,9 +4439,9 @@
     "category": "The Seasonal Larder",
     "definition": "The pome fruits are autumn's harvest (September–November north) but WINTER'S fruit: bred for the cellar centuries before refrigeration, which is why they anchor cold-month tables from Normandy to Nagano. The world map: apples walked out of Kazakhstan's wild forests (Almaty means 'father of apples') into ten thousand cultivars: the cook cares about the split between EATERS (Honeycrisp, Fuji, Gala), COOKERS that hold shape (Granny Smith, Braeburn) or collapse on purpose (Bramley, the British pie doctrine), and CIDER apples too tannic to eat; pears divide into European butter-flesh (Comice, Bartlett/Williams, Anjou: ripened OFF the tree, the crucial rule) and Asian crisp-flesh (nashi) that eat like apples. Kitchen calendar: fresh-crop autumn apples snap; by spring, storage apples soften toward sauce and cake. Quince, the family's perfumed third sibling, is October's inedible-raw, glorious-cooked argument for patience, Persia to Spain's membrillo. Southern harvest: March–May, which is why Kiwi and Tasmanian fruit fills the northern spring.",
     "recipes": [
+      "ketchup-aux-fruits",
       "apple-pie",
-      "rotkohl",
-      "apfelstrudel"
+      "rotkohl"
     ]
   },
   {
@@ -4577,9 +4587,9 @@
     "category": "The Seasonal Larder",
     "definition": "The onion family seems seasonless because it is CURED: bulb onions and garlic are summer harvests (July–August north) dried down for storage, which is why the pantry never runs out and why 'fresh' alliums are the actual seasonal event. The spring exceptions are the Larder's opening act: ramps/wild garlic carpeting eastern-American and European woods (April, the foraging festival with sustainability manners: take leaves, spare bulbs), green garlic (immature, mild, the whole stalk usable), spring onions and calçots (Catalonia's charred-onion festival with romesco, January–April: an entire cuisine built on one allium's window), and chive blossoms. The cured-world map: sweet onion appellations (Vidalia, Walla Walla, Cévennes), pink Roscoff braids, garlic's own harvest festivals and the green-shoot rule for winter cloves (germ out when sprouted). Autumn plants next year's garlic; summer braids this year's: the allium year is a circle, and the kitchen mostly meets it mid-cure.",
     "recipes": [
+      "kokoda",
       "jerk-chicken",
-      "empanadas-saltenas",
-      "colcannon"
+      "empanadas-saltenas"
     ]
   },
   {
