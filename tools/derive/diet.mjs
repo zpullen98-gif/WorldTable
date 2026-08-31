@@ -191,6 +191,10 @@ const EXCEPTIONS = [
 	'vegetable stock', 'vegetable broth', 'mushroom stock', 'chicken of the woods',
 	'hamburger bun', 'hamburger buns', 'chickpea', 'chickpeas', 'beefsteak tomato',
 	'beefsteak tomatoes', 'meaty mushroom', 'meat-free', 'meatless',
+	// A marrow is a squash, and Hungarian tokfozelek is built on one. Bone
+	// marrow is not, and the offal list catches that through 'bone', so only
+	// the vegetable forms are masked here.
+	'marrow squash', 'vegetable marrow', 'marrowfat pea', 'marrowfat peas',
 	// fish-shaped, not fish
 	'fish-shaped', 'crabapple', 'crab apple', 'vegan fish sauce',
 	// Shellfish-shaped, not shellfish. King oyster is a mushroom, and the
