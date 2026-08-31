@@ -161,6 +161,7 @@ export const STATION_MAP = {
 	"Folding: keeping the air in": ["patissier"],  // Unanimous.
 	"Fresh pasta": ["patissier"],  // Contested, and the sharpest call on the board. Entremetier audit struck it: the anchor is 'Gluten & Hydration', the same baker's entry that anchors K
 	"Gnocchi": ["entremetier"],  // New with the Pasta & Fresh Dough chapter. A potato dumpling is starch cookery before it is pasta, and the entremetier owns the potato.
+	"Poaching eggs": ["entremetier"],  // New with Garde Manger and the Lyonnaise salad. Eggs are entremetier in this brigade mapping, and a poached egg is a garnish or a course of its own rather than a sauce or a roast.
 	"Frying the paste until the oil splits": ["saucier"],  // Unanimous. Declined the entremetier audit's addition: this is a sauce base, and the guide's brigade entry gives sauces to the saucier by name.
 	"Griddle & plancha work": ["rotisseur"],  // Contested. Entremetier audit disowned it: the definition sells the flat-top on 'smash burgers' entire physics', and the roster is cheesesteaks, reuben
 	"Grilling over live coals": ["rotisseur"],  // Unanimous.

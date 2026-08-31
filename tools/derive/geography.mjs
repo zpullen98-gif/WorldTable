@@ -39,7 +39,7 @@ export const ATLAS_OF_CHAPTERS = {
 			'Bengali',
 			'Kerala & the Malabar Coast'
 		],
-		Japan: ['Japanese'],
+		Japan: ['Japanese', 'Kansai & Osaka', 'Kyoto & Kaiseki', 'Okinawa'],
 		Korea: ['Korean'],
 		Thailand: ['Thai'],
 		Vietnam: ['Vietnamese'],
@@ -59,8 +59,14 @@ export const ATLAS_OF_CHAPTERS = {
 	},
 	Europe: {
 		Italy: ['Italian', 'Emilia-Romagna', 'Sicilian'],
-		France: ['French'],
-		Spain: ['Spanish'],
+		France: [
+			'French',
+			'Lyon & Burgundy',
+			'Provence & the Midi',
+			'Alsace & the North',
+			'The French Basque & Gascony'
+		],
+		Spain: ['Spanish', 'Basque & Navarre', 'Catalonia', 'Andalusia'],
 		Portugal: ['Portuguese'],
 		Greece: ['Greek'],
 		Germany: ['German'],

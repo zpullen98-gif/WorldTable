@@ -204,8 +204,8 @@
     "definition": "BABY BACKS come from up near the loin: smaller, leaner, faster, pricier. SPARE RIBS come from the belly side: bigger, fattier, more flavor, the pitmaster's preference. ST. LOUIS CUT is spares squared off (tips and cartilage removed) for even cooking and neat presentation; the trimmed rib tips are their own delicacy. Membrane off the bone side always; the bend test beats the falling-off-the-bone myth.",
     "recipes": [
       "kansas-city-barbecue-ribs",
-      "golubtsy",
-      "shepherds-pie"
+      "soki-soba",
+      "golubtsy"
     ]
   },
   {
@@ -281,7 +281,8 @@
     "definition": "To cook and preserve in fat: canonically duck legs salted overnight, then poached submerged in duck fat at ~90°C until spoon-tender, stored under that fat where they keep (and improve) for weeks. The technique generalizes: garlic confit, tomato confit, tuna confit. Low temperature plus fat's moisture barrier equals tenderness without drying, the ancestral sous vide. Crisp the skin in a pan before serving; the fat is reusable treasure.",
     "recipes": [
       "confit-duck-leg",
-      "pollo-al-ajillo"
+      "garbure-bearnaise",
+      "gesiers-de-canard-confits"
     ]
   },
   {
@@ -309,8 +310,8 @@
     "definition": "The two body plans behind all fish butchery. ROUND FISH (salmon, bass, snapper) swim upright and yield two fillets, one per side. FLAT FISH (sole, halibut, flounder, turbot) lie on the seabed, both eyes migrated to one side, and yield four fillets: two large from the top, two small from the bottom. Different filleting strokes, different portioning math, and the flatfish's fifth 'cut', the collar-fringed frill, is a delicacy the trade keeps.",
     "recipes": [
       "sea-trout-filleted-and-cured",
-      "quick-pho-ga",
-      "salsa-verde-italian"
+      "kokotxas-de-merluza-en-salsa-verde",
+      "quick-pho-ga"
     ]
   },
   {
@@ -573,7 +574,9 @@
     "term": "Seasonality & Ripeness",
     "category": "Vegetables & Produce",
     "definition": "The restaurateur's produce truth: an in-season vegetable at peak needs technique subtracted, not added: August tomatoes want salt and nothing; February tomatoes want roasting and apology. CLIMACTERIC fruits (tomatoes, stone fruit, bananas, avocados) ripen after picking; NON-CLIMACTERIC (berries, citrus, grapes, peppers) never improve, only decline. Buy them ripe or not at all. Menu writing begins at the market calendar, and food cost improves when the menu follows the season instead of fighting it.",
-    "recipes": []
+    "recipes": [
+      "poires-a-la-beaujolaise"
+    ]
   },
   {
     "slug": "tubers-roots-and-rhizomes",
@@ -661,9 +664,9 @@
     "category": "Techniques: Heat & Precision",
     "definition": "Three temperatures pretending to be one method. POACH: 71–82°C, water barely shivering: eggs, fish, chicken breast, anything delicate that violent bubbles would shred. SIMMER: 85–95°C, lazy bubbles: stocks, braises, beans, sauces. BOIL: 100°C rolling: pasta, blanching, potatoes, and almost nothing made of protein. The most common home error is treating these as synonyms; the most common professional discipline is watching the bubbles, not the dial. Salt poaching liquids and courts-bouillons like they are the sauce, because for those minutes they are.",
     "recipes": [
-      "tteokbokki",
-      "chicken-paprikash",
-      "champ"
+      "oeufs-en-meurette",
+      "poires-a-la-beaujolaise",
+      "tteokbokki"
     ]
   },
   {
@@ -1045,7 +1048,8 @@
     "definition": "The fifth taste, savoriness, is glutamate and its nucleotide amplifiers (inosinate in meat and bonito, guanylate in dried mushrooms), and they MULTIPLY when combined: dashi (kombu + katsuobushi), tomato + parmesan, mushroom + soy. The chef's umami arsenal: parmesan rinds, anchovies and fish sauce, miso, dried mushrooms, tomato paste, aged cheeses, Marmite, kombu, and plain MSG, which is simply glutamate isolated, safe by every major food authority's judgment, and quietly present in half the pantry anyway. Professional seasoning is a three-axis game: salt, acid, and umami: when a dish is 'missing something' and salt isn't it, it's one of the other two.",
     "recipes": [
       "banh-mi-op-la",
-      "hoppin-john"
+      "hoppin-john",
+      "kansai-kake-jiru-usukuchi-noodle-broth"
     ]
   },
   {
@@ -1326,7 +1330,9 @@
     "term": "Munster",
     "category": "Cheese Atlas",
     "definition": "Alsace's washed-rind heavyweight (no relation whatsoever to the mild American 'muenster' that borrowed the name and dropped the character): monk-made origins, brine-washed to a sticky orange rind, with a barnyard boom and a supple, sweet-milk interior. Locals eat it the peasant way: with boiled potatoes and cumin or caraway seeds, and a Gewürztraminer whose lychee sweetness meets the funk head-on, one of the great regional pairings in all of cheese. Serve it last on the board; nothing follows Munster.",
-    "recipes": []
+    "recipes": [
+      "munster-au-cumin-et-pommes-de-terre-en-robe"
+    ]
   },
   {
     "slug": "gruyere",
@@ -1381,7 +1387,9 @@
     "term": "Idiazábal",
     "category": "Cheese Atlas",
     "definition": "Basque country's shepherd cheese, raw milk from Latxa sheep, pressed, aged, and traditionally SMOKED (a happy accident of wheels stored near hearth chimneys, now signature): beechwood perfume over buttery, lanolin depth. The pintxo bars slice it with membrillo or walnuts; the modern Basque kitchen shaves it over grilled leeks and wood-fired anything, where the smoke rhymes. Alongside Roncal and Ossau-Iraty (the French Basque sibling), it maps the Pyrenean sheep's-milk belt: one mountain range, one style, two passports.",
-    "recipes": []
+    "recipes": [
+      "idiazabal-con-membrillo-casero"
+    ]
   },
   {
     "slug": "serra-da-estrela",
@@ -1675,9 +1683,9 @@
     "category": "Charcuterie Atlas",
     "definition": "Spain's mountain ham ('sierra' = mountain range): white-breed pigs, salt, and 12–24 months of dry mountain air: firmer, saltier, and more savory-direct than Italian prosciutto, the daily ham of every Spanish bar where legs stand clamped in jamoneros like national monuments. Grades by cure length (bodega → reserva → gran reserva). Its highest culinary calling beyond the plate: draped over warm pan con tomate, wrapped around grilled asparagus, or crisped into shards that out-bacon bacon. Serrano is the workhorse; ibérico, next entry, is the thoroughbred: a menu needs to know which it is paying for.",
     "recipes": [
-      "guacamole",
-      "croquetas-de-jamon",
-      "idaho-basque-croquetas"
+      "salmorejo-cordobes",
+      "huevos-a-la-flamenca",
+      "guacamole"
     ]
   },
   {
@@ -1687,7 +1695,8 @@
     "definition": "The summit of world charcuterie: black-hoofed Iberian pigs whose genetics marble fat INTO the muscle, cured 24–48 months. The label's color code is the entire price ladder: BLACK (100% ibérico, acorn-fed 'de bellota': free-range oak pasture, oleic-acid fat that melts at room temperature and tastes of the dehesa), RED (bellota, crossbred), GREEN (cebo de campo, pasture and feed), WHITE (cebo, feed-raised). Serve at warm room temperature in small translucent cuts, hand-carved along the muscle; the glistening is the point. The back-of-house truth: a whole bellota leg is a masterclass in yield management; carve it well and it is a menu; carve it badly and it is a loss.",
     "recipes": [
       "croquetas-de-jamon",
-      "idaho-basque-croquetas"
+      "idaho-basque-croquetas",
+      "salmorejo-cordobes"
     ]
   },
   {
@@ -1744,9 +1753,9 @@
     "category": "Charcuterie Atlas",
     "definition": "France's great air-dried ham, Basque-country legs salted with Salies-de-Béarn's spring salt and dried in Adour valley air (IGP): milder and moister than Spanish serrano, sweeter-nutty, the aperitif ham of the southwest folded beside melon and piment d'Espelette. The wider French ham vocabulary a menu should command: JAMBON DE PARIS: brined, gently COOKED ham, the jambon-beurre baguette's soul (a great cooked ham is a craft, not a compromise); jambon persillé: Burgundy's parsleyed ham terrine set in gelée. France cures less flamboyantly than Iberia and cooks ham better than anyone; both facts belong in your program.",
     "recipes": [
-      "ratatouille",
-      "sauce-tomate-classical",
-      "california-french-dip"
+      "poulet-basquaise",
+      "garbure-bearnaise",
+      "ratatouille"
     ]
   },
   {
@@ -1754,7 +1763,9 @@
     "term": "Saucisson Sec",
     "category": "Charcuterie Atlas",
     "definition": "France's dry-cured sausage archetype: coarse pork, garlic, wine, black pepper, aged under its white bloom until firm with a gentle tang: the picnic's centerpiece, the apéro's opening move, sliced thick on a board with cornichons, butter, and baguette (the butter is not optional in France and should not be optional anywhere). Variants map the country: rosette de Lyon (large, refined), saucisson d'Arles, versions with hazelnuts, Beaufort cheese, or figs. The service ritual matters: peel as you slice, cut coins on a slight bias, room temperature always; a cold saucisson is a mute one.",
-    "recipes": []
+    "recipes": [
+      "saucisson-de-lyon-en-brioche"
+    ]
   },
   {
     "slug": "pate-and-terrine",
@@ -1795,9 +1806,9 @@
     "category": "Charcuterie Atlas",
     "definition": "Fattened duck or goose liver: served hot-seared (a minute per side in a dry screaming pan, deglazed with something sweet-acid) or cold as TERRINE / AU TORCHON: deveined, cured, rolled in a towel ('torchon'), poached barely (mi-cuit = half-cooked), and sliced into rosy coins with brioche and a sweet-tart counterpoint (Sauternes gelée, fruit chutney). Grades A/B/C by size and integrity; A for torchon, B for hot service and mousse. The professional reality a restaurateur must hold honestly: gavage is contested and banned in some jurisdictions: know your local law, your sourcing (some producers pursue ethical alternatives, including wild-gorged 'natural' foie), and your clientele. Serve it with intention or not at all.",
     "recipes": [
+      "foie-gras-de-canard-poele-au-verjus",
       "king-cake",
-      "ajiaco-santafereno",
-      "taiwanese-beef-noodle-soup"
+      "ajiaco-santafereno"
     ]
   },
   {
@@ -1891,8 +1902,8 @@
     "definition": "No cheese involved: the head's rich meats (cheek, jowl, tongue) simmered until the collagen liquefies, picked, seasoned sharply with vinegar and herbs, and set in their own gelatin into a sliceable mosaic: fromage de tête in France, testa in cassetta in Italy, sülze in Germany, Pennsylvania Dutch souse with extra vinegar. The garde manger's waste-nothing masterpiece and the purest demonstration that gelatin is flavor's architecture. Serve cool, sliced thin, with mustard, rye, and pickles; the acid in the set and on the plate is what makes richness read as brightness. Win the skeptic with the slice before the name: a recurring theme in this atlas, because it works.",
     "recipes": [
       "adjika",
-      "cacio-e-pepe",
-      "quiche-lorraine"
+      "munster-au-cumin-et-pommes-de-terre-en-robe",
+      "cacio-e-pepe"
     ]
   },
   {
@@ -1997,7 +2008,7 @@
     "recipes": [
       "gravlax",
       "hot-and-sour-soup",
-      "pasta-e-fagioli"
+      "ikayaki-sennichimae-style"
     ]
   },
   {
@@ -2023,7 +2034,9 @@
     "term": "Oak, Malolactic & Lees",
     "category": "Wine & Beverage",
     "definition": "The winemaker's texture toolkit, tasted daily and named rarely. OAK (new barrels especially, French subtle/American loud) adds vanilla, spice, toast, and tannin: Rioja's coconut warmth, Napa Chardonnay's butterscotch. MALOLACTIC CONVERSION turns sharp malic acid (green apple) into soft lactic (cream): the 'buttery' in buttery Chardonnay is literally diacetyl, butter's own molecule; crisp whites (most Riesling, Albariño) skip it. LEES AGING (sur lie, resting on spent yeast) builds bready, creamy breadth: Champagne's brioche, Muscadet's texture. Read a wine's richness through these three levers and 'I taste vanilla-cream-toast' becomes 'new oak, full malo, long lees': sommelier fluency in one entry.",
-    "recipes": []
+    "recipes": [
+      "kasujiru-nada-style"
+    ]
   },
   {
     "slug": "vintage-nv-and-minerality",
@@ -2072,8 +2085,8 @@
     "definition": "The heartbreak grape: thin-skinned, site-obsessed, and at its peak (the Côte d'Or's village-premier-grand cru ladder) the most transparent expression of terroir in red wine: cherry, forest floor, silk tannin, high acid. That structure makes it the SOMMELIER'S SWISS ARMY KNIFE: the red that crosses to fish (salmon, tuna), loves duck, mushrooms, and roast chicken, and rescues 'one bottle for the whole table' negotiations nightly. New World fluency: Willamette (nervy), Sonoma Coast, Central Otago (dark and plush). If the food list leans poultry, pork, mushroom, and fatty fish, Pinot's the by-the-glass workhorse; price it like the friend it is.",
     "recipes": [
       "boeuf-bourguignon",
-      "oregon-pinot-noir-braised-short-ribs",
-      "boudin-noir-aux-pommes"
+      "oeufs-en-meurette",
+      "oregon-pinot-noir-braised-short-ribs"
     ]
   },
   {
@@ -2254,9 +2267,9 @@
     "category": "Wine & Beverage",
     "definition": "Temperature is a seasoning: premium ginjo/daiginjo CHILLED (heat burns off the aromatics you paid for); junmai and honjozo shine warm (kanzake, ~40–50°C: gentle bath, never microwave-scorched), where warmth blooms umami for winter food. Pairing is sake's quiet superpower: LOW ACID + HIGH UMAMI + NO TANNIN means it never fights; it bridges. The famous fixes: sake + uni/roe/oily fish (where wine turns metallic, sake glides), sake + fried food (karaage, tempura), sake + aged cheese (the pairing that converts wine people), sake + anything soy-glazed (congruent umami). Serve in a wine glass for aromatics, ochoko for ritual; both are correct. A Japanese-leaning menu without a sake page is leaving both delight and margin on the table.",
     "recipes": [
+      "kyo-yasai-no-takiawase",
       "chicken-teriyaki",
-      "hane-tsuki-gyoza",
-      "ajiaco-santafereno"
+      "hane-tsuki-gyoza"
     ]
   },
   {
@@ -2351,9 +2364,9 @@
     "category": "Spice Atlas",
     "definition": "The world's second-most-traded spice and the earthy backbone of an astonishing belt: Mexican adobos, Texan chili, North African tagines, Middle Eastern kofta, Indian jeera rice, Xinjiang lamb skewers, one seed threading four continents. Warm, smoky-sweet, slightly bitter; its flavor doubles when TOASTED whole and triples when ground fresh from toasted seed (the pre-ground jar is a different, dustier spice). The professional's distinction: whole seeds bloomed in hot oil (the tadka move) release differently than ground stirred into a braise; many cuisines deploy both stages in the same dish. If a savory dish tastes 'somehow flat' across half the world's cuisines, cumin is the first suspect to interrogate.",
     "recipes": [
+      "munster-au-cumin-et-pommes-de-terre-en-robe",
       "aloo-gobi",
-      "raita",
-      "mujadara"
+      "raita"
     ]
   },
   {
@@ -2529,7 +2542,7 @@
     "recipes": [
       "white-mountain-venison-stew",
       "alaska-moose-stew",
-      "bigos"
+      "choucroute-garnie-a-lalsacienne"
     ]
   },
   {
@@ -2560,9 +2573,9 @@
     "category": "Spice Atlas",
     "definition": "The most doubted spice in the drawer, and the doubt is a freshness problem, not a flavor one. TRUE Mediterranean bay (Laurus nobilis) carries eucalyptus-nutmeg-tea notes that build quietly over long simmering: stocks, braises, béchamel's infusion, bolognese, pickling brines; remove before serving (the leaf never softens; it is an infusion vessel, not food). CALIFORNIA bay is a different, harsher tree at twice the volume: halve the dose. Indian 'bay' (tej patta) is different again: a cassia leaf, cinnamon-toned, for biryani and korma, not a substitute in either direction. The test that ends skepticism: simmer one fresh-dried leaf in cream for ten minutes and taste; then check your jar's age, because a two-year-old bay leaf is, in fairness to the skeptics, genuinely just a leaf.",
     "recipes": [
-      "cullen-skink",
-      "sarde-a-beccafico-alla-palermitana",
-      "moros-y-cristianos"
+      "rinones-al-jerez",
+      "sofregit-de-ceba-i-tomaquet",
+      "cullen-skink"
     ]
   },
   {
@@ -2732,7 +2745,9 @@
     "category": "Spice Atlas",
     "definition": "Japan's 'seven-flavor chile', a 350-year-old Edo-era table blend: coarse chile with sansho pepper (Sichuan's Japanese cousin, the tingle), toasted orange or yuzu peel, black and white sesame, ginger, nori or aonori, and hemp or poppy seeds; the classic shops in Tokyo and Kyoto still custom-mix ratios to order like apothecaries. It finishes rather than cooks: shaken over udon and soba (the noodle wing's kitsune udon expects it), ramen, gyudon, yakitori, grilled mochi, even fries and popcorn in modern kitchens: heat with citrus, nuttiness, and umami riding along, which is why it out-performs plain chile flakes nearly everywhere flakes go. ICHIMI tōgarashi is the same jar minus six friends (pure chile), and knowing the difference marks you at any noodle counter. A tin at the table is the cheapest 'finishing program' a casual menu can install.",
     "recipes": [
-      "kitsune-udon"
+      "kitsune-udon",
+      "negiyaki",
+      "doteyaki"
     ]
   },
   {
@@ -3067,8 +3082,8 @@
     "definition": "The pre-blender that blenders never fully replaced: pounding RUPTURES cells and bruises oils out where blades slice and whip air in: pesto's name is the pestle (hand-pounded pesto is visibly glossier and louder-flavored), Thai curry pastes demand the pound (the recipe wing says so repeatedly), guacamole in a MOLCAJETE (Mexican basalt; season by grinding rice until it runs clean) tastes creamier from crushed-not-chopped alliums, and the SURIBACHI's ridged ceramic grinds sesame for goma-ae like nothing else. The heavy granite Thai mortar is the do-everything choice: spice cracking, aioli, sambal (the ulekan's cousin). Ten minutes of pounding is the honest cost; the return is texture and aroma a machine's heat and aeration subtly flatten. Every serious kitchen keeps one within reach: not for nostalgia, for chemistry.",
     "recipes": [
       "pol-sambola",
-      "guacamole",
-      "som-tum"
+      "picada-de-fruits-secs",
+      "allioli-de-morter"
     ]
   },
   {
@@ -3632,8 +3647,8 @@
     "definition": "The kitchen's mise en place doctrine, rebuilt at the rail. The station's law: everything used in service within THREE STEPS and one reach: jiggers and spoons in the same slot every shift (muscle memory is speed), the speed rail's bottle order memorized like a keyboard, tins and strainers staged in pairs, the juice program's bottles dated and rail-ready (the citrus entry's par system), syrups labeled in squeeze bottles (the plating wing's line-work tools moonlighting), garnish tray stocked and covered, ice bins FULL at open (running for ice mid-rush is the bar's walk of shame). Pre-service checklist culture: chilled glassware racked (the chill law at scale), vermouth fresh (the entry's refrigeration law), egg whites or aquafaba portioned, the well faced and full. Service discipline: work clean AS you go (a wiped rail between rounds), close-out standards (burn the ice, wash the tins, date the juices, restock to par for the opener: the person you're setting up is tomorrow's you). The transferable thesis, one last time: a bar station and a sauté station are the same organism: mise, reach, repetition, and respect for the next shift; master one and you can read the other at a glance.",
     "recipes": [
       "lasagne-sheets-laminated-egg-dough",
-      "tres-leches",
-      "apple-pie"
+      "warabimochi",
+      "tres-leches"
     ]
   },
   {
@@ -4006,7 +4021,7 @@
     "recipes": [
       "carrot-cake-with-cream-cheese-frosting",
       "kadhi-pakora",
-      "oyakodon"
+      "sawara-no-saikyo-yaki"
     ]
   },
   {
@@ -4124,9 +4139,9 @@
     "category": "The Flavor Atlas",
     "definition": "The taste we're born rejecting and spend adulthood acquiring: evolution's poison alarm, retrained by coffee, beer, chocolate, and char into sophistication's signature. In the kitchen bitterness is an EDGE tool: it creates contrast (radicchio against sweet balsamic, coffee under caramel, charred crust on sweet-glazed meat), prevents cloying (the amaro after dinner, cocoa in mole, beer in carbonnade), and adds the 'grown-up' dimension flat dishes lack. Its management levers: SALT suppresses it (the grapefruit trick), SWEET buffers it, FAT rounds it, and blanching leaches it (the bitter-greens protocol). The dosage philosophy: bitterness should be a seasoning met on purpose, never an ambush, deployed at the edges of a dish where the palate can visit and retreat. A menu with zero bitterness reads childish; a dish drowned in it reads burnt. The line between is where interesting lives.",
     "recipes": [
+      "carbonade-flamande",
       "chicken-congee",
-      "som-tum",
-      "atay-moroccan-mint-tea"
+      "som-tum"
     ]
   },
   {
@@ -4631,9 +4646,9 @@
     "category": "The Seasonal Larder",
     "definition": "Crab is the most regionally seasonal protein in the Larder: every coast has its species, its window, and its ritual. The calendar tour: DUNGENESS (US West Coast, winter: the December opener is a holiday unto itself; sweet, flaky, the crab feed's honoree), BLUE CRAB (Chesapeake and Gulf, summer: steamed with Old Bay in the R-months' mirror image; soft-shells are the molting brief of May–August, eaten whole, fried, legendary), STONE CRAB claws (Florida, October 15–May 1, claw-only harvest with the crab returned, sustainability as tradition), KING and SNOW crab (Alaska's brutal winter fisheries), BROWN CRAB (Britain and Brittany's summer dressed crab), SPIDER CRAB (Spain's centollo, winter Galician feasts), and MUD CRAB (Southeast Asia and Australia, year-round tropical: Singapore's chili crab knows no calendar). Kitchen laws: crab is bought alive or cooked-that-day (the dead-raw crab is a rule, not a preference), picked meat is the labor tax made honest, and the brown/tomalley body meat is the flavor concentrate the claws only hint at.",
     "recipes": [
+      "soupe-de-poissons-de-roche",
       "yakisoba",
-      "perfect-fried-rice",
-      "khao-pad-thai-fried-rice"
+      "perfect-fried-rice"
     ]
   },
   {
@@ -4676,8 +4691,8 @@
     "definition": "The bivalve winter: MUSSELS follow the oyster's logic: plump and glycogen-sweet in cold months (September–April; the Belgian moules season opens in September with national ceremony), thin and spawn-spent in high summer; farmed rope-grown mussels soften but don't erase the rhythm. Provenance: Galicia's rafts (Europe's mussel engine), Brittany's bouchot AOC (pole-grown, small, intense), Prince Edward Island's cold-water blues, New Zealand's green-lipped natives. SCALLOPS: the wild season is a winter story: the US East Coast's day-boat sea scallops and Maine's brief December–April dive fishery (diver scallops as the sustainability-and-freshness benchmark), Brittany's coquille Saint-Jacques season (October–May, dredge-regulated, the shell that named the pilgrimage), Japan's Hokkaido farms running year-round, and bay scallops' tiny autumn window (Nantucket's November opening). Kitchen laws by season: winter bivalves need less adornment (their own sweetness peaks); the dry-vs-wet scallop rule from the bivalve entry matters MORE in season: don't let soaking erase what winter built.",
     "recipes": [
       "suen-yung-jing-daai-ji-steamed-scallops-with-garlic-and-fun-see",
-      "pizza-margherita",
-      "rosemary-focaccia"
+      "ttoro-de-saint-jean-de-luz",
+      "pizza-margherita"
     ]
   },
   {
@@ -4751,7 +4766,11 @@
     "term": "Riesling",
     "category": "The Grape Atlas",
     "definition": "The sommelier's desert-island white and the most food-versatile grape on earth: high acid, low alcohol, and a style range from bone-dry to nobly sweet, all of it aromatic: lime, green apple, white peach, and with age the famous petrol note (prized, not a flaw). The homeland is Germany's slate rivers (Mosel's featherweight Kabinetts, Rheingau's power) with Alsace, Austria, Australia's Clare Valley (bone-dry, lime-laced), and the Finger Lakes as the diaspora. THE FOOD TRUTH that runs this guide's pairing engine: off-dry Riesling is the answer to fire: its sugar tames capsaicin while its acid cuts richness, making it the standing partner for Thai, Sichuan, Indian, and Korean heat; dry versions handle pork, choucroute, and anything with fruit on the plate. Reading the label: German Prädikat levels (Kabinett→Spätlese→Auslese) climb in ripeness and usually sweetness; 'trocken' means dry. Never oaked, rarely wrong.",
-    "recipes": []
+    "recipes": [
+      "coq-au-riesling",
+      "choucroute-garnie-a-lalsacienne",
+      "baeckeoffe"
+    ]
   },
   {
     "slug": "chardonnay",
@@ -4790,7 +4809,7 @@
     "recipes": [
       "oregon-pinot-noir-braised-short-ribs",
       "boeuf-bourguignon",
-      "boudin-noir-aux-pommes"
+      "oeufs-en-meurette"
     ]
   },
   {
@@ -4863,7 +4882,9 @@
     "term": "Gamay (Beaujolais)",
     "category": "The Grape Atlas",
     "definition": "The joy grape: Beaujolais' Gamay is red fruit at its most charming: fresh cherry, cranberry, violet, a whisper of banana in the carbonic versions (the whole-cluster fermentation signature), low tannin, bright acid, and a temperament built for LUNCH. The ladder matters: Beaujolais Nouveau (the November marketing sprint, party wine), Beaujolais-Villages (the everyday step up), and the ten CRUS (Morgon, Fleurie, Moulin-à-Vent…) where Gamay turns genuinely serious: structured, age-worthy, Burgundy's neighbor at a third the price. THE FOOD ROLE is the pairing engine's utility player: charcuterie's best friend (the bistro plate's default pour), roast chicken, salmon (with a light chill it crosses the fish line like Pinot), Thanksgiving and picnic food, cheese boards, and anything where a big red would bully. SERVE IT COOL, 12–14°C, the chill is doctrine, not eccentricity. When a menu can't decide, cru Beaujolais rarely offends and usually delights: the sommelier's peacekeeping pour.",
-    "recipes": []
+    "recipes": [
+      "poires-a-la-beaujolaise"
+    ]
   },
   {
     "slug": "albarino-alvarinho",

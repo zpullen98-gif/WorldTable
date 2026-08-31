@@ -12,17 +12,17 @@
  * searing anything is doing the same measurable thing whether the pan holds
  * duck or aubergine, and that is assessable once, for all of it.
  *
- * 262 of the 1410 remain unassessable and always will on this approach: 226
- * carry no technique tag at all, and the other 36 exercise only techniques too
+ * 276 of the 1510 remain unassessable and always will on this approach: 243
+ * carry no technique tag at all, and the other 33 exercise only techniques too
  * rare in this corpus to be worth a standard. That is the honest ceiling rather
  * than a backlog, and it is gated below with everything else: the first
  * version of this sentence said 146 and 35, which were reasoned rather than
  * measured and were both wrong.
  *
- * The 53 techniques written here are every technique the corpus uses on 12 or
- * more recipes. They put a standard on 1103 recipes that had none, taking the
- * assessable corpus from 45 to 1148 of 1410: for 53 pieces of writing rather
- * than 1103.
+ * The 54 techniques written here are every technique the corpus uses on 12 or
+ * more recipes. They put a standard on 1189 recipes that had none, taking the
+ * assessable corpus from 45 to 1234 of 1510: for 54 pieces of writing rather
+ * than 1189.
  *
  * These were 752 and 797 until the em dash sweep of 29 Aug 2026. Exactly one
  * recipe moved: kulfi, whose first ingredient read "1.5L whole milk - reduced
@@ -105,6 +105,17 @@ export const TECHNIQUE_GATE_MIN_RECIPES = 12;
 export const JUDGED_BY_MAX = 2;
 
 export const TECHNIQUE_STANDARDS = [
+	{
+		slug: 'dashi',
+		marks: [
+			{ id: 'dashi#clear', text: 'It is clear enough to read the bottom of the pan through it. Cloudiness means it boiled, or the kombu stayed in past the first small bubbles, and neither can be strained out afterwards.' },
+			{ id: 'dashi#colour', text: 'Pale gold rather than brown, nearer the colour of weak tea. A brown dashi has been cooked too hard or too long and will taste of the pan rather than of the sea.' },
+			{ id: 'dashi#kombu', text: 'The kombu came out before the water reached a simmer, and it is supple rather than slimy. A slippery surface on the sheet means alginates have started to leach, and the broth will feel viscous on the tongue.' },
+			{ id: 'dashi#strain', text: 'Strained without pressing. Squeezing the flakes or the kelp forces out bitterness and fine particles, and the difference is obvious in the finished bowl.' },
+			{ id: 'dashi#taste', text: 'Tasted alone it is savoury and faintly sweet with no fishiness and no bitter edge. Fishy means the katsuobushi steeped rather than settling; bitter means heat.' }
+		],
+		fault: 'Heat, or time, or both. Kombu boiled gives up alginates and turns the broth slippery and faintly bitter; katsuobushi left to steep turns it sour and fishy. Almost every dashi failure is an excess of one of the two things the cook controls, and neither is recoverable once it has happened.'
+	},
 	{
 		slug: 'tortillas-on-the-comal',
 		marks: [

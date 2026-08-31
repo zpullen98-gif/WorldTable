@@ -16,11 +16,27 @@
     "count": 10
   },
   {
+    "name": "Alsace & the North",
+    "slug": "alsace-and-the-north",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "France",
+    "count": 10
+  },
+  {
     "name": "American",
     "slug": "american",
     "kind": "us",
     "group": "United States",
     "subgroup": "American Table",
+    "count": 10
+  },
+  {
+    "name": "Andalusia",
+    "slug": "andalusia",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "Spain",
     "count": 10
   },
   {
@@ -69,6 +85,14 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Austria",
+    "count": 10
+  },
+  {
+    "name": "Basque & Navarre",
+    "slug": "basque-and-navarre",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "Spain",
     "count": 10
   },
   {
@@ -157,6 +181,14 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "The Caribbean",
+    "count": 10
+  },
+  {
+    "name": "Catalonia",
+    "slug": "catalonia",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "Spain",
     "count": 10
   },
   {
@@ -456,6 +488,14 @@
     "count": 10
   },
   {
+    "name": "Kansai & Osaka",
+    "slug": "kansai-and-osaka",
+    "kind": "world",
+    "group": "Asia",
+    "subgroup": "Japan",
+    "count": 10
+  },
+  {
     "name": "Kansas",
     "slug": "kansas",
     "kind": "us",
@@ -488,6 +528,14 @@
     "count": 10
   },
   {
+    "name": "Kyoto & Kaiseki",
+    "slug": "kyoto-and-kaiseki",
+    "kind": "world",
+    "group": "Asia",
+    "subgroup": "Japan",
+    "count": 10
+  },
+  {
     "name": "Levantine",
     "slug": "levantine",
     "kind": "world",
@@ -501,6 +549,14 @@
     "kind": "atlas",
     "group": "The Atlases",
     "subgroup": null,
+    "count": 10
+  },
+  {
+    "name": "Lyon & Burgundy",
+    "slug": "lyon-and-burgundy",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "France",
     "count": 10
   },
   {
@@ -720,6 +776,14 @@
     "count": 10
   },
   {
+    "name": "Okinawa",
+    "slug": "okinawa",
+    "kind": "world",
+    "group": "Asia",
+    "subgroup": "Japan",
+    "count": 10
+  },
+  {
     "name": "Oklahoma",
     "slug": "oklahoma",
     "kind": "us",
@@ -805,6 +869,14 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Portugal",
+    "count": 10
+  },
+  {
+    "name": "Provence & the Midi",
+    "slug": "provence-and-the-midi",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "France",
     "count": 10
   },
   {
@@ -989,6 +1061,14 @@
     "kind": "atlas",
     "group": "The Atlases",
     "subgroup": null,
+    "count": 10
+  },
+  {
+    "name": "The French Basque & Gascony",
+    "slug": "the-french-basque-and-gascony",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "France",
     "count": 10
   },
   {

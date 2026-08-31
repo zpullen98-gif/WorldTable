@@ -40,6 +40,11 @@ const SHELLFISH_WITNESS =
 	/\b(shrimps?|prawns?|crabs?|lobsters?|scallops?(?! cut from| from a king)|oysters?(?! mushrooms?)|clams?|mussels?|squid|calamari|octopus|langoustines?)\b/i;
 /* Ingredient lines that name a shellfish only to say the dish has none. */
 const SHELLFISH_EXEMPT = /\b(king oyster|oyster mushrooms?)\b/i;
+/* Dashi made without bonito. The Kyoto and Okinawa chapters write
+   "kombu dashi, kombu only" precisely so the dish can be vegetarian, and
+   the diet table already excepts it; without the same exception here the
+   test demands a fish allergen on a broth made of kelp. */
+const FISH_EXEMPT = /\b(kombu dashi|shiitake dashi|shojin dashi|vegetarian dashi|vegan dashi)\b/i;
 
 describe('an escape never silences an allergen', () => {
 	/**
@@ -76,7 +81,8 @@ describe('an escape never silences an allergen', () => {
 				.join(' | ');
 			const diet = bySlug.get(r.slug)?.diet;
 			if (!diet) continue;
-			if (FISH_WITNESS.test(text) && !diet.containsFish) missed.push(`${r.slug} (fish)`);
+			if (FISH_WITNESS.test(text) && !FISH_EXEMPT.test(text) && !diet.containsFish)
+				missed.push(`${r.slug} (fish)`);
 			if (SHELLFISH_WITNESS.test(text) && !SHELLFISH_EXEMPT.test(text) && !diet.containsShellfish)
 				missed.push(`${r.slug} (shellfish)`);
 		}

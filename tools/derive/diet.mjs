@@ -34,7 +34,14 @@ const MEAT = [
 	'pork roll', 'burnt ends', 'jerky', 'backstrap', 'tri-tip', 'flank',
 	'prime rib', 'pot roast', 'lardo', 'coppa', 'nduja', 'bresaola',
 	'pulled pork', 'rib tip', 'pig', 'hock', 'trotter', 'chitterling',
-	'bologna', 'braunschweiger', 'head cheese', 'sopressata', 'guanciale'
+	'bologna', 'braunschweiger', 'head cheese', 'sopressata', 'guanciale',
+	// French and Basque words for meat the list already held in English.
+	// 'lard' is here but word-boundary matching cannot reach inside 'lardons',
+	// which is how a tarte flambee and a salade lyonnaise both read as meatless.
+	'lardon', 'lardons', 'poitrine', 'magret', 'confit de canard', 'gesier',
+	'gizzard', 'txuleta', 'chuleta', 'rib chop', 'presa', 'secreto', 'pluma',
+	'boudin', 'saucisson', 'andouillette', 'jambon', 'graisse de canard',
+	'duck fat', 'goose fat', 'ventreche'
 ];
 
 const PORK = [
@@ -65,6 +72,17 @@ const FISH = [
 	// char kway teow as containing fish.
 	'lake trout', 'arctic char', 'lake char', 'sturgeon', 'tilefish', 'wahoo', 'opah', 'escolar',
 	'skate', 'ray', 'bass', 'crappie', 'bluegill', 'menhaden',
+	// Japanese fish names. Sawara is Spanish mackerel and hamo is pike conger:
+	// the table knew mackerel and eel, and neither word appears in either dish.
+	// Only the unambiguous ones. 'saba' is mackerel in Japan and a banana in
+	// the Philippines and Indonesia, and it flagged halo-halo and pisang
+	// goreng as containing fish. 'aji' is a Peruvian chilli, 'buri' a
+	// Philippine palm, 'tai' and 'ayu' are too short to be safe. All four
+	// fish are already reachable by their English names, so the cost of
+	// leaving them out is a synonym; the cost of keeping them was a dessert
+	// labelled with an allergen it does not have.
+	'sawara', 'hamo', 'hamachi', 'iwashi', 'kamasu', 'nodoguro', 'shirasu',
+	'hotaru ika', 'kinmedai', 'shishamo',
 	// South African, West African and Australasian names. Every one of these
 	// arrived with a chapter and none was in the table: a reader avoiding fish
 	// would have been told a snoek braai contains none.

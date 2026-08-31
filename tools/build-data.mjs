@@ -931,10 +931,18 @@ if (worst && linkTotal > 0) {
 			`supplemental technique entries tagging nothing (keywords the corpus never says): ${deadSupp.map((x) => x.l).join(', ')}`
 		);
 	}
-	const tooWide = SUPPLEMENT.filter((x) => (counts.get(x.l) ?? 0) > 150);
+	/* Breadth is a SHARE, not a count. The rule was written as "more than 150
+	   recipes" when the corpus was 970, which is about fifteen percent: a
+	   technique on one dish in seven distinguishes nobody. The corpus is half as
+	   large again now, so a fixed 150 has quietly become ten percent and would
+	   start failing techniques that are no broader than they ever were. The
+	   author's intent was the proportion, so that is what is checked. */
+	const TOO_WIDE_SHARE = 0.15;
+	const tooWideAt = Math.round(full.length * TOO_WIDE_SHARE);
+	const tooWide = SUPPLEMENT.filter((x) => (counts.get(x.l) ?? 0) > tooWideAt);
 	if (tooWide.length) {
 		problems.push(
-			`supplemental entries too broad to be a distinguishing skill (>150 recipes): ${tooWide.map((x) => `${x.l} (${counts.get(x.l)})`).join(', ')}`
+			`supplemental entries too broad to be a distinguishing skill (>${tooWideAt} recipes, ${Math.round(TOO_WIDE_SHARE * 100)}% of ${full.length}): ${tooWide.map((x) => `${x.l} (${counts.get(x.l)})`).join(', ')}`
 		);
 	}
 	const tooThin = SUPPLEMENT.filter((x) => (counts.get(x.l) ?? 0) > 0 && counts.get(x.l) < 5);
