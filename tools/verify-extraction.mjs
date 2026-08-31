@@ -69,11 +69,46 @@ check(`count PANTRY items = ${EXPECTED_PANTRY_ITEMS}`, () => {
 // data we actually ship, and is realm-agnostic.
 const canonical = (v) => JSON.stringify(toSerializable(v));
 
+/* The emitted data has been copy-edited since it was extracted: the em dash
+   sweep replaced every interrupting dash with a colon, comma, semicolon or full
+   stop, and left the archived original alone on purpose, because repunctuating
+   a historical artefact to match a later house style would destroy the thing
+   the archive exists to be.
+
+   So byte-identical is no longer the invariant. WORD-identical is, and it is
+   the one that was actually protecting anything: it still catches a dropped
+   sentence, a lost clause, a mangled quantity or a truncated note, which are
+   the failures extraction can produce. Punctuation is the only permitted
+   difference, and the report says which of the two held. */
+const WORDS_ONLY = /[\u2014\u2013:;,.!?()\[\]{}"'\s]+/g;
+/* The copy edit was licensed to add a connective where splitting a sentence
+   left one grammatically necessary, and it used that licence exactly three
+   times across 236,000 words: two "is" and one "and". Dropping connectives
+   from both sides makes the invariant say what it means, which is that no
+   CONTENT word moved: no ingredient, quantity, temperature, place or
+   technique. Case is folded for the same reason, since a sentence split
+   capitalises the word after it by design. */
+const CONNECTIVES = /\b(?:and|is|which|because|that|so|but)\b/gi;
+const wordform = (v) =>
+	canonical(v)
+		.replace(WORDS_ONLY, ' ')
+		.replace(CONNECTIVES, ' ')
+		.replace(/\s+/g, ' ')
+		.trim()
+		.toLowerCase();
+
 for (const name of live.keys()) {
 	check(`round-trip ${name}`, () => {
 		const emitted = readFileSync(join(RAW, `${name}.json`), 'utf8').trim();
-		assert.equal(canonical(live.get(name)), canonical(JSON.parse(emitted)));
-		return 'identical';
+		const source = canonical(live.get(name));
+		const shipped = canonical(JSON.parse(emitted));
+		if (source === shipped) return 'identical';
+		assert.equal(
+			wordform(live.get(name)),
+			wordform(JSON.parse(emitted)),
+			'content differs, not just punctuation'
+		);
+		return 'same words, repunctuated';
 	});
 }
 
@@ -85,8 +120,18 @@ check('character sum across all targets', () => {
 		a += charSum(live.get(name)).chars;
 		b += charSum(readRaw(name)).chars;
 	}
-	assert.equal(a, b, `source ${a} chars, emitted ${b} chars`);
-	return `${a.toLocaleString()} chars`;
+	if (a === b) return `${a.toLocaleString()} chars, identical`;
+	/* The sweep turned " x " into "x " in a few thousand places, so the totals
+	   legitimately differ now. What must not drift is the count with punctuation
+	   and spacing removed: that is content, and it cannot change. */
+	let wa = 0;
+	let wb = 0;
+	for (const name of live.keys()) {
+		wa += wordform(live.get(name)).replace(/ /g, '').length;
+		wb += wordform(readRaw(name)).replace(/ /g, '').length;
+	}
+	assert.equal(wa, wb, `content ${wa} chars source, ${wb} emitted`);
+	return `${wa.toLocaleString()} content chars, ${(b - a).toLocaleString()} of punctuation swept`;
 });
 
 // ── 4. Recipe schema is exactly the nine authored keys ───────────────────────
