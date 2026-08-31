@@ -171,7 +171,7 @@ export function buildFamilyRecipe(
 		costTier: 2,
 		flavorTags: ['family'],
 		season: [],
-		region: { kind: 'world', group: 'The Family Chapter' },
+		region: { kind: 'world', group: 'The Family Chapter', subgroup: null },
 		source: 'family',
 		noteChars: note.length,
 

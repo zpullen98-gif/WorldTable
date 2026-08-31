@@ -31,8 +31,13 @@ export interface ChapterRef {
 	name: string;
 	slug: string;
 	kind: RegionKind;
-	/** For US chapters, the rail super-region ("The South"). Else the kind label. */
+	/** Continent, or "United States", or "The Atlases". The rail's first level. */
 	group: string;
+	/**
+	 * Country, or a US super-region. The rail's second level. Null for the
+	 * Atlases, which are not places and are listed flat.
+	 */
+	subgroup: string | null;
 	count: number;
 }
 
@@ -152,7 +157,7 @@ export interface RecipeSummary {
 	flavorTags: string[];
 	/** Months (1-12) this dish is at its peak, northern-hemisphere canonical. */
 	season: number[];
-	region: { kind: RegionKind; group: string };
+	region: { kind: RegionKind; group: string; subgroup: string | null };
 	source: 'guide' | 'family';
 	/** Length of the "from the pass" note: drives the backfill report. */
 	noteChars: number;

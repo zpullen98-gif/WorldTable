@@ -3,63 +3,72 @@
     "name": "Alabama",
     "slug": "alabama",
     "kind": "us",
-    "group": "The South",
+    "group": "United States",
+    "subgroup": "The South",
     "count": 10
   },
   {
     "name": "Alaska",
     "slug": "alaska",
     "kind": "us",
-    "group": "The Pacific",
+    "group": "United States",
+    "subgroup": "The Pacific",
     "count": 10
   },
   {
     "name": "American",
     "slug": "american",
     "kind": "us",
-    "group": "American Table",
+    "group": "United States",
+    "subgroup": "American Table",
     "count": 10
   },
   {
     "name": "Argentine",
     "slug": "argentine",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "The Americas",
+    "subgroup": "Argentina",
     "count": 10
   },
   {
     "name": "Arizona",
     "slug": "arizona",
     "kind": "us",
-    "group": "The Southwest",
+    "group": "United States",
+    "subgroup": "The Southwest",
     "count": 10
   },
   {
     "name": "Arkansas",
     "slug": "arkansas",
     "kind": "us",
-    "group": "The South",
+    "group": "United States",
+    "subgroup": "The South",
     "count": 10
   },
   {
     "name": "Austrian",
     "slug": "austrian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Austria",
     "count": 10
   },
   {
     "name": "Bengali",
     "slug": "bengali",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "India",
     "count": 10
   },
   {
     "name": "Brazilian",
     "slug": "brazilian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "The Americas",
+    "subgroup": "Brazil",
     "count": 10
   },
   {
@@ -67,6 +76,7 @@
     "slug": "bread-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
@@ -74,83 +84,95 @@
     "slug": "breakfast-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
     "name": "British",
     "slug": "british",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Britain",
     "count": 10
   },
   {
     "name": "Burmese",
     "slug": "burmese",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "Myanmar",
     "count": 10
   },
   {
     "name": "Cajun & Creole",
     "slug": "cajun-and-creole",
     "kind": "us",
-    "group": "The South",
+    "group": "United States",
+    "subgroup": "The South",
     "count": 10
   },
   {
     "name": "California",
     "slug": "california",
     "kind": "us",
-    "group": "The Pacific",
+    "group": "United States",
+    "subgroup": "The Pacific",
     "count": 10
   },
   {
     "name": "Cantonese",
     "slug": "cantonese",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "China",
     "count": 10
   },
   {
     "name": "Caribbean",
     "slug": "caribbean",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "The Americas",
+    "subgroup": "The Caribbean",
     "count": 10
   },
   {
     "name": "Caucasus & Central Asian",
     "slug": "caucasus-and-central-asian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "The Caucasus & Central Asia",
     "count": 10
   },
   {
     "name": "Chinese",
     "slug": "chinese",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "China",
     "count": 10
   },
   {
     "name": "Colorado",
     "slug": "colorado",
     "kind": "us",
-    "group": "The Southwest",
+    "group": "United States",
+    "subgroup": "The Southwest",
     "count": 10
   },
   {
     "name": "Connecticut",
     "slug": "connecticut",
     "kind": "us",
-    "group": "New England",
+    "group": "United States",
+    "subgroup": "New England",
     "count": 10
   },
   {
     "name": "Delaware",
     "slug": "delaware",
     "kind": "us",
-    "group": "Mid-Atlantic",
+    "group": "United States",
+    "subgroup": "Mid-Atlantic",
     "count": 10
   },
   {
@@ -158,6 +180,7 @@
     "slug": "dessert-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 30
   },
   {
@@ -165,34 +188,39 @@
     "slug": "dumpling-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
     "name": "East African",
     "slug": "east-african",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Africa",
+    "subgroup": "East Africa",
     "count": 10
   },
   {
     "name": "Eastern European",
     "slug": "eastern-european",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Central & Eastern Europe",
     "count": 10
   },
   {
     "name": "Emilia-Romagna",
     "slug": "emilia-romagna",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Italy",
     "count": 10
   },
   {
     "name": "Ethiopian",
     "slug": "ethiopian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Africa",
+    "subgroup": "Ethiopia",
     "count": 10
   },
   {
@@ -200,55 +228,63 @@
     "slug": "fermentation-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
     "name": "Filipino",
     "slug": "filipino",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "The Philippines",
     "count": 10
   },
   {
     "name": "Florida",
     "slug": "florida",
     "kind": "us",
-    "group": "The South",
+    "group": "United States",
+    "subgroup": "The South",
     "count": 10
   },
   {
     "name": "French",
     "slug": "french",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "France",
     "count": 10
   },
   {
     "name": "Georgia",
     "slug": "georgia",
     "kind": "us",
-    "group": "The South",
+    "group": "United States",
+    "subgroup": "The South",
     "count": 10
   },
   {
     "name": "Georgian",
     "slug": "georgian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "Georgia",
     "count": 10
   },
   {
     "name": "German",
     "slug": "german",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Germany",
     "count": 10
   },
   {
     "name": "Greek",
     "slug": "greek",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Greece",
     "count": 10
   },
   {
@@ -256,6 +292,7 @@
     "slug": "grill-and-bbq-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
@@ -263,118 +300,135 @@
     "slug": "holiday-feast-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
     "name": "Hungarian",
     "slug": "hungarian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Hungary",
     "count": 10
   },
   {
     "name": "Idaho",
     "slug": "idaho",
     "kind": "us",
-    "group": "The Mountain West",
+    "group": "United States",
+    "subgroup": "The Mountain West",
     "count": 10
   },
   {
     "name": "Illinois",
     "slug": "illinois",
     "kind": "us",
-    "group": "The Midwest",
+    "group": "United States",
+    "subgroup": "The Midwest",
     "count": 10
   },
   {
     "name": "Indian",
     "slug": "indian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "India",
     "count": 10
   },
   {
     "name": "Indiana",
     "slug": "indiana",
     "kind": "us",
-    "group": "The Midwest",
+    "group": "United States",
+    "subgroup": "The Midwest",
     "count": 10
   },
   {
     "name": "Indonesian",
     "slug": "indonesian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "Indonesia",
     "count": 10
   },
   {
     "name": "Iowa",
     "slug": "iowa",
     "kind": "us",
-    "group": "The Midwest",
+    "group": "United States",
+    "subgroup": "The Midwest",
     "count": 10
   },
   {
     "name": "Irish",
     "slug": "irish",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Ireland",
     "count": 10
   },
   {
     "name": "Italian",
     "slug": "italian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Italy",
     "count": 10
   },
   {
     "name": "Japanese",
     "slug": "japanese",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "Japan",
     "count": 10
   },
   {
     "name": "Jiangnan",
     "slug": "jiangnan",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "China",
     "count": 10
   },
   {
     "name": "Kansas",
     "slug": "kansas",
     "kind": "us",
-    "group": "The Plains",
+    "group": "United States",
+    "subgroup": "The Plains",
     "count": 10
   },
   {
     "name": "Kentucky",
     "slug": "kentucky",
     "kind": "us",
-    "group": "The South",
+    "group": "United States",
+    "subgroup": "The South",
     "count": 10
   },
   {
     "name": "Kerala & the Malabar Coast",
     "slug": "kerala-and-the-malabar-coast",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "India",
     "count": 10
   },
   {
     "name": "Korean",
     "slug": "korean",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "Korea",
     "count": 10
   },
   {
     "name": "Levantine",
     "slug": "levantine",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "The Levant & the Gulf",
     "count": 10
   },
   {
@@ -382,139 +436,159 @@
     "slug": "lunch-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
     "name": "Maine",
     "slug": "maine",
     "kind": "us",
-    "group": "New England",
+    "group": "United States",
+    "subgroup": "New England",
     "count": 10
   },
   {
     "name": "Malaysian",
     "slug": "malaysian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "Malaysia",
     "count": 10
   },
   {
     "name": "Maryland",
     "slug": "maryland",
     "kind": "us",
-    "group": "Mid-Atlantic",
+    "group": "United States",
+    "subgroup": "Mid-Atlantic",
     "count": 10
   },
   {
     "name": "Massachusetts",
     "slug": "massachusetts",
     "kind": "us",
-    "group": "New England",
+    "group": "United States",
+    "subgroup": "New England",
     "count": 10
   },
   {
     "name": "Mexican",
     "slug": "mexican",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "The Americas",
+    "subgroup": "Mexico",
     "count": 10
   },
   {
     "name": "Michigan",
     "slug": "michigan",
     "kind": "us",
-    "group": "The Midwest",
+    "group": "United States",
+    "subgroup": "The Midwest",
     "count": 10
   },
   {
     "name": "Middle Eastern",
     "slug": "middle-eastern",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "The Levant & the Gulf",
     "count": 10
   },
   {
     "name": "Minnesota",
     "slug": "minnesota",
     "kind": "us",
-    "group": "The Midwest",
+    "group": "United States",
+    "subgroup": "The Midwest",
     "count": 10
   },
   {
     "name": "Mississippi",
     "slug": "mississippi",
     "kind": "us",
-    "group": "The South",
+    "group": "United States",
+    "subgroup": "The South",
     "count": 10
   },
   {
     "name": "Missouri",
     "slug": "missouri",
     "kind": "us",
-    "group": "The Midwest",
+    "group": "United States",
+    "subgroup": "The Midwest",
     "count": 10
   },
   {
     "name": "Montana",
     "slug": "montana",
     "kind": "us",
-    "group": "The Mountain West",
+    "group": "United States",
+    "subgroup": "The Mountain West",
     "count": 10
   },
   {
     "name": "Moroccan",
     "slug": "moroccan",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Africa",
+    "subgroup": "Morocco",
     "count": 10
   },
   {
     "name": "Nebraska",
     "slug": "nebraska",
     "kind": "us",
-    "group": "The Plains",
+    "group": "United States",
+    "subgroup": "The Plains",
     "count": 10
   },
   {
     "name": "Nevada",
     "slug": "nevada",
     "kind": "us",
-    "group": "The Southwest",
+    "group": "United States",
+    "subgroup": "The Southwest",
     "count": 10
   },
   {
     "name": "New Hampshire",
     "slug": "new-hampshire",
     "kind": "us",
-    "group": "New England",
+    "group": "United States",
+    "subgroup": "New England",
     "count": 10
   },
   {
     "name": "New Jersey",
     "slug": "new-jersey",
     "kind": "us",
-    "group": "Mid-Atlantic",
+    "group": "United States",
+    "subgroup": "Mid-Atlantic",
     "count": 10
   },
   {
     "name": "New Mexico",
     "slug": "new-mexico",
     "kind": "us",
-    "group": "The Southwest",
+    "group": "United States",
+    "subgroup": "The Southwest",
     "count": 10
   },
   {
     "name": "New Orleans",
     "slug": "new-orleans",
     "kind": "us",
-    "group": "The South",
+    "group": "United States",
+    "subgroup": "The South",
     "count": 10
   },
   {
     "name": "New York",
     "slug": "new-york",
     "kind": "us",
-    "group": "Mid-Atlantic",
+    "group": "United States",
+    "subgroup": "Mid-Atlantic",
     "count": 10
   },
   {
@@ -522,34 +596,39 @@
     "slug": "noodle-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
     "name": "North Carolina",
     "slug": "north-carolina",
     "kind": "us",
-    "group": "The South",
+    "group": "United States",
+    "subgroup": "The South",
     "count": 10
   },
   {
     "name": "North Dakota",
     "slug": "north-dakota",
     "kind": "us",
-    "group": "The Plains",
+    "group": "United States",
+    "subgroup": "The Plains",
     "count": 10
   },
   {
     "name": "Northern Chinese",
     "slug": "northern-chinese",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "China",
     "count": 10
   },
   {
     "name": "Oaxacan",
     "slug": "oaxacan",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "The Americas",
+    "subgroup": "Mexico",
     "count": 10
   },
   {
@@ -557,55 +636,63 @@
     "slug": "offal-and-the-whole-animal",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
     "name": "Ohio",
     "slug": "ohio",
     "kind": "us",
-    "group": "The Midwest",
+    "group": "United States",
+    "subgroup": "The Midwest",
     "count": 10
   },
   {
     "name": "Oklahoma",
     "slug": "oklahoma",
     "kind": "us",
-    "group": "The Plains",
+    "group": "United States",
+    "subgroup": "The Plains",
     "count": 10
   },
   {
     "name": "Oregon",
     "slug": "oregon",
     "kind": "us",
-    "group": "The Pacific",
+    "group": "United States",
+    "subgroup": "The Pacific",
     "count": 10
   },
   {
     "name": "Pacific & Hawaiian",
     "slug": "pacific-and-hawaiian",
     "kind": "us",
-    "group": "The Pacific",
+    "group": "United States",
+    "subgroup": "The Pacific",
     "count": 10
   },
   {
     "name": "Pennsylvania",
     "slug": "pennsylvania",
     "kind": "us",
-    "group": "Mid-Atlantic",
+    "group": "United States",
+    "subgroup": "Mid-Atlantic",
     "count": 10
   },
   {
     "name": "Persian",
     "slug": "persian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "Iran",
     "count": 10
   },
   {
     "name": "Peruvian",
     "slug": "peruvian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "The Americas",
+    "subgroup": "Peru",
     "count": 10
   },
   {
@@ -613,41 +700,47 @@
     "slug": "pickle-and-condiment-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
     "name": "Portuguese",
     "slug": "portuguese",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Portugal",
     "count": 10
   },
   {
     "name": "Punjabi & North Indian",
     "slug": "punjabi-and-north-indian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "India",
     "count": 10
   },
   {
     "name": "Rhode Island",
     "slug": "rhode-island",
     "kind": "us",
-    "group": "New England",
+    "group": "United States",
+    "subgroup": "New England",
     "count": 10
   },
   {
     "name": "Russian & Ukrainian",
     "slug": "russian-and-ukrainian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Russia & Ukraine",
     "count": 10
   },
   {
     "name": "Scandinavian",
     "slug": "scandinavian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Scandinavia",
     "count": 10
   },
   {
@@ -655,20 +748,23 @@
     "slug": "seafood-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 20
   },
   {
     "name": "Sichuan",
     "slug": "sichuan",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "China",
     "count": 10
   },
   {
     "name": "Sicilian",
     "slug": "sicilian",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Italy",
     "count": 10
   },
   {
@@ -676,41 +772,47 @@
     "slug": "soup-and-stew-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
     "name": "South American",
     "slug": "south-american",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "The Americas",
+    "subgroup": "South America",
     "count": 10
   },
   {
     "name": "South Carolina",
     "slug": "south-carolina",
     "kind": "us",
-    "group": "The South",
+    "group": "United States",
+    "subgroup": "The South",
     "count": 10
   },
   {
     "name": "South Dakota",
     "slug": "south-dakota",
     "kind": "us",
-    "group": "The Plains",
+    "group": "United States",
+    "subgroup": "The Plains",
     "count": 10
   },
   {
     "name": "Spanish",
     "slug": "spanish",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Europe",
+    "subgroup": "Spain",
     "count": 10
   },
   {
     "name": "Sri Lankan",
     "slug": "sri-lankan",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "Sri Lanka",
     "count": 10
   },
   {
@@ -718,6 +820,7 @@
     "slug": "stock-and-fond-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
@@ -725,34 +828,39 @@
     "slug": "street-food-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
     "name": "Tamil & the South",
     "slug": "tamil-and-the-south",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "India",
     "count": 10
   },
   {
     "name": "Tennessee",
     "slug": "tennessee",
     "kind": "us",
-    "group": "The South",
+    "group": "United States",
+    "subgroup": "The South",
     "count": 10
   },
   {
     "name": "Texas",
     "slug": "texas",
     "kind": "us",
-    "group": "The Southwest",
+    "group": "United States",
+    "subgroup": "The Southwest",
     "count": 10
   },
   {
     "name": "Thai",
     "slug": "thai",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "Thailand",
     "count": 10
   },
   {
@@ -760,6 +868,7 @@
     "slug": "the-bakery",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
@@ -767,6 +876,7 @@
     "slug": "the-cure",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
@@ -774,6 +884,7 @@
     "slug": "the-rice-bowl",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
@@ -781,6 +892,7 @@
     "slug": "the-saucier",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
@@ -788,83 +900,95 @@
     "slug": "the-vegetable-led-plate",
     "kind": "atlas",
     "group": "The Atlases",
+    "subgroup": null,
     "count": 10
   },
   {
     "name": "Turkish",
     "slug": "turkish",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "Turkey",
     "count": 10
   },
   {
     "name": "Utah",
     "slug": "utah",
     "kind": "us",
-    "group": "The Southwest",
+    "group": "United States",
+    "subgroup": "The Southwest",
     "count": 10
   },
   {
     "name": "Vermont",
     "slug": "vermont",
     "kind": "us",
-    "group": "New England",
+    "group": "United States",
+    "subgroup": "New England",
     "count": 10
   },
   {
     "name": "Vietnamese",
     "slug": "vietnamese",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Asia",
+    "subgroup": "Vietnam",
     "count": 10
   },
   {
     "name": "Virginia",
     "slug": "virginia",
     "kind": "us",
-    "group": "Mid-Atlantic",
+    "group": "United States",
+    "subgroup": "Mid-Atlantic",
     "count": 10
   },
   {
     "name": "Washington",
     "slug": "washington",
     "kind": "us",
-    "group": "The Pacific",
+    "group": "United States",
+    "subgroup": "The Pacific",
     "count": 10
   },
   {
     "name": "West African",
     "slug": "west-african",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "Africa",
+    "subgroup": "West Africa",
     "count": 10
   },
   {
     "name": "West Virginia",
     "slug": "west-virginia",
     "kind": "us",
-    "group": "Mid-Atlantic",
+    "group": "United States",
+    "subgroup": "Mid-Atlantic",
     "count": 10
   },
   {
     "name": "Wisconsin",
     "slug": "wisconsin",
     "kind": "us",
-    "group": "The Midwest",
+    "group": "United States",
+    "subgroup": "The Midwest",
     "count": 10
   },
   {
     "name": "Wyoming",
     "slug": "wyoming",
     "kind": "us",
-    "group": "The Mountain West",
+    "group": "United States",
+    "subgroup": "The Mountain West",
     "count": 10
   },
   {
     "name": "Yucatecan",
     "slug": "yucatecan",
     "kind": "world",
-    "group": "World Cuisines",
+    "group": "The Americas",
+    "subgroup": "Mexico",
     "count": 10
   }
 ]

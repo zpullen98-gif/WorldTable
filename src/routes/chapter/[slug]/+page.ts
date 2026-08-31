@@ -27,6 +27,7 @@ export async function load({ params }) {
 				slug: params.slug,
 				kind: 'world',
 				group: 'The Family Chapter',
+				subgroup: null,
 				count: fam.length
 			};
 			return { chapter: synthesized };

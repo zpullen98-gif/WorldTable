@@ -13,10 +13,29 @@
 	} = $props();
 
 	/**
-	 * Rail grouping, ported from `railGroups` (L1866) as a pure derivation.
-	 * Order is deliberate: world cuisines, then the thematic Atlases, then the
-	 * nine US super-regions in the original's geographic order.
+	 * Two levels: continent, then country, with the chapter as the leaf.
+	 *
+	 * It was one level, and fifty-two world cuisines shared a single heading
+	 * called "World Cuisines" while the nine US super-regions each had one of
+	 * their own, so New England outranked Asia. Now the United States is one
+	 * entry like any other continent and its super-regions are its second
+	 * level, which is what fifty states always needed.
+	 *
+	 * The Atlases have no country, so they render flat: a country heading
+	 * repeating "Dessert Atlas" under "Dessert Atlas" would be noise.
 	 */
+	const CONTINENT_ORDER = [
+		'The Family Chapter',
+		'Europe',
+		'Asia',
+		'Africa',
+		'The Americas',
+		'United States',
+		'The Atlases'
+	];
+
+	// Within a continent, countries run alphabetically, except the US regions,
+	// which run in the original guide's geographic order rather than by name.
 	const US_ORDER = [
 		'New England',
 		'Mid-Atlantic',
@@ -29,24 +48,42 @@
 		'American Table'
 	];
 
-	const groups = $derived.by(() => {
-		const byGroup = new Map<string, ChapterRef[]>();
-		for (const c of chapters) {
-			if (!byGroup.has(c.group)) byGroup.set(c.group, []);
-			byGroup.get(c.group)!.push(c);
-		}
-		for (const list of byGroup.values()) list.sort((a, b) => a.name.localeCompare(b.name));
+	type Country = { country: string | null; chapters: ChapterRef[] };
 
-		// Family first: your own recipes outrank the printed ones.
-		const order = ['The Family Chapter', 'World Cuisines', 'The Atlases', ...US_ORDER];
-		return order
-			.filter((g) => byGroup.has(g))
-			.map((g) => ({ group: g, chapters: byGroup.get(g)! }));
+	const groups = $derived.by(() => {
+		const byGroup = new Map<string, Map<string, ChapterRef[]>>();
+		for (const c of chapters) {
+			if (!byGroup.has(c.group)) byGroup.set(c.group, new Map());
+			const key = c.subgroup ?? '';
+			const inner = byGroup.get(c.group)!;
+			if (!inner.has(key)) inner.set(key, []);
+			inner.get(key)!.push(c);
+		}
+
+		const ordered = [
+			...CONTINENT_ORDER.filter((g) => byGroup.has(g)),
+			...[...byGroup.keys()].filter((g) => !CONTINENT_ORDER.includes(g)).sort()
+		];
+
+		return ordered.map((g) => {
+			const inner = byGroup.get(g)!;
+			let keys = [...inner.keys()];
+			keys =
+				g === 'United States'
+					? [...US_ORDER.filter((k) => inner.has(k)), ...keys.filter((k) => !US_ORDER.includes(k))]
+					: keys.sort((a, b) => a.localeCompare(b));
+			const countries: Country[] = keys.map((k) => ({
+				country: k === '' ? null : k,
+				chapters: inner.get(k)!.sort((a, b) => a.name.localeCompare(b.name))
+			}));
+			const total = countries.reduce((n, c) => n + c.chapters.length, 0);
+			return { group: g, countries, total };
+		});
 	});
 
 	// A group opens when it holds the active chapter, so a deep link to
 	// /chapter/vermont arrives with New England already expanded.
-	let open = $state(new Set<string>(['World Cuisines']));
+	let open = $state(new Set<string>(['Europe']));
 
 	$effect(() => {
 		if (!active) return;
@@ -81,20 +118,27 @@
 					onclick={() => toggle(g.group)}
 				>
 					<span>{g.group}</span>
+					<span class="gct">{g.total}</span>
 					<span class="caret" aria-hidden="true">{isOpen ? '▾' : '▸'}</span>
 				</button>
 				{#if isOpen}
 					<ul class="sub">
-						{#each g.chapters as c (c.slug)}
-							<li>
-								<a
-									href="{base}/chapter/{c.slug}"
-									class:on={active === c.slug}
-								>
-									<span class="nm">{c.name}</span>
-									<span class="ct">{shown(c.slug, c.count)}</span>
-								</a>
-							</li>
+						{#each g.countries as ctry (ctry.country ?? '_')}
+							{#if ctry.country}
+								<li class="cntry" aria-hidden="true">{ctry.country}</li>
+							{/if}
+							{#each ctry.chapters as c (c.slug)}
+								<li>
+									<a
+										href="{base}/chapter/{c.slug}"
+										class:on={active === c.slug}
+										class:nested={ctry.country !== null}
+									>
+										<span class="nm">{c.name}</span>
+										<span class="ct">{shown(c.slug, c.count)}</span>
+									</a>
+								</li>
+							{/each}
 						{/each}
 					</ul>
 				{/if}
@@ -104,6 +148,25 @@
 </nav>
 
 <style>
+	/* The country line is a label, not a link: it names the second level
+	   without adding another thing to click in a rail that is already deep. */
+	.cntry {
+		padding: 0.55rem 0 0.15rem 0.1rem;
+		font-size: 0.72rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		opacity: 0.55;
+	}
+	.sub a.nested {
+		padding-left: 0.85rem;
+	}
+	.gct {
+		margin-left: auto;
+		padding-right: 0.5rem;
+		font-size: 0.72rem;
+		opacity: 0.5;
+		font-variant-numeric: tabular-nums;
+	}
 	.rail {
 		position: relative;
 	}

@@ -28,6 +28,7 @@ import { derivePairing } from './derive/pairing.mjs';
 import { deriveTechniques, deriveFilms } from './derive/films.mjs';
 import { fullTechTable, LEXICON_ANCHOR, SUPPLEMENT } from './derive/technique-table.mjs';
 import { RECIPE_SUPPLEMENT, SUPPLEMENT_ATLASES } from './derive/recipes-supplement.mjs';
+import { placeOf, placedChapters } from './derive/geography.mjs';
 import { buildCrosslinks } from './derive/crosslinks.mjs';
 import { STANDARDS, MIN_MARKS, MAX_MARKS } from './derive/standards.mjs';
 import {
@@ -135,6 +136,43 @@ function gateSupplement() {
 }
 if (!gateSupplement()) process.exitCode = 1;
 
+/**
+ * Every chapter has a place on the map, and every place has a chapter.
+ *
+ * A chapter missing from the atlas would still be reachable by URL and by
+ * search, so nothing would look broken; it would simply never appear in the
+ * rail again, and nobody would notice for months. A place naming a chapter that
+ * no longer exists is the same bug read backwards, and it is how a rail ends up
+ * with an empty heading.
+ */
+function gateGeography(chapterNames) {
+	const known = new Set(placedChapters());
+	const atlases = new Set([...ATLAS, ...SUPPLEMENT_ATLASES]);
+	const problems = [];
+
+	for (const name of chapterNames) {
+		if (atlases.has(name)) continue;
+		if (!known.has(name)) {
+			problems.push(`chapter "${name}" has no place in tools/derive/geography.mjs: add it under a continent and a country, or the rail will never show it`);
+		}
+	}
+	const present = new Set(chapterNames);
+	for (const name of known) {
+		if (!present.has(name)) {
+			problems.push(`geography.mjs places "${name}", which is not a chapter any more: remove it, or the rail grows an empty heading`);
+		}
+	}
+
+	if (problems.length) {
+		console.error(`\n  geography: ${problems.length} problem(s)`);
+		problems.forEach((x) => console.error(`    \u2717 ${x}`));
+		return false;
+	}
+	console.log(`  geography: ${chapterNames.length} chapters placed on the map`);
+	return true;
+}
+
+
 const PANTRY = raw('PANTRY');
 const STUDY = raw('STUDY');
 const SUBS = raw('SUBS');
@@ -188,9 +226,25 @@ const ATLAS = new Set([
 ]);
 
 function classifyChapter(name) {
-	if (US_GROUP.has(name)) return { kind: 'us', group: US_GROUP.get(name) };
-	if (ATLAS.has(name) || SUPPLEMENT_ATLASES.has(name)) return { kind: 'atlas', group: 'The Atlases' };
-	return { kind: 'world', group: 'World Cuisines' };
+	/* group is the continent, subgroup the country. The Atlases are not places
+	   and carry no country, so the rail lists them flat under one heading. The
+	   kind is unchanged and still says whether a chapter is American, thematic
+	   or foreign, because the filters and the search facets read it. */
+	if (ATLAS.has(name) || SUPPLEMENT_ATLASES.has(name)) {
+		return { kind: 'atlas', group: 'The Atlases', subgroup: null };
+	}
+	const place = placeOf(name);
+	if (place) {
+		return {
+			kind: place.continent === 'United States' ? 'us' : 'world',
+			group: place.continent,
+			subgroup: place.country
+		};
+	}
+	/* Unreachable: gateGeography below fails the build first. Kept so a caller
+	   that somehow gets here produces a chapter with an honest label rather
+	   than undefined. */
+	return { kind: 'world', group: 'Unplaced', subgroup: null };
 }
 
 // ── ingredient sections ──────────────────────────────────────────────────────
@@ -358,10 +412,12 @@ R.forEach((r, i) => {
 
 const chapters = [...chapterCounts.entries()]
 	.map(([name, count]) => {
-		const { kind, group } = classifyChapter(name);
-		return { name, slug: slugify(name), kind, group, count };
+		const { kind, group, subgroup } = classifyChapter(name);
+		return { name, slug: slugify(name), kind, group, subgroup, count };
 	})
 	.sort((a, b) => a.name.localeCompare(b.name));
+
+if (!gateGeography(chapters.map((c) => c.name))) process.exitCode = 1;
 
 const lexicon = D.map((e, i) => ({
 	slug: lexSlugs[i],

@@ -111,6 +111,7 @@
 					slug: r.chapterSlug,
 					kind: 'world',
 					group: 'The Family Chapter',
+					subgroup: null,
 					count: 1
 				});
 		}
