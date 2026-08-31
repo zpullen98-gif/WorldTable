@@ -18073,8 +18073,8 @@
       "Allspice"
     ],
     "judgedBy": [
-      "frying-the-paste-until-the-oil-splits",
-      "keeping-the-cooking-liquid"
+      "keeping-the-cooking-liquid",
+      "frying-the-paste-until-the-oil-splits"
     ]
   },
   {
@@ -35619,7 +35619,7 @@
     ],
     "judgedBy": [
       "skimming-foam-fat-and-a-clear-broth",
-      "deglazing-and-pan-sauces"
+      "reducing-a-sauce"
     ]
   },
   {
@@ -78008,8 +78008,8 @@
       }
     },
     "lexiconTerms": [
-      "ferment-funk-the-taste-of-time",
-      "blenders-immersion-high-speed-and-food-processor"
+      "blenders-immersion-high-speed-and-food-processor",
+      "ferment-funk-the-taste-of-time"
     ],
     "pantryItems": [
       "Garlic",
@@ -80229,8 +80229,8 @@
       "Clove"
     ],
     "judgedBy": [
-      "deglazing-and-pan-sauces",
-      "reducing-a-sauce"
+      "reducing-a-sauce",
+      "deglazing-and-pan-sauces"
     ]
   },
   {
@@ -89378,7 +89378,7 @@
     ],
     "judgedBy": [
       "skimming-foam-fat-and-a-clear-broth",
-      "deglazing-and-pan-sauces"
+      "reducing-a-sauce"
     ]
   },
   {
@@ -110131,6 +110131,668 @@
     ],
     "judgedBy": [
       "deep-frying"
+    ]
+  },
+  {
+    "slug": "baechu-kimchi",
+    "ingredients": [
+      {
+        "kind": "item",
+        "text": "1 napa cabbage, about 1.2kg, quartered lengthwise"
+      },
+      {
+        "kind": "item",
+        "text": "90g coarse sea salt, not iodised"
+      },
+      {
+        "kind": "item",
+        "text": "40g gochugaru, coarse Korean chilli flake"
+      },
+      {
+        "kind": "item",
+        "text": "30g garlic, about 8 cloves, grated"
+      },
+      {
+        "kind": "item",
+        "text": "15g ginger, grated"
+      },
+      {
+        "kind": "item",
+        "text": "30g salted shrimp (saeujeot), minced"
+      },
+      {
+        "kind": "item",
+        "text": "20g fish sauce"
+      },
+      {
+        "kind": "item",
+        "text": "15g glutinous rice flour cooked to a paste with 150ml water"
+      },
+      {
+        "kind": "item",
+        "text": "100g Korean radish, julienned"
+      },
+      {
+        "kind": "item",
+        "text": "3 spring onions, in 4cm lengths"
+      }
+    ],
+    "steps": [
+      {
+        "text": "Salt the cabbage between every leaf, heaviest at the stem, and leave 2 hours turning once. It is ready when a stem folds double without cracking.",
+        "durationSec": 7200,
+        "handsOnSec": 240,
+        "unattendedSec": 7200,
+        "estimated": true
+      },
+      {
+        "text": "Rinse three times and drain cut side down 30 min. Water left in the leaf dilutes the brine and slows the ferment.",
+        "durationSec": 1800,
+        "handsOnSec": 2040,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Cool the rice paste, then beat in gochugaru, garlic, ginger, shrimp and fish sauce. Fold through radish and spring onion.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Wearing gloves, paint the paste over every leaf. Pack into a jar, press until brine rises over the top, and leave 2cm of headroom.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Ferment at 18 to 20C for 2 to 4 days until it tastes sour and fizzes against the tongue, then refrigerate.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      }
+    ],
+    "note": "The salting is the whole technique. It draws water out by osmosis until the cell walls go limp, which is why a ready stem folds instead of snapping, and it leaves the cabbage salty enough that lactobacillus can work while almost nothing else can. That selective pressure is what makes fermentation safe rather than lucky. Keep everything under the brine: the spoilage organisms that ruin a jar are aerobic, and a leaf floating in air is where they start. Bubbles and a clean sour smell mean it is working; fuzz on a dry surface means something was left exposed.",
+    "equipment": [
+      "Grater / zester"
+    ],
+    "techniques": [
+      "Brining & curing",
+      "Fermentation",
+      "Salting to draw the water out",
+      "Knife cuts: dice, julienne, bias"
+    ],
+    "flavor": {
+      "tags": [
+        "aromatic",
+        "tangy-ferment",
+        "fiery",
+        "umami-deep"
+      ],
+      "sentence": "Leads with aromatics blooming from the first bite, ferment tang with real depth behind it, finishing long and savory."
+    },
+    "pairingId": 18,
+    "films": {
+      "techniques": [
+        {
+          "label": "Technique: Brining & curing",
+          "url": "https://www.youtube.com/results?search_query=brining%20curing%20meat%20technique%20explained",
+          "sub": "The skill inside this recipe"
+        }
+      ],
+      "dish": {
+        "label": "Maangchi’s tongbaechu kimchi",
+        "url": "https://www.youtube.com/watch?v=eTucCw1w6Ak",
+        "sub": "★ A canon film: verified"
+      },
+      "search": {
+        "label": "This dish, cooked on camera",
+        "url": "https://www.youtube.com/results?search_query=Baechu%20Kimchi%20recipe",
+        "sub": "Search films of Baechu Kimchi"
+      },
+      "teacher": {
+        "label": "The cuisine, deeper",
+        "url": "https://www.youtube.com/results?search_query=Fermentation%20Atlas%20cooking%20techniques",
+        "sub": "Technique films from the Fermentation Atlas kitchen"
+      }
+    },
+    "lexiconTerms": [
+      "fermentation-and-pickling"
+    ],
+    "pantryItems": [
+      "Ground meat",
+      "Shrimp",
+      "Onion",
+      "Garlic",
+      "Ginger",
+      "Scallion",
+      "Chiles",
+      "Cabbage",
+      "Radish/Turnip",
+      "Rice",
+      "Flour",
+      "Fish sauce",
+      "Kimchi",
+      "Clove"
+    ],
+    "judgedBy": [
+      "salting-to-draw-the-water-out",
+      "fermentation"
+    ]
+  },
+  {
+    "slug": "sauerkraut-the-two-ingredient-ferment",
+    "ingredients": [
+      {
+        "kind": "item",
+        "text": "1kg white cabbage, cored and shredded 2mm"
+      },
+      {
+        "kind": "item",
+        "text": "20g fine sea salt, not iodised"
+      }
+    ],
+    "steps": [
+      {
+        "text": "Weigh the cabbage and use exactly 2% of that weight in salt. Precision here is not fussiness; it is the safety margin.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Toss and then squeeze in handfuls for 10 min until the cabbage releases enough liquid to pool when pressed.",
+        "durationSec": 600,
+        "handsOnSec": 840,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Pack into a jar a fistful at a time, pressing hard, until the brine covers everything. Weight it down.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Ferment at 18 to 22C for 2 to 4 weeks, releasing pressure every few days. Taste weekly and refrigerate when it is sour enough.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      }
+    ],
+    "note": "Two percent salt by weight is the number to memorise, because it is the concentration at which lactobacillus is comfortable and most spoilage organisms are not. Below about 1.5% the kraut goes soft and can turn; above 3% the ferment stalls and stays harshly salty. Weigh the cabbage rather than the jar, and weigh the salt rather than measuring it by spoon, since flake salts differ in density by a factor of two. Cold slows everything: a cellar at 15C takes twice as long as a kitchen at 22C and produces a rounder, less sharp result.",
+    "equipment": [],
+    "techniques": [
+      "Brining & curing",
+      "Fermentation"
+    ],
+    "flavor": {
+      "tags": [
+        "bright",
+        "tangy-ferment"
+      ],
+      "sentence": "Leads with acid holding everything up to the light, ferment tang with real depth behind it."
+    },
+    "pairingId": 6,
+    "films": {
+      "techniques": [
+        {
+          "label": "Technique: Brining & curing",
+          "url": "https://www.youtube.com/results?search_query=brining%20curing%20meat%20technique%20explained",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: Fermentation",
+          "url": "https://www.youtube.com/results?search_query=fermentation%20basics%20vegetables%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
+      "search": {
+        "label": "This dish, cooked on camera",
+        "url": "https://www.youtube.com/results?search_query=Sauerkraut%2C%20the%20Two%20Ingredient%20Ferment%20recipe",
+        "sub": "Search films of Sauerkraut, the Two Ingredient Ferment"
+      },
+      "teacher": {
+        "label": "The cuisine, deeper",
+        "url": "https://www.youtube.com/results?search_query=Fermentation%20Atlas%20cooking%20techniques",
+        "sub": "Technique films from the Fermentation Atlas kitchen"
+      }
+    },
+    "lexiconTerms": [
+      "ferment-funk-the-taste-of-time",
+      "sous-vide-hardware-circulators-sealers-and-safety-kit",
+      "ice-and-dilution-the-invisible-ingredient"
+    ],
+    "pantryItems": [
+      "Cabbage"
+    ],
+    "judgedBy": [
+      "fermentation",
+      "brining-and-curing"
+    ]
+  },
+  {
+    "slug": "shio-koji",
+    "ingredients": [
+      {
+        "kind": "item",
+        "text": "200g dried rice koji"
+      },
+      {
+        "kind": "item",
+        "text": "60g fine sea salt"
+      },
+      {
+        "kind": "item",
+        "text": "300ml water, filtered if yours is chlorinated"
+      }
+    ],
+    "steps": [
+      {
+        "text": "Break the koji grains apart with your fingers so none are clumped, then stir through the salt.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Add water to cover by 1cm and stir. Keep the surface submerged.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Leave at room temperature 7 to 10 days, stirring daily; it is ready when the grains are soft, the liquid is cloudy, and it smells of sweet chestnut.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Blend smooth for a marinade, or leave whole. Refrigerate up to 6 months.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      }
+    ],
+    "note": "Koji is Aspergillus oryzae grown on rice, and what you are buying is its enzymes: proteases that cut protein into free amino acids, and amylases that cut starch into sugar. Rubbed on fish or chicken at about 10% of its weight for a few hours, shio koji does what a long dry age does, tenderising while building glutamate, which is why the result tastes savoury rather than merely salty. The limit is time: leave protein in it overnight and the proteases go too far, turning the surface soft and faintly bitter. Two to four hours is the working window.",
+    "equipment": [],
+    "techniques": [
+      "Fermentation",
+      "Marinating: acid, salt and time"
+    ],
+    "flavor": {
+      "tags": [
+        "clean",
+        "simple"
+      ],
+      "sentence": "A quiet dish that lets its main ingredient speak: season well and stand aside."
+    },
+    "pairingId": 10,
+    "films": {
+      "techniques": [
+        {
+          "label": "Technique: Fermentation",
+          "url": "https://www.youtube.com/results?search_query=fermentation%20basics%20vegetables%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
+      "search": {
+        "label": "This dish, cooked on camera",
+        "url": "https://www.youtube.com/results?search_query=Shio%20Koji%20recipe",
+        "sub": "Search films of Shio Koji"
+      },
+      "teacher": {
+        "label": "The cuisine, deeper",
+        "url": "https://www.youtube.com/results?search_query=Fermentation%20Atlas%20cooking%20techniques",
+        "sub": "Technique films from the Fermentation Atlas kitchen"
+      }
+    },
+    "lexiconTerms": [],
+    "pantryItems": [
+      "Rice"
+    ],
+    "judgedBy": [
+      "fermentation",
+      "marinating-acid-salt-and-time"
+    ]
+  },
+  {
+    "slug": "preserved-lemons",
+    "ingredients": [
+      {
+        "kind": "item",
+        "text": "8 unwaxed lemons, thin skinned"
+      },
+      {
+        "kind": "item",
+        "text": "200g coarse sea salt"
+      },
+      {
+        "kind": "item",
+        "text": "2 bay leaves"
+      },
+      {
+        "kind": "item",
+        "text": "1 tsp black peppercorns"
+      },
+      {
+        "kind": "item",
+        "text": "Juice of 4 further lemons, as needed"
+      }
+    ],
+    "steps": [
+      {
+        "text": "Cut each lemon in quarters from the top, stopping 1cm short of the base so it stays hinged.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Pack salt into every cut surface, close the fruit, and press into a sterilised jar, layering bay and peppercorns.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Press down hard. The lemons should release enough juice to cover; top up with fresh juice if not.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Seal and leave a month at room temperature, turning the jar occasionally. Refrigerate after opening.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      }
+    ],
+    "note": "This is a salt cure, not a fermentation in the lactic sense, and the salt is doing two jobs: drawing juice out to make the covering brine, and breaking down the pith so the bitterness leaves. That is why a month matters and a week does not. The rind is the ingredient; most cooks scrape the flesh away and use only the peel, sliced fine. A white bloom on the surface is usually harmless kahm yeast, and can be lifted off, but any fuzzy growth or a jar where the fruit has risen out of the brine should go in the bin.",
+    "equipment": [],
+    "techniques": [
+      "Fermentation"
+    ],
+    "flavor": {
+      "tags": [
+        "bright",
+        "gently hot"
+      ],
+      "sentence": "Leads with acid holding everything up to the light, a warm current of chile."
+    },
+    "pairingId": 6,
+    "films": {
+      "techniques": [
+        {
+          "label": "Technique: Brining & curing",
+          "url": "https://www.youtube.com/results?search_query=brining%20curing%20meat%20technique%20explained",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: Fermentation",
+          "url": "https://www.youtube.com/results?search_query=fermentation%20basics%20vegetables%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
+      "search": {
+        "label": "This dish, cooked on camera",
+        "url": "https://www.youtube.com/results?search_query=Preserved%20Lemons%20recipe",
+        "sub": "Search films of Preserved Lemons"
+      },
+      "teacher": {
+        "label": "The cuisine, deeper",
+        "url": "https://www.youtube.com/results?search_query=Fermentation%20Atlas%20cooking%20techniques",
+        "sub": "Technique films from the Fermentation Atlas kitchen"
+      }
+    },
+    "lexiconTerms": [
+      "rinses-floats-and-layering"
+    ],
+    "pantryItems": [
+      "Lemon",
+      "Bay leaf",
+      "Pickles"
+    ],
+    "judgedBy": [
+      "fermentation"
+    ]
+  },
+  {
+    "slug": "brown-veal-stock",
+    "ingredients": [
+      {
+        "kind": "item",
+        "text": "4kg veal bones, knuckle and marrow, cut 6cm"
+      },
+      {
+        "kind": "item",
+        "text": "500g onion, halved"
+      },
+      {
+        "kind": "item",
+        "text": "250g carrot, in chunks"
+      },
+      {
+        "kind": "item",
+        "text": "250g leek, white only"
+      },
+      {
+        "kind": "item",
+        "text": "100g tomato paste"
+      },
+      {
+        "kind": "item",
+        "text": "1 head garlic, halved across"
+      },
+      {
+        "kind": "item",
+        "text": "2 bay leaves, 6 parsley stalks, 1 tsp black peppercorns"
+      },
+      {
+        "kind": "item",
+        "text": "6 litres cold water"
+      }
+    ],
+    "steps": [
+      {
+        "text": "Roast the bones at 220C (425F) for 45 min until deep brown, turning once. Pale bones make pale stock and there is no recovering it later.",
+        "durationSec": 2700,
+        "handsOnSec": 240,
+        "unattendedSec": 2700,
+        "estimated": true
+      },
+      {
+        "text": "Add the vegetables and roast 20 min more, then smear on the tomato paste and give it 10 min until it darkens and smells sweet rather than tinny.",
+        "durationSec": 1200,
+        "handsOnSec": 0,
+        "unattendedSec": 1800,
+        "estimated": false
+      },
+      {
+        "text": "Transfer to a tall pot, deglaze the roasting tray with water and scrape every brown speck in, then cover with cold water.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Bring to 90C and hold there 8 to 12 hours, never boiling, skimming for the first hour. Add the aromatics in the final hour.",
+        "durationSec": 36000,
+        "handsOnSec": 36240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Strain through muslin without pressing, chill overnight, and lift the fat cap off.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      }
+    ],
+    "note": "Two rules carry this. Start cold, because proteins that will become scum are soluble in cold water and set into the liquid if you start hot, and a stock clouded at the beginning never clears. Then never let it boil: at a rolling boil the rendered fat emulsifies into the water and the stock turns greasy and permanently opaque, where at 90C it simply floats and can be lifted off cold. The gelatine comes from knuckle and connective tissue rather than marrow, so ask for joints. Properly made it sets to a firm jelly in the fridge, and that wobble is the only test worth running.",
+    "equipment": [
+      "Sheet pan",
+      "Fine sieve"
+    ],
+    "techniques": [
+      "Deglazing & pan sauces",
+      "Roasting in a hot oven",
+      "Frying the paste until the oil splits",
+      "The bare simmer: holding liquid below the boil",
+      "Straining & passing through a sieve",
+      "Skimming: foam, fat and a clear broth"
+    ],
+    "flavor": {
+      "tags": [
+        "umami-deep",
+        "rich",
+        "fiery",
+        "herb-fresh"
+      ],
+      "sentence": "Leads with savory depth stacked from the pantry’s bass notes, richness that coats and comforts, lifted green at the very end."
+    },
+    "pairingId": 18,
+    "films": {
+      "techniques": [
+        {
+          "label": "Technique: Deglazing & pan sauces",
+          "url": "https://www.youtube.com/results?search_query=pan%20sauce%20deglazing%20technique",
+          "sub": "The skill inside this recipe"
+        },
+        {
+          "label": "Technique: Building an emulsion",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20emulsify%20sauce%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
+      "search": {
+        "label": "This dish, cooked on camera",
+        "url": "https://www.youtube.com/results?search_query=Brown%20Veal%20Stock%20recipe",
+        "sub": "Search films of Brown Veal Stock"
+      },
+      "teacher": {
+        "label": "The cuisine, deeper",
+        "url": "https://www.youtube.com/results?search_query=Stock%20%26%20Fond%20Atlas%20cooking%20techniques",
+        "sub": "Technique films from the Stock & Fond Atlas kitchen"
+      }
+    },
+    "lexiconTerms": [
+      "speck-alto-adige",
+      "deglaze-and-fond"
+    ],
+    "pantryItems": [
+      "Onion",
+      "Garlic",
+      "Leek",
+      "Tomato",
+      "Carrot",
+      "Parsley",
+      "Bay leaf",
+      "Stock/Broth",
+      "Tomato paste"
+    ],
+    "judgedBy": [
+      "skimming-foam-fat-and-a-clear-broth",
+      "roasting-in-a-hot-oven"
+    ]
+  },
+  {
+    "slug": "dashi-ichiban",
+    "ingredients": [
+      {
+        "kind": "item",
+        "text": "20g kombu, wiped but not washed"
+      },
+      {
+        "kind": "item",
+        "text": "1 litre soft water"
+      },
+      {
+        "kind": "item",
+        "text": "25g katsuobushi, thick shaved"
+      }
+    ],
+    "steps": [
+      {
+        "text": "Steep the kombu in the cold water 30 min, then bring slowly to 60C and hold 20 min. Do not let it boil.",
+        "durationSec": 1800,
+        "handsOnSec": 240,
+        "unattendedSec": 3000,
+        "estimated": true
+      },
+      {
+        "text": "Lift the kombu out the moment small bubbles climb the pan.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Raise to 80C, add the katsuobushi all at once, and take off the heat immediately.",
+        "durationSec": null,
+        "handsOnSec": 240,
+        "unattendedSec": 0,
+        "estimated": true
+      },
+      {
+        "text": "Let the flakes sink, about 2 min, then strain through muslin without pressing.",
+        "durationSec": 120,
+        "handsOnSec": 360,
+        "unattendedSec": 0,
+        "estimated": true
+      }
+    ],
+    "note": "Dashi is a lesson in restraint: almost everything that goes wrong is caused by more heat or more time. Kombu gives up glutamate slowly at low temperature, and boiling it drags out alginates that turn the broth slippery and faintly bitter. Katsuobushi gives inosinate in seconds, and left to steep it turns sour and fishy. The reason the two are used together is synergy rather than tradition: glutamate and inosinate together read as far more savoury than the sum of each alone, which is why a two ingredient broth can carry a whole meal. The spent kombu and flakes make niban dashi, a second, weaker stock for simmering vegetables.",
+    "equipment": [
+      "Fine sieve"
+    ],
+    "techniques": [
+      "Dashi",
+      "Straining & passing through a sieve"
+    ],
+    "flavor": {
+      "tags": [
+        "umami-deep"
+      ],
+      "sentence": "Leads with savory depth stacked from the pantry’s bass notes."
+    },
+    "pairingId": 14,
+    "films": {
+      "techniques": [
+        {
+          "label": "Technique: Dashi",
+          "url": "https://www.youtube.com/results?search_query=how%20to%20make%20dashi%20technique",
+          "sub": "The skill inside this recipe"
+        }
+      ],
+      "search": {
+        "label": "This dish, cooked on camera",
+        "url": "https://www.youtube.com/results?search_query=Dashi%2C%20Ichiban%20recipe",
+        "sub": "Search films of Dashi, Ichiban"
+      },
+      "teacher": {
+        "label": "The cuisine, deeper",
+        "url": "https://www.youtube.com/results?search_query=Stock%20%26%20Fond%20Atlas%20cooking%20techniques",
+        "sub": "Technique films from the Stock & Fond Atlas kitchen"
+      }
+    },
+    "lexiconTerms": [],
+    "pantryItems": [
+      "Stock/Broth",
+      "Seaweed/Nori"
+    ],
+    "judgedBy": [
+      "straining-and-passing-through-a-sieve"
     ]
   }
 ]

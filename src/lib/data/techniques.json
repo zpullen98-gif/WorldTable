@@ -180,7 +180,7 @@
     "lexiconTerm": "Brining: Wet, Dry & Cures",
     "definition": "Salt's three levels of commitment. WET BRINE (5–8% salt solution, hours): dissolves some muscle protein so meat retains water: juicier lean cuts, diluted flavor, wet skin. DRY BRINE (salting 1–3 days ahead, uncovered): seasons deeply, keeps flavor concentrated, and desiccates skin for crackling, the modern professional default for poultry and steaks. CURING (higher salt, often with nitrite, plus time): preservation and transformation. Bacon, gravlax, pastrami, prosciutto. The through-line is diffusion and osmosis given time; 'season early' is the shortest version of this entire entry.",
     "origin": "original",
-    "chapters": 24,
+    "chapters": 25,
     "semesters": [
       {
         "n": 10,
@@ -217,7 +217,9 @@
       "texas-smoked-sausage",
       "sonoran-hot-dog",
       "utah-fry-sauce-burger",
-      "utah-pastrami-burger"
+      "utah-pastrami-burger",
+      "baechu-kimchi",
+      "sauerkraut-the-two-ingredient-ferment"
     ]
   },
   {
@@ -551,7 +553,7 @@
     "lexiconTerm": "Stocks: Blanc, Brun, Broth & Demi",
     "definition": "WHITE STOCK: raw bones, gentle simmer: clean, pale, for velouté and light soups. BROWN STOCK: bones and mirepoix roasted first, tomato paste caramelized: deep color and roasted flavor, the mother of demi-glace and jus. BROTH is meat-based and seasoned to drink; stock is bone-based, unsalted, and built for gelatin. A proper stock sets like Jell-O cold. GLACE is stock reduced to a syrup; a spoon flavors a whole pan sauce. Skim relentlessly, never boil (cloudiness is emulsified scum), salt never (it concentrates downstream), and know that stock is the bank account every other station borrows from.",
     "origin": "original",
-    "chapters": 4,
+    "chapters": 5,
     "semesters": [
       {
         "n": 2,
@@ -565,7 +567,8 @@
       "saimin",
       "takoyaki",
       "zaru-soba",
-      "kitsune-udon"
+      "kitsune-udon",
+      "dashi-ichiban"
     ]
   },
   {
@@ -613,7 +616,7 @@
     "lexiconTerm": "Deglaze & Fond",
     "definition": "FOND (French for 'base/foundation') is the browned glaze of proteins and sugars welded to the pan after searing, concentrated Maillard flavor that amateurs scrub into the sink and professionals convert into money. DEGLAZING: pouring liquid (wine, stock, even water) into the hot emptied pan and scraping; the fond dissolves into an instant sauce base. From there: reduce, season, mount with butter, and a sautéed anything becomes a finished dish. The habit to build: never wash a pan with fond in it until you've asked what sauce it wanted to become.",
     "origin": "original",
-    "chapters": 16,
+    "chapters": 17,
     "semesters": [
       {
         "n": 1,
@@ -654,7 +657,8 @@
       "montana-bison-ribeye-with-wild-mushrooms",
       "wyoming-prime-rib",
       "wyoming-lamb-stew",
-      "alaska-moose-stew"
+      "alaska-moose-stew",
+      "brown-veal-stock"
     ]
   },
   {
@@ -809,7 +813,7 @@
     "lexiconTerm": "Fermentation & Pickling",
     "definition": "Two preserved-sour families the menu should distinguish. QUICK PICKLING: vinegar, sugar, salt poured over: sour today, no microbes involved. LACTO-FERMENTATION: salt (2–3% by weight) suppresses bad microbes while lactobacillus converts sugars to lactic acid (sauerkraut, kimchi, real dill pickles, curtido), living sour with depth vinegar can't fake. Adjacent kingdoms: KOJI (Aspergillus mold on rice/barley) powers miso, soy sauce, and modern dry-age shortcuts; yeast ferments bread and beer; SCOBYs make kombucha and vinegar itself. Ferments are how a restaurant builds house flavor no supplier can sell the competition.",
     "origin": "original",
-    "chapters": 12,
+    "chapters": 13,
     "semesters": [
       {
         "n": 5,
@@ -834,7 +838,11 @@
       "new-haven-white-clam-apizza",
       "new-haven-tomato-pie",
       "new-york-slice",
-      "alaska-sourdough-pancakes"
+      "alaska-sourdough-pancakes",
+      "baechu-kimchi",
+      "sauerkraut-the-two-ingredient-ferment",
+      "shio-koji",
+      "preserved-lemons"
     ]
   },
   {
@@ -937,7 +945,7 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "supplement",
-    "chapters": 15,
+    "chapters": 16,
     "semesters": [],
     "recipes": [
       "chicken-tinga",
@@ -965,7 +973,8 @@
       "singapore-chilli-crab",
       "cuban-black-beans-and-rice",
       "sofrito-shrimp-creole",
-      "nevada-chile-verde"
+      "nevada-chile-verde",
+      "brown-veal-stock"
     ]
   },
   {
@@ -1316,7 +1325,7 @@
     "lexiconTerm": "Knife Cuts: The Classical Ladder",
     "definition": "The French system exists because even cuts cook evenly and plate professionally. The ladder: BRUNOISE (3mm dice) and its baby FINE BRUNOISE (1.5mm); JULIENNE (matchsticks 3mm × 5cm) and BATONNET (6mm × 6cm, the fry); small/medium/large DICE (6/12/20mm); PAYSANNE (thin tiles); CHIFFONADE (herbs and leaves rolled and sliced into ribbons); TOURNÉ (the seven-sided football that has hazed culinary students for a century). MINCE is fineness without geometry; SUPREME is the citrus segment freed from all membrane. Speed comes later; uniformity is the exam, and the claw grip is the tuition.",
     "origin": "supplement",
-    "chapters": 36,
+    "chapters": 37,
     "semesters": [
       {
         "n": 1,
@@ -1384,7 +1393,8 @@
       "new-mexico-chile-rellenos",
       "butte-pasty",
       "montana-lentil-and-wheat-berry-salad",
-      "california-roll"
+      "california-roll",
+      "baechu-kimchi"
     ]
   },
   {
@@ -1506,7 +1516,7 @@
     "lexiconTerm": "Velveting & Marinades",
     "definition": "VELVETING is the Chinese restaurant's tenderness secret: sliced meat coated in egg white, cornstarch, and a little baking soda or wine, rested, then pre-cooked briefly in oil or water; the alkaline soda relaxes surface proteins and the starch jackets in moisture, producing that signature silk in stir-fries. MARINADES, honestly assessed: salt, sugar, and acid work only millimeters deep (oil carries aromatics to the surface); enzyme marinades (pineapple, papaya, yogurt's gentler lactic action) genuinely tenderize but turn meat mushy past their window. Marinades are surface seasoning plus browning chemistry: the flavor is real; the 'penetration' is mostly myth, and the dry brine outperforms for depth.",
     "origin": "supplement",
-    "chapters": 34,
+    "chapters": 35,
     "semesters": [
       {
         "n": 4,
@@ -1571,7 +1581,8 @@
       "arizona-carne-seca",
       "colorado-lamb-chops",
       "wyoming-beef-jerky",
-      "seattle-style-teriyaki-chicken"
+      "seattle-style-teriyaki-chicken",
+      "shio-koji"
     ]
   },
   {
@@ -2042,7 +2053,7 @@
     "lexiconTerm": "Roasting, Baking & Carryover",
     "definition": "Dry ambient heat in an enclosed oven: 'roasting' for meats and vegetables, 'baking' for doughs, the physics identical. The professional's three levers: TEMPERATURE STRATEGY (high-then-low for a crusted roast, low-then-blast 'reverse sear' for even doneness plus crust), AIRFLOW (convection browns faster and dries surfaces: drop 15°C from conventional recipes), and CARRYOVER: internal temperature climbs 3–8°C after removal as the exterior's heat equalizes inward. Pull the roast BEFORE target and rest it: resting redistributes juices and finishes the cook. Cutting early spills what patience would have kept.",
     "origin": "supplement",
-    "chapters": 18,
+    "chapters": 19,
     "semesters": [
       {
         "n": 7,
@@ -2074,7 +2085,8 @@
       "chicago-italian-beef",
       "wyoming-prime-rib",
       "california-french-dip",
-      "birch-glazed-king-salmon"
+      "birch-glazed-king-salmon",
+      "brown-veal-stock"
     ]
   },
   {
@@ -2183,7 +2195,7 @@
     "lexiconTerm": "Brining: Wet, Dry & Cures",
     "definition": "Salt's three levels of commitment. WET BRINE (5–8% salt solution, hours): dissolves some muscle protein so meat retains water: juicier lean cuts, diluted flavor, wet skin. DRY BRINE (salting 1–3 days ahead, uncovered): seasons deeply, keeps flavor concentrated, and desiccates skin for crackling, the modern professional default for poultry and steaks. CURING (higher salt, often with nitrite, plus time): preservation and transformation. Bacon, gravlax, pastrami, prosciutto. The through-line is diffusion and osmosis given time; 'season early' is the shortest version of this entire entry.",
     "origin": "supplement",
-    "chapters": 11,
+    "chapters": 12,
     "semesters": [],
     "recipes": [
       "eggplant-parmigiana",
@@ -2200,7 +2212,8 @@
       "squash-casserole",
       "hane-tsuki-gyoza",
       "carolina-coleslaw",
-      "ohio-sauerkraut-balls"
+      "ohio-sauerkraut-balls",
+      "baechu-kimchi"
     ]
   },
   {
@@ -2508,7 +2521,7 @@
     "lexiconTerm": "Consommé & Clarification",
     "definition": "Stock clarified to crystal transparency using a RAFT: egg whites, ground meat, and mirepoix whisked into cold stock, then heated gently: the proteins coagulate into a floating filter that captures every particle while the meat re-fortifies flavor. Ladled out through the raft's vent hole, the result is a soup so clear you read the bowl's maker's mark, with more flavor than it has any right to. The modern shortcuts (ice filtration through a frozen block, agar clarification) earn their place, but the raft remains the classical exam: patience, temperature control, and protein chemistry in one pot.",
     "origin": "supplement",
-    "chapters": 17,
+    "chapters": 18,
     "semesters": [
       {
         "n": 4,
@@ -2539,7 +2552,8 @@
       "nevada-basque-lamb-shoulder",
       "wyoming-chokecherry-jelly",
       "oregon-pinot-noir-braised-short-ribs",
-      "alaska-king-crab-legs-with-drawn-butter"
+      "alaska-king-crab-legs-with-drawn-butter",
+      "brown-veal-stock"
     ]
   },
   {
@@ -2685,7 +2699,7 @@
     "lexiconTerm": "Sieves: Chinois, Tamis & Food Mill",
     "definition": "Texture's final gatekeepers: the difference between good and restaurant-smooth is usually a pass through mesh. CHINOIS (the conical fine-mesh 'China cap'): sauces, custards, and consommé-adjacent liquids pressed through with a ladle's back, the crème anglaise and silky-soup insurance the pastry wing's custard entries demand. TAMIS (drum sieve): purées pushed across with a scraper: pommes purée's cloud (Robuchon's potatoes are a tamis story), flawless raviolo fillings, sifted dry goods. FOOD MILL: the rustic-smooth middle path. Tomato sauce milled (skins and seeds stay behind, BODY stays in; the sauce wing's Escoffier entry argues this against the blender's foam), mashed potatoes without glue (it cuts, never whips, so starch stays calm), applesauce at volume. The hierarchy by finish: mill = rustic-smooth with body; tamis = refined purée; chinois = liquid silk. Straining is not fussiness; it is the visible difference guests can't name and always notice.",
     "origin": "supplement",
-    "chapters": 25,
+    "chapters": 26,
     "semesters": [
       {
         "n": 6,
@@ -2734,7 +2748,9 @@
       "salt-rising-bread",
       "floridian-flan",
       "indiana-persimmon-pudding",
-      "wyoming-chokecherry-jelly"
+      "wyoming-chokecherry-jelly",
+      "brown-veal-stock",
+      "dashi-ichiban"
     ]
   },
   {
@@ -2991,7 +3007,7 @@
     "lexiconTerm": "Poach, Simmer, Boil",
     "definition": "Three temperatures pretending to be one method. POACH: 71–82°C, water barely shivering: eggs, fish, chicken breast, anything delicate that violent bubbles would shred. SIMMER: 85–95°C, lazy bubbles: stocks, braises, beans, sauces. BOIL: 100°C rolling: pasta, blanching, potatoes, and almost nothing made of protein. The most common home error is treating these as synonyms; the most common professional discipline is watching the bubbles, not the dial. Salt poaching liquids and courts-bouillons like they are the sauce, because for those minutes they are.",
     "origin": "supplement",
-    "chapters": 28,
+    "chapters": 29,
     "semesters": [
       {
         "n": 4,
@@ -3042,7 +3058,8 @@
       "carolina-fish-stew",
       "wisconsin-beer-cheese-soup",
       "wyoming-cowboy-coffee",
-      "california-french-dip"
+      "california-french-dip",
+      "brown-veal-stock"
     ]
   },
   {

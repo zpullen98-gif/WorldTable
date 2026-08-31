@@ -212,13 +212,13 @@ describe('the judgedBy join', () => {
 });
 
 describe('what this bought, measured against the shipped data', () => {
-	it('takes the assessable corpus from 45 to 796 of 970', () => {
+	it('takes the assessable corpus from 45 to 802 of 976', () => {
 		const dish = detail.filter((r) => r.standard).length;
 		const byTechnique = detail.filter((r) => r.judgedBy).length;
 		expect(dish).toBe(45);
-		expect(byTechnique).toBe(751);
-		expect(dish + byTechnique).toBe(796);
-		expect(detail.length).toBe(970);
+		expect(byTechnique).toBe(757);
+		expect(dish + byTechnique).toBe(802);
+		expect(detail.length).toBe(976);
 	});
 
 	it('does it with 50 pieces of writing', () => {

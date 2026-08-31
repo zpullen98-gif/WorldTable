@@ -27,6 +27,7 @@ import { deriveCost } from './derive/cost.mjs';
 import { derivePairing } from './derive/pairing.mjs';
 import { deriveTechniques, deriveFilms } from './derive/films.mjs';
 import { fullTechTable, LEXICON_ANCHOR, SUPPLEMENT } from './derive/technique-table.mjs';
+import { RECIPE_SUPPLEMENT, SUPPLEMENT_ATLASES } from './derive/recipes-supplement.mjs';
 import { buildCrosslinks } from './derive/crosslinks.mjs';
 import { STANDARDS, MIN_MARKS, MAX_MARKS } from './derive/standards.mjs';
 import {
@@ -53,8 +54,87 @@ const OUT = join(ROOT, 'src', 'lib', 'data');
 
 const raw = (name) => reviveRegex(JSON.parse(readFileSync(join(RAW, `${name}.json`), 'utf8')));
 
-const R = raw('R');
+/* The original 970, sealed and proved lossless by verify-extraction.mjs,
+   plus everything authored since. Downstream code cannot tell them apart, and
+   should not: a supplement recipe is derived, tagged, gated and indexed on
+   exactly the same terms. */
+const R_ORIGINAL = raw('R');
+const R = [...R_ORIGINAL, ...RECIPE_SUPPLEMENT];
 const D = raw('D');
+
+/**
+ * The supplement's own gate.
+ *
+ * The original 970 are proved correct by extraction. Nothing proves a hand
+ * written recipe except this, so it checks the contract the file documents:
+ * the nine keys and nothing else, a course the app can render, a difficulty
+ * the filter can show, a name no other recipe already claims, and a note long
+ * enough to have said something. A recipe that fails here never reaches the
+ * data, which is the point.
+ */
+function gateSupplement() {
+	const COURSES = new Set(['Bread', 'Breakfast', 'Dessert', 'Drink', 'Main',
+		'Salad', 'Sauce', 'Side', 'Soup', 'Starter']);
+	const KEYS = ['n', 'c', 'k', 'd', 't', 'v', 'i', 'm', 'p'];
+	const problems = [];
+	const seen = new Map();
+	R_ORIGINAL.forEach((r) => seen.set(slugify(r.n), 'the original guide'));
+
+	RECIPE_SUPPLEMENT.forEach((r, i) => {
+		const where = `supplement[${i}] ${r && r.n ? JSON.stringify(r.n) : '(unnamed)'}`;
+		if (!r || typeof r !== 'object') { problems.push(`${where}: not an object`); return; }
+
+		const extra = Object.keys(r).filter((k) => !KEYS.includes(k));
+		if (extra.length) problems.push(`${where}: unknown key(s) ${extra.join(', ')}`);
+		for (const k of KEYS) if (r[k] === undefined) problems.push(`${where}: missing "${k}"`);
+		if (problems.length && !r.n) return;
+
+		if (typeof r.n !== 'string' || !r.n.trim()) problems.push(`${where}: name must be a non-empty string`);
+		if (typeof r.c !== 'string' || !r.c.trim()) problems.push(`${where}: chapter must be a non-empty string`);
+		if (!COURSES.has(r.k)) problems.push(`${where}: course ${JSON.stringify(r.k)} is not one the app renders`);
+		if (![1, 2, 3].includes(r.d)) problems.push(`${where}: difficulty must be 1, 2 or 3`);
+		if (!Number.isFinite(r.t) || r.t <= 0 || r.t > 600) problems.push(`${where}: t must be active minutes, 1 to 600`);
+		if (r.v !== 0 && r.v !== 1) problems.push(`${where}: v must be 0 or 1`);
+
+		/* Two, not three. The floor is here to catch a recipe that forgot its
+		   ingredients, and 3 was copied from the original guide's observed
+		   minimum rather than from anything true: a kraut is cabbage and salt,
+		   a cure is meat and salt, and padding either to satisfy a gate would
+		   be a lie about the dish. */
+		if (!Array.isArray(r.i) || r.i.length < 2 || r.i.length > 18) {
+			problems.push(`${where}: needs 2 to 18 ingredients, has ${Array.isArray(r.i) ? r.i.length : 'none'}`);
+		} else if (r.i.some((x) => typeof x !== 'string' || !x.trim())) {
+			problems.push(`${where}: an ingredient is empty or not a string`);
+		}
+		if (!Array.isArray(r.m) || r.m.length < 3 || r.m.length > 6) {
+			problems.push(`${where}: needs 3 to 6 method steps, has ${Array.isArray(r.m) ? r.m.length : 'none'}`);
+		} else if (r.m.some((x) => typeof x !== 'string' || !x.trim())) {
+			problems.push(`${where}: a step is empty or not a string`);
+		}
+		if (typeof r.p !== 'string' || r.p.length < 120) {
+			problems.push(`${where}: the note must explain a mechanism, 120 chars minimum, has ${typeof r.p === 'string' ? r.p.length : 0}`);
+		}
+
+		/* The product was swept of these. A new one puts it back. */
+		const text = [r.n, r.c, r.p, ...(r.i || []), ...(r.m || [])].join(' ');
+		if (/\u2014/.test(text)) problems.push(`${where}: contains an em dash`);
+		if (/ \u2013 /.test(text)) problems.push(`${where}: contains a spaced en dash`);
+
+		const slug = slugify(r.n);
+		if (seen.has(slug)) problems.push(`${where}: name collides with one already in ${seen.get(slug)}`);
+		else seen.set(slug, 'the supplement');
+	});
+
+	if (problems.length) {
+		console.error(`\n  supplement: ${problems.length} problem(s)`);
+		problems.forEach((x) => console.error(`    \u2717 ${x}`));
+		return false;
+	}
+	console.log(`  supplement: ${RECIPE_SUPPLEMENT.length} authored recipes, contract holds`);
+	return true;
+}
+if (!gateSupplement()) process.exitCode = 1;
+
 const PANTRY = raw('PANTRY');
 const STUDY = raw('STUDY');
 const SUBS = raw('SUBS');
@@ -109,7 +189,7 @@ const ATLAS = new Set([
 
 function classifyChapter(name) {
 	if (US_GROUP.has(name)) return { kind: 'us', group: US_GROUP.get(name) };
-	if (ATLAS.has(name)) return { kind: 'atlas', group: 'The Atlases' };
+	if (ATLAS.has(name) || SUPPLEMENT_ATLASES.has(name)) return { kind: 'atlas', group: 'The Atlases' };
 	return { kind: 'world', group: 'World Cuisines' };
 }
 

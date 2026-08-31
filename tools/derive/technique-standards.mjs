@@ -12,7 +12,7 @@
  * searing anything is doing the same measurable thing whether the pan holds
  * duck or aubergine, and that is assessable once, for all of it.
  *
- * 174 of the 970 remain unassessable and always will on this approach: 143
+ * 174 of the 976 remain unassessable and always will on this approach: 143
  * carry no technique tag at all, and the other 31 exercise only techniques too
  * rare in this corpus to be worth a standard. That is the honest ceiling rather
  * than a backlog, and it is gated below with everything else: the first
@@ -20,9 +20,9 @@
  * measured and were both wrong.
  *
  * The 50 techniques written here are every technique the corpus uses on 12 or
- * more recipes. They put a standard on 751 recipes that had none, taking the
- * assessable corpus from 45 to 796 of 970: for 50 pieces of writing rather
- * than 751.
+ * more recipes. They put a standard on 757 recipes that had none, taking the
+ * assessable corpus from 45 to 802 of 976: for 50 pieces of writing rather
+ * than 757.
  *
  * These were 752 and 797 until the em dash sweep of 29 Aug 2026. Exactly one
  * recipe moved: kulfi, whose first ingredient read "1.5L whole milk - reduced
