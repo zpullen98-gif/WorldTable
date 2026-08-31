@@ -219,9 +219,11 @@ export const STATION_MAP = {
 	"The water bath": ["patissier"],  // Contested. Saucier audit struck it: its only semester tag is 6, Pastry Fundamentals, five of seven recipes are pastry, and its single sauce recipe is 
 	"The wobble & the skewer: testing a bake": ["patissier"],  // Unanimous.
 	"Tortillas on the comal": ["entremetier"],  // Unanimous.
+	"Mole": ["saucier"],  // New with the Oaxacan chapter. Contested only on scale: a mole negro is a day of work and thirty ingredients, but the shape of it is a sauce built on toasted aromatics, fried in fat and then let down with stock, which is saucier work in any kitchen.
 	"Trussing": ["rotisseur"],  // Contested. Garde-manger audit struck it: one recipe, pollo-a-la-brasa, a spit-roasted chicken, and the definition's stated purpose is even cooking, w
 	"Whipping a meringue": ["patissier"],  // Unanimous.
 	"Wok technique": ["saucier"],  // Contested. Judged by the work, not the wok: extreme-heat sauté in small batches with sauce poured down the hot wall. The wok cook is the saucier of th
+	"Velveting": ["saucier"],  // New with the Cantonese chapter. It is the prep that makes wok technique possible, a starch and egg-white coat set in warm oil or water so the protein cannot wring itself out at 200C, and it belongs to whoever owns the wok.
 	"Working with masa": ["entremetier"],  // Unanimous. Nixtamalised corn is a component of hot dishes made fresh daily by the cook serving them.
 };
 

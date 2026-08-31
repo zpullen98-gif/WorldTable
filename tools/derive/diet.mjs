@@ -18,7 +18,7 @@
 
 const MEAT = [
 	'beef', 'veal', 'lamb', 'mutton', 'goat', 'pork', 'ham', 'bacon', 'pancetta',
-	'prosciutto', 'guanciale', 'lard', 'chorizo', 'chouriço', 'chourico',
+	'prosciutto', 'guanciale', 'lard', 'asiento', 'chorizo', 'chouriço', 'chourico',
 	'salami', 'sausage', 'chicken', 'turkey', 'duck', 'goose', 'quail',
 	'poussin', 'rabbit', 'venison', 'pheasant', 'partridge', 'squab',
 	'bison', 'elk', 'moose', 'brisket', 'oxtail', 'steak', 'ribeye', 'sirloin',
@@ -38,7 +38,7 @@ const MEAT = [
 ];
 
 const PORK = [
-	'pork', 'ham', 'bacon', 'pancetta', 'prosciutto', 'guanciale', 'lard',
+	'pork', 'ham', 'bacon', 'pancetta', 'prosciutto', 'guanciale', 'lard', 'asiento',
 	'chorizo', 'salami', 'pepperoni', 'mortadella', 'capicola', 'bratwurst',
 	'kielbasa', 'linguica', 'spam', 'andouille', 'pork belly', 'scrapple',
 	'goetta', 'livermush', 'knockwurst', 'pork roll', 'jamón', 'jamon',

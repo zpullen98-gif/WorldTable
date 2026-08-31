@@ -114,9 +114,9 @@
     "category": "Beef Cuts & Grades",
     "definition": "The rear leg: big, lean, cheap, and unforgiving. TOP ROUND makes roast beef and London broil (slice paper-thin: thickness is its enemy); BOTTOM ROUND braises or cures into bresaola; EYE OF ROUND looks like tenderloin and eats like a tire unless roasted gently and shaved. The round teaches the master's lesson: the knife and the slicing angle can rescue what the muscle withholds.",
     "recipes": [
+      "begun-bhaja",
       "squash-casserole",
-      "newark-italian-hot-dog",
-      "hyderabadi-dum-biryani"
+      "newark-italian-hot-dog"
     ]
   },
   {
@@ -135,7 +135,9 @@
     "term": "Marbling",
     "category": "Beef Cuts & Grades",
     "definition": "Intramuscular fat, the white webbing within the muscle, not the cap around it. It melts during cooking, basting the meat from inside: the primary driver of juiciness, flavor, and the price tag. Grading systems worldwide are largely marbling scores in different costumes: USDA (Select→Choice→Prime), Japan's BMS 1–12 scale, Australia's MB 0–9. More marbling forgives higher doneness; lean cuts have no such insurance.",
-    "recipes": []
+    "recipes": [
+      "garganelli-al-pettine-con-prosciutto-e-piselli"
+    ]
   },
   {
     "slug": "wagyu-and-kobe",
@@ -158,8 +160,8 @@
     "definition": "Diet shapes the fat. Grass-fed beef is leaner, yellower-fatted, and mineral-forward: cooks faster and less forgivingly. Grain-finished cattle (the feedlot norm) marble heavier and taste sweeter and more 'classically beefy' to most palates. Neither is the moral or culinary winner in all cases; a chef should know both, source deliberately, and adjust doneness targets down for grass-fed.",
     "recipes": [
       "duck-prosciutto",
-      "onigiri",
-      "beef-and-broccoli"
+      "medhu-vadai",
+      "onigiri"
     ]
   },
   {
@@ -190,9 +192,9 @@
     "category": "Pork, Lamb & Poultry",
     "definition": "The fatty underside: uncured, it is the canvas for lechon kawali, braised dongpo pork, porchetta's wrap, and every crispy-skin project; cured and smoked it becomes BACON; cured and unsmoked, PANCETTA. The layered fat renders in stages, which is why belly loves two-step cooking: long-low to tenderize, then violent heat for the crackling. Score the skin, dry it hard, and salt is your only essential seasoning.",
     "recipes": [
+      "siu-yuk-crackling-roast-pork-belly",
       "kimchi-jjigae",
-      "yakisoba",
-      "goi-cuon-summer-rolls"
+      "lao-beijing-zhajiangmian"
     ]
   },
   {
@@ -246,7 +248,8 @@
     "definition": "Age vocabulary the trade still uses: LAMB is under a year; HOGGET one to two years: deeper flavor, still tender, beloved by chefs and hard to find; MUTTON is two-plus: assertive, ideal for curries, birria's ancestor barbacoa, and long braises where 'lamby' is the point. Most 'gamey lamb' complaints are actually about fat left unrendered, not age; render it properly and the flavor converts skeptics.",
     "recipes": [
       "curry-goat",
-      "kentucky-burgoo"
+      "kentucky-burgoo",
+      "mutton-seekh-kebab"
     ]
   },
   {
@@ -287,7 +290,8 @@
     "category": "Pork, Lamb & Poultry",
     "definition": "RENDERING is melting animal fat out of its tissue over gentle heat; the cracklings (gribenes, chicharrones, duck skin crisps) are the by-product bonus. SCHMALTZ is rendered chicken (or goose) fat, the flavor spine of matzo balls, chopped liver, and honest fried onions. A kitchen that saves its fat (bacon, duck, beef trim) cooks better and cheaper than one that buys flavor in bottles. Strain, label, refrigerate.",
     "recipes": [
-      "matzo-ball-soup"
+      "matzo-ball-soup",
+      "tlayuda-con-asiento-y-tasajo"
     ]
   },
   {
@@ -381,7 +385,8 @@
     "definition": "WET scallops are treated with STP (a phosphate soak): they're whiter, heavier with water, weep in the pan, and refuse to brown. DRY scallops are untreated: ivory-to-pinkish, sticky, and they sear to a proper crust. The size code counts per pound: U-10 means under ten to the pound (huge); 20/30 means twenty to thirty. Buy dry, pat them arid, oil the pan not the scallop, and grant them 90 undisturbed seconds a side.",
     "recipes": [
       "beurre-blanc",
-      "king-oyster-scallops"
+      "king-oyster-scallops",
+      "suen-yung-jing-daai-ji-steamed-scallops-with-garlic-and-fun-see"
     ]
   },
   {
@@ -536,8 +541,8 @@
     "definition": "Mexican kitchens rename chiles when dried, and knowing the pairs is fluency: poblano→ANCHO (raisin-sweet), jalapeño→CHIPOTLE (smoked), chilaca→PASILLA, mirasol→GUAJILLO (the workhorse red). Heat is measured in SCOVILLE units (bell 0; jalapeño ~5k; habanero/scotch bonnet ~200–350k) and lives in the pith and placenta, not the seeds. Capsaicin is fat-soluble: dairy and oil calm it; water spreads the fire. Toast dried chiles briefly (fragrant, never acrid) before soaking.",
     "recipes": [
       "arizona-chiltepin-salsa",
-      "gambas-al-ajillo",
-      "bigos"
+      "memelas-con-asiento",
+      "gambas-al-ajillo"
     ]
   },
   {
@@ -576,7 +581,8 @@
     "definition": "Underground is not one category. TRUE ROOTS: carrot, parsnip, beet, radish, celeriac: sweetening in cold storage as starch converts to sugar (post-frost parsnips are candy). TUBERS: potato, sweet potato, yam (true yams and sweet potatoes are unrelated; American 'yams' are sweet potatoes), cassava/yuca, taro, the world's calorie backbone. RHIZOMES: ginger, turmeric, galangal, aromatic stems, not roots, grated and pounded into the flavor bases of Asia. Peel ginger with a spoon; the skin is thinnest where the flavor is strongest.",
     "recipes": [
       "sancocho-de-siete-carnes",
-      "leeks-vinaigrette"
+      "leeks-vinaigrette",
+      "gui-hua-nuomi-ou"
     ]
   },
   {
@@ -610,7 +616,9 @@
     "category": "Techniques: Heat & Precision",
     "definition": "Combination cooking: sear for Maillard flavor, then simmer partially submerged (braise, big pieces) or fully submerged (stew, small pieces) in a covered pot at a bare tremble (85–95°C liquid, oven around 150°C) until collagen converts to gelatin. The conversion needs time above ~70°C, which is why tough cuts get tender and lean cuts get dry: choose collagen-rich muscle always. Universal laws: never boil (boiled braises are grainy), skim honestly, rest overnight when possible (flavor marries, fat lifts), and the strained liquid IS the sauce: reduce and mount it, waste nothing.",
     "recipes": [
-      "cider-braised-pork-shoulder"
+      "cider-braised-pork-shoulder",
+      "dongpo-rou",
+      "rou-jia-mo"
     ]
   },
   {
@@ -767,9 +775,9 @@
     "category": "Techniques: Heat & Precision",
     "definition": "One word, two crafts. TEMPERING EGGS: whisking hot liquid gradually into yolks before returning all to the pot, raising their temperature gently so custards (crème anglaise, carbonara's cousin) thicken at 82°C instead of scrambling at 90°C, the thermometer's best friend. TEMPERING CHOCOLATE: melting, cooling, and reheating to precise curves (dark: ~50°→27°→31–32°C) so cocoa butter sets in stable Form V crystals: glossy snap instead of dull bloom. Both are the same discipline wearing different aprons: proteins and fats obey temperature, and the cook who controls degrees controls texture.",
     "recipes": [
-      "chocolate-chip-cookies",
-      "schwarzwalder-kirschtorte",
-      "sachertorte"
+      "shukto",
+      "cholar-dal",
+      "chocolate-chip-cookies"
     ]
   },
   {
@@ -777,7 +785,10 @@
     "term": "Velveting & Marinades",
     "category": "Techniques: Heat & Precision",
     "definition": "VELVETING is the Chinese restaurant's tenderness secret: sliced meat coated in egg white, cornstarch, and a little baking soda or wine, rested, then pre-cooked briefly in oil or water; the alkaline soda relaxes surface proteins and the starch jackets in moisture, producing that signature silk in stir-fries. MARINADES, honestly assessed: salt, sugar, and acid work only millimeters deep (oil carries aromatics to the surface); enzyme marinades (pineapple, papaya, yogurt's gentler lactic action) genuinely tenderize but turn meat mushy past their window. Marinades are surface seasoning plus browning chemistry: the flavor is real; the 'penetration' is mostly myth, and the dry brine outperforms for depth.",
-    "recipes": []
+    "recipes": [
+      "longjing-xia-ren",
+      "shuizhu-niurou"
+    ]
   },
   {
     "slug": "pressure-and-slow-cooking",
@@ -962,9 +973,9 @@
     "category": "Baking & Pastry Science",
     "definition": "Sugar syrup's temperature IS its destiny: thread 110°C (syrups), soft ball 113–116 (fudge, pralines, Italian meringue), firm/hard ball 120–130 (caramels, nougat), soft/hard crack 132–154 (toffee, brittle, spun sugar), then true CARAMEL 160–180°C: sugar itself breaking into hundreds of bitter-sweet compounds, from blond to mahogany to one shade before ruin. Wet caramel (sugar + water) is safer; dry caramel is faster and riskier. Crystallization is the saboteur: don't stir once boiling, brush down stray crystals, or insure with corn syrup/glucose. Add cream and butter and it's sauce; add nothing and stop it dark and it's the top of a crème brûlée's ancestry.",
     "recipes": [
+      "tejate",
       "oyakodon",
-      "tres-leches",
-      "bananas-foster"
+      "tres-leches"
     ]
   },
   {
@@ -1122,7 +1133,7 @@
     "recipes": [
       "banana-pudding",
       "boston-cream-pie",
-      "patatas-bravas"
+      "lasagne-verdi-alla-bolognese"
     ]
   },
   {
@@ -1155,7 +1166,7 @@
     "recipes": [
       "ravioli-del-plin",
       "milanese-saffron-risotto",
-      "ragu-alla-bolognese"
+      "tortellini-in-brodo-di-cappone"
     ]
   },
   {
@@ -1201,7 +1212,8 @@
     "definition": "'Recooked': traditionally not a cheese at all but a by-product: whey left from cheesemaking reheated until its remaining proteins flock into sweet, fluffy curds. Fresh ricotta (sheep's-whey Roman ricotta is the benchmark) bears no resemblance to the grainy supermarket tub: seek basket ricotta or make it (whole milk + acid, 20 minutes). Drain it overnight for cannoli and fillings: wet ricotta is the assassin of Sicilian pastry. RICOTTA SALATA is the pressed, salted, aged version: snowy, firm, grated over pasta alla Norma.",
     "recipes": [
       "cannoli-siciliani",
-      "knafeh-nabulseyeh"
+      "tortelli-derbetta-di-parma",
+      "pasta-alla-norma"
     ]
   },
   {
@@ -1445,6 +1457,7 @@
     "definition": "South Asia's fresh acid-set cheese: milk split with lemon or vinegar, drained, and pressed into a firm block; no rennet, no aging, no melt. Its refusal to melt is the feature: cubes hold proud through saag paneer, matar paneer, and the tandoor's skewers, browning at the edges while staying milky within. Make it at home in 30 minutes (the fresher, the softer) and press to the firmness the dish demands. Fry cubes lightly before saucing for structure, or soak them in warm water for pillowy softness: two textures, one cheese, cook's choice.",
     "recipes": [
       "palak-paneer",
+      "paneer-tikka",
       "paratha"
     ]
   },
@@ -1495,8 +1508,8 @@
     "definition": "Latin America's daily fresh cheese: mild, milky, lightly salty, crumbling soft over beans, tacos dorados, and huevos, tempering chile heat the way yogurt tempers curry (fat and casein are capsaicin's counselors). It softens with heat but holds shape: crumble, don't expect melt. QUESO PANELA, its basket-molded cousin, slices and grills; queso para freír fries. The fresh-cheese family across this atlas (paneer, queso fresco, farmer cheese, twaróg) is one idea wearing many flags: milk, acid or gentle rennet, salt, and no patience required.",
     "recipes": [
       "arizona-nopalitos-salad",
-      "chicken-tinga",
-      "enchiladas-verdes"
+      "chileajo-de-verduras",
+      "chicken-tinga"
     ]
   },
   {
@@ -1556,8 +1569,9 @@
     "category": "Charcuterie Atlas",
     "definition": "Italy's twin crown hams: hind legs cured with sea salt ONLY (no nitrites, by consortium law) and air-dried 12–36 months: Parma from Emilia's valleys, sweet and delicate, its rind fire-branded with the ducal crown; San Daniele from Friuli's alpine-adriatic crosswinds, pressed flatter ('guitar-shaped'), a shade darker and sweeter still. Slice tissue-thin at the last moment: the fat must melt at lip temperature, which is the entire tasting experience. With melon or figs it is summer's law; draped over hot pizza after the oven, not before, it is technique.",
     "recipes": [
-      "xo-sauce",
-      "duck-prosciutto"
+      "tortellini-in-brodo-di-cappone",
+      "garganelli-al-pettine-con-prosciutto-e-piselli",
+      "cotoletta-alla-petroniana"
     ]
   },
   {
@@ -1591,8 +1605,8 @@
     "definition": "Pork belly cured with salt, pepper, and spice, bacon's un-smoked Italian ancestor, in two forms the kitchen should distinguish: TESA (flat slab) for cubing into lardons, carbonara's understudy, and soffritto's opening act; ARROTOLATA (rolled tight into a spiral) for slicing thin and eating raw like the salume it is. Render it gently and its fat is a cooking medium with a résumé. The pancetta→guanciale→bacon triangle is a one-question exam: same belly-adjacent idea (Italian unsmoked, Italian jowl-funk, Anglo-smoked), and the dish tells you which voice it wants.",
     "recipes": [
       "ragu-alla-bolognese",
-      "sauce-tomate-classical",
-      "locro"
+      "lasagne-verdi-alla-bolognese",
+      "erbazzone-reggiano"
     ]
   },
   {
@@ -1601,9 +1615,9 @@
     "category": "Charcuterie Atlas",
     "definition": "The original 'baloney' and its total vindication: heat-cooked emulsified pork studded with cubes of neck fat and (classically) pistachios and peppercorns. Silky, rosy, perfumed with myrtle and spice, produced in barrel-sized girths and shaved into pink silk. IGP-protected Bologna craft; the American lunchmeat borrowed the name and dropped the poetry. Serve it folded into clouds on a board, blitzed into spuma (mortadella mousse on warm bread, the Bolognese aperitivo flex), or in the pistachio-stracciatella-mortadella pizza that conquered the 2020s. Never slice it thick; mortadella is an aerosol of a meat.",
     "recipes": [
+      "tortellini-in-brodo-di-cappone",
       "muffuletta",
-      "salat-olivier",
-      "connecticut-grinder"
+      "salat-olivier"
     ]
   },
   {
@@ -1879,9 +1893,9 @@
     "category": "Charcuterie Atlas",
     "definition": "China's sweet wind-dried sausages, pork (and liver, or duck versions) cured with sugar, soy, and rose-scented baijiu, dried until firm and glossy: too dense to eat raw, transformed by steam: classically sliced over rice as it cooks (the fat perfumes every grain), diced into fried rice, clay-pot rice, and turnip cake. The wider larou (cured-meat) pantry (Hunan's smoked belly, Yunnan hams that stand comparison with Serrano) is one of the world's great curing traditions, made mostly invisible to Western boards by geography and habit. A modern charcuterie program that steams lap cheong beside its saucisson is telling the whole story, not half.",
     "recipes": [
-      "char-kway-teow",
-      "perfect-fried-rice",
-      "khao-pad-thai-fried-rice"
+      "lo-mai-gai-lotus-leaf-sticky-rice-parcels",
+      "bo-jai-fan-claypot-rice-with-lap-cheong",
+      "char-kway-teow"
     ]
   },
   {
@@ -1899,7 +1913,7 @@
     "recipes": [
       "jian-bing",
       "bresaola",
-      "ragu-alla-bolognese"
+      "siu-yuk-crackling-roast-pork-belly"
     ]
   },
   {
@@ -2017,8 +2031,8 @@
     "definition": "The service-critical defects. CORKED (TCA taint): wet cardboard, musty basement: fruit stripped mute; affects a few percent of natural-cork bottles, and the only response is a gracious immediate replacement (never argue; the guest's nose is the instrument). OXIDIZED: browned color, bruised-apple, sherry-gone-wrong flatness: bad storage or a dead bottle (deliberate oxidation in Sherry and Madeira is a style, not a flaw; know the difference). REDUCED: struck-match or rotten-egg sulfur notes that often BLOW OFF with air or a decant: wait before condemning. VOLATILE ACIDITY: nail-polish lift; BRETT: barnyard (fault or 'character' depending on the drinker and the dose). Train every server on corked wine alone and your program's credibility survives its worst night.",
     "recipes": [
       "cioppino",
-      "ragu-alla-bolognese",
-      "coq-au-vin"
+      "cong-shao-hai-shen",
+      "ragu-alla-bolognese"
     ]
   },
   {
@@ -2177,9 +2191,9 @@
     "category": "Wine & Beverage",
     "definition": "The working physics, pocket-sized. SALT loves acid and bubbles, softens tannin's grip, and makes sweetness sing (jamón + fino; caviar + Champagne). FAT wants either cutting acid or matching richness, and it is tannin's best friend. ACID in food DEMANDS equal acid in wine (the vinaigrette rule). HEAT (chili) is inflamed by alcohol and tannin, soothed by sugar, cold, and low proof (the Riesling formula; beer and off-dry whites over big reds, always). SWEET dishes need SWEETER wines. BITTER (char, chicory, chocolate) stacks with tannin: sometimes gloriously (char + Syrah), sometimes harshly; fruit and sweetness buffer it. UMAMI (mushrooms, aged cheese, soy) can make tannic wines taste harsher and needs fruit or salt as a bridge. Six switches; every pairing question is some combination of them.",
     "recipes": [
+      "cholar-dal",
       "crepes",
-      "chicken-paprikash",
-      "wiener-saftgulasch"
+      "chicken-paprikash"
     ]
   },
   {
@@ -2342,7 +2356,7 @@
     "recipes": [
       "zhoug-akhdar",
       "brined-whole-roast-cauliflower",
-      "quick-pho-ga"
+      "arachuvitta-sambar"
     ]
   },
   {
@@ -2374,8 +2388,8 @@
     "definition": "The dried flower bud that launched wars, the Moluccas' original monopoly spice, so potent (eugenol, also a dental anesthetic: that numbing is real) that it is measured in single buds where other spices go by spoons. It anchors ham studding, mulled everything, pho and biryani broths, mole, garam masala, and pumpkin spice. Always as the bass note, never the melody: one clove too many and the dish tastes of the dentist. Technique: stud an onion with cloves for stocks and béchamel (the classical onion piqué, retrievable flavor), and count what goes in so you can count what comes out. Its preservative, antimicrobial past is why it saturates old-world pickling and curing blends; the history is edible.",
     "recipes": [
       "pan-con-tomate",
-      "pollo-al-ajillo",
-      "maple-glazed-ham"
+      "lao-beijing-zhajiangmian",
+      "pollo-al-ajillo"
     ]
   },
   {
@@ -2396,8 +2410,8 @@
     "definition": "The eight-pointed pod that perfumes East and Southeast Asia's great broths: pho's signature aromatic, red-braised pork's licorice depth, five-spice's dominant voice, and the secret one-pod upgrade to Western beef braises and tomato sauces (it amplifies meaty flavors via its anethole–umami synergy; French chefs slip one into onions for that reason and remove the evidence). Whole pods infuse and retrieve; ground it is loud and fast-fading. It is licorice-adjacent but warmer and more resinous than European anise: the two share anethole, not personality. One or two pods per pot is the law; star anise never learned the meaning of 'background' and must be supervised accordingly.",
     "recipes": [
       "pho-bo-broth",
-      "massaman-curry",
-      "quick-pho-ga"
+      "lao-beijing-zhajiangmian",
+      "suan-cai-bai-rou"
     ]
   },
   {
@@ -2407,8 +2421,8 @@
     "definition": "The anethole family, arranged by volume. FENNEL SEED: the gentlest: sweet, hay-green, the signature of Italian sausage, finocchiona (see the charcuterie wing), taralli, and the panch-phoron chorus; toasted, it is the after-dinner mukhwas digestif of India. ANISE SEED: sharper, the flavor of pastis, ouzo, sambuca, and pizzelle, the Mediterranean's licorice thread. Then the outliers: LICORICE ROOT itself (glycyrrhizin: fifty times sweeter than sugar, a different molecule entirely) and star anise (previous entry) carrying the flavor east. Kitchen intel: fennel pollen, the flower's dust, is the luxury whisper version chefs dust on pork and fish; and the licorice line divides guests absolutely, so deploy it labeled, never ambushed.",
     "recipes": [
       "pho-bo-broth",
-      "massaman-curry",
-      "quick-pho-ga"
+      "rou-jia-mo",
+      "kozhi-chettinad"
     ]
   },
   {
@@ -2462,8 +2476,8 @@
     "definition": "Three seeds up an escalating heat ladder, sharing sinigrin chemistry with horseradish and wasabi (see The Three Heats). YELLOW/WHITE: mildest, American mustard, pickling brines, the base of most prepared mustards. BROWN: hotter, Dijon's engine, Chinese hot mustard, half of Indian cooking. BLACK: hottest and smallest: the seed that POPS in Indian tadkas, where the technique transforms it: sputtered in hot oil until it crackles, the pungency converts to a nutty, almost popcorn warmth that bears no resemblance to the raw bite. Prepared-mustard science for the kitchen: the heat is enzymatic, activated by cold water and killed by heat and time, which is why hot-water mustard is mild, fresh-made English mustard is violent, and simmered mustard sauces mellow to tang.",
     "recipes": [
       "saturday-night-baked-beans",
-      "uzbek-plov",
-      "black-sesame-tang-yuan"
+      "shorshe-ilish",
+      "uzbek-plov"
     ]
   },
   {
@@ -2539,8 +2553,8 @@
     "definition": "The most doubted spice in the drawer, and the doubt is a freshness problem, not a flavor one. TRUE Mediterranean bay (Laurus nobilis) carries eucalyptus-nutmeg-tea notes that build quietly over long simmering: stocks, braises, béchamel's infusion, bolognese, pickling brines; remove before serving (the leaf never softens; it is an infusion vessel, not food). CALIFORNIA bay is a different, harsher tree at twice the volume: halve the dose. Indian 'bay' (tej patta) is different again: a cassia leaf, cinnamon-toned, for biryani and korma, not a substitute in either direction. The test that ends skepticism: simmer one fresh-dried leaf in cream for ten minutes and taste; then check your jar's age, because a two-year-old bay leaf is, in fairness to the skeptics, genuinely just a leaf.",
     "recipes": [
       "cullen-skink",
-      "bacalhau-a-bras",
-      "bifana"
+      "sarde-a-beccafico-alla-palermitana",
+      "bacalhau-a-bras"
     ]
   },
   {
@@ -2551,7 +2565,7 @@
     "recipes": [
       "aam-ka-achar",
       "moong-dal-khichdi",
-      "vada-pav"
+      "arachuvitta-sambar"
     ]
   },
   {
@@ -2560,9 +2574,9 @@
     "category": "Spice Atlas",
     "definition": "The brick-red seed of the Americas that colors half the world's kitchens without most eaters knowing its name, earthy, peppery-nutmeg in flavor, and industrial-strength orange-red in pigment: it dyes Yucatecan achiote paste (cochinita pibil's recado rojo), Filipino kare-kare's golden sauce (the recipe wing's toasted-rice stew), Puerto Rican sazón and annatto oil, Oaxacan chorizo, and, historically, your cheddar, mimolette, and red Leicester (the cheese wing's orange is annatto, not cows). Technique: the seeds are rock-hard; bloom them in warm oil until it glows amber-red and DISCARD the seeds (annatto oil is the usable format), or buy the paste/ground. Flavor is modest; color is the job, and it does the job like nothing else legal.",
     "recipes": [
+      "recado-rojo",
       "kare-kare",
-      "hallacas",
-      "arroz-con-pollo"
+      "hallacas"
     ]
   },
   {
@@ -2571,9 +2585,9 @@
     "category": "Spice Atlas",
     "definition": "Acid without liquid: the dry-souring pantry that solves what lemon juice cannot (dry rubs, doughs, spice blends, finished frying). AMCHUR: green-mango powder, chaat masala's tang, the fruity sour dusted over pakoras and into North Indian dishes off-heat. LOOMI (black/dried lime): whole limes boiled and sun-blackened: pierced into Persian and Gulf stews (ghormeh sabzi's haunting fermented-citrus depth) or ground into baharat variants. ANARDANA: dried pomegranate seeds, sweet-sour grit in Punjabi chole and stuffings. TAMARIND: the pulp behind pad thai, sinigang's flinch, sambar, agua de tamarindo, and Worcestershire's secret. Sold as pulp-with-seeds (soak and strain; best flavor) or concentrate (convenient, one-dimensional). Together they are a masterclass: sour is a spice-rack category, not just a squeeze.",
     "recipes": [
+      "amritsari-chole",
       "chana-masala",
-      "massaman-curry",
-      "vada-pav"
+      "massaman-curry"
     ]
   },
   {
@@ -2700,8 +2714,8 @@
     "definition": "The philosophical blend, five spices for the five flavors in cosmological balance: star anise (dominant), cloves, cassia, Sichuan peppercorn, and fennel seed (regional sixths (ginger, licorice root, orange peel) sneak in without scandal). Its home turf is fatty meat: char siu's lacquer, red-braised pork, crispy duck and roast goose rubs, Taiwanese popcorn chicken's dust, the anise-clove warmth cutting through richness the way acid does elsewhere. Use with a light hand (star anise's volume problem is inherited) and bloom briefly in oil or marinade sugar. The name's lesson outlasts the jar: Chinese spicing aims at BALANCE across a whole flavor spectrum, not heat, a corrective to every menu that writes 'Asian spice' and means chile.",
     "recipes": [
       "char-siu-pork",
-      "zongzi",
-      "khao-pad-thai-fried-rice"
+      "siu-yuk-crackling-roast-pork-belly",
+      "zhima-shaobing"
     ]
   },
   {
@@ -2729,7 +2743,9 @@
     "term": "Panch Phoron",
     "category": "Spice Atlas",
     "definition": "Bengal's five-spice, and unlike nearly every other blend in this atlas, the seeds stay WHOLE and are never ground: equal(ish) parts cumin, fennel, fenugreek, nigella, and black mustard, made for exactly one technique, the phoron/tadka: seeds into hot oil or ghee until they crackle and pop in sequence (each ignites at its own moment; the sound is the timer), then vegetables, dal, or fish enter the perfumed fat. It defines Bengali and Odia home cooking: aloo posto's cousins, begun bhaja's eggplant, dal tempering, chutneys. The blend is also a one-jar spice EDUCATION: five distinct seeds, visible and separable, teaching bloom behavior, bitterness thresholds (fenugreek's dose is deliberately smallest), and the whole-spice philosophy in every spoonful. Keep a jar mixed; the crackle is the recipe.",
-    "recipes": []
+    "recipes": [
+      "shukto"
+    ]
   },
   {
     "slug": "chaat-masala",
@@ -2737,9 +2753,9 @@
     "category": "Spice Atlas",
     "definition": "India's electric finishing dust, the flavor of street food itself: amchur's sour, KALA NAMAK's sulfurous black-salt funk (the note that smells of boiled egg and tastes of genius), cumin, coriander, dried mint, asafoetida, chile, dried ginger, engineered to be sprinkled on FINISHED food, never cooked: over fruit (the revelation: chaat masala on watermelon or pineapple rewires expectations), fried snacks, pakoras, corn, yogurt bowls, raita, even the rim of a nimbu pani or lassi glass. 'Chaat' means to lick: the name is the review. It is the subcontinent's answer to the finishing-salt concept: sour-salty-funky-cooling all at once, and a shaker of it beside the salt converts a home kitchen's snack game overnight. The kala namak is non-negotiable; without it the blend is merely tangy dust.",
     "recipes": [
+      "paneer-tikka",
       "pani-puri",
-      "japanese-curry",
-      "butter-chicken"
+      "japanese-curry"
     ]
   },
   {
@@ -2767,7 +2783,8 @@
     "definition": "The single technique cluster that separates spice-owners from spice-cooks. TOASTING (dry pan, whole spices, medium heat until fragrant and a shade darker; seconds matter; walk away and start over): drives off moisture, blooms new roasted compounds, and readies seeds for grinding. BLOOMING (spices into hot FAT: the tadka/tarka/chhonk of India, the berbere fry of Ethiopia, the paprika rule of Hungary, the curry-paste split of Thailand): most spice flavor compounds are FAT-soluble, so oil extracts and distributes what water never will; this is why chili crisp works, why raw curry powder tastes dusty, and why the recipe wing's soups start with a fried paste. The sequencing law: hardy spices early into fat; delicate ground spices brief and late (they scorch); finishing blends off-heat entirely. One sentence to keep: spices don't flavor food; fat carries spices, which flavor food.",
     "recipes": [
       "dal-tadka",
-      "cantonese-steamed-fish"
+      "cantonese-steamed-fish",
+      "sarson-da-saag"
     ]
   },
   {
@@ -2776,9 +2793,9 @@
     "category": "Spice Atlas",
     "definition": "Spices are aroma, aroma is volatile oil, and volatile means leaving: the only question is how fast. WHOLE spices (seeds, pods, barks, berries) keep their oils armored for 1–3 years; GROUND spices bleed from the moment of grinding: vibrant for ~6 months, ghosts within a year (the sniff test is the audit: no aroma leaping from the jar means no flavor landing in the pot). The protocol: buy whole where feasible, grind to order (a $20 blade grinder dedicated to spices is the pantry's best ROI; clean it by buzzing raw rice), buy ground small and often from stores with turnover (spice shops and international groceries beat supermarket dust at half the price), store airtight, DARK, cool, and never over the stove; heat and light are the thieves. Date every jar on arrival. The uncomfortable truth doubling as liberation: most home spice racks are museums; a working spice drawer is small, fresh, and frequently replaced.",
     "recipes": [
+      "passatelli-in-brodo",
       "ragu-alla-bolognese",
-      "raita",
-      "smash-burger"
+      "raita"
     ]
   },
   {
@@ -2857,8 +2874,8 @@
     "definition": "Two rectangles, opposite souls: confusing them breaks knives. The CHINESE CHEF'S KNIFE (cai dao, 'vegetable knife'): despite the cleaver silhouette, a THIN, agile slicer: the one knife of most Chinese kitchens, doing everything from hair-fine scallions to smashing garlic with the flat, scooping with the blade as a bench scraper, tenderizing with the spine; masters run entire banquets on it. The BONE CLEAVER: thick, heavy, soft-steeled: built to CHOP through poultry bones, ribs, and joints (the recipe wing's chop-through-the-bone dishes assume one); it holds no fine edge and doesn't want to. The pairing IS the system: cai dao for everything with cells, bone cleaver for everything with skeleton, and never, ever the gyuto for either's heavy job.",
     "recipes": [
       "chicken-congee",
-      "tandoori-style-chicken",
-      "khao-pad-thai-fried-rice"
+      "guaiwei-ji-si",
+      "tandoori-style-chicken"
     ]
   },
   {
@@ -2933,6 +2950,7 @@
     "category": "Knife & Equipment Atlas",
     "definition": "A shape, a material, and a philosophy: thin CARBON STEEL (14\", flat-bottom for Western burners; round-bottom over a wok ring or jet burner) whose sloped walls create simultaneous temperature ZONES: a searing base, cooler shoulders to stage ingredients, and a geometry built for the toss. Season it by the traditional burn-in (scrub factory coating, heat until it blues, oil-and-aromatics wipe), then let stir-fries blacken it into glory. It is also the kitchen's most versatile vessel in disguise: deep-fryer (less oil than a pot, more surface), steamer (bamboo baskets stack in it), smoker (foil, rice, tea, sugar: the recipe wing's tea-smoke jobs), braiser. Wok hei (the technique entry) is the goal; a screaming-hot thin steel wok and small batches are the equipment half of that bargain. Nonstick 'woks' are contradictions: the coating dies exactly at the temperature the wok exists to reach.",
     "recipes": [
+      "gon-chau-ngau-ho-dry-fried-beef-ho-fun",
       "pad-krapow-moo",
       "nasi-goreng"
     ]
@@ -2942,7 +2960,9 @@
     "term": "Stainless Clad (Tri-Ply)",
     "category": "Knife & Equipment Atlas",
     "definition": "The workhorse of the modern professional kitchen: an aluminum (or copper) core bonded wall-to-wall inside stainless skins: stainless for durability and non-reactivity (wine, tomato, cream sauces welcome), the core for even, responsive heat that plain stainless can't dream of. It is the FOND factory: food sticks by design, browns deeply, and releases when the crust is ready, then deglazes into pan sauces (the deglaze entry's entire economy runs on this pan). Technique that ends the 'everything sticks' complaint: preheat properly (water drop should skitter as a mercury bead, the Leidenfrost test), then oil, then food, then patience. Buy fully-clad (not disc-bottom, whose walls scorch), a 10–12\" skillet and a 3–4qt saucier as the core pair, and know that this is the pan category where buy-it-for-life pricing is genuinely rational.",
-    "recipes": []
+    "recipes": [
+      "gui-hua-nuomi-ou"
+    ]
   },
   {
     "slug": "nonstick-honestly",
@@ -3336,8 +3356,8 @@
     "definition": "Concentrated botanical tinctures dosed in dashes: the salt and pepper of drink-making, and the fastest route from 'mixed drink' to 'cocktail' (the word's original 1806 definition REQUIRED them: spirit, sugar, water, bitters). The trinity: ANGOSTURA (Trinidad's clove-cinnamon universal: the Old Fashioned and Manhattan's signature; also a secret savory weapon: dashes into braises and whipped cream both work), PEYCHAUD'S (New Orleans' lighter, anise-cherry voice: the Sazerac's hometown requirement; the recipe wing's city chapter nods), ORANGE bitters (the pre-Prohibition Martini's missing piece, restored). Beyond: celery (savory gin drinks), mole, tiki 'falernum'-adjacent spice blends, house-made programs (high-proof spirit + the spice wing's inventory = signature bitters at pennies). Two dashes is a spec; four is a choice; a bottle lasts years: the highest flavor-per-dollar ratio in the entire building.",
     "recipes": [
       "char-siu-pork",
-      "quiche-lorraine",
-      "tandoori-style-chicken"
+      "siu-yuk-crackling-roast-pork-belly",
+      "quiche-lorraine"
     ]
   },
   {
@@ -3972,8 +3992,8 @@
     "definition": "The launch sequence, choreographed. PRE-OPENING: hire 15–20% over need (opening attrition is certain), train in weeks not days: systems, steps of service, menu tastings for ALL staff (servers sell what they've tasted), and POS drills; write the manuals now (the training entry's assets) while everything is being decided anyway. THE SOFT OPEN: friends-and-family nights (free or discounted, feedback structured), then limited-menu/limited-hours paid service: the purpose is finding failure points at survivable scale: the ticket-time collapse, the dish-pit bottleneck, the 86 cascade; fix, then widen. THE MEDIA/HYPE DECISION: do NOT invite critics or chase press until the operation deserves them. Reviews are permanent; opening chaos is temporary; let the machine tighten for weeks first. THE FIRST 90 DAYS: expect the curve, weeks 1–6 buzz (do not staff or order against it as the new normal), weeks 7–12 the trough (the working-capital entry's moment; hold standards precisely when revenue dips: cutting quality in the trough digs it deeper), daily post-shift debriefs (what broke, who shone, what 86'd), weekly P&L pulse from day one (the habits installed now ARE the company), and menu edits after real sales data, not opening-night anecdotes. THE OWNER'S POSTURE: on the floor every service, tasting everything, learning names: the first 90 days write the culture entry's first draft in permanent ink, and the neighborhood decides in one season whether you're theirs.",
     "recipes": [
       "carrot-cake-with-cream-cheese-frosting",
-      "oyakodon",
-      "hummus"
+      "kadhi-pakora",
+      "oyakodon"
     ]
   },
   {
@@ -4114,7 +4134,8 @@
     "definition": "A working chemistry map for the nose, no lab required. ESTERS: fruity notes (banana's isoamyl acetate, apple, pear): born in fermentation, which is why Belgian yeasts taste of banana and wine of berries. TERPENES: the citrus-pine-floral family (limonene in zest, pinene in rosemary, linalool in coriander seed and lavender); volatile, fat-soluble, why zest beats juice for perfume. PYRAZINES: roasted, toasted, nutty, green: Maillard's children in coffee, chocolate, seared crust; also the green-pepper note in cabernet. SULFUR VOLATILES: alliums, brassicas, eggs: pungent raw, sweet when tamed. PHENOLICS: smoke, clove, vanilla, the barrel and campfire register. ALDEHYDES: fresh-cut grass, cilantro's soapy divide, citrus skin. The point of knowing families: substitutions and pairings become predictable: coriander seed bridges to citrus because they share linalool; rosemary befriends gin's juniper through terpenes. Cooking is applied perfumery, and these are the perfumer's shelves.",
     "recipes": [
       "sibirskie-pelmeni",
-      "chargrilled-oysters"
+      "chargrilled-oysters",
+      "yibin-ranmian"
     ]
   },
   {
@@ -4218,9 +4239,9 @@
     "category": "The Flavor Atlas",
     "definition": "Three points on fire's flavor dial, often confused and differently earned. SMOKE: phenolic compounds from smoldering wood dissolving onto food, sweet at low doses (fruit woods), assertive at high (hickory, mesquite), acrid when the fire is dirty (the thin-blue doctrine); it reads as flavor even cold, which is why cold-smoking exists. CHAR: localized surface carbonization (the blistered pepper, the leopard-spotted pizza cornicione, elote's blackened kernels, the steak's crust edges), bitterness deployed as PUNCTUATION against sweet and rich interiors; scraped-clean char (the burnt-on-purpose school: charred onion in pho broth, blackened citrus, burnt eggplant's smoke-from-within) is technique, not accident. THE BURNT EDGE is where char crosses into acrid, carbon without contrast. The palate law: smoke and char are BITTER-FAMILY seasonings and obey bitter's rules: they demand sweetness, fat, or acid as counterweight (barbecue sauce exists for a reason), and they compound, so a dish gets ONE fire signature loud, not three.",
     "recipes": [
+      "mole-negro-oaxaqueno",
       "pad-see-ew",
-      "pork-roll-egg-and-cheese",
-      "missouri-burnt-ends"
+      "pork-roll-egg-and-cheese"
     ]
   },
   {
@@ -4284,9 +4305,9 @@
     "category": "The Flavor Atlas",
     "definition": "Flavor has a time signature: ATTACK (the first hit: salt, acid, and aroma arrive fastest), MID-PALATE (body, umami, fat's coating), and FINISH: what remains after swallowing, and for how long ('length', in the wine wing's borrowed vocabulary). Long finishes come from fat-soluble compounds released slowly (chile heat's lease, resinous herbs, smoke, aged-cheese depth, tannin's grip), from umami's lingering channels, and from complexity itself: many compounds, staggered departure. Short-finish food (bright, lean, acid-led) is refreshment; long-finish food is satisfaction; a MENU alternates them the way music alternates sustain and staccato, the tasting-menu logic of palate resets (sorbet, pickles, that crunchy-fresh register) between rich lengths. Design applications: end the dish's finish ON PURPOSE: a bitter edge and lingering warmth for the braise, a clean acid snap for the crudo; taste your food thirty seconds AFTER swallowing and season for that moment too, because that is the moment the guest decides whether to take another bite. The last flavor standing is the review.",
     "recipes": [
+      "baak-cheuk-gai-lan-blanched-gai-lan-with-ginger-oil",
       "ragu-alla-bolognese",
-      "coq-au-vin",
-      "salmon-donburi"
+      "coq-au-vin"
     ]
   },
   {
@@ -4307,7 +4328,8 @@
     "definition": "The palate is a muscle with a vocabulary problem: you cannot improve what you cannot name. THE TRAINING PROTOCOL: taste ANALYTICALLY (before swallowing, ask the five-taste checklist, then aroma families, then texture and temperature, then finish: thirty seconds of attention beats thirty mindless meals), taste COMPARATIVELY (two olive oils side by side teach more than twenty alone; the wine wing's method generalized to vinegars, salts, chocolates, soy sauces), taste SINGLE INGREDIENTS at their extremes (a caper, a raw cranberry, straight fish sauce: calibrate the instruments), and RETASTE your own dishes at every stage and at table temperature. THE VOCABULARY LADDER: start with the axes (salty/sweet/sour/bitter/umami + rich/bright/hot), add the registers from this atlas (nutty, floral, briny, funky, smoky, resinous, green), then borrow wine's structure words (attack, body, finish, length). Write tasting notes: writing forces naming, naming builds memory. The professional endpoint: the chef who can say 'it needs mid-palate umami and a brighter finish' instead of 'something's off' fixes dishes in one move instead of five, and trains a whole kitchen to taste in the same language. The palate you build is the only knife that never dulls.",
     "recipes": [
       "ploughmans-lunch",
-      "boiled-peanuts"
+      "boiled-peanuts",
+      "nicuatole"
     ]
   },
   {
@@ -4327,9 +4349,9 @@
     "category": "Techniques: Heat & Precision",
     "definition": "The smallest technique with the largest per-second flavor return: dry heat waking pyrazines and oils in anything with fat and starch to brown. THE METHODS ranked: OVEN (160–175°C on a sheet pan) for volume and evenness: nuts 8–12 min, stirred once; STOVETOP DRY PAN for small batches and whole spices: constant motion, trust your nose over your eyes (fragrant means nearly done; golden means done; 'one more minute' means starting over); the aggressive exception: coconut and sesame toast in a blink and burn in the next. THE LAWS: toast WHOLE then chop (surface-area math: chopped pieces scorch at the corners), carryover is real (pull a shade early; hot nuts keep cooking on the pan: decant immediately), toasted flavors FADE in liquid (re-toast garnishes; add toasted elements late), and salt while warm when salting at all. THE APPLICATIONS threading this guide: the nutty register's entire pantry, dukkah and gomasio, toasted-rice powder for larb, the pie crust's blind-baked depth, spices before grinding, and the honest truth that most 'flat' granola, pesto, and praline died of raw nuts. When in doubt, toast, but stand there while you do.",
     "recipes": [
-      "masala-dosa",
-      "umm-ali",
-      "vollkornbrot-with-rye-soaker"
+      "thalassery-kozhi-biryani",
+      "phirni",
+      "muttaikose-poriyal"
     ]
   },
   {
@@ -4350,8 +4372,8 @@
     "definition": "The thermometer is the truth (that entry stands), but the senses are the always-on instruments, and professionals read both. TOUCH: the steak firmness scale (raw = slack cheek, rare = thenar pad relaxed, medium = thumb-to-middle-finger tension, well = tensed; imprecise alone, powerful once calibrated AGAINST your thermometer on your own pans); bread's hollow tap; the fish flake-test at a fork's gentle twist; pasta bitten for the white pinpoint of true al dente; caramel's thread between chilled fingers. SIGHT: the shrimp's C-curl (O means overcooked), milk-solid color in brown butter, the sauce's nappe line, syrup's bubble size tightening as water leaves, the jam's sheet off a cold spoon, proofing's slow-spring poke. SOUND, the most neglected: frying's rolling boil quieting as moisture finishes (silence in the fryer means done or means burning; the pitch tells which), the sear's confident sizzle vs. the crowded pan's steam-hiss, brown butter's foam going quiet ten seconds before ready, the hollow knock of a finished loaf. The pedagogy: use the thermometer to TRAIN the senses: probe, then press, look, and listen, until the instruments agree and your hands carry the calibration to any kitchen with no batteries required.",
     "recipes": [
       "whole-grilled-fish-with-ladolemono",
-      "sachertorte",
-      "english-muffins"
+      "sheng-jian-bao",
+      "sachertorte"
     ]
   },
   {
@@ -4383,8 +4405,8 @@
     "definition": "Peaches, nectarines, apricots, plums, and cherries, the drupe family, run the shortest, sweetest arc in the produce year: cherries fire first (late May–June north), apricots close behind, peaches and nectarines own July–August, plums carry into September. The pedigree map: apricots and peaches are Chinese natives that walked the Silk Road (Persia lent the peach its Latin name by mistake); today's benchmarks are Georgia and California peaches, French Bergeron apricots, Alsatian mirabelles and quetsches, Japan's giftwrapped white peaches, Spain's Calanda. The buying law: stone fruit ripens in AROMA and give, not color, and a great peach is a ten-day local event: it does not ship. Kitchen notes: under-ripe stone fruit is for grilling and roasting (heat finishes what the tree didn't); the pit carries almond-bitter noyaux perfume (crack a few into the jam). Southern summer flips it all to December–February: Chile and South Africa fill northern winters at the cost of the perfume.",
     "recipes": [
       "aam-ka-achar",
-      "pizza-margherita",
-      "la-galbi"
+      "cabbage-thoran",
+      "pizza-margherita"
     ]
   },
   {
@@ -4395,7 +4417,7 @@
     "recipes": [
       "jerk-chicken",
       "curry-goat",
-      "empanadas-saltenas"
+      "zui-ji"
     ]
   },
   {
@@ -4466,9 +4488,9 @@
     "category": "The Seasonal Larder",
     "definition": "The legume spring: garden peas, sugar snaps, snow peas, and fava (broad) beans all peak in the cool window (April–June north) before summer heat turns their sugars starchy, and pea sugar converts within HOURS of picking, the fact that built the frozen-pea industry's honest case (frozen-at-field often beats 'fresh' that traveled). The map: the French petit pois doctrine (tiny, buttered, à la française with lettuce), Italy's vignarola (the Roman spring stew of peas, favas, and artichokes in one pot, the season's own recipe), England's mushy-pea inheritance, Spain's habitas con jamón, the Middle East's ful medames running on dried favas year-round (one bean, two pantries, like the mango's green double life). Fava labor is the price of entry: pod, blanch, peel, twice-shelled, worth it. Shoots and tendrils are the bonus crop (the stir-fry wing's dou miao). The kitchen law: spring legumes want minutes of heat and mint or lemon, not stewing, except where the vignarola knows better.",
     "recipes": [
+      "songshu-guiyu",
       "jerk-chicken",
-      "rice-and-peas",
-      "ackee-and-saltfish"
+      "rice-and-peas"
     ]
   },
   {
@@ -4609,7 +4631,7 @@
     "recipes": [
       "moules-frites",
       "baked-alaska",
-      "quiche-lorraine"
+      "suen-yung-jing-daai-ji-steamed-scallops-with-garlic-and-fun-see"
     ]
   },
   {
@@ -4640,9 +4662,9 @@
     "category": "The Seasonal Larder",
     "definition": "The bivalve winter: MUSSELS follow the oyster's logic: plump and glycogen-sweet in cold months (September–April; the Belgian moules season opens in September with national ceremony), thin and spawn-spent in high summer; farmed rope-grown mussels soften but don't erase the rhythm. Provenance: Galicia's rafts (Europe's mussel engine), Brittany's bouchot AOC (pole-grown, small, intense), Prince Edward Island's cold-water blues, New Zealand's green-lipped natives. SCALLOPS: the wild season is a winter story: the US East Coast's day-boat sea scallops and Maine's brief December–April dive fishery (diver scallops as the sustainability-and-freshness benchmark), Brittany's coquille Saint-Jacques season (October–May, dredge-regulated, the shell that named the pilgrimage), Japan's Hokkaido farms running year-round, and bay scallops' tiny autumn window (Nantucket's November opening). Kitchen laws by season: winter bivalves need less adornment (their own sweetness peaks); the dry-vs-wet scallop rule from the bivalve entry matters MORE in season: don't let soaking erase what winter built.",
     "recipes": [
+      "suen-yung-jing-daai-ji-steamed-scallops-with-garlic-and-fun-see",
       "pizza-margherita",
-      "rosemary-focaccia",
-      "quiche-lorraine"
+      "rosemary-focaccia"
     ]
   },
   {

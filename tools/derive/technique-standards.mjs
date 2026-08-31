@@ -12,17 +12,17 @@
  * searing anything is doing the same measurable thing whether the pan holds
  * duck or aubergine, and that is assessable once, for all of it.
  *
- * 188 of the 1060 remain unassessable and always will on this approach: 154
- * carry no technique tag at all, and the other 34 exercise only techniques too
+ * 211 of the 1180 remain unassessable and always will on this approach: 178
+ * carry no technique tag at all, and the other 33 exercise only techniques too
  * rare in this corpus to be worth a standard. That is the honest ceiling rather
  * than a backlog, and it is gated below with everything else: the first
  * version of this sentence said 146 and 35, which were reasoned rather than
  * measured and were both wrong.
  *
- * The 51 techniques written here are every technique the corpus uses on 12 or
- * more recipes. They put a standard on 827 recipes that had none, taking the
- * assessable corpus from 45 to 872 of 1060: for 51 pieces of writing rather
- * than 827.
+ * The 53 techniques written here are every technique the corpus uses on 12 or
+ * more recipes. They put a standard on 924 recipes that had none, taking the
+ * assessable corpus from 45 to 969 of 1180: for 53 pieces of writing rather
+ * than 924.
  *
  * These were 752 and 797 until the em dash sweep of 29 Aug 2026. Exactly one
  * recipe moved: kulfi, whose first ingredient read "1.5L whole milk - reduced
@@ -105,6 +105,28 @@ export const TECHNIQUE_GATE_MIN_RECIPES = 12;
 export const JUDGED_BY_MAX = 2;
 
 export const TECHNIQUE_STANDARDS = [
+	{
+		slug: 'tortillas-on-the-comal',
+		marks: [
+			{ id: 'tortillas-on-the-comal#puff', text: 'It puffs. On the second turn the tortilla lifts into a dome as the trapped water flashes to steam and splits the two faces apart; a tortilla that never puffs was pressed too thick, cooked too cool, or turned too often.' },
+			{ id: 'tortillas-on-the-comal#freckled', text: 'Freckled, not blackened: small brown spots across a pale field. An evenly browned tortilla has been on too long and will be a cracker by the time it reaches the table.' },
+			{ id: 'tortillas-on-the-comal#folds', text: 'It folds without cracking while warm, and still folds after five minutes under a cloth. A tortilla that splits along the fold has lost too much water on the comal.' },
+			{ id: 'tortillas-on-the-comal#edges', text: 'The edges are unbroken and roughly round, with no ragged fringe: a fringed edge means the masa was too dry when it was pressed, and no amount of heat will fix it afterwards.' },
+			{ id: 'tortillas-on-the-comal#smell', text: 'It smells of toasted corn rather than of scorch or of raw lime. Raw lime means the nixtamal was under-rinsed; scorch means the comal was above the working heat.' }
+		],
+		fault: 'The masa was too dry or the comal too cool. A dry masa cracks at the edge on pressing and cannot generate the steam that puffs it; a cool comal dries the tortilla through before the water can flash, so it leaves the heat stiff, pale and already stale.'
+	},
+	{
+		slug: 'wok-technique',
+		marks: [
+			{ id: 'wok-technique#dry', text: 'Everything went in dry and went in in order. Wet protein or wet vegetables drop the wok below the heat that browns, and what follows is a stew in a round pan however hard the burner is working.' },
+			{ id: 'wok-technique#loud', text: 'The wok stays loud from the first moment to the last. A wok that falls quiet has been overloaded, and the food in it is now boiling in its own liquid.' },
+			{ id: 'wok-technique#coated', text: 'Every piece is coated and glossy with no pooled sauce in the bottom of the dish: the sauce should cling by reduction and starch, not sit under the food.' },
+			{ id: 'wok-technique#colour', text: 'Vegetables keep their colour and a bite at the centre. Grey-green greens or a limp stem mean too long in the pan, and nothing later in the dish recovers them.' },
+			{ id: 'wok-technique#aroma', text: 'It carries the faint scorched note that only comes from food touching metal above about 200C, distinct from bitterness, which means the aromatics were burnt and is a different failure entirely.' }
+		],
+		fault: 'Too much went in at once, or it went in wet. The wok loses its heat, the food releases water and simmers, the sauce thins instead of clinging, and the dish arrives pale and slack with liquid pooling under it.'
+	},
 	{
 		slug: 'pleating-dumplings',
 		marks: [

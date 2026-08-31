@@ -49,6 +49,13 @@
     "count": 10
   },
   {
+    "name": "Bengali",
+    "slug": "bengali",
+    "kind": "world",
+    "group": "World Cuisines",
+    "count": 10
+  },
+  {
     "name": "Bread Atlas",
     "slug": "bread-atlas",
     "kind": "atlas",
@@ -81,6 +88,13 @@
     "slug": "california",
     "kind": "us",
     "group": "The Pacific",
+    "count": 10
+  },
+  {
+    "name": "Cantonese",
+    "slug": "cantonese",
+    "kind": "world",
+    "group": "World Cuisines",
     "count": 10
   },
   {
@@ -149,6 +163,13 @@
   {
     "name": "Eastern European",
     "slug": "eastern-european",
+    "kind": "world",
+    "group": "World Cuisines",
+    "count": 10
+  },
+  {
+    "name": "Emilia-Romagna",
+    "slug": "emilia-romagna",
     "kind": "world",
     "group": "World Cuisines",
     "count": 10
@@ -280,6 +301,13 @@
     "count": 10
   },
   {
+    "name": "Jiangnan",
+    "slug": "jiangnan",
+    "kind": "world",
+    "group": "World Cuisines",
+    "count": 10
+  },
+  {
     "name": "Kansas",
     "slug": "kansas",
     "kind": "us",
@@ -291,6 +319,13 @@
     "slug": "kentucky",
     "kind": "us",
     "group": "The South",
+    "count": 10
+  },
+  {
+    "name": "Kerala & the Malabar Coast",
+    "slug": "kerala-and-the-malabar-coast",
+    "kind": "world",
+    "group": "World Cuisines",
     "count": 10
   },
   {
@@ -462,6 +497,20 @@
     "count": 10
   },
   {
+    "name": "Northern Chinese",
+    "slug": "northern-chinese",
+    "kind": "world",
+    "group": "World Cuisines",
+    "count": 10
+  },
+  {
+    "name": "Oaxacan",
+    "slug": "oaxacan",
+    "kind": "world",
+    "group": "World Cuisines",
+    "count": 10
+  },
+  {
     "name": "Offal & the Whole Animal",
     "slug": "offal-and-the-whole-animal",
     "kind": "atlas",
@@ -518,6 +567,13 @@
     "count": 10
   },
   {
+    "name": "Punjabi & North Indian",
+    "slug": "punjabi-and-north-indian",
+    "kind": "world",
+    "group": "World Cuisines",
+    "count": 10
+  },
+  {
     "name": "Rhode Island",
     "slug": "rhode-island",
     "kind": "us",
@@ -544,6 +600,20 @@
     "kind": "atlas",
     "group": "The Atlases",
     "count": 20
+  },
+  {
+    "name": "Sichuan",
+    "slug": "sichuan",
+    "kind": "world",
+    "group": "World Cuisines",
+    "count": 10
+  },
+  {
+    "name": "Sicilian",
+    "slug": "sicilian",
+    "kind": "world",
+    "group": "World Cuisines",
+    "count": 10
   },
   {
     "name": "Soup & Stew Atlas",
@@ -592,6 +662,13 @@
     "slug": "street-food-atlas",
     "kind": "atlas",
     "group": "The Atlases",
+    "count": 10
+  },
+  {
+    "name": "Tamil & the South",
+    "slug": "tamil-and-the-south",
+    "kind": "world",
+    "group": "World Cuisines",
     "count": 10
   },
   {
@@ -718,6 +795,13 @@
     "slug": "wyoming",
     "kind": "us",
     "group": "The Mountain West",
+    "count": 10
+  },
+  {
+    "name": "Yucatecan",
+    "slug": "yucatecan",
+    "kind": "world",
+    "group": "World Cuisines",
     "count": 10
   }
 ]
