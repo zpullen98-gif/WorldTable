@@ -28,6 +28,11 @@
         "dishes": 1
       },
       {
+        "slug": "dry-pan-toasting-spices-seeds-and-nuts",
+        "label": "Dry-pan toasting: spices, seeds and nuts",
+        "dishes": 1
+      },
+      {
         "slug": "knife-cuts-dice-julienne-bias",
         "label": "Knife cuts: dice, julienne, bias",
         "dishes": 1
@@ -89,6 +94,11 @@
       {
         "slug": "soaking-dried-goods-back-to-life",
         "label": "Soaking dried goods back to life",
+        "dishes": 1
+      },
+      {
+        "slug": "straining-and-passing-through-a-sieve",
+        "label": "Straining & passing through a sieve",
         "dishes": 1
       },
       {
@@ -201,6 +211,11 @@
         "dishes": 2
       },
       {
+        "slug": "reducing-a-sauce",
+        "label": "Reducing a sauce",
+        "dishes": 2
+      },
+      {
         "slug": "skimming-foam-fat-and-a-clear-broth",
         "label": "Skimming: foam, fat and a clear broth",
         "dishes": 2
@@ -211,6 +226,11 @@
         "dishes": 1
       },
       {
+        "slug": "keeping-the-cooking-liquid",
+        "label": "Keeping the cooking liquid",
+        "dishes": 1
+      },
+      {
         "slug": "knife-cuts-dice-julienne-bias",
         "label": "Knife cuts: dice, julienne, bias",
         "dishes": 1
@@ -218,11 +238,6 @@
       {
         "slug": "marinating-acid-salt-and-time",
         "label": "Marinating: acid, salt and time",
-        "dishes": 1
-      },
-      {
-        "slug": "reducing-a-sauce",
-        "label": "Reducing a sauce",
         "dishes": 1
       },
       {
@@ -335,6 +350,11 @@
         "dishes": 1
       },
       {
+        "slug": "tempering-a-custard",
+        "label": "Tempering a custard",
+        "dishes": 1
+      },
+      {
         "slug": "the-bare-simmer-holding-liquid-below-the-boil",
         "label": "The bare simmer: holding liquid below the boil",
         "dishes": 1
@@ -443,13 +463,13 @@
     ],
     "skills": [
       {
-        "slug": "searing-the-hard-crust",
-        "label": "Searing: the hard crust",
-        "dishes": 2
-      },
-      {
         "slug": "wok-technique",
         "label": "Wok technique",
+        "dishes": 3
+      },
+      {
+        "slug": "searing-the-hard-crust",
+        "label": "Searing: the hard crust",
         "dishes": 2
       },
       {
@@ -491,6 +511,11 @@
         "slug": "building-an-emulsion",
         "label": "Building an emulsion",
         "dishes": 3
+      },
+      {
+        "slug": "deep-frying",
+        "label": "Deep frying",
+        "dishes": 1
       },
       {
         "slug": "draining-fried-food-a-rack-never-paper",

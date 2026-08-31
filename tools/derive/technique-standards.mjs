@@ -12,17 +12,17 @@
  * searing anything is doing the same measurable thing whether the pan holds
  * duck or aubergine, and that is assessable once, for all of it.
  *
- * 276 of the 1510 remain unassessable and always will on this approach: 243
- * carry no technique tag at all, and the other 33 exercise only techniques too
+ * 90 of the 1510 remain unassessable and always will on this approach: 67
+ * carry no technique tag at all, and the other 23 exercise only techniques too
  * rare in this corpus to be worth a standard. That is the honest ceiling rather
  * than a backlog, and it is gated below with everything else: the first
  * version of this sentence said 146 and 35, which were reasoned rather than
  * measured and were both wrong.
  *
- * The 54 techniques written here are every technique the corpus uses on 12 or
- * more recipes. They put a standard on 1189 recipes that had none, taking the
- * assessable corpus from 45 to 1234 of 1510: for 54 pieces of writing rather
- * than 1189.
+ * The 59 techniques written here are every technique the corpus uses on 12 or
+ * more recipes. They put a standard on 1375 recipes that had none, taking the
+ * assessable corpus from 45 to 1420 of 1510: for 59 pieces of writing rather
+ * than 1375.
  *
  * These were 752 and 797 until the em dash sweep of 29 Aug 2026. Exactly one
  * recipe moved: kulfi, whose first ingredient read "1.5L whole milk - reduced
@@ -105,6 +105,61 @@ export const TECHNIQUE_GATE_MIN_RECIPES = 12;
 export const JUDGED_BY_MAX = 2;
 
 export const TECHNIQUE_STANDARDS = [
+	{
+		slug: 'pounding-a-curry-paste',
+		marks: [
+			{ id: 'pounding-a-curry-paste#smeared', text: 'Smeared thin across a pale surface it reads as one substance, edge to edge: no pale gritty specks standing proud of the smear, no shard that drags a line through it as the smear is pulled. Flecks mean something hard went in after something wet and skated instead of shattering.' },
+			{ id: 'pounding-a-curry-paste#rubbed', text: 'Rubbed between finger and thumb it feels like wet clay, dense and smooth, and takes the print of the thumb. Anything that rolls into a hard grain or grits like sand has not been broken down, and the order of work was wrong.' },
+			{ id: 'pounding-a-curry-paste#fibrous', text: 'The fibrous aromatics have surrendered: pinch a little and pull, and nothing draws out as a thread or a hair. Listen to the last minutes of work as well, which should be a dull wet slap in the mortar; a dry knock or rattle still present means hard pieces are being chased around rather than crushed.' },
+			{ id: 'pounding-a-curry-paste#even', text: 'One even colour throughout when it is turned under the light, deep and saturated, with no marbling and no streak in which a single component can still be read. A dull grey cast over the surface says it was worked long past its point.' },
+			{ id: 'pounding-a-curry-paste#heaped', text: 'Heaped up and left alone it stands in a soft peak and holds the mark of the pestle for a full minute: no clear or coloured liquid creeps out at the base, no oily film separates on top. It should also come to the pass cool, no warmer than about 25 C (77 F); a mortar warm to the back of the hand means friction has driven off the top aroma and the paste will smell flat.' }
+		],
+		fault: 'Everything went into the mortar together, or the wet ingredients arrived before the hard, dry ones had been reduced to dust, so the moisture cushioned every blow and the hard pieces slid rather than broke. What comes to the pass is a wet mince rather than a paste: hard flecks and fibrous threads through a loose slurry, liquid weeping out of the heap within a minute, colour marbled instead of single, and on the plate it reads as separate raw items sitting next to each other rather than one flavour.'
+	},
+	{
+		slug: 'scoring',
+		marks: [
+			{ id: 'scoring#lift', text: 'Lift one cut open with a fingertip: it parts through the skin and stops in the fat beneath, showing a pale wall at its base. Any cut showing red or fibrous flesh has gone too deep; any that has not reached the fat has left the skin tethered, and it will tighten under heat.' },
+			{ id: 'scoring#lines', text: 'The lines run parallel at even spacing, roughly a finger\'s width apart, each carried the full length of the face and stopped the same margin short of the edge. Sight down them: lines that converge, wander or crowd at one end cook at different rates and read as careless on the plate.' },
+			{ id: 'scoring#line', text: 'Each line is one clean draw of the blade held at a slant, not a sawn or doubled track, and it leaves a bevelled lip standing slightly proud rather than a vertical slot. The surface should be dry and cold, near 4C (39F), when it is cut; worked warm and slack it drags, and the blade tears where it should part.' },
+			{ id: 'scoring#cooking', text: 'After cooking the cuts have opened and set, each a clear gap with firm browned walls. Lines closed back to faint scratches were cut too shallow or too straight down, and the surface has shrunk over them instead of through them.' },
+			{ id: 'scoring#piece', text: 'The piece lies flat and true when it is set down, with no cupping through the middle and no lifted, curled edge. A bowed piece means the tightening surface was never released, so it pulled the whole thing up and left the underside pale where it stood off the heat.' }
+		],
+		fault: 'The blade was pushed rather than drawn, through a surface left warm and slack, so it went past the fat and into the flesh. The cuts bleed as they cook and the juices flood the surface, so it steams instead of crisping: the lines gape into wet ragged trenches, the flesh between them dries into hard ridges, and the skin stays leathery and pale where it should have blistered and set.'
+	},
+	{
+		slug: 'tadka-blooming-spices-in-fat',
+		marks: [
+			{ id: 'tadka-blooming-spices-in-fat#tempering', text: 'The fat is at tempering heat before anything goes in, around 180C (350F): one test seed dropped in surfaces and cracks within two or three seconds. A seed that sinks and sits quiet means the fat is cold and everything will steep rather than bloom; fat already hazing and thinning has gone past 200C (390F), and the first thing in will be black before the last thing is in.' },
+			{ id: 'tadka-blooming-spices-in-fat#went', text: 'Ask what went in and in what order, then read it back off the pan: the hardest seeds lead, with ten to twenty seconds before the next addition, and the softest seeds, any leaf and any powdered aromatic go last with only seconds left. Everything tipped in on one drop is a fail even when the pan smells right, because the most delicate thing in it cannot survive the time the hardest one needs.' },
+			{ id: 'tadka-blooming-spices-in-fat#gave', text: 'The pan gave a hard scatter of popping that rose, peaked and thinned before it left the heat. A pan that stayed silent never reached popping heat and the seeds are still hard and raw against the teeth; seeds still cracking loudly as it is poured finished blooming in the dish instead of in the fat, where nothing was watching them.' },
+			{ id: 'tadka-blooming-spices-in-fat#cumin', text: 'Cumin is exactly one shade darker than it went in and no more, a warm even brown that smells nutty and sweet; anything near coffee colour, or smelling of scorch, has already carried bitterness into the fat. Fenugreek is pale gold, checked under the light with nothing copper or brown among it, and this is the mark to judge first: past gold it turns the whole pot bitter, and no salt, sugar or souring will pull it back.' },
+			{ id: 'tadka-blooming-spices-in-fat#leaf', text: 'The leaf is blistered and gone translucent, still green at the edge and crisp rather than black or limp, and it cracked sharply when it met the fat. It reached the dish still at full heat and answered with a violent hiss, and it reads on the surface afterwards as bright separate fat with whole spices suspended through it, not a dull dark sediment settled on the bottom.' }
+		],
+		fault: 'The fat was pushed past hazing before anything went in, or every spice was tipped in together, so the hardest and the most delicate cooked on one clock: in the seconds the hardest seeds need to pop, fenugreek goes from gold to brown and the leaf goes black. Nothing can be corrected after that. The tempering pours in dark and smells scorched over the top of the dish, the specks read black rather than brown when the surface is turned to the light, and a flat acrid bitterness arrives at the back of the palate after the swallow and stays there through the next mouthful.'
+	},
+	{
+		slug: 'the-water-bath',
+		marks: [
+			{ id: 'the-water-bath#water', text: 'The water stands two thirds of the way up the side of the inner dish and is still standing there at the end: filled only to the halfway mark, the upper band sets hard and pale long before the centre moves, and water lapping the rim or splashed over the top has thinned the surface into a loose, watery skin.' },
+			{ id: 'the-water-bath#bath', text: 'The bath is silent, steaming, with at most one slow bubble rising at the wall of the outer vessel, held between 80C and 85C (176F and 185F). Any chatter of the dish against the base, any steady string of bubbles, any rolling of the surface means the water has run to 100C (212F) and the damage is already done.' },
+			{ id: 'the-water-bath#nudged', text: 'Nudged, the centre trembles as one piece, a coin of movement in a face that is otherwise still. A ripple that travels outward in waves means it is still liquid beneath the skin; a face that does not move at all has been carried past the set and will eat firm and grainy.' },
+			{ id: 'the-water-bath#face', text: 'Cut, the face is dense and glossy from edge to edge: no honeycomb of small bubbles along the outer band, and no bead of clear liquid weeping from the cut or pooling between the set and the side of the dish, which is the mark of protein wrung out by heat.' },
+			{ id: 'the-water-bath#left', text: 'It left the water before it was done and rested clear of it: the centre reads 78C (172F) as it is lifted out and climbs to roughly 82C (180F) standing. Anything left sitting in the hot bath after the heat was cut has gone on cooking, and it reaches the pass tight and split however well it looked when it went in.' }
+		],
+		fault: 'The bath was pushed too hot and allowed to boil, usually an outer vessel set over direct heat that was never turned down, or a bath topped up part way through with boiling water, so the mixture against the wall of the dish ran past 85C (185F) and its protein seized and squeezed out its liquid. The outer band is pitted and grainy, a ring of watery liquid weeps into the dish as soon as it is cut, and the centre is still slack, because the outside was overcooked long before the middle set.'
+	},
+	{
+		slug: 'working-with-masa',
+		marks: [
+			{ id: 'working-with-masa#pinch', text: 'Pinch a small piece and roll it closed between finger and thumb: hydrated correctly the edge stays smooth and seals over on itself; a fringe of fine cracks opening along the pinched edge is under hydration, and every piece off that batch will split at the rim. In the hand it feels soft and yielding and leaves a matt film on the palm, never a wet skin that strings when the hand lifts away.' },
+			{ id: 'working-with-masa#rest', text: 'After the rest it is damp and matt right through, and it has been kept covered the whole time: a pale dried skin over the mass, or grit that grinds under the thumb when a ball is squashed flat, means it stood open to the air or was shaped before the moisture had reached the centre of the ground grain.' },
+			{ id: 'working-with-masa#lifts', text: 'It lifts off the press as one clean piece, the rim unbroken and the thickness even from side to side at roughly 2 mm, and a hand shaped piece is judged the same way, with no thin translucent windows worn through the middle. A lacy scalloped rim, or a piece that stretches and tears as it is lifted, fails the mark.' },
+			{ id: 'working-with-masa#held', text: 'Held to the face it smells of toasted sweet corn, faintly mineral and clean. A sharp chalky or soapy smell of raw lime, or a bitterness sitting at the back of the tongue when a raw pinch is tasted, means it was under rinsed and no amount of heat afterwards will drive it off.' },
+			{ id: 'working-with-masa#surface', text: 'On a surface holding 190 to 200 C (375 to 390 F) it lifts and balloons across most of its face on the last turn, then settles soft and pliable as it cools. Rested a minute and folded in half, it creases without splitting: a piece that never lifts, or that cracks white along the fold, is failed however good its colour.' }
+		],
+		fault: 'Too little moisture worked in, and no rest to let what there is reach the centre of the ground grain: it handles well while it is being mixed, then tightens as it stands, so the pieces come off the press with cracked scalloped rims, sit flat and pale on the heat and never lift, and go stiff within a minute of coming off, breaking along the crease instead of folding.'
+	},
 	{
 		slug: 'dashi',
 		marks: [

@@ -363,6 +363,8 @@ export const LEXICON_ANCHOR = {
  * film links: keeping the original entries first means a recipe that already
  * had film links keeps exactly the ones it had.
  */
+import { TAGGING_PASS } from './tagging-pass.mjs';
+
 export function fullTechTable(TECH) {
 	/* Merged by label, not concatenated. A SUPPLEMENT entry that repeats an
 	   extracted label is WIDENING it: raw/TECH.json is proved against the sealed
@@ -370,7 +372,7 @@ export function fullTechTable(TECH) {
 	   from this side. Two entries for one technique would otherwise collide on
 	   the slug, which the build rightly refuses. */
 	const byLabel = new Map();
-	for (const t of [...TECH, ...SUPPLEMENT]) {
+	for (const t of [...TECH, ...SUPPLEMENT, ...TAGGING_PASS]) {
 		const prev = byLabel.get(t.l);
 		if (prev) prev.k = [...new Set([...prev.k, ...t.k])];
 		else byLabel.set(t.l, { ...t, k: [...t.k] });
