@@ -243,8 +243,8 @@
 		<div class="limits">
 			<p>
 				<b>It is coverage, not competence.</b> It counts the techniques a person has cooked a dish for.
-				It cannot see whether the plate was any good on most dishes: {ASSESS.assessable} of the guide’s {ASSESS.corpus} are now assessable, {ASSESS.dishStandards} against a standard of their own and {ASSESS.byTechnique} against the techniques they exercise, so “to a standard” is always a floor and never a measure.assessable} of the
-				guide's {ASSESS.corpus} are now assessable, {ASSESS.dishStandards} against a standard of
+				It cannot see whether the plate was any good on most dishes: {ASSESS.assessable} of the
+				guide’s {ASSESS.corpus} are now assessable, {ASSESS.dishStandards} against a standard of
 				their own and {ASSESS.byTechnique} against the techniques they exercise, so “to a standard”
 				is always a floor and never a measure.
 			</p>

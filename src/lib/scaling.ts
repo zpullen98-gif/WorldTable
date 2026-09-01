@@ -97,20 +97,73 @@ export function scaleLine(s: string, x: number): string {
 	});
 }
 
+/**
+ * A range separator: hyphen, en dash, em dash, or the word "to".
+ *
+ * Ranges are the reason this file has a rule ordering at all. A single-value
+ * rule matches the half that CARRIES the unit and leaves the other half alone,
+ * so "160-165C" became "160-329°F": a frying temperature whose low end is still
+ * Celsius and reads, to an American cook, as 160°F. Measured over the corpus
+ * before this was written: 48 temperature ranges, 7 kg, 6 g, 2 ml. Of the
+ * temperature ranges, 47 carried no correct Fahrenheit anywhere else in the
+ * line to cross-check against, and 20 were frying, holding or internal
+ * temperatures for raw protein.
+ */
+const RANGE = String.raw`(-?\d+(?:\.\d+)?)\s*(-|–|—|\s+to\s+)\s*(-?\d+(?:\.\d+)?)`;
+
+const cToF = (v: number) => Math.round((v * 9) / 5 + 32);
+
 export function convertLine(s: string, units: 'metric' | 'us'): string {
 	if (units === 'metric') return s;
-	return s
-		.replace(/(\d+(?:\.\d+)?)\s*kg\b/gi, (_m, v) => `${Math.round(v * 2.205 * 10) / 10} lb`)
-		.replace(/(\d+(?:\.\d+)?)\s*g\b/gi, (m, v) =>
-			v < 15 ? m : `${Math.round((v / 28.35) * 10) / 10} oz`
-		)
-		.replace(/(\d+(?:\.\d+)?)\s*ml\b/gi, (m, v) =>
-			v < 15 ? m : `${Math.round((v / 29.57) * 10) / 10} fl oz`
-		)
-		.replace(/(\d+(?:\.\d+)?)\s*L\b/g, (_m, v) => `${Math.round(v * 1.057 * 10) / 10} qt`)
-		// The original emitted a bare "F" here, losing the degree sign it had
-		// just consumed from "°C". Restored: 180°C should read 356°F.
-		.replace(/(\d+(?:\.\d+)?)\s*°?C\b/g, (_m, v) => `${Math.round((v * 9) / 5 + 32)}°F`)
+	return (
+		s
+			/**
+			 * The author's OWN conversion wins, always.
+			 *
+			 * 459 lines already write the Fahrenheit themselves: "220C (425F)".
+			 * Converting the Celsius half produced "428°F (425F)", contradicting
+			 * the author's deliberate rounding on exactly the recipes careful
+			 * enough to give both scales. 146 of those disagreed by more than a
+			 * degree; the rest merely printed the same number twice. Take what
+			 * the author wrote and drop the metric half, since in US mode the
+			 * bracket has nothing left to explain.
+			 */
+			.replace(
+				/(-?\d+(?:\.\d+)?)\s*°?C\s*\(\s*(-?\d+(?:\.\d+)?)\s*°?F\s*\)/g,
+				(_m, _c, f) => `${f}°F`
+			)
+			/* Ranges before singles, for every unit that has them. */
+			.replace(new RegExp(`${RANGE}\\s*kg\\b`, 'gi'), (_m, a, sep, b) =>
+				`${Math.round(a * 2.205 * 10) / 10}${sep}${Math.round(b * 2.205 * 10) / 10} lb`
+			)
+			.replace(new RegExp(`${RANGE}\\s*g\\b`, 'gi'), (m, a, sep, b) =>
+				/* The 15 g floor is the single rule's, kept here: below it the
+				   original leaves grams alone, and a range should not disagree
+				   with the single value it sits next to. Judged on the HIGH end,
+				   so "200-300 g" converts as one unit rather than half of one. */
+				b < 15 ? m : `${Math.round((a / 28.35) * 10) / 10}${sep}${Math.round((b / 28.35) * 10) / 10} oz`
+			)
+			.replace(new RegExp(`${RANGE}\\s*ml\\b`, 'gi'), (m, a, sep, b) =>
+				b < 15 ? m : `${Math.round((a / 29.57) * 10) / 10}${sep}${Math.round((b / 29.57) * 10) / 10} fl oz`
+			)
+			.replace(new RegExp(`${RANGE}\\s*°?C\\b`, 'g'), (_m, a, sep, b) =>
+				`${cToF(Number(a))}${sep}${cToF(Number(b))}°F`
+			)
+			.replace(/(\d+(?:\.\d+)?)\s*kg\b/gi, (_m, v) => `${Math.round(v * 2.205 * 10) / 10} lb`)
+			.replace(/(\d+(?:\.\d+)?)\s*g\b/gi, (m, v) =>
+				v < 15 ? m : `${Math.round((v / 28.35) * 10) / 10} oz`
+			)
+			.replace(/(\d+(?:\.\d+)?)\s*ml\b/gi, (m, v) =>
+				v < 15 ? m : `${Math.round((v / 29.57) * 10) / 10} fl oz`
+			)
+			.replace(/(\d+(?:\.\d+)?)\s*L\b/g, (_m, v) => `${Math.round(v * 1.057 * 10) / 10} qt`)
+			/* The original emitted a bare "F" here, losing the degree sign it had
+			   just consumed from "°C". Restored: 180°C should read 356°F.
+
+			   The leading minus is part of the match. Without it "-20C" matched as
+			   "20C" and rendered "-68°F", turning the parasite-kill freeze on four
+			   cured fish recipes into a temperature no domestic freezer reaches. */
+			.replace(/(-?\d+(?:\.\d+)?)\s*°?C\b/g, (_m, v) => `${cToF(Number(v))}°F`)
 		/**
 		 * Dimension pairs BEFORE the single-value rule, or the single rule takes
 		 * first refusal and converts only the half that carries the unit:
@@ -121,7 +174,8 @@ export function convertLine(s: string, units: 'metric' | 'us'): string {
 			/(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)\s*cm\b/gi,
 			(_m, a, b) => `${Math.round((a / 2.54) * 10) / 10}x${Math.round((b / 2.54) * 10) / 10} in`
 		)
-		.replace(/(\d+(?:\.\d+)?)\s*cm\b/gi, (_m, v) => `${Math.round((v / 2.54) * 10) / 10} in`);
+		.replace(/(\d+(?:\.\d+)?)\s*cm\b/gi, (_m, v) => `${Math.round((v / 2.54) * 10) / 10} in`)
+	);
 }
 
 /** Both transforms, in the order the original applied them. */

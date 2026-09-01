@@ -102,7 +102,9 @@ test('a semester lists the skills its dishes drill, heaviest first', async ({ pa
 
 test('a technique names the semesters that teach it', async ({ page }) => {
 	await goto(page, '/technique/braising');
-	await expect(page.locator('.taught')).toContainText('Semester 4 — The Braise');
+	// Either separator: the sweep that replaced em dashes with colons broke this
+	// assertion, and the thing worth pinning is the semester, not the punctuation.
+	await expect(page.locator('.taught')).toContainText(/Semester 4[:\u2014-] The Braise/);
 	// The separator regressed once to "Braise,Semester" under Svelte whitespace
 	// trimming; assert the space survives.
 	await expect(page.locator('.taught')).not.toContainText(',Semester');

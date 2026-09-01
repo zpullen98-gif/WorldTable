@@ -162,7 +162,7 @@
 		<dl class="counts">
 			<div><dt>Recipes</dt><dd>{TOTALS.recipes}</dd></div>
 			<div><dt>Chapters</dt><dd>{TOTALS.chapters}</dd></div>
-			<div><dt>Lexicon</dt><dd>479</dd></div>
+			<div><dt>Lexicon</dt><dd>{TOTALS.lexicon}</dd></div>
 		</dl>
 	</div>
 </header>

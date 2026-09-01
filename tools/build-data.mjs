@@ -682,6 +682,24 @@ write('study.json', study);
 write('substitutions.json', substitutions);
 write('cellar.json', cellar);
 write('techniques.json', techniques);
+
+/**
+ * The header numbers, EMITTED for the same reason assessability.json is.
+ *
+ * The masthead printed a hardcoded 479 for the Lexicon and the technique page
+ * printed "of 970 dishes" long after the corpus reached 1710, which rendered
+ * the arithmetically impossible "1620 of 970". Recipes and chapters are free
+ * for a page to count, because data.ts already holds those arrays. The lexicon
+ * and the technique table are NOT: both are deliberately dynamic imports worth
+ * a few hundred KB, and pulling one into the eager bundle to read `.length`
+ * would trade a wrong number for a slow one.
+ */
+write('totals.json', {
+	recipes: R.length,
+	chapters: chapters.length,
+	lexicon: lexicon.length,
+	techniques: techniques.length
+});
 write('technique-standards.json', techniqueStandards);
 write('palate.json', palate);
 write('economics.json', economics);

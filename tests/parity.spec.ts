@@ -76,8 +76,13 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 		}))
 	)()`);
 
+	/* The original is 970 dishes and always will be: it is a sealed artefact.
+	   Our corpus is those 970 followed by an authored supplement, so parity is
+	   checked over the original's SPAN, not over the whole array. Position still
+	   aligns because the supplement is appended, never interleaved: if that ever
+	   changes, the name comparison below fails on the first row and says so. */
 	expect(legacy).toHaveLength(970);
-	expect(ourIndex).toHaveLength(970);
+	expect(ourIndex.length).toBeGreaterThanOrEqual(970);
 
 	// Our arrays preserve original order, so records align by position.
 	const authoredDiffs: string[] = [];

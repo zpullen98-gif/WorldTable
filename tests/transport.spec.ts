@@ -65,7 +65,7 @@ test('a venue survives its own export: preps, prices and waste all round-trip', 
 	await page.locator('input[type=file]').setInputFiles(path!);
 
 	// The banner names what landed, in the merge's own units.
-	const banner = page.locator('text=/Imported —/');
+	const banner = page.locator('text=/Imported[:\u2014-]/');
 	await expect(banner).toBeVisible();
 	await expect(banner).toContainText('1 menu dish');
 	await expect(banner).toContainText('1 prep');

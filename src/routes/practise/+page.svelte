@@ -10,6 +10,7 @@
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
+	import TRACK from '$lib/data/service-track.json';
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
 	import { repertoire, dueList } from '$lib/repertoire';
@@ -97,8 +98,8 @@
 			<a href="{base}/service/drill">
 				<h2>Drill the service track</h2>
 				<p>
-					Ten scored questions over the 186 terms of the front-of-house track, scheduled so a term
-					you miss comes back sooner. Works on a fresh install.
+					Ten scored questions over the {TRACK.total} terms of the service track, scheduled so a
+					term you miss comes back sooner. Works on a fresh install.
 				</p>
 			</a>
 		</li>

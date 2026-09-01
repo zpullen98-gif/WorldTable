@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { TOTALS } from '$lib/data';
 
 	let { data } = $props();
 
@@ -25,7 +26,7 @@
 			each with every recipe in the guide that demonstrates it.
 		</p>
 		<p class="progress">
-			{data.techniques.length} skills · {data.tagged} of 970 dishes carry at least one
+			{data.techniques.length} skills · {data.tagged} of {TOTALS.recipes} dishes carry at least one
 		</p>
 	</header>
 

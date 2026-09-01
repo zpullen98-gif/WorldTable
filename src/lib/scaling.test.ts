@@ -191,3 +191,66 @@ describe('conversion handles dimension pairs', () => {
 		);
 	});
 });
+
+describe('conversion handles ranges, and the author who already did the maths', () => {
+	/* Every case below is a real corpus line. Measured before the fix: 459
+	   author-written pairs, 48 temperature ranges, 15 weight and volume ranges,
+	   4 sub-zero temperatures. */
+
+	it('takes the author’s own Fahrenheit and drops the metric half', () => {
+		// Converting the Celsius half printed "428°F (425F)": the author's
+		// deliberate oven rounding contradicted on the recipes careful enough
+		// to give both scales.
+		expect(convertLine('Roast the bones at 220C (425F) for 45 min.', 'us')).toBe(
+			'Roast the bones at 425°F for 45 min.'
+		);
+		expect(convertLine('preheated to 250C (480F): score deep', 'us')).toBe(
+			'preheated to 480°F: score deep'
+		);
+	});
+
+	it('converts BOTH ends of a temperature range', () => {
+		// "Fry at 160-329°F" told an American cook to fry chicken at 160°F.
+		expect(convertLine('Fry at 160–165°C, turning, 14–18 min.', 'us')).toBe(
+			'Fry at 320–329°F, turning, 14–18 min.'
+		);
+		expect(convertLine('hold the cooker at 110-120C with hickory', 'us')).toBe(
+			'hold the cooker at 230-248°F with hickory'
+		);
+		expect(convertLine('it lives between 50–60°C and dies outside', 'us')).toBe(
+			'it lives between 122–140°F and dies outside'
+		);
+	});
+
+	it('keeps a sub-zero temperature below zero', () => {
+		// The parasite-kill freeze on four cured fish recipes rendered as
+		// "-68°F", a temperature no domestic freezer reaches, which invites a
+		// reader to decide the step is a typo and skip it.
+		expect(convertLine('held at -20C (-4F) for 7 days first', 'us')).toBe(
+			'held at -4°F for 7 days first'
+		);
+		expect(convertLine('frozen at -20C for at least 24 hours', 'us')).toBe(
+			'frozen at -4°F for at least 24 hours'
+		);
+	});
+
+	it('converts both ends of a weight or volume range', () => {
+		expect(convertLine('1 octopus, 1.5–2kg, cleaned', 'us')).toBe('1 octopus, 3.3–4.4 lb, cleaned');
+		expect(convertLine('200-300 g water, for slackening', 'us')).toBe(
+			'7.1-10.6 oz water, for slackening'
+		);
+		expect(convertLine('60 to 90 ml cold water', 'us')).toBe('2 to 3 fl oz cold water');
+	});
+
+	it('leaves a small-gram range alone, as the single-value rule does', () => {
+		// The 15 g floor exists because "5 g salt" in ounces helps nobody. A
+		// range must not disagree with the single value sitting beside it.
+		expect(convertLine('5-10 g yeast', 'us')).toBe('5-10 g yeast');
+	});
+
+	it('still converts the plain cases it always did', () => {
+		expect(convertLine('Bake at 180°C for 25 min.', 'us')).toBe('Bake at 356°F for 25 min.');
+		expect(convertLine('500g flour and 300ml water', 'us')).toBe('17.6 oz flour and 10.1 fl oz water');
+		expect(convertLine('Butter a 23x33cm pan.', 'us')).toBe('Butter a 9.1x13 in pan.');
+	});
+});

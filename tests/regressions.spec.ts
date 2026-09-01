@@ -1,5 +1,14 @@
 import { test, expect } from '@playwright/test';
 import { goto } from './helpers';
+import { readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+/* Read rather than import: Playwright's loader wants an import attribute for
+   JSON, and parity.spec.ts already reads its fixtures this way. */
+const TOTALS = JSON.parse(
+	readFileSync(join(dirname(fileURLToPath(import.meta.url)), '../src/lib/data/totals.json'), 'utf8')
+) as { recipes: number; chapters: number; lexicon: number; techniques: number };
 
 /**
  * The named regression suite.
@@ -12,7 +21,16 @@ import { goto } from './helpers';
 test('L582 — header shows the real counts, not three bare labels', async ({ page }) => {
 	await goto(page, '/');
 	const counts = page.locator('.counts dd');
-	await expect(counts).toHaveText(['970', '94', '479']);
+	// Read from the same emitted totals the masthead reads, so this asserts that
+	// the header is WIRED to the data rather than asserting what the corpus
+	// happened to be the day somebody typed it. It was ['970','94','479'] for
+	// months after the corpus reached 1710, which is how the suite went red
+	// without anybody choosing that.
+	await expect(counts).toHaveText([
+		String(TOTALS.recipes),
+		String(TOTALS.chapters),
+		String(TOTALS.lexicon)
+	]);
 });
 
 test('L2506 — typing in the Lexicon search keeps recipe cross-links', async ({ page }) => {
@@ -64,9 +82,22 @@ test('L1913 — unaccented searches find their accented dishes', async ({ page }
 test('ingredient search finds dishes by what goes in them', async ({ page }) => {
 	await goto(page, '/recipes');
 	await page.getByLabel('Search recipes').fill('lemongrass');
-	// 13 in the corpus; the substring fallback found exactly 1.
-	await expect(page.locator('.card')).toHaveCount(13);
+	/* The claim here is NOT "the corpus contains N lemongrass dishes", which
+	   changes whenever a recipe is added and which is what made this test go
+	   red. It is that the search reads INGREDIENTS: the substring fallback over
+	   name and chapter found exactly one dish, and the index finds the rest.
+
+	   So: many results, and specifically a dish whose own name never says
+	   lemongrass. Beef Rendang can only be found here by what is in the pot.
+
+	   The ORDER matters. The search index is a lazy import, so for a moment the
+	   grid holds only the substring fallback's single hit. toHaveCount and
+	   toBeVisible retry until they pass; a bare `await locator.count()` reads
+	   once and would catch that moment, which is exactly what it did. Wait on a
+	   retrying assertion first, then count. */
+	await expect(page.locator('.card h3', { hasText: 'Beef Rendang' })).toBeVisible();
 	await expect(page.locator('.card h3', { hasText: 'Tom Yum Goong' })).toBeVisible();
+	expect(await page.locator('.card').count()).toBeGreaterThan(5);
 });
 
 test('persistence — pin, note, service and units survive a reload', async ({ page }) => {
@@ -93,9 +124,9 @@ test('L3488 — a family recipe is visibly distinct and fully integrated', async
 	// wrapping <label> text ("Ingredients — one per line"); the placeholders
 	// hold example content.
 	await page.getByLabel('Dish name').fill('Test Family Stew');
-	await page.getByLabel(/Ingredients — one per line/).fill('2 onions\n500g beef');
+	await page.getByLabel(/Ingredients[:\u2014-] one per line/).fill('2 onions\n500g beef');
 	await page
-		.getByLabel(/Method — one step per line/)
+		.getByLabel(/Method[:\u2014-] one step per line/)
 		.fill('Brown the beef.\nSimmer 90 min until tender.');
 	await page.getByRole('button', { name: 'Add to the guide' }).click();
 	await expect(page.locator('.msg')).toContainText('Test Family Stew');

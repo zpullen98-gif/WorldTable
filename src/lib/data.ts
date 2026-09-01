@@ -29,6 +29,7 @@ import type {
 
 import indexJson from './data/recipes.index.json';
 import chaptersJson from './data/chapters.json';
+import totalsJson from './data/totals.json';
 
 export const recipes = indexJson as unknown as RecipeSummary[];
 export const chapters = chaptersJson as unknown as ChapterRef[];
@@ -38,9 +39,19 @@ export const chapterBySlug = new Map(chapters.map((c) => [c.slug, c]));
 
 export const COURSES = [...new Set(recipes.map((r) => r.course))].sort();
 
+/**
+ * Recipes and chapters are counted from the arrays right here, which are loaded
+ * anyway. Lexicon and techniques come from the emitted totals, because both of
+ * those files are dynamic imports worth a few hundred KB and importing one to
+ * read `.length` would put it in the eager bundle for the sake of a number in
+ * the masthead. See the emit in tools/build-data.mjs for why any of this is
+ * emitted rather than typed.
+ */
 export const TOTALS = {
 	recipes: recipes.length,
-	chapters: chapters.length
+	chapters: chapters.length,
+	lexicon: totalsJson.lexicon,
+	techniques: totalsJson.techniques
 };
 
 /* ---- lazy islands ---------------------------------------------------- */

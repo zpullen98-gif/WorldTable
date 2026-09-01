@@ -1,5 +1,14 @@
 import { test, expect } from '@playwright/test';
 import { goto } from './helpers';
+import { readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+/* Read rather than import: Playwright's loader wants an import attribute for
+   JSON, and parity.spec.ts already reads its fixtures this way. */
+const TOTALS = JSON.parse(
+	readFileSync(join(dirname(fileURLToPath(import.meta.url)), '../src/lib/data/totals.json'), 'utf8')
+) as { recipes: number; chapters: number; lexicon: number; techniques: number };
 
 /**
  * The offline contract, in a real Chromium — the one check the embedded dev
@@ -60,12 +69,14 @@ test('the whole app works with the network gone', async ({ page, context }) => {
 
 	// The lexicon works offline (its 479 terms are a precached chunk).
 	await goto(page, '/lexicon');
-	await expect(page.locator('.lexcard')).toHaveCount(479);
+	await expect(page.locator('.lexcard')).toHaveCount(TOTALS.lexicon);
 
 	// Search works offline (index is a precached chunk).
 	await goto(page, '/recipes');
 	await page.getByLabel('Search recipes').fill('lemongrass');
-	await expect(page.locator('.card')).toHaveCount(13);
+	// A count here is a corpus size, and it drifts. What must be true offline is
+	// that the INDEX answered at all: a dish findable only by its ingredients.
+	await expect(page.locator('.card h3', { hasText: 'Beef Rendang' })).toBeVisible();
 
 	// State still persists offline — IndexedDB owes nothing to the network.
 	await goto(page, '/recipe/cacio-e-pepe');
