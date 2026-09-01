@@ -975,7 +975,12 @@ if (worst && linkTotal > 0) {
 	const labelSet = new Set(TECH_ALL.map((x) => x.l));
 	const lexSet = new Set(lexicon.map((e) => e.slug));
 	const badKeys = Object.keys(LEXICON_ANCHOR).filter((k) => !labelSet.has(k));
-	const badVals = Object.entries(LEXICON_ANCHOR).filter(([, v]) => !lexSet.has(v));
+	/* An explicit null is a ruling, not a typo: the Lexicon was searched and has
+	   no entry that defines this skill (Flambé, the baker's egg wash). It is
+	   written into the table rather than left as an absent key so the search
+	   isn't repeated, and it renders exactly as an absent key does — no
+	   definition block. Only a NON-null value has to resolve to a real slug. */
+	const badVals = Object.entries(LEXICON_ANCHOR).filter(([, v]) => v !== null && !lexSet.has(v));
 	if (badKeys.length) {
 		problems.push(`LEXICON_ANCHOR keys matching no technique label: ${badKeys.join(', ')}`);
 	}

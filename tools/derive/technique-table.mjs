@@ -278,6 +278,27 @@ export const SUPPLEMENT = [
  * unanchored on purpose: its page shows the recipes and no borrowed prose.
  * Several labels share an anchor, which is correct: Jerk, Asado fire and
  * Low & slow smoking are three fires and one doctrine.
+ *
+ * ## The test an anchor has to pass
+ *
+ * Adjacency is not definition. The rule the table was audited against, and the
+ * one to apply to any new entry:
+ *
+ *   Does the entry describe the OPERATION this label's recipes perform?
+ *
+ * Same operation at a different granularity anchors (the coat before the fry
+ * sits inside Deep & Shallow Frying; Rubbing fat into flour sits inside the pie
+ * doctrine). A different operation does not, however close the words look.
+ * Charring is not the Maillard reaction: one is pyrolysing a skin black over
+ * flame, the other is amino acids meeting sugars, and the Lexicon defines them
+ * in separate entries. Skimming is not rafting a consommé. A tadka is not an
+ * infusion; the infusion entry says in so many words that high heat fries
+ * instead of infusing, which is precisely what a tadka does on purpose.
+ *
+ * An explicit `null` is a ruling too, and is written down rather than left as an
+ * absent key: it says the Lexicon was searched and has no entry for this skill.
+ * The page then shows its recipes and no definition, which is how most of the
+ * table already renders. Honest beats furnished.
  */
 export const LEXICON_ANCHOR = {
 	// ── the classical spine ──────────────────────────────────────────────────
@@ -293,7 +314,14 @@ export const LEXICON_ANCHOR = {
 	'Building an emulsion': 'emulsions',
 	Hollandaise: 'emulsions',
 	'Deglazing & pan sauces': 'deglaze-and-fond',
-	'Caramelizing onions': 'sweat-vs-saute-vs-sear',
+	/* Sweat vs. Sauté vs. Sear defines sweating as onions cooked WITHOUT colour,
+	   "sweet, not roasty", which is the opposite end of the keyboard from a
+	   forty-minute caramelisation. The Allium Spectrum has the clause that
+	   actually says it: "CARAMELIZED (long, patient): sugars developed to
+	   mahogany depth, onion soup's entire thesis." The label still tags nothing
+	   in this corpus, so nothing renders either way; the ruling is recorded so
+	   it is right on the day the keywords catch. */
+	'Caramelizing onions': 'the-allium-spectrum',
 	'The seafood boil': 'poach-simmer-boil',
 	'Poaching eggs': 'poach-simmer-boil',
 
@@ -302,11 +330,23 @@ export const LEXICON_ANCHOR = {
 	Jerk: 'grilling-vs-barbecue-vs-smoking',
 	'Asado fire': 'grilling-vs-barbecue-vs-smoking',
 	'Wok technique': 'wok-hei-and-stir-fry-discipline',
-	Flambé: 'the-kitchen-torch',
+	/* Two fires that are not the same fire. The Kitchen Torch is a handheld
+	   propane head: brûlée's glass lid, torched nigiri, blistering a pepper in
+	   place. A flambé is a pan of spirit lit off its own vapour: bananas Foster,
+	   saganaki, the brandy pan sauce. The torch entry never mentions it and
+	   nothing else in the Lexicon does either, so the page carries its four
+	   recipes and no definition. */
+	Flambé: null,
 	'The brûlée torch': 'the-kitchen-torch',
 
 	// ── stock and broth ──────────────────────────────────────────────────────
-	Dashi: 'stocks-blanc-brun-broth-and-demi',
+	/* Ramen broth is a bone stock and reads the stock entry correctly. Dashi is
+	   not: no bones, no roasting, no gelatin, no hours — kombu drawn below the
+	   boil and katsuobushi steeped off it, done in ten minutes. The one entry in
+	   the guide that names it is the umami entry, and it names it for exactly
+	   the reason dashi exists: "they MULTIPLY when combined: dashi (kombu +
+	   katsuobushi)". Glutamate times inosinate IS the technique. */
+	Dashi: 'umami-and-the-glutamate-pantry',
 	'Ramen broth': 'stocks-blanc-brun-broth-and-demi',
 
 	// ── dough ────────────────────────────────────────────────────────────────
@@ -341,7 +381,13 @@ export const LEXICON_ANCHOR = {
 
 	// ── the rest ─────────────────────────────────────────────────────────────
 	Velveting: 'velveting-and-marinades',
-	'Tadka: blooming spices in fat': 'infusion-steeping-flavor-into-fat-cream-and-syrup',
+	/* The infusion entry rules a tadka OUT in its own text: fat infusions want
+	   "gentle heat (60–90°C), then strain: high heat fries instead of infusing".
+	   Frying is the whole point of a tadka, and nothing is strained — the fat
+	   and the spices both go into the dal. The Spice Atlas wrote the entry this
+	   page wanted: "BLOOMING (spices into hot FAT: the tadka/tarka/chhonk of
+	   India, the berbere fry of Ethiopia, the paprika rule of Hungary)". */
+	'Tadka: blooming spices in fat': 'toasting-blooming-and-the-tadka-doctrine',
 	Falafel: 'deep-and-shallow-frying',
 	Churros: 'deep-and-shallow-frying',
 	Injera: 'fermentation-and-pickling',
@@ -350,7 +396,14 @@ export const LEXICON_ANCHOR = {
 	'Searing: the hard crust': 'searing-and-pan-technique',
 	'Roasting in a hot oven': 'roasting-baking-and-carryover',
 	'Grilling over live coals': 'grilling-vs-barbecue-vs-smoking',
-	'Charring over open flame': 'the-maillard-reaction',
+	/* Maillard is amino acids meeting reducing sugars at ~140°C and it belongs to
+	   Searing, which already has it. Charring is the skin taken past that into
+	   carbon on purpose. The Flavor Atlas separates the two and then lists this
+	   page's own recipes as its examples — "elote's blackened kernels", "the
+	   blistered pepper", "charred onion in pho broth", "burnt eggplant's
+	   smoke-from-within" — which is elote, chiles rellenos, pho bo broth and
+	   mirza ghasemi, four of the thirty-one. */
+	'Charring over open flame': 'smoke-char-and-the-burnt-edge',
 	'The broiler: heat from above': 'salamander-broiler-and-top-down-fire',
 	'Griddle & plancha work': 'comal-plancha-and-griddles',
 	'Dry-pan toasting: spices, seeds and nuts': 'toasting-nuts-seeds-grains-and-coconut',
@@ -363,8 +416,23 @@ export const LEXICON_ANCHOR = {
 	'Salted water & the float test': 'poach-simmer-boil',
 	'Blanching & shocking': 'blanch-and-shock',
 	'Straining & passing through a sieve': 'sieves-chinois-tamis-and-food-mill',
-	'Skimming: foam, fat and a clear broth': 'consomme-and-clarification',
+	/* A raft is not a skimmer. Clarification whisks egg white and ground meat
+	   into cold stock and filters it through the coagulating raft; skimming is a
+	   ladle and a patient cook. Exactly one of the sixty-three recipes here
+	   rafts (chicken-consomme-raft-method) and the other sixty-two are stocks,
+	   braises and one chokecherry jelly. The stock entry states the doctrine the
+	   label names: "Skim relentlessly, never boil (cloudiness is emulsified
+	   scum)" — foam, fat, and a clear broth in one line. */
+	'Skimming: foam, fat and a clear broth': 'stocks-blanc-brun-broth-and-demi',
 	'Keeping the cooking liquid': 'stocks-blanc-brun-broth-and-demi',
+	/* Deliberate, and the same shape as Tempering: one Lexicon entry, two halves,
+	   two labels. "Velveting & Marinades" opens on egg white and cornstarch, and
+	   then spends its second half on this page's exact subject — "MARINADES,
+	   honestly assessed: salt, sugar, and acid work only millimeters deep …
+	   the flavor is real; the 'penetration' is mostly myth". That IS the guide's
+	   marinade doctrine and there is no second copy of it. Reads as a mismatch
+	   because the prose leads with velveting; it is a shared entry, not a wrong
+	   one, and the eyebrow names both crafts. */
 	'Marinating: acid, salt and time': 'velveting-and-marinades',
 	'Salting to draw the water out': 'brining-wet-dry-and-cures',
 	'The overnight rest: letting a dish marry': 'the-second-day-reheating-as-technique',
@@ -376,7 +444,14 @@ export const LEXICON_ANCHOR = {
 	'Creaming butter & sugar': 'creaming-foaming-and-cake-structure',
 	'Folding: keeping the air in': 'creaming-foaming-and-cake-structure',
 	'Rubbing fat into flour': 'blind-baking-and-pie-doctrine',
-	'Egg wash & the baker’s shine': 'baste-arroser-and-glaze',
+	/* Baste, Arroser & Glaze is three ways of painting a ROAST: pan juices over
+	   a bird, foaming butter over a steak, reduced teriyaki lacquered onto
+	   yakitori. None of the thirty-four recipes here is a roast; they are pies,
+	   challah, brioche, pot pies and cinnamon buns brushed with beaten egg
+	   before they bake, browning by protein rather than by lacquered sugar. The
+	   Lexicon says "egg wash" exactly once, as a waterproofing footnote inside
+	   the pie doctrine, which is a different job again. No entry defines it. */
+	'Egg wash & the baker’s shine': null,
 	'The wobble & the skewer: testing a bake': 'doneness-by-touch-sight-and-sound'
 };
 
