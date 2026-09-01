@@ -62,9 +62,22 @@ keyword tables.
   "Bún Thịt Nướng" (Lunch Atlas) are different recipes that fold to the same
   slug. *Both* get qualified, never just the second one, so slugs depend on the
   set of recipes and not on their array order.
+- **NFD does not fold every letter, so `slugify` transliterates first.** NFD only
+  splits a base letter from its combining marks; a letter that is its own
+  codepoint (ø æ å ı ł ð ß þ đ œ) survives the strip and then meets
+  `[^a-z0-9]`. That punched holes in 22 slugs: `sm-rrebr-d`, `mant`, `c-lb-r`,
+  `bleskiver`. `TRANSLITERATIONS` in tools/slugify.mjs runs ahead of the NFD
+  step and is the complete statement of the rule, including the letters that
+  already decomposed. The search tokenizer shares the NFD pass only: it indexes
+  "mantı", not "manti", because a token is not a URL.
 - **Everything user-facing is keyed by slug, never array index.** The original
   keyed the menu and notes by index, so adding one family recipe repointed every
   saved reference.
+- **A slug change is a data migration.** Routes move, and every slug-keyed table
+  has to move with them: `notes.json`, `overrides.json`, and the mark-id ledger
+  at tools/derive/mark-ids.ledger.json, whose ids are `{standardSlug}#{word}`
+  and which fails the build on an orphan. build-data gates notes and mark ids;
+  nothing gates a stale bookmark, so the diff is the record.
 - **`vegetarian` is authored, `vegetarianStrict` is derived.** The corpus is
   inconsistent about "pork (or shiitake for veg)" constructions. The build gates
   only fail on unambiguous errors; see the long note in `tools/derive/diet.mjs`.
