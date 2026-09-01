@@ -186,3 +186,63 @@ test('the slash key focuses the search box', async ({ page }) => {
 	await page.locator('body').press('/');
 	await expect(page.getByLabel('Search recipes')).toBeFocused();
 });
+
+/**
+ * The rail counts what the grid delivers.
+ *
+ * CuisineRail read `counts?.get(slug) ?? fallback`, and the coalesce could not
+ * tell "nobody counted" from "counted, and the answer is nothing": railCounts
+ * only carries a key for a chapter with at least one match, so a chapter the
+ * filter emptied fell through to its UNFILTERED total from chapters.json.
+ * Unfiltered every chapter has a key and the fallback never fires, which is why
+ * it stayed invisible. Under q="pad thai" it was 159 of 171 rows advertising
+ * 1696 dishes that were not there, and clicking one landed on "Nothing on the
+ * pass".
+ *
+ * The invariant is the sum: what the rail claims across all its rows has to be
+ * exactly what the grid is showing.
+ */
+test('the chapter rail sums to the grid, filtered and unfiltered', async ({ page }) => {
+	test.setTimeout(120_000);
+	await goto(page, '/recipes');
+
+	/* All groups but one are collapsed by default, so open them to see the rows.
+	   Clicking the first collapsed one repeatedly rather than iterating .all():
+	   each expansion re-renders the rail, so a snapshot of handles goes stale
+	   and nth(3) waits forever for a group that is already open. Bounded so a
+	   header that stops toggling fails the assertion instead of the timeout. */
+	const openAll = async () => {
+		const collapsed = page.locator('.rghead[aria-expanded="false"]');
+		for (let i = 0; i < 40 && (await collapsed.count()); i++) await collapsed.first().click();
+		expect(await collapsed.count()).toBe(0);
+	};
+	const railSum = async () => {
+		const ns = await page.locator('.rail .sub a .ct').allTextContents();
+		return ns.reduce((s, t) => s + Number(t), 0);
+	};
+
+	await openAll();
+	await expect(page.locator('.rail .sub a')).toHaveCount(TOTALS.chapters);
+	expect(await railSum()).toBe(TOTALS.recipes);
+	await expect(page.locator('.rail .sub a.empty')).toHaveCount(0);
+
+	// Narrow it hard. Every row must still add up to the grid.
+	await page.getByLabel('Search recipes').fill('pad thai');
+	await expect(page.locator('.card')).not.toHaveCount(TOTALS.recipes);
+	await openAll();
+	const cards = await page.locator('.card').count();
+	expect(cards).toBeGreaterThan(0);
+	expect(await railSum()).toBe(cards);
+
+	// The emptied chapters say 0 and are marked, rather than advertising their
+	// unfiltered totals.
+	const empties = await page.locator('.rail .sub a.empty').count();
+	expect(empties).toBeGreaterThan(100);
+	for (const t of await page.locator('.rail .sub a.empty .ct').allTextContents()) expect(t).toBe('0');
+
+	// A query matching nothing must not offer the whole corpus.
+	await page.getByLabel('Search recipes').fill('zzzqqqxxx');
+	await expect(page.locator('.card')).toHaveCount(0);
+	await openAll();
+	expect(await railSum()).toBe(0);
+});

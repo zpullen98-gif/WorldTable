@@ -101,7 +101,27 @@
 		open = next;
 	}
 
-	const shown = (slug: string, fallback: number) => counts?.get(slug) ?? fallback;
+	/**
+	 * What a row says it holds.
+	 *
+	 * This was `counts?.get(slug) ?? fallback`, and the coalesce could not tell
+	 * "nobody counted" from "counted, and the answer is nothing": railCounts
+	 * only ever has a key for a chapter with at least one match, so a chapter
+	 * filtered to zero fell through to chapters.json's UNFILTERED total. With no
+	 * filter every chapter has a key and the fallback never fires, which is why
+	 * this stayed invisible. Measured: unfiltered, 0 of 171 rows wrong; q="pad
+	 * thai", 159 of 171 rows advertising 1696 dishes that are not there; a query
+	 * matching nothing, all 171 offering the whole corpus. Median across
+	 * thirteen real queries, 161 of 171.
+	 *
+	 * `counts` stays nullable because the rail can be rendered with no filtered
+	 * view to count; when it IS given, an absent key is a real zero and says so.
+	 * The row stays a link on purpose: a cook who has narrowed too far may well
+	 * want to jump to a chapter and start again, and a row reading 0 has already
+	 * said what is there.
+	 */
+	const shown = (slug: string, fallback: number) =>
+		counts ? (counts.get(slug) ?? 0) : fallback;
 </script>
 
 <nav class="rail" aria-label="Chapters">
@@ -129,14 +149,20 @@
 								<li class="cntry" aria-hidden="true">{ctry.country}</li>
 							{/if}
 							{#each ctry.chapters as c (c.slug)}
+								{@const n = shown(c.slug, c.count)}
 								<li>
 									<a
 										href="{base}/chapter/{c.slug}"
 										class:on={active === c.slug}
 										class:nested={ctry.country !== null}
+										class:empty={n === 0}
 									>
 										<span class="nm">{c.name}</span>
-										<span class="ct">{shown(c.slug, c.count)}</span>
+										<!-- The count is the row's whole claim, so it carries the
+										     screen-reader wording rather than sitting as a bare
+										     numeral next to a chapter name. -->
+										<span class="ct">{n}</span>
+										<span class="sr">{n === 1 ? 'dish' : 'dishes'}</span>
 									</a>
 								</li>
 							{/each}
@@ -228,6 +254,27 @@
 		color: var(--muted);
 		font-variant-numeric: oldstyle-nums;
 		flex: none;
+	}
+
+	/* Same shape as the helper in menu/costing and menu/waste. */
+	.sr {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+	}
+
+	/* A chapter the current filter empties. It stays a link, because jumping to
+	   a chapter is a reasonable way to start again, but it should not look like
+	   somewhere with food in it. Opacity only: the count beside it already says
+	   0, so this is reinforcement and never the sole carrier of the fact. */
+	.rail a.empty {
+		opacity: 0.42;
+	}
+	.rail a.empty:hover,
+	.rail a.empty:focus-visible {
+		opacity: 1;
 	}
 
 	.all {
