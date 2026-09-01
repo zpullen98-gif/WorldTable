@@ -135,7 +135,11 @@ function gateSupplement() {
 	console.log(`  supplement: ${RECIPE_SUPPLEMENT.length} authored recipes, contract holds`);
 	return true;
 }
-if (!gateSupplement()) process.exitCode = 1;
+/* Held, not exited on, so that gateGeography below still gets to speak: a
+   run that fixes one gate only to discover the other on the next run wastes
+   the report both of them just produced. The pair is enforced together at
+   the emit boundary, before anything is written. */
+const supplementHeld = gateSupplement();
 
 /**
  * Every chapter has a place on the map, and every place has a chapter.
@@ -418,7 +422,7 @@ const chapters = [...chapterCounts.entries()]
 	})
 	.sort((a, b) => a.name.localeCompare(b.name));
 
-if (!gateGeography(chapters.map((c) => c.name))) process.exitCode = 1;
+const geographyHeld = gateGeography(chapters.map((c) => c.name));
 
 const lexicon = D.map((e, i) => ({
 	slug: lexSlugs[i],
@@ -593,6 +597,27 @@ const techniqueStandards = TECHNIQUE_STANDARDS.map((x) => ({
 	marks: x.marks,
 	fault: x.fault
 })).sort((a, b) => b.recipeCount - a.recipeCount);
+
+/*
+ * The two gates above are enforced HERE, on the same reasoning the mark-id
+ * ledger block is ordered by: a gate that fails after the write has not
+ * gated anything.
+ *
+ * Both of them used to do `process.exitCode = 1`, which sets the code the
+ * process will exit WITH and does not stop it. So the run continued, derived
+ * the corpus, and wrote all 25 files; the build announced a supplement recipe
+ * that broke the nine-key contract and then shipped it anyway, while the
+ * comment on gateSupplement claimed a failing recipe never reaches the data.
+ * It reached the data every time. Only the exit code said otherwise, and only
+ * to a caller that bothered to read it.
+ *
+ * Exiting at the emit boundary rather than at each gate is what lets both
+ * still report in one run.
+ */
+if (!supplementHeld || !geographyHeld) {
+	console.error('\n  BUILD GATE FAILED: nothing was written\n');
+	process.exit(1);
+}
 
 // ── emit ─────────────────────────────────────────────────────────────────────
 mkdirSync(OUT, { recursive: true });
