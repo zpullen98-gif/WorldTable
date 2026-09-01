@@ -8,11 +8,36 @@
  * without a TS loader.
  */
 
-/** NFD-fold: strip combining marks so "ragu" matches "Ragù". Same folding as
- *  the slug generator and the filter fallback, one rule everywhere.
- *  @param {string} s */
+import { transliterate } from '../../tools/slugify.mjs';
+
+/**
+ * Fold a term to what a plain keyboard can type: substitute the letters NFD
+ * cannot take apart, then strip the combining marks it can.
+ *
+ * The second pass alone is what "ragu" matches "Ragù" needs, and for a long
+ * time it was all this did. It is not enough. NFD leaves ı, æ, ø, ł and their
+ * relatives standing, so the index held "cılbır" and "flæsk" and a cook typing
+ * "Cilbir" or "Flaesk" got an EMPTY GRID: two dotless i's is a distance of two,
+ * the fuzzy budget is round(0.2 × 6) = 1, and combineWith AND means one term
+ * that finds no match empties the whole result. Seven dishes could not be found
+ * by their own names typed the only way most keyboards can type them:
+ * İmam Bayıldı, Kıymalı Pide, Çılbır, Fıstıklı Baklava, Kayseri Mantısı,
+ * Stegt Flæsk med Persillesovs and Flæskesteg med Sprød Svær.
+ *
+ * Smørrebrød survived only by being long: ten characters buys a budget of two,
+ * which is exactly what its two ø's cost. That was luck, not a rule.
+ *
+ * Both passes now, from the same table the slug generator uses. Typing the
+ * accented form still works, because it folds to the same string.
+ *
+ * CHANGING THIS INVALIDATES search-index.json. MiniSearch.loadJS must be given
+ * the exact options the index was serialized with, so `npm run build:data` has
+ * to run after any edit here or every lookup silently corrupts.
+ *
+ * @param {string} s
+ */
 export const fold = (s) =>
-	s
+	transliterate(s)
 		.normalize('NFD')
 		.replace(/[̀-ͯ]/g, '')
 		.toLowerCase();

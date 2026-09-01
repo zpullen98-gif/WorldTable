@@ -74,6 +74,23 @@ const TRANSLITERATIONS = {
    Every key is a plain letter; none of them mean anything inside a class. */
 const NON_DECOMPOSING = new RegExp(`[${Object.keys(TRANSLITERATIONS).join('')}]`, 'g');
 
+/**
+ * The first pass on its own, for callers that fold but do not slugify.
+ *
+ * The search tokenizer needs exactly this and nothing after it. It has no
+ * `[^a-z0-9]` to survive, so it keeps its apostrophes and spaces, but it has
+ * the same trouble with the letters NFD will not take apart, and it was losing
+ * seven dishes to them: a cook typing "Cilbir" got an empty grid because the
+ * index held "cılbır" and two dotless i's is two edits against a fuzzy budget
+ * of one. Sharing the table rather than the whole function is what fixes that
+ * without flattening a search token into a URL.
+ *
+ * @param {string} input
+ */
+export function transliterate(input) {
+	return String(input).replace(NON_DECOMPOSING, (c) => TRANSLITERATIONS[c]);
+}
+
 /** @param {string} input */
 export function slugify(input) {
 	return String(input)

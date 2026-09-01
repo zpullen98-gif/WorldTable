@@ -13,13 +13,19 @@
 import type { FilterState, RecipeSummary } from './types';
 import { QUICK_MINUTES, ADVANCE_MIN } from './types';
 
-/** NFD-fold so an unaccented query matches an accented dish. */
-export function fold(s: string): string {
-	return s
-		.normalize('NFD')
-		.replace(/[̀-ͯ]/g, '')
-		.toLowerCase();
-}
+/**
+ * Re-exported, not reimplemented.
+ *
+ * This was a second copy of the same four lines, and the copies had to agree:
+ * this one folds the query for the substring scan the grid uses until the
+ * search index loads, and search-config's folds the terms that went INTO that
+ * index. A cook typing "Cilbir" hits this one first and the index a moment
+ * later, so a rule that lived in only one of them would change the results
+ * under them mid-keystroke. The Lexicon and Pantry pages import it from here
+ * too, and they were quietly on the older rule.
+ */
+import { fold } from './search-config.mjs';
+export { fold };
 
 /** Haystack for the cheap substring pass. Built once per recipe, memoised. */
 const haystacks = new WeakMap<RecipeSummary, string>();
