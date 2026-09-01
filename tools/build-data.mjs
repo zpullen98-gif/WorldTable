@@ -724,7 +724,14 @@ mini.addAll(
 {
 	const json = JSON.stringify(mini);
 	writeFileSync(join(OUT, 'search-index.json'), json + '\n', 'utf8');
-	console.log(`  ${'search-index.json'.padEnd(24)} ${'970'.padStart(5)}  ${(json.length / 1024).toFixed(0).padStart(6)} KB`);
+	/* Counted, not typed. This said 970 long after the corpus reached 1710, so
+	   the build report claimed for weeks that two in five recipes were missing
+	   from search. They were not: the index had them all. A wrong number in a
+	   report is worse than no number, because it sends somebody hunting a bug
+	   that does not exist, or hides one that does. Reports what the INDEX holds
+	   rather than what the corpus holds, so that if the two ever do drift apart
+	   the report shows it instead of hiding it behind a matching number. */
+	console.log(`  ${'search-index.json'.padEnd(24)} ${String(mini.documentCount).padStart(5)}  ${(json.length / 1024).toFixed(0).padStart(6)} KB`);
 }
 
 // ── gates ────────────────────────────────────────────────────────────────────
