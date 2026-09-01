@@ -605,14 +605,30 @@
 							aria-expanded={openId === d.id}
 						>
 							<span class="nm">{d.name}</span>
+							<!--
+								`e.complete` is false when a line cannot be costed (a yield of
+								zero, a missing number), and costing.ts then returns a total
+								with those lines LEFT OUT, so the plate cost is a floor and the
+								percentage with it. The warning that says so lived inside the
+								expanded branch below, so a COLLAPSED row published "8.1%" in a
+								green "under" band for a dish whose real food cost was at least
+								15%: the colour asserted a verdict on a number the code already
+								knew was partial, and this is the figure a kitchen prices a menu
+								on. No verdict colour on a partial total, and both figures say
+								they are floors without needing to be opened.
+							-->
 							<span class="figures">
 								{#if e.foodCostPct !== null}
-									<span class="pct" data-verdict={verdict}>{e.foodCostPct.toFixed(1)}%</span>
+									<span class="pct" data-verdict={e.complete ? verdict : 'unknown'}
+										>{e.foodCostPct.toFixed(1)}%{e.complete ? '' : ' at least'}</span
+									>
 								{:else}
 									<span class="pct" data-verdict="unknown">no price</span>
 								{/if}
-								<span class="cost">{sym}{money(e.plateCost)} cost</span>
-								{#if e.contribution !== null}
+								<span class="cost"
+									>{sym}{money(e.plateCost)} cost{e.complete ? '' : ' at least'}</span
+								>
+								{#if e.contribution !== null && e.complete}
 									<span class="cost">{sym}{money(e.contribution)} left</span>
 								{/if}
 							</span>

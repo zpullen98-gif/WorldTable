@@ -105,3 +105,49 @@ test('importing a file the venue already has reports nothing new, and changes no
 	await goto(page, '/menu/costing');
 	await expect(page.getByText('9.10 cost', { exact: false })).toBeVisible();
 });
+
+/**
+ * A partial plate cost must not wear a verdict.
+ *
+ * costing.ts returns a total with uncostable lines LEFT OUT and flags it
+ * `complete: false`. Only the expanded body read that flag, so a COLLAPSED row
+ * published "8.1%" inside a green "under" band for a dish whose real food cost
+ * was at least 15% - a colour asserting a business judgement on a number the
+ * code already knew was a floor, and the number a kitchen prices a menu on.
+ */
+test('a plate that cannot be fully costed says so before it is opened', async ({ page }) => {
+	const now = Date.now();
+	await seedHouse(page, {
+		dishes: [
+			{ id: 'dx', name: 'Ratatouille', section: 'Mains', description: '', ingredients: [], allergens: [], price: '7.00', ts: now }
+		],
+		preps: [],
+		dishCosts: {
+			dx: {
+				lines: [
+					{ id: 'a', item: 'Aubergine', unitCost: 2.0, unit: 'kg', usedQty: 0.285, yieldPct: 100 },
+					// yieldPct 0 -> this line cannot be costed and is dropped from the total.
+					{ id: 'b', item: 'Courgette', unitCost: 2.4, unit: 'kg', usedQty: 0.2, yieldPct: 0 }
+				],
+				sales: [],
+				ts: now
+			}
+		}
+	});
+	await goto(page, '/menu/costing');
+
+	const head = page.locator('button.dishhead', { hasText: 'Ratatouille' });
+	await expect(head).toHaveAttribute('aria-expanded', 'false');
+
+	// Collapsed, before any click: both figures admit they are floors, and the
+	// percentage carries no verdict colour.
+	await expect(head.locator('.pct')).toHaveAttribute('data-verdict', 'unknown');
+	await expect(head.locator('.pct')).toContainText('at least');
+	await expect(head.locator('.cost').first()).toContainText('at least');
+	// "left" is contribution, which is meaningless on a partial cost.
+	await expect(head.locator('.cost', { hasText: 'left' })).toHaveCount(0);
+
+	// The existing explanation is still there once opened.
+	await head.click();
+	await expect(page.locator('.incomplete')).toContainText('cannot be costed');
+});

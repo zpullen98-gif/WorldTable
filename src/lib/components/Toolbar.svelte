@@ -70,7 +70,12 @@
 
 		<button class="chip lucky" onclick={onlucky}>Chef’s pick ↗</button>
 
-		<span class="count" aria-live="polite">{resultCount} dishes</span>
+		<!-- Singular when there is one. This is an aria-live region, so the count
+		     is also read aloud on every keystroke that changes it, and "1 dishes"
+		     is worse heard than seen. -->
+		<span class="count" aria-live="polite"
+			>{resultCount} {resultCount === 1 ? 'dish' : 'dishes'}</span
+		>
 	</div>
 </div>
 
