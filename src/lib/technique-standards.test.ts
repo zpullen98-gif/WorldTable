@@ -221,7 +221,7 @@ describe('what this bought, measured against the shipped data', () => {
 		expect(detail.length).toBe(1844);
 	});
 
-	it('does it with 59 pieces of writing', () => {
+	it('does it with 60 pieces of writing', () => {
 		expect(shipped.length).toBe(60);
 	});
 
