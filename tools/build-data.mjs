@@ -328,10 +328,18 @@ const crosslinks = buildCrosslinks(R, recipeSlugs, D, lexSlugs, linkBlobs);
  * prose would make the technique pages follow backfill order the way the
  * cross-links once followed it into Italian.
  *
- * deriveFilms deliberately keeps the full blob and the ORIGINAL table below:
- * film links are a curated set of twelve canon URLs plus searches, they are not
- * a claim about what the recipe demonstrates, and re-cutting them here would
- * churn 970 recipes' link lists for no gain.
+ * deriveFilms keeps the full blob and the ORIGINAL table below, and still
+ * should: the note is where a dish explains its own mechanism, so for many
+ * recipes it is the only place the technique is named at all. Cacio e Pepe
+ * never types "emulsion" in its method. Cutting films down to the tags would
+ * delete 242 links, and most of them are apt.
+ *
+ * This comment used to say film links "are not a claim about what the recipe
+ * demonstrates". They are: the line under each one reads "The skill inside this
+ * recipe", and on a canon URL it reads "verified". So the note stays evidence
+ * and is read properly instead, by the three guards in films.mjs against prose
+ * that denies, inflects or collides. deriveFilms is handed the note-free text
+ * alongside the blob so it can tell a method statement from a margin one.
  */
 const TECH_ALL = attachFilms(fullTechTable(TECH), slugify);
 
@@ -405,7 +413,12 @@ R.forEach((r, i) => {
 		techniques,
 		flavor,
 		pairingId: internPairing(ov.pairing ?? derivePairing(r, blobs[i], CELLAR, BOTTLE_NOTES, flavor.tags)),
-		films: deriveFilms(r, blobs[i], { F, TEACHERS, DISH_FILMS, TECH }, isAmerican),
+		films: deriveFilms(
+			r,
+			{ blob: blobs[i], linkBlob: linkBlobs[i], note: effNotes[i] },
+			{ F, TEACHERS, DISH_FILMS, TECH },
+			isAmerican
+		),
 		lexiconTerms: crosslinks.recipeToTerms.get(slug) ?? [],
 		pantryItems: pantryMap.get(i) ?? [],
 		// Absent rather than empty for the 925 dishes with no standard yet:
