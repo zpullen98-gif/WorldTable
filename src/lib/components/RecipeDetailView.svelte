@@ -156,6 +156,11 @@
 			<li>{'$'.repeat(r.costTier)}</li>
 			{#if r.diet.vegetarian}<li class="veg">Vegetarian</li>{/if}
 			{#if r.diet.vegan}<li class="veg">Vegan</li>{/if}
+			<!-- Weaker than the badge on purpose: the dish is NOT vegan as
+			     written, it is a dish whose own ingredient line names the way
+			     ("niter kibbeh or oil"). Disjoint from .vegan in the data, so
+			     these two can never appear together. -->
+			{#if r.diet.veganOption}<li class="veg-option">Vegan option</li>{/if}
 		</ul>
 
 		<p class="palate">
@@ -461,6 +466,14 @@
 	.stats li.veg {
 		color: var(--leaf);
 		border-color: var(--leaf);
+	}
+	/* A stated route, not a claim about the dish. It keeps the leaf so it reads
+	   as one of the diet chips, and gives up the solid border and the coloured
+	   text so it can never be mistaken for the badge above it. */
+	.stats li.veg-option {
+		color: var(--muted);
+		border-color: var(--leaf);
+		border-style: dashed;
 	}
 
 	.palate {

@@ -141,3 +141,53 @@ describe('vegan is an assertion, not an omission', () => {
 		expect(recipes.filter((r) => r.diet.vegan).length).toBeGreaterThan(50);
 	});
 });
+
+/**
+ * The corpus side of `veganOption`. The unit cases live in diet.test.ts; these
+ * assert what the built data actually carries, which is the thing the page
+ * paints.
+ */
+describe('vegan option is the weaker claim, and stays weaker', () => {
+	it('carries the six recipes the vegan gate took the badge from', () => {
+		// Four are Ethiopian fasting cooking, which states the route in words.
+		for (const slug of [
+			'misir-wat',
+			'gomen-wat',
+			'kik-alicha',
+			'atkilt-wat',
+			'orange-and-cinnamon-salad',
+			'bagels'
+		]) {
+			const d = bySlug.get(slug)?.diet;
+			expect(d, slug).toBeTruthy();
+			expect(d?.vegan, `${slug} is not vegan as written`).toBe(false);
+			expect(d?.veganOption, `${slug} states a vegan route`).toBe(true);
+		}
+	});
+
+	it('never fires alongside vegan or vegetarianOption', () => {
+		expect(recipes.filter((r) => r.diet.veganOption && r.diet.vegan).map((r) => r.slug)).toEqual([]);
+		expect(
+			recipes.filter((r) => r.diet.veganOption && r.diet.vegetarianOption).map((r) => r.slug)
+		).toEqual([]);
+	});
+
+	it('always has something to be an option around', () => {
+		// Otherwise it is plain `vegan` and should have said so.
+		const empty = recipes
+			.filter(
+				(r) =>
+					r.diet.veganOption &&
+					!r.diet.containsDairy &&
+					!r.diet.containsEgg &&
+					!r.diet.containsHoney
+			)
+			.map((r) => r.slug);
+		expect(empty).toEqual([]);
+	});
+
+	it('did not move the vegan population it was carved out beside', () => {
+		expect(recipes.filter((r) => r.diet.vegan).length).toBeGreaterThan(50);
+		expect(recipes.filter((r) => r.diet.veganOption).length).toBeGreaterThan(5);
+	});
+});

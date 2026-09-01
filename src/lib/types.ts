@@ -92,6 +92,13 @@ export interface DietFlags {
 	/** Animal products appear, but only in optional or "or" positions. */
 	vegetarianOption: boolean;
 	vegan: boolean;
+	/**
+	 * The same reading as `vegetarianOption`, one product group further in:
+	 * vegan by the binding reading, but dairy, egg or honey is named somewhere
+	 * and the recipe states the route around it ("niter kibbeh or oil"). Never
+	 * true alongside `vegan` or `vegetarianOption`; see tools/derive/diet.mjs.
+	 */
+	veganOption: boolean;
 	containsMeat: boolean;
 	containsPork: boolean;
 	containsFish: boolean;

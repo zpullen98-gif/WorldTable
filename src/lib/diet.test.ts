@@ -151,3 +151,125 @@ describe('a denial is not a declaration', () => {
 		).toBe(true);
 	});
 });
+
+/**
+ * `veganOption`: vegan by the binding reading, but dairy, egg or honey is named
+ * somewhere and the recipe states the route around it.
+ *
+ * It exists because making `vegan` refuse on dairy, egg and honey from every
+ * line was right and still cost six recipes their badge with nothing left in
+ * its place. Four of the six are Ethiopian fasting cooking saying, in words, how
+ * to cook the dish vegan.
+ */
+describe('vegan option: the route the recipe names itself', () => {
+	it('reads the four Ethiopian fasting lines the badge used to cover', () => {
+		const misir = deriveDiet(
+			recipe('Misir Wat', [
+				'300g red lentils, rinsed',
+				'3 tbsp niter kibbeh or oil (oil keeps it vegan, Ethiopia fasts expertly)'
+			])
+		);
+		expect(misir.containsDairy, 'niter kibbeh is clarified butter').toBe(true);
+		expect(misir.vegan, 'not vegan as written').toBe(false);
+		expect(misir.veganOption).toBe(true);
+
+		// The bare "or", with no parenthetical to help it.
+		expect(deriveDiet(recipe('Gomen Wat', ['3 tbsp niter kibbeh or oil'])).veganOption).toBe(true);
+		expect(
+			deriveDiet(recipe('Kik Alicha', ['80 g niter kibbeh, or 80 ml sunflower oil on fasting days']))
+				.veganOption
+		).toBe(true);
+	});
+
+	it('reads the two sweetener lines', () => {
+		// Neither has any alternative VEG_ALTERNATIVE recognises: `sugar` and
+		// `syrup` are in VEGAN_ALTERNATIVE and deliberately nowhere else.
+		expect(
+			deriveDiet(recipe('Orange & Cinnamon Salad', ['4 oranges', 'Powdered sugar or honey']))
+				.veganOption
+		).toBe(true);
+		expect(
+			deriveDiet(
+				recipe('Bagels', ['1 tbsp barley malt syrup (or honey) in the dough + 2 tbsp in the pot'])
+			).veganOption
+		).toBe(true);
+	});
+
+	it('refuses a dairy line that licenses its own escape', () => {
+		// VEG_ALTERNATIVE names butter, cream, cheese and egg, which are exactly
+		// what a vegan is avoiding. Sharing it would let "kefir or sour milk,
+		// 1 egg" escape on the word `egg`: the panna cotta bug, one level down.
+		const v = deriveDiet(
+			recipe('Varenyky z Vyshneyu', [
+				'Dough: 400g flour, 200ml kefir or sour milk, 1 egg, ½ tsp soda, pinch salt',
+				'Smetana or thick sour cream, a bowl of it'
+			])
+		);
+		expect(v.containsDairy).toBe(true);
+		expect(v.veganOption).toBe(false);
+
+		expect(
+			deriveDiet(recipe('Cherry Salad', ['100g blue cheese or goat cheese, crumbled'])).veganOption
+		).toBe(false);
+		expect(
+			deriveDiet(recipe('Snickers Salad', ['250ml whipped cream or whipped topping'])).veganOption
+		).toBe(false);
+	});
+
+	it('refuses a line that merely mentions service, however it is spelled', () => {
+		// The paella failure in a second costume: all three of these are bound
+		// butter or ghee, and the optional/accompaniment heuristics discard the
+		// whole line. The vegan reading does not run them.
+		expect(
+			deriveDiet(recipe('Roosterkoek', ['30 g butter, softened, plus more to serve'])).veganOption
+		).toBe(false);
+		expect(
+			deriveDiet(recipe('Paratha', ['Ghee: for the dough, the layers, the pan, and philosophically']))
+				.veganOption
+		).toBe(false);
+		expect(
+			deriveDiet(recipe('Mercimek', ['Finish: butter bloomed with pul biber, dried mint, lemon']))
+				.veganOption
+		).toBe(false);
+	});
+
+	it('wants the word "vegan" in a parenthetical, not merely "veg"', () => {
+		// A parenthetical promising a vegetarian route says nothing about the
+		// dairy on its own line. No "or" in either, so the parenthetical branch
+		// is the only one that can fire.
+		expect(
+			deriveDiet(recipe('Gratin', ['200ml cream (kombu stock, kept vegetarian)'])).veganOption
+		).toBe(false);
+		expect(
+			deriveDiet(recipe('Gratin', ['200ml cream (oat cream keeps it vegan)'])).veganOption
+		).toBe(true);
+	});
+
+	it('never fires alongside vegan or vegetarianOption', () => {
+		// Nothing named anywhere: the stronger claim, and it owns the page.
+		const dal = deriveDiet(recipe('Dal', ['200g red lentils', '1 tbsp coconut oil', 'Turmeric']));
+		expect(dal.vegan).toBe(true);
+		expect(dal.veganOption).toBe(false);
+
+		// Meat escaped: its vegan-ness is two stated routes deep, and
+		// `vegetarianOption` is the field that already says so.
+		const mapo = deriveDiet(
+			recipe('Mapo Tofu', ['400g silken tofu', '150g ground pork (or shiitake for veg)', 'Ghee or oil'])
+		);
+		expect(mapo.vegetarianOption).toBe(true);
+		expect(mapo.veganOption).toBe(false);
+	});
+
+	it('does not let the sweeteners excuse meat', () => {
+		// Tapsilog is why `sugar` is not in the shared VEG_ALTERNATIVE: its own
+		// line offers "calamansi or lemon, garlic, sugar" beside 400g of beef.
+		const t = deriveDiet(
+			recipe('Tapsilog', [
+				'400g beef sirloin, sliced thin; marinade: soy, calamansi or lemon, garlic, sugar, pepper'
+			])
+		);
+		expect(t.containsMeat, 'the beef is still binding').toBe(true);
+		expect(t.vegetarianStrict).toBe(false);
+		expect(t.veganOption).toBe(false);
+	});
+});
