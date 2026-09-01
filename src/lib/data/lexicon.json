@@ -83,7 +83,7 @@
     "recipes": [
       "carne-asada",
       "vaca-frita",
-      "beef-and-broccoli"
+      "pabellon-criollo"
     ]
   },
   {
@@ -365,8 +365,8 @@
     "definition": "Two-shelled filter feeders, the merroir animals: they taste of their water. Oysters and clams are sold live and must be tightly closed (or close when tapped); mussels ditto, beards pulled at the last minute; scallops are shucked at sea and sold as the adductor muscle alone. Discard pre-cooking gapers that won't close and post-cooking clams/mussels that won't open. The liquor inside every one of them is seasoning: never rinse it away.",
     "recipes": [
       "cioppino",
-      "new-england-clam-chowder",
-      "seafood-chowder"
+      "pulmay-curanto-en-olla",
+      "new-england-clam-chowder"
     ]
   },
   {
@@ -463,8 +463,8 @@
     "definition": "Two different products sharing a word. HOT-SMOKED (kippers, smoked mackerel, hot-smoked salmon): cooked through at 60–80°C: flaky, opaque, ready to eat warm or cold. COLD-SMOKED (lox-style salmon, finnan haddie): smoke applied under ~30°C after curing; the flesh stays silky and translucent-raw. Cold smoking without proper curing is a food-safety tightrope; hot smoking is a weekend skill. Both begin with a cure, because salt came before smoke.",
     "recipes": [
       "cold-smoked-salmon",
-      "fish-and-chips",
-      "seafood-chowder"
+      "svickova-na-smetane",
+      "lutefisk"
     ]
   },
   {
@@ -666,7 +666,7 @@
     "recipes": [
       "oeufs-en-meurette",
       "poires-a-la-beaujolaise",
-      "tteokbokki"
+      "kulajda"
     ]
   },
   {
@@ -982,8 +982,8 @@
     "definition": "Sugar syrup's temperature IS its destiny: thread 110°C (syrups), soft ball 113–116 (fudge, pralines, Italian meringue), firm/hard ball 120–130 (caramels, nougat), soft/hard crack 132–154 (toffee, brittle, spun sugar), then true CARAMEL 160–180°C: sugar itself breaking into hundreds of bitter-sweet compounds, from blond to mahogany to one shade before ruin. Wet caramel (sugar + water) is safer; dry caramel is faster and riskier. Crystallization is the saboteur: don't stir once boiling, brush down stray crystals, or insure with corn syrup/glucose. Add cream and butter and it's sauce; add nothing and stop it dark and it's the top of a crème brûlée's ancestry.",
     "recipes": [
       "tejate",
-      "oyakodon",
-      "tres-leches"
+      "trdelnik",
+      "oyakodon"
     ]
   },
   {
@@ -1014,9 +1014,9 @@
     "category": "Baking & Pastry Science",
     "definition": "PROOFING is the final rise before baking; the poke test judges it (indent springs back slowly = ready; instantly = underproofed; never = over). OVEN SPRING is the first minutes' dramatic expansion as gasses balloon before the crust sets: steam in the oven delays crust-set and maximizes it, which is why lidded Dutch ovens and steam-injected decks exist, and why SCORING (lame slashes) directs the explosion artfully instead of randomly. THE CRUMB, the interior's hole structure, is the loaf's autopsy: tight crumb from low hydration or underproofing; open irregular crumb from wet dough, gentle handling, and full fermentation. Bakers read crumb the way sommeliers read legs.",
     "recipes": [
-      "smulpaj-med-kardemumma",
-      "country-sourdough-loaf",
-      "nanaimo-bars"
+      "moravske-kolace",
+      "arepa-reina-pepiada",
+      "smulpaj-med-kardemumma"
     ]
   },
   {
@@ -1452,7 +1452,9 @@
     "term": "Brunost (Gjetost)",
     "category": "Cheese Atlas",
     "definition": "Norway's brown 'cheese' that is technically caramel: whey boiled down for hours until its milk sugars Maillard into a fudge-dense, tan block tasting of goat's-milk dulce de leche: sweet, tangy, faintly savory, entirely unlike anything else on a board. Shaved thin with the cheese plane (a Norwegian invention that exists substantially for this cheese) onto waffles, brown bread, or crispbread at breakfast. Serve it to guests unannounced and collect the reactions; stock it and your cheese program owns a story no competitor within miles is telling.",
-    "recipes": []
+    "recipes": [
+      "brunost"
+    ]
   },
   {
     "slug": "sulguni",
@@ -1576,7 +1578,7 @@
     "recipes": [
       "kasespatzle",
       "ploughmans-lunch",
-      "cacio-e-pepe"
+      "bryndzove-halusky"
     ]
   },
   {
@@ -2017,9 +2019,9 @@
     "category": "Wine & Beverage",
     "definition": "DRY means the yeast ate the sugar: nothing to do with tannin's drying grip, and the two are confused daily at every table in the world. Residual sugar (RS) runs from bone-dry through off-dry (a few grams: much German Riesling, Vouvray, Alsace) to fully sweet. The professional rehabilitation project: off-dry is a pairing superpower, not a beginner's crutch: sugar tames chili heat, loves salt, and flatters fried food; the sweet-wine law is absolute: THE WINE MUST BE SWEETER THAN THE DISH (dry wine after dessert tastes of ash and regret: hence Sauternes with the tarte, Port with the chocolate). Fruity ≠ sweet: a dry wine can smell of peaches; teach your floor staff the difference and refunds drop.",
     "recipes": [
+      "cachapa-con-queso-de-mano",
       "tiramisu",
-      "crepes",
-      "chicken-teriyaki"
+      "crepes"
     ]
   },
   {
@@ -2106,9 +2108,9 @@
     "category": "Wine & Beverage",
     "definition": "Three Old-World reds built by their cuisines. TEMPRANILLO (Rioja, Ribera del Duero): red fruit and leather under American-oak coconut-vanilla, graded by age (crianza, reserva, gran reserva), lamb and jamón's companion. SANGIOVESE (Chianti Classico, Brunello): sour cherry, herbs, and acid HIGH enough to marry tomato sauce, the eternal answer to red-sauce pairing questions, engineered by centuries of the same dinner table. NEBBIOLO (Barolo, Barbaresco): 'tar and roses', pale color hiding ferocious tannin and acid, demanding fat and years, rewarded by brasato, truffles, and aged cheese. The shared lesson: Europe's greatest food wines have acid FIRST, because they evolved at the table, not the tasting bench.",
     "recipes": [
+      "guasacaca",
       "ragu-alla-bolognese",
-      "coq-au-vin",
-      "char-siu-pork"
+      "coq-au-vin"
     ]
   },
   {
@@ -2661,9 +2663,9 @@
     "category": "Spice Atlas",
     "definition": "'Spicy' is three different chemicals with three different behaviors, and a chef should prescribe them deliberately. CAPSAICIN (chiles): fat-soluble, slow-building, LINGERING: it binds heat receptors and stays; milk and fat rescue, water spreads (the chile entry in Vegetables maps the family). PIPERINE (black pepper): moderate, fast, front-of-mouth warmth that plays bass under other flavors. ISOTHIOCYANATES (mustard, horseradish, wasabi): volatile and water-soluble: a sinus FLASH that vanishes in seconds (which is why wasabi's burn dies while habanero's compounds file a lease); enzymatically created when cells are crushed, killed by heat; hence horseradish folded in cold and 'wasabi' that is mostly dyed horseradish (real wasabi, grated fresh, fades in 15 minutes and is priced like it). Three heats, three arcs: linger, hum, flash: compose with them the way you compose sweet and acid.",
     "recipes": [
+      "lutefisk",
       "tres-leches",
-      "apple-pie",
-      "rum-punch"
+      "apple-pie"
     ]
   },
   {
@@ -2887,9 +2889,9 @@
     "category": "Knife & Equipment Atlas",
     "definition": "The draw-cut family. BREAD KNIFE (9–10\", serrated): saws through crusts that would deflect a plain edge, and doubles on tomatoes, melons, cakes (leveling layers), and chocolate; buy one decent one, use it for years, replace when dull (serrations resist home sharpening). CARVING/SLICING (Western, 10–12\", often granton): the roast and ham blade: long enough to slice in single draws, because sawing shreds and single strokes gleam. Japan's masters: SUJIHIKI: the double-bevel slicer for proteins; YANAGIBA: the single-bevel sashimi sword, drawing through fish in one pull so the cut face stays mirror-optical (texture on the tongue IS the cut). One law unites them: long blades exist so meat is sliced in ONE motion: length is not vanity, it is surface quality.",
     "recipes": [
+      "arepa-reina-pepiada",
       "char-siu-pork",
-      "som-tum",
-      "red-beans-and-rice"
+      "som-tum"
     ]
   },
   {
@@ -2988,7 +2990,7 @@
     "recipes": [
       "gui-hua-nuomi-ou",
       "hollandaise-and-the-two-ways-it-splits",
-      "the-deglazed-pan-sauce-white-wine-and-shallot"
+      "lutefisk"
     ]
   },
   {
@@ -3405,8 +3407,8 @@
     "definition": "The bar's foundational fork, decided by ingredients, not vibes. SHAKE (hard, 10–15 seconds, with intent): anything containing CITRUS, dairy, egg, or fruit; shaking chills fastest, dilutes correctly, and AERATES: the frothy top of a daiquiri is texture the drink requires; a stirred margarita is flat in every sense. STIR (30–45 seconds, silent, ice-filled mixing glass): SPIRIT-ONLY drinks (Martini, Manhattan, Negroni, Old Fashioned) where clarity and silken weight are the point; shaking them shatters ice into clouding chips and bubbles ('bruising' gin is folklore, but wrecking a Manhattan's silk is documented nightly). The exceptions prove the rule: shaken-by-request Martinis are the guest's right (Fleming's fictional spy normalized a jarring spec, and hospitality outranks doctrine); thrown/rolled drinks (Bloody Mary, rolled, never shaken: foam ruins it) occupy the middle. One law, memorized: citrus shakes, spirit stirs, and the guest wins ties.",
     "recipes": [
       "lynchburg-lemonade",
-      "crema-catalana",
-      "banh-mi"
+      "ital-ackee-and-callaloo",
+      "crema-catalana"
     ]
   },
   {
@@ -3648,7 +3650,7 @@
     "recipes": [
       "lasagne-sheets-laminated-egg-dough",
       "warabimochi",
-      "tres-leches"
+      "tan-matsun-and-ice-water"
     ]
   },
   {
@@ -4434,7 +4436,7 @@
     "recipes": [
       "aam-ka-achar",
       "cabbage-thoran",
-      "pizza-margherita"
+      "knackebrod"
     ]
   },
   {
@@ -4560,9 +4562,9 @@
     "category": "The Seasonal Larder",
     "definition": "One New World family, two opposite ingredients divided by harvest date. SUMMER SQUASH (zucchini, yellow crookneck, pattypan, picked immature, June–September): watery, quick, skin-on, the Mediterranean's gratins and grills, Mexico's calabacitas, the blossom bonus stuffed and fried (male flowers on stems: pick those, keep the fruit); the size law is inverse: small means dense and sweet, baseball bats mean watery bitterness. WINTER SQUASH (butternut, kabocha, delicata, acorn, Hubbard, pumpkin: left to mature, harvested September–November, CURED and cellared): dense, sweet, starchy: autumn eating that stores till spring, which is why 'winter' names an eating season, not a growing one. The world map: kabocha's chestnut density in Japan (tempura, simmered nimono), Mexico's calabaza en tacha, Italy's tortelli di zucca with amaretti, the American pie complex, West Africa's egusi seeds. Kitchen law: roast winter squash HARD (the caramelization is the dish) and salt summer squash ahead to pull its water. One family, opposite problems.",
     "recipes": [
-      "korean-fried-chicken",
-      "pajeon",
-      "goi-cuon-summer-rolls"
+      "porotos-granados",
+      "sopaipillas-de-zapallo",
+      "soup-joumou"
     ]
   },
   {
@@ -4615,7 +4617,7 @@
     "recipes": [
       "ratatouille",
       "ajapsandali",
-      "eggplant-parmigiana"
+      "kavarma"
     ]
   },
   {
@@ -4692,7 +4694,7 @@
     "recipes": [
       "suen-yung-jing-daai-ji-steamed-scallops-with-garlic-and-fun-see",
       "ttoro-de-saint-jean-de-luz",
-      "pizza-margherita"
+      "qovoq-manti"
     ]
   },
   {

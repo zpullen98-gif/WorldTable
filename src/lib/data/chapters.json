@@ -72,6 +72,14 @@
     "count": 10
   },
   {
+    "name": "Armenian",
+    "slug": "armenian",
+    "kind": "world",
+    "group": "Asia",
+    "subgroup": "Armenia",
+    "count": 10
+  },
+  {
     "name": "Australian",
     "slug": "australian",
     "kind": "world",
@@ -85,6 +93,14 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Austria",
+    "count": 10
+  },
+  {
+    "name": "Baltic",
+    "slug": "baltic",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "The Baltics",
     "count": 10
   },
   {
@@ -200,11 +216,27 @@
     "count": 10
   },
   {
+    "name": "Chilean",
+    "slug": "chilean",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "Chile",
+    "count": 10
+  },
+  {
     "name": "Chinese",
     "slug": "chinese",
     "kind": "world",
     "group": "Asia",
     "subgroup": "China",
+    "count": 10
+  },
+  {
+    "name": "Colombian",
+    "slug": "colombian",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "Colombia",
     "count": 10
   },
   {
@@ -232,6 +264,22 @@
     "count": 10
   },
   {
+    "name": "Czech & Slovak",
+    "slug": "czech-and-slovak",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "Czechia & Slovakia",
+    "count": 10
+  },
+  {
+    "name": "Danish",
+    "slug": "danish",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "Denmark",
+    "count": 10
+  },
+  {
     "name": "Delaware",
     "slug": "delaware",
     "kind": "us",
@@ -246,6 +294,14 @@
     "group": "The Atlases",
     "subgroup": null,
     "count": 30
+  },
+  {
+    "name": "Dominican",
+    "slug": "dominican",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "The Dominican Republic",
+    "count": 10
   },
   {
     "name": "Dumpling Atlas",
@@ -392,6 +448,14 @@
     "count": 10
   },
   {
+    "name": "Haitian",
+    "slug": "haitian",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "Haiti",
+    "count": 10
+  },
+  {
     "name": "Holiday Feast Atlas",
     "slug": "holiday-feast-atlas",
     "kind": "atlas",
@@ -456,6 +520,14 @@
     "count": 10
   },
   {
+    "name": "Iraqi",
+    "slug": "iraqi",
+    "kind": "world",
+    "group": "Asia",
+    "subgroup": "Iraq",
+    "count": 10
+  },
+  {
     "name": "Irish",
     "slug": "irish",
     "kind": "world",
@@ -469,6 +541,14 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Italy",
+    "count": 10
+  },
+  {
+    "name": "Jamaican",
+    "slug": "jamaican",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "Jamaica",
     "count": 10
   },
   {
@@ -752,6 +832,14 @@
     "count": 10
   },
   {
+    "name": "Norwegian & Icelandic",
+    "slug": "norwegian-and-icelandic",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "Norway & Iceland",
+    "count": 10
+  },
+  {
     "name": "Oaxacan",
     "slug": "oaxacan",
     "kind": "world",
@@ -856,11 +944,27 @@
     "count": 10
   },
   {
+    "name": "Peruvian Highlands",
+    "slug": "peruvian-highlands",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "Peru",
+    "count": 10
+  },
+  {
     "name": "Pickle & Condiment Atlas",
     "slug": "pickle-and-condiment-atlas",
     "kind": "atlas",
     "group": "The Atlases",
     "subgroup": null,
+    "count": 10
+  },
+  {
+    "name": "Polish",
+    "slug": "polish",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "Poland",
     "count": 10
   },
   {
@@ -880,6 +984,14 @@
     "count": 10
   },
   {
+    "name": "Puerto Rican",
+    "slug": "puerto-rican",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "Puerto Rico",
+    "count": 10
+  },
+  {
     "name": "Punjabi & North Indian",
     "slug": "punjabi-and-north-indian",
     "kind": "world",
@@ -893,6 +1005,14 @@
     "kind": "us",
     "group": "United States",
     "subgroup": "New England",
+    "count": 10
+  },
+  {
+    "name": "Romanian & Bulgarian",
+    "slug": "romanian-and-bulgarian",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "Romania & Bulgaria",
     "count": 10
   },
   {
@@ -1016,6 +1136,14 @@
     "count": 10
   },
   {
+    "name": "Swedish",
+    "slug": "swedish",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "Sweden",
+    "count": 10
+  },
+  {
     "name": "Tamil & the South",
     "slug": "tamil-and-the-south",
     "kind": "world",
@@ -1096,6 +1224,14 @@
     "count": 10
   },
   {
+    "name": "Trinidadian",
+    "slug": "trinidadian",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "Trinidad & Tobago",
+    "count": 10
+  },
+  {
     "name": "Turkish",
     "slug": "turkish",
     "kind": "world",
@@ -1109,6 +1245,22 @@
     "kind": "us",
     "group": "United States",
     "subgroup": "The Southwest",
+    "count": 10
+  },
+  {
+    "name": "Uzbek & the Silk Road",
+    "slug": "uzbek-and-the-silk-road",
+    "kind": "world",
+    "group": "Asia",
+    "subgroup": "Uzbekistan & the Silk Road",
+    "count": 10
+  },
+  {
+    "name": "Venezuelan",
+    "slug": "venezuelan",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "Venezuela",
     "count": 10
   },
   {
@@ -1173,6 +1325,14 @@
     "kind": "us",
     "group": "United States",
     "subgroup": "The Mountain West",
+    "count": 10
+  },
+  {
+    "name": "Yemeni & the Gulf",
+    "slug": "yemeni-and-the-gulf",
+    "kind": "world",
+    "group": "Asia",
+    "subgroup": "Yemen & the Gulf",
     "count": 10
   },
   {

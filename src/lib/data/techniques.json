@@ -8,10 +8,15 @@
     "lexiconTerm": "Comal, Plancha & Griddles",
     "definition": "Flat-metal cooking: dry heat with total contact, no walls, no steam trap. The COMAL (Mexican, carbon steel or clay): tortillas puffed (the recipe wing's flour-tortilla law), chiles and tomatoes charred for salsas (the blister IS the flavor: dry-charring is a technique category), quesadillas sealed. The PLANCHA (Spanish) and TEPPAN (Japanese): restaurant flat-tops delivering full-surface Maillard. Smash burgers' entire physics (maximum crust contact), gambas a la plancha, fried rice at scale. Home translation: a carbon-steel griddle or the cast-iron pan's flat side across two burners; outdoor flat-top grills (the Blackstone era) brought plancha cooking to backyards. The flat-top's professional edge: heat ZONES across one surface, sear left, hold right, the pass's geography in steel.",
     "origin": "original",
-    "chapters": 1,
+    "chapters": 3,
     "semesters": [],
     "recipes": [
-      "arepas"
+      "arepas",
+      "arepa-de-choclo-con-cuajada",
+      "empanadas-vallunas",
+      "arepa-reina-pepiada",
+      "cachapa-con-queso-de-mano",
+      "caraotas-negras"
     ]
   },
   {
@@ -23,12 +28,13 @@
     "lexiconTerm": "Grilling vs. Barbecue vs. Smoking",
     "definition": "Three fires, three clocks. GRILLING: direct high heat, minutes, for tender cuts: the two-zone setup (hot side/cool side) is the entire skill, giving sear and refuge in one grate. BARBECUE: indirect low heat (105–135°C) plus wood smoke, hours, for collagen cuts (brisket, shoulder, ribs) where 'low and slow' is the collagen conversion clock wearing an apron. SMOKING divides again: hot-smoking cooks while flavoring; cold-smoking (under ~30°C) flavors cured foods without cooking. Thin blue smoke good, white billows bitter; the fire is an ingredient and must be cooked as carefully as the meat.",
     "origin": "original",
-    "chapters": 3,
+    "chapters": 4,
     "semesters": [],
     "recipes": [
       "tacos-de-pollo-asado",
       "tira-de-asado",
-      "lechon-asado"
+      "lechon-asado",
+      "asado-negro"
     ]
   },
   {
@@ -94,7 +100,7 @@
     "lexiconTerm": "Blanch & Shock",
     "definition": "Brief boiling in heavily salted water followed by an ice-bath arrest. It sets chlorophyll's electric green (and stops it there), softens vegetables to exact tenderness for later reheating (the restaurant à-la-minute secret: nearly everything green was blanched hours ago), loosens skins (tomatoes, peaches, fava), and tames raw edges (onion for salads). The salt matters: it seasons and protects color; the shock matters more: residual heat keeps cooking anything not stopped. Blanch-and-shock is the technique that lets a ten-minute dinner service plate a two-hour mise.",
     "origin": "supplement",
-    "chapters": 42,
+    "chapters": 45,
     "semesters": [
       {
         "n": 1,
@@ -166,7 +172,11 @@
       "mitarashi-dango",
       "kyo-yasai-no-takiawase",
       "hamo-no-otoshi",
-      "warabimochi"
+      "warabimochi",
+      "risalamande-med-kirseb-rsauce",
+      "quzi",
+      "kubba-halab",
+      "rocoto-relleno-arequipeno"
     ]
   },
   {
@@ -236,7 +246,7 @@
     "lexiconTerm": "Brining: Wet, Dry & Cures",
     "definition": "Salt's three levels of commitment. WET BRINE (5–8% salt solution, hours): dissolves some muscle protein so meat retains water: juicier lean cuts, diluted flavor, wet skin. DRY BRINE (salting 1–3 days ahead, uncovered): seasons deeply, keeps flavor concentrated, and desiccates skin for crackling, the modern professional default for poultry and steaks. CURING (higher salt, often with nitrite, plus time): preservation and transformation. Bacon, gravlax, pastrami, prosciutto. The through-line is diffusion and osmosis given time; 'season early' is the shortest version of this entire entry.",
     "origin": "original",
-    "chapters": 43,
+    "chapters": 51,
     "semesters": [
       {
         "n": 10,
@@ -310,7 +320,18 @@
       "sawara-no-saikyo-yaki",
       "shibazuke",
       "jambon-persille-de-bourgogne",
-      "gesiers-de-canard-confits"
+      "gesiers-de-canard-confits",
+      "pasuts-tolma",
+      "vepro-knedlo-zelo",
+      "dansk-remoulade",
+      "dolma-iraqiyya",
+      "amba",
+      "zakwas-buraczany",
+      "ogorki-kiszone",
+      "sarmale-in-foi-de-varza-murata",
+      "banitsa-sas-sirene",
+      "gubbrora",
+      "mango-chow"
     ]
   },
   {
@@ -345,7 +366,7 @@
     "lexiconTerm": "Emulsions",
     "definition": "Fat and water convinced to coexist as droplets, held by an emulsifier (egg-yolk lecithin, mustard, starch, or sheer agitation): the physics behind mayonnaise, hollandaise, vinaigrette, beurre blanc, aioli, and glossy pan sauces. The universal method: add fat SLOWLY to the water phase while shearing hard; the universal failure: too fast, too hot, or too cold, and it 'breaks' into grease. The universal rescue: start fresh with a new yolk (or a spoon of water/mustard) and whisk the broken sauce INTO it. Pasta's starchy water emulsifying oil and butter into clinging sauce is the same trick; Italian kitchens just never named it.",
     "origin": "original",
-    "chapters": 18,
+    "chapters": 20,
     "semesters": [
       {
         "n": 9,
@@ -389,7 +410,9 @@
       "cervelle-de-canut",
       "le-grand-aioli",
       "soupe-au-pistou",
-      "tapenade-noire-au-mortier"
+      "tapenade-noire-au-mortier",
+      "hovmastarsas",
+      "guasacaca"
     ]
   },
   {
@@ -441,7 +464,7 @@
     "lexiconTerm": "The Maillard Reaction",
     "definition": "The browning reaction between amino acids and reducing sugars, roaring above ~140°C, the source of seared steak crust, bread crust, roasted coffee, fried onions, and toasted anything: hundreds of new flavor compounds from one bit of chemistry. Its enemies are water (surfaces must be DRY: a wet steak steams at 100°C forever) and crowding (which traps steam). Its friends: high heat, dry surfaces, a little alkalinity (the pinch of baking soda in stir-fry velveting and pretzel dips). Distinct from CARAMELIZATION, which is sugar alone breaking down at ~160°C+. Half of 'flavor' in savory cooking is engineering these two reactions on purpose.",
     "origin": "supplement",
-    "chapters": 20,
+    "chapters": 21,
     "semesters": [],
     "recipes": [
       "elote",
@@ -473,7 +496,8 @@
       "oven-hangi-vegetables",
       "asun",
       "flammekueche-tarte-flambee",
-      "escalivada"
+      "escalivada",
+      "lyutenitsa"
     ]
   },
   {
@@ -485,7 +509,7 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "supplement",
-    "chapters": 36,
+    "chapters": 39,
     "semesters": [],
     "recipes": [
       "kofta-kebabs",
@@ -529,7 +553,10 @@
       "saucisson-de-lyon-en-brioche",
       "mimiga-no-pinatsu-miso-ae",
       "panisses-de-marseille",
-      "gateau-basque-a-la-cerise-noire-ditxassou"
+      "gateau-basque-a-la-cerise-noire-ditxassou",
+      "kuchen-de-frambuesa",
+      "gizzada",
+      "qiymali-somsa"
     ]
   },
   {
@@ -760,7 +787,7 @@
     "lexiconTerm": "Deep & Shallow Frying",
     "definition": "Frying is violent dehydration: oil at 160–190°C flash-boils surface moisture outward (the bubbles ARE water leaving), creating crust while steam-cooking the interior. Laws: recover temperature between batches (crowding = greasy), match oil to job (neutral high-smoke oils for deep; the double-fry, low then high, for fries, tostones, and chicken that must stay crisp), drain on RACKS not paper (paper steams the base), and salt in the first seconds while the surface is still hot and receptive. Oil is a reusable ingredient: strain it, smell it, retire it when it darkens or foams.",
     "origin": "original",
-    "chapters": 59,
+    "chapters": 66,
     "semesters": [
       {
         "n": 9,
@@ -853,7 +880,15 @@
       "bofrot",
       "pescaito-frito-gaditano",
       "kushikatsu-shinsekai-rules",
-      "panisses-de-marseille"
+      "panisses-de-marseille",
+      "empanadas-vallunas",
+      "chicharron-de-pollo",
+      "griot",
+      "akra-malanga",
+      "escovitch-fish",
+      "bacalaitos",
+      "pholourie-with-tamarind-sauce",
+      "luqaimat"
     ]
   },
   {
@@ -865,7 +900,7 @@
     "lexiconTerm": "Deglaze & Fond",
     "definition": "FOND (French for 'base/foundation') is the browned glaze of proteins and sugars welded to the pan after searing, concentrated Maillard flavor that amateurs scrub into the sink and professionals convert into money. DEGLAZING: pouring liquid (wine, stock, even water) into the hot emptied pan and scraping; the fond dissolves into an instant sauce base. From there: reduce, season, mount with butter, and a sautéed anything becomes a finished dish. The habit to build: never wash a pan with fond in it until you've asked what sauce it wanted to become.",
     "origin": "original",
-    "chapters": 26,
+    "chapters": 28,
     "semesters": [
       {
         "n": 1,
@@ -928,7 +963,9 @@
       "kangaroo-loin-with-mountain-pepperberry",
       "carbonade-flamande",
       "poulet-basquaise",
-      "foie-gras-de-canard-poele-au-verjus"
+      "foie-gras-de-canard-poele-au-verjus",
+      "sos-ti-malis",
+      "brunost"
     ]
   },
   {
@@ -940,7 +977,7 @@
     "lexiconTerm": "Fryer Setups & Oil Management",
     "definition": "Frying's equipment truth: the vessel is simple; the DISCIPLINE is the machine. Home setups ranked: a heavy DUTCH OVEN with a clip thermometer (thermal mass = temperature stability, the recovery physics of the frying entry) beats most countertop electric fryers (underpowered, slow recovery); a WOK fries with less oil and more surface; dedicated electric fryers earn space only with filtration and frequency. The management protocol that separates operations from accidents: never past two-thirds full, food DRY (water is the eruption), a spider and a landing rack staged BEFORE the first drop, baking soda or a lid for fire (never water: say it twice), and oil husbandry: strain through fine mesh after each session, store dark and cool, track uses by what was fried (fish retires oil fastest), retire at darkening, foaming, or off smells. Air fryers, honestly filed: compact convection ovens: excellent at reheating fried food and roasting small batches, incapable of actual frying; useful appliance, dishonest name. Restaurant note: fryer oil is a tracked COST line and a fire-code fixture: respect it at home like the pros are required to.",
     "origin": "supplement",
-    "chapters": 48,
+    "chapters": 58,
     "semesters": [
       {
         "n": 9,
@@ -1011,7 +1048,19 @@
       "kushikatsu-shinsekai-rules",
       "tablier-de-sapeur",
       "sata-andagi",
-      "panisses-de-marseille"
+      "panisses-de-marseille",
+      "sopaipillas-de-zapallo",
+      "bramborak",
+      "smazeny-syr-s-tatarskou-omackou",
+      "tasso-kabrit",
+      "akra-malanga",
+      "festival",
+      "kleinur",
+      "cuy-chactado",
+      "placki-ziemniaczane",
+      "bacalaitos",
+      "pholourie-with-tamarind-sauce",
+      "pabellon-criollo"
     ]
   },
   {
@@ -1023,7 +1072,7 @@
     "lexiconTerm": "Toasting: Nuts, Seeds, Grains & Coconut",
     "definition": "The smallest technique with the largest per-second flavor return: dry heat waking pyrazines and oils in anything with fat and starch to brown. THE METHODS ranked: OVEN (160–175°C on a sheet pan) for volume and evenness: nuts 8–12 min, stirred once; STOVETOP DRY PAN for small batches and whole spices: constant motion, trust your nose over your eyes (fragrant means nearly done; golden means done; 'one more minute' means starting over); the aggressive exception: coconut and sesame toast in a blink and burn in the next. THE LAWS: toast WHOLE then chop (surface-area math: chopped pieces scorch at the corners), carryover is real (pull a shade early; hot nuts keep cooking on the pan: decant immediately), toasted flavors FADE in liquid (re-toast garnishes; add toasted elements late), and salt while warm when salting at all. THE APPLICATIONS threading this guide: the nutty register's entire pantry, dukkah and gomasio, toasted-rice powder for larb, the pie crust's blind-baked depth, spices before grinding, and the honest truth that most 'flat' granola, pesto, and praline died of raw nuts. When in doubt, toast, but stand there while you do.",
     "origin": "supplement",
-    "chapters": 46,
+    "chapters": 51,
     "semesters": [
       {
         "n": 1,
@@ -1087,7 +1136,13 @@
       "munster-au-cumin-et-pommes-de-terre-en-robe",
       "salade-lyonnaise",
       "takoraisu",
-      "foie-gras-de-canard-poele-au-verjus"
+      "foie-gras-de-canard-poele-au-verjus",
+      "kama-kefiiriga",
+      "sobrebarriga-a-la-criolla",
+      "bammy",
+      "jamaican-curry-powder",
+      "raggmunk-med-stekt-flask",
+      "hawaij-lil-shorba"
     ]
   },
   {
@@ -1099,7 +1154,7 @@
     "lexiconTerm": "Baste, Arroser & Glaze",
     "definition": "Three ways of painting with heat. BASTING: spooning pan juices or fat over roasting food: flavor and sheen, though evidence says its moisture claims are romance; it mostly speeds surface cooking and pleases the cook. ARROSER: the French pan ritual: tilting the pan and spoon-showering foaming butter, garlic, and thyme over a steak or fish in its final minute: aroma infusion plus a butterfat crust. GLAZING: painting reduced sauces (teriyaki, barbecue, honey-mustard) in THIN repeated coats late in cooking so sugars lacquer instead of burn, the huli huli and yakitori law. Sugar burns at the temperature meat browns; timing is the technique.",
     "origin": "supplement",
-    "chapters": 24,
+    "chapters": 27,
     "semesters": [],
     "recipes": [
       "apple-pie",
@@ -1130,7 +1185,12 @@
       "rainier-cherry-galette",
       "alaska-salmon-pirok",
       "brioche-nanterre",
-      "navettes-marseillaises-a-la-fleur-doranger"
+      "navettes-marseillaises-a-la-fleur-doranger",
+      "trdelnik",
+      "moravske-kolace",
+      "kleicha-bil-tamur",
+      "obi-non",
+      "qovoq-manti"
     ]
   },
   {
@@ -1142,11 +1202,12 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "original",
-    "chapters": 2,
+    "chapters": 3,
     "semesters": [],
     "recipes": [
       "empanadas-saltenas",
-      "empanadas-de-pino"
+      "empanadas-de-pino",
+      "empanadas-vallunas"
     ]
   },
   {
@@ -1173,7 +1234,7 @@
     "lexiconTerm": "Fermentation & Pickling",
     "definition": "Two preserved-sour families the menu should distinguish. QUICK PICKLING: vinegar, sugar, salt poured over: sour today, no microbes involved. LACTO-FERMENTATION: salt (2–3% by weight) suppresses bad microbes while lactobacillus converts sugars to lactic acid (sauerkraut, kimchi, real dill pickles, curtido), living sour with depth vinegar can't fake. Adjacent kingdoms: KOJI (Aspergillus mold on rice/barley) powers miso, soy sauce, and modern dry-age shortcuts; yeast ferments bread and beer; SCOBYs make kombucha and vinegar itself. Ferments are how a restaurant builds house flavor no supplier can sell the competition.",
     "origin": "original",
-    "chapters": 29,
+    "chapters": 30,
     "semesters": [
       {
         "n": 5,
@@ -1230,7 +1291,9 @@
       "thiebou-yapp",
       "soupou-kandia",
       "nokoss",
-      "choucroute-garnie-a-lalsacienne"
+      "choucroute-garnie-a-lalsacienne",
+      "zakwas-buraczany",
+      "zrazy-zawijane"
     ]
   },
   {
@@ -1287,7 +1350,7 @@
     "lexiconTerm": "Creaming, Foaming & Cake Structure",
     "definition": "Cakes rise on air you built before the oven. CREAMING: beating butter and sugar until pale: sugar crystals literally cut air pockets into the fat, which chemical leaveners then inflate (butter cakes, cookies where the long cream = lift). FOAMING: whipping eggs (whole: genoise; whites: meringue, angel food, chiffon) into a protein foam, the sponge family's entire structure. RIBBON STAGE: whole eggs and sugar whipped until the batter falls in a slowly-dissolving ribbon, the doneness test for sponges and molten cakes alike. The corollary rule: once air is in, FOLD, never stir: every rough stroke is height surrendered.",
     "origin": "supplement",
-    "chapters": 21,
+    "chapters": 22,
     "semesters": [],
     "recipes": [
       "tres-leches",
@@ -1315,7 +1378,9 @@
       "washington-apple-cake",
       "cassata-siciliana",
       "goxua",
-      "gateau-basque-a-la-cerise-noire-ditxassou"
+      "gateau-basque-a-la-cerise-noire-ditxassou",
+      "sarmale-in-foi-de-varza-murata",
+      "papanasi-cu-smantana-si-dulceata-de-afine"
     ]
   },
   {
@@ -1352,7 +1417,7 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "supplement",
-    "chapters": 43,
+    "chapters": 51,
     "semesters": [],
     "recipes": [
       "chicken-tinga",
@@ -1432,7 +1497,22 @@
       "marmitako-de-bonito",
       "gilda-de-getaria",
       "sofregit-de-ceba-i-tomaquet",
-      "rafute"
+      "rafute",
+      "caldillo-de-congrio",
+      "pollo-guisado-dominicano",
+      "habichuelas-guisadas-con-auyama",
+      "sos-ti-malis",
+      "legim",
+      "chairo",
+      "olluquito-con-charqui",
+      "sofrito",
+      "arroz-con-gandules",
+      "bacalaitos",
+      "asopao-de-pollo",
+      "pasteles-de-masa",
+      "lyutenitsa",
+      "qovurma-lagmon",
+      "caraotas-negras"
     ]
   },
   {
@@ -1459,7 +1539,7 @@
     "lexiconTerm": "Comal, Plancha & Griddles",
     "definition": "Flat-metal cooking: dry heat with total contact, no walls, no steam trap. The COMAL (Mexican, carbon steel or clay): tortillas puffed (the recipe wing's flour-tortilla law), chiles and tomatoes charred for salsas (the blister IS the flavor: dry-charring is a technique category), quesadillas sealed. The PLANCHA (Spanish) and TEPPAN (Japanese): restaurant flat-tops delivering full-surface Maillard. Smash burgers' entire physics (maximum crust contact), gambas a la plancha, fried rice at scale. Home translation: a carbon-steel griddle or the cast-iron pan's flat side across two burners; outdoor flat-top grills (the Blackstone era) brought plancha cooking to backyards. The flat-top's professional edge: heat ZONES across one surface, sear left, hold right, the pass's geography in steel.",
     "origin": "supplement",
-    "chapters": 36,
+    "chapters": 37,
     "semesters": [
       {
         "n": 4,
@@ -1514,7 +1594,8 @@
       "moreton-bay-bugs-split-and-grilled",
       "vaca-frita",
       "butatama-osaka-okonomiyaki",
-      "talo"
+      "talo",
+      "arepa-de-choclo-con-cuajada"
     ]
   },
   {
@@ -1526,7 +1607,7 @@
     "lexiconTerm": "Grilling vs. Barbecue vs. Smoking",
     "definition": "Three fires, three clocks. GRILLING: direct high heat, minutes, for tender cuts: the two-zone setup (hot side/cool side) is the entire skill, giving sear and refuge in one grate. BARBECUE: indirect low heat (105–135°C) plus wood smoke, hours, for collagen cuts (brisket, shoulder, ribs) where 'low and slow' is the collagen conversion clock wearing an apron. SMOKING divides again: hot-smoking cooks while flavoring; cold-smoking (under ~30°C) flavors cured foods without cooking. Thin blue smoke good, white billows bitter; the fire is an ingredient and must be cooked as carefully as the meat.",
     "origin": "supplement",
-    "chapters": 41,
+    "chapters": 47,
     "semesters": [
       {
         "n": 7,
@@ -1598,7 +1679,15 @@
       "roosterkoek",
       "txuleta-a-la-brasa",
       "calcots-a-la-brasa",
-      "escalivada"
+      "escalivada",
+      "khorovats",
+      "machas-a-la-parmesana",
+      "fl-skesteg-med-spr-d-sv-r",
+      "masgouf",
+      "jerk-pork",
+      "mititei",
+      "shopska-salata",
+      "lyutenitsa"
     ]
   },
   {
@@ -1626,13 +1715,14 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "original",
-    "chapters": 4,
+    "chapters": 5,
     "semesters": [],
     "recipes": [
       "quick-baklava-rolls",
       "spanakopita",
       "f-st-kl-baklava",
-      "knafeh-nabulseyeh"
+      "knafeh-nabulseyeh",
+      "banitsa-sas-sirene"
     ]
   },
   {
@@ -1713,7 +1803,7 @@
     "lexiconTerm": "Grilling vs. Barbecue vs. Smoking",
     "definition": "Three fires, three clocks. GRILLING: direct high heat, minutes, for tender cuts: the two-zone setup (hot side/cool side) is the entire skill, giving sear and refuge in one grate. BARBECUE: indirect low heat (105–135°C) plus wood smoke, hours, for collagen cuts (brisket, shoulder, ribs) where 'low and slow' is the collagen conversion clock wearing an apron. SMOKING divides again: hot-smoking cooks while flavoring; cold-smoking (under ~30°C) flavors cured foods without cooking. Thin blue smoke good, white billows bitter; the fire is an ingredient and must be cooked as carefully as the meat.",
     "origin": "original",
-    "chapters": 1,
+    "chapters": 2,
     "semesters": [
       {
         "n": 7,
@@ -1721,7 +1811,8 @@
       }
     ],
     "recipes": [
-      "jerk-chicken"
+      "jerk-chicken",
+      "jerk-pork"
     ]
   },
   {
@@ -1749,7 +1840,7 @@
     "lexiconTerm": "Stocks: Blanc, Brun, Broth & Demi",
     "definition": "WHITE STOCK: raw bones, gentle simmer: clean, pale, for velouté and light soups. BROWN STOCK: bones and mirepoix roasted first, tomato paste caramelized: deep color and roasted flavor, the mother of demi-glace and jus. BROTH is meat-based and seasoned to drink; stock is bone-based, unsalted, and built for gelatin. A proper stock sets like Jell-O cold. GLACE is stock reduced to a syrup; a spoon flavors a whole pan sauce. Skim relentlessly, never boil (cloudiness is emulsified scum), salt never (it concentrates downstream), and know that stock is the bank account every other station borrows from.",
     "origin": "supplement",
-    "chapters": 45,
+    "chapters": 51,
     "semesters": [
       {
         "n": 3,
@@ -1813,7 +1904,13 @@
       "frijoles-negros-dormidos",
       "fatta-bil-lahma",
       "red-red",
-      "asun"
+      "asun",
+      "mulgipuder",
+      "pulmay-curanto-en-olla",
+      "gammeldags-oksesteg",
+      "sorrel",
+      "farikal",
+      "zrazy-zawijane"
     ]
   },
   {
@@ -1841,7 +1938,7 @@
     "lexiconTerm": "Gluten & Hydration",
     "definition": "Gluten is the elastic network formed when wheat's glutenin and gliadin meet water and agitation: the structure of bread, the enemy of tenderness in cakes and pie crusts. The baker steers it three ways: FLOUR CHOICE (bread flour ~12–14% protein builds; cake flour ~8% barely does), FAT (shortens gluten strands, hence 'shortening', 'shortbread', 'shortcrust'), and TECHNIQUE (kneading develops it; minimal mixing and resting relax it). HYDRATION is water as a percentage of flour weight: 60% is a tight bagel dough, 75% a country loaf, 85%+ the wet ciabatta school. Baker's percentages, everything relative to flour at 100%, are the professional language; learn them and every formula scales.",
     "origin": "original",
-    "chapters": 28,
+    "chapters": 31,
     "semesters": [],
     "recipes": [
       "apfelstrudel",
@@ -1886,7 +1983,11 @@
       "amala",
       "saucisson-de-lyon-en-brioche",
       "sata-andagi",
-      "pissaladiere-nicoise"
+      "pissaladiere-nicoise",
+      "sini-manti",
+      "obi-non",
+      "qovoq-manti",
+      "pan-de-jamon"
     ]
   },
   {
@@ -1898,7 +1999,7 @@
     "lexiconTerm": "Knife Cuts: The Classical Ladder",
     "definition": "The French system exists because even cuts cook evenly and plate professionally. The ladder: BRUNOISE (3mm dice) and its baby FINE BRUNOISE (1.5mm); JULIENNE (matchsticks 3mm × 5cm) and BATONNET (6mm × 6cm, the fry); small/medium/large DICE (6/12/20mm); PAYSANNE (thin tiles); CHIFFONADE (herbs and leaves rolled and sliced into ribbons); TOURNÉ (the seven-sided football that has hazed culinary students for a century). MINCE is fineness without geometry; SUPREME is the citrus segment freed from all membrane. Speed comes later; uniformity is the exam, and the claw grip is the tuition.",
     "origin": "supplement",
-    "chapters": 72,
+    "chapters": 84,
     "semesters": [
       {
         "n": 1,
@@ -2032,7 +2133,29 @@
       "shibazuke",
       "hirayachi",
       "soupe-au-pistou",
-      "axoa-de-veau-despelette"
+      "axoa-de-veau-despelette",
+      "cepelinai-su-spirguciais",
+      "saltibarsciai",
+      "pino-de-carne-a-cuchillo",
+      "kulajda",
+      "bryndzove-halusky",
+      "soup-joumou",
+      "escovitch-fish",
+      "kjotsupa",
+      "chuno-phuti",
+      "chairo",
+      "olluquito-con-charqui",
+      "rocoto-relleno-arequipeno",
+      "quinua-atamalada",
+      "zurek-na-zakwasie",
+      "zrazy-zawijane",
+      "arroz-con-gandules",
+      "pasteles-de-masa",
+      "qovurma-palov",
+      "qovoq-manti",
+      "qiymali-somsa",
+      "tequenos",
+      "saltah-bil-hulba"
     ]
   },
   {
@@ -2114,7 +2237,7 @@
     "lexiconTerm": "Roux, Slurry & Liaison",
     "definition": "The thickener's toolkit. ROUX: equal weights flour and fat cooked together: white (2 min) for béchamel, blond for velouté, brown to brick-dark for gumbo, each stage trading thickening power for flavor. SLURRY: cornstarch or arrowroot in cold water, whisked into simmering liquid at the end: instant gloss, Asian-sauce standard, breaks down if boiled long. LIAISON: egg yolk and cream tempered in off the heat: the silk finish of blanquette and avgolemono; boil it and you've made sweet scrambled regret. BEURRE MANIÉ: raw butter-flour paste whisked in at the finish, the braise-rescuer. Choose by the sauce's temperature future, not habit.",
     "origin": "original",
-    "chapters": 24,
+    "chapters": 25,
     "semesters": [
       {
         "n": 10,
@@ -2152,7 +2275,8 @@
       "tillamook-cheddar-mac-and-cheese",
       "oregon-chanterelle-soup",
       "tokfozelek",
-      "poutine"
+      "poutine",
+      "go-abki-w-sosie-pomidorowym"
     ]
   },
   {
@@ -2164,7 +2288,7 @@
     "lexiconTerm": "Velveting & Marinades",
     "definition": "VELVETING is the Chinese restaurant's tenderness secret: sliced meat coated in egg white, cornstarch, and a little baking soda or wine, rested, then pre-cooked briefly in oil or water; the alkaline soda relaxes surface proteins and the starch jackets in moisture, producing that signature silk in stir-fries. MARINADES, honestly assessed: salt, sugar, and acid work only millimeters deep (oil carries aromatics to the surface); enzyme marinades (pineapple, papaya, yogurt's gentler lactic action) genuinely tenderize but turn meat mushy past their window. Marinades are surface seasoning plus browning chemistry: the flavor is real; the 'penetration' is mostly myth, and the dry brine outperforms for depth.",
     "origin": "supplement",
-    "chapters": 46,
+    "chapters": 49,
     "semesters": [
       {
         "n": 4,
@@ -2245,7 +2369,10 @@
       "baeckeoffe",
       "potjevleesch",
       "tablier-de-sapeur",
-      "daube-provencale"
+      "daube-provencale",
+      "tasso-kabrit",
+      "adobo-arequipeno",
+      "zurbian-hadrami"
     ]
   },
   {
@@ -2257,7 +2384,7 @@
     "lexiconTerm": "Blenders: Immersion, High-Speed & Food Processor",
     "definition": "Three machines, three physics, endless substitution errors. IMMERSION (stick) BLENDER: purées IN the pot: soups without lava transfers (the soup wing's blend-smooth entries assume one), mayo in 60 seconds (the one-jar immersion-mayo trick), sauce rescues; the restaurant version is a boat motor. HIGH-SPEED BLENDER (Vitamix-class): the smoothness ceiling: velvet soups, nut butters, silky salsas and curry bases (heat from friction is real: it will warm and even cook contents; also the reason it emulsifies like a champion). FOOD PROCESSOR: the CHOPPER: pulse-control texture (pesto with identity, pie dough's butter pebbles, falafel's coarse grind, shredding discs at volume) where blenders would liquefy. The sorting rule: liquids and smoothness → blender; solids and texture → processor; in-pot and quick → stick. And the professional footnote: the blender's whirl adds AIR: sauces that must stay glossy-dense (the mortar entry's argument) sometimes want the pound or the pass instead.",
     "origin": "supplement",
-    "chapters": 66,
+    "chapters": 76,
     "semesters": [],
     "recipes": [
       "guacamole",
@@ -2349,7 +2476,23 @@
       "soupe-de-poissons-de-roche",
       "le-grand-aioli",
       "soupe-au-pistou",
-      "tapenade-noire-au-mortier"
+      "tapenade-noire-au-mortier",
+      "mulgipuder",
+      "sklandrausis",
+      "sopaipillas-de-zapallo",
+      "bryndzove-halusky",
+      "mangu",
+      "habichuelas-guisadas-con-auyama",
+      "pastelon-de-platano-maduro",
+      "raspeballer",
+      "pernil-al-horno",
+      "trifongo-de-platano-y-yuca",
+      "ciorba-de-burta",
+      "banitsa-sas-sirene",
+      "tarator",
+      "semla",
+      "guasacaca",
+      "sahawiq-hamra"
     ]
   },
   {
@@ -2392,7 +2535,7 @@
     "lexiconTerm": "Blind Baking & Pie Doctrine",
     "definition": "BLIND BAKING: baking a crust empty (lined with parchment and weighted with beans/rice/sugar) before a wet filling arrives: partial for quiches that bake again, full for cream and citrus tarts. DOCKING: pricking pastry so steam escapes flat where puff isn't wanted. The pie-crust catechism: cold fat in visible pieces (steam pockets = flake), minimal water, minimal handling (gluten = toughness), rest before rolling, chill before baking (cold pastry into a hot oven holds its architecture). A 'soggy bottom' is the genre's public shame; the defenses are blind baking, a hot steel or stone below, egg-wash waterproofing, and fillings added no wetter than they must be.",
     "origin": "original",
-    "chapters": 22,
+    "chapters": 24,
     "semesters": [
       {
         "n": 6,
@@ -2424,7 +2567,9 @@
       "cochinita-pibil",
       "pate-sucree-by-the-sanding-method",
       "aussie-meat-pie",
-      "macadamia-and-wattleseed-tart"
+      "macadamia-and-wattleseed-tart",
+      "kuchen-de-frambuesa",
+      "gizzada"
     ]
   },
   {
@@ -2481,11 +2626,12 @@
     "lexiconTerm": "Poach, Simmer, Boil",
     "definition": "Three temperatures pretending to be one method. POACH: 71–82°C, water barely shivering: eggs, fish, chicken breast, anything delicate that violent bubbles would shred. SIMMER: 85–95°C, lazy bubbles: stocks, braises, beans, sauces. BOIL: 100°C rolling: pasta, blanching, potatoes, and almost nothing made of protein. The most common home error is treating these as synonyms; the most common professional discipline is watching the bubbles, not the dial. Salt poaching liquids and courts-bouillons like they are the sauce, because for those minutes they are.",
     "origin": "original",
-    "chapters": 1,
+    "chapters": 2,
     "semesters": [],
     "recipes": [
       "salade-lyonnaise",
-      "oeufs-en-meurette"
+      "oeufs-en-meurette",
+      "kulajda"
     ]
   },
   {
@@ -2497,7 +2643,7 @@
     "lexiconTerm": "Mortar & Pestle: Molcajete, Suribachi, Granite",
     "definition": "The pre-blender that blenders never fully replaced: pounding RUPTURES cells and bruises oils out where blades slice and whip air in: pesto's name is the pestle (hand-pounded pesto is visibly glossier and louder-flavored), Thai curry pastes demand the pound (the recipe wing says so repeatedly), guacamole in a MOLCAJETE (Mexican basalt; season by grinding rice until it runs clean) tastes creamier from crushed-not-chopped alliums, and the SURIBACHI's ridged ceramic grinds sesame for goma-ae like nothing else. The heavy granite Thai mortar is the do-everything choice: spice cracking, aioli, sambal (the ulekan's cousin). Ten minutes of pounding is the honest cost; the return is texture and aroma a machine's heat and aeration subtly flatten. Every serious kitchen keeps one within reach: not for nostalgia, for chemistry.",
     "origin": "original",
-    "chapters": 15,
+    "chapters": 17,
     "semesters": [],
     "recipes": [
       "green-curry-gaeng-keow-wan",
@@ -2518,7 +2664,10 @@
       "kukul-mas-curry",
       "terrine-de-campagne",
       "mutton-bunny-chow",
-      "picada-de-fruits-secs"
+      "picada-de-fruits-secs",
+      "mititei",
+      "machboos-dajaj",
+      "zurbian-hadrami"
     ]
   },
   {
@@ -2530,7 +2679,7 @@
     "lexiconTerm": "Proofing, Oven Spring & the Crumb",
     "definition": "PROOFING is the final rise before baking; the poke test judges it (indent springs back slowly = ready; instantly = underproofed; never = over). OVEN SPRING is the first minutes' dramatic expansion as gasses balloon before the crust sets: steam in the oven delays crust-set and maximizes it, which is why lidded Dutch ovens and steam-injected decks exist, and why SCORING (lame slashes) directs the explosion artfully instead of randomly. THE CRUMB, the interior's hole structure, is the loaf's autopsy: tight crumb from low hydration or underproofing; open irregular crumb from wet dough, gentle handling, and full fermentation. Bakers read crumb the way sommeliers read legs.",
     "origin": "supplement",
-    "chapters": 50,
+    "chapters": 56,
     "semesters": [
       {
         "n": 5,
@@ -2607,7 +2756,14 @@
       "aish-baladi",
       "bofrot",
       "roosterkoek",
-      "pissaladiere-nicoise"
+      "pissaladiere-nicoise",
+      "trdelnik",
+      "moravske-kolace",
+      "makowiec",
+      "semla",
+      "obi-non",
+      "pan-de-jamon",
+      "bint-al-sahn"
     ]
   },
   {
@@ -2634,7 +2790,7 @@
     "lexiconTerm": "Reduction, Nappe & Mounting",
     "definition": "REDUCTION: simmering a liquid to evaporate water, concentrating flavor and body, the sauce-maker's primary move, always reduced BEFORE final seasoning (salt concentrates too). NAPPE: the classical doneness test: sauce coats the back of a spoon and holds a clean line drawn by a finger. MONTER AU BEURRE: 'mounting' cold butter cubes into a finished sauce off the heat, swirling, emulsifying in gloss, body, and richness; the last thirty seconds that make restaurant sauces taste like restaurant sauces. Together they are the grammar of à-la-minute saucing: reduce, season, mount, plate.",
     "origin": "original",
-    "chapters": 62,
+    "chapters": 69,
     "semesters": [
       {
         "n": 1,
@@ -2735,7 +2891,18 @@
       "piperade",
       "poulet-basquaise",
       "axoa-de-veau-despelette",
-      "ttoro-de-saint-jean-de-luz"
+      "ttoro-de-saint-jean-de-luz",
+      "pino-de-carne-a-cuchillo",
+      "stegt-fl-sk-med-persillesovs",
+      "boller-i-karry",
+      "pollo-guisado-dominicano",
+      "griot",
+      "escovitch-fish",
+      "brown-stew-chicken",
+      "gizzada",
+      "ocopa-arequipena",
+      "saltah-bil-hulba",
+      "zurbian-hadrami"
     ]
   },
   {
@@ -2747,7 +2914,7 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "supplement",
-    "chapters": 50,
+    "chapters": 56,
     "semesters": [
       {
         "n": 4,
@@ -2821,7 +2988,15 @@
       "oeufs-en-meurette",
       "la-pochouse-verdunoise",
       "poulet-basquaise",
-      "magret-de-canard-a-la-poele-froide"
+      "magret-de-canard-a-la-poele-froide",
+      "cepelinai-su-spirguciais",
+      "kugelis",
+      "hovezi-gulas",
+      "lutefisk",
+      "zurek-na-zakwasie",
+      "arroz-con-gandules",
+      "qovurma-palov",
+      "dimlama"
     ]
   },
   {
@@ -2833,7 +3008,7 @@
     "lexiconTerm": "Gluten & Hydration",
     "definition": "Gluten is the elastic network formed when wheat's glutenin and gliadin meet water and agitation: the structure of bread, the enemy of tenderness in cakes and pie crusts. The baker steers it three ways: FLOUR CHOICE (bread flour ~12–14% protein builds; cake flour ~8% barely does), FAT (shortens gluten strands, hence 'shortening', 'shortbread', 'shortcrust'), and TECHNIQUE (kneading develops it; minimal mixing and resting relax it). HYDRATION is water as a percentage of flour weight: 60% is a tight bagel dough, 75% a country loaf, 85%+ the wet ciabatta school. Baker's percentages, everything relative to flour at 100%, are the professional language; learn them and every formula scales.",
     "origin": "supplement",
-    "chapters": 40,
+    "chapters": 47,
     "semesters": [
       {
         "n": 5,
@@ -2899,7 +3074,16 @@
       "damper",
       "koeksisters",
       "navettes-marseillaises-a-la-fleur-doranger",
-      "talo"
+      "talo",
+      "sini-manti",
+      "gata",
+      "sklandrausis",
+      "empanadas-vallunas",
+      "festival",
+      "kurma",
+      "cachapa-con-queso-de-mano",
+      "tequenos",
+      "bint-al-sahn"
     ]
   },
   {
@@ -2911,7 +3095,7 @@
     "lexiconTerm": "Resting, Carryover & the Thermometer",
     "definition": "The instant-read thermometer is the cheapest skill upgrade in cooking: doneness is a temperature, not a time. Key coordinates: 50–52°C rare beef, 55–57 medium-rare, 63°C+rest for pork, 68–74°C poultry white-to-dark, 82°C custards, 95°C brisket-probe-tender. CARRYOVER adds 3–8°C after removal (more in big roasts); RESTING (5 min for steaks, 30–45 for large roasts) lets juices thicken and redistribute; meat cut immediately bleeds what patience would keep. The pros' phrase 'cook to temp, not to time' is the entire entry in five words; the pros' habit of probing the COLDEST likely spot is the footnote that matters.",
     "origin": "supplement",
-    "chapters": 39,
+    "chapters": 46,
     "semesters": [
       {
         "n": 3,
@@ -2971,7 +3155,14 @@
       "negiyaki",
       "goya-chanpuru",
       "magret-de-canard-a-la-poele-froide",
-      "gesiers-de-canard-confits"
+      "gesiers-de-canard-confits",
+      "basturma",
+      "svickova-na-smetane",
+      "gammeldags-oksesteg",
+      "jerk-pork",
+      "kotlet-schabowy",
+      "qovurma-lagmon",
+      "pan-de-jamon"
     ]
   },
   {
@@ -3001,7 +3192,7 @@
     "lexiconTerm": "Roasting, Baking & Carryover",
     "definition": "Dry ambient heat in an enclosed oven: 'roasting' for meats and vegetables, 'baking' for doughs, the physics identical. The professional's three levers: TEMPERATURE STRATEGY (high-then-low for a crusted roast, low-then-blast 'reverse sear' for even doneness plus crust), AIRFLOW (convection browns faster and dries surfaces: drop 15°C from conventional recipes), and CARRYOVER: internal temperature climbs 3–8°C after removal as the exterior's heat equalizes inward. Pull the roast BEFORE target and rest it: resting redistributes juices and finishes the cook. Cutting early spills what patience would have kept.",
     "origin": "supplement",
-    "chapters": 35,
+    "chapters": 40,
     "semesters": [
       {
         "n": 7,
@@ -3054,7 +3245,29 @@
       "dukkah",
       "salvitxada-de-calcotada",
       "mitarashi-dango",
-      "quenelles-de-brochet-sauce-nantua"
+      "quenelles-de-brochet-sauce-nantua",
+      "vepro-knedlo-zelo",
+      "stegt-fl-sk-med-persillesovs",
+      "fl-skesteg-med-spr-d-sv-r",
+      "quzi",
+      "margat-bamia",
+      "pernil-al-horno",
+      "mandi-laham"
+    ]
+  },
+  {
+    "slug": "rolling-dolmas",
+    "label": "Rolling dolmas",
+    "query": "how to roll dolmas grape leaves",
+    "film": null,
+    "lexiconSlug": null,
+    "lexiconTerm": null,
+    "definition": null,
+    "origin": "original",
+    "chapters": 1,
+    "semesters": [],
+    "recipes": [
+      "dolma-iraqiyya"
     ]
   },
   {
@@ -3066,7 +3279,7 @@
     "lexiconTerm": "Blind Baking & Pie Doctrine",
     "definition": "BLIND BAKING: baking a crust empty (lined with parchment and weighted with beans/rice/sugar) before a wet filling arrives: partial for quiches that bake again, full for cream and citrus tarts. DOCKING: pricking pastry so steam escapes flat where puff isn't wanted. The pie-crust catechism: cold fat in visible pieces (steam pockets = flake), minimal water, minimal handling (gluten = toughness), rest before rolling, chill before baking (cold pastry into a hot oven holds its architecture). A 'soggy bottom' is the genre's public shame; the defenses are blind baking, a hot steel or stone below, egg-wash waterproofing, and fillings added no wetter than they must be.",
     "origin": "supplement",
-    "chapters": 28,
+    "chapters": 36,
     "semesters": [],
     "recipes": [
       "buttermilk-biscuits",
@@ -3101,7 +3314,15 @@
       "damper",
       "butter-tarts",
       "chin-chin",
-      "koeksisters"
+      "koeksisters",
+      "rupjmaizes-kartojums",
+      "kuchen-de-frambuesa",
+      "moravske-kolace",
+      "dyrl-gens-natmad",
+      "kleicha-bil-tamur",
+      "gizzada",
+      "kurma",
+      "tequenos"
     ]
   },
   {
@@ -3113,7 +3334,7 @@
     "lexiconTerm": "Poach, Simmer, Boil",
     "definition": "Three temperatures pretending to be one method. POACH: 71–82°C, water barely shivering: eggs, fish, chicken breast, anything delicate that violent bubbles would shred. SIMMER: 85–95°C, lazy bubbles: stocks, braises, beans, sauces. BOIL: 100°C rolling: pasta, blanching, potatoes, and almost nothing made of protein. The most common home error is treating these as synonyms; the most common professional discipline is watching the bubbles, not the dial. Salt poaching liquids and courts-bouillons like they are the sauce, because for those minutes they are.",
     "origin": "supplement",
-    "chapters": 74,
+    "chapters": 93,
     "semesters": [
       {
         "n": 1,
@@ -3263,7 +3484,48 @@
       "soki-soba",
       "nakami-jiru",
       "le-grand-aioli",
-      "soupe-au-pistou"
+      "soupe-au-pistou",
+      "harisa",
+      "ghapama",
+      "cepelinai-su-spirguciais",
+      "saltibarsciai",
+      "mulgipuder",
+      "rosolje",
+      "pastel-de-choclo",
+      "pulmay-curanto-en-olla",
+      "pebre-chileno",
+      "empanadas-vallunas",
+      "papas-chorreadas",
+      "houskovy-knedlik",
+      "bryndzove-halusky",
+      "stegt-fl-sk-med-persillesovs",
+      "boller-i-karry",
+      "brunede-kartofler",
+      "mangu",
+      "majarete",
+      "diri-ak-djon-djon",
+      "tasso-kabrit",
+      "timman-bagilla",
+      "shalgham-bil-dibis",
+      "festival",
+      "plokkfiskur",
+      "go-abki-w-sosie-pomidorowym",
+      "arroz-con-gandules",
+      "trifongo-de-platano-y-yuca",
+      "pasteles-de-masa",
+      "guineitos-en-escabeche",
+      "mamaliga-cu-branza-si-smantana",
+      "sillsallad",
+      "curry-crab-and-dumpling",
+      "macaroni-pie",
+      "qovurma-palov",
+      "qovurma-lagmon",
+      "qovoq-manti",
+      "arepa-reina-pepiada",
+      "caraotas-negras",
+      "saltah-bil-hulba",
+      "machboos-dajaj",
+      "zurbian-hadrami"
     ]
   },
   {
@@ -3275,7 +3537,7 @@
     "lexiconTerm": "Brining: Wet, Dry & Cures",
     "definition": "Salt's three levels of commitment. WET BRINE (5–8% salt solution, hours): dissolves some muscle protein so meat retains water: juicier lean cuts, diluted flavor, wet skin. DRY BRINE (salting 1–3 days ahead, uncovered): seasons deeply, keeps flavor concentrated, and desiccates skin for crackling, the modern professional default for poultry and steaks. CURING (higher salt, often with nitrite, plus time): preservation and transformation. Bacon, gravlax, pastrami, prosciutto. The through-line is diffusion and osmosis given time; 'season early' is the shortest version of this entire entry.",
     "origin": "supplement",
-    "chapters": 28,
+    "chapters": 31,
     "semesters": [],
     "recipes": [
       "eggplant-parmigiana",
@@ -3315,7 +3577,10 @@
       "sawara-no-saikyo-yaki",
       "mimiga-no-pinatsu-miso-ae",
       "bohemienne-daubergines",
-      "magret-de-canard-a-la-poele-froide"
+      "magret-de-canard-a-la-poele-froide",
+      "sini-manti",
+      "tepsi-baytinijan",
+      "shopska-salata"
     ]
   },
   {
@@ -3327,7 +3592,7 @@
     "lexiconTerm": "Sweat vs. Sauté vs. Sear",
     "definition": "Three pan verbs distinguished by heat and intent. SWEAT: low heat, a little fat, often a lid or parchment; vegetables soften and release moisture WITHOUT color (the start of risotto, velouté, most braises where onion flavor should be sweet, not roasty). SAUTÉ: medium-high, food 'jumping' (sauter) in a wide pan: light browning, fast cooking, constant motion. SEAR: maximum heat, zero motion: deep crust, Maillard at full roar. Recipes say 'cook the onions' and mean one of three different flavors; knowing which one the dish needs is the difference between following recipes and cooking.",
     "origin": "supplement",
-    "chapters": 61,
+    "chapters": 64,
     "semesters": [
       {
         "n": 1,
@@ -3412,7 +3677,10 @@
       "morogo-wa-thepe",
       "tortillitas-de-camarones",
       "goya-chanpuru",
-      "bohemienne-daubergines"
+      "bohemienne-daubergines",
+      "sos-ti-malis",
+      "ocopa-arequipena",
+      "saltah-bil-hulba"
     ]
   },
   {
@@ -3424,7 +3692,7 @@
     "lexiconTerm": "Proofing, Oven Spring & the Crumb",
     "definition": "PROOFING is the final rise before baking; the poke test judges it (indent springs back slowly = ready; instantly = underproofed; never = over). OVEN SPRING is the first minutes' dramatic expansion as gasses balloon before the crust sets: steam in the oven delays crust-set and maximizes it, which is why lidded Dutch ovens and steam-injected decks exist, and why SCORING (lame slashes) directs the explosion artfully instead of randomly. THE CRUMB, the interior's hole structure, is the loaf's autopsy: tight crumb from low hydration or underproofing; open irregular crumb from wet dough, gentle handling, and full fermentation. Bakers read crumb the way sommeliers read legs.",
     "origin": "original",
-    "chapters": 17,
+    "chapters": 22,
     "semesters": [],
     "recipes": [
       "spanakopita",
@@ -3446,7 +3714,13 @@
       "kyo-yasai-no-takiawase",
       "navettes-marseillaises-a-la-fleur-doranger",
       "magret-de-canard-a-la-poele-froide",
-      "gateau-basque-a-la-cerise-noire-ditxassou"
+      "gateau-basque-a-la-cerise-noire-ditxassou",
+      "gata",
+      "vepro-knedlo-zelo",
+      "fl-skesteg-med-spr-d-sv-r",
+      "mangu",
+      "trifongo-de-platano-y-yuca",
+      "guineitos-en-escabeche"
     ]
   },
   {
@@ -3458,7 +3732,7 @@
     "lexiconTerm": "Searing & Pan Technique",
     "definition": "The skill inside the skill: preheat the pan dry until oil shimmers instantly, dry the protein aggressively, salt just before, lay it away from you, and then DO NOT MOVE IT: proteins release themselves when the crust forms and tear when rushed. Fond, the browned layer stuck to the pan, is not mess but the future sauce; deglaze with wine or stock and scrape. Baste with foaming butter, garlic, and thyme in the final minute (arroser) for the restaurant finish. Crowding is the cardinal sin: steam kills sear; work in batches like your Michelin star depends on it.",
     "origin": "supplement",
-    "chapters": 80,
+    "chapters": 86,
     "semesters": [
       {
         "n": 1,
@@ -3613,7 +3887,15 @@
       "txangurro-a-la-donostiarra",
       "pollastre-amb-escamarlans",
       "takoraisu",
-      "foie-gras-de-canard-poele-au-verjus"
+      "foie-gras-de-canard-poele-au-verjus",
+      "pino-de-carne-a-cuchillo",
+      "hovezi-gulas",
+      "pastelon-de-platano-maduro",
+      "molondrones-guisados",
+      "legim",
+      "kavarma",
+      "dimlama",
+      "qovurma-lagmon"
     ]
   },
   {
@@ -3625,7 +3907,7 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "supplement",
-    "chapters": 52,
+    "chapters": 62,
     "semesters": [],
     "recipes": [
       "perfect-fried-rice",
@@ -3698,7 +3980,17 @@
       "orecchiette-dragged-with-a-knife",
       "anzac-biscuits",
       "ragout-de-boulettes",
-      "panellets-de-pinyons"
+      "panellets-de-pinyons",
+      "cepelinai-su-spirguciais",
+      "empanadas-vallunas",
+      "houskovy-knedlik",
+      "pastelon-de-platano-maduro",
+      "kubba-halab",
+      "raspeballer",
+      "trifongo-de-platano-y-yuca",
+      "curry-crab-and-dumpling",
+      "qiymali-somsa",
+      "arepa-reina-pepiada"
     ]
   },
   {
@@ -3739,7 +4031,7 @@
     "lexiconTerm": "Consommé & Clarification",
     "definition": "Stock clarified to crystal transparency using a RAFT: egg whites, ground meat, and mirepoix whisked into cold stock, then heated gently: the proteins coagulate into a floating filter that captures every particle while the meat re-fortifies flavor. Ladled out through the raft's vent hole, the result is a soup so clear you read the bowl's maker's mark, with more flavor than it has any right to. The modern shortcuts (ice filtration through a frozen block, agar clarification) earn their place, but the raft remains the classical exam: patience, temperature control, and protein chemistry in one pot.",
     "origin": "supplement",
-    "chapters": 40,
+    "chapters": 49,
     "semesters": [
       {
         "n": 4,
@@ -3800,7 +4092,20 @@
       "jambon-persille-de-bourgogne",
       "rafute",
       "ttoro-de-saint-jean-de-luz",
-      "garbure-bearnaise"
+      "garbure-bearnaise",
+      "harisa",
+      "caldillo-de-congrio",
+      "sancocho-de-gallina",
+      "soup-joumou",
+      "quzi",
+      "raspeballer",
+      "kjotsupa",
+      "skyr",
+      "brunost",
+      "ciorba-de-burta",
+      "artsoppa-med-punsch",
+      "kalops",
+      "qaynatma-shurpa"
     ]
   },
   {
@@ -3812,7 +4117,7 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "supplement",
-    "chapters": 45,
+    "chapters": 50,
     "semesters": [
       {
         "n": 2,
@@ -3878,7 +4183,12 @@
       "blatjang",
       "esqueixada-de-bacalla",
       "jimami-dofu",
-      "garbure-bearnaise"
+      "garbure-bearnaise",
+      "mote-con-huesillo",
+      "lutefisk",
+      "chuno-phuti",
+      "caraotas-negras",
+      "harees"
     ]
   },
   {
@@ -3890,7 +4200,7 @@
     "lexiconTerm": "Fermentation in Bread: Yeast, Levain, Preferments",
     "definition": "Yeast eats sugar and exhales CO₂ (lift) and alcohol/acids (flavor); TIME is the flavor multiplier, which is why fast bread tastes of nothing. The preferment family trades time for depth: POOLISH (wet, French, mild-sweet), BIGA (stiff, Italian), and LEVAIN/SOURDOUGH STARTER (wild yeast plus lactobacilli: lift AND tang, no commercial yeast at all). Cold retarding (overnight refrigeration) slows yeast while flavor enzymes keep working, the professional's schedule trick AND flavor trick in one. AUTOLYSE, resting just flour and water before adding salt and leaven, lets gluten begin building itself; twenty lazy minutes replacing ten of kneading.",
     "origin": "original",
-    "chapters": 6,
+    "chapters": 8,
     "semesters": [
       {
         "n": 5,
@@ -3904,7 +4214,9 @@
       "alaska-sourdough-pancakes",
       "levain-boule",
       "vollkornbrot-with-rye-soaker",
-      "rye-sourdough-starter"
+      "rye-sourdough-starter",
+      "saldskabmaize",
+      "rugbr-d"
     ]
   },
   {
@@ -3916,7 +4228,7 @@
     "lexiconTerm": "Steaming & En Papillote",
     "definition": "Cooking in vapor at 100°C: gentler than boiling (no agitation, no flavor leached into water) and the technique of choice where the ingredient IS the dish: Cantonese fish, dim sum, couscous, tamales, Christmas pudding. EN PAPILLOTE seals food in parchment so it steams in its own moisture plus wine and butter, a self-saucing micro-oven with tableside theater. Steam burns worse than boiling water (it releases latent heat on contact); open lids and packets away from yourself, always, and never let the pot run dry: the smell of scorched steamer is a lesson learned once.",
     "origin": "supplement",
-    "chapters": 67,
+    "chapters": 78,
     "semesters": [
       {
         "n": 5,
@@ -4034,7 +4346,24 @@
       "manganji-togarashi-to-oage-san-no-taitan",
       "goya-chanpuru",
       "daube-provencale",
-      "talo"
+      "talo",
+      "lavash",
+      "rupjmaizes-kartojums",
+      "pulmay-curanto-en-olla",
+      "sopaipillas-de-zapallo",
+      "mangu",
+      "pastelon-de-platano-maduro",
+      "masgouf",
+      "quzi",
+      "timman-bagilla",
+      "pachamanca-a-la-olla",
+      "shopska-salata",
+      "dhalpuri-roti",
+      "dimlama",
+      "qovoq-manti",
+      "pabellon-criollo",
+      "machboos-dajaj",
+      "zurbian-hadrami"
     ]
   },
   {
@@ -4046,7 +4375,7 @@
     "lexiconTerm": "Sieves: Chinois, Tamis & Food Mill",
     "definition": "Texture's final gatekeepers: the difference between good and restaurant-smooth is usually a pass through mesh. CHINOIS (the conical fine-mesh 'China cap'): sauces, custards, and consommé-adjacent liquids pressed through with a ladle's back, the crème anglaise and silky-soup insurance the pastry wing's custard entries demand. TAMIS (drum sieve): purées pushed across with a scraper: pommes purée's cloud (Robuchon's potatoes are a tamis story), flawless raviolo fillings, sifted dry goods. FOOD MILL: the rustic-smooth middle path. Tomato sauce milled (skins and seeds stay behind, BODY stays in; the sauce wing's Escoffier entry argues this against the blender's foam), mashed potatoes without glue (it cuts, never whips, so starch stays calm), applesauce at volume. The hierarchy by finish: mill = rustic-smooth with body; tamis = refined purée; chinois = liquid silk. Straining is not fussiness; it is the visible difference guests can't name and always notice.",
     "origin": "supplement",
-    "chapters": 66,
+    "chapters": 79,
     "semesters": [
       {
         "n": 2,
@@ -4175,7 +4504,23 @@
       "cervelle-de-canut",
       "soki-soba",
       "daube-provencale",
-      "ttoro-de-saint-jean-de-luz"
+      "ttoro-de-saint-jean-de-luz",
+      "caldillo-de-congrio",
+      "svickova-na-smetane",
+      "boller-i-karry",
+      "gammeldags-oksesteg",
+      "majarete",
+      "morir-sonando",
+      "diri-ak-djon-djon",
+      "quzi",
+      "sorrel",
+      "skyr",
+      "zakwas-buraczany",
+      "coquito",
+      "ciorba-de-burta",
+      "papanasi-cu-smantana-si-dulceata-de-afine",
+      "pholourie-with-tamarind-sauce",
+      "chicha-andina"
     ]
   },
   {
@@ -4187,7 +4532,7 @@
     "lexiconTerm": "Caramel Stages & Sugar Work",
     "definition": "Sugar syrup's temperature IS its destiny: thread 110°C (syrups), soft ball 113–116 (fudge, pralines, Italian meringue), firm/hard ball 120–130 (caramels, nougat), soft/hard crack 132–154 (toffee, brittle, spun sugar), then true CARAMEL 160–180°C: sugar itself breaking into hundreds of bitter-sweet compounds, from blond to mahogany to one shade before ruin. Wet caramel (sugar + water) is safer; dry caramel is faster and riskier. Crystallization is the saboteur: don't stir once boiling, brush down stray crystals, or insure with corn syrup/glucose. Add cream and butter and it's sauce; add nothing and stop it dark and it's the top of a crème brûlée's ancestry.",
     "origin": "original",
-    "chapters": 37,
+    "chapters": 41,
     "semesters": [
       {
         "n": 4,
@@ -4235,7 +4580,12 @@
       "flan-cubano",
       "faikakai-topai",
       "tocino-de-cielo",
-      "goxua"
+      "goxua",
+      "arepa-de-choclo-con-cuajada",
+      "trdelnik",
+      "brunede-kartofler",
+      "asado-negro",
+      "quesillo"
     ]
   },
   {
@@ -4266,7 +4616,7 @@
     "lexiconTerm": "Sweat vs. Sauté vs. Sear",
     "definition": "Three pan verbs distinguished by heat and intent. SWEAT: low heat, a little fat, often a lid or parchment; vegetables soften and release moisture WITHOUT color (the start of risotto, velouté, most braises where onion flavor should be sweet, not roasty). SAUTÉ: medium-high, food 'jumping' (sauter) in a wide pan: light browning, fast cooking, constant motion. SEAR: maximum heat, zero motion: deep crust, Maillard at full roar. Recipes say 'cook the onions' and mean one of three different flavors; knowing which one the dish needs is the difference between following recipes and cooking.",
     "origin": "supplement",
-    "chapters": 89,
+    "chapters": 103,
     "semesters": [
       {
         "n": 2,
@@ -4454,7 +4804,26 @@
       "pissaladiere-nicoise",
       "piperade",
       "axoa-de-veau-despelette",
-      "ttoro-de-saint-jean-de-luz"
+      "ttoro-de-saint-jean-de-luz",
+      "cepelinai-su-spirguciais",
+      "pastel-de-choclo",
+      "porotos-granados",
+      "papas-chorreadas",
+      "svickova-na-smetane",
+      "mangu",
+      "molondrones-guisados",
+      "sos-ti-malis",
+      "diri-ak-djon-djon",
+      "kubba-halab",
+      "margat-bamia",
+      "ital-ackee-and-callaloo",
+      "plokkfiskur",
+      "chuno-phuti",
+      "go-abki-w-sosie-pomidorowym",
+      "guineitos-en-escabeche",
+      "sarmale-in-foi-de-varza-murata",
+      "lyutenitsa",
+      "asado-negro"
     ]
   },
   {
@@ -4520,7 +4889,7 @@
     "lexiconTerm": "Tempering (Eggs & Chocolate)",
     "definition": "One word, two crafts. TEMPERING EGGS: whisking hot liquid gradually into yolks before returning all to the pot, raising their temperature gently so custards (crème anglaise, carbonara's cousin) thicken at 82°C instead of scrambling at 90°C, the thermometer's best friend. TEMPERING CHOCOLATE: melting, cooling, and reheating to precise curves (dark: ~50°→27°→31–32°C) so cocoa butter sets in stable Form V crystals: glossy snap instead of dull bloom. Both are the same discipline wearing different aprons: proteins and fats obey temperature, and the cook who controls degrees controls texture.",
     "origin": "original",
-    "chapters": 36,
+    "chapters": 45,
     "semesters": [
       {
         "n": 6,
@@ -4573,7 +4942,17 @@
       "creme-caramel-the-set-custard",
       "macadamia-and-wattleseed-tart",
       "flan-cubano",
-      "bobotie"
+      "bobotie",
+      "kuchen-de-frambuesa",
+      "rundown",
+      "skyr",
+      "rocoto-relleno-arequipeno",
+      "queso-helado-arequipeno",
+      "zurek-na-zakwasie",
+      "banitsa-sas-sirene",
+      "prinsesstarta",
+      "macaroni-pie",
+      "quesillo"
     ]
   },
   {
@@ -4585,7 +4964,7 @@
     "lexiconTerm": "Poach, Simmer, Boil",
     "definition": "Three temperatures pretending to be one method. POACH: 71–82°C, water barely shivering: eggs, fish, chicken breast, anything delicate that violent bubbles would shred. SIMMER: 85–95°C, lazy bubbles: stocks, braises, beans, sauces. BOIL: 100°C rolling: pasta, blanching, potatoes, and almost nothing made of protein. The most common home error is treating these as synonyms; the most common professional discipline is watching the bubbles, not the dial. Salt poaching liquids and courts-bouillons like they are the sauce, because for those minutes they are.",
     "origin": "supplement",
-    "chapters": 73,
+    "chapters": 92,
     "semesters": [
       {
         "n": 4,
@@ -4721,7 +5100,36 @@
       "le-grand-aioli",
       "daube-provencale",
       "axoa-de-veau-despelette",
-      "ttoro-de-saint-jean-de-luz"
+      "ttoro-de-saint-jean-de-luz",
+      "pasuts-tolma",
+      "cepelinai-su-spirguciais",
+      "marineeritud-korvits",
+      "pastel-de-choclo",
+      "caldillo-de-congrio",
+      "sancocho-de-gallina",
+      "svickova-na-smetane",
+      "hovezi-gulas",
+      "kulajda",
+      "boller-i-karry",
+      "pollo-guisado-dominicano",
+      "majarete",
+      "griot",
+      "dolma-iraqiyya",
+      "shalgham-bil-dibis",
+      "rundown",
+      "lutefisk",
+      "plokkfiskur",
+      "r-mmegr-t",
+      "chairo",
+      "zurek-na-zakwasie",
+      "guineitos-en-escabeche",
+      "ciorba-de-burta",
+      "curry-crab-and-dumpling",
+      "qaynatma-shurpa",
+      "arepa-reina-pepiada",
+      "pabellon-criollo",
+      "asado-negro",
+      "harees"
     ]
   },
   {
@@ -4800,7 +5208,7 @@
     "lexiconTerm": "Deep & Shallow Frying",
     "definition": "Frying is violent dehydration: oil at 160–190°C flash-boils surface moisture outward (the bubbles ARE water leaving), creating crust while steam-cooking the interior. Laws: recover temperature between batches (crowding = greasy), match oil to job (neutral high-smoke oils for deep; the double-fry, low then high, for fries, tostones, and chicken that must stay crisp), drain on RACKS not paper (paper steams the base), and salt in the first seconds while the surface is still hot and receptive. Oil is a reusable ingredient: strain it, smell it, retire it when it darkens or foams.",
     "origin": "supplement",
-    "chapters": 51,
+    "chapters": 55,
     "semesters": [
       {
         "n": 1,
@@ -4889,7 +5297,11 @@
       "songshu-guiyu",
       "bu-thee-kyaw",
       "pescaito-frito-gaditano",
-      "kushikatsu-shinsekai-rules"
+      "kushikatsu-shinsekai-rules",
+      "smazeny-syr-s-tatarskou-omackou",
+      "chicharron-de-pollo",
+      "cuy-chactado",
+      "zakwas-zytni-na-zurek"
     ]
   },
   {
@@ -4918,7 +5330,7 @@
     "lexiconTerm": "The Second Day: Reheating as Technique",
     "definition": "Leftovers are not lesser food; they are food at a DIFFERENT STAGE, and reheating is cooking, with its own laws. THE IMPROVERS: braises, stews, curries, chilis, and tomato sauces genuinely gain overnight (flavors marry, fat redistributes, starches settle: the cook-chill entry's 'better the second day', engineered on purpose by restaurants); reheat these GENTLY and add back brightness (the top-note layer dies in the fridge; fresh herbs, a squeeze, a swirl of raw oil resurrect it). THE TECHNIQUES BY FOOD: crisp things re-crisp in DRY heat only (oven or air-fryer at 190°C on a rack: the microwave is where fried chicken goes to become a sponge); pizza in a covered skillet (crisp base, melted top, no sog); rice safely and brilliantly as fried rice (day-old is the SPEC: the chill firms grains for the wok; store it promptly, per the food-safety entry's rules); steak sliced cold or revived low-and-slow then flashed (the reverse sear's little sibling); pasta reborn in a pan with a splash of water rebuilding the emulsion; bread flashed wet into a hot oven for a second first-day. THE ADD-BACK DOCTRINE, the entry's one rule: reheating restores temperature but not TIME'S CASUALTIES: acid, herbs, crunch, and aroma are re-seasonings, not options. Cook once, season twice.",
     "origin": "supplement",
-    "chapters": 25,
+    "chapters": 26,
     "semesters": [],
     "recipes": [
       "moroccan-carrot-salad",
@@ -4946,7 +5358,8 @@
       "hyderabadi-dum-biryani",
       "aussie-meat-pie",
       "droewors",
-      "panellets-de-pinyons"
+      "panellets-de-pinyons",
+      "soup-joumou"
     ]
   },
   {
@@ -4958,10 +5371,11 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "original",
-    "chapters": 1,
+    "chapters": 2,
     "semesters": [],
     "recipes": [
-      "laugenbrezeln"
+      "laugenbrezeln",
+      "lutefisk"
     ]
   },
   {
@@ -5052,7 +5466,7 @@
     "lexiconTerm": "Doneness by Touch, Sight & Sound",
     "definition": "The thermometer is the truth (that entry stands), but the senses are the always-on instruments, and professionals read both. TOUCH: the steak firmness scale (raw = slack cheek, rare = thenar pad relaxed, medium = thumb-to-middle-finger tension, well = tensed; imprecise alone, powerful once calibrated AGAINST your thermometer on your own pans); bread's hollow tap; the fish flake-test at a fork's gentle twist; pasta bitten for the white pinpoint of true al dente; caramel's thread between chilled fingers. SIGHT: the shrimp's C-curl (O means overcooked), milk-solid color in brown butter, the sauce's nappe line, syrup's bubble size tightening as water leaves, the jam's sheet off a cold spoon, proofing's slow-spring poke. SOUND, the most neglected: frying's rolling boil quieting as moisture finishes (silence in the fryer means done or means burning; the pitch tells which), the sear's confident sizzle vs. the crowded pan's steam-hiss, brown butter's foam going quiet ten seconds before ready, the hollow knock of a finished loaf. The pedagogy: use the thermometer to TRAIN the senses: probe, then press, look, and listen, until the instruments agree and your hands carry the calibration to any kitchen with no batteries required.",
     "origin": "supplement",
-    "chapters": 66,
+    "chapters": 79,
     "semesters": [
       {
         "n": 6,
@@ -5156,7 +5570,29 @@
       "kasujiru-nada-style",
       "yudofu",
       "saucisson-de-lyon-en-brioche",
-      "rafute"
+      "rafute",
+      "ghapama",
+      "kugelis",
+      "sklandrausis",
+      "kuchen-de-frambuesa",
+      "changua",
+      "houskovy-knedlik",
+      "vepro-knedlo-zelo",
+      "moravske-kolace",
+      "dr-mmekage-fra-brovst",
+      "jerk-pork",
+      "festival",
+      "raspeballer",
+      "lutefisk",
+      "zrazy-zawijane",
+      "sernik-krakowski",
+      "tembleque",
+      "pholourie-with-tamarind-sauce",
+      "macaroni-pie",
+      "qaynatma-shurpa",
+      "qovurma-lagmon",
+      "arepa-reina-pepiada",
+      "asado-negro"
     ]
   },
   {
@@ -5241,7 +5677,7 @@
     "lexiconTerm": "Meringues: French, Swiss, Italian",
     "definition": "One foam, three temperaments. FRENCH: raw whites whipped with sugar; lightest, least stable, for baking into pavlova shells and folding into batters. SWISS: whites and sugar warmed over a bain-marie to ~70°C then whipped, denser, glossier, safe from grit, the buttercream base. ITALIAN: 118°C sugar syrup streamed into whipping whites: fully cooked, the most stable of all, for torching (baked Alaska, tarte au citron meringuée) and marshmallow work. Universal laws: no trace of yolk fat, a clean bowl, sugar added gradually, and 'stiff peaks' means the tip stands with a slight bow; chalky over-whip is one minute past glory.",
     "origin": "original",
-    "chapters": 16,
+    "chapters": 18,
     "semesters": [
       {
         "n": 6,
@@ -5275,7 +5711,10 @@
       "suspiro-a-la-limena",
       "cooked-meringue-italian-and-swiss",
       "vanilla-souffle-on-a-patissiere-base",
-      "goxua"
+      "goxua",
+      "rupjmaizes-kartojums",
+      "makowiec",
+      "sernik-krakowski"
     ]
   },
   {
@@ -5287,7 +5726,7 @@
     "lexiconTerm": "Wok Hei & Stir-Fry Discipline",
     "definition": "Wok hei, 'the breath of the wok', is the smoky, singed-air aroma from food and oil vaporizing against carbon steel at extreme heat, micro-charring in mid-toss. The home translation: maximum burner, a carbon-steel wok preheated to smoking, ingredients DRY and cut uniform, everything prepped before ignition (a stir-fry is 90% mise, 10% cooking), small batches, sauces poured down the hot wok wall so they scorch-caramelize on arrival, and the discipline of letting food SIT between tosses to catch char. Crowding is the killer; one portion at a time is the law from char kway teow to pad see ew.",
     "origin": "original",
-    "chapters": 14,
+    "chapters": 15,
     "semesters": [
       {
         "n": 8,
@@ -5319,7 +5758,8 @@
       "kyet-thun-ni-kyaw",
       "nan-bya",
       "arroz-chaufa",
-      "appa"
+      "appa",
+      "qovurma-lagmon"
     ]
   },
   {

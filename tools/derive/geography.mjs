@@ -54,7 +54,11 @@ export const ATLAS_OF_CHAPTERS = {
 		   Eastern" chapter predates it and covers the wider region, so the two
 		   sit together rather than pretending to be one country. */
 		'The Levant & the Gulf': ['Levantine', 'Middle Eastern'],
+		Iraq: ['Iraqi'],
+		'Yemen & the Gulf': ['Yemeni & the Gulf'],
 		Georgia: ['Georgian'],
+		Armenia: ['Armenian'],
+		'Uzbekistan & the Silk Road': ['Uzbek & the Silk Road'],
 		'The Caucasus & Central Asia': ['Caucasus & Central Asian']
 	},
 	Europe: {
@@ -74,8 +78,15 @@ export const ATLAS_OF_CHAPTERS = {
 		Hungary: ['Hungarian'],
 		Britain: ['British'],
 		Ireland: ['Irish'],
+		Denmark: ['Danish'],
+		Sweden: ['Swedish'],
+		'Norway & Iceland': ['Norwegian & Icelandic'],
 		Scandinavia: ['Scandinavian'],
 		'Russia & Ukraine': ['Russian & Ukrainian'],
+		Poland: ['Polish'],
+		'Czechia & Slovakia': ['Czech & Slovak'],
+		'Romania & Bulgaria': ['Romanian & Bulgarian'],
+		'The Baltics': ['Baltic'],
 		'Central & Eastern Europe': ['Eastern European']
 	},
 	Africa: {
@@ -93,13 +104,24 @@ export const ATLAS_OF_CHAPTERS = {
 	},
 	'The Americas': {
 		Mexico: ['Mexican', 'Oaxacan', 'Yucatecan'],
-		Peru: ['Peruvian'],
+		Peru: ['Peruvian', 'Peruvian Highlands'],
 		Brazil: ['Brazilian'],
 		Argentina: ['Argentine'],
 		'South America': ['South American'],
 		Cuba: ['Cuban'],
-		/* Thirteen nations in ten recipes. Cuba is out; the rest are still
-		   waiting, and this entry is the honest record of that. */
+		Jamaica: ['Jamaican'],
+		'Trinidad & Tobago': ['Trinidadian'],
+		Haiti: ['Haitian'],
+		'Puerto Rico': ['Puerto Rican'],
+		'The Dominican Republic': ['Dominican'],
+		Colombia: ['Colombian'],
+		Venezuela: ['Venezuelan'],
+		Chile: ['Chilean'],
+		/* What is left after the splits, and still named for a region because
+		   that is what it still is: Barbados, Guyana, the Windwards and the
+		   Leewards have no chapter of their own yet. Same for the southern
+		   cone's remaining nations under South America. Keeping these honest
+		   is better than pretending the map is finished. */
 		'The Caribbean': ['Caribbean'],
 		Canada: ['Canadian']
 	},

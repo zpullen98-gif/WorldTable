@@ -154,6 +154,7 @@ export const STATION_MAP = {
 	"Egg wash & the baker’s shine": ["patissier"],  // Unanimous.
 	"Empanada folding": ["patissier"],  // Contested. Two of three lenses said pastry; garde-manger audit struck its own claim: one recipe, no definition, and the same hands as pierogi and ple
 	"Pleating dumplings": ["patissier"],  // New, and filed beside Empanada folding for the same reason: in this brigade mapping the shaping of a filled dough is pastry work, whatever cuisine it comes from. The Dumpling Atlas made it real.
+	"Rolling dolmas": ["garde-manger"],  // New with the Armenian and Iraqi chapters. Filled and rolled leaves are cold-section work: the assembly is done off the heat and in quantity, which is the garde-manger's day.
 	"Falafel": ["rotisseur"],  // Contested. Entremetier audit struck it: the query field is literally 'falafel frying technique' and the anchor is Deep & Shallow Frying. The chickpea 
 	"Fermentation": ["garde-manger", "patissier"],  // SPLIT. The definition covers both kingdoms explicitly, lacto-ferments and koji against yeast and levain, and 10 of 18 recipes are leavened doughs. T
 	"Filleting fish": ["poissonnier"],  // Contested. Poissonnier audit struck the garde-manger half as double-counting: the meat/poultry side of that same lexicon entry already has its own tec

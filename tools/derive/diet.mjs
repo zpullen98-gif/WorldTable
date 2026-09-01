@@ -38,6 +38,9 @@ const MEAT = [
 	// French and Basque words for meat the list already held in English.
 	// 'lard' is here but word-boundary matching cannot reach inside 'lardons',
 	// which is how a tarte flambee and a salade lyonnaise both read as meatless.
+	// A stewing hen is a chicken. 'gallina' and 'hen' are how half the
+	// Americas write it, and neither reached the table.
+	'hen', 'stewing hen', 'gallina', 'cockerel', 'capon',
 	'lardon', 'lardons', 'poitrine', 'magret', 'confit de canard', 'gesier',
 	'gizzard', 'txuleta', 'chuleta', 'rib chop', 'presa', 'secreto', 'pluma',
 	'boudin', 'saucisson', 'andouillette', 'jambon', 'graisse de canard',
@@ -83,6 +86,11 @@ const FISH = [
 	// labelled with an allergen it does not have.
 	'sawara', 'hamo', 'hamachi', 'iwashi', 'kamasu', 'nodoguro', 'shirasu',
 	'hotaru ika', 'kinmedai', 'shishamo',
+	// Freshwater and northern European names. Swedish ansjovis is spice
+	// cured SPRAT rather than anchovy, and the table knew neither word, so a
+	// dish built on a tin of them declared no fish at all.
+	'carp', 'ansjovis', 'sprat', 'sprats', 'brisling', 'saltfish', 'salt fish',
+	'bacalhau', 'zander', 'tench', 'bream', 'burbot', 'vendace',
 	// South African, West African and Australasian names. Every one of these
 	// arrived with a chapter and none was in the table: a reader avoiding fish
 	// would have been told a snoek braai contains none.

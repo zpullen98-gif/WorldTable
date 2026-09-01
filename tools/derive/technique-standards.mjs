@@ -12,17 +12,17 @@
  * searing anything is doing the same measurable thing whether the pan holds
  * duck or aubergine, and that is assessable once, for all of it.
  *
- * 90 of the 1510 remain unassessable and always will on this approach: 67
- * carry no technique tag at all, and the other 23 exercise only techniques too
+ * 114 of the 1710 remain unassessable and always will on this approach: 89
+ * carry no technique tag at all, and the other 25 exercise only techniques too
  * rare in this corpus to be worth a standard. That is the honest ceiling rather
  * than a backlog, and it is gated below with everything else: the first
  * version of this sentence said 146 and 35, which were reasoned rather than
  * measured and were both wrong.
  *
  * The 59 techniques written here are every technique the corpus uses on 12 or
- * more recipes. They put a standard on 1375 recipes that had none, taking the
- * assessable corpus from 45 to 1420 of 1510: for 59 pieces of writing rather
- * than 1375.
+ * more recipes. They put a standard on 1551 recipes that had none, taking the
+ * assessable corpus from 45 to 1596 of 1710: for 59 pieces of writing rather
+ * than 1551.
  *
  * These were 752 and 797 until the em dash sweep of 29 Aug 2026. Exactly one
  * recipe moved: kulfi, whose first ingredient read "1.5L whole milk - reduced
