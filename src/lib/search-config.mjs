@@ -37,10 +37,41 @@ import { transliterate } from '../../tools/slugify.mjs';
  * @param {string} s
  */
 export const fold = (s) =>
-	transliterate(s)
+	spell(s)
 		.normalize('NFD')
 		.replace(/[̀-ͯ]/g, '')
 		.toLowerCase();
+
+/**
+ * The rest of what slugify does before it starts hyphenating, and for the same
+ * reasons, applied BEFORE the text is split into terms.
+ *
+ * It has to run before the split, not after, which is why it cannot live in
+ * fold(): MiniSearch tokenizes on punctuation, so by the time processTerm sees
+ * a term the apostrophe has already become a word boundary. "Za'atar" was
+ * indexed as "za" and "atar", and a cook typing "zaatar" - which is how it is
+ * usually written in English - matched neither, so the grid came back empty.
+ * That cost eight dishes: Oka i'a, Ta'ameya, Fa'ausi, Ka'ak al-Quds,
+ * Man'oushe Za'atar, Labneh bi Zeit wa Za'atar, Fried Shrimp Po'boy and
+ * Sfoglia all'Uovo.
+ *
+ * The ampersand is the same bargain read the other way. "&" is punctuation, so
+ * "Beef & Broccoli" indexed "beef" and "broccoli" and nothing between them,
+ * while a cook types the word: "Beef and Broccoli" carries a third term that
+ * matched nothing, and combineWith AND turned that into no results at all.
+ * Five dishes, plus Red Beans & Rice, which returned eighteen cards led by
+ * Cuban Black Beans and Rice and never itself.
+ *
+ * slugify has deleted apostrophes and spelled out "&" since the beginning. All
+ * this does is stop the search box from disagreeing with the URL bar.
+ *
+ * @param {string} s
+ */
+function spell(s) {
+	return transliterate(s)
+		.replace(/['’`´]/g, '')
+		.replace(/&/g, ' and ');
+}
 
 /** @type {import('minisearch').Options} */
 export const miniOptions = {
@@ -51,9 +82,35 @@ export const miniOptions = {
 	fields: ['name', 'chapter', 'ingredients', 'flavor', 'technique'],
 	// Nothing stored: the id indexes straight into the recipes array.
 	storeFields: [],
+	/*
+	 * MiniSearch's own default, with spell() run first. The split pattern is
+	 * copied from it deliberately rather than imported: loadJS has to be handed
+	 * the same tokenizer the index was built with, and a tokenizer that changed
+	 * under a minisearch upgrade would corrupt every lookup silently rather
+	 * than failing. If that pattern ever drifts, search.test.ts is where it
+	 * shows up.
+	 */
+	tokenize: (/** @type {string} */ text) =>
+		spell(text)
+			.split(/[\n\r\p{Z}\p{P}]+/u)
+			.filter(Boolean),
 	processTerm: (/** @type {string} */ term) => {
 		const t = fold(term);
-		return t.length > 1 ? t : null;
+		/*
+		 * "and" is dropped rather than indexed, even though spell() has just
+		 * manufactured it out of every "&". Indexing it would put the term on
+		 * 1542 of 1844 documents and then let combineWith AND demand it back:
+		 * a cook typing "mac and cheese" would be asking for three terms where
+		 * they meant two. Dropped, the query is ["mac","cheese"] and the dish
+		 * is found whichever way its name spells the conjunction.
+		 *
+		 * spell() still has to do the substitution, because filter.ts's
+		 * substring haystack is built with fold() and never tokenized, and it
+		 * is the path the grid uses until the index finishes loading. Without
+		 * it the ampersand dishes come back empty for the first moment and then
+		 * populate, which is the flicker this whole change is about.
+		 */
+		return t.length > 1 && t !== 'and' ? t : null;
 	},
 	searchOptions: {
 		// prefix: "lemongr" already finds lemongrass while you type.

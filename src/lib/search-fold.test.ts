@@ -106,3 +106,108 @@ describe('the seven dishes, against the real index', () => {
 		expect(missing, 'dishes absent from their own results').toBe(0);
 	});
 });
+
+/**
+ * The same defect wearing two other characters, found by a sweep of the search
+ * path after the seven were fixed. Both were already settled law in the URL
+ * bar: slugify has deleted apostrophes and spelled out "&" from the beginning.
+ * Only the search box disagreed.
+ */
+describe('an apostrophe a cook does not type', () => {
+	type Row = { name: string; chapter: string; flavorTags: string[] };
+	const rows = index as unknown as Row[];
+	const mini = new MiniSearch(miniOptions);
+	mini.addAll(
+		rows.map((r, id) => ({
+			id,
+			name: r.name,
+			chapter: r.chapter,
+			ingredients: '',
+			flavor: (r.flavorTags ?? []).join(' '),
+			technique: ''
+		}))
+	);
+	const ids = (q: string) => mini.search(q).map((r) => r.id as number);
+
+	it('finds the dish whether or not the apostrophe is typed', () => {
+		// "zaatar" is how English usually writes it, and it found NOTHING.
+		const named = (n: string) => rows.findIndex((r) => r.name === n);
+		expect(ids('zaatar').length).toBeGreaterThan(0);
+		expect(ids('Manoushe Zaatar')[0]).toBe(named("Man'oushe Za'atar"));
+		expect(ids('Oka ia')[0]).toBe(named("Oka i'a"));
+		expect(ids('Taameya')[0]).toBe(named("Ta'ameya"));
+		expect(ids('Kaak al-Quds')[0]).toBe(named("Ka'ak al-Quds"));
+	});
+
+	it('all 27 apostrophe dishes survive having it dropped', () => {
+		let empty = 0;
+		for (let i = 0; i < rows.length; i++) {
+			if (!/['’]/.test(rows[i].name)) continue;
+			if (!ids(rows[i].name.replace(/['’]/g, '')).includes(i)) empty++;
+		}
+		expect(empty).toBe(0);
+	});
+});
+
+describe('an ampersand a cook types as a word', () => {
+	type Row = { name: string; chapter: string; flavorTags: string[] };
+	const rows = index as unknown as Row[];
+	const mini = new MiniSearch(miniOptions);
+	mini.addAll(
+		rows.map((r, id) => ({
+			id,
+			name: r.name,
+			chapter: r.chapter,
+			ingredients: '',
+			flavor: (r.flavorTags ?? []).join(' '),
+			technique: ''
+		}))
+	);
+	const ids = (q: string) => mini.search(q).map((r) => r.id as number);
+	const named = (n: string) => rows.findIndex((r) => r.name === n);
+
+	it('finds the dish when "&" is written out', () => {
+		expect(ids('Baked Mac and Cheese')[0]).toBe(named('Baked Mac & Cheese'));
+		expect(ids('Beef and Broccoli')[0]).toBe(named('Beef & Broccoli'));
+		expect(ids('Lamb and Apricot Tagine')[0]).toBe(named('Lamb & Apricot Tagine'));
+	});
+
+	it('ranks the dish itself first, not a namesake', () => {
+		/* "red beans and rice" used to return 18 cards led by Cuban Black Beans
+		   and Rice, with the dish it names absent from all of them. */
+		expect(ids('red beans and rice')[0]).toBe(named('Red Beans & Rice'));
+	});
+
+	it('all 11 ampersand dishes survive it being spelled out', () => {
+		let lost = 0;
+		for (let i = 0; i < rows.length; i++) {
+			if (!rows[i].name.includes('&')) continue;
+			if (!ids(rows[i].name.replace(/&/g, 'and')).includes(i)) lost++;
+		}
+		expect(lost).toBe(0);
+	});
+
+	it('does not index the conjunction it just manufactured', () => {
+		/* spell() turns every "&" into "and", so indexing the word would put it
+		   on 1542 of 1844 documents and then let combineWith AND demand it
+		   back. Dropped at processTerm instead: the substitution exists for the
+		   substring haystack, which is never tokenized. */
+		expect(miniOptions.processTerm?.('and', 'name')).toBeFalsy();
+		expect(miniOptions.processTerm?.('And', 'name')).toBeFalsy();
+		expect(ids('and')).toHaveLength(0);
+		// A real term of the same length is untouched.
+		expect(miniOptions.processTerm?.('egg', 'name')).toBe('egg');
+	});
+
+	it('leaves the ordinary corpus alone', () => {
+		/* Counts are not asserted: this fixture indexes name/chapter/flavor
+		   only, so they differ from the shipped index, which also carries
+		   ingredients and techniques. The invariants are what must hold. */
+		const named = (n: string) => rows.findIndex((r) => r.name === n);
+		expect(ids('ragu')).toContain(named('Ragù alla Bolognese'));
+		// And still must NOT reach asparagus, which the old substring scan did.
+		expect(ids('ragu')).not.toContain(named('Idaho Morel and Asparagus Saute'));
+		expect(ids('nicoise')).toContain(named('Salade Niçoise'));
+		expect(ids('brulee')).toContain(named('Crème Brûlée'));
+	});
+});
