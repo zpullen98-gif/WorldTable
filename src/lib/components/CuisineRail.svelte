@@ -51,6 +51,24 @@
 
 	type Country = { country: string | null; chapters: ChapterRef[] };
 
+	/**
+	 * How many dishes a chapter is offering right now.
+	 *
+	 * This was `counts?.get(slug) ?? fallback`, and the coalesce could not tell
+	 * "nobody counted" from "counted, and the answer is nothing": railCounts
+	 * only carries a key for a chapter with at least one match, so a chapter the
+	 * filter emptied fell through to chapters.json's UNFILTERED total. With no
+	 * filter every chapter has a key and the fallback never fires, which is why
+	 * it stayed invisible. Measured: unfiltered, 0 of 171 rows wrong; q="pad
+	 * thai", 159 of 171 rows advertising 1696 dishes that are not there; a query
+	 * matching nothing, all 171 offering the whole corpus. Median across
+	 * thirteen real queries, 161 of 171.
+	 *
+	 * `counts` stays nullable because the rail can be rendered with no filtered
+	 * view to count; when it IS given, an absent key is a real zero and says so.
+	 */
+	const dishes = (c: ChapterRef) => (counts ? (counts.get(c.slug) ?? 0) : c.count);
+
 	const groups = $derived.by(() => {
 		const byGroup = new Map<string, Map<string, ChapterRef[]>>();
 		for (const c of chapters) {
@@ -77,7 +95,18 @@
 				country: k === '' ? null : k,
 				chapters: inner.get(k)!.sort((a, b) => a.name.localeCompare(b.name))
 			}));
-			const total = countries.reduce((n, c) => n + c.chapters.length, 0);
+			/*
+			 * The sum of the rows beneath it, which is not what this used to be:
+			 * it counted CHAPTERS while every row under it counts dishes, so the
+			 * same column read "Europe 31" over rows adding to 346. It also
+			 * ignored the filter completely, and a group is COLLAPSED by
+			 * default, so for most of the rail this was the only number on
+			 * screen and the one least able to change.
+			 */
+			const total = countries.reduce(
+				(n, c) => n + c.chapters.reduce((m, ch) => m + dishes(ch), 0),
+				0
+			);
 			return { group: g, countries, total };
 		});
 	});
@@ -101,27 +130,9 @@
 		open = next;
 	}
 
-	/**
-	 * What a row says it holds.
-	 *
-	 * This was `counts?.get(slug) ?? fallback`, and the coalesce could not tell
-	 * "nobody counted" from "counted, and the answer is nothing": railCounts
-	 * only ever has a key for a chapter with at least one match, so a chapter
-	 * filtered to zero fell through to chapters.json's UNFILTERED total. With no
-	 * filter every chapter has a key and the fallback never fires, which is why
-	 * this stayed invisible. Measured: unfiltered, 0 of 171 rows wrong; q="pad
-	 * thai", 159 of 171 rows advertising 1696 dishes that are not there; a query
-	 * matching nothing, all 171 offering the whole corpus. Median across
-	 * thirteen real queries, 161 of 171.
-	 *
-	 * `counts` stays nullable because the rail can be rendered with no filtered
-	 * view to count; when it IS given, an absent key is a real zero and says so.
-	 * The row stays a link on purpose: a cook who has narrowed too far may well
-	 * want to jump to a chapter and start again, and a row reading 0 has already
-	 * said what is there.
-	 */
-	const shown = (slug: string, fallback: number) =>
-		counts ? (counts.get(slug) ?? 0) : fallback;
+	/* A row stays a link even at 0, on purpose: a cook who has narrowed too far
+	   may well want to jump to a chapter and start again, and a row reading 0
+	   has already said what is there. See dishes() above for the count itself. */
 </script>
 
 <nav class="rail" aria-label="Chapters">
@@ -149,7 +160,7 @@
 								<li class="cntry" aria-hidden="true">{ctry.country}</li>
 							{/if}
 							{#each ctry.chapters as c (c.slug)}
-								{@const n = shown(c.slug, c.count)}
+								{@const n = dishes(c)}
 								<li>
 									<a
 										href="{base}/chapter/{c.slug}"

@@ -220,10 +220,19 @@ test('the chapter rail sums to the grid, filtered and unfiltered', async ({ page
 		const ns = await page.locator('.rail .sub a .ct').allTextContents();
 		return ns.reduce((s, t) => s + Number(t), 0);
 	};
+	/* The group headers are the only number a COLLAPSED group shows, and they
+	   counted chapters while every row under them counted dishes: the same
+	   column read "Europe 31" over rows adding to 346, and it ignored the
+	   filter entirely. They have to sum to the grid as well. */
+	const headerSum = async () => {
+		const ns = await page.locator('.rail .gct').allTextContents();
+		return ns.reduce((s, t) => s + Number(t), 0);
+	};
 
 	await openAll();
 	await expect(page.locator('.rail .sub a')).toHaveCount(TOTALS.chapters);
 	expect(await railSum()).toBe(TOTALS.recipes);
+	expect(await headerSum()).toBe(TOTALS.recipes);
 	await expect(page.locator('.rail .sub a.empty')).toHaveCount(0);
 
 	// Narrow it hard. Every row must still add up to the grid.
@@ -233,6 +242,7 @@ test('the chapter rail sums to the grid, filtered and unfiltered', async ({ page
 	const cards = await page.locator('.card').count();
 	expect(cards).toBeGreaterThan(0);
 	expect(await railSum()).toBe(cards);
+	expect(await headerSum()).toBe(cards);
 
 	// The emptied chapters say 0 and are marked, rather than advertising their
 	// unfiltered totals.
@@ -245,4 +255,5 @@ test('the chapter rail sums to the grid, filtered and unfiltered', async ({ page
 	await expect(page.locator('.card')).toHaveCount(0);
 	await openAll();
 	expect(await railSum()).toBe(0);
+	expect(await headerSum()).toBe(0);
 });
