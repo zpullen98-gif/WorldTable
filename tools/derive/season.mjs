@@ -77,22 +77,78 @@ function matchesProduce(blob, produce, PANTRY) {
 }
 
 /**
+ * Words a keyword must NOT be allowed to claim, because they are a different
+ * ingredient rather than an inflection of the same one.
+ *
+ * The left-boundary rule below is deliberate and stays: the shelf is written as
+ * stems, so "cherr" catches cherry and cherries and "anchov" catches anchovy
+ * and anchovies. Adding a right boundary was measured and removes 1125 pantry
+ * claims, most of them plurals the stems exist to catch. This table is the
+ * narrow alternative: name the collisions instead of changing the rule.
+ *
+ * Measured over the corpus, worst first. The two that mattered most:
+ *
+ *   'mince' claimed "minced garlic", 181 times, so Ground meat was asserted by
+ *   201 recipes of which about 85 have no meat in them at all. Tick mince,
+ *   onion and garlic, the most ordinary thing a cook ticks, and the top results
+ *   were Farofa de Dende, Pebre Chileno and Shiro Wat, each announcing "Using
+ *   Ground meat", while the actual mince dishes were pushed below them. The
+ *   real thing is still caught: 'minced beef' and 'minced pork' are their own
+ *   keywords on the same item.
+ *
+ *   'corn' claimed cornstarch, cornflour, cornmeal and Cornish, so 156 corn
+ *   free dishes reported "Using Corn", printed as literal text under a Butter
+ *   Chicken. Masa still counts as corn, which is how the arepas, tamales and
+ *   tortillas keep the tag they should have.
+ *
+ * The same helper drives the seasonal "peak this month" line, so every entry
+ * here fixes both surfaces at once.
+ */
+/** @type {Record<string, string[]>} */
+const NOT_THIS_WORD = {
+	mince: ['minced'],
+	butter: ['buttermilk', 'buttercream', 'butternut', 'butterhead', 'butterfly'],
+	corn: ['cornstarch', 'cornflour', 'cornmeal', 'cornbread', 'cornflake', 'cornichon',
+		'cornish', 'corned', 'corn syrup'],
+	masa: ['masala'],
+	tamari: ['tamarind'],
+	bread: ['breadcrumb', 'breadfruit'],
+	ancho: ['anchovy', 'anchovies', 'anchoa'],
+	lemon: ['lemongrass'],
+	'rice ': ['rice flour', 'rice vinegar', 'rice noodle', 'rice vermicelli', 'rice paper',
+		'rice wine'],
+	'cream ': ['cream cheese'],
+	grape: ['grapeseed'],
+	grapes: ['grapeseed'],
+	bun: ['bunch'],
+	egg: ['eggplant'],
+	raisin: ['raising'],
+	cod: ['coddle', 'coddie']
+};
+
+/**
  * Left-boundary match: the keyword must start a word, but need not finish one.
  *
  * The shelf is full of deliberate stems: "cherr" is written to catch cherry and
  * cherries, so a right boundary would break it. A LEFT boundary is what stops
  * "sage" matching "sausage" and "corn" matching "peppercorns".
  *
+ * What it cannot stop on its own is a keyword that PREFIXES a different
+ * ingredient, which is what NOT_THIS_WORD above is for.
+ *
  * @param {string} text
  * @param {string} keyword
  */
 export function hasWord(text, keyword) {
+	const banned = NOT_THIS_WORD[keyword];
 	let from = 0;
 	for (;;) {
 		const at = text.indexOf(keyword, from);
 		if (at === -1) return false;
 		const before = at === 0 ? '' : text[at - 1];
-		if (!/[a-z0-9]/i.test(before)) return true;
+		if (!/[a-z0-9]/i.test(before)) {
+			if (!banned?.some((/** @type {string} */ w) => text.startsWith(w, at))) return true;
+		}
 		from = at + 1;
 	}
 }
