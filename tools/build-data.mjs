@@ -46,6 +46,7 @@ import { buildDrills } from './derive/drills.mjs';
 import { buildStations } from './derive/stations.mjs';
 import { LADDERS, CUPS, TRIALS, PASS_AT } from './derive/calibration.mjs';
 import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
+import { advanceWait, QUICK_MINUTES } from './derive/advance.mjs';
 import { derivePantryMap, narrowBlob } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
 import { miniOptions } from '../src/lib/search-config.mjs';
@@ -381,6 +382,11 @@ R.forEach((r, i) => {
 	const flavor = deriveFlavor(blobs[i], NOTE_DEFS);
 	const techniques = ov.techniques ?? deriveTechniques(linkBlobs[i], TECH_ALL);
 
+	/* Read from the raw method, not from the split steps: the split caps a
+	   duration at 600 minutes and never learned the word "weeks". Absent rather
+	   than zero, the way judgedBy is, so a card can test for the key. */
+	const adv = advanceWait(r.m);
+
 	index.push({
 		slug,
 		name: r.n,
@@ -399,7 +405,8 @@ R.forEach((r, i) => {
 		season: ov.season ?? deriveSeason(narrowBlobs[i], SEASON, PANTRY),
 		region,
 		source: 'guide',
-		noteChars: effNotes[i].length
+		noteChars: effNotes[i].length,
+		...(adv.advanceMin ? { advanceMin: adv.advanceMin, advancePhrase: adv.advancePhrase } : {})
 	});
 
 	full.push({
@@ -1208,6 +1215,42 @@ console.log('');
 	);
 	console.log(
 		`  service: ${advance} recipes carry a wait of ${ADVANCE_MIN}+ min and cannot start inside a service`
+	);
+}
+
+/*
+ * Advance time, which is a different question from the service split above and
+ * is measured separately for the reasons in tools/derive/advance.mjs.
+ *
+ * Gated on its own contract only: a stated wait must carry the phrase it was
+ * read from, so the card can quote the method rather than paraphrase it, and no
+ * wait may exceed a year, which would mean a shelf-life sentence got through.
+ */
+{
+	const planned = index.filter((r) => r.advanceMin);
+	const YEAR = 525600;
+
+	const mute = planned.filter((r) => !r.advancePhrase);
+	if (mute.length) {
+		problems.push(
+			`recipes with an advance wait and no phrase to show for it: ${mute.map((r) => r.slug).join(', ')}`
+		);
+	}
+	const absurd = planned.filter((r) => r.advanceMin > YEAR);
+	if (absurd.length) {
+		problems.push(
+			`advance waits over a year, which is a shelf life read as a wait: ` +
+				absurd.map((r) => `${r.slug} (${r.advancePhrase})`).join(', ')
+		);
+	}
+
+	const quickAndSlow = index.filter((r) => r.minutes <= QUICK_MINUTES && r.advanceMin >= ADVANCE_MIN);
+	console.log(
+		`  advance: ${planned.length} recipes need planning ahead, ` +
+			`${planned.filter((r) => r.advanceMin >= 1440).length} of them a day or more`
+	);
+	console.log(
+		`  advance: ${quickAndSlow.length} are under ${QUICK_MINUTES} active minutes and no longer answer "Under ${QUICK_MINUTES} min"`
 	);
 }
 

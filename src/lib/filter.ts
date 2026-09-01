@@ -11,7 +11,7 @@
  * testable and cannot go stale the way the original's rebound listeners did.
  */
 import type { FilterState, RecipeSummary } from './types';
-import { QUICK_MINUTES } from './types';
+import { QUICK_MINUTES, ADVANCE_MIN } from './types';
 
 /** NFD-fold so an unaccented query matches an accented dish. */
 export function fold(s: string): string {
@@ -36,7 +36,15 @@ export function matches(r: RecipeSummary, f: FilterState, month?: number): boole
 	if (f.chapter && r.chapterSlug !== f.chapter) return false;
 	if (f.course && r.course !== f.course) return false;
 	if (f.difficulty && r.difficulty !== f.difficulty) return false;
+	/*
+	 * "Under 40 min" is a promise about when you eat, and `minutes` is ACTIVE
+	 * minutes by contract: a three week cure with twenty minutes of work is 20.
+	 * Both halves are needed, or the filter answers with Guanciale (30 active
+	 * minutes, five weeks hanging), Preserved Lemons and Sauerkraut. 109 dishes
+	 * passed on the active number alone. See tools/derive/advance.mjs.
+	 */
 	if (f.quick && r.minutes > QUICK_MINUTES) return false;
+	if (f.quick && (r.advanceMin ?? 0) >= ADVANCE_MIN) return false;
 	if (f.vegetarian && !r.diet.vegetarian) return false;
 
 	if (f.season && month) {

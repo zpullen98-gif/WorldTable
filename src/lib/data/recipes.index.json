@@ -100,7 +100,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 511
+    "noteChars": 511,
+    "advanceMin": 180,
+    "advancePhrase": "2–3 hours"
   },
   {
     "slug": "pizza-margherita",
@@ -466,7 +468,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 470
+    "noteChars": 470,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "shrimp-scampi",
@@ -1711,7 +1715,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 455
+    "noteChars": 455,
+    "advanceMin": 1440,
+    "advancePhrase": "4–24 hours"
   },
   {
     "slug": "kung-pao-chicken",
@@ -2126,7 +2132,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 461
+    "noteChars": 461,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "guacamole",
@@ -3073,7 +3081,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 443
+    "noteChars": 443,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "tandoori-style-chicken",
@@ -4543,7 +4553,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 471
+    "noteChars": 471,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "pan-con-tomate",
@@ -5406,7 +5418,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 528
+    "noteChars": 528,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "red-beans-and-rice",
@@ -5456,7 +5470,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 474
+    "noteChars": 474,
+    "advanceMin": 180,
+    "advancePhrase": "2–3 hours"
   },
   {
     "slug": "chicken-and-sausage-jambalaya",
@@ -5826,7 +5842,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 448
+    "noteChars": 448,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "bananas-foster",
@@ -6368,7 +6386,9 @@
       "subgroup": "Korea"
     },
     "source": "guide",
-    "noteChars": 442
+    "noteChars": 442,
+    "advanceMin": 1440,
+    "advancePhrase": "4–24 hours"
   },
   {
     "slug": "doenjang-jjigae",
@@ -7075,7 +7095,9 @@
       "subgroup": "Morocco"
     },
     "source": "guide",
-    "noteChars": 483
+    "noteChars": 483,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "seven-vegetable-couscous",
@@ -7727,7 +7749,9 @@
       "subgroup": "American Table"
     },
     "source": "guide",
-    "noteChars": 492
+    "noteChars": 492,
+    "advanceMin": 420,
+    "advancePhrase": "5–7 hours"
   },
   {
     "slug": "buttermilk-biscuits",
@@ -7941,7 +7965,9 @@
       "subgroup": "American Table"
     },
     "source": "guide",
-    "noteChars": 492
+    "noteChars": 492,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "chocolate-chip-cookies",
@@ -8648,7 +8674,9 @@
       "subgroup": "The Caribbean"
     },
     "source": "guide",
-    "noteChars": 497
+    "noteChars": 497,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "rice-and-peas",
@@ -8757,7 +8785,9 @@
       "subgroup": "The Caribbean"
     },
     "source": "guide",
-    "noteChars": 474
+    "noteChars": 474,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "ropa-vieja",
@@ -9151,7 +9181,9 @@
       "subgroup": "The Caribbean"
     },
     "source": "guide",
-    "noteChars": 492
+    "noteChars": 492,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "jollof-rice",
@@ -9376,7 +9408,9 @@
       "subgroup": "West Africa"
     },
     "source": "guide",
-    "noteChars": 491
+    "noteChars": 491,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "mafe",
@@ -10577,7 +10611,9 @@
       "subgroup": "Central & Eastern Europe"
     },
     "source": "guide",
-    "noteChars": 514
+    "noteChars": 514,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "adjaruli-khachapuri",
@@ -11865,7 +11901,9 @@
       "subgroup": "The Philippines"
     },
     "source": "guide",
-    "noteChars": 252
+    "noteChars": 252,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "sinigang-na-baboy",
@@ -12145,7 +12183,9 @@
       "subgroup": "The Philippines"
     },
     "source": "guide",
-    "noteChars": 212
+    "noteChars": 212,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "sizzling-sisig",
@@ -12256,7 +12296,9 @@
       "subgroup": "The Philippines"
     },
     "source": "guide",
-    "noteChars": 206
+    "noteChars": 206,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "leche-flan",
@@ -12311,7 +12353,9 @@
       "subgroup": "The Philippines"
     },
     "source": "guide",
-    "noteChars": 199
+    "noteChars": 199,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "halo-halo",
@@ -12534,7 +12578,9 @@
       "subgroup": "Germany"
     },
     "source": "guide",
-    "noteChars": 199
+    "noteChars": 199,
+    "advanceMin": 7200,
+    "advancePhrase": "3–5 days"
   },
   {
     "slug": "schweinshaxe",
@@ -12582,7 +12628,9 @@
       "subgroup": "Germany"
     },
     "source": "guide",
-    "noteChars": 470
+    "noteChars": 470,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "currywurst",
@@ -13072,7 +13120,9 @@
       "subgroup": "Austria"
     },
     "source": "guide",
-    "noteChars": 180
+    "noteChars": 180,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "frittatensuppe",
@@ -13385,7 +13435,9 @@
       "subgroup": "Austria"
     },
     "source": "guide",
-    "noteChars": 280
+    "noteChars": 280,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "vanillekipferl",
@@ -14028,7 +14080,9 @@
       "subgroup": "East Africa"
     },
     "source": "guide",
-    "noteChars": 247
+    "noteChars": 247,
+    "advanceMin": 7200,
+    "advancePhrase": "3–5 days"
   },
   {
     "slug": "doro-wat",
@@ -14680,7 +14734,9 @@
       "subgroup": "Portugal"
     },
     "source": "guide",
-    "noteChars": 260
+    "noteChars": 260,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "ameijoas-a-bulhao-pato",
@@ -15836,7 +15892,9 @@
       "subgroup": "Malaysia"
     },
     "source": "guide",
-    "noteChars": 282
+    "noteChars": 282,
+    "advanceMin": 360,
+    "advancePhrase": "6 hours"
   },
   {
     "slug": "hainanese-chicken-rice",
@@ -16406,7 +16464,9 @@
       "subgroup": "Russia & Ukraine"
     },
     "source": "guide",
-    "noteChars": 263
+    "noteChars": 263,
+    "advanceMin": 1440,
+    "advancePhrase": "a day"
   },
   {
     "slug": "solyanka",
@@ -17165,7 +17225,9 @@
       "subgroup": "The Caucasus & Central Asia"
     },
     "source": "guide",
-    "noteChars": 263
+    "noteChars": 263,
+    "advanceMin": 1440,
+    "advancePhrase": "a day"
   },
   {
     "slug": "chak-chak",
@@ -17260,7 +17322,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 269
+    "noteChars": 269,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "baguette-de-tradition",
@@ -17307,7 +17371,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 282
+    "noteChars": 282,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "japanese-shokupan",
@@ -17497,7 +17563,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 258
+    "noteChars": 258,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "challah",
@@ -18120,7 +18188,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 315
+    "noteChars": 315,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "chimichurri-rojo-and-aji-verde",
@@ -18282,7 +18352,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 290
+    "noteChars": 290,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "basque-burnt-cheesecake",
@@ -18441,7 +18513,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 347
+    "noteChars": 347,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "gulab-jamun",
@@ -18491,7 +18565,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 344
+    "noteChars": 344,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "knafeh-nabulseyeh",
@@ -18806,7 +18882,9 @@
       "subgroup": "Argentina"
     },
     "source": "guide",
-    "noteChars": 299
+    "noteChars": 299,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "provoleta",
@@ -18856,7 +18934,9 @@
       "subgroup": "Argentina"
     },
     "source": "guide",
-    "noteChars": 300
+    "noteChars": 300,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "choripan",
@@ -19084,7 +19164,9 @@
       "subgroup": "Argentina"
     },
     "source": "guide",
-    "noteChars": 333
+    "noteChars": 333,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "vitel-tone",
@@ -19134,7 +19216,9 @@
       "subgroup": "Argentina"
     },
     "source": "guide",
-    "noteChars": 354
+    "noteChars": 354,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "medialunas",
@@ -19390,7 +19474,9 @@
       "subgroup": "The Pacific"
     },
     "source": "guide",
-    "noteChars": 334
+    "noteChars": 334,
+    "advanceMin": 360,
+    "advancePhrase": "5–6 hours"
   },
   {
     "slug": "lomi-lomi-salmon",
@@ -19646,7 +19732,9 @@
       "subgroup": "The Pacific"
     },
     "source": "guide",
-    "noteChars": 363
+    "noteChars": 363,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "haupia",
@@ -19802,7 +19890,9 @@
       "subgroup": "The Pacific"
     },
     "source": "guide",
-    "noteChars": 342
+    "noteChars": 342,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "fried-shrimp-poboy-dressed",
@@ -20313,7 +20403,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 402
+    "noteChars": 402,
+    "advanceMin": 1440,
+    "advancePhrase": "ONE DAY"
   },
   {
     "slug": "sazerac",
@@ -20843,7 +20935,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 369
+    "noteChars": 369,
+    "advanceMin": 4320,
+    "advancePhrase": "2–3 DAYS"
   },
   {
     "slug": "lynchburg-lemonade",
@@ -21178,7 +21272,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 378
+    "noteChars": 378,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "diner-buttermilk-pancakes",
@@ -21451,7 +21547,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 400
+    "noteChars": 400,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "takoyaki",
@@ -22313,7 +22411,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 400
+    "noteChars": 400,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "pan-bagnat",
@@ -22591,7 +22691,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 346
+    "noteChars": 346,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "bouillabaisse",
@@ -22998,7 +23100,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 417
+    "noteChars": 417,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "cioppino",
@@ -23705,7 +23809,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 358
+    "noteChars": 358,
+    "advanceMin": 4320,
+    "advancePhrase": "Three days"
   },
   {
     "slug": "christmas-pudding",
@@ -23758,7 +23864,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 397
+    "noteChars": 397,
+    "advanceMin": 360,
+    "advancePhrase": "6 hours"
   },
   {
     "slug": "dresdner-stollen",
@@ -23814,7 +23922,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 401
+    "noteChars": 401,
+    "advanceMin": 30240,
+    "advancePhrase": "2–3 weeks"
   },
   {
     "slug": "pan-de-muerto",
@@ -24042,7 +24152,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 396
+    "noteChars": 396,
+    "advanceMin": 720,
+    "advancePhrase": "OVERNIGHT"
   },
   {
     "slug": "zongzi",
@@ -24095,7 +24207,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 421
+    "noteChars": 421,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "hoppin-john",
@@ -24255,7 +24369,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 346
+    "noteChars": 346,
+    "advanceMin": 120,
+    "advancePhrase": "1–2 hours"
   },
   {
     "slug": "yakitori",
@@ -24370,7 +24486,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 433
+    "noteChars": 433,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "anticuchos-de-corazon",
@@ -24425,7 +24543,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 411
+    "noteChars": 411,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "pollo-a-la-brasa",
@@ -24475,7 +24595,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 508
+    "noteChars": 508,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "picanha-na-brasa",
@@ -24632,7 +24754,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 450
+    "noteChars": 450,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "home-gyros",
@@ -24692,7 +24816,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 455
+    "noteChars": 455,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "nyama-choma",
@@ -25235,7 +25361,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 447
+    "noteChars": 447,
+    "advanceMin": 4320,
+    "advancePhrase": "2–3 days"
   },
   {
     "slug": "linguine-alle-vongole",
@@ -25898,7 +26026,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 402
+    "noteChars": 402,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "profiteroles-pate-a-choux-master",
@@ -26157,7 +26287,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 463
+    "noteChars": 463,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "key-lime-pie",
@@ -26418,7 +26550,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 495
+    "noteChars": 495,
+    "advanceMin": 1440,
+    "advancePhrase": "a day"
   },
   {
     "slug": "nanaimo-bars",
@@ -27041,7 +27175,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 475
+    "noteChars": 475,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "whoopie-pies",
@@ -27193,7 +27329,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 464
+    "noteChars": 464,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "saturday-night-baked-beans",
@@ -27240,7 +27378,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 186
+    "noteChars": 186,
+    "advanceMin": 360,
+    "advancePhrase": "6 hours"
   },
   {
     "slug": "needhams",
@@ -27288,7 +27428,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 482
+    "noteChars": 482,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "downeast-haddock-chowder",
@@ -27335,7 +27477,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 474
+    "noteChars": 474,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "maine-italian-sandwich",
@@ -27440,7 +27584,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 493
+    "noteChars": 493,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "new-england-boiled-dinner",
@@ -27500,7 +27646,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 484
+    "noteChars": 484,
+    "advanceMin": 300,
+    "advancePhrase": "5 hours"
   },
   {
     "slug": "cider-braised-pork-shoulder",
@@ -27552,7 +27700,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 460
+    "noteChars": 460,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "north-country-corn-chowder",
@@ -27819,7 +27969,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 439
+    "noteChars": 439,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "maple-cream-pie",
@@ -27868,7 +28020,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 478
+    "noteChars": 478,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "farm-turkey-pot-pie",
@@ -28028,7 +28182,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 479
+    "noteChars": 479,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "sugar-on-snow",
@@ -28171,7 +28327,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 462
+    "noteChars": 462,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "maple-glazed-ham",
@@ -28317,7 +28475,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 454
+    "noteChars": 454,
+    "advanceMin": 360,
+    "advancePhrase": "6 hours"
   },
   {
     "slug": "chicken-and-cheddar-pot-pie",
@@ -28423,7 +28583,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 226
+    "noteChars": 226,
+    "advanceMin": 360,
+    "advancePhrase": "4-6 hours"
   },
   {
     "slug": "boston-clam-chowder",
@@ -28518,7 +28680,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 476
+    "noteChars": 476,
+    "advanceMin": 420,
+    "advancePhrase": "6-7 hours"
   },
   {
     "slug": "boston-cream-pie",
@@ -28614,7 +28778,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 181
+    "noteChars": 181,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "whole-belly-fried-clams",
@@ -28722,7 +28888,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 468
+    "noteChars": 468,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "baked-scrod",
@@ -28827,7 +28995,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 187
+    "noteChars": 187,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "cape-cod-cranberry-relish",
@@ -28937,7 +29107,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 481
+    "noteChars": 481,
+    "advanceMin": 300,
+    "advancePhrase": "5 hours"
   },
   {
     "slug": "rhode-island-clear-clam-chowder",
@@ -29337,7 +29509,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 471
+    "noteChars": 471,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "snail-salad",
@@ -29502,7 +29676,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 481
+    "noteChars": 481,
+    "advanceMin": 2880,
+    "advancePhrase": "24-48 hours"
   },
   {
     "slug": "connecticut-hot-lobster-roll",
@@ -29658,7 +29834,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 179
+    "noteChars": 179,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "shad-roe-with-bacon",
@@ -29768,7 +29946,9 @@
       "subgroup": "New England"
     },
     "source": "guide",
-    "noteChars": 465
+    "noteChars": 465,
+    "advanceMin": 2880,
+    "advancePhrase": "24-48 hours"
   },
   {
     "slug": "fried-oysters-with-tartar",
@@ -30046,7 +30226,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 499
+    "noteChars": 499,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "bagels-with-lox-and-schmear",
@@ -30203,7 +30385,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 470
+    "noteChars": 470,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "beef-on-weck",
@@ -30251,7 +30435,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 469
+    "noteChars": 469,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "manhattan-clam-chowder",
@@ -31108,7 +31294,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 194
+    "noteChars": 194,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "scrapple",
@@ -31158,7 +31346,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 186
+    "noteChars": 186,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "shoofly-pie",
@@ -31368,7 +31558,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 486
+    "noteChars": 486,
+    "advanceMin": 300,
+    "advancePhrase": "5 hours"
   },
   {
     "slug": "sticky-buns",
@@ -31476,7 +31668,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 201
+    "noteChars": 201,
+    "advanceMin": 10080,
+    "advancePhrase": "a week"
   },
   {
     "slug": "philadelphia-water-ice",
@@ -31533,7 +31727,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 485
+    "noteChars": 485,
+    "advanceMin": 240,
+    "advancePhrase": "3-4 hours"
   },
   {
     "slug": "chicken-and-slippery-dumplings",
@@ -31693,7 +31889,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 219
+    "noteChars": 219,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "the-bobbie",
@@ -31801,7 +31999,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 477
+    "noteChars": 477,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "sussex-county-chicken-and-corn",
@@ -32343,7 +32543,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 479
+    "noteChars": 479,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "smith-island-cake",
@@ -32499,7 +32701,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 194
+    "noteChars": 194,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "coddies",
@@ -32946,7 +33150,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 475
+    "noteChars": 475,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "virginia-peanut-pie",
@@ -32996,7 +33202,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 199
+    "noteChars": 199,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "skillet-fried-apples",
@@ -33158,7 +33366,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 200
+    "noteChars": 200,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "west-virginia-slaw-dog",
@@ -33265,7 +33475,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 470
+    "noteChars": 470,
+    "advanceMin": 180,
+    "advancePhrase": "2-3 hours"
   },
   {
     "slug": "ramps-and-potatoes",
@@ -33415,7 +33627,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 210
+    "noteChars": 210,
+    "advanceMin": 43200,
+    "advancePhrase": "a month"
   },
   {
     "slug": "sausage-gravy-over-biscuits",
@@ -33615,7 +33829,9 @@
       "subgroup": "Mid-Atlantic"
     },
     "source": "guide",
-    "noteChars": 243
+    "noteChars": 243,
+    "advanceMin": 240,
+    "advancePhrase": "3-4 hours"
   },
   {
     "slug": "eastern-nc-whole-hog-barbecue",
@@ -33668,7 +33884,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 216
+    "noteChars": 216,
+    "advanceMin": 720,
+    "advancePhrase": "10-12 hours"
   },
   {
     "slug": "lexington-style-pork-shoulder",
@@ -33827,7 +34045,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 185
+    "noteChars": 185,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "carolina-coleslaw",
@@ -33880,7 +34100,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 183
+    "noteChars": 183,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "hush-puppies",
@@ -34451,7 +34673,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 200
+    "noteChars": 200,
+    "advanceMin": 240,
+    "advancePhrase": "3-4 hours"
   },
   {
     "slug": "pimento-cheese",
@@ -34500,7 +34724,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 486
+    "noteChars": 486,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "bog-style-chicken-and-rice",
@@ -34760,7 +34986,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 199
+    "noteChars": 199,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "fried-chicken-georgia-style",
@@ -34810,7 +35038,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 491
+    "noteChars": 491,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "vidalia-onion-casserole",
@@ -35175,7 +35405,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 256
+    "noteChars": 256,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "florida-stone-crab-with-mustard-sauce",
@@ -35607,7 +35839,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 220
+    "noteChars": 220,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "georgia-buttermilk-biscuits-with-sausage",
@@ -35765,7 +35999,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 241
+    "noteChars": 241,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "fried-green-tomatoes-alabama",
@@ -35867,7 +36103,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 193
+    "noteChars": 193,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "alabama-fried-catfish-plate",
@@ -36176,7 +36414,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 225
+    "noteChars": 225,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "fried-okra",
@@ -36277,7 +36517,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 220
+    "noteChars": 220,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "mississippi-comeback-sauce",
@@ -36493,7 +36735,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 225
+    "noteChars": 225,
+    "advanceMin": 480,
+    "advancePhrase": "8 hours"
   },
   {
     "slug": "mississippi-sweet-potato-pone",
@@ -36600,7 +36844,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 462
+    "noteChars": 462,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "comeback-fried-shrimp",
@@ -36844,7 +37090,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 196
+    "noteChars": 196,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "arkansas-cheese-dip",
@@ -37006,7 +37254,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 200
+    "noteChars": 200,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "arkansas-smoked-turkey-and-dumplings",
@@ -37169,7 +37419,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 236
+    "noteChars": 236,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "kentucky-derby-pie",
@@ -37269,7 +37521,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 194
+    "noteChars": 194,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "kentucky-spoonbread",
@@ -37373,7 +37627,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 215
+    "noteChars": 215,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "kentucky-bourbon-balls",
@@ -37469,7 +37725,9 @@
       "subgroup": "The South"
     },
     "source": "guide",
-    "noteChars": 193
+    "noteChars": 193,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "mississippi-fried-green-tomatoes",
@@ -37824,7 +38082,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 217
+    "noteChars": 217,
+    "advanceMin": 120,
+    "advancePhrase": "5-2 hours"
   },
   {
     "slug": "ohio-goetta",
@@ -37872,7 +38132,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 191
+    "noteChars": 191,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "buckeye-candy",
@@ -38238,7 +38500,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 196
+    "noteChars": 196,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "indiana-breaded-pork-tenderloin",
@@ -38343,7 +38607,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 218
+    "noteChars": 218,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "indiana-persimmon-pudding",
@@ -38442,7 +38708,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 184
+    "noteChars": 184,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "indiana-corn-and-sausage-skillet",
@@ -38649,7 +38917,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 218
+    "noteChars": 218,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "chicago-italian-beef",
@@ -39024,7 +39294,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 195
+    "noteChars": 195,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "michigan-pasty",
@@ -39129,7 +39401,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 206
+    "noteChars": 206,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "michigan-coney-dog",
@@ -39239,7 +39513,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 222
+    "noteChars": 222,
+    "advanceMin": 300,
+    "advancePhrase": "5 hours"
   },
   {
     "slug": "mackinac-island-fudge",
@@ -39596,7 +39872,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 189
+    "noteChars": 189,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "illinois-pork-chops-and-applesauce",
@@ -40081,7 +40359,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 240
+    "noteChars": 240,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "wisconsin-kringle",
@@ -40590,7 +40870,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 215
+    "noteChars": 215,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "minnesota-swedish-meatballs",
@@ -41135,7 +41417,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 215
+    "noteChars": 215,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "missouri-persimmon-cake",
@@ -41449,7 +41733,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 241
+    "noteChars": 241,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "iowa-skillet-sweet-corn",
@@ -41659,7 +41945,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 228
+    "noteChars": 228,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "iowa-rhubarb-custard-pie",
@@ -41758,7 +42046,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 206
+    "noteChars": 206,
+    "advanceMin": 420,
+    "advancePhrase": "6-7 hours"
   },
   {
     "slug": "kansas-city-barbecue-ribs",
@@ -41808,7 +42098,9 @@
       "subgroup": "The Midwest"
     },
     "source": "guide",
-    "noteChars": 209
+    "noteChars": 209,
+    "advanceMin": 360,
+    "advancePhrase": "5-6 hours"
   },
   {
     "slug": "missouri-corn-and-bacon-chowder",
@@ -42071,7 +42363,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 189
+    "noteChars": 189,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "north-dakota-lefse",
@@ -42118,7 +42412,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 216
+    "noteChars": 216,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "north-dakota-bison-pot-roast",
@@ -42170,7 +42466,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 207
+    "noteChars": 207,
+    "advanceMin": 300,
+    "advancePhrase": "5 hours"
   },
   {
     "slug": "north-dakota-caramel-rolls",
@@ -42594,7 +42892,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 210
+    "noteChars": 210,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "south-dakota-pheasant-with-cream-gravy",
@@ -42641,7 +42941,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 229
+    "noteChars": 229,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "south-dakota-tiger-meat",
@@ -42949,7 +43251,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 217
+    "noteChars": 217,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "nebraska-runza",
@@ -43002,7 +43306,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 221
+    "noteChars": 221,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "nebraska-bierocks",
@@ -43055,7 +43361,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 209
+    "noteChars": 209,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "nebraska-reuben-sandwich",
@@ -43266,7 +43574,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 211
+    "noteChars": 211,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "nebraska-dorothy-lynch-salad",
@@ -43322,7 +43632,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 210
+    "noteChars": 210,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "nebraska-popcorn-balls",
@@ -43579,7 +43891,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 206
+    "noteChars": 206,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "kansas-fried-chicken",
@@ -43627,7 +43941,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 215
+    "noteChars": 215,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "kansas-wheat-bread",
@@ -43675,7 +43991,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 211
+    "noteChars": 211,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "kansas-bran-muffins",
@@ -44390,7 +44708,9 @@
       "subgroup": "The Plains"
     },
     "source": "guide",
-    "noteChars": 194
+    "noteChars": 194,
+    "advanceMin": 180,
+    "advancePhrase": "2-3 hours"
   },
   {
     "slug": "oklahoma-pecan-pie",
@@ -44542,7 +44862,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 246
+    "noteChars": 246,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "texas-breakfast-tacos",
@@ -44699,7 +45021,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 224
+    "noteChars": 224,
+    "advanceMin": 240,
+    "advancePhrase": "2-4 hours"
   },
   {
     "slug": "texas-kolaches-and-klobasniky",
@@ -44746,7 +45070,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 234
+    "noteChars": 234,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "texas-pecan-pie",
@@ -44844,7 +45170,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 226
+    "noteChars": 226,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "texas-sheet-cake",
@@ -45101,7 +45429,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 225
+    "noteChars": 225,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "new-mexico-posole",
@@ -45163,7 +45493,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 231
+    "noteChars": 231,
+    "advanceMin": 180,
+    "advancePhrase": "2-3 hours"
   },
   {
     "slug": "new-mexico-sopaipillas",
@@ -46115,7 +46447,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 255
+    "noteChars": 255,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "nevada-shrimp-cocktail",
@@ -46743,7 +47077,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 220
+    "noteChars": 220,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "utah-green-jell-o-salad",
@@ -46801,7 +47137,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 218
+    "noteChars": 218,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "utah-pastrami-burger",
@@ -47063,7 +47401,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 221
+    "noteChars": 221,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "utah-peach-cobbler-dutch-oven",
@@ -47336,7 +47676,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 226
+    "noteChars": 226,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "colorado-bison-burger",
@@ -47496,7 +47838,9 @@
       "subgroup": "The Southwest"
     },
     "source": "guide",
-    "noteChars": 213
+    "noteChars": 213,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "colorado-cinnamon-roll",
@@ -47798,7 +48142,9 @@
       "subgroup": "The Mountain West"
     },
     "source": "guide",
-    "noteChars": 221
+    "noteChars": 221,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "montana-huckleberry-milkshake",
@@ -48216,7 +48562,9 @@
       "subgroup": "The Mountain West"
     },
     "source": "guide",
-    "noteChars": 221
+    "noteChars": 221,
+    "advanceMin": 180,
+    "advancePhrase": "2-3 hours"
   },
   {
     "slug": "rocky-mountain-oysters",
@@ -48322,7 +48670,9 @@
       "subgroup": "The Mountain West"
     },
     "source": "guide",
-    "noteChars": 226
+    "noteChars": 226,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "wyoming-cowboy-coffee",
@@ -48469,7 +48819,9 @@
       "subgroup": "The Mountain West"
     },
     "source": "guide",
-    "noteChars": 235
+    "noteChars": 235,
+    "advanceMin": 1440,
+    "advancePhrase": "6-24 hours"
   },
   {
     "slug": "wyoming-cowboy-stew",
@@ -48576,7 +48928,9 @@
       "subgroup": "The Mountain West"
     },
     "source": "guide",
-    "noteChars": 221
+    "noteChars": 221,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "wyoming-cowboy-cookies",
@@ -48819,7 +49173,9 @@
       "subgroup": "The Mountain West"
     },
     "source": "guide",
-    "noteChars": 198
+    "noteChars": 198,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "idaho-basque-croquetas",
@@ -48868,7 +49224,9 @@
       "subgroup": "The Mountain West"
     },
     "source": "guide",
-    "noteChars": 230
+    "noteChars": 230,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "idaho-lentil-soup",
@@ -49345,7 +49703,9 @@
       "subgroup": "The Pacific"
     },
     "source": "guide",
-    "noteChars": 241
+    "noteChars": 241,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "california-roll",
@@ -49560,7 +49920,9 @@
       "subgroup": "The Pacific"
     },
     "source": "guide",
-    "noteChars": 222
+    "noteChars": 222,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "san-francisco-garlic-noodles",
@@ -49777,7 +50139,9 @@
       "subgroup": "The Pacific"
     },
     "source": "guide",
-    "noteChars": 214
+    "noteChars": 214,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "cracked-dungeness-crab-with-drawn-butter",
@@ -49985,7 +50349,9 @@
       "subgroup": "The Pacific"
     },
     "source": "guide",
-    "noteChars": 218
+    "noteChars": 218,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "portland-maple-bacon-doughnut",
@@ -50722,7 +51088,9 @@
       "subgroup": "The Pacific"
     },
     "source": "guide",
-    "noteChars": 210
+    "noteChars": 210,
+    "advanceMin": 480,
+    "advancePhrase": "6-8 hours"
   },
   {
     "slug": "washington-smoked-salmon-chowder",
@@ -51208,7 +51576,9 @@
       "subgroup": "The Pacific"
     },
     "source": "guide",
-    "noteChars": 221
+    "noteChars": 221,
+    "advanceMin": 300,
+    "advancePhrase": "5 hours"
   },
   {
     "slug": "alaska-rhubarb-upside-down-cake",
@@ -51374,7 +51744,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 561
+    "noteChars": 561,
+    "advanceMin": 5760,
+    "advancePhrase": "2 to 4 days"
   },
   {
     "slug": "sauerkraut-the-two-ingredient-ferment",
@@ -51428,7 +51800,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 535
+    "noteChars": 535,
+    "advanceMin": 40320,
+    "advancePhrase": "2 to 4 weeks"
   },
   {
     "slug": "shio-koji",
@@ -51476,7 +51850,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 551
+    "noteChars": 551,
+    "advanceMin": 14400,
+    "advancePhrase": "7 to 10 days"
   },
   {
     "slug": "preserved-lemons",
@@ -51530,7 +51906,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 516
+    "noteChars": 516,
+    "advanceMin": 43200,
+    "advancePhrase": "a month"
   },
   {
     "slug": "brown-veal-stock",
@@ -51591,7 +51969,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 579
+    "noteChars": 579,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "dashi-ichiban",
@@ -51685,7 +52065,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 442
+    "noteChars": 442,
+    "advanceMin": 960,
+    "advancePhrase": "12-16 hours"
   },
   {
     "slug": "focaccia-genovese",
@@ -51734,7 +52116,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 448
+    "noteChars": 448,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "tawa-naan",
@@ -51830,7 +52214,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 447
+    "noteChars": 447,
+    "advanceMin": 4320,
+    "advancePhrase": "3 days"
   },
   {
     "slug": "pocket-pita",
@@ -51925,7 +52311,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 427
+    "noteChars": 427,
+    "advanceMin": 1080,
+    "advancePhrase": "12-18 hours"
   },
   {
     "slug": "nixtamal-corn-tortillas",
@@ -51978,7 +52366,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 432
+    "noteChars": 432,
+    "advanceMin": 840,
+    "advancePhrase": "8-14 hours"
   },
   {
     "slug": "brioche-nanterre",
@@ -52026,7 +52416,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 421
+    "noteChars": 421,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "laminated-roti-canai",
@@ -52123,7 +52515,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 434
+    "noteChars": 434,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "jiaozi-pork-and-napa-cabbage",
@@ -52229,7 +52623,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 401
+    "noteChars": 401,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "har-gow",
@@ -52277,7 +52673,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 443
+    "noteChars": 443,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "momo-kathmandu-style",
@@ -52438,7 +52836,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 469
+    "noteChars": 469,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "kayseri-mantisi",
@@ -52605,7 +53005,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 407
+    "noteChars": 407,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "empanadas-de-pino",
@@ -52655,7 +53057,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 405
+    "noteChars": 405,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "fresh-soybean-tempeh",
@@ -52702,7 +53106,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 413
+    "noteChars": 413,
+    "advanceMin": 2160,
+    "advancePhrase": "24 to 36 hours"
   },
   {
     "slug": "black-tea-kombucha",
@@ -52750,7 +53156,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 446
+    "noteChars": 446,
+    "advanceMin": 4320,
+    "advancePhrase": "2 to 3 days"
   },
   {
     "slug": "rye-sourdough-starter",
@@ -52799,7 +53207,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 438
+    "noteChars": 438,
+    "advanceMin": 1440,
+    "advancePhrase": "a day"
   },
   {
     "slug": "lacto-fermented-red-chilli-sauce",
@@ -52896,7 +53306,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 409
+    "noteChars": 409,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "full-sour-dill-pickles",
@@ -52952,7 +53364,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 393
+    "noteChars": 393,
+    "advanceMin": 20160,
+    "advancePhrase": "7 to 14 days"
   },
   {
     "slug": "chicken-liver-parfait",
@@ -53002,7 +53416,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 374
+    "noteChars": 374,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "grilled-veal-sweetbreads",
@@ -53058,7 +53474,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 366
+    "noteChars": 366,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "steak-and-kidney-pudding",
@@ -53106,7 +53524,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 393
+    "noteChars": 393,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "trippa-alla-romana",
@@ -53166,7 +53586,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 383
+    "noteChars": 383,
+    "advanceMin": 180,
+    "advancePhrase": "5 to 3 hours"
   },
   {
     "slug": "boudin-noir-aux-pommes",
@@ -53274,7 +53696,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 382
+    "noteChars": 382,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "roast-bone-marrow-with-parsley-salad",
@@ -53330,7 +53754,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 368
+    "noteChars": 368,
+    "advanceMin": 1440,
+    "advancePhrase": "12 to 24 hours"
   },
   {
     "slug": "grilled-lamb-heart-skewers",
@@ -53386,7 +53812,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 358
+    "noteChars": 358,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "lamb-brains-with-black-butter",
@@ -53436,7 +53864,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 386
+    "noteChars": 386,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "calfs-liver-onions-and-sage",
@@ -53593,7 +54023,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 389
+    "noteChars": 389,
+    "advanceMin": 2880,
+    "advancePhrase": "48 hours"
   },
   {
     "slug": "half-sour-dills-in-salt-brine",
@@ -53708,7 +54140,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 427
+    "noteChars": 427,
+    "advanceMin": 40320,
+    "advancePhrase": "4 weeks"
   },
   {
     "slug": "aam-ka-achar",
@@ -53762,7 +54196,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 390
+    "noteChars": 390,
+    "advanceMin": 14400,
+    "advancePhrase": "7-10 days"
   },
   {
     "slug": "chimichurri-verde",
@@ -53812,7 +54248,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 421
+    "noteChars": 421,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "zhoug-akhdar",
@@ -53967,7 +54405,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 378
+    "noteChars": 378,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "salsa-macha",
@@ -54017,7 +54457,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 402
+    "noteChars": 402,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "fond-blanc-de-volaille",
@@ -54072,7 +54514,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 446
+    "noteChars": 446,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "fumet-de-poisson",
@@ -54299,7 +54743,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 493
+    "noteChars": 493,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "pho-bo-broth",
@@ -54459,7 +54905,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 446
+    "noteChars": 446,
+    "advanceMin": 720,
+    "advancePhrase": "8 to 12 hours"
   },
   {
     "slug": "dill-and-aquavit-cured-salmon",
@@ -54557,7 +55005,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 380
+    "noteChars": 380,
+    "advanceMin": 2880,
+    "advancePhrase": "48 hours"
   },
   {
     "slug": "duck-prosciutto",
@@ -54604,7 +55054,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 439
+    "noteChars": 439,
+    "advanceMin": 30240,
+    "advancePhrase": "10 to 21 days"
   },
   {
     "slug": "bresaola",
@@ -54656,7 +55108,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 453
+    "noteChars": 453,
+    "advanceMin": 80640,
+    "advancePhrase": "four to eight weeks"
   },
   {
     "slug": "guanciale",
@@ -54706,7 +55160,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 424
+    "noteChars": 424,
+    "advanceMin": 50400,
+    "advancePhrase": "3 to 5 weeks"
   },
   {
     "slug": "salt-cod-home-cured",
@@ -54754,7 +55210,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 410
+    "noteChars": 410,
+    "advanceMin": 7200,
+    "advancePhrase": "5 days"
   },
   {
     "slug": "confit-duck-leg",
@@ -54803,7 +55261,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 418
+    "noteChars": 418,
+    "advanceMin": 10080,
+    "advancePhrase": "a week"
   },
   {
     "slug": "pork-rillettes",
@@ -54853,7 +55313,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 381
+    "noteChars": 381,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "biltong",
@@ -54902,7 +55364,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 424
+    "noteChars": 424,
+    "advanceMin": 5760,
+    "advancePhrase": "3 to 4 days"
   },
   {
     "slug": "boquerones-en-vinagre",
@@ -54952,7 +55416,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 422
+    "noteChars": 422,
+    "advanceMin": 1440,
+    "advancePhrase": "a day"
   },
   {
     "slug": "milanese-saffron-risotto",
@@ -55112,7 +55578,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 424
+    "noteChars": 424,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "party-jollof-rice",
@@ -55214,7 +55682,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 389
+    "noteChars": 389,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "dolsot-bibimbap",
@@ -55324,7 +55794,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 415
+    "noteChars": 415,
+    "advanceMin": 120,
+    "advancePhrase": "1 to 2 hours"
   },
   {
     "slug": "arroz-con-pollo",
@@ -55593,7 +56065,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 385
+    "noteChars": 385,
+    "advanceMin": 120,
+    "advancePhrase": "2 to 2 hours"
   },
   {
     "slug": "mushroom-xo",
@@ -55980,7 +56454,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 436
+    "noteChars": 436,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "tomato-water-consomme",
@@ -56035,7 +56511,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 442
+    "noteChars": 442,
+    "advanceMin": 720,
+    "advancePhrase": "8 to 12 hours"
   },
   {
     "slug": "shorshe-ilish",
@@ -56184,7 +56662,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 401
+    "noteChars": 401,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "aloo-posto",
@@ -56340,7 +56820,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 369
+    "noteChars": 369,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "begun-bhaja",
@@ -56838,7 +57320,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 388
+    "noteChars": 388,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "jiu-yim-yau-yu-salt-and-pepper-squid",
@@ -57200,7 +57684,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 377
+    "noteChars": 377,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "garganelli-al-pettine-con-prosciutto-e-piselli",
@@ -57570,7 +58056,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 378
+    "noteChars": 378,
+    "advanceMin": 360,
+    "advancePhrase": "6 hours"
   },
   {
     "slug": "hong-shao-rou",
@@ -57882,7 +58370,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 360
+    "noteChars": 360,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "longjing-xia-ren",
@@ -57979,7 +58469,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 373
+    "noteChars": 373,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "you-men-chun-sun",
@@ -58075,7 +58567,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 381
+    "noteChars": 381,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "meen-moilee",
@@ -58180,7 +58674,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 370
+    "noteChars": 370,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "palappam",
@@ -58227,7 +58723,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 387
+    "noteChars": 387,
+    "advanceMin": 480,
+    "advancePhrase": "six to eight hours"
   },
   {
     "slug": "puttu",
@@ -58654,7 +59152,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 421
+    "noteChars": 421,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "shanxi-dao-xiao-mian",
@@ -58877,7 +59377,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 449
+    "noteChars": 449,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "guo-bao-rou",
@@ -59031,7 +59533,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 409
+    "noteChars": 409,
+    "advanceMin": 4320,
+    "advancePhrase": "3 days"
   },
   {
     "slug": "zhima-shaobing",
@@ -59471,7 +59975,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 366
+    "noteChars": 366,
+    "advanceMin": 120,
+    "advancePhrase": "two hours"
   },
   {
     "slug": "caldo-de-piedra",
@@ -59525,7 +60031,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 397
+    "noteChars": 397,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "chapulines-al-ajo-y-limon",
@@ -59686,7 +60194,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 389
+    "noteChars": 389,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "dal-makhani",
@@ -59741,7 +60251,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 363
+    "noteChars": 363,
+    "advanceMin": 480,
+    "advancePhrase": "8 hours"
   },
   {
     "slug": "rajma-chawal",
@@ -59797,7 +60309,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 374
+    "noteChars": 374,
+    "advanceMin": 480,
+    "advancePhrase": "8 hours"
   },
   {
     "slug": "amritsari-chole",
@@ -59859,7 +60373,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 379
+    "noteChars": 379,
+    "advanceMin": 480,
+    "advancePhrase": "8 hours"
   },
   {
     "slug": "sarson-da-saag",
@@ -60132,7 +60648,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 349
+    "noteChars": 349,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "kadhi-pakora",
@@ -60694,7 +61212,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 415
+    "noteChars": 415,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "yibin-ranmian",
@@ -60852,7 +61372,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 341
+    "noteChars": 341,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "pasta-alla-norma",
@@ -61076,7 +61598,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 398
+    "noteChars": 398,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "cuscusu-di-pesce-alla-trapanese",
@@ -61246,7 +61770,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 382
+    "noteChars": 382,
+    "advanceMin": 720,
+    "advancePhrase": "12 hours"
   },
   {
     "slug": "granita-di-mandorla-con-brioche-col-tuzzu",
@@ -61299,7 +61825,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 391
+    "noteChars": 391,
+    "advanceMin": 480,
+    "advancePhrase": "8 hours"
   },
   {
     "slug": "idli",
@@ -61347,7 +61875,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 400
+    "noteChars": 400,
+    "advanceMin": 300,
+    "advancePhrase": "5 hours"
   },
   {
     "slug": "kal-dosai",
@@ -61394,7 +61924,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 409
+    "noteChars": 409,
+    "advanceMin": 720,
+    "advancePhrase": "8 to 12 hours"
   },
   {
     "slug": "arachuvitta-sambar",
@@ -61769,7 +62301,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 425
+    "noteChars": 425,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "paasi-paruppu-payasam",
@@ -61879,7 +62413,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 351
+    "noteChars": 351,
+    "advanceMin": 720,
+    "advancePhrase": "12 hours"
   },
   {
     "slug": "cochinita-pibil",
@@ -61938,7 +62474,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 407
+    "noteChars": 407,
+    "advanceMin": 720,
+    "advancePhrase": "6 to 12 hours"
   },
   {
     "slug": "panuchos-yucatecos",
@@ -62056,7 +62594,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 377
+    "noteChars": 377,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "papadzules",
@@ -62614,7 +63154,9 @@
       "subgroup": "Brazil"
     },
     "source": "guide",
-    "noteChars": 377
+    "noteChars": 377,
+    "advanceMin": 180,
+    "advancePhrase": "2 to 3 hours"
   },
   {
     "slug": "feijao-tropeiro",
@@ -63490,7 +64032,9 @@
       "subgroup": "Ethiopia"
     },
     "source": "guide",
-    "noteChars": 372
+    "noteChars": 372,
+    "advanceMin": 4320,
+    "advancePhrase": "three days"
   },
   {
     "slug": "chechebsa",
@@ -65505,7 +66049,9 @@
       "subgroup": "The Levant & the Gulf"
     },
     "source": "guide",
-    "noteChars": 415
+    "noteChars": 415,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "halawet-el-jibn",
@@ -65561,7 +66107,9 @@
       "subgroup": "The Levant & the Gulf"
     },
     "source": "guide",
-    "noteChars": 437
+    "noteChars": 437,
+    "advanceMin": 480,
+    "advancePhrase": "8 hours"
   },
   {
     "slug": "nan-e-barbari",
@@ -65720,7 +66268,9 @@
       "subgroup": "Iran"
     },
     "source": "guide",
-    "noteChars": 430
+    "noteChars": 430,
+    "advanceMin": 300,
+    "advancePhrase": "5 hours"
   },
   {
     "slug": "khoresh-e-fesenjan",
@@ -65830,7 +66380,9 @@
       "subgroup": "Iran"
     },
     "source": "guide",
-    "noteChars": 407
+    "noteChars": 407,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "ash-e-reshteh",
@@ -65994,7 +66546,9 @@
       "subgroup": "Iran"
     },
     "source": "guide",
-    "noteChars": 412
+    "noteChars": 412,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "salad-e-shirazi",
@@ -66904,7 +67458,9 @@
       "subgroup": "Sri Lanka"
     },
     "source": "guide",
-    "noteChars": 357
+    "noteChars": 357,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "pol-sambola",
@@ -67951,7 +68507,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 419
+    "noteChars": 419,
+    "advanceMin": 2880,
+    "advancePhrase": "48 hours"
   },
   {
     "slug": "chicken-liver-parfait-butter-emulsion-method",
@@ -68000,7 +68558,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 427
+    "noteChars": 427,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "gravlax-the-cure-by-weight",
@@ -68049,7 +68609,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 427
+    "noteChars": 427,
+    "advanceMin": 2880,
+    "advancePhrase": "36 to 48 hours"
   },
   {
     "slug": "sea-trout-filleted-and-cured",
@@ -68105,7 +68667,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 425
+    "noteChars": 425,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "pickled-vegetables-for-the-plate",
@@ -68225,7 +68789,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 399
+    "noteChars": 399,
+    "advanceMin": 120,
+    "advancePhrase": "two hours"
   },
   {
     "slug": "sfoglia-alluovo-the-hand-rolled-sheet",
@@ -69141,7 +69707,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 339
+    "noteChars": 339,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "creme-caramel-the-set-custard",
@@ -69191,7 +69759,9 @@
       "subgroup": null
     },
     "source": "guide",
-    "noteChars": 350
+    "noteChars": 350,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "rewena-paraoa",
@@ -69238,7 +69808,9 @@
       "subgroup": "Aotearoa New Zealand"
     },
     "source": "guide",
-    "noteChars": 393
+    "noteChars": 393,
+    "advanceMin": 5760,
+    "advancePhrase": "two to four days"
   },
   {
     "slug": "boil-up",
@@ -69346,7 +69918,9 @@
       "subgroup": "Aotearoa New Zealand"
     },
     "source": "guide",
-    "noteChars": 442
+    "noteChars": 442,
+    "advanceMin": 240,
+    "advancePhrase": "three to four hours"
   },
   {
     "slug": "oven-hangi-vegetables",
@@ -69666,7 +70240,9 @@
       "subgroup": "Aotearoa New Zealand"
     },
     "source": "guide",
-    "noteChars": 411
+    "noteChars": 411,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "hokey-pokey",
@@ -69815,7 +70391,9 @@
       "subgroup": "Australia"
     },
     "source": "guide",
-    "noteChars": 373
+    "noteChars": 373,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "slow-roast-saltbush-lamb-shoulder",
@@ -69865,7 +70443,9 @@
       "subgroup": "Australia"
     },
     "source": "guide",
-    "noteChars": 407
+    "noteChars": 407,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "barramundi-with-lemon-myrtle-butter",
@@ -70443,7 +71023,9 @@
       "subgroup": "Canada"
     },
     "source": "guide",
-    "noteChars": 477
+    "noteChars": 477,
+    "advanceMin": 14400,
+    "advancePhrase": "8 to 10 days"
   },
   {
     "slug": "soupe-aux-pois-jaunes",
@@ -70496,7 +71078,9 @@
       "subgroup": "Canada"
     },
     "source": "guide",
-    "noteChars": 425
+    "noteChars": 425,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "hodge-podge",
@@ -70607,7 +71191,9 @@
       "subgroup": "Canada"
     },
     "source": "guide",
-    "noteChars": 392
+    "noteChars": 392,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "butter-tarts",
@@ -70866,7 +71452,9 @@
       "subgroup": "Cuba"
     },
     "source": "guide",
-    "noteChars": 373
+    "noteChars": 373,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "moros-y-cristianos",
@@ -70975,7 +71563,9 @@
       "subgroup": "Cuba"
     },
     "source": "guide",
-    "noteChars": 416
+    "noteChars": 416,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "yuca-con-mojo",
@@ -71317,7 +71907,9 @@
       "subgroup": "Cuba"
     },
     "source": "guide",
-    "noteChars": 434
+    "noteChars": 434,
+    "advanceMin": 360,
+    "advancePhrase": "6 hours"
   },
   {
     "slug": "aish-baladi",
@@ -71422,7 +72014,9 @@
       "subgroup": "Egypt"
     },
     "source": "guide",
-    "noteChars": 348
+    "noteChars": 348,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "besara",
@@ -71860,7 +72454,9 @@
       "subgroup": "Egypt"
     },
     "source": "guide",
-    "noteChars": 366
+    "noteChars": 366,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "banku",
@@ -73418,7 +74014,9 @@
       "subgroup": "The Pacific Islands"
     },
     "source": "guide",
-    "noteChars": 379
+    "noteChars": 379,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "thiebou-yapp",
@@ -73533,7 +74131,9 @@
       "subgroup": "Senegal"
     },
     "source": "guide",
-    "noteChars": 371
+    "noteChars": 371,
+    "advanceMin": 120,
+    "advancePhrase": "one to two hours"
   },
   {
     "slug": "domoda",
@@ -73701,7 +74301,9 @@
       "subgroup": "Senegal"
     },
     "source": "guide",
-    "noteChars": 395
+    "noteChars": 395,
+    "advanceMin": 240,
+    "advancePhrase": "four hours"
   },
   {
     "slug": "accara",
@@ -73919,7 +74521,9 @@
       "subgroup": "Senegal"
     },
     "source": "guide",
-    "noteChars": 390
+    "noteChars": 390,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "bissap",
@@ -74081,7 +74685,9 @@
       "subgroup": "South Africa"
     },
     "source": "guide",
-    "noteChars": 393
+    "noteChars": 393,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "lam-potjiekos",
@@ -74305,7 +74911,9 @@
       "subgroup": "South Africa"
     },
     "source": "guide",
-    "noteChars": 428
+    "noteChars": 428,
+    "advanceMin": 5760,
+    "advancePhrase": "2 to 4 days"
   },
   {
     "slug": "roosterkoek",
@@ -74413,7 +75021,9 @@
       "subgroup": "South Africa"
     },
     "source": "guide",
-    "noteChars": 413
+    "noteChars": 413,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "morogo-wa-thepe",
@@ -74522,7 +75132,9 @@
       "subgroup": "South Africa"
     },
     "source": "guide",
-    "noteChars": 482
+    "noteChars": 482,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "choucroute-garnie-a-lalsacienne",
@@ -74691,7 +75303,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 341
+    "noteChars": 341,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "coq-au-riesling",
@@ -74903,7 +75517,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 346
+    "noteChars": 346,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "carbonade-flamande",
@@ -74952,7 +75568,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 358
+    "noteChars": 358,
+    "advanceMin": 180,
+    "advancePhrase": "three hours"
   },
   {
     "slug": "waterzooi-de-poulet",
@@ -75121,7 +75739,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 412
+    "noteChars": 412,
+    "advanceMin": 120,
+    "advancePhrase": "two hours"
   },
   {
     "slug": "ajoblanco-con-uvas-moscatel",
@@ -75175,7 +75795,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 369
+    "noteChars": 369,
+    "advanceMin": 120,
+    "advancePhrase": "two hours"
   },
   {
     "slug": "gazpachuelo-malagueno",
@@ -75340,7 +75962,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 387
+    "noteChars": 387,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "rabo-de-toro-al-vino-de-montilla",
@@ -75395,7 +76019,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 423
+    "noteChars": 423,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "espinacas-con-garbanzos",
@@ -75615,7 +76241,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 417
+    "noteChars": 417,
+    "advanceMin": 240,
+    "advancePhrase": "four hours"
   },
   {
     "slug": "bacalao-al-pil-pil",
@@ -76094,7 +76722,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 365
+    "noteChars": 365,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "idiazabal-con-membrillo-casero",
@@ -76150,7 +76780,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 391
+    "noteChars": 391,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "sofregit-de-ceba-i-tomaquet",
@@ -76364,7 +76996,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 368
+    "noteChars": 368,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "calcots-a-la-brasa",
@@ -76672,7 +77306,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 379
+    "noteChars": 379,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "butatama-osaka-okonomiyaki",
@@ -76728,7 +77364,9 @@
       "subgroup": "Japan"
     },
     "source": "guide",
-    "noteChars": 320
+    "noteChars": 320,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "negiyaki",
@@ -76985,7 +77623,9 @@
       "subgroup": "Japan"
     },
     "source": "guide",
-    "noteChars": 370
+    "noteChars": 370,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "kansai-kake-jiru-usukuchi-noodle-broth",
@@ -77243,7 +77883,9 @@
       "subgroup": "Japan"
     },
     "source": "guide",
-    "noteChars": 307
+    "noteChars": 307,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "kumiage-yuba",
@@ -77506,7 +78148,9 @@
       "subgroup": "Japan"
     },
     "source": "guide",
-    "noteChars": 372
+    "noteChars": 372,
+    "advanceMin": 4320,
+    "advancePhrase": "two to three days"
   },
   {
     "slug": "hamo-no-otoshi",
@@ -77604,7 +78248,9 @@
       "subgroup": "Japan"
     },
     "source": "guide",
-    "noteChars": 326
+    "noteChars": 326,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "shibazuke",
@@ -77658,7 +78304,9 @@
       "subgroup": "Japan"
     },
     "source": "guide",
-    "noteChars": 347
+    "noteChars": 347,
+    "advanceMin": 2880,
+    "advancePhrase": "two days"
   },
   {
     "slug": "warabimochi",
@@ -77765,7 +78413,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 363
+    "noteChars": 363,
+    "advanceMin": 120,
+    "advancePhrase": "two hours"
   },
   {
     "slug": "saucisson-de-lyon-en-brioche",
@@ -77815,7 +78465,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 354
+    "noteChars": 354,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "salade-lyonnaise",
@@ -78032,7 +78684,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 391
+    "noteChars": 391,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "cervelle-de-canut",
@@ -78138,7 +78792,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 389
+    "noteChars": 389,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "la-pochouse-verdunoise",
@@ -78248,7 +78904,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 372
+    "noteChars": 372,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "goya-chanpuru",
@@ -78401,7 +79059,9 @@
       "subgroup": "Japan"
     },
     "source": "guide",
-    "noteChars": 432
+    "noteChars": 432,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "jimami-dofu",
@@ -78454,7 +79114,9 @@
       "subgroup": "Japan"
     },
     "source": "guide",
-    "noteChars": 443
+    "noteChars": 443,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "mimiga-no-pinatsu-miso-ae",
@@ -78508,7 +79170,9 @@
       "subgroup": "Japan"
     },
     "source": "guide",
-    "noteChars": 418
+    "noteChars": 418,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "nakami-jiru",
@@ -78956,7 +79620,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 373
+    "noteChars": 373,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "soupe-au-pistou",
@@ -79174,7 +79840,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 374
+    "noteChars": 374,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "tapenade-noire-au-mortier",
@@ -79230,7 +79898,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 394
+    "noteChars": 394,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "panisses-de-marseille",
@@ -79286,7 +79956,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 373
+    "noteChars": 373,
+    "advanceMin": 120,
+    "advancePhrase": "two hours"
   },
   {
     "slug": "navettes-marseillaises-a-la-fleur-doranger",
@@ -79340,7 +80012,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 393
+    "noteChars": 393,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "piperade",
@@ -79705,7 +80379,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 423
+    "noteChars": 423,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "garbure-bearnaise",
@@ -79871,7 +80547,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 382
+    "noteChars": 382,
+    "advanceMin": 120,
+    "advancePhrase": "two hours"
   },
   {
     "slug": "lavash",
@@ -79919,7 +80597,9 @@
       "subgroup": "Armenia"
     },
     "source": "guide",
-    "noteChars": 383
+    "noteChars": 383,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "spas",
@@ -80028,7 +80708,9 @@
       "subgroup": "Armenia"
     },
     "source": "guide",
-    "noteChars": 390
+    "noteChars": 390,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "basturma",
@@ -80077,7 +80759,9 @@
       "subgroup": "Armenia"
     },
     "source": "guide",
-    "noteChars": 414
+    "noteChars": 414,
+    "advanceMin": 20160,
+    "advancePhrase": "10 to 14 days"
   },
   {
     "slug": "harisa",
@@ -80126,7 +80810,9 @@
       "subgroup": "Armenia"
     },
     "source": "guide",
-    "noteChars": 393
+    "noteChars": 393,
+    "advanceMin": 180,
+    "advancePhrase": "2 to 3 hours"
   },
   {
     "slug": "sini-manti",
@@ -80225,7 +80911,9 @@
       "subgroup": "Armenia"
     },
     "source": "guide",
-    "noteChars": 392
+    "noteChars": 392,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "ghapama",
@@ -80427,7 +81115,9 @@
       "subgroup": "The Baltics"
     },
     "source": "guide",
-    "noteChars": 371
+    "noteChars": 371,
+    "advanceMin": 720,
+    "advancePhrase": "8 to 12 hours"
   },
   {
     "slug": "cepelinai-su-spirguciais",
@@ -80534,7 +81224,9 @@
       "subgroup": "The Baltics"
     },
     "source": "guide",
-    "noteChars": 350
+    "noteChars": 350,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "kugelis",
@@ -80630,7 +81322,9 @@
       "subgroup": "The Baltics"
     },
     "source": "guide",
-    "noteChars": 367
+    "noteChars": 367,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "rosolje",
@@ -80689,7 +81383,9 @@
       "subgroup": "The Baltics"
     },
     "source": "guide",
-    "noteChars": 379
+    "noteChars": 379,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "marineeritud-korvits",
@@ -80748,7 +81444,9 @@
       "subgroup": "The Baltics"
     },
     "source": "guide",
-    "noteChars": 369
+    "noteChars": 369,
+    "advanceMin": 4320,
+    "advancePhrase": "3 days"
   },
   {
     "slug": "sklandrausis",
@@ -80848,7 +81546,9 @@
       "subgroup": "The Baltics"
     },
     "source": "guide",
-    "noteChars": 358
+    "noteChars": 358,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "kama-kefiiriga",
@@ -80951,7 +81651,9 @@
       "subgroup": "Chile"
     },
     "source": "guide",
-    "noteChars": 325
+    "noteChars": 325,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "pastel-de-choclo",
@@ -81391,7 +82093,9 @@
       "subgroup": "Chile"
     },
     "source": "guide",
-    "noteChars": 387
+    "noteChars": 387,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "kuchen-de-frambuesa",
@@ -81612,7 +82316,9 @@
       "subgroup": "Colombia"
     },
     "source": "guide",
-    "noteChars": 420
+    "noteChars": 420,
+    "advanceMin": 120,
+    "advancePhrase": "two hours"
   },
   {
     "slug": "sobrebarriga-a-la-criolla",
@@ -82154,7 +82860,9 @@
       "subgroup": "Czechia & Slovakia"
     },
     "source": "guide",
-    "noteChars": 367
+    "noteChars": 367,
+    "advanceMin": 180,
+    "advancePhrase": "three hours"
   },
   {
     "slug": "hovezi-gulas",
@@ -82581,7 +83289,9 @@
       "subgroup": "Denmark"
     },
     "source": "guide",
-    "noteChars": 330
+    "noteChars": 330,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "dyrlaegens-natmad",
@@ -82724,7 +83434,9 @@
       "subgroup": "Denmark"
     },
     "source": "guide",
-    "noteChars": 402
+    "noteChars": 402,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "boller-i-karry",
@@ -82818,7 +83530,9 @@
       "subgroup": "Denmark"
     },
     "source": "guide",
-    "noteChars": 390
+    "noteChars": 390,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "brunede-kartofler",
@@ -82868,7 +83582,9 @@
       "subgroup": "Denmark"
     },
     "source": "guide",
-    "noteChars": 374
+    "noteChars": 374,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "dansk-remoulade",
@@ -82927,7 +83643,9 @@
       "subgroup": "Denmark"
     },
     "source": "guide",
-    "noteChars": 362
+    "noteChars": 362,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "risalamande-med-kirsebaersauce",
@@ -83211,7 +83929,9 @@
       "subgroup": "The Dominican Republic"
     },
     "source": "guide",
-    "noteChars": 374
+    "noteChars": 374,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "habichuelas-guisadas-con-auyama",
@@ -83268,7 +83988,9 @@
       "subgroup": "The Dominican Republic"
     },
     "source": "guide",
-    "noteChars": 378
+    "noteChars": 378,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "moro-de-guandules-con-coco",
@@ -83384,7 +84106,9 @@
       "subgroup": "The Dominican Republic"
     },
     "source": "guide",
-    "noteChars": 383
+    "noteChars": 383,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "pastelon-de-platano-maduro",
@@ -83717,7 +84441,9 @@
       "subgroup": "Haiti"
     },
     "source": "guide",
-    "noteChars": 378
+    "noteChars": 378,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "sos-ti-malis",
@@ -83954,7 +84680,9 @@
       "subgroup": "Haiti"
     },
     "source": "guide",
-    "noteChars": 371
+    "noteChars": 371,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "pikliz",
@@ -84014,7 +84742,9 @@
       "subgroup": "Haiti"
     },
     "source": "guide",
-    "noteChars": 359
+    "noteChars": 359,
+    "advanceMin": 10080,
+    "advancePhrase": "a week"
   },
   {
     "slug": "tasso-kabrit",
@@ -84072,7 +84802,9 @@
       "subgroup": "Haiti"
     },
     "source": "guide",
-    "noteChars": 355
+    "noteChars": 355,
+    "advanceMin": 240,
+    "advancePhrase": "four hours"
   },
   {
     "slug": "akra-malanga",
@@ -84238,7 +84970,9 @@
       "subgroup": "Iraq"
     },
     "source": "guide",
-    "noteChars": 403
+    "noteChars": 403,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "dolma-iraqiyya",
@@ -84348,7 +85082,9 @@
       "subgroup": "Iraq"
     },
     "source": "guide",
-    "noteChars": 355
+    "noteChars": 355,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "tepsi-baytinijan",
@@ -84507,7 +85243,9 @@
       "subgroup": "Iraq"
     },
     "source": "guide",
-    "noteChars": 425
+    "noteChars": 425,
+    "advanceMin": 7200,
+    "advancePhrase": "three to five days"
   },
   {
     "slug": "timman-bagilla",
@@ -84659,7 +85397,9 @@
       "subgroup": "Iraq"
     },
     "source": "guide",
-    "noteChars": 362
+    "noteChars": 362,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "shalgham-bil-dibis",
@@ -84714,7 +85454,9 @@
       "subgroup": "Iraq"
     },
     "source": "guide",
-    "noteChars": 372
+    "noteChars": 372,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "escovitch-fish",
@@ -85398,7 +86140,9 @@
       "subgroup": "Norway & Iceland"
     },
     "source": "guide",
-    "noteChars": 429
+    "noteChars": 429,
+    "advanceMin": 8640,
+    "advancePhrase": "4 to 6 days"
   },
   {
     "slug": "plokkfiskur",
@@ -85549,7 +86293,9 @@
       "subgroup": "Norway & Iceland"
     },
     "source": "guide",
-    "noteChars": 409
+    "noteChars": 409,
+    "advanceMin": 720,
+    "advancePhrase": "9 to 12 hours"
   },
   {
     "slug": "skyr",
@@ -85652,7 +86398,9 @@
       "subgroup": "Norway & Iceland"
     },
     "source": "guide",
-    "noteChars": 419
+    "noteChars": 419,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "rommegrot",
@@ -85756,7 +86504,9 @@
       "subgroup": "Norway & Iceland"
     },
     "source": "guide",
-    "noteChars": 416
+    "noteChars": 416,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "ocopa-arequipena",
@@ -85856,7 +86606,9 @@
       "subgroup": "Peru"
     },
     "source": "guide",
-    "noteChars": 391
+    "noteChars": 391,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "chairo",
@@ -85906,7 +86658,9 @@
       "subgroup": "Peru"
     },
     "source": "guide",
-    "noteChars": 398
+    "noteChars": 398,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "olluquito-con-charqui",
@@ -85955,7 +86709,9 @@
       "subgroup": "Peru"
     },
     "source": "guide",
-    "noteChars": 372
+    "noteChars": 372,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "rocoto-relleno-arequipeno",
@@ -86055,7 +86811,9 @@
       "subgroup": "Peru"
     },
     "source": "guide",
-    "noteChars": 378
+    "noteChars": 378,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "pachamanca-a-la-olla",
@@ -86113,7 +86871,9 @@
       "subgroup": "Peru"
     },
     "source": "guide",
-    "noteChars": 395
+    "noteChars": 395,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "cuy-chactado",
@@ -86168,7 +86928,9 @@
       "subgroup": "Peru"
     },
     "source": "guide",
-    "noteChars": 415
+    "noteChars": 415,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "quinua-atamalada",
@@ -86322,7 +87084,9 @@
       "subgroup": "Poland"
     },
     "source": "guide",
-    "noteChars": 313
+    "noteChars": 313,
+    "advanceMin": 1440,
+    "advancePhrase": "a day"
   },
   {
     "slug": "zakwas-buraczany",
@@ -86704,7 +87468,9 @@
       "subgroup": "Poland"
     },
     "source": "guide",
-    "noteChars": 404
+    "noteChars": 404,
+    "advanceMin": 120,
+    "advancePhrase": "two hours"
   },
   {
     "slug": "makowiec",
@@ -86816,7 +87582,9 @@
       "subgroup": "Poland"
     },
     "source": "guide",
-    "noteChars": 395
+    "noteChars": 395,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "sofrito",
@@ -86980,7 +87748,9 @@
       "subgroup": "Puerto Rico"
     },
     "source": "guide",
-    "noteChars": 408
+    "noteChars": 408,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "trifongo-de-platano-y-yuca",
@@ -87209,7 +87979,9 @@
       "subgroup": "Puerto Rico"
     },
     "source": "guide",
-    "noteChars": 419
+    "noteChars": 419,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "guineitos-en-escabeche",
@@ -87259,7 +88031,9 @@
       "subgroup": "Puerto Rico"
     },
     "source": "guide",
-    "noteChars": 412
+    "noteChars": 412,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "tembleque",
@@ -87307,7 +88081,9 @@
       "subgroup": "Puerto Rico"
     },
     "source": "guide",
-    "noteChars": 400
+    "noteChars": 400,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "coquito",
@@ -87357,7 +88133,9 @@
       "subgroup": "Puerto Rico"
     },
     "source": "guide",
-    "noteChars": 418
+    "noteChars": 418,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "mamaliga-cu-branza-si-smantana",
@@ -87523,7 +88301,9 @@
       "subgroup": "Romania & Bulgaria"
     },
     "source": "guide",
-    "noteChars": 416
+    "noteChars": 416,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "mititei",
@@ -87632,7 +88412,9 @@
       "subgroup": "Romania & Bulgaria"
     },
     "source": "guide",
-    "noteChars": 365
+    "noteChars": 365,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "banitsa-sas-sirene",
@@ -88000,7 +88782,9 @@
       "subgroup": "Sweden"
     },
     "source": "guide",
-    "noteChars": 381
+    "noteChars": 381,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "kalops",
@@ -88163,7 +88947,9 @@
       "subgroup": "Sweden"
     },
     "source": "guide",
-    "noteChars": 389
+    "noteChars": 389,
+    "advanceMin": 240,
+    "advancePhrase": "four hours"
   },
   {
     "slug": "gubbrora",
@@ -88262,7 +89048,9 @@
       "subgroup": "Sweden"
     },
     "source": "guide",
-    "noteChars": 408
+    "noteChars": 408,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "rarorda-lingon",
@@ -88981,7 +89769,9 @@
       "subgroup": "Uzbekistan & the Silk Road"
     },
     "source": "guide",
-    "noteChars": 349
+    "noteChars": 349,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "qovurma-palov",
@@ -89150,7 +89940,9 @@
       "subgroup": "Uzbekistan & the Silk Road"
     },
     "source": "guide",
-    "noteChars": 349
+    "noteChars": 349,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "qovurma-lagmon",
@@ -89205,7 +89997,9 @@
       "subgroup": "Uzbekistan & the Silk Road"
     },
     "source": "guide",
-    "noteChars": 355
+    "noteChars": 355,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "qovoq-manti",
@@ -89793,7 +90587,9 @@
       "subgroup": "Venezuela"
     },
     "source": "guide",
-    "noteChars": 371
+    "noteChars": 371,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "guasacaca",
@@ -89901,7 +90697,9 @@
       "subgroup": "Venezuela"
     },
     "source": "guide",
-    "noteChars": 356
+    "noteChars": 356,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "quesillo",
@@ -89950,7 +90748,9 @@
       "subgroup": "Venezuela"
     },
     "source": "guide",
-    "noteChars": 347
+    "noteChars": 347,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "chicha-andina",
@@ -89999,7 +90799,9 @@
       "subgroup": "Venezuela"
     },
     "source": "guide",
-    "noteChars": 349
+    "noteChars": 349,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "hawaij-lil-shorba",
@@ -90162,7 +90964,9 @@
       "subgroup": "Yemen & the Gulf"
     },
     "source": "guide",
-    "noteChars": 462
+    "noteChars": 462,
+    "advanceMin": 480,
+    "advancePhrase": "8 hours"
   },
   {
     "slug": "mandi-laham",
@@ -90217,7 +91021,9 @@
       "subgroup": "Yemen & the Gulf"
     },
     "source": "guide",
-    "noteChars": 407
+    "noteChars": 407,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "machboos-dajaj",
@@ -90322,7 +91128,9 @@
       "subgroup": "Yemen & the Gulf"
     },
     "source": "guide",
-    "noteChars": 385
+    "noteChars": 385,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "harees",
@@ -90479,7 +91287,9 @@
       "subgroup": "Yemen & the Gulf"
     },
     "source": "guide",
-    "noteChars": 421
+    "noteChars": 421,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "luqaimat",
@@ -90529,7 +91339,9 @@
       "subgroup": "Yemen & the Gulf"
     },
     "source": "guide",
-    "noteChars": 407
+    "noteChars": 407,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "makroud",
@@ -90639,7 +91451,9 @@
       "subgroup": "Morocco"
     },
     "source": "guide",
-    "noteChars": 465
+    "noteChars": 465,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "balah-el-sham",
@@ -90791,7 +91605,9 @@
       "subgroup": "East Africa"
     },
     "source": "guide",
-    "noteChars": 445
+    "noteChars": 445,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "melktert",
@@ -90841,7 +91657,9 @@
       "subgroup": "South Africa"
     },
     "source": "guide",
-    "noteChars": 419
+    "noteChars": 419,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "cape-brandy-pudding",
@@ -91001,7 +91819,9 @@
       "subgroup": "The Levant & the Gulf"
     },
     "source": "guide",
-    "noteChars": 403
+    "noteChars": 403,
+    "advanceMin": 720,
+    "advancePhrase": "12 hours"
   },
   {
     "slug": "tahini-halva",
@@ -91056,7 +91876,9 @@
       "subgroup": "The Levant & the Gulf"
     },
     "source": "guide",
-    "noteChars": 497
+    "noteChars": 497,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "muhallabia",
@@ -91105,7 +91927,9 @@
       "subgroup": "The Levant & the Gulf"
     },
     "source": "guide",
-    "noteChars": 435
+    "noteChars": 435,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "omani-halwa",
@@ -91155,7 +91979,9 @@
       "subgroup": "Yemen & the Gulf"
     },
     "source": "guide",
-    "noteChars": 479
+    "noteChars": 479,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "cajeta-de-celaya",
@@ -91205,7 +92031,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 439
+    "noteChars": 439,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "pudim-de-leite-condensado",
@@ -91253,7 +92081,9 @@
       "subgroup": "Brazil"
     },
     "source": "guide",
-    "noteChars": 422
+    "noteChars": 422,
+    "advanceMin": 360,
+    "advancePhrase": "6 hours"
   },
   {
     "slug": "chocoflan",
@@ -91303,7 +92133,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 438
+    "noteChars": 438,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "leche-asada",
@@ -91518,7 +92350,9 @@
       "subgroup": "Trinidad & Tobago"
     },
     "source": "guide",
-    "noteChars": 430
+    "noteChars": 430,
+    "advanceMin": 20160,
+    "advancePhrase": "two weeks"
   },
   {
     "slug": "jamaican-sweet-potato-pudding",
@@ -91678,7 +92512,9 @@
       "subgroup": "Venezuela"
     },
     "source": "guide",
-    "noteChars": 442
+    "noteChars": 442,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "habichuelas-con-dulce",
@@ -91788,7 +92624,9 @@
       "subgroup": "Colombia"
     },
     "source": "guide",
-    "noteChars": 458
+    "noteChars": 458,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "mizu-yokan",
@@ -91836,7 +92674,9 @@
       "subgroup": "Japan"
     },
     "source": "guide",
-    "noteChars": 443
+    "noteChars": 443,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "sakuramochi-domyoji-style",
@@ -92041,7 +92881,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 488
+    "noteChars": 488,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "guihua-nuomi-ou-osmanthus-lotus-root-with-glutinous-rice",
@@ -92089,7 +92931,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 457
+    "noteChars": 457,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "songpyeon",
@@ -92193,7 +93037,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 464
+    "noteChars": 464,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "rasmalai",
@@ -92249,7 +93095,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 468
+    "noteChars": 468,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "watalappan",
@@ -92299,7 +93147,9 @@
       "subgroup": "Sri Lanka"
     },
     "source": "guide",
-    "noteChars": 459
+    "noteChars": 459,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "kuih-talam-pandan",
@@ -92347,7 +93197,9 @@
       "subgroup": "Malaysia"
     },
     "source": "guide",
-    "noteChars": 467
+    "noteChars": 467,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "che-chuoi",
@@ -92498,7 +93350,9 @@
       "subgroup": "Iran"
     },
     "source": "guide",
-    "noteChars": 439
+    "noteChars": 439,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "rillettes-de-canard",
@@ -92548,7 +93402,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 468
+    "noteChars": 468,
+    "advanceMin": 10080,
+    "advancePhrase": "a week"
   },
   {
     "slug": "pommes-de-terre-sarladaises",
@@ -92646,7 +93502,9 @@
       "subgroup": "Hungary"
     },
     "source": "guide",
-    "noteChars": 466
+    "noteChars": 466,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "martinsgans",
@@ -92698,7 +93556,9 @@
       "subgroup": "Germany"
     },
     "source": "guide",
-    "noteChars": 477
+    "noteChars": 477,
+    "advanceMin": 2880,
+    "advancePhrase": "Two days"
   },
   {
     "slug": "goose-schmaltz-and-gribenes",
@@ -92800,7 +93660,9 @@
       "subgroup": "Poland"
     },
     "source": "guide",
-    "noteChars": 491
+    "noteChars": 491,
+    "advanceMin": 30240,
+    "advancePhrase": "3 weeks"
   },
   {
     "slug": "beijing-kaoya",
@@ -92852,7 +93714,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 459
+    "noteChars": 459,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "siu-ngo",
@@ -92901,7 +93765,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 452
+    "noteChars": 452,
+    "advanceMin": 720,
+    "advancePhrase": "12 hours"
   },
   {
     "slug": "zhangcha-ya",
@@ -92951,7 +93817,9 @@
       "subgroup": "China"
     },
     "source": "guide",
-    "noteChars": 448
+    "noteChars": 448,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "pappardelle-al-ragu-danatra",
@@ -93007,7 +93875,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 470
+    "noteChars": 470,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "bun-mang-vit",
@@ -93282,7 +94152,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 459
+    "noteChars": 459,
+    "advanceMin": 2880,
+    "advancePhrase": "48 hours"
   },
   {
     "slug": "kouign-amann",
@@ -93331,7 +94203,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 400
+    "noteChars": 400,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "madeleines-au-beurre-noisette",
@@ -93387,7 +94261,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 369
+    "noteChars": 369,
+    "advanceMin": 720,
+    "advancePhrase": "12 hours"
   },
   {
     "slug": "salzburger-nockerl",
@@ -93498,7 +94374,9 @@
       "subgroup": "Austria"
     },
     "source": "guide",
-    "noteChars": 372
+    "noteChars": 372,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "bienenstich",
@@ -93604,7 +94482,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 379
+    "noteChars": 379,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "pestinos-de-semana-santa",
@@ -93761,7 +94641,9 @@
       "subgroup": "Britain"
     },
     "source": "guide",
-    "noteChars": 422
+    "noteChars": 422,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "bakewell-tart",
@@ -93815,7 +94697,9 @@
       "subgroup": "Britain"
     },
     "source": "guide",
-    "noteChars": 413
+    "noteChars": 413,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "semifreddo-al-caffe",
@@ -93862,7 +94746,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 418
+    "noteChars": 418,
+    "advanceMin": 360,
+    "advancePhrase": "6 hours"
   },
   {
     "slug": "cantucci-di-prato",
@@ -93970,7 +94856,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 449
+    "noteChars": 449,
+    "advanceMin": 1440,
+    "advancePhrase": "a day"
   },
   {
     "slug": "galaktoboureko",
@@ -94026,7 +94914,9 @@
       "subgroup": "Greece"
     },
     "source": "guide",
-    "noteChars": 375
+    "noteChars": 375,
+    "advanceMin": 240,
+    "advancePhrase": "4 hours"
   },
   {
     "slug": "kyivskyi-tort",
@@ -94076,7 +94966,9 @@
       "subgroup": "Russia & Ukraine"
     },
     "source": "guide",
-    "noteChars": 385
+    "noteChars": 385,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "pate-en-croute",
@@ -94126,7 +95018,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 435
+    "noteChars": 435,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "rillons-de-tours",
@@ -94174,7 +95068,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 403
+    "noteChars": 403,
+    "advanceMin": 720,
+    "advancePhrase": "12 hours"
   },
   {
     "slug": "pot-au-feu",
@@ -94342,7 +95238,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 417
+    "noteChars": 417,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "carbonnade-flamande",
@@ -94392,7 +95290,9 @@
       "subgroup": "Belgium"
     },
     "source": "guide",
-    "noteChars": 431
+    "noteChars": 431,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "thuringer-rostbratwurst",
@@ -94442,7 +95342,9 @@
       "subgroup": "Germany"
     },
     "source": "guide",
-    "noteChars": 406
+    "noteChars": 406,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "lancashire-hotpot",
@@ -94496,7 +95398,9 @@
       "subgroup": "Britain"
     },
     "source": "guide",
-    "noteChars": 435
+    "noteChars": 435,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "osso-buco-alla-milanese",
@@ -94552,7 +95456,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 431
+    "noteChars": 431,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "porchetta",
@@ -94608,7 +95514,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 440
+    "noteChars": 440,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "cotechino-con-lenticchie",
@@ -94658,7 +95566,9 @@
       "subgroup": "Italy"
     },
     "source": "guide",
-    "noteChars": 368
+    "noteChars": 368,
+    "advanceMin": 1440,
+    "advancePhrase": "24 hours"
   },
   {
     "slug": "bollito-misto-con-salsa-verde",
@@ -94767,7 +95677,9 @@
       "subgroup": "Portugal"
     },
     "source": "guide",
-    "noteChars": 394
+    "noteChars": 394,
+    "advanceMin": 720,
+    "advancePhrase": "12 hours"
   },
   {
     "slug": "lomo-embuchado",
@@ -94817,7 +95729,9 @@
       "subgroup": "Spain"
     },
     "source": "guide",
-    "noteChars": 465
+    "noteChars": 465,
+    "advanceMin": 120960,
+    "advancePhrase": "12 weeks"
   },
   {
     "slug": "pinnekjott",
@@ -94866,7 +95780,9 @@
       "subgroup": "Norway & Iceland"
     },
     "source": "guide",
-    "noteChars": 403
+    "noteChars": 403,
+    "advanceMin": 30240,
+    "advancePhrase": "3 weeks"
   },
   {
     "slug": "rullepolse",
@@ -94916,7 +95832,9 @@
       "subgroup": "Denmark"
     },
     "source": "guide",
-    "noteChars": 469
+    "noteChars": 469,
+    "advanceMin": 4320,
+    "advancePhrase": "3 days"
   },
   {
     "slug": "gespickte-rehkeule",
@@ -94975,7 +95893,9 @@
       "subgroup": "Austria"
     },
     "source": "guide",
-    "noteChars": 492
+    "noteChars": 492,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "rehrucken-baden-baden",
@@ -95094,7 +96014,9 @@
       "subgroup": "Britain"
     },
     "source": "guide",
-    "noteChars": 470
+    "noteChars": 470,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "lapin-a-la-moutarde",
@@ -95204,7 +96126,9 @@
       "subgroup": "France"
     },
     "source": "guide",
-    "noteChars": 458
+    "noteChars": 458,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "coniglio-alla-ligure",
@@ -95370,7 +96294,9 @@
       "subgroup": "Poland"
     },
     "source": "guide",
-    "noteChars": 482
+    "noteChars": 482,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "summan-mashwi",
@@ -95485,7 +96411,9 @@
       "subgroup": "Egypt"
     },
     "source": "guide",
-    "noteChars": 449
+    "noteChars": 449,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "leng-chi-tu-cold-eaten-rabbit",
@@ -95639,7 +96567,9 @@
       "subgroup": "The Levant & the Gulf"
     },
     "source": "guide",
-    "noteChars": 495
+    "noteChars": 495,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "birria-de-chivo",
@@ -95697,7 +96627,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 410
+    "noteChars": 410,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "barbacoa-de-borrego",
@@ -95753,7 +96685,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 427
+    "noteChars": 427,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "arni-giouvetsi",
@@ -95809,7 +96743,9 @@
       "subgroup": "Greece"
     },
     "source": "guide",
-    "noteChars": 481
+    "noteChars": 481,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "kuzu-kapama",
@@ -95868,7 +96804,9 @@
       "subgroup": "Turkey"
     },
     "source": "guide",
-    "noteChars": 452
+    "noteChars": 452,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "khorkhog",
@@ -95917,7 +96855,9 @@
       "subgroup": "The Caucasus & Central Asia"
     },
     "source": "guide",
-    "noteChars": 465
+    "noteChars": 465,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "rogan-josh",
@@ -96017,7 +96957,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 489
+    "noteChars": 489,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "bakri-ke-paye",
@@ -96072,7 +97014,9 @@
       "subgroup": "India"
     },
     "source": "guide",
-    "noteChars": 493
+    "noteChars": 493,
+    "advanceMin": 420,
+    "advancePhrase": "7 hours"
   },
   {
     "slug": "goat-water",
@@ -96128,7 +97072,9 @@
       "subgroup": "The Caribbean"
     },
     "source": "guide",
-    "noteChars": 498
+    "noteChars": 498,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "goat-meat-pepper-soup",
@@ -96183,7 +97129,9 @@
       "subgroup": "Nigeria"
     },
     "source": "guide",
-    "noteChars": 493
+    "noteChars": 493,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "mbuzi-wa-kupaka",
@@ -96286,7 +97234,9 @@
       "subgroup": "Romania & Bulgaria"
     },
     "source": "guide",
-    "noteChars": 412
+    "noteChars": 412,
+    "advanceMin": 60,
+    "advancePhrase": "1 hour"
   },
   {
     "slug": "merguez",
@@ -96336,7 +97286,9 @@
       "subgroup": "Morocco"
     },
     "source": "guide",
-    "noteChars": 482
+    "noteChars": 482,
+    "advanceMin": 2880,
+    "advancePhrase": "two days"
   },
   {
     "slug": "pavlova-roulade-with-passionfruit-curd",
@@ -96649,7 +97601,9 @@
       "subgroup": "Norway & Iceland"
     },
     "source": "guide",
-    "noteChars": 487
+    "noteChars": 487,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "vinarterta",
@@ -96705,7 +97659,9 @@
       "subgroup": "Norway & Iceland"
     },
     "source": "guide",
-    "noteChars": 480
+    "noteChars": 480,
+    "advanceMin": 4320,
+    "advancePhrase": "3 days"
   },
   {
     "slug": "vispipuuro",
@@ -96752,7 +97708,9 @@
       "subgroup": "Finland"
     },
     "source": "guide",
-    "noteChars": 436
+    "noteChars": 436,
+    "advanceMin": 60,
+    "advancePhrase": "an hour"
   },
   {
     "slug": "bondepige-med-slor",
@@ -96860,7 +97818,9 @@
       "subgroup": "Russia & Ukraine"
     },
     "source": "guide",
-    "noteChars": 465
+    "noteChars": 465,
+    "advanceMin": 180,
+    "advancePhrase": "3 hours"
   },
   {
     "slug": "nkwobi",
@@ -96915,7 +97875,9 @@
       "subgroup": "Nigeria"
     },
     "source": "guide",
-    "noteChars": 431
+    "noteChars": 431,
+    "advanceMin": 300,
+    "advancePhrase": "5 hours"
   },
   {
     "slug": "skilpadjies",
@@ -97021,7 +97983,9 @@
       "subgroup": "Morocco"
     },
     "source": "guide",
-    "noteChars": 432
+    "noteChars": 432,
+    "advanceMin": 360,
+    "advancePhrase": "6 hours"
   },
   {
     "slug": "dulet",
@@ -97132,7 +98096,9 @@
       "subgroup": "East Africa"
     },
     "source": "guide",
-    "noteChars": 455
+    "noteChars": 455,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "colonial-goose",
@@ -97190,7 +98156,9 @@
       "subgroup": "Aotearoa New Zealand"
     },
     "source": "guide",
-    "noteChars": 476
+    "noteChars": 476,
+    "advanceMin": 720,
+    "advancePhrase": "12 hours"
   },
   {
     "slug": "kangaroo-tail-soup",
@@ -97298,7 +98266,9 @@
       "subgroup": "The Pacific Islands"
     },
     "source": "guide",
-    "noteChars": 498
+    "noteChars": 498,
+    "advanceMin": 300,
+    "advancePhrase": "5 hours"
   },
   {
     "slug": "laplap-with-chicken",
@@ -97350,7 +98320,9 @@
       "subgroup": "The Pacific Islands"
     },
     "source": "guide",
-    "noteChars": 445
+    "noteChars": 445,
+    "advanceMin": 120,
+    "advancePhrase": "2 hours"
   },
   {
     "slug": "barreado",
@@ -97405,7 +98377,9 @@
       "subgroup": "Brazil"
     },
     "source": "guide",
-    "noteChars": 479
+    "noteChars": 479,
+    "advanceMin": 720,
+    "advancePhrase": "12 hours"
   },
   {
     "slug": "cau-cau",
@@ -97518,7 +98492,9 @@
       "subgroup": "Mexico"
     },
     "source": "guide",
-    "noteChars": 492
+    "noteChars": 492,
+    "advanceMin": 720,
+    "advancePhrase": "overnight"
   },
   {
     "slug": "guyanese-pepperpot",
@@ -97622,6 +98598,8 @@
       "subgroup": "Colombia"
     },
     "source": "guide",
-    "noteChars": 481
+    "noteChars": 481,
+    "advanceMin": 2160,
+    "advancePhrase": "36 hours"
   }
 ]

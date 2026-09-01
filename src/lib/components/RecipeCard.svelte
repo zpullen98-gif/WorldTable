@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 	import type { RecipeSummary } from '$lib/types';
 	import { formatTime, recipeHref } from '$lib/data';
-	import { DIFFICULTY_LABEL } from '$lib/types';
+	import { DIFFICULTY_LABEL, ADVANCE_MIN } from '$lib/types';
 
 	let { recipe }: { recipe: RecipeSummary } = $props();
 </script>
@@ -14,6 +14,13 @@
 	<div class="badges">
 		<span class="badge d{recipe.difficulty}">{DIFFICULTY_LABEL[recipe.difficulty]}</span>
 		<span class="badge">{formatTime(recipe.minutes)}</span>
+		<!-- The time badge is ACTIVE minutes, so on its own it reads as a promise
+		     the dish cannot keep: Guanciale is thirty minutes of work and five
+		     weeks of hanging. Quote the method's own words rather than rounding
+		     them into a number the recipe never says. -->
+		{#if (recipe.advanceMin ?? 0) >= ADVANCE_MIN && recipe.advancePhrase}
+			<span class="badge plan">plus {recipe.advancePhrase}</span>
+		{/if}
 		{#if recipe.diet.vegetarian}<span class="badge veg">Vegetarian</span>{/if}
 		{#if recipe.source === 'family'}<span class="badge fam">Family</span>{/if}
 	</div>
@@ -119,5 +126,13 @@
 	.badge.fam {
 		color: var(--turmeric-deep);
 		border-color: var(--turmeric-deep);
+	}
+	/* Dashed, because it is not a property of the dish the way Vegetarian is:
+	   it is a warning about the calendar, and it should read as attached to the
+	   time badge beside it rather than as another label. */
+	.badge.plan {
+		border-style: dashed;
+		border-color: var(--turmeric);
+		color: var(--turmeric-deep);
 	}
 </style>

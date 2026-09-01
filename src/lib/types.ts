@@ -170,6 +170,17 @@ export interface RecipeSummary {
 	source: 'guide' | 'family';
 	/** Length of the "from the pass" note: drives the backfill report. */
 	noteChars: number;
+	/**
+	 * The longest wait the method asks a cook to sit through, in minutes, and
+	 * the words it was read from so a card can quote rather than paraphrase.
+	 *
+	 * ABSENT, not zero, when there is none: only about a tenth of the corpus
+	 * carries one, and the index ships to every page. `minutes` is unaffected
+	 * and still means active work, which is why both are needed to answer
+	 * "can I eat this tonight". See tools/derive/advance.mjs.
+	 */
+	advanceMin?: number;
+	advancePhrase?: string;
 }
 
 /** The rest of a recipe, loaded lazily and precached for offline. */
@@ -369,8 +380,15 @@ export const EMPTY_FILTERS: FilterState = {
 	season: false
 };
 
-/** "Under 40 min": the original's threshold, kept. */
-export const QUICK_MINUTES = 40;
+/**
+ * "Under 40 min": the original's threshold, kept, and the wait past which a
+ * dish has to be started the day before.
+ *
+ * Both are defined in tools/derive/advance.mjs and re-exported here, the way
+ * slug.ts re-exports slugify, so that the number build-data reports against and
+ * the number the filter applies are the same number.
+ */
+export { QUICK_MINUTES, ADVANCE_MIN } from '../../tools/derive/advance.mjs';
 
 export const DIFFICULTY_LABEL: Record<Difficulty, string> = {
 	1: 'Easy',

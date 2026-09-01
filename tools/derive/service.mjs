@@ -71,7 +71,12 @@ export const UNATTENDED =
 export const ACTIVE =
 	/\b(sear|saut|fry|whisk|stir|knead|chop|dice|mince|slice|cut|mount|toss|flip|brown|deglaz|assembl|plate|fold|beat|blend|grate|shape|roll|wrap|pipe|garnish|season|strain|carve|arrange|dress|toast|temper|emulsif|scrape|skim|brush|coat|peel|trim|spread|layer|stuff|fill|form|press|pound|sift|cream|portion|ladle|spoon|sprinkle|squeeze|zest|crush|shuck|rub)/gi;
 
-/** Match positions for a global regex, reset each time: lastIndex is shared state. */
+/**
+ * Match positions for a global regex, reset each time: lastIndex is shared state.
+ * @param {RegExp} re
+ * @param {string} text
+ * @returns {number[]}
+ */
 function positions(re, text) {
 	re.lastIndex = 0;
 	return [...text.matchAll(re)].map((m) => m.index);
@@ -87,10 +92,12 @@ function positions(re, text) {
 export function isUnattended(clause, at, mins) {
 	const waits = positions(UNATTENDED, clause);
 	const hands = positions(ACTIVE, clause);
+	/** @param {number[]} xs */
 	const before = (xs) => {
 		const prior = xs.filter((i) => i <= at);
 		return prior.length ? at - prior[prior.length - 1] : Infinity;
 	};
+	/** @param {number[]} xs */
 	const after = (xs) => {
 		const later = xs.filter((i) => i > at);
 		return later.length ? later[0] - at : Infinity;
