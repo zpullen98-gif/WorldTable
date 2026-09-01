@@ -76,10 +76,26 @@ function spell(s) {
 /** @type {import('minisearch').Options} */
 export const miniOptions = {
 	idField: 'id',
-	// `technique` joined the surface when the technique pages did: the tags are
-	// what a recipe DOES, so "braise" should reach all 27 braises from the main
-	// search box and not only from /technique.
-	fields: ['name', 'chapter', 'ingredients', 'flavor', 'technique'],
+	/*
+	 * `technique` joined the surface when the technique pages did: the tags are
+	 * what a recipe DOES, so "braise" should reach all 27 braises from the main
+	 * search box and not only from /technique.
+	 *
+	 * `course` joined because the grid has TWO searches and they disagreed. The
+	 * substring fallback in filter.ts builds its haystack from name, chapter,
+	 * COURSE and flavour, and it is what the grid shows until this index
+	 * finishes loading. So a cook typed "Dessert", saw 325 cards, and watched
+	 * them drop to 33 with no keystroke, because the index had never been given
+	 * the field. Measured across the ten authored courses: Starter 200 then 13,
+	 * Main 685 then 63, Breakfast 83 then 17.
+	 *
+	 * Adding it costs 19 KB (1003 to 1022) and changed the top result for none
+	 * of 500 name queries at any boost from 1 to 8. Every course word now
+	 * returns every dish of that course, so the swap can only ever widen the
+	 * grid, which is the direction it already moved for 609 of 900 real corpus
+	 * words: this index searches ingredients and the fallback does not.
+	 */
+	fields: ['name', 'chapter', 'course', 'ingredients', 'flavor', 'technique'],
 	// Nothing stored: the id indexes straight into the recipes array.
 	storeFields: [],
 	/*
@@ -115,11 +131,43 @@ export const miniOptions = {
 	searchOptions: {
 		// prefix: "lemongr" already finds lemongrass while you type.
 		prefix: true,
-		// fuzzy 0.2 ≈ one edit per five letters: "brulee" reaches "brûlée",
-		// but "ragu" cannot reach "asparagus", which is the point. The old
-		// substring scan matched anything containing the letters.
-		fuzzy: 0.2,
+		/*
+		 * fuzzy 0.2 ≈ one edit per five letters: "brulee" reaches "brûlée", but
+		 * "ragu" cannot reach "asparagus", which is the point. The old substring
+		 * scan matched anything containing the letters.
+		 *
+		 * FLOORED AT SIX CHARACTERS, because one edit on a short word is not a
+		 * typo, it is a different word. Adding `course` above gave the index ten
+		 * very short, very populous terms, and fuzzy handed them to any five
+		 * letter query: typing the real dish name "Maine Lobster Roll" flooded
+		 * the grid with 693 cards at character five, 677 of them every Main in
+		 * the book, because "maine" is one edit from "main". With the floor that
+		 * is 11.
+		 *
+		 * Measured to cost nothing it was doing: all ten courses still return
+		 * every dish of that course, and all sixteen dishes the folding rules
+		 * exist for (cilbir, brulee, ragu, flaesk, smorrebrod, zaatar, manti,
+		 * oka ia and the rest) rank exactly as they did. It also quiets the
+		 * short-query noise generally: "tart" 64 to 34, "soup" 224 to 149.
+		 *
+		 * A term-level function, so it is the QUERY's word length that decides,
+		 * not the indexed term's.
+		 */
+		fuzzy: (/** @type {string} */ term) => (term.length >= 6 ? 0.2 : false),
 		combineWith: 'AND',
-		boost: { name: 8, chapter: 4, technique: 3, ingredients: 2, flavor: 1 }
+		/*
+		 * course sits with flavour, at the bottom, and that is deliberate rather
+		 * than modest. It is the least specific evidence in the index: ten values
+		 * across 1844 documents, where a name is nearly unique. It is also a
+		 * one-token field, so BM25's length normalisation already scores a course
+		 * hit generously without any help from a boost.
+		 *
+		 * The number changes no result set at all — across 5165 query-and-boost
+		 * pairs the returned recipes were identical at 0.5, 1, 2, 3, 4 and 8 —
+		 * and only moves ranking, where raising it steadily displaces better
+		 * evidence: top-1 flips against the pre-course index climb 16, 18, 19,
+		 * 21, 21, 24 as the boost climbs. 1 is the floor of that curve.
+		 */
+		boost: { name: 8, chapter: 4, technique: 3, ingredients: 2, course: 1, flavor: 1 }
 	}
 };

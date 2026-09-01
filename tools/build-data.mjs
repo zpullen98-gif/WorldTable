@@ -779,6 +779,10 @@ mini.addAll(
 		id: i,
 		name: r.n,
 		chapter: r.c,
+		/* From the emitted record rather than from r.k, so the indexed course is
+		   the same string filter.ts compares against. Two sources for one field
+		   is how the index and the grid came to disagree in the first place. */
+		course: index[i].course,
 		ingredients: r.i.join(' '),
 		flavor: index[i].flavorTags.join(' '),
 		technique: full[i].techniques.join(' ')
