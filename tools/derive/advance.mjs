@@ -71,8 +71,11 @@ const WORD = {
 const UNIT_MIN = { hour: 60, hr: 60, day: 1440, week: 10080, month: 43200 };
 
 const N = `(?:\\d+(?:\\.\\d+)?|${Object.keys(WORD).join('|')})`;
+/* The dashes are escaped, not typed. This module is imported by types.ts, so it
+   is bundled into the client, and a literal em dash here ships one into the
+   app's own voice and shows up in the publish preflight's dash count. */
 const DURATION = new RegExp(
-	`\\b(${N})(?:\\s*(?:to|or|[-–—])\\s*(${N}))?\\s*(hours?|hrs?|days?|weeks?|months?)\\b|\\b(overnight)\\b`,
+	`\\b(${N})(?:\\s*(?:to|or|[-\\u2013\\u2014])\\s*(${N}))?\\s*(hours?|hrs?|days?|weeks?|months?)\\b|\\b(overnight)\\b`,
 	'gi'
 );
 
@@ -132,5 +135,9 @@ export function advanceWait(steps) {
 			}
 		}
 	}
-	return { advanceMin: best, advancePhrase: phrase };
+	/* Lowercased because it is quoted mid-sentence, as "plus 2 to 3 days". Five
+	   methods shout their wait ("ONE DAY", "OVERNIGHT", "2-3 DAYS") and a badge
+	   reading "plus ONE DAY" is the method's emphasis in the app's voice. No
+	   duration contains a proper noun, so nothing is lost by folding it. */
+	return { advanceMin: best, advancePhrase: phrase.toLowerCase() };
 }

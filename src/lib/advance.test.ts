@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { advanceWait, QUICK_MINUTES, ADVANCE_MIN } from '../../tools/derive/advance.mjs';
 import { matches } from './filter';
-import { DEFAULT_FILTERS } from './types';
+import { EMPTY_FILTERS } from './types';
 import type { RecipeSummary } from './types';
 import index from './data/recipes.index.json';
 
@@ -79,7 +79,7 @@ describe('waiting is not keeping', () => {
 
 describe('what "Under 40 min" now answers', () => {
 	const rows = index as unknown as RecipeSummary[];
-	const quick = { ...DEFAULT_FILTERS, quick: true };
+	const quick = { ...EMPTY_FILTERS, quick: true };
 	const named = (name: string) => rows.find((r) => r.name === name)!;
 
 	it('drops the dishes that need a cure, however little work they are', () => {
