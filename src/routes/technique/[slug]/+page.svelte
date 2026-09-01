@@ -73,6 +73,31 @@
 		</section>
 	{/if}
 
+	<!--
+		Above the film and the dishes on purpose: what the technique is, then how
+		you know you did it, then someone doing it, then somewhere to do it.
+
+		The wording is the recipe page's verbatim. 1676 dishes carry no standard
+		of their own and are judged on the techniques they exercise; that block
+		links HERE, and until now here said nothing about how the technique is
+		judged. A cook arriving from it should recognise the prose rather than
+		meet a second, differently worded account of the same thing.
+	-->
+	{#if data.standard}
+		<section class="standard">
+			<h2 class="sec">How to tell it is going right</h2>
+			<ul class="marks">
+				{#each data.standard.marks as mark (mark.id)}
+					<li>{mark.text}</li>
+				{/each}
+			</ul>
+			<p class="fault">
+				<span class="faultlabel">Where it goes wrong</span>
+				{data.standard.fault}
+			</p>
+		</section>
+	{/if}
+
 	<section class="film" data-print="hide">
 		{#if t.film}
 			<!-- Naming the film and the channel is the point. "A canon film" told the
@@ -161,6 +186,52 @@
 		display: inline-block;
 		margin-top: 10px;
 		font-size: var(--t-small);
+	}
+
+	/* Built like the Lexicon block above it rather than like the recipe page's
+	   version, which is a plain rule-topped section. On this page `.sec` already
+	   means "a chapter of dishes starts here", so an unboxed standard would read
+	   as the first chapter heading instead of as the lesson. */
+	.standard {
+		background: var(--paper-raised);
+		border: 1px solid var(--line);
+		border-left: 3px solid var(--turmeric);
+		border-radius: var(--radius);
+		padding: 16px 18px;
+		margin-bottom: 22px;
+	}
+	.standard .sec {
+		margin: 0;
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	.marks {
+		margin: 10px 0 0;
+		padding-left: 1.1em;
+		list-style: square;
+		max-width: var(--measure);
+	}
+	.marks li {
+		margin-bottom: 8px;
+		line-height: 1.6;
+		color: var(--ink-soft);
+	}
+	.marks li::marker {
+		color: var(--turmeric);
+	}
+	.fault {
+		margin-top: 14px;
+		font-size: var(--t-small);
+		color: var(--ink-soft);
+		line-height: 1.6;
+		max-width: var(--measure);
+	}
+	.faultlabel {
+		display: inline-block;
+		margin-right: 6px;
+		font-variant: small-caps;
+		letter-spacing: 0.06em;
+		color: var(--turmeric-deep);
 	}
 
 	.film {
