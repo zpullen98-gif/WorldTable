@@ -3,7 +3,13 @@
     "slug": "arepas",
     "label": "Arepas",
     "query": "how to make arepas technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=M1onLM4nJSg",
+      "id": "M1onLM4nJSg",
+      "title": "How to Make Arepas | Easy and Only Three Ingredients!",
+      "channel": "Preppy Kitchen",
+      "watchFor": "The dough being rested and then patted between wet palms: the hydration and the smooth crack-free edge are what decide whether it splits open cleanly after griddling."
+    },
     "lexiconSlug": "comal-plancha-and-griddles",
     "lexiconTerm": "Comal, Plancha & Griddles",
     "definition": "Flat-metal cooking: dry heat with total contact, no walls, no steam trap. The COMAL (Mexican, carbon steel or clay): tortillas puffed (the recipe wing's flour-tortilla law), chiles and tomatoes charred for salsas (the blister IS the flavor: dry-charring is a technique category), quesadillas sealed. The PLANCHA (Spanish) and TEPPAN (Japanese): restaurant flat-tops delivering full-surface Maillard. Smash burgers' entire physics (maximum crust contact), gambas a la plancha, fried rice at scale. Home translation: a carbon-steel griddle or the cast-iron pan's flat side across two burners; outdoor flat-top grills (the Blackstone era) brought plancha cooking to backyards. The flat-top's professional edge: heat ZONES across one surface, sear left, hold right, the pass's geography in steel.",
@@ -23,7 +29,13 @@
     "slug": "asado-fire",
     "label": "Asado fire",
     "query": "argentine asado fire technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=5NNGX36hfLY",
+      "id": "5NNGX36hfLY",
+      "title": "Seven Fires With Francis Mallmann",
+      "channel": "Mind of a Chef",
+      "watchFor": "Fire treated as several distinct tools rather than one heat setting: Mallmann lays out the different fires and what each is for, which is the two-zone idea taken to its conclusion and the reason an asado cook builds embers before cooking anything."
+    },
     "lexiconSlug": "grilling-vs-barbecue-vs-smoking",
     "lexiconTerm": "Grilling vs. Barbecue vs. Smoking",
     "definition": "Three fires, three clocks. GRILLING: direct high heat, minutes, for tender cuts: the two-zone setup (hot side/cool side) is the entire skill, giving sear and refuge in one grate. BARBECUE: indirect low heat (105–135°C) plus wood smoke, hours, for collagen cuts (brisket, shoulder, ribs) where 'low and slow' is the collagen conversion clock wearing an apron. SMOKING divides again: hot-smoking cooks while flavoring; cold-smoking (under ~30°C) flavors cured foods without cooking. Thin blue smoke good, white billows bitter; the fire is an ingredient and must be cooked as carefully as the meat.",
@@ -41,7 +53,13 @@
     "slug": "bechamel-the-mother-sauce",
     "label": "Béchamel: the mother sauce",
     "query": "bechamel mother sauce technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=X0-YKTKaYAE",
+      "id": "X0-YKTKaYAE",
+      "title": "Béchamel | Questions Answered, Theory Explained",
+      "channel": "French Cooking Academy",
+      "watchFor": "The roux for the two minutes it cooks before any milk goes in, and then watch the sauce thicken all at once near the boil: white roux and the moment of thickening are the two things people get wrong."
+    },
     "lexiconSlug": "roux-slurry-and-liaison",
     "lexiconTerm": "Roux, Slurry & Liaison",
     "definition": "The thickener's toolkit. ROUX: equal weights flour and fat cooked together: white (2 min) for béchamel, blond for velouté, brown to brick-dark for gumbo, each stage trading thickening power for flavor. SLURRY: cornstarch or arrowroot in cold water, whisked into simmering liquid at the end: instant gloss, Asian-sauce standard, breaks down if boiled long. LIAISON: egg yolk and cream tempered in off the heat: the silk finish of blanquette and avgolemono; boil it and you've made sweet scrambled regret. BEURRE MANIÉ: raw butter-flour paste whisked in at the finish, the braise-rescuer. Choose by the sauce's temperature future, not habit.",
@@ -60,7 +78,13 @@
     "slug": "beurre-blanc",
     "label": "Beurre blanc",
     "query": "beurre blanc technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=JFF9SdLUI4g",
+      "id": "JFF9SdLUI4g",
+      "title": "How to Make a Beurre Blanc (Butter Sauce) | Chef Jean-Pierre",
+      "channel": "Chef Jean-Pierre",
+      "watchFor": "The reduction going almost dry before any butter goes in, then cold butter worked in off aggressive heat: the sauce thickens and takes on gloss, and you can see the point where too much heat would break it."
+    },
     "lexiconSlug": "reduction-nappe-and-mounting",
     "lexiconTerm": "Reduction, Nappe & Mounting",
     "definition": "REDUCTION: simmering a liquid to evaporate water, concentrating flavor and body, the sauce-maker's primary move, always reduced BEFORE final seasoning (salt concentrates too). NAPPE: the classical doneness test: sauce coats the back of a spoon and holds a clean line drawn by a finger. MONTER AU BEURRE: 'mounting' cold butter cubes into a finished sauce off the heat, swirling, emulsifying in gloss, body, and richness; the last thirty seconds that make restaurant sauces taste like restaurant sauces. Together they are the grammar of à-la-minute saucing: reduce, season, mount, plate.",
@@ -78,7 +102,13 @@
     "slug": "biryani-and-dum",
     "label": "Biryani & dum",
     "query": "biryani dum technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=aleED1mc5kI",
+      "id": "aleED1mc5kI",
+      "title": "Hyderabadi Chicken Biryani | हैदराबादी चिकन दम बिरयानी | Chicken Dum Biryani | Chef Ranveer Brar",
+      "channel": "Chef Ranveer Brar",
+      "watchFor": "The layering and then the seal: dough pressed around the lid so the pot becomes its own pressure vessel, which is what dum actually means."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -95,7 +125,13 @@
     "slug": "blanching-and-shocking",
     "label": "Blanching & shocking",
     "query": "blanch and shock technique ice bath",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=B-0wCOLyUTs",
+      "id": "B-0wCOLyUTs",
+      "title": "Is Blanching Really Necessary? | America's Test Kitchen",
+      "channel": "America's Test Kitchen",
+      "watchFor": "The side-by-side colour of blanched-and-shocked greens against the unshocked ones, which shows why the ice bath is not optional but the step that fixes the green in place."
+    },
     "lexiconSlug": "blanch-and-shock",
     "lexiconTerm": "Blanch & Shock",
     "definition": "Brief boiling in heavily salted water followed by an ice-bath arrest. It sets chlorophyll's electric green (and stops it there), softens vegetables to exact tenderness for later reheating (the restaurant à-la-minute secret: nearly everything green was blanched hours ago), loosens skins (tomatoes, peaches, fava), and tames raw edges (onion for salads). The salt matters: it seasons and protects color; the shock matters more: residual heat keeps cooking anything not stopped. Blanch-and-shock is the technique that lets a ten-minute dinner service plate a two-hour mise.",
@@ -183,7 +219,13 @@
     "slug": "braising",
     "label": "Braising",
     "query": "braising technique explained",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=t0ORhrvqvRw",
+      "id": "t0ORhrvqvRw",
+      "title": "The Foolproof Formula for Braising Beef | Techniquely with Lan Lam",
+      "channel": "America's Test Kitchen",
+      "watchFor": "Lan Lam on why the liquid must never boil and why the pot comes only partway up the meat, which is what turns a braise from a covered simmer into collagen becoming gelatin."
+    },
     "lexiconSlug": "braising-and-stewing",
     "lexiconTerm": "Braising & Stewing",
     "definition": "Combination cooking: sear for Maillard flavor, then simmer partially submerged (braise, big pieces) or fully submerged (stew, small pieces) in a covered pot at a bare tremble (85–95°C liquid, oven around 150°C) until collagen converts to gelatin. The conversion needs time above ~70°C, which is why tough cuts get tender and lean cuts get dry: choose collagen-rich muscle always. Universal laws: never boil (boiled braises are grainy), skim honestly, rest overnight when possible (flavor marries, fat lifts), and the strained liquid IS the sauce: reduce and mount it, waste nothing.",
@@ -241,7 +283,13 @@
     "slug": "brining-and-curing",
     "label": "Brining & curing",
     "query": "brining curing meat technique explained",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=w3rI3KPi_D0",
+      "id": "w3rI3KPi_D0",
+      "title": "How Dry Brining Works",
+      "channel": "Meathead's AmazingRibs",
+      "watchFor": "Time-lapse of salt on a steak: the surface first goes wet as salt pulls water out, then the brine is drawn back in, which is the whole argument for dry brining over wet."
+    },
     "lexiconSlug": "brining-wet-dry-and-cures",
     "lexiconTerm": "Brining: Wet, Dry & Cures",
     "definition": "Salt's three levels of commitment. WET BRINE (5–8% salt solution, hours): dissolves some muscle protein so meat retains water: juicier lean cuts, diluted flavor, wet skin. DRY BRINE (salting 1–3 days ahead, uncovered): seasons deeply, keeps flavor concentrated, and desiccates skin for crackling, the modern professional default for poultry and steaks. CURING (higher salt, often with nitrite, plus time): preservation and transformation. Bacon, gravlax, pastrami, prosciutto. The through-line is diffusion and osmosis given time; 'season early' is the shortest version of this entire entry.",
@@ -338,7 +386,13 @@
     "slug": "brown-butter",
     "label": "Brown butter",
     "query": "brown butter beurre noisette technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=4KvqLCKLn2E",
+      "id": "4KvqLCKLn2E",
+      "title": "How to Brown Butter | Today's Special",
+      "channel": "America's Test Kitchen",
+      "watchFor": "The milk solids at the bottom of the pan, not the fat: the foam subsiding and the specks turning hazelnut is the whole signal, and the pan must come off the heat a shade before it looks right."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -361,7 +415,13 @@
     "slug": "building-an-emulsion",
     "label": "Building an emulsion",
     "query": "how to emulsify sauce technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=c82pUCXjY2w",
+      "id": "c82pUCXjY2w",
+      "title": "Make Homemade Mayonnaise with Master Chef Jacques Pépin",
+      "channel": "Jacques Pépin Foundation",
+      "watchFor": "The moment the sauce seizes into thickness: watch how slowly the oil goes in at the start and how the stream can widen once the emulsion has taken, which is the single judgement that separates mayonnaise from a broken puddle of yolk and oil."
+    },
     "lexiconSlug": "emulsions",
     "lexiconTerm": "Emulsions",
     "definition": "Fat and water convinced to coexist as droplets, held by an emulsifier (egg-yolk lecithin, mustard, starch, or sheer agitation): the physics behind mayonnaise, hollandaise, vinaigrette, beurre blanc, aioli, and glossy pan sauces. The universal method: add fat SLOWLY to the water phase while shearing hard; the universal failure: too fast, too hot, or too cold, and it 'breaks' into grease. The universal rescue: start fresh with a new yolk (or a spoon of water/mustard) and whisk the broken sauce INTO it. Pasta's starchy water emulsifying oil and butter into clinging sauce is the same trick; Italian kitchens just never named it.",
@@ -419,7 +479,13 @@
     "slug": "butchery-basics",
     "label": "Butchery basics",
     "query": "how to debone chicken technique",
-    "film": "https://www.youtube.com/watch?v=i_ZkAHCR1D0",
+    "film": {
+      "url": "https://www.youtube.com/watch?v=i_ZkAHCR1D0",
+      "id": "i_ZkAHCR1D0",
+      "title": "Jacques Pépin's Chicken Galantine",
+      "channel": "Sur La Table",
+      "watchFor": "The knife tip riding the bone the whole way. He is not cutting the bird, he is following its skeleton, and the blade almost never leaves the surface."
+    },
     "lexiconSlug": "butchery-verbs-frenching-butterflying-tying",
     "lexiconTerm": "Butchery Verbs: Frenching, Butterflying, Tying",
     "definition": "FRENCHING: scraping rib bones clean (racks of lamb, tomahawks, crown roasts), pure presentation, honest theater. BUTTERFLYING: splitting a piece horizontally almost through and opening it like a book: even thickness for fast cooking (chicken breasts) or a canvas for stuffing (roulades, porchetta). TYING: butcher's twine at intervals to hold shape. Even cooking, clean slices. SILVERSKIN: the iridescent membrane that never renders; strip it from tenderloins with a knife-tip and a pull. These verbs are where cooking begins before heat exists; a chef who butchers understands the animal a recipe can't teach.",
@@ -442,7 +508,13 @@
     "slug": "ceviche",
     "label": "Ceviche",
     "query": "ceviche technique how to",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=C9aiGLIry7g",
+      "id": "C9aiGLIry7g",
+      "title": "How to Make Ceviche",
+      "channel": "Munchies",
+      "watchFor": "How briefly the fish actually sits in the lime: Gastón Acurio treats long marination as the classic mistake, and you can see the surface turn opaque while the centre stays translucent, which is the texture the dish is aiming at."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -459,7 +531,13 @@
     "slug": "charring-over-open-flame",
     "label": "Charring over open flame",
     "query": "charring vegetables chilies over flame technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=H-BduziRdTY",
+      "id": "H-BduziRdTY",
+      "title": "Rick Bayless Salsa Essentials: \"Chiltomate\" Roasted Tomato-Habanero Salsa",
+      "channel": "Rick Bayless",
+      "watchFor": "How far he takes the tomato and habanero skins, to blistered and blackened in patches rather than merely softened, which is the char that carries the flavor into the salsa."
+    },
     "lexiconSlug": "the-maillard-reaction",
     "lexiconTerm": "The Maillard Reaction",
     "definition": "The browning reaction between amino acids and reducing sugars, roaring above ~140°C, the source of seared steak crust, bread crust, roasted coffee, fried onions, and toasted anything: hundreds of new flavor compounds from one bit of chemistry. Its enemies are water (surfaces must be DRY: a wet steak steams at 100°C forever) and crowding (which traps steam). Its friends: high heat, dry surfaces, a little alkalinity (the pinch of baking soda in stir-fry velveting and pretzel dips). Distinct from CARAMELIZATION, which is sugar alone breaking down at ~160°C+. Half of 'flavor' in savory cooking is engineering these two reactions on purpose.",
@@ -563,7 +641,13 @@
     "slug": "choux-pastry",
     "label": "Choux pastry",
     "query": "choux pastry technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=okmeKRVSlvM",
+      "id": "okmeKRVSlvM",
+      "title": "Claire Saffitz Makes Cheese Puffs / Pâte à Choux Part 1 | Dessert Person",
+      "channel": "Claire Saffitz x Dessert Person",
+      "watchFor": "The panade being dried out on the stove and then the eggs beaten in one at a time: watch the paste go from split and slick to glossy, and the ribbon test that tells you to stop adding egg, since consistency here decides whether the puff rises hollow or squat."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -584,7 +668,13 @@
     "slug": "churning-ice-cream",
     "label": "Churning ice cream",
     "query": "ice cream churning technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=MdirPsiHnCA",
+      "id": "MdirPsiHnCA",
+      "title": "Ice Cream | Basics with Babish",
+      "channel": "Binging with Babish",
+      "watchFor": "The base going into the machine thin and cold and coming out at soft-serve thickness: that change is air being beaten in and ice crystals being kept small by constant agitation."
+    },
     "lexiconSlug": "frozen-dessert-machines-churners-and-pacojet",
     "lexiconTerm": "Frozen Dessert Machines: Churners & Pacojet",
     "definition": "Ice cream is texture engineering, small ice crystals plus controlled air (overrun), and the machines are crystal-size strategies. HOME CHURNERS: frozen-bowl (cheap, one batch, pre-freeze the bowl 24h) vs. self-refrigerating compressors (batch after batch, the enthusiast's line). The pastry-science levers travel with either: sugar and alcohol depress freezing (scoopability), fat carries flavor, stabilizers (or the custard wing's egg base) manage melt; churn cold bases fast, harden in shallow containers. The pro disruptors: the PACOJET spins FROZEN solid blocks into instant micro-shaved creams to order (savory sorbets, herb ices, single-portion economics, a fine-dining fixture), and its consumer descendant (the Ninja Creami class) brought the same shave-don't-churn idea home, remaking the category. Kulfi (the dessert wing) reminds everyone the no-machine road exists: density as a choice. Whatever the hardware: the base recipe is 80% of the result: machines only preserve the texture you formulated.",
@@ -603,7 +693,13 @@
     "slug": "churros",
     "label": "Churros",
     "query": "churros piping frying technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=453mpKHVaBs",
+      "id": "453mpKHVaBs",
+      "title": "How to Make Churros",
+      "channel": "Preppy Kitchen",
+      "watchFor": "The star tip and the piping hand: the ridges are structural, giving the surface area that makes churros crisp, and you can see the dough hold its fluting the moment it hits the oil."
+    },
     "lexiconSlug": "deep-and-shallow-frying",
     "lexiconTerm": "Deep & Shallow Frying",
     "definition": "Frying is violent dehydration: oil at 160–190°C flash-boils surface moisture outward (the bubbles ARE water leaving), creating crust while steam-cooking the interior. Laws: recover temperature between batches (crowding = greasy), match oil to job (neutral high-smoke oils for deep; the double-fry, low then high, for fries, tostones, and chicken that must stay crisp), drain on RACKS not paper (paper steams the base), and salt in the first seconds while the surface is still hot and receptive. Oil is a reusable ingredient: strain it, smell it, retire it when it darkens or foams.",
@@ -618,7 +714,13 @@
     "slug": "confit",
     "label": "Confit",
     "query": "confit technique explained",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=UhwKM3DzT_Q",
+      "id": "UhwKM3DzT_Q",
+      "title": "How To Make Duck Leg Confit at Home (Christmas dinner ideas)",
+      "channel": "French Cooking Academy",
+      "watchFor": "The fat never comes near a simmer: watch the surface stay almost still for hours, because confit is poaching in fat at low temperature, not frying, and the bubbles you do see are moisture leaving the meat rather than the fat boiling."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -638,7 +740,13 @@
     "slug": "congee",
     "label": "Congee",
     "query": "how to make congee technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=t2SahnNVULA",
+      "id": "t2SahnNVULA",
+      "title": "🍲  The Perfect Congee (鷄粥) | Preserving my dad's recipe!",
+      "channel": "Made With Lau",
+      "watchFor": "The rice grains collapsing over time from separate grains into a suspension, and the stirring that drives it, which is the whole technique rather than any ingredient in the pot."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -654,7 +762,13 @@
     "slug": "creaming-butter-and-sugar",
     "label": "Creaming butter & sugar",
     "query": "creaming butter sugar cake structure technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=ThJi3p2As6M",
+      "id": "ThJi3p2As6M",
+      "title": "How to Cream Butter and Sugar | Food Network",
+      "channel": "Food Network",
+      "watchFor": "The colour change in the bowl: butter going from yellow and dense to pale and visibly increased in volume, which is the air you are building before any leavener gets a chance to work."
+    },
     "lexiconSlug": "creaming-foaming-and-cake-structure",
     "lexiconTerm": "Creaming, Foaming & Cake Structure",
     "definition": "Cakes rise on air you built before the oven. CREAMING: beating butter and sugar until pale: sugar crystals literally cut air pockets into the fat, which chemical leaveners then inflate (butter cakes, cookies where the long cream = lift). FOAMING: whipping eggs (whole: genoise; whites: meringue, angel food, chiffon) into a protein foam, the sponge family's entire structure. RIBBON STAGE: whole eggs and sugar whipped until the batter falls in a slowly-dissolving ribbon, the doneness test for sponges and molten cakes alike. The corollary rule: once air is in, FOLD, never stir: every rough stroke is height surrendered.",
@@ -694,7 +808,13 @@
     "slug": "crepes",
     "label": "Crêpes",
     "query": "crepe technique how to",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=V_okk5pOLp4",
+      "id": "V_okk5pOLp4",
+      "title": "Jacques Pépin Makes His Famous Crêpes | American Masters: At Home with Jacques Pépin | PBS",
+      "channel": "American Masters PBS",
+      "watchFor": "The wrist: the pour and the swirl are one continuous motion, and the batter has to be thin enough to run to the edge before it sets."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -718,7 +838,13 @@
     "slug": "curing-gravlax",
     "label": "Curing gravlax",
     "query": "gravlax curing salmon technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=i6_Qmo8HaVY",
+      "id": "i6_Qmo8HaVY",
+      "title": "How to make salmon gravadlax | Rick Stein's Cookery School | Rick Stein",
+      "channel": "Rick Stein Restaurants",
+      "watchFor": "How completely the salt and sugar cure is packed over the flesh and how much liquid has been drawn out when it is unwrapped: the change from raw to firm, translucent and sliceable is osmosis doing all the work."
+    },
     "lexiconSlug": "brining-wet-dry-and-cures",
     "lexiconTerm": "Brining: Wet, Dry & Cures",
     "definition": "Salt's three levels of commitment. WET BRINE (5–8% salt solution, hours): dissolves some muscle protein so meat retains water: juicier lean cuts, diluted flavor, wet skin. DRY BRINE (salting 1–3 days ahead, uncovered): seasons deeply, keeps flavor concentrated, and desiccates skin for crackling, the modern professional default for poultry and steaks. CURING (higher salt, often with nitrite, plus time): preservation and transformation. Bacon, gravlax, pastrami, prosciutto. The through-line is diffusion and osmosis given time; 'season early' is the shortest version of this entire entry.",
@@ -734,7 +860,13 @@
     "slug": "dashi",
     "label": "Dashi",
     "query": "how to make dashi technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=qIWDxfCHQgs",
+      "id": "qIWDxfCHQgs",
+      "title": "How to Make Dashi (Recipe) だしの作り方（レシピ）",
+      "channel": "Just One Cookbook",
+      "watchFor": "The kombu being lifted out just before the boil and the katsuobushi being allowed to sink rather than stirred, because dashi is defined by restraint and anything harder turns it bitter and cloudy."
+    },
     "lexiconSlug": "stocks-blanc-brun-broth-and-demi",
     "lexiconTerm": "Stocks: Blanc, Brun, Broth & Demi",
     "definition": "WHITE STOCK: raw bones, gentle simmer: clean, pale, for velouté and light soups. BROWN STOCK: bones and mirepoix roasted first, tomato paste caramelized: deep color and roasted flavor, the mother of demi-glace and jus. BROTH is meat-based and seasoned to drink; stock is bone-based, unsalted, and built for gelatin. A proper stock sets like Jell-O cold. GLACE is stock reduced to a syrup; a spoon flavors a whole pan sauce. Skim relentlessly, never boil (cloudiness is emulsified scum), salt never (it concentrates downstream), and know that stock is the bank account every other station borrows from.",
@@ -782,7 +914,13 @@
     "slug": "deep-frying",
     "label": "Deep frying",
     "query": "deep frying technique oil temperature",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=LzK4sC_ZYgc",
+      "id": "LzK4sC_ZYgc",
+      "title": "The Ultimate Way To Deep Fry Anything That Never Fails | Epicurious 101",
+      "channel": "Epicurious",
+      "watchFor": "The bubbling around each piece as it enters the oil and how the chef waits for temperature recovery before the next batch, which is the crowding law made visible."
+    },
     "lexiconSlug": "deep-and-shallow-frying",
     "lexiconTerm": "Deep & Shallow Frying",
     "definition": "Frying is violent dehydration: oil at 160–190°C flash-boils surface moisture outward (the bubbles ARE water leaving), creating crust while steam-cooking the interior. Laws: recover temperature between batches (crowding = greasy), match oil to job (neutral high-smoke oils for deep; the double-fry, low then high, for fries, tostones, and chicken that must stay crisp), drain on RACKS not paper (paper steams the base), and salt in the first seconds while the surface is still hot and receptive. Oil is a reusable ingredient: strain it, smell it, retire it when it darkens or foams.",
@@ -895,7 +1033,13 @@
     "slug": "deglazing-and-pan-sauces",
     "label": "Deglazing & pan sauces",
     "query": "pan sauce deglazing technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=nZxW4n5RyfI",
+      "id": "nZxW4n5RyfI",
+      "title": "Science: How to Make a Better Pan Sauce (Step #1: Break All the Rules)",
+      "channel": "America's Test Kitchen",
+      "watchFor": "The fond dissolving off the pan bottom the instant liquid hits it, and then the butter going in: a pan sauce is a fat-in-water emulsion, and this shows both the moment it comes together and the over-reduction that breaks it."
+    },
     "lexiconSlug": "deglaze-and-fond",
     "lexiconTerm": "Deglaze & Fond",
     "definition": "FOND (French for 'base/foundation') is the browned glaze of proteins and sugars welded to the pan after searing, concentrated Maillard flavor that amateurs scrub into the sink and professionals convert into money. DEGLAZING: pouring liquid (wine, stock, even water) into the hot emptied pan and scraping; the fond dissolves into an instant sauce base. From there: reduce, season, mount with butter, and a sautéed anything becomes a finished dish. The habit to build: never wash a pan with fond in it until you've asked what sauce it wanted to become.",
@@ -972,7 +1116,13 @@
     "slug": "draining-fried-food-a-rack-never-paper",
     "label": "Draining fried food: a rack, never paper",
     "query": "draining fried food rack technique crisp",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=LzK4sC_ZYgc",
+      "id": "LzK4sC_ZYgc",
+      "title": "The Ultimate Way To Deep Fry Anything That Never Fails | Epicurious 101",
+      "channel": "Epicurious",
+      "watchFor": "The whole frying discipline rather than a recipe: heavy pot, clip thermometer, small batches so the oil recovers, and the finished pieces lifted onto a rack where air reaches every side instead of steaming on paper."
+    },
     "lexiconSlug": "fryer-setups-and-oil-management",
     "lexiconTerm": "Fryer Setups & Oil Management",
     "definition": "Frying's equipment truth: the vessel is simple; the DISCIPLINE is the machine. Home setups ranked: a heavy DUTCH OVEN with a clip thermometer (thermal mass = temperature stability, the recovery physics of the frying entry) beats most countertop electric fryers (underpowered, slow recovery); a WOK fries with less oil and more surface; dedicated electric fryers earn space only with filtration and frequency. The management protocol that separates operations from accidents: never past two-thirds full, food DRY (water is the eruption), a spider and a landing rack staged BEFORE the first drop, baking soda or a lid for fire (never water: say it twice), and oil husbandry: strain through fine mesh after each session, store dark and cool, track uses by what was fried (fish retires oil fastest), retire at darkening, foaming, or off smells. Air fryers, honestly filed: compact convection ovens: excellent at reheating fried food and roasting small batches, incapable of actual frying; useful appliance, dishonest name. Restaurant note: fryer oil is a tracked COST line and a fire-code fixture: respect it at home like the pros are required to.",
@@ -1067,7 +1217,13 @@
     "slug": "dry-pan-toasting-spices-seeds-and-nuts",
     "label": "Dry-pan toasting: spices, seeds and nuts",
     "query": "toasting spices dry pan technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=hK91vFjf_PU",
+      "id": "hK91vFjf_PU",
+      "title": "How to toast spices",
+      "channel": "Great British Chefs",
+      "watchFor": "The seeds for the moment they start to jump and darken a shade, which is the cue to tip them out of the pan immediately: residual heat in the metal will carry them from toasted to burnt after the heat is off."
+    },
     "lexiconSlug": "toasting-nuts-seeds-grains-and-coconut",
     "lexiconTerm": "Toasting: Nuts, Seeds, Grains & Coconut",
     "definition": "The smallest technique with the largest per-second flavor return: dry heat waking pyrazines and oils in anything with fat and starch to brown. THE METHODS ranked: OVEN (160–175°C on a sheet pan) for volume and evenness: nuts 8–12 min, stirred once; STOVETOP DRY PAN for small batches and whole spices: constant motion, trust your nose over your eyes (fragrant means nearly done; golden means done; 'one more minute' means starting over); the aggressive exception: coconut and sesame toast in a blink and burn in the next. THE LAWS: toast WHOLE then chop (surface-area math: chopped pieces scorch at the corners), carryover is real (pull a shade early; hot nuts keep cooking on the pan: decant immediately), toasted flavors FADE in liquid (re-toast garnishes; add toasted elements late), and salt while warm when salting at all. THE APPLICATIONS threading this guide: the nutty register's entire pantry, dukkah and gomasio, toasted-rice powder for larb, the pie crust's blind-baked depth, spices before grinding, and the honest truth that most 'flat' granola, pesto, and praline died of raw nuts. When in doubt, toast, but stand there while you do.",
@@ -1229,7 +1385,13 @@
     "slug": "fermentation",
     "label": "Fermentation",
     "query": "fermentation basics vegetables technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=snxb_PSe3Ps",
+      "id": "snxb_PSe3Ps",
+      "title": "Brad Makes Sauerkraut | It's Alive | Bon Appétit",
+      "channel": "Bon Appétit",
+      "watchFor": "Cabbage weighed, salted by percentage, then massaged until it releases enough of its own liquid to sit under brine, which is the line between lacto-fermentation and a quick pickle."
+    },
     "lexiconSlug": "fermentation-and-pickling",
     "lexiconTerm": "Fermentation & Pickling",
     "definition": "Two preserved-sour families the menu should distinguish. QUICK PICKLING: vinegar, sugar, salt poured over: sour today, no microbes involved. LACTO-FERMENTATION: salt (2–3% by weight) suppresses bad microbes while lactobacillus converts sugars to lactic acid (sauerkraut, kimchi, real dill pickles, curtido), living sour with depth vinegar can't fake. Adjacent kingdoms: KOJI (Aspergillus mold on rice/barley) powers miso, soy sauce, and modern dry-age shortcuts; yeast ferments bread and beer; SCOBYs make kombucha and vinegar itself. Ferments are how a restaurant builds house flavor no supplier can sell the competition.",
@@ -1300,7 +1462,13 @@
     "slug": "filleting-fish",
     "label": "Filleting fish",
     "query": "how to fillet a fish technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=codtvhRYAUw",
+      "id": "codtvhRYAUw",
+      "title": "How to Fillet a Salmon or Trout | Jamie Oliver",
+      "channel": "Jamie Oliver",
+      "watchFor": "The knife staying flat and riding the backbone in long strokes rather than sawing: the fillet you lose is the fillet left on the frame, and the sound of blade on bone is the guide."
+    },
     "lexiconSlug": "boning-fillet-and-the-butchery-blades",
     "lexiconTerm": "Boning, Fillet & the Butchery Blades",
     "definition": "Blades that follow anatomy. BONING (5–6\", stiff or semi-flex): rides bones and seams: breaking down chickens, frenching racks, seaming out silverskin; the stiff version muscles through joints, the flexible sweeps curves. FILLET (6–9\", fully flexible): the fish specialist bending along the spine, skinning in one drawn stroke. Japan's specialists: HONESUKI: the triangular poultry-boning knife whose pointed authority converts chicken breakdown from chore to craft; DEBA: the thick single-bevel cleaver-knife that heads and fillets whole fish (spine chopped by the heel, flesh drawn by the edge). Butchery blades are where sharpening pays cash: yield percentage (see the menu-economics entry) is literally a function of edge and angle: a sharp boning knife is a raise you give yourself.",
@@ -1322,7 +1490,13 @@
     "slug": "flambe",
     "label": "Flambé",
     "query": "flambe technique safely",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=DyKhvsAPO9I",
+      "id": "DyKhvsAPO9I",
+      "title": "How To Flambe Safely | 1 Minute Tips | French Guy Cooking",
+      "channel": "Jamie Oliver",
+      "watchFor": "The pan being pulled off the heat before the spirit goes in, and where the hands and face are when it lights: the safety sequence is the whole technique."
+    },
     "lexiconSlug": "the-kitchen-torch",
     "lexiconTerm": "The Kitchen Torch",
     "definition": "Directed fire, sold as a dessert toy and worth far more. The canon: CRÈME BRÛLÉE's glass lid (thin sugar, even sweeps, let it cool to glass: the pastry wing's stage-managed caramel), meringue toasting (baked Alaska's peaks, tarte au citron's optional crown). The savory second life: peeling peppers and tomatoes in place, blistering shishitos, finishing sous-vide proteins' edges where the pan can't reach (the crevices of a chicken thigh, a roast's pale corner: torch as detail-sear), melting cheese to order, aburi-style sushi's kissed fat (torched salmon nigiri's entire genre), charring citrus for cocktails. Hardware truth: the tiny culinary torches are underpowered toys; a hardware-store propane or MAP-gas head with a trigger igniter costs less and works properly; hold the flame so food sees the blue cone's TIP, keep it moving, and mind the 'torch taste' (unburned fuel from too-close, too-rich flames: distance and a hot, lean flame prevent it).",
@@ -1345,7 +1519,13 @@
     "slug": "folding-keeping-the-air-in",
     "label": "Folding: keeping the air in",
     "query": "folding batter technique keep air",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=7To3giV62rg",
+      "id": "7To3giV62rg",
+      "title": "How to Fold in Ingredients | Baking Mad",
+      "channel": "Silver Spoon",
+      "watchFor": "The spatula cutting down through the centre, sweeping the bowl's floor and turning the mass over while the other hand rotates the bowl: it is a flip, never a stir, and the difference is the air you keep."
+    },
     "lexiconSlug": "creaming-foaming-and-cake-structure",
     "lexiconTerm": "Creaming, Foaming & Cake Structure",
     "definition": "Cakes rise on air you built before the oven. CREAMING: beating butter and sugar until pale: sugar crystals literally cut air pockets into the fat, which chemical leaveners then inflate (butter cakes, cookies where the long cream = lift). FOAMING: whipping eggs (whole: genoise; whites: meringue, angel food, chiffon) into a protein foam, the sponge family's entire structure. RIBBON STAGE: whole eggs and sugar whipped until the batter falls in a slowly-dissolving ribbon, the doneness test for sponges and molten cakes alike. The corollary rule: once air is in, FOLD, never stir: every rough stroke is height surrendered.",
@@ -1387,7 +1567,13 @@
     "slug": "fresh-pasta",
     "label": "Fresh pasta",
     "query": "fresh pasta dough technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=EnXb1u9UoBU",
+      "id": "EnXb1u9UoBU",
+      "title": "The Best Way To Make Pasta From Scratch | Epicurious 101",
+      "channel": "Epicurious",
+      "watchFor": "The dough changing under the heel of the hand from a shaggy, tearing mass to a smooth elastic one, which is the gluten network forming and the only reliable cue for when to stop kneading."
+    },
     "lexiconSlug": "gluten-and-hydration",
     "lexiconTerm": "Gluten & Hydration",
     "definition": "Gluten is the elastic network formed when wheat's glutenin and gliadin meet water and agitation: the structure of bread, the enemy of tenderness in cakes and pie crusts. The baker steers it three ways: FLOUR CHOICE (bread flour ~12–14% protein builds; cake flour ~8% barely does), FAT (shortens gluten strands, hence 'shortening', 'shortbread', 'shortcrust'), and TECHNIQUE (kneading develops it; minimal mixing and resting relax it). HYDRATION is water as a percentage of flour weight: 60% is a tight bagel dough, 75% a country loaf, 85%+ the wet ciabatta school. Baker's percentages, everything relative to flour at 100%, are the professional language; learn them and every formula scales.",
@@ -1412,7 +1598,13 @@
     "slug": "frying-the-paste-until-the-oil-splits",
     "label": "Frying the paste until the oil splits",
     "query": "frying curry paste sofrito until oil separates",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=fJMAc5oU5_w",
+      "id": "fJMAc5oU5_w",
+      "title": "How to make Onion Tomato Masala | Sanjeev Kapoor Khazana",
+      "channel": "Sanjeev Kapoor Khazana",
+      "watchFor": "The surface of the masala for the moment the fat stops being absorbed and starts pooling and glistening at the edges of the pan, which is the signal that the water has cooked out and the paste is done."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -1519,7 +1711,13 @@
     "slug": "gnocchi",
     "label": "Gnocchi",
     "query": "how to make gnocchi light technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=_ZiSsYAWblA",
+      "id": "_ZiSsYAWblA",
+      "title": "95yr old Mirella from Rome makes gnocchi with tomato sauce! | Pasta Grannies",
+      "channel": "Pasta Grannies",
+      "watchFor": "How little flour she adds and how briefly she works the dough, because lightness in gnocchi is entirely a matter of stopping early rather than of any trick in the shaping."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -1602,7 +1800,13 @@
     "slug": "grilling-over-live-coals",
     "label": "Grilling over live coals",
     "query": "grilling over charcoal two zone technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=V-21tnf6tHk",
+      "id": "V-21tnf6tHk",
+      "title": "Setting Up a Two-Zone Charcoal Fire | Weber Grills",
+      "channel": "Weber Grills",
+      "watchFor": "The coals being banked to one side and nothing else: the hot side and the empty refuge beside it are the whole technique, and seeing the actual depth of the coal bed is what a diagram cannot teach."
+    },
     "lexiconSlug": "grilling-vs-barbecue-vs-smoking",
     "lexiconTerm": "Grilling vs. Barbecue vs. Smoking",
     "definition": "Three fires, three clocks. GRILLING: direct high heat, minutes, for tender cuts: the two-zone setup (hot side/cool side) is the entire skill, giving sear and refuge in one grate. BARBECUE: indirect low heat (105–135°C) plus wood smoke, hours, for collagen cuts (brisket, shoulder, ribs) where 'low and slow' is the collagen conversion clock wearing an apron. SMOKING divides again: hot-smoking cooks while flavoring; cold-smoking (under ~30°C) flavors cured foods without cooking. Thin blue smoke good, white billows bitter; the fire is an ingredient and must be cooked as carefully as the meat.",
@@ -1694,7 +1898,13 @@
     "slug": "hand-pulled-noodles",
     "label": "Hand-pulled noodles",
     "query": "hand pulled noodles technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=6DgITQSonv4",
+      "id": "6DgITQSonv4",
+      "title": "Lanzhou Hand Pulled Noodles (拉面)",
+      "channel": "Chinese Cooking Demystified",
+      "watchFor": "The repeated stretch-and-fold against the bench: watch how the dough stops fighting back and starts extending, which is the gluten network being aligned rather than merely developed."
+    },
     "lexiconSlug": "gluten-and-hydration",
     "lexiconTerm": "Gluten & Hydration",
     "definition": "Gluten is the elastic network formed when wheat's glutenin and gliadin meet water and agitation: the structure of bread, the enemy of tenderness in cakes and pie crusts. The baker steers it three ways: FLOUR CHOICE (bread flour ~12–14% protein builds; cake flour ~8% barely does), FAT (shortens gluten strands, hence 'shortening', 'shortbread', 'shortcrust'), and TECHNIQUE (kneading develops it; minimal mixing and resting relax it). HYDRATION is water as a percentage of flour weight: 60% is a tight bagel dough, 75% a country loaf, 85%+ the wet ciabatta school. Baker's percentages, everything relative to flour at 100%, are the professional language; learn them and every formula scales.",
@@ -1729,7 +1939,13 @@
     "slug": "hollandaise",
     "label": "Hollandaise",
     "query": "hollandaise technique how to",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=PS2avsY5G0M",
+      "id": "PS2avsY5G0M",
+      "title": "How to Make Hollandaise",
+      "channel": "LeCordon Bleu",
+      "watchFor": "The moment butter begins going in against the whisked yolks: the sauce should thicken and turn opaque as droplets disperse, and that visual change is the emulsion forming."
+    },
     "lexiconSlug": "emulsions",
     "lexiconTerm": "Emulsions",
     "definition": "Fat and water convinced to coexist as droplets, held by an emulsifier (egg-yolk lecithin, mustard, starch, or sheer agitation): the physics behind mayonnaise, hollandaise, vinaigrette, beurre blanc, aioli, and glossy pan sauces. The universal method: add fat SLOWLY to the water phase while shearing hard; the universal failure: too fast, too hot, or too cold, and it 'breaks' into grease. The universal rescue: start fresh with a new yolk (or a spoon of water/mustard) and whisk the broken sauce INTO it. Pasta's starchy water emulsifying oil and butter into clinging sauce is the same trick; Italian kitchens just never named it.",
@@ -1746,7 +1962,13 @@
     "slug": "icing-and-frosting",
     "label": "Icing & frosting",
     "query": "frosting buttercream finishing a cake technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=Pf1bbVIcty8",
+      "id": "Pf1bbVIcty8",
+      "title": "How to frost cake layers and create a crumb coat",
+      "channel": "King Arthur Baking Company",
+      "watchFor": "The crumb coat going on deliberately thin and ugly, then being chilled before the finish coat: that first sacrificial layer is what traps loose crumbs so the visible frosting stays clean, and skipping it is why home cakes look speckled."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -1776,7 +1998,13 @@
     "slug": "injera",
     "label": "Injera",
     "query": "how to make injera technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=lXr3Q3Atbjs",
+      "id": "lXr3Q3Atbjs",
+      "title": "How to Make Injera - Fermented Ethiopian Teff Flatbread",
+      "channel": "Yang's Nourishing Kitchen",
+      "watchFor": "The batter after its multi-day souring, and then the pour: a thin spiral from the outside inward, followed by the eyes opening across the surface, which is how you read that the ferment actually worked."
+    },
     "lexiconSlug": "fermentation-and-pickling",
     "lexiconTerm": "Fermentation & Pickling",
     "definition": "Two preserved-sour families the menu should distinguish. QUICK PICKLING: vinegar, sugar, salt poured over: sour today, no microbes involved. LACTO-FERMENTATION: salt (2–3% by weight) suppresses bad microbes while lactobacillus converts sugars to lactic acid (sauerkraut, kimchi, real dill pickles, curtido), living sour with depth vinegar can't fake. Adjacent kingdoms: KOJI (Aspergillus mold on rice/barley) powers miso, soy sauce, and modern dry-age shortcuts; yeast ferments bread and beer; SCOBYs make kombucha and vinegar itself. Ferments are how a restaurant builds house flavor no supplier can sell the competition.",
@@ -1835,7 +2063,13 @@
     "slug": "keeping-the-cooking-liquid",
     "label": "Keeping the cooking liquid",
     "query": "save the cooking liquid broth technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=se9zjwSyeNI&t=19s",
+      "id": "se9zjwSyeNI",
+      "title": "How to Make Martha Stewart's Brown Beef Stock | Martha's Cooking School | Martha Stewart",
+      "channel": "Martha Stewart",
+      "watchFor": "The roasting of bones and aromatics to a true deep brown, and then the deglazing of the roasting pan, which is the step that separates brown stock from white and carries all the fond into the pot."
+    },
     "lexiconSlug": "stocks-blanc-brun-broth-and-demi",
     "lexiconTerm": "Stocks: Blanc, Brun, Broth & Demi",
     "definition": "WHITE STOCK: raw bones, gentle simmer: clean, pale, for velouté and light soups. BROWN STOCK: bones and mirepoix roasted first, tomato paste caramelized: deep color and roasted flavor, the mother of demi-glace and jus. BROTH is meat-based and seasoned to drink; stock is bone-based, unsalted, and built for gelatin. A proper stock sets like Jell-O cold. GLACE is stock reduced to a syrup; a spoon flavors a whole pan sauce. Skim relentlessly, never boil (cloudiness is emulsified scum), salt never (it concentrates downstream), and know that stock is the bank account every other station borrows from.",
@@ -1917,7 +2151,13 @@
     "slug": "khachapuri-shaping",
     "label": "Khachapuri shaping",
     "query": "khachapuri adjaruli shaping technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=VyR8TFSfNhI&t=135s",
+      "id": "VyR8TFSfNhI",
+      "title": "How to Make Adjaruli Khachapuri (Georgian Cheese Bread)",
+      "channel": "America's Test Kitchen",
+      "watchFor": "The \"Shaping the Bread\" chapter: the long edges are rolled inward into walls and the ends pinched into points, and the wall height is what decides whether the boat holds its cheese or leaks."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -1933,7 +2173,13 @@
     "slug": "kneading-dough",
     "label": "Kneading dough",
     "query": "how to knead dough windowpane test",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=KToPmRXEQ3c",
+      "id": "KToPmRXEQ3c",
+      "title": "How to Knead Dough – Bake It Better with Kye",
+      "channel": "King Arthur Baking Company",
+      "watchFor": "Kye's hands doing the push-fold-quarter-turn on the bench, and the moment the dough stops tearing and starts pulling back at her, which is the gluten network becoming visible as behaviour rather than as a test."
+    },
     "lexiconSlug": "gluten-and-hydration",
     "lexiconTerm": "Gluten & Hydration",
     "definition": "Gluten is the elastic network formed when wheat's glutenin and gliadin meet water and agitation: the structure of bread, the enemy of tenderness in cakes and pie crusts. The baker steers it three ways: FLOUR CHOICE (bread flour ~12–14% protein builds; cake flour ~8% barely does), FAT (shortens gluten strands, hence 'shortening', 'shortbread', 'shortcrust'), and TECHNIQUE (kneading develops it; minimal mixing and resting relax it). HYDRATION is water as a percentage of flour weight: 60% is a tight bagel dough, 75% a country loaf, 85%+ the wet ciabatta school. Baker's percentages, everything relative to flour at 100%, are the professional language; learn them and every formula scales.",
@@ -1994,7 +2240,13 @@
     "slug": "knife-cuts-dice-julienne-bias",
     "label": "Knife cuts: dice, julienne, bias",
     "query": "classical knife cuts brunoise julienne technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=nffGuGwCE3E",
+      "id": "nffGuGwCE3E",
+      "title": "Jacques Pépin Techniques: Proper Knife Skills for Cutting, Chopping and Slicing",
+      "channel": "KQED Food",
+      "watchFor": "Pépin's guiding hand: the curled knuckles that ride the blade and meter the width of every slice, which is where evenness actually comes from rather than from counting millimetres."
+    },
     "lexiconSlug": "knife-cuts-the-classical-ladder",
     "lexiconTerm": "Knife Cuts: The Classical Ladder",
     "definition": "The French system exists because even cuts cook evenly and plate professionally. The ladder: BRUNOISE (3mm dice) and its baby FINE BRUNOISE (1.5mm); JULIENNE (matchsticks 3mm × 5cm) and BATONNET (6mm × 6cm, the fry); small/medium/large DICE (6/12/20mm); PAYSANNE (thin tiles); CHIFFONADE (herbs and leaves rolled and sliced into ribbons); TOURNÉ (the seven-sided football that has hazed culinary students for a century). MINCE is fineness without geometry; SUPREME is the citrus segment freed from all membrane. Speed comes later; uniformity is the exam, and the claw grip is the tuition.",
@@ -2162,7 +2414,13 @@
     "slug": "lamination",
     "label": "Lamination",
     "query": "dough lamination technique butter block",
-    "film": "https://www.youtube.com/watch?v=vpwY3nmLLaA",
+    "film": {
+      "url": "https://www.youtube.com/watch?v=vpwY3nmLLaA",
+      "id": "vpwY3nmLLaA",
+      "title": "Make Perfect Croissants With Claire Saffitz | Try This at Home | NYT Cooking",
+      "channel": "NYT Cooking",
+      "watchFor": "The butter block staying one sheet through every turn. The moment it cracks or melts into the dough is the moment the layers are lost, and she shows both."
+    },
     "lexiconSlug": "lamination",
     "lexiconTerm": "Lamination",
     "definition": "Folding a butter block into dough and rolling repeatedly to create alternating sheets, dozens to hundreds of layers, so oven heat turns the butter's water to steam and jacks the layers apart: croissants, puff pastry, danish, kouign-amann, and the medialuna's method. The disciplines: dough and butter at matched plasticity (cold but bendable: shattered butter means leaks; warm butter means brioche), rest between folds (gluten relaxes or it fights back), and counted turns (3 letter-folds ≈ 27 layers; 6 ≈ 729 for classic puff). 'Rough puff' cheats with butter chunks and honest speed. Lamination is pastry's showpiece of the principle that structure IS technique.",
@@ -2202,7 +2460,13 @@
     "slug": "low-and-slow-smoking",
     "label": "Low & slow smoking",
     "query": "offset smoker fire management brisket",
-    "film": "https://www.youtube.com/watch?v=VmTzdMHu5KU",
+    "film": {
+      "url": "https://www.youtube.com/watch?v=VmTzdMHu5KU",
+      "id": "VmTzdMHu5KU",
+      "title": "BBQ with Franklin: The Brisket",
+      "channel": "BBQwithFranklin",
+      "watchFor": "How much fat he leaves on and where. The trim decides the finished brisket long before the fire does, and it is the step most cooks rush."
+    },
     "lexiconSlug": "grilling-vs-barbecue-vs-smoking",
     "lexiconTerm": "Grilling vs. Barbecue vs. Smoking",
     "definition": "Three fires, three clocks. GRILLING: direct high heat, minutes, for tender cuts: the two-zone setup (hot side/cool side) is the entire skill, giving sear and refuge in one grate. BARBECUE: indirect low heat (105–135°C) plus wood smoke, hours, for collagen cuts (brisket, shoulder, ribs) where 'low and slow' is the collagen conversion clock wearing an apron. SMOKING divides again: hot-smoking cooks while flavoring; cold-smoking (under ~30°C) flavors cured foods without cooking. Thin blue smoke good, white billows bitter; the fire is an ingredient and must be cooked as carefully as the meat.",
@@ -2232,7 +2496,13 @@
     "slug": "making-a-roux",
     "label": "Making a roux",
     "query": "how to make a roux technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=eTf0n1HoC1w",
+      "id": "eTf0n1HoC1w",
+      "title": "How to Make a Roux Like a Pro | Food Network",
+      "channel": "Food Network",
+      "watchFor": "The color ladder in the pan, white to blond to brown, and how the roux loosens and smells nutty as it darkens, which is the trade of thickening power for flavor happening in real time."
+    },
     "lexiconSlug": "roux-slurry-and-liaison",
     "lexiconTerm": "Roux, Slurry & Liaison",
     "definition": "The thickener's toolkit. ROUX: equal weights flour and fat cooked together: white (2 min) for béchamel, blond for velouté, brown to brick-dark for gumbo, each stage trading thickening power for flavor. SLURRY: cornstarch or arrowroot in cold water, whisked into simmering liquid at the end: instant gloss, Asian-sauce standard, breaks down if boiled long. LIAISON: egg yolk and cream tempered in off the heat: the silk finish of blanquette and avgolemono; boil it and you've made sweet scrambled regret. BEURRE MANIÉ: raw butter-flour paste whisked in at the finish, the braise-rescuer. Choose by the sauce's temperature future, not habit.",
@@ -2499,7 +2769,13 @@
     "slug": "mole",
     "label": "Mole",
     "query": "how to make mole technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=9nLCrGeaEPE",
+      "id": "9nLCrGeaEPE",
+      "title": "Rick Bayless Beginner's Mole",
+      "channel": "Rick Bayless",
+      "watchFor": "The order and restraint of the toasting: chiles until they smell nutty and not one second into bitterness, then the seeds and nuts, then the frying-back of the puree that turns it from raw paste into mole."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -2514,7 +2790,13 @@
     "slug": "paella-and-socarrat",
     "label": "Paella & socarrat",
     "query": "paella socarrat technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=y4i4jebJ4PM",
+      "id": "y4i4jebJ4PM",
+      "title": "Spanish Cooking Techniques: Socarrat",
+      "channel": "Foods&Wines from Spain",
+      "watchFor": "The last minutes over raised heat: listen for the crackle and watch the pan being left alone, since stirring at this point is what costs you the crust."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -2530,7 +2812,13 @@
     "slug": "pie-crust-and-blind-baking",
     "label": "Pie crust & blind baking",
     "query": "pie crust blind baking technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=0KzAxaVMOVA",
+      "id": "0KzAxaVMOVA",
+      "title": "Learn To Cook: Blind Baking a Pie Shell",
+      "channel": "America's Test Kitchen",
+      "watchFor": "How the parchment is tucked and the weights are filled all the way up the sides, not just pooled in the bottom, which is what stops the walls slumping."
+    },
     "lexiconSlug": "blind-baking-and-pie-doctrine",
     "lexiconTerm": "Blind Baking & Pie Doctrine",
     "definition": "BLIND BAKING: baking a crust empty (lined with parchment and weighted with beans/rice/sugar) before a wet filling arrives: partial for quiches that bake again, full for cream and citrus tarts. DOCKING: pricking pastry so steam escapes flat where puff isn't wanted. The pie-crust catechism: cold fat in visible pieces (steam pockets = flake), minimal water, minimal handling (gluten = toughness), rest before rolling, chill before baking (cold pastry into a hot oven holds its architecture). A 'soggy bottom' is the genre's public shame; the defenses are blind baking, a hot steel or stone below, egg-wash waterproofing, and fillings added no wetter than they must be.",
@@ -2594,7 +2882,13 @@
     "slug": "pleating-dumplings",
     "label": "Pleating dumplings",
     "query": "how to pleat dumplings technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=XcFrhE7w4XM",
+      "id": "XcFrhE7w4XM",
+      "title": "Chef Anita Lo Shows How to Fill and Pleat Chinese Dumplings",
+      "channel": "Epicurious",
+      "watchFor": "Close hands on a single wrapper: only the near face gets pleated while the back stays flat, and the centre seam is sealed first so each fold has something to close against."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -2621,7 +2915,13 @@
     "slug": "poaching-eggs",
     "label": "Poaching eggs",
     "query": "how to poach eggs technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=S60GxA9JpLk",
+      "id": "S60GxA9JpLk",
+      "title": "Truly Foolproof Poached Eggs",
+      "channel": "J. Kenji López-Alt",
+      "watchFor": "The straining step that removes the loose outer white before the egg ever touches water, then the surface of the pot: it shivers rather than bubbles, which is the whole 71-82C poach in one image."
+    },
     "lexiconSlug": "poach-simmer-boil",
     "lexiconTerm": "Poach, Simmer, Boil",
     "definition": "Three temperatures pretending to be one method. POACH: 71–82°C, water barely shivering: eggs, fish, chicken breast, anything delicate that violent bubbles would shred. SIMMER: 85–95°C, lazy bubbles: stocks, braises, beans, sauces. BOIL: 100°C rolling: pasta, blanching, potatoes, and almost nothing made of protein. The most common home error is treating these as synonyms; the most common professional discipline is watching the bubbles, not the dial. Salt poaching liquids and courts-bouillons like they are the sauce, because for those minutes they are.",
@@ -2638,7 +2938,13 @@
     "slug": "pounding-a-curry-paste",
     "label": "Pounding a curry paste",
     "query": "thai curry paste mortar pestle technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=d6YbVqqcR4w",
+      "id": "d6YbVqqcR4w",
+      "title": "Ultimate Guide to THAI CURRY PASTE - Hot Thai Kitchen",
+      "channel": "Pailin's Kitchen",
+      "watchFor": "The order ingredients enter the mortar, hardest and driest first, and the way the pestle crushes rather than stirs, which is what bruises the oils out instead of whipping air in."
+    },
     "lexiconSlug": "mortar-and-pestle-molcajete-suribachi-granite",
     "lexiconTerm": "Mortar & Pestle: Molcajete, Suribachi, Granite",
     "definition": "The pre-blender that blenders never fully replaced: pounding RUPTURES cells and bruises oils out where blades slice and whip air in: pesto's name is the pestle (hand-pounded pesto is visibly glossier and louder-flavored), Thai curry pastes demand the pound (the recipe wing says so repeatedly), guacamole in a MOLCAJETE (Mexican basalt; season by grinding rice until it runs clean) tastes creamier from crushed-not-chopped alliums, and the SURIBACHI's ridged ceramic grinds sesame for goma-ae like nothing else. The heavy granite Thai mortar is the do-everything choice: spice cracking, aioli, sambal (the ulekan's cousin). Ten minutes of pounding is the honest cost; the return is texture and aroma a machine's heat and aeration subtly flatten. Every serious kitchen keeps one within reach: not for nostalgia, for chemistry.",
@@ -2674,7 +2980,13 @@
     "slug": "proofing-the-rise-before-the-oven",
     "label": "Proofing: the rise before the oven",
     "query": "proofing dough oven spring technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=3o5boRXTlt0",
+      "id": "3o5boRXTlt0",
+      "title": "How to Do the \"Poke Test\" (and 3 ways it can trick you)",
+      "channel": "Grant Bakes",
+      "watchFor": "The indent itself in close-up and how fast it fills: springs back at once is underproofed, comes back slowly is ready, stays put is gone. He also shows where the test lies to you, which is the part most poke-test videos skip."
+    },
     "lexiconSlug": "proofing-oven-spring-and-the-crumb",
     "lexiconTerm": "Proofing, Oven Spring & the Crumb",
     "definition": "PROOFING is the final rise before baking; the poke test judges it (indent springs back slowly = ready; instantly = underproofed; never = over). OVEN SPRING is the first minutes' dramatic expansion as gasses balloon before the crust sets: steam in the oven delays crust-set and maximizes it, which is why lidded Dutch ovens and steam-injected decks exist, and why SCORING (lame slashes) directs the explosion artfully instead of randomly. THE CRUMB, the interior's hole structure, is the loaf's autopsy: tight crumb from low hydration or underproofing; open irregular crumb from wet dough, gentle handling, and full fermentation. Bakers read crumb the way sommeliers read legs.",
@@ -2770,7 +3082,13 @@
     "slug": "ramen-broth",
     "label": "Ramen broth",
     "query": "tonkotsu ramen broth technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=F-TQjevcOf4",
+      "id": "F-TQjevcOf4",
+      "title": "RAMEN SCHOOL #8 | How to Make Tonkotsu Ramen",
+      "channel": "Adam Liaw",
+      "watchFor": "The hard rolling boil rather than a gentle simmer: that agitation is what emulsifies collagen and fat into the opaque white broth, the opposite of a clear stock."
+    },
     "lexiconSlug": "stocks-blanc-brun-broth-and-demi",
     "lexiconTerm": "Stocks: Blanc, Brun, Broth & Demi",
     "definition": "WHITE STOCK: raw bones, gentle simmer: clean, pale, for velouté and light soups. BROWN STOCK: bones and mirepoix roasted first, tomato paste caramelized: deep color and roasted flavor, the mother of demi-glace and jus. BROTH is meat-based and seasoned to drink; stock is bone-based, unsalted, and built for gelatin. A proper stock sets like Jell-O cold. GLACE is stock reduced to a syrup; a spoon flavors a whole pan sauce. Skim relentlessly, never boil (cloudiness is emulsified scum), salt never (it concentrates downstream), and know that stock is the bank account every other station borrows from.",
@@ -3003,7 +3321,13 @@
     "slug": "resting-dough-the-pause-that-does-the-work",
     "label": "Resting dough: the pause that does the work",
     "query": "resting dough autolyse gluten relax technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=Kcy4_HGf2SE",
+      "id": "Kcy4_HGf2SE",
+      "title": "Steps of Baking Ep.2 | Autolyse",
+      "channel": "ChainBaker",
+      "watchFor": "The same shaggy dough before and after the rest: watch it go from tearing to stretching with no kneading in between, which is the pause doing the work."
+    },
     "lexiconSlug": "gluten-and-hydration",
     "lexiconTerm": "Gluten & Hydration",
     "definition": "Gluten is the elastic network formed when wheat's glutenin and gliadin meet water and agitation: the structure of bread, the enemy of tenderness in cakes and pie crusts. The baker steers it three ways: FLOUR CHOICE (bread flour ~12–14% protein builds; cake flour ~8% barely does), FAT (shortens gluten strands, hence 'shortening', 'shortbread', 'shortcrust'), and TECHNIQUE (kneading develops it; minimal mixing and resting relax it). HYDRATION is water as a percentage of flour weight: 60% is a tight bagel dough, 75% a country loaf, 85%+ the wet ciabatta school. Baker's percentages, everything relative to flour at 100%, are the professional language; learn them and every formula scales.",
@@ -3090,7 +3414,13 @@
     "slug": "resting-meat-and-slicing-against-the-grain",
     "label": "Resting meat & slicing against the grain",
     "query": "resting meat slicing against the grain technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=9Nxst8lhwNM",
+      "id": "9Nxst8lhwNM",
+      "title": "Does Resting Meat Matter? | Techniquely with Lan Lam",
+      "channel": "America's Test Kitchen",
+      "watchFor": "The cut surfaces of the rested and unrested pieces side by side and how much liquid each one releases onto the board, which is the actual evidence for resting rather than the folklore."
+    },
     "lexiconSlug": "resting-carryover-and-the-thermometer",
     "lexiconTerm": "Resting, Carryover & the Thermometer",
     "definition": "The instant-read thermometer is the cheapest skill upgrade in cooking: doneness is a temperature, not a time. Key coordinates: 50–52°C rare beef, 55–57 medium-rare, 63°C+rest for pork, 68–74°C poultry white-to-dark, 82°C custards, 95°C brisket-probe-tender. CARRYOVER adds 3–8°C after removal (more in big roasts); RESTING (5 min for steaks, 30–45 for large roasts) lets juices thicken and redistribute; meat cut immediately bleeds what patience would keep. The pros' phrase 'cook to temp, not to time' is the entire entry in five words; the pros' habit of probing the COLDEST likely spot is the footnote that matters.",
@@ -3169,7 +3499,13 @@
     "slug": "risotto-method",
     "label": "Risotto method",
     "query": "risotto technique mantecatura",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=ANZTOPW_j7k",
+      "id": "ANZTOPW_j7k",
+      "title": "Mantecare il risotto come un grande maestro - la tecnica dell'ONDA di Christian Costardi",
+      "channel": "Italia Squisita",
+      "watchFor": "The pan being slammed and swung so the rice travels as a wave, which is the mantecatura: it is the motion, not the butter alone, that emulsifies the starch into cream."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -3187,7 +3523,13 @@
     "slug": "roasting-in-a-hot-oven",
     "label": "Roasting in a hot oven",
     "query": "roasting technique oven temperature",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=0Mss7hxdqvQ",
+      "id": "0Mss7hxdqvQ",
+      "title": "How to Properly Roast a Chicken | Kenji's Cooking Show",
+      "channel": "J. Kenji López-Alt",
+      "watchFor": "The temperature strategy argued out loud with a thermometer in hand: why the breast and the leg want different finishing temperatures, and how oven heat and bird position are used to close that gap instead of splitting the difference and drying the breast."
+    },
     "lexiconSlug": "roasting-baking-and-carryover",
     "lexiconTerm": "Roasting, Baking & Carryover",
     "definition": "Dry ambient heat in an enclosed oven: 'roasting' for meats and vegetables, 'baking' for doughs, the physics identical. The professional's three levers: TEMPERATURE STRATEGY (high-then-low for a crusted roast, low-then-blast 'reverse sear' for even doneness plus crust), AIRFLOW (convection browns faster and dries surfaces: drop 15°C from conventional recipes), and CARRYOVER: internal temperature climbs 3–8°C after removal as the exterior's heat equalizes inward. Pull the roast BEFORE target and rest it: resting redistributes juices and finishes the cook. Cutting early spills what patience would have kept.",
@@ -3259,7 +3601,13 @@
     "slug": "rolling-dolmas",
     "label": "Rolling dolmas",
     "query": "how to roll dolmas grape leaves",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=G7OLFDL63J4",
+      "id": "G7OLFDL63J4",
+      "title": "How to Make Dolmades | Stuffed Grape Leaves",
+      "channel": "Preppy Kitchen",
+      "watchFor": "The roll itself: leaf vein-side up, a restrained line of filling, sides folded in before rolling, and the parcel left deliberately loose so the rice has room to swell without bursting the leaf during the long simmer."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -3274,7 +3622,13 @@
     "slug": "rubbing-fat-into-flour",
     "label": "Rubbing fat into flour",
     "query": "rubbing in method pastry pea sized butter",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=LW6H_SL_TJo",
+      "id": "LW6H_SL_TJo",
+      "title": "How to Rub Butter into Flour | Baking Mad",
+      "channel": "Silver Spoon",
+      "watchFor": "The fingertips only, lifting the mixture high and letting it fall: watch for the moment it reads as breadcrumbs with pea-sized lumps still in it, because those unrubbed lumps are the flakiness."
+    },
     "lexiconSlug": "blind-baking-and-pie-doctrine",
     "lexiconTerm": "Blind Baking & Pie Doctrine",
     "definition": "BLIND BAKING: baking a crust empty (lined with parchment and weighted with beans/rice/sugar) before a wet filling arrives: partial for quiches that bake again, full for cream and citrus tarts. DOCKING: pricking pastry so steam escapes flat where puff isn't wanted. The pie-crust catechism: cold fat in visible pieces (steam pockets = flake), minimal water, minimal handling (gluten = toughness), rest before rolling, chill before baking (cold pastry into a hot oven holds its architecture). A 'soggy bottom' is the genre's public shame; the defenses are blind baking, a hot steel or stone below, egg-wash waterproofing, and fillings added no wetter than they must be.",
@@ -3532,7 +3886,13 @@
     "slug": "salting-to-draw-the-water-out",
     "label": "Salting to draw the water out",
     "query": "salting vegetables to draw out water technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=ZxkOY034xmA",
+      "id": "ZxkOY034xmA",
+      "title": "Salting Eggplant - Kitchen Wisdom - Martha Stewart",
+      "channel": "Martha Stewart",
+      "watchFor": "Beads of water standing up on the cut face of the salted eggplant, and how much liquid is blotted away before it ever meets oil."
+    },
     "lexiconSlug": "brining-wet-dry-and-cures",
     "lexiconTerm": "Brining: Wet, Dry & Cures",
     "definition": "Salt's three levels of commitment. WET BRINE (5–8% salt solution, hours): dissolves some muscle protein so meat retains water: juicier lean cuts, diluted flavor, wet skin. DRY BRINE (salting 1–3 days ahead, uncovered): seasons deeply, keeps flavor concentrated, and desiccates skin for crackling, the modern professional default for poultry and steaks. CURING (higher salt, often with nitrite, plus time): preservation and transformation. Bacon, gravlax, pastrami, prosciutto. The through-line is diffusion and osmosis given time; 'season early' is the shortest version of this entire entry.",
@@ -3587,7 +3947,13 @@
     "slug": "sauteing-and-the-shallow-fry",
     "label": "Sautéing & the shallow fry",
     "query": "sauteing shallow frying technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=WWj9ByH8MU8",
+      "id": "WWj9ByH8MU8",
+      "title": "The Basics of Sautéing Correctly!",
+      "channel": "Rick Bayless",
+      "watchFor": "How much empty pan he leaves around the food and how little he actually stirs: crowding and fussing are what turn a sauté into a steam, and this is the difference you can see rather than read."
+    },
     "lexiconSlug": "sweat-vs-saute-vs-sear",
     "lexiconTerm": "Sweat vs. Sauté vs. Sear",
     "definition": "Three pan verbs distinguished by heat and intent. SWEAT: low heat, a little fat, often a lid or parchment; vegetables soften and release moisture WITHOUT color (the start of risotto, velouté, most braises where onion flavor should be sweet, not roasty). SAUTÉ: medium-high, food 'jumping' (sauter) in a wide pan: light browning, fast cooking, constant motion. SEAR: maximum heat, zero motion: deep crust, Maillard at full roar. Recipes say 'cook the onions' and mean one of three different flavors; knowing which one the dish needs is the difference between following recipes and cooking.",
@@ -3687,7 +4053,13 @@
     "slug": "scoring",
     "label": "Scoring",
     "query": "scoring bread dough technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=3pmC4do7fOA",
+      "id": "3pmC4do7fOA",
+      "title": "How to Score Bread Dough WITHOUT SNAGGING - 214",
+      "channel": "Bake with Jack",
+      "watchFor": "The angle and the speed of the blade rather than the pattern: he shows that snagging is caused by hesitation and a square-on cut, and that one confident shallow stroke at a slant is what opens an ear."
+    },
     "lexiconSlug": "proofing-oven-spring-and-the-crumb",
     "lexiconTerm": "Proofing, Oven Spring & the Crumb",
     "definition": "PROOFING is the final rise before baking; the poke test judges it (indent springs back slowly = ready; instantly = underproofed; never = over). OVEN SPRING is the first minutes' dramatic expansion as gasses balloon before the crust sets: steam in the oven delays crust-set and maximizes it, which is why lidded Dutch ovens and steam-injected decks exist, and why SCORING (lame slashes) directs the explosion artfully instead of randomly. THE CRUMB, the interior's hole structure, is the loaf's autopsy: tight crumb from low hydration or underproofing; open irregular crumb from wet dough, gentle handling, and full fermentation. Bakers read crumb the way sommeliers read legs.",
@@ -3727,7 +4099,13 @@
     "slug": "searing-the-hard-crust",
     "label": "Searing: the hard crust",
     "query": "searing technique crust dry pan",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=JB1x0O-bhrw&t=222s",
+      "id": "JB1x0O-bhrw",
+      "title": "Adam Savage Tests the Best Ways to Sear a Steak!",
+      "channel": "Adam Savage’s Tested",
+      "watchFor": "The \"What is Sear\" segment defines the crust as a chemical event rather than a colour, then the side-by-side sears show why a genuinely preheated dry surface browns while a damp or crowded one steams."
+    },
     "lexiconSlug": "searing-and-pan-technique",
     "lexiconTerm": "Searing & Pan Technique",
     "definition": "The skill inside the skill: preheat the pan dry until oil shimmers instantly, dry the protein aggressively, salt just before, lay it away from you, and then DO NOT MOVE IT: proteins release themselves when the crust forms and tear when rushed. Fond, the browned layer stuck to the pan, is not mess but the future sauce; deglaze with wine or stock and scrape. Baste with foaming butter, garlic, and thyme in the final minute (arroser) for the restaurant finish. Crowding is the cardinal sin: steam kills sear; work in batches like your Michelin star depends on it.",
@@ -3997,7 +4375,13 @@
     "slug": "shucking-shellfish",
     "label": "Shucking shellfish",
     "query": "how to shuck oysters clams safely",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=LVBfkXiuEJM",
+      "id": "LVBfkXiuEJM",
+      "title": "HOW TO SHUCK AN OYSTER | Hog Island Oyster Co.",
+      "channel": "Hog Island Oyster Co.",
+      "watchFor": "The knife entering at the hinge and twisting rather than levering, and the blade then running flat along the top shell to cut the adductor, which is what keeps the meat whole and the liquor in the cup."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -4026,7 +4410,13 @@
     "slug": "skimming-foam-fat-and-a-clear-broth",
     "label": "Skimming: foam, fat and a clear broth",
     "query": "skimming stock foam technique clear broth",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=6x0Jo78q2rU",
+      "id": "6x0Jo78q2rU",
+      "title": "Classic Chicken Broth/Stock | Chef Jean-Pierre",
+      "channel": "Chef Jean-Pierre",
+      "watchFor": "The grey scum being lifted off as the pot comes up to heat, and the pot then held at a bare shiver rather than a boil: skimming plus never boiling is what keeps the broth clear."
+    },
     "lexiconSlug": "consomme-and-clarification",
     "lexiconTerm": "Consommé & Clarification",
     "definition": "Stock clarified to crystal transparency using a RAFT: egg whites, ground meat, and mirepoix whisked into cold stock, then heated gently: the proteins coagulate into a floating filter that captures every particle while the meat re-fortifies flavor. Ladled out through the raft's vent hole, the result is a soup so clear you read the bowl's maker's mark, with more flavor than it has any right to. The modern shortcuts (ice filtration through a frozen block, agar clarification) earn their place, but the raft remains the classical exam: patience, temperature control, and protein chemistry in one pot.",
@@ -4195,7 +4585,13 @@
     "slug": "sourdough-starter",
     "label": "Sourdough starter",
     "query": "sourdough starter guide",
-    "film": "https://www.youtube.com/watch?v=sTAiDki7AQA",
+    "film": {
+      "url": "https://www.youtube.com/watch?v=sTAiDki7AQA",
+      "id": "sTAiDki7AQA",
+      "title": "The Ultimate Sourdough Starter Guide",
+      "channel": "Joshua Weissman",
+      "watchFor": "What a starter looks like on the days it seems to be failing. The false rise in the first week fools most people into throwing away a healthy culture."
+    },
     "lexiconSlug": "fermentation-in-bread-yeast-levain-preferments",
     "lexiconTerm": "Fermentation in Bread: Yeast, Levain, Preferments",
     "definition": "Yeast eats sugar and exhales CO₂ (lift) and alcohol/acids (flavor); TIME is the flavor multiplier, which is why fast bread tastes of nothing. The preferment family trades time for depth: POOLISH (wet, French, mild-sweet), BIGA (stiff, Italian), and LEVAIN/SOURDOUGH STARTER (wild yeast plus lactobacilli: lift AND tang, no commercial yeast at all). Cold retarding (overnight refrigeration) slows yeast while flavor enzymes keep working, the professional's schedule trick AND flavor trick in one. AUTOLYSE, resting just flour and water before adding salt and leaven, lets gluten begin building itself; twenty lazy minutes replacing ten of kneading.",
@@ -4223,7 +4619,13 @@
     "slug": "steaming-basket-leaf-and-lid",
     "label": "Steaming: basket, leaf and lid",
     "query": "steaming technique basket en papillote",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=dUyw0V7X1tg",
+      "id": "dUyw0V7X1tg",
+      "title": "How to Kill, Clean, and Steam a Whole Fish in the Chinese Style (清蒸鱼)",
+      "channel": "Chinese Cooking Demystified",
+      "watchFor": "The fish goes into a covered basket over hard-boiling water and comes out at the exact moment the flesh parts from the bone: watch how short the time is, and how the steaming liquid is poured off rather than served, because it is the leached-out fishiness the technique is designed to shed."
+    },
     "lexiconSlug": "steaming-and-en-papillote",
     "lexiconTerm": "Steaming & En Papillote",
     "definition": "Cooking in vapor at 100°C: gentler than boiling (no agitation, no flavor leached into water) and the technique of choice where the ingredient IS the dish: Cantonese fish, dim sum, couscous, tamales, Christmas pudding. EN PAPILLOTE seals food in parchment so it steams in its own moisture plus wine and butter, a self-saucing micro-oven with tableside theater. Steam burns worse than boiling water (it releases latent heat on contact); open lids and packets away from yourself, always, and never let the pot run dry: the smell of scorched steamer is a lesson learned once.",
@@ -4592,7 +4994,13 @@
     "slug": "sushi-rice-and-rolling",
     "label": "Sushi rice & rolling",
     "query": "how to make sushi rice rolling technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=nIoOv6lWYnk&t=37s",
+      "id": "nIoOv6lWYnk",
+      "title": "The Best Way To Make Sushi At Home (Professional Quality) | Epicurious 101",
+      "channel": "Epicurious",
+      "watchFor": "Chef Taka cuts the vinegar through the rice with the paddle rather than stirring it, so the grains stay whole; the rolling chapter at 7:37 shows the mat tucking and the fingers setting tension."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -4830,7 +5238,13 @@
     "slug": "tadka-blooming-spices-in-fat",
     "label": "Tadka: blooming spices in fat",
     "query": "tadka tempering spices technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=iaJ4UlYvDvE",
+      "id": "iaJ4UlYvDvE",
+      "title": "Easy Dal Tadka Three Ways | एक दाल तीन तड़के | AWADHI / PUNJABI DAL TADKA | Chef Ranveer Brar",
+      "channel": "Chef Ranveer Brar",
+      "watchFor": "Three tadkas built in sequence: the order spices enter the hot fat, and the few seconds between fragrant and burnt, seen back to back."
+    },
     "lexiconSlug": "infusion-steeping-flavor-into-fat-cream-and-syrup",
     "lexiconTerm": "Infusion: Steeping Flavor into Fat, Cream & Syrup",
     "definition": "Extraction without transformation: coaxing an ingredient's aroma into a carrier while leaving the ingredient itself behind; the technique that turns pantries into perfumeries. THE CARRIERS AND THEIR AFFINITIES: FAT (the flavor-carrier entry's solvent: herb oils, chili crisp, garlic confit oil, vanilla in browned butter): gentle heat (60–90°C), then strain: high heat fries instead of infusing; CREAM & MILK (the pastry kitchen's canvas: vanilla bean, cardamom, bay, tea, toasted nuts steeped for custards and ganache): scald, steep off-heat 15–30 min covered, strain and proceed; SYRUP & SUGAR (the bar wing's program: oleo saccharum's cold extraction, cinnamon-bark simmers, zest-buried sugars): sweetness holds volatiles beautifully; ALCOHOL & VINEGAR (tinctures, house bitters, herb vinegars): the patient cold infusions measured in days. THE VARIABLES: temperature trades speed for delicacy (cold-steeped vanilla is prettier than boiled), surface area accelerates (bruise, crack, tear), and TIME has a ceiling: over-steeped infusions turn bitter and vegetal (tea's lesson generalized: taste at intervals, strain at peak). The restaurant math: infusions are signature flavor at raw-ingredient cost: the house chili oil on the table is branding you can eat.",
@@ -4884,7 +5298,13 @@
     "slug": "tempering-a-custard",
     "label": "Tempering a custard",
     "query": "how to temper eggs custard technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=EgzgFRO2KFc",
+      "id": "EgzgFRO2KFc",
+      "title": "How to Make Crème Anglaise (Custard Sauce)",
+      "channel": "The Bake School",
+      "watchFor": "The thin first ladles of hot milk going into the yolks under constant whisking, then the spoon-back nappe test at the end, which is the only reliable read on 82°C without a thermometer."
+    },
     "lexiconSlug": "tempering-eggs-and-chocolate",
     "lexiconTerm": "Tempering (Eggs & Chocolate)",
     "definition": "One word, two crafts. TEMPERING EGGS: whisking hot liquid gradually into yolks before returning all to the pot, raising their temperature gently so custards (crème anglaise, carbonara's cousin) thicken at 82°C instead of scrambling at 90°C, the thermometer's best friend. TEMPERING CHOCOLATE: melting, cooling, and reheating to precise curves (dark: ~50°→27°→31–32°C) so cocoa butter sets in stable Form V crystals: glossy snap instead of dull bloom. Both are the same discipline wearing different aprons: proteins and fats obey temperature, and the cook who controls degrees controls texture.",
@@ -4959,7 +5379,13 @@
     "slug": "the-bare-simmer-holding-liquid-below-the-boil",
     "label": "The bare simmer: holding liquid below the boil",
     "query": "poaching simmering temperature technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=A8yPmXpzkvU",
+      "id": "A8yPmXpzkvU",
+      "title": "The Difference Between Boiling And Simmering | Cooking Techniques | Whole Foods Market",
+      "channel": "WholeFoodsMarket",
+      "watchFor": "The two pots side by side: the lazy bubbles that break singly at the surface versus the rolling boil, which is the distinction this technique lives or dies on."
+    },
     "lexiconSlug": "poach-simmer-boil",
     "lexiconTerm": "Poach, Simmer, Boil",
     "definition": "Three temperatures pretending to be one method. POACH: 71–82°C, water barely shivering: eggs, fish, chicken breast, anything delicate that violent bubbles would shred. SIMMER: 85–95°C, lazy bubbles: stocks, braises, beans, sauces. BOIL: 100°C rolling: pasta, blanching, potatoes, and almost nothing made of protein. The most common home error is treating these as synonyms; the most common professional discipline is watching the bubbles, not the dial. Salt poaching liquids and courts-bouillons like they are the sauce, because for those minutes they are.",
@@ -5181,7 +5607,13 @@
     "slug": "the-brulee-torch",
     "label": "The brûlée torch",
     "query": "creme brulee torch technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=dsjoULgoCf4",
+      "id": "dsjoULgoCf4",
+      "title": "Claire Saffitz Makes Crème Brûlée & Crème Caramel | Dessert Person",
+      "channel": "Claire Saffitz x Dessert Person",
+      "watchFor": "The flame held at a distance and swept continuously across a thin, even sugar layer rather than parked in one spot, which is the difference between a glass lid and a burnt patch over cold custard."
+    },
     "lexiconSlug": "the-kitchen-torch",
     "lexiconTerm": "The Kitchen Torch",
     "definition": "Directed fire, sold as a dessert toy and worth far more. The canon: CRÈME BRÛLÉE's glass lid (thin sugar, even sweeps, let it cool to glass: the pastry wing's stage-managed caramel), meringue toasting (baked Alaska's peaks, tarte au citron's optional crown). The savory second life: peeling peppers and tomatoes in place, blistering shishitos, finishing sous-vide proteins' edges where the pan can't reach (the crevices of a chicken thigh, a roast's pale corner: torch as detail-sear), melting cheese to order, aburi-style sushi's kissed fat (torched salmon nigiri's entire genre), charring citrus for cocktails. Hardware truth: the tiny culinary torches are underpowered toys; a hardware-store propane or MAP-gas head with a trigger igniter costs less and works properly; hold the flame so food sees the blue cone's TIP, keep it moving, and mind the 'torch taste' (unburned fuel from too-close, too-rich flames: distance and a hot, lean flame prevent it).",
@@ -5203,7 +5635,13 @@
     "slug": "the-coat-before-the-fry-dredge-crumb-batter",
     "label": "The coat before the fry: dredge, crumb, batter",
     "query": "breading dredging standard breading procedure",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=-m8bm55-o7Q",
+      "id": "-m8bm55-o7Q",
+      "title": "The Standard Breading Process in 3 Easy Steps - Kitchen Conundrums with Thomas Joseph",
+      "channel": "Everyday Food",
+      "watchFor": "The one-wet-hand, one-dry-hand discipline down the flour-egg-crumb line: keeping one hand out of the egg is what stops the crumb from clumping onto your fingers instead of the cutlet, and it is the whole difference between a coat that survives the oil and one that sloughs off."
+    },
     "lexiconSlug": "deep-and-shallow-frying",
     "lexiconTerm": "Deep & Shallow Frying",
     "definition": "Frying is violent dehydration: oil at 160–190°C flash-boils surface moisture outward (the bubbles ARE water leaving), creating crust while steam-cooking the interior. Laws: recover temperature between batches (crowding = greasy), match oil to job (neutral high-smoke oils for deep; the double-fry, low then high, for fries, tostones, and chicken that must stay crisp), drain on RACKS not paper (paper steams the base), and salt in the first seconds while the surface is still hot and receptive. Oil is a reusable ingredient: strain it, smell it, retire it when it darkens or foams.",
@@ -5308,7 +5746,13 @@
     "slug": "the-molcajete",
     "label": "The molcajete",
     "query": "molcajete salsa technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=bC85E00qgVs",
+      "id": "bC85E00qgVs",
+      "title": "Salsa de Molcajete | Rick Bayless Taco Manual",
+      "channel": "Rick Bayless",
+      "watchFor": "Garlic and chiles are crushed to a paste against the stone before anything else goes in, then tomatoes are broken rather than pureed: watch the texture stay ragged, which is what a blender destroys."
+    },
     "lexiconSlug": "mortar-and-pestle-molcajete-suribachi-granite",
     "lexiconTerm": "Mortar & Pestle: Molcajete, Suribachi, Granite",
     "definition": "The pre-blender that blenders never fully replaced: pounding RUPTURES cells and bruises oils out where blades slice and whip air in: pesto's name is the pestle (hand-pounded pesto is visibly glossier and louder-flavored), Thai curry pastes demand the pound (the recipe wing says so repeatedly), guacamole in a MOLCAJETE (Mexican basalt; season by grinding rice until it runs clean) tastes creamier from crushed-not-chopped alliums, and the SURIBACHI's ridged ceramic grinds sesame for goma-ae like nothing else. The heavy granite Thai mortar is the do-everything choice: spice cracking, aioli, sambal (the ulekan's cousin). Ten minutes of pounding is the honest cost; the return is texture and aroma a machine's heat and aeration subtly flatten. Every serious kitchen keeps one within reach: not for nostalgia, for chemistry.",
@@ -5366,7 +5810,13 @@
     "slug": "the-pretzel-bath",
     "label": "The pretzel bath",
     "query": "pretzel lye baking soda bath technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=H8kPsKNl7Yk",
+      "id": "H8kPsKNl7Yk",
+      "title": "World Famous Bavarian Pretzels - Oktoberfest Special - Food Wishes",
+      "channel": "Food Wishes",
+      "watchFor": "The dip itself: how few seconds the shaped pretzel spends in the alkaline bath, the handling precautions around lye, and the colour the crust reaches in the oven afterwards, which no egg wash or baking-soda substitute quite matches."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -5382,7 +5832,13 @@
     "slug": "the-seafood-boil",
     "label": "The seafood boil",
     "query": "crawfish boil technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=xsNnkXWvJ-4",
+      "id": "xsNnkXWvJ-4",
+      "title": "How To Make a Crawfish Boil with Isaac Toups",
+      "channel": "Munchies",
+      "watchFor": "The soak after the heat goes off, which is where the seasoning actually enters the crawfish; the boil itself is brief and the waiting is the technique."
+    },
     "lexiconSlug": "poach-simmer-boil",
     "lexiconTerm": "Poach, Simmer, Boil",
     "definition": "Three temperatures pretending to be one method. POACH: 71–82°C, water barely shivering: eggs, fish, chicken breast, anything delicate that violent bubbles would shred. SIMMER: 85–95°C, lazy bubbles: stocks, braises, beans, sauces. BOIL: 100°C rolling: pasta, blanching, potatoes, and almost nothing made of protein. The most common home error is treating these as synonyms; the most common professional discipline is watching the bubbles, not the dial. Salt poaching liquids and courts-bouillons like they are the sauce, because for those minutes they are.",
@@ -5398,7 +5854,13 @@
     "slug": "the-souffle",
     "label": "The soufflé",
     "query": "souffle technique how to",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=Xyvsql9P9Cs",
+      "id": "Xyvsql9P9Cs",
+      "title": "Grand Marnier Souffle | Chef Jean-Pierre",
+      "channel": "Chef Jean-Pierre",
+      "watchFor": "The whites being folded into the heavy base: a sacrificial spoonful first to slacken it, then a light hand, because every stroke past necessary is lift you have deflated before the oven gets a turn."
+    },
     "lexiconSlug": "creaming-foaming-and-cake-structure",
     "lexiconTerm": "Creaming, Foaming & Cake Structure",
     "definition": "Cakes rise on air you built before the oven. CREAMING: beating butter and sugar until pale: sugar crystals literally cut air pockets into the fat, which chemical leaveners then inflate (butter cakes, cookies where the long cream = lift). FOAMING: whipping eggs (whole: genoise; whites: meringue, angel food, chiffon) into a protein foam, the sponge family's entire structure. RIBBON STAGE: whole eggs and sugar whipped until the batter falls in a slowly-dissolving ribbon, the doneness test for sponges and molten cakes alike. The corollary rule: once air is in, FOLD, never stir: every rough stroke is height surrendered.",
@@ -5413,7 +5875,13 @@
     "slug": "the-tagine",
     "label": "The tagine",
     "query": "tagine cooking technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=XtSJSAwYSr0",
+      "id": "XtSJSAwYSr0",
+      "title": "Cooking Class in La Maison Arabe: Chicken Tagine& Moroccan Salads- CookingWithAlia - Episode 140",
+      "channel": "cookingwithalia",
+      "watchFor": "How little liquid goes in at the start, and how the cone returns it: filmed in a Marrakech cooking school with the lid coming off mid-cook."
+    },
     "lexiconSlug": "clay-and-earthenware-tagine-donabe-cazuela",
     "lexiconTerm": "Clay & Earthenware: Tagine, Donabe, Cazuela",
     "definition": "The oldest cookware still winning on merit: clay heats slowly, radiates gently and evenly, holds warmth to the table, and (unglazed) breathes moisture in a way metal cannot. TAGINE: the cone is a condensation engine: steam rises, cools on the peak, rains back, self-basting stews with minimal liquid (the recipe wing's Moroccan chapter assumes one, though a Dutch oven forgives). DONABE: Japan's stovetop clay: rice with prized crust, nabemono hot pots simmering at the table, smoker variants. CAZUELA: Spain's glazed dish, from gambas al ajillo's sizzle to arroz al horno. ROMERTOPF and the clay-baker family steam-roast in their own soaked moisture. The universal laws: no thermal shock (cold clay on high flame = crack: use diffusers, start low), season unglazed clay per maker, and accept the trade: clay is slower, gentler, and serves its own dish hot at the table, cookware and plating in one artifact.",
@@ -5430,7 +5898,13 @@
     "slug": "the-water-bath",
     "label": "The water bath",
     "query": "bain marie water bath baking technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=MLlblnAV5_Q",
+      "id": "MLlblnAV5_Q",
+      "title": "How to Make a Cheesecake Water Bath | Sally's Baking",
+      "channel": "Sally's Baking Recipes",
+      "watchFor": "The foil wrapping of the springform pan and the height the water actually comes up the side: the whole point is gentle, even, humid heat, and a leaked pan or too little water defeats it."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,
@@ -5599,7 +6073,13 @@
     "slug": "tortillas-on-the-comal",
     "label": "Tortillas on the comal",
     "query": "how to make tortillas comal technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=4JBHQS-DEbI",
+      "id": "4JBHQS-DEbI",
+      "title": "Your Guide to Easy Homemade Corn Tortillas | Rick Bayless Taco Manual",
+      "channel": "Rick Bayless",
+      "watchFor": "The three-flip rhythm on the hot surface and the moment the tortilla inflates, which is the steam trap forming between the two layers and the sign the heat is right."
+    },
     "lexiconSlug": "comal-plancha-and-griddles",
     "lexiconTerm": "Comal, Plancha & Griddles",
     "definition": "Flat-metal cooking: dry heat with total contact, no walls, no steam trap. The COMAL (Mexican, carbon steel or clay): tortillas puffed (the recipe wing's flour-tortilla law), chiles and tomatoes charred for salsas (the blister IS the flavor: dry-charring is a technique category), quesadillas sealed. The PLANCHA (Spanish) and TEPPAN (Japanese): restaurant flat-tops delivering full-surface Maillard. Smash burgers' entire physics (maximum crust contact), gambas a la plancha, fried rice at scale. Home translation: a carbon-steel griddle or the cast-iron pan's flat side across two burners; outdoor flat-top grills (the Blackstone era) brought plancha cooking to backyards. The flat-top's professional edge: heat ZONES across one surface, sear left, hold right, the pass's geography in steel.",
@@ -5638,7 +6118,13 @@
     "slug": "trussing",
     "label": "Trussing",
     "query": "how to truss technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=VxlcSzMOG9o",
+      "id": "VxlcSzMOG9o",
+      "title": "Jacques Pépin Techniques: How To Truss a Chicken for Roasting",
+      "channel": "KQED Food",
+      "watchFor": "His hands and the single length of string: the legs are drawn in tight against the breast so the bird cooks as one compact shape, and there is no knot-tying fuss to memorise."
+    },
     "lexiconSlug": "butchery-verbs-frenching-butterflying-tying",
     "lexiconTerm": "Butchery Verbs: Frenching, Butterflying, Tying",
     "definition": "FRENCHING: scraping rib bones clean (racks of lamb, tomahawks, crown roasts), pure presentation, honest theater. BUTTERFLYING: splitting a piece horizontally almost through and opening it like a book: even thickness for fast cooking (chicken breasts) or a canvas for stuffing (roulades, porchetta). TYING: butcher's twine at intervals to hold shape. Even cooking, clean slices. SILVERSKIN: the iridescent membrane that never renders; strip it from tenderloins with a knife-tip and a pull. These verbs are where cooking begins before heat exists; a chef who butchers understands the animal a recipe can't teach.",
@@ -5654,7 +6140,13 @@
     "slug": "velveting",
     "label": "Velveting",
     "query": "velveting meat chinese technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=nM1GQNJU6LQ&t=71s",
+      "id": "nM1GQNJU6LQ",
+      "title": "Tenderize by 'Velveting': a Skeptic's Guide",
+      "channel": "Chinese Cooking Demystified",
+      "watchFor": "The guide section separates what actually does the work (the alkaline soda on the surface proteins, the starch shield) from the folklore, and shows the oil-blanch and water-blanch side by side."
+    },
     "lexiconSlug": "velveting-and-marinades",
     "lexiconTerm": "Velveting & Marinades",
     "definition": "VELVETING is the Chinese restaurant's tenderness secret: sliced meat coated in egg white, cornstarch, and a little baking soda or wine, rested, then pre-cooked briefly in oil or water; the alkaline soda relaxes surface proteins and the starch jackets in moisture, producing that signature silk in stir-fries. MARINADES, honestly assessed: salt, sugar, and acid work only millimeters deep (oil carries aromatics to the surface); enzyme marinades (pineapple, papaya, yogurt's gentler lactic action) genuinely tenderize but turn meat mushy past their window. Marinades are surface seasoning plus browning chemistry: the flavor is real; the 'penetration' is mostly myth, and the dry brine outperforms for depth.",
@@ -5672,7 +6164,13 @@
     "slug": "whipping-a-meringue",
     "label": "Whipping a meringue",
     "query": "how to whip meringue stiff peaks technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=IE442EjxeTQ",
+      "id": "IE442EjxeTQ",
+      "title": "Meringue - Swiss, French and Italian recipes",
+      "channel": "Matt Adlard",
+      "watchFor": "All three meringues made side by side, so you can compare how the whites behave raw, warmed over water, and hit with hot syrup, and see the difference in gloss and peak stability that follows."
+    },
     "lexiconSlug": "meringues-french-swiss-italian",
     "lexiconTerm": "Meringues: French, Swiss, Italian",
     "definition": "One foam, three temperaments. FRENCH: raw whites whipped with sugar; lightest, least stable, for baking into pavlova shells and folding into batters. SWISS: whites and sugar warmed over a bain-marie to ~70°C then whipped, denser, glossier, safe from grit, the buttercream base. ITALIAN: 118°C sugar syrup streamed into whipping whites: fully cooked, the most stable of all, for torching (baked Alaska, tarte au citron meringuée) and marshmallow work. Universal laws: no trace of yolk fat, a clean bowl, sugar added gradually, and 'stiff peaks' means the tip stands with a slight bow; chalky over-whip is one minute past glory.",
@@ -5721,7 +6219,13 @@
     "slug": "wok-technique",
     "label": "Wok technique",
     "query": "wok hei stir fry technique",
-    "film": "https://www.youtube.com/watch?v=n10xBmqehik",
+    "film": {
+      "url": "https://www.youtube.com/watch?v=n10xBmqehik",
+      "id": "n10xBmqehik",
+      "title": "How to Make Any Fried Rice - Three Flavors and Recipes",
+      "channel": "Chinese Cooking Demystified",
+      "watchFor": "The pan, not the rice. Listen for the moment the sound changes as the wok is brought back to heat between additions: that pause is the whole technique."
+    },
     "lexiconSlug": "wok-hei-and-stir-fry-discipline",
     "lexiconTerm": "Wok Hei & Stir-Fry Discipline",
     "definition": "Wok hei, 'the breath of the wok', is the smoky, singed-air aroma from food and oil vaporizing against carbon steel at extreme heat, micro-charring in mid-toss. The home translation: maximum burner, a carbon-steel wok preheated to smoking, ingredients DRY and cut uniform, everything prepped before ignition (a stir-fry is 90% mise, 10% cooking), small batches, sauces poured down the hot wok wall so they scorch-caramelize on arrival, and the discipline of letting food SIT between tosses to catch char. Crowding is the killer; one portion at a time is the law from char kway teow to pad see ew.",
@@ -5766,7 +6270,13 @@
     "slug": "working-with-masa",
     "label": "Working with masa",
     "query": "how to make tamales masa technique",
-    "film": null,
+    "film": {
+      "url": "https://www.youtube.com/watch?v=lyR8kno58GU",
+      "id": "lyR8kno58GU",
+      "title": "Pati Jinich - How to Make Tamales",
+      "channel": "Pati Jinich",
+      "watchFor": "How the masa is beaten with fat until it lightens and holds air, and the spreading of it on the husk: thickness and evenness here decide whether the tamal steams tender or dense."
+    },
     "lexiconSlug": null,
     "lexiconTerm": null,
     "definition": null,

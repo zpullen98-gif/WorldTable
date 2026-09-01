@@ -27,6 +27,7 @@ import { deriveCost } from './derive/cost.mjs';
 import { derivePairing } from './derive/pairing.mjs';
 import { deriveTechniques, deriveFilms } from './derive/films.mjs';
 import { fullTechTable, LEXICON_ANCHOR, SUPPLEMENT } from './derive/technique-table.mjs';
+import { attachFilms } from './derive/technique-films.mjs';
 import { RECIPE_SUPPLEMENT, SUPPLEMENT_ATLASES } from './derive/recipes-supplement.mjs';
 import { placeOf, placedChapters } from './derive/geography.mjs';
 import { buildCrosslinks } from './derive/crosslinks.mjs';
@@ -328,7 +329,7 @@ const crosslinks = buildCrosslinks(R, recipeSlugs, D, lexSlugs, linkBlobs);
  * a claim about what the recipe demonstrates, and re-cutting them here would
  * churn 970 recipes' link lists for no gain.
  */
-const TECH_ALL = fullTechTable(TECH);
+const TECH_ALL = attachFilms(fullTechTable(TECH), slugify);
 
 /** The original's `isAmerican` (L3837): membership in any US rail region. */
 const AMERICAN = new Set(RAIL_REGIONS.flatMap(([, members]) => members));
@@ -532,8 +533,9 @@ const techniques = TECH_ALL.map((x, i) => {
 		slug: slugify(x.l),
 		label: x.l,
 		query: x.q ?? '',
-		/** A verified canon film, where the original curated one. */
-		film: x.u ?? null,
+		/** The chosen film for this skill, checked against YouTube, or null when
+		    the reader is still sent to a search. See derive/technique-films.mjs. */
+		film: x.film ?? null,
 		/** The Lexicon term that defines this skill, when one does. */
 		lexiconSlug: anchor,
 		lexiconTerm: term ? term.term : null,

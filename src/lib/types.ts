@@ -262,13 +262,30 @@ export interface LexiconEntry {
  * is a definition card, whereas a Technique carries the complete set, which is
  * the whole point of the technique pages.
  */
+/**
+ * One chosen film, with enough about it to be worth clicking.
+ *
+ * The title and channel are the real ones as YouTube reports them, not a
+ * description of them, which is what lets tools/check-films.mjs notice an id
+ * that still resolves but no longer points at the film it was chosen for.
+ */
+export interface TechniqueFilm {
+	url: string;
+	id: string;
+	title: string;
+	channel: string;
+	/** The specific moment the skill happens: what a search box cannot give. */
+	watchFor: string;
+}
+
 export interface Technique {
 	slug: string;
 	label: string;
 	/** A search for studying this skill on film. */
 	query: string;
-	/** A verified canon film, where the original curated one. */
-	film: string | null;
+	/** The chosen film for this skill, or null when the reader gets a search.
+	 *  Checked against YouTube, title and channel included, by check-films. */
+	film: TechniqueFilm | null;
 	/** The lexicon term that defines this skill, when one does. */
 	lexiconSlug: string | null;
 	lexiconTerm: string | null;

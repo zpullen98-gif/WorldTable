@@ -75,9 +75,13 @@
 
 	<section class="film" data-print="hide">
 		{#if t.film}
-			<a href={t.film} target="_blank" rel="noopener">
-				<span class="lbl">★ A canon film, verified</span>
-				<span class="sub">Watch this technique done properly</span>
+			<!-- Naming the film and the channel is the point. "A canon film" told the
+			     reader nothing about whether it was worth ten minutes of their evening. -->
+			<a class="chosen" href={t.film.url} target="_blank" rel="noopener">
+				<span class="eyebrow">A chosen film</span>
+				<span class="lbl">{t.film.title}</span>
+				<span class="sub">{t.film.channel}</span>
+				<span class="watch">Watch for: {t.film.watchFor}</span>
 			</a>
 		{:else if t.query}
 			<a
@@ -181,6 +185,33 @@
 		display: block;
 		font-size: var(--t-micro);
 		color: var(--muted);
+	}
+	/* A chosen film is a lesson, so it is built like the Lexicon block above it
+	   rather than like the bare search link it replaced: same raised paper, same
+	   rule down the left, same eyebrow. The search fallback keeps the quieter
+	   one-line treatment, because a search really is just a link. */
+	.film a.chosen {
+		background: var(--paper-raised);
+		border-left: 3px solid var(--turmeric);
+		padding: 14px 18px;
+	}
+	.film a.chosen .eyebrow {
+		display: block;
+		margin-bottom: 6px;
+	}
+	.film a.chosen .lbl {
+		font-size: var(--t-body);
+		line-height: 1.35;
+		text-wrap: balance;
+	}
+	.film .watch {
+		display: block;
+		margin-top: 9px;
+		font-size: var(--t-small);
+		line-height: 1.58;
+		color: var(--ink-soft);
+		max-width: var(--measure);
+		text-wrap: pretty;
 	}
 
 	.sec {
