@@ -44,7 +44,24 @@ async function tryRead(path) {
 }
 
 createServer(async (req, res) => {
-	const url = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+	/*
+	 * decodeURIComponent throws URIError on a malformed escape, and this handler
+	 * is async, so the throw became an unhandled rejection and took the whole
+	 * server down: `GET /recipe/%zz` answered ECONNRESET and every request after
+	 * it ECONNREFUSED, exit code 1. Playwright runs the suite against this
+	 * server, so one bad path would read as a mass failure of everything after
+	 * it rather than as the one bad request it is.
+	 *
+	 * Only the pathname is decoded, so a query or fragment never reached it,
+	 * and this is the local static server rather than the shipping app.
+	 */
+	let url;
+	try {
+		url = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+	} catch {
+		res.writeHead(400).end();
+		return;
+	}
 	// Traversal guard: normalize, then refuse anything escaping build/.
 	const safe = normalize(url).replace(/^(\.\.[/\\])+/, '');
 	const base = join(BUILD, safe);

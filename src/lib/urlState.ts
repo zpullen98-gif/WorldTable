@@ -8,6 +8,39 @@
  */
 import type { Course, Difficulty, FilterState } from './types';
 import { EMPTY_FILTERS } from './types';
+import { COURSES } from './data';
+
+/**
+ * Read a course out of the URL, or nothing.
+ *
+ * This used to be `(p.get('course') as Course) || null`: a cast, on the line
+ * directly above a difficulty check that validates properly. A cast is not a
+ * check, and filter.ts compares with `r.course !== f.course`, so any string
+ * that was not one of the ten authored courses matched no recipe at all.
+ * `?course=main` kept 0 of 1844, in every chapter, for as long as it was set.
+ *
+ * It was the worst kind of empty. The Toolbar's select has no option whose
+ * value is "main", so it sat at selectedIndex -1 showing no filter name, and
+ * filtersToSearch wrote the dead value back onto every later URL, so clearing
+ * the search box did not clear it. The site root forwards its query string to
+ * /recipes verbatim, so /?course=main reached it too.
+ *
+ * Case is FOLDED rather than rejected. Someone hand-editing ?course=main means
+ * Main, and answering that with an empty library is obtuse; canonicalising also
+ * lets filtersToSearch write the value back in its authored spelling, so a bad
+ * link heals itself on first load. Anything that is not a course under any
+ * casing becomes null, which shows the whole library rather than none of it,
+ * and is what the difficulty check beside it already does with a 4.
+ *
+ * The list is COURSES from ./data, derived from the shipped corpus rather than
+ * written out again here, so it cannot drift from the recipes.
+ */
+function courseFromURL(raw: string | null): Course | null {
+	if (!raw) return null;
+	const want = raw.trim().toLowerCase();
+	const hit = (COURSES as readonly string[]).find((c) => c.toLowerCase() === want);
+	return (hit as Course | undefined) ?? null;
+}
 
 export function filtersFromURL(url: URL, chapter: string | null = null): FilterState {
 	const p = url.searchParams;
@@ -15,7 +48,7 @@ export function filtersFromURL(url: URL, chapter: string | null = null): FilterS
 	return {
 		q: p.get('q') ?? '',
 		chapter,
-		course: (p.get('course') as Course) || null,
+		course: courseFromURL(p.get('course')),
 		difficulty: diff === 1 || diff === 2 || diff === 3 ? (diff as Difficulty) : null,
 		quick: p.get('quick') === '1',
 		vegetarian: p.get('veg') === '1',

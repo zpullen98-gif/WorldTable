@@ -55,9 +55,19 @@ const SERVICES = [
 for (const { scheme, name: service } of SERVICES) {
 	for (const view of VIEWS) {
 		test(`axe: ${view.name} has no serious violations in ${service} service`, async ({ page }) => {
-			// axe walks every node — on the 1710-card grid that is legitimately
-			// slow, slower still with the whole suite hammering one static server.
-			test.setTimeout(120_000);
+			/*
+			 * axe walks every node, and on the recipe grid that is every card in
+			 * the corpus: legitimately slow, slower still with four workers
+			 * hammering one static server.
+			 *
+			 * This said 1710 and allowed two minutes. The corpus is 1844 now, the
+			 * grid scan measures 1.4 to 1.6 minutes on an idle machine, and under
+			 * the full suite it began timing out — a failure that looks exactly
+			 * like a real accessibility regression and is not one. Three minutes
+			 * restores the margin the two originally bought. If this starts
+			 * failing again, measure the scan alone before believing it.
+			 */
+			test.setTimeout(180_000);
 			await page.emulateMedia({ colorScheme: scheme });
 			await goto(page, view.path);
 
