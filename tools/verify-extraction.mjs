@@ -80,7 +80,7 @@ const canonical = (v) => JSON.stringify(toSerializable(v));
    sentence, a lost clause, a mangled quantity or a truncated note, which are
    the failures extraction can produce. Punctuation is the only permitted
    difference, and the report says which of the two held. */
-const WORDS_ONLY = /[\u2014\u2013:;,.!?()\[\]{}"'\s]+/g;
+const WORDS_ONLY = /[-\u2014\u2013:;,.!?()\[\]{}"'\s]+/g;
 /* The copy edit was licensed to add a connective where splitting a sentence
    left one grammatically necessary, and it used that licence exactly three
    times across 236,000 words: two "is" and one "and". Dropping connectives

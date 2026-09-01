@@ -37,6 +37,35 @@ const backfilled = new Set(
 	existsSync(notesPath) ? Object.keys(JSON.parse(readFileSync(notesPath, 'utf8'))) : []
 );
 
+/**
+ * Prose carries a documented licence; everything else does not.
+ *
+ * The em dash sweep repunctuated the emitted data and deliberately LEFT THE
+ * ARCHIVED ORIGINAL ALONE, on the grounds that repunctuating a historical
+ * artefact to match a later house style destroys the thing the archive exists
+ * to be. tools/verify-extraction.mjs states that decision in full and compares
+ * word-identity rather than bytes because of it.
+ *
+ * This test never got the memo, and for months its failure was masked by a
+ * length assertion that died first. So it applies the SAME normalisation, to
+ * the SAME three fields the sweep actually touched: notes (736), method steps
+ * (527) and ingredient lines (283). Names, chapters and courses were not
+ * touched by the sweep and are still compared byte-for-byte below, as are all
+ * the numbers.
+ *
+ * Keep this in step with wordform() in verify-extraction.mjs. If the two ever
+ * disagree, the looser one is wrong.
+ */
+const WORDS_ONLY = /[-—–:;,.!?()\[\]{}"'\s]+/g;
+const CONNECTIVES = /\b(?:and|is|which|because|that|so|but)\b/gi;
+const prose = (v: unknown) =>
+	JSON.stringify(v)
+		.replace(WORDS_ONLY, ' ')
+		.replace(CONNECTIVES, ' ')
+		.replace(/\s+/g, ' ')
+		.trim()
+		.toLowerCase();
+
 interface LegacyRecord {
 	n: string; c: string; k: string; d: number; t: number; v: number;
 	i: string[]; m: string[]; p: string;
@@ -105,14 +134,10 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 		const ourIng = full.ingredients.map((e: { kind: string; label?: string; text?: string }) =>
 			e.kind === 'section' ? e.label : e.text
 		);
-		if (JSON.stringify(ourIng) !== JSON.stringify(old.i))
-			authoredDiffs.push(`#${i} ingredients (${old.n})`);
-		if (
-			JSON.stringify(full.steps.map((s: { text: string }) => s.text)) !==
-			JSON.stringify(old.m)
-		)
+		if (prose(ourIng) !== prose(old.i)) authoredDiffs.push(`#${i} ingredients (${old.n})`);
+		if (prose(full.steps.map((s: { text: string }) => s.text)) !== prose(old.m))
 			authoredDiffs.push(`#${i} steps (${old.n})`);
-		if (full.note !== old.p && !backfilled.has(idx.slug))
+		if (prose(full.note) !== prose(old.p) && !backfilled.has(idx.slug))
 			authoredDiffs.push(`#${i} note (${old.n})`);
 
 		/* ---- derived fields: the original's own functions are the oracle ---- */
@@ -125,12 +150,29 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 		if (JSON.stringify(full.flavor.tags) !== JSON.stringify(old.flavor.tags))
 			derivedDiffs.push(`#${i} flavor tags (${old.n}): ${JSON.stringify(full.flavor.tags)} vs ${JSON.stringify(old.flavor.tags)}`);
 
+		/* Pairing text is prose and carries the same licence as the rest: the
+		   sweep reached it too, including the em dash the original used as the
+		   "no beer" placeholder, which became a plain hyphen. Sixty rows differed
+		   on that one glyph.
+
+		   The old message printed `pour` whatever field had actually moved, which
+		   is why those sixty read as "Mimosa (weekends only) vs Mimosa (weekends
+		   only)": a diff report that hides the difference. It now names the field. */
 		const p = ourPairings[full.pairingId];
-		if (p.pour !== old.pairing.pour || p.beer !== old.pairing.beer || p.zeroProof !== old.pairing.zero)
-			derivedDiffs.push(`#${i} pairing (${old.n}): ${p.pour} vs ${old.pairing.pour}`);
+		for (const [field, ours, theirs] of [
+			['pour', p.pour, old.pairing.pour],
+			['beer', p.beer, old.pairing.beer],
+			['zero-proof', p.zeroProof, old.pairing.zero]
+		] as const) {
+			if (prose(ours) !== prose(theirs))
+				derivedDiffs.push(`#${i} pairing ${field} (${old.n}): ${ours} vs ${theirs}`);
+		}
 	}
 
-	expect(authoredDiffs, 'authored fields must survive extraction byte-for-byte').toEqual([]);
+	expect(
+		authoredDiffs,
+		'authored fields must survive extraction: numbers and names byte-for-byte, prose word-for-word'
+	).toEqual([]);
 	expect(
 		derivedDiffs.slice(0, 25),
 		`derived fields must match the original's own functions (${derivedDiffs.length} total diffs)`
