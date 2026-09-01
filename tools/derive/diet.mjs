@@ -394,21 +394,80 @@ function scrub(text) {
 const VEG_ALTERNATIVE =
 	/\b(?:veg|vegan|vegetable|vegetarian|shortening|butter|oil|kombu|shiitake|mushroom|agar|tofu|olive|paprika|cream|stiffener|egg|dhal|dal|lentil|chickpea|bean|potato|paneer|cheese|asparagus|spinach|cabbage|rice|noodle|salad|fruit|nut)s?\b/i;
 
+/**
+ * The same idea for the VEGAN question, and a separate list rather than a flag
+ * on the one above, because the two lists disagree about five words.
+ *
+ * VEG_ALTERNATIVE names butter, cream, cheese, paneer and egg, which are
+ * perfectly good vegetarian alternatives and are exactly what a vegan is
+ * avoiding. Left shared, a dairy line licenses its OWN escape and the panna
+ * cotta bug returns one level down: "200ml kefir or sour milk, 1 egg" escapes
+ * on the word `egg` in its second segment, and Varenyky z Vyshneyu (cherry
+ * dumplings built on kefir, egg and smetana) reads as vegan by the binding
+ * reading. Measured: that construction alone put Varenyky, Iowa Snickers
+ * Salad ("whipped cream or whipped topping"), Michigan Dried Cherry Salad
+ * ("blue cheese or goat cheese") and Arkansas Fried Pies ("cold butter or
+ * shortening, 120ml cold buttermilk") into the claim.
+ *
+ * The sweeteners are the other half of the difference. "Powdered sugar or
+ * honey" and "barley malt syrup (or honey)" are two of the six recipes this
+ * flag exists for, and neither has any recognised alternative without them.
+ *
+ * They are NOT added to VEG_ALTERNATIVE, and that was measured before it was
+ * decided: across all 1710 recipes, sugar|syrup|maple|agave in the shared list
+ * moves exactly one dish, and moves it the wrong way. Tapsilog's first line is
+ * "400g beef sirloin, sliced thin; marinade: soy, calamansi or lemon, garlic,
+ * sugar, pepper", whose second segment carries no meat and would now match
+ * `sugar`, escaping the beef along with the line and flipping a Filipino
+ * cured-beef breakfast to vegetarianStrict. One regression, no gain: the six
+ * recipes that want the sweeteners all want them for the vegan reading, where
+ * `veganOption` refuses on `vegetarianOption` anyway and no meat word can be
+ * excused by them.
+ */
+const VEGAN_ALTERNATIVE =
+	/\b(?:veg|vegan|vegetable|vegetarian|shortening|oil|kombu|shiitake|mushroom|agar|tofu|olive|paprika|stiffener|dhal|dal|lentil|chickpea|bean|potato|asparagus|spinach|cabbage|rice|noodle|salad|fruit|nut|sugar|syrup|maple|agave)s?\b/i;
+
 const OPTIONAL_MARKER =
 	/^\s*(?:optional|fillings?|to serve|for serving|garnish|serve with|toppings?)\b|\boptional\b|\bto serve\b|\bfor serving\b/i;
 
-/** @param {string} line */
-function lineIsEscaped(line) {
-	// "Smoked salmon to serve", "Fillings: umeboshi, tuna-mayo, salmon flakes":
-	// genuinely additive, the dish stands without them.
-	if (OPTIONAL_MARKER.test(line)) return true;
+/**
+ * @param {string} line
+ * @param {'vegetarian'|'vegan'} [mode] `'vegan'` narrows on both sides: see the
+ *   two blocks below that branch on it.
+ */
+function lineIsEscaped(line, mode = 'vegetarian') {
+	const vegan = mode === 'vegan';
 
-	// Accompaniment lists: a run of foods with no quantity anywhere, e.g.
-	// "Grilled meats, roast chicken, fries, eggs: they all apply" or
-	// "Satay, gado-gado, noodles, grilled chicken, raw vegetables, your spoon".
-	// A line that names three or more things and measures none of them is
-	// telling you what to serve the sauce WITH, not what goes in it.
-	if (!/\d/.test(line) && line.split(/[,;]/).length >= 3) return true;
+	/*
+	 * The optional/accompaniment heuristics below are deliberately NOT run for
+	 * the vegan reading, which asks only one question: does the recipe itself
+	 * name the route? An "or" clause and a parenthetical saying "vegan" do. A
+	 * line merely mentioning service does not, and this is the paella failure
+	 * that the fish and shellfish block below found, in a second costume, and
+	 * measured on the same corpus:
+	 *
+	 *   Roosterkoek   "30 g butter, softened, plus more to serve"
+	 *   Paratha       "Ghee: for the dough, the layers, the pan, and philosophically"
+	 *   Mercimek Corbasi  "Finish: butter bloomed with pul biber, dried mint, lemon wedges"
+	 *
+	 * All three are bound butter or ghee, the first with a weight on it, and
+	 * all three are discarded whole: the first by `\bto serve\b` firing mid-line
+	 * and the other two by the no-quantity-three-commas rule. Honouring these
+	 * two branches admits eleven dishes and three of them are lies, which is the
+	 * wrong ratio for something painted on the page.
+	 */
+	if (!vegan) {
+		// "Smoked salmon to serve", "Fillings: umeboshi, tuna-mayo, salmon flakes":
+		// genuinely additive, the dish stands without them.
+		if (OPTIONAL_MARKER.test(line)) return true;
+
+		// Accompaniment lists: a run of foods with no quantity anywhere, e.g.
+		// "Grilled meats, roast chicken, fries, eggs: they all apply" or
+		// "Satay, gado-gado, noodles, grilled chicken, raw vegetables, your spoon".
+		// A line that names three or more things and measures none of them is
+		// telling you what to serve the sauce WITH, not what goes in it.
+		if (!/\d/.test(line) && line.split(/[,;]/).length >= 3) return true;
+	}
 
 	// "chicken or veg stock" offers a real meatless path; "100g bacon or spam"
 	// does not. So split on `or` and require some alternative that is BOTH free
@@ -430,15 +489,25 @@ function lineIsEscaped(line) {
 			const scrubbed = scrub(lowered);
 			if (RE.meat.test(scrubbed) || RE.fish.test(scrubbed) || RE.shellfish.test(scrubbed))
 				return false;
-			return VEG_ALTERNATIVE.test(lowered);
+			// Dairy and honey scrubbed, egg raw: the same split the flags
+			// themselves use, so "coconut milk" is still a way out and "egg
+			// noodles" is still egg.
+			if (vegan && (RE.dairy.test(scrubbed) || RE.egg.test(lowered) || RE.honey.test(scrubbed)))
+				return false;
+			return (vegan ? VEGAN_ALTERNATIVE : VEG_ALTERNATIVE).test(lowered);
 		});
 		if (escapes) return true;
 	}
 
 	// "2 tbsp dashi (kombu dashi keeps it vegetarian)": a parenthetical that
-	// names a vegetarian route is a stated alternative, same as an "or".
+	// names a vegetarian route is a stated alternative, same as an "or". The
+	// vegan reading wants the word `vegan` specifically: a parenthetical
+	// promising a vegetarian route says nothing about the dairy on its line,
+	// and "(oil keeps it vegan, Ethiopia fasts expertly)" is the corpus doing
+	// this correctly and unmistakably.
 	const parentheticals = line.match(/\(([^)]*)\)/g) ?? [];
-	if (parentheticals.some((/** @type {string} */ p) => /\bveg(?:an|etarians?)?\b/i.test(p))) return true;
+	const claim = vegan ? /\bvegan\b/i : /\bveg(?:an|etarians?)?\b/i;
+	if (parentheticals.some((/** @type {string} */ p) => claim.test(p))) return true;
 
 	return false;
 }
@@ -554,6 +623,42 @@ export function deriveDiet(r, _fullBlob) {
 	const vegetarianOption =
 		vegetarianStrict && (anyLine(RE.meat) || containsFish || containsShellfish);
 
+	/**
+	 * The same reading, one product group further in.
+	 *
+	 * `vegetarianOption` exists because "this dish is vegetarian by the binding
+	 * reading, and an animal product is named somewhere and only escaped" is a
+	 * useful thing to be able to say. Nothing said it for the vegan question,
+	 * and the commit that made `vegan` refuse on dairy, egg and honey from EVERY
+	 * line therefore took the badge off six recipes that state a vegan route in
+	 * their own words and left nothing at all in its place:
+	 *
+	 *   Misir Wat    "3 tbsp niter kibbeh or oil (oil keeps it vegan, Ethiopia fasts expertly)"
+	 *   Gomen Wat    "3 tbsp niter kibbeh or oil"
+	 *   Kik Alicha   "80 g niter kibbeh, or 80 ml sunflower oil on fasting days"
+	 *   Atkilt Wat   "60 g niter kibbeh, or 60 ml sunflower oil on fasting days"
+	 *   Orange & Cinnamon Salad   "Powdered sugar or honey"
+	 *   Bagels       "1 tbsp barley malt syrup (or honey) in the dough"
+	 *
+	 * Ethiopian fasting cooking is one of the world's major vegan traditions and
+	 * four of those lines are it saying so. Dropping the badge was right; showing
+	 * nothing was a loss, and the doctrine that justified it ("the data already
+	 * says so in its own field") was only true of meat and fish.
+	 *
+	 * `!vegetarianOption` is deliberate and mirrors `vegan` itself. A dish whose
+	 * MEAT is escaped is a vegetarian option, its vegan-ness is two stated
+	 * routes deep, and the field that says so already exists. This flag stacks
+	 * on a clean vegetarian reading, never on another option.
+	 */
+	const veganBinding = lines.filter((l) => !lineIsEscaped(l, 'vegan'));
+	const veganStrict =
+		vegetarianStrict &&
+		!veganBinding.some((l) => RE.dairy.test(scrub(l.toLowerCase()))) &&
+		!veganBinding.some((l) => RE.egg.test(l.toLowerCase())) &&
+		!veganBinding.some((l) => RE.honey.test(scrub(l.toLowerCase())));
+	const veganOption =
+		veganStrict && !vegetarianOption && (containsDairy || containsEgg || containsHoney);
+
 	// The authored flag, when we have it. deriveDiet is also called on
 	// user-added family recipes, which carry the same `v` field.
 	const vegetarian = typeof r.v === 'number' || typeof r.v === 'boolean'
@@ -590,6 +695,12 @@ export function deriveDiet(r, _fullBlob) {
 		vegan:
 			vegetarianStrict && !vegetarianOption && !containsDairy && !containsEgg && !containsHoney,
 		vegetarianOption,
+		/**
+		 * Disjoint from `vegan` by construction, and the build gate says so out
+		 * loud: `vegan` requires that nothing is named anywhere, `veganOption`
+		 * requires that something is.
+		 */
+		veganOption,
 		containsMeat,
 		containsPork: anyBinding(RE.pork),
 		containsFish,

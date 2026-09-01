@@ -847,12 +847,41 @@ if (judgement.length) {
 		   their own honey. */
 		if (d.containsHoney) carries.push('honey');
 		if (d.vegetarianOption) carries.push('vegetarianOption');
+		/* `veganOption` means an animal product is named and only escaped, which
+		   is the same contradiction `vegetarianOption` is here for. The two are
+		   disjoint by construction in derive/diet.mjs; this is what says so. */
+		if (d.veganOption) carries.push('veganOption');
 		if (carries.length) veganLies.push(`${r.n} [${slug}]: ${carries.join(', ')}`);
 	});
 	if (veganLies.length) {
 		problems.push(
 			`${veganLies.length} recipes claim vegan while their own text names an animal product:\n` +
 				veganLies.map((x) => `      ${x}`).join('\n')
+		);
+	}
+
+	/**
+	 * And the mirror: a vegan OPTION whose escape was a meat escape, or which
+	 * carries no dairy/egg/honey at all, is not an option, it is either a
+	 * `vegetarianOption` or a plain `vegan`. Both fail the flag's own definition
+	 * ("vegan by the binding reading, but an animal product is named somewhere")
+	 * and both would put a second, weaker claim on a page that already makes a
+	 * stronger one.
+	 */
+	const optionLies = [];
+	R.forEach((r, i) => {
+		const slug = recipeSlugs[i];
+		const d = OVERRIDES.recipes?.[slug]?.diet ?? deriveDiet(r, blobs[i]);
+		if (!d.veganOption) return;
+		if (d.vegan) optionLies.push(`${r.n} [${slug}]: also claims vegan`);
+		else if (d.vegetarianOption) optionLies.push(`${r.n} [${slug}]: also claims vegetarianOption`);
+		else if (!d.containsDairy && !d.containsEgg && !d.containsHoney)
+			optionLies.push(`${r.n} [${slug}]: names no dairy, egg or honey to be an option around`);
+	});
+	if (optionLies.length) {
+		problems.push(
+			`${optionLies.length} recipes claim a vegan option they cannot hold:\n` +
+				optionLies.map((x) => `      ${x}`).join('\n')
 		);
 	}
 
