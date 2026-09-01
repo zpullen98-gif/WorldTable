@@ -1,47 +1,137 @@
 {
-  "_readme": [
-    "Human rulings that beat the derived values in tools/derive/*. Merged last by",
-    "build-data.mjs, and exempt from the diet gates.",
-    "",
-    "Every entry needs a `reason`. If you cannot write one, the fix belongs in the",
-    "keyword tables instead: an override is for a genuine judgement call, not for",
-    "silencing a bug."
-  ],
-
-  "recipes": {
-    "pimento-cheese": {
-      "reason": "Worcestershire contains anchovy, so containsFish stays true and the allergen line will say so. But the corpus, and ordinary American usage, treat pimento cheese as vegetarian. Following the author for the filter, keeping the fact for the label.",
-      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
-    },
-    "mississippi-comeback-sauce": {
-      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese: vegetarian by the author's call, containsFish reported honestly.",
-      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
-    },
-    "beer-cheese": {
-      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
-      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
-    },
-    "kentucky-beer-cheese-soup": {
-      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
-      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
-    },
-    "wisconsin-beer-cheese-soup": {
-      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
-      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
-    },
-
-    "kitsune-udon": {
-      "reason": "The broth line states the kombu-shiitake dashi option explicitly; a later line repeats plain 'dashi' for the aburaage without restating it. Per-line matching cannot carry the alternative across lines, so this is ruled by hand. Kitsune udon is traditionally and straightforwardly vegetarian-capable.",
-      "diet": { "vegetarian": true, "containsFish": true, "confidence": "reviewed" }
-    },
-
-    "new-mexico-red-chile-enchiladas": {
-      "reason": "Ingredient reads only '500ml stock' with no qualifier. The author marked the dish non-vegetarian, which for a New Mexico red chile sauce means meat stock. Bare 'stock' is too ambiguous to add to the keyword tables without misfiring across the corpus, so it is ruled here.",
-      "diet": { "vegetarian": false, "containsMeat": true, "confidence": "reviewed" }
-    },
-    "arizona-sonoran-enchiladas": {
-      "reason": "Same bare '500ml stock' as new-mexico-red-chile-enchiladas, same ruling.",
-      "diet": { "vegetarian": false, "containsMeat": true, "confidence": "reviewed" }
-    }
-  }
+	"_readme": [
+		"Human rulings that beat the derived values in tools/derive/*. Merged last by",
+		"build-data.mjs, and exempt from the diet gates.",
+		"",
+		"Every entry needs a `reason`. If you cannot write one, the fix belongs in the",
+		"keyword tables instead: an override is for a genuine judgement call, not for",
+		"silencing a bug."
+	],
+	"recipes": {
+		"pimento-cheese": {
+			"reason": "Worcestershire contains anchovy, so containsFish stays true and the allergen line will say so. But the corpus, and ordinary American usage, treat pimento cheese as vegetarian. Following the author for the filter, keeping the fact for the label.",
+			"diet": {
+				"vegetarian": true,
+				"containsFish": true,
+				"confidence": "reviewed"
+			}
+		},
+		"mississippi-comeback-sauce": {
+			"reason": "Worcestershire (anchovy). Same ruling as pimento-cheese: vegetarian by the author's call, containsFish reported honestly.",
+			"diet": {
+				"vegetarian": true,
+				"containsFish": true,
+				"confidence": "reviewed"
+			}
+		},
+		"beer-cheese": {
+			"reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
+			"diet": {
+				"vegetarian": true,
+				"containsFish": true,
+				"confidence": "reviewed"
+			}
+		},
+		"kentucky-beer-cheese-soup": {
+			"reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
+			"diet": {
+				"vegetarian": true,
+				"containsFish": true,
+				"confidence": "reviewed"
+			}
+		},
+		"wisconsin-beer-cheese-soup": {
+			"reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
+			"diet": {
+				"vegetarian": true,
+				"containsFish": true,
+				"confidence": "reviewed"
+			}
+		},
+		"kitsune-udon": {
+			"reason": "The broth line states the kombu-shiitake dashi option explicitly; a later line repeats plain 'dashi' for the aburaage without restating it. Per-line matching cannot carry the alternative across lines, so this is ruled by hand. Kitsune udon is traditionally and straightforwardly vegetarian-capable.",
+			"diet": {
+				"vegetarian": true,
+				"containsFish": true,
+				"confidence": "reviewed"
+			}
+		},
+		"new-mexico-red-chile-enchiladas": {
+			"reason": "Ingredient reads only '500ml stock' with no qualifier. The author marked the dish non-vegetarian, which for a New Mexico red chile sauce means meat stock. Bare 'stock' is too ambiguous to add to the keyword tables without misfiring across the corpus, so it is ruled here.",
+			"diet": {
+				"vegetarian": false,
+				"containsMeat": true,
+				"confidence": "reviewed"
+			}
+		},
+		"arizona-sonoran-enchiladas": {
+			"reason": "Same bare '500ml stock' as new-mexico-red-chile-enchiladas, same ruling.",
+			"diet": {
+				"vegetarian": false,
+				"containsMeat": true,
+				"confidence": "reviewed"
+			}
+		},
+		"christmas-pudding": {
+			"reason": "Technique 'Pleating dumplings' removed: a pleated parchment and foil lid tied over a basin, not a dumpling.",
+			"techniques": [
+				"Tempering a custard",
+				"Steaming: basket, leaf and lid",
+				"Soaking dried goods back to life"
+			]
+		},
+		"steak-and-kidney-pudding": {
+			"reason": "Technique 'Pleating dumplings' removed: a pleated parchment and foil lid tied over a basin, not a dumpling.",
+			"techniques": [
+				"Searing: the hard crust",
+				"Steaming: basket, leaf and lid",
+				"Salted water & the float test",
+				"Knife cuts: dice, julienne, bias"
+			]
+		},
+		"tempered-dark-chocolate-by-seeding": {
+			"reason": "Technique 'Steaming: basket, leaf and lid' removed: its own step reads \"keeping every drop of water and every wisp of steam off the bowl\", and Tempering chocolate put in its place: the extracted table names that technique and its keys never matched this recipe.",
+			"techniques": [
+				"Tempering chocolate"
+			]
+		},
+		"porrusalda": {
+			"reason": "Technique 'Steaming: basket, leaf and lid' removed: \"wet leeks steam instead of sweating\": the word is the warning.",
+			"techniques": [
+				"Sweating aromatics: soft, never browned",
+				"The bare simmer: holding liquid below the boil"
+			]
+		},
+		"daube-provencale": {
+			"reason": "Technique 'Steaming: basket, leaf and lid' removed: \"dry every face of every piece, or it will steam rather than brown\".",
+			"techniques": [
+				"The bare simmer: holding liquid below the boil",
+				"Straining & passing through a sieve",
+				"Marinating: acid, salt and time"
+			]
+		},
+		"marquesitas": {
+			"reason": "Technique 'Steaming: basket, leaf and lid' removed: \"cook without moving it until the steam coming off the surface stops\".",
+			"techniques": []
+		},
+		"alaska-salmon-pirok": {
+			"reason": "Technique 'Steaming: basket, leaf and lid' removed: \"cut steam vents\" in a pie crust.",
+			"techniques": [
+				"Sweating aromatics: soft, never browned",
+				"Egg wash & the baker’s shine"
+			]
+		},
+		"celeriac-baked-in-salt-dough": {
+			"reason": "Technique 'Steaming: basket, leaf and lid' removed: \"every crack is a steam leak\": it is baked in salt.",
+			"techniques": [
+				"Dry-pan toasting: spices, seeds and nuts"
+			]
+		},
+		"avial": {
+			"reason": "Technique 'Steaming: basket, leaf and lid' removed: \"pull the pot off the heat, let the steam die back\".",
+			"techniques": [
+				"Knife cuts: dice, julienne, bias"
+			]
+		}
+	}
 }

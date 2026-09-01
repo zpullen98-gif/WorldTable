@@ -52,9 +52,34 @@ export const SUPPLEMENT = [
 	   "pleat one side only" or "16 to 18 pleats". This entry is what lets the
 	   Dumpling Atlas be seen, and the extracted half stays untouched. */
 	{
-		k: ['pleats', 'pleat one', 'pleat all', 'pleat three', 'pleat 8', 'pleat 6', 'gather the rim'],
+		/* Bare 'pleats' is gone. It caught the parchment, not the dumpling: a
+		   Basque cheesecake "lined with two rough sheets of parchment, pleats,
+		   wrinkles and all", a galette folded "in loose pleats", a papillote
+		   "crimped in small overlapping pleats" — and Zhong Shui Jiao, which IS
+		   a dumpling and says "a plain half moon with NO pleats". All four were
+		   graded on dumpling sealing, so the cheesecake page ended with five
+		   marks about filling escaping into cloudy water.
+
+		   The replacements name the hand doing it. 'pleats around' keeps Xiao
+		   Long Bao, whose line is "gather 16 to 18 pleats around the rim". */
+		k: ['pleat one', 'pleat all', 'pleat three', 'pleat 8', 'pleat 6',
+			'gather the rim', 'pleats around', 'pleat the wrapper'],
 		l: 'Pleating dumplings',
 		q: 'dumpling pleating technique jiaozi fold'
+	},
+	/* The extracted table has a 'Tempering chocolate' entry and it has never
+	   fired once, because its keys are 'temper the chocolate' and 'tempered
+	   chocolate' and the corpus's only tempering recipe is called "Tempered
+	   DARK Chocolate by Seeding". One word in the middle, and a whole technique
+	   sat unreachable while its recipe was graded on steaming instead.
+
+	   Both keys hit that recipe and nothing else in 1710. 'couverture' is safe
+	   to add on its own terms: a recipe that names it is working with real
+	   tempering chocolate. */
+	{
+		k: ['tempered dark chocolate', 'couverture'],
+		l: 'Tempering chocolate',
+		q: 'chocolate tempering seeding method couverture'
 	},
 	// ── dry heat ─────────────────────────────────────────────────────────────
 	{

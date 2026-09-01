@@ -2893,22 +2893,16 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "original",
-    "chapters": 8,
+    "chapters": 2,
     "semesters": [],
     "recipes": [
       "gyoza",
-      "basque-burnt-cheesecake",
-      "christmas-pudding",
-      "salmon-en-papillote",
-      "rainier-cherry-galette",
       "jiaozi-pork-and-napa-cabbage",
       "xiao-long-bao",
       "har-gow",
       "momo-kathmandu-style",
       "kalakuri-khinkali",
-      "hitokuchi-gyoza-hakata-style",
-      "steak-and-kidney-pudding",
-      "zhong-shui-jiao"
+      "hitokuchi-gyoza-hakata-style"
     ]
   },
   {
@@ -4630,7 +4624,7 @@
     "lexiconTerm": "Steaming & En Papillote",
     "definition": "Cooking in vapor at 100°C: gentler than boiling (no agitation, no flavor leached into water) and the technique of choice where the ingredient IS the dish: Cantonese fish, dim sum, couscous, tamales, Christmas pudding. EN PAPILLOTE seals food in parchment so it steams in its own moisture plus wine and butter, a self-saucing micro-oven with tableside theater. Steam burns worse than boiling water (it releases latent heat on contact); open lids and packets away from yourself, always, and never let the pot run dry: the smell of scorched steamer is a lesson learned once.",
     "origin": "supplement",
-    "chapters": 78,
+    "chapters": 75,
     "semesters": [
       {
         "n": 5,
@@ -4688,7 +4682,6 @@
       "mission-style-burrito",
       "penn-cove-mussels-steamed-in-cider",
       "alaska-king-crab-legs-with-drawn-butter",
-      "alaska-salmon-pirok",
       "nixtamal-corn-tortillas",
       "xiao-long-bao",
       "har-gow",
@@ -4697,7 +4690,6 @@
       "steak-and-kidney-pudding",
       "hyderabadi-dum-biryani",
       "brined-whole-roast-cauliflower",
-      "celeriac-baked-in-salt-dough",
       "twice-cooked-aubergine-with-miso-glaze",
       "suen-yung-jing-daai-ji-steamed-scallops-with-garlic-and-fun-see",
       "gon-chau-ngau-ho-dry-fried-beef-ho-fun",
@@ -4709,12 +4701,10 @@
       "dongpo-rou",
       "sheng-jian-bao",
       "puttu",
-      "avial",
       "thalassery-kozhi-biryani",
       "sarson-da-saag",
       "cuscusu-di-pesce-alla-trapanese",
       "idli",
-      "marquesitas",
       "atkilt-wat",
       "badrijani-nigvzit",
       "zereshk-polo-ba-morgh",
@@ -4722,7 +4712,6 @@
       "kukul-mas-curry",
       "wattalappam",
       "sauce-bearnaise",
-      "tempered-dark-chocolate-by-seeding",
       "sugar-syrup-through-the-named-stages",
       "boil-up",
       "hangi",
@@ -4740,14 +4729,12 @@
       "thiakry",
       "morogo-wa-thepe",
       "baeckeoffe",
-      "porrusalda",
       "calcots-a-la-brasa",
       "escalivada",
       "butatama-osaka-okonomiyaki",
       "ikayaki-sennichimae-style",
       "manganji-togarashi-to-oage-san-no-taitan",
       "goya-chanpuru",
-      "daube-provencale",
       "talo",
       "lavash",
       "rupjmaizes-kartojums",
@@ -5373,6 +5360,21 @@
       "prinsesstarta",
       "macaroni-pie",
       "quesillo"
+    ]
+  },
+  {
+    "slug": "tempering-chocolate",
+    "label": "Tempering chocolate",
+    "query": "tempering chocolate technique",
+    "film": null,
+    "lexiconSlug": "tempering-eggs-and-chocolate",
+    "lexiconTerm": "Tempering (Eggs & Chocolate)",
+    "definition": "One word, two crafts. TEMPERING EGGS: whisking hot liquid gradually into yolks before returning all to the pot, raising their temperature gently so custards (crème anglaise, carbonara's cousin) thicken at 82°C instead of scrambling at 90°C, the thermometer's best friend. TEMPERING CHOCOLATE: melting, cooling, and reheating to precise curves (dark: ~50°→27°→31–32°C) so cocoa butter sets in stable Form V crystals: glossy snap instead of dull bloom. Both are the same discipline wearing different aprons: proteins and fats obey temperature, and the cook who controls degrees controls texture.",
+    "origin": "original",
+    "chapters": 1,
+    "semesters": [],
+    "recipes": [
+      "tempered-dark-chocolate-by-seeding"
     ]
   },
   {

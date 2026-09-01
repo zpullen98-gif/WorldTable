@@ -168,34 +168,6 @@
     "fault": "It was pushed through a mesh too coarse for it, or the sieve was overloaded and slopped at the rim, so the fibres it was meant to remove are in the finished sauce and it reads grainy on the tongue."
   },
   {
-    "slug": "steaming-basket-leaf-and-lid",
-    "label": "Steaming: basket, leaf and lid",
-    "recipeCount": 124,
-    "marks": [
-      {
-        "id": "steaming-basket-leaf-and-lid#steam",
-        "text": "Steam was running before the food went in: the water at a rolling boil and vapour coming steadily through the basket, rather than the whole thing warming up together."
-      },
-      {
-        "id": "steaming-basket-leaf-and-lid#nothing",
-        "text": "Nothing touches the water at any point: the food sits clear of it throughout, and the level neither drops enough to boil dry nor rises enough to wet it."
-      },
-      {
-        "id": "steaming-basket-leaf-and-lid#stayed",
-        "text": "The lid stayed on. Every lift costs the chamber its heat, and the number of lifts should be as close to none as the dish allows."
-      },
-      {
-        "id": "steaming-basket-leaf-and-lid#lifted",
-        "text": "Lifted out, the surface is glossy and plump with its colour heightened rather than dulled: greens brighter than they went in, not olive."
-      },
-      {
-        "id": "steaming-basket-leaf-and-lid#cooked",
-        "text": "Cooked through with the shape intact: it yields at the centre without having slumped or split, and there is no more than a spoonful of clean condensate beneath it."
-      }
-    ],
-    "fault": "The lid was loose or dripping and the condensate fell back onto the food, so it arrives waterlogged and pale with its seasoning washed down into the bottom of the dish."
-  },
-  {
     "slug": "the-wobble-and-the-skewer-testing-a-bake",
     "label": "The wobble & the skewer: testing a bake",
     "recipeCount": 119,
@@ -222,6 +194,34 @@
       }
     ],
     "fault": "It was judged on the clock and on how the edges looked, so a centre still liquid went to the rack and sank as it cooled, a dense wet seam under a perfectly browned top."
+  },
+  {
+    "slug": "steaming-basket-leaf-and-lid",
+    "label": "Steaming: basket, leaf and lid",
+    "recipeCount": 117,
+    "marks": [
+      {
+        "id": "steaming-basket-leaf-and-lid#steam",
+        "text": "Steam was running before the food went in: the water at a rolling boil and vapour coming steadily through the basket, rather than the whole thing warming up together."
+      },
+      {
+        "id": "steaming-basket-leaf-and-lid#nothing",
+        "text": "Nothing touches the water at any point: the food sits clear of it throughout, and the level neither drops enough to boil dry nor rises enough to wet it."
+      },
+      {
+        "id": "steaming-basket-leaf-and-lid#stayed",
+        "text": "The lid stayed on. Every lift costs the chamber its heat, and the number of lifts should be as close to none as the dish allows."
+      },
+      {
+        "id": "steaming-basket-leaf-and-lid#lifted",
+        "text": "Lifted out, the surface is glossy and plump with its colour heightened rather than dulled: greens brighter than they went in, not olive."
+      },
+      {
+        "id": "steaming-basket-leaf-and-lid#cooked",
+        "text": "Cooked through with the shape intact: it yields at the centre without having slumped or split, and there is no more than a spoonful of clean condensate beneath it."
+      }
+    ],
+    "fault": "The lid was loose or dripping and the condensate fell back onto the food, so it arrives waterlogged and pale with its seasoning washed down into the bottom of the dish."
   },
   {
     "slug": "mashing-and-pureeing",
@@ -1568,34 +1568,6 @@
     "fault": "A finish meant to sit on top went on while the bake was still warm. The layer that touched first melted, slid, and soaked in; what is left sets greasy and streaked, and no amount of chilling afterwards puts that finish back."
   },
   {
-    "slug": "pleating-dumplings",
-    "label": "Pleating dumplings",
-    "recipeCount": 13,
-    "marks": [
-      {
-        "id": "pleating-dumplings#seal",
-        "text": "The seam is closed along its whole length with no gap at either end of the pleat run: hold one up to the light and no filling shows through the join. A dumpling that opens in the water was sealed against a wet or floured rim."
-      },
-      {
-        "id": "pleating-dumplings#rim",
-        "text": "The rim is clean and dry where it meets itself. Filling smeared onto the sealing edge is the single most common cause of a burst, and it cannot be wiped off once the dough has taken it up."
-      },
-      {
-        "id": "pleating-dumplings#even",
-        "text": "The pleats are even in size and count across the batch, so every piece holds the same weight of filling and cooks in the same time. A tray that ranges from eight folds to eighteen will not finish together."
-      },
-      {
-        "id": "pleating-dumplings#centre",
-        "text": "The wrapper is thicker at the centre than at the rim, so the base carries the filling without tearing while the pleated edge stays fine enough to eat. A disc rolled evenly flat splits at the bottom."
-      },
-      {
-        "id": "pleating-dumplings#stands",
-        "text": "It stands up on its own base without slumping, and the pleats still read as pleats after cooking rather than having relaxed into a smooth seam."
-      }
-    ],
-    "fault": "The rim was wet, floured or smeared with filling, so the seal never took: the dumpling opens in the pot, the filling leaves, and what surfaces is a slack empty wrapper in cloudy water. Uneven pleat counts across a tray compound it, because the batch stops finishing at the same moment."
-  },
-  {
     "slug": "the-water-bath",
     "label": "The water bath",
     "recipeCount": 12,
@@ -1650,5 +1622,33 @@
       }
     ],
     "fault": "Too little moisture worked in, and no rest to let what there is reach the centre of the ground grain: it handles well while it is being mixed, then tightens as it stands, so the pieces come off the press with cracked scalloped rims, sit flat and pale on the heat and never lift, and go stiff within a minute of coming off, breaking along the crease instead of folding."
+  },
+  {
+    "slug": "pleating-dumplings",
+    "label": "Pleating dumplings",
+    "recipeCount": 7,
+    "marks": [
+      {
+        "id": "pleating-dumplings#seal",
+        "text": "The seam is closed along its whole length with no gap at either end of the pleat run: hold one up to the light and no filling shows through the join. A dumpling that opens in the water was sealed against a wet or floured rim."
+      },
+      {
+        "id": "pleating-dumplings#rim",
+        "text": "The rim is clean and dry where it meets itself. Filling smeared onto the sealing edge is the single most common cause of a burst, and it cannot be wiped off once the dough has taken it up."
+      },
+      {
+        "id": "pleating-dumplings#even",
+        "text": "The pleats are even in size and count across the batch, so every piece holds the same weight of filling and cooks in the same time. A tray that ranges from eight folds to eighteen will not finish together."
+      },
+      {
+        "id": "pleating-dumplings#centre",
+        "text": "The wrapper is thicker at the centre than at the rim, so the base carries the filling without tearing while the pleated edge stays fine enough to eat. A disc rolled evenly flat splits at the bottom."
+      },
+      {
+        "id": "pleating-dumplings#stands",
+        "text": "It stands up on its own base without slumping, and the pleats still read as pleats after cooking rather than having relaxed into a smooth seam."
+      }
+    ],
+    "fault": "The rim was wet, floured or smeared with filling, so the seal never took: the dumpling opens in the pot, the filling leaves, and what surfaces is a slack empty wrapper in cloudy water. Uneven pleat counts across a tray compound it, because the batch stops finishing at the same moment."
   }
 ]

@@ -12,17 +12,24 @@
  * searing anything is doing the same measurable thing whether the pan holds
  * duck or aubergine, and that is assessable once, for all of it.
  *
- * 114 of the 1710 remain unassessable and always will on this approach: 89
- * carry no technique tag at all, and the other 25 exercise only techniques too
+ * 116 of the 1710 remain unassessable and always will on this approach: 90
+ * carry no technique tag at all, and the other 26 exercise only techniques too
  * rare in this corpus to be worth a standard. That is the honest ceiling rather
  * than a backlog, and it is gated below with everything else: the first
  * version of this sentence said 146 and 35, which were reasoned rather than
  * measured and were both wrong.
  *
  * The 59 techniques written here are every technique the corpus uses on 12 or
- * more recipes. They put a standard on 1551 recipes that had none, taking the
- * assessable corpus from 45 to 1596 of 1710: for 59 pieces of writing rather
- * than 1551.
+ * more recipes. They put a standard on 1549 recipes that had none, taking the
+ * assessable corpus from 45 to 1594 of 1710: for 59 pieces of writing rather
+ * than 1549.
+ *
+ * Two moved on 1 Sep 2026, when a graded standard was taken off nine recipes it
+ * was aimed at wrongly: a cheesecake and a galette were being marked on
+ * dumpling sealing, and tempered chocolate on steaming, directly under its own
+ * instruction to keep steam off the bowl. Marquesitas and the chocolate had no
+ * other technique, so the corpus lost two assessable dishes and gained an
+ * honest silence in place of a wrong grade.
  *
  * These were 752 and 797 until the em dash sweep of 29 Aug 2026. Exactly one
  * recipe moved: kulfi, whose first ingredient read "1.5L whole milk - reduced

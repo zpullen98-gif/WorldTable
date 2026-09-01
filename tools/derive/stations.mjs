@@ -210,6 +210,7 @@ export const STATION_MAP = {
 	"Sushi rice & rolling": ["garde-manger"],  // Contested. Unanimous across lenses; I declined the garde-manger audit's own offer of an entremetier half: three recipes, all cold assembly, and the s
 	"Tadka: blooming spices in fat": ["saucier"],  // Unanimous. A finishing sauce poured at the pass.
 	"Tandoor breads": ["patissier", "rotisseur"],  // SPLIT per two audits: three of four recipes are meat in the clay oven (tandoori chicken, tikka masala, nihari) and only garlic-naan is dough. The fire
+	"Tempering chocolate": ["patissier"],  // New: the extracted table named it and its keys never matched, so it had no recipes and needed no station until now. Pastry without argument, and the custard entry above already notes that half its own definition is chocolate tempering.
 	"Tempering a custard": ["patissier"],  // Contested. Saucier audit struck it: 18 of 21 recipes are pastry, half the definition is chocolate tempering, and the saucier's real share of this skil
 	"The bare simmer: holding liquid below the boil": ["entremetier", "saucier"],  // SPLIT. The entremetier audit called its absence the worst hole on the board: it is the only technique in all 103 whose definition names the poaching 
 	"The broiler: heat from above": ["rotisseur"],  // Unanimous.
