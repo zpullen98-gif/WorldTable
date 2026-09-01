@@ -76,7 +76,13 @@ export const CHECKED_FLAGS = [
  * Flags diet.mjs derives that are NOT allergens and are correctly absent from
  * the screen. Kept named so the closure test can tell "not an allergen" from
  * "an allergen we forgot to display".
+ *
+ * `containsHoney` is derived for the VEGAN claim, which is a different question
+ * from allergy. Honey is not one of the fourteen, and adding it to the screened
+ * line would widen a regulated list with something that does not belong on it.
+ * This list is what stops that being mistaken for an oversight: the closure
+ * test fired the moment the flag existed, which is how it got here.
  */
-export const NOT_ALLERGENS = ['containsMeat', 'containsPork'] as const;
+export const NOT_ALLERGENS = ['containsMeat', 'containsPork', 'containsHoney'] as const;
 
 export const list = (xs: readonly string[]) => xs.join(', ');

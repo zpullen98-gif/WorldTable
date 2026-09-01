@@ -122,7 +122,15 @@ const DAIRY = [
 	'crema', 'crème fraîche', 'creme fraiche', 'ghee', 'condensed milk',
 	'evaporated milk', 'sour cream', 'clotted cream', 'queso', 'brie',
 	'camembert', 'gorgonzola', 'stilton', 'manchego', 'provolone', 'burrata',
-	'quark', 'skyr', 'kefir', 'custard', 'ice cream', 'double cream'
+	'quark', 'skyr', 'kefir', 'custard', 'ice cream', 'double cream',
+	/* Cheeses and cultured fats the table did not name, mostly outside western
+	   Europe. A whole 400g farmhouse munster and 150g of Roquefort both cleared
+	   dairy. 'niter kibbeh' is the spiced clarified butter under most of the
+	   Ethiopian chapter and accounts for nine; 'samna' is its Egyptian
+	   equivalent, 'smetana' Russian soured cream, 'kashk' Persian dried whey,
+	   'ayib' Ethiopian curd cheese. Seven of these also wore a Vegan badge. */
+	'roquefort', 'monterey jack', 'quesillo', 'munster', 'smetana',
+	'caciocavallo', 'primosale', 'kashk', 'niter kibbeh', 'samna', 'ayib'
 ];
 
 const EGG = ['egg', 'eggs', 'egg yolk', 'egg yolks', 'egg white', 'egg whites', 'mayonnaise', 'mayo', 'aioli', 'meringue', 'custard'];
@@ -140,7 +148,17 @@ const GLUTEN = [
 	'tortilla', 'pita', 'baguette', 'brioche', 'phyllo', 'filo', 'puff pastry',
 	'pastry', 'cracker', 'crackers', 'beer', 'udon', 'ramen', 'somen', 'lasagne',
 	'lasagna', 'gnocchi', 'dumpling wrappers', 'wonton', 'pierogi', 'roux',
-	'malt', 'rye', 'sourdough', 'croissant', 'biscuit', 'cake flour'
+	'malt', 'rye', 'sourdough', 'croissant', 'biscuit', 'cake flour',
+	/* Named breads and shapes the table never learned. Each one was the ONLY
+	   wheat word in its recipe, so the page rendered no Contains block at all
+	   and the screen line read as clearance. 'farina' is Italian 00 flour and
+	   accounts for seven on its own, all Emilia-Romagna pasta; 'savoiardi' is
+	   the 24 sponge fingers under a tiramisu that listed dairy, egg and alcohol
+	   and not the biscuit. 'digestive biscuit' is deliberately not bare
+	   'digestive', which matches Feijoada's "the orange is digestive strategy". */
+	'semola', 'grano duro', 'farina', 'macaroni', 'matzo', 'graham', 'bagel',
+	'pretzel', 'hoagie', 'bolillo', 'birote', 'mantou', 'savoiardi',
+	'kaiser roll', 'digestive biscuit'
 ];
 
 const NUTS = [
@@ -156,7 +174,17 @@ const ALCOHOL = [
 	'mezcal', 'sherry', 'port', 'marsala', 'vermouth', 'sake', 'mirin',
 	'liqueur', 'kirsch', 'amaretto', 'grand marnier', 'cointreau', 'champagne',
 	'prosecco', 'cachaça', 'cachaca', 'pisco', 'shaoxing', 'soju', 'calvados',
-	'bitters', 'campari', 'aperol', 'absinthe', 'schnapps', 'grappa'
+	'bitters', 'campari', 'aperol', 'absinthe', 'schnapps', 'grappa',
+	/* The table had 'wine' but no grape, no region and no regional spirit, so a
+	   dish poached in 750ml of Beaujolais with creme de cassis printed nothing.
+	   'awamori' is the Okinawan spirit in five dishes; 'vino seco' the Cuban
+	   cooking wine in four.
+
+	   'hard cider', never bare 'cider': about forty recipes use cider VINEGAR,
+	   which is not alcohol, and the boundary matcher cannot tell them apart. */
+	'burgundy', 'pinot noir', 'riesling', 'sylvaner', 'gamay', 'beaujolais',
+	'txakoli', 'oloroso', 'amontillado', 'awamori', 'vino seco', 'ouzo',
+	'pastis', 'armagnac', 'crème de cassis', 'guinness', 'hard cider'
 ];
 
 /**
@@ -207,6 +235,19 @@ const MOLLUSC = [
  * separates this from the five hazard rules that were measured and refused.
  */
 const LUPIN = ['lupin', 'lupini'];
+
+/**
+ * Honey is NOT an allergen, and is not on the screened list for that reason.
+ * It is here because it is the one animal product the vegan expression could
+ * not see: the word appeared nowhere in this file, so the gate written to catch
+ * a false Vegan badge could not fire on it, and six recipes wore the badge over
+ * their own ingredient line.
+ *
+ * Bare 'honey' only. 'honeycomb' was proposed and is refused: every occurrence
+ * in this corpus is honeycomb TRIPE, a morel's honeycomb, or Idli batter, and
+ * the right-hand word boundary already stops 'honey' reaching any of them.
+ */
+const HONEY = ['honey', 'bee pollen', 'royal jelly'];
 
 /**
  * Vegetarian-safe exceptions. These strings contain a flagged keyword as a
@@ -296,15 +337,43 @@ const RE = {
 	celery: makeMatcher(CELERY),
 	mustard: makeMatcher(MUSTARD),
 	mollusc: makeMatcher(MOLLUSC),
-	lupin: makeMatcher(LUPIN)
+	lupin: makeMatcher(LUPIN),
+	honey: makeMatcher(HONEY)
 };
 
 const EXCEPTION_RE = makeMatcher(EXCEPTIONS);
 
+/**
+ * A denial is not a declaration.
+ *
+ * The corpus states four of these emphatically, because in each case the
+ * absence IS the recipe, and the word-boundary matcher read every one of them
+ * as the ingredient being present:
+ *
+ *   "there is NO flour, and there never was"   Tarta de Santiago, shipped
+ *                                              containsGluten. It is a
+ *                                              flourless almond cake, and the
+ *                                              flag denied a coeliac the one
+ *                                              dessert in the chapter they
+ *                                              could safely eat.
+ *   "A mountain of parsley; NO CHEESE"         Linguine alle Vongole, dairy.
+ *   "NO honey in Turkish baklava"              Fistikli Baklava, honey.
+ *   "No cream, no garlic, no onion"            Carbonara, which contains
+ *                                              pecorino anyway, so the flag
+ *                                              was right for the wrong reason.
+ *
+ * Deliberately narrow: only these words, and only directly after a denial. A
+ * general rule would reach "no more than 2 tbsp butter", where the butter is
+ * real. Anything it does not cover keeps the old behaviour, which errs towards
+ * declaring, and that is the right direction to err in.
+ */
+const NEGATED =
+	/\b(?:no|without|never any)\s+(?:cream|cheese|milk|butter|flour|honey|eggs?|wine|nuts?)\b/giu;
+
 /** Blank out known-safe phrases before testing, so their substrings can't fire. */
 /** @param {string} text */
 function scrub(text) {
-	return text.replace(new RegExp(EXCEPTION_RE.source, 'giu'), ' ');
+	return text.replace(NEGATED, ' ').replace(new RegExp(EXCEPTION_RE.source, 'giu'), ' ');
 }
 
 /**
@@ -458,6 +527,9 @@ export function deriveDiet(r, _fullBlob) {
 	// because its exceptions ("coconut milk") are the point; egg's exception
 	// ("egg noodles") was hiding the allergen it names.
 	const containsEgg = anyRaw(RE.egg);
+	/* Every line, like the allergens: a honey glaze brushed on at the end is
+	   still honey, and the vegan claim has to answer for it. */
+	const containsHoney = anyLine(RE.honey);
 
 	/**
 	 * Derived, literal, safety-first: no animal product in any binding position.
@@ -503,7 +575,20 @@ export function deriveDiet(r, _fullBlob) {
 		 * already says so in its own field. It is not vegan, and a guest reading
 		 * a badge is not reading the ingredient list.
 		 */
-		vegan: vegetarianStrict && !vegetarianOption && !containsDairy && !containsEgg,
+		/**
+		 * Honey joins the refusal list on the same grounds as dairy and egg: the
+		 * badge is an assertion read by someone who is not going to read the
+		 * ingredients underneath it.
+		 *
+		 * Deliberately strict about the two lines that offer a way out, "powdered
+		 * sugar or honey" and "barley malt syrup (or honey)". This file's own
+		 * doctrine, three comments up, is that a dish with a stated alternative
+		 * is an OPTION and not the thing itself, and being wrong in this
+		 * direction costs a vegan a dish they could have eaten, while the other
+		 * direction costs them the thing they were avoiding.
+		 */
+		vegan:
+			vegetarianStrict && !vegetarianOption && !containsDairy && !containsEgg && !containsHoney,
 		vegetarianOption,
 		containsMeat,
 		containsPork: anyBinding(RE.pork),
@@ -523,6 +608,7 @@ export function deriveDiet(r, _fullBlob) {
 		containsMustard: anyRaw(RE.mustard),
 		containsMollusc: anyRaw(RE.mollusc),
 		containsLupin: anyRaw(RE.lupin),
+		containsHoney,
 		confidence: 'derived'
 	};
 }

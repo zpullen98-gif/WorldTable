@@ -841,6 +841,11 @@ if (judgement.length) {
 		if (d.containsShellfish) carries.push('shellfish');
 		if (d.containsDairy) carries.push('dairy');
 		if (d.containsEgg) carries.push('egg');
+		/* Honey is not an allergen, but it is an animal product, and this gate is
+		   about the Vegan badge rather than about allergy. It was invisible here
+		   until the word entered diet.mjs at all: six recipes wore the badge over
+		   their own honey. */
+		if (d.containsHoney) carries.push('honey');
 		if (d.vegetarianOption) carries.push('vegetarianOption');
 		if (carries.length) veganLies.push(`${r.n} [${slug}]: ${carries.join(', ')}`);
 	});

@@ -110,6 +110,8 @@ export interface DietFlags {
 	/** And molluscs from crustaceans. containsShellfish still covers both. */
 	containsMollusc: boolean;
 	containsLupin: boolean;
+	/** Not an allergen: derived for the vegan claim. See lib/allergens.ts. */
+	containsHoney: boolean;
 	/** 'derived' = keywords only; 'reviewed'/'override' = a human ruled on it. */
 	confidence: 'derived' | 'reviewed' | 'override';
 }
