@@ -212,17 +212,17 @@ describe('the judgedBy join', () => {
 });
 
 describe('what this bought, measured against the shipped data', () => {
-	it('takes the assessable corpus from 45 to 1594 of 1710', () => {
+	it('takes the assessable corpus from 45 to 1721 of 1844', () => {
 		const dish = detail.filter((r) => r.standard).length;
 		const byTechnique = detail.filter((r) => r.judgedBy).length;
 		expect(dish).toBe(45);
-		expect(byTechnique).toBe(1549);
-		expect(dish + byTechnique).toBe(1594);
-		expect(detail.length).toBe(1710);
+		expect(byTechnique).toBe(1676);
+		expect(dish + byTechnique).toBe(1721);
+		expect(detail.length).toBe(1844);
 	});
 
 	it('does it with 59 pieces of writing', () => {
-		expect(shipped.length).toBe(59);
+		expect(shipped.length).toBe(60);
 	});
 
 	/**
@@ -235,10 +235,10 @@ describe('what this bought, measured against the shipped data', () => {
 	 * exercise only techniques too rare in this corpus to be worth a standard —
 	 * and below 12 the ladder effectively ends, per the module header.
 	 */
-	it('leaves 116 dishes with no standard of any kind', () => {
+	it('leaves 123 dishes with no standard of any kind', () => {
 		const none = detail.filter((r) => !r.standard && !r.judgedBy);
-		expect(none.length).toBe(116);
-		expect(none.filter((r) => !r.techniques?.length).length).toBe(90);
-		expect(none.filter((r) => r.techniques?.length).length).toBe(26);
+		expect(none.length).toBe(123);
+		expect(none.filter((r) => !r.techniques?.length).length).toBe(100);
+		expect(none.filter((r) => r.techniques?.length).length).toBe(23);
 	});
 });

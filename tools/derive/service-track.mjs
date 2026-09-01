@@ -490,12 +490,22 @@ export const SERVER_MODULES = [
  * across all 479 definitions, exactly two mention allergens and only one states
  * a rule, so there is nothing here to build one out of.
  */
-function assertNoVerdict(obj, recipeSlugs, problems) {
+function assertNoVerdict(obj, recipeSlugs, problems, lexiconSlugs = new Set()) {
 	const BANNED = new Set(['allergens', 'contains', 'clear', 'safe', 'screened', 'recipes']);
 	/** @type {(node: unknown, path: string) => void} */
 	const walk = (node, path) => {
 		if (typeof node === 'string') {
-			if (recipeSlugs.has(node)) {
+			/* A string that is ALSO a Lexicon term is a term, whatever else it
+			   happens to name. The corpus gained a Lomo Embuchado and a Pate en
+			   Croute in September 2026, and the charcuterie module had carried
+			   both as termSlugs for far longer: the collision is a coincidence
+			   of naming, not a verdict about a dish.
+
+			   The teeth are intact. A recipe slug that is not a Lexicon term
+			   still fires, which is the case this was written for: somebody
+			   pasting a dish into the track so the server can tell a guest it is
+			   safe to eat. */
+			if (recipeSlugs.has(node) && !lexiconSlugs.has(node)) {
 				problems.push(`service-track: ${path} names the recipe "${node}": this track is about terms`);
 			}
 			return;
@@ -619,7 +629,7 @@ export function buildServiceTrack(lexicon, cellar, recipeSlugList = []) {
 		untaught: CELLAR_UNTAUGHT
 	};
 
-	assertNoVerdict(serviceTrack, new Set(recipeSlugList), problems);
+	assertNoVerdict(serviceTrack, new Set(recipeSlugList), problems, new Set(bySlug.keys()));
 
 	return { serviceTrack, problems };
 }

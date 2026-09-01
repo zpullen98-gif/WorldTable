@@ -297,6 +297,11 @@ const EXCEPTIONS = [
 	// "goat cheese" is not goat. Neither is head cheese, but that one IS meat,
 	// so it stays out of this list.
 	'goat cheese', 'goats cheese', "goat's cheese", 'goat curd',
+	// Same shape, found when the corpus gained a Mexican cajeta and a Filipino
+	// bibingka: the milk of an animal and the egg of a bird are not its meat,
+	// and both recipes are vegetarian. The build caught them, which is what the
+	// vegetarian gate is for.
+	"goat's milk", 'goats milk', 'goat milk', 'duck egg', 'duck eggs',
 	// egg-shaped, not egg
 	'eggplant', 'eggplants', 'egg noodles'
 ];

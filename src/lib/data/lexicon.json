@@ -282,7 +282,7 @@
     "recipes": [
       "confit-duck-leg",
       "garbure-bearnaise",
-      "gesiers-de-canard-confits"
+      "cassoulet-de-toulouse"
     ]
   },
   {
@@ -632,8 +632,8 @@
     "definition": "Dry ambient heat in an enclosed oven: 'roasting' for meats and vegetables, 'baking' for doughs, the physics identical. The professional's three levers: TEMPERATURE STRATEGY (high-then-low for a crusted roast, low-then-blast 'reverse sear' for even doneness plus crust), AIRFLOW (convection browns faster and dries surfaces: drop 15°C from conventional recipes), and CARRYOVER: internal temperature climbs 3–8°C after removal as the exterior's heat equalizes inward. Pull the roast BEFORE target and rest it: resting redistributes juices and finishes the cook. Cutting early spills what patience would have kept.",
     "recipes": [
       "dry-brined-roast-turkey-with-real-gravy",
-      "beef-and-broccoli",
-      "garlic-naan-stovetop"
+      "japanese-cotton-cheesecake",
+      "beef-and-broccoli"
     ]
   },
   {
@@ -858,8 +858,8 @@
     "definition": "The French system exists because even cuts cook evenly and plate professionally. The ladder: BRUNOISE (3mm dice) and its baby FINE BRUNOISE (1.5mm); JULIENNE (matchsticks 3mm × 5cm) and BATONNET (6mm × 6cm, the fry); small/medium/large DICE (6/12/20mm); PAYSANNE (thin tiles); CHIFFONADE (herbs and leaves rolled and sliced into ribbons); TOURNÉ (the seven-sided football that has hazed culinary students for a century). MINCE is fineness without geometry; SUPREME is the citrus segment freed from all membrane. Speed comes later; uniformity is the exam, and the claw grip is the tuition.",
     "recipes": [
       "new-york-cheesecake",
-      "tabbouleh",
-      "scones-with-jam-and-clotted-cream"
+      "kuih-talam-pandan",
+      "tabbouleh"
     ]
   },
   {
@@ -983,7 +983,7 @@
     "recipes": [
       "tejate",
       "trdelnik",
-      "oyakodon"
+      "torta-rogel"
     ]
   },
   {
@@ -1718,6 +1718,7 @@
     "category": "Charcuterie Atlas",
     "definition": "Spain's cured pork loin is the whole eye muscle rubbed with pimentón and garlic, cased, and air-dried into a lean, rosy cylinder: clean-slicing, delicately smoky-sweet, the tidiest meat on the Spanish board. Lomo ibérico de bellota is its luxury edition, marbled where standard lomo is lean. Because it is a single whole muscle (no grind, no fat mosaic), it is also the beginner charcutier's classic first project: salt, spice, casing, patience, and a muscle that forgives. On the board it plays counterpoint: where chorizo shouts and jamón seduces, lomo simply states.",
     "recipes": [
+      "lomo-embuchado",
       "lomo-saltado"
     ]
   },
@@ -1786,9 +1787,9 @@
     "category": "Charcuterie Atlas",
     "definition": "Charcuterie's cathedral: seasoned forcemeats and marinated garnishes (pistachio, foie, game) baked inside a decorated pastry case, the gap between meat and crust filled after baking with aspic poured through chimney vents: served in slices that read like stained glass. Once grandmother food, now the subject of a literal World Championship in Lyon and the ultimate flex of the modern charcuterie renaissance. For the aspiring master it is the final exam in one dish: butchery, seasoning, pastry, aspic clarity, and patience, all judged in a single cross-section. When it appears on a menu, order it; someone in that kitchen is serious.",
     "recipes": [
+      "pate-en-croute",
       "banh-mi",
-      "banh-mi-op-la",
-      "profiteroles-pate-a-choux-master"
+      "banh-mi-op-la"
     ]
   },
   {
@@ -1943,9 +1944,9 @@
     "category": "Charcuterie Atlas",
     "definition": "CURE #1 (pink salt, 6.25% sodium nitrite): for short cures and anything smoked or cooked: bacon, pastrami, sausages; nitrite blocks Clostridium botulinum, fixes the rosy color, and builds 'cured' flavor. CURE #2 (nitrite + nitrate): for long dry cures; the nitrate is a time-release reservoir that bacteria slowly convert to nitrite over months of salami and ham aging. Both are dyed pink to prevent tragic salt mix-ups and used in grams per kilo, weighed on a scale, never eyeballed. 'Uncured' supermarket bacon uses celery-powder nitrate, the same chemistry wearing a garden costume. Respect the numbers and this is settled, safe science; wing it and it is the one place in cooking where confidence can genuinely hurt someone.",
     "recipes": [
+      "po-gesek",
       "grilled-veal-sweetbreads",
-      "terrine-de-campagne",
-      "chicken-liver-parfait-butter-emulsion-method"
+      "terrine-de-campagne"
     ]
   },
   {
@@ -1955,8 +1956,8 @@
     "definition": "CASINGS: natural (hog, sheep, beef middles; the snap and the breathability tradition prefers), collagen (uniform, beginner-friendly), and inedible synthetics for large formats. The WHITE MOLD on good salami (Penicillium nalgiovense, applied on purpose) is a bodyguard: it shields against bad molds, moderates drying, and adds a mushroomy finish (green or black fuzz is the enemy; wipe with vinegar or discard). The CHAMBER is the craft's climate: ~12–15°C and 70–80% humidity with gentle air: a wine fridge with a humidity controller is the modern apprentice's cave. CASE HARDENING, a dried shell trapping a wet center, is the classic failure; humidity, not speed, prevents it. Weight loss (30–40% for most salami) is the honest doneness test, so weigh at hanging and write the date on everything.",
     "recipes": [
       "texas-smoked-sausage",
-      "leche-flan",
-      "lomi-lomi-salmon"
+      "lomo-embuchado",
+      "leche-flan"
     ]
   },
   {
@@ -2620,8 +2621,8 @@
     "definition": "Perfume as ingredient: the line between enchanting and soapy is dosage, and these three live on it. ROSE (water and dried petals): Persian love-language (faloodeh, Turkish delight, ras el hanout's petals, gulab jamun's syrup (the dessert wing)) add drops, taste, repeat; brands vary wildly in strength. ORANGE BLOSSOM WATER: the Levant and Morocco's counterpart (baklava syrups, pan de muerto's defining scent (the holiday wing), Ramos gin fizz), same drop-discipline. MAHLEB: ground sour-cherry pits, almond-rose-bitter: the secret of Greek tsoureki, Armenian choreg, and Nabulsi cheese's perfume; buy whole, grind to order, use within months (it goes rancid quietly). The floral rule: these season the AROMA layer, arrive at the end or in syrups, and a heavy hand converts dessert into potpourri; measured, they are the difference between sweet and unforgettable.",
     "recipes": [
       "halawet-el-jibn",
-      "orange-and-cinnamon-salad",
-      "kare-kare"
+      "qatayef-asafiri",
+      "maamoul"
     ]
   },
   {
@@ -3139,8 +3140,8 @@
     "definition": "The countertop's power take-off. The three heads: PADDLE (creaming butter-sugar, the cake wing's aeration engine; cookie doughs; shredding cooked chicken in seconds), WHISK (meringues, whipped cream, sponge ribbons, the foam entries made effortless), DOUGH HOOK (kneading's outsource: enriched doughs and bagels' stiff fight, though slack high-hydration breads still prefer the fold-by-hand method per the bread wing). Bowl-lift vs. tilt-head is capacity politics; 300+ watts and full metal gears are the durability line. The HUB is the quiet value: pasta rollers (fresh tagliatelle's sheets, per the noodle wing, without the hand-crank clamp wars), the meat grinder (house burgers, sausage, the charcuterie wing's fresh-sausage gateway), and vegetable shredders. Restaurant translation: the 20-quart Hobart is the same machine with a payroll; learn the home unit's heads and the pro floor model holds no mysteries.",
     "recipes": [
       "fufu",
-      "muffuletta",
-      "ca-kho-to-caramel-fish"
+      "vispipuuro",
+      "muffuletta"
     ]
   },
   {
@@ -3386,7 +3387,7 @@
     "recipes": [
       "char-siu-pork",
       "siu-yuk-crackling-roast-pork-belly",
-      "quiche-lorraine"
+      "trinidadian-black-cake"
     ]
   },
   {
@@ -3748,7 +3749,9 @@
     "term": "The Lease: NNN, CAM & Percentage Rent",
     "category": "Restaurant Finance & Opening",
     "definition": "The contract that outlives most restaurants: learn its dialect. TRIPLE NET (NNN): you pay base rent PLUS property taxes, insurance, and CAM (common area maintenance): the quoted '$40/sq ft' is not the number; ask for the fully-loaded occupancy cost and its history of increases. PERCENTAGE RENT: base plus a % of sales above a 'natural breakpoint', common in malls; model it against your projections. TERM STRUCTURE: 5–10 years with options (options belong to YOU: a 5-year lease with two 5-year options is ownership-like security with tenant-like flexibility); rent escalations (fixed 2–3% beats CPI in inflationary years); EXCLUSIVITY clauses (the landlord can't lease to a competing concept); assignment rights (can you sell the restaurant with the lease attached? Your exit depends on it). The stance: everything is negotiable in a soft market, nothing after signing; the lease is the silent partner who never works a shift and always gets paid first.",
-    "recipes": []
+    "recipes": [
+      "lomo-embuchado"
+    ]
   },
   {
     "slug": "ti-allowance-and-lease-negotiation",
@@ -4519,8 +4522,8 @@
     "definition": "The legume spring: garden peas, sugar snaps, snow peas, and fava (broad) beans all peak in the cool window (April–June north) before summer heat turns their sugars starchy, and pea sugar converts within HOURS of picking, the fact that built the frozen-pea industry's honest case (frozen-at-field often beats 'fresh' that traveled). The map: the French petit pois doctrine (tiny, buttered, à la française with lettuce), Italy's vignarola (the Roman spring stew of peas, favas, and artichokes in one pot, the season's own recipe), England's mushy-pea inheritance, Spain's habitas con jamón, the Middle East's ful medames running on dried favas year-round (one bean, two pantries, like the mango's green double life). Fava labor is the price of entry: pod, blanch, peel, twice-shelled, worth it. Shoots and tendrils are the bonus crop (the stir-fry wing's dou miao). The kitchen law: spring legumes want minutes of heat and mint or lemon, not stewing, except where the vignarola knows better.",
     "recipes": [
       "songshu-guiyu",
-      "jerk-chicken",
-      "rice-and-peas"
+      "kuzu-kapama",
+      "jerk-chicken"
     ]
   },
   {
@@ -4605,8 +4608,8 @@
     "definition": "The onion family seems seasonless because it is CURED: bulb onions and garlic are summer harvests (July–August north) dried down for storage, which is why the pantry never runs out and why 'fresh' alliums are the actual seasonal event. The spring exceptions are the Larder's opening act: ramps/wild garlic carpeting eastern-American and European woods (April, the foraging festival with sustainability manners: take leaves, spare bulbs), green garlic (immature, mild, the whole stalk usable), spring onions and calçots (Catalonia's charred-onion festival with romesco, January–April: an entire cuisine built on one allium's window), and chive blossoms. The cured-world map: sweet onion appellations (Vidalia, Walla Walla, Cévennes), pink Roscoff braids, garlic's own harvest festivals and the green-shoot rule for winter cloves (germ out when sprouted). Autumn plants next year's garlic; summer braids this year's: the allium year is a circle, and the kitchen mostly meets it mid-cure.",
     "recipes": [
       "kokoda",
-      "jerk-chicken",
-      "empanadas-saltenas"
+      "zhangcha-ya",
+      "jerk-chicken"
     ]
   },
   {

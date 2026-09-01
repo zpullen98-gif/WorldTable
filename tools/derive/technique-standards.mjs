@@ -12,17 +12,23 @@
  * searing anything is doing the same measurable thing whether the pan holds
  * duck or aubergine, and that is assessable once, for all of it.
  *
- * 116 of the 1710 remain unassessable and always will on this approach: 90
- * carry no technique tag at all, and the other 26 exercise only techniques too
+ * 123 of the 1844 remain unassessable and always will on this approach: 100
+ * carry no technique tag at all, and the other 23 exercise only techniques too
  * rare in this corpus to be worth a standard. That is the honest ceiling rather
  * than a backlog, and it is gated below with everything else: the first
  * version of this sentence said 146 and 35, which were reasoned rather than
  * measured and were both wrong.
  *
- * The 59 techniques written here are every technique the corpus uses on 12 or
- * more recipes. They put a standard on 1549 recipes that had none, taking the
- * assessable corpus from 45 to 1594 of 1710: for 59 pieces of writing rather
- * than 1549.
+ * The 60 techniques written here are every technique the corpus uses on 12 or
+ * more recipes. They put a standard on 1676 recipes that had none, taking the
+ * assessable corpus from 45 to 1721 of 1844: for 60 pieces of writing rather
+ * than 1676.
+ *
+ * The sixtieth is low and slow smoking, and it arrived by the gate rather than
+ * by choice: 134 meat and dessert recipes on 1 Sep 2026 pushed that technique
+ * from 11 recipes to 12, and the threshold rule then demanded a standard for
+ * it. That is the rule working. A skill the corpus leans on is a skill a cook
+ * should be able to check themselves against.
  *
  * Two moved on 1 Sep 2026, when a graded standard was taken off nine recipes it
  * was aimed at wrongly: a cheesecake and a galette were being marked on
@@ -256,6 +262,18 @@ export const TECHNIQUE_STANDARDS = [
 		],
 		fault: 'Too much went in at once, the pan cooled, and the food released its water: what was meant to brown in three minutes stews for ten and comes out grey, slack and wet.'
 	},
+	{
+		slug: 'low-and-slow-smoking',
+		marks: [
+			{ id: 'low-and-slow-smoking#thin', text: 'The smoke coming off is thin and blue, not white and rolling. White smoke is unburnt fuel and it deposits soot and acrid phenols; a fire drawing enough air to burn its own smoke is what perfumes rather than tars.' },
+			{ id: 'low-and-slow-smoking#steady', text: 'The chamber held its temperature within a narrow band for the whole cook, adjusted with the air intake rather than by adding fuel in armfuls. A pit swinging fifty degrees cooks the outside twice and the middle once.' },
+			{ id: 'low-and-slow-smoking#stall', text: 'The stall was expected and waited out or wrapped through deliberately, not chased with heat. A brisket that sits at 70C (158F) for three hours is losing exactly as much water as it needs to; the cook who turns the fire up renders it dry.' },
+			{ id: 'low-and-slow-smoking#probe', text: 'Doneness was judged by feel and by probe, never by the clock: the probe slides in with no resistance anywhere, and the number that matters is the one where the collagen has gone, not a time per kilo.' },
+			{ id: 'low-and-slow-smoking#rest', text: 'It rested long and warm, an hour or more, wrapped and out of any draught. Cut straight off the pit and the juice runs onto the board instead of staying in the slice.' }
+		],
+		fault: 'The fire was fed for temperature rather than for combustion, so it smouldered: white smoke, a bitter deposit on the surface, and a swing in the chamber every time more fuel went on. Then the stall was read as a stall in progress rather than evaporation doing its work, the heat went up, and the meat finished dry with a hard grey band under the bark.'
+	},
+
 	{
 		slug: 'grilling-over-live-coals',
 		marks: [

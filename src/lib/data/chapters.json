@@ -45,7 +45,7 @@
     "kind": "world",
     "group": "Oceania",
     "subgroup": "Aotearoa New Zealand",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Argentine",
@@ -53,7 +53,7 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "Argentina",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Arizona",
@@ -85,7 +85,7 @@
     "kind": "world",
     "group": "Oceania",
     "subgroup": "Australia",
-    "count": 10
+    "count": 13
   },
   {
     "name": "Austrian",
@@ -93,7 +93,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Austria",
-    "count": 10
+    "count": 13
   },
   {
     "name": "Baltic",
@@ -112,6 +112,14 @@
     "count": 10
   },
   {
+    "name": "Belgian",
+    "slug": "belgian",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "Belgium",
+    "count": 1
+  },
+  {
     "name": "Bengali",
     "slug": "bengali",
     "kind": "world",
@@ -125,7 +133,7 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "Brazil",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Bread Atlas",
@@ -149,7 +157,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Britain",
-    "count": 10
+    "count": 14
   },
   {
     "name": "Burmese",
@@ -189,7 +197,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "China",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Caribbean",
@@ -197,7 +205,7 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "The Caribbean",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Catalonia",
@@ -213,7 +221,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "The Caucasus & Central Asia",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Chilean",
@@ -221,7 +229,7 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "Chile",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Chinese",
@@ -229,7 +237,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "China",
-    "count": 10
+    "count": 13
   },
   {
     "name": "Colombian",
@@ -237,7 +245,7 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "Colombia",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Colorado",
@@ -277,7 +285,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Denmark",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Delaware",
@@ -301,7 +309,7 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "The Dominican Republic",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Dumpling Atlas",
@@ -317,7 +325,7 @@
     "kind": "world",
     "group": "Africa",
     "subgroup": "East Africa",
-    "count": 10
+    "count": 13
   },
   {
     "name": "Eastern European",
@@ -325,7 +333,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Central & Eastern Europe",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Egyptian",
@@ -333,7 +341,7 @@
     "kind": "world",
     "group": "Africa",
     "subgroup": "Egypt",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Emilia-Romagna",
@@ -357,7 +365,7 @@
     "kind": "world",
     "group": "Africa",
     "subgroup": "Ethiopia",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Fermentation Atlas",
@@ -373,7 +381,15 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "The Philippines",
-    "count": 10
+    "count": 11
+  },
+  {
+    "name": "Finnish",
+    "slug": "finnish",
+    "kind": "world",
+    "group": "Europe",
+    "subgroup": "Finland",
+    "count": 1
   },
   {
     "name": "Florida",
@@ -389,7 +405,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "France",
-    "count": 10
+    "count": 24
   },
   {
     "name": "Garde Manger",
@@ -421,7 +437,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Germany",
-    "count": 10
+    "count": 14
   },
   {
     "name": "Ghanaian",
@@ -437,7 +453,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Greece",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Grill & BBQ Atlas",
@@ -469,7 +485,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Hungary",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Idaho",
@@ -493,7 +509,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "India",
-    "count": 10
+    "count": 15
   },
   {
     "name": "Indiana",
@@ -541,7 +557,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Italy",
-    "count": 10
+    "count": 20
   },
   {
     "name": "Jamaican",
@@ -549,7 +565,7 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "Jamaica",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Japanese",
@@ -557,7 +573,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "Japan",
-    "count": 10
+    "count": 13
   },
   {
     "name": "Jiangnan",
@@ -605,7 +621,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "Korea",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Kyoto & Kaiseki",
@@ -621,7 +637,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "The Levant & the Gulf",
-    "count": 10
+    "count": 14
   },
   {
     "name": "Lunch Atlas",
@@ -653,7 +669,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "Malaysia",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Maryland",
@@ -677,7 +693,7 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "Mexico",
-    "count": 10
+    "count": 15
   },
   {
     "name": "Michigan",
@@ -693,7 +709,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "The Levant & the Gulf",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Minnesota",
@@ -733,7 +749,7 @@
     "kind": "world",
     "group": "Africa",
     "subgroup": "Morocco",
-    "count": 10
+    "count": 14
   },
   {
     "name": "Nebraska",
@@ -797,7 +813,7 @@
     "kind": "world",
     "group": "Africa",
     "subgroup": "Nigeria",
-    "count": 10
+    "count": 13
   },
   {
     "name": "Noodle Atlas",
@@ -829,7 +845,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "China",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Norwegian & Icelandic",
@@ -837,7 +853,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Norway & Iceland",
-    "count": 10
+    "count": 13
   },
   {
     "name": "Oaxacan",
@@ -901,7 +917,7 @@
     "kind": "world",
     "group": "Oceania",
     "subgroup": "The Pacific Islands",
-    "count": 10
+    "count": 14
   },
   {
     "name": "Pasta & Fresh Dough",
@@ -933,7 +949,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "Iran",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Peruvian",
@@ -941,7 +957,7 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "Peru",
-    "count": 10
+    "count": 13
   },
   {
     "name": "Peruvian Highlands",
@@ -965,7 +981,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Poland",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Portuguese",
@@ -973,7 +989,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Portugal",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Provence & the Midi",
@@ -1013,7 +1029,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Romania & Bulgaria",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Russian & Ukrainian",
@@ -1021,7 +1037,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Russia & Ukraine",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Scandinavian",
@@ -1053,7 +1069,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "China",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Sicilian",
@@ -1077,7 +1093,7 @@
     "kind": "world",
     "group": "Africa",
     "subgroup": "South Africa",
-    "count": 10
+    "count": 13
   },
   {
     "name": "South American",
@@ -1109,7 +1125,7 @@
     "kind": "world",
     "group": "Europe",
     "subgroup": "Spain",
-    "count": 10
+    "count": 13
   },
   {
     "name": "Sri Lankan",
@@ -1117,7 +1133,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "Sri Lanka",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Stock & Fond Atlas",
@@ -1173,7 +1189,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "Thailand",
-    "count": 10
+    "count": 11
   },
   {
     "name": "The Bakery",
@@ -1229,7 +1245,7 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "Trinidad & Tobago",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Turkish",
@@ -1237,7 +1253,15 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "Turkey",
-    "count": 10
+    "count": 11
+  },
+  {
+    "name": "Uruguayan",
+    "slug": "uruguayan",
+    "kind": "world",
+    "group": "The Americas",
+    "subgroup": "Uruguay",
+    "count": 1
   },
   {
     "name": "Utah",
@@ -1261,7 +1285,7 @@
     "kind": "world",
     "group": "The Americas",
     "subgroup": "Venezuela",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Vermont",
@@ -1277,7 +1301,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "Vietnam",
-    "count": 10
+    "count": 12
   },
   {
     "name": "Virginia",
@@ -1333,7 +1357,7 @@
     "kind": "world",
     "group": "Asia",
     "subgroup": "Yemen & the Gulf",
-    "count": 10
+    "count": 11
   },
   {
     "name": "Yucatecan",
