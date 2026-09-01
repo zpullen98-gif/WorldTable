@@ -167,6 +167,76 @@ select option {
 	top: 12px;
 }
 
+/**
+ * The chip: the app's one small control, and until now not defined anywhere
+ * that all of it could see.
+ *
+ * Nine components style their own. Thirteen more USE the class and style
+ * nothing, across 49 markup sites and, once the 27 prerendered service topics
+ * are counted, most of a hundred pages: /service/drill, /menu/preps,
+ * /menu/costing, /menu/waste, /menu/prep-board, /practise/calibrate,
+ * /practise/firing, the error page, the home bands. Those rendered raw
+ * operating-system buttons and plain underlined links in the middle of a
+ * hand-set page.
+ *
+ * It was also the app's one real contrast failure. An unstyled button keeps the
+ * user agent's background, which in a dark browser is #6b6b6b, and the global
+ * `button { color: inherit }` puts #eae2ce text on it: 4.12:1, under the 4.5:1
+ * floor. Setting a background is what fixes that, not touching the text.
+ *
+ * WHERE THESE VALUES COME FROM. Ten local `.chip` blocks exist and five are
+ * character-identical; that majority is the base below. `:hover` is unanimous
+ * across all four that define it. `:disabled` is two-to-one for 0.45.
+ *
+ * `.chip.on` is the one that was NOT obvious: four different active styles are
+ * in use across the app. The turmeric outline is chosen because it is what
+ * menu and CookMode use, and because it marks state without changing the box,
+ * so a row of chips does not reflow when one is selected. /menu/prep-board is
+ * the page that needed it: its 1/2/3/4 selector already sets aria-pressed, so
+ * a screen reader could always tell which was chosen and only a sighted reader
+ * could not.
+ *
+ * Scoped styles beat this. Svelte compiles a component's own `.chip` with a
+ * higher specificity, so every page that already looks right is untouched, and
+ * the deliberately different sizes in CookMode, RecipeDetailView and pantry
+ * keep theirs. Nothing here is a redesign; it is the floor.
+ *
+ * Deliberately NOT here: `select.chip { appearance: none }`, which menu and
+ * Toolbar both set. They also draw their own arrow. Stripping the native arrow
+ * globally without replacing it would leave a dropdown that does not look like
+ * one, which is worse than the plain control it replaces.
+ */
+.chip {
+	border: 1px solid var(--line);
+	background: var(--card);
+	padding: 8px 14px;
+	border-radius: var(--radius);
+	cursor: pointer;
+	font-size: 14px;
+}
+.chip:hover:not(:disabled) {
+	border-color: var(--turmeric);
+}
+a.chip {
+	text-decoration: none;
+	color: var(--ink);
+	display: inline-flex;
+	align-items: center;
+}
+.chip.on {
+	border-color: var(--turmeric-deep);
+	color: var(--turmeric-deep);
+}
+.chip.go {
+	background: var(--accent-solid);
+	border-color: var(--accent-solid);
+	color: var(--on-accent);
+}
+.chip:disabled {
+	opacity: 0.45;
+	cursor: default;
+}
+
 .shell {
 	max-width: 1200px;
 	margin: 0 auto;

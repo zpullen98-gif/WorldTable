@@ -36,44 +36,45 @@ const VIEWS = [
 	{ path: '/service/srv-room', name: 'service track module' },
 	{ path: '/service/drill', name: 'service drill' },
 	{ path: '/family', name: 'family chapter' },
-	{ path: '/menu', name: 'menu worksheet' }
+	{ path: '/menu', name: 'menu worksheet' },
+	/* Added with the global .chip rule: these three used the class and defined
+	   no style, so they rendered raw operating-system controls and carried the
+	   contrast failure. They are in the sweep now so that cannot come back. */
+	{ path: '/menu/preps', name: 'prep list' },
+	{ path: '/menu/costing', name: 'costing sheet' },
+	{ path: '/practise/calibrate', name: 'calibration' }
 ];
 
-for (const view of VIEWS) {
-	test(`axe: ${view.name} has no serious violations`, async ({ page }) => {
-		// axe walks every node — on the 970-card grid that is legitimately slow,
-		// slower still with the whole suite hammering one static server.
-		test.setTimeout(120_000);
-		await goto(page, view.path);
+/* Both services. The app follows prefers-color-scheme, so emulating it is
+   enough to swap the whole palette. */
+const SERVICES = [
+	{ scheme: 'light', name: 'day' },
+	{ scheme: 'dark', name: 'night' }
+] as const;
 
-		const results = await new AxeBuilder({ page })
-			.withTags(['wcag2a', 'wcag2aa'])
-			.options({ resultTypes: ['violations'] })
-			.analyze();
+for (const { scheme, name: service } of SERVICES) {
+	for (const view of VIEWS) {
+		test(`axe: ${view.name} has no serious violations in ${service} service`, async ({ page }) => {
+			// axe walks every node — on the 1710-card grid that is legitimately
+			// slow, slower still with the whole suite hammering one static server.
+			test.setTimeout(120_000);
+			await page.emulateMedia({ colorScheme: scheme });
+			await goto(page, view.path);
 
-		const serious = results.violations.filter(
-			(v) => v.impact === 'serious' || v.impact === 'critical'
-		);
-		expect(
-			serious.map((v) => `${v.id}: ${v.help} (${v.nodes.length} nodes)`)
-		).toEqual([]);
-	});
+			const results = await new AxeBuilder({ page })
+				.withTags(['wcag2a', 'wcag2aa'])
+				.options({ resultTypes: ['violations'] })
+				.analyze();
+
+			const serious = results.violations.filter(
+				(v) => v.impact === 'serious' || v.impact === 'critical'
+			);
+			expect(
+				serious.map((v) => `${v.id}: ${v.help} (${v.nodes.length} nodes)`)
+			).toEqual([]);
+		});
+	}
 }
-
-test('axe: day service holds the same bar', async ({ page }) => {
-	// Day is the likelier contrast failure — light paper, gold accents.
-	await page.emulateMedia({ colorScheme: 'light' });
-	await goto(page, '/recipe/cacio-e-pepe');
-
-	const results = await new AxeBuilder({ page })
-		.withTags(['wcag2a', 'wcag2aa'])
-		.options({ resultTypes: ['violations'] })
-		.analyze();
-	const serious = results.violations.filter(
-		(v) => v.impact === 'serious' || v.impact === 'critical'
-	);
-	expect(serious.map((v) => `${v.id}: ${v.help} (${v.nodes.length} nodes)`)).toEqual([]);
-});
 
 test('cook mode is reachable and escapable by keyboard alone', async ({ page }) => {
 	await goto(page, '/recipe/cacio-e-pepe');
