@@ -319,7 +319,10 @@ const linkBlobs = R.map((r) => `${r.n} ${r.c} ${r.i.join(' ')} ${r.m.join(' ')}`
 
 /** Name + ingredients only: the original's RTEXT. What the dish CONTAINS. */
 const narrowBlobs = R.map((r) => narrowBlob(r));
-const crosslinks = buildCrosslinks(R, recipeSlugs, D, lexSlugs, linkBlobs);
+// OVERRIDES.lexicon is the hand-ruling door for word-sense collisions the
+// scorer cannot see, the same doctrine as ov.techniques. Dead rows come back
+// as problems and fail the build below.
+const crosslinks = buildCrosslinks(R, recipeSlugs, D, lexSlugs, linkBlobs, OVERRIDES.lexicon ?? {});
 
 /**
  * Techniques score off linkBlobs, the same note-free text as cross-links, for
@@ -1011,7 +1014,16 @@ for (const [, slugs] of crosslinks.termToRecipes) {
 	}
 }
 const worst = [...linkChapter.entries()].sort((a, b) => b[1] - a[1])[0];
-if (worst && linkTotal > 0) {
+/*
+ * The zero-skip is fixed: this block used to be wrapped in
+ * `if (worst && linkTotal > 0)`, so a build that produced NO links at all
+ * skipped the concentration gate AND its console line and passed. Zero links
+ * is now its own failure, and the minimums below catch the subtler version -
+ * a filter change that quietly deletes half the table.
+ */
+if (linkTotal === 0) {
+	problems.push('cross-links: the build produced zero links, which no rule change should');
+} else {
 	const share = worst[1] / linkTotal;
 	if (share > 0.08) {
 		problems.push(
@@ -1020,8 +1032,42 @@ if (worst && linkTotal > 0) {
 		);
 	}
 	console.log(
-		`\n  cross-links: ${linkTotal} total, top chapter ${worst[0]} at ${((worst[1] / linkTotal) * 100).toFixed(1)}%`
+		`
+  cross-links: ${linkTotal} total, top chapter ${worst[0]} at ${((worst[1] / linkTotal) * 100).toFixed(1)}%`
 	);
+}
+
+/*
+ * The justification floor, as a GATE (item 20's lesson: console lines are not
+ * gates). Every emitted link must sit in the justified set the builder computed
+ * from raw scoring, so a wiring bug in the pick path cannot ship a coincidence.
+ * The unit fixture in src/lib/crosslinks.test.ts holds the other end: the
+ * hand-read bad pairs must never reappear in the shipped JSON.
+ */
+{
+	const unjustified = [];
+	for (const [termSlug, slugs] of crosslinks.termToRecipes)
+		for (const s of slugs)
+			if (!crosslinks.justified.has(termSlug + '|' + s)) unjustified.push(`${termSlug} -> ${s}`);
+	if (unjustified.length) {
+		problems.push(
+			`cross-links shipping without justification (${unjustified.length}): ` +
+				unjustified.slice(0, 5).join(', ')
+		);
+	}
+
+	// Dead override rows: a judgement that no longer binds must be re-made.
+	problems.push(...crosslinks.overrideProblems);
+
+	/*
+	 * Minimums, with slack for content growth. Post-fix values are 631 links
+	 * across 279 entries; the floor is what makes catastrophic over-deletion a
+	 * build failure instead of a Playwright surprise.
+	 */
+	const entriesWithLinks = [...crosslinks.termToRecipes.values()].filter((v) => v.length).length;
+	if (linkTotal < 550) problems.push(`cross-links: only ${linkTotal} links shipped (floor 550)`);
+	if (entriesWithLinks < 250)
+		problems.push(`cross-links: only ${entriesWithLinks} entries carry links (floor 250)`);
 }
 
 // Overlay hygiene: a key that matches no slug is a silent no-op, the worst

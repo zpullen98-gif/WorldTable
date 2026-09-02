@@ -148,5 +148,161 @@
         "Salted water & the float test"
       ]
     }
+  },
+  "lexicon": {
+    "_readme": "Hand rulings over the lexicon cross-links, mirroring recipes[].techniques: the scorer cannot see word sense, so a collision no rule can separate gets a reasoned row here. `empty` clears the term, `drop` removes named links, `keep` pins links the mechanical rule would delete. Every row needs a reason, and the build fails on a dead row: a drop that suppressed nothing or a keep naming a pair the scorer never picked means the corpus moved and the judgement must be re-made.",
+    "strip-new-york-strip": {
+      "reason": "Force-empty: no strip steak dish exists in the corpus. Its surviving matches are zest strips and dough strips ('Roll the dough into a long strip' on a Wisconsin Kringle).",
+      "empty": true
+    },
+    "the-round-top-bottom-eye": {
+      "reason": "Force-empty: no whole-round dish exists. Matches are 'the rounds' of crackers and eggplant.",
+      "empty": true
+    },
+    "flat-iron": {
+      "reason": "Force-empty: no flat-iron steak dish exists. Matches are cast-iron skillets and flat griddles.",
+      "empty": true
+    },
+    "clove": {
+      "reason": "The spice term, and the match is '1 garlic clove': the one word-sense collision a core-phrase hit can still make. (Lao Beijing needed no drop: its 'cloves' already fails the word-boundary regex.)",
+      "drop": [
+        "pan-con-tomate"
+      ]
+    },
+    "tempering-eggs-and-chocolate": {
+      "reason": "The Bengali tadka is also called tempering; Shukto and Cholar Dal temper spices in hot oil, not eggs into custard.",
+      "drop": [
+        "shukto",
+        "cholar-dal"
+      ]
+    },
+    "marbling": {
+      "reason": "Beef-fat marbling, matched on a pasta's cut-face 'marbling'.",
+      "drop": [
+        "garganelli-al-pettine-con-prosciutto-e-piselli"
+      ]
+    },
+    "knife-cuts-the-classical-ladder": {
+      "reason": "A steamed pandan custard cake carrying 'knife' for slicing the pan; no classical cut is performed.",
+      "drop": [
+        "kuih-talam-pandan"
+      ]
+    },
+    "steel-science-carbon-stainless-and-hrc": {
+      "reason": "Knife steel, matched on 'Preheat a steel or stone': the pizza steel is a different object.",
+      "drop": [
+        "pizza-margherita"
+      ]
+    },
+    "scales-and-measuring-by-weight": {
+      "reason": "Measuring by weight, matched on 'Press under a weight 30 min': a pressing weight, not a scale.",
+      "drop": [
+        "muffuletta"
+      ]
+    },
+    "the-brine-and-sea-register": {
+      "reason": "The FLAVOR register (oysters, capers, sea vegetables); the fried chickens brine as a TECHNIQUE, which is 'Brining & curing', not this term.",
+      "drop": [
+        "korean-fried-chicken",
+        "buttermilk-fried-chicken"
+      ]
+    },
+    "sheet-pans-racks-and-hotel-pans": {
+      "reason": "Equipment term riding 'sheet'/'pans' on a stack cake's cake pans, a pastry sheet and a dough sheet.",
+      "drop": [
+        "pasteis-de-nata",
+        "roti-canai"
+      ]
+    },
+    "grilling-vs-barbecue-vs-smoking": {
+      "reason": "'dripping SMOKING in a muffin tin' is oven-hot beef fat for Yorkshire puddings, not barbecue.",
+      "drop": [
+        "sunday-roast-beef-and-yorkshire-puddings"
+      ]
+    },
+    "rinses-floats-and-layering": {
+      "reason": "A cocktail term; the tamales' 'float test' is the masa buoyancy check, its own technique.",
+      "drop": [
+        "tamales-rojos"
+      ]
+    },
+    "pomegranate-and-quince-autumns-perfume": {
+      "reason": "Assam Laksa's 'perfume' belongs to torch ginger, not to autumn fruit.",
+      "drop": [
+        "assam-laksa"
+      ]
+    },
+    "fermentation-in-bread-yeast-levain-preferments": {
+      "reason": "Pinned: 'yeast' misses the staple cap at DF 104 by four recipes, and these two are the corpus's flagship yeasted breads.",
+      "keep": [
+        "pizza-margherita",
+        "rosemary-focaccia"
+      ]
+    },
+    "emulsions": {
+      "reason": "Pinned: the three canonical emulsion sauces carry the term only in their CHAPTER title, and chapters were measured and rejected as subject position (16 of 21 chapter-carried links were geography homographs).",
+      "keep": [
+        "hollandaise-and-the-two-ways-it-splits",
+        "sauce-bearnaise",
+        "beurre-blanc-the-cold-butter-mount"
+      ]
+    },
+    "round-fish-vs-flat-fish": {
+      "reason": "Pinned: the sea trout is the corpus's one full round-fish breakdown; its carrier 'fish' is a staple word (DF 143).",
+      "keep": [
+        "sea-trout-filleted-and-cured"
+      ]
+    },
+    "stocks-blanc-brun-broth-and-demi": {
+      "reason": "Pinned: the ramen is built on the term's own stocks; its carriers 'broth'/'stock' are staple words.",
+      "keep": [
+        "weeknight-shoyu-ramen"
+      ]
+    },
+    "the-nutty-register": {
+      "reason": "Pinned: the veloute's beurre noisette IS the register; carrier 'nutty' rides prose the position test cannot see.",
+      "keep": [
+        "sauce-veloute"
+      ]
+    },
+    "umami-and-the-glutamate-pantry": {
+      "reason": "Pinned: kombu-and-shoyu broth is the glutamate pantry in practice; carriers are staple words.",
+      "keep": [
+        "kansai-kake-jiru-usukuchi-noodle-broth"
+      ]
+    },
+    "pork-shoulder-butt-vs-picnic": {
+      "reason": "Pinned: char siu is a pork-shoulder showcase whose ingredient line says 'pork shoulder' — 'pork' alone is a staple word (DF > 100).",
+      "keep": [
+        "char-siu-pork"
+      ]
+    },
+    "black-pepper-and-the-pepper-family": {
+      "reason": "Pinned: the two dishes built ON black pepper; 'pepper' is a staple word carrying chiles everywhere else.",
+      "keep": [
+        "cacio-e-pepe",
+        "dan-dan-noodles"
+      ]
+    },
+    "wok-hei-and-stir-fry-discipline": {
+      "reason": "Pinned: the one genuine wok stir-fry the rule keeps losing to the staple cap on 'stir' (DF 479), which rightly kills the Bolognese and the omelette.",
+      "keep": [
+        "yakisoba"
+      ]
+    },
+    "tomatoes-the-argument-for-august": {
+      "reason": "Pinned: the two dishes that ARE the August argument; 'tomatoes' is a staple word (DF > 100).",
+      "keep": [
+        "pizza-margherita",
+        "ratatouille"
+      ]
+    },
+    "cheese-families": {
+      "reason": "Pinned: pecorino and gruyere showcases; 'cheese' is a staple word (DF > 100).",
+      "keep": [
+        "cacio-e-pepe",
+        "quiche-lorraine"
+      ]
+    }
   }
 }

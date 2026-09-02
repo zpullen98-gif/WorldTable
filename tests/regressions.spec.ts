@@ -356,3 +356,28 @@ test('the service drill does not count terms it will never ask', async ({ page }
 	// this page must not mention it.
 	await expect(page.locator('.note')).not.toContainText(/term is due|terms are due/);
 });
+
+/**
+ * The honest-empty state, pinned from both sides.
+ *
+ * Cross-links used to ship on any positive score, so T-Bone & Porterhouse
+ * linked to Chicken Congee, Tandoori Chicken and Spanakopita via the word
+ * 'bone', and a capital-stack finance term linked to Crepes via "Stack under a
+ * towel". A 117-link hand read put the defect population at ~510 of 1,148. The
+ * fix: a link must contain its subject (tools/derive/crosslinks.mjs), and a
+ * term whose matches were all coincidences renders NO links - the shipped norm
+ * the safety entries established. Ribeye is the control: its links ride its
+ * own word and must survive.
+ */
+test('a term whose matches were coincidences shows none, and a real one keeps its links', async ({
+	page
+}) => {
+	await goto(page, '/lexicon');
+	await page.getByLabel('Search the lexicon').fill('porterhouse');
+	await expect(page.locator('.lexcard')).toHaveCount(1);
+	await expect(page.locator('.xrefs a')).toHaveCount(0);
+
+	await page.getByLabel('Search the lexicon').fill('ribeye');
+	await expect(page.locator('.lexcard').first()).toBeVisible();
+	expect(await page.locator('.xrefs a').count()).toBeGreaterThan(0);
+});
