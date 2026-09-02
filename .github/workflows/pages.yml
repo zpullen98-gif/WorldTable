@@ -6,9 +6,18 @@
 # on the service worker path and passes everything else without looking.
 name: Pages
 
+# Every branch RUNS; only master PUBLISHES.
+#
+# The trigger was [master] alone, which meant the gates below would have fired
+# for the first time on the merge of a 98-commit branch — the moment a red build
+# is least diagnosable. Item 16 asks that a derive rule cannot be committed
+# without shipping its output, and that only holds if the gate runs where the
+# work happens. Publication stays pinned to master by the `if:` on the upload
+# and deploy steps, so widening this does not start deploying feature branches.
 on:
   push:
-    branches: [master]
+    branches: ['**']
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -34,12 +43,54 @@ jobs:
 
       - run: npm ci
 
-      # The data pipeline is committed, so this asserts the committed JSON still
-      # matches what the archived original extracts to — a corrupted commit of
-      # recipes.full.json would otherwise deploy silently.
+      # Re-extracts the archived original and asserts src/lib/data/raw/ still
+      # holds the same WORDS. Punctuation deliberately differs: the em dash sweep
+      # of 29 Aug (d0ba35c, 2f98cd5, f741ca2) swept 3,872 characters out of the
+      # committed raw data, so the invariant is word-identity and the checks say
+      # so on their own face ("same words, repunctuated").
+      #
+      # This comment used to claim the step also caught "a corrupted commit of
+      # recipes.full.json". It does not: verify:data never opens a derived
+      # artifact, only raw/. That corruption is caught by `npm test`, and the
+      # derive rules are covered by the build:data step below.
       - run: npm run verify:data
 
+      # Deliberately BEFORE build:data. Several of these tests are staleness
+      # gates in their own right — src/lib/technique-standards.test.ts fails with
+      # "technique-standards.mjs was edited without re-running build:data", and
+      # palate, sanitation and standards do the same. Re-deriving first would
+      # regenerate the drift away before they ever looked at it, leaving four
+      # deliberate gates permanently green and permanently useless.
       - run: npm test
+
+      # The guarantee the comment above used to claim, put where it is true.
+      #
+      # The 22 derived artifacts under src/lib/data are COMMITTED, and nothing
+      # rebuilt them: a rule edited in tools/derive shipped only if a human
+      # remembered to re-run this by hand. Allergen and diet rulings are the
+      # sharp case — deriveDiet (tools/derive/diet.mjs) is baked into
+      # recipes.index.json at build time, so a widened allergen list that was
+      # never re-derived reaches nobody, and every gate stays green while a
+      # recipe screen tells a cook the wrong thing.
+      #
+      # build:data is byte-reproducible (verified across repeated runs, and
+      # under a changed timezone and locale), so any change here means the
+      # commit edited a derive rule without shipping its output.
+      #
+      # `extract` is NOT run here and must never be: it regenerates raw/ from
+      # the unswept archive and would revert the three dash-sweep commits. The
+      # archive is a read-only oracle that verify:data checks against, never a
+      # build input.
+      - run: npm run build:data
+
+      - name: derived data must match the derive rules
+        run: |
+          if [ -n "$(git status --porcelain --untracked-files=all -- src/lib/data tools/derive)" ]; then
+            echo "::error::build:data changed the tree: something under tools/derive was edited without re-running 'npm run build:data' and committing the result."
+            git status --porcelain --untracked-files=all -- src/lib/data tools/derive
+            git --no-pager diff -- src/lib/data tools/derive | head -200
+            exit 1
+          fi
 
       - run: npm run build:pages
 
@@ -48,11 +99,16 @@ jobs:
           BASE_PATH: /WorldTable
 
       - uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/master'
         with:
           path: build
 
   deploy:
     needs: build
+    # Also keeps a branch run from tripping the github-pages environment's
+    # deployment-branch policy, which would fail it for a reason unrelated to
+    # anything the branch changed.
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

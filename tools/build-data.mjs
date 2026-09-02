@@ -440,7 +440,17 @@ const chapters = [...chapterCounts.entries()]
 		const { kind, group, subgroup } = classifyChapter(name);
 		return { name, slug: slugify(name), kind, group, subgroup, count };
 	})
-	.sort((a, b) => a.name.localeCompare(b.name));
+	/* The locale is PINNED, and it is not decoration. A bare localeCompare
+	   resolves against the runtime's default locale, so this file is authored on
+	   Windows/Node 24 under en-US and re-derived in CI on ubuntu under LANG=C.UTF-8.
+	   The derived JSON is committed and CI now fails when re-deriving changes it,
+	   which makes collation drift a red build on a machine nobody is looking at.
+	   Chapter names are ASCII but still reorder under cs-CZ and lt-LT, and the
+	   technique labels carry Béchamel, Crêpes, Flambé, puréeing, Sautéing, brûlée
+	   and soufflé. Pinning reproduces the committed order exactly: it is a lock,
+	   not a change. Do NOT swap these for a codepoint sort — that DOES reorder
+	   techniques.json and stations.json. */
+	.sort((a, b) => a.name.localeCompare(b.name, 'en'));
 
 const geographyHeld = gateGeography(chapters.map((c) => c.name));
 
@@ -496,7 +506,7 @@ const study = STUDY.map((s, i) => {
 		terms: s.x.map((t) => termToSlug.get(t)).filter(Boolean),
 		skills: [...counts.entries()]
 			.map(([label, dishes]) => ({ slug: slugify(label), label, dishes }))
-			.sort((a, b) => b.dishes - a.dishes || a.label.localeCompare(b.label))
+			.sort((a, b) => b.dishes - a.dishes || a.label.localeCompare(b.label, 'en'))
 	};
 });
 
@@ -572,7 +582,7 @@ const techniques = TECH_ALL.map((x, i) => {
 	};
 })
 	.filter((t) => t.recipes.length)
-	.sort((a, b) => a.label.localeCompare(b.label));
+	.sort((a, b) => a.label.localeCompare(b.label, 'en'));
 
 /**
  * `judgedBy`: the technique standards a recipe is assessed against.

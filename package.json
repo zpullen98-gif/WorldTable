@@ -16,6 +16,7 @@
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"verify:build": "node tools/verify-build.mjs",
+		"verify:derived": "node tools/build-data.mjs && git diff --exit-code -- src/lib/data tools/derive",
 		"icons": "node tools/make-icons.mjs",
 		"build:quick": "node tools/build-quick.mjs",
 		"test:e2e": "playwright test",
