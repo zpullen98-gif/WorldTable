@@ -282,7 +282,12 @@
 		</div>
 	{/if}
 
-	<p class="back"><a href="{base}/practise">Back to Practise</a></p>
+	<!-- Service, not Practise. The layout's OWNS map files /coverage under
+	     Service and the Service tab is what lights here, so an exit to Practise
+	     sent a cook to a page whose tab was not the lit one and which shows no
+	     way back unless this device is a manager's. The Service hub now carries
+	     the entrance, so the way in, the way out and the lit tab all agree. -->
+	<p class="back"><a href="{base}/service">Back to Service</a></p>
 </div>
 
 <style>

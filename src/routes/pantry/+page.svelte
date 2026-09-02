@@ -75,6 +75,12 @@
 <svelte:head><title>Pantry Match | The World Table</title></svelte:head>
 
 <div class="shell view">
+	<!-- A way out. Until a cook ticks enough ingredients to produce a match this
+	     page has no links at all, so on arrival it was a cul-de-sac reachable
+	     from exactly one tile on the home page. -->
+	<nav class="crumbs" data-print="hide">
+		<a href="{base}/recipes">The Library</a> · <span>Pantry Match</span>
+	</nav>
 	<header class="head">
 		<h1>Pantry Match</h1>
 		<p class="lede">
@@ -174,6 +180,13 @@
 </div>
 
 <style>
+	/* Same as the crumb rows on /technique/[slug] and /service/[topic]. */
+	.crumbs {
+		font-size: var(--t-micro);
+		color: var(--muted);
+		margin-bottom: 12px;
+	}
+
 	.view {
 		padding: 26px 0 80px;
 	}

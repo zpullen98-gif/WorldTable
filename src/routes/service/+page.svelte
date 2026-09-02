@@ -73,6 +73,29 @@
 				</a>
 			</li>
 		{/if}
+		<!--
+			The coverage board had ZERO inbound links in the whole built app, the
+			only route with none. Its single authored link sits behind {#if manager}
+			on /practise, and `manager` is false unless the shared layer is present
+			AND this device has been opted in — a switch that lives in another wing
+			entirely. Meanwhile the layout's OWNS map lights the SERVICE tab on it,
+			so the tab that claimed the page was the one place never linking to it.
+
+			Ungated here, because the page gates itself in the right place and says
+			so: it narrows the roster to your own record BEFORE reading anything
+			("Reading less is the gate; not rendering what you already read is a
+			curtain") and prints a warning explaining why. A cook sees their own
+			coverage; a manager's device sees the house.
+		-->
+		<li>
+			<a href="{base}/coverage">
+				<h3>The Coverage Board</h3>
+				<p>
+					Who has done the work of each station: your own record, or the whole house on a
+					manager's device.
+				</p>
+			</a>
+		</li>
 	</ul>
 
 	<h2 class="sec">Drill it</h2>

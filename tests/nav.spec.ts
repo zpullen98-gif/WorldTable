@@ -83,3 +83,79 @@ test.describe('exactly one tab owns each route', () => {
 		});
 	}
 });
+
+/**
+ * The Library's children, and the way back out.
+ *
+ * The layout's OWNS map gives the /recipes tab to /family, /pantry and
+ * /lexicon, and /recipes linked to none of the three. Measured over the whole
+ * built app, /family and /pantry had exactly ONE inbound link each - a tile on
+ * the home page, under bands labelled Learn and Practise, which are not the tab
+ * that lights when you land. Both were also dead ends: /family's only links are
+ * into individual family recipes, which do not exist until the feature has been
+ * used, and /pantry has none at all until enough ingredients are ticked.
+ *
+ * A sixth mode tab was not an option: the bar needs 463 CSS px and already
+ * clips Service and Library at every common iPhone width.
+ */
+test('the Library links to the pages its tab claims', async ({ page }) => {
+	await goto(page, '/recipes');
+	const shelf = page.locator('nav.shelf');
+	await expect(shelf).toBeVisible();
+	for (const [href, label] of [
+		['/family', 'The Family Chapter'],
+		['/pantry', 'Pantry Match'],
+		['/lexicon', "Chef's Lexicon"]
+	] as const) {
+		const link = shelf.locator(`a[href$="${href}"]`);
+		await expect(link, `${href} must have a Library-side entrance`).toHaveCount(1);
+		await expect(link).toContainText(label);
+	}
+});
+
+for (const [route, title] of [
+	['/family', 'The Family Chapter'],
+	['/pantry', 'Pantry Match']
+] as const) {
+	test(`${route} has a way back to the Library`, async ({ page }) => {
+		await goto(page, route);
+		const crumb = page.locator('nav.crumbs');
+		await expect(crumb).toBeVisible();
+		await expect(crumb.locator('a')).toHaveAttribute('href', /\/recipes$/);
+		await expect(crumb).toContainText(title);
+		// And it goes where it says.
+		await crumb.locator('a').click();
+		await expect(page.locator('h1')).toHaveText('The Library');
+	});
+}
+
+/**
+ * The coverage board, which nothing linked to at all.
+ *
+ * Measured over all 2179 built pages it had ZERO inbound links, the only route
+ * in the app with none. Its one authored link sits behind `{#if manager}` on
+ * /practise, and `manager` is false unless the shared Outside Of Time layer is
+ * present AND this device has been opted in — a switch that lives in a
+ * different wing. Meanwhile the layout's OWNS map lights the SERVICE tab on it,
+ * so the tab that claimed the page was the one place that never linked to it,
+ * and the page's own exit went to Practise instead.
+ *
+ * Ungated on the Service hub is safe: the page narrows the roster to your own
+ * record before reading anything, and says so.
+ */
+test('the coverage board can be reached and left without being a manager', async ({ page }) => {
+	await goto(page, '/service');
+	const link = page.locator('a[href$="/coverage"]');
+	await expect(link, 'Service must offer the coverage board').toHaveCount(1);
+
+	await link.click();
+	await expect(page.locator('h1')).toHaveText(/Coverage/i);
+	// A plain device is told what it is seeing rather than shown an empty board.
+	await expect(page.locator('.warn')).toContainText("not marked as a manager's device");
+
+	// Way out, and it agrees with the tab that is lit.
+	const back = page.locator('.back a');
+	await expect(back).toHaveText('Back to Service');
+	await back.click();
+	await expect(page.locator('h1')).toHaveText('Service');
+});
