@@ -256,7 +256,7 @@
 					? `Your ${dishes} dishes, drilled like the canon`
 					: `Opens at four dishes on My Menu, ${4 - dishes} to go`}</small
 			></a>
-			<a href="{base}/lexicon">Lexicon Quiz<small>Ten questions on the words a cook is expected to know</small></a>
+			<a href="{base}/lexicon">Lexicon Quiz<small>Ten questions on the words a cook is expected to know, scheduled so the ones you miss come back</small></a>
 			<a href="{base}/repertoire">The Repertoire<small
 				>{due.length
 					? `${due.length} dish${due.length === 1 ? '' : 'es'} due a re-cook`

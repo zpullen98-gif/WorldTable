@@ -2,6 +2,9 @@
 	import { base } from '$app/paths';
 	import { bySlug } from '$lib/data';
 	import { fold } from '$lib/filter';
+	import { session } from '$lib/stores/session.svelte';
+	import { repertoire, dueList, scopeToSlugs, TERM_LADDER_DAYS } from '$lib/repertoire';
+	import { nextTarget, optionsForTerm, gradeForQuiz, QUIZ_LENGTH } from '$lib/lexicon-quiz';
 
 	let { data } = $props();
 
@@ -64,42 +67,85 @@
 		options: Entry[];
 	}
 
-	const QUIZ_LENGTH = 10;
 	let quiz = $state<Question | null>(null);
 	let picked = $state<Entry | null>(null);
 	let qNum = $state(0);
 	let right = $state(0);
 	let verdict = $state('');
 
-	const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
+	/*
+	 * The terms this page is behind on.
+	 *
+	 * Scoped to lexicon slugs: drillLog is one un-namespaced pool shared with
+	 * the service drill and with practise/firing's `drill-firing-order`
+	 * sentinel, so an unscoped fold would count things this page cannot ask.
+	 * See scopeToSlugs in repertoire.ts for the rule.
+	 */
+	const lexSlugs = $derived(new Set(data.lexicon.map((e) => e.slug)));
+	const dueTerms = $derived.by(() => {
+		const now = Date.now();
+		return dueList(
+			repertoire(scopeToSlugs(session.drillLog, lexSlugs), now, TERM_LADDER_DAYS),
+			now
+		).map((e) => e.slug);
+	});
+
+	/*
+	 * One entry per TERM per round, not one per question.
+	 *
+	 * A round drawn from a narrow filter asks the same term more than once - a
+	 * five-term category cannot field ten distinct questions - and before
+	 * anything was recorded that cost nothing. Now that every answer writes to
+	 * a ladder, three answers on one term in one sitting must not be three
+	 * pieces of evidence.
+	 */
+	let recorded = new Set<string>();
 
 	function ask() {
-		// The round draws from the current filter, like the original: quiz what
-		// you're studying. Under 4 visible terms, widen to the whole lexicon.
+		// POOL is what gets asked: the current filter, so the quiz still asks
+		// what you are studying. The >= 4 floor is now only a pool floor - it
+		// stopped being the termination guard when the rejection loop went.
+		// FIELD is always the whole lexicon; see lexicon-quiz.ts.
 		const pool = shown.length >= 4 ? shown : data.lexicon;
-		const target = pick(pool);
-		const sameCat = pool.filter((e) => e.category === target.category && e.slug !== target.slug);
-		const others = new Map<string, Entry>([[target.slug, target]]);
-		while (others.size < 4) {
-			const cand = pick(sameCat.length >= 3 ? sameCat : pool);
-			others.set(cand.slug, cand);
-		}
-		quiz = { target, options: [...others.values()].sort(() => Math.random() - 0.5) };
+		const target = nextTarget(pool, dueTerms, asked, Math.random);
+		if (!target) return;
+		asked.add(target.slug);
+		quiz = optionsForTerm(target, data.lexicon, Math.random);
 		picked = null;
 	}
+
+	/** The slugs this round has already put in front of the cook. */
+	let asked = new Set<string>();
 
 	function startQuiz() {
 		deck = [];
 		qNum = 0;
 		right = 0;
 		verdict = '';
+		asked = new Set();
+		recorded = new Set();
 		ask();
 	}
 
 	function answer(o: Entry) {
 		if (picked) return; // already answered
 		picked = o;
-		if (o.slug === quiz!.target.slug) right++;
+		const correct = o.slug === quiz!.target.slug;
+		if (correct) right++;
+		/*
+		 * Recorded BEFORE anything advances, the rule service/drill states at
+		 * its own markDrilled call: a cook who closes the tab mid-round keeps
+		 * the answers they gave.
+		 *
+		 * `close`, never `met`, even when right - the quiz shows the definition
+		 * raw and 307 of 479 of them (64.1%) name their own term inside the
+		 * first 180 characters. On the ladder `close` holds rather than
+		 * promotes, so only the redacted service drill can climb a term.
+		 */
+		if (!recorded.has(quiz!.target.slug)) {
+			recorded.add(quiz!.target.slug);
+			session.markDrilled(quiz!.target.slug, gradeForQuiz(correct));
+		}
 		qNum++;
 	}
 
@@ -156,6 +202,15 @@
 		<button class="chip" onclick={shuffle}>Study mode ▸ flashcards</button>
 		<button class="chip" onclick={startQuiz}>Quiz me ▸ multiple choice</button>
 		<span class="count">{shown.length} of {data.lexicon.length} terms</span>
+		<!--
+			Its own noun, deliberately. The mode bar's Practise pill counts DISHES
+			from cookedLog and must keep meaning that; this counts TERMS and says
+			so. Not .def, .flash or .lexcard: those three are a published paywall
+			contract keyed to the tier attribute, held by src/lib/navigation.test.ts.
+		-->
+		{#if dueTerms.length}
+			<span class="count due">{dueTerms.length} term{dueTerms.length === 1 ? '' : 's'} due</span>
+		{/if}
 	</div>
 
 	{#if verdict}
@@ -254,6 +309,9 @@
 	}
 	.chip:hover { border-color: var(--turmeric); }
 	select.chip { appearance: none; max-width: 260px; }
+	.due {
+		color: var(--turmeric-deep);
+	}
 	.count { font-size: var(--t-small); color: var(--muted); font-variant-numeric: oldstyle-nums; margin-left: auto; }
 
 	.flash {

@@ -18,7 +18,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { session } from '$lib/stores/session.svelte';
-	import { repertoire, dueList, TERM_LADDER_DAYS } from '$lib/repertoire';
+	import { repertoire, dueList, scopeToSlugs, TERM_LADDER_DAYS } from '$lib/repertoire';
 	import {
 		buildRound,
 		verdictFor,
@@ -30,11 +30,27 @@
 	let { data } = $props();
 
 	/** Terms past their re-cook, on the TERM ladder (2/6/14/35/90). */
+	/*
+	 * Scoped to THIS deck's slugs, which it was not before.
+	 *
+	 * drillLog is one un-namespaced pool with three writers, so folding all of
+	 * it counted terms this page will never ask. It was already wrong by one:
+	 * practise/firing writes the sentinel `drill-firing-order`, buildRound
+	 * dropped it from the round (drill.ts maps due slugs through bySlug), and
+	 * the line below still counted it — the page promised a term it then did
+	 * not ask. With the Lexicon quiz now writing lexicon slugs to the same log,
+	 * unscoped it would have been wrong by up to 293.
+	 *
+	 * everDrilled needs it just as much as due: it drives the cold-read branch,
+	 * which is what a first-time cook sees.
+	 */
+	const cardSlugs = $derived(new Set(data.cards.map((c) => c.slug)));
+	const ownLog = $derived(scopeToSlugs(session.drillLog, cardSlugs));
 	const due = $derived.by(() => {
 		const now = Date.now();
-		return dueList(repertoire(session.drillLog, now, TERM_LADDER_DAYS), now).map((e) => e.slug);
+		return dueList(repertoire(ownLog, now, TERM_LADDER_DAYS), now).map((e) => e.slug);
 	});
-	const everDrilled = $derived(new Set(session.drillLog.map((e) => e.slug)));
+	const everDrilled = $derived(new Set(ownLog.map((e) => e.slug)));
 
 	let round = $state<DrillQuestion[] | null>(null);
 	let at = $state(0);

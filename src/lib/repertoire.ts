@@ -223,6 +223,30 @@ export function repertoire(
 }
 
 /**
+ * One surface's own entries, and the rule that makes it necessary.
+ *
+ * `drillLog` is keyed by a BARE SLUG with no namespace, and it has three
+ * writers: the service drill (186 card slugs), the Lexicon quiz (any of 479
+ * lexicon slugs) and practise/firing, which writes the synthetic sentinel
+ * `drill-firing-order` that is neither. So every consumer of dueList MUST scope
+ * to its own slug set before folding, or it counts terms it will never ask.
+ *
+ * That was already wrong before the quiz joined: the service drill folded the
+ * whole log, so the firing sentinel inflated its "N terms are due" line by one
+ * while buildRound silently dropped it from the round — the page promised a
+ * term it then did not ask. Unscoped, the same line would have been wrong by up
+ * to 293 once the quiz began writing.
+ *
+ * Cheaper than a corpus tag on each entry, and correct for the entries already
+ * on disk: a tag cannot be inferred retroactively, mergeSessions keys on
+ * `slug|at` so an import could not supply one, and the natural default for an
+ * untagged entry ("it came from the track") is exactly wrong for the sentinel.
+ */
+export function scopeToSlugs(log: readonly CookEntry[], slugs: ReadonlySet<string>): CookEntry[] {
+	return log.filter((e) => slugs.has(e.slug));
+}
+
+/**
  * The dishes wanting a re-cook, most decayed first.
  *
  * Ordered by how far past due they are as a PROPORTION of their own interval,

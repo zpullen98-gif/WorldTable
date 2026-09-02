@@ -257,3 +257,102 @@ test('the chapter rail sums to the grid, filtered and unfiltered', async ({ page
 	expect(await railSum()).toBe(0);
 	expect(await headerSum()).toBe(0);
 });
+
+/**
+ * The Lexicon quiz remembers now, and the service drill stopped counting terms
+ * it will never ask.
+ *
+ * Before this, the quiz was the only study surface in the app with no memory:
+ * ten questions, a verdict ported from the original, one aggregate
+ * `oot:round-complete` to the monorepo's log, and `quiz = null`. Meanwhile the
+ * service drill had scheduled its terms all along through the same
+ * session.drillLog — and all 186 of its cards ARE lexicon terms, so 293 terms
+ * had no memory anywhere.
+ *
+ * Driven end to end rather than unit tested for the reason the timer specs are:
+ * the store is a runes module a vitest test cannot reach. The pure logic lives
+ * in src/lib/lexicon-quiz.ts and is unit tested there.
+ */
+test('a lexicon quiz answer is recorded, graded close, and survives a reload', async ({ page }) => {
+	await goto(page, '/lexicon');
+
+	await page.getByRole('button', { name: /Quiz me/ }).click();
+	const options = page.locator('button.opt');
+	await expect(options.first()).toBeVisible();
+	await options.first().click();
+
+	// Outlive the write, then start a genuinely fresh document.
+	await page.waitForTimeout(700);
+	await page.reload();
+	await page.waitForSelector('html[data-hydrated]');
+
+	const log = await page.evaluate(
+		() =>
+			new Promise<Array<{ slug: string; grade?: string }>>((resolve) => {
+				const open = indexedDB.open('world-table');
+				open.onsuccess = () => {
+					const get = open.result.transaction('state', 'readonly').objectStore('state').getAll();
+					get.onsuccess = () => {
+						const row = (get.result as Array<{ drillLog?: unknown[] }>).find((v) => v?.drillLog);
+						resolve(((row?.drillLog ?? []) as Array<{ slug: string; grade?: string }>) ?? []);
+					};
+				};
+			})
+	);
+
+	expect(log.length, 'one answer writes exactly one entry').toBe(1);
+	/*
+	 * `close`, never `met`. The quiz shows the definition raw and 307 of the 479
+	 * shipped definitions (64.1%) name their own term inside the first 180
+	 * characters, so a right answer here is weaker evidence than the drill's
+	 * redacted prompt. On the ladder `close` holds the rung instead of advancing
+	 * it, which is what keeps the drill's meaning intact for the 186 terms both
+	 * surfaces share.
+	 */
+	expect(['close', 'missed']).toContain(log[0].grade);
+
+	// And the term is a lexicon slug, so the page's own due count can see it.
+	expect(log[0].slug).toMatch(/^[a-z0-9-]+$/);
+});
+
+/**
+ * The partition, which was already wrong by one before the quiz joined.
+ *
+ * practise/firing writes the synthetic slug `drill-firing-order` into the same
+ * drillLog, and the service drill folded the WHOLE log into its "N terms are
+ * due" line while buildRound silently dropped the sentinel from the round: the
+ * page promised a term it then did not ask. Unscoped, that line would have been
+ * wrong by up to 293 once the quiz began writing.
+ */
+test('the service drill does not count terms it will never ask', async ({ page }) => {
+	await goto(page, '/service/drill');
+
+	await page.evaluate(
+		() =>
+			new Promise<void>((resolve) => {
+				const open = indexedDB.open('world-table');
+				open.onsuccess = () => {
+					const store = open.result.transaction('state', 'readwrite').objectStore('state');
+					const get = store.getAll();
+					get.onsuccess = () => {
+						const keys = store.getAllKeys();
+						keys.onsuccess = () => {
+							const rows = get.result as Array<Record<string, unknown>>;
+							const i = rows.findIndex((v) => v && 'drillLog' in v);
+							if (i < 0) return resolve();
+							const old = new Date(Date.now() - 400 * 24 * 3600 * 1000).getTime();
+							rows[i].drillLog = [{ slug: 'drill-firing-order', at: old, grade: 'missed' }];
+							const put = store.put(rows[i], keys.result[i]);
+							put.onsuccess = () => resolve();
+						};
+					};
+				};
+			})
+	);
+
+	await page.reload();
+	await page.waitForSelector('html[data-hydrated]');
+	// A 400-day-old missed entry is unambiguously due — but it is not a card, so
+	// this page must not mention it.
+	await expect(page.locator('.note')).not.toContainText(/term is due|terms are due/);
+});

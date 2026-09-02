@@ -4,9 +4,11 @@
   The distinction from Learn is not decorative. Learn is where you are told
   something; Practise is where the app finds out whether it stuck. Two of these
   are graded by you (the repertoire's ladder, and cook mode's check against the
-  dish's standard) and one is scored by the app (the menu drill). Stage 5 adds
-  the scored drill over the Lexicon; until it does, this hub says so rather than
-  pretending the Lexicon's flashcards are an assessment.
+  dish's standard) and one is scored by the app (the menu drill). The Lexicon's
+  quiz is now scheduled too: it writes every answer to the same drillLog ladder
+  the service drill uses, graded `close` rather than `met` because it shows the
+  definition unredacted. The flashcards beside it are still self-judged, and the
+  copy below says which is which.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
@@ -107,8 +109,9 @@
 			<a href="{base}/lexicon">
 				<h2>Lexicon flashcards</h2>
 				<p>
-					{data.lexicon} terms, with a quiz. Not scored and not scheduled yet: turn a card and judge
-					yourself.
+					{data.lexicon} terms. The quiz is scored and scheduled: a term you miss comes back sooner,
+					and the page tells you how many are due. The flashcards beside it stay self-judged - turn a
+					card and mark yourself.
 				</p>
 			</a>
 		</li>

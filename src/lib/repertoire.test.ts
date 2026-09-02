@@ -3,11 +3,14 @@ import {
 	repertoire,
 	dueList,
 	cookedSlugs,
+	scopeToSlugs,
 	sinceLabel,
 	LADDER_DAYS,
+	TERM_LADDER_DAYS,
 	DAY_MS,
 	type CookEntry
 } from './repertoire';
+import drills from './data/drills.json';
 
 /**
  * The schedule.
@@ -192,5 +195,119 @@ describe('sinceLabel', () => {
 		[800, '2 years ago']
 	])('%i days reads as %s', (days, label) => {
 		expect(sinceLabel(days as number)).toBe(label);
+	});
+});
+
+/**
+ * What a Lexicon quiz answer is worth, which is the specification for item 17.
+ *
+ * The quiz and the service drill now write to ONE log over the same terms - all
+ * 186 drill cards are lexicon terms - so the two surfaces had to be given
+ * different weights or the easier one would have driven the ladder. The drill
+ * asks from a redacted prompt and grades `met`. The quiz shows the definition
+ * raw (307 of 479 name their own term in the first 180 characters) and grades
+ * `close`, which HOLDS the rung instead of advancing it.
+ *
+ * These four tests are the contract. If they go red, the meaning of every
+ * shipped drill ladder has quietly changed.
+ */
+describe('a quiz answer on the term ladder', () => {
+	const day = (n: number) => Date.now() - n * DAY_MS;
+
+	it('never promotes: six correct quiz answers leave a term on the bottom rung', () => {
+		const log: CookEntry[] = Array.from({ length: 6 }, (_, i) => ({
+			slug: 'brunoise',
+			at: day(60 - i * 10),
+			grade: 'close' as const
+		}));
+		const [entry] = repertoire(log, Date.now(), TERM_LADDER_DAYS);
+		expect(entry.intervalDays).toBe(TERM_LADDER_DAYS[0]);
+	});
+
+	it('does not block the drill: met, close, met still climbs', () => {
+		const log: CookEntry[] = [
+			{ slug: 'brunoise', at: day(30), grade: 'met' },
+			{ slug: 'brunoise', at: day(20), grade: 'close' },
+			{ slug: 'brunoise', at: day(10), grade: 'met' }
+		];
+		// rungFor starts at 0, so this is met -> 1, close holds 1, met -> 2, and
+		// rung 2 is the ladder's SECOND interval. The point is that the close in
+		// the middle cost the cook nothing.
+		const [entry] = repertoire(log, Date.now(), TERM_LADDER_DAYS);
+		expect(entry.intervalDays).toBe(TERM_LADDER_DAYS[1]);
+
+		const withoutClose = repertoire(
+			log.filter((e) => e.grade !== 'close'),
+			Date.now(),
+			TERM_LADDER_DAYS
+		);
+		expect(entry.intervalDays).toBe(withoutClose[0].intervalDays);
+	});
+
+	it('puts a never-answered term on the bottom rung and makes it due', () => {
+		const log: CookEntry[] = [{ slug: 'brunoise', at: day(5), grade: 'close' }];
+		const [entry] = repertoire(log, Date.now(), TERM_LADDER_DAYS);
+		expect(entry.intervalDays).toBe(2);
+		expect(dueList([entry], Date.now())).toHaveLength(1);
+	});
+
+	it('demotes by one on a miss and floors at the bottom', () => {
+		const climb: CookEntry[] = [
+			{ slug: 'brunoise', at: day(40), grade: 'met' },
+			{ slug: 'brunoise', at: day(30), grade: 'met' }
+		];
+		const [before] = repertoire(climb, Date.now(), TERM_LADDER_DAYS);
+		const [after] = repertoire(
+			[...climb, { slug: 'brunoise', at: day(20), grade: 'missed' }],
+			Date.now(),
+			TERM_LADDER_DAYS
+		);
+		expect(after.intervalDays).toBeLessThan(before.intervalDays);
+
+		const allMissed: CookEntry[] = Array.from({ length: 5 }, (_, i) => ({
+			slug: 'brunoise',
+			at: day(50 - i * 10),
+			grade: 'missed' as const
+		}));
+		expect(repertoire(allMissed, Date.now(), TERM_LADDER_DAYS)[0].intervalDays).toBe(
+			TERM_LADDER_DAYS[0]
+		);
+	});
+});
+
+/**
+ * The partition.
+ *
+ * drillLog is one un-namespaced pool with three writers, and it was ALREADY
+ * miscounting before the quiz joined: practise/firing writes the synthetic
+ * slug `drill-firing-order`, which is neither a card nor a lexicon term, and
+ * the service drill folded the whole log into the "N terms are due" line while
+ * buildRound silently dropped it from the round. The page promised a term it
+ * then did not ask.
+ */
+describe('scopeToSlugs', () => {
+	const CARDS = new Set((drills as { cards: Array<{ slug: string }> }).cards.map((c) => c.slug));
+
+	it('keeps the sentinel out of the service drill, against the real card set', () => {
+		const real = [...CARDS][0];
+		const log: CookEntry[] = [
+			{ slug: 'drill-firing-order', at: Date.now() - DAY_MS * 30, grade: 'missed' },
+			{ slug: real, at: Date.now() - DAY_MS * 30, grade: 'missed' }
+		];
+		const due = dueList(
+			repertoire(scopeToSlugs(log, CARDS), Date.now(), TERM_LADDER_DAYS),
+			Date.now()
+		).map((e) => e.slug);
+		expect(due).toEqual([real]);
+	});
+
+	it('preserves repeats and drops foreign slugs', () => {
+		const log: CookEntry[] = [
+			{ slug: 'a', at: 1, grade: 'met' },
+			{ slug: 'b', at: 2, grade: 'met' },
+			{ slug: 'a', at: 3, grade: 'missed' }
+		];
+		expect(scopeToSlugs(log, new Set(['a']))).toHaveLength(2);
+		expect(scopeToSlugs(log, new Set())).toEqual([]);
 	});
 });
