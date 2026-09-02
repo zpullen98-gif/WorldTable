@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { migrate, importLegacyCode } from './migrations';
+import { migrate, importLegacyCode, readSession, NewerVersionError } from './migrations';
 import { CURRENT_VERSION, mergeSessions, type SessionState } from './state';
 import { describeImport } from './portable';
 import { EMPTY_SESSION } from './state';
@@ -312,5 +312,55 @@ describe('importLegacyCode (the WT1. base64 format)', () => {
 		const { state } = importLegacyCode(code, orderedSlugs, pantryLabels);
 		const summary = describeImport(state, structuredClone(EMPTY_SESSION));
 		expect(summary).toContain('1 new pinned dish');
+	});
+});
+
+/**
+ * A record this build must not touch - the readHouse contract, for the session.
+ *
+ * migrate() always refused a newer version; its CALLER turned the refusal into
+ * a silent reset. loadSession caught the throw, snapshotted the record under a
+ * corrupt.* key nothing read, returned an empty session, and the next tap
+ * persisted that empty over the real record. Reproduced end to end before the
+ * fix: tick 'Chicken', bump the stored version to 2, reload, tick 'Beef' -
+ * Chicken gone from the live key. These pin the pure reader that decides the
+ * hold; db.test.ts pins that the write path honours it.
+ */
+describe('a record this build must not touch', () => {
+	it('throws a typed refusal for a newer version', () => {
+		expect(() => migrate({ schemaVersion: CURRENT_VERSION + 1 })).toThrow(NewerVersionError);
+	});
+
+	it('refuses a newer version as held, and does not hand back its content', () => {
+		const r = readSession({ schemaVersion: CURRENT_VERSION + 1, pantry: ['Chicken'] });
+		expect(r.held).toBe(true);
+		if (r.held) expect(r.reason).toBe('newer');
+		expect(r.state.pantry).toEqual([]);
+	});
+
+	it('reads a current record normally', () => {
+		const r = readSession({ schemaVersion: CURRENT_VERSION, pantry: ['Chicken'] });
+		expect(r.held).toBe(false);
+		expect(r.state.pantry).toEqual(['Chicken']);
+	});
+
+	it('reads a record predating the field, the one case coercion is for', () => {
+		const r = readSession({ menu: ['cacio-e-pepe'] });
+		expect(r.held).toBe(false);
+		expect(r.state.schemaVersion).toBe(CURRENT_VERSION);
+		expect(r.state.menu).toEqual(['cacio-e-pepe']);
+	});
+
+	it('treats nothing on disk as a fresh start, not a refusal', () => {
+		expect(readSession(undefined).held).toBe(false);
+		expect(readSession(null).held).toBe(false);
+	});
+
+	it('refuses a version it cannot positively recognise', () => {
+		for (const v of ['2', null, {}]) {
+			const r = readSession({ schemaVersion: v });
+			expect(r.held, JSON.stringify(v)).toBe(true);
+			if (r.held) expect(r.reason).toBe('unrecognised');
+		}
 	});
 });

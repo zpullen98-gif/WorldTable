@@ -207,6 +207,29 @@
 	</div>
 </nav>
 
+<!--
+	The hold, announced. The house record shows its banner only on /menu, its
+	one consumer page; the session is read on every route, so this lives in the
+	layout. Copy keeps the house register - cause, guarantee, consequence, one
+	action - but does NOT promise that a reload fixes it: after a rollback there
+	is no newer worker waiting.
+-->
+{#if session.held}
+	<div class="shell">
+		<p class="held" role="alert">
+			{#if session.heldReason === 'unreadable'}
+				<b>The record on this device could not be read.</b>
+			{:else}
+				<b>This device is running an older edition of The World Table than the one that saved your record.</b>
+			{/if}
+			Nothing has been lost and nothing will be overwritten, but your menu, notes, pantry and cooked
+			log stay hidden, and anything you record now will not be kept, until this device is running
+			the edition that saved it. If an update is offered, take it; otherwise open the newer
+			edition.
+		</p>
+	</div>
+{/if}
+
 <main id="main" tabindex="-1">
 	{@render children()}
 </main>
@@ -453,6 +476,16 @@
 	.service:hover {
 		color: var(--turmeric-deep);
 		border-color: var(--line);
+	}
+
+	/* The house record's .blocked, in the layout. */
+	.held {
+		border: 1px solid var(--chili);
+		border-left-width: 3px;
+		border-radius: var(--radius);
+		padding: 12px 14px;
+		margin: 16px 0 0;
+		line-height: 1.55;
 	}
 
 	main {

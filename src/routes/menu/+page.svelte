@@ -442,6 +442,13 @@
 	async function doImport(e: Event) {
 		const file = (e.target as HTMLInputElement).files?.[0];
 		if (!file) return;
+		// Before any parse: a merge into a held record would print "Imported"
+		// over a write that will never land.
+		if (session.held) {
+			importMsg =
+				'This device is on an older edition than the one that saved its record. Import is paused until it updates.';
+			return;
+		}
 		try {
 			const text = await file.text();
 
@@ -514,7 +521,8 @@
 		<button
 			class="chip"
 			onclick={doExport}
-			disabled={!session.menu.length && !session.pantry.length && !house.dishes.length}
+			disabled={session.held || (!session.menu.length && !session.pantry.length && !house.dishes.length)}
+			title={session.held ? 'Export is paused: the record on this device was saved by a newer edition.' : undefined}
 			>Export session</button
 		>
 		<button class="chip" onclick={() => fileInput?.click()}>Import session…</button>

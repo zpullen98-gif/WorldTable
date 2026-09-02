@@ -13,11 +13,12 @@ import { browser } from '$app/environment';
 import type { Recipe, RecipeSummary } from '../types';
 import {
 	EMPTY_SESSION,
-	loadSession,
+	loadSessionRecord,
 	saveSession,
 	currentKey,
 	debounce,
-	type SessionState
+	type SessionState,
+	type HeldReason
 } from '../persistence/db';
 import {
 	mergeSessions,
@@ -42,9 +43,39 @@ class SessionStore {
 	 */
 	#key = '';
 
-	#persist = debounce(() => {
-		void saveSession($state.snapshot(this.#s) as SessionState, this.#key || undefined);
-	}, 400);
+	/**
+	 * A record on disk this build must not touch: written by a newer edition,
+	 * or unreadable. Every write is a no-op while this is set, and the layout
+	 * renders a banner saying so. See readSession() in persistence/migrations.ts
+	 * for the whole story; the short version is that the refusal used to exist
+	 * and its caller turned it into a silent reset.
+	 */
+	#held = $state(false);
+	#heldReason = $state<HeldReason | null>(null);
+
+	/**
+	 * THE write. Both the debounced and the immediate path funnel through here,
+	 * so there is exactly one place a guard can be forgotten - and it is not.
+	 *
+	 * The #ready half is the house store's hydration guard, copied: a tap that
+	 * lands before hydrate() has read the disk would otherwise persist
+	 * EMPTY-plus-one-tap OVER the real record - the same wipe, arriving through
+	 * timing instead of versioning. One tap lost beats a record lost.
+	 *
+	 * The #held half is belt; saveSession re-checks the disk inside the write
+	 * transaction as braces, and reports back if the record moved under us.
+	 */
+	#write() {
+		if (!this.#ready || this.#held) return;
+		void saveSession($state.snapshot(this.#s) as SessionState, this.#key || undefined).then((ok) => {
+			if (!ok && this.#ready) {
+				this.#held = true;
+				this.#heldReason ??= 'newer';
+			}
+		});
+	}
+
+	#persist = debounce(() => this.#write(), 400);
 
 	/**
 	 * Immediate write, for single discrete actions: a pin, a tick, a saved
@@ -54,11 +85,18 @@ class SessionStore {
 	 * async IndexedDB write is not guaranteed to commit before teardown).
 	 */
 	#persistNow() {
-		void saveSession($state.snapshot(this.#s) as SessionState, this.#key || undefined);
+		this.#write();
 	}
 
 	get ready() {
 		return this.#ready;
+	}
+	/** True when there is a record here this build must not touch. */
+	get held() {
+		return this.#held;
+	}
+	get heldReason() {
+		return this.#heldReason;
 	}
 
 	/**
@@ -74,8 +112,13 @@ class SessionStore {
 	async hydrate() {
 		if (!browser || this.#started) return;
 		this.#started = true;
-		this.#s = await loadSession();
+		const read = await loadSessionRecord();
+		this.#s = read.state;
+		this.#held = read.held;
+		this.#heldReason = read.held ? read.reason : null;
 		this.#key = currentKey();
+		// Ready even when held, as the house store is: pages stop showing
+		// skeletons and render the empty state under the banner.
 		this.#ready = true;
 
 		// A tab closing or navigating mid-debounce would otherwise lose the last
@@ -84,10 +127,13 @@ class SessionStore {
 		// cross-document navigation: pin a dish and immediately click a link,
 		// and the pin evaporated. pagehide is the one that always fires on the
 		// way out.
+		// flushPending, not flush: only a write that is actually pending goes
+		// out. flush() wrote unconditionally, so every tab switch rewrote the
+		// record whether anything had changed or not.
 		window.addEventListener('visibilitychange', () => {
-			if (document.visibilityState === 'hidden') this.flush();
+			if (document.visibilityState === 'hidden') this.#persist.flushPending();
 		});
-		window.addEventListener('pagehide', () => this.flush());
+		window.addEventListener('pagehide', () => this.#persist.flushPending());
 	}
 
 	flush() {
@@ -110,9 +156,14 @@ class SessionStore {
 		if (!browser) return;
 		const next = currentKey();
 		if (this.#ready && next === this.#key) return;
-		if (this.#ready) this.#persist.flush();
+		// An outgoing HELD person's in-memory state is empty-plus-taps; flushing
+		// it would be the exact overwrite the hold exists to prevent.
+		if (this.#ready && !this.#held) this.#persist.flush();
 		this.#ready = false;
-		this.#s = await loadSession();
+		const read = await loadSessionRecord();
+		this.#s = read.state;
+		this.#held = read.held;
+		this.#heldReason = read.held ? read.reason : null;
 		this.#key = next;
 		this.#ready = true;
 	}
@@ -507,9 +558,12 @@ class SessionStore {
 		return $state.snapshot(this.#s) as SessionState;
 	}
 
-	replace(next: SessionState) {
+	/** False when refused: a held record is not ours to replace. */
+	replace(next: SessionState): boolean {
+		if (this.#held) return false;
 		this.#s = next;
 		this.#persist.flush();
+		return true;
 	}
 
 	/**
@@ -517,9 +571,11 @@ class SessionStore {
 	 * is mergeSessions() in persistence/state.ts, a pure function so that a
 	 * unit test can reach it, which is what this code most needed.
 	 */
-	merge(incoming: Partial<SessionState>) {
+	merge(incoming: Partial<SessionState>): boolean {
+		if (this.#held) return false;
 		this.#s = mergeSessions(this.#s, incoming);
 		this.#persist.flush();
+		return true;
 	}
 }
 

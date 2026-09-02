@@ -31,6 +31,10 @@ export async function seedSession(
 ) {
 	await page.addInitScript(
 		([extra, id]) => {
+		// Same switch seedHouse has: addInitScript re-runs on EVERY navigation,
+		// so a spec that must observe what the APP left on disk after a reload
+		// flips this first, or the seed quietly puts the record back.
+		if (localStorage.getItem('__wt_seed_off')) return;
 		const DAY = 86_400_000;
 		const now = Date.now();
 		const state = {

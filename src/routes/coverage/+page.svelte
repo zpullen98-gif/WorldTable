@@ -46,6 +46,7 @@
 	);
 
 	let people = $state<Array<{ id: string; name: string; coverage: StationCoverage[] }>>([]);
+	let heldNames = $state<string[]>([]);
 	let ready = $state(false);
 	let manager = $state(false);
 	let roster = $state(0);
@@ -74,12 +75,18 @@
 		const sessions = await loadAllSessions(
 			visible.map((p) => ({ id: p.id, name: p.name, legacy: p.legacy }))
 		);
-		people = sessions.map((s) => ({
-			id: s.id,
-			name: s.name,
-			// Cooks only. A drill answer is knowledge; a station is work.
-			coverage: coverageFor(s.session.cookedLog, stations, recipesByTechnique)
-		}));
+		// A HELD record - saved by a newer edition than this device runs - reads
+		// as empty, and an empty cooked log would report that person as a gap on
+		// every station. Excluded from the roster and named below instead.
+		heldNames = sessions.filter((s) => s.held).map((s) => s.name);
+		people = sessions
+			.filter((s) => !s.held)
+			.map((s) => ({
+				id: s.id,
+				name: s.name,
+				// Cooks only. A drill answer is knowledge; a station is work.
+				coverage: coverageFor(s.session.cookedLog, stations, recipesByTechnique)
+			}));
 
 		const now = Date.now();
 		const cold = new Map<string, Map<string, string[]>>();
@@ -174,6 +181,12 @@
 			</p>
 		{/if}
 
+		{#if heldNames.length}
+			<p class="note">
+				{heldNames.join(', ')} cooked on a newer edition of the app than this device runs; their
+				coverage cannot be read here until it updates.
+			</p>
+		{/if}
 		<h2 class="sec">Who can cover tonight</h2>
 		<p class="secnote">
 			Ordered by how much of each station a person has actually cooked. A name at zero is not a
