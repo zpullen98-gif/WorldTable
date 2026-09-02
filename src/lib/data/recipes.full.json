@@ -3960,7 +3960,7 @@
       {
         "text": "Boil the marinade with extra honey into a glaze; brush every 10 min.",
         "durationSec": 600,
-        "handsOnSec": 840,
+        "handsOnSec": 300,
         "unattendedSec": 0,
         "estimated": true
       },
@@ -17629,7 +17629,7 @@
       {
         "text": "Grill over medium coals, lid down, turning every 10 min, ~40 min total.",
         "durationSec": 600,
-        "handsOnSec": 600,
+        "handsOnSec": 240,
         "unattendedSec": 2400,
         "estimated": false
       },
@@ -29311,7 +29311,7 @@
       {
         "text": "Grill over medium coals (or roast 220°C), skin-side up first, turning every 10 min, ~40 min, basting with the reserved sauce.",
         "durationSec": 600,
-        "handsOnSec": 600,
+        "handsOnSec": 240,
         "unattendedSec": 2400,
         "estimated": false
       },
@@ -32685,8 +32685,8 @@
       {
         "text": "Simmer the beef to a clean broth, 1.5 h, skimming.",
         "durationSec": 18000,
-        "handsOnSec": 18240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 18000,
         "estimated": true
       },
       {
@@ -34359,7 +34359,7 @@
       {
         "text": "Bulk ferment 4–6 h at room temperature, folding the dough over itself every 45 min: four folds replace all kneading.",
         "durationSec": 21600,
-        "handsOnSec": 2940,
+        "handsOnSec": 720,
         "unattendedSec": 21600,
         "estimated": true
       },
@@ -38004,8 +38004,8 @@
       {
         "text": "Add the meats in order of toughness; simmer 1.5 h more, stirring from the bottom: locro loves to stick.",
         "durationSec": 18000,
-        "handsOnSec": 18240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 18000,
         "estimated": true
       },
       {
@@ -39206,9 +39206,9 @@
       {
         "text": "Grill over medium coals, turning (huli means turn, and the dish is named for the shout) every 5–7 min.",
         "durationSec": 420,
-        "handsOnSec": 420,
+        "handsOnSec": 300,
         "unattendedSec": 0,
-        "estimated": false
+        "estimated": true
       },
       {
         "text": "Baste with the reserved sauce on each turn; the pineapple sugars want to burn, so keep the chicken moving and the heat honest.",
@@ -40827,9 +40827,9 @@
       {
         "text": "Mop lightly every 45 min after the second hour, moisture, not sauce.",
         "durationSec": 2700,
-        "handsOnSec": 0,
-        "unattendedSec": 2700,
-        "estimated": false
+        "handsOnSec": 300,
+        "unattendedSec": 0,
+        "estimated": true
       },
       {
         "text": "They are done when the rack bends and cracks at the surface when lifted with tongs. Dust with a final pinch of fresh rub (the Rendezvous signature) and serve dry, proudly.",
@@ -47948,8 +47948,8 @@
       {
         "text": "Wine and stock; brisket back, fat cap UP; braise covered at 150°C, 3.5–4 h until a fork twists in with mild resistance: collapsing-soft slices badly.",
         "durationSec": 14400,
-        "handsOnSec": 14640,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 14400,
         "estimated": true
       },
       {
@@ -49398,7 +49398,7 @@
       {
         "text": "Grill over MEDIUM coals, turning every 10 min and basting with salt water, 45–75 min depending on the cut; nyama choma is cooked past medium on purpose: firm, chewy at the edges, deeply browned; this is the texture the tradition wants, not a failure of it.",
         "durationSec": 600,
-        "handsOnSec": 5340,
+        "handsOnSec": 5220,
         "unattendedSec": 0,
         "estimated": true
       },
@@ -53670,8 +53670,8 @@
       {
         "text": "Bake at 190°C suspended over a tray, TURNING every 4–5 min and basting with butter, 20–25 min: the sugar caramelizes into a glassy amber shell as it rotates.",
         "durationSec": 300,
-        "handsOnSec": 0,
-        "unattendedSec": 1800,
+        "handsOnSec": 300,
+        "unattendedSec": 1500,
         "estimated": false
       },
       {
@@ -57023,7 +57023,7 @@
       {
         "text": "Uncover the ham and brush with glaze every 15 min for the last 45 min, until lacquered and deep amber.",
         "durationSec": 900,
-        "handsOnSec": 3600,
+        "handsOnSec": 2880,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -57504,9 +57504,9 @@
       {
         "text": "Brine the chops 4-6 hours, no longer, or the texture turns spongy and the meat reads salty.",
         "durationSec": 21600,
-        "handsOnSec": 21600,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 21600,
+        "estimated": true
       },
       {
         "text": "Lift the chops out, rinse, and dry them thoroughly: a wet chop steams instead of searing.",
@@ -64125,8 +64125,8 @@
       {
         "text": "Simmer the tripe with the bone and water 2.5 hours until tender, skimming. Lift the tripe out, cut into strips, and strain the broth.",
         "durationSec": 18000,
-        "handsOnSec": 18240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 18000,
         "estimated": true
       },
       {
@@ -64512,8 +64512,8 @@
       {
         "text": "Freeze in a shallow pan, scraping and stirring every 30 min for 3-4 hours.",
         "durationSec": 1800,
-        "handsOnSec": 16200,
-        "unattendedSec": 0,
+        "handsOnSec": 480,
+        "unattendedSec": 14400,
         "estimated": false
       },
       {
@@ -68185,7 +68185,7 @@
       {
         "text": "Cook beside a hardwood fire, or in a 200C oven with a smoking chip tray, 35-50 min, basting with butter every 15 min.",
         "durationSec": 3000,
-        "handsOnSec": 900,
+        "handsOnSec": 180,
         "unattendedSec": 3000,
         "estimated": false
       },
@@ -68887,8 +68887,8 @@
       {
         "text": "Cook over the lowest heat 4-5 hours, stirring often as it thickens and darkens. A spatter screen saves your arms.",
         "durationSec": 18000,
-        "handsOnSec": 18240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 18000,
         "estimated": true
       },
       {
@@ -103468,9 +103468,9 @@
       {
         "text": "Marinate the slices in all the remaining ingredients 6-24 hours in the fridge.",
         "durationSec": 36000,
-        "handsOnSec": 36000,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
+        "estimated": true
       },
       {
         "text": "Pat the strips dry and lay them on racks without overlapping.",
@@ -110696,8 +110696,8 @@
       {
         "text": "Bring to 90C and hold there 8 to 12 hours, never boiling, skimming for the first hour. Add the aromatics in the final hour.",
         "durationSec": 36000,
-        "handsOnSec": 36240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -110905,8 +110905,8 @@
       {
         "text": "Build the levain: whisk the starter into its 50 g water, stir in the 50 g flour, and hold at 24C (75F) for 5-6 hours until it is domed, webbed inside and a spoonful floats.",
         "durationSec": 21600,
-        "handsOnSec": 21840,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 21600,
         "estimated": true
       },
       {
@@ -110919,7 +110919,7 @@
       {
         "text": "Squeeze in the levain, then the salt with the last 35 g water. Bulk at 25C (77F) with four sets of stretch and fold at 30 minute intervals, and stop when the dough has risen by half, domes at the edges and shows bubbles against the wall of the tub, about 4-5 hours.",
         "durationSec": 1800,
-        "handsOnSec": 2040,
+        "handsOnSec": 840,
         "unattendedSec": 18000,
         "estimated": true
       },
@@ -111510,8 +111510,8 @@
       {
         "text": "Prove on oiled trays 20 minutes at room temperature, then cold retard 12-18 hours at 4C (39F). They are ready when a test bagel dropped into cold water floats within 10 seconds.",
         "durationSec": 1200,
-        "handsOnSec": 37440,
-        "unattendedSec": 0,
+        "handsOnSec": 1440,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -112006,8 +112006,8 @@
       {
         "text": "Bake at 250C (480F) for 15 minutes, drop to 180C (355F) and give it 60-70 minutes more, to an internal 98C (208F). Cool completely, wrap in a cloth, and do not cut it for 24 hours.",
         "durationSec": 900,
-        "handsOnSec": 36240,
-        "unattendedSec": 5100,
+        "handsOnSec": 240,
+        "unattendedSec": 41100,
         "estimated": true
       }
     ],
@@ -114039,9 +114039,9 @@
       {
         "text": "Drain and cook until a bean smears to paste under light thumb pressure: 40 minutes at full pressure, or about 4 hours steamed.",
         "durationSec": 2400,
-        "handsOnSec": 16800,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 2640,
+        "unattendedSec": 14400,
+        "estimated": true
       },
       {
         "text": "Scald the tray, spoon and cover with boiling water, then stir the spore solution through the beans while they are still around 70C (158F), hot enough to kill rivals and harmless to spores.",
@@ -114053,9 +114053,9 @@
       {
         "text": "Spread 2 cm deep, cover with foil pricked all over so air still reaches the surface, and hold at 40 to 42C (104 to 108F) for 22 hours.",
         "durationSec": 36000,
-        "handsOnSec": 36000,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
+        "estimated": true
       },
       {
         "text": "It is done when a white bloom coats the beans and a lifted spoon pulls long threads. Refrigerate 24 hours before eating: the strings tighten and the ammonia settles back.",
@@ -115763,8 +115763,8 @@
       {
         "text": "Stir the salt into the water until it dissolves, pour it over the diced vegetables and chilli, and weight them under. Leave 12 hours at room temperature.",
         "durationSec": 36000,
-        "handsOnSec": 36240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -116174,8 +116174,8 @@
       {
         "text": "Wipe the mango pieces dry, toss with the salt and turmeric, and leave in a covered bowl 24 hours; drain off the liquor that collects and dry the fruit again.",
         "durationSec": 36000,
-        "handsOnSec": 36240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -117501,9 +117501,9 @@
       {
         "text": "Return the bones and back fat to a clean pot, cover with the 5 litres, and hold at a full rolling boil for 8 to 12 hours, topping up with boiling water to keep everything submerged.",
         "durationSec": 36000,
-        "handsOnSec": 36000,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
+        "estimated": true
       },
       {
         "text": "It is done when it is opaque as single cream and leaves a film on the back of a spoon that does not run off.",
@@ -117660,9 +117660,9 @@
       {
         "text": "Cover the clean bones and brisket with the 6 litres of cold water, bring to 90C (195F) and hold there, skimming every 20 minutes for the first hour. Pull the brisket at 90 minutes, when a skewer slides out with no resistance, and chill it in cold water.",
         "durationSec": 1200,
-        "handsOnSec": 1200,
+        "handsOnSec": 300,
         "unattendedSec": 5400,
-        "estimated": false
+        "estimated": true
       },
       {
         "text": "Simmer the bones 5 hours more with the charred aromatics, adding the spice bag only for the last 90 minutes, then season off the heat with the fish sauce, rock sugar and salt.",
@@ -118019,9 +118019,9 @@
       {
         "text": "Seal in a vacuum bag, or wrap tight in two layers of film in a tray, and hold at 4C (39F) for 48 hours, turning the parcel every 12 hours.",
         "durationSec": 36000,
-        "handsOnSec": 72000,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 480,
+        "unattendedSec": 36000,
+        "estimated": true
       },
       {
         "text": "Open it when the flesh has gone deep translucent orange throughout and a fingertip pressed into the thick end springs back instead of denting.",
@@ -121129,9 +121129,9 @@
       {
         "text": "Nestle the beetroot directly into the embers, heap more coals over the tops, and turn them every 15 minutes so no face sits still against the hottest spot.",
         "durationSec": 900,
-        "handsOnSec": 900,
+        "handsOnSec": 300,
         "unattendedSec": 0,
-        "estimated": false
+        "estimated": true
       },
       {
         "text": "Cook 45 to 60 minutes, until a skewer runs to the centre with no resistance and the skins are blistered black and lifting away from the flesh.",
@@ -121647,7 +121647,7 @@
         "text": "Cover tightly with foil and bake at 160C (320F) for 1 hour 45 minutes to 2 hours, until a skewer meets no resistance anywhere from top to base.",
         "durationSec": 3600,
         "handsOnSec": 0,
-        "unattendedSec": 13500,
+        "unattendedSec": 7200,
         "estimated": false
       },
       {
@@ -126649,9 +126649,9 @@
       {
         "text": "Rub the bird inside and out with the 25 g of salt and leave it uncovered in the fridge for 4 hours, until the skin feels dry and tacky rather than wet.",
         "durationSec": 14400,
-        "handsOnSec": 14400,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 14400,
+        "estimated": true
       },
       {
         "text": "Slide it into water held at 85C (185F) with the ginger and spring onion, keep it there 25 minutes, then kill the heat and steep 25 more, until juice from the thigh joint runs clear and the meat at the bone is just set.",
@@ -134877,8 +134877,8 @@
       {
         "text": "Fold the aubergine back in off the heat, tear in the basil, and leave it at room temperature for at least 4 hours; it is not finished until it is cool.",
         "durationSec": 14400,
-        "handsOnSec": 14640,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 14400,
         "estimated": true
       }
     ],
@@ -135419,9 +135419,9 @@
       {
         "text": "Fold it in the bowl four times at 30 minute intervals, until it holds a low dome, then refrigerate overnight.",
         "durationSec": 1800,
-        "handsOnSec": 1800,
+        "handsOnSec": 300,
         "unattendedSec": 0,
-        "estimated": false
+        "estimated": true
       },
       {
         "text": "Cook the onions in the topping oil over low heat for 40 minutes until jammy, pale gold and sweet with no bite left, melt in the anchovies, then add the tomato and reduce until the mix mounds on the spoon.",
@@ -135995,7 +135995,7 @@
       {
         "text": "Scrape the whole surface with a fork every 30 minutes for about 3 hours, until it is a bank of loose crystals that collapse under a spoon.",
         "durationSec": 1800,
-        "handsOnSec": 12600,
+        "handsOnSec": 11160,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -142482,8 +142482,8 @@
       {
         "text": "Warm the milk to 40C (104 F), whisk in the yoghurt, cover, and hold somewhere warm until it sets into a thick sour clabber that shears cleanly off a spoon, about 24 hours.",
         "durationSec": 36000,
-        "handsOnSec": 36240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -143215,7 +143215,7 @@
       {
         "text": "Turn every 2 minutes for about 15 minutes, until the outside is mahogany and crusted and juice beading at a cut runs clear rather than pink.",
         "durationSec": 120,
-        "handsOnSec": 1020,
+        "handsOnSec": 1380,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -145412,9 +145412,9 @@
       {
         "text": "Whisk the sea salt through the yoghurt, tip it into doubled muslin, tie the corners and hang it over a bowl in the fridge until it stops dripping and holds a peak, 12 to 24 hours.",
         "durationSec": 36000,
-        "handsOnSec": 36000,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
+        "estimated": true
       },
       {
         "text": "Toast the sesame in a dry pan over medium heat, shaking, until the seeds turn straw gold and begin to skip, then tip them out to cool completely.",
@@ -146585,7 +146585,7 @@
       {
         "text": "Mix the bread flour, 350 g water, yeast, salt and oil to a shaggy mass, rest 20 minutes, then stretch and fold in the bowl every 20 minutes until the dough peels off the sides in one smooth sheet.",
         "durationSec": 1200,
-        "handsOnSec": 1440,
+        "handsOnSec": 300,
         "unattendedSec": 1200,
         "estimated": true
       },
@@ -152396,8 +152396,8 @@
       {
         "text": "Soak the trimmed livers in the milk at 4C (39F) for 6 hours, then drain and pat dry; the milk draws out blood that otherwise reads metallic and sets a dull grey.",
         "durationSec": 21600,
-        "handsOnSec": 21840,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 21600,
         "estimated": true
       },
       {
@@ -152546,8 +152546,8 @@
         "text": "Seal tight in a bag or double wrap with no air pocket, sit it in a tray under a 500 g weight, and cure at 3C (37F) for 36 to 48 hours, turning it every 12 hours in the brine it throws.",
         "durationSec": 36000,
         "handsOnSec": 240,
-        "unattendedSec": 72000,
-        "estimated": true
+        "unattendedSec": 36000,
+        "estimated": false
       },
       {
         "text": "Unwrap, scrape off the dill and pat dry; the flesh should have darkened to deep coral, feel springy under the thumb and no longer hold a dent.",
@@ -152811,8 +152811,8 @@
       {
         "text": "Cool everything uncovered to room temperature, then hold at 4C (39F) for at least 4 hours before service; a baton is ready when it snaps cleanly and tastes seasoned rather than raw.",
         "durationSec": 14400,
-        "handsOnSec": 14640,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 14400,
         "estimated": true
       }
     ],
@@ -158134,8 +158134,8 @@
       {
         "text": "Smoke at 105 to 110C (220 to 230F) over maple until the internal temperature reaches 74C (165F), about 6 hours; the crust will be near black and that is right.",
         "durationSec": 21600,
-        "handsOnSec": 21840,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 21600,
         "estimated": true
       },
       {
@@ -176588,9 +176588,9 @@
       {
         "text": "Line a sieve with muslin, tip in the fromage blanc and drain it in the fridge until it holds a ridge from the spoon and the whey has stopped dripping, at least 4 h.",
         "durationSec": 14400,
-        "handsOnSec": 14400,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 14400,
+        "estimated": true
       },
       {
         "text": "Beat the drained curd with the crème fraîche and salt, then trickle in the oil while whisking until the mixture is glossy and thick enough to keep the whisk marks.",
@@ -181446,9 +181446,9 @@
       {
         "text": "Rinse the salt away, soak 2 hours in cold water, pat dry, then press the meat flat between boards under a 3 kg weight in the fridge for 24 hours.",
         "durationSec": 7200,
-        "handsOnSec": 36000,
-        "unattendedSec": 7200,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 43200,
+        "estimated": true
       },
       {
         "text": "Hang it in a cool draught, around 12C (54F), until dark, firm and about 40 percent lighter than its trimmed weight, 10 to 14 days.",
@@ -181979,9 +181979,9 @@
       {
         "text": "Seat the lid, brush the outside with the last of the butter and bake at 180C (350F) until a skewer slides through the wall with no resistance and the skin has slumped and browned, 1 hour 30 minutes to 2 hours.",
         "durationSec": 3600,
-        "handsOnSec": 12600,
+        "handsOnSec": 7440,
         "unattendedSec": 0,
-        "estimated": false
+        "estimated": true
       },
       {
         "text": "Rest 15 minutes, then cut straight down through the whole pumpkin so every wedge carries wall, rice and fruit.",
@@ -182303,9 +182303,9 @@
       {
         "text": "Cool the scald to blood heat, beat in the starter, and leave it covered 8 to 12 hours until the surface is domed, bubbled and sharply sour.",
         "durationSec": 36000,
-        "handsOnSec": 36000,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
+        "estimated": true
       },
       {
         "text": "Work in the remaining flour, honey and salt with a wet wooden spoon to a dough like thick mortar, adding the extra water only if it will not come together; it should never look like wheat dough.",
@@ -188185,8 +188185,8 @@
       {
         "text": "Add the onions, bay, thyme and enough stock to come a third of the way up, cover, and cook at 150C (300F), turning every 40 minutes, until a skewer slides in with only slight resistance and the centre reads 75C (167F), about 2 hours 30 minutes.",
         "durationSec": 2400,
-        "handsOnSec": 0,
-        "unattendedSec": 11400,
+        "handsOnSec": 180,
+        "unattendedSec": 9000,
         "estimated": false
       },
       {
@@ -194787,15 +194787,15 @@
       {
         "text": "Cover and hold at 36 to 38C (97 to 100F) for 4 to 5 hours, until it has set to a clean custard that shears off a spoon in a sharp edge and beads a little clear whey.",
         "durationSec": 18000,
-        "handsOnSec": 18000,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 18000,
+        "estimated": true
       },
       {
         "text": "Chill the set curd, then ladle it into a muslin lined sieve and drain in the fridge for 8 to 12 hours, until it has lost about three quarters of its volume and holds the ridge of a spoon.",
         "durationSec": 36000,
-        "handsOnSec": 36240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -196127,8 +196127,8 @@
       {
         "text": "Blend the huacatay, chincho, mint, garlic, both ají pastes, cumin, oregano, salt and half the chicha to a coarse green paste, rub it into the pork and chicken and leave them in the cold for 4 hours.",
         "durationSec": 14400,
-        "handsOnSec": 14640,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 14400,
         "estimated": true
       },
       {
@@ -196522,9 +196522,9 @@
       {
         "text": "Pour into the shallowest metal tray you own and freeze, scraping the set edges into the middle with a fork every 30 minutes, four or five times, until it is stiff and finely crystalline.",
         "durationSec": 1800,
-        "handsOnSec": 0,
-        "unattendedSec": 1800,
-        "estimated": false
+        "handsOnSec": 300,
+        "unattendedSec": 0,
+        "estimated": true
       },
       {
         "text": "Scoop into cold glasses and dust heavily with ground cinnamon.",
@@ -198261,8 +198261,8 @@
       {
         "text": "Roast with the flap folded back at 150C (300F) until the meat twists off the bone with a fork, 5 to 6 hours; the fat under the flap should have rendered to a shallow pool.",
         "durationSec": 21600,
-        "handsOnSec": 21840,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 21600,
         "estimated": true
       },
       {
@@ -204242,15 +204242,15 @@
       {
         "text": "Whisk in the yoghurt, cover and keep at blood heat 6 to 8 hours, until the surface is set firm enough to hold the mark of a spoon and smells cleanly sour.",
         "durationSec": 28800,
-        "handsOnSec": 29040,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
         "text": "Stir in the salt, pour into a doubled muslin, tie it and hang in the fridge 8 to 12 hours, until the curd holds its shape like soft cheese and the whey has stopped dripping.",
         "durationSec": 36000,
-        "handsOnSec": 36240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -204925,8 +204925,8 @@
       {
         "text": "Cover and hold at the barest simmer, turning the meat every 40 minutes, until a skewer slides through the centre with no grip, about 3 hours.",
         "durationSec": 2400,
-        "handsOnSec": 0,
-        "unattendedSec": 13200,
+        "handsOnSec": 300,
+        "unattendedSec": 10800,
         "estimated": false
       },
       {
@@ -207581,9 +207581,9 @@
       {
         "text": "Whisk in the sugar, yeast and rice flour, cover, and leave at room temperature until the surface domes and breaks into bubbles and smells faintly sour, 3 hours to 4 hours.",
         "durationSec": 10800,
-        "handsOnSec": 25200,
-        "unattendedSec": 0,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 14400,
+        "estimated": true
       },
       {
         "text": "Stir it down and fold in the last 100 ml of coconut milk, the cardamom and the salt, to a batter that pours like thin cream.",
@@ -207596,7 +207596,7 @@
         "text": "Pour into a ghee-greased 25 cm round tin to a depth of 3 cm and bake at 180C (350F) for 40 minutes to 45 minutes, until the top is bronzed and a skewer comes out clean.",
         "durationSec": 2400,
         "handsOnSec": 0,
-        "unattendedSec": 5100,
+        "unattendedSec": 2700,
         "estimated": false
       },
       {
@@ -207724,7 +207724,7 @@
         "text": "Rub the cold butter into the 250 g flour, icing sugar and salt to coarse crumbs, bind with the yolk and cold water, line a 24 cm tin and chill it 30 minutes, then prick the base, line it with paper and baking beans and bake at 190C (375F) for 15 minutes, lift out the paper and beans and give it 5 minutes to 8 minutes more until the base is dry and sandy.",
         "durationSec": 1800,
         "handsOnSec": 240,
-        "unattendedSec": 3480,
+        "unattendedSec": 3180,
         "estimated": true
       },
       {
@@ -207883,7 +207883,7 @@
         "text": "Bake in a buttered 23 cm dish at least 6 cm deep at 180C (350F) for 40 minutes to 45 minutes, until the centre springs back under a finger.",
         "durationSec": 2400,
         "handsOnSec": 0,
-        "unattendedSec": 5100,
+        "unattendedSec": 2700,
         "estimated": false
       },
       {
@@ -208155,8 +208155,8 @@
       {
         "text": "Pour the warm ghee over both semolinas and rub it through with your hands until every grain is slick, then cover and leave 12 hours at room temperature.",
         "durationSec": 36000,
-        "handsOnSec": 36240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -208184,7 +208184,7 @@
         "text": "Bake at 170C (340F) for 18 minutes to 20 minutes, until the bases are pale gold and the tops still blond, and dust with icing sugar only once they are cold.",
         "durationSec": 1080,
         "handsOnSec": 0,
-        "unattendedSec": 2280,
+        "unattendedSec": 1200,
         "estimated": false
       }
     ],
@@ -208282,15 +208282,15 @@
       {
         "text": "Pour the syrup into the tahini in a thin stream, stirring with a spatula for no more than 2 minutes to 3 minutes, until the mass thickens, loses its shine and begins to pull into threads behind the blade.",
         "durationSec": 120,
-        "handsOnSec": 300,
+        "handsOnSec": 180,
         "unattendedSec": 0,
         "estimated": false
       },
       {
         "text": "Fold in the pistachios and salt, press firmly into a lined 20 cm tin, and leave 24 hours at room temperature before cutting.",
         "durationSec": 36000,
-        "handsOnSec": 36240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -208726,7 +208726,7 @@
         "text": "Bake at 160C (325F) for 60 minutes to 70 minutes, until the edge is set and the centre moves in one piece, like a shrug, when you nudge the tray.",
         "durationSec": 3600,
         "handsOnSec": 0,
-        "unattendedSec": 7800,
+        "unattendedSec": 4200,
         "estimated": false
       },
       {
@@ -208874,7 +208874,7 @@
         "text": "Cover tightly with foil, stand the tin in a roasting tray of boiling water reaching halfway up, and bake at 180C (350F) for 70 minutes to 85 minutes, until a skewer pushed into the cake band comes out clean.",
         "durationSec": 4200,
         "handsOnSec": 0,
-        "unattendedSec": 9300,
+        "unattendedSec": 5100,
         "estimated": false
       },
       {
@@ -208985,7 +208985,7 @@
         "text": "Set the dish straight on the oven rack and bake at 180C (350F) for 45 minutes to 55 minutes, until the top is blistered dark brown in patches and the centre still trembles.",
         "durationSec": 2700,
         "handsOnSec": 240,
-        "unattendedSec": 6000,
+        "unattendedSec": 3300,
         "estimated": true
       },
       {
@@ -209099,7 +209099,7 @@
         "text": "Divide into 8, roll each piece into a 20 cm disc about 1.5 mm thick, the depth of two coins stacked, prick all over, and bake at 190C (375F) for 5 minutes to 7 minutes, until pale gold and dry. They crisp as they cool.",
         "durationSec": 300,
         "handsOnSec": 240,
-        "unattendedSec": 720,
+        "unattendedSec": 420,
         "estimated": true
       },
       {
@@ -209265,9 +209265,9 @@
       {
         "text": "Fry 2 minutes to 3 minutes a side until deep gold and hollow sounding on the spoon, drain, and pour the warm syrup over.",
         "durationSec": 120,
-        "handsOnSec": 300,
+        "handsOnSec": 420,
         "unattendedSec": 0,
-        "estimated": false
+        "estimated": true
       }
     ],
     "note": "This dough is nearly half squash purée, so its water is held by starch rather than by gluten. That is why it pours instead of kneading, and why the ring is opened by hand in the air: rolling it would need flour, and flour turns picarones into bread rings. The purée must be at blood heat before the yeast goes in, since hot mash kills it outright. Oil at 180C (350F) cuts both ways. Cooler and the dough drinks fat before its crust sets; hotter and the crust hardens before the inside can puff.",
@@ -209550,7 +209550,7 @@
       {
         "text": "Pour the last 250 ml of coconut milk gently over the top and return it for 25 minutes to 30 minutes, until that layer has thickened to a custard skin and the pudding no longer ripples when you move the dish.",
         "durationSec": 1500,
-        "handsOnSec": 3300,
+        "handsOnSec": 1800,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -209666,7 +209666,7 @@
         "text": "Whisk the whole eggs and sugar over a pan of hot water to blood heat, then off the heat to the ribbon stage, fold in the sifted flour in three goes, and bake in a lined 20 cm tin at 180C (350F) for 25 minutes to 30 minutes.",
         "durationSec": 1500,
         "handsOnSec": 240,
-        "unattendedSec": 3300,
+        "unattendedSec": 1800,
         "estimated": true
       },
       {
@@ -209800,7 +209800,7 @@
       {
         "text": "Cook 1 hour to 2 hours more, until the strips are amber right through and the syrup falls from the spoon in thick slow drops.",
         "durationSec": 3600,
-        "handsOnSec": 10800,
+        "handsOnSec": 7200,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -209929,7 +209929,7 @@
       {
         "text": "Add the sweet potato and raisins and cook 20 minutes to 25 minutes more, until a cube gives to a knife but still has square corners, then stir in the vanilla off the heat.",
         "durationSec": 1200,
-        "handsOnSec": 2700,
+        "handsOnSec": 1500,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -210144,7 +210144,7 @@
         "text": "Simmer 3 minutes to 4 minutes, until a drop on a cold saucer skins over and holds a thumbprint within a minute.",
         "durationSec": 180,
         "handsOnSec": 0,
-        "unattendedSec": 420,
+        "unattendedSec": 240,
         "estimated": false
       },
       {
@@ -210523,7 +210523,7 @@
         "text": "Fill each shell to 3 mm below the rim and bake at 200C (400F) for 15 minutes, then drop to 180C (350F) for 10 minutes to 12 minutes.",
         "durationSec": 900,
         "handsOnSec": 240,
-        "unattendedSec": 2220,
+        "unattendedSec": 1620,
         "estimated": true
       },
       {
@@ -210646,7 +210646,7 @@
         "text": "Pour into an oiled 20 cm tin, where the batter sits about 4 cm deep, and steam over a full boil for 45 minutes to 50 minutes, until the surface has turned from milky to translucent and springs back under a finger. A layer no more than 3 cm deep, as in a 23 cm tin, is set in 30 minutes. Cool completely, at least 3 hours, before cutting into 1 cm slabs.",
         "durationSec": 2700,
         "handsOnSec": 2040,
-        "unattendedSec": 16500,
+        "unattendedSec": 13800,
         "estimated": true
       },
       {
@@ -210958,8 +210958,8 @@
       {
         "text": "Start this the day before. Whisk the flour, yoghurt and warm water to a batter the thickness of double cream, beating hard for 3 minutes to work air in, then cover and leave at 25C to 30C (77F to 86F) for 12 hours to 24 hours, until it smells sour and the surface is domed with bubbles.",
         "durationSec": 180,
-        "handsOnSec": 72420,
-        "unattendedSec": 0,
+        "handsOnSec": 420,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -211098,7 +211098,7 @@
       {
         "text": "Knead the chhena on the worktop with the heel of your hand for 6 minutes to 8 minutes, until the grain has gone and a smear on your palm feels smooth and slightly greasy. Divide into 12, roll, and press into 1 cm discs with no cracks at the edge.",
         "durationSec": 360,
-        "handsOnSec": 1080,
+        "handsOnSec": 720,
         "unattendedSec": 0,
         "estimated": true
       },
@@ -211225,7 +211225,7 @@
         "text": "Steam over gently simmering water, the lid set ajar: ramekins take 25 minutes to 30 minutes, a single 1 litre bowl 50 minutes to 60 minutes. The probe is the only endpoint that works for both vessels, so use it: the centre should read 80C to 82C (176F to 180F), with the edge set and the middle moving as one piece.",
         "durationSec": 1500,
         "handsOnSec": 240,
-        "unattendedSec": 9900,
+        "unattendedSec": 5400,
         "estimated": true
       },
       {
@@ -211481,7 +211481,7 @@
       {
         "text": "Boil the tapioca pearls in plenty of water for 8 minutes to 10 minutes, until only a white dot is left in each centre, then cover the pan off the heat for 5 minutes until the dot clears and rinse them in cold water.",
         "durationSec": 480,
-        "handsOnSec": 1380,
+        "handsOnSec": 900,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -211489,7 +211489,7 @@
         "text": "Bring the coconut milk, water, pandan leaf, salt and remaining sugar to a bare simmer, slide in the banana, and poach 5 minutes to 7 minutes until the edges go translucent and a skewer meets no resistance.",
         "durationSec": 300,
         "handsOnSec": 0,
-        "unattendedSec": 720,
+        "unattendedSec": 420,
         "estimated": false
       },
       {
@@ -211633,7 +211633,7 @@
       {
         "text": "Lay on the salted egg and cheese and return them for 10 minutes to 15 minutes, until the top is patched brown and a skewer comes out clean.",
         "durationSec": 600,
-        "handsOnSec": 1500,
+        "handsOnSec": 900,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -211750,9 +211750,9 @@
       {
         "text": "Fold the threads through the cold syrup in a shallow metal tray and freeze, dragging a fork through the whole tray every 30 minutes for about 3 hours, until it is a loose slush of separate icy threads.",
         "durationSec": 1800,
-        "handsOnSec": 240,
-        "unattendedSec": 12600,
-        "estimated": true
+        "handsOnSec": 360,
+        "unattendedSec": 10800,
+        "estimated": false
       },
       {
         "text": "Spoon into chilled glasses and pour the lime juice and sour cherry syrup over at the table.",
@@ -211966,7 +211966,7 @@
       {
         "text": "Leave them completely alone for 8 minutes, then turn them over in sections with a fish slice. Repeat until the edges are amber and a knife slides into a slice with no crunch at the centre, 20 minutes to 25 minutes in all.",
         "durationSec": 480,
-        "handsOnSec": 3180,
+        "handsOnSec": 1980,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -212194,7 +212194,7 @@
       {
         "text": "Set the goose breast down on a rack over a deep tin holding the water and the giblets and roast at 150C (300F). Every 40 minutes ladle the rendered fat out into a bowl and top the tin up with hot water. Turn the bird breast up after 90 minutes.",
         "durationSec": 2400,
-        "handsOnSec": 2640,
+        "handsOnSec": 300,
         "unattendedSec": 5400,
         "estimated": true
       },
@@ -212295,13 +212295,13 @@
         "text": "Carry on until the bubbling changes from big and lazy to fine and quiet and the pieces have shrunk to pale gold curls, 45 minutes to 60 minutes in all.",
         "durationSec": 2700,
         "handsOnSec": 0,
-        "unattendedSec": 6300,
+        "unattendedSec": 3600,
         "estimated": false
       },
       {
         "text": "Add the onion and cook until onion and skin are both deep brown and crisp, 10 minutes to 15 minutes. The onion runs ahead, so fish it out early if it darkens first.",
         "durationSec": 600,
-        "handsOnSec": 1740,
+        "handsOnSec": 1140,
         "unattendedSec": 0,
         "estimated": true
       },
@@ -212554,7 +212554,7 @@
         "text": "Roast breast up on a rack above a tray of water at 200C (400F) for 30 minutes, then drop to 170C (340F) for 45 minutes to 55 minutes, until the skin is mahogany and hard to the tap and the thigh reads 78C (172F).",
         "durationSec": 1800,
         "handsOnSec": 0,
-        "unattendedSec": 7800,
+        "unattendedSec": 5100,
         "estimated": false
       },
       {
@@ -212690,7 +212690,7 @@
         "text": "Sit the goose breast up on a rack with a tray of water beneath to quench the drips. Give it 30 minutes at 200C (400F), then turn the oven down to 170C (340F) and carry on for 1 hour 30 minutes to 2 hours, until the thickest part of the thigh reads 82C (180F).",
         "durationSec": 1800,
         "handsOnSec": 240,
-        "unattendedSec": 14400,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -212829,7 +212829,7 @@
         "text": "Warm the duck through at 200C (400F) until the thickest part of the thigh reads 74C (165F), 35 minutes to 45 minutes from cold, while the oil comes to 190C (375F). Lower it in and spoon oil over any part that stands proud, about 4 minutes, until the skin is dark, blistered and rigid. Drain, rest 5 minutes, and chop through the bone into 3 cm pieces.",
         "durationSec": 2100,
         "handsOnSec": 240,
-        "unattendedSec": 5340,
+        "unattendedSec": 3240,
         "estimated": true
       }
     ],
@@ -212953,7 +212953,7 @@
       {
         "text": "Salt the legs and lay them skin down in a cold, dry, heavy pan. Set it over low heat and leave them 15 minutes to 20 minutes, until a pool of clear fat has run out and the skin is deep brown and stiff. Lift them out.",
         "durationSec": 900,
-        "handsOnSec": 2340,
+        "handsOnSec": 1440,
         "unattendedSec": 0,
         "estimated": true
       },
@@ -213130,7 +213130,7 @@
       {
         "text": "Lower the duck into the water with the charred ginger and onions, bring it to a bare shiver and hold it exactly there, skimming, for 50 minutes to 60 minutes, until the thigh reads 74C (165F). Lift the duck into iced water for 5 minutes, then drain it.",
         "durationSec": 3000,
-        "handsOnSec": 6900,
+        "handsOnSec": 3900,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -213425,14 +213425,14 @@
       {
         "text": "Put the coconut cream alone in a wide pan over medium heat and stir it until the emulsion breaks and clear oil pools at the edges, 5 minutes to 8 minutes.",
         "durationSec": 300,
-        "handsOnSec": 780,
+        "handsOnSec": 720,
         "unattendedSec": 0,
-        "estimated": false
+        "estimated": true
       },
       {
         "text": "Stir the curry paste into that split oil and fry it until the raw garlic and shrimp smell has gone and the paste smells sweet and toasted, 3 minutes to 4 minutes.",
         "durationSec": 180,
-        "handsOnSec": 660,
+        "handsOnSec": 480,
         "unattendedSec": 0,
         "estimated": true
       },
@@ -213446,9 +213446,9 @@
       {
         "text": "Reheat the duck apart from the curry: spread the slices skin up on a tray and give them 8 minutes to 10 minutes at 180C (350F), until they read 74C (165F) and the skin has crisped again.",
         "durationSec": 480,
-        "handsOnSec": 1080,
+        "handsOnSec": 840,
         "unattendedSec": 0,
-        "estimated": false
+        "estimated": true
       },
       {
         "text": "Take the pan off the heat, stir in the basil, chillies and lime juice, then lay the hot duck on top with the skin proud of the sauce.",
@@ -213747,7 +213747,7 @@
         "text": "Strain, cover and refrigerate 24 hours to 48 hours, then bring the batter back to room temperature and stir gently to redistribute the fat.",
         "durationSec": 36000,
         "handsOnSec": 240,
-        "unattendedSec": 72000,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -213761,7 +213761,7 @@
         "text": "Fill the chilled moulds with the room temperature batter to 5 mm below the rim, bake at 240C (475F) for 15 minutes then at 180C (350F) for 45 minutes to 55 minutes until nearly black, and turn out onto a rack at once.",
         "durationSec": 900,
         "handsOnSec": 240,
-        "unattendedSec": 6900,
+        "unattendedSec": 4200,
         "estimated": true
       }
     ],
@@ -213876,7 +213876,7 @@
         "text": "Bake at 200C (400F) for 35 minutes to 40 minutes until the sugar beneath each has gone to dark caramel, then lift them out immediately or the caramel welds them in.",
         "durationSec": 2100,
         "handsOnSec": 0,
-        "unattendedSec": 4500,
+        "unattendedSec": 2400,
         "estimated": false
       }
     ],
@@ -214011,7 +214011,7 @@
         "text": "Bake at 220C (425F) for 4 minutes, drop the oven to 180C (350F) for 6 minutes to 7 minutes, and turn them out the moment the edges brown and the hump springs back.",
         "durationSec": 240,
         "handsOnSec": 240,
-        "unattendedSec": 1020,
+        "unattendedSec": 660,
         "estimated": true
       }
     ],
@@ -214139,7 +214139,7 @@
         "text": "Heap three tall peaks into the hot dish and bake 10 minutes to 12 minutes, until the ridges are browned and the insides still creamy, then dust with icing sugar and carry it straight to the table.",
         "durationSec": 600,
         "handsOnSec": 240,
-        "unattendedSec": 1320,
+        "unattendedSec": 720,
         "estimated": true
       }
     ],
@@ -214274,7 +214274,7 @@
         "text": "Glaze the lattice, press flaked almonds around the rim and bake at 180C (350F) for 45 minutes to 50 minutes, until the jam bubbles slowly and the pastry is a dark biscuit brown.",
         "durationSec": 2700,
         "handsOnSec": 240,
-        "unattendedSec": 5700,
+        "unattendedSec": 3000,
         "estimated": true
       },
       {
@@ -214423,7 +214423,7 @@
         "text": "Press the dough into a lined 26 cm tin, spread the almond mixture right to the edge, prove 30 minutes, then bake at 180C (350F) for 30 minutes to 35 minutes until the top is amber and the crumb reads 96C (205F).",
         "durationSec": 1800,
         "handsOnSec": 2040,
-        "unattendedSec": 3900,
+        "unattendedSec": 2100,
         "estimated": true
       },
       {
@@ -214538,7 +214538,7 @@
       {
         "text": "Toast the almonds at 160C (320F) for 12 minutes to 15 minutes until pale gold right through, then hold them somewhere warm.",
         "durationSec": 720,
-        "handsOnSec": 1620,
+        "handsOnSec": 900,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -214559,7 +214559,7 @@
       {
         "text": "Boil the sugar and water to 145C (293F), pour it into the whites in a thin thread with the mixer running, follow with the hot honey, then set the bowl over simmering water and stir with a spatula for 25 minutes to 35 minutes, until a teaspoon of the mass dropped into cold water sets hard enough to snap rather than bend.",
         "durationSec": 1500,
-        "handsOnSec": 3600,
+        "handsOnSec": 2100,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -214810,7 +214810,7 @@
         "text": "Bake at 180C (350F) for 30 minutes to 35 minutes, then judge it by probe alone, pushed into the geometric centre of the bowl: pull it out when that reads 80C (176F), which is the reading that makes the loose centre safe to eat, and ignore the skewer, which comes away wet.",
         "durationSec": 1800,
         "handsOnSec": 0,
-        "unattendedSec": 3900,
+        "unattendedSec": 2100,
         "estimated": false
       },
       {
@@ -214929,7 +214929,7 @@
         "text": "Bake the shortbread at 150C (300F) for 35 minutes to 40 minutes until an even pale sand colour, cut through the marks while hot and cool it in the tin.",
         "durationSec": 2100,
         "handsOnSec": 240,
-        "unattendedSec": 4500,
+        "unattendedSec": 2400,
         "estimated": true
       }
     ],
@@ -215063,7 +215063,7 @@
         "text": "Spread the jam over the base, level the frangipane on top, scatter the flaked almonds, and bake at 170C (340F) for 35 minutes to 40 minutes until risen, golden and springy at the centre.",
         "durationSec": 2100,
         "handsOnSec": 240,
-        "unattendedSec": 4500,
+        "unattendedSec": 2400,
         "estimated": true
       }
     ],
@@ -215167,9 +215167,9 @@
       {
         "text": "Whisk the syrup into the yolks and salt in a heatproof bowl, set it over simmering water and cook to 82C (180F), whisking constantly, then take it off and whip 8 minutes to 10 minutes until pale, thick and cool to the touch.",
         "durationSec": 480,
-        "handsOnSec": 1080,
+        "handsOnSec": 840,
         "unattendedSec": 0,
-        "estimated": false
+        "estimated": true
       },
       {
         "text": "Whisk in the cold espresso and rum, whip the cream to soft peaks, and fold the cream through in two additions, keeping as much air as you can.",
@@ -215290,14 +215290,14 @@
         "text": "Bake at 170C (340F) for 25 minutes to 30 minutes until firm and pale gold, then cool them on the tray for 15 minutes.",
         "durationSec": 1500,
         "handsOnSec": 0,
-        "unattendedSec": 4200,
+        "unattendedSec": 2700,
         "estimated": false
       },
       {
         "text": "Cut on a 45 degree angle into 1.5 cm slices with a serrated knife, lay them cut side down and bake again at 150C (300F) for 15 minutes to 20 minutes until dry all the way through.",
         "durationSec": 900,
         "handsOnSec": 240,
-        "unattendedSec": 2100,
+        "unattendedSec": 1200,
         "estimated": true
       }
     ],
@@ -215394,7 +215394,7 @@
       {
         "text": "Simmer the rice in the milk with the lemon peel, sugar and salt, stirring often, for 30 minutes to 35 minutes until the grains are soft and the mixture is still loose and creamy.",
         "durationSec": 1800,
-        "handsOnSec": 4140,
+        "handsOnSec": 2340,
         "unattendedSec": 0,
         "estimated": true
       },
@@ -215416,7 +215416,7 @@
         "text": "Butter a 24 cm tin, dust it with breadcrumbs, pour the mixture in and bake at 170C (340F) for 50 minutes to 55 minutes until set with a faint wobble and browned in patches.",
         "durationSec": 3000,
         "handsOnSec": 240,
-        "unattendedSec": 6300,
+        "unattendedSec": 3300,
         "estimated": true
       },
       {
@@ -215560,7 +215560,7 @@
         "text": "Bake at 180C (350F) for 50 minutes to 55 minutes until deep gold and puffed, then pour the cold syrup over the pastry straight from the oven and leave it 4 hours.",
         "durationSec": 3000,
         "handsOnSec": 0,
-        "unattendedSec": 20700,
+        "unattendedSec": 17700,
         "estimated": false
       }
     ],
@@ -215694,7 +215694,7 @@
         "text": "Whisk the yolks with the milk and the 200 g sugar, bring to a boil and simmer 4 minutes to 5 minutes, stirring, until it thickens to the consistency of condensed milk, then cover, chill in the refrigerator, and bring it back to 20C (68F) shortly before you need it.",
         "durationSec": 240,
         "handsOnSec": 240,
-        "unattendedSec": 540,
+        "unattendedSec": 300,
         "estimated": true
       },
       {
@@ -216707,7 +216707,7 @@
       {
         "text": "Grill over medium coals for 12 minutes to 15 minutes, turning often, to an internal 71C (160F). The skin should blister and stay whole; a split link has been cooked too fast.",
         "durationSec": 720,
-        "handsOnSec": 1860,
+        "handsOnSec": 1140,
         "unattendedSec": 0,
         "estimated": true
       }
@@ -217111,15 +217111,15 @@
       {
         "text": "Roast at 150C (300F) for 3 hours to 3.5 hours, until the centre of the loin reads 63C (145F) and a skewer slips through the belly wrapped around it.",
         "durationSec": 10800,
-        "handsOnSec": 18000,
-        "unattendedSec": 10800,
-        "estimated": false
+        "handsOnSec": 240,
+        "unattendedSec": 28800,
+        "estimated": true
       },
       {
         "text": "Raise the oven to 240C (475F) for 20 minutes to 30 minutes until the rind blisters and shatters under a knuckle, then rest the whole roll 20 minutes before cutting 2 cm slices.",
         "durationSec": 1200,
         "handsOnSec": 1440,
-        "unattendedSec": 3000,
+        "unattendedSec": 1800,
         "estimated": true
       }
     ],
@@ -217427,8 +217427,8 @@
       {
         "text": "Cook the tongue in a second pot of boiling water for 2.5 hours and peel the skin away while it is still too hot to hold comfortably; once cold it will not come off at all.",
         "durationSec": 18000,
-        "handsOnSec": 18240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 18000,
         "estimated": true
       },
       {
@@ -217846,7 +217846,7 @@
         "text": "Lay the birch sticks in a criss cross raft in the base of a heavy pot, pour the water in beneath them, pile the ribs on top, cover tightly and steam over low heat for 2.5 hours to 3 hours, adding hot water whenever the pot runs dry, until the meat slips off the bone.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 28800,
+        "unattendedSec": 10800,
         "estimated": true
       },
       {
@@ -219223,7 +219223,7 @@
         "text": "Line a 1.5 kg loaf tin of about 2 litres with the bacon, press the mixture in without air pockets, fold the bacon over and bake at 150C to 160C (300F to 325F) in a water bath until the centre reads 71C (160F), 1 hour 15 minutes to 1 hour 45 minutes.",
         "durationSec": 3600,
         "handsOnSec": 240,
-        "unattendedSec": 10800,
+        "unattendedSec": 6300,
         "estimated": true
       },
       {
@@ -219375,7 +219375,7 @@
       {
         "text": "Grill over hot charcoal, skin side down first, 3 minutes to 4 minutes a side, brushing on the pomegranate molasses only in the last minute, until the thigh reads 74C (165F).",
         "durationSec": 180,
-        "handsOnSec": 420,
+        "handsOnSec": 240,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -220445,7 +220445,7 @@
         "text": "Raise the oven to 180C (350F). Lift the shanks out, stir the raw orzo and the last 300 ml of stock, boiling hot, into the sauce, bring the pot back to a simmer on the hob, sit the shanks on top and return it uncovered to the oven for 15 minutes to 18 minutes.",
         "durationSec": 900,
         "handsOnSec": 240,
-        "unattendedSec": 1980,
+        "unattendedSec": 1080,
         "estimated": true
       },
       {
@@ -220591,7 +220591,7 @@
       {
         "text": "Add the water, salt, pepper and sugar, cover, and cook over the lowest heat without stirring for 1 hour 15 minutes to 1 hour 45 minutes, until the lettuce has collapsed into a green broth.",
         "durationSec": 3600,
-        "handsOnSec": 10800,
+        "handsOnSec": 6300,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -220721,7 +220721,7 @@
         "text": "Set the pot on the coals for 1 hour 30 minutes to 2 hours 30 minutes depending on the age of the animal, turning it now and then, until the meat slips off the rib and the water has gone dark and fatty; look in at the hour and add a cup of boiling water if the pot has gone quiet.",
         "durationSec": 3600,
         "handsOnSec": 240,
-        "unattendedSec": 14400,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -221170,8 +221170,8 @@
       {
         "text": "Add the trotters, salt and water, bring to a bare tremble and cook with the lid ajar for 6 hours to 7 hours, skimming through the first hour. Keep the trotters covered the whole way, topping up with boiling water, never cold, as the level falls; expect to add a litre or more before the skin turns translucent and slides off the bone.",
         "durationSec": 21600,
-        "handsOnSec": 47040,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 25200,
         "estimated": true
       },
       {
@@ -221785,14 +221785,14 @@
         "text": "Bake at 180C (350F) for 50 minutes to 60 minutes, until the centre reads 71C (160F) and the caul has melted down to a thin brown skin.",
         "durationSec": 3000,
         "handsOnSec": 240,
-        "unattendedSec": 6600,
+        "unattendedSec": 3600,
         "estimated": true
       },
       {
         "text": "Cool it in the tin for 1 hour to 1 hour 30 minutes, no longer, then refrigerate until cold right through and slice it straight from the fridge; a warm loaf falls apart on the knife and a dense offal loaf left to cool on the counter sits for hours at the temperature bacteria like best.",
         "durationSec": 3600,
         "handsOnSec": 240,
-        "unattendedSec": 9000,
+        "unattendedSec": 5400,
         "estimated": true
       }
     ],
@@ -221933,7 +221933,7 @@
       {
         "text": "Grill over medium coals for 8 minutes to 10 minutes, turning often, until the centre reads 71C (160F); fierce heat splits the casing and the fat you worked to keep runs into the fire.",
         "durationSec": 480,
-        "handsOnSec": 1320,
+        "handsOnSec": 840,
         "unattendedSec": 0,
         "estimated": true
       }
@@ -222218,7 +222218,7 @@
         "text": "Lift the dumplings into bowls, then boil the syrup hard for 8 minutes to 10 minutes, until it has reduced by about half and coats the back of a spoon, pour it back over and serve with the cold cream.",
         "durationSec": 480,
         "handsOnSec": 240,
-        "unattendedSec": 1080,
+        "unattendedSec": 600,
         "estimated": true
       }
     ],
@@ -222343,7 +222343,7 @@
         "text": "Bake 20 minutes to 25 minutes until the meringue is set, dry on top and the colour of a plain biscuit, then cool completely in the tin before cutting into squares.",
         "durationSec": 1200,
         "handsOnSec": 240,
-        "unattendedSec": 2700,
+        "unattendedSec": 1500,
         "estimated": true
       }
     ],
@@ -222450,7 +222450,7 @@
         "text": "Bake 45 minutes to 50 minutes, until the top is set and matt, the edges pull away from the leaf and a skewer comes out carrying a thick translucent smear rather than raw white paste.",
         "durationSec": 2700,
         "handsOnSec": 0,
-        "unattendedSec": 5700,
+        "unattendedSec": 3000,
         "estimated": false
       },
       {
@@ -222541,7 +222541,7 @@
       {
         "text": "Peel the taro wearing gloves, since the raw sap irritates skin, and boil it in well salted water for 25 minutes to 30 minutes until a knife meets no resistance at the centre of the largest piece. Drain it, pour the cooking water away and let the steam blow off.",
         "durationSec": 1500,
-        "handsOnSec": 3540,
+        "handsOnSec": 2040,
         "unattendedSec": 0,
         "estimated": true
       },
@@ -222836,7 +222836,7 @@
         "text": "Roll each piece on baking paper to a 20 cm round about 4 mm thick, trimming against an upturned plate, and bake at 180C (350F) for 9 minutes to 11 minutes until the edges are just tan and the middle is dry. Cool the rounds flat.",
         "durationSec": 540,
         "handsOnSec": 240,
-        "unattendedSec": 1200,
+        "unattendedSec": 660,
         "estimated": true
       },
       {
@@ -222951,7 +222951,7 @@
       {
         "text": "Whip on high for 6 minutes to 8 minutes: it will roughly double, turn from wine dark to pale pink and begin to hold soft peaks.",
         "durationSec": 360,
-        "handsOnSec": 840,
+        "handsOnSec": 480,
         "unattendedSec": 0,
         "estimated": false
       },
@@ -223067,7 +223067,7 @@
       {
         "text": "Melt the butter in a wide frying pan, add the rye crumbs and brown sugar and fry over a medium heat, stirring constantly, for 8 minutes to 10 minutes until they smell of toast and toffee.",
         "durationSec": 480,
-        "handsOnSec": 1320,
+        "handsOnSec": 840,
         "unattendedSec": 0,
         "estimated": true
       },
@@ -223212,7 +223212,7 @@
         "text": "Beat the 100 g butter with the 100 g sugar, beat in the eggs one at a time and fold in the flour, then spread the batter into two 20 cm circles marked on lined trays and bake at 200C (400F) for 8 minutes to 10 minutes until springy. Cool and trim them to sit inside a 20 cm ring at least 8 cm deep, lined with a collar of baking paper or acetate.",
         "durationSec": 480,
         "handsOnSec": 240,
-        "unattendedSec": 1080,
+        "unattendedSec": 600,
         "estimated": true
       },
       {
@@ -224035,8 +224035,8 @@
       {
         "text": "Pour the marinade into a pan and boil it for a full minute before it goes anywhere near the roast, because it held raw lamb for 12 hours. Roast at 160C (325F), basting with the boiled marinade every 20 minutes, until the centre of the stuffing reads 74C (165F), 2 hours to 2.5 hours.",
         "durationSec": 36000,
-        "handsOnSec": 7200,
-        "unattendedSec": 55200,
+        "handsOnSec": 7560,
+        "unattendedSec": 54000,
         "estimated": false
       },
       {
@@ -224432,7 +224432,7 @@
       {
         "text": "Fold the leaves into a sealed parcel and bake at 180C (350F) until the chicken reads 74C (165F) at the bone and the batter is set enough to cut, 90 minutes to 2 hours 30 minutes depending on how deep the tray is. The thermometer decides this, not the clock.",
         "durationSec": 5400,
-        "handsOnSec": 14640,
+        "handsOnSec": 9240,
         "unattendedSec": 0,
         "estimated": true
       },
@@ -224570,7 +224570,7 @@
         "text": "Cook at 130C (265F) for 10 hours to 12 hours without opening it; the meat is done when it collapses into threads under the back of a spoon.",
         "durationSec": 36000,
         "handsOnSec": 240,
-        "unattendedSec": 72000,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -224869,8 +224869,8 @@
       {
         "text": "Line the rack with the softened maguey leaves, lay in the lamb and the avocado leaves, fold the leaves over, cover with foil and the lid and cook at 150C (300F) for 5 hours, until the meat leaves the bone with no resistance. At the four hour mark, open it just far enough to stir the rice into the broth below, then seal it again.",
         "durationSec": 18000,
-        "handsOnSec": 18240,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 18000,
         "estimated": true
       },
       {
@@ -225113,7 +225113,7 @@
         "text": "Lay the sheet flat on a rack over a tray and dry it uncovered in the fridge, and only in the fridge, for 24 hours to 36 hours, turning it once, until the surface is matte and tacky and the sheet has stiffened but still bends.",
         "durationSec": 36000,
         "handsOnSec": 0,
-        "unattendedSec": 72000,
+        "unattendedSec": 36000,
         "estimated": false
       },
       {

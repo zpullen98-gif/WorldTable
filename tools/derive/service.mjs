@@ -63,6 +63,37 @@ export const ADVANCE_MIN = 240;
 /** The parser is the original's, widened to find EVERY duration in a clause. */
 const DURATION = /(\d+)\s*(?:[–-]\s*(\d+))?\s*(min\b|minute|h\b|hour)/gi;
 
+/*
+ * A recurrence is not a block of time.
+ *
+ * "turning the parcel every 12 hours" states how OFTEN a short act repeats, not
+ * how long anything takes. Read as a duration it charged twelve hours; read as
+ * a recurrence it is four turns of about a minute. The precedent for refusing a
+ * number outright is one file over: advance.mjs disqualifies clauses matching
+ * STORAGE, QUALITY or AGE before scoring any duration at all.
+ *
+ * `every` only, never `each`: across 1,844 recipes `each` precedes a parsable
+ * duration ZERO times, while it is distributive 59 times ("whisking each
+ * addition", "soak each overnight").
+ */
+const RECURRENCE_BEFORE = /\bevery\s*$/i;
+const RECURRENCE_AFTER = /^\s*[\u2013-]?\s*intervals?\b/i;
+
+/** One turn, one baste, one fold. The act a recurrence repeats is short. */
+export const RECURRENCE_ACTION_MIN = 1;
+
+/*
+ * One range written long is ONE duration.
+ *
+ * DURATION understands a dash range and keeps its top (`m[2] || m[1]`), but
+ * "6 hours to 7 hours" matches TWICE and both were summed: 80 sites across 69
+ * recipes, charging thirteen hours where seven were meant. COMPOUND carries the
+ * same logic back over a compound low end, so "1 hour 30 minutes to 2 hours" is
+ * two hours rather than three and a half.
+ */
+const SPELLED_RANGE = /^s?\s*to\s*$/i;
+const COMPOUND = /^s?\s+$/i;
+
 /** Verbs whose time the cook is free during. */
 export const UNATTENDED =
 	/\b(simmer|braise|bake|roast|proof|ferment|rest|chill|refrigerat|marinat|steep|rise|cure|soak|reduce|cool|infuse|brine|freeze|stand|smoke|steam|sous|dry)/gi;
@@ -90,6 +121,30 @@ function positions(re, text) {
  * @param {number} mins
  */
 export function isUnattended(clause, at, mins) {
+	/*
+	 * Four hours or more is not a pair of hands, whatever verb sits nearest.
+	 *
+	 * ADVANCE_MIN is this module's OWN line for "cannot be fitted into a
+	 * service: it starts the day before", and a block that cannot fit inside a
+	 * service is not service work. Below the line the nearest-verb rule decides
+	 * exactly as before, so nothing short moves: a dark roux whisked 30-45 min
+	 * and taffy pulled 15-20 min stay hands-on. That is the whole reason to
+	 * prefer a magnitude line to a vocabulary edit - adding `cook` to
+	 * UNATTENDED would have flipped 192 durations with a median of five
+	 * minutes, most of them correctly attended work.
+	 *
+	 * Above the line no verb in range is worth trusting, because the verbs that
+	 * govern a long hold - hold, hang, leave, retard, drain - are in NEITHER
+	 * list. `before(waits)` then returns Infinity, Infinity is never less than
+	 * a finite number, and the nearest ACTIVE token wins by accident. On the
+	 * flagship case the winner was `layer`, out of "two layers of film", and a
+	 * 48-hour cure booked twenty hours of work.
+	 *
+	 * Measured: 45 stated durations of 240 min or more were booked hands-on,
+	 * across 42 steps in 39 recipes. Every one is a cure, brine, prove, drain,
+	 * hang, smoke, roast or long hold. No false positives.
+	 */
+	if (mins >= ADVANCE_MIN) return true;
 	const waits = positions(UNATTENDED, clause);
 	const hands = positions(ACTIVE, clause);
 	/** @param {number[]} xs */
@@ -129,23 +184,70 @@ export function stepService(text) {
 
 	for (const clause of stripped.split(/[;.]/).map((c) => c.trim()).filter(Boolean)) {
 		DURATION.lastIndex = 0;
-		const found = [...clause.matchAll(DURATION)];
-		if (!found.length) {
+		const all = [...clause.matchAll(DURATION)];
+		if (!all.length) {
 			// A clause with no time in it is work somebody still has to do. Two
 			// words or fewer is a fragment, not an instruction.
 			if (positions(ACTIVE, clause).length || clause.split(/\s+/).length > 2) unnamedWork = true;
 			continue;
 		}
-		for (const m of found) {
-			let mins = parseInt(m[2] || m[1], 10);
-			if (m[3].toLowerCase().startsWith('h')) mins *= 60;
-			mins = Math.min(mins, 600); // the original's ceiling, kept
+		// One range written long is one duration: keep the top, drop the low end.
+		/** @param {number} i */
+		const gap = (i) => clause.slice(all[i - 1].index + all[i - 1][0].length, all[i].index);
+		/** @type {Set<number>} */
+		const low = new Set();
+		for (let i = 1; i < all.length; i++) {
+			if (!SPELLED_RANGE.test(gap(i))) continue;
+			low.add(i - 1);
+			for (let j = i - 1; j > 0 && COMPOUND.test(gap(j)); j--) low.add(j - 1);
+		}
+		const found = all.filter((_, i) => !low.has(i));
+
+		// Raw minutes, BEFORE the ceiling: a recurrence needs the true span to
+		// know how many visits it stands for. Capped, dill's 48 hours would
+		// derive one turn instead of four.
+		const raw = found.map((m) => {
+			const v = parseInt(m[2] || m[1], 10);
+			return m[3].toLowerCase().startsWith('h') ? v * 60 : v;
+		});
+		const recurs = found.map(
+			(m) =>
+				RECURRENCE_BEFORE.test(clause.slice(0, m.index)) ||
+				RECURRENCE_AFTER.test(clause.slice(m.index + m[0].length))
+		);
+		/** The block a recurrence repeats inside, when the clause states one. */
+		const span = Math.max(0, ...raw.filter((_, i) => !recurs[i]));
+		let timed = 0;
+
+		found.forEach((m, i) => {
+			if (recurs[i]) {
+				const reps = Math.min(12, Math.max(1, Math.round(span / raw[i]) || 1));
+				handsMin += reps * RECURRENCE_ACTION_MIN;
+				// Counted as stated work, or the 4-minute default double-charges it.
+				statedActive++;
+				return;
+			}
+			timed++;
+			/*
+			 * 600 comes from the original's stepDur, where a NON-GLOBAL match
+			 * capped ONE undifferentiated elapsed number per step for a printed
+			 * T+ axis. Here DURATION is global and the ceiling applies per
+			 * MATCH, so a step can still compose past it. Kept as a damper on
+			 * the parser, not as the original's contract - which is honoured
+			 * where it belongs, in build-data.mjs's durationSec for the timer.
+			 */
+			const mins = Math.min(raw[i], 600);
 			if (isUnattended(clause, m.index, mins)) waitMin += mins;
 			else {
 				handsMin += mins;
 				statedActive++;
 			}
-		}
+		});
+
+		// A clause whose ONLY number was a recurrence still holds work nobody
+		// timed: "Mop lightly every 45 min" is not a step that costs nothing.
+		if (!timed && (positions(ACTIVE, clause).length || clause.split(/\s+/).length > 2))
+			unnamedWork = true;
 	}
 
 	// Active verbs outnumbering the durations attached to them means work nobody
