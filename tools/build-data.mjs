@@ -201,8 +201,10 @@ const OVERRIDES = existsSync(overridesPath)
 /**
  * The backfill overlay: slug -> a rewritten "from the pass" note.
  *
- * The raw extraction stays byte-identical to the archived original (that is
- * what verify:data proves); improved notes live here and are applied before
+ * The raw extraction stays WORD-identical to the archived original (that is
+ * what verify:data proves - byte-identity stopped being the invariant with the
+ * em dash sweep of 29 Aug, and the checks print "same words, repunctuated");
+ * improved notes live here and are applied before
  * the blobs are built, so flavor tags, seasons, cross-links and the search
  * index all re-derive from the richer text, exactly the ripple the backfill
  * is meant to cause, visible in the recipes.json diff.

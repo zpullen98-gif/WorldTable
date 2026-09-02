@@ -562,7 +562,10 @@ asserts NOT_SCREENED stays non-empty so the day it lands, the copy must change.
 
 - None planned. The content backfill completed 2026-08-08: all 320 thin "from
   the pass" notes rewritten in src/lib/data/notes.json (the overlay keeps the
-  raw extraction byte-identical to the archived original). `npm run
+  raw extraction WORD-identical to the archived original; byte-identity ended
+  with the em dash sweep of 29 Aug). Measured: move notes.json aside and
+  build:data still exits 0 saying "all gates passed" while those same 320 index
+  entries change, so the overlay is a silent dependency. `npm run
   report:notes` is the ledger and reads zero. New authoring goes through the
   same overlay; the parity harness exempts overlaid slugs automatically.
 - 143 recipes still carry no technique tag, spread thin (no chapter has more

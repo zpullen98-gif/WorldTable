@@ -8,9 +8,9 @@
  * sealed original, and the other hundred did not, so the Table taught a hundred
  * skills by handing over a search box.
  *
- * The films cannot live in raw/TECH.json: that file is proved byte-for-byte
- * against the archived original by verify:data, and adding a URL to it would
- * break the proof. They cannot live in SUPPLEMENT either, because fullTechTable
+ * The films cannot live in raw/TECH.json: that file is proved WORD-for-word
+ * against the archived original by verify:data (byte-identity ended with the em
+ * dash sweep), and adding a URL to it would break the proof just the same. They cannot live in SUPPLEMENT either, because fullTechTable
  * merges by label and keeps the first entry's fields, so a film added there
  * would be silently dropped for any technique the original already names. So
  * they live here, keyed by slug, and are attached to the table after the merge.
