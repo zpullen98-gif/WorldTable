@@ -10,3 +10,8 @@ reference/world-table-v1.html -text
 *.svelte text eol=lf
 *.css  text eol=lf
 *.md   text eol=lf
+# The workflow carries a multi-line bash block (the re-derive gate). A CRLF
+# checkout of it fails on an ubuntu runner with an error that names the shell,
+# not the line endings. This held only because core.autocrlf normalises on
+# commit here; the attribute makes it true on any machine.
+*.yml  text eol=lf
