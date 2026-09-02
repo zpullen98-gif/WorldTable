@@ -1636,6 +1636,7 @@
     "equipment": [],
     "techniques": [
       "Deglazing & pan sauces",
+      "Caramelizing onions",
       "The broiler: heat from above"
     ],
     "flavor": {
@@ -5041,6 +5042,7 @@
     "note": "Frying the blended salsa is the step that makes it Mexican cooking: a raw purée tastes like tomato juice; seared in hot fat until it darkens and thickens, it concentrates into something with a past. The chipotles are smoked-then-dried jalapeños, so the dish carries fire and smoke without a grill. Simmer only until juicy (tinga on a tostada should sit, not soak), and remember the poaching broth is free flavor waiting to be used.",
     "equipment": [],
     "techniques": [
+      "Caramelizing onions",
       "Frying the paste until the oil splits",
       "The bare simmer: holding liquid below the boil",
       "Mashing & puréeing"
@@ -8981,6 +8983,7 @@
     "note": "This peasant dish lives or dies on onion patience: mahogany, not blond, because those twenty-five slow minutes are the only place its depth can come from; lentils and rice bring bulk, the onions bring the cuisine. Half get folded through, half go on top still crisp, and the contrast is the dish. Mujadara is medieval (it appears in Arabic cookbooks from the 13th century), and it remains the proof that three cheap ingredients plus discipline outrank ten expensive ones without it.",
     "equipment": [],
     "techniques": [
+      "Caramelizing onions",
       "Sautéing & the shallow fry"
     ],
     "flavor": {
@@ -19034,6 +19037,7 @@
       "Grill"
     ],
     "techniques": [
+      "Caramelizing onions",
       "Charring over open flame",
       "Marinating: acid, salt and time"
     ],
@@ -28215,6 +28219,7 @@
     "equipment": [],
     "techniques": [
       "Injera",
+      "Caramelizing onions",
       "Frying the paste until the oil splits"
     ],
     "flavor": {
@@ -34936,6 +34941,7 @@
     "note": "The boil sets the crust before the oven can spring the crumb: that is the chew, the shine, and the entire difference between a bagel and a roll with a hole. New York credits its water; bakers credit the overnight cold proof and the malt. Both are half right.",
     "equipment": [],
     "techniques": [
+      "Boiling bagels",
       "Fermentation",
       "Sautéing & the shallow fry",
       "Proofing: the rise before the oven"
@@ -37915,7 +37921,6 @@
     "note": "The 'napolitana' has nothing to do with Naples; it was born at Restaurante Nápoli in Buenos Aires, allegedly to rescue a slightly burnt milanesa under sauce and cheese. Argentina eats milanesas the way other nations eat sandwiches: daily, in every home, and the leftover milanesa sandwich (sánguche de milanesa) may quietly outrank the original.",
     "equipment": [],
     "techniques": [
-      "The soufflé",
       "The broiler: heat from above",
       "Sautéing & the shallow fry",
       "The coat before the fry: dredge, crumb, batter"
@@ -37931,13 +37936,7 @@
     },
     "pairingId": 16,
     "films": {
-      "techniques": [
-        {
-          "label": "Technique: The soufflé",
-          "url": "https://www.youtube.com/results?search_query=souffle%20technique%20how%20to",
-          "sub": "The skill inside this recipe"
-        }
-      ],
+      "techniques": [],
       "search": {
         "label": "This dish, cooked on camera",
         "url": "https://www.youtube.com/results?search_query=Milanesa%20a%20la%20Napolitana%20recipe",
@@ -93483,6 +93482,7 @@
     "note": "Born in El Reno during the Depression, when onions stretched scarce beef. Smashing the onions into the patty is the whole technique: they steam the meat, then caramelize when flipped, becoming half the burger.",
     "equipment": [],
     "techniques": [
+      "Caramelizing onions",
       "Griddle & plancha work"
     ],
     "flavor": {
@@ -111534,7 +111534,7 @@
       "Sheet pan"
     ],
     "techniques": [
-      "Draining fried food: a rack, never paper",
+      "Boiling bagels",
       "Salted water & the float test"
     ],
     "flavor": {
@@ -111566,7 +111566,6 @@
       "Sesame"
     ],
     "judgedBy": [
-      "draining-fried-food-a-rack-never-paper",
       "salted-water-and-the-float-test"
     ]
   },
@@ -154794,7 +154793,8 @@
       "Sheet pan"
     ],
     "techniques": [
-      "Whipping a meringue"
+      "Whipping a meringue",
+      "The soufflé"
     ],
     "flavor": {
       "tags": [

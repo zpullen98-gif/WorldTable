@@ -223,6 +223,22 @@
     ]
   },
   {
+    "slug": "boiling-bagels",
+    "label": "Boiling bagels",
+    "query": "why boil bagels technique",
+    "film": null,
+    "lexiconSlug": null,
+    "lexiconTerm": null,
+    "definition": null,
+    "origin": "original",
+    "chapters": 2,
+    "semesters": [],
+    "recipes": [
+      "bagels",
+      "hand-rolled-bagels"
+    ]
+  },
+  {
     "slug": "braising",
     "label": "Braising",
     "query": "braising technique explained",
@@ -526,6 +542,31 @@
       "huli-huli-chicken",
       "pollo-a-la-brasa",
       "alabama-white-sauce-chicken"
+    ]
+  },
+  {
+    "slug": "caramelizing-onions",
+    "label": "Caramelizing onions",
+    "query": "caramelizing onions properly technique",
+    "film": null,
+    "lexiconSlug": "the-allium-spectrum",
+    "lexiconTerm": "The Allium Spectrum",
+    "definition": "One family, an entire flavor keyboard, played by cut and heat. RAW & FINE (grated garlic, minced shallot, sliced scallion tops): maximal enzyme-born pungency, the sharp top notes of dressings, salsas, and steak tartare; brutality that mellows in minutes of acid contact (the onion-in-lime trick). SWEATED (gentle, no color): sulfur softened to sweetness, the invisible base of most of this guide. CARAMELIZED (long, patient): sugars developed to mahogany depth, onion soup's entire thesis. FRIED CRISP: pyrazine crunch, fried shallots on everything Southeast Asian. CHARRED & BLACKENED: bitter-sweet smoke: Mexican salsa's dry-charred onion, calçots. FERMENTED & AGED: black garlic's balsamic-molasses transformation, the funk register. ROASTED WHOLE: garlic turned to sweet paste. The compositional insight: great dishes often run the SAME allium at two spectrum points: soup of caramelized onions crowned with raw chive; the beginning and the end of the keyboard in one bowl.",
+    "origin": "original",
+    "chapters": 6,
+    "semesters": [
+      {
+        "n": 2,
+        "title": "Stocks, Soups & the Simmer"
+      }
+    ],
+    "recipes": [
+      "soupe-a-loignon",
+      "chicken-tinga",
+      "mujadara",
+      "chicken-yassa",
+      "doro-wat",
+      "oklahoma-onion-burger"
     ]
   },
   {
@@ -1164,7 +1205,7 @@
     "lexiconTerm": "Fryer Setups & Oil Management",
     "definition": "Frying's equipment truth: the vessel is simple; the DISCIPLINE is the machine. Home setups ranked: a heavy DUTCH OVEN with a clip thermometer (thermal mass = temperature stability, the recovery physics of the frying entry) beats most countertop electric fryers (underpowered, slow recovery); a WOK fries with less oil and more surface; dedicated electric fryers earn space only with filtration and frequency. The management protocol that separates operations from accidents: never past two-thirds full, food DRY (water is the eruption), a spider and a landing rack staged BEFORE the first drop, baking soda or a lid for fire (never water: say it twice), and oil husbandry: strain through fine mesh after each session, store dark and cool, track uses by what was fried (fish retires oil fastest), retire at darkening, foaming, or off smells. Air fryers, honestly filed: compact convection ovens: excellent at reheating fried food and roasting small batches, incapable of actual frying; useful appliance, dishonest name. Restaurant note: fryer oil is a tracked COST line and a fire-code fixture: respect it at home like the pros are required to.",
     "origin": "supplement",
-    "chapters": 59,
+    "chapters": 58,
     "semesters": [
       {
         "n": 9,
@@ -1213,7 +1254,6 @@
       "idaho-finger-steaks",
       "washington-razor-clam-fritters",
       "walla-walla-onion-rings",
-      "hand-rolled-bagels",
       "crispy-pig-ear-strips",
       "begun-bhaja",
       "luchi",
@@ -6141,7 +6181,7 @@
     "chapters": 1,
     "semesters": [],
     "recipes": [
-      "milanesa-a-la-napolitana"
+      "vanilla-souffle-on-a-patissiere-base"
     ]
   },
   {

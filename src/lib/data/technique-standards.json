@@ -448,34 +448,6 @@
     "fault": "The fat was below temperature or the pan was crowded, so the coat drank fat instead of sealing against it: it comes out pale and heavy, greasy to the fingers, and slumps off the food as it cools."
   },
   {
-    "slug": "draining-fried-food-a-rack-never-paper",
-    "label": "Draining fried food: a rack, never paper",
-    "recipeCount": 78,
-    "marks": [
-      {
-        "id": "draining-fried-food-a-rack-never-paper#staged",
-        "text": "The rack was in place before the first thing went into the oil, not fetched afterwards while food waited in a spider over the pot."
-      },
-      {
-        "id": "draining-fried-food-a-rack-never-paper#air",
-        "text": "It lands on a rack with air moving underneath it. Anything set down on paper or a flat plate traps its own steam against its base."
-      },
-      {
-        "id": "draining-fried-food-a-rack-never-paper#salted",
-        "text": "Salted within seconds of landing, while it is still hot enough to take seasoning."
-      },
-      {
-        "id": "draining-fried-food-a-rack-never-paper#crisp",
-        "text": "A minute later the underside is still as crisp as the top: no soft flat patch where it has been sitting."
-      },
-      {
-        "id": "draining-fried-food-a-rack-never-paper#single",
-        "text": "Nothing is stacked or piled while hot, however tempting it is to keep it together. A pile steams itself soft from the inside out."
-      }
-    ],
-    "fault": "It was drained on paper, or piled up to keep warm. Steam leaving the food has nowhere to go but back into the crust, so the underside softens within a minute: the crispness the frying just bought is gone before the plate reaches the table."
-  },
-  {
     "slug": "proofing-the-rise-before-the-oven",
     "label": "Proofing: the rise before the oven",
     "recipeCount": 78,
@@ -530,6 +502,34 @@
       }
     ],
     "fault": "It went on over live flames instead of settled coals, so the outside charred bitter in the flare-ups while the middle stayed cold, and everything on the plate tastes of soot."
+  },
+  {
+    "slug": "draining-fried-food-a-rack-never-paper",
+    "label": "Draining fried food: a rack, never paper",
+    "recipeCount": 77,
+    "marks": [
+      {
+        "id": "draining-fried-food-a-rack-never-paper#staged",
+        "text": "The rack was in place before the first thing went into the oil, not fetched afterwards while food waited in a spider over the pot."
+      },
+      {
+        "id": "draining-fried-food-a-rack-never-paper#air",
+        "text": "It lands on a rack with air moving underneath it. Anything set down on paper or a flat plate traps its own steam against its base."
+      },
+      {
+        "id": "draining-fried-food-a-rack-never-paper#salted",
+        "text": "Salted within seconds of landing, while it is still hot enough to take seasoning."
+      },
+      {
+        "id": "draining-fried-food-a-rack-never-paper#crisp",
+        "text": "A minute later the underside is still as crisp as the top: no soft flat patch where it has been sitting."
+      },
+      {
+        "id": "draining-fried-food-a-rack-never-paper#single",
+        "text": "Nothing is stacked or piled while hot, however tempting it is to keep it together. A pile steams itself soft from the inside out."
+      }
+    ],
+    "fault": "It was drained on paper, or piled up to keep warm. Steam leaving the food has nowhere to go but back into the crust, so the underside softens within a minute: the crispness the frying just bought is gone before the plate reaches the table."
   },
   {
     "slug": "blanching-and-shocking",

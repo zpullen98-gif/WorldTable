@@ -58,9 +58,19 @@
  * build fails and forces this judgement to be made again rather than leaving a
  * genuine technique permanently uncounted.
  */
-export const UNDRILLED = {
-	'The soufflé': ['milanesa-a-la-napolitana']
-};
+/*
+ * EMPTY, and the gate below is why.
+ *
+ * This held 'The soufflé': ['milanesa-a-la-napolitana'] on the reasoning that
+ * the only recipe carrying the label carried it on a negative simile. The
+ * comment above promised: "if the corpus ever gains a real soufflé, the build
+ * fails and forces this judgement to be made again". The corpus HAD one all
+ * along - vanilla-souffle-on-a-patissiere-base - it was simply never tagged,
+ * because the sealed keyword list asked for five accented forms and the recipe
+ * spells its own name unaccented. The judgement is re-made: the exclusion is
+ * lifted and the label is drilled, following the Pleating dumplings precedent.
+ */
+export const UNDRILLED = {};
 
 /**
  * Techniques that belong to every station, and therefore to none.
@@ -176,6 +186,8 @@ export const STATION_MAP = {
 	"Keeping the cooking liquid": ["entremetier", "saucier"],  // SPLIT per saucier audit: semester 3 is 'The Sauté Station & Pan Sauces' and vongole, garides-saganaki and konigsberger-klopse mount the liquid into a 
 	"Khachapuri shaping": ["patissier"],  // Unanimous.
 	"Kneading dough": ["patissier"],  // Unanimous.
+	"Boiling bagels": ["patissier"],  // Unanimous. Follows "Kneading dough", "Proofing" and "Sourdough starter", all patissier: the kettle is a step in a bread, not a station of its own.
+	"Caramelizing onions": ["entremetier", "saucier"],  // SPLIT, and contested rather than unanimous. The vegetable is the entremetier's, but 4 of the 6 recipes are building a base for something else (chicken-tinga, chicken-yassa, doro-wat, soupe-a-l'oignon), which is the same move as "Frying the paste until the oil splits" and "Deglazing", both saucier. Not FOUNDATION: "Sweating aromatics" is foundational because everyone does it, and this label is defined as its opposite.
 	"Lamination": ["patissier"],  // Unanimous.
 	"Letter-folding dough": ["patissier"],  // Unanimous.
 	"Low & slow smoking": ["rotisseur"],  // Unanimous.
@@ -226,6 +238,7 @@ export const STATION_MAP = {
 	"Mole": ["saucier"],  // New with the Oaxacan chapter. Contested only on scale: a mole negro is a day of work and thirty ingredients, but the shape of it is a sauce built on toasted aromatics, fried in fat and then let down with stock, which is saucier work in any kitchen.
 	"Trussing": ["rotisseur"],  // Contested. Garde-manger audit struck it: one recipe, pollo-a-la-brasa, a spit-roasted chicken, and the definition's stated purpose is even cooking, w
 	"Whipping a meringue": ["patissier"],  // Unanimous.
+	"The soufflé": ["patissier"],  // Unanimous. A soufflé on a pâtissière base; the station that already owns "Whipping a meringue" and "Folding: keeping the air in", which are the two moves it is made of.
 	"Wok technique": ["saucier"],  // Contested. Judged by the work, not the wok: extreme-heat sauté in small batches with sauce poured down the hot wall. The wok cook is the saucier of th
 	"Velveting": ["saucier"],  // New with the Cantonese chapter. It is the prep that makes wok technique possible, a starch and egg-white coat set in warm oil or water so the protein cannot wring itself out at 200C, and it belongs to whoever owns the wok.
 	"Working with masa": ["entremetier"],  // Unanimous. Nixtamalised corn is a component of hot dishes made fresh daily by the cook serving them.

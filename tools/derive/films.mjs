@@ -228,6 +228,11 @@ function saidIn(text, entry, { allowDenied = true } = {}) {
  */
 /** @type {Record<string, string[]>} */
 const WRONG_SENSE = {
+	/* "the milanesa crust should be a jacket, not a souffl\u00e9": a denial in the
+	   METHOD. The tag is removed by an override, but deriveFilms is handed the
+	   SEALED TECH rather than TECH_ALL, so an override cannot reach the film - a
+	   breaded veal cutlet was carrying "Technique: The souffl\u00e9". */
+	'Milanesa a la Napolitana': ['The souffl\u00e9'],
 	/* "compression fuses meat, cheese, pickle and mustard into a single
 	   laminated material": a pressed sandwich, not a butter block. */
 	'The Cubano': ['Lamination'],

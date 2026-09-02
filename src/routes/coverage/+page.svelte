@@ -266,13 +266,19 @@
 					sweated an onion tells you nothing about who can cover the sauce.
 				</p>
 			{/if}
-			{#if data.stations.undrilled.length}
-				<p>
-					<b>Two are excluded because the guide does not actually drill them:</b>
-					{data.stations.undrilled.join(' and ')}. Their only recipes mention them in passing: a
-					negative simile and a parchment lid, and crediting a cook for either would be a lie.
-				</p>
-			{/if}
+			<!--
+				The "excluded techniques" paragraph lived here and is deleted rather than
+				updated. UNDRILLED is empty now: its one entry was 'The soufflé', excluded
+				because its only recipe carried the label on a negative simile, and the
+				corpus turned out to have a real soufflé all along that the keyword never
+				matched. The copy was already false before that - it read "Two are
+				excluded... a negative simile and a parchment lid" while stations.json had
+				shipped one entry since the pleating half was lifted, and no gate covers
+				prose, which is why it drifted unnoticed.
+
+				If an exclusion is ever justified again, write the sentence with it: the
+				reason is per-entry prose and cannot be derived from the data.
+			-->
 			<p>
 				<b>The line is not evenly weighted, and that is the guide's shape.</b> Pâtissier owns
 				{stations.find((s) => s.key === 'patissier')?.techniques.length} techniques and poissonnier

@@ -549,10 +549,19 @@ const cellar = CELLAR.map((name) => ({
  * technique terms together reached 72 of 970 recipes. Here "Braising" carries
  * every recipe that braises, and borrows the Lexicon's prose to explain itself.
  *
- * Labels that tag nothing are dropped rather than shipped as empty pages. Five
- * of the original's entries never fire against this corpus: Gnocchi and
- * Boiling bagels because it contains no gnocchi and no bagel, which is not a
- * bug, just a table written for a wider guide than the one that shipped.
+ * Labels that tag nothing are dropped rather than shipped as empty pages, and
+ * a dead label is now a BUILD FAILURE rather than a console line (see the gate
+ * below).
+ *
+ * What stood here said: "Five of the original's entries never fire against this
+ * corpus: Gnocchi and Boiling bagels because it contains no gnocchi and no
+ * bagel, which is not a bug, just a table written for a wider guide than the
+ * one that shipped." Every clause of that was wrong. The corpus holds ONE
+ * gnocchi recipe and THREE bagel recipes. `Gnocchi` fires. `Boiling bagels`
+ * asked for the single phrase "boil the bagels", which no recipe says - they
+ * say "45 seconds a side in malty water" and "Boil 30 seconds a side". The
+ * keyword had been written from the label instead of from the corpus, and the
+ * comment then explained the silence away with a premise nobody checked.
  */
 const chapterOfSlug = new Map(index.map((r) => [r.slug, r.chapter]));
 const techRecipes = new Map();
@@ -1121,8 +1130,22 @@ if (worst && linkTotal > 0) {
 		`\n  techniques: ${tagged} of ${index.length} recipes tagged (${index.length - tagged} untagged), ` +
 			`${techniques.length} live labels, ${anchored} anchored to a lexicon definition`
 	);
+	/*
+	 * A label that tags NOTHING is a keyword written from the label instead of
+	 * from the corpus. This printed on every build for months - "2 original
+	 * entries never fire: Caramelizing onions, Boiling bagels" - beside a
+	 * comment explaining it away, and nothing failed. Both were real techniques
+	 * the guide teaches, on six and two recipes respectively.
+	 *
+	 * A console line nobody reads is not a gate. If a sealed row genuinely has
+	 * no recipe in this corpus, widen it on the authored side or say why in
+	 * SUPPLEMENT; do not let it go quiet again.
+	 */
 	if (deadOriginal.length) {
-		console.log(`  techniques: ${deadOriginal.length} original entries never fire: ${deadOriginal.join(', ')}`);
+		problems.push(
+			`technique labels that tag no recipe at all, which means a keyword written from the ` +
+				`label rather than from the corpus: ${deadOriginal.join(', ')}`
+		);
 	}
 	const untaggedChapters = [...new Set(index.map((r) => r.chapter))].filter((c) =>
 		index.every((r, i) => r.chapter !== c || !full[i].techniques.length)

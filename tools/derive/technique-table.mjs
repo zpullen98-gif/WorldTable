@@ -267,6 +267,46 @@ export const SUPPLEMENT = [
 		k: ['for the icing', 'for the frosting', 'cheese frosting', 'white frosting', 'buttercream', 'icing over', 'icing should', 'pipe rosettes'],
 		l: 'Icing & frosting',
 		q: 'frosting buttercream finishing a cake technique'
+	},
+	/*
+	 * The three the keyword table never learned, widened from the CORPUS rather
+	 * than from the label.
+	 *
+	 * All three labels are sealed rows in raw/TECH.json whose keywords were
+	 * written from the technique's NAME and never checked against a recipe.
+	 * `Caramelizing onions` asked for "caramelized onion" and "caramelize the
+	 * onion"; `Boiling bagels` asked for "boil the bagels". Both matched ZERO
+	 * recipes and build:data has printed "2 original entries never fire" on
+	 * every run since. The British spellings are zero too - the corpus simply
+	 * says it another way.
+	 *
+	 * Widened here because fullTechTable merges by label with a set UNION, so
+	 * the authored side can only ADD. That is also why the two false positives
+	 * this uncovers are handled in overrides.json rather than by narrowing.
+	 *
+	 * Every keyword below matches exactly one recipe and was hand-read. The
+	 * obvious wider forms were measured and rejected: "carameliz" pulls in 19
+	 * (yakisoba, bulgogi, banh-mi, kaya-toast); "caramelis" finds 6 and NOT ONE
+	 * is an onion; "deep mahogany" alone finds 11 of which 9 are crust colour;
+	 * "bagel" adds bagels-with-lox-and-schmear, which boils nothing.
+	 */
+	{ k: ['souffle'], l: 'The soufflé', q: 'souffle technique how to' },
+	{
+		k: ['in malty water', 'boil 30 seconds a side'],
+		l: 'Boiling bagels',
+		q: 'why boil bagels technique'
+	},
+	{
+		k: [
+			'caramelize onion',
+			'min to deep mahogany',
+			'onions low and slow',
+			'onions in oil',
+			'onion paste in a heavy pot',
+			'onions hit the griddle and caramelize'
+		],
+		l: 'Caramelizing onions',
+		q: 'caramelizing onions properly technique'
 	}
 ];
 
