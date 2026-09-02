@@ -252,6 +252,10 @@
 	}
 	.conflict li {
 		display: flex;
+		/* The attribs keep their nowrap - the attribution is carried whole, the
+		   page's own convention - so the ROW wraps instead. Without this the
+		   longest attribution ran the page to 344px wide on a 320px phone. */
+		flex-wrap: wrap;
 		gap: 10px;
 		align-items: baseline;
 		padding: 7px 0;

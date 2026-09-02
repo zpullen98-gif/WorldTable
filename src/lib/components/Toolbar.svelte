@@ -21,7 +21,10 @@
 </script>
 
 <div class="toolbar" data-print="hide">
-	<div class="tool-inner">
+	<!-- shell, like head-inner and modebar-inner in the layout: without it the
+     search input ran glass-to-glass on /recipes and all 171 chapter pages at
+     every width, and pinned to the far left of wide desktop windows. -->
+<div class="shell tool-inner">
 		<div class="search">
 			<svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true">
 				<circle cx="11" cy="11" r="7" /><path d="M21 21l-4.5-4.5" />

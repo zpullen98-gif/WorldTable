@@ -295,7 +295,14 @@
 </div>
 
 <style>
-	.view { padding: 26px 0 80px; }
+	/*
+	 * padding-BLOCK, deliberately. The shorthand `padding: 26px 0 80px` zeroed
+	 * padding-inline, and this scoped rule out-specifies the global
+	 * `.shell {{ padding-inline: 20px }}` - so this page shipped with its text
+	 * touching the glass on phones. Six routes had the same line; measured at
+	 * 320 and 375, h1 and lede sat at x=0 while every healthy route sat at 20.
+	 */
+	.view { padding-block: 26px 80px; }
 	.head h1 { font-size: var(--t-h2); margin-bottom: 8px; }
 	.tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 20px 0 24px; }
 	.search { flex: 1 1 260px; }
@@ -334,7 +341,10 @@
 	.opt.right { border-color: var(--leaf); color: var(--leaf); font-weight: 600; }
 	.opt.wrong { border-color: var(--chili); color: var(--chili); }
 
-	.lexgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--gap); }
+	/* min(100%, 320px): the bare 320px floor only ever fit because the gutter
+	   bug above had removed the gutters. With 20px back on each side a 320px
+	   track overflows a 320px phone by 40 - the two fixes ship together. */
+	.lexgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: var(--gap); }
 	.lexcard {
 		background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
 		padding: 16px 18px; content-visibility: auto; contain-intrinsic-size: auto 220px;

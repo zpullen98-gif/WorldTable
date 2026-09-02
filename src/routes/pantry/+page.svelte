@@ -188,7 +188,9 @@
 	}
 
 	.view {
-		padding: 26px 0 80px;
+		/* padding-BLOCK: the old shorthand zeroed the inline padding and beat
+		   .shell's 20px gutter - text on the glass at phone widths. */
+		padding-block: 26px 80px;
 	}
 	.head h1 {
 		font-size: var(--t-h2);

@@ -262,7 +262,9 @@
 		color: var(--muted);
 	}
 	.view {
-		padding: 26px 0 80px;
+		/* padding-BLOCK: the old `padding: 26px 0 80px` shorthand zeroed the
+		   inline padding and beat .shell's 20px gutter - text on the glass. */
+		padding-block: 26px 80px;
 		max-width: 1000px;
 	}
 	.head h1 {
@@ -292,12 +294,17 @@
 	}
 	.row {
 		display: grid;
-		grid-template-columns: 1.4fr 1fr 1fr 0.7fr;
+		/* FIVE tracks: item 19 added the Serves control and forgot the column, so
+		   the field wrapped alone onto a second row at desktop. */
+		grid-template-columns: 1.4fr 1fr 1fr 0.7fr 0.7fr;
 		gap: 10px;
 	}
 	@media (max-width: 560px) {
 		.row {
-			grid-template-columns: 1fr 1fr;
+			/* minmax(0,1fr), not 1fr: a bare fr floors at the track's min-content,
+			   and the inputs' intrinsic width is 163px - two of those plus the gap
+			   is 336px in a 280px box. The form scrolled sideways at 320. */
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 		}
 	}
 
@@ -311,6 +318,10 @@
 	input,
 	select,
 	textarea {
+		/* The load-bearing half of the 320px fix: a grid item refuses to shrink
+		   below its content's min-width, and a number input's intrinsic minimum
+		   is ~163px. Without this the minmax(0,1fr) tracks above still overflow. */
+		min-width: 0;
 		background: var(--card);
 		border: 1px solid var(--line);
 		border-radius: var(--radius);

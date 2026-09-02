@@ -31,7 +31,27 @@
 }
 
 html {
-	scroll-behavior: smooth;
+	/*
+	 * NO global smooth scroll, and the deletion is the fix, not a preference.
+	 *
+	 * /lexicon at a phone width is ~150,000px tall - 479 cards in one column -
+	 * and `scroll-behavior: smooth` turned every cross-page #term anchor into
+	 * a two-second animation that navigation cut short: measured, readers
+	 * landed 8,000 to 21,000px SHORT of the heading they clicked, on every one
+	 * of the nine templates that emit lexicon links. The rule also ignored
+	 * prefers-reduced-motion. An instant jump lands within half a pixel.
+	 *
+	 * scroll-padding is the other half: the mode bar is sticky and, since it
+	 * learned to wrap (item 15), two rows tall on phones - so a completed jump
+	 * put the target heading fully UNDERNEATH it. 56px covers the one-row
+	 * desktop bar; the phone override matches the bar's own wrap breakpoint.
+	 */
+	scroll-padding-top: 56px;
+}
+@media (max-width: 599px) {
+	html {
+		scroll-padding-top: 110px;
+	}
 }
 
 body {

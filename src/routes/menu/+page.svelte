@@ -905,7 +905,14 @@
 </div>
 
 <style>
-	.view { padding: 26px 0 80px; max-width: 900px; }
+	/*
+	 * padding-BLOCK, deliberately. The shorthand `padding: 26px 0 80px` zeroed
+	 * padding-inline, and this scoped rule out-specifies the global
+	 * `.shell {{ padding-inline: 20px }}` - so this page shipped with its text
+	 * touching the glass on phones. Six routes had the same line; measured at
+	 * 320 and 375, h1 and lede sat at x=0 while every healthy route sat at 20.
+	 */
+	.view { padding-block: 26px 80px; max-width: 900px; }
 	.head h1 { font-size: var(--t-h2); margin-bottom: 8px; }
 	.tools { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 10px; }
 	.chip {
