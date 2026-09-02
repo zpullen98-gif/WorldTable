@@ -95,8 +95,12 @@ test.describe('exactly one tab owns each route', () => {
  * into individual family recipes, which do not exist until the feature has been
  * used, and /pantry has none at all until enough ingredients are ticked.
  *
- * A sixth mode tab was not an option: the bar needs 463 CSS px and already
- * clips Service and Library at every common iPhone width.
+ * A sixth mode tab is still not the answer, though the reason has changed. It
+ * used to be that the bar could not hold one: it clipped Service and Library at
+ * every common iPhone width. The bar wraps now, so a sixth tab would fit — it
+ * would simply cost another row of sticky chrome on a phone. The reason left is
+ * the real one: these three are pages the Library tab already OWNS, not modes,
+ * and promoting a shelf to a mode says the opposite.
  */
 test('the Library links to the pages its tab claims', async ({ page }) => {
 	await goto(page, '/recipes');
@@ -158,4 +162,88 @@ test('the coverage board can be reached and left without being a manager', async
 	await expect(back).toHaveText('Back to Service');
 	await back.click();
 	await expect(page.locator('h1')).toHaveText('Service');
+});
+
+/**
+ * The bar at phone widths, which is where it was broken.
+ *
+ * Measured before the fix at 375 CSS px: clientWidth 375 against scrollWidth
+ * 644. Today 74, Learn 73, Practise 114, Service 104, Library 84 is 449px of
+ * tabs, plus 20 of gaps and the 44px indent the Outside Of Time chip needs, so
+ * 513px of bar in a 375px box. Only THREE tabs were visible at 320, 375, 390
+ * and 414. Worse, on /recipes the lit Library tab sat at x 425 to 508 with
+ * scrollLeft pinned at 0 — the bar could not show a cook the tab they were
+ * standing on, and nothing scrolled it there.
+ *
+ * The rest of the suite runs at the Playwright default of 1280 and is blind to
+ * all of it, which is why it survived this long.
+ *
+ * Three rejected fixes are recorded in +layout.svelte. The short version:
+ * pulling the toggle out buys zero visible tabs because it sits after Library;
+ * auto-scrolling the active tab into view hides Today instead; and tightening
+ * alone cannot seat five tabs at 320 above the 44px touch floor.
+ */
+test.describe('the mode bar fits on a phone', () => {
+	/*
+	 * One page load, resized in place, rather than a test per width.
+	 *
+	 * The bar is pure CSS — flex-wrap plus one media query — so a resize reflows
+	 * it with no JS and no navigation, and four separate loads bought nothing.
+	 * They cost something, though: the first cut ran four extra specs in
+	 * parallel and starved /recipes, the heaviest page in the app at 2179
+	 * dishes, which hydrates in about 13s here against the 15s ceiling in
+	 * helpers.goto. Seven specs failed with nothing wrong with them, and all
+	 * seven passed at --workers=1. Worth knowing: that margin is thin enough
+	 * that this suite is one slow machine away from flaking on its own.
+	 *
+	 * /learn is used because the bar is rendered by +layout.svelte and is
+	 * identical on every route. The one case that needs a Library-lit page uses
+	 * /family, a page that tab owns and which is nearly empty.
+	 */
+	test('all five tabs and the toggle stay reachable from 320 to 600', async ({ page }) => {
+		await goto(page, '/learn');
+
+		for (const width of [320, 375, 390, 414, 430, 600]) {
+			await page.setViewportSize({ width, height: 800 });
+
+			const box = await page.locator('.modebar-inner').evaluate((el) => {
+				const inner = el.getBoundingClientRect();
+				const within = (e: Element) => {
+					const r = e.getBoundingClientRect();
+					return (
+						r.left >= inner.left - 1 && r.right <= inner.right + 1 && r.bottom <= inner.bottom + 1
+					);
+				};
+				const kids = [...el.children];
+				return {
+					offscreen: kids.filter((k) => !within(k)).map((k) => k.textContent!.trim()),
+					// A bar that overflows is a bar that hides a tab: nothing in the
+					// app says it scrolls, and before this fix nothing scrolled it.
+					overflows: el.scrollWidth > el.clientWidth + 1,
+					// The floor for a one-handed target in a kitchen. Every tab was
+					// under it on height before this change, at every width.
+					undersized: kids
+						.map((k) => ({ t: k.textContent!.trim(), r: k.getBoundingClientRect() }))
+						.filter(({ r }) => r.width < 44 || r.height < 44)
+						.map(({ t }) => t)
+				};
+			});
+
+			expect(box.offscreen, `every tab must be inside the bar at ${width}px`).toEqual([]);
+			expect(box.overflows, `the bar must not overflow at ${width}px`).toBe(false);
+			expect(box.undersized, `every target must clear 44px at ${width}px`).toEqual([]);
+		}
+	});
+
+	test('the tab you are standing on is on screen', async ({ page }) => {
+		await page.setViewportSize({ width: 375, height: 800 });
+		// Library is the LAST tab, so it was the one pushed out of the box — on a
+		// page that tab owns. That was the unrecoverable case: the lit tab sat at
+		// x 425 to 508 in a 375px bar with scrollLeft stuck at 0.
+		await goto(page, '/family');
+		const on = page.locator('.modetab.on');
+		await expect(on).toHaveCount(1);
+		await expect(on).toHaveText(/^Library/);
+		await expect(on).toBeInViewport({ ratio: 1 });
+	});
 });

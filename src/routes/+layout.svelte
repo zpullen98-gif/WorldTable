@@ -170,7 +170,18 @@
 <nav class="modebar" data-print="hide" aria-label="Sections">
 	<div class="shell modebar-inner">
 		{#each MODES as m (m.href)}
-			<a class="modetab" class:on={isActive(m.href)} href="{base}{m.href || '/'}">
+			{@const here = isActive(m.href)}
+			<!--
+				aria-current, which the bar has never had: the lit tab was marked by a
+				colour and a 2px underline and nothing else, so a screen reader was
+				told five links and not which one you were standing on.
+			-->
+			<a
+				class="modetab"
+				class:on={here}
+				aria-current={here ? 'page' : undefined}
+				href="{base}{m.href || '/'}"
+			>
 				{m.label}{#if m.href === '/service' && session.menuCount}<span class="pill"
 						>{session.menuCount}</span
 					>{:else if m.href === '/practise' && dueCount}<span class="pill">{dueCount}</span>{/if}
@@ -181,7 +192,9 @@
 			onclick={() => prefs.toggleService()}
 			aria-label="Switch between day and night service"
 		>
-			{prefs.resolvedService === 'night' ? '☀ Day service' : '☾ Night service'}
+			<span class="svcglyph" aria-hidden="true"
+				>{prefs.resolvedService === 'night' ? '☀' : '☾'}</span
+			><span class="svcword">{prefs.resolvedService === 'night' ? 'Day service' : 'Night service'}</span>
 		</button>
 	</div>
 </nav>
@@ -266,7 +279,22 @@
 		display: flex;
 		gap: 4px;
 		align-items: center;
-		overflow-x: auto;
+		/*
+		 * Wrap at EVERY width, not just on phones.
+		 *
+		 * Keying this to the phone breakpoint left a cliff at exactly 600px: the
+		 * media query switched off, the toggle's full 114px label and the 16px
+		 * tab padding came back together, and the bar went straight back to
+		 * overflowing with tabs hidden and no way to know it. Unconditional wrap
+		 * has no cliff anywhere — the row breaks only when the content genuinely
+		 * does not fit, and above about 640px it never does, so nothing about the
+		 * desktop bar changes.
+		 *
+		 * overflow-x is left at its default rather than `auto`: there is nothing
+		 * to scroll to now, and a scroll container that can never scroll is still
+		 * a tab stop and still a place focus can be lost.
+		 */
+		flex-wrap: wrap;
 	}
 	/*
 	 * Room for the shared layer's return chip.
@@ -282,6 +310,34 @@
 	 * "inside the monorepo". Standalone this costs a small indent on a bar that
 	 * already scrolls horizontally, which is the cheaper of the two mistakes.
 	 */
+	/*
+	 * On a phone the bar WRAPS rather than scrolls.
+	 *
+	 * Measured at 375 CSS px: five tabs need 449 px, plus 44 for the chip indent
+	 * and 20 of gaps, in a 375 px box. Only THREE tabs were visible at 320, 375,
+	 * 390 and 414 — Service was clipped as well as Library, and at /recipes the
+	 * lit Library tab sat at x 425 to 508 with scrollLeft pinned at 0, so the bar
+	 * could not even show a cook the tab they were standing on.
+	 *
+	 * Three fixes were measured and rejected before this one:
+	 *
+	 *   Pulling button.service out buys 130 px of scrollWidth and exactly ZERO
+	 *   extra visible tabs, because it already sits AFTER Library and was never
+	 *   what covered it.
+	 *
+	 *   Scrolling the active tab into view trades one hidden tab for another: on
+	 *   /recipes it reveals Library by pushing Today, the home of the app and the
+	 *   most-tapped thing on the bar, off the other end.
+	 *
+	 *   Tightening padding and tracking alone cannot seat five tabs at 320 px
+	 *   without taking the targets under the 44 px floor.
+	 *
+	 * Wrapping is the only shape that shows all five at every width with the
+	 * labels and the vocabulary untouched. It costs one extra row of sticky bar
+	 * below about 640px and nothing above it. The wrap itself is unconditional
+	 * and lives on .modebar-inner; what is phone-only is the chip indent below,
+	 * the tighter tab padding and the toggle collapsing to its glyph.
+	 */
 	@media (max-width: 599px) {
 		.modebar-inner {
 			padding-left: 44px;
@@ -293,7 +349,14 @@
 		letter-spacing: var(--tracking-tab);
 		text-transform: uppercase;
 		color: var(--muted);
-		padding: 13px 16px 11px;
+		/* 15/13 with a 16px line box measures 46px tall. It was 13/11, which
+		   measured 43.04px on every tab in the bar — under the 44px touch floor,
+		   though only just, and only because the 1.55 body line-height resolves
+		   to 17.05px here and the 2px transparent border-bottom counts. A
+		   separate defect from the overflow, found while measuring it, and this
+		   is the primary navigation of an app used one-handed in a kitchen. */
+		padding: 15px 16px 13px;
+		line-height: 16px;
 		border-bottom: 2px solid transparent;
 		text-decoration: none;
 		white-space: nowrap;
@@ -328,6 +391,56 @@
 		padding: 7px 10px;
 		border-radius: var(--radius);
 		white-space: nowrap;
+		/* It sits in the primary nav beside 46px tabs and measured 33px tall at
+		   every width above the phone breakpoint, so the floor is not phone-only. */
+		min-height: 44px;
+	}
+	.svcword {
+		margin-left: 0.45em;
+	}
+	/*
+	 * On a phone the toggle keeps its glyph and drops its words, which is what
+	 * lets the wrapped bar settle at exactly two rows instead of three: with the
+	 * full 112px label it took a row of its own at 320 and 375, the two commonest
+	 * widths, and a 147px sticky bar is its own defect.
+	 *
+	 * The words are the only thing removed. The accessible name is the
+	 * aria-label, not the text, so nothing is lost to a screen reader and
+	 * tests/regressions.spec.ts still finds it by /day and night service/.
+	 *
+	 * Deleting the control outright was the other candidate and is survivable —
+	 * the app follows prefers-color-scheme when nothing is stored — but it is the
+	 * ONLY service control in the app, so on a phone it would mean the OS decided
+	 * day or night and a cook could never say otherwise.
+	 */
+	@media (max-width: 599px) {
+		.svcword {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			clip-path: inset(50%);
+			white-space: nowrap;
+		}
+		.service {
+			min-width: 44px;
+			font-size: 15px;
+		}
+		/*
+		 * 16 to 10 horizontally. This buys a whole extra tab on the first row and
+		 * still leaves the narrowest target 61px wide, well over the floor.
+		 *
+		 * It has to live HERE, below the base .modetab rule, not up beside the
+		 * flex-wrap. The base rule sets `padding` as a shorthand; a media query
+		 * adds no specificity, so an override written above it loses on source
+		 * order and silently does nothing. It did exactly that in the first cut
+		 * of this change: the tabs measured 74/73/114/104/84 at 320px, the
+		 * untouched widths, and the bar came out three rows tall.
+		 */
+		.modetab {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 	}
 	.service:hover {
 		color: var(--turmeric-deep);
