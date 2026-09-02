@@ -397,7 +397,26 @@ R.forEach((r, i) => {
 		course: r.k,
 		difficulty: r.d,
 		minutes: r.t,
-		serves: ov.serves ?? 4,
+		/*
+		 * Absent rather than defaulted, the way advanceMin is a few lines below
+		 * ("Absent rather than zero... so a card can test for the key").
+		 *
+		 * This shipped `serves: 4` on all 1,844 recipes. The number was not
+		 * checked and could not be: raw/R.json carries c,d,i,k,m,n,p,t,v and no
+		 * servings field, and no recipe states a yield in its prose. The original
+		 * made the claim ONCE, as a blanket line in its subtitle; the port turned
+		 * one editorial sentence into 1,844 data points and inherited an "unless
+		 * noted" escape with no mechanism behind it.
+		 *
+		 * Inferring one was measured and rejected: a strict multi-anchor estimator
+		 * covers 29.5% of the corpus and hand-scored 5 of 24 acceptable inside its
+		 * OWN best tier, so a derived yield would be wrong four times in five on
+		 * exactly the dishes it was most sure of. A varying wrong number also
+		 * reads as measured where a constant reads as a default, so it would be
+		 * harder to catch, not easier. overrides.json stays the door for a
+		 * hand-ruled yield with a written reason.
+		 */
+		...(ov.serves ? { serves: ov.serves } : {}),
 		diet,
 		costTier: ov.costTier ?? deriveCost(r, blobs[i]),
 		flavorTags: flavor.tags,

@@ -18,6 +18,7 @@ const draft = (over: Partial<FamilyDraft> = {}): FamilyDraft => ({
 	course: 'Dessert' as FamilyDraft['course'],
 	difficulty: 1 as FamilyDraft['difficulty'],
 	minutes: 40,
+	serves: null,
 	vegetarian: true,
 	ingredients: '200g peanut butter\n300g sugar\n50g butter\n1 egg white',
 	method: 'Boil the sugar.\nStir in the rest.\nPour and set.',
@@ -55,5 +56,32 @@ describe('the family screen is real', () => {
 		expect(plain.diet.containsNuts).toBe(false);
 		expect(plain.diet.containsGluten).toBe(false);
 		expect(plain.diet.containsDairy).toBe(false);
+	});
+});
+
+/**
+ * The yield, which nobody was ever asked for.
+ *
+ * This is the same defect as the allergen screen above, one field along, and it
+ * shipped in the same object literal: `serves: 4` was stamped onto a recipe the
+ * COOK typed, from a form with no such control. On the guide side the identical
+ * constant went out on all 1,844 recipes — neither source states a yield, so
+ * there was nothing it could have been checked against.
+ *
+ * These two assertions are the only coverage this field has ever had.
+ */
+describe('the yield is asked for, not assumed', () => {
+	it('omits serves entirely when the cook did not say', () => {
+		expect('serves' in buildFamilyRecipe(draft(), [], [])).toBe(false);
+	});
+
+	it('keeps the number when the cook did say', () => {
+		expect(buildFamilyRecipe(draft({ serves: 8 }), [], []).serves).toBe(8);
+	});
+
+	/** Blank must stay valid: absent means nobody said, not "invalid draft". */
+	it('rounds a typed number and refuses a nonsense one', () => {
+		expect(buildFamilyRecipe(draft({ serves: 6.4 }), [], []).serves).toBe(6);
+		expect('serves' in buildFamilyRecipe(draft({ serves: 0 }), [], [])).toBe(false);
 	});
 });

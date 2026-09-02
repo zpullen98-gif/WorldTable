@@ -160,7 +160,12 @@ export interface RecipeSummary {
 	course: Course;
 	difficulty: Difficulty;
 	minutes: number;
-	serves: number;
+	/**
+	 * Present only when a HUMAN supplied one, which today means family recipes
+	 * alone. Neither source states a yield: the archive's rows carry no servings
+	 * field, and no recipe in the corpus states one in its prose.
+	 */
+	serves?: number;
 	diet: DietFlags;
 	costTier: 1 | 2 | 3 | 4;
 	flavorTags: string[];

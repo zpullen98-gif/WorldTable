@@ -152,7 +152,22 @@
 		<ul class="stats">
 			<li>{DIFFICULTY_LABEL[r.difficulty]}</li>
 			<li>{formatTime(r.minutes)}</li>
-			<li>Serves {r.serves * scale}</li>
+			<!--
+				Only when a human said so. This printed "Serves 4" on all 1,844 guide
+				recipes from a constant: neither source states a yield, and inferring
+				one was measured and rejected at 5-of-24 accuracy inside the
+				estimator's own best tier.
+			-->
+			{#if r.serves != null}<li>Serves {r.serves * scale}</li>{/if}
+			<!--
+				Paper only. On screen the pressed scale button already says this, but
+				the toolbar is data-print="hide" and print.css hides every button, so
+				the line above was the ONLY thing telling a printed sheet what multiple
+				it was at - quantities are rewritten by renderLine either way. Losing
+				that with it would have been a quiet regression. This invents nothing:
+				the multiple is a fact the app owns because the reader pressed it.
+			-->
+			{#if scale !== 1}<li class="scaled">Scaled {SCALES.find((s) => s.x === scale)?.label}</li>{/if}
 			<li>{'$'.repeat(r.costTier)}</li>
 			{#if r.diet.vegetarian}<li class="veg">Vegetarian</li>{/if}
 			{#if r.diet.vegan}<li class="veg">Vegan</li>{/if}
@@ -454,6 +469,14 @@
 		gap: 8px;
 		list-style: none;
 		margin-bottom: 14px;
+	}
+	.stats li.scaled {
+		display: none;
+	}
+	@media print {
+		.stats li.scaled {
+			display: block;
+		}
 	}
 	.stats li {
 		border: 1px solid var(--line);

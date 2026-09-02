@@ -21,6 +21,14 @@ export interface FamilyDraft {
 	course: Course;
 	difficulty: Difficulty;
 	minutes: number;
+	/**
+	 * What the cook says it serves. Null when they did not say.
+	 *
+	 * Required-with-null rather than optional, deliberately: it forces every
+	 * future draft builder to answer the question instead of silently inheriting
+	 * a default, which is the failure this whole field is being fixed for.
+	 */
+	serves: number | null;
 	vegetarian: boolean;
 	/** One ingredient per line, as typed. */
 	ingredients: string;
@@ -151,7 +159,13 @@ export function buildFamilyRecipe(
 		course: draft.course,
 		difficulty: draft.difficulty,
 		minutes: Math.round(draft.minutes),
-		serves: 4,
+		/*
+		 * Asked, not stamped. This was `serves: 4` on a recipe the COOK typed,
+		 * from a form that never asked - the same shape as the allergen defect
+		 * described immediately below, which put "reviewed by hand" over
+		 * ingredients nobody had screened.
+		 */
+		...(draft.serves && draft.serves > 0 ? { serves: Math.round(draft.serves) } : {}),
 		/**
 		 * The REAL screen, not a wall of hardcoded falses. This literal used to
 		 * set every contains* flag to false with confidence 'reviewed', and the

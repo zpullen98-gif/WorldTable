@@ -155,9 +155,17 @@
 			<svelte:element this={path === '/' ? 'h1' : 'p'} class="brandline">
 				<a href={base || '/'}>The World <em>Table</em></a>
 			</svelte:element>
-			<p class="eyebrow">
-				An interactive culinary compendium: every dish serves four unless noted
-			</p>
+			<!--
+				The original's own subtitle (reference/world-table-v1.html) reads
+				"An interactive culinary compendium - recipes, lexicon & study - every
+				dish serves four unless noted". The last clause is dropped rather than
+				softened: nothing could ever BE noted, because no recipe states a yield
+				and no override sets one, so "unless noted" pointed at a mechanism that
+				does not exist. This is the original's line restored, not a departure
+				from it. Do not hedge it back to "most dishes serve four" - that is the
+				same claim in a softer voice, on 2,176 prerendered pages.
+			-->
+			<p class="eyebrow">An interactive culinary compendium: recipes, lexicon and study</p>
 		</div>
 		<dl class="counts">
 			<div><dt>Recipes</dt><dd>{TOTALS.recipes}</dd></div>

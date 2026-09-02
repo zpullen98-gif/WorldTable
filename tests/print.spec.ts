@@ -56,3 +56,46 @@ test('the guest menu prints ink-on-white with no app chrome', async ({ page }) =
 	const pdf = await page.pdf({ format: 'A5' });
 	expect(pdf.byteLength).toBeGreaterThan(1000);
 });
+
+/**
+ * A printed sheet has to say what multiple it is at.
+ *
+ * The scale toolbar is data-print="hide" and print.css hides every button, so
+ * on paper nothing reveals the scale — while the ingredient and step quantities
+ * ARE rewritten, by renderLine. Until now the only thing carrying that on paper
+ * was "Serves {r.serves * scale}", which worked by accident and rested on a
+ * serving count no source ever stated. Removing the fabricated number without
+ * replacing this would have been a quiet regression: a tripled sheet that looks
+ * like a single batch.
+ */
+test('a scaled recipe says so on paper, where the buttons cannot', async ({ page }) => {
+	await goto(page, '/recipe/ragu-alla-bolognese');
+
+	const first = page.locator('.ingredients .item').first();
+	const atOne = await first.textContent();
+
+	await page.getByRole('button', { name: '×2' }).click();
+	await expect(first).not.toHaveText(atOne ?? '');
+
+	// On screen the pressed button already says it, so the chip stays out of the way.
+	await expect(page.locator('.stats li.scaled')).toBeHidden();
+
+	await page.emulateMedia({ media: 'print' });
+	await expect(page.locator('.stats li.scaled')).toBeVisible();
+	await expect(page.locator('.stats li.scaled')).toHaveText('Scaled ×2');
+	// And the control that would otherwise have said it is gone, as designed.
+	await expect(page.getByRole('button', { name: '×2' })).toBeHidden();
+});
+
+/**
+ * No guide recipe claims a yield any more. Neither source states one: the
+ * archive's rows carry no servings field and no recipe states one in prose, so
+ * the shipped "Serves 4" on all 1,844 was a constant that could not be checked.
+ */
+test('a guide recipe makes no serving claim', async ({ page }) => {
+	await goto(page, '/recipe/ragu-alla-bolognese');
+	await expect(page.locator('.stats')).not.toContainText('Serves');
+	// The masthead promised it too, on every page, with an "unless noted"
+	// escape that pointed at no mechanism.
+	await expect(page.locator('header .eyebrow').first()).not.toContainText('serves four');
+});

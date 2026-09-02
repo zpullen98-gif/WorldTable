@@ -19,6 +19,8 @@
 		course: 'Main' as Course,
 		difficulty: 2 as Difficulty,
 		minutes: 45,
+		// Blank, and blank stays valid: absent means nobody said.
+		serves: null,
 		vegetarian: false,
 		ingredients: '',
 		method: '',
@@ -131,6 +133,12 @@
 				<label class="mins">
 					<span class="sec">Minutes</span>
 					<input type="number" min="1" bind:value={draft.minutes} />
+				</label>
+				<!-- Optional on purpose: left blank, the dish simply does not claim a
+				     yield, which is what every guide recipe now does. -->
+				<label class="mins">
+					<span class="sec">Serves</span>
+					<input type="number" min="1" bind:value={draft.serves} placeholder="—" />
 				</label>
 			</div>
 
