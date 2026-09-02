@@ -1213,21 +1213,66 @@ console.log('');
 		);
 	}
 
-	const impossible = svc.filter((r) => r.handsOnMin > r.elapsedMin);
-	if (impossible.length) {
+	/*
+	 * The mirror of `idle`, and the gate that should have existed.
+	 *
+	 * What stood here was `handsOnMin > elapsedMin`, which is ARITHMETICALLY
+	 * UNREACHABLE: recipeService defines `elapsedSec += hands + wait` with both
+	 * terms non-negative (service.mjs), so elapsed is the sum and hands can
+	 * never exceed it. It measured zero recipes on every build since it was
+	 * written and always would have. False assurance, not a lenient threshold,
+	 * so it is deleted rather than loosened.
+	 *
+	 * This is the check it was reaching for. `idle` catches a recipe where every
+	 * stated number was read as a wait; this catches a STEP where a wait was
+	 * read as work. ADVANCE_MIN is the service module's own "cannot be fitted
+	 * into a service", so a step booking that much of one pair of hands is a
+	 * misparse by definition. 43 steps in 40 recipes tripped it before the
+	 * classifier was fixed; the worst surviving step is 186 min.
+	 */
+	const overworked = full.flatMap((r) =>
+		(r.steps ?? [])
+			.map((s, i) => ({ slug: r.slug, i: i + 1, min: Math.round((s.handsOnSec ?? 0) / 60) }))
+			.filter((s) => s.min >= ADVANCE_MIN)
+	);
+	if (overworked.length) {
 		problems.push(
-			`recipes whose hands-on time exceeds their elapsed time: ` +
-				impossible.slice(0, 5).map((r) => r.slug).join(', ')
+			`steps booking a block of hands too long to fit inside a service, which is a wait read as work: ` +
+				overworked.slice(0, 5).map((s) => `${s.slug} #${s.i} (${s.min} min)`).join(', ')
 		);
 	}
 
-	const share = svc.map((r) => r.handsOnMin / r.elapsedMin).sort((a, b) => a - b);
-	const at = (q) => share[Math.floor(share.length * q)].toFixed(2);
+	/*
+	 * The derived number held to the ceiling the AUTHORED one already signs:
+	 * `t` must be active minutes, 1 to 600. Nineteen recipes exceeded it before
+	 * the fix, the worst by 55x its own author's figure.
+	 */
+	const ceiling = svc.filter((r) => r.handsOnMin > 600);
+	if (ceiling.length) {
+		problems.push(
+			`derived hands-on above the 600-minute ceiling an authored t must obey: ` +
+				ceiling.slice(0, 5).map((r) => `${r.slug} (${r.handsOnMin} min)`).join(', ')
+		);
+	}
+
+	/*
+	 * NOT the hands-on share, which cannot say anything. elapsed is DEFINED as
+	 * hands + wait, so the share is bounded in [0, 1] by construction and 646 of
+	 * 1,844 recipes sit at exactly 1.00 - "p90 1.00" printed on every build
+	 * since the split shipped and meant nothing.
+	 *
+	 * This counts the shape the defect actually had: a long recipe with no
+	 * unattended time at all, which no method has. Eleven before the fix, zero
+	 * after. Printed rather than gated, for now.
+	 */
+	const allWork = svc.filter(
+		(r) => r.handsOnMin === r.elapsedMin && r.elapsedMin >= ADVANCE_MIN
+	).length;
 	const advance = svc.filter((r) => r.advance).length;
 	const elapsed = svc.map((r) => r.elapsedMin).sort((a, b) => a - b);
 	console.log(
 		`  service: median ${elapsed[Math.floor(elapsed.length / 2)]} min elapsed, ` +
-			`hands-on share p10 ${at(0.1)} / median ${at(0.5)} / p90 ${at(0.9)}`
+			`${allWork} recipes run ${ADVANCE_MIN}+ min with zero unattended time`
 	);
 	console.log(
 		`  service: ${advance} recipes carry a wait of ${ADVANCE_MIN}+ min and cannot start inside a service`

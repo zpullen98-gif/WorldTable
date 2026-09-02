@@ -294,7 +294,7 @@ test('a lexicon quiz answer is recorded, graded close, and survives a reload', a
 					const get = open.result.transaction('state', 'readonly').objectStore('state').getAll();
 					get.onsuccess = () => {
 						const row = (get.result as Array<{ drillLog?: unknown[] }>).find((v) => v?.drillLog);
-						resolve(((row?.drillLog ?? []) as Array<{ slug: string; grade?: string }>) ?? []);
+						resolve((row?.drillLog ?? []) as Array<{ slug: string; grade?: string }>);
 					};
 				};
 			})
