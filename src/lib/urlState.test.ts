@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { filtersFromURL, filtersToSearch, isDefault } from './urlState';
+import { filtersFromURL, filtersToSearch, isDefault, discreteSearch } from './urlState';
 import { applyFilters } from './filter';
 import { COURSES, recipes } from './data';
 
@@ -111,5 +111,19 @@ describe('the round trip', () => {
 	it('a repeated parameter takes the first, and does not throw', () => {
 		expect(from('?course=Main&course=Soup').course).toBe('Main');
 		expect(from('?course=nonsense&course=Soup').course).toBeNull();
+	});
+});
+
+describe('discreteSearch: a chip is a choice, a keystroke is not', () => {
+	const from = (search: string) => filtersFromURL(new URL(`https://x/recipes${search}`));
+	it('is equal for two states that differ only by typing', () => {
+		expect(discreteSearch(from('?q=rag&veg=1'))).toBe(discreteSearch(from('?q=ragu&veg=1')));
+	});
+	it('differs when a chip differs', () => {
+		expect(discreteSearch(from('?q=rag&veg=1'))).not.toBe(discreteSearch(from('?q=rag')));
+	});
+	it('is empty for the default view and for a query alone', () => {
+		expect(discreteSearch(from(''))).toBe('');
+		expect(discreteSearch(from('?q=rag'))).toBe('');
 	});
 });

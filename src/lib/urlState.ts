@@ -2,9 +2,12 @@
  * Filter state <-> query string.
  *
  * A filtered view is a thing people send each other ("here, the vegetarian
- * mains under 40 minutes"), so it belongs in the URL. Written with replaceState
- * rather than pushState: typing six characters into the search box should not
- * cost six presses of the Back button.
+ * mains under 40 minutes"), so it belongs in the URL. Keystrokes are written
+ * with replaceState: typing six characters into the search box should not cost
+ * six presses of the Back button. A chip, a select or a clear is a DISCRETE
+ * choice and pushes, so Back undoes it - it never did, and a cook who toggled
+ * three chips and pressed Back left the app. discreteSearch() below is how
+ * RecipeBrowser tells the two apart.
  */
 import type { Course, Difficulty, FilterState } from './types';
 import { EMPTY_FILTERS } from './types';
@@ -67,6 +70,15 @@ export function filtersToSearch(f: FilterState): string {
 	if (f.season) p.set('season', '1');
 	const s = p.toString();
 	return s ? `?${s}` : '';
+}
+
+/**
+ * The query string with q removed: what a chip or select change looks like
+ * from the URL's point of view. Two states with the same discreteSearch differ
+ * only by typing.
+ */
+export function discreteSearch(f: FilterState): string {
+	return filtersToSearch({ ...f, q: '' });
 }
 
 export function isDefault(f: FilterState): boolean {

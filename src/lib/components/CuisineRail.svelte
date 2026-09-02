@@ -5,11 +5,21 @@
 	let {
 		chapters,
 		active = null,
-		counts = null
+		counts = null,
+		search = ''
 	}: {
 		chapters: ChapterRef[];
 		active?: string | null;
 		counts?: Map<string, number> | null;
+		/**
+		 * The current filters as a query string, carried on every row. The counts
+		 * below ALREADY reflect the active filters, so a row reading "Italian 10"
+		 * under Vegetarian promises ten vegetarian Italian dishes - and delivered
+		 * sixty-one, because the link dropped the query. (Chapter-to-chapter hops
+		 * happened to keep it, purely because SvelteKit reuses the page node on a
+		 * same-route hop and the component's state survived.)
+		 */
+		search?: string;
 	} = $props();
 
 	/**
@@ -130,16 +140,17 @@
 		open = next;
 	}
 
-	/* A row stays a link even at 0, on purpose: a cook who has narrowed too far
-	   may well want to jump to a chapter and start again, and a row reading 0
-	   has already said what is there. See dishes() above for the count itself. */
+	/* A row stays a link even at 0, on purpose: a row reading 0 has already
+	   said what is there, and landing on it now reaches the empty state, which
+	   names the filter and offers Drop and Clear. "Start again" is that control,
+	   not a silent reset. See dishes() above for the count itself. */
 </script>
 
 <nav class="rail" aria-label="Chapters">
 	<h2 class="eyebrow">Chapters</h2>
 	<ul>
 		<li>
-			<a class="all" class:on={!active} href="{base}/recipes">All chapters</a>
+			<a class="all" class:on={!active} href="{base}/recipes{search}">All chapters</a>
 		</li>
 		{#each groups as g (g.group)}
 			{@const isOpen = open.has(g.group)}
@@ -163,7 +174,7 @@
 								{@const n = dishes(c)}
 								<li>
 									<a
-										href="{base}/chapter/{c.slug}"
+										href="{base}/chapter/{c.slug}{search}"
 										class:on={active === c.slug}
 										class:nested={ctry.country !== null}
 										class:empty={n === 0}

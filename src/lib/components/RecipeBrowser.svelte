@@ -2,15 +2,16 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import { base } from '$app/paths';
-	import { goto } from '$app/navigation';
+	import { goto, afterNavigate, beforeNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import { chapters, chapterBySlug, recipes } from '$lib/data';
 	import { applyFilters, matches, effectiveMonth } from '$lib/filter';
 	import { ensureSearch, searchIds } from '$lib/search';
-	import { filtersFromURL, filtersToSearch, EMPTY_FILTERS } from '$lib/urlState';
+	import { filtersFromURL, filtersToSearch, discreteSearch, EMPTY_FILTERS } from '$lib/urlState';
+	import { emptyState, type Droppable } from '$lib/emptyState';
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import { session } from '$lib/stores/session.svelte';
-	import type { ChapterRef } from '$lib/types';
+	import type { ChapterRef, FilterState, RecipeSummary } from '$lib/types';
 	import RecipeCard from './RecipeCard.svelte';
 	import CuisineRail from './CuisineRail.svelte';
 	import Toolbar from './Toolbar.svelte';
@@ -30,12 +31,16 @@
 	 * the route, and the derived `active` below tracks it.
 	 */
 	let filters = $state({ ...EMPTY_FILTERS });
+	let toolbar: Toolbar | undefined = $state();
+	let headingEl: HTMLHeadingElement | undefined = $state();
 
-	// Once, on mount: not a reactive effect. The write-back effect below pushes
-	// filters INTO the URL, so re-reading the URL reactively would have the two
-	// chasing each other every keystroke.
+	// Once, on mount, and again on popstate (see the history split below): not
+	// a reactive effect. The write-back effect pushes filters INTO the URL, so
+	// re-reading the URL reactively would have the two chasing each other every
+	// keystroke.
 	onMount(() => {
 		filters = filtersFromURL(page.url);
+		written = { ...filters };
 	});
 
 	const active = $derived(chapter?.slug ?? null);
@@ -69,9 +74,15 @@
 		familyRecipes.length ? [...recipes, ...familyRecipes] : recipes
 	);
 
-	const matchedAll = $derived.by(() => {
-		const rest = { ...filters, chapter: null };
-		const q = filters.q.trim();
+	/**
+	 * One function for "everything under these filters", so the empty state's
+	 * query pool can take the IDENTICAL index-or-substring path the grid took.
+	 * That is what makes "Drop Vegetarian for 20 dishes" the number the grid
+	 * shows after the click, not a substring approximation of it.
+	 */
+	function matchUnder(f: FilterState): RecipeSummary[] {
+		const rest = { ...f, chapter: null };
+		const q = f.q.trim();
 		if (q && searchReady) {
 			const ids = searchIds(q);
 			if (ids) {
@@ -82,7 +93,9 @@
 			}
 		}
 		return applyFilters(allRecipes, rest, month);
-	});
+	}
+
+	const matchedAll = $derived(matchUnder({ ...filters, chapter: null }));
 
 	const results = $derived(
 		active ? matchedAll.filter((r) => r.chapterSlug === active) : matchedAll
@@ -118,35 +131,125 @@
 		return synthesized.size ? [...synthesized.values(), ...chapters] : chapters;
 	});
 
-	// Mirror filters into the URL. replaceState so typing doesn't fill history.
+	/**
+	 * The empty state, computed only when the grid is empty.
+	 *
+	 * qPool is the scope narrowed by the query alone, by the same path the grid
+	 * used, so the numbers the sentence carries are the ones the grid will show.
+	 */
+	const empty = $derived.by(() => {
+		if (results.length) return null;
+		const scopeAll = active ? allRecipes.filter((r) => r.chapterSlug === active) : allRecipes;
+		const qPool = filters.q.trim()
+			? matchUnder({ ...EMPTY_FILTERS, q: filters.q }).filter((r) => !active || r.chapterSlug === active)
+			: scopeAll;
+		return emptyState({
+			scope: chapter?.name ?? 'the library',
+			inChapter: !!active,
+			all: scopeAll,
+			qPool,
+			filters,
+			month,
+			library: matchedAll.length
+		});
+	});
+
+	/*
+	 * Mirror filters into the URL, and decide what Back means.
+	 *
+	 * Every change used to replaceState, so Back never undid a filter: a cook
+	 * who toggled three chips and pressed Back left the app. Now a keystroke
+	 * replaces and a discrete choice - chip, select, clear - pushes. The two are
+	 * told apart by comparing discreteSearch() against the state the URL LAST
+	 * GOT (`written`), not against page.url: a hop to a bare same-route URL (the
+	 * Library tab from a filtered /recipes) keeps re-appending the query with
+	 * replaceState as it always did, rather than costing two entries.
+	 *
+	 * Back then needs the URL read back INTO filters, which the onMount seed does
+	 * not cover. afterNavigate does it for popstate only, and `restoring` keeps
+	 * the effect from writing the URL back out while the re-seed lands. Both are
+	 * plain variables on purpose: reading a $state here (`navigating`, say)
+	 * subscribes the effect to it and goto loops forever - measured, a hang.
+	 */
+	let written: FilterState = { ...EMPTY_FILTERS };
+	let restoring = false;
+	beforeNavigate((nav) => {
+		if (nav.type === 'popstate') restoring = true;
+	});
+	afterNavigate((nav) => {
+		if (nav.type !== 'popstate') return;
+		filters = filtersFromURL(page.url);
+		written = { ...filters };
+		restoring = false;
+	});
 	$effect(() => {
 		if (!browser) return;
 		const search = filtersToSearch(filters);
+		if (restoring) return;
 		const current = page.url.search;
 		if (search !== current) {
+			const keystroke = discreteSearch(written) === discreteSearch(filters);
+			written = { ...filters };
 			goto(`${page.url.pathname}${search}`, {
-				replaceState: true,
+				replaceState: keystroke,
 				keepFocus: true,
 				noScroll: true
 			});
 		}
 	});
 
+	/**
+	 * Chef's pick. On a zero-result chapter it draws from the library under the
+	 * same filters - a vegetarian who asked in the Seafood Atlas gets a
+	 * vegetarian dish, not a seafood one - and is disabled only when the library
+	 * is empty too. It used to return silently on zero, which is the exact view
+	 * a cook reaches for it on. The original fell back to the WHOLE library
+	 * ignoring every filter; this is stricter than what the port dropped.
+	 */
 	function lucky() {
-		if (!results.length) return;
-		const pick = results[Math.floor(Math.random() * results.length)];
+		const pool = results.length ? results : matchedAll;
+		if (!pool.length) return;
+		const pick = pool[Math.floor(Math.random() * pool.length)];
 		goto(`${base}/recipe/${pick.slug}`);
+	}
+
+	/**
+	 * Clear every filter. Never navigates: the chapter comes from the route, so
+	 * this cannot move a cook off the page they are on. Keyboard activation
+	 * lands where '/' lands; a pointer tap lands on the grid heading, so a phone
+	 * does not open a keyboard over the grid it just widened.
+	 */
+	function clearAll(e?: MouseEvent) {
+		filters = { ...EMPTY_FILTERS };
+		if (e && e.detail === 0) toolbar?.focusSearch();
+		else headingEl?.focus();
+	}
+
+	/** Drop the one filter the empty state named, and hand focus to its control. */
+	function dropOne(key: Droppable) {
+		filters = { ...filters, [key]: EMPTY_FILTERS[key] };
+		if (key === 'q') toolbar?.focusSearch();
+		else toolbar?.focusControl(key);
 	}
 </script>
 
-<Toolbar bind:filters resultCount={results.length} onlucky={lucky} />
+<Toolbar
+	bind:this={toolbar}
+	bind:filters
+	resultCount={results.length}
+	onlucky={lucky}
+	onclear={clearAll}
+	luckyDisabled={!results.length && !matchedAll.length}
+	brief={empty?.brief ?? ''}
+/>
 
 <div class="shell wrap">
-	<CuisineRail chapters={railChapters} {active} counts={railCounts} />
+	<CuisineRail chapters={railChapters} {active} counts={railCounts} search={filtersToSearch(filters)} />
 
 	<div class="content">
 		<div class="meta-row">
-			<h2>{chapter?.name ?? 'All chapters'}</h2>
+			<!-- tabindex -1: the clear control sends a pointer tap here. -->
+			<h2 bind:this={headingEl} tabindex="-1">{chapter?.name ?? 'All chapters'}</h2>
 			{#if chapter}
 				<p class="group">{chapter.group}</p>
 			{/if}
@@ -158,8 +261,29 @@
 					<RecipeCard {recipe} />
 				{/each}
 			</div>
-		{:else}
-			<p class="empty">Nothing on the pass. Loosen a filter or try another ingredient.</p>
+		{:else if empty}
+			<!--
+				Names the culprit, with the count it gives back. This was one fixed
+				sentence for six filters - "Loosen a filter" - and measured over the
+				corpus that is the wrong advice two thirds of the time: one filter
+				emptied the chapter on its own, and dropping it is the whole answer.
+			-->
+			<div class="empty">
+				<p>{empty.sentence}</p>
+				<p class="actions">
+					{#if empty.culprit}
+						<button type="button" class="chip" onclick={() => dropOne(empty.culprit!.key)}
+							>Drop {empty.culprit.label}</button
+						>
+					{/if}
+					<button type="button" class="chip" onclick={(e) => clearAll(e)}>Clear filters</button>
+					{#if active && empty.library > 0}
+						<a class="chip" href="{base}/recipes{filtersToSearch(filters)}"
+							>{empty.library} across the library</a
+						>
+					{/if}
+				</p>
+			</div>
 		{/if}
 	</div>
 </div>
@@ -176,6 +300,18 @@
 		.wrap {
 			grid-template-columns: 1fr;
 			gap: 12px;
+		}
+		/*
+		 * Dishes FIRST on a phone. Under 820px the rail is static, fully open
+		 * for the active group, and rendered before the content - so on
+		 * /chapter/italian at 375x667 a 2,012px rail sat between the toolbar and
+		 * the first dish, 2.9 screens below the fold; a US chapter with two
+		 * groups open put it 7 screens down. Every chapter page, every phone.
+		 * Unconditional rather than only-when-empty, so the heading does not
+		 * flip above and below the rail with the result count.
+		 */
+		.content {
+			order: -1;
 		}
 	}
 
@@ -205,9 +341,36 @@
 	}
 
 	.empty {
-		padding: 60px 20px;
+		padding: 40px 20px 60px;
 		text-align: center;
 		color: var(--muted);
+	}
+	.empty p:first-child {
 		font-style: italic;
+		max-width: var(--measure);
+		margin: 0 auto 16px;
+	}
+	.actions {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+	}
+	.actions .chip {
+		border: 1px solid var(--line);
+		background: var(--card);
+		color: var(--ink);
+		padding: 8px 14px;
+		border-radius: var(--radius);
+		cursor: pointer;
+		font-size: 14px;
+		font-style: normal;
+		text-decoration: none;
+	}
+	.actions .chip:hover {
+		border-color: var(--turmeric);
+	}
+	.meta-row h2:focus {
+		outline: none;
 	}
 </style>

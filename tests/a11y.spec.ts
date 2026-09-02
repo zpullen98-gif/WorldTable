@@ -40,6 +40,9 @@ const VIEWS = [
 	/* Added with the global .chip rule: these three used the class and defined
 	   no style, so they rendered raw operating-system controls and carried the
 	   contrast failure. They are in the sweep now so that cannot come back. */
+	/* The chapter route renders the same toolbar as /recipes, now with a Clear
+	   control and an empty state that offers buttons - and was never swept. */
+	{ path: '/chapter/italian', name: 'chapter grid' },
 	{ path: '/menu/preps', name: 'prep list' },
 	{ path: '/menu/costing', name: 'costing sheet' },
 	{ path: '/practise/calibrate', name: 'calibration' }

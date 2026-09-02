@@ -73,3 +73,25 @@ test('a cross-page lexicon anchor lands on its term, visible below the bar', asy
 	expect(m.inViewport, 'the card must be in the viewport, not stranded mid-page').toBe(true);
 	expect(m.cardTop, 'the card must clear the sticky bar').toBeGreaterThanOrEqual(m.barBottom ?? 0);
 });
+
+/**
+ * Dishes come before the rail on a phone.
+ *
+ * Under 820px the rail is static and fully open for the active group, and it
+ * rendered BEFORE the content column: on /chapter/italian at 375x667 a 2,012px
+ * rail sat between the toolbar and the first dish, 2.9 screens below the fold;
+ * a US chapter with two groups open put it seven screens down. Every chapter
+ * page, every phone, and the empty state item 26 exists to deliver would have
+ * been buried under the same rail.
+ */
+test('on a phone the first dish comes before the chapter rail', async ({ page }) => {
+	await page.setViewportSize({ width: 375, height: 667 });
+	await goto(page, '/chapter/italian');
+	const m = await page.evaluate(() => {
+		const card = document.querySelector('.card')!.getBoundingClientRect();
+		const rail = document.querySelector('.rail')!.getBoundingClientRect();
+		return { cardTop: Math.round(card.top), railTop: Math.round(rail.top), fold: window.innerHeight };
+	});
+	expect(m.cardTop, 'the first dish must sit above the rail').toBeLessThan(m.railTop);
+	expect(m.cardTop, 'and within the first two screens').toBeLessThan(m.fold * 2);
+});
