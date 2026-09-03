@@ -5,7 +5,7 @@ import type { ChapterRef } from '$lib/types';
 
 export const prerender = true;
 
-/** All 94 chapters get a real HTML page on disk. */
+/** Every chapter gets a real HTML page on disk. */
 export function entries() {
 	return chapters.map((c) => ({ slug: c.slug }));
 }

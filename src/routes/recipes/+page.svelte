@@ -6,9 +6,9 @@
   than as training. The grid is unchanged and un-demoted; it is still the best
   thing in the app for what it is for; it simply is not the front door.
 
-  RecipeBrowser is deliberately rendered untouched: the 94 chapter pages render
-  the very same component, and any change to its internals lands on all 95
-  pages at once.
+  RecipeBrowser is deliberately rendered untouched: the 171 chapter pages
+  render the very same component, and any change to its internals lands on
+  all 172 pages at once.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
@@ -28,9 +28,10 @@
 <!--
 	The page's own h1. The layout renders the site name as an h1 ONLY on '/', so
 	without this the library had no first-level heading at all; it inherited one
-	from the home page it used to be. RecipeBrowser's own heading is an h2 that
-	names the current chapter or filter, which is the level below this and stays
-	where it is: the 94 chapter pages render the same component.
+	from the home page it used to be. RecipeBrowser's own heading names the
+	current chapter or filter; here it stays h2 (the default), one level below
+	this h1. The 171 chapter pages render the same component with
+	headingLevel="h1" instead, since they have no page h1 of their own.
 -->
 <div class="shell libhead">
 	<h1>The Library</h1>

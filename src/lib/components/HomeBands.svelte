@@ -7,7 +7,7 @@
   search result rather than a course.
 
   These bands sit above the grid and leave it completely untouched, which also
-  means the 94 chapter pages that render the same component are unaffected.
+  means the 171 chapter pages that render the same component are unaffected.
 
   Band names and structure classes come from shared/oot-home.css, so a cook who
   has used the Ledger already knows how to read this. Colour comes from the
@@ -94,7 +94,7 @@
 <div class="oot-band-host">
 	<section class="oot-sec">
 		<div class="oot-sec-head">
-			<h3>Today</h3><span>One dish, cooked properly, beats ten read about</span>
+			<h2>Today</h2><span>One dish, cooked properly, beats ten read about</span>
 		</div>
 		{#if !role}
 			<!-- The induction seed. The World Table has never asked who is using it,
@@ -235,7 +235,7 @@
 
 	<section class="oot-sec">
 		<div class="oot-sec-head">
-			<h3>Learn</h3><span>Read it first, then cook what you read</span>
+			<h2>Learn</h2><span>Read it first, then cook what you read</span>
 		</div>
 		<div class="oot-grid-links">
 			<a href="{base}/study">Path of Study<small>Ten semesters, {curriculumTotal} dishes in teaching order</small></a>
@@ -248,7 +248,7 @@
 
 	<section class="oot-sec">
 		<div class="oot-sec-head">
-			<h3>Practise</h3><span>Until the menu comes without thinking</span>
+			<h2>Practise</h2><span>Until the menu comes without thinking</span>
 		</div>
 		<div class="oot-grid-links">
 			<a href="{base}/menu/quiz">Drill the Menu<small
@@ -273,7 +273,7 @@
 
 	<section class="oot-sec">
 		<div class="oot-sec-head">
-			<h3>Record</h3><span>What you have cooked, and where it lives</span>
+			<h2>Record</h2><span>What you have cooked, and where it lives</span>
 		</div>
 		<!-- A percentage needs a DENOMINATOR that means something.
 		     The student has one (45 dishes, fixed and finishable) so the student
@@ -311,11 +311,11 @@
 	</section>
 
 	<!-- This band's body used to be the RecipeBrowser that followed it. With the
-	     grid at /recipes it needs a way in, or the heading announces 970 dishes
-	     and offers no route to them. -->
+	     grid at /recipes it needs a way in, or the count below (`All
+	     {recipeTotal} recipes`) names every dish with no route to any of them. -->
 	<section class="oot-sec">
 		<div class="oot-sec-head">
-			<h3>The library</h3><span>When you want a dish rather than a lesson</span>
+			<h2>The library</h2><span>When you want a dish rather than a lesson</span>
 		</div>
 		<div class="oot-grid-links">
 			<a href="{base}/recipes"

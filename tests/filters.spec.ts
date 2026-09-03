@@ -60,7 +60,9 @@ test('a clear control appears with the first filter and costs no row on a phone'
 	// A tap lands on the grid heading, so a phone does not open a keyboard.
 	await page.getByRole('button', { name: 'Vegetarian', exact: true }).click();
 	await page.locator('.clear').click();
-	await expect(page.locator('.meta-row h2')).toBeFocused();
+	// h1 here, not h2: this is a chapter page, and RecipeBrowser renders its
+	// own heading as the page's h1 there (headingLevel="h1").
+	await expect(page.locator('.meta-row :is(h1, h2)')).toBeFocused();
 });
 
 test('the empty state names the culprit and offers the way out', async ({ page }) => {

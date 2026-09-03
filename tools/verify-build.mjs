@@ -197,6 +197,43 @@ check('the collided slugs both resolved', () => {
 	return 'both chapter-qualified pages exist';
 });
 
+/**
+ * Every content page has one first-level heading and never skips a level.
+ * All 171 chapter pages shipped for a long time with none at all - the
+ * layout promotes the brandline to an h1 only on '/', and the chapter/filter
+ * heading the pages shared with /recipes rendered as an h2 - so a screen
+ * reader's outline for the largest single route family in the app began at
+ * "Chapters" (the rail's own label) with no page title above it. A handful
+ * of non-content surfaces (404, the offline fallback, the app shell, the
+ * print-only guest menu) are exempt: none of them is a page a reader lands
+ * on and reads by heading.
+ */
+check('every content page has an h1, and no page skips a heading level', () => {
+	const EXEMPT = new Set(['404.html', 'fallback.html', 'shell.html', 'menu/guest.html']);
+	const noH1 = [];
+	const skips = [];
+	for (const f of html) {
+		const r = rel(f);
+		if (EXEMPT.has(r)) continue;
+		const levels = [...readFileSync(f, 'utf8').matchAll(/<h([1-6])[ >]/g)].map((m) => Number(m[1]));
+		if (!levels.includes(1)) {
+			noH1.push(r);
+			continue;
+		}
+		let prev = 0;
+		for (const lvl of levels) {
+			if (prev && lvl - prev > 1) {
+				skips.push(`${r}: h${prev} -> h${lvl}`);
+				break;
+			}
+			prev = lvl;
+		}
+	}
+	assert(noH1.length === 0, `${noH1.length} pages with no h1: ${noH1.slice(0, 5).join(', ')}`);
+	assert(skips.length === 0, `${skips.length} pages skip a heading level: ${skips.slice(0, 5).join(', ')}`);
+	return `${html.length - 4} content pages checked, all with a clean h1-down outline`;
+});
+
 // ── service worker ───────────────────────────────────────────────────────────
 check('service worker generated', () => {
 	assert(sw.length > 1000, 'sw.js is suspiciously small');

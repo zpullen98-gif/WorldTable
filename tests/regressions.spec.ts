@@ -33,6 +33,42 @@ test('L582 — header shows the real counts, not three bare labels', async ({ pa
 	]);
 });
 
+/**
+ * Every content page has an h1, and the accessible outline never skips a
+ * level - checked via getByRole so this reflects what a screen reader's
+ * heading rotor actually sees, not just raw tags in the markup.
+ *
+ * All 171 chapter pages shipped with none: the layout promotes the
+ * brandline to an h1 only on '/', and the chapter/filter heading these
+ * pages shared with /recipes rendered one level down, as an h2. The home
+ * dashboard had the opposite problem - a real h1 followed immediately by
+ * five h3 section heads with no h2 between them. tools/verify-build.mjs
+ * carries the exhaustive, build-wide version of this same check; this pins
+ * three representative live pages against the accessibility tree itself.
+ */
+test('a chapter page has its own h1, and the home dashboard does not skip h2', async ({
+	page
+}) => {
+	await goto(page, '/chapter/italian');
+	await expect(page.getByRole('heading', { level: 1, name: 'Italian' })).toBeVisible();
+	// Recipe cards are h2 here, not h3: one level below the page's own h1,
+	// which is what keeps the outline from skipping straight to h3.
+	expect(await page.getByRole('heading', { level: 2 }).count()).toBeGreaterThan(0);
+	await expect(page.getByRole('heading', { level: 3 })).toHaveCount(0);
+
+	await goto(page, '/recipes');
+	await expect(page.getByRole('heading', { level: 1, name: 'The Library' })).toBeVisible();
+	await expect(page.getByRole('heading', { level: 2, name: 'All chapters' })).toBeVisible();
+
+	await goto(page, '/');
+	const h1 = page.getByRole('heading', { level: 1 });
+	await expect(h1).toHaveCount(1);
+	for (const name of ['Today', 'Learn', 'Practise', 'Record', 'The library']) {
+		await expect(page.getByRole('heading', { level: 2, name })).toBeVisible();
+	}
+	await expect(page.getByRole('heading', { level: 3 })).toHaveCount(0);
+});
+
 test('L2506 — typing in the Lexicon search keeps recipe cross-links', async ({ page }) => {
 	await goto(page, '/lexicon');
 	await expect(page.locator('.lexcard').first()).toBeVisible();

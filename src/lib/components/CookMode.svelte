@@ -189,6 +189,52 @@
 		onclose();
 	}
 
+	/**
+	 * One announcer, mounted for the dialog's whole life.
+	 *
+	 * The three screens (steps / grading / repairing) are alternates of a
+	 * single {#if}, each carrying its OWN aria-live region - so a live region
+	 * was always created together with its content, which screen readers do
+	 * not reliably announce; the region has to already exist before the
+	 * mutation. Both transitions (finish() into grading, grade() into
+	 * repairing) also fired from a button inside the branch that was about to
+	 * unmount, so the cook's tab position was lost at the same moment.
+	 *
+	 * This node never unmounts, so a transition is a text change inside an
+	 * EXISTING region - the reliable case - rather than a new one appearing
+	 * full. It is deliberately separate from the three visible `.live`/
+	 * `.pass.live` panels below, which keep their own on-screen text but lose
+	 * their aria-live/aria-atomic: within the steps screen, `.live` used to
+	 * scope the announcement to just the step text (not the timer, not the
+	 * nav buttons), and folding everything into one always-mounted atomic
+	 * region would have re-announced the whole screen on every timer tick,
+	 * which is the exact bug this file's own header comment already fixed
+	 * once.
+	 */
+	const liveAnnounce = $derived.by(() => {
+		if (repairing) return `${name}: what to reach for.`;
+		if (grading)
+			return standardLabel
+				? `${name}: how was the technique, ${standardLabel}?`
+				: `${name}: how did it come out?`;
+		return `${name}: step ${i + 1} of ${steps.length}. ${step?.text ?? ''}`;
+	});
+
+	/**
+	 * Focus follows the screen. `finish()` and `grade('close'|'missed')` both
+	 * fire from a button inside the branch that unmounts when grading/
+	 * repairing turns true, so without this focus fell to <body> (or, inside
+	 * this modal <dialog>, wherever the engine's focus-fixup lands) at the
+	 * exact moment the screen changed. `passHeadingEl` is rebound by each
+	 * branch's own `bind:this` below; a tabindex="-1" paragraph, the same
+	 * idiom RecipeBrowser.svelte uses for its own heading, so this works
+	 * identically whether or not the repair table (async) has loaded yet.
+	 */
+	let passHeadingEl: HTMLElement | undefined = $state();
+	$effect(() => {
+		if (grading || repairing) passHeadingEl?.focus();
+	});
+
 	/* ---- wake lock ------------------------------------------------------ */
 	let awake = $state(false);
 	let releaseLock: (() => void) | null = null;
@@ -256,16 +302,22 @@
 >
 	<button class="close" onclick={close} aria-label="Exit cook mode">✕</button>
 
+	<!-- See liveAnnounce's own comment above: the one node in here that never
+	     unmounts, so a screen change is a mutation a screen reader can
+	     reliably catch rather than a region appearing already full. -->
+	<div class="sr" aria-live="polite" aria-atomic="true">{liveAnnounce}</div>
+
 	<!--
-		One live region for the thing that changes, marked atomic so a screen
-		reader announces "Step 2 of 4, sweat the soffritto…" as a unit. The clock
-		used to be the only live region in here, which meant the ticking seconds
-		were announced every few hundred milliseconds while the step text, the
-		entire content of the dialog, changed silently.
+		The visible text below is now presentation only (no aria-live): the
+		hidden node above owns the announcement. Scoped to just the changing
+		text, as it always was - the clock used to be the only live region in
+		here, which meant the ticking seconds were announced every few hundred
+		milliseconds while the step text, the entire content of the dialog,
+		changed silently.
 	-->
 	{#if repairing}
-		<div class="pass live" aria-live="polite" aria-atomic="true">
-			<p class="eyebrow">{name} · what to reach for</p>
+		<div class="pass live">
+			<p class="eyebrow" tabindex="-1" bind:this={passHeadingEl}>{name} · what to reach for</p>
 			{#if standard}
 				<p class="passfault"><b>The usual cause here</b> {standard.fault}</p>
 			{/if}
@@ -306,8 +358,8 @@
 			</div>
 		</div>
 	{:else if grading}
-		<div class="pass live" aria-live="polite" aria-atomic="true">
-			<p class="eyebrow">{name} · the pass</p>
+		<div class="pass live">
+			<p class="eyebrow" tabindex="-1" bind:this={passHeadingEl}>{name} · the pass</p>
 			{#if standardLabel}
 				<!-- Naming the technique on its own line rather than folding it into the
 				     question: the labels are noun phrases ("Making a roux", "Knife cuts:
@@ -346,7 +398,7 @@
 			</p>
 		</div>
 	{:else}
-	<div class="live" aria-live="polite" aria-atomic="true">
+	<div class="live">
 		<p class="eyebrow">{name} · step {i + 1} of {steps.length}</p>
 		<p class="step" class:alarm={elapsed}>{step?.text}</p>
 	</div>
@@ -587,6 +639,17 @@
 		flex-direction: column;
 		gap: 22px;
 		align-items: center;
+	}
+
+	/* Same shape as the helper in CuisineRail and menu/costing. liveAnnounce's
+	   own text, never shown - the visible .eyebrow/.step paragraphs already
+	   say the same thing on screen. */
+	.sr {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
 	}
 
 	/* The point of cook mode: one step, set huge, readable from across a

@@ -16,7 +16,18 @@
 	import CuisineRail from './CuisineRail.svelte';
 	import Toolbar from './Toolbar.svelte';
 
-	let { chapter = null }: { chapter?: ChapterRef | null } = $props();
+	/**
+	 * h2 by default: /recipes renders this component under its OWN page h1
+	 * ("The Library"), so the chapter/filter heading here is one level below
+	 * it. The 171 chapter pages render this component as their entire page
+	 * and have no h1 of their own - +layout.svelte promotes the brandline to
+	 * an h1 only on '/' - so they pass headingLevel="h1" and this becomes the
+	 * page's real first-level heading instead of a level the outline skips.
+	 */
+	let {
+		chapter = null,
+		headingLevel = 'h2'
+	}: { chapter?: ChapterRef | null; headingLevel?: 'h1' | 'h2' } = $props();
 
 	/**
 	 * Filters start empty and are seeded from the URL on the client.
@@ -66,9 +77,10 @@
 	 * ingredient-aware: "lemongrass" finds Tom Yum by its ingredients, and
 	 * "ragu" no longer matches asparagus by substring accident.
 	 */
-	// Family recipes sit alongside the guide's 970 in every list below. They are
-	// not in the static search index, so under a query they are matched by the
-	// substring predicate (name/chapter) and appended after the ranked results.
+	// Family recipes sit alongside the whole guide corpus in every list below.
+	// They are not in the static search index, so under a query they are
+	// matched by the substring predicate (name/chapter) and appended after the
+	// ranked results.
 	const familyRecipes = $derived(session.familyRecipes);
 	const allRecipes = $derived(
 		familyRecipes.length ? [...recipes, ...familyRecipes] : recipes
@@ -249,7 +261,7 @@
 	<div class="content">
 		<div class="meta-row">
 			<!-- tabindex -1: the clear control sends a pointer tap here. -->
-			<h2 bind:this={headingEl} tabindex="-1">{chapter?.name ?? 'All chapters'}</h2>
+			<svelte:element this={headingLevel} bind:this={headingEl} tabindex="-1">{chapter?.name ?? 'All chapters'}</svelte:element>
 			{#if chapter}
 				<p class="group">{chapter.group}</p>
 			{/if}
@@ -258,7 +270,11 @@
 		{#if results.length}
 			<div class="grid">
 				{#each results as recipe (recipe.slug)}
-					<RecipeCard {recipe} />
+					<!-- One level below this heading, whichever level that is: h3 under
+					     this component's own h2 on /recipes, h2 under its h1 on a
+					     chapter page - never skipping past h2 the way a fixed h3 would
+					     have on a page whose only other heading is now an h1. -->
+					<RecipeCard {recipe} headingLevel={headingLevel === 'h1' ? 'h2' : 'h3'} />
 				{/each}
 			</div>
 		{:else if empty}
@@ -324,7 +340,10 @@
 		border-bottom: 1px solid var(--line);
 		padding-bottom: 8px;
 	}
-	.meta-row h2 {
+	/* :is(h1, h2), not a bare h2: chapter pages render this heading as the
+	   page's own h1 (see the headingLevel prop above) and it must look
+	   exactly like it did as an h2 - the level changed, not the design. */
+	.meta-row :is(h1, h2) {
 		font-size: var(--t-h2);
 	}
 	.group {
@@ -370,7 +389,7 @@
 	.actions .chip:hover {
 		border-color: var(--turmeric);
 	}
-	.meta-row h2:focus {
+	.meta-row :is(h1, h2):focus {
 		outline: none;
 	}
 </style>

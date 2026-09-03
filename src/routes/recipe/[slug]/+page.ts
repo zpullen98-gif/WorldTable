@@ -12,7 +12,7 @@ import {
 export const prerender = true;
 
 /**
- * All 970 recipes get a real page on disk, so a link to /recipe/cacio-e-pepe
+ * Every recipe gets a real page on disk, so a link to /recipe/cacio-e-pepe
  * renders with JavaScript disabled and survives being pasted anywhere.
  *
  * Family recipes are NOT this route's problem. They live at /family/[slug],
@@ -20,7 +20,7 @@ export const prerender = true;
  * server-side 404 would fire before a browser-only fallback ever ran.
  *
  * Set WT_FULL_PRERENDER=0 (npm run build:quick) to build only a handful during
- * UI iteration: the full run is ~1,500 pages and takes a minute.
+ * UI iteration: the full run is 1,844 pages and takes a minute.
  */
 export function entries() {
 	if (process.env.WT_FULL_PRERENDER === '0') {

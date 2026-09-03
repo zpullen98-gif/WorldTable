@@ -151,7 +151,7 @@ export interface Films {
 	teacher: FilmLink;
 }
 
-/** The lightweight record shipped eagerly to render the 970-card grid. */
+/** The lightweight record shipped eagerly to render the full recipe grid. */
 export interface RecipeSummary {
 	slug: string;
 	name: string;

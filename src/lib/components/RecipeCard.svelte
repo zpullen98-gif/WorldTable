@@ -4,12 +4,33 @@
 	import { formatTime, recipeHref } from '$lib/data';
 	import { DIFFICULTY_LABEL, ADVANCE_MIN } from '$lib/types';
 
-	let { recipe }: { recipe: RecipeSummary } = $props();
+	/**
+	 * h3 by default, one level below RecipeBrowser's own h2 - which is
+	 * itself one level below the page's h1 on /recipes. On a chapter page
+	 * RecipeBrowser's heading IS the page's h1 (see its headingLevel prop),
+	 * so a card staying at h3 there would skip h2 entirely; RecipeBrowser
+	 * passes headingLevel="h2" down to every card it renders in that case.
+	 */
+	let {
+		recipe,
+		headingLevel = 'h3'
+	}: { recipe: RecipeSummary; headingLevel?: 'h2' | 'h3' } = $props();
 </script>
 
 <a class="card" href="{base}{recipeHref(recipe)}" data-slug={recipe.slug}>
 	<span class="tab">{recipe.chapter}</span>
-	<h3>{recipe.name}</h3>
+	<!-- Two static branches, not <svelte:element this={headingLevel}>: this
+	     card renders up to 1844 times on /recipes (the h3 default), and a
+	     dynamic element forces Svelte to resolve the tag at runtime on every
+	     one of them instead of compiling a fixed tag - measurably slower to
+	     hydrate at that count, which is exactly the render this project has
+	     an established rule against re-slowing (content-visibility exists on
+	     this same file for the identical reason). -->
+	{#if headingLevel === 'h2'}
+		<h2>{recipe.name}</h2>
+	{:else}
+		<h3>{recipe.name}</h3>
+	{/if}
 	<p class="sub">{recipe.flavorTags.slice(0, 3).join(' · ')}</p>
 	<div class="badges">
 		<span class="badge d{recipe.difficulty}">{DIFFICULTY_LABEL[recipe.difficulty]}</span>
@@ -43,8 +64,8 @@
 			border-color 0.12s ease;
 
 		/* Off-screen cards keep their DOM node, so find-in-page, print and the
-		   accessibility tree all still see 970 recipes, but cost no layout or
-		   paint. This is why the grid needs no virtualisation. */
+		   accessibility tree all still see every recipe on screen, but cost no
+		   layout or paint. This is why the grid needs no virtualisation. */
 		content-visibility: auto;
 		contain-intrinsic-size: auto 172px;
 	}
@@ -80,7 +101,7 @@
 		text-overflow: ellipsis;
 	}
 
-	h3 {
+	:is(h2, h3) {
 		font-size: var(--t-h4);
 		font-weight: 600;
 		line-height: 1.25;

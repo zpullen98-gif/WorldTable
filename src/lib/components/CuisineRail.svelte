@@ -165,7 +165,13 @@
 </script>
 
 <nav class="rail" aria-label="Chapters">
-	<h2 class="eyebrow">Chapters</h2>
+	<!-- Not a heading: the <nav> already carries this exact text as its own
+	     accessible name, so an inner <h2> was a redundant heading that also
+	     sat BEFORE the page's main heading in document order - on a chapter
+	     page (whose h1 is the chapter name, rendered inside RecipeBrowser's
+	     content, after this rail) that produced h2 "Chapters" -> h1 "Italian"
+	     -> h3 (the recipe cards), skipping straight past h2 a second time. -->
+	<p class="eyebrow" aria-hidden="true">Chapters</p>
 	<ul>
 		<li>
 			<a class="all" class:on={!active} href="{base}/recipes{search}">All chapters</a>
@@ -321,7 +327,9 @@
 		background: linear-gradient(transparent, var(--paper));
 	}
 
-	h2 {
+	/* .eyebrow, not h2: the "Chapters" label above is a <p> now, not a
+	   heading (see the markup comment). */
+	.eyebrow {
 		margin: 4px 0 10px;
 	}
 

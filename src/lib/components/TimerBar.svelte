@@ -36,10 +36,41 @@
 	let minutes = $state('');
 	let editing = $state<string | null>(null);
 
+	/**
+	 * Four controls in this file unmount themselves the moment they are
+	 * activated - the rename button, the "+ Timer" button, Cancel, and every
+	 * begin() trigger (a preset, Start, or Enter in the minutes field) - and
+	 * none of them placed focus on purpose, so it fell to <body> each time.
+	 * Toolbar.svelte states the project's own rule for this: "The button
+	 * unmounts with the empty state, so focus must be placed on purpose or it
+	 * falls to BODY."
+	 *
+	 * `hasOpenedAdd` is a plain variable, not $state: read inside the $effect
+	 * below it must NOT become a dependency, or the effect would rerun (and
+	 * refocus .addbtn) on every unrelated re-render once the panel has been
+	 * opened once. It exists only to tell "adding started false because nothing
+	 * has happened yet" (skip focusing anything, including on mount) from
+	 * "adding just went back to false because Cancel or begin() fired" (return
+	 * focus to the button that just remounted).
+	 */
+	let renameInputEl: HTMLInputElement | undefined = $state();
+	let addLabelEl: HTMLInputElement | undefined = $state();
+	let addBtnEl: HTMLButtonElement | undefined = $state();
+	let hasOpenedAdd = false;
+
+	$effect(() => {
+		if (editing !== null) renameInputEl?.focus();
+	});
+	$effect(() => {
+		if (adding) addLabelEl?.focus();
+		else if (hasOpenedAdd) addBtnEl?.focus();
+	});
+
 	function open() {
 		adding = true;
 		label = '';
 		minutes = '';
+		hasOpenedAdd = true;
 	}
 
 	function begin(mins: number) {
@@ -74,6 +105,7 @@
 				{#if editing === t.id}
 					<input
 						class="lab"
+						bind:this={renameInputEl}
 						value={t.label}
 						maxlength="24"
 						aria-label="Rename this timer"
@@ -92,7 +124,13 @@
 						{#if goesOffAt(t)}<span class="at">till {goesOffAt(t)}</span>{/if}
 					</button>
 				{/if}
-				<span class="clock">{t.rang ? 'Time' : formatClock(left)}</span>
+				<!-- aria-hidden: role="status" below makes .bar an atomic polite
+				     live region, so a mutation ANYWHERE inside it re-announces the
+				     whole bar. Without this, every timer's own once-a-second clock
+				     tick did exactly that, for as long as any timer ran, on every
+				     page - the ringing/pausing/renaming events this region exists
+				     to announce are the only mutations that should reach it now. -->
+				<span class="clock" aria-hidden="true">{t.rang ? 'Time' : formatClock(left)}</span>
 
 				{#if t.rang}
 					<button class="act" onclick={() => timers.dismiss(t.id)}>Dismiss</button>
@@ -116,6 +154,7 @@
 		<div class="timer add">
 			<input
 				class="lab"
+				bind:this={addLabelEl}
 				placeholder="The rice"
 				maxlength="24"
 				bind:value={label}
@@ -152,7 +191,7 @@
 			<button class="x" onclick={() => (adding = false)} aria-label="Cancel">✕</button>
 		</div>
 	{:else}
-		<button class="addbtn" onclick={open} aria-label="Start a timer">
+		<button class="addbtn" bind:this={addBtnEl} onclick={open} aria-label="Start a timer">
 			+ Timer
 		</button>
 	{/if}

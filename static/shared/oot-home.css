@@ -37,7 +37,11 @@
   padding-bottom: 7px;
   border-bottom: 1px solid var(--oot-line, currentColor);
 }
-.oot-sec-head h3 {
+/* :is(h2, h3): each wing's own band heading was h1 -> h3 with no h2 between
+   them, a heading-order skip. WorldTable's HomeBands.svelte now renders h2;
+   :is() keeps this selector working for whichever level a wing uses without
+   this shared file needing to know or coordinate across the three of them. */
+.oot-sec-head :is(h2, h3) {
   margin: 0;
   font-size: .78rem;
   letter-spacing: .2em;
