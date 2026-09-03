@@ -19,7 +19,7 @@ import {
 	charSum,
 	EXPECTED,
 	EXPECTED_PANTRY_ITEMS
-} from './extract.mjs';
+} from './extract-lib.mjs';
 import { slugify, qualifiedSlugs } from './slugify.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');

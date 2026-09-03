@@ -17,7 +17,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { reviveRegex } from './extract.mjs';
+import { reviveRegex } from './extract-lib.mjs';
 import { slugify, qualifiedSlugs } from './slugify.mjs';
 import { deriveDiet } from './derive/diet.mjs';
 import { deriveSeason } from './derive/season.mjs';

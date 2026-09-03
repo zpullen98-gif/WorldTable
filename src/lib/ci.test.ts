@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 /**
@@ -10,7 +10,8 @@ import { join } from 'node:path';
  * file nobody runs locally before pushing, which makes it the easiest place for
  * a careful change to quietly undo a careful decision.
  */
-const yml = readFileSync(join(process.cwd(), '.github', 'workflows', 'pages.yml'), 'utf8');
+const ROOT = process.cwd();
+const yml = readFileSync(join(ROOT, '.github', 'workflows', 'pages.yml'), 'utf8');
 const steps = [...yml.matchAll(/^\s+- (?:run: |name: )(.*)$/gm)].map((m) => m[1].trim());
 const at = (needle: string) => steps.findIndex((s) => s.includes(needle));
 
@@ -31,16 +32,61 @@ describe('the deploy workflow', () => {
 	});
 
 	/**
-	 * `npm run extract` regenerates src/lib/data/raw/ from the archived original,
+	 * The writer that regenerates src/lib/data/raw/ from the archived original,
 	 * which still carries the em dashes that three commits (d0ba35c, 2f98cd5,
-	 * f741ca2) deliberately swept out of the committed copy: 3,872 characters
-	 * across 7 files. It is not a build step, it is a one-way import, and
-	 * verify:data checks raw/ AGAINST the archive rather than rebuilding it from
-	 * it. A CI job that ran extract would revert the sweep and report success.
+	 * f741ca2) deliberately swept out of the committed copy: 3,919 of them across
+	 * 7 of the 15 files, 2,028 in R alone. It is not a build step, it is a
+	 * one-way import, and verify:data checks raw/ AGAINST the archive rather than
+	 * rebuilding it from it - WORD-identical, not byte-identical, which is
+	 * exactly why a revert would sail through every gate green.
+	 *
+	 * This test is the outer of three defences now. It was the only one.
 	 */
 	it('never runs extract, which would revert the dash sweep', () => {
 		const runs = yml.split('\n').filter((l) => /^\s+- run:/.test(l));
 		expect(runs.filter((l) => /\bextract\b/.test(l))).toEqual([]);
+	});
+
+	/**
+	 * The other two defences, which is where item 31 landed.
+	 *
+	 * The reader and the writer used to be ONE file, `tools/extract.mjs`, and
+	 * three tools imported the reader out of it - so the writer sat one stray
+	 * call away from every build. They are now `extract-lib.mjs` (reads, writes
+	 * nothing) and `extract-writer.mjs` (refuses without an explicit flag).
+	 *
+	 * A future session cannot reach the gun by tab-completing `npm run`, and no
+	 * import pulls it in. Both halves are asserted here, because both are one
+	 * careless edit from being undone.
+	 */
+	it('keeps the reader and the writer apart, and off npm run', () => {
+		const pkg = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8')) as {
+			scripts: Record<string, string>;
+		};
+		expect(
+			Object.entries(pkg.scripts).filter(([, v]) => /extract-writer|\bextract\.mjs/.test(v)),
+			'no npm script may reach the writer'
+		).toEqual([]);
+
+		// The one-file version is gone, so nothing imports it back out of habit.
+		expect(existsSync(join(ROOT, 'tools', 'extract.mjs'))).toBe(false);
+
+		const tools = readdirSync(join(ROOT, 'tools')).filter((f) => f.endsWith('.mjs'));
+		const importers = tools.filter(
+			(f) =>
+				f !== 'extract-writer.mjs' &&
+				readFileSync(join(ROOT, 'tools', f), 'utf8').includes("from './extract-writer.mjs'")
+		);
+		expect(importers, 'nothing may import the writer').toEqual([]);
+	});
+
+	/** The safety itself: it refuses, and it says what it would cost. */
+	it('the writer refuses to run without the confirmation flag', () => {
+		const w = readFileSync(join(ROOT, 'tools', 'extract-writer.mjs'), 'utf8');
+		expect(w).toMatch(/process\.argv\.includes\(CONFIRM\)/);
+		expect(w).toMatch(/process\.exit\(1\)/);
+		// A refusal that does not name the damage is a speed bump.
+		expect(w).toMatch(/3,919 em-dashes/);
 	});
 
 	/**

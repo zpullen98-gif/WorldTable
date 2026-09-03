@@ -1,8 +1,19 @@
 /**
- * extract.mjs: lift the inline data literals out of reference/world-table-v1.html
- * into versioned JSON, losslessly.
+ * extract-lib.mjs: READ the inline data literals out of the archived original.
  *
- * Why not regex-to-JSON: the literals are valid JS but NOT valid JSON. `R` uses
+ * This file writes NOTHING. It was the top half of extract.mjs, and it is split
+ * out because the bottom half - the writer - is a loaded gun. `src/lib/data/raw/`
+ * looks generated and is not: three deliberate commits swept 3,919 em-dashes out
+ * of it, and re-running the writer would silently put every one of them back.
+ *
+ * Three tools import from here and every one of them only ever read:
+ * build-data.mjs and report-techniques.mjs for `reviveRegex`, and
+ * verify-extraction.mjs for the parser it checks `raw/` with. Importing them
+ * from a module that also writes meant the writer was one stray call away at
+ * all times.
+ *
+ * HOW IT READS - unchanged, and the reason this half is worth keeping. Why not
+ * regex-to-JSON: the literals are valid JS but NOT valid JSON. `R` uses
  * unquoted keys, `NOTE_DEFS` and `EQUIP` hold live RegExp objects, `PANTRY` mixes
  * quoted and unquoted keys, and there are escape sequences (twelve \" in D, two \u
  * in R) that a hand-rolled scanner will silently mangle. Character classes inside
@@ -15,19 +26,19 @@
  * references, no calls, so nothing DOM-adjacent is ever executed. acorn only
  * parses the surrounding script; it never runs it.
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as vm from 'node:vm';
 import * as acorn from 'acorn';
 import * as walk from 'acorn-walk';
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const SOURCE = join(ROOT, 'reference', 'world-table-v1.html');
-const OUT_DIR = join(ROOT, 'src', 'lib', 'data', 'raw');
+export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+export const SOURCE = join(ROOT, 'reference', 'world-table-v1.html');
+
 
 /** Declarations we lift. Order here is the order they're reported. */
-const TARGETS = [
+export const TARGETS = [
 	'R',
 	'D',
 	'PANTRY',
@@ -208,55 +219,4 @@ export function extract(html) {
 		throw new Error(`Targets not found in source: ${missing.join(', ')}`);
 	}
 	return found;
-}
-
-function main() {
-	const html = readFileSync(SOURCE, 'utf8');
-	const found = extract(html);
-
-	mkdirSync(OUT_DIR, { recursive: true });
-
-	const report = [];
-	for (const name of TARGETS) {
-		const value = found.get(name);
-		const serializable = toSerializable(value);
-		const json = JSON.stringify(serializable, null, 2);
-
-		// Round-trip check right here, before we write. If the emitted JSON does
-		// not revive back to something char-identical, we have already lost data
-		// and there is no point continuing.
-		const revived = reviveRegex(JSON.parse(json));
-		const a = charSum(value);
-		const b = charSum(revived);
-		if (a.chars !== b.chars || a.leaves !== b.leaves) {
-			throw new Error(
-				`${name}: round-trip lost data: ` +
-					`${a.chars}/${a.leaves} chars/leaves in, ${b.chars}/${b.leaves} out`
-			);
-		}
-
-		const file = join(OUT_DIR, `${name}.json`);
-		writeFileSync(file, json + '\n', 'utf8');
-
-		const count = Array.isArray(value) ? value.length : Object.keys(value).length;
-		report.push({ name, count, chars: a.chars, leaves: a.leaves });
-	}
-
-	const w = (s, n) => String(s).padEnd(n);
-	console.log(`\n  extracted from ${SOURCE.replace(ROOT, '.')}\n`);
-	console.log(`  ${w('target', 14)}${w('count', 8)}${w('chars', 10)}leaves`);
-	console.log(`  ${'─'.repeat(44)}`);
-	for (const r of report) {
-		const expected = EXPECTED[r.name];
-		const mark = expected === undefined ? ' ' : r.count === expected ? '✓' : '✗';
-		console.log(`  ${w(r.name, 14)}${w(r.count, 8)}${w(r.chars, 10)}${w(r.leaves, 8)}${mark}`);
-	}
-	const total = report.reduce((s, r) => s + r.chars, 0);
-	console.log(`  ${'─'.repeat(44)}`);
-	console.log(`  ${w('TOTAL', 14)}${w('', 8)}${w(total, 10)}\n`);
-	console.log(`  wrote ${report.length} files to ${OUT_DIR.replace(ROOT, '.')}\n`);
-}
-
-if (import.meta.url === `file://${process.argv[1]}` || process.argv[1]?.endsWith('extract.mjs')) {
-	main();
 }
