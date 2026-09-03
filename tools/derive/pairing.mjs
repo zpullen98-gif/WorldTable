@@ -9,14 +9,63 @@
  * rather than recomputed via `flavorFor(r)`: the original called it inside a
  * function that itself ran over the whole array, so the tags were derived
  * hundreds of times per render.
+ *
+ * ## `has()` needs a leading word boundary
+ *
+ * Every keyword here was a bare substring, and cost.mjs already named this
+ * collision class and fixed it for cost tiers: 'ham' inside "béchamel" and
+ * "champ", 'sole' inside "posole", 'elk' inside "whelk", 'lamb' inside
+ * "flambé", 'ragu' inside "asparagus", 'smoked' inside "unsmoked" (a
+ * negation), 'lime' inside "slime", 'mac and' inside "sumac and". A LEFT
+ * boundary only, the same asymmetry cost.mjs settled on: a right boundary
+ * would break the plurals ("oysters", "scallops") this list depends on, and
+ * none of these words is ever written WITH a prefix, so a leading boundary
+ * only refuses matches that were never legitimate.
+ *
+ * `milk` is the one deliberate exception, kept bare. It is a SUFFIX
+ * collision, not a prefix one - "buttermilk" - and a left boundary rejects
+ * it (the letter 'r' sits directly before "milk"), where cost.mjs's own
+ * precedent for this shape (`\bbutter` still finding "buttermilk") matches
+ * from the other end and does not apply. Buttermilk cornbread genuinely
+ * wants the fruitier pork pour, so this keyword stays a bare substring
+ * rather than losing a real match to a boundary built for a different
+ * collision.
+ *
+ * ## The blob is the recipe, not the writing about it
+ *
+ * costBlob (cost.mjs), not the note-bearing blob every other call site here
+ * gets: 'ham' inside "pressure chamber", 'ham' inside "béchamel" (a note
+ * comparing this dish to one), 'ham' inside "the Bahamas", 'lime' inside
+ * "slime" all sit in the editorial note rather than in what the recipe
+ * actually asks for, the same class cost.mjs's own header describes for
+ * cost tiers.
+ */
+const escape = (/** @type {string} */ s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/**
+ * @param {{ c: string, k: string, v?: number }} r
+ * @param {string} blob
+ * @param {unknown} _CELLAR
+ * @param {unknown} _BOTTLE_NOTES
+ * @param {string[]} [tags]
  */
 export function derivePairing(r, blob, _CELLAR, _BOTTLE_NOTES, tags = []) {
 	const t = blob;
-	const has = (...ks) => ks.some((k) => t.includes(k));
+	/** @param {string[]} ks */
+	const has = (...ks) =>
+		ks.some((k) => (k === 'milk' ? t.includes(k) : new RegExp(`\\b${escape(k)}`, 'iu').test(t)));
+	/** @param {string} x */
 	const tag = (x) => tags.includes(x);
 	const c = r.c;
 	const k = r.k;
 
+	/**
+	 * @param {string} pour
+	 * @param {string} alt
+	 * @param {string} beer
+	 * @param {string} zeroProof
+	 * @param {string} why
+	 */
 	const P = (pour, alt, beer, zeroProof, why) => ({ pour, alt, beer, zeroProof, why });
 
 	/* ---- course shortcuts ---- */

@@ -119,6 +119,200 @@ const COST_RULINGS: Array<[slug: string, original: number, ours: number, why: 'b
 ];
 const costRuling = new Map(COST_RULINGS.map(([slug, original, ours]) => [slug, { original, ours }]));
 
+/**
+ * The same complaint as COST_RULINGS, for pairing.mjs's `has()`: 'ham' inside
+ * "béchamel" and "champ", 'sole' inside "posole", 'elk' inside "whelk" and
+ * "semmelknödel", 'lamb' inside "flambé", 'ragu' inside "asparagus", 'smoked'
+ * inside "unsmoked" (a negation), 'lime' inside "slime", 'mac and' inside
+ * "sumac and" - all fixed by the same LEFT boundary cost.mjs already settled
+ * on, with the same one exception: 'milk' stays bare, because "buttermilk" is
+ * a SUFFIX collision a left boundary cannot keep (see pairing.mjs's own
+ * comment).
+ *
+ * A second, independent cause: derivePairing was reading the note along with
+ * the ingredients and method, the same class costBlob already excludes for
+ * cost tiers. 'no lobster necessary' (a NEGATION) put Bouillabaisse on the
+ * shellfish pour; 'leaner than chicken' put a pheasant on the chicken pour;
+ * 'jerky-deep' (a left-boundary-satisfying PREFIX, not a collision the
+ * boundary fix alone catches) read as Caribbean jerk seasoning. Both causes
+ * are real and several rows need both landed together to reach their
+ * corrected answer.
+ *
+ * EXHAUSTIVE AND EXACT, checked both ways below, same as COST_RULINGS: a
+ * pairing field a ruling does not name failing, or a ruling whose predicted
+ * move stops happening, both fail the test.
+ */
+const PAIRING_RULINGS: Array<
+	[
+		slug: string,
+		original: { pour: string; beer: string; zeroProof: string },
+		ours: { pour: string; beer: string; zeroProof: string },
+		why: 'boundary' | 'note'
+	]
+> = [
+	[
+		'champ',
+		{ pour: 'Chenin Blanc (Vouvray sec)', beer: 'Farmhouse saison', zeroProof: 'Cloudy apple juice, chilled' },
+		{ pour: 'Sauvignon Blanc (Sancerre)', beer: 'Berliner weisse', zeroProof: 'Cucumber-lime water' },
+		'boundary'
+	],
+	[
+		'semmelknodel',
+		{ pour: 'Cabernet Sauvignon or Malbec', beer: 'Amber ale', zeroProof: 'Sparkling water, make room' },
+		{ pour: 'Sauvignon Blanc (Sancerre)', beer: 'Berliner weisse', zeroProof: 'Cucumber-lime water' },
+		'boundary'
+	],
+	[
+		'kanelbullar',
+		{ pour: 'Chenin Blanc (Vouvray sec)', beer: 'Farmhouse saison', zeroProof: 'Cloudy apple juice, chilled' },
+		{ pour: 'Grüner Veltliner', beer: 'Saison', zeroProof: 'Sparkling water with citrus & herbs' },
+		'boundary'
+	],
+	[
+		'gomen-wat',
+		{
+			pour: 'Off-dry Riesling (Mosel Kabinett)',
+			beer: 'Crisp lager or pilsner',
+			zeroProof: 'Agua fresca or iced jasmine tea'
+		},
+		{ pour: 'Grüner Veltliner', beer: 'Saison', zeroProof: 'Sparkling water with citrus & herbs' },
+		'note'
+	],
+	[
+		'english-muffins',
+		{ pour: 'Chenin Blanc (Vouvray sec)', beer: 'Farmhouse saison', zeroProof: 'Cloudy apple juice, chilled' },
+		{ pour: 'Grüner Veltliner', beer: 'Saison', zeroProof: 'Sparkling water with citrus & herbs' },
+		'boundary'
+	],
+	[
+		'sauce-bechamel',
+		{ pour: 'Chenin Blanc (Vouvray sec)', beer: 'Farmhouse saison', zeroProof: 'Cloudy apple juice, chilled' },
+		{ pour: 'Grüner Veltliner', beer: 'Saison', zeroProof: 'Sparkling water with citrus & herbs' },
+		'boundary'
+	],
+	[
+		'sauce-hollandaise',
+		{
+			pour: 'Syrah (northern Rhône) or Nebbiolo',
+			beer: 'Belgian dubbel',
+			zeroProof: 'Beet & blackcurrant shrub'
+		},
+		{ pour: 'Sauvignon Blanc (Sancerre)', beer: 'Berliner weisse', zeroProof: 'Cucumber-lime water' },
+		'note'
+	],
+	[
+		'basque-burnt-cheesecake',
+		{ pour: 'Tawny Port', beer: 'Barleywine', zeroProof: 'Cold-brew coffee' },
+		{ pour: 'Sauternes', beer: 'Belgian tripel', zeroProof: 'Jasmine tea' },
+		'note'
+	],
+	[
+		'malva-pudding',
+		{ pour: 'Tawny Port', beer: 'Barleywine', zeroProof: 'Cold-brew coffee' },
+		{ pour: 'Sauternes', beer: 'Belgian tripel', zeroProof: 'Jasmine tea' },
+		'note'
+	],
+	[
+		'creole-pralines',
+		{ pour: 'Tawny Port', beer: 'Barleywine', zeroProof: 'Cold-brew coffee' },
+		{ pour: 'Sauternes', beer: 'Belgian tripel', zeroProof: 'Jasmine tea' },
+		'note'
+	],
+	[
+		'chess-pie',
+		{ pour: 'Moscato d’Asti', beer: 'Witbier', zeroProof: 'Sparkling elderflower' },
+		{ pour: 'Sauternes', beer: 'Belgian tripel', zeroProof: 'Jasmine tea' },
+		'note'
+	],
+	[
+		'pani-puri',
+		{ pour: 'Riesling or Grenache', beer: 'Farmhouse saison', zeroProof: 'Cloudy apple juice, chilled' },
+		{ pour: 'Sauvignon Blanc (Sancerre)', beer: 'Berliner weisse', zeroProof: 'Cucumber-lime water' },
+		'boundary'
+	],
+	[
+		'bouillabaisse',
+		{ pour: 'Albariño', beer: 'Pilsner or witbier', zeroProof: 'White grape & tonic' },
+		{ pour: 'Vermentino or Sauvignon Blanc', beer: 'Witbier', zeroProof: 'Sparkling water with citrus' },
+		'note'
+	],
+	[
+		'tacos-al-pastor-home-trompo',
+		{ pour: 'Syrah or Grenache/GSM', beer: 'Porter', zeroProof: 'Pomegranate spritz' },
+		{ pour: 'Riesling or Grenache', beer: 'Farmhouse saison', zeroProof: 'Cloudy apple juice, chilled' },
+		'note'
+	],
+	[
+		'carolina-coleslaw',
+		{ pour: 'Riesling or Grenache', beer: 'Farmhouse saison', zeroProof: 'Cloudy apple juice, chilled' },
+		{ pour: 'Grüner Veltliner', beer: 'Saison', zeroProof: 'Sparkling water with citrus & herbs' },
+		'note'
+	],
+	[
+		'conch-fritters',
+		{ pour: 'Chenin Blanc (Vouvray sec)', beer: 'Farmhouse saison', zeroProof: 'Cloudy apple juice, chilled' },
+		{ pour: 'Champagne: when lost, bubbles', beer: 'Pilsner', zeroProof: 'Sparkling water with citrus' },
+		'boundary'
+	],
+	[
+		'florida-orange-cake',
+		{ pour: 'Moscato d’Asti', beer: 'Witbier', zeroProof: 'Sparkling elderflower' },
+		{ pour: 'Sauternes', beer: 'Belgian tripel', zeroProof: 'Jasmine tea' },
+		'note'
+	],
+	[
+		'michigan-booyah',
+		{
+			pour: 'Syrah (northern Rhône) or Nebbiolo',
+			beer: 'Belgian dubbel',
+			zeroProof: 'Beet & blackcurrant shrub'
+		},
+		{ pour: 'Cabernet Sauvignon or Malbec', beer: 'Amber ale', zeroProof: 'Sparkling water, make room' },
+		'note'
+	],
+	[
+		'south-dakota-pheasant-with-cream-gravy',
+		{ pour: 'Chardonnay (village Burgundy)', beer: 'Bière de garde', zeroProof: 'Verbena iced tea' },
+		{ pour: 'Champagne: when lost, bubbles', beer: 'Pilsner', zeroProof: 'Sparkling water with citrus' },
+		'note'
+	],
+	[
+		'new-mexico-posole',
+		{ pour: 'Vermentino or Sauvignon Blanc', beer: 'Witbier', zeroProof: 'Sparkling water with citrus' },
+		{ pour: 'Riesling or Grenache', beer: 'Farmhouse saison', zeroProof: 'Cloudy apple juice, chilled' },
+		'boundary'
+	],
+	[
+		'arizona-carne-seca',
+		{
+			pour: 'Off-dry Riesling (Mosel Kabinett)',
+			beer: 'Crisp lager or pilsner',
+			zeroProof: 'Agua fresca or iced jasmine tea'
+		},
+		{ pour: 'Cabernet Sauvignon or Malbec', beer: 'Amber ale', zeroProof: 'Sparkling water, make room' },
+		'note'
+	],
+	[
+		'snake-river-trout-with-bacon',
+		{ pour: 'Vermentino or Sauvignon Blanc', beer: 'Witbier', zeroProof: 'Sparkling water with citrus' },
+		{ pour: 'Riesling or Grenache', beer: 'Farmhouse saison', zeroProof: 'Cloudy apple juice, chilled' },
+		'note'
+	],
+	[
+		'santa-maria-tri-tip',
+		{ pour: 'Zinfandel (old-vine)', beer: 'Smoked porter', zeroProof: 'Cherry cola, honestly' },
+		{ pour: 'Cabernet Sauvignon or Malbec', beer: 'Amber ale', zeroProof: 'Sparkling water, make room' },
+		'note'
+	],
+	[
+		'geoduck-crudo',
+		{ pour: 'Albariño or Muscadet', beer: 'Witbier', zeroProof: 'Sparkling water with lemon' },
+		{ pour: 'Champagne: when lost, bubbles', beer: 'Pilsner', zeroProof: 'Sparkling water with citrus' },
+		'note'
+	]
+];
+const pairingRuling = new Map(PAIRING_RULINGS.map(([slug, original, ours]) => [slug, { original, ours }]));
+
 interface LegacyRecord {
 	n: string; c: string; k: string; d: number; t: number; v: number;
 	i: string[]; m: string[]; p: string;
@@ -170,6 +364,7 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 	const authoredDiffs: string[] = [];
 	const derivedDiffs: string[] = [];
 	const usedRulings = new Set<string>();
+	const usedPairingRulings = new Set<string>();
 
 	for (let i = 0; i < 970; i++) {
 		const old = legacy[i];
@@ -225,13 +420,34 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 		   is why those sixty read as "Mimosa (weekends only) vs Mimosa (weekends
 		   only)": a diff report that hides the difference. It now names the field. */
 		const p = ourPairings[full.pairingId];
-		for (const [field, ours, theirs] of [
-			['pour', p.pour, old.pairing.pour],
-			['beer', p.beer, old.pairing.beer],
-			['zero-proof', p.zeroProof, old.pairing.zero]
-		] as const) {
-			if (prose(ours) !== prose(theirs))
-				derivedDiffs.push(`#${i} pairing ${field} (${old.n}): ${ours} vs ${theirs}`);
+		const pairingFields = [
+			['pour', p.pour, old.pairing.pour, 'pour'],
+			['beer', p.beer, old.pairing.beer, 'beer'],
+			['zero-proof', p.zeroProof, old.pairing.zero, 'zeroProof']
+		] as const;
+		const pairingMismatch = pairingFields.some(([, ours, theirs]) => prose(ours) !== prose(theirs));
+		if (pairingMismatch) {
+			/* Same ruling-or-fail shape as cost above: covered only if the ruling
+			   predicts every field that actually moved, exactly. */
+			const ruled = pairingRuling.get(idx.slug);
+			const covered =
+				ruled &&
+				pairingFields.every(
+					([, ours, theirs, key]) =>
+						prose(ruled.original[key]) === prose(theirs) && prose(ruled.ours[key]) === prose(ours)
+				);
+			if (covered) {
+				usedPairingRulings.add(idx.slug);
+			} else {
+				for (const [field, ours, theirs] of pairingFields) {
+					if (prose(ours) !== prose(theirs))
+						derivedDiffs.push(`#${i} pairing ${field} (${old.n}): ${ours} vs ${theirs}`);
+				}
+			}
+		} else if (pairingRuling.has(idx.slug)) {
+			derivedDiffs.push(
+				`#${i} pairing (${old.n}): agrees with the original now, so its PAIRING_RULINGS row is stale`
+			);
 		}
 	}
 
@@ -250,5 +466,9 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 	expect(
 		COST_RULINGS.map(([slug]) => slug).filter((slug) => !usedRulings.has(slug)),
 		'a COST_RULINGS row that never fired is stale: delete it or find out why it stopped applying'
+	).toEqual([]);
+	expect(
+		PAIRING_RULINGS.map(([slug]) => slug).filter((slug) => !usedPairingRulings.has(slug)),
+		'a PAIRING_RULINGS row that never fired is stale: delete it or find out why it stopped applying'
 	).toEqual([]);
 });

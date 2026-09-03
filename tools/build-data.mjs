@@ -509,7 +509,13 @@ R.forEach((r, i) => {
 		equipment: ov.equipment ?? deriveEquipment(r, EQUIP),
 		techniques,
 		flavor,
-		pairingId: internPairing(ov.pairing ?? derivePairing(r, blobs[i], CELLAR, BOTTLE_NOTES, flavor.tags)),
+		// costBlob, not blobs[i]: same reason as costTier above. 'ham' inside
+		// "pressure chamber", 'ham' inside a note comparing this dish to another
+		// wrapped in béchamel, 'lime' inside "slime" all sat in the editorial
+		// commentary, not in what the recipe actually asks for.
+		pairingId: internPairing(
+			ov.pairing ?? derivePairing(r, costBlob(r), CELLAR, BOTTLE_NOTES, flavor.tags)
+		),
 		films: deriveFilms(
 			r,
 			{ blob: blobs[i], linkBlob: linkBlobs[i], note: effNotes[i] },

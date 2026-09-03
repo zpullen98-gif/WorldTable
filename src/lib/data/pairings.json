@@ -161,18 +161,11 @@
     "why": "Sugar, cold, and low alcohol are the fire code: sweetness tames capsaicin while acid resets the palate; tannin would fan the flames."
   },
   {
-    "pour": "Chenin Blanc (Vouvray sec)",
-    "alt": "Cru Beaujolais",
-    "beer": "Farmhouse saison",
-    "zeroProof": "Cloudy apple juice, chilled",
-    "why": "Pork loves fruit and gentle sweetness: orchard-note whites and low-tannin reds flatter it where heavy oak flattens."
-  },
-  {
-    "pour": "Tawny Port",
-    "alt": "PX Sherry or bourbon",
-    "beer": "Barleywine",
-    "zeroProof": "Cold-brew coffee",
-    "why": "Caramel echoing caramel: oxidative aging built the same flavors into the glass that the pan built into the plate."
+    "pour": "Pinot Noir or Gamay",
+    "alt": "Chenin Blanc",
+    "beer": "Bière de garde",
+    "zeroProof": "Verbena iced tea",
+    "why": "Chicken is wine’s most agreeable partner. Match the SAUCE, not the bird: cream to oak, tomato to Sangiovese’s acid, herbs to Loire whites."
   },
   {
     "pour": "Off-dry Riesling (Mosel Kabinett)",
@@ -203,6 +196,13 @@
     "why": "Barbecue’s sweet-smoke wants jammy fruit that shakes hands with the sauce; dry austere reds argue with sugar and lose."
   },
   {
+    "pour": "Chenin Blanc (Vouvray sec)",
+    "alt": "Cru Beaujolais",
+    "beer": "Farmhouse saison",
+    "zeroProof": "Cloudy apple juice, chilled",
+    "why": "Pork loves fruit and gentle sweetness: orchard-note whites and low-tannin reds flatter it where heavy oak flattens."
+  },
+  {
     "pour": "Cabernet or Rioja Reserva",
     "alt": "Malbec",
     "beer": "Porter",
@@ -210,11 +210,11 @@
     "why": "Lamb’s sweet grass-fat wants structure: tannin from Cabernet, smoke-echo from Rioja’s oak, or Syrah’s pepper for the spiced routes."
   },
   {
-    "pour": "Pinot Noir or Gamay",
-    "alt": "Chenin Blanc",
-    "beer": "Bière de garde",
-    "zeroProof": "Verbena iced tea",
-    "why": "Chicken is wine’s most agreeable partner. Match the SAUCE, not the bird: cream to oak, tomato to Sangiovese’s acid, herbs to Loire whites."
+    "pour": "Tawny Port",
+    "alt": "PX Sherry or bourbon",
+    "beer": "Barleywine",
+    "zeroProof": "Cold-brew coffee",
+    "why": "Caramel echoing caramel: oxidative aging built the same flavors into the glass that the pan built into the plate."
   },
   {
     "pour": "Off-dry Riesling (Mosel Kabinett)",
@@ -229,13 +229,6 @@
     "beer": "-",
     "zeroProof": "Already zero-proof unless you made it otherwise",
     "why": "This is the glass, not the plate: judge it on temperature, dilution, and balance, and let the food do the answering."
-  },
-  {
-    "pour": "Provence rosé",
-    "alt": "Bandol rosé or Vermentino",
-    "beer": "Bière blanche",
-    "zeroProof": "Citron pressé",
-    "why": "The Niçoise law: the salad and the pink wine grew up on the same coast: salt, oil, and sun answered in kind."
   },
   {
     "pour": "Cabernet Sauvignon or Malbec",
@@ -273,6 +266,13 @@
     "why": "Brine wants saline, steely whites: merroir meeting minerality, with bubbles or stout as the classic dissents."
   },
   {
+    "pour": "Champagne: when lost, bubbles",
+    "alt": "Cru Beaujolais, lightly chilled",
+    "beer": "Pilsner",
+    "zeroProof": "Sparkling water with citrus",
+    "why": "The universal donors: acid, bubbles, and low tannin rescue nearly any plate: the sommelier’s honest safety net."
+  },
+  {
     "pour": "Nebbiolo (Langhe) or aged Pinot Noir",
     "alt": "White Burgundy for cream-based versions",
     "beer": "Dubbel",
@@ -285,13 +285,6 @@
     "beer": "Crisp pilsner",
     "zeroProof": "Iced barley or jasmine tea",
     "why": "Soy, fish sauce, and oyster sauce stack savory depth: answer it with high-acid, low-oak whites that cut salt without adding weight."
-  },
-  {
-    "pour": "Champagne: when lost, bubbles",
-    "alt": "Cru Beaujolais, lightly chilled",
-    "beer": "Pilsner",
-    "zeroProof": "Sparkling water with citrus",
-    "why": "The universal donors: acid, bubbles, and low tannin rescue nearly any plate: the sommelier’s honest safety net."
   },
   {
     "pour": "Pinot Noir (the classic)",
