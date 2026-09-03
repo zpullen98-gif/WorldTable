@@ -34,9 +34,43 @@ export function deriveTechniques(blob, TECH) {
 	   the same recipe are one technique, not two. */
 	return [
 		...new Set(
-			TECH.filter((x) => x.k.some((k) => blob.includes(k.toLowerCase()))).map((x) => x.l)
+			TECH.filter((x) => x.k.some((k) => matchedInSense(blob, k))).map((x) => x.l)
 		)
 	];
+}
+
+/**
+ * A keyword that only ever appears buried inside a longer word has not been
+ * said. `nappe` inside `snapper`; `salted water` inside `unsalted water`.
+ *
+ * The film path has had this guard since the films pass (alwaysMidWord below);
+ * deriveTechniques was a bare substring test and had none of the three, so the
+ * exact collisions those guards were written for kept shipping as TAGS. Nine
+ * of the eleven recipes tagged "Reducing a sauce" by `nappe` were snapper, and
+ * nine recipes were tagged "Salted water & the float test" for boiling in
+ * UNsalted water - the keyword is a substring of its own negation.
+ *
+ * SCOPED, and the scope is the whole reason it is safe. Porting the film
+ * guards wholesale removes 78 tags of which 44 are TRUE, because many keywords
+ * are deliberately punctuation-led or stopword-led stems: ' mash ', '. roast ',
+ * 'the mole', '1cm of hot oil'. Testing those against the preceding character
+ * asks the wrong question. Restricted to keywords that begin with a letter and
+ * do not begin with a stopword, it drops exactly 23 tags and every one was
+ * hand-read wrong.
+ *
+ * Only the tag path calls this. saidIn() and the film links keep the
+ * unscoped guard they were measured against.
+ *
+ * @param {string} blob
+ * @param {string} kw
+ */
+function matchedInSense(blob, kw) {
+	const k = kw.toLowerCase();
+	if (!blob.includes(k)) return false;
+	const t = k.trim();
+	if (!/^[a-z]/.test(t)) return true;
+	if (/^(the|a|an|of|in|at|to|with|and|into|on)\b/.test(t)) return true;
+	return !alwaysMidWord(blob, k);
 }
 
 /*

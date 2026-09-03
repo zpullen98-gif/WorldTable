@@ -30,7 +30,7 @@
   {
     "slug": "salted-water-and-the-float-test",
     "label": "Salted water & the float test",
-    "recipeCount": 198,
+    "recipeCount": 189,
     "marks": [
       {
         "id": "salted-water-and-the-float-test#water",
@@ -252,34 +252,6 @@
     "fault": "A starchy ingredient met a high-speed blade, so the cells burst and released their starch: what should be light comes out as an elastic glue that lifts off the spoon in one mass."
   },
   {
-    "slug": "reducing-a-sauce",
-    "label": "Reducing a sauce",
-    "recipeCount": 103,
-    "marks": [
-      {
-        "id": "reducing-a-sauce#simmer",
-        "text": "A steady simmer with the surface moving, never a rolling boil that throws it up the sides and scorches what is left on the base."
-      },
-      {
-        "id": "reducing-a-sauce#nappe",
-        "text": "Judged by behaviour rather than the clock: it coats the back of a spoon and holds a clean line when a finger is drawn through it."
-      },
-      {
-        "id": "reducing-a-sauce#visible",
-        "text": "The drop in volume is visible against the side of the pan: there is a line to see, not a guess about whether anything has happened."
-      },
-      {
-        "id": "reducing-a-sauce#after",
-        "text": "Seasoned at the end and not the beginning, because salt concentrates at exactly the rate everything else does."
-      },
-      {
-        "id": "reducing-a-sauce#clean",
-        "text": "Nothing is catching underneath: a spoon drawn across the base comes up clean, with no browned film building where the heat is fiercest."
-      }
-    ],
-    "fault": "It was seasoned at the start and then reduced by half. The salt concentrated along with everything else, so the sauce reaches perfect body and is too salty to serve. And the only remedy is to dilute it and reduce it all over again."
-  },
-  {
     "slug": "deep-frying",
     "label": "Deep frying",
     "recipeCount": 96,
@@ -336,9 +308,37 @@
     "fault": "It was taken off as soon as it smelled good, before the fat separated; the raw edge of the aromatics is still in it, and the finished dish tastes thin and sharp no matter how long it simmers afterwards."
   },
   {
+    "slug": "reducing-a-sauce",
+    "label": "Reducing a sauce",
+    "recipeCount": 95,
+    "marks": [
+      {
+        "id": "reducing-a-sauce#simmer",
+        "text": "A steady simmer with the surface moving, never a rolling boil that throws it up the sides and scorches what is left on the base."
+      },
+      {
+        "id": "reducing-a-sauce#nappe",
+        "text": "Judged by behaviour rather than the clock: it coats the back of a spoon and holds a clean line when a finger is drawn through it."
+      },
+      {
+        "id": "reducing-a-sauce#visible",
+        "text": "The drop in volume is visible against the side of the pan: there is a line to see, not a guess about whether anything has happened."
+      },
+      {
+        "id": "reducing-a-sauce#after",
+        "text": "Seasoned at the end and not the beginning, because salt concentrates at exactly the rate everything else does."
+      },
+      {
+        "id": "reducing-a-sauce#clean",
+        "text": "Nothing is catching underneath: a spoon drawn across the base comes up clean, with no browned film building where the heat is fiercest."
+      }
+    ],
+    "fault": "It was seasoned at the start and then reduced by half. The salt concentrated along with everything else, so the sauce reaches perfect body and is too salty to serve. And the only remedy is to dilute it and reduce it all over again."
+  },
+  {
     "slug": "brining-and-curing",
     "label": "Brining & curing",
-    "recipeCount": 89,
+    "recipeCount": 88,
     "marks": [
       {
         "id": "brining-and-curing#fully",
@@ -422,7 +422,7 @@
   {
     "slug": "the-coat-before-the-fry-dredge-crumb-batter",
     "label": "The coat before the fry: dredge, crumb, batter",
-    "recipeCount": 79,
+    "recipeCount": 80,
     "marks": [
       {
         "id": "the-coat-before-the-fry-dredge-crumb-batter#coat",
@@ -812,6 +812,34 @@
     "fault": "The hot liquid went in too fast, or the pot went back over full heat to save time. The yolks set into threads before they could thicken smoothly, and a scrambled custard does not come back; straining hides a little of it and nothing hides the rest."
   },
   {
+    "slug": "kneading-dough",
+    "label": "Kneading dough",
+    "recipeCount": 57,
+    "marks": [
+      {
+        "id": "kneading-dough#transformed",
+        "text": "The work changed it: what began shaggy and rough is one smooth, cohesive mass, with nothing raggy hanging off it."
+      },
+      {
+        "id": "kneading-dough#surface",
+        "text": "The surface has gone satin and barely tacky, releasing cleanly from hands and board instead of leaving a trail."
+      },
+      {
+        "id": "kneading-dough#degree",
+        "text": "Worked to the point this dough asks for and no further: springy and elastic where structure is wanted, just brought together where tenderness is."
+      },
+      {
+        "id": "kneading-dough#inside",
+        "text": "Torn or cut open, the inside is uniform: no dry streaks, no unmixed pockets, no core of flour that never met the water."
+      },
+      {
+        "id": "kneading-dough#rest",
+        "text": "After its rest it rolls and shapes without snapping back. A dough that fights the pin needed more rest, not more force."
+      }
+    ],
+    "fault": "Sticking was fought with flour instead of technique or patience, stroke after stroke, until the dough had taken in far more than the formula asked; it turns tight and dry under the hands, and bakes dense however well everything else goes."
+  },
+  {
     "slug": "roasting-in-a-hot-oven",
     "label": "Roasting in a hot oven",
     "recipeCount": 56,
@@ -842,7 +870,7 @@
   {
     "slug": "fermentation",
     "label": "Fermentation",
-    "recipeCount": 54,
+    "recipeCount": 53,
     "marks": [
       {
         "id": "fermentation#warmth",
@@ -894,34 +922,6 @@
       }
     ],
     "fault": "It was stirred after coming to the boil, or a stray crystal from the side of the pan fell back in. One crystal seeds the whole pan and the syrup turns grainy within seconds, and once sugar has crystallised the only cure is more water and starting the whole thing again."
-  },
-  {
-    "slug": "kneading-dough",
-    "label": "Kneading dough",
-    "recipeCount": 50,
-    "marks": [
-      {
-        "id": "kneading-dough#transformed",
-        "text": "The work changed it: what began shaggy and rough is one smooth, cohesive mass, with nothing raggy hanging off it."
-      },
-      {
-        "id": "kneading-dough#surface",
-        "text": "The surface has gone satin and barely tacky, releasing cleanly from hands and board instead of leaving a trail."
-      },
-      {
-        "id": "kneading-dough#degree",
-        "text": "Worked to the point this dough asks for and no further: springy and elastic where structure is wanted, just brought together where tenderness is."
-      },
-      {
-        "id": "kneading-dough#inside",
-        "text": "Torn or cut open, the inside is uniform: no dry streaks, no unmixed pockets, no core of flour that never met the water."
-      },
-      {
-        "id": "kneading-dough#rest",
-        "text": "After its rest it rolls and shapes without snapping back. A dough that fights the pin needed more rest, not more force."
-      }
-    ],
-    "fault": "Sticking was fought with flour instead of technique or patience, stroke after stroke, until the dough had taken in far more than the formula asked; it turns tight and dry under the hands, and bakes dense however well everything else goes."
   },
   {
     "slug": "deglazing-and-pan-sauces",

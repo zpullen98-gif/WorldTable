@@ -385,7 +385,17 @@ R.forEach((r, i) => {
 
 	const diet = { ...deriveDiet(r, blobs[i]), ...(ov.diet ?? {}) };
 	const flavor = deriveFlavor(blobs[i], NOTE_DEFS);
-	const techniques = ov.techniques ?? deriveTechniques(linkBlobs[i], TECH_ALL);
+	/*
+	 * techniquesDrop is SUBTRACTIVE, and that is the difference that matters.
+	 * `ov.techniques` replaces the derived array wholesale, so every row using
+	 * it freezes that recipe against every future widening - eleven recipes are
+	 * already unreachable that way. A ruling that one keyword read the wrong
+	 * sense should remove that one label and leave the rest of the derivation
+	 * live. Both are honoured; new rulings should use the drop.
+	 */
+	const derivedTech = deriveTechniques(linkBlobs[i], TECH_ALL);
+	const dropTech = ov.techniquesDrop ?? [];
+	const techniques = ov.techniques ?? derivedTech.filter((t) => !dropTech.includes(t));
 
 	/* Read from the raw method, not from the split steps: the split caps a
 	   duration at 600 minutes and never learned the word "weeks". Absent rather
@@ -1083,6 +1093,55 @@ if (linkTotal === 0) {
 		problems.push(
 			`backfilled notes under the 180-char bar: ${short.map(([k, v]) => `${k} (${String(v).length})`).join(', ')}`
 		);
+	}
+}
+
+/*
+ * Technique-override hygiene, which did not exist.
+ *
+ * `ov.techniques` and `ov.techniquesDrop` were applied with NO validation of
+ * any kind: not the recipe slug, not the label, not whether the row still
+ * changes anything. A mistyped slug shipped silently, and a row whose ruling
+ * the derivation had already stopped producing sat there looking load-bearing.
+ * The lexicon overrides got exactly this gate in item 21 and the technique
+ * overrides never had it - which is how five sealed-keyword collisions
+ * (`choux` the cabbage, `lye` the cure, `flamb` inside a tart's name, `churn`
+ * inside a denial) went unnoticed long enough to reach a technique page.
+ *
+ * A dead row is a judgement that no longer binds, and it must be re-made
+ * rather than silently carried.
+ */
+{
+	const slugSet = new Set(recipeSlugs);
+	const liveLabels = new Set(TECH_ALL.map((t) => t.l));
+	const bySlug = new Map(index.map((r, n) => [r.slug, full[n]]));
+	for (const [slug, ov] of Object.entries(OVERRIDES.recipes ?? {})) {
+		const rules = ov.techniques ?? ov.techniquesDrop;
+		if (!rules) continue;
+		if (!slugSet.has(slug)) {
+			problems.push(`technique override "${slug}" matches no recipe slug`);
+			continue;
+		}
+		for (const label of rules) {
+			if (!liveLabels.has(label))
+				problems.push(`technique override ${slug}: "${label}" is not a label the table produces`);
+		}
+		if (ov.techniquesDrop) {
+			const derived = deriveTechniques(linkBlobs[index.findIndex((r) => r.slug === slug)], TECH_ALL);
+			const inert = ov.techniquesDrop.filter((l) => !derived.includes(l));
+			if (inert.length)
+				problems.push(
+					`technique override ${slug}: drop ${inert.map((l) => `"${l}"`).join(', ')} suppressed nothing this build`
+				);
+		} else if (bySlug.has(slug)) {
+			const derived = deriveTechniques(linkBlobs[index.findIndex((r) => r.slug === slug)], TECH_ALL);
+			const same =
+				derived.length === ov.techniques.length && derived.every((t) => ov.techniques.includes(t));
+			if (same)
+				problems.push(
+					`technique override ${slug}: the list equals what the table derives, so the row rules nothing`
+				);
+		}
 	}
 }
 

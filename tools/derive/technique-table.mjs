@@ -290,6 +290,49 @@ export const SUPPLEMENT = [
 	 * is an onion; "deep mahogany" alone finds 11 of which 9 are crust colour;
 	 * "bagel" adds bagels-with-lox-and-schmear, which boils nothing.
 	 */
+	/*
+	 * The second pass over the sealed half, and the shape of the backlog it
+	 * came from: 42 of the 112 live labels sat at five recipes or fewer and
+	 * ALL 42 were sealed. Median keyword list, sealed 2 against authored 15 -
+	 * the widening pass reached the foundations and left the dish-shaped
+	 * entries at the one or two exact phrases the extractor wrote from the
+	 * label rather than from a recipe.
+	 *
+	 * Every keyword below matches exactly ONE recipe, hand-read, with the
+	 * wider forms measured and rejected: 'ramen' pulls saimin (a dashi broth),
+	 * 'shoyu' pulls nine soy-sauce ingredient lines, 'mole ' pulls three
+	 * guacamoles, 'pretzel' pulls beer-cheese and pretzel salt, 'thick rib'
+	 * pulls seven "thick ribbon"s and "thick ribeye"s, 'stretch the dough'
+	 * pulls four pizzas and a roti canai.
+	 *
+	 * Labels that could cross TECHNIQUE_GATE_MIN_RECIPES are deliberately NOT
+	 * widened here: Béchamel has thirteen unambiguous butter-flour-milk sauces
+	 * in the corpus and Butchery basics has thirty-odd jointed birds, and a
+	 * label reaching twelve REQUIRES an authored standard - human prose, and a
+	 * different item from a keyword pass. They are filed rather than half-done.
+	 */
+	{ k: ["ta'ameya"], l: 'Falafel', q: 'falafel technique fava' },
+	{ k: ['mole coloradito', 'mole amarillo'], l: 'Mole', q: 'oaxacan mole technique' },
+	{ k: ['shoyu ramen'], l: 'Ramen broth', q: 'shoyu ramen broth tare technique' },
+	{ k: ['tolma'], l: 'Rolling dolmas', q: 'rolling dolma tolma technique' },
+	{ k: ['cured salmon'], l: 'Curing gravlax', q: 'curing salmon gravlax technique' },
+	{ k: ['biang biang', 'lagmon'], l: 'Hand-pulled noodles', q: 'hand pulled noodle technique' },
+	{ k: ['boil each pretzel'], l: 'The pretzel bath', q: 'pretzel bath technique' },
+	/*
+	 * Three keywords that pay for the guard above. Its 23 removals are all
+	 * coincidences, but two of the recipes were carrying a real technique on a
+	 * coincidental keyword, and one is simply a good keyword found while
+	 * reading: 'thicken to a coating' 1/1 (ika-vakalolo genuinely reduces),
+	 * 'knead 8 minutes' 9/9 (seven of the nine carry no Kneading tag today),
+	 * 'drop of batter' 2/2.
+	 */
+	{ k: ['thicken to a coating'], l: 'Reducing a sauce', q: 'reducing a sauce nappe technique' },
+	{ k: ['knead 8 minutes'], l: 'Kneading dough', q: 'kneading dough by hand technique' },
+	{
+		k: ['drop of batter'],
+		l: 'The coat before the fry: dredge, crumb, batter',
+		q: 'batter temperature test technique'
+	},
 	{ k: ['souffle'], l: 'The soufflé', q: 'souffle technique how to' },
 	{
 		k: ['in malty water', 'boil 30 seconds a side'],

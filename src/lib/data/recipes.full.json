@@ -2867,9 +2867,7 @@
     ],
     "note": "Compress just enough to hold: an onigiri should fall apart in the mouth, not in the hand, and the difference is three firm-but-gentle presses versus a squeeze that welds the grains into a plug. Wet, salted palms are the whole seasoning system: the salt lives on the surface where the tongue meets it first. Nori goes on at the last second so it snaps rather than sogs. This is Japan's oldest portable meal: samurai carried them into the field a thousand years ago.",
     "equipment": [],
-    "techniques": [
-      "Sushi rice & rolling"
-    ],
+    "techniques": [],
     "flavor": {
       "tags": [
         "briny"
@@ -3481,6 +3479,7 @@
     "note": "Ramen is assembly, not soup-making: broth, tare, noodles and toppings are four separate projects that meet in the bowl, which is why the tare seasons the BOWL and not the pot; every serving lands calibrated instead of drifting saltier as the broth reduces. Noodles never cook in the broth; their starch would cloud in minutes what the kombu spent twenty building. Get the sequence right and a weeknight bowl stands shockingly close to the shop version.",
     "equipment": [],
     "techniques": [
+      "Ramen broth",
       "The bare simmer: holding liquid below the boil"
     ],
     "flavor": {
@@ -11022,8 +11021,8 @@
       "Clove"
     ],
     "judgedBy": [
-      "the-coat-before-the-fry-dredge-crumb-batter",
-      "sauteing-and-the-shallow-fry"
+      "sauteing-and-the-shallow-fry",
+      "the-coat-before-the-fry-dredge-crumb-batter"
     ]
   },
   {
@@ -11816,9 +11815,7 @@
     "equipment": [
       "Skillet"
     ],
-    "techniques": [
-      "Reducing a sauce"
-    ],
+    "techniques": [],
     "flavor": {
       "tags": [
         "rich",
@@ -11856,9 +11853,6 @@
       "Oregano",
       "Butter",
       "Paprika"
-    ],
-    "judgedBy": [
-      "reducing-a-sauce"
     ]
   },
   {
@@ -19233,8 +19227,7 @@
       "Mortar & pestle"
     ],
     "techniques": [
-      "Pounding a curry paste",
-      "Reducing a sauce"
+      "Pounding a curry paste"
     ],
     "flavor": {
       "tags": [
@@ -19285,8 +19278,7 @@
       "Tamarind"
     ],
     "judgedBy": [
-      "pounding-a-curry-paste",
-      "reducing-a-sauce"
+      "pounding-a-curry-paste"
     ]
   },
   {
@@ -37627,7 +37619,7 @@
     ],
     "judgedBy": [
       "the-broiler-heat-from-above",
-      "the-coat-before-the-fry-dredge-crumb-batter"
+      "sauteing-and-the-shallow-fry"
     ]
   },
   {
@@ -39105,8 +39097,7 @@
     "note": "Samoa calls it oka, Fiji calls it kokoda, Tahiti calls it poisson cru: the Pacific's great citrus-and-coconut fish family, and the coconut cream is the move that makes it gentler and rounder than any Latin ceviche. The half-drain of lime is the balance point: too much acid and the coconut curdles into argument; drained right, they make peace in the bowl.",
     "equipment": [],
     "techniques": [
-      "Ceviche",
-      "Reducing a sauce"
+      "Ceviche"
     ],
     "flavor": {
       "tags": [
@@ -39148,9 +39139,6 @@
       "Coconut",
       "Cream",
       "Coconut milk"
-    ],
-    "judgedBy": [
-      "reducing-a-sauce"
     ]
   },
   {
@@ -45981,6 +45969,7 @@
     "note": "Xi'an's belt noodle, named onomatopoeically for the slap of dough on counter, and written with a character so famously complex (50-plus strokes) that it fits in no standard font and is taught as a rhyme. The pour-over of smoking oil onto raw aromatics is the master move: it blooms the chili and garlic in one hiss, sauce made in the bowl, three seconds, no pan.",
     "equipment": [],
     "techniques": [
+      "Hand-pulled noodles",
       "Braising",
       "Blanching & shocking"
     ],
@@ -46559,7 +46548,6 @@
     ],
     "techniques": [
       "Dashi",
-      "Salted water & the float test",
       "Blanching & shocking"
     ],
     "flavor": {
@@ -50322,9 +50310,7 @@
     "equipment": [
       "Sheet pan"
     ],
-    "techniques": [
-      "Reducing a sauce"
-    ],
+    "techniques": [],
     "flavor": {
       "tags": [
         "bright",
@@ -50547,7 +50533,6 @@
     "note": "Veracruz was Spain's front door into Mexico, and this dish is the meeting minutes: Mediterranean olives, capers and olive oil folded into a New World tomato sauce with pickled chiles casting the deciding vote. The raisins are the old Moorish echo most recipes north of the port forget. It is Mexico's great poached-fish dish (gentle heat, briny-bright sauce) and proof that fusion cooking is not a trend but a four-century-old habit.",
     "equipment": [],
     "techniques": [
-      "Reducing a sauce",
       "Brining & curing",
       "The bare simmer: holding liquid below the boil"
     ],
@@ -50603,7 +50588,7 @@
     ],
     "judgedBy": [
       "brining-and-curing",
-      "reducing-a-sauce"
+      "the-bare-simmer-holding-liquid-below-the-boil"
     ]
   },
   {
@@ -51006,7 +50991,6 @@
     "note": "Escabeche crossed from Spain through the galleon trade and the Philippines rewired it: where the Mediterranean original is a cold vinegar preservation, the Filipino version is served hot, sweetened with cane sugar, and built on the crisp-versus-sauced tension of a whole fried fish dressed at the last second. The ginger is the Filipino signature; the pour-over timing is the craft. It is the same word wearing a completely different climate.",
     "equipment": [],
     "techniques": [
-      "Reducing a sauce",
       "Knife cuts: dice, julienne, bias"
     ],
     "flavor": {
@@ -51044,7 +51028,6 @@
       "Sugar"
     ],
     "judgedBy": [
-      "reducing-a-sauce",
       "knife-cuts-dice-julienne-bias"
     ]
   },
@@ -52318,9 +52301,7 @@
     "equipment": [
       "Ice-cream churner"
     ],
-    "techniques": [
-      "Churning ice cream"
-    ],
+    "techniques": [],
     "flavor": {
       "tags": [
         "rich",
@@ -63105,6 +63086,7 @@
     "note": "The soda bath is what makes a pretzel a pretzel: it raises the surface pH so the crust browns fast and tastes of that particular pretzel tang. Philadelphia eats them soft, in rows, with mustard.",
     "equipment": [],
     "techniques": [
+      "The pretzel bath",
       "Kneading dough",
       "Salted water & the float test",
       "Proofing: the rise before the oven",
@@ -63867,8 +63849,8 @@
       "Cinnamon"
     ],
     "judgedBy": [
-      "kneading-dough",
-      "sugar-stages-and-caramel"
+      "sugar-stages-and-caramel",
+      "kneading-dough"
     ]
   },
   {
@@ -64659,7 +64641,6 @@
     "note": "A Delaware Valley institution passed down from colonial taverns, when snapping turtle was cheap protein and the soup was every inn's pride. The dark roux and the sherry are non-negotiable, and the sherry goes in at the table, never in the pot, each spoonful baptized to the eater's taste from the cruet alongside. The hard-boiled egg garnish is the old-school tell. Rich, dark, faintly sweet: closer to a ragout than a broth, and one of the last living links to tavern cooking.",
     "equipment": [],
     "techniques": [
-      "Reducing a sauce",
       "Making a roux",
       "Searing: the hard crust",
       "Sweating aromatics: soft, never browned"
@@ -64713,7 +64694,7 @@
     ],
     "judgedBy": [
       "making-a-roux",
-      "reducing-a-sauce"
+      "searing-the-hard-crust"
     ]
   },
   {
@@ -65094,8 +65075,8 @@
       "Cream"
     ],
     "judgedBy": [
-      "sweating-aromatics-soft-never-browned",
-      "salted-water-and-the-float-test"
+      "salted-water-and-the-float-test",
+      "sweating-aromatics-soft-never-browned"
     ]
   },
   {
@@ -73532,8 +73513,8 @@
       "Clove"
     ],
     "judgedBy": [
-      "frying-the-paste-until-the-oil-splits",
-      "reducing-a-sauce"
+      "reducing-a-sauce",
+      "frying-the-paste-until-the-oil-splits"
     ]
   },
   {
@@ -75121,8 +75102,8 @@
       "Cornmeal/Polenta"
     ],
     "judgedBy": [
-      "the-coat-before-the-fry-dredge-crumb-batter",
-      "sauteing-and-the-shallow-fry"
+      "sauteing-and-the-shallow-fry",
+      "the-coat-before-the-fry-dredge-crumb-batter"
     ]
   },
   {
@@ -88465,7 +88446,7 @@
     ],
     "judgedBy": [
       "shaping-by-hand",
-      "sweating-aromatics-soft-never-browned"
+      "salted-water-and-the-float-test"
     ]
   },
   {
@@ -89038,8 +89019,8 @@
       "Cinnamon"
     ],
     "judgedBy": [
-      "kneading-dough",
-      "sugar-stages-and-caramel"
+      "sugar-stages-and-caramel",
+      "kneading-dough"
     ]
   },
   {
@@ -93289,7 +93270,7 @@
     ],
     "judgedBy": [
       "draining-fried-food-a-rack-never-paper",
-      "the-coat-before-the-fry-dredge-crumb-batter"
+      "sauteing-and-the-shallow-fry"
     ]
   },
   {
@@ -96621,7 +96602,6 @@
     "note": "A Tucson and Sonora border creation: the bacon-wrapped dog in a fluffy bolillo, loaded like a taco. Wrap the bacon spirally and crisp it fully; a limp bacon wrap slides off and misses the smoky point of the whole thing.",
     "equipment": [],
     "techniques": [
-      "Brining & curing",
       "Griddle & plancha work"
     ],
     "flavor": {
@@ -96660,8 +96640,7 @@
       "Mayonnaise"
     ],
     "judgedBy": [
-      "griddle-and-plancha-work",
-      "brining-and-curing"
+      "griddle-and-plancha-work"
     ]
   },
   {
@@ -112133,6 +112112,7 @@
     "techniques": [
       "Pleating dumplings",
       "Pie crust & blind baking",
+      "Kneading dough",
       "Charring over open flame",
       "Dry-pan toasting: spices, seeds and nuts",
       "Steaming: basket, leaf and lid",
@@ -112935,7 +112915,7 @@
     ],
     "judgedBy": [
       "salting-to-draw-the-water-out",
-      "kneading-dough"
+      "roasting-in-a-hot-oven"
     ]
   },
   {
@@ -117549,6 +117529,7 @@
       "Sheet pan"
     ],
     "techniques": [
+      "Curing gravlax",
       "Brining & curing"
     ],
     "flavor": {
@@ -122454,7 +122435,7 @@
     ],
     "judgedBy": [
       "tempering-a-custard",
-      "frying-the-paste-until-the-oil-splits"
+      "reducing-a-sauce"
     ]
   },
   {
@@ -125179,8 +125160,8 @@
       "Stock/Broth"
     ],
     "judgedBy": [
-      "the-coat-before-the-fry-dredge-crumb-batter",
-      "sauteing-and-the-shallow-fry"
+      "sauteing-and-the-shallow-fry",
+      "the-coat-before-the-fry-dredge-crumb-batter"
     ]
   },
   {
@@ -125543,7 +125524,7 @@
     ],
     "judgedBy": [
       "sugar-stages-and-caramel",
-      "frying-the-paste-until-the-oil-splits"
+      "reducing-a-sauce"
     ]
   },
   {
@@ -128257,6 +128238,7 @@
     "equipment": [],
     "techniques": [
       "Hand-pulled noodles",
+      "Kneading dough",
       "The bare simmer: holding liquid below the boil",
       "Salted water & the float test",
       "Straining & passing through a sieve",
@@ -128306,8 +128288,8 @@
       "Sichuan peppercorn"
     ],
     "judgedBy": [
-      "the-wobble-and-the-skewer-testing-a-bake",
-      "straining-and-passing-through-a-sieve"
+      "kneading-dough",
+      "the-wobble-and-the-skewer-testing-a-bake"
     ]
   },
   {
@@ -129532,6 +129514,7 @@
       "Rolling pin"
     ],
     "techniques": [
+      "Kneading dough",
       "Proofing: the rise before the oven"
     ],
     "flavor": {
@@ -129566,6 +129549,7 @@
       "Sichuan peppercorn"
     ],
     "judgedBy": [
+      "kneading-dough",
       "proofing-the-rise-before-the-oven"
     ]
   },
@@ -129979,6 +129963,7 @@
     "note": "A mole is fried before it is thinned, and that is not ceremony. In hot fat the paste reaches temperatures water cannot: sugars and proteins brown, the raw starch of nut and plantain cooks out, and the fat soluble pigments bloom red. Thin it first and it can only stew, staying thin, sour and gritty however long you give it. Fry until the fat pools, then add liquid.",
     "equipment": [],
     "techniques": [
+      "Mole",
       "Reducing a sauce",
       "Tortillas on the comal",
       "Charring over open flame",
@@ -130152,6 +130137,7 @@
     "note": "Amarillo is thickened with masa, not fat, so the masa is slaked in cold liquid first: tipped straight into hot broth the outside of every grain gelatinises at once and seals a raw core, which is why lumpy mole never smooths out again. Once in, it wants a gentle boil for five minutes. Pulled off early it tastes chalky and slackens as it stands.",
     "equipment": [],
     "techniques": [
+      "Mole",
       "Working with masa",
       "Tortillas on the comal",
       "Frying the paste until the oil splits",
@@ -131706,7 +131692,6 @@
     ],
     "techniques": [
       "Tadka: blooming spices in fat",
-      "Churning ice cream",
       "Steaming: basket, leaf and lid",
       "Knife cuts: dice, julienne, bias",
       "Mashing & puréeing"
@@ -138727,7 +138712,7 @@
     ],
     "judgedBy": [
       "mashing-and-pureeing",
-      "sweating-aromatics-soft-never-browned"
+      "salted-water-and-the-float-test"
     ]
   },
   {
@@ -140762,6 +140747,7 @@
     ],
     "techniques": [
       "Wok technique",
+      "Kneading dough",
       "Proofing: the rise before the oven"
     ],
     "flavor": {
@@ -140800,7 +140786,7 @@
     ],
     "judgedBy": [
       "wok-technique",
-      "proofing-the-rise-before-the-oven"
+      "kneading-dough"
     ]
   },
   {
@@ -142206,6 +142192,7 @@
     "equipment": [],
     "techniques": [
       "Khachapuri shaping",
+      "Kneading dough",
       "Proofing: the rise before the oven"
     ],
     "flavor": {
@@ -142254,6 +142241,7 @@
       "Sugar"
     ],
     "judgedBy": [
+      "kneading-dough",
       "proofing-the-rise-before-the-oven"
     ]
   },
@@ -143364,7 +143352,6 @@
     "equipment": [],
     "techniques": [
       "Tempering a custard",
-      "Fermentation",
       "Straining & passing through a sieve",
       "Skimming: foam, fat and a clear broth"
     ],
@@ -143404,8 +143391,8 @@
       "Nuts"
     ],
     "judgedBy": [
-      "fermentation",
-      "tempering-a-custard"
+      "tempering-a-custard",
+      "skimming-foam-fat-and-a-clear-broth"
     ]
   },
   {
@@ -145992,8 +145979,8 @@
       "Nuts"
     ],
     "judgedBy": [
-      "kneading-dough",
-      "sugar-stages-and-caramel"
+      "sugar-stages-and-caramel",
+      "kneading-dough"
     ]
   },
   {
@@ -146835,7 +146822,7 @@
     ],
     "judgedBy": [
       "soaking-dried-goods-back-to-life",
-      "frying-the-paste-until-the-oil-splits"
+      "reducing-a-sauce"
     ]
   },
   {
@@ -147794,7 +147781,6 @@
     "note": "Rocoto is Capsicum pubescens, a different species from the ajíes: thick fleshed, apple crisp, with its heat locked in the pale placenta and the black seeds. Strip both and it eats like a sweet pepper. Habas must lose their second skin after blanching or they stay leathery and taste of chalk. Dress it late, because vinegar standing on queso fresco draws it wet and crumbly.",
     "equipment": [],
     "techniques": [
-      "Salted water & the float test",
       "Blanching & shocking",
       "Knife cuts: dice, julienne, bias"
     ],
@@ -153226,6 +153212,7 @@
     "techniques": [
       "Lamination",
       "Fresh pasta",
+      "Kneading dough",
       "Salted water & the float test",
       "Blanching & shocking",
       "Resting dough: the pause that does the work"
@@ -153262,8 +153249,8 @@
       "Flour"
     ],
     "judgedBy": [
-      "resting-dough-the-pause-that-does-the-work",
-      "blanching-and-shocking"
+      "kneading-dough",
+      "resting-dough-the-pause-that-does-the-work"
     ]
   },
   {
@@ -156691,7 +156678,6 @@
     "techniques": [
       "Roasting in a hot oven",
       "Steaming: basket, leaf and lid",
-      "Salted water & the float test",
       "Blanching & shocking"
     ],
     "flavor": {
@@ -160065,6 +160051,7 @@
     "note": "Torn bean cell walls and their own starch are the only binder here; no egg, no flour. Salt and bicarbonate pull water out fast, so a paste seasoned early goes slack and the patty steams itself hollow and bursts in the oil. A blender does the same damage by another route: a smooth paste has no structure, drinks fat and fries grey instead of green.",
     "equipment": [],
     "techniques": [
+      "Falafel",
       "Draining fried food: a rack, never paper"
     ],
     "flavor": {
@@ -161588,8 +161575,8 @@
       "Clove"
     ],
     "judgedBy": [
-      "frying-the-paste-until-the-oil-splits",
-      "reducing-a-sauce"
+      "reducing-a-sauce",
+      "frying-the-paste-until-the-oil-splits"
     ]
   },
   {
@@ -161800,7 +161787,6 @@
     ],
     "techniques": [
       "Frying the paste until the oil splits",
-      "Salted water & the float test",
       "Keeping the cooking liquid",
       "Soaking dried goods back to life"
     ],
@@ -162429,8 +162415,8 @@
       "Thyme"
     ],
     "judgedBy": [
-      "frying-the-paste-until-the-oil-splits",
-      "reducing-a-sauce"
+      "reducing-a-sauce",
+      "frying-the-paste-until-the-oil-splits"
     ]
   },
   {
@@ -165586,7 +165572,6 @@
     "equipment": [],
     "techniques": [
       "Sweating aromatics: soft, never browned",
-      "Salted water & the float test",
       "Soaking dried goods back to life",
       "Mashing & puréeing"
     ],
@@ -167624,7 +167609,6 @@
       "Grater / zester"
     ],
     "techniques": [
-      "Flambé",
       "Charring over open flame",
       "Straining & passing through a sieve"
     ],
@@ -169327,6 +169311,7 @@
     "equipment": [],
     "techniques": [
       "Sautéing & the shallow fry",
+      "The coat before the fry: dredge, crumb, batter",
       "Draining fried food: a rack, never paper"
     ],
     "flavor": {
@@ -169523,8 +169508,8 @@
       "Clove"
     ],
     "judgedBy": [
-      "frying-the-paste-until-the-oil-splits",
-      "reducing-a-sauce"
+      "reducing-a-sauce",
+      "frying-the-paste-until-the-oil-splits"
     ]
   },
   {
@@ -173326,7 +173311,6 @@
     ],
     "techniques": [
       "Dashi",
-      "Salted water & the float test",
       "Straining & passing through a sieve"
     ],
     "flavor": {
@@ -173466,8 +173450,7 @@
       "Grater / zester"
     ],
     "techniques": [
-      "Dashi",
-      "Salted water & the float test"
+      "Dashi"
     ],
     "flavor": {
       "tags": [
@@ -173510,8 +173493,7 @@
       "Dried mushrooms"
     ],
     "judgedBy": [
-      "dashi",
-      "salted-water-and-the-float-test"
+      "dashi"
     ]
   },
   {
@@ -174797,8 +174779,7 @@
     "equipment": [],
     "techniques": [
       "Dashi",
-      "The bare simmer: holding liquid below the boil",
-      "Salted water & the float test"
+      "The bare simmer: holding liquid below the boil"
     ],
     "flavor": {
       "tags": [
@@ -176919,7 +176900,6 @@
     "note": "Okinawa soba holds no buckwheat: it is wheat raised with alkaline water, and the high pH tightens the gluten and yellows the flour, which is why the strand stays springy sitting in hot broth. The broth is the other local marker, half pork and half katsuobushi rather than one or the other. Boil the bonito and you pull out bitterness and cloud; hold the pot near 80C (176F) for three minutes and you get the savour and nothing sour.",
     "equipment": [],
     "techniques": [
-      "Salted water & the float test",
       "Straining & passing through a sieve"
     ],
     "flavor": {
@@ -176957,8 +176937,7 @@
       "Seaweed/Nori"
     ],
     "judgedBy": [
-      "straining-and-passing-through-a-sieve",
-      "salted-water-and-the-float-test"
+      "straining-and-passing-through-a-sieve"
     ]
   },
   {
@@ -180764,6 +180743,7 @@
     "note": "Sour cabbage rolls because lactic fermentation has already softened the pectin in the leaf; fresh cabbage cracks at the rib unless blanched, and it makes a flat tolma, because with no meat and no fat here the acid is the seasoning. Fill with the grain still raw and the leaf only two thirds full: bulgur and rice keep swelling in the pot and a tight roll splits. Weight them or they unwind.",
     "equipment": [],
     "techniques": [
+      "Rolling dolmas",
       "Brining & curing",
       "The bare simmer: holding liquid below the boil"
     ],
@@ -183216,7 +183196,7 @@
     ],
     "judgedBy": [
       "the-bare-simmer-holding-liquid-below-the-boil",
-      "sweating-aromatics-soft-never-browned"
+      "salted-water-and-the-float-test"
     ]
   },
   {
@@ -184834,7 +184814,6 @@
     "equipment": [],
     "techniques": [
       "Empanada folding",
-      "Arepas",
       "Deep frying",
       "Salted water & the float test",
       "Shaping by hand",
@@ -185108,8 +185087,8 @@
       "Cumin"
     ],
     "judgedBy": [
-      "sweating-aromatics-soft-never-browned",
-      "salted-water-and-the-float-test"
+      "salted-water-and-the-float-test",
+      "sweating-aromatics-soft-never-browned"
     ]
   },
   {
@@ -188538,8 +188517,8 @@
       "Sugar"
     ],
     "judgedBy": [
-      "frying-the-paste-until-the-oil-splits",
-      "reducing-a-sauce"
+      "reducing-a-sauce",
+      "frying-the-paste-until-the-oil-splits"
     ]
   },
   {
@@ -189655,8 +189634,8 @@
       "Thyme"
     ],
     "judgedBy": [
-      "deep-frying",
-      "reducing-a-sauce"
+      "reducing-a-sauce",
+      "deep-frying"
     ]
   },
   {
@@ -189932,7 +189911,7 @@
     ],
     "judgedBy": [
       "straining-and-passing-through-a-sieve",
-      "sweating-aromatics-soft-never-browned"
+      "salted-water-and-the-float-test"
     ]
   },
   {
@@ -192217,7 +192196,6 @@
     "note": "The crust has to survive vinegar, so build it dry: fry fish patted matte, and drain it on a rack. On paper, trapped steam softens the skin before the acid ever reaches it. Pour the pickle boiling over hot fish so it penetrates, but hold the vegetables to 90 seconds in it; longer and they go limp and stay limp through the days the fish keeps. Best after a night in the fridge.",
     "equipment": [],
     "techniques": [
-      "Reducing a sauce",
       "Deep frying",
       "Knife cuts: dice, julienne, bias"
     ],
@@ -192258,7 +192236,7 @@
     ],
     "judgedBy": [
       "deep-frying",
-      "reducing-a-sauce"
+      "knife-cuts-dice-julienne-bias"
     ]
   },
   {
@@ -193762,7 +193740,6 @@
     "note": "Lye takes the fish apart on purpose. At around pH 12 it hydrolyses protein and saponifies fat, so rehydrated stockfish swells past 90 percent water and sets as a gel. Two failures: left too long in the bath it dissolves to slime, and given too short a freshwater soak afterwards it holds residual alkali, which is caustic, soapy and unsafe. Soak until it is neutral, then bake briefly, because the protein is already half undone.",
     "equipment": [],
     "techniques": [
-      "The pretzel bath",
       "Rendering fat: and cooking in what runs out",
       "The bare simmer: holding liquid below the boil",
       "Soaking dried goods back to life",
@@ -193932,7 +193909,7 @@
     ],
     "judgedBy": [
       "the-bare-simmer-holding-liquid-below-the-boil",
-      "sweating-aromatics-soft-never-browned"
+      "salted-water-and-the-float-test"
     ]
   },
   {
@@ -196803,7 +196780,7 @@
     ],
     "judgedBy": [
       "making-a-roux",
-      "sweating-aromatics-soft-never-browned"
+      "salted-water-and-the-float-test"
     ]
   },
   {
@@ -203208,6 +203185,7 @@
     ],
     "techniques": [
       "Wok technique",
+      "Hand-pulled noodles",
       "Searing: the hard crust",
       "Frying the paste until the oil splits",
       "Salted water & the float test",
@@ -204054,7 +204032,6 @@
       "Grater / zester"
     ],
     "techniques": [
-      "Arepas",
       "Resting dough: the pause that does the work"
     ],
     "flavor": {
@@ -208727,8 +208704,8 @@
       "Clove"
     ],
     "judgedBy": [
-      "deep-frying",
-      "reducing-a-sauce"
+      "reducing-a-sauce",
+      "deep-frying"
     ]
   },
   {
@@ -212455,7 +212432,7 @@
     ],
     "judgedBy": [
       "reducing-a-sauce",
-      "sweating-aromatics-soft-never-browned"
+      "salted-water-and-the-float-test"
     ]
   },
   {
@@ -213338,7 +213315,7 @@
     ],
     "judgedBy": [
       "chilling-to-firm-the-fridge-as-binder",
-      "kneading-dough"
+      "sugar-stages-and-caramel"
     ]
   },
   {
@@ -213852,6 +213829,7 @@
     "equipment": [],
     "techniques": [
       "Whipping a meringue",
+      "Kneading dough",
       "Salted water & the float test",
       "Proofing: the rise before the oven"
     ],
@@ -213902,7 +213880,7 @@
     ],
     "judgedBy": [
       "whipping-a-meringue",
-      "proofing-the-rise-before-the-oven"
+      "kneading-dough"
     ]
   },
   {
@@ -218173,7 +218151,6 @@
     "note": "Pheasant breast runs 1% to 2% fat and its skin has little to give, so a dry oven strips it in minutes. Breast down in a covered pot, the thin muscle sits in 100C (212F) steam under the fat rendering out of the bacon while the legs, which need time as well as 74C (165F), catch up. The overnight salt is a dry brine: the muscle holds water it would otherwise shed. An older bird, one with a rigid breastbone tip, belongs in this pot and not in a roasting tin.",
     "equipment": [],
     "techniques": [
-      "Choux pastry",
       "Trussing",
       "Salted water & the float test"
     ],

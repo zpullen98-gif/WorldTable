@@ -147,6 +147,36 @@
         "Boiling bagels",
         "Salted water & the float test"
       ]
+    },
+    "faisan-aux-choux": {
+      "reason": "Technique 'Choux pastry' removed: the sealed keyword 'choux' is French for CABBAGE, and this is pheasant braised on savoy. No pastry.",
+      "techniquesDrop": [
+        "Choux pastry"
+      ]
+    },
+    "flammekueche-tarte-flambee": {
+      "reason": "Technique 'Flambé' removed: the sealed keyword 'flamb' matches the tart's own name. It is a flatbread baked on a stone at 270C; nothing is lit.",
+      "techniquesDrop": [
+        "Flambé"
+      ]
+    },
+    "lutefisk": {
+      "reason": "Technique 'The pretzel bath' removed: the sealed keyword 'lye' matches this fish's sodium-hydroxide cure. Same reagent, different job - that page is about giving BREAD an alkaline skin for the oven.",
+      "techniquesDrop": [
+        "The pretzel bath"
+      ]
+    },
+    "kulfi": {
+      "reason": "Technique 'Churning ice cream' removed: the sealed keyword 'churn' sits inside 'no eggs, no churning: kulfi is proudly still' - a DENIAL, which the tag path cannot see (films.mjs's negation guard is film-only). Kulfi carries nothing else, and an honest silence beats a wrong grade; marquesitas is the precedent.",
+      "techniquesDrop": [
+        "Churning ice cream"
+      ]
+    },
+    "sarson-da-saag": {
+      "reason": "Technique 'Churning ice cream' removed: the sealed keyword 'churn' matches 'mash the greens in the pot with a wooden churner'. A tool, not the technique.",
+      "techniquesDrop": [
+        "Churning ice cream"
+      ]
     }
   },
   "lexicon": {

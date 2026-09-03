@@ -19,9 +19,7 @@
     "recipes": [
       "arepas",
       "arepa-de-choclo-con-cuajada",
-      "empanadas-vallunas",
       "arepa-reina-pepiada",
-      "cachapa-con-queso-de-mano",
       "caraotas-negras"
     ]
   },
@@ -321,7 +319,7 @@
     "lexiconTerm": "Brining: Wet, Dry & Cures",
     "definition": "Salt's three levels of commitment. WET BRINE (5–8% salt solution, hours): dissolves some muscle protein so meat retains water: juicier lean cuts, diluted flavor, wet skin. DRY BRINE (salting 1–3 days ahead, uncovered): seasons deeply, keeps flavor concentrated, and desiccates skin for crackling, the modern professional default for poultry and steaks. CURING (higher salt, often with nitrite, plus time): preservation and transformation. Bacon, gravlax, pastrami, prosciutto. The through-line is diffusion and osmosis given time; 'season early' is the shortest version of this entire entry.",
     "origin": "original",
-    "chapters": 58,
+    "chapters": 57,
     "semesters": [
       {
         "n": 10,
@@ -356,7 +354,6 @@
       "south-dakota-pheasant-with-cream-gravy",
       "kansas-fried-chicken",
       "texas-smoked-sausage",
-      "sonoran-hot-dog",
       "utah-fry-sauce-burger",
       "utah-pastrami-burger",
       "alder-smoked-sockeye-salmon",
@@ -720,7 +717,7 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "original",
-    "chapters": 4,
+    "chapters": 3,
     "semesters": [
       {
         "n": 6,
@@ -730,8 +727,7 @@
     "recipes": [
       "profiteroles-pate-a-choux-master",
       "pate-a-choux-the-base-dough",
-      "balah-el-sham",
-      "faisan-aux-choux"
+      "balah-el-sham"
     ]
   },
   {
@@ -749,14 +745,12 @@
     "lexiconTerm": "Frozen Dessert Machines: Churners & Pacojet",
     "definition": "Ice cream is texture engineering, small ice crystals plus controlled air (overrun), and the machines are crystal-size strategies. HOME CHURNERS: frozen-bowl (cheap, one batch, pre-freeze the bowl 24h) vs. self-refrigerating compressors (batch after batch, the enthusiast's line). The pastry-science levers travel with either: sugar and alcohol depress freezing (scoopability), fat carries flavor, stabilizers (or the custard wing's egg base) manage melt; churn cold bases fast, harden in shallow containers. The pro disruptors: the PACOJET spins FROZEN solid blocks into instant micro-shaved creams to order (savory sorbets, herb ices, single-portion economics, a fine-dining fixture), and its consumer descendant (the Ninja Creami class) brought the same shave-don't-churn idea home, remaking the category. Kulfi (the dessert wing) reminds everyone the no-machine road exists: density as a choice. Whatever the hardware: the base recipe is 80% of the result: machines only preserve the texture you formulated.",
     "origin": "original",
-    "chapters": 5,
+    "chapters": 3,
     "semesters": [],
     "recipes": [
-      "kulfi",
       "maple-creemee",
       "illinois-sweet-corn-ice-cream",
-      "idaho-huckleberry-ice-cream",
-      "sarson-da-saag"
+      "idaho-huckleberry-ice-cream"
     ]
   },
   {
@@ -922,10 +916,11 @@
     "lexiconTerm": "Brining: Wet, Dry & Cures",
     "definition": "Salt's three levels of commitment. WET BRINE (5–8% salt solution, hours): dissolves some muscle protein so meat retains water: juicier lean cuts, diluted flavor, wet skin. DRY BRINE (salting 1–3 days ahead, uncovered): seasons deeply, keeps flavor concentrated, and desiccates skin for crackling, the modern professional default for poultry and steaks. CURING (higher salt, often with nitrite, plus time): preservation and transformation. Bacon, gravlax, pastrami, prosciutto. The through-line is diffusion and osmosis given time; 'season early' is the shortest version of this entire entry.",
     "origin": "original",
-    "chapters": 2,
+    "chapters": 3,
     "semesters": [],
     "recipes": [
       "gravlax",
+      "dill-and-aquavit-cured-salmon",
       "gravlax-the-cure-by-weight"
     ]
   },
@@ -1461,10 +1456,11 @@
     "lexiconTerm": "Deep & Shallow Frying",
     "definition": "Frying is violent dehydration: oil at 160–190°C flash-boils surface moisture outward (the bubbles ARE water leaving), creating crust while steam-cooking the interior. Laws: recover temperature between batches (crowding = greasy), match oil to job (neutral high-smoke oils for deep; the double-fry, low then high, for fries, tostones, and chicken that must stay crisp), drain on RACKS not paper (paper steams the base), and salt in the first seconds while the surface is still hot and receptive. Oil is a reusable ingredient: strain it, smell it, retire it when it darkens or foams.",
     "origin": "original",
-    "chapters": 1,
+    "chapters": 2,
     "semesters": [],
     "recipes": [
-      "falafel"
+      "falafel",
+      "taameya"
     ]
   },
   {
@@ -1482,7 +1478,7 @@
     "lexiconTerm": "Fermentation & Pickling",
     "definition": "Two preserved-sour families the menu should distinguish. QUICK PICKLING: vinegar, sugar, salt poured over: sour today, no microbes involved. LACTO-FERMENTATION: salt (2–3% by weight) suppresses bad microbes while lactobacillus converts sugars to lactic acid (sauerkraut, kimchi, real dill pickles, curtido), living sour with depth vinegar can't fake. Adjacent kingdoms: KOJI (Aspergillus mold on rice/barley) powers miso, soy sauce, and modern dry-age shortcuts; yeast ferments bread and beer; SCOBYs make kombucha and vinegar itself. Ferments are how a restaurant builds house flavor no supplier can sell the competition.",
     "origin": "original",
-    "chapters": 31,
+    "chapters": 30,
     "semesters": [
       {
         "n": 5,
@@ -1531,7 +1527,6 @@
       "laphet-thoke",
       "balachaung-kyaw",
       "ayib",
-      "churchkhela",
       "nan-e-barbari",
       "aish-baladi",
       "banku",
@@ -1589,7 +1584,7 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "original",
-    "chapters": 4,
+    "chapters": 3,
     "semesters": [
       {
         "n": 3,
@@ -1599,8 +1594,7 @@
     "recipes": [
       "bananas-foster",
       "garides-saganaki",
-      "flambe-pan-sauce-brandy-and-green-peppercorn",
-      "flammekueche-tarte-flambee"
+      "flambe-pan-sauce-brandy-and-green-peppercorn"
     ]
   },
   {
@@ -2013,11 +2007,13 @@
     "lexiconTerm": "Gluten & Hydration",
     "definition": "Gluten is the elastic network formed when wheat's glutenin and gliadin meet water and agitation: the structure of bread, the enemy of tenderness in cakes and pie crusts. The baker steers it three ways: FLOUR CHOICE (bread flour ~12–14% protein builds; cake flour ~8% barely does), FAT (shortens gluten strands, hence 'shortening', 'shortbread', 'shortcrust'), and TECHNIQUE (kneading develops it; minimal mixing and resting relax it). HYDRATION is water as a percentage of flour weight: 60% is a tight bagel dough, 75% a country loaf, 85%+ the wet ciabatta school. Baker's percentages, everything relative to flour at 100%, are the professional language; learn them and every formula scales.",
     "origin": "original",
-    "chapters": 2,
+    "chapters": 4,
     "semesters": [],
     "recipes": [
       "lagman",
-      "lanzhou-lamian"
+      "biang-biang-mian",
+      "lanzhou-lamian",
+      "qovurma-lagmon"
     ]
   },
   {
@@ -2296,7 +2292,7 @@
     "lexiconTerm": "Gluten & Hydration",
     "definition": "Gluten is the elastic network formed when wheat's glutenin and gliadin meet water and agitation: the structure of bread, the enemy of tenderness in cakes and pie crusts. The baker steers it three ways: FLOUR CHOICE (bread flour ~12–14% protein builds; cake flour ~8% barely does), FAT (shortens gluten strands, hence 'shortening', 'shortbread', 'shortcrust'), and TECHNIQUE (kneading develops it; minimal mixing and resting relax it). HYDRATION is water as a percentage of flour weight: 60% is a tight bagel dough, 75% a country loaf, 85%+ the wet ciabatta school. Baker's percentages, everything relative to flour at 100%, are the professional language; learn them and every formula scales.",
     "origin": "original",
-    "chapters": 33,
+    "chapters": 37,
     "semesters": [],
     "recipes": [
       "apfelstrudel",
@@ -2316,6 +2312,7 @@
       "pocket-pita",
       "brioche-nanterre",
       "jiaozi-pork-and-napa-cabbage",
+      "momo-kathmandu-style",
       "pierogi-z-kapusta-i-grzybami",
       "kayseri-mantisi",
       "hitokuchi-gyoza-hakata-style",
@@ -2326,17 +2323,22 @@
       "tortelli-derbetta-di-parma",
       "piadina-romagnola",
       "sheng-jian-bao",
+      "lanzhou-lamian",
+      "zhima-shaobing",
       "makki-di-roti",
       "zhong-shui-jiao",
       "granita-di-mandorla-con-brioche-col-tuzzu",
       "coxinha-de-frango",
+      "nan-bya",
       "dabo-kolo",
+      "imeruli-khachapuri",
       "kaak-al-quds",
       "halawet-el-jibn",
       "sfoglia-alluovo-the-hand-rolled-sheet",
       "semola-e-acqua-the-eggless-durum-dough",
       "knife-cut-wheat-noodles",
       "orecchiette-dragged-with-a-knife",
+      "lasagne-sheets-laminated-egg-dough",
       "spaghetti-alla-chitarra-the-square-strand",
       "amala",
       "saucisson-de-lyon-en-brioche",
@@ -2348,6 +2350,7 @@
       "pan-de-jamon",
       "chebakia",
       "kouign-amann",
+      "bienenstich",
       "pate-en-croute"
     ]
   },
@@ -2925,7 +2928,9 @@
     "chapters": 1,
     "semesters": [],
     "recipes": [
-      "mole-negro-oaxaqueno"
+      "mole-negro-oaxaqueno",
+      "mole-coloradito",
+      "mole-amarillo-con-chochoyotes"
     ]
   },
   {
@@ -3234,9 +3239,10 @@
     "lexiconTerm": "Stocks: Blanc, Brun, Broth & Demi",
     "definition": "WHITE STOCK: raw bones, gentle simmer: clean, pale, for velouté and light soups. BROWN STOCK: bones and mirepoix roasted first, tomato paste caramelized: deep color and roasted flavor, the mother of demi-glace and jus. BROTH is meat-based and seasoned to drink; stock is bone-based, unsalted, and built for gelatin. A proper stock sets like Jell-O cold. GLACE is stock reduced to a syrup; a spoon flavors a whole pan sauce. Skim relentlessly, never boil (cloudiness is emulsified scum), salt never (it concentrates downstream), and know that stock is the bank account every other station borrows from.",
     "origin": "original",
-    "chapters": 1,
+    "chapters": 2,
     "semesters": [],
     "recipes": [
+      "weeknight-shoyu-ramen",
       "tonkotsu-broth"
     ]
   },
@@ -3249,7 +3255,7 @@
     "lexiconTerm": "Reduction, Nappe & Mounting",
     "definition": "REDUCTION: simmering a liquid to evaporate water, concentrating flavor and body, the sauce-maker's primary move, always reduced BEFORE final seasoning (salt concentrates too). NAPPE: the classical doneness test: sauce coats the back of a spoon and holds a clean line drawn by a finger. MONTER AU BEURRE: 'mounting' cold butter cubes into a finished sauce off the heat, swirling, emulsifying in gloss, body, and richness; the last thirty seconds that make restaurant sauces taste like restaurant sauces. Together they are the grammar of à-la-minute saucing: reduce, season, mount, plate.",
     "origin": "original",
-    "chapters": 72,
+    "chapters": 67,
     "semesters": [
       {
         "n": 1,
@@ -3269,23 +3275,16 @@
       "coq-au-vin",
       "kheer",
       "patatas-bravas",
-      "blackened-redfish",
       "tteokbokki",
       "lemongrass-chicken",
       "baked-mac-and-cheese",
-      "thieboudienne",
       "chicken-adobo",
       "rinderrouladen",
       "sauce-veloute",
       "sauce-espagnole-and-demi-glace",
       "dulce-de-leche-casero",
-      "oka-ia",
       "jamaican-oxtail-stew",
-      "salt-baked-whole-fish",
-      "pescado-a-la-veracruzana",
-      "escabecheng-isda",
       "cape-cod-cranberry-relish",
-      "snapper-soup",
       "smithfield-ham-with-redeye-gravy",
       "sausage-gravy-over-biscuits",
       "sofrito-shrimp-creole",
@@ -3356,7 +3355,6 @@
       "boller-i-karry",
       "pollo-guisado-dominicano",
       "griot",
-      "escovitch-fish",
       "brown-stew-chicken",
       "gizzada",
       "ocopa-arequipena",
@@ -3778,9 +3776,10 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "original",
-    "chapters": 1,
+    "chapters": 2,
     "semesters": [],
     "recipes": [
+      "pasuts-tolma",
       "dolma-iraqiyya"
     ]
   },
@@ -3860,7 +3859,7 @@
     "lexiconTerm": "Poach, Simmer, Boil",
     "definition": "Three temperatures pretending to be one method. POACH: 71–82°C, water barely shivering: eggs, fish, chicken breast, anything delicate that violent bubbles would shred. SIMMER: 85–95°C, lazy bubbles: stocks, braises, beans, sauces. BOIL: 100°C rolling: pasta, blanching, potatoes, and almost nothing made of protein. The most common home error is treating these as synonyms; the most common professional discipline is watching the bubbles, not the dial. Salt poaching liquids and courts-bouillons like they are the sauce, because for those minutes they are.",
     "origin": "supplement",
-    "chapters": 101,
+    "chapters": 100,
     "semesters": [
       {
         "n": 1,
@@ -3889,7 +3888,6 @@
       "black-sesame-tang-yuan",
       "bouillabaisse",
       "fresh-egg-pasta-tagliatelle-master",
-      "zaru-soba",
       "matzo-ball-soup",
       "maine-lobster-roll",
       "linguine-alle-vongole",
@@ -3961,7 +3959,6 @@
       "elarji",
       "langos",
       "papa-a-la-huancaina",
-      "solterito-arequipeno",
       "beurre-monte-butter-held-liquid",
       "salade-composee-built-in-layers",
       "sauce-verte",
@@ -3978,20 +3975,17 @@
       "pate-a-choux-the-base-dough",
       "boil-up",
       "kina-on-buttered-bread",
-      "roast-kent-pumpkin-warrigal-greens-and-macadamia",
       "moros-y-cristianos",
       "yuca-con-mojo",
       "fatta-bil-lahma",
       "mahshi-kromb",
       "waakye",
       "nkatenkwan-groundnut-soup",
-      "red-red",
       "kontomire-abom",
       "amala",
       "ayamase",
       "ofe-nsala",
       "akara",
-      "ndambe",
       "choucroute-garnie-a-lalsacienne",
       "spaetzle-a-lalsacienne",
       "munster-au-cumin-et-pommes-de-terre-en-robe",
@@ -3999,15 +3993,11 @@
       "gazpachuelo-malagueno",
       "kokotxas-de-merluza-en-salsa-verde",
       "fideua-rossejada",
-      "kansai-kake-jiru-usukuchi-noodle-broth",
-      "kizami-udon",
       "mitarashi-dango",
       "kyo-yasai-no-takiawase",
-      "nishin-soba",
       "quenelles-de-brochet-sauce-nantua",
       "oeufs-en-meurette",
       "tablier-de-sapeur",
-      "soki-soba",
       "nakami-jiru",
       "le-grand-aioli",
       "soupe-au-pistou",
@@ -5262,7 +5252,6 @@
     "chapters": 4,
     "semesters": [],
     "recipes": [
-      "onigiri",
       "salmon-donburi",
       "california-roll",
       "shari-seasoned-sushi-rice",
@@ -6045,6 +6034,7 @@
       "songshu-guiyu",
       "bu-thee-kyaw",
       "pescaito-frito-gaditano",
+      "tortillitas-de-camarones",
       "kushikatsu-shinsekai-rules",
       "smazeny-syr-s-tatarskou-omackou",
       "chicharron-de-pollo",
@@ -6138,7 +6128,7 @@
     "semesters": [],
     "recipes": [
       "laugenbrezeln",
-      "lutefisk"
+      "philadelphia-soft-pretzel"
     ]
   },
   {

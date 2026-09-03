@@ -602,11 +602,6 @@
     ],
     "skills": [
       {
-        "slug": "reducing-a-sauce",
-        "label": "Reducing a sauce",
-        "dishes": 2
-      },
-      {
         "slug": "straining-and-passing-through-a-sieve",
         "label": "Straining & passing through a sieve",
         "dishes": 2
@@ -619,6 +614,11 @@
       {
         "slug": "making-a-roux",
         "label": "Making a roux",
+        "dishes": 1
+      },
+      {
+        "slug": "reducing-a-sauce",
+        "label": "Reducing a sauce",
         "dishes": 1
       },
       {

@@ -12,17 +12,23 @@
  * searing anything is doing the same measurable thing whether the pan holds
  * duck or aubergine, and that is assessable once, for all of it.
  *
- * 123 of the 1844 remain unassessable and always will on this approach: 100
- * carry no technique tag at all, and the other 23 exercise only techniques too
+ * 125 of the 1844 remain unassessable and always will on this approach: 103
+ * carry no technique tag at all, and the other 22 exercise only techniques too
  * rare in this corpus to be worth a standard. That is the honest ceiling rather
  * than a backlog, and it is gated below with everything else: the first
  * version of this sentence said 146 and 35, which were reasoned rather than
  * measured and were both wrong.
  *
+ * It moved from 123/100/23 when the tagger got a sense guard. Four recipes
+ * became untagged - onigiri, blackened-redfish, salt-baked-whole-fish and
+ * kulfi - because the one tag each carried was a collision: `nappe` inside
+ * `snapper`, `nigiri` inside `onigiri`, and kulfi's own denial. This number
+ * going UP is the honest direction.
+ *
  * The 60 techniques written here are every technique the corpus uses on 12 or
- * more recipes. They put a standard on 1676 recipes that had none, taking the
- * assessable corpus from 45 to 1721 of 1844: for 60 pieces of writing rather
- * than 1676.
+ * more recipes. They put a standard on 1674 recipes that had none, taking the
+ * assessable corpus from 45 to 1719 of 1844: for 60 pieces of writing rather
+ * than 1674.
  *
  * The sixtieth is low and slow smoking, and it arrived by the gate rather than
  * by choice: 134 meat and dessert recipes on 1 Sep 2026 pushed that technique
@@ -42,9 +48,15 @@
  * by two-thirds" and now reads "1.5L whole milk: reduced by two-thirds".
  * deriveTechniques is a substring test over the recipe blob, so it lost its
  * "Sugar stages & caramel" tag, and with it the standard that made it
- * assessable. It keeps "Churning ice cream". The lesson worth carrying is that
- * a matcher keyed on prose is keyed on that prose's PUNCTUATION too, and a
- * copy edit is therefore a data change; the gate is what caught it.
+ * assessable. The lesson worth carrying is that a matcher keyed on prose is
+ * keyed on that prose's PUNCTUATION too, and a copy edit is therefore a data
+ * change; the gate is what caught it.
+ *
+ * It kept "Churning ice cream" until the sense guard, and that tag was a lie
+ * of the same family: the sealed keyword `churn` sat inside kulfi's own
+ * sentence "no eggs, no churning: kulfi is proudly still". A substring test
+ * cannot read a denial. Kulfi now carries nothing, which is the third honest
+ * silence in this comment.
  *
  * Those numbers are gated in build-data.mjs and read back out of this
  * comment. If a technique is added, a standard is written, or the corpus
