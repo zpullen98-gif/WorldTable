@@ -4,4 +4,4 @@
  * Re-exported rather than copied: a forked slug rule is a forked URL space,
  * and every persisted reference is keyed by these strings.
  */
-export { slugify, qualifiedSlugs } from '../../tools/slugify.mjs';
+export { slugify, qualifiedSlugs, slugOrFallback, stableSuffix } from '../../tools/slugify.mjs';

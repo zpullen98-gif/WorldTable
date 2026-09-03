@@ -6,6 +6,7 @@
  * openable in any editor if something ever goes wrong.
  */
 import type { SessionState } from './db';
+import { screenFamilyRecipes } from '../familyRecipe';
 import type { HousePortable } from './house';
 
 export const FORMAT = 'world-table-session';
@@ -126,9 +127,20 @@ export function describeImport(
 		(k) => k in current.notes && current.notes[k] !== inNotes[k]
 	).length;
 	const newPantry = (incoming.pantry ?? []).filter((l) => !current.pantry.includes(l)).length;
-	const newFamily = (incoming.familyRecipes ?? []).filter(
+	/*
+	 * Family recipes, screened before they are counted.
+	 *
+	 * The count has to come from the SAME screen the merge uses or the banner
+	 * promises recipes the merge then throws away. `rejected` is surfaced rather
+	 * than swallowed: a file with a half-written recipe in it is a file the cook
+	 * can go and fix, and silently dropping it is how the old blank-Library
+	 * defect would simply become a blank space instead.
+	 */
+	const screened = screenFamilyRecipes(incoming.familyRecipes);
+	const newFamily = screened.kept.filter(
 		(r) => !current.familyRecipes.some((e) => e.slug === r.slug)
 	).length;
+	const skippedFamily = screened.rejected;
 	const newDishes = (incoming.menuDishes ?? []).filter(
 		(d) => d && d.id && !(current.menuDishes ?? []).some((e) => e.id === d.id)
 	).length;
@@ -241,5 +253,24 @@ export function describeImport(
 		parts.push(`${newPrices} ${newPrices === 1 ? 'price' : 'prices'} for the item book`);
 	if (newWaste)
 		parts.push(`${newWaste} waste ${newWaste === 1 ? 'entry' : 'entries'}`);
-	return parts.length ? parts.join(', ') : 'nothing new, this file matches what you already have';
+
+	/*
+	 * What will NOT be imported, said out loud.
+	 *
+	 * Appended after the "nothing new" line rather than before the list, because
+	 * on a file whose only fault is a half-written recipe that sentence is a lie
+	 * on its own: nothing new lands AND something was thrown away. The first
+	 * reason is quoted in full - a cook told "1 recipe skipped" learns nothing,
+	 * and one told "Nan's Stew: no flavour tags" can go and fix the file.
+	 */
+	const said = parts.length
+		? parts.join(', ')
+		: 'nothing new, this file matches what you already have';
+	if (!skippedFamily.length) return said;
+	const n = skippedFamily.length;
+	const tail =
+		n === 1
+			? `1 family recipe skipped (${skippedFamily[0]})`
+			: `${n} family recipes skipped (${skippedFamily[0]}, and ${n - 1} more)`;
+	return `${said}; ${tail}`;
 }

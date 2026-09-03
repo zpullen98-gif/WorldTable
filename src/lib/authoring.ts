@@ -13,7 +13,7 @@ import type { PantryGroup, Recipe, Course, Difficulty, DietFlags } from './types
 // The guide's own allergen matcher, pure and importable; see the diet note below.
 import { deriveDiet } from '../../tools/derive/diet.mjs';
 import { bySlug } from './data';
-import { slugify } from './slug';
+import { slugOrFallback } from './slug';
 
 export interface FamilyDraft {
 	name: string;
@@ -103,7 +103,10 @@ export function familySlug(name: string, existingFamily: Recipe[]): string {
 	const taken = (s: string) =>
 		bySlug.has(s) || existingFamily.some((r) => r.slug === s);
 
-	const base = slugify(name);
+	// Never empty: see slugOrFallback. A dish named wholly in a non-Latin
+	// script used to slug to "", and the uniqueness pass below then handed the
+	// second one "-family", so both were nonsense and neither had a page.
+	const base = slugOrFallback(name, 'dish');
 	if (!taken(base)) return base;
 	if (!taken(`${base}-family`)) return `${base}-family`;
 	let n = 2;
@@ -155,7 +158,10 @@ export function buildFamilyRecipe(
 		slug: familySlug(draft.name, existingFamily),
 		name: draft.name.trim(),
 		chapter,
-		chapterSlug: slugify(chapter),
+		// A chapter slug has NO uniqueness pass, so an empty one was worse here
+		// than on the dish: every non-Latin chapter collapsed into a single rail
+		// row. The fallback is a hash of the name, so two devices agree.
+		chapterSlug: slugOrFallback(chapter, 'chapter'),
 		course: draft.course,
 		difficulty: draft.difficulty,
 		minutes: Math.round(draft.minutes),

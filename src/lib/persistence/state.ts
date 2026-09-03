@@ -9,6 +9,7 @@
  * luck is not a foundation; a leaf module is.
  */
 import type { Recipe } from '../types';
+import { screenFamilyRecipes } from '../familyRecipe';
 import type { CostLine } from '../costing';
 
 export const CURRENT_VERSION = 1;
@@ -508,9 +509,21 @@ export function mergeSessions(
 			}
 			return [...done.values()].sort((a, b) => a.at - b.at);
 		})(),
+		/*
+		 * Screened, like every other list here.
+		 *
+		 * calibrationLog refuses an entry without a string slug and a numeric
+		 * `at`; menuDishes refuses one without an id. This took whatever arrived
+		 * and deduplicated on a `slug` it never checked existed. A record missing
+		 * `flavorTags`, `diet` or `season` does not hide itself in the Library -
+		 * applyFilters maps across every recipe at once, so it takes the whole
+		 * grid down the moment the cook types into search or ticks Vegetarian,
+		 * and it persists, so it does it again on every load. See familyRecipe.ts
+		 * for the measurement.
+		 */
 		familyRecipes: [
 			...current.familyRecipes,
-			...(incoming.familyRecipes ?? []).filter(
+			...screenFamilyRecipes(incoming.familyRecipes).kept.filter(
 				(r) => !current.familyRecipes.some((e) => e.slug === r.slug)
 			)
 		],

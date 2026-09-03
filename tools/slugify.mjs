@@ -104,6 +104,60 @@ export function slugify(input) {
 		.replace(/^-+|-+$/g, '');
 }
 
+
+/**
+ * A slug for a name that slugify empties out.
+ *
+ * `slugify` ends on `[^a-z0-9]+` and then trims the dashes, so a name written
+ * wholly in a script it has no transliteration for survives as the EMPTY
+ * STRING. Measured: 中国菜, Питание, Ελληνικά, 한식 and עברית all slugify to "".
+ * The guide's own corpus never hits this - every one of its 1,844 names is
+ * Latin - but the family shelf is a form a person types their own dish into,
+ * and a family that cooks in Chinese reaches it by typing, not by hand-editing
+ * a file. Both the dish slug and the chapter slug went through it.
+ *
+ * What "" costs: the dish's page is `/family/`, and because a chapter slug has
+ * no uniqueness pass at all, EVERY non-Latin chapter collapses onto the same
+ * empty slug and merges into one rail row. Two different dishes also collide on
+ * import, where family recipes are deduplicated by slug.
+ *
+ * The fallback must be DETERMINISTIC in the name, not a counter or a timestamp:
+ * a .wtjson travels between a phone and a laptop, and the slug is the identity
+ * the merge dedupes on. Two devices given the same name have to produce the
+ * same slug or the same dish arrives twice. So it is a hash, normalized NFC
+ * first because the same name typed on two keyboards can be composed
+ * differently and must still hash alike.
+ *
+ * FNV-1a, 32-bit, base36. Not a security hash and not trying to be: it is a
+ * short stable label. `>>> 0` on every step keeps it unsigned in JS's 32-bit
+ * bitwise domain.
+ *
+ * @param {string} input
+ */
+export function stableSuffix(input) {
+	const s = String(input).normalize('NFC');
+	let h = 0x811c9dc5;
+	for (let i = 0; i < s.length; i++) {
+		h ^= s.charCodeAt(i);
+		h = Math.imul(h, 0x01000193) >>> 0;
+	}
+	return h.toString(36);
+}
+
+/**
+ * slugify, but never empty.
+ *
+ * `kind` is the readable half - 'dish' or 'chapter' - so a URL that cannot
+ * carry the name at least says what it is. Callers on the guide's own data
+ * must keep using `slugify`: this is for names a person typed.
+ *
+ * @param {string} input
+ * @param {string} kind
+ */
+export function slugOrFallback(input, kind) {
+	return slugify(input) || `${kind}-${stableSuffix(input)}`;
+}
+
 /**
  * Assign a stable slug to every item, qualifying collisions by a second field.
  *
