@@ -1,8 +1,15 @@
 # The World Table — session handoff
 
-Written 28 Aug 2026, re-measured 29 Aug 2026. **Every number below was
-measured, not remembered** — run the tool. Where a document and a file
-disagree, the file wins.
+Written 28 Aug 2026, re-measured 29 Aug 2026 and 3 Sep 2026. **Every number
+below was measured, not remembered** — run the tool. Where a document and a
+file disagree, the file wins.
+
+**Numbers outside this table are re-measured only where this pass touched
+them.** The corpus section, and any count inside an older dated entry, was
+last verified on the date that entry carries — do not trust "970 recipes" or
+"94 chapters" below without rerunning `verify-build.mjs`, which as of 3 Sep
+prints 1,844 and 171. Fixing that drift everywhere it appears is itself a
+filed, un-started item — see "What's left, ranked".
 
 `CLAUDE.md` is the architectural reference and is far more detailed. Read it
 second; read this first.
@@ -22,13 +29,13 @@ at **$49.99/month, unlimited staff, one shared login**.
 
 | | |
 |---|---|
-| WorldTable | branch `dish-standards`, **51 commits unpushed** (remote `origin/master`), tree clean |
-| OutsideOfTime | branch `main`, HEAD `1a6f7d5e`, tree clean, **no git remote — never pushed** |
-| Tests | **583 unit** (37 files) · **87 e2e** — **the whole suite is green** |
-| Gates | `build:data` all pass · `verify:build` **18/18** |
-| Precache | 1.44 MB gzipped against a 2.00 MB cap |
-| Routes | 29 · Derived JSON | 23 files (`assessability.json` joined) |
-| Deploy | `table/` re-synced for `/menu/waste`. See below. |
+| WorldTable | branch `dish-standards`, HEAD `4942968`, **fully pushed** (remote `origin/dish-standards`), tree clean |
+| OutsideOfTime | branch `main`, HEAD `71e43b27a`, tree clean, **no git remote — never pushed** |
+| Tests | **898 unit** (60 files) · **145 e2e** — **the whole suite is green** |
+| Gates | `build:data` all pass · `verify:build` **22/22** |
+| Precache | 2.29 MB gzipped against a 2.50 MB cap (the cap moved from an older 2 MB when the corpus grew past 970 recipes, before this pass) |
+| Routes | 29 · Derived JSON | 24 files (`assessability.json` joined) |
+| Deploy | `table/` re-synced for the 3 Sep audit pass, at `4942968`. See below. |
 
 ## The corpus
 
@@ -238,6 +245,75 @@ import a value back into it.
 
 ## What was built, most recent first
 
+### 3 Sep — the audit pass
+
+A 12-lens adversarial-verification workflow raised 122 findings across five
+categories: gate-integrity, correctness, cook-facing, accessibility, and
+staleness/maintenance. The first four — 60 findings, all top-priority — are
+fixed, tested, mutation-verified where a gate or test was involved, and
+pushed across nine commits (`c60fa0a` through `4942968`). The fifth category,
+62 findings, is almost entirely stale numbers this same document and
+`README.md`/`CLAUDE.md` recite (970 recipes, 94 chapters, and their
+downstream arithmetic) plus a handful of dead-code/prose nits — **left
+un-started, on purpose**, to keep this pass to the findings that changed
+behaviour rather than the ones that only changed prose. It is the top item
+below.
+
+The findings, by cluster:
+
+- **`advance.mjs` split clauses on every period**, so "cures 1.5 hours" broke
+  after "1", and `keeps?`/`holds?`/`lasts?` matched storage-verb sentences
+  that name no duration at all. Re-measured against the real corpus rather
+  than trusted at the finding's own count (which was wrong twice before this
+  number stood): **65 recipes changed `advanceMin`, 20 gained a plan badge, 8
+  lost a fabricated one** (a shelf-life sentence with no actual wait), and 13
+  correctly dropped "Under 40 min" they had never earned.
+- **Pantry Match's own empty state didn't name what emptied it.** `pantryMatch.ts`
+  is now a pure module (`matchPantry`, `pantryCulprit`) so the page and its 11
+  unit tests share one true source, and the count line reads "X of Y dishes"
+  instead of a bare number.
+- **`mergeSessions` dropped the tail of a merged timer window** on import —
+  the same class of bug the 30 Aug pass closed for `stepActuals` and
+  `planRun`, one function over. `mergeStepWindow` now interleaves fairly
+  instead of concat-and-slice. `house.adopt()` also now refuses to write
+  while `#blocked`, closing the same rollback hole `hydrate()` was closed for
+  on 28 Aug, one call site later — Export's own button now warns when it
+  would.
+- **A left-boundary bug in `pairing.mjs`'s `has()`** matched `'red'` inside
+  `'shredded'` and `'oil'` inside `'boil'` — the pairing engine was reading
+  ingredient words as substrings of unrelated ones. Rewritten with a real word
+  boundary; `'milk'` stays a deliberate bare-substring exception (buttermilk,
+  milkshake genuinely should count) with the reasoning left in a comment so
+  the next person doesn't "fix" it back.
+- **CuisineRail's collapsed multi-chapter countries were four bare digits**,
+  not a labelled group, and their contrast came from `opacity` on a token
+  already at 4.55:1 — a 0.05 margin over AA that any dimming failed outright.
+  Same fix, same reasoning, extended to `menu`'s "Hands on tonight" toggles
+  and `TimerBar`'s length presets: `role="group" aria-label` naming the unit,
+  full-strength color tokens instead of `opacity`.
+- **CookMode's pass-grading announcement only existed inside the branch it
+  announced**, so a screen reader had nothing live to hear until after the
+  content it needed to hear had already rendered. Fixed with a persistent
+  `aria-live="polite"` region that exists before either branch mounts, plus
+  focus management onto the pass heading — the general form of "a live
+  region must exist before its content mutates," now applied everywhere this
+  file grades or repairs a pass.
+- **Chapter pages had no `h1`**, and fixing that (giving `RecipeBrowser` a
+  `headingLevel` prop) created a new skip of its own — `h2 "Chapters" → h1 →
+  h3` — caught by building a full census across all 2,181 wing pages before
+  trusting it, not by the new gate alone. `verify-build.mjs` now asserts a
+  clean, un-skipped heading outline on every content page (22/22 checks; was
+  18).
+- **`<svelte:element this={headingLevel}>` in `RecipeCard.svelte` cost real
+  hydration time at 1,844 repetitions** — enough to push the e2e suite past
+  its 15s hydration timeout on `/recipes`, deterministically, chromium-only.
+  This was mis-diagnosed twice first (a known worker-count toast flake, then
+  assumed test-runner resource contention) before a trace showed 41
+  requests at 200 with zero console errors and the fix — two static `{#if}`
+  branches instead of a dynamic tag — dropped the same test from a timeout to
+  a 17.3s pass. Filed below, under "a note on method," as this pass's own
+  entry.
+
 ### 30 Aug — the deep pass
 
 A six-lens multi-agent review (state, money, copy, a11y, chef-workflow, gates)
@@ -362,9 +438,20 @@ in the app).
 
 ## What's left, ranked
 
-The previous list is EMPTY — all seven items shipped, and the deep pass that
-followed is applied. Nothing is queued. What remains is the standing product
-questions below, and whatever the next session measures.
+1. **The 62 staleness/maintenance findings from the 3 Sep audit, deferred on
+   purpose** (see above). Almost all of it is one shape: a document or a code
+   comment stating a corpus figure — 970 recipes, 94 chapters — that
+   `verify-build.mjs` now measures at 1,844 and 171. This document's own
+   older sections have not been swept either; "The corpus," and every dated
+   entry above 3 Sep, carries whatever number was true on the date it was
+   written. Worth doing as one pass grouped by file rather than by finding,
+   since the fix is almost always the same edit repeated.
+2. A handful of dead-code and prose nits from the same audit, filed but not
+   itemised here — low value, batch with #1.
+
+Everything from the worklist before the 30 Aug deep pass shipped, and the
+deep pass itself is applied. What remains beyond the two items above is the
+standing product questions below, and whatever the next session measures.
 
 ## Open questions for the owner
 
@@ -390,9 +477,9 @@ questions below, and whatever the next session measures.
 
 ## Deploying to the monorepo
 
-**`table/` is current as of `1a6f7d5e` and nothing is blocking.** It had been
-stale enough to be missing eleven routes, so re-sync after any route change
-rather than assuming it followed.
+**`table/` is current as of World Table `4942968` / OutsideOfTime `71e43b27a`
+and nothing is blocking.** It had once been stale enough to be missing eleven
+routes, so re-sync after any route change rather than assuming it followed.
 
 The procedure is written out in **`OutsideOfTime/README.md` "Rebuilding the
 World Table"** — that file, not this one, and the order is load-bearing. In
@@ -434,6 +521,14 @@ it every time — but it also means a real edit made HERE, to this file, is
 silently discarded on the next inject rather than shipped. If this file is ever
 meant to change, change it in the monorepo's `shared/oot-home.css` first.
 
+**That exact mistake happened during the 3 Sep audit pass** — the h1/h2
+heading fix touched this repo's copy (correctly, for World Table's own
+standalone build) but never touched the monorepo's canonical copy, so the
+rationale comment and the `:is(h2, h3)` selector sat inert until caught while
+writing this section up and fixed directly in `OutsideOfTime/shared/oot-home.css`.
+Selector was equivalent either way (same elements, same specificity), so
+nothing shipped wrong — but it is the concrete case this warning exists for.
+
 ## A note on method
 
 The valuable habits, repeatedly: **measure before building**, **break every gate
@@ -451,6 +546,22 @@ perfectly and nothing covered whether anybody called it. When a feature spans a
 pure function and the two lines that invoke it, the invocation is where the bug
 will be — and the cheapest permanent gate is a REQUIRED argument, because an
 omitted optional one compiles in silence while `check` names every call site.
+
+One more, earned on 3 Sep:
+
+**A dynamic tag is not free at scale, and a flaky-looking e2e failure can be a
+real one.** `<svelte:element this={headingLevel}>` on `RecipeCard.svelte`,
+rendered up to 1,844 times on `/recipes`, was slow enough to push hydration
+past the suite's 15s timeout — deterministically, not intermittently, though
+it took a trace (all 41 requests 200, zero console errors) to rule out
+everything else first. Two earlier guesses were wrong in different directions
+— a known worker-count flake, then this session's own concurrent Browser-pane
+use — before the trace forced the real, narrower question: not "is the
+network broken" but "is this specific render slow." A dynamic element used
+once per page (`RecipeBrowser`'s own heading) cost nothing measurable; the
+same construct at ~1,800x repetition did. Fixed with two static `{#if}`
+branches. The general form: profile the render before trusting an infra
+explanation for a failure that only ever happens on one route.
 
 **The browser is where wording fails.** The band sentence was correct code and a
 wrong claim: it announced that a dish had "moved out of the band" over a plaice
