@@ -66,6 +66,59 @@ const prose = (v: unknown) =>
 		.trim()
 		.toLowerCase();
 
+/**
+ * The nineteen dishes whose cost we deliberately disagree with the original on.
+ *
+ * `costFor` is the oracle for costTier and it stays the oracle. But the original
+ * scored bare substrings, so a keyword matched inside a longer word that never
+ * meant the ingredient, and this test would otherwise pin those readings
+ * forever. THE PRECEDENT IS ALREADY IN THIS FILE: `equip` is not taken from
+ * `equipFor()` either, because that destructured the RegExp out of each pair -
+ * we replicate the SELECTION and take "the labels it meant". Same move here, for
+ * the same reason.
+ *
+ * Two causes, both the same complaint - letters that do not mean the ingredient:
+ *
+ *   'boundary'  the keyword sat inside a longer word in the recipe itself.
+ *               `cream` in SCREAMING ("a screaming grill pan", "screaming-hot
+ *               steel") on sisig, pita and manoushe; `veal` in REVEAL on
+ *               matambre and tarta de Santiago; `uni` in UNIFIED on bun thit
+ *               nuong, which put it a tier up for a word in a sentence about
+ *               the dish being unified; `duck` in GEODUCK, which is a clam.
+ *
+ *   'note'      the keyword sat inside a word in the EDITORIAL NOTE, which is
+ *               prose about the dish rather than a statement of what goes in it.
+ *               `uni` in "unifier", `cream` in "creamery", `brisket` inside a
+ *               sentence in banana pudding. A dish is not made expensive by a
+ *               paragraph.
+ *
+ * EXHAUSTIVE AND EXACT, checked both ways below: a twentieth divergence fails,
+ * and a ruling that stops being needed fails too. This is a list of reviewed
+ * decisions, not a mute button - every row was read against its recipe.
+ */
+const COST_RULINGS: Array<[slug: string, original: number, ours: number, why: 'boundary' | 'note']> = [
+	['sizzling-sisig', 2, 1, 'boundary'],
+	['wiener-saftgulasch', 3, 2, 'note'],
+	['polvo-a-lagareiro', 2, 1, 'note'],
+	['soto-ayam', 2, 1, 'note'],
+	['pita', 2, 1, 'boundary'],
+	['matambre-arrollado', 3, 1, 'boundary'],
+	['manoushe-zaatar', 2, 1, 'boundary'],
+	['bun-thit-nuong-lunch-atlas', 2, 1, 'boundary'],
+	['cullen-skink', 3, 2, 'note'],
+	['tacos-al-pastor-home-trompo', 2, 1, 'note'],
+	['banana-pudding', 3, 2, 'note'],
+	['tarta-de-santiago', 3, 2, 'boundary'],
+	['nebraska-chicken-fried-steak', 3, 2, 'note'],
+	['arizona-prickly-pear-margarita', 2, 1, 'note'],
+	['colorado-bison-burger', 2, 1, 'note'],
+	['colorado-elk-chili', 3, 2, 'note'],
+	['montana-bison-ribeye-with-wild-mushrooms', 3, 2, 'note'],
+	['hood-river-pear-and-blue-cheese-salad', 2, 1, 'note'],
+	['geoduck-crudo', 2, 1, 'boundary']
+];
+const costRuling = new Map(COST_RULINGS.map(([slug, original, ours]) => [slug, { original, ours }]));
+
 interface LegacyRecord {
 	n: string; c: string; k: string; d: number; t: number; v: number;
 	i: string[]; m: string[]; p: string;
@@ -116,6 +169,7 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 	// Our arrays preserve original order, so records align by position.
 	const authoredDiffs: string[] = [];
 	const derivedDiffs: string[] = [];
+	const usedRulings = new Set<string>();
 
 	for (let i = 0; i < 970; i++) {
 		const old = legacy[i];
@@ -145,8 +199,20 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 
 		if (JSON.stringify(full.equipment) !== JSON.stringify(old.equip))
 			derivedDiffs.push(`#${i} equipment (${old.n}): ${JSON.stringify(full.equipment)} vs ${JSON.stringify(old.equip)}`);
-		if (idx.costTier !== old.cost)
-			derivedDiffs.push(`#${i} cost (${old.n}): ${idx.costTier} vs ${old.cost}`);
+		if (idx.costTier !== old.cost) {
+			/* A ruling covers this only if it says EXACTLY this move. A dish that
+			   diverges differently than the ruling predicted is a new fact, not a
+			   covered one, and must fail. */
+			const ruled = costRuling.get(idx.slug);
+			if (ruled && ruled.original === old.cost && ruled.ours === idx.costTier) {
+				usedRulings.add(idx.slug);
+			} else {
+				derivedDiffs.push(`#${i} cost (${old.n}): ${idx.costTier} vs ${old.cost}`);
+			}
+		} else if (costRuling.has(idx.slug)) {
+			/* The ruling is no longer needed. Say so rather than carrying it. */
+			derivedDiffs.push(`#${i} cost (${old.n}): agrees with the original now, so its COST_RULINGS row is stale`);
+		}
 		if (JSON.stringify(full.flavor.tags) !== JSON.stringify(old.flavor.tags))
 			derivedDiffs.push(`#${i} flavor tags (${old.n}): ${JSON.stringify(full.flavor.tags)} vs ${JSON.stringify(old.flavor.tags)}`);
 
@@ -176,5 +242,13 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 	expect(
 		derivedDiffs.slice(0, 25),
 		`derived fields must match the original's own functions (${derivedDiffs.length} total diffs)`
+	).toEqual([]);
+
+	/* Every ruling has to earn its place. A row for a recipe the loop never
+	   reached - renamed, overridden, backfilled since - is a row nobody is
+	   checking, and the list would rot into a blanket exclusion. */
+	expect(
+		COST_RULINGS.map(([slug]) => slug).filter((slug) => !usedRulings.has(slug)),
+		'a COST_RULINGS row that never fired is stale: delete it or find out why it stopped applying'
 	).toEqual([]);
 });
