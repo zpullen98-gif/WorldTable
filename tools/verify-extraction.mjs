@@ -78,8 +78,16 @@ const canonical = (v) => JSON.stringify(toSerializable(v));
    So byte-identical is no longer the invariant. WORD-identical is, and it is
    the one that was actually protecting anything: it still catches a dropped
    sentence, a lost clause, a mangled quantity or a truncated note, which are
-   the failures extraction can produce. Punctuation is the only permitted
-   difference, and the report says which of the two held. */
+   the failures extraction can produce.
+
+   "Punctuation is the only permitted difference" used to be the whole claim
+   here, and it was measurably false: wordform is blind to an adjacent
+   array-element boundary moving while the words either side of it stay in
+   order, so merging two ingredient lines into one - or splitting one into
+   two - left the flattened word stream identical and passed. A second,
+   independent check, `structure ${name}` below, closes exactly that gap by
+   comparing array lengths, object key sets and scalar TYPES rather than word
+   content. Between the two, punctuation is the only permitted difference. */
 const WORDS_ONLY = /[-\u2014\u2013:;,.!?()\[\]{}"'\s]+/g;
 /* The copy edit was licensed to add a connective where splitting a sentence
    left one grammatically necessary, and it used that licence exactly three
@@ -97,6 +105,34 @@ const wordform = (v) =>
 		.trim()
 		.toLowerCase();
 
+/**
+ * What `wordform` cannot see: STRUCTURE.
+ *
+ * Measured directly against this file's own canonical()/wordform(): merging
+ * two neighbouring ingredient lines into one, or splitting one line into two
+ * at a space, leaves the flattened word stream byte-identical, so `wordform`
+ * reports a pass on a recipe whose ingredient count just changed. Reordering
+ * two lines, moving a word across the ingredients/method boundary, or
+ * dropping a line are all still caught - `wordform` is blind to exactly one
+ * thing, an adjacent array-element boundary moving while the words either
+ * side of it stay in the same order.
+ *
+ * `structuralShape` closes that one hole and nothing else: array LENGTH at
+ * every level, object KEY SET at every level, and scalar TYPE (never scalar
+ * VALUE - a scalar's content is prose and wordform's job, and this must not
+ * re-impose byte-identity through a side door). A recipe whose ingredient
+ * array grew or shrank by one element fails here even though every word it
+ * contains is still present, in order, somewhere in the record.
+ */
+function structuralShape(v) {
+	if (Array.isArray(v)) return { t: 'array', len: v.length, items: v.map(structuralShape) };
+	if (v && typeof v === 'object') {
+		const keys = Object.keys(v).sort();
+		return { t: 'object', keys, values: keys.map((k) => structuralShape(v[k])) };
+	}
+	return { t: typeof v };
+}
+
 for (const name of live.keys()) {
 	check(`round-trip ${name}`, () => {
 		const emitted = readFileSync(join(RAW, `${name}.json`), 'utf8').trim();
@@ -109,6 +145,29 @@ for (const name of live.keys()) {
 			'content differs, not just punctuation'
 		);
 		return 'same words, repunctuated';
+	});
+
+	// Separate from the wordform check above on purpose: a failure here means
+	// the SHAPE moved (an array grew or shrank, a key appeared or vanished, a
+	// value changed kind) while the words may still read as identical. See
+	// structuralShape for exactly what it does and does not compare.
+	//
+	// Both sides go through JSON.parse(JSON.stringify(...)) - `canonical`,
+	// already used above - not just toSerializable. Skipping that round trip
+	// on the live side alone was the first draft's bug: JSON.stringify turns
+	// an `undefined` ARRAY ELEMENT into `null` and DROPS an `undefined` OBJECT
+	// PROPERTY outright, and the shipped side already went through exactly
+	// that conversion once, on the way to disk. Comparing raw toSerializable()
+	// output against a JSON-parsed file compared two different NORMALIZATIONS
+	// of the same value and failed on all 12 targets, on a corpus every other
+	// check here proves is clean.
+	check(`structure ${name}`, () => {
+		assert.deepStrictEqual(
+			structuralShape(JSON.parse(canonical(live.get(name)))),
+			structuralShape(JSON.parse(readFileSync(join(RAW, `${name}.json`), 'utf8'))),
+			'array lengths, key sets or value kinds differ'
+		);
+		return 'shape unchanged';
 	});
 }
 

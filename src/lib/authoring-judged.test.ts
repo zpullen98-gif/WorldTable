@@ -73,10 +73,12 @@ describe('a self-declared tick can never credit a station', () => {
 	 * `techniquesTouched` looks cooks up by slug WITHIN those lists. No family
 	 * slug appears in one, so no amount of ticking reaches the board.
 	 *
-	 * stations.mjs refuses by name to credit work never done — it gates "The
-	 * soufflé" on its exact recipe list so a manager cannot believe their pastry
-	 * cook was tested on the most collapse-prone item in the repertoire. This
-	 * asserts the same refusal holds for house dishes.
+	 * stations.mjs's UNDRILLED gates the guide's OWN techniques the same way,
+	 * by exact recipe list rather than by label alone — the reason a real
+	 * vanilla soufflé recipe eventually forced "The soufflé"'s stale exclusion
+	 * to be re-judged and lifted, rather than staying silently wrong. This
+	 * asserts the equivalent refusal holds for house dishes: a family recipe
+	 * cannot self-credit a station no audited list has ever put it in.
 	 */
 	const techs = techniques as unknown as Array<{ label: string; recipes: string[] }>;
 

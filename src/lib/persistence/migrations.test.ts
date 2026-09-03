@@ -1,4 +1,6 @@
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { migrate, importLegacyCode, readSession, NewerVersionError } from './migrations';
 import { CURRENT_VERSION, mergeSessions, type SessionState } from './state';
 import { describeImport } from './portable';
@@ -273,6 +275,46 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 			mine
 		);
 		expect(summary).toContain('1 menu dish');
+	});
+
+	/**
+	 * "Every field is named explicitly. Nothing is left to the spread." had no
+	 * gate: `lastWrite` was still taken verbatim from `incoming` through the
+	 * bare `...incoming` spread, unnoticed only because saveSession restamps it
+	 * on every write and nothing reads it back — the field is write-only. This
+	 * is a SOURCE check rather than a behavioural one, because most of
+	 * SessionState's fields transform their value (union two arrays, merge two
+	 * logs) rather than pass one through, so a generic "does a sentinel
+	 * survive" probe cannot tell a legitimate merge from a fallthrough. What
+	 * every field must do, transform or not, is appear as an explicit key in
+	 * the return object — which is exactly the rule stated above, made
+	 * mechanical: read straight from SessionState's own declaration, not from
+	 * EMPTY_SESSION, because `planRun` is optional and absent from
+	 * EMPTY_SESSION and would otherwise go unchecked by the very field that
+	 * motivated the rule.
+	 */
+	it('names every SessionState field explicitly in its return object', () => {
+		const src = readFileSync(join(process.cwd(), 'src', 'lib', 'persistence', 'state.ts'), 'utf8');
+
+		const ifaceStart = src.indexOf('export interface SessionState {');
+		const ifaceEnd = src.indexOf('\n}', ifaceStart);
+		const iface = src.slice(ifaceStart, ifaceEnd);
+		// Top-level members only: exactly one leading tab. A nested field inside
+		// e.g. `cookedLog: Array<{ ... }>` sits at two tabs and must not count.
+		const TOP_LEVEL_FIELD = /^\t(\w+)\??:/gm;
+		const fields = [...iface.matchAll(TOP_LEVEL_FIELD)].map((m) => m[1]);
+		expect(fields.length, 'the interface must have been read').toBeGreaterThan(10);
+
+		const fnStart = src.indexOf('export function mergeSessions(');
+		const returnStart = src.indexOf('\treturn {', fnStart);
+		const returnEnd = src.indexOf('\n\t};\n}', returnStart);
+		const body = src.slice(returnStart, returnEnd);
+
+		const unnamed = fields.filter((f) => {
+			const NAMED_AS_KEY = new RegExp('\\b' + f + '\\s*[,:]');
+			return !NAMED_AS_KEY.test(body);
+		});
+		expect(unnamed, 'every SessionState field must be an explicit key in the merge').toEqual([]);
 	});
 });
 

@@ -416,12 +416,23 @@ grep -rho 'sw\.js`,{scope:`[^`]*`' _app/immutable/   # must print scope:`/table/
 Then REPLACE `table/` (`rm -rf` and copy, not copy-over, or content-hashed
 chunks accumulate forever — 126 of them had), and re-inject with
 `node .scripts/inject-oot-bar.mjs` followed by `--check`, which exits non-zero
-if any page lacks the chip. 1,219 html files at the last run.
+if any page lacks the chip. 2,181 html files at the last run.
 
-Versions: shared scripts **v18**, `oot-home.css?v=18`; `codex-v67`,
-`ledger-v39`, `firstlight-v45`, `cfl-v84`. The Table's own copy of
-`shared/oot-home.css` is byte-identical to the monorepo's, so a rebuild does not
-regress the AA contrast fix — but check it, because the build copies its own.
+Versions: shared scripts **v23**; `codex-v67`, `ledger-v39`, `firstlight-v45`,
+`cfl-v84`.
+**`shared/oot-home.css` is NOT kept in sync by anything on this side.** The
+Table's own `static/shared/oot-home.css` is a fork the monorepo's shared copy
+diverged from at commit `39c338b4d` (2 Sep) and stayed diverged through every
+rebuild since — 18 bytes, one selector, the AA contrast fix's own `.oot-sec-head
+h2` rule — because the wing copies `build/shared/oot-home.css` wholesale from
+whatever this file last held, and nothing on the monorepo side compared the two
+until 3 Sep. It is now gated there: `inject-oot-bar.mjs` re-stamps the wing's
+copy from the monorepo's canonical `shared/oot-home.css` on every run, and
+`publish.mjs` refuses to publish if they still differ. That means this repo's
+own `static/shared/oot-home.css` can safely stay stale — the monorepo overwrites
+it every time — but it also means a real edit made HERE, to this file, is
+silently discarded on the next inject rather than shipped. If this file is ever
+meant to change, change it in the monorepo's `shared/oot-home.css` first.
 
 ## A note on method
 

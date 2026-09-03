@@ -32,34 +32,39 @@
  */
 
 /**
- * Techniques the coverage board must NOT count, because the corpus does not
- * actually drill them.
+ * Two exclusions this file once carried, both since lifted. History rather
+ * than a live rule now, kept because the reasoning that lifted each one is
+ * why the gate below exists at all: a technique wrongly excluded is a cook
+ * credited with nothing they never earned, and the guide changing underneath
+ * a stale exclusion is exactly the failure this file cannot see for itself
+ * without a build that checks.
  *
- * Both were found by auditing the map, not by reading the labels, and both
- * would have credited a cook with something they have never done, which is the
- * one failure a coverage board cannot survive.
- *
- *   The soufflé      : one recipe, milanesa-a-la-napolitana, a breaded fried
- *                      cutlet. The only appearance of the word is a NEGATIVE
- *                      SIMILE: "milanesa crust should be a jacket, not a
- *                      soufflé". Nothing in the guide drills a soufflé, sweet
- *                      or savoury, and a manager reading that box would believe
- *                      their pastry cook had been tested on the most
- *                      collapse-prone item in the repertoire.
- *   Pleating dumplings: WAS excluded here. Its only recipe was christmas-pudding,
- *                      where the pleat is the parchment-and-foil lid over a
+ *   The soufflé      : excluded on the reasoning that the corpus's only hit
+ *                      for the word was a NEGATIVE SIMILE - "milanesa crust
+ *                      should be a jacket, not a soufflé" - and nothing else
+ *                      drilled it. Wrong: the corpus had a real one all
+ *                      along, vanilla-souffle-on-a-patissiere-base, simply
+ *                      untagged, because the sealed keyword list asked for
+ *                      five accented forms and the recipe spells its own
+ *                      name unaccented. The judgement was re-made; the label
+ *                      is drilled now.
+ *   Pleating dumplings: excluded because its only recipe, christmas-pudding,
+ *                      used "pleat" for the parchment-and-foil lid over a
  *                      steamed basin: the label described a dumpling and the
  *                      data described a pudding. The Dumpling Atlas of 31 Aug
  *                      2026 gave it ten recipes that genuinely pleat, so the
- *                      judgement was re-made and the exclusion lifted, which is
- *                      exactly what the gate below exists to force.
+ *                      judgement was re-made and the exclusion lifted, which
+ *                      is exactly what the gate below exists to force.
  *
- * `recipes` is gated exactly: if the corpus ever gains a real soufflé, the
- * build fails and forces this judgement to be made again rather than leaving a
- * genuine technique permanently uncounted.
+ * `recipes` is gated exactly: if the corpus ever gains a technique this file
+ * excludes, the build fails and forces the judgement to be made again rather
+ * than leaving a genuine technique permanently uncounted. That gate is why
+ * both entries above were caught, and it is dormant rather than deleted now
+ * that the map holds no live exclusion — see coverage/+page.svelte for what a
+ * new one would need to say if one is ever justified again.
  */
 /*
- * EMPTY, and the gate below is why.
+ * EMPTY, and the gate above is why both entries there are past tense now.
  *
  * This held 'The soufflé': ['milanesa-a-la-napolitana'] on the reasoning that
  * the only recipe carrying the label carried it on a negative simile. The

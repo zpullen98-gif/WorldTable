@@ -78,17 +78,18 @@ export interface SessionState {
 	/**
 	 * Observed elapsed minutes per step, keyed `slug#index#stepCount`.
 	 *
-	 * The step count is IN the key on purpose. It is constant for the 970 frozen
-	 * guide recipes, so it costs them nothing; a family recipe re-authored to a
-	 * different length simply mints a new key and its old observations are never
-	 * read again. No special case, no stale actuals against a step that moved.
+	 * The step count is IN the key on purpose. It is constant for the 1,844
+	 * frozen guide recipes, so it costs them nothing; a family recipe
+	 * re-authored to a different length simply mints a new key and its old
+	 * observations are never read again. No special case, no stale actuals
+	 * against a step that moved.
 	 */
 	stepActuals: Record<string, number[]>;
 	/**
 	 * Every cook, not every dish: one entry per time the dish was made. The
 	 * timestamps drive the re-cook schedule in lib/repertoire.ts; the grade is
 	 * what the plate was against the dish's standard, absent on cooks recorded
-	 * before standards existed and on the 925 dishes that have none.
+	 * before standards existed and on the 127 dishes that have none.
 	 */
 	cookedLog: Array<{
 		slug: string;
@@ -607,6 +608,7 @@ export function mergeSessions(
 		role: current.role ?? incoming.role,
 		// After the spread, never before: a hand-edited file must not be able to
 		// walk the schema marker backwards and re-trigger a migration.
-		schemaVersion: current.schemaVersion
+		schemaVersion: current.schemaVersion,
+		lastWrite: current.lastWrite
 	};
 }
