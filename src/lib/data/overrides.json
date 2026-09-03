@@ -174,6 +174,30 @@
       "techniquesDrop": [
         "Churning ice cream"
       ]
+    },
+    "chocolate-chip-cookies": {
+      "reason": "EQUIP's Deep-fry pot pattern carries a bare '190°c' alternative with no oil/fry context, meant for a temperature stated in an oil line - but this recipe's only 190°C is 'Bake 190°C, 11-12 min', its whole equipment line. No oil, no frying, anywhere in it. A precision fix to the pattern itself would cost fish-and-chips and moules-frites their own genuine 190°C oil reading (both match the SAME bare alternative, and neither states 'oil for frying' verbatim), so this is a per-recipe ruling rather than a pattern change.",
+      "equipment": []
+    },
+    "eggplant-parmigiana": {
+      "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies. This dish does pan-fry the eggplant ('Fry or roast at 220°C'), just not in a deep-fry pot; its 190°C is 'bake 190°c for 30 min', the casserole oven.",
+      "equipment": ["Thermometer"]
+    },
+    "briam": {
+      "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake 190°c for 60-75 min' is the tray of roasted vegetables, no fryer anywhere.",
+      "equipment": ["Grater / zester"]
+    },
+    "apfelstrudel": {
+      "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake 190°c, 35-40 min' is the strudel in the oven.",
+      "equipment": ["Sheet pan"]
+    },
+    "smulpaj-med-kardemumma": {
+      "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake 190°c, 35-40 min' is the crumble, no fryer anywhere - and, like chocolate-chip-cookies, it was the dish's entire equipment line.",
+      "equipment": []
+    },
+    "kurtoskalacs": {
+      "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake at 190°c suspended over a tray' is the chimney cake turning over a rotisserie, not a fryer. Not in the sealed 970, so no parity constraint, but the same defect deserves the same fix rather than a one-off regex patch.",
+      "equipment": ["Grill", "Sheet pan", "Rolling pin"]
     }
   },
   "lexicon": {
