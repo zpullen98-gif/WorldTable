@@ -184,6 +184,8 @@ export function buildCrosslinks(R, recipeSlugs, D, lexSlugs, blobs, lexOverrides
 
 	const termToRecipes = new Map();
 	const recipeToTerms = new Map();
+	/** slug -> the term as written, for the inverse below. */
+	const termName = new Map();
 	/** Every 'term|recipe' pair the rule (or a pin) justifies, for the build gate. */
 	const justified = new Set();
 	/** @type {string[]} */
@@ -193,6 +195,7 @@ export function buildCrosslinks(R, recipeSlugs, D, lexSlugs, blobs, lexOverrides
 
 	D.forEach((entry, ti) => {
 		const termSlug = lexSlugs[ti];
+		termName.set(termSlug, entry.t);
 		const phrase = fold(entry.t);
 		// "Brisket (Point vs. Flat)" -> the useful part is before the paren.
 		const core = phrase.split('(')[0].trim();
@@ -301,19 +304,28 @@ export function buildCrosslinks(R, recipeSlugs, D, lexSlugs, blobs, lexOverrides
 			overrideProblems.push(`lexicon override "${key}" matches no lexicon term slug`);
 	}
 
-	// Invert, capped at 4 terms per recipe, best-scoring first.
+	/*
+	 * Invert, capped at 4 terms per recipe, best-scoring first.
+	 *
+	 * Carries the term's NAME beside its slug. The recipe page cannot look one
+	 * up: lexicon.json is a deliberate dynamic import ("a few hundred KB", see
+	 * data.ts), and pulling it onto every recipe page to print three words
+	 * would be a poor trade. 631 references over 279 distinct terms is 19KB
+	 * inlined, against a recipes.full.json already past 7MB.
+	 */
 	const inverse = new Map();
 	for (const [termSlug, slugs] of termToRecipes) {
+		const name = termName.get(termSlug) ?? termSlug;
 		slugs.forEach((s, rank) => {
 			if (!inverse.has(s)) inverse.set(s, []);
-			inverse.get(s).push({ termSlug, rank });
+			inverse.get(s).push({ slug: termSlug, term: name, rank });
 		});
 	}
 	for (const [slug, list] of inverse) {
 		list.sort((a, b) => a.rank - b.rank);
 		recipeToTerms.set(
 			slug,
-			list.slice(0, 4).map((x) => x.termSlug)
+			list.slice(0, 4).map((x) => ({ slug: x.slug, term: x.term }))
 		);
 	}
 

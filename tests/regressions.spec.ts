@@ -381,3 +381,50 @@ test('a term whose matches were coincidences shows none, and a real one keeps it
 	await expect(page.locator('.lexcard').first()).toBeVisible();
 	expect(await page.locator('.xrefs a').count()).toBeGreaterThan(0);
 });
+
+/**
+ * The words inside a dish, which were shipped and rendered nowhere.
+ *
+ * buildCrosslinks always emitted both directions and build-data wrote the
+ * recipe->term half into all 1,844 records; no view, component or test ever
+ * read it - 444 recipes carrying 631 references to 279 terms. It renders now
+ * because two other items made it viable: item 21 put a justification rule on
+ * the forward direction this half is inverted from, and item 22 fixed the
+ * anchors, without which every one of these links would have stranded a cook
+ * thousands of pixels short on a 150,000px-tall page.
+ *
+ * The round trip is the assertion: the block, the link, and the landing.
+ */
+test('a dish names the Lexicon words inside it, and the link lands on the term', async ({
+	page
+}) => {
+	await goto(page, '/recipe/cacio-e-pepe');
+	const words = page.locator('.words a');
+	await expect(words).toHaveCount(3);
+	await expect(words.first()).toHaveText('Cheese Families');
+
+	await page.locator('.words a[href$="pecorino-romano"]').click();
+	await expect(page).toHaveURL(/\/lexicon#pecorino-romano$/);
+
+	const landed = await page.evaluate(() => {
+		const card = document.getElementById('pecorino-romano');
+		const bar = document.querySelector('.modebar');
+		const c = card?.getBoundingClientRect();
+		const b = bar?.getBoundingClientRect();
+		return {
+			found: !!card,
+			clearsBar: !!c && !!b && c.top >= b.bottom - 1,
+			inViewport: !!c && c.top >= 0 && c.top < window.innerHeight
+		};
+	});
+	expect(landed.found).toBe(true);
+	expect(landed.inViewport, 'the term must be on screen, not stranded').toBe(true);
+	expect(landed.clearsBar, 'and below the sticky bar, not under it').toBe(true);
+});
+
+/** A dish the cross-links never reached renders no empty heading. */
+test('a dish with no Lexicon words shows no block at all', async ({ page }) => {
+	await goto(page, '/recipe/miso-soup');
+	await expect(page.locator('.words')).toHaveCount(0);
+	await expect(page.getByRole('heading', { name: 'The words inside' })).toHaveCount(0);
+});

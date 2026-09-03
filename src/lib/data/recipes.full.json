@@ -87,9 +87,18 @@
       }
     },
     "lexiconTerms": [
-      "cheese-families",
-      "pecorino-romano",
-      "black-pepper-and-the-pepper-family"
+      {
+        "slug": "cheese-families",
+        "term": "Cheese Families"
+      },
+      {
+        "slug": "pecorino-romano",
+        "term": "Pecorino Romano"
+      },
+      {
+        "slug": "black-pepper-and-the-pepper-family",
+        "term": "Black Pepper & the Pepper Family"
+      }
     ],
     "pantryItems": [
       "Cheese (any)",
@@ -227,7 +236,10 @@
       }
     },
     "lexiconTerms": [
-      "pancetta-tesa-and-arrotolata"
+      {
+        "slug": "pancetta-tesa-and-arrotolata",
+        "term": "Pancetta (Tesa & Arrotolata)"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -371,10 +383,22 @@
       }
     },
     "lexiconTerms": [
-      "fermentation-in-bread-yeast-levain-preferments",
-      "mozzarella-di-bufala-campana",
-      "dehydrator-ferment-station-and-the-pantry-machines",
-      "tomatoes-the-argument-for-august"
+      {
+        "slug": "fermentation-in-bread-yeast-levain-preferments",
+        "term": "Fermentation in Bread: Yeast, Levain, Preferments"
+      },
+      {
+        "slug": "mozzarella-di-bufala-campana",
+        "term": "Mozzarella di Bufala Campana"
+      },
+      {
+        "slug": "dehydrator-ferment-station-and-the-pantry-machines",
+        "term": "Dehydrator, Ferment Station & the Pantry Machines"
+      },
+      {
+        "slug": "tomatoes-the-argument-for-august",
+        "term": "Tomatoes: The Argument for August"
+      }
     ],
     "pantryItems": [
       "Tomato",
@@ -511,7 +535,10 @@
       }
     },
     "lexiconTerms": [
-      "saffron"
+      {
+        "slug": "saffron",
+        "term": "Saffron"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -633,8 +660,14 @@
       }
     },
     "lexiconTerms": [
-      "deglaze-and-fond",
-      "reverse-sear-and-the-gray-band"
+      {
+        "slug": "deglaze-and-fond",
+        "term": "Deglaze & Fond"
+      },
+      {
+        "slug": "reverse-sear-and-the-gray-band",
+        "term": "Reverse Sear & the Gray Band"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -1004,8 +1037,14 @@
       }
     },
     "lexiconTerms": [
-      "mascarpone",
-      "espresso-and-the-coffee-program"
+      {
+        "slug": "mascarpone",
+        "term": "Mascarpone"
+      },
+      {
+        "slug": "espresso-and-the-coffee-program",
+        "term": "Espresso & the Coffee Program"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -1101,7 +1140,10 @@
       }
     },
     "lexiconTerms": [
-      "fermentation-in-bread-yeast-levain-preferments"
+      {
+        "slug": "fermentation-in-bread-yeast-levain-preferments",
+        "term": "Fermentation in Bread: Yeast, Levain, Preferments"
+      }
     ],
     "pantryItems": [
       "Rosemary",
@@ -1238,7 +1280,10 @@
       }
     },
     "lexiconTerms": [
-      "shrimp-sizing-and-prawn-confusion"
+      {
+        "slug": "shrimp-sizing-and-prawn-confusion",
+        "term": "Shrimp Sizing & Prawn Confusion"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -1366,7 +1411,10 @@
       }
     },
     "lexiconTerms": [
-      "nonstick-honestly"
+      {
+        "slug": "nonstick-honestly",
+        "term": "Nonstick, Honestly"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -1645,7 +1693,10 @@
       }
     },
     "lexiconTerms": [
-      "gruyere"
+      {
+        "slug": "gruyere",
+        "term": "Gruyère"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -1770,8 +1821,14 @@
       }
     },
     "lexiconTerms": [
-      "peppers-and-eggplant-the-nightshade-late-summer",
-      "tomatoes-the-argument-for-august"
+      {
+        "slug": "peppers-and-eggplant-the-nightshade-late-summer",
+        "term": "Peppers & Eggplant: The Nightshade Late Summer"
+      },
+      {
+        "slug": "tomatoes-the-argument-for-august",
+        "term": "Tomatoes: The Argument for August"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -2037,10 +2094,22 @@
       }
     },
     "lexiconTerms": [
-      "chuck",
-      "pinot-noir-and-burgundy",
-      "boudin-noir-and-boudin-blanc",
-      "pinot-noir"
+      {
+        "slug": "chuck",
+        "term": "Chuck"
+      },
+      {
+        "slug": "pinot-noir-and-burgundy",
+        "term": "Pinot Noir & Burgundy"
+      },
+      {
+        "slug": "boudin-noir-and-boudin-blanc",
+        "term": "Boudin Noir & Boudin Blanc"
+      },
+      {
+        "slug": "pinot-noir",
+        "term": "Pinot Noir"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -2181,9 +2250,18 @@
       }
     },
     "lexiconTerms": [
-      "blind-baking-and-pie-doctrine",
-      "cheese-families",
-      "nutmeg-and-mace"
+      {
+        "slug": "blind-baking-and-pie-doctrine",
+        "term": "Blind Baking & Pie Doctrine"
+      },
+      {
+        "slug": "cheese-families",
+        "term": "Cheese Families"
+      },
+      {
+        "slug": "nutmeg-and-mace",
+        "term": "Nutmeg & Mace"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -2288,7 +2366,10 @@
       }
     },
     "lexiconTerms": [
-      "gruyere"
+      {
+        "slug": "gruyere",
+        "term": "Gruyère"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -2421,8 +2502,14 @@
       }
     },
     "lexiconTerms": [
-      "the-kitchen-torch",
-      "vanilla"
+      {
+        "slug": "the-kitchen-torch",
+        "term": "The Kitchen Torch"
+      },
+      {
+        "slug": "vanilla",
+        "term": "Vanilla"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -2539,9 +2626,18 @@
       }
     },
     "lexiconTerms": [
-      "tuna-grades-akami-chutoro-otoro",
-      "blanch-and-shock",
-      "tuna-and-winter-fat"
+      {
+        "slug": "tuna-grades-akami-chutoro-otoro",
+        "term": "Tuna Grades (Akami, Chūtoro, Ōtoro)"
+      },
+      {
+        "slug": "blanch-and-shock",
+        "term": "Blanch & Shock"
+      },
+      {
+        "slug": "tuna-and-winter-fat",
+        "term": "Tuna & Winter Fat"
+      }
     ],
     "pantryItems": [
       "Tuna",
@@ -2778,9 +2874,18 @@
       }
     },
     "lexiconTerms": [
-      "sake-fundamentals-the-polishing-ladder",
-      "sake-service-and-pairing",
-      "baste-arroser-and-glaze"
+      {
+        "slug": "sake-fundamentals-the-polishing-ladder",
+        "term": "Sake Fundamentals: The Polishing Ladder"
+      },
+      {
+        "slug": "sake-service-and-pairing",
+        "term": "Sake Service & Pairing"
+      },
+      {
+        "slug": "baste-arroser-and-glaze",
+        "term": "Baste, Arroser & Glaze"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -2889,9 +2994,18 @@
       }
     },
     "lexiconTerms": [
-      "wild-salmon-the-run-calendar",
-      "tuna-grades-akami-chutoro-otoro",
-      "tuna-and-winter-fat"
+      {
+        "slug": "wild-salmon-the-run-calendar",
+        "term": "Wild Salmon: The Run Calendar"
+      },
+      {
+        "slug": "tuna-grades-akami-chutoro-otoro",
+        "term": "Tuna Grades (Akami, Chūtoro, Ōtoro)"
+      },
+      {
+        "slug": "tuna-and-winter-fat",
+        "term": "Tuna & Winter Fat"
+      }
     ],
     "pantryItems": [
       "Salmon",
@@ -2991,10 +3105,22 @@
       }
     },
     "lexiconTerms": [
-      "roux-slurry-and-liaison",
-      "riesling-the-sommeliers-secret-weapon",
-      "curry-powder-the-colonial-invention",
-      "chaat-masala"
+      {
+        "slug": "roux-slurry-and-liaison",
+        "term": "Roux, Slurry & Liaison"
+      },
+      {
+        "slug": "riesling-the-sommeliers-secret-weapon",
+        "term": "Riesling: The Sommelier's Secret Weapon"
+      },
+      {
+        "slug": "curry-powder-the-colonial-invention",
+        "term": "Curry Powder: The Colonial Invention"
+      },
+      {
+        "slug": "chaat-masala",
+        "term": "Chaat Masala"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -3306,7 +3432,10 @@
       }
     },
     "lexiconTerms": [
-      "wok-hei-and-stir-fry-discipline"
+      {
+        "slug": "wok-hei-and-stir-fry-discipline",
+        "term": "Wok Hei & Stir-Fry Discipline"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -3506,7 +3635,10 @@
       }
     },
     "lexiconTerms": [
-      "stocks-blanc-brun-broth-and-demi"
+      {
+        "slug": "stocks-blanc-brun-broth-and-demi",
+        "term": "Stocks: Blanc, Brun, Broth & Demi"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -3613,7 +3745,10 @@
       }
     },
     "lexiconTerms": [
-      "sashimi-grade-and-ikejime"
+      {
+        "slug": "sashimi-grade-and-ikejime",
+        "term": "Sashimi-Grade & Ikejime"
+      }
     ],
     "pantryItems": [
       "Salmon",
@@ -3723,7 +3858,10 @@
       }
     },
     "lexiconTerms": [
-      "shrimp-sizing-and-prawn-confusion"
+      {
+        "slug": "shrimp-sizing-and-prawn-confusion",
+        "term": "Shrimp Sizing & Prawn Confusion"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -3841,8 +3979,14 @@
       }
     },
     "lexiconTerms": [
-      "sichuan-peppercorn-and-mala",
-      "roux-slurry-and-liaison"
+      {
+        "slug": "sichuan-peppercorn-and-mala",
+        "term": "Sichuan Peppercorn & Málà"
+      },
+      {
+        "slug": "roux-slurry-and-liaison",
+        "term": "Roux, Slurry & Liaison"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -3955,9 +4099,18 @@
       }
     },
     "lexiconTerms": [
-      "chinese-five-spice",
-      "salamander-broiler-and-top-down-fire",
-      "pork-shoulder-butt-vs-picnic"
+      {
+        "slug": "chinese-five-spice",
+        "term": "Chinese Five-Spice"
+      },
+      {
+        "slug": "salamander-broiler-and-top-down-fire",
+        "term": "Salamander, Broiler & Top-Down Fire"
+      },
+      {
+        "slug": "pork-shoulder-butt-vs-picnic",
+        "term": "Pork Shoulder: Butt vs. Picnic"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -4170,7 +4323,10 @@
       }
     },
     "lexiconTerms": [
-      "fillet-steak-loin-and-collar"
+      {
+        "slug": "fillet-steak-loin-and-collar",
+        "term": "Fillet, Steak, Loin & Collar"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -4468,8 +4624,14 @@
       }
     },
     "lexiconTerms": [
-      "sesame-seeds-tahini-and-beyond",
-      "black-pepper-and-the-pepper-family"
+      {
+        "slug": "sesame-seeds-tahini-and-beyond",
+        "term": "Sesame: Seeds, Tahini & Beyond"
+      },
+      {
+        "slug": "black-pepper-and-the-pepper-family",
+        "term": "Black Pepper & the Pepper Family"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -4572,8 +4734,14 @@
       }
     },
     "lexiconTerms": [
-      "grilling-vs-barbecue-vs-smoking",
-      "steaming-and-en-papillote"
+      {
+        "slug": "grilling-vs-barbecue-vs-smoking",
+        "term": "Grilling vs. Barbecue vs. Smoking"
+      },
+      {
+        "slug": "steaming-and-en-papillote",
+        "term": "Steaming & En Papillote"
+      }
     ],
     "pantryItems": [
       "White fish",
@@ -4775,7 +4943,10 @@
       }
     },
     "lexiconTerms": [
-      "paprika-and-pimenton"
+      {
+        "slug": "paprika-and-pimenton",
+        "term": "Paprika & Pimentón"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -4889,7 +5060,10 @@
       }
     },
     "lexiconTerms": [
-      "jamon-serrano"
+      {
+        "slug": "jamon-serrano",
+        "term": "Jamón Serrano"
+      }
     ],
     "pantryItems": [
       "Ham/Prosciutto",
@@ -4994,7 +5168,10 @@
       }
     },
     "lexiconTerms": [
-      "queso-oaxaca-quesillo"
+      {
+        "slug": "queso-oaxaca-quesillo",
+        "term": "Queso Oaxaca (Quesillo)"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -5099,10 +5276,22 @@
       }
     },
     "lexiconTerms": [
-      "flank-skirt-and-hanger",
-      "pressure-and-slow-cooking",
-      "salamander-broiler-and-top-down-fire",
-      "fillet-steak-loin-and-collar"
+      {
+        "slug": "flank-skirt-and-hanger",
+        "term": "Flank, Skirt & Hanger"
+      },
+      {
+        "slug": "pressure-and-slow-cooking",
+        "term": "Pressure & Slow Cooking"
+      },
+      {
+        "slug": "salamander-broiler-and-top-down-fire",
+        "term": "Salamander, Broiler & Top-Down Fire"
+      },
+      {
+        "slug": "fillet-steak-loin-and-collar",
+        "term": "Fillet, Steak, Loin & Collar"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -5309,7 +5498,10 @@
       }
     },
     "lexiconTerms": [
-      "garnish-expression-twists-and-the-cherry-question"
+      {
+        "slug": "garnish-expression-twists-and-the-cherry-question",
+        "term": "Garnish: Expression, Twists & the Cherry Question"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -5413,7 +5605,10 @@
       }
     },
     "lexiconTerms": [
-      "cotija"
+      {
+        "slug": "cotija",
+        "term": "Cotija"
+      }
     ],
     "pantryItems": [
       "Chiles",
@@ -5529,7 +5724,10 @@
       }
     },
     "lexiconTerms": [
-      "monterey-jack-and-pepper-jack"
+      {
+        "slug": "monterey-jack-and-pepper-jack",
+        "term": "Monterey Jack & Pepper Jack"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -5640,9 +5838,18 @@
       }
     },
     "lexiconTerms": [
-      "copper-and-enameled-cast-iron",
-      "comal-plancha-and-griddles",
-      "cast-iron"
+      {
+        "slug": "copper-and-enameled-cast-iron",
+        "term": "Copper & Enameled Cast Iron"
+      },
+      {
+        "slug": "comal-plancha-and-griddles",
+        "term": "Comal, Plancha & Griddles"
+      },
+      {
+        "slug": "cast-iron",
+        "term": "Cast Iron"
+      }
     ],
     "pantryItems": [
       "Ham/Prosciutto",
@@ -5853,8 +6060,14 @@
       }
     },
     "lexiconTerms": [
-      "garam-masala",
-      "salamander-broiler-and-top-down-fire"
+      {
+        "slug": "garam-masala",
+        "term": "Garam Masala"
+      },
+      {
+        "slug": "salamander-broiler-and-top-down-fire",
+        "term": "Salamander, Broiler & Top-Down Fire"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -5962,7 +6175,10 @@
       }
     },
     "lexiconTerms": [
-      "the-souring-spices-amchur-loomi-anardana-and-tamarind"
+      {
+        "slug": "the-souring-spices-amchur-loomi-anardana-and-tamarind",
+        "term": "The Souring Spices: Amchur, Loomi, Anardana & Tamarind"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -6067,8 +6283,14 @@
       }
     },
     "lexiconTerms": [
-      "turmeric",
-      "toasting-blooming-and-the-tadka-doctrine"
+      {
+        "slug": "turmeric",
+        "term": "Turmeric"
+      },
+      {
+        "slug": "toasting-blooming-and-the-tadka-doctrine",
+        "term": "Toasting, Blooming & the Tadka Doctrine"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -6175,7 +6397,10 @@
       }
     },
     "lexiconTerms": [
-      "paneer"
+      {
+        "slug": "paneer",
+        "term": "Paneer"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -6288,7 +6513,10 @@
       }
     },
     "lexiconTerms": [
-      "saffron"
+      {
+        "slug": "saffron",
+        "term": "Saffron"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -6393,8 +6621,14 @@
       }
     },
     "lexiconTerms": [
-      "cumin",
-      "garam-masala"
+      {
+        "slug": "cumin",
+        "term": "Cumin"
+      },
+      {
+        "slug": "garam-masala",
+        "term": "Garam Masala"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -6490,7 +6724,10 @@
       }
     },
     "lexiconTerms": [
-      "cumin"
+      {
+        "slug": "cumin",
+        "term": "Cumin"
+      }
     ],
     "pantryItems": [
       "Chiles",
@@ -6598,8 +6835,14 @@
       }
     },
     "lexiconTerms": [
-      "copper-and-enameled-cast-iron",
-      "cast-iron"
+      {
+        "slug": "copper-and-enameled-cast-iron",
+        "term": "Copper & Enameled Cast Iron"
+      },
+      {
+        "slug": "cast-iron",
+        "term": "Cast Iron"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -7045,8 +7288,14 @@
       }
     },
     "lexiconTerms": [
-      "curry-leaf",
-      "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime"
+      {
+        "slug": "curry-leaf",
+        "term": "Curry Leaf"
+      },
+      {
+        "slug": "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime",
+        "term": "The Fresh Aromatic Trio: Galangal, Lemongrass & Makrut Lime"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -7152,7 +7401,10 @@
       }
     },
     "lexiconTerms": [
-      "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime"
+      {
+        "slug": "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime",
+        "term": "The Fresh Aromatic Trio: Galangal, Lemongrass & Makrut Lime"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -7361,7 +7613,10 @@
       }
     },
     "lexiconTerms": [
-      "the-wok"
+      {
+        "slug": "the-wok",
+        "term": "The Wok"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -7498,8 +7753,14 @@
       }
     },
     "lexiconTerms": [
-      "chuck",
-      "the-souring-spices-amchur-loomi-anardana-and-tamarind"
+      {
+        "slug": "chuck",
+        "term": "Chuck"
+      },
+      {
+        "slug": "the-souring-spices-amchur-loomi-anardana-and-tamarind",
+        "term": "The Souring Spices: Amchur, Loomi, Anardana & Tamarind"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -7605,7 +7866,10 @@
       }
     },
     "lexiconTerms": [
-      "garnish-expression-twists-and-the-cherry-question"
+      {
+        "slug": "garnish-expression-twists-and-the-cherry-question",
+        "term": "Garnish: Expression, Twists & the Cherry Question"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -7936,7 +8200,10 @@
       }
     },
     "lexiconTerms": [
-      "mango-the-monsoon-herald"
+      {
+        "slug": "mango-the-monsoon-herald",
+        "term": "Mango: The Monsoon Herald"
+      }
     ],
     "pantryItems": [
       "Mango",
@@ -8050,7 +8317,10 @@
       }
     },
     "lexiconTerms": [
-      "paprika-and-pimenton"
+      {
+        "slug": "paprika-and-pimenton",
+        "term": "Paprika & Pimentón"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -8266,7 +8536,10 @@
       }
     },
     "lexiconTerms": [
-      "feta"
+      {
+        "slug": "feta",
+        "term": "Feta"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -8472,7 +8745,10 @@
       }
     },
     "lexiconTerms": [
-      "pressure-and-slow-cooking"
+      {
+        "slug": "pressure-and-slow-cooking",
+        "term": "Pressure & Slow Cooking"
+      }
     ],
     "pantryItems": [
       "Scallion",
@@ -8570,8 +8846,14 @@
       }
     },
     "lexiconTerms": [
-      "sumac",
-      "pomegranate-and-quince-autumns-perfume"
+      {
+        "slug": "sumac",
+        "term": "Sumac"
+      },
+      {
+        "slug": "pomegranate-and-quince-autumns-perfume",
+        "term": "Pomegranate & Quince: Autumn's Perfume"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -8683,7 +8965,10 @@
       }
     },
     "lexiconTerms": [
-      "lamb-primals"
+      {
+        "slug": "lamb-primals",
+        "term": "Lamb Primals"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -8788,7 +9073,10 @@
       }
     },
     "lexiconTerms": [
-      "sesame-seeds-tahini-and-beyond"
+      {
+        "slug": "sesame-seeds-tahini-and-beyond",
+        "term": "Sesame: Seeds, Tahini & Beyond"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -9086,8 +9374,14 @@
       }
     },
     "lexiconTerms": [
-      "starchy-vs-waxy-potatoes",
-      "nonstick-honestly"
+      {
+        "slug": "starchy-vs-waxy-potatoes",
+        "term": "Starchy vs. Waxy Potatoes"
+      },
+      {
+        "slug": "nonstick-honestly",
+        "term": "Nonstick, Honestly"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -9197,9 +9491,18 @@
       }
     },
     "lexiconTerms": [
-      "chorizo-spanish-vs-mexican",
-      "mirepoix-trinity-sofrito-and-friends",
-      "paprika-and-pimenton"
+      {
+        "slug": "chorizo-spanish-vs-mexican",
+        "term": "Chorizo: Spanish vs. Mexican"
+      },
+      {
+        "slug": "mirepoix-trinity-sofrito-and-friends",
+        "term": "Mirepoix, Trinity, Sofrito & Friends"
+      },
+      {
+        "slug": "paprika-and-pimenton",
+        "term": "Paprika & Pimentón"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -9304,10 +9607,22 @@
       }
     },
     "lexiconTerms": [
-      "the-sherry-spectrum",
-      "chile-flavor-beyond-heat",
-      "brandy-cognac-armagnac-calvados-and-pisco",
-      "chile-fluency-fresh-and-dried"
+      {
+        "slug": "the-sherry-spectrum",
+        "term": "The Sherry Spectrum"
+      },
+      {
+        "slug": "chile-flavor-beyond-heat",
+        "term": "Chile Flavor Beyond Heat"
+      },
+      {
+        "slug": "brandy-cognac-armagnac-calvados-and-pisco",
+        "term": "Brandy: Cognac, Armagnac, Calvados & Pisco"
+      },
+      {
+        "slug": "chile-fluency-fresh-and-dried",
+        "term": "Chile Fluency (Fresh & Dried)"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -9940,9 +10255,18 @@
       }
     },
     "lexiconTerms": [
-      "jamon-iberico-and-the-bellota-grades",
-      "roux-slurry-and-liaison",
-      "nutmeg-and-mace"
+      {
+        "slug": "jamon-iberico-and-the-bellota-grades",
+        "term": "Jamón Ibérico (and the Bellota Grades)"
+      },
+      {
+        "slug": "roux-slurry-and-liaison",
+        "term": "Roux, Slurry & Liaison"
+      },
+      {
+        "slug": "nutmeg-and-mace",
+        "term": "Nutmeg & Mace"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -10056,7 +10380,10 @@
       }
     },
     "lexiconTerms": [
-      "the-kitchen-torch"
+      {
+        "slug": "the-kitchen-torch",
+        "term": "The Kitchen Torch"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -10157,7 +10484,10 @@
       }
     },
     "lexiconTerms": [
-      "feta"
+      {
+        "slug": "feta",
+        "term": "Feta"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -10455,7 +10785,10 @@
       }
     },
     "lexiconTerms": [
-      "lamb-primals"
+      {
+        "slug": "lamb-primals",
+        "term": "Lamb Primals"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -10894,7 +11227,10 @@
       }
     },
     "lexiconTerms": [
-      "riesling-the-sommeliers-secret-weapon"
+      {
+        "slug": "riesling-the-sommeliers-secret-weapon",
+        "term": "Riesling: The Sommelier's Secret Weapon"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -11000,7 +11336,10 @@
       }
     },
     "lexiconTerms": [
-      "deep-and-shallow-frying"
+      {
+        "slug": "deep-and-shallow-frying",
+        "term": "Deep & Shallow Frying"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -11114,8 +11453,14 @@
       }
     },
     "lexiconTerms": [
-      "feta",
-      "clay-and-earthenware-tagine-donabe-cazuela"
+      {
+        "slug": "feta",
+        "term": "Feta"
+      },
+      {
+        "slug": "clay-and-earthenware-tagine-donabe-cazuela",
+        "term": "Clay & Earthenware: Tagine, Donabe, Cazuela"
+      }
     ],
     "pantryItems": [
       "Tomato",
@@ -11221,8 +11566,14 @@
       }
     },
     "lexiconTerms": [
-      "tasso-and-cajun-andouille",
-      "sweetness-as-seasoning"
+      {
+        "slug": "tasso-and-cajun-andouille",
+        "term": "Tasso & Cajun Andouille"
+      },
+      {
+        "slug": "sweetness-as-seasoning",
+        "term": "Sweetness as Seasoning"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -11327,7 +11678,10 @@
       }
     },
     "lexiconTerms": [
-      "ham-and-hock"
+      {
+        "slug": "ham-and-hock",
+        "term": "Ham & Hock"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -11430,7 +11784,10 @@
       }
     },
     "lexiconTerms": [
-      "tasso-and-cajun-andouille"
+      {
+        "slug": "tasso-and-cajun-andouille",
+        "term": "Tasso & Cajun Andouille"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -11840,8 +12197,14 @@
       }
     },
     "lexiconTerms": [
-      "cast-iron",
-      "copper-and-enameled-cast-iron"
+      {
+        "slug": "cast-iron",
+        "term": "Cast Iron"
+      },
+      {
+        "slug": "copper-and-enameled-cast-iron",
+        "term": "Copper & Enameled Cast Iron"
+      }
     ],
     "pantryItems": [
       "White fish",
@@ -11933,10 +12296,22 @@
       }
     },
     "lexiconTerms": [
-      "teliszalami-hungarian-winter-salami",
-      "mozzarella-di-bufala-campana",
-      "provolone-dolce-and-piccante",
-      "mortadella-bologna"
+      {
+        "slug": "teliszalami-hungarian-winter-salami",
+        "term": "Téliszalámi (Hungarian Winter Salami)"
+      },
+      {
+        "slug": "mozzarella-di-bufala-campana",
+        "term": "Mozzarella di Bufala Campana"
+      },
+      {
+        "slug": "provolone-dolce-and-piccante",
+        "term": "Provolone (Dolce & Piccante)"
+      },
+      {
+        "slug": "mortadella-bologna",
+        "term": "Mortadella Bologna"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -12357,8 +12732,14 @@
       }
     },
     "lexiconTerms": [
-      "ribeye-prime-rib",
-      "sirloin-tri-tip-and-picanha"
+      {
+        "slug": "ribeye-prime-rib",
+        "term": "Ribeye / Prime Rib"
+      },
+      {
+        "slug": "sirloin-tri-tip-and-picanha",
+        "term": "Sirloin, Tri-Tip & Picanha"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -12485,7 +12866,10 @@
       }
     },
     "lexiconTerms": [
-      "blanch-and-shock"
+      {
+        "slug": "blanch-and-shock",
+        "term": "Blanch & Shock"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -12589,8 +12973,14 @@
       }
     },
     "lexiconTerms": [
-      "by-the-glass-economics-coravin-and-corkage",
-      "sesame-seeds-tahini-and-beyond"
+      {
+        "slug": "by-the-glass-economics-coravin-and-corkage",
+        "term": "By-the-Glass Economics, Coravin & Corkage"
+      },
+      {
+        "slug": "sesame-seeds-tahini-and-beyond",
+        "term": "Sesame: Seeds, Tahini & Beyond"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -12701,7 +13091,10 @@
       }
     },
     "lexiconTerms": [
-      "pork-belly"
+      {
+        "slug": "pork-belly",
+        "term": "Pork Belly"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -12912,7 +13305,10 @@
       }
     },
     "lexiconTerms": [
-      "cephalopods-squid-octopus-cuttlefish"
+      {
+        "slug": "cephalopods-squid-octopus-cuttlefish",
+        "term": "Cephalopods (Squid, Octopus, Cuttlefish)"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -13118,7 +13514,10 @@
       }
     },
     "lexiconTerms": [
-      "short-ribs-english-vs-flanken"
+      {
+        "slug": "short-ribs-english-vs-flanken",
+        "term": "Short Ribs (English vs. Flanken)"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -13441,8 +13840,14 @@
       }
     },
     "lexiconTerms": [
-      "pate-and-terrine",
-      "pate-en-croute"
+      {
+        "slug": "pate-and-terrine",
+        "term": "Pâté & Terrine"
+      },
+      {
+        "slug": "pate-en-croute",
+        "term": "Pâté en Croûte"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -13767,8 +14172,14 @@
       }
     },
     "lexiconTerms": [
-      "clay-and-earthenware-tagine-donabe-cazuela",
-      "wild-salmon-the-run-calendar"
+      {
+        "slug": "clay-and-earthenware-tagine-donabe-cazuela",
+        "term": "Clay & Earthenware: Tagine, Donabe, Cazuela"
+      },
+      {
+        "slug": "wild-salmon-the-run-calendar",
+        "term": "Wild Salmon: The Run Calendar"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -13879,7 +14290,10 @@
       }
     },
     "lexiconTerms": [
-      "the-negroni-and-equal-parts-architecture"
+      {
+        "slug": "the-negroni-and-equal-parts-architecture",
+        "term": "The Negroni & Equal-Parts Architecture"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -14061,7 +14475,10 @@
       }
     },
     "lexiconTerms": [
-      "espresso-and-the-coffee-program"
+      {
+        "slug": "espresso-and-the-coffee-program",
+        "term": "Espresso & the Coffee Program"
+      }
     ],
     "pantryItems": [
       "Milk",
@@ -14396,7 +14813,10 @@
       }
     },
     "lexiconTerms": [
-      "clay-and-earthenware-tagine-donabe-cazuela"
+      {
+        "slug": "clay-and-earthenware-tagine-donabe-cazuela",
+        "term": "Clay & Earthenware: Tagine, Donabe, Cazuela"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -14504,7 +14924,10 @@
       }
     },
     "lexiconTerms": [
-      "lamb-primals"
+      {
+        "slug": "lamb-primals",
+        "term": "Lamb Primals"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -14610,7 +15033,10 @@
       }
     },
     "lexiconTerms": [
-      "baharat-and-the-seven-spice-family"
+      {
+        "slug": "baharat-and-the-seven-spice-family",
+        "term": "Baharat & the Seven-Spice Family"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -14823,7 +15249,10 @@
       }
     },
     "lexiconTerms": [
-      "salt-cod-and-the-preserved-fish-pantry"
+      {
+        "slug": "salt-cod-and-the-preserved-fish-pantry",
+        "term": "Salt Cod & the Preserved Fish Pantry"
+      }
     ],
     "pantryItems": [
       "White fish",
@@ -15521,7 +15950,10 @@
       }
     },
     "lexiconTerms": [
-      "american-cheese-defended"
+      {
+        "slug": "american-cheese-defended",
+        "term": "American Cheese, Defended"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -15640,8 +16072,14 @@
       }
     },
     "lexiconTerms": [
-      "west-country-farmhouse-cheddar",
-      "monterey-jack-and-pepper-jack"
+      {
+        "slug": "west-country-farmhouse-cheddar",
+        "term": "West Country Farmhouse Cheddar"
+      },
+      {
+        "slug": "monterey-jack-and-pepper-jack",
+        "term": "Monterey Jack & Pepper Jack"
+      }
     ],
     "pantryItems": [
       "Chiles",
@@ -15742,8 +16180,14 @@
       }
     },
     "lexiconTerms": [
-      "pork-shoulder-butt-vs-picnic",
-      "oils-and-smoke-points"
+      {
+        "slug": "pork-shoulder-butt-vs-picnic",
+        "term": "Pork Shoulder: Butt vs. Picnic"
+      },
+      {
+        "slug": "oils-and-smoke-points",
+        "term": "Oils & Smoke Points"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -15848,7 +16292,10 @@
       }
     },
     "lexiconTerms": [
-      "frozen-dessert-machines-churners-and-pacojet"
+      {
+        "slug": "frozen-dessert-machines-churners-and-pacojet",
+        "term": "Frozen Dessert Machines: Churners & Pacojet"
+      }
     ],
     "pantryItems": [
       "Butter",
@@ -15940,7 +16387,10 @@
       }
     },
     "lexiconTerms": [
-      "corn-sugar-against-the-clock"
+      {
+        "slug": "corn-sugar-against-the-clock",
+        "term": "Corn: Sugar Against the Clock"
+      }
     ],
     "pantryItems": [
       "Bacon",
@@ -16043,7 +16493,10 @@
       }
     },
     "lexiconTerms": [
-      "ham-and-hock"
+      {
+        "slug": "ham-and-hock",
+        "term": "Ham & Hock"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -16150,7 +16603,10 @@
       }
     },
     "lexiconTerms": [
-      "apples-and-pears-the-autumn-keepers"
+      {
+        "slug": "apples-and-pears-the-autumn-keepers",
+        "term": "Apples & Pears: The Autumn Keepers"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -16257,7 +16713,10 @@
       }
     },
     "lexiconTerms": [
-      "vanilla"
+      {
+        "slug": "vanilla",
+        "term": "Vanilla"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -16361,8 +16820,14 @@
       }
     },
     "lexiconTerms": [
-      "starchy-vs-waxy-potatoes",
-      "bivalves-oysters-clams-mussels-scallops"
+      {
+        "slug": "starchy-vs-waxy-potatoes",
+        "term": "Starchy vs. Waxy Potatoes"
+      },
+      {
+        "slug": "bivalves-oysters-clams-mussels-scallops",
+        "term": "Bivalves (Oysters, Clams, Mussels, Scallops)"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -16469,7 +16934,10 @@
       }
     },
     "lexiconTerms": [
-      "sumac"
+      {
+        "slug": "sumac",
+        "term": "Sumac"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -17069,7 +17537,10 @@
       }
     },
     "lexiconTerms": [
-      "sumac"
+      {
+        "slug": "sumac",
+        "term": "Sumac"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -17481,9 +17952,18 @@
       }
     },
     "lexiconTerms": [
-      "allspice",
-      "scotch-irish-and-world-whisky",
-      "berries-the-late-spring-sprint"
+      {
+        "slug": "allspice",
+        "term": "Allspice"
+      },
+      {
+        "slug": "scotch-irish-and-world-whisky",
+        "term": "Scotch, Irish & World Whisky"
+      },
+      {
+        "slug": "berries-the-late-spring-sprint",
+        "term": "Berries: The Late-Spring Sprint"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -17712,10 +18192,22 @@
       }
     },
     "lexiconTerms": [
-      "mutton-and-hogget",
-      "lamb-spring-hogget-and-mutton",
-      "curry-powder-the-colonial-invention",
-      "berries-the-late-spring-sprint"
+      {
+        "slug": "mutton-and-hogget",
+        "term": "Mutton & Hogget"
+      },
+      {
+        "slug": "lamb-spring-hogget-and-mutton",
+        "term": "Lamb: Spring, Hogget & Mutton"
+      },
+      {
+        "slug": "curry-powder-the-colonial-invention",
+        "term": "Curry Powder: The Colonial Invention"
+      },
+      {
+        "slug": "berries-the-late-spring-sprint",
+        "term": "Berries: The Late-Spring Sprint"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -18035,8 +18527,14 @@
       }
     },
     "lexiconTerms": [
-      "turmeric",
-      "curry-powder-the-colonial-invention"
+      {
+        "slug": "turmeric",
+        "term": "Turmeric"
+      },
+      {
+        "slug": "curry-powder-the-colonial-invention",
+        "term": "Curry Powder: The Colonial Invention"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -18539,7 +19037,10 @@
       }
     },
     "lexiconTerms": [
-      "scotch-irish-and-world-whisky"
+      {
+        "slug": "scotch-irish-and-world-whisky",
+        "term": "Scotch, Irish & World Whisky"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -18739,7 +19240,10 @@
       }
     },
     "lexiconTerms": [
-      "sirloin-tri-tip-and-picanha"
+      {
+        "slug": "sirloin-tri-tip-and-picanha",
+        "term": "Sirloin, Tri-Tip & Picanha"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -19055,8 +19559,14 @@
       }
     },
     "lexiconTerms": [
-      "stand-mixer-and-attachments",
-      "the-kitchen-torch"
+      {
+        "slug": "stand-mixer-and-attachments",
+        "term": "Stand Mixer & Attachments"
+      },
+      {
+        "slug": "the-kitchen-torch",
+        "term": "The Kitchen Torch"
+      }
     ],
     "pantryItems": [
       "Plantain",
@@ -19671,10 +20181,22 @@
       }
     },
     "lexiconTerms": [
-      "marketing-and-the-regulars-math",
-      "gluten-and-hydration",
-      "mozzarella-di-bufala-campana",
-      "frozen-dessert-machines-churners-and-pacojet"
+      {
+        "slug": "marketing-and-the-regulars-math",
+        "term": "Marketing & the Regulars Math"
+      },
+      {
+        "slug": "gluten-and-hydration",
+        "term": "Gluten & Hydration"
+      },
+      {
+        "slug": "mozzarella-di-bufala-campana",
+        "term": "Mozzarella di Bufala Campana"
+      },
+      {
+        "slug": "frozen-dessert-machines-churners-and-pacojet",
+        "term": "Frozen Dessert Machines: Churners & Pacojet"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -19870,7 +20392,10 @@
       }
     },
     "lexiconTerms": [
-      "nonstick-honestly"
+      {
+        "slug": "nonstick-honestly",
+        "term": "Nonstick, Honestly"
+      }
     ],
     "pantryItems": [
       "Butter",
@@ -20077,7 +20602,10 @@
       }
     },
     "lexiconTerms": [
-      "lomo-embuchado"
+      {
+        "slug": "lomo-embuchado",
+        "term": "Lomo Embuchado"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -20294,8 +20822,14 @@
       }
     },
     "lexiconTerms": [
-      "steaming-and-en-papillote",
-      "line-slang-86-in-the-weeds-and-family-meal"
+      {
+        "slug": "steaming-and-en-papillote",
+        "term": "Steaming & En Papillote"
+      },
+      {
+        "slug": "line-slang-86-in-the-weeds-and-family-meal",
+        "term": "Line Slang: 86, In the Weeds & Family Meal"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -20736,7 +21270,10 @@
       }
     },
     "lexiconTerms": [
-      "consomme-and-clarification"
+      {
+        "slug": "consomme-and-clarification",
+        "term": "Consommé & Clarification"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -20868,7 +21405,10 @@
       }
     },
     "lexiconTerms": [
-      "teliszalami-hungarian-winter-salami"
+      {
+        "slug": "teliszalami-hungarian-winter-salami",
+        "term": "Téliszalámi (Hungarian Winter Salami)"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -20967,9 +21507,18 @@
       }
     },
     "lexiconTerms": [
-      "caraway-and-nigella",
-      "scales-and-measuring-by-weight",
-      "chuck"
+      {
+        "slug": "caraway-and-nigella",
+        "term": "Caraway & Nigella"
+      },
+      {
+        "slug": "scales-and-measuring-by-weight",
+        "term": "Scales & Measuring by Weight"
+      },
+      {
+        "slug": "chuck",
+        "term": "Chuck"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -21070,7 +21619,10 @@
       }
     },
     "lexiconTerms": [
-      "boning-fillet-and-the-butchery-blades"
+      {
+        "slug": "boning-fillet-and-the-butchery-blades",
+        "term": "Boning, Fillet & the Butchery Blades"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -21182,7 +21734,10 @@
       }
     },
     "lexiconTerms": [
-      "blanch-and-shock"
+      {
+        "slug": "blanch-and-shock",
+        "term": "Blanch & Shock"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -21295,7 +21850,10 @@
       }
     },
     "lexiconTerms": [
-      "sulguni"
+      {
+        "slug": "sulguni",
+        "term": "Sulguni"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -21391,8 +21949,14 @@
       }
     },
     "lexiconTerms": [
-      "starchy-vs-waxy-potatoes",
-      "line-slang-86-in-the-weeds-and-family-meal"
+      {
+        "slug": "starchy-vs-waxy-potatoes",
+        "term": "Starchy vs. Waxy Potatoes"
+      },
+      {
+        "slug": "line-slang-86-in-the-weeds-and-family-meal",
+        "term": "Line Slang: 86, In the Weeds & Family Meal"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -21589,8 +22153,14 @@
       }
     },
     "lexiconTerms": [
-      "kabanosy-and-the-kielbasa-family",
-      "wild-mushrooms-the-forest-calendar"
+      {
+        "slug": "kabanosy-and-the-kielbasa-family",
+        "term": "Kabanosy & the Kielbasa Family"
+      },
+      {
+        "slug": "wild-mushrooms-the-forest-calendar",
+        "term": "Wild Mushrooms: The Forest Calendar"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -21695,8 +22265,14 @@
       }
     },
     "lexiconTerms": [
-      "beer-styles-the-two-family-map",
-      "fryer-setups-and-oil-management"
+      {
+        "slug": "beer-styles-the-two-family-map",
+        "term": "Beer Styles: The Two-Family Map"
+      },
+      {
+        "slug": "fryer-setups-and-oil-management",
+        "term": "Fryer Setups & Oil Management"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -21794,7 +22370,10 @@
       }
     },
     "lexiconTerms": [
-      "startup-costs-the-real-number"
+      {
+        "slug": "startup-costs-the-real-number",
+        "term": "Startup Costs: The Real Number"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -22702,7 +23281,10 @@
       }
     },
     "lexiconTerms": [
-      "scotch-irish-and-world-whisky"
+      {
+        "slug": "scotch-irish-and-world-whisky",
+        "term": "Scotch, Irish & World Whisky"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -22990,7 +23572,10 @@
       }
     },
     "lexiconTerms": [
-      "wild-salmon-the-run-calendar"
+      {
+        "slug": "wild-salmon-the-run-calendar",
+        "term": "Wild Salmon: The Run Calendar"
+      }
     ],
     "pantryItems": [
       "Bacon",
@@ -23495,7 +24080,10 @@
       }
     },
     "lexiconTerms": [
-      "mandoline-and-the-slicing-machines"
+      {
+        "slug": "mandoline-and-the-slicing-machines",
+        "term": "Mandoline & the Slicing Machines"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -23587,7 +24175,10 @@
       }
     },
     "lexiconTerms": [
-      "hot-drinks-toddy-irish-coffee-and-the-warm-service"
+      {
+        "slug": "hot-drinks-toddy-irish-coffee-and-the-warm-service",
+        "term": "Hot Drinks: Toddy, Irish Coffee & the Warm Service"
+      }
     ],
     "pantryItems": [
       "Cream",
@@ -23792,7 +24383,10 @@
       }
     },
     "lexiconTerms": [
-      "why-restaurants-fail-the-honest-list"
+      {
+        "slug": "why-restaurants-fail-the-honest-list",
+        "term": "Why Restaurants Fail: The Honest List"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -23901,8 +24495,14 @@
       }
     },
     "lexiconTerms": [
-      "shank-oxtail-and-cheek",
-      "annatto-achiote"
+      {
+        "slug": "shank-oxtail-and-cheek",
+        "term": "Shank, Oxtail & Cheek"
+      },
+      {
+        "slug": "annatto-achiote",
+        "term": "Annatto (Achiote)"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -24109,7 +24709,10 @@
       }
     },
     "lexiconTerms": [
-      "acid-architecture"
+      {
+        "slug": "acid-architecture",
+        "term": "Acid Architecture"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -24320,8 +24923,14 @@
       }
     },
     "lexiconTerms": [
-      "guanciale-jowl-and-lardo",
-      "grilling-vs-barbecue-vs-smoking"
+      {
+        "slug": "guanciale-jowl-and-lardo",
+        "term": "Guanciale, Jowl & Lardo"
+      },
+      {
+        "slug": "grilling-vs-barbecue-vs-smoking",
+        "term": "Grilling vs. Barbecue vs. Smoking"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -24536,8 +25145,14 @@
       }
     },
     "lexiconTerms": [
-      "microplane-graters-and-the-zest-doctrine",
-      "casings-molds-and-the-curing-chamber"
+      {
+        "slug": "microplane-graters-and-the-zest-doctrine",
+        "term": "Microplane, Graters & the Zest Doctrine"
+      },
+      {
+        "slug": "casings-molds-and-the-curing-chamber",
+        "term": "Casings, Molds & the Curing Chamber"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -24842,7 +25457,10 @@
       }
     },
     "lexiconTerms": [
-      "emmentaler"
+      {
+        "slug": "emmentaler",
+        "term": "Emmentaler"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -25057,8 +25675,14 @@
       }
     },
     "lexiconTerms": [
-      "beer-styles-the-two-family-map",
-      "caraway-and-nigella"
+      {
+        "slug": "beer-styles-the-two-family-map",
+        "term": "Beer Styles: The Two-Family Map"
+      },
+      {
+        "slug": "caraway-and-nigella",
+        "term": "Caraway & Nigella"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -25269,7 +25893,10 @@
       }
     },
     "lexiconTerms": [
-      "the-brine-and-sea-register"
+      {
+        "slug": "the-brine-and-sea-register",
+        "term": "The Brine & Sea Register"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -25469,7 +26096,10 @@
       }
     },
     "lexiconTerms": [
-      "apples-and-pears-the-autumn-keepers"
+      {
+        "slug": "apples-and-pears-the-autumn-keepers",
+        "term": "Apples & Pears: The Autumn Keepers"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -25663,8 +26293,14 @@
       }
     },
     "lexiconTerms": [
-      "legal-entity-and-partnership-agreements",
-      "brandy-cognac-armagnac-calvados-and-pisco"
+      {
+        "slug": "legal-entity-and-partnership-agreements",
+        "term": "Legal Entity & Partnership Agreements"
+      },
+      {
+        "slug": "brandy-cognac-armagnac-calvados-and-pisco",
+        "term": "Brandy: Cognac, Armagnac, Calvados & Pisco"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -25964,10 +26600,22 @@
       }
     },
     "lexiconTerms": [
-      "floral-notes-and-perfume-dosage",
-      "pomegranate-and-quince-autumns-perfume",
-      "caraway-and-nigella",
-      "microplane-graters-and-the-zest-doctrine"
+      {
+        "slug": "floral-notes-and-perfume-dosage",
+        "term": "Floral Notes & Perfume Dosage"
+      },
+      {
+        "slug": "pomegranate-and-quince-autumns-perfume",
+        "term": "Pomegranate & Quince: Autumn's Perfume"
+      },
+      {
+        "slug": "caraway-and-nigella",
+        "term": "Caraway & Nigella"
+      },
+      {
+        "slug": "microplane-graters-and-the-zest-doctrine",
+        "term": "Microplane, Graters & the Zest Doctrine"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -26493,7 +27141,10 @@
       }
     },
     "lexiconTerms": [
-      "hot-drinks-toddy-irish-coffee-and-the-warm-service"
+      {
+        "slug": "hot-drinks-toddy-irish-coffee-and-the-warm-service",
+        "term": "Hot Drinks: Toddy, Irish Coffee & the Warm Service"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -26592,7 +27243,10 @@
       }
     },
     "lexiconTerms": [
-      "doneness-by-touch-sight-and-sound"
+      {
+        "slug": "doneness-by-touch-sight-and-sound",
+        "term": "Doneness by Touch, Sight & Sound"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -26915,8 +27569,14 @@
       }
     },
     "lexiconTerms": [
-      "body-alcohol-and-weight-matching",
-      "scales-and-measuring-by-weight"
+      {
+        "slug": "body-alcohol-and-weight-matching",
+        "term": "Body, Alcohol & Weight-Matching"
+      },
+      {
+        "slug": "scales-and-measuring-by-weight",
+        "term": "Scales & Measuring by Weight"
+      }
     ],
     "pantryItems": [
       "Salmon",
@@ -27221,7 +27881,10 @@
       }
     },
     "lexiconTerms": [
-      "proofing-oven-spring-and-the-crumb"
+      {
+        "slug": "proofing-oven-spring-and-the-crumb",
+        "term": "Proofing, Oven Spring & the Crumb"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -27952,7 +28615,10 @@
       }
     },
     "lexiconTerms": [
-      "berbere-and-mitmita"
+      {
+        "slug": "berbere-and-mitmita",
+        "term": "Berbere & Mitmita"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -28266,7 +28932,10 @@
       }
     },
     "lexiconTerms": [
-      "reverse-sear-and-the-gray-band"
+      {
+        "slug": "reverse-sear-and-the-gray-band",
+        "term": "Reverse Sear & the Gray Band"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -28480,7 +29149,10 @@
       }
     },
     "lexiconTerms": [
-      "berbere-and-mitmita"
+      {
+        "slug": "berbere-and-mitmita",
+        "term": "Berbere & Mitmita"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -29264,9 +29936,18 @@
       }
     },
     "lexiconTerms": [
-      "beer-at-the-table-and-the-carbonation-advantage",
-      "pork-loin-vs-tenderloin",
-      "beer-styles-the-two-family-map"
+      {
+        "slug": "beer-at-the-table-and-the-carbonation-advantage",
+        "term": "Beer at the Table & the Carbonation Advantage"
+      },
+      {
+        "slug": "pork-loin-vs-tenderloin",
+        "term": "Pork Loin vs. Tenderloin"
+      },
+      {
+        "slug": "beer-styles-the-two-family-map",
+        "term": "Beer Styles: The Two-Family Map"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -29366,7 +30047,10 @@
       }
     },
     "lexiconTerms": [
-      "beer-at-the-table-and-the-carbonation-advantage"
+      {
+        "slug": "beer-at-the-table-and-the-carbonation-advantage",
+        "term": "Beer at the Table & the Carbonation Advantage"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -29464,7 +30148,10 @@
       }
     },
     "lexiconTerms": [
-      "cephalopods-squid-octopus-cuttlefish"
+      {
+        "slug": "cephalopods-squid-octopus-cuttlefish",
+        "term": "Cephalopods (Squid, Octopus, Cuttlefish)"
+      }
     ],
     "pantryItems": [
       "Squid/Octopus",
@@ -29563,8 +30250,14 @@
       }
     },
     "lexiconTerms": [
-      "the-oily-fish-calendar",
-      "building-the-home-and-starting-bar"
+      {
+        "slug": "the-oily-fish-calendar",
+        "term": "The Oily Fish Calendar"
+      },
+      {
+        "slug": "building-the-home-and-starting-bar",
+        "term": "Building the Home & Starting Bar"
+      }
     ],
     "pantryItems": [
       "Sardines",
@@ -29884,8 +30577,14 @@
       }
     },
     "lexiconTerms": [
-      "shrimp-sizing-and-prawn-confusion",
-      "the-wok"
+      {
+        "slug": "shrimp-sizing-and-prawn-confusion",
+        "term": "Shrimp Sizing & Prawn Confusion"
+      },
+      {
+        "slug": "the-wok",
+        "term": "The Wok"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -29989,7 +30688,10 @@
       }
     },
     "lexiconTerms": [
-      "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime"
+      {
+        "slug": "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime",
+        "term": "The Fresh Aromatic Trio: Galangal, Lemongrass & Makrut Lime"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -30302,8 +31004,14 @@
       }
     },
     "lexiconTerms": [
-      "the-sommeliers-service-ritual-and-floor-fluency",
-      "turmeric"
+      {
+        "slug": "the-sommeliers-service-ritual-and-floor-fluency",
+        "term": "The Sommelier's Service Ritual & Floor Fluency"
+      },
+      {
+        "slug": "turmeric",
+        "term": "Turmeric"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -30418,7 +31126,10 @@
       }
     },
     "lexiconTerms": [
-      "why-restaurants-fail-the-honest-list"
+      {
+        "slug": "why-restaurants-fail-the-honest-list",
+        "term": "Why Restaurants Fail: The Honest List"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -30535,7 +31246,10 @@
       }
     },
     "lexiconTerms": [
-      "the-essential-smallwares"
+      {
+        "slug": "the-essential-smallwares",
+        "term": "The Essential Smallwares"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -30644,7 +31358,10 @@
       }
     },
     "lexiconTerms": [
-      "deep-and-shallow-frying"
+      {
+        "slug": "deep-and-shallow-frying",
+        "term": "Deep & Shallow Frying"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -30963,7 +31680,10 @@
       }
     },
     "lexiconTerms": [
-      "lap-cheong-and-the-chinese-cured-pantry"
+      {
+        "slug": "lap-cheong-and-the-chinese-cured-pantry",
+        "term": "Lap Cheong & the Chinese Cured Pantry"
+      }
     ],
     "pantryItems": [
       "Sausage",
@@ -31089,7 +31809,10 @@
       }
     },
     "lexiconTerms": [
-      "curry-leaf"
+      {
+        "slug": "curry-leaf",
+        "term": "Curry Leaf"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -31203,7 +31926,10 @@
       }
     },
     "lexiconTerms": [
-      "floral-notes-and-perfume-dosage"
+      {
+        "slug": "floral-notes-and-perfume-dosage",
+        "term": "Floral Notes & Perfume Dosage"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -31313,7 +32039,10 @@
       }
     },
     "lexiconTerms": [
-      "resting-carryover-and-the-thermometer"
+      {
+        "slug": "resting-carryover-and-the-thermometer",
+        "term": "Resting, Carryover & the Thermometer"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -32216,8 +32945,14 @@
       }
     },
     "lexiconTerms": [
-      "roe-caviar-ikura-tobiko-bottarga",
-      "insurance-the-policy-stack"
+      {
+        "slug": "roe-caviar-ikura-tobiko-bottarga",
+        "term": "Roe: Caviar, Ikura, Tobiko, Bottarga"
+      },
+      {
+        "slug": "insurance-the-policy-stack",
+        "term": "Insurance: The Policy Stack"
+      }
     ],
     "pantryItems": [
       "Salmon",
@@ -32324,7 +33059,10 @@
       }
     },
     "lexiconTerms": [
-      "mortadella-bologna"
+      {
+        "slug": "mortadella-bologna",
+        "term": "Mortadella Bologna"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -32427,7 +33165,10 @@
       }
     },
     "lexiconTerms": [
-      "mushroom-field-guide"
+      {
+        "slug": "mushroom-field-guide",
+        "term": "Mushroom Field Guide"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -32852,7 +33593,10 @@
       }
     },
     "lexiconTerms": [
-      "kitchen-design-and-flow"
+      {
+        "slug": "kitchen-design-and-flow",
+        "term": "Kitchen Design & Flow"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -32958,7 +33702,10 @@
       }
     },
     "lexiconTerms": [
-      "building-flavor-in-layers"
+      {
+        "slug": "building-flavor-in-layers",
+        "term": "Building Flavor in Layers"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -33060,7 +33807,10 @@
       }
     },
     "lexiconTerms": [
-      "startup-costs-the-real-number"
+      {
+        "slug": "startup-costs-the-real-number",
+        "term": "Startup Costs: The Real Number"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -33167,8 +33917,14 @@
       }
     },
     "lexiconTerms": [
-      "malbec-zinfandel-and-the-new-world-crowd-pleasers",
-      "the-sommeliers-service-ritual-and-floor-fluency"
+      {
+        "slug": "malbec-zinfandel-and-the-new-world-crowd-pleasers",
+        "term": "Malbec, Zinfandel & the New World Crowd-Pleasers"
+      },
+      {
+        "slug": "the-sommeliers-service-ritual-and-floor-fluency",
+        "term": "The Sommelier's Service Ritual & Floor Fluency"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -33276,7 +34032,10 @@
       }
     },
     "lexiconTerms": [
-      "fermentation-and-pickling"
+      {
+        "slug": "fermentation-and-pickling",
+        "term": "Fermentation & Pickling"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -33385,7 +34144,10 @@
       }
     },
     "lexiconTerms": [
-      "lamination"
+      {
+        "slug": "lamination",
+        "term": "Lamination"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -33886,7 +34648,10 @@
       }
     },
     "lexiconTerms": [
-      "head-cheese-and-the-aspic-arts"
+      {
+        "slug": "head-cheese-and-the-aspic-arts",
+        "term": "Head Cheese & the Aspic Arts"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -33987,7 +34752,10 @@
       }
     },
     "lexiconTerms": [
-      "vodka-honestly"
+      {
+        "slug": "vodka-honestly",
+        "term": "Vodka, Honestly"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -34098,8 +34866,14 @@
       }
     },
     "lexiconTerms": [
-      "dehydrator-ferment-station-and-the-pantry-machines",
-      "why-restaurants-fail-the-honest-list"
+      {
+        "slug": "dehydrator-ferment-station-and-the-pantry-machines",
+        "term": "Dehydrator, Ferment Station & the Pantry Machines"
+      },
+      {
+        "slug": "why-restaurants-fail-the-honest-list",
+        "term": "Why Restaurants Fail: The Honest List"
+      }
     ],
     "pantryItems": [
       "Bread",
@@ -34347,7 +35121,10 @@
       }
     },
     "lexiconTerms": [
-      "tangzhong-and-scalds"
+      {
+        "slug": "tangzhong-and-scalds",
+        "term": "Tangzhong & Scalds"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -34452,7 +35229,10 @@
       }
     },
     "lexiconTerms": [
-      "comal-plancha-and-griddles"
+      {
+        "slug": "comal-plancha-and-griddles",
+        "term": "Comal, Plancha & Griddles"
+      }
     ],
     "pantryItems": [
       "Butter",
@@ -34647,7 +35427,10 @@
       }
     },
     "lexiconTerms": [
-      "gluten-and-hydration"
+      {
+        "slug": "gluten-and-hydration",
+        "term": "Gluten & Hydration"
+      }
     ],
     "pantryItems": [
       "Bread",
@@ -34936,7 +35719,10 @@
       }
     },
     "lexiconTerms": [
-      "paneer"
+      {
+        "slug": "paneer",
+        "term": "Paneer"
+      }
     ],
     "pantryItems": [
       "Potato",
@@ -35138,8 +35924,14 @@
       }
     },
     "lexiconTerms": [
-      "syrah-grenache-and-the-rhone-school",
-      "gruyere"
+      {
+        "slug": "syrah-grenache-and-the-rhone-school",
+        "term": "Syrah, Grenache & the Rhône School"
+      },
+      {
+        "slug": "gruyere",
+        "term": "Gruyère"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -35251,10 +36043,22 @@
       }
     },
     "lexiconTerms": [
-      "mother-sauce-fish-stock-fumet",
-      "reduction-nappe-and-mounting",
-      "the-nutty-register",
-      "mushroom-field-guide"
+      {
+        "slug": "mother-sauce-fish-stock-fumet",
+        "term": "Mother Sauce Fish Stock: Fumet"
+      },
+      {
+        "slug": "reduction-nappe-and-mounting",
+        "term": "Reduction, Nappe & Mounting"
+      },
+      {
+        "slug": "the-nutty-register",
+        "term": "The Nutty Register"
+      },
+      {
+        "slug": "mushroom-field-guide",
+        "term": "Mushroom Field Guide"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -35499,10 +36303,22 @@
       }
     },
     "lexiconTerms": [
-      "meringues-french-swiss-italian",
-      "sieves-chinois-tamis-and-food-mill",
-      "ff-and-e-smallwares-and-opening-inventory",
-      "boning-fillet-and-the-butchery-blades"
+      {
+        "slug": "meringues-french-swiss-italian",
+        "term": "Meringues: French, Swiss, Italian"
+      },
+      {
+        "slug": "sieves-chinois-tamis-and-food-mill",
+        "term": "Sieves: Chinois, Tamis & Food Mill"
+      },
+      {
+        "slug": "ff-and-e-smallwares-and-opening-inventory",
+        "term": "FF&E, Smallwares & Opening Inventory"
+      },
+      {
+        "slug": "boning-fillet-and-the-butchery-blades",
+        "term": "Boning, Fillet & the Butchery Blades"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -35727,7 +36543,10 @@
       }
     },
     "lexiconTerms": [
-      "scallops-dry-vs-wet-u-10"
+      {
+        "slug": "scallops-dry-vs-wet-u-10",
+        "term": "Scallops: Dry vs. Wet, U-10"
+      }
     ],
     "pantryItems": [
       "Scallops",
@@ -35831,7 +36650,10 @@
       }
     },
     "lexiconTerms": [
-      "knife-care-and-the-cutting-board-question"
+      {
+        "slug": "knife-care-and-the-cutting-board-question",
+        "term": "Knife Care & the Cutting Board Question"
+      }
     ],
     "pantryItems": [
       "Anchovy",
@@ -35932,7 +36754,10 @@
       }
     },
     "lexiconTerms": [
-      "the-sherry-spectrum"
+      {
+        "slug": "the-sherry-spectrum",
+        "term": "The Sherry Spectrum"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -36033,7 +36858,10 @@
       }
     },
     "lexiconTerms": [
-      "cotija"
+      {
+        "slug": "cotija",
+        "term": "Cotija"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -36138,7 +36966,10 @@
       }
     },
     "lexiconTerms": [
-      "congruent-vs-contrast-the-master-key"
+      {
+        "slug": "congruent-vs-contrast-the-master-key",
+        "term": "Congruent vs. Contrast (The Master Key)"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -36361,7 +37192,10 @@
       }
     },
     "lexiconTerms": [
-      "creaming-foaming-and-cake-structure"
+      {
+        "slug": "creaming-foaming-and-cake-structure",
+        "term": "Creaming, Foaming & Cake Structure"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -36463,7 +37297,10 @@
       }
     },
     "lexiconTerms": [
-      "ricotta"
+      {
+        "slug": "ricotta",
+        "term": "Ricotta"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -36575,7 +37412,10 @@
       }
     },
     "lexiconTerms": [
-      "speck-alto-adige"
+      {
+        "slug": "speck-alto-adige",
+        "term": "Speck Alto Adige"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -36682,7 +37522,10 @@
       }
     },
     "lexiconTerms": [
-      "fryer-setups-and-oil-management"
+      {
+        "slug": "fryer-setups-and-oil-management",
+        "term": "Fryer Setups & Oil Management"
+      }
     ],
     "pantryItems": [
       "Milk",
@@ -36787,7 +37630,10 @@
       }
     },
     "lexiconTerms": [
-      "akkawi-and-nabulsi"
+      {
+        "slug": "akkawi-and-nabulsi",
+        "term": "Akkawi & Nabulsi"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -37079,7 +37925,10 @@
       }
     },
     "lexiconTerms": [
-      "brandy-cognac-armagnac-calvados-and-pisco"
+      {
+        "slug": "brandy-cognac-armagnac-calvados-and-pisco",
+        "term": "Brandy: Cognac, Armagnac, Calvados & Pisco"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -37298,9 +38147,18 @@
       }
     },
     "lexiconTerms": [
-      "malbec",
-      "malbec-zinfandel-and-the-new-world-crowd-pleasers",
-      "short-ribs-english-vs-flanken"
+      {
+        "slug": "malbec",
+        "term": "Malbec"
+      },
+      {
+        "slug": "malbec-zinfandel-and-the-new-world-crowd-pleasers",
+        "term": "Malbec, Zinfandel & the New World Crowd-Pleasers"
+      },
+      {
+        "slug": "short-ribs-english-vs-flanken",
+        "term": "Short Ribs (English vs. Flanken)"
+      }
     ],
     "pantryItems": [
       "Beef"
@@ -37401,7 +38259,10 @@
       }
     },
     "lexiconTerms": [
-      "provolone-dolce-and-piccante"
+      {
+        "slug": "provolone-dolce-and-piccante",
+        "term": "Provolone (Dolce & Piccante)"
+      }
     ],
     "pantryItems": [
       "Chiles",
@@ -37504,7 +38365,10 @@
       }
     },
     "lexiconTerms": [
-      "chorizo-spanish-vs-mexican"
+      {
+        "slug": "chorizo-spanish-vs-mexican",
+        "term": "Chorizo: Spanish vs. Mexican"
+      }
     ],
     "pantryItems": [
       "Sausage",
@@ -37603,7 +38467,10 @@
       }
     },
     "lexiconTerms": [
-      "deep-and-shallow-frying"
+      {
+        "slug": "deep-and-shallow-frying",
+        "term": "Deep & Shallow Frying"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -37820,7 +38687,10 @@
       }
     },
     "lexiconTerms": [
-      "searing-and-pan-technique"
+      {
+        "slug": "searing-and-pan-technique",
+        "term": "Searing & Pan Technique"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -37925,7 +38795,10 @@
       }
     },
     "lexiconTerms": [
-      "tuna-grades-akami-chutoro-otoro"
+      {
+        "slug": "tuna-grades-akami-chutoro-otoro",
+        "term": "Tuna Grades (Akami, Chūtoro, Ōtoro)"
+      }
     ],
     "pantryItems": [
       "Tuna",
@@ -38226,8 +39099,14 @@
       }
     },
     "lexiconTerms": [
-      "the-concept-and-business-plan",
-      "legal-entity-and-partnership-agreements"
+      {
+        "slug": "the-concept-and-business-plan",
+        "term": "The Concept & Business Plan"
+      },
+      {
+        "slug": "legal-entity-and-partnership-agreements",
+        "term": "Legal Entity & Partnership Agreements"
+      }
     ],
     "pantryItems": [
       "Squash/Pumpkin"
@@ -38317,7 +39196,10 @@
       }
     },
     "lexiconTerms": [
-      "sashimi-grade-and-ikejime"
+      {
+        "slug": "sashimi-grade-and-ikejime",
+        "term": "Sashimi-Grade & Ikejime"
+      }
     ],
     "pantryItems": [
       "Tuna",
@@ -38415,8 +39297,14 @@
       }
     },
     "lexiconTerms": [
-      "pork-shoulder-butt-vs-picnic",
-      "floral-notes-and-perfume-dosage"
+      {
+        "slug": "pork-shoulder-butt-vs-picnic",
+        "term": "Pork Shoulder: Butt vs. Picnic"
+      },
+      {
+        "slug": "floral-notes-and-perfume-dosage",
+        "term": "Floral Notes & Perfume Dosage"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -39429,8 +40317,14 @@
       }
     },
     "lexiconTerms": [
-      "sheet-pans-racks-and-hotel-pans",
-      "oysters-and-the-r-month-rule"
+      {
+        "slug": "sheet-pans-racks-and-hotel-pans",
+        "term": "Sheet Pans, Racks & Hotel Pans"
+      },
+      {
+        "slug": "oysters-and-the-r-month-rule",
+        "term": "Oysters & the R-Month Rule"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -39542,7 +40436,10 @@
       }
     },
     "lexiconTerms": [
-      "beer-at-the-table-and-the-carbonation-advantage"
+      {
+        "slug": "beer-at-the-table-and-the-carbonation-advantage",
+        "term": "Beer at the Table & the Carbonation Advantage"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -39746,7 +40643,10 @@
       }
     },
     "lexiconTerms": [
-      "tasting-and-seasoning-like-a-chef"
+      {
+        "slug": "tasting-and-seasoning-like-a-chef",
+        "term": "Tasting & Seasoning Like a Chef"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -39968,9 +40868,18 @@
       }
     },
     "lexiconTerms": [
-      "mirepoix-trinity-sofrito-and-friends",
-      "prime-cost-the-number-that-runs-the-building",
-      "ham-and-hock"
+      {
+        "slug": "mirepoix-trinity-sofrito-and-friends",
+        "term": "Mirepoix, Trinity, Sofrito & Friends"
+      },
+      {
+        "slug": "prime-cost-the-number-that-runs-the-building",
+        "term": "Prime Cost: The Number That Runs the Building"
+      },
+      {
+        "slug": "ham-and-hock",
+        "term": "Ham & Hock"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -40091,7 +41000,10 @@
       }
     },
     "lexiconTerms": [
-      "resting-carryover-and-the-thermometer"
+      {
+        "slug": "resting-carryover-and-the-thermometer",
+        "term": "Resting, Carryover & the Thermometer"
+      }
     ],
     "pantryItems": [
       "Butter",
@@ -40292,8 +41204,14 @@
       }
     },
     "lexiconTerms": [
-      "absinthe-and-the-rinse",
-      "the-old-fashioned-template"
+      {
+        "slug": "absinthe-and-the-rinse",
+        "term": "Absinthe & the Rinse"
+      },
+      {
+        "slug": "the-old-fashioned-template",
+        "term": "The Old Fashioned Template"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -40505,7 +41423,10 @@
       }
     },
     "lexiconTerms": [
-      "grills-and-smokers-kettle-kamado-offset-pellet"
+      {
+        "slug": "grills-and-smokers-kettle-kamado-offset-pellet",
+        "term": "Grills & Smokers: Kettle, Kamado, Offset, Pellet"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -40733,9 +41654,18 @@
       }
     },
     "lexiconTerms": [
-      "aged-gouda",
-      "american-country-ham",
-      "vermouth-and-the-fortified-aperitif-shelf"
+      {
+        "slug": "aged-gouda",
+        "term": "Aged Gouda"
+      },
+      {
+        "slug": "american-country-ham",
+        "term": "American Country Ham"
+      },
+      {
+        "slug": "vermouth-and-the-fortified-aperitif-shelf",
+        "term": "Vermouth & the Fortified Aperitif Shelf"
+      }
     ],
     "pantryItems": [
       "Ham/Prosciutto",
@@ -40942,7 +41872,10 @@
       }
     },
     "lexiconTerms": [
-      "dehydrator-ferment-station-and-the-pantry-machines"
+      {
+        "slug": "dehydrator-ferment-station-and-the-pantry-machines",
+        "term": "Dehydrator, Ferment Station & the Pantry Machines"
+      }
     ],
     "pantryItems": [
       "Bacon",
@@ -41251,7 +42184,10 @@
       }
     },
     "lexiconTerms": [
-      "building-flavor-in-layers"
+      {
+        "slug": "building-flavor-in-layers",
+        "term": "Building Flavor in Layers"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -41353,8 +42289,14 @@
       }
     },
     "lexiconTerms": [
-      "bourbon-rye-and-american-whiskey",
-      "the-liqueur-shelf-orange-maraschino-chartreuse-and-friends"
+      {
+        "slug": "bourbon-rye-and-american-whiskey",
+        "term": "Bourbon, Rye & American Whiskey"
+      },
+      {
+        "slug": "the-liqueur-shelf-orange-maraschino-chartreuse-and-friends",
+        "term": "The Liqueur Shelf: Orange, Maraschino, Chartreuse & Friends"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -41452,8 +42394,14 @@
       }
     },
     "lexiconTerms": [
-      "service-styles-and-front-of-house-fluency",
-      "queso-oaxaca-quesillo"
+      {
+        "slug": "service-styles-and-front-of-house-fluency",
+        "term": "Service Styles & Front-of-House Fluency"
+      },
+      {
+        "slug": "queso-oaxaca-quesillo",
+        "term": "Queso Oaxaca (Quesillo)"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -41569,7 +42517,10 @@
       }
     },
     "lexiconTerms": [
-      "comal-plancha-and-griddles"
+      {
+        "slug": "comal-plancha-and-griddles",
+        "term": "Comal, Plancha & Griddles"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -41788,8 +42739,14 @@
       }
     },
     "lexiconTerms": [
-      "whole-muscle-vs-fermented-salami-the-two-churches",
-      "grills-and-smokers-kettle-kamado-offset-pellet"
+      {
+        "slug": "whole-muscle-vs-fermented-salami-the-two-churches",
+        "term": "Whole-Muscle vs. Fermented Salami: The Two Churches"
+      },
+      {
+        "slug": "grills-and-smokers-kettle-kamado-offset-pellet",
+        "term": "Grills & Smokers: Kettle, Kamado, Offset, Pellet"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -41998,7 +42955,10 @@
       }
     },
     "lexiconTerms": [
-      "insurance-the-policy-stack"
+      {
+        "slug": "insurance-the-policy-stack",
+        "term": "Insurance: The Policy Stack"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -42199,8 +43159,14 @@
       }
     },
     "lexiconTerms": [
-      "pate-and-terrine",
-      "pate-en-croute"
+      {
+        "slug": "pate-and-terrine",
+        "term": "Pâté & Terrine"
+      },
+      {
+        "slug": "pate-en-croute",
+        "term": "Pâté en Croûte"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -42300,9 +43266,18 @@
       }
     },
     "lexiconTerms": [
-      "akkawi-and-nabulsi",
-      "labneh",
-      "zaatar-the-blend"
+      {
+        "slug": "akkawi-and-nabulsi",
+        "term": "Akkawi & Nabulsi"
+      },
+      {
+        "slug": "labneh",
+        "term": "Labneh"
+      },
+      {
+        "slug": "zaatar-the-blend",
+        "term": "Za'atar (The Blend)"
+      }
     ],
     "pantryItems": [
       "Tomato",
@@ -42519,7 +43494,10 @@
       }
     },
     "lexiconTerms": [
-      "cephalopods-squid-octopus-cuttlefish"
+      {
+        "slug": "cephalopods-squid-octopus-cuttlefish",
+        "term": "Cephalopods (Squid, Octopus, Cuttlefish)"
+      }
     ],
     "pantryItems": [
       "Squid/Octopus",
@@ -42617,7 +43595,10 @@
       }
     },
     "lexiconTerms": [
-      "chaat-masala"
+      {
+        "slug": "chaat-masala",
+        "term": "Chaat Masala"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -42832,8 +43813,14 @@
       }
     },
     "lexiconTerms": [
-      "resting-carryover-and-the-thermometer",
-      "queso-oaxaca-quesillo"
+      {
+        "slug": "resting-carryover-and-the-thermometer",
+        "term": "Resting, Carryover & the Thermometer"
+      },
+      {
+        "slug": "queso-oaxaca-quesillo",
+        "term": "Queso Oaxaca (Quesillo)"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -43066,7 +44053,10 @@
       }
     },
     "lexiconTerms": [
-      "fryer-setups-and-oil-management"
+      {
+        "slug": "fryer-setups-and-oil-management",
+        "term": "Fryer Setups & Oil Management"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -43373,9 +44363,18 @@
       }
     },
     "lexiconTerms": [
-      "carbon-steel-pans",
-      "steel-science-carbon-stainless-and-hrc",
-      "vermouth-and-the-fortified-aperitif-shelf"
+      {
+        "slug": "carbon-steel-pans",
+        "term": "Carbon Steel Pans"
+      },
+      {
+        "slug": "steel-science-carbon-stainless-and-hrc",
+        "term": "Steel Science: Carbon, Stainless & HRC"
+      },
+      {
+        "slug": "vermouth-and-the-fortified-aperitif-shelf",
+        "term": "Vermouth & the Fortified Aperitif Shelf"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -43483,8 +44482,14 @@
       }
     },
     "lexiconTerms": [
-      "sake-fundamentals-the-polishing-ladder",
-      "sake-service-and-pairing"
+      {
+        "slug": "sake-fundamentals-the-polishing-ladder",
+        "term": "Sake Fundamentals: The Polishing Ladder"
+      },
+      {
+        "slug": "sake-service-and-pairing",
+        "term": "Sake Service & Pairing"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -43589,7 +44594,10 @@
       }
     },
     "lexiconTerms": [
-      "tiki-and-the-rum-canon"
+      {
+        "slug": "tiki-and-the-rum-canon",
+        "term": "Tiki & the Rum Canon"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -44097,9 +45105,18 @@
       }
     },
     "lexiconTerms": [
-      "west-country-farmhouse-cheddar",
-      "stilton",
-      "aged-gouda"
+      {
+        "slug": "west-country-farmhouse-cheddar",
+        "term": "West Country Farmhouse Cheddar"
+      },
+      {
+        "slug": "stilton",
+        "term": "Stilton"
+      },
+      {
+        "slug": "aged-gouda",
+        "term": "Aged Gouda"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -44306,7 +45323,10 @@
       }
     },
     "lexiconTerms": [
-      "mango-the-monsoon-herald"
+      {
+        "slug": "mango-the-monsoon-herald",
+        "term": "Mango: The Monsoon Herald"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -44525,7 +45545,10 @@
       }
     },
     "lexiconTerms": [
-      "vermouth-and-the-fortified-aperitif-shelf"
+      {
+        "slug": "vermouth-and-the-fortified-aperitif-shelf",
+        "term": "Vermouth & the Fortified Aperitif Shelf"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -44890,8 +45913,14 @@
       }
     },
     "lexiconTerms": [
-      "shank-oxtail-and-cheek",
-      "mirepoix-trinity-sofrito-and-friends"
+      {
+        "slug": "shank-oxtail-and-cheek",
+        "term": "Shank, Oxtail & Cheek"
+      },
+      {
+        "slug": "mirepoix-trinity-sofrito-and-friends",
+        "term": "Mirepoix, Trinity, Sofrito & Friends"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -44995,7 +46024,10 @@
       }
     },
     "lexiconTerms": [
-      "feasibility-and-market-analysis"
+      {
+        "slug": "feasibility-and-market-analysis",
+        "term": "Feasibility & Market Analysis"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -45194,7 +46226,10 @@
       }
     },
     "lexiconTerms": [
-      "bay-leaf"
+      {
+        "slug": "bay-leaf",
+        "term": "Bay Leaf"
+      }
     ],
     "pantryItems": [
       "White fish",
@@ -45414,9 +46449,18 @@
       }
     },
     "lexiconTerms": [
-      "cardamom-green-and-black",
-      "nutmeg-and-mace",
-      "searing-and-pan-technique"
+      {
+        "slug": "cardamom-green-and-black",
+        "term": "Cardamom: Green & Black"
+      },
+      {
+        "slug": "nutmeg-and-mace",
+        "term": "Nutmeg & Mace"
+      },
+      {
+        "slug": "searing-and-pan-technique",
+        "term": "Searing & Pan Technique"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -45525,8 +46569,14 @@
       }
     },
     "lexiconTerms": [
-      "bivalves-oysters-clams-mussels-scallops",
-      "crab-vocabulary"
+      {
+        "slug": "bivalves-oysters-clams-mussels-scallops",
+        "term": "Bivalves (Oysters, Clams, Mussels, Scallops)"
+      },
+      {
+        "slug": "crab-vocabulary",
+        "term": "Crab Vocabulary"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -45644,8 +46694,14 @@
       }
     },
     "lexiconTerms": [
-      "rice-cooker-and-donabe-rice",
-      "ff-and-e-smallwares-and-opening-inventory"
+      {
+        "slug": "rice-cooker-and-donabe-rice",
+        "term": "Rice Cooker & Donabe Rice"
+      },
+      {
+        "slug": "ff-and-e-smallwares-and-opening-inventory",
+        "term": "FF&E, Smallwares & Opening Inventory"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -45892,8 +46948,14 @@
       }
     },
     "lexiconTerms": [
-      "pecorino-romano",
-      "guanciale-jowl-and-lardo"
+      {
+        "slug": "pecorino-romano",
+        "term": "Pecorino Romano"
+      },
+      {
+        "slug": "guanciale-jowl-and-lardo",
+        "term": "Guanciale, Jowl & Lardo"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -46003,7 +47065,10 @@
       }
     },
     "lexiconTerms": [
-      "sichuan-peppercorn-and-mala"
+      {
+        "slug": "sichuan-peppercorn-and-mala",
+        "term": "Sichuan Peppercorn & Málà"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -46121,8 +47186,14 @@
       }
     },
     "lexiconTerms": [
-      "shank-oxtail-and-cheek",
-      "ff-and-e-smallwares-and-opening-inventory"
+      {
+        "slug": "shank-oxtail-and-cheek",
+        "term": "Shank, Oxtail & Cheek"
+      },
+      {
+        "slug": "ff-and-e-smallwares-and-opening-inventory",
+        "term": "FF&E, Smallwares & Opening Inventory"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -46470,7 +47541,10 @@
       }
     },
     "lexiconTerms": [
-      "smoke-char-and-the-burnt-edge"
+      {
+        "slug": "smoke-char-and-the-burnt-edge",
+        "term": "Smoke, Char & the Burnt Edge"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -46688,7 +47762,10 @@
       }
     },
     "lexiconTerms": [
-      "shichimi-togarashi"
+      {
+        "slug": "shichimi-togarashi",
+        "term": "Shichimi Tōgarashi"
+      }
     ],
     "pantryItems": [
       "Tofu",
@@ -46910,7 +47987,10 @@
       }
     },
     "lexiconTerms": [
-      "roasting-baking-and-carryover"
+      {
+        "slug": "roasting-baking-and-carryover",
+        "term": "Roasting, Baking & Carryover"
+      }
     ],
     "pantryItems": [
       "Turkey",
@@ -47353,9 +48433,18 @@
       }
     },
     "lexiconTerms": [
-      "butchery-verbs-frenching-butterflying-tying",
-      "line-slang-86-in-the-weeds-and-family-meal",
-      "annatto-achiote"
+      {
+        "slug": "butchery-verbs-frenching-butterflying-tying",
+        "term": "Butchery Verbs: Frenching, Butterflying, Tying"
+      },
+      {
+        "slug": "line-slang-86-in-the-weeds-and-family-meal",
+        "term": "Line Slang: 86, In the Weeds & Family Meal"
+      },
+      {
+        "slug": "annatto-achiote",
+        "term": "Annatto (Achiote)"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -47469,7 +48558,10 @@
       }
     },
     "lexiconTerms": [
-      "schmaltz-and-rendering"
+      {
+        "slug": "schmaltz-and-rendering",
+        "term": "Schmaltz & Rendering"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -47579,7 +48671,10 @@
       }
     },
     "lexiconTerms": [
-      "brisket-point-vs-flat"
+      {
+        "slug": "brisket-point-vs-flat",
+        "term": "Brisket (Point vs. Flat)"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -47682,7 +48777,10 @@
       }
     },
     "lexiconTerms": [
-      "duck-prosciutto-magret-seche"
+      {
+        "slug": "duck-prosciutto-magret-seche",
+        "term": "Duck Prosciutto (Magret Séché)"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -48023,8 +49121,14 @@
       }
     },
     "lexiconTerms": [
-      "brisket-point-vs-flat",
-      "grills-and-smokers-kettle-kamado-offset-pellet"
+      {
+        "slug": "brisket-point-vs-flat",
+        "term": "Brisket (Point vs. Flat)"
+      },
+      {
+        "slug": "grills-and-smokers-kettle-kamado-offset-pellet",
+        "term": "Grills & Smokers: Kettle, Kamado, Offset, Pellet"
+      }
     ],
     "pantryItems": [
       "Beef"
@@ -48141,7 +49245,10 @@
       }
     },
     "lexiconTerms": [
-      "sake-fundamentals-the-polishing-ladder"
+      {
+        "slug": "sake-fundamentals-the-polishing-ladder",
+        "term": "Sake Fundamentals: The Polishing Ladder"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -48243,7 +49350,10 @@
       }
     },
     "lexiconTerms": [
-      "mandoline-and-the-slicing-machines"
+      {
+        "slug": "mandoline-and-the-slicing-machines",
+        "term": "Mandoline & the Slicing Machines"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -48594,7 +49704,10 @@
       }
     },
     "lexiconTerms": [
-      "sirloin-tri-tip-and-picanha"
+      {
+        "slug": "sirloin-tri-tip-and-picanha",
+        "term": "Sirloin, Tri-Tip & Picanha"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -48693,7 +49806,10 @@
       }
     },
     "lexiconTerms": [
-      "culture-and-the-owners-job"
+      {
+        "slug": "culture-and-the-owners-job",
+        "term": "Culture & the Owner's Job"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -48801,8 +49917,14 @@
       }
     },
     "lexiconTerms": [
-      "mascarpone",
-      "lamb-spring-hogget-and-mutton"
+      {
+        "slug": "mascarpone",
+        "term": "Mascarpone"
+      },
+      {
+        "slug": "lamb-spring-hogget-and-mutton",
+        "term": "Lamb: Spring, Hogget & Mutton"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -49210,8 +50332,14 @@
       }
     },
     "lexiconTerms": [
-      "crab-vocabulary",
-      "searing-and-pan-technique"
+      {
+        "slug": "crab-vocabulary",
+        "term": "Crab Vocabulary"
+      },
+      {
+        "slug": "searing-and-pan-technique",
+        "term": "Searing & Pan Technique"
+      }
     ],
     "pantryItems": [
       "Crab",
@@ -49319,8 +50447,14 @@
       }
     },
     "lexiconTerms": [
-      "reduction-nappe-and-mounting",
-      "tasso-and-cajun-andouille"
+      {
+        "slug": "reduction-nappe-and-mounting",
+        "term": "Reduction, Nappe & Mounting"
+      },
+      {
+        "slug": "tasso-and-cajun-andouille",
+        "term": "Tasso & Cajun Andouille"
+      }
     ],
     "pantryItems": [
       "Bacon",
@@ -49738,7 +50872,10 @@
       }
     },
     "lexiconTerms": [
-      "steaming-and-en-papillote"
+      {
+        "slug": "steaming-and-en-papillote",
+        "term": "Steaming & En Papillote"
+      }
     ],
     "pantryItems": [
       "White fish",
@@ -49964,7 +51101,10 @@
       }
     },
     "lexiconTerms": [
-      "brining-wet-dry-and-cures"
+      {
+        "slug": "brining-wet-dry-and-cures",
+        "term": "Brining: Wet, Dry & Cures"
+      }
     ],
     "pantryItems": [
       "White fish",
@@ -50459,7 +51599,10 @@
       }
     },
     "lexiconTerms": [
-      "pressure-and-slow-cooking"
+      {
+        "slug": "pressure-and-slow-cooking",
+        "term": "Pressure & Slow Cooking"
+      }
     ],
     "pantryItems": [
       "Salmon",
@@ -50566,7 +51709,10 @@
       }
     },
     "lexiconTerms": [
-      "fermentation-and-pickling"
+      {
+        "slug": "fermentation-and-pickling",
+        "term": "Fermentation & Pickling"
+      }
     ],
     "pantryItems": [
       "White fish",
@@ -50808,7 +51954,10 @@
       }
     },
     "lexiconTerms": [
-      "curry-leaf"
+      {
+        "slug": "curry-leaf",
+        "term": "Curry Leaf"
+      }
     ],
     "pantryItems": [
       "White fish",
@@ -51129,8 +52278,14 @@
       }
     },
     "lexiconTerms": [
-      "doneness-by-touch-sight-and-sound",
-      "boning-fillet-and-the-butchery-blades"
+      {
+        "slug": "doneness-by-touch-sight-and-sound",
+        "term": "Doneness by Touch, Sight & Sound"
+      },
+      {
+        "slug": "boning-fillet-and-the-butchery-blades",
+        "term": "Boning, Fillet & the Butchery Blades"
+      }
     ],
     "pantryItems": [
       "White fish",
@@ -51392,7 +52547,10 @@
       }
     },
     "lexiconTerms": [
-      "knife-cuts-the-classical-ladder"
+      {
+        "slug": "knife-cuts-the-classical-ladder",
+        "term": "Knife Cuts: The Classical Ladder"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -51501,8 +52659,14 @@
       }
     },
     "lexiconTerms": [
-      "ganache-bloom-and-chocolate-craft",
-      "pate-and-terrine"
+      {
+        "slug": "ganache-bloom-and-chocolate-craft",
+        "term": "Ganache, Bloom & Chocolate Craft"
+      },
+      {
+        "slug": "pate-and-terrine",
+        "term": "Pâté & Terrine"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -51641,9 +52805,18 @@
       }
     },
     "lexiconTerms": [
-      "microplane-graters-and-the-zest-doctrine",
-      "citrus-zest-juice-and-pith",
-      "meringues-french-swiss-italian"
+      {
+        "slug": "microplane-graters-and-the-zest-doctrine",
+        "term": "Microplane, Graters & the Zest Doctrine"
+      },
+      {
+        "slug": "citrus-zest-juice-and-pith",
+        "term": "Citrus: Zest, Juice & Pith"
+      },
+      {
+        "slug": "meringues-french-swiss-italian",
+        "term": "Meringues: French, Swiss, Italian"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -51892,8 +53065,14 @@
       }
     },
     "lexiconTerms": [
-      "frozen-dessert-machines-churners-and-pacojet",
-      "knife-care-and-the-cutting-board-question"
+      {
+        "slug": "frozen-dessert-machines-churners-and-pacojet",
+        "term": "Frozen Dessert Machines: Churners & Pacojet"
+      },
+      {
+        "slug": "knife-care-and-the-cutting-board-question",
+        "term": "Knife Care & the Cutting Board Question"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -52128,8 +53307,14 @@
       }
     },
     "lexiconTerms": [
-      "sous-vide-hardware-circulators-sealers-and-safety-kit",
-      "citrus-zest-juice-and-pith"
+      {
+        "slug": "sous-vide-hardware-circulators-sealers-and-safety-kit",
+        "term": "Sous Vide Hardware: Circulators, Sealers & Safety Kit"
+      },
+      {
+        "slug": "citrus-zest-juice-and-pith",
+        "term": "Citrus: Zest, Juice & Pith"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -52332,7 +53517,10 @@
       }
     },
     "lexiconTerms": [
-      "reduction-nappe-and-mounting"
+      {
+        "slug": "reduction-nappe-and-mounting",
+        "term": "Reduction, Nappe & Mounting"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -52434,7 +53622,10 @@
       }
     },
     "lexiconTerms": [
-      "malbec-zinfandel-and-the-new-world-crowd-pleasers"
+      {
+        "slug": "malbec-zinfandel-and-the-new-world-crowd-pleasers",
+        "term": "Malbec, Zinfandel & the New World Crowd-Pleasers"
+      }
     ],
     "pantryItems": [
       "Coconut",
@@ -52646,7 +53837,10 @@
       }
     },
     "lexiconTerms": [
-      "knife-care-and-the-cutting-board-question"
+      {
+        "slug": "knife-care-and-the-cutting-board-question",
+        "term": "Knife Care & the Cutting Board Question"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -52845,7 +54039,10 @@
       }
     },
     "lexiconTerms": [
-      "building-the-home-and-starting-bar"
+      {
+        "slug": "building-the-home-and-starting-bar",
+        "term": "Building the Home & Starting Bar"
+      }
     ],
     "pantryItems": [
       "Rice",
@@ -52945,7 +54142,10 @@
       }
     },
     "lexiconTerms": [
-      "creaming-foaming-and-cake-structure"
+      {
+        "slug": "creaming-foaming-and-cake-structure",
+        "term": "Creaming, Foaming & Cake Structure"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -53142,7 +54342,10 @@
       }
     },
     "lexiconTerms": [
-      "the-opening-soft-launch-and-the-first-90-days"
+      {
+        "slug": "the-opening-soft-launch-and-the-first-90-days",
+        "term": "The Opening: Soft Launch & the First 90 Days"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -53461,7 +54664,10 @@
       }
     },
     "lexiconTerms": [
-      "espresso-and-the-coffee-program"
+      {
+        "slug": "espresso-and-the-coffee-program",
+        "term": "Espresso & the Coffee Program"
+      }
     ],
     "pantryItems": [
       "Chocolate/Cocoa",
@@ -54258,7 +55464,10 @@
       }
     },
     "lexiconTerms": [
-      "mustard-seeds-yellow-brown-and-black"
+      {
+        "slug": "mustard-seeds-yellow-brown-and-black",
+        "term": "Mustard Seeds: Yellow, Brown & Black"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -55006,7 +56215,10 @@
       }
     },
     "lexiconTerms": [
-      "braising-and-stewing"
+      {
+        "slug": "braising-and-stewing",
+        "term": "Braising & Stewing"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -55632,7 +56844,10 @@
       }
     },
     "lexiconTerms": [
-      "juniper"
+      {
+        "slug": "juniper",
+        "term": "Juniper"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -56027,7 +57242,10 @@
       }
     },
     "lexiconTerms": [
-      "mandoline-and-the-slicing-machines"
+      {
+        "slug": "mandoline-and-the-slicing-machines",
+        "term": "Mandoline & the Slicing Machines"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -57108,7 +58326,10 @@
       }
     },
     "lexiconTerms": [
-      "baste-arroser-and-glaze"
+      {
+        "slug": "baste-arroser-and-glaze",
+        "term": "Baste, Arroser & Glaze"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -59601,7 +60822,10 @@
       }
     },
     "lexiconTerms": [
-      "pecorino-romano"
+      {
+        "slug": "pecorino-romano",
+        "term": "Pecorino Romano"
+      }
     ],
     "pantryItems": [
       "Mussels/Clams",
@@ -62989,7 +64213,10 @@
       }
     },
     "lexiconTerms": [
-      "ribeye-prime-rib"
+      {
+        "slug": "ribeye-prime-rib",
+        "term": "Ribeye / Prime Rib"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -63454,7 +64681,10 @@
       }
     },
     "lexiconTerms": [
-      "provolone-dolce-and-piccante"
+      {
+        "slug": "provolone-dolce-and-piccante",
+        "term": "Provolone (Dolce & Piccante)"
+      }
     ],
     "pantryItems": [
       "Tomato",
@@ -63717,7 +64947,10 @@
       }
     },
     "lexiconTerms": [
-      "allspice"
+      {
+        "slug": "allspice",
+        "term": "Allspice"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -64088,7 +65321,10 @@
       }
     },
     "lexiconTerms": [
-      "mango-the-monsoon-herald"
+      {
+        "slug": "mango-the-monsoon-herald",
+        "term": "Mango: The Monsoon Herald"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -65560,7 +66796,10 @@
       }
     },
     "lexiconTerms": [
-      "crab-vocabulary"
+      {
+        "slug": "crab-vocabulary",
+        "term": "Crab Vocabulary"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -68461,7 +69700,10 @@
       }
     },
     "lexiconTerms": [
-      "sieves-chinois-tamis-and-food-mill"
+      {
+        "slug": "sieves-chinois-tamis-and-food-mill",
+        "term": "Sieves: Chinois, Tamis & Food Mill"
+      }
     ],
     "pantryItems": [
       "Apple",
@@ -77253,8 +78495,14 @@
       }
     },
     "lexiconTerms": [
-      "mutton-and-hogget",
-      "lamb-spring-hogget-and-mutton"
+      {
+        "slug": "mutton-and-hogget",
+        "term": "Mutton & Hogget"
+      },
+      {
+        "slug": "lamb-spring-hogget-and-mutton",
+        "term": "Lamb: Spring, Hogget & Mutton"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -77505,7 +78753,10 @@
       }
     },
     "lexiconTerms": [
-      "blenders-immersion-high-speed-and-food-processor"
+      {
+        "slug": "blenders-immersion-high-speed-and-food-processor",
+        "term": "Blenders: Immersion, High-Speed & Food Processor"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -79002,7 +80253,10 @@
       }
     },
     "lexiconTerms": [
-      "carbon-steel-pans"
+      {
+        "slug": "carbon-steel-pans",
+        "term": "Carbon Steel Pans"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -79947,8 +81201,14 @@
       }
     },
     "lexiconTerms": [
-      "tenderloin-filet-mignon",
-      "pork-loin-vs-tenderloin"
+      {
+        "slug": "tenderloin-filet-mignon",
+        "term": "Tenderloin / Filet Mignon"
+      },
+      {
+        "slug": "pork-loin-vs-tenderloin",
+        "term": "Pork Loin vs. Tenderloin"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -80925,7 +82185,10 @@
       }
     },
     "lexiconTerms": [
-      "the-essential-smallwares"
+      {
+        "slug": "the-essential-smallwares",
+        "term": "The Essential Smallwares"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -83414,7 +84677,10 @@
       }
     },
     "lexiconTerms": [
-      "ganache-bloom-and-chocolate-craft"
+      {
+        "slug": "ganache-bloom-and-chocolate-craft",
+        "term": "Ganache, Bloom & Chocolate Craft"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -85016,7 +86282,10 @@
       }
     },
     "lexiconTerms": [
-      "wild-mushrooms-the-forest-calendar"
+      {
+        "slug": "wild-mushrooms-the-forest-calendar",
+        "term": "Wild Mushrooms: The Forest Calendar"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -85375,7 +86644,10 @@
       }
     },
     "lexiconTerms": [
-      "allspice"
+      {
+        "slug": "allspice",
+        "term": "Allspice"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -85634,8 +86906,14 @@
       }
     },
     "lexiconTerms": [
-      "tenderloin-filet-mignon",
-      "pork-loin-vs-tenderloin"
+      {
+        "slug": "tenderloin-filet-mignon",
+        "term": "Tenderloin / Filet Mignon"
+      },
+      {
+        "slug": "pork-loin-vs-tenderloin",
+        "term": "Pork Loin vs. Tenderloin"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -86200,7 +87478,10 @@
       }
     },
     "lexiconTerms": [
-      "the-essential-smallwares"
+      {
+        "slug": "the-essential-smallwares",
+        "term": "The Essential Smallwares"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -86782,8 +88063,14 @@
       }
     },
     "lexiconTerms": [
-      "the-liqueur-shelf-orange-maraschino-chartreuse-and-friends",
-      "the-old-fashioned-template"
+      {
+        "slug": "the-liqueur-shelf-orange-maraschino-chartreuse-and-friends",
+        "term": "The Liqueur Shelf: Orange, Maraschino, Chartreuse & Friends"
+      },
+      {
+        "slug": "the-old-fashioned-template",
+        "term": "The Old Fashioned Template"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -86915,7 +88202,10 @@
       }
     },
     "lexiconTerms": [
-      "wild-mushrooms-the-forest-calendar"
+      {
+        "slug": "wild-mushrooms-the-forest-calendar",
+        "term": "Wild Mushrooms: The Forest Calendar"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -87989,7 +89279,10 @@
       }
     },
     "lexiconTerms": [
-      "brisket-point-vs-flat"
+      {
+        "slug": "brisket-point-vs-flat",
+        "term": "Brisket (Point vs. Flat)"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -88093,7 +89386,10 @@
       }
     },
     "lexiconTerms": [
-      "ribs-baby-back-vs-spare-vs-st-louis"
+      {
+        "slug": "ribs-baby-back-vs-spare-vs-st-louis",
+        "term": "Ribs: Baby Back vs. Spare vs. St. Louis"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -94306,7 +95602,10 @@
       }
     },
     "lexiconTerms": [
-      "monterey-jack-and-pepper-jack"
+      {
+        "slug": "monterey-jack-and-pepper-jack",
+        "term": "Monterey Jack & Pepper Jack"
+      }
     ],
     "pantryItems": [
       "Bacon",
@@ -94881,7 +96180,10 @@
       }
     },
     "lexiconTerms": [
-      "casings-molds-and-the-curing-chamber"
+      {
+        "slug": "casings-molds-and-the-curing-chamber",
+        "term": "Casings, Molds & the Curing Chamber"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -97191,7 +98493,10 @@
       }
     },
     "lexiconTerms": [
-      "tequila-and-mezcal"
+      {
+        "slug": "tequila-and-mezcal",
+        "term": "Tequila & Mezcal"
+      }
     ],
     "pantryItems": [
       "Lime",
@@ -97416,7 +98721,10 @@
       }
     },
     "lexiconTerms": [
-      "chile-fluency-fresh-and-dried"
+      {
+        "slug": "chile-fluency-fresh-and-dried",
+        "term": "Chile Fluency (Fresh & Dried)"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -97534,7 +98842,10 @@
       }
     },
     "lexiconTerms": [
-      "queso-fresco"
+      {
+        "slug": "queso-fresco",
+        "term": "Queso Fresco"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -101821,7 +103132,10 @@
       }
     },
     "lexiconTerms": [
-      "ribeye-prime-rib"
+      {
+        "slug": "ribeye-prime-rib",
+        "term": "Ribeye / Prime Rib"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -103552,7 +104866,10 @@
       }
     },
     "lexiconTerms": [
-      "deglaze-and-fond"
+      {
+        "slug": "deglaze-and-fond",
+        "term": "Deglaze & Fond"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -104027,7 +105344,10 @@
       }
     },
     "lexiconTerms": [
-      "jamon-iberico-and-the-bellota-grades"
+      {
+        "slug": "jamon-iberico-and-the-bellota-grades",
+        "term": "Jamón Ibérico (and the Bellota Grades)"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -105037,7 +106357,10 @@
       }
     },
     "lexiconTerms": [
-      "roquefort"
+      {
+        "slug": "roquefort",
+        "term": "Roquefort"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -105277,7 +106600,10 @@
       }
     },
     "lexiconTerms": [
-      "roe-caviar-ikura-tobiko-bottarga"
+      {
+        "slug": "roe-caviar-ikura-tobiko-bottarga",
+        "term": "Roe: Caviar, Ikura, Tobiko, Bottarga"
+      }
     ],
     "pantryItems": [
       "Crab",
@@ -106626,9 +107952,18 @@
       }
     },
     "lexiconTerms": [
-      "short-ribs-english-vs-flanken",
-      "pinot-noir",
-      "pinot-noir-and-burgundy"
+      {
+        "slug": "short-ribs-english-vs-flanken",
+        "term": "Short Ribs (English vs. Flanken)"
+      },
+      {
+        "slug": "pinot-noir",
+        "term": "Pinot Noir"
+      },
+      {
+        "slug": "pinot-noir-and-burgundy",
+        "term": "Pinot Noir & Burgundy"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -107220,7 +108555,10 @@
       }
     },
     "lexiconTerms": [
-      "chicories-and-bitter-greens"
+      {
+        "slug": "chicories-and-bitter-greens",
+        "term": "Chicories & Bitter Greens"
+      }
     ],
     "pantryItems": [
       "Cheese (any)",
@@ -109409,7 +110747,10 @@
       }
     },
     "lexiconTerms": [
-      "juniper"
+      {
+        "slug": "juniper",
+        "term": "Juniper"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -109936,9 +111277,18 @@
       }
     },
     "lexiconTerms": [
-      "ice-and-dilution-the-invisible-ingredient",
-      "ferment-funk-the-taste-of-time",
-      "sous-vide-hardware-circulators-sealers-and-safety-kit"
+      {
+        "slug": "ice-and-dilution-the-invisible-ingredient",
+        "term": "Ice & Dilution: The Invisible Ingredient"
+      },
+      {
+        "slug": "ferment-funk-the-taste-of-time",
+        "term": "Ferment Funk: The Taste of Time"
+      },
+      {
+        "slug": "sous-vide-hardware-circulators-sealers-and-safety-kit",
+        "term": "Sous Vide Hardware: Circulators, Sealers & Safety Kit"
+      }
     ],
     "pantryItems": [
       "Cabbage"
@@ -110259,7 +111609,10 @@
       }
     },
     "lexiconTerms": [
-      "deglaze-and-fond"
+      {
+        "slug": "deglaze-and-fond",
+        "term": "Deglaze & Fond"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -111170,7 +112523,10 @@
       }
     },
     "lexiconTerms": [
-      "sieves-chinois-tamis-and-food-mill"
+      {
+        "slug": "sieves-chinois-tamis-and-food-mill",
+        "term": "Sieves: Chinois, Tamis & Food Mill"
+      }
     ],
     "pantryItems": [
       "Corn",
@@ -112149,7 +113505,10 @@
       }
     },
     "lexiconTerms": [
-      "sichuan-peppercorn-and-mala"
+      {
+        "slug": "sichuan-peppercorn-and-mala",
+        "term": "Sichuan Peppercorn & Málà"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -112900,7 +114259,10 @@
       }
     },
     "lexiconTerms": [
-      "parmigiano-reggiano"
+      {
+        "slug": "parmigiano-reggiano",
+        "term": "Parmigiano-Reggiano"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -113178,7 +114540,10 @@
       }
     },
     "lexiconTerms": [
-      "acidity-the-backbone"
+      {
+        "slug": "acidity-the-backbone",
+        "term": "Acidity (The Backbone)"
+      }
     ],
     "pantryItems": [
       "Vinegar"
@@ -113719,8 +115084,14 @@
       }
     },
     "lexiconTerms": [
-      "fermentation-and-pickling",
-      "tannin"
+      {
+        "slug": "fermentation-and-pickling",
+        "term": "Fermentation & Pickling"
+      },
+      {
+        "slug": "tannin",
+        "term": "Tannin"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -113872,7 +115243,10 @@
       }
     },
     "lexiconTerms": [
-      "port-madeira-and-the-fortified-sweets"
+      {
+        "slug": "port-madeira-and-the-fortified-sweets",
+        "term": "Port, Madeira & the Fortified Sweets"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -114423,8 +115797,14 @@
       }
     },
     "lexiconTerms": [
-      "boudin-noir-and-boudin-blanc",
-      "quatre-epices-and-the-european-baking-blends"
+      {
+        "slug": "boudin-noir-and-boudin-blanc",
+        "term": "Boudin Noir & Boudin Blanc"
+      },
+      {
+        "slug": "quatre-epices-and-the-european-baking-blends",
+        "term": "Quatre Épices & the European Baking Blends"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -115169,7 +116549,10 @@
       }
     },
     "lexiconTerms": [
-      "acidity-the-backbone"
+      {
+        "slug": "acidity-the-backbone",
+        "term": "Acidity (The Backbone)"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -115460,7 +116843,10 @@
       }
     },
     "lexiconTerms": [
-      "tannin"
+      {
+        "slug": "tannin",
+        "term": "Tannin"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -115599,7 +116985,10 @@
       }
     },
     "lexiconTerms": [
-      "acidity-the-backbone"
+      {
+        "slug": "acidity-the-backbone",
+        "term": "Acidity (The Backbone)"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -115730,8 +117119,14 @@
       }
     },
     "lexiconTerms": [
-      "asafoetida-hing",
-      "stone-fruit-in-high-summer"
+      {
+        "slug": "asafoetida-hing",
+        "term": "Asafoetida (Hing)"
+      },
+      {
+        "slug": "stone-fruit-in-high-summer",
+        "term": "Stone Fruit in High Summer"
+      }
     ],
     "pantryItems": [
       "Chiles",
@@ -115981,8 +117376,14 @@
       }
     },
     "lexiconTerms": [
-      "coriander-seed",
-      "cardamom-green-and-black"
+      {
+        "slug": "coriander-seed",
+        "term": "Coriander Seed"
+      },
+      {
+        "slug": "cardamom-green-and-black",
+        "term": "Cardamom: Green & Black"
+      }
     ],
     "pantryItems": [
       "Ham/Prosciutto",
@@ -116247,7 +117648,10 @@
       }
     },
     "lexiconTerms": [
-      "duck-prosciutto-magret-seche"
+      {
+        "slug": "duck-prosciutto-magret-seche",
+        "term": "Duck Prosciutto (Magret Séché)"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -117193,8 +118597,14 @@
       }
     },
     "lexiconTerms": [
-      "star-anise",
-      "fennel-anise-and-the-licorice-line"
+      {
+        "slug": "star-anise",
+        "term": "Star Anise"
+      },
+      {
+        "slug": "fennel-anise-and-the-licorice-line",
+        "term": "Fennel, Anise & the Licorice Line"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -117332,7 +118742,10 @@
       }
     },
     "lexiconTerms": [
-      "consomme-and-clarification"
+      {
+        "slug": "consomme-and-clarification",
+        "term": "Consommé & Clarification"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -117670,7 +119083,10 @@
       }
     },
     "lexiconTerms": [
-      "smoked-fish-hot-vs-cold"
+      {
+        "slug": "smoked-fish-hot-vs-cold",
+        "term": "Smoked Fish: Hot vs. Cold"
+      }
     ],
     "pantryItems": [
       "Salmon",
@@ -117771,7 +119187,10 @@
       }
     },
     "lexiconTerms": [
-      "duck-prosciutto-magret-seche"
+      {
+        "slug": "duck-prosciutto-magret-seche",
+        "term": "Duck Prosciutto (Magret Séché)"
+      }
     ],
     "pantryItems": [
       "Duck",
@@ -117905,7 +119324,10 @@
       }
     },
     "lexiconTerms": [
-      "bresaola-della-valtellina"
+      {
+        "slug": "bresaola-della-valtellina",
+        "term": "Bresaola della Valtellina"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -118031,7 +119453,10 @@
       }
     },
     "lexiconTerms": [
-      "guanciale-jowl-and-lardo"
+      {
+        "slug": "guanciale-jowl-and-lardo",
+        "term": "Guanciale, Jowl & Lardo"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -118131,7 +119556,10 @@
       }
     },
     "lexiconTerms": [
-      "building-the-home-and-starting-bar"
+      {
+        "slug": "building-the-home-and-starting-bar",
+        "term": "Building the Home & Starting Bar"
+      }
     ],
     "pantryItems": [
       "White fish",
@@ -118248,7 +119676,10 @@
       }
     },
     "lexiconTerms": [
-      "confit"
+      {
+        "slug": "confit",
+        "term": "Confit"
+      }
     ],
     "pantryItems": [
       "Duck",
@@ -118380,7 +119811,10 @@
       }
     },
     "lexiconTerms": [
-      "quatre-epices-and-the-european-baking-blends"
+      {
+        "slug": "quatre-epices-and-the-european-baking-blends",
+        "term": "Quatre Épices & the European Baking Blends"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -118727,8 +120161,14 @@
       }
     },
     "lexiconTerms": [
-      "saffron",
-      "parmigiano-reggiano"
+      {
+        "slug": "saffron",
+        "term": "Saffron"
+      },
+      {
+        "slug": "parmigiano-reggiano",
+        "term": "Parmigiano-Reggiano"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -119045,8 +120485,14 @@
       }
     },
     "lexiconTerms": [
-      "cardamom-green-and-black",
-      "garam-masala"
+      {
+        "slug": "cardamom-green-and-black",
+        "term": "Cardamom: Green & Black"
+      },
+      {
+        "slug": "garam-masala",
+        "term": "Garam Masala"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -119989,7 +121435,10 @@
       }
     },
     "lexiconTerms": [
-      "asafoetida-hing"
+      {
+        "slug": "asafoetida-hing",
+        "term": "Asafoetida (Hing)"
+      }
     ],
     "pantryItems": [
       "Ginger",
@@ -120123,7 +121572,10 @@
       }
     },
     "lexiconTerms": [
-      "coriander-seed"
+      {
+        "slug": "coriander-seed",
+        "term": "Coriander Seed"
+      }
     ],
     "pantryItems": [
       "Chiles",
@@ -120927,8 +122379,14 @@
       }
     },
     "lexiconTerms": [
-      "scallops-dry-vs-wet-u-10",
-      "baste-arroser-and-glaze"
+      {
+        "slug": "scallops-dry-vs-wet-u-10",
+        "term": "Scallops: Dry vs. Wet, U-10"
+      },
+      {
+        "slug": "baste-arroser-and-glaze",
+        "term": "Baste, Arroser & Glaze"
+      }
     ],
     "pantryItems": [
       "Scallops",
@@ -121288,7 +122746,10 @@
       }
     },
     "lexiconTerms": [
-      "consomme-and-clarification"
+      {
+        "slug": "consomme-and-clarification",
+        "term": "Consommé & Clarification"
+      }
     ],
     "pantryItems": [
       "Tomato",
@@ -121416,7 +122877,10 @@
       }
     },
     "lexiconTerms": [
-      "mustard-seeds-yellow-brown-and-black"
+      {
+        "slug": "mustard-seeds-yellow-brown-and-black",
+        "term": "Mustard Seeds: Yellow, Brown & Black"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -121996,7 +123460,10 @@
       }
     },
     "lexiconTerms": [
-      "panch-phoron"
+      {
+        "slug": "panch-phoron",
+        "term": "Panch Phoron"
+      }
     ],
     "pantryItems": [
       "Ginger",
@@ -122759,9 +124226,18 @@
       }
     },
     "lexiconTerms": [
-      "lobster-new-shell-vs-hard-shell",
-      "mussels-scallops-and-the-cold-water-winter",
-      "scallops-dry-vs-wet-u-10"
+      {
+        "slug": "lobster-new-shell-vs-hard-shell",
+        "term": "Lobster: New Shell vs Hard Shell"
+      },
+      {
+        "slug": "mussels-scallops-and-the-cold-water-winter",
+        "term": "Mussels, Scallops & the Cold-Water Winter"
+      },
+      {
+        "slug": "scallops-dry-vs-wet-u-10",
+        "term": "Scallops: Dry vs. Wet, U-10"
+      }
     ],
     "pantryItems": [
       "Scallops",
@@ -123059,9 +124535,18 @@
       }
     },
     "lexiconTerms": [
-      "pork-belly",
-      "whole-muscle-vs-fermented-salami-the-two-churches",
-      "chinese-five-spice"
+      {
+        "slug": "pork-belly",
+        "term": "Pork Belly"
+      },
+      {
+        "slug": "whole-muscle-vs-fermented-salami-the-two-churches",
+        "term": "Whole-Muscle vs. Fermented Salami: The Two Churches"
+      },
+      {
+        "slug": "chinese-five-spice",
+        "term": "Chinese Five-Spice"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -123225,7 +124710,10 @@
       }
     },
     "lexiconTerms": [
-      "the-wok"
+      {
+        "slug": "the-wok",
+        "term": "The Wok"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -123537,7 +125025,10 @@
       }
     },
     "lexiconTerms": [
-      "lap-cheong-and-the-chinese-cured-pantry"
+      {
+        "slug": "lap-cheong-and-the-chinese-cured-pantry",
+        "term": "Lap Cheong & the Chinese Cured Pantry"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -123866,7 +125357,10 @@
       }
     },
     "lexiconTerms": [
-      "lap-cheong-and-the-chinese-cured-pantry"
+      {
+        "slug": "lap-cheong-and-the-chinese-cured-pantry",
+        "term": "Lap Cheong & the Chinese Cured Pantry"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -124230,9 +125724,18 @@
       }
     },
     "lexiconTerms": [
-      "prosciutto-di-parma-and-san-daniele",
-      "mortadella-bologna",
-      "parmigiano-reggiano"
+      {
+        "slug": "prosciutto-di-parma-and-san-daniele",
+        "term": "Prosciutto di Parma & San Daniele"
+      },
+      {
+        "slug": "mortadella-bologna",
+        "term": "Mortadella Bologna"
+      },
+      {
+        "slug": "parmigiano-reggiano",
+        "term": "Parmigiano-Reggiano"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -124514,7 +126017,10 @@
       }
     },
     "lexiconTerms": [
-      "pancetta-tesa-and-arrotolata"
+      {
+        "slug": "pancetta-tesa-and-arrotolata",
+        "term": "Pancetta (Tesa & Arrotolata)"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -124643,7 +126149,10 @@
       }
     },
     "lexiconTerms": [
-      "prosciutto-di-parma-and-san-daniele"
+      {
+        "slug": "prosciutto-di-parma-and-san-daniele",
+        "term": "Prosciutto di Parma & San Daniele"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -124896,7 +126405,10 @@
       }
     },
     "lexiconTerms": [
-      "ricotta"
+      {
+        "slug": "ricotta",
+        "term": "Ricotta"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -125033,7 +126545,10 @@
       }
     },
     "lexiconTerms": [
-      "pancetta-tesa-and-arrotolata"
+      {
+        "slug": "pancetta-tesa-and-arrotolata",
+        "term": "Pancetta (Tesa & Arrotolata)"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -125149,7 +126664,10 @@
       }
     },
     "lexiconTerms": [
-      "prosciutto-di-parma-and-san-daniele"
+      {
+        "slug": "prosciutto-di-parma-and-san-daniele",
+        "term": "Prosciutto di Parma & San Daniele"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -125632,7 +127150,10 @@
       }
     },
     "lexiconTerms": [
-      "braising-and-stewing"
+      {
+        "slug": "braising-and-stewing",
+        "term": "Braising & Stewing"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -125786,7 +127307,10 @@
       }
     },
     "lexiconTerms": [
-      "doneness-by-touch-sight-and-sound"
+      {
+        "slug": "doneness-by-touch-sight-and-sound",
+        "term": "Doneness by Touch, Sight & Sound"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -126053,7 +127577,10 @@
       }
     },
     "lexiconTerms": [
-      "peas-favas-and-the-green-spring"
+      {
+        "slug": "peas-favas-and-the-green-spring",
+        "term": "Peas, Favas & the Green Spring"
+      }
     ],
     "pantryItems": [
       "Tomato",
@@ -126183,7 +127710,10 @@
       }
     },
     "lexiconTerms": [
-      "berries-the-late-spring-sprint"
+      {
+        "slug": "berries-the-late-spring-sprint",
+        "term": "Berries: The Late-Spring Sprint"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -126320,7 +127850,10 @@
       }
     },
     "lexiconTerms": [
-      "velveting-and-marinades"
+      {
+        "slug": "velveting-and-marinades",
+        "term": "Velveting & Marinades"
+      }
     ],
     "pantryItems": [
       "Shrimp",
@@ -126674,7 +128207,10 @@
       }
     },
     "lexiconTerms": [
-      "stainless-clad-tri-ply"
+      {
+        "slug": "stainless-clad-tri-ply",
+        "term": "Stainless Clad (Tri-Ply)"
+      }
     ],
     "pantryItems": [
       "Dried fruit",
@@ -127639,7 +129175,10 @@
       }
     },
     "lexiconTerms": [
-      "toasting-nuts-seeds-grains-and-coconut"
+      {
+        "slug": "toasting-nuts-seeds-grains-and-coconut",
+        "term": "Toasting: Nuts, Seeds, Grains & Coconut"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -128585,8 +130124,14 @@
       }
     },
     "lexiconTerms": [
-      "star-anise",
-      "pork-belly"
+      {
+        "slug": "star-anise",
+        "term": "Star Anise"
+      },
+      {
+        "slug": "pork-belly",
+        "term": "Pork Belly"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -128914,7 +130459,10 @@
       }
     },
     "lexiconTerms": [
-      "star-anise"
+      {
+        "slug": "star-anise",
+        "term": "Star Anise"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -129250,8 +130798,14 @@
       }
     },
     "lexiconTerms": [
-      "fennel-anise-and-the-licorice-line",
-      "braising-and-stewing"
+      {
+        "slug": "fennel-anise-and-the-licorice-line",
+        "term": "Fennel, Anise & the Licorice Line"
+      },
+      {
+        "slug": "braising-and-stewing",
+        "term": "Braising & Stewing"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -129540,7 +131094,10 @@
       }
     },
     "lexiconTerms": [
-      "chinese-five-spice"
+      {
+        "slug": "chinese-five-spice",
+        "term": "Chinese Five-Spice"
+      }
     ],
     "pantryItems": [
       "Flour",
@@ -130324,7 +131881,10 @@
       }
     },
     "lexiconTerms": [
-      "schmaltz-and-rendering"
+      {
+        "slug": "schmaltz-and-rendering",
+        "term": "Schmaltz & Rendering"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -130451,7 +132011,10 @@
       }
     },
     "lexiconTerms": [
-      "chile-fluency-fresh-and-dried"
+      {
+        "slug": "chile-fluency-fresh-and-dried",
+        "term": "Chile Fluency (Fresh & Dried)"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -130615,7 +132178,10 @@
       }
     },
     "lexiconTerms": [
-      "queso-fresco"
+      {
+        "slug": "queso-fresco",
+        "term": "Queso Fresco"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -131566,7 +133132,10 @@
       }
     },
     "lexiconTerms": [
-      "the-souring-spices-amchur-loomi-anardana-and-tamarind"
+      {
+        "slug": "the-souring-spices-amchur-loomi-anardana-and-tamarind",
+        "term": "The Souring Spices: Amchur, Loomi, Anardana & Tamarind"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -132118,8 +133687,14 @@
       }
     },
     "lexiconTerms": [
-      "chaat-masala",
-      "paneer"
+      {
+        "slug": "chaat-masala",
+        "term": "Chaat Masala"
+      },
+      {
+        "slug": "paneer",
+        "term": "Paneer"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -132273,7 +133848,10 @@
       }
     },
     "lexiconTerms": [
-      "mutton-and-hogget"
+      {
+        "slug": "mutton-and-hogget",
+        "term": "Mutton & Hogget"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -132447,7 +134025,10 @@
       }
     },
     "lexiconTerms": [
-      "the-opening-soft-launch-and-the-first-90-days"
+      {
+        "slug": "the-opening-soft-launch-and-the-first-90-days",
+        "term": "The Opening: Soft Launch & the First 90 Days"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -132566,7 +134147,10 @@
       }
     },
     "lexiconTerms": [
-      "toasting-nuts-seeds-grains-and-coconut"
+      {
+        "slug": "toasting-nuts-seeds-grains-and-coconut",
+        "term": "Toasting: Nuts, Seeds, Grains & Coconut"
+      }
     ],
     "pantryItems": [
       "Milk",
@@ -132885,7 +134469,10 @@
       }
     },
     "lexiconTerms": [
-      "velveting-and-marinades"
+      {
+        "slug": "velveting-and-marinades",
+        "term": "Velveting & Marinades"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -133636,7 +135223,10 @@
       }
     },
     "lexiconTerms": [
-      "cleavers-chinese-chef-vs-bone"
+      {
+        "slug": "cleavers-chinese-chef-vs-bone",
+        "term": "Cleavers: Chinese Chef vs. Bone"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -135925,7 +137515,10 @@
       }
     },
     "lexiconTerms": [
-      "asafoetida-hing"
+      {
+        "slug": "asafoetida-hing",
+        "term": "Asafoetida (Hing)"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -136347,7 +137940,10 @@
       }
     },
     "lexiconTerms": [
-      "toasting-nuts-seeds-grains-and-coconut"
+      {
+        "slug": "toasting-nuts-seeds-grains-and-coconut",
+        "term": "Toasting: Nuts, Seeds, Grains & Coconut"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -136509,7 +138105,10 @@
       }
     },
     "lexiconTerms": [
-      "fennel-anise-and-the-licorice-line"
+      {
+        "slug": "fennel-anise-and-the-licorice-line",
+        "term": "Fennel, Anise & the Licorice Line"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -137059,7 +138658,10 @@
       }
     },
     "lexiconTerms": [
-      "annatto-achiote"
+      {
+        "slug": "annatto-achiote",
+        "term": "Annatto (Achiote)"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -141098,7 +142700,10 @@
       }
     },
     "lexiconTerms": [
-      "berbere-and-mitmita"
+      {
+        "slug": "berbere-and-mitmita",
+        "term": "Berbere & Mitmita"
+      }
     ],
     "pantryItems": [
       "Flour",
@@ -141238,7 +142843,10 @@
       }
     },
     "lexiconTerms": [
-      "fenugreek-seed-leaf-and-blue"
+      {
+        "slug": "fenugreek-seed-leaf-and-blue",
+        "term": "Fenugreek: Seed, Leaf & Blue"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -142326,7 +143934,10 @@
       }
     },
     "lexiconTerms": [
-      "sulguni"
+      {
+        "slug": "sulguni",
+        "term": "Sulguni"
+      }
     ],
     "pantryItems": [
       "Cheese (any)",
@@ -142847,7 +144458,10 @@
       }
     },
     "lexiconTerms": [
-      "fenugreek-seed-leaf-and-blue"
+      {
+        "slug": "fenugreek-seed-leaf-and-blue",
+        "term": "Fenugreek: Seed, Leaf & Blue"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -143113,7 +144727,10 @@
       }
     },
     "lexiconTerms": [
-      "fenugreek-seed-leaf-and-blue"
+      {
+        "slug": "fenugreek-seed-leaf-and-blue",
+        "term": "Fenugreek: Seed, Leaf & Blue"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -143263,7 +144880,10 @@
       }
     },
     "lexiconTerms": [
-      "peppers-and-eggplant-the-nightshade-late-summer"
+      {
+        "slug": "peppers-and-eggplant-the-nightshade-late-summer",
+        "term": "Peppers & Eggplant: The Nightshade Late Summer"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -143797,7 +145417,10 @@
       }
     },
     "lexiconTerms": [
-      "tempering-eggs-and-chocolate"
+      {
+        "slug": "tempering-eggs-and-chocolate",
+        "term": "Tempering (Eggs & Chocolate)"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -144808,7 +146431,10 @@
       }
     },
     "lexiconTerms": [
-      "zaatar-the-blend"
+      {
+        "slug": "zaatar-the-blend",
+        "term": "Za'atar (The Blend)"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -144918,8 +146544,14 @@
       }
     },
     "lexiconTerms": [
-      "labneh",
-      "zaatar-the-blend"
+      {
+        "slug": "labneh",
+        "term": "Labneh"
+      },
+      {
+        "slug": "zaatar-the-blend",
+        "term": "Za'atar (The Blend)"
+      }
     ],
     "pantryItems": [
       "Thyme",
@@ -145965,8 +147597,14 @@
       }
     },
     "lexiconTerms": [
-      "the-floral-pantry-rose-orange-blossom-and-mahleb",
-      "akkawi-and-nabulsi"
+      {
+        "slug": "the-floral-pantry-rose-orange-blossom-and-mahleb",
+        "term": "The Floral Pantry: Rose, Orange Blossom & Mahleb"
+      },
+      {
+        "slug": "akkawi-and-nabulsi",
+        "term": "Akkawi & Nabulsi"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -147435,7 +149073,10 @@
       }
     },
     "lexiconTerms": [
-      "sashimi-grade-and-ikejime"
+      {
+        "slug": "sashimi-grade-and-ikejime",
+        "term": "Sashimi-Grade & Ikejime"
+      }
     ],
     "pantryItems": [
       "White fish",
@@ -147577,7 +149218,10 @@
       }
     },
     "lexiconTerms": [
-      "queso-fresco"
+      {
+        "slug": "queso-fresco",
+        "term": "Queso Fresco"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -149406,7 +151050,10 @@
       }
     },
     "lexiconTerms": [
-      "mortar-and-pestle-molcajete-suribachi-granite"
+      {
+        "slug": "mortar-and-pestle-molcajete-suribachi-granite",
+        "term": "Mortar & Pestle: Molcajete, Suribachi, Granite"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -150031,8 +151678,14 @@
       }
     },
     "lexiconTerms": [
-      "emulsions",
-      "stainless-clad-tri-ply"
+      {
+        "slug": "emulsions",
+        "term": "Emulsions"
+      },
+      {
+        "slug": "stainless-clad-tri-ply",
+        "term": "Stainless Clad (Tri-Ply)"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -150165,7 +151818,10 @@
       }
     },
     "lexiconTerms": [
-      "emulsions"
+      {
+        "slug": "emulsions",
+        "term": "Emulsions"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -150295,8 +151951,14 @@
       }
     },
     "lexiconTerms": [
-      "strainers-hawthorne-julep-and-the-double-strain",
-      "emulsions"
+      {
+        "slug": "strainers-hawthorne-julep-and-the-double-strain",
+        "term": "Strainers: Hawthorne, Julep & the Double Strain"
+      },
+      {
+        "slug": "emulsions",
+        "term": "Emulsions"
+      }
     ],
     "pantryItems": [
       "Shallot",
@@ -150524,9 +152186,18 @@
       }
     },
     "lexiconTerms": [
-      "sweat-vs-saute-vs-sear",
-      "steel-science-carbon-stainless-and-hrc",
-      "carbon-steel-pans"
+      {
+        "slug": "sweat-vs-saute-vs-sear",
+        "term": "Sweat vs. Sauté vs. Sear"
+      },
+      {
+        "slug": "steel-science-carbon-stainless-and-hrc",
+        "term": "Steel Science: Carbon, Stainless & HRC"
+      },
+      {
+        "slug": "carbon-steel-pans",
+        "term": "Carbon Steel Pans"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -151045,7 +152716,10 @@
       }
     },
     "lexiconTerms": [
-      "sweat-vs-saute-vs-sear"
+      {
+        "slug": "sweat-vs-saute-vs-sear",
+        "term": "Sweat vs. Sauté vs. Sear"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -151759,8 +153433,14 @@
       }
     },
     "lexiconTerms": [
-      "pink-salt-nitrite-and-nitrate-the-science-straight",
-      "quatre-epices-and-the-european-baking-blends"
+      {
+        "slug": "pink-salt-nitrite-and-nitrate-the-science-straight",
+        "term": "Pink Salt, Nitrite & Nitrate (The Science, Straight)"
+      },
+      {
+        "slug": "quatre-epices-and-the-european-baking-blends",
+        "term": "Quatre Épices & the European Baking Blends"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -151920,7 +153600,10 @@
       }
     },
     "lexiconTerms": [
-      "port-madeira-and-the-fortified-sweets"
+      {
+        "slug": "port-madeira-and-the-fortified-sweets",
+        "term": "Port, Madeira & the Fortified Sweets"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -152161,7 +153844,10 @@
       }
     },
     "lexiconTerms": [
-      "round-fish-vs-flat-fish"
+      {
+        "slug": "round-fish-vs-flat-fish",
+        "term": "Round Fish vs. Flat Fish"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -152743,7 +154429,10 @@
       }
     },
     "lexiconTerms": [
-      "ricotta"
+      {
+        "slug": "ricotta",
+        "term": "Ricotta"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -153946,7 +155635,10 @@
       }
     },
     "lexiconTerms": [
-      "meringues-french-swiss-italian"
+      {
+        "slug": "meringues-french-swiss-italian",
+        "term": "Meringues: French, Swiss, Italian"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -154262,7 +155954,10 @@
       }
     },
     "lexiconTerms": [
-      "vanilla"
+      {
+        "slug": "vanilla",
+        "term": "Vanilla"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -156465,8 +158160,14 @@
       }
     },
     "lexiconTerms": [
-      "fillet-steak-loin-and-collar",
-      "reverse-sear-and-the-gray-band"
+      {
+        "slug": "fillet-steak-loin-and-collar",
+        "term": "Fillet, Steak, Loin & Collar"
+      },
+      {
+        "slug": "reverse-sear-and-the-gray-band",
+        "term": "Reverse Sear & the Gray Band"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -157475,7 +159176,10 @@
       }
     },
     "lexiconTerms": [
-      "clove"
+      {
+        "slug": "clove",
+        "term": "Clove"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -158025,8 +159729,14 @@
       }
     },
     "lexiconTerms": [
-      "apples-and-pears-the-autumn-keepers",
-      "clove"
+      {
+        "slug": "apples-and-pears-the-autumn-keepers",
+        "term": "Apples & Pears: The Autumn Keepers"
+      },
+      {
+        "slug": "clove",
+        "term": "Clove"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -159700,7 +161410,10 @@
       }
     },
     "lexiconTerms": [
-      "flank-skirt-and-hanger"
+      {
+        "slug": "flank-skirt-and-hanger",
+        "term": "Flank, Skirt & Hanger"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -160876,8 +162589,14 @@
       }
     },
     "lexiconTerms": [
-      "dukkah",
-      "coriander-seed"
+      {
+        "slug": "dukkah",
+        "term": "Dukkah"
+      },
+      {
+        "slug": "coriander-seed",
+        "term": "Coriander Seed"
+      }
     ],
     "pantryItems": [
       "Mint",
@@ -166689,7 +168408,10 @@
       }
     },
     "lexiconTerms": [
-      "cinnamon-vs-cassia"
+      {
+        "slug": "cinnamon-vs-cassia",
+        "term": "Cinnamon vs. Cassia"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -167503,8 +169225,14 @@
       }
     },
     "lexiconTerms": [
-      "riesling",
-      "juniper"
+      {
+        "slug": "riesling",
+        "term": "Riesling"
+      },
+      {
+        "slug": "juniper",
+        "term": "Juniper"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -167788,7 +169516,10 @@
       }
     },
     "lexiconTerms": [
-      "riesling"
+      {
+        "slug": "riesling",
+        "term": "Riesling"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -167942,7 +169673,10 @@
       }
     },
     "lexiconTerms": [
-      "riesling"
+      {
+        "slug": "riesling",
+        "term": "Riesling"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -168745,9 +170479,18 @@
       }
     },
     "lexiconTerms": [
-      "munster",
-      "cumin",
-      "head-cheese-and-the-aspic-arts"
+      {
+        "slug": "munster",
+        "term": "Munster"
+      },
+      {
+        "slug": "cumin",
+        "term": "Cumin"
+      },
+      {
+        "slug": "head-cheese-and-the-aspic-arts",
+        "term": "Head Cheese & the Aspic Arts"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -168867,8 +170610,14 @@
       }
     },
     "lexiconTerms": [
-      "jamon-serrano",
-      "jamon-iberico-and-the-bellota-grades"
+      {
+        "slug": "jamon-serrano",
+        "term": "Jamón Serrano"
+      },
+      {
+        "slug": "jamon-iberico-and-the-bellota-grades",
+        "term": "Jamón Ibérico (and the Bellota Grades)"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -169755,7 +171504,10 @@
       }
     },
     "lexiconTerms": [
-      "bay-leaf"
+      {
+        "slug": "bay-leaf",
+        "term": "Bay Leaf"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -169900,7 +171652,10 @@
       }
     },
     "lexiconTerms": [
-      "jamon-serrano"
+      {
+        "slug": "jamon-serrano",
+        "term": "Jamón Serrano"
+      }
     ],
     "pantryItems": [
       "Sausage",
@@ -171206,7 +172961,10 @@
       }
     },
     "lexiconTerms": [
-      "idiazabal"
+      {
+        "slug": "idiazabal",
+        "term": "Idiazábal"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -171310,7 +173068,10 @@
       }
     },
     "lexiconTerms": [
-      "bay-leaf"
+      {
+        "slug": "bay-leaf",
+        "term": "Bay Leaf"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -171428,7 +173189,10 @@
       }
     },
     "lexiconTerms": [
-      "mortar-and-pestle-molcajete-suribachi-granite"
+      {
+        "slug": "mortar-and-pestle-molcajete-suribachi-granite",
+        "term": "Mortar & Pestle: Molcajete, Suribachi, Granite"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -171538,7 +173302,10 @@
       }
     },
     "lexiconTerms": [
-      "mortar-and-pestle-molcajete-suribachi-granite"
+      {
+        "slug": "mortar-and-pestle-molcajete-suribachi-granite",
+        "term": "Mortar & Pestle: Molcajete, Suribachi, Granite"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -172690,7 +174457,10 @@
       }
     },
     "lexiconTerms": [
-      "shichimi-togarashi"
+      {
+        "slug": "shichimi-togarashi",
+        "term": "Shichimi Tōgarashi"
+      }
     ],
     "pantryItems": [
       "Squid/Octopus",
@@ -172960,7 +174730,10 @@
       }
     },
     "lexiconTerms": [
-      "shichimi-togarashi"
+      {
+        "slug": "shichimi-togarashi",
+        "term": "Shichimi Tōgarashi"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -173346,7 +175119,10 @@
       }
     },
     "lexiconTerms": [
-      "umami-and-the-glutamate-pantry"
+      {
+        "slug": "umami-and-the-glutamate-pantry",
+        "term": "Umami & The Glutamate Pantry"
+      }
     ],
     "pantryItems": [
       "Noodles",
@@ -173622,7 +175398,10 @@
       }
     },
     "lexiconTerms": [
-      "oak-malolactic-and-lees"
+      {
+        "slug": "oak-malolactic-and-lees",
+        "term": "Oak, Malolactic & Lees"
+      }
     ],
     "pantryItems": [
       "Salmon",
@@ -174291,7 +176070,10 @@
       }
     },
     "lexiconTerms": [
-      "sake-service-and-pairing"
+      {
+        "slug": "sake-service-and-pairing",
+        "term": "Sake Service & Pairing"
+      }
     ],
     "pantryItems": [
       "Eggplant",
@@ -175335,7 +177117,10 @@
       }
     },
     "lexiconTerms": [
-      "saucisson-sec"
+      {
+        "slug": "saucisson-sec",
+        "term": "Saucisson Sec"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -175765,9 +177550,18 @@
       }
     },
     "lexiconTerms": [
-      "poach-simmer-boil",
-      "pinot-noir-and-burgundy",
-      "pinot-noir"
+      {
+        "slug": "poach-simmer-boil",
+        "term": "Poach, Simmer, Boil"
+      },
+      {
+        "slug": "pinot-noir-and-burgundy",
+        "term": "Pinot Noir & Burgundy"
+      },
+      {
+        "slug": "pinot-noir",
+        "term": "Pinot Noir"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -176517,8 +178311,14 @@
       }
     },
     "lexiconTerms": [
-      "gamay-beaujolais",
-      "poach-simmer-boil"
+      {
+        "slug": "gamay-beaujolais",
+        "term": "Gamay (Beaujolais)"
+      },
+      {
+        "slug": "poach-simmer-boil",
+        "term": "Poach, Simmer, Boil"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -176925,7 +178725,10 @@
       }
     },
     "lexiconTerms": [
-      "ribs-baby-back-vs-spare-vs-st-louis"
+      {
+        "slug": "ribs-baby-back-vs-spare-vs-st-louis",
+        "term": "Ribs: Baby Back vs. Spare vs. St. Louis"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -177990,7 +179793,10 @@
       }
     },
     "lexiconTerms": [
-      "crab-seasons-around-the-world"
+      {
+        "slug": "crab-seasons-around-the-world",
+        "term": "Crab Seasons Around the World"
+      }
     ],
     "pantryItems": [
       "Crab",
@@ -179415,7 +181221,10 @@
       }
     },
     "lexiconTerms": [
-      "jambon-de-bayonne-and-french-whole-muscle-hams"
+      {
+        "slug": "jambon-de-bayonne-and-french-whole-muscle-hams",
+        "term": "Jambon de Bayonne & French Whole-Muscle Hams"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -179682,7 +181491,10 @@
       }
     },
     "lexiconTerms": [
-      "mussels-scallops-and-the-cold-water-winter"
+      {
+        "slug": "mussels-scallops-and-the-cold-water-winter",
+        "term": "Mussels, Scallops & the Cold-Water Winter"
+      }
     ],
     "pantryItems": [
       "Mussels/Clams",
@@ -179892,7 +181704,10 @@
       }
     },
     "lexiconTerms": [
-      "foie-gras-torchon-mi-cuit-and-ethics-of-service"
+      {
+        "slug": "foie-gras-torchon-mi-cuit-and-ethics-of-service",
+        "term": "Foie Gras: Torchon, Mi-Cuit & Ethics of Service"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -180163,8 +181978,14 @@
       }
     },
     "lexiconTerms": [
-      "confit",
-      "jambon-de-bayonne-and-french-whole-muscle-hams"
+      {
+        "slug": "confit",
+        "term": "Confit"
+      },
+      {
+        "slug": "jambon-de-bayonne-and-french-whole-muscle-hams",
+        "term": "Jambon de Bayonne & French Whole-Muscle Hams"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -183313,7 +185134,10 @@
       }
     },
     "lexiconTerms": [
-      "squash-summers-water-winters-starch"
+      {
+        "slug": "squash-summers-water-winters-starch",
+        "term": "Squash: Summer's Water, Winter's Starch"
+      }
     ],
     "pantryItems": [
       "Onion",
@@ -183450,7 +185274,10 @@
       }
     },
     "lexiconTerms": [
-      "bivalves-oysters-clams-mussels-scallops"
+      {
+        "slug": "bivalves-oysters-clams-mussels-scallops",
+        "term": "Bivalves (Oysters, Clams, Mussels, Scallops)"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -183942,7 +185769,10 @@
       }
     },
     "lexiconTerms": [
-      "squash-summers-water-winters-starch"
+      {
+        "slug": "squash-summers-water-winters-starch",
+        "term": "Squash: Summer's Water, Winter's Starch"
+      }
     ],
     "pantryItems": [
       "Squash/Pumpkin",
@@ -185681,7 +187511,10 @@
       }
     },
     "lexiconTerms": [
-      "smoked-fish-hot-vs-cold"
+      {
+        "slug": "smoked-fish-hot-vs-cold",
+        "term": "Smoked Fish: Hot vs. Cold"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -186287,7 +188120,10 @@
       }
     },
     "lexiconTerms": [
-      "poach-simmer-boil"
+      {
+        "slug": "poach-simmer-boil",
+        "term": "Poach, Simmer, Boil"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -186875,7 +188711,10 @@
       }
     },
     "lexiconTerms": [
-      "proofing-oven-spring-and-the-crumb"
+      {
+        "slug": "proofing-oven-spring-and-the-crumb",
+        "term": "Proofing, Oven Spring & the Crumb"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -190217,7 +192056,10 @@
       }
     },
     "lexiconTerms": [
-      "squash-summers-water-winters-starch"
+      {
+        "slug": "squash-summers-water-winters-starch",
+        "term": "Squash: Summer's Water, Winter's Starch"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -193775,8 +195617,14 @@
       }
     },
     "lexiconTerms": [
-      "smoked-fish-hot-vs-cold",
-      "stainless-clad-tri-ply"
+      {
+        "slug": "smoked-fish-hot-vs-cold",
+        "term": "Smoked Fish: Hot vs. Cold"
+      },
+      {
+        "slug": "stainless-clad-tri-ply",
+        "term": "Stainless Clad (Tri-Ply)"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -194352,7 +196200,10 @@
       }
     },
     "lexiconTerms": [
-      "brunost-gjetost"
+      {
+        "slug": "brunost-gjetost",
+        "term": "Brunost (Gjetost)"
+      }
     ],
     "pantryItems": [
       "Milk",
@@ -199813,7 +201664,10 @@
       }
     },
     "lexiconTerms": [
-      "peppers-and-eggplant-the-nightshade-late-summer"
+      {
+        "slug": "peppers-and-eggplant-the-nightshade-late-summer",
+        "term": "Peppers & Eggplant: The Nightshade Late Summer"
+      }
     ],
     "pantryItems": [
       "Pork",
@@ -203930,7 +205784,10 @@
       }
     },
     "lexiconTerms": [
-      "serrated-slicers-and-the-long-blades"
+      {
+        "slug": "serrated-slicers-and-the-long-blades",
+        "term": "Serrated, Slicers & the Long Blades"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -204207,7 +206064,10 @@
       }
     },
     "lexiconTerms": [
-      "flank-skirt-and-hanger"
+      {
+        "slug": "flank-skirt-and-hanger",
+        "term": "Flank, Skirt & Hanger"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -207472,7 +209332,10 @@
       }
     },
     "lexiconTerms": [
-      "the-floral-pantry-rose-orange-blossom-and-mahleb"
+      {
+        "slug": "the-floral-pantry-rose-orange-blossom-and-mahleb",
+        "term": "The Floral Pantry: Rose, Orange Blossom & Mahleb"
+      }
     ],
     "pantryItems": [
       "Lemon",
@@ -207610,7 +209473,10 @@
       }
     },
     "lexiconTerms": [
-      "the-floral-pantry-rose-orange-blossom-and-mahleb"
+      {
+        "slug": "the-floral-pantry-rose-orange-blossom-and-mahleb",
+        "term": "The Floral Pantry: Rose, Orange Blossom & Mahleb"
+      }
     ],
     "pantryItems": [
       "Orange",
@@ -208844,7 +210710,10 @@
       }
     },
     "lexiconTerms": [
-      "bitters-the-bars-spice-rack"
+      {
+        "slug": "bitters-the-bars-spice-rack",
+        "term": "Bitters: The Bar's Spice Rack"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -209824,7 +211693,10 @@
       }
     },
     "lexiconTerms": [
-      "roasting-baking-and-carryover"
+      {
+        "slug": "roasting-baking-and-carryover",
+        "term": "Roasting, Baking & Carryover"
+      }
     ],
     "pantryItems": [
       "Eggs",
@@ -211856,7 +213728,10 @@
       }
     },
     "lexiconTerms": [
-      "pink-salt-nitrite-and-nitrate-the-science-straight"
+      {
+        "slug": "pink-salt-nitrite-and-nitrate-the-science-straight",
+        "term": "Pink Salt, Nitrite & Nitrate (The Science, Straight)"
+      }
     ],
     "pantryItems": [
       "Garlic",
@@ -215305,7 +217180,10 @@
       }
     },
     "lexiconTerms": [
-      "pate-en-croute"
+      {
+        "slug": "pate-en-croute",
+        "term": "Pâté en Croûte"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -215852,7 +217730,10 @@
       }
     },
     "lexiconTerms": [
-      "confit"
+      {
+        "slug": "confit",
+        "term": "Confit"
+      }
     ],
     "pantryItems": [
       "Chicken",
@@ -217147,8 +219028,14 @@
       }
     },
     "lexiconTerms": [
-      "lomo-embuchado",
-      "casings-molds-and-the-curing-chamber"
+      {
+        "slug": "lomo-embuchado",
+        "term": "Lomo Embuchado"
+      },
+      {
+        "slug": "casings-molds-and-the-curing-chamber",
+        "term": "Casings, Molds & the Curing Chamber"
+      }
     ],
     "pantryItems": [
       "Beef",
@@ -220019,7 +221906,10 @@
       }
     },
     "lexiconTerms": [
-      "peas-favas-and-the-green-spring"
+      {
+        "slug": "peas-favas-and-the-green-spring",
+        "term": "Peas, Favas & the Green Spring"
+      }
     ],
     "pantryItems": [
       "Lamb",
@@ -222382,7 +224272,10 @@
       }
     },
     "lexiconTerms": [
-      "stand-mixer-and-attachments"
+      {
+        "slug": "stand-mixer-and-attachments",
+        "term": "Stand Mixer & Attachments"
+      }
     ],
     "pantryItems": [
       "Dried fruit",

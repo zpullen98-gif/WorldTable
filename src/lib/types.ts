@@ -201,7 +201,14 @@ export interface RecipeDetail {
 	pairingId: number;
 	films: Films;
 	/** Slugs into the lexicon: scored at build time, not "first three hits". */
-	lexiconTerms: string[];
+	/**
+	 * The Lexicon terms this dish demonstrates, with the term as written.
+	 *
+	 * Slug AND name: lexicon.json is a dynamic import, so a page rendering
+	 * these cannot resolve a slug to a term without fetching the whole
+	 * lexicon. See buildCrosslinks' inverse.
+	 */
+	lexiconTerms: Array<{ slug: string; term: string }>;
 	/** Pantry item labels this recipe calls for. */
 	pantryItems: string[];
 	/**

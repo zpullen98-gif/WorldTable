@@ -262,6 +262,32 @@
 			{/if}
 
 			<!--
+				The words inside, which were computed and shipped and rendered
+				NOWHERE. buildCrosslinks has always emitted both directions;
+				build-data wrote the recipe->term half into all 1,844 records and no
+				view, component or test ever read it - 444 recipes carrying 631
+				references to 279 terms, the app's own thesis sitting in the payload.
+
+				It renders now rather than being deleted, for two reasons that are
+				both recent. The links only started WORKING in item 22: the lexicon
+				is ~150,000px tall on a phone, and a global smooth scroll stranded
+				every #term anchor thousands of pixels short of its heading, so
+				before scroll-padding existed this block would have sent a cook
+				nowhere. And item 21 put a justification rule on the forward
+				direction, which this half is inverted from - so these are links
+				that survived a hand-read rule, not the coincidences that used to
+				ride "bone" and "strip".
+			-->
+			{#if d.lexiconTerms.length}
+				<h2 class="sec">The words inside</h2>
+				<p class="skills words">
+					{#each d.lexiconTerms as t (t.slug)}
+						<a href="{base}/lexicon#{t.slug}">{t.term}</a>
+					{/each}
+				</p>
+			{/if}
+
+			<!--
 				ALWAYS rendered, never gated on the list being non-empty.
 				101 of 970 recipes have all seven flags false and used to show
 				nothing at all, hummus among them, over a line reading "150g good
@@ -666,6 +692,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 6px;
+	}
+	/* The words read as prose-adjacent, the skills as destinations: same chip,
+	   the turmeric edge marks which list is the Lexicon's. */
+	.words a {
+		border-color: color-mix(in oklab, var(--turmeric-deep) 40%, var(--line));
 	}
 	.skills a {
 		font-size: var(--t-micro);
