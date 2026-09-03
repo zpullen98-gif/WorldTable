@@ -259,6 +259,44 @@ test('the chapter rail sums to the grid, filtered and unfiltered', async ({ page
 });
 
 /**
+ * A collapsed group's total is the ONE number it shows, and a bare numeral
+ * gave it the accessible name "Europe 346" with no unit - the leaf rows were
+ * fixed for exactly this and the group header was not. Separately, the
+ * rail's second level (country/US super-region) was entirely aria-hidden, so
+ * a screen reader heard a flat run of state names under "United States" with
+ * no grouping at all. Only multi-chapter countries carry real grouping
+ * information (a single-chapter country's label just restates the chapter's
+ * own name), so only those are exposed - via a nested, labelled <ul>, not a
+ * bare un-hidden sibling <li>.
+ */
+test('a collapsed group announces a unit, and a multi-chapter country is a labelled group', async ({
+	page
+}) => {
+	await goto(page, '/recipes');
+
+	const europe = page.locator('.rghead', { hasText: 'Europe' });
+	await expect(europe).toHaveAccessibleName(/\d+ dishes?$/);
+
+	// Europe is open by default (CuisineRail.svelte's initial `open` state) -
+	// no click needed, and clicking it here would COLLAPSE it instead.
+	await expect(europe).toHaveAttribute('aria-expanded', 'true');
+	// France holds several chapters and is not self-naming the way a
+	// single-chapter country is, so it must be exposed as a labelled group.
+	const franceLabel = page.locator('span.cntry', { hasText: 'France' });
+	await expect(franceLabel).toHaveCount(1);
+	const franceLabelId = await franceLabel.getAttribute('id');
+	expect(franceLabelId).toBeTruthy();
+	const franceGroup = page.locator(`ul.cntrygrp[aria-labelledby="${franceLabelId}"]`);
+	await expect(franceGroup).toHaveCount(1);
+	expect(await franceGroup.locator('a').count()).toBeGreaterThan(1);
+
+	// A single-chapter country (Austria/Austrian) stays a plain hidden label:
+	// exposing it would announce a redundant subgroup of one.
+	const austria = page.locator('li.cntry[aria-hidden="true"]', { hasText: 'Austria' });
+	await expect(austria).toHaveCount(1);
+});
+
+/**
  * The active chapter's own group can be collapsed.
  *
  * The auto-open $effect both READ and WROTE the same `open` state, so it sat

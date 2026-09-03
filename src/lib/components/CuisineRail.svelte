@@ -180,32 +180,68 @@
 				>
 					<span>{g.group}</span>
 					<span class="gct">{g.total}</span>
+					<!-- Same reason as the leaf count's .sr below: this is the ONE
+					     number a collapsed group shows, and a bare numeral in the
+					     button's own name reads as "Europe 346" with no unit. -->
+					<span class="sr">{g.total === 1 ? 'dish' : 'dishes'}</span>
 					<span class="caret" aria-hidden="true">{isOpen ? '▾' : '▸'}</span>
 				</button>
 				{#if isOpen}
 					<ul class="sub">
 						{#each g.countries as ctry (ctry.country ?? '_')}
-							{#if ctry.country}
-								<li class="cntry" aria-hidden="true">{ctry.country}</li>
-							{/if}
-							{#each ctry.chapters as c (c.slug)}
-								{@const n = dishes(c)}
-								<li>
-									<a
-										href="{base}/chapter/{c.slug}{search}"
-										class:on={active === c.slug}
-										class:nested={ctry.country !== null}
-										class:empty={n === 0}
-									>
-										<span class="nm">{c.name}</span>
-										<!-- The count is the row's whole claim, so it carries the
-										     screen-reader wording rather than sitting as a bare
-										     numeral next to a chapter name. -->
-										<span class="ct">{n}</span>
-										<span class="sr">{n === 1 ? 'dish' : 'dishes'}</span>
-									</a>
+							{#if ctry.country && ctry.chapters.length > 1}
+								<!-- A country with more than one chapter is a real grouping a
+								     screen reader cannot reconstruct from the chapter names
+								     alone ("Alabama" says nothing about The South) - unlike the
+								     single-chapter case below, where the label is the chapter's
+								     own adjectival form ("Austria" / "Austrian") and hiding it
+								     loses nothing. Nested and labelled, not just un-hidden: a
+								     flat aria-hidden removal would still leave the chapters as
+								     unrelated siblings with no group at all. -->
+								{@const groupId = `cntry-${g.group}-${ctry.country}`}
+								<li class="cntry-group">
+									<span class="cntry" id={groupId}>{ctry.country}</span>
+									<ul class="cntrygrp" aria-labelledby={groupId}>
+										{#each ctry.chapters as c (c.slug)}
+											{@const n = dishes(c)}
+											<li>
+												<a
+													href="{base}/chapter/{c.slug}{search}"
+													class:on={active === c.slug}
+													class:nested={true}
+													class:empty={n === 0}
+												>
+													<span class="nm">{c.name}</span>
+													<span class="ct">{n}</span>
+													<span class="sr">{n === 1 ? 'dish' : 'dishes'}</span>
+												</a>
+											</li>
+										{/each}
+									</ul>
 								</li>
-							{/each}
+							{:else}
+								{#if ctry.country}
+									<li class="cntry" aria-hidden="true">{ctry.country}</li>
+								{/if}
+								{#each ctry.chapters as c (c.slug)}
+									{@const n = dishes(c)}
+									<li>
+										<a
+											href="{base}/chapter/{c.slug}{search}"
+											class:on={active === c.slug}
+											class:nested={ctry.country !== null}
+											class:empty={n === 0}
+										>
+											<span class="nm">{c.name}</span>
+											<!-- The count is the row's whole claim, so it carries the
+											     screen-reader wording rather than sitting as a bare
+											     numeral next to a chapter name. -->
+											<span class="ct">{n}</span>
+											<span class="sr">{n === 1 ? 'dish' : 'dishes'}</span>
+										</a>
+									</li>
+								{/each}
+							{/if}
 						{/each}
 					</ul>
 				{/if}
@@ -216,22 +252,48 @@
 
 <style>
 	/* The country line is a label, not a link: it names the second level
-	   without adding another thing to click in a rail that is already deep. */
+	   without adding another thing to click in a rail that is already deep.
+	   `display: block` because this class sits on an <li> in the flat,
+	   single-chapter case and a <span> labelling a nested <ul> in the
+	   grouped case - the span needs it to take the same padded row shape
+	   the li gets for free.
+	   color, not opacity: 0.55 on --ink measured 3.66:1 in day service,
+	   below the 4.5:1 AA floor for 11.5px text. --muted is a real token
+	   already at AA in both services (4.55:1 day, 5.70:1 night), not a
+	   diluted version of --ink that drifts with whatever it sits on. */
 	.cntry {
+		display: block;
 		padding: 0.55rem 0 0.15rem 0.1rem;
 		font-size: 0.72rem;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		opacity: 0.55;
+		color: var(--muted);
+	}
+	.cntry-group {
+		list-style: none;
+	}
+	/* A nested <ul> inside .sub needs its own reset: the browser default
+	   margin and list padding would indent a grouped country's chapters
+	   differently from the flat single-chapter siblings beside them. */
+	.cntrygrp {
+		margin: 0;
+		padding: 0;
 	}
 	.sub a.nested {
 		padding-left: 0.85rem;
 	}
+	/* color, not opacity: 0.5 inherited --turmeric-deep from .rghead and
+	   measured 3.15:1 night / 2.15:1 day, well under the 4.5:1 AA floor -
+	   worse than the .empty row this file already had a comment about.
+	   --muted matches the leaf count's own color, so a collapsed group's
+	   total and an open group's per-chapter counts read as the same kind
+	   of number. Explicit rather than inherited, so editing .rghead's
+	   color (the group NAME) can never drag this along with it again. */
 	.gct {
 		margin-left: auto;
 		padding-right: 0.5rem;
 		font-size: 0.72rem;
-		opacity: 0.5;
+		color: var(--muted);
 		font-variant-numeric: tabular-nums;
 	}
 	.rail {
@@ -307,14 +369,19 @@
 
 	/* A chapter the current filter empties. It stays a link, because jumping to
 	   a chapter is a reasonable way to start again, but it should not look like
-	   somewhere with food in it. Opacity only: the count beside it already says
-	   0, so this is reinforcement and never the sole carrier of the fact. */
-	.rail a.empty {
-		opacity: 0.42;
+	   somewhere with food in it. The count beside it already says 0, so this is
+	   reinforcement and never the sole carrier of the fact - which is also why
+	   it dims only .nm and leaves .ct alone: .ct's own color is already --muted,
+	   sitting at the 4.5:1 AA floor in day service with a 0.05 margin, and any
+	   opacity multiplier on top of that fails. A whole-link `opacity: 0.42` used
+	   to dim both together, measuring 1.72:1 on the count in day service - the
+	   one number this row exists to show. */
+	.rail a.empty .nm {
+		color: var(--muted);
 	}
-	.rail a.empty:hover,
-	.rail a.empty:focus-visible {
-		opacity: 1;
+	.rail a.empty:hover .nm,
+	.rail a.empty:focus-visible .nm {
+		color: var(--ink);
 	}
 
 	.all {
