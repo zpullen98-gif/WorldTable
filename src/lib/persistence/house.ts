@@ -384,6 +384,29 @@ export function houseSnapshot(house: HouseRecord): {
 }
 
 /**
+ * The session half and the house half of an export, combined the way
+ * doExport (menu/+page.svelte) actually spreads them.
+ *
+ * houseSnapshot is spread AFTER the session's own snapshot because it is
+ * normally the more current of the two: absorbSession has already moved
+ * `SessionState.menuDishes`/`dishCosts` out of the session and into the house
+ * record, so the session's copy is a stale pre-migration legacy the house
+ * copy should win over. While `blocked`, absorbSession never ran and never
+ * will (house.svelte.ts returns before it in hydrate()), so houseSnapshot is
+ * correctly empty for a record this build cannot read - and spreading it
+ * anyway let the empty `menuDishes: []`/`dishCosts: {}` overwrite whatever
+ * the session was still carrying, erasing a menu the export could otherwise
+ * have kept. `blocked` skips the house half entirely instead.
+ */
+export function mergeExportedMenu<T extends { menuDishes?: MenuDish[]; dishCosts?: Record<string, DishCosting> }>(
+	sessionSnapshot: T,
+	houseSnapshot: { menuDishes: MenuDish[]; dishCosts: Record<string, DishCosting> },
+	blocked: boolean
+): T {
+	return { ...sessionSnapshot, ...(blocked ? {} : houseSnapshot) };
+}
+
+/**
  * The house-owned collections that ride OUTSIDE the session object.
  *
  * WHY THIS IS SEPARATE FROM houseSnapshot. The menu and its costings sit inside

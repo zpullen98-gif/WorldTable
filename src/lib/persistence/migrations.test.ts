@@ -2,7 +2,13 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { migrate, importLegacyCode, readSession, NewerVersionError } from './migrations';
-import { CURRENT_VERSION, mergeSessions, type SessionState } from './state';
+import {
+	CURRENT_VERSION,
+	mergeSessions,
+	mergeStepWindow,
+	validStepActuals,
+	type SessionState
+} from './state';
 import { describeImport } from './portable';
 import { EMPTY_SESSION } from './state';
 
@@ -275,6 +281,102 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 			mine
 		);
 		expect(summary).toContain('1 menu dish');
+	});
+
+	/**
+	 * stepActuals carries no timestamp per sample, so recordStepActual's own
+	 * write-side rule (session.svelte.ts: round first, then refuse anything at
+	 * or below zero) is the only thing that says what a "real" sample looks
+	 * like. Before this, mergeSessions admitted whatever a hand-edited file
+	 * said - a fractional 0.4, a negative -3 - that the live store itself could
+	 * never have written.
+	 */
+	describe('validStepActuals', () => {
+		it('rounds first, like recordStepActual, rather than dropping a fraction', () => {
+			expect(validStepActuals([7.6])).toEqual([8]);
+			expect(validStepActuals([0.4])).toEqual([]); // rounds to 0, then refused
+		});
+
+		it('refuses zero and negative samples', () => {
+			expect(validStepActuals([-3, 0, 5])).toEqual([5]);
+		});
+
+		it('refuses non-numbers and non-finite values without throwing', () => {
+			expect(validStepActuals(['x', null, NaN, Infinity, 12])).toEqual([12]);
+		});
+
+		it('is the safe empty value for anything that is not an array', () => {
+			expect(validStepActuals('20')).toEqual([]);
+			expect(validStepActuals(undefined)).toEqual([]);
+		});
+	});
+
+	/**
+	 * No per-sample timestamp exists to union on, so this cannot promise the
+	 * newest observations win — what it can promise is that concatenating and
+	 * slicing the tail no longer lets one side's file wipe the other's window
+	 * outright.
+	 */
+	describe('mergeStepWindow', () => {
+		it('keeps both sides when the combined count is under the cap', () => {
+			// Order carries no meaning without a per-sample timestamp - only that
+			// nothing is dropped when there was no need to.
+			expect(mergeStepWindow([1, 2], [3, 4]).sort()).toEqual([1, 2, 3, 4]);
+		});
+
+		it('a full incoming window no longer wipes a full local one', () => {
+			const local = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+			const incoming = [90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101];
+			const out = mergeStepWindow(local, incoming);
+			expect(out).toHaveLength(12);
+			expect(out.some((n) => local.includes(n)), 'the local window survived at all').toBe(true);
+			expect(out.some((n) => incoming.includes(n)), 'the incoming window survived at all').toBe(
+				true
+			);
+		});
+
+		it('stays at the cap and keeps drawing from whichever side still has samples', () => {
+			// Local is short; incoming alone has to fill the rest of the window.
+			const out = mergeStepWindow([1, 2], Array.from({ length: 12 }, (_, i) => 100 + i));
+			expect(out).toHaveLength(12);
+			expect(out).toContain(1);
+			expect(out).toContain(2);
+		});
+	});
+
+	describe('mergeSessions merges stepActuals instead of letting incoming own the tail', () => {
+		it('a full incoming window no longer wipes every local observation for a shared key', () => {
+			const mine = { ...live(), stepActuals: { 'coq-au-vin#0': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] } };
+			const out = mergeSessions(mine, {
+				stepActuals: { 'coq-au-vin#0': [90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101] }
+			});
+			const key = out.stepActuals['coq-au-vin#0'];
+			expect(key).toHaveLength(12);
+			expect(key.some((n) => n <= 12), 'some of the local window survived').toBe(true);
+		});
+
+		it('screens incoming samples the way recordStepActual would before merging them', () => {
+			const mine = { ...live(), stepActuals: { 'suzma#1': [5, 5, 5] } };
+			const out = mergeSessions(mine, { stepActuals: { 'suzma#1': [0.4, 7.6, -3] } });
+			// 0.4 rounds to 0 and is refused; 7.6 rounds to 8; -3 is refused.
+			expect(out.stepActuals['suzma#1']).toEqual([5, 5, 5, 8]);
+		});
+
+		it('leaves an untouched key alone', () => {
+			const mine = { ...live(), stepActuals: { 'cacio-e-pepe#0': [10, 12] } };
+			const out = mergeSessions(mine, { stepActuals: {} });
+			expect(out.stepActuals['cacio-e-pepe#0']).toEqual([10, 12]);
+		});
+	});
+
+	it('describeImport counts valid step timings and screens out what the store would refuse', () => {
+		const mine = live();
+		const summary = describeImport(
+			{ stepActuals: { 'coq-au-vin#0': [8, 0.4, -3, 12] } },
+			mine
+		);
+		// 8 and 12 round-trip through validStepActuals; 0.4 and -3 do not.
+		expect(summary).toContain('2 step timings');
 	});
 
 	/**

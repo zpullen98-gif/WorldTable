@@ -5,6 +5,7 @@
 	import { house } from '$lib/stores/house.svelte';
 	import type { MenuDish } from '$lib/persistence/state';
 	import { buildExport, download, parseImport, describeImport } from '$lib/persistence/portable';
+	import { mergeExportedMenu } from '$lib/persistence/house';
 	import Ornament from '$lib/components/Ornament.svelte';
 	import { onMount } from 'svelte';
 	import {
@@ -428,8 +429,21 @@
 		// The preps ride in a sibling block instead. They have no session-side
 		// legacy to be stranded, and mergeSessions would otherwise copy them into
 		// the per-profile record on the way back in. See housePortable().
+		//
+		// mergeExportedMenu (persistence/house.ts) spreads house.snapshot()
+		// after session.snapshot() because it is normally the more current of
+		// the two - the session's own copy is a stale pre-migration legacy
+		// once absorbSession has moved it into the house record. While
+		// house.blocked, absorbSession never ran and never will, so
+		// house.snapshot() is correctly empty and would OVERWRITE the
+		// session's own still-populated legacy menuDishes/dishCosts with
+		// nothing; mergeExportedMenu skips the house half in that case instead.
 		download(
-			buildExport({ ...session.snapshot(), ...house.snapshot() }, TOTALS.recipes, house.portable())
+			buildExport(
+				mergeExportedMenu(session.snapshot(), house.snapshot(), house.blocked),
+				TOTALS.recipes,
+				house.portable()
+			)
 		);
 	}
 
@@ -441,6 +455,15 @@
 		if (session.held) {
 			importMsg =
 				'This device is on an older edition than the one that saved its record. Import is paused until it updates.';
+			return;
+		}
+		// The house-side twin of the guard above. house.adopt() now refuses to
+		// mutate its record while blocked, but without this the banner would
+		// still count the imported dishes and preps as landed - they render for
+		// this one session and vanish on reload, having never been persisted.
+		if (house.blocked) {
+			importMsg =
+				'This device is running an older version than the one that saved your menu. Import is paused until this tablet updates.';
 			return;
 		}
 		try {
@@ -516,7 +539,11 @@
 			class="chip"
 			onclick={doExport}
 			disabled={session.held || (!session.menu.length && !session.pantry.length && !house.dishes.length)}
-			title={session.held ? 'Export is paused: the record on this device was saved by a newer edition.' : undefined}
+			title={session.held
+				? 'Export is paused: the record on this device was saved by a newer edition.'
+				: house.blocked
+					? 'This tablet is behind: the venue menu, preps, costings, item book and waste log cannot be read here, so the file will carry only your own pins, notes and pantry.'
+					: undefined}
 			>Export session</button
 		>
 		<button class="chip" onclick={() => fileInput?.click()}>Import session…</button>

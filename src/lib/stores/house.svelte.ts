@@ -272,6 +272,13 @@ class House {
 		costs: Record<string, DishCosting> | undefined,
 		incoming: HousePortable
 	) {
+		// #persist() below already refuses to WRITE a blocked record, but this
+		// assigned #r unconditionally regardless, so an import rendered the
+		// adopted dishes and preps on screen under the alert saying they "stay
+		// hidden" - and they vanished again on reload, since nothing was ever
+		// saved. The on-screen state must not be able to contradict the alert
+		// directly above it.
+		if (this.#blocked) return;
 		this.#r = adoptImport(this.#r, dishes, costs, incoming);
 		this.#persist();
 	}

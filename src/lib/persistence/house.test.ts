@@ -7,6 +7,7 @@ import {
 	adoptImport,
 	removeDish,
 	houseSnapshot,
+	mergeExportedMenu,
 	type HouseRecord
 } from './house';
 import type { MenuDish } from './state';
@@ -159,6 +160,42 @@ describe('what an export carries', () => {
 		const h: HouseRecord = { ...fresh(), eightySix: { a: { at: 1, by: 'Marcus' } } };
 		expect(Object.keys(houseSnapshot(h))).toEqual(['menuDishes', 'dishCosts']);
 		expect(JSON.stringify(houseSnapshot(h))).not.toContain('Marcus');
+	});
+});
+
+/**
+ * doExport spreads `{...session.snapshot(), ...house.snapshot()}`, house
+ * winning normally because absorbSession has already moved the legacy
+ * session fields into the house record. While house.blocked, absorbSession
+ * never runs, so house.snapshot() is correctly `{menuDishes: [], dishCosts:
+ * {}}` for a record this build cannot read - and spreading it anyway erased
+ * whatever the session was still carrying from before the block began.
+ */
+describe('mergeExportedMenu — the house half must not erase the session half while blocked', () => {
+	const houseSnap = houseSnapshot(absorbSession(fresh(), { menuDishes: [dish('house-dish')] }));
+
+	it('the house menu wins when the house record is readable, as before', () => {
+		const out = mergeExportedMenu(
+			{ menuDishes: [dish('legacy-dish')], dishCosts: {} },
+			houseSnap,
+			false
+		);
+		expect(out.menuDishes.map((d) => d.id)).toEqual(['house-dish']);
+	});
+
+	it('the session half survives untouched while the house record is blocked', () => {
+		const out = mergeExportedMenu(
+			{ menuDishes: [dish('legacy-dish')], dishCosts: { 'legacy-dish': { lines: [], sales: [], ts: 1 } } },
+			houseSnap,
+			true
+		);
+		expect(out.menuDishes.map((d) => d.id)).toEqual(['legacy-dish']);
+		expect(out.dishCosts['legacy-dish']).toBeDefined();
+	});
+
+	it('a blocked export with nothing in the session legacy carries nothing, not a crash', () => {
+		const out = mergeExportedMenu({ menuDishes: [], dishCosts: {} }, houseSnap, true);
+		expect(out.menuDishes).toEqual([]);
 	});
 });
 

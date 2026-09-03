@@ -9,7 +9,7 @@ import type { SessionState } from './db';
 import { screenFamilyRecipes } from '../familyRecipe';
 import type { HousePortable } from './house';
 import { asArray, asRecord } from '../importShape';
-import { mergeCostings, normaliseCosting } from './state';
+import { mergeCostings, normaliseCosting, validStepActuals } from './state';
 
 export const FORMAT = 'world-table-session';
 /**
@@ -111,7 +111,11 @@ export function parseImport(text: string): PortableFile {
 }
 
 /**
- * What an import would change, shown before anything is written.
+ * What an import changed. Computed before the write in code order
+ * (menu/+page.svelte's doImport calls this, then session.merge and
+ * house.adopt, unconditionally) but there is no confirm step between them -
+ * this is a summary of a write that has already happened by the time the
+ * cook reads it, not a preview they could still decline.
  *
  * Every field is guarded: `incoming` is whatever a user's file claimed to be,
  * and a hand-edited .wtjson missing `menu` must produce a summary, not a crash
@@ -258,6 +262,22 @@ export function describeImport(
 		(w) => w?.id && !mineWaste.has(w.id)
 	).length;
 
+	/**
+	 * Step timings, which this banner never mentioned at all: mergeSessions
+	 * (state.ts) used to fall through a bare `...incoming` spread here, and a
+	 * genuine .wtjson always carries the key, so importing a colleague's file
+	 * silently replaced the cook's own observed step timings while this
+	 * function reported "nothing new". Counted in SAMPLES, the unit
+	 * validStepActuals screens to (rounded, finite, positive - what
+	 * recordStepActual itself could have written), not in keys: a file
+	 * carrying six fresh readings of one step is six chances to see the
+	 * estimate drift, and "1 step" would undersell it.
+	 */
+	let newStepTimings = 0;
+	for (const arr of Object.values(asRecord<unknown>(incoming.stepActuals))) {
+		newStepTimings += validStepActuals(arr).length;
+	}
+
 	const mineByPrep = new Map((current.preps ?? []).map((pr) => [pr.id, pr]));
 	let newPreps = 0;
 	let updatedPreps = 0;
@@ -288,6 +308,8 @@ export function describeImport(
 		parts.push(`${newPrices} ${newPrices === 1 ? 'price' : 'prices'} for the item book`);
 	if (newWaste)
 		parts.push(`${newWaste} waste ${newWaste === 1 ? 'entry' : 'entries'}`);
+	if (newStepTimings)
+		parts.push(`${newStepTimings} step ${newStepTimings === 1 ? 'timing' : 'timings'}`);
 
 	/*
 	 * What will NOT be imported, said out loud.

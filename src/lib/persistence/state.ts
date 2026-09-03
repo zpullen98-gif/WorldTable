@@ -433,6 +433,49 @@ export function mergeCostings(
 }
 
 /**
+ * A stepActuals sample survives only if it is what recordStepActual
+ * (session.svelte.ts) could have produced itself: rounded first, then
+ * refused at or below zero. mergeSessions used to admit whatever arrived -
+ * a fractional 0.4, a negative -3 - that the live store could never write.
+ * Shared with describeImport so the banner can only ever describe a change
+ * the merge will actually make.
+ */
+export function validStepActuals(raw: unknown): number[] {
+	if (!Array.isArray(raw)) return [];
+	return raw
+		.map((n) => (typeof n === 'number' ? Math.round(n) : NaN))
+		.filter((n) => Number.isFinite(n) && n > 0);
+}
+
+/**
+ * Two windows of one step's timings, capped at 12. `stepActuals` carries no
+ * timestamp per sample (Record<string, number[]>, not Record<string,
+ * {min,at}[]>), so this can never be the timestamp-keyed union cookedLog and
+ * drillLog get - a genuine fix needs that field added, which is a schema
+ * change this function does not make. What it fixes is the sharper failure:
+ * concatenating and slicing the tail meant `incoming` always occupied the
+ * cap, so a colleague's file exported months ago and carrying a full window
+ * silently replaced every one of the cook's own observations for a shared
+ * guide-recipe key. Drawing from the RECENT end of both arrays in turn means
+ * a full incoming window now displaces at most half of a full local one,
+ * never all of it.
+ */
+export function mergeStepWindow(current: number[], incoming: number[], cap = 12): number[] {
+	const out: number[] = [];
+	let ci = current.length - 1;
+	let ii = incoming.length - 1;
+	let takeIncoming = true;
+	while (out.length < cap && (ci >= 0 || ii >= 0)) {
+		if (takeIncoming && ii >= 0) out.push(incoming[ii--]);
+		else if (!takeIncoming && ci >= 0) out.push(current[ci--]);
+		else if (ii >= 0) out.push(incoming[ii--]);
+		else out.push(current[ci--]);
+		takeIncoming = !takeIncoming;
+	}
+	return out.reverse();
+}
+
+/**
  * Reconcile an imported session over the live one, field by field.
  *
  * Lives here as a pure function rather than inside the store because the store
@@ -596,22 +639,32 @@ export function mergeSessions(
 		 * shipped with two fields still falling through `...incoming`: every
 		 * genuine .wtjson carries stepActuals (EMPTY_SESSION always has the key,
 		 * and buildExport writes the full state), so importing a colleague's
-		 * file replaced the cook's observed step timings wholesale: the numbers
-		 * every back-timed plan is built from, and the banner counted nothing.
-		 * Same failure that erased a Path of Study, two fields along.
+		 * file replaced the cook's observed step timings wholesale - the "usually
+		 * N min elapsed here" hint on the plan row (menu/+page.svelte, the only
+		 * reader of observedElapsed; it does not feed the plan's back-timed start
+		 * times) - and the banner counted nothing. Same failure that erased a
+		 * Path of Study, two fields along.
 		 *
-		 * stepActuals unions per key and keeps recordStepActual's last-12 window;
-		 * newest observations win the slice, matching the store. planRun stays
-		 * LOCAL: a run is one device's live service clock, like the 86 board;
-		 * importing a file exported mid-service must not install someone else's
-		 * "40 minutes behind" over tonight's.
+		 * "unions per key and keeps recordStepActual's last-12 window; newest
+		 * observations win the slice" was never true and could not be:
+		 * Record<string, number[]> carries no timestamp per sample, so nothing
+		 * here can tell which side is actually newer. Concatenating and slicing
+		 * the tail meant `incoming` always won the cap regardless - a colleague's
+		 * file exported months ago and carrying a full window silently replaced
+		 * every one of the cook's own observations. mergeStepWindow draws from
+		 * the recent end of both arrays in turn instead, so a full incoming
+		 * window can no longer wipe a full local one outright; see its own
+		 * comment for why that is the honest fix rather than the real one.
+		 * planRun stays LOCAL: a run is one device's live service clock, like
+		 * the 86 board; importing a file exported mid-service must not install
+		 * someone else's "40 minutes behind" over tonight's.
 		 */
 		stepActuals: (() => {
 			const out: SessionState['stepActuals'] = { ...current.stepActuals };
 			for (const [k, arr] of Object.entries(incoming.stepActuals ?? {})) {
-				if (!Array.isArray(arr)) continue;
-				const nums = arr.filter((n) => typeof n === 'number' && Number.isFinite(n) && n > 0);
-				out[k] = [...(out[k] ?? []), ...nums].slice(-12);
+				const nums = validStepActuals(arr);
+				if (!nums.length) continue;
+				out[k] = mergeStepWindow(out[k] ?? [], nums);
 			}
 			return out;
 		})(),
