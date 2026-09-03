@@ -184,7 +184,16 @@ const ALCOHOL = [
 	   which is not alcohol, and the boundary matcher cannot tell them apart. */
 	'burgundy', 'pinot noir', 'riesling', 'sylvaner', 'gamay', 'beaujolais',
 	'txakoli', 'oloroso', 'amontillado', 'awamori', 'vino seco', 'ouzo',
-	'pastis', 'armagnac', 'crème de cassis', 'guinness', 'hard cider'
+	'pastis', 'armagnac', 'crème de cassis', 'guinness', 'hard cider',
+	/* Jambon Persillé de Bourgogne names its poaching wine only as "Bourgogne
+	   Aligoté", and Tablier de Sapeur only as "dry white Mâcon" — neither
+	   sentence contains 'wine' or any other listed word. Both dishes were
+	   flagged anyway, by accident, through an unrelated "20 ml white wine
+	   vinegar" line elsewhere in their own ingredients; scrub()'s vinegar
+	   exception below removes that accident, so their real wine needs a real
+	   token or they go from a right answer to a wrong one for the wrong
+	   reason. */
+	'aligoté', 'mâcon'
 ];
 
 /**
@@ -311,7 +320,15 @@ const EXCEPTIONS = [
 	// rather than bare 'speck', because that is the shape the ordinary sense
 	// actually takes ("a speck of", "not a speck of"); the cured meat is never
 	// written that way.
-	'speck of'
+	'speck of',
+	// alcohol-shaped, not alcohol. 'wine vinegar' rather than 'red wine
+	// vinegar'/'white wine vinegar' separately: this is a substring match, so
+	// the bare two-word phrase blanks both qualified forms (and the one
+	// unqualified "6 to 7 percent wine vinegar" the qualified pair would have
+	// missed), leaving the harmless 'red'/'white' behind. Measured: 'wine' and
+	// 'sherry' are the only two ALCOHOL words this corpus ever puts directly
+	// before 'vinegar'.
+	'wine vinegar', 'sherry vinegar'
 ];
 
 const escape = (/** @type {string} */ s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

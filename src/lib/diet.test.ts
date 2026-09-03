@@ -80,6 +80,46 @@ describe('substring collisions', () => {
 	it('still reads speck itself as pork', () => {
 		expect(deriveDiet(recipe('Speck-Wrapped Trout', ['4 slices speck'])).containsPork).toBe(true);
 	});
+
+	/**
+	 * "wine"/"sherry" carry the ALCOHOL flag, and a vinegar has neither: 66
+	 * recipes whose only alcohol-shaped word was in a "red/white wine vinegar"
+	 * or "sherry vinegar" line were told they contained alcohol they do not.
+	 */
+	it('does not read a wine or sherry vinegar as alcohol', () => {
+		expect(
+			deriveDiet(recipe('Vinaigrette', ['6 tbsp olive oil', '2 tbsp red wine vinegar'])).containsAlcohol
+		).toBe(false);
+		expect(
+			deriveDiet(recipe('Gazpacho', ['100ml olive oil', '2 tbsp sherry vinegar'])).containsAlcohol
+		).toBe(false);
+		expect(
+			deriveDiet(recipe('Slaw', ['2 tbsp white wine vinegar'])).containsAlcohol
+		).toBe(false);
+	});
+
+	it('still reads bare wine or sherry as alcohol', () => {
+		expect(deriveDiet(recipe('Coq au Vin', ['250ml red wine'])).containsAlcohol).toBe(true);
+		expect(deriveDiet(recipe('Sherry Trifle', ['60ml sherry'])).containsAlcohol).toBe(true);
+	});
+
+	/**
+	 * Two dishes name their poaching wine only as an appellation ("Bourgogne
+	 * Aligoté", "dry white Mâcon") with no other alcohol word anywhere in the
+	 * method - they used to read as alcohol only by accident, through an
+	 * unrelated "white wine vinegar" line the vinegar exception above now
+	 * masks. Losing the accident must not lose the answer.
+	 */
+	it('reads an appellation as alcohol even with no other wine word in the method', () => {
+		expect(
+			deriveDiet(recipe('Jambon Persillé', ['500 ml Bourgogne Aligoté', '20 ml white wine vinegar']))
+				.containsAlcohol
+		).toBe(true);
+		expect(
+			deriveDiet(recipe('Tablier de Sapeur', ['150 ml dry white Mâcon', '20 ml white wine vinegar']))
+				.containsAlcohol
+		).toBe(true);
+	});
 });
 
 describe('the vocabulary widening: words the tables never learned', () => {
