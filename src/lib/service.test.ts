@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { stepService, ADVANCE_MIN } from '../../tools/derive/service.mjs';
+import { stepService, ADVANCE_MIN, LONG_HOLD_MIN } from '../../tools/derive/service.mjs';
 import full from './data/recipes.full.json';
 
 /**
@@ -51,13 +51,86 @@ describe('the magnitude backstop', () => {
 		expect(min(taffy.unattendedSec)).toBe(0);
 	});
 
-	it('draws the line at ADVANCE_MIN, the module’s own "cannot fit in a service"', () => {
+	it('draws the line at LONG_HOLD_MIN, and keeps it clear of ADVANCE_MIN', () => {
+		expect(LONG_HOLD_MIN).toBe(90);
+		// Two constants, two questions. ADVANCE_MIN decides the day-before
+		// banner and the Quick filter, and must not drift with the classifier.
 		expect(ADVANCE_MIN).toBe(240);
-		// 239 obeys the nearest-verb rule; 240 is a wait whatever governs it.
-		const under = stepService('Knead and press the dough by hand for 239 min');
-		const over = stepService('Knead and press the dough by hand for 240 min');
+
+		// 89 obeys the nearest-verb rule; 90 is a wait whatever governs it.
+		const under = stepService('Knead and press the dough by hand for 89 min');
+		const over = stepService('Knead and press the dough by hand for 90 min');
 		expect(min(under.handsOnSec)).toBeGreaterThan(0);
-		expect(min(over.unattendedSec)).toBe(240);
+		expect(min(over.unattendedSec)).toBe(90);
+	});
+
+	/**
+	 * The four separate ways the 90-239 tier failed. No vocabulary edit reaches
+	 * all four, which is why the line is a magnitude and not a word list.
+	 */
+	it('holds the tier item 18 left behind, however it was governed', () => {
+		// The governing verb is in NEITHER list, so ACTIVE won uncontested.
+		expect(min(stepService('Prove at 24-26C, no hotter, for 2-3 hours, until a light press springs back').unattendedSec)).toBe(180);
+		expect(min(stepService('Add the tomatoes and hold at 90C to 95C, partly covered, for 3 hours').unattendedSec)).toBe(180);
+		expect(min(stepService('Bulk 2 hours at 22C with two folds in the tub, until doubled').unattendedSec)).toBe(120);
+
+		// A doneness test won the race.
+		expect(min(stepService('Cook 2.5 to 3 hours, until a pea crushes to nothing against the pot').unattendedSec)).toBe(180);
+
+		// A manner aside won it.
+		expect(min(stepService('Simmer uncovered on medium-low, stirring occasionally, 2 h, as it thickens').unattendedSec)).toBe(120);
+
+		// The token was not a verb at all: temper in "temperature", spoon in
+		// "spoonful", a plate you weight with, water that is rolling.
+		expect(min(stepService('Cover and leave at room temperature for about 2 hours, until it sets').unattendedSec)).toBe(120);
+		expect(min(stepService('Add the halved onion and a spoonful of salt, and hold it at a bare tremble 2 h').unattendedSec)).toBe(120);
+		expect(min(stepService('Steam the whole piece over rolling water for about 3 hours').unattendedSec)).toBe(180);
+	});
+
+	/**
+	 * Where the line stops, and why it is 90 rather than lower. These four are
+	 * the honest attended cases in the 45-89 tier - the ones item 18 went out of
+	 * its way to protect - and a cook really is pinned to all of them.
+	 */
+	it('leaves the genuinely attended work below the line alone', () => {
+		expect(min(stepService('Stir constantly now, 30-45 min').handsOnSec)).toBe(45);
+		expect(
+			min(stepService('Simmer the milk in a wide heavy pan, stirring and scraping the sides and bottom constantly, 60-75 min').handsOnSec)
+		).toBe(75);
+		expect(min(stepService('cook in a double boiler with knotted pandan, stirring, 45 min to a thick amber curd').handsOnSec)).toBe(45);
+	});
+
+	/**
+	 * The gate: the tier cannot refill without a test going red.
+	 *
+	 * The threshold here is the LITERAL 90, never LONG_HOLD_MIN. A gate that
+	 * reads the constant it polices moves when the constant moves, and passes
+	 * whatever it is set to - which is exactly what this one did on its first
+	 * mutation test, sitting green while the line was put back to 240.
+	 */
+	it('books no stated duration of 90 min or more as hands-on, corpus-wide', () => {
+		const DUR = /(\d+(?:\.\d+)?)\s*(?:[\u2013-]\s*(\d+(?:\.\d+)?))?\s*(min\b|minute|h\b|hour|day|week)/gi;
+		const offenders: string[] = [];
+		for (const r of full as Array<{ slug: string; steps?: Array<{ text: string }> }>) {
+			for (const st of r.steps ?? []) {
+				const stripped = String(st.text).replace(/\([^)]*\)/g, ' ');
+				for (const clause of stripped.split(/[;.](?!\d)/)) {
+					DUR.lastIndex = 0;
+					let long = false;
+					for (const m of clause.matchAll(DUR)) {
+						const v = parseFloat(m[2] || m[1]);
+						const u = m[3].toLowerCase();
+						const per = u.startsWith('h') ? 60 : u.startsWith('d') ? 1440 : u.startsWith('w') ? 10080 : 1;
+						if (Math.min(Math.round(v * per), 600) >= 90) long = true;
+					}
+					if (!long) continue;
+					// The clause states a 90+ block. If it charges 90+ minutes of
+					// hands, the magnitude line stopped applying to it.
+					if (min(stepService(clause).handsOnSec) >= 90) offenders.push(`${r.slug}: ${clause.trim().slice(0, 70)}`);
+				}
+			}
+		}
+		expect(offenders).toEqual([]);
 	});
 });
 

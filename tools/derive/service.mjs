@@ -61,6 +61,54 @@ export const LONG_WAIT_MIN = 20;
 export const ADVANCE_MIN = 240;
 
 /**
+ * A stated block this long is a hold, not a pair of hands.
+ *
+ * Item 18 drew the same line at ADVANCE_MIN and proved it: above 240 min the
+ * nearest-verb rule was wrong every single time. This is that finding carried
+ * down to where it actually stops being true, and the stopping point is
+ * measured rather than assumed.
+ *
+ * BETWEEN 90 AND 239 MIN, ALL 54 STATED DURATIONS BOOKED HANDS-ON WERE WRONG -
+ * 51 recipes, and not one of them is work. They fail in four ways and no
+ * vocabulary edit reaches all four:
+ *
+ *   the governing verb is in NEITHER list  "hold at 90C ... 3 hours",
+ *                                          "Prove at 24-26C for 2-3 hours",
+ *                                          "Bulk 2 h", "poach at 85C for 90"
+ *   a doneness test wins the race          "until a pea CRUSHES to nothing"
+ *   a manner aside wins it                 "stirring occasionally, 2 h",
+ *                                          "SKIMMING the grey foam"
+ *   the token is not a verb at all         "room TEMPERATURE" (temper),
+ *                                          "a SPOONFUL of salt" (spoon),
+ *                                          "weight with an upturned PLATE",
+ *                                          "over ROLLING water"
+ *
+ * The last group is item 35's missing word boundary and worth fixing on its own
+ * merits, but it is 8 of the 54: fixing it would leave 46 cooks still told they
+ * are busy for two hours.
+ *
+ * WHY 90 AND NOT LOWER. The 45-89 tier is genuinely mixed, and the honest cases
+ * are the ones item 18 went out of its way to protect: a dark roux whisked
+ * 30-45 min, rendang "Stir constantly now, 30-45 min", kulfi stirred
+ * "constantly, 60-75 min", kaya toast 45 min in a double boiler. All four stay
+ * hands-on at this line. Below 90 a cook really can be pinned to one act;
+ * at 90 and above, in this corpus, they are not.
+ *
+ * THE ONE KNOWN UNDER-COUNT: dulce de leche, "stirring OFTEN at first and
+ * CONSTANTLY once it thickens, 2-2.5 hours", is the only case in the corpus
+ * where a 90+ block is genuinely attended, and its 150 min moves to wait.
+ * The step is not left looking unattended - it still books 20 min of hands off
+ * that same sentence's "the last 20 minutes are where reputations are made" -
+ * but the caramel is under-counted and this is the one place it happens.
+ * Booking 150 minutes of hands is the larger error: it is a simmer you attend,
+ * not a task that holds you.
+ *
+ * After the change, ZERO stated durations of 90 min or more are booked
+ * hands-on anywhere in the corpus. The longest that remains is kulfi at 75.
+ */
+export const LONG_HOLD_MIN = 90;
+
+/**
  * The parser is the original's, widened to find EVERY duration in a clause -
  * and then twice more, for two things it could not read at all.
  *
@@ -150,16 +198,22 @@ function positions(re, text) {
  */
 export function isUnattended(clause, at, mins) {
 	/*
-	 * Four hours or more is not a pair of hands, whatever verb sits nearest.
+	 * Ninety minutes or more is not a pair of hands, whatever verb sits nearest.
 	 *
-	 * ADVANCE_MIN is this module's OWN line for "cannot be fitted into a
-	 * service: it starts the day before", and a block that cannot fit inside a
-	 * service is not service work. Below the line the nearest-verb rule decides
-	 * exactly as before, so nothing short moves: a dark roux whisked 30-45 min
-	 * and taffy pulled 15-20 min stay hands-on. That is the whole reason to
-	 * prefer a magnitude line to a vocabulary edit - adding `cook` to
-	 * UNATTENDED would have flipped 192 durations with a median of five
-	 * minutes, most of them correctly attended work.
+	 * This line was ADVANCE_MIN - "cannot be fitted into a service, so it is not
+	 * service work" - and item 18 proved the rule above it. LONG_HOLD_MIN
+	 * carries it down to 90, where the evidence stops: see that constant for the
+	 * 54 cases and the four separate ways they fail. The two constants are kept
+	 * apart on purpose, because they answer different questions - ADVANCE_MIN
+	 * still decides the day-before banner and the Quick filter, and must not
+	 * drift because the classifier learned something.
+	 *
+	 * Below the line the nearest-verb rule decides exactly as before, so nothing
+	 * short moves: a dark roux whisked 30-45 min and taffy pulled 15-20 min stay
+	 * hands-on. That is the whole reason to prefer a magnitude line to a
+	 * vocabulary edit - adding `cook` to UNATTENDED would have flipped 192
+	 * durations with a median of five minutes, most of them correctly attended
+	 * work, and it would still have missed `hold`, `prove` and `bulk`.
 	 *
 	 * Above the line no verb in range is worth trusting, because the verbs that
 	 * govern a long hold - hold, hang, leave, retard, drain - are in NEITHER
@@ -172,7 +226,7 @@ export function isUnattended(clause, at, mins) {
 	 * across 42 steps in 39 recipes. Every one is a cure, brine, prove, drain,
 	 * hang, smoke, roast or long hold. No false positives.
 	 */
-	if (mins >= ADVANCE_MIN) return true;
+	if (mins >= LONG_HOLD_MIN) return true;
 	const waits = positions(UNATTENDED, clause);
 	const hands = positions(ACTIVE, clause);
 	/** @param {number[]} xs */
