@@ -61,6 +61,53 @@ describe('waiting is not keeping', () => {
 			.toBe(7 * 1440);
 	});
 
+	it('reads "hold"/"keep" as the wait itself when a temperature follows, not shelf life', () => {
+		// Suzma: two waits behind two different keeping verbs in one method.
+		const a = advanceWait([
+			step('Whisk in the yoghurt, cover and keep at blood heat 6 to 8 hours, until the surface is set firm'),
+			step('Hang in the fridge 8 to 12 hours, until the curd holds its shape like soft cheese')
+		]);
+		expect(a.advanceMin).toBe(12 * 60);
+		expect(a.advancePhrase).toBe('8 to 12 hours');
+
+		expect(advanceWait([step('Hold at 4C (39F) for 48 hours, turning the parcel every 12 hours')]).advanceMin)
+			.toBe(48 * 60);
+	});
+
+	it('does not read a doneness test — "holds its shape", "hold a spoon mark" — as shelf life or a wait', () => {
+		const a = advanceWait([
+			step('Chill at least 4 hours until the top sets firm enough to hold a spoon mark')
+		]);
+		expect(a.advanceMin).toBe(4 * 60);
+		expect(a.advancePhrase).toBe('4 hours');
+	});
+
+	it('does not let "keep" governing an ingredient, not the dish, veto the wait beside it', () => {
+		// Mote con Huesillo: "...and keep that water" sits in the same clause as
+		// the real overnight soak once the decimal split stops severing them.
+		const a = advanceWait([
+			step('Soak the dried peaches overnight in the 1.5 litres of water and keep that water; it is the body of the syrup.')
+		]);
+		expect(a.advanceMin).toBe(720);
+		expect(a.advancePhrase).toBe('overnight');
+	});
+
+	it('reads a decimal hour correctly instead of splitting on the decimal point', () => {
+		// The old `.split(/[;.]/)` cut "2.5 hours" into "...2" and "5 hours...",
+		// so the badge quoted a number the method never states.
+		const a = advanceWait([step('Simmer with the lid ajar, about 2.5 hours, until the lamb yields to a spoon.')]);
+		expect(a.advanceMin).toBe(150);
+		expect(a.advancePhrase).toBe('2.5 hours');
+	});
+
+	it('does not read the adjective "last" as the verb "lasts", and so does not veto the clause it sits in', () => {
+		const a = advanceWait([
+			step('Smoke fat-side up 8-10 hours until it pulls at 92C internal, spritzing with vinegar in the last hours.')
+		]);
+		expect(a.advanceMin).toBe(10 * 60);
+		expect(a.advancePhrase).toBe('8-10 hours');
+	});
+
 	it('does not read the age of an ingredient as a wait', () => {
 		// "toast only if they are a day old" is about a bought bagel.
 		expect(advanceWait([step('Toast only if they are a day old')]).advanceMin).toBe(0);

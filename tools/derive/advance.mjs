@@ -37,6 +37,12 @@
  * "refrigerate 7 days" is Guanciale's cure and "keeps two weeks refrigerated"
  * is not, and both name the same appliance.
  *
+ * "keep"/"hold" are the trap inside the trap: the corpus uses both verbs for
+ * the wait itself ("hold at 4C for 48 hours", "keep at blood heat 6 to 8
+ * hours") and for a doneness test with no duration in it at all ("holds its
+ * shape", "hold a spoon mark"), not only for shelf life. The verb alone does
+ * not say which; only what follows it does — see KEEP_HOLD_SHELF_LIFE below.
+ *
  * Shio Koji is the case that proves the split is worth having: it states a
  * genuine 7 to 10 day ferment AND a 6 month shelf life, and the longest number
  * in the method is the one that means nothing to a cook deciding what to make.
@@ -79,9 +85,37 @@ const DURATION = new RegExp(
 	'gi'
 );
 
-/** How long the finished thing lasts. Never the fridge, always the verb. */
+/**
+ * How long the finished thing lasts, once it exists. `keeps?`/`holds?` used to
+ * sit in this list bare, and the corpus uses both verbs for two other things
+ * a cook actually has to wait through: "hold at 4C for 48 hours" and "keep at
+ * blood heat 6 to 8 hours" are the wait itself, not a claim about the fridge,
+ * and "holds its shape", "holds a peak", "hold a spoon mark" are a doneness
+ * test with no duration in the word at all. Vetoing the whole clause on the
+ * bare verb threw away the "48 hours" and the "6 to 8 hours" along with it.
+ * `keeps?`/`holds?` are handled separately below, where the duration that
+ * follows the verb is what decides which sense it is. `lasts?` is gone
+ * outright: "lasts" as a verb appears zero times in this corpus, every match
+ * was the adjective "last" ("the last 20 minutes"), and it cost two long
+ * smokes their wait for nothing in return.
+ */
 const STORAGE =
-	/\b(keeps?|keeping|will keep|lasts?|store[sd]?|storage|storing|gone by|best (?:within|before|in)|eat within|use within|good for|holds?|freezes? (?:for|well)|shelf life|refrigerates? well|leftovers?|up to)\b/i;
+	/\b(keeping|will keep|store[sd]?|storage|storing|gone by|best (?:within|before|in)|eat within|use within|good for|freezes? (?:for|well)|shelf life|refrigerates? well|leftovers?|up to)\b/i;
+
+/**
+ * The shelf-life sense of keep/hold, isolated from the wait sense: "Keeps two
+ * weeks refrigerated" and "It holds three weeks in the fridge" put the
+ * duration right after the verb, with at most a hedge word between them.
+ * "hold at 4C for 48 hours" does not — "at" sits where this pattern needs a
+ * number — so the 48 hours reads as what it is, a wait. Requiring a unit
+ * word (not just the number) is what keeps "hold a spoon mark" and "holds a
+ * peak" out: "a"/"an" match the number alternation, but "spoon" and "peak"
+ * are not hours/days/weeks/months, so the doneness tests never match here.
+ */
+const KEEP_HOLD_SHELF_LIFE = new RegExp(
+	`\\b(?:keeps?|holds?)\\s+(?:about |around |for |up to )?(${N})\\s*(hours?|hrs?|days?|weeks?|months?)\\b`,
+	'i'
+);
 
 /** Edible now, nicer later. Not an instruction to wait. */
 const QUALITY =
@@ -120,10 +154,13 @@ export function advanceWait(steps) {
 	for (const raw of steps ?? []) {
 		const text = typeof raw === 'string' ? raw : (raw?.text ?? '');
 		for (const clause of String(text)
-			.split(/[;.]/)
+			// A full stop with a digit right after it is a decimal point, not the
+			// end of a clause: splitting on a bare [;.] cut "2.5 hours" into "2"
+			// and "5 hours", and the fragment read as five hours.
+			.split(/[;.](?!\d)/)
 			.map((c) => c.trim())
 			.filter(Boolean)) {
-			if (STORAGE.test(clause) || QUALITY.test(clause)) continue;
+			if (STORAGE.test(clause) || KEEP_HOLD_SHELF_LIFE.test(clause) || QUALITY.test(clause)) continue;
 			DURATION.lastIndex = 0;
 			for (const m of clause.matchAll(DURATION)) {
 				if (AGE.test(clause.slice(m.index + m[0].length))) continue;
