@@ -60,8 +60,36 @@ export const LONG_WAIT_MIN = 20;
 /** A block this long cannot be fitted into a service: it starts the day before. */
 export const ADVANCE_MIN = 240;
 
-/** The parser is the original's, widened to find EVERY duration in a clause. */
-const DURATION = /(\d+)\s*(?:[–-]\s*(\d+))?\s*(min\b|minute|h\b|hour)/gi;
+/**
+ * The parser is the original's, widened to find EVERY duration in a clause -
+ * and then twice more, for two things it could not read at all.
+ *
+ * DECIMALS. The clause splitter below cut on a bare full stop, so "simmer
+ * 1.5 h" became the clauses "simmer 1" and "5 h", and the step booked FIVE
+ * HOURS. 33 recipes said it that way and every one of them shipped 300 minutes
+ * of wait: curry-goat's "2-2.5 h", gulyas's "1.5 h", schweinshaxe's "2.5 h".
+ * The number was not merely rounded, it was the digits after the point read as
+ * a fresh duration. Both halves of the fix are required: the splitter must not
+ * cut a decimal point, and DURATION must be able to read one.
+ *
+ * DAYS AND WEEKS AND OVERNIGHT. 140 steps across 125 recipes state a wait in
+ * units this regex had never seen, and booked ZERO for it - "marinate
+ * overnight", "cure 3 days", "hang a week". The service split therefore
+ * understated their elapsed time by the whole wait, which is what the prep
+ * board back-times from. (The "start it the day before" banner is safe: it
+ * comes from advanceMin, a separate derivation in advance.mjs that has always
+ * read these units. That is why this was quiet.)
+ *
+ * `overnight` carries no number, so it is its own pattern, valued at eight
+ * hours - the reading a kitchen would give it, and the one the ceiling below
+ * leaves intact.
+ */
+const DURATION =
+	/(\d+(?:\.\d+)?)\s*(?:[–-]\s*(\d+(?:\.\d+)?))?\s*(min\b|minute|h\b|hour|day|week)/gi;
+
+/** A wait with no number on it. Eight hours is what a kitchen means by it. */
+const OVERNIGHT = /\bovernight\b/gi;
+const OVERNIGHT_MIN = 8 * 60;
 
 /*
  * A recurrence is not a block of time.
@@ -182,9 +210,37 @@ export function stepService(text) {
 	let statedActive = 0;
 	let unnamedWork = false;
 
-	for (const clause of stripped.split(/[;.]/).map((c) => c.trim()).filter(Boolean)) {
+	/* (?!\d): a full stop with a digit after it is a decimal point, not the end
+	   of a clause. Splitting on it is what turned "1.5 h" into five hours. */
+	for (const clause of stripped.split(/[;.](?!\d)/).map((c) => c.trim()).filter(Boolean)) {
 		DURATION.lastIndex = 0;
 		const all = [...clause.matchAll(DURATION)];
+
+		/*
+		 * "marinate overnight" is a wait with no number on it. Counted here
+		 * rather than in DURATION because it has no digits to capture, and only
+		 * when the clause states no other duration.
+		 *
+		 * That last condition is measured, not cautious-by-default. 107 clauses
+		 * say overnight alone and take the full eight hours. The 26 that pair it
+		 * with a number are mostly shapes where ADDING would be plainly wrong: a
+		 * range ("marinate 30 min to overnight", "4 h to overnight"), an
+		 * alternative ("rise 90 min, or cold-ferment overnight"), or a
+		 * restatement ("keep it at 40-45C overnight, 12 hours" - the overnight IS
+		 * the twelve hours). A few are genuine sequences ("proof 20 min, then
+		 * refrigerate overnight") and those are under-counted. Under-counting is
+		 * the safe direction here: over-counting a wait is what item 18 spent its
+		 * whole effort undoing.
+		 *
+		 * Unattended by definition: nobody stands over it.
+		 */
+		OVERNIGHT.lastIndex = 0;
+		if (!all.length && OVERNIGHT.test(clause)) {
+			waitMin += OVERNIGHT_MIN;
+			if (positions(ACTIVE, clause).length || clause.split(/\s+/).length > 2) unnamedWork = true;
+			continue;
+		}
+
 		if (!all.length) {
 			// A clause with no time in it is work somebody still has to do. Two
 			// words or fewer is a fragment, not an instruction.
@@ -207,8 +263,12 @@ export function stepService(text) {
 		// know how many visits it stands for. Capped, dill's 48 hours would
 		// derive one turn instead of four.
 		const raw = found.map((m) => {
-			const v = parseInt(m[2] || m[1], 10);
-			return m[3].toLowerCase().startsWith('h') ? v * 60 : v;
+			// parseFloat, not parseInt: "2.5 h" is two and a half hours, and the
+			// top of a range is still the top ("2-2.5 h" is 150 minutes).
+			const v = parseFloat(m[2] || m[1]);
+			const unit = m[3].toLowerCase();
+			const perUnit = unit.startsWith('h') ? 60 : unit.startsWith('d') ? 1440 : unit.startsWith('w') ? 10080 : 1;
+			return Math.round(v * perUnit);
 		});
 		const recurs = found.map(
 			(m) =>

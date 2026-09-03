@@ -17888,7 +17888,7 @@
         "text": "Blitz the paste; massage into the slashes; marinate overnight, no shortcuts here.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -18136,7 +18136,7 @@
         "text": "Season meat with curry powder and aromatics; marinate overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -18150,7 +18150,7 @@
         "text": "Brown meat in that; add water to barely cover; simmer 2–2.5 h until sliding off the bone.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -19290,7 +19290,7 @@
         "text": "Marinate chicken in lime, mustard, garlic and a third of the onions, overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -21468,7 +21468,7 @@
         "text": "Water to soup depth; simmer 1.5 h.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 5400,
         "estimated": true
       },
       {
@@ -21671,7 +21671,7 @@
         "text": "Soften cabbage: freeze whole overnight then thaw (the lazy genius method), or blanch and peel leaves.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -21692,7 +21692,7 @@
         "text": "Cover with sauce; braise low 1–1.5 h. Better tomorrow, best the day after.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 5400,
         "estimated": true
       }
     ],
@@ -23732,7 +23732,7 @@
         "text": "Everything back with Guinness, stock, thyme, bay; oven 150°C, 2.5 h, lid ajar.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -24770,7 +24770,7 @@
         "text": "Dry UNCOVERED in the fridge overnight: the skin must be desert-dry.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -24975,7 +24975,7 @@
         "text": "Marinate beef overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -25094,7 +25094,7 @@
         "text": "Steam 30–35 min or bake in a water bath at 160°C, 45 min, until it barely trembles. Chill overnight; invert.",
         "durationSec": 2100,
         "handsOnSec": 0,
-        "unattendedSec": 4800,
+        "unattendedSec": 33600,
         "estimated": false
       }
     ],
@@ -25296,9 +25296,9 @@
       {
         "text": "Wine, stock; rouladen back; braise covered at 160°C, 1.5–2 h.",
         "durationSec": 7200,
-        "handsOnSec": 240,
+        "handsOnSec": 0,
         "unattendedSec": 7200,
-        "estimated": true
+        "estimated": false
       },
       {
         "text": "Lift out; strain and reduce the sauce; whisk in cold butter. Slice one open to admire the spiral.",
@@ -25506,7 +25506,7 @@
         "text": "Submerge beef in the cold marinade; refrigerate 3–5 days, turning daily.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -25620,15 +25620,15 @@
         "text": "Rub knuckles with salt, caraway, crushed garlic; rest overnight uncovered in the fridge.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
         "text": "Roast on the onion bed at 160°C, 2.5 h, adding beer to the pan as it evaporates.",
         "durationSec": 18000,
-        "handsOnSec": 240,
-        "unattendedSec": 18000,
-        "estimated": true
+        "handsOnSec": 0,
+        "unattendedSec": 9000,
+        "estimated": false
       },
       {
         "text": "Crank to 230°C (or broil) for the final 20–30 min, basting with beer, until the skin blisters into amber glass.",
@@ -26558,14 +26558,14 @@
         "text": "Beef in with a little water; stew low 2.5 h, adding splashes, never drowning; the onions are the sauce.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
         "text": "Rest overnight if you can. Serve with dumplings to mop the sauce (Saft) it is named for.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -27212,7 +27212,7 @@
         "text": "Boil the glaze to 108°C; cool slightly; pour over in one confident motion. Do not touch it again. Rest overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -28449,7 +28449,7 @@
         "text": "Whisk teff and water to a thin batter; cover loosely; leave at room temperature 3–5 days until sour and bubbling, pouring off the dark liquid daily.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -33110,7 +33110,7 @@
         "text": "Simmer the beef to a clean broth, 1.5 h, skimming.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 5400,
         "estimated": true
       },
       {
@@ -34193,7 +34193,7 @@
         "text": "Simmer the meat 2–2.5 h to a clean, strong broth; lift out; keep the sorpa barely simmering.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -34388,7 +34388,7 @@
         "text": "Simmer beans until fully soft, 1.5 h; drain, keeping a cup of the liquor.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 5400,
         "estimated": true
       },
       {
@@ -34813,7 +34813,7 @@
         "text": "Shape a tight round; seam-up in a floured, cloth-lined bowl; refrigerate overnight: the cold builds the sour and the schedule builds your sleep.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -34935,7 +34935,7 @@
         "text": "Mix the overnight poolish with everything else; knead briefly; bulk 2 h with two folds.",
         "durationSec": 7200,
         "handsOnSec": 7440,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -35473,7 +35473,7 @@
         "text": "Rich, smooth dough; knead well; rise 1.5 h.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 5400,
         "estimated": true
       },
       {
@@ -36116,8 +36116,8 @@
       {
         "text": "Unite with mirepoix and herbs; simmer 1.5–2 h, skimming relentlessly; strain through fine mesh.",
         "durationSec": 7200,
-        "handsOnSec": 7440,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 7200,
         "estimated": true
       },
       {
@@ -37023,7 +37023,7 @@
         "text": "Dry the apple halves uncovered in the fridge overnight if you can: drier apples, deeper caramel, no flood.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -38196,7 +38196,7 @@
         "text": "Leave the cheese rounds uncovered in the fridge overnight to dry the surface: dry cheese crusts; moist cheese escapes.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -38525,7 +38525,7 @@
         "text": "Add the meats in order of toughness; simmer 1.5 h more, stirring from the bottom: locro loves to stick.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 5400,
         "estimated": true
       },
       {
@@ -38630,8 +38630,8 @@
       {
         "text": "Simmer submerged in seasoned broth 1.5 h (or braise covered); then press under a weighted board in the fridge overnight.",
         "durationSec": 18000,
-        "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "handsOnSec": 5640,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -38760,7 +38760,7 @@
         "text": "Shingle on a platter; flood completely with the salsa; capers over; rest overnight. Serve cold at the head of the Christmas table.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -38959,9 +38959,9 @@
       {
         "text": "Simmer steadily, stirring OFTEN at first and CONSTANTLY once it thickens and turns gold, 2–2.5 hours: the last 20 minutes are where reputations are made and pots are lost.",
         "durationSec": 18000,
-        "handsOnSec": 240,
-        "unattendedSec": 19200,
-        "estimated": true
+        "handsOnSec": 10200,
+        "unattendedSec": 0,
+        "estimated": false
       },
       {
         "text": "It is ready at repostero stage when a spoon dragged across the bottom leaves a slow-closing path; earlier for a pourable salsa stage.",
@@ -40079,7 +40079,7 @@
         "text": "Chill at least 2 h; refresh with the reserved mayo before serving: the pasta drinks overnight. Scoop with an ice cream scoop beside rice and something smoky.",
         "durationSec": 7200,
         "handsOnSec": 240,
-        "unattendedSec": 7200,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -40705,9 +40705,9 @@
       {
         "text": "Meat back; simmer low and lidded 1–1.5 h until fork-tender and the gravy is deep russet.",
         "durationSec": 18000,
-        "handsOnSec": 240,
-        "unattendedSec": 18000,
-        "estimated": true
+        "handsOnSec": 0,
+        "unattendedSec": 5400,
+        "estimated": false
       },
       {
         "text": "Start the grits at the hour mark: slow, stirred, enriched. Grillades over grits, gravy over everything, green onions over that.",
@@ -40819,8 +40819,8 @@
       {
         "text": "Greens back in with their likker; simmer low 1.5–2 h: the gumbo should turn deep green-brown and thick as a sermon.",
         "durationSec": 7200,
-        "handsOnSec": 7440,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 7200,
         "estimated": true
       },
       {
@@ -41046,7 +41046,7 @@
         "text": "Rich dough; rise 1.5 h. Roll a long rectangle; spread the cinnamon butter; roll into a log and join into an oval ring, sealing well.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 5400,
         "estimated": true
       },
       {
@@ -41366,9 +41366,9 @@
       {
         "text": "Smoke indirect at 120°C, meat side up, hickory smoke thin and blue, 4.5–5.5 h.",
         "durationSec": 18000,
-        "handsOnSec": 240,
-        "unattendedSec": 18000,
-        "estimated": true
+        "handsOnSec": 0,
+        "unattendedSec": 19800,
+        "estimated": false
       },
       {
         "text": "Mop lightly every 45 min after the second hour, moisture, not sauce.",
@@ -42149,7 +42149,7 @@
         "text": "Refrigerate 2–3 DAYS: the apple butter migrates and the firm layers soften into velvet. Dust and slice thin: it is richer than it admits.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -42791,7 +42791,7 @@
         "text": "Ferment the ground batter overnight in a warm spot: it should double and smell like a bakery with opinions; salt after fermenting.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -43326,7 +43326,7 @@
         "text": "Soak the oats in the milk (and juice, if going classical) overnight in the fridge.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -45605,14 +45605,14 @@
         "text": "Blend the adobo; strain it; marinate the beef in it overnight if you can.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
         "text": "Sear the meat; pour over the adobo and stock; braise covered at 150°C or a bare simmer 3–3.5 h until it shreds at a glance.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 12600,
         "estimated": true
       },
       {
@@ -46638,7 +46638,7 @@
         "text": "Aromatics in; stock to nearly cover; the lowest simmer or a 150°C oven, lid on, 3–3.5 h (a pressure cooker earns its keep here at 50 min).",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 12600,
         "estimated": true
       },
       {
@@ -48073,7 +48073,7 @@
         "text": "Cool; re-lid; store in a cold cupboard 4–6 weeks, feeding it a spoon of brandy weekly: the pudding matures like the season's patience.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -48193,7 +48193,7 @@
         "text": "THE RITUAL: brush the hot loaf with all the melted butter until it drinks every drop; bury in icing sugar; cool; sugar again. Wrap and REST 2–3 weeks: young stollen is bread; aged stollen is Christmas.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -48278,8 +48278,8 @@
       {
         "text": "Rich dough with the zest and azahar; knead until silk; rise 1.5–2 h: enriched dough is slow and unhurried, like the season.",
         "durationSec": 7200,
-        "handsOnSec": 7440,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 7200,
         "estimated": true
       },
       {
@@ -48622,7 +48622,7 @@
         "text": "OVERNIGHT: chill the whole pot. The fat lifts off in a sheet; the meat firms.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -48724,7 +48724,7 @@
         "text": "Marinate the pork overnight; soak and season the rice; prep all fillings into an assembly line.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -49291,7 +49291,7 @@
         "text": "Marinate the pork sheets in adobo overnight: every face painted.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -49532,7 +49532,7 @@
         "text": "Blend the marinade; massage over and UNDER the skin; refrigerate overnight: the soy and panca stain the bird to its name ('a la brasa' birds are famously mahogany-black at the edges).",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -49857,7 +49857,7 @@
         "text": "Knead the meat with garlic, salt and the soda water 5 full minutes until sticky and pale: the knead builds the spring; rest overnight in the fridge (non-negotiable; the texture forms in the cold).",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -49974,7 +49974,7 @@
         "text": "Marinate the sheets overnight; thread and pack them onto the skewer-and-onion stand into a dense cylinder.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -51047,7 +51047,7 @@
         "text": "Bury the fillets in it; refrigerate 2–3 days, turning once a day: the miso cures, seasons and sweetens to the bone.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -52501,7 +52501,7 @@
         "text": "Chill overnight, uncovered. Slice with a hot wet knife, wiped between cuts. Dense, ivory, level as a lake: that is New York.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -55320,7 +55320,7 @@
         "text": "Season with salt, white pepper, and a dusting of paprika. Rest overnight in the fridge if you can.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -56028,7 +56028,7 @@
         "text": "Cover the corned beef with cold water, add bay and peppercorns, and simmer very gently 2.5 hours until a fork slides in easily. Never let it boil hard.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -57666,7 +57666,7 @@
         "text": "Strain and chill thoroughly, ideally overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -59234,7 +59234,7 @@
         "text": "Rest the dough in the fridge at least an hour; overnight is better.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -59467,7 +59467,7 @@
         "text": "Return the beef with stock, bay, and thyme. Cover and braise at 150C for 2.5 hours.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -64438,7 +64438,7 @@
         "text": "Pour into loaf pans, cool, and chill overnight until solid.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -64885,7 +64885,7 @@
         "text": "Simmer the tripe with the bone and water 2.5 hours until tender, skimming. Lift the tripe out, cut into strips, and strain the broth.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -67570,7 +67570,7 @@
         "text": "Cool completely in the poaching liquid, then chill overnight. Slice cold, thin, showing the green swirl.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -70594,7 +70594,7 @@
         "text": "Pack into a loaf pan, cool, and chill overnight until firm.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -74828,7 +74828,7 @@
         "text": "Cool, then chill overnight. Run a knife around the edge and invert onto a plate so the caramel floods over.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -76153,7 +76153,7 @@
         "text": "Bake the cornbread in a hot cast-iron skillet and let it go stale overnight; crumble it with the torn white bread.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -77114,7 +77114,7 @@
         "text": "Brine the chicken in buttermilk and hot sauce overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -79156,7 +79156,7 @@
         "text": "Brine the chicken in buttermilk overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -80062,8 +80062,8 @@
       {
         "text": "Simmer uncovered 1.5-2 hours, stirring, until dark and slightly thickened but still loose.",
         "durationSec": 7200,
-        "handsOnSec": 7440,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 7200,
         "estimated": true
       },
       {
@@ -80208,7 +80208,7 @@
         "text": "Season boldly: it dulls once cold. Pack into loaf pans and chill overnight until solid.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -83330,7 +83330,7 @@
         "text": "Simmer the chicken, beef, and pork in the water with the bay 2.5 hours until all fall apart. Lift out, shred, discard bones, and keep the broth.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -86466,7 +86466,7 @@
         "text": "Mix the riced potato with the melted butter, cream, salt, and sugar, then chill overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -90004,7 +90004,7 @@
         "text": "Mix the riced potato with the melted butter, cream, salt, and sugar, then chill overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -90129,7 +90129,7 @@
         "text": "Return the roast with stock, bay, and thyme. Cover and braise at 150C for 2.5 hours.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -93314,7 +93314,7 @@
         "text": "Brine the chicken in buttermilk overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -96118,7 +96118,7 @@
         "text": "Rest in the fridge overnight to develop flavor and dry the casing.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -96804,9 +96804,9 @@
       {
         "text": "Braise at 160C for 2.5-3 hours until the pork is falling apart and the sauce is deep and thick.",
         "durationSec": 10800,
-        "handsOnSec": 240,
+        "handsOnSec": 0,
         "unattendedSec": 10800,
-        "estimated": true
+        "estimated": false
       },
       {
         "text": "Stir in the vinegar and season. Serve with rice, beans, or tortillas.",
@@ -103938,7 +103938,7 @@
         "text": "Rub the roast all over with salt, pepper, garlic, herbs, and oil and rest it uncovered in the fridge overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -103952,7 +103952,7 @@
         "text": "Drop to 120C and roast slowly to an internal 52C for medium-rare, about 2.5 hours. Use a thermometer, not a clock.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -104538,7 +104538,7 @@
         "text": "Strain through a jelly bag overnight without squeezing: squeezing clouds the jelly.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -105285,7 +105285,7 @@
         "text": "Stir in the minced ham, nutmeg, salt, and pepper. Spread in a tray, cover, and chill overnight until firm.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -110694,7 +110694,7 @@
         "text": "Return the meat with the stock, juniper, bay, and thyme. Cover and braise at 150C for 2.5 hours.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -111126,9 +111126,9 @@
       {
         "text": "Ferment at 18 to 20C for 2 to 4 days until it tastes sour and fizzes against the tongue, then refrigerate.",
         "durationSec": null,
-        "handsOnSec": 240,
-        "unattendedSec": 0,
-        "estimated": true
+        "handsOnSec": 0,
+        "unattendedSec": 36000,
+        "estimated": false
       }
     ],
     "note": "The salting is the whole technique. It draws water out by osmosis until the cell walls go limp, which is why a ready stem folds instead of snapping, and it leaves the cabbage salty enough that lactobacillus can work while almost nothing else can. That selective pressure is what makes fermentation safe rather than lucky. Keep everything under the brine: the spoilage organisms that ruin a jar are aerobic, and a leaf floating in air is where they start. Bubbles and a clean sour smell mean it is working; fuzz on a dry surface means something was left exposed.",
@@ -111234,7 +111234,7 @@
         "text": "Ferment at 18 to 22C for 2 to 4 weeks, releasing pressure every few days. Taste weekly and refrigerate when it is sour enough.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -111333,7 +111333,7 @@
         "text": "Leave at room temperature 7 to 10 days, stirring daily; it is ready when the grains are soft, the liquid is cloudy, and it smells of sweet chestnut.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -111557,7 +111557,7 @@
         "text": "Strain through muslin without pressing, chill overnight, and lift the fat cap off.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -112114,7 +112114,7 @@
         "text": "Whisk the teff into the 750 g water until lump free and about the thickness of double cream. Cover loosely and leave at 22-25C (72-77F) for 3 days, each morning pouring off the grey liquid that has risen and stirring the batter down.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -113130,7 +113130,7 @@
         "text": "Blanch the pork skin and wings 3 minutes and rinse, then simmer with the 1.6L water, ginger and spring onion at a bare tremble for 3 hours. Strain and chill overnight: it must set firm enough to cut in clean cubes, with no wobble.",
         "durationSec": 180,
         "handsOnSec": 240,
-        "unattendedSec": 10980,
+        "unattendedSec": 39780,
         "estimated": true
       },
       {
@@ -114364,7 +114364,7 @@
         "text": "Stir in cumin, paprika, oregano and the 25g flour, cook 2 minutes, add the stock, and simmer until a spoon drawn through leaves a track that closes slowly. Cool, then chill overnight: the pino has to be cold and set.",
         "durationSec": 120,
         "handsOnSec": 360,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -114614,7 +114614,7 @@
         "text": "For fizz, decant into pressure-rated swing-tops with 10 percent fruit juice, leave 2 to 3 days at room temperature, burping one bottle daily as a gauge, then refrigerate to stop it.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -115039,7 +115039,7 @@
         "text": "They are ready when a cut pickle is translucent to the centre with no pale opaque core and the skin has gone from bright green to olive, 7 to 14 days. Jar and refrigerate.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -115620,8 +115620,8 @@
       {
         "text": "Simmer covered at a bare tremble for 2.5 to 3 hours, until a strip gives with no spring when you press it and the sauce coats the tripe.",
         "durationSec": 10800,
-        "handsOnSec": 11040,
-        "unattendedSec": 0,
+        "handsOnSec": 240,
+        "unattendedSec": 10800,
         "estimated": true
       },
       {
@@ -115862,15 +115862,15 @@
       {
         "text": "Cover the ears with cold water with the onion, bay, peppercorns, vinegar and salt, and simmer very gently for 2.5 to 3 hours, until a skewer meets no resistance at the thick base.",
         "durationSec": 10800,
-        "handsOnSec": 240,
+        "handsOnSec": 0,
         "unattendedSec": 10800,
-        "estimated": true
+        "estimated": false
       },
       {
         "text": "Lift them out, lay them flat between two paper-lined trays, weight with 2 kg and refrigerate overnight until firm and cold.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -116947,7 +116947,7 @@
         "text": "Wait 4 weeks minimum. It is ready when the raw vinegar sting has rounded and the cauliflower has gone translucent at the edge.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -117084,7 +117084,7 @@
         "text": "Cover with cloth and leave in sun or a warm window 7-10 days, shaking daily, until the mango is amber and yields to a fingernail. Seal and keep a year.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -117865,7 +117865,7 @@
         "text": "Chill overnight and lift off the set fat cap. The stock beneath should wobble like a soft jelly; if it does not, you had too little collagen or too much water.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -119148,7 +119148,7 @@
         "text": "Weigh it every few days. It is finished at 30% loss from that post-cure weight, usually 10 to 21 days, when the thick end feels like the heel of your hand.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -119259,7 +119259,7 @@
         "text": "Cure at 4C (39F) for 12 days, flipping the bag daily so the liquor washes both ends.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -119391,7 +119391,7 @@
         "text": "Rub the cure into every face, seal in a bag or covered tray, and refrigerate 7 days at 4C (39F), turning daily.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -119404,9 +119404,9 @@
       {
         "text": "Give it 3 to 5 weeks, until it has lost 30% of its weight and the lean seam at the thick end is firm under a thumb.",
         "durationSec": null,
-        "handsOnSec": 240,
-        "unattendedSec": 0,
-        "estimated": true
+        "handsOnSec": 0,
+        "unattendedSec": 36000,
+        "estimated": false
       },
       {
         "text": "Wipe any bloom off with a vinegar cloth, wrap in paper, and keep it in the fridge, cutting only what you need.",
@@ -119501,7 +119501,7 @@
         "text": "By day 7 the loin should be stiff, amber at the edge and about half its starting weight. Rack it another 5 days in a cold airy place if you want it board hard.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -119742,7 +119742,7 @@
         "text": "Toss the pork and back fat with the salt and spices and leave in the fridge overnight, a short cure rather than a long one.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -119777,7 +119777,7 @@
         "text": "Pack into jars, pressing out air pockets, seal with 5 mm of melted fat, and keep 3 days before eating.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -119883,7 +119883,7 @@
         "text": "Weigh the batch daily. Medium biltong, still red in the middle, is 50% weight loss and takes 3 to 4 days. Dry sticks are 60%.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -121808,7 +121808,7 @@
         "text": "Cool completely and jar with the oil covering the solids by 5 mm; it keeps 3 weeks refrigerated and tastes better after two days.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -122591,7 +122591,7 @@
         "text": "Press with a board and a 2 kg weight, cool, then refrigerate overnight; turn out, cut into bars and fry in the oil over medium heat until all four long faces are glassy and crisp.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -122957,9 +122957,9 @@
       {
         "text": "Rub the fish with 1.5 tsp turmeric and 1.5 tsp salt and leave 15 minutes until the surface goes tacky.",
         "durationSec": 900,
-        "handsOnSec": 1140,
+        "handsOnSec": 900,
         "unattendedSec": 0,
-        "estimated": true
+        "estimated": false
       },
       {
         "text": "Heat the mustard oil until the raw smell flattens and a haze lifts, then fry the steaks over a high flame, 2 minutes a side, and do not touch them until each piece releases itself from the pan and shows a set tan crust. Lift out.",
@@ -128169,7 +128169,7 @@
         "text": "Leave them to cool in the liquid overnight, then lift them out and slice 5 mm thick.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -130886,7 +130886,7 @@
         "text": "Soak the dried sea cucumbers in cold water for 3 days in a scrupulously clean bowl, changing the water twice daily and giving them a 40 minute simmer on the second day. They are ready when they have swollen to four times their dry size and a finger sinks into the flank with a slight spring.",
         "durationSec": 2400,
         "handsOnSec": 240,
-        "unattendedSec": 2400,
+        "unattendedSec": 38400,
         "estimated": true
       },
       {
@@ -133058,9 +133058,9 @@
       {
         "text": "Soak the chana 8 hours in 1.5 litres of cold water with the bicarbonate: they are ready when each has doubled and splits cleanly instead of snapping.",
         "durationSec": 28800,
-        "handsOnSec": 240,
+        "handsOnSec": 0,
         "unattendedSec": 28800,
-        "estimated": true
+        "estimated": false
       },
       {
         "text": "Boil them in fresh water with the muslin bag of tea, the whole spices and 6 g salt for 45 minutes, until a chana crushes to a smooth paste against the roof of the mouth and the skins have stained near black; lift out the bag and the whole spices.",
@@ -134245,7 +134245,7 @@
         "text": "Cover and leave a full day before using; colour keeps bleeding out of the flakes overnight and the raw edge goes with it.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -147993,7 +147993,7 @@
         "text": "Simmer with the lid ajar until the lamb yields to a spoon, the beans are creamy and a slick of dark green oil stands on the surface, about 2.5 hours.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -153550,7 +153550,7 @@
         "text": "Chill overnight, then flood the top with clarified butter at 40C (104F) to a depth of 4 mm and set.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -157361,7 +157361,7 @@
         "text": "Layer them with the salt in a bowl and leave overnight, then drain off the brine that has collected and throw it away.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -157712,7 +157712,7 @@
         "text": "Cool the filling completely, ideally overnight in the fridge, until it can be spooned out in a solid block.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -157842,7 +157842,7 @@
         "text": "Grind the saltbush, salt, coriander and pepper together, work the mix into the scores with the oil, and leave the shoulder uncovered in the fridge overnight to dry the surface.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -159253,7 +159253,7 @@
         "text": "Mix the pickling salt, curing salt, sugar, savory, bay, garlic, mustard seed and half the pepper and coriander; rub it into every surface and into the seam between the muscles, then pack the brisket in a non-reactive tub, weight it and refrigerate 8 to 10 days, turning it daily, until a cut into the thickest part shows the same even pink right through.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -159267,7 +159267,7 @@
         "text": "Pat dry, press on the remaining pepper and coriander in a thick even crust, and leave the meat uncovered on a rack in the fridge overnight until the surface is dry and tacky to the finger.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -159399,7 +159399,7 @@
         "text": "Cover the peas with cold water by 8 cm and leave them overnight, then drain.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -160316,7 +160316,7 @@
         "text": "Soak the beans overnight in the cold water with the halved pepper; do not drain them, that black liquor is the body of the dish.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -160344,7 +160344,7 @@
         "text": "Take off the heat and stir in the vinegar, the vino seco and the sugar; cool, refrigerate overnight and reheat gently to serve over white rice.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -167916,7 +167916,7 @@
         "text": "Rinse samp and beans separately through several changes of cold water until it runs clear, then soak each overnight in plenty of cold water; the samp will swell to roughly three times its dry volume.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -168497,7 +168497,7 @@
         "text": "Cover and rest in the fridge overnight so the salt and vinegar work through, then check the seasoning by frying a teaspoon of it.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -168510,9 +168510,9 @@
       {
         "text": "Hang the coils in a cool, dry place at 15C to 20C (59F to 68F) with a fan moving air over them, until the wors is hard at the surface and still gives faintly at the core, 2 to 4 days depending on thickness.",
         "durationSec": null,
-        "handsOnSec": 240,
-        "unattendedSec": 0,
-        "estimated": true
+        "handsOnSec": 0,
+        "unattendedSec": 36000,
+        "estimated": false
       }
     ],
     "note": "This is not jerky. Jerky is cooked dry with heat and usually smoke; wors and biltong are raw, and their safety comes from salt pulling water out while brown grape vinegar drops the surface pH below what spoilage organisms tolerate. So the drying stays cool with air always moving; warm still air grows mould in the folds first. Use beef or sheep fat only. Pork fat goes rancid within days of hanging and there is no rescuing it.",
@@ -169455,7 +169455,7 @@
         "text": "Marinate the three meats overnight in the cold with the wine, onion, leek, garlic, juniper, bay and thyme; by morning the meat looks grey and the wine has gone cloudy.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -170000,7 +170000,7 @@
         "text": "Marinate the four meats overnight in the beer, vinegar, onion, juniper, bay and pepper, turning once; the surfaces firm up and pale.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -170028,7 +170028,7 @@
         "text": "Weight the terrine lightly, chill overnight until fully set, then turn out and slice thick, serving at cellar temperature with frites and mustard.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -171199,7 +171199,7 @@
         "text": "Cool overnight, lift off the set fat cap, then reduce the sauce until it coats a spoon and warm the tail through in it.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -174102,7 +174102,7 @@
         "text": "Wrap the paste and rest it overnight in the fridge so the almond oil and the sugar syrup even out and it stops sticking to your hands.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -177042,7 +177042,7 @@
         "text": "Mix flour, salt, sugar, yeast and the cold eggs to a shaggy dough and work it 10 min until it slaps clean off the bowl. Add the butter piece by piece and keep working until the dough is glossy and stretches to a windowpane. Chill overnight.",
         "durationSec": 600,
         "handsOnSec": 840,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -177648,7 +177648,7 @@
         "text": "Soak the hock in cold water overnight, changing it twice, to pull the cure back out; the last water should taste barely salty.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -177676,7 +177676,7 @@
         "text": "Pack meat and green jelly into a terrine in alternating spoonfuls so the parsley marbles rather than layers, press lightly, and chill overnight until firm. Cut in thick slices and serve with pickles and bread.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -177945,7 +177945,7 @@
         "text": "Cut the tripe into 8 palm sized pieces and marinate overnight in the wine, the 40 g mustard, the juice of one lemon and the pepper, turning once.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -178269,7 +178269,7 @@
         "text": "Cool the pears in the syrup, then chill them in it overnight; the colour keeps travelling inward as they sit.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -180038,7 +180038,7 @@
         "text": "Marinate the beef overnight in the wine with the onions, carrots, garlic, cloves and bouquet; next day lift the meat out and dry every face of every piece, or it will steam rather than brown.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -181758,7 +181758,7 @@
         "text": "Toss the gizzards with the salt, pepper, garlic and herbs, cover and cure them in the fridge overnight, until they feel firm and faintly tacky.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -182671,9 +182671,9 @@
       {
         "text": "Bury the beef in the coarse salt in a non-reactive tray, refrigerate and turn it daily until it is stiff to the thumb all through, 4 to 5 days.",
         "durationSec": null,
-        "handsOnSec": 240,
-        "unattendedSec": 0,
-        "estimated": true
+        "handsOnSec": 0,
+        "unattendedSec": 36000,
+        "estimated": false
       },
       {
         "text": "Rinse the salt away, soak 2 hours in cold water, pat dry, then press the meat flat between boards under a 3 kg weight in the fridge for 24 hours.",
@@ -182686,21 +182686,21 @@
         "text": "Hang it in a cool draught, around 12C (54F), until dark, firm and about 40 percent lighter than its trimmed weight, 10 to 14 days.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
         "text": "Stir the ground fenugreek into the water and leave it overnight: it should swell into a tacky paste that holds a ridge. Beat in the garlic, both paprikas, cumin, allspice and fine salt.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
         "text": "Jacket the meat all over in a layer 3 mm thick and hang it again until the crust is dry to the knuckle and taps hard, about 1 week.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -184030,7 +184030,7 @@
         "text": "Soak the barley in cold water overnight and drain; this is not optional, it is the difference between creamy and crunchy.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -184308,7 +184308,7 @@
         "text": "Seal, cool to room temperature and leave at least 3 days before opening; the cubes should be translucent right through and still snap under a fork.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -184824,7 +184824,7 @@
         "text": "Spread it on a tray and refrigerate overnight; it is used only when cold and set.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -185821,7 +185821,7 @@
         "text": "Soak the dried peaches overnight in the 1.5 litres of water and keep that water; it is the body of the syrup.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -188781,7 +188781,7 @@
         "text": "Stir the cracked rye, flaxseed and sunflower seeds into the 500 ml water, cover, and leave overnight, until the kernels are plump and chew soft rather than gritty and no loose water is left.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -189124,7 +189124,7 @@
         "text": "Score the rind at 5 mm intervals, down through the fat but not into the meat, then leave the joint uncovered in the fridge overnight until the rind feels papery and dry.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -189516,7 +189516,7 @@
         "text": "Boil the potatoes in salted water until just tender, peel them while warm, then leave them uncovered in the fridge overnight so the surfaces dry out.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -191395,7 +191395,7 @@
         "text": "Toss with the epis, the rest of the juice, onion, thyme, salt and pepper and leave covered in the fridge; overnight is better than four hours.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -191986,7 +191986,7 @@
         "text": "Rub the beef with the epis and sour orange juice and leave it while you peel; overnight in the fridge is better.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -195539,23 +195539,23 @@
       {
         "text": "Soak the stockfish in a plastic or stainless tub of cold water at 4 to 8C, changing the water daily, for 5 days, until it has swollen to about three times its dry thickness and a corner gives under a fingernail.",
         "durationSec": null,
-        "handsOnSec": 240,
-        "unattendedSec": 0,
-        "estimated": true
+        "handsOnSec": 0,
+        "unattendedSec": 36000,
+        "estimated": false
       },
       {
         "text": "Wearing gloves and eye protection, add the sodium hydroxide to the 10 litres of cold water and never the reverse, since it heats sharply; submerge the fish and hold at cool room temperature for 2 days, until the flesh is translucent, slippery and wobbles like set jelly.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
         "text": "Lift the fish out with tongs into fresh cold water and soak a further 4 to 6 days, changing twice a day, until it smells of nothing, feels firm rather than soapy to the fingers, and a poached scrap tastes clean with no burn at the back of the throat.",
         "durationSec": null,
-        "handsOnSec": 240,
-        "unattendedSec": 0,
-        "estimated": true
+        "handsOnSec": 0,
+        "unattendedSec": 36000,
+        "estimated": false
       },
       {
         "text": "Salt the drained fish and leave 25 minutes; water beads on the surface and the flesh tightens.",
@@ -196149,7 +196149,7 @@
         "text": "Pack while still warm into an oiled mould, pressing out air pockets, then cool and chill overnight until firm enough to take a wire.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -196632,7 +196632,7 @@
         "text": "Soak the chuño in plenty of cold water overnight, changing the water twice, until a piece squeezed between finger and thumb gives all the way through with no hard core.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -196785,7 +196785,7 @@
         "text": "Soak the chalona and the 150 g of chuño in separate bowls of cold water overnight; next day rinse the chalona and tear it into strips, and rub the skins off the chuño, squeeze it dry and chop it.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -197214,7 +197214,7 @@
         "text": "Mix the pork with the chicha, panca, garlic, cumin, oregano, salt and pepper and leave it covered in the cold overnight; the meat should come out stained red through the outer centimetre.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -199130,7 +199130,7 @@
         "text": "Turn the oven off, wedge the door ajar and leave the cake inside for an hour, then chill overnight before cutting.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -199505,7 +199505,7 @@
         "text": "Stab the meat all over to the depth of the blade and push the paste into every cut, coat the exposed flesh, then lay the skin flap back loose and leave the skin itself bare. Refrigerate uncovered overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -200975,7 +200975,7 @@
         "text": "Turn your hand over to test it: the paste should cling upside down. Cover and rest it in the fridge overnight, since there is no casing to hold these together and the bicarbonate needs the time.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -201962,7 +201962,7 @@
         "text": "Soak the peas overnight in plenty of cold water, then drain and lift off any hulls and shrivelled peas floating on top.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -206428,7 +206428,7 @@
         "text": "Soak the beans overnight in cold salted water; salt in the soak helps the skins soften, so it is acid, not salt, that you hold back.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -206844,7 +206844,7 @@
         "text": "Chill overnight, run a knife round the rim, and invert onto a lipped plate; the caramel will have drawn water out of the custard and gone back to sauce.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -210660,7 +210660,7 @@
         "text": "Bake in a double lined 23 cm tin at 150C (300F) for 2 hours to 2.5 hours, until a skewer comes out with crumbs on it but no wet batter.",
         "durationSec": 7200,
         "handsOnSec": 0,
-        "unattendedSec": 25200,
+        "unattendedSec": 9000,
         "estimated": false
       },
       {
@@ -213104,7 +213104,7 @@
         "text": "Rub the legs with the salt, white pepper and mace, tuck the thyme, bay and garlic around them, and leave them covered in the fridge overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -213658,7 +213658,7 @@
         "text": "Box or bag them, refrigerate at 3C (37F), and turn them once a day for 7 days so the brine that forms bathes both faces.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -213679,7 +213679,7 @@
         "text": "Hang at 12C to 14C (54F to 57F) at 70 percent to 80 percent relative humidity until each breast has lost 30 percent of the weight it went into the smoker at, 2 weeks to 3 weeks. If the surface hardens and the loss stalls, vacuum bag the breast, leave it a week in the fridge to equalise, then hang it again. Slice paper thin across the grain. Once it has lost 30 percent, wrap it and keep it below 4C (39F): it holds three months whole, and two weeks once cut. A cellar only counts if it truly holds 12C to 14C (54F to 57F).",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -216947,7 +216947,7 @@
         "text": "Fold in the hazelnuts and sifted flour by hand, spread into two 22 cm circles on lined trays, and dry at 140C (285F) for 2 hours until they lift cleanly and sound hollow; leave them overnight.",
         "durationSec": 7200,
         "handsOnSec": 240,
-        "unattendedSec": 7200,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -217967,7 +217967,7 @@
         "text": "Stuff the casing without stretching it, twist into 20 cm lengths, prick any air pockets, and rest the sausages uncovered in the fridge overnight so the salt completes the bind and the surface dries.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -218378,7 +218378,7 @@
         "text": "Roast at 150C (300F) for 3 hours to 3.5 hours, until the centre of the loin reads 63C (145F) and a skewer slips through the belly wrapped around it.",
         "durationSec": 10800,
         "handsOnSec": 240,
-        "unattendedSec": 28800,
+        "unattendedSec": 12600,
         "estimated": true
       },
       {
@@ -218693,8 +218693,8 @@
       {
         "text": "Cook the tongue in a second pot of boiling water for 2.5 hours and peel the skin away while it is still too hot to hold comfortably; once cold it will not come off at all.",
         "durationSec": 18000,
-        "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "handsOnSec": 9240,
+        "unattendedSec": 0,
         "estimated": true
       },
       {
@@ -218960,7 +218960,7 @@
         "text": "Weigh the loin and write the number on a label; every decision from here is a percentage of it, and the curing salt is weighed on a scale that reads to 0.01 g, not a kitchen scale. Rub the salt and curing salt over every surface, seal it in a bag, and cure it at 3C (37F) for 10 days, turning it daily.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -218981,7 +218981,7 @@
         "text": "Hang it in a purpose built curing chamber, or a fridge fitted with a temperature controller and a humidifier, at 12C to 15C (54F to 59F) and 75 percent to 80 percent humidity until it has lost 35 percent of the weight on the label, 8 weeks to 12 weeks, weighing it once a week. A soft white bloom is normal and wipes off with a cloth dipped in vinegar; black, green or fuzzy growth, an ammoniacal or sour smell, or a soft spongy patch means the loin goes in the bin. If the loss stalls short of 35 percent, the humidity is too high.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -219096,14 +219096,14 @@
         "text": "Rub the racks all over with the coarse salt, pack them into a non metal tub with the rest of the salt between the layers, and leave them at 4C (39F) for 3 days, pouring off the brine that gathers each morning.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
         "text": "Rinse the salt off, pat the racks dry, and hang them in a cold, dry, airy place at 0C to 4C (32F to 39F) for 3 weeks, until they are stiff, dark and about a third lighter than they started. The surface must be dry to the touch within 48 hours; a sour or ammoniacal smell, or slime under the ribs, and the batch goes in the bin. Saw them down into single ribs.",
         "durationSec": 36000,
         "handsOnSec": 240,
-        "unattendedSec": 36000,
+        "unattendedSec": 72000,
         "estimated": true
       },
       {
@@ -219116,9 +219116,9 @@
       {
         "text": "Lay the birch sticks in a criss cross raft in the base of a heavy pot, pour the water in beneath them, pile the ribs on top, cover tightly and steam over low heat for 2.5 hours to 3 hours, adding hot water whenever the pot runs dry, until the meat slips off the bone.",
         "durationSec": 18000,
-        "handsOnSec": 240,
+        "handsOnSec": 0,
         "unattendedSec": 10800,
-        "estimated": true
+        "estimated": false
       },
       {
         "text": "Boil the swede and potatoes soft, mash them with the butter, pepper, nutmeg and a ladle of the salty pot liquid, and serve the ribs on top with the rest of that liquid poured over.",
@@ -219224,7 +219224,7 @@
         "text": "Lay the belly flat, trim it into a neat rectangle, and rub the salt, curing salt, sugar, allspice and white pepper over both faces. Stack the trimmings back on top, cover, and cure it flat in the fridge for 3 days, turning it daily and pouring off the brine.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
@@ -219375,7 +219375,7 @@
         "text": "Rub the haunch with the salt, juniper, allspice and pepper and leave it uncovered on a rack in the fridge overnight, until the surface is tacky rather than wet.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -220003,7 +220003,7 @@
         "text": "Salt and pepper the bird inside and out and leave it uncovered in the fridge overnight.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -220306,7 +220306,7 @@
         "text": "Marinate the boar overnight IN THE FRIDGE in the wine with the juniper, bay and peppercorns, then drain it, keep 300 ml of the marinade and dry the meat on cloth.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -220500,7 +220500,7 @@
         "text": "Cool it completely in the tin and chill it overnight before slicing.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       }
     ],
@@ -220944,7 +220944,7 @@
         "text": "Spread it out so it falls to room temperature within 2 hours, fold through the sesame seeds and spring onions, and if it is not eaten the same day cover and refrigerate it, where it keeps 4 days under its oil, then bring it back to cool room temperature to serve.",
         "durationSec": 7200,
         "handsOnSec": 7440,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -221231,7 +221231,7 @@
         "text": "Cover the jameed with the cold water and leave it in the fridge overnight, until it gives like wet clay; blend it and pass it through a sieve to a thin, pourable, chalk-white liquid.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -221388,7 +221388,7 @@
         "text": "Rub the goat all over with the salt, cover it and leave it in the fridge overnight so the salt travels to the bone.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -221546,7 +221546,7 @@
         "text": "Rub the lamb with the 25 g of salt and leave it uncovered in the fridge overnight, so the surface dries and the salt goes in.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -223200,7 +223200,7 @@
         "text": "Stuff into the casing without packing it tight, twist into 15 cm links and hang them in the fridge overnight so the colour deepens and the casing dries. There is no cure in these, and the hang has already spent a day of their life: grill within two days of stuffing, or freeze the links once the hang is done.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -224123,7 +224123,7 @@
         "text": "Wrap the whole torte tightly in baking paper and then foil and leave it somewhere cool for at least 3 days before slicing it thinly with a serrated knife.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],
@@ -224625,7 +224625,7 @@
         "text": "Simmer the cow foot with the halved onion, stock cube and 5 g of the salt in water to cover until a skewer slides through the skin with no resistance and the liquor is sticky on the lips, about 2.5 hours. Lift the meat out and keep 100 ml of the liquor.",
         "durationSec": 18000,
         "handsOnSec": 240,
-        "unattendedSec": 18000,
+        "unattendedSec": 9000,
         "estimated": true
       },
       {
@@ -225311,8 +225311,8 @@
       {
         "text": "Pour the marinade into a pan and boil it for a full minute before it goes anywhere near the roast, because it held raw lamb for 12 hours. Roast at 160C (325F), basting with the boiled marinade every 20 minutes, until the centre of the stuffing reads 74C (165F), 2 hours to 2.5 hours.",
         "durationSec": 36000,
-        "handsOnSec": 7560,
-        "unattendedSec": 54000,
+        "handsOnSec": 9480,
+        "unattendedSec": 36000,
         "estimated": false
       },
       {
@@ -225568,15 +225568,15 @@
         "text": "Submerge the brisket, weight it under a plate and hold it at 4C (39F) for 5 days, turning it daily.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       },
       {
         "text": "Rinse the meat, cover it with fresh cold water, bring it to the boil and tip that water away, then do it a second time before simmering in fresh water for 2.5 hours until a skewer slides out clean.",
         "durationSec": 18000,
-        "handsOnSec": 240,
-        "unattendedSec": 18000,
-        "estimated": true
+        "handsOnSec": 0,
+        "unattendedSec": 9000,
+        "estimated": false
       },
       {
         "text": "Drop the taro into the pot for the last 40 minutes.",
@@ -226132,7 +226132,7 @@
         "text": "Rub the lamb all over with it and leave it overnight in the fridge.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 28800,
         "estimated": true
       },
       {
@@ -226293,7 +226293,7 @@
         "text": "Cool it quickly and keep it in the fridge no longer than 3 days, bringing it back to a rolling boil every time you reheat it. It is better on the second day and better again on the third.",
         "durationSec": null,
         "handsOnSec": 240,
-        "unattendedSec": 0,
+        "unattendedSec": 36000,
         "estimated": true
       }
     ],

@@ -141,3 +141,54 @@ describe('the shipped corpus', () => {
 		expect(bad.map((b) => b.slug)).toEqual([]);
 	});
 });
+
+/**
+ * Two units the parser could not read at all.
+ *
+ * DECIMALS. The clause splitter cut on a bare full stop, so "simmer 1.5 h"
+ * became "simmer 1" and "5 h" and the step booked FIVE HOURS. Thirty-three
+ * recipes said it that way and every one shipped 300 minutes: the digits after
+ * the point were being read as a fresh duration, not rounded away.
+ *
+ * DAYS, WEEKS, OVERNIGHT. 140 steps across 125 recipes stated a wait in units
+ * DURATION had never seen and booked ZERO for it - guanciale hung for five
+ * weeks and the service split said nothing at all.
+ */
+describe('durations the parser could not read', () => {
+	it('reads a decimal instead of splitting on it', () => {
+		expect(min(stepService('simmer 1.5 h').unattendedSec)).toBe(90);
+		// The top of a range, as everywhere else in this module.
+		expect(min(stepService('simmer 2–2.5 h until sliding off the bone').unattendedSec)).toBe(150);
+		expect(min(stepService('oven 150°C, 2.5 h, lid ajar').unattendedSec)).toBe(150);
+	});
+
+	it('reads a wait stated in days or weeks, held to the ceiling', () => {
+		expect(min(stepService('Cure in the fridge 3 days, turning daily.').unattendedSec)).toBe(600);
+		expect(min(stepService('Hang in a cool place for 1 week.').unattendedSec)).toBe(600);
+	});
+
+	it('values overnight at eight hours', () => {
+		const r = stepService('Season meat with curry powder and aromatics; marinate overnight.');
+		expect(min(r.unattendedSec)).toBe(480);
+	});
+
+	/**
+	 * Measured, not cautious-by-default: of the 26 clauses pairing overnight
+	 * with a number, most are a RANGE ("30 min to overnight"), an ALTERNATIVE
+	 * ("rise 90 min, or cold-ferment overnight") or a RESTATEMENT ("overnight,
+	 * 12 hours"), and adding to any of those would over-count - the direction
+	 * item 18 spent its whole effort undoing.
+	 */
+	it('does not add overnight to a clause that already states a number', () => {
+		expect(min(stepService('Marinate chicken 30 min to overnight').unattendedSec)).toBe(30);
+		expect(min(stepService('Keep it at 40-45C overnight, 12 hours, until it foams').unattendedSec)).toBe(600);
+	});
+
+	/** The item-18 guards, unmoved by any of it. */
+	it('still leaves short attended work alone', () => {
+		expect(
+			min(stepService('Make a dark roux: whisk oil and flour over medium 30-45 min to milk-chocolate brown').handsOnSec)
+		).toBeGreaterThanOrEqual(45);
+		expect(min(stepService('Pull the taffy with buttered hands, stretching and folding, for 15-20 min').handsOnSec)).toBe(20);
+	});
+});
