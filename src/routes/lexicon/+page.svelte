@@ -339,10 +339,14 @@
 	}
 	.chip:hover { border-color: var(--turmeric); }
 	select.chip { appearance: none; max-width: 260px; }
-	.due {
+	.count { font-size: var(--t-small); color: var(--muted); font-variant-numeric: oldstyle-nums; margin-left: auto; }
+	/* .count.due, not .due: a bare `.due` here tied .count on specificity and
+	   lost the tie on source order, so the due-terms pill rendered --muted,
+	   identical to the plain count beside it. Two classes beats one regardless
+	   of which is declared first. */
+	.count.due {
 		color: var(--turmeric-deep);
 	}
-	.count { font-size: var(--t-small); color: var(--muted); font-variant-numeric: oldstyle-nums; margin-left: auto; }
 
 	.flash {
 		border: 1px solid var(--turmeric); background: var(--card);

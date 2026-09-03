@@ -1169,7 +1169,13 @@
 		font-size: var(--t-lede);
 		color: var(--ink);
 	}
-	.inow {
+	/*
+	 * .mono (below) sets color too, at equal specificity - a bare `.inow` here
+	 * lost that tie on source order, so a real unit price and "not priced"
+	 * rendered in the identical colour. `.inow.mono` outranks `.mono` on
+	 * specificity instead of on order, so it wins whichever file it moves to.
+	 */
+	.inow.mono {
 		color: var(--ink);
 	}
 	.inow.muted {

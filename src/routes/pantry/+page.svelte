@@ -4,6 +4,7 @@
 	import { fold, effectiveMonth } from '$lib/filter';
 	import { prefs } from '$lib/stores/prefs.svelte';
 	import { session } from '$lib/stores/session.svelte';
+	import { matchPantry, pantryCulprit } from '$lib/pantryMatch';
 	import type { Recipe } from '$lib/types';
 
 	let { data } = $props();
@@ -39,32 +40,21 @@
 
 	const selected = $derived(new Set(session.pantry));
 
-	const results = $derived.by(() => {
-		if (!selected.size) return [];
-		const need = Math.min(minMatches, selected.size);
-		const scored = [];
-		// Family recipes match too: their pantryItems were derived with the same
-		// keyword tables when they were saved (see authoring.ts).
-		const pool = session.familyRecipes.length
-			? [...recipes, ...session.familyRecipes]
-			: recipes;
-		for (const r of pool) {
-			if (course && r.course !== course) continue;
-			if (vegOnly && !r.diet.vegetarian) continue;
-			const items = data.recipeItems[r.slug] ?? (r as Recipe).pantryItems ?? [];
-			const hits = items.filter((l) => selected.has(l));
-			if (!hits.length || hits.length < need) continue;
-			const missing = items.filter((l) => !selected.has(l)).slice(0, 4);
-			scored.push({ r, hits, missing });
-		}
-		scored.sort(
-			(a, b) =>
-				b.hits.length - a.hits.length ||
-				a.missing.length - b.missing.length ||
-				a.r.minutes - b.r.minutes
-		);
-		return scored.slice(0, 60);
-	});
+	// Family recipes match too: their pantryItems were derived with the same
+	// keyword tables when they were saved (see authoring.ts).
+	const pool = $derived(
+		(session.familyRecipes.length ? [...recipes, ...session.familyRecipes] : recipes) as Recipe[]
+	);
+	const itemsOf = (r: Recipe) => data.recipeItems[r.slug] ?? r.pantryItems ?? [];
+
+	const matchOpts = $derived({ selected, minMatches, course, vegOnly });
+	const match = $derived(matchPantry(pool, itemsOf, matchOpts));
+	const results = $derived(match.shown);
+	// Only worth computing once the list is actually empty: it re-runs the
+	// match up to three times more, once per relaxed control.
+	const culprit = $derived(
+		selected.size && !match.matched.length ? pantryCulprit(pool, itemsOf, matchOpts) : null
+	);
 
 	const MONTHS = [
 		'', 'January', 'February', 'March', 'April', 'May', 'June',
@@ -151,7 +141,14 @@
 				<label class="chip inline">
 					<input type="checkbox" bind:checked={vegOnly} /> Vegetarian only
 				</label>
-				<span class="count">{selected.size} selected · {results.length} dishes</span>
+				<span class="count">
+					{selected.size} selected ·
+					{#if match.matched.length > results.length}
+						{results.length} of {match.matched.length} dishes
+					{:else}
+						{results.length} dishes
+					{/if}
+				</span>
 			</div>
 
 			{#if results.length}
@@ -169,10 +166,29 @@
 						</li>
 					{/each}
 				</ul>
-			{:else}
+			{:else if !selected.size}
 				<p class="empty">
 					Select a few ingredients from the shelf; proteins and produce steer the match hardest.
 					The more you tick, the smarter the ranking.
+				</p>
+			{:else if culprit}
+				<p class="empty">
+					Nothing matches what’s ticked with
+					{#if culprit.key === 'minMatches'}“{minMatches}+ matches” required
+					{:else if culprit.key === 'course'}“{course}” selected
+					{:else}Vegetarian only on
+					{/if}.
+					{#if culprit.key === 'minMatches'}
+						Try “Any match” for {culprit.restored} {culprit.restored === 1 ? 'dish' : 'dishes'}.
+					{:else if culprit.key === 'course'}
+						Drop the course filter for {culprit.restored} {culprit.restored === 1 ? 'dish' : 'dishes'}.
+					{:else}
+						Drop Vegetarian only for {culprit.restored} {culprit.restored === 1 ? 'dish' : 'dishes'}.
+					{/if}
+				</p>
+			{:else}
+				<p class="empty">
+					No dish in the guide matches what’s ticked. Try a different ingredient.
 				</p>
 			{/if}
 		</div>

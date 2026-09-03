@@ -100,3 +100,32 @@ describe('absence must never read as clearance', () => {
 		expect(noodles.map((r) => r.slug)).toEqual([]);
 	});
 });
+
+/**
+ * "Reviewed by hand" renders under the allergen screen whenever confidence
+ * isn't 'derived'. It used to fire whenever a recipe carried ANY diet
+ * override, so a ruling about `vegetarian`/`containsMeat` — neither of them a
+ * screened allergen — printed "Reviewed by hand" over an allergen list no
+ * human had looked at.
+ */
+describe('"Reviewed by hand" means a human ruled on a screened allergen', () => {
+	it('a ruling that never touches a CHECKED_FLAGS key stays derived', () => {
+		for (const slug of ['arizona-sonoran-enchiladas', 'new-mexico-red-chile-enchiladas']) {
+			const r = recipes.find((x) => x.slug === slug);
+			expect(r, `the corpus no longer has ${slug}`).toBeDefined();
+			expect(r!.diet.confidence, `${slug} was ruled on vegetarian/meat, not an allergen`).toBe(
+				'derived'
+			);
+		}
+	});
+
+	it('a ruling that pins a screened allergen stays reviewed', () => {
+		for (const slug of ['pimento-cheese', 'kitsune-udon']) {
+			const r = recipes.find((x) => x.slug === slug);
+			expect(r, `the corpus no longer has ${slug}`).toBeDefined();
+			expect(r!.diet.confidence, `${slug}'s override sets containsFish, a CHECKED_FLAGS key`).toBe(
+				'reviewed'
+			);
+		}
+	});
+});

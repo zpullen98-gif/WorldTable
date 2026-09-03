@@ -50,6 +50,7 @@ import { advanceWait, QUICK_MINUTES } from './derive/advance.mjs';
 import { derivePantryMap, narrowBlob } from './derive/pantry.mjs';
 import MiniSearch from 'minisearch';
 import { miniOptions } from '../src/lib/search-config.mjs';
+import { CHECKED_FLAGS } from '../src/lib/allergens.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW = join(ROOT, 'src', 'lib', 'data', 'raw');
@@ -422,7 +423,21 @@ R.forEach((r, i) => {
 	const region = classifyChapter(r.c);
 	const ov = OVERRIDES.recipes?.[slug] ?? {};
 
-	const diet = { ...deriveDiet(r, blobs[i]), ...(ov.diet ?? {}) };
+	/*
+	 * "Reviewed by hand" (RecipeDetailView.svelte) renders under the allergen
+	 * screen whenever confidence isn't 'derived', but an override's OWN
+	 * `confidence: 'reviewed'` used to mean "a human touched this recipe's
+	 * diet block at all" - vegetarian and containsMeat included, neither of
+	 * them a screened allergen (CHECKED_FLAGS, src/lib/allergens.ts). Two
+	 * enchiladas ruled only on stock and the vegetarian filter still printed
+	 * "Reviewed by hand" over an allergen list nobody had reviewed. Confidence
+	 * is computed from what the override actually touches, not trusted from
+	 * the override's own say-so.
+	 */
+	const dietOverride = ov.diet ?? {};
+	const dietTouchesAllergenScreen = Object.keys(dietOverride).some((k) => CHECKED_FLAGS.includes(k));
+	const diet = { ...deriveDiet(r, blobs[i]), ...dietOverride };
+	if (!dietTouchesAllergenScreen) diet.confidence = 'derived';
 	const flavor = deriveFlavor(blobs[i], NOTE_DEFS);
 	/*
 	 * techniquesDrop is SUBTRACTIVE, and that is the difference that matters.
