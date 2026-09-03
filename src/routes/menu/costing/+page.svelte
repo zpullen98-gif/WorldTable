@@ -1167,10 +1167,10 @@
 	.iname {
 		font-family: var(--display);
 		font-size: var(--t-lede);
-		color: var(--text);
+		color: var(--ink);
 	}
 	.inow {
-		color: var(--text);
+		color: var(--ink);
 	}
 	.inow.muted {
 		color: var(--ink-soft);
@@ -1216,6 +1216,11 @@
 		font-size: var(--t-small);
 		color: var(--ink-soft);
 	}
+	/* This read `color: var(--text)` - --text is tokens.css's FONT stack, not a
+	   colour - so the declaration was invalid-at-computed-value-time and the
+	   measured-yield input inherited .iyield's --ink-soft instead of --ink. The
+	   plain `input` rule already gets this right two hundred lines below; this
+	   higher-specificity rule was actively taking it away. */
 	.iyield input {
 		width: 6.5rem;
 		font: inherit;
@@ -1223,7 +1228,7 @@
 		border: 1px solid var(--line);
 		border-radius: var(--radius);
 		background: var(--paper-raised);
-		color: var(--text);
+		color: var(--ink);
 	}
 	.warn,
 	.incomplete,

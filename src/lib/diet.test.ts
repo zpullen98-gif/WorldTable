@@ -65,6 +65,21 @@ describe('substring collisions', () => {
 	it('still reads arctic char as fish', () => {
 		expect(deriveDiet(recipe('Roast Char', ['2 arctic char fillets'])).containsFish).toBe(true);
 	});
+
+	/**
+	 * Speck is cured Tyrolean pork, and the PORK list carries the bare word for
+	 * it - but "a speck of X" is the ordinary English sense, a tiny amount, and
+	 * Pavlova's "not a speck of yolk" once shipped containsPork:true for a
+	 * meringue with no pork anywhere in it.
+	 */
+	it('does not read "a speck of" as cured pork', () => {
+		const meringue = recipe('Pavlova', ['4 egg whites, not a speck of yolk', 'caster sugar']);
+		expect(deriveDiet(meringue).containsPork).toBe(false);
+	});
+
+	it('still reads speck itself as pork', () => {
+		expect(deriveDiet(recipe('Speck-Wrapped Trout', ['4 slices speck'])).containsPork).toBe(true);
+	});
 });
 
 describe('the vocabulary widening: words the tables never learned', () => {

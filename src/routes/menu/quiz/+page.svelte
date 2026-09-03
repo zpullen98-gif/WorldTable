@@ -191,7 +191,7 @@
 			<p class="empty">
 				The quiz needs at least two dishes it can ask about: a dish counts once it has a
 				description, two or more ingredient lines, or a price no other dish on the menu shares.
-				Fill them in on My Menu<a href="{base}/menu">My Menu</a>. The flashcards work meanwhile.
+				Fill them in on <a href="{base}/menu">My Menu</a>. The flashcards work meanwhile.
 			</p>
 			<div class="tools">
 				<button class="chip" onclick={startDeck}>Study mode ▸ flashcards</button>

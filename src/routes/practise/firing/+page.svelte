@@ -246,7 +246,7 @@
 	}
 	.clock {
 		font-size: var(--t-lede);
-		color: var(--text);
+		color: var(--ink);
 	}
 	/* Urgency is carried by the NUMBER falling, reinforced by weight, never by
 	   colour alone. */
@@ -258,7 +258,7 @@
 		font-family: var(--display);
 		font-size: var(--t-lede);
 		margin: 0 0 10px;
-		color: var(--text);
+		color: var(--ink);
 	}
 	.options {
 		display: grid;
@@ -271,7 +271,7 @@
 		border: 1px solid var(--line);
 		border-radius: var(--radius);
 		background: var(--card);
-		color: var(--text);
+		color: var(--ink);
 		cursor: pointer;
 		display: grid;
 		gap: 2px;
@@ -312,7 +312,7 @@
 	.score {
 		font-family: var(--display);
 		font-size: var(--t-lede);
-		color: var(--text);
+		color: var(--ink);
 		margin: 0 0 6px;
 	}
 	.result p {
@@ -337,7 +337,7 @@
 		border: 1px solid var(--line);
 		border-radius: var(--radius);
 		background: var(--paper-raised);
-		color: var(--text);
+		color: var(--ink);
 		cursor: pointer;
 	}
 	.primary:hover,

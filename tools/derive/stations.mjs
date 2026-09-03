@@ -75,6 +75,7 @@
  * spells its own name unaccented. The judgement is re-made: the exclusion is
  * lifted and the label is drilled, following the Pleating dumplings precedent.
  */
+/** @type {Record<string, string[]>} label -> the recipe slugs that made it an exclusion. */
 export const UNDRILLED = {};
 
 /**
@@ -126,8 +127,25 @@ export const STATIONS = [
 	}
 ];
 
-/** Not a station. Gated so the page can quote the guide on what it means. */
+/**
+ * Not a station. Gated so the page can quote the guide on what it means.
+ *
+ * TWO constants, deliberately, where there used to be one doing both jobs.
+ * TOURNANT_EVIDENCE is a GATE PROBE: a prefix substring, matched with
+ * `.includes()` at the build check below, robust to punctuation drifting
+ * around it. TOURNANT_QUOTE is DISPLAY COPY: the whole sentence, for a page
+ * to render inside quotation marks. The two used to be the same string, with
+ * the page's template bolting a literal ")" onto the end of the probe to
+ * fake a closing paren - which silently dropped the guide's actual second
+ * clause, "often the best pure cook in the building", the whole reason the
+ * label is worth calling out (see stations.ts). `includes()` on a PREFIX
+ * passes for any superstring, so the gate could never have noticed.
+ */
 export const TOURNANT_EVIDENCE = 'TOURNANT (the swing cook who works every station';
+/** The full sentence, matching src/lib/data/lexicon.json's post-dash-sweep
+ *  punctuation verbatim (a comma, not the sealed original's em dash). */
+export const TOURNANT_QUOTE =
+	'TOURNANT (the swing cook who works every station, often the best pure cook in the building)';
 
 /**
  * Technique -> station. Authored, and a claim about WORK rather than cuisine.
@@ -368,7 +386,7 @@ export function buildStations(lexicon, techniques) {
 					s.techniques.reduce((n, t) => n + (recipeCount.get(t) ?? 0), 0)
 				])
 			),
-			tournant: TOURNANT_EVIDENCE,
+			tournant: TOURNANT_QUOTE,
 			foundation: Object.keys(FOUNDATION),
 			undrilled: Object.keys(UNDRILLED)
 		},

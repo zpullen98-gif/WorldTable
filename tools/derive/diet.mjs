@@ -303,7 +303,15 @@ const EXCEPTIONS = [
 	// vegetarian gate is for.
 	"goat's milk", 'goats milk', 'goat milk', 'duck egg', 'duck eggs',
 	// egg-shaped, not egg
-	'eggplant', 'eggplants', 'egg noodles'
+	'eggplant', 'eggplants', 'egg noodles',
+	// Speck is cured Tyrolean pork, and the PORK list carries the bare word for
+	// it. "Not a speck of yolk" (pavlova) uses the ordinary English sense - a
+	// tiny amount - and is the corpus's only ingredient-line use of the bare
+	// word, which is why one meringue shipped containsPork:true. 'speck of'
+	// rather than bare 'speck', because that is the shape the ordinary sense
+	// actually takes ("a speck of", "not a speck of"); the cured meat is never
+	// written that way.
+	'speck of'
 ];
 
 const escape = (/** @type {string} */ s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

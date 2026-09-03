@@ -259,6 +259,39 @@ test('the chapter rail sums to the grid, filtered and unfiltered', async ({ page
 });
 
 /**
+ * The active chapter's own group can be collapsed.
+ *
+ * The auto-open $effect both READ and WROTE the same `open` state, so it sat
+ * in its own dependency list: toggle() reassigning `open` re-triggered the
+ * effect, which immediately re-added the active chapter's group before the
+ * next paint. Tapping the header of the group holding the current chapter did
+ * nothing - aria-expanded never left "true" - while every OTHER group
+ * collapsed normally, which is what hid it in casual use. Reachable on all
+ * 171 chapter pages; Vermont is under "United States", the group hit hardest
+ * (52 chapters).
+ */
+test('the active chapter’s own group collapses like any other', async ({ page }) => {
+	await goto(page, '/chapter/vermont');
+	// Selected by TEXT alone, not by aria-expanded: the same locator has to keep
+	// resolving to this button after its state changes, which a locator that
+	// also filters on aria-expanded="true" cannot do once it flips to false.
+	const active = page.locator('.rghead').filter({ hasText: 'United States' });
+	await expect(active).toHaveCount(1);
+	await expect(active).toHaveAttribute('aria-expanded', 'true');
+
+	await active.click();
+	await expect(active).toHaveAttribute('aria-expanded', 'false');
+
+	// Stays collapsed - the old bug re-opened it within the same flush.
+	await page.waitForTimeout(300);
+	await expect(active).toHaveAttribute('aria-expanded', 'false');
+
+	// And still toggles open again, a deliberate re-expand.
+	await active.click();
+	await expect(active).toHaveAttribute('aria-expanded', 'true');
+});
+
+/**
  * The Lexicon quiz remembers now, and the service drill stopped counting terms
  * it will never ask.
  *

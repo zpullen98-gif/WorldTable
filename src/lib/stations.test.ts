@@ -142,6 +142,26 @@ describe('the tournant', () => {
 	it('is never awarded on an empty roster', () => {
 		expect(isTournant([])).toBe(false);
 	});
+
+	/**
+	 * TOURNANT_EVIDENCE (tools/derive/stations.mjs) is a GATE PROBE, a prefix
+	 * substring matched with `.includes()`. Emitting that same constant as
+	 * display copy - what this used to do - meant coverage/+page.svelte had to
+	 * bolt a literal ")" onto it to fake a closing paren, which silently
+	 * dropped the guide's actual second clause, "often the best pure cook in
+	 * the building". TOURNANT_QUOTE is the whole sentence, for display; this
+	 * pins that the shipped data carries the full quote and that the probe
+	 * stays a genuine PREFIX of it, so the two cannot drift apart unnoticed.
+	 */
+	it("ships the guide's full tournant sentence, not the gate's truncated probe", async () => {
+		const { TOURNANT_EVIDENCE, TOURNANT_QUOTE } = await import('../../tools/derive/stations.mjs');
+		expect(TOURNANT_QUOTE.startsWith(TOURNANT_EVIDENCE)).toBe(true);
+		expect(TOURNANT_QUOTE).toContain('often the best pure cook in the building');
+		expect(TOURNANT_QUOTE.endsWith(')')).toBe(true);
+
+		const stationsJson = (await import('./data/stations.json')).default as { tournant: string };
+		expect(stationsJson.tournant).toBe(TOURNANT_QUOTE);
+	});
 });
 
 describe('who can cover tonight', () => {

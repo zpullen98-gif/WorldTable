@@ -248,7 +248,12 @@
 
 		{#if tournants.length}
 			<h2 class="sec">The tournant</h2>
-			<p class="secnote">“{data.stations.tournant})”, the guide's own words.</p>
+			<!-- data.stations.tournant is now the WHOLE sentence, closing paren
+			     included (stations.mjs's TOURNANT_QUOTE) - this used to append a
+			     literal ")" to a gate-probe PREFIX, which silently dropped the
+			     guide's actual second clause, "often the best pure cook in the
+			     building". -->
+			<p class="secnote">“{data.stations.tournant}”, the guide's own words.</p>
 			<p class="tournant">{tournants.map((p) => p.name).join(', ')}</p>
 		{/if}
 
@@ -256,10 +261,11 @@
 		<div class="limits">
 			<p>
 				<b>It is coverage, not competence.</b> It counts the techniques a person has cooked a dish for.
-				It cannot see whether the plate was any good on most dishes: {ASSESS.assessable} of the
-				guide’s {ASSESS.corpus} are now assessable, {ASSESS.dishStandards} against a standard of
-				their own and {ASSESS.byTechnique} against the techniques they exercise, so “to a standard”
-				is always a floor and never a measure.
+				It cannot see whether the plate was any good: {ASSESS.assessable} of the guide’s
+				{ASSESS.corpus} are now assessable, {ASSESS.dishStandards} against a standard of their own
+				and {ASSESS.byTechnique} against the techniques they exercise, so “to a standard” is always
+				a floor and never a measure - the board grades against no dish's plate, not even those
+				{ASSESS.assessable}.
 			</p>
 			<p>
 				<b>It is not a training record and must not be used as one.</b> Nothing here is dated, exported

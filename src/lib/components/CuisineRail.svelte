@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { untrack } from 'svelte';
 	import { base } from '$app/paths';
 	import type { ChapterRef } from '$lib/types';
 
@@ -122,14 +123,31 @@
 	});
 
 	// A group opens when it holds the active chapter, so a deep link to
-	// /chapter/vermont arrives with New England already expanded.
+	// /chapter/vermont arrives with the GROUP already expanded - "United
+	// States", not the "New England" subgroup this comment used to name.
+	// Subgroups have no collapse control of their own; every one renders
+	// under whichever group is open.
 	let open = $state(new Set<string>(['Europe']));
 
+	/*
+	 * READS `open` untracked. It used to read it tracked, which means this
+	 * effect was in its own dependency list: toggle() reassigning `open`
+	 * re-ran this effect, which immediately re-added the active chapter's
+	 * group before the next paint. The tap did nothing - not a visible
+	 * bounce, since the re-add happens in the same flush, before paint, but
+	 * `aria-expanded` never left "true" and the header stayed inert. Measured
+	 * on all 171 chapter pages: the active chapter's own group can never be
+	 * collapsed; every OTHER group collapses normally, which is what hid it.
+	 *
+	 * untrack() keeps the read from re-arming the effect, so it fires only
+	 * when `active` (or `chapters`) actually changes - once per navigation,
+	 * as intended - and a deliberate collapse of the active group sticks.
+	 */
 	$effect(() => {
 		if (!active) return;
 		const g = chapters.find((c) => c.slug === active)?.group;
-		if (g && !open.has(g)) {
-			open = new Set([...open, g]);
+		if (g && !untrack(() => open).has(g)) {
+			open = new Set([...untrack(() => open), g]);
 		}
 	});
 

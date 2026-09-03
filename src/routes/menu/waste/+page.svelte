@@ -376,9 +376,18 @@
 				{/each}
 			</ul>
 		{:else}
+			<!--
+				Used to end "...and the guide is clear which is more common." The
+				guide's only sentence about waste logs names a most-common CAUSE
+				of waste (over-prepping), not a most-common EXPLANATION for an
+				empty log - "more common" occurs nowhere in the sealed original.
+				This page's own header comment already scopes the comparison
+				correctly ("What this page ADDS is the comparison the guide
+				invites"); this line contradicted it.
+			-->
 			<p class="empty">
-				Nothing logged in the week of {weekLabel(activeWeek)}. That is either a very good week or a
-				log nobody opened, and the guide is clear which is more common.
+				Nothing logged in the week of {weekLabel(activeWeek)}. That could mean a very good week, or
+				a log nobody opened.
 			</p>
 		{/if}
 
@@ -411,7 +420,7 @@
 	.headline {
 		font-family: var(--display);
 		font-size: var(--t-lede);
-		color: var(--text);
+		color: var(--ink);
 		max-width: var(--measure);
 		margin: 0 0 14px;
 	}
@@ -424,7 +433,7 @@
 	}
 	.wktotal {
 		font-size: var(--t-lede);
-		color: var(--text);
+		color: var(--ink);
 	}
 	.share,
 	.rcount {
@@ -469,10 +478,10 @@
 		gap: 4px 10px;
 	}
 	.rlabel {
-		color: var(--text);
+		color: var(--ink);
 	}
 	.rmoney {
-		color: var(--text);
+		color: var(--ink);
 	}
 	.bar {
 		margin-top: 3px;
@@ -511,6 +520,10 @@
 		font-size: var(--t-micro);
 		color: var(--ink-soft);
 	}
+	/* This read `color: var(--text)` - --text is tokens.css's FONT stack, not a
+	   colour, so the rule was invalid-at-computed-value-time and applied none.
+	   Every field a cook typed into the waste log inherited `.logger label`'s
+	   --ink-soft instead: secondary ink, one step down from what was meant. */
 	.logger input,
 	.logger select {
 		font: inherit;
@@ -518,7 +531,7 @@
 		border: 1px solid var(--line);
 		border-radius: var(--radius);
 		background: var(--paper-raised);
-		color: var(--text);
+		color: var(--ink);
 	}
 	.logger .qty input {
 		width: 6rem;
@@ -559,7 +572,7 @@
 		min-width: 7rem;
 	}
 	.what {
-		color: var(--text);
+		color: var(--ink);
 	}
 	.how,
 	.val {

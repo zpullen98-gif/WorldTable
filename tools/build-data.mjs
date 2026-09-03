@@ -1072,6 +1072,31 @@ if (judgement.length) {
 	}
 }
 
+/**
+ * containsPork implies containsMeat. PORK is a subset of what MEAT should
+ * catch - measured, PORK carries 32 tokens and 'speck' was the only one MEAT
+ * did not also carry, which is exactly how a meringue shipped
+ * containsPork:true, containsMeat:false: "not a speck of yolk" matched the
+ * cured-meat word list and nothing else. A one-line invariant catches the
+ * whole SHAPE of that bug, not just this one word, in either keyword table.
+ */
+{
+	const porkWithoutMeat = [];
+	R.forEach((r, i) => {
+		const slug = recipeSlugs[i];
+		const d = OVERRIDES.recipes?.[slug]?.diet ?? deriveDiet(r, blobs[i]);
+		if (d.containsPork && !d.containsMeat) porkWithoutMeat.push(`${r.n} [${slug}]`);
+	});
+	if (porkWithoutMeat.length) {
+		problems.push(
+			`${porkWithoutMeat.length} recipes carry containsPork with no containsMeat - a PORK keyword ` +
+				`matched something MEAT's own list does not, which is how "not a speck of yolk" once ` +
+				`flagged a meringue:\n` +
+				porkWithoutMeat.map((x) => `      ${x}`).join('\n')
+		);
+	}
+}
+
 // Cross-link concentration: the original always scanned from index 0, so links
 // piled onto whatever chapter came first (Italian). Assert nobody dominates.
 const linkChapter = new Map();
