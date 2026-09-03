@@ -4,11 +4,15 @@
  * Fifth and last time this pattern appears in the guide, and the only time it
  * comes with a reason to build LESS rather than more.
  *
- * The substrate is two entries. "Food Safety: The Chef-Owner's Non-Negotiables"
- * is 701 characters and reaches three recipes that crosslinks.mjs picked on
- * keyword score: key lime pie, pretzels and a tomato sauce, none of them
- * hazard-relevant. "Health Inspections & Crisis Management" is 1,535 characters
- * and reaches nothing at all. That is everything the guide has to say.
+ * The substrate is two DEDICATED entries, plus a third this module borrows one
+ * figure from. "Food Safety: The Chef-Owner's Non-Negotiables" is 701
+ * characters and reaches three recipes that crosslinks.mjs picked on keyword
+ * score: key lime pie, pretzels and a tomato sauce, none of them
+ * hazard-relevant. "Health Inspections & Crisis Management" is 1,535
+ * characters and reaches nothing at all. "Sous Vide Hardware: Circulators,
+ * Sealers & Safety Kit" is 1,019 characters and is not a food-safety entry at
+ * all - it is where CONFLICT's second danger-window figure actually lives (see
+ * ANCHORS.svHardware below). That is everything the guide has to say.
  *
  * ## What this module deliberately does NOT do
  *

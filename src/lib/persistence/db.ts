@@ -13,7 +13,7 @@
  *
  * Preferences are the deliberate exception: see stores/prefs.svelte.ts.
  */
-import { get, set, del, getMany, update, createStore } from 'idb-keyval';
+import { get, set, del, update, createStore } from 'idb-keyval';
 import { browser } from '$app/environment';
 import { EMPTY_SESSION, type SessionState } from './state';
 import { readSession, NewerVersionError, type HeldReason, type SessionRead } from './migrations';
@@ -193,19 +193,36 @@ export async function loadAllSessions(
 		const only = await loadSessionRecord();
 		return [{ id: 'solo', name: 'This device', session: only.state, held: only.held }];
 	}
-	const keys = profiles.map((p) => (p.legacy ? KEY_BASE : `${KEY_BASE}::${p.id}`));
-	let raw: unknown[];
-	try {
-		raw = await getMany(keys, store);
-	} catch {
-		return [];
-	}
-	return profiles.map((p, i) => {
-		// One held record must not take the whole board down - and must not be
-		// reported as a cook with no coverage either; the board says who is held.
-		const r = readSession(raw[i]);
-		return { id: p.id, name: p.name, session: r.state, held: r.held };
-	});
+	/*
+	 * Read PER KEY, not via getMany. getMany's Promise.all rejects the WHOLE
+	 * batch on a single bad key (idb-keyval@6.3.0: getMany is
+	 * `Promise.all(keys.map(k => promisifyRequest(store.get(k))))`, one
+	 * readonly transaction), so one sibling roster record that fails to
+	 * deserialize - or a transaction abort between two reads - used to make
+	 * this function return `[]` outright: the whole board, not just the one
+	 * bad record, reported "nobody has cooked here" - the exact violation of
+	 * the comment two lines below, which this used to contradict rather than
+	 * implement. Reading one key at a time means a single failure is exactly
+	 * as contained as it already was for a MALFORMED record (readSession's
+	 * own held/'unreadable' path); it costs nothing extra on the happy path,
+	 * since idb-keyval's individual gets share the same underlying store.
+	 */
+	return Promise.all(
+		profiles.map(async (p) => {
+			const key = p.legacy ? KEY_BASE : `${KEY_BASE}::${p.id}`;
+			let raw: unknown;
+			try {
+				raw = await get(key, store);
+			} catch {
+				// One held record must not take the whole board down - and must
+				// not be reported as a cook with no coverage either; the board
+				// says who is held.
+				return { id: p.id, name: p.name, session: structuredClone(EMPTY_SESSION), held: true };
+			}
+			const r = readSession(raw);
+			return { id: p.id, name: p.name, session: r.state, held: r.held };
+		})
+	);
 }
 
 export async function clearSession(): Promise<void> {

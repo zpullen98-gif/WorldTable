@@ -8,6 +8,8 @@
 import type { SessionState } from './db';
 import { screenFamilyRecipes } from '../familyRecipe';
 import type { HousePortable } from './house';
+import { asArray, asRecord } from '../importShape';
+import { mergeCostings, normaliseCosting } from './state';
 
 export const FORMAT = 'world-table-session';
 /**
@@ -114,19 +116,30 @@ export function parseImport(text: string): PortableFile {
  * Every field is guarded: `incoming` is whatever a user's file claimed to be,
  * and a hand-edited .wtjson missing `menu` must produce a summary, not a crash
  * before the summary.
+ *
+ * The guard used to be `?? []` / `?? {}`, which only covers null/undefined.
+ * Measured: a hand-typed `menu`, `pantry`, `menuDishes` or `waste` that was a
+ * SCALAR (not missing, just the wrong shape) threw a raw TypeError into the
+ * banner - `(incoming.menu ?? []).filter is not a function`. Worse and
+ * silent: a scalar `notes` did not throw at all, because `Object.keys('ab')`
+ * treats a string as indexable and mints two junk notes out of it, counted
+ * and announced as real ("2 new notes") before mergeSessions writes exactly
+ * that junk to disk. asArray/asRecord (importShape.ts) close both, and are
+ * shared with mergeSessions so the banner and the write can never disagree
+ * about what counts as "an array" or "a record".
  */
 export function describeImport(
 	incoming: Partial<SessionState> & HousePortable,
 	current: SessionState & HousePortable
 ) {
-	const inMenu = incoming.menu ?? [];
-	const inNotes = incoming.notes ?? {};
+	const inMenu = asArray<string>(incoming.menu);
+	const inNotes = asRecord<string>(incoming.notes);
 	const newPins = inMenu.filter((s) => !current.menu.includes(s)).length;
 	const newNotes = Object.keys(inNotes).filter((k) => !(k in current.notes)).length;
 	const overwritten = Object.keys(inNotes).filter(
 		(k) => k in current.notes && current.notes[k] !== inNotes[k]
 	).length;
-	const newPantry = (incoming.pantry ?? []).filter((l) => !current.pantry.includes(l)).length;
+	const newPantry = asArray<string>(incoming.pantry).filter((l) => !current.pantry.includes(l)).length;
 	/*
 	 * Family recipes, screened before they are counted.
 	 *
@@ -141,12 +154,12 @@ export function describeImport(
 		(r) => !current.familyRecipes.some((e) => e.slug === r.slug)
 	).length;
 	const skippedFamily = screened.rejected;
-	const newDishes = (incoming.menuDishes ?? []).filter(
+	const newDishes = asArray<{ id: string; ts?: number }>(incoming.menuDishes).filter(
 		(d) => d && d.id && !(current.menuDishes ?? []).some((e) => e.id === d.id)
 	).length;
 	// An id match with a newer ts means the merge will REPLACE the live copy:
 	// the banner must say so, the way notes get their 'replaced' count.
-	const updatedDishes = (incoming.menuDishes ?? []).filter((d) => {
+	const updatedDishes = asArray<{ id: string; ts?: number }>(incoming.menuDishes).filter((d) => {
 		if (!d || !d.id) return false;
 		const mine = (current.menuDishes ?? []).find((e) => e.id === d.id);
 		return !!mine && (d.ts ?? 0) > (mine.ts ?? 0);
@@ -165,21 +178,41 @@ export function describeImport(
 	 * actually works in: a week absent locally is ADDED, and a week present with
 	 * a different count is REPLACED.
 	 */
+	/*
+	 * Derived from the ACTUAL merge, not re-derived by eye beside it.
+	 *
+	 * This used to reimplement the decision - "an incoming week with a later
+	 * `at` replaces" - and mergeCostings' real rule is stricter: an incoming
+	 * stamp more than CLOCK_SKEW_MS (24h) ahead of now is a dead RTC, not the
+	 * future, and loses. Strictly past that line the count banner said
+	 * "replaced" while the merge kept the local figure (it still stamps
+	 * `prev` on the record, which is a real change - just not the one named).
+	 * Separately, this never ran normaliseCosting's validWeek check, so a
+	 * hand-edited week with a non-finite `at` was counted as "1 week of
+	 * covers" and then discarded entirely by the merge.
+	 *
+	 * Calling mergeCostings directly means the banner can only ever describe
+	 * a change the merge will actually make.
+	 */
 	let weeksAdded = 0;
 	let weeksReplaced = 0;
 	let costedDishes = 0;
-	for (const [id, incomingCosting] of Object.entries(incoming.dishCosts ?? {})) {
-		const mine = current.dishCosts?.[id];
-		const theirWeeks = Array.isArray(incomingCosting?.sales) ? incomingCosting.sales : [];
-		if (!mine) {
-			if (theirWeeks.length || incomingCosting?.lines?.length) costedDishes++;
-			weeksAdded += theirWeeks.length;
+	for (const [id, incomingRaw] of Object.entries(asRecord<unknown>(incoming.dishCosts))) {
+		const mineNorm = normaliseCosting(current.dishCosts?.[id]);
+		const merged = mergeCostings(current.dishCosts?.[id], incomingRaw);
+		if (!merged) continue;
+		if (!mineNorm) {
+			if (merged.sales.length || merged.lines.length) costedDishes++;
+			weeksAdded += merged.sales.length;
 			continue;
 		}
-		for (const w of theirWeeks) {
-			const ours = (mine.sales ?? []).find((x) => x.weekStart === w.weekStart);
+		const mineByWeek = new Map(mineNorm.sales.map((w) => [w.weekStart, w]));
+		for (const w of merged.sales) {
+			const ours = mineByWeek.get(w.weekStart);
 			if (!ours) weeksAdded++;
-			else if (ours.count !== w.count && (w.at ?? 0) > (ours.at ?? 0)) weeksReplaced++;
+			// The winner's count differs from what we had before the merge: a
+			// real replacement, whichever side won it.
+			else if (w.count !== ours.count) weeksReplaced++;
 		}
 	}
 
@@ -221,7 +254,9 @@ export function describeImport(
 	// The waste log. Counted in ENTRIES, because that is the unit it merges in
 	// and an entry is one thing that went in one bin.
 	const mineWaste = new Set((current.waste ?? []).map((w) => w?.id));
-	const newWaste = (incoming.waste ?? []).filter((w) => w?.id && !mineWaste.has(w.id)).length;
+	const newWaste = asArray<{ id?: string }>(incoming.waste).filter(
+		(w) => w?.id && !mineWaste.has(w.id)
+	).length;
 
 	const mineByPrep = new Map((current.preps ?? []).map((pr) => [pr.id, pr]));
 	let newPreps = 0;

@@ -67,12 +67,35 @@ class SessionStore {
 	 */
 	#write() {
 		if (!this.#ready || this.#held) return;
-		void saveSession($state.snapshot(this.#s) as SessionState, this.#key || undefined).then((ok) => {
-			if (!ok && this.#ready) {
-				this.#held = true;
-				this.#heldReason ??= 'newer';
-			}
-		});
+		void saveSession($state.snapshot(this.#s) as SessionState, this.#key || undefined)
+			.then((ok) => {
+				if (!ok && this.#ready) {
+					this.#held = true;
+					this.#heldReason ??= 'newer';
+				}
+			})
+			/*
+			 * saveSession rethrows anything that is not a version conflict
+			 * (db.ts), so a transaction abort or a closed connection - idb-keyval
+			 * itself warns "Safari sometimes likes to just close the connection"
+			 * - used to become an UNHANDLED promise rejection here: silent to the
+			 * cook, and silent in devtools too outside a debugger.
+			 *
+			 * Deliberately NOT routed into #held. #heldReason only has copy for
+			 * 'newer' and 'unrecognised'/'unreadable' (+layout.svelte), so
+			 * reusing it here would tell a cook whose write merely failed to
+			 * transiently that "this device is running an older edition" -
+			 * wrong cause, wrong instruction - and #held LATCHES: #write returns
+			 * early forever afterward, turning one transient failure idb-keyval
+			 * would have recovered from on the next call into permanent silent
+			 * data loss for the rest of the session. A console.warn, matching
+			 * the precedent db.ts already sets for a read failure, is the
+			 * honest floor: visible to whoever is debugging a lost edit, and it
+			 * does not invent a UI claim this store cannot back up.
+			 */
+			.catch((err) => {
+				console.warn('[world-table] session write failed; the edit was not saved', err);
+			});
 	}
 
 	#persist = debounce(() => this.#write(), 400);

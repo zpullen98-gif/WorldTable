@@ -102,7 +102,20 @@ class House {
 		this.#r.lastWrite = Date.now();
 		const by = profiles.currentName();
 		if (by) this.#r.lastEditedBy = by;
-		void set(HOUSE_KEY, $state.snapshot(this.#r), store);
+		/*
+		 * Caught, not fire-and-forget: an unhandled rejection here (quota, a
+		 * closed connection, a transaction abort) used to mean a menu edit or a
+		 * costing sheet silently never reached disk. NOT routed into #blocked:
+		 * that flag is set from a LOAD-time failure (readHouse), has its own
+		 * distinct meaning and copy, and latches - line 94 above refuses every
+		 * future write while it is set, so reusing it for a transient write
+		 * failure would turn one recoverable miss into permanent silent loss
+		 * for the rest of the session. A console.warn is the honest floor,
+		 * matching the precedent db.ts already sets for a read failure.
+		 */
+		set(HOUSE_KEY, $state.snapshot(this.#r), store).catch((err) => {
+			console.warn('[world-table] house write failed; the change was not saved', err);
+		});
 	}
 
 	async hydrate() {

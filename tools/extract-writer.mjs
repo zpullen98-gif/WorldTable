@@ -11,7 +11,7 @@
  * And nothing downstream would notice. `verify:data` proves raw/ WORD-identical
  * to the archive, not byte-identical - that is the whole point of it, since
  * byte-identical stopped being the invariant the moment the sweep landed. So
- * all 38 checks pass, the build is green, and 1,672 punctuation marks the author
+ * all 53 checks pass, the build is green, and 3,919 em-dashes the author
  * removed on purpose are back in the shipped app.
  *
  * It used to be `npm run extract`, one tab-complete away, and the reader half

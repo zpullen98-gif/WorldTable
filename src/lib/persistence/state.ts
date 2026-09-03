@@ -10,6 +10,7 @@
  */
 import type { Recipe } from '../types';
 import { screenFamilyRecipes } from '../familyRecipe';
+import { asArray, asRecord } from '../importShape';
 import type { CostLine } from '../costing';
 
 export const CURRENT_VERSION = 1;
@@ -479,17 +480,31 @@ export function mergeSessions(
 		if (!seen || richness(e) > richness(seen)) cooked.set(key, e);
 	}
 
+	/*
+	 * Both levels guarded, not just the outer one. `Object.entries('ab')`
+	 * treats a string as indexable and does not throw - it returns
+	 * `[['0','a'],['1','b']]` - so a hand-typed `shoppingChecks: "ab"` used to
+	 * survive the loop and silently write `{"0":["a"],"1":["b"]}`, because
+	 * `[...'a']` (spreading a single CHARACTER) is a valid one-element array
+	 * too. asRecord stops the outer scalar; Array.isArray stops a per-hash
+	 * value that is a scalar with the outer shape otherwise correct.
+	 */
 	const shoppingChecks: SessionState['shoppingChecks'] = { ...current.shoppingChecks };
-	for (const [hash, lines] of Object.entries(incoming.shoppingChecks ?? {})) {
+	for (const [hash, lines] of Object.entries(asRecord<unknown>(incoming.shoppingChecks))) {
+		if (!Array.isArray(lines)) continue;
 		shoppingChecks[hash] = [...new Set([...(shoppingChecks[hash] ?? []), ...lines])];
 	}
 
 	return {
 		...current,
 		...incoming,
-		menu: [...new Set([...current.menu, ...(incoming.menu ?? [])])],
-		notes: { ...current.notes, ...(incoming.notes ?? {}) },
-		pantry: [...new Set([...current.pantry, ...(incoming.pantry ?? [])])],
+		menu: [...new Set([...current.menu, ...asArray<string>(incoming.menu)])],
+		// asRecord, not `?? {}`: a scalar `notes` (e.g. a hand-typed string)
+		// is not null/undefined, so `?? {}` let it straight through, and
+		// `{...'ab'}` treats a string as indexable the same way
+		// `Object.entries` does - silently minting a junk note per character.
+		notes: { ...current.notes, ...asRecord<string>(incoming.notes) },
+		pantry: [...new Set([...current.pantry, ...asArray<string>(incoming.pantry)])],
 		shoppingChecks,
 		cookedLog: [...cooked.values()].sort((a, b) => a.at - b.at),
 		// The same union as cookedLog above, for the same reason: keyed on
