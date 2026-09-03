@@ -1,9 +1,15 @@
 import { defineConfig } from '@playwright/test';
 
 /**
- * E2E tests run against the PRODUCTION build served by vite preview: the same
- * bytes a user gets, service worker included. Run `npm run build` first; the
- * webServer block only starts the static server, it does not rebuild.
+ * E2E tests run against the PRODUCTION build served by tools/serve.mjs (see the
+ * webServer block below for why it is not vite preview): the same bytes a user
+ * gets, service worker included. Run `npm run build` first; the webServer block
+ * only starts the static server, it does not rebuild.
+ *
+ * This comment used to say "served by vite preview" - the exact thing the
+ * webServer block twenty lines down exists to warn against, and has said so
+ * since commit 029a697 introduced tools/serve.mjs. The header is the first
+ * thing anyone reads; it was contradicting the file it heads.
  */
 export default defineConfig({
 	testDir: 'tests',
@@ -12,8 +18,8 @@ export default defineConfig({
 	 * Deliberate, not the default.
 	 *
 	 * Playwright sizes workers from CPU count (half of 20 here), but this suite
-	 * is not CPU-parallel work: eleven axe runs walk large DOMs, the offline
-	 * specs install service workers, the parity harness loads the 1.5MB archived
+	 * is not CPU-parallel work: 45 axe runs walk large DOMs, the offline specs
+	 * install service workers, the parity harness loads the 1.5MB archived
 	 * original, and every one of them talks to a SINGLE Node static server. At
 	 * ten workers the failures moved around the suite run to run: print, then
 	 * offline, then a timer, which is the signature of contention rather than

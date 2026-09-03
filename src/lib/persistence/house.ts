@@ -327,6 +327,25 @@ export function dishesUsingPrep(house: HouseRecord, prepId: string): MenuDish[] 
 }
 
 /**
+ * A Prep is stored in SECONDS, and the editing form types MINUTES.
+ *
+ * The store is seconds so the prep board can hand a Prep straight to
+ * buildPass, whose PassStepInput is handsOnSec: a prep kept in minutes would
+ * back-time to sixty times its length — a two-hour stock claiming five days.
+ * Pulled out of the editing page into a pure pair so the round trip itself is
+ * something a test can call, not just something the page's markup implies.
+ */
+export function prepSecToFormMin(sec: number): number {
+	return Math.round(sec / 60);
+}
+
+/** The inverse: what save() writes back, floored at zero and NaN-proofed the
+ *  same way an empty or hand-cleared form field already is. */
+export function prepFormMinToSec(min: number): number {
+	return Math.max(0, Math.round(Number(min) || 0) * 60);
+}
+
+/**
  * How many batches to make, given what is on hand.
  *
  * Par and the count are both in PORTIONS; portions-per-batch is what turns the

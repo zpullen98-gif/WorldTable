@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { house, type Prep } from '$lib/stores/house.svelte';
+	import { prepSecToFormMin, prepFormMinToSec } from '$lib/persistence/house';
 	import { prepPortionCost, money, lineCost, type CostLine } from '$lib/costing';
 	import { itemSlugOf, currentPrice } from '$lib/items';
 	import Ornament from '$lib/components/Ornament.svelte';
@@ -61,12 +62,9 @@
 			portions: p.portions,
 			par: p.par,
 			shelfLifeDays: p.shelfLifeDays ?? 0,
-			// Stored in SECONDS and typed in minutes. The store is the seconds so
-			// the prep board can hand these straight to buildPass, whose
-			// PassStepInput is handsOnSec: a prep kept in minutes would back-time
-			// to sixty times its length.
-			handsOnMin: Math.round(p.handsOnSec / 60),
-			unattendedMin: Math.round(p.unattendedSec / 60),
+			// Stored in SECONDS and typed in minutes — see prepSecToFormMin.
+			handsOnMin: prepSecToFormMin(p.handsOnSec),
+			unattendedMin: prepSecToFormMin(p.unattendedSec),
 			// Carried through the form. The field was displayed on the prep board
 			// and settable NOWHERE, reachable only by hand-editing a .wtjson,
 			// and an edit round-trip silently dropped whatever a file had put in.
@@ -84,8 +82,8 @@
 			portions: Number(form.portions) || 0,
 			par: Number(form.par) || 0,
 			...(Number(form.shelfLifeDays) > 0 ? { shelfLifeDays: Number(form.shelfLifeDays) } : {}),
-			handsOnSec: Math.max(0, Math.round(Number(form.handsOnMin) || 0) * 60),
-			unattendedSec: Math.max(0, Math.round(Number(form.unattendedMin) || 0) * 60),
+			handsOnSec: prepFormMinToSec(form.handsOnMin),
+			unattendedSec: prepFormMinToSec(form.unattendedMin),
 			...(form.station.trim() ? { station: form.station.trim() } : {}),
 			lines: form.lines,
 			ts: Date.now()

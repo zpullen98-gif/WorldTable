@@ -26,9 +26,19 @@ permissions:
   id-token: write
 
 # Let a running deploy finish rather than cancelling it half-published.
+#
+# Scoped to master only. The trigger was widened to every branch and to
+# pull_request (see above) without touching this: every branch push and every
+# PR event then queued into the SAME constant group as a deploying master run,
+# and GitHub cancels the PENDING run in a group when a new one is queued
+# (cancel-in-progress only protects the run already IN PROGRESS) - so a master
+# deploy queued behind a branch push could be evicted before it ever runs,
+# leaving Pages on the previous commit with no error anywhere. Master keeps
+# its single serialized queue and never self-cancels; every other ref gets its
+# own group, keyed by ref, and is free to cancel its own superseded runs.
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: ${{ github.ref == 'refs/heads/master' && 'pages' || format('pages-{0}', github.ref) }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
 
 jobs:
   build:
@@ -103,8 +113,42 @@ jobs:
         with:
           path: build
 
+  # No step anywhere else runs the Playwright suite, which means nothing in CI
+  # ever installs a real service worker or exercises tests/parity.spec.ts - the
+  # test that loads the SEALED ORIGINAL in a browser and runs the original's own
+  # costFor / flavorFor / pairingFull / equipment scan as the oracle for what
+  # this app derives. verify:build (in the `build` job) proves a great deal
+  # about the SW statically - precache membership, the offline-navigation
+  # fallback resolving under the real BASE_PATH - but it never installs a
+  # worker, so install/activate/controllerchange and a controlled fetch are
+  # untested by anything that runs automatically. This job is the whole reason
+  # e2e's own webServer exists: `npm run build` (not build:pages) produces the
+  # unbased build playwright.config.ts's baseURL assumes.
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx playwright install --with-deps chromium
+
+      # Unbased, deliberately: playwright.config.ts's webServer serves build/
+      # at baseURL http://localhost:4173 with no path prefix, which is the
+      # default `vite build` produces. build:pages (the `build` job) sets
+      # BASE_PATH=/WorldTable for GitHub Pages and is not what this suite runs
+      # against.
+      - run: npm run build
+
+      - run: npm run test:e2e
+
   deploy:
-    needs: build
+    needs: [build, e2e]
     # Also keeps a branch run from tripping the github-pages environment's
     # deployment-branch policy, which would fail it for a reason unrelated to
     # anything the branch changed.

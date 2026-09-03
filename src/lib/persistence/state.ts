@@ -239,6 +239,24 @@ export interface PlanRun {
  */
 export const RUN_MAX_AGE_MS = 18 * 60 * 60 * 1000;
 
+/**
+ * The run, but ONLY if it belongs to this menu and has not gone stale.
+ *
+ * Pure and outside the runes store, per the house rule, so the two refusals
+ * are directly testable — SessionStore.runFor() is a two-line pass-through to
+ * this. Both guards matter. A run inherited by a different menu would tick
+ * rows that are not in it; a run resumed the following afternoon would open
+ * on "40 minutes behind" for a service that finished last night.
+ *
+ * `now` is a parameter rather than `Date.now()` read inline, so the staleness
+ * arm is testable without a fake timer.
+ */
+export function runFor(planRun: PlanRun | undefined, menuHash: string, now: number): PlanRun | null {
+	if (!planRun || planRun.menuHash !== menuHash) return null;
+	if (now - planRun.startedAt > RUN_MAX_AGE_MS) return null;
+	return planRun;
+}
+
 export const EMPTY_SESSION: SessionState = {
 	schemaVersion: CURRENT_VERSION,
 	menu: [],

@@ -79,19 +79,30 @@ describe('the structure is a true claim about the guide’s prose', () => {
 	});
 
 	/**
-	 * The check worth having. "TOO SOUR" and "TOO SWEET" are one word apart and
-	 * their fixes are near-opposites, so a lever landing under the wrong fault
-	 * is the mistake that would read as plausible forever.
+	 * This used to compute exactly the predicate above it with the variables
+	 * renamed - "no lever is satisfied by the wrong fault's clause alone" read
+	 * as a cross-clause check but was proven, by evidence appearing in its OWN
+	 * clause, which is precisely what the test above it already established.
+	 * 500 randomised token mutations produced identical output on both; adding
+	 * a `{move:'Salt', token:'salt'}` lever to TOO SALTY - an instruction to
+	 * salt an already-too-salty dish - left both green.
+	 *
+	 * The real property, matching what palate.mjs's build gate now checks: a
+	 * lever must not name the very fault it is meant to cure. Token SHARING
+	 * across faults is not itself wrong - "acid" legitimately cures both TOO
+	 * SWEET and TOO SPICY - so this does not assert exclusivity, only that a
+	 * fault's own descriptor never appears among its own remedies.
 	 */
-	it('no lever is satisfied by the wrong fault’s clause alone', () => {
-		const suspicious: string[] = [];
+	it('no lever cures its own fault by naming it', () => {
+		const selfNamed: string[] = [];
 		for (const f of FAULTS) {
 			for (const lever of f.levers) {
-				const own = (clauses.get(f.key) ?? '').toLowerCase().includes(lever.token);
-				if (!own) suspicious.push(`${f.key}/${lever.move}`);
+				if (lever.token.includes(f.slug) || f.slug.includes(lever.token)) {
+					selfNamed.push(`${f.key}/${lever.move}`);
+				}
 			}
 		}
-		expect(suspicious).toEqual([]);
+		expect(selfNamed).toEqual([]);
 	});
 
 	it('rebuilding from the shipped lexicon reports no problems', () => {

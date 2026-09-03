@@ -42,16 +42,59 @@ describe('nothing is written until every gate has spoken', () => {
 	});
 
 	/**
+	 * The mark-id ledger is a SEPARATE write, gated by its own `!problems.length`
+	 * check rather than by the staging Map — a ledger append is not something a
+	 * later gate failure can be allowed to leave half-done. That guard only
+	 * means "every gate passed" if every gate has already spoken into
+	 * `problems` by the time it runs, and six of them once did not: a comment
+	 * beside the ledger claimed economics, waste, sanitation, service-track,
+	 * drills and stations were pushed above it, and they were pushed below it,
+	 * so a build failing on any one of those six had already committed newly
+	 * minted mark ids before exiting. Proved live: mutating a lexicon word
+	 * `buildWaste` depends on trips the waste gate, and before this test
+	 * existed the ledger and assessability.json both changed under that
+	 * failure; after the fix, neither does (checked by md5sum, not by re-import,
+	 * because the point is what lands on disk).
+	 */
+	it('pushes every content gate before the mark-id ledger commits', () => {
+		const ledgerWrite = buildData.indexOf('writeFileSync(LEDGER,');
+		expect(ledgerWrite, 'the ledger write must exist').toBeGreaterThan(-1);
+		for (const name of [
+			'economicsProblems',
+			'wasteProblems',
+			'sanitationProblems',
+			'serviceTrackProblems',
+			'drillProblems',
+			'stationProblems'
+		]) {
+			const pushedAt = buildData.indexOf(`problems.push(...${name})`);
+			expect(pushedAt, `problems.push(...${name}) must exist`).toBeGreaterThan(-1);
+			expect(pushedAt, `${name} must be pushed before the ledger commits`).toBeLessThan(ledgerWrite);
+		}
+	});
+
+	/**
 	 * And no artifact may slip past the staging. search-index.json used to write
 	 * itself directly, not because it was exempt but because it serializes
-	 * itself; that is exactly the shape that reappears.
+	 * itself; that is exactly the shape that reappears — assessability.json did
+	 * it a second time, through `new URL('../src/lib/data/assessability.json', ...)`
+	 * rather than `join(OUT, ...)`, which is precisely the spelling this test's
+	 * PREVIOUS regex (`writeFileSync\(join\(OUT[^)]*\)`) could not see: it
+	 * matched only one literal shape and called that "exactly one place", while
+	 * a second write sat 130 lines earlier under a different one. Every
+	 * `writeFileSync(` call site is enumerated here now, not just the ones
+	 * spelled the way the last bug happened to be spelled.
 	 */
-	it('writes to the output directory in exactly one place', () => {
-		const direct = [...buildData.matchAll(/writeFileSync\(join\(OUT[^)]*\)/g)];
-		expect(direct).toHaveLength(1);
-		// And that one place is the flush.
-		const at = buildData.indexOf(direct[0][0]);
-		expect(buildData.slice(at - 120, at)).toContain('staged');
+	it('has no writeFileSync into src/lib/data other than the staged flush', () => {
+		const calls = [...buildData.matchAll(/writeFileSync\(/g)].map((m) => m.index);
+		expect(calls.length, 'there should be exactly two writeFileSync call sites in this file').toBe(2);
+		const unaccountedFor = calls.filter((at) => {
+			const call = buildData.slice(at, at + 60);
+			const isTheStagedFlush = call.startsWith("writeFileSync(join(OUT, file), text");
+			const isTheMarkIdLedger = call.startsWith('writeFileSync(LEDGER,');
+			return !isTheStagedFlush && !isTheMarkIdLedger;
+		});
+		expect(unaccountedFor, 'every writeFileSync must be either the staged flush or the ledger').toEqual([]);
 	});
 });
 

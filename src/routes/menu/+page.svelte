@@ -15,7 +15,8 @@
 		daysEarlier,
 		DEFAULT_HANDS_MIN,
 		DEFAULT_COURSE_FIRING,
-		observedElapsed
+		observedElapsed,
+		actualKey as actualKeyOf
 	} from '$lib/pass';
 
 	let { data } = $props();
@@ -200,16 +201,9 @@
 	const ticks = $derived(run?.ticks ?? {});
 	const rowKey = (st: { slug: string; n: number }) => `${st.slug}-${st.n}`;
 
-	/**
-	 * The actuals key carries the dish's STEP COUNT.
-	 *
-	 * Constant for the 970 frozen guide recipes, so it costs them nothing. A
-	 * family recipe re-authored to a different length mints a new key instead,
-	 * and its old observations are simply never read again: no special case and
-	 * no stale actuals pinned to a step that moved.
-	 */
+	// See pass.ts's actualKey for why the step count rides in the key.
 	const actualKey = (st: { slug: string; n: number }) =>
-		`${st.slug}#${st.n}#${stepsOf(st.slug).length}`;
+		actualKeyOf(st.slug, st.n, stepsOf(st.slug).length);
 
 	let now = $state(0);
 
@@ -374,7 +368,7 @@
 		else dishForm.allergens.splice(i, 1);
 	}
 	/**
-	 * Recipes a menu dish can point at: the guide's 970 and this device's own.
+	 * Recipes a menu dish can point at: the guide's 1,844 and this device's own.
 	 * Matched by NAME through a datalist, because a chef knows what the dish is
 	 * called and not what its slug is.
 	 */

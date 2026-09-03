@@ -27,13 +27,22 @@
  * That structure is a claim about the prose, so the build checks it:
  *
  *   - Every fault we carry must appear as a labelled clause in the entry.
- *   - Every lever's `token` must appear inside its own fault's clause. This is
- *     what stops a lever drifting: "TOO SOUR" is one word from "TOO SWEET" and
- *     their fixes are near-opposites, so a lever filed under the wrong fault is
- *     the exact mistake worth failing a build over.
+ *   - Every lever's `token` must appear inside its own fault's clause.
+ *   - No lever may name the fault it is meant to cure: a "Salt" lever filed
+ *     under TOO SALTY is nonsense on its face - an instruction to salt an
+ *     already-too-salty dish - and it is exactly the shape of mistake nobody
+ *     reads for, because it passes the check above with room to spare.
  *   - And the reverse, which matters most: any labelled clause in the entry
  *     that we did NOT carry fails the build. If the corpus states a ninth
  *     fault, nobody has to notice by eye.
+ *
+ * What none of this catches, and cannot: a lever whose token is real prose
+ * evidence for its OWN fault but ALSO happens to appear in another fault's
+ * clause - "acid" legitimately cures both TOO SWEET and TOO SPICY, so token
+ * sharing between faults is not itself a defect and a blanket exclusivity
+ * rule would reject 15 of the 26 shipped levers today. The self-naming check
+ * above is the narrow, sound slice of that idea: it catches the one shape of
+ * cross-fault confusion that is never legitimate.
  *
  * The consequence is that this file cannot silently disagree with the guide.
  * Rewrite the entry and the build tells you which levers you just invalidated.
@@ -217,6 +226,22 @@ export function buildPalate(lexicon) {
 				problems.push(
 					`palate: "${f.key}" no longer mentions "${lever.token}" ` +
 						`(lever "${lever.move}"): the entry was rewritten under it`
+				);
+			}
+		}
+	}
+
+	// No lever may cure its own fault by naming it: a "Salt" lever under TOO
+	// SALTY would pass the evidence check above (its own clause obviously
+	// mentions salt) while being nonsense as a remedy. Matched on the fault's
+	// own `slug`, which is already the concise descriptor ('salty', 'sweet',
+	// 'bitter', ...), so this needs no separate word list to maintain.
+	for (const f of FAULTS) {
+		for (const lever of f.levers) {
+			if (lever.token.includes(f.slug) || f.slug.includes(lever.token)) {
+				problems.push(
+					`palate: "${f.key}"'s own remedy "${lever.move}" (token "${lever.token}") ` +
+						`names the fault itself, not a fix for it`
 				);
 			}
 		}

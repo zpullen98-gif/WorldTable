@@ -6,6 +6,8 @@ import {
 	dishesUsingPrep,
 	batchesNeeded,
 	localDay,
+	prepSecToFormMin,
+	prepFormMinToSec,
 	EMPTY_HOUSE,
 	type HouseRecord,
 	type Prep
@@ -170,14 +172,25 @@ describe('the prep on the house record', () => {
 	});
 
 	/**
-	 * Times are SECONDS. PassStepInput is handsOnSec/unattendedSec and handsOf()
-	 * divides by 60, so a prep stored in minutes back-times to sixty times its
-	 * length — a two-hour stock would claim five days on the prep board.
+	 * This used to divide the test's own fixture literals back down —
+	 * 3600/60 === 60 restated — and touched neither prepSecToFormMin nor
+	 * prepFormMinToSec, so it could not fail under a mutation of either. Those
+	 * two are what src/routes/menu/preps/+page.svelte's editing form actually
+	 * calls; asserted here directly, because a prep stored in minutes back-times
+	 * to sixty times its length on the prep board — a two-hour stock claiming
+	 * five days — and nothing else in the suite exercises that round trip.
 	 */
-	it('stores times in seconds, so the pass can read them directly', () => {
-		const p = prep();
-		expect(p.handsOnSec / 60).toBe(60);
-		expect(p.unattendedSec / 3600).toBe(9);
+	it('round-trips seconds through the editing form as minutes, and back', () => {
+		const p = prep({ handsOnSec: 3600, unattendedSec: 32400 });
+		expect(prepSecToFormMin(p.handsOnSec)).toBe(60);
+		expect(prepSecToFormMin(p.unattendedSec)).toBe(540);
+		// And the inverse a saved form actually performs.
+		expect(prepFormMinToSec(60)).toBe(3600);
+		expect(prepFormMinToSec(prepSecToFormMin(p.handsOnSec))).toBe(p.handsOnSec);
+		// A cleared or non-numeric field must not become NaN seconds, or worse,
+		// negative — floored at zero, matching the form's own guard.
+		expect(prepFormMinToSec(Number.NaN)).toBe(0);
+		expect(prepFormMinToSec(-5)).toBe(0);
 	});
 
 	it('names the dishes that would lose their total if it went', () => {

@@ -359,6 +359,24 @@ export function observedElapsed(samples: number[], estimateMin: number): number 
 }
 
 /**
+ * The actuals key carries the dish's STEP COUNT.
+ *
+ * Constant for the 1,844 frozen guide recipes, so it costs them nothing. A
+ * family recipe re-authored to a different length mints a new key instead,
+ * and its old observations are simply never read again: no special case and
+ * no stale actuals pinned to a step that moved.
+ *
+ * Pure and outside the page, per the house rule, so the step-count clause is
+ * directly testable: the page used to close over its own `stepsOf(slug)`
+ * lookup, which made the key untestable without also faking that closure.
+ * `stepCount` is now a plain parameter — the caller (the page) still reads it
+ * from `stepsOf`, this function no longer needs to know that.
+ */
+export function actualKey(slug: string, n: number, stepCount: number): string {
+	return `${slug}#${n}#${stepCount}`;
+}
+
+/**
  * Clock time for a point on the plan, given when service is.
  * One place, because "minutes before service" appears on every row.
  */

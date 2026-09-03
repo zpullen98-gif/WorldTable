@@ -102,8 +102,37 @@ describe('the deploy workflow', () => {
 		expect(at('npm test')).toBeLessThan(at('npm run build:data'));
 	});
 
-	/** A gate after the artifact is uploaded is not a gate. */
+	/**
+	 * A gate after the artifact is uploaded is not a gate.
+	 *
+	 * `at()` is `findIndex`, which returns -1 on no match, and -1 is less than
+	 * every real index - so renaming this step (leaving its `run:` block
+	 * untouched) used to make the comparison pass while checking nothing, the
+	 * same fail-open shape the sibling test above already guards against.
+	 * Guarded the same way that one is.
+	 */
 	it('gates before it builds pages', () => {
-		expect(at('derived data must match')).toBeLessThan(at('npm run build:pages'));
+		const gate = at('derived data must match');
+		expect(gate, 'the re-derive gate step is missing or was renamed').toBeGreaterThan(-1);
+		expect(gate).toBeLessThan(at('npm run build:pages'));
+	});
+
+	/**
+	 * Nothing else in CI ever installs a real service worker or runs
+	 * tests/parity.spec.ts, which loads the SEALED ORIGINAL in a browser and
+	 * runs its own costFor / flavorFor / pairingFull / equipment scan as the
+	 * oracle for what this app derives. verify:build proves a great deal about
+	 * the service worker statically, but never installs one, so
+	 * install/activate/controllerchange and a controlled fetch went untested by
+	 * anything automatic. Pinned here so a future edit that drops the e2e job,
+	 * or unhooks it from `deploy`, is a red test rather than a quiet loss of
+	 * coverage the next publish would not notice either.
+	 */
+	it('runs the Playwright suite, and deploy cannot ship without it', () => {
+		expect(yml, 'an e2e job must exist').toMatch(/^\s*e2e:\s*$/m);
+		expect(yml).toContain('npm run test:e2e');
+		expect(yml, 'deploy must require e2e as well as build').toMatch(
+			/needs:\s*\[\s*build\s*,\s*e2e\s*\]/
+		);
 	});
 });

@@ -22,7 +22,7 @@ import {
 } from '../persistence/db';
 import {
 	mergeSessions,
-	RUN_MAX_AGE_MS,
+	runFor as pureRunFor,
 	type MenuDish,
 	type DishCosting,
 	type PlanRun
@@ -294,10 +294,7 @@ class SessionStore {
 	 * "40 minutes behind" for a service that finished last night.
 	 */
 	runFor(menuHash: string): PlanRun | null {
-		const r = this.#s.planRun;
-		if (!r || r.menuHash !== menuHash) return null;
-		if (Date.now() - r.startedAt > RUN_MAX_AGE_MS) return null;
-		return r;
+		return pureRunFor(this.#s.planRun, menuHash, Date.now());
 	}
 
 	startRun(menuHash: string, serviceTime: string) {

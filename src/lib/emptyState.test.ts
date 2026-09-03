@@ -108,9 +108,20 @@ describe('the culprit', () => {
 	});
 
 	it('speaks in the singular for one dish', () => {
-		const one = [{ ...R.find((r) => r.diet.vegetarian)!, chapterSlug: 'x' }];
-		const e = emptyState({ scope: 'X', inChapter: true, all: one, qPool: one, filters: f({ quick: true, difficulty: 3 }), month, library: 0 });
-		if (e.culprit) expect(e.sentence).toMatch(/for 1 dish;/);
+		/*
+		 * Used to pull `R.find((r) => r.diet.vegetarian)` - whatever the corpus's
+		 * FIRST vegetarian dish happens to be, in build order - and guard the
+		 * only assertion behind `if (e.culprit)`. 307 of the corpus's 882
+		 * vegetarian dishes are neither quick nor difficulty 3, so for most of
+		 * them BOTH filters fail the dish at once, culprit is null (no single
+		 * drop restores it), and the guarded assertion never runs while the test
+		 * still reports green. One filter now, on a hand-built dish stated to
+		 * fail exactly that one, the way the tie-break test above already does.
+		 */
+		const one = [{ ...R[0], slug: 'singular', minutes: 200, chapterSlug: 'x' }] as RecipeSummary[];
+		const e = emptyState({ scope: 'X', inChapter: true, all: one, qPool: one, filters: f({ quick: true }), month, library: 0 });
+		expect(e.culprit, 'the one filter that emptied a one-dish pool must be found').not.toBeNull();
+		expect(e.sentence).toMatch(/for 1 dish;/);
 	});
 
 	it('drops the library clause on the library itself', () => {

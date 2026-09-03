@@ -1602,6 +1602,30 @@ console.log('');
 
 problems.push(...palateProblems);
 
+/*
+ * Pushed HERE, above the mark-id ledger block below, because a build failing
+ * on any of these six had already appended newly minted mark ids to the
+ * COMMITTED ledger before exiting — an abandoned edit then left phantom ids
+ * whose honest retraction would itself fail the next build. The ledger's
+ * guard is `!problems.length`; it only means "every gate passed" if every
+ * gate has already spoken, which requires these six to run before it.
+ *
+ * This comment used to sit BELOW the ledger block, beside these same six
+ * lines, describing a move that had never been made — every one of them ran
+ * after the ledger write it warns against. Caught by measuring, not by
+ * reading: `node -e` reproduction of buildWaste with one lexicon word
+ * changed showed `problems` still empty at the ledger's guard while a real
+ * problem sat two hundred lines further down. Fixed by actually moving the
+ * six lines here, not by rewriting the sentence to match where they already
+ * were.
+ */
+problems.push(...economicsProblems);
+problems.push(...wasteProblems);
+problems.push(...sanitationProblems);
+problems.push(...serviceTrackProblems);
+problems.push(...drillProblems);
+problems.push(...stationProblems);
+
 /**
  * The technique standards: gated in both directions, with the numbers in the
  * module's own headline read back out of it.
@@ -1743,9 +1767,18 @@ problems.push(...palateProblems);
 		 * again. The coverage board shipped "683 ... 45 ... 638" in its limits
 		 * copy and the corpus moved twice underneath it: a page number that is
 		 * not computed or emitted-and-gated is a page number already drifting.
+		 *
+		 * STAGED, not written directly. This was a bare writeFileSync, the one
+		 * artifact the item-30 staging pass missed because it is spelled
+		 * `new URL(...)` rather than `join(OUT, ...)` — the exact blind spot
+		 * build-integrity.test.ts's own regex shared. A build that failed a
+		 * later gate (economics, waste, sanitation, service-track, drills,
+		 * stations) still rewrote this one committed file from the new corpus
+		 * while the other twenty stayed on the old one, and then printed
+		 * "nothing was written". stage() makes that promise true.
 		 */
-		writeFileSync(
-			new URL('../src/lib/data/assessability.json', import.meta.url),
+		stage(
+			'assessability.json',
 			JSON.stringify(
 				{ corpus: actual.nCorpus, dishStandards: actual.nDish, byTechnique: actual.nGained, assessable: actual.nAssessable },
 				null,
@@ -1857,22 +1890,6 @@ problems.push(...palateProblems);
 		);
 	}
 }
-
-
-/*
- * Pushed ABOVE the mark-id ledger block, deliberately. These six lived after
- * it, so a build failing on any of them had already appended newly minted ids
- * to the committed ledger, and an abandoned edit then left phantom ids whose
- * honest retraction would itself fail the build. The ledger's guard is
- * `!problems.length`; it only means "every gate passed" if every gate has
- * already spoken.
- */
-problems.push(...economicsProblems);
-problems.push(...wasteProblems);
-problems.push(...sanitationProblems);
-problems.push(...serviceTrackProblems);
-problems.push(...drillProblems);
-problems.push(...stationProblems);
 
 if (problems.length) {
 	console.error('  BUILD GATE FAILED: nothing was written\n');

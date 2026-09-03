@@ -4,7 +4,8 @@ import {
 	ACTUALS_MIN_OBSERVATIONS,
 	ACTUALS_OUTLIER_FACTOR
 } from './pass';
-import { mergeSessions, EMPTY_SESSION, RUN_MAX_AGE_MS } from './persistence/state';
+import { mergeSessions, EMPTY_SESSION, RUN_MAX_AGE_MS, runFor } from './persistence/state';
+import { actualKey } from './pass';
 
 /**
  * What a step actually takes, from the ticks a cook left behind.
@@ -73,19 +74,30 @@ describe('the run belongs to one menu and one evening', () => {
 	});
 
 	/**
-	 * These two guards are why the run carries a menu hash and a start time at
-	 * all. A run inherited by a different menu ticks rows that are not in it; a
-	 * run resumed the next afternoon opens on "40 minutes behind" for a service
-	 * that finished last night.
+	 * These used to assert a fixture literal against itself and bound the
+	 * exported constant against nothing: neither called `runFor` at all, so
+	 * both refusals it names — wrong menu, gone stale — were unexercised by any
+	 * test in the repo. `runFor` is pure (persistence/state.ts), so both are
+	 * asserted directly now, including the staleness arm, which needs `now` as
+	 * a parameter rather than a live clock to be testable at all.
 	 */
-	it('has a hash to refuse a different menu with', () => {
-		const s = withRun();
-		expect(s.planRun.menuHash).toBe('a|b');
+	it('refuses a run that belongs to a different menu', () => {
+		const run = withRun().planRun;
+		expect(runFor(run, 'a|b', run.startedAt)).toBe(run);
+		expect(runFor(run, 'x|y', run.startedAt)).toBeNull();
 	});
 
 	it('expires, and the window is long enough to survive a walk to the walk-in', () => {
 		expect(RUN_MAX_AGE_MS).toBeGreaterThan(60 * 60 * 1000);
 		expect(RUN_MAX_AGE_MS).toBeLessThan(48 * 60 * 60 * 1000);
+		const run = withRun().planRun;
+		// One millisecond either side of the window is the actual boundary.
+		expect(runFor(run, 'a|b', run.startedAt + RUN_MAX_AGE_MS - 1)).toBe(run);
+		expect(runFor(run, 'a|b', run.startedAt + RUN_MAX_AGE_MS + 1)).toBeNull();
+	});
+
+	it('has no run to refuse when none was ever started', () => {
+		expect(runFor(undefined, 'a|b', Date.now())).toBeNull();
 	});
 
 	it('survives an import untouched — a plan in progress is not a document', () => {
@@ -97,18 +109,17 @@ describe('the run belongs to one menu and one evening', () => {
 
 describe('the actuals key', () => {
 	/**
-	 * The step count is IN the key. It never changes for the 970 frozen guide
-	 * recipes, so it costs them nothing; a family recipe re-authored to a
-	 * different length mints a new key and its old observations are never read
-	 * again, which is the discard the panel asked for without a special case.
+	 * This used to re-implement the key locally with a lambda that asserted
+	 * only properties of a JavaScript template literal, and never imported the
+	 * production `actualKey` — which lives (now) in pass.ts, not in the .svelte
+	 * page it used to be a closure inside of. Dropping the step count from the
+	 * real key left this file green.
 	 */
-	const key = (slug: string, n: number, steps: number) => `${slug}#${n}#${steps}`;
-
 	it('is stable while the dish is', () => {
-		expect(key('coq-au-vin', 3, 8)).toBe(key('coq-au-vin', 3, 8));
+		expect(actualKey('coq-au-vin', 3, 8)).toBe(actualKey('coq-au-vin', 3, 8));
 	});
 
 	it('changes when a family recipe is re-authored to a different length', () => {
-		expect(key('fam-nonna', 3, 8)).not.toBe(key('fam-nonna', 3, 9));
+		expect(actualKey('fam-nonna', 3, 8)).not.toBe(actualKey('fam-nonna', 3, 9));
 	});
 });

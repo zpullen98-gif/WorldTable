@@ -36,19 +36,26 @@ describe('a cost tier is not set by a word inside another word', () => {
 	 * in the technique tagger: these are how a recipe actually writes them.
 	 */
 	it('still finds the plurals and the inflections a recipe uses', () => {
+		/*
+		 * toBe, not toBeGreaterThanOrEqual: deriveCost floors at 1, so a bound of
+		 * >= 1 on a tier-1 expectation is satisfied by ANY dish, priced or not.
+		 * The 'creamy sauce'/'buttermilk' rows used exactly that shape (with a
+		 * `tier === 1 ? 1 : tier` ternary that was itself a no-op, since it
+		 * returns `tier` either way) and asserted nothing: deleting 'cream' and
+		 * 'butter' from the keyword table left them green. Both dishes actually
+		 * derive to 2 (1 base + 0.5 for the dairy hit, rounded), which is the
+		 * real number now pinned.
+		 */
 		for (const [word, tier] of [
 			['scallops', 2],
 			['prawns', 2],
 			['crabs', 3],
-			['creamy sauce', 1],
-			['buttermilk', 1]
+			['creamy sauce', 2],
+			['buttermilk', 2]
 		] as Array<[string, number]>) {
 			const d = r([word]);
-			expect(deriveCost(d, costBlob(d)), word).toBeGreaterThanOrEqual(tier === 1 ? 1 : tier);
+			expect(deriveCost(d, costBlob(d)), word).toBe(tier);
 		}
-		// Specifically: the leading boundary does not cost these their match.
-		expect(deriveCost(r(['scallops']), costBlob(r(['scallops'])))).toBe(2);
-		expect(deriveCost(r(['crabs']), costBlob(r(['crabs'])))).toBe(3);
 	});
 });
 
