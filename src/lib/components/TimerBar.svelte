@@ -121,9 +121,9 @@
 				bind:value={label}
 				aria-label="What this timer is for"
 			/>
-			<div class="presets">
+			<div class="presets" role="group" aria-label="Timer length">
 				{#each PRESETS as m (m)}
-					<button class="act" onclick={() => begin(m)}>{m}</button>
+					<button class="act" onclick={() => begin(m)} aria-label="{m} minutes">{m}</button>
 				{/each}
 				<input
 					class="mins"

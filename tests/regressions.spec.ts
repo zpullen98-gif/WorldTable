@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { goto } from './helpers';
+import { goto, seedSession } from './helpers';
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -498,4 +498,29 @@ test('a dish with no Lexicon words shows no block at all', async ({ page }) => {
 	await goto(page, '/recipe/miso-soup');
 	await expect(page.locator('.words')).toHaveCount(0);
 	await expect(page.getByRole('heading', { name: 'The words inside' })).toHaveCount(0);
+});
+
+/**
+ * The Pass's "Hands on tonight" toggles were four buttons whose entire
+ * accessible name was a bare digit ("1", "2", "3", "4"), with the visible
+ * "Hands on tonight" span associated to them by nothing at all - no
+ * role="group", no aria-labelledby. A screen reader hit "1, toggle button,
+ * not pressed" with no way to know what was being set, while this same file
+ * already applies role="group" aria-label="Allergens" to a fully-labelled
+ * checkbox row 146 lines below.
+ */
+test('the "Hands on tonight" toggles are a labelled group, not four bare digits', async ({
+	page
+}) => {
+	await seedSession(page);
+	await goto(page, '/menu');
+	await page.locator('.plan li').first().waitFor({ timeout: 15_000 });
+
+	const group = page.locator('[role="group"][aria-label="Hands on tonight"]');
+	await expect(group).toHaveCount(1);
+	const buttons = group.getByRole('button');
+	await expect(buttons).toHaveCount(4);
+	for (const n of [1, 2, 3, 4]) {
+		await expect(group.getByRole('button', { name: String(n), exact: true })).toHaveCount(1);
+	}
 });

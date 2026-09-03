@@ -668,15 +668,21 @@
 			{/each}
 
 			<div class="handsrow">
-				<span class="handslabel">Hands on tonight</span>
-				{#each [1, 2, 3, 4] as n (n)}
-					<button
-						class="chip"
-						class:on={hands === n}
-						aria-pressed={hands === n}
-						onclick={() => (hands = n)}>{n}</button
-					>
-				{/each}
+				<!-- role="group" because each button's entire accessible name is a bare
+				     digit: without it a screen reader hears "1, toggle button, not
+				     pressed" with nothing connecting it to what is being set. Same idiom
+				     as the allergens group below. -->
+				<div class="handsbtns" role="group" aria-label="Hands on tonight">
+					<span class="handslabel" aria-hidden="true">Hands on tonight</span>
+					{#each [1, 2, 3, 4] as n (n)}
+						<button
+							class="chip"
+							class:on={hands === n}
+							aria-pressed={hands === n}
+							onclick={() => (hands = n)}>{n}</button
+						>
+					{/each}
+				</div>
 				<span class="handsnote">Not saved: it is tonight's number, not a rota.</span>
 			</div>
 
@@ -1060,6 +1066,15 @@
 		align-items: center;
 		gap: 8px;
 		margin: 14px 0 6px;
+	}
+	/* The label + buttons now share a role="group" wrapper (see the markup
+	   comment above), which would otherwise stop them wrapping as individual
+	   flex items the way .handsrow's other children still do. */
+	.handsbtns {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px;
 	}
 	.linkrow {
 		display: block;

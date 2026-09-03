@@ -24,7 +24,7 @@ test('a cook can start a timer from anywhere, without a recipe', async ({ page }
 	await add.click();
 
 	await page.getByLabel('What this timer is for').fill('The rice');
-	await page.getByRole('button', { name: '20', exact: true }).click();
+	await page.getByRole('button', { name: '20 minutes', exact: true }).click();
 
 	const bar = page.getByRole('status', { name: 'Kitchen timers' });
 	await expect(bar).toContainText('The rice');
@@ -47,7 +47,7 @@ test('a running timer can be renamed, because the bar is read at two metres', as
 	await goto(page, '/recipes');
 	await page.getByRole('button', { name: 'Start a timer' }).click();
 	await page.getByLabel('What this timer is for').fill('T12');
-	await page.getByRole('button', { name: '10', exact: true }).click();
+	await page.getByRole('button', { name: '10 minutes', exact: true }).click();
 
 	const bar = page.getByRole('status', { name: 'Kitchen timers' });
 	// The label button specifically: the row's ✕ is aria-labelled "Remove the T12
@@ -69,11 +69,27 @@ test('two timers are told apart by when they go off, not by renaming them for yo
 	for (const mins of ['5', '20']) {
 		await page.getByRole('button', { name: 'Start a timer' }).click();
 		await page.getByLabel('What this timer is for').fill('T12');
-		await page.getByRole('button', { name: mins, exact: true }).click();
+		await page.getByRole('button', { name: `${mins} minutes`, exact: true }).click();
 	}
 
 	const bar = page.getByRole('status', { name: 'Kitchen timers' });
 	// Both keep the name the cook gave them; the deadline is what separates them.
 	await expect(bar.locator('button.label')).toHaveCount(2);
 	await expect(bar.getByText(/till \d\d:\d\d/).first()).toBeVisible();
+});
+
+/**
+ * The preset buttons (3, 5, 10, 20, 40) were named by their bare digit alone,
+ * with no unit and nothing connecting them to what they set: a screen reader
+ * hit "20, button" with no way to tell minutes from anything else.
+ */
+test('the timer-length presets are a labelled group naming the unit', async ({ page }) => {
+	await goto(page, '/recipes');
+	await page.getByRole('button', { name: 'Start a timer' }).click();
+
+	const group = page.locator('[role="group"][aria-label="Timer length"]');
+	await expect(group).toHaveCount(1);
+	for (const m of [3, 5, 10, 20, 40]) {
+		await expect(group.getByRole('button', { name: `${m} minutes`, exact: true })).toHaveCount(1);
+	}
 });
