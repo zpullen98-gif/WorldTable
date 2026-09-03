@@ -30,7 +30,7 @@
   {
     "slug": "salted-water-and-the-float-test",
     "label": "Salted water & the float test",
-    "recipeCount": 189,
+    "recipeCount": 188,
     "marks": [
       {
         "id": "salted-water-and-the-float-test#water",
@@ -728,34 +728,6 @@
     "fault": "Too little water, or too little time. The pieces swell until they are packed tight against each other and the ones in the middle never fully take up water; they will not soften later in the dish either, so the finished plate has hard pieces scattered through it."
   },
   {
-    "slug": "resting-meat-and-slicing-against-the-grain",
-    "label": "Resting meat & slicing against the grain",
-    "recipeCount": 63,
-    "marks": [
-      {
-        "id": "resting-meat-and-slicing-against-the-grain#before",
-        "text": "It came off the heat BEFORE the target temperature, measured with a probe rather than by time, because carryover keeps driving the inside up after it is out."
-      },
-      {
-        "id": "resting-meat-and-slicing-against-the-grain#coldest",
-        "text": "The probe went into the coldest likely part rather than the easiest one to reach: the reading that matters is the lowest one, not the first one."
-      },
-      {
-        "id": "resting-meat-and-slicing-against-the-grain#rested",
-        "text": "Rested for a time matched to its size, somewhere warm, and not cut into partway through to see how it is doing."
-      },
-      {
-        "id": "resting-meat-and-slicing-against-the-grain#dry",
-        "text": "The board is nearly dry when it is finally cut. A spreading pool means it was cut too early, and that liquid should have stayed inside."
-      },
-      {
-        "id": "resting-meat-and-slicing-against-the-grain#across",
-        "text": "The grain was found and the knife went ACROSS it, so the fibres are cut short, and the blade was sharp enough that the slices hold together rather than tearing."
-      }
-    ],
-    "fault": "It was cut straight off the heat, usually because everything else was ready. The muscle is still contracted and the juice still driven to the centre, so it runs out onto the board; the meat is drier than it ever needed to be, and the flavour that left it is sitting in a puddle under the knife."
-  },
-  {
     "slug": "keeping-the-cooking-liquid",
     "label": "Keeping the cooking liquid",
     "recipeCount": 60,
@@ -786,7 +758,7 @@
   {
     "slug": "tempering-a-custard",
     "label": "Tempering a custard",
-    "recipeCount": 60,
+    "recipeCount": 59,
     "marks": [
       {
         "id": "tempering-a-custard#gradual",
@@ -866,6 +838,34 @@
       }
     ],
     "fault": "The tray was crowded, or the oven was not truly up to heat. The food releases steam faster than a cool box can carry it away, so it sits pale and slack, and the extra minutes spent chasing colour take the inside well past where it should have stopped."
+  },
+  {
+    "slug": "resting-meat-and-slicing-against-the-grain",
+    "label": "Resting meat & slicing against the grain",
+    "recipeCount": 56,
+    "marks": [
+      {
+        "id": "resting-meat-and-slicing-against-the-grain#before",
+        "text": "It came off the heat BEFORE the target temperature, measured with a probe rather than by time, because carryover keeps driving the inside up after it is out."
+      },
+      {
+        "id": "resting-meat-and-slicing-against-the-grain#coldest",
+        "text": "The probe went into the coldest likely part rather than the easiest one to reach: the reading that matters is the lowest one, not the first one."
+      },
+      {
+        "id": "resting-meat-and-slicing-against-the-grain#rested",
+        "text": "Rested for a time matched to its size, somewhere warm, and not cut into partway through to see how it is doing."
+      },
+      {
+        "id": "resting-meat-and-slicing-against-the-grain#dry",
+        "text": "The board is nearly dry when it is finally cut. A spreading pool means it was cut too early, and that liquid should have stayed inside."
+      },
+      {
+        "id": "resting-meat-and-slicing-against-the-grain#across",
+        "text": "The grain was found and the knife went ACROSS it, so the fibres are cut short, and the blade was sharp enough that the slices hold together rather than tearing."
+      }
+    ],
+    "fault": "It was cut straight off the heat, usually because everything else was ready. The muscle is still contracted and the juice still driven to the centre, so it runs out onto the board; the meat is drier than it ever needed to be, and the flavour that left it is sitting in a puddle under the knife."
   },
   {
     "slug": "fermentation",

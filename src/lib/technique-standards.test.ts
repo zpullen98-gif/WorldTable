@@ -212,12 +212,12 @@ describe('the judgedBy join', () => {
 });
 
 describe('what this bought, measured against the shipped data', () => {
-	it('takes the assessable corpus from 45 to 1719 of 1844', () => {
+	it('takes the assessable corpus from 45 to 1717 of 1844', () => {
 		const dish = detail.filter((r) => r.standard).length;
 		const byTechnique = detail.filter((r) => r.judgedBy).length;
 		expect(dish).toBe(45);
-		expect(byTechnique).toBe(1674);
-		expect(dish + byTechnique).toBe(1719);
+		expect(byTechnique).toBe(1672);
+		expect(dish + byTechnique).toBe(1717);
 		expect(detail.length).toBe(1844);
 	});
 
@@ -227,18 +227,28 @@ describe('what this bought, measured against the shipped data', () => {
 
 	/**
 	 * The honest remainder, asserted so it cannot quietly drift to zero and take
-	 * the copy's honesty with it. 173 dishes can still only be recorded as
+	 * the copy's honesty with it. 127 dishes can still only be recorded as
 	 * cooked, and the recipe page renders no block at all for them.
 	 *
-	 * Split, because the two halves have different futures. 143 carry no
-	 * technique tag at all and no threshold will ever reach them; the other 30
+	 * Split, because the two halves have different futures. 105 carry no
+	 * technique tag at all and no threshold will ever reach them; the other 22
 	 * exercise only techniques too rare in this corpus to be worth a standard —
 	 * and below 12 the ladder effectively ends, per the module header.
+	 *
+	 * (This comment said 173/143/30 while the assertions below said 125/103/22.
+	 * The prose was left behind by an earlier change and nothing caught it,
+	 * because a comment is not a gate. Corrected 3 Sep along with the numbers.)
+	 *
+	 * It rose by two on 3 Sep, when 'then slice' and 'shingle' were deleted from
+	 * 'Resting meat & slicing against the grain': two recipes whose ONLY tag was
+	 * that misreading now carry none. Up is the honest direction there. A recipe
+	 * assessed on a skill its method never teaches is worse than one not
+	 * assessed at all.
 	 */
-	it('leaves 125 dishes with no standard of any kind', () => {
+	it('leaves 127 dishes with no standard of any kind', () => {
 		const none = detail.filter((r) => !r.standard && !r.judgedBy);
-		expect(none.length).toBe(125);
-		expect(none.filter((r) => !r.techniques?.length).length).toBe(103);
+		expect(none.length).toBe(127);
+		expect(none.filter((r) => !r.techniques?.length).length).toBe(105);
 		expect(none.filter((r) => r.techniques?.length).length).toBe(22);
 	});
 });

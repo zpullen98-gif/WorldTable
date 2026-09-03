@@ -12,23 +12,33 @@
  * searing anything is doing the same measurable thing whether the pan holds
  * duck or aubergine, and that is assessable once, for all of it.
  *
- * 125 of the 1844 remain unassessable and always will on this approach: 103
+ * 127 of the 1844 remain unassessable and always will on this approach: 105
  * carry no technique tag at all, and the other 22 exercise only techniques too
  * rare in this corpus to be worth a standard. That is the honest ceiling rather
  * than a backlog, and it is gated below with everything else: the first
  * version of this sentence said 146 and 35, which were reasoned rather than
  * measured and were both wrong.
  *
- * It moved from 123/100/23 when the tagger got a sense guard. Four recipes
+ * It moved from 123/100/23 when the tagger got a sense guard, and from
+ * 125/103/22 when 'then slice' and 'shingle' were deleted: two recipes whose
+ * ONLY tag was that misread now carry none. The ceiling going up here is the
+ * same honest direction as the sense guard - it is two recipes no longer being
+ * assessed on a skill their method never teaches. Four recipes
  * became untagged - onigiri, blackened-redfish, salt-baked-whole-fish and
  * kulfi - because the one tag each carried was a collision: `nappe` inside
  * `snapper`, `nigiri` inside `onigiri`, and kulfi's own denial. This number
  * going UP is the honest direction.
  *
  * The 60 techniques written here are every technique the corpus uses on 12 or
- * more recipes. They put a standard on 1674 recipes that had none, taking the
- * assessable corpus from 45 to 1719 of 1844: for 60 pieces of writing rather
- * than 1674.
+ * more recipes. They put a standard on 1672 recipes that had none, taking the
+ * assessable corpus from 45 to 1717 of 1844: for 60 pieces of writing rather
+ * than 1672.
+ *
+ * Both numbers came DOWN by two on 3 Sep, and down is also an honest direction:
+ * deleting 'then slice' and 'shingle' from 'Resting meat & slicing against the
+ * grain' cost seven recipes a tag none of them had earned, and two of those had
+ * no other assessable technique at all. A recipe assessed on a skill its method
+ * never teaches is worse than one not assessed.
  *
  * The sixtieth is low and slow smoking, and it arrived by the gate rather than
  * by choice: 134 meat and dessert recipes on 1 Sep 2026 pushed that technique

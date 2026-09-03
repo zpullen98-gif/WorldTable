@@ -8,40 +8,25 @@
  * this exact key.
  */
 import { browser } from '$app/environment';
+import { DEFAULTS, sanitizePrefs } from '../prefs-schema';
+import type { Prefs, Service, Units, Hemisphere } from '../prefs-schema';
 
-export type Service = 'day' | 'night';
-export type Units = 'metric' | 'us';
-export type Hemisphere = 'N' | 'S';
+export type { Service, Units, Hemisphere };
 
 const KEY = 'wt.prefs.v1';
-const VERSION = 1;
 
-interface Prefs {
-	schemaVersion: number;
-	service: Service | null; // null = follow prefers-color-scheme
-	units: Units;
-	hemisphere: Hemisphere;
-}
-
-const DEFAULTS: Prefs = {
-	schemaVersion: VERSION,
-	service: null,
-	units: 'metric',
-	hemisphere: 'N'
-};
-
+/*
+ * The shape and the checks live in prefs-schema.ts, a pure module, so vitest can
+ * reach them. This read used to end on `{ ...DEFAULTS, ...parsed }` - a spread,
+ * not a check - and localStorage is the one store a person can edit from a
+ * console. See that module for how the two readers of this key disagreed.
+ */
 function read(): Prefs {
 	if (!browser) return { ...DEFAULTS };
 	try {
 		const raw = localStorage.getItem(KEY);
 		if (!raw) return { ...DEFAULTS };
-		const parsed = JSON.parse(raw);
-		// Unknown future version: don't guess at its shape, just use defaults for
-		// this session rather than overwriting what a newer build wrote.
-		if (typeof parsed?.schemaVersion === 'number' && parsed.schemaVersion > VERSION) {
-			return { ...DEFAULTS };
-		}
-		return { ...DEFAULTS, ...parsed, schemaVersion: VERSION };
+		return sanitizePrefs(JSON.parse(raw));
 	} catch {
 		return { ...DEFAULTS };
 	}

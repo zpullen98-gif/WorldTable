@@ -45,6 +45,24 @@ function courseFromURL(raw: string | null): Course | null {
 	return (hit as Course | undefined) ?? null;
 }
 
+/**
+ * Every query key this module reads. Exported so nothing has to guess.
+ *
+ * The front door forwards a legacy `/?q=...` on to /recipes, and it used to
+ * forward on the mere PRESENCE of a query string - so `/?fbclid=...` from a
+ * Facebook share, or `/?utm_source=...` from any campaign link, sent a first-
+ * time visitor to the Library after a flash of the home page they had actually
+ * been sent to. Listing the keys here rather than in the page keeps the test and
+ * the forward reading from the same source: add a filter to the parser below
+ * without adding it here and the forward silently stops honouring it.
+ */
+export const FILTER_KEYS = ['q', 'course', 'diff', 'quick', 'veg', 'season'] as const;
+
+/** Does this URL actually ask the Library for anything? */
+export function hasFilterQuery(url: URL): boolean {
+	return FILTER_KEYS.some((k) => url.searchParams.has(k));
+}
+
 export function filtersFromURL(url: URL, chapter: string | null = null): FilterState {
 	const p = url.searchParams;
 	const diff = Number(p.get('diff'));

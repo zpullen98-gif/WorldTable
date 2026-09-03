@@ -12,6 +12,7 @@
 import type { PantryGroup, Recipe, Course, Difficulty, DietFlags } from './types';
 // The guide's own allergen matcher, pure and importable; see the diet note below.
 import { deriveDiet } from '../../tools/derive/diet.mjs';
+import { deriveCost, costBlob } from '../../tools/derive/cost.mjs';
 import { bySlug } from './data';
 import { slugOrFallback } from './slug';
 
@@ -146,6 +147,9 @@ export function buildFamilyRecipe(
 
 	// Same narrow blob the pantry matcher uses for guide recipes: name +
 	// ingredients, so a family stew shows up in Pantry Match like any other.
+	/* The shape cost.mjs prices: the same four fields the corpus gives it. */
+	const forCost = { n: draft.name, c: chapter, i: ingredients, m: method };
+
 	const narrow = `${draft.name} ${ingredients.join(' ')}`.toLowerCase();
 	const pantryItems = pantry
 		.flatMap((g) => g.items)
@@ -188,7 +192,17 @@ export function buildFamilyRecipe(
 			...(deriveDiet({ n: draft.name, i: ingredients, v: draft.vegetarian }) as DietFlags),
 			confidence: 'derived'
 		},
-		costTier: 2,
+		/*
+		 * Derived, not stamped. This was a bare `costTier: 2` on a recipe the
+		 * COOK typed, from a form that never asks - the same shape as the
+		 * `serves: 4` fixed above and the allergen wall below it, and it printed
+		 * as a confident `$$` on the page.
+		 *
+		 * cost.mjs is a pure zero-import module, so the author's own lines go
+		 * through exactly the rule the guide's 1,844 recipes go through, the way
+		 * deriveDiet already does. A family recipe of lobster now says so.
+		 */
+		costTier: deriveCost({ i: ingredients }, costBlob(forCost)),
 		flavorTags: ['family'],
 		season: [],
 		region: { kind: 'world', group: 'The Family Chapter', subgroup: null },

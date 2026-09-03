@@ -217,7 +217,21 @@ export const SUPPLEMENT = [
 		q: 'mashing pureeing food mill technique'
 	},
 	{
-		k: ['against the grain', 'across the grain', 'rest the meat', 'rest, slice', 'then slice', 'shingle'],
+		/*
+		 * 'then slice' and 'shingle' deleted. Both read the wrong sense every
+		 * time: seven tags between them and not one phrase teaches resting or
+		 * grain direction. Salsa criolla slices ONIONS, negiyaki slices spring
+		 * onion, goya chanpuru slices bitter melon, gesiers slices gizzards over
+		 * leaves, laplap says the taro "will then slice instead of slumping"
+		 * (setting starch), pan de jamon shingles HAM onto dough, and
+		 * tafelspitz's is a serving line, "then sliced beef with both sauces".
+		 *
+		 * The contrast case, measured and deliberately NOT touched: 'across the
+		 * grain' is sound, and 'sear' elsewhere is 1 false positive in 67 (1.5%),
+		 * which is override material rather than a keyword bug. A keyword earns
+		 * deletion by being wrong in every instance, not by being wrong once.
+		 */
+		k: ['against the grain', 'across the grain', 'rest the meat', 'rest, slice'],
 		l: 'Resting meat & slicing against the grain',
 		q: 'resting meat slicing against the grain technique'
 	},

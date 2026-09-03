@@ -1584,7 +1584,7 @@
     "lexiconTerm": null,
     "definition": null,
     "origin": "original",
-    "chapters": 3,
+    "chapters": 4,
     "semesters": [
       {
         "n": 3,
@@ -1593,6 +1593,7 @@
     ],
     "recipes": [
       "bananas-foster",
+      "christmas-pudding",
       "garides-saganaki",
       "flambe-pan-sauce-brandy-and-green-peppercorn"
     ]
@@ -3575,7 +3576,7 @@
     "lexiconTerm": "Resting, Carryover & the Thermometer",
     "definition": "The instant-read thermometer is the cheapest skill upgrade in cooking: doneness is a temperature, not a time. Key coordinates: 50–52°C rare beef, 55–57 medium-rare, 63°C+rest for pork, 68–74°C poultry white-to-dark, 82°C custards, 95°C brisket-probe-tender. CARRYOVER adds 3–8°C after removal (more in big roasts); RESTING (5 min for steaks, 30–45 for large roasts) lets juices thicken and redistribute; meat cut immediately bleeds what patience would keep. The pros' phrase 'cook to temp, not to time' is the entire entry in five words; the pros' habit of probing the COLDEST likely spot is the footnote that matters.",
     "origin": "supplement",
-    "chapters": 49,
+    "chapters": 45,
     "semesters": [
       {
         "n": 3,
@@ -3597,7 +3598,6 @@
       "bife-con-chimichurri",
       "sunday-roast-beef-and-yorkshire-puddings",
       "sauerbraten",
-      "tafelspitz",
       "vitel-tone",
       "holiday-braised-brisket",
       "central-texas-smoked-brisket",
@@ -3625,30 +3625,24 @@
       "fuqi-feipian",
       "poc-chuc",
       "kyet-thun-ni-kyaw",
-      "salsa-criolla",
       "kangaroo-loin-with-mountain-pepperberry",
       "montreal-smoked-meat",
       "chichinga",
       "kokoda",
       "dibi",
       "txuleta-a-la-brasa",
-      "negiyaki",
-      "goya-chanpuru",
       "magret-de-canard-a-la-poele-froide",
-      "gesiers-de-canard-confits",
       "basturma",
       "svickova-na-smetane",
       "gammeldags-oksesteg",
       "jerk-pork",
       "kotlet-schabowy",
       "qovurma-lagmon",
-      "pan-de-jamon",
       "polgesek",
       "bollito-misto-con-salsa-verde",
       "lomo-embuchado",
       "gespickte-rehkeule",
       "rehrucken-baden-baden",
-      "laplap-with-chicken",
       "carne-oreada-santandereana"
     ]
   },
@@ -3916,7 +3910,6 @@
       "pierogi-z-kapusta-i-grzybami",
       "kayseri-mantisi",
       "ravioli-del-plin",
-      "steak-and-kidney-pudding",
       "trippa-alla-romana",
       "tonkotsu-broth",
       "pho-bo-broth",
@@ -5559,7 +5552,7 @@
     "lexiconTerm": "Tempering (Eggs & Chocolate)",
     "definition": "One word, two crafts. TEMPERING EGGS: whisking hot liquid gradually into yolks before returning all to the pot, raising their temperature gently so custards (crème anglaise, carbonara's cousin) thicken at 82°C instead of scrambling at 90°C, the thermometer's best friend. TEMPERING CHOCOLATE: melting, cooling, and reheating to precise curves (dark: ~50°→27°→31–32°C) so cocoa butter sets in stable Form V crystals: glossy snap instead of dull bloom. Both are the same discipline wearing different aprons: proteins and fats obey temperature, and the cook who controls degrees controls texture.",
     "origin": "original",
-    "chapters": 48,
+    "chapters": 47,
     "semesters": [
       {
         "n": 6,
@@ -5577,7 +5570,6 @@
       "arroz-doce",
       "malva-pudding",
       "vada-pav",
-      "christmas-pudding",
       "banana-pudding",
       "umm-ali",
       "nanaimo-bars",

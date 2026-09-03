@@ -79,7 +79,18 @@ export const TAGGING_PASS = [
 		q: 'filleting fish technique'
 	},
 	{
-		k: ['tilt to ignite'],
+		/*
+		 * 'blue flames' reaches christmas-pudding ("warm brandy in a ladle,
+		 * ignite, and pour the blue flames over at the table"), which is a
+		 * textbook flambé and carried no label at all. One hit, no false
+		 * positives.
+		 *
+		 * NOT 'ignite' on its own, which is three and one of them is a warning
+		 * AGAINST flame: txuleta a la brasa says "dripping fat that ignites lays
+		 * down soot rather than smoke". The bare verb reads the wrong sense
+		 * exactly the way the two pudding overrides did.
+		 */
+		k: ['tilt to ignite', 'blue flames'],
 		l: 'Flambé',
 		q: 'flambé technique'
 	},

@@ -73,20 +73,17 @@
       }
     },
     "christmas-pudding": {
-      "reason": "Technique 'Pleating dumplings' removed: a pleated parchment and foil lid tied over a basin, not a dumpling.",
-      "techniques": [
-        "Tempering a custard",
-        "Steaming: basket, leaf and lid",
-        "Soaking dried goods back to life"
+      "reason": "Three keyword readings ruled wrong, stated as DROPS so the rest of the derivation stays live. 'Pleating dumplings': a pleated parchment and foil lid tied over a basin, not a dumpling. 'Tempering a custard': the recipe never makes one - 'serve with brandy butter or custard' is a serving suggestion in the last line. The array form this row used to take froze all three in and made the second unfixable without rewriting the list.",
+      "techniquesDrop": [
+        "Pleating dumplings",
+        "Tempering a custard"
       ]
     },
     "steak-and-kidney-pudding": {
-      "reason": "Technique 'Pleating dumplings' removed: a pleated parchment and foil lid tied over a basin, not a dumpling.",
-      "techniques": [
-        "Searing: the hard crust",
-        "Steaming: basket, leaf and lid",
-        "Salted water & the float test",
-        "Knife cuts: dice, julienne, bias"
+      "reason": "Two keyword readings ruled wrong, stated as DROPS so the rest of the derivation stays live. 'Pleating dumplings': a pleated parchment and foil lid tied over a basin, not a dumpling. 'Salted water & the float test': the phrase is 'soak the kidney in cold salted water', which is drawing blood out of offal, not testing gnocchi for buoyancy.",
+      "techniquesDrop": [
+        "Pleating dumplings",
+        "Salted water & the float test"
       ]
     },
     "tempered-dark-chocolate-by-seeding": {

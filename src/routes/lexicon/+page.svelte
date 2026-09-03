@@ -278,10 +278,33 @@
 				<h2>{e.term}</h2>
 				<p class="def">{e.definition}</p>
 				{#if e.recipes.length}
-					<p class="xrefs">
+					<!--
+						The links used to sit here with nothing but an arrow glyph in front
+						of them, so their placement inside the card was the entire claim
+						that they had anything to do with the term. A screen reader heard a
+						run of dish names and no reason for them; a sighted reader had to
+						infer it from a mapsto arrow.
+
+						Visible words rather than an aria-label, because the framing was
+						missing for everyone, not only for assistive tech - and a label
+						nobody can see is a label nobody proofreads. `role=group` carries
+						it into the accessibility tree as one named thing rather than
+						loose links; a plain <p> with aria-label is not reliably announced.
+
+						"Demonstrated in" is the crosslink contract, not a hedge: item
+						21's justification rule means a dish only appears here when the
+						term is one of the things it actually shows.
+
+						A heading per card was the other option and is wrong at this
+						density: 479 cards would put 479 more headings into the page's
+						heading list, which makes heading navigation worse, not better.
+					-->
+					<p class="xrefs" role="group" aria-label="Dishes that demonstrate {e.term}">
+						<span class="xlabel">Demonstrated in</span>
 						{#each e.recipes as slug (slug)}
 							{@const r = bySlug.get(slug)}
-							{#if r}<a href="{base}/recipe/{slug}">↦ {r.name}</a>{/if}
+							{#if r}<a href="{base}/recipe/{slug}"><span aria-hidden="true">↦</span> {r.name}</a
+								>{/if}
 						{/each}
 					</p>
 				{/if}
@@ -351,7 +374,12 @@
 	}
 	.lexcard h2 { font-size: var(--t-h4); margin: 4px 0 8px; }
 	.lexcard .def { font-size: 14.5px; color: var(--ink-soft); max-width: 62ch; }
-	.xrefs { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+	.xrefs { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+	/* Reads as a label, not as another chip: no border, no link colour. */
+	.xlabel {
+		font-size: var(--t-small); color: var(--muted); text-transform: uppercase;
+		letter-spacing: 0.04em; flex: 0 0 100%;
+	}
 	.xrefs a {
 		font-size: var(--t-small); color: var(--turmeric-deep); text-decoration: none;
 		border: 1px solid var(--line); border-radius: var(--radius); padding: 2px 8px;

@@ -168,7 +168,19 @@
 				the multiple is a fact the app owns because the reader pressed it.
 			-->
 			{#if scale !== 1}<li class="scaled">Scaled {SCALES.find((s) => s.x === scale)?.label}</li>{/if}
-			<li>{'$'.repeat(r.costTier)}</li>
+			<!--
+				The tier used to print as a bare run of dollar signs with no label and
+				no hedge, so a derived guess read like a price. It is a keyword score
+				over the recipe's own words, not a costing: the House ledger is where
+				real money lives.
+
+				The aria-label carries the number, because "$$" read aloud is two
+				dollar signs and means nothing.
+			-->
+			<li title="Rough cost, derived from the ingredients">
+				<span aria-hidden="true">{'$'.repeat(r.costTier)}</span>
+				<span class="sr">roughly {r.costTier} of 4 for cost</span>
+			</li>
 			{#if r.diet.vegetarian}<li class="veg">Vegetarian</li>{/if}
 			{#if r.diet.vegan}<li class="veg">Vegan</li>{/if}
 			<!-- Weaker than the badge on purpose: the dish is NOT vegan as
@@ -511,6 +523,15 @@
 		font-size: var(--t-small);
 		color: var(--muted);
 		font-variant-numeric: oldstyle-nums;
+	}
+	/* Same shape the rail and toolbar use: read aloud, never painted. Scoped
+	   styles mean each component that needs it defines it. */
+	.stats .sr {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
 	}
 	.stats li.veg {
 		color: var(--leaf);

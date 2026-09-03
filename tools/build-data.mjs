@@ -23,7 +23,7 @@ import { deriveDiet } from './derive/diet.mjs';
 import { deriveSeason } from './derive/season.mjs';
 import { deriveEquipment } from './derive/equipment.mjs';
 import { deriveFlavor } from './derive/flavor.mjs';
-import { deriveCost } from './derive/cost.mjs';
+import { deriveCost, costBlob } from './derive/cost.mjs';
 import { derivePairing } from './derive/pairing.mjs';
 import { deriveTechniques, deriveFilms } from './derive/films.mjs';
 import { fullTechTable, LEXICON_ANCHOR, SUPPLEMENT } from './derive/technique-table.mjs';
@@ -193,10 +193,45 @@ const TEACHERS = raw('TEACHERS');
 const DISH_FILMS = raw('DISH_FILMS');
 const TECH = raw('TECH');
 
+/*
+ * AUTHORED INPUTS THAT LIVE IN THE OUTPUT DIRECTORY.
+ *
+ * overrides.json and notes.json are hand-written and sit in src/lib/data/,
+ * which is also where this script emits to. Both were read with
+ * `existsSync(p) ? JSON.parse(...) : {}`, so losing one was not an error, it was
+ * an empty default.
+ *
+ * MEASURED rather than argued: move notes.json aside and `npm run build:data`
+ * exits 0, prints "all gates passed", and changes 320 of the 1,844 index entries
+ * - exactly the 320 the backfill overlay covers. Every downstream derivation
+ * re-runs on the poorer text: flavour tags, seasons, cross-links, the search
+ * index. Nothing says a word.
+ *
+ * The CI derived-data gate catches the UNSHIPPED version of this, because the
+ * regenerated tree would be dirty. It does not catch a deletion committed
+ * together with its regenerated data, which is the shape a careless sweep
+ * actually takes. So absence is now fatal here, at the read.
+ *
+ * `required()` and not a bare existsSync check, because the failure has to name
+ * the file and say it is authored. "Cannot find module" would send the next
+ * reader looking for the script that generates it, and there isn't one.
+ */
+const required = (path, what) => {
+	if (!existsSync(path)) {
+		console.error(`\n  BUILD INPUT MISSING: ${path.replace(ROOT, '.')}\n`);
+		console.error(`    ${what}`);
+		console.error('    It is AUTHORED, not generated: nothing here can rebuild it.');
+		console.error('    Restore it from git rather than letting the build default it away.\n');
+		process.exit(1);
+	}
+	return JSON.parse(readFileSync(path, 'utf8'));
+};
+
 const overridesPath = join(OUT, 'overrides.json');
-const OVERRIDES = existsSync(overridesPath)
-	? JSON.parse(readFileSync(overridesPath, 'utf8'))
-	: { recipes: {} };
+const OVERRIDES = required(
+	overridesPath,
+	'The hand-written per-recipe overrides: tags, courses and technique labels.'
+);
 
 /**
  * The backfill overlay: slug -> a rewritten "from the pass" note.
@@ -210,7 +245,11 @@ const OVERRIDES = existsSync(overridesPath)
  * is meant to cause, visible in the recipes.json diff.
  */
 const notesPath = join(OUT, 'notes.json');
-const NOTES = existsSync(notesPath) ? JSON.parse(readFileSync(notesPath, 'utf8')) : {};
+const NOTES = required(
+	notesPath,
+	'The backfill overlay: 320 rewritten "from the pass" notes. Without it the ' +
+		'build silently re-derives every one of them from the poorer original text.'
+);
 
 // ── chapter classification ───────────────────────────────────────────────────
 // 52 US-rail chapters, 11 thematic Atlas chapters, 31 world cuisines = 94.
@@ -431,7 +470,9 @@ R.forEach((r, i) => {
 		 */
 		...(ov.serves ? { serves: ov.serves } : {}),
 		diet,
-		costTier: ov.costTier ?? deriveCost(r, blobs[i]),
+		// costBlob, not blobs[i]: the wide blob carries the NOTE, and a dish is
+		// not made expensive by prose about it. See cost.mjs.
+		costTier: ov.costTier ?? deriveCost(r, costBlob(r)),
 		flavorTags: flavor.tags,
 		// Narrow text, like the original's RTEXT and like the pantry matcher:
 		// seasonality is about what is IN the dish. A note remarking that a stew
@@ -693,9 +734,27 @@ if (!supplementHeld || !geographyHeld) {
 }
 
 // ── emit ─────────────────────────────────────────────────────────────────────
+/*
+ * STAGED, then promoted once every gate has spoken.
+ *
+ * These calls used to write straight into src/lib/data/. The emit runs here,
+ * around line 770, and the gate block that can still fail the build is a
+ * THOUSAND lines further down - so a run that failed its late gates had already
+ * put poisoned artifacts on disk, then exited 1, leaving a tree that looks
+ * built. The partial fix above (the supplement/geography gate, "nothing was
+ * written") only ever covered the gates that had spoken by that point.
+ *
+ * Staging costs one copy of the output in memory: a few MB, against a build
+ * that already holds every recipe twice. The table still prints as each file is
+ * prepared, because it is a progress report and the sizes are its useful part.
+ */
 mkdirSync(OUT, { recursive: true });
+/** @type {Map<string, string>} file name -> the exact bytes it will get */
+const staged = new Map();
+const stage = (file, text) => staged.set(file, text);
 const write = (file, value) => {
-	writeFileSync(join(OUT, file), JSON.stringify(value, null, 2) + '\n', 'utf8');
+	const text = JSON.stringify(value, null, 2) + '\n';
+	stage(file, text);
 	const kb = (JSON.stringify(value).length / 1024).toFixed(0);
 	console.log(`  ${file.padEnd(24)} ${String(Array.isArray(value) ? value.length : '').padStart(5)}  ${kb.padStart(6)} KB`);
 };
@@ -843,7 +902,9 @@ mini.addAll(
 );
 {
 	const json = JSON.stringify(mini);
-	writeFileSync(join(OUT, 'search-index.json'), json + '\n', 'utf8');
+	// Staged like every other artifact: this one bypassed write() because it
+	// serializes itself, not because it is exempt from the gates.
+	stage('search-index.json', json + '\n');
 	/* Counted, not typed. This said 970 long after the corpus reached 1710, so
 	   the build report claimed for weeks that two in five recipes were missing
 	   from search. They were not: the index had them all. A wrong number in a
@@ -1814,8 +1875,11 @@ problems.push(...drillProblems);
 problems.push(...stationProblems);
 
 if (problems.length) {
-	console.error('  BUILD GATE FAILED\n');
+	console.error('  BUILD GATE FAILED: nothing was written\n');
 	for (const p of problems) console.error(`    ✗ ${p}\n`);
 	process.exit(1);
 }
-console.log('  all gates passed\n');
+
+/* Every gate has spoken. Only now does anything touch the tree. */
+for (const [file, text] of staged) writeFileSync(join(OUT, file), text, 'utf8');
+console.log(`  all gates passed, ${staged.size} files written\n`);

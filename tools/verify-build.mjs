@@ -68,12 +68,45 @@ const html = files.filter((f) => extname(f) === '.html');
    What is actually being checked is unchanged and still worth checking: that
    EVERY recipe and EVERY chapter got a prerendered page, so a routing or
    pagination regression that silently drops pages cannot ship. */
-const expectedRecipes = JSON.parse(
-	readFileSync(join(ROOT, 'src/lib/data/recipes.full.json'), 'utf8')
-).length;
+/*
+ * Counted from the file the PAGES come from.
+ *
+ * This read recipes.full.json while `entries()` maps over `recipes`, which
+ * src/lib/data.ts loads from recipes.index.json. Both are 1,844 today and in the
+ * same slug order, so it was latent rather than live - but a check whose number
+ * comes from a different file than the thing it checks is not checking, it is
+ * agreeing by coincidence.
+ *
+ * The pair is asserted below, so the coincidence becomes a contract.
+ */
+const indexRecipes = JSON.parse(
+	readFileSync(join(ROOT, 'src/lib/data/recipes.index.json'), 'utf8')
+);
+const expectedRecipes = indexRecipes.length;
 const expectedChapters = JSON.parse(
 	readFileSync(join(ROOT, 'src/lib/data/chapters.json'), 'utf8')
 ).length;
+
+/*
+ * The two recipe files are one corpus in two shapes: the index is what the app
+ * eagerly loads and prerenders from, the full file is the lazy detail. Nothing
+ * anywhere required them to hold the same dishes in the same order, so a
+ * derivation that dropped a recipe from one would leave the other's pages
+ * pointing at details that are not there - and every count in this file would
+ * still add up, because each was read from whichever file happened to be handy.
+ */
+check('the two recipe files are the same corpus, in the same order', () => {
+	const full = JSON.parse(readFileSync(join(ROOT, 'src/lib/data/recipes.full.json'), 'utf8'));
+	assert(
+		full.length === indexRecipes.length,
+		`index has ${indexRecipes.length}, full has ${full.length}`
+	);
+	const a = indexRecipes.map((r) => r.slug);
+	const b = full.map((r) => r.slug);
+	const firstDiff = a.findIndex((slug, i) => slug !== b[i]);
+	assert(firstDiff === -1, `slug order diverges at ${firstDiff}: ${a[firstDiff]} vs ${b[firstDiff]}`);
+	return `${a.length} slugs, identical order`;
+});
 
 check('every recipe has a prerendered page', () => {
 	const n = html.filter((f) => rel(f).startsWith('recipe/')).length;
