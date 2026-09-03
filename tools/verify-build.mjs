@@ -331,6 +331,60 @@ check('PWA manifest and icons present', () => {
 	return `${m.icons.length} icons incl. maskable`;
 });
 
+/*
+ * Every number the shipped app says about itself is the number it has.
+ *
+ * Three surfaces state the corpus size and only two of them could interpolate.
+ * `+layout.svelte` reads TOTALS for recipes and chapters but carried the
+ * lexicon's 479 as a LITERAL, in the very file that already had totals.json
+ * open; the manifest is static, cannot interpolate at all, and had drifted to
+ * "970 recipes" - the size of the original guide, 874 dishes ago.
+ *
+ * A number that happens to be right today is not fixed, it is unexploded. This
+ * gate is the only thing that keeps the static one honest, so it reads EVERY
+ * integer out of the manifest description and demands each one be a real total.
+ * Written to be wrong loudly: a new number in that sentence fails until it is
+ * either a genuine total or the sentence stops quoting figures.
+ */
+check('the manifest states no number the corpus does not have', () => {
+	const totals = JSON.parse(readFileSync(join(ROOT, 'src/lib/data/totals.json'), 'utf8'));
+	const m = JSON.parse(readFileSync(join(BUILD, 'manifest.webmanifest'), 'utf8'));
+	const known = new Set(Object.values(totals).map(Number));
+	const stated = [...String(m.description ?? '').matchAll(/\b(\d[\d,]*)\b/g)].map((x) =>
+		Number(x[1].replace(/,/g, ''))
+	);
+	assert(stated.length > 0, 'manifest description quotes no figures: delete this gate or restore them');
+	const wrong = stated.filter((n) => !known.has(n));
+	assert(
+		wrong.length === 0,
+		`manifest description states ${wrong.join(', ')}, which totals.json does not have (${[...known].join(', ')})`
+	);
+	return `${stated.length} figures, all real`;
+});
+
+/*
+ * And the layout must not grow a new literal where a total belongs. The rule
+ * is narrow on purpose: a bare integer of three digits or more, inside the
+ * description meta or the footer, is a corpus figure that should have been
+ * interpolated. Years, pixel values and the rest of the file are none of its
+ * business.
+ */
+check('no hardcoded corpus figure in the masthead or footer', () => {
+	const layout = readFileSync(join(ROOT, 'src', 'routes', '+layout.svelte'), 'utf8');
+	const spans = [];
+	const desc = layout.match(/name="description"[\s\S]{0,400}?\/>/);
+	if (desc) spans.push(['meta description', desc[0]]);
+	const foot = layout.match(/<footer>[\s\S]*?<\/footer>/);
+	if (foot) spans.push(['footer', foot[0]]);
+	assert(spans.length === 2, 'could not find both the description meta and the footer');
+	const offenders = [];
+	for (const [where, text] of spans) {
+		for (const m of text.matchAll(/\b\d{3,}\b/g)) offenders.push(`${where}: ${m[0]}`);
+	}
+	assert(offenders.length === 0, `hardcoded figure - interpolate TOTALS instead (${offenders.join('; ')})`);
+	return 'both interpolate';
+});
+
 // ── report ───────────────────────────────────────────────────────────────────
 const pad = (s, n) => String(s).padEnd(n);
 console.log('\n  verifying build/\n');

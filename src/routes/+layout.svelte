@@ -140,7 +140,7 @@
 	<meta name="apple-mobile-web-app-title" content={__APP_NAME__} />
 	<meta
 		name="description"
-		content="An interactive culinary compendium: {TOTALS.recipes} recipes across {TOTALS.chapters} chapters, a 479-term chef’s lexicon, pantry matching and a ten-semester path of study."
+		content="An interactive culinary compendium: {TOTALS.recipes} recipes across {TOTALS.chapters} chapters, a {TOTALS.lexicon}-term chef’s lexicon, pantry matching and a ten-semester path of study."
 	/>
 </svelte:head>
 
@@ -239,7 +239,7 @@
 
 <footer>
 	<div class="shell">
-		The World Table · {TOTALS.recipes} recipes · {TOTALS.chapters} chapters · Chef’s Lexicon: 479 terms
+		The World Table · {TOTALS.recipes} recipes · {TOTALS.chapters} chapters · Chef’s Lexicon: {TOTALS.lexicon} terms
 	</div>
 </footer>
 
