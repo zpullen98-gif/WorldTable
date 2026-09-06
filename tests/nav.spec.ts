@@ -21,7 +21,8 @@ const TABS = [
 	{ href: '/learn', label: 'Learn', h1: /^Learn$/ },
 	{ href: '/practise', label: 'Practise', h1: /^Practise$/ },
 	{ href: '/service', label: 'Service', h1: /^Service$/ },
-	{ href: '/recipes', label: 'Library', h1: /^The Library$/ }
+	{ href: '/recipes', label: 'Library', h1: /^The Library$/ },
+	{ href: '/menu', label: 'Menu', h1: /^My Menu$/ }
 ];
 
 for (const tab of TABS) {
@@ -35,9 +36,9 @@ for (const tab of TABS) {
 	});
 }
 
-test('the bar shows exactly five tabs', async ({ page }) => {
+test('the bar shows exactly six tabs', async ({ page }) => {
 	await goto(page, '/');
-	await expect(page.locator('.modetab')).toHaveCount(5);
+	await expect(page.locator('.modetab')).toHaveCount(6);
 });
 
 /**
@@ -57,14 +58,16 @@ test.describe('exactly one tab owns each route', () => {
 		['/menu/quiz', 'Practise'],
 		['/practise/firing', 'Practise'],
 		['/service', 'Service'],
-		['/menu', 'Service'],
-		['/menu/costing', 'Service'],
-		// Added with the waste log, along with three siblings the list had never
-		// caught up with. /service OWNS the '/menu' prefix, so every sheet under
-		// it is Service — but nothing was asserting that for four of them.
-		['/menu/preps', 'Service'],
-		['/menu/prep-board', 'Service'],
-		['/menu/waste', 'Service'],
+		['/menu', 'Menu'],
+		['/menu/costing', 'Menu'],
+		// Every sheet under /menu belongs to the Menu tab, which is the point of
+		// the tab: the house's own menu, its costs, its preps and its waste in
+		// one place. /menu/quiz is the single exception above, claimed by
+		// Practise because it is assessed, and tested first for exactly that.
+		['/menu/preps', 'Menu'],
+		['/menu/prep-board', 'Menu'],
+		['/menu/waste', 'Menu'],
+		['/menu/guest', 'Menu'],
 		['/coverage', 'Service'],
 		['/recipes', 'Library'],
 		['/recipe/cacio-e-pepe', 'Library'],

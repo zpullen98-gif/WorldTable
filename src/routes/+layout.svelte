@@ -56,7 +56,12 @@
 		{ href: '/learn', label: 'Learn' },
 		{ href: '/practise', label: 'Practise' },
 		{ href: '/service', label: 'Service' },
-		{ href: '/recipes', label: 'Library' }
+		{ href: '/recipes', label: 'Library' },
+		/* The house's own menu, beside the Library rather than a tile inside a
+		   home band: the Library is the 1,844 dishes somebody else wrote, this is
+		   the handful this kitchen actually sends, and a cook holds the two as a
+		   pair. */
+		{ href: '/menu', label: 'Menu' }
 	];
 
 	/**
@@ -66,14 +71,15 @@
 	 * there would assert on files that can never exist.
 	 *
 	 * Order is longest-prefix-first where two tabs share a stem: /menu/quiz is
-	 * Practise (it is assessed) while /menu itself is Service, so the quiz must
-	 * be tested first or Service would claim it.
+	 * Practise (it is assessed) while /menu itself is the Menu tab, so the quiz
+	 * must be tested first or Menu would claim it.
 	 */
 	const OWNS: Array<[string, string[]]> = [
 		['/practise', ['/practise', '/repertoire', '/menu/quiz']],
+		['/menu', ['/menu']],
 		// /coverage is Service: it is the question a chef asks at four o'clock,
-		// beside the menu and the pass, not something they are being taught.
-		['/service', ['/service', '/menu', '/coverage']],
+		// beside the pass, not something they are being taught.
+		['/service', ['/service', '/coverage']],
 		['/learn', ['/learn', '/study', '/technique', '/palate', '/safety']],
 		['/recipes', ['/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry']]
 	];

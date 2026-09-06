@@ -314,9 +314,9 @@
 			<a href="{base}/pantry">Pantry Match<small
 				>{pantry ? `${pantry} ingredients ticked` : 'What can you cook from what is in the walk-in'}</small
 			></a>
-			<a href="{base}/menu">My Menu<small
-				>{dishes ? `${dishes} dishes entered` : 'Enter the menu the house actually serves'}</small
-			></a>
+			<!-- My Menu is a tab of its own now, beside Library. A tile here as
+			     well would put the same destination in two places and make the
+			     bar look like the shortcut rather than the home of it. -->
 		</div>
 	</section>
 

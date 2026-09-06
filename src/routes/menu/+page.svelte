@@ -8,6 +8,7 @@
 	import { mergeExportedMenu } from '$lib/persistence/house';
 	import Ornament from '$lib/components/Ornament.svelte';
 	import ExportNudge from '$lib/components/ExportNudge.svelte';
+	import MenuImport from '$lib/components/MenuImport.svelte';
 	import { onMount } from 'svelte';
 	import {
 		buildPass,
@@ -812,6 +813,15 @@
 				The drill opens at four dishes: {4 - house.dishes.length} more to go.
 			{/if}
 		</p>
+
+		<!--
+			Above the hand form on purpose. A venue arriving here already has a
+			menu printed, photographed or on a website, and typing it in one dish
+			at a time is where most of them stopped. The panel folds itself away
+			once the menu has dishes on it, so it is only in the way on the one
+			visit where it is the whole point.
+		-->
+		<MenuImport />
 
 		{#if !dishForm}
 			<button class="chip" onclick={newDish}>Add a dish</button>

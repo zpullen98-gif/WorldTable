@@ -97,7 +97,27 @@ export default defineConfig({
 				 * Prerendering and precaching are separate decisions.
 				 */
 				globPatterns: ['**/*.{js,css,woff2,png,svg,webmanifest}'],
-				globIgnores: ['**/node_modules/**', '**/*.woff'],
+				/**
+				 * The last entry is the menu photo reader, and it is here because
+				 * the glob above sweeps every .js in the build.
+				 *
+				 * src/lib/menu-ocr.ts pulls tesseract.js in as an ASSET rather than
+				 * a lazy chunk, precisely so it has a filename this line can name:
+				 * SvelteKit spells client chunks `chunks/[hash].js`, so a chunk
+				 * cannot be excluded by any pattern. Precached it would put ~63 KB
+				 * of reader into the install, and the four megabytes of worker,
+				 * wasm core and language data it then fetches would follow it into
+				 * the cache the moment anyone hosted them here. Every install would
+				 * pay, on first load, for a feature most kitchens never open.
+				 *
+				 * The cost of the exclusion is stated plainly on the import screen:
+				 * the first photo read on a device needs a connection.
+				 */
+				globIgnores: [
+					'**/node_modules/**',
+					'**/*.woff',
+					'**/assets/tesseract.esm.min.*.js'
+				],
 				maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
 				/**
 				 * Supplying manifestTransforms REPLACES the SvelteKit plugin's own
