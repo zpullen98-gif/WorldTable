@@ -244,7 +244,15 @@ const NAMED_ENTITIES: Record<string, string> = {
 	thinsp: ' ',
 	shy: '',
 	ndash: '–',
-	mdash: String.fromCharCode(8212),
+	/* The em dash below is a literal on purpose. The monorepo publish gate
+	   counts U+2014 across the built tree, and the escape hatch it offers,
+	   writing the escape instead, only survives inside a regex body: rolldown
+	   folds both an escape and a String.fromCharCode call in a plain string
+	   straight back to the character, which was measured, not assumed. There is
+	   nothing to be done about it and nothing that needs doing: an entity table
+	   exists to produce the characters it names, and one dash sits well inside
+	   the gate's baseline. Escape the ones in menu-parse.ts, not this one. */
+	mdash: '—',
 	hellip: '…',
 	lsquo: '‘',
 	rsquo: '’',
