@@ -257,8 +257,29 @@
 	{@render children()}
 </main>
 
-<TimerBar />
-<UpdatePrompt />
+<!--
+	One bottom-centre lane, not two layers fighting over it.
+
+	TimerBar and UpdatePrompt were each position:fixed at bottom-centre, the
+	toast at z-index 90 over the bar's 70, so "Ready to cook offline" landed
+	exactly on top of the running timers. Measured at 1280x720: the rename
+	button's centre was (566, 645) and the toast covered y 644 to 702, with
+	elementFromPoint returning the toast. Every control on the bar - rename,
+	Pause, Resume, Dismiss, the row's remove button - was dead to the touch
+	from the moment the service worker finished precaching until somebody
+	dismissed a toast that gave no hint it was in the way. First visit only,
+	which is worse: a cook meets it once, with a pot on, and has no reason to
+	connect the two.
+
+	Docking them makes overlap impossible by construction rather than by two
+	components agreeing about offsets neither can see. The bar sits at the
+	bottom of the lane and the toast stacks above it, so a toast arriving or
+	leaving never moves the bar under a cook's thumb.
+-->
+<div class="dock" data-print="hide">
+	<UpdatePrompt />
+	<TimerBar />
+</div>
 
 <footer>
 	<div class="shell">
@@ -509,6 +530,28 @@
 		padding: 12px 14px;
 		margin: 16px 0 0;
 		line-height: 1.55;
+	}
+
+	.dock {
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		/* Above the safe-area inset, so it clears a phone's home indicator. */
+		bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+		z-index: 70;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 8px;
+		max-width: calc(100vw - 24px);
+		/* A lane, not a surface. The gap between the two, and any slack beside
+		   the narrower of them, must not swallow taps meant for the page
+		   underneath, so the dock itself takes no pointers and its children
+		   take them back. */
+		pointer-events: none;
+	}
+	.dock > :global(*) {
+		pointer-events: auto;
 	}
 
 	main {

@@ -93,3 +93,64 @@ test('the timer-length presets are a labelled group naming the unit', async ({ p
 		await expect(group.getByRole('button', { name: `${m} minutes`, exact: true })).toHaveCount(1);
 	}
 });
+
+/**
+ * The bar keeps its controls when the offline toast arrives.
+ *
+ * TimerBar and UpdatePrompt were each position:fixed at bottom-centre, the
+ * toast at z-index 90 over the bar's 70, so the "Ready to cook offline" toast
+ * covered the running timers outright: at 1280x720 the rename button's centre
+ * was (566, 645) and the toast covered y 644 to 702. Rename, Pause, Resume,
+ * Dismiss and the row's remove button were all dead to the touch, on first
+ * visit, with a pot on.
+ *
+ * It read as flake rather than as a bug because the toast lands about three
+ * seconds after hydration, which is exactly when these tests are clicking:
+ * the two specs that touch the bar LATE (the rename below, and the second
+ * "Start a timer" of the two-timer spec) failed on a loaded machine and passed
+ * on a quiet one, a different one each run, while the three that only assert
+ * text or click the bar immediately after goto never failed at all. The fix is
+ * a shared dock in +layout.svelte, so the two cannot overlap by construction;
+ * this is the guard, and it uses the REAL service-worker toast because a
+ * stand-in element would stack correctly even if the toast went back to being
+ * fixed on its own.
+ */
+test('the offline toast stacks above the timer bar, never over it', async ({ page }) => {
+	// A real first-visit precache. offline.spec.ts budgets the same way.
+	test.setTimeout(90_000);
+	await goto(page, '/');
+
+	await page.getByRole('button', { name: 'Start a timer' }).click();
+	await page.getByLabel('What this timer is for').fill('T12');
+	await page.getByRole('button', { name: '10 minutes', exact: true }).click();
+
+	const bar = page.getByRole('status', { name: 'Kitchen timers' });
+	const label = bar.locator('button.label');
+	await expect(label).toBeVisible();
+
+	const toast = page.locator('.toast');
+	await expect(toast).toBeVisible({ timeout: 60_000 });
+
+	// Stated as geometry as well as behaviour, so a regression says WHY rather
+	// than only reporting a click that timed out.
+	const boxes = await page.evaluate(() => {
+		const r = (s: string) => document.querySelector(s)?.getBoundingClientRect();
+		const a = r('button.label');
+		const b = r('.toast');
+		if (!a || !b) return null;
+		const hit = document.elementFromPoint(a.left + a.width / 2, a.top + a.height / 2);
+		return {
+			overlaps: a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom,
+			topmostAtLabelCentre: hit?.closest('button.label') !== null
+		};
+	});
+	expect(boxes).not.toBeNull();
+	expect(boxes!.overlaps).toBe(false);
+	expect(boxes!.topmostAtLabelCentre).toBe(true);
+
+	// And the control actually works with the toast on screen. A short timeout
+	// on purpose: occluded, this fails in five seconds saying the toast
+	// intercepts pointer events, instead of hanging for the full thirty.
+	await label.click({ timeout: 5_000 });
+	await expect(page.getByLabel('Rename this timer')).toBeFocused();
+});

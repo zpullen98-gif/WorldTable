@@ -264,13 +264,10 @@
 		padding: 0;
 		text-align: left;
 	}
+	/* Placement belongs to .dock in +layout.svelte, which this shares with the
+	   update toast: two independently fixed bottom-centre layers is exactly how
+	   the toast came to sit on top of the timers. */
 	.bar {
-		position: fixed;
-		left: 50%;
-		transform: translateX(-50%);
-		/* Above the safe-area inset, so it clears a phone's home indicator. */
-		bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-		z-index: 70;
 		display: flex;
 		flex-direction: column;
 		gap: 6px;

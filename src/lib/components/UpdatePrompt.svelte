@@ -46,12 +46,10 @@
 {/if}
 
 <style>
+	/* Placement belongs to .dock in +layout.svelte, which this shares with the
+	   timer bar. This used to be fixed at bottom-centre with z-index 90 and
+	   covered the running timers outright. */
 	.toast {
-		position: fixed;
-		bottom: 18px;
-		left: 50%;
-		transform: translateX(-50%);
-		z-index: 90;
 		max-width: min(460px, calc(100vw - 32px));
 		display: flex;
 		flex-wrap: wrap;
