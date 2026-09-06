@@ -78,13 +78,13 @@
 	/* ---- the photo ------------------------------------------------------- */
 
 	/**
-	 * What this device can do, asked once after mount and NEVER during
-	 * prerender: there is no `window` in the SSR pass, so ocrPlan() answers
-	 * "you owe a 4.4 MB download" there, and this page is prerendered. Baked
-	 * into the HTML, that sentence would be told to every phone whose own OCR
-	 * would have cost nothing.
+	 * Whether this device can read a photograph, asked once after mount and
+	 * NEVER during prerender: there is no `window` in the SSR pass, so ocrPlan()
+	 * answers "no reader here" and this page is prerendered. Baked into the
+	 * HTML, that answer would be shown to every phone that can in fact read one.
+	 * Null means not asked yet, and the picker waits rather than guessing.
 	 */
-	let plan = $state<{ native: boolean; needsDownload: boolean; approxMB: number } | null>(null);
+	let plan = $state<{ native: boolean } | null>(null);
 	let reading = $state(false);
 	let pct = $state(0);
 	let progressNote = $state('');
@@ -411,24 +411,24 @@
 
 			<div class="way">
 				<span class="fieldlabel">Or photograph it</span>
-				{#if plan?.needsDownload}
-					<!-- Said BEFORE the picker, from ocrPlan(), because the download
-					     starts the moment a file is chosen and four megabytes is a real
-					     number on somebody's phone plan.
-					     It also names WHO is contacted. This app tells people nothing
-					     leaves their device, and on this one path something does: the
-					     reader is fetched from jsDelivr. The photograph is not, and the
-					     difference between those two is the whole sentence. The privacy
-					     policy carries the same disclosure. -->
-					<p class="waynote">
-						This device needs the photo reader downloaded first, about {plan.approxMB} MB from
-						jsDelivr, so this one read needs a connection. After that it is quicker. Your photo
-						stays on this device either way: only the reader is fetched.
-					</p>
-				{:else if plan?.native}
-					<p class="waynote">This device reads photos on its own: nothing to download.</p>
-				{:else}
+				<!-- Said BEFORE the picker, out of ocrPlan(). A browser with no reader
+				     is told so here rather than after somebody has taken the picture,
+				     and the picker is withheld: a control that can only fail is worse
+				     than no control. Nothing is fetched on this path any more, so there
+				     is no longer anyone to disclose. -->
+				{#if plan === null}
 					<p class="waynote">Point the camera at the printed menu, or pick a photo you already took.</p>
+				{:else if plan.native}
+					<p class="waynote">
+						This device reads photos itself. The picture never leaves it, and nothing is
+						downloaded to read it.
+					</p>
+				{:else}
+					<p class="waynote">
+						This browser cannot read photographs, and this app will not fetch a reader to do
+						it. On a phone, hold your finger on the text in the picture, copy it, and paste it
+						into the box above. Or give the address of the menu below.
+					</p>
 				{/if}
 				<!--
 					No `capture` attribute, deliberately. It forces the camera open and
@@ -436,15 +436,17 @@
 					somebody took last week. `accept` alone still offers the camera as a
 					choice on both phone platforms.
 				-->
-				<label class="filebtn chip">
-					<input
-						type="file"
-						accept="image/*"
-						onchange={onPhoto}
-						disabled={reading}
-					/>
-					{reading ? 'Reading…' : 'Choose a photo'}
-				</label>
+				{#if plan === null || plan.native}
+					<label class="filebtn chip">
+						<input
+							type="file"
+							accept="image/*"
+							onchange={onPhoto}
+							disabled={reading}
+						/>
+						{reading ? 'Reading…' : 'Choose a photo'}
+					</label>
+				{/if}
 				{#if reading}
 					<div class="progline">
 						<!-- The bar is the picture; the sentence beside it is what gets
