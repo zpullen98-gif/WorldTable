@@ -137,7 +137,7 @@ const SIZE_WORD =
 	/^(?:glass|gls|bottle|btl|carafe|pitcher|jug|half|full|small|large|sm|lg|reg|regular|pint|schooner|single|double|cup|pot|scoop|slice|each|ea|pp|supp|supplement|\d{2,4}\s?(?:ml|cl|oz))$/i;
 
 /** Punctuation that joins two prices together rather than separating a price from a name. */
-const CONNECTOR = /^(?:[/|,&]|[-–—]+)$/;
+const CONNECTOR = /^(?:[/|,&]|[-–\u2014]+)$/;
 
 /** A currency standing alone as its own token: the '£' of '£ 12', the 'GBP' of '14 GBP'. */
 const LONE_CURRENCY = new RegExp('^(?:' + CURRENCY_SYMBOL + '|' + CURRENCY_CODE + ')$', 'i');
@@ -192,7 +192,7 @@ const NOISE = [
 	/\b(please|kindly)\s+(inform|note|tell|ask|advise|speak|let|make)\b/i,
 	/\b(tel|telephone|phone|call us|reservations?|bookings?)\b.*\d{3}/i,
 	/\bwe (cannot|can not|do not|don't) guarantee\b/i,
-	/^(?:page\s*)?[\s~*_.\-–—]*\d{1,3}[\s~*_.\-–—]*$/i,
+	/^(?:page\s*)?[\s~*_.\-–\u2014]*\d{1,3}[\s~*_.\-–\u2014]*$/i,
 	/\b[A-Z]{1,2}\d{1,2}[A-Z]?\s*\d[A-Z]{2}\b/,
 	/\b\d+[a-z]?\s+[\w'-]+\s+(street|road|avenue|lane|drive|square|place|terrace|gardens|gdns)\b/i
 ];
@@ -207,7 +207,7 @@ const DAY_WORD =
  * price is the reading that matters: 'Sunday roast 18.50' is a dish and 'Sunday
  * 12 to 4' is opening hours.
  */
-const CLOCK = /\d\s*(?:am|pm)\b|\d{1,2}[:.]\d{2}\b|\d\s*(?:[-–—]|to|till|until)\s*\d/i;
+const CLOCK = /\d\s*(?:am|pm)\b|\d{1,2}[:.]\d{2}\b|\d\s*(?:[-–\u2014]|to|till|until)\s*\d/i;
 
 /** Small words a section heading may leave lower case without ceasing to be title case. */
 const SMALL_WORDS = new Set([
@@ -409,8 +409,8 @@ function isJunk(text: string): boolean {
 
 function stripDecoration(text: string): string {
 	return text
-		.replace(/^[\s~*=+_.·•<>«»\-–—#]+/, '')
-		.replace(/[\s~*=+_.·•<>«»\-–—#:]+$/, '')
+		.replace(/^[\s~*=+_.·•<>«»\-–\u2014#]+/, '')
+		.replace(/[\s~*=+_.·•<>«»\-–\u2014#:]+$/, '')
 		.trim();
 }
 
@@ -421,7 +421,7 @@ function words(text: string): string[] {
 /**
  * A heading the menu has shouted, decorated or punctuated, which therefore needs
  * no help from its surroundings to be recognised: 'STARTERS', '~ Mains ~',
- * '— Puddings —', 'Sides:'.
+ * a rule of dashes around 'Puddings', 'Sides:'.
  *
  * The shouting test insists on at least one A-Z, because a script without letter
  * case has no capitals to shout with and every line of such a menu would
@@ -430,7 +430,7 @@ function words(text: string): string[] {
 function isStrongHeading(text: string): boolean {
 	const core = stripDecoration(text);
 	if (!core || !/\p{L}/u.test(core) || words(core).length > 6) return false;
-	if (/^[~*=+_·•<>«»#\-–—]/.test(text) && /[~*=+_·•»>#\-–—]$/.test(text)) return true;
+	if (/^[~*=+_·•<>«»#\-–\u2014]/.test(text) && /[~*=+_·•»>#\-–\u2014]$/.test(text)) return true;
 	if (text.trim().endsWith(':')) return true;
 	return /[A-Z]/.test(core) && !/[a-z]/.test(core);
 }
@@ -494,7 +494,7 @@ function splitAt(text: string, re: RegExp): [string, string] | null {
 }
 
 function splitDescription(name: string): { name: string; description: string; ambiguous: boolean } {
-	const clear = splitAt(name, /(?:\s[-–—]\s|:\s|\s?\|\s?)/);
+	const clear = splitAt(name, /(?:\s[-–\u2014]\s|:\s|\s?\|\s?)/);
 	if (clear) return { name: clear[0], description: clear[1], ambiguous: false };
 
 	const comma = splitAt(name, /,\s*/);
@@ -523,7 +523,7 @@ function splitDescription(name: string): { name: string; description: string; am
  * insists on the spaces a menu's numbering puts round the dash, which is what
  * leaves a hyphenated name such as '5-spice duck' alone.
  */
-const ITEM_NUMBER = /^\d{1,3}(?:\s*[.)]\s*|\s+[-–—]\s+)(?=[^\s\d])/;
+const ITEM_NUMBER = /^\d{1,3}(?:\s*[.)]\s*|\s+[-–\u2014]\s+)(?=[^\s\d])/;
 
 /** Everything a single line is, worked out once so the placing pass can look ahead cheaply. */
 function scan(raw: string): Scan {
@@ -535,7 +535,7 @@ function scan(raw: string): Scan {
 		// Dot and underscore leaders are a printer drawing the eye across to the
 		// price. Turned into a space, they stop being a problem for anything below.
 		.replace(/(?:[.·_]{2,}|…+)/g, ' ')
-		.replace(/(\S)\s*[-–—]{3,}\s*(\S)/g, '$1 $2')
+		.replace(/(\S)\s*[-–\u2014]{3,}\s*(\S)/g, '$1 $2')
 		.replace(/\s+/g, ' ')
 		.trim()
 		// Last, so the whitespace above has already been made ordinary and the

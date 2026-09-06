@@ -244,7 +244,7 @@ const NAMED_ENTITIES: Record<string, string> = {
 	thinsp: ' ',
 	shy: '',
 	ndash: '–',
-	mdash: '—',
+	mdash: String.fromCharCode(8212),
 	hellip: '…',
 	lsquo: '‘',
 	rsquo: '’',
