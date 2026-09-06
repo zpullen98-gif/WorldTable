@@ -18,19 +18,23 @@ const TOTALS = JSON.parse(
  * "simplifies" a fix without tripping the alarm that explains why it existed.
  */
 
-test('L582 — header shows the real counts, not three bare labels', async ({ page }) => {
+test('L582 — the counts on the page are the real ones, not typed', async ({ page }) => {
 	await goto(page, '/');
-	const counts = page.locator('.counts dd');
-	// Read from the same emitted totals the masthead reads, so this asserts that
-	// the header is WIRED to the data rather than asserting what the corpus
-	// happened to be the day somebody typed it. It was ['970','94','479'] for
-	// months after the corpus reached 1710, which is how the suite went red
-	// without anybody choosing that.
-	await expect(counts).toHaveText([
-		String(TOTALS.recipes),
-		String(TOTALS.chapters),
-		String(TOTALS.lexicon)
-	]);
+	// The masthead carried these three until the owner had them taken out: at the
+	// top of 2,181 pages they read as a wall rather than a welcome. The GUARD is
+	// still needed and moved with the numbers, because what it protects against
+	// was never where they sat. It is that somebody types a count once and the
+	// corpus grows past it: the header said 970, 94 and 479 for months after the
+	// corpus reached 1710, and nobody chose that. So this reads the footer, which
+	// still carries all three, against the same emitted totals the page reads.
+	const footer = page.locator('footer .shell').first();
+	await expect(footer).toContainText(`${TOTALS.recipes} recipes`);
+	await expect(footer).toContainText(`${TOTALS.chapters} chapters`);
+	await expect(footer).toContainText(`${TOTALS.lexicon} terms`);
+
+	// And the masthead is now clear of them, which is the thing the owner asked
+	// for and the thing a later "restore the stats" edit would quietly undo.
+	await expect(page.locator('header .counts')).toHaveCount(0);
 });
 
 /**

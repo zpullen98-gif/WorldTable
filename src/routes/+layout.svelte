@@ -186,11 +186,15 @@
 			-->
 			<p class="eyebrow">An interactive culinary compendium: recipes, lexicon and study</p>
 		</div>
-		<dl class="counts">
-			<div><dt>Recipes</dt><dd>{TOTALS.recipes}</dd></div>
-			<div><dt>Chapters</dt><dd>{TOTALS.chapters}</dd></div>
-			<div><dt>Lexicon</dt><dd>{TOTALS.lexicon}</dd></div>
-		</dl>
+		<!--
+			The three counts that used to sit here (1,844 recipes, 171 chapters,
+			479 lexicon terms) are gone from the masthead by the owner's call: at
+			the top of every one of 2,181 pages they read as a wall rather than a
+			welcome, and the first thing a new cook met was the size of the thing
+			they had not read. The numbers are not hidden, they are just not the
+			greeting: the footer still carries all three, wired to the same
+			emitted totals, which is where the L582 regression guard moved to.
+		-->
 	</div>
 </header>
 
@@ -312,26 +316,10 @@
 		color: var(--muted);
 	}
 
-	/* The original rendered three labels here with no numbers, against a CSS rule
-	   styling an element that never existed. These are the real counts. */
-	.counts {
-		display: flex;
-		gap: 22px;
-		text-align: right;
-	}
-	.counts dt {
-		font-size: var(--t-micro);
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: var(--muted);
-	}
-	.counts dd {
-		font-family: var(--display);
-		font-size: 26px;
-		color: var(--turmeric-deep);
-		font-variant-numeric: oldstyle-nums;
-		line-height: 1.1;
-	}
+	/* The .counts rules went with the markup. The original had the opposite bug,
+	   three labels with no numbers against a rule for an element that never
+	   existed, so if a masthead statistic is ever wanted again, add the markup
+	   and the rule together rather than reviving one of them. */
 
 	.modebar {
 		position: sticky;

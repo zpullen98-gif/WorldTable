@@ -62,7 +62,10 @@ test('a venue survives its own export: preps, prices and waste all round-trip', 
 
 	// ---- import, through the real input --------------------------------------
 	await page.getByRole('button', { name: 'Import session…' }).click();
-	await page.locator('input[type=file]').setInputFiles(path!);
+	// Scoped to the tools row on purpose. The Menu tab now carries a second file
+	// input, the menu importer's photo picker, which is open by default on an
+	// empty menu, so a bare input[type=file] is ambiguous here and matched both.
+	await page.locator('.tools input[type=file]').setInputFiles(path!);
 
 	// The banner names what landed, in the merge's own units.
 	const banner = page.locator('text=/Imported[:\u2014-]/');
@@ -99,7 +102,10 @@ test('importing a file the venue already has reports nothing new, and changes no
 	// Same venue, same file, straight back in — the no-op that proves the merge
 	// is order-independent end to end, not only in the unit suite.
 	await page.getByRole('button', { name: 'Import session…' }).click();
-	await page.locator('input[type=file]').setInputFiles(path!);
+	// Scoped to the tools row on purpose. The Menu tab now carries a second file
+	// input, the menu importer's photo picker, which is open by default on an
+	// empty menu, so a bare input[type=file] is ambiguous here and matched both.
+	await page.locator('.tools input[type=file]').setInputFiles(path!);
 	await expect(page.locator('text=/nothing new/')).toBeVisible();
 
 	await goto(page, '/menu/costing');
