@@ -60,7 +60,7 @@
 	}
 </script>
 
-<svelte:head><title>The Repertoire: The World Table</title></svelte:head>
+<svelte:head><title>The Repertoire · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">

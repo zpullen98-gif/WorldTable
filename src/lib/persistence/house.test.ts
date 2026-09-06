@@ -2,6 +2,8 @@ import { describe, it, expect } from 'vitest';
 import {
 	EMPTY_HOUSE,
 	readHouse,
+	exportNudge,
+	DAY_MS,
 	HOUSE_VERSION,
 	absorbSession,
 	adoptImport,
@@ -249,5 +251,54 @@ describe('a record this build must not touch', () => {
 	it('treats nothing on disk as a fresh start, not as a refusal', () => {
 		expect(readHouse(undefined)).toEqual({ record: structuredClone(EMPTY_HOUSE), blocked: false });
 		expect(readHouse(null).blocked).toBe(false);
+	});
+
+	/**
+	 * The 22 renamed slugs (persistence/migrations.ts). A dish pointing at
+	 * /recipe/sm-rrebr-d pointed at a page that no longer exists, so cook mode,
+	 * the standard and the Repertoire all lost the lamb rump that goes out sixty
+	 * times a week. Followed on every read; nothing on disk is rewritten until
+	 * the next genuine write.
+	 */
+	it('brings a dish recipeSlug to the current spelling on read', () => {
+		const stored = {
+			...structuredClone(EMPTY_HOUSE),
+			dishes: [
+				{ ...dish('a'), recipeSlug: 'sm-rrebr-d' },
+				{ ...dish('b'), recipeSlug: 'cacio-e-pepe' },
+				dish('c')
+			]
+		};
+		const { record } = readHouse(stored);
+		expect(record.dishes.map((d) => d.recipeSlug)).toEqual(['smorrebrod', 'cacio-e-pepe', undefined]);
+	});
+});
+
+/**
+ * The venue's costing sheet, item book, prep board and waste log live in
+ * evictable browser storage and the manual .wtjson export is the only backup.
+ * The nudge is what lets a page say how stale that backup is; it must be
+ * silent on a fresh device and on a record exported since it last changed.
+ */
+describe('the export nudge', () => {
+	it('says nothing for an empty record', () => {
+		expect(exportNudge({ lastWrite: 0 })).toBeNull();
+		expect(exportNudge({ lastWrite: 0, lastExportAt: 5 })).toBeNull();
+	});
+
+	it('says nothing when the export is at least as new as the last write', () => {
+		expect(exportNudge({ lastWrite: 100, lastExportAt: 100 })).toBeNull();
+		expect(exportNudge({ lastWrite: 100, lastExportAt: 200 })).toBeNull();
+	});
+
+	it('reports a record that has never been exported', () => {
+		expect(exportNudge({ lastWrite: 100 })).toEqual({ days: null });
+	});
+
+	it('counts whole days since the last export once the record has moved on', () => {
+		const exported = 1_000_000;
+		const now = exported + 9 * DAY_MS + DAY_MS / 2;
+		expect(exportNudge({ lastWrite: exported + 1, lastExportAt: exported }, now)).toEqual({ days: 9 });
+		expect(exportNudge({ lastWrite: exported + 1, lastExportAt: exported }, exported + 2)).toEqual({ days: 0 });
 	});
 });

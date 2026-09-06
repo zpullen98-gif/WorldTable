@@ -33,9 +33,21 @@
 	const numeric = (key: string) => s.numeric.find((n) => n.key === key);
 	const clause = (key: string) => s.clauses.find((c) => c.key === key);
 	const termOf = (anchor: string) => s.entries[anchor]?.term ?? '';
+
+	// Deterministic, so the prerendered sentence and the hydrated one agree:
+	// toLocaleDateString would print the build machine's locale into the HTML.
+	const MONTHS = [
+		'January', 'February', 'March', 'April', 'May', 'June',
+		'July', 'August', 'September', 'October', 'November', 'December'
+	];
+	const SOURCES = ['fda', 'fsa'] as const;
+	const readOn = $derived.by(() => {
+		const [y, m, d] = s.code.asOf.split('-').map(Number);
+		return `${d} ${MONTHS[m - 1]} ${y}`;
+	});
 </script>
 
-<svelte:head><title>Food Safety: The World Table</title></svelte:head>
+<svelte:head><title>Food Safety · The World Table</title></svelte:head>
 
 <div class="shell view" data-print="hide">
 	<header class="head">
@@ -106,6 +118,43 @@
 		</ul>
 	{/if}
 
+	<!-- The one AUTHORED block on this page, and labelled as such. The guide's
+	     figures above are consumer guidance and stricter than a code; the
+	     silences below (reheating, hot-holding, sanitiser) are the numbers a
+	     line asks for. Source and date on every row; never converted; gated in
+	     tools/derive/sanitation.mjs on its own C/F agreement. -->
+	<h2 class="sec">The numbers a code states</h2>
+	<p class="secnote">
+		Not the guide's figures: these are the {s.code.sources.fda.name} and {s.code.sources.fsa.name}
+		figures, printed as stated and read on {readOn}. Where they and the guide differ, this app does
+		not reconcile them, and where your code differs from both, yours governs.
+	</p>
+
+	<dl class="numbers code">
+		{#each s.code.rows as r (r.key)}
+			<div>
+				<dt>{r.label}</dt>
+				{#each SOURCES as src (src)}
+					{@const figure = r[src]}
+					<dd>
+						<span class="attrib srcname">{s.code.sources[src].name}</span>
+						{#if figure}
+							<span class="fig">{figure}</span>
+						{:else}
+							<span class="none">no figure carried here</span>
+						{/if}
+					</dd>
+				{/each}
+			</div>
+		{/each}
+	</dl>
+
+	<p class="note">
+		{s.code.sources.fda.name}: {s.code.sources.fda.note}
+		{s.code.sources.fsa.name}: {s.code.sources.fsa.note}
+		A row with no figure from a source means this page carries none, not that the source has none.
+	</p>
+
 	<h2 class="sec">The disciplines</h2>
 	<p class="secnote">The guide's own words, unabridged.</p>
 	<ul class="clauses">
@@ -133,7 +182,8 @@
 	<h2 class="sec">What the guide names and does not state</h2>
 	<p class="secnote">
 		Read this as a list of places to look elsewhere: your jurisdiction, your inspector, your
-		written plan. It is not a list of things that do not matter.
+		written plan. It is not a list of things that do not matter. The code figures above cover some
+		of them; the guide itself still states none.
 	</p>
 	<ul class="gaps">
 		{#each s.gaps as g (g.key)}
@@ -241,6 +291,28 @@
 		font-size: 18px;
 		font-variant-numeric: tabular-nums;
 		color: var(--ink);
+	}
+	/* Two sources per row, each on its own line with the source first, so a
+	   figure is never read without the name of the code it came from. */
+	.code dd {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2px;
+	}
+	.code dd + dd {
+		margin-top: 8px;
+	}
+	.code .fig {
+		font-size: 16px;
+		line-height: 1.45;
+	}
+	.srcname {
+		white-space: normal;
+	}
+	.none {
+		color: var(--muted);
+		font-size: var(--t-small);
+		font-style: italic;
 	}
 
 	.conflict,

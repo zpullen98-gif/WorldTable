@@ -155,4 +155,28 @@ describe('the corpus, after the guards', () => {
 	it('gives Gravlax the technique it actually is', () => {
 		expect(has('Gravlax, the Cure by Weight', 'Brining & curing')).toBe(true);
 	});
+
+	/**
+	 * The teacher link is a youtube.com/results search, and its label has to
+	 * say so. "Study with Jacques Pépin" over a promotional blurb read as that
+	 * person appearing in or endorsing the product; nobody named in the
+	 * TEACHERS table has agreed to either. The label names what the link is
+	 * and the sub line is descriptive fact, on every recipe that carries one.
+	 */
+	it('labels the teacher link as the YouTube search it is, with no blurb', () => {
+		const teachers = full
+			.map((r) => (r as { films?: { teacher?: { label: string; sub: string; url: string } } }).films?.teacher)
+			.filter((t): t is { label: string; sub: string; url: string } => !!t);
+		expect(teachers.length).toBe(full.length);
+		const named = teachers.filter((t) => t.label.startsWith('Search YouTube: '));
+		expect(named.length, 'the named-teacher links').toBeGreaterThan(900);
+		for (const t of teachers) {
+			expect(t.label, t.label).not.toMatch(/^Study with/);
+			expect(t.url).toMatch(/^https:\/\/www\.youtube\.com\/results\?search_query=/);
+		}
+		for (const t of named) {
+			expect(t.label).toMatch(/^Search YouTube: .+ on .+$/);
+			expect(t.sub).toMatch(/^A YouTube search for .+ and this dish\. No affiliation\.$/);
+		}
+	});
 });

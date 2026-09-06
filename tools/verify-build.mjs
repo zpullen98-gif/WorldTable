@@ -388,48 +388,35 @@ check('fonts are latin subsets only', () => {
 	return `${woff2.length} files`;
 });
 
-check('PWA manifest and icons present', () => {
-	const m = JSON.parse(readFileSync(join(BUILD, 'manifest.webmanifest'), 'utf8'));
-	assert(m.name && m.start_url && m.display === 'standalone', 'manifest is incomplete');
-	for (const icon of m.icons) {
-		assert(existsSync(join(BUILD, icon.src)), `missing icon ${icon.src}`);
-	}
-	assert(
-		m.icons.some((i) => i.purpose === 'maskable'),
-		'no maskable icon'
-	);
-	return `${m.icons.length} icons incl. maskable`;
-});
-
 /*
- * Every number the shipped app says about itself is the number it has.
+ * One product, one manifest, one robots.txt: both live at the ORIGIN ROOT of
+ * Outside Of Time and this wing ships neither. static/manifest.webmanifest
+ * used to be here, and with it a gate that read every figure out of its
+ * description and checked each against totals.json, because a static file
+ * cannot interpolate and had drifted to "970 recipes", 874 dishes stale. The
+ * product's manifest quotes no figures; the wing's is gone; the gate that
+ * kept it honest went with it.
  *
- * Three surfaces state the corpus size and only two of them could interpolate.
- * `+layout.svelte` reads TOTALS for recipes and chapters but carried the
- * lexicon's 479 as a LITERAL, in the very file that already had totals.json
- * open; the manifest is static, cannot interpolate at all, and had drifted to
- * "970 recipes" - the size of the original guide, 874 dishes ago.
- *
- * A number that happens to be right today is not fixed, it is unexploded. This
- * gate is the only thing that keeps the static one honest, so it reads EVERY
- * integer out of the manifest description and demands each one be a real total.
- * Written to be wrong loudly: a new number in that sentence fails until it is
- * either a genuine total or the sentence stops quoting figures.
+ * What is asserted instead: the two files are absent from the build, the
+ * precache does not list a manifest (the glob still names the extension, so
+ * a file that crept back into static/ would be precached and this would say
+ * so), the icons the product's manifest points into this wing for are still
+ * shipped, and no page links a manifest INSIDE this build: the only manifest
+ * a page may link is the product's, above base.
  */
-check('the manifest states no number the corpus does not have', () => {
-	const totals = JSON.parse(readFileSync(join(ROOT, 'src/lib/data/totals.json'), 'utf8'));
-	const m = JSON.parse(readFileSync(join(BUILD, 'manifest.webmanifest'), 'utf8'));
-	const known = new Set(Object.values(totals).map(Number));
-	const stated = [...String(m.description ?? '').matchAll(/\b(\d[\d,]*)\b/g)].map((x) =>
-		Number(x[1].replace(/,/g, ''))
-	);
-	assert(stated.length > 0, 'manifest description quotes no figures: delete this gate or restore them');
-	const wrong = stated.filter((n) => !known.has(n));
-	assert(
-		wrong.length === 0,
-		`manifest description states ${wrong.join(', ')}, which totals.json does not have (${[...known].join(', ')})`
-	);
-	return `${stated.length} figures, all real`;
+check('no manifest or robots of its own, icons still shipped', () => {
+	assert(!existsSync(join(BUILD, 'manifest.webmanifest')), 'build/manifest.webmanifest exists: the product has one manifest, at the root');
+	assert(!existsSync(join(BUILD, 'robots.txt')), 'build/robots.txt exists: the product has one robots.txt, at the root');
+	const listed = precached.filter((u) => u.split('?')[0].endsWith('.webmanifest'));
+	assert(listed.length === 0, `precache lists a manifest: ${listed.join(', ')}`);
+	for (const icon of ['icon-192.png', 'icon-512.png', 'icon-maskable-512.png']) {
+		assert(existsSync(join(BUILD, icon)), `missing icon ${icon}`);
+	}
+	const index = readFileSync(join(BUILD, 'index.html'), 'utf8');
+	const own = `href="${BASE}/manifest.webmanifest"`;
+	assert(!index.includes(own), `index.html links ${own}, a manifest this build does not ship`);
+	const links = index.match(/<link[^>]+rel="manifest"[^>]*>/g) ?? [];
+	return links.length ? `links the product manifest only: ${links[0].match(/href="([^"]*)"/)?.[1]}` : 'no manifest link (standalone)';
 });
 
 /*

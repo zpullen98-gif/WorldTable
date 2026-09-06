@@ -134,7 +134,7 @@
 </script>
 
 <svelte:head>
-	<title>{r.name}: The World Table</title>
+	<title>{r.name} · The World Table</title>
 	<meta name="description" content={d.flavor.sentence} />
 </svelte:head>
 
@@ -318,8 +318,20 @@
 			<p class="screened">
 				Screened for: {list(CHECKED)}. <b>Not screened:</b> {list(NOT_SCREENED)}.
 			</p>
+			<!--
+				What the screen IS, said on every page it appears on. 1,838 of 1,844
+				recipes carry a keyword-derived screen and six were read by a person;
+				a list headed "Found" and "Screened for" reads as a ruling either
+				way, and the derived ones must say they are not one. The test in
+				allergens.test.ts holds this sentence and the reviewed line apart.
+			-->
 			{#if r.diet.confidence !== 'derived'}
 				<p class="reviewed">Reviewed by hand</p>
+			{:else}
+				<p class="screened derived">
+					Screened by keyword from the ingredient list, not reviewed by a person; check every
+					label for what the list cannot show.
+				</p>
 			{/if}
 		</section>
 

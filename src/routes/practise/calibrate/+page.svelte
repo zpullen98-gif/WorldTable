@@ -73,7 +73,7 @@
 	const letter = (i: number) => String.fromCharCode(65 + i);
 </script>
 
-<svelte:head><title>Calibrate: The World Table</title></svelte:head>
+<svelte:head><title>Calibrate · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">

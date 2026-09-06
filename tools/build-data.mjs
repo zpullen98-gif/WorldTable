@@ -337,6 +337,59 @@ const recipeSlugs = qualifiedSlugs(
 );
 const lexSlugs = D.map((e) => slugify(e.t));
 
+/**
+ * The line door: a hand-corrected ingredient or step in a SEALED recipe.
+ *
+ * raw/R.json is proved word-identical to the archived original by verify:data,
+ * so a wrong line in it cannot be edited there. Until this existed the only
+ * doors were tags, course, techniques, diet, serves and a whole-note overlay:
+ * a nitrite dose written by the teaspoon at twice the legal ceiling had nowhere
+ * to land. `ov.ingredients` and `ov.steps` are maps from the EXACT original
+ * line to its replacement, keyed that way on purpose: if the raw line ever
+ * changes, the key stops matching and the build fails here rather than
+ * silently shipping the sealed text again. verify:data runs the same check
+ * without deriving anything, so the two can never disagree about which line
+ * a ruling binds to.
+ *
+ * Applied BEFORE the blobs are built, so every derivation (diet, flavour,
+ * cross-links, the search index, the service split) sees the corrected text.
+ */
+const lineOverrideProblems = [];
+{
+	const bySlug = new Map(recipeSlugs.map((s, i) => [s, i]));
+	for (const [slug, ov] of Object.entries(OVERRIDES.recipes ?? {})) {
+		if (!ov.ingredients && !ov.steps) continue;
+		const i = bySlug.get(slug);
+		if (i === undefined) {
+			lineOverrideProblems.push(`line override "${slug}" matches no recipe slug`);
+			continue;
+		}
+		const r = { ...R[i], i: [...R[i].i], m: [...R[i].m] };
+		for (const [field, key] of [['i', 'ingredients'], ['m', 'steps']]) {
+			for (const [original, replacement] of Object.entries(ov[key] ?? {})) {
+				const at = r[field].indexOf(original);
+				if (at === -1) {
+					lineOverrideProblems.push(
+						`line override ${slug}: the ${key === 'steps' ? 'step' : 'ingredient'} ${JSON.stringify(original)} ` +
+							`is not in the recipe any more, so the ruling binds to nothing. Re-key it to the current line ` +
+							`or remove it deliberately.`
+					);
+					continue;
+				}
+				if (typeof replacement !== 'string' || !replacement.trim() || replacement === original) {
+					lineOverrideProblems.push(`line override ${slug}: ${JSON.stringify(original)} needs a different, non-empty replacement`);
+					continue;
+				}
+				if (/—/.test(replacement) || / -- /.test(replacement)) {
+					lineOverrideProblems.push(`line override ${slug}: the replacement for ${JSON.stringify(original)} contains an em dash`);
+				}
+				r[field][at] = replacement;
+			}
+		}
+		R[i] = r;
+	}
+}
+
 /** Notes with the backfill overlay applied: the text the app actually ships. */
 const effNotes = R.map((r, i) => NOTES[recipeSlugs[i]] ?? r.p);
 
@@ -937,7 +990,35 @@ mini.addAll(
 }
 
 // ── gates ────────────────────────────────────────────────────────────────────
-const problems = [];
+const problems = [...lineOverrideProblems];
+
+/**
+ * A cure dosed by the spoon, REPORTED rather than gated.
+ *
+ * Sodium nitrite is the one number in the corpus a kitchen cannot eyeball: the
+ * Lexicon's own entry says cures are "used in grams per kilo, weighed on a
+ * scale, never eyeballed", and every other cure line gives grams at 0.25
+ * percent of the meat. One sealed line read "1 tsp pink curing salt" against
+ * 1.2 kg, about twice the ceiling, and was corrected through the line door
+ * above. This keeps the count visible so the next one is seen the day it is
+ * authored. Not a gate, because a supplement author may legitimately write
+ * "never a teaspoon of cure" in a warning, and a false stop on prose costs
+ * more than a line in the report.
+ */
+{
+	const SPOON = /\b(?:tsp|tbsp|teaspoons?|tablespoons?)\b/i;
+	const CURE = /\b(?:cur(?:e|ing) salt|pink (?:curing )?salt|prague powder|nitrite|instacure|peklosol)\b/i;
+	const spooned = [];
+	R.forEach((r, i) => {
+		for (const line of r.i) {
+			if (SPOON.test(line) && CURE.test(line)) spooned.push(`${r.n} [${recipeSlugs[i]}]: ${line}`);
+		}
+	});
+	console.log(
+		`  cure: ${spooned.length} ingredient line${spooned.length === 1 ? '' : 's'} dose a nitrite cure by the spoon (reported, not gated)` +
+			(spooned.length ? `\n${spooned.map((x) => `      ${x}`).join('\n')}` : '')
+	);
+}
 
 /**
  * The 970-row test. Those hand-authored `v` booleans are ground truth nobody had

@@ -28,7 +28,7 @@
 	const done = $derived(list.filter((r) => cooked.has(r.slug)).length);
 </script>
 
-<svelte:head><title>{t.label}: The World Table</title></svelte:head>
+<svelte:head><title>{t.label} · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<nav class="crumbs" data-print="hide">

@@ -78,7 +78,7 @@
 	});
 </script>
 
-<svelte:head><title>Guest Menu: The World Table</title></svelte:head>
+<svelte:head><title>Guest Menu · The World Table</title></svelte:head>
 
 <div class="page">
 	<nav class="tools" data-print="hide">
@@ -149,6 +149,10 @@
 			{#if dateline}<p class="date">{dateline}</p>{/if}
 		</article>
 	{:else}
+		<!-- The card's own h1 lives inside the pinned branches, so with nothing
+		     pinned this route had no heading at all: a disabled button and one
+		     sentence. The title tag already says Guest Menu; the page now does too. -->
+		<h1 class="emptyhead" data-print="hide">Guest Menu</h1>
 		<p class="empty" data-print="hide">
 			{#if showing === 'house'}
 				No dishes on the kitchen's menu yet: enter them on the worksheet and they print here.
@@ -273,11 +277,16 @@
 		margin-top: 36px;
 	}
 
+	.emptyhead {
+		font-size: var(--t-h1);
+		text-align: center;
+		margin-top: 40px;
+	}
 	.empty {
 		text-align: center;
 		color: var(--muted);
 		font-style: italic;
-		padding: 60px 0;
+		padding: 20px 0 60px;
 	}
 
 	@media print {

@@ -10,6 +10,7 @@ import { screenFamilyRecipes } from '../familyRecipe';
 import type { HousePortable } from './house';
 import { asArray, asRecord } from '../importShape';
 import { mergeCostings, normaliseCosting, validStepActuals } from './state';
+import { remapSessionSlugs } from './migrations';
 
 export const FORMAT = 'world-table-session';
 /**
@@ -107,7 +108,16 @@ export function parseImport(text: string): PortableFile {
 		throw new Error(`That file was written by a newer version (v${f.version}).`);
 	}
 	if (!f.data) throw new Error('That session file has no data in it.');
-	return f as PortableFile;
+	/*
+	 * Slugs brought to their current spelling BEFORE the banner and the merge
+	 * read the file. A .wtjson exported from the live site carries the 22
+	 * pre-rename slugs (persistence/migrations.ts, SLUG_RENAMES), and will for
+	 * as long as anyone keeps the file: mergeSessions unions by slug, so
+	 * without this an old pin lands beside the new one and never resolves.
+	 * The menu dishes' recipeSlug pointers ride inside data.menuDishes and are
+	 * covered by the same call.
+	 */
+	return { ...f, data: remapSessionSlugs(f.data) } as PortableFile;
 }
 
 /**

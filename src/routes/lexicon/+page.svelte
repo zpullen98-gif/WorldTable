@@ -5,6 +5,7 @@
 	import { session } from '$lib/stores/session.svelte';
 	import { repertoire, dueList, scopeToSlugs, TERM_LADDER_DAYS } from '$lib/repertoire';
 	import { nextTarget, optionsForTerm, gradeForQuiz, QUIZ_LENGTH } from '$lib/lexicon-quiz';
+	import { markStudied } from '$lib/oot-studied';
 
 	let { data } = $props();
 
@@ -167,6 +168,8 @@
 						detail: { kind: 'quiz', right, of: QUIZ_LENGTH }
 					})
 				);
+			// A finished round is a day studied, product-wide (lib/oot-studied.ts).
+			markStudied();
 			quiz = null;
 			return;
 		}
@@ -174,7 +177,7 @@
 	}
 </script>
 
-<svelte:head><title>The Chef’s Lexicon: The World Table</title></svelte:head>
+<svelte:head><title>The Chef’s Lexicon · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">

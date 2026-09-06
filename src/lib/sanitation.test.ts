@@ -8,7 +8,9 @@ import {
 	CONFLICT,
 	GAPS,
 	CF_PAIR,
+	CODE,
 	readNumbers,
+	readPairs,
 	buildSanitation
 } from '../../tools/derive/sanitation.mjs';
 import { convertLine } from './scaling';
@@ -34,7 +36,7 @@ import type { Sanitation, LexiconEntry, RecipeSummary } from './types';
  * decorative), that the page does not import the converter, and that nothing
  * shipped names a recipe.
  */
-const shipped = sanitationJson as unknown as Sanitation;
+const shipped = sanitationJson as unknown as Sanitation & { code: typeof CODE };
 const lex = lexiconJson as unknown as LexiconEntry[];
 const recipes = indexJson as unknown as RecipeSummary[];
 const bySlug = new Map(lex.map((e) => [e.slug, e]));
@@ -223,6 +225,82 @@ describe("the guide's silences are load-bearing", () => {
 			const holder = bySlug.get(g.except.slug);
 			expect(holder, `${g.key} allows a token in a slug that no longer exists`).toBeDefined();
 			expect(holder!.definition.toLowerCase()).toContain(g.except.token.toLowerCase());
+		}
+	});
+});
+
+describe('the authored code block', () => {
+	/**
+	 * The one regulatory block on the page that the guide cannot be gated
+	 * against, so it is gated on itself: it reached the JSON as authored, every
+	 * F (C) pair agrees (the guide's own pair does not, which is why the page
+	 * never converts), every row carries a figure, and the voice holds.
+	 */
+	it('reached the shipped data as authored', () => {
+		expect(shipped.code).toEqual(CODE);
+		expect(shipped.code.rows.map((r) => r.key)).toEqual(CODE.rows.map((r) => r.key));
+	});
+
+	it('is dated, and names both sources', () => {
+		expect(shipped.code.asOf).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+		expect(Number.isNaN(Date.parse(shipped.code.asOf))).toBe(false);
+		expect(shipped.code.sources.fda.name).toMatch(/^FDA Food Code \d{4}$/);
+		expect(shipped.code.sources.fsa.name).toContain('Food Standards Agency');
+	});
+
+	it('every Fahrenheit and Celsius pair agrees within a degree', () => {
+		let pairs = 0;
+		for (const r of shipped.code.rows) {
+			for (const s of [r.fda, r.fsa]) {
+				if (!s) continue;
+				for (const { f, c } of readPairs(s)) {
+					pairs++;
+					expect(Math.abs(f - ((c * 9) / 5 + 32)), `${r.key}: ${f}°F vs ${c}°C`).toBeLessThanOrEqual(1);
+				}
+			}
+		}
+		// The gate is only worth something if it reads pairs. Nine today.
+		expect(pairs).toBeGreaterThanOrEqual(9);
+	});
+
+	it('reads the pairs it is meant to, and not the guide-style ranges', () => {
+		expect(readPairs('41°F (5°C) or below')).toEqual([{ f: 41, c: 5 }]);
+		expect(readPairs('135°F (57°C) to 70°F (21°C) within 2 hours')).toEqual([
+			{ f: 135, c: 57 },
+			{ f: 70, c: 21 }
+		]);
+		expect(readPairs('4–60°C (40–140°F)')).toEqual([]);
+	});
+
+	it('carries the figures a line asks for and the guide never states', () => {
+		const keys = shipped.code.rows.map((r) => r.key);
+		for (const k of ['coldHolding', 'hotHolding', 'cooling', 'reheating', 'cookPoultry', 'sanitiser']) {
+			expect(keys).toContain(k);
+		}
+		for (const r of shipped.code.rows) {
+			expect(r.fda || r.fsa, `${r.key} carries no figure`).toBeTruthy();
+		}
+	});
+
+	it('keeps the voice: no em dash, no double hyphen', () => {
+		const text = JSON.stringify(shipped.code);
+		expect(text).not.toMatch(/—/);
+		expect(text).not.toMatch(/ -- /);
+	});
+
+	it('a mismatched pair fails the build gate', () => {
+		const wrong = structuredClone(CODE);
+		wrong.rows[0].fda = '41°F (10°C) or below';
+		// The gate is private to buildSanitation, so it is exercised through the
+		// same door the build uses, with the module constant swapped for the bad
+		// copy by reference.
+		const saved = CODE.rows[0].fda;
+		CODE.rows[0].fda = wrong.rows[0].fda;
+		try {
+			const { problems } = buildSanitation(lex, recipes.map((r) => r.slug));
+			expect(problems.some((p) => p.includes('pairs 41°F with 10°C'))).toBe(true);
+		} finally {
+			CODE.rows[0].fda = saved;
 		}
 	});
 });

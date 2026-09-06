@@ -32,8 +32,12 @@ if (base !== '' && !/^\/[^/]/.test(base)) {
    away from a shell, so they are derived here rather than documented as an env
    prefix somebody will paste into Git Bash. Either can still be overridden. */
 const isOotWing = base === '/table';
-const manifestHref =
-	process.env.MANIFEST_HREF ?? (isOotWing ? '/manifest.webmanifest' : `${base}/manifest.webmanifest`);
+/* This repo ships no manifest of its own any more (static/manifest.webmanifest
+   is gone: one product, one manifest, at the root). The wing links the
+   product's; a standalone build links NOTHING, and +layout.svelte renders no
+   <link rel="manifest"> for an empty href, rather than one that 404s on every
+   page. Override with MANIFEST_HREF if a standalone deploy ever grows one. */
+const manifestHref = process.env.MANIFEST_HREF ?? (isOotWing ? '/manifest.webmanifest' : '');
 const appName = process.env.APP_NAME ?? (isOotWing ? 'Outside Of Time' : 'World Table');
 
 const env = { ...process.env, BASE_PATH: base, MANIFEST_HREF: manifestHref, APP_NAME: appName };

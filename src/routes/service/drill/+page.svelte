@@ -18,6 +18,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { session } from '$lib/stores/session.svelte';
+	import { markStudied } from '$lib/oot-studied';
 	import { repertoire, dueList, scopeToSlugs, TERM_LADDER_DAYS } from '$lib/repertoire';
 	import {
 		buildRound,
@@ -94,8 +95,8 @@
 
 	/**
 	 * One dispatch per finished round, matching the two existing sites the
-	 * monorepo's oot-log.js already consumes. markStudied() is an existing
-	 * profiles method: no shared-file edit.
+	 * monorepo's oot-log.js already consumes. The studied mark goes through
+	 * lib/oot-studied.ts, the one helper every round-complete site shares.
 	 */
 	function finish() {
 		if (!round) return;
@@ -105,14 +106,14 @@
 					detail: { kind: 'quiz', right, of: round.length }
 				})
 			);
-			window.OOT?.profiles?.markStudied();
 		} catch {
 			/* standalone, or a hardened browser. The round still counted. */
 		}
+		markStudied();
 	}
 </script>
 
-<svelte:head><title>Drill the track: The World Table</title></svelte:head>
+<svelte:head><title>Drill the track · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<nav class="crumbs"><a href="{base}/service">Service</a></nav>

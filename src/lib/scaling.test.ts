@@ -104,6 +104,14 @@ describe('convertLine', () => {
 		expect(convertLine('1.2L water', 'us')).toBe('1.3 qt water');
 	});
 
+	it('converts the word litres as well as the letter', () => {
+		// 193 corpus lines write the word, and stayed metric beside converted ml.
+		expect(convertLine('6 litres cold water', 'us')).toBe('6.3 qt cold water');
+		expect(convertLine('3 litres water', 'us')).toBe('3.2 qt water');
+		expect(convertLine('1 liter milk', 'us')).toBe('1.1 qt milk');
+		expect(convertLine('1.5 L soft water', 'us')).toBe('1.6 qt soft water');
+	});
+
 	it('converts centimetres', () => {
 		expect(convertLine('10cm piece kombu', 'us')).toBe('3.9 in piece kombu');
 	});
@@ -153,6 +161,27 @@ describe('scaling leaves alone what does not scale', () => {
 			'4 tbsp each soy and mirin, 2 tsp sugar'
 		);
 		expect(scaleLine('1 tsp each sugar, mirin, soy', 2)).toBe('2 tsp each sugar, mirin, soy');
+	});
+
+	/**
+	 * The cure line, in the house form every cure in the corpus now uses. The
+	 * gram figure scales; the cure NUMBER is a name (number 2 is the nitrate
+	 * cure for a months-long dry cure), the percentage is the rate at any batch
+	 * size, and "reading to 0.01 g" is the scale's resolution. Doubling used to
+	 * print "6 g curing salt number 2 (12½ percent sodium nitrite), ½ percent of
+	 * the meat, weighed on a scale reading to 0.02 g".
+	 */
+	it('scales the cure and nothing else on a cure line', () => {
+		expect(
+			scaleLine(
+				'3 g curing salt number 1 (6.25 percent sodium nitrite), 0.25 percent of the meat, weighed on a scale reading to 0.01 g',
+				2
+			)
+		).toBe(
+			'6 g curing salt number 1 (6.25 percent sodium nitrite), 0.25 percent of the meat, weighed on a scale reading to 0.01 g'
+		);
+		expect(scaleLine('4 g curing salt no. 2 (0.25%)', 2)).toBe('8 g curing salt no. 2 (0.25%)');
+		expect(scaleLine('2 tsp cure #1', 2)).toBe('4 tsp cure #1');
 	});
 
 	it('does not resize a tin you cannot buy', () => {
@@ -206,6 +235,27 @@ describe('conversion handles ranges, and the author who already did the maths', 
 		);
 		expect(convertLine('preheated to 250C (480F): score deep', 'us')).toBe(
 			'preheated to 480°F: score deep'
+		);
+	});
+
+	it('takes the author’s own Fahrenheit for a paired RANGE too', () => {
+		// The range rule converted the Celsius half and left the bracket
+		// standing, so a US cook read two Fahrenheit figures a degree apart.
+		expect(convertLine('Fry at 170C to 180C (340F to 355F)', 'us')).toBe('Fry at 340°F to 355°F');
+		expect(convertLine('hold at 80C to 85C (175F to 185F)', 'us')).toBe('hold at 175°F to 185°F');
+		expect(convertLine('24-26C (75-79F)', 'us')).toBe('75-79°F');
+		expect(convertLine('proof at 22 to 26C (72 to 79F)', 'us')).toBe('proof at 72 to 79°F');
+		// The range word may be "and", on either side of the bracket; a word on
+		// the author's side outranks a dash in the bracket, so "between" keeps it.
+		expect(convertLine('hold the sauce between 55C and 65C (131F and 149F)', 'us')).toBe(
+			'hold the sauce between 131°F and 149°F'
+		);
+		expect(convertLine('Work between 31 and 32C (88 and 90F)', 'us')).toBe('Work between 88 and 90°F');
+		expect(convertLine('hold between 60C and 70C (140F-158F) for 45 minutes', 'us')).toBe(
+			'hold between 140°F and 158°F for 45 minutes'
+		);
+		expect(convertLine('hold the pit between 110C and 130C (230F to 265F).', 'us')).toBe(
+			'hold the pit between 230°F and 265°F.'
 		);
 	});
 

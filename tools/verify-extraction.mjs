@@ -21,6 +21,7 @@ import {
 	EXPECTED_PANTRY_ITEMS
 } from './extract-lib.mjs';
 import { slugify, qualifiedSlugs } from './slugify.mjs';
+import { RECIPE_SUPPLEMENT } from './derive/recipes-supplement.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SOURCE = join(ROOT, 'reference', 'world-table-v1.html');
@@ -319,6 +320,43 @@ check('NOTE_DEFS and EQUIP hold live RegExp after revival', () => {
 	assert.equal(equipRe, 31, `${equipRe}/31 EQUIP rules revived as RegExp`);
 	assert.ok(noteRe > 0, 'no NOTE_DEFS regexes revived');
 	return `${equipRe} EQUIP + ${noteRe} NOTE_DEFS`;
+});
+
+// ── 8. Line overrides still bind to a line that exists ───────────────────────
+// overrides.json may replace an ingredient or a step in a sealed recipe, keyed
+// by the EXACT original line (build-data.mjs, "the line door"). A key that no
+// longer matches is a ruling that binds to nothing, and the build gates it; this
+// is the same check run against the raw text alone, so it fails before any
+// derivation and cannot be argued away by a build that did not run.
+const OVERRIDES = JSON.parse(
+	readFileSync(join(ROOT, 'src', 'lib', 'data', 'overrides.json'), 'utf8')
+);
+check('every line override names a line the recipe still has', () => {
+	const all = [...R, ...RECIPE_SUPPLEMENT];
+	const slugs = qualifiedSlugs(
+		all,
+		(r) => r.n,
+		(r) => r.c
+	);
+	const bySlug = new Map(slugs.map((s, i) => [s, all[i]]));
+	const bad = [];
+	let bound = 0;
+	for (const [slug, ov] of Object.entries(OVERRIDES.recipes ?? {})) {
+		if (!ov.ingredients && !ov.steps) continue;
+		const r = bySlug.get(slug);
+		if (!r) {
+			bad.push(`${slug}: no such recipe`);
+			continue;
+		}
+		for (const [field, key] of [['i', 'ingredients'], ['m', 'steps']]) {
+			for (const original of Object.keys(ov[key] ?? {})) {
+				if (r[field].includes(original)) bound++;
+				else bad.push(`${slug}: ${key} ${JSON.stringify(original)} is not in the recipe`);
+			}
+		}
+	}
+	assert.equal(bad.length, 0, bad.join('; '));
+	return `${bound} bound`;
 });
 
 // ── report ───────────────────────────────────────────────────────────────────

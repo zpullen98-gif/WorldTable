@@ -17,6 +17,7 @@ import { get, set, del, update, createStore } from 'idb-keyval';
 import { browser } from '$app/environment';
 import { EMPTY_SESSION, type SessionState } from './state';
 import { readSession, NewerVersionError, type HeldReason, type SessionRead } from './migrations';
+import { writeSummary } from '../oot-summary';
 
 export type { HeldReason, SessionRead } from './migrations';
 
@@ -53,6 +54,62 @@ function KEY(): string {
 	} catch {
 		return KEY_BASE;
 	}
+}
+
+/**
+ * The first name typed on a Table-only device keeps the kitchen.
+ *
+ * shared/oot-home.js decides whether the first profile on a device ADOPTS the
+ * bare keys by asking hasHistory(), which reads a fixed list of localStorage
+ * keys. This wing keeps its record in IndexedDB, so until the
+ * `world-table-has-history-v1` flag existed (written on save, see
+ * lib/oot-summary.ts) a device that had only ever cooked from the Table looked
+ * empty to that check. The first name typed got a plain, namespaced profile
+ * and an empty `session::<id>` beside months of work under bare `session`,
+ * with nothing left that could ever read it.
+ *
+ * So: a named, non-legacy profile whose own record does not exist, on a device
+ * whose bare record does and has never been claimed, is handed a COPY of the
+ * bare record once, and the device remembers that it was claimed. Copy, not
+ * move: the bare record stays where an unnamed or legacy reader expects it.
+ *
+ * Refused when the roster already holds a legacy profile. That person IS the
+ * bare record's owner, and handing their kitchen to the next name typed would
+ * be the exact confusion profiles exist to prevent.
+ */
+export const CLAIMED_FLAG = 'world-table-session-claimed-v1';
+
+function claimAllowed(key: string): boolean {
+	if (key === KEY_BASE) return false;
+	try {
+		if (localStorage.getItem(CLAIMED_FLAG) === '1') return false;
+		const p = window.OOT && window.OOT.profiles;
+		if (p && p.list().some((x) => x.legacy)) return false;
+		return true;
+	} catch {
+		return false;
+	}
+}
+
+async function claimBare(key: string): Promise<unknown> {
+	if (!store || !claimAllowed(key)) return undefined;
+	let bare: unknown;
+	try {
+		bare = await get(KEY_BASE, store);
+	} catch {
+		return undefined;
+	}
+	if (bare === undefined) return undefined;
+	// Only a record this build can read is worth copying; a held one is left
+	// exactly where it is, for the edition that can.
+	if (readSession(bare).held) return undefined;
+	try {
+		await set(key, bare, store);
+		localStorage.setItem(CLAIMED_FLAG, '1');
+	} catch {
+		return undefined;
+	}
+	return bare;
 }
 
 /*
@@ -100,6 +157,8 @@ export async function loadSessionRecord(): Promise<SessionRead> {
 		held.set(key, 'unreadable');
 		return { state: structuredClone(EMPTY_SESSION), held: true, reason: 'unreadable' };
 	}
+	// A named profile with no record of its own: see claimBare above.
+	if (raw === undefined) raw = await claimBare(key);
 	const read = readSession(raw);
 	if (read.held) {
 		const first = !held.has(key);
@@ -155,6 +214,14 @@ export async function saveSession(state: SessionState, key?: string): Promise<bo
 			},
 			store
 		);
+		/*
+		 * The Pass's summary and the device's history flag, on every successful
+		 * save and under the key that was actually written to, never the one the
+		 * roster currently names (they differ mid-switch; see `key` above).
+		 * writeSummary never throws: a localStorage failure is not a failed
+		 * session write and must not be reported as one.
+		 */
+		writeSummary(state, k);
 		return true;
 	} catch (e) {
 		if (e instanceof NewerVersionError) {

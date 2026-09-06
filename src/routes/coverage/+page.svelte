@@ -146,7 +146,7 @@
 		xs.length <= 1 ? (xs[0] ?? '') : xs.slice(0, -1).join(', ') + ' and ' + xs[xs.length - 1];
 </script>
 
-<svelte:head><title>Coverage: The World Table</title></svelte:head>
+<svelte:head><title>Coverage · The World Table</title></svelte:head>
 
 <div class="shell view" data-print="hide">
 	<header class="head">

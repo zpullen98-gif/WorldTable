@@ -77,7 +77,7 @@
 	}
 </script>
 
-<svelte:head><title>The Family Chapter: The World Table</title></svelte:head>
+<svelte:head><title>The Family Chapter · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<!-- A way out, which this page did not have: its only links are into
@@ -138,7 +138,7 @@
 				     yield, which is what every guide recipe now does. -->
 				<label class="mins">
 					<span class="sec">Serves</span>
-					<input type="number" min="1" bind:value={draft.serves} placeholder="—" />
+					<input type="number" min="1" bind:value={draft.serves} />
 				</label>
 			</div>
 

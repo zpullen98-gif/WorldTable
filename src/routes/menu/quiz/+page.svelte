@@ -3,6 +3,7 @@
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
 	import type { MenuDish } from '$lib/persistence/state';
+	import { markStudied } from '$lib/oot-studied';
 
 	/* Drills over The Kitchen's Menu: the dishes entered on /menu. The quiz
 	 * engine is the lexicon page's, ported: ten a round, distractors from the
@@ -154,6 +155,8 @@
 						detail: { kind: 'quiz', right, of: QUIZ_LENGTH }
 					})
 				);
+			// A finished round is a day studied, product-wide (lib/oot-studied.ts).
+			markStudied();
 			quiz = null;
 			return;
 		}
@@ -169,7 +172,7 @@
 	}
 </script>
 
-<svelte:head><title>Drill the Menu: The World Table</title></svelte:head>
+<svelte:head><title>Drill the Menu · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<article class="sheet">

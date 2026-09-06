@@ -39,7 +39,7 @@
 	});
 </script>
 
-<svelte:head><title>Not here: The World Table</title></svelte:head>
+<svelte:head><title>Not here · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<h1>{page.status === 404 ? 'Nothing at this address' : 'Something went wrong'}</h1>

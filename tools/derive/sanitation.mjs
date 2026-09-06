@@ -41,6 +41,11 @@
  *    still NAMES a practice and that it still states NO figure for it. That
  *    second half is what stops anybody, including a later me, from quietly
  *    filling a gap with invented regulatory content.
+ *
+ * And one thing that IS authored, and labelled as such on the page: CODE, the
+ * FDA Food Code and UK FSA figures beside the guide's, with source and date.
+ * It is the one place a regulatory number enters this module, it is gated on
+ * its own internal consistency, and it is kept out of the GAPS gate on purpose.
  */
 
 import { parseRepairTable } from './palate.mjs';
@@ -226,6 +231,152 @@ export const GAPS = [
 
 /** The framing the page is required to carry, tied to prose that must persist. */
 export const FRAMING = { jurisdictionFact: 'jurisdiction' };
+
+/**
+ * The figures a code states, beside the guide's. AUTHORED, and said so.
+ *
+ * The guide's numbers are consumer guidance (40–140°F is the USDA's), stricter
+ * than what an inspector enforces but never named as such, and its silences
+ * (reheating, hot-holding, sanitizer strength) are exactly the numbers a line
+ * asks for before service. This block carries the FDA Food Code and the UK
+ * FSA figures with their source and date on the same row, printed as stated
+ * and never converted, under the same framing as everything else on the page:
+ * your code governs.
+ *
+ * It does NOT fill the GAPS above. Those assert what the GUIDE states, and the
+ * guide still states none of this; the gate on them scans the lexicon, not
+ * this block, and that is deliberate. What IS gated here: every C/F pair in
+ * these strings must agree within a degree (the guide's own pair does not,
+ * see CF_PAIR, so an authored one must), every row must carry at least one
+ * figure, `asOf` must be a real date, and no string may carry an em dash.
+ *
+ * Editions: FDA Food Code 2022 (the current edition on the date below; states
+ * adopt it with amendments and on their own schedule). FSA figures are the
+ * England, Wales and Northern Ireland regulations and FSA cooking guidance.
+ */
+export const CODE = {
+	asOf: '2026-09-05',
+	sources: {
+		fda: {
+			name: 'FDA Food Code 2022',
+			note: 'United States. Adopted state by state, with amendments and on their own schedule, so the figure your inspector holds you to may differ.'
+		},
+		fsa: {
+			name: 'UK Food Standards Agency',
+			note: 'England, Wales and Northern Ireland regulations, and FSA cooking guidance. Scotland sets no chilled figure in law.'
+		}
+	},
+	rows: [
+		{
+			key: 'coldHolding',
+			label: 'Cold holding',
+			fda: '41°F (5°C) or below',
+			fsa: '8°C or below in law; 5°C or below recommended'
+		},
+		{
+			key: 'hotHolding',
+			label: 'Hot holding',
+			fda: '135°F (57°C) or above',
+			fsa: '63°C or above'
+		},
+		{
+			key: 'cooling',
+			label: 'Cooling cooked food',
+			fda: '135°F (57°C) to 70°F (21°C) within 2 hours, then to 41°F (5°C) within 4 more',
+			fsa: null
+		},
+		{
+			key: 'reheating',
+			label: 'Reheating for hot holding',
+			fda: '165°F (74°C) for 15 seconds',
+			fsa: null
+		},
+		{
+			key: 'cookPoultry',
+			label: 'Poultry, stuffed meats and reheated leftovers',
+			fda: '165°F (74°C)',
+			fsa: '75°C, or 70°C held for two minutes: one figure for everything cooked'
+		},
+		{
+			key: 'cookGround',
+			label: 'Ground meats',
+			fda: '155°F (68°C) for 17 seconds',
+			fsa: '75°C, or 70°C held for two minutes'
+		},
+		{
+			key: 'cookWhole',
+			label: 'Whole cuts of beef, pork, lamb and fish',
+			fda: '145°F (63°C) for 15 seconds',
+			fsa: '75°C, or 70°C held for two minutes'
+		},
+		{
+			key: 'sanitiser',
+			label: 'Sanitiser strength',
+			fda: 'chlorine 50 to 100 ppm · quaternary ammonium per the label, commonly 150 to 400 ppm · iodine 12.5 to 25 ppm',
+			fsa: null
+		}
+	]
+};
+
+/**
+ * Every "F (C)" pair in an authored figure, so the gate can check them.
+ *
+ * @param {string} s
+ * @returns {Array<{ f: number, c: number }>}
+ */
+export function readPairs(s) {
+	const out = [];
+	for (const m of String(s).matchAll(/([0-9]+(?:\.[0-9]+)?)°F \(([0-9]+(?:\.[0-9]+)?)°C\)/g)) {
+		out.push({ f: Number(m[1]), c: Number(m[2]) });
+	}
+	return out;
+}
+
+/**
+ * The authored block, checked. A wrong safety number in an AUTHORED block has
+ * no guide text to be gated against, so the block gates itself: pairs agree,
+ * rows carry a figure, the date parses, the voice holds.
+ *
+ * @param {typeof CODE} code
+ * @param {string[]} problems
+ */
+function checkCode(code, problems) {
+	if (!/^\d{4}-\d{2}-\d{2}$/.test(code.asOf) || Number.isNaN(Date.parse(code.asOf))) {
+		problems.push(`sanitation: the code block's asOf ${JSON.stringify(code.asOf)} is not a date`);
+	}
+	for (const [key, src] of Object.entries(code.sources)) {
+		if (!src.name || !src.note) problems.push(`sanitation: the code source "${key}" needs a name and a note`);
+	}
+	const seen = new Set();
+	for (const row of code.rows) {
+		if (seen.has(row.key)) problems.push(`sanitation: the code row "${row.key}" appears twice`);
+		seen.add(row.key);
+		if (!row.label) problems.push(`sanitation: the code row "${row.key}" has no label`);
+		if (!row.fda && !row.fsa) {
+			problems.push(`sanitation: the code row "${row.key}" carries no figure from either source`);
+		}
+		for (const src of /** @type {const} */ (['fda', 'fsa'])) {
+			const s = row[src];
+			if (s === null || s === undefined) continue;
+			if (typeof s !== 'string' || !s.trim()) {
+				problems.push(`sanitation: the code row "${row.key}" has an empty ${src} figure; use null for none`);
+				continue;
+			}
+			for (const { f, c } of readPairs(s)) {
+				const expected = (c * 9) / 5 + 32;
+				if (Math.abs(f - expected) > 1) {
+					problems.push(
+						`sanitation: the code row "${row.key}" pairs ${f}°F with ${c}°C, and ${c}°C is ${expected.toFixed(1)}°F`
+					);
+				}
+			}
+		}
+	}
+	const strings = JSON.stringify(code);
+	if (/—/.test(strings) || / -- /.test(strings)) {
+		problems.push('sanitation: the code block carries an em dash');
+	}
+}
 
 /**
  * Refuse any per-recipe surface, structurally.
@@ -446,6 +597,9 @@ export function buildSanitation(lexicon, recipeSlugList = []) {
 		}
 	}
 
+	/* ---- the authored code block, self-gated ---------------------------- */
+	checkCode(CODE, problems);
+
 	const sanitation = {
 		entries,
 		clauses,
@@ -454,7 +608,8 @@ export function buildSanitation(lexicon, recipeSlugList = []) {
 		cf: { ...CF_PAIR, converted, disagrees: true },
 		conflict,
 		gaps,
-		framing: framingFact ? { jurisdiction: framingFact.evidence } : null
+		framing: framingFact ? { jurisdiction: framingFact.evidence } : null,
+		code: CODE
 	};
 
 	assertNoRecipes(sanitation, new Set(recipeSlugList), problems);

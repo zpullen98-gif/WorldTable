@@ -7,6 +7,7 @@
 	import { buildExport, download, parseImport, describeImport } from '$lib/persistence/portable';
 	import { mergeExportedMenu } from '$lib/persistence/house';
 	import Ornament from '$lib/components/Ornament.svelte';
+	import ExportNudge from '$lib/components/ExportNudge.svelte';
 	import { onMount } from 'svelte';
 	import {
 		buildPass,
@@ -445,6 +446,9 @@
 				house.portable()
 			)
 		);
+		// The file is the backup; stamp when it was last taken so the nudge can
+		// count from it. Not a change to the record: see markExported().
+		house.markExported();
 	}
 
 	async function doImport(e: Event) {
@@ -523,7 +527,7 @@
 	}
 </script>
 
-<svelte:head><title>My Menu: The World Table</title></svelte:head>
+<svelte:head><title>My Menu · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -561,6 +565,7 @@
 		{/if}
 	</div>
 	{#if importMsg}<p class="msg" aria-live="polite">{importMsg}</p>{/if}
+	<ExportNudge />
 
 	{#if !stats}
 		<p class="empty">

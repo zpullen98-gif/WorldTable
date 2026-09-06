@@ -39,15 +39,15 @@
 	const track = $derived(data.track);
 </script>
 
-<svelte:head><title>Service: The World Table</title></svelte:head>
+<svelte:head><title>Service · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
 		<h1>Service</h1>
 		<p class="lede">
-			{track.fohTotal} terms (cheese, charcuterie, the bar, wine and the grapes) in the order a
-			floor learns them. Start at the room and the words the kitchen shouts; the Grape Atlas can
-			wait for week three.
+			{track.total} terms, {track.fohTotal} of them from the five atlases (cheese, charcuterie, the
+			bar, wine and the grapes), in the order a floor learns them. Start at the room and the words
+			the kitchen shouts; the Grape Atlas can wait for week three.
 		</p>
 	</header>
 

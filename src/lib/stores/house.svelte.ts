@@ -50,6 +50,7 @@ import {
 	localDay,
 	houseSnapshot,
 	housePortable,
+	exportNudge,
 	type HousePortable,
 	type HouseRecord,
 	type EightySix,
@@ -73,6 +74,13 @@ class House {
 	 * Every write is a no-op while this is set. See readHouse().
 	 */
 	#blocked = $state(false);
+	/**
+	 * What navigator.storage.persist() answered, or null until it has been
+	 * asked. Asked once, on the first genuine write, because that is the first
+	 * moment there is something on this device worth keeping. See #persist().
+	 */
+	#storagePersisted = $state<boolean | null>(null);
+	#storageAsked = false;
 
 	get ready() {
 		return this.#ready;
@@ -87,8 +95,61 @@ class House {
 	get lastEditedBy(): string | undefined {
 		return this.#r.lastEditedBy;
 	}
+	/**
+	 * true: the browser granted durable storage, and will not evict this
+	 * record under pressure. false: it refused, or the API is absent, so the
+	 * record is best-effort and the export is the only backup. null: not yet
+	 * asked, because nothing has been written on this device.
+	 */
+	get storagePersisted(): boolean | null {
+		return this.#storagePersisted;
+	}
+	/** How stale the last export is; see exportNudge() in persistence/house.ts. */
+	get exportNudge(): { days: number | null } | null {
+		return exportNudge(this.#r);
+	}
 
-	#persist() {
+	/**
+	 * Ask the browser to keep this origin's storage.
+	 *
+	 * Without it the whole house record (menu, 86 board, costings, preps, the
+	 * item book with its history, the waste log) is best-effort storage: Safari
+	 * deletes it for a site not added to the home screen after seven days
+	 * without a visit, and Chromium may evict it under pressure. One call, once
+	 * per page lifetime, on the first genuine write; the answer is recorded so
+	 * the pages can say which case they are in. Failure is recorded as `false`
+	 * rather than thrown: a refused request changes what the page should say,
+	 * never whether the write goes ahead.
+	 */
+	#requestPersistence() {
+		if (this.#storageAsked) return;
+		this.#storageAsked = true;
+		try {
+			const s = typeof navigator !== 'undefined' ? navigator.storage : undefined;
+			if (!s || typeof s.persist !== 'function') {
+				this.#storagePersisted = false;
+				return;
+			}
+			s.persist().then(
+				(ok) => {
+					this.#storagePersisted = Boolean(ok);
+				},
+				() => {
+					this.#storagePersisted = false;
+				}
+			);
+		} catch {
+			this.#storagePersisted = false;
+		}
+	}
+
+	/**
+	 * @param touch whether this write is a change to the record. Every mutator
+	 * passes the default; markExported() passes false so an export stamps
+	 * `lastExportAt` without moving `lastWrite`, which is the comparison the
+	 * export nudge rests on.
+	 */
+	#persist(touch = true) {
 		// The guard that makes the refusal real. Without it every mutator below
 		// would cheerfully write EMPTY_HOUSE over a record it could not read.
 		if (!browser || !store || this.#blocked) return;
@@ -99,9 +160,12 @@ class House {
 		// loses at most that one pre-hydration tap; hydrate() then installs the
 		// disk record. One tap lost beats a venue lost.
 		if (!this.#ready) return;
-		this.#r.lastWrite = Date.now();
-		const by = profiles.currentName();
-		if (by) this.#r.lastEditedBy = by;
+		if (touch) {
+			this.#r.lastWrite = Date.now();
+			const by = profiles.currentName();
+			if (by) this.#r.lastEditedBy = by;
+			this.#requestPersistence();
+		}
 		/*
 		 * Caught, not fire-and-forget: an unhandled rejection here (quota, a
 		 * closed connection, a transaction abort) used to mean a menu edit or a
@@ -496,6 +560,17 @@ class House {
 			}
 		};
 		this.#persist();
+	}
+
+	/**
+	 * The export just happened: remember when, so the nudge can count from it.
+	 * Called by the page that writes the .wtjson, after download(). Not a
+	 * change to the record, so lastWrite and lastEditedBy stay where they are.
+	 */
+	markExported() {
+		if (this.#blocked || !this.#ready) return;
+		this.#r = { ...this.#r, lastExportAt: Date.now() };
+		this.#persist(false);
 	}
 
 	snapshot() {

@@ -196,5 +196,68 @@
   ],
   "framing": {
     "jurisdiction": "know your jurisdiction's system (letter grades posted in the window, point scores, risk-based frequency)"
+  },
+  "code": {
+    "asOf": "2026-09-05",
+    "sources": {
+      "fda": {
+        "name": "FDA Food Code 2022",
+        "note": "United States. Adopted state by state, with amendments and on their own schedule, so the figure your inspector holds you to may differ."
+      },
+      "fsa": {
+        "name": "UK Food Standards Agency",
+        "note": "England, Wales and Northern Ireland regulations, and FSA cooking guidance. Scotland sets no chilled figure in law."
+      }
+    },
+    "rows": [
+      {
+        "key": "coldHolding",
+        "label": "Cold holding",
+        "fda": "41°F (5°C) or below",
+        "fsa": "8°C or below in law; 5°C or below recommended"
+      },
+      {
+        "key": "hotHolding",
+        "label": "Hot holding",
+        "fda": "135°F (57°C) or above",
+        "fsa": "63°C or above"
+      },
+      {
+        "key": "cooling",
+        "label": "Cooling cooked food",
+        "fda": "135°F (57°C) to 70°F (21°C) within 2 hours, then to 41°F (5°C) within 4 more",
+        "fsa": null
+      },
+      {
+        "key": "reheating",
+        "label": "Reheating for hot holding",
+        "fda": "165°F (74°C) for 15 seconds",
+        "fsa": null
+      },
+      {
+        "key": "cookPoultry",
+        "label": "Poultry, stuffed meats and reheated leftovers",
+        "fda": "165°F (74°C)",
+        "fsa": "75°C, or 70°C held for two minutes: one figure for everything cooked"
+      },
+      {
+        "key": "cookGround",
+        "label": "Ground meats",
+        "fda": "155°F (68°C) for 17 seconds",
+        "fsa": "75°C, or 70°C held for two minutes"
+      },
+      {
+        "key": "cookWhole",
+        "label": "Whole cuts of beef, pork, lamb and fish",
+        "fda": "145°F (63°C) for 15 seconds",
+        "fsa": "75°C, or 70°C held for two minutes"
+      },
+      {
+        "key": "sanitiser",
+        "label": "Sanitiser strength",
+        "fda": "chlorine 50 to 100 ppm · quaternary ammonium per the label, commonly 150 to 400 ppm · iodine 12.5 to 25 ppm",
+        "fsa": null
+      }
+    ]
   }
 }

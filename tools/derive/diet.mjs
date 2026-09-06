@@ -59,6 +59,12 @@ const FISH = [
 	'fish', 'anchovy', 'anchovies', 'salmon', 'tuna', 'cod', 'haddock', 'halibut',
 	'snapper', 'branzino', 'sole', 'sea bass', 'tilapia', 'barramundi', 'trout',
 	'mackerel', 'sardine', 'herring', 'bonito', 'katsuobushi',
+	// Bare 'katsuo' is the same fish as katsuobushi, and the corpus writes
+	// "600ml katsuo and kombu dashi": the only fish word on the line was inside
+	// the kombu-dashi exception, scrub() blanked it, and Rafute and Nakami Jiru
+	// printed an allergen screen with no fish. 'iriko' is niboshi under its
+	// western-Japan name; 'awase dashi' is the blended (bonito) stock.
+	'katsuo', 'katsuo dashi', 'awase dashi', 'iriko',
 	'bacalao', 'bacalhau', 'salt cod', 'fish sauce', 'nam pla', 'worcestershire',
 	'bottarga', 'roe', 'caviar', 'tobiko', 'ikura', 'uni', 'eel', 'unagi',
 	'dashi', 'niboshi', 'surimi', 'lox', 'gravlax', 'kipper', 'whitebait',
@@ -145,6 +151,12 @@ const GLUTEN = [
 	// empty allergen list renders no "Contains" block at all, which reads as
 	// "no allergens" rather than "we don't know". Whole soybeans are excepted.
 	'soy', 'hoisin', 'kecap manis', 'gochujang', 'teriyaki', 'miso',
+	/* Shoyu IS soy sauce, and koikuchi and usukuchi are its two wheat-brewed
+	   grades. The Kyoto and Okinawa chapters write "40ml usukuchi shoyu" with
+	   no other soy word on the page, and seven recipes shipped an allergen
+	   screen that said gluten had been looked for and not found. Soba is wheat
+	   blended unless it is labelled juwari, so it declares. */
+	'shoyu', 'usukuchi', 'koikuchi', 'soba',
 	'tortilla', 'pita', 'baguette', 'brioche', 'phyllo', 'filo', 'puff pastry',
 	'pastry', 'cracker', 'crackers', 'beer', 'udon', 'ramen', 'somen', 'lasagne',
 	'lasagna', 'gnocchi', 'dumpling wrappers', 'wonton', 'pierogi', 'roux',
@@ -219,7 +231,9 @@ const SESAME = [
 const SOY = [
 	'soy', 'soya', 'soybean', 'tofu', 'miso', 'tempeh', 'edamame', 'doenjang',
 	'gochujang', 'hoisin', 'tamari', 'natto', 'kecap manis', 'teriyaki', 'yuba',
-	'douchi', 'ssamjang'
+	'douchi', 'ssamjang',
+	// The Japanese word for soy sauce and its two grades; see GLUTEN.
+	'shoyu', 'usukuchi', 'koikuchi'
 ];
 
 /** A refinement of NUTS, because the statutory list separates them. */
@@ -296,10 +310,6 @@ const EXCEPTIONS = [
 	'oyster mushroom', 'oyster mushrooms', 'mushroom scallop', 'mushroom scallops',
 	'vegan scallop', 'vegan scallops', 'oyster sauce substitute',
 	'king oyster scallop', 'king oyster scallops', 'oyster scallops',
-	// Dashi is on the fish list because almost every dashi is bonito. These two
-	// are the exceptions that define themselves by leaving it out.
-	'kombu dashi', 'shojin dashi', 'shiitake dashi', 'vegetarian dashi',
-	'vegan dashi', 'mushroom xo',
 	// Place names. "Cape Cod Cranberry Relish" is a vegetarian dish that was
 	// reading as fish purely because Cape Cod is named after the cod.
 	'cape cod', 'cod cranberry', 'codfish ball',
@@ -330,6 +340,26 @@ const EXCEPTIONS = [
 	// before 'vinegar'.
 	'wine vinegar', 'sherry vinegar'
 ];
+
+/**
+ * Dashi is on the fish list because almost every dashi is bonito. These are
+ * the exceptions that define themselves by leaving it out.
+ *
+ * Kept apart from EXCEPTIONS because they are applied CONDITIONALLY: only when
+ * the text being scrubbed carries no other fish word. "600ml katsuo and kombu
+ * dashi" is a bonito stock that happens to name the kelp, and blanking the
+ * phrase unconditionally deleted the only 'dashi' on the line while bare
+ * 'katsuo' was not yet a FISH token, so Rafute and Nakami Jiru printed an
+ * allergen screen without fish. 'mushroom xo' is the same shape one list over:
+ * a seafood sauce that defines itself by leaving the seafood out.
+ */
+const DASHI_EXCEPTIONS = [
+	'kombu dashi', 'shojin dashi', 'shiitake dashi', 'vegetarian dashi',
+	'vegan dashi', 'mushroom xo'
+];
+
+/** The fish words that stop a dashi exception from firing on the same text. */
+const OTHER_FISH = /(?<![\p{L}])(?:katsuo(?:bushi)?|bonito|niboshi|iriko|anchov(?:y|ies))(?![\p{L}])/iu;
 
 const escape = (/** @type {string} */ s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
@@ -372,6 +402,7 @@ const RE = {
 };
 
 const EXCEPTION_RE = makeMatcher(EXCEPTIONS);
+const DASHI_EXCEPTION_RE = makeMatcher(DASHI_EXCEPTIONS);
 
 /**
  * A denial is not a declaration.
@@ -403,7 +434,11 @@ const NEGATED =
 /** Blank out known-safe phrases before testing, so their substrings can't fire. */
 /** @param {string} text */
 function scrub(text) {
-	return text.replace(NEGATED, ' ').replace(new RegExp(EXCEPTION_RE.source, 'giu'), ' ');
+	const out = text.replace(NEGATED, ' ').replace(new RegExp(EXCEPTION_RE.source, 'giu'), ' ');
+	// A vegetarian dashi is only an exception when the same text names no other
+	// fish: "katsuo and kombu dashi" keeps its dashi. See DASHI_EXCEPTIONS.
+	if (OTHER_FISH.test(out)) return out;
+	return out.replace(new RegExp(DASHI_EXCEPTION_RE.source, 'giu'), ' ');
 }
 
 /**

@@ -18,7 +18,7 @@
 	const role = $derived(session.role);
 </script>
 
-<svelte:head><title>Learn: The World Table</title></svelte:head>
+<svelte:head><title>Learn · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">

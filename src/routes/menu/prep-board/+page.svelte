@@ -123,7 +123,7 @@
 	const hours = (sec: number) => (sec >= 3600 ? `${Math.round(sec / 360) / 10} h` : `${Math.round(sec / 60)} min`);
 </script>
 
-<svelte:head><title>The Prep Board: The World Table</title></svelte:head>
+<svelte:head><title>The Prep Board · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">

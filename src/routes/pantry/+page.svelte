@@ -62,7 +62,7 @@
 	];
 </script>
 
-<svelte:head><title>Pantry Match | The World Table</title></svelte:head>
+<svelte:head><title>Pantry Match · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<!-- A way out. Until a cook ticks enough ingredients to produce a match this

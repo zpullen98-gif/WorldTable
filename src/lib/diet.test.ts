@@ -182,6 +182,77 @@ describe('the vocabulary widening: words the tables never learned', () => {
 	});
 });
 
+/**
+ * Shoyu, katsuo and soba: the Kyoto and Okinawa chapters write soy sauce as
+ * "usukuchi shoyu", bonito as "katsuo", and nine recipes shipped an allergen
+ * screen that said soy, gluten or fish had been looked for and not found, over
+ * the ingredient line that names it. Every line below is copied from the
+ * corpus recipe named, and the flags are what the served page must carry.
+ */
+describe('shoyu is soy sauce, katsuo is bonito, soba is wheat', () => {
+	const flags = (n: string, i: string[]) => {
+		const d = deriveDiet(recipe(n, i));
+		return { gluten: d.containsGluten, soy: d.containsSoy, fish: d.containsFish };
+	};
+	const shoyuOnly = { gluten: true, soy: true, fish: false };
+
+	it('reads usukuchi and koikuchi shoyu as soy and as gluten', () => {
+		expect(flags('Yudofu', ['600g kinugoshi tofu, the softest you can buy', '20g kombu', '100ml usukuchi shoyu'])).toEqual(shoyuOnly);
+		expect(flags('Kumiage Yuba', ['1.2 L unsweetened soymilk', '10g kombu', '20ml usukuchi shoyu'])).toEqual(shoyuOnly);
+		expect(flags('Yuba Maki no Ankake', ['40g dried yuba sheets, about 6', '500ml kombu dashi', '20ml usukuchi shoyu'])).toEqual(shoyuOnly);
+		expect(flags('Kyo-yasai no Takiawase', ['1.5 L soft water', '20g kombu', '400g ebi-imo, or other taro', '40ml usukuchi shoyu'])).toEqual(shoyuOnly);
+		expect(
+			flags('Manganji Togarashi to Oage-san no Taitan', ['60g abura-age, 2 sheets', '400ml kombu dashi', '30ml usukuchi shoyu'])
+		).toEqual(shoyuOnly);
+		expect(flags('Hamo no Otoshi', ['1 hamo, about 700g, filleted skin on', '15ml kombu dashi', '5ml usukuchi shoyu'])).toEqual({
+			gluten: true,
+			soy: true,
+			fish: true
+		});
+	});
+
+	it('reads soba as gluten, and a bonito dashi as fish', () => {
+		expect(
+			flags('Nishin Soba', [
+				'2 migaki nishin, dried herring, about 150g',
+				'60ml koikuchi shoyu',
+				'1.2 L dashi of kombu and katsuobushi',
+				'60ml usukuchi shoyu',
+				'400g dried soba'
+			])
+		).toEqual({ gluten: true, soy: true, fish: true });
+		expect(flags('Zaru Soba', ['400g good dried soba: at least 40% buckwheat'])).toEqual({ gluten: true, soy: false, fish: false });
+	});
+
+	it('does not let "kombu dashi" hide the katsuo on the same line', () => {
+		// The exception phrase was blanked before matching, and bare 'katsuo'
+		// was not a fish word, so the only fish token on the line vanished.
+		expect(flags('Rafutē', ['1kg skin-on pork belly, in one piece', '600ml katsuo and kombu dashi', '80ml koikuchi soy sauce'])).toEqual({
+			gluten: true,
+			soy: true,
+			fish: true
+		});
+		expect(flags('Nakami Jiru', ['700g pork small intestine', '1.6 litres katsuo and kombu dashi', '10ml usukuchi soy sauce'])).toEqual({
+			gluten: true,
+			soy: true,
+			fish: true
+		});
+	});
+
+	it('still keeps a kombu-only dashi fish-free', () => {
+		const d = deriveDiet(recipe('Kombu Dashi', ['20g kombu', '1 L soft water', '500ml kombu dashi, cold']));
+		expect(d.containsFish).toBe(false);
+		expect(d.vegetarianStrict).toBe(true);
+		expect(d.vegan).toBe(true);
+	});
+
+	it('still lets a kombu dashi stated as the vegetarian route escape the binding read', () => {
+		const d = deriveDiet(recipe('Miso Soup', ['1L dashi (kombu dashi keeps it vegetarian)', '60g miso']));
+		expect(d.containsFish, 'the allergen is still reported').toBe(true);
+		expect(d.vegetarianStrict, 'the stated route still counts').toBe(true);
+	});
+});
+
 describe('a denial is not a declaration', () => {
 	it('does not flag the ingredient a recipe insists it has none of', () => {
 		// Tarta de Santiago is a flourless almond cake and shipped containsGluten,

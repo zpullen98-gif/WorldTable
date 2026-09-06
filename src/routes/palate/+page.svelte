@@ -25,7 +25,7 @@
 	const toggle = (slug: string) => (open = open === slug ? null : slug);
 </script>
 
-<svelte:head><title>The Palate: The World Table</title></svelte:head>
+<svelte:head><title>The Palate · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">

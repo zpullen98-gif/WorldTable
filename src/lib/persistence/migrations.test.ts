@@ -1,7 +1,18 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { migrate, importLegacyCode, readSession, NewerVersionError } from './migrations';
+import {
+	migrate,
+	importLegacyCode,
+	readSession,
+	NewerVersionError,
+	SLUG_RENAMES,
+	renameSlug,
+	remapSessionSlugs,
+	remapDishSlugs
+} from './migrations';
+import { parseImport, FORMAT, FORMAT_VERSION } from './portable';
+import index from '../data/recipes.index.json';
 import {
 	CURRENT_VERSION,
 	mergeSessions,
@@ -23,6 +34,124 @@ describe('migrate', () => {
 
 	it('refuses a future version without destroying it', () => {
 		expect(() => migrate({ schemaVersion: CURRENT_VERSION + 1 })).toThrow(/newer version/);
+	});
+});
+
+/**
+ * The 22 renamed slugs. Commit 5ef6984 moved 22 prerendered pages and walked
+ * the cascade for notes.json, the mark-id ledger, overrides and films, and
+ * scoped bookmarks only. It did not walk the records on people's devices:
+ * menu, notes, stepActuals keys, cookedLog and a menu dish's recipeSlug are
+ * all keyed on the slug, and the live site served the OLD spellings for its
+ * whole life, so every one of those records is keyed on a slug no recipe has.
+ */
+describe('the 22 renamed slugs follow their records', () => {
+	const live = new Set((index as Array<{ slug: string }>).map((r) => r.slug));
+
+	it('maps every old slug to a slug the corpus still has, and none to itself', () => {
+		expect(SLUG_RENAMES.size).toBe(22);
+		for (const [from, to] of SLUG_RENAMES) {
+			expect(live.has(to), `${to} is not a live recipe`).toBe(true);
+			expect(live.has(from), `${from} is still live, so it was not renamed`).toBe(false);
+			expect(from).not.toBe(to);
+		}
+	});
+
+	it('is a no-op on a current slug', () => {
+		expect(renameSlug('cacio-e-pepe')).toBe('cacio-e-pepe');
+		expect(renameSlug('smorrebrod')).toBe('smorrebrod');
+	});
+
+	it('remaps every slug-keyed field of a session, and only those', () => {
+		const out = remapSessionSlugs({
+			menu: ['sm-rrebr-d', 'cacio-e-pepe', 'mant'],
+			notes: { 'c-lb-r': 'more butter', 'cacio-e-pepe': 'less pepper' },
+			stepActuals: { 'bleskiver#2#6': [4, 5], 'cacio-e-pepe#0#4': [9] },
+			cookedLog: [
+				{ slug: 'rugbr-d', at: 100, grade: 'met' },
+				{ slug: 'carbonara', at: 200 }
+			],
+			menuDishes: [
+				{ id: 'd-1', name: 'Open sandwich', section: 'Lunch', description: '', ingredients: [], allergens: [], price: '', ts: 1, recipeSlug: 'sm-rrebr-d' },
+				{ id: 'd-2', name: 'Pasta', section: 'Mains', description: '', ingredients: [], allergens: [], price: '', ts: 1, recipeSlug: 'cacio-e-pepe' }
+			],
+			pantry: ['Garlic']
+		});
+		expect(out.menu).toEqual(['smorrebrod', 'cacio-e-pepe', 'manti']);
+		expect(out.notes).toEqual({ cilbir: 'more butter', 'cacio-e-pepe': 'less pepper' });
+		expect(out.stepActuals).toEqual({ 'aebleskiver#2#6': [4, 5], 'cacio-e-pepe#0#4': [9] });
+		expect(out.cookedLog).toEqual([
+			{ slug: 'rugbrod', at: 100, grade: 'met' },
+			{ slug: 'carbonara', at: 200 }
+		]);
+		expect(out.menuDishes?.map((d) => d.recipeSlug)).toEqual(['smorrebrod', 'cacio-e-pepe']);
+		expect(out.pantry).toEqual(['Garlic']);
+	});
+
+	it('re-keys the shopping ticks and the live run with the menu they hash', () => {
+		const out = remapSessionSlugs({
+			menu: ['sm-rrebr-d', 'cacio-e-pepe'],
+			shoppingChecks: { 'cacio-e-pepe|sm-rrebr-d': ['Produce:0'] },
+			planRun: { menuHash: 'cacio-e-pepe|sm-rrebr-d', serviceTime: '19:00', startedAt: 1, ticks: { 'sm-rrebr-d-2': 5 } }
+		});
+		expect(out.shoppingChecks).toEqual({ 'cacio-e-pepe|smorrebrod': ['Produce:0'] });
+		expect(out.planRun?.menuHash).toBe('cacio-e-pepe|smorrebrod');
+		expect(out.planRun?.ticks).toEqual({ 'smorrebrod-2': 5 });
+	});
+
+	it('merges rather than drops when both spellings hold a record', () => {
+		const out = remapSessionSlugs({
+			menu: ['mant', 'manti'],
+			notes: { mant: 'old note', manti: 'new note' },
+			stepActuals: { 'mant#1#5': [3], 'manti#1#5': [4] }
+		});
+		expect(out.menu).toEqual(['manti']);
+		expect(out.notes?.manti).toContain('old note');
+		expect(out.notes?.manti).toContain('new note');
+		expect(out.stepActuals?.['manti#1#5']?.sort()).toEqual([3, 4]);
+	});
+
+	it('is idempotent, so running on every load costs nothing', () => {
+		const once = remapSessionSlugs({ menu: ['sm-rrebr-d'], notes: { mant: 'x' }, cookedLog: [{ slug: 'c-lb-r', at: 1 }] });
+		expect(remapSessionSlugs(once)).toEqual(once);
+	});
+
+	it('leaves a field of the wrong shape exactly as it was', () => {
+		const out = remapSessionSlugs({ menu: 'sm-rrebr-d', notes: 'ab' } as never);
+		expect((out as { menu: unknown }).menu).toBe('sm-rrebr-d');
+		expect((out as { notes: unknown }).notes).toBe('ab');
+	});
+
+	it('runs on load, whatever version the record is', () => {
+		const v0 = migrate({ menu: ['sm-rrebr-d'], cookedLog: [{ slug: 'bleskiver', at: 1 }] });
+		expect(v0.menu).toEqual(['smorrebrod']);
+		expect(v0.cookedLog[0].slug).toBe('aebleskiver');
+		const current = readSession({ schemaVersion: CURRENT_VERSION, notes: { 'f-st-kl-baklava': 'no honey' } });
+		expect(current.state.notes).toEqual({ 'fistikli-baklava': 'no honey' });
+	});
+
+	it('runs inside the .wtjson import path, because exports from the live site carry old slugs', () => {
+		const file = JSON.stringify({
+			format: FORMAT,
+			version: FORMAT_VERSION,
+			exportedAt: '2026-08-31T00:00:00.000Z',
+			app: { version: '2.0.0', recipeCount: 1710 },
+			data: {
+				...structuredClone(EMPTY_SESSION),
+				menu: ['sm-rrebr-d'],
+				notes: { mant: 'fold tighter' },
+				menuDishes: [{ id: 'd-1', name: 'Open sandwich', section: 'Lunch', description: '', ingredients: [], allergens: [], price: '', ts: 1, recipeSlug: 'sm-rrebr-d' }]
+			}
+		});
+		const parsed = parseImport(file);
+		expect(parsed.data.menu).toEqual(['smorrebrod']);
+		expect(parsed.data.notes).toEqual({ manti: 'fold tighter' });
+		expect(parsed.data.menuDishes[0].recipeSlug).toBe('smorrebrod');
+	});
+
+	it('remaps a house dish pointer and leaves a dish with none alone', () => {
+		const out = remapDishSlugs([{ recipeSlug: 'rullep-lse' }, { recipeSlug: 'carbonara' }, {}]);
+		expect(out.map((d) => d.recipeSlug)).toEqual(['rullepolse', 'carbonara', undefined]);
 	});
 });
 

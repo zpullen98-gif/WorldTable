@@ -134,9 +134,22 @@
 <svelte:window onkeydown={onKeydown} />
 
 <svelte:head>
-	<title>The World Table: Interactive Culinary Field Guide</title>
-	<link rel="manifest" href={__MANIFEST_HREF__} />
+	<!-- The base title, product-suffixed: every wing of Outside Of Time ends
+	     its document title the same way, and each page below replaces it with
+	     '<Page> · The World Table'. -->
+	<title>The World Table · Outside Of Time</title>
+	<!--
+		The manifest is the PRODUCT'S, at the origin root, linked only when the
+		build was told where it is (build:pages sets MANIFEST_HREF for the /table
+		wing). This repo ships no manifest of its own any more: one product, one
+		manifest, one install. An empty href renders no link rather than a 404
+		on every page of a standalone build.
+	-->
+	{#if __MANIFEST_HREF__}
+		<link rel="manifest" href={__MANIFEST_HREF__} />
+	{/if}
 	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<meta name="apple-mobile-web-app-title" content={__APP_NAME__} />
 	<meta
 		name="description"
@@ -240,6 +253,22 @@
 <footer>
 	<div class="shell">
 		The World Table · {TOTALS.recipes} recipes · {TOTALS.chapters} chapters · Chef’s Lexicon: {TOTALS.lexicon} terms
+		<!--
+			The product's Privacy and Terms pages live at the ORIGIN ROOT of Outside
+			Of Time, above this wing's base, so the links are root-absolute on
+			purpose and only rendered when there is a base to be above: the
+			standalone build, served from its own root, has no such pages to link.
+
+			rel="external" is load-bearing twice over. The prerender crawler skips
+			an external link, and without that it fails the build on any href that
+			does not begin with base (the same rule the manifest link needed an
+			exception for in vite.config.ts). And the client router treats it as a
+			full navigation rather than a route of this app, which /privacy.html is
+			not.
+		-->
+		{#if base}
+			<span class="legal">· <a href="/privacy.html" rel="external">Privacy</a> · <a href="/terms.html" rel="external">Terms</a></span>
+		{/if}
 	</div>
 </footer>
 

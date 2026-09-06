@@ -1,4 +1,16 @@
 /**
+ * ORIGINAL WORK.
+ *
+ * Every recipe in this file is company-authored, written for The World Table
+ * in this repository with AI assistance, between 31 August and 1 September
+ * 2026: eight commits, 635c04b through 2f3f583, all by the repository's one
+ * author. None of it is lifted from the archived original at
+ * reference/world-table-v1.html, which stays sealed and byte-gated. Each
+ * entry is build-gated the same way the originals are: the contract below,
+ * the diet cross-check, the technique tagging and the search index all run
+ * over it in tools/build-data.mjs, and a recipe that fails a gate fails the
+ * build rather than shipping.
+ *
  * recipes-supplement.mjs: recipes authored AFTER the original guide.
  *
  * WHY THIS FILE EXISTS, and why new recipes do not go in raw/R.json.
@@ -1283,11 +1295,11 @@ export const RECIPE_SUPPLEMENT = [
 		m: [
 			'Stir the salt into the water until it dissolves, pour it over the diced vegetables and chilli, and weight them under. Leave 12 hours at room temperature.',
 			'Drain and rinse well, then taste one: it should read seasoned, not salty. Spread on a cloth and pat dry.',
-			'Toss the vegetables with the vinegar and leave 30 minutes, then drain that off and discard it.',
-			'Fold through the olives, oregano, garlic, chilli flakes, celery seed and pepper, pack into jars, and pour over both oils to cover by 1 cm.',
-			'Refrigerate 48 hours before serving, and stand the jar out 20 minutes first so the olive oil clears from cloudy to loose.',
+			'Toss the vegetables with the vinegar and leave 30 minutes. Keep the vinegar: it goes into the jar with them.',
+			'Fold through the olives, oregano, garlic, chilli flakes, celery seed and pepper, pack into jars with the vinegar, and pour over both oils to cover by 1 cm.',
+			'Refrigerate 48 hours before serving, and stand the jar out 20 minutes first so the olive oil clears from cloudy to loose. Refrigerate, and use within 4 days.',
 		],
-		p: 'Two stages, and skipping the first is what ruins it. Twelve hours in 6 percent brine draws free water out osmotically; pack the vegetables wet instead and that water bleeds into the oil, thins the acid and sours the jar inside a week. The vinegar toss acidifies the surfaces. Garlic under oil is a botulism risk at room temperature, so this lives in the fridge and is eaten within a month.'
+		p: 'Two stages, and skipping the first is what ruins it. Twelve hours in 6 percent brine draws free water out osmotically; pack the vegetables wet instead and that water bleeds into the oil, thins the acid and sours the jar inside a week. The vinegar stays in the jar because it is the only acid the pack has, and raw garlic under oil with no acid is the textbook botulism vector; the fridge slows the organism but does not stop it, which is why the keep-by is four days and not a month.'
 	},
 	{
 		n: 'Half-Sour Dills in Salt Brine',
@@ -2911,7 +2923,7 @@ export const RECIPE_SUPPLEMENT = [
 		m: [
 			'Bring the soys, water, rock sugar, wine, ginger, spring onion and whole spices to a boil in a pot just wide enough to hold the bird, then drop the heat until only a bubble or two breaks the surface every few seconds, around 85C (185F).',
 			'Lower the chicken in breast down, holding the legs so the cavity floods, and lift it clear twice in the first two minutes so the cold cavity liquid drains and is replaced: the brine must never climb back to a rolling boil.',
-			'Poach 25 minutes for a 1.4 kg bird, then kill the heat and leave it covered in the brine off the stove for 20 minutes, until the thickest part of the thigh reads 72C (162F) and runs clear amber juice when pierced.',
+			'Poach 25 minutes for a 1.4 kg bird, then kill the heat and leave it covered in the brine off the stove for 20 minutes, until the thickest part of the thigh reads 74C (165F) and runs clear amber juice when pierced.',
 			'Lift the bird into iced water for 3 minutes, until the skin tightens and squeaks under a finger, then hang it to drip for 10 minutes.',
 			'Chop through the bone into 2 cm strips, rebuild the bird on the plate, brush with sesame oil and spoon over 100 ml of the hot brine.',
 		],

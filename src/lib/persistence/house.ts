@@ -27,6 +27,7 @@ export { localDay, weekStartOf, recentWeeks, normaliseCosting, mergeCostings, CL
 import type { CostLine } from '../costing';
 import { mergeItems, type Item } from '../items';
 import { mergeWaste, type WasteEntry } from '../waste';
+import { remapDishSlugs } from './migrations';
 
 export const HOUSE_KEY = 'house';
 export const HOUSE_VERSION = 1;
@@ -142,6 +143,17 @@ export interface HouseRecord {
 	absorbed: string[];
 	lastWrite: number;
 	lastEditedBy?: string;
+	/**
+	 * When this record was last written out as a .wtjson, ms epoch.
+	 *
+	 * The record lives in IndexedDB, which is best-effort storage: Safari
+	 * deletes it for a site not added to the home screen after seven days
+	 * without a visit, and Chromium may evict it under pressure. The manual
+	 * export is the only backup, so the app has to be able to say how stale
+	 * that backup is. Stamped by the store's markExported(), never by a write,
+	 * and never carried by an export: it is a fact about this device.
+	 */
+	lastExportAt?: number;
 }
 
 export const EMPTY_HOUSE: HouseRecord = {
@@ -156,6 +168,31 @@ export const EMPTY_HOUSE: HouseRecord = {
 	absorbed: [],
 	lastWrite: 0
 };
+
+export const DAY_MS = 24 * 60 * 60 * 1000;
+
+/**
+ * Whether the house record has changed since it was last exported, and how
+ * long ago that was.
+ *
+ * `null` means nothing to say: the record is empty, or the last export is at
+ * least as new as the last write. Otherwise `days` is how many whole days
+ * since the last export, or `null` when there has never been one. Pure, so a
+ * page can render the sentence and a test can pin it; the store exposes it as
+ * `house.exportNudge`.
+ *
+ * `lastWrite` is what #persist() stamps on every genuine write, and
+ * markExported() deliberately does not restamp it, so the comparison holds.
+ */
+export function exportNudge(
+	house: Pick<HouseRecord, 'lastWrite' | 'lastExportAt'>,
+	now: number = Date.now()
+): { days: number | null } | null {
+	if (!house.lastWrite) return null;
+	const at = house.lastExportAt;
+	if (typeof at === 'number' && at >= house.lastWrite) return null;
+	return { days: typeof at === 'number' ? Math.max(0, Math.floor((now - at) / DAY_MS)) : null };
+}
 
 /**
  * What to do with whatever was on disk under the `house` key.
@@ -187,7 +224,13 @@ export function readHouse(raw: unknown): { record: HouseRecord; blocked: boolean
 	// A record with no version at all predates the field: readable, and the
 	// spread below fills in whatever it lacks.
 	if (typeof v === 'number' && v > HOUSE_VERSION) return { record: empty, blocked: true };
-	return { record: { ...empty, ...(raw as HouseRecord) }, blocked: false };
+	const record = { ...empty, ...(raw as HouseRecord) };
+	// A dish's pointer into the guide follows the 22 renamed slugs, on every
+	// read, for the reason migrations.ts gives: nothing on disk is rewritten
+	// until the next genuine write, and a stale pointer is a dish cook mode
+	// cannot open.
+	if (Array.isArray(record.dishes)) record.dishes = remapDishSlugs(record.dishes);
+	return { record, blocked: false };
 }
 
 /**

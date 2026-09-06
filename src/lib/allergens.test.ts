@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
 import { CHECKED, CHECKED_FLAGS, NOT_SCREENED, NOT_ALLERGENS } from './allergens';
 import indexJson from './data/recipes.index.json';
 
@@ -127,5 +128,49 @@ describe('"Reviewed by hand" means a human ruled on a screened allergen', () => 
 				'reviewed'
 			);
 		}
+	});
+});
+
+/**
+ * The derived screen says what it is, on every page it appears on.
+ *
+ * 1,838 of 1,844 recipes carry a keyword-derived screen; six were read by a
+ * person. A list headed "Found" over "Screened for" reads as a ruling either
+ * way, so the derived ones carry one sentence saying nobody ruled. There is
+ * no component renderer in the unit suite (runes modules are not reachable
+ * from vitest, see CLAUDE.md), so this holds the SOURCE to its shape: the
+ * sentence sits in the `{:else}` of the confidence branch, the reviewed line
+ * in its `{#if}`, and neither can be dropped or swapped without failing here.
+ */
+describe('the derived screen says it was not reviewed', () => {
+	const src = readFileSync('src/lib/components/RecipeDetailView.svelte', 'utf8');
+	const SENTENCE =
+		'Screened by keyword from the ingredient list, not reviewed by a person; check every label for what the list cannot show.';
+
+	it('renders the sentence only on derived recipes, and "Reviewed by hand" only on the rest', () => {
+		const at = src.indexOf("{#if r.diet.confidence !== 'derived'}");
+		expect(at, 'the confidence branch is gone from the allergen block').toBeGreaterThan(-1);
+		const block = src.slice(at, src.indexOf('{/if}', at));
+		const [ifHalf, elseHalf] = block.split('{:else}');
+		expect(elseHalf, 'the derived branch has no {:else}').toBeDefined();
+		expect(ifHalf).toContain('Reviewed by hand');
+		expect(ifHalf).not.toContain('Screened by keyword');
+		// Whitespace-folded: the template wraps the sentence across lines.
+		expect(elseHalf.replace(/\s+/g, ' ')).toContain(SENTENCE);
+		expect(elseHalf).not.toContain('Reviewed by hand');
+	});
+
+	it('the sentence keeps the house voice: no em dash, no double hyphen', () => {
+		expect(SENTENCE).not.toMatch(/—| -- /);
+	});
+
+	it('the corpus is overwhelmingly derived, so the sentence is the common case', () => {
+		const derived = recipes.filter((r) => r.diet.confidence === 'derived').length;
+		const reviewed = recipes.length - derived;
+		expect(derived + reviewed).toBe(recipes.length);
+		expect(derived, 'fewer than 99% derived: has the screen been re-reviewed?').toBeGreaterThan(
+			recipes.length * 0.99
+		);
+		expect(reviewed, 'no reviewed recipe left: pimento-cheese and kitsune-udon were').toBeGreaterThan(0);
 	});
 });

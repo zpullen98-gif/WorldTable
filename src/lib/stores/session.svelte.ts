@@ -28,6 +28,7 @@ import {
 	type PlanRun
 } from '../persistence/state';
 import { cookedSlugs, type CookEntry, type Grade } from '../repertoire';
+import { markStudied } from '../oot-studied';
 
 class SessionStore {
 	#s = $state<SessionState>(structuredClone(EMPTY_SESSION));
@@ -431,6 +432,8 @@ class SessionStore {
 		if (off?.length) entry.off = [...off];
 		this.#s.cookedLog = [...this.#s.cookedLog, entry];
 		this.#persistNow();
+		// A dish cooked is a day studied, product-wide (lib/oot-studied.ts).
+		markStudied();
 	}
 
 	/**

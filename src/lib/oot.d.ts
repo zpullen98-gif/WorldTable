@@ -62,12 +62,33 @@ interface OotProfiles {
 	switch(id: string): boolean;
 }
 
+/**
+ * shared/oot-home.js: the two members HomeBands.svelte renders and binds.
+ * Everything else on OOT.home (section, todayCard, streak, readiness,
+ * firstPath) is unused here and deliberately undeclared.
+ */
+interface OotHome {
+	/** The "Studying" row as an HTML string; '' when there is no roster layer. */
+	who(opts?: { streak?: boolean }): string;
+	/** Delegated click handling for the row, bound ONCE per root. A switch
+	 *  reloads the page; an add calls `rerender`. */
+	bindWho(root: Element, rerender?: () => void): void;
+}
+
+/** shared/oot-pass.js: the manager strip and its click binding. */
+interface OotPass {
+	/** '' unless this device has the manager view turned on. */
+	strip(): string;
+	bind(root: Element, onOpen?: () => void): void;
+}
+
 interface Window {
 	OOT?: {
 		profiles?: OotProfiles;
+		home?: OotHome;
 		log?: unknown;
 		gate?: unknown;
-		pass?: unknown;
+		pass?: OotPass;
 		auth?: unknown;
 	};
 }

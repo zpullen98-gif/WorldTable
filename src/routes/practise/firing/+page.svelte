@@ -3,6 +3,7 @@
 	import { session } from '$lib/stores/session.svelte';
 	import { recipes } from '$lib/data';
 	import { buildPass } from '$lib/pass';
+	import { markStudied } from '$lib/oot-studied';
 	import {
 		firingQuestions,
 		canDrill,
@@ -119,6 +120,8 @@
 			// One slug for the whole drill, like the calibration bench's ladder
 			// slugs: the drill log is the cook's own record, read by no one else.
 			session.markDrilled('drill-firing-order', grade as 'met' | 'close' | 'missed');
+			// A finished drill is a day studied, product-wide (lib/oot-studied.ts).
+			markStudied();
 			run = null;
 			return;
 		}
@@ -130,7 +133,7 @@
 	const q = $derived(run ? run.questions[run.at] : null);
 </script>
 
-<svelte:head><title>The Firing Drill | The World Table</title></svelte:head>
+<svelte:head><title>The Firing Drill · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">

@@ -13,6 +13,9 @@
 	const particulars = $derived(
 		data.techniques.filter((t) => !t.anchored).sort((a, b) => b.count - a.count)
 	);
+
+	/** "1 dish", "3 dishes": the index printed "1 dishes · 1 chapters" on four tiles. */
+	const count = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
 </script>
 
 <svelte:head><title>The Techniques · The World Table</title></svelte:head>
@@ -40,7 +43,7 @@
 			<li>
 				<a class="tile" href="{base}/technique/{t.slug}">
 					<h3>{t.label}</h3>
-					<p class="meta">{t.count} dishes · {t.chapters} chapters</p>
+					<p class="meta">{count(t.count, 'dish', 'dishes')} · {count(t.chapters, 'chapter', 'chapters')}</p>
 					{#if t.lexiconTerm}<p class="anchor">{t.lexiconTerm}</p>{/if}
 				</a>
 			</li>
@@ -57,7 +60,7 @@
 			<li>
 				<a class="tile" href="{base}/technique/{t.slug}">
 					<h3>{t.label}</h3>
-					<p class="meta">{t.count} dishes · {t.chapters} chapters</p>
+					<p class="meta">{count(t.count, 'dish', 'dishes')} · {count(t.chapters, 'chapter', 'chapters')}</p>
 				</a>
 			</li>
 		{/each}

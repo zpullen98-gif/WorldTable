@@ -36,7 +36,7 @@
 	});
 </script>
 
-<svelte:head><title>Practise: The World Table</title></svelte:head>
+<svelte:head><title>Practise · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -91,8 +91,8 @@
 				<h2>Calibrate your palate</h2>
 				<p>
 					Three cups, two the same, and the app holds the answer. Six ladders that narrow until
-					you cannot tell them apart -- which is the number worth knowing, and the one thing you
-					cannot test alone.
+					you cannot tell them apart. That threshold is the number worth knowing, and the one
+					thing you cannot test alone.
 				</p>
 			</a>
 		</li>

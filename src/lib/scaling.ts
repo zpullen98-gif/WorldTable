@@ -57,16 +57,27 @@ export function scaleLine(s: string, x: number): string {
 		if (off > 0 && str[off - 1] === '/') return m;
 		// Temperatures and times are not quantities of anything. Days and weeks
 		// belong here as much as minutes: doubling a batch does not double a
-		// ferment, and "marinated 3 TO 5 DAYS" was becoming 6 to 10.
+		// ferment, and "marinated 3 TO 5 DAYS" was becoming 6 to 10. A
+		// percentage is a ratio whichever way it is spelled: "0.25 percent of
+		// the meat" is the cure rate at any batch size, and it was doubling to
+		// "½ percent" beside a doubled gram figure that was already right.
 		if (
 			// The range separator may be a dash OR the word "to": the corpus writes
 			// "marinated 3 TO 5 DAYS", and a dash-only guard let the 3 double.
-			/^\s*(?:(?:[–-]|\bto\b)\s*\d+(?:[.]\d+)?\s*)?(?:°|%|C\b|F\b|min\b|minutes?\b|hours?\b|h\b|sec|days?\b|weeks?\b|months?\b)/i.test(
+			/^\s*(?:(?:[–-]|\bto\b)\s*\d+(?:[.]\d+)?\s*)?(?:°|%|percent\b|per cent\b|C\b|F\b|min\b|minutes?\b|hours?\b|h\b|sec|days?\b|weeks?\b|months?\b)/i.test(
 				rest
 			)
 		)
 			return m;
 		if (/^\/\d/.test(rest)) return m;
+
+		// A NAME, not a count. "curing salt number 1" is Prague powder #1, the
+		// nitrite cure; doubling the batch printed "curing salt number 2", which
+		// is the nitrate cure for a months-long dry cure and the wrong salt for a
+		// sausage smoked tomorrow. Same for "no. 1", "#1" and a scale "reading
+		// to 0.01 g", which is the instrument's resolution and not an amount.
+		const before = str.slice(0, off);
+		if (/(?:\bnumber|\bno\.?|#|\bnr\.?|\breading to)\s*$/i.test(before)) return m;
 
 		// A pan is a pan whatever the batch size. Catches both halves of a pair,
 		// because the first number sees the "x33cm" that follows it:
@@ -132,6 +143,31 @@ export function convertLine(s: string, units: 'metric' | 'us'): string {
 				/(-?\d+(?:\.\d+)?)\s*°?C\s*\(\s*(-?\d+(?:\.\d+)?)\s*°?F\s*\)/g,
 				(_m, _c, f) => `${f}°F`
 			)
+			/**
+			 * The same rule for a RANGE the author paired: "24-26C (75-79F)",
+			 * "Fry at 170C to 180C (340F to 355F)", "22 to 26C (72 to 79F)". The
+			 * single rule above cannot see these, and the range rule below then
+			 * converted the Celsius half and left the author's bracket standing,
+			 * so a US cook read "338°F to 356°F (340F to 355F)": two Fahrenheit
+			 * figures a degree or two apart with nothing to say which was the
+			 * author's. 53 lines in 52 recipes. The author's figures win, and the
+			 * unit is written the way the author wrote it: on both ends when they
+			 * did ("340°F to 355°F"), on the high end when they did not ("75-79°F").
+			 * The range word may also be "and", on either side of the bracket:
+			 * "hold between 55C and 65C (131F and 149F)", "between 60C and 70C
+			 * (140F-158F)". Where the author's sentence joins with a word and the
+			 * bracket with a dash, the word stays, so "between" keeps its "and".
+			 */
+			.replace(
+				new RegExp(
+					`(-?\\d+(?:\\.\\d+)?)\\s*°?C?\\s*(-|–|—|\\s+to\\s+|\\s+and\\s+)\\s*(-?\\d+(?:\\.\\d+)?)\\s*°?C\\s*\\(\\s*(-?\\d+(?:\\.\\d+)?)\\s*(°?F)?\\s*(-|–|—|\\s+to\\s+|\\s+and\\s+)\\s*(-?\\d+(?:\\.\\d+)?)\\s*°?F\\s*\\)`,
+					'g'
+				),
+				(_m, _a, sep, _b, fa, faUnit, fsep, fb) => {
+					const join = /[a-z]/i.test(sep) ? sep : fsep;
+					return faUnit ? `${fa}°F${join}${fb}°F` : `${fa}${join}${fb}°F`;
+				}
+			)
 			/* Ranges before singles, for every unit that has them. */
 			.replace(new RegExp(`${RANGE}\\s*kg\\b`, 'gi'), (_m, a, sep, b) =>
 				`${Math.round(a * 2.205 * 10) / 10}${sep}${Math.round(b * 2.205 * 10) / 10} lb`
@@ -156,7 +192,12 @@ export function convertLine(s: string, units: 'metric' | 'us'): string {
 			.replace(/(\d+(?:\.\d+)?)\s*ml\b/gi, (m, v) =>
 				v < 15 ? m : `${Math.round((v / 29.57) * 10) / 10} fl oz`
 			)
-			.replace(/(\d+(?:\.\d+)?)\s*L\b/g, (_m, v) => `${Math.round(v * 1.057 * 10) / 10} qt`)
+			/* The word as well as the letter. The corpus writes "6 litres cold
+			   water" on 193 lines in 166 recipes, and every one of them stayed in
+			   litres beside a "120ml" that had become "4.1 fl oz". Same quart
+			   factor; the letter stays case-sensitive because a bare lowercase l
+			   is not a unit anyone writes. */
+			.replace(/(\d+(?:\.\d+)?)\s*(?:L|[Ll]it(?:re|er)s?)\b/g, (_m, v) => `${Math.round(v * 1.057 * 10) / 10} qt`)
 			/* The original emitted a bare "F" here, losing the degree sign it had
 			   just consumed from "°C". Restored: 180°C should read 356°F.
 

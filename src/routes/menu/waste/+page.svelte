@@ -187,7 +187,7 @@
 	const valueOf = (w: WasteEntry) => entryValue(w);
 </script>
 
-<svelte:head><title>The Waste Log | The World Table</title></svelte:head>
+<svelte:head><title>The Waste Log · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">

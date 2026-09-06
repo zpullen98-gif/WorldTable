@@ -44,6 +44,7 @@
 	} from '$lib/items';
 	import { costingCsv, csvFilename } from '$lib/costing-csv';
 	import { weekStartOf } from '$lib/persistence/house';
+	import ExportNudge from '$lib/components/ExportNudge.svelte';
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
@@ -505,7 +506,7 @@
 	const costed = $derived(dishes.filter((d) => linesFor(d.id).length > 0));
 </script>
 
-<svelte:head><title>The Costing Sheet: The World Table</title></svelte:head>
+<svelte:head><title>The Costing Sheet · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
@@ -516,6 +517,10 @@
 			the menu. Your numbers stay on this device.
 		</p>
 	</header>
+
+	<!-- Outside the sheet on purpose: it is about the record, not the costing,
+	     and it must stay readable where the sheet is masked. -->
+	<ExportNudge />
 
 	<article class="sheet">
 		<!--

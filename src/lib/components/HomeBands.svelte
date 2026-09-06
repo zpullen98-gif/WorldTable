@@ -19,6 +19,50 @@
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
 	import { repertoire, dueList, sinceLabel } from '$lib/repertoire';
+	import { onMount } from 'svelte';
+
+	/* ---- who is studying ---------------------------------------------------
+	 *
+	 * The profile row (Add your name) and, on a manager's device, The Pass
+	 * strip, at the top of Today: the same two pieces of shared HTML, in the
+	 * same order, that light/js/oot-light.js puts at the top of First Light's
+	 * Today. Both are rendered by shared/oot-home.js and shared/oot-pass.js
+	 * from the roster and bound ONCE on the band's container, which survives
+	 * every rerender of the row inside it. Switching a name reloads the page
+	 * (the shared layer's rule, see bindWho); adding one rerenders the row
+	 * through the callback. The session itself follows the roster through
+	 * profiles.onChange in +layout.svelte, not here.
+	 *
+	 * Standalone there is no window.OOT and the row is an empty string. Every
+	 * call is guarded because a hardened browser can throw on the window
+	 * access itself, and the home page must paint either way.
+	 */
+	let bandHost = $state<HTMLDivElement | null>(null);
+	let whoHtml = $state('');
+
+	function paintWho() {
+		let html = '';
+		try {
+			const oot = typeof window !== 'undefined' ? window.OOT : undefined;
+			if (oot?.pass?.strip) html += oot.pass.strip();
+			if (oot?.home?.who) html += oot.home.who();
+		} catch {
+			html = '';
+		}
+		whoHtml = html;
+	}
+
+	onMount(() => {
+		paintWho();
+		try {
+			const oot = window.OOT;
+			if (!oot || !bandHost) return;
+			if (oot.home?.bindWho) oot.home.bindWho(bandHost, paintWho);
+			if (oot.pass?.bind) oot.pass.bind(bandHost, () => {});
+		} catch {
+			/* the row is decoration on the band, never a reason to fail it */
+		}
+	});
 
 	interface Props {
 		/** The course's dish slugs, in teaching order, from study.json. */
@@ -91,11 +135,16 @@
 	});
 </script>
 
-<div class="oot-band-host">
+<div class="oot-band-host" bind:this={bandHost}>
 	<section class="oot-sec">
 		<div class="oot-sec-head">
 			<h2>Today</h2><span>One dish, cooked properly, beats ten read about</span>
 		</div>
+		{#if whoHtml}
+			<!-- Shared-layer HTML from oot-pass.js and oot-home.js: the roster is
+			     escaped there (esc), and standalone this string is empty. -->
+			<div class="whorow">{@html whoHtml}</div>
+		{/if}
 		{#if !role}
 			<!-- The induction seed. The World Table has never asked who is using it,
 			     and the three audiences want different first sentences: a server is
@@ -302,7 +351,9 @@
 				{courseDone} of {curriculumTotal} on the course · {cooked} dish{cooked === 1 ? '' : 'es'}
 				cooked in all · {menuCount} pinned · {dishes} on the house menu.
 			{/if}
-			Everything is kept in this browser; export it from My Menu.
+			Everything is kept in this browser{house.storagePersisted === false
+				? ', which has not promised to keep it'
+				: ''}; export it from My Menu.
 		</div>
 		<div class="oot-today-sub" style="margin-top:6px">
 			<a href="{base}/repertoire">The Repertoire</a>, every dish you have cooked, how long ago, and
@@ -326,6 +377,11 @@
 </div>
 
 <style>
+	/* The row's own looks come from shared/oot-home.css (.oot-who, .oot-pass);
+	   this only keeps it off the Today card below it. */
+	.whorow {
+		margin-bottom: 12px;
+	}
 	.oot-band-host {
 		max-width: 1200px;
 		margin: 0 auto;

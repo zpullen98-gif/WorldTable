@@ -16,10 +16,10 @@
 /** @param {string} q */
 const YT = (q) => `https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`;
 
-const KENJI = {
-	n: 'J. Kenji López-Alt',
-	w: 'the science-first American kitchen, one take, no cuts'
-};
+/* The name only. The blurb the original carried beside it was promotional
+   copy about a living person and no longer reaches the page; see the teacher
+   link below. */
+const KENJI = { n: 'J. Kenji López-Alt' };
 
 /**
  * Technique labels a recipe demonstrates, from the TECH keyword table.
@@ -309,8 +309,17 @@ export function deriveFilms(r, text, { TEACHERS, DISH_FILMS, TECH }, isAmerican 
 	}));
 
 	const T = TEACHERS[r.c] || (isAmerican(r.c) ? KENJI : null);
+	/* The label says what the link IS: a YouTube search for a named teacher and
+	   this dish. It used to read "Study with <name>" over a promotional blurb
+	   from the sealed TEACHERS table, which reads as that person endorsing or
+	   appearing in the product; they have agreed to neither, and the link is an
+	   ordinary search. The sub line is descriptive fact for the same reason. */
 	const teacher = T
-		? { label: `Study with ${T.n}`, url: YT(`${T.n} ${r.n}`), sub: T.w }
+		? {
+				label: `Search YouTube: ${T.n} on ${r.n}`,
+				url: YT(`${T.n} ${r.n}`),
+				sub: `A YouTube search for ${T.n} and this dish. No affiliation.`
+			}
 		: {
 				label: 'The cuisine, deeper',
 				url: YT(`${r.c} cooking techniques`),
