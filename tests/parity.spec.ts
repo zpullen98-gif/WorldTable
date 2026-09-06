@@ -29,9 +29,25 @@ const ourPairings = JSON.parse(
 	readFileSync(join(ROOT, 'src', 'lib', 'data', 'pairings.json'), 'utf8')
 );
 const overridesPath = join(ROOT, 'src', 'lib', 'data', 'overrides.json');
-const overridden = new Set(
-	Object.keys(existsSync(overridesPath) ? JSON.parse(readFileSync(overridesPath, 'utf8')).recipes ?? {} : {})
-);
+const overrideRecipes: Record<string, { ingredients?: Record<string, string>; steps?: Record<string, string> }> =
+	existsSync(overridesPath) ? (JSON.parse(readFileSync(overridesPath, 'utf8')).recipes ?? {}) : {};
+const overridden = new Set(Object.keys(overrideRecipes));
+
+/**
+ * The line door: an override may replace one exact ingredient or step line of
+ * the sealed original, keyed by the original's own text (tools/build-data.mjs).
+ * It exists because the archive is sealed and a line can still be WRONG in a
+ * way a kitchen cannot absorb: the first user is a cure that dosed nitrite at
+ * about twice the ceiling every other cure in the book states in grams.
+ *
+ * Authored parity is still byte-for-byte everywhere else. A dish may diverge on
+ * the field its override actually names, and on no other. Checked BOTH ways, the
+ * same doctrine as COST_RULINGS below: a dish that diverges without an override
+ * fails, and an override that no longer produces a divergence is stale and fails
+ * too, so a raw change that quietly absorbs the correction cannot pass unnoticed.
+ */
+const lineOverride = (slug: string, field: 'ingredients' | 'steps') =>
+	Object.keys(overrideRecipes[slug]?.[field] ?? {}).length > 0;
 const notesPath = join(ROOT, 'src', 'lib', 'data', 'notes.json');
 const backfilled = new Set(
 	existsSync(notesPath) ? Object.keys(JSON.parse(readFileSync(notesPath, 'utf8'))) : []
@@ -365,6 +381,7 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 	const derivedDiffs: string[] = [];
 	const usedRulings = new Set<string>();
 	const usedPairingRulings = new Set<string>();
+	const usedLineOverrides = new Set<string>();
 
 	for (let i = 0; i < 970; i++) {
 		const old = legacy[i];
@@ -383,9 +400,15 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 		const ourIng = full.ingredients.map((e: { kind: string; label?: string; text?: string }) =>
 			e.kind === 'section' ? e.label : e.text
 		);
-		if (prose(ourIng) !== prose(old.i)) authoredDiffs.push(`#${i} ingredients (${old.n})`);
-		if (prose(full.steps.map((s: { text: string }) => s.text)) !== prose(old.m))
+		const ingDiffers = prose(ourIng) !== prose(old.i);
+		if (ingDiffers && !lineOverride(idx.slug, 'ingredients'))
+			authoredDiffs.push(`#${i} ingredients (${old.n})`);
+		if (ingDiffers) usedLineOverrides.add(`${idx.slug}:ingredients`);
+
+		const stepsDiffer = prose(full.steps.map((s: { text: string }) => s.text)) !== prose(old.m);
+		if (stepsDiffer && !lineOverride(idx.slug, 'steps'))
 			authoredDiffs.push(`#${i} steps (${old.n})`);
+		if (stepsDiffer) usedLineOverrides.add(`${idx.slug}:steps`);
 		if (prose(full.note) !== prose(old.p) && !backfilled.has(idx.slug))
 			authoredDiffs.push(`#${i} note (${old.n})`);
 
@@ -470,5 +493,18 @@ test('the original, executing itself, agrees with our build output', async ({ pa
 	expect(
 		PAIRING_RULINGS.map(([slug]) => slug).filter((slug) => !usedPairingRulings.has(slug)),
 		'a PAIRING_RULINGS row that never fired is stale: delete it or find out why it stopped applying'
+	).toEqual([]);
+
+	/* The same in the other direction for the line door: an override that no
+	   longer changes the line it names has either been absorbed into raw or
+	   stopped matching, and either way nobody is checking it any more. */
+	const declaredLineOverrides = Object.entries(overrideRecipes).flatMap(([slug, ov]) =>
+		(['ingredients', 'steps'] as const)
+			.filter((field) => Object.keys(ov?.[field] ?? {}).length > 0)
+			.map((field) => `${slug}:${field}`)
+	);
+	expect(
+		declaredLineOverrides.filter((key) => !usedLineOverrides.has(key)),
+		'a line override that no longer changes its recipe is stale: delete it or find out why it stopped applying'
 	).toEqual([]);
 });
