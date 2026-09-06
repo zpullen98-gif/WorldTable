@@ -147,18 +147,21 @@ for (const [route, title] of [
  * so the tab that claimed the page was the one place that never linked to it,
  * and the page's own exit went to Practise instead.
  *
- * Ungated on the Service hub is safe: the page narrows the roster to your own
- * record before reading anything, and says so.
+ * Ungated on the Service hub is safe: there is one record per device now, so
+ * the board is simply this device's own stations. It used to carry a line
+ * saying the device was not a manager's, which was true then and would be
+ * said to everybody now.
  */
-test('the coverage board can be reached and left without being a manager', async ({ page }) => {
+test('the coverage board can be reached and left', async ({ page }) => {
 	await goto(page, '/service');
 	const link = page.locator('a[href$="/coverage"]');
 	await expect(link, 'Service must offer the coverage board').toHaveCount(1);
 
 	await link.click();
 	await expect(page.locator('h1')).toHaveText(/Coverage/i);
-	// A plain device is told what it is seeing rather than shown an empty board.
-	await expect(page.locator('.warn')).toContainText("not marked as a manager's device");
+	// One record per device, so no line about whose device this is and no
+	// apology: just the board. The station list is what proves it rendered.
+	await expect(page.locator('.people li').first()).toBeVisible();
 
 	// Way out, and it agrees with the tab that is lit.
 	const back = page.locator('.back a');

@@ -13,7 +13,7 @@
  *
  * Preferences are the deliberate exception: see stores/prefs.svelte.ts.
  */
-import { get, set, del, update, createStore } from 'idb-keyval';
+import { get, set, del, update, keys, createStore } from 'idb-keyval';
 import { browser } from '$app/environment';
 import { EMPTY_SESSION, type SessionState } from './state';
 import { readSession, NewerVersionError, type HeldReason, type SessionRead } from './migrations';
@@ -27,16 +27,21 @@ export type { SessionState } from './state';
 
 const store = browser ? createStore('world-table', 'state') : undefined;
 
-/* One record per person on a shared device.
+/* ONE RECORD PER DEVICE.
  *
- * A venue buys one subscription and its staff share a sign-in, so a kitchen
- * tablet would otherwise pool everyone's cooked marks and menus into one pile.
- * shared/oot-profiles.js keeps a roster on the device and hands back a
- * namespaced key; with nobody named it returns 'session' unchanged, so a
- * kitchen that never uses profiles is unaffected and nothing has to migrate.
+ * This kitchen belongs to whoever is holding the device. It asked for a name
+ * once, so that a venue sharing one sign-in could tell two cooks apart, and
+ * that has been taken out: the app is personal now.
  *
- * Read at call time rather than captured once, because the answer changes the
- * moment somebody else taps their name.
+ * The way back, when a venue edition returns, is to ask the shared layer for
+ * the key again, which is what this used to be:
+ *
+ *     const p = browser && window.OOT && window.OOT.profiles;
+ *     return p ? p.key(KEY_BASE) : KEY_BASE;
+ *
+ * It has to go back in step with shared/oot-profiles.js PERSONAL, not on its
+ * own: a wing that namespaces while the others do not is how one person ends
+ * up reading another person's kitchen.
  *
  * The window.OOT declaration lives in src/lib/oot.d.ts: ONE declaration only.
  * A second, narrower one used to sit here; two declarations of the same
@@ -48,12 +53,7 @@ export function currentKey(): string {
 }
 
 function KEY(): string {
-	try {
-		const p = browser && window.OOT && window.OOT.profiles;
-		return p ? p.key(KEY_BASE) : KEY_BASE;
-	} catch {
-		return KEY_BASE;
-	}
+	return KEY_BASE;
 }
 
 /**
@@ -145,8 +145,124 @@ export function heldReason(key: string = KEY()): HeldReason | null {
  * fixed key per record, written at most once per page lifetime - and named
  * for what it is. A record from a newer build is not corrupt.
  */
+/**
+ * The kitchen comes back to the device, once.
+ *
+ * A record written while this wing namespaced by profile sits at
+ * `session::<id>` and nothing reads it any more. Three cases, and the first
+ * is the one that matters:
+ *
+ *   1. CLAIMED_FLAG is set and there is exactly one named record. The flag is
+ *      claimBare saying it copied the bare record onto that name, so the bare
+ *      record is an ANCESTOR of the named one and everything since has gone to
+ *      the name. Copying the named record over the bare one is a fast forward,
+ *      not a merge, and it is the only branch that saves a real kitchen from
+ *      being silently rolled back months.
+ *   2. There is no bare record and exactly one named record: it is plainly
+ *      this device's, so it comes across.
+ *   3. There is a bare record and no flag: leave it. It belongs to a legacy
+ *      profile, or to the device before names existed, and handing it away is
+ *      what profiles existed to prevent.
+ *
+ * Two or more named records: nothing is copied and nothing is spent, because
+ * merging two kitchens invents a service neither cook worked.
+ * strandedSessions() lists them and adoptStranded() takes one on request.
+ *
+ * Never deletes, never merges, and never copies a record this build cannot
+ * read: a held record is left exactly where the edition that can read it will
+ * find it.
+ */
+export const DENAMED_FLAG = 'world-table-denamed-v1';
+
+function namedKeys(all: IDBValidKey[]): string[] {
+	return all
+		.filter((k): k is string => typeof k === 'string')
+		.filter((k) => k.startsWith(KEY_BASE + '::'));
+}
+
+async function denameSession(): Promise<void> {
+	try {
+		if (!store) return;
+		if (localStorage.getItem(DENAMED_FLAG) === '1') return;
+		const named = namedKeys(await keys(store));
+		if (named.length > 1) {
+			// Said out loud once, because the alternative is a device that looks
+			// empty with two kitchens sitting on it and nothing anywhere saying so.
+			// Nothing is deleted; adoptStranded(key) takes one when somebody asks.
+			console.warn(
+				'[world-table] more than one kitchen is stored under a name on this device, so ' +
+					'none has been taken automatically: ' + named.join(', ')
+			);
+			return;
+		}
+		if (named.length !== 1) return;          // nobody named anything here
+		const claimed = localStorage.getItem(CLAIMED_FLAG) === '1';
+		const bare = await get(KEY_BASE, store);
+		if (bare !== undefined && !claimed) return;   // case 3
+		const rec = await get(named[0], store);
+		if (rec === undefined) return;
+		if (readSession(rec).held) return;            // not ours to move
+		await set(KEY_BASE, rec, store);              // copy, never move
+		localStorage.setItem(DENAMED_FLAG, '1');
+	} catch {
+		/* A migration that cannot run must never take the boot down with it. */
+	}
+}
+
+/*
+ * The memo dedupes CONCURRENT callers and nothing more: it is cleared when the
+ * run settles, so a later load tries again. Idempotence is the flag's job, not
+ * the memo's, and the flag is only spent when something was actually moved.
+ * A device that is being held, because two kitchens are stored under names on
+ * it, therefore gets another chance every load rather than one chance ever.
+ */
+let denaming: Promise<void> | null = null;
+function ensureDenamed(): Promise<void> {
+	try {
+		if (localStorage.getItem(DENAMED_FLAG) === '1') return Promise.resolve();
+	} catch {
+		/* no localStorage: fall through and let denameSession decide */
+	}
+	if (!denaming) {
+		denaming = denameSession().finally(() => {
+			denaming = null;
+		});
+	}
+	return denaming;
+}
+
+/** What is still stored under a name, for a device that had more than one. */
+export async function strandedSessions(): Promise<string[]> {
+	if (!browser || !store) return [];
+	try {
+		return namedKeys(await keys(store));
+	} catch {
+		return [];
+	}
+}
+
+/** Take one of them onto this device, keeping what it displaces. */
+export async function adoptStranded(key: string): Promise<boolean> {
+	if (!browser || !store) return false;
+	try {
+		if (!key.startsWith(KEY_BASE + '::')) return false;
+		const rec = await get(key, store);
+		if (rec === undefined || readSession(rec).held) return false;
+		const bare = await get(KEY_BASE, store);
+		if (bare !== undefined) await set(`displaced::${KEY_BASE}`, bare, store);
+		await set(KEY_BASE, rec, store);
+		localStorage.setItem(DENAMED_FLAG, '1');
+		return true;
+	} catch {
+		return false;
+	}
+}
 export async function loadSessionRecord(): Promise<SessionRead> {
 	if (!browser || !store) return { state: structuredClone(EMPTY_SESSION), held: false };
+	// Before the first read, and before any entry point, including the
+	// prerendered shell. Gating this on a missing bare record would skip the
+	// one device that needs it most: see denameSession.
+	await ensureDenamed();
 	const key = KEY();
 	let raw: unknown;
 	try {
@@ -157,7 +273,8 @@ export async function loadSessionRecord(): Promise<SessionRead> {
 		held.set(key, 'unreadable');
 		return { state: structuredClone(EMPTY_SESSION), held: true, reason: 'unreadable' };
 	}
-	// A named profile with no record of its own: see claimBare above.
+	// claimBare stays for the venue edition; it cannot fire while KEY() is
+	// plain, because claimAllowed refuses the bare key outright.
 	if (raw === undefined) raw = await claimBare(key);
 	const read = readSession(raw);
 	if (read.held) {

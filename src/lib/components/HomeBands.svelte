@@ -21,10 +21,15 @@
 	import { repertoire, dueList, sinceLabel } from '$lib/repertoire';
 	import { onMount } from 'svelte';
 
-	/* ---- who is studying ---------------------------------------------------
+	/* ---- the shared row ----------------------------------------------------
 	 *
-	 * The profile row (Add your name) and, on a manager's device, The Pass
-	 * strip, at the top of Today: the same two pieces of shared HTML, in the
+	 * This used to be the profile row (Add your name) and, on a manager's
+	 * device, The Pass strip. The app keeps one record per device now, so the
+	 * shared layer answers with the day count alone, or with nothing at all,
+	 * and this host renders whatever it is given. The wiring is left whole
+	 * because it is how the row comes back.
+	 *
+	 * What it was: the same two pieces of shared HTML, in the
 	 * same order, that light/js/oot-light.js puts at the top of First Light's
 	 * Today. Both are rendered by shared/oot-home.js and shared/oot-pass.js
 	 * from the roster and bound ONCE on the band's container, which survives

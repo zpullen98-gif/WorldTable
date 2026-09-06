@@ -158,15 +158,12 @@
 	</header>
 
 	{#if !ready}
-		<p class="note">Reading the roster…</p>
+		<p class="note">Reading your stations…</p>
 	{:else}
-		{#if !manager}
-			<p class="warn">
-				This is not marked as a manager's device, so you are seeing only your own coverage. The
-				tablet on the pass is not the manager's; that distinction is the shared layer's, and it is
-				deliberate.
-			</p>
-		{/if}
+		<!-- The line that used to stand here told every reader their device was
+		     not a manager's. There are no manager devices any more: this app
+		     keeps one record per device, so the board below is simply yours. It
+		     comes back with the venue edition, along with `manager` above. -->
 
 		{#if showRisk}
 			<p class="thin">
@@ -346,14 +343,6 @@
 		font-size: var(--t-small);
 		line-height: 1.55;
 		margin-bottom: 14px;
-	}
-	.warn {
-		padding: 11px 14px;
-		border-left: 2px solid var(--turmeric-deep);
-		background: var(--paper-raised);
-		max-width: var(--measure);
-		font-size: var(--t-small);
-		line-height: 1.55;
 	}
 	.station {
 		margin-bottom: 18px;

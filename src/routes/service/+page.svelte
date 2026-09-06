@@ -91,7 +91,7 @@
 			<a href="{base}/coverage">
 				<h3>The Coverage Board</h3>
 				<p>
-					Who has done the work of each station: your own record, or the whole house on a
+					Which stations you have done the work of, and which are still waiting on
 					manager's device.
 				</p>
 			</a>

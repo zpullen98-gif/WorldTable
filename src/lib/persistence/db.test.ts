@@ -19,6 +19,7 @@ vi.mock('idb-keyval', () => ({
 	get: vi.fn(async (k: string) => mem.get(k)),
 	set: vi.fn(async (k: string, v: unknown) => void mem.set(k, v)),
 	del: vi.fn(async (k: string) => void mem.delete(k)),
+	keys: vi.fn(async () => [...mem.keys()]),
 	update: vi.fn(async (k: string, fn: (cur: unknown) => unknown) => {
 		const next = fn(mem.get(k));
 		mem.set(k, next);
@@ -26,7 +27,15 @@ vi.mock('idb-keyval', () => ({
 }));
 
 import { get as idbGet } from 'idb-keyval';
-import { loadSessionRecord, saveSession, loadAllSessions, heldReason } from './db';
+import {
+	loadSessionRecord,
+	saveSession,
+	loadAllSessions,
+	heldReason,
+	strandedSessions,
+	adoptStranded,
+	DENAMED_FLAG
+} from './db';
 import { EMPTY_SESSION, CURRENT_VERSION, type SessionState } from './state';
 
 const v1 = (over: Partial<SessionState> = {}): SessionState => ({
@@ -227,7 +236,7 @@ describe('the summary The Pass reads, written on every save', () => {
 	});
 });
 
-describe('the first name typed on a Table-only device keeps the kitchen', () => {
+describe('a named kitchen comes back to the device when the app goes personal', () => {
 	beforeEach(() => {
 		mem.clear();
 		ls.clear();
@@ -238,46 +247,70 @@ describe('the first name typed on a Table-only device keeps the kitchen', () => 
 		uninstallOOT();
 	});
 
-	it('copies the bare record into a named profile once, sets the flag, leaves the bare record', async () => {
-		mem.set('session', v1({ pantry: ['Chicken'], cookedLog: [{ slug: 'a', at: 5 }] }));
-		installOOT('p1', [{ id: 'p1', name: 'Maria' }]);
+	/*
+	 * THE ONE THAT MATTERS. claimBare copied the bare record onto a name once
+	 * and set its flag, so on this device the bare record is FROZEN on the day
+	 * the name was typed and every service since has gone to the named key.
+	 * A migration that only fires when the bare record is missing would skip
+	 * exactly this device and hand the cook a kitchen months out of date.
+	 */
+	it('fast forwards a claimed device onto the record that has been live since', async () => {
+		mem.set('session', v1({ pantry: ['the day the name was typed'] }));
+		mem.set('session::p1', v1({ pantry: ['every service since'] }));
+		ls.set('world-table-session-claimed-v1', '1');
 
 		const read = await loadSessionRecord();
-		expect(read.held).toBe(false);
+		expect(read.state.pantry).toEqual(['every service since']);
+		expect(ls.get(DENAMED_FLAG)).toBe('1');
+		// Copy, never move: the named record is still there for a venue edition.
+		expect(mem.has('session::p1')).toBe(true);
+	});
+
+	it('takes the one named record when there is no bare record at all', async () => {
+		mem.set('session::p1', v1({ pantry: ['Chicken'] }));
+		const read = await loadSessionRecord();
 		expect(read.state.pantry).toEqual(['Chicken']);
-		expect(mem.get('session::p1')).toEqual(mem.get('session'));
-		expect(ls.get('world-table-session-claimed-v1')).toBe('1');
-
-		// The second name typed starts empty: the kitchen was claimed already.
-		installOOT('p2', [
-			{ id: 'p1', name: 'Maria' },
-			{ id: 'p2', name: 'Devon' }
-		]);
-		const second = await loadSessionRecord();
-		expect(second.state.pantry).toEqual([]);
-		expect(mem.has('session::p2')).toBe(false);
+		expect(ls.get(DENAMED_FLAG)).toBe('1');
+		expect(mem.has('session::p1')).toBe(true);
 	});
 
-	it('does not claim when a legacy profile already owns the bare record', async () => {
-		mem.set('session', v1({ pantry: ['Chicken'] }));
-		installOOT('p2', [
-			{ id: 'p1', name: 'The bar', legacy: true },
-			{ id: 'p2', name: 'Devon' }
-		]);
+	it('leaves an unclaimed bare record alone: it is the legacy reader\u2019s', async () => {
+		mem.set('session', v1({ pantry: ['the legacy kitchen'] }));
+		mem.set('session::p2', v1({ pantry: ['somebody else'] }));
 		const read = await loadSessionRecord();
-		expect(read.state.pantry).toEqual([]);
-		expect(mem.has('session::p2')).toBe(false);
-		expect(ls.has('world-table-session-claimed-v1')).toBe(false);
+		expect(read.state.pantry).toEqual(['the legacy kitchen']);
+		expect(ls.has(DENAMED_FLAG)).toBe(false);
 	});
 
-	it('does not claim a bare record this build cannot read, and does not spend the flag on it', async () => {
-		mem.set('session', { ...v1({ pantry: ['Chicken'] }), schemaVersion: CURRENT_VERSION + 1 });
-		installOOT('p1', [{ id: 'p1', name: 'Maria' }]);
+	it('refuses to choose between two named kitchens, and lists them instead', async () => {
+		mem.set('session::p1', v1({ pantry: ['Maria'] }));
+		mem.set('session::p2', v1({ pantry: ['Devon'] }));
 		const read = await loadSessionRecord();
-		expect(read.held).toBe(false); // the named record is simply empty
 		expect(read.state.pantry).toEqual([]);
-		expect(mem.has('session::p1')).toBe(false);
-		expect(ls.has('world-table-session-claimed-v1')).toBe(false);
+		expect(mem.has('session')).toBe(false);
+		expect(ls.has(DENAMED_FLAG)).toBe(false);
+		expect((await strandedSessions()).sort()).toEqual(['session::p1', 'session::p2']);
+
+		// And one can be taken on request, without losing the other.
+		expect(await adoptStranded('session::p2')).toBe(true);
+		expect((await loadSessionRecord()).state.pantry).toEqual(['Devon']);
+		expect(mem.has('session::p1')).toBe(true);
+	});
+
+	it('does not move a record this build cannot read, and does not spend the flag', async () => {
+		mem.set('session::p1', { ...v1({ pantry: ['Chicken'] }), schemaVersion: CURRENT_VERSION + 1 });
+		const read = await loadSessionRecord();
+		expect(mem.has('session')).toBe(false);
+		expect(ls.has(DENAMED_FLAG)).toBe(false);
+		expect(read.state.pantry).toEqual([]);
+	});
+
+	it('moves once and then stops looking', async () => {
+		mem.set('session::p1', v1({ pantry: ['Chicken'] }));
+		await loadSessionRecord();
+		mem.set('session', v1({ pantry: ['edited since'] }));
+		const again = await loadSessionRecord();
+		expect(again.state.pantry).toEqual(['edited since']);
 	});
 
 	it('never touches the legacy or unnamed path', async () => {
