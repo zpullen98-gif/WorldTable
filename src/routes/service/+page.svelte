@@ -81,18 +81,15 @@
 			entirely. Meanwhile the layout's OWNS map lights the SERVICE tab on it,
 			so the tab that claimed the page was the one place never linking to it.
 
-			Ungated here, because the page gates itself in the right place and says
-			so: it narrows the roster to your own record BEFORE reading anything
-			("Reading less is the gate; not rendering what you already read is a
-			curtain") and prints a warning explaining why. A cook sees their own
-			coverage; a manager's device sees the house.
+			Ungated here, because the page reads one record, this device's, and
+			says so in its own lede. There are no manager devices in this edition.
 		-->
 		<li>
 			<a href="{base}/coverage">
 				<h3>The Coverage Board</h3>
 				<p>
-					Which stations you have done the work of, and which are still waiting on
-					manager's device.
+					Which stations you have done the work of, and which are still waiting. Kept on
+					this device.
 				</p>
 			</a>
 		</li>

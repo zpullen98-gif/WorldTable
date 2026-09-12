@@ -18,6 +18,10 @@ const manifestHref = process.env.MANIFEST_HREF ?? `${base}/manifest.webmanifest`
 // second, differently named icon on the phone of somebody who installed the
 // whole product.
 const appName = process.env.APP_NAME ?? 'World Table';
+// The wing build, as opposed to a standalone one. The wing is the only build
+// whose pages load the product's shared scripts, so it is the only one whose
+// worker should go looking for them (see static/sw-shared.js).
+const isWing = base === '/table';
 
 export default defineConfig({
 	// The safety page says when it was BUILT and deliberately never says
@@ -97,7 +101,8 @@ export default defineConfig({
 				 * Prerendering and precaching are separate decisions.
 				 */
 				globPatterns: ['**/*.{js,css,woff2,png,svg,webmanifest}'],
-				globIgnores: ['**/node_modules/**', '**/*.woff'],
+				// sw-shared.js is the worker's own import, not a page asset.
+				globIgnores: ['**/node_modules/**', '**/*.woff', '**/sw-shared.js'],
 				maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
 				/**
 				 * Supplying manifestTransforms REPLACES the SvelteKit plugin's own
@@ -155,20 +160,39 @@ export default defineConfig({
 				 * /shared/ belongs to Outside Of Time, the site this build is a wing
 				 * of, and sits outside this project entirely, so the glob cannot see
 				 * it and the precache manifest can never list it. Without a rule here
-				 * the four shared scripts (config, auth, gate, return chip) are the
-				 * only same-origin requests this app makes that fail offline, which
-				 * would leave the wing unable to answer "is this reader signed in and
-				 * what have they paid for" on exactly the trip-and-tunnel journeys the
-				 * offline shell exists for.
+				 * the nine shared scripts (config, profiles, home, auth, gate, locks,
+				 * pass, log, return chip) are the only same-origin requests this app
+				 * makes that fail offline, on exactly the trip-and-tunnel journeys the
+				 * offline shell exists for: the chip is the wing's only way back to
+				 * the hub, and the streak is recorded through OOT.profiles.
 				 *
 				 * Runtime rather than additionalManifestEntries deliberately: precache
 				 * install is atomic, so listing a file this repo does not own would
 				 * mean a missing sibling directory costs the entire offline shell.
-				 * StaleWhileRevalidate caches on first use and degrades to nothing
-				 * worse than today if the files are absent.
+				 * StaleWhileRevalidate degrades to nothing worse than today if the
+				 * files are absent.
+				 *
+				 * "On first use" was the gap. The hub's "store every wing offline"
+				 * button registers this worker and stops, so the cache stayed empty
+				 * until the wing had been opened once online, and an offline first
+				 * open had no chip and no streak. static/sw-shared.js, imported below
+				 * in the wing build only, warms this cache at install, best-effort,
+				 * one URL at a time. It caches the BARE URLs because the ?v=N stamp
+				 * on shell.html's tags is written by the monorepo after the build;
+				 * ignoreSearch lets that request be answered from the bare entry and
+				 * revalidated when the network is there.
+				 *
+				 * No maxAgeSeconds. These files are versioned by ?v=N, so a stale copy
+				 * is replaced by a new key rather than going bad with age, and the 90
+				 * days that used to be here meant an installed wing unopened for a
+				 * season lost its return chip the next time it was opened without
+				 * signal. The other four wings precache the same nine files with no
+				 * expiry. maxEntries bounds the cache instead: nine bare entries plus
+				 * nine per stamp, so 40 holds the current stamp and two before it.
 				 *
 				 * The cache name is prefixed oot- so the sibling wings' activate
-				 * handlers, which reap only their own prefix, leave it alone.
+				 * handlers, which reap only their own prefix, leave it alone. It is
+				 * repeated in static/sw-shared.js and the two must agree.
 				 */
 				runtimeCaching: [
 					{
@@ -177,10 +201,12 @@ export default defineConfig({
 						handler: 'StaleWhileRevalidate',
 						options: {
 							cacheName: 'oot-shared-v1',
-							expiration: { maxEntries: 16, maxAgeSeconds: 60 * 60 * 24 * 90 }
+							matchOptions: { ignoreSearch: true },
+							expiration: { maxEntries: 40 }
 						}
 					}
 				],
+				...(isWing ? { importScripts: ['sw-shared.js'] } : {}),
 				cleanupOutdatedCaches: true,
 				clientsClaim: true,
 				skipWaiting: false

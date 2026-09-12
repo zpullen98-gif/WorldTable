@@ -528,7 +528,7 @@
 	.logger select {
 		font: inherit;
 		padding: 4px 6px;
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		border-radius: var(--radius);
 		background: var(--paper-raised);
 		color: var(--ink);

@@ -220,13 +220,16 @@
 			>
 		</div>
 		<button class="chip" onclick={() => (cooking = true)}>Cook mode ▸</button>
+		<!-- ○ and ✓ are the app's own marks for not-yet and done (the study path,
+		     the technique pages). The pushpin emoji was a colour picture in a
+		     hand-set page, drawn differently by every platform, on 1,844 recipes. -->
 		<button
 			class="chip pin"
 			class:on={session.isPinned(r.slug)}
 			aria-pressed={session.isPinned(r.slug)}
 			onclick={() => session.togglePin(r.slug)}
 		>
-			{session.isPinned(r.slug) ? '📌 On the menu' : '📌 Add to menu'}
+			{session.isPinned(r.slug) ? '✓ On the menu' : '○ Add to menu'}
 		</button>
 		<button class="chip" onclick={() => window.print()}>Print</button>
 	</div>
@@ -597,6 +600,13 @@
 		padding: 7px 12px;
 		cursor: pointer;
 		font-size: var(--t-small);
+		/* These two rows rewrite every quantity on the page and measured 38x34
+		   with the segments abutting, under the 44px floor the app applies to
+		   every other kitchen-thumb control. The segments stay joined, with the
+		   1px divider between them: that is what a segmented control looks like.
+		   The pressed one inverts and Serves recomputes, so a mis-tap is loud. */
+		min-height: 44px;
+		min-width: 48px;
 	}
 	.group button:last-child {
 		border-right: 0;
@@ -612,6 +622,9 @@
 		border-radius: var(--radius);
 		cursor: pointer;
 		font-size: var(--t-small);
+		/* Same floor as the segments beside them, so a wrapped row of chips on
+		   a phone does not drop back to 34px the moment it leaves their line. */
+		min-height: 44px;
 	}
 	.chip:hover {
 		border-color: var(--turmeric);
@@ -634,7 +647,7 @@
 	.notes textarea {
 		width: 100%;
 		background: var(--card);
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		border-radius: var(--radius);
 		padding: 10px 12px;
 		resize: vertical;

@@ -1236,7 +1236,7 @@
 		width: 6.5rem;
 		font: inherit;
 		padding: 2px 5px;
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		border-radius: var(--radius);
 		background: var(--paper-raised);
 		color: var(--ink);
@@ -1377,7 +1377,7 @@
 		width: 100%;
 		min-width: 5.5em;
 		padding: 5px 7px;
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		background: var(--card, transparent);
 		color: var(--ink);
 		border-radius: var(--radius);
@@ -1425,7 +1425,7 @@
 		min-height: 40px;
 	}
 	.rate {
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		background: none;
 		padding: 6px 8px;
 		border-radius: var(--radius);

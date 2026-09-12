@@ -10,6 +10,7 @@
 	import { repertoire, dueList } from '$lib/repertoire';
 	import UpdatePrompt from '$lib/components/UpdatePrompt.svelte';
 	import TimerBar from '$lib/components/TimerBar.svelte';
+	import { bareHtmlPath } from '$lib/htmlPath';
 
 	let { children } = $props();
 
@@ -45,6 +46,42 @@
 	// and a keystroke into that gap lands on a dead input.
 	$effect(() => {
 		document.documentElement.dataset.hydrated = 'true';
+	});
+
+	/**
+	 * The address bar follows the router. hooks.ts already resolves the on-disk
+	 * .html spelling of a page to the page (see $lib/htmlPath.ts), so this is
+	 * cosmetic and runs once: a reader who arrived by a sitemap or a pasted
+	 * link ends up on the URL the app itself would have produced, and a copied
+	 * address from here on is the bare one. history.state is kept as is, so
+	 * SvelteKit's own history bookkeeping is untouched.
+	 */
+	$effect(() => {
+		const bare = bareHtmlPath(location.pathname);
+		if (bare === location.pathname) return;
+		history.replaceState(history.state, '', bare + location.search + location.hash);
+	});
+
+	/**
+	 * The dock publishes its height, so the page can keep out from under it.
+	 *
+	 * The dock is position:fixed at bottom-centre and grows a row per running
+	 * timer, and nothing reserved that room: at 375x812 with four timers it
+	 * covered y 547 to 800, the last method steps of a recipe among them, and
+	 * with no timers at all its 32px "+ Timer" button sat on the footer's
+	 * Privacy link at every phone width, at the only scroll position where the
+	 * footer is on screen. The footer below pads by --dock-h, which this keeps
+	 * current, so the end of every page scrolls clear of the lane.
+	 */
+	let dockEl: HTMLDivElement | undefined = $state();
+	$effect(() => {
+		if (!dockEl || typeof ResizeObserver === 'undefined') return;
+		const ro = new ResizeObserver((entries) => {
+			const h = Math.ceil(entries[0].contentRect.height);
+			document.documentElement.style.setProperty('--dock-h', `${h}px`);
+		});
+		ro.observe(dockEl);
+		return () => ro.disconnect();
 	});
 
 	/* Ordered the way the home bands are, and labelled short enough that the bar
@@ -84,7 +121,9 @@
 		['/recipes', ['/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry']]
 	];
 
-	const path = $derived(page.url.pathname.replace(base, '') || '/');
+	// bareHtmlPath: page.url keeps the .html spelling a reader may have arrived
+	// by, and the tab that owns the path should not care which spelling it was.
+	const path = $derived(bareHtmlPath(page.url.pathname.replace(base, '') || '/'));
 
 	/* The one number worth carrying in the chrome: how many dishes are past
 	   their re-cook. Same treatment as the menu's count: a pill, not a badge
@@ -276,7 +315,7 @@
 	bottom of the lane and the toast stacks above it, so a toast arriving or
 	leaving never moves the bar under a cook's thumb.
 -->
-<div class="dock" data-print="hide">
+<div class="dock" data-print="hide" bind:this={dockEl}>
 	<UpdatePrompt />
 	<TimerBar />
 </div>
@@ -376,9 +415,10 @@
 	 *
 	 * Inside Outside Of Time, oot-bar.js pins a chip at position:fixed, top 10px,
 	 * left 10px, z-index 45 (over this bar, which is sticky at z-index 40), and
-	 * under 600px it collapses to a round icon roughly 40px across. It therefore
-	 * sits on top of the FIRST tab, which after the cut to five is "Today", on
-	 * the view people land on.
+	 * at every width it is a 44px disc (x 10 to 54, y 10 to 54) carrying the
+	 * OOT monogram, opening into a pill only while hovered or focused. It
+	 * therefore sits on top of the FIRST tab, which after the cut to five is
+	 * "Today", on the view people land on, whenever this bar is docked.
 	 *
 	 * Applied unconditionally because there is no reliable marker to key it to:
 	 * data-oot-tier is REMOVED for paid visitors, so it cannot stand in for
@@ -413,9 +453,18 @@
 	 * and lives on .modebar-inner; what is phone-only is the chip indent below,
 	 * the tighter tab padding and the toggle collapsing to its glyph.
 	 */
-	@media (max-width: 599px) {
+	/* The chip is a 44px disc at x 10 to 54, y 10 to 54 at every width, and
+	   the shell is 1200px wide with a 20px gutter, so the brand's x is
+	   (width - 1200) / 2 + 20 and passes 54 at 1268px. Below that the
+	   masthead's ink began at x 21, y 35 (it covered the T of The) and the
+	   docked bar's first tab at x 20, so both keep the lane: the bar's padding
+	   replaces the gutter, hence 60 rather than 40. */
+	@media (max-width: 1267px) {
 		.modebar-inner {
-			padding-left: 44px;
+			padding-left: 60px;
+		}
+		.brandline {
+			padding-left: 48px;
 		}
 	}
 	.modetab {
@@ -564,11 +613,21 @@
 
 	footer {
 		border-top: 1px solid var(--line);
-		padding: 20px 0;
+		/* 20px of its own, then the dock: 12px off the bottom plus its measured
+		   height (--dock-h, set above; 44px is the one-button lane if the
+		   observer never ran) plus the safe area. Reserved on the LAST element
+		   only, which is enough: it is the end of the document that must clear
+		   the lane, and mid-document text can always be scrolled out from under it. */
+		padding: 20px 0 calc(32px + var(--dock-h, 44px) + env(safe-area-inset-bottom, 0px));
 		text-align: center;
 		font-size: var(--t-small);
 		color: var(--muted);
 		position: relative;
 		z-index: 1;
+	}
+	@media print {
+		footer {
+			padding-bottom: 20px;
+		}
 	}
 </style>

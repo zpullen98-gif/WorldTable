@@ -828,7 +828,7 @@
 	input[type='url'],
 	.bulk input,
 	.review input {
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		background: var(--card);
 		border-radius: var(--radius);
 		padding: 8px 12px;

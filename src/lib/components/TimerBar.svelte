@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { tick } from 'svelte';
 	import { timers, formatClock } from '$lib/stores/timers.svelte';
 
 	/**
@@ -35,6 +36,39 @@
 	let label = $state('');
 	let minutes = $state('');
 	let editing = $state<string | null>(null);
+
+	/**
+	 * Out of the way, not off the heat.
+	 *
+	 * With four timers the dock covered a third of a phone screen, and the only
+	 * way to read the method under it was to clear timers. Pause is no help:
+	 * a paused timer drops out of `timers.active` and leaves the bar entirely.
+	 * So the bar folds to one line, "3 timers running", and every timer keeps
+	 * counting. A timer that RINGS unfolds the bar by itself, because its
+	 * Dismiss has to be reachable the moment it is needed. The choice is
+	 * forgotten when the last timer goes, so a fresh timer never starts
+	 * hidden.
+	 */
+	let folded = $state(false);
+	const ringing = $derived(list.some((t) => t.rang));
+	const collapsed = $derived(folded && list.length > 0 && !ringing);
+	$effect(() => {
+		if (!list.length) folded = false;
+	});
+	let foldBtnEl: HTMLButtonElement | undefined = $state();
+	let unfoldBtnEl: HTMLButtonElement | undefined = $state();
+	// Both buttons unmount the moment they are pressed (the rule at
+	// hasOpenedAdd below), so focus is handed to the one that replaces it.
+	async function fold() {
+		folded = true;
+		await tick();
+		unfoldBtnEl?.focus();
+	}
+	async function unfold() {
+		folded = false;
+		await tick();
+		foldBtnEl?.focus();
+	}
 
 	/**
 	 * Four controls in this file unmount themselves the moment they are
@@ -98,6 +132,11 @@
 
 <!-- App chrome: a printed recipe should not carry a countdown across it. -->
 <div class="bar" role="status" aria-label="Kitchen timers" data-print="hide">
+	{#if collapsed}
+		<button class="addbtn" bind:this={unfoldBtnEl} onclick={unfold} aria-expanded="false">
+			{list.length} {list.length === 1 ? 'timer' : 'timers'} running ▸ Show
+		</button>
+	{:else}
 	{#if list.length}
 		{#each list as t (t.id)}
 			{@const left = timers.remaining(t)}
@@ -191,9 +230,15 @@
 			<button class="x" onclick={() => (adding = false)} aria-label="Cancel">✕</button>
 		</div>
 	{:else}
-		<button class="addbtn" bind:this={addBtnEl} onclick={open} aria-label="Start a timer">
-			+ Timer
-		</button>
+		<div class="row">
+			{#if list.length}
+				<button class="addbtn" bind:this={foldBtnEl} onclick={fold} aria-expanded="true" aria-label="Hide the timers">Hide</button>
+			{/if}
+			<button class="addbtn" bind:this={addBtnEl} onclick={open} aria-label="Start a timer">
+				+ Timer
+			</button>
+		</div>
+	{/if}
 	{/if}
 </div>
 
@@ -209,19 +254,24 @@
 		cursor: pointer;
 		font: inherit;
 		font-size: var(--t-small, 0.8125rem);
-		min-height: 32px;
+		min-height: 44px; /* the suite's touch floor; the dock publishes its height, so the page keeps clear */
 		padding: 4px 12px;
 	}
 	.addbtn:hover {
 		border-color: var(--turmeric);
 		color: var(--ink);
 	}
+	.row {
+		align-self: flex-end;
+		display: flex;
+		gap: 6px;
+	}
 	.add {
 		flex-wrap: wrap;
 	}
 	.lab {
 		background: none;
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		border-radius: var(--radius);
 		color: inherit;
 		font: inherit;
@@ -237,7 +287,7 @@
 	}
 	.mins {
 		background: none;
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		border-radius: var(--radius);
 		color: inherit;
 		font: inherit;

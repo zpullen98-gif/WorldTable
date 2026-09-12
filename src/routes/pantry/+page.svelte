@@ -240,7 +240,7 @@
 		flex: 1;
 		min-width: 0;
 		padding: 8px 10px;
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		background: var(--card);
 		border-radius: var(--radius);
 	}

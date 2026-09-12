@@ -307,8 +307,8 @@
 		<div class="oot-grid-links">
 			<a href="{base}/menu/quiz">Drill the Menu<small
 				>{dishes >= 4
-					? `Your ${dishes} dishes, drilled like the canon`
-					: `Opens at four dishes on My Menu, ${4 - dishes} to go`}</small
+					? `Your ${dishes} dishes from the house menu, drilled like the canon`
+					: `Opens at four dishes on the house menu, ${4 - dishes} to go`}</small
 			></a>
 			<a href="{base}/lexicon">Lexicon Quiz<small>Ten questions on the words a cook is expected to know, scheduled so the ones you miss come back</small></a>
 			<a href="{base}/repertoire">The Repertoire<small

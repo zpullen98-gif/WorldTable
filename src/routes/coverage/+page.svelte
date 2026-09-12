@@ -12,13 +12,15 @@
   and the counts are raw. A chef judges competence by watching somebody work;
   this board tells them where to look.
 
-  ON READING OTHER PEOPLE'S DATA, and this is the part to be exact about,
-  because the opposite was assumed for a while. A manager device CAN read every
-  profile's whole record: the storage key is `session::<id>`, deterministic and
-  reconstructible, and the shared layer already does this for two other wings.
-  So showing coverage rather than answers is a CHOICE, and the copy below says
-  so. Claiming the app "cannot" see more would be false, and the first engineer
-  to read persistence/db.ts would overturn the policy on a bad premise.
+  ON OTHER PEOPLE'S DATA. This edition keeps ONE record per device and the page
+  reads only that: profiles.list() is empty, loadAllSessions returns the
+  device's own record under the name "This device", and every station shows
+  one row. The copy is written in the singular for that reason, and the
+  roster code path (people, thin, the tournant by name) stays behind
+  `people.length > 1` for a venue edition that reads a brigade. When that
+  returns, so does the plural, and so does the point that a manager device
+  CAN read every profile's record (the key is `session::<id>`, deterministic)
+  and shows coverage rather than answers as a choice, not a limit.
 -->
 <script lang="ts">
 	import { onMount } from 'svelte';
@@ -123,8 +125,10 @@
 	 * their head and loses on precisely the morning it matters, the scenario
 	 * the page was built for and the one thing it never said.
 	 */
+	// One person on the device makes every touched station "thin", which is
+	// not a risk, it is the shape of a personal record. Only a roster has one.
 	const thin = $derived(
-		stations
+		people.length < 2 ? [] : stations
 			.map((st) => ({
 				name: st.name,
 				covers: whoCanCover(st.key, people).filter((c) => c.touched > 0)
@@ -152,8 +156,8 @@
 	<header class="head">
 		<h1>Coverage</h1>
 		<p class="lede">
-			Who has done the work of each station, on this device. Not who is qualified; that is yours to
-			judge, from watching them cook.
+			Which stations you have done the work of, on this device. Not which you are qualified for:
+			that is judged by watching somebody cook, and no list can do it.
 		</p>
 	</header>
 
@@ -169,7 +173,7 @@
 			<p class="thin">
 				{#if uncovered.length}
 					<b>{listOf(uncovered.map((s) => s.name))}</b>
-					{uncovered.length === 1 ? 'has' : 'have'} nobody at all.
+					{uncovered.length === 1 ? 'has' : 'have'} nothing cooked yet.
 				{/if}
 				{#if thin.length}
 					<b>{listOf(thin.map((t) => t.name))}</b>
@@ -180,14 +184,19 @@
 
 		{#if heldNames.length}
 			<p class="note">
-				{heldNames.join(', ')} cooked on a newer edition of the app than this device runs; their
-				coverage cannot be read here until it updates.
+				{#if people.length + heldNames.length > 1}
+					{heldNames.join(', ')} cooked on a newer edition of the app than this device runs; their
+					coverage cannot be read here until it updates.
+				{:else}
+					The record on this device was saved by a newer edition of the app than this device runs;
+					coverage cannot be read until it updates.
+				{/if}
 			</p>
 		{/if}
-		<h2 class="sec">Who can cover tonight</h2>
+		<h2 class="sec">What you can cover tonight</h2>
 		<p class="secnote">
-			Ordered by how much of each station a person has actually cooked. A name at zero is not a
-			mistake. <b>Nobody can cover this</b> is the most useful thing this board can tell you.
+			Each station, with how much of it you have actually cooked. A station at zero is not a
+			mistake: <b>nothing yet</b> is the most useful thing this board can tell you.
 		</p>
 
 		{#each stations as s (s.key)}
@@ -202,7 +211,10 @@
 						{@const cold = coldBy.get(c.id)?.get(s.key) ?? []}
 						{@const gaps = people.find((p) => p.id === c.id)?.coverage.find((x) => x.key === s.key)?.gaps ?? []}
 						<li>
-							<span class="who">{c.name}</span>
+							<!-- A name only where there is more than one to tell apart: on a
+							     device with one record the name is "This device", which is
+							     the page's lede said in fewer words. -->
+							{#if people.length > 1}<span class="who">{c.name}</span>{/if}
 							<span class="band" data-band={c.band}>{BAND_LABEL[c.band]}</span>
 							<span class="count">{c.touched} of {c.of}</span>
 							{#if c.met}<span class="met">{c.met} to a standard</span>{/if}
@@ -237,7 +249,7 @@
 							{/if}
 						</li>
 					{:else}
-						<li class="empty">Nobody on this device has cooked here.</li>
+						<li class="empty">Nothing cooked here yet, on this device.</li>
 					{/each}
 				</ul>
 			</section>
@@ -251,13 +263,15 @@
 			     guide's actual second clause, "often the best pure cook in the
 			     building". -->
 			<p class="secnote">“{data.stations.tournant}”, the guide's own words.</p>
-			<p class="tournant">{tournants.map((p) => p.name).join(', ')}</p>
+			<p class="tournant">
+				{people.length > 1 ? tournants.map((p) => p.name).join(', ') : 'Every station on the line, cooked on this device.'}
+			</p>
 		{/if}
 
 		<h2 class="sec">What this board does not say</h2>
 		<div class="limits">
 			<p>
-				<b>It is coverage, not competence.</b> It counts the techniques a person has cooked a dish for.
+				<b>It is coverage, not competence.</b> It counts the techniques you have cooked a dish for.
 				It cannot see whether the plate was any good: {ASSESS.assessable} of the guide’s
 				{ASSESS.corpus} are now assessable, {ASSESS.dishStandards} against a standard of their own
 				and {ASSESS.byTechnique} against the techniques they exercise, so “to a standard” is always
@@ -270,16 +284,15 @@
 				this is not it.
 			</p>
 			<p>
-				<b>It shows coverage because we chose to, not because we must.</b> This device can read every
-				profile's whole session: the key is reconstructible and the shared layer already does it
-				elsewhere. Answers, notes and family recipes are not shown here because a shared tablet exists
-				so a brigade can share a device, not so a manager can read somebody's notebook.
+				<b>It shows coverage and nothing more, by choice.</b> This device keeps one record and this
+				board reads only that: the cooked log, counted by station. Answers, notes and family recipes
+				stay where they were written, and nothing on this board is sent anywhere.
 			</p>
 			{#if data.stations.foundation.length}
 				<p>
 					<b>Three techniques belong to everyone, so they count for nobody:</b>
-					{data.stations.foundation.join(', ')}. They appear across every station, so knowing who has
-					sweated an onion tells you nothing about who can cover the sauce.
+					{data.stations.foundation.join(', ')}. They appear across every station, so having sweated an
+					onion says nothing about whether you can cover the sauce.
 				</p>
 			{/if}
 			<!--

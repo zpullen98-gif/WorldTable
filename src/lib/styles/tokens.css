@@ -21,6 +21,12 @@
 	--muted: #9a907a;
 	--line: #3b3628;
 	--line-strong: #4d4735;
+	/* The edge of a text field. --line is a hairline for rules and card edges
+	   and reads 1.4:1 against the card in both services, which is fine for a
+	   rule and fails WCAG 1.4.11 as the only mark of an input's box, which owes
+	   3:1. Fields draw this instead: 3.40:1 on the night card (#211d16), 3.66:1
+	   on night paper; day values below. Leave --line alone. */
+	--field-line: #77705d;
 
 	/* ---- accents ---- */
 	--turmeric: #c2a055;
@@ -82,6 +88,7 @@
 		--muted: #7c7462;
 		--line: #ded5bd;
 		--line-strong: #c8bda0;
+		--field-line: #928870; /* 3.48:1 on the day card #fffefb, 3.45:1 on day paper */
 
 		--turmeric: #a5822f;
 		--turmeric-deep: #7a5f26; /* AA on tinted paper: #8a6d2e measured 4.43:1 */
@@ -112,6 +119,7 @@
 	--muted: #7c7462;
 	--line: #ded5bd;
 	--line-strong: #c8bda0;
+	--field-line: #928870;
 
 	--turmeric: #a5822f;
 	--turmeric-deep: #7a5f26; /* AA on tinted paper: #8a6d2e measured 4.43:1 */

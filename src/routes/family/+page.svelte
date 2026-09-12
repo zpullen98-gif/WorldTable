@@ -323,7 +323,7 @@
 		   is ~163px. Without this the minmax(0,1fr) tracks above still overflow. */
 		min-width: 0;
 		background: var(--card);
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		border-radius: var(--radius);
 		padding: 9px 12px;
 		font-size: 15px;

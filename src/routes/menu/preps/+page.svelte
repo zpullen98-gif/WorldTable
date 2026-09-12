@@ -405,7 +405,7 @@
 		gap: 2px;
 	}
 	.frow input {
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		background: none;
 		padding: 8px 10px;
 		border-radius: var(--radius);
@@ -430,7 +430,7 @@
 		padding: 3px 6px;
 	}
 	.lines input {
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		background: none;
 		padding: 6px 8px;
 		border-radius: var(--radius);

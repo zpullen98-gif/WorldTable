@@ -333,7 +333,7 @@
 	.tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 20px 0 24px; }
 	.search { flex: 1 1 260px; }
 	.search input {
-		width: 100%; padding: 10px 14px; border: 1px solid var(--line);
+		width: 100%; padding: 10px 14px; border: 1px solid var(--field-line);
 		background: var(--card); border-radius: var(--radius);
 	}
 	.chip {

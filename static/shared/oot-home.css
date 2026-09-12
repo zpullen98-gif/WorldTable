@@ -157,10 +157,13 @@
 }
 .oot-path-row:last-child { border-bottom: 0; }
 .oot-path-row:hover .oot-path-t { text-decoration: underline; }
-.oot-path-mark { color: var(--oot-accent, currentColor); font-size: .95rem; }
+/* The mark is the step's number, tabular so a column of them lines up. It was
+   a tick and a hollow circle once, and this row renders inside the Codex,
+   which allows no pictorial glyph at all. */
+.oot-path-mark { color: var(--oot-accent, currentColor); font-size: .95rem; font-variant-numeric: tabular-nums; }
 .oot-path-t { color: var(--oot-ink, currentColor); }
-/* Done recedes to the muted colour rather than to 55% of the ink. The tick
-   in .oot-path-mark is what actually says "done"; this is the echo. */
+/* Done recedes to the muted colour rather than to 55% of the ink. The word
+   "done" in .oot-path-mins is what actually says done; this is the echo. */
 .oot-path-row.done .oot-path-t { color: var(--oot-dim, currentColor); }
 .oot-path-mins {
   font-size: .74rem;
@@ -206,6 +209,28 @@
 }
 .oot-chip:focus-visible,
 .oot-path-row:focus-visible { outline: 2px solid var(--oot-accent, currentColor); outline-offset: 2px; }
+/* The inline fallback for a webview with no prompt(): see bindWho in oot-home.js. */
+.oot-who-form {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.oot-who-form p { margin: 0; flex: 1 1 100%; font-size: .85rem; }
+.oot-who-form input {
+  font: inherit;
+  font-size: .85rem;
+  padding: 5px 9px;
+  border: 1px solid var(--oot-line, currentColor);
+  background: none;
+  color: var(--oot-ink, currentColor);
+  border-radius: 2px;
+  min-width: 0;
+  flex: 1 1 160px;
+}
+.oot-who-form input:focus-visible { outline: 2px solid var(--oot-accent, currentColor); outline-offset: 2px; }
 
 /* ---- the pass: the manager strip ------------------------------------ */
 .oot-pass {

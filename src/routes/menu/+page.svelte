@@ -1016,7 +1016,7 @@
 	.timeline .serviceline b { color: var(--turmeric-deep); }
 	.passbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0 14px; }
 	.passbar .svc { font-size: var(--t-small); color: var(--ink-soft); }
-	.passbar input { font: inherit; padding: 5px 8px; border: 1px solid var(--line); background: var(--card, transparent); color: var(--ink); border-radius: var(--radius); }
+	.passbar input { font: inherit; padding: 5px 8px; border: 1px solid var(--field-line); background: var(--card, transparent); color: var(--ink); border-radius: var(--radius); }
 	.passbar .chip.on { border-color: var(--turmeric-deep); color: var(--turmeric-deep); }
 	.passbar .left { font-size: var(--t-small); color: var(--ink-soft); font-variant-numeric: tabular-nums; }
 	.hint.soft { color: var(--muted); }
@@ -1030,7 +1030,7 @@
 	.dishform { display: grid; gap: 10px; margin: 12px 0 18px; max-width: 640px; }
 	.dishform .frow { display: flex; flex-wrap: wrap; gap: 8px; }
 	.dishform input, .dishform textarea {
-		border: 1px solid var(--line); background: var(--card); border-radius: var(--radius);
+		border: 1px solid var(--field-line); background: var(--card); border-radius: var(--radius);
 		padding: 8px 12px; font-size: 14.5px; font-family: inherit; flex: 1; min-width: 140px;
 	}
 	.dishform .short { flex: 0 1 110px; min-width: 90px; }

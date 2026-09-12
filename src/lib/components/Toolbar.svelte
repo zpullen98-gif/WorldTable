@@ -174,7 +174,7 @@
 	.search input {
 		width: 100%;
 		padding: 10px 14px 10px 38px;
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		background: var(--card);
 		border-radius: var(--radius);
 		color: var(--ink);

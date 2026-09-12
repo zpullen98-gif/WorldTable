@@ -283,7 +283,7 @@
 		font-size: var(--t-small, 0.8125rem);
 	}
 	.controls input[type='time'] {
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		background: none;
 		padding: 7px 9px;
 		border-radius: var(--radius);
@@ -318,7 +318,7 @@
 		color: var(--ink-soft);
 	}
 	.cnt input {
-		border: 1px solid var(--line);
+		border: 1px solid var(--field-line);
 		background: none;
 		padding: 6px 8px;
 		border-radius: var(--radius);
