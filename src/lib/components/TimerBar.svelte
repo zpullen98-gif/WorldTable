@@ -212,7 +212,14 @@
 					bind:value={minutes}
 					aria-label="Minutes"
 					onkeydown={(e) => {
-						if (e.key === 'Enter') begin(Number(minutes));
+						/* preventDefault, or Enter starts the timer and then re-opens
+						   this panel: begin() unmounts the field, the effect above hands
+						   focus to "+ Timer" in the same tick, and the key's default
+						   click lands on that button. Clicking Start never did this. */
+						if (e.key === 'Enter') {
+							e.preventDefault();
+							begin(Number(minutes));
+						}
 					}}
 				/>
 				<button class="act" onclick={() => begin(Number(minutes))} disabled={!Number(minutes)}>
@@ -243,7 +250,7 @@
 </div>
 
 <style>
-	/* 32px targets kept: this is tapped one-handed beside a pan. */
+	/* Tapped one-handed beside a pan: the 44px floor, not 32. */
 	.addbtn {
 		align-self: flex-end;
 		background: var(--card);

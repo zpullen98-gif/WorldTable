@@ -596,7 +596,9 @@
 	.group button {
 		background: var(--card);
 		border: 0;
-		border-right: 1px solid var(--line);
+		/* --field-line, not --line: a 1.4:1 hairline between two unpressed
+		   segments is not a boundary a reader can see. */
+		border-right: 1px solid var(--field-line);
 		padding: 7px 12px;
 		cursor: pointer;
 		font-size: var(--t-small);

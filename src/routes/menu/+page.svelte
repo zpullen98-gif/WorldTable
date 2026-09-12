@@ -972,7 +972,8 @@
 	.chip:hover:not(:disabled) { border-color: var(--turmeric); }
 	a.chip { text-decoration: none; color: var(--ink); display: inline-flex; align-items: center; }
 	.chip:disabled { opacity: 0.45; cursor: default; }
-	select.chip { appearance: none; max-width: 280px; }
+	/* A form control wearing the chip's coat: its edge is the field edge (3:1). */
+	select.chip { appearance: none; max-width: 280px; border-color: var(--field-line); }
 	.msg { font-size: var(--t-small); color: var(--turmeric-deep); margin-bottom: 10px; }
 
 	.stats { display: flex; flex-wrap: wrap; gap: 26px; border-block: 1px solid var(--line); padding: 14px 0; margin: 14px 0 24px; }

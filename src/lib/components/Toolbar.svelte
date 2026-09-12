@@ -213,6 +213,8 @@
 
 	select.chip {
 		appearance: none;
+		/* A form control wearing the chip's coat: its edge is the field edge (3:1). */
+		border-color: var(--field-line);
 		padding-right: 28px;
 		background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
 			linear-gradient(135deg, currentColor 50%, transparent 50%);

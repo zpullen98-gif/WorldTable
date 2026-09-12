@@ -178,17 +178,29 @@ export default defineConfig({
 				 * open had no chip and no streak. static/sw-shared.js, imported below
 				 * in the wing build only, warms this cache at install, best-effort,
 				 * one URL at a time. It caches the BARE URLs because the ?v=N stamp
-				 * on shell.html's tags is written by the monorepo after the build;
-				 * ignoreSearch lets that request be answered from the bare entry and
-				 * revalidated when the network is there.
+				 * on shell.html's tags is written by the monorepo after the build.
+				 *
+				 * ONE KEY PER FILE. The cacheKeyWillBeUsed plugin below strips the
+				 * search from every read AND every write on this route, so the
+				 * install-time entry, the entry a ?v=26 request is served from and
+				 * the entry the background revalidation writes are the same entry.
+				 * This was matchOptions ignoreSearch, and that only widened the READ:
+				 * the revalidation still wrote a stamped key that nothing ever read,
+				 * the bare entry answered every stamp for good, and a new worker
+				 * re-adding the bare key pushed it to the end of the cache, behind the
+				 * stale stamped entries ignoreSearch matched first. The wing could go
+				 * on serving an older shared script than the page asked for while the
+				 * hub and the other four wings ran the new one. With the key stripped
+				 * a bumped stamp is answered from the entry on hand and that entry is
+				 * refreshed by the revalidation, the next open runs the new copy, and
+				 * every install (every rebuild) refetches all nine.
 				 *
 				 * No maxAgeSeconds. These files are versioned by ?v=N, so a stale copy
-				 * is replaced by a new key rather than going bad with age, and the 90
-				 * days that used to be here meant an installed wing unopened for a
-				 * season lost its return chip the next time it was opened without
-				 * signal. The other four wings precache the same nine files with no
-				 * expiry. maxEntries bounds the cache instead: nine bare entries plus
-				 * nine per stamp, so 40 holds the current stamp and two before it.
+				 * is replaced rather than going bad with age, and the 90 days that
+				 * used to be here meant an installed wing unopened for a season lost
+				 * its return chip the next time it was opened without signal. The
+				 * other four wings precache the same nine files with no expiry.
+				 * maxEntries bounds the cache instead: nine files, one key each.
 				 *
 				 * The cache name is prefixed oot- so the sibling wings' activate
 				 * handlers, which reap only their own prefix, leave it alone. It is
@@ -201,8 +213,16 @@ export default defineConfig({
 						handler: 'StaleWhileRevalidate',
 						options: {
 							cacheName: 'oot-shared-v1',
-							matchOptions: { ignoreSearch: true },
-							expiration: { maxEntries: 40 }
+							plugins: [
+								{
+									cacheKeyWillBeUsed: async ({ request }) => {
+										const u = new URL(request.url);
+										u.search = '';
+										return u.href;
+									}
+								}
+							],
+							expiration: { maxEntries: 16 }
 						}
 					}
 				],

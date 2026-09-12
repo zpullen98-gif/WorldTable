@@ -300,6 +300,8 @@
 	}
 	select.chip {
 		appearance: none;
+		/* A form control wearing the chip's coat: its edge is the field edge (3:1). */
+		border-color: var(--field-line);
 	}
 	.chip.inline {
 		display: flex;

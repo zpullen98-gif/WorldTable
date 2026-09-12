@@ -341,7 +341,8 @@
 		border-radius: var(--radius); cursor: pointer; font-size: 14px;
 	}
 	.chip:hover { border-color: var(--turmeric); }
-	select.chip { appearance: none; max-width: 260px; }
+	/* A form control wearing the chip's coat: its edge is the field edge (3:1). */
+	select.chip { appearance: none; max-width: 260px; border-color: var(--field-line); }
 	.count { font-size: var(--t-small); color: var(--muted); font-variant-numeric: oldstyle-nums; margin-left: auto; }
 	/* .count.due, not .due: a bare `.due` here tied .count on specificity and
 	   lost the tie on source order, so the due-terms pill rendered --muted,
