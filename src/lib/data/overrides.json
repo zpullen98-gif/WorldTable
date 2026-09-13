@@ -1,368 +1,386 @@
 {
-  "_readme": [
-    "Human rulings that beat the derived values in tools/derive/*. Merged last by",
-    "build-data.mjs, and exempt from the diet gates.",
-    "",
-    "Every entry needs a `reason`. If you cannot write one, the fix belongs in the",
-    "keyword tables instead: an override is for a genuine judgement call, not for",
-    "silencing a bug."
-  ],
-  "recipes": {
-    "pimento-cheese": {
-      "reason": "Worcestershire contains anchovy, so containsFish stays true and the allergen line will say so. But the corpus, and ordinary American usage, treat pimento cheese as vegetarian. Following the author for the filter, keeping the fact for the label.",
-      "diet": {
-        "vegetarian": true,
-        "containsFish": true,
-        "confidence": "reviewed"
-      }
-    },
-    "mississippi-comeback-sauce": {
-      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese: vegetarian by the author's call, containsFish reported honestly.",
-      "diet": {
-        "vegetarian": true,
-        "containsFish": true,
-        "confidence": "reviewed"
-      }
-    },
-    "beer-cheese": {
-      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
-      "diet": {
-        "vegetarian": true,
-        "containsFish": true,
-        "confidence": "reviewed"
-      }
-    },
-    "kentucky-beer-cheese-soup": {
-      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
-      "diet": {
-        "vegetarian": true,
-        "containsFish": true,
-        "confidence": "reviewed"
-      }
-    },
-    "wisconsin-beer-cheese-soup": {
-      "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
-      "diet": {
-        "vegetarian": true,
-        "containsFish": true,
-        "confidence": "reviewed"
-      }
-    },
-    "kitsune-udon": {
-      "reason": "The broth line states the kombu-shiitake dashi option explicitly; a later line repeats plain 'dashi' for the aburaage without restating it. Per-line matching cannot carry the alternative across lines, so this is ruled by hand. Kitsune udon is traditionally and straightforwardly vegetarian-capable.",
-      "diet": {
-        "vegetarian": true,
-        "containsFish": true,
-        "confidence": "reviewed"
-      }
-    },
-    "new-mexico-red-chile-enchiladas": {
-      "reason": "Ingredient reads only '500ml stock' with no qualifier. The author marked the dish non-vegetarian, which for a New Mexico red chile sauce means meat stock. Bare 'stock' is too ambiguous to add to the keyword tables without misfiring across the corpus, so it is ruled here.",
-      "diet": {
-        "vegetarian": false,
-        "containsMeat": true,
-        "confidence": "reviewed"
-      }
-    },
-    "arizona-sonoran-enchiladas": {
-      "reason": "Same bare '500ml stock' as new-mexico-red-chile-enchiladas, same ruling.",
-      "diet": {
-        "vegetarian": false,
-        "containsMeat": true,
-        "confidence": "reviewed"
-      }
-    },
-    "texas-smoked-sausage": {
-      "reason": "The sealed line doses the cure by the teaspoon: 1 tsp of cure number 1 is about 5.7 g, which against 1.2 kg of meat is 0.475 percent, roughly 300 ppm ingoing nitrite against the 156 ppm ceiling, and 'pink curing salt' is the exact name Polgesek warns against. Restated in the house form every other cure in the corpus uses: grams at 0.25 percent of the meat, weighed. The smoke step pulled fresh ground pork and beef at 68C with no Fahrenheit pair; 71C (160F) is the ground-meat minimum the product is held to in training, and the pair is written by hand so the US toggle takes the author's number.",
-      "ingredients": {
-        "1 tsp pink curing salt": "3 g curing salt number 1 (6.25 percent sodium nitrite), 0.25 percent of the meat, weighed on a scale reading to 0.01 g"
-      },
-      "steps": {
-        "Smoke at 110C over post oak 3-4 hours until the internal temperature reaches 68C.": "Smoke at 110C over post oak 3-4 hours until the internal temperature reaches 71C (160F)."
-      }
-    },
-    "christmas-pudding": {
-      "reason": "Three keyword readings ruled wrong, stated as DROPS so the rest of the derivation stays live. 'Pleating dumplings': a pleated parchment and foil lid tied over a basin, not a dumpling. 'Tempering a custard': the recipe never makes one - 'serve with brandy butter or custard' is a serving suggestion in the last line. The array form this row used to take froze all three in and made the second unfixable without rewriting the list.",
-      "techniquesDrop": [
-        "Pleating dumplings",
-        "Tempering a custard"
-      ]
-    },
-    "steak-and-kidney-pudding": {
-      "reason": "Two keyword readings ruled wrong, stated as DROPS so the rest of the derivation stays live. 'Pleating dumplings': a pleated parchment and foil lid tied over a basin, not a dumpling. 'Salted water & the float test': the phrase is 'soak the kidney in cold salted water', which is drawing blood out of offal, not testing gnocchi for buoyancy.",
-      "techniquesDrop": [
-        "Pleating dumplings",
-        "Salted water & the float test"
-      ]
-    },
-    "tempered-dark-chocolate-by-seeding": {
-      "reason": "Technique 'Steaming: basket, leaf and lid' removed: its own step reads \"keeping every drop of water and every wisp of steam off the bowl\", and Tempering chocolate put in its place: the extracted table names that technique and its keys never matched this recipe.",
-      "techniques": [
-        "Tempering chocolate"
-      ]
-    },
-    "porrusalda": {
-      "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"wet leeks steam instead of sweating\": the word is the warning.",
-      "techniques": [
-        "Sweating aromatics: soft, never browned",
-        "The bare simmer: holding liquid below the boil"
-      ]
-    },
-    "daube-provencale": {
-      "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"dry every face of every piece, or it will steam rather than brown\".",
-      "techniques": [
-        "The bare simmer: holding liquid below the boil",
-        "Straining & passing through a sieve",
-        "Marinating: acid, salt and time"
-      ]
-    },
-    "marquesitas": {
-      "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"cook without moving it until the steam coming off the surface stops\".",
-      "techniques": []
-    },
-    "alaska-salmon-pirok": {
-      "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"cut steam vents\" in a pie crust.",
-      "techniques": [
-        "Sweating aromatics: soft, never browned",
-        "Egg wash & the baker’s shine"
-      ]
-    },
-    "celeriac-baked-in-salt-dough": {
-      "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"every crack is a steam leak\": it is baked in salt.",
-      "techniques": [
-        "Dry-pan toasting: spices, seeds and nuts"
-      ]
-    },
-    "avial": {
-      "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"pull the pot off the heat, let the steam die back\".",
-      "techniques": [
-        "Knife cuts: dice, julienne, bias"
-      ]
-    },
-    "milanesa-a-la-napolitana": {
-      "reason": "Technique 'The soufflé' removed: \"the milanesa crust should be a jacket, not a soufflé\" is a DENIAL, and the tag path has no negation guard (the three guards in films.mjs are film-only). This is a breaded fried cutlet.",
-      "techniques": [
-        "The broiler: heat from above",
-        "Sautéing & the shallow fry",
-        "The coat before the fry: dredge, crumb, batter"
-      ]
-    },
-    "hand-rolled-bagels": {
-      "reason": "Technique 'Draining fried food: a rack, never paper' removed: \"drain on a rack for a moment\" sits INSIDE the boiling step. A bagel is boiled, not fried, and judgedBy[0] was grading a boiled bread on fry drainage.",
-      "techniques": [
-        "Boiling bagels",
-        "Salted water & the float test"
-      ]
-    },
-    "faisan-aux-choux": {
-      "reason": "Technique 'Choux pastry' removed: the sealed keyword 'choux' is French for CABBAGE, and this is pheasant braised on savoy. No pastry.",
-      "techniquesDrop": [
-        "Choux pastry"
-      ]
-    },
-    "flammekueche-tarte-flambee": {
-      "reason": "Technique 'Flambé' removed: the sealed keyword 'flamb' matches the tart's own name. It is a flatbread baked on a stone at 270C; nothing is lit.",
-      "techniquesDrop": [
-        "Flambé"
-      ]
-    },
-    "lutefisk": {
-      "reason": "Technique 'The pretzel bath' removed: the sealed keyword 'lye' matches this fish's sodium-hydroxide cure. Same reagent, different job - that page is about giving BREAD an alkaline skin for the oven.",
-      "techniquesDrop": [
-        "The pretzel bath"
-      ]
-    },
-    "kulfi": {
-      "reason": "Technique 'Churning ice cream' removed: the sealed keyword 'churn' sits inside 'no eggs, no churning: kulfi is proudly still' - a DENIAL, which the tag path cannot see (films.mjs's negation guard is film-only). Kulfi carries nothing else, and an honest silence beats a wrong grade; marquesitas is the precedent.",
-      "techniquesDrop": [
-        "Churning ice cream"
-      ]
-    },
-    "sarson-da-saag": {
-      "reason": "Technique 'Churning ice cream' removed: the sealed keyword 'churn' matches 'mash the greens in the pot with a wooden churner'. A tool, not the technique.",
-      "techniquesDrop": [
-        "Churning ice cream"
-      ]
-    },
-    "chocolate-chip-cookies": {
-      "reason": "EQUIP's Deep-fry pot pattern carries a bare '190°c' alternative with no oil/fry context, meant for a temperature stated in an oil line - but this recipe's only 190°C is 'Bake 190°C, 11-12 min', its whole equipment line. No oil, no frying, anywhere in it. A precision fix to the pattern itself would cost fish-and-chips and moules-frites their own genuine 190°C oil reading (both match the SAME bare alternative, and neither states 'oil for frying' verbatim), so this is a per-recipe ruling rather than a pattern change.",
-      "equipment": []
-    },
-    "eggplant-parmigiana": {
-      "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies. This dish does pan-fry the eggplant ('Fry or roast at 220°C'), just not in a deep-fry pot; its 190°C is 'bake 190°c for 30 min', the casserole oven.",
-      "equipment": ["Thermometer"]
-    },
-    "briam": {
-      "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake 190°c for 60-75 min' is the tray of roasted vegetables, no fryer anywhere.",
-      "equipment": ["Grater / zester"]
-    },
-    "apfelstrudel": {
-      "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake 190°c, 35-40 min' is the strudel in the oven.",
-      "equipment": ["Sheet pan"]
-    },
-    "smulpaj-med-kardemumma": {
-      "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake 190°c, 35-40 min' is the crumble, no fryer anywhere - and, like chocolate-chip-cookies, it was the dish's entire equipment line.",
-      "equipment": []
-    },
-    "kurtoskalacs": {
-      "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake at 190°c suspended over a tray' is the chimney cake turning over a rotisserie, not a fryer. Not in the sealed 970, so no parity constraint, but the same defect deserves the same fix rather than a one-off regex patch.",
-      "equipment": ["Grill", "Sheet pan", "Rolling pin"]
-    }
+ "_readme": [
+  "Human rulings that beat the derived values in tools/derive/*. Merged last by",
+  "build-data.mjs, and exempt from the diet gates.",
+  "",
+  "Every entry needs a `reason`. If you cannot write one, the fix belongs in the",
+  "keyword tables instead: an override is for a genuine judgement call, not for",
+  "silencing a bug."
+ ],
+ "recipes": {
+  "pimento-cheese": {
+   "reason": "Worcestershire contains anchovy, so containsFish stays true and the allergen line will say so. But the corpus, and ordinary American usage, treat pimento cheese as vegetarian. Following the author for the filter, keeping the fact for the label.",
+   "diet": {
+    "vegetarian": true,
+    "containsFish": true,
+    "confidence": "reviewed"
+   }
   },
-  "lexicon": {
-    "_readme": "Hand rulings over the lexicon cross-links, mirroring recipes[].techniques: the scorer cannot see word sense, so a collision no rule can separate gets a reasoned row here. `empty` clears the term, `drop` removes named links, `keep` pins links the mechanical rule would delete. Every row needs a reason, and the build fails on a dead row: a drop that suppressed nothing or a keep naming a pair the scorer never picked means the corpus moved and the judgement must be re-made.",
-    "strip-new-york-strip": {
-      "reason": "Force-empty: no strip steak dish exists in the corpus. Its surviving matches are zest strips and dough strips ('Roll the dough into a long strip' on a Wisconsin Kringle).",
-      "empty": true
-    },
-    "the-round-top-bottom-eye": {
-      "reason": "Force-empty: no whole-round dish exists. Matches are 'the rounds' of crackers and eggplant.",
-      "empty": true
-    },
-    "flat-iron": {
-      "reason": "Force-empty: no flat-iron steak dish exists. Matches are cast-iron skillets and flat griddles.",
-      "empty": true
-    },
-    "clove": {
-      "reason": "The spice term, and the match is '1 garlic clove': the one word-sense collision a core-phrase hit can still make. (Lao Beijing needed no drop: its 'cloves' already fails the word-boundary regex.)",
-      "drop": [
-        "pan-con-tomate"
-      ]
-    },
-    "tempering-eggs-and-chocolate": {
-      "reason": "The Bengali tadka is also called tempering; Shukto and Cholar Dal temper spices in hot oil, not eggs into custard.",
-      "drop": [
-        "shukto",
-        "cholar-dal"
-      ]
-    },
-    "marbling": {
-      "reason": "Beef-fat marbling, matched on a pasta's cut-face 'marbling'.",
-      "drop": [
-        "garganelli-al-pettine-con-prosciutto-e-piselli"
-      ]
-    },
-    "knife-cuts-the-classical-ladder": {
-      "reason": "A steamed pandan custard cake carrying 'knife' for slicing the pan; no classical cut is performed.",
-      "drop": [
-        "kuih-talam-pandan"
-      ]
-    },
-    "steel-science-carbon-stainless-and-hrc": {
-      "reason": "Knife steel, matched on 'Preheat a steel or stone': the pizza steel is a different object.",
-      "drop": [
-        "pizza-margherita"
-      ]
-    },
-    "scales-and-measuring-by-weight": {
-      "reason": "Measuring by weight, matched on 'Press under a weight 30 min': a pressing weight, not a scale.",
-      "drop": [
-        "muffuletta"
-      ]
-    },
-    "the-brine-and-sea-register": {
-      "reason": "The FLAVOR register (oysters, capers, sea vegetables); the fried chickens brine as a TECHNIQUE, which is 'Brining & curing', not this term.",
-      "drop": [
-        "korean-fried-chicken",
-        "buttermilk-fried-chicken"
-      ]
-    },
-    "sheet-pans-racks-and-hotel-pans": {
-      "reason": "Equipment term riding 'sheet'/'pans' on a stack cake's cake pans, a pastry sheet and a dough sheet.",
-      "drop": [
-        "pasteis-de-nata",
-        "roti-canai"
-      ]
-    },
-    "grilling-vs-barbecue-vs-smoking": {
-      "reason": "'dripping SMOKING in a muffin tin' is oven-hot beef fat for Yorkshire puddings, not barbecue.",
-      "drop": [
-        "sunday-roast-beef-and-yorkshire-puddings"
-      ]
-    },
-    "rinses-floats-and-layering": {
-      "reason": "A cocktail term; the tamales' 'float test' is the masa buoyancy check, its own technique.",
-      "drop": [
-        "tamales-rojos"
-      ]
-    },
-    "pomegranate-and-quince-autumns-perfume": {
-      "reason": "Assam Laksa's 'perfume' belongs to torch ginger, not to autumn fruit.",
-      "drop": [
-        "assam-laksa"
-      ]
-    },
-    "fermentation-in-bread-yeast-levain-preferments": {
-      "reason": "Pinned: 'yeast' misses the staple cap at DF 104 by four recipes, and these two are the corpus's flagship yeasted breads.",
-      "keep": [
-        "pizza-margherita",
-        "rosemary-focaccia"
-      ]
-    },
-    "emulsions": {
-      "reason": "Pinned: the three canonical emulsion sauces carry the term only in their CHAPTER title, and chapters were measured and rejected as subject position (16 of 21 chapter-carried links were geography homographs).",
-      "keep": [
-        "hollandaise-and-the-two-ways-it-splits",
-        "sauce-bearnaise",
-        "beurre-blanc-the-cold-butter-mount"
-      ]
-    },
-    "round-fish-vs-flat-fish": {
-      "reason": "Pinned: the sea trout is the corpus's one full round-fish breakdown; its carrier 'fish' is a staple word (DF 143).",
-      "keep": [
-        "sea-trout-filleted-and-cured"
-      ]
-    },
-    "stocks-blanc-brun-broth-and-demi": {
-      "reason": "Pinned: the ramen is built on the term's own stocks; its carriers 'broth'/'stock' are staple words.",
-      "keep": [
-        "weeknight-shoyu-ramen"
-      ]
-    },
-    "the-nutty-register": {
-      "reason": "Pinned: the veloute's beurre noisette IS the register; carrier 'nutty' rides prose the position test cannot see.",
-      "keep": [
-        "sauce-veloute"
-      ]
-    },
-    "umami-and-the-glutamate-pantry": {
-      "reason": "Pinned: kombu-and-shoyu broth is the glutamate pantry in practice; carriers are staple words.",
-      "keep": [
-        "kansai-kake-jiru-usukuchi-noodle-broth"
-      ]
-    },
-    "pork-shoulder-butt-vs-picnic": {
-      "reason": "Pinned: char siu is a pork-shoulder showcase whose ingredient line says 'pork shoulder' — 'pork' alone is a staple word (DF > 100).",
-      "keep": [
-        "char-siu-pork"
-      ]
-    },
-    "black-pepper-and-the-pepper-family": {
-      "reason": "Pinned: the two dishes built ON black pepper; 'pepper' is a staple word carrying chiles everywhere else.",
-      "keep": [
-        "cacio-e-pepe",
-        "dan-dan-noodles"
-      ]
-    },
-    "wok-hei-and-stir-fry-discipline": {
-      "reason": "Pinned: the one genuine wok stir-fry the rule keeps losing to the staple cap on 'stir' (DF 479), which rightly kills the Bolognese and the omelette.",
-      "keep": [
-        "yakisoba"
-      ]
-    },
-    "tomatoes-the-argument-for-august": {
-      "reason": "Pinned: the two dishes that ARE the August argument; 'tomatoes' is a staple word (DF > 100).",
-      "keep": [
-        "pizza-margherita",
-        "ratatouille"
-      ]
-    },
-    "cheese-families": {
-      "reason": "Pinned: pecorino and gruyere showcases; 'cheese' is a staple word (DF > 100).",
-      "keep": [
-        "cacio-e-pepe",
-        "quiche-lorraine"
-      ]
-    }
+  "mississippi-comeback-sauce": {
+   "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese: vegetarian by the author's call, containsFish reported honestly.",
+   "diet": {
+    "vegetarian": true,
+    "containsFish": true,
+    "confidence": "reviewed"
+   }
+  },
+  "beer-cheese": {
+   "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
+   "diet": {
+    "vegetarian": true,
+    "containsFish": true,
+    "confidence": "reviewed"
+   }
+  },
+  "kentucky-beer-cheese-soup": {
+   "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
+   "diet": {
+    "vegetarian": true,
+    "containsFish": true,
+    "confidence": "reviewed"
+   }
+  },
+  "wisconsin-beer-cheese-soup": {
+   "reason": "Worcestershire (anchovy). Same ruling as pimento-cheese.",
+   "diet": {
+    "vegetarian": true,
+    "containsFish": true,
+    "confidence": "reviewed"
+   }
+  },
+  "kitsune-udon": {
+   "reason": "The broth line states the kombu-shiitake dashi option explicitly; a later line repeats plain 'dashi' for the aburaage without restating it. Per-line matching cannot carry the alternative across lines, so this is ruled by hand. Kitsune udon is traditionally and straightforwardly vegetarian-capable.",
+   "diet": {
+    "vegetarian": true,
+    "containsFish": true,
+    "confidence": "reviewed"
+   }
+  },
+  "new-mexico-red-chile-enchiladas": {
+   "reason": "Ingredient reads only '500ml stock' with no qualifier. The author marked the dish non-vegetarian, which for a New Mexico red chile sauce means meat stock. Bare 'stock' is too ambiguous to add to the keyword tables without misfiring across the corpus, so it is ruled here.",
+   "diet": {
+    "vegetarian": false,
+    "containsMeat": true,
+    "confidence": "reviewed"
+   }
+  },
+  "arizona-sonoran-enchiladas": {
+   "reason": "Same bare '500ml stock' as new-mexico-red-chile-enchiladas, same ruling.",
+   "diet": {
+    "vegetarian": false,
+    "containsMeat": true,
+    "confidence": "reviewed"
+   }
+  },
+  "texas-smoked-sausage": {
+   "reason": "The sealed line doses the cure by the teaspoon: 1 tsp of cure number 1 is about 5.7 g, which against 1.2 kg of meat is 0.475 percent, roughly 300 ppm ingoing nitrite against the 156 ppm ceiling, and 'pink curing salt' is the exact name Polgesek warns against. Restated in the house form every other cure in the corpus uses: grams at 0.25 percent of the meat, weighed. The smoke step pulled fresh ground pork and beef at 68C with no Fahrenheit pair; 71C (160F) is the ground-meat minimum the product is held to in training, and the pair is written by hand so the US toggle takes the author's number.",
+   "ingredients": {
+    "1 tsp pink curing salt": "3 g curing salt number 1 (6.25 percent sodium nitrite), 0.25 percent of the meat, weighed on a scale reading to 0.01 g"
+   },
+   "steps": {
+    "Smoke at 110C over post oak 3-4 hours until the internal temperature reaches 68C.": "Smoke at 110C over post oak 3-4 hours until the internal temperature reaches 71C (160F)."
+   }
+  },
+  "christmas-pudding": {
+   "reason": "Three keyword readings ruled wrong, stated as DROPS so the rest of the derivation stays live. 'Pleating dumplings': a pleated parchment and foil lid tied over a basin, not a dumpling. 'Tempering a custard': the recipe never makes one - 'serve with brandy butter or custard' is a serving suggestion in the last line. The array form this row used to take froze all three in and made the second unfixable without rewriting the list.",
+   "techniquesDrop": [
+    "Pleating dumplings",
+    "Tempering a custard"
+   ]
+  },
+  "steak-and-kidney-pudding": {
+   "reason": "Two keyword readings ruled wrong, stated as DROPS so the rest of the derivation stays live. 'Pleating dumplings': a pleated parchment and foil lid tied over a basin, not a dumpling. 'Salted water & the float test': the phrase is 'soak the kidney in cold salted water', which is drawing blood out of offal, not testing gnocchi for buoyancy.",
+   "techniquesDrop": [
+    "Pleating dumplings",
+    "Salted water & the float test"
+   ]
+  },
+  "tempered-dark-chocolate-by-seeding": {
+   "reason": "Technique 'Steaming: basket, leaf and lid' removed: its own step reads \"keeping every drop of water and every wisp of steam off the bowl\", and Tempering chocolate put in its place: the extracted table names that technique and its keys never matched this recipe.",
+   "techniques": [
+    "Tempering chocolate"
+   ]
+  },
+  "porrusalda": {
+   "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"wet leeks steam instead of sweating\": the word is the warning.",
+   "techniques": [
+    "Sweating aromatics: soft, never browned",
+    "The bare simmer: holding liquid below the boil"
+   ]
+  },
+  "daube-provencale": {
+   "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"dry every face of every piece, or it will steam rather than brown\".",
+   "techniques": [
+    "The bare simmer: holding liquid below the boil",
+    "Straining & passing through a sieve",
+    "Marinating: acid, salt and time"
+   ]
+  },
+  "marquesitas": {
+   "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"cook without moving it until the steam coming off the surface stops\".",
+   "techniques": []
+  },
+  "alaska-salmon-pirok": {
+   "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"cut steam vents\" in a pie crust.",
+   "techniques": [
+    "Sweating aromatics: soft, never browned",
+    "Egg wash & the baker’s shine"
+   ]
+  },
+  "celeriac-baked-in-salt-dough": {
+   "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"every crack is a steam leak\": it is baked in salt.",
+   "techniques": [
+    "Dry-pan toasting: spices, seeds and nuts"
+   ]
+  },
+  "avial": {
+   "reason": "Technique 'Steaming: basket, leaf and lid' removed: \"pull the pot off the heat, let the steam die back\".",
+   "techniques": [
+    "Knife cuts: dice, julienne, bias"
+   ]
+  },
+  "milanesa-a-la-napolitana": {
+   "reason": "Technique 'The soufflé' removed: \"the milanesa crust should be a jacket, not a soufflé\" is a DENIAL, and the tag path has no negation guard (the three guards in films.mjs are film-only). This is a breaded fried cutlet.",
+   "techniques": [
+    "The broiler: heat from above",
+    "Sautéing & the shallow fry",
+    "The coat before the fry: dredge, crumb, batter"
+   ]
+  },
+  "hand-rolled-bagels": {
+   "reason": "Technique 'Draining fried food: a rack, never paper' removed: \"drain on a rack for a moment\" sits INSIDE the boiling step. A bagel is boiled, not fried, and judgedBy[0] was grading a boiled bread on fry drainage.",
+   "techniques": [
+    "Boiling bagels",
+    "Salted water & the float test"
+   ]
+  },
+  "faisan-aux-choux": {
+   "reason": "Technique 'Choux pastry' removed: the sealed keyword 'choux' is French for CABBAGE, and this is pheasant braised on savoy. No pastry.",
+   "techniquesDrop": [
+    "Choux pastry"
+   ]
+  },
+  "flammekueche-tarte-flambee": {
+   "reason": "Technique 'Flambé' removed: the sealed keyword 'flamb' matches the tart's own name. It is a flatbread baked on a stone at 270C; nothing is lit.",
+   "techniquesDrop": [
+    "Flambé"
+   ]
+  },
+  "lutefisk": {
+   "reason": "Technique 'The pretzel bath' removed: the sealed keyword 'lye' matches this fish's sodium-hydroxide cure. Same reagent, different job - that page is about giving BREAD an alkaline skin for the oven.",
+   "techniquesDrop": [
+    "The pretzel bath"
+   ]
+  },
+  "kulfi": {
+   "reason": "Technique 'Churning ice cream' removed: the sealed keyword 'churn' sits inside 'no eggs, no churning: kulfi is proudly still' - a DENIAL, which the tag path cannot see (films.mjs's negation guard is film-only). Kulfi carries nothing else, and an honest silence beats a wrong grade; marquesitas is the precedent.",
+   "techniquesDrop": [
+    "Churning ice cream"
+   ]
+  },
+  "sarson-da-saag": {
+   "reason": "Technique 'Churning ice cream' removed: the sealed keyword 'churn' matches 'mash the greens in the pot with a wooden churner'. A tool, not the technique.",
+   "techniquesDrop": [
+    "Churning ice cream"
+   ]
+  },
+  "chocolate-chip-cookies": {
+   "reason": "EQUIP's Deep-fry pot pattern carries a bare '190°c' alternative with no oil/fry context, meant for a temperature stated in an oil line - but this recipe's only 190°C is 'Bake 190°C, 11-12 min', its whole equipment line. No oil, no frying, anywhere in it. A precision fix to the pattern itself would cost fish-and-chips and moules-frites their own genuine 190°C oil reading (both match the SAME bare alternative, and neither states 'oil for frying' verbatim), so this is a per-recipe ruling rather than a pattern change.",
+   "equipment": []
+  },
+  "eggplant-parmigiana": {
+   "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies. This dish does pan-fry the eggplant ('Fry or roast at 220°C'), just not in a deep-fry pot; its 190°C is 'bake 190°c for 30 min', the casserole oven.",
+   "equipment": [
+    "Thermometer"
+   ]
+  },
+  "briam": {
+   "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake 190°c for 60-75 min' is the tray of roasted vegetables, no fryer anywhere.",
+   "equipment": [
+    "Grater / zester"
+   ]
+  },
+  "apfelstrudel": {
+   "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake 190°c, 35-40 min' is the strudel in the oven.",
+   "equipment": [
+    "Sheet pan"
+   ]
+  },
+  "smulpaj-med-kardemumma": {
+   "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake 190°c, 35-40 min' is the crumble, no fryer anywhere - and, like chocolate-chip-cookies, it was the dish's entire equipment line.",
+   "equipment": []
+  },
+  "kurtoskalacs": {
+   "reason": "Same EQUIP bare-190°c false positive as chocolate-chip-cookies: 'bake at 190°c suspended over a tray' is the chimney cake turning over a rotisserie, not a fryer. Not in the sealed 970, so no parity constraint, but the same defect deserves the same fix rather than a one-off regex patch.",
+   "equipment": [
+    "Grill",
+    "Sheet pan",
+    "Rolling pin"
+   ]
   }
+ },
+ "lexicon": {
+  "_readme": "Hand rulings over the lexicon cross-links, mirroring recipes[].techniques: the scorer cannot see word sense, so a collision no rule can separate gets a reasoned row here. `empty` clears the term, `drop` removes named links, `keep` pins links the mechanical rule would delete. Every row needs a reason, and the build fails on a dead row: a drop that suppressed nothing or a keep naming a pair the scorer never picked means the corpus moved and the judgement must be re-made.",
+  "black-pepper-and-the-pepper-family": {
+   "reason": "Pinned: the two dishes built ON black pepper; 'pepper' is a staple word carrying chiles everywhere else.",
+   "keep": [
+    "cacio-e-pepe",
+    "dan-dan-noodles"
+   ]
+  },
+  "cheese-families": {
+   "reason": "Pinned: pecorino and gruyere showcases; 'cheese' is a staple word (DF > 100).",
+   "keep": [
+    "cacio-e-pepe",
+    "quiche-lorraine"
+   ]
+  },
+  "clove": {
+   "reason": "The spice term, and the match is '1 garlic clove': the one word-sense collision a core-phrase hit can still make. (Lao Beijing needed no drop: its 'cloves' already fails the word-boundary regex.)",
+   "drop": [
+    "pan-con-tomate"
+   ]
+  },
+  "emulsions": {
+   "reason": "Pinned: the three canonical emulsion sauces carry the term only in their CHAPTER title, and chapters were measured and rejected as subject position (16 of 21 chapter-carried links were geography homographs).",
+   "keep": [
+    "hollandaise-and-the-two-ways-it-splits",
+    "sauce-bearnaise",
+    "beurre-blanc-the-cold-butter-mount"
+   ]
+  },
+  "english-pea": {
+   "reason": "Force-empty: the scorer matched on ENGLISH, not on peas. Its links were full-english-breakfast and english-muffins, neither of which contains a pea. No shelling-pea dish in the corpus names the term.",
+   "empty": true
+  },
+  "fermentation-in-bread-yeast-levain-preferments": {
+   "reason": "Pinned: 'yeast' misses the staple cap at DF 104 by four recipes, and these two are the corpus's flagship yeasted breads.",
+   "keep": [
+    "pizza-margherita",
+    "rosemary-focaccia"
+   ]
+  },
+  "flat-iron": {
+   "reason": "Force-empty: no flat-iron steak dish exists. Matches are cast-iron skillets and flat griddles.",
+   "empty": true
+  },
+  "grilling-vs-barbecue-vs-smoking": {
+   "reason": "'dripping SMOKING in a muffin tin' is oven-hot beef fat for Yorkshire puddings, not barbecue.",
+   "drop": [
+    "sunday-roast-beef-and-yorkshire-puddings"
+   ]
+  },
+  "knife-cuts-the-classical-ladder": {
+   "reason": "A steamed pandan custard cake carrying 'knife' for slicing the pan; no classical cut is performed.",
+   "drop": [
+    "kuih-talam-pandan"
+   ]
+  },
+  "marbling": {
+   "reason": "Beef-fat marbling, matched on a pasta's cut-face 'marbling'.",
+   "drop": [
+    "garganelli-al-pettine-con-prosciutto-e-piselli"
+   ]
+  },
+  "pea-shoots": {
+   "reason": "Force-empty: the scorer matched on SHOOTS. All three links were bamboo shoots (green curry, yan du xian) and green garlic shoots (hui guo rou). No dish in the corpus uses pea shoots.",
+   "empty": true
+  },
+  "pomegranate-and-quince-autumns-perfume": {
+   "reason": "Assam Laksa's 'perfume' belongs to torch ginger, not to autumn fruit.",
+   "drop": [
+    "assam-laksa"
+   ]
+  },
+  "pork-shoulder-butt-vs-picnic": {
+   "reason": "Pinned: char siu is a pork-shoulder showcase whose ingredient line says 'pork shoulder' — 'pork' alone is a staple word (DF > 100).",
+   "keep": [
+    "char-siu-pork"
+   ]
+  },
+  "rinses-floats-and-layering": {
+   "reason": "A cocktail term; the tamales' 'float test' is the masa buoyancy check, its own technique.",
+   "drop": [
+    "tamales-rojos"
+   ]
+  },
+  "round-fish-vs-flat-fish": {
+   "reason": "Pinned: the sea trout is the corpus's one full round-fish breakdown; its carrier 'fish' is a staple word (DF 143).",
+   "keep": [
+    "sea-trout-filleted-and-cured"
+   ]
+  },
+  "scales-and-measuring-by-weight": {
+   "reason": "Measuring by weight, matched on 'Press under a weight 30 min': a pressing weight, not a scale.",
+   "drop": [
+    "muffuletta"
+   ]
+  },
+  "sheet-pans-racks-and-hotel-pans": {
+   "reason": "Equipment term riding 'sheet'/'pans' on a stack cake's cake pans, a pastry sheet and a dough sheet.",
+   "drop": [
+    "pasteis-de-nata",
+    "roti-canai"
+   ]
+  },
+  "steel-science-carbon-stainless-and-hrc": {
+   "reason": "Knife steel, matched on 'Preheat a steel or stone': the pizza steel is a different object.",
+   "drop": [
+    "pizza-margherita"
+   ]
+  },
+  "stocks-blanc-brun-broth-and-demi": {
+   "reason": "Pinned: the ramen is built on the term's own stocks; its carriers 'broth'/'stock' are staple words.",
+   "keep": [
+    "weeknight-shoyu-ramen"
+   ]
+  },
+  "strip-new-york-strip": {
+   "reason": "Force-empty: no strip steak dish exists in the corpus. Its surviving matches are zest strips and dough strips ('Roll the dough into a long strip' on a Wisconsin Kringle).",
+   "empty": true
+  },
+  "tempering-eggs-and-chocolate": {
+   "reason": "The Bengali tadka is also called tempering; Shukto and Cholar Dal temper spices in hot oil, not eggs into custard.",
+   "drop": [
+    "shukto",
+    "cholar-dal"
+   ]
+  },
+  "the-brine-and-sea-register": {
+   "reason": "The FLAVOR register (oysters, capers, sea vegetables); the fried chickens brine as a TECHNIQUE, which is 'Brining & curing', not this term.",
+   "drop": [
+    "korean-fried-chicken",
+    "buttermilk-fried-chicken"
+   ]
+  },
+  "the-nutty-register": {
+   "reason": "Pinned: the veloute's beurre noisette IS the register; carrier 'nutty' rides prose the position test cannot see.",
+   "keep": [
+    "sauce-veloute"
+   ]
+  },
+  "the-round-top-bottom-eye": {
+   "reason": "Force-empty: no whole-round dish exists. Matches are 'the rounds' of crackers and eggplant.",
+   "empty": true
+  },
+  "tomatoes-the-argument-for-august": {
+   "reason": "Pinned: the two dishes that ARE the August argument; 'tomatoes' is a staple word (DF > 100).",
+   "keep": [
+    "pizza-margherita",
+    "ratatouille"
+   ]
+  },
+  "umami-and-the-glutamate-pantry": {
+   "reason": "Pinned: kombu-and-shoyu broth is the glutamate pantry in practice; carriers are staple words.",
+   "keep": [
+    "kansai-kake-jiru-usukuchi-noodle-broth"
+   ]
+  },
+  "wok-hei-and-stir-fry-discipline": {
+   "reason": "Pinned: the one genuine wok stir-fry the rule keeps losing to the staple cap on 'stir' (DF 479), which rightly kills the Bolognese and the omelette.",
+   "keep": [
+    "yakisoba"
+   ]
+  }
+ }
 }

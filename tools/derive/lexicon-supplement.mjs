@@ -282,6 +282,56 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["stir-frying", "simmering", "blanching", "steaming", "braising"]
 	},
 	{
+		t: "Acorn Squash",
+		c: "The Vegetable Atlas",
+		d: "A ribbed, dark green, acorn-shaped winter squash (Cucurbita pepo), and the least sweet of the common ones: dry matter is around 12 percent, the flesh runs fibrous and mildly nutty, and sugar never climbs the way it does in kabocha or delicata, because it sets little starch and, as a pepo, will not convert what it has to sugar in storage the way the maxima squashes do. It only declines, so buy it to cook, not to keep. The deep ribs and hollow seed cavity make a natural bowl, which is why it is nearly always halved, seasoned in the cavity, and baked: butter and maple, or brown sugar, or sausage and apple, with the added fat and sugar doing work the flesh cannot do alone. Cut it pole to pole through the ribs, score the flesh in a crosshatch, and roast cut side DOWN first at 200C (400F) so the face steams itself tender against the pan; flip and glaze to finish. Young acorn skin is edible, old acorn skin is leather.",
+		season: [9, 10, 11, 12, 1],
+		choose: "Dull dark green with an orange ground spot where it lay in the field; a pale ground spot means it was picked early. Heavy, rind hard, stem dry. Reject fruit gone mostly orange: it is old, stringy, and flat.",
+		store: "Cool dry room at 10 to 13C (50 to 55F), a month or two. Never cure it warm as you would a butternut: above 15C respiration burns off the little sugar it has and the rind goes orange, for stringy, flat flesh. Cut halves, wrapped and cold, 3 days.",
+		prep: "Set it on a damp towel, drive a heavy knife into the crest of a rib at the stem end, and lever down to halve it pole to pole. Scoop seeds and strings, and crosshatch the flesh so seasoning gets past the surface. If the flesh smells or tastes bitter, raw or cooked, throw the whole squash out: acorn crosses readily with ornamental gourds, cooking does not break the cucurbitacins down, and a mouthful brings on violent vomiting and diarrhea.",
+		methods: ["roast", "bake", "steam", "braise", "grill"]
+	},
+	{
+		t: "Amaranth Greens",
+		c: "The Vegetable Atlas",
+		d: "The leaf of the amaranth plant: een choy in Cantonese kitchens, chaulai in India, efo tete in Yoruba, callaloo in Jamaica. In Trinidad and much of the eastern Caribbean callaloo is taro leaf instead, a different plant whose raphides make it unsafe until it has simmered half an hour, so ask which leaf you are buying. A hot-weather green that thrives in the heat that makes spinach bolt. Red types carry BETACYANIN, the beet pigment, water soluble and fragile: long cooking or an alkaline pot turns the magenta brown, so cook it fast and lean acid. Flavor is mild and mineral, with spinach's oxalate chalkiness in older leaves. The leaf collapses in a minute while the stems stay crisp, so slice them separately and give them a two-minute head start. Amaranth is not mucilaginous and will not thicken a stew; the body in callaloo is okra.",
+		season: [6, 7, 8, 9],
+		choose: "Bright turgid leaves with even color, stems crisp enough to snap, no seed heads forming. Reject holed or yellowing leaves, woody lower stems, and bunches already wilting at the tips.",
+		store: "Refrigerate unwashed in a loose bag at 0 to 2 C (32 to 36 F), 4 to 6 days. It grows in heat, but the cut leaf is not chilling sensitive the way basil is; cold plus high humidity is what holds it, and 5 C is what costs it days.",
+		prep: "Wash in several changes of water, since the leaves cup grit. Strip leaves from any stem thicker than a pencil, cut tender stems into 3 cm lengths and start them first. Red types color the pan and the garlic. Oxalate runs higher here than in spinach: for anyone with a stone history, blanch in a big pot and pour the water off, which carries most of the soluble oxalate away. Steaming and stir-frying do not.",
+		methods: ["stir-fry", "saute", "simmer", "blanch", "steam", "braise"]
+	},
+	{
+		t: "Arugula",
+		c: "The Vegetable Atlas",
+		d: "A brassica, not a lettuce, and that is the whole flavor: chewing ruptures cells and lets MYROSINASE meet the GLUCOSINOLATES, generating isothiocyanates in seconds, the same reaction that sharpens mustard and horseradish. Pungency climbs with heat, drought and age, so summer-stressed or bolting plants bite hard while cool-grown spring leaf tastes green and nutty. Salad arugula is ERUCA SATIVA, broad and moderate; WILD or SYLVETTA rocket is another plant, DIPLOTAXIS TENUIFOLIA, narrow-lobed and twice as hot; baby leaf is mildest. The glucosinolates are water-soluble, so soaking leaches them; the isothiocyanates are volatile, so leaves cut early go flat. Heat denatures the enzyme near 70 C, so arugula on a hot pizza wilts sweet. Dress it whole, at the last second, with fat and acid.",
+		season: [4, 5, 6, 9, 10],
+		choose: "Leaves stiff and dark with dry stems, smelling sharply of mustard when you crush one. Reject yellowing, wet clumped leaves at the bottom of the box, and long thick stalks carrying flower buds, which are fibrous.",
+		store: "Refrigerate at 0 to 2 C (32 to 36 F) in a vented box with a dry towel, 3 to 5 days. Trapped moisture turns it to slime overnight; only pea shoots fail faster.",
+		prep: "Wash once in cold water and dry gently but completely, since bruised leaves darken and go bitter. Leave the leaves whole, pull off any stem thicker than a matchstick, and add it off the heat if it is going into something hot.",
+		methods: ["raw", "wilt", "saute", "puree", "grill"]
+	},
+	{
+		t: "Asparagus",
+		c: "The Vegetable Atlas",
+		d: "The spear is a shoot: an entire young stem racing upward, which is why it is the sweetest thing in the garden the hour it is cut and dull three days later. Once severed it keeps respiring, burning its own sugar and stiffening the base with lignin, so a week-old spear is fibrous at the bottom and flat on the palate. The green is chlorophyll; the sulfur note on the plate comes from methionine compounds breaking down in the heat, while the famous smell afterward is a separate matter, asparagusic acid metabolized in the body into volatile sulfides that not everyone can smell. Thickness is variety and crown vigor, not toughness: fat spears from an established crown are tender and sweet, pencil spears from a young one are stringier. Cook them hard and fast so the chlorophyll stays bright: heavily salted boiling water, a hot grill, a dry roast at 220C (425F). Stop while the spear still bends without snapping.",
+		season: [4, 5, 6],
+		choose: "Tight, dry, purple-tinged tips with no flowering and no wet smell; the spear should squeak when two are rubbed together. Reject shriveled or split butts and tips that are going to seed or turning slimy.",
+		store: "Trim a centimeter off the butts and stand the bunch in 2cm of water in the refrigerator, loosely bagged, up to four days. Cold is the whole point: warmth speeds the respiration that burns off the sugar and lays lignin into the base.",
+		prep: "Snap or cut off the woody base, then peel the lower third of fat spears with a swivel peeler; the skin there is lignified and stays tough at any temperature. Thin spears need no peeling at all.",
+		methods: ["blanching", "grilling", "roasting", "steaming", "sauteing", "stir-frying"]
+	},
+	{
+		t: "Bamboo Shoots",
+		c: "The Vegetable Atlas",
+		d: "The new culm of a bamboo, cut in its first weeks while it is still a tight cone of overlapping sheaths. Fresh shoots contain cyanogenic glycosides, principally TAXIPHYLLIN, which release hydrogen cyanide when the tissue is damaged: they must be BOILED, uncovered so the gas escapes, 20 to 40 minutes for small spring shoots and up to two hours for a big winter one, and the water thrown away. The harshness is separate: homogentisic and oxalic acid, building from the hour it is dug. Rice bran, nuka, and a dried chili go in because the bran's starch takes up those acids and its calcium ties up the oxalic. The reward is a shoot that is crisp, faintly sweet, and a little smoky. Canned shoots are already boiled and safe but carry a tinny brine: two minutes in fresh water strips it. Never eat fresh bamboo raw, and never shortcut the boil.",
+		season: [12, 1, 2, 3, 4, 5],
+		choose: "Heavy, firm shoots with tight glossy sheaths and a moist pale cut base; smaller is sweeter. Reject dry, cracked, or greening tips, which mean the shoot has aged and turned bitter in the ground.",
+		store: "Boil fresh shoots the day you buy them, since raw ones turn bitter within 24 hours. Once boiled, keep them submerged in fresh water in the refrigerator up to a week, changing the water daily.",
+		prep: "Cut the top off at an angle, where the cyanogen is highest, and slit the sheaths down one side. Boil in the sheaths, uncovered, with rice bran and a dried chili until a skewer slides through the base. Cool in the liquid, then peel, trim the woody base, and slice into wedges or combs.",
+		methods: ["boiling", "stir-frying", "braising", "simmering", "grilling"]
+	},
+	{
 		t: "Beefsteak Tomato",
 		c: "The Vegetable Atlas",
 		d: "The big multi-locular slicer: thin walls, wide seed-and-jelly chambers, water near 95 percent, which is why it falls apart in a pan and why it owns the sandwich and the platter. Its case for existing is aroma, not flesh. The green-leaf volatiles that read as tomato (cis-3-hexenal, hexanal) are not stored in the fruit; a lipoxygenase cascade builds them in seconds from membrane fats the moment you cut. Cold suppresses that machinery: a week below about 12 C (54 F) holds the volatile genes down and aroma only partly returns in a warm kitchen, while chilling injury to the cell membranes is what turns flesh mealy. A day or two cold is recoverable and beats letting a ripe tomato rot. Counter, stem-scar down, and salt cut slices a few minutes before serving: salt draws juice and lifts sweetness, but aroma is smelled, not tasted, and cis-3-hexenal fades in minutes, so do not hold them.",
@@ -292,6 +342,26 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["raw", "grilling", "broiling", "roasting", "stewing"]
 	},
 	{
+		t: "Beet",
+		c: "The Vegetable Atlas",
+		d: "Beta vulgaris, the same species as sugar beet and chard. The color is not anthocyanin but BETALAIN, a nitrogen-bearing pigment in two families: red-violet betacyanin and yellow betaxanthin. Betalains are water-soluble and escape through the smallest cut, so a peeled, chopped beet boils out pale while the water goes crimson. They degrade under sustained heat and above about pH 6, sliding toward brown. Sugar runs 6 to 8 percent, among the highest in any vegetable, which is why beets roast to near-candy. In some eaters the pigment passes through and reddens urine and stool, which is harmless. The earthy note is GEOSMIN; acid breaks it down to something odorless, the real reason beets with vinegar, with goat cheese, with citrus all work. Roast them whole in their skins, covered, then slip the skins off while warm.",
+		season: [6, 7, 8, 9, 10],
+		choose: "Small to medium, 5-8 cm (2-3 in), heavy for their size, with taut unwrinkled skin and a short intact tail. Lively tops are a freshness tell and good eating, though they match spinach for oxalate, which matters to anyone who forms kidney stones. Reject soft shoulders and anything bigger than a fist, which runs woody.",
+		store: "Cut the tops back to 2 cm (1 in) so they stop drawing moisture. Refrigerate the roots unwashed in a bag for two to three weeks and the greens separately for three days. Cooked beets hold five days.",
+		prep: "Cook whole and unpeeled to keep the color in, then rub the skins away in a towel. If you must cut them raw, use a board you do not mind staining and acidulate the water. Gloves save your hands; lemon juice lifts the stain.",
+		methods: ["roast", "boil", "pickle", "raw", "braise", "grill"]
+	},
+	{
+		t: "Belgian Endive",
+		c: "The Vegetable Atlas",
+		d: "WITLOOF, the forced chicory: the root is grown in a field through summer, lifted, then regrown in complete darkness for about three weeks, which is why the chicon is ivory and tight. With no light there is no chlorophyll and far less of the bitterness the green plant would build, leaving a crisp, faintly bitter leaf with a hollow snap and a bullet-shaped structure nothing else offers. Light undoes that work: a head left out under bright light greens at the tips within hours and turns genuinely bitter, which is why growers ship it wrapped in blue paper. The solid cone of core at the base is the sharpest part of all. Whole leaves make the best edible spoon in the kitchen, and halves braised cut side down in butter with a pinch of sugar go silky and faintly caramel. Keep it wrapped and dark until you use it.",
+		season: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+		choose: "Tight torpedo shapes, ivory with pale yellow tips and no green, firm and heavy in the hand. Reject greening tips, splayed or opening leaves, brown flecks, and soft butts.",
+		store: "Refrigerate wrapped in paper inside a bag, in the dark, at 2 to 4 C (36 to 39 F), 1 to 2 weeks. Light, not age, is what makes stored endive bitter.",
+		prep: "Trim a sliver off the butt and pull the leaves away whole, or halve lengthwise and cut out the solid cone of core. Cut surfaces brown quickly, so acidulate with lemon or cut to order.",
+		methods: ["raw", "braise", "grill", "roast", "saute", "gratin"]
+	},
+	{
 		t: "Bell Pepper",
 		c: "The Vegetable Atlas",
 		d: "The same species as the jalapeno and the cayenne, Capsicum annuum, with one gene switched off: a deletion at Pun1 means the placenta, the pale rib the seeds hang from, never builds capsaicin. Everything else about a chile is still in there, which is why the fruit changes so much as it ripens. GREEN is simply unripe: chlorophyll still present, the green pyrazine (2-isobutyl-3-methoxypyrazine) at full strength, sugar low. Ripe color is the cultivar, not a stage: a red one clears chlorophyll and builds capsanthin, while yellow and orange types lack a working capsanthin-capsorubin synthase and stop at paler carotenoids. Sugar roughly doubles and the pyrazine fades. Choose the color for the job: green for the grassy bite of a sofrito or a stew. The skin is a cuticle that never softens, so char it black, sweat it covered ten minutes, and rub it off.",
@@ -300,6 +370,16 @@ export const LEXICON_SUPPLEMENT = [
 		store: "Crisper in an open bag, one to two weeks for green, under a week for red and yellow, which are riper and soften faster. Surface water starts the rot at the stem, so dry them before they go in and do not seal the bag.",
 		prep: "Stand it on the board and cut the walls off the core in four downward slices: seeds stay with the core and nothing needs rinsing. Strip the pale ribs, which carry the bitterness. Peel for a salad or puree, leave peel on for a stew.",
 		methods: ["raw", "roasting", "charring", "grilling", "stir-frying", "stewing"]
+	},
+	{
+		t: "Bitter Melon",
+		c: "The Vegetable Atlas",
+		d: "A knobbly cucumber-shaped gourd (Momordica charantia) sold green and hard, whose bitterness is the point: momordicin and related cucurbitane glycosides, densest in the skin and the green wall rather than in the white pith, give a clean lingering bitter that Chinese, Indian, and Southeast Asian cooks set against fat, chili, and fermented salt. The CHINESE type is pale green, smooth-ridged, longer and milder; the INDIAN type, karela, is darker, narrower, warty, and fiercer. Buy it hard and green. Tame it without erasing it: slice thin, salt 20 to 30 minutes, squeeze and rinse, which pulls juice out and leaves sodium behind to blunt what stays, or blanch a minute, which genuinely leaches the glycosides into the water. Then cook it hard with fat and something salty, black beans, egg, dried shrimp. Two cautions: it lowers blood sugar, which matters for anyone on diabetes medication, and it is avoided in pregnancy; the seeds and the sweet red aril of ripe fruit can cause vomiting in children and hemolysis in people with G6PD deficiency, so throw them out.",
+		season: [6, 7, 8, 9],
+		choose: "Firm and heavy, ridges tight and unblemished, skin evenly green whether pale or dark by type. Reject yellowing or orange fruit, soft spots, and any melon split open to show the red seed pulp inside.",
+		store: "Paper bag in the warmest part of the refrigerator, 4 to 5 days: it is chilling sensitive, and a cold crisper pits and browns the ridges while a warm kitchen yellows it. Cut melon, wrapped, 2 days. A one minute blanch before freezing suits curries but gives up the crunch.",
+		prep: "Halve lengthwise and scoop the white pith and seeds out with a spoon: they go for texture, not for bitterness, which lives in the green wall and skin you are keeping. Discard any red aril and mature seeds. Slice thin on the bias, salt 20 minutes, squeeze dry.",
+		methods: ["stir-fry", "braise", "steam", "simmer", "fry", "pickle"]
 	},
 	{
 		t: "Black Garlic",
@@ -362,6 +442,66 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["roast", "saute", "fry", "braise", "grill", "steam"]
 	},
 	{
+		t: "Burdock Root",
+		c: "The Vegetable Atlas",
+		d: "GOBO in Japan: the long taproot of greater burdock, Arctium lappa, and one of the most aggressively astringent vegetables in common use. The flesh is loaded with chlorogenic acid and related polyphenols, which are both the flavor, a woody earthy bitterness, and the problem, since cutting it lets polyphenol oxidase turn the face gray-brown inside a minute. It stores inulin, not starch, so there are no granules to swell and no mealy collapse; the crunch that outlasts a long simmer is lignified fiber, and the inulin itself leaches away in the pot. The best flavor sits directly under the skin, so scraping beats peeling and a pale scrubbed root has already lost half of what you paid for. Soak cut gobo in water with a splash of vinegar for ten minutes, drain hard, and stir-fry it fast for kinpira before the soy and mirin go in.",
+		season: [11, 12, 1, 2, 3, 4],
+		choose: "Buy it rather than dig it: foxglove rosettes pass for first-year burdock and the root carries cardiac glycosides. Pencil to broom-handle thick, firm the whole length, root hairs and soil on, and it should not flex. Reject cracked, hollow, limp, or pale scrubbed roots.",
+		store: "Refrigerate unwashed with its soil, wrapped in damp paper inside a bag, for two weeks; standing it upright in a deep container helps. Once cut it browns and dries quickly, so soak it or use it the same day.",
+		prep: "Scrape the skin with the back of a knife instead of peeling, since the flavor lives just beneath it. Shave sasagaki style, like sharpening a pencil, straight into vinegar water. Change the water once, then drain hard.",
+		methods: ["stir-fry", "braise", "simmer", "deep-fry", "pickle", "steam"]
+	},
+	{
+		t: "Butter Lettuce",
+		c: "The Vegetable Atlas",
+		d: "BIBB and BOSTON, the two American trade names, and the red butterheads sold as butter lettuce too: loose rosettes with thin cell walls and a soft midrib that never goes fibrous. No lettuce rib carries meaningful lignin, so the butter is low fiber and low turgor, not an absence of wood. That structure is both the appeal and the problem. The leaf yields instantly under the tooth and it bruises just as instantly under a thumb, going translucent and watery within minutes of rough handling. Salt is the agent in a dressing: it pulls water osmotically out of cells that have little structure to hold it, so a butter lettuce dressed five minutes early is a wet napkin by service. Much of it now arrives hydroponic with the root ball attached, which keeps the head alive in the walk-in and is worth the extra money. Dress it at the pass with a light vinaigrette rather than a thick creamy one, and use the whole cupped leaves as vessels instead of tearing them up.",
+		season: [5, 6, 9, 10],
+		choose: "A head that feels alive: leaves springy, heart pale yellow-green, no transparent patches. Reject bruises gone glassy, slime at the core, and cut-root heads whose base has browned.",
+		store: "Refrigerate in its clamshell or a loose bag at 2 to 4 C (36 to 39 F), 4 to 6 days; root-ball heads stand in 1 cm of water and keep a week. Never stack anything on top of it.",
+		prep: "Cut the core out and let the rosette fall apart rather than tearing through it. Swish whole leaves in cold water, drain them on a towel instead of spinning hard, and keep them cupped and unbroken. Rinsing is for grit, not for safety: this leaf is eaten raw with no cooking step, and no wash clears bacteria from torn or slimy tissue, so pull and discard any damaged leaf, keep the standing water on a root-ball head below the leaf line and off the growing plug, and work cold and fast.",
+		methods: ["raw", "wilt", "steam", "braise", "puree"]
+	},
+	{
+		t: "Butternut Squash",
+		c: "The Vegetable Atlas",
+		d: "A mature winter squash, cut when the rind hardens and the stem corks, then CURED warm for a week or two: curing heals the skin and lets amylases keep converting starch to sugar, which is why a cured butternut tastes sweeter than one eaten green. Its shape is the argument for it. A long solid neck of seedless flesh sits above a small bulb holding every seed, so it peels and dices with almost no waste and gives you uniform cubes. Dry matter runs around 12 to 14 percent, low for a winter squash next to kabocha at 20 plus, so the flesh is smooth and moist rather than floury: it purees to silk, but it will not hold a crisp edge on a cube. Roast at 220C (425F) on a preheated sheet in a single layer and leave it alone until the undersides are deep brown, Maillard and caramel together. That brown is the whole difference between a side dish and a good one.",
+		season: [9, 10, 11, 12, 1],
+		choose: "Heavy for its size, rind matte hard tan that a thumbnail cannot dent, stem dry and corked and still attached. Reject glossy green-tinged rind, which means uncured, any soft patch, or a stem that has fallen out.",
+		store: "Whole in a cool dry room at 10 to 15C (50 to 59F), a month or more; the refrigerator is too cold and too damp and shortens it. Cut pieces, wrapped, in the refrigerator for 4 days.",
+		prep: "Y-peeler, and take the pale fibrous layer under the skin as well. Cut the neck off the bulb first, then stand each piece on a flat face: a rolling squash is how people cut themselves. Scoop the seeds. If the raw flesh tastes bitter, bin the whole squash, since roasting will not destroy cucurbitacin.",
+		methods: ["roast", "bake", "braise", "steam", "saute", "fry"]
+	},
+	{
+		t: "Cardoon",
+		c: "The Vegetable Atlas",
+		d: "The artichoke's wild parent domesticated a second way, for the stalk instead of the bud: both are forms of Cynara cardunculus, so these ribbed stems look like enormous silver celery and taste like artichoke heart with a bitter edge. That bitterness is cynaropicrin and its fellow sesquiterpene lactones, and the traditional answer is blanching the plant in the field, banking soil or wrapping paper around the stalks for weeks so light cannot reach them and the compounds stay low. Everything about it is work. The outer ribs carry hard strings, and the cut surfaces rust within a minute through polyphenol oxidase. Most cardoon is boiled first, 20 to 40 minutes in acidulated water, before it goes anywhere else: gratinated under bechamel and parmesan in Lombardy, or fried in batter. Piedmont is the exception, where the pale blanched gobbo of Nizza Monferrato goes to the table raw, in ribs, for dipping in bagna cauda. Budget an hour before it becomes an ingredient.",
+		season: [11, 12, 1, 2],
+		choose: "Firm, heavy stalks, pale ivory to light green from field blanching, with tight ribs and no flowering stem; the smaller inner ribs are the tender ones. Deep green stalks were never blanched and stay bitter and stringy. Reject limp, hollow, heavily browned, or spongy stalks.",
+		store: "Wrap in a damp cloth and refrigerate up to a week; age brings limpness and more bitterness. Once boiled, hold the pieces submerged in their own cooking liquid, refrigerated, up to three days.",
+		prep: "Strip the strings with a peeler as you would celery, cut into 8cm lengths straight into lemon water, then boil in acidulated water until a knife slides through. Work fast: exposed surfaces rust in a minute.",
+		methods: ["boiling", "braising", "frying", "baking", "stewing"]
+	},
+	{
+		t: "Carrot",
+		c: "The Vegetable Atlas",
+		d: "A taproot that stores its energy as sucrose, not starch, alongside beta-carotene, a fat-soluble orange pigment locked inside chromoplasts. Cooking bursts those cell walls and fat then carries the freed pigment, which is why carrot in butter delivers more vitamin A than raw carrot. Cold sweetens it: near 0C (32F) respiration slows while sugars keep accumulating, a kind of antifreeze, so late-autumn and overwintered roots are the sweet ones. Roasting drives off water and pushes those sugars to caramelize while the cell-wall pectin softens. The bitterness is two compounds: polyacetylenes such as falcarindiol in the peel, and 6-methoxymellein, which stored roots build when ethylene reaches them. Cook small carrots whole; cut big ones on a steep bias to widen the cut face for browning.",
+		season: [9, 10, 11],
+		choose: "Firm enough to resist bending, with a smooth shoulder and no green crown, which shades bitter. Fine hairs and deep cracks mean age. Reject limp rubbery roots and any showing a woody pale core at the cut end.",
+		store: "Tops draw moisture out of the root, so twist them off at once. Refrigerate whole unwashed roots in a sealed bag at 0-4C (32-39F) for three to four weeks. Submerge only cut or peeled carrots, a few days at most, changing the water. Ethylene from apples and pears turns them bitter; keep them apart.",
+		prep: "Scrub rather than peel young roots; the flavor sits near the skin. Peel old ones and cut out any woody core. Slice on a bias for surface area, and hold cut carrots in cold water so the faces do not dry chalky white.",
+		methods: ["roast", "braise", "glaze", "saute", "steam", "raw", "pickle"]
+	},
+	{
+		t: "Cassava",
+		c: "The Vegetable Atlas",
+		d: "Manihot esculenta, also yuca or manioc, the starch staple for some 800 million people and the one root in this chapter that can kill someone if it is handled carelessly. The whole plant carries CYANOGENIC GLYCOSIDES, chiefly linamarin: damage the tissue and the plant's own linamarase splits it to acetone cyanohydrin, which gives up hydrogen cyanide as it warms, or later in the gut if drying was rushed. Sweet varieties hold most of it in the peel and only a modest amount in the flesh; bitter varieties, grown for yield and pest resistance, carry dangerous quantities throughout and demand grating, prolonged soaking, pressing, and fermenting or roasting before they are food. One badly processed meal can poison outright; short-cut processing on a low-protein diet brings konzo, a sudden and permanent spastic paralysis of the legs. Peel it thickly, pull out the woody core, and boil it in plenty of water until it splits and falls tender. Never raw, never underdone.",
+		season: [],
+		choose: "Waxed roots with unbroken skin and snapped ends showing pure white flesh; have one cut open if the shop allows. Reject gray or black streaking, blue-black specks, a dark ring under the peel, or any sour smell.",
+		store: "Roots decline within two to three days of harvest, faster than anything else here. Refrigerate whole waxed roots up to a week, or peel, cut, and keep them frozen for months. Discard any flesh that has discolored.",
+		prep: "Cut into lengths, score the skin, and lever off both the brown bark and the pink layer beneath, which hold most of the toxin. Split each piece and pull the woody central fiber out. Hold in water, then boil in an open pot.",
+		methods: ["boil", "deep-fry", "braise", "stew", "simmer"]
+	},
+	{
 		t: "Cauliflower",
 		c: "The Vegetable Atlas",
 		d: "The curd is an arrested inflorescence: flower stems that thickened and multiplied instead of blooming, packed into a dome. It is white because the curd is undifferentiated meristem that builds no chloroplasts; leaves tied over it, or folded by a self-blanching cultivar, only keep sun from yellowing or greening the surface. With no chlorophyll to gray out, browning reads clean, and its free sugars and amino acids take Maillard well at 220C (425F) in dry heat. Boiled it turns waterlogged and sulfurous. Its blandness is structural too, which is why it carries curry, brown butter, anchovy, and cheese without arguing back. Purple types bleed anthocyanin into the water and go blue-gray without acid; orange types hold their carotene, which is fat soluble and does not leach. Cut steaks through the core so they hold, and roast them cut side down first.",
@@ -380,6 +520,26 @@ export const LEXICON_SUPPLEMENT = [
 		store: "Unwrapped in a bag in the cold, where it keeps for weeks; it is a storage root and behaves like one. Once cut, wrap the remainder tight, because the open face dries and browns faster than it rots.",
 		prep: "Cut a flat foot so it stands, then take the skin down in strips with a knife. A peeler cannot clear the matted root hairs and you will fight it for ten minutes and still leave grit. Hold cut pieces in acidulated water.",
 		methods: ["puree", "roast", "remoulade", "gratin", "soup", "braise"]
+	},
+	{
+		t: "Celery",
+		c: "The Vegetable Atlas",
+		d: "Ribbed petioles: leaf stalks the plant built as plumbing. The strings you pull off are collenchyma, cords of thickened cellulose and pectin just under the skin, not lignin, which is why they hold together through a four-hour braise without ever turning woody. The flavor is phthalides, sedanolide and its relatives, the same family that makes celery seed and lovage smell of celery, over a faintly saline base. Celery is also a declared allergen in Europe and a real cause of anaphylaxis, and cooking does not destroy it, so a mirepoix, a trinity or a stock carries it invisibly. Say so when asked. Dark outer ribs are tough and belong in stock; the pale heart is tender and sweet and belongs in a salad. Cut across the rib for crescents that fall apart, along it for batons that hold. Keep the leaves: they are the most aromatic part of the plant.",
+		season: [],
+		choose: "Firm ribs that break with an audible crack, glossy, tight at the base, with green, upright leaves. Reject rubbery bunches, brown streaking, spongy pith, and a center rib that has gone hollow.",
+		store: "Whole head wrapped in foil or a damp cloth in the crisper, two to three weeks; ribs go limp from water loss, not trapped gas, and celery yellows fast next to ripening fruit. Limp ribs come back after an hour in ice water.",
+		prep: "For raw service, snap the top of a rib and pull downward to strip the strings. Trim the base, wash down inside the curve where grit collects, and keep the leaves for stock or salad. Throw out ribs with pink or brown rot lesions: those run high in furanocoumarins, and juice on skin plus sunlight raises blisters a day or two later. Wash hands and forearms after a long prep.",
+		methods: ["braising", "stewing", "sauteing", "roasting", "grilling", "raw"]
+	},
+	{
+		t: "Chayote",
+		c: "The Vegetable Atlas",
+		d: "A pale green pear-shaped gourd holding one flat soft seed, eaten immature like a summer squash but built far more firmly: the flesh is crisp, dense, barely sweet, closer to raw kohlrabi than to zucchini, and it holds shape through long cooking where zucchini would slump. Cut in 2 cm pieces it turns tender in 12 to 15 minutes of simmering and holds there another 20, so it survives stews, stuffed halves, and soup. It tastes of almost nothing, so season it hard and finish with acid, or slice it thin raw, where it stays crunchy in a slaw overnight. The cut surface weeps a sticky sap that dries to a tight film on the hands and can irritate skin, so peel under running water or in gloves. Peel it, too: the skin toughens as the fruit grows, though a small smooth one can keep it.",
+		season: [],
+		choose: "Hard, unwrinkled, pale to medium green, with no sprout pushing out of the furrowed end. Reject soft, wrinkled, or yellowing fruit and any with brown bruises, which rot from the inside and go slimy.",
+		store: "Refrigerator crisper, unwrapped, 2 to 3 weeks, far longer than any summer squash. Left at room temperature it sprouts from the seed end within a week and the flesh turns spongy and dry as the shoot feeds.",
+		prep: "Peel under running water or wearing gloves, since the sap stiffens skin. Halve and lift out the flat seed, which is edible and nutty, so cook it. It barely discolors, so no acidulated water is needed.",
+		methods: ["braise", "steam", "saute", "boil", "raw", "bake"]
 	},
 	{
 		t: "Cherry Tomato",
@@ -412,6 +572,16 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["braise", "simmer", "saute", "steam", "blanch"]
 	},
 	{
+		t: "Cucumber",
+		c: "The Vegetable Atlas",
+		d: "Botanically a pepo, a gourd family berry: Cucumis sativus, kin to melon, not a Cucurbita squash. Harvested immature at about 95 percent water, level with iceberg lettuce, which is why it eats cold and crisp and resists cooking. Crispness here is turgor pressure, water pushing against intact cell walls, and salt destroys it. That single mechanism explains both salting slices on purpose, to pull water out so they season and bend, and the disaster of dressing a cucumber salad an hour early. Types matter more than most cooks allow. SLICING cucumbers are thick-skinned, often waxed for shipping, with developed seeds. ENGLISH or hothouse are long, thin-skinned, nearly seedless, sold shrink-wrapped. KIRBY are short, bumpy, and firm-fleshed, the pickling standard because they stay crunchy in brine. Bitterness at the stem end is cucurbitacin, which neither cooking nor brining removes: cut 2 cm off, taste it, and if the bitter is strong the whole fruit goes in the bin.",
+		season: [6, 7, 8, 9],
+		choose: "Firm end to end with no give at the stem, skin deep green and unwrinkled. Reject soft yellowing patches, a shriveled tip, or heavy wax you cannot scrub off if you intend to eat the peel.",
+		store: "Hold at 10 to 12C (50 to 54F) if you can; below 10C (50F) they pit and go water-soaked in about three days. Otherwise the crisper, loose, and use them inside 5 days, before the cold marks them. Keep them away from apples and tomatoes, whose ethylene yellows them.",
+		prep: "Peel waxed cucumbers, leave thin skins alone. Seed the watery ones by halving and running a spoon down the cavity. Salt slices 20 minutes and drain for salads; for crunch, slice at the last minute.",
+		methods: ["raw", "pickle", "braise", "saute", "grill"]
+	},
+	{
 		t: "Curly Kale",
 		c: "The Vegetable Atlas",
 		d: "The frilled, waxy-leaved kale that never forms a head, Brassica oleracea Acephala group: a loose rosette with a thick fibrous midrib and a cuticle heavy enough that dressing slides straight off it. Frost is what makes it worth eating; the plant piles up soluble sugars as antifreeze, so kale cut after a hard freeze is measurably sweeter than the same plant in September. Raw, the fix is mechanical: strip the ribs, shred fine, then massage with salt and oil for a full minute. Nothing ruptures. Salt pulls the water out, the cells go slack, and air leaves the spaces inside the leaf, which is what darkens it. Cooked, it takes a fast saute with garlic or a long braise. For chips, dry leaves matter more than heat: wet kale steams and turns leathery. Bake at 150C (300F) until crisp but still green.",
@@ -420,6 +590,106 @@ export const LEXICON_SUPPLEMENT = [
 		store: "Unwashed in a perforated bag with a dry towel, 5 to 7 days. Water left on the leaves turns them black and slimy. It does not sweeten in the fridge; a cut leaf respires its sugars away, so hold it no longer than you must.",
 		prep: "Hold the rib at the base and strip the leaf off with the other hand, or fold the leaf and cut the rib out. The ribs are not waste: slice them thin and start them a few minutes ahead of the leaf.",
 		methods: ["saute", "braise", "bake", "steam", "stir-fry", "blanch"]
+	},
+	{
+		t: "Daikon",
+		c: "The Vegetable Atlas",
+		d: "The big white Japanese radish, mild because it carries the same glucosinolates as its small cousins at far lower concentration, and unevenly: the shoulder end is sweet and good raw, the tail end is the hot end and belongs in the pot. It is about 95 percent water with almost no starch, which makes it the sponge of the root world; simmer it in dashi and it takes on the whole flavor of the pot while going translucent and yielding. Grating ruptures the cells and turns myrosinase loose, so the heat peaks inside a minute and is mostly gone in twenty, which is exactly why oroshi is grated to order and set beside fried and fatty food. Simmer thick rounds slowly, never at a rolling boil, until a skewer passes through with no resistance.",
+		season: [10, 11, 12, 1, 2],
+		choose: "Heavy, glossy, and firm end to end, skin unbroken, with no flex when you hold it at both ends. Fresh green tops are a bonus and good pickled. Reject limp roots, black spotting at the cut face, and any with a woody flower stalk.",
+		store: "Cut the tops off first, since the leaves pull water out of the root, then wrap the root in damp paper inside a bag and refrigerate for two weeks. A cut face hardens and dries, so wrap it tight and use it within four days.",
+		prep: "Peel the thick outer layer, which is fibrous. For simmering, cut rounds 3 cm (1 in) thick, bevel the edges so they do not fray, and score a shallow cross on one face to draw the liquid into the center.",
+		methods: ["simmer", "braise", "pickle", "raw", "stir-fry", "steam"]
+	},
+	{
+		t: "Dandelion Greens",
+		c: "The Vegetable Atlas",
+		d: "Taraxacum, the true dandelion, bitter from SESQUITERPENE LACTONES, mainly taraxinic acid glycosides, carried in the milky latex of the rib and root. Bitterness here is a calendar: leaves cut before the plant flowers are sharp but good eating, and once the flower stalk rises the leaf turns harsh and leathery. Most restaurant dandelion is not Taraxacum but Italian dandelion, a chicory whose bitters are lactucin and lactucopicrin; both cook the same way. The standard treatments work, but not for the reasons usually given. A blanch in a big pot leaches the water-soluble glycosides into the water, which you discard; the salt in that pot is seasoning, not extraction. Salt on the plate does suppress bitter perception directly, and so does a pinch of sugar. Fat coats and slows release. Acid suppresses nothing; it only gives the palate somewhere else to go. Blanch, refresh, squeeze dry, then saute hard with garlic and chili.",
+		season: [3, 4, 5, 9, 10],
+		choose: "Young leaves under 25 cm, tender and dark, stems snapping wetly, no flower buds hidden in the crown. Reject yellowing leathery outer leaves and thick woody midribs. If it is foraged, confirm the plant: hairless leaves, milky latex, all leaves basal, a single head on one hollow unbranched stalk. Ragwort and groundsel rosettes grow in the same ground, have leafy branched stems and no latex, and carry liver-damaging alkaloids. Take nothing from lawns or verges; dandelion is what broadleaf weedkiller is aimed at.",
+		store: "Refrigerate unwashed in a bag at 0 to 2 C (32 to 36 F), 3 to 5 days. Bitterness climbs with storage time and warmth, so keep it cold and use it early.",
+		prep: "Wash in several changes of water, checking the crown for soil. Trim the crown but keep the bunch together for blanching. Thick ribs cook slower than leaf: split them, or start them 2 minutes ahead.",
+		methods: ["blanch", "saute", "braise", "grill", "simmer", "raw"]
+	},
+	{
+		t: "Delicata Squash",
+		c: "The Vegetable Atlas",
+		d: "A small oblong winter squash (Cucurbita pepo), cream rind striped dark green, and an exception to nearly every winter squash rule. Its skin never sets hard, which is why you never bother peeling it, and why it bruises: a delicata keeps 1 to 3 months against a butternut's six, and rot starts at a knock or a soft end rather than through the flesh. The flesh is thin-walled, fine-grained and genuinely sweet, tasting closer to sweet potato than to pumpkin, and there is not much of it, so the cook's job is to maximize surface. Cut it crosswise into rings, push the seed core out of each ring with a thumb, and roast at 220C (425F) in a single layer until both faces are brown and the scalloped edges have gone crisp and chewy. It wants nothing beyond oil and salt. Handle it like fruit, not like a keeper you can stack.",
+		season: [9, 10, 11],
+		choose: "Firm and matte, deep green stripes over a cream ground, 15 to 20 cm (6 to 8 in), heavy for its size. Reject soft ends, mushy brown spots, or a rind gone uniformly orange-yellow. Do not cook squash out of a decorative bin: striped ornamental gourds are the same species and hold enough cucurbitacin to cause violent vomiting and diarrhea. Bitter means bin it.",
+		store: "A cool dry room at 10 to 13C (50 to 55F), 1 to 2 months; check weekly and cook the knocked ones first. Refrigerate only after cutting, wrapped, for 3 days. A warm kitchen cuts that to a couple of weeks, since the soft rind gives fungi an easy way in.",
+		prep: "Do not peel. Scrub, trim both ends, cut crosswise into 1 cm (half inch) rings, and pop the seed core out of each one. Oil and salt the rings in a bowl before they hit the sheet, never after.",
+		methods: ["roast", "bake", "saute", "grill", "steam"]
+	},
+	{
+		t: "Edamame",
+		c: "The Vegetable Atlas",
+		d: "Immature soybeans (Glycine max) picked green at about 80 percent of full seed size, before the seed's sucrose is drawn down into raffinose and stachyose and the seed dries. That timing is the whole flavor: sucrose and free glutamate are at their peak, so edamame tastes sweet and faintly nutty where a mature soybean tastes only of bean. Lipoxygenase is in there all the same and throws the beany note the moment cut tissue meets air and water, which is why cooking is prompt and whole: four to six minutes in heavily salted boiling water, or steamed. Never eaten raw, since cooking is what knocks down the trypsin inhibitors and lectins, and this is soy, one of the common allergens. Salt the outside of the pod after cooking, since the fuzz is not eaten and that is what the mouth touches. Nearly all the world's supply is blanched and frozen in the pod within hours of picking, which is why it keeps its color; cook those straight from frozen.",
+		season: [7, 8, 9],
+		choose: "Fresh: bright green, plump, fuzzy pods, ideally still on the stem, with two or three beans each. Frozen: loose pods with no ice crystals or clumping. Reject yellowing pods and any with flat, empty sections.",
+		store: "Fresh pods shed sugar within a day, so refrigerate and cook them the same day. Frozen pods keep six months at minus 18C (0F). Once cooked, refrigerate and eat within two days, hot or cold.",
+		prep: "Nothing to peel. Rub the pods with coarse salt to scour the fuzz and season the shell, then boil in salted water and drain. Shock in ice water only if they are going out cold, or they turn drab.",
+		methods: ["boiling", "steaming", "blanching", "stir-frying", "roasting"]
+	},
+	{
+		t: "English Pea",
+		c: "The Vegetable Atlas",
+		d: "The shelling pea, grown for the seeds while the pod stays inedible: that wall carries a lignified parchment membrane, which is exactly what snow and snap peas were bred to lose. Inside, the seed is a storehouse caught mid-transition, and the clock is brutal. Within hours of picking, enzymes convert sucrose into starch and a sweet, grassy pea turns mealy and dull. This is the one vegetable where the frozen product honestly beats the fresh, because commercial peas are shelled and blanched within hours of the field and those enzymes are stopped cold. Buy fresh pods only when you know the picking day, and taste one raw before you commit the kitchen. Expect to lose about 60 percent of the weight to the pods. Cook them two to four minutes, never longer; finish with mint, butter, or cream, and simmer the empty pods into a sweet green stock.",
+		season: [4, 5, 6],
+		choose: "Smooth, glossy, squeaky pods that feel full but not tight, with seeds you can roll under a thumb. Reject swollen, dull, or yellowing pods, which hold big starchy peas, and any pod that rattles.",
+		store: "Refrigerate unshelled in a bag and shell to order, within two days; once shelled they lose sweetness by the hour. A bag of good frozen peas is the more reliable item to keep on hand.",
+		prep: "Press the seam with a thumb to pop the pod open and run a finger down to release the peas. Sort out the large pale starchy ones for soup and keep the small bright ones for finishing a dish.",
+		methods: ["blanching", "steaming", "braising", "sauteing", "stewing"]
+	},
+	{
+		t: "Escarole",
+		c: "The Vegetable Atlas",
+		d: "Broad-leaf endive: the same species as frisee with none of the frizz, a loose head shading from a tough dark green jacket to a pale tender heart. It is CICHORIUM ENDIVIA, an endive rather than a true chicory, and the mildest of the group: bitter enough to be interesting, sturdy enough to hold its shape in liquid, the green of beans and greens, of Italian wedding soup, and of long garlicky braises where spinach would dissolve. The bitterness sits in SESQUITERPENE LACTONES, which are water soluble, so blanching and pouring the water off is what removes it; fat and salt only bury the signal, which is why olive oil, anchovy and cured pork read as sweetness. Treat one head as two ingredients, heart raw and jacket cooked. Cut crosswise into wide ribbons, wilt into hot oil with garlic, add stock, 10 to 15 minutes.",
+		season: [9, 10, 11, 12],
+		choose: "A heavy head with a broad pale heart, leaves crisp and unwilted, butt cut white and moist. Reject rusty brown midribs, black slime in the crown, and a heart that has already greened up.",
+		store: "Refrigerate whole and unwashed in a bag at 1 to 4 C (34 to 39 F), 5 to 7 days. Wash only at service: water trapped in the crown turns the base slimy inside a day.",
+		prep: "Quarter through the core, then wash leaf by leaf, since escarole holds sand deep in the ribs. Trim the core, stack the leaves and cut crosswise into ribbons. Cut edges brown fast, so cut close to the pan.",
+		methods: ["braise", "saute", "blanch", "simmer", "grill", "raw"]
+	},
+	{
+		t: "Fava Bean",
+		c: "The Vegetable Atlas",
+		d: "The broad bean, an ancient legume eaten at every stage: whole young pod, shelled bean, peeled bean, and dried. SAFETY FIRST. The glycosides vicine and convicine trigger FAVISM, an acute breakdown of red blood cells, in people with inherited G6PD deficiency, most common in those with ancestry around the Mediterranean, Africa, the Middle East, and South and Southeast Asia. Cooking does not destroy them, so a braise is no safer than a raw bean. It is not an allergy, it is serious, and favas are also rich in L-DOPA and off limits to anyone taking an MAO inhibitor. Name the bean on the menu and never bury it in a puree. Each bean wears two coats: the pod, and a skin that turns gray-green, chewy, and bitter as the bean matures. Beans smaller than a thumbnail need neither peeling nor cooking; anything larger wants 30 seconds in boiling water, then a pinch to slip the skin. Reckon four to one on weight from pod to peeled bean. Dress them with olive oil, hard sheep cheese, and mint.",
+		season: [4, 5, 6],
+		choose: "Plump, green, firm pods with a velvet feel and beans that read as gentle bumps rather than hard knots. Reject yellowed, blackened, or rubbery pods; big lumps mean tough, floury beans and a lot of peeling.",
+		store: "Refrigerate unshelled in a bag up to four days; once shelled they go starchy and dull within a day. Peeled beans hold two days refrigerated under a film of olive oil, which also keeps them green.",
+		prep: "Split the pod along its seam and thumb the beans out of the padding. Blanch 30 seconds, cool in ice water, then nick the pale skin at the germ end and squeeze the bean out bright green.",
+		methods: ["blanching", "braising", "sauteing", "grilling", "stewing", "raw"]
+	},
+	{
+		t: "Fennel Bulb",
+		c: "The Vegetable Atlas",
+		d: "Not a root but a swollen cluster of overlapping leaf bases, which is why it layers like an onion and shreds like celery. The anise scent is anethole, the same molecule in star anise and pastis, held in oil ducts that rupture at the knife, so fennel is loudest the second you cut it and quieter every minute after. Heat is the switch. Raw it is crunchy, cold, and aggressively licorice; braised, the anethole steams away and the flesh turns mild and sweet with no browning at all, while dry roasting also browns surface sugars and amino acids into something nutty that people do not recognize as fennel. Florence fennel, finocchio, is the bulbing kind; wild herb fennel gives fronds, pollen, and seed but never a bulb. Buy wild fennel, do not gather it: poison hemlock carries the same feathery leaf and white umbel and is lethal, and it is told apart by smooth purple blotched stems and a rank smell, never anise. Use all of it: the bulb for the dish, the stalks for stock and as a grilling bed, the fronds as an herb, the pollen as a finishing spice. Shave it paper thin for salads, or cut fat wedges through the core so they hold while they brown.",
+		season: [10, 11, 12, 1, 2, 3],
+		choose: "Squat, white, tightly packed bulbs with no splitting between the layers and fronds still attached, which is the real freshness tell. Reject flattened, yellowing, or dried bulbs and any with a woody brown base.",
+		store: "Refrigerate whole in the crisper up to a week, but cut the fronds off and bag them separately since they wilt within a day. Cut surfaces brown and lose aroma fast, so slice to order.",
+		prep: "Trim the stalks, shave the dry base, halve through the root. Leave the core in for wedges that must hold their shape; cut it out for shaving on a mandoline into ice water, which curls and crisps the slices.",
+		methods: ["roasting", "braising", "grilling", "sauteing", "steaming", "raw"]
+	},
+	{
+		t: "Fresh Horseradish",
+		c: "The Vegetable Atlas",
+		d: "A brassica root that is odorless until you break it. Intact cells keep the glucosinolate sinigrin and the enzyme myrosinase in separate compartments; grating ruptures both and they meet, generating ALLYL ISOTHIOCYANATE, a volatile that travels up the nose rather than across the tongue. That is the whole chemistry, and it runs on a clock: pungency peaks about three minutes after grating, then evaporates and degrades, losing its edge within the quarter hour. Acid halts the reaction and stabilizes what has already formed, so the timing of the vinegar decides the result: add it immediately for a mild sauce, wait three minutes for a fierce one. Heat destroys the enzyme outright, which is why cooked horseradish is merely earthy. Grate at the last minute, into vinegar, and never simmer it in a sauce.",
+		season: [10, 11, 12, 1, 2, 3],
+		choose: "A firm heavy root at least 4 cm (1.5 in) thick, with clean cut ends and pale cream flesh. Whole it smells of almost nothing, so scratch it: horseradish bites back within seconds. Buy it rather than dig it, since monkshood root looks much the same and a mouthful is lethal. Reject soft, shriveled, or greenish roots and any with hollow gray streaking inside.",
+		store: "Wrap whole in damp paper in a bag and refrigerate two to three weeks, or bury it in damp sand somewhere cold for months. Grated and held in vinegar it keeps a month refrigerated before the heat fades to nothing.",
+		prep: "Peel only the piece you are using. Grate somewhere ventilated, since the vapor stings the eyes harder than onion, on a fine microplane or in a processor with the lid on. A closed bowl concentrates it, so open that lid away from your face. Straight into vinegar with a pinch of salt.",
+		methods: ["raw", "pickle", "infuse", "sauce"]
+	},
+	{
+		t: "Frisee",
+		c: "The Vegetable Atlas",
+		d: "Curly endive, CICHORIUM ENDIVIA var. crispum, not the C. INTYBUS of Belgian endive and radicchio. Coarse green heads sold as chicory are the same species grown unblanched; frisee is blanched, its HEART pale and mild because the grower tied or covered the head to shut light out, halting chlorophyll and suppressing the SESQUITERPENE LACTONES, lactucin and lactucopicrin, that carry the bitterness. Only the blanched heart is salad; the green skirt braises, and pricing a head means pricing that pale center. Architecture matters as much as taste: those fine wiry leaves trap a warm dressing instead of shedding it and stay crisp under hot bacon fat long enough to be eaten, which is the logic of a lyonnaise salad. Buy for the heart, tear rather than chop, and give it fat, egg yolk, vinegar and salt: bitterness needs all four.",
+		season: [9, 10, 11, 12],
+		choose: "A broad head with a large creamy white to pale yellow heart and no green creeping toward the center. Reject dark heads with a tiny pale core, dry brown leaf tips, and sliminess at the base.",
+		store: "Refrigerate whole and unwashed in a bag at 1 to 4 C (34 to 39 F), 5 to 7 days. Light greens the heart back up in storage and brings the bitterness with it, so keep it bagged and dark.",
+		prep: "Halve the head, cut out the solid core, and tear the pale leaves into bite pieces, saving the dark skirt for braising. Wash and dry completely: warm dressing beads up and runs straight off a wet leaf.",
+		methods: ["raw", "wilt", "braise", "saute", "grill"]
 	},
 	{
 		t: "Gai Lan",
@@ -442,6 +712,16 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["roasting", "confiting", "frying", "sweating", "braising", "pickling"]
 	},
 	{
+		t: "Globe Artichoke",
+		c: "The Vegetable Atlas",
+		d: "An immature flower bud of a thistle, eaten before it can bloom: you want the fleshy bases of the bracts and the receptacle beneath them, and the hairy choke is the florets that never opened. It is the most chemically opinionated vegetable on the board. CYNARIN and chlorogenic acid occupy the sweet receptors on the tongue, and the next sip rinses them off and the receptors rebound, so water and wine taken straight after read strangely sweet and hollow. Only about two thirds of people get it, so pair for the table rather than for your own palate, and put acid on the plate. Cut surfaces blacken in under a minute through polyphenol oxidase, so lemon here is a tool, not a garnish. Size is variety and position on the plant, not maturity: the big crown bud, the mid-size side buds, and the tiny purple babies with no choke worth trimming. Big ones want steaming or braising; babies can be quartered and fried whole. Trim into acidulated water, and taste the wine before the plate, never after.",
+		season: [3, 4, 5, 10, 11, 12, 1, 2],
+		choose: "Heavy for their size, with squeaky, tightly closed bracts and a freshly cut stem. Reject spreading or leathery bracts, blackened cut ends, and any bud that feels light or rattles, which means it has dried out.",
+		store: "Refrigerate in a bag with a damp towel up to five days, sprinkling the stems with water. Winter buds with frost-blistered bronze bracts keep just as well and are often the sweetest of the year.",
+		prep: "Snap off outer bracts until pale ones appear, cut the top third away, peel the stem, which is heart, then scoop the choke out with a spoon. Rub every cut face with lemon and hold in acidulated water.",
+		methods: ["steaming", "braising", "frying", "grilling", "roasting", "stewing"]
+	},
+	{
 		t: "Globe Eggplant",
 		c: "The Vegetable Atlas",
 		d: "The flesh is a sponge: parenchyma cells around open air spaces that run a quarter to a third of its raw volume, which is why a raw cube drinks a whole pan of oil in seconds and why the cook who keeps adding more ends up with grease. Heat is the fix, not restraint. Once the cell walls pass about 70 C (160 F) they collapse, the foam shuts, and the vegetable stops absorbing and gives some oil back. So take the structure down first: salt the cut faces 30 minutes and blot, or steam or microwave the pieces, or oil the surface and roast hot rather than lowering raw flesh into a cold pan. Modern globe cultivars are bred low in the bitter glycoalkaloids, so salting is about oil and water, not bitterness. Then brown it properly: pale eggplant tastes of nothing.",
@@ -450,6 +730,26 @@ export const LEXICON_SUPPLEMENT = [
 		store: "A cool pantry at 10 to 12 C (50 to 54 F) for two days is ideal. Refrigeration pits and browns the skin and turns the seeds dark, so if it must go in, use the door or the warmest shelf, loosely bagged, three days.",
 		prep: "Cut with a sharp blade and keep moving: polyphenol oxidase browns the cut face within minutes, and salt or acidulated water holds it. Skin on for braising, where it keeps cubes intact; peel for a puree, where the skin turns it gray.",
 		methods: ["roasting", "grilling", "broiling", "deep-frying", "braising", "charring"]
+	},
+	{
+		t: "Golden Beet",
+		c: "The Vegetable Atlas",
+		d: "The same species as the red beet, but a cultivar that makes the yellow betaxanthin half of the betalain pair and almost none of the red betacyanin, so nothing it touches turns pink. It still bleeds, only in yellow: boiling water and a shared bowl will take the color. Milder, but not because of geosmin, which tracks the cultivar and not the root color and is not reliably lower in gold types. The yellow is heat labile and holds best between pH 4 and 6, browning to khaki in long or alkaline cooking, so squeeze lemon into the water and keep the roasting pan covered. Roast whole at 200C (400F) until a skewer slides through with no resistance, then peel them warm.",
+		season: [6, 7, 8, 9, 10],
+		choose: "Firm, no bigger than 8 cm (3 in), orange-tan skin, taproot fine and whole. Cracks are uneven water; a corky black crown is boron deficiency and runs deep. Reject soft roots and shriveled shoulders.",
+		store: "Top them, leaving 2 cm (1 in) of stem, and refrigerate unwashed in a perforated bag for two to three weeks; they soften sooner than red beets. The greens go limp in three days and cook like chard.",
+		prep: "Leaching is a water problem: boil whole, skin and stem on, then peel warm. Dry heat washes nothing out, so peel before roasting if you like. Raw, peel and slice thin, then dress at once with acid to slow browning.",
+		methods: ["roast", "boil", "raw", "pickle", "braise", "grill"]
+	},
+	{
+		t: "Green Bean",
+		c: "The Vegetable Atlas",
+		d: "The whole immature pod of Phaseolus vulgaris, seeds and all, picked before the beans inside swell and before the pod lays down its fibrous parchment layer. Modern varieties are stringless, so the old job of stripping the suture is largely gone, but the wall is still cellulose and pectin: it needs enough heat to soften that pectin and not one second more. Past that the cells rupture and their own acid swaps hydrogen for the magnesium held at the center of the chlorophyll, so bright green turns to olive pheophytin. That window is the entire technique. A large volume of heavily salted boiling water, three to six minutes, then out and into ice. The other honest route is the opposite: high dry heat until the pods blister, or the long Greek fasolakia braise, where you trade green for sweetness. Choose one. The middle, wet and lukewarm, is where beans go gray and squeaky. Never raw: the pod carries the dry bean's lectin at much lower levels, and a raw plateful is enough to make a guest sick.",
+		season: [6, 7, 8, 9],
+		choose: "Slim pods that break in half with a crisp snap and show no bulges from the seeds inside; the surface should be velvet, not shine. Reject limp, rust-spotted, or leathery pods and any with visible seed lumps.",
+		store: "Refrigerate dry in a perforated bag up to five days, in the crisper drawer and never against the back wall; below 4C (40F) the skin pits and russets. Blanched and frozen, they hold their color for months.",
+		prep: "Line the pods up and cut the stem ends in one pass; the thin tail is edible and looks better left on. Dry them before any hot pan, and drop blanched beans into ice water to lock the color.",
+		methods: ["blanching", "boiling", "roasting", "sauteing", "braising", "stir-frying", "grilling"]
 	},
 	{
 		t: "Green Cabbage",
@@ -482,6 +782,26 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["pan-frying", "deep-frying", "pickling", "braising", "roasting", "stewing"]
 	},
 	{
+		t: "Hearts of Palm",
+		c: "The Vegetable Atlas",
+		d: "The growing core of a palm: the apical bud and the young leaf bases sheathing it, the only growing point the tree has, which is why taking one from a single-stemmed palm kills it. Sustainable production now leans on the peach palm, pejibaye, which suckers and regrows from the base, and on farmed acai palm. Texture is the whole point: dense, ivory, concentric rings, crisp as a water chestnut when fresh, with a flavor between artichoke heart and young corn. Almost all of it arrives jarred or canned, and the sourness is not the tin: it is citric acid added on purpose, since a low-acid vegetable must be acidified to can it safely. Rinsing takes the brine off the surface; the acid inside the tissue stays. Fresh hearts are sweeter and more tender, and brown within minutes of cutting. Slice into coins for salads, sear split pieces dry until they color, or shred the layers as a stand-in for crab.",
+		season: [],
+		choose: "Fresh: firm, heavy, cream-white cylinders with no browning at the cut. Jarred: whole pale spears over pre-cut coins every time. This is a low-acid vegetable held safe only by the acid added to it, so refuse a bulging or leaking lid and discard, without tasting, any jar that spurts on opening, smells off, or has gone cloudy.",
+		store: "Fresh hearts keep about a week refrigerated and tightly wrapped. Move an opened can into glass or plastic, since cut tinplate taints the food; under its liquid it holds five days, drained about two.",
+		prep: "Fresh: peel away the fibrous outer sheaths until you reach tender rings, then cut into lemon water, because the cut face browns. Jarred: rinse under cold water and pat bone dry, or it will steam instead of searing.",
+		methods: ["searing", "grilling", "frying", "braising", "roasting", "raw"]
+	},
+	{
+		t: "Iceberg Lettuce",
+		c: "The Vegetable Atlas",
+		d: "The CRISPHEAD, bred less for flavor than for structure: leaves wrapped so tightly they brace one another, which gives the head its shipping durability and its one real culinary virtue, cold shattering crunch at roughly 96 percent water. The crunch is turgor, not moisture alone: water held under pressure in the vacuoles against a stiff cell wall, so the cell bursts at the bite instead of folding. Cold holds that pressure and warmth loses it, which is why a limp head comes back after twenty minutes in ice water and why a cut one never does. Use it where a soft leaf would steam: under a wedge of blue cheese, inside a taco, on a burger, and against chili heat or smoke. It is also the lettuce that survives a hot dressing or thirty seconds in a wok. Keep it colder than any other lettuce, cut it only at service since cut edges brown within the hour, and pull the leaves whole for wrapping.",
+		season: [6, 7, 8, 9],
+		choose: "A head that squeaks and gives only slightly, heavy for its size, outer leaves intact and matte green. Reject rusty red-brown streaking along the ribs and any head that feels light or spongy at the crown.",
+		store: "Refrigerate whole and unwashed at 0 to 2 C (32 to 36 F), 10 to 14 days; it outlasts every other lettuce here. Ethylene from apples and pears causes the rust spotting, so keep it away from fruit.",
+		prep: "Core it by striking the butt on the board and twisting the core free, then run cold water into the cavity to open the leaves. Shred with a sharp knife at the last minute or tear for wedges; a blunt blade bruises the ribs.",
+		methods: ["raw", "grill", "stir-fry", "sear", "braise"]
+	},
+	{
 		t: "Japanese Eggplant",
 		c: "The Vegetable Atlas",
 		d: "The long, slender, thin-skinned type (NASU in Japan, with the Chinese varieties close kin): the same aerenchyma foam as a globe, but less of it per bite, a narrow seed core, fewer seeds, and skin tender enough to eat. That geometry is the entire difference. A 3 cm (1 1/4 in) baton cooks through before the outside can dry out, so it belongs to fast, hot, direct heat: grill, broiler, wok. It needs no salting: salting collapses the foam so a long fry cannot fill it, and on fast dry heat little oil is free and escaping steam keeps it out. Score the cut face in a diamond 3 mm (1/8 in) deep, cook it cut side down until it slumps and the flesh goes translucent cream, and only then brush on miso or soy, which burn.",
@@ -490,6 +810,26 @@ export const LEXICON_SUPPLEMENT = [
 		store: "Cool and humid at 10 to 12 C (50 to 54 F) in a perforated bag, two days: dry air, not warmth, is what shrivels that thin skin. Below 10 C it pits and bronzes, so refrigerate only past two days, bagged, and take the pitting over a shriveled fruit.",
 		prep: "Halve lengthwise or cut on a long bias for surface area; no peeling, no salting. The cut face browns fast, so cut it while the pan heats, not before. Cooking one whole over flame, prick the skin twice or it bursts.",
 		methods: ["grilling", "broiling", "stir-frying", "steaming", "roasting", "pan-frying"]
+	},
+	{
+		t: "Jicama",
+		c: "The Vegetable Atlas",
+		d: "The tuberous root of a Mexican legume, Pachyrhizus erosus, whose vine is poisonous: the seeds and foliage carry ROTENONE, an insecticide, so the root alone is food. That root is about 90 percent water over only a few percent starch, and the crunch is structural: cell walls that hold through the heat that breaks a potato's pectin down, so it is crisp raw and stubbornly crisp cooked, more water chestnut than potato. Sweetness is free sugar, sucrose with a little glucose and fructose. The inulin alongside is not sweet at all: it passes undigested and ferments in the gut, so a big raw plateful means gas for anyone sensitive. Cut surfaces brown slowly and want no acid, but they dry chalky, so keep them covered. Skin and the fibrous layer under it both have to go. Peel, cut into batons, and dress with lime, chili, and salt.",
+		season: [10, 11, 12, 1, 2, 3],
+		choose: "Medium, 500 g to 1 kg (1 to 2 lb), heavy, with dry unblemished tan skin and no weeping at the root scar. Big ones turn fibrous and starchy. Reject soft spots, cracks, mold, and any that feels light for its size.",
+		store: "Whole and unwashed at 12-15C (55-60F) somewhere dry it keeps a month or more, which is its best trick. Below 10C it takes chilling damage and goes water-soaked, so the refrigerator shortens its life rather than lengthens it. Only cut pieces belong there, wrapped, up to five days.",
+		prep: "Slice off top and bottom, then peel with a knife rather than a peeler: the skin and the tough fibrous layer under it both have to go, and a peeler leaves that layer behind. Cut planks, then matchsticks.",
+		methods: ["raw", "stir-fry", "pickle", "braise", "deep-fry"]
+	},
+	{
+		t: "Kabocha Squash",
+		c: "The Vegetable Atlas",
+		d: "Seiyo kabocha, Cucurbita maxima: squat, dark green streaked with pale gray, and the driest of the common ones at 20 to 28 percent dry matter against butternut's 13. That one number explains how it behaves. (Nihon kabocha, the moschata type, is as wet as butternut.) The flesh is dense, sweet, and faintly chestnut-like, and it cooks FLOURY rather than wet, so a simmered piece keeps its shape instead of dissolving into the broth, which is exactly what a Japanese nimono asks for. It makes a poor thin soup and a superb tempura. The skin is thin, fully edible once cooked, and holds a cut piece together, so leave it on for simmering and roasting and peel only when you want a smooth puree. Simmer in dashi, soy, mirin and sugar just until a skewer meets slight resistance, then stop: carried past that point kabocha crumbles all at once.",
+		season: [9, 10, 11, 12],
+		choose: "Heavy and rock hard, rind dull and deeply green, stem brown and well corked, which is the sign it was cured. Reject a shiny rind, any soft patch, or a squash that feels light, meaning watery and immature.",
+		store: "Whole at 10 to 15C (50 to 59F) in the dark for 1 to 3 months, and it sweetens over the first few weeks. Cut pieces wrapped in the refrigerator, 4 days; the cut face molds well before the flesh spoils.",
+		prep: "The rind is hard: set it on a damp towel, drive a heavy knife in beside the stem, and lever down. To soften a stubborn one, stab the rind right through in three or four places first, then give it two minutes in the microwave; sealed, it traps steam and can burst. Scrape out seeds and strings, and bevel cut edges for simmering.",
+		methods: ["simmer", "roast", "steam", "fry", "bake", "braise"]
 	},
 	{
 		t: "Kohlrabi",
@@ -522,6 +862,26 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["sweating", "braising", "poaching", "roasting", "grilling", "charring"]
 	},
 	{
+		t: "Little Gem",
+		c: "The Vegetable Atlas",
+		d: "A dwarf cos: the sweetness and thin leaf of a butter lettuce carried on the upright ribbed frame of a romaine, which is why one head is one portion and why it halves cleanly. The tight head shades its interior, so those leaves stay pale for lack of chlorophyll and taste mild because they are young; shade does not make sugar. Bitterness is sesquiterpene lactone carried in the latex, which runs heaviest in the stem, so the core is the bitter part and the outer jacket the coarse one. Density is the advantage here: a halved gem holds together face down in a hot pan, the cut face browns while the core steams in its own moisture, and the ribs stay audible under the char. It is also sturdy enough to be dressed a few minutes ahead without wilting. Peel off two or three outer leaves, split lengthwise through the core so the leaves stay anchored, and treat it as a vegetable to be cooked, not only as salad.",
+		season: [5, 6, 7, 9],
+		choose: "Heads dense and heavy for their size, tight to the squeeze, butt cut clean and white. Reject light hollow heads, browning at the base, and any pack with slimy outer leaves pressed against the heart.",
+		store: "Whole and unwashed in a bag at 1 to 4 C (34 to 39 F), 7 to 10 days. Halved or washed heads brown at the cut core within a day, so cut to order.",
+		prep: "Strip the outer jacket, trim the butt but leave the core intact, then split or quarter lengthwise. Wash by fanning the cut halves under cold running water: soil sits two leaves deep at the base.",
+		methods: ["raw", "grill", "sear", "braise", "roast"]
+	},
+	{
+		t: "Lotus Root",
+		c: "The Vegetable Atlas",
+		d: "RENKON, the jointed rhizome of the lotus, hollow along its length with a ring of air channels that make the famous lacework cross-section and let the plant breathe down through the mud. Texture is the point, and not fixed: thin slices cooked fast stay crisp, while a long simmer gelatinizes its considerable starch and turns the flesh floury and soft, as Chinese soups want. Acid holds the crunch, suppressing the pectin breakdown that softens vegetables, so vinegar belongs in the soak and the pot. Cut faces brown fast from polyphenol oxidase and draw sticky mucilage threads, which the same soak fixes. Long boiling costs it its vitamin C. Always cook it: raw lotus can carry cysts of the fluke Fasciolopsis buski. Slice thin, soak ten minutes, then stir-fry hard or simmer in dashi.",
+		season: [10, 11, 12, 1, 2],
+		choose: "Unbroken heavy sections with the joints still sealed, skin creamy tan and free of soft or blackened patches. If it is sold cut, the channels should be clean and pale. Reject packed mud inside the holes or gray discoloration.",
+		store: "Refrigerate whole unpeeled sections wrapped in damp paper for two weeks; once a joint is cut the open channels darken and spoil within three or four days. Peeled slices hold two days in acidulated water.",
+		prep: "Cut the sealed joints away, peel the skin, and slice across the root to show the pattern. Drop the slices straight into water with a splash of vinegar for ten minutes to stop the browning and rinse off the sticky threads.",
+		methods: ["stir-fry", "simmer", "deep-fry", "braise", "steam", "pickle"]
+	},
+	{
 		t: "Mustard Greens",
 		c: "The Vegetable Atlas",
 		d: "Brassica juncea, the loudest member of the family: its glucosinolate is sinigrin, which myrosinase converts into allyl isothiocyanate, the same volatile compound that sends horseradish and wasabi up the nose. That reaction is the handle you hold it by. Raw, torn late into a salad, it is aggressive and peppery; heat kills the enzyme and drives off what it made, leaving something mild, green, and faintly sweet. So decide which vegetable you want before you light the burner. Southern cooking simmers it long with smoked pork, and Punjabi sarson ka saag does the same for hours before mashing it and topping it with ghee; Chinese kitchens go the other way, stir-frying it fast or salting gai choy into sour pickle. Cold sweetens it, heat makes it bolt and turn coarse. Cut it last if you want the bite.",
@@ -542,6 +902,76 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["stir-fry", "ferment", "braise", "steam", "simmer", "pickle"]
 	},
 	{
+		t: "Nettles",
+		c: "The Vegetable Atlas",
+		d: "A wild green that defends itself: leaf and stem are covered in hollow silica TRICHOMES that snap on contact and inject histamine, acetylcholine and serotonin, with oxalic and tartaric acid to prolong the burn. The hairs keep working inside a delivery box for days, so wear gloves, move them with tongs, and never taste a raw leaf. Sixty seconds in boiling water, or a hard wilt in a covered pan, breaks and collapses the hairs so they cannot inject; the histamine itself is heat stable, which is why thorough drying disarms nettles just as well. After that the leaf is safe, deep green, and tastes like spinach crossed with cucumber and green tea. Pick only young tips before flowering: older leaves load gritty calcium carbonate cystoliths that irritate the urinary tract. Blanch the bag on arrival, squeeze dry, and treat it as spinach.",
+		season: [3, 4, 5],
+		choose: "Young tops only, the top four to six leaves of a stem, bright and unblemished, with no flower buds or seed strings in the leaf axils. Reject coarse tall stems, yellowing, and anything gathered from roadsides or sprayed ground.",
+		store: "Keep in the bag it came in, gloves nearby, at 0 to 2 C (32 to 36 F), 2 to 3 days raw. Blanched and squeezed into balls it holds 4 days chilled and keeps for months in the freezer.",
+		prep: "Gloves and tongs throughout. Dunk the bag in cold water and lift the tops out, leaving grit and aphids behind, then 60 seconds in boiling salted water, ice water, squeeze hard, chop. Strip leaves off tough stems only after blanching.",
+		methods: ["blanch", "puree", "simmer", "saute", "braise", "steam"]
+	},
+	{
+		t: "New Potato",
+		c: "The Vegetable Atlas",
+		d: "Not a variety but a stage: any potato lifted before its skin has set, while the plant is still growing. Two things follow. The skin has not yet built a corky periderm, so it rubs away under a thumb and the tuber has almost no barrier against moisture loss or rot, which makes new potatoes a week's vegetable rather than a season's. And the plant has not finished turning sugars into starch, so the flesh is low in solids and high in sugar: waxy, firm, sweet, and glassy instead of mealy. The cells stay bound to each other, so it holds its shape in a salad, in a braise, and under a smashing. Do not peel it. Boil from cold in well-salted water and dress it while hot, when it drinks the vinaigrette.",
+		season: [5, 6, 7, 8],
+		choose: "Skin that flakes away when you rub it with a thumb, which is the actual test. Small, uniform, firm, with damp soil still clinging. Reject set papery skin sold as new, soft or sprouting ends, and any green tinge: the green is only chlorophyll, but it marks bitter solanine beneath it, which boiling does not destroy and which sits in the very skin you are keeping.",
+		store: "A week at most, refrigerated in paper inside a bag, or somewhere cool and dark. Cold sweetens them as it does any potato, but that only shows up in frying; boiled within the week it costs you nothing, and the unset skin rots fast in a warm kitchen. Buy them for the week you will use them.",
+		prep: "Never peel; scrub gently under running water and accept that some skin comes away with the grit. Leave the small ones whole, halve the larger, and start them in cold salted water so the outsides do not blow apart first.",
+		methods: ["boil", "steam", "roast", "smash", "braise", "grill", "saute"]
+	},
+	{
+		t: "Okra",
+		c: "The Vegetable Atlas",
+		d: "The immature seed pod of a hibiscus relative (Abelmoschus esculentus), and the whole argument about it is MUCILAGE: an acidic pectic polysaccharide held in mucilage cells that rupture at the knife and hydrate into that famous slippery gel. The gel is a thickener, not a defect; it is the body in gumbo and in West African and South Indian stews, which is what the plant is for. When you do not want it, you have two controls. ACID: tomato, lemon, tamarind, or a vinegar soak does not cut the chains, it protonates their galacturonic acid units so they stop repelling each other, coil tight, and stop thickening. HIGH DRY HEAT: roast at 230C (450F), grill, or fry with the pods whole or halved; with no free water the mucilage cannot hydrate, so it concentrates and browns instead of stringing. Wet, crowded, medium heat is what produces slime. Size is the other lever: pods over 10cm build lignin in the ridges and turn woody. Small pods, hot pan, and do not stir for the first two minutes.",
+		season: [7, 8, 9],
+		choose: "Bright green pods under 10cm, firm and unblemished, that snap at the tip when you bend it. Reject limp, bruised, blackened, or oversized pods; if the tip bends instead of breaking, the pod is already woody.",
+		store: "Keep dry in a paper bag, three days, in the warmest part of the refrigerator: below about 7C (45F) okra chills, pits, and blackens along the ridges within two days. Do not wash until you cook.",
+		prep: "Wash and dry completely, then trim the cap only, leaving the pod sealed if you want less gel. Cut into coins when you want the gel in the pot; every cut face you make releases more of it.",
+		methods: ["roasting", "grilling", "frying", "stewing", "pickling", "braising"]
+	},
+	{
+		t: "Parsnip",
+		c: "The Vegetable Atlas",
+		d: "A carrot relative that trades carotene for starch and a resinous, almost clove-like aroma built from terpenes. It needs frost to be worth eating: at temperatures near 0C (32F) the root breaks stored starch down into sucrose and fructose to protect its cells, which is why a September parsnip tastes like raw potato and a December one tastes like candy. That sugar load browns hard and early, so parsnips scorch at heat that merely colors a carrot. The core lignifies with size into a fibrous column. Note the sap: parsnip leaves and skin carry furanocoumarins that raise a burning rash on skin later exposed to sunlight, so wear gloves when peeling a crate of them. Roast at 200C (400F) until the edges are mahogany and collapsing.",
+		season: [11, 12, 1, 2, 3],
+		choose: "Ivory to pale tan, firm, and no thicker than 5 cm (2 in) at the shoulder; big ones hide a woody core. Reject any that flexes, any with brown soft patches at the crown, and any furred with gray storage mold.",
+		store: "Refrigerate unwashed in a perforated bag for two to four weeks; the damp stops them going rubbery, and cold near 0C (32F) goes on turning starch to sugar, so they improve in storage. Trim any greens off at once. Blanched, they freeze well; peeled ones hold a day in water, trading a little aroma for it.",
+		prep: "Peel, halve or quarter lengthwise, and cut the core out of anything wrist-thick. The cut faces oxidize gray-brown, so hold them in acidulated water. Glove up for volume work: the sap burns skin in sunlight.",
+		methods: ["roast", "puree", "braise", "fry", "steam", "glaze"]
+	},
+	{
+		t: "Pattypan Squash",
+		c: "The Vegetable Atlas",
+		d: "A summer squash shaped like a small flying saucer with a scalloped rim, sold from thumb-size upward. The shape is the point: the wide flat faces are built for a pan, and the little discs hold together better than a zucchini coin because the flesh is marginally firmer and the seed cavity proportionally smaller. Picked at 3 to 5 cm (1 to 2 in) they need nothing but oil, salt, and high heat, and they cook whole. Let them reach saucer size and the skin sets, the seeds coarsen, and you are into hollow-and-fill territory: cut a lid, scoop the center, pack with sausage or rice, and bake covered so the shell steams tender before the filling colors. Halve bigger ones through the equator and sear the cut faces hard. The scalloped edge catches and browns, and that browning is most of the flavor you will get from something this watery.",
+		season: [6, 7, 8, 9],
+		choose: "Heavy and rigid, skin glossy: 3 to 5 cm (1 to 2 in) whole, 8 to 10 cm (3 to 4 in) to hollow and fill. Reject a rind a thumbnail will not mark, brown scars on the flat faces, or a dried shrunken stem.",
+		store: "Crisper, unwashed and loose, 4 to 5 days. The scalloped rim bruises in a packed bag and the bruise goes soft and brown inside a day. Cut pattypan holds one day and no more, so cook it the day you cut it.",
+		prep: "Trim the stem flush and leave the skin on. Halve through the equator for searing; for filling, cut a lid and hollow it with a melon baller. Taste a raw sliver and spit it out; bin any bitter fruit, since cooking does not destroy cucurbitacin.",
+		methods: ["roast", "grill", "saute", "bake", "steam", "fry"]
+	},
+	{
+		t: "Pea Shoots",
+		c: "The Vegetable Atlas",
+		d: "The growing tips of the pea plant, leaf and tendril and about 10 cm of stem. It is grassy and only mildly sweet: the sugar into starch trade belongs to the seed, not the shoot, and a growing tip is a sink living on sucrose sent up from the leaves below. Two products share the name. MICROGREEN shoots come off seed-dense trays cut at around ten days, soft and mild, for salad; DOU MIAO, the Cantonese tip, is cut from a field-grown snow pea vine and has real pea flavor with enough structure to fight a wok. It is all surface area and respires hard, so a box that looked fine at delivery can yellow by evening. Cook it fast, 45 to 60 seconds in a screaming wok with garlic, a splash of stock and salt. Past that it collapses to a third of its volume and goes flat and khaki.",
+		season: [3, 4, 5, 10, 11],
+		choose: "Tendrils curled and springy, leaves bright green and dry, stems snapping cleanly at the cut end. Reject yellow leaves, wet matted patches, thick fibrous stems, and shoots that have begun to flower.",
+		store: "Refrigerate at 0 to 2 C (32 to 36 F) in a vented box with a dry towel, 2 to 3 days at best. It is the most perishable green in this chapter, so order it for the day you will use it.",
+		prep: "Snap the bottom off each stem where it stops breaking cleanly and discard the fibrous end. Wash quickly and dry well, since wet shoots steam instead of searing. Do not cut them: they are picked at the right length.",
+		methods: ["stir-fry", "raw", "wilt", "blanch", "steam"]
+	},
+	{
+		t: "Persian Cucumber",
+		c: "The Vegetable Atlas",
+		d: "A short, slim, thin-skinned cucumber, 12 to 15 cm (5 to 6 in), sold unwaxed and usually bagged in sixes or eights. It is no drier than a slicer, near 96 percent water like every cucumber; what sets it apart is proportion. The seed cavity is narrow and the seeds stay soft, so there is more firm wall and less of the soft gel that weeps and slumps first, and a Persian holds its crunch in a dressed salad long after an English has gone limp. The skin is thin enough to eat and carries almost no bitterness, since these cultivars are largely bred free of cucurbitacin. That makes it the default wherever cucumber must stay crisp: chopped salads, salatim, tzatziki, smashed cucumber. SMASH it rather than slice it. Crack the fruit with the flat of a cleaver so it splits along its own fracture lines, and the ragged torn surfaces grip dressing in a way no clean knife cut ever will.",
+		season: [6, 7, 8, 9],
+		choose: "Rigid and snapping-firm, skin taut and dark with a fine bloom, never waxed. Reject bendy fruit, soft stem ends, or a bag with condensation and one slick cucumber in it, since that one spoils its neighbors.",
+		store: "Crisper, in the bag it came in, up to a week, though the cold works against them: below 10C (50F) the skin pits and goes water-soaked in about three days. Unwaxed skin dehydrates fast, so never leave them bare on a shelf.",
+		prep: "No peeling and no seeding. Wash, trim both ends, and cut as late as you can. For smashed cucumber, crack with a cleaver, salt 10 minutes, pour off the liquid that collects, then dress.",
+		methods: ["raw", "pickle", "stir-fry", "grill"]
+	},
+	{
 		t: "Plum Tomato",
 		c: "The Vegetable Atlas",
 		d: "Bred for solids, not for slicing: two locules instead of eight, a thick pericarp wall, little seed jelly, dry matter around 7 percent against a beefsteak's 5. That wall is where the pectin sits, cross-linked by calcium, so plum flesh keeps its shape through the first twenty minutes of a sauce and then breaks down into body rather than water. You spend far less time boiling liquid off, which is the real prize: a short cook keeps the fruit's acid and aroma instead of stewing them flat. SAN MARZANO is the long, pointed, low-acid benchmark; ROMA is the workhorse. Cook them skin-on and pass the sauce through a food mill, which strips skin and seed while pushing the pectin through.",
@@ -550,6 +980,56 @@ export const LEXICON_SUPPLEMENT = [
 		store: "Counter at room temperature, stem-scar down, up to a week: the thicker wall holds longer than a beefsteak's. Keep whole fruit out of the refrigerator unless it is dead ripe and you cannot use it, when cold beats rot. Decant opened cans into a covered jar, keep them cold, and use in four days; acid on a cut tin edge turns metallic.",
 		prep: "Score an X in the base, boil 20 seconds in batches, then straight into ice water or the flesh cooks on and the skins cling. Or roast skin-on and mill. Scrape the seed jelly out with a thumb only when you want a drier sauce: it runs about three times the glutamate of the flesh, though a plum holds little of it.",
 		methods: ["roasting", "simmering", "stewing", "braising", "drying", "grilling"]
+	},
+	{
+		t: "Pumpkin",
+		c: "The Vegetable Atlas",
+		d: "Not one squash but a shape, spread across four species, and the distinction that matters in a kitchen is between a field pumpkin bred for size and a cooking pumpkin bred for flesh. The big carving types are watery, stringy, and low in sugar because they were selected to grow large and hold a cut wall, and they will punish a pie. The ones to cook are the small dense cultivars: SUGAR or PIE pumpkins, and better still the thick-walled moschata and maxima heirlooms, whose starch turns to sugar in storage. Field and acorn pepo types do the opposite, going blander and stringier each week. Roast rather than boil, since the flesh is wet already, and brown the cut faces before you scrape and puree. If the puree is loose, tighten it in a dry pan over medium heat until it holds a line behind the spoon, or the pie will weep into its crust.",
+		season: [9, 10, 11, 12],
+		choose: "Small cooking cultivars, 1 to 3 kg (2 to 6 lb), heavy for size, rind too hard to mark with a thumbnail, stem dry and firmly set. Reject stemless fruit, soft ground spots, and big carving pumpkins if you mean to eat it.",
+		store: "Cool dry room at 10 to 15C (50 to 59F), 2 to 3 months on a shelf with the fruit not touching. Never refrigerate a whole one. Roasted puree keeps 4 days cold and holds well frozen flat in bags.",
+		prep: "Stand it on a cut base, halve pole to pole, and scoop seeds and strings with an ice cream scoop. Taste a raw sliver: bitterness means cucurbitacins, which cooking will not remove, so discard that fruit. Keep the seeds: rinse, dry, oil, salt, roast. Roast the halves skin-on and scrape the flesh out afterward.",
+		methods: ["roast", "bake", "braise", "steam", "simmer", "fry"]
+	},
+	{
+		t: "Puntarelle",
+		c: "The Vegetable Atlas",
+		d: "The blanched inner shoots of Catalogna chicory: hollow, pale, asparagus-like stalks that form in the heart of the plant under the dark canopy of its own jagged outer leaves. The shoots are the prize and the outer leaves are a separate braising green. Whole and raw the shoots are tough and aggressively bitter, so Rome does two things to them. First they are split lengthwise into thin strips, traditionally on a wire grid, which releases the tension in the outer wall; then the strips go into ice water, where uneven swelling curls them into tight ringlets and leaches out a real share of the water-soluble bitter lactones. What comes out is cold, crunchy and only pleasantly bitter. The dressing is not optional: anchovy pounded into garlic, vinegar and oil. Cut, soak an hour, dress at the pass.",
+		season: [12, 1, 2, 3],
+		choose: "Heads with a dense cluster of fat pale hollow shoots at the center, ivory-green and firm, outer leaves dark and unwilted. Reject flowering shoots, stalks gone spongy or rubbery, and browned cut ends.",
+		store: "Refrigerate whole and unwashed at 1 to 4 C (34 to 39 F), 5 to 7 days. Cut strips hold 24 hours in ice water in the walk-in, losing some crunch and some bitterness together.",
+		prep: "Strip the outer leaves off for braising, break the shoots from the core, then slice each shoot lengthwise into thin strips. Straight into ice water for at least 30 minutes to curl them. The bitter latex stains hands and board.",
+		methods: ["raw", "braise", "saute", "blanch", "grill"]
+	},
+	{
+		t: "Purslane",
+		c: "The Vegetable Atlas",
+		d: "A succulent weed worth buying: fat jade paddles on red stems, crunchy and sour and genuinely SLIPPERY, because the cells are packed with mucilage, a soluble fiber like okra's. It carries more alpha-linolenic acid, the plant form of omega-3, than any other common leaf vegetable. The sourness is malic acid, banked overnight and spent through the day, though that swing is a drought response and well watered market purslane shows little of it. It also holds oxalic acid at spinach levels or above, so blanch it and pour the water away if you eat it often or make oxalate stones. The mucilage is the decision. Raw with tomato, cucumber and Turkish yogurt it reads as juicy crunch; simmered into a Mexican verdolagas stew with pork it thickens the liquid. Use leaves and tender stems, and dress with acid, since fat alone slides off.",
+		season: [6, 7, 8, 9],
+		choose: "Plump firm paddles on crisp red-tinged stems that snap wetly, with no flowers. Reject flaccid or wilted leaves, yellowing, blackened stem ends, and any bunch already sliming in the bag. If you pick rather than buy, snap a stem: purslane bleeds clear, the spurge that shares its ground bleeds milky white and is poisonous.",
+		store: "Refrigerate unwashed in a loose bag at 2 to 5 C (36 to 41 F), 3 to 4 days. It bruises where it is packed tight and chills badly below 2 C (36 F), going translucent and watery.",
+		prep: "Wash hard in several changes of cold water: it grows low and holds sand. Pinch off the woody lower stems and keep the tender ones. Cut at the last moment to limit how much mucilage is released.",
+		methods: ["raw", "saute", "simmer", "stew", "blanch", "pickle"]
+	},
+	{
+		t: "Radicchio",
+		c: "The Vegetable Atlas",
+		d: "Red chicory, the round CHIOGGIA head the one most markets sell: burgundy leaves veined white, colored by ANTHOCYANINS that intensify with cold nights and turn blue-gray in anything alkaline. Bitterness comes from sesquiterpene lactones, mainly lactucin and lactucopicrin. Season matters: chicory banks INULIN, not starch, and cold hydrolyzes that fructan to sugar, so autumn and winter heads are balanced while summer heads are punishing. Three things tame it, as the Veneto worked out: fat, salt and heat. Grilled or roasted, the cut face caramelizes and the leaves go sweet and smoky; soaked in ice water for 20 minutes, raw wedges shed their harshest edge. CASTELFRANCO is the pale speckled loose head, milder and best raw. Cook it hard or dress it hard, with anchovy, vinegar, cheese or pork fat; nothing about radicchio rewards timidity.",
+		season: [10, 11, 12, 1, 2],
+		choose: "A firm head that feels heavy and dense for its size, leaves tight and glossy with crisp white ribs. Reject soft or spongy heads, brown edges on the outer leaves, and a dry split core.",
+		store: "Refrigerate whole and unwashed at 1 to 4 C (34 to 39 F), 2 to 3 weeks; it is the longest-keeping leaf in this chapter. Cut faces oxidize brown, so keep heads whole until service.",
+		prep: "Peel off bruised outer leaves and quarter through the core so the wedges hold together. Soak raw wedges in ice water to mellow them. Use a sharp stainless knife, since carbon steel blackens the cut ribs.",
+		methods: ["grill", "roast", "raw", "braise", "saute", "char"]
+	},
+	{
+		t: "Radish",
+		c: "The Vegetable Atlas",
+		d: "The fastest root in the garden, pulled twenty-five days from seed, and the pepper is the point: glucosinolates meeting myrosinase at the cut face to make isothiocyanates that climb the nose rather than sit on the tongue. Heat destroys the enzyme, so a roasted radish turns sweet and mild, close to a young turnip, while a cut raw one peaks a minute or two after the knife and fades from there as those volatiles escape and break down. Pungency rises with warmth in the field and with age in the root, and an overgrown radish goes hollow and pithy as the flesh outruns its water supply. The crispness is nothing but turgor pressure, so ice water brings a limp radish back inside half an hour. Serve them raw with butter and flaky salt, or halve them and roast at 220C (425F) until the cut faces color.",
+		season: [3, 4, 5, 6, 9, 10],
+		choose: "Firm and taut, small, unsplit skin, lively green tops. Give is water loss and ice water fixes it; pith tracks size and age, so buy small and heavy for the size. Reject cracked roots, golf ball size and up, and yellowing leaves.",
+		store: "Twist the tops off, then refrigerate the roots in a sealed container for a week, or submerged in water for two. The greens wilt within a day and are good sauteed or blended into soup.",
+		prep: "Scrub, trim the tailroot and the crown, and leave whole or halve. Slice thin only just before serving, since the heat peaks early and then fades and the faces dry. Thirty minutes in ice water restores the snap to a tired bunch.",
+		methods: ["raw", "roast", "pickle", "braise", "saute", "grill"]
 	},
 	{
 		t: "Ramps",
@@ -582,6 +1062,26 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["pickling", "grilling", "charring", "roasting", "sweating"]
 	},
 	{
+		t: "Rhubarb",
+		c: "The Vegetable Atlas",
+		d: "A vegetable that eats like a fruit: the petiole of a giant sorrel relative, sour with malic and oxalic acid and almost devoid of sugar, which is why every recipe for it adds some. THE LEAVES ARE NOT FOOD. The blades carry oxalic acid at levels high enough to cause serious poisoning, along with anthraquinone glycosides; cut them off at the market and compost them, and never let them near a stockpot, an infusion, or a salad. The stalk is the safe part and the part you want. FORCED rhubarb, grown in dark sheds and harvested by candlelight in winter, is pink, slender, tender, and mild; FIELD rhubarb in late spring is greener, stringier, and far more sour. Color is variety, not ripeness, so a green stalk can be perfectly ripe. Pectin is low, so rhubarb collapses into threads rather than setting: cook it briefly with sugar, or bake the pieces spread on a tray so they hold their shape.",
+		season: [1, 2, 3, 4, 5, 6],
+		choose: "Firm, glossy stalks that snap crisply and feel heavy for their size: forced run 1 to 2cm across, field 2 to 3cm, and thicker than that is usually pithy. Reject limp or split stalks, and get the leaves off before you carry it home.",
+		store: "Leaves off, refrigerated in a bag up to a week; stalks go limp as they lose water. It freezes well raw in cut lengths and goes into the pot straight from the freezer, no softening first.",
+		prep: "Wash, trim both ends, cut into 3cm lengths. Peeling is unnecessary except on thick, stringy field stalks late in the season. The leaves are not an ingredient in any preparation, cooked or raw.",
+		methods: ["baking", "stewing", "roasting", "poaching", "pickling"]
+	},
+	{
+		t: "Romaine",
+		c: "The Vegetable Atlas",
+		d: "The cos lettuce, Lactuca sativa var. longifolia: an upright head whose thick midrib is a block of water-swollen cells, which is why romaine crunches where other lettuces fold and why it holds up on a grill. Cut it and the rib weeps white LATEX carrying the sesquiterpene lactones lactucin and lactucopicrin; that is the bitterness, strongest at the butt and rising as the plant bolts in summer heat. Outer leaves are dark, coarse and mineral; the HEART is pale and sweet because it grew shaded by its own wrapper, and it is the part worth serving whole. Structure is what makes it the Caesar lettuce: the rib carries a thick emulsion without collapsing, where a soft leaf would drown. Wash, then chill the leaves hard before dressing. Cold water restores turgor in twenty minutes, and a limp romaine is usually just a warm one.",
+		season: [4, 5, 6, 9, 10],
+		choose: "Heads heavy for their size with tight pale hearts and stiff squeaky ribs. Reject rust-colored oxidation along the rib edges, pink or brown bleeding at the cut butt, and heads that feel light and airy.",
+		store: "Whole and unwashed in a bag at 0 to 2 C (32 to 36 F), 7 to 10 days; at 4 C, half that. Keep it clear of apples and bananas: ethylene is what pits the ribs with rust spots. Below freezing the cells burst and go translucent.",
+		prep: "Trim the butt, separate the leaves and wash them individually, since grit hides at the base of each rib. Washing removes grit, not E. coli: romaine is a repeat outbreak vehicle, so buy whole heads over pre-cut bags and cook it for anyone pregnant, elderly or immune-compromised. Spin bone dry or the dressing slides off. Tear for salad; use a knife only for wedges and grill halves.",
+		methods: ["raw", "grill", "sear", "braise", "steam"]
+	},
+	{
 		t: "Romanesco",
 		c: "The Vegetable Atlas",
 		d: "The chartreuse cone whose surface is a fractal: every bud is a scaled copy of the whole head. Its florets keep trying to flower and failing, and each failure throws up more buds, so the spiral repeats at every scale, in Fibonacci counts. It is no cross of broccoli and cauliflower but an old Roman cauliflower, Brassica oleracea botrytis group, nuttier and less sulfurous than either. Cooks care for two things: it is firmer than cauliflower and holds its shape through roasting, and the pattern is the plating, so cut through the axis and every wedge shows the spiral. It carries chlorophyll, so its own acid pushes the magnesium out of the pigment and turns it olive if you overcook it or hold it on a pass. Roast in wedges at 220C (425F), cut face down, and serve the moment the edges brown.",
@@ -590,6 +1090,46 @@ export const LEXICON_SUPPLEMENT = [
 		store: "Whole and unwashed in a perforated bag, 5 to 7 days; it yellows faster than cauliflower. Keep it stem up so the cones face down and shed drip instead of holding water in the points.",
 		prep: "Soak it cones down in cold salted water ten minutes; the spirals hide cabbage aphids and grit. Cut from the base through the core into wedges to keep the spirals intact, into single cones only for pickling or pasta. Trim the stem flat so the wedges sit cut face down in the pan.",
 		methods: ["roast", "steam", "saute", "grill", "blanch"]
+	},
+	{
+		t: "Romano Bean",
+		c: "The Vegetable Atlas",
+		d: "The flat Italian pod bean, Phaseolus vulgaris again, wide as a thumb and often 15cm long, sold as flat bean or helda. The shape is not cosmetic. That broad wall carries far more surface per gram than a slim haricot, so it browns and drinks braising liquid as a round bean cannot. What makes it slow is not a heavier pectin load but a tougher, more fibrous wall, so it laughs at the three-minute blanch. Cook it longer and wetter, and add the tomato late: acid holds pectin together, and beans braised in tomato from the start stay stubborn for an hour. This is the bean for a slow olive oil braise until it is olive-drab and silky, for fasolakia, for a stew with gigante beans, for charring flat on a grill. Purple Romano goes green in the pot as the anthocyanin washes out. Stop trying to keep this one crisp.",
+		season: [7, 8, 9],
+		choose: "Broad, flat pods with a matte surface and no swelling over the seeds; a fresh one snaps cleanly when bent, an old one folds. Reject folding, papery, or rust-spotted pods, which stay leathery however long you cook them.",
+		store: "Refrigerate in a perforated bag up to five days. All that surface area costs water fast, so keep them covered and out of the refrigerator door, where the temperature swings every time it opens.",
+		prep: "Snap the stem end and pull; older pods still give up a string. Cut on a sharp bias into 5cm lengths for braises, or leave them whole for the grill and dress them off the heat while they are still hot.",
+		methods: ["braising", "stewing", "grilling", "roasting", "boiling", "sauteing"]
+	},
+	{
+		t: "Russet Potato",
+		c: "The Vegetable Atlas",
+		d: "The high-solids baking potato: around 22 percent dry matter. It is the quantity of starch that does the work, not the type: potato starch runs four fifths AMYLOPECTIN in every cultivar, and the russet just packs more into large granules. Past about 65C (150F) they swell with water while the pectin cementing the cells dissolves, and the russet falls into dry mealy cells. That is a defect in a salad and the entire point of a baked potato, a fry, and a mash. Low moisture and low reducing sugar also make it a fine frying potato: little sugar means the exterior browns evenly instead of going dark before the center cooks. The netted skin bakes to a crisp shell. Bake at 200C (400F) on the rack, never in foil, which only steams it.",
+		season: [],
+		choose: "Heavy and rock hard, with dry netted skin and no green cast. The green is only chlorophyll, but it marks the light exposure that also builds solanine and chaconine, and cooking does not break those down. Cut green and sprouts away deeply or pass the potato by, and spit out anything that tastes bitter. Reject soft ends, wrinkled skin, and any cut or bruise weeping onto its neighbors.",
+		store: "Cool, dark, and ventilated at 7-10C (45-50F), loose in paper, for a month or more. Never refrigerate them: cold turns starch to sugar and the fries come out dark and sweet. Store them away from onions.",
+		prep: "Scrub; peel only when the dish demands it. Fries and cubes hold their shape better after a cold water rinse that washes off free surface starch. Cut flesh grays within minutes, so keep it under water until it cooks.",
+		methods: ["bake", "deep-fry", "mash", "roast", "gratin", "simmer"]
+	},
+	{
+		t: "Rutabaga",
+		c: "The Vegetable Atlas",
+		d: "A cross of turnip and cabbage, Brassica napus, denser and sweeter than either parent, with yellow flesh from carotenoids, a purple-shouldered skin, and often a coat of food-grade wax from the packer. It carries the same glucosinolate chemistry as the turnip but more sugar to balance it, which is why it tolerates long cooking where turnip turns acrid. Its carbohydrate is sugar, not starch: there is almost none to gelatinize, so it holds its shape through an hour of stew and cannot go gluey under the masher, though it does mash wet. Dry the drained pieces in the hot pan before the butter goes in. Bitterness concentrates near the surface, so peel a full centimeter in, past the greenish layer. Cook until a knife meets no resistance.",
+		season: [10, 11, 12, 1, 2],
+		choose: "Heavy, rock hard, 10-15 cm (4-6 in), smooth skin, firm crown. Reject any that gives under thumb pressure or shows sunken brown patches. A rap tells you nothing through flesh this dense, and brown heart shows only on cutting, so buy small.",
+		store: "Whole and waxed they hold a month in the refrigerator and several in a cold cellar at 0-4C (32-39F). Once cut, wrap the piece and use it within four days; the open face dries to a leathery skin.",
+		prep: "Trim both ends flat for a stable base, then take the skin off with a knife rather than a peeler, cutting deep enough to clear the pale green layer beneath. Work in even 2 cm (1 in) pieces; it cooks slower than potato.",
+		methods: ["boil", "mash", "roast", "braise", "stew", "gratin"]
+	},
+	{
+		t: "Salsify",
+		c: "The Vegetable Atlas",
+		d: "The taproot of a purple goatsbeard, called oyster plant for a faint shellfish note in the cooked flesh. Its storage carbohydrate is INULIN rather than starch, so it never turns floury: it cooks to a dense, silky, faintly sweet firmness and thickens nothing around it. Inulin also brings the same digestive complaint that follows sunchokes, in smaller measure. The white flesh browns fast and hard once cut, driven by polyphenol oxidase, and the root weeps a sticky white latex that glues itself to a peeler and to your hands. Black salsify, SCORZONERA, is a different plant with the same behavior under a tougher dark skin. Peel under running water into lemon water, then simmer in a blanc of water, flour, and lemon juice to hold it ivory.",
+		season: [10, 11, 12, 1, 2],
+		choose: "Straight firm roots about as thick as a thumb, sold with their soil on and the skin unbroken. Limp or heavily forked roots lose half their weight to the peeler. Reject any that feels hollow or spongy at the thick end.",
+		store: "Refrigerate unwashed and unpeeled in a bag with the soil still clinging, up to two weeks. Peeled, it browns within minutes and must sit in acidulated water. Cooked, it keeps three days held in its own liquid.",
+		prep: "Wear gloves; the latex is sticky and stains. Scrub, then peel under running water straight into lemon water. Cut even lengths and simmer in a blanc, water slackened with a spoon of flour and lemon, to keep the color.",
+		methods: ["simmer", "roast", "fry", "puree", "saute", "gratin"]
 	},
 	{
 		t: "Savoy Cabbage",
@@ -622,6 +1162,56 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["sweating", "deep-frying", "roasting", "confiting", "pickling"]
 	},
 	{
+		t: "Snap Pea",
+		c: "The Vegetable Atlas",
+		d: "A 1970s cross, not an heirloom: Pisum sativum bred from a snow pea toward the fat round pod of a shelling pea. The snow pea already lacked the parchment that lines a shelling pod; what was new is the thick sweet wall, tender at full seed size. Like sweet corn, it turns sugar to starch fast after picking, so a pod that tastes floury has spent too long in transit. A shelling pea at its peak is as sweet; here you also eat the wall. Most varieties still run a string down one or both seams, and it stays fibrous however you cook it. Cooking is barely cooking: 60 to 90 seconds in boiling salted water, or 30 seconds in a ripping hot pan finished with a splash of water. Eat them raw when they are good. If a pod needs more than two minutes to be pleasant, it is too old to rescue. Never pick pods off a flowering ornamental vine: sweet pea, Lathyrus odoratus, is a different genus and is poisonous.",
+		season: [4, 5, 6],
+		choose: "Plump, bright, squeaky pods that snap audibly and feel heavy for their size, with seeds visible but not straining the wall. Reject dull, flabby, or yellowing pods and any that have dried out at the stem end.",
+		store: "Refrigerate in a perforated bag up to three days and use them sooner; the sugar-to-starch loss runs on temperature, so give them the coldest shelf. Ethylene from bananas and apples yellows the pods instead.",
+		prep: "Snap the stem end backward and pull the string down the straight seam, then check the second seam on thick pods. Split them lengthwise for salads so the peas show, or leave whole for the pan.",
+		methods: ["blanching", "stir-frying", "sauteing", "steaming", "grilling", "raw"]
+	},
+	{
+		t: "Snow Pea",
+		c: "The Vegetable Atlas",
+		d: "The flat pea pod, picked before the seeds develop, whose wall lacks the lignified parchment layer that makes a shelling pea's pod inedible. Because there is almost nothing inside, everything you taste is that wall: crisp, green, faintly sweet, and structurally fragile. Heat here is measured in seconds, not minutes. In a wok they go in last and come out while still audibly crunchy; boiled past a minute they go limp as the cell membranes give way and the cells lose turgor, and translucent as water floods the air spaces that were scattering the light. The same plant gives DOU MIAO, the shoots and tendrils, a vegetable in their own right and the same flavor in leaf form. Expect a string on the straight seam of every pod but the youngest. Serve them raw or barely warmed through, and dress them after the heat, since acid strips the magnesium out of chlorophyll and turns hot pods olive within minutes.",
+		season: [4, 5, 6],
+		choose: "Flat, bright, almost translucent pods with only faint seed bumps; they should snap rather than fold. Reject opaque, yellowed, limp, or bulging pods, where the seeds inside have already gone starchy.",
+		store: "Refrigerate in a perforated bag up to three days; they lose water quickly and go leathery. Keep them clear of ethylene producers, and do not wash them until the moment they meet the pan.",
+		prep: "Pinch the stem end and pull the string along the straight edge. Leave them whole for stir-fries; for salads cut on a long bias into thin strips, which makes them eat finer and look deliberate.",
+		methods: ["stir-frying", "blanching", "steaming", "sauteing", "raw"]
+	},
+	{
+		t: "Sorrel",
+		c: "The Vegetable Atlas",
+		d: "The sour leaf: its sharpness is OXALIC ACID, the same compound behind the chalky tooth feel of spinach and chard, here sharp enough to read as acid. Two things follow. Cooked, sorrel slumps to a puree in seconds: the leaf is thin and its walls give at once. The color is other chemistry, acid driving magnesium from chlorophyll to PHEOPHYTIN, bright green to olive-khaki in fifteen seconds, and nothing will hold it. Accept the color or stay raw. Second, it is a seasoning, not a vegetable: by the bowl the oxalate load is high, and anyone prone to kidney stones should be told so. FRENCH sorrel is the broad shield-shaped mild one, garden sorrel the sharper arrow-shaped one; sorrel sold dried, or as a drink, is hibiscus, another plant. Melt it into cream and butter for oily fish and stop there.",
+		season: [4, 5, 6, 7],
+		choose: "Bright even green leaves, thin and crisp, snapping at the stem. Reject yellowing, slug-holed leaves, and thick leathery ones with prominent ribs, which are old and turn bitter rather than sour.",
+		store: "Refrigerate at 0 to 2 C (32 to 36 F) in a bag with a dry towel, 2 to 3 days; it is fragile and fails fast. Its acid attacks aluminum and bare cast iron, so store and cook it in stainless or glass.",
+		prep: "Fold each leaf and strip the rib out, since ribs stay stringy in a finished sauce. Chiffonade at the last moment. Cook only in stainless, enamel or glass: reactive metal gives metallic off flavors and blackening.",
+		methods: ["raw", "wilt", "puree", "saute", "simmer"]
+	},
+	{
+		t: "Spaghetti Squash",
+		c: "The Vegetable Atlas",
+		d: "A pale yellow oblong winter squash whose cooked flesh separates into long strands. That is not a trick of the fork: the flesh is built of elongated cell bundles glued by pectin, and heat softens the pectin between the bundles before the bundles themselves break down, so a fork combs them apart. The same mechanism sets the failure modes. Overcook it and the bundles collapse into wet mush; undercook it and the strands stay squeaky and taste raw. Roast halves cut side down at 200C (400F) for 35 to 45 minutes, until a knife enters the rind with slight resistance and no further. Cut the squash CROSSWISE into rings rather than lengthwise if you want long strands, because the fibers run around the circumference. It is watery and mild, so drain the combed strands in a colander and salt them; treating it as a sponge for sauce rather than as pasta is the honest way to serve it.",
+		season: [9, 10, 11, 12],
+		choose: "Hard pale yellow rind with no green cast, heavy for its size, dry stem intact. Reject green-tinged fruit, which is immature and strands poorly, and anything with a bruised, sunken, or weeping patch.",
+		store: "Cool dry room at 10 to 15C (50 to 59F), 1 to 2 months. Cooked strands keep 4 days in a covered box in the refrigerator and shed more water each day, so drain them again before you dress them.",
+		prep: "Pierce the rind and microwave 3 minutes to make it cuttable. Cut crosswise for long strands, scoop the seeds, oil and salt the cut faces. Comb with a fork only after it has cooled a few minutes.",
+		methods: ["roast", "bake", "steam", "braise"]
+	},
+	{
+		t: "Spinach",
+		c: "The Vegetable Atlas",
+		d: "A tender amaranth-family leaf, Spinacia oleracea, loaded with OXALIC ACID, which binds calcium into insoluble crystals: that chalky film on the teeth is spinach. Chard is a true relative; sorrel is a dock and purslane a portulaca, high in oxalate by chemistry, not kinship. Boiling leaches some out, while cream and cheese give the oxalate other calcium to grab, which is why creamed spinach tastes smooth rather than furry. The leaf is about 91 percent water in thin cells, so 500 g collapses to a fistful in ninety seconds. FLAT-LEAF and SEMI-SAVOY are the salad and fast-wilt types; baby spinach is any of them cut young. SAVOY, crinkled and mature, hides sand in its folds but stands up to braising. Never crowd the pan: steamed in its own water the leaf goes drab, as acid from the cells strips magnesium out of chlorophyll. Wilt in batches over high heat, then squeeze it hard in a towel before it goes near a filling.",
+		season: [3, 4, 5, 10, 11],
+		choose: "Leaves stiff enough to stand up when you lift a handful, stems snapping rather than bending, color even and dark. Reject yellowing at the stem end, and reject sliminess or a sour smell in the bag: that bag went anaerobic.",
+		store: "Refrigerate unwashed at 0 to 2 C (32 to 36 F) in a loosely closed bag with a dry paper towel, 3 to 5 days. Surface moisture and ethylene from apples or bananas both speed the yellowing.",
+		prep: "Wash mature savoy in a deep sink of cold water, lift the leaves out and leave the grit on the bottom; repeat twice. Strip thick stems by folding the leaf and tearing along the rib. Cut just before cooking, since bruised cells oxidize fast.",
+		methods: ["saute", "blanch", "steam", "braise", "puree", "raw"]
+	},
+	{
 		t: "Spring Onion",
 		c: "The Vegetable Atlas",
 		d: "A true bulb onion pulled young, when the base has swelled to a walnut or a golf ball but the top is still green. Sharpness is made at the knife, when alliinase meets the sulfur precursors the bulb built up as it grew; curing adds none. A young one has less of them and far more water to dilute what it has, so it is mild and juicy, nearer a sweet onion than the storage onion it would have become. The wrapper has not dried into papery scales, so there is nothing to cure and nothing to keep: buy and cook, do not stock. Note the naming, which trips written orders: in Britain and Australia spring onion means scallion, a straight shaft with no bulb. Here it means the bulb. Halve them through the root, oil and salt the cut faces, and grill hard until black at the edges and collapsing, then hit them with vinegar.",
@@ -630,6 +1220,26 @@ export const LEXICON_SUPPLEMENT = [
 		store: "Refrigerate with tops on, loosely wrapped in the crisper, about a week. Cutting the tops back buys a few more days, because the leaves keep drawing water out of the bulb. There is no cure and no pantry life.",
 		prep: "Trim the roots flush but keep the root plate, which holds the halves together. Peel only the slimy outer layer. Halve any bulb wider than 40 mm; larger than that and the cut face chars before the center gives.",
 		methods: ["grilling", "charring", "roasting", "braising", "sweating", "pickling"]
+	},
+	{
+		t: "Sunchoke",
+		c: "The Vegetable Atlas",
+		d: "Neither from Jerusalem nor an artichoke: the tuber of a North American sunflower, Helianthus tuberosus, with a nutty, faintly artichoke sweetness. It stores INULIN instead of starch, a chain of fructose units that the human small intestine has no enzyme to break. Two things follow. It cooks without ever going floury, holding a dense creaminess that makes the silkiest puree of any root. And the intact inulin arrives in the colon, where gut bacteria ferment it into gas; the flatulence is real, famous, and worth warning a table about rather than pretending away. Long slow cooking and acid hydrolyze some of the inulin into fructose, which sweetens the tuber and eases the effect. Serve a small portion the first time, and cook them long and low rather than fast and hot.",
+		season: [10, 11, 12, 1, 2, 3],
+		choose: "Firm heavy knobs with tight skin and shallow rather than convoluted lobes, since every fold costs flesh at the peeler. Reject soft spots, wrinkling, sprouts, and mold in the folds. Green or purple tinges are harmless here; this is a sunflower, not a potato.",
+		store: "Refrigerate unwashed in a perforated bag for one to two weeks; they dehydrate faster than potatoes and go rubbery. Room temperature ruins them in days. Cooked puree holds four days covered.",
+		prep: "Scrub hard and leave the skin on where you can, since it is thin and tasty. Cut flesh browns fast, so drop it into lemon water. Halve and roast cut side down. Raw slices off a mandoline carry the whole undiminished inulin load, so keep them to a garnish.",
+		methods: ["roast", "puree", "braise", "raw", "fry", "simmer"]
+	},
+	{
+		t: "Sweet Corn",
+		c: "The Vegetable Atlas",
+		d: "A grass seed eaten at the milk stage, when the kernel is still a bag of sugar and water and not yet a dry starch seed. Standard su varieties convert sucrose to starch the moment the ear leaves the stalk and lose much of their sweetness in a day at room temperature. Sugary-enhanced, se, types slow that conversion, and the shrunken-2 supersweets, sh2, carry two to three times the sugar and hold it for days, which is why a December ear can still taste sweet and taste of nothing else. Cold stops the clock: an ear held near 0C (32F) keeps most of its sugar for a week. Cook it briefly, three to five minutes in boiling water, salted if you like: salt does not toughen kernels, whatever the old rule says, while calcium in hard water and acid do firm cell walls. Or grill hard and dry, where Maillard browning and the sugars work together. After cutting the kernels off, scrape the bare cobs into the pot: that milky liquid is the best part of any chowder.",
+		season: [7, 8, 9],
+		choose: "Heavy ears, tight green husks, stem end freshly cut not dried gray. Ripe silk is brown and tacky; pale silk was picked early, black or slimy is old. Feel for filled kernels through the husk.",
+		store: "Refrigerate in the husk as cold as you can short of freezing, cook within two days; warmth converts the sugar. Blanch cut kernels a minute before freezing, or enzymes flatten them within weeks.",
+		prep: "Husk, then rub the silk off with a dry towel. Stand the ear in a bowl and cut down through two thirds of the kernel depth, then scrape the cob with the back of the blade for the milk.",
+		methods: ["grilling", "boiling", "roasting", "steaming", "sauteing", "frying"]
 	},
 	{
 		t: "Sweet Onion",
@@ -642,6 +1252,36 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["grilling", "charring", "roasting", "deep-frying", "pickling"]
 	},
 	{
+		t: "Sweet Potato",
+		c: "The Vegetable Atlas",
+		d: "Ipomoea batatas, a morning glory relative and no relation whatever to the true yam, regardless of the shop label. Its defining trick is beta-amylase, which survives into the pot: once the starch gelatinizes near 60C (140F) the enzyme strips maltose off it until the heat kills the enzyme near 75C (167F), so a slowly heated sweet potato manufactures its own sugar, while one blasted from cold in a hot oven races past that window and lands bland and starchy. Orange-fleshed types are moist and high in beta-carotene; white and purple Asian types are drier, denser, and closer to chestnut. Curing in warmth for a week after harvest heals the skin and lifts the sweetness further. Start them in a moderate oven, 175C (350F), and give them a full hour.",
+		season: [9, 10, 11, 12],
+		choose: "Firm and heavy, with smooth unbruised skin and tapered rather than stringy ends; several even roots beat one giant. Reject soft sunken patches, shriveled ends, and dark pitted rot: the bitterness it spreads is ipomeamarone and its relatives, toxins that baking does not destroy and that travel past the visible lesion, so throw out the whole root rather than trim around it.",
+		store: "Never refrigerate: below about 13C (55F) they take chilling injury, developing hard centers and off flavors. Keep them in a dark ventilated basket at 14-16C (57-61F), where a cured root holds for a month or more.",
+		prep: "Scrub and cook in the skin wherever possible, which keeps moisture and sugar in. Cut flesh oxidizes gray, so hold it in water. Roasted skin slips off easily and is worth eating when it has crisped.",
+		methods: ["roast", "bake", "braise", "puree", "deep-fry", "steam", "grill"]
+	},
+	{
+		t: "Swiss Chard",
+		c: "The Vegetable Atlas",
+		d: "A beet bred for leaf and stalk instead of root, Beta vulgaris, which is why chard tastes faintly of beet and why the stems run red, gold or white: BETALAIN pigments, water-soluble and quick to bleed into anything pale. It carries the same oxalic acid as spinach, concentrated in the leaf, so the chalky tooth feel and the dairy fix apply here too. The working rule is that chard is two vegetables in one bunch. The stalk is fibrous and dense, closer to celery, and wants a 4 to 6 minute head start; the leaf collapses in ninety seconds. Cook them together and you serve raw stalk under gray leaf. RAINBOW and RUBY are the handsome ones but they bleed; FORDHOOK GIANT, white-stalked, is the workhorse. Separate stem from leaf at the board every time and start the stems in the fat first.",
+		season: [6, 7, 8, 9, 10],
+		choose: "Stalks firm, glossy and squeaky, snapping cleanly; leaves upright with no collapsed midribs. Reject brown pitting, split stalks, and any bunch whose cut ends have dried out and gone corky.",
+		store: "Refrigerate unwashed in a bag at 0 to 2 C (32 to 36 F), 4 to 7 days; the leaves fail long before the stems. Keep it away from ethylene fruit and do not wash first: water in the crown rots the base.",
+		prep: "Fold each leaf along the rib and cut the stalk out, then slice the stalks crosswise like celery. Cut stems oxidize and dull, so cook them promptly or hold them in acidulated water. Chiffonade the leaf at the last moment.",
+		methods: ["saute", "braise", "blanch", "steam", "grill", "gratin"]
+	},
+	{
+		t: "Taro",
+		c: "The Vegetable Atlas",
+		d: "Colocasia esculenta, one of the oldest cultivated plants on earth and a staple across the Pacific, West Africa, and Asia: cream flesh flecked purple over starch granules a fraction the size of a potato's, which is why it cooks smooth and creamy. Raw it is inedible and vicious to handle, loaded with calcium oxalate RAPHIDES, needle-shaped crystals that lodge in skin and mucous membrane beside the irritant proteins that drive the burning and swelling. The crystals are stable well past boiling and do not break down; cooking works by denaturing those proteins and wrecking the cells that fire the needles, while plenty of water carries off soluble oxalate. There is no safe raw taro, the leaves want 45 minutes, and ornamental elephant ears (Alocasia, Caladium) are not taro and not food. Glove up to peel, and boil or steam until a knife slides through without catching.",
+		season: [],
+		choose: "Firm and heavy under a dry, hairy, ringed skin, with no soft or moldy patches. The cut crown should be crisp cream flecked purple, never gray, slimy, or sour. Pinker, drier flesh is malanga (Xanthosoma), sold from the same bin and never creamy. Small corms cook creamier; large ones fry better.",
+		store: "Cool, dark, and dry at 12-15C (55-60F) for one to two weeks; do not refrigerate whole corms, which brings on rot and a hard center. Once peeled, keep the pieces submerged in cold water and cook them the same day.",
+		prep: "Gloves are not optional: the raw sap causes fierce itching. Peel thickly under running water, rinse off the slippery starch, and hold in salted water. Never taste it raw, and cook it right through before it reaches a plate.",
+		methods: ["boil", "steam", "deep-fry", "braise", "roast", "simmer"]
+	},
+	{
 		t: "Tomatillo",
 		c: "The Vegetable Atlas",
 		d: "A Physalis, not a tomato and not an unripe one: a separate genus fruiting inside a papery calyx, the husk, picked mature while still green, short of the yellow ripeness that sweetens it. Inside is a chemistry unlike the tomato bin: citric and malic acid hold the pH near 3.8, and the cell walls carry a heavy load of pectin. Heat breaks those cells and frees the pectin into the liquid, where it thickens by viscosity alone, so salsa verde clings to a chip when blended raw tomato runs off it. Nothing gels here, and a long boil in that acid thins it again, so keep the simmer short. Char them under a broiler until the skins blacken in patches and juice runs. Blended raw they give a sharper, thinner, grassier salsa cruda; both are correct, they are not the same sauce.",
@@ -652,6 +1292,86 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["charring", "broiling", "roasting", "simmering", "raw", "braising"]
 	},
 	{
+		t: "Treviso",
+		c: "The Vegetable Atlas",
+		d: "The elongated Veneto chicory, a radicchio, in two forms barely the same vegetable. PRECOCE is the early one, from September: a torpedo of tight burgundy leaves, firmer than the round heads, halving cleanly and taking a grill better than any of them. TARDIVO is the late one, a made thing: after frost the plants are lifted with the taproot on and stood roots down in the dark in flowing spring water at 12 to 15 C (54 to 59 F) for two to three weeks, regrowing blind on root reserves. The new growth is nearly white, the ribs curl like claws, bitterness falls away and it turns crunchy and sweet. Frost matters to both: chicory stores inulin, not starch, and cold splits it to sugar. Grill precoce in oiled halves, cut face down and hard; serve tardivo raw with anchovy and oil, and pay what it costs.",
+		season: [9, 10, 11, 12, 1, 2],
+		choose: "Precoce: firm heavy torpedoes, tight leaves, crisp white ribs. Tardivo: pronounced white curled ribs with only the tips red-purple, roots often still attached. Reject limp heads, brown rib edges and soft butts.",
+		store: "Refrigerate whole and unwashed at 1 to 4 C (34 to 39 F): precoce 10 to 14 days, tardivo 5 to 7, since forced growth is fragile. Leave the root on tardivo until service.",
+		prep: "Halve or quarter precoce through the core so the leaves stay attached. For tardivo, trim the root, split lengthwise and separate the spears; 10 minutes in ice water tightens the curl and crisps the ribs.",
+		methods: ["grill", "raw", "roast", "braise", "saute"]
+	},
+	{
+		t: "Turnip",
+		c: "The Vegetable Atlas",
+		d: "A brassica root, which files it with mustard and cabbage rather than with the carrot: its sharpness is GLUCOSINOLATES, converted by the enzyme myrosinase into pungent isothiocyanates the moment the cells are cut. Young turnips hold little of it and taste sweet and juicy; big old ones concentrate it into a hard peppery bitterness, made worse by slow cooking under a lid, which traps the sulfur compounds against the food. Fast dry high heat carries them off instead, so the same root that turns acrid in a covered pot comes out sweet from a roasting tray. The flesh is mostly water with modest starch, so it collapses rather than thickens. The tops are good greens with the same mustard bite. Roast or glaze small turnips whole, and blanch large ones in an open pot before finishing in butter.",
+		season: [4, 5, 9, 10, 11],
+		choose: "Small, 5-7 cm (2-3 in), heavy for size, smooth and taut. A purple shoulder marks only the purple-top type; hakurei are white all over, golden types yellow, and both are sweet young. Fresh tops mean a fresh root. Reject soft or spongy roots.",
+		store: "Cut the greens away at once, then refrigerate the roots unwashed in a bag for two weeks, the greens for two days. Warm dry air costs water: the root goes limp and sprouts. Woodiness is set in the field, not in storage.",
+		prep: "Peel old roots; young ones need only a scrub. Halve or quarter for even cooking and keep every piece the same size. Blanch large turnips in plenty of unlidded water to carry the sulfur off before they meet the butter.",
+		methods: ["roast", "glaze", "braise", "boil", "puree", "pickle", "raw"]
+	},
+	{
+		t: "Water Chestnut",
+		c: "The Vegetable Atlas",
+		d: "Not a nut and not a chestnut: the corm of a sedge, Eleocharis dulcis, grown in flooded paddy. Do not confuse it with horned water caltrop, Trapa, also sold as water chestnut: a different plant, and cooked, never raw. Its fame is a texture that survives almost anything you do to it. FERULIC ACID esterified to the cell wall polysaccharides forms cross-links that hold through boiling, so the cells never separate and the corm stays audibly crisp through a stir-fry, a long braise, even canning. The flavor is mild and faintly sweet, so it contributes crunch far more than taste, and canning takes even that. SAFETY: paddy plants can carry cysts of the fluke Fasciolopsis buski on the hull, so never peel one with your teeth, pare deep, and blanch briefly if you mean to serve them uncooked.",
+		season: [11, 12, 1, 2, 3],
+		choose: "Fresh corms hard as stones under papery dark skin, with no give at all under a thumb. Scratch a corner: the flesh should be bright white and juicy. Reject soft, wrinkled, moldy, or sprouting corms and any showing brown flesh.",
+		store: "Refrigerate fresh corms unwashed and dry in a paper bag for up to two weeks, sorting out any that soften. Peeled, keep them submerged in acidulated water, changed daily, three days. Rinse canned ones well before use.",
+		prep: "Trim top and bottom flat, then pare the skin off with a small knife, cutting until no brown remains anywhere under the surface. The flesh oxidizes, so hold it in cold water. Slice or dice and add in the last minute.",
+		methods: ["stir-fry", "raw", "braise", "steam", "deep-fry", "simmer"]
+	},
+	{
+		t: "Watercress",
+		c: "The Vegetable Atlas",
+		d: "A semi-aquatic brassica, NASTURTIUM OFFICINALE, grown in flowing spring water, whose hollow stems are as edible as the leaf and whose heat comes from PHENETHYL ISOTHIOCYANATE, released the moment the cells break: sharper and more sinus-directed than arugula. Heat denatures the enzyme and the isothiocyanate is volatile, so a minute in a hot pan takes the bite out and the soup tastes gentle and green. Wild cress carries two dangers. Streams below sheep or cattle pasture leave liver fluke cysts stuck to the leaf, where washing and vinegar cannot reach, so only cooking through makes it safe. And watercress grows in the same ditches as HEMLOCK WATER DROPWORT and WATER HEMLOCK, which have killed foragers, so buy cultivated. UPLAND cress (BARBAREA VERNA) is a soil crop, similar pepper, neither concern. Use the stems, ice the bunch to stiffen it, and add it to hot food last.",
+		season: [3, 4, 5, 10, 11],
+		choose: "Dark glossy leaves on crisp stems that snap, the bunch heavy and springy in the hand. Reject yellow leaves, blackened stem ends, a sour swampy smell, and bunches standing in warm water at the market.",
+		store: "Stand the stems in 2 cm of cold water with the leaves loosely bagged, at 1 to 4 C (34 to 39 F), 3 to 4 days, changing the water daily. Laid flat it wilts in half the time.",
+		prep: "Wash in several changes of cold water and check the crown for grit and small snails. Pinch off only the thickest woody stalks, since the fine stems carry most of the pepper. Chill hard before plating it raw.",
+		methods: ["raw", "wilt", "blanch", "puree", "simmer"]
+	},
+	{
+		t: "Watermelon Radish",
+		c: "The Vegetable Atlas",
+		d: "A large daikon-type Chinese heirloom, dull pale green and white on the outside and shocking magenta at the core. That color is anthocyanin, not betalain, which makes it pH-sensitive: acid holds it bright pink to red, alkalinity shifts it blue-gray, and heat plus time leach it out into the pan. The flavor sits between the daikon and the little red radish, mildly peppery at the rim and sweeter toward the colored center, with the glucosinolate bite climbing as the root ages or grows oversized. It is a fall and winter crop, because warmth in the field makes it woody and harsh. The entire reason to buy one is the cross-section, so slice it thin across the equator, dress it with rice vinegar or lime, and serve it raw.",
+		season: [10, 11, 12, 1, 2],
+		choose: "Baseball-sized or smaller, heavy, firm all over, skin free of cracks and soft dents. Buy from a vendor who will show you a cut one, since a dull pale core is the common disappointment. Reject any that yields to the thumb.",
+		store: "Refrigerate topped and unwashed in a sealed bag for two to three weeks; they outlast small radishes by far. Once sliced the color dulls within a day, so cut them to order and dress them straight away.",
+		prep: "Peel thinly only if the skin is tough, since much of the pepper lives there. Slice across the root on a mandoline to show the ring, then dress at once with acid, which sets the pink and keeps the faces from drying.",
+		methods: ["raw", "pickle", "roast", "braise", "saute"]
+	},
+	{
+		t: "White Asparagus",
+		c: "The Vegetable Atlas",
+		d: "The same plant grown blind: soil or black film heaped over the crown so no light reaches the shoot, no chlorophyll forms, and the spear stays ivory. Without photosynthesis it builds none of the green, grassy flavor, and what remains is cleaner and sweeter in the middle but bitter at the skin and the butt, where steroidal saponins such as protodioscin concentrate. That, not fiber alone, is what the peeling is for. The skin is also thicker and more lignified than a green spear's, so white asparagus is always peeled, generously, from just under the tip to the butt. Northern Europe treats the season as an event, and the classic handling answers the vegetable: simmer in water with salt, a pinch of sugar and a strip of lemon to balance the bitterness, 10 to 20 minutes by thickness. Crisp-tender is a green-spear virtue; here it just tastes woody.",
+		season: [4, 5, 6],
+		choose: "Straight ivory spears with closed tips and moist, pale cut ends; they should squeak when rubbed together. Reject hollow, deeply ridged, or violet-flushed spears and any with dried, fibrous butts.",
+		store: "Wrap in a damp cloth, bag, and refrigerate in the dark, three days; violet tips cost grade, not flavor. Simmer peelings and butts 20 minutes for the liquid, then strain, or they leach bitterness in.",
+		prep: "Peel twice, from 2cm below the tip down to the butt, taking a visibly thick ribbon, then cut off the dry end. Any fiber you leave will not soften with cooking, no matter how long it simmers.",
+		methods: ["simmering", "steaming", "braising", "roasting", "sauteing"]
+	},
+	{
+		t: "Winter Melon",
+		c: "The Vegetable Atlas",
+		d: "Despite the name a summer-grown gourd, also sold as wax gourd or ash gourd, harvested MATURE, which is why it keeps like a winter squash: a waxy white bloom forms over the rind and seals it, and a whole melon holds for months in a cool room. They grow enormous, 10 kg (22 lb) and upward, so it usually reaches you as a cut wedge with the pale seeded core showing. The flesh is white, turns translucent as it cooks, and tastes of almost nothing beyond a faint cucumber note, and that blankness is the point: in Cantonese cooking it goes into long-simmered soups where it turns glassy and carries pork, ham, and dried scallop, and it is candied into winter melon sugar. Size sets the timing, not the clock: 3 cm chunks go glassy and tender in 20 to 30 minutes, while thick pieces, or the whole hollowed melon steamed for winter melon pond, keep their shape for two hours and more. Thin slices left to boil do not shred, they slump to mush and cloud the broth.",
+		season: [8, 9, 10, 11, 12],
+		choose: "A cut wedge with a bright, wet-looking white face and dense firm flesh, or a whole melon carrying an even chalky bloom. Reject wedges with a dried, yellowed, or slippery cut face, and any soft or pitted rind.",
+		store: "Whole in a cool dark dry room, 2 to 4 months on a rack off the floor. Cut wedges wrapped tight against the exposed face in the refrigerator, 5 days; the cut flesh dries and sours long before the rind fails.",
+		prep: "Cut the rind away with a knife, not a peeler, deep enough to lose the hard pale layer beneath it. Scoop the seeds and spongy core. Taste a raw sliver before anything goes in the pot: this melon should be bland, and real bitterness means cucurbitacins, so discard the whole fruit. Same rule for the bottle gourd (lauki, opo) sold beside it, where bitter fruit and its juice have caused severe poisoning. Cut 3 cm (1 in) chunks, because small pieces vanish in the pot.",
+		methods: ["simmer", "braise", "steam", "stir-fry", "poach"]
+	},
+	{
+		t: "Yam",
+		c: "The Vegetable Atlas",
+		d: "The true yam, genus DIOSCOREA, is a tropical tuber from West Africa and Asia with nothing to do with the orange sweet potato sold under its name in American shops. It grows big, sometimes past 5 kg (11 lb), under a rough bark-like skin, and the dense white to pale yellow flesh is starchy, dry, and neutral: nearer to cassava or chestnut than to anything sweet. The raw flesh carries calcium oxalate raphides, needle crystals that sting skin and mouth, alongside bitter saponins. Heat does not dissolve the crystals, which outlast any pot; peeling thickly and boiling is what clears the saponins and soluble oxalate that carry the sting. Cook the starchy African and Caribbean yams always, though Japanese nagaimo is another Dioscorea and is grated raw on purpose. Some wild species hold the alkaloid dioscorine and are poison until days of leaching. Glove up, peel thickly, and boil in salted water until it gives completely.",
+		season: [10, 11, 12, 1],
+		choose: "Heavy and hard with no soft spots, skin intact and dry, and any cut end clean and white rather than gray or slimy. Reject weeping cuts, mold at the ends, and any section that gives under a firm thumb.",
+		store: "Cool, dark, dry, and well ventilated at 15-16C (59-61F) for weeks to months; below about 12C (54F) they brown inside and rot faster, so keep whole roots out of the refrigerator. Wrap cut pieces, refrigerate, and use within two days.",
+		prep: "Wear gloves: the raw sap raises an itching rash. Peel thickly with a knife to clear the fibrous layer under the bark, then hold the pieces in salted water, which slows browning and draws off some of the slippery mucilage.",
+		methods: ["boil", "roast", "deep-fry", "braise", "steam", "stew"]
+	},
+	{
 		t: "Yellow Onion",
 		c: "The Vegetable Atlas",
 		d: "The workhorse, and the place to learn the chemistry, because an intact onion is odorless. Cut it and alliinase splits its sulfoxide precursors into sulfenic acids: most condense into thiosulfinates, while lachrymatory factor synthase turns one into syn-propanethial-S-oxide, the tear volatile. Damage sets the pungency: a coarse pole-to-pole cut severs fewer cells and tastes milder than a fine crosswise dice, and a dull knife crushes its way to a harsh onion. Heat kills both enzymes in seconds, so raw bite vanishes in the pan; hold the pieces at a bare sizzle for 40 minutes and fructans hydrolyze to fructose, which browns with the onion's amino acids. That is Maillard, not caramelization; a wet pan stays near 100 C (212 F). High dry matter and thick papery scales are why it cures and keeps. Dice pole to pole to hold shape, crosswise to collapse.",
@@ -660,5 +1380,35 @@ export const LEXICON_SUPPLEMENT = [
 		store: "Loose in a basket, cool dark cupboard with air moving, 7 to 10 C (45 to 50 F), two to three months. Never bagged in plastic and never beside potatoes: potatoes want damp air and onions want dry, and the damp is what rots them. Cooked onions are low-acid and have caused botulism when a batch sat in fat at room temperature, so cool it fast, then refrigerate under four days or freeze.",
 		prep: "Trim the stem end, leave the root plate on to hold the layers, cut through to the board, then peel the skin away with the first layer if it is leathery. Chill the onion 20 minutes before fine dicing to blunt the tear gas.",
 		methods: ["sweating", "caramelizing", "roasting", "braising", "frying", "pickling"]
+	},
+	{
+		t: "Yellow Squash",
+		c: "The Vegetable Atlas",
+		d: "The same immature summer squash as zucchini in a different skin: CROOKNECK, bent-necked and slightly bumpy, and STRAIGHTNECK, smooth and uniform. The yellow is carotenoid pigment sitting in the peel; the flesh underneath is the same pale, wet, thin-walled tissue, a shade sweeter and more delicate than zucchini, with a seed cavity that softens sooner. That delicacy cuts both ways, because yellow squash goes to mush a beat before zucchini does: it wants less time, not more. Older crookneck skin toughens, so press a thumbnail in and if it resists, the fruit is past its window. The Southern smother: soften onion in fat, add thick slices, lid on and low for 20 to 30 minutes, until it slumps sweet and the water cooks back. If you want texture instead, cut thick coins, salt them, blot, and sear in a wide uncrowded pan.",
+		season: [6, 7, 8, 9],
+		choose: "Small to medium, 15 cm (6 in) or under, skin bright and faintly waxy, thumbnail marks it without effort. Reject dull leathery hide, soft spots along the neck, or a fruit gone light and slack for its size.",
+		store: "Crisper drawer, dry and loosely bagged, 4 days at most; it bruises more easily than zucchini and every bruise turns watery. Do not wash until you cook. Keep it off the coldest shelf, which pits the skin.",
+		prep: "Skin and seeds both stay. Trim the stem and the blossom scar. Taste a raw sliver and spit it out; bin the whole fruit if it is bitter, since cooking does not destroy cucurbitacin. Salt coins 15 minutes and blot for searing, or cut at the last second for a smother.",
+		methods: ["saute", "grill", "roast", "fry", "braise", "steam"]
+	},
+	{
+		t: "Yukon Gold Potato",
+		c: "The Vegetable Atlas",
+		d: "A Canadian-bred all-purpose cultivar sitting between the mealy russet and a true waxy potato: roughly 18 percent dry matter, thin yellow skin, and yellow flesh colored by carotenoids that read as buttery before any butter arrives. The middling starch means the cells neither fall apart like a russet nor stay stubbornly bound like a fingerling, so it mashes smooth, roasts to a creamy interior with a crisp edge, and just about holds together sliced in a gratin. Its cells resist separating, so you work them harder, and a beater tears them open: the freed starch, mostly AMYLOSE, sets into glue. The skin is fine enough to leave on everywhere. Rice or press it while hot, fold in warm fat by hand, and stop early.",
+		season: [],
+		choose: "Firm, with taut thin gold skin and shallow eyes, and uniform in size so a tray cooks evenly. Reject green shoulders, sprouts, soft spots, and deep growth cracks that trap grit you will never wash out.",
+		store: "Cool, dark, and dry at 7-10C (45-50F) in paper or an open basket, up to three weeks; thin skin means they keep less well than russets. Light greens the skin and builds bitter glycoalkaloids beneath it: pare those off, or throw the potato out.",
+		prep: "No need to peel, the skin is fine enough to eat. Rinse cut pieces for crisper roasting, and before mashing too: it removes only surface starch, and the creaminess is inside the cells. Cut even sizes, start in cold water.",
+		methods: ["roast", "mash", "boil", "gratin", "braise", "pan-fry", "steam"]
+	},
+	{
+		t: "Zucchini",
+		c: "The Vegetable Atlas",
+		d: "Summer squash picked immature, Cucurbita pepo: the skin never sets, the seeds stay soft, and roughly 95 percent of the fruit is water held in thin-walled cells. That water is the whole problem. Heat bursts those cells anyway; crowd the pan and the water they release cannot escape as steam, so the squash stews gray in its own liquid instead of browning. Two fixes, pick one. DRIVE THE WATER OUT first: salt coins or planks 15 minutes and press them dry, so the surface browns. Or GO HOT AND FAST in a wide pan, single layer, so the water flashes off before the flesh collapses. The flavor is faint and vegetal, so zucchini works as a carrier for garlic, chili, anchovy, mint. Grate it for fritters and wring the shreds in a towel until they stop dripping; skip that and the batter will not set. Cook it to jammy collapse on purpose, or barely at all. The middle is where it goes gray.",
+		season: [6, 7, 8, 9],
+		choose: "Firm, heavy for its size, skin taut and glossy and easily nicked by a thumbnail; 15 to 20 cm (6 to 8 in) is the window. Reject spongy stem ends, dull leathery skin, or giants whose seeds have gone fibrous.",
+		store: "Crisper drawer, unwashed and loosely bagged, 4 to 5 days. Long stretches below 5C (41F) pit the skin; surface moisture turns it slimy within a day. Cut faces weep, so cut only what you will cook now.",
+		prep: "No peeling: the skin is the structure and the color. Trim both ends. Taste a raw sliver and spit it out; if it is bitter, bin the whole squash. That is cucurbitacin, cooking does not destroy it, and it brings violent vomiting and diarrhea. Salt cut pieces 15 minutes and blot before searing.",
+		methods: ["grill", "saute", "roast", "fry", "braise", "raw"]
 	}
 ];
