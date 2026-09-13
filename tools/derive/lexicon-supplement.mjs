@@ -982,6 +982,396 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["stir-frying", "simmering", "blanching", "steaming", "braising"]
 	},
 	{
+		t: "Aleppo Pepper",
+		c: "The Herb & Chile Atlas",
+		d: "Not a plain ground chile: coarse flakes of the Halaby pepper of the Aleppo region, sun-dried then cut with salt and usually a little oil, which is why it clumps slightly, glows dark rusty red and tastes savory instead of dusty. PUL BIBER is not the variety; it is Turkish for flake pepper and covers plain hot flakes too, so ask for MARAS BIBER, the Kahramanmaras crop that stands in for Aleppo. The oil holds fat-soluble aroma a dry powder loses and the salt preserves, so the jar seasons twice: pull back on salt elsewhere. Raisin, sun-dried tomato and a mild tang, often from citric acid added at packing, with a slow heat near 10,000 Scoville that builds rather than strikes. True Aleppo has been scarce since the Syrian war and most on the shelf is Turkish, which is close. Finish with it: eggs, yogurt, roast vegetables, lamb.",
+		season: [],
+		choose: "Coarse flakes that look faintly damp and oily, dark brick to burgundy, clumping when pressed between finger and thumb, smelling of raisin. Reject dry, bright orange, free-running flakes with no aroma at all.",
+		store: "Airtight and dark, and refrigerated in a hot kitchen, because the oil in it can go rancid in a way dry flakes cannot. Six months for good color and aroma, a year at the outside. Never on the shelf above the stove.",
+		prep: "No grinding needed. Finish with it, or bloom it the Turkish way in butter or oil warm enough to sizzle but not smoke, 30 to 60 seconds, off the burner: the pigment and sugars scorch above roughly 160C (320F). Account for the salt already in the jar and season the dish last, not first.",
+		methods: ["finishing", "roasting", "grilling", "sauteing", "baking"]
+	},
+	{
+		t: "Ancho",
+		c: "The Herb & Chile Atlas",
+		d: "Dried ripe poblano: the pod ripens red on the plant, then cures to a wrinkled mahogany sheet smelling of raisin, prune and cocoa. Those notes are not fanciful. Drying concentrates fruit sugars and lets slow Maillard browning and carotenoid breakdown build aroma compounds the fresh green pod never had. Heat is low, 1,000 to 2,000 Scoville, so ancho is the body and sweetness of a mole or an adobo, never the fire. Keep the family straight: MULATO is dried poblano too, from a strain that ripens brown not red, holding its chlorophyll; chocolate and licorice rather than raisin. Toast anchos flat on a dry comal, 15 to 20 seconds a side over medium, until they puff and smell of dried fruit, then soak 20 minutes and blend. Scorch one and the whole pot turns bitter with no way back.",
+		season: [],
+		choose: "Pliable and leathery, folding without cracking, deep reddish brown with a faint gloss; a good one bends like a dried apricot. Reject stiff, faded, dusty pods that snap, and any showing pinholes or webbing: pantry moth.",
+		store: "Airtight, dark, room temperature, 6 to 12 months; the freezer holds them a year longer. Light bleaches the color and warmth drives off the aroma. Damp softness with a musty smell is mold: discard the pod, do not trim it.",
+		prep: "Wipe with a damp cloth, stem, slit lengthwise, shake out seeds and pale veins. Gloves, or wash your hands before you touch your eyes. Soak after toasting, never before, and use the soaking water only if it tastes sweet.",
+		methods: ["toasting", "simmering", "braising", "stewing", "frying"]
+	},
+	{
+		t: "Cascabel",
+		c: "The Herb & Chile Atlas",
+		d: "A small round chile the size of a walnut, dried until the seeds come loose and rattle inside the hollow shell, exactly what the name means: little rattle, or sleigh bell. Shake the bag as a freshness test: a silent pod has taken up moisture and is heading for mold. Keep it for the flavor, nutty and woody, tobacco and a smoky note from drying alone with no smoke involved, over a mild 1,500 to 3,000 Scoville. The wall is thin and hard, which is why it dries hollow and rattles at all, so take flavor from it and body from a guajillo: toast and blend with tomatillo, or with toasted sesame and pumpkin seed. Toast whole and watch it: the round shape traps heat and one side burns while you study the other.",
+		season: [],
+		choose: "Round, firm, deep reddish brown with smooth skin, and a clear rattle when shaken by the handful. Reject silent, soft or split pods. Gray or white film that looks fuzzy or smells musty is mold: bin it, since mold toxins survive toasting and soaking.",
+		store: "Airtight and dark at room temperature, about 12 months. Moisture silences the rattle and invites mold, so add a food-safe desiccant packet in a humid kitchen. Freeze the surplus if you buy by the kilo.",
+		prep: "Cut a circle around the stem end and tip the seeds out; there are many and they are bitter. Toast 20 to 30 seconds, turning constantly, then soak 20 minutes. Blend well and strain: the skin is tougher than it looks.",
+		methods: ["toasting", "simmering", "braising", "stewing", "frying"]
+	},
+	{
+		t: "Chervil",
+		c: "The Herb & Chile Atlas",
+		d: "The most heat-fragile herb in the kitchen: a lace-leaved cousin of parsley whose aroma is a whisper of anise over green, carried by estragole in a leaf so thin that thirty seconds over a flame takes all of it. Nothing else in the fines herbes quartet, with parsley, chives and tarragon, is lost so easily, and nothing is so easily wasted: chervil in a braise is money burned. Its place is at the very end and away from the heat, on an omelette as it folds, into a beurre blanc once the pan is off, over young peas and carrots, or whole in a delicate salad where the sprig goes in intact. Buy it the day you need it and no sooner. If you cannot find it, use a little tarragon with parsley and be honest that you have made a different dish.",
+		season: [3, 4, 5, 9, 10],
+		choose: "Pale bright green lacy sprigs that stand rather than flop, with faint sweet anise on the rub. Reject anything wilted, darkened, or wet at the cut base, because chervil never recovers once it has collapsed. Buy it or sow it, never gather it: poison hemlock and fool's parsley wear the same lace and both can kill. Chervil has a ridged, finely hairy stem and smells sweetly of anise; hemlock's stem is smooth, hollow and blotched purple, and both impostors smell rank. In any doubt, throw it out.",
+		store: "The shortest life of any herb: two to three days, loosely boxed between dry paper at 4 C (39 F), unwashed until the moment of use. Treat a bunch you cannot finish in two days as tonight's ingredient.",
+		prep: "Pinch whole sprigs off the stem and leave them whole, since chopping costs you both the look and most of the aroma. If you must cut, one pass with scissors. Scatter it at the table, not in the pan.",
+		methods: ["raw", "garnishing", "infusing", "blending"]
+	},
+	{
+		t: "Chile de Arbol",
+		c: "The Herb & Chile Atlas",
+		d: "A slim glossy scarlet pod on a woody stem, the name meaning tree chile for that stalk. This is a heat chile first, 15,000 to 30,000 Scoville, clean and forward, with a thin skin and almost no flesh, so it lends a sauce almost no body or sweetness: build the sauce from guajillo or ancho and let arbol do the striking. Its aroma is grassy and nutty rather than fruity, and it sits behind the fire of salsa de arbol, salsa macha and the chile oils of the Mexican table. The thin wall fries in seconds, so drop the pods into warm oil, not hot, and lift them the moment they darken by a shade. Blackened arbol is acrid and will ruin a liter of oil. Count pods instead of guessing spoonfuls: one seeds a whole pot of beans.",
+		season: [],
+		choose: "Bright glossy red, straight, whole, stem attached, no splits down the side. Reject dull brick or orange pods and bags full of broken shards and loose seed dust: both mean old stock and a flat, stale kind of heat.",
+		store: "Airtight and dark, about 12 months. Capsaicin is stable but the aroma is not, and whole pods keep far better than ground. Store well away from anything absorbent you would rather not have tasting of chile.",
+		prep: "Wear gloves, and note water will not rinse capsaicin off: scrub with oil, then soap. Heat sits in the pale veins, not the seeds, so strip the veins for less. Toast dry 5 to 10 seconds, or fry in warm oil with the fan on and a window open, since frying pods aerosolizes capsaicin and sets off coughing.",
+		methods: ["toasting", "frying", "simmering", "stewing", "infusing"]
+	},
+	{
+		t: "Chipotle",
+		c: "The Herb & Chile Atlas",
+		d: "Ripe red jalapeno, smoke-dried for days over hardwood until the flesh goes leathery. Sweetness is sugar concentrating as water leaves plus smoke phenols; nothing caramelizes at smokehouse heat. Two kinds, and they do not behave alike. MORITA is what most shops sell: smaller, purple-black, dried less, pliable, fruity, sweeter in a sauce. MECO is the traditional one, dusty tan-brown like a cigar butt, smoked far longer, drier, savory and tarry. Heat sits around 5,000 to 10,000 Scoville, and smoke makes it read hotter than it measures. CHIPOTLES EN ADOBO are moritas stewed with tomato and vinegar, a third ingredient again, and the canned sauce is worth as much as the pods. Treat smoke as a seasoning: one or two pods carry a whole pot.",
+		season: [],
+		choose: "Moritas should flex and shine purple-black with a clean smoke smell; mecos are matte tan and rigid, which is correct rather than stale. Reject anything smelling of ash or creosote, which means oversmoked and bitter.",
+		store: "Airtight and dark, 6 to 12 months; the smoke aroma is the first thing to go. Move opened canned chipotles in adobo to a glass jar, refrigerate, use within 2 weeks, or freeze the surplus in tablespoon portions.",
+		prep: "Stem and split the dry pods and scrape out the pale veins, where the heat sits; the seeds are only along for the ride. Soak 30 minutes, mecos longer than moritas. Scrape canned pods the same way, then mince fine.",
+		methods: ["toasting", "simmering", "braising", "stewing", "grilling"]
+	},
+	{
+		t: "Chives",
+		c: "The Herb & Chile Atlas",
+		d: "A true allium, and the mildest of them: cut the hollow leaf and alliinase meets its sulfur precursors and builds thiosulfinates in seconds, the same reaction that gives a raw onion its bite, but from a far smaller store, so the result is onion perfume instead of onion punch. Those thiosulfinates are volatile and fall apart with heat into dull sulfides, which is why cooked chives taste of nothing much and slump into green threads. They go on at the end: potatoes, eggs, sour cream, a finished soup. GARLIC CHIVES (nira, or Chinese chives) are a different species with a flat solid leaf and a real garlic note, and those do hold their own in a hot wok. The purple flower heads are edible and sharper than the leaves: pull them into florets, discard the wiry stalk, and use fewer than you think. Snip chives with scissors, since a blade crushes the tube flat and wrings it out onto the board.",
+		season: [4, 5, 6, 7, 8, 9, 10],
+		choose: "Stiff upright uniformly green tubes that snap rather than fold, smelling cleanly of onion. Reject yellow or translucent strands, flattened bunches, and any wet patch under the band, which spreads through the bundle.",
+		store: "Dry, loosely wrapped in paper inside a box at 4 C (39 F): about a week, and moisture is the only real enemy. Cut chives hold almost nothing, so snip what the plate needs and no more.",
+		prep: "Hold a small bundle taut and cut straight down with sharp scissors into even lengths; dragging a dull knife squeezes them empty. Do not wash unless you have to, and dry them completely before cutting.",
+		methods: ["raw", "garnishing", "infusing", "stir-frying", "blending"]
+	},
+	{
+		t: "Cilantro",
+		c: "The Herb & Chile Atlas",
+		d: "The leaf and the seed are the same plant and taste nothing alike: the leaf is built on unsaturated aldehydes, chiefly (E)-2-decenal, while the dried seed is mostly linalool and reads sweet, citrus and woody. Those leaf aldehydes belong to the same chemical family as some soap perfumes and as the defensive spray of true bugs, which is why a real minority of cooks taste soap and nothing else. The genetics are partial: a common variant in a cluster of smell receptor genes, OR6A2 among them, shifts the odds without settling it. So it is not fussiness, but it is not fixed either: exposure dulls it, and crushing helps, since leaf enzymes break the aldehydes down and blended cilantro reads milder than torn. Serve it alongside, not stirred through, for strangers. The aldehydes are light and they leave: cilantro goes in off the heat. The roots go into Thai curry paste, and the stems carry more flavor than the leaves.",
+		season: [3, 4, 5, 9, 10, 11],
+		choose: "Bright green, firm stems that snap, roots still attached if you can get them. Reject limp dark tips, yellowing, and any bunch running to flower: bolted cilantro goes thin, ferny and bitter.",
+		store: "Roots or stem ends in a jar of water, a loose bag over the leaves, 4 C (39 F): five to seven days. It rots faster than parsley, so pull out any slick leaf the moment you see one.",
+		prep: "Wash in a full bowl twice and dry it completely: that takes the sand off, and not much else. Fresh cilantro has carried Cyclospora, hepatitis A and Salmonella, and no rinse or vinegar soak removes them, so cook it in rather than scatter it raw for anyone pregnant, frail or immune compromised. Use the stems: cut them in with the leaves for salsa, or very fine for a paste. Add at the last second, because chopped cilantro fades within ten minutes.",
+		methods: ["raw", "garnishing", "blending", "stir-frying", "pickling"]
+	},
+	{
+		t: "Dill",
+		c: "The Herb & Chile Atlas",
+		d: "Dill leaf is not a carvone herb: its signature is alpha-phellandrene with dill ether, and carvone belongs to the seed. Seed and spearmint carry mirror-image carvones, which is why one reads caraway and the other cooling. The feathery leaf, the yellow flower head and the dried seed are three separate ingredients. Leaf is delicate and volatile; the flower head is the traditional crown in a jar of brined cucumbers; the seed is warmer, closer to caraway, and stands up to bread and to a long braise. Leaf dill collapses within a minute of heat, so its work is cold: gravlax, cucumber and yogurt, potato salad, smoked fish, the final stir into borscht or chicken soup. Cut it with scissors rather than a knife, because the fronds are too fine to chop without crushing them to a green paste.",
+		season: [5, 6, 7, 8],
+		choose: "Fine springy blue-green fronds that smell sharp when brushed. Reject yellowing, matted or slimy heads, and bunches that are mostly thick stalk: you are buying frond, and stem is dead weight.",
+		store: "Stem ends in water, bagged, at 4 C (39 F): five to seven days at best, since dill is the fastest herb to slime. To hold it longer, cut it and freeze it under oil; dried dill weed keeps almost nothing.",
+		prep: "Snip the fronds off the stalk with scissors straight over the bowl. Keep the tender upper stems for stocks and pickling brines. Add at the very end and never let it boil: a minute at heat and the phellandrene is gone.",
+		methods: ["raw", "garnishing", "curing", "pickling", "infusing", "steaming"]
+	},
+	{
+		t: "Epazote",
+		c: "The Herb & Chile Atlas",
+		d: "The exception in this chapter: the herb you add at the beginning rather than the end. Epazote is Dysphania ambrosioides, a goosefoot, and its aroma, medicinal and resinous, faintly of fuel and savory at once, comes chiefly from ASCARIDOLE, a peroxide terpene. It survives a bean pot far better than a tender herb, though a long simmer still dulls it, so add a second sprig near the end. Ascaridole is also the rule of the house. The oil is poisonous in doses a kitchen would call small and has killed; the seed heads carry the most of it and the leaves the least. A sprig or two in a pot feeding eight is the culinary amount and is long established as safe, but leave it out altogether in pregnancy: ascaridole stimulates the uterus and this plant was long used to end pregnancies. Cook with the leaf, never with the oil.",
+		season: [6, 7, 8, 9],
+		choose: "Jagged pointed mid-green leaves on a single upright stem, with a sharp medicinal smell you will not mistake for anything else. Reject flowering stalks heavy with seed, which are coarse and much stronger, and yellowed lower growth.",
+		store: "Stem ends in water under a loose bag at 4 C (39 F): four to five days. It dries better than most tender herbs, but ascaridole is volatile and most of it leaves with the water, so the dried leaf is milder: jar it away from light and use more, not less, about a tablespoon crumbled for a fresh sprig.",
+		prep: "Strip the leaves off the woody lower stem, or drop a whole tender sprig in the pot and fish it out later. Chop fine only for quesadillas and mole verde, where it goes in raw. One sprig per pot is the working measure.",
+		methods: ["simmering", "stewing", "braising", "frying", "steaming"]
+	},
+	{
+		t: "Flat-leaf Parsley",
+		c: "The Herb & Chile Atlas",
+		d: "The workhorse of the soft herbs and the only one that shrugs off a little heat: the fresh leaf runs on p-mentha-1,3,8-triene and myrcene with myristicin behind them, all less fugitive than cilantro's aldehydes, so a minute in a hot pan bruises it rather than erasing it. Apiole sits in the seed and root, not the leaf. The flat Italian leaf is more aromatic than the curly, which was bred for the plate rim. Stems carry less volatile oil than the leaf but plenty of flavor: tie them into a bouquet garni, or cut them fine for gremolata, persillade and tabbouleh, where parsley is the salad and not the garnish. Chopped parsley darkens because polyphenol oxidase meets phenolics in crushed cells, not because of chlorophyll, which only goes olive under acid and heat. Chop it last, sharp blade, one pass, plate within a minute.",
+		season: [5, 6, 7, 8, 9, 10],
+		choose: "Deep uniform green, springy stems, leaves that stand up when you shake the bunch. Reject yellowing at the tie, blackened slimy stem ends, or a bunch that smells of wet grass clippings. Garden or foraged bunches need a second look: fool's parsley and poison hemlock both mimic the flat leaf and both are poisonous. Crushed parsley smells of parsley; hemlock smells rank and mousy and its hairless stem is blotched purple. Anything that fails that test goes in the bin, not the pot.",
+		store: "Trim the stems, stand the bunch in 2 cm of water, bag it loosely, hold at 4 C (39 F): ten days, changing the water twice. Washed and left damp in a sealed box it turns to slime in two days.",
+		prep: "Wash and dry it hard, spinner then towel, because wet parsley smears instead of cutting. Strip the leaves off thick stems, gather them into a tight ball, rock a sharp knife through once. Over-chopping bleeds green juice onto the board.",
+		methods: ["raw", "garnishing", "blanching", "deep-frying", "infusing", "simmering"]
+	},
+	{
+		t: "Fresno Chile",
+		c: "The Herb & Chile Atlas",
+		d: "The chile mistaken for a red jalapeno on every line in America, and it is not one. The Fresno has a thinner wall, a body that tapers to a cone rather than a blunt barrel, and a pod that points up on the plant. It runs 2,500 to 10,000 Scoville with a fruitier, brighter, less vegetal flavor, because a Fresno is picked ripe while a jalapeno is picked green. That thin wall is the working difference: it will not stuff and it collapses under long roasting, but it cuts into clean scarlet rings that hold their color raw, which is the whole reason cooks reach for it. Garnish, ceviche, quick pickles, a red flick across a green plate. The heat still concentrates in the PLACENTA, and that pith is narrow here, so seeding is quick and effective. Slice it in rings with a sharp knife and use it raw or barely warmed.",
+		season: [8, 9, 10],
+		choose: "Glossy scarlet cones, firm and taut, with a green stem still attached; a dried shriveled stem means weeks off the plant. Reject dull matte skin, soft tips, and any pod with a wrinkled band around the shoulder.",
+		store: "Loose in the refrigerator crisper, 1 to 2 weeks; ripe fruit goes over faster than a green chile does. Sliced into vinegar with a pinch of salt and sugar they hold 3 weeks and keep their scarlet.",
+		prep: "Gloves, even for two pods: capsaicin is oil soluble, so it survives soap and water on bare fingers and finds eyes and contact lenses hours later. Top, halve, strip the narrow white pith with a paring knife, then slice even rings. Cut them last so the red does not bleed across the board.",
+		methods: ["pickling", "grilling", "sauteing", "blending", "fermenting"]
+	},
+	{
+		t: "Genovese Basil",
+		c: "The Herb & Chile Atlas",
+		d: "The basil of pesto and caprese: sweet, faintly clove-warm, built on linalool with eugenol behind it and no anise to speak of. That profile is fragile in both directions. Heat drives the volatiles off, so basil goes onto the pizza after the oven and into the sauce after the flame; and cold injures it below about 12 C (54 F), not by rupturing cells but by stiffening their membranes until they leak, which turns the leaf translucent and then black along the veins. That is why the refrigerator is the wrong home for a bunch of basil, and why bruised leaves darken anyway: leaking cells put polyphenol oxidase in contact with phenolics and air. For pesto you have two honest options. Work fast and cold with enough oil to seal every cut surface, or blanch the leaves five seconds and shock them, which denatures the enzyme and buys you a green sauce that holds overnight.",
+		season: [6, 7, 8, 9],
+		choose: "Large cupped glossy leaves in bright mid-green on firm stems. Reject black-flecked or translucent leaves, which have been chilled, and any bunch carrying flower spikes: once it flowers the leaf coarsens and turns bitter.",
+		store: "Stems in water on the counter, out of direct sun, tented loosely, water changed daily: four to six days. Keep it above about 12 C (54 F). Anything you must keep longer goes into the freezer, as a paste under oil or packed into ice cube trays. Basil under oil left on the counter is a botulism risk: the leaf is low acid and moist and the oil shuts out air, which is what Clostridium botulinum wants. So herb pastes under oil live in the freezer, or cold for no more than four days, never on the shelf.",
+		prep: "Do not chop it to death. Stack the leaves, roll them, cut one clean chiffonade, or tear by hand; a dull knife bruises and blackens. Wash before you pick the leaves off the stem and dry them, since water dulls pesto.",
+		methods: ["raw", "garnishing", "blending", "infusing", "blanching", "pickling"]
+	},
+	{
+		t: "Gochugaru",
+		c: "The Herb & Chile Atlas",
+		d: "Korean sun-dried Capsicum annuum, seeded and crushed not milled to dust, sweet and fruity. Graded mild to hot, 1,500 to 8,000 Scoville. The red is the carotenoid capsanthin; capsaicin is colorless. The cut is the thing, and the two grades are not interchangeable. COARSE, gulgeun, runs 1 to 3 mm and belongs in kimchi: the flakes cling and stay visible; carotenoids do not leach into brine. FINE, goun, is near powder and belongs in gochujang, stews and sauces, where it disperses. Fine in kimchi gives a muddy paste; coarse in a sauce never integrates. Sun-dried taeyangcho beats machine-dried. Buy the grade the recipe names, and buy small, because the color goes first.",
+		season: [],
+		choose: "Vivid red, slightly moist and pliable, smelling sweet and fruity. Reject dull brown-red flakes, hard caked lumps or any musty smell, since damp chile molds. Check the bag for the grade you need and for taeyangcho before you pay.",
+		store: "Cold: Korean kitchens refrigerate or freeze this one as a matter of course, because warmth, light and air oxidize the carotenoids. Bag in a sealed box, six months chilled, a year frozen. Let a cold bag warm sealed before opening, or condensation cakes it.",
+		prep: "No grinding, no soaking. Work it into a paste with garlic, fish sauce and a little water and let it stand 10 minutes to hydrate; flakes thrown in dry streak the kimchi and never spread. Wear gloves: capsaicin clings to bare hands for hours and finds your eyes.",
+		methods: ["stewing", "simmering", "fermenting", "braising", "grilling"]
+	},
+	{
+		t: "Guajillo",
+		c: "The Herb & Chile Atlas",
+		d: "Dried mirasol chile: a long smooth pod, thin-fleshed under a tough burgundy skin that should still bend. A papery, brittle pod is stale. Where ancho is soft and raisiny, guajillo is tannic and bright, green tea and berry with a tart edge from fruit acids that survive drying, at a clean 2,500 to 5,000 Scoville. That tough skin is the working problem: it will not break down in a blender, so guajillo sauce goes gritty unless you strain it. Soak, blend hard, push through a medium sieve, discard the flecks. It is the backbone red of birria, adobo and pozole rojo, usually married to ancho for sweetness and arbol for heat. Toast it barely, 10 seconds a side; it scorches before the pod ever puffs.",
+		season: [],
+		choose: "Deep translucent red, glossy, flexible enough to bend into a C without shattering. Reject brown or orange-faded pods, which have sat under light, and any that are brittle, dusty, or smell of cardboard rather than fruit.",
+		store: "Airtight, dark and cool, 6 to 12 months for full aroma; the freezer buys another year. Thin flesh means guajillo fades faster than a fleshy pod. Never on a shelf above the stove: heat and light both strip it. Damp softness or a musty smell is mold: discard the pod, do not trim it.",
+		prep: "Stem and seed before soaking; the seeds run bitter here. Gloves for a big batch: capsaicin stays on your fingers and finds your eyes later. Soak 20 to 30 minutes in water just off the boil, blend with some of that liquid, then strain. The skin is the reason a sauce feels sandy on the tongue.",
+		methods: ["toasting", "simmering", "braising", "stewing", "frying"]
+	},
+	{
+		t: "Habanero",
+		c: "The Herb & Chile Atlas",
+		d: "A different species from the jalapeno and serrano: Capsicum chinense, lantern-shaped, 100,000 to 350,000 Scoville and built on aroma as much as burn. The apricot, citrus and floral notes are volatile esters carried in the skin and wall, not in the pith, which is why a habanero with the PLACENTA scraped out still tastes unmistakably of habanero while burning a fraction as hard. The heat is slow: 20 to 30 seconds behind the first bite, then a long plateau across the whole mouth rather than a sharp front-of-tongue hit, so cooks who taste too fast overdose the pot. Capsaicin is fat and alcohol soluble and not water soluble, so a split pod bloomed in warm oil or coconut milk perfumes the entire batch. One pod seasons a liter of stew. Add it whole and lift it out when the heat is where you want it.",
+		season: [8, 9, 10],
+		choose: "Firm waxy lanterns that feel light for their size, skin taut and unbruised, stem green and still attached. Orange, red and chocolate strains all work. Reject pods with soft shoulders, wrinkled skin, or dark weeping patches.",
+		store: "In a paper bag in the refrigerator, a week to ten days: the walls are thin and hollow, and this species pits in the cold sooner than a jalapeno does. A cool counter suits them. They freeze whole for months; dried, they hold their heat but lose most of the fruit.",
+		prep: "Nitrile gloves, not latex, and a board scrubbed with soap; capsaicin clings to wood and skin for hours. Scraping the placenta cuts the heat, but a bare wall still outburns a jalapeno. Frying, charring or blending these puts capsaicin in the air, so run the hood and do not lean over the pan.",
+		methods: ["simmering", "blending", "pickling", "roasting", "fermenting"]
+	},
+	{
+		t: "Hatch Chile",
+		c: "The Herb & Chile Atlas",
+		d: "Not a cultivar but an appellation: New Mexico pod-type chiles grown in the Hatch Valley along the Rio Grande, where hot days and cold nights build sugar and a distinctly earthy, sun-baked flavor. The cultivar sets the heat, so the label matters more than the name: BIG JIM and NUMEX 6-4 sit around 500 to 2,500 Scoville, while SANDIA and BARKER'S run 5,000 to 15,000 and will ambush a cook expecting a mild green chile. The season is brutally short, roughly six weeks from August, which is why the whole state roasts at once in propane drum roasters: the char loosens that tough skin and the smoke becomes half the flavor. A year of cooking is bought in that window and frozen. Buy them roasted and treat the hot bag as a clock, because roasted chile is low acid and a sealed warm bag is airless: spread the pods in one layer, bag one-cup portions once they stop steaming, and get them into the freezer within two hours of the roaster. Write the cultivar and the heat on the bag.",
+		season: [8, 9],
+		choose: "Long, straight, thick-walled pods with glossy skin and no creased shoulders; a straight pod peels and stuffs cleanly. Ask for the cultivar and the heat grade by name. Reject thin curled pods and any with soft translucent patches.",
+		store: "Fresh and unroasted, 1 week in the crisper. Roasted, cold within 2 hours of the roaster, then 3 days refrigerated or 12 months frozen with the skins left on; the skin is armor inside the bag, so peel them only as you use them.",
+		prep: "Peel only after roasting, and only what you are about to cook. Wear gloves for a hot cultivar. Slit the pod, lift the seed core out whole, and keep every drop of juice that pools underneath; that juice is the sauce.",
+		methods: ["roasting", "charring", "stuffing", "stewing", "grilling"]
+	},
+	{
+		t: "Jalapeno",
+		c: "The Herb & Chile Atlas",
+		d: "The kitchen's default fresh chile: thick-walled, grassy, 2,500 to 8,000 Scoville depending on cultivar and on how hard the plant was stressed. The heat is capsaicin, and capsaicin is built in the PLACENTA, the white pith the seeds cling to; the seeds themselves are nearly innocent and only taste hot because they sat against that pith. Scrape the placenta out with the tip of a spoon and you keep the green flavor while cutting most of the burn. CORKING, the fine tan striations, is cuticle that split as the fruit outgrew it; it tracks cultivar and ripeness, so a corked pod is usually the older and hotter one. Left on the plant it ripens red and sweeter; smoked and dried at that stage it becomes CHIPOTLE. The thick wall is the point: it survives roasting, stuffing and pickling where a thin chile collapses. Slice it into coins across the pod for pickling, and wear gloves.",
+		season: [7, 8, 9],
+		choose: "Firm and heavy, glossy dark green with taut skin and a stiff green stem. Corked pods with tan striations are riper and usually hotter, not spoiled. Reject anything soft at the shoulder, wrinkled, or showing a sunken translucent spot.",
+		store: "Loose and unbagged in the refrigerator crisper, 1 to 2 weeks; a sealed bag traps moisture and rots the stem end first. Long stretches below 7C (45F) pit the skin. Pickled in brine they hold for months.",
+		prep: "Wear gloves: capsaicin moves from skin to eyes and contact lenses for hours afterward. Split lengthwise, scrape the white placenta out with a spoon to control heat, then slice. Do not seed them under running water; it spreads the oil, which is not water soluble.",
+		methods: ["roasting", "grilling", "pickling", "stuffing", "sauteing", "smoking"]
+	},
+	{
+		t: "Kashmiri Chile",
+		c: "The Herb & Chile Atlas",
+		d: "The Indian cook's color chile: a thin wrinkled deep-red pod grown in and around Kashmir, prized because it stains a dish scarlet at only 1,000 to 2,000 Scoville. The red is carotenoid pigment, mostly capsanthin, and it is fat-soluble, which is why blooming the powder in warm ghee or oil for 20 to 30 seconds draws out a color that stirring it into water never will. That is the whole trick behind rogan josh, tandoori marinades and every restaurant curry that looks fiercer than it tastes. Much of what is sold as Kashmiri outside India is byadgi or a blend, still honest for color. Bloom on low heat or off it: above roughly 160C (320F) the pigment scorches, going brown and bitter in the pan.",
+		season: [],
+		choose: "Whole pods long, wrinkled, deep brick-red and flexible, never brittle or blotched with white. Powder should be vivid brick-red and smell sweet and fruity; reject orange or dull brown. Fluorescent red means added dye, usually rhodamine B or a Sudan azo dye, both banned and carcinogenic. Test it: capsanthin is fat-soluble, so a pinch on cold water should barely tint it, while dye bleeds red at once.",
+		store: "Airtight, dark and cool. Whole pods hold a year; powder loses color and aroma within 3 to 4 months of opening, so buy small. In a hot kitchen keep the jar cold, and never shake it over a steaming pan.",
+		prep: "Shake the seeds out of whole pods before grinding for a smoother, sweeter powder. Bloom in warm fat before any liquid goes in. For color without more heat, swap half your usual chile powder for this and taste as you go.",
+		methods: ["blooming", "toasting", "simmering", "braising", "grilling", "roasting"]
+	},
+	{
+		t: "Lovage",
+		c: "The Herb & Chile Atlas",
+		d: "Celery multiplied: Levisticum officinale carries the same PHTHALIDES that make celery smell like celery (ligustilide, sedanolide), banked hardest in root and seed, while the leaf's warm, faintly aniseed top note is a terpene, alpha-terpinyl acetate. Germans call it Maggikraut because it smells like the bouillon, not because the bouillon contains any. Leaves, hollow stems and seeds all work; the root is the most concentrated part, a seasoning to dry and grate, not a vegetable. The mistake everybody makes is quantity. One or two leaves season a pot of stock or potato soup for six; a handful, used the way you would use parsley, turns the whole thing bitter and soapy. Treat it as an aromatic rather than a herb: count it in leaves, add it early to wet cooking, and taste before you add a second.",
+		season: [4, 5, 6],
+		choose: "Dark, glossy, deeply toothed leaves like flat parsley grown huge, on thick hollow stems, with a celery smell you catch at arm's length. Reject yellowing outer leaves, stems running to flower (bitter and coarse), and any bunch that smells faint. Cutting your own, trust the smell: poison hemlock self-seeds into beds, carries purple-blotched stems and smells stale and mousy, never of celery. Seed sold as lovage in South Asian shops is usually ajwain, all thyme and no celery.",
+		store: "Refrigerator, stems in water or the bunch wrapped damp, about a week. Better: chop the leaves, pack them into an ice tray with water or oil, and freeze in single-dish portions. Dried lovage holds its celery note well for six months.",
+		prep: "Leaves, tender stems and seeds all work; thick stems are hollow and stringy, so slice them thin or discard. Use one or two leaves where a recipe would take a handful of parsley. The sap carries furanocoumarins and is phototoxic: juice on skin plus sunlight can raise a burn that blisters hours later and leaves brown marks for months, so wash hands and forearms with soap, not a rinse.",
+		methods: ["simmer", "braise", "stew", "blanch", "roast", "infuse"]
+	},
+	{
+		t: "Marjoram",
+		c: "The Herb & Chile Atlas",
+		d: "The same genus as oregano behaving in the opposite direction: Origanum majorana makes little carvacrol and builds cis-SABINENE HYDRATE instead, a sweet, soft, faintly piney alcohol, so marjoram is floral where oregano is hot. That molecule is fragile. It degrades under long heat and open simmering, which is why marjoram is the one Origanum that has to be handled like a soft herb: in during the last few minutes, or off the heat, or stirred in cold. It carries pale, fatty, gentle things, and that is where it earns its place: bratwurst and liverwurst, Polish and Czech soups, egg dishes, roast potatoes, herbes de Provence. Never swap it one for one with oregano. It is sweeter and weaker, so you need more of it and you need it later.",
+		season: [6, 7, 8, 9],
+		choose: "Soft, rounded gray-green leaves on thin stems, with the knot-like buds at the tips that give it the name knotted marjoram, smelling sweet and piney, not sharp. Reject wet or blackening tips, and two impostors: wild marjoram is Origanum vulgare and pot marjoram is O. onites, both sharp oregano.",
+		store: "Refrigerator, loosely bagged with a dry paper towel, about a week; it fades faster than oregano. Dried marjoram loses its sweetness inside six months, so buy small quantities often. Chopped into soft butter and rolled, it freezes well.",
+		prep: "Strip the leaves; the thin stems are still stringy. Chop just before use and add in the last five minutes or off the heat entirely. If a recipe insists on a long braise, add half at the start for depth and half at the end for the perfume.",
+		methods: ["saute", "bake", "roast", "simmer", "grill", "infuse"]
+	},
+	{
+		t: "Mint",
+		c: "The Herb & Chile Atlas",
+		d: "The cooling is not temperature: menthol binds TRPM8, the nerve receptor that reports cold, so the mouth is told it has been chilled while nothing has actually changed. Which mint you have matters more than any recipe admits. SPEARMINT is dominated by carvone, grassy and sweet, and is the cooking mint: tabbouleh, lamb, raita, mojitos, the Vietnamese herb plate. PEPPERMINT carries far more menthol, reads medicinal in food, and belongs in tea, chocolate and candy. Moroccan mint is a spearmint; chocolate mint is a peppermint cultivar and tastes it; apple mint is another species, woolly and mild. Never cook with PENNYROYAL, a common garden mint whose pulegone attacks the liver; it has killed people as a tea. Heat drives the menthol off fast and long cooking turns the leaf hay-like, so mint goes raw into yogurt, dressings and finished plates, or into an infusion only as long as it takes to steep.",
+		season: [5, 6, 7, 8, 9],
+		choose: "Perky evenly green leaves that smell strongly from a light rub, stems that snap. Reject rust-colored spots on the leaf undersides, a fungus that runs through the whole bunch, and any blackened or wilted tips.",
+		store: "Rolled in a barely damp towel in a box at 4 C (39 F): seven to ten days, the longest life of the tender herbs. Store it whole and pick as you go, because bruised leaves oxidize black within hours.",
+		prep: "Pick the leaves off the stems, which are stringy and bitter. Stack, roll and cut a single chiffonade with a sharp blade, or tear. For syrup or tea, bruise gently and steep below the boil: boiled mint goes bitter.",
+		methods: ["raw", "garnishing", "infusing", "blending", "pickling"]
+	},
+	{
+		t: "Oregano",
+		c: "The Herb & Chile Atlas",
+		d: "CARVACROL is the molecule: the same phenol family as thyme's thymol, and the reason oregano reads as hot and medicinal rather than green. GREEK oregano (Origanum vulgare hirtum) carries the most and is the one worth buying; ordinary vulgare and ornamental forms can be close to flavorless. This is one of the very few herbs genuinely better dried, because the grassy volatiles leave while the heavy phenols stay and concentrate. MEXICAN OREGANO is not the same plant, or even the same family: Lippia graveolens is a verbena, but it makes thymol and carvacrol of its own, which is why it reads as oregano at all, over a citrus and cineole base the Greek plant has none of. It belongs in pozole, birria and chili, where the Mediterranean one tastes wrong. Add dried oregano early to anything wet.",
+		season: [6, 7, 8],
+		choose: "Fresh: rigid stems, small firm leaves, a smell that stings the nose slightly. Dried: whole leaves rather than powder, gray-green not brown, still loud when crushed. Reject dried oregano that smells mostly of the box it came in.",
+		store: "Fresh keeps about a week in the refrigerator, loosely bagged. Dried is the real pantry form: whole leaf, airtight, dark, six to twelve months. Keep Mexican and Greek oregano in separate labeled jars; they are not interchangeable.",
+		prep: "Crush dried leaves between your palms over the pot to fracture them and release the oil. Strip fresh leaves; the stems stay tough after an hour of cooking. Early into sauces and marinades, late into dressings and raw salads.",
+		methods: ["simmer", "roast", "grill", "bake", "marinate", "stew"]
+	},
+	{
+		t: "Padron Pepper",
+		c: "The Herb & Chile Atlas",
+		d: "Galicia's answer to the shishito and a tighter, thicker, nuttier pod: small, squat and heart-shouldered, grown around Herbon under its own protected name, Pemento de Herbon. The Galician saying is the warning, that some bite and some do not, and the lottery is real at the size you actually buy: two pods of the same length off the same plant can differ, because capsaicin is built in the PLACENTA in answer to stress, and drought, heat and hard sun in the field drive it far harder than pod size does. Size only sets the ceiling. A thumb-long pod has had the longest to load and the hottest of them reach about 2,500 Scoville, a mild jalapeno, while the same seed grown outside Galicia's cool wet summers runs hot at any size. The thicker wall changes the pan work too; they want more fat and a moment longer than a shishito, fried in a real pool of olive oil until the skin blisters and the flesh slumps. Fry hot, drain on paper, and hit them with coarse salt while still glossy.",
+		season: [6, 7, 8, 9, 10],
+		choose: "Small pods, 3 to 5 centimeters, firm, matte deep green, stems stiff and green. Uniform size cooks evenly. These ripen red, so skip any pod with a red blush or corky stretch marks, and skip soft, rubbery or thumb-long ones.",
+		store: "In a vented or part open bag in the crisper, 4 to 5 days; a paper bag wicks them dry and they wrinkle fast once picked. They want damp air, not wet skin: do not wash until you cook, and shake out condensation.",
+		prep: "Dry them thoroughly; water hitting hot oil spits and steams the skin instead of blistering it. Stems stay on as handles, seeds stay in, pods stay whole: pricking lets oil in and the pod's own juice out, so it spits worse. Fry one uncrowded layer, screen at hand, extractor on, since blistering chiles put capsaicin in the air.",
+		methods: ["pan-frying", "blistering", "grilling", "roasting", "deep-frying"]
+	},
+	{
+		t: "Pasilla",
+		c: "The Herb & Chile Atlas",
+		d: "Dried chilaca, a wrinkled near-black pod whose name means little raisin, and the source of the commonest chile error in an American kitchen: across California and the Pacific Northwest, fresh poblanos are sold as pasilla. They are not pasilla, and dried ancho in its place makes a mole sweeter and flatter than it should be. The true pod, sold as PASILLA NEGRO, is dark, herbal and faintly bitter: cocoa, prune and a woody tobacco finish at 1,000 to 2,500 Scoville. PASILLA DE OAXACA is another chile again: smoked, much hotter. It is the third leg with ancho and mulato in mole negro, and alone it sauces duck and white fish. Toast gently, 15 seconds a side; black skin hides scorching, so judge by smell, not color.",
+		season: [],
+		choose: "Nearly black with a violet cast, wrinkled but supple, 15 to 20 cm (6 to 8 in) long and narrow. Reject anything wide, heart-shaped and reddish: that is ancho mislabeled. Brittle pods are old stock; a gray bloom that will not brush off, or smells musty, is mold.",
+		store: "Airtight and dark at room temperature, 6 to 12 months; freeze for a longer hold. Dark pods hide their fading, so date the bag. Any damp softness or musty smell is mold and the pod goes in the bin, not the pot.",
+		prep: "Stem, slit, strip out seeds and the pale veins that carry most of the bite. Toast, then soak 20 minutes and blend. Strain for anything going on a plate rather than into a pot; the skin survives as dark flecks.",
+		methods: ["toasting", "simmering", "braising", "stewing", "frying"]
+	},
+	{
+		t: "Poblano",
+		c: "The Herb & Chile Atlas",
+		d: "The broad, heart-shaped chile of central Mexico, 1,000 to 2,000 Scoville: mild enough to eat as a vegetable, though a drought-stressed plant will throw a pod that bites. Two things define it. The wall is thick and meaty, which is why it stuffs for chiles rellenos where a thin chile tears. The skin is tough and papery and never softens in cooking, so it has to be blistered off: char the pod black over flame or under a broiler, shut it in a covered bowl for ten minutes so its own steam lifts the skin, then rub it away dry. Do not rinse the peeled flesh; that washes the smoke down the drain. The green pod you buy is immature; left to ripen red and then dried it becomes the ANCHO, the raisin-and-coffee base of mole and adobo, and a browner strain dried the same way is the MULATO. Char, steam, peel, then cut into rajas.",
+		season: [8, 9, 10],
+		choose: "Deep green, nearly black-green, broad flat shoulder, a straight body that will lie down in a pan. Firm, heavy, unblemished. Much of the US labels it pasilla, so buy the shape, not the sign; true pasilla is dried chilaca. Reject twisted pods and soft brown pitting.",
+		store: "Unwrapped in the crisper, up to 1 week: the flesh under that tough skin goes slack faster than a jalapeno's. Charred and peeled, they keep 3 days refrigerated, or freeze flat in sheets with paper between them.",
+		prep: "Char over a live flame until the skin blisters black, cover, and let the trapped steam loosen it; rub the skin away dry. For rellenos, slit one side only and lift the seed core out through the slit, leaving the shoulders intact.",
+		methods: ["roasting", "charring", "stuffing", "braising", "frying"]
+	},
+	{
+		t: "Rosemary",
+		c: "The Herb & Chile Atlas",
+		d: "The leathery needle is the point: oil glands under a distended cuticle hold CAMPHOR, 1,8-cineole and alpha-pinene, terpenes that read as pine and medicine, alongside CARNOSIC ACID, a phenolic diterpene sold as an extract to stop fats going rancid. Those terpenes are lighter than thyme's phenols, pinene leaving at 155C, so a long roast burns off the pine and leaves camphor and resin: add a second sprig late for brightness. Half a sprig still flavors a kilo of potatoes. The terpenes are fat-soluble and barely water-soluble, so bloom rosemary in warm oil or butter and the flavor spreads evenly instead of landing in bitter chopped pockets. Keep sprigs in fat or under the meat, not bare on a hot tray where they scorch acrid; chop to near dust, because a whole needle in a mouthful is a splinter.",
+		season: [],
+		choose: "Firm upright branches, needles deep green above and silver beneath, pliable rather than snapping, releasing pine when rubbed: needles that crack off dry have already lost oil. Reject black or shriveled needles, limp tips, and the gray webbing of spider mites at the growing tips.",
+		store: "Refrigerator in a loose bag, two to three weeks, or stood in a glass of water on the counter for a week like a cut flower. It dries better than most herbs: hang bunches in the dark and strip when brittle. Whole sprigs freeze with little loss.",
+		prep: "Strip needles backwards down the stem, then chop them to near dust. Bloom the chop in warm oil or butter before the other aromatics rather than throwing it dry into liquid. Save thick stems as skewers for lamb, or as brushes for basting.",
+		methods: ["roast", "grill", "braise", "bake", "infuse", "smoke"]
+	},
+	{
+		t: "Sage",
+		c: "The Herb & Chile Atlas",
+		d: "A woolly leaf, but the wool is not the store: the oil sits in separate pinhead glands among those branched hairs, holding THUJONE with camphor and 1,8-cineole, a resinous, faintly bitter smell that cuts fat, which is why sage lives with pork, sausage, liver, beans and brown butter. Heat is how you tame it. Slide the leaves in while the butter still foams, near 110C (230F), where the water boiling out of the butter caps the pan: the leaf dries, goes brittle, and sheds its sharpest camphor while the milk solids brown nutty around it. Pull them when the foam falls and the butter turns nut brown, a moment before the solids blacken. Thujone is a real neurotoxin, but dose is everything: leaves in a stuffing are irrelevant, while sage TEA drunk in quantity, or the essential oil, is where thujone actually matters, so treat sage as a seasoning and not a daily infusion. Cook it. Raw sage is aggressive and stays aggressive.",
+		season: [5, 6, 7, 8, 9, 10],
+		choose: "Leaves thick, velvety, dry, pale gray-green, firm off the stem, camphorous when rubbed. Purple sage is the same species and as strong; mild means Greek sage; pineapple sage is another plant, fruity, no substitute. Reject limp leaves, black spots, or a musty smell.",
+		store: "Refrigerator in a loose bag with a dry paper towel, one to two weeks; trapped moisture rots the felted surface first. Dry it whole, fast and in the dark, or it turns to musty hay. Leaves crisped in butter keep a day in a tin, uncovered.",
+		prep: "Pick the leaves off and do not chop until the last moment: bruising sage releases its harshest camphor notes early. For frying, leaves must be bone dry or the butter spits. Chiffonade for stuffings, whole leaves for the pan.",
+		methods: ["fry", "roast", "braise", "bake", "stew", "infuse"]
+	},
+	{
+		t: "Scotch Bonnet",
+		c: "The Herb & Chile Atlas",
+		d: "The Caribbean sibling of the habanero and the same species, Capsicum chinense: squat as a tam o'shanter with a puckered base, 100,000 to 350,000 Scoville, and rounder, sweeter and more tropical where the habanero leans sharp and citric. It is not interchangeable in the dishes built on it. Jerk depends on the bonnet with allspice and thyme, and so do Jamaican pepper sauce, Trinidadian green seasoning and the Haitian pikliz that cuts fried pork. The burn sits in the PLACENTA, the white pith the seeds hang from, while the wall carries the fruit; shaking out seeds does little, but a pod scraped clean of pith gives the perfume with a fraction of the heat. In a stew the classic move is to drop the pod in whole and unbroken, let it steep, and lift it out before it splits. Use it whole, watch it, and do not stir it into shreds.",
+		season: [8, 9, 10],
+		choose: "Squat glossy pods with deep creases, thick walls and a fresh green stem; yellow through scarlet are all ripe. Weight in the hand means flesh. Reject shriveled or dull pods, and any with a soft crease that yields to a thumb.",
+		store: "In paper in the refrigerator, 2 to 3 weeks. They freeze whole in a bag for a year and drop into a pot straight from frozen. Packed in vinegar with onion and carrot they keep for months and only improve.",
+		prep: "Gloves, and keep your hands off your eyes. To flavor without fire, simmer the pod whole and unpricked and lift it out intact; any breach lets the burn into the pot. To use it hot, split it and scrape the white pith and seed platform out with a spoon. Capsaicin does not rinse off, so soap the board, the knife and the sink, and lift a blender lid away from your face.",
+		methods: ["simmering", "braising", "grilling", "pickling", "blending"]
+	},
+	{
+		t: "Serrano",
+		c: "The Herb & Chile Atlas",
+		d: "Slimmer and cleaner than a jalapeno, running 10,000 to 25,000 Scoville: two to five times the burn in a pod half the size. The wall is thin, and that changes the cooking. There is no tough papery skin worth charring off, so serranos go into the pan or the molcajete whole rather than being roasted and peeled. The heat still lives in the PLACENTA, the white pith, but a serrano packs nearly as much pith into a third of the flesh, so scraping it buys less relief than in a fatter chile; use fewer pods instead. Raw, the flavor is bright, green and almost metallic; ripened to red or brown it turns sweet and rounded. This is the chile of pico de gallo and salsa verde, where the fruit is barely cooked at all. Mince it seeds and all for salsa cruda, and taste one sliver before you commit the bowl.",
+		season: [7, 8, 9],
+		choose: "Slim rigid pods that snap rather than bend, deep green and glossy, with a green stem still attached. Red ones are simply ripe, sweeter, and fine to use. Reject limp rubbery pods and any with a soft brown collar at the stem.",
+		store: "Loose in the crisper up to 2 weeks; wrapped in paper inside a container beats plastic, which sweats them soft. They freeze whole in a bag for months and go straight from frozen into the blender for salsa.",
+		prep: "Gloves on. Top and mince fine, pith and seeds included, for raw salsa; for less burn, ring the pod and discard the stem-end third, where the placenta is densest. Never wipe an eye with a forearm at the board.",
+		methods: ["roasting", "grilling", "pickling", "simmering", "sauteing"]
+	},
+	{
+		t: "Shishito",
+		c: "The Herb & Chile Atlas",
+		d: "A thin-walled Japanese frying pepper, 50 to 200 Scoville, whose crumpled tip is said to resemble a lion's face, which is where the name comes from. Roughly one pod in ten is genuinely hot, and that is not folklore: water stress, heat and sun during fruiting push a plant to make more capsaicin, and pods on one branch do not get an equal share, so a bag cannot be sorted by eye. Heat is not the point anyway; the blister is. Thin walls cook a pod through in two or three minutes, and the skin scorches in patches while the flesh steams in its own moisture, going sweet, smoky and slippery. That needs a screaming pan and a thin film of oil to carry heat into the skin: crowd a cool pan and the temperature crashes, the pods weep, and they stew to khaki instead. Get the oil shimmering, toss until blackened in patches, then salt and squeeze lemon over.",
+		season: [6, 7, 8, 9],
+		choose: "Slender bright green wrinkled pods with firm walls and green stems; small and uniform cooks evenly. Ripe red ones are sweeter and likelier to be the hot ones. Reject limp pods, yellowing skin, and any soft at the tip.",
+		store: "In a paper bag in the crisper, 5 to 7 days; they lose their snap fast and go leathery in plastic. Do not wash before storing. Once blistered they are worth eating inside the hour and never the next day.",
+		prep: "No prep beyond drying them completely: wet pods steam instead of blistering. Leave the stems on as handles and the seeds in. Pierce each pod once with a knife tip so trapped steam cannot burst it in the pan.",
+		methods: ["blistering", "pan-frying", "grilling", "deep-frying", "roasting"]
+	},
+	{
+		t: "Shiso",
+		c: "The Herb & Chile Atlas",
+		d: "A mint-family leaf that tastes like nothing else in the family: the signature is perillaldehyde, and it reads as basil, mint, cumin and a cold anise all at once. GREEN SHISO (aojiso), Perilla frutescens var. crispa, is the sashimi leaf, the serrated flag under raw fish; its oil is antibacterial in a lab, which is no safeguard for the fish it sits on. RED SHISO (akajiso) carries shisonin, a cyanidin pigment that stains umeboshi and the beni shoga pickled in the leftover ume brine; acid does not make the color, it holds the pigment in its red form instead of letting it slide blue-gray. Korean perilla (kkaennip) is the other variety, var. frutescens, broader and flatter, smelling of perilla ketone rather than perillaldehyde, earthy and musty rather than licorice; it is not a swap. The aldehyde flashes off over heat, so use the leaf raw, or batter one side only and fry it briefly for tempura, which shields the aroma under the coating.",
+		season: [6, 7, 8, 9],
+		choose: "Whole dry unbroken leaves with crisp serrations and a strong smell from a light rub. Reject torn or bruised leaves, black spotting, and any that have gone limp and papery around the edges.",
+		store: "Stacked flat between dry paper in a sealed box, in the warmest part of the fridge or a cool room near 10 C (50 F): five to seven days. Below about 8 C (46 F) the leaf takes chilling injury and spots black. Water sitting on a leaf rots it in a day, so stems in water under a bag works only if the leaves stay dry.",
+		prep: "Rinse only if it needs it and pat completely dry. Use leaves whole under fish or around rice; for a garnish, stack, roll and cut a fine chiffonade with a very sharp knife, since the cut edge bruises black.",
+		methods: ["raw", "garnishing", "deep-frying", "pickling", "infusing"]
+	},
+	{
+		t: "Summer Savory",
+		c: "The Herb & Chile Atlas",
+		d: "Satureja hortensis, an annual with soft narrow leaves and a peppery bite from CARVACROL, riding on the gamma-terpinene and p-cymene the plant builds it from: thyme's family of phenols pitched lower and hotter, closer to mild black pepper than to anything green. It is the bean herb, Bohnenkraut in German, cooked with every kind of legume, through Bulgarian chubritsa, Georgian and Romanian pots and old English pease; the tradition says it eases the wind beans cause, and true or not it seasons them better than anything else on the shelf. WINTER SAVORY (Satureja montana) is the perennial cousin: woodier, more resinous, more bitter, and the one for long braises and cured sausage. Summer savory sits between hardy and soft, so use it twice: a sprig with the aromatics, and a chopped pinch at the end.",
+		season: [7, 8, 9],
+		choose: "Fresh: soft fine leaves on green stems, peppery when rubbed; bunches just coming into bloom are strongest, since the oil peaks at flowering. Dried: gray-green whole leaf smelling of thyme and pepper. Reject brittle brown stems, seeded stalks, and savory faded to hay.",
+		store: "Refrigerator in a loose bag with a dry cloth, about a week fresh. It dries unusually well: hang bunches in the dark, strip, and keep whole leaf airtight for a year. Bulgarian chubritza blends keep on the same terms.",
+		prep: "Strip leaves from any stem thicker than a matchstick. Chop fine for sausage meat and bean pots so it disperses. The peppery top notes go first under heat, so hold back a third of the herb for the last few minutes.",
+		methods: ["simmer", "stew", "braise", "roast", "grill", "cure"]
+	},
+	{
+		t: "Tarragon",
+		c: "The Herb & Chile Atlas",
+		d: "French tarragon is a sterile plant: it sets no viable seed and is propagated only from cuttings, and that single fact tells you what to buy. Anything offered as tarragon seed is RUSSIAN tarragon, a taller, coarser, nearly flavorless relative that looks close enough to fool a shopper. The French plant runs on estragole, the same compound that carries chervil and Thai basil but here far more insistent, with ocimene and limonene behind it, not anethole, and it leaves a faint numbing bitterness at the back of the tongue. It is a tender herb that rewards a short infusion: steeped in warmed vinegar, reduced into the base of a bearnaise, slipped under the skin of a chicken. Use it alone or nearly alone. Tarragon does not share a plate politely, and a heavy hand turns a good sauce into licorice.",
+		season: [5, 6, 7, 8, 9],
+		choose: "Slim glossy dark leaves on supple stems, and a strong anise hit from one rubbed leaf. Reject pale broad dull foliage with little smell, which is the Russian plant, and any blackening where the stems were cut.",
+		store: "Wrapped in a barely damp towel and boxed at 4 C (39 F): about five days. For months, steep the sprigs in white wine vinegar, where the acid keeps them. Herb butter works too but belongs in the freezer: the wet leaves turn it in the cold box long before months are up.",
+		prep: "Strip the leaves downward off the stem, discarding the woody bitter lower inch. Chop coarsely and only just before use, then taste as you go: tarragon keeps gaining strength as it sits in a warm sauce.",
+		methods: ["raw", "infusing", "poaching", "roasting", "garnishing", "pickling"]
+	},
+	{
+		t: "Thai Basil",
+		c: "The Herb & Chile Atlas",
+		d: "Not a substitute for Genovese and not interchangeable with it: the leaf is narrow, the stems and flower spikes purple, and the aroma is frank anise, because the dominant compound is estragole (methyl chavicol) rather than linalool. It is also sturdier in the pot, its oil held in a firmer, waxier leaf, so it survives a minute of curry where sweet basil would simply vanish. That is how it flavors green curry, drunken noodles, and the herb plate beside a bowl of pho. Do not confuse it with HOLY BASIL (kaphrao), a hairier, duller, peppery leaf carrying eugenol, which is what belongs in pad kaphrao; that swap is the commonest fault in a home version of the dish. Stir Thai basil in during the last thirty seconds and put the lid on, so the steam carries the anise up through everything.",
+		season: [6, 7, 8, 9],
+		choose: "Firm purple stems, taut unblemished leaves, a clear licorice smell from one rubbed leaf. Reject wilted or water-soaked leaves, black chilled edges, and bunches with no aroma at all when you crush a tip.",
+		store: "Like sweet basil, stems in water at room temperature, out of sun: four to five days. Never refrigerate it; chilling injury starts below about 10 C (50 F) and blackens the leaf. Aim for 12 to 15 C (54 to 59 F).",
+		prep: "Pick leaves and tender tips off the woody lower stems; the flower spikes are edible and intensely anise, so use them too. Leave leaves whole, because cutting spends the oil on the board rather than in the bowl.",
+		methods: ["raw", "stir-frying", "simmering", "steaming", "garnishing", "infusing"]
+	},
+	{
+		t: "Thai Bird Chile",
+		c: "The Herb & Chile Atlas",
+		d: "Prik kee noo, the bird's eye: a finger-joint pod running 50,000 to 100,000 Scoville, thin-walled and almost all placenta and seed, which is why there is no way to seed it into mildness. The burn arrives fast and sharp at the front of the mouth and clears faster than a habanero's, so Thai cooking can use a lot of it without flattening the palate; the balance comes from fish sauce, lime and palm sugar answering the heat, not from restraint with the pod. Green ones are grassy and more aggressive, red ones riper and a shade sweeter. Bruising matters more than chopping: pounded in a mortar with garlic and salt, the cells rupture and release capsaicin and aroma into the paste, where sliced coins would sit there as hot flecks. Pound them, and count the pods aloud so the next cook knows what is in the bowl.",
+		season: [7, 8, 9],
+		choose: "Rigid pods no longer than a finger joint, taut skin, stems that snap when bent. Bags marked Thai chile often hold the longer, milder prik chee fa, so buy by size. Green and red both work. Reject leathery or wrinkled pods and black tip spotting.",
+		store: "In a paper towel inside a container in the refrigerator, 1 to 2 weeks. They freeze loose in a bag for months and slice more easily from frozen. Air-dried on a string they keep a year and turn raisiny and sweet, not smoky: smoke comes only from a smoker.",
+		prep: "Gloves for more than a few. Pound with garlic and salt in a mortar rather than mincing; for chile fish sauce, slice into thin rings, stem cap discarded. Do not touch your face for the rest of the shift.",
+		methods: ["stir-frying", "simmering", "pickling", "infusing", "drying"]
+	},
+	{
+		t: "Thyme",
+		c: "The Herb & Chile Atlas",
+		d: "A phenol in a small tough leaf: THYMOL, with its isomer carvacrol, sits in surface glands on a leaf rolled tight against a Mediterranean summer. That structure is the whole distinction between a hardy herb and a soft one: the leaf does not collapse in liquid, and thymol boils near 232C and holds on, so an hour in a braise concentrates the flavor instead of erasing it. FRENCH and ENGLISH thyme are both Thymus vulgaris and the workhorse; LEMON thyme is the hybrid, led by citral, no lighter than thymol but wrecked by heat and acid into a stale p-cymene note, so add it late, to fish and chicken; wild creeping thyme is thinner and more floral. Thymol is antimicrobial in a lab dish, not in a pot, so use thyme for flavor and salt for keeping. Whole sprigs go into anything wet at the start and come out at the end; strip the leaves only where you want to see them.",
+		season: [5, 6, 7, 8, 9],
+		choose: "Springy sprigs, small gray-green leaves firmly attached, stems flexible rather than brittle, and a strong smell when you pinch one: that means the oil glands are intact. Reject yellowed or blackened tips, wet slimy stems, and any bunch shedding leaves in the bag.",
+		store: "Refrigerator, wrapped loosely in a barely damp cloth inside a bag, two to three weeks; it outlasts every soft herb. Freeze whole sprigs in a bag and drop them into the pot still frozen. Dried thyme holds its phenols about a year in the dark, then goes to dust.",
+		prep: "Strip leaves by pinching the growing tip and pulling down against the growth; they come away cleanly. Woody stems go in the pot and come out before service, never onto the plate. Do not chop fine unless the dish is smooth: bruised thyme turns grassy.",
+		methods: ["braise", "roast", "simmer", "stew", "grill", "infuse"]
+	},
+	{
+		t: "Urfa Biber",
+		c: "The Herb & Chile Atlas",
+		d: "The dark one: a Turkish pepper from Urfa cured by a sweat-and-dry cycle, sun by day and wrapped tight by night, so it holds its own moisture instead of drying out. Nothing ferments; the warm wet nights brown it, sugars and amino acids reacting while the red carotenoids break down, and that is where the near black-purple comes from. It is sticky, and tastes of raisin, molasses, coffee, sour cherry and tobacco, with a smoky depth built without any smoke and a late, slow heat near 7,500 Scoville. Like Aleppo it is cut with salt and oil, so season the dish after it. Its darkness will muddy a pale dish: put it where that helps, on lamb, eggplant, chocolate, browned butter, roast carrots, or yogurt under a thread of olive oil.",
+		season: [],
+		choose: "Almost black with a purple cast, visibly damp and sticky, clumping into soft lumps you break with a spoon, smelling of raisin and tobacco. Reject anything dry, gray-black and free-running: old stock with the oil gone.",
+		store: "Airtight and refrigerated once opened, and let the jar warm before you open it so it does not sweat inside. The moisture left in it makes this the most perishable of the flake chiles: six months cold with the aroma intact. Any musty smell, or white or gray fuzz in the clumps, means the whole jar goes out. Molds on damp chile make aflatoxin, and cooking does not destroy it. Once it dries to loose dust the character is gone.",
+		prep: "No prep beyond breaking up the clumps. Add late, off direct heat, or stir into warm oil or butter for a minute to bloom the color. Taste for salt before you season, and use a light hand in anything meant to stay pale.",
+		methods: ["finishing", "roasting", "grilling", "braising", "baking"]
+	},
+	{
+		t: "Vietnamese Coriander",
+		c: "The Herb & Chile Atlas",
+		d: "Not a coriander and not even a relation: rau ram is a knotweed, kin to sorrel and buckwheat, with a narrow pointed leaf often marked by a dark chevron. It carries the aldehydes that make cilantro smell like cilantro, decanal and dodecanal chiefly, over the (E)-2-decenal that gives cilantro its soap note, and adds a peppery heat at the back of the throat that cilantro has not got. It is not a stand-in for cilantro but its own herb: raw on the herb plate, in goi ga chicken salad, with snails, duck and anything fatty that needs cutting, and simmered in Malaysian asam laksa, where it is daun kesum and goes into the broth. Heat dulls it, so in Vietnamese dishes add it off the heat. It roots readily from a cutting in a glass of water on a sunny windowsill, which is the answer when the Asian grocery has none.",
+		season: [6, 7, 8, 9],
+		choose: "Narrow glossy deep green leaves on reddish jointed stems, springy, with a hot peppery smell on the rub. Reject yellowed lower leaves, hollow dried-out stems, and any bunch that smells merely grassy.",
+		store: "Stem ends in water on the counter out of direct sun, changing the water daily: five to seven days. It is tropical and chills like basil, so a 4 C (39 F) fridge blackens the leaf in a day or two; if it must go in, use the door. Root a few stems and you will not buy it again.",
+		prep: "Pick the leaves and tender tips off the jointed stems, which are tough and fibrous. Leave leaves whole for an herb plate, or tear them into a salad. Add it to the bowl only after the heat is off.",
+		methods: ["raw", "garnishing", "blending", "pickling", "infusing"]
+	},
+	{
 		t: "Acorn Squash",
 		c: "The Vegetable Atlas",
 		d: "A ribbed, dark green, acorn-shaped winter squash (Cucurbita pepo), and the least sweet of the common ones: dry matter is around 12 percent, the flesh runs fibrous and mildly nutty, and sugar never climbs the way it does in kabocha or delicata, because it sets little starch and, as a pepo, will not convert what it has to sugar in storage the way the maxima squashes do. It only declines, so buy it to cook, not to keep. The deep ribs and hollow seed cavity make a natural bowl, which is why it is nearly always halved, seasoned in the cavity, and baked: butter and maple, or brown sugar, or sausage and apple, with the added fat and sugar doing work the flesh cannot do alone. Cut it pole to pole through the ribs, score the flesh in a crosshatch, and roast cut side DOWN first at 200C (400F) so the face steams itself tender against the pan; flip and glaze to finish. Young acorn skin is edible, old acorn skin is leather.",
