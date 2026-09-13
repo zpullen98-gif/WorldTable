@@ -928,7 +928,16 @@
         "sub": "A YouTube search for Italia Squisita and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "globe-eggplant",
+        "term": "Globe Eggplant"
+      },
+      {
+        "slug": "japanese-eggplant",
+        "term": "Japanese Eggplant"
+      }
+    ],
     "pantryItems": [
       "Garlic",
       "Tomato",
@@ -1827,6 +1836,14 @@
       {
         "slug": "tomatoes-the-argument-for-august",
         "term": "Tomatoes: The Argument for August"
+      },
+      {
+        "slug": "globe-eggplant",
+        "term": "Globe Eggplant"
+      },
+      {
+        "slug": "japanese-eggplant",
+        "term": "Japanese Eggplant"
       }
     ],
     "pantryItems": [
@@ -3223,7 +3240,12 @@
         "sub": "A YouTube search for Just One Cookbook and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "savoy-cabbage",
+        "term": "Savoy Cabbage"
+      }
+    ],
     "pantryItems": [
       "Pork",
       "Ground meat",
@@ -3989,6 +4011,10 @@
       {
         "slug": "roux-slurry-and-liaison",
         "term": "Roux, Slurry & Liaison"
+      },
+      {
+        "slug": "scallion",
+        "term": "Scallion"
       }
     ],
     "pantryItems": [
@@ -4327,6 +4353,14 @@
     },
     "lexiconTerms": [
       {
+        "slug": "broccoli",
+        "term": "Broccoli"
+      },
+      {
+        "slug": "broccoli-rabe",
+        "term": "Broccoli Rabe"
+      },
+      {
         "slug": "fillet-steak-loin-and-collar",
         "term": "Fillet, Steak, Loin & Collar"
       }
@@ -4434,7 +4468,12 @@
         "sub": "A YouTube search for Chinese Cooking Demystified and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "scallion",
+        "term": "Scallion"
+      }
+    ],
     "pantryItems": [
       "Scallion",
       "Flour",
@@ -4526,7 +4565,12 @@
         "sub": "A YouTube search for Chinese Cooking Demystified and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "bok-choy",
+        "term": "Bok Choy"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Pork",
@@ -4744,6 +4788,10 @@
       {
         "slug": "steaming-and-en-papillote",
         "term": "Steaming & En Papillote"
+      },
+      {
+        "slug": "scallion",
+        "term": "Scallion"
       }
     ],
     "pantryItems": [
@@ -6631,6 +6679,10 @@
       {
         "slug": "garam-masala",
         "term": "Garam Masala"
+      },
+      {
+        "slug": "cauliflower",
+        "term": "Cauliflower"
       }
     ],
     "pantryItems": [
@@ -6838,6 +6890,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "garlic",
+        "term": "Garlic"
+      },
       {
         "slug": "copper-and-enameled-cast-iron",
         "term": "Copper & Enameled Cast Iron"
@@ -7175,7 +7231,12 @@
         "sub": "A YouTube search for Pailin’s Kitchen and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "brussels-sprouts",
+        "term": "Brussels Sprouts"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Shrimp",
@@ -7298,6 +7359,10 @@
       {
         "slug": "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime",
         "term": "The Fresh Aromatic Trio: Galangal, Lemongrass & Makrut Lime"
+      },
+      {
+        "slug": "globe-eggplant",
+        "term": "Globe Eggplant"
       }
     ],
     "pantryItems": [
@@ -7990,7 +8055,16 @@
         "sub": "A YouTube search for Pailin’s Kitchen and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "broccoli",
+        "term": "Broccoli"
+      },
+      {
+        "slug": "broccoli-rabe",
+        "term": "Broccoli Rabe"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Shrimp",
@@ -8644,7 +8718,12 @@
         "sub": "A YouTube search for Middle Eats and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "red-onion",
+        "term": "Red Onion"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Onion",
@@ -10490,6 +10569,10 @@
       {
         "slug": "feta",
         "term": "Feta"
+      },
+      {
+        "slug": "red-onion",
+        "term": "Red Onion"
       }
     ],
     "pantryItems": [
@@ -12871,6 +12954,10 @@
       {
         "slug": "blanch-and-shock",
         "term": "Blanch & Shock"
+      },
+      {
+        "slug": "brussels-sprouts",
+        "term": "Brussels Sprouts"
       }
     ],
     "pantryItems": [
@@ -13732,7 +13819,12 @@
         "sub": "A YouTube search for Helen’s Recipes and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "brussels-sprouts",
+        "term": "Brussels Sprouts"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Onion",
@@ -14571,7 +14663,12 @@
         "sub": "A YouTube search for Helen’s Recipes and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "broccolini",
+        "term": "Broccolini"
+      }
+    ],
     "pantryItems": [
       "Garlic",
       "Spinach",
@@ -16495,6 +16592,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "collard-greens",
+        "term": "Collard Greens"
+      },
       {
         "slug": "ham-and-hock",
         "term": "Ham & Hock"
@@ -20300,7 +20401,12 @@
         "sub": "Technique films from the South American kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "yellow-onion",
+        "term": "Yellow Onion"
+      }
+    ],
     "pantryItems": [
       "White fish",
       "Onion",
@@ -23477,7 +23583,20 @@
         "sub": "A YouTube search for Donal Skehan and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "curly-kale",
+        "term": "Curly Kale"
+      },
+      {
+        "slug": "lacinato-kale",
+        "term": "Lacinato Kale"
+      },
+      {
+        "slug": "savoy-cabbage",
+        "term": "Savoy Cabbage"
+      }
+    ],
     "pantryItems": [
       "Onion",
       "Scallion",
@@ -24506,6 +24625,10 @@
       {
         "slug": "annatto-achiote",
         "term": "Annatto (Achiote)"
+      },
+      {
+        "slug": "bok-choy",
+        "term": "Bok Choy"
       }
     ],
     "pantryItems": [
@@ -25353,7 +25476,12 @@
         "sub": "A YouTube search for My German Recipes and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "red-cabbage",
+        "term": "Red Cabbage"
+      }
+    ],
     "pantryItems": [
       "Beef",
       "Bacon",
@@ -25574,7 +25702,12 @@
         "sub": "A YouTube search for My German Recipes and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "red-cabbage",
+        "term": "Red Cabbage"
+      }
+    ],
     "pantryItems": [
       "Beef",
       "Onion",
@@ -26103,6 +26236,10 @@
       {
         "slug": "apples-and-pears-the-autumn-keepers",
         "term": "Apples & Pears: The Autumn Keepers"
+      },
+      {
+        "slug": "red-cabbage",
+        "term": "Red Cabbage"
       }
     ],
     "pantryItems": [
@@ -29043,7 +29180,20 @@
         "sub": "Technique films from the East African kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "collard-greens",
+        "term": "Collard Greens"
+      },
+      {
+        "slug": "curly-kale",
+        "term": "Curly Kale"
+      },
+      {
+        "slug": "lacinato-kale",
+        "term": "Lacinato Kale"
+      }
+    ],
     "pantryItems": [
       "Onion",
       "Garlic",
@@ -29627,7 +29777,20 @@
         "sub": "Technique films from the Portuguese kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "collard-greens",
+        "term": "Collard Greens"
+      },
+      {
+        "slug": "curly-kale",
+        "term": "Curly Kale"
+      },
+      {
+        "slug": "lacinato-kale",
+        "term": "Lacinato Kale"
+      }
+    ],
     "pantryItems": [
       "Onion",
       "Garlic",
@@ -40124,7 +40287,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "sweet-onion",
+        "term": "Sweet Onion"
+      }
+    ],
     "pantryItems": [
       "Onion",
       "Carrot",
@@ -44380,6 +44548,10 @@
         "term": "Carbon Steel Pans"
       },
       {
+        "slug": "mustard-greens",
+        "term": "Mustard Greens"
+      },
+      {
         "slug": "steel-science-carbon-stainless-and-hrc",
         "term": "Steel Science: Carbon, Stainless & HRC"
       },
@@ -46248,6 +46420,10 @@
     },
     "lexiconTerms": [
       {
+        "slug": "leek",
+        "term": "Leek"
+      },
+      {
         "slug": "bay-leaf",
         "term": "Bay Leaf"
       }
@@ -47208,6 +47384,10 @@
     },
     "lexiconTerms": [
       {
+        "slug": "mustard-greens",
+        "term": "Mustard Greens"
+      },
+      {
         "slug": "shank-oxtail-and-cheek",
         "term": "Shank, Oxtail & Cheek"
       },
@@ -47436,7 +47616,16 @@
         "sub": "A YouTube search for Chinese Cooking Demystified and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "shallot",
+        "term": "Shallot"
+      },
+      {
+        "slug": "mustard-greens",
+        "term": "Mustard Greens"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Eggs",
@@ -47565,6 +47754,18 @@
       {
         "slug": "smoke-char-and-the-burnt-edge",
         "term": "Smoke, Char & the Burnt Edge"
+      },
+      {
+        "slug": "gai-lan",
+        "term": "Gai Lan"
+      },
+      {
+        "slug": "broccoli",
+        "term": "Broccoli"
+      },
+      {
+        "slug": "broccoli-rabe",
+        "term": "Broccoli Rabe"
       }
     ],
     "pantryItems": [
@@ -49026,7 +49227,12 @@
         "sub": "A YouTube search for America’s Test Kitchen and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "green-tomato",
+        "term": "Green Tomato"
+      }
+    ],
     "pantryItems": [
       "Beef",
       "Pork",
@@ -50479,6 +50685,10 @@
       {
         "slug": "tasso-and-cajun-andouille",
         "term": "Tasso & Cajun Andouille"
+      },
+      {
+        "slug": "shallot",
+        "term": "Shallot"
       }
     ],
     "pantryItems": [
@@ -58214,7 +58424,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "leek",
+        "term": "Leek"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Eggs",
@@ -69488,7 +69703,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "ramps",
+        "term": "Ramps"
+      }
+    ],
     "pantryItems": [
       "Bacon",
       "Potato",
@@ -107149,7 +107369,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "garlic",
+        "term": "Garlic"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Garlic",
@@ -111209,7 +111434,12 @@
         "sub": "Technique films from the Fermentation Atlas kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "napa-cabbage",
+        "term": "Napa Cabbage"
+      }
+    ],
     "pantryItems": [
       "Shrimp",
       "Onion",
@@ -113074,7 +113304,16 @@
         "sub": "Technique films from the Dumpling Atlas kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "napa-cabbage",
+        "term": "Napa Cabbage"
+      },
+      {
+        "slug": "spring-onion",
+        "term": "Spring Onion"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Pork",
@@ -113234,7 +113473,12 @@
         "sub": "Technique films from the Dumpling Atlas kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "spring-onion",
+        "term": "Spring Onion"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Pork",
@@ -117026,6 +117270,10 @@
       {
         "slug": "acidity-the-backbone",
         "term": "Acidity (The Backbone)"
+      },
+      {
+        "slug": "cauliflower",
+        "term": "Cauliflower"
       }
     ],
     "pantryItems": [
@@ -118072,6 +118320,10 @@
       {
         "slug": "white-button-mushroom",
         "term": "White Button Mushroom"
+      },
+      {
+        "slug": "leek",
+        "term": "Leek"
       }
     ],
     "pantryItems": [
@@ -118499,7 +118751,12 @@
         "sub": "Technique films from the Stock & Fond Atlas kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "spring-onion",
+        "term": "Spring Onion"
+      }
+    ],
     "pantryItems": [
       "Pork",
       "Onion",
@@ -120694,7 +120951,16 @@
         "sub": "Technique films from the The Rice Bowl kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "bell-pepper",
+        "term": "Bell Pepper"
+      },
+      {
+        "slug": "plum-tomato",
+        "term": "Plum Tomato"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Onion",
@@ -121630,6 +121896,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "cauliflower",
+        "term": "Cauliflower"
+      },
       {
         "slug": "coriander-seed",
         "term": "Coriander Seed"
@@ -122830,6 +123100,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "cherry-tomato",
+        "term": "Cherry Tomato"
+      },
       {
         "slug": "consomme-and-clarification",
         "term": "Consommé & Clarification"
@@ -124321,6 +124595,10 @@
       {
         "slug": "scallops-dry-vs-wet-u-10",
         "term": "Scallops: Dry vs. Wet, U-10"
+      },
+      {
+        "slug": "garlic",
+        "term": "Garlic"
       }
     ],
     "pantryItems": [
@@ -125578,7 +125856,12 @@
         "sub": "Technique films from the Cantonese kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "gai-lan",
+        "term": "Gai Lan"
+      }
+    ],
     "pantryItems": [
       "Onion",
       "Ginger",
@@ -130043,7 +130326,12 @@
         "sub": "Technique films from the Northern Chinese kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "bok-choy",
+        "term": "Bok Choy"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Onion",
@@ -130546,6 +130834,10 @@
       {
         "slug": "star-anise",
         "term": "Star Anise"
+      },
+      {
+        "slug": "napa-cabbage",
+        "term": "Napa Cabbage"
       }
     ],
     "pantryItems": [
@@ -134698,7 +134990,12 @@
         "sub": "Technique films from the Sichuan kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "green-garlic",
+        "term": "Green Garlic"
+      }
+    ],
     "pantryItems": [
       "Pork",
       "Onion",
@@ -136606,7 +136903,12 @@
         "sub": "Technique films from the Sicilian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "plum-tomato",
+        "term": "Plum Tomato"
+      }
+    ],
     "pantryItems": [
       "Anchovy",
       "Onion",
@@ -138888,7 +139190,12 @@
         "sub": "Technique films from the Yucatecan kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "red-onion",
+        "term": "Red Onion"
+      }
+    ],
     "pantryItems": [
       "Pork",
       "Onion",
@@ -139197,7 +139504,12 @@
         "sub": "Technique films from the Yucatecan kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "bell-pepper",
+        "term": "Bell Pepper"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Turkey",
@@ -152274,6 +152586,10 @@
         "term": "Steel Science: Carbon, Stainless & HRC"
       },
       {
+        "slug": "shallot",
+        "term": "Shallot"
+      },
+      {
         "slug": "carbon-steel-pans",
         "term": "Carbon Steel Pans"
       }
@@ -156906,7 +157222,12 @@
         "sub": "Technique films from the Aotearoa & Maori kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "green-cabbage",
+        "term": "Green Cabbage"
+      }
+    ],
     "pantryItems": [
       "Onion",
       "Potato",
@@ -164928,7 +165249,12 @@
         "sub": "Technique films from the Nigerian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "bell-pepper",
+        "term": "Bell Pepper"
+      }
+    ],
     "pantryItems": [
       "Onion",
       "Bell pepper",
@@ -166565,7 +166891,12 @@
         "sub": "Technique films from the Senegalese kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "green-cabbage",
+        "term": "Green Cabbage"
+      }
+    ],
     "pantryItems": [
       "Lamb",
       "Eggs",
@@ -173840,7 +174171,12 @@
         "sub": "Technique films from the Catalonia kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "sweet-onion",
+        "term": "Sweet Onion"
+      }
+    ],
     "pantryItems": [
       "White fish",
       "Salt cod",
@@ -182069,6 +182405,10 @@
       {
         "slug": "jambon-de-bayonne-and-french-whole-muscle-hams",
         "term": "Jambon de Bayonne & French Whole-Muscle Hams"
+      },
+      {
+        "slug": "green-cabbage",
+        "term": "Green Cabbage"
       }
     ],
     "pantryItems": [
@@ -220162,7 +220502,12 @@
         "sub": "A YouTube search for Jacques Pépin and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "savoy-cabbage",
+        "term": "Savoy Cabbage"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Pork",
