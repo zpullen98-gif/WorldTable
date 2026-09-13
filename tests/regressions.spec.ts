@@ -533,9 +533,20 @@ test('a dish names the Lexicon words inside it, and the link lands on the term',
 	expect(landed.clearsBar, 'and below the sticky bar, not under it').toBe(true);
 });
 
-/** A dish the cross-links never reached renders no empty heading. */
+/**
+ * A dish the cross-links never reached renders no empty heading.
+ *
+ * This was miso soup until the Ingredient Atlas landed, and it stopped being
+ * true for the best possible reason: miso soup now carries miso, silken tofu,
+ * wakame and kombu, every one of them genuinely in the bowl. A dessert is the
+ * durable choice, since the atlas is produce, fungi, grain and pantry.
+ *
+ * If this one gains a word too, MOVE it rather than weakening the assertion:
+ * what is under test is that an empty cross-link set renders nothing at all,
+ * not that any particular dish stays empty. 1,113 recipes carry no term today.
+ */
 test('a dish with no Lexicon words shows no block at all', async ({ page }) => {
-	await goto(page, '/recipe/miso-soup');
+	await goto(page, '/recipe/tres-leches');
 	await expect(page.locator('.words')).toHaveCount(0);
 	await expect(page.getByRole('heading', { name: 'The words inside' })).toHaveCount(0);
 });

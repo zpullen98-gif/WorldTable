@@ -55,14 +55,82 @@
 	 * `$derived` recomputes from state. There is no function reference held by a
 	 * listener, so there is nothing that can go stale. Do not "fix" this again.
 	 */
+	/**
+	 * The haystack is built once per entry and memoised, the way the recipe grid
+	 * does it in filter.ts. It was being rebuilt on every keystroke: three
+	 * template strings and a fold() over 779 entries, ~600 KB of prose folded
+	 * per character typed. The WeakMap is keyed on the entry object, which is
+	 * stable because data.lexicon is loaded once.
+	 *
+	 * The atlas fields are in the haystack deliberately. A cook who searches
+	 * "remoulade" should find Celeriac, and "for a crab boil" should find the
+	 * thing you put in one: those answers live in `methods` and `prep`, not in
+	 * the definition, and leaving them out makes the new entries less findable
+	 * than the old ones.
+	 */
+	const haystacks = new WeakMap<Entry, string>();
+	function haystack(e: Entry): string {
+		let h = haystacks.get(e);
+		if (h === undefined) {
+			h = fold(
+				`${e.term} ${e.category} ${e.definition} ${e.choose ?? ''} ${e.store ?? ''} ${e.prep ?? ''} ${(e.methods ?? []).join(' ')}`
+			);
+			haystacks.set(e, h);
+		}
+		return h;
+	}
+
 	const shown = $derived.by(() => {
 		const needle = fold(q).trim();
 		return data.lexicon.filter((e) => {
 			if (category && e.category !== category) return false;
 			if (!needle) return true;
-			return fold(`${e.term} ${e.category} ${e.definition}`).includes(needle);
+			return haystack(e).includes(needle);
 		});
 	});
+
+	/**
+	 * GROUPING, which is what makes 779 cards navigable.
+	 *
+	 * The page was one flat run in source order: the 479 archive terms in the
+	 * order they were sliced out, then everything authored since appended in a
+	 * block. Categories were already ALMOST contiguous, so it looked ordered
+	 * without being so, and "Techniques: Heat & Precision" was split into a run
+	 * of 23 and a run of 5 with nothing on screen to say why. 210,000px of that
+	 * is not a reference, it is a scroll.
+	 *
+	 * Sorted by category and then by term, both with localeCompare, because 27
+	 * of these terms carry accents and a codepoint sort files Comte after Zest.
+	 *
+	 * A leading "The " is dropped for sorting only, so The Vegetable Atlas files
+	 * under V beside Vegetables & Produce, and The Fruit Atlas under F. Shelving
+	 * every atlas under T would separate each one from the subject it is about,
+	 * which is the whole reason a reader is looking for it.
+	 */
+	const sortKey = (c: string) => c.replace(/^The\s+/i, '');
+	const catId = (c: string) =>
+		'cat-' + sortKey(c).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+	const groups = $derived.by(() => {
+		const byCat = new Map<string, Entry[]>();
+		for (const e of shown) {
+			const g = byCat.get(e.category);
+			if (g) g.push(e);
+			else byCat.set(e.category, [e]);
+		}
+		return [...byCat.entries()]
+			.map(([name, entries]) => ({
+				name,
+				id: catId(name),
+				entries: [...entries].sort((a, b) => a.term.localeCompare(b.term, 'en'))
+			}))
+			.sort((a, b) => sortKey(a.name).localeCompare(sortKey(b.name), 'en'));
+	});
+
+	/* The directory is an orientation device, and it is only orienting when the
+	   whole corpus is on screen. Once a search or a category filter has cut the
+	   page down, it would list categories the reader has already left. */
+	const showDirectory = $derived(!q.trim() && !category);
 
 	/* ---- flashcards ----
 	 * The deck snapshots the ENTRIES, not indices into `shown`. `shown` is a
@@ -211,7 +279,7 @@
 
 <div class="shell view">
 	<header class="head">
-		<h1>The Chef’s Lexicon</h1>
+		<h1 id="top">The Chef’s Lexicon</h1>
 		<p class="lede">
 			A working culinary dictionary for the climb from cook to chef to restaurateur: cuts and how
 			to treat them, the fish counter decoded, every technique from a proper sear to sous vide,
@@ -304,11 +372,46 @@
 		</div>
 	{/if}
 
-	<div class="lexgrid">
-		{#each shown as e (e.slug)}
-			<article class="lexcard" id={e.slug}>
-				<p class="eyebrow">{e.category}</p>
-				<h2>{e.term}</h2>
+	<!--
+		The directory. 779 cards is a reference only if you can see what is in it
+		and land somewhere on purpose; without this the page is 210,000 pixels of
+		scroll with no way in. Plain anchors, so it works before hydration and
+		with JavaScript off, and it is NOT sticky on purpose: the mode bar above
+		it is already sticky and two rows tall on a phone, and a second sticky
+		bar would have to be paid for out of app.css's scroll-padding-top, which
+		exists to stop a cross-page #term anchor landing underneath the first one.
+		Each group carries its own way back up here instead.
+	-->
+	{#if showDirectory}
+		<nav class="directory" data-print="hide" aria-label="Jump to a category">
+			{#each groups as g (g.id)}
+				<a href="#{g.id}">{g.name}<span class="dn">{g.entries.length}</span></a>
+			{/each}
+		</nav>
+	{/if}
+
+	{#each groups as g (g.id)}
+		<section class="group">
+			<h2 class="grouphead" id={g.id}>
+				<span class="gname">{g.name}</span>
+				<span class="gn">{g.entries.length}</span>
+				<a class="totop" href="#top" data-print="hide">Top</a>
+			</h2>
+			<div class="lexgrid">
+				{#each g.entries as e (e.slug)}
+					<article class="lexcard" id={e.slug}>
+						<!--
+							h3, under the group's h2. Every term was an h2 in a flat run, so a
+							screen reader's heading list was 779 siblings with no structure.
+							The outline is now page, category, term, which is what the page
+							actually is, and it lets a reader jump by category OR by term.
+
+							The per-card category eyebrow is gone. Every card now sits inside
+							a labelled group, including in search results, and that heading is
+							sticky, so the category was being said twice within 40 pixels: the
+							group heading and then three cards in a row repeating it.
+						-->
+						<h3>{e.term}</h3>
 				<p class="def">{e.definition}</p>
 				<!--
 					The atlas fields. Only the ingredient entries carry them, so this
@@ -369,11 +472,13 @@
 							{#if r}<a href="{base}/recipe/{slug}"><span aria-hidden="true">↦</span> {r.name}</a
 								>{/if}
 						{/each}
-					</p>
-				{/if}
-			</article>
-		{/each}
-	</div>
+						</p>
+					{/if}
+				</article>
+			{/each}
+			</div>
+		</section>
+	{/each}
 
 	{#if !shown.length}
 		<p class="empty">No terms match. Widen the search: the kitchen is large.</p>
@@ -439,8 +544,72 @@
 	.lexcard {
 		background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
 		padding: 16px 18px; content-visibility: auto; contain-intrinsic-size: auto 220px;
+		/* Clears the sticky group heading above. scroll-margin is per-element and
+		   ADDS to html's scroll-padding-top, so a /lexicon#term anchor from any of
+		   the nine templates that emit one still lands on the card and not under
+		   the heading, without touching the global rule every other route uses. */
+		scroll-margin-top: 52px;
 	}
-	.lexcard h2 { font-size: var(--t-h4); margin: 4px 0 8px; }
+	.lexcard h3 { font-size: var(--t-h4); margin: 4px 0 8px; font-weight: 600; }
+
+	/* ---- the directory and the group headings ---- */
+
+	/* auto-fit, not auto-fill: with 25 categories on a wide screen auto-fill
+	   leaves empty phantom tracks at the end of the last row and the links stop
+	   looking like one block. */
+	.directory {
+		display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+		gap: 2px 18px; margin: 0 0 34px; padding: 16px 0; border-block: 1px solid var(--line);
+	}
+	.directory a {
+		display: flex; align-items: baseline; gap: 8px;
+		padding: 4px 0; color: var(--ink); text-decoration: none; font-size: var(--t-small);
+	}
+	.directory a:hover { color: var(--turmeric-deep); }
+	.directory a:hover .dn { border-color: var(--turmeric); }
+	/* The count is the useful half: it says whether a category is worth the trip,
+	   and it is the only place the shape of the corpus is visible at a glance. */
+	.dn {
+		margin-left: auto; font-variant-numeric: tabular-nums; font-size: 0.8em;
+		color: var(--muted); border-bottom: 1px solid transparent;
+	}
+
+	.group { margin: 0 0 44px; }
+	/*
+	 * Sticky, and this is the one sticky thing this page adds.
+	 *
+	 * The Vegetable Atlas is 113 cards: scroll into the middle of it and without
+	 * this you have no idea which category you are in, which is the whole problem
+	 * the grouping was meant to solve.
+	 *
+	 * It parks at --modebar-h, the bar's MEASURED height, not at the
+	 * scroll-padding-top beside it: those two numbers are 56 and 110 and the bar
+	 * is 47 and 97, because scroll-padding over-allows on purpose. Sticking at
+	 * the padding value left a 9px slot on desktop and 13px on a phone with card
+	 * text scrolling through it, which reads as a broken header. z-index below
+	 * the bar's 40, so the bar always wins the overlap.
+	 *
+	 * The cost is that an anchored card would land underneath it, which is
+	 * exactly the failure app.css's scroll-padding exists to prevent. Paid for
+	 * with scroll-margin-top on the cards rather than by raising the global
+	 * scroll-padding: this heading only exists on this page, so every other
+	 * route's anchors must not move.
+	 */
+	.grouphead {
+		position: sticky; top: var(--modebar-h); z-index: 20;
+		display: flex; align-items: baseline; gap: 12px;
+		margin: 0 0 16px; padding: 10px 0 8px; border-bottom: 1px solid var(--line);
+		background: var(--paper); font-size: var(--t-h4); letter-spacing: 0.02em;
+	}
+	.gname { color: var(--turmeric-deep); }
+	.gn { font-variant-numeric: tabular-nums; font-size: 0.75em; color: var(--muted); }
+	/* Pushed to the end and quiet until wanted: on a page this tall the way back
+	   to the directory has to exist, and it must not read as a third control. */
+	.totop {
+		margin-left: auto; font-size: 0.7em; letter-spacing: 0.1em; text-transform: uppercase;
+		color: var(--muted); text-decoration: none;
+	}
+	.totop:hover { color: var(--turmeric-deep); }
 	.lexcard .def { font-size: 14.5px; color: var(--ink-soft); max-width: 62ch; }
 	/* The atlas rows. A two-column grid on anything with room, because the whole
 	   value of these fields is being scannable: a cook at a market wants

@@ -47,10 +47,24 @@ html {
 	 * desktop bar; the phone override matches the bar's own wrap breakpoint.
 	 */
 	scroll-padding-top: 56px;
+
+	/*
+	 * The mode bar's ACTUAL height, measured: 47px desktop, 97px when it wraps
+	 * to two rows on a phone. Deliberately NOT the scroll-padding numbers above,
+	 * which over-allow by design so an anchored heading lands clear of the bar
+	 * with a little air rather than flush against it.
+	 *
+	 * This exists because anything else that wants to stick BELOW the bar has to
+	 * match its height exactly or content shows through the gap, and a second
+	 * copy of the number in another file drifts the first time the bar changes.
+	 * The Lexicon's sticky category headings are the current consumer.
+	 */
+	--modebar-h: 47px;
 }
 @media (max-width: 599px) {
 	html {
 		scroll-padding-top: 110px;
+		--modebar-h: 97px;
 	}
 }
 
