@@ -121694,7 +121694,12 @@
         "sub": "Technique films from the The Vegetable-Led Plate kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "celeriac",
+        "term": "Celeriac"
+      }
+    ],
     "pantryItems": [
       "Celeriac",
       "Parsley",
@@ -170335,7 +170340,12 @@
         "sub": "Technique films from the Alsace & the North kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "celeriac",
+        "term": "Celeriac"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Eggs",
@@ -187494,6 +187504,10 @@
       {
         "slug": "smoked-fish-hot-vs-cold",
         "term": "Smoked Fish: Hot vs. Cold"
+      },
+      {
+        "slug": "celeriac",
+        "term": "Celeriac"
       }
     ],
     "pantryItems": [

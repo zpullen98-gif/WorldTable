@@ -39,7 +39,8 @@ import {
 } from './derive/technique-standards.mjs';
 import { buildPalate } from './derive/palate.mjs';
 import { buildEconomics } from './derive/economics.mjs';
-import { buildSanitation } from './derive/sanitation.mjs';
+import { buildSanitation, GAPS } from './derive/sanitation.mjs';
+import { LEXICON_SUPPLEMENT, ATLAS_CATEGORIES } from './derive/lexicon-supplement.mjs';
 import { buildWaste } from './derive/waste.mjs';
 import { buildServiceTrack } from './derive/service-track.mjs';
 import { buildDrills } from './derive/drills.mjs';
@@ -64,7 +65,11 @@ const raw = (name) => reviveRegex(JSON.parse(readFileSync(join(RAW, `${name}.jso
    exactly the same terms. */
 const R_ORIGINAL = raw('R');
 const R = [...R_ORIGINAL, ...RECIPE_SUPPLEMENT];
-const D = raw('D');
+/* The original 479, sealed and proved lossless by verify-extraction.mjs, plus
+   every term authored since. Downstream cannot tell them apart and should not:
+   a supplement term is slugged, crosslinked and rendered on the same terms. */
+const D_ORIGINAL = raw('D');
+const D = [...D_ORIGINAL, ...LEXICON_SUPPLEMENT];
 
 /**
  * The supplement's own gate.
@@ -142,6 +147,120 @@ function gateSupplement() {
    the report both of them just produced. The pair is enforced together at
    the emit boundary, before anything is written. */
 const supplementHeld = gateSupplement();
+
+/**
+ * The lexicon supplement's own gate.
+ *
+ * Same argument as gateSupplement: the 479 are proved correct by extraction,
+ * and nothing proves an authored term except this. It checks four things the
+ * rest of the build does not:
+ *
+ * 1. SLUG UNIQUENESS ACROSS THE MERGED LEXICON. This is the one worth having
+ *    even if the supplement were empty. Recipes go through qualifiedSlugs(),
+ *    which throws on a collision; the lexicon is a bare D.map(slugify) and a
+ *    collision is SILENT. Two terms that fold to one slug give a duplicate key
+ *    in a keyed {#each}, a duplicate id so every /lexicon#slug deep link lands
+ *    on the first, and a termToRecipes.set() that last-write-wins so the two
+ *    quietly share one recipe list. slugify folds accents and deletes
+ *    apostrophes, so "Creme Fraiche" and "Crème Fraîche" are the same slug.
+ *
+ * 2. THE BANNED TOKENS, imported from sanitation's own GAPS rather than
+ *    restated, so the two can never drift apart. Those tokens must appear in
+ *    zero definitions or the build fails much later and much less clearly;
+ *    catching it here names the entry.
+ *
+ * 3. THE CATEGORY. Only the six atlases. The five front-of-house categories
+ *    have their term counts pinned in service-track.mjs and every term in them
+ *    must also be placed in a SERVER_MODULES entry, so an addition there is a
+ *    three-file change and must be deliberate, never a typo in this file.
+ *
+ * 4. THE STRUCTURED FIELDS, required here and optional in the emitted shape.
+ *    That asymmetry is the point: the sealed 479 stay valid, and new work
+ *    cannot silently ship as a bare definition.
+ */
+function gateLexiconSupplement() {
+	const problems = [];
+	const KEYS = ['t', 'c', 'd', 'season', 'choose', 'store', 'prep', 'methods'];
+	const REQUIRED = KEYS;
+	const CATEGORIES = new Set(ATLAS_CATEGORIES);
+
+	/* every token sanitation asserts is absent from the lexicon, taken from
+	   the same list that enforces it, exceptions ignored because an exception
+	   is granted to one existing slug and never to new work */
+	const BANNED = [...new Set(GAPS.flatMap((g) => g.absent ?? []))];
+
+	const seen = new Map();
+	D_ORIGINAL.forEach((e) => seen.set(slugify(e.t), `the original guide (${e.t})`));
+
+	LEXICON_SUPPLEMENT.forEach((e, i) => {
+		const where = `lexicon supplement[${i}] ${e && e.t ? JSON.stringify(e.t) : '(unnamed)'}`;
+		if (!e || typeof e !== 'object') { problems.push(`${where}: not an object`); return; }
+
+		const extra = Object.keys(e).filter((k) => !KEYS.includes(k));
+		if (extra.length) problems.push(`${where}: unknown key(s) ${extra.join(', ')}`);
+		for (const k of REQUIRED) if (e[k] === undefined) problems.push(`${where}: missing "${k}"`);
+		if (typeof e.t !== 'string' || !e.t.trim()) { problems.push(`${where}: term must be a non-empty string`); return; }
+
+		if (!CATEGORIES.has(e.c)) {
+			problems.push(`${where}: category ${JSON.stringify(e.c)} is not one of the atlases this file may add to`);
+		}
+
+		if (typeof e.d !== 'string' || e.d.length < 325 || e.d.length > 1600) {
+			problems.push(`${where}: the definition must be 325 to 1600 chars, has ${typeof e.d === 'string' ? e.d.length : 0}`);
+		}
+
+		for (const f of ['choose', 'store', 'prep']) {
+			if (e[f] !== undefined && (typeof e[f] !== 'string' || e[f].trim().length < 40)) {
+				problems.push(`${where}: "${f}" must say something, 40 chars minimum`);
+			}
+		}
+		if (e.season !== undefined) {
+			if (!Array.isArray(e.season) || e.season.some((m) => !Number.isInteger(m) || m < 1 || m > 12)) {
+				problems.push(`${where}: season must be month integers 1 to 12`);
+			} else if (new Set(e.season).size !== e.season.length) {
+				problems.push(`${where}: season repeats a month`);
+			}
+		}
+		if (e.methods !== undefined) {
+			if (!Array.isArray(e.methods) || !e.methods.length || e.methods.some((m) => typeof m !== 'string' || !m.trim())) {
+				problems.push(`${where}: methods must be a non-empty array of non-empty strings`);
+			}
+		}
+
+		/* The product was swept of these. A new one puts it back, and the
+		   suite's publish gate has two characters of headroom for the whole
+		   site, counted twice per entry because the wing ships the JSON and a
+		   prerendered page of the same words. */
+		const text = [e.t, e.c, e.d, e.choose, e.store, e.prep, ...(e.methods || [])].filter(Boolean).join(' ');
+		if (/—/.test(text)) problems.push(`${where}: contains an em dash`);
+		if (/ – /.test(text)) problems.push(`${where}: contains a spaced en dash`);
+
+		const lower = text.toLowerCase();
+		for (const token of BANNED) {
+			if (lower.includes(token)) {
+				problems.push(`${where}: contains ${JSON.stringify(token)}, which sanitation asserts appears in no definition`);
+			}
+		}
+
+		const slug = slugify(e.t);
+		if (!slug) problems.push(`${where}: term slugifies to nothing, keep it Latin script`);
+		else if (seen.has(slug)) problems.push(`${where}: slug "${slug}" collides with ${seen.get(slug)}`);
+		else seen.set(slug, `the supplement (${e.t})`);
+	});
+
+	if (problems.length) {
+		console.error(`\n  lexicon supplement: ${problems.length} problem(s)`);
+		problems.forEach((x) => console.error(`    ✗ ${x}`));
+		return false;
+	}
+	const byCat = {};
+	for (const e of LEXICON_SUPPLEMENT) byCat[e.c] = (byCat[e.c] ?? 0) + 1;
+	const spread = Object.entries(byCat).map(([c, n]) => `${n} ${c.replace(/^The /, '')}`).join(', ');
+	console.log(`  lexicon supplement: ${LEXICON_SUPPLEMENT.length} authored terms, contract holds${spread ? ` (${spread})` : ''}`);
+	console.log(`  lexicon slugs: ${seen.size} distinct across the merged lexicon, no collisions`);
+	return true;
+}
+const lexiconSupplementHeld = gateLexiconSupplement();
 
 /**
  * Every chapter has a place on the map, and every place has a chapter.
@@ -603,12 +722,29 @@ const chapters = [...chapterCounts.entries()]
 
 const geographyHeld = gateGeography(chapters.map((c) => c.name));
 
+/* The five atlas fields are emitted ONLY when the entry carries them, rather
+   than as empty strings and arrays on all 479 sealed terms. Two reasons, and
+   the second is the one that matters: a `choose: ''` on a cheese is a promise
+   the page has to test for anyway, and the lexicon chunk is precached against
+   a 2.50 MB gzipped budget with roughly 215 KB left, so five empty keys 479
+   times is weight every reader pays for on every install. `!== undefined` and
+   not a truthiness test, because an entry whose season is a deliberate empty
+   array, meaning genuinely year round, must keep it. */
+const atlasFields = (e) => {
+	const out = {};
+	for (const f of ['season', 'choose', 'store', 'prep', 'methods']) {
+		if (e[f] !== undefined) out[f] = e[f];
+	}
+	return out;
+};
+
 const lexicon = D.map((e, i) => ({
 	slug: lexSlugs[i],
 	term: e.t,
 	category: e.c,
 	definition: e.d,
-	recipes: crosslinks.termToRecipes.get(lexSlugs[i]) ?? []
+	recipes: crosslinks.termToRecipes.get(lexSlugs[i]) ?? [],
+	...atlasFields(e)
 }));
 
 const pantry = PANTRY.map((g) => ({
@@ -802,7 +938,7 @@ const techniqueStandards = TECHNIQUE_STANDARDS.map((x) => ({
  * Exiting at the emit boundary rather than at each gate is what lets both
  * still report in one run.
  */
-if (!supplementHeld || !geographyHeld) {
+if (!supplementHeld || !geographyHeld || !lexiconSupplementHeld) {
 	console.error('\n  BUILD GATE FAILED: nothing was written\n');
 	process.exit(1);
 }
