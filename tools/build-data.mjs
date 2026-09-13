@@ -205,13 +205,30 @@ function gateLexiconSupplement() {
 			problems.push(`${where}: category ${JSON.stringify(e.c)} is not one of the atlases this file may add to`);
 		}
 
-		if (typeof e.d !== 'string' || e.d.length < 325 || e.d.length > 1600) {
-			problems.push(`${where}: the definition must be 325 to 1600 chars, has ${typeof e.d === 'string' ? e.d.length : 0}`);
+		/* The ceiling is 1200, not the corpus maximum of 1586. Measured on the
+		   first authored batch: writers land at roughly twice the house median
+		   of 757 when only a floor is given, and a 1800 character definition
+		   reads wrong beside a 500 character cheese entry, scrolls a page that
+		   is already too long, and costs precache budget that the atlas needs
+		   for its count. A floor alone is half a rule. */
+		if (typeof e.d !== 'string' || e.d.length < 325 || e.d.length > 1200) {
+			problems.push(`${where}: the definition must be 325 to 1200 chars, has ${typeof e.d === 'string' ? e.d.length : 0}`);
 		}
 
 		for (const f of ['choose', 'store', 'prep']) {
-			if (e[f] !== undefined && (typeof e[f] !== 'string' || e[f].trim().length < 40)) {
+			if (e[f] === undefined) continue;
+			if (typeof e[f] !== 'string' || e[f].trim().length < 40) {
 				problems.push(`${where}: "${f}" must say something, 40 chars minimum`);
+			} else if (e[f].length > 700) {
+				/* These are a lookup, not a second essay. The cap was 400 until
+				   the first batch produced a 597 character "choose" for
+				   matsutake, and the length was the Amanita smithiana warning:
+				   a lookalike sharing the same duff and season that has put
+				   foragers into kidney failure, with the four marks that tell
+				   them apart. A rule that forces THAT to be trimmed is the
+				   wrong rule. 700 still catches a second essay, and the
+				   entries that approach it are the ones that earn it. */
+				problems.push(`${where}: "${f}" is ${e[f].length} chars, 700 maximum, it is a lookup not an essay`);
 			}
 		}
 		if (e.season !== undefined) {

@@ -3434,6 +3434,10 @@
       {
         "slug": "wok-hei-and-stir-fry-discipline",
         "term": "Wok Hei & Stir-Fry Discipline"
+      },
+      {
+        "slug": "oyster-mushroom",
+        "term": "Oyster Mushroom"
       }
     ],
     "pantryItems": [
@@ -17959,6 +17963,10 @@
       {
         "slug": "berries-the-late-spring-sprint",
         "term": "Berries: The Late-Spring Sprint"
+      },
+      {
+        "slug": "wood-ear",
+        "term": "Wood Ear"
       }
     ],
     "pantryItems": [
@@ -33160,6 +33168,14 @@
       {
         "slug": "mushroom-field-guide",
         "term": "Mushroom Field Guide"
+      },
+      {
+        "slug": "hedgehog-mushroom",
+        "term": "Hedgehog Mushroom"
+      },
+      {
+        "slug": "king-oyster-mushroom",
+        "term": "King Oyster Mushroom"
       }
     ],
     "pantryItems": [
@@ -34027,6 +34043,10 @@
       {
         "slug": "fermentation-and-pickling",
         "term": "Fermentation & Pickling"
+      },
+      {
+        "slug": "wood-ear",
+        "term": "Wood Ear"
       }
     ],
     "pantryItems": [
@@ -46116,7 +46136,16 @@
         "sub": "A YouTube search for America’s Test Kitchen and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "wood-ear",
+        "term": "Wood Ear"
+      },
+      {
+        "slug": "dried-shiitake",
+        "term": "Dried Shiitake"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Pork",
@@ -48772,6 +48801,10 @@
       {
         "slug": "duck-prosciutto-magret-seche",
         "term": "Duck Prosciutto (Magret Séché)"
+      },
+      {
+        "slug": "dried-shiitake",
+        "term": "Dried Shiitake"
       }
     ],
     "pantryItems": [
@@ -106098,7 +106131,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "morel",
+        "term": "Morel"
+      }
+    ],
     "pantryItems": [
       "Garlic",
       "Shallot",
@@ -108190,7 +108228,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "chanterelle",
+        "term": "Chanterelle"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Garlic",
@@ -113660,7 +113703,12 @@
         "sub": "Technique films from the Dumpling Atlas kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "porcini",
+        "term": "Porcini"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Onion",
@@ -118020,7 +118068,12 @@
         "sub": "Technique films from the Stock & Fond Atlas kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "white-button-mushroom",
+        "term": "White Button Mushroom"
+      }
+    ],
     "pantryItems": [
       "White fish",
       "Onion",
@@ -118310,7 +118363,12 @@
         "sub": "Technique films from the Stock & Fond Atlas kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "white-button-mushroom",
+        "term": "White Button Mushroom"
+      }
+    ],
     "pantryItems": [
       "Onion",
       "Leek",
@@ -118846,7 +118904,12 @@
         "sub": "Technique films from the Stock & Fond Atlas kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "shiitake",
+        "term": "Shiitake"
+      }
+    ],
     "pantryItems": [
       "Mushrooms",
       "Stock/Broth",
@@ -120913,7 +120976,12 @@
         "sub": "Technique films from the The Rice Bowl kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "shiitake",
+        "term": "Shiitake"
+      }
+    ],
     "pantryItems": [
       "Beef",
       "Eggs",
@@ -121842,7 +121910,20 @@
         "sub": "Technique films from the The Vegetable-Led Plate kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "king-oyster-mushroom",
+        "term": "King Oyster Mushroom"
+      },
+      {
+        "slug": "oyster-mushroom",
+        "term": "Oyster Mushroom"
+      },
+      {
+        "slug": "shiitake",
+        "term": "Shiitake"
+      }
+    ],
     "pantryItems": [
       "Garlic",
       "Ginger",
@@ -122381,6 +122462,14 @@
       {
         "slug": "baste-arroser-and-glaze",
         "term": "Baste, Arroser & Glaze"
+      },
+      {
+        "slug": "king-oyster-mushroom",
+        "term": "King Oyster Mushroom"
+      },
+      {
+        "slug": "oyster-mushroom",
+        "term": "Oyster Mushroom"
       }
     ],
     "pantryItems": [
@@ -175249,7 +175338,12 @@
         "sub": "Technique films from the Kansai & Osaka kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "dried-shiitake",
+        "term": "Dried Shiitake"
+      }
+    ],
     "pantryItems": [
       "Onion",
       "Ginger",
