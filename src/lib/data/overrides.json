@@ -228,6 +228,10 @@
     "dan-dan-noodles"
    ]
   },
+  "charentais-melon": {
+   "reason": "Force-empty: the scorer matched MELON. Its links were egusi soup, where egusi is ground melon SEED, and goya chanpuru, where the goya is a bitter melon. No dish in the corpus uses a Charentais.",
+   "empty": true
+  },
   "cheese-families": {
    "reason": "Pinned: pecorino and gruyere showcases; 'cheese' is a staple word (DF > 100).",
    "keep": [
@@ -239,6 +243,13 @@
    "reason": "The spice term, and the match is '1 garlic clove': the one word-sense collision a core-phrase hit can still make. (Lao Beijing needed no drop: its 'cloves' already fails the word-boundary regex.)",
    "drop": [
     "pan-con-tomate"
+   ]
+  },
+  "cooking-apple": {
+   "reason": "Bondepige med slor calls for 800 g of cooking apples and is the real one. The ploughman's apple is quartered raw on a board and japanese curry grates a sweet eating apple into the sauce; neither is a Bramley, and the ploughman's lost its celery link to this.",
+   "drop": [
+    "ploughmans-lunch",
+    "japanese-curry"
    ]
   },
   "emulsions": {
@@ -323,6 +334,12 @@
     "roti-canai"
    ]
   },
+  "sour-cherry": {
+   "reason": "The syrup in faloodeh and the kirschwasser that is the Black Forest cake's legal identity are both genuine. Som tum is cherry TOMATOES.",
+   "drop": [
+    "som-tum"
+   ]
+  },
   "steel-science-carbon-stainless-and-hrc": {
    "reason": "Knife steel, matched on 'Preheat a steel or stone': the pizza steel is a different object.",
    "drop": [
@@ -337,6 +354,10 @@
   },
   "strip-new-york-strip": {
    "reason": "Force-empty: no strip steak dish exists in the corpus. Its surviving matches are zest strips and dough strips ('Roll the dough into a long strip' on a Wisconsin Kringle).",
+   "empty": true
+  },
+  "sweet-cherry": {
+   "reason": "Force-empty: the scorer matched CHERRY. Its links were som tum (cherry tomatoes) and philly cheesesteak (hot cherry peppers). No dish in the corpus uses a sweet cherry as fruit.",
    "empty": true
   },
   "tempering-eggs-and-chocolate": {

@@ -3787,6 +3787,10 @@
     },
     "lexiconTerms": [
       {
+        "slug": "avocado",
+        "term": "Avocado"
+      },
+      {
         "slug": "cucumber",
         "term": "Cucumber"
       },
@@ -5029,6 +5033,10 @@
       {
         "slug": "paprika-and-pimenton",
         "term": "Paprika & Pimentón"
+      },
+      {
+        "slug": "lime",
+        "term": "Lime"
       }
     ],
     "pantryItems": [
@@ -7409,16 +7417,16 @@
         "term": "Curry Leaf"
       },
       {
+        "slug": "coconut",
+        "term": "Coconut"
+      },
+      {
         "slug": "bamboo-shoots",
         "term": "Bamboo Shoots"
       },
       {
         "slug": "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime",
         "term": "The Fresh Aromatic Trio: Galangal, Lemongrass & Makrut Lime"
-      },
-      {
-        "slug": "globe-eggplant",
-        "term": "Globe Eggplant"
       }
     ],
     "pantryItems": [
@@ -7884,6 +7892,10 @@
       {
         "slug": "the-souring-spices-amchur-loomi-anardana-and-tamarind",
         "term": "The Souring Spices: Amchur, Loomi, Anardana & Tamarind"
+      },
+      {
+        "slug": "coconut",
+        "term": "Coconut"
       }
     ],
     "pantryItems": [
@@ -7990,6 +8002,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "papaya",
+        "term": "Papaya"
+      },
       {
         "slug": "garnish-expression-twists-and-the-cherry-question",
         "term": "Garnish: Expression, Twists & the Cherry Question"
@@ -8340,6 +8356,10 @@
       {
         "slug": "mango-the-monsoon-herald",
         "term": "Mango: The Monsoon Herald"
+      },
+      {
+        "slug": "mango",
+        "term": "Mango"
       }
     ],
     "pantryItems": [
@@ -9223,6 +9243,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "pomegranate",
+        "term": "Pomegranate"
+      },
       {
         "slug": "sesame-seeds-tahini-and-beyond",
         "term": "Sesame: Seeds, Tahini & Beyond"
@@ -12895,8 +12919,16 @@
         "term": "Ribeye / Prime Rib"
       },
       {
+        "slug": "asian-pear",
+        "term": "Asian Pear"
+      },
+      {
         "slug": "sirloin-tri-tip-and-picanha",
         "term": "Sirloin, Tri-Tip & Picanha"
+      },
+      {
+        "slug": "prickly-pear",
+        "term": "Prickly Pear"
       }
     ],
     "pantryItems": [
@@ -14995,6 +15027,10 @@
     },
     "lexiconTerms": [
       {
+        "slug": "lemon",
+        "term": "Lemon"
+      },
+      {
         "slug": "clay-and-earthenware-tagine-donabe-cazuela",
         "term": "Clay & Earthenware: Tagine, Donabe, Cazuela"
       }
@@ -15105,6 +15141,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "apricot",
+        "term": "Apricot"
+      },
       {
         "slug": "lamb-primals",
         "term": "Lamb Primals"
@@ -15935,7 +15975,12 @@
         "sub": "A YouTube search for Cooking with Alia and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "orange",
+        "term": "Orange"
+      }
+    ],
     "pantryItems": [
       "Orange",
       "Dried fruit",
@@ -19143,7 +19188,12 @@
         "sub": "A YouTube search for Chris De La Rosa and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "dragon-fruit",
+        "term": "Dragon Fruit"
+      }
+    ],
     "pantryItems": [
       "Lime",
       "Orange",
@@ -20304,7 +20354,12 @@
         "sub": "Technique films from the South American kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "orange",
+        "term": "Orange"
+      }
+    ],
     "pantryItems": [
       "Pork",
       "Bacon",
@@ -23327,7 +23382,12 @@
         "sub": "A YouTube search for Gordon Ramsay and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "raspberry",
+        "term": "Raspberry"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Berries",
@@ -23424,7 +23484,12 @@
         "sub": "A YouTube search for Gordon Ramsay and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "strawberry",
+        "term": "Strawberry"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Lemon",
@@ -24336,6 +24401,10 @@
       {
         "slug": "mandoline-and-the-slicing-machines",
         "term": "Mandoline & the Slicing Machines"
+      },
+      {
+        "slug": "dragon-fruit",
+        "term": "Dragon Fruit"
       }
     ],
     "pantryItems": [
@@ -24983,6 +25052,10 @@
         "term": "Acid Architecture"
       },
       {
+        "slug": "calamansi",
+        "term": "Calamansi"
+      },
+      {
         "slug": "snow-pea",
         "term": "Snow Pea"
       }
@@ -25203,6 +25276,10 @@
       {
         "slug": "grilling-vs-barbecue-vs-smoking",
         "term": "Grilling vs. Barbecue vs. Smoking"
+      },
+      {
+        "slug": "calamansi",
+        "term": "Calamansi"
       }
     ],
     "pantryItems": [
@@ -25301,7 +25378,12 @@
         "sub": "A YouTube search for Panlasang Pinoy and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "calamansi",
+        "term": "Calamansi"
+      }
+    ],
     "pantryItems": [
       "Beef",
       "Eggs",
@@ -25518,7 +25600,16 @@
         "sub": "A YouTube search for Panlasang Pinoy and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "jackfruit",
+        "term": "Jackfruit"
+      },
+      {
+        "slug": "dragon-fruit",
+        "term": "Dragon Fruit"
+      }
+    ],
     "pantryItems": [
       "Sweet potato",
       "Banana",
@@ -26380,6 +26471,10 @@
     },
     "lexiconTerms": [
       {
+        "slug": "redcurrant",
+        "term": "Redcurrant"
+      },
+      {
         "slug": "apples-and-pears-the-autumn-keepers",
         "term": "Apples & Pears: The Autumn Keepers"
       },
@@ -26583,6 +26678,10 @@
       {
         "slug": "legal-entity-and-partnership-agreements",
         "term": "Legal Entity & Partnership Agreements"
+      },
+      {
+        "slug": "sour-cherry",
+        "term": "Sour Cherry"
       },
       {
         "slug": "brandy-cognac-armagnac-calvados-and-pisco",
@@ -27533,6 +27632,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "apricot",
+        "term": "Apricot"
+      },
       {
         "slug": "doneness-by-touch-sight-and-sound",
         "term": "Doneness by Touch, Sight & Sound"
@@ -28696,7 +28799,12 @@
         "sub": "Technique films from the Scandinavian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "raspberry",
+        "term": "Raspberry"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Lemon",
@@ -31888,7 +31996,12 @@
         "sub": "Technique films from the Malaysian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "banana",
+        "term": "Banana"
+      }
+    ],
     "pantryItems": [
       "Anchovy",
       "Eggs",
@@ -34373,6 +34486,10 @@
     },
     "lexiconTerms": [
       {
+        "slug": "kiwi",
+        "term": "Kiwi"
+      },
+      {
         "slug": "fermentation-and-pickling",
         "term": "Fermentation & Pickling"
       },
@@ -34786,7 +34903,12 @@
         "sub": "Technique films from the Caucasus & Central Asian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "pomegranate",
+        "term": "Pomegranate"
+      }
+    ],
     "pantryItems": [
       "Liver & Offal",
       "Onion",
@@ -34889,7 +35011,12 @@
         "sub": "Technique films from the Caucasus & Central Asian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "pomegranate",
+        "term": "Pomegranate"
+      }
+    ],
     "pantryItems": [
       "Garlic",
       "Chiles",
@@ -37768,6 +37895,14 @@
       {
         "slug": "speck-alto-adige",
         "term": "Speck Alto Adige"
+      },
+      {
+        "slug": "kiwi",
+        "term": "Kiwi"
+      },
+      {
+        "slug": "passionfruit",
+        "term": "Passionfruit"
       }
     ],
     "pantryItems": [
@@ -38080,7 +38215,12 @@
         "sub": "A YouTube search for Claire Saffitz and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "strawberry",
+        "term": "Strawberry"
+      }
+    ],
     "pantryItems": [
       "Berries",
       "Rice",
@@ -40160,7 +40300,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "pineapple",
+        "term": "Pineapple"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Garlic",
@@ -42583,6 +42728,10 @@
       {
         "slug": "building-flavor-in-layers",
         "term": "Building Flavor in Layers"
+      },
+      {
+        "slug": "apple",
+        "term": "Apple"
       }
     ],
     "pantryItems": [
@@ -42797,6 +42946,10 @@
       {
         "slug": "queso-oaxaca-quesillo",
         "term": "Queso Oaxaca (Quesillo)"
+      },
+      {
+        "slug": "avocado",
+        "term": "Avocado"
       }
     ],
     "pantryItems": [
@@ -49844,6 +49997,10 @@
       {
         "slug": "mandoline-and-the-slicing-machines",
         "term": "Mandoline & the Slicing Machines"
+      },
+      {
+        "slug": "pineapple",
+        "term": "Pineapple"
       }
     ],
     "pantryItems": [
@@ -53705,7 +53862,12 @@
         "sub": "A YouTube search for Claire Saffitz and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "banana",
+        "term": "Banana"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Banana",
@@ -53814,6 +53976,14 @@
       {
         "slug": "sous-vide-hardware-circulators-sealers-and-safety-kit",
         "term": "Sous Vide Hardware: Circulators, Sealers & Safety Kit"
+      },
+      {
+        "slug": "key-lime",
+        "term": "Key Lime"
+      },
+      {
+        "slug": "lime",
+        "term": "Lime"
       },
       {
         "slug": "citrus-zest-juice-and-pith",
@@ -55514,7 +55684,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "blueberry",
+        "term": "Blueberry"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Lemon",
@@ -56474,7 +56649,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "apple",
+        "term": "Apple"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Apple",
@@ -57211,7 +57391,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "blueberry",
+        "term": "Blueberry"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Berries",
@@ -59896,7 +60081,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "cranberry",
+        "term": "Cranberry"
+      }
+    ],
     "pantryItems": [
       "White fish",
       "Orange",
@@ -64409,7 +64599,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "blueberry",
+        "term": "Blueberry"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Berries",
@@ -66187,7 +66382,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "peach",
+        "term": "Peach"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Lemon",
@@ -66291,7 +66491,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "cranberry",
+        "term": "Cranberry"
+      }
+    ],
     "pantryItems": [
       "Turkey",
       "Dried fruit",
@@ -73263,7 +73468,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "peach",
+        "term": "Peach"
+      }
+    ],
     "pantryItems": [
       "Lemon",
       "Stone fruit",
@@ -74296,7 +74506,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "peach",
+        "term": "Peach"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Stone fruit",
@@ -74391,7 +74606,16 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "key-lime",
+        "term": "Key Lime"
+      },
+      {
+        "slug": "lime",
+        "term": "Lime"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Lime",
@@ -74736,7 +74960,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "key-lime",
+        "term": "Key Lime"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Onion",
@@ -75123,7 +75352,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "orange",
+        "term": "Orange"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Orange",
@@ -76025,7 +76259,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "banana",
+        "term": "Banana"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Banana",
@@ -78525,7 +78764,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "blackberry",
+        "term": "Blackberry"
+      }
+    ],
     "pantryItems": [
       "Lemon",
       "Berries",
@@ -82011,7 +82255,16 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "fuyu-persimmon",
+        "term": "Fuyu Persimmon"
+      },
+      {
+        "slug": "hachiya-persimmon",
+        "term": "Hachiya Persimmon"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Butter",
@@ -82127,7 +82380,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "apple",
+        "term": "Apple"
+      }
+    ],
     "pantryItems": [
       "Apple",
       "Butter",
@@ -85144,7 +85402,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "strawberry",
+        "term": "Strawberry"
+      }
+    ],
     "pantryItems": [
       "Orange",
       "Berries",
@@ -86341,7 +86604,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "cranberry",
+        "term": "Cranberry"
+      }
+    ],
     "pantryItems": [
       "Orange",
       "Dried fruit",
@@ -88523,7 +88791,16 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "fuyu-persimmon",
+        "term": "Fuyu Persimmon"
+      },
+      {
+        "slug": "hachiya-persimmon",
+        "term": "Hachiya Persimmon"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Dried fruit",
@@ -90193,7 +90470,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "blackberry",
+        "term": "Blackberry"
+      }
+    ],
     "pantryItems": [
       "Lemon",
       "Berries",
@@ -99098,6 +99380,18 @@
       {
         "slug": "tequila-and-mezcal",
         "term": "Tequila & Mezcal"
+      },
+      {
+        "slug": "pear",
+        "term": "Pear"
+      },
+      {
+        "slug": "prickly-pear",
+        "term": "Prickly Pear"
+      },
+      {
+        "slug": "asian-pear",
+        "term": "Asian Pear"
       }
     ],
     "pantryItems": [
@@ -100710,7 +101004,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "date",
+        "term": "Date"
+      }
+    ],
     "pantryItems": [
       "Dried fruit",
       "Milk",
@@ -101177,7 +101476,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "pineapple",
+        "term": "Pineapple"
+      }
+    ],
     "pantryItems": [
       "Carrot",
       "Lime",
@@ -101394,7 +101698,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "raspberry",
+        "term": "Raspberry"
+      }
+    ],
     "pantryItems": [
       "Berries",
       "Milk",
@@ -107969,7 +108278,16 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "meyer-lemon",
+        "term": "Meyer Lemon"
+      },
+      {
+        "slug": "lemon",
+        "term": "Lemon"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Lemon",
@@ -109194,6 +109512,14 @@
       {
         "slug": "chicories-and-bitter-greens",
         "term": "Chicories & Bitter Greens"
+      },
+      {
+        "slug": "pear",
+        "term": "Pear"
+      },
+      {
+        "slug": "prickly-pear",
+        "term": "Prickly Pear"
       }
     ],
     "pantryItems": [
@@ -115765,6 +116091,10 @@
       {
         "slug": "tannin",
         "term": "Tannin"
+      },
+      {
+        "slug": "blackcurrant",
+        "term": "Blackcurrant"
       }
     ],
     "pantryItems": [
@@ -116339,7 +116669,12 @@
         "sub": "Technique films from the Offal & the Whole Animal kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "plum",
+        "term": "Plum"
+      }
+    ],
     "pantryItems": [
       "Liver & Offal",
       "Onion",
@@ -117519,6 +117854,10 @@
       {
         "slug": "tannin",
         "term": "Tannin"
+      },
+      {
+        "slug": "blackcurrant",
+        "term": "Blackcurrant"
       }
     ],
     "pantryItems": [
@@ -117803,6 +118142,10 @@
       {
         "slug": "stone-fruit-in-high-summer",
         "term": "Stone Fruit in High Summer"
+      },
+      {
+        "slug": "mango",
+        "term": "Mango"
       }
     ],
     "pantryItems": [
@@ -121350,6 +121693,10 @@
       {
         "slug": "plum-tomato",
         "term": "Plum Tomato"
+      },
+      {
+        "slug": "plum",
+        "term": "Plum"
       }
     ],
     "pantryItems": [
@@ -128346,6 +128693,10 @@
       {
         "slug": "peas-favas-and-the-green-spring",
         "term": "Peas, Favas & the Green Spring"
+      },
+      {
+        "slug": "mandarin",
+        "term": "Mandarin"
       }
     ],
     "pantryItems": [
@@ -129669,6 +130020,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "plantain",
+        "term": "Plantain"
+      },
       {
         "slug": "yam",
         "term": "Yam"
@@ -136888,7 +137243,12 @@
         "sub": "Technique films from the Sicilian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "plum",
+        "term": "Plum"
+      }
+    ],
     "pantryItems": [
       "Garlic",
       "Tomato",
@@ -139469,6 +139829,10 @@
       {
         "slug": "annatto-achiote",
         "term": "Annatto (Achiote)"
+      },
+      {
+        "slug": "grapefruit",
+        "term": "Grapefruit"
       }
     ],
     "pantryItems": [
@@ -139616,6 +139980,10 @@
       {
         "slug": "red-onion",
         "term": "Red Onion"
+      },
+      {
+        "slug": "grapefruit",
+        "term": "Grapefruit"
       }
     ],
     "pantryItems": [
@@ -139930,6 +140298,10 @@
       {
         "slug": "bell-pepper",
         "term": "Bell Pepper"
+      },
+      {
+        "slug": "grapefruit",
+        "term": "Grapefruit"
       }
     ],
     "pantryItems": [
@@ -140633,7 +141005,12 @@
         "sub": "Technique films from the Yucatecan kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "plantain",
+        "term": "Plantain"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Ham/Prosciutto",
@@ -150948,7 +151325,12 @@
         "sub": "Technique films from the Peruvian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "quince",
+        "term": "Quince"
+      }
+    ],
     "pantryItems": [
       "Corn",
       "Lime",
@@ -158874,7 +159256,12 @@
         "sub": "Technique films from the Australian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "lemon",
+        "term": "Lemon"
+      }
+    ],
     "pantryItems": [
       "White fish",
       "Lemon",
@@ -167199,7 +167586,16 @@
         "sub": "Technique films from the Pacific Islands kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "watermelon",
+        "term": "Watermelon"
+      },
+      {
+        "slug": "mango",
+        "term": "Mango"
+      }
+    ],
     "pantryItems": [
       "Mango",
       "Pineapple",
@@ -169141,7 +169537,12 @@
         "sub": "Technique films from the South African kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "apricot",
+        "term": "Apricot"
+      }
+    ],
     "pantryItems": [
       "Garlic",
       "Lemon",
@@ -176585,6 +176986,10 @@
     },
     "lexiconTerms": [
       {
+        "slug": "yuzu",
+        "term": "Yuzu"
+      },
+      {
         "slug": "daikon",
         "term": "Daikon"
       }
@@ -176837,7 +177242,12 @@
         "sub": "Technique films from the Kyoto & Kaiseki kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "yuzu",
+        "term": "Yuzu"
+      }
+    ],
     "pantryItems": [
       "Ginger",
       "Carrot",
@@ -176999,6 +177409,10 @@
       {
         "slug": "sake-service-and-pairing",
         "term": "Sake Service & Pairing"
+      },
+      {
+        "slug": "yuzu",
+        "term": "Yuzu"
       },
       {
         "slug": "taro",
@@ -187753,7 +188167,12 @@
         "sub": "Technique films from the Colombian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "guava",
+        "term": "Guava"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Plantain",
@@ -194802,7 +195221,12 @@
         "sub": "Technique films from the Iraqi kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "date",
+        "term": "Date"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Dried fruit",
@@ -194902,7 +195326,12 @@
         "sub": "Technique films from the Iraqi kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "date",
+        "term": "Date"
+      }
+    ],
     "pantryItems": [
       "Beets",
       "Radish/Turnip",
@@ -199837,6 +200266,10 @@
       {
         "slug": "fresh-horseradish",
         "term": "Fresh Horseradish"
+      },
+      {
+        "slug": "blackcurrant",
+        "term": "Blackcurrant"
       }
     ],
     "pantryItems": [
@@ -200678,7 +201111,12 @@
         "sub": "Technique films from the Puerto Rican kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "plantain",
+        "term": "Plantain"
+      }
+    ],
     "pantryItems": [
       "Garlic",
       "Plantain",
@@ -209768,7 +210206,12 @@
         "sub": "Technique films from the Nigerian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "coconut",
+        "term": "Coconut"
+      }
+    ],
     "pantryItems": [
       "Coconut",
       "Sugar",
@@ -212095,7 +212538,12 @@
         "sub": "Technique films from the Venezuelan kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "papaya",
+        "term": "Papaya"
+      }
+    ],
     "pantryItems": [
       "Lime",
       "Cinnamon",
@@ -214058,7 +214506,12 @@
         "sub": "Technique films from the Persian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "sour-cherry",
+        "term": "Sour Cherry"
+      }
+    ],
     "pantryItems": [
       "Lime",
       "Stone fruit",
@@ -214865,7 +215318,12 @@
         "sub": "Technique films from the Northern Chinese kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "mandarin",
+        "term": "Mandarin"
+      }
+    ],
     "pantryItems": [
       "Duck",
       "Onion",
@@ -220789,7 +221247,12 @@
         "sub": "A YouTube search for Gordon Ramsay and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "redcurrant",
+        "term": "Redcurrant"
+      }
+    ],
     "pantryItems": [
       "Beef",
       "Pork",
@@ -222167,7 +222630,12 @@
         "sub": "A YouTube search for Jacques Pépin and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "redcurrant",
+        "term": "Redcurrant"
+      }
+    ],
     "pantryItems": [
       "Venison/Game",
       "Onion",
@@ -224419,7 +224887,12 @@
         "sub": "Technique films from the Australian kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "passionfruit",
+        "term": "Passionfruit"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Butter",
@@ -225436,7 +225909,12 @@
         "sub": "Technique films from the Danish kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "cooking-apple",
+        "term": "Cooking Apple"
+      }
+    ],
     "pantryItems": [
       "Lemon",
       "Apple",
@@ -226241,7 +226719,12 @@
         "sub": "Technique films from the East African kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "papaya",
+        "term": "Papaya"
+      }
+    ],
     "pantryItems": [
       "Beef",
       "Garlic",
