@@ -11,6 +11,7 @@
 import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import {
 	extract,
@@ -134,18 +135,99 @@ function structuralShape(v) {
 	return { t: typeof v };
 }
 
+/**
+ * AUTHORED DIVERGENCES: the narrow door for a deliberate correction.
+ *
+ * The archive is a historical artefact and is never edited, so a fact the
+ * original got WRONG can only be fixed in raw/. That breaks word-identity,
+ * which is this file's whole invariant, and the first such fix (Russian
+ * service, commit 7fda30f) left CI red at its first step with no way to say
+ * "this one is on purpose".
+ *
+ * The door is deliberately narrow, because a gate that can be waved through is
+ * not a gate:
+ *
+ *   - it is keyed to ONE element of ONE target, by index, and every other
+ *     element is still held to word-identity;
+ *   - it pins the hash of BOTH sides, so the archive drifting, or the authored
+ *     text being edited again, fails until the record is re-made;
+ *   - it pins the content-character delta, so the corpus-wide sum invariant
+ *     still balances to the character;
+ *   - and it is REVERSE-GATED: a record whose element no longer diverges fails,
+ *     because a judgement that no longer binds must be re-made. That is the
+ *     same rule the crosslink overrides already follow.
+ *
+ * A record is never hand-written. `node tools/verify-extraction.mjs
+ * --print-divergences` emits it from the two texts it actually compared.
+ */
+const DIVERGENCES = JSON.parse(readFileSync(join(ROOT, 'tools', 'authored-divergences.json'), 'utf8'));
+const PRINT_DIVERGENCES = process.argv.includes('--print-divergences');
+const hash = (s) => createHash('sha256').update(s, 'utf8').digest('hex').slice(0, 16);
+const contentChars = (v) => wordform(v).replace(/ /g, '').length;
+
+/* index -> record, per target, plus a note of which records actually bound so
+   the reverse gate can see the ones that did not */
+const divergencesFor = (name) => (DIVERGENCES[name] ?? []);
+const bound = new Set();
+
+function reconcile(name, sourceVal, shippedVal) {
+	/* only array targets can be reconciled element-wise; anything else is
+	   all-or-nothing and falls through to the plain assertion */
+	if (!Array.isArray(sourceVal) || !Array.isArray(shippedVal)) return null;
+	if (sourceVal.length !== shippedVal.length) return null;
+
+	const differing = [];
+	for (let i = 0; i < sourceVal.length; i++) {
+		if (wordform(sourceVal[i]) !== wordform(shippedVal[i])) differing.push(i);
+	}
+	if (!differing.length) return null;
+
+	const records = divergencesFor(name);
+	const byIndex = new Map(records.map((r) => [r.index, r]));
+	const unexplained = [];
+
+	for (const i of differing) {
+		const rec = byIndex.get(i);
+		const archive = wordform(sourceVal[i]);
+		const authored = wordform(shippedVal[i]);
+		if (PRINT_DIVERGENCES) {
+			console.log(JSON.stringify({
+				index: i,
+				term: shippedVal[i]?.t ?? shippedVal[i]?.n ?? null,
+				reason: rec?.reason ?? 'REPLACE ME: why the archive is wrong and this is right',
+				commit: rec?.commit ?? 'REPLACE ME',
+				archiveHash: hash(archive),
+				authoredHash: hash(authored),
+				contentCharDelta: contentChars(shippedVal[i]) - contentChars(sourceVal[i])
+			}, null, 1));
+		}
+		if (!rec) { unexplained.push(`${i} (${shippedVal[i]?.t ?? '?'}) has no divergence record`); continue; }
+		if (rec.archiveHash !== hash(archive)) { unexplained.push(`${i}: the ARCHIVE text moved, record is stale`); continue; }
+		if (rec.authoredHash !== hash(authored)) { unexplained.push(`${i}: the AUTHORED text moved, record is stale`); continue; }
+		if (rec.contentCharDelta !== contentChars(shippedVal[i]) - contentChars(sourceVal[i])) {
+			unexplained.push(`${i}: contentCharDelta is wrong`); continue;
+		}
+		bound.add(`${name}:${i}`);
+	}
+
+	assert.equal(unexplained.length, 0, unexplained.join('; '));
+	return differing.length;
+}
+
 for (const name of live.keys()) {
 	check(`round-trip ${name}`, () => {
 		const emitted = readFileSync(join(RAW, `${name}.json`), 'utf8').trim();
 		const source = canonical(live.get(name));
 		const shipped = canonical(JSON.parse(emitted));
 		if (source === shipped) return 'identical';
-		assert.equal(
-			wordform(live.get(name)),
-			wordform(JSON.parse(emitted)),
-			'content differs, not just punctuation'
-		);
-		return 'same words, repunctuated';
+		const sourceVal = live.get(name);
+		const shippedVal = JSON.parse(emitted);
+		if (wordform(sourceVal) === wordform(shippedVal)) return 'same words, repunctuated';
+		/* words moved: either every moved element is a recorded, hash-pinned
+		   authored divergence, or this fails exactly as it did before */
+		const n = reconcile(name, sourceVal, shippedVal);
+		assert.notEqual(n, null, 'content differs, not just punctuation');
+		return `same words, repunctuated, ${n} authored divergence${n === 1 ? '' : 's'}`;
 	});
 
 	// Separate from the wordform check above on purpose: a failure here means
@@ -190,8 +272,34 @@ check('character sum across all targets', () => {
 		wa += wordform(live.get(name)).replace(/ /g, '').length;
 		wb += wordform(readRaw(name)).replace(/ /g, '').length;
 	}
-	assert.equal(wa, wb, `content ${wa} chars source, ${wb} emitted`);
-	return `${wa.toLocaleString()} content chars, ${(b - a).toLocaleString()} of punctuation swept`;
+	/* An authored divergence is a deliberate content change, so it moves this
+	   sum by exactly the amount its own record pins. Adding the recorded deltas
+	   to the archive side keeps the invariant EXACT rather than approximate: an
+	   unrecorded change of even one character still fails here. */
+	let delta = 0;
+	for (const records of Object.values(DIVERGENCES)) {
+		if (!Array.isArray(records)) continue;
+		for (const r of records) delta += r.contentCharDelta;
+	}
+	assert.equal(wa + delta, wb, `content ${wa} chars source${delta ? ` (${delta >= 0 ? '+' : ''}${delta} authored)` : ''}, ${wb} emitted`);
+	return delta
+		? `${wb.toLocaleString()} content chars, ${(b - a).toLocaleString()} of punctuation swept, ${delta >= 0 ? '+' : ''}${delta} authored`
+		: `${wa.toLocaleString()} content chars, ${(b - a).toLocaleString()} of punctuation swept`;
+});
+
+/* The reverse half, and the reason a stale exemption cannot rot here: a record
+   that no longer binds anything means the divergence was reverted or the index
+   moved, and either way the judgement has to be re-made rather than left lying
+   around granting a licence nothing is using. */
+check('every authored divergence still binds', () => {
+	const stale = [];
+	for (const [name, records] of Object.entries(DIVERGENCES)) {
+		if (!Array.isArray(records)) continue;
+		for (const r of records) if (!bound.has(`${name}:${r.index}`)) stale.push(`${name}[${r.index}] ${r.term ?? ''}`);
+	}
+	assert.equal(stale.length, 0, `no longer diverging, remove the record: ${stale.join(', ')}`);
+	const n = bound.size;
+	return n ? `${n} recorded, ${n} still binding` : 'none recorded';
 });
 
 // ── 4. Recipe schema is exactly the nine authored keys ───────────────────────

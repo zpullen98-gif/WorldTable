@@ -1,0 +1,14 @@
+{
+  "_readme": "Deliberate corrections to raw/ that the archived original got factually wrong. reference/world-table-v1.html is a historical artefact and is never edited, so a wrong fact can only be fixed on this side, which breaks the word-identity invariant verify-extraction.mjs exists to hold. Each record licenses exactly ONE element of ONE target and nothing else: both sides are hash-pinned, so the archive drifting or the authored text being edited again fails until the record is re-made, and the content-character delta is pinned so the corpus sum still balances exactly. Reverse-gated: a record whose element no longer diverges FAILS, because a judgement that no longer binds must be re-made. Never hand-write a record. Run `node tools/verify-extraction.mjs --print-divergences`, paste what it prints, and write the reason yourself.",
+  "D": [
+    {
+      "index": 107,
+      "term": "Service Styles & Front-of-House Fluency",
+      "reason": "The archive defined RUSSIAN service as 'plated individually and served formally, what most fine dining actually does'. That is AMERICAN service, which the very same definition then describes as 'plated in the kitchen, served directly; the modern default', so the original contradicted itself and taught the wrong thing twice. Service a la russe is the opposite: fully cooked in the kitchen, carried to the table on platters and portioned onto the guest's plate by the server, also called silver service. A cook who learned the archive's version would mis-name the style in front of a room.",
+      "commit": "7fda30f",
+      "archiveHash": "81659f3de2ab870c",
+      "authoredHash": "b0107aad2085a009",
+      "contentCharDelta": 57
+    }
+  ]
+}
