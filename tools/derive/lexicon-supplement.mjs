@@ -982,6 +982,206 @@ export const LEXICON_SUPPLEMENT = [
 		methods: ["stir-frying", "simmering", "blanching", "steaming", "braising"]
 	},
 	{
+		t: "Anchovy",
+		c: "The Global Pantry Atlas",
+		d: "Engraulis encrasicolus, salt-cured six to twelve months while the fish's own cathepsins take the muscle apart: protein becomes free amino acids, chiefly glutamate, which is why an anchovy multiplies savor. Nucleotides do the reverse, the IMP of fresh fish breaking down within days of death, so the savor is glutamate and short peptides. The same autolysis dissolves connective tissue, so a fillet warmed in oil melts into a soffritto and seasons the pot unseen. SALT-PACKED whole fish are firmer and cleaner tasting; OIL-PACKED fillets are often mushy. BOQUERONES are not salt-cured but marinated in vinegar, which does not kill Anisakis larvae: eat them only if the fish was frozen at minus 20C for a day first, longer in a home freezer. Scandinavian ansjovis is spice-cured sprat, another fish. Melt one or two into hot oil before the aromatics, then salt afterward.",
+		season: [],
+		choose: "Salt-packed fish should be plump and firm along the backbone, rosy brown, smelling briny and nutty. Reject gray or rust-streaked flesh, collapsed bellies, and any tin that smells sharp, metallic, or rancid.",
+		store: "A sealed salt-packed tin keeps a year in a cool cupboard; once opened, cover the fish in salt or oil and refrigerate. Opened oil-packed fillets last about two weeks fully submerged. Air turns the oil rancid.",
+		prep: "Rinse salt-packed fish, run a thumb down the spine and lift the backbone out in one piece, pat dry, then cover in olive oil. Oil-packed fillets need draining only. Mash against the board before they hit the pan.",
+		methods: ["sauteing", "frying", "braising", "roasting", "simmering", "marinating"]
+	},
+	{
+		t: "Caper",
+		c: "The Global Pantry Atlas",
+		d: "The unopened flower bud of Capparis spinosa, unpleasant raw and made edible by cure: bruising and salting bring the glucosinolate glucocapparin into contact with myrosinase, releasing volatile methyl isothiocyanate, the mustardy, faintly sulfurous note that is caper flavor. Brine adds acetic sharpness on top, salt packing does not, which is why SALT-PACKED capers taste of caper and vinegar-packed ones largely of vinegar. Buds are graded by size, NONPAREIL smallest and firmest. White specks on a salted bud are rutin crystals, a mark of quality rather than mold. CAPER BERRIES are the fruit that follows the flower, stalk attached and seedy: milder, and not a substitute. Never pickle a wild lookalike: the green fruit of caper spurge, Euphorbia lathyris, has been pickled in error for capers and is a violent purgative and skin irritant. Rinse salt-packed buds, soak, and add late, since heat blows the pungency off.",
+		season: [],
+		choose: "Salt-packed, small, and firm: a nonpareil should feel dry and gritty in the hand and snap between the teeth after soaking. Reject soft khaki buds and jars whose brine has clouded or smells yeasty.",
+		store: "Salt-packed keep a year or more in a cool cupboard, refrigerated once opened and buried in their salt. Brined keep a few months under liquid in the refrigerator; buds above the line brown and turn slimy.",
+		prep: "Rinse salt-packed capers in several changes of water, soak 10 to 15 minutes, then taste one before committing. Pat dry if they are going into hot fat or they will spit. Chop only for a sauce.",
+		methods: ["sauteing", "frying", "braising", "roasting", "simmering"]
+	},
+	{
+		t: "Coconut Milk",
+		c: "The Global Pantry Atlas",
+		d: "Not a juice but an emulsion: grated coconut flesh pressed with water gives oil droplets held in suspension by coconut proteins, and that emulsion is fragile on purpose. Heat the thick cream from the top of an unshaken can without stirring and it CRACKS, the protein film failing and clear oil pooling out. Frying the curry paste in that released oil is the first real step of a Thai curry, blooming fat-soluble aromatics that water alone cannot reach. Gums and emulsifiers added by some brands prevent the crack, which makes those cans useless here and fine in a smoothie. Fat is the other variable: full-fat cans crack and enrich, light cans are mostly water. Buy short-label cans, open them standing up, and do not shake.",
+		season: [],
+		choose: "A can, not the carton drink and not sweetened cream of coconut, which is cocktail syrup. Coconut and water on the label, and at least 17 g fat per 100 ml, which beats the shake test. Reject gums if you mean to crack the cream, and any bulging or leaking can.",
+		store: "Unopened cans keep years in the cupboard. Once opened, move the milk to glass and refrigerate three to four days, no more; it sours fast. Frozen cubes keep three months and will separate when used.",
+		prep: "Chill the can an hour: coconut fat sets only below about 24C, so a warm kitchen gives no separation. Open it upright, spoon the firm cream off for frying, keep the thin milk to loosen the sauce, and hold it at a bare simmer, since a hard boil splits it.",
+		methods: ["simmering", "braising", "stewing", "steaming", "frying", "baking"]
+	},
+	{
+		t: "Doubanjiang",
+		c: "The Global Pantry Atlas",
+		d: "Sichuan's broad bean paste: fava beans cultured with Aspergillus oryzae on wheat flour, then salted with fresh chiles and left in open jars under sun and dew for one to three years, turned by hand. Time is the grade. PIXIAN doubanjiang, the long-aged kind, is dark maroon, coarse with whole bean halves, salty and deep rather than hot. It holds no rice and almost no sugar, which is why gochujang cannot stand in for it. The wheat in its koji means it is not gluten free, and the bean is Vicia faba, so it is out for anyone with G6PD deficiency. The technique is fixed: fry it in oil over medium heat until the fat runs red and the raw smell turns nutty, half a minute at least. Skip that and mapo doufu tastes of raw salt; do it and the oil becomes the seasoning.",
+		season: [],
+		choose: "Dark maroon-brown, coarse with visible bean halves, dense and nearly dry, not oily; two years or more if the label states age. Wheat flour on the list is normal, it makes the koji. Reject bright scarlet smooth pastes and oil-packed chili bean sauces sold under the same name.",
+		store: "Sealed and refrigerated after opening, over a year; darkening is age, not spoilage. It sheds no oil of its own, so press the surface flat and cover it with a film of neutral oil or plastic, and always use a dry spoon, since water starts surface mold.",
+		prep: "Chop the coarse beans before frying so the paste disperses. Fry in oil until the oil stains red, then add the aromatics. It is very salty: hold back salt and soy sauce until the dish is built and tasted.",
+		methods: ["stir-frying", "braising", "stewing", "simmering", "steaming"]
+	},
+	{
+		t: "Firm Tofu",
+		c: "The Global Pantry Atlas",
+		d: "Soy milk set with a coagulant and pressed, and the coagulant is the entry. NIGARI, magnesium chloride, dissolves at once and sets fast, so the curd is coarse and brittle, the flavor clean and sweet; CALCIUM SULFATE, gypsum, is barely soluble, sets slowly into a finer, smoother gel, and gives several times the calcium per block. Firmness comes from the soy milk's concentration first, then pressure and time. Heat tightens the network further: a long bake or fry firms the inside as it dries. Press it, salt it, or freeze it, growing ice crystals that leave a chewy sponge once it comes back from frozen in the refrigerator. Dry the surface before it meets fat, because surface water makes tofu stick and steam instead of brown.",
+		season: [],
+		choose: "Blocks heavy for their size, cut faces clean and faintly waxy, packing water clear. Reject cloudy or ropey water, a domed lid, or any sour smell on opening: that is spoilage bacteria, not fermentation.",
+		store: "Refrigerated under water changed daily, three to four days once opened; unopened, go by the date. Freezing holds it three months but permanently rebuilds the texture into a spongy one, which is sometimes the point.",
+		prep: "Press 20 to 30 minutes under a weighted plate. Cut with a wet blade so it releases cleanly. Salting the block, or two minutes in salted water at a bare simmer, firms the exterior so it survives a stir-fry.",
+		methods: ["pan-frying", "deep-frying", "grilling", "braising", "stir-frying", "baking", "simmering"]
+	},
+	{
+		t: "Fish Sauce",
+		c: "The Global Pantry Atlas",
+		d: "Anchovies packed with salt at roughly three parts fish to one of salt, then barreled a year or more: the fish's own gut enzymes and salt-tolerant bacteria autolyze the muscle protein into free amino acids, glutamate above all, and salt near 25 percent keeps spoilage organisms out. Salt does not stop histamine. It builds from that same protein whenever the catch sits warm before salting, survives the barrel and the pan alike, and gives sensitive people flushing and headache, so buy from makers who salt at sea. What drains off first is the first press, and the grade on a good label is nitrogen, 30 to 40 gN per liter. The volatile amines do cook off, but this is still fish: say so before it vanishes into a braise or a tomato sauce, because fish allergy is real.",
+		season: [],
+		choose: "Clear amber to deep russet, never brown and murky. A short label, anchovy and salt with perhaps sugar, and a nitrogen grade printed. Reject bottles with sediment, hydrolyzed protein, or the flat color of cola.",
+		store: "Cool, dark and capped; at that salt level it does not spoil. Refrigerate after opening to slow oxidation and use within a year. Salt crystals in an old bottle are harmless, a black syrupy color means the flavor has gone.",
+		prep: "Add it early to braises so the amines cook off and only the savor stays; keep it raw only for dressings and dipping sauces, where the smell is wanted. Halve the salt elsewhere in the recipe the first time you use it.",
+		methods: ["braising", "stewing", "marinating", "stir-frying", "simmering", "glazing"]
+	},
+	{
+		t: "Gochujang",
+		c: "The Global Pantry Atlas",
+		d: "Korean chile paste built from gochugaru, meju, glutinous rice and salt, then aged. The sweetness is not added sugar in a traditional pot: gochujang meju is soybean plus grain, and its amylase, usually helped by barley malt, cuts rice starch into maltose and glucose while protease frees glutamate from the bean. Sweet and savor build with time; heat does not, since capsaicin arrives with the gochugaru and only dilutes, and the red is its capsanthin, which age darkens. Gochugaru is a mild capsicum by world standards, so gochujang reads fruity rather than sharp. It is NOT a stand-in for doubanjiang: no broad bean, no brine funk, far more sugar. It carries soy, and most tubs carry wheat too. Those sugars mean it burns in a hot dry pan, so bloom it in a little oil over medium heat or slacken it into stock before a fierce flame.",
+		season: [],
+		choose: "Read the label, since the tub is opaque: the Korean heat number one to five, the red pepper powder percentage when given, and grain named early. Rice is the premium grain, but wheat and barley gochujang are traditional too, so reject only tubs led by corn syrup or water.",
+		store: "Refrigerated once opened, a year or more; it darkens and deepens rather than spoiling. Press the surface flat and keep the spoon in the kitchen, not the tub. A slightly domed lid is live fermentation, not a fault.",
+		prep: "Slake it first: work a spoonful smooth into a little warm liquid, or it clumps in cold stock. Bloom in oil over medium heat until it smells toasted, never high. Balance with vinegar and hold back soy sauce: it is salty as well as sweet.",
+		methods: ["braising", "stewing", "marinating", "glazing", "grilling", "stir-frying"]
+	},
+	{
+		t: "Harissa",
+		c: "The Global Pantry Atlas",
+		d: "A Tunisian paste of dried red chilies, soaked or roasted, then pounded with garlic, salt and toasted caraway, coriander and cumin and finished under olive oil. BAKLOUTI chilies give the classic version its fruit and its moderate heat, but strength varies wildly between brands. Capsaicin is fat-soluble, so harissa bloomed in warm oil carries its heat evenly through a dish while a spoonful stirred in cold sits in hot pockets. ROSE harissa adds dried petals and reads sweeter and rounder. The oil on top is a seal against air, not a preservative: a low-acid garlic paste kept under oil at room temperature is a known botulism route, so a homemade jar lives in the refrigerator. Fry it in fat before any liquid goes in.",
+		season: [],
+		choose: "Deep brick red, thick enough to stand a spoon in, smelling of toasted seed and dried fruit rather than raw vinegar. Reject dull brown paste, a burnt bitter edge, and tubes whose first ingredient is tomato.",
+		store: "An opened commercial jar keeps a month refrigerated, oil topped up to cover. A homemade paste is low-acid garlic under oil: refrigerate it and use it within a week, or freeze it in tablespoon portions, and never keep it at room temperature.",
+		prep: "Taste for heat before committing: brands run from mild to brutal. Fry a spoonful in oil for thirty seconds, until it darkens and smells nutty, then add liquid. Wash the board, since capsaicin transfers to everything.",
+		methods: ["frying", "roasting", "grilling", "braising", "stewing", "marinating"]
+	},
+	{
+		t: "Kimchi",
+		c: "The Global Pantry Atlas",
+		d: "Vegetables salted, dressed with chili, garlic, ginger and usually jeotgal, a salted shrimp or anchovy paste, then left to ferment: salt draws water from napa cabbage, a Brassica rapa and not the round green head, Leuconostoc begins the acid and throws off the carbon dioxide, and Lactobacillus finishes the souring with little gas. Most jars therefore carry fish or shellfish and are not vegetarian, so read the label. It never stops. Cold only slows it, so one jar is three ingredients over three months: crisp and barely sour at two weeks, bright and fizzy at six, deeply acidic and soft by twelve. FRESH kimchi belongs raw, where its snap is the point. SOUR kimchi belongs in jjigae, fried rice and pancakes, where acid and long heat are what you want. Taste the jar before you cook, not after.",
+		season: [],
+		choose: "Cabbage with a spine left in it, submerged in thick red brine, the lid faintly domed with gas. Reject brown or slimy leaves, and any jar with no free liquid, which has dried out and stalled.",
+		store: "Refrigerated for months in a jar with headroom for gas, vegetables pressed under the brine and the lid opened over the sink. Warmth speeds everything: a jar on the counter sours in days and pushes liquid out.",
+		prep: "Lift the leaves onto a board and cut them stacked rather than hacking at the jar. Squeeze the juice into a bowl and keep it, since it is the seasoning for the stew. Wear gloves or the chili lives under your nails.",
+		methods: ["stewing", "braising", "frying", "sauteing", "simmering", "grilling"]
+	},
+	{
+		t: "Kombu",
+		c: "The Global Pantry Atlas",
+		d: "Sun-dried kelp, Saccharina japonica and a few sister species, whose white bloom is not mold but mannitol and free glutamate: the kelp Ikeda tasted in 1908 when he named the fifth taste umami. Its glutamate multiplies rather than adds with the inosinate in katsuobushi and the guanylate in dried shiitake, which is why dashi tastes larger than its parts. Heat is the whole technique: glutamate leaches below a simmer, while boiling pulls alginate and fucoidan that turn the broth slimy and dull. Steep 10 g per liter cold for an hour, bring it slowly to 60 C (140 F), hold it there twenty minutes, then lift it out well before the surface trembles. Iodine is the real caution, not a flavor note: kombu runs 1 to 2 mg per dry gram against an adult daily ceiling near 1 mg, and much of it steeps into the broth. A daily habit can push a thyroid either way, so keep it occasional, and off the table for anyone on thyroid medicine or feeding an infant.",
+		season: [],
+		choose: "Thick, stiff, near-black sheets under an even dusty bloom; MA-KOMBU and RISHIRI for clear dashi, thinner green-black HIDAKA when you mean to eat it. Reject limp or damp pieces, and any bloom that is fuzzy, spotted or musty: that is mold.",
+		store: "Airtight in a cool dark cupboard with its desiccant packet, a year or more. Humidity is the killer: it dulls the bloom and invites mold. Do not refrigerate it unwrapped, condensation will ruin the surface in days.",
+		prep: "Never wash the white powder off, that is the flavor; wipe grit away with a dry cloth only. Snip two or three slits in the leaf to open surface area. The spent piece is not waste: simmer it down into tsukudani.",
+		methods: ["steeping", "simmering", "braising", "pickling", "stewing"]
+	},
+	{
+		t: "Mirin",
+		c: "The Global Pantry Atlas",
+		d: "True HON-MIRIN is a sweet rice wine: glutinous rice, rice koji and distilled spirit aged together while the koji's amylase cuts the starch into glucose and maltose. It lands near 14 percent alcohol and around 40 percent sugar, and it works on three fronts at once. The sugars brown and give teriyaki its lacquer; the alcohol carries off fishy volatiles and helps a glaze cling; and both together firm the surface proteins of fish so a fillet holds its shape in a simmer. Two things hide behind AJI-MIRIN: mirin-style seasoning, a corn syrup blend under 1 percent alcohol, and SHIO-MIRIN, full strength but salted to escape Japan's liquor tax. Both bring unbudgeted salt. Buy hon-mirin; a simmer softens the alcohol but does not remove it.",
+		season: [],
+		choose: "The label should read hon-mirin and list rice, rice koji and alcohol, nothing more. Expect amber color and a honeyed, sake-like nose. Reject bottles leading with corn syrup, glucose, or salt.",
+		store: "Hon-mirin keeps months in a cool dark cupboard, protected by its own alcohol. Do not refrigerate: cold throws its sugars out as crystals. Mirin-style seasoning is the opposite, refrigerate and use in three months.",
+		prep: "No knife work, but simmer it thirty seconds on its own if the dish cooks briefly, or raw alcohol stays in the sauce. Its sugar scorches, so brush glazes on at the end over lower heat and watch the pan.",
+		methods: ["simmering", "glazing", "braising", "grilling", "poaching", "marinating"]
+	},
+	{
+		t: "Miso",
+		c: "The Global Pantry Atlas",
+		d: "Soybeans inoculated with koji, Aspergillus oryzae grown on rice or barley, then salted and aged. The mold's enzymes do all the work: protease cuts bean protein into free amino acids, glutamate above all, while amylase turns grain starch into sugar for the yeasts and lactobacilli that follow. Color tracks recipe more than time. SHIRO is koji-heavy, low in salt and aged for weeks, so it stays pale and sweet; AKA carries more bean, more salt and warmer aging, and darkens as amino acids and sugars condense into melanoidins, the same browning that happens in a hot pan, only cold and slow. Salt sits between 5 and 13 percent, which is why it keeps. Slacken it in a ladle of hot broth and stir it in off the heat: a boil blows off the aroma.",
+		season: [],
+		choose: "Smooth and glossy, the color even top to bottom; reject a dried crust. Dark liquid pooled on live miso is tamari, stir it in. Read the label: barley or wheat koji means gluten, and dashi-added miso contains fish.",
+		store: "Refrigerated in a sealed tub with the surface pressed flat, up to a year; it darkens slowly and safely. Freezing is fine, it never sets hard. Use a clean dry spoon, because water on the spoon starts surface mold.",
+		prep: "Slacken it in warm liquid before it meets the pot or it clumps into knots. Add it at the very end. For a marinade cut it with sake or mirin so it spreads, and watch the pan: it is full of sugar and scorches fast.",
+		methods: ["simmering", "marinating", "glazing", "broiling", "braising", "pickling"]
+	},
+	{
+		t: "Nori",
+		c: "The Global Pantry Atlas",
+		d: "Pyropia laver, washed, minced to a slurry, cast on screens and dried into paper: a sheet is compressed algae held together by its own polysaccharides. Nearly all of it now sells as YAKI-NORI, already toasted: heat drives off moisture and wrecks the red phycoerythrin, so the raw purple-black turns the green-black of good nori. Eating quality is a moisture argument. A good sheet shatters between the fingers, and nori pulls water out of the room within minutes of opening, going leathery and tasting flat. It carries free glutamate of its own, so a torn sheet over rice or noodles is seasoning and not garnish. Open one packet at a time, and revive a dull sheet over a low flame until it greens and crisps.",
+		season: [],
+		choose: "Dark purple-black, glossy and even, with no pinholes when held up to a light; the sheet should snap rather than bend. Reject reddish or matte-brown sheets, and any packet sold without a desiccant sachet.",
+		store: "Sealed with the desiccant in its foil, cool and dark, six months crisp. Humidity is the enemy, not age. A tin beats a clip. Frozen packs keep a year: open only at room temperature or they sweat.",
+		prep: "Cut with scissors or a dry blade; a wet knife drags and tears. Toast before rolling, and roll on the rough side so the rice grips. Seal the seam with a few grains crushed under a fingertip, since water makes it soggy.",
+		methods: ["toasting", "grilling", "deep-frying", "simmering", "blending"]
+	},
+	{
+		t: "Oyster Sauce",
+		c: "The Global Pantry Atlas",
+		d: "At root it is oyster liquor reduced until its amino acids and sugars brown, a Cantonese accident of 1888 that became a pantry fixture. Modern bottles are a built sauce: some oyster extract, sugar, salt, caramel color, added MSG doing most of the glutamate work, and a starch for gloss and cling. Two things follow. It is mollusk, not vegetarian, and a shellfish-allergic guest can react to a spoonful stirred through greens, so name it at the table; a shiitake version, its guanylate raised by drying, covers both. And it is largely sugar and starch, so it scorches on a dry hot pan: toss it through blanched gai lan or into a stir-fry in the last thirty seconds, off the fiercest heat.",
+		season: [],
+		choose: "Oyster extract first or second, glossy dark brown, thick enough to coat a spoon. Expect wheat flour and MSG even in premium bottles, so read it before cooking for a celiac. Reject thin, near-black ones led by sugar, water and caramel color.",
+		store: "Cupboard until opened, then refrigerated and used within six months; the starch and sugar make it a food, not a preserve. Wipe the rim before capping, and retire any bottle growing mold at the neck.",
+		prep: "Stir the bottle first, the solids settle hard. Add it at the end of cooking, cut with a splash of stock so it coats instead of clumping. Taste before adding salt or soy sauce, since it already carries plenty of both.",
+		methods: ["stir-frying", "glazing", "braising", "steaming", "marinating"]
+	},
+	{
+		t: "Preserved Lemon",
+		c: "The Global Pantry Atlas",
+		d: "Whole lemons packed in salt and their own juice: osmosis pulls water out of the rind, the salt concentration climbs past what spoilage organisms tolerate, and over four to six weeks the pith loses its bitterness while the peel turns soft and translucent. Salt is only half the preservation: the juice holds the jar near pH 2.5, and a batch cut with water instead loses the barrier that keeps a sealed jar safe. Air is the other problem, which is why the fruit must stay under its liquid. The aroma shifts as the texture does, the sharp citral of fresh zest giving way to something floral and faintly fermented. THE RIND IS THE INGREDIENT: scrape the collapsed flesh away, since it carries most of the salt and little of the perfume. Rinse, cut into fine ribbons, and stir in at the end of a tagine, a dressing, or a tray of roasting chicken.",
+		season: [],
+		choose: "Rind soft enough to dent under a thumbnail, fully submerged in brine gone thick and cloudy, smelling sour and floral at once. Reject jars with fruit sitting proud of the liquid, fuzzy or colored growth, a slippery rind, or a flat smell with no sourness left.",
+		store: "Refrigerated under brine once opened, a year and more. Top up with lemon juice and salt if the level falls below the fruit, and press the pieces down after each use. A dirty spoon is what ends the jar.",
+		prep: "Halve, scoop out flesh and seeds with a teaspoon, rinse the rind briefly. Slice into fine ribbons across the peel so nobody gets a salty plank, then taste the dish before you salt it at all.",
+		methods: ["braising", "stewing", "roasting", "marinating", "grilling"]
+	},
+	{
+		t: "Rice Vinegar",
+		c: "The Global Pantry Atlas",
+		d: "A second fermentation, this one aerobic: Acetobacter oxidizes the ethanol to acetic acid, landing around 4 to 5 percent acidity against 6 to 7 for wine vinegar. That gap is the whole point. Rice vinegar sharpens without stripping, which is why it dresses cucumber and seasons sushi rice where a red wine vinegar would bully everything on the plate. Japanese KOMEZU is clean and faintly sweet; SEASONED rice vinegar is the same liquid with sugar and salt already in it, so check the label before you season again. CHINKIANG black vinegar is glutinous rice plus wheat bran, malty and not gluten free; the smoky one is Shanxi aged vinegar, from sorghum. Acetic acid is volatile: add it at the end, and taste it against the salt, since each makes the other read stronger.",
+		season: [],
+		choose: "Pale clear gold for komezu, a clean sour smell with no sting at the back of the nose, and a short ingredient list. Reject cloudy bottles with sediment or a floating veil unless the label says unfiltered.",
+		store: "A cool dark cupboard, capped tight, a year or two: the acidity keeps it safe but light and air flatten the aroma. Seasoned vinegar carries sugar and salt and holds less well, so refrigerate it once opened.",
+		prep: "Measure it, do not pour it, since a heavy hand cannot be undone. At 4 percent it is under the 5 percent a canned pickle needs to keep the jar below pH 4.6, so rice vinegar pickles belong in the refrigerator and get eaten within a month. For sushi rice, warm it with the sugar and salt, then cool it before it meets the rice. Never reduce it hard: the aroma leaves first.",
+		methods: ["pickling", "marinating", "simmering", "braising", "deglazing", "glazing"]
+	},
+	{
+		t: "Silken Tofu",
+		c: "The Global Pantry Atlas",
+		d: "Set in its own container and never pressed: the soy milk is richer to begin with, so the curd traps the whey inside instead of losing it, which is the whole difference from a firm block. The coagulant is usually GLUCONO DELTA-LACTONE, which hydrolyzes slowly into gluconic acid and drops the pH evenly through the tub, giving the smoothest gel of any method; nigari-set kinugoshi is sweeter and more fragile still. That gel is mostly water held in a weak protein net, so a hard boil tears it: the net contracts, weeps, and the block turns grainy and riddled with holes. Hold it below a simmer, spoon it rather than cut it, and remember it purees into a silk-smooth emulsion for dressings and desserts with no dairy at all.",
+		season: [],
+		choose: "An aseptic carton shows nothing, so reject dents, bulges, or a leaking seam. A refrigerated tub should hold an uncracked block with little free liquid, clear not milky; a cracked, weeping one will collapse.",
+		store: "Aseptic cartons keep at room temperature until the date, then go cold once opened; refrigerated tubs stay cold. Opened, cover in cold water, two days at most. Never freeze, ice shatters the gel. Keep from strong odors.",
+		prep: "Slide the block out onto your palm, or cut it in the tub and lift pieces with a slotted spoon. To fry, drain dry, dust with starch, and lower it away from you: loose water spits in hot oil. Blend it cold with acid and salt; heat first and the puree goes chalky.",
+		methods: ["steaming", "simmering", "blending", "poaching", "deep-frying"]
+	},
+	{
+		t: "Soy Sauce",
+		c: "The Global Pantry Atlas",
+		d: "Soybeans and roasted cracked WHEAT inoculated with koji, then fermented in brine for months as a moromi mash: koji protease frees the amino acids, koji amylase turns wheat starch to sugar for the yeasts that make alcohol and esters, and salt-tolerant Tetragenococcus drops the pH. Say that out loud to a celiac guest, because ordinary soy sauce contains wheat and is not gluten free. TAMARI is the low-wheat style, rounder and less aromatic for it, but plenty of tamari still carries wheat: read the label and buy only a certified gluten free bottle. KOIKUCHI is the dark all-purpose bottle; USUKUCHI is paler and saltier, for dishes color would spoil. Hydrolyzed vegetable protein on a label means acid, days not months, and none of the esters. Heat drives the aromatics off, so add it early for depth and color, then a few drops at the end for smell.",
+		season: [],
+		choose: "A short label: water, wheat, soybeans, salt. Naturally brewed, in glass; a listed alcohol is a preservative, not a fault. Reject hydrolyzed protein, caramel color or corn syrup. Ammonia shows only once open, not at the shelf.",
+		store: "Sealed, cool and dark; refrigerate once opened and use within three months for aroma, which oxidizes long before the salt would let anything spoil. On a warm shelf it darkens and the flavor flattens out.",
+		prep: "Measure it, because salt concentrates as a sauce reduces: season early, correct at the end. Pour it down the hot rim of the wok, not into the middle: the rim flashes it to aroma, while a puddle cools the pan and stews the food.",
+		methods: ["braising", "glazing", "marinating", "stir-frying", "simmering", "curing"]
+	},
+	{
+		t: "Thai Red Curry Paste",
+		c: "The Global Pantry Atlas",
+		d: "A wet pounded paste, not a dry spice blend: soaked dried red chilies worked in a granite mortar with galangal, lemongrass, makrut lime zest, coriander root, shallot, garlic, white pepper and salted shrimp paste. The pounding is the technique. Crushing ruptures cell walls and drives the volatile oils into the paste itself, where a blender chops and aerates and leaves something rougher and thinner. Those aromatics are fat-soluble, which is why the paste is fried in cracked coconut cream until the oil runs red and smells of lime leaf before a drop of liquid arrives. A fresh paste is low in acid and lives in the refrigerator or the freezer, never on the counter under oil. Fry first, season with fish sauce and palm sugar last.",
+		season: [],
+		choose: "Dense, oily, and fragrant through the lid, brick to rust red with visible root fiber. Almost every tub carries shrimp paste, so read the label if anyone at the table avoids shellfish. Reject pale pink pastes bulked with salt, and anything that smells of vinegar rather than lemongrass.",
+		store: "An opened tub keeps two to three weeks refrigerated, surface pressed flat and any oil left covering it. Freeze in tablespoon portions for six months. Homemade paste never keeps at room temperature under oil.",
+		prep: "Stabilized coconut milk will not crack: use a can of coconut and water only, or plain oil. Fry over medium until red oil separates, two to three minutes. Start at half what a recipe asks: brands vary.",
+		methods: ["frying", "simmering", "braising", "stewing", "grilling", "marinating"]
+	},
+	{
+		t: "Wakame",
+		c: "The Global Pantry Atlas",
+		d: "A brown kelp, Undaria pinnatifida, sold salted or dried in dark shreds that swell eight to ten times on contact with water. Green is fucoxanthin: that brown carotenoid sits in a protein complex that masks the chlorophyll, and only heat breaks it. Salt does not, which is why the processor blanches the fronds for seconds in near-boiling water before salting or drying. Your cold soak only reveals green already set at the plant. Its alginates give the slip a sunomono wants, but a long soak swells the walls past slip into slime. Two to five minutes in cold water is the whole of the cooking. Salted keeps better than dried: rinse it, soak, squeeze, and add it to miso soup off the heat, never during a boil.",
+		season: [],
+		choose: "Salted wakame in dark olive-green clumps, springy and whole; dried shreds near-black and brittle with few pale stems. Reject khaki, faded or dusty lots: the oils have oxidized and it will taste fishy and flat.",
+		store: "Salted, refrigerated in its own salt, several months, or frozen for a year. Dried, airtight and dark, a year, with humidity the thing that kills it. Once rehydrated it keeps two days refrigerated, no longer.",
+		prep: "Rinse salted wakame free of crystals before soaking or the finished dish is inedibly salty. Cut out the tough midrib and keep it, kuki wakame, for pickling. Squeeze gently; wringing bruises the fronds into mush.",
+		methods: ["soaking", "simmering", "blanching", "pickling", "steaming"]
+	},
+	{
 		t: "00 Flour",
 		c: "The Grain, Pulse & Seed Atlas",
 		d: "The Italian mill grade, and the commonest misunderstanding in a kitchen: the number is set by ASH, the mineral residue left after burning, which measures how much bran was milled out. Grind size is not part of the definition, though 00 is usually milled fine. Tipo 00 is the most refined, under 0.55 percent ash, so almost nothing of the bran survives; 0, 1 and 2 carry progressively more, and integrale is wholemeal. Italian law sets only a floor for protein, 9 percent at 00, and bags run from that to 13 percent for panettone, so a 00 can be weaker or stronger than the bread flour beside it. Low bran is what buys the silky, extensible dough that opens thin at the center and blisters into a puffed rim in 90 seconds at 450 C (840 F). Choose by the protein or W value, never by the zeroes.",

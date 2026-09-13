@@ -2820,7 +2820,24 @@
         "sub": "A YouTube search for Just One Cookbook and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "miso",
+        "term": "Miso"
+      },
+      {
+        "slug": "silken-tofu",
+        "term": "Silken Tofu"
+      },
+      {
+        "slug": "wakame",
+        "term": "Wakame"
+      },
+      {
+        "slug": "kombu",
+        "term": "Kombu"
+      }
+    ],
     "pantryItems": [
       "Tofu",
       "Scallion",
@@ -3053,6 +3070,10 @@
         "term": "Wild Salmon: The Run Calendar"
       },
       {
+        "slug": "nori",
+        "term": "Nori"
+      },
+      {
         "slug": "tuna-grades-akami-chutoro-otoro",
         "term": "Tuna Grades (Akami, Chūtoro, Ōtoro)"
       },
@@ -3279,6 +3300,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "rice-vinegar",
+        "term": "Rice Vinegar"
+      },
       {
         "slug": "savoy-cabbage",
         "term": "Savoy Cabbage"
@@ -3701,6 +3726,10 @@
       {
         "slug": "stocks-blanc-brun-broth-and-demi",
         "term": "Stocks: Blanc, Brun, Broth & Demi"
+      },
+      {
+        "slug": "kombu",
+        "term": "Kombu"
       }
     ],
     "pantryItems": [
@@ -3817,12 +3846,12 @@
         "term": "Cucumber"
       },
       {
-        "slug": "sushi-rice",
-        "term": "Sushi Rice"
+        "slug": "nori",
+        "term": "Nori"
       },
       {
-        "slug": "sashimi-grade-and-ikejime",
-        "term": "Sashimi-Grade & Ikejime"
+        "slug": "sushi-rice",
+        "term": "Sushi Rice"
       }
     ],
     "pantryItems": [
@@ -4059,12 +4088,16 @@
         "term": "Sichuan Peppercorn & Málà"
       },
       {
+        "slug": "doubanjiang",
+        "term": "Doubanjiang"
+      },
+      {
         "slug": "roux-slurry-and-liaison",
         "term": "Roux, Slurry & Liaison"
       },
       {
-        "slug": "scallion",
-        "term": "Scallion"
+        "slug": "silken-tofu",
+        "term": "Silken Tofu"
       }
     ],
     "pantryItems": [
@@ -7354,20 +7387,20 @@
     },
     "lexiconTerms": [
       {
+        "slug": "firm-tofu",
+        "term": "Firm Tofu"
+      },
+      {
         "slug": "chives",
         "term": "Chives"
       },
       {
-        "slug": "brussels-sprouts",
-        "term": "Brussels Sprouts"
-      },
-      {
-        "slug": "hearts-of-palm",
-        "term": "Hearts of Palm"
-      },
-      {
         "slug": "thai-bird-chile",
         "term": "Thai Bird Chile"
+      },
+      {
+        "slug": "silken-tofu",
+        "term": "Silken Tofu"
       }
     ],
     "pantryItems": [
@@ -7490,16 +7523,16 @@
         "term": "Curry Leaf"
       },
       {
-        "slug": "thai-basil",
-        "term": "Thai Basil"
+        "slug": "coconut-milk",
+        "term": "Coconut Milk"
       },
       {
-        "slug": "coconut",
-        "term": "Coconut"
+        "slug": "fish-sauce",
+        "term": "Fish Sauce"
       },
       {
-        "slug": "bamboo-shoots",
-        "term": "Bamboo Shoots"
+        "slug": "thai-red-curry-paste",
+        "term": "Thai Red Curry Paste"
       }
     ],
     "pantryItems": [
@@ -7609,6 +7642,10 @@
       {
         "slug": "the-fresh-aromatic-trio-galangal-lemongrass-and-makrut-lime",
         "term": "The Fresh Aromatic Trio: Galangal, Lemongrass & Makrut Lime"
+      },
+      {
+        "slug": "fish-sauce",
+        "term": "Fish Sauce"
       }
     ],
     "pantryItems": [
@@ -7710,7 +7747,12 @@
         "sub": "A YouTube search for Pailin’s Kitchen and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "fish-sauce",
+        "term": "Fish Sauce"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Scallion",
@@ -7971,12 +8013,16 @@
         "term": "Chuck"
       },
       {
-        "slug": "the-souring-spices-amchur-loomi-anardana-and-tamarind",
-        "term": "The Souring Spices: Amchur, Loomi, Anardana & Tamarind"
+        "slug": "coconut-milk",
+        "term": "Coconut Milk"
       },
       {
-        "slug": "coconut",
-        "term": "Coconut"
+        "slug": "thai-red-curry-paste",
+        "term": "Thai Red Curry Paste"
+      },
+      {
+        "slug": "the-souring-spices-amchur-loomi-anardana-and-tamarind",
+        "term": "The Souring Spices: Amchur, Loomi, Anardana & Tamarind"
       }
     ],
     "pantryItems": [
@@ -8338,6 +8384,14 @@
       {
         "slug": "peanut",
         "term": "Peanut"
+      },
+      {
+        "slug": "coconut-milk",
+        "term": "Coconut Milk"
+      },
+      {
+        "slug": "thai-red-curry-paste",
+        "term": "Thai Red Curry Paste"
       }
     ],
     "pantryItems": [
@@ -12931,7 +12985,20 @@
         "sub": "A YouTube search for Maangchi and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "gochujang",
+        "term": "Gochujang"
+      },
+      {
+        "slug": "kimchi",
+        "term": "Kimchi"
+      },
+      {
+        "slug": "nori",
+        "term": "Nori"
+      }
+    ],
     "pantryItems": [
       "Bacon",
       "Eggs",
@@ -13181,8 +13248,8 @@
         "term": "Blanch & Shock"
       },
       {
-        "slug": "brussels-sprouts",
-        "term": "Brussels Sprouts"
+        "slug": "gochujang",
+        "term": "Gochujang"
       },
       {
         "slug": "zucchini",
@@ -13414,6 +13481,10 @@
         "term": "Pork Belly"
       },
       {
+        "slug": "kimchi",
+        "term": "Kimchi"
+      },
+      {
         "slug": "gochugaru",
         "term": "Gochugaru"
       }
@@ -13525,7 +13596,12 @@
         "sub": "A YouTube search for Maangchi and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "rice-vinegar",
+        "term": "Rice Vinegar"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Garlic",
@@ -14060,10 +14136,6 @@
       {
         "slug": "thai-basil",
         "term": "Thai Basil"
-      },
-      {
-        "slug": "brussels-sprouts",
-        "term": "Brussels Sprouts"
       }
     ],
     "pantryItems": [
@@ -15163,6 +15235,10 @@
         "term": "Lemon"
       },
       {
+        "slug": "preserved-lemon",
+        "term": "Preserved Lemon"
+      },
+      {
         "slug": "clay-and-earthenware-tagine-donabe-cazuela",
         "term": "Clay & Earthenware: Tagine, Donabe, Cazuela"
       }
@@ -15395,6 +15471,10 @@
         "term": "Baharat & the Seven-Spice Family"
       },
       {
+        "slug": "harissa",
+        "term": "Harissa"
+      },
+      {
         "slug": "couscous",
         "term": "Couscous"
       }
@@ -15618,6 +15698,10 @@
       {
         "slug": "salt-cod-and-the-preserved-fish-pantry",
         "term": "Salt Cod & the Preserved Fish Pantry"
+      },
+      {
+        "slug": "preserved-lemon",
+        "term": "Preserved Lemon"
       }
     ],
     "pantryItems": [
@@ -19574,10 +19658,6 @@
       {
         "slug": "bitter-melon",
         "term": "Bitter Melon"
-      },
-      {
-        "slug": "hearts-of-palm",
-        "term": "Hearts of Palm"
       },
       {
         "slug": "yam",
@@ -26459,6 +26539,10 @@
       {
         "slug": "the-brine-and-sea-register",
         "term": "The Brine & Sea Register"
+      },
+      {
+        "slug": "anchovy",
+        "term": "Anchovy"
       }
     ],
     "pantryItems": [
@@ -37358,6 +37442,10 @@
       {
         "slug": "knife-care-and-the-cutting-board-question",
         "term": "Knife Care & the Cutting Board Question"
+      },
+      {
+        "slug": "anchovy",
+        "term": "Anchovy"
       }
     ],
     "pantryItems": [
@@ -45617,6 +45705,10 @@
       {
         "slug": "romaine",
         "term": "Romaine"
+      },
+      {
+        "slug": "anchovy",
+        "term": "Anchovy"
       }
     ],
     "pantryItems": [
@@ -46879,6 +46971,10 @@
       {
         "slug": "feasibility-and-market-analysis",
         "term": "Feasibility & Market Analysis"
+      },
+      {
+        "slug": "caper",
+        "term": "Caper"
       }
     ],
     "pantryItems": [
@@ -48066,6 +48162,10 @@
     },
     "lexiconTerms": [
       {
+        "slug": "doubanjiang",
+        "term": "Doubanjiang"
+      },
+      {
         "slug": "mustard-greens",
         "term": "Mustard Greens"
       },
@@ -48189,6 +48289,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "oyster-sauce",
+        "term": "Oyster Sauce"
+      },
       {
         "slug": "black-bean",
         "term": "Black Bean"
@@ -52057,6 +52161,10 @@
       {
         "slug": "brining-wet-dry-and-cures",
         "term": "Brining: Wet, Dry & Cures"
+      },
+      {
+        "slug": "miso",
+        "term": "Miso"
       }
     ],
     "pantryItems": [
@@ -53373,7 +53481,12 @@
         "sub": "A YouTube search for Helen Rennie and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "caper",
+        "term": "Caper"
+      }
+    ],
     "pantryItems": [
       "Squid/Octopus",
       "Chiles",
@@ -85278,6 +85391,10 @@
       {
         "slug": "green-bean",
         "term": "Green Bean"
+      },
+      {
+        "slug": "soy-sauce",
+        "term": "Soy Sauce"
       }
     ],
     "pantryItems": [
@@ -87853,6 +87970,10 @@
       {
         "slug": "allspice",
         "term": "Allspice"
+      },
+      {
+        "slug": "soy-sauce",
+        "term": "Soy Sauce"
       }
     ],
     "pantryItems": [
@@ -108519,6 +108640,10 @@
     },
     "lexiconTerms": [
       {
+        "slug": "oyster-sauce",
+        "term": "Oyster Sauce"
+      },
+      {
         "slug": "garlic",
         "term": "Garlic"
       }
@@ -110101,6 +110226,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "mirin",
+        "term": "Mirin"
+      },
       {
         "slug": "iceberg-lettuce",
         "term": "Iceberg Lettuce"
@@ -112632,6 +112761,10 @@
       {
         "slug": "napa-cabbage",
         "term": "Napa Cabbage"
+      },
+      {
+        "slug": "kimchi",
+        "term": "Kimchi"
       }
     ],
     "pantryItems": [
@@ -119049,7 +119182,12 @@
         "sub": "Technique films from the Pickle & Condiment Atlas kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "harissa",
+        "term": "Harissa"
+      }
+    ],
     "pantryItems": [
       "Garlic",
       "Chiles",
@@ -120422,6 +120560,10 @@
       {
         "slug": "shiitake",
         "term": "Shiitake"
+      },
+      {
+        "slug": "kombu",
+        "term": "Kombu"
       }
     ],
     "pantryItems": [
@@ -122520,6 +122662,10 @@
       {
         "slug": "shiitake",
         "term": "Shiitake"
+      },
+      {
+        "slug": "gochujang",
+        "term": "Gochujang"
       }
     ],
     "pantryItems": [
@@ -123624,7 +123770,16 @@
         "sub": "Technique films from the The Vegetable-Led Plate kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "mirin",
+        "term": "Mirin"
+      },
+      {
+        "slug": "miso",
+        "term": "Miso"
+      }
+    ],
     "pantryItems": [
       "Onion",
       "Ginger",
@@ -126046,7 +126201,12 @@
         "sub": "Technique films from the Cantonese kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "soy-sauce",
+        "term": "Soy Sauce"
+      }
+    ],
     "pantryItems": [
       "Chicken",
       "Onion",
@@ -126681,6 +126841,10 @@
       {
         "slug": "glutinous-rice",
         "term": "Glutinous Rice"
+      },
+      {
+        "slug": "oyster-sauce",
+        "term": "Oyster Sauce"
       }
     ],
     "pantryItems": [
@@ -136205,6 +136369,10 @@
       {
         "slug": "velveting-and-marinades",
         "term": "Velveting & Marinades"
+      },
+      {
+        "slug": "doubanjiang",
+        "term": "Doubanjiang"
       }
     ],
     "pantryItems": [
@@ -177035,7 +177203,12 @@
         "sub": "Technique films from the Kansai & Osaka kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "rice-vinegar",
+        "term": "Rice Vinegar"
+      }
+    ],
     "pantryItems": [
       "Ginger",
       "Rice",
@@ -225571,7 +225744,12 @@
         "sub": "A YouTube search for Cooking with Alia and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "harissa",
+        "term": "Harissa"
+      }
+    ],
     "pantryItems": [
       "Lamb",
       "Sausage",
@@ -227284,7 +227462,12 @@
         "sub": "A YouTube search for Cooking with Alia and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "preserved-lemon",
+        "term": "Preserved Lemon"
+      }
+    ],
     "pantryItems": [
       "Beef",
       "Garlic",

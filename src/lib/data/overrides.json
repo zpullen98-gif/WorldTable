@@ -235,6 +235,10 @@
     "dan-dan-noodles"
    ]
   },
+  "brussels-sprouts": {
+   "reason": "Force-empty: the scorer matched SPROUTS. All three links are bean sprouts, in pad thai, bibimbap namul and a pho herb plate. No dish in the corpus cooks a brussels sprout.",
+   "empty": true
+  },
   "cannellini-bean": {
    "reason": "Cassoulet and pasta e fagioli both name the bean. Dan dan noodles is sweet BEAN sauce.",
    "drop": [
@@ -291,6 +295,13 @@
     "rosemary-focaccia"
    ]
   },
+  "firm-tofu": {
+   "reason": "Pad thai names firm tofu outright. Miso soup specifies SILKEN tofu, which has its own entry, and hot and sour soup names no tofu at all in its ingredients.",
+   "drop": [
+    "miso-soup",
+    "hot-and-sour-soup"
+   ]
+  },
   "flat-iron": {
    "reason": "Force-empty: no flat-iron steak dish exists. Matches are cast-iron skillets and flat griddles.",
    "empty": true
@@ -306,6 +317,10 @@
    "drop": [
     "sunday-roast-beef-and-yorkshire-puddings"
    ]
+  },
+  "hearts-of-palm": {
+   "reason": "Force-empty: the scorer matched PALM. Its links are pad thai's palm sugar and egusi soup's palm oil. No dish in the corpus uses palm heart.",
+   "empty": true
   },
   "kidney-bean": {
    "reason": "Dal makhani's rajma and the Dominican habichuelas con dulce are both genuine. Creme brulee is a vanilla BEAN.",
