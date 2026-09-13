@@ -12,7 +12,37 @@
 	let q = $state('');
 	let category = $state<string | null>(null);
 
-	const categories = $derived([...new Set(data.lexicon.map((e) => e.category))].sort());
+	/* localeCompare, not a bare .sort(). The project pins collation everywhere it
+	   matters (build-data.mjs does it for techniques and stations with a comment
+	   warning that a codepoint sort reorders them), and this list was the one
+	   place still sorting by codepoint. It did not show while every category
+	   began with an ASCII capital; the atlases added below are the same shape,
+	   but the rule should not depend on that staying true. */
+	const categories = $derived(
+		[...new Set(data.lexicon.map((e) => e.category))].sort((a, b) => a.localeCompare(b, 'en'))
+	);
+
+	/* [9,10,11,12,1,2] is a database row; "September to February" is what a cook
+	   reads. The stored order IS reading order and must never be sorted: a
+	   winter crop wraps the year end on purpose, and sorting it would print
+	   "January to December" for a vegetable that is out of season all summer.
+	   A run that is not contiguous is listed rather than ranged, because
+	   "April to May, September to October" is two seasons and saying "April to
+	   October" about it would be a lie. */
+	const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+		'July', 'August', 'September', 'October', 'November', 'December'];
+	function seasonLabel(months: number[]): string {
+		if (!months.length) return 'Year round';
+		const runs: number[][] = [];
+		for (const m of months) {
+			const last = runs[runs.length - 1];
+			if (last && ((last[last.length - 1] % 12) + 1) === m) last.push(m);
+			else runs.push([m]);
+		}
+		return runs
+			.map((r) => (r.length === 1 ? MONTHS[r[0] - 1] : `${MONTHS[r[0] - 1]} to ${MONTHS[r[r.length - 1] - 1]}`))
+			.join(', ');
+	}
 
 	/**
 	 * The L2506 bug, structurally impossible here.
@@ -280,6 +310,36 @@
 				<p class="eyebrow">{e.category}</p>
 				<h2>{e.term}</h2>
 				<p class="def">{e.definition}</p>
+				<!--
+					The atlas fields. Only the ingredient entries carry them, so this
+					whole block is absent on the 479 sealed terms rather than rendering
+					five empty rows: the data omits the keys entirely, and an {#if} per
+					row means an entry with a season but no keeping note still reads.
+
+					A description list, not a table and not paragraphs: these are
+					label/value pairs and dl is the element that says so, which matters
+					because a cook scanning for "how do I pick one" is doing exactly the
+					lookup dt describes. No heading per row, for the same reason the
+					crosslink group has none, spelled out below: more cards must not put
+					five times as many headings into the page's heading list.
+
+					Season renders as month names, because [9,10,11,12,1,2] is a database
+					row and "September to February" is what a person reads. The stored
+					order is already reading order and must not be sorted: a winter crop
+					wraps the year end on purpose.
+				-->
+				{#if e.season || e.choose || e.store || e.prep || e.methods}
+					<dl class="atlas">
+						{#if e.season}
+							<dt>Season</dt>
+							<dd>{seasonLabel(e.season)}</dd>
+						{/if}
+						{#if e.choose}<dt>Choosing</dt><dd>{e.choose}</dd>{/if}
+						{#if e.store}<dt>Keeping</dt><dd>{e.store}</dd>{/if}
+						{#if e.prep}<dt>Prep</dt><dd>{e.prep}</dd>{/if}
+						{#if e.methods}<dt>Cook it</dt><dd>{e.methods.join(', ')}</dd>{/if}
+					</dl>
+				{/if}
 				{#if e.recipes.length}
 					<!--
 						The links used to sit here with nothing but an arrow glyph in front
@@ -382,6 +442,26 @@
 	}
 	.lexcard h2 { font-size: var(--t-h4); margin: 4px 0 8px; }
 	.lexcard .def { font-size: 14.5px; color: var(--ink-soft); max-width: 62ch; }
+	/* The atlas rows. A two-column grid on anything with room, because the whole
+	   value of these fields is being scannable: a cook at a market wants
+	   "Choosing" to be findable without reading a paragraph. It collapses to one
+	   column on a narrow phone, where a 90px label column would leave the value
+	   six words wide. `dt` is styled as the quiet half deliberately: the reader
+	   is scanning for the label but reading the value. */
+	.atlas {
+		margin: 12px 0 0; display: grid; gap: 4px 14px;
+		grid-template-columns: max-content 1fr; align-items: baseline;
+		font-size: var(--t-small); line-height: 1.5;
+	}
+	.atlas dt {
+		color: var(--muted); text-transform: uppercase;
+		letter-spacing: 0.04em; white-space: nowrap;
+	}
+	.atlas dd { margin: 0; color: var(--ink); }
+	@media (max-width: 460px) {
+		.atlas { grid-template-columns: 1fr; gap: 2px; }
+		.atlas dd { margin-bottom: 8px; }
+	}
 	.xrefs { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
 	/* Reads as a label, not as another chip: no border, no link colour. */
 	.xlabel {

@@ -285,6 +285,30 @@ export interface LexiconEntry {
 	definition: string;
 	/** Recipe slugs that demonstrate this term: capped at 3 by crosslinks.mjs. */
 	recipes: string[];
+
+	/**
+	 * The atlas fields, on ingredient entries only.
+	 *
+	 * Optional because the 479 terms sliced from the archive do not carry them
+	 * and never will: raw/D.json is sealed at word-identity with the original,
+	 * so this shape has to hold both a definition card and an ingredient entry.
+	 * They are OMITTED rather than emitted empty, which is why these are `?`
+	 * and not `| null`: five empty keys on 479 terms is weight every reader
+	 * pays for on every install, against a precache budget with ~195 KB left.
+	 *
+	 * tools/derive/lexicon-supplement.mjs REQUIRES all five on every entry it
+	 * adds, so optional here never means optional to write.
+	 */
+	/** Peak months, 1 to 12, northern hemisphere. Empty array means genuinely year round. */
+	season?: number[];
+	/** What a good one looks and feels like in the hand, and the defect to reject. */
+	choose?: string;
+	/** Where, how long, and what kills it. */
+	store?: string;
+	/** The knife reality: peeling, trimming, oxidation, the part people get wrong. */
+	prep?: string;
+	/** Cooking methods the ingredient actually suits. */
+	methods?: string[];
 }
 
 /**
