@@ -6487,6 +6487,859 @@
     ]
   },
   {
+    "slug": "00-flour",
+    "term": "00 Flour",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "The Italian mill grade, and the commonest misunderstanding in a kitchen: the number is set by ASH, the mineral residue left after burning, which measures how much bran was milled out. Grind size is not part of the definition, though 00 is usually milled fine. Tipo 00 is the most refined, under 0.55 percent ash, so almost nothing of the bran survives; 0, 1 and 2 carry progressively more, and integrale is wholemeal. Italian law sets only a floor for protein, 9 percent at 00, and bags run from that to 13 percent for panettone, so a 00 can be weaker or stronger than the bread flour beside it. Low bran is what buys the silky, extensible dough that opens thin at the center and blisters into a puffed rim in 90 seconds at 450 C (840 F). Choose by the protein or W value, never by the zeroes.",
+    "recipes": [
+      "fresh-egg-pasta-tagliatelle-master",
+      "ravioli-del-plin",
+      "sfoglia-alluovo-the-hand-rolled-sheet"
+    ],
+    "season": [],
+    "choose": "Read past the zeroes. W is printed on professional sacks only, so on a retail bag work it from the nutrition panel: protein divided by the serving weight. Want 12.5 percent or W260 to W320 for pizza, 9 to 10 for pastry.",
+    "store": "Airtight, cool and dark, a year for refined 00, since the bran and germ are already gone. Keep it well away from onions and spice, as flour takes on smells fast. Weevils enter through paper, so decant it.",
+    "prep": "It hydrates faster and more evenly than coarse flour, so an autolyse works quickly: mix flour and water, rest 20 to 30 minutes, then add salt and yeast. Weigh it, since it packs differently from all-purpose.",
+    "methods": [
+      "baking",
+      "boiling",
+      "frying",
+      "griddling"
+    ]
+  },
+  {
+    "slug": "almond",
+    "term": "Almond",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Prunus dulcis, the seed of a drupe, a peach relative stripped of its flesh, which is why an almond tastes faintly of stone fruit. Bitter almonds and apricot kernels both hold amygdalin, which the seed's own emulsin turns to hydrogen cyanide once crushed and wetted; bitter kernels are still sold loose and online under both names, a handful will poison a child and a few dozen can kill an adult, so cook only with sweet almonds. At about 50 percent oil and mostly oleic, the almond keeps far better than walnut or pecan and takes more grinding before it slumps to butter, which is what makes marzipan, frangipane and the Mediterranean habit of thickening with nuts possible. The brown skin is tannin: sixty seconds in boiling water and it slips off between two fingers. Toast at 160 C (320 F) and pull the tray a shade pale, because they keep coloring off the heat.",
+    "recipes": [
+      "delaware-peach-pie",
+      "michigan-cherry-pie",
+      "nevada-pine-nut-cookies"
+    ],
+    "season": [
+      8,
+      9,
+      10
+    ],
+    "choose": "Plump, uniformly tan kernels with no shrivel and no dark oily patches. Smell the bag: sweet and milky is right, crayon or old paint is rancid fat. Buy new crop in autumn, and buy whole, not sliced.",
+    "store": "Sealed, cool and dark for 6 months, refrigerated for a year, frozen almost indefinitely: rancidity is oxygen attacking unsaturated fat, and cold stops it. Ground almonds spoil fastest of all.",
+    "prep": "Blanch 60 seconds in boiling water and pinch the skins off while warm. Grind cold and in short pulses with a spoonful of the recipe's sugar or flour, or released oil turns the meal into wet paste.",
+    "methods": [
+      "roasting",
+      "toasting",
+      "blanching",
+      "frying",
+      "baking",
+      "candying"
+    ]
+  },
+  {
+    "slug": "arborio-rice",
+    "term": "Arborio Rice",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "A fat Italian superfino grain which, with its cousins CARNAROLI and VIALONE NANO, is bred for one job: to surrender surface starch while its core stays firm. The chalky center is not amylose but loosely packed starch full of air spaces, so it hydrates slowly and keeps its bite while the abraded outer layers gelatinize and shed the starch that thickens the liquid into a sauce, which is why risotto is creamy without a drop of cream. Do not rinse it; you would wash off the starch you are farming. Toast the dry grain in fat until the edges turn glassy and the core stays opaque, splash with wine, then feed in hot stock a ladle at a time, stirring so the grains abrade against one another. Carnaroli carries more amylose, holds its bite far longer and is the safer rice for service. Finish off the heat by beating in cold butter and grated cheese hard, the mantecatura, and send it loose enough to spread slowly across a tilted plate.",
+    "recipes": [
+      "risotto-alla-milanese",
+      "torta-di-riso-bolognese",
+      "weeknight-paella"
+    ],
+    "season": [],
+    "choose": "Plump pearly grains showing a visible opaque white core, from a sealed box or bag. Carnaroli holds its bite longest, vialone nano cooks fastest, arborio sheds starch soonest and overcooks fastest. Reject dusty, broken or dull grain.",
+    "store": "Airtight in a cool dark cupboard up to two years; an open jar loses no starch, it only invites weevils, since the cream is freed from the grain in the pot rather than carried on it as dust. Risotto never comes back as risotto, but chilled firm it is the body for arancini.",
+    "prep": "Never rinse it. Toast it until the edges go glassy and the core stays white, and keep the stock at a simmer so the pot never drops off temperature. Stir often enough to abrade the grains, not constantly.",
+    "methods": [
+      "toasting",
+      "simmering",
+      "baking",
+      "frying",
+      "deep-frying"
+    ]
+  },
+  {
+    "slug": "basmati-rice",
+    "term": "Basmati Rice",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "The long-grain aristocrat of the Punjab, high in amylose and defined by two things: AROMA and ELONGATION. The aroma is 2-acetyl-1-pyrroline, the same popcorn molecule that scents jasmine rice, carried here on a drier, nuttier frame. The elongation is why the grain is AGED, held a year or more before sale: in storage its own lipids break down to free fatty acids that bind amylose and the protein matrix cross-links, so the grain firms, takes up MORE water, and stretches lengthwise nearly double instead of bloating and bursting. New-crop basmati cooks gummy and will not elongate. Rinse, then soak 20 to 30 minutes so water enters before heat does and the center cooks before the outside blows out. Soaked and drained, it needs 1 part rice to 1.25 parts water; unsoaked, 1.5. For biryani boil it like pasta in salted water, drain it short, and finish it in the steam of the sealed pot.",
+    "recipes": [
+      "kheer",
+      "kedgeree",
+      "hyderabadi-dum-biryani"
+    ],
+    "season": [],
+    "choose": "Long slender ivory grains with a faint nutty smell, and a bag that states AGED or a crop year. Reject a high count of broken grains, and reject new-crop basmati, which cooks soft and refuses to elongate.",
+    "store": "Airtight, cool and dark, but know the trade: aging firms the grain while its 2-acetyl-1-pyrroline evaporates, so buy aged and use it within the year. Keep it from spices, since the grain takes on smells. Cooked, refrigerate within the hour, three days.",
+    "prep": "Rinse until the water runs clear, soak 20 to 30 minutes, then drain. Handle the soaked grain gently, because it is fragile and broken grains cloud the pot. Fork it through after resting, never spoon it.",
+    "methods": [
+      "boiling",
+      "steaming",
+      "simmering",
+      "pressure cooking",
+      "baking"
+    ]
+  },
+  {
+    "slug": "black-bean",
+    "term": "Black Bean",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "The turtle bean of Latin America, whose black coat is anthocyanin, the same pigment family as blackcurrant and red cabbage and just as sensitive to pH: alkaline water, or a pinch of soda, swings it to blue-gray and the pot goes drab, while a squeeze of acid at the end holds the color deep and dark. Hard water is a different lever, its calcium cross-linking the pectin so beans cook slower, not duller. Acid late has a second reason: tomato or lime at the start keeps that pectin from breaking down and the beans stay stubborn hours past their time. The cooking liquid is not waste, dark with leached anthocyanin and thick with dissolved starch, the body of a Brazilian feijoada and of Cuban frijoles negros, so never pour it away. Cook with cumin, epazote and a whole onion, and thicken by mashing a ladleful of beans back in rather than flour.",
+    "recipes": [
+      "jajangmyeon"
+    ],
+    "season": [],
+    "choose": "Deep even black with a glossy coat and a clear white eye. Reject faded brown-black beans, split coats, or a bag with dust and broken halves at the bottom: all signs of age, and old beans stay hard.",
+    "store": "Airtight, dark, cool, inside a year, with the date on the jar. Cooked, they keep 5 days refrigerated in their liquid, or freeze them in it and bring them back in the refrigerator overnight.",
+    "prep": "Sort for stones, then soak overnight in salted water at 1 percent, which pulls calcium out of the pectin. Drain that water off, cover by 5 cm, and boil hard for 10 full minutes before anything else: raw beans carry the lectin phytohemagglutinin, less of it than red kidneys but it is there, and holding them below boiling makes it worse rather than safer, so never start them dry in a slow cooker. Then drop to a shiver for 60 to 90 minutes; a rolling boil past that point bursts every coat.",
+    "methods": [
+      "simmering",
+      "stewing",
+      "braising",
+      "pressure cooking",
+      "pureeing",
+      "frying"
+    ]
+  },
+  {
+    "slug": "black-eyed-pea",
+    "term": "Black-eyed Pea",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Not a Phaseolus at all but a cowpea, Vigna unguiculata, out of West Africa and carried to the American South, where it became Hoppin' John. A thinner coat and a softer cotyledon mean it needs no soaking and cooks in 45 minutes from dry. Separately, being a Vigna it makes no phytohemagglutinin, so the ten minute hard boil a kidney bean demands is not a question here; its own mild lectins go in the ordinary simmer. The flavor is earthy and faintly mineral, closer to a fresh shelling pea than to a bean, and it carries smoke: ham hock, bacon, a burnt onion. It goes from firm to mush inside ten minutes, so taste early and often. Fresh field peas, sold shelled in late summer, cook in 20 minutes and are a different thing. Pull them just short and let them finish off the heat in their pot liquor.",
+    "recipes": [
+      "moin-moin",
+      "hoppin-john",
+      "lowcountry-hoppin-john"
+    ],
+    "season": [],
+    "choose": "Cream-colored with a clean black eye and a smooth taut coat. Reject yellowed, shrunken or cracked peas, and beware a bag that rattles with dust: age here means a cooking time you cannot predict.",
+    "store": "Airtight, dark and cool, inside a year. Cooked, 4 days refrigerated in their liquor. Fresh shelled field peas are perishable: refrigerate and cook within 2 days, or blanch 2 minutes, cool, then tray freeze.",
+    "prep": "No soaking needed, though an hour in warm water evens the cooking. Sort for grit, then simmer with a smoked hock and an onion for 40 to 50 minutes, salting from the start, and taste from minute 35.",
+    "methods": [
+      "simmering",
+      "stewing",
+      "braising",
+      "frying",
+      "pressure cooking"
+    ]
+  },
+  {
+    "slug": "bread-flour",
+    "term": "Bread Flour",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Hard wheat milled to 12 to 14 percent protein, and that number matters only because two of those proteins, GLIADIN and GLUTENIN, hydrate and cross-link into gluten: gliadin brings extensibility, glutenin brings elasticity, and together they build a net that traps the carbon dioxide the yeast makes. More protein means a stronger net, more gas held, a taller rise and a chewier crumb, which is why bread flour carries baguettes, bagels, pizza and the enriched doughs that would tear under butter and egg. It also drinks 3 to 5 percent more water by weight than all-purpose, so swapping it in at the same hydration gives you a tight, stiff dough that fights the shaping. Malted barley flour is often blended in to feed the yeast and brown the crust. Keep it out of biscuits, pastry and cake, where gluten is the enemy of tenderness.",
+    "recipes": [
+      "nan-e-barbari",
+      "pizza-margherita",
+      "rosemary-focaccia"
+    ],
+    "season": [],
+    "choose": "Look for 12 to 14 percent protein on the panel. Bleach only whitens pigment; the chlorine that weakens gluten goes on cake flour. Malted barley flour helps browning. Reject a sharp or paint smell, oxidized lipid.",
+    "store": "Airtight, cool and dark, six months to a year; white flour far outlasts whole grain. In a warm kitchen freeze it in a sealed bag, then bring it back to room temperature before mixing so dough temperature holds.",
+    "prep": "Raise hydration 3 to 5 percent over all-purpose, because it drinks more. Mix, then rest 20 minutes before kneading and much of the gluten builds itself. Weigh it; never scoop. Flour is raw: never taste raw dough or batter, which has carried E. coli and Salmonella.",
+    "methods": [
+      "baking",
+      "steaming",
+      "frying",
+      "boiling",
+      "griddling"
+    ]
+  },
+  {
+    "slug": "buckwheat",
+    "term": "Buckwheat",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Not wheat and not even a grass: the seed of Fagopyrum, a relative of rhubarb and sorrel, and therefore GLUTEN FREE, a pseudocereal alongside quinoa and amaranth. Gluten free is not the same as safe for everyone: buckwheat itself sets off anaphylaxis often enough to be a labeled allergen in Japan and Korea, and ordinary flour is milled and bagged alongside wheat, so celiacs need a bag certified for it. The hulled seed is the groat; toasted, it becomes KASHA, and that toasting is where the deep, malty, faintly bitter flavor lives. Raw groats are pale, mild and collapse into mush quickly, so toast them in a dry pan until they smell of cocoa before any liquid goes near them, then use no more than 1 part groats to 1.75 parts water for 12 to 15 minutes. The classic insurance against mush is to coat the dry groats in beaten egg and dry them in the pan first, sealing each seed. The flour, dark and flecked with hull, carries soba, galettes and blini, but it builds no structure at all: cut it with wheat flour unless the recipe is designed around that fragility.",
+    "recipes": [
+      "buckwheat-cakes",
+      "scrapple",
+      "zaru-soba"
+    ],
+    "season": [],
+    "choose": "Choose by color: pale groats are raw and mild, deep reddish-brown kasha is toasted and malty. For soba or blini, buy flour visibly flecked with dark hull. Reject flour that smells of crayon or oil paint: that is its germ oil gone rancid. Musty is mold, not age.",
+    "store": "Airtight, cool and dark, six months for groats. The flour is fatty and turns quickly: keep it in the freezer and use it inside three months. Rancid buckwheat tastes of cardboard and cannot be rescued by cooking.",
+    "prep": "Toast raw groats in a dry pan until they smell of cocoa, then 1 part groats to 1.75 parts water, 12 to 15 minutes. For separate grains, coat the dry groats in beaten egg and dry them in the pan first.",
+    "methods": [
+      "toasting",
+      "boiling",
+      "simmering",
+      "baking",
+      "griddling"
+    ]
+  },
+  {
+    "slug": "bulgur",
+    "term": "Bulgur",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Wheat that has already been cooked: whole durum kernels are parboiled, dried, stripped of part of their bran, then cracked and sorted by size. That parboiling gelatinizes the starch, which is why bulgur needs only rehydration rather than cooking, and why it is one of the most stable things in a pantry. Grade is everything and the numbers are printed on the bag. FINE, number 1, is soaked cold for tabbouleh and worked raw into kibbeh; MEDIUM, number 2, suits pilaf; COARSE, numbers 3 and 4, holds its shape in stuffings and stews. Do not confuse it with cracked wheat, which is raw and needs genuine cooking time. For fine grade, cover with cold water or lemon juice for 20 to 30 minutes and wring it out in a cloth; for coarse, use 1 part grain to 1.5 parts boiling stock, lid on, off the heat, 20 minutes, then fork it through.",
+    "recipes": [
+      "tabbouleh",
+      "mujaddara-hamra",
+      "kibbeh-maqliyeh"
+    ],
+    "season": [],
+    "choose": "Buy by number: fine 1 for tabbouleh and kibbeh, medium 2 for pilaf, coarse 3 or 4 for stuffing. Grains should be uniform and smell toasty. Reject anything labeled cracked wheat, which is raw and behaves differently.",
+    "store": "Airtight, cool and dark, a year and more, since it is already cooked and dried. Keep it away from damp, which mats it. Refrigerate soaked bulgur and use it within two days, before the lemon dulls it.",
+    "prep": "Fine grade: cover with cold water or lemon juice 20 to 30 minutes, then wring it dry in a cloth. Coarse: 1 part grain to 2 parts boiling stock, lid on, off the heat, 30 minutes, then fork it through.",
+    "methods": [
+      "simmering",
+      "steaming",
+      "boiling",
+      "baking",
+      "frying"
+    ]
+  },
+  {
+    "slug": "cannellini-bean",
+    "term": "Cannellini Bean",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "A white kidney bean bred to Italian taste: long, thin-skinned and mild, with a cotyledon that cooks to cream while the coat stays whole around it. Tuscany built fagioli all'uccelletto, ribollita and pasta e fagioli on that, each wanting the bean and its starchy broth together. Because it is Phaseolus vulgaris, the same species as the red kidney, it carries the same lectin at about a third the level: soak, drain, and give it ten minutes at a rolling boil before dropping to a simmer, and the question is closed. After that cook it barely moving, with sage, garlic and olive oil, which carries the fat soluble aromatics through the broth. Stop when one crushes with no chalk at the center, then cool it in its own liquid so the skins stay on. Get the pot into the refrigerator inside two hours: boiling does not kill Bacillus cereus spores, and a warm pot of beans is where they wake up.",
+    "recipes": [
+      "cassoulet-de-toulouse",
+      "pasta-e-fagioli"
+    ],
+    "season": [],
+    "choose": "Ivory-white plump ovals with tight unbroken skins. Reject yellowed or gray beans, which are old and will never soften, and any bag carrying loose shed skins and broken halves at the bottom.",
+    "store": "Airtight, cool and dark, inside a year. Cooked, they keep 5 days refrigerated submerged in their liquid; left uncovered they dry, wrinkle and split. Jarred Spanish and Italian beans earn their price.",
+    "prep": "Sort, then soak overnight in salted water. Drain, cover with fresh water, boil hard 10 minutes, then simmer 45 to 75 minutes as gently as the pan allows. Salt early; keep tomato and vinegar for the end.",
+    "methods": [
+      "boiling",
+      "simmering",
+      "braising",
+      "stewing",
+      "pureeing",
+      "pressure cooking"
+    ]
+  },
+  {
+    "slug": "cashew",
+    "term": "Cashew",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "You have never seen a truly raw cashew. The nut is the fruit proper, a drupe whose double shell is lined with caustic oil rich in anacardic acid, kin to the urushiol in poison ivy, and every commercial cashew is steamed or roasted in the shell to drive it off before shelling; what a shop labels raw means only unroasted after that. The cashew apple above it is a swollen stalk, juicy and astringent, too fragile to ship fresh and fermented in Goa into feni. Nutritionally it is the odd one out: about 44 percent fat, high in starch and low in fiber, and it is the missing fiber, not the starch, that lets soaked kernels blend to a smooth neutral cream, the fat and protein doing the thickening. It is a severe tree-nut allergen and cross-reacts with pistachio. Soak in just-boiled water 20 minutes, then blend with fresh water and stop before the machine heats it and the fat separates.",
+    "recipes": [
+      "acaraje",
+      "wattalappam",
+      "watalappan"
+    ],
+    "season": [],
+    "choose": "Whole unbroken kernels of even ivory color, graded W240 or W320 by count. Reject gray, spotted or shriveled nuts and anything with a sour smell. Broken pieces cost half and are fine for blending.",
+    "store": "Sealed and frozen a year, refrigerated 6 months, in a cupboard 2 to 3 months. They take up other smells more readily than most nuts, so keep the jar shut and away from onions, coffee and spice.",
+    "prep": "For cream, cover with just-boiled water 20 minutes, drain, and blend with fresh water to the thickness you want. For crunch, toast 12 to 15 minutes at 160 C (320 F); they color unevenly, so shake twice.",
+    "methods": [
+      "toasting",
+      "roasting",
+      "frying",
+      "pureeing",
+      "baking",
+      "candying"
+    ]
+  },
+  {
+    "slug": "chestnut",
+    "term": "Chestnut",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "The sweet chestnut, Castanea sativa, is not a nut in kitchen terms: about half water, 45 percent carbohydrate and only 2 to 3 percent fat, so it behaves like a potato with sugar in it, and the flour is naturally gluten free. That water is why it sits on the produce table and spoils like a vegetable, going moldy or drying to a rattle within weeks. Much of the sweetness is sucrose already in the raw nut, built up as cold storage turns starch to sugar; roasting gelatinizes the rest and browns the sugar rather than making it, though a raw nut still tastes chalky. It has two skins: the glossy outer shell and a bitter tannic pellicle folded into every crease of the kernel, which is the entire difficulty of peeling. Score the flat face through to the flesh, roast at 200 C (390 F) for 20 minutes, and peel them scalding hot, because a cold chestnut never gives up its pellicle.",
+    "recipes": [
+      "ma-tai-gou-water-chestnut-cake",
+      "zongzi",
+      "shio-koji"
+    ],
+    "season": [
+      10,
+      11,
+      12
+    ],
+    "choose": "Heavy, firm and glossy, no give when squeezed, no worm hole. A light nut has dried and shrunk from its shell; a rattle means air and a wasted nut. Sweet chestnuts have a flat side and a pointed tassel; a round nut with no tassel, from a husk with a few thick spikes, is a horse chestnut, which is toxic and roasting does not change that.",
+    "store": "Refrigerate in a paper bag and use within 2 weeks; they are alive and still respiring. At room temperature they mold in days. Cooked and peeled, they freeze well, and vacuum-packed ones are honest.",
+    "prep": "Score a deep X or a belt right through the shell on the flat face, or steam builds and they burst. Roast or boil 20 minutes, then peel a few at a time while too hot to hold, keeping the rest warm.",
+    "methods": [
+      "roasting",
+      "boiling",
+      "braising",
+      "steaming",
+      "pureeing",
+      "candying"
+    ]
+  },
+  {
+    "slug": "chickpea",
+    "term": "Chickpea",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "One species, Cicer arietinum, in two market types: KABULI, the large pale chickpea of hummus and Spanish stews, and DESI, the small dark-skinned Indian one split into chana dal. Buy chana dal and besan from a seller you trust: both have been cut with grass pea, Lathyrus sativus, whose neurotoxin cripples on a steady diet. Pectin glues the cell walls, and in seed held warm and damp it loses methyl groups and locks onto calcium and magnesium freed from phytate, so the seed stays gritty for hours. Bicarbonate is the answer: alkali swaps sodium onto those chains and breaks them apart, giving skins that slip and a puree that tastes of chickpea instead of grit. AQUAFABA is the cooking liquid, not the soak water, which is drained: protein and leached saponins whip like egg white. Cook further than looks right, until a chickpea crushes to paste between finger and thumb with no core at all.",
+    "recipes": [
+      "panelle-palermitane",
+      "mohinga",
+      "ohn-no-khao-swe"
+    ],
+    "season": [],
+    "choose": "Buy where the sacks move, off the hot aisle: warm damp storage, not the calendar, sets the pectin hard, while cool dry seed cooks soft past a year. Want even size, matte unbroken skins, no split halves or dust.",
+    "store": "Airtight, dark and cool, used inside a year, with the purchase date written on the jar. Cooked chickpeas keep 4 days refrigerated under their own liquid, which stops the skins drying and cracking.",
+    "prep": "Soak 12 hours in salted water at 1 percent plus half a teaspoon of bicarbonate per 250 g; the salt displaces calcium from the pectin and softens the skin. Drain, cover by 5 cm, simmer, skim the foam.",
+    "methods": [
+      "simmering",
+      "pressure cooking",
+      "braising",
+      "roasting",
+      "frying",
+      "stewing"
+    ]
+  },
+  {
+    "slug": "couscous",
+    "term": "Couscous",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "PASTA, not a grain, and knowing that changes how you handle it: durum semolina is moistened and rolled by hand or machine against dry semolina until it agglomerates into tiny spheres, which are then dried. Factory couscous is steamed before that drying, which is exactly what makes it instant. It is wheat, so it is not gluten free. You are cooking dough, not hydrating a kernel. Traditional Maghrebi couscous is steamed three separate times in a couscoussier set over the stew it will be served with, raked, oiled and rested between steamings, and it comes out light and separate. Instant wants only an equal volume of boiling stock, a lid, 5 minutes and a fork. The universal fault is the lump: add a spoon of oil or butter and rake the grains apart with your fingers while they are still warm. MOGHRABIEH is the same idea larger, hand rolled, steamed or simmered into the stew; Israeli ptitim is extruded and oven toasted wheat pasta, a different thing, boiled like pasta.",
+    "recipes": [
+      "seven-vegetable-couscous",
+      "falafel",
+      "lamb-and-apricot-tagine"
+    ],
+    "season": [],
+    "choose": "Nearly all boxed couscous, plain included, is already precooked; for true steaming ask a North African grocer for grain marked not precooked. Medium is the default grade, fine for salads. Grains even and free running, with no seasoning or salt blended in.",
+    "store": "Airtight, cool and dark, a year and more, since it is dried pasta and behaves like it. Cooked couscous carries Bacillus cereus spores that live through cooking and wake in grain left standing warm, and their toxin is not undone by more heat: spread it out, refrigerate inside two hours, use it in four days, and warm it through with a splash of stock and a fork.",
+    "prep": "Instant: equal volumes boiling stock, lid, 5 minutes, then rake apart with oiled fingers while warm, the only real cure for lumps. Traditional: steam three times, oiling and raking the grains between each.",
+    "methods": [
+      "steaming",
+      "boiling",
+      "simmering",
+      "baking"
+    ]
+  },
+  {
+    "slug": "farro",
+    "term": "Farro",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "An ancient hulled wheat, most often EMMER, Triticum dicoccum, though spelt and einkorn are sold under the same name across Italy. The commercial grade, not the variety, decides both texture and timing. PERLATO has been pearled, the bran abraded off exactly as it is on pearl barley: it cooks in 20 to 25 minutes with no soak, and it will slump to porridge if you walk away from the pot. SEMIPERLATO is partly scoured. INTEGRALE keeps its whole bran, so the fiber shields the starch and the grain stays chewy and nutty; it wants several hours of soaking and 40 minutes or more of simmering. Cook any grade like pasta in abundant salted water or stock, drain while the grains still resist the tooth, and dress them warm, because a warm grain drinks vinaigrette and a cold one sheds it. Perlato makes the better farrotto, its bared starch binding the pan.",
+    "recipes": [],
+    "season": [],
+    "choose": "Read the grade first, perlato, semiperlato or integrale, since cooking time roughly triples across them. Grains should be plump and whole with a clean wheat smell. Reject bags heavy with cracked grain and chaff.",
+    "store": "Airtight, cool and dark. Perlato keeps a year; integrale still has its bran oil and is best inside six months, or in the freezer. Spread cooked farro thin to cool fast and refrigerate inside two hours, since standing warm grain grows Bacillus cereus. Use it in four days.",
+    "prep": "Soak integrale several hours; perlato needs none. Boil in abundant salted water or stock and drain while it still resists the tooth. Dress it warm, because a warm grain drinks dressing and a cold one repels it.",
+    "methods": [
+      "boiling",
+      "simmering",
+      "braising",
+      "baking",
+      "toasting"
+    ]
+  },
+  {
+    "slug": "glutinous-rice",
+    "term": "Glutinous Rice",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Sticky rice, sweet rice, mochigome, khao niao: a grain that is almost pure AMYLOPECTIN, one to two percent amylose, which is why it cooks translucent, chewy and clinging to itself in a mass. It contains NO GLUTEN; the name describes glue-like texture, which matters to anyone cooking for celiac disease. It drinks water fast and has no amylose network to hold shape, so free water wrecks it: soak at least 4 hours or overnight, then STEAM it over water in a cloth or a woven basket for 25 to 35 minutes, turning the mass once. Boiled, it slumps into paste. Pounded hot it becomes mochi; milled, it is the flour that gives tang yuan and mochiko cakes their chew. Black glutinous rice is the same starch with the bran left on and wants a longer soak. Serve it warm. Cold it firms as the amylopectin retrogrades, but that firming reverses: steam or grill it again and it softens, which is how hard mochi is rescued.",
+    "recipes": [
+      "guihua-nuomi-ou-osmanthus-lotus-root-with-glutinous-rice",
+      "lo-mai-gai-lotus-leaf-sticky-rice-parcels",
+      "ichigo-daifuku"
+    ],
+    "season": [],
+    "choose": "Chalky opaque white grains, not translucent ones: the surest way to pick it from a bin. That opacity is air between loosely packed starch granules, not amylopectin itself, so chalk in ordinary rice is still a defect. Thai long grain for khao niao, Japanese mochigome for mochi. Reject yellowed grain.",
+    "store": "Airtight, cool and dark, a year or more. Black glutinous rice keeps its bran oil, so use it inside six months. Cooked sticky rice is not acidified like sushi rice: a warm cloth basket is four hours at most, then chill it and steam it soft again, because Bacillus cereus spores survive the pot and grow in rice held warm.",
+    "prep": "Soak 4 hours or overnight, drain, then STEAM in cloth or a basket 25 to 35 minutes, turning once. Boiling gives paste. Wet your hands and the paddle before handling or it will glue itself to both.",
+    "methods": [
+      "steaming",
+      "boiling",
+      "grilling",
+      "frying",
+      "baking"
+    ]
+  },
+  {
+    "slug": "green-lentil",
+    "term": "Green Lentil",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "The everyday brown-green lentil, Lens culinaris, sold whole with its seed coat still on. It is small and flat, so water reaches the cotyledon in minutes, which is why a lentil goes from bag to bowl in 25 minutes while a bean wants a night. The coat is what holds the shape, so keep the water at a bare shiver: a hard boil tears it open and you get soup where you wanted salad. Acid is the lever here. Nothing cross-links: acid stalls the beta-elimination that dissolves pectin above pH 5, so vinegar or tomato at the start holds the lentils firm and adds twenty minutes; at the end it seasons without fighting the pot. Salt early does no harm and seasons the interior. Cook them in stock with a bay leaf and half an onion, then dress them the moment they come off the heat, while they are still hot and still drinking.",
+    "recipes": [
+      "montana-lentil-and-wheat-berry-salad",
+      "idaho-lentil-soup",
+      "shukto"
+    ],
+    "season": [],
+    "choose": "Look for whole domed lentils of one size, little dust, few split or shriveled ones. Skip any bag with pale chalky specimens mixed in: those are old and stay gritty while the sound lentils around them collapse.",
+    "store": "Airtight and dark, best inside a year; heat and light dull the flavor and harden the coat. Cooked and cooled they keep 5 days refrigerated, and improve on day two with a little oil and vinegar.",
+    "prep": "No soaking. Tip onto a tray and pick out grit and the odd stone, then rinse. Cook in three times their volume of liquid at a bare simmer, start testing at 20 minutes, and stop while they still bite. If you sprout them, use seed sold for sprouting and cook the sprouts: a warm wet jar multiplies whatever the seed carried.",
+    "methods": [
+      "simmering",
+      "braising",
+      "stewing",
+      "pressure cooking",
+      "sprouting"
+    ]
+  },
+  {
+    "slug": "hazelnut",
+    "term": "Hazelnut",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Corylus avellana, the filbert, and a nut whose flavor roasting amplifies rather than invents: the character compound filbertone is present in the raw kernel and heat multiplies it, while Maillard pyrazines add the generic toasted layer around it. Give it 12 to 15 minutes at 160 C (320 F), until the kernel is honey-colored right through to the center, not just at the surface. The skins are bitter, so tip the hot nuts into a clean towel, wrap them two minutes to steam, then rub hard. Its fat runs close to 80 percent oleic, the highest of the common nuts, so it keeps better than walnut or pecan, though the freezer is still the answer. Ground with chocolate it becomes GIANDUJA; ground alone and worked past paste it is hazelnut butter, and only caramelized sugar ground in with it makes praline paste. Roast whole and grind what you need.",
+    "recipes": [
+      "oregon-hazelnut-torte",
+      "sole-meuniere",
+      "sibirskie-pelmeni"
+    ],
+    "season": [
+      8,
+      9,
+      10
+    ],
+    "choose": "Heavy plump kernels of even size with tight skins and no shrivel; a nut in shell that rattles has dried out. Piedmont Tonda Gentile is worth the price for pastry. Reject anything smelling of old oil.",
+    "store": "Sealed and frozen for a year, refrigerated for 6 months. Roast and skin only what you will use that week: a skinned nut has lost its wrapper and oxidizes noticeably faster than a whole one does.",
+    "prep": "Roast 12 to 15 minutes at 160 C (320 F), tip hot into a towel, wrap 2 minutes to steam, then rub. Accept that a tenth of the skin never leaves. Roast rather than serve raw where birch pollen hay fever is common: the protein that itches mouths breaks down with that heat, while the proteins behind true nut allergy do not.",
+    "methods": [
+      "roasting",
+      "toasting",
+      "baking",
+      "grinding",
+      "candying",
+      "frying"
+    ]
+  },
+  {
+    "slug": "jasmine-rice",
+    "term": "Jasmine Rice",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Thai hom mali: a long grain that behaves like a medium one. Amylose sits lower than in basmati, around 15 to 18 percent, so the cooked grains come out soft, moist and lightly clinging, meant to be lifted in a clump with a spoon rather than blown apart into a pilaf. The perfume is again 2-acetyl-1-pyrroline, and here is the difference that catches cooks out: jasmine is best NEW CROP and the scent fades with every month in the bag, where basmati wants age. Because the grain is already soft, cut the water back to about 1 part rice to 1.25 parts after rinsing, or mush is one splash away. This is the default rice under Thai curries, Vietnamese grilled pork and Cantonese steamed fish. Never fry it the day it is cooked: spread it on a tray, chill it uncovered overnight so the surface starch retrogrades and dries, then fry the separate grains hard.",
+    "recipes": [
+      "chicken-congee",
+      "pad-krapow-moo",
+      "khao-pad-thai-fried-rice"
+    ],
+    "season": [],
+    "choose": "Buy NEW CROP, the one rice that is better young: look for a harvest date and a clear pandan and popcorn smell through the bag. Reject dusty, heavily broken or flat-smelling grain, which has sat too long.",
+    "store": "Airtight, cool, dark and out of the light, and use it inside a year while it still smells of something. Cooked jasmine holds three days refrigerated and is better on day two for frying, once chilled and dry.",
+    "prep": "Rinse twice, no more, and cut the water to about 1.25 parts per part of rice, because this grain is soft to start with. Rest it lidded 10 minutes, then fork gently: it is meant to clump a little.",
+    "methods": [
+      "steaming",
+      "boiling",
+      "simmering",
+      "stir-frying",
+      "pressure cooking"
+    ]
+  },
+  {
+    "slug": "kidney-bean",
+    "term": "Kidney Bean",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "The red kidney bean carries more PHYTOHAEMAGGLUTININ, a lectin, than any other common bean, and undercooked it is genuinely dangerous: four or five soaked but unboiled beans bring on violent vomiting and diarrhea within a few hours. Heat destroys the lectin, but only real heat. THE BEANS MUST BE SOAKED, DRAINED, AND THEN BOILED HARD AT A ROLLING BOIL FOR AT LEAST TEN MINUTES before you drop the pot to a simmer. A slow cooker is the trap that has poisoned people: held near 80 C (176 F) the lectin survives and its activity climbs, so beans cooked gently from dry can be more toxic than raw ones. Boil them in a pan first, then slow cook if you like. Canned kidney beans have already been through that boil and are safe from the tin. The payoff is a bean that keeps its shape in chili where softer ones dissolve.",
+    "recipes": [
+      "dal-makhani",
+      "habichuelas-con-dulce"
+    ],
+    "season": [],
+    "choose": "Deep glossy red-brown, plump, with unbroken coats; reject dull, wrinkled or split beans and any bag full of dust. Canned are a legitimate choice here, already boiled through: drain and rinse them.",
+    "store": "Airtight, dark and cool, used inside a year. Cooked beans keep 5 days refrigerated in their liquid. Never keep the soaking water: it holds leached lectin and the sugars that cause wind. Bin it.",
+    "prep": "Soak 8 to 12 hours, discard that water, cover with fresh, and boil hard a full 10 minutes before simmering 60 to 90 minutes more. Set a timer for the boil and do not judge those ten minutes by eye.",
+    "methods": [
+      "boiling",
+      "simmering",
+      "stewing",
+      "braising",
+      "pressure cooking"
+    ]
+  },
+  {
+    "slug": "long-grain-white-rice",
+    "term": "Long-grain White Rice",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Rice starch is two molecules and the ratio decides everything: AMYLOSE, a straight chain that sets firm and separate as it cools, and AMYLOPECTIN, a branched one that stays soft and clinging. Long grain runs high in amylose, 22 to 28 percent, so the cooked grains stay individual, dry and distinct: the rice of pilaf, jambalaya, biryani and fried rice. Milling has stripped the bran and the oily germ, which is why it keeps for years and cooks quickly. Rinse until the water runs nearly clear to wash off loose milling starch, or the grains glue to the pot. Absorption is 1 part rice to 1.5 parts water by volume, lid on, 15 to 18 minutes at a bare simmer, then 10 minutes off the heat undisturbed, because the trapped steam finishes the center. Never stir the pot: a spoon tears softening grains and drags fresh amylose out of them, and that glues it.",
+    "recipes": [],
+    "season": [],
+    "choose": "Uniform translucent grains with few chalky white kernels and little broken rice drifting in the bottom of the bag, since breakage means starchy, uneven cooking. Reject any bag that smells musty or of old oil.",
+    "store": "Airtight in a cool dark cupboard, two years and more, because milling removed the germ that goes rancid. Weevils are the real threat: a sealed container beats a bay leaf. Cooked rice is the hazard: Bacillus cereus spores survive the pot and, left standing warm, make a heat-stable toxin that cooking does not undo. Cool it spread thin, refrigerate within the hour, three days.",
+    "prep": "Rinse in several changes of cold water until it runs clear, then drain well so the ratio stays honest; enriched US rice loses its sprayed-on vitamins that way, the price of separate grains. Rest lidded 10 minutes, then fork through.",
+    "methods": [
+      "boiling",
+      "steaming",
+      "simmering",
+      "stir-frying",
+      "baking"
+    ]
+  },
+  {
+    "slug": "masa-harina",
+    "term": "Masa Harina",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "The great fact of corn cookery. Dried field corn is simmered and steeped in an alkaline solution of slaked lime, calcium hydroxide, then washed and hulled: NIXTAMALIZATION. The alkali dissolves the pericarp, loosens the starch and, above all, frees bound niacin, vitamin B3, into a form the body can actually absorb, which is why cultures built on nixtamalized corn never suffered the pellagra that killed people wherever corn was adopted without the lime. It also builds the toasty lime flavor and lets starch and protein form a dough that coheres with no gluten in it at all. Masa harina is that nixtamalized corn dried and milled, so it needs only water: about 1 part masa to 1.3 parts warm water by weight, kneaded 2 minutes and rested 20. Fine grind presses tortillas, coarse builds tamales. Work it soft, because dry dough cracks at the edge.",
+    "recipes": [
+      "mississippi-delta-hot-tamales",
+      "texas-chili-con-carne",
+      "arizona-green-corn-tamales"
+    ],
+    "season": [],
+    "choose": "Buy masa harina stated as nixtamalized, fine grind for tortillas, coarse for tamales. It should smell sweetly of corn and lime. Its shelf twin masarepa is precooked arepa flour, never limed: like cornmeal and polenta it will not cohere.",
+    "store": "Airtight, cool and dark, six months to a year; the flavor fades long before it spoils and old masa tastes of dust. Fresh masa dough holds a day refrigerated under close wrap and dries out fast in open air.",
+    "prep": "About 1 part masa to 1.3 parts warm water by weight, kneaded 2 minutes and rested 20. Press between plastic sheets. If the edges crack as you press, the dough is dry: wet your hands and knead it again.",
+    "methods": [
+      "griddling",
+      "steaming",
+      "frying",
+      "deep-frying",
+      "baking"
+    ]
+  },
+  {
+    "slug": "mung-bean",
+    "term": "Mung Bean",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Vigna radiata, unlike anything else in the dry store: tiny seed, thin permeable coat, so water reaches the center fast and it cooks from dry in 30 to 40 minutes with no soaking. Its stachyose and raffinose run as high as most pulses: what is missing is the wait, not the gas. Skinned and split it is moong dal, the gentlest dal, pale yellow and ready in twenty. Whole, it is the sprouting bean of East Asia, and germination is a real transformation: amylases cut stored starch to sugars and the seedling builds vitamin C where there was almost none, which is why a sprout tastes sweet and green rather than starchy. Its starch runs 30 to 45 percent amylose, which sets firm as it cools, and that is why Chinese glass noodles and Korean mung jelly exist. Sprout in a jar in the dark, rinsing twice a day, and eat them at 3 to 5 cm before they green and turn bitter.",
+    "recipes": [
+      "kuih-talam-pandan",
+      "cendol",
+      "jian-bing"
+    ],
+    "season": [],
+    "choose": "Whole mung should be uniform olive-green with a bright waxy sheen, never dull khaki. For sprouting, buy food-grade seed with a stated germination rate. Reject wrinkled, mottled or dusty beans.",
+    "store": "Airtight, dark and cool, a year for whole beans; split moong dal has no coat to protect it and dulls faster, so use it in 6 months. Sprouts are alive: refrigerate in a vented box, eat within 3 days.",
+    "prep": "Rinse and sort; no soaking for whole beans, though 2 hours cuts the time by a third. For sprouts soak 8 hours, drain hard, and rinse morning and night: standing water is what turns a jar sour. Sprouting warmth and wet also multiply any Salmonella or E. coli riding in on the seed, and rinsing will not remove them, so buy seed sold and tested for sprouting, never garden seed, and cook the sprouts through for children, pregnant women, the old and anyone immune compromised.",
+    "methods": [
+      "simmering",
+      "stewing",
+      "sprouting",
+      "steaming",
+      "pressure cooking",
+      "frying"
+    ]
+  },
+  {
+    "slug": "peanut",
+    "term": "Peanut",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "A legume, not a nut: Arachis hypogaea flowers above ground, then the fertilized peg bends over, drives into the soil, and ripens its pod underground. That soil contact matters, because Aspergillus flavus and A. parasiticus on damaged pods make aflatoxin, which is heat stable and tasteless: roasting will not destroy it and your tongue will not catch it, so lots are sorted and tested and moldy or shriveled kernels go in the bin. It is also among the most serious food allergens: the proteins survive roasting, frying and grinding, and a shared fryer or a wiped board is enough to put someone in hospital. Otherwise it is a bean that acts like a nut, with enough sugar and free amino acid to Maillard hard. VALENCIA carry three or more sweet red skinned kernels a pod and are the ones boiled green; RUNNER goes to butter; SPANISH are small and the oiliest; VIRGINIA is the big in shell nut. Roast at 175 C (350 F) for 15 to 20 minutes and salt them hot.",
+    "recipes": [
+      "virginia-peanut-soup",
+      "chicken-satay-peanut-sauce",
+      "peanut-satay-sauce-master"
+    ],
+    "season": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "choose": "Shelled, want plump even kernels with tight skins, no shrivel, no dark specks, no green gray bloom. In shell, heavy with no rattle. Judge by eye, not by taste: aflatoxin has no flavor, and bitter usually means rancid oil. Green peanuts are damp and heavy, shells unstained.",
+    "store": "Sealed and cool for 3 months, refrigerated 6, frozen a year. The fat is largely oleic and keeps better than a walnut's, but warmth and humidity invite mold, the real risk here. Green peanuts spoil in days even cold. Boiled peanuts are wet and low in acid: keep them cold, never in a sealed jar on the counter.",
+    "prep": "Roast raw kernels 15 to 20 minutes at 175 C (350 F); they carry over, so pull them pale, tan through and not white at the center. Cool, then rub the skins off in a towel. Simmer green peanuts in heavy brine 1 to 4 hours, until soft through.",
+    "methods": [
+      "roasting",
+      "boiling",
+      "frying",
+      "baking",
+      "stewing",
+      "grinding"
+    ]
+  },
+  {
+    "slug": "pearl-barley",
+    "term": "Pearl Barley",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Barley scoured until the hull, the bran and the oily germ are polished away, which is what pearling means and why it cooks in 25 to 35 minutes rather than an hour. BETA-GLUCAN survives because in barley it sits in the cell walls of the endosperm itself, not mainly in the bran; it leaches out and thickens the liquid, which is why a barley soup keeps setting up in the pot overnight and why barley makes a convincing orzotto with none of the fussing a risotto demands. Pot or scotch barley is lightly pearled and keeps some bran; hulled barley is the whole grain and takes about twice as long. Note plainly that barley contains gluten, as hordein. Salt it early, since the grain takes salt slowly, and choose your method by the result you want: boil it in abundant water and drain for separate grains in a salad, or cook it in measured liquid when you want that thickening. Toast the dry grain in a dry pan first for a nuttier finish.",
+    "recipes": [
+      "montana-beef-and-barley-soup",
+      "mulgipuder",
+      "chairo"
+    ],
+    "season": [],
+    "choose": "Even, ivory, well-rounded pearls with few broken pieces. Three grades: pearl; pot or scotch, lightly pearled, some bran left, slower; hulled, the whole grain, near twice pearl's time. Reject gray or chipped grain.",
+    "store": "Airtight, cool and dark, a year for pearl; hulled barley still holds its bran oil and is best inside six months. Cooked barley keeps four days refrigerated and will thicken any soup it sits in overnight.",
+    "prep": "Pearl needs no soak. Toast it dry for flavor, then boil in abundant salted water and drain if you want separate grains; cook it in measured liquid only when you actually want the beta-glucan to thicken.",
+    "methods": [
+      "boiling",
+      "simmering",
+      "braising",
+      "baking",
+      "toasting"
+    ]
+  },
+  {
+    "slug": "pecan",
+    "term": "Pecan",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "A hickory of the Mississippi basin, Carya illinoinensis, and one of the fattest nuts in use at around 72 percent oil, behind macadamia. That fat is mostly oleic with about a fifth linoleic, and it is the linoleic that oxidizes: pecan turns slower than walnut, faster than almond, so it belongs in the freezer and not a jar on the shelf. Fat also means it browns fast and burns faster, and a pecan toasts through in 6 to 8 minutes at 160 C (320 F) where an almond wants twice as long. The convoluted kernel, folded around a bitter tannic septum, holds butter, sugar and salt in its creases, which is why candied pecan and praline coat so evenly. Varieties count: DESIRABLE and STUART are large and mild, wild natives are small, dark and far more flavorful. Toast before any batter; raw pecan is sweet and tannic but reads mostly of fat.",
+    "recipes": [
+      "georgia-pecan-pie",
+      "mississippi-pecan-pralines",
+      "alabama-peach-and-pecan-cobbler"
+    ],
+    "season": [
+      10,
+      11,
+      12
+    ],
+    "choose": "Plump glossy halves of even deep gold-brown. Reject shriveled, dull or blotchy kernels and any showing dark oily spots. If the bag smells of putty or crayon, the oil has already turned: walk away.",
+    "store": "Sealed in the freezer for a year or more; refrigerated, 6 months; a cupboard, only weeks in warm weather. Buy shelled pecans from a shop with turnover, and buy new crop from October to December.",
+    "prep": "Toast 6 to 8 minutes at 160 C (320 F), shaking once, and watch them: the line between toasted and burnt is about sixty seconds. Cool flat on the tray before chopping so they stay crisp and do not smear.",
+    "methods": [
+      "toasting",
+      "roasting",
+      "baking",
+      "candying",
+      "frying"
+    ]
+  },
+  {
+    "slug": "pine-nut",
+    "term": "Pine Nut",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "The seed of a pine cone, pried out by hand, which is most of why it costs what it does. Two shapes reach the market and they are not the same food: the Mediterranean stone pine, Pinus pinea, gives the long slim teardrop of pesto, sweet and faintly resinous; the Asian pines give a squat triangular kernel, cheaper and blander. PINE MOUTH comes from one of those Asian pines, Pinus armandii, which ships unnamed inside generic Chinese pine nuts: a day or two after eating, everything tastes bitter and metallic, and it can last two weeks. No treatment, no lasting harm, but a guest will remember it, so buy Korean or Mediterranean by name. The fat is highly unsaturated and they go rancid faster than almost anything else, so taste one before you use them. Toast in a dry pan over low heat, moving them constantly: they go from pale to burnt in seconds.",
+    "recipes": [
+      "nevada-pine-nut-cookies",
+      "panellets-de-pinyons",
+      "songshu-guiyu"
+    ],
+    "season": [],
+    "choose": "Long slim ivory kernels if you want Mediterranean flavor; squat triangles are the cheaper Asian species. Check the stated origin, reject any that look yellow or oily, and taste one before buying more.",
+    "store": "Sealed in the freezer, where they hold 6 months to a year; a cupboard jar goes rancid in weeks and the flavor fades before that. Toast them straight from frozen, allowing about a minute longer.",
+    "prep": "There is no prep beyond toasting, and that is the whole risk: dry pan, low heat, constant motion, 3 to 4 minutes, off the heat while still blond. Tip onto a cold plate at once or the pan finishes them.",
+    "methods": [
+      "toasting",
+      "roasting",
+      "baking",
+      "frying",
+      "pureeing"
+    ]
+  },
+  {
+    "slug": "pinto-bean",
+    "term": "Pinto Bean",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Pinto means painted: a beige bean splashed with russet that cooks to a uniform brown and to a creamy interior, though cannellini and borlotti do the same. Its starch gelatinizes in the boil and its cell walls separate rather than shatter, so the cotyledon mashes to a smooth paste rather than a mealy one, which is why this is the bean of frijoles refritos and of the all-day Texas pot. Refried does not mean fried twice: refritos means well fried, the beans mashed into hot lard or bacon fat and driven down until the water goes and the gelatinized starch and protein hold the fat as an emulsion. Cook them soft enough that one crushes against the roof of your mouth with no resistance, then fry a ladleful at a time and let each addition dry down before the next goes in.",
+    "recipes": [],
+    "season": [],
+    "choose": "Pale beans with clear russet mottling, not uniformly darkened ones: pintos darken as they age, so a dark bag is an old bag that will never soften. No splits, no dust, no shriveled loose coats.",
+    "store": "Airtight, cool and dark, a year at most, and note the date. Cooked beans keep 5 days refrigerated in their broth, which sets to a light gel from dissolved starch and is the best part of the pot.",
+    "prep": "Sort for stones and clods. Soak overnight in salted water and drain it off, or skip the soak and add an hour. Boil hard for 10 full minutes first: raw beans carry the lectin phytohemagglutinin, and a pot held below boiling, a slow cooker above all, makes it worse rather than safer. Then simmer with onion, garlic and a little fat, salting from the start; hold acid until they are soft.",
+    "methods": [
+      "simmering",
+      "stewing",
+      "braising",
+      "frying",
+      "pressure cooking",
+      "pureeing"
+    ]
+  },
+  {
+    "slug": "pistachio",
+    "term": "Pistachio",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Pistacia vera, an arid-country tree of Central Asia and Iran, and the nut that signals its own maturity: the kernel swells until the shell splits along its suture. Not every closed shell is immature, some simply never dehisce, but they grade lower and are cracked by machine. The green is chlorophyll and the purple blush anthocyanin, and both degrade with heat, which is why pistachios for pastry are toasted low or not at all. SICILIAN BRONTE, grown on lava soil, are the deepest green and the most expensive; Iranian kernels are long and rich; Californian are pale, cheap and right for salting. In shell they are brined before roasting, so the salt sits on the shell and the kernel stays nearly unsalted. For pastry buy raw unsalted kernels and blanch the skins off.",
+    "recipes": [
+      "chicago-rainbow-cone",
+      "cannoli-siciliani",
+      "knafeh-nabulseyeh"
+    ],
+    "season": [
+      9,
+      10
+    ],
+    "choose": "In shell, want a clean natural split and a full heavy nut; machine-cracked shells gape evenly and often hold shrunken kernels. Shelled, look for deep green under purple skin, never yellowish and dull. Discard any kernel stained brown, chalky or musty: pistachio is among the crops most prone to aflatoxin mold, which roasting does not destroy.",
+    "store": "Sealed and frozen a year, refrigerated 6 months. Kernels fade in light, so keep them dark if you are buying them for color. Salted nuts in shell go soft in humid air; a dry sealed jar keeps them crisp.",
+    "prep": "Blanch shelled kernels 60 seconds, shock in iced water, rub the skins off, then dry them well: wet kernels mold within days and will not grind to a paste. Chop by hand and late, cut faces dull within hours, and keep heat below 150 C (300 F).",
+    "methods": [
+      "toasting",
+      "roasting",
+      "baking",
+      "grinding",
+      "blanching",
+      "candying"
+    ]
+  },
+  {
+    "slug": "polenta",
+    "term": "Polenta",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Dried corn ground to meal, and the dish made from it. Texture is decided by GRIND and by whether the germ was left in. Coarse stone-ground meal keeps the germ, tastes powerfully of corn and wants 40 to 45 minutes of slow cooking; degerminated instant polenta has been precooked and dried and thickens in 3 minutes with a fraction of the flavor. It thickens because the starch granules take up water and swell into a gel below the boil, which is why the meal must fall in as a thin rain while you whisk: a clump gels a skin around dry meal, crushable on the pot side while the paste is loose, not after it stiffens. Reckon 1 part meal to 4 or 5 parts water or stock, salted from the start, and cook until the paste pulls cleanly from the side of the pot. It is not nixtamalized, so it will never make tortillas. Beat butter and cheese in off the heat, or pour it out to set firm and cut it into slabs.",
+    "recipes": [
+      "cendol",
+      "arepas",
+      "talo"
+    ],
+    "season": [],
+    "choose": "Coarse stone-ground meal with the germ left in smells sweetly of corn and earns its 45 minutes; instant is precooked and flat. Check the grind stated on the bag. Reject meal that smells musty, sour or of paint.",
+    "store": "Stone-ground meal with the germ holds three months at room temperature and six in the freezer, because that germ oil goes rancid. Degerminated meal keeps a year. Set polenta keeps three days wrapped and cold.",
+    "prep": "Rain the meal into salted boiling liquid in a thin stream while whisking hard, crushing any clump on the pot side before the paste stiffens. Use a deep pot and the lowest simmer: thick polenta traps steam and throws scalding paste that sticks to skin. Reckon 1 part meal to 4 or 5 parts liquid, and stir the bottom, where it catches.",
+    "methods": [
+      "simmering",
+      "baking",
+      "grilling",
+      "frying",
+      "deep-frying"
+    ]
+  },
+  {
+    "slug": "puy-lentil",
+    "term": "Puy Lentil",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "The lentille verte du Puy, grown under AOP rules on the volcanic plateau of the Haute-Loire, where basalt soil and a dry wind produce a small slate-green lentil flecked with blue. The distinction is not romance: a thicker, tougher seed coat and a denser cotyledon mean it holds its shape through a long simmer and eats firm and peppery where a common green lentil goes floury. BELUGA, the round black lentil, behaves the same way and costs less. Anything sold as green lentil in the style of Puy is the type without the terroir, and it will soften sooner, so cut five minutes off. Do not drown it: cook in just enough stock that almost none is left at the end, so the flavor stays in the lentil rather than in the water you are about to pour down the sink.",
+    "recipes": [
+      "montana-lentil-and-wheat-berry-salad",
+      "idaho-lentil-soup"
+    ],
+    "season": [],
+    "choose": "True Puy carries the AOP label and a Haute-Loire address; the rest are lookalikes, cheaper and softer. Grains should be small, glossy and mottled blue-green. Reject dull, dusty or cracked stock.",
+    "store": "Airtight, cool and dry, inside a year. Warmth and damp, not age, harden it: cotyledon pectin sets with calcium and cooking drifts past 45 minutes. Cooked, they keep 5 days refrigerated and eat better cold than hot.",
+    "prep": "No soaking, which would soften the coat you are paying for. Rinse, cover by 3 cm with stock, simmer 20 to 25 minutes to a firm bite, then salt and dress at once so they drink the vinaigrette hot.",
+    "methods": [
+      "simmering",
+      "braising",
+      "stewing",
+      "pressure cooking"
+    ]
+  },
+  {
+    "slug": "quinoa",
+    "term": "Quinoa",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Not a grass but the seed of Chenopodium quinoa, a goosefoot relative of spinach and beet, and one of the few plant foods carrying all nine essential amino acids in useful proportion. Its pericarp, the thin outer fruit wall, holds SAPONINS, bitter triterpene glycosides that repel birds and insects and foam in water; they are why an unrinsed pot tastes of detergent. Export quinoa is dry-polished and washed to strip that layer, so many bags now foam little or not at all. Rinse anyway in a fine sieve, rubbing, until no foam rises, since you cannot tell by looking. The seed is gluten free, but it is often cleaned and packed alongside wheat, so buy certified stock if a celiac is eating. Cook 1 part to 1.75 parts water 15 minutes, rest lidded 10; done when the germ uncoils into a pale tail. Toast dry first for a nuttier result.",
+    "recipes": [
+      "quinua-atamalada"
+    ],
+    "season": [],
+    "choose": "Dry, free-running seed, no clumping. White cooks softest; red and black hold their shape. Bitterness is a taste, not a smell: chew a seed at the bulk bin. Reject dust, webbing, or a rancid smell.",
+    "store": "Airtight, cool and dark, about a year; the oily germ shortens that in a warm kitchen. Bacillus cereus spores survive cooking and multiply in grain left standing warm, so spread cooked quinoa out, chill it within the hour, and keep it four days. Freezes in portions without mush.",
+    "prep": "Rinse in a fine sieve under cold running water, rubbing, until no foam rises: that foam is the saponin. Cook 1 part to 1.75 parts water 15 minutes, rest lidded 10, then fork. Done when the germ uncoils.",
+    "methods": [
+      "boiling",
+      "simmering",
+      "steaming",
+      "toasting",
+      "baking"
+    ]
+  },
+  {
+    "slug": "red-lentil",
+    "term": "Red Lentil",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Masoor dal: a brown lentil skinned and split, so the seed coat that holds a green lentil together is simply gone. Nothing restrains the cotyledon, its starch granules swell and burst within 15 to 20 minutes, and the lentil collapses into a golden puree. That is not a failure, it is the entire point: every dal, every thickened soup, every Turkish mercimek corbasi is built on the collapse. The orange color is carotenoid and fades to pale yellow as it cooks, so judge doneness by texture only and never by eye. Because they are hulled they foam hard in the first minutes, and that foam is leached starch and protein; skim it or the pot climbs over the rim. Hold all acid until after the collapse, because lemon or tomato added early keeps the pectin intact and you will wait an hour for a puree that never arrives.",
+    "recipes": [
+      "montana-lentil-and-wheat-berry-salad",
+      "idaho-lentil-soup"
+    ],
+    "season": [],
+    "choose": "Bright coral-orange and uniform, not faded to straw, which means long storage and a flat, dusty flavor. Look through the bag for grit and small stones: split lentils hide debris better than whole.",
+    "store": "Airtight, dark and cool, inside a year: with no seed coat the exposed cotyledon oxidizes and both color and flavor dull. Cooked dal keeps 4 days refrigerated and thickens, so loosen it with water.",
+    "prep": "Rinse in several changes until the water runs clear: that takes off milling dust and cuts the foam, though the collapse will release its own starch regardless. No soaking. Simmer in 3 to 4 times their volume, skim the first foam, stir.",
+    "methods": [
+      "simmering",
+      "stewing",
+      "pressure cooking",
+      "pureeing",
+      "braising"
+    ]
+  },
+  {
+    "slug": "rolled-oats",
+    "term": "Rolled Oats",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Oat groats are KILNED first, a long dry heat that builds the toasted flavor and kills the LIPASE that would otherwise split the grain's unusually high fat into soapy free fatty acids. Only then are they steamed briefly to soften and pressed flat between rollers, a shaping step, not the stabilizing one; steel-cut oats are the same kilned groats merely chopped, which is why they keep as well. Thickness decides behavior. OLD-FASHIONED rolled oats hold their shape through 5 minutes of simmering and inside a cookie; QUICK oats are cut then rolled thinner and go pasty fast; INSTANT are cooked further still and want only hot liquid; STEEL-CUT need 25 to 30 minutes. Creaminess is swollen gelatinized starch plus beta-glucan, so stirring thickens it and a resting pot keeps tightening. Oats are naturally gluten free but are milled alongside wheat, so celiac cooking demands a bag labeled gluten free, and a few celiacs react even to pure oats. Salt the cooking liquid, not the finished bowl.",
+    "recipes": [
+      "smulpaj-med-kardemumma",
+      "bircher-muesli",
+      "nutmeg-apple-crisp"
+    ],
+    "season": [],
+    "choose": "Buy old-fashioned rolled oats: broad whole flakes whose shape you can still see. Quick and instant are thinner and go pasty. For celiac cooking the bag must say gluten free. Reject flakes smelling of crayon or old oil.",
+    "store": "Airtight, cool and dark, a year sealed. Kilning killed the lipase, so what finally spoils them is slow oxidation, sped by warmth and light, and the smell is the tell. In a warm kitchen keep them in the freezer and use them straight from the bag.",
+    "prep": "Salt the cooking liquid, never the finished bowl. For porridge, 1 part oats to 2.5 parts liquid, simmered and stirred so the beta-glucan comes out; for a chewier bowl stir less and rest it off the heat.",
+    "methods": [
+      "simmering",
+      "baking",
+      "toasting",
+      "frying",
+      "boiling"
+    ]
+  },
+  {
+    "slug": "semolina",
+    "term": "Semolina",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "The coarse, sandy, straw-yellow mill of DURUM wheat, Triticum turgidum subsp. durum, so hard that its endosperm shatters into gritty particles instead of dusting into flour. The yellow is carotenoid, mostly lutein; the grit is the entire point. Durum protein runs high, but as a tetraploid it lacks the D genome that carries bread wheat's strongest glutenins, so its gluten is tenacious and short rather than springy: superb for an extruded shape that resists overcooking, and it does rise, into the dense close crumb of Altamura bread. Coarse semola is for extruded pasta and dusting; the fine remill, rimacinata, is for that bread and for hand-shaped southern pasta of flour and water, orecchiette and busiate, while egg pasta belongs to soft-wheat 00. Hydrate slowly: mix, rest 30 minutes, then knead. It is also the grain of halva and of upma.",
+    "recipes": [
+      "english-muffins",
+      "cuscusu-di-pesce-alla-trapanese",
+      "sanwin-makin"
+    ],
+    "season": [],
+    "choose": "Sandy, free-flowing, pale gold and frankly gritty between the fingers rather than powdery. Check whether it is coarse semola or fine rimacinata, since they are not interchangeable. Reject clumped or stale meal.",
+    "store": "Airtight, cool and dark, about a year. It is purified endosperm, so it turns rancid slowly; what fades first is the yellow, as the carotenoids oxidize. Moths and weevils prize it, so decant the bag and check it.",
+    "prep": "Hydrate slowly: mix the dough, rest it 30 minutes, then knead, because the coarse particles drink at their own pace. Dust peels and drying trays with semolina, never with fine flour, which scorches.",
+    "methods": [
+      "boiling",
+      "baking",
+      "frying",
+      "toasting",
+      "steaming"
+    ]
+  },
+  {
+    "slug": "sushi-rice",
+    "term": "Sushi Rice",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Short-grain japonica, sold as sushi rice, koshihikari or simply Japanese rice: amylose near 17 percent in a fat round grain that cooks plump and cohesive, so a formed handful holds under fish yet falls apart in the mouth. Rinse and gently rub until the water runs almost clear, then rest the drained grain 30 minutes so it hydrates evenly, and cook at about 1 part rice to 1.1 parts water. What makes it sushi rice is not the variety but the SEASONING: while the rice is hot, fold through vinegar, sugar and salt, roughly 60 ml rice vinegar, 30 g sugar and 8 g salt per 500 g of uncooked rice, cutting with a flat wet paddle instead of stirring so you do not crush grains. Fan it as you fold: hot rice drinks the seasoning, and fanning drives off the moisture the vinegar added so the grains stay distinct and glossy. Hold it at room temperature under a damp cloth for up to four hours, never cold, which stales it hard.",
+    "recipes": [
+      "shari-seasoned-sushi-rice",
+      "salmon-donburi",
+      "california-roll"
+    ],
+    "season": [],
+    "choose": "Short round pearly grains of a named japonica such as koshihikari or akitakomachi, with a recent milling date. Reject bags carrying many chalky or cracked grains, which burst and drag the finished rice to paste.",
+    "store": "Uncooked: airtight and cool, six months to a year, since fresh-milled character fades. Seasoned rice sits out under a damp cloth only because the vinegar acidifies it, and only four hours: Bacillus cereus spores survive the pot, and the toxin they make in warm rice survives more heat. Chilling stales it hard, so season only what you will use.",
+    "prep": "Rinse and rub gently until the water is nearly clear, drain 30 minutes, then cook. Fold the vinegar mixture into hot rice with a flat wet paddle, slicing rather than stirring, fanning to drive off surface moisture so the grains stay distinct and glossy.",
+    "methods": [
+      "steaming",
+      "boiling",
+      "simmering",
+      "pressure cooking"
+    ]
+  },
+  {
+    "slug": "walnut",
+    "term": "Walnut",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Juglans regia, the English or Persian walnut; black walnut (J. nigra) shares the name and nothing else. The most fragile nut in the pantry: its fat is over 70 percent polyunsaturated, but the dominant fatty acid is linoleic at about 58 percent, with alpha-linolenic near 14 percent, and it is that small omega-3 fraction, three double bonds to attack, that goes first. A walnut turns rancid while an almond is still fine, and rancid walnut is the bitter, paint-like taste people wrongly accept as the walnut's character. True bitterness is separate and lives in the papery pellicle, loaded with tannin: a minute in boiling water and a hard rub in a towel takes the edge off, and toasting at 160 C (320 F) mellows the rest. In autumn buy WET WALNUTS, undried, crisp and milky, a different food that keeps a week cold. Taste one nut from every bag before it goes near a cake.",
+    "recipes": [
+      "churchkhela",
+      "gesiers-de-canard-confits",
+      "keftedes"
+    ],
+    "season": [
+      6,
+      9,
+      10,
+      11
+    ],
+    "choose": "In shell, heavy for its size with no rattle. Shelled, pale golden and crisp, never limp, dark or oily-smelling. Break one and taste: rancidity is instant and unmistakable, and one bad nut sours a cake.",
+    "store": "The freezer, sealed, where they hold a year and more; the refrigerator gives 6 months and a warm cupboard maybe two. Light, heat and air all attack the same unsaturated fat. Toast from frozen.",
+    "prep": "Blanch 30 seconds and rub in a towel to cut the tannin, or toast 8 minutes at 160 C (320 F) and cool them completely before chopping, since warm walnuts smear. Chop by hand: a processor makes oil.",
+    "methods": [
+      "toasting",
+      "roasting",
+      "baking",
+      "candying",
+      "pickling",
+      "blanching"
+    ]
+  },
+  {
+    "slug": "wild-rice",
+    "term": "Wild Rice",
+    "category": "The Grain, Pulse & Seed Atlas",
+    "definition": "Not rice at all: ZIZANIA, an aquatic grass of the North American lakes and a different genus from Oryza, gathered traditionally by Anishinaabe canoe and knocking sticks. The black hull is the bran of an intact whole grain, so it behaves like a seed rather than a starch: it needs 45 to 55 minutes in plenty of salted water and it will never turn creamy or sticky no matter what you do to it. The smoky, tea-like flavor comes from the parching and fire-curing the grain gets after harvest, not from the plant. It is ready when roughly a third of the grains have split lengthwise to show the pale interior; push past that point and the pot goes woolly and threadlike. Cook it like pasta in abundant water and drain, never by absorption, since timing swings from lot to lot. Hand-harvested lake rice cooks faster and far less evenly than cultivated paddy grain.",
+    "recipes": [
+      "minnesota-wild-rice-soup",
+      "minnesota-hot-dish-wild-rice-and-beef",
+      "minnesota-wild-rice-pancakes"
+    ],
+    "season": [],
+    "choose": "Long glossy near-black grains of fairly even length. Hand-harvested lake rice is shorter, browner and more varied; cultivated paddy grain is uniform and jet. Reject bags heavy with broken grain and dust.",
+    "store": "Airtight, cool and dark, where it keeps for years, since the bran left after hulling carries almost no oil to go rancid. Cooked, it holds four days refrigerated and freezes well in portions for salads.",
+    "prep": "Rinse, then boil in abundant salted water and drain: 45 to 55 minutes cultivated, 20 to 30 hand-harvested. Stop when about a third have split to show the pale interior; past that it goes woolly. Dress it warm.",
+    "methods": [
+      "boiling",
+      "simmering",
+      "braising",
+      "baking",
+      "toasting"
+    ]
+  },
+  {
     "slug": "aleppo-pepper",
     "term": "Aleppo Pepper",
     "category": "The Herb & Chile Atlas",
@@ -8465,9 +9318,7 @@
     "category": "The Vegetable Atlas",
     "definition": "The broad bean, an ancient legume eaten at every stage: whole young pod, shelled bean, peeled bean, and dried. SAFETY FIRST. The glycosides vicine and convicine trigger FAVISM, an acute breakdown of red blood cells, in people with inherited G6PD deficiency, most common in those with ancestry around the Mediterranean, Africa, the Middle East, and South and Southeast Asia. Cooking does not destroy them, so a braise is no safer than a raw bean. It is not an allergy, it is serious, and favas are also rich in L-DOPA and off limits to anyone taking an MAO inhibitor. Name the bean on the menu and never bury it in a puree. Each bean wears two coats: the pod, and a skin that turns gray-green, chewy, and bitter as the bean matures. Beans smaller than a thumbnail need neither peeling nor cooking; anything larger wants 30 seconds in boiling water, then a pinch to slip the skin. Reckon four to one on weight from pod to peeled bean. Dress them with olive oil, hard sheep cheese, and mint.",
     "recipes": [
-      "besara",
-      "creme-brulee",
-      "dan-dan-noodles"
+      "besara"
     ],
     "season": [
       4,
@@ -8709,8 +9560,7 @@
     "definition": "The whole immature pod of Phaseolus vulgaris, seeds and all, picked before the beans inside swell and before the pod lays down its fibrous parchment layer. Modern varieties are stringless, so the old job of stripping the suture is largely gone, but the wall is still cellulose and pectin: it needs enough heat to soften that pectin and not one second more. Past that the cells rupture and their own acid swaps hydrogen for the magnesium held at the center of the chlorophyll, so bright green turns to olive pheophytin. That window is the entire technique. A large volume of heavily salted boiling water, three to six minutes, then out and into ice. The other honest route is the opposite: high dry heat until the pods blister, or the long Greek fasolakia braise, where you trade green for sweetness. Choose one. The middle, wet and lukewarm, is where beans go gray and squeaky. Never raw: the pod carries the dry bean's lectin at much lower levels, and a raw plateful is enough to make a guest sick.",
     "recipes": [
       "indiana-green-bean-casserole",
-      "gado-gado",
-      "cendol"
+      "gado-gado"
     ],
     "season": [
       6,
@@ -9293,10 +10143,7 @@
     "term": "Persian Cucumber",
     "category": "The Vegetable Atlas",
     "definition": "A short, slim, thin-skinned cucumber, 12 to 15 cm (5 to 6 in), sold unwaxed and usually bagged in sixes or eights. It is no drier than a slicer, near 96 percent water like every cucumber; what sets it apart is proportion. The seed cavity is narrow and the seeds stay soft, so there is more firm wall and less of the soft gel that weeps and slumps first, and a Persian holds its crunch in a dressed salad long after an English has gone limp. The skin is thin enough to eat and carries almost no bitterness, since these cultivars are largely bred free of cucurbitacin. That makes it the default wherever cucumber must stay crisp: chopped salads, salatim, tzatziki, smashed cucumber. SMASH it rather than slice it. Crack the fruit with the flat of a cleaver so it splits along its own fracture lines, and the ragged torn surfaces grip dressing in a way no clean knife cut ever will.",
-    "recipes": [
-      "salmon-donburi",
-      "raita"
-    ],
+    "recipes": [],
     "season": [
       6,
       7,
@@ -9635,11 +10482,7 @@
     "term": "Romano Bean",
     "category": "The Vegetable Atlas",
     "definition": "The flat Italian pod bean, Phaseolus vulgaris again, wide as a thumb and often 15cm long, sold as flat bean or helda. The shape is not cosmetic. That broad wall carries far more surface per gram than a slim haricot, so it browns and drinks braising liquid as a round bean cannot. What makes it slow is not a heavier pectin load but a tougher, more fibrous wall, so it laughs at the three-minute blanch. Cook it longer and wetter, and add the tomato late: acid holds pectin together, and beans braised in tomato from the start stay stubborn for an hour. This is the bean for a slow olive oil braise until it is olive-drab and silky, for fasolakia, for a stew with gigante beans, for charring flat on a grill. Purple Romano goes green in the pot as the anthocyanin washes out. Stop trying to keep this one crisp.",
-    "recipes": [
-      "cacio-e-pepe",
-      "creme-brulee",
-      "dan-dan-noodles"
-    ],
+    "recipes": [],
     "season": [
       7,
       8,

@@ -221,10 +221,23 @@
  },
  "lexicon": {
   "_readme": "Hand rulings over the lexicon cross-links, mirroring recipes[].techniques: the scorer cannot see word sense, so a collision no rule can separate gets a reasoned row here. `empty` clears the term, `drop` removes named links, `keep` pins links the mechanical rule would delete. Every row needs a reason, and the build fails on a dead row: a drop that suppressed nothing or a keep naming a pair the scorer never picked means the corpus moved and the judgement must be re-made.",
+  "black-bean": {
+   "reason": "Jajangmyeon's chunjang is genuinely a fermented black bean paste. Dan dan noodles is sweet bean sauce and jian bing is mung BEAN flour, neither of which is this bean.",
+   "drop": [
+    "dan-dan-noodles",
+    "jian-bing"
+   ]
+  },
   "black-pepper-and-the-pepper-family": {
    "reason": "Pinned: the two dishes built ON black pepper; 'pepper' is a staple word carrying chiles everywhere else.",
    "keep": [
     "cacio-e-pepe",
+    "dan-dan-noodles"
+   ]
+  },
+  "cannellini-bean": {
+   "reason": "Cassoulet and pasta e fagioli both name the bean. Dan dan noodles is sweet BEAN sauce.",
+   "drop": [
     "dan-dan-noodles"
    ]
   },
@@ -264,6 +277,13 @@
    "reason": "Force-empty: the scorer matched on ENGLISH, not on peas. Its links were full-english-breakfast and english-muffins, neither of which contains a pea. No shelling-pea dish in the corpus names the term.",
    "empty": true
   },
+  "fava-bean": {
+   "reason": "Besara is a dish of dried split favas. The other two are a vanilla BEAN and sweet BEAN sauce.",
+   "drop": [
+    "creme-brulee",
+    "dan-dan-noodles"
+   ]
+  },
   "fermentation-in-bread-yeast-levain-preferments": {
    "reason": "Pinned: 'yeast' misses the staple cap at DF 104 by four recipes, and these two are the corpus's flagship yeasted breads.",
    "keep": [
@@ -275,10 +295,22 @@
    "reason": "Force-empty: no flat-iron steak dish exists. Matches are cast-iron skillets and flat griddles.",
    "empty": true
   },
+  "green-bean": {
+   "reason": "The casserole and gado gado both cook green beans. Cendol is mung BEAN starch.",
+   "drop": [
+    "cendol"
+   ]
+  },
   "grilling-vs-barbecue-vs-smoking": {
    "reason": "'dripping SMOKING in a muffin tin' is oven-hot beef fat for Yorkshire puddings, not barbecue.",
    "drop": [
     "sunday-roast-beef-and-yorkshire-puddings"
+   ]
+  },
+  "kidney-bean": {
+   "reason": "Dal makhani's rajma and the Dominican habichuelas con dulce are both genuine. Creme brulee is a vanilla BEAN.",
+   "drop": [
+    "creme-brulee"
    ]
   },
   "knife-cuts-the-classical-ladder": {
@@ -295,6 +327,14 @@
   },
   "pea-shoots": {
    "reason": "Force-empty: the scorer matched on SHOOTS. All three links were bamboo shoots (green curry, yan du xian) and green garlic shoots (hui guo rou). No dish in the corpus uses pea shoots.",
+   "empty": true
+  },
+  "persian-cucumber": {
+   "reason": "Force-empty: both links say only 'cucumber', which the plain Cucumber entry already carries. On salmon donburi the redundant second cucumber displaced sashimi-grade-and-ikejime, which is what that dish is about.",
+   "empty": true
+  },
+  "pinto-bean": {
+   "reason": "Force-empty: the scorer matched BEAN. Its links were creme brulee (a vanilla bean), dan dan noodles (sweet bean sauce) and pad thai (bean sprouts). No dish in the corpus cooks a pinto.",
    "empty": true
   },
   "pomegranate-and-quince-autumns-perfume": {
@@ -314,6 +354,10 @@
    "drop": [
     "tamales-rojos"
    ]
+  },
+  "romano-bean": {
+   "reason": "Force-empty: the scorer matched BEAN, and one link, cacio e pepe, has no bean of any kind in it. The others are a vanilla bean and sweet bean sauce.",
+   "empty": true
   },
   "round-fish-vs-flat-fish": {
    "reason": "Pinned: the sea trout is the corpus's one full round-fish breakdown; its carrier 'fish' is a staple word (DF 143).",
