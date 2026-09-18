@@ -9,19 +9,36 @@
 	 * timer once you have walked away from it, which is the whole point, since
 	 * closing cook mode does not take the pot off the stove.
 	 *
-	 * It renders nothing at all when nothing is running, so it costs a mounted
-	 * component and no pixels the rest of the time.
+	 * It renders nothing at all when nothing is running AND nothing can be
+	 * started here, so it costs a mounted component and no pixels the rest of
+	 * the time.
 	 */
 	const list = $derived(timers.active);
 
 	/**
-	 * A timer that is not attached to a recipe.
+	 * Is a method on screen.
+	 *
+	 * The route's answer, handed down by +layout.svelte: true on /recipe/ and
+	 * /family/, false everywhere else. It gates STARTING a timer, never showing
+	 * one, and the layout's comment on `cooking` says why those are two
+	 * different questions and why only the first one is about the route.
+	 */
+	let { cooking = false }: { cooking?: boolean } = $props();
+
+	/**
+	 * A timer that is not attached to a recipe STEP.
 	 *
 	 * The rice. The refire on table 12. The Barolo that needs forty minutes in
 	 * the decanter. None of those are recipe steps, and `timers.start` had
 	 * exactly ONE call site in the whole app, cook mode's, so every cook on
 	 * the line used their phone, which is the thing this was meant to replace,
 	 * and the bar honestly showed two of the five pots actually running.
+	 *
+	 * `cooking` is how far that reaches, and the correction is the owner's:
+	 * the launcher used to sit in the dock on every route, so the home page and
+	 * the Lexicon each carried a floating control for a thing neither of them
+	 * does. A timer belongs to the cooking process, so it is offered where a
+	 * method is on screen and nowhere else.
 	 *
 	 * No store change was needed for this: `start()` already takes
 	 * { label, seconds } with recipeSlug and stepIndex optional.
@@ -100,6 +117,39 @@
 		else if (hasOpenedAdd) addBtnEl?.focus();
 	});
 
+	/*
+	 * Leaving the method closes the panel, and forgets it was ever opened.
+	 *
+	 * The first half is the obvious one: without it, opening "+ Timer" and then
+	 * walking to the Lexicon leaves the whole add form sitting on a page that no
+	 * longer offers timers, with every preset still live.
+	 *
+	 * The second half is the half that bit. `hasOpenedAdd` exists to hand focus
+	 * back to the button that just remounted after Cancel or begin(), and it was
+	 * harmless to leave set for the session while that button was bound
+	 * unconditionally: `addBtnEl` only ever changed on the panel opening and
+	 * closing, which is the transition the effect was written for. The button
+	 * now lives inside {#if cooking}, so it unbinds and rebinds every time the
+	 * route crosses the cooking boundary, and because the focus effect READS
+	 * `addBtnEl` in its else branch, each rebind re-runs it. Measured: after one
+	 * "+ Timer" press anywhere, ARRIVING at the next dish put focus on the
+	 * floating button at the bottom of the screen instead of the top of the
+	 * document, for the rest of the session, so a screen reader opened the dish
+	 * by saying "Start a timer, button". SvelteKit's own focus reset does not
+	 * save it: the effect runs inside the ticks Kit awaits, so Kit sees focus
+	 * has already moved and stands down.
+	 *
+	 * Leaving the method is exactly when "return focus to the button" stops
+	 * applying, so the flag is cleared with the panel. Dish to dish never
+	 * rebinds, because `cooking` stays true across that navigation.
+	 */
+	$effect(() => {
+		if (!cooking) {
+			adding = false;
+			hasOpenedAdd = false;
+		}
+	});
+
 	function open() {
 		adding = true;
 		label = '';
@@ -130,7 +180,10 @@
 	};
 </script>
 
-<!-- App chrome: a printed recipe should not carry a countdown across it. -->
+<!-- App chrome: a printed recipe should not carry a countdown across it.
+     No pots on and no method on screen means no bar at all, which is what
+     takes the control off the home page. -->
+{#if list.length || cooking}
 <div class="bar" role="status" aria-label="Kitchen timers" data-print="hide">
 	{#if collapsed}
 		<button class="addbtn" bind:this={unfoldBtnEl} onclick={unfold} aria-expanded="false">
@@ -190,7 +243,8 @@
 	{/if}
 
 	{#if adding}
-		<div class="timer add">
+		<!-- A form, not a status: see the note on .row below. -->
+		<div class="timer add" aria-live="off">
 			<input
 				class="lab"
 				bind:this={addLabelEl}
@@ -237,17 +291,31 @@
 			<button class="x" onclick={() => (adding = false)} aria-label="Cancel">✕</button>
 		</div>
 	{:else}
-		<div class="row">
+		<!--
+			aria-live="off": these are CONTROLS, not status, and they sit inside a
+			role="status" region that is implicitly atomic, so any addition under
+			it re-announces every running timer in full. The row already toggled
+			with the add panel; it now also mounts when a cook carrying a pot
+			walks ONTO a dish, which would read the whole bar aloud on arrival.
+			The nearest aria-live ancestor decides, so switching it off here keeps
+			the region to the thing it exists to announce: a timer ringing,
+			pausing or being renamed.
+		-->
+		<div class="row" aria-live="off">
 			{#if list.length}
 				<button class="addbtn" bind:this={foldBtnEl} onclick={fold} aria-expanded="true" aria-label="Hide the timers">Hide</button>
 			{/if}
-			<button class="addbtn" bind:this={addBtnEl} onclick={open} aria-label="Start a timer">
-				+ Timer
-			</button>
+			<!-- Hide stays wherever a pot is on; only STARTING one is scoped. -->
+			{#if cooking}
+				<button class="addbtn" bind:this={addBtnEl} onclick={open} aria-label="Start a timer">
+					+ Timer
+				</button>
+			{/if}
 		</div>
 	{/if}
 	{/if}
 </div>
+{/if}
 
 <style>
 	/* Tapped one-handed beside a pan: the 44px floor, not 32. */

@@ -125,6 +125,35 @@
 	// by, and the tab that owns the path should not care which spelling it was.
 	const path = $derived(bareHtmlPath(page.url.pathname.replace(base, '') || '/'));
 
+	/**
+	 * A timer is started from a dish, not from the front door.
+	 *
+	 * "+ Timer" used to sit in the dock on every route, so the Lexicon, the
+	 * chapter rails and the home page all carried a floating control for a
+	 * thing none of them do. The owner's rule: the timer belongs to the
+	 * cooking process, so it is offered where cooking happens and nowhere else.
+	 * /recipe/ and /family/ are the two surfaces that render a method, and
+	 * cook mode lives inside them.
+	 *
+	 * A RUNNING timer still follows you everywhere, which is not a hedge: the
+	 * bar is the only thing in the app that rings, there is no OS notification
+	 * and no wake lock outside cook mode, so a timer that went out of sight
+	 * when a cook stepped to the Lexicon to look up a term would be a pot left
+	 * on the heat with nothing watching it. Starting one is what is scoped
+	 * here; keeping one is not.
+	 *
+	 * page.status is the other half of "is a method on screen", and the prefix
+	 * alone cannot answer it: /recipe/<a slug that no longer exists> renders
+	 * +error.svelte, "Nothing at this address", with no ingredients, no method
+	 * and no cook mode, while the URL still starts with /recipe/. Twenty-two
+	 * recipe URLs were renamed in one commit on this branch, so a stale
+	 * bookmark landing there is a real journey, and a floating "+ Timer" over
+	 * an error page is precisely the thing being taken off the home page.
+	 */
+	const cooking = $derived(
+		page.status < 400 && (path.startsWith('/recipe/') || path.startsWith('/family/'))
+	);
+
 	/* The one number worth carrying in the chrome: how many dishes are past
 	   their re-cook. Same treatment as the menu's count: a pill, not a badge
 	   that nags, and absent entirely at zero. */
@@ -317,7 +346,7 @@
 -->
 <div class="dock" data-print="hide" bind:this={dockEl}>
 	<UpdatePrompt />
-	<TimerBar />
+	<TimerBar {cooking} />
 </div>
 
 <footer>

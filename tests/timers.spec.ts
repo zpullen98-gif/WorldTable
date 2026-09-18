@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { goto } from './helpers';
 
 /**
- * A timer that is not attached to a recipe.
+ * A timer that is not attached to a recipe STEP.
  *
  * The rice. The refire on table 12. The Barolo that needs forty minutes in the
  * decanter. None of those are recipe steps, and `timers.start` had exactly ONE
@@ -14,8 +14,8 @@ import { goto } from './helpers';
  * vitest test cannot reach, which is the same reason mergeSessions and
  * repertoire.ts are pure functions living outside their stores.
  */
-test('a cook can start a timer from anywhere, without a recipe', async ({ page }) => {
-	await goto(page, '/recipes');
+test('a cook can start a timer that is no step of the method', async ({ page }) => {
+	await goto(page, '/recipe/cacio-e-pepe');
 
 	// The affordance has to exist when NOTHING is running — which is exactly
 	// when a cook needs it, and exactly when the bar used to render nothing.
@@ -33,7 +33,7 @@ test('a cook can start a timer from anywhere, without a recipe', async ({ page }
 });
 
 test('the timer says on its own face that it cannot alarm while closed', async ({ page }) => {
-	await goto(page, '/recipes');
+	await goto(page, '/recipe/cacio-e-pepe');
 	await page.getByRole('button', { name: 'Start a timer' }).click();
 
 	// ring() is Web Audio with a documented "audio is a courtesy, never a
@@ -44,7 +44,7 @@ test('the timer says on its own face that it cannot alarm while closed', async (
 });
 
 test('a running timer can be renamed, because the bar is read at two metres', async ({ page }) => {
-	await goto(page, '/recipes');
+	await goto(page, '/recipe/cacio-e-pepe');
 	await page.getByRole('button', { name: 'Start a timer' }).click();
 	await page.getByLabel('What this timer is for').fill('T12');
 	await page.getByRole('button', { name: '10 minutes', exact: true }).click();
@@ -64,7 +64,7 @@ test('a running timer can be renamed, because the bar is read at two metres', as
 test('two timers are told apart by when they go off, not by renaming them for you', async ({
 	page
 }) => {
-	await goto(page, '/recipes');
+	await goto(page, '/recipe/cacio-e-pepe');
 
 	for (const mins of ['5', '20']) {
 		await page.getByRole('button', { name: 'Start a timer' }).click();
@@ -84,7 +84,7 @@ test('two timers are told apart by when they go off, not by renaming them for yo
  * hit "20, button" with no way to tell minutes from anything else.
  */
 test('the timer-length presets are a labelled group naming the unit', async ({ page }) => {
-	await goto(page, '/recipes');
+	await goto(page, '/recipe/cacio-e-pepe');
 	await page.getByRole('button', { name: 'Start a timer' }).click();
 
 	const group = page.locator('[role="group"][aria-label="Timer length"]');
@@ -116,9 +116,11 @@ test('the timer-length presets are a labelled group naming the unit', async ({ p
  * fixed on its own.
  */
 test('the offline toast stacks above the timer bar, never over it', async ({ page }) => {
-	// A real first-visit precache. offline.spec.ts budgets the same way.
+	// A real first-visit precache. offline.spec.ts budgets the same way. The
+	// dish rather than the home page: a cold start either way, and only the
+	// dish carries the launcher now.
 	test.setTimeout(90_000);
-	await goto(page, '/');
+	await goto(page, '/recipe/cacio-e-pepe');
 
 	await page.getByRole('button', { name: 'Start a timer' }).click();
 	await page.getByLabel('What this timer is for').fill('T12');
@@ -153,4 +155,183 @@ test('the offline toast stacks above the timer bar, never over it', async ({ pag
 	// intercepts pointer events, instead of hanging for the full thirty.
 	await label.click({ timeout: 5_000 });
 	await expect(page.getByLabel('Rename this timer')).toBeFocused();
+});
+
+/**
+ * The timer belongs to the cooking process.
+ *
+ * "+ Timer" sat in the dock on every route, so the home page and the Lexicon
+ * each carried a floating control for a thing neither of them does. The
+ * owner's rule: the timer is offered where a method is on screen, and nowhere
+ * else.
+ *
+ * The second half of this test is not a hedge against the first. A RUNNING
+ * timer still follows the cook everywhere, because this bar is the only thing
+ * in the app that rings — no OS notification, no wake lock outside cook mode —
+ * so a timer that vanished when a cook stepped to the Lexicon to look up a
+ * word would be a pot left on the heat with nothing watching it. Starting one
+ * is what is scoped; keeping one is not.
+ */
+test('the timer is offered where cooking happens, and nowhere else', async ({ page }) => {
+	const add = page.getByRole('button', { name: 'Start a timer' });
+	const bar = page.getByRole('status', { name: 'Kitchen timers' });
+
+	// Nothing running and no method on screen: no launcher, and no empty bar
+	// left behind either.
+	await goto(page, '/');
+	await expect(add).toHaveCount(0);
+	await expect(bar).toHaveCount(0);
+
+	await goto(page, '/lexicon');
+	await expect(add).toHaveCount(0);
+
+	// /recipes is the trap, not a third example. '/recipes'.startsWith('/recipe')
+	// is TRUE, which is why the layout's OWNS map exists at all, and it is the
+	// index six of the specs above were moved OFF for not being a cooking
+	// surface. If the trailing slash in '/recipe/' is ever dropped, this is the
+	// assertion that says so.
+	await goto(page, '/recipes');
+	await expect(add).toHaveCount(0);
+
+	await goto(page, '/recipe/cacio-e-pepe');
+	await expect(add).toBeVisible();
+	await add.click();
+	await page.getByLabel('What this timer is for').fill('The rice');
+	await page.getByRole('button', { name: '20 minutes', exact: true }).click();
+	await expect(bar).toContainText('The rice');
+
+	// Walk away from the dish: the pot is still watched, and still cannot be
+	// joined by a second one from here.
+	await goto(page, '/lexicon');
+	await expect(bar).toContainText('The rice');
+	await expect(add).toHaveCount(0);
+});
+
+/**
+ * The same rule, reached the way a cook reaches it: by tapping.
+ *
+ * Every leg above uses `goto`, which is `page.goto` - a full document load that
+ * throws the root layout away and recomputes everything from scratch. The
+ * mechanism this change actually rests on is a DERIVED flag that has to flip
+ * during SvelteKit's client-side navigation, and a full load cannot tell a
+ * reactive `cooking` from a constant one: replace the `$derived` with a plain
+ * const and every assertion above still passes. This is the one that fails.
+ */
+test('the launcher appears and disappears on a tapped navigation, not just a reload', async ({
+	page
+}) => {
+	const add = page.getByRole('button', { name: 'Start a timer' });
+
+	await goto(page, '/recipe/cacio-e-pepe');
+	await expect(add).toBeVisible();
+
+	// Client-side, through the app's own chrome.
+	await page.getByRole('link', { name: 'Library', exact: true }).click();
+	await expect(page).toHaveURL(/\/recipes/);
+	await expect(add).toHaveCount(0);
+
+	// And back, still without a reload.
+	await page.locator('a.card').first().click();
+	await expect(page).toHaveURL(/\/recipe\//);
+	await expect(add).toBeVisible();
+});
+
+/**
+ * Arriving at a dish must not put focus on the dock.
+ *
+ * `hasOpenedAdd` is the flag that hands focus back to "+ Timer" after Cancel or
+ * a started timer, and it is deliberately not reactive. Gating the button on
+ * `cooking` made it unbind and rebind on every crossing of the cooking
+ * boundary, and the focus effect reads `addBtnEl`, so each rebind re-ran it:
+ * once a cook had opened the panel even once, ARRIVING at the next dish moved
+ * focus to the floating button at the bottom of the screen, and a screen
+ * reader opened the dish by reading "Start a timer, button". The whole e2e
+ * suite stayed green, because nothing in it asserted focus across a route
+ * change.
+ */
+test('arriving at a dish leaves focus at the top of the page, not on the dock', async ({
+	page
+}) => {
+	const add = page.getByRole('button', { name: 'Start a timer' });
+
+	await goto(page, '/recipe/cacio-e-pepe');
+	await add.click();
+	// Cancel, which is the transition hasOpenedAdd exists for: focus is handed
+	// back to "+ Timer" HERE, correctly, and must not persist past this page.
+	await page.getByRole('button', { name: 'Cancel' }).click();
+	await expect(add).toBeFocused();
+
+	await page.getByRole('link', { name: 'Library', exact: true }).click();
+	await page.locator('a.card').first().click();
+	await expect(page).toHaveURL(/\/recipe\//);
+
+	await expect(add).toBeVisible();
+	await expect(add).not.toBeFocused();
+});
+
+/**
+ * The open panel is the one state that can walk off a dish.
+ *
+ * The {#if cooking} gate only covers the CLOSED row: while `adding` is true
+ * that branch is not rendered at all, and the add form's only gate is the
+ * root {#if list.length || cooking}, which stays true for as long as a pot is
+ * on. So a cook with a timer running can open "+ Timer", tap away to the
+ * Library, and carry a live set of presets onto a page that offers no timers.
+ * An $effect closes it; this is what says so.
+ */
+test('an open timer panel does not travel off the dish', async ({ page }) => {
+	await goto(page, '/recipe/cacio-e-pepe');
+
+	// A running timer, so the bar itself survives the journey and the panel is
+	// the only thing under test.
+	await page.getByRole('button', { name: 'Start a timer' }).click();
+	await page.getByLabel('What this timer is for').fill('The braise');
+	await page.getByRole('button', { name: '40 minutes', exact: true }).click();
+
+	await page.getByRole('button', { name: 'Start a timer' }).click();
+	await expect(page.getByLabel('What this timer is for')).toBeVisible();
+
+	await page.getByRole('link', { name: 'Library', exact: true }).click();
+	await expect(page.getByLabel('What this timer is for')).toHaveCount(0);
+	// The pot is still watched; only the form went.
+	await expect(page.getByRole('status', { name: 'Kitchen timers' })).toContainText('The braise');
+});
+
+/**
+ * The other half of `cooking`.
+ *
+ * `/family/` is in the rule because a dish the kitchen wrote itself renders
+ * through the same RecipeDetailView, with the same method and the same cook
+ * mode, as one of the 1,844 in the book. Nothing else in the suite visits a
+ * family dish at all, so deleting that half of the condition left every test
+ * green.
+ */
+test('a dish the kitchen wrote itself is a cooking surface too', async ({ page }) => {
+	await goto(page, '/family');
+	await page.getByLabel('Dish name').fill('Probe Stew');
+	await page.getByLabel(/Ingredients[:—-] one per line/).fill('2 onions\n500g beef');
+	await page
+		.getByLabel(/Method[:—-] one step per line/)
+		.fill('Brown the beef.\nSimmer 90 min until tender.');
+	await page.getByRole('button', { name: 'Add to the guide' }).click();
+	await expect(page.locator('.msg')).toContainText('Probe Stew');
+
+	await goto(page, '/family/probe-stew');
+	await expect(page.locator('.head h1')).toHaveText('Probe Stew');
+	await expect(page.getByRole('button', { name: 'Start a timer' })).toBeVisible();
+});
+
+/**
+ * A URL that looks like a dish is not a dish.
+ *
+ * `cooking` asks the route, so an address under /recipe/ that resolves to
+ * nothing still looked like a cooking surface: +error.svelte renders "Nothing
+ * at this address", with no ingredients, no method and no cook mode, and the
+ * dock painted a "+ Timer" over it. Twenty-two recipe URLs were renamed in one
+ * commit on this branch, so a stale bookmark landing here is a real journey.
+ */
+test('an address under /recipe/ that resolves to nothing carries no timer', async ({ page }) => {
+	await goto(page, '/recipe/no-such-dish-as-this');
+	await expect(page.getByRole('heading', { name: 'Nothing at this address' })).toBeVisible();
+	await expect(page.getByRole('button', { name: 'Start a timer' })).toHaveCount(0);
 });
