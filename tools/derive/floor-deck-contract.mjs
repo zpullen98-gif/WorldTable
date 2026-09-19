@@ -282,6 +282,30 @@ export function leakNames(card) {
 }
 
 /**
+ * A card's one recipe link, against the recipe index: it must exist, and its
+ * name must share a word with the term or an alias, the rule the crosslinks
+ * obey (a link carries its subject).
+ *
+ * Here, in the contract, and not only in the build, because the build was the
+ * one place it ran: a draft passed validate.mjs, merged, and then failed
+ * build:data on "Tarte au Citron" under Tart and "Escabecheng Isda" under
+ * Escabeche. The validator now loads the recipe index and calls this too.
+ *
+ * @param {{ id: string, term: string, aliases?: string[], recipe?: string }} card
+ * @param {Map<string, string>} recipeName slug -> recipe name
+ * @returns {string[]}
+ */
+export function recipeProblems(card, recipeName) {
+	if (card.recipe === undefined) return [];
+	const name = recipeName.get(card.recipe);
+	if (!name) return [`${card.id}: recipe "${card.recipe}" is not in the recipe index`];
+	const allNames = [card.term, ...(card.aliases ?? [])].join(' ');
+	const inName = new Set(significantWords(name, 3));
+	if (significantWords(allNames, 3).some((w) => inName.has(w))) return [];
+	return [`${card.id}: recipe "${name}" shares no word with ${JSON.stringify(card.term)} or its aliases. A link carries its subject, the rule the crosslinks obey`];
+}
+
+/**
  * The words of a card's own name that an option under that name may not use.
  *
  * @param {{ term: string, aliases?: string[] }} card

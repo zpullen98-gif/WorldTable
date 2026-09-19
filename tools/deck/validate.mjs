@@ -18,7 +18,7 @@
 
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { checkDeck } from '../derive/floor-deck-contract.mjs';
+import { checkDeck, recipeProblems } from '../derive/floor-deck-contract.mjs';
 import { DECK_SECTIONS, PACKET_TERMS, PACKET_ERRORS } from '../derive/floor-deck.mjs';
 import { ROOT, loadSection, readLedger, resolveDraft, overlay } from './lib.mjs';
 
@@ -39,6 +39,11 @@ if (sectionKey && !DECK_SECTIONS.some((s) => s.key === sectionKey)) die(`no sect
 const ledger = readLedger();
 const lexicon = JSON.parse(readFileSync(join(ROOT, 'src', 'lib', 'data', 'lexicon.json'), 'utf8'));
 const lexiconSlugs = new Set(lexicon.map((e) => e.slug));
+/* The recipe links too, through the contract's own rule: the build was the
+   only place it ran, and two merged sections failed build:data on it. */
+const recipeName = new Map(
+	JSON.parse(readFileSync(join(ROOT, 'src', 'lib', 'data', 'recipes.index.json'), 'utf8')).map((r) => [r.slug, r.name])
+);
 
 /** the sections as they are on disk now, not as this process first imported them */
 const sections = [];
@@ -64,6 +69,8 @@ problems.push(
 		packetErrors: PACKET_ERRORS
 	})
 );
+
+for (const s of sections) for (const c of s.cards) if (c.planned !== true) problems.push(...recipeProblems(c, recipeName));
 
 if (problems.length) {
 	console.error(`\n  ${problems.length} problem(s)`);

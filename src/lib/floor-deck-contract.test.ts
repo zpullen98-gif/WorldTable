@@ -508,9 +508,15 @@ describe('the build and the authoring tools enforce the same contract', () => {
 	it('the validator and the merger call it too, and define no rule of their own', () => {
 		for (const f of ['tools/deck/validate.mjs', 'tools/deck/merge.mjs']) {
 			const text = src(f);
-			expect(text, f).toMatch(/import \{ checkDeck \} from '\.\.\/derive\/floor-deck-contract\.mjs'/);
+			expect(text, f).toMatch(/import \{ checkDeck(, \w+)* \} from '\.\.\/derive\/floor-deck-contract\.mjs'/);
 			expect(text, `${f} restates a limit`).not.toMatch(/LIMITS|VERDICT_RE|BANNED/);
 		}
+		/* The recipe-link rule ran in the build alone, and two merged sections
+		   failed build:data on it. The validator runs it now, from the contract,
+		   and does not restate it. */
+		expect(src('tools/deck/validate.mjs')).toMatch(/import \{ checkDeck, recipeProblems \} from/);
+		expect(src('tools/derive/floor-deck.mjs')).toMatch(/recipeProblems\(c, recipeName\)/);
+		expect(src('tools/deck/validate.mjs')).not.toMatch(/shares no word/);
 	});
 	it('the brief prints the contract numbers rather than its own', () => {
 		expect(src('tools/deck/brief.mjs')).toMatch(/import \{ LIMITS, AIMS, BANNED/);

@@ -63,7 +63,8 @@ import {
 	genericWords,
 	identifyingWords,
 	leakCount,
-	leakNames
+	leakNames,
+	recipeProblems
 } from './floor-deck-contract.mjs';
 import { wrongAnswersFor, seeded, foldText } from '../../src/lib/floor-deck-core.mjs';
 
@@ -337,7 +338,6 @@ export function buildFloorDeck({ recipes }) {
 			   recipe check below still reads EVERY alias: a link is about the
 			   subject, not about what would give an answer away. */
 			const names = leakNames(c);
-			const allNames = [c.term, ...(c.aliases ?? [])].join(' ');
 			const red = redact(c.why, names, { minLength: 3 });
 			if (red.prompt.endsWith('…')) problems.push(`${c.id}: the prompt was clipped; why is over the redactor's length`);
 			if (red.hiddenShare > MAX_REDACTED_SHARE) {
@@ -346,16 +346,7 @@ export function buildFloorDeck({ recipes }) {
 			const survivors = leakCount(red.prompt, significantWords(names, 3));
 			if (survivors) problems.push(`${c.id}: ${survivors} word(s) of the term survive in its own prompt`);
 
-			if (c.recipe !== undefined) {
-				const name = recipeName.get(c.recipe);
-				if (!name) problems.push(`${c.id}: recipe "${c.recipe}" is not in the recipe index`);
-				else {
-					const inName = new Set(significantWords(name, 3));
-					if (!significantWords(allNames, 3).some((w) => inName.has(w))) {
-						problems.push(`${c.id}: recipe "${name}" shares no word with ${JSON.stringify(c.term)} or its aliases. A link carries its subject, the rule the crosslinks obey`);
-					}
-				}
-			}
+			problems.push(...recipeProblems(c, recipeName));
 
 			/** @param {string[]|undefined} ids */
 			const live = (ids) => {
