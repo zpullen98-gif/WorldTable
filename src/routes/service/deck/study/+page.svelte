@@ -187,7 +187,7 @@
 				<p class="note">Looking a card up records nothing.</p>
 				<p class="tools"><a class="chip" href="{base}/service/deck">The deck</a></p>
 			{:else}
-				<p class="empty">There is no card with that id. It may not be written yet.</p>
+				<p class="empty">There is no card with that id. It may have been retired from the deck.</p>
 				<p class="tools"><a class="chip" href="{base}/service/deck">The deck</a></p>
 			{/if}
 		{:else if !session.ready || !started}

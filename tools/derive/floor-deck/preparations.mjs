@@ -180,7 +180,7 @@ const cards = [
 		madeWith: ['egg', 'wheat flour', 'breadcrumbs', 'often milk', 'often butter', 'sometimes ham', 'sometimes fish or shellfish'],
 		note: 'The center holds heat far longer than the shell. Warn guests the first bite runs hot.',
 		origin: 'French, from croquer, to crunch; in Spain croqueta',
-		seeAlso: ['fd_0031', 'fd_0208', 'fd_0021'],
+		seeAlso: ['fd_0031', 'fd_0208'],
 		line: 'Jamón croquettes, saffron aioli'
 	},
 	{
@@ -301,6 +301,37 @@ const cards = [
 		traps: [
 			{ says: 'Fish pressed into a crust of finely ground almond flour, then baked golden', why: 'The almonds are sliced and toasted, spooned over pan-fried fish, not ground into a baked crust.' }
 		]
+	},
+	{
+		id: 'fd_0004',
+		term: 'Coleslaw',
+		packet: true,
+		gist: 'Shredded raw cabbage salad, dressed creamy or sharp with vinegar',
+		guest: "It's crisp shredded cabbage in a tangy dressing, cool and crunchy. It's here to cut through the richness of barbecue and anything fried.",
+		why: 'Raw cabbage is shredded fine and dressed a while ahead, so salt and acid soften it slightly while it keeps its crunch. Creamy versions are mayonnaise-based; in the Carolinas it is often just vinegar, sugar and pepper, or reddened with ketchup.',
+		madeWith: ['cabbage', 'often carrot', 'vinegar', 'sugar', 'often mayonnaise', 'often egg', 'sometimes buttermilk'],
+		origin: 'Dutch koolsla, cabbage salad, brought to colonial New York',
+		pairs: 'Pulled pork, fried catfish, hushpuppies, sandwiches',
+		recipe: 'carolina-coleslaw',
+		seeAlso: ['fd_0200'],
+		line: 'Pulled pork sandwich, vinegar coleslaw, pickles',
+		traps: [
+			{ says: 'Hot braised red cabbage, stewed soft with apple and vinegar', why: 'It is raw cabbage dressed cold, crisp and crunchy, not cooked soft.' }
+		]
+	},
+	{
+		id: 'fd_0005',
+		term: 'Hash',
+		packet: true,
+		gist: 'Chopped cooked meat and potato, pan-crisped into a browned crust',
+		guest: "Usually it's chopped meat and potatoes crisped in a hot pan, often with a runny egg on top. At Carolina barbecue joints it's a soft pork stew over rice.",
+		why: 'Born as a way to use leftovers: cooked meat, often corned or roast beef, is diced with potato and onion and pressed into a hot buttered pan, then left alone so the starch browns into a crust. In South Carolina barbecue joints, hash is instead a soft pork stew spooned over rice.',
+		madeWith: ['often beef', 'sometimes pork', 'potato', 'onion', 'often butter', 'sometimes egg'],
+		note: 'The egg on top usually comes with a runny yolk. A guest can ask for it cooked through.',
+		origin: 'From the French hacher, to chop',
+		pairs: 'Fried or poached eggs, toast, hot sauce, and rice under Carolina hash',
+		seeAlso: ['fd_0085'],
+		line: 'Corned beef hash, two fried eggs, toast'
 	}
 ];
 

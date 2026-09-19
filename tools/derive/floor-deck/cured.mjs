@@ -74,7 +74,7 @@ const cards = [
 		pairs: 'Biscuits, red-eye gravy, grits, melon, pickles',
 		lexiconSlug: 'american-country-ham',
 		recipe: 'country-ham-with-redeye-gravy',
-		seeAlso: ['fd_0012', 'fd_0074', 'fd_0089'],
+		seeAlso: ['fd_0074', 'fd_0089'],
 		line: 'Shaved country ham, buttermilk biscuits, sorghum butter',
 		traps: [
 			{ says: 'Pork leg soaked in a sweet brine, then baked and glazed until moist', why: 'That describes the wet-cured city style. This one is rubbed with dry salt and aged, never soaked in brine.' }

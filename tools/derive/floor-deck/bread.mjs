@@ -16,7 +16,7 @@ const cards = [
 		origin: 'French word for fritter, made famous in New Orleans',
 		pairs: 'Chicory coffee, café au lait, chocolate or caramel dipping sauce',
 		recipe: 'beignets',
-		seeAlso: ['fd_0243', 'fd_0021'],
+		seeAlso: ['fd_0243'],
 		line: 'Warm beignets, powdered sugar, chicory crème anglaise',
 		traps: [
 			{ says: 'Thin French pancakes folded around sugar, fruit or chocolate', why: 'They are fried puffs of yeast dough, not pancakes cooked flat on a griddle.' }
@@ -74,6 +74,18 @@ const cards = [
 		traps: [
 			{ says: 'Bread made sour by mixing vinegar or buttermilk into the dough', why: "The sourness comes from fermentation by the starter's bacteria, not from anything poured in." }
 		]
+	},
+	{
+		id: 'fd_0020',
+		term: 'Cornbread',
+		gist: 'Crusty skillet-baked quick bread of cornmeal and buttermilk',
+		guest: "It's a cornmeal bread baked in a hot iron skillet, so the edges come out crisp and golden. Tender inside with a real toasted corn flavor, and best with butter.",
+		why: 'Cornmeal, buttermilk and egg are leavened with baking soda and poured into a skillet already hot with fat, which fries the crust as it bakes. Southern versions are less sweet and more corn-forward. Northern ones are sweeter and cakier.',
+		madeWith: ['cornmeal', 'buttermilk', 'egg', 'often butter', 'often bacon fat', 'sometimes wheat flour', 'sometimes sugar'],
+		notThis: 'Not polenta, cornmeal stirred into a porridge. Cornbread is a batter, poured into a hot pan and baked.',
+		recipe: 'skillet-cornbread',
+		seeAlso: ['fd_0179'],
+		line: 'Skillet cornbread, sorghum butter'
 	},
 	{
 		id: 'fd_0238',

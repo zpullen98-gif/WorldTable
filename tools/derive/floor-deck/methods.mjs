@@ -119,6 +119,22 @@ const cards = [
 		]
 	},
 	{
+		id: 'fd_0002',
+		term: 'Chicken-Fried',
+		packet: true,
+		gist: 'Meat pounded thin, floured and pan-crisped like Southern chicken',
+		guest: "It means the meat is pounded thin, floured and fried crisp just like fried chicken. Most often it's a beef steak, and it usually comes with a creamy pepper gravy.",
+		why: 'A tough, cheap cut, usually beef round run through a tenderizer, is pounded thin, dipped in egg or buttermilk and dredged in seasoned flour, then shallow-fried in hot fat. The ragged crust stays crisp under cream gravy, a floured cousin of the breadcrumbed schnitzel.',
+		madeWith: ['usually beef', 'wheat flour', 'often egg', 'often buttermilk', 'often milk', 'sometimes pork'],
+		origin: 'Texas and the Southern plains, likely from German schnitzel',
+		pairs: 'Cream gravy, mashed potatoes, green beans, biscuits',
+		seeAlso: ['fd_0031'],
+		line: 'Chicken-fried steak, pepper cream gravy, mashed potatoes',
+		traps: [
+			{ says: 'Boneless chicken breast marinated in buttermilk and cooked crisp', why: 'The name is the method. The meat is usually beef steak, sometimes pork, cooked the way chicken is.' }
+		]
+	},
+	{
 		id: 'fd_0032',
 		term: 'Grilled',
 		packet: true,
@@ -307,7 +323,6 @@ const cards = [
 		origin: 'Southern and Appalachian cooks call hot bacon dressing on lettuce killed lettuce',
 		notThis: 'Close to a quick sauté, but stopped the moment the leaves soften, before anything browns.',
 		recipe: 'nebraska-wilted-lettuce-salad',
-		seeAlso: ['fd_0014'],
 		confusedWith: ['fd_0038'],
 		line: 'Wilted spinach, garlic, lemon, chili flake'
 	},

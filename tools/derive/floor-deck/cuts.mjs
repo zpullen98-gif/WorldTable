@@ -68,7 +68,7 @@ const cards = [
 		note: 'A hock often seasons a dish without showing on the plate. Mention the pork when a guest asks what is in it.',
 		pairs: 'Collard greens, split pea soup, white beans, black-eyed peas',
 		lexiconSlug: 'ham-and-hock',
-		seeAlso: ['fd_0014', 'fd_0041', 'fd_0103'],
+		seeAlso: ['fd_0041', 'fd_0103'],
 		line: 'White beans, smoked ham hock, cornbread',
 		traps: [
 			{ says: "The pig's foot below the ankle, all skin and small bones, pickled or stewed", why: 'That is the trotter. This is the joint just above it, where the leg meets the foot.' }

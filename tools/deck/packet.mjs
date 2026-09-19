@@ -13,20 +13,12 @@
  * @type {Record<string, string>}
  */
 export const PACKET_SAID = {
-	// Southern Terms
-	'Black-Eyed Peas': 'small, light bean that has a dark spot',
+	// Southern Terms: the section is gone (2026-09-19); these four moved to
+	// other sections with their ids, the rest retired with the section.
 	'Chicken-Fried': 'thin piece of [meat] that is battered and fried',
-	'Chow-Chow': 'pickled relish consisting of a combination of [..]',
 	Coleslaw: 'shredded raw cabbage dressed in mayonnaise',
 	Hash: 'diced meat, potatoes and spices mixed together',
-	Hoecakes: 'unleavened cake made with flour or corn meal (listed as "Hoe cakes/Johnny cakes")',
 	Hominy: 'dried corn kernels treated with an alkali, lime',
-	"Hoppin' John": 'peas and rice dish',
-	Muscadine: 'a musky thick skinned grape, dark purple',
-	Scuppernong: 'amber green variety of muscadine',
-	Sorghum: 'genus of grasses, made into syrup or molasses',
-	'Red-Eye Gravy': 'made from drippings of pan fried pork into a thin s[auce]',
-	Succotash: 'sweet corn with lima beans or other shell beans',
 
 	// Cooking Methods
 	Boiled: 'cooking with boiling water based [liquid]',

@@ -171,7 +171,7 @@ const cards = [
 		pairs: 'Samosas, curries, cheddar, pork, cheese and charcuterie boards',
 		notThis: 'Not a jam: vinegar and spice make it savory. Chow-chow is a chopped vegetable pickle, and mostarda is fruit with mustard heat.',
 		seeAlso: ['fd_0215'],
-		confusedWith: ['fd_0276', 'fd_0003', 'fd_0274'],
+		confusedWith: ['fd_0276', 'fd_0274'],
 		line: 'Pork chop, apple chutney, braised greens',
 		traps: [
 			{ says: 'Thick curry gravy of slow-cooked meat, spooned over steamed rice', why: 'It is a relish served on the side, not a curry or a gravy.' }

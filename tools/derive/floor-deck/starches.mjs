@@ -127,6 +127,25 @@ const cards = [
 		]
 	},
 	{
+		id: 'fd_0007',
+		term: 'Hominy',
+		say: 'HAH-muh-nee',
+		packet: true,
+		gist: 'Whole corn kernels steeped in alkali until puffed and chewy',
+		guest: "It's corn that's been soaked and cooked until the kernels puff up big and soft, a little chewy. It tastes like a warm corn tortilla.",
+		why: 'Dried field corn is cooked in an alkali, slaked lime or lye, which loosens the hull so it slips off and swells the starch. The same process makes masa for tortillas, so hominy shares that toasty flavor. It eats plump and chewy, and ground coarse it becomes hominy grits.',
+		madeWith: ['dried corn', 'slaked lime', 'sometimes lye'],
+		origin: 'From a Powhatan word, the same corn as Mexican pozole',
+		pairs: 'Braised pork, chiles, greens, butter and black pepper',
+		notThis: 'Not grits, though grits can be ground from it. Hominy is whole, puffy kernels you can count.',
+		seeAlso: ['fd_0179'],
+		confusedWith: ['fd_0178'],
+		line: 'Braised pork shoulder, stewed hominy, charred onion',
+		traps: [
+			{ says: 'Fresh sweet corn cut from the cob and simmered in butter and cream', why: 'It is dried field corn treated with alkali, starchy and chewy, not fresh sweet corn.' }
+		]
+	},
+	{
 		id: 'fd_0179',
 		term: 'Polenta',
 		say: 'poh-LEN-tuh',
@@ -326,7 +345,7 @@ const cards = [
 		notThis: 'Not black rice, which is a true Asian rice whose dark color sits in its bran.',
 		lexiconSlug: 'wild-rice',
 		recipe: 'minnesota-wild-rice-soup',
-		seeAlso: ['fd_0018', 'fd_0056'],
+		seeAlso: ['fd_0056'],
 		line: 'Roast duck, wild rice, cherries, pan jus',
 		traps: [
 			{ says: 'Dark whole-grain Asian paddy grain, with the bran layer left on', why: 'It is not an Asian grain or even true rice; it is a North American water grass.' }

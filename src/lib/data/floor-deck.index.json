@@ -1,6 +1,5 @@
 {
   "sections": {
-    "southern": "The Southern Table",
     "methods": "Cooking Methods",
     "meats": "Poultry, Game & Offal",
     "cured": "Cured & Preserved Meats",
@@ -17,144 +16,6 @@
     "language": "Menu Language & Sourcing Words"
   },
   "cards": [
-    {
-      "id": "fd_0001",
-      "term": "Black-Eyed Peas",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0002",
-      "term": "Chicken-Fried",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0003",
-      "term": "Chow-Chow",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0004",
-      "term": "Coleslaw",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0005",
-      "term": "Hash",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0006",
-      "term": "Hoecakes",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0007",
-      "term": "Hominy",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0008",
-      "term": "Hoppin' John",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0009",
-      "term": "Muscadine",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0010",
-      "term": "Scuppernong",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0011",
-      "term": "Sorghum",
-      "section": "southern",
-      "aliases": [
-        "Sorghum Syrup",
-        "Sorghum Molasses"
-      ]
-    },
-    {
-      "id": "fd_0012",
-      "term": "Red-Eye Gravy",
-      "section": "southern",
-      "aliases": [
-        "Red Ham Gravy"
-      ]
-    },
-    {
-      "id": "fd_0013",
-      "term": "Succotash",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0014",
-      "term": "Collard Greens",
-      "section": "southern",
-      "aliases": [
-        "Collards"
-      ]
-    },
-    {
-      "id": "fd_0015",
-      "term": "Pot Likker",
-      "section": "southern",
-      "aliases": [
-        "Potlikker",
-        "Pot Liquor"
-      ]
-    },
-    {
-      "id": "fd_0016",
-      "term": "Field Peas",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0017",
-      "term": "Benne",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0018",
-      "term": "Carolina Gold Rice",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0019",
-      "term": "Pimento Cheese",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0020",
-      "term": "Cornbread",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0021",
-      "term": "Hushpuppies",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0022",
-      "term": "Okra",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0023",
-      "term": "Boiled Peanuts",
-      "section": "southern"
-    },
-    {
-      "id": "fd_0024",
-      "term": "Pepper Vinegar",
-      "section": "southern",
-      "aliases": [
-        "Pepper Sauce",
-        "Hot Pepper Vinegar"
-      ]
-    },
     {
       "id": "fd_0025",
       "term": "Boiled",
@@ -188,6 +49,11 @@
     {
       "id": "fd_0031",
       "term": "Fried",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0002",
+      "term": "Chicken-Fried",
       "section": "methods"
     },
     {
@@ -1164,6 +1030,11 @@
       "section": "starches"
     },
     {
+      "id": "fd_0007",
+      "term": "Hominy",
+      "section": "starches"
+    },
+    {
       "id": "fd_0179",
       "term": "Polenta",
       "section": "starches"
@@ -1446,6 +1317,16 @@
       ]
     },
     {
+      "id": "fd_0004",
+      "term": "Coleslaw",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0005",
+      "term": "Hash",
+      "section": "preparations"
+    },
+    {
       "id": "fd_0234",
       "term": "Beignets",
       "section": "bread"
@@ -1463,6 +1344,11 @@
     {
       "id": "fd_0237",
       "term": "Sourdough",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0020",
+      "term": "Cornbread",
       "section": "bread"
     },
     {
@@ -1830,15 +1716,6 @@
     }
   ],
   "byLexicon": {
-    "black-eyed-pea": [
-      "fd_0001"
-    ],
-    "collard-greens": [
-      "fd_0014"
-    ],
-    "okra": [
-      "fd_0022"
-    ],
     "confit": [
       "fd_0029"
     ],

@@ -68,7 +68,6 @@ import {
 } from './floor-deck-contract.mjs';
 import { wrongAnswersFor, seeded, foldText } from '../../src/lib/floor-deck-core.mjs';
 
-import southern from './floor-deck/southern.mjs';
 import methods from './floor-deck/methods.mjs';
 import meats from './floor-deck/meats.mjs';
 import cured from './floor-deck/cured.mjs';
@@ -112,8 +111,12 @@ export const DECK_COMPLETE = true;
  */
 /** @type {import('./floor-deck-contract.mjs').AuthoredSection[]} */
 export const DECK_SECTIONS = [
-	{ key: 'southern', title: 'The Southern Table', madeWith: 'required', cards: southern,
-		blurb: 'The words a Southern menu assumes you grew up with: field peas and pot likker, hominy and hoecakes, the grapes and syrups of the region.' },
+	/* The Southern Table (fd_0001..fd_0024) was removed on the owner's decision,
+	   2026-09-19: the words any American menu uses moved to their natural
+	   sections with their ids (Chicken-Fried to methods, Coleslaw and Hash to
+	   preparations, Hominy to starches, Cornbread to bread), and the 19 regional
+	   ones are retired in the ledger. tools/deck/audit/southern.json keeps why
+	   each read as it did. */
 	{ key: 'methods', title: 'Cooking Methods', madeWith: 'optional', cards: methods,
 		blurb: 'The verbs on the menu. What each one does to the food, how it shows on the plate, and how to tell the near neighbors apart.' },
 	{ key: 'meats', title: 'Poultry, Game & Offal', madeWith: 'required', cards: meats,
@@ -156,9 +159,7 @@ export const DECK_SECTIONS = [
  * @type {string[]}
  */
 export const PACKET_TERMS = [
-	'Black-Eyed Peas', 'Chicken-Fried', 'Chow-Chow', 'Coleslaw', 'Hash', 'Hoecakes',
-	'Hominy', "Hoppin' John", 'Muscadine', 'Scuppernong', 'Sorghum', 'Red-Eye Gravy',
-	'Succotash', 'Boiled', 'Braised', 'Brined', 'Caramelized', 'Confit',
+	'Chicken-Fried', 'Coleslaw', 'Hash', 'Hominy', 'Boiled', 'Braised', 'Brined', 'Caramelized', 'Confit',
 	'Cured', 'Fried', 'Grilled', 'Pickled', 'Poached', 'Preserved',
 	'Puréed', 'Roasted', 'Sautéed', 'Seared', 'Simmered', 'Smoked',
 	'Sous Vide', 'Wilted', 'Escargot', 'Guinea Hen', 'Quail', 'Squab',
@@ -212,8 +213,6 @@ export const PACKET_ERRORS = {
 	fd_0121: /shallow/i,
 	/* Flounder: the packet wrote "eyes on the left side"; it depends on the family */
 	fd_0111: /left/i,
-	/* Red-Eye Gravy: the packet wrote "drippings of pan fried pork"; it is country ham drippings and black coffee, with no thickener */
-	fd_0012: /flour|milk|cream|sausage/i,
 	/* Pastrami: the packet stopped at "then smoked"; it is steamed after smoking */
 	fd_0072: /cold|only smoked|no further/i,
 	/* Jus: the packet wrote "light sauce used in beef recipes"; it is any roast's own juices, lightly reduced */

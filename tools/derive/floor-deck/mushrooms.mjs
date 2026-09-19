@@ -41,7 +41,7 @@ const cards = [
 		term: 'Black Trumpet',
 		aliases: ['Horn of Plenty', 'Black Chanterelle', 'Trompette de la Mort'],
 		packet: true,
-		gist: 'Thin, hollow, near-black wild funnel with a deep, smoky flavor',
+		gist: 'Thin, hollow, charcoal-dark wild funnel with a deep, smoky flavor',
 		guest: "It's a wild mushroom shaped like a little dark horn. It's thin and delicate, with a deep, smoky flavor, a bit like truffle, that goes a long way.",
 		why: 'A wild relative of the chanterelle, foraged under hardwoods and not farmed. It has no gills, just a thin hollow funnel, so it cooks in a minute and turns silky. Its aroma is intense and smoky, and it dries so well that dried ones are ground into sauces.',
 		madeWith: ['black trumpet mushroom', 'often butter', 'often cream', 'sometimes shallot'],
