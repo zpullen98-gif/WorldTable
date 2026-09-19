@@ -1,0 +1,835 @@
+{
+	"section": "starches",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0172",
+				"fd_0173",
+				"fd_0174",
+				"fd_0175",
+				"fd_0176",
+				"fd_0177",
+				"fd_0178",
+				"fd_0179",
+				"fd_0180",
+				"fd_0181",
+				"fd_0182",
+				"fd_0183",
+				"fd_0184",
+				"fd_0185",
+				"fd_0186",
+				"fd_0187",
+				"fd_0188",
+				"fd_0189",
+				"fd_0190",
+				"fd_0191",
+				"fd_0192",
+				"fd_0193",
+				"fd_0194"
+			],
+			"findings": [
+				{
+					"id": "fd_0179",
+					"field": "origin",
+					"severity": "wrong",
+					"claim": "a Latin word for grain mush, long before corn arrived",
+					"because": "In classical Latin, polenta meant hulled barley groats or barley meal (Pliny, Columella). The Latin word for a grain mush was puls.",
+					"fix": "Northern Italy; Latin polenta meant barley meal, long before corn arrived",
+					"lens": "fact",
+					"key": "starches-1-fact-1"
+				},
+				{
+					"id": "fd_0178",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "Grits are stone-ground corn slow-cooked until creamy",
+					"because": "Many grits are not stone-ground. Plenty of kitchens use quick or regular degerminated grits, and the why says so itself. A server who repeats this line may be describing the plate wrongly.",
+					"fix": "Grits are ground dried corn slow-cooked until creamy",
+					"lens": "fact",
+					"key": "starches-1-fact-2"
+				},
+				{
+					"id": "fd_0177",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "light and pillowy, made by hand",
+					"because": "Whether gnocchi are handmade depends on the kitchen, and many restaurants buy them in. The card should not have a server promise this to a guest.",
+					"fix": "light and pillowy",
+					"lens": "fact",
+					"key": "starches-1-fact-3"
+				},
+				{
+					"id": "fd_0173",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Breton crepes",
+					"because": "The buckwheat dish of Brittany is the savory galette (galette de sarrasin). Breton crepes are the sweet ones, made with wheat flour. Galette is a card on the roster.",
+					"fix": "Breton galettes",
+					"lens": "fact",
+					"key": "starches-1-fact-4"
+				},
+				{
+					"id": "fd_0176",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Piccolo is einkorn, the first wheat people farmed",
+					"because": "Einkorn and emmer were both domesticated in the Fertile Crescent at about the same time, around 10,000 years ago. Sources disagree about which came first, so 'the first' is stronger than the evidence.",
+					"fix": "Piccolo is einkorn, one of the first wheats people farmed",
+					"lens": "fact",
+					"key": "starches-1-fact-5"
+				},
+				{
+					"id": "fd_0176",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "The oldest farmed wheat",
+					"because": "Einkorn's claim to be older than emmer is disputed, because both were domesticated at about the same time.",
+					"fix": "One of the first farmed wheats",
+					"lens": "fact",
+					"key": "starches-1-fact-6"
+				},
+				{
+					"id": "fd_0172",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "filled with roast meat",
+					"because": "Many kitchens fill agnolotti with squash, cheese or potato. A new hire who repeats this as fact will tell a guest that a squash agnolotti holds meat, or tell a guest who avoids meat that the dish is the classic one. The classic filling belongs in why and madeWith, and the guest line should frame it as the traditional version.",
+					"fix": "They're little pinched pillows of fresh egg pasta from northern Italy, classically filled with roast meat. Small, tender, made to soak up sauce.",
+					"lens": "floor",
+					"key": "starches-1-floor-7"
+				},
+				{
+					"id": "fd_0177",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "light and pillowy, made by hand",
+					"because": "Many kitchens use bought or machine-extruded gnocchi. A server who promises they are handmade is making a claim the card cannot back.",
+					"fix": "They're soft little potato dumplings, light and pillowy. Think of the best mashed potato turned into bite-size pasta.",
+					"lens": "floor",
+					"key": "starches-1-floor-8"
+				},
+				{
+					"id": "fd_0178",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "stone-ground corn slow-cooked until creamy, with butter and often cheese",
+					"because": "Not every kitchen uses stone-ground grits or finishes them with butter. The guest line tells the server to state what is in the dish, so a guest who avoids dairy hears butter as a fact about tonight's plate when the recipe varies. The dairy belongs in madeWith.",
+					"fix": "Grits are ground corn slow-cooked until creamy, often finished with butter. It's the South's comfort food, and great under shrimp.",
+					"lens": "floor",
+					"key": "starches-1-floor-9"
+				},
+				{
+					"id": "fd_0179",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "slow-cooked with butter and cheese",
+					"because": "It is stated as fact, but many kitchens make polenta with stock or water, or leave out the cheese. The server would be announcing dairy as certain when madeWith correctly says 'often'.",
+					"fix": "It's Italian cornmeal slow-cooked until creamy, often with butter and cheese. Soft, it's like a savory corn pudding, and grilled it gets a crisp crust.",
+					"lens": "floor",
+					"key": "starches-1-floor-10"
+				},
+				{
+					"id": "fd_0174",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "(no say given)",
+					"because": "New hires hesitate over bulgur: is it BUL-gur, bul-GOOR or BOOL-gar? American dining rooms say BUHL-ger, so the card should give that respelling.",
+					"fix": "BUHL-ger",
+					"lens": "floor",
+					"key": "starches-1-floor-11"
+				},
+				{
+					"id": "fd_0176",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's the smallest and oldest of the ancient Italian wheats.",
+					"because": "The card's own menu line sells it as 'Einkorn risotto', and guests who read food labels know the word einkorn. The guest line never says the name a guest would recognize, so a server who is asked 'is that einkorn?' is left with nothing to say. Einkorn is also not originally Italian.",
+					"fix": "It's einkorn, the smallest and oldest of the ancient wheats.",
+					"lens": "floor",
+					"key": "starches-1-floor-12"
+				},
+				{
+					"id": "fd_0172",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "del plin means with a pinch in local dialect",
+					"because": "The phrase is not introduced: the card never says that 'agnolotti del plin' is the menu name for the pinched style. A new hire reading it cannot tell where 'del plin' comes from or when a guest would see it.",
+					"fix": "Piedmont, northern Italy; the pinched style is agnolotti del plin, plin meaning pinch",
+					"lens": "floor",
+					"key": "starches-1-floor-13"
+				},
+				{
+					"id": "fd_0173",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "Despite the name it isn't wheat at all, it's a seed from a plant related to rhubarb.",
+					"because": "A guest who has to avoid wheat will hear 'isn't wheat at all' as an assurance about the dish. The card's own note says soba, blini and many buckwheat crepes are blended with wheat flour. The botany can stay, but the guest line must not sound like a clearance.",
+					"fix": "Despite the name it's no kin to wheat, it's a seed from a plant related to rhubarb.",
+					"lens": "safety",
+					"key": "starches-1-safety-14"
+				},
+				{
+					"id": "fd_0173",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"buckwheat\", \"sometimes wheat flour\", \"sometimes egg\", \"sometimes butter\"",
+					"because": "The card names blini and crepes as classic uses. Blini are classically made with milk, and many crepe batters are too, but the list never flags milk.",
+					"fix": "add \"sometimes milk\"",
+					"lens": "safety",
+					"key": "starches-1-safety-15"
+				},
+				{
+					"id": "fd_0177",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "Not pasta dough.",
+					"because": "A server who says 'not pasta' or 'not pasta dough' at the table can be heard as saying there is no wheat, but potato gnocchi are bound with wheat flour, and ricotta gnocchi and alla romana gnocchi are made with wheat too. The contrast should be about shape and texture, not ingredients.",
+					"fix": "Not rolled pasta, though flour binds them.",
+					"lens": "safety",
+					"key": "starches-1-safety-16"
+				},
+				{
+					"id": "fd_0185",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Not pappardelle, which are about twice as wide.",
+					"because": "Tagliatelle are about 7 to 8 mm wide and pappardelle usually 2 to 3 cm, so pappardelle run roughly three times as wide. 'About twice' understates the difference a server uses to tell them apart.",
+					"fix": "Not pappardelle, which are about three times as wide.",
+					"lens": "fact",
+					"key": "starches-2-fact-1"
+				},
+				{
+					"id": "fd_0182",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Long-kerneled Italian risotto rice prized for its firm center",
+					"because": "Acquerello (fd_0183) is carnaroli, so this gist is equally true of Acquerello. If it shows up as a wrong option under Acquerello, a learner who picks it is right. The gist needs something only the variety has, such as its 1945 breeding, and nothing the aged brand also has.",
+					"fix": "Longer, firmer risotto rice variety bred near Milan in 1945",
+					"lens": "floor",
+					"key": "starches-2-floor-2"
+				},
+				{
+					"id": "fd_0183",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Brand of Italian rice aged a year or more in the husk before milling",
+					"because": "Next to the Carnaroli gist, which describes the same grain, only the word brand and the ageing separate the two. Put the germ added back in, which only Acquerello has, so it cannot be swapped with fd_0182.",
+					"fix": "Branded risotto rice aged in the husk, its germ milled back in",
+					"lens": "floor",
+					"key": "starches-2-floor-3"
+				},
+				{
+					"id": "fd_0183",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "that the farm ages for at least a year. The grains stay firm and absorb flavor beautifully.",
+					"because": "'The farm' leaves the guest asking which farm, and 'absorb flavor beautifully' sounds like brochure copy. Say what the ageing does in plain words.",
+					"fix": "It's a prized Italian risotto rice, aged at least a year before milling, so the grains stay firm and soak up the broth.",
+					"lens": "floor",
+					"key": "starches-2-floor-4"
+				},
+				{
+					"id": "fd_0183",
+					"field": "notThis",
+					"severity": "style",
+					"claim": "sold in tins, so ask for it by name.",
+					"because": "A guest never asks for the rice by name, so 'ask for it by name' gives the server nothing to do. What the server needs to know is that it is carnaroli from one estate.",
+					"fix": "Not a variety but a brand: aged carnaroli from a single Piedmont estate, sold in tins.",
+					"lens": "floor",
+					"key": "starches-2-floor-5"
+				},
+				{
+					"id": "fd_0184",
+					"field": "line",
+					"severity": "unclear",
+					"claim": "Semolina gnocchi, brown butter, sage",
+					"because": "Semolina gnocchi (gnocchi alla romana) are soft, baked rounds of semolina porridge. The guest line promises that semolina gives 'a firm bite', so a server reading it at this dish would be wrong at the table. Use a dish where the guest line holds.",
+					"fix": "Hand-rolled semolina cavatelli, sausage, broccoli rabe",
+					"lens": "floor",
+					"key": "starches-2-floor-6"
+				},
+				{
+					"id": "fd_0184",
+					"field": "guest",
+					"severity": "style",
+					"claim": "the backbone of dried pasta. It gives pasta and bread a firm bite and a sunny color.",
+					"because": "'Backbone' and 'sunny color' read like copy off a card, not something a server would say. Plainer words are easier for a new hire to say aloud.",
+					"fix": "the flour dried pasta is made from. It gives pasta and bread a firm bite and a golden color.",
+					"lens": "floor",
+					"key": "starches-2-floor-7"
+				},
+				{
+					"id": "fd_0181",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "so run it straight from the pass.",
+					"because": "'The pass' is kitchen slang a third-day server may not know yet. Say plainly what to do.",
+					"fix": "so run it to the table the moment it is up.",
+					"lens": "floor",
+					"key": "starches-2-floor-8"
+				},
+				{
+					"id": "fd_0187",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's tiny pasta from North Africa, steamed until light and fluffy.",
+					"because": "Couscous is the classic grain-bowl mix-up: guests take it for a grain like quinoa or rice. The guest line is the part a server says aloud, and it never says wheat. 'Pasta' alone does not tell a guest who avoids wheat what it is made of. The card's own notThis exists because of this confusion.",
+					"fix": "It's tiny wheat pasta from North Africa, steamed until light and fluffy.",
+					"lens": "safety",
+					"key": "starches-2-safety-9"
+				},
+				{
+					"id": "fd_0184",
+					"field": "line",
+					"severity": "unclear",
+					"claim": "Semolina gnocchi, brown butter, sage",
+					"because": "Semolina gnocchi (gnocchi alla romana) are classically made with milk, butter, egg yolk and parmesan. madeWith lists only durum wheat, so a server reading this menu line from the card would give an incomplete ingredient picture for the dish shown. A line where semolina is the whole story avoids that.",
+					"fix": "Semolina bucatini, cacio e pepe",
+					"lens": "safety",
+					"key": "starches-2-safety-10"
+				},
+				{
+					"id": "fd_0186",
+					"field": "line",
+					"severity": "unclear",
+					"claim": "Arborio rice pudding, vanilla, poached pear",
+					"because": "Rice pudding is made with milk, often cream and sometimes egg, but madeWith lists only rice. A server looking at the card for this menu line would see rice as the only ingredient. The card is about the rice, so use a risotto line instead.",
+					"fix": "Arborio risotto, spring peas, parmesan",
+					"lens": "safety",
+					"key": "starches-2-safety-11"
+				},
+				{
+					"id": "fd_0189",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "The hard dark hull keeps it chewy",
+					"because": "The hull (husk) is removed in processing; the dark, chewy layer is the seed coat or bran that stays on the grain. The deck's own wild-rice lexicon entry calls the black layer the bran.",
+					"fix": "The hard dark bran coat keeps it chewy",
+					"lens": "fact",
+					"key": "starches-3-fact-1"
+				},
+				{
+					"id": "fd_0189",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "a true Asian rice with a dark bran that cooks soft and sticky",
+					"because": "Most black rice sold as 'forbidden rice' is not glutinous and cooks up chewy, not sticky. Only the Thai black sticky kind is glutinous.",
+					"fix": "a true Asian rice whose dark color sits in its bran",
+					"lens": "fact",
+					"key": "starches-3-fact-2"
+				},
+				{
+					"id": "fd_0194",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "semolina",
+					"because": "Semolina is durum wheat. A guest with a wheat allergy, or a new server, may not know that, and this list is the card's only allergy flag.",
+					"fix": "durum wheat semolina",
+					"lens": "fact",
+					"key": "starches-3-fact-3"
+				},
+				{
+					"id": "fd_0193",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "semolina",
+					"because": "Semolina is durum wheat. On the only list that works as an allergy flag, the word wheat should appear.",
+					"fix": "durum wheat semolina",
+					"lens": "fact",
+					"key": "starches-3-fact-4"
+				},
+				{
+					"id": "fd_0192",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Best of all floating in a rich, clear broth, a Bologna winter dish.",
+					"because": "A verbless fragment that a nervous new hire will stumble over aloud. 'Best of all' also sounds like the server is steering the guest toward a broth dish that may not be what this menu serves, since tortellini often come with cream or butter sauces.",
+					"fix": "In Bologna they come floating in a rich, clear broth.",
+					"lens": "floor",
+					"key": "starches-3-floor-5"
+				},
+				{
+					"id": "fd_0193",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Short curled shells of eggless semolina dough, pressed by a finger",
+					"because": "Every word here also fits the neighbouring Orecchiette card: eggless semolina, pressed by a finger or thumb, and 'curled' or 'shell' for a cupped piece. A test taker could accept this gist for Orecchiette. The shape that tells cavatelli apart is a small hollow roll, like a tiny hot dog bun.",
+					"fix": "Short eggless semolina curls shaped like tiny hot dog buns",
+					"lens": "floor",
+					"key": "starches-3-floor-6"
+				},
+				{
+					"id": "fd_0193",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "They're little curled shells of hand-pressed pasta",
+					"because": "Guests hear 'shells' as the familiar shell pasta, conchiglie, which is a different shape. The hot dog bun picture is the one servers actually use and it tells the guest what will land on the plate.",
+					"fix": "They're little hand-rolled pasta curls from southern Italy, like tiny hot dog buns. Dense and chewy, and the hollow holds sauce.",
+					"lens": "floor",
+					"key": "starches-3-floor-7"
+				},
+				{
+					"id": "fd_0193",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "Short curled shells of eggless semolina dough, pressed by a finger",
+					"because": "\"Eggless\" tells the reader the pasta has no egg. A server will repeat that to a guest with an egg allergy. Many American kitchens make cavatelli from a flour and ricotta dough, and some add egg. Describe what the dough is made with, not what it leaves out.",
+					"fix": "Short curled shells of semolina and water dough, pressed by a finger",
+					"lens": "safety",
+					"key": "starches-3-safety-8"
+				},
+				{
+					"id": "fd_0193",
+					"field": "why",
+					"severity": "verdict",
+					"claim": "Durum semolina with no egg gives a firm, chewy bite",
+					"because": "\"With no egg\" is an absence claim a guest could rely on, and house recipes vary: ricotta versions are common and some add egg. The mechanism holds if you name the flour.",
+					"fix": "Durum semolina and water give a firm, chewy bite",
+					"lens": "safety",
+					"key": "starches-3-safety-9"
+				},
+				{
+					"id": "fd_0193",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "These are firm pasta, no potato.",
+					"because": "\"No potato\" is another claim that the dish lacks something, and regional potato cavatelli do exist. Tell the two apart by texture instead.",
+					"fix": "These are firm pasta, not soft dumplings.",
+					"lens": "safety",
+					"key": "starches-3-safety-10"
+				},
+				{
+					"id": "fd_0193",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"semolina\", \"sometimes ricotta\"",
+					"because": "Many guests with a wheat allergy do not know semolina is wheat, and the house form for this is \"wheat flour\". Ricotta doughs also sometimes take egg, which the list leaves out.",
+					"fix": "\"durum wheat semolina\", \"sometimes ricotta\", \"sometimes egg\"",
+					"lens": "safety",
+					"key": "starches-3-safety-11"
+				},
+				{
+					"id": "fd_0194",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "Small cupped disks of eggless durum dough, thin in the middle",
+					"because": "\"Eggless\" is a free-from claim about egg that a server could pass on as an assurance. Recipes vary by kitchen. Name the dough instead.",
+					"fix": "Small cupped disks of semolina and water dough, thin in the middle",
+					"lens": "safety",
+					"key": "starches-3-safety-12"
+				},
+				{
+					"id": "fd_0194",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "It is eggless semolina dough, dragged by knife and shaped over a thumb.",
+					"because": "The trap's explanation makes the same no-egg claim, and this is what the reader learns as the right answer. Say what the dough is made with.",
+					"fix": "It is semolina and water dough, dragged by knife and shaped over a thumb.",
+					"lens": "safety",
+					"key": "starches-3-safety-13"
+				},
+				{
+					"id": "fd_0194",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"semolina\"",
+					"because": "A guest with a wheat allergy may not know semolina is durum wheat. Name the wheat, as the other pasta cards do with \"wheat flour\".",
+					"fix": "\"durum wheat semolina\"",
+					"lens": "safety",
+					"key": "starches-3-safety-14"
+				},
+				{
+					"id": "fd_0192",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"mortadella\"",
+					"because": "Mortadella, including the Bologna IGP product, is often studded with pistachio. That puts a tree nut into a classic tortellini filling. A server needs that flagged for a guest with a nut allergy.",
+					"fix": "\"mortadella\", \"sometimes pistachio\"",
+					"lens": "safety",
+					"key": "starches-3-safety-15"
+				},
+				{
+					"key": "starches-critic-1",
+					"id": "fd_0172",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The Agnolotti trap reads \"Long flat ribbons of fresh egg pasta, cut by hand and tossed in ragu\". That is a true description of Tagliatelle (fd_0185), and nearly repeats its gist. A trap may not be true of another card on the roster.",
+					"because": "The Agnolotti trap reads \"Long flat ribbons of fresh egg pasta, cut by hand and tossed in ragu\". That is a true description of Tagliatelle (fd_0185), and nearly repeats its gist. A trap may not be true of another card on the roster.",
+					"fix": "Replace it with a false description in the same length band (60 to 72 chars) that fits no roster card, e.g. \"Large baked tubes of dried pasta, stuffed with ricotta and spinach\" (66). Why: \"They are small pinched pockets of fresh egg pasta, boiled and never baked.\""
+				},
+				{
+					"key": "starches-critic-2",
+					"id": "fd_0193",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The Cavatelli notThis contradicts its own why. It says \"These are firm pasta, not soft dumplings\", while the why says \"more like a dumpling than a noodle\". It also restates the dumpling point twice and never addresses Orecchiette, which is listed in confusedWithTerms.",
+					"because": "The Cavatelli notThis contradicts its own why. It says \"These are firm pasta, not soft dumplings\", while the why says \"more like a dumpling than a noodle\". It also restates the dumpling point twice and never addresses Orecchiette, which is listed in confusedWithTerms.",
+					"fix": "notThis: \"Not gnocchi, which are soft potato dumplings, and not orecchiette, which are round cupped ears. These are short curls with a slit.\""
+				},
+				{
+					"key": "starches-critic-3",
+					"id": "fd_0177",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The Gnocchi guest line says \"turned into bite-size pasta\" while its notThis opens \"Not rolled pasta\". A server gets told two opposite things. Gnocchi also has no link to Cavatelli, although Cavatelli lists Gnocchi in confusedWithTerms.",
+					"because": "The Gnocchi guest line says \"turned into bite-size pasta\" while its notThis opens \"Not rolled pasta\". A server gets told two opposite things. Gnocchi also has no link to Cavatelli, although Cavatelli lists Gnocchi in confusedWithTerms.",
+					"fix": "Guest: \"They're soft little potato dumplings, light and pillowy. Think of the best mashed potato shaped into bite-size pieces.\" Add \"Cavatelli\" to seeAlsoTerms (or confusedWithTerms, with notThis naming it)."
+				},
+				{
+					"key": "starches-critic-4",
+					"id": "fd_0173",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The guest line \"Despite the name it's no kin to wheat\" works as an implied free-from verdict at the table. The packet row for this term said \"gluten free alternative\", and the card's own note says soba, blini and crepes are often blended with wheat flour. A guest who asks about wheat hears \"no wheat\". The trap \"An old variety of whole wheat, roasted dark\" also sits close to Freekeh (roasted wheat) and Farro (ancient wheat).",
+					"because": "The guest line \"Despite the name it's no kin to wheat\" works as an implied free-from verdict at the table. The packet row for this term said \"gluten free alternative\", and the card's own note says soba, blini and crepes are often blended with wheat flour. A guest who asks about wheat hears \"no wheat\". The trap \"An old variety of whole wheat, roasted dark\" also sits close to Freekeh (roasted wheat) and Farro (ancient wheat).",
+					"fix": "Guest: \"It's the dark, earthy seed of a plant related to rhubarb, ground into flour for crepes and noodles. It tastes toasty, a bit like dark rye.\" Leave the not-a-grass fact to the why. Consider a trap such as \"A dark variety of rye, ground coarse for a sour, malty taste\" (60)."
+				},
+				{
+					"key": "starches-critic-5",
+					"id": "fd_0181",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The Risotto note says \"the moment\" twice in two sentences, and its first sentence says the same thing as its second.",
+					"because": "The Risotto note says \"the moment\" twice in two sentences, and its first sentence says the same thing as its second.",
+					"fix": "Note: \"It keeps thickening as it sits, so run it to the table the moment it is up.\""
+				},
+				{
+					"key": "starches-critic-6",
+					"id": "fd_0175",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Farro lists Freekeh in confusedWithTerms, but its notThis addresses only barley and piccolo. Freekeh lists Farro only as seeAlso, so the link is one-sided and the confusion is weak.",
+					"because": "Farro lists Freekeh in confusedWithTerms, but its notThis addresses only barley and piccolo. Freekeh lists Farro only as seeAlso, so the link is one-sided and the confusion is weak.",
+					"fix": "Move Freekeh from confusedWithTerms to seeAlsoTerms on Farro, which matches Freekeh's seeAlso. Farro Piccolo stays as the confusion."
+				},
+				{
+					"key": "starches-critic-7",
+					"id": "fd_0179",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Semolina lists Polenta in confusedWithTerms (yellow and gritty), but Polenta does not link back.",
+					"because": "Semolina lists Polenta in confusedWithTerms (yellow and gritty), but Polenta does not link back.",
+					"fix": "Add \"Semolina\" to Polenta's seeAlsoTerms (or to confusedWithTerms, with a clause in notThis: semolina is wheat, polenta is corn)."
+				},
+				{
+					"key": "starches-critic-8",
+					"id": "fd_0176",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The Farro Piccolo gist is 70 characters, the longest gist in the section, and it is the longest option on its card (trap 64). The line also leans on \"softer than emmer\", a word the reader has not been taught.",
+					"because": "The Farro Piccolo gist is 70 characters, the longest gist in the section, and it is the longest option on its card (trap 64). The line also leans on \"softer than emmer\", a word the reader has not been taught.",
+					"fix": "Shorten the gist to about 62 chars, e.g. \"Tiny, tender grain of one of the very first wheats ever farmed\" (62)."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "starches-1-fact-1",
+					"action": "applied",
+					"reason": "Origin now reads 'Northern Italy; Latin polenta meant barley meal, long before corn arrived', since classical polenta was barley groats and the mush word was puls."
+				},
+				{
+					"finding": "starches-1-fact-2",
+					"action": "applied",
+					"reason": "Grits guest line now says 'ground dried corn' in place of 'stone-ground corn'."
+				},
+				{
+					"finding": "starches-1-fact-3",
+					"action": "applied",
+					"reason": "Removed 'made by hand' from the gnocchi guest line."
+				},
+				{
+					"finding": "starches-1-fact-4",
+					"action": "applied",
+					"reason": "Buckwheat why now says 'Breton galettes', the buckwheat dish of Brittany."
+				},
+				{
+					"finding": "starches-1-fact-5",
+					"action": "applied",
+					"reason": "Why now says 'one of the first wheats people farmed', because einkorn and emmer were domesticated at about the same time."
+				},
+				{
+					"finding": "starches-1-fact-6",
+					"action": "applied",
+					"reason": "Gist now opens 'One of the first farmed wheats', and the trap's why was softened to match."
+				},
+				{
+					"finding": "starches-1-floor-7",
+					"action": "applied",
+					"reason": "Guest line now says 'classically filled with roast meat' and keeps Piedmont."
+				},
+				{
+					"finding": "starches-1-floor-8",
+					"action": "applied",
+					"reason": "Gnocchi guest line now uses the proposed text, with no promise that they are handmade."
+				},
+				{
+					"finding": "starches-1-floor-9",
+					"action": "applied",
+					"reason": "Grits guest line now reads 'ground dried corn slow-cooked until creamy, often finished with butter', and cheese is left to madeWith."
+				},
+				{
+					"finding": "starches-1-floor-10",
+					"action": "applied",
+					"reason": "Polenta guest line now says 'slow-cooked until creamy, often with butter and cheese'."
+				},
+				{
+					"finding": "starches-1-floor-11",
+					"action": "applied",
+					"reason": "Added say 'BUHL-ger', which matches how Americans say the word."
+				},
+				{
+					"finding": "starches-1-floor-12",
+					"action": "applied",
+					"reason": "Guest line now names einkorn: 'It's einkorn, one of the oldest wheats people farmed', with no claim that it is Italian and no claim that it is the single oldest."
+				},
+				{
+					"finding": "starches-1-floor-13",
+					"action": "applied",
+					"reason": "Origin now reads 'Piedmont, northern Italy; pinched ones are agnolotti del plin, plin meaning pinch', which introduces the menu name."
+				},
+				{
+					"finding": "starches-1-safety-14",
+					"action": "applied",
+					"reason": "Guest line now says 'it's no kin to wheat', which keeps the botany without sounding like an assurance about the dish."
+				},
+				{
+					"finding": "starches-1-safety-15",
+					"action": "applied",
+					"reason": "Added 'sometimes milk' to madeWith, because blini and many crepe batters are made with milk."
+				},
+				{
+					"finding": "starches-1-safety-16",
+					"action": "applied",
+					"reason": "notThis now opens 'Not rolled pasta, though flour binds them.', so the contrast is about form and not about ingredients."
+				},
+				{
+					"finding": "starches-2-fact-1",
+					"action": "applied",
+					"reason": "Tagliatelle run about 7 to 8 mm and pappardelle 2 to 3 cm, so notThis now says pappardelle are about three times as wide."
+				},
+				{
+					"finding": "starches-2-floor-2",
+					"action": "applied",
+					"reason": "The gist now reads 'Long, firm Italian risotto rice variety bred near Milan in 1945' (63 chars, shorter than its 67-char trap). The words variety and 1945 separate it from the Acquerello brand."
+				},
+				{
+					"finding": "starches-2-floor-3",
+					"action": "applied",
+					"reason": "The gist now reads 'Husk-aged risotto rice brand, its germ put back once milled' (59 chars, just under the 60-char trap). It names the husk ageing and the germ put back, which only Acquerello has."
+				},
+				{
+					"finding": "starches-2-floor-4",
+					"action": "applied",
+					"reason": "Took the suggested guest line: aged at least a year before milling, so the grains stay firm and soak up the broth."
+				},
+				{
+					"finding": "starches-2-floor-5",
+					"action": "applied",
+					"reason": "notThis now reads 'Not a variety but a brand: aged carnaroli from a single Piedmont estate, sold in tins.'"
+				},
+				{
+					"finding": "starches-2-floor-6",
+					"action": "applied",
+					"reason": "Semolina gnocchi alla romana are soft, so the line is now 'Hand-rolled semolina cavatelli, tomato, basil', a firm semolina-and-water pasta where the guest line holds. The same change answers safety-10."
+				},
+				{
+					"finding": "starches-2-floor-7",
+					"action": "applied",
+					"reason": "Dropped 'backbone' and 'sunny'. The guest line now says it is what most dried pasta is made from and gives a firm bite and a warm yellow color, so 'flour' and 'golden' are not repeated."
+				},
+				{
+					"finding": "starches-2-floor-8",
+					"action": "applied",
+					"reason": "Changed 'run it straight from the pass' to 'run it to the table the moment it is up'."
+				},
+				{
+					"finding": "starches-2-safety-9",
+					"action": "applied",
+					"reason": "The guest line now says 'tiny wheat pasta from North Africa'."
+				},
+				{
+					"finding": "starches-2-safety-10",
+					"action": "applied",
+					"reason": "Changed the line from gnocchi alla romana (milk, butter, egg yolk, cheese) to a cavatelli line where semolina is the whole pasta. The sauce is a plain tomato and basil, which also answers floor-6."
+				},
+				{
+					"finding": "starches-2-safety-11",
+					"action": "applied",
+					"reason": "The rice pudding line (milk, cream, sometimes egg) is now 'Arborio risotto, spring peas, parmesan'."
+				},
+				{
+					"finding": "starches-3-fact-1",
+					"action": "applied",
+					"reason": "Wild Rice why now says the hard dark bran coat keeps it chewy, because the hull is removed in processing."
+				},
+				{
+					"finding": "starches-3-fact-2",
+					"action": "applied",
+					"reason": "Wild Rice notThis now reads 'a true Asian rice whose dark color sits in its bran' and no longer calls black rice sticky."
+				},
+				{
+					"finding": "starches-3-fact-3",
+					"action": "applied",
+					"reason": "Orecchiette madeWith 'semolina' became 'durum wheat semolina'."
+				},
+				{
+					"finding": "starches-3-fact-4",
+					"action": "applied",
+					"reason": "Cavatelli madeWith 'semolina' became 'durum wheat semolina'."
+				},
+				{
+					"finding": "starches-3-floor-5",
+					"action": "applied",
+					"reason": "Tortellini guest second sentence is now 'In Bologna they come floating in a rich, clear broth.'"
+				},
+				{
+					"finding": "starches-3-floor-6",
+					"action": "applied",
+					"reason": "Cavatelli gist is now 'Short semolina dough curls shaped like tiny split hot dog buns'. It uses the hot dog bun shape to set it apart from Orecchiette and leaves out 'eggless', per safety-8."
+				},
+				{
+					"finding": "starches-3-floor-7",
+					"action": "applied",
+					"reason": "Cavatelli guest now uses the suggested line: hand-rolled curls like tiny hot dog buns, dense and chewy, the hollow holds sauce. The word 'shells' is gone."
+				},
+				{
+					"finding": "starches-3-safety-8",
+					"action": "applied",
+					"reason": "'Eggless' was removed from the Cavatelli gist. The new gist names only the semolina dough and makes no claim about egg."
+				},
+				{
+					"finding": "starches-3-safety-9",
+					"action": "applied",
+					"reason": "Cavatelli why now reads 'Durum semolina and water give a firm, chewy bite'."
+				},
+				{
+					"finding": "starches-3-safety-10",
+					"action": "applied",
+					"reason": "Cavatelli notThis now ends 'These are firm pasta, not soft dumplings.' and no longer says 'no potato'."
+				},
+				{
+					"finding": "starches-3-safety-11",
+					"action": "applied",
+					"reason": "Cavatelli madeWith is now durum wheat semolina, sometimes ricotta, sometimes egg, often sausage."
+				},
+				{
+					"finding": "starches-3-safety-12",
+					"action": "applied",
+					"reason": "'Eggless durum' was removed from the Orecchiette gist, which now reads 'Small cupped disks of semolina dough, thin in the middle'. I left out 'and water' so the gist stays shorter than its 63-character trap."
+				},
+				{
+					"finding": "starches-3-safety-13",
+					"action": "applied",
+					"reason": "Orecchiette trap why now reads 'It is semolina and water dough, dragged by knife and shaped over a thumb.'"
+				},
+				{
+					"finding": "starches-3-safety-14",
+					"action": "applied",
+					"reason": "Orecchiette madeWith now lists 'durum wheat semolina' (same change as fact-3)."
+				},
+				{
+					"finding": "starches-3-safety-15",
+					"action": "applied",
+					"reason": "'sometimes pistachio' was added after 'mortadella' in Tortellini madeWith, which brings the list to 7 items."
+				},
+				{
+					"finding": "starches-critic-1",
+					"action": "applied",
+					"reason": "Replaced the Tagliatelle-true trap with a baked stuffed-tube description that fits no roster card, and a why saying these are small pinched pockets, boiled rather than baked."
+				},
+				{
+					"finding": "starches-critic-2",
+					"action": "applied",
+					"reason": "The notThis now names both gnocchi and orecchiette and no longer contradicts the dumpling comparison in the why."
+				},
+				{
+					"finding": "starches-critic-3",
+					"action": "applied",
+					"reason": "The guest line now says bite-size pieces instead of pasta, and Cavatelli is added to seeAlsoTerms."
+				},
+				{
+					"finding": "starches-critic-4",
+					"action": "applied",
+					"reason": "The guest line drops the no-wheat claim and describes the seed and its uses, and the trap is now a dark rye (not a roster card), which moves it away from Freekeh and Farro."
+				},
+				{
+					"finding": "starches-critic-5",
+					"action": "applied",
+					"reason": "The note is now the single sentence the critic proposed."
+				},
+				{
+					"finding": "starches-critic-6",
+					"action": "applied",
+					"reason": "Freekeh moved from confusedWithTerms to seeAlsoTerms on Farro, and Farro Piccolo stays as the confusion."
+				},
+				{
+					"finding": "starches-critic-7",
+					"action": "applied",
+					"reason": "Added Semolina to Polenta's seeAlsoTerms."
+				},
+				{
+					"finding": "starches-critic-8",
+					"action": "applied",
+					"reason": "The gist is now the 62-character line with no emmer reference, shorter than the 64-character trap."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0172",
+						"issue": "The Agnolotti trap reads \"Long flat ribbons of fresh egg pasta, cut by hand and tossed in ragu\". That is a true description of Tagliatelle (fd_0185), and nearly repeats its gist. A trap may not be true of another card on the roster.",
+						"fix": "Replace it with a false description in the same length band (60 to 72 chars) that fits no roster card, e.g. \"Large baked tubes of dried pasta, stuffed with ricotta and spinach\" (66). Why: \"They are small pinched pockets of fresh egg pasta, boiled and never baked.\""
+					},
+					{
+						"id": "fd_0193",
+						"issue": "The Cavatelli notThis contradicts its own why. It says \"These are firm pasta, not soft dumplings\", while the why says \"more like a dumpling than a noodle\". It also restates the dumpling point twice and never addresses Orecchiette, which is listed in confusedWithTerms.",
+						"fix": "notThis: \"Not gnocchi, which are soft potato dumplings, and not orecchiette, which are round cupped ears. These are short curls with a slit.\""
+					},
+					{
+						"id": "fd_0177",
+						"issue": "The Gnocchi guest line says \"turned into bite-size pasta\" while its notThis opens \"Not rolled pasta\". A server gets told two opposite things. Gnocchi also has no link to Cavatelli, although Cavatelli lists Gnocchi in confusedWithTerms.",
+						"fix": "Guest: \"They're soft little potato dumplings, light and pillowy. Think of the best mashed potato shaped into bite-size pieces.\" Add \"Cavatelli\" to seeAlsoTerms (or confusedWithTerms, with notThis naming it)."
+					},
+					{
+						"id": "fd_0173",
+						"issue": "The guest line \"Despite the name it's no kin to wheat\" works as an implied free-from verdict at the table. The packet row for this term said \"gluten free alternative\", and the card's own note says soba, blini and crepes are often blended with wheat flour. A guest who asks about wheat hears \"no wheat\". The trap \"An old variety of whole wheat, roasted dark\" also sits close to Freekeh (roasted wheat) and Farro (ancient wheat).",
+						"fix": "Guest: \"It's the dark, earthy seed of a plant related to rhubarb, ground into flour for crepes and noodles. It tastes toasty, a bit like dark rye.\" Leave the not-a-grass fact to the why. Consider a trap such as \"A dark variety of rye, ground coarse for a sour, malty taste\" (60)."
+					},
+					{
+						"id": "fd_0181",
+						"issue": "The Risotto note says \"the moment\" twice in two sentences, and its first sentence says the same thing as its second.",
+						"fix": "Note: \"It keeps thickening as it sits, so run it to the table the moment it is up.\""
+					},
+					{
+						"id": "fd_0175",
+						"issue": "Farro lists Freekeh in confusedWithTerms, but its notThis addresses only barley and piccolo. Freekeh lists Farro only as seeAlso, so the link is one-sided and the confusion is weak.",
+						"fix": "Move Freekeh from confusedWithTerms to seeAlsoTerms on Farro, which matches Freekeh's seeAlso. Farro Piccolo stays as the confusion."
+					},
+					{
+						"id": "fd_0179",
+						"issue": "Semolina lists Polenta in confusedWithTerms (yellow and gritty), but Polenta does not link back.",
+						"fix": "Add \"Semolina\" to Polenta's seeAlsoTerms (or to confusedWithTerms, with a clause in notThis: semolina is wheat, polenta is corn)."
+					},
+					{
+						"id": "fd_0176",
+						"issue": "The Farro Piccolo gist is 70 characters, the longest gist in the section, and it is the longest option on its card (trap 64). The line also leans on \"softer than emmer\", a word the reader has not been taught.",
+						"fix": "Shorten the gist to about 62 chars, e.g. \"Tiny, tender grain of one of the very first wheats ever farmed\" (62)."
+					}
+				],
+				"notes": "The section mean is 669 characters of prose per card (ceiling 720). The longest cards are fd_0180 (752), fd_0179 (734) and fd_0188 (732), all under 900. Every roster row has a card, and no row carries a knownPacketError. I found no em or en dashes, no banned substrings and no verdict words. Every gist and trap stays free of its own mayNotAppear words. Across the 17 cards with traps, gists average 62.6 characters and traps 62.4, so length gives nothing away. Cross-section links look right: Grits and Hominy are linked, Wild Rice points to Carolina Gold Rice, Buckwheat to Galette, and Couscous to Semolina. Facts I checked with no problem found: Carnaroli bred in 1945 near Milan; Acquerello aged in the husk with its germ put back, from Tenuta Colombara in the province of Vercelli; tagliatelle about 7 to 8 mm against pappardelle at 2 to 3 cm; wild rice mostly paddy grown in Minnesota and California. Optional: the Ravioli notThis names only Agnolotti, although Tortellini is also in its confusedWithTerms. Scratch file of the section prose: C:\\Users\\zpull\\AppData\\Local\\Temp\\claude\\C--Users-zpull--claude\\ee375187-7803-4126-b577-0cdfe403a999\\scratchpad\\s.json"
+			},
+			"acceptedRejected": []
+		}
+	]
+}

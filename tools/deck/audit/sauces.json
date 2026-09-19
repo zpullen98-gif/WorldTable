@@ -1,0 +1,803 @@
+{
+	"section": "sauces",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0195",
+				"fd_0196",
+				"fd_0197",
+				"fd_0198",
+				"fd_0199",
+				"fd_0200",
+				"fd_0201",
+				"fd_0202",
+				"fd_0203",
+				"fd_0204",
+				"fd_0205",
+				"fd_0206",
+				"fd_0207",
+				"fd_0208",
+				"fd_0209",
+				"fd_0210",
+				"fd_0211",
+				"fd_0212",
+				"fd_0213",
+				"fd_0214",
+				"fd_0215"
+			],
+			"findings": [
+				{
+					"id": "fd_0196",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Not hollandaise, which is lemon and butter only.",
+					"because": "Hollandaise is built on egg yolks just as bearnaise is. Saying it is 'lemon and butter only' teaches a server that one of the two sauces has no yolk, and that is exactly the wrong thing to repeat to a guest who is avoiding egg.",
+					"fix": "Not hollandaise, the same yolks and butter with lemon. This one is flecked green with tarragon.",
+					"lens": "fact",
+					"key": "sauces-1-fact-1"
+				},
+				{
+					"id": "fd_0198",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Airy froth whipped up with a hand blender to top a plate",
+					"because": "On modern menus an 'emulsion' (brown butter, dashi-butter, beurre blanc style) is very often frothed with a hand blender just before plating and served airy. So this trap can be true of the menu word, and its why ('it is creamy, not airy') is not reliably true.",
+					"fix": "says: \"Clear broth set firm with gelatin and sliced cold\"; why: \"That is an aspic; this is fat and water held as droplets, not a set gel.\"",
+					"lens": "fact",
+					"key": "sauces-1-fact-2"
+				},
+				{
+					"id": "fd_0198",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Fat and water held together as tiny droplets in one smooth sauce",
+					"because": "This literally describes hollandaise, aioli and vinaigrette too. Shown as a distractor under any of those terms it is a true answer, and under Emulsion any of their gists would pass. The gist needs to mark this card as the kitchen word for the state, not as a particular sauce.",
+					"fix": "Kitchen word for oil and water beaten into one stable mix",
+					"lens": "floor",
+					"key": "sauces-1-floor-3"
+				},
+				{
+					"id": "fd_0196",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Not hollandaise, which is lemon and butter only.",
+					"because": "Hollandaise is egg yolk, butter and lemon. Saying 'lemon and butter only' tells a new hire it has no egg, and they may repeat that to a guest who asks about egg.",
+					"fix": "Not hollandaise, which has lemon, not herbs.",
+					"lens": "floor",
+					"key": "sauces-1-floor-4"
+				},
+				{
+					"id": "fd_0199",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "Light sauce made only for beef, like the dip served with a French dip",
+					"because": "'the dip served with a French dip' repeats itself and reads badly as an answer option. A cleaner version keeps the required beef mistake and the same length band.",
+					"fix": "Light sauce used only for beef, the dip for a French dip sandwich",
+					"lens": "floor",
+					"key": "sauces-1-floor-5"
+				},
+				{
+					"id": "fd_0197",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "which matters to a guest asking about lightly cooked egg.",
+					"because": "This says the fact matters but never tells the server what to do with it. A third-day hire needs the action: send the question to the kitchen.",
+					"fix": "The yolks are warmed, not cooked firm: send undercooked egg questions to the kitchen.",
+					"lens": "floor",
+					"key": "sauces-1-floor-6"
+				},
+				{
+					"id": "fd_0199",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "Not gravy, which is thickened with flour",
+					"because": "Set against gravy, this tells a server that jus has no flour, which a guest avoiding wheat would take as an assurance. Many kitchens finish a jus lié with starch, and some use a little roux or flour-dusted meat. The card's own why says it is 'only lightly thickened'. The real difference is how thick it is, not whether flour is used.",
+					"fix": "Not gravy, which is thickened much further, and not demi-glace, a far thicker veal reduction.",
+					"lens": "safety",
+					"key": "sauces-1-safety-7"
+				},
+				{
+					"id": "fd_0196",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Held warm, never hot: too much heat scrambles the yolks and the sauce splits.",
+					"because": "The note leaves out the fact a server most needs: the egg yolks are only gently warmed and never set firm, so this is lightly cooked egg, just as on the hollandaise card. A guest who asks about undercooked egg deserves a plain answer that sends them to the kitchen about pasteurized eggs.",
+					"fix": "The yolks are only gently warmed, never set firm; ask the kitchen whether its eggs are pasteurized.",
+					"lens": "safety",
+					"key": "sauces-1-safety-8"
+				},
+				{
+					"id": "fd_0197",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "which matters to a guest asking about lightly cooked egg",
+					"because": "The note hints at a concern but gives the server nothing to do about it. The plain fact is that the yolks stay lightly cooked, and the question to take back to the kitchen is whether it uses pasteurized eggs, as the aioli card already says.",
+					"fix": "The yolks are only gently warmed, never set firm. Ask the kitchen whether it uses pasteurized eggs.",
+					"lens": "safety",
+					"key": "sauces-1-safety-9"
+				},
+				{
+					"id": "fd_0200",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"oil\"",
+					"because": "Vinaigrettes are often made with walnut or hazelnut oil, and a guest with a tree-nut allergy needs that flagged by name. Plain 'oil' hides it.",
+					"fix": "\"oil\", \"sometimes walnut or hazelnut oil\"",
+					"lens": "safety",
+					"key": "sauces-1-safety-10"
+				},
+				{
+					"id": "fd_0209",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "sometimes anchovy",
+					"because": "The classic French remoulade (Escoffier) is mayonnaise with mustard, gherkins, capers, herbs and anchovy essence. Anchovy belongs to the classic recipe, not an occasional extra, and a guest with a fish allergy needs it flagged at that strength.",
+					"fix": "often anchovy",
+					"lens": "fact",
+					"key": "sauces-2-fact-1"
+				},
+				{
+					"id": "fd_0209",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "It starts with mayonnaise, an emulsion of egg yolk and oil",
+					"because": "The old-line New Orleans red remoulade (Arnaud's, Galatoire's style) is often oil-based, like a vinaigrette, with no mayonnaise at all. The card calls mayonnaise universal and then describes the Louisiana version as a variant of it.",
+					"fix": "Most start with mayonnaise, an emulsion of egg yolk and oil",
+					"lens": "fact",
+					"key": "sauces-2-fact-2"
+				},
+				{
+					"id": "fd_0209",
+					"field": "recipe",
+					"severity": "unclear",
+					"claim": "dansk-remoulade",
+					"because": "Danish remoulade is a different, yellow sauce colored with curry or turmeric and served with fried fish and hot dogs. The card describes only the French and Louisiana versions, so a server who follows the link gets a sauce the card never mentions.",
+					"fix": "omit recipe",
+					"lens": "fact",
+					"key": "sauces-2-fact-3"
+				},
+				{
+					"id": "fd_0206",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "often red wine",
+					"because": "The classic demi-glace (Escoffier) is espagnole and brown stock reduced together and finished with Madeira or sometimes sherry, not red wine. Red wine belongs to its child sauces, such as bordelaise.",
+					"fix": "often madeira",
+					"lens": "fact",
+					"key": "sauces-2-fact-4"
+				},
+				{
+					"id": "fd_0205",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "Too hot or too cold and it splits into oil",
+					"because": "Heat is what breaks it into oil. When it gets too cold the butter sets solid, and the sauce only breaks once it is warmed again. The card should not tell servers that cold alone turns it into oil.",
+					"fix": "Too hot and it splits into oil, too cold and it sets",
+					"lens": "fact",
+					"key": "sauces-2-fact-5"
+				},
+				{
+					"id": "fd_0206",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It's a deeply reduced veal sauce",
+					"because": "Veal is the classic base, but many American kitchens make demi-glace from beef or chicken bones, or buy a base. A server who repeats this line tells a guest who avoids veal what the plate holds, and it may not be true of this kitchen. The why and madeWith already say 'traditionally veal', so the guest line should hedge the same way.",
+					"fix": "It's a deeply reduced meat sauce, classically veal",
+					"lens": "floor",
+					"key": "sauces-2-floor-6"
+				},
+				{
+					"id": "fd_0208",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's what makes a lasagna, a gratin or a croque monsieur so rich.",
+					"because": "Most American lasagna is layered with ricotta, not béchamel. The béchamel version is the Bolognese style. A new hire at an Italian-American place who says this about the house lasagna will be wrong.",
+					"fix": "It's what makes a classic lasagna, a gratin or a croque monsieur so rich.",
+					"lens": "floor",
+					"key": "sauces-2-floor-7"
+				},
+				{
+					"id": "fd_0204",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "a rich broth clarified until it is perfectly clear",
+					"because": "'Clarified until clear' says the same thing twice and uses a kitchen word without explaining it. A guest who asks 'what is that?' learns nothing about how it gets clear. Egg white is the plain answer, and it is the fact the guest is most likely to ask about next.",
+					"fix": "a rich broth cleared with egg white until it is perfectly clear",
+					"lens": "floor",
+					"key": "sauces-2-floor-8"
+				},
+				{
+					"id": "fd_0209",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "It starts with mayonnaise, an emulsion of egg yolk and oil",
+					"because": "The card never says the base is uncooked. Kitchens that make their own mayonnaise usually whisk it from raw egg yolk, and commercial mayonnaise uses pasteurized egg. A guest who avoids raw egg will ask, and the server needs to know to check with the kitchen. The card has no note, so adding one does not repeat anything.",
+					"fix": "House-made versions are often whisked from raw egg yolk. Ask the kitchen whether theirs uses pasteurized egg.",
+					"lens": "safety",
+					"key": "sauces-2-safety-9"
+				},
+				{
+					"id": "fd_0203",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"fruit or vegetable\", \"often sugar\", \"often lemon juice\"",
+					"because": "Classic fruit coulis, especially raspberry, is often sharpened with a splash of liqueur such as kirsch or framboise, and it is served raw or barely cooked, so the alcohol stays in. madeWith should flag alcohol for guests who avoid it.",
+					"fix": "\"fruit or vegetable\", \"often sugar\", \"often lemon juice\", \"sometimes liqueur\"",
+					"lens": "safety",
+					"key": "sauces-2-safety-10"
+				},
+				{
+					"id": "fd_0213",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "a Catalan sauce of roasted red peppers and tomato",
+					"because": "The classic base is dried sweet peppers (ñora), soaked and ground, with roasted tomato and garlic. Roasted fresh bell peppers are a common American shortcut, and saying so contradicts the card's own gist and why.",
+					"fix": "a Catalan sauce of dried sweet red peppers and roasted tomato",
+					"lens": "fact",
+					"key": "sauces-3-fact-1"
+				},
+				{
+					"id": "fd_0213",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "It is cooked and ground smooth, built on roasted peppers, nuts and bread.",
+					"because": "The sauce itself is not cooked: its tomato and garlic are roasted, its peppers are dried and soaked, and the whole is pounded or ground raw. Traditional romesco is also coarse and rustic, not smooth.",
+					"fix": "It is ground from dried peppers, roasted tomato, nuts and bread, not chopped raw.",
+					"lens": "fact",
+					"key": "sauces-3-fact-2"
+				},
+				{
+					"id": "fd_0213",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "first made by fishermen for their catch",
+					"because": "The Tarragona fishermen story (Serrallo quarter) is a local tradition, not a documented fact. A server will repeat it as a fact.",
+					"fix": "said to come from its fishermen",
+					"lens": "fact",
+					"key": "sauces-3-fact-3"
+				},
+				{
+					"id": "fd_0214",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "simmer gently in water for hours",
+					"because": "This holds for chicken and veal. Fish stock (fumet) and shellfish stock, both in this card's madeWith, simmer only about 20 to 45 minutes, because longer cooking turns them bitter and chalky.",
+					"fix": "simmer gently in water, for hours, or under an hour for fish",
+					"lens": "fact",
+					"key": "sauces-3-fact-4"
+				},
+				{
+					"id": "fd_0214",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"sometimes fish bones\", \"sometimes shellfish shells\"",
+					"because": "Fish fumet is classically made with white wine, and brown stock with tomato paste. Alcohol is one of the flags this section asks for, and it is missing.",
+					"fix": "replace \"sometimes shellfish shells\" with \"sometimes white wine\" or merge fish and shellfish into one item and add \"sometimes white wine\"",
+					"lens": "fact",
+					"key": "sauces-3-fact-5"
+				},
+				{
+					"id": "fd_0211",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "It is served cold, never cooked.",
+					"because": "Italian salsa verde is served at room temperature, never chilled. A server who calls it cold misleads the guest.",
+					"fix": "It is served at room temperature, never cooked.",
+					"lens": "fact",
+					"key": "sauces-3-fact-6"
+				},
+				{
+					"id": "fd_0211",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"sometimes bread\"",
+					"because": "Many Piedmontese versions (bagnet verd) also use hard-boiled egg. Egg is a flag a guest with an allergy would need.",
+					"fix": "replace \"garlic\" or merge so the list gets \"sometimes hard-boiled egg\" alongside \"sometimes bread\"",
+					"lens": "fact",
+					"key": "sauces-3-fact-7"
+				},
+				{
+					"id": "fd_0214",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "bones and vegetables simmered for hours into a rich liquid. It's what gives our sauces",
+					"because": "The card's own madeWith lists fish bones and shellfish shells, and fish stock is simmered only about 20 to 30 minutes; 'for hours' is false for those. 'Our sauces' also has the server assert this kitchen's practice, which the card cannot know.",
+					"fix": "bones and vegetables simmered slowly in water. It's what gives sauces",
+					"lens": "floor",
+					"key": "sauces-3-floor-8"
+				},
+				{
+					"id": "fd_0214",
+					"field": "line",
+					"severity": "unclear",
+					"claim": "Spring pea soup, chicken stock, mint, crème fraîche",
+					"because": "Menus almost never list stock as a component of a soup, because it is already in the soup base, so this does not read like a real menu. Stock shows up on a menu when a dish is steamed or finished in it.",
+					"fix": "Steamed clams, fish stock, white wine, grilled bread",
+					"lens": "floor",
+					"key": "sauces-3-floor-9"
+				},
+				{
+					"id": "fd_0212",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "pounded with pine nuts, garlic, Parmesan and olive oil",
+					"because": "Most restaurant pesto is made in a blender or food processor. A server who tells a guest it is pounded is making a claim the kitchen may not back up. The why already covers what the name means.",
+					"fix": "made with pine nuts, garlic, Parmesan and olive oil",
+					"lens": "floor",
+					"key": "sauces-3-floor-10"
+				},
+				{
+					"id": "fd_0213",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "roasted red peppers and tomato",
+					"because": "The why says the classic sauce uses dried sweet peppers that are soaked, with the tomato roasted, so the guest line and the why disagree. A server who reads both will not know which one to repeat.",
+					"fix": "sweet dried red peppers and roasted tomato",
+					"lens": "floor",
+					"key": "sauces-3-floor-11"
+				},
+				{
+					"id": "fd_0211",
+					"field": "say",
+					"severity": "style",
+					"claim": "SAHL-sah VEHR-deh",
+					"because": "This is the Italian ending. An American dining room says the final syllable as 'day', as in the familiar Mexican salsa verde, and the key has 'ay' for that sound.",
+					"fix": "SAHL-sah VEHR-day",
+					"lens": "floor",
+					"key": "sauces-3-floor-12"
+				},
+				{
+					"id": "fd_0215",
+					"field": "say",
+					"severity": "style",
+					"claim": "ah-groh-DOHL-cheh",
+					"because": "This is the native Italian ending. American servers and guests say the last syllable as 'chay', and the key has 'ay' for that sound.",
+					"fix": "ah-groh-DOHL-chay",
+					"lens": "floor",
+					"key": "sauces-3-floor-13"
+				},
+				{
+					"id": "fd_0211",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"parsley\", \"olive oil\", \"capers\", \"often anchovy\", \"garlic\", \"vinegar\", \"sometimes bread\"",
+					"because": "The card's origin points to Piedmont, and the Piedmontese version (bagnet verd) is often made with hard-boiled egg or egg yolk. Many Italian recipes add it too. Egg is a major allergen, and this list never mentions it. The list is already at its limit of 7, but vinegar is covered in both the gist and the why, so it can come out to make room.",
+					"fix": "\"parsley\", \"olive oil\", \"capers\", \"often anchovy\", \"garlic\", \"sometimes bread\", \"sometimes hard-boiled egg\"",
+					"lens": "safety",
+					"key": "sauces-3-safety-14"
+				},
+				{
+					"id": "fd_0214",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "Kitchens leave it unsalted on purpose, because it gets reduced into sauces and the salt would concentrate.",
+					"because": "This states that every kitchen's stock is unsalted. A guest limiting sodium could take that as a promise. Many kitchens salt stock lightly, and bought-in bases are often salted. The accurate claim is that it is usually left unsalted.",
+					"fix": "Kitchens usually leave it unsalted, because it gets reduced into sauces and salt would concentrate.",
+					"lens": "safety",
+					"key": "sauces-3-safety-15"
+				},
+				{
+					"key": "sauces-critic-1",
+					"id": "fd_0197",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The Hollandaise trap 'Cold cream sauce of mayonnaise, mustard and fresh lemon' comes close to a true description of Remoulade (fd_0209), a card on this roster: a cold mayonnaise sauce with mustard. A trap must not describe another card truthfully.",
+					"because": "The Hollandaise trap 'Cold cream sauce of mayonnaise, mustard and fresh lemon' comes close to a true description of Remoulade (fd_0209), a card on this roster: a cold mayonnaise sauce with mustard. A trap must not describe another card truthfully.",
+					"fix": "Replace traps[0].says with 'Cold sauce of whipped cream, mustard and lemon for fish' (55 chars, gist is 59). Keep a why such as: 'It is served warm and built from egg yolks and melted butter, not cream.'"
+				},
+				{
+					"key": "sauces-critic-2",
+					"id": "fd_0208",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The confusion link runs one way only. Velouté (fd_0207) lists Béchamel in confusedWithTerms, but Béchamel keeps Velouté only in seeAlsoTerms and has no notThis. New hires mix up the two pale roux mother sauces in both directions.",
+					"because": "The confusion link runs one way only. Velouté (fd_0207) lists Béchamel in confusedWithTerms, but Béchamel keeps Velouté only in seeAlsoTerms and has no notThis. New hires mix up the two pale roux mother sauces in both directions.",
+					"fix": "Move 'Velouté' from seeAlsoTerms to confusedWithTerms and add notThis: 'Not velouté, which is built on light stock. This one is milk, so it tastes mild and milky.' The card stands at 620 chars, so there is room."
+				},
+				{
+					"key": "sauces-critic-3",
+					"id": "fd_0198",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (58) is longer than the only trap (49), so the gist is the longest option.",
+					"because": "Length parity: the gist (58) is longer than the only trap (49), so the gist is the longest option.",
+					"fix": "Shorten the gist to 'Fat and liquid beaten into one smooth, even mix' (47). Do not pad the trap."
+				},
+				{
+					"key": "sauces-critic-4",
+					"id": "fd_0201",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (60) is longer than the trap (51), so the gist is the longest option.",
+					"because": "Length parity: the gist (60) is longer than the trap (51), so the gist is the longest option.",
+					"fix": "Shorten the gist to 'Minced shallot and black pepper steeped in vinegar' (50)."
+				},
+				{
+					"key": "sauces-critic-5",
+					"id": "fd_0202",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (62) is longer than the trap (53), so the gist is the longest option.",
+					"because": "Length parity: the gist (62) is longer than the trap (53), so the gist is the longest option.",
+					"fix": "Shorten the gist to 'Caramelized sugar cooked down with vinegar into syrup' (51)."
+				},
+				{
+					"key": "sauces-critic-6",
+					"id": "fd_0210",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (63) is longer than the trap (57), so the gist is the longest option.",
+					"because": "Length parity: the gist (63) is longer than the trap (57), so the gist is the longest option.",
+					"fix": "Shorten the gist to 'Raw Argentine sauce of parsley, garlic, oil and vinegar' (55)."
+				},
+				{
+					"key": "sauces-critic-7",
+					"id": "fd_0204",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (67) is longer than the trap (62), and 67 sits at the top of the aim range.",
+					"because": "Length parity: the gist (67) is longer than the trap (62), and 67 sits at the top of the aim range.",
+					"fix": "Shorten the gist to 'Meat stock made crystal clear by a raft of egg white' (52), or to another wording under 62."
+				},
+				{
+					"key": "sauces-critic-8",
+					"id": "fd_0205",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (67) is longer than the trap (64), so the gist is the longest option.",
+					"because": "Length parity: the gist (67) is longer than the trap (64), so the gist is the longest option.",
+					"fix": "Shorten the gist to 'Cold butter whisked into a reduction of wine and shallot' (56)."
+				},
+				{
+					"key": "sauces-critic-9",
+					"id": "fd_0208",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (62) is longer than the trap (60), so the gist is the longest option.",
+					"because": "Length parity: the gist (62) is longer than the trap (60), so the gist is the longest option.",
+					"fix": "Shorten the gist to 'Hot milk thickened with butter and flour, the white base' (56). If you keep the words 'mother sauce', keep the result under 60 characters."
+				},
+				{
+					"key": "sauces-critic-10",
+					"id": "fd_0200",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (59) is longer than the trap (57), so the gist is the longest option.",
+					"because": "Length parity: the gist (59) is longer than the trap (57), so the gist is the longest option.",
+					"fix": "Shorten the gist to 'Oil whisked with vinegar or citrus, held with mustard' (53)."
+				},
+				{
+					"key": "sauces-critic-11",
+					"id": "fd_0196",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (59) is longer than the trap (58), so the gist is the longest option. Separately, the note is word-for-word the same as the note on Hollandaise (fd_0197), which reads as boilerplate across two neighbouring cards.",
+					"because": "Length parity: the gist (59) is longer than the trap (58), so the gist is the longest option. Separately, the note is word-for-word the same as the note on Hollandaise (fd_0197), which reads as boilerplate across two neighbouring cards.",
+					"fix": "Change the gist to 'Warm butter sauce of yolks, tarragon, shallot and vinegar' (57). Either drop the note on one of the two cards or reword one. The why on Béarnaise already says gentle heat, so dropping its note is the cheapest fix."
+				},
+				{
+					"key": "sauces-operator-1",
+					"id": "fd_0207",
+					"lens": "operator",
+					"field": "madeWith",
+					"severity": "style",
+					"claim": "[\"butter\",\"wheat flour\",\"chicken, veal or fish stock\",\"often cream\"]",
+					"because": "The contract refused \"chicken, veal or fish stock\": a madeWith item is one ingredient noun, and a list inside an item hides the one that matters to an allergy.",
+					"fix": "Split into \"white stock\" (the classical name for the veal or chicken base) and \"sometimes fish stock\", so fish is flagged as its own item."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "sauces-1-fact-1",
+					"action": "applied",
+					"reason": "Bearnaise notThis now reads 'Not hollandaise, the same yolks and butter with lemon. This one is flecked green with tarragon.', so both sauces are shown as yolk-based."
+				},
+				{
+					"finding": "sauces-1-fact-2",
+					"action": "applied",
+					"reason": "Replaced the froth trap with the aspic trap as proposed (no Aspic card is on the roster, so it describes no other card), 50 chars against a 58-char gist."
+				},
+				{
+					"finding": "sauces-1-floor-3",
+					"action": "applied",
+					"reason": "Emulsion gist is now 'Kitchen word for fat and liquid beaten into one smooth mix', which names the general state, not one particular sauce; I used 'fat and liquid' because butter emulsions count too."
+				},
+				{
+					"finding": "sauces-1-floor-4",
+					"action": "applied",
+					"reason": "Same notThis as sauces-1-fact-1: one rewrite keeps the yolks in hollandaise and marks tarragon as the difference."
+				},
+				{
+					"finding": "sauces-1-floor-5",
+					"action": "applied",
+					"reason": "Jus trap now reads 'Light sauce used only for beef, the dip for a French dip sandwich', which keeps the required beef mistake."
+				},
+				{
+					"finding": "sauces-1-floor-6",
+					"action": "applied",
+					"reason": "Hollandaise note now reads 'The yolks are only gently warmed, never set firm. Ask the kitchen whether it uses pasteurized eggs.', which gives the server an action."
+				},
+				{
+					"finding": "sauces-1-safety-7",
+					"action": "applied",
+					"reason": "Jus notThis now reads 'Not gravy, which is thickened much further, and not demi-glace, a far thicker veal reduction.' The flour contrast is gone, so it no longer implies jus has no flour."
+				},
+				{
+					"finding": "sauces-1-safety-8",
+					"action": "applied",
+					"reason": "Bearnaise note replaced with the gently-warmed yolks line plus the pasteurized-egg question for the kitchen, with a full stop in place of the semicolon."
+				},
+				{
+					"finding": "sauces-1-safety-9",
+					"action": "applied",
+					"reason": "Hollandaise note set to the proposed wording, the same fix as sauces-1-floor-6."
+				},
+				{
+					"finding": "sauces-1-safety-10",
+					"action": "applied",
+					"reason": "Added 'sometimes walnut or hazelnut oil' to the Vinaigrette madeWith list so the tree nuts are flagged by name."
+				},
+				{
+					"finding": "sauces-2-fact-1",
+					"action": "applied",
+					"reason": "Changed 'sometimes anchovy' to 'often anchovy' in madeWith, since anchovy essence is part of the classic French recipe."
+				},
+				{
+					"finding": "sauces-2-fact-2",
+					"action": "applied",
+					"reason": "The why now opens 'Most start with mayonnaise, ... then take', so oil-based New Orleans versions are not ruled out."
+				},
+				{
+					"finding": "sauces-2-fact-3",
+					"action": "applied",
+					"reason": "Removed recipe dansk-remoulade, because the card never describes the Danish curry-yellow sauce and no other candidate fits."
+				},
+				{
+					"finding": "sauces-2-fact-4",
+					"action": "applied",
+					"reason": "Replaced 'often red wine' with 'often madeira', since the classic demi-glace is finished with Madeira and red wine belongs to children like bordelaise. Alcohol is still flagged."
+				},
+				{
+					"finding": "sauces-2-fact-5",
+					"action": "applied",
+					"reason": "The note now reads 'Too hot and it splits into oil, too cold and it sets, so kitchens make it near service and hold it just warm.'"
+				},
+				{
+					"finding": "sauces-2-floor-6",
+					"action": "applied",
+					"reason": "The guest line now says 'a deeply reduced meat sauce, classically veal'. To avoid saying 'classic' twice, the second clause now reads 'the backbone of a great steak sauce' (157 chars)."
+				},
+				{
+					"finding": "sauces-2-floor-7",
+					"action": "applied",
+					"reason": "The guest line now says 'a classic lasagna', so it no longer claims every lasagna, including ricotta-layered ones, uses béchamel."
+				},
+				{
+					"finding": "sauces-2-floor-8",
+					"action": "applied",
+					"reason": "The guest line now names egg white: 'It's a rich broth made crystal clear with egg white.' This is worded to avoid the 'cleared ... clear' repetition in the suggested fix."
+				},
+				{
+					"finding": "sauces-2-safety-9",
+					"action": "applied",
+					"reason": "Added the note 'House-made versions are often whisked from raw egg yolk. Ask the kitchen whether theirs uses pasteurized egg.' The card's prose now totals 779, which is inside the limit."
+				},
+				{
+					"finding": "sauces-2-safety-10",
+					"action": "applied",
+					"reason": "Added 'sometimes liqueur' to madeWith, because raspberry coulis is often finished with kirsch or framboise and served uncooked."
+				},
+				{
+					"finding": "sauces-3-fact-1",
+					"action": "applied",
+					"reason": "Romesco guest line now says dried sweet red peppers and roasted tomato, and 'Smoky' became 'Earthy', since dried nora peppers are not smoked."
+				},
+				{
+					"finding": "sauces-3-fact-2",
+					"action": "applied",
+					"reason": "The trap's why now reads 'It is ground from dried peppers, roasted tomato, nuts and bread, not chopped raw.'"
+				},
+				{
+					"finding": "sauces-3-fact-3",
+					"action": "applied",
+					"reason": "Origin now says the sauce is 'said to come from its fishermen', so the local tradition is not stated as fact."
+				},
+				{
+					"finding": "sauces-3-fact-4",
+					"action": "applied",
+					"reason": "Stock why now says 'for hours, or under an hour for fish', and the opening was shortened to 'Bones and vegetables' to stay near the length aim."
+				},
+				{
+					"finding": "sauces-3-fact-5",
+					"action": "applied",
+					"reason": "Added 'sometimes white wine' to the stock madeWith and dropped 'carrot' to stay at 7 items, keeping both fish and shellfish as separate flags."
+				},
+				{
+					"finding": "sauces-3-fact-6",
+					"action": "applied",
+					"reason": "Salsa verde why now says it is served at room temperature, never cooked."
+				},
+				{
+					"finding": "sauces-3-fact-7",
+					"action": "applied",
+					"reason": "Added 'sometimes hard-boiled egg' to the madeWith, and removed 'vinegar', which the gist and why already cover (same change as safety-14)."
+				},
+				{
+					"finding": "sauces-3-floor-8",
+					"action": "applied",
+					"reason": "Stock guest line now says 'simmered slowly in water' and 'gives sauces and soups', which drops both 'for hours' and 'our'."
+				},
+				{
+					"finding": "sauces-3-floor-9",
+					"action": "applied",
+					"reason": "Stock line replaced with 'Steamed clams, fish stock, white wine, grilled bread'."
+				},
+				{
+					"finding": "sauces-3-floor-10",
+					"action": "applied",
+					"reason": "Pesto guest line now says 'made with' instead of 'pounded with'. The why still explains where the name comes from."
+				},
+				{
+					"finding": "sauces-3-floor-11",
+					"action": "applied",
+					"reason": "Romesco guest line now matches the why: dried sweet red peppers and roasted tomato (same edit as fact-1)."
+				},
+				{
+					"finding": "sauces-3-floor-12",
+					"action": "applied",
+					"reason": "Salsa verde say changed to SAHL-sah VEHR-day."
+				},
+				{
+					"finding": "sauces-3-floor-13",
+					"action": "applied",
+					"reason": "Agrodolce say changed to ah-groh-DOHL-chay."
+				},
+				{
+					"finding": "sauces-3-safety-14",
+					"action": "applied",
+					"reason": "Salsa verde madeWith is now parsley, olive oil, capers, often anchovy, garlic, sometimes bread, sometimes hard-boiled egg. Vinegar was removed to make room."
+				},
+				{
+					"finding": "sauces-3-safety-15",
+					"action": "applied",
+					"reason": "Stock note now reads 'Kitchens usually leave it unsalted, because it gets reduced into sauces and salt would concentrate.'"
+				},
+				{
+					"finding": "sauces-critic-1",
+					"action": "applied",
+					"reason": "Replaced the trap with 'Cold sauce of whipped cream, mustard and lemon for fish' and a cream-based why. The trap at 55 was still shorter than the 59-character gist, so I also cut the gist to 48 ('Warm lemony sauce of egg yolks and melted butter')."
+				},
+				{
+					"finding": "sauces-critic-2",
+					"action": "applied",
+					"reason": "Moved Velouté from seeAlsoTerms to confusedWithTerms and added a notThis that says velouté thickens stock where this sauce uses milk."
+				},
+				{
+					"finding": "sauces-critic-3",
+					"action": "applied",
+					"reason": "Shortened the gist to 'Fat and liquid beaten into one smooth, even mix' (47), under the 49-character trap."
+				},
+				{
+					"finding": "sauces-critic-4",
+					"action": "applied",
+					"reason": "Shortened the gist to 'Minced shallot and black pepper steeped in vinegar' (50), under the 51-character trap."
+				},
+				{
+					"finding": "sauces-critic-5",
+					"action": "applied",
+					"reason": "The suggested wording came out at 53, the same length as the trap, so I used 'Caramelized sugar cooked with vinegar into a syrup' (50) instead."
+				},
+				{
+					"finding": "sauces-critic-6",
+					"action": "applied",
+					"reason": "Shortened the gist to 'Raw Argentine sauce of parsley, garlic, oil and vinegar' (55), under the 57-character trap."
+				},
+				{
+					"finding": "sauces-critic-7",
+					"action": "applied",
+					"reason": "Changed the gist to 'Rich meat stock made crystal clear by a raft of egg white' (57), under the 62-character trap and within 5 characters of it."
+				},
+				{
+					"finding": "sauces-critic-8",
+					"action": "applied",
+					"reason": "Shortened the gist to 'Cold butter whisked into a reduction of wine and shallot' (56), under the 64-character trap."
+				},
+				{
+					"finding": "sauces-critic-9",
+					"action": "applied",
+					"reason": "Shortened the gist to 'Hot milk thickened with butter and flour, the white base' (56), under the 60-character trap."
+				},
+				{
+					"finding": "sauces-critic-10",
+					"action": "applied",
+					"reason": "Shortened the gist to 'Oil whisked with vinegar or citrus, held with mustard' (53), under the 57-character trap."
+				},
+				{
+					"finding": "sauces-critic-11",
+					"action": "applied",
+					"reason": "Changed the gist to 'Warm butter sauce of yolks, tarragon, shallot and vinegar' (57), under the 58-character trap. Dropped the Béarnaise note, which repeated the Hollandaise note word for word."
+				},
+				{
+					"finding": "sauces-operator-1",
+					"action": "applied",
+					"reason": "Operator: split into white stock and sometimes fish stock."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0197",
+						"issue": "The Hollandaise trap 'Cold cream sauce of mayonnaise, mustard and fresh lemon' comes close to a true description of Remoulade (fd_0209), a card on this roster: a cold mayonnaise sauce with mustard. A trap must not describe another card truthfully.",
+						"fix": "Replace traps[0].says with 'Cold sauce of whipped cream, mustard and lemon for fish' (55 chars, gist is 59). Keep a why such as: 'It is served warm and built from egg yolks and melted butter, not cream.'"
+					},
+					{
+						"id": "fd_0208",
+						"issue": "The confusion link runs one way only. Velouté (fd_0207) lists Béchamel in confusedWithTerms, but Béchamel keeps Velouté only in seeAlsoTerms and has no notThis. New hires mix up the two pale roux mother sauces in both directions.",
+						"fix": "Move 'Velouté' from seeAlsoTerms to confusedWithTerms and add notThis: 'Not velouté, which is built on light stock. This one is milk, so it tastes mild and milky.' The card stands at 620 chars, so there is room."
+					},
+					{
+						"id": "fd_0198",
+						"issue": "Length parity: the gist (58) is longer than the only trap (49), so the gist is the longest option.",
+						"fix": "Shorten the gist to 'Fat and liquid beaten into one smooth, even mix' (47). Do not pad the trap."
+					},
+					{
+						"id": "fd_0201",
+						"issue": "Length parity: the gist (60) is longer than the trap (51), so the gist is the longest option.",
+						"fix": "Shorten the gist to 'Minced shallot and black pepper steeped in vinegar' (50)."
+					},
+					{
+						"id": "fd_0202",
+						"issue": "Length parity: the gist (62) is longer than the trap (53), so the gist is the longest option.",
+						"fix": "Shorten the gist to 'Caramelized sugar cooked down with vinegar into syrup' (51)."
+					},
+					{
+						"id": "fd_0210",
+						"issue": "Length parity: the gist (63) is longer than the trap (57), so the gist is the longest option.",
+						"fix": "Shorten the gist to 'Raw Argentine sauce of parsley, garlic, oil and vinegar' (55)."
+					},
+					{
+						"id": "fd_0204",
+						"issue": "Length parity: the gist (67) is longer than the trap (62), and 67 sits at the top of the aim range.",
+						"fix": "Shorten the gist to 'Meat stock made crystal clear by a raft of egg white' (52), or to another wording under 62."
+					},
+					{
+						"id": "fd_0205",
+						"issue": "Length parity: the gist (67) is longer than the trap (64), so the gist is the longest option.",
+						"fix": "Shorten the gist to 'Cold butter whisked into a reduction of wine and shallot' (56)."
+					},
+					{
+						"id": "fd_0208",
+						"issue": "Length parity: the gist (62) is longer than the trap (60), so the gist is the longest option.",
+						"fix": "Shorten the gist to 'Hot milk thickened with butter and flour, the white base' (56). If you keep the words 'mother sauce', keep the result under 60 characters."
+					},
+					{
+						"id": "fd_0200",
+						"issue": "Length parity: the gist (59) is longer than the trap (57), so the gist is the longest option.",
+						"fix": "Shorten the gist to 'Oil whisked with vinegar or citrus, held with mustard' (53)."
+					},
+					{
+						"id": "fd_0196",
+						"issue": "Length parity: the gist (59) is longer than the trap (58), so the gist is the longest option. Separately, the note is word-for-word the same as the note on Hollandaise (fd_0197), which reads as boilerplate across two neighbouring cards.",
+						"fix": "Change the gist to 'Warm butter sauce of yolks, tarragon, shallot and vinegar' (57). Either drop the note on one of the two cards or reword one. The why on Béarnaise already says gentle heat, so dropping its note is the cheapest fix."
+					}
+				],
+				"notes": "Coverage and the rules I checked. All 21 roster rows have a card. Section mean is 667 chars (ceiling 720); the longest card is fd_0209 at 779 and none is over 900. No verdict words, em or en dashes, or banned substrings (scanned mechanically). Every accented term has a say. The Jus knownPacketError is covered: its trap says 'used only for beef'. No two gists or guest lines are duplicates. Velouté/Béchamel and Chimichurri/Salsa Verde have parallel gists but each names what sets it apart. Confusion pairs Hollandaise/Béarnaise, Hollandaise/Beurre Blanc, Jus/Demi-Glace and Gastrique/Agrodolce are linked both ways. Consommé->Stock and Coulis->Compote are one-way, which is acceptable. Optional ideas: add 'Brown Butter' (fd_0161) to seeAlsoTerms on Beurre Blanc, since guests mix up the beurre sauces. The Agrodolce gist lists raisins and onion as if they were fixed, though the why says 'often'; 'Italian sweet-sour sauce of vinegar and sugar, often with raisins' would be more accurate if it fits the length. Agrodolce notThis (132) and Demi-Glace guest (158) are over their aim ranges but inside the limits. Scratch length script: C:/Users/zpull/AppData/Local/Temp/claude/C--Users-zpull--claude/ee375187-7803-4126-b577-0cdfe403a999/scratchpad/s.py"
+			},
+			"acceptedRejected": []
+		}
+	]
+}

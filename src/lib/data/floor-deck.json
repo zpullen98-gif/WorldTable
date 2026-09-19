@@ -57,13 +57,13 @@
       "key": "starches",
       "title": "Grains, Pasta & Starches",
       "blurb": "Grains, corn, rice and pasta shapes: what each one is, how it eats, and the names that are easy to mix up.",
-      "count": 0
+      "count": 23
     },
     {
       "key": "sauces",
       "title": "Sauces, Stocks & Dressings",
       "blurb": "The mother sauces and their children, the emulsions, the stocks beneath them and the cold sauces: what goes in each and what it does on the plate.",
-      "count": 0
+      "count": 21
     },
     {
       "key": "preparations",
@@ -192,7 +192,8 @@
       "pairs": "Pulled pork, fried catfish, hushpuppies, sandwiches",
       "recipe": "carolina-coleslaw",
       "seeAlso": [
-        "fd_0003"
+        "fd_0003",
+        "fd_0200"
       ],
       "line": "Pulled pork sandwich, vinegar coleslaw, pickles"
     },
@@ -262,6 +263,12 @@
       "origin": "From a Powhatan word, the same corn as Mexican pozole",
       "pairs": "Braised pork, chiles, greens, butter and black pepper",
       "notThis": "Not grits, though grits can be ground from it. Hominy is whole, puffy kernels you can count.",
+      "seeAlso": [
+        "fd_0179"
+      ],
+      "confusedWith": [
+        "fd_0178"
+      ],
       "line": "Braised pork shoulder, stewed hominy, charred onion",
       "prompt": "Dried field corn is cooked in an alkali, slaked lime or lye, which loosens the hull so it slips off and swells the starch. The same process makes masa for tortillas, so __ shares that toasty flavor. It eats plump and chewy, and ground coarse it becomes __ grits."
     },
@@ -368,7 +375,9 @@
       "origin": "American South; said to be named for the reddish eye of fat in the bowl",
       "pairs": "Country ham, stone-ground grits, biscuits",
       "seeAlso": [
-        "fd_0067"
+        "fd_0067",
+        "fd_0178",
+        "fd_0199"
       ],
       "line": "Country ham, red-eye gravy, stone-ground grits",
       "prompt": "Slices of country ham fry until their fat and browned bits coat the skillet. Black coffee, sometimes with water, goes in to lift them. It is left unthickened, so it stays thin and brothy: salty, smoky and a little bitter, more jus than __."
@@ -517,7 +526,8 @@
       "origin": "South Carolina Lowcountry, named for its golden hull in the field",
       "recipe": "carolina-gold-rice-pilau",
       "seeAlso": [
-        "fd_0008"
+        "fd_0008",
+        "fd_0186"
       ],
       "line": "Carolina Gold rice pilau, shrimp, smoked sausage",
       "prompt": "Grown in South __ by the late 1600s, it made planters rich on the skill of enslaved West African __ growers, then nearly vanished after 1900. It can cook up separate like long grain or turn creamy when stirred, closer to risotto __."
@@ -947,6 +957,9 @@
       ],
       "origin": "French purer, to strain or make pure",
       "notThis": "Not a coulis: a coulis is a thin sauce you pour, while a purée is thick enough to hold its shape on the plate.",
+      "confusedWith": [
+        "fd_0203"
+      ],
       "line": "Seared scallops, cauliflower purée, brown butter",
       "prompt": "Food, usually cooked soft first, is blended or pushed through a fine sieve until no fiber or lump is left, so it eats silky and dense. Kitchens often loosen it with butter, cream or stock, which is why a __ can taste richer than the vegetable. A mash keeps some texture."
     },
@@ -1033,7 +1046,8 @@
       "why": "The liquid sits just under boiling, about 85 to 96 C (185 to 205 F), with small bubbles breaking now and then. That is hot enough to soften tough cuts, beans and grains and pull flavor into a stock, yet calm enough not to shred meat or cloud a broth.",
       "notThis": "Not poached, which is cooler with no bubbles, or boiled, which rolls hard and can toughen meat and break up delicate food.",
       "seeAlso": [
-        "fd_0026"
+        "fd_0026",
+        "fd_0214"
       ],
       "confusedWith": [
         "fd_0025",
@@ -1477,7 +1491,8 @@
       "note": "So lean that past medium it turns dry and livery, which is why most kitchens send the loin rare to medium rare.",
       "pairs": "Juniper, red wine, blackberry or cherry, celery root",
       "seeAlso": [
-        "fd_0093"
+        "fd_0093",
+        "fd_0199"
       ],
       "line": "Seared venison loin, juniper jus, celery root"
     },
@@ -2006,6 +2021,7 @@
       "notThis": "Not andouille, its smokehouse partner, which is a sausage in a casing. This is a solid piece of shoulder.",
       "lexiconSlug": "tasso-and-cajun-andouille",
       "seeAlso": [
+        "fd_0178",
         "fd_0041",
         "fd_0091"
       ],
@@ -2323,6 +2339,7 @@
       "lexiconSlug": "flank-skirt-and-hanger",
       "seeAlso": [
         "fd_0099",
+        "fd_0210",
         "fd_0097"
       ],
       "confusedWith": [
@@ -2568,6 +2585,7 @@
       "notThis": "Not skirt, a longer, fattier ribbon from under the ribs, nor bavette, the looser-grained sirloin flap.",
       "lexiconSlug": "flank-skirt-and-hanger",
       "seeAlso": [
+        "fd_0210",
         "fd_0032"
       ],
       "confusedWith": [
@@ -2595,6 +2613,9 @@
       "origin": "Fajitas take their name from it: faja is Spanish for belt",
       "notThis": "Not flank, wider and leaner, nor hanger, short and thick, nor bavette, the thicker sirloin flap.",
       "lexiconSlug": "flank-skirt-and-hanger",
+      "seeAlso": [
+        "fd_0210"
+      ],
       "confusedWith": [
         "fd_0088",
         "fd_0097",
@@ -2786,7 +2807,8 @@
       "lexiconSlug": "lamb-primals",
       "seeAlso": [
         "fd_0090",
-        "fd_0037"
+        "fd_0037",
+        "fd_0199"
       ],
       "line": "Herb-crusted rack of lamb, mint salsa verde, potato gratin"
     },
@@ -2992,6 +3014,9 @@
       "origin": "Middle English haly butte, holy flatfish, eaten on feast days",
       "notThis": "Not flounder, a small flatfish sold in thin fillets, or turbot, which is richer and more gelatinous.",
       "recipe": "baked-alaska-halibut-with-mayonnaise-crust",
+      "seeAlso": [
+        "fd_0205"
+      ],
       "confusedWith": [
         "fd_0111",
         "fd_0123"
@@ -3051,6 +3076,7 @@
       "lexiconSlug": "oysters-east-vs-west",
       "recipe": "oysters-rockefeller",
       "seeAlso": [
+        "fd_0201",
         "fd_0137",
         "fd_0114"
       ],
@@ -3253,7 +3279,8 @@
       "origin": "European coasts from Norway to the Mediterranean, much of it farmed in Spain",
       "notThis": "Not halibut, a bigger, leaner flatfish. Cheap Greenland turbot is a different, softer and oilier fish.",
       "seeAlso": [
-        "fd_0111"
+        "fd_0111",
+        "fd_0205"
       ],
       "confusedWith": [
         "fd_0113"
@@ -3526,7 +3553,8 @@
       "pairs": "Old Bay, drawn butter, crab cakes, remoulade, cold beer",
       "recipe": "steamed-blue-crabs-with-old-bay",
       "seeAlso": [
-        "fd_0135"
+        "fd_0135",
+        "fd_0209"
       ],
       "line": "Jumbo lump blue crab cake, remoulade, charred lemon",
       "prompt": "A swimming __ of the Atlantic and Gulf with paddle-shaped back legs. The two big muscles driving those paddles give jumbo lump, the whitest, sweetest meat. Lump and backfin are smaller pieces, and claw meat is darker and stronger. Picking is slow handwork, hence the price."
@@ -3877,7 +3905,9 @@
       "origin": "Black winter truffles from France, white from Piedmont in Italy",
       "notThis": "Not the chocolate truffle, which is a candy, and not truffle oil, which is usually just flavored.",
       "seeAlso": [
-        "fd_0149"
+        "fd_0149",
+        "fd_0185",
+        "fd_0181"
       ],
       "confusedWith": [
         "fd_0148"
@@ -3929,6 +3959,7 @@
       "pairs": "Risotto, fresh pasta, veal, beef, polenta, parmesan",
       "lexiconSlug": "porcini",
       "seeAlso": [
+        "fd_0181",
         "fd_0141",
         "fd_0144"
       ],
@@ -4176,6 +4207,9 @@
       ],
       "origin": "English for Parmigiano-Reggiano, though US parmesan can be domestic",
       "pairs": "Pasta, risotto, balsamic, pears, Caesar salad",
+      "seeAlso": [
+        "fd_0181"
+      ],
       "line": "Shaved Parmigiano-Reggiano, arugula, lemon"
     },
     {
@@ -4195,6 +4229,7 @@
       "notThis": "Not ghee, which is cooked longer until the solids toast. That tastes nutty. This stays clean and mild.",
       "lexiconSlug": "butterfat-fluency-butter-cream-and-cultures",
       "seeAlso": [
+        "fd_0197",
         "fd_0161"
       ],
       "confusedWith": [
@@ -4266,7 +4301,8 @@
       ],
       "pairs": "Grilled steak, fish, corn on the cob, warm bread",
       "seeAlso": [
-        "fd_0161"
+        "fd_0161",
+        "fd_0205"
       ],
       "line": "Seared strip steak, herb compound butter, fries",
       "prompt": "Softened __ is beaten with herbs, garlic, shallot, citrus or spices, rolled into a log and chilled. A cold slice set on hot steak or fish melts into an instant sauce that carries those flavors. The French classic is maître d'hôtel __, parsley and lemon."
@@ -4463,6 +4499,1122 @@
       ],
       "line": "Washed rind cheese, pear mostarda, rye crisps",
       "prompt": "While it ages the cheese is rubbed with brine, sometimes with beer, wine or brandy. The damp, salty surface grows orange bacteria that make the tacky __ and barnyard smell, while the paste stays supple and savory. Think Taleggio or French Munster."
+    },
+    {
+      "id": "fd_0172",
+      "term": "Agnolotti",
+      "say": "an-yoh-LOH-tee",
+      "section": "starches",
+      "gist": "Pinched pockets of Piedmontese egg pasta, stuffed with roast meat",
+      "guest": "They're little pinched pillows of fresh egg pasta from Piedmont, classically filled with roast meat. Small, tender, and made to soak up the sauce.",
+      "why": "A long strip of egg dough is folded over a line of filling, then pinched and cut into bite-size pockets, so each one has a ruffled edge that grabs sauce. The classic filling is leftover braised or roast meat, so they eat richer than cheese ravioli.",
+      "madeWith": [
+        "wheat flour",
+        "egg",
+        "traditionally veal",
+        "often pork",
+        "often parmesan",
+        "sometimes butter"
+      ],
+      "origin": "Piedmont, northern Italy; pinched ones are agnolotti del plin, plin meaning pinch",
+      "notThis": "Not ravioli, which are larger squares sealed between two sheets, and not tortellini, which are rings wrapped around a finger.",
+      "confusedWith": [
+        "fd_0191",
+        "fd_0192"
+      ],
+      "line": "Veal agnolotti, brown butter, sage, parmesan"
+    },
+    {
+      "id": "fd_0173",
+      "term": "Buckwheat",
+      "section": "starches",
+      "gist": "Dark, earthy seed of a plant related to rhubarb, not a true grain",
+      "guest": "It's the dark, earthy seed of a plant related to rhubarb, ground into flour for crepes and noodles. It tastes toasty, a bit like dark rye.",
+      "why": "The three-sided seeds are hulled into groats, eaten whole or ground into flour. Toasted groats, called kasha, taste deep and nutty. The flour is gray and earthy, the backbone of Japanese soba, Breton galettes and Russian blini.",
+      "madeWith": [
+        "buckwheat",
+        "sometimes wheat flour",
+        "sometimes egg",
+        "sometimes milk",
+        "sometimes butter"
+      ],
+      "note": "Soba, blini and many buckwheat crepes are blended with wheat flour, so ask the kitchen what is in each one.",
+      "origin": "From Dutch boekweit, beech wheat, for seeds shaped like beechnuts",
+      "lexiconSlug": "buckwheat",
+      "recipe": "buckwheat-cakes",
+      "seeAlso": [
+        "fd_0180"
+      ],
+      "line": "Buckwheat crepe, ham, gruyere, fried egg"
+    },
+    {
+      "id": "fd_0174",
+      "term": "Bulgur",
+      "say": "BUHL-ger",
+      "section": "starches",
+      "gist": "Wheat parboiled, dried and cracked, so it softens in minutes",
+      "guest": "It's cracked wheat that's already been cooked once, so it's light and fluffy with a nutty chew. It's the grain in tabbouleh.",
+      "why": "Whole wheat kernels are boiled, dried and cracked into fine, medium or coarse bits. Because the starch is cooked before it is cracked, it only needs soaking or a short simmer, and the grains stay separate and chewy rather than going mushy.",
+      "madeWith": [
+        "wheat",
+        "often olive oil",
+        "often parsley"
+      ],
+      "origin": "Turkey and the Levant; the grain behind tabbouleh, kibbeh and pilaf",
+      "notThis": "Not couscous, which is tiny rolled pasta made from semolina. Bulgur is broken grain and eats nuttier and chewier.",
+      "confusedWith": [
+        "fd_0187",
+        "fd_0188"
+      ],
+      "line": "Tabbouleh, bulgur, parsley, mint, lemon"
+    },
+    {
+      "id": "fd_0175",
+      "term": "Farro",
+      "say": "FAHR-oh",
+      "section": "starches",
+      "gist": "Ancient hulled wheat, usually emmer, with a big chewy, nutty grain",
+      "guest": "It's an ancient Italian wheat with a big, chewy grain and a nutty flavor. It holds its bite, so it's great in salads and risotto-style dishes.",
+      "why": "It is hulled wheat, mostly emmer, whose husk clings to the grain. Pearled farro has the bran rubbed off and cooks in about 20 minutes. Whole farro keeps it and takes longer, staying firmer and nuttier. Think brown rice with more bounce.",
+      "madeWith": [
+        "emmer wheat",
+        "sometimes spelt"
+      ],
+      "pairs": "Mushrooms, roasted squash, pecorino, grain salads",
+      "notThis": "Not barley, though it looks similar. On Italian labels piccolo means einkorn, medio emmer and grande spelt.",
+      "lexiconSlug": "farro",
+      "seeAlso": [
+        "fd_0188"
+      ],
+      "confusedWith": [
+        "fd_0176"
+      ],
+      "line": "Farro salad, roasted squash, pecorino, brown butter",
+      "prompt": "It is hulled wheat, mostly emmer, whose husk clings to the grain. Pearled __ has the bran rubbed off and cooks in about 20 minutes. Whole __ keeps it and takes longer, staying firmer and nuttier. Think brown rice with more bounce."
+    },
+    {
+      "id": "fd_0176",
+      "term": "Farro Piccolo",
+      "say": "FAHR-oh PEE-koh-loh",
+      "aliases": [
+        "Einkorn"
+      ],
+      "section": "starches",
+      "gist": "Tiny, tender grain of one of the very first wheats ever farmed",
+      "guest": "It's einkorn, one of the oldest wheats people farmed. The grains are tiny and tender, with a mild, sweet, nutty flavor.",
+      "why": "Piccolo is einkorn, one of the first wheats people farmed, about ten thousand years ago. Its kernels are small, so it cooks faster and eats softer and sweeter than everyday farro, which is emmer. It is a true wheat, just an old one.",
+      "madeWith": [
+        "einkorn wheat"
+      ],
+      "origin": "Italian for small farro; einkorn, first farmed in what is now Turkey",
+      "notThis": "Not plain farro, which is usually emmer with a bigger, chewier grain. Piccolo on the label is what marks it.",
+      "lexiconSlug": "farro",
+      "confusedWith": [
+        "fd_0175"
+      ],
+      "line": "Einkorn risotto, spring peas, lemon, parmesan",
+      "prompt": "__ is __, one of the first wheats people farmed, about ten thousand years ago. Its kernels are small, so it cooks faster and eats softer and sweeter than everyday __, which is emmer. It is a true wheat, just an old one."
+    },
+    {
+      "id": "fd_0177",
+      "term": "Gnocchi",
+      "say": "NYOH-kee",
+      "section": "starches",
+      "gist": "Soft little dumplings of riced potato bound with a bit of flour",
+      "guest": "They're soft little potato dumplings, light and pillowy. Think of the best mashed potato shaped into bite-size pieces.",
+      "why": "Baked or boiled potato is riced, then kneaded with just enough flour to hold. Less flour and a light hand keep them tender. Too much work makes them dense. They boil in about two minutes, and many kitchens then sear them for a crisp edge.",
+      "madeWith": [
+        "potato",
+        "wheat flour",
+        "often egg",
+        "sometimes ricotta",
+        "often parmesan",
+        "often butter"
+      ],
+      "pairs": "Brown butter and sage, tomato sauce, gorgonzola cream, pesto",
+      "notThis": "Not rolled pasta, though flour binds them. Ricotta gnocchi swap potato for cheese, and gnocchi alla romana are baked semolina discs.",
+      "recipe": "gnocchi-di-patate-from-baked-potato",
+      "seeAlso": [
+        "fd_0165",
+        "fd_0184",
+        "fd_0193"
+      ],
+      "confusedWith": [
+        "fd_0193"
+      ],
+      "line": "Potato gnocchi, brown butter, sage, parmesan"
+    },
+    {
+      "id": "fd_0178",
+      "term": "Grits",
+      "section": "starches",
+      "gist": "Coarsely ground dried corn, slow-cooked into a Southern porridge",
+      "guest": "Grits are ground dried corn slow-cooked until creamy, often finished with butter. It's the South's comfort food, and great under shrimp.",
+      "why": "Dried corn, often dent corn or lime-treated hominy, is ground coarse and simmered in water or milk until the starch swells. Stone-ground grits keep the germ, so they taste more of corn and take up to an hour. Instant grits cook in minutes and taste flat.",
+      "madeWith": [
+        "corn",
+        "often butter",
+        "often milk",
+        "sometimes cheese",
+        "sometimes cream"
+      ],
+      "pairs": "Shrimp, grillades, fried eggs, country ham, red-eye gravy",
+      "notThis": "Not polenta, the Italian cousin. Grits are Southern, often from white corn, and usually cooked looser and butterier.",
+      "recipe": "lowcountry-shrimp-and-grits",
+      "confusedWith": [
+        "fd_0007",
+        "fd_0179"
+      ],
+      "line": "Shrimp and grits, tasso gravy, scallions",
+      "prompt": "Dried corn, often dent corn or lime-treated hominy, is ground coarse and simmered in water or milk until the starch swells. Stone-ground __ keep the germ, so they taste more of corn and take up to an hour. Instant __ cook in minutes and taste flat."
+    },
+    {
+      "id": "fd_0179",
+      "term": "Polenta",
+      "say": "poh-LEN-tuh",
+      "section": "starches",
+      "gist": "Italian cornmeal cooked into a porridge, served soft or set and grilled",
+      "guest": "It's Italian cornmeal slow-cooked until creamy, often with butter and cheese. Served soft it's like a savory corn pudding, and set and grilled it gets a crisp crust.",
+      "why": "Dried corn is ground to meal and stirred into simmering liquid until the starch swells. Served soft, it is spoonable and creamy. Left to cool, it sets firm and can be sliced, then grilled or fried. Coarse meal tastes more of corn and takes longer.",
+      "madeWith": [
+        "cornmeal",
+        "often butter",
+        "often parmesan",
+        "sometimes milk"
+      ],
+      "origin": "Northern Italy; Latin polenta meant barley meal, long before corn arrived",
+      "pairs": "Braised meats, mushrooms, ragu, gorgonzola",
+      "notThis": "Not grits, the Southern cousin. Polenta is usually yellow corn and is served soft or set firm.",
+      "lexiconSlug": "polenta",
+      "seeAlso": [
+        "fd_0184"
+      ],
+      "confusedWith": [
+        "fd_0178",
+        "fd_0184"
+      ],
+      "line": "Braised short rib, soft polenta, gremolata"
+    },
+    {
+      "id": "fd_0180",
+      "term": "Quinoa",
+      "say": "KEEN-wah",
+      "section": "starches",
+      "gist": "Tiny Andean seed that cooks up fluffy with a little curled tail",
+      "guest": "It's a tiny seed from the Andes, cooked like rice. It's light and fluffy with a gentle pop and a nutty, earthy flavor.",
+      "why": "Not a grass grain at all but the seed of a plant related to spinach and beets. Simmered, each seed turns translucent and its germ loosens into a white spiral, which gives the soft pop. It is lighter than rice or farro and carries dressings well.",
+      "madeWith": [
+        "quinoa",
+        "often olive oil",
+        "sometimes stock"
+      ],
+      "note": "The seed's natural coating is bitter and soapy, so it is rinsed before cooking. Most sold today comes prewashed.",
+      "origin": "Andes of Bolivia and Peru, grown there for thousands of years",
+      "notThis": "Not couscous, which is tiny pasta rolled from wheat. Quinoa is a seed, and each one shows a little curled tail.",
+      "lexiconSlug": "quinoa",
+      "seeAlso": [
+        "fd_0173",
+        "fd_0175"
+      ],
+      "confusedWith": [
+        "fd_0187"
+      ],
+      "line": "Red quinoa, roasted squash, pepitas, lemon"
+    },
+    {
+      "id": "fd_0181",
+      "term": "Risotto",
+      "say": "rih-ZOH-toh",
+      "section": "starches",
+      "gist": "Italian rice stirred with hot broth until creamy from its own starch",
+      "guest": "It's Italian rice stirred slowly in broth until it turns creamy on its own, then finished with butter and parmesan. Rich, with a little bite.",
+      "why": "Short, starchy rice is toasted in fat, then fed hot broth a ladle at a time. The stirring rubs starch off each grain into the liquid, making a sauce with no cream, while the core stays firm. Butter and cheese beaten in at the end make it glossy.",
+      "madeWith": [
+        "rice",
+        "stock",
+        "butter",
+        "parmesan",
+        "onion",
+        "often white wine"
+      ],
+      "note": "It keeps thickening as it sits, so run it to the table the moment it is up.",
+      "origin": "Northern Italy, from riso, the Italian word for rice",
+      "pairs": "Saffron, mushrooms, seafood, spring peas, osso buco",
+      "recipe": "risotto-alla-milanese",
+      "seeAlso": [
+        "fd_0186",
+        "fd_0182",
+        "fd_0183"
+      ],
+      "line": "Wild mushroom risotto, aged parmesan, thyme"
+    },
+    {
+      "id": "fd_0182",
+      "term": "Carnaroli",
+      "say": "kar-nah-ROH-lee",
+      "section": "starches",
+      "gist": "Long, firm Italian risotto rice variety bred near Milan in 1945",
+      "guest": "It's the rice many Italian chefs choose for risotto. It turns just as creamy but each grain stays distinct with a pleasant bite.",
+      "why": "An Italian superfino rice bred near Milan in the 1940s. Its outside sheds plenty of starch for creaminess, but the grain is longer and firmer than arborio and holds its shape, so the risotto is more forgiving and less likely to turn mushy.",
+      "madeWith": [
+        "rice"
+      ],
+      "origin": "Bred in Lombardy in 1945, grown in Piedmont and Lombardy",
+      "notThis": "Not arborio, the plumper, softer risotto rice. Carnaroli grains are longer and stay firmer in the pan.",
+      "seeAlso": [
+        "fd_0181",
+        "fd_0183"
+      ],
+      "confusedWith": [
+        "fd_0186",
+        "fd_0183"
+      ],
+      "line": "Carnaroli risotto, saffron, bone marrow"
+    },
+    {
+      "id": "fd_0183",
+      "term": "Acquerello",
+      "say": "ah-kweh-REL-oh",
+      "section": "starches",
+      "gist": "Husk-aged risotto rice brand, its germ put back once milled",
+      "guest": "It's a prized Italian risotto rice, aged at least a year before milling, so the grains stay firm and soak up the broth.",
+      "why": "A carnaroli rice from one family estate near Vercelli in Piedmont. It is aged in the husk at least a year, which firms the starch so grains absorb broth without splitting. After milling, the germ is blended back in, adding nutrients and a little nuttiness.",
+      "madeWith": [
+        "rice"
+      ],
+      "origin": "Tenuta Colombara estate in Piedmont, Italian for watercolor",
+      "notThis": "Not a variety but a brand: aged carnaroli from a single Piedmont estate, sold in tins.",
+      "seeAlso": [
+        "fd_0181",
+        "fd_0186"
+      ],
+      "confusedWith": [
+        "fd_0182"
+      ],
+      "line": "Aged Acquerello risotto, white truffle, parmesan"
+    },
+    {
+      "id": "fd_0184",
+      "term": "Semolina",
+      "say": "seh-muh-LEE-nuh",
+      "section": "starches",
+      "gist": "Coarse, sandy golden meal milled from hard durum wheat",
+      "guest": "It's coarse, golden flour milled from hard durum wheat, what most dried pasta is made from. It gives pasta and bread a firm bite and a warm yellow color.",
+      "why": "Durum wheat is so hard that milling shatters it into sandy, yellow grit instead of soft powder. Its strong protein makes a dough that holds its shape through drying and boiling, which is why dried pasta and couscous rely on it. It also dusts pizza peels.",
+      "madeWith": [
+        "durum wheat"
+      ],
+      "origin": "Italian semola, from Latin for fine flour",
+      "notThis": "Not cornmeal or polenta, though all three are yellow and gritty. Semolina is wheat, cornmeal is corn.",
+      "lexiconSlug": "semolina",
+      "seeAlso": [
+        "fd_0187",
+        "fd_0177"
+      ],
+      "confusedWith": [
+        "fd_0179"
+      ],
+      "line": "Hand-rolled semolina cavatelli, tomato, basil"
+    },
+    {
+      "id": "fd_0185",
+      "term": "Tagliatelle",
+      "say": "tahl-yah-TEL-ay",
+      "section": "starches",
+      "gist": "Long, flat ribbons of fresh egg pasta, the classic from Bologna",
+      "guest": "They're long, flat ribbons of fresh egg pasta from Bologna, classic with a slow meat ragu. Silky and tender, and the sauce clings to them.",
+      "why": "Egg and flour dough is rolled into thin sheets and cut into ribbons about 7 to 8 millimeters wide. The egg makes them rich and tender, and the rolled surface is porous, so a meaty sauce clings. Narrower than pappardelle, much like fettuccine.",
+      "madeWith": [
+        "wheat flour",
+        "egg"
+      ],
+      "origin": "Emilia-Romagna, from tagliare, Italian for to cut",
+      "pairs": "Ragu Bolognese, butter and parmesan, mushrooms, truffle",
+      "notThis": "Not pappardelle, which are about three times as wide. Tagliatelle are close to fettuccine, the Roman name.",
+      "recipe": "fresh-egg-pasta-tagliatelle-master",
+      "seeAlso": [
+        "fd_0184"
+      ],
+      "confusedWith": [
+        "fd_0190"
+      ],
+      "line": "Tagliatelle Bolognese, aged parmesan"
+    },
+    {
+      "id": "fd_0186",
+      "term": "Arborio",
+      "say": "ar-BOR-ee-oh",
+      "section": "starches",
+      "gist": "Plump, pearly short-grain Italian rice, the best known for risotto",
+      "guest": "It's the classic Italian risotto rice. The plump grains release lots of starch, so the dish turns rich and creamy.",
+      "why": "A superfino rice named for the town of Arborio in Piedmont. Its fat grains have a chalky white core and shed surface starch readily, which thickens the broth into a creamy sauce. It softens sooner than carnaroli, so timing matters.",
+      "madeWith": [
+        "rice"
+      ],
+      "origin": "Named for the town of Arborio, Vercelli, Piedmont",
+      "notThis": "Not carnaroli, the longer, firmer grain many chefs prefer. Arborio is rounder and turns soft sooner.",
+      "lexiconSlug": "arborio-rice",
+      "seeAlso": [
+        "fd_0181",
+        "fd_0183"
+      ],
+      "confusedWith": [
+        "fd_0182"
+      ],
+      "line": "Arborio risotto, spring peas, parmesan",
+      "prompt": "A superfino rice named for the town of __ in Piedmont. Its fat grains have a chalky white core and shed surface starch readily, which thickens the broth into a creamy sauce. It softens sooner than carnaroli, so timing matters."
+    },
+    {
+      "id": "fd_0187",
+      "term": "Couscous",
+      "say": "KOOS-koos",
+      "section": "starches",
+      "gist": "Tiny steamed beads of rolled semolina from North Africa",
+      "guest": "It's tiny wheat pasta from North Africa, steamed until light and fluffy. It soaks up the broth of whatever stew it's served with.",
+      "why": "Durum semolina is sprinkled with water and rolled by hand or machine into tiny granules, then dried. Steamed, often over a simmering stew, the beads swell and fluff apart. Most sold today is precooked and only needs soaking in boiling liquid.",
+      "madeWith": [
+        "durum wheat",
+        "often butter",
+        "sometimes olive oil"
+      ],
+      "origin": "The Maghreb: Morocco, Algeria and Tunisia",
+      "pairs": "Tagine, lamb, merguez, seven vegetables, harissa",
+      "notThis": "Not a grain like bulgur or a seed like quinoa. It is pasta made from wheat. Pearl couscous is a larger, toasted pasta.",
+      "lexiconSlug": "couscous",
+      "recipe": "seven-vegetable-couscous",
+      "seeAlso": [
+        "fd_0184"
+      ],
+      "confusedWith": [
+        "fd_0174",
+        "fd_0180"
+      ],
+      "line": "Lamb tagine, apricot, saffron couscous"
+    },
+    {
+      "id": "fd_0188",
+      "term": "Freekeh",
+      "say": "FREE-kuh",
+      "aliases": [
+        "Farik",
+        "Frikeh"
+      ],
+      "section": "starches",
+      "gist": "Green wheat roasted over fire, then rubbed clean and often cracked",
+      "guest": "It's young wheat picked green and roasted over fire, so it tastes a little smoky. It cooks up chewy and nutty, like a toasty cousin of bulgur.",
+      "why": "The wheat, usually durum, is cut while still green and soft, piled and set alight so the straw and chaff burn off while the moist kernels only char. The kernels are rubbed clean and often cracked. That early harvest and fire give a firm chew and a smoky, grassy flavor.",
+      "madeWith": [
+        "green wheat",
+        "often butter",
+        "sometimes chicken stock"
+      ],
+      "origin": "The Levant and Egypt; from Arabic farik, meaning rubbed",
+      "pairs": "Roast lamb, chicken, yogurt, herbs and pomegranate",
+      "notThis": "Not bulgur, which is ripe wheat parboiled, dried and cracked, with no smoke. Freekeh tastes of the fire.",
+      "seeAlso": [
+        "fd_0175"
+      ],
+      "confusedWith": [
+        "fd_0174"
+      ],
+      "line": "Freekeh salad, charred eggplant, herbs, yogurt"
+    },
+    {
+      "id": "fd_0189",
+      "term": "Wild Rice",
+      "section": "starches",
+      "gist": "Long black seed of a North American lake grass, firm and nutty",
+      "guest": "It's the seed of a grass that grows in northern lakes, not true rice. It's chewy and nutty, with a toasty, almost tea-like flavor.",
+      "why": "It comes from Zizania, a water grass native to the Great Lakes, gathered by canoe by the Ojibwe, who call it manoomin. Most sold today is paddy grown in Minnesota and California. The hard dark bran coat keeps it chewy, and cooked grains split to show white inside.",
+      "madeWith": [
+        "wild rice",
+        "often butter",
+        "sometimes chicken stock",
+        "sometimes mushroom"
+      ],
+      "note": "Takes 45 to 60 minutes to cook, so kitchens make it ahead. Split grains are a sign it is done.",
+      "pairs": "Duck, game birds, mushrooms, dried cranberries",
+      "notThis": "Not black rice, which is a true Asian rice whose dark color sits in its bran.",
+      "lexiconSlug": "wild-rice",
+      "recipe": "minnesota-wild-rice-soup",
+      "seeAlso": [
+        "fd_0018",
+        "fd_0056"
+      ],
+      "line": "Roast duck, wild rice, cherries, pan jus"
+    },
+    {
+      "id": "fd_0190",
+      "term": "Pappardelle",
+      "say": "pah-pahr-DEL-ay",
+      "section": "starches",
+      "gist": "Very wide, flat ribbons of fresh egg pasta, made for heavy meat sauces",
+      "guest": "They're wide, silky ribbons of fresh egg pasta. They're built to carry a rich, slow-cooked sauce, so every forkful gets plenty of it.",
+      "why": "Fresh egg dough is rolled thin and cut into ribbons about two to three centimeters wide. The width and the egg make them tender but sturdy, with lots of surface to hold a chunky braise. Tuscany serves them with wild boar, hare or duck ragu.",
+      "madeWith": [
+        "wheat flour",
+        "egg"
+      ],
+      "origin": "Tuscany, Italy; from pappare, to gobble up",
+      "pairs": "Wild boar, hare or duck ragu, mushrooms, braised short rib",
+      "notThis": "Not tagliatelle, which is the same egg dough cut about a third as wide.",
+      "recipe": "pappardelle-al-ragu-di-cinghiale",
+      "confusedWith": [
+        "fd_0185"
+      ],
+      "line": "Pappardelle, wild boar ragu, pecorino"
+    },
+    {
+      "id": "fd_0191",
+      "term": "Ravioli",
+      "section": "starches",
+      "gist": "Square pillows of pasta, two sheets pressed together around a filling",
+      "guest": "They're little pillows of fresh pasta sealed around a filling, often ricotta or meat. Soft and rich inside, with a tender bite of pasta around it.",
+      "why": "A spoonful of filling goes on one sheet of fresh dough, a second sheet goes over it, and the pillows are pressed and cut apart. That gives a flat, sealed edge on every side. Ricotta and spinach is the classic, but meat, squash and cheese are common too.",
+      "madeWith": [
+        "wheat flour",
+        "egg",
+        "often ricotta",
+        "often parmesan",
+        "sometimes meat"
+      ],
+      "note": "Fillings change by kitchen and by day. Check tonight's filling before describing it.",
+      "pairs": "Brown butter and sage, tomato sauce, parmesan",
+      "notThis": "Agnolotti fold one sheet over the filling and pinch, so they have a fold on one side.",
+      "recipe": "ravioli-di-ricotta-the-seal",
+      "seeAlso": [
+        "fd_0165",
+        "fd_0161"
+      ],
+      "confusedWith": [
+        "fd_0172",
+        "fd_0192"
+      ],
+      "line": "Ricotta ravioli, brown butter, sage"
+    },
+    {
+      "id": "fd_0192",
+      "term": "Tortellini",
+      "say": "tor-tuh-LEE-nee",
+      "section": "starches",
+      "gist": "Small rings of stuffed egg pasta, twisted around a fingertip",
+      "guest": "They're little rings of fresh pasta, classically filled with pork and parmesan. In Bologna they come floating in a rich, clear broth.",
+      "why": "A tiny square of egg dough gets a dab of filling, is folded to a triangle, then wrapped around a fingertip and pinched into a ring. The Bologna filling is pork loin, prosciutto, mortadella and parmesan. Small and dense, they are meant for broth.",
+      "madeWith": [
+        "wheat flour",
+        "egg",
+        "pork",
+        "mortadella",
+        "sometimes pistachio",
+        "parmesan",
+        "often chicken broth"
+      ],
+      "origin": "Bologna and Modena, Italy; a small tortello, from torta, a pie",
+      "notThis": "Not ravioli, which are flat sealed pillows. Tortelloni are bigger rings, often ricotta-filled.",
+      "recipe": "tortellini-in-brodo-di-cappone",
+      "seeAlso": [
+        "fd_0159"
+      ],
+      "confusedWith": [
+        "fd_0172",
+        "fd_0191"
+      ],
+      "line": "Tortellini in brodo, parmesan"
+    },
+    {
+      "id": "fd_0193",
+      "term": "Cavatelli",
+      "say": "kah-vuh-TEL-ee",
+      "section": "starches",
+      "gist": "Short semolina dough curls shaped like tiny split hot dog buns",
+      "guest": "They're little hand-rolled pasta curls from southern Italy, like tiny hot dog buns. Dense and chewy, and the hollow holds sauce.",
+      "why": "A rope of semolina and water dough is cut into short pieces, and each is pulled with a fingertip or a small wooden board so it curls around a hollow. Durum semolina and water give a firm, chewy bite, more like a dumpling than a noodle.",
+      "madeWith": [
+        "durum wheat semolina",
+        "sometimes ricotta",
+        "sometimes egg",
+        "often sausage"
+      ],
+      "origin": "Molise and Puglia, Italy; from cavare, to hollow out",
+      "pairs": "Sausage and broccoli rabe, tomato sauce, ricotta",
+      "notThis": "Not gnocchi, which are soft potato dumplings, and not orecchiette, which are round cupped ears. These are short curls with a slit.",
+      "seeAlso": [
+        "fd_0184"
+      ],
+      "confusedWith": [
+        "fd_0177",
+        "fd_0194"
+      ],
+      "line": "Cavatelli, sausage, broccoli rabe, chili"
+    },
+    {
+      "id": "fd_0194",
+      "term": "Orecchiette",
+      "say": "or-uh-kee-ET-ay",
+      "section": "starches",
+      "gist": "Small cupped disks of semolina dough, thin in the middle",
+      "guest": "The name means little ears. They're small cupped pasta from Puglia, chewy at the rim and tender in the middle, and the cup scoops up sauce.",
+      "why": "Semolina and water dough is cut into small nubs, dragged across a board with a knife so each one curls, then flipped inside out over a thumb. That leaves a rough outside, a thin center and a thick rim, so one piece eats both tender and chewy.",
+      "madeWith": [
+        "durum wheat semolina",
+        "often garlic",
+        "sometimes anchovy",
+        "sometimes sausage"
+      ],
+      "origin": "Puglia, Italy; Italian for little ears",
+      "pairs": "Broccoli rabe, garlic, anchovy and chili; sausage",
+      "notThis": "Cavatelli are curled like a shell. These are round and domed like a small ear.",
+      "recipe": "orecchiette-dragged-with-a-knife",
+      "seeAlso": [
+        "fd_0184"
+      ],
+      "confusedWith": [
+        "fd_0193"
+      ],
+      "line": "Orecchiette, broccoli rabe, anchovy, chili"
+    },
+    {
+      "id": "fd_0195",
+      "term": "Aioli",
+      "say": "eye-OH-lee",
+      "section": "sauces",
+      "gist": "Thick garlic cream of olive oil beaten in drop by drop",
+      "guest": "It's a garlic sauce from the south of France, whipped with olive oil until it's thick and creamy. Great for dipping fries or spreading on a sandwich.",
+      "why": "Garlic is pounded to a paste and olive oil is whisked in slowly until it thickens like mayonnaise. Most kitchens use egg yolk to hold it, as mayonnaise does, though the oldest versions rely on garlic alone. Raw garlic gives it real heat and bite.",
+      "madeWith": [
+        "garlic",
+        "olive oil",
+        "often egg yolk",
+        "often lemon juice"
+      ],
+      "note": "Made with raw egg yolk in most kitchens, so ask whether yours is raw or pasteurized.",
+      "origin": "Provence and Catalonia, from the words for garlic and oil",
+      "seeAlso": [
+        "fd_0198",
+        "fd_0209",
+        "fd_0213"
+      ],
+      "line": "Crispy fries, smoked paprika aioli"
+    },
+    {
+      "id": "fd_0196",
+      "term": "Béarnaise",
+      "say": "bair-NAYZ",
+      "section": "sauces",
+      "gist": "Warm butter sauce of yolks, tarragon, shallot and vinegar",
+      "guest": "It's a warm, buttery sauce with tarragon and shallot, the classic partner for steak. Rich like hollandaise but with a tangy herb bite.",
+      "why": "A reduction of vinegar, shallot, tarragon and pepper is whisked with egg yolks over gentle heat, then butter goes in slowly until it turns thick and glossy. It is a child of hollandaise: the reduction and herbs give it tang and an anise note.",
+      "madeWith": [
+        "egg yolk",
+        "butter",
+        "white wine vinegar",
+        "shallot",
+        "tarragon",
+        "often white wine"
+      ],
+      "pairs": "Filet, steak frites, grilled fish, roast beef",
+      "notThis": "Not hollandaise, the same yolks and butter with lemon. This one is flecked green with tarragon.",
+      "recipe": "sauce-bearnaise",
+      "seeAlso": [
+        "fd_0198",
+        "fd_0160"
+      ],
+      "confusedWith": [
+        "fd_0197"
+      ],
+      "line": "Filet mignon, pommes frites, béarnaise"
+    },
+    {
+      "id": "fd_0197",
+      "term": "Hollandaise",
+      "say": "HAH-luhn-dayz",
+      "section": "sauces",
+      "gist": "Warm lemony sauce of egg yolks and melted butter",
+      "guest": "It's a warm, silky butter sauce brightened with lemon, the one on eggs Benedict. It's lovely over asparagus or fish too.",
+      "why": "Egg yolks and a little water or lemon are whisked over gentle heat, then melted butter goes in a little at a time. The yolks hold the butter as tiny droplets, so it turns thick and pale. One of the French mother sauces; béarnaise grows from it.",
+      "madeWith": [
+        "egg yolk",
+        "butter",
+        "lemon juice",
+        "sometimes cayenne"
+      ],
+      "note": "The yolks are only gently warmed, never set firm. Ask the kitchen whether it uses pasteurized eggs.",
+      "pairs": "Eggs Benedict, asparagus, poached salmon, artichokes",
+      "notThis": "Not béarnaise, which adds tarragon and shallot, and not beurre blanc, a butter sauce built on wine and shallot.",
+      "recipe": "sauce-hollandaise",
+      "seeAlso": [
+        "fd_0198"
+      ],
+      "confusedWith": [
+        "fd_0196",
+        "fd_0205"
+      ],
+      "line": "Eggs Benedict, Canadian bacon, hollandaise"
+    },
+    {
+      "id": "fd_0198",
+      "term": "Emulsion",
+      "section": "sauces",
+      "gist": "Fat and liquid beaten into one smooth, even mix",
+      "guest": "It means the sauce is whisked or blended so the oil and the liquid stay together, which makes it silky and rich on the tongue.",
+      "why": "Oil and water separate, but beaten hard they break into droplets, and an emulsifier such as egg yolk or mustard keeps them apart. Mayonnaise, hollandaise and vinaigrette all work this way. Too hot, too cold or too much fat and it breaks into a greasy puddle.",
+      "madeWith": [
+        "oil",
+        "often butter",
+        "often egg yolk",
+        "often mustard",
+        "often vinegar"
+      ],
+      "origin": "Latin emulgere, to milk out: milk is itself one",
+      "lexiconSlug": "emulsions",
+      "recipe": "the-broken-emulsion-three-rescues",
+      "seeAlso": [
+        "fd_0195",
+        "fd_0197",
+        "fd_0200"
+      ],
+      "line": "Seared scallops, brown butter emulsion, peas"
+    },
+    {
+      "id": "fd_0199",
+      "term": "Jus",
+      "say": "ZHOO",
+      "section": "sauces",
+      "gist": "Thin, glossy sauce made from roast meat's own juices, cooked down",
+      "guest": "It's the natural juices from the roast, cooked down into a light, glossy sauce. All the flavor of the meat without the heaviness of gravy.",
+      "why": "Drippings left in the roasting pan are loosened with stock or wine and simmered down, then strained. It is left thin or only lightly thickened, so it pours like broth but tastes deep. Any roast can make one: lamb, chicken, pork, veal or beef.",
+      "madeWith": [
+        "meat drippings",
+        "often stock",
+        "sometimes wine",
+        "sometimes butter"
+      ],
+      "origin": "French for juice; au jus means served with its own juices",
+      "notThis": "Not gravy, which is thickened much further, and not demi-glace, a far thicker veal reduction.",
+      "recipe": "red-wine-jus-monter-au-beurre",
+      "seeAlso": [
+        "fd_0214"
+      ],
+      "confusedWith": [
+        "fd_0206"
+      ],
+      "line": "Roast lamb loin, fondant potato, rosemary jus"
+    },
+    {
+      "id": "fd_0200",
+      "term": "Vinaigrette",
+      "say": "vin-uh-GRET",
+      "section": "sauces",
+      "gist": "Oil whisked with vinegar or citrus, held with mustard",
+      "guest": "It's a light dressing of good oil and vinegar with a little mustard and shallot. Bright and tangy, it lets the greens taste like themselves.",
+      "why": "The classic ratio is about three parts oil to one of vinegar. Whisked hard, the vinegar breaks into droplets in the oil, and mustard helps them stay put, but it still separates on standing, so it gets a shake. Beyond salad it dresses leeks, fish and grains.",
+      "madeWith": [
+        "oil",
+        "sometimes walnut or hazelnut oil",
+        "vinegar",
+        "often mustard",
+        "often shallot",
+        "sometimes honey"
+      ],
+      "origin": "French, from vinaigre, vinegar",
+      "recipe": "vinaigrette-the-three-to-one",
+      "seeAlso": [
+        "fd_0198",
+        "fd_0201"
+      ],
+      "line": "Little gems, radish, sherry vinaigrette"
+    },
+    {
+      "id": "fd_0201",
+      "term": "Mignonette",
+      "say": "min-yuh-NET",
+      "section": "sauces",
+      "gist": "Minced shallot and black pepper steeped in vinegar",
+      "guest": "It's a sharp little sauce of shallot, cracked pepper and vinegar for the oysters. A few drops brighten the brine without covering it.",
+      "why": "Shallot is minced fine and steeped in red wine or champagne vinegar with coarsely cracked black pepper. It is thinner and sharper than any salad dressing, so it cuts the oyster's salt and richness instead of masking it.",
+      "madeWith": [
+        "shallot",
+        "vinegar",
+        "black pepper"
+      ],
+      "origin": "French for coarsely cracked pepper, the heart of the sauce",
+      "pairs": "Raw oysters on the half shell, clams, crudo",
+      "seeAlso": [
+        "fd_0115",
+        "fd_0200",
+        "fd_0137"
+      ],
+      "line": "East Coast oysters, champagne mignonette, lemon"
+    },
+    {
+      "id": "fd_0202",
+      "term": "Gastrique",
+      "say": "gas-TREEK",
+      "section": "sauces",
+      "gist": "Caramelized sugar cooked with vinegar into a syrup",
+      "guest": "It's a sweet and tangy glaze made from caramel and vinegar, often with fruit. It's there to cut the richness of the meat.",
+      "why": "Sugar is cooked to caramel, then vinegar goes in and it simmers to a syrup, often with fruit or stock. The caramel brings depth, the vinegar brings snap, and together they cut through rich, fatty meats. The base of classic duck with orange.",
+      "madeWith": [
+        "sugar",
+        "vinegar",
+        "often fruit",
+        "sometimes stock",
+        "sometimes wine"
+      ],
+      "pairs": "Duck breast, pork belly, foie gras, stone fruit",
+      "notThis": "Not agrodolce, the Italian sweet-sour that is often chunky with onion or raisins. This one is a smooth syrup.",
+      "seeAlso": [
+        "fd_0056"
+      ],
+      "confusedWith": [
+        "fd_0215"
+      ],
+      "line": "Seared duck breast, cherry gastrique, parsnip"
+    },
+    {
+      "id": "fd_0203",
+      "term": "Coulis",
+      "say": "koo-LEE",
+      "section": "sauces",
+      "gist": "Smooth, strained purée of fruit or vegetable, served as a sauce",
+      "guest": "It's ripe fruit, or sometimes a vegetable, blended and strained into a smooth, pourable sauce. It tastes like the fruit itself, only silkier.",
+      "why": "Fruit such as raspberry or mango, or a vegetable such as roasted red pepper, is blended, lightly sweetened and pushed through a fine sieve to catch seeds and skins. Raw or barely cooked and thickened by its own pulp, it tastes fresh, not jammy.",
+      "madeWith": [
+        "fruit or vegetable",
+        "often sugar",
+        "often lemon juice",
+        "sometimes liqueur"
+      ],
+      "origin": "French, from couler, to flow or to strain",
+      "pairs": "Cheesecake, panna cotta, chocolate cake, ice cream",
+      "notThis": "Not a compote, which is fruit cooked in soft chunks. This is blended and strained perfectly smooth.",
+      "seeAlso": [
+        "fd_0036"
+      ],
+      "confusedWith": [
+        "fd_0036"
+      ],
+      "line": "Vanilla cheesecake, raspberry coulis, mint"
+    },
+    {
+      "id": "fd_0204",
+      "term": "Consommé",
+      "say": "kahn-suh-MAY",
+      "section": "sauces",
+      "gist": "Rich meat stock made crystal clear by a raft of egg white",
+      "guest": "It's a rich broth made crystal clear with egg white. You can see the bottom of the bowl, yet every spoonful tastes of long-simmered meat.",
+      "why": "A strong stock is whisked cold with egg whites, lean ground meat and chopped vegetables, then heated gently. The whites set into a floating raft that traps the cloudy particles while the meat adds flavor. The broth is ladled out through a hole in the raft and strained.",
+      "madeWith": [
+        "beef or chicken stock",
+        "egg white",
+        "lean ground meat",
+        "celery",
+        "carrot",
+        "onion"
+      ],
+      "origin": "French for completed, a stock taken to its finish",
+      "notThis": "Not plain broth or stock, which stays cloudy. Clarity is the test: a true one is see-through.",
+      "lexiconSlug": "consomme-and-clarification",
+      "recipe": "chicken-consomme-raft-method",
+      "confusedWith": [
+        "fd_0214"
+      ],
+      "line": "Oxtail consommé, root vegetables, chervil"
+    },
+    {
+      "id": "fd_0205",
+      "term": "Beurre Blanc",
+      "say": "BURR BLAHN",
+      "section": "sauces",
+      "gist": "Cold butter whisked into a reduction of wine and shallot",
+      "guest": "It's a warm butter sauce sharpened with white wine and shallot. Silky and rich with a bright finish, and a classic with fish and scallops.",
+      "why": "White wine and vinegar are boiled down with minced shallot to a few spoonfuls, then cold butter is whisked in piece by piece. Kept just warm, the butter stays suspended as an emulsion, so the sauce eats creamy rather than oily and the acid cuts the richness.",
+      "madeWith": [
+        "butter",
+        "white wine",
+        "white wine vinegar",
+        "shallot",
+        "sometimes cream"
+      ],
+      "note": "Fragile. Too hot and it splits into oil, too cold and it sets, so kitchens make it near service and hold it just warm.",
+      "origin": "French for white butter, from the Loire Valley near Nantes",
+      "notThis": "Not hollandaise, which is thickened with egg yolk. This is butter whisked into a wine reduction.",
+      "recipe": "beurre-blanc",
+      "seeAlso": [
+        "fd_0198"
+      ],
+      "confusedWith": [
+        "fd_0197"
+      ],
+      "line": "Seared scallops, beurre blanc, spring peas"
+    },
+    {
+      "id": "fd_0206",
+      "term": "Demi-Glace",
+      "say": "DEM-ee-glahss",
+      "section": "sauces",
+      "gist": "Glossy brown sauce base of roasted veal stock reduced by half",
+      "guest": "It's a deeply reduced meat sauce, classically veal, glossy and rich and the backbone of a great steak sauce. Think of the best gravy you've had, concentrated.",
+      "why": "Veal bones and vegetables are roasted and simmered for hours into brown stock, which is then reduced by about half, classically with a roux-thickened brown sauce. Gelatin from the bones gives body and shine, and the long reduction concentrates roasted, meaty flavor.",
+      "madeWith": [
+        "traditionally veal bones",
+        "onion",
+        "carrot",
+        "celery",
+        "tomato",
+        "often madeira",
+        "often wheat flour"
+      ],
+      "origin": "French for half glaze, halfway between a sauce and a glaze",
+      "pairs": "Steak, veal chop, short rib, and the base of bordelaise",
+      "notThis": "Not jus, the thin, unthickened pan juice. This is thicker and glossier and coats a spoon.",
+      "lexiconSlug": "stocks-blanc-brun-broth-and-demi",
+      "recipe": "sauce-espagnole-and-demi-glace",
+      "seeAlso": [
+        "fd_0214"
+      ],
+      "confusedWith": [
+        "fd_0199"
+      ],
+      "line": "Grilled veal chop, potato purée, demi-glace"
+    },
+    {
+      "id": "fd_0207",
+      "term": "Velouté",
+      "say": "veh-loo-TAY",
+      "section": "sauces",
+      "gist": "Pale mother sauce of light stock thickened with butter and flour",
+      "guest": "It's a silky sauce made from chicken or fish broth, thickened lightly. Mild and savory, it lets delicate fish or chicken taste like themselves.",
+      "why": "Butter and flour are cooked to a pale roux, then light stock from chicken, veal or fish is whisked in and simmered until smooth. Finished with cream it becomes sauce suprême, and with wine and cream a white wine sauce for fish.",
+      "madeWith": [
+        "butter",
+        "wheat flour",
+        "white stock",
+        "sometimes fish stock",
+        "often cream"
+      ],
+      "note": "On a menu the word can also name a silky puréed soup, as in mushroom velouté.",
+      "origin": "French for velvety, one of the five mother sauces",
+      "notThis": "Not béchamel, which is made with milk. This is built on stock, so it tastes savory, not milky.",
+      "recipe": "sauce-veloute",
+      "seeAlso": [
+        "fd_0214"
+      ],
+      "confusedWith": [
+        "fd_0208"
+      ],
+      "line": "Poached halibut, mussel velouté, leeks"
+    },
+    {
+      "id": "fd_0208",
+      "term": "Béchamel",
+      "say": "BESH-uh-mel",
+      "section": "sauces",
+      "gist": "Hot milk thickened with butter and flour, the white base",
+      "guest": "It's a creamy white sauce of milk thickened with butter and flour. It's what makes a classic lasagna, a gratin or a croque monsieur so rich.",
+      "why": "Butter and flour are cooked briefly without browning, then hot milk is whisked in and simmered until thick and smooth, often seasoned with nutmeg. Add cheese and it becomes Mornay, the sauce behind many gratins and baked macaroni. It tastes mild, milky and gentle.",
+      "madeWith": [
+        "milk",
+        "butter",
+        "wheat flour",
+        "often nutmeg",
+        "sometimes onion"
+      ],
+      "origin": "French, traditionally named for Louis de Béchameil, steward to Louis XIV",
+      "pairs": "Lasagna, croque monsieur, gratins, moussaka",
+      "notThis": "Not velouté, which thickens light stock the same way. This one is built on milk, so it is paler and milkier.",
+      "recipe": "sauce-bechamel",
+      "confusedWith": [
+        "fd_0207"
+      ],
+      "line": "Croque monsieur, ham, gruyère, béchamel"
+    },
+    {
+      "id": "fd_0209",
+      "term": "Remoulade",
+      "say": "REM-uh-lahd",
+      "section": "sauces",
+      "gist": "Cold mayonnaise sauce sharpened with pickles, capers and mustard",
+      "guest": "It's a tangy, creamy cold sauce, mayonnaise sharpened with mustard, pickles and herbs. It's great with anything fried, especially crab cakes.",
+      "why": "Most start with mayonnaise, an emulsion of egg yolk and oil, then take chopped pickles, capers, herbs and mustard. The French version is pale and herby. The Louisiana one is often pink or orange with Creole mustard, paprika, hot sauce and horseradish, and bolder.",
+      "madeWith": [
+        "egg yolk",
+        "oil",
+        "mustard",
+        "pickles",
+        "capers",
+        "often anchovy",
+        "sometimes horseradish"
+      ],
+      "note": "House-made versions are often whisked from raw egg yolk. Ask the kitchen whether theirs uses pasteurized egg.",
+      "pairs": "Crab cakes, fried shrimp, po' boys, celery root salad",
+      "notThis": "Not tartar sauce, though close. It is usually more mustardy and herby, and in Louisiana spicier and pinker.",
+      "seeAlso": [
+        "fd_0195",
+        "fd_0198"
+      ],
+      "line": "Crab cakes, Creole remoulade, pickled okra"
+    },
+    {
+      "id": "fd_0210",
+      "term": "Chimichurri",
+      "say": "chee-mee-CHOO-ree",
+      "section": "sauces",
+      "gist": "Raw Argentine sauce of parsley, garlic, oil and vinegar",
+      "guest": "It's Argentina's steak sauce, chopped parsley and garlic in oil and vinegar with a little chili. Bright and sharp, it cuts through rich grilled meat.",
+      "why": "Parsley, garlic and dried oregano are chopped, usually by hand rather than blended, and loosened with oil, red wine vinegar and red pepper flakes. Raw garlic and vinegar make it sharp enough to cut fat, which is why it sits beside grilled beef at an Argentine asado.",
+      "madeWith": [
+        "parsley",
+        "garlic",
+        "oregano",
+        "oil",
+        "red wine vinegar",
+        "red pepper flakes"
+      ],
+      "origin": "Argentina and Uruguay, the table sauce of the asado grill",
+      "notThis": "Not pesto or Italian salsa verde. This is loose, vinegar-sharp and flecked with oregano and chili.",
+      "recipe": "chimichurri-verde",
+      "seeAlso": [
+        "fd_0098",
+        "fd_0088"
+      ],
+      "confusedWith": [
+        "fd_0212",
+        "fd_0211"
+      ],
+      "line": "Wood-grilled skirt steak, chimichurri, crispy potatoes"
+    },
+    {
+      "id": "fd_0211",
+      "term": "Salsa Verde",
+      "say": "SAHL-sah VEHR-day",
+      "section": "sauces",
+      "gist": "Chopped parsley sauce sharpened with capers, anchovy and vinegar",
+      "guest": "It's a bright Italian green sauce of chopped parsley, capers, anchovy and good olive oil. It wakes up rich meats and grilled fish.",
+      "why": "The herbs are chopped by hand rather than blended, loosened with olive oil and sharpened with vinegar or lemon. Capers and anchovy add salt and savory depth without tasting fishy, and the acid cuts through fatty meat. It is served at room temperature, never cooked.",
+      "madeWith": [
+        "parsley",
+        "olive oil",
+        "capers",
+        "often anchovy",
+        "garlic",
+        "sometimes bread",
+        "sometimes hard-boiled egg"
+      ],
+      "origin": "Italian for green sauce, classic beside the boiled meats of Piedmont",
+      "notThis": "Not chimichurri, which leans on oregano and chili and skips the capers. Mexican salsa verde is a tomatillo salsa.",
+      "recipe": "salsa-verde-italian",
+      "seeAlso": [
+        "fd_0212"
+      ],
+      "confusedWith": [
+        "fd_0210"
+      ],
+      "line": "Grilled swordfish, salsa verde, charred lemon"
+    },
+    {
+      "id": "fd_0212",
+      "term": "Pesto",
+      "section": "sauces",
+      "gist": "Pounded basil sauce with pine nuts, garlic, hard cheese and oil",
+      "guest": "It's the classic basil sauce from Genoa, made with pine nuts, garlic, Parmesan and olive oil. Fresh, green and nutty, it clings to pasta.",
+      "why": "The name comes from the Italian for to pound, as in a mortar and pestle. Crushing the leaves bursts their oils instead of slicing them, so the sauce is fragrant and glossy. Cheese and nuts give it body, so it coats pasta the way a cream sauce would.",
+      "madeWith": [
+        "basil",
+        "pine nuts",
+        "parmesan",
+        "often pecorino",
+        "garlic",
+        "olive oil",
+        "sometimes walnuts"
+      ],
+      "note": "Cut basil darkens in air, so a dull top layer is normal. Kitchens often seal it under a film of oil.",
+      "origin": "Genoa in Liguria, from pestare, Italian for to pound",
+      "pairs": "Trofie or trenette with green beans and potato, minestrone",
+      "seeAlso": [
+        "fd_0211",
+        "fd_0159"
+      ],
+      "confusedWith": [
+        "fd_0210"
+      ],
+      "line": "Trofie, basil pesto, green beans, potato"
+    },
+    {
+      "id": "fd_0213",
+      "term": "Romesco",
+      "say": "roh-MEHS-koh",
+      "section": "sauces",
+      "gist": "Catalan sauce of dried red peppers, roasted tomato, nuts and bread",
+      "guest": "It's a Catalan sauce of dried sweet red peppers and roasted tomato, ground with toasted almonds and garlic. Earthy, nutty and a little sweet.",
+      "why": "Dried sweet peppers, traditionally the small round ñora, are soaked and ground with roasted tomato and garlic, then thickened with toasted almonds or hazelnuts and fried bread. The nuts and bread make it thick and spoonable, and a splash of vinegar keeps it bright.",
+      "madeWith": [
+        "dried red pepper",
+        "tomato",
+        "almonds",
+        "often hazelnuts",
+        "bread",
+        "garlic",
+        "olive oil"
+      ],
+      "origin": "Tarragona on the Catalan coast, said to come from its fishermen",
+      "pairs": "Grilled spring onions and leeks, grilled fish, potatoes",
+      "recipe": "romesco",
+      "line": "Grilled leeks, romesco, toasted hazelnuts"
+    },
+    {
+      "id": "fd_0214",
+      "term": "Stock",
+      "section": "sauces",
+      "gist": "Liquid simmered from bones and aromatics, the base under sauces",
+      "guest": "It's the kitchen's foundation, bones and vegetables simmered slowly in water into a rich liquid. It's what gives sauces and soups their depth.",
+      "why": "Bones and vegetables simmer gently in water for hours, or under an hour for fish. Collagen in the bones melts into gelatin, which gives stock body and makes it set when cold. Roasting the bones first makes brown stock, deeper in color and flavor, for dark sauces.",
+      "madeWith": [
+        "chicken bones",
+        "often veal bones",
+        "sometimes fish bones",
+        "sometimes shellfish shells",
+        "sometimes white wine",
+        "onion",
+        "celery"
+      ],
+      "note": "Kitchens usually leave it unsalted, because it gets reduced into sauces and salt would concentrate.",
+      "notThis": "Not broth, which is made from meat and seasoned to drink. Stock is a building block, rarely served on its own.",
+      "lexiconSlug": "stocks-blanc-brun-broth-and-demi",
+      "recipe": "brown-veal-stock",
+      "seeAlso": [
+        "fd_0206",
+        "fd_0207",
+        "fd_0204"
+      ],
+      "confusedWith": [
+        "fd_0204"
+      ],
+      "line": "Steamed clams, fish stock, white wine, grilled bread",
+      "prompt": "Bones and vegetables simmer gently in water for hours, or under an hour for fish. Collagen in the bones melts into gelatin, which gives __ body and makes it set when cold. Roasting the bones first makes brown __, deeper in color and flavor, for dark sauces."
+    },
+    {
+      "id": "fd_0215",
+      "term": "Agrodolce",
+      "say": "ah-groh-DOHL-chay",
+      "section": "sauces",
+      "gist": "Italian sweet-sour sauce of vinegar, sugar, raisins and onion",
+      "guest": "It's the Italian take on sweet and sour, vinegar and sugar or honey cooked down, often with raisins and onions. It makes rich meats and vegetables pop.",
+      "why": "Vinegar is cooked with sugar or honey until syrupy, and in Sicily raisins, pine nuts and onions often go in. The sweetness rounds off the vinegar's edge, so it cuts through fat without puckering, which is why it lands on duck, pork, rabbit and squash.",
+      "madeWith": [
+        "wine vinegar",
+        "sugar",
+        "often honey",
+        "often raisins",
+        "often onion",
+        "sometimes pine nuts"
+      ],
+      "origin": "Italian for sour-sweet, strongest in Sicilian and Roman cooking",
+      "notThis": "Not gastrique, the smooth French sauce base of caramelized sugar and vinegar. Agrodolce is chunkier and often holds fruit and onion.",
+      "confusedWith": [
+        "fd_0202"
+      ],
+      "line": "Roast duck breast, cherry agrodolce, farro"
     }
   ]
 }

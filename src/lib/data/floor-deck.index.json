@@ -7,7 +7,9 @@
     "cuts": "Meat Cuts",
     "fish": "Fish & Shellfish",
     "mushrooms": "Mushrooms & Truffles",
-    "dairy": "Dairy & Cheese Words"
+    "dairy": "Dairy & Cheese Words",
+    "starches": "Grains, Pasta & Starches",
+    "sauces": "Sauces, Stocks & Dressings"
   },
   "cards": [
     {
@@ -1117,6 +1119,233 @@
       "id": "fd_0171",
       "term": "Washed Rind",
       "section": "dairy"
+    },
+    {
+      "id": "fd_0172",
+      "term": "Agnolotti",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0173",
+      "term": "Buckwheat",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0174",
+      "term": "Bulgur",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0175",
+      "term": "Farro",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0176",
+      "term": "Farro Piccolo",
+      "section": "starches",
+      "aliases": [
+        "Einkorn"
+      ]
+    },
+    {
+      "id": "fd_0177",
+      "term": "Gnocchi",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0178",
+      "term": "Grits",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0179",
+      "term": "Polenta",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0180",
+      "term": "Quinoa",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0181",
+      "term": "Risotto",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0182",
+      "term": "Carnaroli",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0183",
+      "term": "Acquerello",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0184",
+      "term": "Semolina",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0185",
+      "term": "Tagliatelle",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0186",
+      "term": "Arborio",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0187",
+      "term": "Couscous",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0188",
+      "term": "Freekeh",
+      "section": "starches",
+      "aliases": [
+        "Farik",
+        "Frikeh"
+      ]
+    },
+    {
+      "id": "fd_0189",
+      "term": "Wild Rice",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0190",
+      "term": "Pappardelle",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0191",
+      "term": "Ravioli",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0192",
+      "term": "Tortellini",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0193",
+      "term": "Cavatelli",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0194",
+      "term": "Orecchiette",
+      "section": "starches"
+    },
+    {
+      "id": "fd_0195",
+      "term": "Aioli",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0196",
+      "term": "Béarnaise",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0197",
+      "term": "Hollandaise",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0198",
+      "term": "Emulsion",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0199",
+      "term": "Jus",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0200",
+      "term": "Vinaigrette",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0201",
+      "term": "Mignonette",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0202",
+      "term": "Gastrique",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0203",
+      "term": "Coulis",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0204",
+      "term": "Consommé",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0205",
+      "term": "Beurre Blanc",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0206",
+      "term": "Demi-Glace",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0207",
+      "term": "Velouté",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0208",
+      "term": "Béchamel",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0209",
+      "term": "Remoulade",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0210",
+      "term": "Chimichurri",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0211",
+      "term": "Salsa Verde",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0212",
+      "term": "Pesto",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0213",
+      "term": "Romesco",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0214",
+      "term": "Stock",
+      "section": "sauces"
+    },
+    {
+      "id": "fd_0215",
+      "term": "Agrodolce",
+      "section": "sauces"
     }
   ],
   "byLexicon": {
@@ -1299,6 +1528,41 @@
     ],
     "feta": [
       "fd_0168"
+    ],
+    "buckwheat": [
+      "fd_0173"
+    ],
+    "farro": [
+      "fd_0175",
+      "fd_0176"
+    ],
+    "polenta": [
+      "fd_0179"
+    ],
+    "quinoa": [
+      "fd_0180"
+    ],
+    "semolina": [
+      "fd_0184"
+    ],
+    "arborio-rice": [
+      "fd_0186"
+    ],
+    "couscous": [
+      "fd_0187"
+    ],
+    "wild-rice": [
+      "fd_0189"
+    ],
+    "emulsions": [
+      "fd_0198"
+    ],
+    "consomme-and-clarification": [
+      "fd_0204"
+    ],
+    "stocks-blanc-brun-broth-and-demi": [
+      "fd_0206",
+      "fd_0214"
     ]
   }
 }
