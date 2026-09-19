@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
 	repertoire,
+	dayKey,
 	dueList,
 	cookedSlugs,
 	scopeToSlugs,
@@ -309,5 +310,80 @@ describe('scopeToSlugs', () => {
 		];
 		expect(scopeToSlugs(log, new Set(['a']))).toHaveLength(2);
 		expect(scopeToSlugs(log, new Set())).toEqual([]);
+	});
+});
+
+/**
+ * One climb a day, for a deck that asks one card four ways.
+ *
+ * Timestamps are built with the local Date constructor, never from an epoch
+ * constant plus hours: "the same local day" has to mean the same thing on the
+ * CI runner in UTC and on a laptop in Tennessee.
+ */
+describe('one climb per local day', () => {
+	const at = (day: number, hour: number) => new Date(2026, 8, day, hour, 0, 0).getTime();
+	const LATER = at(28, 12);
+	const rungOf = (log: CookEntry[], guarded: boolean) =>
+		repertoire(log, LATER, TERM_LADDER_DAYS, guarded ? { oneClimbPerDay: true } : {})[0].rung;
+
+	it('is OFF by default: two met answers in one evening still climb twice, as they always have', () => {
+		const log = [cook('fd_0001', at(1, 19), 'met'), cook('fd_0001', at(1, 21), 'met')];
+		expect(rungOf(log, false)).toBe(2);
+		expect(repertoire(log, LATER, TERM_LADDER_DAYS)[0].rung).toBe(2);
+		expect(repertoire(log, LATER)[0].rung).toBe(2);
+	});
+
+	it('guarded, three modes asking one card in one evening climb once', () => {
+		const log = [cook('fd_0001', at(1, 19), 'met'), cook('fd_0001', at(1, 20), 'met'), cook('fd_0001', at(1, 21), 'met')];
+		expect(rungOf(log, true)).toBe(1);
+	});
+
+	it('the next local day climbs again, even an hour past midnight', () => {
+		const log = [cook('fd_0001', at(1, 23), 'met'), cook('fd_0001', at(2, 1), 'met')];
+		expect(rungOf(log, true)).toBe(2);
+	});
+
+	it('right five minutes after wrong is reading, not remembering: it holds', () => {
+		const log = [cook('fd_0001', at(1, 9), 'met'), cook('fd_0001', at(3, 9), 'met'), cook('fd_0001', at(5, 19), 'missed'), cook('fd_0001', at(5, 20), 'met')];
+		// 1, 2, dropped to 1, and the same-day met holds at 1
+		expect(rungOf(log, true)).toBe(1);
+		// unguarded, the same log climbs straight back
+		expect(rungOf(log, false)).toBe(2);
+	});
+
+	it('a miss always drops, whatever else the day holds', () => {
+		const log = [cook('fd_0001', at(1, 9), 'met'), cook('fd_0001', at(2, 9), 'met'), cook('fd_0001', at(3, 9), 'met'), cook('fd_0001', at(3, 10), 'missed')];
+		expect(rungOf(log, true)).toBe(2);
+	});
+
+	it('close holds with or without the guard', () => {
+		const log = [cook('fd_0001', at(1, 9), 'met'), cook('fd_0001', at(2, 9), 'close'), cook('fd_0001', at(3, 9), 'close')];
+		expect(rungOf(log, true)).toBe(1);
+		expect(rungOf(log, false)).toBe(1);
+	});
+
+	it('the guard is per slug: two cards answered in one sitting each climb', () => {
+		const log = [cook('fd_0001', at(1, 19), 'met'), cook('fd_0002', at(1, 19), 'met')];
+		const out = repertoire(log, LATER, TERM_LADDER_DAYS, { oneClimbPerDay: true });
+		expect(out.map((e) => e.rung)).toEqual([1, 1]);
+		const next = [...log, cook('fd_0001', at(2, 19), 'met'), cook('fd_0002', at(2, 19), 'met')];
+		expect(repertoire(next, LATER, TERM_LADDER_DAYS, { oneClimbPerDay: true }).map((e) => e.rung)).toEqual([2, 2]);
+	});
+});
+
+describe('lapses', () => {
+	it('counts every miss, ever, and is derived rather than stored', () => {
+		const log = [cook('a', daysAgo(30), 'met'), cook('a', daysAgo(20), 'missed'), cook('a', daysAgo(10), 'missed'), cook('a', daysAgo(1), 'met'), cook('b', daysAgo(1), 'met')];
+		const out = repertoire(log, NOW, TERM_LADDER_DAYS);
+		expect(out.find((e) => e.slug === 'a')!.lapses).toBe(2);
+		expect(out.find((e) => e.slug === 'b')!.lapses).toBe(0);
+	});
+});
+
+describe('dayKey', () => {
+	it('is the local calendar day', () => {
+		expect(dayKey(new Date(2026, 8, 5, 0, 0, 1).getTime())).toBe('2026-09-05');
+		expect(dayKey(new Date(2026, 8, 5, 23, 59, 59).getTime())).toBe('2026-09-05');
+		expect(dayKey(new Date(2026, 11, 31, 23, 59, 59).getTime())).toBe('2026-12-31');
 	});
 });

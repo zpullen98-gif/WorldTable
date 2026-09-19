@@ -124,6 +124,21 @@ export const TERM_LADDER_DAYS = [2, 6, 14, 35, 90] as const;
 
 export const DAY_MS = 86_400_000;
 
+/**
+ * The LOCAL calendar day of a moment, as YYYY-MM-DD.
+ *
+ * Local, because "one climb a day" and "comes back next session" are about the
+ * reader's day, not UTC's: a server studying at 11pm and again at 1am has
+ * studied on two days wherever Greenwich is. Written here rather than imported
+ * from persistence/state.ts, which would drag the whole persistence graph into
+ * a module that is pure on purpose.
+ */
+export function dayKey(at: number): string {
+	const d = new Date(at);
+	const two = (n: number) => String(n).padStart(2, '0');
+	return `${d.getFullYear()}-${two(d.getMonth() + 1)}-${two(d.getDate())}`;
+}
+
 export type RepertoireState = 'fresh' | 'holding' | 'due' | 'cold';
 
 export interface RepertoireEntry {
@@ -142,6 +157,36 @@ export interface RepertoireEntry {
 	dueAt: number;
 	daysSince: number;
 	state: RepertoireState;
+	/**
+	 * How many times it has been missed, ever. Derived from the log and never
+	 * stored. A card that has collapsed a dozen times must not look like a new
+	 * one after two good answers: the Floor Deck uses this to break ties among
+	 * equally overdue cards and to name "the terms that keep slipping".
+	 */
+	lapses: number;
+}
+
+/**
+ * How the walk may be tightened. Everything here defaults to OFF, so the dish
+ * ladder, the service drill and the Lexicon quiz are exactly what they were.
+ */
+export interface RepertoireOptions {
+	/**
+	 * At most one climb per LOCAL day per slug, however many surfaces ask it.
+	 *
+	 * The Floor Deck asks one card through four modes. Without this, a server
+	 * who flips a card, then takes the written test, then plays say-it-back in
+	 * one evening climbs three rungs on one sitting and does not see the card
+	 * again for five weeks, having learned it once. The Bartender's Ledger found
+	 * the same hole in its own scheduler (a card jumped 1, 3, 8, 20 days in an
+	 * evening) and closed it the same way: the counts still move, the calendar
+	 * does not.
+	 *
+	 * A climb also holds on a day that already carries a MISS: getting it right
+	 * five minutes after getting it wrong is reading, not remembering. A miss
+	 * always drops, whatever else the day holds.
+	 */
+	oneClimbPerDay?: boolean;
 }
 
 /**
@@ -151,12 +196,21 @@ export interface RepertoireEntry {
  * clean plates then a ruined one leaves you lower than three clean plates, and
  * the schedule has to say so.
  */
-function rungFor(entries: CookEntry[], ladder: readonly number[]): number {
+function rungFor(entries: CookEntry[], ladder: readonly number[], oneClimbPerDay = false): number {
 	let rung = 0;
+	let climbedOn = '';
+	let missedOn = '';
 	for (const e of entries) {
-		if (e.grade === 'missed') rung = Math.max(1, rung - 1);
-		else if (e.grade === 'close') rung = Math.max(1, rung);
-		else rung += 1;
+		const day = oneClimbPerDay ? dayKey(e.at) : '';
+		if (e.grade === 'missed') {
+			rung = Math.max(1, rung - 1);
+			missedOn = day;
+		} else if (e.grade === 'close') rung = Math.max(1, rung);
+		else if (oneClimbPerDay && (day === climbedOn || day === missedOn)) rung = Math.max(1, rung);
+		else {
+			rung += 1;
+			climbedOn = day;
+		}
 		rung = Math.min(rung, ladder.length);
 	}
 	return Math.max(1, rung);
@@ -187,7 +241,8 @@ export function repertoire(
 	 * identical, which is the whole reason the scheduler is shared rather than
 	 * copied.
 	 */
-	ladder: readonly number[] = LADDER_DAYS
+	ladder: readonly number[] = LADDER_DAYS,
+	opts: RepertoireOptions = {}
 ): RepertoireEntry[] {
 	const bySlug = new Map<string, CookEntry[]>();
 	for (const e of log) {
@@ -202,7 +257,7 @@ export function repertoire(
 		entries.sort((a, b) => a.at - b.at);
 		const first = entries[0].at;
 		const last = entries[entries.length - 1].at;
-		const rung = rungFor(entries, ladder);
+		const rung = rungFor(entries, ladder, opts.oneClimbPerDay === true);
 		const intervalDays = ladder[rung - 1];
 		const elapsed = Math.max(0, now - last);
 		out.push({
@@ -215,7 +270,8 @@ export function repertoire(
 			intervalDays,
 			dueAt: last + intervalDays * DAY_MS,
 			daysSince: Math.floor(elapsed / DAY_MS),
-			state: stateFor(elapsed, intervalDays * DAY_MS)
+			state: stateFor(elapsed, intervalDays * DAY_MS),
+			lapses: entries.filter((e) => e.grade === 'missed').length
 		});
 	}
 	out.sort((a, b) => a.slug.localeCompare(b.slug));
