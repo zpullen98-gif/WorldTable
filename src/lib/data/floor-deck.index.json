@@ -1,7 +1,8 @@
 {
   "sections": {
     "cured": "Cured & Preserved Meats",
-    "cuts": "Meat Cuts"
+    "cuts": "Meat Cuts",
+    "fish": "Fish & Shellfish"
   },
   "cards": [
     {
@@ -324,6 +325,208 @@
       "id": "fd_0107",
       "term": "Wagyu",
       "section": "cuts"
+    },
+    {
+      "id": "fd_0108",
+      "term": "Arctic Char",
+      "section": "fish",
+      "aliases": [
+        "Char"
+      ]
+    },
+    {
+      "id": "fd_0109",
+      "term": "Crawfish",
+      "section": "fish",
+      "aliases": [
+        "Crayfish",
+        "Crawdads",
+        "Mudbugs"
+      ]
+    },
+    {
+      "id": "fd_0110",
+      "term": "Skate",
+      "section": "fish",
+      "aliases": [
+        "Skate Wing",
+        "Raie"
+      ]
+    },
+    {
+      "id": "fd_0111",
+      "term": "Flounder",
+      "section": "fish",
+      "aliases": [
+        "Fluke",
+        "Summer Flounder"
+      ]
+    },
+    {
+      "id": "fd_0112",
+      "term": "Grouper",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0113",
+      "term": "Halibut",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0114",
+      "term": "Mussels",
+      "section": "fish",
+      "aliases": [
+        "Moules"
+      ]
+    },
+    {
+      "id": "fd_0115",
+      "term": "Oysters",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0116",
+      "term": "Roe",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0117",
+      "term": "Salmon",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0118",
+      "term": "Scallops",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0119",
+      "term": "Snapper",
+      "section": "fish",
+      "aliases": [
+        "Red Snapper"
+      ]
+    },
+    {
+      "id": "fd_0120",
+      "term": "Sturgeon",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0121",
+      "term": "Tilefish",
+      "section": "fish",
+      "aliases": [
+        "Golden Tilefish"
+      ]
+    },
+    {
+      "id": "fd_0122",
+      "term": "Trout",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0123",
+      "term": "Turbot",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0124",
+      "term": "Wreckfish",
+      "section": "fish",
+      "aliases": [
+        "Stone Bass"
+      ]
+    },
+    {
+      "id": "fd_0125",
+      "term": "Caviar",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0126",
+      "term": "Bottarga",
+      "section": "fish",
+      "aliases": [
+        "Poutargue"
+      ]
+    },
+    {
+      "id": "fd_0127",
+      "term": "Branzino",
+      "section": "fish",
+      "aliases": [
+        "Loup de Mer",
+        "European Sea Bass",
+        "Mediterranean Sea Bass"
+      ]
+    },
+    {
+      "id": "fd_0128",
+      "term": "Black Sea Bass",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0129",
+      "term": "Cobia",
+      "section": "fish",
+      "aliases": [
+        "Ling",
+        "Lemonfish"
+      ]
+    },
+    {
+      "id": "fd_0130",
+      "term": "Swordfish",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0131",
+      "term": "Tuna",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0132",
+      "term": "Monkfish",
+      "section": "fish",
+      "aliases": [
+        "Anglerfish",
+        "Lotte"
+      ]
+    },
+    {
+      "id": "fd_0133",
+      "term": "Shrimp",
+      "section": "fish",
+      "aliases": [
+        "Prawns"
+      ]
+    },
+    {
+      "id": "fd_0134",
+      "term": "Blue Crab",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0135",
+      "term": "Soft-Shell Crab",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0136",
+      "term": "Lobster",
+      "section": "fish"
+    },
+    {
+      "id": "fd_0137",
+      "term": "Clams",
+      "section": "fish",
+      "aliases": [
+        "Littlenecks",
+        "Quahogs",
+        "Steamers"
+      ]
     }
   ],
   "byLexicon": {
@@ -417,6 +620,26 @@
     ],
     "wagyu-and-kobe": [
       "fd_0107"
+    ],
+    "mussels-scallops-and-the-cold-water-winter": [
+      "fd_0114"
+    ],
+    "oysters-east-vs-west": [
+      "fd_0115"
+    ],
+    "roe-caviar-ikura-tobiko-bottarga": [
+      "fd_0116",
+      "fd_0125",
+      "fd_0126"
+    ],
+    "wild-salmon-the-run-calendar": [
+      "fd_0117"
+    ],
+    "scallops-dry-vs-wet-u-10": [
+      "fd_0118"
+    ],
+    "shrimp-sizing-and-prawn-confusion": [
+      "fd_0133"
     ]
   }
 }

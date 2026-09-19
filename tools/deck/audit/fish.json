@@ -1,0 +1,1192 @@
+{
+	"section": "fish",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0108",
+				"fd_0109",
+				"fd_0110",
+				"fd_0111",
+				"fd_0112",
+				"fd_0113",
+				"fd_0114",
+				"fd_0115",
+				"fd_0116",
+				"fd_0117",
+				"fd_0118",
+				"fd_0119",
+				"fd_0120",
+				"fd_0121",
+				"fd_0122",
+				"fd_0123",
+				"fd_0124",
+				"fd_0125",
+				"fd_0126",
+				"fd_0127",
+				"fd_0128",
+				"fd_0129",
+				"fd_0130",
+				"fd_0131",
+				"fd_0132",
+				"fd_0133",
+				"fd_0134",
+				"fd_0135",
+				"fd_0136",
+				"fd_0137"
+			],
+			"findings": [
+				{
+					"id": "fd_0110",
+					"field": "pairs",
+					"severity": "wrong",
+					"claim": "Brown butter, capers, lemon and parsley, the French classic",
+					"because": "The French classic is raie au beurre noir: butter taken past brown to black, with capers, parsley and a splash of vinegar. Lemon and brown butter make the modern bistro version, not the classic.",
+					"fix": "Black or brown butter, capers, parsley, vinegar or lemon",
+					"lens": "fact",
+					"key": "fish-1-fact-1"
+				},
+				{
+					"id": "fd_0110",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often lemon\"",
+					"because": "The classic beurre noir finish uses vinegar, often alongside or instead of lemon. A guest who asks what is in the sauce should hear vinegar too.",
+					"fix": "often lemon or vinegar",
+					"lens": "fact",
+					"key": "fish-1-fact-2"
+				},
+				{
+					"id": "fd_0109",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"crawfish\", \"often butter\", \"often wheat flour\", \"often cayenne\"",
+					"because": "The card's own pairs line puts sausage in the boil, and in Louisiana that is usually pork andouille or smoked sausage. A guest who avoids pork needs it on the list.",
+					"fix": "add \"sometimes pork sausage\"",
+					"lens": "fact",
+					"key": "fish-1-fact-3"
+				},
+				{
+					"id": "fd_0111",
+					"field": "lexiconSlug",
+					"severity": "unclear",
+					"claim": "round-fish-vs-flat-fish",
+					"because": "This entry is a general essay on how fish are shaped and butchered. It is not a long-form entry on flounder itself, and the Halibut card, which fits it just as well, leaves it out. The rule allows a slug only for an essay on this same subject.",
+					"fix": "omit lexiconSlug",
+					"lens": "fact",
+					"key": "fish-1-fact-4"
+				},
+				{
+					"id": "fd_0115",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "They're shucked to order and eaten raw from the shell with their own juice. Expect a cold, silky bite that tastes of clean ocean, some brinier and some sweeter.",
+					"because": "The line never says what an oyster is, so it does not answer \"what is that?\". It also says they are always eaten raw, but this card links Oysters Rockefeller and lists butter and flour, so a server reading it to a guest ordering baked or fried oysters would be wrong. Naming the raw half shell covers both cases.",
+					"fix": "They're shellfish, and on the half shell they're shucked to order and eaten raw. A cold, silky bite of clean ocean, some brinier, some sweeter.",
+					"lens": "floor",
+					"key": "fish-1-floor-5"
+				},
+				{
+					"id": "fd_0111",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"flounder\", \"often wheat flour\", \"often butter\", \"sometimes crab\", \"sometimes cornmeal\"",
+					"because": "The card links Amandine in seeAlsoTerms, and flounder amandine is one of the classic preparations. It is finished with sliced almonds, a tree nut a guest with an allergy needs flagged. Crab-stuffed flounder is also usually bound with breadcrumbs and egg or mayonnaise.",
+					"fix": "\"flounder\", \"often wheat flour\", \"often butter\", \"sometimes almonds\", \"sometimes crab\", \"sometimes egg\", \"sometimes cornmeal\"",
+					"lens": "safety",
+					"key": "fish-1-safety-6"
+				},
+				{
+					"id": "fd_0111",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note)",
+					"because": "Fluke, which the card gives as an alias, is regularly served raw as crudo or sashimi (hirame). That is a real raw-service fact a server should be able to state, and nothing on the card says it.",
+					"fix": "Fluke is often served raw, sliced thin as crudo or sashimi.",
+					"lens": "safety",
+					"key": "fish-1-safety-7"
+				},
+				{
+					"id": "fd_0114",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Meat runs from pale cream to bright orange. That is male and female, not freshness, and they taste the same.",
+					"because": "The handling fact a server most needs is missing: a mussel that stays shut after steaming should be left in the bowl, not pried open. The color fact can be kept, but the shut-shell rule is the one that matters for safety.",
+					"fix": "A mussel still shut after steaming should be left, not pried open. Orange or cream meat is only male or female.",
+					"lens": "safety",
+					"key": "fish-1-safety-8"
+				},
+				{
+					"id": "fd_0115",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"often shallot\"",
+					"because": "The linked recipe is oysters Rockefeller, which is classically finished with an anise liqueur such as Pernod or Herbsaint. That alcohol is missing, while shallot matters little for allergies and is already implied by mignonette in pairs. The list is at its limit of 7 items, so swap one out.",
+					"fix": "\"sometimes anise liqueur\"",
+					"lens": "safety",
+					"key": "fish-1-safety-9"
+				},
+				{
+					"id": "fd_0112",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"grouper\", \"often butter\", \"sometimes wheat flour\"",
+					"because": "The card's line and its linked recipe are the Florida grouper sandwich, served on a wheat bun with tartar sauce, which is a mayonnaise (egg) sauce. The list shows wheat only as \"sometimes\" and leaves out egg entirely.",
+					"fix": "\"grouper\", \"often butter\", \"often wheat flour\", \"sometimes egg\"",
+					"lens": "safety",
+					"key": "fish-1-safety-10"
+				},
+				{
+					"id": "fd_0113",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"halibut\", \"often butter\", \"often lemon\"",
+					"because": "The linked recipe bakes halibut under a mayonnaise crust, and mayonnaise is an egg emulsion. Egg is not flagged anywhere on the card.",
+					"fix": "\"halibut\", \"often butter\", \"often lemon\", \"sometimes egg\"",
+					"lens": "safety",
+					"key": "fish-1-safety-11"
+				},
+				{
+					"id": "fd_0109",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"crawfish\", \"often butter\", \"often wheat flour\", \"often cayenne\"",
+					"because": "The card's own pairs line puts sausage in the boil, and on the linked backyard boil that sausage is classically andouille, a pork sausage. Pork is not flagged in the list.",
+					"fix": "\"crawfish\", \"often butter\", \"often wheat flour\", \"often cayenne\", \"sometimes pork sausage\"",
+					"lens": "safety",
+					"key": "fish-1-safety-12"
+				},
+				{
+					"id": "fd_0117",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Arctic char and steelhead trout look alike but are smaller, milder and finer in the flake.",
+					"because": "Steelhead is not reliably smaller: farmed steelhead fillets run the same size as Atlantic salmon and sea-run steelhead outweigh many coho and sockeye. What separates both from salmon on the plate is less fat and a finer flake.",
+					"fix": "Arctic char and steelhead trout look alike but are leaner, milder and finer in the flake.",
+					"lens": "fact",
+					"key": "fish-2-fact-1"
+				},
+				{
+					"id": "fd_0116",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"fish eggs\", \"salt\", \"sometimes soy sauce\", \"sometimes butter\", \"sometimes bacon\"",
+					"because": "The list leaves out two things the card's own dishes classically use. Ikura is usually marinated in soy sauce with sake or mirin, which is alcohol. Shad roe, the card's own recipe, is usually dredged in flour before it is pan-fried, which is wheat.",
+					"fix": "fish eggs, salt, sometimes soy sauce, sometimes sake, sometimes wheat flour, sometimes butter, sometimes bacon",
+					"lens": "fact",
+					"key": "fish-2-fact-2"
+				},
+				{
+					"id": "fd_0120",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "Mostly farmed white sturgeon from California and Europe",
+					"because": "In the US, sturgeon meat is mostly farmed white sturgeon from California and Idaho. European farms mostly raise Siberian and Russian sturgeon, so 'white sturgeon from Europe' overstates.",
+					"fix": "Mostly farmed white sturgeon from California and Idaho; wild stocks are protected",
+					"lens": "fact",
+					"key": "fish-2-fact-3"
+				},
+				{
+					"id": "fd_0120",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "bony plates instead of scales",
+					"because": "Sturgeon scutes are modified scales, so a sturgeon does not have plates 'instead of' scales. The fish has rows of bony plates (scutes) and scattered small scales between them.",
+					"fix": "rows of bony plates, not ordinary scales",
+					"lens": "fact",
+					"key": "fish-2-fact-4"
+				},
+				{
+					"id": "fd_0118",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "It stores sugar for energy, which is why it tastes sweet and browns so well.",
+					"because": "A scallop stores its energy as glycogen, which is a starch and not a sugar. Most of the sweet taste comes from free amino acids such as glycine. Glycogen and its breakdown sugars help it brown.",
+					"fix": "It stores glycogen and sweet amino acids, so it tastes sweet and browns well.",
+					"lens": "fact",
+					"key": "fish-2-fact-5"
+				},
+				{
+					"id": "fd_0118",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Scallops are the sweet, tender muscle of the shellfish,",
+					"because": "The line answers 'what is a scallop' with 'the shellfish', which is circular. A guest who asks is really asking which part they are eating, and the line never says it is the muscle that closes the shell.",
+					"fix": "Scallops are the sweet muscle that snaps the shell shut,",
+					"lens": "floor",
+					"key": "fish-2-floor-6"
+				},
+				{
+					"id": "fd_0120",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "more like a pork chop than a flaky fish",
+					"because": "The why compares sturgeon to veal or lobster, so the guest line uses a different comparison from the card behind it. Naming pork on a fish dish also invites a guest who avoids pork to ask whether pork is involved, which a nervous new hire then has to untangle.",
+					"fix": "more like veal than a flaky fish",
+					"lens": "floor",
+					"key": "fish-2-floor-7"
+				},
+				{
+					"id": "fd_0123",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "(no say given)",
+					"because": "Turbot looks French, so a new hire will hesitate between tur-BOH and the English form. American dining rooms say it the English way, rhyming with 'her but'.",
+					"fix": "TER-buht",
+					"lens": "floor",
+					"key": "fish-2-floor-8"
+				},
+				{
+					"id": "fd_0116",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note)",
+					"because": "Loose salted roe such as salmon roe, tobiko and caviar is cured but never cooked, so it reaches the table raw. A server needs to be able to say that plainly, and nothing on the card does: the why says only 'loosened and salted'.",
+					"fix": "Loose salted roe, like salmon roe, is cured but never cooked: it is served raw.",
+					"lens": "safety",
+					"key": "fish-2-safety-9"
+				},
+				{
+					"id": "fd_0116",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"fish eggs\", \"salt\", \"sometimes soy sauce\", \"sometimes butter\", \"sometimes bacon\"",
+					"because": "The classic soy-marinated salmon roe (ikura shoyuzuke) is also seasoned with sake or mirin. Either one is alcohol, and a guest avoiding alcohol would need it flagged.",
+					"fix": "fish eggs, salt, sometimes soy sauce, sometimes sake, sometimes butter, sometimes bacon",
+					"lens": "safety",
+					"key": "fish-2-safety-10"
+				},
+				{
+					"id": "fd_0117",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "The white curd that can bead on cooked salmon is albumin, a natural protein. Gentler cooking shows less of it.",
+					"because": "The real doneness fact is missing. Many kitchens cook salmon to medium, still translucent in the center, and the card's own exemplar line serves it seared. A guest who expects fish cooked through needs to be told, and the albumin trivia has nothing to do with safety.",
+					"fix": "Many kitchens cook it to medium, still translucent in the center. Guests can ask for it cooked through.",
+					"lens": "safety",
+					"key": "fish-2-safety-11"
+				},
+				{
+					"id": "fd_0119",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"fish\", \"often butter\", \"often lemon\"",
+					"because": "The card's own line and why both describe whole fried snapper, which is classically dredged in wheat flour or cornmeal before frying. Wheat is missing from the list.",
+					"fix": "fish, often butter, often lemon, sometimes wheat flour",
+					"lens": "safety",
+					"key": "fish-2-safety-12"
+				},
+				{
+					"id": "fd_0119",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note)",
+					"because": "The gist and why say it is often served whole. A whole snapper comes on the bone with its fins and small bones, and a server should be able to warn the guest.",
+					"fix": "Served whole, it arrives on the bone, with fins and small bones to work around.",
+					"lens": "safety",
+					"key": "fish-2-safety-13"
+				},
+				{
+					"id": "fd_0130",
+					"field": "lexiconSlug",
+					"severity": "wrong",
+					"claim": "fillet-steak-loin-and-collar",
+					"because": "That entry is the general essay on fish cuts (fillet vs steak vs loin vs collar), not the long-form entry on swordfish. The rule allows a slug only when the entry is about this same subject.",
+					"fix": "Omit lexiconSlug.",
+					"lens": "fact",
+					"key": "fish-3-fact-1"
+				},
+				{
+					"id": "fd_0131",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "Yellowfin and bigeye are lean;",
+					"because": "Bigeye carries noticeably more fat than yellowfin and is prized for it, especially for sashimi. Only yellowfin is the classic lean one.",
+					"fix": "Yellowfin is lean, bigeye a little richer;",
+					"lens": "fact",
+					"key": "fish-3-fact-2"
+				},
+				{
+					"id": "fd_0131",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "Albacore is the paler, milder one that goes in cans.",
+					"because": "Most canned tuna is skipjack, sold as light tuna. Albacore is the one canned as white tuna, so calling it the canned tuna misleads.",
+					"fix": "Albacore is the paler, milder one canned as white tuna.",
+					"lens": "fact",
+					"key": "fish-3-fact-3"
+				},
+				{
+					"id": "fd_0131",
+					"field": "aliases",
+					"severity": "unclear",
+					"claim": "\"Ahi\"",
+					"because": "Ahi is the Hawaiian name for yellowfin and bigeye only. It is not another name for tuna in general: bluefin, albacore (tombo) and skipjack (aku) are not ahi. As an alias it would teach servers to call every tuna ahi.",
+					"fix": "Remove the alias. Keep the menu line, where 'ahi tuna' is used correctly.",
+					"lens": "fact",
+					"key": "fish-3-fact-4"
+				},
+				{
+					"id": "fd_0130",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "never falls apart into flakes",
+					"because": "Cooked swordfish does separate into large, dense flakes that follow its rings, especially when overcooked. It holds together better than most fish, but 'never' is false.",
+					"fix": "rarely breaks into flakes",
+					"lens": "fact",
+					"key": "fish-3-fact-5"
+				},
+				{
+					"id": "fd_0128",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "mostly by trap and hook",
+					"because": "Bottom trawl also lands a large share of the commercial black sea bass catch, especially in the Mid-Atlantic, alongside pots and hook and line. 'Mostly by trap and hook' leaves out a major gear.",
+					"fix": "by pot, hook and trawl",
+					"lens": "fact",
+					"key": "fish-3-fact-6"
+				},
+				{
+					"id": "fd_0124",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Shallow reef fish speared by divers in the warm waters off the Keys",
+					"because": "This is a fair description of grouper and snapper, which are both on the roster and are routinely speared on shallow reefs in the Keys. A trap must not truly describe another card.",
+					"fix": "Small shallow-reef fish farmed in pens off the Keys, soft and oily",
+					"lens": "fact",
+					"key": "fish-3-fact-7"
+				},
+				{
+					"id": "fd_0124",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Deep-water Atlantic fish, lean and firm, with big white flakes",
+					"because": "Tilefish (fd_0121) is also a lean, firm, deep-water Atlantic fish, so this gist would be accepted for either term in the test. What makes this one this one is where it gathers and where it is landed.",
+					"fix": "Deep-water Carolina fish that gathers at wrecks, with big flakes",
+					"lens": "floor",
+					"key": "fish-3-floor-8"
+				},
+				{
+					"id": "fd_0124",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "If you like grouper, you'll love this one.",
+					"because": "It promises the guest will love it. The honest, useful part is the comparison, and a new hire can say that without sounding like an ad.",
+					"fix": "It eats a lot like grouper.",
+					"lens": "floor",
+					"key": "fish-3-floor-9"
+				},
+				{
+					"id": "fd_0128",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's a wild fish from our Atlantic coast, sweet and delicate with skin that crisps beautifully. A real favorite with fish lovers.",
+					"because": "\"Our Atlantic coast\" is wrong for any dining room that is not on the East Coast. \"A real favorite with fish lovers\" is filler, and the line never says it is a small fish, which is the first thing that sets it apart from other sea bass.",
+					"fix": "It's a small wild fish from the Atlantic coast, sweet and delicate, and the skin crisps beautifully in the pan.",
+					"lens": "floor",
+					"key": "fish-3-floor-10"
+				},
+				{
+					"id": "fd_0129",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It's buttery enough to serve raw",
+					"because": "The line makes richness sound like the reason the fish can be eaten raw. A guest can take that as an assurance that it is fine to eat raw. Whether a fish is served raw depends on how it was sourced and handled, not on its fat.",
+					"fix": "It's buttery and clean served raw",
+					"lens": "floor",
+					"key": "fish-3-floor-11"
+				},
+				{
+					"id": "fd_0131",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "We serve it raw or seared on the outside and rare inside",
+					"because": "The card is used in every kitchen, and \"we serve it\" states what this house does. A server in a kitchen that grills tuna through or makes a tuna melt (the linked recipe) would be telling the guest something false.",
+					"fix": "It's often served raw, or seared outside and rare inside",
+					"lens": "floor",
+					"key": "fish-3-floor-12"
+				},
+				{
+					"id": "fd_0129",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It's buttery enough to serve raw",
+					"because": "Fat content has nothing to do with whether a fish can be served raw. Raw service depends on how the fish was sourced and handled. The line tells a guest that raw cobia is safe because it is rich, and a server will repeat it that way.",
+					"fix": "It's rich and buttery, lovely raw as crudo, and holds up beautifully on the grill.",
+					"lens": "safety",
+					"key": "fish-3-safety-13"
+				},
+				{
+					"id": "fd_0129",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "good raw and sturdy on a grill",
+					"because": "\"Good raw\" can be read as \"fine to eat raw\", which is a raw-service assurance. The gist should describe how the fish is served and should not judge whether that is suitable.",
+					"fix": "Firm, buttery warm-water fish, often served raw, sturdy on a grill",
+					"lens": "safety",
+					"key": "fish-3-safety-14"
+				},
+				{
+					"id": "fd_0131",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often soy sauce\"",
+					"because": "Most brewed soy sauce is made with wheat, and the ponzu in the line is made with soy sauce too, often with bonito. A guest avoiding wheat will not know that \"soy sauce\" means wheat, so the list needs wheat named separately.",
+					"fix": "\"often soy sauce\", \"often wheat\"",
+					"lens": "safety",
+					"key": "fish-3-safety-15"
+				},
+				{
+					"id": "fd_0125",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"sturgeon roe\", \"salt\"",
+					"because": "The guest line and the pairs line both present caviar with blini and crème fraîche, and those classically hold wheat flour, egg, milk and cream. The list names only the roe, so a server has nothing to flag for the accompaniments the card itself sells.",
+					"fix": "\"sturgeon roe\", \"salt\", \"often blini\", \"often crème fraîche\"",
+					"lens": "safety",
+					"key": "fish-3-safety-16"
+				},
+				{
+					"id": "fd_0126",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note)",
+					"because": "Bottarga is raw roe that is salt-cured and dried, never cooked, and it is grated over a dish at the end. A server should be able to say plainly that it is uncooked. The why never says so.",
+					"fix": "Cured and dried, never cooked. It is shaved or grated over the dish at the end.",
+					"lens": "safety",
+					"key": "fish-3-safety-17"
+				},
+				{
+					"id": "fd_0128",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note)",
+					"because": "The card leaves out a handling fact a server may be asked about. The thin fillets of this small fish often keep fine pin bones, and when it is served whole it comes with head and bones on.",
+					"fix": "Thin fillets can hold a few fine pin bones.",
+					"lens": "safety",
+					"key": "fish-3-safety-18"
+				},
+				{
+					"id": "fd_0131",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "We serve it raw or seared on the outside and rare inside",
+					"because": "\"We serve\" states a house practice as fact on a deck that is used across kitchens, and how tuna is prepared varies. Say how it is usually served and let the server confirm with the kitchen.",
+					"fix": "It's usually served raw, or seared outside and rare inside",
+					"lens": "safety",
+					"key": "fish-3-safety-19"
+				},
+				{
+					"id": "fd_0132",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Dense, boneless tail of a big-mouthed Atlantic fish, meaty and sweet",
+					"because": "The monkfish tail has a central backbone; only the fillets cut off it are boneless. The card's own why says the tail is muscle around one central bone, so the gist contradicts it.",
+					"fix": "Dense, meaty tail of a big-mouthed Atlantic fish, sweet and firm",
+					"lens": "fact",
+					"key": "fish-4-fact-1"
+				},
+				{
+					"id": "fd_0132",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "mostly head and mouth, so only the tail is sold",
+					"because": "The tail is the main cut, but monkfish cheeks and the liver (ankimo in Japanese restaurants) are also sold and served.",
+					"fix": "mostly head and mouth, so the tail is the main cut sold",
+					"lens": "fact",
+					"key": "fish-4-fact-2"
+				},
+				{
+					"id": "fd_0133",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "wild from the Gulf or farmed worldwide",
+					"because": "This reads as if wild shrimp come only from the Gulf. Wild shrimp are also caught on the Atlantic and Pacific coasts and around the world, and farmed shrimp come mostly from Asia and Latin America.",
+					"fix": "wild or farmed, from the Gulf to Asia",
+					"lens": "fact",
+					"key": "fish-4-fact-3"
+				},
+				{
+					"id": "fd_0133",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "They are separate animals, and prawn is often just another market name for the same one.",
+					"because": "The sentence says they are separate animals and also the same one. The true point is that a shrimp never grows into a prawn, and that prawn is often just a market name.",
+					"fix": "Shrimp never grow into prawns, and prawn is often just another market name.",
+					"lens": "fact",
+					"key": "fish-4-fact-4"
+				},
+				{
+					"id": "fd_0134",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"blue crab\", \"often butter\", \"often seafood seasoning\"",
+					"because": "The guest line and the menu line both sell this as a crab cake. Classic Maryland crab cakes are bound with egg and mayonnaise (which is made with egg) and cracker or bread crumbs (wheat). A guest with an allergy needs egg and wheat flagged.",
+					"fix": "\"blue crab\", \"often butter\", \"often seafood seasoning\", \"in crab cakes, egg\", \"in crab cakes, breadcrumbs\"",
+					"lens": "fact",
+					"key": "fish-4-fact-5"
+				},
+				{
+					"id": "fd_0137",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "littlenecks smallest and tenderest",
+					"because": "Littlenecks are not the smallest grade. Countnecks are smaller, and the usual scale runs countneck, littleneck, topneck, cherrystone, chowder.",
+					"fix": "littlenecks small and tender",
+					"lens": "fact",
+					"key": "fish-4-fact-6"
+				},
+				{
+					"id": "fd_0132",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Dense, boneless tail of a big-mouthed Atlantic fish, meaty and sweet",
+					"because": "The monkfish tail has a central backbone, as the card's own why says (one central bone). A server who learns 'boneless' will tell a guest there are no bones, and there is one down the middle of a whole tail.",
+					"fix": "Dense tail of a big-mouthed Atlantic fish, meaty and sweet",
+					"lens": "floor",
+					"key": "fish-4-floor-7"
+				},
+				{
+					"id": "fd_0134",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "It's the Chesapeake Bay crab behind every great crab cake.",
+					"because": "This oversells. Plenty of good crab cakes use Dungeness or imported swimming crab, and a lot of restaurant lump crab is not from the Chesapeake. A new hire who says 'every great crab cake' is making a claim the kitchen's crab may not support.",
+					"fix": "It's the sweet East Coast crab Maryland crab cakes are famous for.",
+					"lens": "floor",
+					"key": "fish-4-floor-8"
+				},
+				{
+					"id": "fd_0137",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Little clams taste briny and sweet, like a clean breath of the sea. Steamed open, they make their own broth, so save some bread.",
+					"because": "It never says what a clam is, so it does not answer 'what is that?'. 'A clean breath of the sea' sounds read off a card, and 'save some bread' assumes the plate comes with bread.",
+					"fix": "Clams are small shellfish that taste briny and sweet. Steamed open, they make their own broth, which is great for dipping bread.",
+					"lens": "floor",
+					"key": "fish-4-floor-9"
+				},
+				{
+					"id": "fd_0137",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "chowders tough and chopped. Soft-shell steamers carry a neck to peel.",
+					"because": "A new hire reads 'chowders' as the soup. It is also the size grade for the largest hard clams, and the card never defines it. On a steamer you peel the skin off the neck, not the neck itself.",
+					"fix": "chowder clams biggest, tough and chopped. Soft-shell steamers have a neck skin to peel.",
+					"lens": "floor",
+					"key": "fish-4-floor-10"
+				},
+				{
+					"id": "fd_0132",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "Dense, boneless tail of a big-mouthed Atlantic fish, meaty and sweet",
+					"because": "A monkfish tail is built around one central backbone, as this card's own why says. Only the trimmed fillets come off it boneless, so a server repeating \"boneless\" is making a no-bones promise the kitchen may not keep.",
+					"fix": "Dense, firm tail of a big-mouthed Atlantic fish, meaty and sweet",
+					"lens": "safety",
+					"key": "fish-4-safety-11"
+				},
+				{
+					"id": "fd_0134",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note)",
+					"because": "Hand-picked blue crab meat, lump and claw alike, often holds small bits of shell and cartilage. That is a real handling fact a server should be able to say, and the card is missing it. The card has no note, so adding one is the only length this change costs.",
+					"fix": "Hand-picked meat can hold small bits of shell and cartilage, even when picked carefully.",
+					"lens": "safety",
+					"key": "fish-4-safety-12"
+				},
+				{
+					"key": "fish-critic-1",
+					"id": "fd_0135",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Hard-rule break: the trap says 'Separate kind of sea creature born with a thin, edible shell' uses 'shell', which is on this card's mayNotAppearInGistOrTraps list (soft, shell, crab).",
+					"because": "Hard-rule break: the trap says 'Separate kind of sea creature born with a thin, edible shell' uses 'shell', which is on this card's mayNotAppearInGistOrTraps list (soft, shell, crab).",
+					"fix": "Rewrite the trap without the word, keeping it near the 60-char gist, e.g. says: 'Separate kind of small sea creature, born soft and eaten whole' (62). Keep the existing why."
+				},
+				{
+					"key": "fish-critic-2",
+					"id": "fd_0133",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The trap 'Young, small crustacean that later grows up to become a prawn' names the card's own alias (Prawns). Traps must be term-free like the gist, and the alias gives the answer away.",
+					"because": "The trap 'Young, small crustacean that later grows up to become a prawn' names the card's own alias (Prawns). Traps must be term-free like the gist, and the alias gives the answer away.",
+					"fix": "Keep the mistake but leave out the alias, e.g. says: 'Young of a bigger crustacean, caught before it grows to full size' (65). The why can still say shrimp never grow into prawns."
+				},
+				{
+					"key": "fish-critic-3",
+					"id": "fd_0116",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Roe's notThis ('Salmon or trout roe is roe, not caviar') contradicts Caviar's notThis (fd_0125), which says a US menu may sell it as 'salmon caviar' if it names the fish. A server who learns both will give guests two different answers.",
+					"because": "Roe's notThis ('Salmon or trout roe is roe, not caviar') contradicts Caviar's notThis (fd_0125), which says a US menu may sell it as 'salmon caviar' if it names the fish. A server who learns both will give guests two different answers.",
+					"fix": "Make Roe agree with Caviar, e.g. notThis: 'Caviar on its own means salted sturgeon roe. Any other roe sold as caviar has to name the fish, as in salmon caviar.'"
+				},
+				{
+					"key": "fish-critic-4",
+					"id": "fd_0117",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Salmon's notThis says steelhead trout is 'leaner, milder and finer in the flake' than salmon. The Trout card (fd_0122) calls steelhead 'bigger, richer and pinker', and farmed steelhead is about as fatty as farmed Atlantic salmon. So the two cards disagree and the salmon claim is shaky.",
+					"because": "Salmon's notThis says steelhead trout is 'leaner, milder and finer in the flake' than salmon. The Trout card (fd_0122) calls steelhead 'bigger, richer and pinker', and farmed steelhead is about as fatty as farmed Atlantic salmon. So the two cards disagree and the salmon claim is shaky.",
+					"fix": "Drop steelhead from the salmon notThis, e.g. 'Arctic char and trout look alike but are leaner and milder, with a finer flake.' Or say steelhead is a sea-run rainbow trout that eats much like salmon."
+				},
+				{
+					"key": "fish-critic-5",
+					"id": "fd_0113",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Links go one way only. Flounder (fd_0111) and Turbot (fd_0123) both list Halibut in confusedWithTerms, but Halibut lists them only in seeAlsoTerms and has no notThis. This is the section's main flatfish confusion.",
+					"because": "Links go one way only. Flounder (fd_0111) and Turbot (fd_0123) both list Halibut in confusedWithTerms, but Halibut lists them only in seeAlsoTerms and has no notThis. This is the section's main flatfish confusion.",
+					"fix": "Move Flounder and Turbot from seeAlsoTerms to confusedWithTerms on Halibut, and add a notThis, e.g. 'Not flounder, a small fish in thin fillets, or turbot, which is richer and more gelatinous.' Halibut's prose is at 683, so there is room."
+				},
+				{
+					"key": "fish-critic-6",
+					"id": "fd_0118",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The notThis names king oyster 'scallops' (mushroom stem), but the card does not link the roster card for that mushroom, King Trumpet (mushrooms section). Guests really do mix the two up on menus.",
+					"because": "The notThis names king oyster 'scallops' (mushroom stem), but the card does not link the roster card for that mushroom, King Trumpet (mushrooms section). Guests really do mix the two up on menus.",
+					"fix": "Add confusedWithTerms: ['King Trumpet']. The notThis already covers the difference. Optionally reword it to 'Not king trumpet mushroom scallops, thick rounds of stem...' so it matches the linked term."
+				},
+				{
+					"key": "fish-critic-7",
+					"id": "fd_0137",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "A reader could not tell the guest line from the Mussels one (fd_0114): both are 'small shellfish, steamed open, make their own broth, great with bread'. Nothing in it says what makes a clam a clam.",
+					"because": "A reader could not tell the guest line from the Mussels one (fd_0114): both are 'small shellfish, steamed open, make their own broth, great with bread'. Nothing in it says what makes a clam a clam.",
+					"fix": "Rewrite with the clam's own traits, e.g. 'Clams are briny little shellfish with a pleasant chew. Small ones like littlenecks are eaten raw or steamed open in wine and garlic.' (about 140)"
+				},
+				{
+					"key": "fish-critic-8",
+					"id": "fd_0119",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (68) is longer than its only trap (66). The gist also does not separate it from Grouper's, since both are lean white warm-reef fish, and Snapper's defining traits (red skin, finer flake) are missing.",
+					"because": "Length parity: the gist (68) is longer than its only trap (66). The gist also does not separate it from Grouper's, since both are lean white warm-reef fish, and Snapper's defining traits (red skin, finer flake) are missing.",
+					"fix": "Shorten and sharpen, e.g. gist: 'Red-skinned warm-reef fish, lean and sweet, often served whole' (61)."
+				},
+				{
+					"key": "fish-critic-9",
+					"id": "fd_0134",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (63) is longer than the trap (59), so the gist is the longest option.",
+					"because": "Length parity: the gist (63) is longer than the trap (59), so the gist is the longest option.",
+					"fix": "Trim the gist, e.g. 'Chesapeake swimmer prized for sweet, hand-picked lump meat' (57). Or lengthen nothing and cut 'graded by lump' to 'sold by lump'."
+				},
+				{
+					"key": "fish-critic-10",
+					"id": "fd_0136",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (66) is longer than the trap (64).",
+					"because": "Length parity: the gist (66) is longer than the trap (64).",
+					"fix": "Trim the gist, e.g. 'Big-clawed cold-water crustacean, firm in the tail, soft in the claw' is too long, so use 'Big-clawed cold-water crustacean with a firm, sweet tail' (56)."
+				},
+				{
+					"key": "fish-critic-11",
+					"id": "fd_0137",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (62) is longer than the trap (59).",
+					"because": "Length parity: the gist (62) is longer than the trap (59).",
+					"fix": "Trim the gist, e.g. 'Sand-burrowing two-shelled shellfish, briny and chewy' (53). Or rewrite the trap to about 62 to 66 chars without padding it."
+				},
+				{
+					"key": "fish-critic-12",
+					"id": "fd_0112",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Traps are on 28 of 30 cards against an aim of about half. Several are strawmen that no real guest or hire would say, so they make easy distractors: Grouper 'freshwater bottom feeder ... like catfish', Snapper 'pond-raised freshwater fish ... muddy' (nearly the same trap as Grouper's), Wreckfish (fd_0124) 'farmed in pens off the Keys, soft and oily', Cobia (fd_0129) 'lean, delicate freshwater fish', Swordfish (fd_0130) 'poached gently and eaten with a spoon', Sturgeon (fd_0120) 'flaky like cod'.",
+					"because": "Traps are on 28 of 30 cards against an aim of about half. Several are strawmen that no real guest or hire would say, so they make easy distractors: Grouper 'freshwater bottom feeder ... like catfish', Snapper 'pond-raised freshwater fish ... muddy' (nearly the same trap as Grouper's), Wreckfish (fd_0124) 'farmed in pens off the Keys, soft and oily', Cobia (fd_0129) 'lean, delicate freshwater fish', Swordfish (fd_0130) 'poached gently and eaten with a spoon', Sturgeon (fd_0120) 'flaky like cod'.",
+					"fix": "Drop the traps on fd_0112, fd_0119, fd_0124, fd_0129, fd_0130 and fd_0120, which leaves 22 of 30. Or replace each with a mistake people really make, e.g. for Swordfish 'best served rare like tuna'. Only do that where it is actually a common error."
+				},
+				{
+					"key": "fish-operator-1",
+					"id": "fd_0111",
+					"lens": "operator",
+					"field": "gist",
+					"severity": "style",
+					"claim": "Small, thin flatfish with lean, delicate fillets and a fine flake",
+					"because": "The contract refused it: the redactor matches a word within one letter, so \"flake\" counts as the alias \"Fluke\" and the gist names its own answer.",
+					"fix": "\"and a fine flake\" replaced with \"mild and sweet\"; shorter than its trap, so length is no tell."
+				},
+				{
+					"key": "fish-operator-2",
+					"id": "fd_0111",
+					"lens": "operator",
+					"field": "why",
+					"severity": "style",
+					"claim": "A flatfish that lies on the seabed with both eyes on its upper side, left or right depending on the species. Little fat and thin fillets give a fine, soft flake and a mild, sweet taste. Fluke is summer flounder, and many American soles are flounders too. It cooks in minutes.",
+					"because": "The say-it-back prompt is this text with the term and aliases taken out; \"flake\" would be blanked as if it were \"Fluke\".",
+					"fix": "\"flake\" became \"texture\" in the one sentence that had it; no fact changed."
+				},
+				{
+					"key": "fish-operator-3",
+					"id": "fd_0130",
+					"lens": "operator",
+					"field": "notThis",
+					"severity": "style",
+					"claim": "",
+					"because": "The contract refused it: a card needs at least one of origin, pairs or notThis, and the fact refuter removed the lexicon link it had.",
+					"fix": "A notThis naming the confusion the card already points at (seeAlso Tuna). Worded so it agrees with the card note that it dries out past medium."
+				},
+				{
+					"key": "fish-operator-4",
+					"id": "fd_0135",
+					"lens": "operator",
+					"field": "why",
+					"severity": "style",
+					"claim": "Crabs grow by molting: they split the old shell and back out soft. Within hours the new one starts to firm, so watermen hold molting crabs in tanks and pull them the moment they emerge. The kitchen trims the face, gills and apron, then fries or sautes it whole.",
+					"because": "The critic noted \"sautes\" where the roster and the rest of the deck write the accent.",
+					"fix": "\"sautes\" spelled \"sautés\"."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "fish-1-fact-1",
+					"action": "applied",
+					"reason": "Skate pairs now reads \"Black butter, capers, parsley and vinegar, the French classic, or brown butter and lemon\", naming raie au beurre noir as the classic and brown butter with lemon as the bistro version."
+				},
+				{
+					"finding": "fish-1-fact-2",
+					"action": "applied",
+					"reason": "Skate madeWith \"often lemon\" is now \"often lemon or vinegar\"."
+				},
+				{
+					"finding": "fish-1-fact-3",
+					"action": "applied",
+					"reason": "Added \"sometimes pork sausage\" to the Crawfish madeWith list."
+				},
+				{
+					"finding": "fish-1-fact-4",
+					"action": "applied",
+					"reason": "Removed lexiconSlug from Flounder because the round-fish-vs-flat-fish essay covers body plans in general, not flounder itself."
+				},
+				{
+					"finding": "fish-1-floor-5",
+					"action": "applied",
+					"reason": "The Oysters guest line now says they are shellfish and that raw service applies to the half shell. The gist (\"often eaten raw\") and the note (\"On the half shell\") were changed to match, so the card no longer implies oysters are always raw."
+				},
+				{
+					"finding": "fish-1-safety-6",
+					"action": "applied",
+					"reason": "Added \"sometimes almonds\" and \"sometimes egg\" to the Flounder madeWith list, which is now at the 7-item limit."
+				},
+				{
+					"finding": "fish-1-safety-7",
+					"action": "applied",
+					"reason": "Added the Flounder note \"Fluke is often served raw, sliced thin as crudo or sashimi.\""
+				},
+				{
+					"finding": "fish-1-safety-8",
+					"action": "applied",
+					"reason": "The Mussels note now leads with the rule that a mussel still shut after steaming is left in the bowl and not pried open, and keeps the shortened male-or-female color fact."
+				},
+				{
+					"finding": "fish-1-safety-9",
+					"action": "applied",
+					"reason": "In the Oysters madeWith list, swapped \"often shallot\" for \"sometimes anise liqueur\" to cover the Pernod or Herbsaint in classic Rockefeller. The list stays at 7 items."
+				},
+				{
+					"finding": "fish-1-safety-10",
+					"action": "applied",
+					"reason": "In the Grouper madeWith list, \"sometimes wheat flour\" is now \"often wheat flour\" and \"sometimes egg\" was added."
+				},
+				{
+					"finding": "fish-1-safety-11",
+					"action": "applied",
+					"reason": "Added \"sometimes egg\" to the Halibut madeWith list to cover the mayonnaise crust in the linked recipe."
+				},
+				{
+					"finding": "fish-1-safety-12",
+					"action": "applied",
+					"reason": "Same fix as fish-1-fact-3: \"sometimes pork sausage\" is now on the Crawfish madeWith list."
+				},
+				{
+					"finding": "fish-2-fact-1",
+					"action": "applied",
+					"reason": "Salmon notThis now says char and steelhead are leaner, milder and finer in the flake, dropping the size claim."
+				},
+				{
+					"finding": "fish-2-fact-2",
+					"action": "applied",
+					"reason": "Roe madeWith now adds sometimes sake and sometimes wheat flour (7 items: fish eggs, salt, soy sauce, sake, wheat flour, butter, bacon)."
+				},
+				{
+					"finding": "fish-2-fact-3",
+					"action": "applied",
+					"reason": "Sturgeon origin now reads California and Idaho in place of California and Europe."
+				},
+				{
+					"finding": "fish-2-fact-4",
+					"action": "applied",
+					"reason": "Sturgeon why now says rows of bony plates, not ordinary scales, since scutes are modified scales."
+				},
+				{
+					"finding": "fish-2-fact-5",
+					"action": "applied",
+					"reason": "Scallops why now says the muscle is rich in glycogen and sweet amino acids, so it tastes sweet and browns well."
+				},
+				{
+					"finding": "fish-2-floor-6",
+					"action": "applied",
+					"reason": "Scallops guest line now opens 'Scallops are the sweet muscle that snaps the shell shut', which names the part being eaten."
+				},
+				{
+					"finding": "fish-2-floor-7",
+					"action": "applied",
+					"reason": "Sturgeon guest line now compares it to veal, which matches the why and keeps pork out of a fish description."
+				},
+				{
+					"finding": "fish-2-floor-8",
+					"action": "applied",
+					"reason": "Added say 'TUR-buht' for the English form American dining rooms use (TUR renders the her-but vowel more clearly than TER)."
+				},
+				{
+					"finding": "fish-2-safety-9",
+					"action": "applied",
+					"reason": "Added the Roe note: loose salted roe is cured but never cooked, so it is served raw."
+				},
+				{
+					"finding": "fish-2-safety-10",
+					"action": "applied",
+					"reason": "Added sometimes sake to the Roe madeWith, together with fish-2-fact-2."
+				},
+				{
+					"finding": "fish-2-safety-11",
+					"action": "applied",
+					"reason": "Replaced the albumin note on Salmon with the doneness fact: often served medium, still translucent in the center, and guests can ask for it cooked through."
+				},
+				{
+					"finding": "fish-2-safety-12",
+					"action": "applied",
+					"reason": "Added sometimes wheat flour to the Snapper madeWith for whole fried snapper."
+				},
+				{
+					"finding": "fish-2-safety-13",
+					"action": "applied",
+					"reason": "Added the Snapper note: served whole, it arrives on the bone with fins and small bones to work around."
+				},
+				{
+					"finding": "fish-3-fact-1",
+					"action": "applied",
+					"reason": "Removed lexiconSlug from Swordfish, since the cuts essay is not about swordfish."
+				},
+				{
+					"finding": "fish-3-fact-2",
+					"action": "applied",
+					"reason": "Tuna why now reads 'Yellowfin is lean, bigeye a little richer, and bluefin belly is marbled with fat.'"
+				},
+				{
+					"finding": "fish-3-fact-3",
+					"action": "applied",
+					"reason": "Tuna why now says albacore is the one canned as white tuna."
+				},
+				{
+					"finding": "fish-3-fact-4",
+					"action": "applied",
+					"reason": "Removed the Ahi alias and kept the 'Seared ahi tuna' menu line."
+				},
+				{
+					"finding": "fish-3-fact-5",
+					"action": "applied",
+					"reason": "Swordfish why now says 'rarely breaks into flakes' in place of 'never falls apart into flakes'."
+				},
+				{
+					"finding": "fish-3-fact-6",
+					"action": "applied",
+					"reason": "Black Sea Bass why now says caught 'by pot, hook and trawl'."
+				},
+				{
+					"finding": "fish-3-fact-7",
+					"action": "applied",
+					"reason": "Wreckfish trap replaced with the farmed shallow-reef line, and its why now covers deep water, wild hook-and-line catch and lean, firm flesh."
+				},
+				{
+					"finding": "fish-3-floor-8",
+					"action": "applied",
+					"reason": "Wreckfish gist is now 'Deep-water Carolina fish that gathers at wrecks, with big flakes', which tells it apart from Tilefish."
+				},
+				{
+					"finding": "fish-3-floor-9",
+					"action": "applied",
+					"reason": "Wreckfish guest line now ends 'It eats a lot like grouper.'"
+				},
+				{
+					"finding": "fish-3-floor-10",
+					"action": "applied",
+					"reason": "Black Sea Bass guest line replaced with the suggested fix, which calls it small, drops 'our' and drops the filler."
+				},
+				{
+					"finding": "fish-3-floor-11",
+					"action": "applied",
+					"reason": "Cobia guest line now reads 'It's buttery and clean served raw', so fat is no longer given as the reason it can be eaten raw."
+				},
+				{
+					"finding": "fish-3-floor-12",
+					"action": "applied",
+					"reason": "Tuna guest line now says 'It's usually served raw, or seared outside and rare inside' in place of 'We serve it'."
+				},
+				{
+					"finding": "fish-3-safety-13",
+					"action": "applied",
+					"reason": "Fixed by the same Cobia guest-line rewrite as floor-11, which removes the richness-therefore-raw link."
+				},
+				{
+					"finding": "fish-3-safety-14",
+					"action": "applied",
+					"reason": "Cobia gist is now 'Firm, buttery warm-water fish, often served raw, sturdy on a grill', 66 characters, level with its trap."
+				},
+				{
+					"finding": "fish-3-safety-15",
+					"action": "applied",
+					"reason": "Added 'often wheat' to the Tuna madeWith list, after 'often soy sauce'."
+				},
+				{
+					"finding": "fish-3-safety-16",
+					"action": "applied",
+					"reason": "Added 'often blini' and 'often crème fraîche' to the Caviar madeWith list, so the accompaniments the card sells can be flagged."
+				},
+				{
+					"finding": "fish-3-safety-17",
+					"action": "applied",
+					"reason": "Added the Bottarga note 'Cured and dried, never cooked. It is shaved or grated over the dish at the end.'"
+				},
+				{
+					"finding": "fish-3-safety-18",
+					"action": "applied",
+					"reason": "Added the Black Sea Bass note 'Thin fillets can hold a few fine pin bones.'"
+				},
+				{
+					"finding": "fish-4-fact-1",
+					"action": "applied",
+					"reason": "Removed 'boneless' from the gist, which now reads 'Dense, firm tail of a big-mouthed Atlantic fish, meaty and sweet' and so no longer contradicts the central bone in the why."
+				},
+				{
+					"finding": "fish-4-fact-2",
+					"action": "applied",
+					"reason": "The why now says 'so the tail is the main cut sold', which leaves room for the cheeks and liver that are also sold."
+				},
+				{
+					"finding": "fish-4-fact-3",
+					"action": "applied",
+					"reason": "The why now says 'wild or farmed, from the Gulf to Asia'."
+				},
+				{
+					"finding": "fish-4-fact-4",
+					"action": "applied",
+					"reason": "The trap's why now reads 'Shrimp never grow into prawns, and prawn is often just another market name.'"
+				},
+				{
+					"finding": "fish-4-fact-5",
+					"action": "applied",
+					"reason": "Added 'sometimes egg' and 'sometimes breadcrumbs' to madeWith so that egg and wheat get flagged for the crab cake this card sells."
+				},
+				{
+					"finding": "fish-4-fact-6",
+					"action": "applied",
+					"reason": "The why now calls littlenecks 'small and tender' instead of the smallest."
+				},
+				{
+					"finding": "fish-4-floor-7",
+					"action": "applied",
+					"reason": "Removed 'boneless' from the gist, with the same edit as fish-4-fact-1."
+				},
+				{
+					"finding": "fish-4-floor-8",
+					"action": "applied",
+					"reason": "The guest line now reads 'It's the East Coast crab Maryland crab cakes are famous for.' I left out 'sweet' there because the next sentence already says it."
+				},
+				{
+					"finding": "fish-4-floor-9",
+					"action": "applied",
+					"reason": "The guest line now says what clams are, drops 'a clean breath of the sea', and ends 'which is great with bread' so it no longer assumes bread comes with the plate."
+				},
+				{
+					"finding": "fish-4-floor-10",
+					"action": "applied",
+					"reason": "The why now reads 'chowder clams biggest, tough and chopped' and 'Soft-shell steamers have a neck skin to peel'."
+				},
+				{
+					"finding": "fish-4-safety-11",
+					"action": "applied",
+					"reason": "Used this finding's wording for the gist: 'Dense, firm tail of a big-mouthed Atlantic fish, meaty and sweet', which makes no promise that there are no bones."
+				},
+				{
+					"finding": "fish-4-safety-12",
+					"action": "applied",
+					"reason": "Added the note 'Hand-picked meat can hold small bits of shell and cartilage, even when picked carefully.' The card's prose total stays well under 900."
+				},
+				{
+					"finding": "fish-critic-1",
+					"action": "applied",
+					"reason": "Soft-Shell Crab trap rewritten as 'Separate species of tiny sea creature, eaten whole from birth' (61 vs gist 60), avoiding soft, shell and crab (the suggested wording used 'soft', also banned)."
+				},
+				{
+					"finding": "fish-critic-2",
+					"action": "applied",
+					"reason": "Shrimp trap now 'Young of a bigger crustacean, caught before it grows to full size' with no alias; the why still says shrimp never grow into prawns."
+				},
+				{
+					"finding": "fish-critic-3",
+					"action": "applied",
+					"reason": "Roe notThis now agrees with Caviar: caviar alone means salted sturgeon roe, and other roe sold as caviar must name the fish."
+				},
+				{
+					"finding": "fish-critic-4",
+					"action": "applied",
+					"reason": "Salmon notThis no longer calls steelhead leaner; it says char and trout are milder and finer-flaked, and steelhead is a sea-run trout that eats much like salmon."
+				},
+				{
+					"finding": "fish-critic-5",
+					"action": "applied",
+					"reason": "Halibut now lists Flounder and Turbot in confusedWithTerms (removed from seeAlso) with a notThis separating them; the note was trimmed slightly and the prose sits at 777."
+				},
+				{
+					"finding": "fish-critic-6",
+					"action": "applied",
+					"reason": "Scallops gains confusedWithTerms King Trumpet, and the notThis now names king trumpet mushroom scallops."
+				},
+				{
+					"finding": "fish-critic-7",
+					"action": "applied",
+					"reason": "Clams guest line rewritten around the clam's own traits: briny, chewy, littlenecks eaten raw or steamed in wine and garlic (132 chars)."
+				},
+				{
+					"finding": "fish-critic-8",
+					"action": "applied",
+					"reason": "Snapper gist is now 'Red-skinned warm-reef fish, lean and sweet, often served whole' (62), which separates it from Grouper; the strawman trap was dropped under finding 12, so there is no parity problem left."
+				},
+				{
+					"finding": "fish-critic-9",
+					"action": "applied",
+					"reason": "Blue Crab gist cut to 'Chesapeake swimmer prized for sweet, hand-picked lump meat' (58), which is now shorter than the 59-char trap."
+				},
+				{
+					"finding": "fish-critic-10",
+					"action": "applied",
+					"reason": "Lobster gist cut to 'Big-clawed cold-water crustacean with a firm, sweet tail' (56) against the 64-char trap."
+				},
+				{
+					"finding": "fish-critic-11",
+					"action": "applied",
+					"reason": "Clams gist cut to 'Sand-burrowing two-shelled shellfish, briny and chewy' (53) against the 59-char trap."
+				},
+				{
+					"finding": "fish-critic-12",
+					"action": "applied",
+					"reason": "Dropped the strawman traps on Grouper (fd_0112) and Snapper (fd_0119), the two cards named here that are in this batch; Wreckfish, Cobia, Swordfish and Sturgeon were not among the cards returned for this pass, so they need the same cut elsewhere."
+				},
+				{
+					"finding": "fish-operator-1",
+					"action": "applied",
+					"reason": "Operator: \"and a fine flake\" replaced with \"mild and sweet\"; shorter than its trap, so length is no tell."
+				},
+				{
+					"finding": "fish-operator-2",
+					"action": "applied",
+					"reason": "Operator: \"flake\" became \"texture\" in the one sentence that had it; no fact changed."
+				},
+				{
+					"finding": "fish-operator-3",
+					"action": "applied",
+					"reason": "Operator: A notThis naming the confusion the card already points at (seeAlso Tuna)."
+				},
+				{
+					"finding": "fish-operator-4",
+					"action": "applied",
+					"reason": "Operator: \"sautes\" spelled \"sautés\"."
+				},
+				{
+					"finding": "fish-3-safety-19",
+					"action": "applied",
+					"reason": "Operator: the corrector had already rewritten the line to \"It's usually served raw, or seared outside and rare inside\"; this records the ruling it did not return."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0135",
+						"issue": "Hard-rule break: the trap says 'Separate kind of sea creature born with a thin, edible shell' uses 'shell', which is on this card's mayNotAppearInGistOrTraps list (soft, shell, crab).",
+						"fix": "Rewrite the trap without the word, keeping it near the 60-char gist, e.g. says: 'Separate kind of small sea creature, born soft and eaten whole' (62). Keep the existing why."
+					},
+					{
+						"id": "fd_0133",
+						"issue": "The trap 'Young, small crustacean that later grows up to become a prawn' names the card's own alias (Prawns). Traps must be term-free like the gist, and the alias gives the answer away.",
+						"fix": "Keep the mistake but leave out the alias, e.g. says: 'Young of a bigger crustacean, caught before it grows to full size' (65). The why can still say shrimp never grow into prawns."
+					},
+					{
+						"id": "fd_0116",
+						"issue": "Roe's notThis ('Salmon or trout roe is roe, not caviar') contradicts Caviar's notThis (fd_0125), which says a US menu may sell it as 'salmon caviar' if it names the fish. A server who learns both will give guests two different answers.",
+						"fix": "Make Roe agree with Caviar, e.g. notThis: 'Caviar on its own means salted sturgeon roe. Any other roe sold as caviar has to name the fish, as in salmon caviar.'"
+					},
+					{
+						"id": "fd_0117",
+						"issue": "Salmon's notThis says steelhead trout is 'leaner, milder and finer in the flake' than salmon. The Trout card (fd_0122) calls steelhead 'bigger, richer and pinker', and farmed steelhead is about as fatty as farmed Atlantic salmon. So the two cards disagree and the salmon claim is shaky.",
+						"fix": "Drop steelhead from the salmon notThis, e.g. 'Arctic char and trout look alike but are leaner and milder, with a finer flake.' Or say steelhead is a sea-run rainbow trout that eats much like salmon."
+					},
+					{
+						"id": "fd_0113",
+						"issue": "Links go one way only. Flounder (fd_0111) and Turbot (fd_0123) both list Halibut in confusedWithTerms, but Halibut lists them only in seeAlsoTerms and has no notThis. This is the section's main flatfish confusion.",
+						"fix": "Move Flounder and Turbot from seeAlsoTerms to confusedWithTerms on Halibut, and add a notThis, e.g. 'Not flounder, a small fish in thin fillets, or turbot, which is richer and more gelatinous.' Halibut's prose is at 683, so there is room."
+					},
+					{
+						"id": "fd_0118",
+						"issue": "The notThis names king oyster 'scallops' (mushroom stem), but the card does not link the roster card for that mushroom, King Trumpet (mushrooms section). Guests really do mix the two up on menus.",
+						"fix": "Add confusedWithTerms: ['King Trumpet']. The notThis already covers the difference. Optionally reword it to 'Not king trumpet mushroom scallops, thick rounds of stem...' so it matches the linked term."
+					},
+					{
+						"id": "fd_0137",
+						"issue": "A reader could not tell the guest line from the Mussels one (fd_0114): both are 'small shellfish, steamed open, make their own broth, great with bread'. Nothing in it says what makes a clam a clam.",
+						"fix": "Rewrite with the clam's own traits, e.g. 'Clams are briny little shellfish with a pleasant chew. Small ones like littlenecks are eaten raw or steamed open in wine and garlic.' (about 140)"
+					},
+					{
+						"id": "fd_0119",
+						"issue": "Length parity: the gist (68) is longer than its only trap (66). The gist also does not separate it from Grouper's, since both are lean white warm-reef fish, and Snapper's defining traits (red skin, finer flake) are missing.",
+						"fix": "Shorten and sharpen, e.g. gist: 'Red-skinned warm-reef fish, lean and sweet, often served whole' (61)."
+					},
+					{
+						"id": "fd_0134",
+						"issue": "Length parity: the gist (63) is longer than the trap (59), so the gist is the longest option.",
+						"fix": "Trim the gist, e.g. 'Chesapeake swimmer prized for sweet, hand-picked lump meat' (57). Or lengthen nothing and cut 'graded by lump' to 'sold by lump'."
+					},
+					{
+						"id": "fd_0136",
+						"issue": "Length parity: the gist (66) is longer than the trap (64).",
+						"fix": "Trim the gist, e.g. 'Big-clawed cold-water crustacean, firm in the tail, soft in the claw' is too long, so use 'Big-clawed cold-water crustacean with a firm, sweet tail' (56)."
+					},
+					{
+						"id": "fd_0137",
+						"issue": "Length parity: the gist (62) is longer than the trap (59).",
+						"fix": "Trim the gist, e.g. 'Sand-burrowing two-shelled shellfish, briny and chewy' (53). Or rewrite the trap to about 62 to 66 chars without padding it."
+					},
+					{
+						"id": "fd_0112",
+						"issue": "Traps are on 28 of 30 cards against an aim of about half. Several are strawmen that no real guest or hire would say, so they make easy distractors: Grouper 'freshwater bottom feeder ... like catfish', Snapper 'pond-raised freshwater fish ... muddy' (nearly the same trap as Grouper's), Wreckfish (fd_0124) 'farmed in pens off the Keys, soft and oily', Cobia (fd_0129) 'lean, delicate freshwater fish', Swordfish (fd_0130) 'poached gently and eaten with a spoon', Sturgeon (fd_0120) 'flaky like cod'.",
+						"fix": "Drop the traps on fd_0112, fd_0119, fd_0124, fd_0129, fd_0130 and fd_0120, which leaves 22 of 30. Or replace each with a mistake people really make, e.g. for Swordfish 'best served rare like tuna'. Only do that where it is actually a common error."
+					}
+				],
+				"notes": "I copied every card's prose to the scratchpad and measured it with a script. Section mean is 689 characters, under the 720 ceiling. Every card is between 598 and 795. Every roster row has a card.\n\nHard rules:\n- No verdict words, en or em dashes, or banned food-safety substrings anywhere in the prose.\n- All three knownPacketError traps are present and match: Flounder /left/, Tilefish /shallow/, Caviar /wild/.\n- The only forbidden-word hits in gists or traps are fd_0135 ('shell') and fd_0133 (the alias 'prawn').\n- No term has an accented letter, so 'say' is never required. Turbot, Branzino, Bottarga and Cobia have one. I found no other term a new hire would stumble over.\n\nTies, not reported as problems: gist and trap are the same length on fd_0120, fd_0129, fd_0133 and fd_0135. They are co-longest options, not strictly longest. The operator can decide whether the gate treats a tie as a failure.\n\nConsistency for the operator, not blocking:\n- madeWith names the species on some cards (arctic char, crawfish, skate, flounder, grouper, halibut, monkfish, lobster, clams) and just 'fish' on others (salmon, snapper, trout, tuna and so on). Pick one convention.\n- fd_0135 why writes 'sautes'. The roster uses 'Sautéed', so 'sautés' may be wanted.\n\nPossible lexicon links, left out on purpose:\n- Lobster: lobster-hard-vs-soft-shell\n- Tuna: tuna-grades-akami-chutoro-otoro\n- Blue Crab: crab-vocabulary\n\nEach covers only part of its card's subject, so omitting them is defensible. crab-vocabulary may well be the long-form essay on jumbo lump, lump and backfin, so check it for Blue Crab.\n\nCross-section links worth promoting to seeAlso if there is room: Flounder to Crudo (its note says crudo), and Lobster to Crawfish (Crawfish already links Lobster)."
+			},
+			"acceptedRejected": []
+		}
+	]
+}
