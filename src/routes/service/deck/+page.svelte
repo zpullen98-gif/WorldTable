@@ -136,6 +136,24 @@
 						</p>
 					</a>
 				</li>
+				<li>
+					<a href="{base}/service/deck/say{query}">
+						<h3>Say it back</h3>
+						<p>
+							The way a guest asks it: the description with the word taken out, or a line from a
+							menu. You say it before you see any choices.
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="{base}/service/deck/lineup{query}">
+						<h3>Lineup</h3>
+						<p>
+							For pre-shift. One term fills the screen, the room answers aloud, you tap whether
+							they had it. Nobody's name is kept.
+						</p>
+					</a>
+				</li>
 			</ul>
 
 			{#if stubborn.length}

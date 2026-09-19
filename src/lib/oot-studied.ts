@@ -4,7 +4,7 @@
  * The definition is the shared layer's, recorded in shared/oot-profiles.js:
  * a person studied today when they COMPLETED something: a round of a quiz or
  * a drill, a dish cooked, a morning kept. Opening an app is not studying, and
- * neither is answering one question and walking away. This wing has five
+ * neither is answering one question and walking away. This wing has seven
  * places where a round completes and one where a dish does:
  *
  *   the lexicon quiz        routes/lexicon        tenth question answered
@@ -12,6 +12,8 @@
  *   the firing drill        routes/practise/firing last question answered
  *   the service drill       routes/service/drill  round finished
  *   the floor deck, flips   routes/service/deck/study  the sitting's last card judged
+ *   the floor deck, test    routes/service/deck/test   last question answered
+ *   the floor deck, say     routes/service/deck/say    tenth question answered
  *   markCooked              stores/session        cook mode's last screen
  *
  * Every one of them calls this and nothing else, so the definition cannot

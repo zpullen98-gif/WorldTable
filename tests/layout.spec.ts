@@ -16,7 +16,7 @@ import { goto } from './helpers';
  * One page load, resized in place - four extra specs in parallel once starved
  * /recipes hydration and failed seven bystanders (see nav.spec.ts).
  */
-const GUTTER_ROUTES = ['/family', '/lexicon', '/menu', '/menu/quiz', '/pantry', '/study', '/safety', '/service/deck', '/service/deck/study', '/service/deck/test'];
+const GUTTER_ROUTES = ['/family', '/lexicon', '/menu', '/menu/quiz', '/pantry', '/study', '/safety', '/service/deck', '/service/deck/study', '/service/deck/test', '/service/deck/say', '/service/deck/lineup'];
 
 test('every route fits a 320px phone with its gutters on', async ({ page }) => {
 	test.setTimeout(120_000);

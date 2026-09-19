@@ -60,6 +60,8 @@ describe('every round-complete site goes through the helper', () => {
 		'src/routes/practise/firing/+page.svelte',
 		'src/routes/service/drill/+page.svelte',
 		'src/routes/service/deck/study/+page.svelte',
+		'src/routes/service/deck/test/+page.svelte',
+		'src/routes/service/deck/say/+page.svelte',
 		'src/lib/stores/session.svelte.ts'
 	];
 
@@ -80,5 +82,22 @@ describe('every round-complete site goes through the helper', () => {
 		// Opening an app is not studying: hydrate() must not mark.
 		const hydrate = src.slice(src.indexOf('async hydrate()'), src.indexOf('flush() {'));
 		expect(hydrate).not.toContain('markStudied');
+	});
+});
+
+/**
+ * And the one Floor Deck mode that must NOT. A Lineup is a room answering
+ * aloud on one tablet: marking whoever holds it as having studied today would
+ * be a claim about a person made from evidence about a room.
+ */
+describe('the lineup marks nobody', () => {
+	it('never calls markStudied, never touches the session, never sends a round', () => {
+		const src = readFileSync('src/routes/service/deck/lineup/+page.svelte', 'utf8');
+		const code = src.slice(src.indexOf('<script'), src.indexOf('</script>'));
+		expect(code).not.toMatch(/markStudied/);
+		expect(code).not.toMatch(/stores\/session/);
+		expect(code).not.toMatch(/markDrilled/);
+		expect(code).not.toMatch(/oot:round-complete/);
+		expect(code).toMatch(/house\.markLineup\(/);
 	});
 });

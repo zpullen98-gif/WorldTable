@@ -46,6 +46,7 @@
 		open = $bindable({ why: false, facts: false, context: false }),
 		size = 'normal',
 		flippable = true,
+		turnButton = true,
 		heading = 'h2',
 		before,
 		onflip
@@ -61,6 +62,8 @@
 		size?: 'normal' | 'stage';
 		/** false: an answer shown as an answer (a test result), never a front */
 		flippable?: boolean;
+		/** false where the page turns the card itself (Lineup's own big controls) */
+		turnButton?: boolean;
 		heading?: 'h2' | 'h3';
 		/** rendered between the term and the answer: "You chose ..." */
 		before?: Snippet;
@@ -106,7 +109,7 @@
 	{@render before?.()}
 
 	{#if !shown}
-		<button class="chip go turn" onclick={flip}>Show the card</button>
+		{#if turnButton}<button class="chip go turn" onclick={flip}>Show the card</button>{/if}
 	{:else}
 		<div class="back">
 			<p class="layer">The guest line</p>

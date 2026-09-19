@@ -284,3 +284,134 @@ test('a bad written test ends on what was missed, each with the card, and no num
 	await expect(page.locator('h1')).toHaveText('What you missed');
 	await expect(page.locator('.where')).toContainText(`of ${Math.min(20, log.length)}`);
 });
+
+/** The house record's lineup tally, and the session's drill log, straight off disk. */
+async function records(page: Page) {
+	return page.evaluate(
+		() =>
+			new Promise<{ drill: string[]; lineup: string[]; studiedKeys: string[] }>((resolve) => {
+				const open = indexedDB.open('world-table');
+				open.onsuccess = () => {
+					const store = open.result.transaction('state', 'readonly').objectStore('state');
+					const all = store.getAll();
+					all.onsuccess = () => {
+						const rows = all.result as Array<{ drillLog?: Array<{ slug: string; grade?: string }>; lineupLog?: Array<{ slug: string; grade: string }> }>;
+						const drill = rows.flatMap((r) => r?.drillLog ?? []).map((e) => e.slug + ':' + e.grade);
+						const lineup = rows.flatMap((r) => r?.lineupLog ?? []).map((e) => e.slug + ':' + e.grade);
+						resolve({ drill, lineup, studiedKeys: Object.keys(localStorage).filter((k) => /stud|streak/i.test(k)) });
+					};
+				};
+			})
+	);
+}
+
+test('say it back asks before it shows, hides the term it asks for, and ends on the misses', async ({ page }) => {
+	await goto(page, '/service/deck/say');
+	await page.getByRole('button', { name: 'Begin' }).click();
+
+	let prompts = 0;
+	let lines = 0;
+	for (let guard = 0; guard < 14; guard++) {
+		if (await page.locator('.result').count()) break;
+		// recall before recognition: no choice is on the page until it has been said
+		await expect(page.locator('.opt')).toHaveCount(0);
+		const isPrompt = (await page.locator('.ask .eyebrow').textContent()) === 'What is this?';
+		const stem = ((await page.locator('.ask .stem, .ask .dish').first().textContent()) ?? '').toLowerCase();
+		await page.getByRole('button', { name: /I've said it/ }).click();
+		await expect(page.locator('.opt')).toHaveCount(4);
+
+		// whichever option is first: right about a quarter of the time, which is
+		// enough wrong answers in ten to end the round on a list of misses
+		await page.locator('.opt').nth(0).click();
+		// the page now says which one it was, in a word and a glyph, not colour alone
+		const right = ((await page.locator('.opt.right').textContent()) ?? '').replace('✓ this one', '').trim();
+		await expect(page.locator('.opt.right .mark')).toHaveText(/this one/);
+		if (isPrompt) {
+			prompts++;
+			// the redacted prompt never holds the term it is asking for
+			expect(stem.includes(right.toLowerCase()), 'the prompt for ' + right + ' names it').toBe(false);
+			expect(DECK.cards.some((c) => c.term === right)).toBe(true);
+		} else {
+			lines++;
+			expect(DECK.cards.some((c) => c.gist === right)).toBe(true);
+		}
+		await expect(page.locator('.flash .def.guest')).toBeVisible();
+		await page.getByRole('button', { name: 'Next' }).click();
+	}
+	expect(lines, 'at most three of a round ask about a dish line').toBeLessThanOrEqual(3);
+	expect(prompts).toBeGreaterThanOrEqual(7);
+
+	await expect(page.locator('.result h2').first()).toBeVisible();
+	const own = await page.evaluate(() => {
+		const r = document.querySelector('.result')!.cloneNode(true) as HTMLElement;
+		r.querySelectorAll('.flash').forEach((el) => el.remove());
+		return r.textContent ?? '';
+	});
+	expect(own).not.toMatch(SCORE);
+	expect(own).not.toMatch(/\d/);
+	await page.waitForTimeout(700);
+	const { drill } = await records(page);
+	expect(drill).toHaveLength(10);
+	// objective: met or missed, never the self-judged close
+	expect(drill.every((e) => e.endsWith(':met') || e.endsWith(':missed'))).toBe(true);
+});
+
+test('a lineup keeps a tally for the room and writes nothing about the person holding the tablet', async ({ page }) => {
+	// a person's own record first, so "unchanged" means something
+	await goto(page, '/service/deck/study');
+	await page.getByRole('button', { name: 'Show the card' }).click();
+	await page.getByRole('button', { name: /Had it/ }).click();
+	await page.waitForTimeout(700);
+	const before = await records(page);
+	expect(before.drill).toHaveLength(1);
+
+	await goto(page, '/service/deck/lineup');
+	await page.getByRole('button', { name: 'Start the lineup' }).click();
+	await expect(page.locator('.stage .term')).toBeVisible();
+
+	// legible at arm's length, two real targets, and never over the dock
+	const shape = await page.evaluate(() => {
+		const px = (el: Element | null) => (el ? parseFloat(getComputedStyle(el).fontSize) : 0);
+		const calls = [...document.querySelectorAll('.call')].map((c) => c.getBoundingClientRect());
+		const dock = document.querySelector('.dock')?.getBoundingClientRect();
+		return {
+			term: px(document.querySelector('.stage .term')),
+			heights: calls.map((c) => Math.round(c.height)),
+			overDock: Boolean(dock && dock.height > 0 && calls.some((c) => c.bottom > dock.top && c.top < dock.bottom)),
+			ownTurnButton: document.querySelectorAll('.stage .turn').length,
+			dialogs: document.querySelectorAll('dialog[open]').length
+		};
+	});
+	expect(shape.term).toBeGreaterThanOrEqual(40);
+	expect(shape.heights.every((h) => h >= 72)).toBe(true);
+	expect(shape.overDock).toBe(false);
+	expect(shape.ownTurnButton).toBe(0);
+	expect(shape.dialogs, 'a modal would make the timer dock inert').toBe(0);
+
+	// the room misses the first, has the second
+	const first = (await page.locator('.stage .term').textContent()) ?? '';
+	await page.getByRole('button', { name: /Missed it/ }).click();
+	await expect(page.locator('.stage .def.guest')).toBeVisible();
+	await page.getByRole('button', { name: /Next/ }).click();
+	await page.getByRole('button', { name: /Had it/ }).click();
+	await page.waitForTimeout(700);
+
+	let now = await records(page);
+	const firstId = DECK.cards.find((c) => c.term === first)!.id;
+	expect(now.lineup.slice(0, 2)[0]).toBe(firstId + ':missed');
+	expect(now.lineup).toHaveLength(2);
+	expect(now.drill, 'a room answering aloud is not evidence about whoever holds the tablet').toEqual(before.drill);
+
+	// undo takes back exactly the last answer
+	await page.getByRole('button', { name: 'Undo last' }).click();
+	await page.waitForTimeout(700);
+	now = await records(page);
+	expect(now.lineup).toEqual([firstId + ':missed']);
+
+	// and what the room missed leads the next lineup
+	await page.getByRole('button', { name: 'End the lineup' }).click();
+	await expect(page.locator('.result h2')).toHaveText('What the room missed');
+	await page.getByRole('button', { name: 'Another lineup' }).click();
+	await page.getByRole('button', { name: 'Start the lineup' }).click();
+	await expect(page.locator('.stage .term')).toHaveText(first);
+});

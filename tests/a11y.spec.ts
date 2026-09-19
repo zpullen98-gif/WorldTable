@@ -38,6 +38,8 @@ const VIEWS = [
 	{ path: '/service/deck', name: 'floor deck landing' },
 	{ path: '/service/deck/study', name: 'floor deck sitting' },
 	{ path: '/service/deck/test', name: 'floor deck written test' },
+	{ path: '/service/deck/say', name: 'floor deck say it back' },
+	{ path: '/service/deck/lineup', name: 'floor deck lineup' },
 	{ path: '/family', name: 'family chapter' },
 	{ path: '/menu', name: 'menu worksheet' },
 	/* Added with the global .chip rule: these three used the class and defined
