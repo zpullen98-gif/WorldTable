@@ -27,6 +27,7 @@ export { localDay, weekStartOf, recentWeeks, normaliseCosting, mergeCostings, CL
 import type { CostLine } from '../costing';
 import { mergeItems, type Item } from '../items';
 import { mergeWaste, type WasteEntry } from '../waste';
+import { mergeLineup, normaliseLineup, type LineupEntry } from '../lineup';
 import { remapDishSlugs } from './migrations';
 
 export const HOUSE_KEY = 'house';
@@ -112,6 +113,14 @@ export interface HouseRecord {
 	 */
 	waste: WasteEntry[];
 	/**
+	 * What the ROOM missed at pre-shift lineup, and nobody's name. See lineup.ts.
+	 *
+	 * On the house record because a room answering aloud on one tablet is a fact
+	 * about the venue and about nobody in it; it is never written to a person's
+	 * drill log. It decides what the next lineup asks first, and nothing else.
+	 */
+	lineupLog: LineupEntry[];
+	/**
 	 * Whether the menu prices this venue types include tax, and at what rate.
 	 *
 	 * ON THE HOUSE RECORD, not in the session, and that is a real improvement
@@ -162,6 +171,7 @@ export const EMPTY_HOUSE: HouseRecord = {
 	preps: [],
 	items: {},
 	waste: [],
+	lineupLog: [],
 	prepCounts: {},
 	eightySix: {},
 	dishCosts: {},
@@ -230,6 +240,9 @@ export function readHouse(raw: unknown): { record: HouseRecord; blocked: boolean
 	// until the next genuine write, and a stale pointer is a dish cook mode
 	// cannot open.
 	if (Array.isArray(record.dishes)) record.dishes = remapDishSlugs(record.dishes);
+	// Every record written before the lineup existed lacks the field, and the
+	// spread above would happily carry a hand-edited non-array through.
+	record.lineupLog = normaliseLineup(record.lineupLog);
 	return { record, blocked: false };
 }
 
@@ -328,6 +341,12 @@ export function adoptImport(
 	// nothing to drop. See mergeWaste.
 	const nextWaste = mergeWaste(house.waste, incoming.waste);
 
+	// A UNION on slug and time, capped after the union. NAMED here like every
+	// other collection: a field the merge does not name is a field an import
+	// silently drops, which is how preps could not travel for as long as they
+	// existed. See mergeLineup.
+	const nextLineup = mergeLineup(house.lineupLog, incoming.lineupLog);
+
 	/**
 	 * Tax adopts only into a venue that has never set it. A tax regime has no
 	 * timestamp to arbitrate with, and an import silently FLIPPING the basis
@@ -344,6 +363,7 @@ export function adoptImport(
 		preps: [...prepById.values()],
 		items: nextItems,
 		waste: nextWaste,
+		lineupLog: nextLineup,
 		...(nextTax ? { tax: nextTax } : {}),
 		absorbed: [...new Set([...house.absorbed, ...nextDishes.map((d) => d.id)])]
 	};
@@ -490,8 +510,16 @@ export interface HousePortable {
 	 * why it is optional HERE and required at every function that emits one.
 	 */
 	items?: Record<string, Item>;
+	/** The lineup tally. Absent from every file written before it existed. */
+	lineupLog?: LineupEntry[];
 }
 
 export function housePortable(house: HouseRecord): HousePortable {
-	return { preps: house.preps, items: house.items, waste: house.waste, ...(house.tax ? { tax: house.tax } : {}) };
+	return {
+		preps: house.preps,
+		items: house.items,
+		waste: house.waste,
+		lineupLog: house.lineupLog,
+		...(house.tax ? { tax: house.tax } : {})
+	};
 }

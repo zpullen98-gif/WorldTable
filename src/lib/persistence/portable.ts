@@ -272,6 +272,12 @@ export function describeImport(
 		(w) => w?.id && !mineWaste.has(w.id)
 	).length;
 
+	// The lineup tally, counted in ANSWERS, the unit it merges in (slug and time).
+	const mineLineup = new Set((current.lineupLog ?? []).map((e) => `${e?.slug}|${e?.at}`));
+	const newLineup = asArray<{ slug?: string; at?: number }>(incoming.lineupLog).filter(
+		(e) => e?.slug && typeof e.at === 'number' && !mineLineup.has(`${e.slug}|${e.at}`)
+	).length;
+
 	/**
 	 * Step timings, which this banner never mentioned at all: mergeSessions
 	 * (state.ts) used to fall through a bare `...incoming` spread here, and a
@@ -318,6 +324,8 @@ export function describeImport(
 		parts.push(`${newPrices} ${newPrices === 1 ? 'price' : 'prices'} for the item book`);
 	if (newWaste)
 		parts.push(`${newWaste} waste ${newWaste === 1 ? 'entry' : 'entries'}`);
+	if (newLineup)
+		parts.push(`${newLineup} lineup ${newLineup === 1 ? 'answer' : 'answers'}`);
 	if (newStepTimings)
 		parts.push(`${newStepTimings} step ${newStepTimings === 1 ? 'timing' : 'timings'}`);
 

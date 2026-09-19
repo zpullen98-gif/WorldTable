@@ -10,6 +10,7 @@ import {
 	removeDish,
 	houseSnapshot,
 	mergeExportedMenu,
+	housePortable,
 	type HouseRecord
 } from './house';
 import type { MenuDish } from './state';
@@ -300,5 +301,51 @@ describe('the export nudge', () => {
 		const now = exported + 9 * DAY_MS + DAY_MS / 2;
 		expect(exportNudge({ lastWrite: exported + 1, lastExportAt: exported }, now)).toEqual({ days: 9 });
 		expect(exportNudge({ lastWrite: exported + 1, lastExportAt: exported }, exported + 2)).toEqual({ days: 0 });
+	});
+});
+
+/**
+ * The lineup tally: what the ROOM missed at pre-shift, on the house record.
+ *
+ * Every collection added to this record has had to learn the same three
+ * things the hard way: a record written before the field existed must still
+ * read, an import must NAME the field or silently drop it, and the export must
+ * carry it because the export is the venue's only backup.
+ */
+describe('the lineup tally travels with the house', () => {
+	const answer = (slug: string, at: number, grade: 'met' | 'missed' = 'met') => ({ slug, at, grade });
+
+	it('reads a record written before the field existed', () => {
+		const old = { schemaVersion: HOUSE_VERSION, dishes: [dish('a')], lastWrite: 5 };
+		const { record, blocked } = readHouse(old);
+		expect(blocked).toBe(false);
+		expect(record.lineupLog).toEqual([]);
+		expect(record.dishes.map((d) => d.id)).toEqual(['a']);
+	});
+
+	it('cleans a hand-edited value rather than carrying it through', () => {
+		expect(readHouse({ schemaVersion: HOUSE_VERSION, lineupLog: 'nope' }).record.lineupLog).toEqual([]);
+		const dirty = { schemaVersion: HOUSE_VERSION, lineupLog: [answer('fd_0001', 1), { slug: 'x' }, null] };
+		expect(readHouse(dirty).record.lineupLog).toEqual([answer('fd_0001', 1)]);
+	});
+
+	it('an import is a union, named in the merge, and merging it twice changes nothing', () => {
+		const mine: HouseRecord = { ...fresh(), lineupLog: [answer('fd_0001', 1, 'missed')] };
+		const file = { lineupLog: [answer('fd_0001', 1, 'missed'), answer('fd_0002', 2)] };
+		const once = adoptImport(mine, [], {}, file);
+		expect(once.lineupLog).toEqual([answer('fd_0001', 1, 'missed'), answer('fd_0002', 2)]);
+		expect(adoptImport(once, [], {}, file).lineupLog).toEqual(once.lineupLog);
+	});
+
+	it('a file that carries none leaves the tally alone', () => {
+		const mine: HouseRecord = { ...fresh(), lineupLog: [answer('fd_0001', 1)] };
+		expect(adoptImport(mine, [], {}, {}).lineupLog).toEqual([answer('fd_0001', 1)]);
+	});
+
+	it('the export carries it, and it carries no name', () => {
+		const h: HouseRecord = { ...fresh(), lineupLog: [answer('fd_0001', 1, 'missed')], lastEditedBy: 'Marcus' };
+		const out = housePortable(h);
+		expect(out.lineupLog).toEqual([answer('fd_0001', 1, 'missed')]);
+		expect(JSON.stringify(out)).not.toContain('Marcus');
 	});
 });

@@ -60,6 +60,7 @@ import type { MenuDish, DishCosting, SalesWeek } from '../persistence/state';
 import type { CostLine, PricedItem } from '../costing';
 import { recordPrice, recordYield, pricedItems, itemNames, currentPrice, type Item } from '../items';
 import { type WasteEntry } from '../waste';
+import { addLineup, removeLineup, type LineupEntry } from '../lineup';
 import { resolveLines, plateCost, prepPortionCost } from '../costing';
 
 export type { HouseRecord, EightySix, Prep };
@@ -68,7 +69,18 @@ const store = browser ? createStore('world-table', 'state') : undefined;
 
 class House {
 	#r = $state<HouseRecord>(structuredClone(EMPTY_HOUSE));
-	#ready = false;
+	/* $state, which it was not. A plain field was invisible for as long as
+	   nothing RENDERED from `house.ready`: the write guards below read it
+	   imperatively. The Floor Deck's Lineup was the first page to put it in a
+	   template (`disabled={!house.ready}`), and on a cold load the button stayed
+	   disabled for good, because a getter over a plain field never tells Svelte
+	   it changed. Arriving from another page hid it: hydration had already
+	   finished. */
+	#ready = $state(false);
+	/* Plain, and the pair of the line above: hydrate() is called from the layout
+	   $effect, and a guard that read the $state would subscribe that effect to
+	   it. See `#started` in session.svelte.ts, which learned this the hard way. */
+	#started = false;
 	/**
 	 * A record we must not overwrite: written by a newer build, or unreadable.
 	 * Every write is a no-op while this is set. See readHouse().
@@ -183,7 +195,8 @@ class House {
 	}
 
 	async hydrate() {
-		if (!browser || !store || this.#ready) return;
+		if (!browser || !store || this.#started) return;
+		this.#started = true;
 		try {
 			const { record, blocked } = readHouse(await get(HOUSE_KEY, store));
 			this.#r = record;
@@ -406,6 +419,32 @@ class House {
 		const next = recordYield(this.#r.items, name, grossQty, usableQty, Date.now());
 		if (next === this.#r.items) return;
 		this.#r = { ...this.#r, items: next };
+		this.#persist();
+	}
+
+	/* ---- the lineup tally --------------------------------------------------
+	 * What the ROOM missed at pre-shift, and nobody's name: see lib/lineup.ts.
+	 * The Floor Deck's Lineup mode writes here and NEVER to a person's drill
+	 * log, because six people answering aloud on one tablet is not evidence
+	 * about whoever is holding it. */
+
+	get lineupLog(): LineupEntry[] {
+		return this.#r.lineupLog;
+	}
+
+	/** One answer from the room. Returns the entry, so the screen can undo exactly it. */
+	markLineup(slug: string, grade: 'met' | 'missed'): LineupEntry | null {
+		if (!slug) return null;
+		const entry: LineupEntry = { slug, at: Date.now(), grade };
+		this.#r = { ...this.#r, lineupLog: addLineup(this.#r.lineupLog, entry) };
+		this.#persist();
+		return entry;
+	}
+
+	undoLineup(slug: string, at: number) {
+		const next = removeLineup(this.#r.lineupLog, slug, at);
+		if (next.length === this.#r.lineupLog.length) return;
+		this.#r = { ...this.#r, lineupLog: next };
 		this.#persist();
 	}
 
