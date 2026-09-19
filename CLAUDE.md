@@ -1,23 +1,26 @@
 # The World Table
 
-A SvelteKit rewrite of a 1.5MB single-file culinary field guide: 970 recipes
-across 94 chapters, a 479-term chef's lexicon, pantry matching, a ten-semester
-path of study, and a menu-planning worksheet. Static build, installable PWA,
-fully offline, no server.
+A SvelteKit rewrite of a 1.5MB single-file culinary field guide, grown since:
+1,844 recipes across 171 chapters, a 779-term chef's lexicon, 112 techniques,
+pantry matching, a ten-semester path of study, a menu-planning worksheet, and
+the Floor Deck, a staff-training deck of menu words. Static build, installable
+PWA, fully offline, no server. `src/lib/data/totals.json` is the truth for
+every one of those figures; a count written in prose goes stale, and several
+below already have (the 970 and 94 in older sections are the archive's).
 
 ## Commands
 
 ```bash
 npm run dev            # localhost:5173
-npm run build          # static site -> build/  (~1,070 HTML pages, ~25s)
+npm run build          # static site -> build/  (~2,180 HTML pages)
 npm run preview        # serve build/ locally
 npm test               # vitest
-npm run check          # svelte-check
+npm run check          # svelte-check (checkJs is ON: every .mjs needs JSDoc types)
+npm run test:e2e       # Playwright, against whatever is in build/ (it never rebuilds)
 
-npm run extract        # re-lift the data literals out of reference/world-table-v1.html
-npm run verify:data    # 38 checks: counts, round-trip, char-sum, slugs, refs
+npm run verify:data    # the sealed raw/ against the archive: counts, round-trip, slugs
 npm run build:data     # derive + emit src/lib/data/*.json  (gated, idempotent)
-npm run verify:build   # 18 checks against build/
+npm run verify:build   # checks against build/, INCLUDING the precache cap
 npm run build:pages    # the GitHub Pages build (sets BASE_PATH correctly)
 npm run icons          # regenerate PWA icons
 npm run report:tech    # technique coverage ledger (--labels, or a chapter name)
@@ -486,6 +489,96 @@ for their entire existence: the merge was written and tested, and neither call
 site ever passed one, because an omitted optional argument compiles in silence.
 `FORMAT_VERSION` stays at 3: the criterion for a bump is a build that would
 DESTROY something, and an old build ignores an unknown top-level key.
+
+`lineupLog` (the Floor Deck's pre-shift tally, below) is a house collection for
+the same reason: a room answering aloud is a fact about the venue, never about
+whoever holds the tablet. It merges by union on `slug|at` and caps at 2,000
+AFTER the union, so two full tablets do not lose the newest answers to the cap.
+
+## The Floor Deck: a staff-training deck of menu words
+
+The owner brought a hand-filled restaurant training packet (about 159 terms in
+ten sections, a dozen of the answers confidently wrong) and asked for it
+combined with what the app knows, corrected, widened to each term's neighbours,
+and made into the best study material it can be, for a WHOLE staff. The plan,
+with the owner's answers verbatim, is `~/.claude/plans/i-want-to-improve-curious-pebble.md`
+on the author's machine; what follows is what a maintainer needs.
+
+**It is not Lexicon entries.** The 479 archive terms are sealed, five FOH
+categories are pinned to the term by the service track, and the supplement
+format is ingredient-shaped (season, choosing, keeping), which does not fit
+Hollandaise or Braised. So it is its own generated data set, linked to the
+Lexicon both ways.
+
+### Data
+
+- Authored: `tools/derive/floor-deck/<section>.mjs` (15 files, machine-written
+  by `tools/deck/merge.mjs`, hand-editable after), `tools/derive/floor-deck.mjs`
+  (`DECK_SECTIONS` in teaching order, `PACKET_TERMS`, `PACKET_ERRORS`,
+  `DECK_GZ_CEILING`, `DECK_COMPLETE`), and ONE contract,
+  `tools/derive/floor-deck-contract.mjs`, imported by both the build gate and
+  the pipeline's validator so they cannot drift.
+- Ids are `fd_NNNN`, minted by `tools/deck/mint-ids.mjs` into the committed
+  `floor-deck.ledger.json` and never typed. The id IS the drill-log slug.
+  `slugify` cannot emit `_`, so an id can never collide with a lexicon slug.
+  The build refuses a hand-typed id, a reused id, a deleted card, or a term that
+  differs from the ledger (`mint-ids.mjs --accept-rename`).
+- Emitted: `floor-deck.json` (cards plus a `frame`), `floor-deck.traps.json`
+  (its OWN file, so `DeckCard` has no traps field and only `/service/deck/test`
+  may load it; a test scans the routes for `loadDeckTraps`), and
+  `floor-deck.index.json` (ids, terms, aliases, section titles, `byLexicon`:
+  what the Lexicon and the hubs read without loading the deck).
+- **No allergen verdict, structurally.** `madeWith` items are ingredient nouns
+  (a pattern refuses contain, free, safe, without, vegan, allerg, suitable,
+  "no", "non"); the sentence around them is never authored but emitted once as
+  `frame` ("Classically made with ... Recipes vary. Confirm with the
+  kitchen."); `VERDICT_RE` runs over every prose string, traps included.
+- Length floors AND ceilings per field, a card total, and a section MEAN
+  ceiling, all in `LIMITS`. Writers land near whatever ceiling they are given;
+  the mean ceiling is what stops a section drifting there.
+- Gists and traps are TERM-FREE (the written test's key must not name its
+  answer). `leakNames()` is the term plus its ONE-word aliases: a multi-word
+  alias is ordinary words ("Beef Short Ribs" must not ban "beef").
+- The build simulates the option-length tell through the same
+  `wrongAnswersFor()` the page calls (`src/lib/floor-deck-core.mjs`): always
+  picking the longest or the shortest option must not beat chance by much.
+
+### Modes, and what each may write
+
+| Mode | Route | Writes |
+|---|---|---|
+| Flip cards | `/service/deck/study` | `close` or `missed`, once per card per local day; self-judged, so it never promotes |
+| Written test | `/service/deck/test` | `met` or `missed`; ends on the misses and **no number**, by the owner's decision |
+| Say it back | `/service/deck/say` | `met` or `missed`; the ONE deck mode that sends `oot:round-complete` |
+| Lineup | `/service/deck/lineup` | ONLY `house.lineupLog`; nothing about a person |
+
+All of it sits on `repertoire.ts` with `{ oneClimbPerDay: true }` (one rung per
+card per local day however many modes ask it; OFF everywhere else, pinned by a
+legacy test). A miss is owed until a non-miss on a LATER local day. A reader who
+only flips must still reach every card, which is why `pickSession` reserves
+`NEW_QUOTA` slots for unseen cards: flips record `close`, which holds a rung.
+
+Pages load the deck in `onMount`, never in `load`: a universal load is inlined
+into the prerendered HTML. `FloorCard.svelte` is the one place a card's answers
+render, as `class="flash"` / `class="def"`, which puts the whole deck under the
+paywall contract in `src/lib/navigation.test.ts` (it now scans components).
+
+### The Lexicon link
+
+`.deckref` ("On the floor") sits inside a `.lexcard`, AFTER `.xrefs` and never
+in it: "Demonstrated in" is a contract about dishes. `.deckhits` rows show
+above the groups while the box holds text, from `src/lib/deck-search.ts`'s own
+thin haystack (term, aliases, section title), never the Lexicon's `haystack()`,
+so the regression counts (brisket 6, porterhouse 1) do not move.
+
+### Adding content
+
+`tools/deck/README.md` is the procedure: brief, the authoring workflow (authors
+in chunks of eight, three refuters with different lenses, a corrector that
+answers every finding, a critic), `take.mjs`, `validate.mjs`, `merge.mjs`,
+`build:data`, `measure.mjs`, `check-displacement.mjs`, the tests. The refute
+pass is not optional. Measure after every section: the deck and the rest of
+the app share one precache cap.
 
 ## Sanitation: the guide's silences, made load-bearing
 
