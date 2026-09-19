@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
 	buildRound,
+	orderRound,
 	optionsFor,
 	fieldFor,
 	shuffle,
@@ -172,5 +173,36 @@ describe('shuffle', () => {
 	it('keeps every element', () => {
 		const src = deck(20);
 		expect(shuffle(src, seeded(2)).map((c) => c.slug).sort()).toEqual(src.map((c) => c.slug).sort());
+	});
+});
+
+describe('orderRound', () => {
+	const cards = ['a', 'b', 'c', 'd', 'e', 'f'].map((slug) => ({ slug }));
+	const rand = () => 0.42;
+
+	it('asks what is due first, in the order it was given, then the never-asked, then the rest', () => {
+		const order = orderRound(cards, ['e', 'b'], new Set(['a', 'b', 'e', 'f']), rand, 5).map((c) => c.slug);
+		expect(order.slice(0, 2)).toEqual(['e', 'b']);
+		// c and d have never been drilled, so they come before a and f
+		expect(new Set(order.slice(2, 4))).toEqual(new Set(['c', 'd']));
+		expect(order).toHaveLength(5);
+		expect(new Set(order).size).toBe(5);
+	});
+
+	it('ignores a due slug that is not a card, rather than asking for nothing', () => {
+		expect(orderRound(cards, ['drill-firing-order', 'a'], new Set(), rand, 2).map((c) => c.slug)[0]).toBe('a');
+	});
+
+	it('is what buildRound asks, card for card, under one seed', () => {
+		const all = Array.from({ length: 30 }, (_, i) => card(i));
+		const due = all.slice(3, 6).map((c) => c.slug);
+		const drilled = new Set(all.slice(0, 20).map((c) => c.slug));
+		const ordered = orderRound(all, due, drilled, seeded(7)).map((c) => c.slug);
+		const asked = buildRound(all, due, drilled, seeded(7)).map((q) => q.target.slug);
+		// buildRound spends more randomness AFTER ordering, on the options, so
+		// the order is identical whenever one seed starts both
+		expect(asked).toEqual(ordered);
+		expect(asked.slice(0, 3)).toEqual(due);
+		expect(asked).toHaveLength(ROUND_LENGTH);
 	});
 });

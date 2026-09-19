@@ -95,6 +95,41 @@ export function optionsFor(
 }
 
 /**
+ * Which cards a round asks, and in what order, before any question is built:
+ * what is due first, then what has never been asked, then the rest.
+ *
+ * Lifted out of buildRound, unchanged, so the Floor Deck's written test can
+ * order a section the same way and then build its own kind of question. The
+ * randomness is consumed in exactly the order it was, so a seeded round is
+ * the round it always was.
+ */
+export function orderRound<T extends { slug: string }>(
+	all: readonly T[],
+	due: readonly string[],
+	drilled: ReadonlySet<string>,
+	rand: Rand,
+	length: number = ROUND_LENGTH
+): T[] {
+	const bySlug = new Map(all.map((c) => [c.slug, c]));
+	const seen = new Set<string>();
+	const order: T[] = [];
+
+	const take = (cards: readonly T[]) => {
+		for (const c of cards) {
+			if (order.length >= length) return;
+			if (seen.has(c.slug)) continue;
+			seen.add(c.slug);
+			order.push(c);
+		}
+	};
+
+	take(due.map((s) => bySlug.get(s)).filter((c): c is T => Boolean(c)));
+	take(shuffle(all.filter((c) => !drilled.has(c.slug)), rand));
+	take(shuffle(all, rand));
+	return order;
+}
+
+/**
  * A round.
  *
  * `due` is asked first: that is the point of scheduling it. The round is then
@@ -109,23 +144,7 @@ export function buildRound(
 	rand: Rand,
 	length: number = ROUND_LENGTH
 ): DrillQuestion[] {
-	const bySlug = new Map(all.map((c) => [c.slug, c]));
-	const seen = new Set<string>();
-	/** @type {DrillCard[]} */
-	const order: DrillCard[] = [];
-
-	const take = (cards: DrillCard[]) => {
-		for (const c of cards) {
-			if (order.length >= length) return;
-			if (seen.has(c.slug)) continue;
-			seen.add(c.slug);
-			order.push(c);
-		}
-	};
-
-	take(due.map((s) => bySlug.get(s)).filter((c): c is DrillCard => Boolean(c)));
-	take(shuffle(all.filter((c) => !drilled.has(c.slug)), rand));
-	take(shuffle(all, rand));
+	const order = orderRound(all, due, drilled, rand, length);
 
 	const questions: DrillQuestion[] = [];
 	for (const target of order) {
