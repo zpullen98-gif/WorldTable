@@ -2,6 +2,7 @@
   "sections": {
     "southern": "The Southern Table",
     "methods": "Cooking Methods",
+    "meats": "Poultry, Game & Offal",
     "cured": "Cured & Preserved Meats",
     "cuts": "Meat Cuts",
     "fish": "Fish & Shellfish"
@@ -272,6 +273,86 @@
       "id": "fd_0049",
       "term": "Pan-Roasted",
       "section": "methods"
+    },
+    {
+      "id": "fd_0050",
+      "term": "Escargot",
+      "section": "meats"
+    },
+    {
+      "id": "fd_0051",
+      "term": "Guinea Hen",
+      "section": "meats",
+      "aliases": [
+        "Guinea Fowl",
+        "Pintade"
+      ]
+    },
+    {
+      "id": "fd_0052",
+      "term": "Quail",
+      "section": "meats"
+    },
+    {
+      "id": "fd_0053",
+      "term": "Squab",
+      "section": "meats"
+    },
+    {
+      "id": "fd_0054",
+      "term": "Sweetbreads",
+      "section": "meats"
+    },
+    {
+      "id": "fd_0055",
+      "term": "Foie Gras",
+      "section": "meats"
+    },
+    {
+      "id": "fd_0056",
+      "term": "Duck Breast",
+      "section": "meats",
+      "aliases": [
+        "Magret"
+      ]
+    },
+    {
+      "id": "fd_0057",
+      "term": "Poussin",
+      "section": "meats"
+    },
+    {
+      "id": "fd_0058",
+      "term": "Rabbit",
+      "section": "meats"
+    },
+    {
+      "id": "fd_0059",
+      "term": "Venison",
+      "section": "meats"
+    },
+    {
+      "id": "fd_0060",
+      "term": "Pheasant",
+      "section": "meats"
+    },
+    {
+      "id": "fd_0061",
+      "term": "Bone Marrow",
+      "section": "meats"
+    },
+    {
+      "id": "fd_0062",
+      "term": "Chicken Liver",
+      "section": "meats"
+    },
+    {
+      "id": "fd_0063",
+      "term": "Beef Tongue",
+      "section": "meats",
+      "aliases": [
+        "Lengua"
+      ]
     },
     {
       "id": "fd_0064",
@@ -818,6 +899,9 @@
     ],
     "schmaltz-and-rendering": [
       "fd_0047"
+    ],
+    "foie-gras-torchon-mi-cuit-and-ethics-of-service": [
+      "fd_0055"
     ],
     "tasso-and-cajun-andouille": [
       "fd_0064",

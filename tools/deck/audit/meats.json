@@ -1,0 +1,631 @@
+{
+	"section": "meats",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0050",
+				"fd_0051",
+				"fd_0052",
+				"fd_0053",
+				"fd_0054",
+				"fd_0055",
+				"fd_0056",
+				"fd_0057",
+				"fd_0058",
+				"fd_0059",
+				"fd_0060",
+				"fd_0061",
+				"fd_0062",
+				"fd_0063"
+			],
+			"findings": [
+				{
+					"id": "fd_0055",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "The birds are fed extra corn in their last weeks, called gavage",
+					"because": "Gavage means force-feeding: corn is delivered by tube, several times a day, for about the last two weeks (ducks) to three or four weeks (geese). 'Fed extra corn' misdescribes it, and the card's own note says guests object to how it is produced; a server who calls it 'extra corn' gets caught out.",
+					"fix": "The birds are force-fed corn for their last two weeks, called gavage",
+					"lens": "fact",
+					"key": "meats-1-fact-1"
+				},
+				{
+					"id": "fd_0055",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "tastes sweet and buttery, not like liver",
+					"because": "Foie gras still has a clear, mild liver flavor; it is far milder than lean liver, not free of it. A guest who dislikes liver and is told it does not taste of liver will be misled.",
+					"fix": "tastes sweet and buttery, only faintly of liver",
+					"lens": "fact",
+					"key": "meats-1-fact-2"
+				},
+				{
+					"id": "fd_0055",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Not chicken liver mousse or pâté, which blend a lean liver with butter.",
+					"because": "Pâté is a ground meat preparation (the roster's own Pâté card), often pork and not necessarily liver or butter-based; only the chicken liver mousse fits 'lean liver blended with butter'.",
+					"fix": "Not chicken liver mousse, lean liver whipped with butter, or pâté, a ground meat spread. This is the whole liver.",
+					"lens": "fact",
+					"key": "meats-1-fact-3"
+				},
+				{
+					"id": "fd_0055",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "It always comes from farmed ducks or geese fattened on extra feed before slaughter.",
+					"because": "The 'extra feed' wording repeats the euphemism for force-feeding, and 'always' is overstated: a few producers, Eduardo Sousa's Spanish goose farm among them, make un-force-fed liver from geese that gorge naturally in autumn. That makes the trap partly true of a real product.",
+					"fix": "It comes from farmed ducks or geese, force-fed in their last weeks, not wild birds.",
+					"lens": "fact",
+					"key": "meats-1-fact-4"
+				},
+				{
+					"id": "fd_0055",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "a centuries-old craft of southwest France",
+					"because": "Fattening goose liver goes back to ancient Egypt and Rome. It is now centered on southwest France, with Alsace the other great center, so calling it a craft of southwest France gets its origin wrong.",
+					"fix": "French for fat liver, an ancient craft now centered on southwest France",
+					"lens": "fact",
+					"key": "meats-1-fact-5"
+				},
+				{
+					"id": "fd_0051",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "is still raised half wild, active and lean",
+					"because": "Most commercial guinea fowl are raised in barns or free-range systems like other farm poultry. 'Half wild' is not accurate, and it contradicts the card's own notThis, which says it is farmed like chicken. The lean, darker meat comes from the breed and a more active bird, not from wild rearing.",
+					"fix": "is a restless, active bird, naturally lean",
+					"lens": "fact",
+					"key": "meats-1-fact-6"
+				},
+				{
+					"id": "fd_0056",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Ducks fly and swim, so the breast is dark, red muscle",
+					"because": "The ducks served (Pekin, Moulard, Muscovy) are farm birds that barely fly. The red breast is inherited from wild ancestors that were strong fliers: the endurance muscle is rich in myoglobin. A guest can easily poke a hole in 'they fly'.",
+					"fix": "Ducks come from strong fliers, so the breast is dark, red muscle",
+					"lens": "fact",
+					"key": "meats-1-fact-7"
+				},
+				{
+					"id": "fd_0050",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "usually farmed, cleaned and cooked ahead",
+					"because": "Much of the escargot sold is not farmed. The classic Burgundy snail (Helix pomatia) is mostly gathered wild in Central and Eastern Europe, and many tins hold giant African snails. Only the petit-gris is widely farmed. What holds true is that restaurants buy them cleaned and precooked, usually tinned.",
+					"fix": "bought cleaned and precooked, usually tinned",
+					"lens": "fact",
+					"key": "meats-1-fact-8"
+				},
+				{
+					"id": "fd_0054",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "Enriched roll baked with sugar and egg and served with honey butter",
+					"because": "'Enriched roll baked with sugar and egg' is nearly a true description of the roster's Brioche card, so this trap is a fair description of another card. A trap must not be true of another card.",
+					"fix": "Sweet yeast dough fried in lard and rolled in cinnamon sugar",
+					"lens": "fact",
+					"key": "meats-1-fact-9"
+				},
+				{
+					"id": "fd_0052",
+					"field": "pairs",
+					"severity": "unclear",
+					"claim": "Grits, grilled over wood, stuffed with sausage, glazed with honey or sorghum",
+					"because": "Pairs is for classic partners on a plate. 'Grilled over wood' is a cooking method, and 'stuffed with' and 'glazed with' are preparations, so a server reads the label as a list of partners and stumbles.",
+					"fix": "Grits, sausage stuffing, a honey or sorghum glaze, pepper jelly",
+					"lens": "fact",
+					"key": "meats-1-fact-10"
+				},
+				{
+					"id": "fd_0054",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "They come from young veal and are neither sweet nor bread. Crisp outside, soft and creamy inside, and very mild, richer than any chicken.",
+					"because": "A guest asking 'what is that?' is asking what part of the animal it is, and this line never says. It only says what it is not, so the server is left without an answer to the follow-up question. 'Young veal' repeats itself, since veal is already a young animal. 'Richer than any chicken' is an odd comparison that tells the guest nothing about organ meat.",
+					"fix": "They're the thymus gland of veal, a mild organ meat, nothing like liver. Crisp outside, soft and creamy inside.",
+					"lens": "floor",
+					"key": "meats-1-floor-11"
+				},
+				{
+					"id": "fd_0056",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Most guests who try it order it again.",
+					"because": "This is an oversell a server cannot back up. Read aloud it sounds like a sales script. The line also never says plainly that this is the breast of a duck. It goes straight to a comparison.",
+					"fix": "It's the breast of the duck, served rosy and sliced like a steak, rich and tender under crisp, rendered skin.",
+					"lens": "floor",
+					"key": "meats-1-floor-12"
+				},
+				{
+					"id": "fd_0051",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "tastes the way chicken used to, a little deeper and more savory, with firmer, leaner meat. Think chicken with a hint of pheasant.",
+					"because": "'Tastes the way chicken used to' is a nostalgic claim the guest cannot check, and it sounds read off a card. 'A hint of pheasant' means nothing to a guest who has never eaten pheasant, and a nervous guest usually hasn't, so the comparison explains nothing.",
+					"fix": "It's a farm bird like chicken, but a little deeper and more savory, with firmer, leaner meat and just a faint wild note.",
+					"lens": "floor",
+					"key": "meats-1-floor-13"
+				},
+				{
+					"id": "fd_0055",
+					"field": "line",
+					"severity": "style",
+					"claim": "Seared foie gras, brioche, fig jam, sauternes",
+					"because": "Sauternes is a place name and a wine appellation, so a real menu capitalizes it. In lowercase it reads like a typo.",
+					"fix": "Seared foie gras, brioche, fig jam, Sauternes",
+					"lens": "floor",
+					"key": "meats-1-floor-14"
+				},
+				{
+					"id": "fd_0055",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Some guests object to how it is produced. Answer honestly and have another dish ready.",
+					"because": "The card never gives the doneness fact a server is asked most: seared foie gras is served rare to pink at the center, and a torchon or mi-cuit is only gently cooked, not cooked through. The why and guest line only say it melts inside.",
+					"fix": "Seared, it stays pink at the center, and a torchon is only gently cooked. Some guests object to how it is made, so answer honestly.",
+					"lens": "safety",
+					"key": "meats-1-safety-15"
+				},
+				{
+					"id": "fd_0052",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"quail\", \"often butter\", \"sometimes bacon\"",
+					"because": "The pairs field names quail stuffed with sausage, which is a classic Southern preparation and usually pork. The madeWith list flags bacon but not the sausage stuffing, which also often holds bread crumbs.",
+					"fix": "\"quail\", \"often butter\", \"sometimes bacon\", \"sometimes pork sausage\"",
+					"lens": "safety",
+					"key": "meats-1-safety-16"
+				},
+				{
+					"id": "fd_0054",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often wheat flour\", \"sometimes milk\"",
+					"because": "Crispy or fried sweetbreads, like the menu line on this card, are often dredged in flour and then dipped in egg and bread crumbs. Egg is a guest-relevant ingredient the list leaves out.",
+					"fix": "\"often wheat flour\", \"sometimes egg\", \"sometimes milk\"",
+					"lens": "safety",
+					"key": "meats-1-safety-17"
+				},
+				{
+					"id": "fd_0062",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"chicken liver\", \"butter\", \"often shallot\", \"often brandy\", \"sometimes cream\"",
+					"because": "A classic chicken liver parfait is bound with whole eggs and baked in a water bath. Both linked parfait recipes in this app use 3 to 4 eggs. Egg is missing from the list, so a server would not flag it for a guest with an egg allergy. Port or Madeira is also standard.",
+					"fix": "\"chicken liver\", \"butter\", \"often egg\", \"often shallot\", \"often brandy or port\", \"sometimes cream\"",
+					"lens": "fact",
+					"key": "meats-2-fact-1"
+				},
+				{
+					"id": "fd_0062",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "creamy when cooked just to pink",
+					"because": "The card's own note says pink chicken liver is linked to food poisoning. USDA guidance is 74 C (165 F), and the UK FSA ties undercooked chicken liver pâté to Campylobacter outbreaks. The test answer should not endorse pink as the ideal.",
+					"fix": "Small, iron-rich chicken organ, silky and mild, often made into a spread",
+					"lens": "fact",
+					"key": "meats-2-fact-2"
+				},
+				{
+					"id": "fd_0062",
+					"field": "why",
+					"severity": "verdict",
+					"claim": "Cooked just to pink it stays creamy; cooked through it turns grainy.",
+					"because": "This teaches pink as the goal, which contradicts the note and US food-safety guidance. It is true that overcooking makes liver grainy. A parfait stays smooth because it is blended and gently baked in a water bath, not because it is served pink. The line also uses a semicolon.",
+					"fix": "Overcooked, it turns grainy, so kitchens cook it gently or bake it as a parfait.",
+					"lens": "fact",
+					"key": "meats-2-fact-3"
+				},
+				{
+					"id": "fd_0063",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "so it needs three hours or more of simmering",
+					"because": "The origin line names gyutan, and gyutan is not simmered. Japanese grill bars peel the raw tongue, slice it thin and grill it quickly. Simmering for hours is usual for tacos and delis, but it is not a requirement of the cut.",
+					"fix": "so it is usually simmered three hours or more",
+					"lens": "fact",
+					"key": "meats-2-fact-4"
+				},
+				{
+					"id": "fd_0063",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Dense cow muscle simmered for hours, then peeled and sliced or seared",
+					"because": "Gyutan, which the card cites, is thin-sliced raw and grilled. The gist gives the long simmer as the defining trait, but it is only the most common way to cook the cut.",
+					"fix": "Dense, fatty cow muscle, usually simmered for hours, peeled and sliced",
+					"lens": "fact",
+					"key": "meats-2-fact-5"
+				},
+				{
+					"id": "fd_0059",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "best cooked rare to medium rare",
+					"because": "Only the loin, the tenderloin and the leg steaks are served rare. Shoulder, shank and neck, which go into stews, osso buco and sausages, are braised well done. This deck's own recipe candidate is a venison stew.",
+					"fix": "Deep red, very lean deer meat, its loin best served rare to medium rare",
+					"lens": "fact",
+					"key": "meats-2-fact-6"
+				},
+				{
+					"id": "fd_0059",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It is at its best served rare to medium rare.",
+					"because": "This is true of the loin and steak cuts but false of braised or stewed venison. A server reading it at the table could tell a guest that a venison stew is served rare.",
+					"fix": "Loin and steaks are at their best rare to medium rare.",
+					"lens": "fact",
+					"key": "meats-2-fact-7"
+				},
+				{
+					"id": "fd_0062",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "they eat like a lighter foie gras",
+					"because": "This oversells, and the card's own notThis says chicken liver is leaner and more mineral than foie gras. A guest who orders expecting foie gras gets something else, and the line blurs the confusion the card is meant to clear up.",
+					"fix": "Chicken livers are rich and silky, with a mild, slightly sweet iron flavor. Most often they are whipped with butter into a smooth spread for toast.",
+					"lens": "floor",
+					"key": "meats-2-floor-8"
+				},
+				{
+					"id": "fd_0062",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "creamy when cooked just to pink",
+					"because": "The gist teaches a new hire that pink is the correct doneness, but the card's own note says pink chicken liver is linked to food poisoning and US guidance is 74 C (165 F). A server will repeat the gist to a guest as a promise about doneness.",
+					"fix": "Small, iron-rich chicken organ, creamy when cooked gently",
+					"lens": "floor",
+					"key": "meats-2-floor-9"
+				},
+				{
+					"id": "fd_0061",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "roasted inside split leg pieces",
+					"because": "'Split leg pieces' is vague: a test-taker cannot tell it means bones, and it could be read as meat. The gist needs to say where the fat sits, still without using the banned words.",
+					"fix": "Beef fat from a leg's hollow core, roasted and spread on toast",
+					"lens": "floor",
+					"key": "meats-2-floor-10"
+				},
+				{
+					"id": "fd_0063",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "Organ meat with a strong, livery flavor and a soft, spreadable texture",
+					"because": "This is close to a true description of Chicken Liver or Pâté, both on the roster, so a test-taker who knows those cards could fairly argue for it. A trap must be false of every card.",
+					"fix": "Gristly, strong-tasting organ that stays chewy however long it cooks",
+					"lens": "floor",
+					"key": "meats-2-floor-11"
+				},
+				{
+					"id": "fd_0058",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Small farmed animal",
+					"because": "'Animal' does not rule out the small farmed birds nearby (Guinea Hen, Quail), whose meat is also lean and mild. On a multiple-choice test this gist could be accepted for a bird. Naming it a mammal is what makes this one this one.",
+					"fix": "Small farmed mammal with lean, pale, mild meat, often braised",
+					"lens": "floor",
+					"key": "meats-2-floor-12"
+				},
+				{
+					"id": "fd_0062",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "creamy when cooked just to pink",
+					"because": "The gist is drilled as the correct answer and teaches pink as the goal. The card's own note says pink chicken liver is linked to food poisoning and US guidance is 74 C (165 F). A server who learns the gist could tell a guest that pink is the right way to serve it.",
+					"fix": "Small, iron-rich chicken organ, silky unless it is overcooked",
+					"lens": "safety",
+					"key": "meats-2-safety-13"
+				},
+				{
+					"id": "fd_0062",
+					"field": "why",
+					"severity": "verdict",
+					"claim": "Cooked just to pink it stays creamy; cooked through it turns grainy.",
+					"because": "This presents undercooked liver as the correct doneness and cooked-through as a fault. That contradicts the note (a campylobacter risk; USDA says 74 C (165 F)). A server would repeat it as reassurance.",
+					"fix": "Overcooked, it turns grainy, so kitchens take care to keep it tender.",
+					"lens": "safety",
+					"key": "meats-2-safety-14"
+				},
+				{
+					"id": "fd_0062",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"chicken liver\", \"butter\", \"often shallot\", \"often brandy\", \"sometimes cream\"",
+					"because": "The linked recipe is a parfait, and a classic baked chicken liver parfait is set with egg. Egg is a major allergen and the list leaves it out.",
+					"fix": "add \"often egg\"",
+					"lens": "safety",
+					"key": "meats-2-safety-15"
+				},
+				{
+					"id": "fd_0060",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"pheasant\", \"often butter\", \"often cream\", \"sometimes bacon\", \"sometimes apple brandy\"",
+					"because": "The card's own line and pairs put chestnuts on the plate, and the US FDA lists chestnut as a tree nut. Bread sauce is also made with milk and wheat bread. The list names neither.",
+					"fix": "add \"sometimes chestnut\" and \"sometimes bread\"",
+					"lens": "safety",
+					"key": "meats-2-safety-16"
+				},
+				{
+					"id": "fd_0058",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note)",
+					"because": "Braised rabbit legs come on the bone and are full of small, fine bones. A server should say so plainly, especially to a guest ordering for a child. Nothing on the card mentions bones.",
+					"fix": "Braised legs come on the bone, and rabbit has many small, fine bones.",
+					"lens": "safety",
+					"key": "meats-2-safety-17"
+				},
+				{
+					"id": "fd_0058",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often butter\"",
+					"because": "The card's line and pairs both say mustard cream, but cream (milk) is not in madeWith.",
+					"fix": "add \"sometimes cream\"",
+					"lens": "safety",
+					"key": "meats-2-safety-18"
+				},
+				{
+					"key": "meats-critic-1",
+					"id": "fd_0054",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (63 chars) is longer than both traps (58 and 60), so on this card the gist is the longest answer option. Every other card with traps has a trap at least as long as its gist.",
+					"because": "Length parity: the gist (63 chars) is longer than both traps (58 and 60), so on this card the gist is the longest answer option. Every other card with traps has a trap at least as long as its gist.",
+					"fix": "Shorten the gist, for example to \"Calf thymus or pancreas, crisp outside and creamy within\" (56 chars). That keeps both traps within about 4 characters of it and neither trap needs padding."
+				},
+				{
+					"key": "meats-critic-2",
+					"id": "fd_0051",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The Pheasant card (fd_0060) lists Guinea Hen under confusedWithTerms, and its notThis says the two birds both eat like a richer chicken. Guinea Hen does not link back: it lists Pheasant only under seeAlsoTerms. Its notThis also says it \"eats far milder than pheasant or venison\", which contradicts both cards. Guinea Hen's why says it has more flavor than chicken, and Pheasant's why says its flavor is only a little deeper than chicken, so the two cards put the birds at about the same level.",
+					"because": "The Pheasant card (fd_0060) lists Guinea Hen under confusedWithTerms, and its notThis says the two birds both eat like a richer chicken. Guinea Hen does not link back: it lists Pheasant only under seeAlsoTerms. Its notThis also says it \"eats far milder than pheasant or venison\", which contradicts both cards. Guinea Hen's why says it has more flavor than chicken, and Pheasant's why says its flavor is only a little deeper than chicken, so the two cards put the birds at about the same level.",
+					"fix": "Move Pheasant from seeAlsoTerms to confusedWithTerms, so seeAlsoTerms becomes [\"Poussin\"]. Rewrite the notThis to fit, for example: \"Not pheasant, the long-tailed autumn game bird. Guinea hen is farmed like chicken and is far milder than venison.\" (about 110 chars, ends in a full stop)."
+				},
+				{
+					"key": "meats-operator-1",
+					"id": "fd_0050",
+					"lens": "operator",
+					"field": "line",
+					"severity": "style",
+					"claim": "Escargots, garlic parsley butter, grilled baguette",
+					"because": "The contract refused the dish line: it read \"Escargots\", and a line has to carry the term as written for say-it-back to find it on a menu.",
+					"fix": "The singular, as most American menus print it."
+				},
+				{
+					"key": "meats-operator-2",
+					"id": "fd_0051",
+					"lens": "operator",
+					"field": "notThis",
+					"severity": "style",
+					"claim": "Not pheasant, the long-tailed autumn game bird. Guinea hen is farmed like chicken and is far milder than venison.",
+					"because": "The critic: the Pheasant card says the two birds eat alike, and this one called guinea hen far milder than venison, which is not the confusion a guest has.",
+					"fix": "Says what actually separates them (which bird it is), and agrees with the Pheasant card."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "meats-1-fact-1",
+					"action": "applied",
+					"reason": "Why now says the birds are force-fed corn in their last weeks, called gavage (kept 'last weeks' since geese run longer than two)."
+				},
+				{
+					"finding": "meats-1-fact-2",
+					"action": "applied",
+					"reason": "Changed to 'tastes sweet and buttery, only faintly of liver'."
+				},
+				{
+					"finding": "meats-1-fact-3",
+					"action": "applied",
+					"reason": "notThis now separates chicken liver mousse (lean liver whipped with butter) from pâté (a ground meat spread)."
+				},
+				{
+					"finding": "meats-1-fact-4",
+					"action": "applied",
+					"reason": "Trap why now reads 'It comes from farmed ducks or geese, force-fed in their last weeks, not wild birds.', dropping 'always' and the euphemism."
+				},
+				{
+					"finding": "meats-1-fact-5",
+					"action": "applied",
+					"reason": "Origin now reads 'French for fat liver, an ancient craft now centered on southwest France'."
+				},
+				{
+					"finding": "meats-1-fact-6",
+					"action": "applied",
+					"reason": "Replaced 'still raised half wild, active and lean' with 'a restless, active bird, naturally lean', which no longer contradicts notThis."
+				},
+				{
+					"finding": "meats-1-fact-7",
+					"action": "applied",
+					"reason": "Why now says ducks descend from strong fliers, so the breast is dark, red muscle."
+				},
+				{
+					"finding": "meats-1-fact-8",
+					"action": "applied",
+					"reason": "Replaced 'usually farmed, cleaned and cooked ahead' with 'bought cleaned and precooked, usually tinned'."
+				},
+				{
+					"finding": "meats-1-fact-9",
+					"action": "applied",
+					"reason": "Replaced the brioche-like trap with 'Sweet yeast dough fried in lard and rolled in cinnamon sugar' (no doughnut or beignet card on the roster) and adjusted its why."
+				},
+				{
+					"finding": "meats-1-fact-10",
+					"action": "applied",
+					"reason": "Pairs now lists partners only: 'Grits, sausage stuffing, a honey or sorghum glaze, pepper jelly'."
+				},
+				{
+					"finding": "meats-1-floor-11",
+					"action": "applied",
+					"reason": "Guest line now says what it is first (a gland, usually the thymus of veal), drops 'young veal' and the chicken comparison, and keeps the texture."
+				},
+				{
+					"finding": "meats-1-floor-12",
+					"action": "applied",
+					"reason": "Guest line now names the breast of the duck, rosy and sliced like a steak under crisp, golden skin, and drops the oversell ('golden' used in place of kitchen-jargon 'rendered')."
+				},
+				{
+					"finding": "meats-1-floor-13",
+					"action": "applied",
+					"reason": "Guest line now uses the suggested wording: a farm bird like chicken, deeper and more savory, firmer, leaner meat, a faint wild note."
+				},
+				{
+					"finding": "meats-1-floor-14",
+					"action": "applied",
+					"reason": "Capitalized Sauternes in the menu line."
+				},
+				{
+					"finding": "meats-1-safety-15",
+					"action": "applied",
+					"reason": "Note now gives the doneness fact (pink at the center when seared, torchon only gently cooked) and keeps the honest-answer advice."
+				},
+				{
+					"finding": "meats-1-safety-16",
+					"action": "applied",
+					"reason": "Added 'sometimes pork sausage' to madeWith to match the sausage stuffing in pairs."
+				},
+				{
+					"finding": "meats-1-safety-17",
+					"action": "applied",
+					"reason": "Added 'sometimes egg' to madeWith for the breaded, fried preparation."
+				},
+				{
+					"finding": "meats-2-fact-1",
+					"action": "applied",
+					"reason": "madeWith now lists chicken liver, butter, often egg, often shallot, often brandy or port, sometimes cream."
+				},
+				{
+					"finding": "meats-2-fact-2",
+					"action": "applied",
+					"reason": "Gist changed to 'Small, iron-rich chicken organ, silky unless it is overcooked', which drops pink as the goal and keeps the gist shorter than the alternatives."
+				},
+				{
+					"finding": "meats-2-fact-3",
+					"action": "applied",
+					"reason": "The pink sentence and its semicolon are gone. The why now reads 'Overcooked, it turns grainy, so kitchens cook it gently, then blend it with butter into a pâté or bake it into a silky parfait.'"
+				},
+				{
+					"finding": "meats-2-fact-4",
+					"action": "applied",
+					"reason": "The why now says 'so it is usually simmered three hours or more', and the guest line adds 'usually' so it no longer contradicts gyutan."
+				},
+				{
+					"finding": "meats-2-fact-5",
+					"action": "applied",
+					"reason": "Gist is now 'Dense, fatty cow muscle, usually simmered for hours, then sliced'. It is trimmed to 64 characters so it stays shorter than the 68-character trap."
+				},
+				{
+					"finding": "meats-2-fact-6",
+					"action": "applied",
+					"reason": "Gist is now 'Deep red, very lean deer meat, its loin served rare to medium rare', so rare applies only to the loin. At 66 characters it stays shorter than the 67-character trap."
+				},
+				{
+					"finding": "meats-2-fact-7",
+					"action": "applied",
+					"reason": "The guest line's second sentence now reads 'Loin and steaks are at their best rare to medium rare.'"
+				},
+				{
+					"finding": "meats-2-floor-8",
+					"action": "applied",
+					"reason": "The foie gras comparison is gone. The guest line now ends 'Most often they are whipped with butter into a smooth spread for toast.'"
+				},
+				{
+					"finding": "meats-2-floor-9",
+					"action": "applied",
+					"reason": "Same gist fix as meats-2-fact-2: the pink claim is replaced with 'silky unless it is overcooked'."
+				},
+				{
+					"finding": "meats-2-floor-10",
+					"action": "applied",
+					"reason": "Gist is now 'Soft beef fat from a leg's hollow core, roasted and spread on toast', which says where the fat sits without using bone or marrow."
+				},
+				{
+					"finding": "meats-2-floor-11",
+					"action": "applied",
+					"reason": "The trap is now 'Gristly, strong-tasting organ that stays chewy however long it cooks', which is not true of Chicken Liver or Pâté. Its why is updated to match."
+				},
+				{
+					"finding": "meats-2-floor-12",
+					"action": "applied",
+					"reason": "Gist is now 'Small farmed mammal with lean, pale, mild meat, often braised', which separates it from Quail and Guinea Hen."
+				},
+				{
+					"finding": "meats-2-safety-13",
+					"action": "applied",
+					"reason": "Same gist fix as meats-2-fact-2. The new gist is essentially the wording this finding proposed."
+				},
+				{
+					"finding": "meats-2-safety-14",
+					"action": "applied",
+					"reason": "Same why fix as meats-2-fact-3: the why no longer presents undercooked liver as correct, and it keeps the true point that overcooking makes it grainy."
+				},
+				{
+					"finding": "meats-2-safety-15",
+					"action": "applied",
+					"reason": "Same as meats-2-fact-1: 'often egg' is added to madeWith."
+				},
+				{
+					"finding": "meats-2-safety-16",
+					"action": "applied",
+					"reason": "'sometimes chestnut' and 'sometimes bread' are added, which brings madeWith to 7 items, the maximum. Milk from bread sauce is covered by the existing 'often cream'."
+				},
+				{
+					"finding": "meats-2-safety-17",
+					"action": "applied",
+					"reason": "Added the note 'Braised legs come on the bone, and rabbit has many small, fine bones.' The why does not already say this."
+				},
+				{
+					"finding": "meats-2-safety-18",
+					"action": "applied",
+					"reason": "Added 'sometimes cream' to Rabbit's madeWith to match the mustard cream in its line and pairs."
+				},
+				{
+					"finding": "meats-critic-1",
+					"action": "applied",
+					"reason": "Shortened the Sweetbreads gist to \"Calf thymus or pancreas, crisp outside and creamy within\" (56 chars), so both traps (58 and 60) are now longer than the gist and within about 4 characters of it."
+				},
+				{
+					"finding": "meats-critic-2",
+					"action": "applied",
+					"reason": "Moved Pheasant from seeAlsoTerms to confusedWithTerms, leaving seeAlsoTerms as [\"Poussin\"], and rewrote notThis so it names pheasant as the bird it is confused with and compares the guinea hen as far milder only to venison, which matches both cards."
+				},
+				{
+					"finding": "meats-operator-1",
+					"action": "applied",
+					"reason": "Operator: The singular, as most American menus print it."
+				},
+				{
+					"finding": "meats-operator-2",
+					"action": "applied",
+					"reason": "Operator: Says what actually separates them (which bird it is), and agrees with the Pheasant card."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0054",
+						"issue": "Length parity: the gist (63 chars) is longer than both traps (58 and 60), so on this card the gist is the longest answer option. Every other card with traps has a trap at least as long as its gist.",
+						"fix": "Shorten the gist, for example to \"Calf thymus or pancreas, crisp outside and creamy within\" (56 chars). That keeps both traps within about 4 characters of it and neither trap needs padding."
+					},
+					{
+						"id": "fd_0051",
+						"issue": "The Pheasant card (fd_0060) lists Guinea Hen under confusedWithTerms, and its notThis says the two birds both eat like a richer chicken. Guinea Hen does not link back: it lists Pheasant only under seeAlsoTerms. Its notThis also says it \"eats far milder than pheasant or venison\", which contradicts both cards. Guinea Hen's why says it has more flavor than chicken, and Pheasant's why says its flavor is only a little deeper than chicken, so the two cards put the birds at about the same level.",
+						"fix": "Move Pheasant from seeAlsoTerms to confusedWithTerms, so seeAlsoTerms becomes [\"Poussin\"]. Rewrite the notThis to fit, for example: \"Not pheasant, the long-tailed autumn game bird. Guinea hen is farmed like chicken and is far milder than venison.\" (about 110 chars, ends in a full stop)."
+					}
+				],
+				"notes": "No other problems found. Every roster row has a card, and ids and terms match the roster exactly. The prose mean is 669 characters per card, under the 720 ceiling; the highest totals are Foie Gras at 794 and Chicken Liver at 771. The Quail packet error is covered: its trap reads \"strong, gamy\" and matches /gam[ey]|strong/i. I found no verdict words, no em or en dashes and no banned substrings. The one temperature is on Chicken Liver, 74 C (165 F), and it is correctly formatted. Every accented or hesitation term has a say (Escargot, Foie Gras, Poussin, Venison), and no gist uses its own term or a listed word from mayNotAppearInGistOrTraps. Foie Gras links to both Chicken Liver and Pâté, and Chicken Liver links back to Foie Gras. None of the traps (wild hare, wild boar, sea snails, mountain oysters, laying hen) describes another card on the roster. Two optional trims: Venison says rare to medium rare in its gist, guest line and note, so its note is the easy cut if the mean ever has to drop. Magret could take an optional say such as mah-GRAY, but it is an alias, not the term, so the card does not need one."
+			},
+			"acceptedRejected": []
+		}
+	]
+}
