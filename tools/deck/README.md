@@ -35,7 +35,11 @@ and nowhere else.
    (culinary fact, floor usability, safety and no verdict) attack every chunk;
    a corrector answers every finding with a disposition; a critic reads the
    whole section and gets one bounded repair. About 17 agents for 22 cards.
-   Save what it returns as `tools/deck/out/<section>.json`.
+   Then `node tools/deck/take.mjs <section> <the run's output file>`: it saves
+   what the run returned as `tools/deck/out/<section>.json` and prints what a
+   person must read before merging (every `wrong` or `verdict` finding with what
+   the corrector did about it, anything undisposed or unplaced, the critic's
+   notes). It decides nothing.
 3. **Validate.** `node tools/deck/validate.mjs --draft tools/deck/out/<section>.json --section <section>`
    The build's own contract, against the draft laid over the deck. Fix what it
    names in the draft (or re-run the chunk) until it is clean.
