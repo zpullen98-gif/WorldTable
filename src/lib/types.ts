@@ -294,7 +294,8 @@ export interface LexiconEntry {
 	 * so this shape has to hold both a definition card and an ingredient entry.
 	 * They are OMITTED rather than emitted empty, which is why these are `?`
 	 * and not `| null`: five empty keys on 479 terms is weight every reader
-	 * pays for on every install, against a precache budget with ~195 KB left.
+	 * pays for on every install, against a capped precache budget
+	 * (tools/verify-build.mjs holds the cap and prints what is left).
 	 *
 	 * tools/derive/lexicon-supplement.mjs REQUIRES all five on every entry it
 	 * adds, so optional here never means optional to write.

@@ -103,8 +103,10 @@ render function by name, stop.
   virtualisation: it breaks Ctrl+F, print, and the a11y tree for a problem that
   measurement says we don't have.
 - Prerendering and precaching are separate decisions. The service worker caches
-  the shell + data + fonts (~1 MB gzip) and rebuilds pages from the
-  `shell.html` navigation fallback. Never precache the 1,070 HTML files.
+  the shell + data + fonts and rebuilds pages from the `shell.html` navigation
+  fallback. Never precache the prerendered HTML files. The precache has a cap,
+  asserted in `tools/verify-build.mjs` with its history and the live figure;
+  every emitted `.js` chunk counts against it, lazy import or not.
 - Day/night are full token sets in `src/lib/styles/tokens.css`, not overrides on
   a body class. Service is read synchronously in `src/app.html` before first
   paint: that is the only reason preferences live in localStorage while

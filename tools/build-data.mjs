@@ -743,8 +743,9 @@ const geographyHeld = gateGeography(chapters.map((c) => c.name));
    than as empty strings and arrays on all 479 sealed terms. Two reasons, and
    the second is the one that matters: a `choose: ''` on a cheese is a promise
    the page has to test for anyway, and the lexicon chunk is precached against
-   a 2.50 MB gzipped budget with roughly 215 KB left, so five empty keys 479
-   times is weight every reader pays for on every install. `!== undefined` and
+   a capped budget (tools/verify-build.mjs holds the cap and prints what is
+   left), so five empty keys 479 times is weight every reader pays for on every
+   install. `!== undefined` and
    not a truthiness test, because an entry whose season is a deliberate empty
    array, meaning genuinely year round, must keep it. */
 const atlasFields = (e) => {

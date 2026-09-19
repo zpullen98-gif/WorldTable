@@ -14,8 +14,8 @@
  * definition is copied here. Inlining the 176 definitions costs 159,861 bytes
  * raw / 64,982 gzipped and duplicates lexicon.json, which is already a lazy
  * chunk; slug-and-category references cost 2,460 gzipped. The precache budget
- * has 0.68 MB of headroom against a 2.00 MB cap, and this is not where to spend
- * it.
+ * is capped (tools/verify-build.mjs holds the cap and prints what is left), and
+ * a second copy of 176 definitions is not where to spend it.
  *
  * ## What is authored and what is checked
  *

@@ -330,7 +330,26 @@ check('offline navigation fallback resolves to a precached URL', () => {
 	return `${fallback} -> ${resolved.replace('https://example.test', '')}`;
 });
 
-check('precache stays under 2.5 MB gzipped', () => {
+/* The floor deck's own weight, measured the way the budget is: each emitted file
+   compacted and gzipped, summed. It sits beside the per-recipe figure because a
+   raise argued from the wrong number is how a budget stops meaning anything:
+   the deck adds terms, not recipes, and the per-recipe figure cannot see it. */
+function deckCost() {
+	const at = (name) => join(ROOT, 'src', 'lib', 'data', name);
+	if (!existsSync(at('floor-deck.json'))) return null;
+	const cards = JSON.parse(readFileSync(at('floor-deck.json'), 'utf8')).cards?.length ?? 0;
+	if (!cards) return null;
+	let gz = 0;
+	for (const name of ['floor-deck.json', 'floor-deck.traps.json', 'floor-deck.index.json']) {
+		if (!existsSync(at(name))) continue;
+		gz += gzipSync(JSON.stringify(JSON.parse(readFileSync(at(name), 'utf8')))).length;
+	}
+	return { cards, gz };
+}
+
+const CAP_MB = 2.65;
+
+check(`precache stays under ${CAP_MB} MB gzipped`, () => {
 	let raw = 0;
 	let gz = 0;
 	for (const f of files) {
@@ -360,11 +379,52 @@ check('precache stays under 2.5 MB gzipped', () => {
 
 	   Raise it again only for a comparable gain in what the reader gets offline.
 	   A jump with no new content is a regression in something shared, and the
-	   per-recipe figure below is what makes the difference visible. */
+	   per-recipe figure below is what makes the difference visible.
+
+	   Raised from 2.5 MB to 2.65 MB on 2026-09-19, by the owner's decision, for
+	   the Floor Deck: a staff-training deck of 300 terms that has to install
+	   with the app and open in a walk-in with no signal, from the first launch.
+	   The alternative weighed was shipping the deck as a fetched static JSON
+	   behind a runtime cache, which keeps the cap and makes offline best effort;
+	   a training tool that works only after it has been opened once on a good
+	   connection was the wrong trade. At the raise the precache stood at
+	   2,619,178 bytes, 2,262 under the old cap, and the new one is
+	   2.65 * 1048576 = 2,778,726. The per-recipe figure cannot argue this
+	   raise, because the deck adds no recipes, so the deck's own cost per card
+	   is printed beside it. The next raise is argued from whichever of the two
+	   figures the new content actually moves.
+
+	   This check is the only place a headroom figure is written down. Every
+	   copy of one in a comment elsewhere went stale within a month. */
 	const perRecipe = gz / expectedRecipes;
-	assert(mb < 2.5, `${mb.toFixed(2)} MB gzipped`);
-	return `${mb.toFixed(2)} MB gzipped, ${(perRecipe / 1024).toFixed(2)} KB per recipe ` +
-		`(${(raw / 1048576).toFixed(2)} MB raw)`;
+	const deck = deckCost();
+	assert(mb < CAP_MB, `${mb.toFixed(3)} MB gzipped against a cap of ${CAP_MB}`);
+	return `${mb.toFixed(3)} MB gzipped, ${(perRecipe / 1024).toFixed(2)} KB per recipe, ` +
+		(deck
+			? `${(deck.gz / deck.cards / 1024).toFixed(2)} KB per deck card ` +
+				`(${deck.cards} cards, ${(deck.gz / 1024).toFixed(1)} KB)`
+			: 'deck not built') +
+		` (${(raw / 1048576).toFixed(2)} MB raw)`;
+});
+
+check('the floor deck installs with the app', () => {
+	const deck = deckCost();
+	if (!deck) return 'deck not built';
+	/* Find the chunk by its first minted id, not by name: chunk names are
+	   content hashes. A deck that is lazily imported and then left out of the
+	   precache would pass every other check here and fail a server in a
+	   basement. */
+	/* The bare id, not the quoted one: Vite may emit a large JSON module as
+	   JSON.parse("...") with its quotes escaped. */
+	const chunks = files.filter(
+		(f) => extname(f) === '.js' && readFileSync(f, 'utf8').includes('fd_0001')
+	);
+	assert(chunks.length, 'no built chunk carries fd_0001: the deck never reached the bundle');
+	const missing = chunks
+		.map(rel)
+		.filter((r) => !precached.some((u) => u === '/' + r || u === r));
+	assert(!missing.length, `these hold deck data and are NOT in the precache: ${missing.join(', ')}`);
+	return `${chunks.length} chunk(s), all precached`;
 });
 
 // ── offline integrity ────────────────────────────────────────────────────────
