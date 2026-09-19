@@ -483,8 +483,10 @@ describe('what shipped', () => {
 		}
 		expect(index.cards.map((c) => c.id)).toEqual(deck.cards.map((c) => c.id));
 	});
+	/* A pin, so the ceiling moves only in a commit that says why. It moved once,
+	   128,000 to 140,000, with the owner's 2.65 to 2.70 MB cap decision. */
 	it('stays under the ceiling the precache cap was raised for', () => {
-		expect(DECK_GZ_CEILING).toBeLessThanOrEqual(128_000);
+		expect(DECK_GZ_CEILING).toBeLessThanOrEqual(140_000);
 	});
 });
 

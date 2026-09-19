@@ -86,10 +86,17 @@ import language from './floor-deck/language.mjs';
 const HERE = dirname(fileURLToPath(import.meta.url));
 export const LEDGER_PATH = join(HERE, 'floor-deck.ledger.json');
 
-/** The three emitted files together may not pass this, gzipped. Measured, not
- *  guessed: 300 cards at the contract's aims came to 127.6 KB. The precache cap
- *  was raised for exactly this much and the five study routes share what is left. */
-export const DECK_GZ_CEILING = 128_000;
+/** The three emitted files together may not pass this, gzipped.
+ *
+ *  First set at 128,000 from a pilot measurement (300 cards at the contract's
+ *  aims came to 127.6 KB) when the precache cap went to 2.65 MB. Moved to
+ *  140,000 when the owner took the cap to 2.70 (verify-build.mjs has the
+ *  argument): three written sections projected 126.8 KB at 300 on the straight
+ *  line, ~121 KB at the last section's marginal rate, and the owner asked for
+ *  depth over trimming. This leaves ~16 KB for sections that run long and
+ *  still keeps the deck's growth well inside what the cap raise bought, so the
+ *  producer screens and the study routes are never squeezed by prose. */
+export const DECK_GZ_CEILING = 140_000;
 
 /** Flip to true when the last planned card is written. From then on a stub, a
  *  missing packet term or a packet error with no trap fails the build. */

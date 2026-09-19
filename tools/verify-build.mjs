@@ -352,7 +352,7 @@ function deckCost() {
 	return { cards, gz, firstId: emitted[0].id };
 }
 
-const CAP_MB = 2.65;
+const CAP_MB = 2.7;
 
 check(`precache stays under ${CAP_MB} MB gzipped`, () => {
 	let raw = 0;
@@ -398,6 +398,18 @@ check(`precache stays under ${CAP_MB} MB gzipped`, () => {
 	   raise, because the deck adds no recipes, so the deck's own cost per card
 	   is printed beside it. The next raise is argued from whichever of the two
 	   figures the new content actually moves.
+
+	   Raised again, 2.65 to 2.70 MB, later the same day and by the same owner,
+	   argued from the deck figure as the paragraph above asks. Three sections in
+	   (74 cards), a section of cards measured about 396 bytes each at the
+	   margin, so the 226 still to write needed ~90 KB, and Producers in My Menu
+	   was still to ship, against ~97 KB left under 2.65: a finish within a few
+	   KB either side. The owner was offered shorter cards or fewer of them and
+	   chose neither, in so many words: raise it by whatever makes this the best
+	   training app it can be. 2.70 is the smallest round figure that carries
+	   every card at the depth the first three sections set, plus the producer
+	   screens, with room to spare, and it is 2.70 * 1048576 = 2,831,155. At the
+	   raise the last measured build stood at 2.544 MB with 44 cards.
 
 	   This check is the only place a headroom figure is written down. Every
 	   copy of one in a comment elsewhere went stale within a month. */

@@ -4,8 +4,9 @@
  *
  *   node tools/deck/measure.mjs
  *
- * The precache cap was raised to 2.65 MB for a deck of at most
- * DECK_GZ_CEILING bytes, and the five study routes share what is left. The
+ * The precache cap (2.70 MB, verify-build.mjs) was raised for a deck of at
+ * most DECK_GZ_CEILING bytes, and the study routes and the producer screens
+ * share what is left. The
  * build fails when the ceiling is passed; this fails EARLIER, when the rate a
  * section was written at would pass it by the time all 300 are in, which is
  * when trimming one section is still cheaper than trimming fifteen.
@@ -52,5 +53,5 @@ if (problems.length) {
 }
 /* Only a deck at least a fifth written projects tightly enough to fail on. */
 const over = cards >= planned / 5 && projected > DECK_GZ_CEILING;
-if (over) console.error(`\n  ✗ at this rate the finished deck passes its ceiling. Tighten this section now; the ceiling does not move\n`);
+if (over) console.error(`\n  ✗ at this rate the finished deck passes its ceiling. Tighten this section now; the ceiling moves only by the owner's decision\n`);
 process.exit(problems.length || over ? 1 : 0);

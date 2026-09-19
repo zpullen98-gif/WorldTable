@@ -33,7 +33,7 @@ at **$49.99/month, unlimited staff, one shared login**.
 | OutsideOfTime | branch `main`, HEAD `71e43b27a`, tree clean, **no git remote — never pushed** |
 | Tests | **898 unit** (60 files) · **145 e2e** — **the whole suite is green** |
 | Gates | `build:data` all pass · `verify:build` **22/22** |
-| Precache | Cap **2.65 MB** gzipped. It moved from 2 MB to 2.5 MB when the corpus grew past 970 recipes, and from 2.5 to 2.65 on 2026-09-19 by the owner's decision, for the Floor Deck (a staff-training deck that must install with the app). At that raise the precache stood at 2,619,178 bytes. The live figure is whatever `npm run verify:build` prints; no copy of it is kept here, because every copy went stale |
+| Precache | Cap **2.70 MB** gzipped. It moved from 2 MB to 2.5 MB when the corpus grew past 970 recipes, from 2.5 to 2.65 on 2026-09-19 by the owner's decision for the Floor Deck (a staff-training deck that must install with the app; at that raise the precache stood at 2,619,178 bytes), and to 2.70 the same day when three written sections showed the full deck at its written depth would finish within a few KB of 2.65 and the owner chose depth over trimming. `tools/verify-build.mjs` carries both arguments. The live figure is whatever `npm run verify:build` prints; no copy of it is kept here, because every copy went stale |
 | Routes | 29 · Derived JSON | 24 files (`assessability.json` joined) |
 | Deploy | `table/` re-synced for the 3 Sep audit pass, at `4942968`. See below. |
 
