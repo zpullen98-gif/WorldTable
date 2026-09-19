@@ -1,0 +1,874 @@
+{
+	"section": "custards",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0249",
+				"fd_0250",
+				"fd_0251",
+				"fd_0252",
+				"fd_0253",
+				"fd_0254",
+				"fd_0255",
+				"fd_0256",
+				"fd_0257",
+				"fd_0258",
+				"fd_0259",
+				"fd_0260",
+				"fd_0261",
+				"fd_0262",
+				"fd_0263",
+				"fd_0264",
+				"fd_0265"
+			],
+			"findings": [
+				{
+					"id": "fd_0249",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "Think melted vanilla ice cream, only richer.",
+					"because": "A classic anglaise is made with milk (cream optional), so it is usually leaner than an ice cream base, not richer. Melted French-style ice cream is the same custard with more cream and sugar.",
+					"fix": "Think melted vanilla ice cream, only lighter.",
+					"lens": "fact",
+					"key": "custards-1-fact-1"
+				},
+				{
+					"id": "fd_0251",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "This is chocolate melted into cream, soft and spoonable.",
+					"because": "A trap's why must be true, but firm ganache, the chocolate-heavy kind rolled into truffles, is not spoonable. The card's own why says it sets firm enough to roll.",
+					"fix": "This is chocolate melted into cream, and it never snaps.",
+					"lens": "fact",
+					"key": "custards-1-fact-2"
+				},
+				{
+					"id": "fd_0251",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "often butter",
+					"because": "Classic ganache is chocolate and cream only. Butter is an optional enrichment, and 'often' overstates it.",
+					"fix": "sometimes butter",
+					"lens": "fact",
+					"key": "custards-1-fact-3"
+				},
+				{
+					"id": "fd_0252",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "Dense dessert baked in a water bath until firm enough to slice cleanly",
+					"because": "This is a true description of a baked custard such as crème caramel, and the Custard card's own why says so. A trap must not describe another card on the roster truthfully.",
+					"fix": "Dense dessert of cream and yolks, baked and chilled, then sliced",
+					"lens": "fact",
+					"key": "custards-1-fact-4"
+				},
+				{
+					"id": "fd_0252",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"egg\", \"cream\", \"sugar\", \"often chocolate\", \"sometimes gelatin\"",
+					"because": "The classic French chocolate mousse is chocolate, eggs and often butter, with no cream. Butter is missing from the list. Some versions have no egg and others have no cream, so neither should be listed as a given.",
+					"fix": "\"often egg\", \"often cream\", \"sugar\", \"often chocolate\", \"sometimes butter\", \"sometimes gelatin\"",
+					"lens": "fact",
+					"key": "custards-1-fact-5"
+				},
+				{
+					"id": "fd_0252",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Chilled dessert made airy",
+					"because": "Savory mousses (chicken liver, duck liver, salmon) are common on starter menus. A new hire told it is always a dessert will be caught out.",
+					"fix": "Chilled dish, usually sweet, made airy",
+					"lens": "fact",
+					"key": "custards-1-fact-6"
+				},
+				{
+					"id": "fd_0253",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Ours is a frozen dessert, whipped yolks and cream set in a mold and sliced.",
+					"because": "This asserts the house version when the card itself says American menus use the word for a layered glass. A server at a place that serves the glass would be telling the guest something false.",
+					"fix": "The French one is a frozen dessert, whipped yolks and cream set in a mold and sliced.",
+					"lens": "fact",
+					"key": "custards-1-fact-7"
+				},
+				{
+					"id": "fd_0255",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "firm outside and meltingly soft in the middle",
+					"because": "Only dipped truffles have a firm shell. A classic cocoa-dusted truffle, the kind on this card's own menu line, is soft ganache all the way through.",
+					"fix": "soft and rich all the way through",
+					"lens": "fact",
+					"key": "custards-1-fact-8"
+				},
+				{
+					"id": "fd_0255",
+					"field": "lexiconSlug",
+					"severity": "unclear",
+					"claim": "ganache-bloom-and-chocolate-craft",
+					"because": "That entry's opening is about ganache ratios and bloom. It mentions truffles only in passing, so it is the Ganache card's essay, not a long-form entry on the chocolate truffle itself.",
+					"fix": "omit lexiconSlug",
+					"lens": "fact",
+					"key": "custards-1-fact-9"
+				},
+				{
+					"id": "fd_0249",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "Think melted vanilla ice cream, only richer.",
+					"because": "Crème anglaise is the ice cream base itself, and it is usually made with milk or part milk, while ice cream leans on cream. It is not richer than melted ice cream, often lighter, so a guest expecting something heavier is misled. The card's own why says the same base churns into ice cream.",
+					"fix": "Think melted vanilla ice cream, served as a sauce.",
+					"lens": "floor",
+					"key": "custards-1-floor-10"
+				},
+				{
+					"id": "fd_0250",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Milk or cream thickened with egg by gentle heat, stirred or baked",
+					"because": "On the Crème Anglaise, Crème Brûlée and Pot de Crème questions, a reader would accept this gist too, since each of those is milk or cream thickened with egg. Swap it the other way and the fd_0249 gist is also true of Custard. The umbrella term needs a gist that says it is the family name, not one member.",
+					"fix": "The family name for any milk or cream set by egg over gentle heat",
+					"lens": "floor",
+					"key": "custards-1-floor-11"
+				},
+				{
+					"id": "fd_0252",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's light and airy, like a spoonable cloud of chocolate.",
+					"because": "This line assumes the mousse is chocolate. The card's own why names fruit purée as a base, so a server with a lemon or passion fruit mousse on the menu would describe the wrong dish.",
+					"fix": "It's light and airy, whipped so it melts on the tongue.",
+					"lens": "floor",
+					"key": "custards-1-floor-12"
+				},
+				{
+					"id": "fd_0253",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Ours is a frozen dessert, whipped yolks and cream set in a mold and sliced. It's like ice cream, only softer and silkier, and it never needs churning.",
+					"because": "The line assumes the house parfait is the French frozen kind. In most American dining rooms, and at every brunch, a parfait is layered yogurt or ice cream with fruit, so a new hire reading this card would describe the wrong dish. Also, 'never needs churning' is kitchen talk a guest does not care about.",
+					"fix": "It's a frozen dessert of whipped eggs and cream, sliced from a mold, softer and silkier than ice cream. At brunch, it's layered yogurt and fruit.",
+					"lens": "floor",
+					"key": "custards-1-floor-13"
+				},
+				{
+					"id": "fd_0253",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Frozen loaf of whipped yolks and cream in France, a layered glass in America",
+					"because": "'A layered glass' reads as glassware, not a dessert, and the France/America split is awkward as an answer option. It is also the longest gist in the chunk.",
+					"fix": "Sliced frozen mold of whipped yolks and cream, or layers in a tall glass",
+					"lens": "floor",
+					"key": "custards-1-floor-14"
+				},
+				{
+					"id": "fd_0254",
+					"field": "gist",
+					"severity": "style",
+					"claim": "set with gelatin into a soft, trembling mold",
+					"because": "It is the dessert that trembles once it is turned out, not the mold, so the phrase does not make sense as a description.",
+					"fix": "Sweetened cream set with gelatin, turned out soft and trembling",
+					"lens": "floor",
+					"key": "custards-1-floor-15"
+				},
+				{
+					"id": "fd_0256",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "denser and silkier than ours, served a little softer",
+					"because": "'Than ours' sounds like the restaurant's own ice cream. If the house churns its own ice cream, the line knocks it down, and if it does not, a guest will not know what 'ours' means.",
+					"fix": "denser and silkier, served a little softer",
+					"lens": "floor",
+					"key": "custards-1-floor-16"
+				},
+				{
+					"id": "fd_0253",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"often fruit\", ... \"sometimes yogurt\"",
+					"because": "The card's gist and why cover the American layered parfait too. That version is often built with granola, which holds oats, wheat and nuts, and sometimes with flavored gelatin (the packet itself said \"flavored gelatins\"). A guest who avoids gelatin or nuts gets no flag for either. Fruit is not an ingredient an allergy needs flagged, so it can give up its place.",
+					"fix": "[\"egg yolk\", \"cream\", \"sugar\", \"sometimes pistachio\", \"sometimes yogurt\", \"sometimes granola\", \"sometimes gelatin\"]",
+					"lens": "safety",
+					"key": "custards-1-safety-17"
+				},
+				{
+					"id": "fd_0257",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "It is never churned, so it melts fast and tastes clean",
+					"because": "In Sicily granita is classically made in a granita machine that stirs the mix slowly and continuously as it freezes; the fork-raked pan is the home method. Saying it is never churned is false of the Sicilian original the card names.",
+					"fix": "Bars stir it slowly in a machine instead of churning in air, so it melts fast and tastes clean",
+					"lens": "fact",
+					"key": "custards-2-fact-1"
+				},
+				{
+					"id": "fd_0257",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "frozen and scraped into crunchy flakes",
+					"because": "Sicilian granita, especially in the east around Catania and Messina, is fine-grained and almost creamy, not crunchy flakes. Coarse flakes are the hand-scraped restaurant style, so the Sicilian attribution plus crunchy flakes misleads.",
+					"fix": "frozen into fine, icy crystals",
+					"lens": "fact",
+					"key": "custards-2-fact-2"
+				},
+				{
+					"id": "fd_0260",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "Rich, cold and made in house.",
+					"because": "Whether a given restaurant makes its ice cream in house varies by kitchen; a new hire repeating this card would state an unverified fact about the house to a guest.",
+					"fix": "Rich, cold and smooth.",
+					"lens": "fact",
+					"key": "custards-2-fact-3"
+				},
+				{
+					"id": "fd_0259",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"fruit\", \"sugar\", \"sometimes wine\", \"sometimes liqueur\"",
+					"because": "Some sorbets, older French recipes and many Italian sorbetti, are stabilized with whipped egg white; a guest with an egg allergy would need that flagged, as the Sherbet card already does.",
+					"fix": "\"fruit\", \"sugar\", \"sometimes egg white\", \"sometimes wine\", \"sometimes liqueur\"",
+					"lens": "fact",
+					"key": "custards-2-fact-4"
+				},
+				{
+					"id": "fd_0260",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "Our ice cream is made with cream, milk and sugar, churned until thick and smooth. Rich, cold and made in house.",
+					"because": "A card is repeated at every restaurant using the deck. \"Made in house\" and \"Our\" state a fact about this kitchen that the card cannot know, and many rooms buy their ice cream in. A server repeating it would be telling guests something false.",
+					"fix": "It's cream, milk and sugar churned as it freezes, so it comes out thick, smooth and rich.",
+					"lens": "floor",
+					"key": "custards-2-floor-5"
+				},
+				{
+					"id": "fd_0260",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Dairy base churned as it freezes, beating in air for a soft scoop",
+					"because": "This is equally true of Gelato (fd_0256), which is also a dairy base churned as it freezes and served as a soft scoop. On a test the two gists could be swapped. What sets ice cream apart is more fat and more air.",
+					"fix": "Rich, high-fat dairy base churned with plenty of air to scoop",
+					"lens": "floor",
+					"key": "custards-2-floor-6"
+				},
+				{
+					"id": "fd_0259",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Smooth churned ice of fruit juice or puree and sugar syrup",
+					"because": "Sherbet (fd_0258) is also a smooth churned ice of fruit and sugar. This gist would be accepted for Sherbet too, because it never says what sets sorbet apart: the base is only fruit, sugar and water.",
+					"fix": "Smooth churned ice of just fruit, sugar and water",
+					"lens": "floor",
+					"key": "custards-2-floor-7"
+				},
+				{
+					"id": "fd_0261",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Frozen mousse of whipped yolks and cream, sliced from a mold",
+					"because": "This is word for word the definition of the French frozen parfait, which the card's own notThis names as a close cousin. It would be accepted for Parfait (fd_0253), so the two gists can be swapped. The Italian origin and the soft slice are what mark this one.",
+					"fix": "Italian frozen mousse, soft enough to slice straight from the freezer",
+					"lens": "floor",
+					"key": "custards-2-floor-8"
+				},
+				{
+					"id": "fd_0261",
+					"field": "say",
+					"severity": "wrong",
+					"claim": "seh-mee-FRAY-doh",
+					"because": "Freddo is said FRED-doh, both in Italian and in American dining rooms. \"FRAY\" teaches a vowel that no one uses at the table.",
+					"fix": "seh-mee-FRED-oh",
+					"lens": "floor",
+					"key": "custards-2-floor-9"
+				},
+				{
+					"id": "fd_0262",
+					"field": "say",
+					"severity": "style",
+					"claim": "krem broo-LAY",
+					"because": "The respelling key asks for one stressed syllable in capitals in every word. As a one-syllable word, \"krem\" takes the stress, and it is said with weight in the dining room.",
+					"fix": "KREM broo-LAY",
+					"lens": "floor",
+					"key": "custards-2-floor-10"
+				},
+				{
+					"id": "fd_0257",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's a Sicilian ice, sweetened fruit, coffee or almond frozen and scraped into crunchy flakes. Lighter and brighter than any scoop.",
+					"because": "The comma splice after \"ice\" is hard to say aloud without stumbling. \"Brighter than any scoop\" oversells, and it is not true of the espresso granita the card's own line offers.",
+					"fix": "It's a Sicilian ice of sweet fruit, coffee or almond, frozen and scraped into crunchy flakes. Light and refreshing.",
+					"lens": "floor",
+					"key": "custards-2-floor-11"
+				},
+				{
+					"id": "fd_0258",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's a fruit frozen dessert with just a little milk or cream churned in.",
+					"because": "\"A fruit frozen dessert\" is an awkward noun stack that a nervous new hire will trip over. \"Fruit ice\" says the same thing in the way people talk.",
+					"fix": "It's a fruit ice with just a little milk or cream churned in.",
+					"lens": "floor",
+					"key": "custards-2-floor-12"
+				},
+				{
+					"id": "fd_0263",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Loose, silky baked custard served in its own little cup, often chocolate",
+					"because": "The card's own why says it sets soft and dense. \"Loose\" suggests runny or pourable, which pot de creme is not. The gist also runs over the 68-character aim.",
+					"fix": "Soft-set, silky baked custard in its own little cup, often chocolate",
+					"lens": "floor",
+					"key": "custards-2-floor-13"
+				},
+				{
+					"id": "fd_0260",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "Our ice cream is made with cream, milk and sugar, churned until thick and smooth. Rich, cold and made in house.",
+					"because": "The card states this kitchen's recipe as a closed list and says it is made in house. A card cannot know either. A guest hears a complete ingredient list, when many ice creams also hold egg yolk, flavorings or mix-ins, and some are bought in.",
+					"fix": "It's cream, milk and sugar churned as it freezes until thick and smooth. Rich, cold and soft enough to scoop.",
+					"lens": "safety",
+					"key": "custards-2-safety-14"
+				},
+				{
+					"id": "fd_0259",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It's fruit, sugar and water churned smooth like ice cream.",
+					"because": "Read aloud, this is a complete ingredient list and sounds like a promise that there is no egg or dairy. Sorbets are classically stabilized with egg white, and some hold wine, liqueur or honey. Recipes vary.",
+					"fix": "It's a fruit ice churned smooth like ice cream.",
+					"lens": "safety",
+					"key": "custards-2-safety-15"
+				},
+				{
+					"id": "fd_0259",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"fruit\", \"sugar\", \"sometimes wine\", \"sometimes liqueur\"",
+					"because": "Egg white is a classic sorbet stabilizer, and the Sherbet card on this roster already lists it. Leaving it out makes sorbet look like the egg-free choice to a guest with an egg allergy.",
+					"fix": "\"fruit\", \"sugar\", \"sometimes egg white\", \"sometimes wine\", \"sometimes liqueur\"",
+					"lens": "safety",
+					"key": "custards-2-safety-16"
+				},
+				{
+					"id": "fd_0259",
+					"field": "why",
+					"severity": "verdict",
+					"claim": "as a base of just fruit and sugar",
+					"because": "\"Just\" makes this a complete list and implies nothing else is in it, such as egg white, dairy or alcohol.",
+					"fix": "as a base built on fruit and sugar",
+					"lens": "safety",
+					"key": "custards-2-safety-17"
+				},
+				{
+					"id": "fd_0259",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "A classic one is just fruit, sugar and water churned smooth, not a yogurt base.",
+					"because": "\"Just\" is the same exhaustive claim again, and it is false wherever egg white or alcohol is used.",
+					"fix": "It is a fruit and sugar syrup base churned smooth, not a yogurt base.",
+					"lens": "safety",
+					"key": "custards-2-safety-18"
+				},
+				{
+					"id": "fd_0258",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "with just a little milk or cream churned in",
+					"because": "\"Just a little\" plays the dairy down. A guest with a milk allergy may take it to mean the amount is too small to matter. The milk is in it, and that is the fact to state.",
+					"fix": "with milk or cream churned in",
+					"lens": "safety",
+					"key": "custards-2-safety-19"
+				},
+				{
+					"id": "fd_0258",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "Not sorbet, which is just fruit, sugar and water.",
+					"because": "This tells servers that sorbet has no dairy or egg, which is a free-from assurance. Sorbets often hold egg white or alcohol.",
+					"fix": "Not sorbet, whose classic base is fruit and sugar.",
+					"lens": "safety",
+					"key": "custards-2-safety-20"
+				},
+				{
+					"id": "fd_0261",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "(no note) with why: \"Egg yolks and sugar are whisked over heat into a foam\" and madeWith \"often egg white\"",
+					"because": "The why says the eggs are cooked. But many semifreddo recipes fold in whipped egg white, and sometimes yolk, that is never heated. It is frozen, not cooked, so a server should be able to say plainly that the egg may be uncooked.",
+					"fix": "Some versions fold in whipped egg that is never cooked. Ask the kitchen how theirs is made.",
+					"lens": "safety",
+					"key": "custards-2-safety-21"
+				},
+				{
+					"id": "fd_0261",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"sometimes nuts\"",
+					"because": "The house rule is to name nuts. The classic semifreddo nuts are almond, hazelnut and pistachio, and the card's own menu line uses pistachio.",
+					"fix": "\"sometimes almond, hazelnut or pistachio\"",
+					"lens": "safety",
+					"key": "custards-2-safety-22"
+				},
+				{
+					"id": "fd_0265",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "This one is uncooked cream held up only by air.",
+					"because": "'Only by air' reads as an assurance that nothing else holds it up. Many kitchens stabilize Chantilly for plating or piping with gelatin, mascarpone or cornstarch. A server could repeat this as 'it's just cream, no gelatin' to a guest who avoids gelatin.",
+					"fix": "This one is uncooked cream lifted by whipped-in air.",
+					"lens": "safety",
+					"key": "custards-3-safety-1"
+				},
+				{
+					"id": "fd_0265",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"cream\", \"sugar\", \"vanilla\", \"sometimes liqueur\"",
+					"because": "Restaurant Chantilly is often stabilized with gelatin, which matters to a guest who avoids gelatin because it is an animal product or for religious reasons. The list is short enough to flag it without going over the item limit.",
+					"fix": "\"cream\", \"sugar\", \"vanilla\", \"sometimes liqueur\", \"sometimes gelatin\"",
+					"lens": "safety",
+					"key": "custards-3-safety-2"
+				},
+				{
+					"key": "custards-critic-1",
+					"id": "fd_0252",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The guest line does not answer 'what is that?'. 'It's light and airy, whipped so it melts on the tongue' never says it is a chilled dessert or what it is made from. At 93 characters it is also under the 100 to 150 aim.",
+					"because": "The guest line does not answer 'what is that?'. 'It's light and airy, whipped so it melts on the tongue' never says it is a chilled dessert or what it is made from. At 93 characters it is also under the 100 to 150 aim.",
+					"fix": "Rewrite, e.g. \"It's a chilled dessert, often chocolate, lightened with whipped cream or egg whites. Rich flavor, but it melts away and never sits heavy.\""
+				},
+				{
+					"key": "custards-critic-2",
+					"id": "fd_0253",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The menu line nearly duplicates Semifreddo's (fd_0261). 'Frozen honey parfait, roasted figs, pistachio' against 'Honey semifreddo, roasted figs, pistachio' leaves two confusable cards with the same plate.",
+					"because": "The menu line nearly duplicates Semifreddo's (fd_0261). 'Frozen honey parfait, roasted figs, pistachio' against 'Honey semifreddo, roasted figs, pistachio' leaves two confusable cards with the same plate.",
+					"fix": "Change one of them, e.g. Parfait line: \"Frozen nougat parfait, raspberry coulis, almond tuile\"."
+				},
+				{
+					"key": "custards-critic-3",
+					"id": "fd_0254",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (63) is longer than the only trap (59), so the gist is the longest option.",
+					"because": "Length parity: the gist (63) is longer than the only trap (59), so the gist is the longest option.",
+					"fix": "Shorten the gist, e.g. \"Sweet cream set with gelatin, turned out soft and trembling\" (58)."
+				},
+				{
+					"key": "custards-critic-4",
+					"id": "fd_0261",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (60) is longer than the only trap (57).",
+					"because": "Length parity: the gist (60) is longer than the only trap (57).",
+					"fix": "Shorten the gist, e.g. \"Italian frozen mousse, soft enough to slice when frozen\" (55), or \"Italian frozen mousse sliced soft from a mold\"."
+				},
+				{
+					"key": "custards-critic-5",
+					"id": "fd_0259",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (63) is longer than the only trap (62).",
+					"because": "Length parity: the gist (63) is longer than the only trap (62).",
+					"fix": "Shorten the gist, e.g. \"Smooth churned fruit ice on sugar syrup, clean and sharp\" (55)."
+				},
+				{
+					"key": "custards-critic-6",
+					"id": "fd_0262",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The menu line 'Vanilla bean creme brulee, fresh berries' drops the accents, so it does not carry the term 'Crème Brûlée' as written. The note ('torched just before it goes out') also restates the why's 'burned on top to order'.",
+					"because": "The menu line 'Vanilla bean creme brulee, fresh berries' drops the accents, so it does not carry the term 'Crème Brûlée' as written. The note ('torched just before it goes out') also restates the why's 'burned on top to order'.",
+					"fix": "Line: \"Vanilla bean crème brûlée, fresh berries\". Cut the note, or keep only the fact the why lacks: \"The top should crack cleanly under the spoon and the custard underneath stay cold.\""
+				},
+				{
+					"key": "custards-critic-7",
+					"id": "fd_0263",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The menu line 'pot de creme' and the notThis 'creme brulee' drop the accents, so neither matches the roster terms as written. Also, Pot de Crème lists Mousse in confusedWithTerms, but Mousse (fd_0252) does not link back, even though the pair is genuinely confused.",
+					"because": "The menu line 'pot de creme' and the notThis 'creme brulee' drop the accents, so neither matches the roster terms as written. Also, Pot de Crème lists Mousse in confusedWithTerms, but Mousse (fd_0252) does not link back, even though the pair is genuinely confused.",
+					"fix": "Line: \"Dark chocolate pot de crème, sea salt, whipped cream\". notThis: \"...Not crème brûlée, which has a torched sugar top.\" Add \"Pot de Crème\" to fd_0252 confusedWithTerms and extend its notThis, e.g. \"...Not pot de crème, which is baked dense in a cup.\""
+				},
+				{
+					"key": "custards-critic-8",
+					"id": "fd_0264",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The why and notThis write 'creme anglaise' without accents, against the roster term Crème Anglaise. 'Custard' is in confusedWithTerms, but pastry cream IS a custard (Custard is the umbrella card), so that is a relation, not a confusion, and notThis never addresses it.",
+					"because": "The why and notThis write 'creme anglaise' without accents, against the roster term Crème Anglaise. 'Custard' is in confusedWithTerms, but pastry cream IS a custard (Custard is the umbrella card), so that is a relation, not a confusion, and notThis never addresses it.",
+					"fix": "Write \"crème anglaise\" in the why and the notThis. Move \"Custard\" from confusedWithTerms to seeAlsoTerms."
+				},
+				{
+					"key": "custards-critic-9",
+					"id": "fd_0265",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The alias 'Creme Chantilly' has no accent. notThis (117) runs above the 60 to 100 aim.",
+					"because": "The alias 'Creme Chantilly' has no accent. notThis (117) runs above the 60 to 100 aim.",
+					"fix": "Alias \"Crème Chantilly\". notThis: \"Not pastry cream, the thick cooked custard. This is raw cream lifted by whipped-in air.\""
+				},
+				{
+					"key": "custards-critic-10",
+					"id": "fd_0260",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The trap 'Frozen sweetened milk set in a mold and cut to serve, never churned' sits close to true descriptions of Semifreddo and the French Parfait on this roster, which are also set in a mold, sliced and never churned. A tester could defend it as a true line for another card.",
+					"because": "The trap 'Frozen sweetened milk set in a mold and cut to serve, never churned' sits close to true descriptions of Semifreddo and the French Parfait on this roster, which are also set in a mold, sliced and never churned. A tester could defend it as a true line for another card.",
+					"fix": "Replace it with a mistake unique to ice cream, e.g. \"Frozen dessert of milk and sugar with no cream, denser than gelato\" (the gelato inversion), why: \"Backwards. It has more cream and more air than gelato, so it is richer and lighter.\""
+				},
+				{
+					"key": "custards-critic-11",
+					"id": "fd_0262",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The 'say' respellings are inconsistent across the section: fd_0249 writes 'KREM ahn-GLAYZ' but fd_0262 writes 'krem broo-LAY' for the same word.",
+					"because": "The 'say' respellings are inconsistent across the section: fd_0249 writes 'KREM ahn-GLAYZ' but fd_0262 writes 'krem broo-LAY' for the same word.",
+					"fix": "Use \"KREM broo-LAY\" to match fd_0249 (or lowercase both). Pick one convention for crème."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "custards-1-fact-1",
+					"action": "applied",
+					"reason": "Guest line now ends 'Think melted vanilla ice cream, only a little lighter.', since a milk-based anglaise is leaner than an ice cream base."
+				},
+				{
+					"finding": "custards-1-fact-2",
+					"action": "applied",
+					"reason": "Trap why now reads 'This is chocolate melted into cream, and it never snaps.', dropping the false 'spoonable'."
+				},
+				{
+					"finding": "custards-1-fact-3",
+					"action": "applied",
+					"reason": "Changed 'often butter' to 'sometimes butter' in the ganache madeWith."
+				},
+				{
+					"finding": "custards-1-fact-4",
+					"action": "applied",
+					"reason": "Trap rewritten to 'Dense dessert of cream and yolks, baked and chilled, then cut in slices' (71 chars, matching the gist), which no roster card describes truthfully."
+				},
+				{
+					"finding": "custards-1-fact-5",
+					"action": "applied",
+					"reason": "madeWith is now often egg, often cream, sugar, often chocolate, sometimes butter, sometimes gelatin."
+				},
+				{
+					"finding": "custards-1-fact-6",
+					"action": "applied",
+					"reason": "Gist now reads 'Chilled dish, usually sweet, made airy with whipped cream or egg whites', which allows for savory mousses."
+				},
+				{
+					"finding": "custards-1-fact-7",
+					"action": "applied",
+					"reason": "Guest line no longer asserts the house version and opens 'In France it's a frozen dessert...', also covering the brunch glass (merged with floor-13)."
+				},
+				{
+					"finding": "custards-1-fact-8",
+					"action": "applied",
+					"reason": "Guest line now says 'soft and rich, that melts on the tongue' with no claim of a firm outside."
+				},
+				{
+					"finding": "custards-1-fact-9",
+					"action": "applied",
+					"reason": "Removed lexiconSlug from the Chocolate Truffle card, because that essay is about ganache."
+				},
+				{
+					"finding": "custards-1-floor-10",
+					"action": "applied",
+					"reason": "Same fix as fact-1: 'richer' is replaced with 'only a little lighter'."
+				},
+				{
+					"finding": "custards-1-floor-11",
+					"action": "applied",
+					"reason": "Gist now reads 'Umbrella name for any milk or cream set by egg over gentle heat', which marks it as the family name."
+				},
+				{
+					"finding": "custards-1-floor-12",
+					"action": "applied",
+					"reason": "Guest line now reads 'It's light and airy, whipped so it melts on the tongue. Rich flavor, but it never sits heavy.', with no assumption of chocolate."
+				},
+				{
+					"finding": "custards-1-floor-13",
+					"action": "applied",
+					"reason": "Guest line now gives both the French frozen version and the brunch layered yogurt and fruit, and drops 'never needs churning'."
+				},
+				{
+					"finding": "custards-1-floor-14",
+					"action": "applied",
+					"reason": "Gist now reads 'Sliced frozen mold of whipped yolks and cream, or layers in a tall glass' (72 chars)."
+				},
+				{
+					"finding": "custards-1-floor-15",
+					"action": "applied",
+					"reason": "Gist now reads 'Sweetened cream set with gelatin, turned out soft and trembling'."
+				},
+				{
+					"finding": "custards-1-floor-16",
+					"action": "applied",
+					"reason": "Removed 'than ours' from the gelato guest line."
+				},
+				{
+					"finding": "custards-1-safety-17",
+					"action": "applied",
+					"reason": "madeWith is now egg yolk, cream, sugar, sometimes pistachio, sometimes yogurt, sometimes granola, sometimes gelatin, and fruit is dropped."
+				},
+				{
+					"finding": "custards-2-fact-1",
+					"action": "applied",
+					"reason": "The Granita why no longer says it is never churned: it now says the syrup is stirred slowly as it freezes, in a machine in Sicilian bars or with a fork in a pan."
+				},
+				{
+					"finding": "custards-2-fact-2",
+					"action": "applied",
+					"reason": "The Granita guest line now says fine, icy crystals instead of crunchy flakes. For consistency the gist says grainy ice crystals and the notThis says grainy crystals."
+				},
+				{
+					"finding": "custards-2-fact-3",
+					"action": "applied",
+					"reason": "Removed made in house from the Ice Cream guest line."
+				},
+				{
+					"finding": "custards-2-fact-4",
+					"action": "applied",
+					"reason": "Added sometimes egg white to Sorbet madeWith."
+				},
+				{
+					"finding": "custards-2-floor-5",
+					"action": "applied",
+					"reason": "The Ice Cream guest line drops Our and made in house and now opens It's cream, milk and sugar, churned as it freezes."
+				},
+				{
+					"finding": "custards-2-floor-6",
+					"action": "applied",
+					"reason": "The Ice Cream gist is now Rich, high-fat dairy base churned with plenty of air to scoop. The fat and the air are what set it apart from Gelato."
+				},
+				{
+					"finding": "custards-2-floor-7",
+					"action": "applied",
+					"reason": "The Sorbet gist is now Smooth churned fruit ice on a sugar-water base, clean and sharp. It marks the water base and avoids the word just, which the safety findings flagged as a complete list."
+				},
+				{
+					"finding": "custards-2-floor-8",
+					"action": "applied",
+					"reason": "The Semifreddo gist is now Italian frozen mousse, soft enough to slice from the freezer. It is trimmed slightly from the fix so the gist stays within 3 characters of its trap."
+				},
+				{
+					"finding": "custards-2-floor-9",
+					"action": "applied",
+					"reason": "say changed to seh-mee-FRED-oh, which matches the Merriam-Webster respelling and common American usage."
+				},
+				{
+					"finding": "custards-2-floor-10",
+					"action": "rejected",
+					"reason": "The respelling gate allows at most one stressed syllable per word and does not require one in every word; the key's own example zhoo is unstressed. In American speech the stress in creme brulee falls on LAY, so capitalizing KREM would teach two equal stresses. It also matches this deck's poh duh KREM."
+				},
+				{
+					"finding": "custards-2-floor-11",
+					"action": "applied",
+					"reason": "The Granita guest line is rewritten without the comma splice or the brighter than any scoop claim: It's a Sicilian ice of sweet fruit, coffee or almond, frozen into fine, icy crystals. Light and refreshing."
+				},
+				{
+					"finding": "custards-2-floor-12",
+					"action": "applied",
+					"reason": "The Sherbet guest line now says a fruit ice instead of a fruit frozen dessert."
+				},
+				{
+					"finding": "custards-2-floor-13",
+					"action": "applied",
+					"reason": "The Pot de Creme gist is now Soft-set, silky baked custard in its own little cup, often chocolate, which is 68 characters."
+				},
+				{
+					"finding": "custards-2-safety-14",
+					"action": "applied",
+					"reason": "The Ice Cream guest line no longer claims made in house. It now names the often-used egg yolk: It's cream, milk and sugar, often with egg yolk, churned as it freezes until thick and smooth. Rich and soft enough to scoop."
+				},
+				{
+					"finding": "custards-2-safety-15",
+					"action": "applied",
+					"reason": "The Sorbet guest line no longer lists ingredients as a closed set. It now opens It's a fruit ice churned smooth like ice cream."
+				},
+				{
+					"finding": "custards-2-safety-16",
+					"action": "applied",
+					"reason": "Added sometimes egg white to Sorbet madeWith, the same change made for custards-2-fact-4."
+				},
+				{
+					"finding": "custards-2-safety-17",
+					"action": "applied",
+					"reason": "The Sorbet why now says a base built on fruit and sugar instead of just fruit and sugar."
+				},
+				{
+					"finding": "custards-2-safety-18",
+					"action": "applied",
+					"reason": "The Sorbet trap why is now It is a fruit and sugar syrup base churned smooth, not a yogurt base."
+				},
+				{
+					"finding": "custards-2-safety-19",
+					"action": "applied",
+					"reason": "The Sherbet guest line now says with milk or cream churned in, without just a little."
+				},
+				{
+					"finding": "custards-2-safety-20",
+					"action": "applied",
+					"reason": "The Sherbet notThis now says Not sorbet, whose classic base is fruit and sugar."
+				},
+				{
+					"finding": "custards-2-safety-21",
+					"action": "applied",
+					"reason": "Added a Semifreddo note: Some versions fold in whipped egg white that is never cooked. Ask the kitchen how theirs is made. It says egg white rather than egg, because the yolk foam in the why is cooked."
+				},
+				{
+					"finding": "custards-2-safety-22",
+					"action": "applied",
+					"reason": "In Semifreddo madeWith, sometimes nuts is replaced with sometimes pistachio and sometimes almond or hazelnut. It is two items because a single item cannot exceed 32 characters."
+				},
+				{
+					"finding": "custards-3-safety-1",
+					"action": "applied",
+					"reason": "notThis now ends 'This one is uncooked cream lifted by whipped-in air.', which drops the 'only' that read as an assurance that nothing else holds it up."
+				},
+				{
+					"finding": "custards-3-safety-2",
+					"action": "applied",
+					"reason": "Added 'sometimes gelatin' to madeWith, because kitchens commonly stabilize Chantilly for piping. The list is now 5 items."
+				},
+				{
+					"finding": "custards-critic-1",
+					"action": "applied",
+					"reason": "Rewrote the Mousse guest line (137 chars) to say it is a chilled dessert lightened with whipped cream or egg whites; also shortened the gist to 68 so it is no longer tied with the trap for longest option."
+				},
+				{
+					"finding": "custards-critic-2",
+					"action": "applied",
+					"reason": "Parfait line changed to 'Frozen nougat parfait, raspberry coulis, almond tuile' and the nut item in madeWith widened to 'sometimes almond or pistachio' to match."
+				},
+				{
+					"finding": "custards-critic-3",
+					"action": "applied",
+					"reason": "Panna Cotta gist shortened to 'Sweet cream set with gelatin, turned out soft and wobbly' (56), below the 59-char trap; the suggested wording actually measures 59, which would have tied the trap."
+				},
+				{
+					"finding": "custards-critic-4",
+					"action": "applied",
+					"reason": "Semifreddo gist shortened to 'Italian frozen mousse, soft enough to slice when frozen' (55), below the 57-char trap."
+				},
+				{
+					"finding": "custards-critic-5",
+					"action": "applied",
+					"reason": "Sorbet gist shortened to 'Smooth churned fruit ice on sugar syrup, clean and sharp' (56), below the 62-char trap."
+				},
+				{
+					"finding": "custards-critic-6",
+					"action": "applied",
+					"reason": "Line now reads 'Vanilla bean crème brûlée, fresh berries' and the note was cut, because the why already covers the torch to order and the warm shell over cold custard."
+				},
+				{
+					"finding": "custards-critic-7",
+					"action": "applied",
+					"reason": "Accents restored in the Pot de Crème line and notThis; Pot de Crème added to Mousse's confusedWithTerms, and Mousse's notThis now ends 'Not pot de crème, which is baked dense in a cup.'"
+				},
+				{
+					"finding": "custards-critic-8",
+					"action": "applied",
+					"reason": "Wrote 'crème anglaise' with accents in the why and notThis, and moved Custard from confusedWithTerms to seeAlsoTerms."
+				},
+				{
+					"finding": "custards-critic-9",
+					"action": "applied",
+					"reason": "Alias is now 'Crème Chantilly' and notThis is the shorter 87-char line; also trimmed the gist to 60 so it no longer ties the 65-char trap."
+				},
+				{
+					"finding": "custards-critic-10",
+					"action": "applied",
+					"reason": "Replaced the trap with the gelato mix-up, reworded without 'cream' or 'ice', which this card's gist and traps may not use: 'Lean frozen milk and sugar, churned slow and denser than gelato'. Its why says the real thing holds more butterfat and air."
+				},
+				{
+					"finding": "custards-critic-11",
+					"action": "applied",
+					"reason": "Crème Brûlée say changed to 'KREM broo-LAY' to match fd_0249's 'KREM ahn-GLAYZ'."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0252",
+						"issue": "The guest line does not answer 'what is that?'. 'It's light and airy, whipped so it melts on the tongue' never says it is a chilled dessert or what it is made from. At 93 characters it is also under the 100 to 150 aim.",
+						"fix": "Rewrite, e.g. \"It's a chilled dessert, often chocolate, lightened with whipped cream or egg whites. Rich flavor, but it melts away and never sits heavy.\""
+					},
+					{
+						"id": "fd_0253",
+						"issue": "The menu line nearly duplicates Semifreddo's (fd_0261). 'Frozen honey parfait, roasted figs, pistachio' against 'Honey semifreddo, roasted figs, pistachio' leaves two confusable cards with the same plate.",
+						"fix": "Change one of them, e.g. Parfait line: \"Frozen nougat parfait, raspberry coulis, almond tuile\"."
+					},
+					{
+						"id": "fd_0254",
+						"issue": "Length parity: the gist (63) is longer than the only trap (59), so the gist is the longest option.",
+						"fix": "Shorten the gist, e.g. \"Sweet cream set with gelatin, turned out soft and trembling\" (58)."
+					},
+					{
+						"id": "fd_0261",
+						"issue": "Length parity: the gist (60) is longer than the only trap (57).",
+						"fix": "Shorten the gist, e.g. \"Italian frozen mousse, soft enough to slice when frozen\" (55), or \"Italian frozen mousse sliced soft from a mold\"."
+					},
+					{
+						"id": "fd_0259",
+						"issue": "Length parity: the gist (63) is longer than the only trap (62).",
+						"fix": "Shorten the gist, e.g. \"Smooth churned fruit ice on sugar syrup, clean and sharp\" (55)."
+					},
+					{
+						"id": "fd_0262",
+						"issue": "The menu line 'Vanilla bean creme brulee, fresh berries' drops the accents, so it does not carry the term 'Crème Brûlée' as written. The note ('torched just before it goes out') also restates the why's 'burned on top to order'.",
+						"fix": "Line: \"Vanilla bean crème brûlée, fresh berries\". Cut the note, or keep only the fact the why lacks: \"The top should crack cleanly under the spoon and the custard underneath stay cold.\""
+					},
+					{
+						"id": "fd_0263",
+						"issue": "The menu line 'pot de creme' and the notThis 'creme brulee' drop the accents, so neither matches the roster terms as written. Also, Pot de Crème lists Mousse in confusedWithTerms, but Mousse (fd_0252) does not link back, even though the pair is genuinely confused.",
+						"fix": "Line: \"Dark chocolate pot de crème, sea salt, whipped cream\". notThis: \"...Not crème brûlée, which has a torched sugar top.\" Add \"Pot de Crème\" to fd_0252 confusedWithTerms and extend its notThis, e.g. \"...Not pot de crème, which is baked dense in a cup.\""
+					},
+					{
+						"id": "fd_0264",
+						"issue": "The why and notThis write 'creme anglaise' without accents, against the roster term Crème Anglaise. 'Custard' is in confusedWithTerms, but pastry cream IS a custard (Custard is the umbrella card), so that is a relation, not a confusion, and notThis never addresses it.",
+						"fix": "Write \"crème anglaise\" in the why and the notThis. Move \"Custard\" from confusedWithTerms to seeAlsoTerms."
+					},
+					{
+						"id": "fd_0265",
+						"issue": "The alias 'Creme Chantilly' has no accent. notThis (117) runs above the 60 to 100 aim.",
+						"fix": "Alias \"Crème Chantilly\". notThis: \"Not pastry cream, the thick cooked custard. This is raw cream lifted by whipped-in air.\""
+					},
+					{
+						"id": "fd_0260",
+						"issue": "The trap 'Frozen sweetened milk set in a mold and cut to serve, never churned' sits close to true descriptions of Semifreddo and the French Parfait on this roster, which are also set in a mold, sliced and never churned. A tester could defend it as a true line for another card.",
+						"fix": "Replace it with a mistake unique to ice cream, e.g. \"Frozen dessert of milk and sugar with no cream, denser than gelato\" (the gelato inversion), why: \"Backwards. It has more cream and more air than gelato, so it is richer and lighter.\""
+					},
+					{
+						"id": "fd_0262",
+						"issue": "The 'say' respellings are inconsistent across the section: fd_0249 writes 'KREM ahn-GLAYZ' but fd_0262 writes 'krem broo-LAY' for the same word.",
+						"fix": "Use \"KREM broo-LAY\" to match fd_0249 (or lowercase both). Pick one convention for crème."
+					}
+				],
+				"notes": "Mechanical checks (measured by script): the section mean is 642 characters of prose per card, so it is under the 720 ceiling. Every card falls between 560 and 718. I found no em or en dashes, no banned substrings and no verdict words (contains, free, allergen, safe, vegan and so on). All 17 roster rows have cards. No row in this section carries knownPacketError, so no trap is mandated. The fd_0255 packet mix-up with the fungus is handled correctly through confusedWithTerms ['Truffle'], and it should NOT become a trap, because it would describe fd_0147 Truffle truthfully. The confusion pairs link in both directions for Gelato/Ice Cream, Sorbet/Sherbet, Sorbet/Granita, Parfait/Semifreddo and Anglaise/Pastry Cream. Two points for the operator. First, gists across the deck freely use other cards' terms ('Italian frozen mousse', 'baked custard', 'scoop of gelato'), which is legal but worth a policy decision for the multiple-choice test. Second, the lexicon slug custards-anglaise-patissiere-and-curds is really the long-form essay for Pastry Cream too, but it is not in fd_0264's lexiconCandidates. The same goes for recipe creme-patissiere-the-boiled-starch-custard, which sits under Custard's candidates. Adding both to fd_0264's candidates would let that card link them."
+			},
+			"acceptedRejected": []
+		}
+	]
+}

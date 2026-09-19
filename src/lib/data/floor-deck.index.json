@@ -11,7 +11,8 @@
     "starches": "Grains, Pasta & Starches",
     "sauces": "Sauces, Stocks & Dressings",
     "preparations": "Preparations & Style Words",
-    "bread": "Bread, Pastry & Cakes"
+    "bread": "Bread, Pastry & Cakes",
+    "custards": "Custards, Creams & Frozen Desserts"
   },
   "cards": [
     {
@@ -1525,6 +1526,98 @@
       "id": "fd_0248",
       "term": "Soufflé",
       "section": "bread"
+    },
+    {
+      "id": "fd_0249",
+      "term": "Crème Anglaise",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0250",
+      "term": "Custard",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0251",
+      "term": "Ganache",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0252",
+      "term": "Mousse",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0253",
+      "term": "Parfait",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0254",
+      "term": "Panna Cotta",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0255",
+      "term": "Chocolate Truffle",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0256",
+      "term": "Gelato",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0257",
+      "term": "Granita",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0258",
+      "term": "Sherbet",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0259",
+      "term": "Sorbet",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0260",
+      "term": "Ice Cream",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0261",
+      "term": "Semifreddo",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0262",
+      "term": "Crème Brûlée",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0263",
+      "term": "Pot de Crème",
+      "section": "custards"
+    },
+    {
+      "id": "fd_0264",
+      "term": "Pastry Cream",
+      "section": "custards",
+      "aliases": [
+        "Crème Pâtissière"
+      ]
+    },
+    {
+      "id": "fd_0265",
+      "term": "Chantilly",
+      "section": "custards",
+      "aliases": [
+        "Chantilly Cream",
+        "Crème Chantilly"
+      ]
     }
   ],
   "byLexicon": {
@@ -1751,6 +1844,13 @@
     ],
     "meringues-french-swiss-italian": [
       "fd_0240"
+    ],
+    "custards-anglaise-patissiere-and-curds": [
+      "fd_0249",
+      "fd_0250"
+    ],
+    "ganache-bloom-and-chocolate-craft": [
+      "fd_0251"
     ]
   }
 }
