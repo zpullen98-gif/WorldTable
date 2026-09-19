@@ -1,4 +1,226 @@
 {
-  "cards": [],
-  "byLexicon": {}
+  "cards": [
+    {
+      "id": "fd_0086",
+      "term": "Ribeye Cap",
+      "section": "cuts",
+      "aliases": [
+        "Calotte",
+        "Spinalis",
+        "Rib Cap"
+      ]
+    },
+    {
+      "id": "fd_0087",
+      "term": "Cheek",
+      "section": "cuts",
+      "aliases": [
+        "Beef Cheek",
+        "Veal Cheek",
+        "Pork Cheek"
+      ]
+    },
+    {
+      "id": "fd_0088",
+      "term": "Hanger Steak",
+      "section": "cuts",
+      "aliases": [
+        "Onglet",
+        "Butcher's Steak",
+        "Hanging Tender"
+      ]
+    },
+    {
+      "id": "fd_0089",
+      "term": "Ham Hock",
+      "section": "cuts",
+      "aliases": [
+        "Pork Hock",
+        "Pork Knuckle"
+      ]
+    },
+    {
+      "id": "fd_0090",
+      "term": "Ribeye",
+      "section": "cuts",
+      "aliases": [
+        "Rib Eye",
+        "Scotch Fillet",
+        "Cowboy Steak",
+        "Tomahawk"
+      ]
+    },
+    {
+      "id": "fd_0091",
+      "term": "Shoulder",
+      "section": "cuts",
+      "aliases": [
+        "Chuck",
+        "Pork Butt",
+        "Boston Butt",
+        "Picnic"
+      ]
+    },
+    {
+      "id": "fd_0092",
+      "term": "Short Rib",
+      "section": "cuts",
+      "aliases": [
+        "Beef Short Ribs",
+        "Flanken",
+        "Jacob's Ladder"
+      ]
+    },
+    {
+      "id": "fd_0093",
+      "term": "Tenderloin",
+      "section": "cuts",
+      "aliases": [
+        "Filet Mignon",
+        "Beef Filet",
+        "Fillet"
+      ]
+    },
+    {
+      "id": "fd_0094",
+      "term": "Pork Belly",
+      "section": "cuts"
+    },
+    {
+      "id": "fd_0095",
+      "term": "New York Strip",
+      "section": "cuts",
+      "aliases": [
+        "Strip Steak",
+        "Kansas City Strip",
+        "Striploin"
+      ]
+    },
+    {
+      "id": "fd_0096",
+      "term": "Porterhouse and T-Bone",
+      "section": "cuts",
+      "aliases": [
+        "Porterhouse",
+        "T-Bone"
+      ]
+    },
+    {
+      "id": "fd_0097",
+      "term": "Flank Steak",
+      "section": "cuts"
+    },
+    {
+      "id": "fd_0098",
+      "term": "Skirt Steak",
+      "section": "cuts",
+      "aliases": [
+        "Arrachera"
+      ]
+    },
+    {
+      "id": "fd_0099",
+      "term": "Bavette",
+      "section": "cuts",
+      "aliases": [
+        "Sirloin Flap",
+        "Flap Steak",
+        "Flap Meat"
+      ]
+    },
+    {
+      "id": "fd_0100",
+      "term": "Flat Iron Steak",
+      "section": "cuts",
+      "aliases": [
+        "Top Blade Steak",
+        "Butler's Steak",
+        "Oyster Blade"
+      ]
+    },
+    {
+      "id": "fd_0101",
+      "term": "Brisket",
+      "section": "cuts"
+    },
+    {
+      "id": "fd_0102",
+      "term": "Oxtail",
+      "section": "cuts"
+    },
+    {
+      "id": "fd_0103",
+      "term": "Shank",
+      "section": "cuts"
+    },
+    {
+      "id": "fd_0104",
+      "term": "Coulotte",
+      "section": "cuts",
+      "aliases": [
+        "Picanha",
+        "Culotte"
+      ]
+    },
+    {
+      "id": "fd_0105",
+      "term": "Rack of Lamb",
+      "section": "cuts"
+    },
+    {
+      "id": "fd_0106",
+      "term": "Pork Chop",
+      "section": "cuts"
+    },
+    {
+      "id": "fd_0107",
+      "term": "Wagyu",
+      "section": "cuts"
+    }
+  ],
+  "byLexicon": {
+    "shank-oxtail-and-cheek": [
+      "fd_0087",
+      "fd_0102",
+      "fd_0103"
+    ],
+    "flank-skirt-and-hanger": [
+      "fd_0088",
+      "fd_0097",
+      "fd_0098"
+    ],
+    "ham-and-hock": [
+      "fd_0089"
+    ],
+    "ribeye-prime-rib": [
+      "fd_0090"
+    ],
+    "short-ribs-english-vs-flanken": [
+      "fd_0092"
+    ],
+    "tenderloin-filet-mignon": [
+      "fd_0093"
+    ],
+    "pork-belly": [
+      "fd_0094"
+    ],
+    "strip-new-york-strip": [
+      "fd_0095"
+    ],
+    "t-bone-and-porterhouse": [
+      "fd_0096"
+    ],
+    "flat-iron": [
+      "fd_0100"
+    ],
+    "brisket-point-vs-flat": [
+      "fd_0101"
+    ],
+    "lamb-primals": [
+      "fd_0105"
+    ],
+    "wagyu-and-kobe": [
+      "fd_0107"
+    ]
+  }
 }

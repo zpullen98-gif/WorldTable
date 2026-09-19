@@ -1,0 +1,1212 @@
+{
+	"section": "cuts",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0086",
+				"fd_0087",
+				"fd_0088",
+				"fd_0089",
+				"fd_0090",
+				"fd_0091",
+				"fd_0092",
+				"fd_0093",
+				"fd_0094",
+				"fd_0095",
+				"fd_0096",
+				"fd_0097",
+				"fd_0098",
+				"fd_0099",
+				"fd_0100",
+				"fd_0101",
+				"fd_0102",
+				"fd_0103",
+				"fd_0104",
+				"fd_0105",
+				"fd_0106",
+				"fd_0107"
+			],
+			"findings": [
+				{
+					"id": "fd_0086",
+					"field": "aliases",
+					"severity": "wrong",
+					"claim": "Cap Steak",
+					"because": "A bare 'Cap Steak' is ambiguous. US beef nomenclature uses 'Top Sirloin Cap Steak' for coulotte, the very cut this card's notThis warns against. The unambiguous names for the spinalis are 'Ribeye Cap Steak' and 'Rib Cap'.",
+					"fix": "Rib Cap",
+					"lens": "fact",
+					"key": "cuts-1-fact-1"
+				},
+				{
+					"id": "fd_0086",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "A ribeye is two muscles: the round eye and a thin crescent curving over the top of it.",
+					"because": "A ribeye cross-section holds more than two muscles: the longissimus (eye), the spinalis (cap), the complexus, and often the multifidus. 'Is two muscles' is a flat count a cook would correct. Hedge it.",
+					"fix": "A ribeye is mainly the round eye plus a thin crescent curving over the top.",
+					"lens": "fact",
+					"key": "cuts-1-fact-2"
+				},
+				{
+					"id": "fd_0087",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "silkier and with more beef flavor",
+					"because": "The aliases and madeWith cover veal cheek and pork cheek, so the guest line is false whenever the menu cheek is not beef. A species-neutral wording stays true for all three.",
+					"fix": "silkier and with deeper flavor",
+					"lens": "fact",
+					"key": "cuts-1-fact-3"
+				},
+				{
+					"id": "fd_0088",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "from beside the diaphragm",
+					"because": "The hanger is not beside the diaphragm. Anatomically it is the crura, the central pillar of the diaphragm itself, hanging from it near the kidneys. The packet's 'cut of the diaphragm' was closer to right than this gist. 'Single thick' still separates it from skirt.",
+					"fix": "from the diaphragm",
+					"lens": "fact",
+					"key": "cuts-1-fact-4"
+				},
+				{
+					"id": "fd_0088",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "and we slice it for you",
+					"because": "This is a house-specific service promise, not a fact about the cut. Many kitchens send hanger whole, and a server reading the card there would be promising something the kitchen does not do.",
+					"fix": "usually served sliced",
+					"lens": "fact",
+					"key": "cuts-1-fact-5"
+				},
+				{
+					"id": "fd_0090",
+					"field": "recipe",
+					"severity": "unclear",
+					"claim": "montana-bison-ribeye-with-wild-mushrooms",
+					"because": "The card defines ribeye as a beef steak, 'the most marbled' cut, with madeWith 'beef'. The linked recipe is bison, a different species that is notably lean, so it contradicts both the species and the marbling story. A guest avoiding or seeking beef would be misled.",
+					"fix": "omit recipe",
+					"lens": "fact",
+					"key": "cuts-1-fact-6"
+				},
+				{
+					"id": "fd_0091",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Hard-working front-leg cut",
+					"because": "The shoulder is the forequarter above the leg: chuck on beef, butt and picnic on pork. The front-leg cut proper is the shank, which is its own card on this roster (fd_0103), so this gist blurs into it.",
+					"fix": "Hard-working forequarter cut",
+					"lens": "fact",
+					"key": "cuts-1-fact-7"
+				},
+				{
+					"id": "fd_0091",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Very tender, lightly worked meat from the front leg that needs only a quick sear",
+					"because": "This is close to a true description of Flat Iron Steak (fd_0100): a shoulder muscle that is among the most tender on the animal and is cooked with a quick sear. A trap may not truly describe another roster card. Calling it a roast makes it false of every card while still matching /tender/.",
+					"fix": "Very tender, lightly worked forequarter roast that needs only a quick sear",
+					"lens": "fact",
+					"key": "cuts-1-fact-8"
+				},
+				{
+					"id": "fd_0091",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"pork\", \"sometimes lamb\", \"sometimes beef\"",
+					"because": "The fixed sentence would read 'Classically made with pork, sometimes lamb...', which makes pork the constant. The card's own menu line is lamb shoulder, and the aliases include Chuck (beef). Shoulder has no default species, so all three need a qualifier. This matters for guests avoiding pork.",
+					"fix": "\"often pork\", \"often lamb\", \"sometimes beef\"",
+					"lens": "fact",
+					"key": "cuts-1-fact-9"
+				},
+				{
+					"id": "fd_0092",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "Beef taken from the brisket, the chest muscle, and sold on a small piece of bone",
+					"because": "The card's own gist places short rib 'low on the chest'. In the test the true option and this trap would both say 'chest', and the trap's gloss would make the gist look wrong. Brisket is precisely the breast (pectoral) muscle, and the ribs are the chest wall. Say 'breast' in the trap so the two do not collide.",
+					"fix": "Beef taken from the brisket, the breast muscle, and sold on a small piece of bone",
+					"lens": "fact",
+					"key": "cuts-1-fact-10"
+				},
+				{
+					"id": "fd_0093",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "the softest and leanest of the steak cuts",
+					"because": "Tenderloin is the most tender but not the leanest steak cut. Top sirloin and eye of round are leaner, and flank (on this roster) is about equal. It is the leanest only among the classic steakhouse trio. 'Mildest' is true and matches the why.",
+					"fix": "the softest and mildest of the steak cuts",
+					"lens": "fact",
+					"key": "cuts-1-fact-11"
+				},
+				{
+					"id": "fd_0086",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "The names sound alike on a menu.",
+					"because": "The term on this card is Ribeye Cap, which sounds nothing like coulotte. The sound-alike is the alias Calotte, which the prose never names, so a new hire cannot tell which two names are meant.",
+					"fix": "Not coulotte, the leaner cap of the sirloin from the back end. Calotte and coulotte sound alike on a menu.",
+					"lens": "floor",
+					"key": "cuts-1-floor-12"
+				},
+				{
+					"id": "fd_0086",
+					"field": "aliases",
+					"severity": "unclear",
+					"claim": "Cap Steak",
+					"because": "\"Cap steak\" is also the usual short name for the top sirloin cap steak, which is coulotte, the cut this card says it is confused with. The alias feeds that confusion.",
+					"fix": "Rib Cap",
+					"lens": "floor",
+					"key": "cuts-1-floor-13"
+				},
+				{
+					"id": "fd_0087",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "silkier and with more beef flavor",
+					"because": "The card's aliases cover Veal Cheek and Pork Cheek and madeWith lists veal and pork. A server describing a pork or veal cheek dish would tell the guest it tastes of beef.",
+					"fix": "silkier and deeper in flavor",
+					"lens": "floor",
+					"key": "cuts-1-floor-14"
+				},
+				{
+					"id": "fd_0088",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "a deep, almost gamey beef flavor, and we slice it for you",
+					"because": "\"Gamey\" reads as a warning to most American guests and loses the sale. The usual floor description of hanger is big, rich or beefy. \"We slice it for you\" is a house plating promise that a general training card cannot make for every kitchen.",
+					"fix": "a deep, rich beef flavor, and it is usually served sliced",
+					"lens": "floor",
+					"key": "cuts-1-floor-15"
+				},
+				{
+					"id": "fd_0088",
+					"field": "confusedWithTerms",
+					"severity": "unclear",
+					"claim": "\"Flank Steak\"",
+					"because": "notThis has to tell the server how to separate every listed confusion, but it only deals with skirt steak. Flank is a wide, flat belly muscle, a related cut rather than a real mix-up, and the card never says how to tell them apart.",
+					"fix": "Remove Flank Steak from confusedWithTerms and add it to seeAlsoTerms, which has room for a third.",
+					"lens": "floor",
+					"key": "cuts-1-floor-16"
+				},
+				{
+					"id": "fd_0090",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's our richest steak",
+					"because": "\"Our\" makes a claim about the house menu that the card cannot know. Wagyu and Ribeye Cap are both on this roster and both are richer, so on many menus the line is false as spoken.",
+					"fix": "It's the richest of the classic steaks",
+					"lens": "floor",
+					"key": "cuts-1-floor-17"
+				},
+				{
+					"id": "fd_0091",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Hard-working front-leg cut, tough cooked fast, pull-apart soft after hours of low heat",
+					"because": "The front leg itself is the shank, and Shank is a card in this section. A hard-working front-leg cut that is tough cooked fast and soft after hours would be accepted as a correct answer for Shank too. The shoulder sits above the leg, and what marks it is that it shreds, as in pulled pork.",
+					"fix": "Hard-working cut atop the front leg, tough cooked fast, shreds after hours of low heat",
+					"lens": "floor",
+					"key": "cuts-1-floor-18"
+				},
+				{
+					"id": "fd_0093",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "It is very lean and dries out past medium. Most kitchens suggest rare to medium rare.",
+					"because": "madeWith lists \"sometimes pork\", so this card also covers pork tenderloin, and the note reads as doneness advice for the term as a whole. No kitchen suggests pork tenderloin rare; it is cooked to at least medium (63 C (145 F) and rested). A new hire could repeat \"rare to medium rare\" to a guest ordering pork. Scope the note to beef.",
+					"fix": "Beef filet is lean and dries past medium. Most kitchens suggest rare to medium rare.",
+					"lens": "safety",
+					"key": "cuts-1-safety-19"
+				},
+				{
+					"id": "fd_0093",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "[\"beef\", \"sometimes pork\", \"sometimes bacon\"]",
+					"because": "The card's own why says it \"so often comes with a sauce, a butter or a bacon wrap\", yet the list flags the bacon and not the butter. The app will print \"Classically made with beef, sometimes pork, sometimes bacon\", which a server will read to a guest with a milk allergy. Butter basting or a butter finish is the most common hidden dairy on a steakhouse filet.",
+					"fix": "[\"beef\", \"sometimes pork\", \"sometimes bacon\", \"often butter\"]",
+					"lens": "safety",
+					"key": "cuts-1-safety-20"
+				},
+				{
+					"id": "fd_0090",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "[\"beef\"]",
+					"because": "Steakhouse ribeyes are routinely basted or finished with butter, and the card's own menu line reads \"roasted garlic butter\". A list that prints only \"Classically made with beef\" is misleading by omission for a guest with a milk allergy. madeWith is the only place this flag can live.",
+					"fix": "[\"beef\", \"often butter\"]",
+					"lens": "safety",
+					"key": "cuts-1-safety-21"
+				},
+				{
+					"id": "fd_0086",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "[\"beef\"]",
+					"because": "Same gap as the ribeye it is cut from: a pan-seared or grilled cap is commonly butter basted or finished, and the menu line's bordelaise is classically mounted with butter and made with red wine. The list should let a server flag dairy.",
+					"fix": "[\"beef\", \"often butter\"]",
+					"lens": "safety",
+					"key": "cuts-1-safety-22"
+				},
+				{
+					"id": "fd_0088",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "[\"beef\"]",
+					"because": "As onglet in a bistro it is classically pan-seared and finished with butter and shallot (onglet a l'echalote, steak frites with maitre d' butter). A beef-only list gives a server nothing to flag for a milk-allergic guest.",
+					"fix": "[\"beef\", \"often butter\"]",
+					"lens": "safety",
+					"key": "cuts-1-safety-23"
+				},
+				{
+					"id": "fd_0092",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "[\"beef\", \"often red wine\"]",
+					"because": "The why sends the reader to Korean barbecue and the aliases include Flanken; that preparation is classically marinated in soy sauce and sesame oil, two major allergy flags the list omits. Braised versions are also commonly dredged in wheat flour before searing. All three matter to a guest asking what is in it.",
+					"fix": "[\"beef\", \"often red wine\", \"sometimes wheat flour\", \"sometimes soy\", \"sometimes sesame\"]",
+					"lens": "safety",
+					"key": "cuts-1-safety-24"
+				},
+				{
+					"id": "fd_0087",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "[\"beef\", \"sometimes veal\", \"sometimes pork\", \"often red wine\"]",
+					"because": "Braised cheeks are very often dredged in wheat flour before browning, or the braising sauce is flour thickened. Wheat is the one classic braise ingredient a guest would need flagged that is missing here.",
+					"fix": "[\"beef\", \"sometimes veal\", \"sometimes pork\", \"often red wine\", \"sometimes wheat flour\"]",
+					"lens": "safety",
+					"key": "cuts-1-safety-25"
+				},
+				{
+					"id": "fd_0087",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note on the card)",
+					"because": "A real doneness fact is missing: cheek is always braised and cooked through, so there is no temperature to take. A new server asking \"how would you like that cooked?\" is the classic gaffe, and the sibling braise card fd_0092 states this plainly while this one does not. The card's prose total is about 660 characters, so a short note fits.",
+					"fix": "Always braised and cooked through. There is no temperature to ask the guest for.",
+					"lens": "safety",
+					"key": "cuts-1-safety-26"
+				},
+				{
+					"id": "fd_0099",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Here it means sirloin flap, thicker than either.",
+					"because": "Sirloin flap is reliably thicker than skirt, but not reliably thicker than flank: flank runs about 2 to 2.5 cm and flap is similar and uneven. What separates flap from flank is its looser, coarser grain and higher marbling, not thickness. The card's own why already limits the claim to 'a thicker, softer skirt steak'.",
+					"fix": "Here it means sirloin flap, a looser cut.",
+					"lens": "fact",
+					"key": "cuts-2-fact-1"
+				},
+				{
+					"id": "fd_0098",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "from the diaphragm",
+					"because": "Only the OUTSIDE skirt is the diaphragm. The inside skirt (transversus abdominis, the one most US kitchens actually receive) is an abdominal wall muscle, as the card's own why says. 'From the diaphragm' is also the defining fact of Hanger Steak (fd_0088), so in a multiple-choice line-up this gist leans on the neighbour's identifier. 'Under the ribs' is true of both skirts and matches the wording on fd_0097.",
+					"fix": "Long, thin ribbon of beef from under the ribs, loose grained and well marbled",
+					"lens": "fact",
+					"key": "cuts-2-fact-2"
+				},
+				{
+					"id": "fd_0095",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Boneless short loin steak",
+					"because": "The strip is sold bone-in as often as not in steakhouses ('bone-in New York strip'), and the card's own alias Kansas City Strip traditionally names the bone-in version. Calling the cut boneless by definition will trip a server whose house strip has a bone. The short loin and the fat edge identify it without that word.",
+					"fix": "Short loin steak with a firm, tight bite and a band of fat down one edge",
+					"lens": "fact",
+					"key": "cuts-2-fact-3"
+				},
+				{
+					"id": "fd_0101",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Cured, it becomes corned beef and pastrami.",
+					"because": "Corned beef is classically brisket, but pastrami is classically the navel (beef plate); brisket pastrami is common today, not the rule. Stated flat, it sets up a contradiction with the Pastrami card and with delis that use navel.",
+					"fix": "Cured, it's corned beef, often pastrami.",
+					"lens": "fact",
+					"key": "cuts-2-fact-4"
+				},
+				{
+					"id": "fd_0101",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "it is braised and cured as often as smoked",
+					"because": "A trap's why must be TRUE, and 'as often as' is an uncheckable frequency claim. The refutation only needs the fact that brisket is also braised and cured.",
+					"fix": "it is braised and cured as well as smoked",
+					"lens": "fact",
+					"key": "cuts-2-fact-5"
+				},
+				{
+					"id": "fd_0101",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Brisket is a big cut from the chest that needs hours of slow cooking.",
+					"because": "The guest line never names the animal. A guest asking \"what is that?\" needs to hear beef first, and \"a big cut\" tells them nothing about their plate (they get slices, not a big cut).",
+					"fix": "Brisket is beef from the chest, cooked slowly for hours.",
+					"lens": "floor",
+					"key": "cuts-2-floor-6"
+				},
+				{
+					"id": "fd_0101",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Done right it slices like butter,",
+					"because": "\"Done right\" said at a table implies the kitchen sometimes does it wrong, and \"slices like butter\" is an oversell a new hire will sound scripted saying. Brisket is tender and moist, not butter.",
+					"fix": "It comes out tender and juicy,",
+					"lens": "floor",
+					"key": "cuts-2-floor-7"
+				},
+				{
+					"id": "fd_0100",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Flat iron comes from the shoulder, and it's one of the most tender steaks on the animal, second only to filet, with more marbling and a beefier flavor.",
+					"because": "One 151-character sentence with four clauses: a nervous hire runs out of breath. \"One of the most tender\" and \"second only to filet\" say the same thing twice, and \"more marbling and a beefier flavor\" dangles with no \"than\" so the guest cannot tell what it is being compared to.",
+					"fix": "Flat iron is a shoulder steak, second only to filet for tenderness. It has more marbling than filet, so it tastes beefier.",
+					"lens": "floor",
+					"key": "cuts-2-floor-8"
+				},
+				{
+					"id": "fd_0099",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Here it means sirloin flap, thicker than either.",
+					"because": "Sirloin flap is thicker than skirt but not reliably thicker than flank: both run about an inch, and this deck's own flank card (fd_0097) calls flank the thick one. What separates flap from flank is its looser, coarser grain and more marbling, not thickness. A server repeating \"thicker than flank\" will be contradicted by the plate.",
+					"fix": "Here it means sirloin flap, a cut of its own.",
+					"lens": "floor",
+					"key": "cuts-2-floor-9"
+				},
+				{
+					"id": "fd_0098",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "plenty of fat running through it",
+					"because": "True, but said aloud to a guest \"plenty of fat\" puts people off the dish rather than selling it. The dining-room word for fat inside the meat is marbling, which guests know and hear as a positive.",
+					"fix": "rich marbling all through it",
+					"lens": "floor",
+					"key": "cuts-2-floor-10"
+				},
+				{
+					"id": "fd_0094",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's cooked slowly until it's spoon tender, then crisped on the outside, so it's very rich.",
+					"because": "The \"so\" is a non sequitur: slow cooking and crisping are not why it is rich, the layered fat is. Said aloud the sentence trails off into a conclusion that does not follow, and a guest hears it as card-reading.",
+					"fix": "It's very rich, cooked slowly until spoon tender, then crisped on the outside.",
+					"lens": "floor",
+					"key": "cuts-2-floor-11"
+				},
+				{
+					"id": "fd_0095",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Boneless short loin steak",
+					"because": "The strip is sold bone-in as often as not, and the card's own alias \"Kansas City Strip\" is traditionally the bone-in version. A hire at a house that serves a bone-in strip would reject this option in the test. The defining features are the short loin, the tight grain and the fat edge, not bonelessness.",
+					"fix": "Short loin steak, firm and tight grained, with a band of fat down one edge",
+					"lens": "floor",
+					"key": "cuts-2-floor-12"
+				},
+				{
+					"id": "fd_0097",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Not skirt steak, which is a longer, thinner, fattier ribbon from under the ribs. Flank is wider, thicker and leaner.",
+					"because": "confusedWithTerms lists Bavette as well as Skirt Steak, but notThis only tells the server how to separate flank from skirt. The bavette confusion is the one a new hire will actually meet on a bistro menu, and the card leaves it unanswered.",
+					"fix": "Not skirt, a longer, fattier ribbon from under the ribs, nor bavette, the looser sirloin flap. Flank is leaner.",
+					"lens": "floor",
+					"key": "cuts-2-floor-13"
+				},
+				{
+					"id": "fd_0097",
+					"field": "guest",
+					"severity": "style",
+					"claim": "so it eats tender with a little chew",
+					"because": "\"Eats tender\" is kitchen and trade idiom (the brief itself uses \"how it eats\" as back-of-house talk). At a table it sounds odd from a new server. Plain English says the same thing.",
+					"fix": "so it's tender with a little chew",
+					"lens": "floor",
+					"key": "cuts-2-floor-14"
+				},
+				{
+					"id": "fd_0096",
+					"field": "pairs",
+					"severity": "style",
+					"claim": "a big red wine, often carved to share",
+					"because": "pairs is a label of partners on the plate. \"Often carved to share\" is a service fact, not a partner, and it already lives in the guest line (\"great for sharing\") and the menu line (\"for two\").",
+					"fix": "a big red wine, steak sauce",
+					"lens": "floor",
+					"key": "cuts-2-floor-15"
+				},
+				{
+					"id": "fd_0101",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "that is from the smoke, not undercooking.",
+					"because": "\"Not undercooking\" is an assurance about doneness that a server will repeat about a plate they did not cook. The checkable fact is that the pink band is the smoke ring, a color reaction between smoke gases and the meat pigment. State that, not a judgment on whether the meat is cooked.",
+					"fix": "that is the smoke ring, and it is normal.",
+					"lens": "safety",
+					"key": "cuts-2-safety-16"
+				},
+				{
+					"id": "fd_0098",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note given)",
+					"because": "Missing doneness fact. Skirt is very thin and is cooked over fierce heat for a minute or two a side. It is best at medium rare to medium and turns tough and dry quickly past that, which a server needs to say when a guest orders it well done. The neighboring flank card carries this fact and this one does not.",
+					"fix": "Add note: \"Best at medium rare to medium. It is so thin that it goes tough quickly past that.\"",
+					"lens": "safety",
+					"key": "cuts-2-safety-17"
+				},
+				{
+					"id": "fd_0099",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note given)",
+					"because": "Missing doneness fact. Sirloin flap is a coarse-fibered cut that bistros cook medium rare by default and slice across the grain. Past medium it turns chewy. A server should be able to state the house doneness plainly when taking the order.",
+					"fix": "Add note: \"Best at medium rare, sliced across the grain. Past medium it turns chewy.\"",
+					"lens": "safety",
+					"key": "cuts-2-safety-18"
+				},
+				{
+					"id": "fd_0102",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"beef\", \"onion\", \"carrot\", \"often red wine\", \"often wheat flour\", \"sometimes butter beans\"",
+					"because": "The card's own menu line, pairs and linked recipe (jamaican-oxtail-stew) are the Jamaican version, which is classically colored and seasoned with soy sauce or browning sauce; the linked recipe lists \"2 tbsp soy or browning sauce\" and the recipe index marks it as holding soy. Soy is one of the flags the brief says a guest would need, and it is missing. There is room: 6 of 7 items are used.",
+					"fix": "Add a seventh item: \"sometimes soy sauce\"",
+					"lens": "fact",
+					"key": "cuts-3-fact-1"
+				},
+				{
+					"id": "fd_0107",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "store fat inside the muscle instead of around it",
+					"because": "Misleading. The Japanese breeds lay down heavy fat around the muscle as well (Japanese carcasses are trimmed of thick external and seam fat, and the yield letter in A5 exists partly because of it). What sets them apart is the extra fat inside the muscle, not an absence of fat outside it.",
+					"fix": "store fat inside the muscle, not just around it",
+					"lens": "fact",
+					"key": "cuts-3-fact-2"
+				},
+				{
+					"id": "fd_0103",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "It is the lower leg, below the knee, and it is far too sinewy to grill.",
+					"because": "In livestock anatomy the \"knee\" of a lamb, calf or steer is the carpal joint of the front leg, and the foreshank (radius and ulna) sits ABOVE it, between elbow and knee; the hind shank sits between stifle and hock. \"Below the knee\" is only right by loose human analogy and is wrong for the foreshank, which is the usual lamb shank. \"The shin\" is accurate for both legs.",
+					"fix": "It is the lower leg, the shin, and it is far too sinewy to grill.",
+					"lens": "fact",
+					"key": "cuts-3-fact-3"
+				},
+				{
+					"id": "fd_0106",
+					"field": "recipe",
+					"severity": "unclear",
+					"claim": "illinois-pork-chops-and-applesauce",
+					"because": "That recipe is unbrined and has the chops returned to the pan, covered and simmered 15 minutes \"until cooked through\", which contradicts everything this card teaches (brine beforehand, hard sear, blush of pink at 63 C (145 F), a rest) and the card's own menu line \"Brined bone-in pork chop\". The other candidate, vermont-maple-brined-pork-chops, is brined 4 to 6 hours, seared, basted with butter to 62 C at the bone and rested 8 minutes: it is the recipe that matches the card and its madeWith (salt brine, sugar, butter, garlic).",
+					"fix": "vermont-maple-brined-pork-chops",
+					"lens": "fact",
+					"key": "cuts-3-fact-4"
+				},
+				{
+					"id": "fd_0102",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's the richest, stickiest beef we serve.",
+					"because": "A superlative about the house menu is an oversell the card cannot know to be true: a room that also sells short rib, cheek or A5 Wagyu makes it false. 'Stickiest' on its own is also not a selling word to a guest. Describe the cut and leave the ranking out.",
+					"fix": "It's rich, sticky and deeply beefy.",
+					"lens": "floor",
+					"key": "cuts-3-floor-5"
+				},
+				{
+					"id": "fd_0103",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "The shank is the lower leg, braised for hours until the meat is spoon-tender and slides off the bone, served in a rich sauce made from its own juices.",
+					"because": "It never says which animal's leg, so it does not fully answer 'what is that?'. It is also one 150-character sentence with three clauses, which a nervous new hire runs out of breath on and which sounds read off a card. Name the animal (the server says whichever is on the menu) and break it in two. The fix is the same length.",
+					"fix": "Shank is the lower leg of lamb or veal, braised for hours until it's spoon-tender and slides off the bone. The sauce is made from its own rich juices.",
+					"lens": "floor",
+					"key": "cuts-3-floor-6"
+				},
+				{
+					"id": "fd_0104",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "From French culotte, a rump cut; in Brazil the same piece is picanha",
+					"because": "The guest line makes the server say 'picanha' aloud and it is listed as an alias a menu may print, but nowhere does the card show how to say it. A new hire will hesitate or say 'pih-CAN-ha'. American dining rooms say pee-KAHN-yah. The say field covers only the term, so the respelling has to live in a context label. This version is shorter than the original.",
+					"fix": "French culotte, a rump cut; Brazil's picanha, said pee-KAHN-yah",
+					"lens": "floor",
+					"key": "cuts-3-floor-7"
+				},
+				{
+					"id": "fd_0106",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "so ask how the guest would like it.",
+					"because": "This tells a third-day server to take a temperature on pork. Many kitchens cook the chop one way and do not take a doneness on pork at all, so the server ends up promising something the line will not do. The floor-safe instruction is to find out how the house serves it.",
+					"fix": "so ask the chef how ours is cooked.",
+					"lens": "floor",
+					"key": "cuts-3-floor-8"
+				},
+				{
+					"id": "fd_0106",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Our pork chop is a thick cut from the loin, the pig's answer to a bone-in strip or ribeye. It's seared hard outside and kept juicy in the middle.",
+					"because": "'Our' and 'It's seared hard ... kept juicy' state as fact how this particular house cuts and cooks it, which a generic deck cannot know (the chop may be grilled, boneless or thin). 'Seared hard' is also line-cook talk. Describe the cut, not the house's execution. The fix is the same length.",
+					"fix": "A pork chop is a thick cut from the loin, the pig's answer to a bone-in strip or ribeye. Done right, it's seared outside and juicy in the middle.",
+					"lens": "floor",
+					"key": "cuts-3-floor-9"
+				},
+				{
+					"id": "fd_0107",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "All Kobe is this, but very little of this is Kobe.",
+					"because": "notThis is not a term-free field, only gist and traps are. Dodging the word makes the one sentence a server most needs to repeat ('is this Kobe?') into a tongue-twister of 'this ... this'. Say it the way the floor says it. The fix is one character shorter.",
+					"fix": "All Kobe is Wagyu, but very little Wagyu is Kobe.",
+					"lens": "floor",
+					"key": "cuts-3-floor-10"
+				},
+				{
+					"id": "fd_0102",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"beef\", \"onion\", \"carrot\", \"often red wine\", \"often wheat flour\", \"sometimes butter beans\"",
+					"because": "The card's own menu line (butter beans, rice and peas) and its linked recipe jamaican-oxtail-stew are the Jamaican style, which is classically seasoned with soy sauce or browning sauce. The linked recipe lists \"2 tbsp soy or browning sauce\". Soy is a major flag for a guest and the list omits it. There is room: the list has 6 of 7 items.",
+					"fix": "Add a seventh item: \"often soy sauce\". Full list: beef, onion, carrot, often red wine, often wheat flour, often soy sauce, sometimes butter beans.",
+					"lens": "safety",
+					"key": "cuts-3-safety-11"
+				},
+				{
+					"id": "fd_0103",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"often tomato\"",
+					"because": "The card names osso buco as the classic cross-cut veal version. That dish is classically floured and browned in butter, so milk is the flag a guest would need and it is missing. The list is already at the 7-item cap and tomato is not a flagged ingredient, so swap it rather than add.",
+					"fix": "Replace \"often tomato\" with \"often butter\".",
+					"lens": "safety",
+					"key": "cuts-3-safety-12"
+				},
+				{
+					"key": "cuts-critic-1",
+					"id": "fd_0089",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The trap \"A thick, meaty slice of cured pork carved from the center of the hind leg\" comes close to a true description of another roster card, Country Ham, which is served as center-cut slices of the cured hind leg. A trap must not truly describe another card.",
+					"because": "The trap \"A thick, meaty slice of cured pork carved from the center of the hind leg\" comes close to a true description of another roster card, Country Ham, which is served as center-cut slices of the cured hind leg. A trap must not truly describe another card.",
+					"fix": "Replace traps[0] with a wrong answer that matches no roster card. says: \"The pig's foot below the ankle, all skin and small bones, pickled or stewed whole\". why: \"That is the trotter. This is the joint just above it, where the leg meets the foot.\" The roster check found no ham, hock or pork in the says."
+				},
+				{
+					"key": "cuts-critic-2",
+					"id": "fd_0100",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The gist opens with \"Shoulder blade steak\", and Shoulder is another card's term in this same section. When Shoulder is the term under test, this gist shows up as a wrong option that carries the term word and is half-true of it, because flat iron is a shoulder cut. That makes it a misleading distractor.",
+					"because": "The gist opens with \"Shoulder blade steak\", and Shoulder is another card's term in this same section. When Shoulder is the term under test, this gist shows up as a wrong option that carries the term word and is half-true of it, because flat iron is a shoulder cut. That makes it a misleading distractor.",
+					"fix": "Rewrite the gist without the word shoulder, for example: \"Beef chuck steak with its tough center seam of gristle cut out, nearly as tender as filet\" (88 chars, no flat or iron, no full alias). The guest line and the why can keep \"shoulder\"."
+				},
+				{
+					"key": "cuts-critic-3",
+					"id": "fd_0098",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The confusion link with Bavette is asymmetric. Bavette lists Skirt Steak in confusedWithTerms, and Bavette's guest line says \"like skirt steak\". Skirt Steak only has Bavette in seeAlsoTerms, and its notThis never mentions bavette.",
+					"because": "The confusion link with Bavette is asymmetric. Bavette lists Skirt Steak in confusedWithTerms, and Bavette's guest line says \"like skirt steak\". Skirt Steak only has Bavette in seeAlsoTerms, and its notThis never mentions bavette.",
+					"fix": "Move Bavette from seeAlsoTerms to confusedWithTerms, which makes three (Flank Steak, Hanger Steak, Bavette). Then name it in notThis, for example: \"Not flank, which is wider and leaner, nor hanger, the short thick steak beside it, nor bavette, the thicker sirloin flap.\" (about 120 chars). Keep Chimichurri in seeAlsoTerms."
+				},
+				{
+					"key": "cuts-critic-4",
+					"id": "fd_0095",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "madeWith is only [\"beef\"]. The card's own menu line reads \"bone marrow butter\" and its pairs list compound butter. Ribeye, Ribeye Cap, Hanger and Tenderloin all carry \"often butter\". A steakhouse strip is butter-basted or butter-finished as often as those, and madeWith is where a dairy flag belongs.",
+					"because": "madeWith is only [\"beef\"]. The card's own menu line reads \"bone marrow butter\" and its pairs list compound butter. Ribeye, Ribeye Cap, Hanger and Tenderloin all carry \"often butter\". A steakhouse strip is butter-basted or butter-finished as often as those, and madeWith is where a dairy flag belongs.",
+					"fix": "Set madeWith to [\"beef\", \"often butter\"]."
+				},
+				{
+					"key": "cuts-critic-5",
+					"id": "fd_0099",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The same madeWith gap as fd_0095. The line is \"Bavette steak, shallot butter, frites\" but madeWith is only [\"beef\"].",
+					"because": "The same madeWith gap as fd_0095. The line is \"Bavette steak, shallot butter, frites\" but madeWith is only [\"beef\"].",
+					"fix": "Set madeWith to [\"beef\", \"often butter\", \"sometimes shallot\"], or at the least add \"often butter\"."
+				},
+				{
+					"key": "cuts-critic-6",
+					"id": "fd_0096",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The same inconsistency as fd_0095. Porterhouse is the most classically butter-finished steakhouse cut on the list, yet madeWith is only [\"beef\"] while the sibling steak cards flag butter.",
+					"because": "The same inconsistency as fd_0095. Porterhouse is the most classically butter-finished steakhouse cut on the list, yet madeWith is only [\"beef\"] while the sibling steak cards flag butter.",
+					"fix": "Set madeWith to [\"beef\", \"often butter\"]."
+				},
+				{
+					"key": "cuts-critic-7",
+					"id": "fd_0097",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "pairs names \"citrus or soy marinades\", but madeWith is only [\"beef\"]. Flank is served marinated more often than not, and soy is the item a server would need flagged. Short Rib already handles this with \"sometimes soy\".",
+					"because": "pairs names \"citrus or soy marinades\", but madeWith is only [\"beef\"]. Flank is served marinated more often than not, and soy is the item a server would need flagged. Short Rib already handles this with \"sometimes soy\".",
+					"fix": "Set madeWith to [\"beef\", \"sometimes soy sauce\", \"sometimes garlic\"]. Apply the same to fd_0098 Skirt Steak (carne asada and fajita marinades often use soy or Worcestershire): [\"beef\", \"sometimes soy sauce\", \"sometimes lime\"]."
+				},
+				{
+					"key": "cuts-critic-8",
+					"id": "fd_0094",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "pairs lists \"soy and ginger glazes\", and the linked recipe is siu yuk, but madeWith is only [\"pork\"]. It is the same soy gap as on Flank.",
+					"because": "pairs lists \"soy and ginger glazes\", and the linked recipe is siu yuk, but madeWith is only [\"pork\"]. It is the same soy gap as on Flank.",
+					"fix": "Set madeWith to [\"pork\", \"salt\", \"sometimes soy sauce\", \"sometimes sugar\"]."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "cuts-1-fact-1",
+					"action": "applied",
+					"reason": "Replaced the ambiguous alias Cap Steak with Rib Cap."
+				},
+				{
+					"finding": "cuts-1-fact-2",
+					"action": "applied",
+					"reason": "The why now reads 'A ribeye is mainly the round eye plus a thin crescent', dropping the flat two-muscle count."
+				},
+				{
+					"finding": "cuts-1-fact-3",
+					"action": "applied",
+					"reason": "Guest line now says 'silkier and deeper in flavor', which holds for beef, veal and pork cheek."
+				},
+				{
+					"finding": "cuts-1-fact-4",
+					"action": "applied",
+					"reason": "Gist now says 'cut from the diaphragm', and the why calls it the thick central pillar of the diaphragm instead of 'attached to' it (also replaced 'does little heavy work' with 'carries no weight')."
+				},
+				{
+					"finding": "cuts-1-fact-5",
+					"action": "applied",
+					"reason": "Replaced the house promise 'we slice it for you' with 'it is usually served sliced'."
+				},
+				{
+					"finding": "cuts-1-fact-6",
+					"action": "applied",
+					"reason": "Removed the bison recipe link from the beef ribeye card."
+				},
+				{
+					"finding": "cuts-1-fact-7",
+					"action": "applied",
+					"reason": "Gist now places the cut 'above the front leg' rather than calling it a front-leg cut, so it no longer describes shank."
+				},
+				{
+					"finding": "cuts-1-fact-8",
+					"action": "applied",
+					"reason": "Trap now describes a 'roast from above the front leg that needs only a quick sear', false of every roster card including Flat Iron, and still matches /tender/."
+				},
+				{
+					"finding": "cuts-1-fact-9",
+					"action": "applied",
+					"reason": "madeWith is now 'often pork', 'often lamb', 'sometimes beef' so no species reads as the constant."
+				},
+				{
+					"finding": "cuts-1-fact-10",
+					"action": "applied",
+					"reason": "Trap now glosses brisket as 'the breast muscle' so it no longer collides with 'chest' in the true gist."
+				},
+				{
+					"finding": "cuts-1-fact-11",
+					"action": "applied",
+					"reason": "Gist now says 'the softest and mildest of the steak cuts' instead of leanest."
+				},
+				{
+					"finding": "cuts-1-floor-12",
+					"action": "applied",
+					"reason": "notThis now names the two sound-alike words: 'Calotte and coulotte sound alike on a menu.'"
+				},
+				{
+					"finding": "cuts-1-floor-13",
+					"action": "applied",
+					"reason": "Alias Cap Steak replaced with Rib Cap, same change as the fact finding."
+				},
+				{
+					"finding": "cuts-1-floor-14",
+					"action": "applied",
+					"reason": "Guest line now says 'silkier and deeper in flavor' with no species named."
+				},
+				{
+					"finding": "cuts-1-floor-15",
+					"action": "applied",
+					"reason": "Guest line now reads 'a deep, rich beef flavor, and it is usually served sliced', dropping 'gamey' and the house promise."
+				},
+				{
+					"finding": "cuts-1-floor-16",
+					"action": "applied",
+					"reason": "Moved Flank Steak from confusedWithTerms to seeAlsoTerms; notThis covers the one remaining confusion, Skirt Steak."
+				},
+				{
+					"finding": "cuts-1-floor-17",
+					"action": "applied",
+					"reason": "Guest line now opens 'It's the richest of the classic steaks' instead of 'our richest steak'."
+				},
+				{
+					"finding": "cuts-1-floor-18",
+					"action": "applied",
+					"reason": "Gist now reads 'cut above the front leg ... shreds after hours of low heat' (87 chars), separating it from Shank."
+				},
+				{
+					"finding": "cuts-1-safety-19",
+					"action": "applied",
+					"reason": "Note is scoped to beef filet and adds that pork tenderloin is always cooked further."
+				},
+				{
+					"finding": "cuts-1-safety-20",
+					"action": "applied",
+					"reason": "Added 'often butter' to the Tenderloin madeWith list."
+				},
+				{
+					"finding": "cuts-1-safety-21",
+					"action": "applied",
+					"reason": "Added 'often butter' to the Ribeye madeWith list, matching its own garlic butter menu line."
+				},
+				{
+					"finding": "cuts-1-safety-22",
+					"action": "applied",
+					"reason": "Added 'often butter' to the Ribeye Cap madeWith list."
+				},
+				{
+					"finding": "cuts-1-safety-23",
+					"action": "applied",
+					"reason": "Added 'often butter' to the Hanger Steak madeWith list."
+				},
+				{
+					"finding": "cuts-1-safety-24",
+					"action": "applied",
+					"reason": "Added 'sometimes wheat flour', 'sometimes soy' and 'sometimes sesame' to the Short Rib madeWith list (5 items)."
+				},
+				{
+					"finding": "cuts-1-safety-25",
+					"action": "applied",
+					"reason": "Added 'sometimes wheat flour' to the Cheek madeWith list."
+				},
+				{
+					"finding": "cuts-1-safety-26",
+					"action": "applied",
+					"reason": "Added a note: 'Cheek is slow cooked all the way through. There is no temperature to ask the guest for.' worded to differ from the Short Rib note; card total is 731."
+				},
+				{
+					"finding": "cuts-2-fact-1",
+					"action": "applied",
+					"reason": "Bavette notThis no longer claims thickness over flank; it now ends 'Here it means sirloin flap, looser and more marbled than flank.'"
+				},
+				{
+					"finding": "cuts-2-fact-2",
+					"action": "applied",
+					"reason": "Skirt gist now says 'from under the ribs' instead of 'from the diaphragm', true of both skirts and no longer leaning on the hanger identifier."
+				},
+				{
+					"finding": "cuts-2-fact-3",
+					"action": "applied",
+					"reason": "Dropped 'Boneless' from the strip gist: 'Short loin steak with a firm, tight bite and a band of fat down one edge'."
+				},
+				{
+					"finding": "cuts-2-fact-4",
+					"action": "applied",
+					"reason": "Brisket why now reads 'Cured, it becomes corned beef and, often, pastrami', leaving room for navel pastrami."
+				},
+				{
+					"finding": "cuts-2-fact-5",
+					"action": "applied",
+					"reason": "Brisket trap why changed from 'as often as smoked' to 'as well as smoked', removing the uncheckable frequency claim."
+				},
+				{
+					"finding": "cuts-2-floor-6",
+					"action": "applied",
+					"reason": "Brisket guest line now opens 'Brisket is beef from the chest, cooked slowly for hours.'"
+				},
+				{
+					"finding": "cuts-2-floor-7",
+					"action": "applied",
+					"reason": "Replaced 'Done right it slices like butter' with 'It comes out tender and juicy' in the brisket guest line."
+				},
+				{
+					"finding": "cuts-2-floor-8",
+					"action": "applied",
+					"reason": "Flat iron guest line rewritten as two short sentences with the comparison made explicit against filet."
+				},
+				{
+					"finding": "cuts-2-floor-9",
+					"action": "applied",
+					"reason": "Same change as cuts-2-fact-1: the thickness claim against flank is gone and the distinction is now looser grain and more marbling."
+				},
+				{
+					"finding": "cuts-2-floor-10",
+					"action": "applied",
+					"reason": "Skirt guest line now says 'rich marbling all through it' instead of 'plenty of fat running through it'."
+				},
+				{
+					"finding": "cuts-2-floor-11",
+					"action": "applied",
+					"reason": "Pork belly guest line reordered to 'It's very rich, cooked slowly until spoon tender, then crisped on the outside', removing the false 'so'."
+				},
+				{
+					"finding": "cuts-2-floor-12",
+					"action": "applied",
+					"reason": "Same change as cuts-2-fact-3: 'Boneless' removed from the strip gist, which now rests on short loin, tight bite and fat edge."
+				},
+				{
+					"finding": "cuts-2-floor-13",
+					"action": "applied",
+					"reason": "Flank notThis now separates it from both skirt and bavette (the looser-grained sirloin flap) and closes on flank being the leanest."
+				},
+				{
+					"finding": "cuts-2-floor-14",
+					"action": "applied",
+					"reason": "Flank guest line changed from 'so it eats tender' to 'so it's tender with a little chew'."
+				},
+				{
+					"finding": "cuts-2-floor-15",
+					"action": "applied",
+					"reason": "Porterhouse pairs now ends 'a big red wine, steak sauce'; the carving-to-share service fact was removed from the partners label."
+				},
+				{
+					"finding": "cuts-2-safety-16",
+					"action": "applied",
+					"reason": "Brisket note no longer says 'not undercooking'; it now states 'that is the smoke ring, and it is normal'."
+				},
+				{
+					"finding": "cuts-2-safety-17",
+					"action": "applied",
+					"reason": "Added the skirt note 'Best at medium rare to medium. It is so thin that it goes tough quickly past that.' and trimmed the why by one word to hold the length."
+				},
+				{
+					"finding": "cuts-2-safety-18",
+					"action": "applied",
+					"reason": "Added the bavette note 'Best at medium rare, sliced across the grain. Past medium it turns chewy.'"
+				},
+				{
+					"finding": "cuts-3-fact-1",
+					"action": "applied",
+					"reason": "Added a seventh madeWith item for soy sauce (as \"often soy sauce\", the stronger of the two suggested wordings); the linked recipe does list 2 tbsp soy or browning sauce."
+				},
+				{
+					"finding": "cuts-3-fact-2",
+					"action": "applied",
+					"reason": "Changed the why to \"store fat inside the muscle, not just around it\"."
+				},
+				{
+					"finding": "cuts-3-fact-3",
+					"action": "applied",
+					"reason": "Trap why now reads \"It is the lower leg, the shin, and it is far too sinewy to grill.\" dropping \"below the knee\"."
+				},
+				{
+					"finding": "cuts-3-fact-4",
+					"action": "applied",
+					"reason": "Checked both recipes in recipes.full.json: the Illinois one is unbrined and simmered covered until cooked through, the Vermont one is brined, seared, basted to 62 C and rested, so recipe is now vermont-maple-brined-pork-chops."
+				},
+				{
+					"finding": "cuts-3-floor-5",
+					"action": "applied",
+					"reason": "Replaced the house superlative with \"It's rich, sticky and deeply beefy.\""
+				},
+				{
+					"finding": "cuts-3-floor-6",
+					"action": "applied",
+					"reason": "Guest line now names lamb or veal and is split into two sentences, using the proposed wording."
+				},
+				{
+					"finding": "cuts-3-floor-7",
+					"action": "applied",
+					"reason": "Origin now reads \"French culotte, a rump cut; Brazil's picanha, said pee-KAHN-yah\" so the alias the server says aloud has a respelling."
+				},
+				{
+					"finding": "cuts-3-floor-8",
+					"action": "applied",
+					"reason": "Note now ends \"so ask the chef how ours is cooked.\" instead of telling the server to take a temperature from the guest."
+				},
+				{
+					"finding": "cuts-3-floor-9",
+					"action": "applied",
+					"reason": "Guest line now opens \"A pork chop is\" and says \"Done right, it's seared outside and juicy in the middle\", removing the house claim and the line-cook phrase."
+				},
+				{
+					"finding": "cuts-3-floor-10",
+					"action": "applied",
+					"reason": "notThis now ends \"All Kobe is Wagyu, but very little Wagyu is Kobe.\""
+				},
+				{
+					"finding": "cuts-3-safety-11",
+					"action": "applied",
+					"reason": "Added \"often soy sauce\" as the seventh madeWith item, placed before \"sometimes butter beans\" exactly as proposed."
+				},
+				{
+					"finding": "cuts-3-safety-12",
+					"action": "applied",
+					"reason": "Replaced \"often tomato\" with \"often butter\" in the Shank madeWith, since osso buco is classically floured and browned in butter and the list was at its cap."
+				},
+				{
+					"finding": "cuts-critic-1",
+					"action": "applied",
+					"reason": "Replaced the Ham Hock trap with the pig's-foot (trotter) description, which matches no roster card and avoids ham and hock."
+				},
+				{
+					"finding": "cuts-critic-2",
+					"action": "applied",
+					"reason": "Rewrote the Flat Iron gist as a chuck steak with its gristle seam cut out (84 chars), dropping the word shoulder and the alias word blade."
+				},
+				{
+					"finding": "cuts-critic-3",
+					"action": "applied",
+					"reason": "Moved Bavette into Skirt Steak's confusedWithTerms (now three), named bavette in notThis, and left Chimichurri in seeAlsoTerms."
+				},
+				{
+					"finding": "cuts-critic-4",
+					"action": "applied",
+					"reason": "New York Strip madeWith is now beef, often butter."
+				},
+				{
+					"finding": "cuts-critic-5",
+					"action": "applied",
+					"reason": "Bavette madeWith is now beef, often butter, sometimes shallot, matching its menu line."
+				},
+				{
+					"finding": "cuts-critic-6",
+					"action": "applied",
+					"reason": "Porterhouse and T-Bone madeWith is now beef, often butter."
+				},
+				{
+					"finding": "cuts-critic-7",
+					"action": "applied",
+					"reason": "Flank madeWith is now beef, sometimes soy sauce, sometimes garlic, and Skirt Steak is beef, sometimes soy sauce, sometimes lime."
+				},
+				{
+					"finding": "cuts-critic-8",
+					"action": "applied",
+					"reason": "Pork Belly madeWith is now pork, salt, sometimes soy sauce, sometimes sugar."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0089",
+						"issue": "The trap \"A thick, meaty slice of cured pork carved from the center of the hind leg\" comes close to a true description of another roster card, Country Ham, which is served as center-cut slices of the cured hind leg. A trap must not truly describe another card.",
+						"fix": "Replace traps[0] with a wrong answer that matches no roster card. says: \"The pig's foot below the ankle, all skin and small bones, pickled or stewed whole\". why: \"That is the trotter. This is the joint just above it, where the leg meets the foot.\" The roster check found no ham, hock or pork in the says."
+					},
+					{
+						"id": "fd_0100",
+						"issue": "The gist opens with \"Shoulder blade steak\", and Shoulder is another card's term in this same section. When Shoulder is the term under test, this gist shows up as a wrong option that carries the term word and is half-true of it, because flat iron is a shoulder cut. That makes it a misleading distractor.",
+						"fix": "Rewrite the gist without the word shoulder, for example: \"Beef chuck steak with its tough center seam of gristle cut out, nearly as tender as filet\" (88 chars, no flat or iron, no full alias). The guest line and the why can keep \"shoulder\"."
+					},
+					{
+						"id": "fd_0098",
+						"issue": "The confusion link with Bavette is asymmetric. Bavette lists Skirt Steak in confusedWithTerms, and Bavette's guest line says \"like skirt steak\". Skirt Steak only has Bavette in seeAlsoTerms, and its notThis never mentions bavette.",
+						"fix": "Move Bavette from seeAlsoTerms to confusedWithTerms, which makes three (Flank Steak, Hanger Steak, Bavette). Then name it in notThis, for example: \"Not flank, which is wider and leaner, nor hanger, the short thick steak beside it, nor bavette, the thicker sirloin flap.\" (about 120 chars). Keep Chimichurri in seeAlsoTerms."
+					},
+					{
+						"id": "fd_0095",
+						"issue": "madeWith is only [\"beef\"]. The card's own menu line reads \"bone marrow butter\" and its pairs list compound butter. Ribeye, Ribeye Cap, Hanger and Tenderloin all carry \"often butter\". A steakhouse strip is butter-basted or butter-finished as often as those, and madeWith is where a dairy flag belongs.",
+						"fix": "Set madeWith to [\"beef\", \"often butter\"]."
+					},
+					{
+						"id": "fd_0099",
+						"issue": "The same madeWith gap as fd_0095. The line is \"Bavette steak, shallot butter, frites\" but madeWith is only [\"beef\"].",
+						"fix": "Set madeWith to [\"beef\", \"often butter\", \"sometimes shallot\"], or at the least add \"often butter\"."
+					},
+					{
+						"id": "fd_0096",
+						"issue": "The same inconsistency as fd_0095. Porterhouse is the most classically butter-finished steakhouse cut on the list, yet madeWith is only [\"beef\"] while the sibling steak cards flag butter.",
+						"fix": "Set madeWith to [\"beef\", \"often butter\"]."
+					},
+					{
+						"id": "fd_0097",
+						"issue": "pairs names \"citrus or soy marinades\", but madeWith is only [\"beef\"]. Flank is served marinated more often than not, and soy is the item a server would need flagged. Short Rib already handles this with \"sometimes soy\".",
+						"fix": "Set madeWith to [\"beef\", \"sometimes soy sauce\", \"sometimes garlic\"]. Apply the same to fd_0098 Skirt Steak (carne asada and fajita marinades often use soy or Worcestershire): [\"beef\", \"sometimes soy sauce\", \"sometimes lime\"]."
+					},
+					{
+						"id": "fd_0094",
+						"issue": "pairs lists \"soy and ginger glazes\", and the linked recipe is siu yuk, but madeWith is only [\"pork\"]. It is the same soy gap as on Flank.",
+						"fix": "Set madeWith to [\"pork\", \"salt\", \"sometimes soy sauce\", \"sometimes sugar\"]."
+					}
+				],
+				"notes": "**What passed**\n\n- **Roster:** all 22 roster rows have a card, with ids and terms copied exactly.\n- **Lengths:** I ran them with a script. Every field is inside its band and every card total is inside 420 to 980. The longest is 868 (Wagyu) and the shortest is 638 (Flat Iron). The section mean is 770.9, under the 800 ceiling.\n- **Known packet errors:** both are covered. The Cheek trap opens \"A lean, naturally soft muscle\", which matches /lean/. The Shoulder trap opens \"Very tender\", which matches /tender/.\n- **Forbidden language:** I found no verdict words, no em or en dashes, no banned substrings, and no temperature in any guest line. The only temperatures are 63 C (145 F) on Pork Chop, in the correct form.\n- **Distinctness:** no two gists or guest lines are the same.\n- **Gists:** no gist contains its own restricted words or a full alias.\n- **Facts:** I checked these and they hold:\n  - the USDA 1.25 inch porterhouse line\n  - the flat iron's 2002 Nebraska and Florida origin\n  - faja as the root of fajita\n  - bavette meaning bib\n  - Kobe coming from Hyogo\n  - the 2011 pork guidance of 63 C (145 F)\n  - strip and ribeye being the same back muscle\n  - osso buco\n\n**For the operator**\n\n1. **Notes:** 18 of 22 cards carry a note, against the brief's \"fewer than half\". In a steak section nearly every one is a real doneness fact, so I did not flag them. Cheek and Short Rib use the same sentence, \"There is no temperature to ask the guest for.\", which you may want to vary.\n2. **Traps:** 17 of 22 cards carry traps, 20 traps in all, against an aim of about half. All 20 are plausible real mistakes, so this is fine unless the test wants fewer.\n3. **Porterhouse and T-Bone:** the gist names \"the strip\" and \"the tenderloin\", which are both other cards' terms. That is legal under rule (a). It will appear as a wrong option under Tenderloin with the term word inside it, but it is clearly a different object, so I left it out of the problems. Avoiding it would mean a rewrite that also skips \"bone\" and the alias \"filet\".\n4. **Pork Chop:** trap 2, the ham steak, also leans toward Country Ham (\"slice of the hog's hind leg, cured and smoked\"). The \"before it is grilled\" clause keeps it just far enough away. If fd_0089 is rewritten, consider softening this one to \"brined and smoked\".\n5. **Alias pronunciations:** Onglet (ohn-GLAY), Calotte (kah-LOT), Spinalis and Arrachera (ah-rah-CHEH-rah) have no respelling because \"say\" covers only the term. Coulotte solved this neatly by putting \"said pee-KAHN-yah\" in origin. The same trick would fit Hanger Steak, which has no origin field yet and room in its total (795).\n6. **Cross-section links:**\n   - Cheek to Guanciale is a seeAlso, and that is right: cured jowl, same part but not a confusion.\n   - Wagyu could take Heritage Breed or Grass-Fed as a seeAlso in place of Seared.\n   - Shoulder to Flat Iron Steak and Flat Iron to Shoulder are correctly reciprocal.\n   - Ribeye Cap and Coulotte are correctly linked as a confusion both ways.\n   - Hanger and Skirt, Flank and Skirt, and Flank and Bavette are each linked as a confusion both ways.\n   - Only Skirt to Bavette is one-sided, and that is reported above.\n\nThe length script is at C:/Users/zpull/AppData/Local/Temp/claude/C--Users-zpull--claude/ee375187-7803-4126-b577-0cdfe403a999/scratchpad/s.py"
+			},
+			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-19",
+			"pass": "condensing",
+			"cards": [
+				"fd_0086",
+				"fd_0087",
+				"fd_0088",
+				"fd_0089",
+				"fd_0090",
+				"fd_0091",
+				"fd_0092",
+				"fd_0093",
+				"fd_0094",
+				"fd_0095",
+				"fd_0096",
+				"fd_0097",
+				"fd_0098",
+				"fd_0099",
+				"fd_0100",
+				"fd_0101",
+				"fd_0102",
+				"fd_0103",
+				"fd_0104",
+				"fd_0105",
+				"fd_0106",
+				"fd_0107"
+			],
+			"findings": [
+				{
+					"id": "fd_0086",
+					"field": "packet",
+					"severity": "unclear",
+					"claim": "The condensed card has no `packet` field. The same is true of all eight cards, fd_0086 to fd_0093.",
+					"because": "Every original in C:/Users/zpull/WorldTable/tools/derive/floor-deck/cuts.mjs carries `packet: true`. If the condensed objects replace the originals whole instead of being merged field by field, all eight cards drop out of the packet. If the condenser's view simply left the field out and the merge keeps untouched fields, nothing is lost. Apart from this I found no damage in fd_0086 to fd_0093. No safety or doneness fact was dropped. term, say, aliases, madeWith, lexiconSlug, recipe, seeAlso, confusedWith and line are unchanged. Each gist sits within 8 characters of its trap. No gist or trap uses its card's term words, and fd_0088's gist no longer uses 'steak'. I found no banned words or dashes. By my count the whole cards run about 634 to 699 characters with a mean of about 671, and every field is within its band.",
+					"fix": "Restore `packet: true` on fd_0086, fd_0087, fd_0088, fd_0089, fd_0090, fd_0091, fd_0092 and fd_0093, or confirm the merge step preserves fields the condenser did not return.",
+					"lens": "condense-check",
+					"key": "cuts-condense-1-1"
+				},
+				{
+					"id": "fd_0094",
+					"field": "packet",
+					"severity": "unclear",
+					"claim": "The condensed card has no packet field.",
+					"because": "The original in cuts.mjs carries packet: true between term and gist. It is the only card in this batch with that flag. If the condensed object replaces the original whole, not field by field, the flag is lost. Nothing in the length brief licenses removing it.",
+					"fix": "Carry packet: true through unchanged. It has no text length, so no limit is affected.",
+					"lens": "condense-check",
+					"key": "cuts-condense-2-1"
+				},
+				{
+					"id": "fd_0098",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "The why now says \"A thin belt with coarse cross fibers and more fat than flank\".",
+					"because": "The original said \"coarse fibers running across its width\". That tells a server the grain runs the short way, which is why the closing \"slicing across the grain\" matters on a long ribbon. \"Cross fibers\" can be read as cross-hatched or criss-crossed, so the direction is lost.",
+					"fix": "\"A thin belt with coarse fibers running across its width and more fat than flank, it soaks up marinade and chars fast.\" This adds about 15 characters: the why goes to about 259 and the card to about 736, both inside the limits.",
+					"lens": "condense-check",
+					"key": "cuts-condense-2-2"
+				},
+				{
+					"id": "fd_0101",
+					"field": "note",
+					"severity": "style",
+					"claim": "The note no longer says \"Sliced across the grain.\" Only the smoke-ring sentence is left.",
+					"because": "That was the card's only statement of the slicing fact. The why, the guest line and the gist do not carry it. It is a handling fact, not doneness or safety, so this is minor, but it is what the note field is for and restoring it costs little.",
+					"fix": "\"Sliced across the grain. Smoked brisket often shows a pink ring under the crust: the smoke ring, and it is normal.\" That is 114 characters and the card comes to about 726.",
+					"lens": "condense-check",
+					"key": "cuts-condense-2-3"
+				},
+				{
+					"id": "fd_0107",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "The note was deleted, so the card no longer says Japanese A5 is sold by the ounce, seared quickly and served in small portions.",
+					"because": "This was the card's only statement of how the product is sold and cooked (by the ounce, a quick sear, small portions). The why does not say it, and the guest line's 'a little goes a long way' does not tell a server how it is priced or portioned. It is a real handling and service fact, not a restatement of the why.",
+					"fix": "Restore a shorter note: 'Japanese A5 is usually sold by the ounce and seared quickly in small portions.' (78 characters; the card goes from 720 to about 798, still under 900).",
+					"lens": "condense-check",
+					"key": "cuts-condense-3-1"
+				},
+				{
+					"id": "fd_0103",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "The note was deleted, so the card no longer says the marrow in a cross-cut piece is meant to be eaten.",
+					"because": "The original note's second sentence was a service fact a server passes to the guest, and the why does not say it; the why mentions the marrow bone only as anatomy. The first sentence (big portion, long bone) was advice and is rightly gone. Minor loss.",
+					"fix": "Restore only: 'The marrow in a cross-cut piece is meant to be eaten.' (53 characters; the card goes from 661 to about 714).",
+					"lens": "condense-check",
+					"key": "cuts-condense-3-2"
+				},
+				{
+					"key": "cuts-condense-operator-1",
+					"id": "fd_0095",
+					"lens": "operator",
+					"field": "guest",
+					"severity": "style",
+					"claim": "The classic steakhouse steak: a firmer bite ...",
+					"because": "The condenser introduced a colon; a guest line is said aloud and carries none.",
+					"fix": "Two sentences, no colon."
+				},
+				{
+					"key": "cuts-condense-operator-2",
+					"id": "fd_0096",
+					"lens": "operator",
+					"field": "guest",
+					"severity": "style",
+					"claim": "Two steaks on one T-shaped bone: a New York strip ...",
+					"because": "The condenser introduced a colon; a guest line is said aloud and carries none.",
+					"fix": "A comma, as the original had."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "cuts-condense-1-1",
+					"action": "applied",
+					"reason": "Verified in C:/Users/zpull/WorldTable/tools/derive/floor-deck/cuts.mjs that all eight originals (fd_0086 to fd_0093) carry packet: true. Restored packet: true on every returned card so a whole-object replace cannot drop them from the packet. Note for the merge step: the output schema does not declare packet, so if the harness strips undeclared fields the merge must preserve untouched fields from the original. No text fields were changed, since the checker found no other loss and all lengths are already in band."
+				},
+				{
+					"finding": "cuts-condense-2-1",
+					"action": "applied",
+					"reason": "Confirmed in cuts.mjs line 152 that fd_0094 carries packet: true. Restored on the returned card unchanged; it has no text length so no limit moves. Note: the output schema does not declare a packet property, so if the harness drops undeclared keys the merge step must preserve the flag from the original."
+				},
+				{
+					"finding": "cuts-condense-2-2",
+					"action": "applied",
+					"reason": "Restored the original wording 'coarse fibers running across its width' so the grain direction is unambiguous. The why is now about 262 characters and the card about 737, both inside the limits; batch mean stays near 681."
+				},
+				{
+					"finding": "cuts-condense-2-3",
+					"action": "applied",
+					"reason": "Restored 'Sliced across the grain.' at the head of the note, the card's only statement of that handling fact. Note is 114 characters (limit 170), card about 724."
+				},
+				{
+					"finding": "cuts-condense-3-1 (fd_0107 note deleted: A5 sold by the ounce, seared quickly, small portions)",
+					"action": "applied",
+					"reason": "Restored the note. Used the original wording, 'Japanese A5 is usually sold by the ounce, seared quickly and served in small portions.' (86 characters), rather than the suggested 78-character version, because 'seared quickly in small portions' shifts the meaning from how it is served to how it is seared. Card total is now 806, under the 900 cap; all other fields unchanged."
+				},
+				{
+					"finding": "cuts-condense-3-2 (fd_0103 note deleted: marrow in a cross-cut piece is meant to be eaten)",
+					"action": "applied",
+					"reason": "Restored only the service fact as the note: 'The marrow in a cross-cut piece is meant to be eaten.' (53 characters). The advisory first sentence stays deleted. Card total is now 714. The six cards in this batch now average 713, so the other batches of the section need to average slightly under 700 for the section mean gate."
+				},
+				{
+					"finding": "cuts-condense-3-1",
+					"action": "applied",
+					"reason": "Operator: the corrector had already restored the note word for word (A5 sold by the ounce, seared quickly, small portions) and filed no disposition."
+				},
+				{
+					"finding": "cuts-condense-3-2",
+					"action": "applied",
+					"reason": "Operator: restored the first sentence of the original note (a whole lamb shank is a big portion on a long bone), a service fact the why does not carry."
+				},
+				{
+					"finding": "cuts-condense-operator-1",
+					"action": "applied",
+					"reason": "Operator: rewritten as two sentences with no colon."
+				},
+				{
+					"finding": "cuts-condense-operator-2",
+					"action": "applied",
+					"reason": "Operator: the colon became the comma the original had."
+				}
+			],
+			"critic": {
+				"ok": true,
+				"problems": [],
+				"notes": "condensed to a mean of 687 characters against a target of 700"
+			},
+			"acceptedRejected": []
+		}
+	]
+}
