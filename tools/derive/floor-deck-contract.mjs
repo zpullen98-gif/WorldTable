@@ -15,6 +15,16 @@
  * field has one, the card has one, and the SECTION has one on its mean, because
  * per-field ceilings alone let every field sit at its maximum at once.
  *
+ * And then it happened again anyway. The pilot section (Meat Cuts, 22 cards)
+ * was given a mean ceiling of 800 and came back at 771, with `why` averaging
+ * 300 against an aim of 220 to 290 and a note on 18 cards of 22. At that rate
+ * 300 cards pass the byte ceiling the precache cap was raised for. So the
+ * numbers below were tightened the same day, while it cost one section to
+ * condense and not fifteen: why 340 -> 300, the mean 800 -> 720. The gist and
+ * the trap came down together to 80, because the pilot's keys averaged 78
+ * characters against 72 for its traps and a reader who always picked the
+ * longest option scored 33 per cent.
+ *
  * ## Why a verdict cannot be expressed
  *
  * This app refuses allergen verdicts structurally (service-track.mjs
@@ -52,9 +62,9 @@ export const LIMITS = {
 	say: [2, 40],
 	alias: [2, 30],
 	aliasesMax: 4,
-	gist: [35, 90],
+	gist: [35, 80],
 	guest: [60, 190],
-	why: [160, 340],
+	why: [160, 300],
 	note: [40, 170],
 	origin: [25, 110],
 	pairs: [25, 110],
@@ -63,15 +73,15 @@ export const LIMITS = {
 	madeWithItem: [2, 32],
 	madeWithMax: 7,
 	madeWithJoined: 140,
-	trapSays: [35, 90],
+	trapSays: [35, 80],
 	trapWhy: [40, 120],
 	trapsMax: 3,
 	seeAlsoMax: 3,
 	confusedWithMax: 3,
 	/** gist + guest + why + note + origin + pairs + notThis + line */
-	cardTotal: [420, 980],
+	cardTotal: [400, 900],
 	/** the mean of cardTotal across a section's authored cards */
-	sectionMean: 800,
+	sectionMean: 720,
 	/** a section that emits any card emits at least this many, so multiple
 	 *  choice can always field three kin */
 	sectionMin: 6,
@@ -80,12 +90,12 @@ export const LIMITS = {
 
 /** What the writers aim at, inside the limits. The authoring brief prints these. */
 export const AIMS = {
-	gist: [55, 75],
-	guest: [110, 160],
-	why: [220, 290],
+	gist: [50, 68],
+	guest: [100, 150],
+	why: [200, 260],
 	origin: [40, 80],
 	pairs: [40, 80],
-	notThis: [60, 110]
+	notThis: [60, 100]
 };
 
 export const CARD_KEYS = [
@@ -253,6 +263,25 @@ export function genericWords(terms) {
 }
 
 /**
+ * The names that would give a card away: its term, and its SINGLE-WORD aliases.
+ *
+ * A one-word alias is a name (Onglet, Calotte, Flanken). A multi-word alias is
+ * mostly ordinary vocabulary: the pilot section came back with "Beef Short
+ * Ribs" as an alias of Short Rib and "Flap Meat" as one of Bavette, and
+ * counting their words banned "beef" and "meat" from those cards' own
+ * descriptions. The brief could not have warned the writers, either: it is
+ * printed before any alias exists. Where a multi-word alias does share a
+ * telling word with the term, the term's own words already cover it.
+ *
+ * @param {{ term: string, aliases?: string[] }} card
+ * @returns {string}
+ */
+export function leakNames(card) {
+	const single = (card.aliases ?? []).filter((a) => !/[\s-]/.test(String(a).trim()));
+	return [card.term, ...single].join(' ');
+}
+
+/**
  * The words of a card's own name that an option under that name may not use.
  *
  * @param {{ term: string, aliases?: string[] }} card
@@ -260,8 +289,7 @@ export function genericWords(terms) {
  * @returns {string[]}
  */
 export function identifyingWords(card, generic) {
-	const names = [card.term, ...(card.aliases ?? [])].join(' ');
-	const all = significantWords(names, 3);
+	const all = significantWords(leakNames(card), 3);
 	const own = all.filter((w) => !generic.has(w));
 	/* When EVERY word of a name is generic, the exemption is off: "Truffle"
 	   sits in three terms (the fungus, Truffle Oil, Chocolate Truffle), and

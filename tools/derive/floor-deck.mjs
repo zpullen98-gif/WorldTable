@@ -62,7 +62,8 @@ import {
 	isStub,
 	genericWords,
 	identifyingWords,
-	leakCount
+	leakCount,
+	leakNames
 } from './floor-deck-contract.mjs';
 import { wrongAnswersFor, seeded, foldText } from '../../src/lib/floor-deck-core.mjs';
 
@@ -324,7 +325,12 @@ export function buildFloorDeck({ recipes }) {
 			if (isStub(c)) continue;
 			count++;
 
-			const names = [c.term, ...(c.aliases ?? [])].join(' ');
+			/* what the prompt hides: the term and its one-word aliases, the same
+			   names the contract keeps out of a gist (leakNames says why). The
+			   recipe check below still reads EVERY alias: a link is about the
+			   subject, not about what would give an answer away. */
+			const names = leakNames(c);
+			const allNames = [c.term, ...(c.aliases ?? [])].join(' ');
 			const red = redact(c.why, names, { minLength: 3 });
 			if (red.prompt.endsWith('…')) problems.push(`${c.id}: the prompt was clipped; why is over the redactor's length`);
 			if (red.hiddenShare > MAX_REDACTED_SHARE) {
@@ -338,7 +344,7 @@ export function buildFloorDeck({ recipes }) {
 				if (!name) problems.push(`${c.id}: recipe "${c.recipe}" is not in the recipe index`);
 				else {
 					const inName = new Set(significantWords(name, 3));
-					if (!significantWords(names, 3).some((w) => inName.has(w))) {
+					if (!significantWords(allNames, 3).some((w) => inName.has(w))) {
 						problems.push(`${c.id}: recipe "${name}" shares no word with ${JSON.stringify(c.term)} or its aliases. A link carries its subject, the rule the crosslinks obey`);
 					}
 				}

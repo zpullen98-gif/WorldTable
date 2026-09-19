@@ -22,7 +22,7 @@
  *      provenance for why each card reads the way it does.
  */
 
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { checkDeck } from '../derive/floor-deck-contract.mjs';
 import { DECK_SECTIONS, PACKET_TERMS, PACKET_ERRORS } from '../derive/floor-deck.mjs';
@@ -79,17 +79,26 @@ if (problems.length) die(`the deck would hold ${problems.length} problem(s) with
 
 writeSection(sectionKey, target.cards);
 
+/* The audit ACCUMULATES: one entry per merge, oldest first. It overwrote, once,
+   and the pilot's condensing pass (8 findings) replaced the authoring pass's
+   record (64 findings, the ones that say why Tenderloin is not "the leanest"
+   and why Brisket's note does not say "not undercooking"). A section is merged
+   more than once as a matter of course: written, condensed, corrected later. */
 mkdirSync(AUDIT_DIR, { recursive: true });
+const auditFile = join(AUDIT_DIR, `${sectionKey}.json`);
 const audit = {
-	section: sectionKey,
 	merged: new Date().toISOString().slice(0, 10),
+	pass: draft.pass ?? (existsSync(auditFile) ? 'revision' : 'authoring'),
 	cards: resolved.cards.map((c) => c.id),
 	findings: draft.findings ?? [],
 	dispositions: draft.dispositions ?? [],
 	critic: draft.critic ?? null,
 	acceptedRejected: acceptRejected ? rejected.map((f) => f.key) : []
 };
-writeFileSync(join(AUDIT_DIR, `${sectionKey}.json`), JSON.stringify(audit, null, '\t') + '\n');
+const prior = existsSync(auditFile) ? JSON.parse(readFileSync(auditFile, 'utf8')) : { section: sectionKey, passes: [] };
+if (!Array.isArray(prior.passes)) throw new Error(`${auditFile} is not { section, passes[] }`);
+prior.passes.push(audit);
+writeFileSync(auditFile, JSON.stringify(prior, null, '\t') + '\n');
 
 const after = target.cards.filter((c) => c.planned !== true).length;
 console.log(`  ${sectionKey}: ${resolved.cards.length} card(s) merged, ${before} -> ${after} written of ${target.cards.length}`);

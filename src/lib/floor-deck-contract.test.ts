@@ -131,7 +131,7 @@ describe('one card: shape', () => {
 	});
 	it('holds every field to a floor and a ceiling', () => {
 		fails(card({ gist: 'Too short' }), /gist is 9 characters/);
-		fails(card({ gist: 'x'.repeat(LIMITS.gist[1] + 1) }), /gist is 91 characters/);
+		fails(card({ gist: 'x'.repeat(LIMITS.gist[1] + 1) }), new RegExp(`gist is ${LIMITS.gist[1] + 1} characters`));
 		fails(card({ why: 'Short.' }), /why is 6 characters/);
 		fails(card({}, ['guest']), /guest is required/);
 	});
@@ -233,6 +233,18 @@ describe('one card: nothing under the term may name the term', () => {
 	it('an alias counts', () => fails(card({ gist: 'The onglet of the French bistro, loose-grained, rich and mineral' }), /gist names its own term/));
 	it('a trap', () => {
 		fails(card({ traps: [{ says: 'A steak cut from the hind leg that is best braised for hours', why: (GOOD.traps as Array<{ why: string }>)[0].why }] }), /says names the term/);
+	});
+	it('a one-word alias is a name; a multi-word alias is ordinary words and bans nothing', () => {
+		// what the pilot came back with: "Beef Short Ribs" must not ban "beef"
+		const c = card({
+			term: 'Short Rib',
+			aliases: ['Beef Short Ribs', 'Flanken'],
+			gist: 'Blocks of fatty beef on stubby bones from low on the chest, braised soft',
+			line: 'Braised short rib, horseradish, potato'
+		}, ['say']);
+		expect(checkCard(c, CTX)).toEqual([]);
+		fails({ ...c, gist: 'The flanken of Korean barbecue, sawn thin across the bones and grilled' }, /gist names its own term/);
+		fails({ ...c, gist: 'Blocks of fatty beef on a short bone from low on the chest, braised' }, /gist names its own term/);
 	});
 	it('but a head noun three cards share identifies nothing', () => {
 		const generic = genericWords(['Hanger Steak', 'Flank Steak', 'Skirt Steak']);
