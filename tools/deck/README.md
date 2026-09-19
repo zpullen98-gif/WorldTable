@@ -41,8 +41,10 @@ and nowhere else.
    the corrector did about it, anything undisposed or unplaced, the critic's
    notes). It decides nothing.
 3. **Validate.** `node tools/deck/validate.mjs --draft tools/deck/out/<section>.json --section <section>`
-   The build's own contract, against the draft laid over the deck. Fix what it
-   names in the draft (or re-run the chunk) until it is clean.
+   The build's own contract, against the draft laid over the deck, including
+   the recipe links (it loads the recipe index for that). Fix what it names in
+   the draft (or re-run the chunk) until it is clean. Read the critic's list
+   against the DRAFT before ruling: its own repair pass has usually fixed it.
 4. **Merge.** `node tools/deck/merge.mjs <section> tools/deck/out/<section>.json`
    All or nothing. It stops on any finding the workflow could not place on a
    card, on any serious finding with no disposition, and on any `wrong` or
@@ -69,7 +71,10 @@ entries feeding several cards, dense confusions, and real Brisket and
 Porterhouse cards to prove the Lexicon's pinned search counts hold). Then cured,
 fish, methods, southern, meats, mushrooms, dairy, starches, sauces,
 preparations, bread, custards, pantry, language. When the last planned card is
-written, set `DECK_COMPLETE = true` in `tools/derive/floor-deck.mjs`.
+written, set `DECK_COMPLETE = true` in `tools/derive/floor-deck.mjs`. Done
+19 Sep 2026: all 300 are written and the flag is on, so a new card is added
+by minting its id (`mint-ids.mjs`), briefing it with `--only`, and taking it
+through the same steps.
 
 ## Ids
 

@@ -29,19 +29,26 @@ at **$49.99/month, unlimited staff, one shared login**.
 
 | | |
 |---|---|
-| WorldTable | branch `dish-standards`, HEAD `4942968`, **fully pushed** (remote `origin/dish-standards`), tree clean |
+| WorldTable | branch `dish-standards`. The live HEAD is whatever `git log -1` prints; as of 19 Sep 2026 the Floor Deck (300 of 300) and Producers in My Menu are committed and pushed |
 | OutsideOfTime | branch `main`, HEAD `71e43b27a`, tree clean, **no git remote — never pushed** |
-| Tests | **898 unit** (60 files) · **145 e2e** — **the whole suite is green** |
-| Gates | `build:data` all pass · `verify:build` **22/22** |
+| Tests | **1,262 unit** (72 files) · **192 e2e** (19 Sep 2026): the whole suite is green |
+| Gates | `verify:data` 55/55 · `build:data` all pass · `verify:derived` clean · `verify:build` **22/22** |
 | Precache | Cap **2.70 MB** gzipped. It moved from 2 MB to 2.5 MB when the corpus grew past 970 recipes, from 2.5 to 2.65 on 2026-09-19 by the owner's decision for the Floor Deck (a staff-training deck that must install with the app; at that raise the precache stood at 2,619,178 bytes), and to 2.70 the same day when three written sections showed the full deck at its written depth would finish within a few KB of 2.65 and the owner chose depth over trimming. `tools/verify-build.mjs` carries both arguments. The live figure is whatever `npm run verify:build` prints; no copy of it is kept here, because every copy went stale |
-| Routes | 29 · Derived JSON | 24 files (`assessability.json` joined) |
+| Routes | 35 pages · Derived JSON | 25 files (`floor-deck*.json` joined) |
 | Deploy | `table/` re-synced for the 3 Sep audit pass, at `4942968`. See below. |
 
 ## The corpus
 
-970 recipes · 94 chapters · 479 lexicon terms · 103 techniques · 45 dish
-standards · 50 technique standards · 475 marks · 6 calibration ladders · 176
-front-of-house terms · 27 service modules · 186 drill cards.
+**Measured 19 Sep 2026:** 1,844 recipes · 171 chapters · 779 lexicon terms
+(479 sealed + 300 atlas) · 112 techniques · 60 technique standards · 6
+calibration ladders · 186 drill cards · **300 Floor Deck cards** in 15
+sections (see `CLAUDE.md`, "The Floor Deck"). `src/lib/data/totals.json` is
+the truth for the first four and the deck.
+
+*The line this replaced, kept for the dated figures below it:* 970 recipes ·
+94 chapters · 479 lexicon terms · 103 techniques · 45 dish standards · 50
+technique standards · 475 marks · 6 calibration ladders · 176 front-of-house
+terms · 27 service modules · 186 drill cards.
 
 **797 of 970 recipes are assessable** — 45 against a standard of their own, 752
 against the techniques they exercise. 173 carry neither: 143 have no technique

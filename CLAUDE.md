@@ -495,6 +495,18 @@ the same reason: a room answering aloud is a fact about the venue, never about
 whoever holds the tablet. It merges by union on `slug|at` and caps at 2,000
 AFTER the union, so two full tablets do not lose the newest answers to the cap.
 
+`producers` (Producers in My Menu, `src/lib/producers.ts`, `/menu/producers`)
+is the venue's own suppliers: name, place, kind, what they supply, the story a
+server can tell, and the dishes they are on. **The dish link lives on the
+producer (`dishIds`)**, never on the dish: `saveDish()` in `/menu` rebuilds a
+dish field by field, so a dish-side pointer would be dropped by the next edit,
+the trap that once lost `Prep.station`. A producer merges WHOLE by newer `ts`,
+links included, because a union of `dishIds` would stop an untick from ever
+travelling and a stale "From ..." credit told to a guest is the worse failure;
+`relinkArrivals` keeps the file's credits on a dish an import brings back.
+`removeDish` prunes. Nothing is seeded. Drill the Menu asks about producers
+only at four or more (`src/lib/menu-quiz.ts`, `PRODUCER_QUIZ_MIN`).
+
 ## The Floor Deck: a staff-training deck of menu words
 
 The owner brought a hand-filled restaurant training packet (about 159 terms in
@@ -579,6 +591,17 @@ answers every finding, a critic), `take.mjs`, `validate.mjs`, `merge.mjs`,
 `build:data`, `measure.mjs`, `check-displacement.mjs`, the tests. The refute
 pass is not optional. Measure after every section: the deck and the rest of
 the app share one precache cap.
+
+Two things the fifteen sections taught, both now in the code: a menu writes
+the plural ("pan-roasted chanterelles"), so dish lines and say-it-back match a
+name or its plain -s/-es plural (`nameInText`, `floor-deck-core.mjs`), and
+anything irregular goes in `aliases`; and the recipe-link rule
+(`recipeProblems` in the contract) runs in the validator as well as the build,
+because it ran only in the build and two merged sections failed there. The
+redactor matches a word within one letter, so an alias can blank a near-miss
+("Fluke" took "flake"); word the gist and why around it rather than weakening
+the redactor. `DECK_COMPLETE` is true: a stub, a missing packet term or an
+untrapped packet error fails the build.
 
 ## Sanitation: the guide's silences, made load-bearing
 
