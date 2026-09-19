@@ -404,6 +404,13 @@ export const LEXICON_ANCHOR = {
 	Fermentation: 'fermentation-and-pickling',
 	'Brining & curing': 'brining-wet-dry-and-cures',
 	'Curing gravlax': 'brining-wet-dry-and-cures',
+	/* This key was simply absent, and an absent key falls through to null
+	   exactly as a deliberate `null` does, while the gate only checks the keys
+	   that are present. So the Confit page shipped with no definition although
+	   the Lexicon has an entry named Confit that defines the technique: duck
+	   legs salted, then poached submerged in fat at about 90C. Found while
+	   mapping a training packet onto the Lexicon, 19 September 2026. */
+	Confit: 'confit',
 	'Making a roux': 'roux-slurry-and-liaison',
 	'Béchamel: the mother sauce': 'roux-slurry-and-liaison',
 	'Reducing a sauce': 'reduction-nappe-and-mounting',
