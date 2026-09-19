@@ -23,6 +23,9 @@ import type {
 	Sanitation,
 	ServiceTrack,
 	Drills,
+	FloorDeck,
+	DeckTraps,
+	DeckIndex,
 	StationsData,
 	TechniqueStandard
 } from './types';
@@ -51,7 +54,8 @@ export const TOTALS = {
 	recipes: recipes.length,
 	chapters: chapters.length,
 	lexicon: totalsJson.lexicon,
-	techniques: totalsJson.techniques
+	techniques: totalsJson.techniques,
+	deck: totalsJson.deck
 };
 
 /* ---- lazy islands ---------------------------------------------------- */
@@ -119,6 +123,36 @@ export async function loadDrills(): Promise<Drills> {
 		drillsCache = (await import('./data/drills.json')).default as unknown as Drills;
 	}
 	return drillsCache;
+}
+
+let floorDeckCache: FloorDeck | null = null;
+export async function loadFloorDeck(): Promise<FloorDeck> {
+	if (!floorDeckCache) {
+		floorDeckCache = (await import('./data/floor-deck.json')).default as unknown as FloorDeck;
+	}
+	return floorDeckCache;
+}
+
+/* The written test's wrong answers, and the ONLY loader for them. A card never
+   shows a trap, and the way that stays true is that nothing but the test route
+   calls this: floor-deck-contract.test.ts scans the routes for the name. */
+let deckTrapsCache: DeckTraps | null = null;
+export async function loadDeckTraps(): Promise<DeckTraps> {
+	if (!deckTrapsCache) {
+		deckTrapsCache = (await import('./data/floor-deck.traps.json')).default as unknown as DeckTraps;
+	}
+	return deckTrapsCache;
+}
+
+/* Ids, terms and the Lexicon reverse map: what the Lexicon page and the tiles
+   need. Never load the whole deck in a page's `load` for the sake of these:
+   load data is inlined into the prerendered HTML. */
+let deckIndexCache: DeckIndex | null = null;
+export async function loadDeckIndex(): Promise<DeckIndex> {
+	if (!deckIndexCache) {
+		deckIndexCache = (await import('./data/floor-deck.index.json')).default as unknown as DeckIndex;
+	}
+	return deckIndexCache;
 }
 
 let serviceTrackCache: ServiceTrack | null = null;

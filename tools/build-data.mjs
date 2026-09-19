@@ -44,6 +44,7 @@ import { LEXICON_SUPPLEMENT, ATLAS_CATEGORIES } from './derive/lexicon-supplemen
 import { buildWaste } from './derive/waste.mjs';
 import { buildServiceTrack } from './derive/service-track.mjs';
 import { buildDrills } from './derive/drills.mjs';
+import { gateFloorDeck, buildFloorDeck } from './derive/floor-deck.mjs';
 import { buildStations } from './derive/stations.mjs';
 import { LADDERS, CUPS, TRIALS, PASS_AT } from './derive/calibration.mjs';
 import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
@@ -278,6 +279,16 @@ function gateLexiconSupplement() {
 	return true;
 }
 const lexiconSupplementHeld = gateLexiconSupplement();
+
+/**
+ * The Floor Deck's authored contract, held with the other authored-content
+ * gates so all of them report in one run. The contract itself is
+ * tools/derive/floor-deck-contract.mjs, shared with the authoring validator;
+ * this stage is everything knowable from the authored cards, the id ledger and
+ * the Lexicon's slugs. What needs the recipe index or the emitted shape (the
+ * prompts, the option-length tell, the bytes) runs later, in buildFloorDeck.
+ */
+const floorDeckHeld = gateFloorDeck({ lexiconSlugs: new Set(D.map((e) => slugify(e.t))) });
 
 /**
  * Every chapter has a place on the map, and every place has a chapter.
@@ -956,7 +967,7 @@ const techniqueStandards = TECHNIQUE_STANDARDS.map((x) => ({
  * Exiting at the emit boundary rather than at each gate is what lets both
  * still report in one run.
  */
-if (!supplementHeld || !geographyHeld || !lexiconSupplementHeld) {
+if (!supplementHeld || !geographyHeld || !lexiconSupplementHeld || !floorDeckHeld) {
 	console.error('\n  BUILD GATE FAILED: nothing was written\n');
 	process.exit(1);
 }
@@ -1050,6 +1061,18 @@ const { serviceTrack, problems: serviceTrackProblems } = buildServiceTrack(
 const { drills, problems: drillProblems } = buildDrills(lexicon, serviceTrack.modules);
 
 /**
+ * The Floor Deck, emitted: the cards, the written test's traps in a file of
+ * their own (so a card has no traps field to show), and the small index the
+ * Lexicon and the tiles read without loading the deck.
+ */
+const {
+	floorDeck,
+	floorDeckTraps,
+	floorDeckIndex,
+	problems: floorDeckProblems
+} = buildFloorDeck({ recipes: index });
+
+/**
  * The brigade's stations, and which technique belongs to which. The station
  * list is gated against the guide's own Brigade entry; the map is gated in
  * reverse, so a technique nobody accounts for fails the build rather than
@@ -1083,7 +1106,8 @@ write('totals.json', {
 	recipes: R.length,
 	chapters: chapters.length,
 	lexicon: lexicon.length,
-	techniques: techniques.length
+	techniques: techniques.length,
+	deck: floorDeck.cards.length
 });
 write('technique-standards.json', techniqueStandards);
 write('palate.json', palate);
@@ -1092,6 +1116,9 @@ write('waste.json', waste);
 write('sanitation.json', sanitation);
 write('service-track.json', serviceTrack);
 write('drills.json', drills);
+write('floor-deck.json', floorDeck);
+write('floor-deck.traps.json', floorDeckTraps);
+write('floor-deck.index.json', floorDeckIndex);
 write('stations.json', stations);
 write('calibration.json', {
 	cups: CUPS,
@@ -1905,6 +1932,7 @@ problems.push(...wasteProblems);
 problems.push(...sanitationProblems);
 problems.push(...serviceTrackProblems);
 problems.push(...drillProblems);
+problems.push(...floorDeckProblems);
 problems.push(...stationProblems);
 
 /**

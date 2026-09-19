@@ -619,6 +619,77 @@ export interface Drills {
 }
 
 /**
+ * The Floor Deck: see tools/derive/floor-deck.mjs and its contract.
+ *
+ * Optional keys are OMITTED, never emitted empty, for the reason the atlas
+ * fields are: every card is precached.
+ */
+export interface DeckSection {
+	key: string;
+	title: string;
+	blurb: string;
+	/** Cards WRITTEN so far. A section at zero is planned and is not shown. */
+	count: number;
+}
+
+export interface DeckCard {
+	/** Minted and frozen, `fd_` and four digits. Also the card's slug in
+	 *  `session.drillLog`, verbatim. Never display it and never derive it. */
+	id: string;
+	term: string;
+	/** A respelling of how a dining room says it: gwan-CHAH-leh. */
+	say?: string;
+	aliases?: string[];
+	section: string;
+	/** Term-free. The written test's key and the Lineup's answer key. */
+	gist: string;
+	/** THE GUEST LINE: what is said at the table. Shown first, always. */
+	guest: string;
+	/** THE WHY. */
+	why: string;
+	/** SERVICE FACTS. Ingredient nouns only; the sentence around them is
+	 *  `FloorDeck.frame`, so a card cannot phrase a verdict. */
+	madeWith?: string[];
+	note?: string;
+	/** CONTEXT. At least one of the three is present. */
+	origin?: string;
+	pairs?: string;
+	notThis?: string;
+	lexiconSlug?: string;
+	recipe?: string;
+	seeAlso?: string[];
+	/** Symmetrised at build, so either side of a pair carries it. */
+	confusedWith?: string[];
+	/** A dish line that carries the term, for "what does this word mean". */
+	line?: string;
+	/** Present only when redaction changed `why`. Read it through promptOf(). */
+	prompt?: string;
+	/* There is no `traps` field, on purpose: traps live in their own file and
+	   only the written test loads it. */
+}
+
+export interface FloorDeck {
+	version: 1;
+	frame: { madeWith: string; confirm: string };
+	sections: DeckSection[];
+	cards: DeckCard[];
+}
+
+/** A wrong answer people really give, and why it is wrong. Test only. */
+export interface DeckTrap {
+	says: string;
+	why: string;
+}
+export type DeckTraps = Record<string, DeckTrap[]>;
+
+/** What the Lexicon and the tiles read without loading the deck. */
+export interface DeckIndex {
+	cards: Array<{ id: string; term: string; section: string; aliases?: string[] }>;
+	/** Lexicon slug -> the cards that name it as their long entry. */
+	byLexicon: Record<string, string[]>;
+}
+
+/**
  * The brigade's stations: see tools/derive/stations.mjs. The station list is
  * the guide's own; the technique map is authored and gated in both directions.
  */

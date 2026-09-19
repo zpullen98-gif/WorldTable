@@ -51,10 +51,16 @@ export const REDACTION = '__';
  * the answer in plain sight.
  */
 /**
+ * `minLength` is 4 for the service drills and always was: no front-of-house
+ * term is three letters. The Floor Deck passes 3, because Jus, Roe, Cod, Ham
+ * and Rib are terms there, and a redaction that skips a three-letter answer
+ * prints it. The default is unchanged so drills.json stays byte-identical.
+ *
  * @param {string} term
+ * @param {number} [minLength]
  * @returns {string[]}
  */
-export function significantWords(term) {
+export function significantWords(term, minLength = 4) {
 	return [
 		...new Set(
 			String(term)
@@ -62,7 +68,7 @@ export function significantWords(term) {
 				.replace(/[̀-ͯ]/g, '')
 				.toLowerCase()
 				.split(/[^a-z0-9]+/)
-				.filter((w) => w.length > 3 && !STOP.has(w))
+				.filter((w) => w.length >= minLength && !STOP.has(w))
 		)
 	];
 }
@@ -129,9 +135,12 @@ function nearSpelling(word, target) {
 /**
  * @param {string} definition
  * @param {string} term
+ * @param {{ minLength?: number, words?: string[] }} [opts] `words` replaces the
+ *   term's own significant words outright: the Floor Deck passes a list with
+ *   the deck's generic head nouns already removed.
  */
-export function redact(definition, term) {
-	const words = significantWords(term);
+export function redact(definition, term, opts = {}) {
+	const words = opts.words ?? significantWords(term, opts.minLength);
 	const original = String(definition);
 	const folded = fold(original);
 
