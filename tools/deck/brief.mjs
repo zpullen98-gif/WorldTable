@@ -2,23 +2,27 @@
 /**
  * The brief for one section: everything a writer and a refuter need, as JSON,
  * read from the files that enforce it so nothing is retyped and nothing can
- * drift. A Workflow script has no filesystem, so this is how the contract
- * reaches it: pass the output as the workflow's `args`.
+ * drift.
  *
- *   node tools/deck/brief.mjs <section> [--only fd_0101,fd_0102] > tools/deck/out/<section>.brief.json
+ *   node tools/deck/brief.mjs <section> [--only fd_0101,fd_0102]
+ *
+ * It WRITES the full brief to tools/deck/out/<section>.brief.json, which the
+ * agents open for themselves, and PRINTS the small object to pass as the
+ * Workflow's `args`: the brief's path and the contract's numbers, because a
+ * Workflow script has no filesystem and builds its schemas from them.
  *
  * The length targets are LIMITS and AIMS from the contract, baked INTO the
  * authoring prompt. The atlas's first batch was given floors and no ceiling
  * and came back at twice the house length.
  */
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { LIMITS, AIMS, BANNED, CARD_KEYS, genericWords, identifyingWords } from '../derive/floor-deck-contract.mjs';
 import { DECK_SECTIONS, PACKET_ERRORS } from '../derive/floor-deck.mjs';
 import { significantWords } from '../derive/drills.mjs';
 import { PACKET_SAID } from './packet.mjs';
-import { ROOT, loadSection, readLedger } from './lib.mjs';
+import { ROOT, OUT_DIR, loadSection, readLedger } from './lib.mjs';
 
 const args = process.argv.slice(2);
 const key = args.find((a) => !a.startsWith('--'));
@@ -93,21 +97,36 @@ for (const s of [DECK_SECTIONS.find((x) => x.key === 'cuts'), ...DECK_SECTIONS.f
 const everyCard = [];
 for (const s of DECK_SECTIONS) for (const c of await loadSection(s.key)) everyCard.push({ id: c.id, term: c.term, section: s.key });
 
-process.stdout.write(
+const RESPELLING = 'ah ay ee eh oh oo uh ow eye zh; one stressed syllable per word in CAPITALS; hyphens between syllables; ASCII letters and apostrophes only: gwan-CHAH-leh, bree-OHSH, zhoo';
+const head = { key: section.key, title: section.title, blurb: section.blurb, madeWith: section.madeWith };
+
+/* The FULL brief goes to disk, where the agents read it for themselves: the
+   roster rows with their candidates, the exemplars and the whole roster come
+   to about 40 KB, which is a poor thing to push through a tool call. */
+mkdirSync(OUT_DIR, { recursive: true });
+const briefPath = join(OUT_DIR, `${section.key}.brief.json`).split('\\').join('/');
+writeFileSync(
+	briefPath,
 	JSON.stringify(
-		{
-			section: { key: section.key, title: section.title, blurb: section.blurb, madeWith: section.madeWith },
-			roster,
-			cardKeys: CARD_KEYS.filter((k) => k !== 'packet'),
-			limits: LIMITS,
-			aims: AIMS,
-			banned: BANNED,
-			genericWords: [...generic].sort(),
-			respellingKey: 'ah ay ee eh oh oo uh ow eye zh; one stressed syllable per word in CAPITALS; hyphens between syllables; ASCII letters and apostrophes only: gwan-CHAH-leh, bree-OHSH, zhoo',
-			exemplars,
-			everyCard
-		},
+		{ section: head, roster, cardKeys: CARD_KEYS.filter((k) => k !== 'packet'), limits: LIMITS, aims: AIMS, banned: BANNED, genericWords: [...generic].sort(), respellingKey: RESPELLING, exemplars, everyCard },
 		null,
 		1
-	) + '\n'
+	) + String.fromCharCode(10)
+);
+
+/* What the workflow script itself needs, and nothing else: it has no
+   filesystem, so the contract's numbers reach it here and everything bulky is
+   a path the agents open. THIS is what is passed as the Workflow's `args`. */
+process.stdout.write(
+	JSON.stringify({
+		briefPath,
+		section: head,
+		limits: LIMITS,
+		aims: AIMS,
+		banned: BANNED,
+		respellingKey: RESPELLING,
+		hasExemplars: exemplars.length > 0,
+		todo: roster.filter((r) => !r.written).map((r) => ({ id: r.id, term: r.term, knownPacketError: Boolean(r.knownPacketError) })),
+		roster: roster.map((r) => ({ id: r.id, term: r.term }))
+	}) + String.fromCharCode(10)
 );

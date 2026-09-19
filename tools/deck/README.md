@@ -17,16 +17,20 @@ and nowhere else.
 
 ## One section
 
-1. **Brief.** `node tools/deck/brief.mjs <section> > tools/deck/out/<section>.brief.json`
-   The roster rows with what the packet's hire hand-wrote (`packet.mjs`) and
-   where that was wrong, the limits and aims, the banned tokens, candidate
-   Lexicon and recipe links, up to three finished cards as the register to
-   match, and the whole roster so a card can name the cards it is confused
-   with. `--only fd_0101,fd_0102` briefs just those cards (for re-running a
-   chunk that died).
+1. **Brief.** `node tools/deck/brief.mjs <section>`
+   It WRITES the full brief to `tools/deck/out/<section>.brief.json`: the roster
+   rows with what the packet's hire hand-wrote (`packet.mjs`) and where that was
+   wrong, the limits and aims, the banned tokens, candidate Lexicon and recipe
+   links, up to three finished cards as the register to match, and the whole
+   roster so a card can name the cards it is confused with. It PRINTS a small
+   JSON object (the brief's path and the contract's numbers): that is the
+   workflow's `args`. `--only fd_0101,fd_0102` briefs just those cards, for
+   re-running a chunk that died.
 2. **Write.** Run `author-section.workflow.js` with the Workflow tool. The tool
    refuses a `scriptPath` outside the session's working directory, so copy the
-   script into it and pass the copy's path; pass the brief JSON as `args`.
+   script into it and pass the copy's path, with step 1's printed object as
+   `args`. A workflow script has no filesystem and its agents do, so the agents
+   open the 50 KB brief for themselves and only 3 KB travels through the call.
    Authors draft in chunks of eight; three refuters with different lenses
    (culinary fact, floor usability, safety and no verdict) attack every chunk;
    a corrector answers every finding with a disposition; a critic reads the

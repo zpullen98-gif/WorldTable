@@ -148,13 +148,22 @@ HARD RULES (a build gate enforces every one; a card that breaks one is thrown ba
 8. Be right. A confident false statement on a training card gets repeated to guests for years. If you are not sure of a fact, check it (search the web) or leave it out. Prefer the specific and checkable over the impressive.
 `
 
-const EXEMPLARS = B.exemplars.length
-	? `\nFINISHED CARDS from this deck, as the register and depth to match (do not copy their wording):\n${JSON.stringify(B.exemplars, null, 1)}\n`
-	: ''
-const EVERY = `\neveryCard (the full roster, for confusedWithTerms and seeAlsoTerms; use the term exactly as written):\n${B.everyCard.map((c) => `${c.term} [${c.section}]`).join('; ')}\n`
+/* The bulky half of the brief stays on disk and every agent opens it for
+   itself: a Workflow script has no filesystem, its agents do, and 50 KB of
+   roster is a poor thing to push through a tool call and then through every
+   prompt. What the SCRIPT needs (the contract's numbers, to build its schemas
+   and its rules) arrives in args. */
+const BRIEF = `
+THE BRIEF is a JSON file on disk. READ IT FIRST, in full, with your file-reading tool: ${B.briefPath}
+It holds:
+- "roster": one row per card of this section: id, term, written, fromThePacket, thePacketSaid (what a working server hand-wrote for the term in a real training packet: it shows the register a guest line should have, and where it is wrong it is your best trap; never trust it as fact), knownPacketError (where that answer was wrong in a known way), mayNotAppearInGistOrTraps, lexiconCandidates, recipeCandidates.
+- "exemplars": finished cards from this deck, the register and depth to match without copying their wording${B.hasExemplars ? '' : ' (empty: this is the first section written)'}.
+- "everyCard": the whole 300-card roster as {id, term, section}, for confusedWithTerms and seeAlsoTerms. Use a term exactly as it is written there.
+- "genericWords": head nouns shared by three or more card names, which a gist may use.
+`
 
 const chunk = (list, n) => { const out = []; for (let i = 0; i < list.length; i += n) out.push(list.slice(i, i + n)); return out }
-const todo = B.roster.filter((r) => !r.written)
+const todo = B.todo
 const chunks = chunk(todo, 8)
 log(`${B.section.key}: ${todo.length} card(s) to write in ${chunks.length} chunk(s)`)
 
@@ -168,8 +177,8 @@ const results = await pipeline(
 	chunks,
 	(rows, _o, i) =>
 		agent(
-			`${RULES}${EXEMPLARS}${EVERY}
-YOU ARE AN AUTHOR. Write one card for EACH of these ${rows.length} roster rows, and only these. "thePacketSaid" is what a working server hand-wrote for the term in a real training packet: it shows the register a guest line should have, and where it is wrong it is your best trap. Do not trust it as fact.
+			`${RULES}${BRIEF}
+YOU ARE AN AUTHOR. Write one card for EACH of these ${rows.length} roster ids, and only these. Find each one's full row in the brief's "roster" before you write it.
 
 ${JSON.stringify(rows, null, 1)}
 
@@ -182,12 +191,12 @@ Return the cards through the schema. Before you return, re-read each card agains
 		const found = await parallel(
 			LENSES.map((lens) => () =>
 				agent(
-					`${RULES}
+					`${RULES}${BRIEF}
 YOU ARE A REFUTER. Your lens: ${lens.title}. ${lens.brief}
 
 A finding names the card by its ID (never by its term), quotes the words objected to, gives the correct fact, and offers replacement wording NO LONGER than what it replaces unless a safety fact demands it. Do not report what is fine. If a card is sound under your lens, report nothing for it.
 
-The roster rows these cards were written from (with what the packet said, known packet errors, and candidate links):
+These cards were written from the brief's roster rows with these ids (what the packet said, known packet errors and candidate links are there):
 ${JSON.stringify(rows, null, 1)}
 
 THE CARDS:
@@ -210,10 +219,10 @@ ${JSON.stringify(cards, null, 1)}`,
 		if (!stage) return null
 		if (!stage.findings.length) return { ...stage, dispositions: [] }
 		const fixed = await agent(
-			`${RULES}
+			`${RULES}${BRIEF}
 YOU ARE THE CORRECTOR. Three refuters attacked these cards. Answer EVERY finding with a disposition: "applied" (you changed the card; say what) or "rejected" (the finding is mistaken; say why, with the fact). Reject only when you are sure: a finding of severity "wrong" or "verdict" that you reject is escalated to a person. Apply the smallest change that answers the finding, keep every length inside its limits and near its aim, keep each gist free of the words listed for its card, and return ALL ${stage.cards.length} cards, changed or not, plus one disposition per finding key.
 
-Roster rows:
+The roster ids of these cards (their full rows are in the brief):
 ${JSON.stringify(stage.rows, null, 1)}
 
 FINDINGS:
@@ -241,12 +250,12 @@ log(`${cards.length} card(s), ${findings.length} finding(s), ${dispositions.filt
 
 phase('Critic')
 let critic = await agent(
-	`${RULES}
+	`${RULES}${BRIEF}
 YOU ARE THE COMPLETENESS CRITIC. Read the WHOLE section at once, which no author or refuter did. Look for: a roster row with no card; two gists or two guest lines that a reader could not tell apart; a pair of cards people genuinely confuse that is NOT linked with confusedWithTerms (in this section or, using everyCard, across sections); a knownPacketError with no matching trap; a term a new hire would mispronounce with no "say"; a card whose guest line does not answer "what is that?"; a section mean running long (the ceiling on the mean is ${L.sectionMean} characters of prose per card); any verdict language the refuters missed. ok is true only if you found nothing. Each problem names the card id and gives the fix.
 
-Roster:
-${JSON.stringify(B.roster.map((r) => ({ id: r.id, term: r.term, knownPacketError: r.knownPacketError })), null, 1)}
-${EVERY}
+The section's roster (ids carrying a known packet error are marked; the detail is in the brief):
+${JSON.stringify(B.roster.map((r) => ({ ...r, knownPacketError: (B.todo.find((t) => t.id === r.id) || {}).knownPacketError || undefined })), null, 1)}
+
 THE SECTION:
 ${JSON.stringify(cards, null, 1)}`,
 	{ label: `critic:${B.section.key}`, phase: 'Critic', schema: CRITIC, effort: 'high' }
@@ -262,7 +271,7 @@ if (critic && critic.problems && critic.problems.length) {
 			.filter((p) => affected.some((c) => c.id === p.id))
 			.map((p, n) => ({ key: `${B.section.key}-critic-${n + 1}`, id: p.id, lens: 'critic', field: 'card', severity: 'unclear', claim: p.issue, because: p.issue, fix: p.fix }))
 		const fixed = await agent(
-			`${RULES}${EVERY}
+			`${RULES}${BRIEF}
 YOU ARE THE CORRECTOR, for the critic's read of the whole section. Answer every finding with a disposition and return ALL ${affected.length} of these cards. This is the one repair pass; keep every length inside its limits.
 
 FINDINGS:
