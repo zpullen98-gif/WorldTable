@@ -1,0 +1,572 @@
+{
+ "section": "bread",
+ "passes": [
+  {
+   "merged": "2026-09-19",
+   "pass": "authoring",
+   "cards": [
+    "fd_0234",
+    "fd_0235",
+    "fd_0236",
+    "fd_0237",
+    "fd_0238",
+    "fd_0239",
+    "fd_0240",
+    "fd_0241",
+    "fd_0242",
+    "fd_0243",
+    "fd_0244",
+    "fd_0245",
+    "fd_0246",
+    "fd_0247",
+    "fd_0248"
+   ],
+   "findings": [
+    {
+     "id": "fd_0238",
+     "field": "traps",
+     "severity": "wrong",
+     "claim": "Chewy mound of shredded coconut, often dipped in chocolate",
+     "because": "This trap is a true description of another card on the roster, fd_0239 (the coconut macaroon). That confusion is already carried by confusedWithTerms, so it cannot also be a trap.",
+     "fix": "says: \"Crisp rolled wafer of almond and butter, curled while still warm\"; why: \"It is a pair of smooth, domed almond shells joined by a filling.\"",
+     "lens": "fact",
+     "key": "bread-1-fact-1"
+    },
+    {
+     "id": "fd_0240",
+     "field": "traps",
+     "severity": "wrong",
+     "claim": "Sweet custard of egg yolks and cream, baked until set and firm",
+     "because": "This is a true description of roster cards Pot de Crème (fd_0263) and Custard (fd_0250). A trap may not describe another card truly.",
+     "fix": "says: \"Whole eggs and flour whipped into a light sponge, baked in a tall pan\"; why: \"It is whipped whites and sugar only, with no yolk or flour.\"",
+     "lens": "fact",
+     "key": "bread-1-fact-2"
+    },
+    {
+     "id": "fd_0240",
+     "field": "guest",
+     "severity": "style",
+     "claim": "Baked, it goes crisp and melts away; toasted on a pie, it stays soft like marshmallow.",
+     "because": "The guest line may not use semicolons. Hard rule.",
+     "fix": "Baked, it goes crisp and melts away. Toasted on a pie, it stays soft like marshmallow.",
+     "lens": "fact",
+     "key": "bread-1-fact-3"
+    },
+    {
+     "id": "fd_0236",
+     "field": "origin",
+     "severity": "wrong",
+     "claim": "Liguria, Italy. From the Latin for hearth",
+     "because": "Focaccia is baked all over Italy, and its roots go back to Roman panis focacius. Liguria (Genoa) is the most famous style, not the origin of focaccia as a whole. The hearth etymology (Latin focus) is correct.",
+     "fix": "Italy, famed in Liguria. Latin for hearth",
+     "lens": "fact",
+     "key": "bread-1-fact-4"
+    },
+    {
+     "id": "fd_0241",
+     "field": "why",
+     "severity": "unclear",
+     "claim": "usually baked empty first so it stays crisp, then filled",
+     "because": "Only tarts with wet or unbaked fillings (curd, cream, fresh fruit) are blind baked. Many classic tarts, such as frangipane, custard-fruit and apple tarts, bake with the filling already in. \"Usually\" overstates it.",
+     "fix": "often baked empty first so it stays crisp, then filled",
+     "lens": "fact",
+     "key": "bread-1-fact-5"
+    },
+    {
+     "id": "fd_0241",
+     "field": "lexiconSlug",
+     "severity": "unclear",
+     "claim": "blind-baking-and-pie-doctrine",
+     "because": "That entry is a technique essay about baking crusts empty and about pie doctrine. It is not the long-form entry on tarts as a dish, and the slug is meant only when the essay covers this same subject.",
+     "fix": "omit lexiconSlug",
+     "lens": "fact",
+     "key": "bread-1-fact-6"
+    },
+    {
+     "id": "fd_0240",
+     "field": "guest",
+     "severity": "style",
+     "claim": "Baked, it goes crisp and melts away; toasted on a pie, it stays soft like marshmallow.",
+     "because": "The guest line may not hold a semicolon. A new hire reading it aloud also runs out of breath before the second half.",
+     "fix": "Baked, it turns crisp and melts away. Toasted on a pie, it stays soft like marshmallow.",
+     "lens": "floor",
+     "key": "bread-1-floor-7"
+    },
+    {
+     "id": "fd_0236",
+     "field": "guest",
+     "severity": "unclear",
+     "claim": "It's an Italian flatbread baked in a pan with lots of olive oil, so the bottom fries crisp and the inside stays soft, usually with salt and rosemary on top.",
+     "because": "It is one 155-character sentence held together by 'so', 'and' and 'usually'. A nervous server loses the thread partway through, and it sounds like it is being read off a card.",
+     "fix": "It's an Italian flatbread baked in lots of olive oil, crisp on the bottom and soft inside, usually topped with salt and rosemary.",
+     "lens": "floor",
+     "key": "bread-1-floor-8"
+    },
+    {
+     "id": "fd_0238",
+     "field": "guest",
+     "severity": "unclear",
+     "claim": "made with almond and filled with ganache, buttercream or jam",
+     "because": "'Made with almond' is awkward to say aloud and does not tell the guest what the shell is. The shell is almond meringue, and naming it is what separates this from the coconut macaroon a guest may be expecting.",
+     "fix": "It's a little French sandwich cookie of almond meringue, crisp outside and chewy inside, filled with ganache, buttercream or jam.",
+     "lens": "floor",
+     "key": "bread-1-floor-9"
+    },
+    {
+     "id": "fd_0238",
+     "field": "line",
+     "severity": "unclear",
+     "claim": "Pistachio and raspberry macarons, three for the table",
+     "because": "'Three for the table' is how a server talks, not how a menu is written. Real menus list the flavors, or a count and a price.",
+     "fix": "Pistachio and raspberry macarons",
+     "lens": "floor",
+     "key": "bread-1-floor-10"
+    },
+    {
+     "id": "fd_0239",
+     "field": "why",
+     "severity": "verdict",
+     "claim": "With no butter and little or no flour, it eats dense, moist and chewy",
+     "because": "States an absence of butter and flour that a server will repeat as a no-dairy or no-wheat assurance. Many recipes hold condensed milk, some add a spoon of flour, and some are butter-brushed or chocolate-dipped. Name the binder instead.",
+     "fix": "Bound by egg white and sugar, it eats dense, moist and chewy",
+     "lens": "safety",
+     "key": "bread-1-safety-11"
+    },
+    {
+     "id": "fd_0239",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "\"coconut\", \"egg white\", \"sugar\", \"often condensed milk\", \"sometimes chocolate\"",
+     "because": "Many American coconut macaroon recipes add a little wheat flour to bind them, and a guest avoiding wheat needs that flagged, especially once the why no longer says there is little or none.",
+     "fix": "coconut, egg white, sugar, often condensed milk, sometimes wheat flour, sometimes chocolate",
+     "lens": "safety",
+     "key": "bread-1-safety-12"
+    },
+    {
+     "id": "fd_0240",
+     "field": "traps",
+     "severity": "verdict",
+     "claim": "with no yolk or cream",
+     "because": "A trap's why may not state an absence. Some meringue desserts are finished with cream or folded into yolk mixtures, so 'no yolk or cream' reads as an assurance. Say what it is instead.",
+     "fix": "It is whites whipped with sugar into an airy foam, not a baked yolk custard.",
+     "lens": "safety",
+     "key": "bread-1-safety-13"
+    },
+    {
+     "id": "fd_0241",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "\"wheat flour\", \"butter\", \"sugar\", \"egg\", \"often cream\"",
+     "because": "Classic tart shells (pâte sucrée) are often made with ground almond, and frangipane is a standard tart filling. A guest with a tree-nut allergy needs that flagged.",
+     "fix": "wheat flour, butter, sugar, egg, often cream, sometimes almond",
+     "lens": "safety",
+     "key": "bread-1-safety-14"
+    },
+    {
+     "id": "fd_0242",
+     "field": "origin",
+     "severity": "wrong",
+     "claim": "German and Austrian, from the word for a round layered cake",
+     "because": "German Torte comes from Italian torta, from Late Latin torta, a round loaf of bread. The source word never meant a layered cake.",
+     "fix": "German and Austrian, via Italian torta, a round cake or loaf",
+     "lens": "fact",
+     "key": "bread-2-fact-1"
+    },
+    {
+     "id": "fd_0242",
+     "field": "notThis",
+     "severity": "unclear",
+     "claim": "A torte is cake all the way through.",
+     "because": "Linzer torte, a classic torte and one of this card's recipe candidates, is a nut-pastry shell with jam under a lattice. It is built like a tart, so the absolute rule is false for it.",
+     "fix": "Not a tart, which is a pastry shell holding a filling. Most tortes are layered cake throughout.",
+     "lens": "fact",
+     "key": "bread-2-fact-2"
+    },
+    {
+     "id": "fd_0245",
+     "field": "madeWith",
+     "severity": "wrong",
+     "claim": "\"sugar\", \"sometimes almond\"",
+     "because": "Many classic Limousin and bistro clafoutis recipes add kirsch, which is alcohol and needs flagging for a guest. Sugar is not a flag item, so it can give up its slot. The list is already at the 7-item cap.",
+     "fix": "replace \"sugar\" with \"often kirsch\" (keep \"sometimes almond\")",
+     "lens": "fact",
+     "key": "bread-2-fact-3"
+    },
+    {
+     "id": "fd_0246",
+     "field": "why",
+     "severity": "wrong",
+     "claim": "baked with no pan so it browns crisp all round",
+     "because": "A free-form galette is baked on a flat baking sheet. It skips the tart pan, not every pan, so a new hire would repeat something false.",
+     "fix": "baked flat on a sheet, no tart ring, so it browns crisp all round",
+     "lens": "fact",
+     "key": "bread-2-fact-4"
+    },
+    {
+     "id": "fd_0246",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "\"often fruit\"",
+     "because": "The galette des rois, a puff-pastry galette filled with almond frangipane, is the third common menu galette and is everywhere in January. The list has no almond to flag it for a guest with a nut allergy. Fruit is not a flag item.",
+     "fix": "replace \"often fruit\" with \"sometimes almond\"",
+     "lens": "fact",
+     "key": "bread-2-fact-5"
+    },
+    {
+     "id": "fd_0248",
+     "field": "notThis",
+     "severity": "unclear",
+     "claim": "A soufflé is baked and served hot.",
+     "because": "A frozen soufflé (soufflé glacé) is a common dessert-menu item. It is a mousse or parfait set cold in a collared dish and is never baked, so the absolute claim fails on menus that list one.",
+     "fix": "A hot soufflé is baked; a frozen one is really a mousse.",
+     "lens": "fact",
+     "key": "bread-2-fact-6"
+    },
+    {
+     "id": "fd_0248",
+     "field": "guest",
+     "severity": "unclear",
+     "claim": "It's baked to order and comes out tall, golden and airy, with a soft, creamy middle. It's worth the wait, and it's best eaten the moment it lands.",
+     "because": "The line never answers \"what is that?\". It doesn't say it is an egg dish, or that it can be savory (cheese) or sweet (chocolate, vanilla), so the guest still doesn't know what they would be ordering.",
+     "fix": "It's a baked egg dish, cheese or chocolate, that rises tall and airy with a soft, creamy middle. It's made to order, so it's worth the wait.",
+     "lens": "floor",
+     "key": "bread-2-floor-7"
+    },
+    {
+     "id": "fd_0243",
+     "field": "guest",
+     "severity": "unclear",
+     "claim": "ready to be filled with cream or cheese",
+     "because": "Savory choux puts the cheese in the dough (gougères). The puffs are not usually filled with cheese, so a guest who hears \"filled with cheese\" gets the wrong picture.",
+     "fix": "ready to be filled with cream or something savory",
+     "lens": "floor",
+     "key": "bread-2-floor-8"
+    },
+    {
+     "id": "fd_0243",
+     "field": "say",
+     "severity": "style",
+     "claim": "paht ah SHOO",
+     "because": "The respelling key wants hyphens between syllables and one capitalized stress per word. As written, \"paht\" and \"ah\" are separate words with no stress, and a dining room says the phrase as one run.",
+     "fix": "paht-ah-SHOO",
+     "lens": "floor",
+     "key": "bread-2-floor-9"
+    },
+    {
+     "id": "fd_0244",
+     "field": "guest",
+     "severity": "unclear",
+     "claim": "you get in a mille-feuille or a beef Wellington",
+     "because": "A nervous new hire will stumble on \"mille-feuille\", and many American guests won't know it. The American menu name for the same pastry is napoleon.",
+     "fix": "you get in a napoleon or a beef Wellington",
+     "lens": "floor",
+     "key": "bread-2-floor-10"
+    },
+    {
+     "id": "fd_0246",
+     "field": "say",
+     "severity": "style",
+     "claim": "gah-LET",
+     "because": "An American dining room reduces the unstressed first syllable, so it is said guh-LET. The key has \"uh\" for exactly this.",
+     "fix": "guh-LET",
+     "lens": "floor",
+     "key": "bread-2-floor-11"
+    },
+    {
+     "id": "fd_0244",
+     "field": "madeWith",
+     "severity": "wrong",
+     "claim": "\"wheat flour\", \"butter\", \"water\", \"salt\"",
+     "because": "Puff pastry is almost always brushed with beaten egg before baking for its gloss, so a guest avoiding egg is served egg even though the dough itself has none. The list reads as if egg is absent. The list has room for one more item.",
+     "fix": "\"wheat flour\", \"butter\", \"water\", \"salt\", \"often egg wash\"",
+     "lens": "safety",
+     "key": "bread-2-safety-12"
+    },
+    {
+     "id": "fd_0246",
+     "field": "madeWith",
+     "severity": "wrong",
+     "claim": "\"often fruit\" ... \"sometimes egg\"",
+     "because": "The best-known French galette on a dessert menu is the galette des rois: puff pastry filled with almond frangipane. The list never flags nuts. Egg is also usual, both as the wash on the crust and cracked onto the Breton galette complète, so \"sometimes\" undersells it. The list is already at 7 items, so the fix swaps out fruit, which a guest can see on the plate.",
+     "fix": "replace \"often fruit\" with \"sometimes almond\", and \"sometimes egg\" with \"often egg\"",
+     "lens": "safety",
+     "key": "bread-2-safety-13"
+    },
+    {
+     "id": "fd_0248",
+     "field": "madeWith",
+     "severity": "wrong",
+     "claim": "\"often sugar\"",
+     "because": "Sweet soufflés are classically flavored with liqueur (Grand Marnier, kirsch), and alcohol is something a guest needs flagged. Sugar is not an allergy concern, and the list is already at 7 items.",
+     "fix": "\"sometimes liqueur\"",
+     "lens": "safety",
+     "key": "bread-2-safety-14"
+    },
+    {
+     "id": "fd_0245",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "\"sometimes almond\"",
+     "because": "Many clafoutis recipes add kirsch or another liqueur to the batter or the fruit, and a guest avoiding alcohol would need that flagged. The list has room for it.",
+     "fix": "add \"sometimes kirsch\"",
+     "lens": "safety",
+     "key": "bread-2-safety-15"
+    },
+    {
+     "id": "fd_0242",
+     "field": "why",
+     "severity": "verdict",
+     "claim": "Many swap some or all of the flour for ground nuts or crumbs",
+     "because": "\"all of the flour\" invites a server to tell a guest avoiding wheat that the torte has no flour. The crumbs in question are usually breadcrumbs, which are wheat, and most tortes keep some flour. What a torte holds is for the madeWith list and the kitchen to say, not the why.",
+     "fix": "Many replace part of the flour with ground nuts or crumbs",
+     "lens": "safety",
+     "key": "bread-2-safety-16"
+    },
+    {
+     "key": "bread-critic-1",
+     "id": "fd_0242",
+     "lens": "critic",
+     "field": "card",
+     "severity": "unclear",
+     "claim": "Torte overstates layering. The gist says 'layered cake' flat out, and notThis says 'Most tortes are layered cake throughout'. On American menus a torte is very often a single-layer cake: flourless chocolate torte, or a nut torte like the card's own line and recipe (oregon-hazelnut-torte). Linzer torte, one of the recipe candidates, is a lattice pastry and not a layer cake at all. A server who repeats 'layers' will describe a torte that does not match the plate. The gist is also 70 characters, the longest gist in the section and 5 over its only trap.",
+     "because": "Torte overstates layering. The gist says 'layered cake' flat out, and notThis says 'Most tortes are layered cake throughout'. On American menus a torte is very often a single-layer cake: flourless chocolate torte, or a nut torte like the card's own line and recipe (oregon-hazelnut-torte). Linzer torte, one of the recipe candidates, is a lattice pastry and not a layer cake at all. A server who repeats 'layers' will describe a torte that does not match the plate. The gist is also 70 characters, the longest gist in the section and 5 over its only trap.",
+     "fix": "Gist: 'Rich, dense European cake, often made with ground nuts in place of flour' (or shorter, around 62 to 66 chars). notThis: 'Not a tart, which is a pastry shell holding a filling. A torte is dense cake, whether in one layer or several.' In why, soften 'build tortes from thin layers' to 'often build tortes from thin layers, or bake one dense round'."
+    },
+    {
+     "key": "bread-critic-2",
+     "id": "fd_0243",
+     "lens": "critic",
+     "field": "card",
+     "severity": "unclear",
+     "claim": "There is a real cross-section confusion with no link. Pâte (dough) and Pâté (cured, the meat spread) are one accent apart, and new hires read and say them the same way. Pâté is on the roster (cured section), but Pâte à Choux has only Puff Pastry in confusedWithTerms, and its notThis does not warn against the mix-up.",
+     "because": "There is a real cross-section confusion with no link. Pâte (dough) and Pâté (cured, the meat spread) are one accent apart, and new hires read and say them the same way. Pâté is on the roster (cured section), but Pâte à Choux has only Puff Pastry in confusedWithTerms, and its notThis does not warn against the mix-up.",
+     "fix": "Add 'Pâté' to confusedWithTerms, giving ['Puff Pastry', 'Pâté'], and extend notThis to cover both within 150 chars, e.g. 'Not puff pastry, which is flaky folded layers, and not pâté, the meat spread. Pâte just means dough.'"
+    },
+    {
+     "key": "bread-operator-1",
+     "id": "fd_0240",
+     "lens": "operator",
+     "field": "guest",
+     "severity": "style",
+     "claim": "\"It's egg whites whipped with sugar into a glossy foam. Baked, it turns crisp and melts away. Toasted on a pie, it stays soft like marshmallow.\"",
+     "because": "Three sentences; a guest line is two at most, and the contract refused it.",
+     "fix": "The last two sentences joined with and; no fact changed."
+    },
+    {
+     "key": "bread-operator-2",
+     "id": "fd_0243",
+     "lens": "operator",
+     "field": "aliases",
+     "severity": "style",
+     "claim": "null",
+     "because": "The contract refused the dish line \"Warm choux puffs\": a menu says choux, and the line carried neither the full term nor an alias.",
+     "fix": "Alias \"Choux\", the word menus and guests actually use; the gist does not contain it."
+    },
+    {
+     "key": "bread-operator-3",
+     "id": "fd_0241",
+     "lens": "operator",
+     "field": "aliases",
+     "severity": "style",
+     "claim": "null",
+     "because": "The build refused the recipe link: \"Tarte au Citron\" shares no word with \"Tart\", and a link carries its subject, the rule the crosslinks obey. The validator cannot see it, because it runs without the recipe corpus.",
+     "fix": "Alias \"Tarte\", the word French menus print (tarte tatin, tarte au citron); the gist and trap do not contain it."
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "bread-1-fact-1",
+     "action": "applied",
+     "reason": "Replaced the coconut-mound trap, which truly describes Macaroon, with the rolled almond wafer trap. Tuile is not on the roster, and the trap is 64 characters against a 64-character gist."
+    },
+    {
+     "finding": "bread-1-fact-2",
+     "action": "applied",
+     "reason": "Replaced the custard trap, which truly describes Custard and Pot de Crème, with the whole-egg sponge trap (no sponge card is on the roster), and gave it a why that says what meringue is."
+    },
+    {
+     "finding": "bread-1-fact-3",
+     "action": "applied",
+     "reason": "Split the guest line at the semicolon into two sentences."
+    },
+    {
+     "finding": "bread-1-fact-4",
+     "action": "applied",
+     "reason": "Origin now reads 'Italy, famed in Liguria. Latin for hearth'."
+    },
+    {
+     "finding": "bread-1-fact-5",
+     "action": "applied",
+     "reason": "Changed 'usually baked empty first' to 'often baked empty first' in the why."
+    },
+    {
+     "finding": "bread-1-fact-6",
+     "action": "applied",
+     "reason": "Removed lexiconSlug, because the blind-baking essay is about a technique and is not the long-form entry on tarts."
+    },
+    {
+     "finding": "bread-1-floor-7",
+     "action": "applied",
+     "reason": "Guest line split into two sentences, using 'turns crisp' as suggested (the same edit that answers bread-1-fact-3)."
+    },
+    {
+     "finding": "bread-1-floor-8",
+     "action": "applied",
+     "reason": "Guest line replaced with the shorter suggested sentence, which drops the 'so' chain."
+    },
+    {
+     "finding": "bread-1-floor-9",
+     "action": "applied",
+     "reason": "Guest line now names the shell as almond meringue, using the suggested wording."
+    },
+    {
+     "finding": "bread-1-floor-10",
+     "action": "applied",
+     "reason": "Line shortened to 'Pistachio and raspberry macarons'."
+    },
+    {
+     "finding": "bread-1-safety-11",
+     "action": "applied",
+     "reason": "Removed the 'no butter and little or no flour' clause. The why now says the sugary whites set around the coconut, so it eats dense, moist and chewy."
+    },
+    {
+     "finding": "bread-1-safety-12",
+     "action": "applied",
+     "reason": "Added 'sometimes wheat flour' to madeWith, which now has 6 items."
+    },
+    {
+     "finding": "bread-1-safety-13",
+     "action": "applied",
+     "reason": "The new trap's why says what meringue is ('whites whipped with sugar into an airy foam, not a whole-egg flour batter') and states no absence."
+    },
+    {
+     "finding": "bread-1-safety-14",
+     "action": "applied",
+     "reason": "Added 'sometimes almond' to madeWith to cover sucrée shells and frangipane."
+    },
+    {
+     "finding": "bread-2-fact-1",
+     "action": "applied",
+     "reason": "Torte origin now reads 'German and Austrian, via Italian torta, a round cake or loaf'."
+    },
+    {
+     "finding": "bread-2-fact-2",
+     "action": "applied",
+     "reason": "Torte notThis second sentence softened to 'Most tortes are layered cake throughout.' so Linzer torte is not contradicted."
+    },
+    {
+     "finding": "bread-2-fact-3",
+     "action": "applied",
+     "reason": "Replaced 'sugar' with kirsch in clafoutis madeWith, written as 'sometimes kirsch' because many classic recipes omit it; almond kept."
+    },
+    {
+     "finding": "bread-2-fact-4",
+     "action": "applied",
+     "reason": "Galette why now says 'baked flat on a sheet with no tart ring' instead of 'with no pan'."
+    },
+    {
+     "finding": "bread-2-fact-5",
+     "action": "applied",
+     "reason": "Replaced 'often fruit' with 'sometimes almond' in galette madeWith to flag the frangipane galette des rois."
+    },
+    {
+     "finding": "bread-2-fact-6",
+     "action": "applied",
+     "reason": "Souffle notThis now says a hot souffle is baked and a frozen one is really a mousse."
+    },
+    {
+     "finding": "bread-2-floor-7",
+     "action": "applied",
+     "reason": "Souffle guest line now opens by saying it is a baked egg dish, savory with cheese or sweet with chocolate."
+    },
+    {
+     "finding": "bread-2-floor-8",
+     "action": "applied",
+     "reason": "Choux guest line now ends 'filled with cream or something savory'."
+    },
+    {
+     "finding": "bread-2-floor-9",
+     "action": "applied",
+     "reason": "Say changed to 'paht-ah-SHOO'."
+    },
+    {
+     "finding": "bread-2-floor-10",
+     "action": "applied",
+     "reason": "Puff pastry guest line now names a napoleon instead of a mille-feuille."
+    },
+    {
+     "finding": "bread-2-floor-11",
+     "action": "applied",
+     "reason": "Say changed to 'guh-LET'."
+    },
+    {
+     "finding": "bread-2-safety-12",
+     "action": "applied",
+     "reason": "Added 'often egg wash' to puff pastry madeWith."
+    },
+    {
+     "finding": "bread-2-safety-13",
+     "action": "applied",
+     "reason": "Galette madeWith: 'often fruit' swapped for 'sometimes almond' and 'sometimes egg' raised to 'often egg'."
+    },
+    {
+     "finding": "bread-2-safety-14",
+     "action": "applied",
+     "reason": "Replaced 'often sugar' with 'sometimes liqueur' in souffle madeWith."
+    },
+    {
+     "finding": "bread-2-safety-15",
+     "action": "applied",
+     "reason": "Kirsch added to clafoutis madeWith as 'sometimes kirsch' (in the slot freed by dropping sugar, keeping the list at 7)."
+    },
+    {
+     "finding": "bread-2-safety-16",
+     "action": "applied",
+     "reason": "Torte why now reads 'Many replace part of the flour with ground nuts or crumbs'."
+    },
+    {
+     "finding": "bread-critic-1",
+     "action": "applied",
+     "reason": "The gist now reads as a dense European cake made with ground nuts and says nothing about layers (63 chars, under its 65-char trap). The guest line, why and notThis now allow one dense round or several layers, and the trap's why no longer says 'layered'."
+    },
+    {
+     "finding": "bread-critic-2",
+     "action": "applied",
+     "reason": "Added Pâté to confusedWithTerms and rewrote notThis to rule out both puff pastry and pâté the meat spread, noting that pâte just means dough (100 chars)."
+    },
+    {
+     "finding": "bread-operator-1",
+     "action": "applied",
+     "reason": "Operator: The last two sentences joined with and; no fact changed."
+    },
+    {
+     "finding": "bread-operator-2",
+     "action": "applied",
+     "reason": "Operator: Alias \"Choux\", the word menus and guests actually use; the gist does not contain it."
+    },
+    {
+     "finding": "bread-operator-3",
+     "action": "applied",
+     "reason": "Operator: alias Tarte added after the merge, by hand, in the section module."
+    }
+   ],
+   "critic": {
+    "ok": false,
+    "problems": [
+     {
+      "id": "fd_0242",
+      "issue": "Torte overstates layering. The gist says 'layered cake' flat out, and notThis says 'Most tortes are layered cake throughout'. On American menus a torte is very often a single-layer cake: flourless chocolate torte, or a nut torte like the card's own line and recipe (oregon-hazelnut-torte). Linzer torte, one of the recipe candidates, is a lattice pastry and not a layer cake at all. A server who repeats 'layers' will describe a torte that does not match the plate. The gist is also 70 characters, the longest gist in the section and 5 over its only trap.",
+      "fix": "Gist: 'Rich, dense European cake, often made with ground nuts in place of flour' (or shorter, around 62 to 66 chars). notThis: 'Not a tart, which is a pastry shell holding a filling. A torte is dense cake, whether in one layer or several.' In why, soften 'build tortes from thin layers' to 'often build tortes from thin layers, or bake one dense round'."
+     },
+     {
+      "id": "fd_0243",
+      "issue": "There is a real cross-section confusion with no link. Pâte (dough) and Pâté (cured, the meat spread) are one accent apart, and new hires read and say them the same way. Pâté is on the roster (cured section), but Pâte à Choux has only Puff Pastry in confusedWithTerms, and its notThis does not warn against the mix-up.",
+      "fix": "Add 'Pâté' to confusedWithTerms, giving ['Puff Pastry', 'Pâté'], and extend notThis to cover both within 150 chars, e.g. 'Not puff pastry, which is flaky folded layers, and not pâté, the meat spread. Pâte just means dough.'"
+     }
+    ],
+    "notes": "Coverage check. All 15 roster rows have a card. The section mean is 650 chars per card, under the 720 ceiling, and the longest card is Soufflé at 741. I found no verdict words, banned substrings, dashes or temperatures. Each guest line answers 'what is that?'. The Macaroon knownPacketError is covered: its trap 'Two little sponge cakes sandwiched...' matches /sandwich/i and does not describe the Macaron card. Every confusion inside the section is linked both ways: Macaron/Macaroon, Tart/Torte, Tart/Galette, Choux/Puff. Soufflé/Mousse is linked across sections.\n\nLength parity. On 9 of the 13 single-trap cards the gist is longer than the trap, by 2 to 5 chars. Examples: Beignets 65/60, Focaccia 69/64, Sourdough 65/62, Tart 66/62, Puff Pastry 66/62, Pavlova 68/62. Everything is within 10 chars, but with only one trap per card the gist is usually the longest option, so trimming 3 to 5 chars off those gists would remove the tell.\n\nOptional polish:\n(1) Galette: add 'Buckwheat' (starches) to seeAlsoTerms, since the Breton meaning is a buckwheat crepe.\n(2) Macaron: 'mah-kah-ROHN' rhymes the last syllable with 'loan'. An American dining room more often says 'mah-kuh-RAHN', and that version also sets it further apart from 'mack-uh-ROON'.\n(3) Two traps describe a sweet crepe: Beignets 'Thin French pancakes folded around sugar, fruit or chocolate' and Clafoutis 'Thin French pancake folded around fruit and cream'. They are close to each other and sit near Galette's buckwheat-crepe meaning. They do not strictly describe the Galette card, which is savory buckwheat, but rewording one would reduce the overlap."
+   },
+   "acceptedRejected": []
+  }
+ ]
+}

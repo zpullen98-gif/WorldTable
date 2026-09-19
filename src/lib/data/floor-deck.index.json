@@ -9,7 +9,8 @@
     "mushrooms": "Mushrooms & Truffles",
     "dairy": "Dairy & Cheese Words",
     "starches": "Grains, Pasta & Starches",
-    "sauces": "Sauces, Stocks & Dressings"
+    "sauces": "Sauces, Stocks & Dressings",
+    "bread": "Bread, Pastry & Cakes"
   },
   "cards": [
     {
@@ -1346,6 +1347,90 @@
       "id": "fd_0215",
       "term": "Agrodolce",
       "section": "sauces"
+    },
+    {
+      "id": "fd_0234",
+      "term": "Beignets",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0235",
+      "term": "Brioche",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0236",
+      "term": "Focaccia",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0237",
+      "term": "Sourdough",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0238",
+      "term": "Macaron",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0239",
+      "term": "Macaroon",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0240",
+      "term": "Meringue",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0241",
+      "term": "Tart",
+      "section": "bread",
+      "aliases": [
+        "Tarte"
+      ]
+    },
+    {
+      "id": "fd_0242",
+      "term": "Torte",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0243",
+      "term": "Pâte à Choux",
+      "section": "bread",
+      "aliases": [
+        "Choux"
+      ]
+    },
+    {
+      "id": "fd_0244",
+      "term": "Puff Pastry",
+      "section": "bread",
+      "aliases": [
+        "Pâte Feuilletée"
+      ]
+    },
+    {
+      "id": "fd_0245",
+      "term": "Clafoutis",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0246",
+      "term": "Galette",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0247",
+      "term": "Pavlova",
+      "section": "bread"
+    },
+    {
+      "id": "fd_0248",
+      "term": "Soufflé",
+      "section": "bread"
     }
   ],
   "byLexicon": {
@@ -1563,6 +1648,12 @@
     "stocks-blanc-brun-broth-and-demi": [
       "fd_0206",
       "fd_0214"
+    ],
+    "fermentation-in-bread-yeast-levain-preferments": [
+      "fd_0237"
+    ],
+    "meringues-french-swiss-italian": [
+      "fd_0240"
     ]
   }
 }
