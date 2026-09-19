@@ -337,14 +337,19 @@ check('offline navigation fallback resolves to a precached URL', () => {
 function deckCost() {
 	const at = (name) => join(ROOT, 'src', 'lib', 'data', name);
 	if (!existsSync(at('floor-deck.json'))) return null;
-	const cards = JSON.parse(readFileSync(at('floor-deck.json'), 'utf8')).cards?.length ?? 0;
+	const emitted = JSON.parse(readFileSync(at('floor-deck.json'), 'utf8')).cards ?? [];
+	const cards = emitted.length;
 	if (!cards) return null;
 	let gz = 0;
 	for (const name of ['floor-deck.json', 'floor-deck.traps.json', 'floor-deck.index.json']) {
 		if (!existsSync(at(name))) continue;
 		gz += gzipSync(JSON.stringify(JSON.parse(readFileSync(at(name), 'utf8')))).length;
 	}
-	return { cards, gz };
+	/* The first id EMITTED, not fd_0001: every id is minted on day one, but a
+	   planned card is never emitted, and the first section written was not the
+	   first section. This check shipped looking for fd_0001 and failed on the
+	   first real deck, while a browser test was opening that deck offline. */
+	return { cards, gz, firstId: emitted[0].id };
 }
 
 const CAP_MB = 2.65;
@@ -410,16 +415,16 @@ check(`precache stays under ${CAP_MB} MB gzipped`, () => {
 check('the floor deck installs with the app', () => {
 	const deck = deckCost();
 	if (!deck) return 'deck not built';
-	/* Find the chunk by its first minted id, not by name: chunk names are
+	/* Find the chunk by the first EMITTED id, not by name: chunk names are
 	   content hashes. A deck that is lazily imported and then left out of the
 	   precache would pass every other check here and fail a server in a
 	   basement. */
 	/* The bare id, not the quoted one: Vite may emit a large JSON module as
 	   JSON.parse("...") with its quotes escaped. */
 	const chunks = files.filter(
-		(f) => extname(f) === '.js' && readFileSync(f, 'utf8').includes('fd_0001')
+		(f) => extname(f) === '.js' && readFileSync(f, 'utf8').includes(deck.firstId)
 	);
-	assert(chunks.length, 'no built chunk carries fd_0001: the deck never reached the bundle');
+	assert(chunks.length, `no built chunk carries ${deck.firstId}: the deck never reached the bundle`);
 	const missing = chunks
 		.map(rel)
 		.filter((r) => !precached.some((u) => u === '/' + r || u === r));
