@@ -2,7 +2,7 @@
  * Schema migrations. Append-only: never edit a migration that has shipped, or
  * you change the meaning of data already sitting on someone's disk.
  */
-import { CURRENT_VERSION, EMPTY_SESSION, mergeStepWindow, type SessionState } from './state';
+import { CURRENT_VERSION, EMPTY_SESSION, mergeStepWindow, withoutRetiredKeys, type SessionState } from './state';
 
 type Migration = (state: Record<string, unknown>) => Record<string, unknown>;
 
@@ -195,7 +195,8 @@ export function migrate(raw: Partial<SessionState>): SessionState {
 
 	// Merge over defaults so a field added in a later build is present even in a
 	// session that predates it.
-	return { ...structuredClone(EMPTY_SESSION), ...(state as Partial<SessionState>), schemaVersion: CURRENT_VERSION };
+	// A key the session no longer has (see RETIRED_SESSION_KEYS) is dropped, not carried.
+	return { ...structuredClone(EMPTY_SESSION), ...withoutRetiredKeys(state as Partial<SessionState>), schemaVersion: CURRENT_VERSION };
 }
 
 export type HeldReason = 'newer' | 'unrecognised' | 'unreadable';

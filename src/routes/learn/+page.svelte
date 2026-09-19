@@ -1,22 +1,22 @@
 <!--
-  Learn: the taught path, for whichever kitchen you stand in.
+  Learn: the taught path, the same for everyone.
 
   A hub rather than a surface. It holds nothing of its own; it is the answer to
   "there are ten tabs and I do not know which one is for me", which is the thing
   that made this app read as a browse surface no matter what the front door said.
 
-  The ORDER inside is the point. For someone learning to cook, the course leads
-  and technique is what the course is secretly made of. For someone who already
-  runs a kitchen there is no syllabus to finish, so technique leads and the
-  course is a route through it. Same destinations, different first line.
+  It used to reorder itself by role (the kitchen saw technique first, the floor
+  saw the Floor Deck first). The owner removed the role question on
+  2026-09-19: every path here is for anyone, so there is one order. The course
+  leads because it is the route through the rest; techniques are what the
+  course is made of; the Floor Deck and the Lexicon are the words; the Palate
+  and Food Safety close it.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { session } from '$lib/stores/session.svelte';
 	import { TOTALS } from '$lib/data';
 
 	let { data } = $props();
-	const role = $derived(session.role);
 </script>
 
 <svelte:head><title>Learn · The World Table</title></svelte:head>
@@ -25,71 +25,48 @@
 	<header class="head">
 		<h1>Learn</h1>
 		<p class="lede">
-			{#if role === 'chef'}
-				No syllabus to finish. {data.techniques} skills, {data.anchored} of them with the definition that
-				explains why they work, and a course underneath if you want a route through them.
-			{:else if role === 'server'}
-				The kitchen's side of the menu. You do not need to cook it, but knowing how it is made is
-				most of knowing how to sell it.
-			{:else}
-				{data.semesters} semesters, {data.courseDishes} dishes, in teaching order. Underneath them are
-				{data.taught} of the guide's {data.techniques} skills: the course is those skills wearing dishes.
-			{/if}
+			{data.semesters} semesters, {data.courseDishes} dishes, in teaching order. Underneath them are
+			{data.taught} of the guide's {data.techniques} skills, and around them the words: the Floor Deck
+			for what to say at the table, the Lexicon for the long read.
 		</p>
 	</header>
 
-	<!--
-		The Floor Deck leads for a server: the words on the menu are the first
-		week's work on the floor, before anything about how a dish is cooked. For
-		everyone else it sits beside the Lexicon, which is its long read.
-	-->
-	{#snippet floorDeck()}
+	<ul class="tiles">
 		<li>
-			<a href="{base}/service/deck">
-				<h2>The Floor Deck</h2>
+			<a href="{base}/study">
+				<h2>The Path of Study</h2>
 				<p>
-					{TOTALS.deck} menu words, one card each: what to say at the table, why, what it is
-					classically made with, and what it gets mistaken for.
+					{data.semesters} semesters, {data.courseDishes} dishes in teaching order. Every dish carries
+					a standard you can check the plate against.
 				</p>
 			</a>
 		</li>
-	{/snippet}
-
-	<ul class="tiles">
-		{#if TOTALS.deck && role === 'server'}{@render floorDeck()}{/if}
-		{#if role === 'chef'}
+		<li>
+			<a href="{base}/technique">
+				<h2>Techniques</h2>
+				<p>
+					{data.techniques} skills, {data.anchored} of them with the definition that explains why they
+					work, and every dish in the book that drills each.
+				</p>
+			</a>
+		</li>
+		{#if TOTALS.deck}
 			<li>
-				<a href="{base}/technique">
-					<h2>Techniques</h2>
-					<p>{data.techniques} skills, each with every dish in the book that drills it.</p>
-				</a>
-			</li>
-			<li>
-				<a href="{base}/study">
-					<h2>The Path of Study</h2>
-					<p>{data.semesters} semesters, {data.courseDishes} dishes. A route through the skills.</p>
-				</a>
-			</li>
-		{:else}
-			<li>
-				<a href="{base}/study">
-					<h2>The Path of Study</h2>
+				<a href="{base}/service/deck">
+					<h2>The Floor Deck</h2>
 					<p>
-						{data.semesters} semesters, {data.courseDishes} dishes in teaching order. Every dish carries
-						a standard you can check the plate against.
-					</p>
-				</a>
-			</li>
-			<li>
-				<a href="{base}/technique">
-					<h2>Techniques</h2>
-					<p>
-						{data.techniques} skills, {data.taught} of them taught on the course. The rest are reachable
-						by browsing.
+						{TOTALS.deck} menu words, one card each: what to say at the table, why, what it is
+						classically made with, and what it gets mistaken for.
 					</p>
 				</a>
 			</li>
 		{/if}
+		<li>
+			<a href="{base}/lexicon">
+				<h2>Chef's Lexicon</h2>
+				<p>{data.lexicon} terms: the words the rest of this app is written in.</p>
+			</a>
+		</li>
 		<li>
 			<a href="{base}/palate">
 				<h2>The Palate</h2>
@@ -102,13 +79,6 @@
 				<p>The guide's food-safety and inspections entries, and what it does not state.</p>
 			</a>
 		</li>
-		<li>
-			<a href="{base}/lexicon">
-				<h2>Chef's Lexicon</h2>
-				<p>{data.lexicon} terms: the words the rest of this app is written in.</p>
-			</a>
-		</li>
-		{#if TOTALS.deck && role !== 'server'}{@render floorDeck()}{/if}
 	</ul>
 </div>
 

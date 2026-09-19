@@ -23,7 +23,6 @@
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
-	const role = $derived(session.role);
 	const dishes = $derived(house.dishes.length);
 	const cooked = $derived(session.cookedDishes.size);
 
@@ -145,17 +144,16 @@
 				</p>
 			</a>
 		</li>
-		{#if role !== 'server'}
-			<li>
-				<a href="{base}/study">
-					<h2>Cook against a standard</h2>
-					<p>
-						All {data.courseDishes} course dishes state what a correct plate looks like. Cook mode asks
-						at the end, and the answer sets how soon the dish comes back.
-					</p>
-				</a>
-			</li>
-		{/if}
+		<!-- Hidden from servers while the app asked who you were; for everyone now. -->
+		<li>
+			<a href="{base}/study">
+				<h2>Cook against a standard</h2>
+				<p>
+					All {data.courseDishes} course dishes state what a correct plate looks like. Cook mode asks
+					at the end, and the answer sets how soon the dish comes back.
+				</p>
+			</a>
+		</li>
 	</ul>
 
 	{#if manager}

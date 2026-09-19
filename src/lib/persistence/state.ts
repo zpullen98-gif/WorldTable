@@ -143,16 +143,6 @@ export interface SessionState {
 	 * of costing work. These merge on their own terms.
 	 */
 	dishCosts: Record<string, DishCosting>;
-	/**
-	 * What this person does. Chosen once, changeable, and a DEFAULT rather than
-	 * a wall; it reorders what the app suggests and never hides a surface.
-	 *
-	 * Kept in the SESSION, which profiles.key() namespaces per person, and
-	 * deliberately not in prefs (raw localStorage, device-wide, read
-	 * synchronously by app.html) and not in the profile's path map (write-once,
-	 * no unmark: a person who changed role would carry both stamps forever).
-	 */
-	role?: 'chef' | 'student' | 'server';
 	lastWrite: number;
 }
 
@@ -272,7 +262,6 @@ export const EMPTY_SESSION: SessionState = {
 	familyRecipes: [],
 	menuDishes: [],
 	dishCosts: {},
-	role: undefined,
 	lastWrite: 0
 };
 
@@ -489,10 +478,29 @@ export function mergeStepWindow(current: number[], incoming: number[], cap = 12)
  *
  * The rule: every field is named explicitly. Nothing is left to the spread.
  */
+/**
+ * Keys a session no longer has, dropped wherever an old one can come back in:
+ * a record saved by an older build (migrate) and an old export's `data`
+ * (mergeSessions, whose spread of `incoming` would otherwise copy them).
+ *
+ * `role` ('chef' | 'student' | 'server') asked "what do you do?" on the home
+ * page and reordered what the app suggested. The owner removed it on
+ * 2026-09-19: every part of the app is for anyone.
+ */
+export const RETIRED_SESSION_KEYS = ['role'] as const;
+
+export function withoutRetiredKeys<T extends object>(state: T): T {
+	if (!RETIRED_SESSION_KEYS.some((k) => k in state)) return state;
+	const out = { ...state } as Record<string, unknown>;
+	for (const k of RETIRED_SESSION_KEYS) delete out[k];
+	return out as T;
+}
+
 export function mergeSessions(
 	current: SessionState,
 	incoming: Partial<SessionState>
 ): SessionState {
+	incoming = withoutRetiredKeys(incoming);
 	// Union by slug AND time, because the log is a log.
 	//
 	// This used to key on slug alone and keep the earliest cook, which was
@@ -669,11 +677,6 @@ export function mergeSessions(
 			return out;
 		})(),
 		planRun: current.planRun,
-		// Named explicitly, per the rule above. A genuine export writes the FULL
-		// state, so an incoming session always carries role present-and-empty,
-		// exactly how cookedLog and shoppingChecks were once wiped. Yours wins
-		// unless you have never set one.
-		role: current.role ?? incoming.role,
 		// After the spread, never before: a hand-edited file must not be able to
 		// walk the schema marker backwards and re-trigger a migration.
 		schemaVersion: current.schemaVersion,

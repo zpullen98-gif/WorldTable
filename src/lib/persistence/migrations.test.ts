@@ -24,6 +24,12 @@ import { describeImport } from './portable';
 import { EMPTY_SESSION } from './state';
 
 describe('migrate', () => {
+	it('drops a role an older build saved', () => {
+		const out = migrate({ menu: ['cacio-e-pepe'], role: 'server' } as never);
+		expect('role' in out).toBe(false);
+		expect(out.menu).toEqual(['cacio-e-pepe']);
+	});
+
 	it('upgrades a version-0 blob and fills missing fields', () => {
 		const out = migrate({ menu: ['cacio-e-pepe'] });
 		expect(out.schemaVersion).toBe(CURRENT_VERSION);
@@ -315,19 +321,14 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 	});
 
 	/**
-	 * The cookedLog failure mode, exactly. buildExport writes the FULL state, so
-	 * a genuine .wtjson always carries `role` present-and-empty — and a bare
-	 * spread would let importing a colleague's menu silently un-set what you do.
+	 * The role question is gone (2026-09-19) and must stay gone: an export
+	 * written before then carries `role` in `data`, and mergeSessions spreads
+	 * `incoming`, so without the strip it would walk straight back in.
 	 */
-	it('keeps your role when the incoming session has none', () => {
-		const mine = { ...live(), role: 'server' as const };
-		const out = mergeSessions(mine, { ...structuredClone(EMPTY_SESSION), menu: ['tom-yum-goong'] });
-		expect(out.role).toBe('server');
-	});
-
-	it('adopts a role when you have never set one', () => {
-		const out = mergeSessions(live(), { role: 'chef' });
-		expect(out.role).toBe('chef');
+	it('drops a role an old export carries', () => {
+		const out = mergeSessions(live(), { menu: ['tom-yum-goong'], role: 'chef' } as never);
+		expect('role' in out).toBe(false);
+		expect(out.menu).toContain('tom-yum-goong');
 	});
 
 	/**

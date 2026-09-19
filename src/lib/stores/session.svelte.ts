@@ -192,26 +192,6 @@ class SessionStore {
 		this.#ready = true;
 	}
 
-	/* ---- role -----------------------------------------------------------
-	 *
-	 * What this person does, and therefore what the app suggests first. A
-	 * default, never a wall: no surface is hidden from anyone.
-	 *
-	 * It lives here rather than in prefs (raw localStorage, device-wide, read
-	 * synchronously by app.html: it would collapse all three roles to whoever
-	 * tapped last) and rather than in the profile's path map (write-once with
-	 * no unmark: a person who changed role would carry both stamps forever).
-	 */
-
-	get role() {
-		return this.#s.role;
-	}
-
-	setRole(role: SessionState['role']) {
-		this.#s.role = role;
-		this.#persistNow();
-	}
-
 	/* ---- the calibration bench -------------------------------------------
 	 *
 	 * A third log beside drillLog, never folded into cookedLog: the mode bar

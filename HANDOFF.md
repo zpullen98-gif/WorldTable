@@ -23,7 +23,7 @@ A SvelteKit rewrite of a 1.5MB single-file culinary field guide, now a
 Time" subscription monorepo (`C:\Users\zpull\OutsideOfTime`), sold B2B to venues
 at **$49.99/month, unlimited staff, one shared login**.
 
-**Audience, decided by the owner: chefs, culinary students, AND servers.**
+**Audience, decided by the owner: chefs, culinary students, AND servers, in ONE app.** The home page's "what do you do?" role question was removed on 2026-09-19: nothing is reordered or hidden by who you are, and every part of the app is for anyone.
 
 ## Repo state
 
@@ -151,8 +151,9 @@ import a value back into it.
   and never a count of what is left.
 - **No per-person number a manager reads** — waste by cook, step times by cook.
   Each is a disciplinary instrument, and the data goes dishonest in a fortnight.
-- **Chef and student are not the same role.** A student has a denominator; a
-  chef's work has no end state.
+- **There are no roles** (removed 2026-09-19; `RETIRED_SESSION_KEYS` strips an old
+  saved or imported `role`). What survives of the old rule: only the course gets a
+  percentage, because only the course has a fixed denominator.
 - **No CSV importer, ever.** The `.wtjson` is the single portability contract
   with tested merge semantics.
 - **Item price history is UNIONED, never newer-wins-whole**, and the union key is

@@ -24,8 +24,10 @@ describe('what belongs to the device and what belongs to the person', () => {
 		expect(src.includes('role'), 'role must not live in device-wide prefs').toBe(false);
 	});
 
-	it('the session does carry it', () => {
+	/* The role question was removed on 2026-09-19. It must not come back in a
+	   different drawer either: not on the session, not in prefs. */
+	it('the session does not carry it either', () => {
 		const src = readFileSync('src/lib/persistence/state.ts', 'utf8');
-		expect(src.includes('role?:'), 'role must live on the session').toBe(true);
+		expect(src.includes('role?:'), 'the role question was removed; everything is for anyone').toBe(false);
 	});
 });
