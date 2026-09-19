@@ -31,7 +31,11 @@ function svelteFiles(dir: string): string[] {
 	return out;
 }
 
-const ROUTES = svelteFiles('src/routes');
+/* Routes AND components. This scanned the routes alone until the Floor Deck,
+   whose answers are rendered by a component: a `class="def"` in
+   src/lib/components would have been invisible here, which is exactly the
+   unpinned selector this contract exists to catch. */
+const ROUTES = [...svelteFiles('src/routes'), ...svelteFiles('src/lib/components')];
 const norm = (p: string) => p.split(/[\\/]/).join('/');
 const usesClass = (src: string, token: string) =>
 	new RegExp(`class="[^"]*\\b${token}\\b`).test(src);
@@ -78,9 +82,20 @@ describe('the paywall selector contract', () => {
 		semesters: ['src/routes/study/+page.svelte'],
 		semester: ['src/routes/study/+page.svelte'],
 		lexcard: ['src/routes/lexicon/+page.svelte'],
-		// Both are paid surfaces, so the free-tier blur is correct on each.
-		def: ['src/routes/lexicon/+page.svelte', 'src/routes/menu/quiz/+page.svelte'],
-		flash: ['src/routes/lexicon/+page.svelte', 'src/routes/menu/quiz/+page.svelte']
+		// All paid surfaces, so the free-tier blur is correct on each. FloorCard
+		// is the ONE place the Floor Deck's answers are rendered: the deck's
+		// routes show a card's answer through it and never with a `def` of
+		// their own, so the contract for the whole deck is this one file.
+		def: [
+			'src/routes/lexicon/+page.svelte',
+			'src/routes/menu/quiz/+page.svelte',
+			'src/lib/components/FloorCard.svelte'
+		],
+		flash: [
+			'src/routes/lexicon/+page.svelte',
+			'src/routes/menu/quiz/+page.svelte',
+			'src/lib/components/FloorCard.svelte'
+		]
 	};
 
 	for (const [token, allowed] of Object.entries(CONTRACT)) {
