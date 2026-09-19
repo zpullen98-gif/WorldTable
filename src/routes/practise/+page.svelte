@@ -17,6 +17,9 @@
 	import { house } from '$lib/stores/house.svelte';
 	import { repertoire, dueList } from '$lib/repertoire';
 	import * as profiles from '$lib/profiles';
+	import { TOTALS, loadDeckIndex } from '$lib/data';
+	import { dueCount } from '$lib/floor-deck';
+	import type { DeckIndex } from '$lib/types';
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
@@ -28,7 +31,18 @@
 	   flag is the shared layer's and it is opt-in per device: the tablet on the
 	   pass is deliberately not the manager's. */
 	let manager = $state(false);
-	onMount(() => { manager = profiles.isManagerDevice(); });
+
+	/* What the Floor Deck is owed today, counted from the deck's small INDEX.
+	   The cards themselves are a third of a megabyte of prose this hub has no
+	   use for; the ids are enough to scope the shared drill log. */
+	let deckIndex = $state<DeckIndex | null>(null);
+	let now = $state(0);
+	onMount(() => {
+		manager = profiles.isManagerDevice();
+		now = Date.now();
+		if (TOTALS.deck) void loadDeckIndex().then((ix) => (deckIndex = ix), () => {});
+	});
+	const deckOwed = $derived(deckIndex && session.ready && now ? dueCount(deckIndex, session.drillLog, now) : 0);
 
 	const due = $derived.by(() => {
 		const now = Date.now();
@@ -96,6 +110,22 @@
 				</p>
 			</a>
 		</li>
+		{#if TOTALS.deck}
+			<li>
+				<a href="{base}/service/deck">
+					<h2>The Floor Deck</h2>
+					<p>
+						{#if deckOwed}
+							{deckOwed} card{deckOwed === 1 ? ' is' : 's are'} owed today. Flip cards, a written test by
+							section, say it back, and a lineup for pre-shift.
+						{:else}
+							{TOTALS.deck} menu words, one card each. Flip cards, a written test by section, say it
+							back, and a lineup for pre-shift. The misses come back first.
+						{/if}
+					</p>
+				</a>
+			</li>
+		{/if}
 		<li>
 			<a href="{base}/service/drill">
 				<h2>Drill the service track</h2>

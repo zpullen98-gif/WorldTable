@@ -93,7 +93,7 @@ export function cardsInScope(deck: FloorDeck, scope: ReadonlySet<string> | null)
 
 /** This surface's own entries out of the shared log. Never scope by prefix:
  *  a card later retired would make a tile promise a term nobody then asks. */
-export function deckLog(log: readonly CookEntry[], cards: readonly DeckCard[]): CookEntry[] {
+export function deckLog(log: readonly CookEntry[], cards: ReadonlyArray<{ id: string }>): CookEntry[] {
 	return scopeToSlugs(log, new Set(cards.map((c) => c.id)));
 }
 
@@ -235,7 +235,9 @@ export function slipping(deck: FloorDeck, log: readonly CookEntry[], now: number
 		.filter(Boolean);
 }
 
-export function dueCount(deck: FloorDeck, log: readonly CookEntry[], now: number): number {
+/** Takes the deck OR its index: a tile elsewhere in the app counts what is owed
+ *  from the small file and never loads the cards to do it. */
+export function dueCount(deck: { cards: ReadonlyArray<{ id: string }> }, log: readonly CookEntry[], now: number): number {
 	const own = deckLog(log, deck.cards);
 	const owed = new Set(outstandingMisses(own));
 	for (const id of dueIds(deckRepertoire(own, now), now)) owed.add(id);

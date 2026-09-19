@@ -13,6 +13,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { session } from '$lib/stores/session.svelte';
+	import { TOTALS } from '$lib/data';
 
 	let { data } = $props();
 	const role = $derived(session.role);
@@ -37,7 +38,25 @@
 		</p>
 	</header>
 
+	<!--
+		The Floor Deck leads for a server: the words on the menu are the first
+		week's work on the floor, before anything about how a dish is cooked. For
+		everyone else it sits beside the Lexicon, which is its long read.
+	-->
+	{#snippet floorDeck()}
+		<li>
+			<a href="{base}/service/deck">
+				<h2>The Floor Deck</h2>
+				<p>
+					{TOTALS.deck} menu words, one card each: what to say at the table, why, what it is
+					classically made with, and what it gets mistaken for.
+				</p>
+			</a>
+		</li>
+	{/snippet}
+
 	<ul class="tiles">
+		{#if TOTALS.deck && role === 'server'}{@render floorDeck()}{/if}
 		{#if role === 'chef'}
 			<li>
 				<a href="{base}/technique">
@@ -89,6 +108,7 @@
 				<p>{data.lexicon} terms: the words the rest of this app is written in.</p>
 			</a>
 		</li>
+		{#if TOTALS.deck && role !== 'server'}{@render floorDeck()}{/if}
 	</ul>
 </div>
 
