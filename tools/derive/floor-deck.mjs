@@ -101,7 +101,7 @@ export const DECK_GZ_CEILING = 140_000;
 
 /** Flip to true when the last planned card is written. From then on a stub, a
  *  missing packet term or a packet error with no trap fails the build. */
-export const DECK_COMPLETE = false;
+export const DECK_COMPLETE = true;
 
 /**
  * In teaching order, which is the order a new hire meets them. Never sorted:

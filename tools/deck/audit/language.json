@@ -1,0 +1,563 @@
+{
+	"section": "language",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0285",
+				"fd_0286",
+				"fd_0287",
+				"fd_0288",
+				"fd_0289",
+				"fd_0290",
+				"fd_0291",
+				"fd_0292",
+				"fd_0293",
+				"fd_0294",
+				"fd_0295",
+				"fd_0296",
+				"fd_0297",
+				"fd_0298",
+				"fd_0299",
+				"fd_0300"
+			],
+			"findings": [
+				{
+					"id": "fd_0285",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Organic produce, certified because its seed was never a GMO",
+					"because": "Organic is its own card on the roster (fd_0300), and USDA organic certification really does exclude GMO seed, so this trap reads as a roughly true description of that card. It should still carry the packet's organic/GMO mistake, but framed as a certification label so it describes neither card.",
+					"fix": "Label certifying a crop was grown from seed that was never a GMO",
+					"lens": "fact",
+					"key": "language-1-fact-1"
+				},
+				{
+					"id": "fd_0287",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "works with knives, dressings and cold sauces instead of flame",
+					"because": "The cold station does cook. Terrines and pâtés are baked in a water bath, and the station also poaches, cures and smokes, all before the food is served cold. The guest line itself lists terrines, so the why contradicts it.",
+					"fix": "works with knives, dressings and cold sauces, cooking ahead and serving chilled",
+					"lens": "fact",
+					"key": "language-1-fact-2"
+				},
+				{
+					"id": "fd_0287",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "French, literally keep to eat, the old cool storeroom",
+					"because": "Garde-manger literally means 'keep the food' or 'guard the food' (garder is to keep, manger here is food). 'Keep to eat' is not a real gloss.",
+					"fix": "French, literally keep the food, the old cool storeroom",
+					"lens": "fact",
+					"key": "language-1-fact-3"
+				},
+				{
+					"id": "fd_0286",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "the kitchen's pantry of things it cures, pickles and preserves itself",
+					"because": "A larder heading doesn't promise the items are made in-house. Many kitchens buy in cured meats and cheese, so a server who repeats 'itself' may be telling the guest something untrue. Whether an item is made in-house is what the House-Made card covers.",
+					"fix": "the kitchen's pantry of cured, pickled and preserved things",
+					"lens": "fact",
+					"key": "language-1-fact-4"
+				},
+				{
+					"id": "fd_0289",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "The dishes can often be adjusted like any other plate.",
+					"because": "Many prix fixe menus limit substitutions or print 'no substitutions', so this reassurance is not reliably true. The trap is false because the word fixes the price, not the recipes. It says nothing about whether dishes can be changed.",
+					"fix": "The word fixes the price, not the recipes or the plating.",
+					"lens": "fact",
+					"key": "language-1-fact-5"
+				},
+				{
+					"id": "fd_0291",
+					"field": "lexiconSlug",
+					"severity": "unclear",
+					"claim": "service-styles-and-front-of-house-fluency",
+					"because": "That entry surveys every service style (à la carte, prix fixe, tasting menu, family style and more) in one line each. It is not a long-form essay on à la carte, and the sibling cards Prix Fixe and Tasting Menu, which the same entry covers equally, do not link it.",
+					"fix": "Omit lexiconSlug",
+					"lens": "fact",
+					"key": "language-1-fact-6"
+				},
+				{
+					"id": "fd_0286",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "The larder is the kitchen's pantry of things it cures, pickles and preserves itself.",
+					"because": "The guest line tells the server to promise that everything under this heading is made in house. Many larder sections serve bought-in salumi, cheese and mustard, so a new hire would be repeating a sourcing claim that may be false. The House-Made card covers that claim.",
+					"fix": "The larder is our cold pantry side of the menu, cured meats, pickles, cheese and preserves, all served cool.",
+					"lens": "floor",
+					"key": "language-1-floor-7"
+				},
+				{
+					"id": "fd_0290",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "often seven or more, so you taste more of the kitchen than one main allows. There's a wine pairing if you'd like it.",
+					"because": "Plenty of tasting menus run five or six courses. The line also has the server offer a wine pairing whether or not this restaurant has one. A new hire says what the card says, so the pairing offer should be a hedge and not a promise.",
+					"fix": "usually five or more, so you taste more of the kitchen than one main allows. Many come with an optional wine pairing.",
+					"lens": "floor",
+					"key": "language-1-floor-8"
+				},
+				{
+					"id": "fd_0285",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "grown from saved seed that comes true each year",
+					"because": "\"Comes true\" is gardener jargon. A new hire reading the answer options may not understand it, and the gist is where the meaning has to land.",
+					"fix": "grown from saved seed that grows back the same plant",
+					"lens": "floor",
+					"key": "language-1-floor-9"
+				},
+				{
+					"id": "fd_0287",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "That cook makes the salads, crudo, terrines and cold starters",
+					"because": "The guest line names crudo, but no field on the card tells the server that plates from this station are often served raw (crudo, tartare, oysters). A server who repeats the guest line should be able to say so plainly when a guest asks. The card has no note, so adding this raw-service fact is justified.",
+					"fix": "Crudo, tartare and oysters from this station are served raw. Say so when you describe them.",
+					"lens": "safety",
+					"key": "language-1-safety-10"
+				},
+				{
+					"id": "fd_0300",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "The farm is certified by the USDA",
+					"because": "USDA sets and oversees the organic standard, but farms are certified by USDA-accredited private or state certifying agents, not by USDA itself. The card's own why says so correctly.",
+					"fix": "The farm is certified to USDA organic rules",
+					"lens": "fact",
+					"key": "language-2-fact-1"
+				},
+				{
+					"id": "fd_0296",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "For meat there is no single federal definition, so certifiers set the bar.",
+					"because": "The qualifier implies eggs have a federal pasture-raised definition. They do not: USDA has no definition of pasture-raised for eggs either, and the common 108 sq ft per hen figure comes from a private certifier.",
+					"fix": "There is no federal definition for meat or eggs, so certifiers set the bar.",
+					"lens": "fact",
+					"key": "language-2-fact-2"
+				},
+				{
+					"id": "fd_0295",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Grass-finished is the stronger wording: it says the cattle never went to a grain feedlot.",
+					"because": "FSIS label guidance says an unqualified grass-fed claim should already mean a forage-only diet after weaning. Grass-finished only spells that out. It is not a separate or stronger legal standard, and grass-fed cattle may still be fed hay in a lot.",
+					"fix": "Grass-finished spells out what the claim should mean: forage to the end, no grain.",
+					"lens": "fact",
+					"key": "language-2-fact-3"
+				},
+				{
+					"id": "fd_0297",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's an old-fashioned breed of pig or bird",
+					"because": "Heritage breeds also cover cattle and sheep, and those show up on menus too. A server repeating 'pig or bird' will be wrong about heritage beef or lamb.",
+					"fix": "It's an old-fashioned breed of animal",
+					"lens": "fact",
+					"key": "language-2-fact-4"
+				},
+				{
+					"id": "fd_0299",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "went out and came back the same day",
+					"because": "Day-boat trips are defined as landing within about 24 hours, which is what the why says. Many go out overnight and land the next morning, so 'the same day' is stronger than the fact.",
+					"fix": "went out and came back within a day",
+					"lens": "fact",
+					"key": "language-2-fact-5"
+				},
+				{
+					"id": "fd_0295",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Beef from cattle kept on forage instead of feedlot grain",
+					"because": "Beside fd_0296's gist ('Animals kept outdoors on living grass for much of their lives'), both gists would be accepted for both terms in the test. This one should rest on diet, the thing that makes it grass-fed.",
+					"fix": "Beef from cattle fed on forage all their lives, never feedlot grain",
+					"lens": "floor",
+					"key": "language-2-floor-6"
+				},
+				{
+					"id": "fd_0296",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Animals kept outdoors on living grass for much of their lives",
+					"because": "'On living grass' reads as a diet claim, so the test would take it as a right answer for Grass-Fed (fd_0295) too. What makes this card different is where the animals live, not what they eat, which the card's own why says.",
+					"fix": "Animals living outdoors with room to roam, whatever they are fed",
+					"lens": "floor",
+					"key": "language-2-floor-7"
+				},
+				{
+					"id": "fd_0299",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "so this was in the water very recently. It's about as fresh as seafood gets.",
+					"because": "Day-boat only means the catch was landed within about a day. It can still spend days in transit before it reaches the restaurant, and the card's own notThis says so. The guest line promises a freshness the server cannot vouch for.",
+					"fix": "so it reached the dock within hours of being caught, not days. That is about as fresh as seafood gets.",
+					"lens": "floor",
+					"key": "language-2-floor-8"
+				},
+				{
+					"id": "fd_0299",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "it says how fresh the catch was at the dock, not how long ago that was",
+					"because": "This reads as a riddle. A new hire cannot turn it into an answer when the guest asks 'so was it caught today?'",
+					"fix": "Not a promise it was caught today: it was fresh when landed, then may travel for days.",
+					"lens": "floor",
+					"key": "language-2-floor-9"
+				},
+				{
+					"id": "fd_0300",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "The farm is certified by the USDA",
+					"because": "The USDA does not certify farms itself. It accredits certifying agents, and those agents inspect and certify each farm under USDA organic rules.",
+					"fix": "The farm is certified to USDA organic rules",
+					"lens": "floor",
+					"key": "language-2-floor-10"
+				},
+				{
+					"id": "fd_0295",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "than the buttery corn-finished steak most people know",
+					"because": "Guests do not know 'corn-finished'. It is ranch jargon, and cattle are finished on grain mixes, not only corn. The contrast a guest understands is marbling.",
+					"fix": "than the richly marbled grain-fed steak most people know",
+					"lens": "floor",
+					"key": "language-2-floor-11"
+				},
+				{
+					"id": "fd_0293",
+					"field": "guest",
+					"severity": "style",
+					"claim": "so it tastes like this place and nowhere else",
+					"because": "This oversells. Plenty of house-made items are standard recipes, and it sounds like marketing read off a card. The honest benefit is freshness and the chef's control.",
+					"fix": "so it is fresher and done the chef's way",
+					"lens": "floor",
+					"key": "language-2-floor-12"
+				},
+				{
+					"id": "fd_0294",
+					"field": "guest",
+					"severity": "style",
+					"claim": "It's a steak lover's steak.",
+					"because": "This is a cliché that sounds scripted and tells the guest nothing new. The first sentence already answers 'what is that?' and makes the steak appealing.",
+					"fix": "(cut the sentence)",
+					"lens": "floor",
+					"key": "language-2-floor-13"
+				},
+				{
+					"id": "fd_0300",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "crops are grown without most synthetic pesticides, and animals get organic feed with no antibiotics or added hormones",
+					"because": "A guest line that says the food comes with 'no antibiotics or added hormones' is a free-from assurance about the plate that the server repeats. It rests on certification paperwork the server cannot check, and a guest may rely on it. The card should say what the claim governs, not what the food lacks.",
+					"fix": "The farm is certified organic, so it follows strict USDA rules on pesticides, fertilizers and what the animals eat.",
+					"lens": "safety",
+					"key": "language-2-safety-14"
+				},
+				{
+					"id": "fd_0295",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "it says the cattle never went to a grain feedlot",
+					"because": "USDA withdrew its grass-fed marketing standard in 2016. Grass-fed and grass-finished label claims are now approved case by case, so 'never' is an absolute the label does not guarantee, and a guest may take it as an assurance about grain in the animal's diet.",
+					"fix": "it claims the cattle ate forage right to the end.",
+					"lens": "safety",
+					"key": "language-2-safety-15"
+				},
+				{
+					"id": "fd_0299",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note; line reads \"Seared day-boat scallops, brown butter, cauliflower\")",
+					"because": "The card calls scallops the classic day-boat item. Day-boat scallops are normally seared hard outside and left translucent, barely cooked, in the center, and they are often served raw as crudo. A server should be able to say that plainly to a guest who asks about doneness.",
+					"fix": "Scallops are usually seared outside and left translucent in the center; day-boat scallops are also served raw.",
+					"lens": "safety",
+					"key": "language-2-safety-16"
+				},
+				{
+					"key": "language-critic-1",
+					"id": "fd_0298",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The trap says \"Fish certified as sustainably caught from a well-managed fishery\" uses \"caught\", which is on this card's mayNotAppearInGistOrTraps list. The trap sits as an answer option under the term Wild-Caught, so it gives the term away, and the leak gate will throw the card back.",
+					"because": "The trap says \"Fish certified as sustainably caught from a well-managed fishery\" uses \"caught\", which is on this card's mayNotAppearInGistOrTraps list. The trap sits as an answer option under the term Wild-Caught, so it gives the term away, and the leak gate will throw the card back.",
+					"fix": "Change the trap's says to \"Fish certified as sustainably harvested from a well-managed fishery\" (67 characters, within 10 of the gist's 61). The trap's why can stay as it is."
+				},
+				{
+					"key": "language-critic-2",
+					"id": "fd_0295",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The trap \"Beef graded higher for marbling than standard supermarket steak\" is a TRUE description of another card on the roster, Wagyu (cuts section), which is known for exactly that. A test-taker who knows Wagyu will see a correct description offered as a wrong answer.",
+					"because": "The trap \"Beef graded higher for marbling than standard supermarket steak\" is a TRUE description of another card on the roster, Wagyu (cuts section), which is known for exactly that. A test-taker who knows Wagyu will see a correct description offered as a wrong answer.",
+					"fix": "Replace the trap with the grain-finished mistake, which is false of every card: says \"Beef finished on corn in a feedlot for heavier marbling\" (55 characters, gist 64), why \"That describes grain-finished beef, the feedlot norm. This beef stays on forage and is leaner.\" Do not use the words grass or fed in the says."
+				},
+				{
+					"key": "language-critic-3",
+					"id": "fd_0285",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The knownPacketError trap \"Label certifying a crop was grown from seed that was never a GMO\" is largely TRUE of heirlooms. Heirloom varieties are open-pollinated and are never genetically engineered, so the only false part is the word \"certifying\". A careful reader may pick it as correct. Any rewrite that simply describes organic farming would instead be a true description of the Organic card.",
+					"because": "The knownPacketError trap \"Label certifying a crop was grown from seed that was never a GMO\" is largely TRUE of heirlooms. Heirloom varieties are open-pollinated and are never genetically engineered, so the only false part is the word \"certifying\". A careful reader may pick it as correct. Any rewrite that simply describes organic farming would instead be a true description of the Organic card.",
+					"fix": "Keep the /organic|GMO/ match but make the claim false of both cards: says \"Produce certified organic because its seed was never a GMO\" (59 characters, gist 65), why \"Organic is a separate farming certification. This word names an old seed variety, certified or not.\""
+				},
+				{
+					"key": "language-critic-4",
+					"id": "fd_0286",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Larder and Garde Manger are genuinely confused: in British and hotel kitchens the garde manger is called the larder, and the cook there is the larder chef. Both cards list the other only under seeAlsoTerms, and neither says how to tell them apart.",
+					"because": "Larder and Garde Manger are genuinely confused: in British and hotel kitchens the garde manger is called the larder, and the cook there is the larder chef. Both cards list the other only under seeAlsoTerms, and neither says how to tell them apart.",
+					"fix": "On fd_0286, move \"Garde Manger\" from seeAlsoTerms to confusedWithTerms and add notThis: \"Not the cold station itself. Garde manger is the cook and station, and larder is the store or the menu heading.\" On fd_0287, move \"Larder\" to confusedWithTerms and add notThis: \"Not the storeroom or the menu heading. Larder names the food and where it is kept, and garde manger is the station that plates it.\" Both cards stay well under the 720 mean."
+				},
+				{
+					"key": "language-critic-5",
+					"id": "fd_0298",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The gist \"Fish or shellfish taken from open water, not from a fish farm\" is also true of Day-Boat seafood, which is wild-caught too. When Day-Boat is the question, this gist is a likely distractor and it is not actually wrong. The gist does not say what makes this card THIS card.",
+					"because": "The gist \"Fish or shellfish taken from open water, not from a fish farm\" is also true of Day-Boat seafood, which is wild-caught too. When Day-Boat is the question, this gist is a likely distractor and it is not actually wrong. The gist does not say what makes this card THIS card.",
+					"fix": "Point the gist at the farmed-versus-wild line and away from trip length: \"Fish taken from the open sea rather than farmed, however long the trip\" (70 characters). Or shorten it to \"Taken from open water rather than farmed, fresh or frozen at sea\" (64 characters). Keep the Wild-Caught and Day-Boat confusedWithTerms link as it is."
+				},
+				{
+					"key": "language-critic-6",
+					"id": "fd_0300",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The link is one-way. Heirloom lists Organic under confusedWithTerms, but Organic lists Heirloom only under seeAlsoTerms. The confusion (the packet's own error) goes both ways, and the test draws distractors from these links.",
+					"because": "The link is one-way. Heirloom lists Organic under confusedWithTerms, but Organic lists Heirloom only under seeAlsoTerms. The confusion (the packet's own error) goes both ways, and the test draws distractors from these links.",
+					"fix": "On fd_0300, set confusedWithTerms to [\"Grass-Fed\", \"Pasture-Raised\", \"Heirloom\"] (three, the maximum) and remove Heirloom from seeAlsoTerms. Optionally extend the notThis: \"Not the same as local, natural, heirloom or grass-fed. Organic beef can still be finished on grain, as long as the grain is organic.\""
+				},
+				{
+					"key": "language-operator-1",
+					"id": "fd_0287",
+					"lens": "operator",
+					"field": "guest",
+					"severity": "style",
+					"claim": "Garde manger is the cold station in our kitchen. That cook makes the salads, crudo, terrines and cold starters, so it's often the first plate you see.",
+					"because": "\"In our kitchen\" states this house's layout on a card every restaurant uses; every other section had its house voice removed the same way.",
+					"fix": "The kitchen's cold station, said as the general case."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "language-1-fact-1",
+					"action": "applied",
+					"reason": "Rewrote the Heirloom trap as a certification label, 'Label certifying a crop was grown from seed that was never a GMO' (64 chars against a 65-char gist). It keeps the packet's GMO mistake without describing the Organic card."
+				},
+				{
+					"finding": "language-1-fact-2",
+					"action": "applied",
+					"reason": "The Garde Manger why now says the cook works with knives, dressings and cold sauces, 'cooking ahead and serving chilled'. The 'instead of flame' claim is gone, and 'clean chill' became 'freshness' so the chill is not said twice."
+				},
+				{
+					"finding": "language-1-fact-3",
+					"action": "applied",
+					"reason": "Origin now reads 'French, literally keep the food, the old cool storeroom'."
+				},
+				{
+					"finding": "language-1-fact-4",
+					"action": "applied",
+					"reason": "Removed 'itself' and the implied in-house promise. The guest line now calls the larder the cold pantry side of the menu, with cured meats, pickles, cheese and preserves."
+				},
+				{
+					"finding": "language-1-floor-7",
+					"action": "applied",
+					"reason": "Same change as fact-4. The guest line now reads 'The larder is the cold pantry side of the menu, cured meats, pickles, cheese and preserves. Plates from there are usually good for sharing.' It makes no house-made claim."
+				},
+				{
+					"finding": "language-1-fact-5",
+					"action": "applied",
+					"reason": "The trap's why now reads 'The word fixes the price, not the recipes or the plating.' It no longer promises that substitutions are possible."
+				},
+				{
+					"finding": "language-1-fact-6",
+					"action": "applied",
+					"reason": "Omitted lexiconSlug on À la Carte. The entry surveys every service style and is not a long-form essay on this term."
+				},
+				{
+					"finding": "language-1-floor-8",
+					"action": "applied",
+					"reason": "The Tasting Menu guest line now says 'usually five or more' and 'Many come with an optional wine pairing'. The server no longer promises a pairing the restaurant may not offer (156 chars)."
+				},
+				{
+					"finding": "language-1-floor-9",
+					"action": "applied",
+					"reason": "The Heirloom gist is now 'Old plant variety whose saved seed grows the same plant each year' (65 chars). The jargon 'comes true' is gone and the gist stays within 1 to 3 characters of both traps."
+				},
+				{
+					"finding": "language-1-safety-10",
+					"action": "applied",
+					"reason": "Added a note to Garde Manger: 'Crudo, tartare and oysters from this station are served raw. Say so when you describe them.' The card's prose total is about 620 characters."
+				},
+				{
+					"finding": "language-2-fact-1",
+					"action": "applied",
+					"reason": "Guest now says the farm is certified to USDA organic rules, not by the USDA."
+				},
+				{
+					"finding": "language-2-fact-2",
+					"action": "applied",
+					"reason": "Why now reads: there is no federal definition for meat or eggs, so certifiers set the bar."
+				},
+				{
+					"finding": "language-2-fact-3",
+					"action": "applied",
+					"reason": "notThis now says grass-finished spells out what the claim should mean rather than calling it a stronger standard."
+				},
+				{
+					"finding": "language-2-fact-4",
+					"action": "applied",
+					"reason": "Guest now says an old-fashioned breed of animal, which covers heritage cattle and sheep too."
+				},
+				{
+					"finding": "language-2-fact-5",
+					"action": "applied",
+					"reason": "Guest now says the boat came back within a day instead of the same day."
+				},
+				{
+					"finding": "language-2-floor-6",
+					"action": "applied",
+					"reason": "Gist now rests on diet as 'Beef from cattle raised on forage, not finished on feedlot grain'. The suggested wording used 'fed', a word banned from this gist, and the 'never' it used is the absolute that the safety finding objects to."
+				},
+				{
+					"finding": "language-2-floor-7",
+					"action": "applied",
+					"reason": "Gist changed to 'Animals living outdoors with room to roam, whatever they are fed', which rests on where the animals live."
+				},
+				{
+					"finding": "language-2-floor-8",
+					"action": "applied",
+					"reason": "Guest no longer promises the fish was in the water very recently. It says the catch landed fresh instead of spending days on ice at sea, and the new closing sentence talks about taste."
+				},
+				{
+					"finding": "language-2-floor-9",
+					"action": "applied",
+					"reason": "notThis now reads: not a promise it was caught today, because it was fresh when landed and then may travel for days."
+				},
+				{
+					"finding": "language-2-floor-10",
+					"action": "applied",
+					"reason": "Same fix as language-2-fact-1: the guest line now says certified to USDA organic rules."
+				},
+				{
+					"finding": "language-2-floor-11",
+					"action": "applied",
+					"reason": "Replaced 'buttery corn-finished steak' with 'richly marbled grain-fed steak'."
+				},
+				{
+					"finding": "language-2-floor-12",
+					"action": "applied",
+					"reason": "Guest now ends 'so it is fresher and done the chef's way'."
+				},
+				{
+					"finding": "language-2-floor-13",
+					"action": "applied",
+					"reason": "Cut 'It's a steak lover's steak.' from the guest line."
+				},
+				{
+					"finding": "language-2-safety-14",
+					"action": "applied",
+					"reason": "Guest no longer promises no antibiotics or hormones. It says the farm follows strict limits on synthetic pesticides, fertilizers and what the animals eat."
+				},
+				{
+					"finding": "language-2-safety-15",
+					"action": "applied",
+					"reason": "notThis now says the claim should mean the cattle ate forage right to the end, with no 'never went to a feedlot' absolute."
+				},
+				{
+					"finding": "language-2-safety-16",
+					"action": "applied",
+					"reason": "Added a note: day-boat scallops are usually seared hard outside and left translucent in the center, and some kitchens serve them raw."
+				},
+				{
+					"finding": "language-critic-1",
+					"action": "applied",
+					"reason": "Changed the Wild-Caught trap's says to 'Fish certified as sustainably harvested from a well-managed fishery', which removes the leaked word 'caught'."
+				},
+				{
+					"finding": "language-critic-2",
+					"action": "applied",
+					"reason": "Replaced the Grass-Fed trap with the feedlot-corn mistake, which contains neither 'grass' nor 'fed' and is false of every card, and used the suggested why."
+				},
+				{
+					"finding": "language-critic-3",
+					"action": "applied",
+					"reason": "Rewrote the Heirloom knownPacketError trap as 'Produce certified organic because its seed was never a GMO', which is false of both Heirloom and Organic, and gave it the new why."
+				},
+				{
+					"finding": "language-critic-4",
+					"action": "applied",
+					"reason": "On fd_0286, moved Garde Manger from seeAlsoTerms to confusedWithTerms and added the suggested notThis. The matching change to fd_0287 is not among the five cards returned here, so it still needs to be made on that card."
+				},
+				{
+					"finding": "language-critic-5",
+					"action": "applied",
+					"reason": "Changed the Wild-Caught gist to 'Taken from open water rather than farmed, fresh or frozen at sea', which is not tied to trip length and keeps rivers in scope. The Day-Boat confusion link stays."
+				},
+				{
+					"finding": "language-critic-6",
+					"action": "applied",
+					"reason": "On fd_0300, set confusedWithTerms to Grass-Fed, Pasture-Raised and Heirloom, dropped the now empty seeAlsoTerms, and added heirloom to the notThis."
+				},
+				{
+					"finding": "language-operator-1",
+					"action": "applied",
+					"reason": "Operator: house voice removed."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0298",
+						"issue": "The trap says \"Fish certified as sustainably caught from a well-managed fishery\" uses \"caught\", which is on this card's mayNotAppearInGistOrTraps list. The trap sits as an answer option under the term Wild-Caught, so it gives the term away, and the leak gate will throw the card back.",
+						"fix": "Change the trap's says to \"Fish certified as sustainably harvested from a well-managed fishery\" (67 characters, within 10 of the gist's 61). The trap's why can stay as it is."
+					},
+					{
+						"id": "fd_0295",
+						"issue": "The trap \"Beef graded higher for marbling than standard supermarket steak\" is a TRUE description of another card on the roster, Wagyu (cuts section), which is known for exactly that. A test-taker who knows Wagyu will see a correct description offered as a wrong answer.",
+						"fix": "Replace the trap with the grain-finished mistake, which is false of every card: says \"Beef finished on corn in a feedlot for heavier marbling\" (55 characters, gist 64), why \"That describes grain-finished beef, the feedlot norm. This beef stays on forage and is leaner.\" Do not use the words grass or fed in the says."
+					},
+					{
+						"id": "fd_0285",
+						"issue": "The knownPacketError trap \"Label certifying a crop was grown from seed that was never a GMO\" is largely TRUE of heirlooms. Heirloom varieties are open-pollinated and are never genetically engineered, so the only false part is the word \"certifying\". A careful reader may pick it as correct. Any rewrite that simply describes organic farming would instead be a true description of the Organic card.",
+						"fix": "Keep the /organic|GMO/ match but make the claim false of both cards: says \"Produce certified organic because its seed was never a GMO\" (59 characters, gist 65), why \"Organic is a separate farming certification. This word names an old seed variety, certified or not.\""
+					},
+					{
+						"id": "fd_0286",
+						"issue": "Larder and Garde Manger are genuinely confused: in British and hotel kitchens the garde manger is called the larder, and the cook there is the larder chef. Both cards list the other only under seeAlsoTerms, and neither says how to tell them apart.",
+						"fix": "On fd_0286, move \"Garde Manger\" from seeAlsoTerms to confusedWithTerms and add notThis: \"Not the cold station itself. Garde manger is the cook and station, and larder is the store or the menu heading.\" On fd_0287, move \"Larder\" to confusedWithTerms and add notThis: \"Not the storeroom or the menu heading. Larder names the food and where it is kept, and garde manger is the station that plates it.\" Both cards stay well under the 720 mean."
+					},
+					{
+						"id": "fd_0298",
+						"issue": "The gist \"Fish or shellfish taken from open water, not from a fish farm\" is also true of Day-Boat seafood, which is wild-caught too. When Day-Boat is the question, this gist is a likely distractor and it is not actually wrong. The gist does not say what makes this card THIS card.",
+						"fix": "Point the gist at the farmed-versus-wild line and away from trip length: \"Fish taken from the open sea rather than farmed, however long the trip\" (70 characters). Or shorten it to \"Taken from open water rather than farmed, fresh or frozen at sea\" (64 characters). Keep the Wild-Caught and Day-Boat confusedWithTerms link as it is."
+					},
+					{
+						"id": "fd_0300",
+						"issue": "The link is one-way. Heirloom lists Organic under confusedWithTerms, but Organic lists Heirloom only under seeAlsoTerms. The confusion (the packet's own error) goes both ways, and the test draws distractors from these links.",
+						"fix": "On fd_0300, set confusedWithTerms to [\"Grass-Fed\", \"Pasture-Raised\", \"Heirloom\"] (three, the maximum) and remove Heirloom from seeAlsoTerms. Optionally extend the notThis: \"Not the same as local, natural, heirloom or grass-fed. Organic beef can still be finished on grain, as long as the grain is organic.\""
+					}
+				],
+				"notes": "Section mean is 643 characters of prose per card, under the 720 ceiling. Grass-Fed (765), Day-Boat (729) and Tasting Menu (738) are the longest. All 16 roster rows have cards. I found no verdict words, no dashes and no banned substrings. Every gist and trap sits within the 10-character parity band. The say values pass the contract's sayProblems gate. There is one consistency question for the operator: the custards audit settled on capitalising a stressed one-syllable word (KREM). By that precedent, fd_0287 \"gard mahn-ZHAY\" would become \"GARD mahn-ZHAY\" and fd_0289 \"pree FIKS\" would stay as it is, since there the stress is on FIKS. Garde Manger has a note on raw service, which is fine, but the Larder and Garde Manger pair is the section's one real missing cross-link. The fix above adds a notThis to both cards, about 110 characters each. fd_0289's alias \"Table d'Hote\" is missing its circumflex, \"Table d'Hôte\"; this is cosmetic and the gate does not check it. Checker script: C:\\Users\\zpull\\AppData\\Local\\Temp\\claude\\C--Users-zpull--claude\\ee375187-7803-4126-b577-0cdfe403a999\\scratchpad\\check.js"
+			},
+			"acceptedRejected": []
+		}
+	]
+}

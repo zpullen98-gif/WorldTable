@@ -13,7 +13,8 @@
     "preparations": "Preparations & Style Words",
     "bread": "Bread, Pastry & Cakes",
     "custards": "Custards, Creams & Frozen Desserts",
-    "pantry": "Pantry, Pickles & Vinegars"
+    "pantry": "Pantry, Pickles & Vinegars",
+    "language": "Menu Language & Sourcing Words"
   },
   "cards": [
     {
@@ -1731,6 +1732,101 @@
       "id": "fd_0284",
       "term": "Finishing Salt",
       "section": "pantry"
+    },
+    {
+      "id": "fd_0285",
+      "term": "Heirloom",
+      "section": "language"
+    },
+    {
+      "id": "fd_0286",
+      "term": "Larder",
+      "section": "language"
+    },
+    {
+      "id": "fd_0287",
+      "term": "Garde Manger",
+      "section": "language"
+    },
+    {
+      "id": "fd_0288",
+      "term": "Amuse-Bouche",
+      "section": "language",
+      "aliases": [
+        "Amuse",
+        "Amuse-Gueule"
+      ]
+    },
+    {
+      "id": "fd_0289",
+      "term": "Prix Fixe",
+      "section": "language",
+      "aliases": [
+        "Table d'Hote",
+        "Set Menu"
+      ]
+    },
+    {
+      "id": "fd_0290",
+      "term": "Tasting Menu",
+      "section": "language",
+      "aliases": [
+        "Degustation",
+        "Chef's Tasting"
+      ]
+    },
+    {
+      "id": "fd_0291",
+      "term": "À la Carte",
+      "section": "language"
+    },
+    {
+      "id": "fd_0292",
+      "term": "Market Price",
+      "section": "language",
+      "aliases": [
+        "MP"
+      ]
+    },
+    {
+      "id": "fd_0293",
+      "term": "House-Made",
+      "section": "language"
+    },
+    {
+      "id": "fd_0294",
+      "term": "Dry-Aged",
+      "section": "language"
+    },
+    {
+      "id": "fd_0295",
+      "term": "Grass-Fed",
+      "section": "language"
+    },
+    {
+      "id": "fd_0296",
+      "term": "Pasture-Raised",
+      "section": "language"
+    },
+    {
+      "id": "fd_0297",
+      "term": "Heritage Breed",
+      "section": "language"
+    },
+    {
+      "id": "fd_0298",
+      "term": "Wild-Caught",
+      "section": "language"
+    },
+    {
+      "id": "fd_0299",
+      "term": "Day-Boat",
+      "section": "language"
+    },
+    {
+      "id": "fd_0300",
+      "term": "Organic",
+      "section": "language"
     }
   ],
   "byLexicon": {
@@ -1988,6 +2084,12 @@
     ],
     "salt-types-and-when-each-wins": [
       "fd_0284"
+    ],
+    "dry-aging": [
+      "fd_0294"
+    ],
+    "grass-fed-vs-grain-finished": [
+      "fd_0295"
     ]
   }
 }
