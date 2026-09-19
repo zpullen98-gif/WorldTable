@@ -265,6 +265,8 @@ describe('one card: nothing under the term may name the term', () => {
 	it('the dish line is the opposite: it has to carry the term', () => {
 		fails(card({ line: 'Grilled beef, chimichurri, fries' }), /dish line has to carry the term/);
 		expect(checkCard(card({ line: 'Onglet, shallots, red wine' }), CTX)).toEqual([]);
+		// a menu writes the plural, and that is the term as written
+		expect(checkCard(card({ line: 'Grilled hanger steaks, chimichurri' }), CTX)).toEqual([]);
 	});
 });
 

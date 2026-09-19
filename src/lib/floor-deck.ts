@@ -39,7 +39,7 @@ import {
 	type RepertoireEntry
 } from './repertoire';
 import { orderRound, shuffle, type Rand } from './drill';
-import { foldText, promptOf, wrongAnswersFor } from './floor-deck-core.mjs';
+import { foldText, nameInText, promptOf, wrongAnswersFor } from './floor-deck-core.mjs';
 
 /** A sitting. Long enough to cover ground, short enough to finish on a break. */
 export const SESSION_LENGTH = 20;
@@ -383,8 +383,9 @@ export function termsInText(text: string, cards: readonly DeckCard[]): DeckCard[
 	const out: DeckCard[] = [];
 	let rest = hay;
 	for (const { card, name } of named) {
-		if (!rest.includes(` ${name} `)) continue;
-		rest = rest.split(` ${name} `).join('  ');
+		const found = nameInText(rest, name);
+		if (!found) continue;
+		rest = rest.split(found).join('  ');
 		if (!out.includes(card)) out.push(card);
 	}
 	return out;

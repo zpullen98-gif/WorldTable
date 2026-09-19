@@ -46,6 +46,30 @@ export function foldText(s) {
 		.trim();
 }
 
+/**
+ * Where a card's name sits in a line of menu text, as the words actually
+ * written there: the name itself, or its plain plural. Both arguments are
+ * already folded; the haystack is padded with a space at each end.
+ *
+ * A menu writes "pan-roasted chanterelles", "morels and asparagus", "a half
+ * dozen oysters", and the exact-name match found none of them: say-it-back
+ * could not see the Chanterelle card on a house menu that served
+ * chanterelles, and the build refused authored lines for the same reason.
+ * Only the regular -s and -es plurals. Anything cleverer ("loaves",
+ * "anchovies") belongs in the card's aliases, where a person decided it.
+ *
+ * @param {string} hay  folded text, padded: ` ${foldText(text)} `
+ * @param {string} name folded name
+ * @returns {string | null} the form found, padded, or null
+ */
+export function nameInText(hay, name) {
+	if (!name) return null;
+	for (const form of [name, `${name}s`, `${name}es`]) {
+		if (hay.includes(` ${form} `)) return ` ${form} `;
+	}
+	return null;
+}
+
 /** @param {{ prompt?: string, why: string }} card */
 export function promptOf(card) {
 	return card.prompt ?? card.why;

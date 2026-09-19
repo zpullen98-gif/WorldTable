@@ -263,6 +263,17 @@ describe('finding deck words on a menu', () => {
 	it('matches an alias', () => {
 		expect(termsInText('Onglet, shallots, red wine', cards).map((c) => c.term)).toEqual(['Hanger Steak']);
 	});
+	/* A menu serves "chanterelles" and "oysters". The exact-name match found
+	   neither, so say-it-back could not see a card on the house's own menu. */
+	it('matches a plain plural, and still keeps whole words', () => {
+		const more = [...cards, card('fd_0006', 'Chanterelle'), card('fd_0007', 'Oyster Mushroom'), card('fd_0008', 'Peach')];
+		expect(termsInText('Pan-roasted chanterelles, brown butter', more).map((c) => c.term)).toEqual(['Chanterelle']);
+		expect(termsInText('Roasted oyster mushrooms and short ribs', more).map((c) => c.term)).toEqual(['Oyster Mushroom', 'Short Rib']);
+		expect(termsInText('Grilled peaches, burrata', more).map((c) => c.term)).toEqual(['Peach']);
+		// a plural is -s or -es on the whole word, never a longer word
+		expect(termsInText('Grilled ribeyes', more).map((c) => c.term)).toEqual(['Ribeye']);
+		expect(termsInText('Spare ribbons', more)).toEqual([]);
+	});
 });
 
 describe('say-it-back', () => {

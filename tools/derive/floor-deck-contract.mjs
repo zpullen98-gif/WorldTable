@@ -45,7 +45,7 @@
 
 import { GAPS } from './sanitation.mjs';
 import { significantWords, redact } from './drills.mjs';
-import { DECK_ID_RE, foldText } from '../../src/lib/floor-deck-core.mjs';
+import { DECK_ID_RE, foldText, nameInText } from '../../src/lib/floor-deck-core.mjs';
 
 /**
  * An authored card is untrusted input until this file has read it, so it is
@@ -416,7 +416,7 @@ export function checkCard(card, ctx) {
 	if (typeof card.line === 'string') {
 		const names = [card.term, ...(Array.isArray(card.aliases) ? card.aliases : [])].map(foldText);
 		const folded = ` ${foldText(card.line)} `;
-		if (!names.some((n) => n && folded.includes(` ${n} `))) problems.push('line: a dish line has to carry the term, or one of its aliases, as written');
+		if (!names.some((n) => nameInText(folded, n))) problems.push('line: a dish line has to carry the term, or one of its aliases, as written (a plain plural counts)');
 	}
 
 	// SERVICE FACTS
