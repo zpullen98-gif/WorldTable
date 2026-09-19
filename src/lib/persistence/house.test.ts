@@ -13,8 +13,10 @@ import {
 	housePortable,
 	type HouseRecord
 } from './house';
-import type { MenuDish } from './state';
+import { EMPTY_SESSION, type MenuDish } from './state';
 import type { CostLine } from '../costing';
+import type { Producer } from '../producers';
+import { describeImport } from './portable';
 
 /**
  * The house record — the venue's facts, kept off the per-profile key.
@@ -347,5 +349,128 @@ describe('the lineup tally travels with the house', () => {
 		const out = housePortable(h);
 		expect(out.lineupLog).toEqual([answer('fd_0001', 1, 'missed')]);
 		expect(JSON.stringify(out)).not.toContain('Marcus');
+	});
+});
+
+/**
+ * The producers: who supplies the venue, and the dishes they are on.
+ *
+ * The same three lessons as the lineup tally above, plus a fourth that is
+ * theirs alone: the dish link lives on the producer (see producers.ts), so
+ * removing a dish is the one write that has to reach into this list.
+ */
+describe('the producers travel with the house', () => {
+	const producer = (id: string, patch: Partial<Producer> = {}): Producer => ({
+		id,
+		name: `Producer ${id}`,
+		place: 'Thomasville, Georgia',
+		kind: 'creamery',
+		supplies: 'the Green Hill',
+		story: 'A family herd on grass.',
+		dishIds: [],
+		ts: 1,
+		...patch
+	});
+
+	it('defaults to none', () => {
+		expect(EMPTY_HOUSE.producers).toEqual([]);
+		expect(readHouse(undefined).record.producers).toEqual([]);
+	});
+
+	it('reads a record written before the field existed', () => {
+		const old = { schemaVersion: HOUSE_VERSION, dishes: [dish('a')], lastWrite: 5 };
+		const { record, blocked } = readHouse(old);
+		expect(blocked).toBe(false);
+		expect(record.producers).toEqual([]);
+		expect(record.dishes.map((d) => d.id)).toEqual(['a']);
+	});
+
+	it('cleans a hand-edited value rather than carrying it through', () => {
+		expect(readHouse({ schemaVersion: HOUSE_VERSION, producers: 'nope' }).record.producers).toEqual([]);
+		expect(readHouse({ schemaVersion: HOUSE_VERSION, producers: { a: 1 } }).record.producers).toEqual([]);
+		const dirty = { schemaVersion: HOUSE_VERSION, producers: [producer('pr-a'), { name: 'no id' }, null, { id: 'pr-b' }] };
+		expect(readHouse(dirty).record.producers).toEqual([producer('pr-a')]);
+	});
+
+	it('an import is a merge by id, named in adoptImport, and merging it twice changes nothing', () => {
+		const mine: HouseRecord = { ...fresh(), producers: [producer('pr-a', { ts: 5, story: 'mine' })] };
+		const file = {
+			producers: [producer('pr-a', { ts: 9, story: 'newer' }), producer('pr-b', { dishIds: ['d-1'] })]
+		};
+		const once = adoptImport(mine, [], {}, file);
+		expect(once.producers.map((p) => [p.id, p.story])).toEqual([
+			['pr-a', 'newer'],
+			['pr-b', 'A family herd on grass.']
+		]);
+		// the dish link travels inside the producer
+		expect(once.producers[1].dishIds).toEqual(['d-1']);
+		expect(adoptImport(once, [], {}, file).producers).toEqual(once.producers);
+	});
+
+	it('an older export with no producers imports cleanly and leaves them alone', () => {
+		const mine: HouseRecord = { ...fresh(), producers: [producer('pr-a')] };
+		expect(adoptImport(mine, [dish('b')], {}, {}).producers).toEqual([producer('pr-a')]);
+		expect(adoptImport(fresh(), [dish('b')], {}, { preps: [] }).producers).toEqual([]);
+	});
+
+	it('the export carries them, links and all', () => {
+		const h: HouseRecord = { ...fresh(), producers: [producer('pr-a', { dishIds: ['a'] })] };
+		expect(housePortable(h).producers).toEqual([producer('pr-a', { dishIds: ['a'] })]);
+	});
+
+	it('removing a dish takes it off every producer, and leaves the rest of each alone', () => {
+		const h: HouseRecord = {
+			...fresh(),
+			dishes: [dish('a'), dish('b')],
+			producers: [producer('pr-a', { dishIds: ['a', 'b'] }), producer('pr-b', { dishIds: ['a'] }), producer('pr-c')]
+		};
+		const out = removeDish(h, 'a');
+		expect(out.producers.map((p) => p.dishIds)).toEqual([['b'], [], []]);
+		expect(out.producers.map((p) => p.story)).toEqual(h.producers.map((p) => p.story));
+		// a dish nobody supplies leaves the list itself untouched
+		expect(removeDish(h, 'z').producers).toBe(h.producers);
+	});
+
+	it('the import banner counts them, and not a row the merge would refuse', () => {
+		const current = {
+			...structuredClone(EMPTY_SESSION),
+			producers: [producer('pr-a', { ts: 5 })]
+		};
+		const summary = describeImport(
+			{ producers: [producer('pr-a', { ts: 9 }), producer('pr-b'), { id: 'pr-c', name: '' } as unknown as Producer] },
+			current
+		);
+		// Split, because '1 producer' is also a substring of '1 producer updated'.
+		const parts = summary.split(', ');
+		expect(parts).toContain('1 producer');
+		expect(parts).toContain('1 producer updated');
+		expect(summary).not.toContain('2 producers');
+	});
+
+	it('a dish deleted here and brought back by an import comes back credited, on both tablets alike', () => {
+		// Two tablets share producer P on dish x. A deletes x (pruned, not restamped).
+		const shared = producer('pr-p', { dishIds: ['x'], ts: 7 });
+		const b: HouseRecord = { ...fresh(), dishes: [dish('x')], producers: [shared] };
+		const a = removeDish(b, 'x');
+		expect(a.producers[0].dishIds).toEqual([]);
+
+		// A imports B: the dish returns, and so does its credit.
+		const aAfter = adoptImport(a, b.dishes, {}, housePortable(b));
+		expect(aAfter.dishes.map((d) => d.id)).toEqual(['x']);
+		expect(aAfter.producers).toEqual([shared]);
+		// B imports A: nothing changes. The two tablets agree.
+		expect(adoptImport(b, a.dishes, {}, housePortable(a)).producers).toEqual([shared]);
+	});
+
+	it('a dish already here keeps my producer as it won, links and all', () => {
+		// A deliberate untick here (newer ts) is not undone by an older file,
+		// because the dish did not arrive through it.
+		const mine: HouseRecord = {
+			...fresh(),
+			dishes: [dish('x')],
+			producers: [producer('pr-p', { dishIds: [], ts: 9 })]
+		};
+		const out = adoptImport(mine, [dish('x')], {}, { producers: [producer('pr-p', { dishIds: ['x'], ts: 3 })] });
+		expect(out.producers[0].dishIds).toEqual([]);
 	});
 });

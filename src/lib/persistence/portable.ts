@@ -9,6 +9,7 @@ import type { SessionState } from './db';
 import { screenFamilyRecipes } from '../familyRecipe';
 import type { HousePortable } from './house';
 import { asArray, asRecord } from '../importShape';
+import { normaliseProducers } from '../producers';
 import { mergeCostings, normaliseCosting, validStepActuals } from './state';
 import { remapSessionSlugs } from './migrations';
 
@@ -278,6 +279,18 @@ export function describeImport(
 		(e) => e?.slug && typeof e.at === 'number' && !mineLineup.has(`${e.slug}|${e.at}`)
 	).length;
 
+	// The producers, counted the way the preps are and through the same screen
+	// the merge uses (normaliseProducer), so a nameless row in a hand-edited
+	// file is not announced as a producer the merge then throws away.
+	const mineProducers = new Map(normaliseProducers(current.producers).map((p) => [p.id, p]));
+	let newProducers = 0;
+	let updatedProducers = 0;
+	for (const p of normaliseProducers(incoming.producers)) {
+		const mine = mineProducers.get(p.id);
+		if (!mine) newProducers++;
+		else if (p.ts > mine.ts) updatedProducers++;
+	}
+
 	/**
 	 * Step timings, which this banner never mentioned at all: mergeSessions
 	 * (state.ts) used to fall through a bare `...incoming` spread here, and a
@@ -326,6 +339,10 @@ export function describeImport(
 		parts.push(`${newWaste} waste ${newWaste === 1 ? 'entry' : 'entries'}`);
 	if (newLineup)
 		parts.push(`${newLineup} lineup ${newLineup === 1 ? 'answer' : 'answers'}`);
+	if (newProducers)
+		parts.push(`${newProducers} ${newProducers === 1 ? 'producer' : 'producers'}`);
+	if (updatedProducers)
+		parts.push(`${updatedProducers} ${updatedProducers === 1 ? 'producer' : 'producers'} updated`);
 	if (newStepTimings)
 		parts.push(`${newStepTimings} step ${newStepTimings === 1 ? 'timing' : 'timings'}`);
 

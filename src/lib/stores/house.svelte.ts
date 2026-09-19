@@ -61,6 +61,11 @@ import type { CostLine, PricedItem } from '../costing';
 import { recordPrice, recordYield, pricedItems, itemNames, currentPrice, type Item } from '../items';
 import { type WasteEntry } from '../waste';
 import { addLineup, removeLineup, type LineupEntry } from '../lineup';
+import {
+	normaliseProducer,
+	setDishProducers as setDishProducersOn,
+	type Producer
+} from '../producers';
 import { resolveLines, plateCost, prepPortionCost } from '../costing';
 
 export type { HouseRecord, EightySix, Prep };
@@ -445,6 +450,50 @@ class House {
 		const next = removeLineup(this.#r.lineupLog, slug, at);
 		if (next.length === this.#r.lineupLog.length) return;
 		this.#r = { ...this.#r, lineupLog: next };
+		this.#persist();
+	}
+
+	/* ---- the producers -----------------------------------------------------
+	 * Who supplies the venue, and the dishes they are on: see lib/producers.ts,
+	 * including why the dish link is stored here on the producer and never on
+	 * the dish, whose form rebuilds it field by field. */
+
+	get producers(): Producer[] {
+		return this.#r.producers;
+	}
+
+	/**
+	 * Add or replace by id, stamping `ts`. Run through normaliseProducer so the
+	 * form and a file obey one rule: a producer with no name is refused here
+	 * rather than saved as a blank line on the page.
+	 */
+	saveProducer(p: Producer): Producer | null {
+		const clean = normaliseProducer({ ...p, ts: Date.now() });
+		if (!clean) return null;
+		const exists = this.#r.producers.some((x) => x.id === clean.id);
+		this.#r = {
+			...this.#r,
+			producers: exists
+				? this.#r.producers.map((x) => (x.id === clean.id ? clean : x))
+				: [...this.#r.producers, clean]
+		};
+		this.#persist();
+		return clean;
+	}
+
+	/** A real delete, like removeWaste, and with the same trade: see mergeProducers. */
+	removeProducer(id: string) {
+		const next = this.#r.producers.filter((p) => p.id !== id);
+		if (next.length === this.#r.producers.length) return;
+		this.#r = { ...this.#r, producers: next };
+		this.#persist();
+	}
+
+	/** After this, exactly these producers carry the dish. Called by the dish form's save. */
+	setDishProducers(dishId: string, ids: readonly string[]) {
+		const next = setDishProducersOn(this.#r.producers, dishId, ids, Date.now());
+		if (next === this.#r.producers) return;
+		this.#r = { ...this.#r, producers: next };
 		this.#persist();
 	}
 

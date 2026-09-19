@@ -28,6 +28,13 @@ import type { CostLine } from '../costing';
 import { mergeItems, type Item } from '../items';
 import { mergeWaste, type WasteEntry } from '../waste';
 import { mergeLineup, normaliseLineup, type LineupEntry } from '../lineup';
+import {
+	mergeProducers,
+	normaliseProducers,
+	pruneDish,
+	relinkArrivals,
+	type Producer
+} from '../producers';
 import { remapDishSlugs } from './migrations';
 
 export const HOUSE_KEY = 'house';
@@ -121,6 +128,12 @@ export interface HouseRecord {
 	 */
 	lineupLog: LineupEntry[];
 	/**
+	 * Who supplies the venue, their story, and the dishes they are on. See
+	 * producers.ts, including why the dish link lives on the producer and not
+	 * on the dish.
+	 */
+	producers: Producer[];
+	/**
 	 * Whether the menu prices this venue types include tax, and at what rate.
 	 *
 	 * ON THE HOUSE RECORD, not in the session, and that is a real improvement
@@ -172,6 +185,7 @@ export const EMPTY_HOUSE: HouseRecord = {
 	items: {},
 	waste: [],
 	lineupLog: [],
+	producers: [],
 	prepCounts: {},
 	eightySix: {},
 	dishCosts: {},
@@ -243,6 +257,9 @@ export function readHouse(raw: unknown): { record: HouseRecord; blocked: boolean
 	// Every record written before the lineup existed lacks the field, and the
 	// spread above would happily carry a hand-edited non-array through.
 	record.lineupLog = normaliseLineup(record.lineupLog);
+	// The same two cases for the producers: absent on every record written
+	// before them, and a hand-edited value cleaned rather than carried through.
+	record.producers = Array.isArray(record.producers) ? normaliseProducers(record.producers) : [];
 	return { record, blocked: false };
 }
 
@@ -347,6 +364,20 @@ export function adoptImport(
 	// existed. See mergeLineup.
 	const nextLineup = mergeLineup(house.lineupLog, incoming.lineupLog);
 
+	// By id, the newer `ts` winning, the preps' rule. NAMED for the reason
+	// every clause here is: an unnamed field is one an import silently drops.
+	// The dish links ride inside each producer, so they travel with it. See
+	// mergeProducers.
+	// A dish this import brought (new here, or deleted here and resurrected
+	// above) keeps the file's credits even where my producer won: see
+	// relinkArrivals.
+	const hadDish = new Set(house.dishes.map((d) => d.id));
+	const nextProducers = relinkArrivals(
+		mergeProducers(house.producers, incoming.producers),
+		incoming.producers,
+		new Set(nextDishes.map((d) => d.id).filter((id) => !hadDish.has(id)))
+	);
+
 	/**
 	 * Tax adopts only into a venue that has never set it. A tax regime has no
 	 * timestamp to arbitrate with, and an import silently FLIPPING the basis
@@ -364,6 +395,7 @@ export function adoptImport(
 		items: nextItems,
 		waste: nextWaste,
 		lineupLog: nextLineup,
+		producers: nextProducers,
 		...(nextTax ? { tax: nextTax } : {}),
 		absorbed: [...new Set([...house.absorbed, ...nextDishes.map((d) => d.id)])]
 	};
@@ -422,13 +454,23 @@ export function batchesNeeded(prep: Prep, onHand: number): number {
 	return Math.ceil(short / prep.portions);
 }
 
-/** Removing a dish takes its costing and its 86 with it. */
+/**
+ * Removing a dish takes its costing and its 86 with it, and takes it off every
+ * producer that supplied it: the link lives on the producer (see producers.ts),
+ * so this is the one place a deleted dish could otherwise linger.
+ */
 export function removeDish(house: HouseRecord, id: string): HouseRecord {
 	const dishCosts = { ...house.dishCosts };
 	delete dishCosts[id];
 	const eightySix = { ...house.eightySix };
 	delete eightySix[id];
-	return { ...house, dishes: house.dishes.filter((d) => d.id !== id), dishCosts, eightySix };
+	return {
+		...house,
+		dishes: house.dishes.filter((d) => d.id !== id),
+		dishCosts,
+		eightySix,
+		producers: pruneDish(house.producers ?? [], id)
+	};
 }
 
 /**
@@ -512,6 +554,11 @@ export interface HousePortable {
 	items?: Record<string, Item>;
 	/** The lineup tally. Absent from every file written before it existed. */
 	lineupLog?: LineupEntry[];
+	/**
+	 * The producers, each carrying its own dish links. Absent from every file
+	 * written before they existed, which adoptImport merges as no change.
+	 */
+	producers?: Producer[];
 }
 
 export function housePortable(house: HouseRecord): HousePortable {
@@ -520,6 +567,7 @@ export function housePortable(house: HouseRecord): HousePortable {
 		items: house.items,
 		waste: house.waste,
 		lineupLog: house.lineupLog,
+		producers: house.producers,
 		...(house.tax ? { tax: house.tax } : {})
 	};
 }
