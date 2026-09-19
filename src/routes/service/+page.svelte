@@ -13,10 +13,9 @@
   them is the honest version and it is also the useful one: it tells a manager
   exactly what their own induction still has to teach.
 
-  Class names here are deliberately NOT .lexcard, .def, .flash, .semester or
-  .semesters: those five are a published paywall contract keyed to the tier
-  attribute with no route scope, and reusing one would blur this page for free
-  visitors. src/lib/navigation.test.ts holds that line.
+  Class names here avoided .lexcard, .def, .flash, .semester and .semesters
+  while those were the monorepo paywall's selectors. The World Table is free in full since 2026-09-19,
+  so nothing blurs them now.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';

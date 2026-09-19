@@ -196,7 +196,7 @@
 					{#if card.kind === 'producer'}
 						{@const p = card.producer}
 						<!-- "Tell me about {producer}": the story is the answer, in the same
-						     .flash .def a dish card uses, so the paywall treats it the same. -->
+						     .flash .def a dish card uses. -->
 						<p class="eyebrow">Card {deckIdx + 1} of {deck.length} · Tell me about</p>
 						<p class="term">{p.name}</p>
 						{#if revealed}

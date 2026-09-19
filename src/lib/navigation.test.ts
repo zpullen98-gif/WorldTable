@@ -1,44 +1,19 @@
 import { describe, it, expect } from 'vitest';
-import { readdirSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { readFileSync } from 'node:fs';
 
 /**
- * Two contracts the app cannot see itself breaking.
+ * A contract the app cannot see itself breaking.
  *
  * 1. The MODES literal is parsed by tools/verify-build.mjs with STRING
  *    SCANNING, not a parser. It needs an exact declaration and single-quoted
  *    hrefs. Break either and the scanner silently finds zero tabs — and the
  *    only thing standing between that and a shipped 404 is a floor assertion.
  *
- * 2. Five class names in this app are a PUBLISHED PAYWALL CONTRACT. The
- *    monorepo's oot-locks.js masks `ol.semesters > li.semester:nth-child(n+2)`
- *    and `.lexcard .def, .flash .def` for free visitors, keyed to the TIER
- *    attribute with NO route scope — it applies wherever those selectors match.
- *
- *    Renaming one fails OPEN: every semester and every definition is delivered
- *    in clear to free visitors, with no symptom on this side. Reusing one on a
- *    new page fails CLOSED: content blurred on a route nobody meant to gate.
- *    Neither shows up in a screenshot of the standalone build.
+ * There was a second: five class names (.semesters, .semester, .lexcard, .def,
+ * .flash) were the monorepo paywall's selectors, pinned here file by file. The
+ * owner made the World Table free in full on 2026-09-19 and the monorepo's
+ * Table lock was deleted, so the classes are only styling and the pin retired.
  */
-
-function svelteFiles(dir: string): string[] {
-	const out: string[] = [];
-	for (const e of readdirSync(dir, { withFileTypes: true })) {
-		const f = join(dir, e.name);
-		if (e.isDirectory()) out.push(...svelteFiles(f));
-		else if (f.endsWith('.svelte')) out.push(f);
-	}
-	return out;
-}
-
-/* Routes AND components. This scanned the routes alone until the Floor Deck,
-   whose answers are rendered by a component: a `class="def"` in
-   src/lib/components would have been invisible here, which is exactly the
-   unpinned selector this contract exists to catch. */
-const ROUTES = [...svelteFiles('src/routes'), ...svelteFiles('src/lib/components')];
-const norm = (p: string) => p.split(/[\\/]/).join('/');
-const usesClass = (src: string, token: string) =>
-	new RegExp(`class="[^"]*\\b${token}\\b`).test(src);
 
 describe('the MODES literal stays machine-readable', () => {
 	const layout = readFileSync('src/routes/+layout.svelte', 'utf8');
@@ -74,34 +49,4 @@ describe('the MODES literal stays machine-readable', () => {
 		// + '.html'. '/' therefore computes '.html', which never exists.
 		expect(body.includes("{ href: '', label: 'Today' }")).toBe(true);
 	});
-});
-
-describe('the paywall selector contract', () => {
-	/** token -> the routes allowed to use it as a class. */
-	const CONTRACT: Record<string, string[]> = {
-		semesters: ['src/routes/study/+page.svelte'],
-		semester: ['src/routes/study/+page.svelte'],
-		lexcard: ['src/routes/lexicon/+page.svelte'],
-		// All paid surfaces, so the free-tier blur is correct on each. FloorCard
-		// is the ONE place the Floor Deck's answers are rendered: the deck's
-		// routes show a card's answer through it and never with a `def` of
-		// their own, so the contract for the whole deck is this one file.
-		def: [
-			'src/routes/lexicon/+page.svelte',
-			'src/routes/menu/quiz/+page.svelte',
-			'src/lib/components/FloorCard.svelte'
-		],
-		flash: [
-			'src/routes/lexicon/+page.svelte',
-			'src/routes/menu/quiz/+page.svelte',
-			'src/lib/components/FloorCard.svelte'
-		]
-	};
-
-	for (const [token, allowed] of Object.entries(CONTRACT)) {
-		it(`"${token}" is used only where oot-locks.js expects it`, () => {
-			const used = ROUTES.filter((f) => usesClass(readFileSync(f, 'utf8'), token)).map(norm);
-			expect(used.sort(), `class "${token}" is a paywall selector`).toEqual(allowed.sort());
-		});
-	}
 });

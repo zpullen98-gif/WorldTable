@@ -10,10 +10,9 @@
   Unlike /menu/quiz, this works the moment the app is installed: it drills the
   guide's own 186 shipped cards rather than dishes the venue has to type in.
 
-  Everything below the h1 sits in exactly ONE <article class="sheet">. That is
-  the paywall contract: oot-locks.js does querySelector('article.sheet'),
-  SINGULAR, so a page with none is protected by a dismissible overlay alone and
-  a page with two leaves the second reachable by keyboard and screen reader.
+  Everything below the h1 sits in exactly ONE <article class="sheet">. That was
+  the paywall's mask target (oot-locks.js did querySelector('article.sheet'));
+  the World Table is free in full since 2026-09-19, and the single sheet stays as the page's shape.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';

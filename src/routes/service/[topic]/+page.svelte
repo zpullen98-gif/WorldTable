@@ -5,11 +5,8 @@
   this material has never had a route to it, and the fix for that is a route,
   not a paraphrase.
 
-  Class names are .svcterm and .svcdef, deliberately NOT .lexcard or .def. Those
-  two are a published paywall contract in the monorepo's oot-locks.js, keyed to
-  the tier attribute with NO route scope: reusing one here would blur this page
-  for free visitors on a route that was never meant to be gated that way.
-  src/lib/navigation.test.ts asserts they stay where they are.
+  Class names are .svcterm and .svcdef. They avoided .lexcard and .def while
+  those were the monorepo paywall's selectors; the World Table is free in full since 2026-09-19.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';

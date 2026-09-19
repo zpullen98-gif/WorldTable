@@ -24,8 +24,8 @@
 	 * reason /menu/preps gives: shared/oot-locks.js does a singular
 	 * querySelector('article.sheet').
 	 *
-	 * The paywall's selector classes are deliberately absent here: see the
-	 * CONTRACT in src/lib/navigation.test.ts.
+	 * (It avoided the paywall's selector classes while there was one; the World
+	 * Table is free in full since 2026-09-19.)
 	 */
 
 	let form = $state<null | {
