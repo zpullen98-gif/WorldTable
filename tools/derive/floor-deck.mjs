@@ -146,7 +146,34 @@ export const DECK_SECTIONS = [
  *
  * @type {string[]}
  */
-export const PACKET_TERMS = [];
+export const PACKET_TERMS = [
+	'Black-Eyed Peas', 'Chicken-Fried', 'Chow-Chow', 'Coleslaw', 'Hash', 'Hoecakes',
+	'Hominy', "Hoppin' John", 'Muscadine', 'Scuppernong', 'Sorghum', 'Red-Eye Gravy',
+	'Succotash', 'Boiled', 'Braised', 'Brined', 'Caramelized', 'Confit',
+	'Cured', 'Fried', 'Grilled', 'Pickled', 'Poached', 'Preserved',
+	'Puréed', 'Roasted', 'Sautéed', 'Seared', 'Simmered', 'Smoked',
+	'Sous Vide', 'Wilted', 'Escargot', 'Guinea Hen', 'Quail', 'Squab',
+	'Sweetbreads', 'Foie Gras', 'Andouille', 'Chorizo', 'Coppa', 'Country Ham',
+	'Guanciale', 'Lardo', 'Lomo', 'Pancetta', 'Pastrami', 'Pâté',
+	'Prosciutto', 'Rillettes', 'Speck', 'Tasso', 'Ribeye Cap', 'Cheek',
+	'Hanger Steak', 'Ham Hock', 'Ribeye', 'Shoulder', 'Short Rib', 'Tenderloin',
+	'Pork Belly', 'Arctic Char', 'Crawfish', 'Skate', 'Flounder', 'Grouper',
+	'Halibut', 'Mussels', 'Oysters', 'Roe', 'Salmon', 'Scallops',
+	'Snapper', 'Sturgeon', 'Tilefish', 'Trout', 'Turbot', 'Wreckfish',
+	'Caviar', 'Abalone Mushroom', 'Beech Mushroom', 'Black Trumpet', 'Chanterelle', 'Hen of the Woods',
+	'King Trumpet', 'Morel', 'Oyster Mushroom', 'Shiitake', 'Truffle', 'Brebis',
+	'Buttermilk', 'Chèvre', 'Crème Fraîche', 'Fromage Blanc', 'Parmesan', 'Clarified Butter',
+	'Brown Butter', 'Agnolotti', 'Buckwheat', 'Bulgur', 'Farro', 'Farro Piccolo',
+	'Gnocchi', 'Grits', 'Polenta', 'Quinoa', 'Risotto', 'Carnaroli',
+	'Acquerello', 'Semolina', 'Tagliatelle', 'Aioli', 'Béarnaise', 'Hollandaise',
+	'Emulsion', 'Jus', 'Vinaigrette', 'Mignonette', 'Gastrique', 'Coulis',
+	'Consommé', 'Carpaccio', 'Tartare', 'Frittata', 'Ragout', 'Beignets',
+	'Brioche', 'Focaccia', 'Sourdough', 'Macaron', 'Macaroon', 'Meringue',
+	'Tart', 'Torte', 'Crème Anglaise', 'Custard', 'Ganache', 'Mousse',
+	'Parfait', 'Panna Cotta', 'Chocolate Truffle', 'Gelato', 'Granita', 'Sherbet',
+	'Sorbet', 'Balsamic', 'Banyuls', 'Saba', 'Kimchi', 'Compote',
+	'Marmalade', 'Heirloom', 'Larder', 'Garde Manger'
+];
 
 /**
  * The packet's handwritten answers that were wrong, as card id -> a pattern
@@ -155,7 +182,36 @@ export const PACKET_TERMS = [];
  *
  * @type {Record<string, RegExp>}
  */
-export const PACKET_ERRORS = {};
+export const PACKET_ERRORS = {
+	/* Shoulder: the packet wrote "very tender meat"; it is tough and collagen-rich until it is cooked slowly */
+	fd_0091: /tender/i,
+	/* Cheek: the packet wrote "lean and tender"; it is rich in collagen and tender only when braised */
+	fd_0087: /lean/i,
+	/* Heirloom: the packet wrote "organically produced without GMOs"; it is an old open-pollinated variety handed down */
+	fd_0285: /organic|GMO/i,
+	/* Macaroon: the packet described a macaron: two almond meringue shells with a filling */
+	fd_0239: /almond|meringue|sandwich/i,
+	/* Sous Vide: the packet wrote "placed in steaming water"; it is a precisely held bath, well below a simmer */
+	fd_0042: /steam|boil/i,
+	/* Lomo: the packet wrote "Spanish for tenderloin"; it is the loin */
+	fd_0070: /tenderloin/i,
+	/* Quail: the packet wrote "strong gamy flavors"; it is mild */
+	fd_0052: /gam[ey]|strong/i,
+	/* Banyuls: the packet wrote "eastern France"; it is Roussillon, in the far south by the Spanish border */
+	fd_0267: /east/i,
+	/* Tilefish: the packet wrote "shallow water fish"; it lives deep */
+	fd_0121: /shallow/i,
+	/* Flounder: the packet wrote "eyes on the left side"; it depends on the family */
+	fd_0111: /left/i,
+	/* Red-Eye Gravy: the packet wrote "drippings of pan fried pork"; it is country ham drippings and black coffee, with no thickener */
+	fd_0012: /flour|milk|cream|sausage/i,
+	/* Pastrami: the packet stopped at "then smoked"; it is steamed after smoking */
+	fd_0072: /cold|only smoked|no further/i,
+	/* Jus: the packet wrote "light sauce used in beef recipes"; it is any roast's own juices, lightly reduced */
+	fd_0199: /beef/i,
+	/* Caviar: the packet wrote "roe from wild sturgeon"; nearly all of it is farmed now */
+	fd_0125: /wild/i
+};
 
 /** The ledger is build INPUT. Missing or unreadable is fatal, never defaulted
  *  to empty: an empty ledger would call every live id unminted at best, and at
