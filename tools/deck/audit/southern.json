@@ -1,0 +1,736 @@
+{
+	"section": "southern",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0001",
+				"fd_0002",
+				"fd_0003",
+				"fd_0004",
+				"fd_0005",
+				"fd_0006",
+				"fd_0007",
+				"fd_0008",
+				"fd_0009",
+				"fd_0010",
+				"fd_0011",
+				"fd_0012",
+				"fd_0013",
+				"fd_0014",
+				"fd_0015",
+				"fd_0016",
+				"fd_0017",
+				"fd_0018",
+				"fd_0019",
+				"fd_0020",
+				"fd_0021",
+				"fd_0022",
+				"fd_0023",
+				"fd_0024"
+			],
+			"findings": [
+				{
+					"id": "fd_0002",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "pounded thin, breaded and fried crisp",
+					"because": "The classic crust is a seasoned-flour dredge, often after an egg or buttermilk dip, not breadcrumbs. The why and gist already say floured. To a guest, 'breaded' suggests a breadcrumb coating, and that can mislead someone asking about the coating.",
+					"fix": "pounded thin, floured and fried crisp",
+					"lens": "fact",
+					"key": "southern-1-fact-1"
+				},
+				{
+					"id": "fd_0002",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "much like a Wiener schnitzel",
+					"because": "Wiener schnitzel is veal in a breadcrumb coating and is served without gravy. Chicken-fried steak is beef in a flour dredge. The comparison holds for the method but can mislead a server about the crust.",
+					"fix": "a cousin of the breadcrumbed schnitzel",
+					"lens": "fact",
+					"key": "southern-1-fact-2"
+				},
+				{
+					"id": "fd_0008",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Eat it on New Year's Day with greens and cornbread for luck.",
+					"because": "The line tells the guest what to do instead of explaining the dish. A new hire saying it at the table in September sounds odd. The tradition is a fact about the dish and should be stated as one.",
+					"fix": "It's the Southern New Year's Day luck dish, with greens and cornbread.",
+					"lens": "floor",
+					"key": "southern-1-floor-3"
+				},
+				{
+					"id": "fd_0008",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "rice cooked down with cowpeas",
+					"because": "The rice is steamed in the seasoned pea liquid until it absorbs it, as the why says. \"Cooked down\" means reduced, which suggests a stew. That makes the gist harder to tell apart from pot likker or a stewed-pea option.",
+					"fix": "Lowcountry rice steamed in the broth of cowpeas and smoked pork",
+					"lens": "floor",
+					"key": "southern-1-floor-4"
+				},
+				{
+					"id": "fd_0005",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's chopped meat and potatoes cooked in a hot pan until the bottom turns crisp and golden.",
+					"because": "In this Southern section the why says a South Carolina barbecue joint's hash is a soft pork stew over rice. A server who gives only the diner version will describe the wrong dish on that menu, and the guest line never mentions it.",
+					"fix": "Usually it's chopped meat and potatoes crisped in a hot pan. At Carolina barbecue it's a soft pork stew over rice.",
+					"lens": "floor",
+					"key": "southern-1-floor-5"
+				},
+				{
+					"id": "fd_0005",
+					"field": "pairs",
+					"severity": "unclear",
+					"claim": "rice in Carolina",
+					"because": "The phrase is tacked onto a list of breakfast partners and reads as a garble. The Carolina version is a stew served over rice, so rice is its base, not a partner.",
+					"fix": "Fried or poached eggs, toast, hot sauce; rice for Carolina hash",
+					"lens": "floor",
+					"key": "southern-1-floor-6"
+				},
+				{
+					"id": "fd_0004",
+					"field": "line",
+					"severity": "style",
+					"claim": "Pulled pork sandwich, vinegar slaw, pickles",
+					"because": "A line must carry the term or a listed alias as written. \"Slaw\" is not in this card's aliases, so the line does not show the word the card teaches.",
+					"fix": "Pulled pork sandwich, vinegar coleslaw, pickles",
+					"lens": "floor",
+					"key": "southern-1-floor-7"
+				},
+				{
+					"id": "fd_0002",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "and it comes smothered in creamy pepper gravy",
+					"because": "This oversells, and it promises a plate the kitchen may not serve: some places put the gravy on the side and some pair the dish with country or brown gravy. The server should say what is usual, not what arrives.",
+					"fix": "and it usually comes with a creamy pepper gravy",
+					"lens": "floor",
+					"key": "southern-1-floor-8"
+				},
+				{
+					"id": "fd_0005",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's at its best with a runny egg on top.",
+					"because": "The guest line pushes an undercooked egg as the ideal without saying it can be ordered otherwise. Hash is usually topped with a fried or poached egg with a runny yolk, and a server should be able to say that plainly and offer it cooked through.",
+					"fix": "It usually comes with a runny egg on top.",
+					"lens": "safety",
+					"key": "southern-1-safety-9"
+				},
+				{
+					"id": "fd_0005",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note)",
+					"because": "Missing a real undercooked-egg fact. The egg on hash is served with a soft, runny yolk by default, and guests can ask for it cooked hard. The why does not say this.",
+					"fix": "The egg on top is usually served with a runny yolk. Ask the kitchen to cook it through if a guest prefers.",
+					"lens": "safety",
+					"key": "southern-1-safety-10"
+				},
+				{
+					"id": "fd_0004",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"sometimes celery seed\"",
+					"because": "Creamy slaw dressings often use buttermilk or sour cream as well as mayonnaise, so dairy is a common classic ingredient a guest with a milk allergy would need flagged. Celery seed is a seasoning and matters less for most guests. The list is already at 7 items.",
+					"fix": "\"sometimes buttermilk\"",
+					"lens": "safety",
+					"key": "southern-1-safety-11"
+				},
+				{
+					"id": "fd_0009",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "The berries are marble-sized, in loose clusters",
+					"because": "Muscadines are large grapes, commonly about 2.5 to 4 cm (1 to 1.5 inches) across, well over marble size. The card's own guest line calls them big, so the why contradicts it.",
+					"fix": "The berries are big, up to an inch across, in loose clusters",
+					"lens": "fact",
+					"key": "southern-2-fact-1"
+				},
+				{
+					"id": "fd_0013",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"sweet corn\", \"lima beans\", \"often butter\", \"sometimes bacon\", \"sometimes tomato\", \"sometimes okra\"",
+					"because": "Creamed succotash is a classic version, and the linked recipe (delaware-succotash) is finished with 120 ml of cream. A guest who avoids milk needs cream flagged, not only butter.",
+					"fix": "\"sweet corn\", \"lima beans\", \"often butter\", \"sometimes cream\", \"sometimes bacon\", \"sometimes tomato\"",
+					"lens": "fact",
+					"key": "southern-2-fact-2"
+				},
+				{
+					"id": "fd_0016",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "They are cowpeas, a family carried from West Africa",
+					"because": "Cowpeas are one species (Vigna unguiculata), not a family. Their botanical family is the whole legume family, Fabaceae. Crowder, lady, zipper and purple hull are varieties of that one species.",
+					"fix": "They are cowpeas, one species carried from West Africa",
+					"lens": "fact",
+					"key": "southern-2-fact-3"
+				},
+				{
+					"id": "fd_0014",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "softer than kale",
+					"because": "Raw collard leaves are thicker and tougher than most kale, which is why they need the long braise the why describes. A server who says softer is likely to be contradicted. What sets collards apart from kale is a milder, less peppery flavor.",
+					"fix": "milder than kale",
+					"lens": "fact",
+					"key": "southern-2-fact-4"
+				},
+				{
+					"id": "fd_0016",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Summer shelling beans of the cowpea clan, simmered creamy and earthy",
+					"because": "Black-eyed peas (fd_0001, same section) are also summer cowpeas simmered creamy and earthy, so this gist would be accepted for Black-Eyed Peas too. What makes field peas this card is that it is the umbrella name for the many Southern cowpea kinds.",
+					"fix": "Umbrella name for Southern summer cowpea kinds: crowder, lady, zipper",
+					"lens": "floor",
+					"key": "southern-2-floor-5"
+				},
+				{
+					"id": "fd_0013",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's a sauté of sweet summer corn and butter beans, often with tomato or okra. Sweet, creamy and bright, it tastes like a Southern garden in August.",
+					"because": "\"A sauté\" used as a noun is kitchen talk, and it puts an accented word in a nervous new hire's mouth. \"Tastes like a Southern garden in August\" oversells and sounds read off a card. The dish also started in New England, so calling it Southern is shaky.",
+					"fix": "It's sweet summer corn and butter beans cooked together, often with tomato or okra. Sweet, creamy and bright, it tastes like peak summer.",
+					"lens": "floor",
+					"key": "southern-2-floor-6"
+				},
+				{
+					"id": "fd_0012",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "loosened with black coffee",
+					"because": "\"Loosened\" is kitchen jargon. A guest hearing it will not understand that the coffee is part of the sauce. Saying plainly what the sauce is made of answers \"what is that?\" better.",
+					"fix": "made with black coffee",
+					"lens": "floor",
+					"key": "southern-2-floor-7"
+				},
+				{
+					"id": "fd_0014",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Earthier than spinach, softer than kale",
+					"because": "Collards are the tougher leaf. Raw, they are sturdier than kale, and they only turn soft after the long braise. A guest who knows kale may push back, and the server cannot defend the comparison.",
+					"fix": "Earthier than spinach, silkier than kale",
+					"lens": "floor",
+					"key": "southern-2-floor-8"
+				},
+				{
+					"id": "fd_0015",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "left in the pan after",
+					"because": "Pot likker is the liquid left in the pot the greens simmer in, not in a pan. \"Pan\" suggests pan drippings, which is what the Red-Eye Gravy gist describes, so the two gists blur together.",
+					"fix": "left behind by",
+					"lens": "floor",
+					"key": "southern-2-floor-9"
+				},
+				{
+					"id": "fd_0009",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Served whole, most people squeeze the pulp into the mouth and leave the tough skin and seeds.",
+					"because": "This is a dangling modifier: as written, the people are the thing served whole. It also tells guests to leave the seeds, but many people swallow or spit them, so the wording should cover both. A new hire repeating this sentence aloud will stumble on it.",
+					"fix": "Eaten whole, the pulp is squeezed into the mouth and the tough skin and seeds set aside.",
+					"lens": "floor",
+					"key": "southern-2-floor-10"
+				},
+				{
+					"id": "fd_0010",
+					"field": "line",
+					"severity": "unclear",
+					"claim": "Scuppernong sorbet, benne wafers",
+					"because": "Benne is the Southern name for sesame, a major allergen. The example menu line names it in a word a new hire will not recognize, and nothing on the card flags it, so a server could read this plate aloud without knowing it holds sesame. The line should not model an allergen hidden behind a regional name.",
+					"fix": "Scuppernong sorbet, mint",
+					"lens": "safety",
+					"key": "southern-2-safety-11"
+				},
+				{
+					"id": "fd_0017",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Small speckled Lowcountry bean, simmered slowly with ham hock",
+					"because": "This is close to a true description of other roster cards: Field Peas (fd_0016) and Black-Eyed Peas (fd_0001) are small, often speckled cowpeas simmered with ham hock. A trap must not be true of another card.",
+					"fix": "Tiny Lowcountry mustard seed, ground hot for pickles and relish",
+					"lens": "fact",
+					"key": "southern-3-fact-1"
+				},
+				{
+					"id": "fd_0022",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "Frying, high heat or acid like tomato and vinegar keep it crisp rather than slick.",
+					"because": "Acid tempers the slime but does not make okra crisp. Stewed with tomato, it goes soft and silky, as the card's own guest line says, so the why contradicts the guest line.",
+					"fix": "Frying and high heat keep it crisp. Acid, like tomato or vinegar, cuts the slick.",
+					"lens": "fact",
+					"key": "southern-3-fact-2"
+				},
+				{
+					"id": "fd_0022",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "from the hibiscus family",
+					"because": "Okra belongs to the mallow family (Malvaceae). Hibiscus is a genus in that family, not a family of its own. Okra is a close relative of hibiscus and was once classed as Hibiscus esculentus.",
+					"fix": "a cousin of hibiscus",
+					"lens": "fact",
+					"key": "southern-3-fact-3"
+				},
+				{
+					"id": "fd_0022",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"okra\", \"often cornmeal\", \"sometimes buttermilk\", \"often tomato\"",
+					"because": "Fried okra is often dredged in wheat flour, or in cornmeal cut with flour, and is often dipped in egg. A guest with a wheat or egg allergy needs both flagged.",
+					"fix": "\"okra\", \"often cornmeal\", \"often wheat flour\", \"sometimes egg\", \"sometimes buttermilk\", \"often tomato\"",
+					"lens": "fact",
+					"key": "southern-3-fact-4"
+				},
+				{
+					"id": "fd_0019",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "egg mayonnaise",
+					"because": "In British and menu usage, \"egg mayonnaise\" means egg salad. The intended item is mayonnaise, which is made with egg yolk, so list the two nouns separately to keep the egg flag clear.",
+					"fix": "\"mayonnaise\", \"egg\"",
+					"lens": "fact",
+					"key": "southern-3-fact-5"
+				},
+				{
+					"id": "fd_0024",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Not a bottled hot sauce.",
+					"because": "Southern pepper vinegar is itself sold bottled, often labeled \"pepper sauce\" (one of this card's aliases), so this line contradicts the card. The real difference is a blended or mash-based hot sauce against a clear vinegar steep.",
+					"fix": "Not a blended hot sauce.",
+					"lens": "fact",
+					"key": "southern-3-fact-6"
+				},
+				{
+					"id": "fd_0020",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"butter\"",
+					"because": "Many Southern skillet cornbreads use only bacon grease or lard, with no butter. Listing butter unqualified while bacon fat is \"often\" overstates it. Keep it listed for the milk flag, but qualify it.",
+					"fix": "\"often butter\"",
+					"lens": "fact",
+					"key": "southern-3-fact-7"
+				},
+				{
+					"id": "fd_0020",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's baked in a hot iron skillet, so the edges come out crisp and golden.",
+					"because": "The line never says what the thing is. A guest asking \"what is that?\" hears how it is cooked but not that it is a cornmeal bread. The answer should come first.",
+					"fix": "It's a cornmeal bread baked in a hot iron skillet, so the edges come out crisp and golden.",
+					"lens": "floor",
+					"key": "southern-3-floor-8"
+				},
+				{
+					"id": "fd_0022",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "stewed with tomato it turns silky and thickens the pot",
+					"because": "This contradicts the card's own why, which says acid like tomato keeps okra from going slick. A server who reads both cards cannot explain it. The silky, thickening effect comes from long simmering in liquid, not from the tomato.",
+					"fix": "simmered in a stew it turns silky and thickens the pot",
+					"lens": "floor",
+					"key": "southern-3-floor-9"
+				},
+				{
+					"id": "fd_0022",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "a green pod vegetable from the hibiscus family",
+					"because": "\"Hibiscus family\" is botany a nervous hire will stumble over, and it is loose: okra belongs to the mallow family and is a cousin of hibiscus, not a hibiscus.",
+					"fix": "a green seed pod, a cousin of hibiscus",
+					"lens": "floor",
+					"key": "southern-3-floor-10"
+				},
+				{
+					"id": "fd_0023",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "They're fresh peanuts simmered in the shell",
+					"because": "Many kitchens boil raw dried peanuts outside the green-peanut season. \"Fresh\" is a promise a server cannot keep. The why already says green peanuts are the best choice.",
+					"fix": "They're peanuts simmered in the shell",
+					"lens": "floor",
+					"key": "southern-3-floor-11"
+				},
+				{
+					"id": "fd_0017",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Small speckled Lowcountry bean, simmered slowly with ham hock",
+					"because": "This fairly describes Field Peas or Black-Eyed Peas on this roster, which are small speckled or eyed legumes cooked with smoked pork. The trap would read as a true answer for a neighboring card.",
+					"fix": "Lowcountry sweet potato, roasted and glazed with sorghum syrup",
+					"lens": "floor",
+					"key": "southern-3-floor-12"
+				},
+				{
+					"id": "fd_0020",
+					"field": "why",
+					"severity": "verdict",
+					"claim": "Southern versions use little or no sugar or wheat flour.",
+					"because": "A server can repeat \"Southern cornbread has no flour\" to a guest avoiding wheat. Many Southern skillet recipes, and most restaurant cornbread, do use some wheat flour, and the madeWith list itself says \"sometimes wheat flour\". The line reads as a promise that the bread has no wheat.",
+					"fix": "Southern versions are less sweet and more corn-forward.",
+					"lens": "safety",
+					"key": "southern-3-safety-13"
+				},
+				{
+					"id": "fd_0023",
+					"field": "why",
+					"severity": "verdict",
+					"claim": "Peanuts are legumes, so they taste closer to a pea than a roasted nut.",
+					"because": "\"Peanuts are legumes\" is the classic misconception behind \"it's not really a nut\". A server can pass it on as reassurance to a guest with a nut allergy. Peanut allergy is among the most severe food allergies, and the card should never suggest a peanut is less of a nut for the guest.",
+					"fix": "They taste closer to a tender cooked bean than a roasted nut.",
+					"lens": "safety",
+					"key": "southern-3-safety-14"
+				},
+				{
+					"id": "fd_0022",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often cornmeal\", \"sometimes buttermilk\", \"often tomato\"",
+					"because": "The card's line, recipe and guest line all lead with fried okra. Southern fried-okra breading is very often a cornmeal and wheat flour mix, sometimes with an egg dip, and the list flags neither wheat nor egg for a guest who needs to know.",
+					"fix": "okra, often cornmeal, often wheat flour, sometimes buttermilk, sometimes egg, often tomato",
+					"lens": "safety",
+					"key": "southern-3-safety-15"
+				},
+				{
+					"key": "southern-critic-1",
+					"id": "fd_0004",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The only trap, 'Shredded raw cabbage that is always bound in mayonnaise dressing', is nearly the gist with one word ('always') changed, and it describes most coleslaw correctly. In the test a reader faces two almost identical options, and the trap is false only on a technicality. The packet's own answer ('dressed in mayonnaise') is incomplete rather than wrong, and brief.knownPacketError is not set for this card.",
+					"because": "The only trap, 'Shredded raw cabbage that is always bound in mayonnaise dressing', is nearly the gist with one word ('always') changed, and it describes most coleslaw correctly. In the test a reader faces two almost identical options, and the trap is false only on a technicality. The packet's own answer ('dressed in mayonnaise') is incomplete rather than wrong, and brief.knownPacketError is not set for this card.",
+					"fix": "Replace it with a clearly false trap in gist register, for example says 'Hot braised red cabbage, stewed soft with apple and vinegar' (59) with why 'It is raw cabbage dressed cold, crisp and crunchy, not cooked soft.' Alternatively drop the trap. Note that the card has no notThis; if you would rather teach the mayo-versus-vinegar point, put it in a notThis."
+				},
+				{
+					"key": "southern-critic-2",
+					"id": "fd_0006",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "fd_0020 Cornbread lists Hoecakes in confusedWithTerms, but Hoecakes lists Cornbread only in seeAlsoTerms. The confusion is genuine in both directions, since griddled cornmeal bread and skillet cornbread are the same batter family, and the packet itself lumped hoecakes with johnnycakes.",
+					"because": "fd_0020 Cornbread lists Hoecakes in confusedWithTerms, but Hoecakes lists Cornbread only in seeAlsoTerms. The confusion is genuine in both directions, since griddled cornmeal bread and skillet cornbread are the same batter family, and the packet itself lumped hoecakes with johnnycakes.",
+					"fix": "Move 'Cornbread' from seeAlsoTerms to confusedWithTerms, then add the required notThis, for example 'Not skillet cornbread, which is poured thick into a pan and baked. These are thin and flipped on a griddle.' (about 100 chars). The section mean has room: it is 629."
+				},
+				{
+					"key": "southern-critic-3",
+					"id": "fd_0016",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "fd_0001 Black-Eyed Peas lists Field Peas in confusedWithTerms, but Field Peas lists Black-Eyed Peas only in seeAlsoTerms. The link runs one way. Separately, its trap ('Sweet, bright green spring legume shelled from its pod and eaten young') makes the same claim as fd_0001's trap ('Young green garden pod shelled fresh in spring and eaten sweet'), so the two cards test one mistake twice.",
+					"because": "fd_0001 Black-Eyed Peas lists Field Peas in confusedWithTerms, but Field Peas lists Black-Eyed Peas only in seeAlsoTerms. The link runs one way. Separately, its trap ('Sweet, bright green spring legume shelled from its pod and eaten young') makes the same claim as fd_0001's trap ('Young green garden pod shelled fresh in spring and eaten sweet'), so the two cards test one mistake twice.",
+					"fix": "Move 'Black-Eyed Peas' to confusedWithTerms and add a clause to notThis, for example 'Not green garden peas, and not only black-eyed peas: those are one kind among crowders, lady peas and zippers.' Then give ONE of the two cards a different real mistake. A good one for fd_0001 is 'Small dried kidney bean from Mexico, cooked soft with chili' (about 58), with why 'It is a cowpea from West Africa, not a New World bean.'"
+				},
+				{
+					"key": "southern-critic-4",
+					"id": "fd_0010",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Scuppernong carries a confusion-style notThis ('Every scuppernong is a muscadine...'), yet Muscadine appears only in seeAlsoTerms. The mix-up is real and common: many Southerners call every muscadine a scuppernong. fd_0009 Muscadine has no notThis, so the muscadine side of the pair is never taught.",
+					"because": "Scuppernong carries a confusion-style notThis ('Every scuppernong is a muscadine...'), yet Muscadine appears only in seeAlsoTerms. The mix-up is real and common: many Southerners call every muscadine a scuppernong. fd_0009 Muscadine has no notThis, so the muscadine side of the pair is never taught.",
+					"fix": "On fd_0010, move 'Muscadine' from seeAlsoTerms to confusedWithTerms; the existing notThis already covers it. On fd_0009, move 'Scuppernong' to confusedWithTerms and add a notThis, for example 'Scuppernong is one bronze muscadine. Most muscadines ripen dark purple, and many people call them all scuppernongs.' Alternatively cut the note so the card stays near its length."
+				},
+				{
+					"key": "southern-critic-5",
+					"id": "fd_0015",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist is 55 characters and the trap is 66, an 11-character gap that breaks the 'within about 10 characters' rule. It also makes the trap the longest option on the card.",
+					"because": "Length parity: the gist is 55 characters and the trap is 66, an 11-character gap that breaks the 'within about 10 characters' rule. It also makes the trap the longest option on the card.",
+					"fix": "Shorten the trap rather than padding the gist, for example 'Unaged corn whiskey made at home in the Southern hills' (54). Alternatively lengthen the gist slightly toward the aim band: 'Smoky, savory broth left in the pot by long-simmered greens' (59)."
+				},
+				{
+					"key": "southern-critic-6",
+					"id": "fd_0010",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The 'say' respelling 'SKUP-er-nahng' does not follow the house key, which uses uh for the vowel in 'cup' and 'er'. fd_0009 'MUSS-kuh-dine' is loose in the same way.",
+					"because": "The 'say' respelling 'SKUP-er-nahng' does not follow the house key, which uses uh for the vowel in 'cup' and 'er'. fd_0009 'MUSS-kuh-dine' is loose in the same way.",
+					"fix": "Use 'SKUHP-er-nahng' on fd_0010 and 'MUHS-kuh-dine' on fd_0009, or whatever the brief's respellingKey allows for the 'ur' and 'ine' sounds. Check it against brief.respellingKey."
+				},
+				{
+					"key": "southern-operator-1",
+					"id": "fd_0023",
+					"lens": "operator",
+					"field": "guest",
+					"severity": "style",
+					"claim": "They're peanuts simmered in the shell in salty water for hours, until soft like a bean. Crack one open and slurp the brine. A roadside Southern classic.",
+					"because": "Three sentences; a guest line is two at most, and the contract refused it after the corrector had passed it.",
+					"fix": "The closing fragment moved to the front of the first sentence; the hours of boiling are in the why; no fact changed."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "southern-1-fact-1",
+					"action": "applied",
+					"reason": "Guest line now says 'pounded thin, floured and fried crisp', matching the seasoned-flour dredge in the why and gist."
+				},
+				{
+					"finding": "southern-1-fact-2",
+					"action": "applied",
+					"reason": "Why now ends 'a floured cousin of the breadcrumbed schnitzel', keeping the comparison while making the crust difference explicit."
+				},
+				{
+					"finding": "southern-1-floor-3",
+					"action": "applied",
+					"reason": "Guest line now states the tradition as a fact: 'It's the traditional New Year's Day luck dish, with greens and cornbread.'"
+				},
+				{
+					"finding": "southern-1-floor-4",
+					"action": "applied",
+					"reason": "Gist changed to 'Lowcountry rice steamed in the broth of cowpeas and smoked pork' (63 chars, term-free, still longer than the 57-char trap by only 6)."
+				},
+				{
+					"finding": "southern-1-floor-5",
+					"action": "applied",
+					"reason": "Guest line now gives the usual pan-crisped version and adds that at Carolina barbecue joints it is a soft pork stew over rice."
+				},
+				{
+					"finding": "southern-1-floor-6",
+					"action": "applied",
+					"reason": "Pairs rewritten as 'Fried or poached eggs, toast, hot sauce, and rice under Carolina hash', making rice the base of the Carolina version, not a garbled partner."
+				},
+				{
+					"finding": "southern-1-floor-7",
+					"action": "applied",
+					"reason": "Line now reads 'Pulled pork sandwich, vinegar coleslaw, pickles' so it carries the term."
+				},
+				{
+					"finding": "southern-1-floor-8",
+					"action": "applied",
+					"reason": "Guest line now says 'it usually comes with a creamy pepper gravy' instead of promising it arrives smothered."
+				},
+				{
+					"finding": "southern-1-safety-9",
+					"action": "applied",
+					"reason": "Merged with floor-5: the guest line now says it comes 'often with a runny egg on top' as a plain description, not a recommendation."
+				},
+				{
+					"finding": "southern-1-safety-10",
+					"action": "applied",
+					"reason": "Added the note 'The egg on top usually comes with a runny yolk. A guest can ask for it cooked through.' The why does not cover this."
+				},
+				{
+					"finding": "southern-1-safety-11",
+					"action": "applied",
+					"reason": "Replaced 'sometimes celery seed' with 'sometimes buttermilk' so the madeWith list flags dairy, and kept it at 7 items."
+				},
+				{
+					"finding": "southern-2-fact-1",
+					"action": "applied",
+					"reason": "Muscadine why now reads 'The berries are big, often an inch or more across, in loose clusters', matching the real 1 to 1.5 inch size and the guest line."
+				},
+				{
+					"finding": "southern-2-fact-2",
+					"action": "applied",
+					"reason": "Added 'sometimes cream' to Succotash madeWith for creamed versions, kept okra since the guest line names it (7 items)."
+				},
+				{
+					"finding": "southern-2-fact-3",
+					"action": "applied",
+					"reason": "Field Peas why now says 'one species carried from West Africa' instead of 'a family'."
+				},
+				{
+					"finding": "southern-2-fact-4",
+					"action": "applied",
+					"reason": "Collard Greens guest now says 'milder than kale' in place of 'softer than kale'."
+				},
+				{
+					"finding": "southern-2-floor-5",
+					"action": "applied",
+					"reason": "Field Peas gist replaced with the umbrella-name line naming crowder, lady and zipper, which sets it apart from Black-Eyed Peas and stays within 1 character of its trap."
+				},
+				{
+					"finding": "southern-2-floor-6",
+					"action": "applied",
+					"reason": "Succotash guest line rewritten as proposed: no noun 'saute', and the oversold Southern garden image replaced with 'tastes like peak summer'."
+				},
+				{
+					"finding": "southern-2-floor-7",
+					"action": "applied",
+					"reason": "Red-Eye Gravy guest now says 'made with black coffee' in place of 'loosened with black coffee'."
+				},
+				{
+					"finding": "southern-2-floor-8",
+					"action": "applied",
+					"reason": "Same clause as fact-4, which already fixed it: 'milder than kale' was chosen over 'silkier' because raw collards are the tougher leaf and flavor is what really sets them apart."
+				},
+				{
+					"finding": "southern-2-floor-9",
+					"action": "applied",
+					"reason": "Pot Likker gist now reads 'Smoky, savory broth left behind by long-simmered greens', which drops 'pan' and keeps the banned word 'pot' out."
+				},
+				{
+					"finding": "southern-2-floor-10",
+					"action": "applied",
+					"reason": "Muscadine note rewritten without the dangling modifier and covering both habits: 'Most people pop the pulp out of the tough skin, then spit out or swallow the seeds.'"
+				},
+				{
+					"finding": "southern-2-safety-11",
+					"action": "applied",
+					"reason": "Scuppernong line changed to 'Scuppernong sorbet, mint' so it no longer names sesame under the regional word benne."
+				},
+				{
+					"finding": "southern-3-fact-1",
+					"action": "applied",
+					"reason": "Replaced the bean trap with the mustard-seed trap (63 chars against a 61-char gist, no roster card on mustard) and rewrote its why to match."
+				},
+				{
+					"finding": "southern-3-fact-2",
+					"action": "applied",
+					"reason": "Why now reads: Frying and high heat keep it crisp. Acid, like tomato or vinegar, cuts the slick."
+				},
+				{
+					"finding": "southern-3-fact-3",
+					"action": "applied",
+					"reason": "Guest now calls okra a cousin of hibiscus rather than from the hibiscus family."
+				},
+				{
+					"finding": "southern-3-fact-4",
+					"action": "applied",
+					"reason": "Added often wheat flour and sometimes egg to madeWith (6 items)."
+				},
+				{
+					"finding": "southern-3-fact-5",
+					"action": "applied",
+					"reason": "Split egg mayonnaise into mayonnaise and egg."
+				},
+				{
+					"finding": "southern-3-fact-6",
+					"action": "applied",
+					"reason": "notThis now opens: Not a blended hot sauce."
+				},
+				{
+					"finding": "southern-3-fact-7",
+					"action": "applied",
+					"reason": "Changed butter to often butter in madeWith."
+				},
+				{
+					"finding": "southern-3-floor-8",
+					"action": "applied",
+					"reason": "Guest now opens: It's a cornmeal bread baked in a hot iron skillet."
+				},
+				{
+					"finding": "southern-3-floor-9",
+					"action": "applied",
+					"reason": "Guest now says simmered in a stew it turns silky and thickens the pot, which matches the revised why."
+				},
+				{
+					"finding": "southern-3-floor-10",
+					"action": "applied",
+					"reason": "Guest now opens: It's a green seed pod, a cousin of hibiscus."
+				},
+				{
+					"finding": "southern-3-floor-11",
+					"action": "applied",
+					"reason": "Dropped fresh from the guest line, and changed the gist from Fresh to Raw groundnuts so the gist makes the same honest claim."
+				},
+				{
+					"finding": "southern-3-floor-12",
+					"action": "applied",
+					"reason": "Same defect as southern-3-fact-1, fixed with the mustard-seed trap there, because a sweet potato trap sits too close to Sorghum-glazed Southern sides."
+				},
+				{
+					"finding": "southern-3-safety-13",
+					"action": "applied",
+					"reason": "Replaced the sugar and wheat flour sentence with: Southern versions are less sweet and more corn-forward."
+				},
+				{
+					"finding": "southern-3-safety-14",
+					"action": "applied",
+					"reason": "Removed the legumes claim. The why now ends: They taste closer to a tender cooked bean than a roasted nut."
+				},
+				{
+					"finding": "southern-3-safety-15",
+					"action": "applied",
+					"reason": "Same change as southern-3-fact-4: often wheat flour and sometimes egg are now in madeWith."
+				},
+				{
+					"finding": "southern-critic-1",
+					"action": "applied",
+					"reason": "Replaced the near-duplicate mayonnaise trap with a clearly false one, 'Hot braised red cabbage, stewed soft with apple and vinegar' (59 against a 64-character gist), and its why now says the cabbage is raw and dressed cold."
+				},
+				{
+					"finding": "southern-critic-2",
+					"action": "applied",
+					"reason": "Moved Cornbread from seeAlsoTerms to confusedWithTerms on Hoecakes and added the required notThis (107 chars): cornbread is poured thick into a pan and baked, hoecakes are thin and flipped on a griddle. The card now totals 719."
+				},
+				{
+					"finding": "southern-critic-3",
+					"action": "applied",
+					"reason": "On Field Peas, moved Black-Eyed Peas to confusedWithTerms, widened notThis to say black-eyed peas are only one kind, and replaced the duplicated green-garden-pea trap with a different false claim (wild foraged, not planted). fd_0001 is not in this batch and keeps its trap, so the two cards no longer test the same mistake."
+				},
+				{
+					"finding": "southern-critic-4",
+					"action": "applied",
+					"reason": "On Scuppernong, moved Muscadine from seeAlsoTerms to confusedWithTerms, and the existing notThis already covers it. fd_0009 Muscadine is not among the five cards in this pass, so its reciprocal link and notThis need to be made where that card is corrected."
+				},
+				{
+					"finding": "southern-critic-5",
+					"action": "applied",
+					"reason": "Shortened the Pot Likker trap to 'Unaged corn whiskey made at home in the Southern hills' (54 against a 55-character gist), so the gist is no longer shorter than its trap."
+				},
+				{
+					"finding": "southern-critic-6",
+					"action": "applied",
+					"reason": "Changed the Scuppernong respelling to SKUHP-er-nahng to match the house uh vowel. The MUHS-kuh-dine fix belongs to fd_0009, which is not in this batch."
+				},
+				{
+					"finding": "southern-operator-1",
+					"action": "applied",
+					"reason": "Operator: rejoined into two sentences, no fact changed."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0004",
+						"issue": "The only trap, 'Shredded raw cabbage that is always bound in mayonnaise dressing', is nearly the gist with one word ('always') changed, and it describes most coleslaw correctly. In the test a reader faces two almost identical options, and the trap is false only on a technicality. The packet's own answer ('dressed in mayonnaise') is incomplete rather than wrong, and brief.knownPacketError is not set for this card.",
+						"fix": "Replace it with a clearly false trap in gist register, for example says 'Hot braised red cabbage, stewed soft with apple and vinegar' (59) with why 'It is raw cabbage dressed cold, crisp and crunchy, not cooked soft.' Alternatively drop the trap. Note that the card has no notThis; if you would rather teach the mayo-versus-vinegar point, put it in a notThis."
+					},
+					{
+						"id": "fd_0006",
+						"issue": "fd_0020 Cornbread lists Hoecakes in confusedWithTerms, but Hoecakes lists Cornbread only in seeAlsoTerms. The confusion is genuine in both directions, since griddled cornmeal bread and skillet cornbread are the same batter family, and the packet itself lumped hoecakes with johnnycakes.",
+						"fix": "Move 'Cornbread' from seeAlsoTerms to confusedWithTerms, then add the required notThis, for example 'Not skillet cornbread, which is poured thick into a pan and baked. These are thin and flipped on a griddle.' (about 100 chars). The section mean has room: it is 629."
+					},
+					{
+						"id": "fd_0016",
+						"issue": "fd_0001 Black-Eyed Peas lists Field Peas in confusedWithTerms, but Field Peas lists Black-Eyed Peas only in seeAlsoTerms. The link runs one way. Separately, its trap ('Sweet, bright green spring legume shelled from its pod and eaten young') makes the same claim as fd_0001's trap ('Young green garden pod shelled fresh in spring and eaten sweet'), so the two cards test one mistake twice.",
+						"fix": "Move 'Black-Eyed Peas' to confusedWithTerms and add a clause to notThis, for example 'Not green garden peas, and not only black-eyed peas: those are one kind among crowders, lady peas and zippers.' Then give ONE of the two cards a different real mistake. A good one for fd_0001 is 'Small dried kidney bean from Mexico, cooked soft with chili' (about 58), with why 'It is a cowpea from West Africa, not a New World bean.'"
+					},
+					{
+						"id": "fd_0010",
+						"issue": "Scuppernong carries a confusion-style notThis ('Every scuppernong is a muscadine...'), yet Muscadine appears only in seeAlsoTerms. The mix-up is real and common: many Southerners call every muscadine a scuppernong. fd_0009 Muscadine has no notThis, so the muscadine side of the pair is never taught.",
+						"fix": "On fd_0010, move 'Muscadine' from seeAlsoTerms to confusedWithTerms; the existing notThis already covers it. On fd_0009, move 'Scuppernong' to confusedWithTerms and add a notThis, for example 'Scuppernong is one bronze muscadine. Most muscadines ripen dark purple, and many people call them all scuppernongs.' Alternatively cut the note so the card stays near its length."
+					},
+					{
+						"id": "fd_0015",
+						"issue": "Length parity: the gist is 55 characters and the trap is 66, an 11-character gap that breaks the 'within about 10 characters' rule. It also makes the trap the longest option on the card.",
+						"fix": "Shorten the trap rather than padding the gist, for example 'Unaged corn whiskey made at home in the Southern hills' (54). Alternatively lengthen the gist slightly toward the aim band: 'Smoky, savory broth left in the pot by long-simmered greens' (59)."
+					},
+					{
+						"id": "fd_0010",
+						"issue": "The 'say' respelling 'SKUP-er-nahng' does not follow the house key, which uses uh for the vowel in 'cup' and 'er'. fd_0009 'MUSS-kuh-dine' is loose in the same way.",
+						"fix": "Use 'SKUHP-er-nahng' on fd_0010 and 'MUHS-kuh-dine' on fd_0009, or whatever the brief's respellingKey allows for the 'ur' and 'ine' sounds. Check it against brief.respellingKey."
+					}
+				],
+				"notes": "No verdict language, banned substrings or dashes turned up anywhere in the section. Every roster row has a card. The fd_0012 knownPacketError is covered: its trap names sausage, flour and milk. The section mean is 629 characters of prose per card, well under the 720 ceiling. The longest card is fd_0003 at 741, which is inside the per-card band. All gists and guest lines are distinct. Hominy/Grits and Chow-Chow/Chutney are properly linked across sections. The fixes above are mostly reciprocal links: Cornbread<->Hoecakes, Black-Eyed Peas<->Field Peas, Muscadine<->Scuppernong. The operator may want them enforced both ways by the build gate. One possible accuracy nuance in fd_0018: Carolina Gold's commercial collapse is usually dated to the 1910s to 1920s (hurricanes plus the loss of labor after emancipation). 'Nearly vanished after 1900' is defensible but loose. Pimento Cheese vs Pimentón is currently a seeAlso and is fine as it is."
+			},
+			"acceptedRejected": []
+		}
+	]
+}
