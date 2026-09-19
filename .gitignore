@@ -11,3 +11,6 @@ test-results/
 playwright-report/
 blob-report/
 .vite/
+
+# Floor Deck authoring drafts and briefs; what is merged lives in tools/derive/floor-deck/ and tools/deck/audit/
+tools/deck/out/

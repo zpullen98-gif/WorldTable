@@ -477,6 +477,38 @@ describe('what shipped', () => {
 });
 
 /**
+ * One contract, two consumers. A validator that carried its own copy of a rule
+ * would let a draft pass that the build then refuses, or the reverse, and the
+ * atlas pipeline's validator was kept honest only by discipline. This is kept
+ * honest by source inspection, like the rest of this repo's build pins.
+ */
+describe('the build and the authoring tools enforce the same contract', () => {
+	const src = (f: string) => readFileSync(f, 'utf8');
+	it('the build gate calls checkDeck from the contract module', () => {
+		const deck = src('tools/derive/floor-deck.mjs');
+		expect(deck).toMatch(/import \{[^}]*\bcheckDeck\b[^}]*\} from '\.\/floor-deck-contract\.mjs'/);
+		expect(src('tools/build-data.mjs')).toMatch(/import \{ gateFloorDeck, buildFloorDeck \} from '\.\/derive\/floor-deck\.mjs'/);
+	});
+	it('the validator and the merger call it too, and define no rule of their own', () => {
+		for (const f of ['tools/deck/validate.mjs', 'tools/deck/merge.mjs']) {
+			const text = src(f);
+			expect(text, f).toMatch(/import \{ checkDeck \} from '\.\.\/derive\/floor-deck-contract\.mjs'/);
+			expect(text, `${f} restates a limit`).not.toMatch(/LIMITS|VERDICT_RE|BANNED/);
+		}
+	});
+	it('the brief prints the contract numbers rather than its own', () => {
+		expect(src('tools/deck/brief.mjs')).toMatch(/import \{ LIMITS, AIMS, BANNED/);
+		expect(src('tools/deck/author-section.workflow.js')).not.toMatch(/minLength: \d|maxLength: \d/);
+	});
+	it('the ledger has one writer, and it is not the build', () => {
+		// a CALL, not the word: the module's header explains why it has none
+		expect(src('tools/derive/floor-deck.mjs')).not.toMatch(/writeFileSync\(/);
+		expect(src('tools/derive/floor-deck-contract.mjs')).not.toMatch(/writeFileSync\(/);
+		expect(src('tools/deck/lib.mjs')).toMatch(/writeFileSync\(LEDGER_PATH/);
+	});
+});
+
+/**
  * Traps are for the written test. The way that stays true is that nothing else
  * loads them, so the routes and components are scanned for the loader's name,
  * the same way navigation.test.ts scans for the paywall's class names.
