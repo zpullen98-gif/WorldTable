@@ -241,6 +241,15 @@ describe('one card: nothing under the term may name the term', () => {
 		const c = card({ gist: 'A loose-grained steak from beside the diaphragm, rich and mineral' });
 		expect(checkCard(c, { ...CTX, generic })).toEqual([]);
 	});
+	it('unless that head noun is the whole name', () => {
+		const generic = genericWords(['Truffle', 'Truffle Oil', 'Chocolate Truffle']);
+		expect(generic.has('truffle')).toBe(true);
+		const c = card(
+			{ term: 'Truffle', gist: 'The truffle is an underground fungus prized for its heavy, musky aroma' },
+			['aliases', 'line', 'say']
+		);
+		expect(checkCard(c, { ...CTX, generic }).join('\n')).toMatch(/gist names its own term \(truffle\)/);
+	});
 	it('the dish line is the opposite: it has to carry the term', () => {
 		fails(card({ line: 'Grilled beef, chimichurri, fries' }), /dish line has to carry the term/);
 		expect(checkCard(card({ line: 'Onglet, shallots, red wine' }), CTX)).toEqual([]);

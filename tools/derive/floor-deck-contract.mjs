@@ -261,7 +261,12 @@ export function genericWords(terms) {
  */
 export function identifyingWords(card, generic) {
 	const names = [card.term, ...(card.aliases ?? [])].join(' ');
-	return significantWords(names, 3).filter((w) => !generic.has(w));
+	const all = significantWords(names, 3);
+	const own = all.filter((w) => !generic.has(w));
+	/* When EVERY word of a name is generic, the exemption is off: "Truffle"
+	   sits in three terms (the fungus, Truffle Oil, Chocolate Truffle), and
+	   on the Truffle card that word is the whole answer. */
+	return own.length ? own : all;
 }
 
 /**
