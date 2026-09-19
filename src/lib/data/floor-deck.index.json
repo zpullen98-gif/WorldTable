@@ -5,7 +5,9 @@
     "meats": "Poultry, Game & Offal",
     "cured": "Cured & Preserved Meats",
     "cuts": "Meat Cuts",
-    "fish": "Fish & Shellfish"
+    "fish": "Fish & Shellfish",
+    "mushrooms": "Mushrooms & Truffles",
+    "dairy": "Dairy & Cheese Words"
   },
   "cards": [
     {
@@ -876,6 +878,245 @@
         "Quahogs",
         "Steamers"
       ]
+    },
+    {
+      "id": "fd_0138",
+      "term": "Abalone Mushroom",
+      "section": "mushrooms",
+      "aliases": [
+        "Abalone Oyster Mushroom"
+      ]
+    },
+    {
+      "id": "fd_0139",
+      "term": "Beech Mushroom",
+      "section": "mushrooms",
+      "aliases": [
+        "Shimeji",
+        "Buna-Shimeji",
+        "Clamshell Mushroom"
+      ]
+    },
+    {
+      "id": "fd_0140",
+      "term": "Black Trumpet",
+      "section": "mushrooms",
+      "aliases": [
+        "Horn of Plenty",
+        "Black Chanterelle",
+        "Trompette de la Mort"
+      ]
+    },
+    {
+      "id": "fd_0141",
+      "term": "Chanterelle",
+      "section": "mushrooms",
+      "aliases": [
+        "Girolle",
+        "Golden Chanterelle"
+      ]
+    },
+    {
+      "id": "fd_0142",
+      "term": "Hen of the Woods",
+      "section": "mushrooms",
+      "aliases": [
+        "Maitake",
+        "Sheep's Head",
+        "Ram's Head"
+      ]
+    },
+    {
+      "id": "fd_0143",
+      "term": "King Trumpet",
+      "section": "mushrooms",
+      "aliases": [
+        "King Oyster Mushroom",
+        "Eryngii",
+        "French Horn Mushroom"
+      ]
+    },
+    {
+      "id": "fd_0144",
+      "term": "Morel",
+      "section": "mushrooms"
+    },
+    {
+      "id": "fd_0145",
+      "term": "Oyster Mushroom",
+      "section": "mushrooms",
+      "aliases": [
+        "Pearl Oyster Mushroom",
+        "Hiratake"
+      ]
+    },
+    {
+      "id": "fd_0146",
+      "term": "Shiitake",
+      "section": "mushrooms"
+    },
+    {
+      "id": "fd_0147",
+      "term": "Truffle",
+      "section": "mushrooms"
+    },
+    {
+      "id": "fd_0148",
+      "term": "Truffle Oil",
+      "section": "mushrooms"
+    },
+    {
+      "id": "fd_0149",
+      "term": "Porcini",
+      "section": "mushrooms",
+      "aliases": [
+        "Cep",
+        "Cèpe",
+        "King Bolete"
+      ]
+    },
+    {
+      "id": "fd_0150",
+      "term": "Cremini",
+      "section": "mushrooms",
+      "aliases": [
+        "Baby Bella",
+        "Brown Mushroom"
+      ]
+    },
+    {
+      "id": "fd_0151",
+      "term": "Enoki",
+      "section": "mushrooms",
+      "aliases": [
+        "Enokitake",
+        "Golden Needle"
+      ]
+    },
+    {
+      "id": "fd_0152",
+      "term": "Lion's Mane",
+      "section": "mushrooms",
+      "aliases": [
+        "Pom Pom Mushroom",
+        "Bearded Tooth"
+      ]
+    },
+    {
+      "id": "fd_0153",
+      "term": "Chicken of the Woods",
+      "section": "mushrooms",
+      "aliases": [
+        "Sulphur Shelf"
+      ]
+    },
+    {
+      "id": "fd_0154",
+      "term": "Brebis",
+      "section": "dairy"
+    },
+    {
+      "id": "fd_0155",
+      "term": "Buttermilk",
+      "section": "dairy"
+    },
+    {
+      "id": "fd_0156",
+      "term": "Chèvre",
+      "section": "dairy"
+    },
+    {
+      "id": "fd_0157",
+      "term": "Crème Fraîche",
+      "section": "dairy"
+    },
+    {
+      "id": "fd_0158",
+      "term": "Fromage Blanc",
+      "section": "dairy"
+    },
+    {
+      "id": "fd_0159",
+      "term": "Parmesan",
+      "section": "dairy",
+      "aliases": [
+        "Parmigiano-Reggiano"
+      ]
+    },
+    {
+      "id": "fd_0160",
+      "term": "Clarified Butter",
+      "section": "dairy",
+      "aliases": [
+        "Drawn Butter"
+      ]
+    },
+    {
+      "id": "fd_0161",
+      "term": "Brown Butter",
+      "section": "dairy",
+      "aliases": [
+        "Beurre Noisette"
+      ]
+    },
+    {
+      "id": "fd_0162",
+      "term": "Ghee",
+      "section": "dairy"
+    },
+    {
+      "id": "fd_0163",
+      "term": "Compound Butter",
+      "section": "dairy",
+      "aliases": [
+        "Beurre Composé"
+      ]
+    },
+    {
+      "id": "fd_0164",
+      "term": "Mascarpone",
+      "section": "dairy"
+    },
+    {
+      "id": "fd_0165",
+      "term": "Ricotta",
+      "section": "dairy"
+    },
+    {
+      "id": "fd_0166",
+      "term": "Burrata",
+      "section": "dairy"
+    },
+    {
+      "id": "fd_0167",
+      "term": "Fresh Mozzarella",
+      "section": "dairy",
+      "aliases": [
+        "Fior di Latte"
+      ]
+    },
+    {
+      "id": "fd_0168",
+      "term": "Feta",
+      "section": "dairy"
+    },
+    {
+      "id": "fd_0169",
+      "term": "Blue Cheese",
+      "section": "dairy",
+      "aliases": [
+        "Bleu Cheese"
+      ]
+    },
+    {
+      "id": "fd_0170",
+      "term": "Bloomy Rind",
+      "section": "dairy"
+    },
+    {
+      "id": "fd_0171",
+      "term": "Washed Rind",
+      "section": "dairy"
     }
   ],
   "byLexicon": {
@@ -1013,6 +1254,51 @@
     ],
     "shrimp-sizing-and-prawn-confusion": [
       "fd_0133"
+    ],
+    "black-trumpet": [
+      "fd_0140"
+    ],
+    "chanterelle": [
+      "fd_0141"
+    ],
+    "king-oyster-mushroom": [
+      "fd_0143"
+    ],
+    "morel": [
+      "fd_0144"
+    ],
+    "oyster-mushroom": [
+      "fd_0145"
+    ],
+    "shiitake": [
+      "fd_0146"
+    ],
+    "porcini": [
+      "fd_0149"
+    ],
+    "cremini": [
+      "fd_0150"
+    ],
+    "enoki": [
+      "fd_0151"
+    ],
+    "lions-mane": [
+      "fd_0152"
+    ],
+    "butterfat-fluency-butter-cream-and-cultures": [
+      "fd_0160"
+    ],
+    "mascarpone": [
+      "fd_0164"
+    ],
+    "ricotta": [
+      "fd_0165"
+    ],
+    "burrata": [
+      "fd_0166"
+    ],
+    "feta": [
+      "fd_0168"
     ]
   }
 }

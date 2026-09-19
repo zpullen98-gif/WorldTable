@@ -45,13 +45,13 @@
       "key": "mushrooms",
       "title": "Mushrooms & Truffles",
       "blurb": "Cultivated and wild mushrooms by texture and flavor, the names one mushroom hides behind, and what a truffle is and is not.",
-      "count": 0
+      "count": 16
     },
     {
       "key": "dairy",
       "title": "Dairy & Cheese Words",
       "blurb": "Butters, cultured creams, fresh cheeses and the style words on a cheese course: which milk, how it is made and how it tastes.",
-      "count": 0
+      "count": 18
     },
     {
       "key": "starches",
@@ -1354,7 +1354,8 @@
       "recipe": "grilled-veal-sweetbreads",
       "seeAlso": [
         "fd_0061",
-        "fd_0062"
+        "fd_0062",
+        "fd_0161"
       ],
       "line": "Crispy veal sweetbreads, brown butter, capers, lemon",
       "prompt": "__ are glands: the thymus in the throat of a young animal and the pancreas near the stomach. They are soaked, blanched, peeled of their membrane and pressed, then seared or fried. Little muscle means no chew, just a soft, milky richness."
@@ -2061,6 +2062,7 @@
       "recipe": "bresaola",
       "seeAlso": [
         "fd_0074",
+        "fd_0159",
         "fd_0030"
       ],
       "line": "Bresaola, arugula, lemon, shaved Parmesan"
@@ -2910,6 +2912,9 @@
       ],
       "note": "No pin bones. A bone-in wing has a flat sheet of soft cartilage in the middle, and the meat slides off it with a fork.",
       "pairs": "Black butter, capers, parsley and vinegar, the French classic, or brown butter and lemon",
+      "seeAlso": [
+        "fd_0161"
+      ],
       "line": "Pan-roasted skate wing, brown butter, capers, lemon",
       "prompt": "__ are rays, with a skeleton of cartilage instead of bone. Only the wings are eaten: a fan of long muscle strands over a sheet of soft cartilage, so the flesh comes away in ribbons, not flakes. It is lean, sweet and mild, and takes well to a hot pan."
     },
@@ -3049,6 +3054,9 @@
         "fd_0137",
         "fd_0114"
       ],
+      "confusedWith": [
+        "fd_0145"
+      ],
       "line": "Half dozen oysters on the half shell, mignonette, lemon"
     },
     {
@@ -3130,6 +3138,9 @@
         "fd_0114",
         "fd_0137",
         "fd_0039"
+      ],
+      "confusedWith": [
+        "fd_0143"
       ],
       "line": "Seared sea scallops, cauliflower puree, brown butter",
       "prompt": "A __ swims by clapping its shells, driven by one big muscle, and that muscle is what we eat. It is rich in glycogen and sweet amino acids, so it tastes sweet and browns well. Sea __ are large and sear. Bay __ are small and cook in seconds. Untreated dry ones sear best."
@@ -3592,6 +3603,866 @@
       ],
       "line": "Linguine with littleneck clams, white wine, chili",
       "prompt": "Two-shelled animals that burrow in sand and mud and filter the water, so they taste of where they grew. Hard shells sell by size: __ small and tender, cherrystones bigger, chowder __ biggest, tough and chopped. Soft-shell __ have a neck skin to peel."
+    },
+    {
+      "id": "fd_0138",
+      "term": "Abalone Mushroom",
+      "say": "ab-uh-LOH-nee MUSH-room",
+      "aliases": [
+        "Abalone Oyster Mushroom"
+      ],
+      "section": "mushrooms",
+      "gist": "Thick, gray-brown cap from the oyster mushroom family, springy",
+      "guest": "It's a thick, meaty cousin of the oyster mushroom, named for the shellfish because it has the same firm, springy chew. Seared, it's savory and satisfying.",
+      "why": "A close relative of the oyster mushroom, grown indoors on sawdust or straw, mostly in East Asia. Its caps are thicker and denser than an oyster's, so they keep their shape and a firm, springy chew when seared or braised. The name comes from that chew.",
+      "madeWith": [
+        "abalone mushroom",
+        "often butter",
+        "often garlic",
+        "sometimes soy sauce",
+        "sometimes oyster sauce"
+      ],
+      "origin": "Named for abalone, the prized sea snail its chewy texture resembles",
+      "notThis": "Not abalone, the shellfish. A mushroom named for its chew, though it is often braised in oyster sauce.",
+      "seeAlso": [
+        "fd_0145",
+        "fd_0143"
+      ],
+      "line": "Seared abalone mushroom, black garlic, scallion",
+      "prompt": "A close relative of the oyster __, grown indoors on sawdust or straw, mostly in East Asia. Its caps are thicker and denser than an oyster's, so they keep their shape and a firm, springy chew when seared or braised. The name comes from that chew."
+    },
+    {
+      "id": "fd_0139",
+      "term": "Beech Mushroom",
+      "aliases": [
+        "Shimeji",
+        "Buna-Shimeji",
+        "Clamshell Mushroom"
+      ],
+      "section": "mushrooms",
+      "gist": "Clump of round brown or white caps, bitter raw and nutty cooked",
+      "guest": "They're little clustered mushrooms, brown or white, on long stems. Cooked, they turn nutty and a bit sweet, with a pleasant crunch that holds up.",
+      "why": "Grown in bottles of sawdust, they reach the kitchen as a clump joined at the base, which is trimmed to free them. Raw they taste bitter, but cooking turns them nutty and savory, and unlike softer mushrooms they stay firm and slightly crunchy.",
+      "madeWith": [
+        "beech mushroom",
+        "often butter",
+        "often soy sauce",
+        "sometimes sesame oil"
+      ],
+      "origin": "Japanese buna-shimeji, named for the beech logs it grows on in the wild",
+      "pairs": "Butter, soy, miso, ramen, rice dishes and hot pots",
+      "seeAlso": [
+        "fd_0151",
+        "fd_0145"
+      ],
+      "line": "Roasted beech mushrooms, miso butter, scallion",
+      "prompt": "Grown in bottles of sawdust, they reach the kitchen as a clump joined at the base, which is trimmed to free them. Raw they taste bitter, but cooking turns them nutty and savory, and unlike softer __ they stay firm and slightly crunchy."
+    },
+    {
+      "id": "fd_0140",
+      "term": "Black Trumpet",
+      "aliases": [
+        "Horn of Plenty",
+        "Black Chanterelle",
+        "Trompette de la Mort"
+      ],
+      "section": "mushrooms",
+      "gist": "Thin, hollow, near-black wild funnel with a deep, smoky flavor",
+      "guest": "It's a wild mushroom shaped like a little dark horn. It's thin and delicate, with a deep, smoky flavor, a bit like truffle, that goes a long way.",
+      "why": "A wild relative of the chanterelle, foraged under hardwoods and not farmed. It has no gills, just a thin hollow funnel, so it cooks in a minute and turns silky. Its aroma is intense and smoky, and it dries so well that dried ones are ground into sauces.",
+      "madeWith": [
+        "black trumpet mushroom",
+        "often butter",
+        "often cream",
+        "sometimes shallot"
+      ],
+      "note": "The hollow funnel traps forest grit, so kitchens split and rinse each one.",
+      "origin": "French trompette de la mort, for its dark color and All Saints' season",
+      "notThis": "Not king trumpet, the thick white farmed stem. This one is wild, thin and nearly black.",
+      "lexiconSlug": "black-trumpet",
+      "seeAlso": [
+        "fd_0141",
+        "fd_0147"
+      ],
+      "confusedWith": [
+        "fd_0143"
+      ],
+      "line": "Black trumpet risotto, parmesan, brown butter"
+    },
+    {
+      "id": "fd_0141",
+      "term": "Chanterelle",
+      "say": "shan-tuh-REL",
+      "aliases": [
+        "Girolle",
+        "Golden Chanterelle"
+      ],
+      "section": "mushrooms",
+      "gist": "Golden, vase-shaped wild mushroom, apricot-scented and peppery",
+      "guest": "It's a golden wild mushroom, foraged, not farmed. It smells faintly of apricot and has a gentle, peppery flavor and a tender, meaty bite.",
+      "why": "Chanterelles live in partnership with the roots of living trees, which is why they are not grown commercially and nearly all are foraged. Under the cap they carry blunt ridges, not true gills. Firm and a little chewy, they taste fruity and peppery, milder than porcini.",
+      "madeWith": [
+        "chanterelle mushroom",
+        "often butter",
+        "often shallot",
+        "sometimes cream"
+      ],
+      "origin": "French, from Greek kantharos, a drinking cup, for its shape",
+      "pairs": "Brown butter, sweet corn, eggs, roast chicken, white Burgundy",
+      "lexiconSlug": "chanterelle",
+      "recipe": "oregon-chanterelle-soup",
+      "seeAlso": [
+        "fd_0140",
+        "fd_0144",
+        "fd_0149"
+      ],
+      "line": "Pan-roasted chanterelles, sweet corn, brown butter",
+      "prompt": "__ live in partnership with the roots of living trees, which is why they are not grown commercially and nearly all are foraged. Under the cap they carry blunt ridges, not true gills. Firm and a little chewy, they taste fruity and peppery, milder than porcini."
+    },
+    {
+      "id": "fd_0142",
+      "term": "Hen of the Woods",
+      "aliases": [
+        "Maitake",
+        "Sheep's Head",
+        "Ram's Head"
+      ],
+      "section": "mushrooms",
+      "gist": "Ruffled cluster of gray-brown fronds found at the base of oak trees",
+      "guest": "It's maitake, a big, ruffled mushroom that grows wild under oaks and is farmed too. Roasted, the frilly edges crisp up and the center stays tender and earthy.",
+      "why": "It grows as one large rosette of overlapping gray-brown caps, usually at the base of oaks, and is now widely farmed too. Torn into pieces and roasted or seared, the thin edges crisp like chips while the thick base stays meaty. The flavor is deep and earthy.",
+      "madeWith": [
+        "maitake mushroom",
+        "often butter",
+        "often olive oil",
+        "sometimes miso"
+      ],
+      "origin": "The Japanese name, maitake, means dancing mushroom",
+      "notThis": "Not chicken of the woods, a bright orange shelf fungus. This one is gray-brown and ruffled.",
+      "seeAlso": [
+        "fd_0145"
+      ],
+      "confusedWith": [
+        "fd_0153"
+      ],
+      "line": "Crispy maitake, miso butter, charred scallion"
+    },
+    {
+      "id": "fd_0143",
+      "term": "King Trumpet",
+      "aliases": [
+        "King Oyster Mushroom",
+        "Eryngii",
+        "French Horn Mushroom"
+      ],
+      "section": "mushrooms",
+      "gist": "Thick white stem under a small cap, seared in coins like scallops",
+      "guest": "It's a mushroom that's almost all thick white stem. Seared, it's firm and meaty with a mild, savory flavor, and some cooks cut it into coins like scallops.",
+      "why": "The largest of the oyster mushroom family, farmed on sawdust. Unlike most mushrooms, its stem is the prize: dense and firm, it browns deeply, shrinks less than softer kinds and keeps a springy bite. Cooks score it and sear it like a scallop or a steak.",
+      "madeWith": [
+        "king trumpet mushroom",
+        "often butter",
+        "often garlic",
+        "sometimes soy sauce"
+      ],
+      "origin": "Native to Mediterranean grasslands, now farmed worldwide as eryngii",
+      "notThis": "Not black trumpet, the thin dark wild funnel. This one is thick, white and farmed.",
+      "lexiconSlug": "king-oyster-mushroom",
+      "seeAlso": [
+        "fd_0145",
+        "fd_0138"
+      ],
+      "confusedWith": [
+        "fd_0118",
+        "fd_0140"
+      ],
+      "line": "Seared king oyster mushroom, brown butter, capers"
+    },
+    {
+      "id": "fd_0144",
+      "term": "Morel",
+      "say": "muh-REL",
+      "section": "mushrooms",
+      "gist": "Hollow, honeycombed spring mushroom, always cooked through",
+      "guest": "It's a wild spring mushroom with a honeycombed cap, one of the most prized there is. It's nutty and earthy, and all those pockets soak up the sauce.",
+      "why": "Morels come up for a few weeks each spring in woods, old orchards and burned forest, and most are still foraged, hence the price. The cap is a hollow honeycomb, light and chewy, and its pits hold butter or cream. The flavor is deep, nutty and meaty, stronger still when dried.",
+      "madeWith": [
+        "morel mushroom",
+        "often butter",
+        "often cream",
+        "sometimes shallot",
+        "sometimes brandy"
+      ],
+      "note": "Always cooked through: raw or undercooked morels can make people sick. The pits also trap grit.",
+      "pairs": "Asparagus, spring peas, ramps, cream sauces, veal and chicken",
+      "lexiconSlug": "morel",
+      "recipe": "idaho-morel-and-asparagus-saute",
+      "seeAlso": [
+        "fd_0141",
+        "fd_0147"
+      ],
+      "line": "Morels and asparagus, cream, grilled bread",
+      "prompt": "__ come up for a few weeks each spring in woods, old orchards and burned forest, and most are still foraged, hence the price. The cap is a hollow honeycomb, light and chewy, and its pits hold butter or cream. The flavor is deep, nutty and meaty, stronger still when dried."
+    },
+    {
+      "id": "fd_0145",
+      "term": "Oyster Mushroom",
+      "aliases": [
+        "Pearl Oyster Mushroom",
+        "Hiratake"
+      ],
+      "section": "mushrooms",
+      "gist": "Soft, fan-shaped gray caps growing in shelves, mild and velvety",
+      "guest": "They're soft, fan-shaped mushrooms with a mild, gently savory flavor. Seared hot, the thin edges go crisp and golden while the middle stays velvety.",
+      "why": "Grown on straw or sawdust, they form overlapping shelves of thin, tender caps with short stems. Being thin, they cook in minutes, and a hot pan crisps the edges. The name is for the shell-like shape and color, not the taste, which is mild with a faint sweetness.",
+      "madeWith": [
+        "oyster mushroom",
+        "often butter",
+        "often garlic",
+        "sometimes wheat flour",
+        "sometimes oyster sauce"
+      ],
+      "note": "Golden and pink kinds sold under the same name are thinner and cook even faster.",
+      "notThis": "Not oysters, the shellfish. The name is for the cap's shape, though dishes may use oyster sauce.",
+      "lexiconSlug": "oyster-mushroom",
+      "seeAlso": [
+        "fd_0143",
+        "fd_0138"
+      ],
+      "confusedWith": [
+        "fd_0115"
+      ],
+      "line": "Crispy oyster mushrooms, chili crisp, scallion"
+    },
+    {
+      "id": "fd_0146",
+      "term": "Shiitake",
+      "say": "shih-TAH-kee",
+      "section": "mushrooms",
+      "gist": "Brown East Asian mushroom with a smoky, deeply savory bite",
+      "guest": "It's a mushroom from East Asia grown on hardwood, meaty and smoky with a deep savory flavor. It's wonderful off the grill or in a broth.",
+      "why": "It grows on hardwood logs or sawdust blocks. Cutting and cooking release a sulfur aroma compound, and the cap is rich in the compounds behind umami, stronger still once dried. The cap eats meaty and firm; the stem is woody, so kitchens keep it for stock.",
+      "madeWith": [
+        "shiitake mushroom",
+        "often soy sauce",
+        "often butter",
+        "sometimes sesame oil"
+      ],
+      "note": "Meant to be cooked through: raw or undercooked shiitake gives a few people an itchy, streaky rash.",
+      "origin": "Japanese, from shii, the tree it grows on, and take, mushroom",
+      "pairs": "Soy, ginger, miso, kombu broth, noodles, rice",
+      "lexiconSlug": "shiitake",
+      "recipe": "shojin-dashi-kombu-and-shiitake",
+      "seeAlso": [
+        "fd_0151",
+        "fd_0145"
+      ],
+      "line": "Grilled shiitake, miso butter, scallion, rice"
+    },
+    {
+      "id": "fd_0147",
+      "term": "Truffle",
+      "section": "mushrooms",
+      "gist": "Rare underground fungus found by dogs, prized for its aroma",
+      "guest": "It's a rare fungus that grows underground on tree roots, and dogs sniff it out. It's usually shaved fresh over the dish, and the smell is the whole point.",
+      "why": "A truffle fruits underground on the roots of oak and hazel, and it spreads by smell, so it is hunted with trained dogs. Its value is aroma, which fades within days of digging, so it is bought small and used fast: white shaved raw, black often warmed gently in fat.",
+      "madeWith": [
+        "fresh truffle",
+        "often butter",
+        "often egg",
+        "often fresh wheat pasta",
+        "sometimes parmesan",
+        "sometimes cream"
+      ],
+      "origin": "Black winter truffles from France, white from Piedmont in Italy",
+      "notThis": "Not the chocolate truffle, which is a candy, and not truffle oil, which is usually just flavored.",
+      "seeAlso": [
+        "fd_0149"
+      ],
+      "confusedWith": [
+        "fd_0148"
+      ],
+      "line": "Tagliatelle, butter, shaved black truffle",
+      "prompt": "A __ fruits underground on the roots of oak and hazel, and it spreads by smell, so it is hunted with trained dogs. Its value is aroma, which fades within days of digging, so it is bought small and used fast: white shaved raw, black often warmed gently in fat."
+    },
+    {
+      "id": "fd_0148",
+      "term": "Truffle Oil",
+      "section": "mushrooms",
+      "gist": "Finishing drizzle whose truffle scent usually comes from a lab",
+      "guest": "It's an oil flavored to smell like truffle, drizzled on at the end. It gives a big, earthy hit of that aroma.",
+      "why": "Most bottles are olive or neutral oil flavored with a manufactured copy of one aroma compound found in white truffle, sometimes with a speck of real truffle for show. It smells louder and flatter than the real thing, and heat drives the aroma off, so it goes on at the end.",
+      "madeWith": [
+        "olive oil",
+        "sometimes neutral oil",
+        "truffle flavoring",
+        "rarely real truffle"
+      ],
+      "note": "A few drops go a long way. Too much reads harsh and chemical.",
+      "notThis": "Not the truffle itself. If a guest asks for real truffle, the answer is the shaved fresh truffle, not the oil.",
+      "confusedWith": [
+        "fd_0147"
+      ],
+      "line": "Fries, truffle oil, parmesan, parsley",
+      "prompt": "Most bottles are olive or neutral __ flavored with a manufactured copy of one aroma compound found in white __, sometimes with a speck of real __ for show. It smells louder and flatter than the real thing, and heat drives the aroma off, so it goes on at the end."
+    },
+    {
+      "id": "fd_0149",
+      "term": "Porcini",
+      "say": "por-CHEE-nee",
+      "aliases": [
+        "Cep",
+        "Cèpe",
+        "King Bolete"
+      ],
+      "section": "mushrooms",
+      "gist": "Fat-stemmed wild forest mushroom with a sponge under its cap",
+      "guest": "Porcini are wild forest mushrooms with a deep, nutty, almost meaty flavor. They're a classic in risotto and fresh pasta.",
+      "why": "A wild mushroom that lives with the roots of pine, oak and spruce and resists farming, so it is foraged. Under the cap is a sponge of pores, not gills. Drying concentrates its nutty, beefy flavor, which is why most kitchens use dried, and the soaking water becomes stock.",
+      "madeWith": [
+        "porcini mushroom",
+        "often butter",
+        "often parmesan",
+        "sometimes white wine"
+      ],
+      "origin": "Italian for little pigs; the French call it cèpe",
+      "pairs": "Risotto, fresh pasta, veal, beef, polenta, parmesan",
+      "lexiconSlug": "porcini",
+      "seeAlso": [
+        "fd_0141",
+        "fd_0144"
+      ],
+      "line": "Porcini risotto, parmesan, brown butter"
+    },
+    {
+      "id": "fd_0150",
+      "term": "Cremini",
+      "say": "kreh-MEE-nee",
+      "aliases": [
+        "Baby Bella",
+        "Brown Mushroom"
+      ],
+      "section": "mushrooms",
+      "gist": "Brown strain of the everyday button, firmer and a little earthier",
+      "guest": "It's the brown cousin of the white button mushroom, a little firmer with more flavor. Let it grow bigger and you get a portobello.",
+      "why": "Same species as the white button: the button is a pale mutant found in a brown bed in the 1920s, and cremini is the original brown strain. It has a touch less water and a deeper, earthier flavor, so it browns well and holds shape. Grown to full size, it is sold as a portobello.",
+      "madeWith": [
+        "cremini mushroom",
+        "often butter",
+        "often garlic",
+        "sometimes thyme",
+        "sometimes sherry"
+      ],
+      "notThis": "Not a wild mushroom. It is farmed year round, the everyday brown mushroom.",
+      "lexiconSlug": "cremini",
+      "seeAlso": [
+        "fd_0149",
+        "fd_0146"
+      ],
+      "line": "Roasted cremini, garlic, thyme, sherry",
+      "prompt": "Same species as the white button: the button is a pale mutant found in a brown bed in the 1920s, and __ is the original brown strain. It has a touch less water and a deeper, earthier flavor, so it browns well and holds shape. Grown to full size, it is sold as a portobello."
+    },
+    {
+      "id": "fd_0151",
+      "term": "Enoki",
+      "say": "eh-NOH-kee",
+      "aliases": [
+        "Enokitake",
+        "Golden Needle"
+      ],
+      "section": "mushrooms",
+      "gist": "Bundle of long, thin white stems with pinhead caps and a crunch",
+      "guest": "Enoki are long, thin white mushrooms that grow in a bundle. They're mild and a little crunchy, and they soak up the broth they cook in.",
+      "why": "Farmed in dark bottles with little air, it stretches into pale noodle-like stems instead of the short golden caps it grows in the wild. There is little cap, so it eats crisp and springy rather than meaty, with a mild, faintly fruity flavor that takes on broth.",
+      "madeWith": [
+        "enoki mushroom",
+        "often soy sauce",
+        "sometimes sesame oil",
+        "sometimes beef",
+        "sometimes pork",
+        "sometimes tofu"
+      ],
+      "note": "Cook it through. Packaged enoki has been part of US listeria recalls, so it should not go out raw.",
+      "origin": "Japanese, from enoki, the hackberry tree it grows on wild",
+      "lexiconSlug": "enoki",
+      "seeAlso": [
+        "fd_0139",
+        "fd_0146"
+      ],
+      "line": "Beef hot pot, enoki, napa cabbage, tofu"
+    },
+    {
+      "id": "fd_0152",
+      "term": "Lion's Mane",
+      "aliases": [
+        "Pom Pom Mushroom",
+        "Bearded Tooth"
+      ],
+      "section": "mushrooms",
+      "gist": "Shaggy white ball of spines that sears up like crab meat",
+      "guest": "It's a white, shaggy mushroom that sears up tender and flaky, a lot like crab or lobster. The flavor is mild and a little sweet.",
+      "why": "It grows on hardwood trees as a white mop of hanging spines, with no gills or cap. Those spines are fine and fibrous, so pressed and seared hard it pulls into strands like shellfish meat. It holds a lot of water, so it needs a hot pan to brown instead of steaming.",
+      "madeWith": [
+        "lion's mane mushroom",
+        "often butter",
+        "sometimes garlic",
+        "sometimes lemon",
+        "sometimes egg",
+        "sometimes breadcrumbs"
+      ],
+      "pairs": "Brown butter, lemon, capers, crab cake style with remoulade",
+      "lexiconSlug": "lions-mane",
+      "seeAlso": [
+        "fd_0145",
+        "fd_0134"
+      ],
+      "line": "Seared lion's mane, brown butter, capers"
+    },
+    {
+      "id": "fd_0153",
+      "term": "Chicken of the Woods",
+      "aliases": [
+        "Sulphur Shelf"
+      ],
+      "section": "mushrooms",
+      "gist": "Orange shelf fungus off tree trunks that tears into meaty strands",
+      "guest": "It's a wild orange mushroom that grows in shelves on trees. Cooked, it pulls apart like chicken breast, with a mild, slightly lemony flavor.",
+      "why": "A wild shelf fungus foraged from the trunks of living and dead hardwoods, oak above all, in summer and fall. Its flesh is dense and fibrous rather than soft, so it tears into strands like cooked chicken. Only the young, tender edges eat well; the older core turns woody.",
+      "madeWith": [
+        "chicken of the woods mushroom",
+        "often butter",
+        "sometimes wheat flour",
+        "sometimes egg",
+        "sometimes buttermilk"
+      ],
+      "note": "Must be cooked through. A few people get an upset stomach even from cooked pieces.",
+      "notThis": "Not hen of the woods, the gray frilly maitake. This one is bright orange-yellow shelves.",
+      "seeAlso": [
+        "fd_0141",
+        "fd_0031"
+      ],
+      "confusedWith": [
+        "fd_0142"
+      ],
+      "line": "Fried chicken of the woods, hot honey, pickles",
+      "prompt": "A wild shelf fungus foraged from the trunks of living and dead hardwoods, oak above all, in summer and fall. Its flesh is dense and fibrous rather than soft, so it tears into strands like cooked __. Only the young, tender edges eat well; the older core turns __."
+    },
+    {
+      "id": "fd_0154",
+      "term": "Brebis",
+      "say": "breh-BEE",
+      "section": "dairy",
+      "gist": "Cheese made from ewe's milk, rich and sweet, sold fresh or aged",
+      "guest": "It's a sheep's milk cheese, richer and sweeter than most cow's milk cheeses, with a nutty, buttery finish.",
+      "why": "Sheep's milk carries nearly twice the fat and more protein than cow's milk, so the cheese eats dense, creamy and sweet. Young, it is mild and milky. Aged, as in the Pyrenees tommes like Ossau-Iraty, it turns firm, nutty and caramel-like.",
+      "madeWith": [
+        "sheep's milk",
+        "salt",
+        "often animal rennet"
+      ],
+      "origin": "French for ewe, used for sheep's milk cheeses, above all from the Pyrenees",
+      "pairs": "Black cherry jam, quince paste, walnuts, crusty bread",
+      "seeAlso": [
+        "fd_0168",
+        "fd_0156"
+      ],
+      "line": "Aged brebis, black cherry jam, walnut bread"
+    },
+    {
+      "id": "fd_0155",
+      "term": "Buttermilk",
+      "section": "dairy",
+      "gist": "Thick, tangy cultured milk that tenderizes batters and brines",
+      "guest": "It's a tangy, lightly thick cultured milk, the classic secret to tender biscuits and juicy fried chicken.",
+      "why": "Once the liquid left after churning butter, today it is low-fat milk soured with lactic cultures. Its acid loosens meat proteins in a brine and reacts with baking soda in batters for lift. It tastes like thin, sharp yogurt, not butter.",
+      "madeWith": [
+        "milk",
+        "lactic cultures"
+      ],
+      "pairs": "Fried chicken, biscuits, pancakes, ranch dressing",
+      "recipe": "buttermilk-fried-chicken",
+      "seeAlso": [
+        "fd_0157",
+        "fd_0020"
+      ],
+      "line": "Buttermilk fried chicken, hot honey, slaw"
+    },
+    {
+      "id": "fd_0156",
+      "term": "Chèvre",
+      "say": "SHEV-ruh",
+      "section": "dairy",
+      "gist": "Soft, bright, tangy fresh cheese made from goat's milk",
+      "guest": "It's fresh goat cheese, creamy and bright with a clean tang. It's lovely with beets, honey or a warm salad.",
+      "why": "Goat's milk is set slowly with cultures and a little rennet, then drained into soft logs. The cultures give the lemony tang, goat's milk fatty acids the goaty note. Young it is spreadable, like tangier cream cheese. Aged, it firms and grows a rind.",
+      "madeWith": [
+        "goat's milk",
+        "salt",
+        "often rennet"
+      ],
+      "origin": "French for goat, used in America for fresh goat cheese",
+      "pairs": "Roasted beets, honey, figs, arugula, toasted walnuts",
+      "notThis": "Not feta, which is brined, saltier and firmer. Chèvre is soft, creamy and never sits in brine.",
+      "seeAlso": [
+        "fd_0154",
+        "fd_0158"
+      ],
+      "confusedWith": [
+        "fd_0168"
+      ],
+      "line": "Roasted beets, whipped chèvre, pistachio, honey"
+    },
+    {
+      "id": "fd_0157",
+      "term": "Crème Fraîche",
+      "say": "KREM FRESH",
+      "section": "dairy",
+      "gist": "Thick, mild cultured cream that won't curdle when hot",
+      "guest": "It's French cultured cream, thick and rich with a gentle tang, like a silkier, milder sour cream. It melts into anything warm.",
+      "why": "Heavy cream is ripened with lactic cultures until it thickens and turns softly sour. With about twice the fat of sour cream, it can go into a hot pan sauce without splitting, and it tastes nutty and mellow rather than sharp.",
+      "madeWith": [
+        "cream",
+        "lactic cultures"
+      ],
+      "origin": "French, fresh cream, though it is cultured, not plain",
+      "pairs": "Caviar, smoked salmon, potatoes, fruit tarts",
+      "notThis": "Not sour cream, which is leaner and sharper and curdles in a hot sauce.",
+      "seeAlso": [
+        "fd_0155",
+        "fd_0164",
+        "fd_0125"
+      ],
+      "line": "Smoked trout, potato rosti, crème fraîche, dill"
+    },
+    {
+      "id": "fd_0158",
+      "term": "Fromage Blanc",
+      "say": "froh-MAHZH BLAHN",
+      "section": "dairy",
+      "gist": "Smooth, spoonable soft white cheese, mild and lightly sour",
+      "guest": "It's a fresh French cheese, smooth and spoonable like thick yogurt, cool and mildly tangy.",
+      "why": "Milk, often skimmed, is soured with cultures and a touch of rennet, then drained only briefly, so the curd stays wet and silky. It is never aged. Think smoother than ricotta and milder than Greek yogurt, with fat set by the milk used.",
+      "madeWith": [
+        "milk",
+        "lactic cultures",
+        "often rennet"
+      ],
+      "origin": "French for white cheese, a staple of French breakfasts and desserts",
+      "pairs": "Berries and honey, or herbs, shallot and black pepper",
+      "notThis": "Not ricotta, which is grainier and made by heating. This is smooth, tangy and set without heat.",
+      "seeAlso": [
+        "fd_0157",
+        "fd_0156"
+      ],
+      "confusedWith": [
+        "fd_0165"
+      ],
+      "line": "Fromage blanc, strawberries, honey, cracked pepper"
+    },
+    {
+      "id": "fd_0159",
+      "term": "Parmesan",
+      "aliases": [
+        "Parmigiano-Reggiano"
+      ],
+      "section": "dairy",
+      "gist": "Hard, long-aged Italian cow's milk cheese, nutty and salty",
+      "guest": "It's a hard, long-aged cheese, nutty and savory with little crunchy crystals. It makes everything taste deeper.",
+      "why": "The real one is made around Parma from raw, part-skimmed cow's milk and aged 12 months or far longer. As it ages, proteins break down into savory amino acids, which is where the depth comes from. The crunchy white specks are clusters of one of them, tyrosine.",
+      "madeWith": [
+        "cow's milk",
+        "salt",
+        "traditionally calf rennet"
+      ],
+      "origin": "English for Parmigiano-Reggiano, though US parmesan can be domestic",
+      "pairs": "Pasta, risotto, balsamic, pears, Caesar salad",
+      "line": "Shaved Parmigiano-Reggiano, arugula, lemon"
+    },
+    {
+      "id": "fd_0160",
+      "term": "Clarified Butter",
+      "aliases": [
+        "Drawn Butter"
+      ],
+      "section": "dairy",
+      "gist": "Mild, pale butterfat, most milk solids skimmed off before they brown",
+      "guest": "It's butter melted down to its golden fat, with the milky bits skimmed off. It tastes clean and buttery and can take real heat.",
+      "why": "Butter is gently melted so the water cooks off and the milk solids separate. The solids burn first in a hot pan, so with most of them gone the fat can sear without scorching. It keeps a mild butter flavor and is the classic base for hollandaise.",
+      "madeWith": [
+        "butter"
+      ],
+      "pairs": "Lobster, crab, hollandaise, béarnaise, seared fish",
+      "notThis": "Not ghee, which is cooked longer until the solids toast. That tastes nutty. This stays clean and mild.",
+      "lexiconSlug": "butterfat-fluency-butter-cream-and-cultures",
+      "seeAlso": [
+        "fd_0161"
+      ],
+      "confusedWith": [
+        "fd_0162"
+      ],
+      "line": "Steamed lobster, drawn butter, lemon",
+      "prompt": "__ is gently melted so the water cooks off and the milk solids separate. The solids burn first in a hot pan, so with most of them gone the fat can sear without scorching. It keeps a mild __ flavor and is the classic base for hollandaise."
+    },
+    {
+      "id": "fd_0161",
+      "term": "Brown Butter",
+      "aliases": [
+        "Beurre Noisette"
+      ],
+      "section": "dairy",
+      "gist": "Butter cooked until its milk solids toast, left in for a nutty taste",
+      "guest": "It's butter cooked just until it toasts, so it turns golden and smells like hazelnuts. It's rich and warm.",
+      "why": "As butter cooks, its water boils off and the milk solids fall to the bottom and toast, the same browning that colors bread crust. That gives a nutty, caramel flavor plain melted butter lacks. The French call it hazelnut butter for the color and smell.",
+      "madeWith": [
+        "butter"
+      ],
+      "note": "It goes from toasted to burnt in seconds, so it is usually made to order.",
+      "pairs": "Sage and squash pasta, sole, scallops, cakes",
+      "notThis": "Not ghee, which toasts the solids and then strains them out. Brown butter keeps them in, and that is the flavor.",
+      "seeAlso": [
+        "fd_0160"
+      ],
+      "confusedWith": [
+        "fd_0162"
+      ],
+      "line": "Butternut squash agnolotti, brown butter, sage",
+      "prompt": "As __ cooks, its water boils off and the milk solids fall to the bottom and toast, the same browning that colors bread crust. That gives a nutty, caramel flavor plain melted __ lacks. The French call it hazelnut __ for the color and smell."
+    },
+    {
+      "id": "fd_0162",
+      "term": "Ghee",
+      "section": "dairy",
+      "gist": "Butter simmered until its milk solids toast, then strained out",
+      "guest": "It's butter cooked slowly until golden and nutty, then strained, for a rich, toasty butter flavor you can't get from plain butter.",
+      "why": "Butter is simmered until its water cooks off and the milk solids sink and toast, then it is strained. What remains is nearly pure butterfat with a nutty, caramel flavor that keeps at room temperature and takes high heat without burning.",
+      "madeWith": [
+        "butter"
+      ],
+      "origin": "India and South Asia, where it is the everyday cooking fat",
+      "notThis": "Clarified butter is strained before the solids color. Brown butter keeps its toasted solids in. Ghee toasts them, then strains them out.",
+      "confusedWith": [
+        "fd_0160",
+        "fd_0161"
+      ],
+      "line": "Ghee-roasted cauliflower, cumin, yogurt, mint"
+    },
+    {
+      "id": "fd_0163",
+      "term": "Compound Butter",
+      "aliases": [
+        "Beurre Composé"
+      ],
+      "section": "dairy",
+      "gist": "Butter beaten with herbs, chilled in a log, sliced onto hot food",
+      "guest": "It's butter mixed with herbs and seasonings, then chilled. A slice melts over your steak and turns into the sauce.",
+      "why": "Softened butter is beaten with herbs, garlic, shallot, citrus or spices, rolled into a log and chilled. A cold slice set on hot steak or fish melts into an instant sauce that carries those flavors. The French classic is maître d'hôtel butter, parsley and lemon.",
+      "madeWith": [
+        "butter",
+        "often herbs",
+        "often garlic",
+        "sometimes shallot",
+        "sometimes anchovy",
+        "sometimes blue cheese"
+      ],
+      "pairs": "Grilled steak, fish, corn on the cob, warm bread",
+      "seeAlso": [
+        "fd_0161"
+      ],
+      "line": "Seared strip steak, herb compound butter, fries",
+      "prompt": "Softened __ is beaten with herbs, garlic, shallot, citrus or spices, rolled into a log and chilled. A cold slice set on hot steak or fish melts into an instant sauce that carries those flavors. The French classic is maître d'hôtel __, parsley and lemon."
+    },
+    {
+      "id": "fd_0164",
+      "term": "Mascarpone",
+      "say": "mas-kar-POH-nay",
+      "section": "dairy",
+      "gist": "Silky Italian cheese of cream set with a mild acid, not rennet",
+      "guest": "It's an Italian cream cheese, silky, sweet and very rich. It's what makes tiramisu so plush, like cream cheese with barely any tang.",
+      "why": "Cream, not milk, is warmed and set with a food acid such as citric acid, then drained. With no rennet and no aging it stays spoonable, sweet and only faintly tangy, and because it starts as cream it is far richer than cream cheese.",
+      "madeWith": [
+        "cream",
+        "often citric acid"
+      ],
+      "origin": "Lombardy, in northern Italy",
+      "pairs": "Tiramisu, fresh figs, berries and honey, risotto",
+      "notThis": "Not ricotta, which is fluffy, grainy curds from whey. Mascarpone is smooth, dense and made from cream.",
+      "lexiconSlug": "mascarpone",
+      "seeAlso": [
+        "fd_0157"
+      ],
+      "confusedWith": [
+        "fd_0165"
+      ],
+      "line": "Tiramisu, espresso-soaked ladyfingers, mascarpone, cocoa"
+    },
+    {
+      "id": "fd_0165",
+      "term": "Ricotta",
+      "say": "rih-KAH-tuh",
+      "section": "dairy",
+      "gist": "Soft, fluffy curds made by reheating the whey left from cheesemaking",
+      "guest": "It's a soft, fluffy fresh cheese with a sweet, milky flavor. Whipped with honey, it's like a cloud on toast.",
+      "why": "The name means recooked: whey left from making other cheeses is heated again, often with milk and a little acid, until the last proteins float up as soft curds. Drained, they are light, moist and mildly sweet. Ricotta salata is the pressed, salted, firm version.",
+      "madeWith": [
+        "whey",
+        "often milk",
+        "sometimes cream",
+        "sometimes vinegar"
+      ],
+      "origin": "Italy, a by-product of cheesemaking",
+      "pairs": "Honey, lemon zest, ravioli, lasagna, grilled bread",
+      "notThis": "Not mascarpone, which is dense set cream, or fromage blanc, which is smooth and tangy. Ricotta is light, fluffy curds.",
+      "lexiconSlug": "ricotta",
+      "recipe": "ravioli-di-ricotta-the-seal",
+      "confusedWith": [
+        "fd_0158",
+        "fd_0164"
+      ],
+      "line": "Whipped ricotta, hot honey, grilled bread",
+      "prompt": "The name means recooked: whey left from making other cheeses is heated again, often with milk and a little acid, until the last proteins float up as soft curds. Drained, they are light, moist and mildly sweet. __ salata is the pressed, salted, firm version."
+    },
+    {
+      "id": "fd_0166",
+      "term": "Burrata",
+      "say": "boo-RAH-tuh",
+      "section": "dairy",
+      "gist": "Pouch of stretched cheese curd filled with cream-soaked shreds",
+      "guest": "It's a ball of fresh mozzarella filled with cream and soft curd. Cut it open and the center spills out, rich and milky.",
+      "why": "Mozzarella curd is stretched in hot water into a thin pouch, filled with stracciatella, shreds of the same curd soaked in cream, then tied shut. The shell is springy and the center loose and sweet, so it eats richer than plain mozzarella.",
+      "madeWith": [
+        "cow's milk",
+        "cream",
+        "sometimes buffalo milk"
+      ],
+      "note": "Best within a day or two of making, and served at room temperature, not fridge-cold.",
+      "origin": "Puglia, southern Italy; the name comes from the Italian for butter",
+      "notThis": "Not fresh mozzarella, which is solid all the way through. Burrata has a creamy, spoonable center.",
+      "lexiconSlug": "burrata",
+      "confusedWith": [
+        "fd_0167"
+      ],
+      "line": "Burrata, heirloom tomatoes, basil oil, grilled bread"
+    },
+    {
+      "id": "fd_0167",
+      "term": "Fresh Mozzarella",
+      "aliases": [
+        "Fior di Latte"
+      ],
+      "section": "dairy",
+      "gist": "Soft white ball of stretched milk curd, solid through, kept in liquid",
+      "guest": "It's soft, milky mozzarella made fresh and kept in water, nothing like the shredded kind. Sweet, delicate and a little springy.",
+      "why": "Curds are dipped in hot water and pulled like taffy until smooth and elastic, then shaped into balls and kept in water or whey. Unaged, it tastes of sweet milk with a light tang and melts into soft strings. Low-moisture pizza mozzarella is the drier cousin.",
+      "madeWith": [
+        "cow's milk"
+      ],
+      "origin": "Southern Italy; from mozzare, to cut off, as the curd is pinched off by hand",
+      "notThis": "Not burrata, which is a mozzarella pouch filled with cream. This is the same curd, solid all the way through.",
+      "confusedWith": [
+        "fd_0166"
+      ],
+      "line": "Fresh mozzarella, tomato, basil, olive oil",
+      "prompt": "Curds are dipped in hot water and pulled like taffy until smooth and elastic, then shaped into balls and kept in water or whey. Unaged, it tastes of sweet milk with a light tang and melts into soft strings. Low-moisture pizza __ is the drier cousin."
+    },
+    {
+      "id": "fd_0168",
+      "term": "Feta",
+      "section": "dairy",
+      "gist": "Salty, tangy white cheese of sheep and goat milk, aged in brine",
+      "guest": "It's the Greek brined cheese, crumbly and creamy with a salty, tangy bite. It wakes up salads, watermelon and anything off the grill.",
+      "why": "Curds are cut into slabs, salted and aged in brine for at least two months. The brine keeps it moist and sharply salty, and sheep's milk gives a rich, creamy tang. In the EU only Greek cheese of sheep's milk, with up to 30 percent goat, carries the name.",
+      "madeWith": [
+        "sheep's milk",
+        "often goat's milk",
+        "sometimes cow's milk"
+      ],
+      "origin": "Greece; the name means slice, for the slabs it is cut into",
+      "pairs": "Greek salad, watermelon, olives, spanakopita, honey",
+      "notThis": "Not chèvre, which is soft, unbrined goat cheese. Feta is firmer, saltier and aged in brine.",
+      "lexiconSlug": "feta",
+      "recipe": "bougiourdi-baked-feta",
+      "confusedWith": [
+        "fd_0156"
+      ],
+      "line": "Baked feta, cherry tomatoes, oregano, warm pita"
+    },
+    {
+      "id": "fd_0169",
+      "term": "Blue Cheese",
+      "aliases": [
+        "Bleu Cheese"
+      ],
+      "section": "dairy",
+      "gist": "Wheel pierced so a mold culture grows in veins, sharp, salty, creamy",
+      "guest": "It's cheese ripened with a mold that runs through it in blue veins. Sharp, salty and creamy, it's bold, and wonderful with pears or honey.",
+      "why": "Milk is set with a blue mold culture, then the young wheel is pierced with needles. Air rushing in lets the mold grow blue-green veins that break down fat and protein, giving the peppery bite and creamy texture. Gorgonzola, Roquefort and Stilton are all in this family.",
+      "madeWith": [
+        "cow's milk",
+        "sometimes sheep's milk",
+        "sometimes goat's milk",
+        "blue mold"
+      ],
+      "note": "Serve it at room temperature and taste it last on a board, since it overpowers milder cheeses.",
+      "pairs": "Pears, walnuts, honey, port, steak, wedge salad",
+      "seeAlso": [
+        "fd_0170",
+        "fd_0171"
+      ],
+      "line": "Iceberg wedge, blue cheese, bacon, cherry tomato",
+      "prompt": "Milk is set with a __ mold culture, then the young wheel is pierced with needles. Air rushing in lets the mold grow __-green veins that break down fat and protein, giving the peppery bite and creamy texture. Gorgonzola, Roquefort and Stilton are all in this family."
+    },
+    {
+      "id": "fd_0170",
+      "term": "Bloomy Rind",
+      "section": "dairy",
+      "gist": "Soft cheese under a velvety white mold skin that ripens it inward",
+      "guest": "It's a soft cheese with a thin, velvety white rind, like Brie or Camembert. Inside it's buttery and creamy, with a mild mushroomy flavor.",
+      "why": "The young cheese is dusted or sprayed with white molds, which grow a downy skin within about a week. Those molds soften the curd from the outside in, so a ripe one runs creamy under the rind and tastes of butter, cream and mushroom. The rind is edible.",
+      "madeWith": [
+        "cow's milk",
+        "sometimes goat's milk",
+        "sometimes sheep's milk",
+        "sometimes added cream",
+        "white mold cultures"
+      ],
+      "note": "Best served at room temperature. A firm, chalky center means it is young, and that is normal.",
+      "pairs": "Baguette, honey, fig jam, apples, Champagne",
+      "notThis": "Not a washed rind. A bloomy rind is white, velvety and mild, while a washed rind is orange, sticky and pungent.",
+      "seeAlso": [
+        "fd_0169"
+      ],
+      "confusedWith": [
+        "fd_0171"
+      ],
+      "line": "Bloomy rind cheese, honeycomb, grilled baguette",
+      "prompt": "The young cheese is dusted or sprayed with white molds, which grow a downy skin within about a week. Those molds soften the curd from the outside in, so a ripe one runs creamy under the __ and tastes of butter, cream and mushroom. The __ is edible."
+    },
+    {
+      "id": "fd_0171",
+      "term": "Washed Rind",
+      "section": "dairy",
+      "gist": "Brine-bathed aging cheese with a sticky orange skin and strong aroma",
+      "guest": "It's a cheese like Taleggio, rubbed with brine as it ages, so the rind turns orange and smells bold. Inside it's milder, soft and savory.",
+      "why": "While it ages the cheese is rubbed with brine, sometimes with beer, wine or brandy. The damp, salty surface grows orange bacteria that make the tacky rind and barnyard smell, while the paste stays supple and savory. Think Taleggio or French Munster.",
+      "madeWith": [
+        "cow's milk",
+        "sometimes goat's milk",
+        "sometimes sheep's milk",
+        "sometimes beer",
+        "sometimes wine",
+        "sometimes brandy"
+      ],
+      "note": "The rind is edible but strong, and many guests leave it.",
+      "pairs": "Belgian ale, Alsatian white wine, pear, rye bread",
+      "notThis": "Not a bloomy rind. A washed rind is orange, tacky and pungent, while a bloomy rind is white, velvety and mild.",
+      "seeAlso": [
+        "fd_0169"
+      ],
+      "confusedWith": [
+        "fd_0170"
+      ],
+      "line": "Washed rind cheese, pear mostarda, rye crisps",
+      "prompt": "While it ages the cheese is rubbed with brine, sometimes with beer, wine or brandy. The damp, salty surface grows orange bacteria that make the tacky __ and barnyard smell, while the paste stays supple and savory. Think Taleggio or French Munster."
     }
   ]
 }

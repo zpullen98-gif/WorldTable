@@ -1,0 +1,618 @@
+{
+	"section": "mushrooms",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0138",
+				"fd_0139",
+				"fd_0140",
+				"fd_0141",
+				"fd_0142",
+				"fd_0143",
+				"fd_0144",
+				"fd_0145",
+				"fd_0146",
+				"fd_0147",
+				"fd_0148",
+				"fd_0149",
+				"fd_0150",
+				"fd_0151",
+				"fd_0152",
+				"fd_0153"
+			],
+			"findings": [
+				{
+					"id": "fd_0140",
+					"field": "origin",
+					"severity": "wrong",
+					"claim": "French trompette de la mort, trumpet of death, for its dark color only",
+					"because": "The dark color is only part of the story. French sources tie the name mainly to the mushroom coming up around All Saints' Day (Toussaint, 1 November), when the French remember their dead. It is not named for its color alone.",
+					"fix": "French trompette de la mort, for its dark color and All Saints' season",
+					"lens": "fact",
+					"key": "mushrooms-1-fact-1"
+				},
+				{
+					"id": "fd_0140",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "The death in its French name is for its dark color.",
+					"because": "The why of a trap has to be true. The name comes from the dark color and also from fruiting around All Saints' Day, the French day for remembering the dead.",
+					"fix": "The death in its French name is for its color and season. It cooks in minutes.",
+					"lens": "fact",
+					"key": "mushrooms-1-fact-2"
+				},
+				{
+					"id": "fd_0144",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "and they are hard to farm, hence the price",
+					"because": "This is out of date. Outdoor morel farming in China has grown large since the 2010s and now supplies much of the dried morel trade. Most fresh morels in Western kitchens are still foraged, and that is what keeps the price high.",
+					"fix": "and most are still foraged, hence the price",
+					"lens": "fact",
+					"key": "mushrooms-1-fact-3"
+				},
+				{
+					"id": "fd_0142",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's a big, ruffled mushroom that grows at the foot of oak trees.",
+					"because": "Menus almost always print this as maitake (the card's own line says \"Crispy maitake\"), so a new hire reading the menu will not connect it to the guest line. The line also suggests it was foraged under an oak, when most restaurant maitake is farmed, and that invites a follow-up the server cannot answer.",
+					"fix": "It's maitake, a big, ruffled mushroom that grows wild under oaks and is farmed too. Roasted, the frilly edges crisp up and the center stays tender and earthy.",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-4"
+				},
+				{
+					"id": "fd_0142",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "(no say given, while the line reads \"Crispy maitake, miso butter, charred scallion\")",
+					"because": "The dish will be ordered as maitake, and a new hire will stop at that word. The term needs no respelling, but the alias the server actually says aloud does. The guest line above is one place to carry it.",
+					"fix": "my-TAH-kee (for Maitake)",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-5"
+				},
+				{
+					"id": "fd_0139",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Tight cluster of small caps on long stems",
+					"because": "A tight cluster of small caps on long stems is the defining picture of enoki, which is on the roster and in this card's seeAlso. Only the second half of the gist separates the two. Beech caps are the rounder, brown or white button caps, and that is the half to lead with.",
+					"fix": "Clump of round brown or white caps, bitter raw and nutty cooked",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-6"
+				},
+				{
+					"id": "fd_0138",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "(no say given for Abalone Mushroom)",
+					"because": "New hires stumble over abalone and say it three or four ways. In American dining rooms it is ab-uh-LOH-nee.",
+					"fix": "ab-uh-LOH-nee MUSH-room",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-7"
+				},
+				{
+					"id": "fd_0138",
+					"field": "guest",
+					"severity": "style",
+					"claim": "named for its chew, which is a lot like abalone. Seared, it's savory and buttery with real bite.",
+					"because": "Most guests have never eaten abalone, so comparing the chew to abalone tells them nothing. It also leaves the server saying the same thing twice (chew, then real bite). Comparing it to a food they know answers \"what is that?\" better.",
+					"fix": "named for the shellfish because it has the same firm, springy chew. Seared, it's savory and meaty.",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-8"
+				},
+				{
+					"id": "fd_0145",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"oyster mushroom\", \"often butter\", \"often garlic\", \"sometimes wheat flour\"",
+					"because": "The card's notThis tells a shellfish-allergic guest \"Not oysters, the shellfish\", yet oyster mushrooms are classically stir-fried with oyster sauce in Chinese and Southeast Asian cooking. Oyster sauce is made from oysters, so a guest could hear \"not oysters\" and wrongly take it as clearance. The madeWith list has to flag it.",
+					"fix": "\"oyster mushroom\", \"often butter\", \"often garlic\", \"sometimes wheat flour\", \"sometimes oyster sauce\"",
+					"lens": "safety",
+					"key": "mushrooms-1-safety-9"
+				},
+				{
+					"id": "fd_0145",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "Not oysters, the shellfish. The name comes only from the shape of the cap.",
+					"because": "\"The name comes only from\" sounds like a promise that shellfish plays no part in the dish, when these mushrooms are often cooked in oyster sauce. The sentence should explain the name without implying the dish has no shellfish.",
+					"fix": "Not oysters, the shellfish. The name is for the cap's shape, though dishes may use oyster sauce.",
+					"lens": "safety",
+					"key": "mushrooms-1-safety-10"
+				},
+				{
+					"id": "fd_0138",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"abalone mushroom\", \"often butter\", \"often garlic\", \"sometimes soy sauce\"",
+					"because": "In Chinese cooking, abalone mushrooms are classically braised in oyster sauce, often as a stand-in for real abalone. The notThis line (\"Not abalone, the shellfish\") invites a shellfish-allergic guest to feel cleared, so the shellfish-based sauce needs to be flagged.",
+					"fix": "\"abalone mushroom\", \"often butter\", \"often garlic\", \"sometimes soy sauce\", \"sometimes oyster sauce\"",
+					"lens": "safety",
+					"key": "mushrooms-1-safety-11"
+				},
+				{
+					"id": "fd_0138",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "This is a mushroom that only borrows the name for its chew.",
+					"because": "\"Only borrows the name\" reads as an assurance that the dish has no shellfish. The classic preparation is braised in oyster sauce, which is made from oysters.",
+					"fix": "A mushroom named for its chew, though it is often braised in oyster sauce.",
+					"lens": "safety",
+					"key": "mushrooms-1-safety-12"
+				},
+				{
+					"id": "fd_0140",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "It is a choice edible that cooks in minutes.",
+					"because": "\"Choice edible\" is a foragers' term that says the mushroom is fine to eat. That is an edibility assurance about a wild mushroom, and correcting the trap does not need it. The real correction is that the \"death\" in the name refers to the color.",
+					"fix": "The death in its French name is for its dark color, not poison. It cooks in minutes.",
+					"lens": "safety",
+					"key": "mushrooms-1-safety-13"
+				},
+				{
+					"id": "fd_0147",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "Nearly all its value is aroma, which heat and time destroy, so it is shaved raw over warm, fatty food.",
+					"because": "This is true of white truffle, which is never cooked. Black winter truffle is routinely cooked gently in classic French cooking: slipped under poultry skin, folded into sauce Périgueux, infused in eggs or butter. Gentle heat in fat brings its aroma out. The card as written would have a server tell a guest that cooked black truffle is wrong.",
+					"fix": "Its value is aroma, which heat and time dull, so white is shaved raw and black warmed gently in fat.",
+					"lens": "fact",
+					"key": "mushrooms-2-fact-1"
+				},
+				{
+					"id": "fd_0146",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "a Japanese mushroom grown on oak logs",
+					"because": "Most shiitake sold to restaurants today is grown on sawdust blocks, not logs, and the card's own why says so. The mushroom is native to East Asia and was first cultivated in China. Only the name is Japanese.",
+					"fix": "an Asian mushroom grown on hardwood",
+					"lens": "fact",
+					"key": "mushrooms-2-fact-2"
+				},
+				{
+					"id": "fd_0149",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Porcini are wild Italian forest mushrooms",
+					"because": "Porcini (king bolete) grow wild across Europe, North America and Asia, and much of the dried porcini sold is from Eastern Europe or China. Only the name is Italian, and a guest who asks where the porcini came from should not be told Italy by default.",
+					"fix": "Porcini are wild forest mushrooms",
+					"lens": "fact",
+					"key": "mushrooms-2-fact-3"
+				},
+				{
+					"id": "fd_0146",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "It's a Japanese mushroom grown on oak logs",
+					"because": "Most shiitake sold to restaurants is grown on sawdust blocks, not oak logs, so a server saying this at most tables says something false. The card's own why says logs or sawdust blocks.",
+					"fix": "It's a Japanese mushroom first grown on logs",
+					"lens": "floor",
+					"key": "mushrooms-2-floor-4"
+				},
+				{
+					"id": "fd_0147",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "We shave it fresh over the dish, and the smell is the whole point.",
+					"because": "This states a service practice as fact. Many kitchens fold truffle into a sauce or butter, or use preserved truffle, so a new hire who repeats this word for word can be wrong about their own dish. Hedge it.",
+					"fix": "It's usually shaved fresh over the dish, and the smell is the whole point.",
+					"lens": "floor",
+					"key": "mushrooms-2-floor-5"
+				},
+				{
+					"id": "fd_0148",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's a finishing oil with a strong truffle aroma. It's a big, earthy hit of that flavor for much less than shaved fresh truffle.",
+					"because": "Talking about price at the table sounds awkward, and the line suggests real truffle when the why says the aroma is usually manufactured. A guest who asks what it is should hear, honestly, that it is flavored oil.",
+					"fix": "It's an oil flavored to smell like truffle, drizzled on at the end. It gives a big, earthy hit of that aroma.",
+					"lens": "floor",
+					"key": "mushrooms-2-floor-6"
+				},
+				{
+					"id": "fd_0148",
+					"field": "line",
+					"severity": "style",
+					"claim": "Truffle fries, parmesan, parsley",
+					"because": "A menu line has to carry the term or an alias as written. This one says only 'Truffle', so it teaches the Truffle card, not Truffle Oil.",
+					"fix": "Fries, truffle oil, parmesan, parsley",
+					"lens": "floor",
+					"key": "mushrooms-2-floor-7"
+				},
+				{
+					"id": "fd_0149",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "They make the richest mushroom risotto there is.",
+					"because": "This oversells, and it doesn't fit when the porcini on the menu is in pasta, on veal or in polenta. The guest line should hold up for any dish.",
+					"fix": "They're a classic in risotto and fresh pasta.",
+					"lens": "floor",
+					"key": "mushrooms-2-floor-8"
+				},
+				{
+					"id": "fd_0152",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "sears up tender and stringy",
+					"because": "'Stringy' is unappetizing to say at a table and works against the sell. The honest selling point is the flaky, shredded texture, like crab.",
+					"fix": "sears up tender and flaky",
+					"lens": "floor",
+					"key": "mushrooms-2-floor-9"
+				},
+				{
+					"id": "fd_0153",
+					"field": "gist",
+					"severity": "style",
+					"claim": "tears like chicken",
+					"because": "The gist holds 'chicken', a word from the term itself, so on the test it gives the answer away and fails the term-free rule. The gate misses it only because 'chicken' is not on the banned list.",
+					"fix": "Orange shelf fungus off tree trunks that tears into meaty strands",
+					"lens": "floor",
+					"key": "mushrooms-2-floor-10"
+				},
+				{
+					"id": "fd_0153",
+					"field": "traps",
+					"severity": "style",
+					"claim": "Farmed mushroom fed on chicken manure, named for how it is grown",
+					"because": "Traps must be term-free like gists. 'Chicken' in the wrong option points straight at the term and makes the test easier than intended.",
+					"fix": "Farmed mushroom grown on poultry manure, named for how it is raised",
+					"lens": "floor",
+					"key": "mushrooms-2-floor-11"
+				},
+				{
+					"id": "fd_0146",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "(no note)",
+					"because": "This card is missing a real raw-service fact. Raw or undercooked shiitake can cause shiitake dermatitis, a documented itchy, streaky rash in some people, so it is meant to be cooked through. A server should be able to say so plainly.",
+					"fix": "Served cooked. Raw or undercooked shiitake can give a few people an itchy rash.",
+					"lens": "safety",
+					"key": "mushrooms-2-safety-12"
+				},
+				{
+					"id": "fd_0150",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"cremini mushroom\", \"often butter\", \"often garlic\", \"sometimes thyme\"",
+					"because": "The card's own menu line reads \"Roasted cremini, garlic, thyme, sherry\", but madeWith leaves the alcohol out. That list is the only place a guest avoiding alcohol would see it flagged.",
+					"fix": "\"cremini mushroom\", \"often butter\", \"often garlic\", \"sometimes thyme\", \"sometimes sherry\"",
+					"lens": "safety",
+					"key": "mushrooms-2-safety-13"
+				},
+				{
+					"id": "fd_0151",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "Always served cooked.",
+					"because": "This states the house practice as a guarantee a guest could rely on, and some kitchens do serve enoki raw in salads. The real fact is the handling rule: packaged enoki has been linked to US listeria outbreaks and recalls, so it is meant to be cooked through.",
+					"fix": "Cook it through. Packaged enoki has been part of US listeria recalls, so it should not go out raw.",
+					"lens": "safety",
+					"key": "mushrooms-2-safety-14"
+				},
+				{
+					"id": "fd_0151",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"sometimes pork\"",
+					"because": "The card's menu line is \"Beef hot pot, enoki, napa cabbage, tofu\", and enoki rolled in beef is a classic dish, but beef is not on the list. The line also names tofu, and soy is covered only as \"often soy sauce\".",
+					"fix": "\"sometimes beef\", \"sometimes pork\"",
+					"lens": "safety",
+					"key": "mushrooms-2-safety-15"
+				},
+				{
+					"id": "fd_0152",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"lion's mane mushroom\", \"often butter\", \"sometimes garlic\", \"sometimes lemon\"",
+					"because": "The pairs field sends the reader to \"crab cake style with remoulade\". A crab-cake-style lion's mane cake is classically bound with egg and breadcrumbs, and remoulade is a mayonnaise, so it is made with egg. None of these is flagged.",
+					"fix": "\"lion's mane mushroom\", \"often butter\", \"sometimes garlic\", \"sometimes lemon\", \"sometimes egg\", \"sometimes breadcrumbs\"",
+					"lens": "safety",
+					"key": "mushrooms-2-safety-16"
+				},
+				{
+					"id": "fd_0153",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"sometimes wheat flour\", \"sometimes egg\"",
+					"because": "The menu line is \"Fried chicken of the woods, hot honey, pickles\". The classic fried-chicken treatment soaks the pieces in buttermilk before the flour, so the list leaves out milk.",
+					"fix": "\"sometimes wheat flour\", \"sometimes egg\", \"sometimes buttermilk\"",
+					"lens": "safety",
+					"key": "mushrooms-2-safety-17"
+				},
+				{
+					"id": "fd_0153",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "Always cooked through, never raw.",
+					"because": "This states the house practice as a guarantee. The real fact is that the mushroom must be cooked through, and a few people react even to cooked pieces.",
+					"fix": "Must be cooked through. A few people get an upset stomach even from cooked pieces.",
+					"lens": "safety",
+					"key": "mushrooms-2-safety-18"
+				},
+				{
+					"id": "fd_0147",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"fresh truffle\", \"often butter\", \"often egg\", \"sometimes parmesan\", \"sometimes cream\"",
+					"because": "The card's menu line and its classic service are fresh egg tagliatelle, which is made with wheat flour. Wheat is not flagged anywhere on the card.",
+					"fix": "\"fresh truffle\", \"often butter\", \"often egg\", \"often fresh pasta\", \"sometimes parmesan\", \"sometimes cream\"",
+					"lens": "safety",
+					"key": "mushrooms-2-safety-19"
+				},
+				{
+					"key": "mushrooms-critic-1",
+					"id": "fd_0141",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Gist is 72 chars, over the 68 aim and 6 longer than its only trap (66), so on this card the gist is the longest answer option, which is the tell the parity rule exists to stop.",
+					"because": "Gist is 72 chars, over the 68 aim and 6 longer than its only trap (66), so on this card the gist is the longest answer option, which is the tell the parity rule exists to stop.",
+					"fix": "Shorten the gist to \"Golden, vase-shaped wild mushroom, apricot-scented and peppery\" (62 chars)."
+				},
+				{
+					"key": "mushrooms-critic-2",
+					"id": "fd_0143",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Gist is 71 chars, over the 68 aim and longer than its trap (68), so the gist is again the longest option.",
+					"because": "Gist is 71 chars, over the 68 aim and longer than its trap (68), so the gist is again the longest option.",
+					"fix": "Shorten the gist to \"Thick white stem under a small cap, seared in coins like scallops\" (64 chars)."
+				},
+				{
+					"key": "mushrooms-critic-3",
+					"id": "fd_0138",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The gist leans on 'shellfish-like bite', and that is also what sets apart Lion's Mane ('sears up like crab meat') and King Trumpet ('seared like scallops'). In a multiple-choice test with those two as the other options, a reader cannot tell which fungus is the 'shellfish' one. The gist says nothing about what makes the abalone mushroom itself: a thick, dark cap in the oyster family.",
+					"because": "The gist leans on 'shellfish-like bite', and that is also what sets apart Lion's Mane ('sears up like crab meat') and King Trumpet ('seared like scallops'). In a multiple-choice test with those two as the other options, a reader cannot tell which fungus is the 'shellfish' one. The gist says nothing about what makes the abalone mushroom itself: a thick, dark cap in the oyster family.",
+					"fix": "Rewrite the gist on the cap, e.g. \"Thick, dark gray cultivated cap of the oyster family, springy to chew\" (about 67 chars), and keep the trap within 10 chars of it."
+				},
+				{
+					"key": "mushrooms-critic-4",
+					"id": "fd_0146",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The trap ('Japanese seaweed dried in sheets and simmered for a clear broth') is not a mistake real people make: nobody takes shiitake for kombu. It only works as a wrong option by being a different thing entirely. The mistake that really appears is in the packet ('soft, spongy quality, woodsy'): treating shiitake as a soft, mild mushroom.",
+					"because": "The trap ('Japanese seaweed dried in sheets and simmered for a clear broth') is not a mistake real people make: nobody takes shiitake for kombu. It only works as a wrong option by being a different thing entirely. The mistake that really appears is in the packet ('soft, spongy quality, woodsy'): treating shiitake as a soft, mild mushroom.",
+					"fix": "Replace the trap with says \"Soft, spongy mushroom with a mild, almost neutral woodsy flavor\" (about 62 chars) and why \"The cap is firm and meaty, and its flavor is strongly savory and smoky, not mild.\""
+				},
+				{
+					"key": "mushrooms-critic-5",
+					"id": "fd_0147",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "At 799 characters of prose this is the section's longest card, well over the 660 aim. The note partly repeats the why ('aroma, which heat and time dull').",
+					"because": "At 799 characters of prose this is the section's longest card, well over the 660 aim. The note partly repeats the why ('aroma, which heat and time dull').",
+					"fix": "Cut the note, or fold 'bought small and used fast' into the why in place of 'which heat and time dull'. The notThis could also lose 'a ganache ball named for its look' to bring the card nearer 700."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "mushrooms-1-fact-1",
+					"action": "applied",
+					"reason": "Origin now reads 'French trompette de la mort, for its dark color and All Saints' season', dropping the claim that the name is for color only."
+				},
+				{
+					"finding": "mushrooms-1-fact-2",
+					"action": "applied",
+					"reason": "Trap why now says the death in the French name is for its dark color and season, not poison, merged with the fix for safety-13."
+				},
+				{
+					"finding": "mushrooms-1-fact-3",
+					"action": "applied",
+					"reason": "Why now says 'most are still foraged, hence the price' in place of 'they are hard to farm', since outdoor morel farming in China is now large."
+				},
+				{
+					"finding": "mushrooms-1-floor-4",
+					"action": "applied",
+					"reason": "Guest line now opens 'It's maitake' and says it grows wild under oaks and is farmed too, which ties it to the menu word and stops it implying every one is foraged."
+				},
+				{
+					"finding": "mushrooms-1-floor-5",
+					"action": "rejected",
+					"reason": "The say field is a respelling of the card's term in ASCII letters, hyphens and apostrophes only, so 'my-TAH-kee (for Maitake)' breaks the format, and 'Hen of the Woods' is plain English that needs none. The guest line now says maitake aloud (floor-4)."
+				},
+				{
+					"finding": "mushrooms-1-floor-6",
+					"action": "applied",
+					"reason": "Gist is now 'Clump of round brown or white caps, bitter raw and nutty cooked', which leads with the round caps that tell it apart from enoki (63 chars, beech-free)."
+				},
+				{
+					"finding": "mushrooms-1-floor-7",
+					"action": "applied",
+					"reason": "Added say 'ab-uh-LOH-nee MUSH-room', the American dining-room pronunciation."
+				},
+				{
+					"finding": "mushrooms-1-floor-8",
+					"action": "applied",
+					"reason": "Guest line now says it is named for the shellfish because it has the same firm, springy chew, then 'Seared, it's savory and satisfying.' This drops the repeated chew and avoids saying meaty twice."
+				},
+				{
+					"finding": "mushrooms-1-safety-9",
+					"action": "applied",
+					"reason": "Added 'sometimes oyster sauce' to madeWith so the shellfish-based sauce is flagged."
+				},
+				{
+					"finding": "mushrooms-1-safety-10",
+					"action": "applied",
+					"reason": "notThis now reads 'Not oysters, the shellfish. The name is for the cap's shape, though dishes may use oyster sauce.' so it no longer sounds like a promise that no shellfish is involved."
+				},
+				{
+					"finding": "mushrooms-1-safety-11",
+					"action": "applied",
+					"reason": "Added 'sometimes oyster sauce' to madeWith, since abalone mushrooms are classically braised in it in Chinese cooking."
+				},
+				{
+					"finding": "mushrooms-1-safety-12",
+					"action": "applied",
+					"reason": "notThis now reads 'Not abalone, the shellfish. A mushroom named for its chew, though it is often braised in oyster sauce.' so the words 'only borrows the name' are gone."
+				},
+				{
+					"finding": "mushrooms-1-safety-13",
+					"action": "applied",
+					"reason": "Removed 'a choice edible' from the trap why, which now says the name is for color and season, not poison, and that it cooks in minutes."
+				},
+				{
+					"finding": "mushrooms-2-fact-1",
+					"action": "applied",
+					"reason": "The why now says heat and time dull the aroma, so white is shaved raw and black is often warmed gently in fat. The gist now says \"prized for its aroma\" in place of \"shaved raw\", and the note no longer claims it is always shaved at the table."
+				},
+				{
+					"finding": "mushrooms-2-fact-2",
+					"action": "applied",
+					"reason": "The guest line now says \"a mushroom from East Asia grown on hardwood\". The gist and the trap's why no longer say log-grown."
+				},
+				{
+					"finding": "mushrooms-2-fact-3",
+					"action": "applied",
+					"reason": "The guest line now says \"Porcini are wild forest mushrooms\" and drops \"Italian\"."
+				},
+				{
+					"finding": "mushrooms-2-floor-4",
+					"action": "applied",
+					"reason": "This is the same claim as fact-2 and gets the same fix: \"a mushroom from East Asia grown on hardwood\", so the line no longer says oak logs."
+				},
+				{
+					"finding": "mushrooms-2-floor-5",
+					"action": "applied",
+					"reason": "The guest line now says \"It's usually shaved fresh over the dish\"."
+				},
+				{
+					"finding": "mushrooms-2-floor-6",
+					"action": "applied",
+					"reason": "The guest line now reads \"It's an oil flavored to smell like truffle, drizzled on at the end. It gives a big, earthy hit of that aroma.\""
+				},
+				{
+					"finding": "mushrooms-2-floor-7",
+					"action": "applied",
+					"reason": "The menu line is now \"Fries, truffle oil, parmesan, parsley\", which carries the term as written."
+				},
+				{
+					"finding": "mushrooms-2-floor-8",
+					"action": "applied",
+					"reason": "The second sentence of the guest line is now \"They're a classic in risotto and fresh pasta.\""
+				},
+				{
+					"finding": "mushrooms-2-floor-9",
+					"action": "applied",
+					"reason": "The guest line now says \"sears up tender and flaky\", and the trap's why now says \"shredded texture\" in place of \"stringy\"."
+				},
+				{
+					"finding": "mushrooms-2-floor-10",
+					"action": "applied",
+					"reason": "The gist now reads \"Orange shelf fungus off tree trunks that tears into meaty strands\". The brief lists \"chicken\" as a generic word, but taking it out removes the giveaway."
+				},
+				{
+					"finding": "mushrooms-2-floor-11",
+					"action": "applied",
+					"reason": "The trap now reads \"Farmed mushroom grown on poultry manure, named for how it is raised\" and stays within 2 characters of the gist."
+				},
+				{
+					"finding": "mushrooms-2-safety-12",
+					"action": "applied",
+					"reason": "Added a note: shiitake is meant to be cooked through, because raw or undercooked shiitake gives a few people an itchy, streaky rash (shiitake dermatitis). The note avoids \"Served cooked\" because that states a house practice as fact."
+				},
+				{
+					"finding": "mushrooms-2-safety-13",
+					"action": "applied",
+					"reason": "Added \"sometimes sherry\" to madeWith."
+				},
+				{
+					"finding": "mushrooms-2-safety-14",
+					"action": "applied",
+					"reason": "The note now reads \"Cook it through. Packaged enoki has been part of US listeria recalls, so it should not go out raw.\""
+				},
+				{
+					"finding": "mushrooms-2-safety-15",
+					"action": "applied",
+					"reason": "Added \"sometimes beef\" to madeWith, and \"sometimes tofu\" to match the menu line."
+				},
+				{
+					"finding": "mushrooms-2-safety-16",
+					"action": "applied",
+					"reason": "Added \"sometimes egg\" and \"sometimes breadcrumbs\" to madeWith."
+				},
+				{
+					"finding": "mushrooms-2-safety-17",
+					"action": "applied",
+					"reason": "Added \"sometimes buttermilk\" to madeWith."
+				},
+				{
+					"finding": "mushrooms-2-safety-18",
+					"action": "applied",
+					"reason": "The note now reads \"Must be cooked through. A few people get an upset stomach even from cooked pieces.\""
+				},
+				{
+					"finding": "mushrooms-2-safety-19",
+					"action": "applied",
+					"reason": "Added \"often fresh wheat pasta\" to madeWith rather than the suggested \"often fresh pasta\", so that wheat is named."
+				},
+				{
+					"finding": "mushrooms-critic-1",
+					"action": "applied",
+					"reason": "The gist is now the suggested 62-character line, 4 shorter than the trap, so it is no longer the longest option."
+				},
+				{
+					"finding": "mushrooms-critic-2",
+					"action": "applied",
+					"reason": "The gist is now the suggested 65-character line, 3 shorter than the 68-character trap."
+				},
+				{
+					"finding": "mushrooms-critic-3",
+					"action": "applied",
+					"reason": "The gist now describes the cap instead of the shellfish chew: 'Thick, gray-brown cap from the oyster mushroom family, springy' (62 characters). It is 3 shorter than the 65-character trap. I used gray-brown rather than dark gray because that is the cap's real color."
+				},
+				{
+					"finding": "mushrooms-critic-4",
+					"action": "applied",
+					"reason": "The kombu trap is gone. In its place is the packet's real mistake, a soft, spongy, mild mushroom, at 63 characters against the 58-character gist, with the suggested why."
+				},
+				{
+					"finding": "mushrooms-critic-5",
+					"action": "applied",
+					"reason": "I cut the note and moved 'fades within days of digging, bought small and used fast' into the why. I dropped the price sentence so the why stays under 300, and cut the ganache clause from notThis. The card's prose is now 678 characters, down from 799."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0141",
+						"issue": "Gist is 72 chars, over the 68 aim and 6 longer than its only trap (66), so on this card the gist is the longest answer option, which is the tell the parity rule exists to stop.",
+						"fix": "Shorten the gist to \"Golden, vase-shaped wild mushroom, apricot-scented and peppery\" (62 chars)."
+					},
+					{
+						"id": "fd_0143",
+						"issue": "Gist is 71 chars, over the 68 aim and longer than its trap (68), so the gist is again the longest option.",
+						"fix": "Shorten the gist to \"Thick white stem under a small cap, seared in coins like scallops\" (64 chars)."
+					},
+					{
+						"id": "fd_0138",
+						"issue": "The gist leans on 'shellfish-like bite', and that is also what sets apart Lion's Mane ('sears up like crab meat') and King Trumpet ('seared like scallops'). In a multiple-choice test with those two as the other options, a reader cannot tell which fungus is the 'shellfish' one. The gist says nothing about what makes the abalone mushroom itself: a thick, dark cap in the oyster family.",
+						"fix": "Rewrite the gist on the cap, e.g. \"Thick, dark gray cultivated cap of the oyster family, springy to chew\" (about 67 chars), and keep the trap within 10 chars of it."
+					},
+					{
+						"id": "fd_0146",
+						"issue": "The trap ('Japanese seaweed dried in sheets and simmered for a clear broth') is not a mistake real people make: nobody takes shiitake for kombu. It only works as a wrong option by being a different thing entirely. The mistake that really appears is in the packet ('soft, spongy quality, woodsy'): treating shiitake as a soft, mild mushroom.",
+						"fix": "Replace the trap with says \"Soft, spongy mushroom with a mild, almost neutral woodsy flavor\" (about 62 chars) and why \"The cap is firm and meaty, and its flavor is strongly savory and smoky, not mild.\""
+					},
+					{
+						"id": "fd_0147",
+						"issue": "At 799 characters of prose this is the section's longest card, well over the 660 aim. The note partly repeats the why ('aroma, which heat and time dull').",
+						"fix": "Cut the note, or fold 'bought small and used fast' into the why in place of 'which heat and time dull'. The notThis could also lose 'a ganache ball named for its look' to bring the card nearer 700."
+					}
+				],
+				"notes": "Section checks otherwise pass. Every one of the 16 roster rows has a card. The section mean is 664 chars (ceiling 720). There are no banned substrings and no verdict words: 'free' appears only in 'trimmed to free them' on Beech, which is not verdict language. There are no em or en dashes. No two gists or guest lines are the same. No roster row carries a knownPacketError, so no trap is required for one. The confusable pairs are linked both ways: Hen of the Woods and Chicken of the Woods, Black Trumpet and King Trumpet, Truffle and Truffle Oil. Oyster Mushroom is linked to Oysters, and Truffle to Chocolate Truffle. Cross-section follow-ups for the operator: (1) check that fd_0255 Chocolate Truffle and fd_0115 Oysters link back to Truffle and Oyster Mushroom in their own confusedWithTerms. (2) King Trumpet could take seeAlso Scallops (fd_0118), because 'king oyster scallops' is a common menu name for it. (3) Chicken of the Woods has seeAlso 'Fried', but its line is 'Fried chicken of the woods', so fd_0002 Chicken-Fried is the closer related card and worth considering. (4) Truffle Oil's gist uses 'truffle', which the genericWords list permits. It is still the card's own head noun, so a mostly-truffle multiple-choice set could be easy. Acceptable as written."
+			},
+			"acceptedRejected": []
+		}
+	]
+}

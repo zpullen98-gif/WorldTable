@@ -1,0 +1,550 @@
+{
+	"section": "dairy",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0154",
+				"fd_0155",
+				"fd_0156",
+				"fd_0157",
+				"fd_0158",
+				"fd_0159",
+				"fd_0160",
+				"fd_0161",
+				"fd_0162",
+				"fd_0163",
+				"fd_0164",
+				"fd_0165",
+				"fd_0166",
+				"fd_0167",
+				"fd_0168",
+				"fd_0169",
+				"fd_0170",
+				"fd_0171"
+			],
+			"findings": [
+				{
+					"id": "fd_0156",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "Goat's milk fats carry the fatty acids that give the lemony, goaty tang.",
+					"because": "The goat fatty acids (caproic, caprylic, capric) give the goaty, animal note. The lemony tang comes from lactic acid made by the cultures. The sentence gives both to the fat, which contradicts the card's own trap why.",
+					"fix": "Goat's milk fatty acids give the goaty note. Cultures give the tang.",
+					"lens": "fact",
+					"key": "dairy-1-fact-1"
+				},
+				{
+					"id": "fd_0159",
+					"field": "origin",
+					"severity": "verdict",
+					"claim": "The English name for Parmigiano-Reggiano, from Parma and Reggio Emilia",
+					"because": "Outside the EU, and above all in the US, 'parmesan' is a generic name. Domestic parmesan is legally aged only about 10 months and made in other ways. A server who treats the two as the same name will promise a guest Italian, year-aged, calf-rennet cheese that the kitchen may not be using. The PDO zone also covers Modena and parts of Bologna and Mantua.",
+					"fix": "English for Parmigiano-Reggiano, though US parmesan can be domestic",
+					"lens": "fact",
+					"key": "dairy-1-fact-2"
+				},
+				{
+					"id": "fd_0159",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "made around Parma from raw, part-skimmed cow's milk and aged 12 to 36 months",
+					"because": "Twelve months is the legal minimum. Wheels are commonly sold at 40, 48 or even 72 months or more, so 36 is not a ceiling.",
+					"fix": "made around Parma from raw, part-skimmed cow's milk and aged 12 months or far longer",
+					"lens": "fact",
+					"key": "dairy-1-fact-3"
+				},
+				{
+					"id": "fd_0158",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "This is smooth, tangy and set cold.",
+					"because": "Fromage blanc is cultured at room temperature, roughly 20 to 30 C (68 to 86 F), not in the cold. The real contrast with ricotta is that it is set by cultures without being heated.",
+					"fix": "This is smooth, tangy and set without heat.",
+					"lens": "fact",
+					"key": "dairy-1-fact-4"
+				},
+				{
+					"id": "fd_0161",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Butter cooked until its milk solids toast and smell of nuts",
+					"because": "Ghee is also butter cooked until its milk solids toast and smell nutty, and Ghee is on this section's roster. As a test option this gist would be accepted for both. What makes this one this one is that the browned solids stay in the butter, where ghee strains them out.",
+					"fix": "Butter cooked until its milk solids brown, kept in for a nutty taste",
+					"lens": "floor",
+					"key": "dairy-1-floor-5"
+				},
+				{
+					"id": "fd_0160",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Pure butterfat with the water and milk solids taken out",
+					"because": "This also describes Ghee, which is on this section's roster, so the two gists could be swapped in the test. The thing that sets this one apart is that the solids come out before they brown, so the fat stays pale and mild.",
+					"fix": "Pale, mild butterfat, milk solids lifted off before they brown",
+					"lens": "floor",
+					"key": "dairy-1-floor-6"
+				},
+				{
+					"id": "fd_0155",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's what makes our biscuits tender and the fried chicken so juicy.",
+					"because": "The card is generic, but this line tells the server to claim dishes the house may not serve. A new hire will repeat it word for word at a table where there are no biscuits.",
+					"fix": "It's the classic secret to tender biscuits and juicy fried chicken.",
+					"lens": "floor",
+					"key": "dairy-1-floor-7"
+				},
+				{
+					"id": "fd_0156",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It softens into anything warm, like the beets here.",
+					"because": "It points at a dish ('the beets here') that the guest may not have ordered and the menu may not have. Roasted beets with goat cheese are also often served cold. The line also almost repeats the crème fraîche guest line ('It melts into anything warm').",
+					"fix": "It's lovely with beets, honey or a warm salad.",
+					"lens": "floor",
+					"key": "dairy-1-floor-8"
+				},
+				{
+					"id": "fd_0159",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It's a hard Italian cheese aged at least a year",
+					"because": "'At least a year' only holds for true Parmigiano-Reggiano. A guest who asks about 'parmesan' on an American menu may be getting a domestic or generic parmesan, which can be aged less and need not be Italian. A server should not promise the age.",
+					"fix": "It's a hard, long-aged Italian cheese, nutty and savory with little crunchy crystals.",
+					"lens": "floor",
+					"key": "dairy-1-floor-9"
+				},
+				{
+					"id": "fd_0157",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "rich enough to boil",
+					"because": "'Rich enough to boil' is kitchen shorthand. A new hire will not see that it means 'will not curdle when heated', so it does not help them tell this option apart.",
+					"fix": "Thick cultured cream, mildly tangy, that won't curdle when heated",
+					"lens": "floor",
+					"key": "dairy-1-floor-10"
+				},
+				{
+					"id": "fd_0161",
+					"field": "guest",
+					"severity": "style",
+					"claim": "Rich, warm and deeply savory.",
+					"because": "It is a verbless fragment that sounds read off a card. 'Deeply savory' also oversells. Brown butter is nutty and toasty, and the line has already said hazelnuts.",
+					"fix": "It's rich and warm.",
+					"lens": "floor",
+					"key": "dairy-1-floor-11"
+				},
+				{
+					"id": "fd_0160",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "Pure butterfat with the water and milk solids taken out",
+					"because": "Clarified butter is still butter. Trace milk proteins remain after clarifying, and it is not a substitute for a guest who avoids milk. A server who repeats 'milk solids taken out' can sound like they are promising the butter has no milk left in it.",
+					"fix": "Butterfat with most of the water and milk solids cooked off",
+					"lens": "safety",
+					"key": "dairy-1-safety-12"
+				},
+				{
+					"id": "fd_0160",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It's butter melted down to just the pure golden fat.",
+					"because": "'Just the pure golden fat' tells a guest nothing else is left. Traces of milk protein remain, so this can be heard as an assurance to someone who avoids dairy.",
+					"fix": "It's butter melted down to its golden fat, the milky bits skimmed off.",
+					"lens": "safety",
+					"key": "dairy-1-safety-13"
+				},
+				{
+					"id": "fd_0155",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It's what makes our biscuits tender and the fried chicken so juicy.",
+					"because": "This states what this kitchen's dishes are made with. The server has not checked the recipe and recipes vary. Ingredient claims belong only in madeWith, which comes with 'Confirm with the kitchen.'",
+					"fix": "It's a tangy, lightly thick cultured milk, the classic for tender biscuits and juicy fried chicken.",
+					"lens": "safety",
+					"key": "dairy-1-safety-14"
+				},
+				{
+					"id": "fd_0161",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "The classic is made from butter alone.",
+					"because": "The guest line says it 'smells like hazelnuts', so a guest with a nut allergy will ask. A server who learned 'butter alone' will pass it on as a promise, but some kitchens finish brown butter with nuts. The card should say where the name comes from and stop there.",
+					"fix": "The name comes from its color and smell, not from nuts in it.",
+					"lens": "safety",
+					"key": "dairy-1-safety-15"
+				},
+				{
+					"id": "fd_0167",
+					"field": "aliases",
+					"severity": "unclear",
+					"claim": "Fior di Latte",
+					"because": "Fior di latte means cow's-milk mozzarella specifically. The buffalo version is a different cheese, mozzarella di bufala. With this alias on the card, 'sometimes buffalo milk' in madeWith contradicts the card's own name, and a server could call buffalo mozzarella fior di latte.",
+					"fix": "Drop 'sometimes buffalo milk' from madeWith and keep the alias, or keep the buffalo line and drop the alias",
+					"lens": "fact",
+					"key": "dairy-2-fact-1"
+				},
+				{
+					"id": "fd_0162",
+					"field": "lexiconSlug",
+					"severity": "unclear",
+					"claim": "butterfat-fluency-butter-cream-and-cultures",
+					"because": "That entry is a broad survey of butter, cream and cultured dairy that mentions ghee in one clause. It is not the long-form essay on ghee, and the rule allows a lexiconSlug only when the entry covers this same subject.",
+					"fix": "Omit lexiconSlug",
+					"lens": "fact",
+					"key": "dairy-2-fact-2"
+				},
+				{
+					"id": "fd_0169",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Pierced so an edible mold veins the paste, sharp, salty and creamy",
+					"because": "As an answer option it opens on a verb with no subject, and \"paste\" is cheesemonger jargon for the interior that a new hire will not know. The option is hard to parse at a glance.",
+					"fix": "Wheel pierced so an edible mold grows in veins, sharp, salty, creamy",
+					"lens": "floor",
+					"key": "dairy-2-floor-3"
+				},
+				{
+					"id": "fd_0163",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's butter whipped with herbs and garlic, then chilled.",
+					"because": "The guest line tells the guest this butter holds garlic, but the flavorings change from kitchen to kitchen. The card's own madeWith lists garlic only as \"often\", and many are citrus, anchovy or blue cheese butters. A server repeating this line would be making a promise about the plate.",
+					"fix": "It's butter mixed with herbs and seasonings, then chilled.",
+					"lens": "floor",
+					"key": "dairy-2-floor-4"
+				},
+				{
+					"id": "fd_0162",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "then strained, so all that's left is pure, rich butter flavor",
+					"because": "Saying the solids are strained off and only 'pure' butter is left sounds like the milk is gone. A guest avoiding milk could take it as clearance. Straining leaves traces of milk protein and lactose behind, and ghee is still a dairy product.",
+					"fix": "It's butter cooked slowly until golden and nutty, then strained, for a rich, toasty butter flavor you can't get from plain butter.",
+					"lens": "safety",
+					"key": "dairy-2-safety-5"
+				},
+				{
+					"id": "fd_0162",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "then strained off",
+					"because": "The line says the milk solids are 'strained off' and nothing says the result is still butter from milk. Next to the guest line, a server could say the milk part has been removed. Traces stay, and the madeWith list shows only 'butter'.",
+					"fix": "Butter simmered until its milk solids toast golden, then strained out",
+					"lens": "safety",
+					"key": "dairy-2-safety-6"
+				},
+				{
+					"id": "fd_0169",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "so an edible mold veins the paste",
+					"because": "'Edible' tells the guest the mold is safe to eat, and a server will repeat it. That is an assurance, not a description. Some guests with a penicillin allergy ask about Penicillium cheeses, and the card should describe the mold without judging it.",
+					"fix": "Pierced so a mold culture veins the paste, sharp, salty and creamy",
+					"lens": "safety",
+					"key": "dairy-2-safety-7"
+				},
+				{
+					"id": "fd_0171",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Inside it's much milder, soft, savory and a little meaty.",
+					"because": "Washed rind covers semi-firm and firm cheeses too: Raclette, Appenzeller, Gruyère and Comté are brine-washed or smear-ripened. Only some are soft, such as Taleggio, Epoisses and Munster, so a server who says every one is soft will be wrong at the table.",
+					"fix": "Inside it's much milder, often soft, savory and a little meaty.",
+					"lens": "fact",
+					"key": "dairy-3-fact-1"
+				},
+				{
+					"id": "fd_0171",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's rubbed with brine as it ages, so the rind turns orange and smells bold.",
+					"because": "The guest asked what it is, and the line never says it is a cheese or gives an example. It opens on the process, so a nervous server answering at the table sounds like they skipped the answer. The partner card fd_0170 names Brie and Camembert. Taleggio is the washed rind a guest is most likely to know.",
+					"fix": "It's a cheese like Taleggio, rubbed with brine as it ages, so the rind turns orange and smells bold.",
+					"lens": "floor",
+					"key": "dairy-3-floor-2"
+				},
+				{
+					"id": "fd_0170",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "A firm, chalky center means it is young, not spoiled.",
+					"because": "\"Not spoiled\" is a condition assurance a server would repeat about a specific wheel. The true fact is that a chalky center is normal in a young cheese. The card should state that and leave spoilage calls to the kitchen.",
+					"fix": "A firm, chalky center means it is young, and that is normal.",
+					"lens": "safety",
+					"key": "dairy-3-safety-3"
+				},
+				{
+					"id": "fd_0170",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "cow's milk, sometimes goat's milk, sometimes sheep's milk, sometimes added cream",
+					"because": "The rind is a surface-ripening Penicillium mold, grown on the cheese and eaten with it. Guests with a mold or penicillin concern often ask about it, but the one place ingredients act as warnings does not list it.",
+					"fix": "cow's milk, sometimes goat's milk, sometimes sheep's milk, sometimes added cream, white mold cultures",
+					"lens": "safety",
+					"key": "dairy-3-safety-4"
+				},
+				{
+					"key": "dairy-critic-1",
+					"id": "fd_0161",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Confusion not linked from this side. Ghee (fd_0162) lists Brown Butter under confusedWithTerms and its notThis contrasts the two, but Brown Butter has Ghee only in seeAlsoTerms and no notThis. Both are butter whose solids toast, so a server who reads only this card cannot tell them apart.",
+					"because": "Confusion not linked from this side. Ghee (fd_0162) lists Brown Butter under confusedWithTerms and its notThis contrasts the two, but Brown Butter has Ghee only in seeAlsoTerms and no notThis. Both are butter whose solids toast, so a server who reads only this card cannot tell them apart.",
+					"fix": "Move Ghee from seeAlsoTerms to confusedWithTerms, keeping Meunière and Clarified Butter in seeAlsoTerms. Add notThis: \"Not ghee, which toasts the solids and then strains them out. Brown butter keeps them in, and that is the flavor.\" The card is at 588 characters, so it has room."
+				},
+				{
+					"key": "dairy-critic-2",
+					"id": "fd_0165",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The confusions are one-sided. Mascarpone (fd_0164) and Fromage Blanc (fd_0158) both list Ricotta under confusedWithTerms, but Ricotta lists neither as a confusion and has no notThis. Mascarpone even sits in its seeAlsoTerms. The origin (\"the name means recooked\") also repeats the first clause of the why word for word.",
+					"because": "The confusions are one-sided. Mascarpone (fd_0164) and Fromage Blanc (fd_0158) both list Ricotta under confusedWithTerms, but Ricotta lists neither as a confusion and has no notThis. Mascarpone even sits in its seeAlsoTerms. The origin (\"the name means recooked\") also repeats the first clause of the why word for word.",
+					"fix": "Set confusedWithTerms to [\"Mascarpone\", \"Fromage Blanc\"] and remove Mascarpone from seeAlsoTerms. Add notThis: \"Not mascarpone, which is dense set cream, or fromage blanc, which is smooth and tangy. Ricotta is light, fluffy curds.\" Cut the origin to \"Italy, a by-product of cheesemaking\", or drop it, to pay for the notThis."
+				},
+				{
+					"key": "dairy-critic-3",
+					"id": "fd_0168",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The confusion is one-sided. Chèvre (fd_0156) lists Feta under confusedWithTerms, but Feta has no confusedWithTerms and no notThis. Fresh goat cheese and feta get crumbled onto the same salads and are genuinely mixed up.",
+					"because": "The confusion is one-sided. Chèvre (fd_0156) lists Feta under confusedWithTerms, but Feta has no confusedWithTerms and no notThis. Fresh goat cheese and feta get crumbled onto the same salads and are genuinely mixed up.",
+					"fix": "Add confusedWithTerms [\"Chèvre\"] and notThis: \"Not chèvre, which is soft, unbrined goat cheese. Feta is firmer, saltier and aged in brine.\" The card is at 606 characters, so it has room."
+				},
+				{
+					"key": "dairy-critic-4",
+					"id": "fd_0164",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity. The gist is 70 characters and the only trap is 57, a gap of 13. That is past the roughly 10-character tolerance, and the gist is the longest option on the card.",
+					"because": "Length parity. The gist is 70 characters and the only trap is 57, a gap of 13. That is past the roughly 10-character tolerance, and the gist is the longest option on the card.",
+					"fix": "Shorten the gist, for example to \"Silky Italian cheese of cream set with a mild acid, not rennet\" (about 62 characters). Do not pad the trap."
+				},
+				{
+					"key": "dairy-critic-5",
+					"id": "fd_0163",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity. At 73 characters this is the longest gist in the section, and it is 9 characters longer than its trap (64), so the gist is the longest option on the card.",
+					"because": "Length parity. At 73 characters this is the longest gist in the section, and it is 9 characters longer than its trap (64), so the gist is the longest option on the card.",
+					"fix": "Shorten the gist to about 63 characters, for example \"Butter beaten with herbs, chilled in a log, sliced onto hot food\". Separately, write the French name in the why with its accents: \"maître d'hôtel butter\"."
+				},
+				{
+					"key": "dairy-critic-6",
+					"id": "fd_0171",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "At 781 characters this is the longest card in the section. Its note (\"The smell is far bigger than the taste\") repeats what the guest line already says (\"Inside it's much milder\"). The brief names a note that restates other text as the cheapest cut.",
+					"because": "At 781 characters this is the longest card in the section. Its note (\"The smell is far bigger than the taste\") repeats what the guest line already says (\"Inside it's much milder\"). The brief names a note that restates other text as the cheapest cut.",
+					"fix": "Cut the note to \"The rind is edible but strong, and many guests leave it.\" Optionally trim the guest line toward the 150-character aim (it is 164 now)."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "dairy-1-fact-1",
+					"action": "applied",
+					"reason": "The why now says the cultures give the lemony tang and goat's milk fatty acids give the goaty note. The trap why was also changed to match: the tang comes from cultures, not from lemon juice."
+				},
+				{
+					"finding": "dairy-1-fact-2",
+					"action": "applied",
+					"reason": "Origin replaced with 'English for Parmigiano-Reggiano, though US parmesan can be domestic'. This also drops the partial list of PDO provinces."
+				},
+				{
+					"finding": "dairy-1-fact-3",
+					"action": "applied",
+					"reason": "The why now says 'aged 12 months or far longer', so 36 months no longer reads as a ceiling."
+				},
+				{
+					"finding": "dairy-1-fact-4",
+					"action": "applied",
+					"reason": "notThis now ends 'set without heat' in place of 'set cold'."
+				},
+				{
+					"finding": "dairy-1-floor-5",
+					"action": "applied",
+					"reason": "The gist now says the solids are left in: 'Butter cooked until its milk solids toast, left in for a nutty taste'. The suggested wording used 'brown', which may not appear in this gist, so 'toast' is used instead. At 67 characters it stays within 5 of the trap."
+				},
+				{
+					"finding": "dairy-1-floor-6",
+					"action": "applied",
+					"reason": "The gist now marks this card off from Ghee: 'Mild, pale butterfat, most milk solids skimmed off before they brown'. The same change answers safety-12."
+				},
+				{
+					"finding": "dairy-1-floor-7",
+					"action": "applied",
+					"reason": "The guest line no longer claims house dishes. It now reads 'the classic secret to tender biscuits and juicy fried chicken'."
+				},
+				{
+					"finding": "dairy-1-floor-8",
+					"action": "applied",
+					"reason": "The guest line's second sentence now reads 'It's lovely with beets, honey or a warm salad.' It points at no dish on the menu and no longer echoes the Crème Fraîche line."
+				},
+				{
+					"finding": "dairy-1-floor-9",
+					"action": "applied",
+					"reason": "'Aged at least a year' is removed and the line now says 'hard, long-aged cheese'. 'Italian' is dropped as well, because a domestic parmesan need not be Italian, which is the point of the finding."
+				},
+				{
+					"finding": "dairy-1-floor-10",
+					"action": "applied",
+					"reason": "'Rich enough to boil' is replaced with plain words: 'Thick, mild cultured cream that won't curdle when hot'. It is kept at 53 characters so the gist is no longer than its 53-character trap."
+				},
+				{
+					"finding": "dairy-1-floor-11",
+					"action": "applied",
+					"reason": "The fragment is replaced with 'It's rich and warm.' and 'deeply savory' is dropped."
+				},
+				{
+					"finding": "dairy-1-safety-12",
+					"action": "applied",
+					"reason": "The gist now says 'most milk solids skimmed off', so it no longer implies that no milk is left. The why also changed 'with them gone' to 'with most of them gone'."
+				},
+				{
+					"finding": "dairy-1-safety-13",
+					"action": "applied",
+					"reason": "The guest line now reads 'butter melted down to its golden fat, with the milky bits skimmed off'. 'Just the pure' is gone."
+				},
+				{
+					"finding": "dairy-1-safety-14",
+					"action": "applied",
+					"reason": "The guest line no longer says what this kitchen's dishes are made with. It now describes buttermilk as the classic for biscuits and fried chicken, as the fix suggested."
+				},
+				{
+					"finding": "dairy-1-safety-15",
+					"action": "applied",
+					"reason": "'Made from butter alone' is removed. The trap why now says only that the name describes the color and hazelnut smell, not a blend with ground nuts."
+				},
+				{
+					"finding": "dairy-2-fact-1",
+					"action": "applied",
+					"reason": "Kept the Fior di Latte alias, which means cow's-milk mozzarella, and dropped 'sometimes buffalo milk' from madeWith, so the card no longer contradicts its own name."
+				},
+				{
+					"finding": "dairy-2-fact-2",
+					"action": "applied",
+					"reason": "Removed the lexiconSlug. The butterfat survey is not the long-form essay on ghee, and no other candidate fits."
+				},
+				{
+					"finding": "dairy-2-floor-3",
+					"action": "applied",
+					"reason": "The gist now opens on the noun 'Wheel' and drops the jargon word 'paste': 'Wheel pierced so a mold culture grows in veins, sharp, salty, creamy' (68 chars)."
+				},
+				{
+					"finding": "dairy-2-floor-4",
+					"action": "applied",
+					"reason": "The guest line now says 'mixed with herbs and seasonings' in place of 'whipped with herbs and garlic', so it promises no particular flavoring."
+				},
+				{
+					"finding": "dairy-2-safety-5",
+					"action": "applied",
+					"reason": "Took the suggested guest line: 'pure' and 'all that's left' are gone, and it now reads as a butter flavor, not the absence of milk."
+				},
+				{
+					"finding": "dairy-2-safety-6",
+					"action": "applied",
+					"reason": "Changed the gist to 'Butter simmered until its milk solids toast, then strained out' (62 chars). It keeps butter as the subject and was shortened to stay within length parity of the 57-char trap."
+				},
+				{
+					"finding": "dairy-2-safety-7",
+					"action": "applied",
+					"reason": "Replaced 'edible mold' with 'a mold culture', so the gist describes the mold and makes no claim that it is safe to eat. This is combined with the floor-3 rewrite."
+				},
+				{
+					"finding": "dairy-3-fact-1",
+					"action": "applied",
+					"reason": "Guest line now says the inside is \"often soft\", since semi-firm washed rinds such as Raclette and Appenzeller exist."
+				},
+				{
+					"finding": "dairy-3-floor-2",
+					"action": "applied",
+					"reason": "Guest line now opens \"It's a cheese like Taleggio,\" so it answers what the thing is and gives a familiar example before the process."
+				},
+				{
+					"finding": "dairy-3-safety-3",
+					"action": "applied",
+					"reason": "Note now reads that a chalky center means it is young \"and that is normal\", which drops the \"not spoiled\" condition assurance."
+				},
+				{
+					"finding": "dairy-3-safety-4",
+					"action": "applied",
+					"reason": "Added \"white mold cultures\" to madeWith so the edible Penicillium rind shows up in the warning list."
+				},
+				{
+					"finding": "dairy-critic-1",
+					"action": "applied",
+					"reason": "Moved Ghee from seeAlsoTerms to confusedWithTerms, kept Meunière and Clarified Butter in seeAlsoTerms, and added the suggested notThis (card now 700 characters)."
+				},
+				{
+					"finding": "dairy-critic-2",
+					"action": "applied",
+					"reason": "Set confusedWithTerms to Mascarpone and Fromage Blanc, removed Mascarpone from seeAlsoTerms, added the notThis, and cut the origin to 'Italy, a by-product of cheesemaking' (card now 682 characters)."
+				},
+				{
+					"finding": "dairy-critic-3",
+					"action": "applied",
+					"reason": "Added confusedWithTerms Chèvre and the notThis contrasting soft unbrined goat cheese with brined feta (card now 697 characters)."
+				},
+				{
+					"finding": "dairy-critic-4",
+					"action": "applied",
+					"reason": "Shortened the gist to 'Silky Italian cheese of cream set with a mild acid, not rennet' (62 characters against the 57-character trap), and left the trap unpadded."
+				},
+				{
+					"finding": "dairy-critic-5",
+					"action": "applied",
+					"reason": "Shortened the gist to 'Butter beaten with herbs, chilled in a log, sliced onto hot food' (64, level with the trap) and wrote the French name in the why as maître d'hôtel butter."
+				},
+				{
+					"finding": "dairy-critic-6",
+					"action": "applied",
+					"reason": "Cut the note to its rind sentence and trimmed the guest line from 164 to 137 characters, so the card drops from 781 to 714."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0161",
+						"issue": "Confusion not linked from this side. Ghee (fd_0162) lists Brown Butter under confusedWithTerms and its notThis contrasts the two, but Brown Butter has Ghee only in seeAlsoTerms and no notThis. Both are butter whose solids toast, so a server who reads only this card cannot tell them apart.",
+						"fix": "Move Ghee from seeAlsoTerms to confusedWithTerms, keeping Meunière and Clarified Butter in seeAlsoTerms. Add notThis: \"Not ghee, which toasts the solids and then strains them out. Brown butter keeps them in, and that is the flavor.\" The card is at 588 characters, so it has room."
+					},
+					{
+						"id": "fd_0165",
+						"issue": "The confusions are one-sided. Mascarpone (fd_0164) and Fromage Blanc (fd_0158) both list Ricotta under confusedWithTerms, but Ricotta lists neither as a confusion and has no notThis. Mascarpone even sits in its seeAlsoTerms. The origin (\"the name means recooked\") also repeats the first clause of the why word for word.",
+						"fix": "Set confusedWithTerms to [\"Mascarpone\", \"Fromage Blanc\"] and remove Mascarpone from seeAlsoTerms. Add notThis: \"Not mascarpone, which is dense set cream, or fromage blanc, which is smooth and tangy. Ricotta is light, fluffy curds.\" Cut the origin to \"Italy, a by-product of cheesemaking\", or drop it, to pay for the notThis."
+					},
+					{
+						"id": "fd_0168",
+						"issue": "The confusion is one-sided. Chèvre (fd_0156) lists Feta under confusedWithTerms, but Feta has no confusedWithTerms and no notThis. Fresh goat cheese and feta get crumbled onto the same salads and are genuinely mixed up.",
+						"fix": "Add confusedWithTerms [\"Chèvre\"] and notThis: \"Not chèvre, which is soft, unbrined goat cheese. Feta is firmer, saltier and aged in brine.\" The card is at 606 characters, so it has room."
+					},
+					{
+						"id": "fd_0164",
+						"issue": "Length parity. The gist is 70 characters and the only trap is 57, a gap of 13. That is past the roughly 10-character tolerance, and the gist is the longest option on the card.",
+						"fix": "Shorten the gist, for example to \"Silky Italian cheese of cream set with a mild acid, not rennet\" (about 62 characters). Do not pad the trap."
+					},
+					{
+						"id": "fd_0163",
+						"issue": "Length parity. At 73 characters this is the longest gist in the section, and it is 9 characters longer than its trap (64), so the gist is the longest option on the card.",
+						"fix": "Shorten the gist to about 63 characters, for example \"Butter beaten with herbs, chilled in a log, sliced onto hot food\". Separately, write the French name in the why with its accents: \"maître d'hôtel butter\"."
+					},
+					{
+						"id": "fd_0171",
+						"issue": "At 781 characters this is the longest card in the section. Its note (\"The smell is far bigger than the taste\") repeats what the guest line already says (\"Inside it's much milder\"). The brief names a note that restates other text as the cheapest cut.",
+						"fix": "Cut the note to \"The rind is edible but strong, and many guests leave it.\" Optionally trim the guest line toward the 150-character aim (it is 164 now)."
+					}
+				],
+				"notes": "No card fails the build gate. The section mean is 634 characters of prose against the 720 ceiling. Every card is between 491 and 781 characters, and every field is inside its band. I found no verdict words, no em or en dashes, no banned substrings and no British spellings. No term, alias or listed word appears in a gist or trap. None of the roster rows carries a knownPacketError, so no trap is owed. Both accented terms (Chèvre, Crème Fraîche) have a say line, and every \"say\" follows the key. Pairs linked correctly in both directions: Burrata and Fresh Mozzarella, Bloomy Rind and Washed Rind, Clarified Butter and Ghee. The problems above are the three one-sided confusions and two length-parity cases. Minor points, not worth a gate: several madeWith lists leave out salt and rennet (Feta, Fresh Mozzarella, Burrata), and Brown Butter and Ghee have similar gists, though \"left in\" and \"strained out\" do tell them apart. I found no cross-section confusion missing: Brown Butter to Meunière and Compound Butter to Beurre Blanc are seeAlso links, which is correct."
+			},
+			"acceptedRejected": []
+		}
+	]
+}
