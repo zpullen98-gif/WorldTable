@@ -1,6 +1,150 @@
 {
   "cards": [
     {
+      "id": "fd_0064",
+      "term": "Andouille",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0065",
+      "term": "Chorizo",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0066",
+      "term": "Coppa",
+      "section": "cured",
+      "aliases": [
+        "Capocollo",
+        "Capicola"
+      ]
+    },
+    {
+      "id": "fd_0067",
+      "term": "Country Ham",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0068",
+      "term": "Guanciale",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0069",
+      "term": "Lardo",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0070",
+      "term": "Lomo",
+      "section": "cured",
+      "aliases": [
+        "Lomo Embuchado",
+        "Lomo Curado"
+      ]
+    },
+    {
+      "id": "fd_0071",
+      "term": "Pancetta",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0072",
+      "term": "Pastrami",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0073",
+      "term": "Pâté",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0074",
+      "term": "Prosciutto",
+      "section": "cured",
+      "aliases": [
+        "Prosciutto Crudo",
+        "Prosciutto di Parma",
+        "Parma Ham",
+        "San Daniele"
+      ]
+    },
+    {
+      "id": "fd_0075",
+      "term": "Rillettes",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0076",
+      "term": "Speck",
+      "section": "cured",
+      "aliases": [
+        "Speck Alto Adige"
+      ]
+    },
+    {
+      "id": "fd_0077",
+      "term": "Tasso",
+      "section": "cured",
+      "aliases": [
+        "Tasso Ham"
+      ]
+    },
+    {
+      "id": "fd_0078",
+      "term": "Charcuterie",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0079",
+      "term": "Bresaola",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0080",
+      "term": "Soppressata",
+      "section": "cured",
+      "aliases": [
+        "Sopressata"
+      ]
+    },
+    {
+      "id": "fd_0081",
+      "term": "'Nduja",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0082",
+      "term": "Jamón Ibérico",
+      "section": "cured",
+      "aliases": [
+        "Pata Negra",
+        "Ibérico Ham"
+      ]
+    },
+    {
+      "id": "fd_0083",
+      "term": "Bacon",
+      "section": "cured",
+      "aliases": [
+        "Streaky Bacon",
+        "Slab Bacon"
+      ]
+    },
+    {
+      "id": "fd_0084",
+      "term": "Terrine",
+      "section": "cured"
+    },
+    {
+      "id": "fd_0085",
+      "term": "Corned Beef",
+      "section": "cured",
+      "aliases": [
+        "Salt Beef"
+      ]
+    },
+    {
       "id": "fd_0086",
       "term": "Ribeye Cap",
       "section": "cuts",
@@ -179,6 +323,54 @@
     }
   ],
   "byLexicon": {
+    "tasso-and-cajun-andouille": [
+      "fd_0064",
+      "fd_0077"
+    ],
+    "chorizo-spanish-vs-mexican": [
+      "fd_0065"
+    ],
+    "coppa-capocollo": [
+      "fd_0066"
+    ],
+    "american-country-ham": [
+      "fd_0067"
+    ],
+    "guanciale-jowl-and-lardo": [
+      "fd_0068",
+      "fd_0069"
+    ],
+    "lomo-embuchado": [
+      "fd_0070"
+    ],
+    "pancetta-tesa-and-arrotolata": [
+      "fd_0071"
+    ],
+    "pate-and-terrine": [
+      "fd_0073",
+      "fd_0084"
+    ],
+    "prosciutto-di-parma-and-san-daniele": [
+      "fd_0074"
+    ],
+    "speck-alto-adige": [
+      "fd_0076"
+    ],
+    "building-the-charcuterie-board": [
+      "fd_0078"
+    ],
+    "bresaola-della-valtellina": [
+      "fd_0079"
+    ],
+    "soppressata": [
+      "fd_0080"
+    ],
+    "nduja": [
+      "fd_0081"
+    ],
+    "jamon-iberico-and-the-bellota-grades": [
+      "fd_0082"
+    ],
     "shank-oxtail-and-cheek": [
       "fd_0087",
       "fd_0102",

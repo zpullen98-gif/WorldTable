@@ -1,0 +1,984 @@
+{
+	"section": "cured",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0064",
+				"fd_0065",
+				"fd_0066",
+				"fd_0067",
+				"fd_0068",
+				"fd_0069",
+				"fd_0070",
+				"fd_0071",
+				"fd_0072",
+				"fd_0073",
+				"fd_0074",
+				"fd_0075",
+				"fd_0076",
+				"fd_0077",
+				"fd_0078",
+				"fd_0079",
+				"fd_0080",
+				"fd_0081",
+				"fd_0082",
+				"fd_0083",
+				"fd_0084",
+				"fd_0085"
+			],
+			"findings": [
+				{
+					"id": "fd_0066",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "It works harder than the leg, so ribbons of fat run through the lean,",
+					"because": "False mechanism. Muscle work does not create marbling (hard-working muscles get tougher and darker, not fattier, and the leg works hard too). Coppa is marbled because the neck-to-shoulder collar is a bundle of several small muscles with seams of fat between them, where the leg is a few big lean muscles.",
+					"fix": "It is a bundle of muscles, so ribbons of fat run through the lean,",
+					"lens": "fact",
+					"key": "cured-1-fact-1"
+				},
+				{
+					"id": "fd_0071",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "and it is sliced for boards as often as it is diced.",
+					"because": "A trap's why must be true, and this contradicts the card's own note (\"Usually diced and cooked crisp\"). Pancetta is overwhelmingly a cooking ingredient; only thin-sliced rolled pancetta sometimes goes on a board. \"As often\" is not true.",
+					"fix": "It is the belly, not the leg. Diced is the norm, though rolled is sliced thin too.",
+					"lens": "fact",
+					"key": "cured-1-fact-2"
+				},
+				{
+					"id": "fd_0064",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "a strong tripe sausage that shares only the name",
+					"because": "They share more than the name: Louisiana andouille descends from the French one, brought by French settlers, and both are smoked pork sausages. What differs is the filling (French: pig intestines and stomach; Cajun: shoulder meat).",
+					"fix": "Not French andouille, its ancestor, a strong smoked tripe sausage.",
+					"lens": "fact",
+					"key": "cured-1-fact-3"
+				},
+				{
+					"id": "fd_0069",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "cured for six months or more, traditionally in marble tubs in Tuscany",
+					"because": "Six months in marble basins is the rule for Lardo di Colonnata specifically. Lardo d'Arnad (the other protected lardo) cures a minimum of three months in wooden tubs, and house-made restaurant lardo is often shorter still. Stated as a general fact about lardo it is too strong; tie the marble to Colonnata.",
+					"fix": "cured for months, traditionally in marble tubs in Colonnata, Tuscany",
+					"lens": "fact",
+					"key": "cured-1-fact-4"
+				},
+				{
+					"id": "fd_0070",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "It's the leanest meat on the board",
+					"because": "Not reliably true of a mixed board: Bresaola (a card on this roster, fd_0079) is leaner, at roughly 2 percent fat. Lomo is the leanest of the cured PORK cuts. A server saying this beside bresaola would be wrong.",
+					"fix": "It's as lean as cured pork gets",
+					"lens": "fact",
+					"key": "cured-1-fact-5"
+				},
+				{
+					"id": "fd_0070",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "It's the leanest meat on the board",
+					"because": "A server cannot promise this. Bresaola (fd_0079, on this same roster) is beef eye of round and is leaner than cured pork loin, and boards differ by house. A new hire will repeat the superlative at a table where bresaola sits beside it. Lomo is lean; it is not reliably the leanest.",
+					"fix": "It's lean for a cured meat",
+					"lens": "floor",
+					"key": "cured-1-floor-6"
+				},
+				{
+					"id": "fd_0071",
+					"field": "guest",
+					"severity": "style",
+					"claim": "It tastes cleaner and more purely porky than American bacon.",
+					"because": "Read aloud, \"more purely porky\" is a tongue-twister (three p sounds in a row) and sounds read off a card. A nervous third-day server will trip on it.",
+					"fix": "It tastes cleaner and sweeter than American bacon, all pork and spice.",
+					"lens": "floor",
+					"key": "cured-1-floor-7"
+				},
+				{
+					"id": "fd_0071",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "it is sliced for boards as often as it is diced",
+					"because": "This contradicts the card's own note (\"Usually diced and cooked crisp\") and the floor reality: in American dining rooms pancetta is overwhelmingly diced and cooked, and only rolled pancetta is occasionally sliced for a board. The falsity of the trap is the cut (leg), so the explanation should rest on that alone.",
+					"fix": "It is the belly, not the leg. Cured pork leg is ham, and it is sliced thin, not diced.",
+					"lens": "floor",
+					"key": "cured-1-floor-8"
+				},
+				{
+					"id": "fd_0066",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "It works harder than the leg, so ribbons of fat run through the lean",
+					"because": "False mechanism that a server will repeat. Hard work does not make marbling (hard-working muscles get tougher and leaner, and the leg works hard too). Coppa is marbled because the collar is a bundle of several small muscles with seams of fat between them.",
+					"fix": "Several small muscles meet here, so ribbons of fat run through the lean",
+					"lens": "floor",
+					"key": "cured-1-floor-9"
+				},
+				{
+					"id": "fd_0067",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Southern pork leg",
+					"because": "Shown as a bare answer option beside Italian and Spanish neighbours, \"Southern\" does not say southern what (southern Italy cures pork legs too). The guest line says \"the South's\", which works aloud in an American dining room, but the written option should name the country the way every neighbouring gist does.",
+					"fix": "American pork leg, dry-salted, often smoked, then aged for months",
+					"lens": "floor",
+					"key": "cured-1-floor-10"
+				},
+				{
+					"id": "fd_0065",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "The Spanish kind is cured and sliced like salami, and the Mexican kind is fresh, crumbled and spicier.",
+					"because": "The guest asked what is on THIS plate, and the line hands them two answers without saying which they are getting. The note tells the server to ask the kitchen, but the spoken line should steer the server to commit to the house's kind first. Same length budget, house kind first.",
+					"fix": "Ours is the Spanish kind, cured and sliced like salami. The Mexican kind is fresh, crumbled and spicier.",
+					"lens": "floor",
+					"key": "cured-1-floor-11"
+				},
+				{
+					"id": "fd_0068",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's cured pork jowl, like an unsmoked Italian bacon",
+					"because": "Many guests do not know the word jowl, and the line never says where on the pig it is. The packet's own hire wrote \"cheeks\", which is the word guests know. One plain word fixes it with no added length by dropping \"Italian\" (the dishes named after it already say Italy).",
+					"fix": "It's cured pork jowl, the cheek, like an unsmoked bacon",
+					"lens": "floor",
+					"key": "cured-1-floor-12"
+				},
+				{
+					"id": "fd_0070",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note on the card)",
+					"because": "Missing raw-service fact. Lomo embuchado is dry-cured and air-dried, never cooked, and it goes to the table as is in thin slices. The neighboring whole-muscle cards (fd_0066, fd_0069, fd_0067) all state this plainly, and this card's notThis even raises a cooked fresh-beef meaning, so a server has nothing to say when a guest asks whether it is cooked. A safety fact justifies the added length.",
+					"fix": "Air-dried, not cooked, and served as is in thin slices.",
+					"lens": "safety",
+					"key": "cured-1-safety-13"
+				},
+				{
+					"id": "fd_0065",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Cured Spanish chorizo is sliced as is",
+					"because": "\"Sliced as is\" does not tell a new hire that dry-cured chorizo is uncooked meat. The card sets \"cured\" against \"raw\" throughout, so a server may tell a guest the Spanish kind is not raw or is cooked. It is air-dried and never cooked, which is the fact fd_0066 states outright. Spain also sells soft cooking chorizo, so \"ask the kitchen\" should stay.",
+					"fix": "Ask the kitchen which kind. Cured Spanish chorizo is air-dried, not cooked, and sliced as is. Fresh Mexican chorizo is always cooked.",
+					"lens": "safety",
+					"key": "cured-1-safety-14"
+				},
+				{
+					"id": "fd_0065",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "the Spanish kind is cured, not raw.",
+					"because": "\"Not raw\" reads as an assurance that Spanish chorizo is cooked. Dry-cured chorizo is uncooked, air-dried meat. The true contrast is dry-cured against fresh, not cooked against raw.",
+					"fix": "The red comes from paprika or dried chiles, and the Spanish kind is dry-cured, not fresh.",
+					"lens": "safety",
+					"key": "cured-1-safety-15"
+				},
+				{
+					"id": "fd_0071",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "it is sliced for boards as often as it is diced.",
+					"because": "It contradicts the card's own note (\"Usually diced and cooked crisp\") and overstates uncooked service. Pancetta is mostly cooked. Only thin-sliced rolled pancetta sometimes goes out uncooked, and that depends on the kitchen. A server who learns \"as often\" will assume board service is routine.",
+					"fix": "It is the belly, not the leg, and the rolled kind is also sliced thin.",
+					"lens": "safety",
+					"key": "cured-1-safety-16"
+				},
+				{
+					"id": "fd_0064",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "This one is all meat, firm and smoked, and it is sliced into coins.",
+					"because": "\"All meat\" is a claim about what the sausage lacks (no rice, no fillers, no binders). Commercial andouille can carry binders or other additions, and recipes vary. Say what it is instead.",
+					"fix": "That is boudin. This one is chunked pork, firm and smoked, sliced into coins.",
+					"lens": "safety",
+					"key": "cured-1-safety-17"
+				},
+				{
+					"id": "fd_0076",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "aged about five months, so it eats denser than prosciutto",
+					"because": "The causal link is backwards. About five months (the PGI average is 22 weeks) is far SHORTER than prosciutto's year or more, so the aging time cannot be why it is denser. Speck is firmer because the leg is boned and opened flat, spice-rubbed and cold smoked, so it loses moisture faster. A guest who knows prosciutto ages longer will catch the server out.",
+					"fix": "aged about five months. Boned, flat and smoked, it eats firmer.",
+					"lens": "fact",
+					"key": "cured-2-fact-1"
+				},
+				{
+					"id": "fd_0074",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "A whole hind leg is packed in sea salt",
+					"because": "Parma and San Daniele legs are not packed or buried in salt. The salt master rubs the leg by hand: damp salt on the skin, a light coat of dry salt on the exposed meat, in two applications over about three weeks. Burying in salt is the Spanish jamon method, and the light salting is exactly why prosciutto is sweeter, which the card itself claims.",
+					"fix": "A whole hind leg is rubbed in sea salt",
+					"lens": "fact",
+					"key": "cured-2-fact-2"
+				},
+				{
+					"id": "fd_0074",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "It is never smoked and never cooked: salt, air and time do all the work.",
+					"because": "In Italian the word alone just means ham, and prosciutto cotto is a cooked ham that does appear on American menus and deli boards. The absolute 'never cooked' is true only of the crudo style this card teaches (the alias list shows that is the intent), so the trap's why should say so or a new hire will be contradicted by a cotto on a sandwich menu.",
+					"fix": "The crudo style is never smoked or cooked: salt, air and time do the work.",
+					"lens": "fact",
+					"key": "cured-2-fact-3"
+				},
+				{
+					"id": "fd_0073",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "not foie gras, a whole liver",
+					"because": "What defines foie gras is that it is the FATTENED liver of a duck or goose, not that it is whole: it is sold as lobes, torchon, mousse and even as pate de foie gras, and a chicken liver is also 'a whole liver'. A server repeating 'foie gras is a whole liver' gives the guest nothing to tell the two apart.",
+					"fix": "not foie gras, fatted liver",
+					"lens": "fact",
+					"key": "cured-2-fact-4"
+				},
+				{
+					"id": "fd_0073",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"pork\", \"liver\", \"pork fat\", \"often egg\", \"often cream\", \"often brandy\", \"sometimes pistachio\"",
+					"because": "The classic binder for a country pate is a panade of bread (or flour) soaked in milk or cream, so wheat is a genuinely classic ingredient and the one flag a guest would need that the list misses. 'pork fat' is already covered by 'pork' and can give up its slot within the 7-item cap.",
+					"fix": "\"pork\", \"liver\", \"often egg\", \"often cream\", \"often bread\", \"often brandy\", \"sometimes pistachio\"",
+					"lens": "fact",
+					"key": "cured-2-fact-5"
+				},
+				{
+					"id": "fd_0078",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often beef\", \"often duck\"",
+					"because": "For a board-level card the list flags pistachio, liver and wine but misses the two commonest hidden ingredients on a board: egg and cream or milk in the pate and terrine (this deck's own pate card lists both), and milk powder in many salami. Beef and duck are the least useful flags of the seven and can give up their slots.",
+					"fix": "\"sometimes egg\", \"sometimes milk\"",
+					"lens": "fact",
+					"key": "cured-2-fact-6"
+				},
+				{
+					"id": "fd_0079",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "breh-ZOH-lah",
+					"because": "The Italian is four syllables (breh-ZAH-oh-lah) and English dictionaries give the 'ow' form first (breh-ZOW-luh); the 'OH' form is a listed secondary variant. The house key has 'ow', so the card can carry the form closer to both the dictionary and the Italian.",
+					"fix": "breh-ZOW-lah",
+					"lens": "fact",
+					"key": "cured-2-fact-7"
+				},
+				{
+					"id": "fd_0075",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "then it's potted and served with warm toast",
+					"because": "\"Potted\" is kitchen jargon. An American guest hears the houseplant sense of the word, and a third-day server cannot explain it. Say the plain thing: it goes into a jar.",
+					"fix": "it's packed in a jar and served with toast",
+					"lens": "floor",
+					"key": "cured-2-floor-8"
+				},
+				{
+					"id": "fd_0075",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Think of French pulled pork you can spread.",
+					"because": "The card's own madeWith lists duck, rabbit and salmon, and many menus sell duck or salmon rillettes. A server who says \"pulled pork\" over a duck rillettes has named the wrong animal at the table. Keep the pulled-pork image but make it a comparison, not an identification.",
+					"fix": "Think pulled pork, but French and spreadable.",
+					"lens": "floor",
+					"key": "cured-2-floor-9"
+				},
+				{
+					"id": "fd_0077",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Despite the nickname it is not leg meat.",
+					"because": "The nickname is never stated. The reader has to find \"Tasso Ham\" in the aliases and also know that ham means hind leg. A new hire reads this sentence and does not know what is being corrected.",
+					"fix": "Called a ham, but it is not leg meat.",
+					"lens": "floor",
+					"key": "cured-2-floor-10"
+				},
+				{
+					"id": "fd_0078",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "like ham, salami, pâté and rillettes",
+					"because": "A guest who has to ask what charcuterie is will not know rillettes. The line explains one unknown French word with another and makes a nervous hire pronounce it, which invites a second \"what is that?\". Three familiar examples answer the question.",
+					"fix": "like ham, salami and pâté",
+					"lens": "floor",
+					"key": "cured-2-floor-11"
+				},
+				{
+					"id": "fd_0078",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "salting, smoking and potting meat, mostly pork, to keep",
+					"because": "\"Potting\" is jargon to a non-cook, and \"to keep\" is a clipped British usage that an American new hire will stumble on in a timed answer option. The fix also brings the gist from 71 to 65 characters, against a 74-character trap.",
+					"fix": "French craft of salting, smoking and preserving meat, mostly pork",
+					"lens": "floor",
+					"key": "cured-2-floor-12"
+				},
+				{
+					"id": "fd_0072",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Think corned beef with a bark and a smoky edge.",
+					"because": "\"Bark\" is barbecue-pit jargon for the dark spice crust and is not defined anywhere on the card. A reader who is not a cook cannot repeat it to a guest. The card already calls it a crust.",
+					"fix": "Think corned beef with a crust and a smoky edge.",
+					"lens": "floor",
+					"key": "cured-2-floor-13"
+				},
+				{
+					"id": "fd_0072",
+					"field": "guest",
+					"severity": "style",
+					"claim": "It's beef cured in a spiced brine, crusted with cracked pepper and coriander, smoked, then steamed until tender.",
+					"because": "This is the gist read aloud: four process steps in one breath sound recited off a card and are hard for a nervous hire to get through. Most guests know corned beef, so anchoring to it answers \"what is that?\" faster and more naturally.",
+					"fix": "It's beef cured like corned beef, then crusted in cracked pepper and coriander, smoked and steamed until tender.",
+					"lens": "floor",
+					"key": "cured-2-floor-14"
+				},
+				{
+					"id": "fd_0076",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "(no say given)",
+					"because": "The card itself tells the hire the word is German, and the German pronunciation is \"shpek\". A new hire will hesitate between \"spek\" and \"shpek\". An American dining room says it with a plain s, and one syllable costs nothing.",
+					"fix": "SPEK",
+					"lens": "floor",
+					"key": "cured-2-floor-15"
+				},
+				{
+					"id": "fd_0076",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "so ask on an Austrian menu",
+					"because": "It does not say who asks whom or what to ask. The server reading this is the one who is supposed to have the answer. State what the word may mean there so the hire knows what to check with the kitchen.",
+					"fix": "so on an Austrian menu it may be bacon",
+					"lens": "floor",
+					"key": "cured-2-floor-16"
+				},
+				{
+					"id": "fd_0079",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "the lean one on the board",
+					"because": "The card's own menu line sells it as a plated dish with arugula, lemon and Parmesan, so there is no board on the table. Said there, \"the lean one on the board\" makes no sense to the guest. State the leanness without assuming a board.",
+					"fix": "very lean",
+					"lens": "floor",
+					"key": "cured-2-floor-17"
+				},
+				{
+					"id": "fd_0073",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "Fully cooked, then served cold. A pink center usually comes from curing salt, not from undercooking.",
+					"because": "A server will repeat this as a blanket assurance, and pâté is the item guests most often ask about for doneness. It is not reliably true. Chicken and duck liver pâtés, mousses and parfaits are often cooked only until the center is still pink on purpose. Undercooked liver pâté is a documented cause of Campylobacter outbreaks. The card cannot tell the server that pink is only cure color, and recipes vary by kitchen.",
+					"fix": "Baked, then served cold. Liver versions are often left pink inside, so ask the kitchen how theirs is cooked.",
+					"lens": "safety",
+					"key": "cured-2-safety-18"
+				},
+				{
+					"id": "fd_0073",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"pork\", \"liver\", \"pork fat\", \"often egg\", \"often cream\", \"often brandy\", \"sometimes pistachio\"",
+					"because": "A classic country pâté is bound with a panade of bread or flour soaked in milk or cream, so wheat is a classic ingredient and the list leaves it out. The card's own menu line is a country pâté. Pork fat flags nothing that pork does not already flag, so that slot can carry the bread and stay within the 7-item limit.",
+					"fix": "\"pork\", \"liver\", \"often bread\", \"often egg\", \"often cream\", \"often brandy\", \"sometimes pistachio\"",
+					"lens": "safety",
+					"key": "cured-2-safety-19"
+				},
+				{
+					"id": "fd_0076",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "(no note on the card; guest line says \"It's a smoked cousin of prosciutto\")",
+					"because": "A raw-service fact is missing. Speck is dry cured, cold smoked and aged, never cooked, and is eaten raw like prosciutto. Guests and new hires hear \"smoked\" as \"cooked\". The only place the card says it is uncooked is a trap's why, which is never shown. The prosciutto and bresaola cards (fd_0074, fd_0079) both carry a \"Served raw\" note, so leaving it off here implies speck is different. With the note added the card's prose totals about 790 characters, under the 900 limit.",
+					"fix": "Add note: \"Served raw, as cured. Cold smoke flavors it but does not cook it.\"",
+					"lens": "safety",
+					"key": "cured-2-safety-20"
+				},
+				{
+					"id": "fd_0078",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note on the card)",
+					"because": "A raw-service fact is missing. Most of a board (dry-cured ham, salami, bresaola, speck, coppa) is cured and served raw, never cooked. \"Is any of this raw?\" is the question a server gets most often about a board, and the card gives no plain answer. With the note added the card's prose totals about 735 characters, under the 900 limit.",
+					"fix": "Add note: \"Dry-cured hams, salami and bresaola are served raw, as cured, never cooked.\"",
+					"lens": "safety",
+					"key": "cured-2-safety-21"
+				},
+				{
+					"id": "fd_0078",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"pork\", \"salt\", \"often beef\", \"often duck\", \"often liver\", \"often wine\", \"sometimes pistachio\"",
+					"because": "The guest line names pâté as part of the board. Pâté is classically bound with egg and cream (see fd_0073's own list), and mousses hold butter. The board's list flags neither egg nor milk. Salt and duck matter to no guest with an allergy, so those two slots can carry them within the 7-item limit.",
+					"fix": "\"pork\", \"often beef\", \"often liver\", \"sometimes egg\", \"sometimes cream\", \"often wine\", \"sometimes pistachio\"",
+					"lens": "safety",
+					"key": "cured-2-safety-22"
+				},
+				{
+					"id": "fd_0075",
+					"field": "why",
+					"severity": "verdict",
+					"claim": "and with no liver it tastes milder than pâté",
+					"because": "\"With no liver\" is a lacks claim a server will repeat as fact. A guest avoiding liver, which is common pregnancy advice, could rely on it, and the card cannot vouch for every kitchen's pot. The same comparison can be made by describing the pâté, with no assurance about this dish.",
+					"fix": "and it tastes milder than liver-rich pâté",
+					"lens": "safety",
+					"key": "cured-2-safety-23"
+				},
+				{
+					"id": "fd_0082",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "This ham comes only from the black Iberian breed and ages far longer.",
+					"because": "The Spanish quality norm (RD 4/2014) lets jamón ibérico come from 50 and 75 percent Iberian crosses, the sire normally Duroc, and most ibérico sold is crossbred. Only the black label is 100 percent Iberian. \"Only from the black Iberian breed\" is false as stated, and a trap's why must be true.",
+					"fix": "That describes serrano. This ham comes from Iberian-breed pigs and ages far longer.",
+					"lens": "fact",
+					"key": "cured-3-fact-1"
+				},
+				{
+					"id": "fd_0083",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "About a week in a salt and sugar cure firms it and turns the lean rosy",
+					"because": "Salt and sugar alone do not turn pork rosy. Without nitrite the lean cooks grey-brown. The pink comes from curing salt (nitrite), or celery powder as the card's own note says. The mechanism as written is wrong and contradicts the note.",
+					"fix": "A week in salt, sugar and curing salt firms it and keeps the lean rosy",
+					"lens": "fact",
+					"key": "cured-3-fact-2"
+				},
+				{
+					"id": "fd_0083",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "the same belly cured but never smoked",
+					"because": "\"Never\" is too strong. Pancetta affumicata (smoked pancetta) is a standard product in northern Italy and is sold in the US. Classic pancetta is unsmoked, but not by definition.",
+					"fix": "the same belly cured but usually not smoked",
+					"lens": "fact",
+					"key": "cured-3-fact-3"
+				},
+				{
+					"id": "fd_0083",
+					"field": "aliases",
+					"severity": "unclear",
+					"claim": "Lardons",
+					"because": "Lardons are not another name for bacon. They are small batons cut from bacon or, in French practice, from unsmoked salt-cured belly (poitrine salée). Listing the word as a straight alias teaches that lardons equals smoked American bacon, and nothing on the card explains the word.",
+					"fix": "Remove \"Lardons\" from aliases (keep Streaky Bacon, Slab Bacon).",
+					"lens": "fact",
+					"key": "cured-3-fact-4"
+				},
+				{
+					"id": "fd_0084",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"often pork liver\" ... \"sometimes gelatin\" (7 items, no bread or flour)",
+					"because": "Many classic country terrines and pâtés de campagne are bound with a panade of bread or flour soaked in milk or cream, so wheat is a genuinely common ingredient a guest would need flagged, and it is missing. The list is at the 7-item cap. \"often pork liver\" adds no flag that \"traditionally pork\" does not already carry, and liver is already named in the why.",
+					"fix": "Replace \"often pork liver\" with \"sometimes bread\" (keep egg, cream, pistachios, brandy, gelatin).",
+					"lens": "fact",
+					"key": "cured-3-fact-5"
+				},
+				{
+					"id": "fd_0080",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "then pressed under weights while it ferments and dries for weeks",
+					"because": "Traditional soppressata is pressed under weights only for the first days, to flatten it and drive out air. It is then hung to dry for weeks. The sentence reads as if it sits under weights for the whole cure.",
+					"fix": "pressed under weights for days, then hung to dry for weeks",
+					"lens": "fact",
+					"key": "cured-3-fact-6"
+				},
+				{
+					"id": "fd_0085",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's rosy, savory and a little tangy, the heart of a Reuben.",
+					"because": "Two problems when said aloud. No server says \"rosy\" at a table, so it sounds read off a card. \"Tangy\" is also not how corned beef tastes: the brine is salt, sugar and pickling spice with no acid, and the tang in a Reuben comes from the sauerkraut and dressing. A guest told \"tangy\" expects something sour. The honest words are salty and gently spiced.",
+					"fix": "It's pink, salty and gently spiced, the heart of a Reuben.",
+					"lens": "floor",
+					"key": "cured-3-floor-7"
+				},
+				{
+					"id": "fd_0083",
+					"field": "aliases",
+					"severity": "unclear",
+					"claim": "Lardons",
+					"because": "Lardons are not another name for bacon. They are short batons cut from slab bacon, and in French kitchens they are often unsmoked. A new hire will meet the word on a frisee salad or a coq au vin, and the card lists it without explaining it. Meanwhile the why spends its last sentence on British back bacon, which an American floor almost never needs. Swap that sentence for the definition so the alias is explained.",
+					"fix": "In why, replace \"British back bacon uses the leaner loin instead.\" with \"Lardons are short batons cut from the slab.\"",
+					"lens": "floor",
+					"key": "cured-3-floor-8"
+				},
+				{
+					"id": "fd_0082",
+					"field": "gist",
+					"severity": "style",
+					"claim": "Long-aged dry ham from Spain's black Iberian pigs, carved paper-thin",
+					"because": "The gist is an answer option under the term \"Jamón Ibérico\". \"Iberian\" is just the English form of the banned word \"iberico\", so a test taker matches it on sight without knowing anything. The build gate checks substrings and will not catch it. Both traps already say Spanish ham, so the breed and the aging should do the work without naming the breed after the term.",
+					"fix": "Long-aged dry ham from Spain's native black pigs, carved paper-thin",
+					"lens": "floor",
+					"key": "cured-3-floor-9"
+				},
+				{
+					"id": "fd_0080",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "Sweet means mild, with no chili, not sugary.",
+					"because": "\"With no chili\" is a lacks-claim a server will repeat to a guest who avoids peppers, and it is not reliably true: Calabrian dolce soppressata is commonly seasoned with sweet red pepper (a capsicum) and black pepper, and makers vary. The note also omits the real raw-service fact: soppressata is a fermented, dry-cured salami that is never cooked, which a server should be able to state plainly.",
+					"fix": "Dry-cured, never cooked. Sold hot or sweet: sweet means mild, not sugary. Know which is on the board.",
+					"lens": "safety",
+					"key": "cured-3-safety-10"
+				},
+				{
+					"id": "fd_0081",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note on the card)",
+					"because": "Missing raw-service fact. 'Nduja is a fermented, cured pork salami that is not cooked, and it is routinely served as it is, spread on bread or spooned over burrata as the card's own menu line shows. A server must be able to say so plainly when asked whether it is cooked. The card has room (about 630 characters of prose).",
+					"fix": "Add note: \"Cured and fermented, never cooked. Often served as it is, spread straight onto bread.\"",
+					"lens": "safety",
+					"key": "cured-3-safety-11"
+				},
+				{
+					"id": "fd_0084",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"traditionally pork\", \"often pork liver\", \"often brandy\", \"often egg\", \"sometimes cream\", \"sometimes pistachios\", \"sometimes gelatin\"",
+					"because": "The list omits wheat. A classic country terrine is very often bound with a panade (bread or breadcrumbs soaked in milk or cream), and some are bound with flour; wheat is exactly what a guest would need flagged, and the card's own serving line adds toast. The list is at the 7-item cap, so merge the two pork items to make room rather than dropping egg, cream, nuts, alcohol or gelatin.",
+					"fix": "[\"traditionally pork and pork liver\", \"often brandy\", \"often egg\", \"sometimes bread\", \"sometimes cream\", \"sometimes pistachios\", \"sometimes gelatin\"]",
+					"lens": "safety",
+					"key": "cured-3-safety-12"
+				},
+				{
+					"id": "fd_0084",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "Not every terrine is meat. Vegetables, fish or foie gras are layered the same way.",
+					"because": "Foie gras is meat (duck or goose liver), so offering it as an example of a terrine that is not meat is false, and a server could repeat it to a guest who does not eat meat. The true point is that not every terrine is pork or even meat; keep fish in view since a fish or shellfish terrine matters to a guest.",
+					"fix": "Not every terrine is pork. Vegetables, fish or foie gras are layered the same way.",
+					"lens": "safety",
+					"key": "cured-3-safety-13"
+				},
+				{
+					"id": "fd_0085",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "There is no corn in it.",
+					"because": "A flat lacks-claim about an ingredient. The point is etymology, not composition: commercial corned beef brines and the plate around it can carry corn-derived sugars such as dextrose or corn syrup, and recipes vary by kitchen. A server who learns this sentence will say it to a guest who avoids corn.",
+					"fix": "Corn here is an old word for the coarse grains of salt used in the cure, not the vegetable.",
+					"lens": "safety",
+					"key": "cured-3-safety-14"
+				},
+				{
+					"id": "fd_0083",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"pork\", \"salt\", \"sugar\", \"sometimes maple syrup\", \"sometimes black pepper\"",
+					"because": "The card's own note says bacon labeled uncured is cured with celery powder, yet celery is missing from the madeWith list, the only place ingredients-as-warnings live. Celery is a named major allergen in the EU, UK and Canada, and guests who react to it ask. There is room (5 of 7 items).",
+					"fix": "[\"pork\", \"salt\", \"sugar\", \"sometimes celery powder\", \"sometimes maple syrup\", \"sometimes black pepper\"]",
+					"lens": "safety",
+					"key": "cured-3-safety-15"
+				},
+				{
+					"key": "cured-critic-1",
+					"id": "fd_0073",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The Pâté gist and the Terrine gist (fd_0084) are nearly the same answer option. Pâté reads \"Seasoned ground meat, fat and often liver, baked and served cold\". Terrine reads \"Loaf of seasoned chopped meats baked in a mold, chilled and sliced\". A reader shown both under either term could not choose between them. The two notThis lines say the real difference is spreadable mixture versus molded, sliced loaf, and the Pâté gist never says it spreads.",
+					"because": "The Pâté gist and the Terrine gist (fd_0084) are nearly the same answer option. Pâté reads \"Seasoned ground meat, fat and often liver, baked and served cold\". Terrine reads \"Loaf of seasoned chopped meats baked in a mold, chilled and sliced\". A reader shown both under either term could not choose between them. The two notThis lines say the real difference is spreadable mixture versus molded, sliced loaf, and the Pâté gist never says it spreads.",
+					"fix": "Change the fd_0073 gist to \"Ground meat, fat and often liver, baked, chilled, spread on toast\". That is 63 characters, still shorter than the card's 65-character trap. Leave the fd_0084 gist as it is, since \"baked in a mold ... sliced\" already marks it."
+				},
+				{
+					"key": "cured-critic-2",
+					"id": "fd_0075",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "confusedWithTerms lists Confit, but notThis only separates rillettes from pâté. Nothing on the card tells the reader how to tell it from confit, which is the point of a confusion link.",
+					"because": "confusedWithTerms lists Confit, but notThis only separates rillettes from pâté. Nothing on the card tells the reader how to tell it from confit, which is the point of a confusion link.",
+					"fix": "Either move Confit to seeAlsoTerms, which has room, or replace notThis with \"Not pâté, which is ground and baked, usually with liver. Not confit, which is served whole, not shredded.\" That is 105 characters against 106 now, so the card total barely moves."
+				},
+				{
+					"key": "cured-critic-3",
+					"id": "fd_0068",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "confusedWithTerms lists Pancetta and Bacon, but notThis only covers pancetta. The bacon distinction (smoke, belly versus jowl) appears only inside a trap's why, which is never shown on the card.",
+					"because": "confusedWithTerms lists Pancetta and Bacon, but notThis only covers pancetta. The bacon distinction (smoke, belly versus jowl) appears only inside a trap's why, which is never shown on the card.",
+					"fix": "Change notThis to \"Not pancetta, which is cured belly, leaner and milder, and not bacon, which is smoked belly. This is the jowl.\" That is 110 characters against 108 now."
+				},
+				{
+					"key": "cured-critic-4",
+					"id": "fd_0064",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The Andouille and Tasso link is one-way. Tasso (fd_0077) lists Andouille under confusedWithTerms and explains it in notThis. Andouille lists Tasso only under seeAlsoTerms, and its notThis is spent on French andouille, which no guest asks about. The two sit together on every Cajun menu, and new hires mix them up.",
+					"because": "The Andouille and Tasso link is one-way. Tasso (fd_0077) lists Andouille under confusedWithTerms and explains it in notThis. Andouille lists Tasso only under seeAlsoTerms, and its notThis is spent on French andouille, which no guest asks about. The two sit together on every Cajun menu, and new hires mix them up.",
+					"fix": "On fd_0064, move Tasso from seeAlsoTerms to confusedWithTerms. Change notThis to \"Not tasso, its smokehouse partner, a solid spiced slab of shoulder. French andouille, its ancestor, is a tripe sausage.\" That is about 118 characters. The card is at 622 now, so there is room."
+				},
+				{
+					"key": "cured-critic-5",
+					"id": "fd_0074",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The Prosciutto and Jamón Ibérico link is one-way. fd_0082 lists Prosciutto as a confusion, but fd_0074 lists Jamón Ibérico only under seeAlsoTerms, and its notThis does not mention Spanish ham. These are the two hams a guest is most likely to ask a server to compare.",
+					"because": "The Prosciutto and Jamón Ibérico link is one-way. fd_0082 lists Prosciutto as a confusion, but fd_0074 lists Jamón Ibérico only under seeAlsoTerms, and its notThis does not mention Spanish ham. These are the two hams a guest is most likely to ask a server to compare.",
+					"fix": "On fd_0074, move Jamón Ibérico from seeAlsoTerms to confusedWithTerms, which makes three with Speck and Pancetta. Change notThis to \"Not speck, the same leg lightly smoked, not pancetta, cured belly for cooking, and not jamón ibérico, Spain's longer-aged ham.\" That is about 126 characters. The card total goes from 728 to about 757 and the section mean rises by about 1."
+				},
+				{
+					"key": "cured-operator-1",
+					"id": "fd_0065",
+					"lens": "operator",
+					"field": "guest",
+					"severity": "style",
+					"claim": "It's a garlicky pork sausage stained deep red. Sliced like salami, it's the cured Spanish kind. Crumbled, it's the fresh Mexican kind, which is spicier.",
+					"because": "Three sentences; a guest line is two at most. The contract caught it after the corrector had passed it.",
+					"fix": "The second and third joined with \"and\", no fact changed."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "cured-1-fact-1",
+					"action": "applied",
+					"reason": "Coppa why now reads 'Several small muscles meet here, so ribbons of fat run through the lean', replacing the false works-harder mechanism."
+				},
+				{
+					"finding": "cured-1-fact-2",
+					"action": "applied",
+					"reason": "Pancetta trap why now rests on the cut alone: 'It is the belly, not the leg. A dry-cured pork leg is a ham, such as prosciutto.'; the 'as often as it is diced' claim is gone."
+				},
+				{
+					"finding": "cured-1-fact-3",
+					"action": "applied",
+					"reason": "Andouille notThis now reads 'Not French andouille, its ancestor, a strong smoked tripe sausage.', dropping 'shares only the name'."
+				},
+				{
+					"finding": "cured-1-fact-4",
+					"action": "applied",
+					"reason": "Lardo why now says 'cured for months, traditionally in marble tubs in Colonnata, Tuscany', tying the marble to Colonnata and dropping the six-month figure."
+				},
+				{
+					"finding": "cured-1-fact-5",
+					"action": "applied",
+					"reason": "Lomo guest line now says 'It's as lean as cured pork gets' instead of 'the leanest meat on the board'."
+				},
+				{
+					"finding": "cured-1-floor-6",
+					"action": "applied",
+					"reason": "Same change as fact-5: the board-wide superlative is removed and the claim is limited to cured pork, so it holds beside bresaola."
+				},
+				{
+					"finding": "cured-1-floor-7",
+					"action": "applied",
+					"reason": "Pancetta guest line now ends 'It tastes cleaner and sweeter than American bacon, all pork and spice.', removing the 'more purely porky' tongue-twister."
+				},
+				{
+					"finding": "cured-1-floor-8",
+					"action": "applied",
+					"reason": "Pancetta trap why rewritten to rest on the cut only (belly, not leg; a dry-cured leg is a ham such as prosciutto), with no claim about board service frequency."
+				},
+				{
+					"finding": "cured-1-floor-9",
+					"action": "applied",
+					"reason": "Same change as fact-1: the Coppa why uses the bundle-of-small-muscles explanation for the marbling."
+				},
+				{
+					"finding": "cured-1-floor-10",
+					"action": "applied",
+					"reason": "Country Ham gist now opens 'American pork leg' instead of 'Southern pork leg'; at 65 characters it stays shorter than its 67-character trap."
+				},
+				{
+					"finding": "cured-1-floor-11",
+					"action": "applied",
+					"reason": "Chorizo guest line now steers the server to commit by what is on the plate ('Sliced like salami, it's the cured Spanish kind. Crumbled, it's the fresh Mexican kind'), rather than hard-coding 'Ours is Spanish', which would be false in a house serving Mexican chorizo."
+				},
+				{
+					"finding": "cured-1-floor-12",
+					"action": "applied",
+					"reason": "Guanciale guest line now reads 'cured pork jowl, the fatty cheek, like an unsmoked Italian bacon'; 'fatty cheek' was used rather than bare 'cheek' so it is not mistaken for the lean braising muscle on the Cheek card."
+				},
+				{
+					"finding": "cured-1-safety-13",
+					"action": "applied",
+					"reason": "Added the Lomo note 'Air-dried, not cooked, and served as is in thin slices.' and trimmed notThis slightly so the card totals 703 characters."
+				},
+				{
+					"finding": "cured-1-safety-14",
+					"action": "applied",
+					"reason": "Chorizo note now says cured Spanish chorizo is 'air-dried, not cooked, and sliced as is', keeping 'Ask the kitchen which kind'."
+				},
+				{
+					"finding": "cured-1-safety-15",
+					"action": "applied",
+					"reason": "Chorizo trap why now says the Spanish kind is 'dry-cured, not fresh', removing 'not raw', which read as an assurance of cooking."
+				},
+				{
+					"finding": "cured-1-safety-16",
+					"action": "applied",
+					"reason": "Pancetta trap why no longer mentions board service at all; the uncooked-service caveat stays only in the note, with 'ask the kitchen'."
+				},
+				{
+					"finding": "cured-1-safety-17",
+					"action": "applied",
+					"reason": "Andouille trap why now says 'This one is chunked pork, firm and smoked, sliced into coins.', replacing 'all meat'."
+				},
+				{
+					"finding": "cured-2-fact-1",
+					"action": "applied",
+					"reason": "Speck why no longer ties firmness to aging time: it now ends 'aged about five months. Boned, flat and smoked, it eats firmer than prosciutto.' and 'like a northern ham' was cut to hold the length."
+				},
+				{
+					"finding": "cured-2-fact-2",
+					"action": "applied",
+					"reason": "Prosciutto why now reads 'A whole hind leg is rubbed with sea salt' instead of 'packed in sea salt'."
+				},
+				{
+					"finding": "cured-2-fact-3",
+					"action": "applied",
+					"reason": "The trap's why now reads 'The crudo style taught here is never smoked or cooked: salt, air and time do the work.', so a cooked prosciutto cotto does not contradict it."
+				},
+				{
+					"finding": "cured-2-fact-4",
+					"action": "applied",
+					"reason": "Pâté notThis now defines foie gras as 'fattened duck or goose liver' instead of 'a whole liver'."
+				},
+				{
+					"finding": "cured-2-fact-5",
+					"action": "applied",
+					"reason": "Pâté madeWith drops 'pork fat' (covered by 'pork') and adds 'often bread' for the classic panade binder, staying at 7 items."
+				},
+				{
+					"finding": "cured-2-fact-6",
+					"action": "applied",
+					"reason": "Charcuterie madeWith adds 'sometimes egg' and 'sometimes milk'; reconciled with safety-22 by giving up 'salt' and 'often duck' while keeping 'often beef', since a bresaola on a mostly pork board is worth flagging."
+				},
+				{
+					"finding": "cured-2-fact-7",
+					"action": "applied",
+					"reason": "Bresaola say changed to 'breh-ZOW-lah', the dictionary-first English form (checked against a web search), and it passes the respelling check."
+				},
+				{
+					"finding": "cured-2-floor-8",
+					"action": "applied",
+					"reason": "Rillettes guest now says 'packed in a jar and served with toast', and the gist also drops 'potted' ('then shredded into a rich spread')."
+				},
+				{
+					"finding": "cured-2-floor-9",
+					"action": "applied",
+					"reason": "Rillettes guest opens 'Think pulled pork, but French and spreadable.' so it compares instead of naming the animal."
+				},
+				{
+					"finding": "cured-2-floor-10",
+					"action": "applied",
+					"reason": "Tasso why opens 'Called a ham, but it is not leg meat.' so the nickname being corrected is stated."
+				},
+				{
+					"finding": "cured-2-floor-11",
+					"action": "applied",
+					"reason": "Charcuterie guest examples are now 'like ham, salami and pâté', with rillettes removed."
+				},
+				{
+					"finding": "cured-2-floor-12",
+					"action": "applied",
+					"reason": "Charcuterie gist is now 'French craft of salting, smoking and preserving meat, mostly pork' (65 chars against a 74-char trap)."
+				},
+				{
+					"finding": "cured-2-floor-13",
+					"action": "applied",
+					"reason": "Pastrami why now says 'corned beef with a crust and a smoky edge'; the earlier 'pepper and coriander crust' became 'rub' so the word is not used twice."
+				},
+				{
+					"finding": "cured-2-floor-14",
+					"action": "applied",
+					"reason": "Pastrami guest now anchors to corned beef: 'It's beef cured like corned beef, then crusted in cracked pepper and coriander, smoked and steamed until tender.'"
+				},
+				{
+					"finding": "cured-2-floor-15",
+					"action": "applied",
+					"reason": "Added say 'spek' with a plain s, lowercase because the respelling key's one-syllable exemplar ('zhoo') is lowercase; the contract's sayProblems check passes."
+				},
+				{
+					"finding": "cured-2-floor-16",
+					"action": "applied",
+					"reason": "Speck notThis now ends 'In German the word just means bacon, so on an Austrian menu it may be bacon.'"
+				},
+				{
+					"finding": "cured-2-floor-17",
+					"action": "applied",
+					"reason": "Bresaola guest now opens 'It's very lean air-dried beef from the Italian Alps.' with no reference to a board."
+				},
+				{
+					"finding": "cured-2-safety-18",
+					"action": "applied",
+					"reason": "Pâté note replaced the 'fully cooked' and pink-is-cure assurance with 'Served cold. Liver versions are often left pink inside, so ask the kitchen how theirs is cooked.' ('Baked' dropped because the why already says it)."
+				},
+				{
+					"finding": "cured-2-safety-19",
+					"action": "applied",
+					"reason": "Same change as fact-5: 'pork fat' replaced by 'often bread' in the pâté madeWith list."
+				},
+				{
+					"finding": "cured-2-safety-20",
+					"action": "applied",
+					"reason": "Added the Speck note 'Served raw, as cured. Cold smoke flavors it but does not cook it.'; why and notThis were trimmed so the card totals about 770 characters."
+				},
+				{
+					"finding": "cured-2-safety-21",
+					"action": "applied",
+					"reason": "Added the Charcuterie note 'Dry-cured ham, salami and bresaola are served raw, as cured.', shortened from the suggested wording to protect the section mean."
+				},
+				{
+					"finding": "cured-2-safety-22",
+					"action": "applied",
+					"reason": "Charcuterie madeWith drops 'salt' and 'often duck' and adds 'sometimes egg' and 'sometimes milk'; 'milk' was chosen over 'cream' because it also covers cream in pâté and milk powder in salami."
+				},
+				{
+					"finding": "cured-2-safety-23",
+					"action": "applied",
+					"reason": "Rillettes why now reads 'and it tastes milder than liver-rich pâté', removing the 'with no liver' claim about this dish."
+				},
+				{
+					"finding": "cured-3-fact-1",
+					"action": "applied",
+					"reason": "Trap why now reads 'This ham comes from Iberian-breed pigs and ages far longer', dropping the false 'only from the black Iberian breed'."
+				},
+				{
+					"finding": "cured-3-fact-2",
+					"action": "applied",
+					"reason": "Why now says 'About a week in salt, sugar and curing salt firms it and keeps the lean rosy', which matches the note on curing salt."
+				},
+				{
+					"finding": "cured-3-fact-3",
+					"action": "applied",
+					"reason": "notThis changed from 'never smoked' to 'usually not smoked', since smoked pancetta exists."
+				},
+				{
+					"finding": "cured-3-fact-4",
+					"action": "applied",
+					"reason": "Removed 'Lardons' from aliases, leaving Streaky Bacon and Slab Bacon."
+				},
+				{
+					"finding": "cured-3-fact-5",
+					"action": "applied",
+					"reason": "Replaced 'often pork liver' with 'sometimes bread' in madeWith; liver stays named in the why."
+				},
+				{
+					"finding": "cured-3-fact-6",
+					"action": "applied",
+					"reason": "Why now says it is pressed under weights for the first days, then hung to dry for weeks, and was tightened to stay near the length aim."
+				},
+				{
+					"finding": "cured-3-floor-7",
+					"action": "applied",
+					"reason": "Guest line now ends 'It's pink, salty and gently spiced, the heart of a Reuben', removing 'rosy' and the inaccurate 'tangy'."
+				},
+				{
+					"finding": "cured-3-floor-8",
+					"action": "applied",
+					"reason": "Replaced the British back bacon sentence in the why with 'Lardons are short batons cut from the slab', so the word is explained even though it is no longer an alias."
+				},
+				{
+					"finding": "cured-3-floor-9",
+					"action": "applied",
+					"reason": "Gist now reads 'Long-aged dry ham from Spain's native black pigs, carved paper-thin', removing 'Iberian'; at 67 characters it stays shorter than the 70-character trap."
+				},
+				{
+					"finding": "cured-3-safety-10",
+					"action": "applied",
+					"reason": "Note replaced with 'Dry-cured, never cooked. Sold hot or sweet: sweet means mild, not sugary. Know which is on the board', dropping the 'with no chili' claim and adding the raw-service fact."
+				},
+				{
+					"finding": "cured-3-safety-11",
+					"action": "applied",
+					"reason": "Added note 'Cured and fermented, never cooked. Often served as it is, spread on bread', slightly shortened from the suggested wording to protect the section mean."
+				},
+				{
+					"finding": "cured-3-safety-12",
+					"action": "applied",
+					"reason": "Added 'sometimes bread' to madeWith; the suggested merged item 'traditionally pork and pork liver' is 33 characters against a 32-character item cap, so the liver item was dropped instead (liver is named in the why) and egg, cream, pistachios, brandy and gelatin are all kept."
+				},
+				{
+					"finding": "cured-3-safety-13",
+					"action": "applied",
+					"reason": "Note now opens 'Not every terrine is pork', so foie gras is no longer offered as a non-meat example."
+				},
+				{
+					"finding": "cured-3-safety-14",
+					"action": "applied",
+					"reason": "Trap why now reads 'Corn here is an old word for the coarse grains of salt used in the cure, not the vegetable', removing the flat 'no corn in it' claim."
+				},
+				{
+					"finding": "cured-3-safety-15",
+					"action": "applied",
+					"reason": "Added 'sometimes celery powder' to the bacon madeWith list (now 6 items), matching the card's own note."
+				},
+				{
+					"finding": "cured-critic-1",
+					"action": "applied",
+					"reason": "Pâté gist now says it is chilled and spread on toast; trimmed to 62 characters (\"Ground meat, fat, often liver, ...\") because the suggested 65-character wording tied the trap and the gist must not be the longest option."
+				},
+				{
+					"finding": "cured-critic-2",
+					"action": "applied",
+					"reason": "Kept Confit as a confusion and replaced notThis with the 105-character line that separates rillettes from both pâté (ground, baked, liver) and confit (served whole, not shredded)."
+				},
+				{
+					"finding": "cured-critic-3",
+					"action": "applied",
+					"reason": "Guanciale notThis now covers both listed confusions: pancetta as cured belly and bacon as smoked belly, against the jowl (110 characters)."
+				},
+				{
+					"finding": "cured-critic-4",
+					"action": "applied",
+					"reason": "Moved Tasso from seeAlsoTerms to confusedWithTerms on Andouille and rewrote notThis to lead with tasso as a solid spiced slab of shoulder, keeping French andouille as a short second sentence (119 characters)."
+				},
+				{
+					"finding": "cured-critic-5",
+					"action": "applied",
+					"reason": "Moved Jamón Ibérico from seeAlsoTerms to confusedWithTerms on Prosciutto (three with Speck and Pancetta) and extended notThis to name Spain's longer-aged ham (126 characters, card total about 757)."
+				},
+				{
+					"finding": "cured-operator-1",
+					"action": "applied",
+					"reason": "Operator: the last two sentences joined into one; no fact changed."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0073",
+						"issue": "The Pâté gist and the Terrine gist (fd_0084) are nearly the same answer option. Pâté reads \"Seasoned ground meat, fat and often liver, baked and served cold\". Terrine reads \"Loaf of seasoned chopped meats baked in a mold, chilled and sliced\". A reader shown both under either term could not choose between them. The two notThis lines say the real difference is spreadable mixture versus molded, sliced loaf, and the Pâté gist never says it spreads.",
+						"fix": "Change the fd_0073 gist to \"Ground meat, fat and often liver, baked, chilled, spread on toast\". That is 63 characters, still shorter than the card's 65-character trap. Leave the fd_0084 gist as it is, since \"baked in a mold ... sliced\" already marks it."
+					},
+					{
+						"id": "fd_0075",
+						"issue": "confusedWithTerms lists Confit, but notThis only separates rillettes from pâté. Nothing on the card tells the reader how to tell it from confit, which is the point of a confusion link.",
+						"fix": "Either move Confit to seeAlsoTerms, which has room, or replace notThis with \"Not pâté, which is ground and baked, usually with liver. Not confit, which is served whole, not shredded.\" That is 105 characters against 106 now, so the card total barely moves."
+					},
+					{
+						"id": "fd_0068",
+						"issue": "confusedWithTerms lists Pancetta and Bacon, but notThis only covers pancetta. The bacon distinction (smoke, belly versus jowl) appears only inside a trap's why, which is never shown on the card.",
+						"fix": "Change notThis to \"Not pancetta, which is cured belly, leaner and milder, and not bacon, which is smoked belly. This is the jowl.\" That is 110 characters against 108 now."
+					},
+					{
+						"id": "fd_0064",
+						"issue": "The Andouille and Tasso link is one-way. Tasso (fd_0077) lists Andouille under confusedWithTerms and explains it in notThis. Andouille lists Tasso only under seeAlsoTerms, and its notThis is spent on French andouille, which no guest asks about. The two sit together on every Cajun menu, and new hires mix them up.",
+						"fix": "On fd_0064, move Tasso from seeAlsoTerms to confusedWithTerms. Change notThis to \"Not tasso, its smokehouse partner, a solid spiced slab of shoulder. French andouille, its ancestor, is a tripe sausage.\" That is about 118 characters. The card is at 622 now, so there is room."
+					},
+					{
+						"id": "fd_0074",
+						"issue": "The Prosciutto and Jamón Ibérico link is one-way. fd_0082 lists Prosciutto as a confusion, but fd_0074 lists Jamón Ibérico only under seeAlsoTerms, and its notThis does not mention Spanish ham. These are the two hams a guest is most likely to ask a server to compare.",
+						"fix": "On fd_0074, move Jamón Ibérico from seeAlsoTerms to confusedWithTerms, which makes three with Speck and Pancetta. Change notThis to \"Not speck, the same leg lightly smoked, not pancetta, cured belly for cooking, and not jamón ibérico, Spain's longer-aged ham.\" That is about 126 characters. The card total goes from 728 to about 757 and the section mean rises by about 1."
+					}
+				],
+				"notes": "The section is not ready as it stands. I found five problems, one serious and four smaller. The serious one is the Pâté gist (fd_0073), which a reader could not tell apart from the Terrine gist (fd_0084). The other four are confusion links that are one-way or that notThis does not explain (fd_0075 Confit, fd_0068 Bacon, fd_0064 Tasso, fd_0074 Jamón Ibérico). Each fix above gives the replacement text.\n\n**What I checked and found clean**\n- **Length:** I ran a script over all 22 cards. The section mean is 703.7 characters of prose per card against the 720 ceiling. Every card falls between 622 and 768. Every gist, guest, why, note, notThis, origin, pairs and line is inside its band.\n- **Trap parity:** every trap is within 10 characters of its card's gist, and no gist is the longest option. fd_0069 is a tie at 66 and 66.\n- **Banned language:** no hits for verdict words, the banned substrings, em or en dashes, or British spellings.\n- **Roster:** all 22 rows have a card. Ids and terms match the roster.\n- **Duplicates:** no two gists and no two guest lines are the same.\n- **Known packet errors:** the Lomo trap (fd_0070) carries \"tenderloin\". Pastrami trap 1 (fd_0072) carries \"only smoked\" and \"cold\".\n- **Say:** present on every accented term, on the term that opens on an apostrophe, and on every term a new hire would hesitate over. Speck is \"spek\" in lowercase, which matches the key's own one-syllable example \"zhoo\". The validate.mjs search showed no capitals rule for say, but I did not read the respelling check itself.\n- **Links:** I searched validate.mjs, lib.mjs and the other deck scripts and found no symmetry rule for confusedWithTerms. The one-way links above are editorial problems, not gate failures. Every confusedWithTerms and seeAlsoTerms value exists in everyCard, and no term appears in both lists on one card.\n- **Slugs:** every lexiconSlug and recipe comes from its own candidate list. Tasso omits tasso-kabrit, the Haitian goat dish. Lomo takes lomo-embuchado, not lomo-saltado. Rillettes, Bacon, Pastrami and Corned Beef leave lexiconSlug out. All four choices are correct.\n\n**Smaller items for the operator, not blocking**\n1. **Terrine (fd_0084):** madeWith leaves out liver, while its why says \"chopped pork, liver and fat\" and Pâté lists liver. The list is already at 7, and every entry flags something (egg, wheat, milk, nut, gelatin, alcohol). Decide whether liver should replace one. Terrine also says \"pistachios\", where Pâté and Charcuterie say \"pistachio\".\n2. **Pâté (fd_0073):** madeWith says \"liver\" with no qualifier, while its why says \"usually some liver\" and its trap says liver is \"common but not required\". It may be intended as the cautious flag, but it is inconsistent. \"often liver\" would match.\n3. **Coppa (fd_0066):** it lists Prosciutto as a confusion one-way. With the fix above, Prosciutto's list is full at three, so leave this one-way.\n4. **Speck (fd_0076):** its gist is the only ham gist with no place word. It is still distinguishable by \"juniper\" and \"cold smoked\". \"Alpine pork leg cured with juniper, cold smoked, then aged\" (58 characters) would separate it further from the Country Ham gist, which also ends in smoked and aged. Its trap is 67 characters, so check trap parity if you change it.\n5. **Shared lexicon slugs:** Andouille with Tasso, Guanciale with Lardo, and Pâté with Terrine each share one entry. Each is a combined essay, so this looks intended. Make sure the app handles two cards pointing at one entry."
+			},
+			"acceptedRejected": []
+		}
+	]
+}
