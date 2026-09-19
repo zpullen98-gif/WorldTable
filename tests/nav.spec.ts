@@ -70,6 +70,7 @@ test.describe('exactly one tab owns each route', () => {
 		// one place. /menu/quiz is the single exception above, claimed by
 		// Practise because it is assessed, and tested first for exactly that.
 		['/menu/preps', 'Menu'],
+		['/menu/producers', 'Menu'],
 		['/menu/prep-board', 'Menu'],
 		['/menu/waste', 'Menu'],
 		['/menu/guest', 'Menu'],

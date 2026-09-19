@@ -157,3 +157,104 @@ test('a plate that cannot be fully costed says so before it is opened', async ({
 	await head.click();
 	await expect(page.locator('.incomplete')).toContainText('cannot be costed');
 });
+
+/**
+ * The producers, through the real form, the real dish link and the real file.
+ *
+ * A producer carries its own dish links (lib/producers.ts says why they live
+ * there and not on the dish), so this is the one collection whose round trip
+ * has to bring back a RELATIONSHIP as well as a record: the dish card's
+ * "From ..." line only renders if the producer crossed AND its link to a dish
+ * that also crossed survived the merge. Checked by that outcome, and by the
+ * story, which only renders if the whole producer came back.
+ */
+test('a producer, its story and its link to a dish survive the export', async ({ page }) => {
+	await seedHouse(page);
+	await goto(page, '/menu/producers');
+	// The seed has done its job: from here on, what is on disk is what the app
+	// wrote, and a navigation must not put the seed back over it. See seedHouse.
+	await page.evaluate(() => localStorage.setItem('__wt_seed_off', '1'));
+
+	// ---- add a producer through the real form, tied to the seeded dish -------
+	await page.getByRole('button', { name: 'Add a producer' }).click();
+	// Wrapping labels: a control's own value joins its accessible name, so the
+	// select (which always has one) is found by role and a leading match.
+	await page.getByRole('textbox', { name: /^Name/ }).fill('Sweet Grass Dairy');
+	await page.getByRole('textbox', { name: /^Where/ }).fill('Thomasville, Georgia');
+	await page.getByRole('combobox', { name: /^Kind/ }).selectOption('creamery');
+	await page.getByLabel('What they supply').fill('the Green Hill');
+	await page.getByLabel('The story').fill('A family herd on grass, milked twice a day.');
+	await page.getByRole('checkbox', { name: 'Braised cheek' }).check();
+	await page.getByRole('button', { name: 'Add the producer' }).click();
+	await expect(page.getByRole('heading', { name: 'Sweet Grass Dairy' })).toBeVisible();
+
+	// In-app navigation on purpose: no unload between the write and the export.
+	await page.getByRole('link', { name: '◂ My Menu' }).click();
+	const credit = page.getByText('From Sweet Grass Dairy, Thomasville, Georgia');
+	await expect(credit).toBeVisible();
+
+	// ---- the other door to the same link: the dish form ----------------------
+	// Opening it pre-ticks the dish's producer; unticking and saving takes the
+	// credit off, ticking and saving puts it back. saveDish writes the link by
+	// the dish's id, so a wrong id or a dropped call fails here.
+	const dishRow = page.locator('#dish-d1');
+	const pick = page
+		.getByRole('group', { name: 'Producers' })
+		.getByRole('checkbox', { name: 'Sweet Grass Dairy' });
+	await dishRow.getByRole('button', { name: 'Edit', exact: true }).click();
+	await expect(pick).toBeChecked();
+	await pick.uncheck();
+	await page.getByRole('button', { name: 'Save the dish' }).click();
+	await expect(credit).toHaveCount(0);
+	await dishRow.getByRole('button', { name: 'Edit', exact: true }).click();
+	await expect(pick).not.toBeChecked();
+	await pick.check();
+	await page.getByRole('button', { name: 'Save the dish' }).click();
+	await expect(credit).toBeVisible();
+
+	// ---- export, through the real button and a real file --------------------
+	const downloadPromise = page.waitForEvent('download');
+	await page.getByRole('button', { name: 'Export session' }).click();
+	const path = await (await downloadPromise).path();
+	expect(path).toBeTruthy();
+
+	const file = JSON.parse(readFileSync(path!, 'utf8'));
+	// The placement IS the contract: beside data, never in it. A producer in
+	// `data` would be copied into the per-profile session record on import.
+	expect(file.house.producers).toHaveLength(1);
+	expect(file.house.producers[0].dishIds).toEqual(['d1']);
+	expect('producers' in file.data).toBe(false);
+
+	// ---- wipe the venue: this browser context becomes "site B" --------------
+	await page.evaluate(async () => {
+		const db = await new Promise<IDBDatabase>((res, rej) => {
+			const r = indexedDB.open('world-table');
+			r.onsuccess = () => res(r.result);
+			r.onerror = () => rej(r.error);
+		});
+		await new Promise((res, rej) => {
+			const tx = db.transaction('state', 'readwrite');
+			tx.objectStore('state').clear();
+			tx.oncomplete = res;
+			tx.onerror = () => rej(tx.error);
+		});
+		db.close();
+	});
+	await goto(page, '/menu');
+	await expect(page.getByText('Nothing entered yet', { exact: false })).toBeVisible();
+	await expect(credit).toHaveCount(0);
+
+	// ---- import, through the real input --------------------------------------
+	await page.getByRole('button', { name: 'Import session…' }).click();
+	await page.locator('.tools input[type=file]').setInputFiles(path!);
+	const banner = page.locator('text=/Imported[:\u2014-]/');
+	await expect(banner).toBeVisible();
+	await expect(banner).toContainText('1 producer');
+
+	// ---- the outcomes: the link, then the producer and its story -------------
+	await expect(credit).toBeVisible();
+	await goto(page, '/menu/producers');
+	await expect(page.getByRole('heading', { name: 'Sweet Grass Dairy' })).toBeVisible();
+	await expect(page.getByText('A family herd on grass, milked twice a day.')).toBeVisible();
+	await expect(page.getByRole('link', { name: 'Braised cheek' })).toBeVisible();
+});

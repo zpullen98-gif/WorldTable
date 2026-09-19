@@ -6,6 +6,7 @@
 	import type { MenuDish } from '$lib/persistence/state';
 	import { buildExport, download, parseImport, describeImport } from '$lib/persistence/portable';
 	import { mergeExportedMenu } from '$lib/persistence/house';
+	import { fromLine, producersForDish } from '$lib/producers';
 	import Ornament from '$lib/components/Ornament.svelte';
 	import ExportNudge from '$lib/components/ExportNudge.svelte';
 	import MenuImport from '$lib/components/MenuImport.svelte';
@@ -222,6 +223,25 @@
 		}
 	});
 
+	// /menu/producers links each dish as /menu#dish-{id}. On a cold load (a new
+	// tab, a reload) the browser looks for that anchor before the house record
+	// is read, finds no dish list, and gives up, so the jump is made here once
+	// the dishes exist. An in-app click already arrives hydrated and scrolls.
+	let hashed = false;
+	$effect(() => {
+		if (hashed || !house.ready) return;
+		hashed = true;
+		// A hand-typed or truncated link ("/menu#%") is a URIError, and an
+		// effect that throws takes the page's other effects down with it.
+		let id = '';
+		try {
+			id = decodeURIComponent(location.hash.slice(1));
+		} catch {
+			return;
+		}
+		if (id.startsWith('dish-')) document.getElementById(id)?.scrollIntoView({ block: 'start' });
+	});
+
 	onMount(() => {
 		now = Date.now();
 		const id = setInterval(() => {
@@ -343,6 +363,9 @@
 		id: string | null; name: string; section: string; description: string;
 		ingredients: string; allergens: string[]; checked: boolean; price: string;
 		recipeSlug: string;
+		/* The producers ticked for this dish. Held in the form and written to the
+		   PRODUCERS on save, never onto the MenuDish: see lib/producers.ts. */
+		producerIds: string[];
 	}>(null);
 
 	function mintDishId() {
@@ -353,7 +376,7 @@
 	function newDish() {
 		dishForm = {
 			id: null, name: '', section: '', description: '', ingredients: '',
-			allergens: [], checked: false, price: '', recipeSlug: ''
+			allergens: [], checked: false, price: '', recipeSlug: '', producerIds: []
 		};
 	}
 	function editDish(d: MenuDish) {
@@ -361,8 +384,15 @@
 			id: d.id, name: d.name, section: d.section, description: d.description,
 			ingredients: d.ingredients.join('\n'), allergens: [...d.allergens],
 			checked: Boolean(d.allergensCheckedAt), price: d.price,
-			recipeSlug: d.recipeSlug ?? ''
+			recipeSlug: d.recipeSlug ?? '',
+			producerIds: producersForDish(house.producers, d.id).map((p) => p.id)
 		};
+	}
+	function toggleProducer(id: string) {
+		if (!dishForm) return;
+		const i = dishForm.producerIds.indexOf(id);
+		if (i < 0) dishForm.producerIds.push(id);
+		else dishForm.producerIds.splice(i, 1);
 	}
 	function toggleAllergen(a: string) {
 		if (!dishForm) return;
@@ -407,6 +437,11 @@
 		};
 		if (dishForm.id) house.updateDish(rec);
 		else house.addDish(rec);
+		// AFTER the dish exists, and by rec.id: a new dish's id is minted just
+		// above, so dishForm.id is still null here. Only when the house has
+		// producers, which is also the only time the form offers them, so a
+		// venue with none never takes a write for nothing.
+		if (house.producers.length) house.setDishProducers(rec.id, dishForm.producerIds);
 		dishForm = null;
 	}
 	const dishSections = $derived.by(() => {
@@ -805,6 +840,7 @@
 			device and carried in the session export like everything else here.
 			<a href="{base}/menu/costing">Cost this menu ▸</a>
 			<a href="{base}/menu/preps">Preps ▸</a>
+			<a href="{base}/menu/producers">Producers ▸</a>
 			<a href="{base}/menu/prep-board">The prep board ▸</a>
 			<a href="{base}/menu/waste">The waste log ▸</a>
 			{#if house.dishes.length >= 4}
@@ -868,6 +904,24 @@
 					{/if}
 				</p>
 
+				{#if house.producers.length}
+					<!-- Only when there is someone to tick. Written to the producers on
+					     save, never to the dish: see lib/producers.ts. -->
+					<div class="producerpick" role="group" aria-label="Producers">
+						<span class="prodlabel" aria-hidden="true">Producers</span>
+						{#each house.producers as p (p.id)}
+							<label class="al">
+								<input
+									type="checkbox"
+									checked={dishForm.producerIds.includes(p.id)}
+									onchange={() => toggleProducer(p.id)}
+								/>
+								{p.name}
+							</label>
+						{/each}
+					</div>
+				{/if}
+
 				<label class="al affirm">
 					<input type="checkbox" bind:checked={dishForm.checked} />
 					I have checked the allergens on this dish against its build
@@ -893,7 +947,9 @@
 				<h3 class="eyebrow">{g.section}</h3>
 				<ul class="dishes">
 					{#each g.items as d (d.id)}
-						<li>
+						{@const from = fromLine(producersForDish(house.producers, d.id))}
+						<!-- The id is the anchor /menu/producers links each dish by. -->
+						<li id="dish-{d.id}">
 							<div class="dishline">
 								<span class="nm" class:off={house.is86(d.id)}>{d.name}</span>
 								{#if house.is86(d.id)}
@@ -905,6 +961,7 @@
 								{#if d.price}<span class="pr">{d.price}</span>{/if}
 							</div>
 							{#if d.description}<p class="dd">{d.description}</p>{/if}
+							{#if from}<p class="dp">{from}</p>{/if}
 							<!--
 								ALWAYS rendered, never gated on the list being non-empty. This is
 								the screen a server reads standing at a table, and it used to show
@@ -1036,6 +1093,12 @@
 	}
 	.dishform .short { flex: 0 1 110px; min-width: 90px; }
 	.allergens { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+	/* The allergen grid's shape, with its label on a line of its own. */
+	.producerpick { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 10px; }
+	.prodlabel { flex-basis: 100%; font-size: var(--t-small); font-weight: 600; }
+	/* The whole label is the target, 44px tall, as on /menu/producers. */
+	.producerpick .al { min-height: 44px; align-items: center; }
+	.dishes .dp { font-size: var(--t-small); color: var(--ink-soft); font-style: italic; }
 	/* The affirmation reads as a statement the user is making, so it sits
 	   apart from the grid of allergen boxes rather than inside it. */
 	.affirm { display: block; margin: 10px 0 0; }
