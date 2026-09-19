@@ -54,7 +54,18 @@ import { DECK_ID_RE, foldText, nameInText } from '../../src/lib/floor-deck-core.
  * @typedef {{ id: string, term: string, [key: string]: any }} AuthoredCard
  * @typedef {{ key: string, title: string, blurb: string, madeWith: 'required'|'optional', cards: AuthoredCard[] }} AuthoredSection
  * @typedef {{ next: number, cards: Array<{ id: string, term: string, was?: string[], retired?: string }> }} Ledger
+ * @typedef {{ level: number, name: string, blurb: string }} AuthoredLevel
  */
+
+/**
+ * The four brigade levels, by their frozen numeric keys: 1 Commis, 2 Chef de
+ * Partie, 3 Sous Chef, 4 Chef. A card carries the NUMBER, and so do URLs
+ * (`?level=2`); the names live in one constant in floor-deck.mjs and reach the
+ * app through the emitted data. A name can be reworded in one place without
+ * touching a card, a link someone saved, or a reader's progress (which is
+ * keyed on the card id and never on its level at all).
+ */
+export const LEVELS = [1, 2, 3, 4];
 
 /** [min, max] in characters unless the name says otherwise. */
 export const LIMITS = {
@@ -85,7 +96,13 @@ export const LIMITS = {
 	/** a section that emits any card emits at least this many, so multiple
 	 *  choice can always field three kin */
 	sectionMin: 6,
-	blurb: [60, 160]
+	blurb: [60, 160],
+	/** a level's display name: "Chef" is the shortest the brigade offers */
+	levelName: [4, 24],
+	/** a complete deck holds at least this many written cards at every level,
+	 *  so a written test of a whole level is always full: TEST_MC + MATCH_SIZE
+	 *  in src/lib/floor-deck.ts, pinned equal by a test */
+	levelMin: 14
 };
 
 /** What the writers aim at, inside the limits. The authoring brief prints these. */
@@ -98,8 +115,10 @@ export const AIMS = {
 	notThis: [60, 100]
 };
 
+/* `level` sits right after `term`, so serializeCard (tools/deck/lib.mjs) writes
+   it under the term, where a reviewer reads the two together. */
 export const CARD_KEYS = [
-	'id', 'term', 'say', 'aliases', 'packet',
+	'id', 'term', 'level', 'say', 'aliases', 'packet',
 	'gist', 'guest', 'why',
 	'madeWith', 'note',
 	'origin', 'pairs', 'notThis',
@@ -394,6 +413,13 @@ export function checkCard(card, ctx) {
 	};
 
 	str('term', LIMITS.term, true);
+	/* The key, never the name and never a string: `'1'` would pass a loose
+	   compare in one place and fail a strict one in another, and a name here
+	   would mean renaming a level edits 281 cards. */
+	if (card.level === undefined) problems.push(`level is required: one of ${LEVELS.join(', ')}`);
+	else if (typeof card.level !== 'number' || !Number.isInteger(card.level) || !LEVELS.includes(card.level)) {
+		problems.push(`level is ${JSON.stringify(card.level)}; it is the integer key ${LEVELS.join(', ')}, never a string or a level's name`);
+	}
 	if (str('say', LIMITS.say, false)) problems.push(...sayProblems(card.say).map((p) => `say: ${p}`));
 	else if (typeof card.term === 'string' && needsSay(card.term)) {
 		problems.push('say is required: the term has a letter a plain keyboard cannot type, or opens on an apostrophe');
@@ -665,6 +691,13 @@ export function checkDeck(sections, ledger, opts = {}) {
 	if (opts.complete) {
 		const stubs = [...live.values()].filter(({ card }) => isStub(card));
 		if (stubs.length) problems.push(`DECK_COMPLETE is true and ${stubs.length} card(s) are still planned: ${stubs.slice(0, 6).map(({ card }) => card.term).join(', ')}${stubs.length > 6 ? ', ...' : ''}`);
+		/* A level is offered as a whole written test, so it has to be able to
+		   field one. Checked only once the deck is complete: a deck written a
+		   section at a time passes through every shape on the way. */
+		for (const level of LEVELS) {
+			const n = authored.filter(({ card }) => card.level === level).length;
+			if (n < LIMITS.levelMin) problems.push(`level ${level} holds ${n} written card(s); every level holds at least ${LIMITS.levelMin}, one full written test`);
+		}
 	}
 	if (opts.packetTerms) {
 		const terms = new Set([...live.values()].map(({ card }) => foldText(card.term)));
@@ -680,6 +713,50 @@ export function checkDeck(sections, ledger, opts = {}) {
 		}
 	}
 
+	return problems;
+}
+
+/**
+ * The levels' display names and blurbs (DECK_LEVELS in floor-deck.mjs).
+ *
+ * A name holds NO digit, because the written test's result screen shows each
+ * missed card's level by name and that screen is held to having no figure in
+ * it at all (the owner's rule, tests/floor-deck.spec.ts). Names are unique
+ * after folding, so "Sous Chef" and "sous-chef" cannot both be offered.
+ *
+ * @param {unknown} levels
+ * @returns {string[]}
+ */
+export function checkLevels(levels) {
+	/** @type {string[]} */
+	const problems = [];
+	if (!Array.isArray(levels)) return ['the levels are an array of { level, name, blurb }'];
+	const keys = levels.map((l) => l?.level);
+	if (JSON.stringify(keys) !== JSON.stringify(LEVELS)) {
+		problems.push(`the levels are keyed ${JSON.stringify(keys)}; they are exactly ${JSON.stringify(LEVELS)}, in that order`);
+	}
+	const names = new Set();
+	for (const l of levels) {
+		const at = `level ${JSON.stringify(l?.level)}`;
+		if (!l || typeof l !== 'object') {
+			problems.push(`${at}: not an object`);
+			continue;
+		}
+		const extra = Object.keys(l).filter((k) => !['level', 'name', 'blurb'].includes(k));
+		if (extra.length) problems.push(`${at}: unknown key(s) ${extra.join(', ')}`);
+		if (typeof l.name !== 'string' || !within(len(l.name), LIMITS.levelName)) {
+			problems.push(`${at}: the name is ${LIMITS.levelName[0]} to ${LIMITS.levelName[1]} characters`);
+		} else {
+			if (/\d/.test(l.name)) problems.push(`${at}: the name "${l.name}" holds a digit, and the test's result screen shows no figure`);
+			for (const p of proseProblems(l.name)) problems.push(`${at} name: ${p}`);
+			const f = foldText(l.name);
+			if (names.has(f)) problems.push(`${at}: the name "${l.name}" is another level's name`);
+			names.add(f);
+		}
+		if (typeof l.blurb !== 'string' || !within(len(l.blurb), LIMITS.blurb)) {
+			problems.push(`${at}: the blurb is ${LIMITS.blurb[0]} to ${LIMITS.blurb[1]} characters`);
+		} else for (const p of proseProblems(l.blurb)) problems.push(`${at} blurb: ${p}`);
+	}
 	return problems;
 }
 

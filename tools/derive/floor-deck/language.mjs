@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0285',
 		term: 'Heirloom',
+		level: 1,
 		packet: true,
 		gist: 'Old plant variety whose saved seed grows the same plant each year',
 		guest: "It's an old variety, grown from seed farmers have saved for generations. They look uneven, but they're grown for flavor rather than for shipping.",
@@ -23,6 +24,7 @@ const cards = [
 	{
 		id: 'fd_0286',
 		term: 'Larder',
+		level: 2,
 		packet: true,
 		gist: 'Cool store for cured and preserved foods, now a menu heading too',
 		guest: 'The larder is the cold pantry side of the menu, cured meats, pickles, cheese and preserves. Plates from there are usually good for sharing.',
@@ -37,6 +39,7 @@ const cards = [
 	{
 		id: 'fd_0287',
 		term: 'Garde Manger',
+		level: 3,
 		say: 'gard mahn-ZHAY',
 		packet: true,
 		gist: 'Cold station of the line that builds salads and chilled starters',
@@ -52,6 +55,7 @@ const cards = [
 	{
 		id: 'fd_0288',
 		term: 'Amuse-Bouche',
+		level: 2,
 		say: 'ah-MOOZ BOOSH',
 		aliases: ['Amuse', 'Amuse-Gueule'],
 		gist: 'One complimentary bite the chef sends out before the first course',
@@ -67,6 +71,7 @@ const cards = [
 	{
 		id: 'fd_0289',
 		term: 'Prix Fixe',
+		level: 1,
 		say: 'pree FIKS',
 		aliases: ["Table d'Hote", 'Set Menu'],
 		gist: 'A few set courses for one charge, with a short pick in each',
@@ -84,6 +89,7 @@ const cards = [
 	{
 		id: 'fd_0290',
 		term: 'Tasting Menu',
+		level: 1,
 		aliases: ['Degustation', "Chef's Tasting"],
 		gist: 'Chef-chosen run of many small courses, often for the whole table',
 		guest: 'The chef sends a run of small courses, usually five or more, so you taste more of the kitchen than one main allows. Many come with an optional wine pairing.',
@@ -100,6 +106,7 @@ const cards = [
 	{
 		id: 'fd_0291',
 		term: 'À la Carte',
+		level: 1,
 		say: 'ah lah KART',
 		gist: 'Every dish priced on its own and ordered one plate at a time',
 		guest: 'À la carte means every dish has its own price, and you order exactly what you want. Build the meal however you like, one plate or five.',
@@ -114,6 +121,7 @@ const cards = [
 	{
 		id: 'fd_0292',
 		term: 'Market Price',
+		level: 1,
 		aliases: ['MP'],
 		gist: 'Listed without a number because the cost shifts with each delivery',
 		guest: "It means the price moves with what we paid for it this week. I'm happy to tell you tonight's price before you order.",
@@ -128,6 +136,7 @@ const cards = [
 	{
 		id: 'fd_0293',
 		term: 'House-Made',
+		level: 1,
 		gist: 'Prepared in this kitchen from scratch, not bought in ready',
 		guest: "The kitchen makes it here from scratch instead of buying it ready, so it is fresher and done the chef's way.",
 		why: "There is no legal definition, so it is the kitchen's own claim: the pasta, bread, pickles or sauce were produced on site from basic ingredients. That usually means fresher, more particular flavor and a lot more labor behind the plate.",
@@ -141,6 +150,7 @@ const cards = [
 	{
 		id: 'fd_0294',
 		term: 'Dry-Aged',
+		level: 2,
 		gist: 'Beef hung unwrapped in a cold room for weeks to deepen and soften',
 		guest: 'The beef rests in a cold room for weeks before we cut it, so it turns more tender and tastes deeper, almost nutty.',
 		why: "Whole cuts sit unwrapped just above freezing with fans moving the air, usually 21 to 45 days or longer. Water evaporates and concentrates the beef flavor while the meat's own enzymes loosen its fibers. The hard outer crust is trimmed away, and that loss is in the price.",
@@ -157,6 +167,7 @@ const cards = [
 	{
 		id: 'fd_0295',
 		term: 'Grass-Fed',
+		level: 1,
 		gist: 'Beef from cattle raised on forage, not finished on feedlot grain',
 		guest: 'The cattle ate grass instead of grain, so the beef is leaner, with a cleaner, more mineral flavor than the richly marbled grain-fed steak most people know.',
 		why: 'Most cattle graze when young, then finish on grain in a feedlot, which builds marbling. Grass-finished animals stay on forage, so the meat is leaner and deeper red, with yellowish fat from the carotene in grass and a mineral, slightly gamey taste.',
@@ -174,6 +185,7 @@ const cards = [
 	{
 		id: 'fd_0296',
 		term: 'Pasture-Raised',
+		level: 2,
 		gist: 'Animals living outdoors with room to roam, whatever they are fed',
 		guest: 'The animals lived outside on open grass, moving around and foraging. The eggs often have deeper-colored yolks, and the meat tends to be firmer with more flavor.',
 		why: 'It describes where the animals lived more than what they ate: pigs and chickens on pasture still get grain feed. More exercise gives firmer, darker meat, and foraging deepens yolk color. There is no federal definition for meat or eggs, so certifiers set the bar.',
@@ -188,6 +200,7 @@ const cards = [
 	{
 		id: 'fd_0297',
 		term: 'Heritage Breed',
+		level: 2,
 		gist: 'Old livestock lines from before fast-growing industrial animals',
 		guest: "It's an old-fashioned breed of animal, the kind farms raised before industrial farming. They grow slower, so the meat is richer and more flavorful.",
 		why: 'Supermarket chickens, turkeys and pigs are bred to grow fast and lean. Older breeds like Berkshire pork or Bourbon Red turkey take longer to reach size, building more fat, darker meat and a firmer bite. Think heirloom tomatoes, for animals.',
@@ -201,6 +214,7 @@ const cards = [
 	{
 		id: 'fd_0298',
 		term: 'Wild-Caught',
+		level: 1,
 		gist: 'Taken from open water rather than farmed, fresh or frozen at sea',
 		guest: 'It was caught in the ocean or a river rather than raised on a farm. Wild fish tend to be leaner and firmer, with a flavor that changes with the season.',
 		why: 'Wild fish swim hard and eat a natural diet, so their flesh is firmer and leaner than farmed fish, and the flavor shifts with season and waters. Wild salmon gets its red color from the shrimp and krill it eats; farmed salmon gets pigment in its feed.',
@@ -216,6 +230,7 @@ const cards = [
 	{
 		id: 'fd_0299',
 		term: 'Day-Boat',
+		level: 2,
 		gist: 'Seafood from vessels that land the catch within hours of fishing',
 		guest: 'The fishing boat went out and came back within a day, so the catch landed fresh instead of spending days on ice at sea. You can taste it in a sweeter, firmer bite.',
 		why: 'Large trip boats stay out a week or more with the catch on ice, so the first fish caught is days old at the dock. Day boats fish close to shore and land within about 24 hours, so the flesh is firmer, sweeter and cleaner. Scallops are the classic.',
@@ -231,6 +246,7 @@ const cards = [
 	{
 		id: 'fd_0300',
 		term: 'Organic',
+		level: 1,
 		gist: 'Certified to federal rules limiting synthetic farm inputs',
 		guest: 'The farm is certified to USDA organic rules, so it follows strict limits on synthetic pesticides, fertilizers and what the animals eat.',
 		why: 'It is a legal claim, overseen by the USDA and checked yearly by certifiers. It rules out GMOs and most synthetic sprays and fertilizers. Livestock eat organic feed, and grazing animals must graze at least 120 days a year. It describes farming method, not flavor.',

@@ -4,10 +4,12 @@
  *
  * ## What it is
  *
- * About three hundred menu words a new hire has to be able to say at a table:
- * a restaurant's hand-filled training packet (photographed 19 September 2026,
- * transcribed in full in the plan that started this work), corrected where its
- * handwritten answers were wrong, and widened to each term's neighbours.
+ * The menu words a new hire has to be able to say at a table: a restaurant's
+ * hand-filled training packet (photographed 19 September 2026, transcribed in
+ * full in the plan that started this work), corrected where its handwritten
+ * answers were wrong, and widened to each term's neighbours. It shipped at 300
+ * cards in fifteen sections; with the Southern section removed it is 281 cards
+ * in 14 sections, each card at one of four brigade levels (DECK_LEVELS).
  *
  * ## Why it is not the Lexicon
  *
@@ -57,7 +59,9 @@ import { fileURLToPath } from 'node:url';
 import { redact, significantWords, MAX_REDACTED_SHARE } from './drills.mjs';
 import {
 	LIMITS,
+	LEVELS,
 	checkDeck,
+	checkLevels,
 	assertNoDeckVerdict,
 	isStub,
 	genericWords,
@@ -103,8 +107,39 @@ export const DECK_GZ_CEILING = 140_000;
 export const DECK_COMPLETE = true;
 
 /**
- * In teaching order, which is the order a new hire meets them. Never sorted:
- * "section by section until every card is seen once" walks this array.
+ * The four brigade levels, and the ONLY place their names are written. A card
+ * carries the numeric key (the contract's LEVELS); the page reads the name
+ * from the emitted `levels`, so a level can be renamed here without touching
+ * a card, a saved link or anyone's progress.
+ *
+ * Nothing is locked. A new reader is GUIDED: new cards come from level 1
+ * across all its sections, then level 2, and so on (floor-deck.ts
+ * teachingOrder), and any level, or all of them, can be opened at any time.
+ * The standard each card was placed against is in tools/deck/README.md,
+ * "Levels"; why each card sits where it does is tools/deck/audit/levels.json.
+ *
+ * A blurb describes the WORDS at that level, never the reader: the landing
+ * shows it under the name, and "for beginners" would tell a ten-year captain
+ * that the Commis cards are beneath them.
+ *
+ * @type {import('./floor-deck-contract.mjs').AuthoredLevel[]}
+ */
+export const DECK_LEVELS = [
+	{ level: 1, name: 'Commis',
+		blurb: 'The everyday words on most American menus: the ones a guest assumes any server already knows on the first day.' },
+	{ level: 2, name: 'Chef de Partie',
+		blurb: 'Common at a good restaurant and worth a sentence to explain, with the pairs of words that are easiest to mix up.' },
+	{ level: 3, name: 'Sous Chef',
+		blurb: 'Fine-dining vocabulary: the classical sauces and preparations, and the specialist cuts and products behind them.' },
+	{ level: 4, name: 'Chef',
+		blurb: 'The rare, specialist and deeply classical words a senior server is expected to own and explain without notes.' }
+];
+
+/**
+ * In teaching order WITHIN a level: a new hire meets level 1's cards section
+ * by section in this order, then level 2's, and so on (the engine sorts by
+ * level, stably, over this order; the emitted file keeps this order because
+ * sorting it level-first cost about 4 KB gzipped for nothing the app needs).
  *
  * `madeWith` is 'optional' where a card is a verb or a word about the menu
  * rather than a food.
@@ -251,6 +286,7 @@ export function gateFloorDeck({ lexiconSlugs }) {
 	} catch (e) {
 		problems = [String(/** @type {any} */ (e)?.message ?? e)];
 	}
+	problems.push(...checkLevels(DECK_LEVELS));
 	if (problems.length) {
 		console.error(`\n  floor deck: ${problems.length} problem(s)`);
 		problems.forEach((x) => console.error(`    ✗ ${x}`));
@@ -259,6 +295,8 @@ export function gateFloorDeck({ lexiconSlugs }) {
 	const all = DECK_SECTIONS.flatMap((s) => s.cards);
 	const written = all.filter((c) => !isStub(c)).length;
 	console.log(`  floor deck: ${written} written of ${all.length} minted, contract holds${DECK_COMPLETE ? ', COMPLETE' : ''}`);
+	const perLevel = DECK_LEVELS.map((l) => `${l.name} ${all.filter((c) => !isStub(c) && c.level === l.level).length}`);
+	console.log(`  floor deck levels: ${perLevel.join(', ')} (each at least ${LIMITS.levelMin})`);
 	return true;
 }
 
@@ -316,7 +354,7 @@ export function buildFloorDeck({ recipes }) {
 		}
 	}
 
-	/** @typedef {{ id: string, term: string, section: string, gist: string, confusedWith?: string[], [key: string]: any }} EmittedCard */
+	/** @typedef {{ id: string, term: string, section: string, level: number, gist: string, confusedWith?: string[], [key: string]: any }} EmittedCard */
 	/** @type {EmittedCard[]} */
 	const cards = [];
 	/** @type {Record<string, Array<{ says: string, why: string }>>} */
@@ -361,6 +399,7 @@ export function buildFloorDeck({ recipes }) {
 			put(out, 'say', c.say);
 			put(out, 'aliases', c.aliases);
 			out.section = s.key;
+			out.level = c.level;
 			out.gist = c.gist;
 			out.guest = c.guest;
 			out.why = c.why;
@@ -387,6 +426,17 @@ export function buildFloorDeck({ recipes }) {
 		sections.push({ key: s.key, title: s.title, blurb: s.blurb, count });
 	}
 
+	/* The levels with their counts. The CARDS are not re-sorted by level: the
+	   engine sorts (floor-deck.ts teachingOrder), and a level-first file
+	   gzipped about 4 KB worse, because neighbours from one section share more
+	   words than neighbours from one level do. A test pins the order. */
+	const levels = DECK_LEVELS.map((l) => ({
+		level: l.level,
+		name: l.name,
+		blurb: l.blurb,
+		count: cards.filter((c) => c.level === l.level).length
+	}));
+
 	const floorDeck = {
 		version: 1,
 		/* The sentence around madeWith, emitted ONCE and composed by the card
@@ -394,6 +444,7 @@ export function buildFloorDeck({ recipes }) {
 		   this at all. */
 		frame: { madeWith: 'Classically made with', confirm: 'Recipes vary. Confirm with the kitchen.' },
 		sections,
+		levels,
 		cards
 	};
 	const floorDeckIndex = {
@@ -401,18 +452,25 @@ export function buildFloorDeck({ recipes }) {
 		   deck hit as "Guanciale, in Cured & Preserved Meats" and must not load
 		   the deck to learn a section's name. */
 		sections: Object.fromEntries(sections.filter((s) => s.count > 0).map((s) => [s.key, s.title])),
+		/* Key to name, for the same reason: a hit reads "Commis · Fish &
+		   Shellfish". Keyed by the number as a string, which is what JSON
+		   makes of an object key anyway. */
+		levels: Object.fromEntries(DECK_LEVELS.map((l) => [String(l.level), l.name])),
 		cards: cards.map((c) => {
 			/** @type {Record<string, any>} */
-			const row = { id: c.id, term: c.term, section: c.section };
+			const row = { id: c.id, term: c.term, section: c.section, level: c.level };
 			put(row, 'aliases', c.aliases);
 			return row;
 		}),
 		byLexicon
 	};
 
-	problems.push(...assertNoDeckVerdict({ frame: floorDeck.frame, sections, cards }, 'floor-deck.json'));
+	problems.push(...assertNoDeckVerdict({ frame: floorDeck.frame, sections, levels, cards }, 'floor-deck.json'));
 	problems.push(...assertNoDeckVerdict(Object.values(traps), 'floor-deck.traps.json'));
-	problems.push(...assertNoDeckVerdict(floorDeckIndex.cards, 'floor-deck.index.json'));
+	problems.push(...assertNoDeckVerdict({ levels: floorDeckIndex.levels, cards: floorDeckIndex.cards }, 'floor-deck.index.json'));
+	for (const c of cards) {
+		if (!LEVELS.includes(c.level)) problems.push(`${c.id}: emitted with level ${JSON.stringify(c.level)}`);
+	}
 
 	/* ── the option-length tell ─────────────────────────────────────────────
 	   Simulated through the SAME wrongAnswersFor the written test calls, so

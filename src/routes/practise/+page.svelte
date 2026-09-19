@@ -116,10 +116,10 @@
 					<p>
 						{#if deckOwed}
 							{deckOwed} card{deckOwed === 1 ? ' is' : 's are'} owed today. Flip cards, a written test by
-							section, say it back, and a lineup for pre-shift.
+							level or by section, say it back, and a lineup for pre-shift.
 						{:else}
-							{TOTALS.deck} menu words, one card each. Flip cards, a written test by section, say it
-							back, and a lineup for pre-shift. The misses come back first.
+							{TOTALS.deck} menu words, one card each. Flip cards, a written test by level or by
+							section, say it back, and a lineup for pre-shift. The misses come back first.
 						{/if}
 					</p>
 				</a>

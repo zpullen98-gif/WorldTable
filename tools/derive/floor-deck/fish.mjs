@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0108',
 		term: 'Arctic Char',
+		level: 2,
 		aliases: ['Char'],
 		packet: true,
 		gist: 'Cold-water cousin of salmon and trout with pink, moderately rich flesh',
@@ -25,6 +26,7 @@ const cards = [
 	{
 		id: 'fd_0109',
 		term: 'Crawfish',
+		level: 1,
 		aliases: ['Crayfish', 'Crawdads', 'Mudbugs'],
 		packet: true,
 		gist: 'Finger-long freshwater crustacean, a tiny lobster eaten for its tail',
@@ -43,6 +45,7 @@ const cards = [
 	{
 		id: 'fd_0110',
 		term: 'Skate',
+		level: 2,
 		aliases: ['Skate Wing', 'Raie'],
 		packet: true,
 		gist: 'Wing of a ray, its sweet white flesh pulling apart in long strands',
@@ -60,6 +63,7 @@ const cards = [
 	{
 		id: 'fd_0111',
 		term: 'Flounder',
+		level: 1,
 		aliases: ['Fluke', 'Summer Flounder'],
 		packet: true,
 		gist: 'Small, thin flatfish with lean, delicate, mild and sweet fillets',
@@ -78,6 +82,7 @@ const cards = [
 	{
 		id: 'fd_0112',
 		term: 'Grouper',
+		level: 1,
 		packet: true,
 		gist: 'Warm-water reef fish with lean, firm white meat in big chunky flakes',
 		guest: "It's a mild white fish from the Gulf and the South Atlantic. The meat is firm and sweet with big, moist flakes, so it holds up to the grill or the fryer.",
@@ -93,6 +98,7 @@ const cards = [
 	{
 		id: 'fd_0113',
 		term: 'Halibut',
+		level: 1,
 		packet: true,
 		gist: 'The largest flatfish, cut into thick, firm, snow-white lean portions',
 		guest: "It's a big cold-water flatfish with thick, snow-white meat. Firm, clean and mildly sweet, the fish for someone who wants nothing fishy.",
@@ -112,6 +118,7 @@ const cards = [
 	{
 		id: 'fd_0114',
 		term: 'Mussels',
+		level: 1,
 		aliases: ['Moules'],
 		packet: true,
 		gist: 'Blue-black bivalve with soft, sweet meat, steamed open in its own broth',
@@ -132,6 +139,7 @@ const cards = [
 	{
 		id: 'fd_0115',
 		term: 'Oysters',
+		level: 1,
 		packet: true,
 		gist: 'Rough-shelled bivalve, often eaten raw, that tastes of its home water',
 		guest: "They're shellfish, and on the half shell they're shucked to order and eaten raw. A cold, silky bite of clean ocean, some brinier, some sweeter.",
@@ -150,6 +158,7 @@ const cards = [
 	{
 		id: 'fd_0116',
 		term: 'Roe',
+		level: 2,
 		packet: true,
 		gist: 'Eggs of a female fish, cured loose or cooked whole in the sac',
 		guest: 'Roe is fish eggs. Salmon roe pops with a bright, salty burst, and spring shad roe is seared whole until it is creamy inside.',
@@ -170,6 +179,7 @@ const cards = [
 	{
 		id: 'fd_0117',
 		term: 'Salmon',
+		level: 1,
 		packet: true,
 		gist: 'Rich, oily pink fish that grows at sea and spawns back in rivers',
 		guest: 'Salmon is rich and buttery, with big, silky flakes. Wild king is the richest of all, and sockeye is leaner and deeper in flavor.',
@@ -190,6 +200,7 @@ const cards = [
 	{
 		id: 'fd_0118',
 		term: 'Scallops',
+		level: 1,
 		packet: true,
 		gist: 'Sweet round muscle a shellfish uses to clap its two shells shut',
 		guest: 'Scallops are the sweet muscle that snaps the shell shut, seared golden on the outside and soft, almost creamy, in the middle.',
@@ -209,6 +220,7 @@ const cards = [
 	{
 		id: 'fd_0119',
 		term: 'Snapper',
+		level: 1,
 		aliases: ['Red Snapper'],
 		packet: true,
 		gist: 'Red-skinned warm-reef fish, lean and sweet, often served whole',
@@ -225,6 +237,7 @@ const cards = [
 	{
 		id: 'fd_0120',
 		term: 'Sturgeon',
+		level: 3,
 		packet: true,
 		gist: 'Ancient armored river fish, dense and meaty, prized for its eggs',
 		guest: 'Sturgeon is the fish caviar comes from. The meat is firm and rich, more like veal than a flaky fish, and it is wonderful smoked.',
@@ -241,6 +254,7 @@ const cards = [
 	{
 		id: 'fd_0121',
 		term: 'Tilefish',
+		level: 3,
 		aliases: ['Golden Tilefish'],
 		packet: true,
 		gist: 'Lean deep-water fish that eats crab, sweet and firm like lobster',
@@ -257,6 +271,7 @@ const cards = [
 	{
 		id: 'fd_0122',
 		term: 'Trout',
+		level: 1,
 		packet: true,
 		gist: 'Mild, delicate freshwater fish, often pan-fried whole or split',
 		guest: 'Trout is a mild, delicate freshwater fish with tender flakes and thin skin that crisps in the pan. With brown butter and almonds, it is a classic.',
@@ -275,6 +290,7 @@ const cards = [
 	{
 		id: 'fd_0123',
 		term: 'Turbot',
+		level: 3,
 		say: 'TUR-buht',
 		packet: true,
 		gist: 'Prized European flatfish, firm and white, rich in gelatin at the bone',
@@ -291,6 +307,7 @@ const cards = [
 	{
 		id: 'fd_0124',
 		term: 'Wreckfish',
+		level: 3,
 		aliases: ['Stone Bass'],
 		packet: true,
 		gist: 'Deep-water Carolina fish that gathers at wrecks, with big flakes',
@@ -309,6 +326,7 @@ const cards = [
 	{
 		id: 'fd_0125',
 		term: 'Caviar',
+		level: 2,
 		packet: true,
 		gist: 'Salt-cured sturgeon eggs, served cold by the small spoonful',
 		guest: "It's sturgeon roe, lightly salted and served cold. Each pearl pops with a clean, briny, buttery flavor, best with a blini and a glass of Champagne.",
@@ -328,6 +346,7 @@ const cards = [
 	{
 		id: 'fd_0126',
 		term: 'Bottarga',
+		level: 4,
 		say: 'boh-TAR-guh',
 		aliases: ['Poutargue'],
 		gist: 'Salted, pressed and dried fish-egg sac, grated like a cheese',
@@ -347,6 +366,7 @@ const cards = [
 	{
 		id: 'fd_0127',
 		term: 'Branzino',
+		level: 2,
 		say: 'bran-ZEE-noh',
 		aliases: ['Loup de Mer', 'European Sea Bass', 'Mediterranean Sea Bass'],
 		gist: 'Mild, lean Mediterranean white fish, often roasted and served whole',
@@ -363,6 +383,7 @@ const cards = [
 	{
 		id: 'fd_0128',
 		term: 'Black Sea Bass',
+		level: 2,
 		gist: 'Small wild Atlantic fish with firm, fine white flesh and crisp skin',
 		guest: "It's a small wild fish from the Atlantic coast, sweet and delicate, and the skin crisps beautifully in the pan.",
 		why: 'A small grouper relative caught from New England to the Gulf by pot, hook and trawl. It stays small, a few pounds at most, so fillets are thin with a fine flake. The white flesh is sweet and mild, firmer than branzino, and the dark skin sears crisp.',
@@ -380,6 +401,7 @@ const cards = [
 	{
 		id: 'fd_0129',
 		term: 'Cobia',
+		level: 3,
 		say: 'KOH-bee-uh',
 		aliases: ['Ling', 'Lemonfish'],
 		gist: 'Firm, buttery warm-water fish, often served raw, sturdy on a grill',
@@ -397,6 +419,7 @@ const cards = [
 	{
 		id: 'fd_0130',
 		term: 'Swordfish',
+		level: 1,
 		gist: 'Big ocean hunter cut into thick, dense, mild steaks that grill well',
 		guest: 'Swordfish is meaty and mild, cut into thick steaks. It eats almost like a pork chop, great off the grill for someone who wants hearty fish.',
 		why: 'A large open-ocean fish, cut crosswise from the loin into boneless steaks. The flesh is dense with a tight grain and moderate fat, so it holds together on a grill and rarely breaks into flakes. It tastes mild, without the red-meat depth of tuna.',
@@ -412,6 +435,7 @@ const cards = [
 	{
 		id: 'fd_0131',
 		term: 'Tuna',
+		level: 1,
 		gist: 'Deep-red, meaty ocean fish, served raw or seared rare inside',
 		guest: "It's a meaty, deep-red fish, clean and rich. It's usually served raw, or seared outside and rare inside, closer to a steak than a flaky fish.",
 		why: 'Tuna are warm-bodied ocean sprinters, and their muscle is full of oxygen-carrying myoglobin, which makes it red and beefy. Yellowfin is lean, bigeye a little richer, and bluefin belly is marbled with fat. Albacore is the paler, milder one canned as white tuna.',
@@ -428,6 +452,7 @@ const cards = [
 	{
 		id: 'fd_0132',
 		term: 'Monkfish',
+		level: 2,
 		aliases: ['Anglerfish', 'Lotte'],
 		gist: 'Dense, firm tail of a big-mouthed Atlantic fish, meaty and sweet',
 		guest: "It's a firm, sweet white fish people call poor man's lobster. It holds together like a steak instead of flaking.",
@@ -444,6 +469,7 @@ const cards = [
 	{
 		id: 'fd_0133',
 		term: 'Shrimp',
+		level: 1,
 		aliases: ['Prawns'],
 		gist: 'Small ten-legged crustacean, sweet and snappy, sized by count',
 		guest: 'Sweet, firm shrimp, cooked just until they curl and turn pink, so they stay juicy with a little snap.',
@@ -462,6 +488,7 @@ const cards = [
 	{
 		id: 'fd_0134',
 		term: 'Blue Crab',
+		level: 2,
 		gist: 'Chesapeake swimmer prized for sweet, hand-picked lump meat',
 		guest: "It's the East Coast crab Maryland crab cakes are famous for. The meat is sweet and delicate, and the big jumbo lumps are the prize.",
 		why: 'A swimming crab of the Atlantic and Gulf with paddle-shaped back legs. The two big muscles driving those paddles give jumbo lump, the whitest, sweetest meat. Lump and backfin are smaller pieces, and claw meat is darker and stronger. Picking is slow handwork, hence the price.',
@@ -479,6 +506,7 @@ const cards = [
 	{
 		id: 'fd_0135',
 		term: 'Soft-Shell Crab',
+		level: 2,
 		gist: 'Freshly molted Chesapeake swimmer, eaten whole with its legs',
 		guest: "It's a blue crab caught just after it sheds its old shell, so you eat the whole thing. Crisp outside, sweet and juicy inside.",
 		why: 'Crabs grow by molting: they split the old shell and back out soft. Within hours the new one starts to firm, so watermen hold molting crabs in tanks and pull them the moment they emerge. The kitchen trims the face, gills and apron, then fries or sautés it whole.',
@@ -494,6 +522,7 @@ const cards = [
 	{
 		id: 'fd_0136',
 		term: 'Lobster',
+		level: 1,
 		gist: 'Big-clawed cold-water crustacean with a firm, sweet tail',
 		guest: "It's the cold-water Atlantic kind with big claws. The tail is firm and sweet, the claw meat softer, and it all loves butter.",
 		why: 'A North Atlantic crustacean fished mostly off Maine and Canada. The tail is one big muscle, so it eats firm and snappy, while claws and knuckles are sweeter and softer. The meat breaks down fast after death, so it is cooked live or killed just before.',
@@ -510,6 +539,7 @@ const cards = [
 	{
 		id: 'fd_0137',
 		term: 'Clams',
+		level: 1,
 		aliases: ['Littlenecks', 'Quahogs', 'Steamers'],
 		gist: 'Sand-burrowing two-shelled shellfish, briny and chewy',
 		guest: 'Clams are briny little shellfish with a pleasant chew. Small ones like littlenecks are eaten raw or steamed open in wine and garlic.',

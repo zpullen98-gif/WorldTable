@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0216',
 		term: 'Carpaccio',
+		level: 2,
 		say: 'kar-PAH-choh',
 		packet: true,
 		gist: 'Raw beef, or sometimes fish, sliced paper thin to cover the plate',
@@ -23,6 +24,7 @@ const cards = [
 	{
 		id: 'fd_0217',
 		term: 'Tartare',
+		level: 2,
 		say: 'tar-TAR',
 		packet: true,
 		gist: 'Raw beef or fish chopped fine by knife, seasoned and served in a mound',
@@ -42,6 +44,7 @@ const cards = [
 	{
 		id: 'fd_0218',
 		term: 'Frittata',
+		level: 1,
 		say: 'frih-TAH-tuh',
 		packet: true,
 		gist: 'Thick open egg dish with its fillings set right in, cut into wedges',
@@ -58,6 +61,7 @@ const cards = [
 	{
 		id: 'fd_0219',
 		term: 'Ragout',
+		level: 2,
 		say: 'rah-GOO',
 		packet: true,
 		gist: 'Slow-simmered stew of meat, fish or vegetables in a thick sauce',
@@ -76,6 +80,7 @@ const cards = [
 	{
 		id: 'fd_0220',
 		term: 'Crudo',
+		level: 3,
 		say: 'KROO-doh',
 		gist: 'Very fresh raw fish dressed simply, Italian style, as it goes out',
 		guest: "It's raw fish sliced thin and dressed at the last second with good olive oil, citrus and sea salt. Clean, cool and delicate, the fish is the whole point.",
@@ -92,6 +97,7 @@ const cards = [
 	{
 		id: 'fd_0221',
 		term: 'Ceviche',
+		level: 2,
 		say: 'seh-VEE-chay',
 		gist: 'Raw fish soaked in lime juice until it firms and turns opaque',
 		guest: "It's raw fish marinated in fresh lime juice with red onion, chili and cilantro. The lime firms it and makes it bright, tangy and refreshing.",
@@ -110,6 +116,7 @@ const cards = [
 	{
 		id: 'fd_0222',
 		term: 'Gravlax',
+		level: 2,
 		say: 'GRAHV-lahks',
 		gist: 'Salmon cured raw under salt, sugar and dill, then sliced thin',
 		guest: "It's Scandinavian salmon cured for a few days with salt, sugar and fresh dill, never smoked. Silky, sweet and herby, usually with a mustard dill sauce.",
@@ -126,6 +133,7 @@ const cards = [
 	{
 		id: 'fd_0223',
 		term: 'Tataki',
+		level: 2,
 		say: 'tah-TAH-kee',
 		gist: 'Fish or beef seared for seconds, rare inside, then sliced and dressed',
 		guest: "It's tuna or beef seared for just a few seconds over high heat, so the edge is cooked and the center stays rare. Sliced thin with a bright citrus soy sauce.",
@@ -142,6 +150,7 @@ const cards = [
 	{
 		id: 'fd_0224',
 		term: 'Escabeche',
+		level: 3,
 		say: 'es-kah-BAY-chay',
 		gist: 'Fish or meat cooked first, then left to cool in a spiced vinegar',
 		guest: "It's fish that's cooked, then left to marinate in a warm, spiced vinegar, often served cool. Bright, tangy and tender, like a gentle pickle.",
@@ -156,6 +165,7 @@ const cards = [
 	{
 		id: 'fd_0225',
 		term: 'Gratin',
+		level: 1,
 		say: 'GRAH-tin',
 		gist: 'Dish baked in a shallow pan until its top forms a browned crust',
 		guest: "It's baked in a shallow dish until the top turns golden and crisp. The classic is thin sliced potatoes baked soft in cream.",
@@ -173,6 +183,7 @@ const cards = [
 	{
 		id: 'fd_0226',
 		term: 'Croquette',
+		level: 2,
 		say: 'kroh-KET',
 		gist: 'Creamy filling shaped into a small log, breaded and deep-fried',
 		guest: "It's a little breaded, fried bite with a crisp shell and a soft, creamy middle. The filling is often ham, fish or cheese in a silky white sauce.",
@@ -186,6 +197,7 @@ const cards = [
 	{
 		id: 'fd_0227',
 		term: 'Roulade',
+		level: 2,
 		say: 'roo-LAHD',
 		gist: 'Thin flat layer spread with filling, rolled into a spiral and sliced',
 		guest: "It's thin meat or cake rolled around a filling, then sliced so every piece shows a pretty spiral. A savory one is often pork or chicken rolled with herbs and greens.",
@@ -201,6 +213,7 @@ const cards = [
 	{
 		id: 'fd_0228',
 		term: 'Ballotine',
+		level: 4,
 		say: 'bal-oh-TEEN',
 		gist: 'Poultry leg or bird with the bones removed, stuffed and rolled tight',
 		guest: "It's usually a chicken leg or a whole bird with the bones taken out, filled with a savory stuffing and rolled. Every slice is juicy meat around a rich center.",
@@ -218,6 +231,7 @@ const cards = [
 	{
 		id: 'fd_0229',
 		term: 'Cassoulet',
+		level: 3,
 		say: 'kah-soo-LAY',
 		gist: 'Slow-baked casserole of white beans, duck confit, sausage and pork',
 		guest: "It's a slow-baked French casserole of white beans with slow-cooked duck, garlic sausage and pork. Hearty and rich, with a golden crust.",
@@ -232,6 +246,7 @@ const cards = [
 	{
 		id: 'fd_0230',
 		term: 'Bouillabaisse',
+		level: 3,
 		say: 'boo-yuh-BAYS',
 		gist: 'Marseille stew of several fish in a saffron and fennel broth',
 		guest: "It's the famous fish stew of Marseille, several kinds of fish in a golden saffron broth, with toast and a garlicky sauce to float on top.",
@@ -250,6 +265,7 @@ const cards = [
 	{
 		id: 'fd_0231',
 		term: 'En Papillote',
+		level: 3,
 		say: 'ahn pah-pee-YOHT',
 		gist: 'Fish or vegetables sealed in a parchment packet to steam in the oven',
 		guest: "It's fish baked sealed inside a parchment paper pouch, so it steams in its own juices. When the pouch is cut open, you get all the aroma.",
@@ -268,6 +284,7 @@ const cards = [
 	{
 		id: 'fd_0232',
 		term: 'Meunière',
+		level: 3,
 		say: 'muhn-YEHR',
 		gist: 'Floured fish fried in butter, dressed only in brown butter and lemon',
 		guest: "It's fish dusted in flour and pan-fried in butter, then finished with nutty browned butter, lemon and parsley. Simple, crisp-edged and rich.",
@@ -288,6 +305,7 @@ const cards = [
 	{
 		id: 'fd_0233',
 		term: 'Amandine',
+		level: 2,
 		say: 'ah-mahn-DEEN',
 		aliases: ['Almondine'],
 		gist: 'Pan-fried fish topped with toasted sliced almonds in browned butter',
@@ -305,6 +323,7 @@ const cards = [
 	{
 		id: 'fd_0004',
 		term: 'Coleslaw',
+		level: 1,
 		packet: true,
 		gist: 'Shredded raw cabbage salad, dressed creamy or sharp with vinegar',
 		guest: "It's crisp shredded cabbage in a tangy dressing, cool and crunchy. It's here to cut through the richness of barbecue and anything fried.",
@@ -322,6 +341,7 @@ const cards = [
 	{
 		id: 'fd_0005',
 		term: 'Hash',
+		level: 1,
 		packet: true,
 		gist: 'Chopped cooked meat and potato, pan-crisped into a browned crust',
 		guest: "Usually it's chopped meat and potatoes crisped in a hot pan, often with a runny egg on top. At Carolina barbecue joints it's a soft pork stew over rice.",

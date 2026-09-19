@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0195',
 		term: 'Aioli',
+		level: 2,
 		say: 'eye-OH-lee',
 		packet: true,
 		gist: 'Thick garlic cream of olive oil beaten in drop by drop',
@@ -24,6 +25,7 @@ const cards = [
 	{
 		id: 'fd_0196',
 		term: 'Béarnaise',
+		level: 2,
 		say: 'bair-NAYZ',
 		packet: true,
 		gist: 'Warm butter sauce of yolks, tarragon, shallot and vinegar',
@@ -43,6 +45,7 @@ const cards = [
 	{
 		id: 'fd_0197',
 		term: 'Hollandaise',
+		level: 1,
 		say: 'HAH-luhn-dayz',
 		packet: true,
 		gist: 'Warm lemony sauce of egg yolks and melted butter',
@@ -63,6 +66,7 @@ const cards = [
 	{
 		id: 'fd_0198',
 		term: 'Emulsion',
+		level: 2,
 		packet: true,
 		gist: 'Fat and liquid beaten into one smooth, even mix',
 		guest: 'It means the sauce is whisked or blended so the oil and the liquid stay together, which makes it silky and rich on the tongue.',
@@ -80,6 +84,7 @@ const cards = [
 	{
 		id: 'fd_0199',
 		term: 'Jus',
+		level: 1,
 		say: 'ZHOO',
 		packet: true,
 		gist: "Thin, glossy sauce made from roast meat's own juices, cooked down",
@@ -99,6 +104,7 @@ const cards = [
 	{
 		id: 'fd_0200',
 		term: 'Vinaigrette',
+		level: 1,
 		say: 'vin-uh-GRET',
 		packet: true,
 		gist: 'Oil whisked with vinegar or citrus, held with mustard',
@@ -116,6 +122,7 @@ const cards = [
 	{
 		id: 'fd_0201',
 		term: 'Mignonette',
+		level: 2,
 		say: 'min-yuh-NET',
 		packet: true,
 		gist: 'Minced shallot and black pepper steeped in vinegar',
@@ -133,6 +140,7 @@ const cards = [
 	{
 		id: 'fd_0202',
 		term: 'Gastrique',
+		level: 3,
 		say: 'gas-TREEK',
 		packet: true,
 		gist: 'Caramelized sugar cooked with vinegar into a syrup',
@@ -151,6 +159,7 @@ const cards = [
 	{
 		id: 'fd_0203',
 		term: 'Coulis',
+		level: 2,
 		say: 'koo-LEE',
 		packet: true,
 		gist: 'Smooth, strained purée of fruit or vegetable, served as a sauce',
@@ -167,6 +176,7 @@ const cards = [
 	{
 		id: 'fd_0204',
 		term: 'Consommé',
+		level: 2,
 		say: 'kahn-suh-MAY',
 		packet: true,
 		gist: 'Rich meat stock made crystal clear by a raft of egg white',
@@ -186,6 +196,7 @@ const cards = [
 	{
 		id: 'fd_0205',
 		term: 'Beurre Blanc',
+		level: 3,
 		say: 'BURR BLAHN',
 		gist: 'Cold butter whisked into a reduction of wine and shallot',
 		guest: "It's a warm butter sauce sharpened with white wine and shallot. Silky and rich with a bright finish, and a classic with fish and scallops.",
@@ -205,6 +216,7 @@ const cards = [
 	{
 		id: 'fd_0206',
 		term: 'Demi-Glace',
+		level: 2,
 		say: 'DEM-ee-glahss',
 		gist: 'Glossy brown sauce base of roasted veal stock reduced by half',
 		guest: "It's a deeply reduced meat sauce, classically veal, glossy and rich and the backbone of a great steak sauce. Think of the best gravy you've had, concentrated.",
@@ -225,6 +237,7 @@ const cards = [
 	{
 		id: 'fd_0207',
 		term: 'Velouté',
+		level: 3,
 		say: 'veh-loo-TAY',
 		gist: 'Pale mother sauce of light stock thickened with butter and flour',
 		guest: "It's a silky sauce made from chicken or fish broth, thickened lightly. Mild and savory, it lets delicate fish or chicken taste like themselves.",
@@ -241,6 +254,7 @@ const cards = [
 	{
 		id: 'fd_0208',
 		term: 'Béchamel',
+		level: 2,
 		say: 'BESH-uh-mel',
 		gist: 'Hot milk thickened with butter and flour, the white base',
 		guest: "It's a creamy white sauce of milk thickened with butter and flour. It's what makes a classic lasagna, a gratin or a croque monsieur so rich.",
@@ -260,6 +274,7 @@ const cards = [
 	{
 		id: 'fd_0209',
 		term: 'Remoulade',
+		level: 2,
 		say: 'REM-uh-lahd',
 		gist: 'Cold mayonnaise sauce sharpened with pickles, capers and mustard',
 		guest: "It's a tangy, creamy cold sauce, mayonnaise sharpened with mustard, pickles and herbs. It's great with anything fried, especially crab cakes.",
@@ -274,6 +289,7 @@ const cards = [
 	{
 		id: 'fd_0210',
 		term: 'Chimichurri',
+		level: 2,
 		say: 'chee-mee-CHOO-ree',
 		gist: 'Raw Argentine sauce of parsley, garlic, oil and vinegar',
 		guest: "It's Argentina's steak sauce, chopped parsley and garlic in oil and vinegar with a little chili. Bright and sharp, it cuts through rich grilled meat.",
@@ -292,6 +308,7 @@ const cards = [
 	{
 		id: 'fd_0211',
 		term: 'Salsa Verde',
+		level: 2,
 		say: 'SAHL-sah VEHR-day',
 		gist: 'Chopped parsley sauce sharpened with capers, anchovy and vinegar',
 		guest: "It's a bright Italian green sauce of chopped parsley, capers, anchovy and good olive oil. It wakes up rich meats and grilled fish.",
@@ -307,6 +324,7 @@ const cards = [
 	{
 		id: 'fd_0212',
 		term: 'Pesto',
+		level: 1,
 		gist: 'Pounded basil sauce with pine nuts, garlic, hard cheese and oil',
 		guest: "It's the classic basil sauce from Genoa, made with pine nuts, garlic, Parmesan and olive oil. Fresh, green and nutty, it clings to pasta.",
 		why: 'The name comes from the Italian for to pound, as in a mortar and pestle. Crushing the leaves bursts their oils instead of slicing them, so the sauce is fragrant and glossy. Cheese and nuts give it body, so it coats pasta the way a cream sauce would.',
@@ -323,6 +341,7 @@ const cards = [
 	{
 		id: 'fd_0213',
 		term: 'Romesco',
+		level: 3,
 		say: 'roh-MEHS-koh',
 		gist: 'Catalan sauce of dried red peppers, roasted tomato, nuts and bread',
 		guest: "It's a Catalan sauce of dried sweet red peppers and roasted tomato, ground with toasted almonds and garlic. Earthy, nutty and a little sweet.",
@@ -340,6 +359,7 @@ const cards = [
 	{
 		id: 'fd_0214',
 		term: 'Stock',
+		level: 1,
 		gist: 'Liquid simmered from bones and aromatics, the base under sauces',
 		guest: "It's the kitchen's foundation, bones and vegetables simmered slowly in water into a rich liquid. It's what gives sauces and soups their depth.",
 		why: 'Bones and vegetables simmer gently in water for hours, or under an hour for fish. Collagen in the bones melts into gelatin, which gives stock body and makes it set when cold. Roasting the bones first makes brown stock, deeper in color and flavor, for dark sauces.',
@@ -354,6 +374,7 @@ const cards = [
 	{
 		id: 'fd_0215',
 		term: 'Agrodolce',
+		level: 3,
 		say: 'ah-groh-DOHL-chay',
 		gist: 'Italian sweet-sour sauce of vinegar, sugar, raisins and onion',
 		guest: "It's the Italian take on sweet and sour, vinegar and sugar or honey cooked down, often with raisins and onions. It makes rich meats and vegetables pop.",

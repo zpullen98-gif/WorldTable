@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0154',
 		term: 'Brebis',
+		level: 4,
 		say: 'breh-BEE',
 		packet: true,
 		gist: "Cheese made from ewe's milk, rich and sweet, sold fresh or aged",
@@ -24,6 +25,7 @@ const cards = [
 	{
 		id: 'fd_0155',
 		term: 'Buttermilk',
+		level: 1,
 		packet: true,
 		gist: 'Thick, tangy cultured milk that tenderizes batters and brines',
 		guest: "It's a tangy, lightly thick cultured milk, the classic secret to tender biscuits and juicy fried chicken.",
@@ -40,6 +42,7 @@ const cards = [
 	{
 		id: 'fd_0156',
 		term: 'Chèvre',
+		level: 2,
 		say: 'SHEV-ruh',
 		packet: true,
 		gist: "Soft, bright, tangy fresh cheese made from goat's milk",
@@ -59,6 +62,7 @@ const cards = [
 	{
 		id: 'fd_0157',
 		term: 'Crème Fraîche',
+		level: 2,
 		say: 'KREM FRESH',
 		packet: true,
 		gist: "Thick, mild cultured cream that won't curdle when hot",
@@ -77,6 +81,7 @@ const cards = [
 	{
 		id: 'fd_0158',
 		term: 'Fromage Blanc',
+		level: 3,
 		say: 'froh-MAHZH BLAHN',
 		packet: true,
 		gist: 'Smooth, spoonable soft white cheese, mild and lightly sour',
@@ -93,6 +98,7 @@ const cards = [
 	{
 		id: 'fd_0159',
 		term: 'Parmesan',
+		level: 1,
 		aliases: ['Parmigiano-Reggiano'],
 		packet: true,
 		gist: "Hard, long-aged Italian cow's milk cheese, nutty and salty",
@@ -110,6 +116,7 @@ const cards = [
 	{
 		id: 'fd_0160',
 		term: 'Clarified Butter',
+		level: 2,
 		aliases: ['Drawn Butter'],
 		packet: true,
 		gist: 'Mild, pale butterfat, most milk solids skimmed off before they brown',
@@ -126,6 +133,7 @@ const cards = [
 	{
 		id: 'fd_0161',
 		term: 'Brown Butter',
+		level: 2,
 		aliases: ['Beurre Noisette'],
 		packet: true,
 		gist: 'Butter cooked until its milk solids toast, left in for a nutty taste',
@@ -145,6 +153,7 @@ const cards = [
 	{
 		id: 'fd_0162',
 		term: 'Ghee',
+		level: 2,
 		gist: 'Butter simmered until its milk solids toast, then strained out',
 		guest: "It's butter cooked slowly until golden and nutty, then strained, for a rich, toasty butter flavor you can't get from plain butter.",
 		why: 'Butter is simmered until its water cooks off and the milk solids sink and toast, then it is strained. What remains is nearly pure butterfat with a nutty, caramel flavor that keeps at room temperature and takes high heat without burning.',
@@ -160,6 +169,7 @@ const cards = [
 	{
 		id: 'fd_0163',
 		term: 'Compound Butter',
+		level: 2,
 		aliases: ['Beurre Composé'],
 		gist: 'Butter beaten with herbs, chilled in a log, sliced onto hot food',
 		guest: "It's butter mixed with herbs and seasonings, then chilled. A slice melts over your steak and turns into the sauce.",
@@ -175,6 +185,7 @@ const cards = [
 	{
 		id: 'fd_0164',
 		term: 'Mascarpone',
+		level: 2,
 		say: 'mas-kar-POH-nay',
 		gist: 'Silky Italian cheese of cream set with a mild acid, not rennet',
 		guest: "It's an Italian cream cheese, silky, sweet and very rich. It's what makes tiramisu so plush, like cream cheese with barely any tang.",
@@ -194,6 +205,7 @@ const cards = [
 	{
 		id: 'fd_0165',
 		term: 'Ricotta',
+		level: 1,
 		say: 'rih-KAH-tuh',
 		gist: 'Soft, fluffy curds made by reheating the whey left from cheesemaking',
 		guest: "It's a soft, fluffy fresh cheese with a sweet, milky flavor. Whipped with honey, it's like a cloud on toast.",
@@ -213,6 +225,7 @@ const cards = [
 	{
 		id: 'fd_0166',
 		term: 'Burrata',
+		level: 2,
 		say: 'boo-RAH-tuh',
 		gist: 'Pouch of stretched cheese curd filled with cream-soaked shreds',
 		guest: "It's a ball of fresh mozzarella filled with cream and soft curd. Cut it open and the center spills out, rich and milky.",
@@ -231,6 +244,7 @@ const cards = [
 	{
 		id: 'fd_0167',
 		term: 'Fresh Mozzarella',
+		level: 1,
 		aliases: ['Fior di Latte'],
 		gist: 'Soft white ball of stretched milk curd, solid through, kept in liquid',
 		guest: "It's soft, milky mozzarella made fresh and kept in water, nothing like the shredded kind. Sweet, delicate and a little springy.",
@@ -247,6 +261,7 @@ const cards = [
 	{
 		id: 'fd_0168',
 		term: 'Feta',
+		level: 1,
 		gist: 'Salty, tangy white cheese of sheep and goat milk, aged in brine',
 		guest: "It's the Greek brined cheese, crumbly and creamy with a salty, tangy bite. It wakes up salads, watermelon and anything off the grill.",
 		why: "Curds are cut into slabs, salted and aged in brine for at least two months. The brine keeps it moist and sharply salty, and sheep's milk gives a rich, creamy tang. In the EU only Greek cheese of sheep's milk, with up to 30 percent goat, carries the name.",
@@ -262,6 +277,7 @@ const cards = [
 	{
 		id: 'fd_0169',
 		term: 'Blue Cheese',
+		level: 1,
 		aliases: ['Bleu Cheese'],
 		gist: 'Wheel pierced so a mold culture grows in veins, sharp, salty, creamy',
 		guest: "It's cheese ripened with a mold that runs through it in blue veins. Sharp, salty and creamy, it's bold, and wonderful with pears or honey.",
@@ -275,6 +291,7 @@ const cards = [
 	{
 		id: 'fd_0170',
 		term: 'Bloomy Rind',
+		level: 3,
 		gist: 'Soft cheese under a velvety white mold skin that ripens it inward',
 		guest: "It's a soft cheese with a thin, velvety white rind, like Brie or Camembert. Inside it's buttery and creamy, with a mild mushroomy flavor.",
 		why: 'The young cheese is dusted or sprayed with white molds, which grow a downy skin within about a week. Those molds soften the curd from the outside in, so a ripe one runs creamy under the rind and tastes of butter, cream and mushroom. The rind is edible.',
@@ -292,6 +309,7 @@ const cards = [
 	{
 		id: 'fd_0171',
 		term: 'Washed Rind',
+		level: 4,
 		gist: 'Brine-bathed aging cheese with a sticky orange skin and strong aroma',
 		guest: "It's a cheese like Taleggio, rubbed with brine as it ages, so the rind turns orange and smells bold. Inside it's milder, soft and savory.",
 		why: 'While it ages the cheese is rubbed with brine, sometimes with beer, wine or brandy. The damp, salty surface grows orange bacteria that make the tacky rind and barnyard smell, while the paste stays supple and savory. Think Taleggio or French Munster.',

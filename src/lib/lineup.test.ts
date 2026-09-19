@@ -62,11 +62,12 @@ describe('a lineup is picked from the room, by the same picker as a sitting', ()
 		id: `fd_${String(i + 1).padStart(4, '0')}`,
 		term: `Term ${i + 1}`,
 		section: 'cuts',
+		level: 1,
 		gist: `gist ${i + 1}`,
 		guest: 'g',
 		why: 'w'
 	}));
-	const deck: FloorDeck = { version: 1, frame: { madeWith: '', confirm: '' }, sections: [{ key: 'cuts', title: 'Cuts', blurb: '', count: 12 }], cards };
+	const deck: FloorDeck = { version: 1, frame: { madeWith: '', confirm: '' }, sections: [{ key: 'cuts', title: 'Cuts', blurb: '', count: 12 }], levels: [{ level: 1, name: 'Commis', blurb: '', count: 12 }], cards };
 	const day = (d: number) => new Date(2026, 8, d, 16, 0, 0).getTime();
 
 	it('asks what the room missed first, then walks on to what it has never been asked', () => {

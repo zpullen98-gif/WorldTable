@@ -1,0 +1,2024 @@
+{
+	"assigned": "2026-09-19",
+	"standard": "tools/deck/README.md, \"Levels\"",
+	"cards": [
+		{
+			"id": "fd_0025",
+			"term": "Boiled",
+			"section": "methods",
+			"level": 1,
+			"reason": "Plain everyday word (boiled lobster, boiled potatoes) that every guest already understands."
+		},
+		{
+			"id": "fd_0026",
+			"term": "Braised",
+			"section": "methods",
+			"level": 1,
+			"reason": "Named in the standard as a Commis example; braised short rib is on most American menus."
+		},
+		{
+			"id": "fd_0027",
+			"term": "Brined",
+			"section": "methods",
+			"level": 1,
+			"reason": "Brined pork chop and turkey are familiar and easy to explain; the packet flag breaks the tie downward."
+		},
+		{
+			"id": "fd_0028",
+			"term": "Caramelized",
+			"section": "methods",
+			"level": 1,
+			"reason": "Caramelized onions are on most American menus and guests already know the word."
+		},
+		{
+			"id": "fd_0029",
+			"term": "Confit",
+			"section": "methods",
+			"level": 2,
+			"reason": "Named in the standard as a Chef de Partie example; common at good restaurants and needs a sentence."
+		},
+		{
+			"id": "fd_0030",
+			"term": "Cured",
+			"section": "methods",
+			"level": 1,
+			"reason": "Cured meats and salmon are familiar menu words; the packet flag breaks the 1-or-2 tie downward."
+		},
+		{
+			"id": "fd_0031",
+			"term": "Fried",
+			"section": "methods",
+			"level": 1,
+			"reason": "Fried is on every American menu and needs no explaining."
+		},
+		{
+			"id": "fd_0002",
+			"term": "Chicken-Fried",
+			"section": "methods",
+			"level": 1,
+			"reason": "Chicken-fried steak is a familiar American menu staple, and it was on the packet."
+		},
+		{
+			"id": "fd_0032",
+			"term": "Grilled",
+			"section": "methods",
+			"level": 1,
+			"reason": "Named in the standard as a Commis example; grilled appears on nearly every menu."
+		},
+		{
+			"id": "fd_0033",
+			"term": "Pickled",
+			"section": "methods",
+			"level": 1,
+			"reason": "Pickled onions and pickles are everywhere on American menus and guests know the word."
+		},
+		{
+			"id": "fd_0034",
+			"term": "Poached",
+			"section": "methods",
+			"level": 1,
+			"reason": "Poached eggs and poached fish are common menu words guests know; it was also on the packet."
+		},
+		{
+			"id": "fd_0035",
+			"term": "Preserved",
+			"section": "methods",
+			"level": 1,
+			"reason": "Challenge accepted: a plain umbrella word guests know (Preserved Lemon has its own card); packet breaks the 1-or-2 tie down."
+		},
+		{
+			"id": "fd_0036",
+			"term": "Puréed",
+			"section": "methods",
+			"level": 1,
+			"reason": "Purée is a common menu word guests already understand, and it was on the packet."
+		},
+		{
+			"id": "fd_0037",
+			"term": "Roasted",
+			"section": "methods",
+			"level": 1,
+			"reason": "Roasted chicken and vegetables are everyday menu words known on day one."
+		},
+		{
+			"id": "fd_0038",
+			"term": "Sautéed",
+			"section": "methods",
+			"level": 1,
+			"reason": "Sautéed spinach and mushrooms are on most American menus, and guests know the word."
+		},
+		{
+			"id": "fd_0039",
+			"term": "Seared",
+			"section": "methods",
+			"level": 1,
+			"reason": "Seared scallops and tuna are common menu words a server needs from day one."
+		},
+		{
+			"id": "fd_0040",
+			"term": "Simmered",
+			"section": "methods",
+			"level": 1,
+			"reason": "Simmered is a plain everyday cooking word guests understand without explanation."
+		},
+		{
+			"id": "fd_0041",
+			"term": "Smoked",
+			"section": "methods",
+			"level": 1,
+			"reason": "Smoked salmon and barbecue are everyday American menu words."
+		},
+		{
+			"id": "fd_0042",
+			"term": "Sous Vide",
+			"section": "methods",
+			"level": 2,
+			"reason": "Common at good restaurants; guests ask about it, and the water-bath method needs a sentence."
+		},
+		{
+			"id": "fd_0043",
+			"term": "Wilted",
+			"section": "methods",
+			"level": 1,
+			"reason": "Wilted spinach and greens are plain menu words; the packet flag breaks any tie downward."
+		},
+		{
+			"id": "fd_0044",
+			"term": "Blanched",
+			"section": "methods",
+			"level": 2,
+			"reason": "A kitchen word that shows up on good menus; guests ask what it means and confuse it with boiled."
+		},
+		{
+			"id": "fd_0045",
+			"term": "Steamed",
+			"section": "methods",
+			"level": 1,
+			"reason": "Steamed vegetables, fish and dumplings are everyday menu words known to every guest."
+		},
+		{
+			"id": "fd_0046",
+			"term": "Fermented",
+			"section": "methods",
+			"level": 2,
+			"reason": "Fermented is now common on good menus, needs a sentence, and is often confused with pickled."
+		},
+		{
+			"id": "fd_0047",
+			"term": "Rendered",
+			"section": "methods",
+			"level": 2,
+			"reason": "Rendered duck skin is a good-restaurant term guests ask about; it needs a sentence and is confused with confit."
+		},
+		{
+			"id": "fd_0048",
+			"term": "Blackened",
+			"section": "methods",
+			"level": 1,
+			"reason": "Blackened chicken and fish are on many casual American menus, and guests expect a server to know it."
+		},
+		{
+			"id": "fd_0049",
+			"term": "Pan-Roasted",
+			"section": "methods",
+			"level": 2,
+			"reason": "Common at good restaurants, but it takes a sentence to separate it from seared and roasted."
+		},
+		{
+			"id": "fd_0050",
+			"term": "Escargot",
+			"section": "meats",
+			"level": 2,
+			"reason": "A bistro standard guests know by name but still ask about. One sentence covers it: snails in garlic butter."
+		},
+		{
+			"id": "fd_0051",
+			"term": "Guinea Hen",
+			"section": "meats",
+			"level": 2,
+			"reason": "One-line explanation and Pheasant's declared confusable pair; rarer on menus, so a real 2/3 tie that the packet flag breaks down."
+		},
+		{
+			"id": "fd_0052",
+			"term": "Quail",
+			"section": "meats",
+			"level": 2,
+			"reason": "Common at good restaurants, especially Southern ones; needs one line on its size and the semi-boneless bones."
+		},
+		{
+			"id": "fd_0053",
+			"term": "Squab",
+			"section": "meats",
+			"level": 3,
+			"reason": "A fine-dining specialist bird served rare; seldom seen outside upscale menus. The packet flag does not settle it, because this is no tie."
+		},
+		{
+			"id": "fd_0054",
+			"term": "Sweetbreads",
+			"section": "meats",
+			"level": 3,
+			"reason": "Named in the written standard as a Sous Chef example: a classic fine-dining offal."
+		},
+		{
+			"id": "fd_0055",
+			"term": "Foie Gras",
+			"section": "meats",
+			"level": 2,
+			"reason": "A famous word at any good restaurant; needs a sentence and is the main confusable with chicken liver."
+		},
+		{
+			"id": "fd_0056",
+			"term": "Duck Breast",
+			"section": "meats",
+			"level": 1,
+			"reason": "Plain English word on menus at most sit-down restaurants; guests know it, and only the doneness needs saying."
+		},
+		{
+			"id": "fd_0057",
+			"term": "Poussin",
+			"section": "meats",
+			"level": 3,
+			"reason": "A French fine-dining term for a specialist product; takes explaining against Cornish hen."
+		},
+		{
+			"id": "fd_0058",
+			"term": "Rabbit",
+			"section": "meats",
+			"level": 2,
+			"reason": "A familiar word that shows up at good Italian and French places; guests ask what it tastes like, so it needs a sentence."
+		},
+		{
+			"id": "fd_0059",
+			"term": "Venison",
+			"section": "meats",
+			"level": 2,
+			"reason": "Guests know it is deer, and it is common at good restaurants; one sentence on leanness and doneness explains it."
+		},
+		{
+			"id": "fd_0060",
+			"term": "Pheasant",
+			"section": "meats",
+			"level": 2,
+			"reason": "A familiar game-bird word at good restaurants; one half of the main confusable pair with guinea hen."
+		},
+		{
+			"id": "fd_0061",
+			"term": "Bone Marrow",
+			"section": "meats",
+			"level": 2,
+			"reason": "Now common at steakhouses and gastropubs; needs a sentence on how it is scooped and spread."
+		},
+		{
+			"id": "fd_0062",
+			"term": "Chicken Liver",
+			"section": "meats",
+			"level": 2,
+			"reason": "An everyday word, usually served as mousse; the main confusable with foie gras, so it needs a sentence."
+		},
+		{
+			"id": "fd_0063",
+			"term": "Beef Tongue",
+			"section": "meats",
+			"level": 2,
+			"reason": "Common as lengua on taco menus and in delis; guests ask, and one sentence on its texture settles them."
+		},
+		{
+			"id": "fd_0064",
+			"term": "Andouille",
+			"section": "cured",
+			"level": 2,
+			"reason": "Common in Cajun dishes but not on most menus; needs a sentence to split it from tasso and boudin."
+		},
+		{
+			"id": "fd_0065",
+			"term": "Chorizo",
+			"section": "cured",
+			"level": 1,
+			"reason": "On countless American menus through Mexican food; guests expect any server to know it. Packet breaks the 1/2 tie down."
+		},
+		{
+			"id": "fd_0066",
+			"term": "Coppa",
+			"section": "cured",
+			"level": 2,
+			"reason": "Common on good charcuterie boards and known as capicola; needs a sentence against prosciutto."
+		},
+		{
+			"id": "fd_0067",
+			"term": "Country Ham",
+			"section": "cured",
+			"level": 2,
+			"reason": "Regional American staple that needs a sentence to separate it from brined city ham."
+		},
+		{
+			"id": "fd_0068",
+			"term": "Guanciale",
+			"section": "cured",
+			"level": 3,
+			"reason": "Named as a Sous Chef example in the standard: a specialist Italian cured cut."
+		},
+		{
+			"id": "fd_0069",
+			"term": "Lardo",
+			"section": "cured",
+			"level": 3,
+			"reason": "Specialist Italian product at fine-dining tables; guests confuse it with lard and ask what it is."
+		},
+		{
+			"id": "fd_0070",
+			"term": "Lomo",
+			"section": "cured",
+			"level": 4,
+			"reason": "Spanish cured loin, rare outside tapas bars and rarer than Jamon Iberico (L3); specialist charcuterie."
+		},
+		{
+			"id": "fd_0071",
+			"term": "Pancetta",
+			"section": "cured",
+			"level": 2,
+			"reason": "Common at good Italian restaurants; a main confusable pair with bacon and guanciale."
+		},
+		{
+			"id": "fd_0072",
+			"term": "Pastrami",
+			"section": "cured",
+			"level": 1,
+			"reason": "Everyday American deli word that guests expect any server to know on day one."
+		},
+		{
+			"id": "fd_0073",
+			"term": "Pâté",
+			"section": "cured",
+			"level": 2,
+			"reason": "Familiar word, but guests ask about it and it is a main confusable with terrine and rillettes."
+		},
+		{
+			"id": "fd_0074",
+			"term": "Prosciutto",
+			"section": "cured",
+			"level": 1,
+			"reason": "On most American menus with Italian dishes; guests assume every server knows it."
+		},
+		{
+			"id": "fd_0075",
+			"term": "Rillettes",
+			"section": "cured",
+			"level": 2,
+			"reason": "Challenge rejected: a bistro board staple one sentence explains, next to confit; a true 2/3 tie, so packet breaks it down."
+		},
+		{
+			"id": "fd_0076",
+			"term": "Speck",
+			"section": "cured",
+			"level": 3,
+			"reason": "Challenge rejected: on menus no more often than guanciale, a named Sous Chef example; a specialist product, not a real tie."
+		},
+		{
+			"id": "fd_0077",
+			"term": "Tasso",
+			"section": "cured",
+			"level": 3,
+			"reason": "Regional Cajun product rarely seen outside Southern menus; a specialist item that confuses guests."
+		},
+		{
+			"id": "fd_0078",
+			"term": "Charcuterie",
+			"section": "cured",
+			"level": 1,
+			"reason": "Charcuterie boards are everywhere; an everyday menu word guests expect every server to know."
+		},
+		{
+			"id": "fd_0079",
+			"term": "Bresaola",
+			"section": "cured",
+			"level": 3,
+			"reason": "Specialist Italian cured beef found at finer restaurants; guests often ask what it is."
+		},
+		{
+			"id": "fd_0080",
+			"term": "Soppressata",
+			"section": "cured",
+			"level": 2,
+			"reason": "Common on pizzas and boards at good restaurants; needs a sentence against everyday salami."
+		},
+		{
+			"id": "fd_0081",
+			"term": "'Nduja",
+			"section": "cured",
+			"level": 2,
+			"reason": "Challenge accepted: now common on pizzas and small plates, guests ask often, and one sentence explains it, like burrata."
+		},
+		{
+			"id": "fd_0082",
+			"term": "Jamón Ibérico",
+			"section": "cured",
+			"level": 3,
+			"reason": "Luxury specialist product with bellota grades to explain; a known name on fine-dining menus."
+		},
+		{
+			"id": "fd_0083",
+			"term": "Bacon",
+			"section": "cured",
+			"level": 1,
+			"reason": "Everyday word on nearly every American menu; any server knows it on day one."
+		},
+		{
+			"id": "fd_0084",
+			"term": "Terrine",
+			"section": "cured",
+			"level": 2,
+			"reason": "Common at good bistros; a main confusable pair with pâté and tureen that needs a sentence."
+		},
+		{
+			"id": "fd_0085",
+			"term": "Corned Beef",
+			"section": "cured",
+			"level": 1,
+			"reason": "Everyday American deli and Reuben word that guests expect any server to know."
+		},
+		{
+			"id": "fd_0086",
+			"term": "Ribeye Cap",
+			"section": "cuts",
+			"level": 2,
+			"reason": "Common at good steakhouses and needs a sentence (spinalis); packet breaks the 2/3 tie downward"
+		},
+		{
+			"id": "fd_0087",
+			"term": "Cheek",
+			"section": "cuts",
+			"level": 2,
+			"reason": "Braised cheek shows up at good restaurants and guests ask what it is; not on most everyday menus"
+		},
+		{
+			"id": "fd_0088",
+			"term": "Hanger Steak",
+			"section": "cuts",
+			"level": 2,
+			"reason": "Named Chef de Partie example: common at good restaurants, needs a sentence, confusable with skirt"
+		},
+		{
+			"id": "fd_0089",
+			"term": "Ham Hock",
+			"section": "cuts",
+			"level": 1,
+			"reason": "A familiar American household word guests rarely ask about; packet breaks the 1/2 tie downward"
+		},
+		{
+			"id": "fd_0090",
+			"term": "Ribeye",
+			"section": "cuts",
+			"level": 1,
+			"reason": "Named Commis example: the steak on nearly every American menu"
+		},
+		{
+			"id": "fd_0091",
+			"term": "Shoulder",
+			"section": "cuts",
+			"level": 1,
+			"reason": "Everyday menu word (pork or lamb shoulder, pulled pork) that guests already know"
+		},
+		{
+			"id": "fd_0092",
+			"term": "Short Rib",
+			"section": "cuts",
+			"level": 1,
+			"reason": "Braised short rib is on most American menus and guests order it without asking"
+		},
+		{
+			"id": "fd_0093",
+			"term": "Tenderloin",
+			"section": "cuts",
+			"level": 1,
+			"reason": "Filet mignon and tenderloin are day-one steakhouse words every guest expects a server to know"
+		},
+		{
+			"id": "fd_0094",
+			"term": "Pork Belly",
+			"section": "cuts",
+			"level": 1,
+			"reason": "Pork belly is now on most American menus; packet breaks the 1/2 tie downward"
+		},
+		{
+			"id": "fd_0095",
+			"term": "New York Strip",
+			"section": "cuts",
+			"level": 1,
+			"reason": "Classic steakhouse cut on most American menus, known to guests on sight"
+		},
+		{
+			"id": "fd_0096",
+			"term": "Porterhouse and T-Bone",
+			"section": "cuts",
+			"level": 1,
+			"reason": "Steakhouse staple guests assume any server knows; the size difference is quick to explain"
+		},
+		{
+			"id": "fd_0097",
+			"term": "Flank Steak",
+			"section": "cuts",
+			"level": 2,
+			"reason": "Common menu steak but part of the main confusable trio with skirt and hanger"
+		},
+		{
+			"id": "fd_0098",
+			"term": "Skirt Steak",
+			"section": "cuts",
+			"level": 2,
+			"reason": "Common at good restaurants and a main confusable pair with flank and hanger"
+		},
+		{
+			"id": "fd_0099",
+			"term": "Bavette",
+			"section": "cuts",
+			"level": 3,
+			"reason": "French bistro specialist cut, less common than hanger, easily confused with flank and skirt"
+		},
+		{
+			"id": "fd_0100",
+			"term": "Flat Iron Steak",
+			"section": "cuts",
+			"level": 2,
+			"reason": "Frequent at good restaurants, and guests ask what a flat iron is; one sentence explains it"
+		},
+		{
+			"id": "fd_0101",
+			"term": "Brisket",
+			"section": "cuts",
+			"level": 1,
+			"reason": "Everyday American barbecue and deli word every guest already knows"
+		},
+		{
+			"id": "fd_0102",
+			"term": "Oxtail",
+			"section": "cuts",
+			"level": 2,
+			"reason": "Common at good and Caribbean restaurants; needs a sentence on the bone and the braise"
+		},
+		{
+			"id": "fd_0103",
+			"term": "Shank",
+			"section": "cuts",
+			"level": 1,
+			"reason": "Braised lamb shank is a familiar menu staple that guests order without asking"
+		},
+		{
+			"id": "fd_0104",
+			"term": "Coulotte",
+			"section": "cuts",
+			"level": 3,
+			"reason": "Named Sous Chef example: a specialist sirloin cut, easily confused with calotte"
+		},
+		{
+			"id": "fd_0105",
+			"term": "Rack of Lamb",
+			"section": "cuts",
+			"level": 1,
+			"reason": "Everyday menu item on most American menus that guests know on sight"
+		},
+		{
+			"id": "fd_0106",
+			"term": "Pork Chop",
+			"section": "cuts",
+			"level": 1,
+			"reason": "Everyday American menu word that needs no explanation"
+		},
+		{
+			"id": "fd_0107",
+			"term": "Wagyu",
+			"section": "cuts",
+			"level": 2,
+			"reason": "Widely on good menus, guests often ask about it, and Kobe vs A5 needs a sentence"
+		},
+		{
+			"id": "fd_0108",
+			"term": "Arctic Char",
+			"section": "fish",
+			"level": 2,
+			"reason": "Common at good restaurants and needs a sentence; the classic confusable with salmon and trout."
+		},
+		{
+			"id": "fd_0109",
+			"term": "Crawfish",
+			"section": "fish",
+			"level": 1,
+			"reason": "Widely known word guests assume servers know; tie with level 2 broken downward by packet."
+		},
+		{
+			"id": "fd_0110",
+			"term": "Skate",
+			"section": "fish",
+			"level": 2,
+			"reason": "Regular bistro fish that guests ask about; one sentence explains the ray wing."
+		},
+		{
+			"id": "fd_0111",
+			"term": "Flounder",
+			"section": "fish",
+			"level": 1,
+			"reason": "Everyday American fish name that needs no explanation on day one."
+		},
+		{
+			"id": "fd_0112",
+			"term": "Grouper",
+			"section": "fish",
+			"level": 1,
+			"reason": "Familiar fish across Southern and seafood menus; packet breaks the tie with level 2 downward."
+		},
+		{
+			"id": "fd_0113",
+			"term": "Halibut",
+			"section": "fish",
+			"level": 1,
+			"reason": "One of the most common white fish on American menus; guests know it."
+		},
+		{
+			"id": "fd_0114",
+			"term": "Mussels",
+			"section": "fish",
+			"level": 1,
+			"reason": "Everyday shellfish on most American menus; no explanation needed."
+		},
+		{
+			"id": "fd_0115",
+			"term": "Oysters",
+			"section": "fish",
+			"level": 1,
+			"reason": "Everyday raw bar word guests assume any server knows."
+		},
+		{
+			"id": "fd_0116",
+			"term": "Roe",
+			"section": "fish",
+			"level": 2,
+			"reason": "Guests ask what roe means and which kind; it takes a sentence to explain."
+		},
+		{
+			"id": "fd_0117",
+			"term": "Salmon",
+			"section": "fish",
+			"level": 1,
+			"reason": "Standard's own level 1 example; on nearly every American menu."
+		},
+		{
+			"id": "fd_0118",
+			"term": "Scallops",
+			"section": "fish",
+			"level": 1,
+			"reason": "Everyday shellfish on most American menus; guests know the word."
+		},
+		{
+			"id": "fd_0119",
+			"term": "Snapper",
+			"section": "fish",
+			"level": 1,
+			"reason": "Familiar everyday fish name on American menus; packet breaks the tie downward."
+		},
+		{
+			"id": "fd_0120",
+			"term": "Sturgeon",
+			"section": "fish",
+			"level": 3,
+			"reason": "Rarely on menus as a meat; a specialist product explained mostly through caviar."
+		},
+		{
+			"id": "fd_0121",
+			"term": "Tilefish",
+			"section": "fish",
+			"level": 3,
+			"reason": "Specialist regional fish, rare on menus, and guests nearly always ask what it is."
+		},
+		{
+			"id": "fd_0122",
+			"term": "Trout",
+			"section": "fish",
+			"level": 1,
+			"reason": "Everyday freshwater fish on most American menus; no explanation needed."
+		},
+		{
+			"id": "fd_0123",
+			"term": "Turbot",
+			"section": "fish",
+			"level": 3,
+			"reason": "Standard's own level 3 example; a prized fine-dining flatfish."
+		},
+		{
+			"id": "fd_0124",
+			"term": "Wreckfish",
+			"section": "fish",
+			"level": 3,
+			"reason": "Very rare local catch, a tie between 3 and 4 that the packet breaks downward."
+		},
+		{
+			"id": "fd_0125",
+			"term": "Caviar",
+			"section": "fish",
+			"level": 2,
+			"reason": "Well-known word, but the kinds and how it is served take a sentence at a good restaurant."
+		},
+		{
+			"id": "fd_0126",
+			"term": "Bottarga",
+			"section": "fish",
+			"level": 4,
+			"reason": "Standard's own level 4 example; rare cured roe a senior server must own."
+		},
+		{
+			"id": "fd_0127",
+			"term": "Branzino",
+			"section": "fish",
+			"level": 2,
+			"reason": "Standard's own level 2 example; common at good restaurants and needs a sentence."
+		},
+		{
+			"id": "fd_0128",
+			"term": "Black Sea Bass",
+			"section": "fish",
+			"level": 2,
+			"reason": "Common at good restaurants; the main confusable against branzino and Chilean sea bass."
+		},
+		{
+			"id": "fd_0129",
+			"term": "Cobia",
+			"section": "fish",
+			"level": 3,
+			"reason": "Uncommon specialist fish, usually as crudo; guests rarely know it."
+		},
+		{
+			"id": "fd_0130",
+			"term": "Swordfish",
+			"section": "fish",
+			"level": 1,
+			"reason": "Everyday grilled fish steak found on most American menus."
+		},
+		{
+			"id": "fd_0131",
+			"term": "Tuna",
+			"section": "fish",
+			"level": 1,
+			"reason": "Everyday fish on nearly every American menu, from ahi to sushi."
+		},
+		{
+			"id": "fd_0132",
+			"term": "Monkfish",
+			"section": "fish",
+			"level": 2,
+			"reason": "Common at good restaurants; guests ask, and a sentence explains poor man's lobster."
+		},
+		{
+			"id": "fd_0133",
+			"term": "Shrimp",
+			"section": "fish",
+			"level": 1,
+			"reason": "Standard's own level 1 example; on nearly every American menu."
+		},
+		{
+			"id": "fd_0134",
+			"term": "Blue Crab",
+			"section": "fish",
+			"level": 2,
+			"reason": "Crab is familiar, but blue crab and its lump grades take a sentence to explain."
+		},
+		{
+			"id": "fd_0135",
+			"term": "Soft-Shell Crab",
+			"section": "fish",
+			"level": 2,
+			"reason": "Guests ask if they really eat the whole crab; needs a sentence at a good restaurant."
+		},
+		{
+			"id": "fd_0136",
+			"term": "Lobster",
+			"section": "fish",
+			"level": 1,
+			"reason": "Everyday menu word guests assume any server knows."
+		},
+		{
+			"id": "fd_0137",
+			"term": "Clams",
+			"section": "fish",
+			"level": 1,
+			"reason": "Everyday shellfish on most American menus; no explanation needed."
+		},
+		{
+			"id": "fd_0138",
+			"term": "Abalone Mushroom",
+			"section": "mushrooms",
+			"level": 4,
+			"reason": "Rarer on American menus than Lion's Mane (a standard L4), so packet cannot pull it down; it is not a tie."
+		},
+		{
+			"id": "fd_0139",
+			"term": "Beech Mushroom",
+			"section": "mushrooms",
+			"level": 2,
+			"reason": "Shimeji shows up at good and Asian restaurants and needs a sentence; 2/3 tie, packet tips it down."
+		},
+		{
+			"id": "fd_0140",
+			"term": "Black Trumpet",
+			"section": "mushrooms",
+			"level": 3,
+			"reason": "Fine-dining wild mushroom, confusable with king trumpet; specialist product vocabulary."
+		},
+		{
+			"id": "fd_0141",
+			"term": "Chanterelle",
+			"section": "mushrooms",
+			"level": 2,
+			"reason": "Common on seasonal menus at good restaurants; guests ask, one sentence explains it."
+		},
+		{
+			"id": "fd_0142",
+			"term": "Hen of the Woods",
+			"section": "mushrooms",
+			"level": 2,
+			"reason": "Crispy maitake is common at good restaurants; main confusable pair with chicken of the woods."
+		},
+		{
+			"id": "fd_0143",
+			"term": "King Trumpet",
+			"section": "mushrooms",
+			"level": 2,
+			"reason": "King oyster is common at good restaurants and forms the main confusable pair with black trumpet."
+		},
+		{
+			"id": "fd_0144",
+			"term": "Morel",
+			"section": "mushrooms",
+			"level": 2,
+			"reason": "Well-known spring mushroom at good restaurants; needs a sentence (wild, always cooked)."
+		},
+		{
+			"id": "fd_0145",
+			"term": "Oyster Mushroom",
+			"section": "mushrooms",
+			"level": 1,
+			"reason": "Widely on everyday menus; 1/2 tie on the shellfish mix-up, packet tips it down."
+		},
+		{
+			"id": "fd_0146",
+			"term": "Shiitake",
+			"section": "mushrooms",
+			"level": 1,
+			"reason": "Everyday mushroom on most American menus; guests assume any server knows it."
+		},
+		{
+			"id": "fd_0147",
+			"term": "Truffle",
+			"section": "mushrooms",
+			"level": 1,
+			"reason": "Word is on most American menus and every guest knows it; 1/2 tie, packet tips it down."
+		},
+		{
+			"id": "fd_0148",
+			"term": "Truffle Oil",
+			"section": "mushrooms",
+			"level": 1,
+			"reason": "Challenge accepted: truffle fries put it on casual menus nationwide, and it cannot sit above fresh truffle at 1."
+		},
+		{
+			"id": "fd_0149",
+			"term": "Porcini",
+			"section": "mushrooms",
+			"level": 2,
+			"reason": "Staple of good Italian menus (risotto, pasta); needs a sentence, not a day-one word."
+		},
+		{
+			"id": "fd_0150",
+			"term": "Cremini",
+			"section": "mushrooms",
+			"level": 1,
+			"reason": "Baby bella is the everyday brown mushroom on most American menus."
+		},
+		{
+			"id": "fd_0151",
+			"term": "Enoki",
+			"section": "mushrooms",
+			"level": 2,
+			"reason": "Common at hot pot and Asian restaurants; needs a sentence and a cook-through note."
+		},
+		{
+			"id": "fd_0152",
+			"term": "Lion's Mane",
+			"section": "mushrooms",
+			"level": 4,
+			"reason": "Named in the written standard as a CHEF example."
+		},
+		{
+			"id": "fd_0153",
+			"term": "Chicken of the Woods",
+			"section": "mushrooms",
+			"level": 4,
+			"reason": "Rare foraged shelf fungus, seen on menus even less often than lion's mane (a CHEF anchor)."
+		},
+		{
+			"id": "fd_0154",
+			"term": "Brebis",
+			"section": "dairy",
+			"level": 4,
+			"reason": "French ewe's-milk label almost never printed on US menus; specialist cheese vocabulary like Washed Rind (L4)."
+		},
+		{
+			"id": "fd_0155",
+			"term": "Buttermilk",
+			"section": "dairy",
+			"level": 1,
+			"reason": "Everyday American menu word (fried chicken, biscuits, ranch) that guests expect any server to know."
+		},
+		{
+			"id": "fd_0156",
+			"term": "Chèvre",
+			"section": "dairy",
+			"level": 2,
+			"reason": "The French word for goat cheese, common at good restaurants; it needs a sentence and has to be told apart from feta."
+		},
+		{
+			"id": "fd_0157",
+			"term": "Crème Fraîche",
+			"section": "dairy",
+			"level": 2,
+			"reason": "Common at good restaurants and needs a sentence; the main thing to explain is how it differs from sour cream."
+		},
+		{
+			"id": "fd_0158",
+			"term": "Fromage Blanc",
+			"section": "dairy",
+			"level": 3,
+			"reason": "Specialist fresh cheese, rare on American menus, and it has to be told apart from ricotta; that is fine-dining product vocabulary."
+		},
+		{
+			"id": "fd_0159",
+			"term": "Parmesan",
+			"section": "dairy",
+			"level": 1,
+			"reason": "Listed as a Commis example in the written standard, and it is on most American menus."
+		},
+		{
+			"id": "fd_0160",
+			"term": "Clarified Butter",
+			"section": "dairy",
+			"level": 2,
+			"reason": "Drawn butter is common with seafood, but the term needs a sentence and belongs to the confusable trio with ghee and brown butter."
+		},
+		{
+			"id": "fd_0161",
+			"term": "Brown Butter",
+			"section": "dairy",
+			"level": 2,
+			"reason": "Common at good restaurants (brown butter sage); it needs a sentence and is confused with ghee."
+		},
+		{
+			"id": "fd_0162",
+			"term": "Ghee",
+			"section": "dairy",
+			"level": 2,
+			"reason": "Increasingly common on menus; it is in the main confusable trio with clarified butter and brown butter."
+		},
+		{
+			"id": "fd_0163",
+			"term": "Compound Butter",
+			"section": "dairy",
+			"level": 2,
+			"reason": "Steakhouse staple that needs a sentence to explain; a familiar idea rather than a specialist word."
+		},
+		{
+			"id": "fd_0164",
+			"term": "Mascarpone",
+			"section": "dairy",
+			"level": 2,
+			"reason": "Common through tiramisu but not on most menus; it needs a sentence and is confused with ricotta."
+		},
+		{
+			"id": "fd_0165",
+			"term": "Ricotta",
+			"section": "dairy",
+			"level": 1,
+			"reason": "Everyday Italian-American menu cheese (lasagna, whipped ricotta) that guests assume servers know."
+		},
+		{
+			"id": "fd_0166",
+			"term": "Burrata",
+			"section": "dairy",
+			"level": 2,
+			"reason": "Listed as a Chef de Partie example in the written standard; it is common at good restaurants and gets confused with mozzarella."
+		},
+		{
+			"id": "fd_0167",
+			"term": "Fresh Mozzarella",
+			"section": "dairy",
+			"level": 1,
+			"reason": "On most American menus (caprese, pizza) and needs almost no explanation."
+		},
+		{
+			"id": "fd_0168",
+			"term": "Feta",
+			"section": "dairy",
+			"level": 1,
+			"reason": "Everyday menu cheese (Greek salad) that any server knows on day one."
+		},
+		{
+			"id": "fd_0169",
+			"term": "Blue Cheese",
+			"section": "dairy",
+			"level": 1,
+			"reason": "On most American menus (wedge salad, wings) and needs almost no explanation."
+		},
+		{
+			"id": "fd_0170",
+			"term": "Bloomy Rind",
+			"section": "dairy",
+			"level": 3,
+			"reason": "Cheese-board rind vocabulary used at fine dining; guests know Brie but rarely the category term."
+		},
+		{
+			"id": "fd_0171",
+			"term": "Washed Rind",
+			"section": "dairy",
+			"level": 4,
+			"reason": "Listed as a Chef example in the written standard: specialist rind vocabulary a senior server must own."
+		},
+		{
+			"id": "fd_0172",
+			"term": "Agnolotti",
+			"section": "starches",
+			"level": 2,
+			"reason": "Common on upscale American menus; needs a sentence to set it apart from ravioli and tortellini."
+		},
+		{
+			"id": "fd_0173",
+			"term": "Buckwheat",
+			"section": "starches",
+			"level": 2,
+			"reason": "Guests know the word but often ask; takes a sentence to explain it is not wheat, with a gluten caveat."
+		},
+		{
+			"id": "fd_0174",
+			"term": "Bulgur",
+			"section": "starches",
+			"level": 2,
+			"reason": "Seen at good restaurants in tabbouleh; confused with couscous, so it needs a sentence."
+		},
+		{
+			"id": "fd_0175",
+			"term": "Farro",
+			"section": "starches",
+			"level": 2,
+			"reason": "A staple of good-restaurant grain salads that guests ask about; one sentence covers it."
+		},
+		{
+			"id": "fd_0176",
+			"term": "Farro Piccolo",
+			"section": "starches",
+			"level": 4,
+			"reason": "Einkorn sold under a specialist product name, rarer than Carnaroli; it belongs with Acquerello at L4."
+		},
+		{
+			"id": "fd_0177",
+			"term": "Gnocchi",
+			"section": "starches",
+			"level": 2,
+			"reason": "Written standard names Gnocchi as a Chef de Partie example."
+		},
+		{
+			"id": "fd_0178",
+			"term": "Grits",
+			"section": "starches",
+			"level": 1,
+			"reason": "Shrimp and grits is everyday American menu fare that any guest expects a server to know on day one."
+		},
+		{
+			"id": "fd_0007",
+			"term": "Hominy",
+			"section": "starches",
+			"level": 2,
+			"reason": "Seen in pozole and Southern dishes; guests ask, it needs a sentence, and it gets confused with grits."
+		},
+		{
+			"id": "fd_0179",
+			"term": "Polenta",
+			"section": "starches",
+			"level": 2,
+			"reason": "Common at good restaurants; needs a sentence and is one of the main pairs confused with grits."
+		},
+		{
+			"id": "fd_0180",
+			"term": "Quinoa",
+			"section": "starches",
+			"level": 1,
+			"reason": "An everyday word from grain bowls on most American menus; guests already know it."
+		},
+		{
+			"id": "fd_0181",
+			"term": "Risotto",
+			"section": "starches",
+			"level": 1,
+			"reason": "Written standard names Risotto as a Commis example."
+		},
+		{
+			"id": "fd_0182",
+			"term": "Carnaroli",
+			"section": "starches",
+			"level": 3,
+			"reason": "Specialist risotto-rice variety named mainly on fine-dining menus; a product, not an everyday dish."
+		},
+		{
+			"id": "fd_0183",
+			"term": "Acquerello",
+			"section": "starches",
+			"level": 4,
+			"reason": "Written standard names Acquerello as a Chef example."
+		},
+		{
+			"id": "fd_0184",
+			"term": "Semolina",
+			"section": "starches",
+			"level": 2,
+			"reason": "Seen on good menus for pasta and bread; takes a sentence to explain durum and the cornmeal mix-up."
+		},
+		{
+			"id": "fd_0185",
+			"term": "Tagliatelle",
+			"section": "starches",
+			"level": 2,
+			"reason": "Common on good Italian menus; needs a sentence to set it apart from pappardelle and fettuccine."
+		},
+		{
+			"id": "fd_0186",
+			"term": "Arborio",
+			"section": "starches",
+			"level": 2,
+			"reason": "A familiar risotto rice that is one of the main pairs confused with carnaroli; needs a sentence."
+		},
+		{
+			"id": "fd_0187",
+			"term": "Couscous",
+			"section": "starches",
+			"level": 1,
+			"reason": "An everyday word on most American menus that guests already know; a server is expected to know it."
+		},
+		{
+			"id": "fd_0188",
+			"term": "Freekeh",
+			"section": "starches",
+			"level": 4,
+			"reason": "Rare fire-roasted green wheat, far less seen than Farro or Bulgur (L2); a specialist grain like Farro Piccolo."
+		},
+		{
+			"id": "fd_0189",
+			"term": "Wild Rice",
+			"section": "starches",
+			"level": 1,
+			"reason": "An everyday American side and soup word that guests assume any server knows."
+		},
+		{
+			"id": "fd_0190",
+			"term": "Pappardelle",
+			"section": "starches",
+			"level": 2,
+			"reason": "Common at good Italian restaurants and one of the main pairs confused with tagliatelle."
+		},
+		{
+			"id": "fd_0191",
+			"term": "Ravioli",
+			"section": "starches",
+			"level": 1,
+			"reason": "An everyday pasta name on most American menus that any guest expects a server to know."
+		},
+		{
+			"id": "fd_0192",
+			"term": "Tortellini",
+			"section": "starches",
+			"level": 1,
+			"reason": "A household pasta name that guests know from any Italian-American menu."
+		},
+		{
+			"id": "fd_0193",
+			"term": "Cavatelli",
+			"section": "starches",
+			"level": 2,
+			"reason": "Common at good Italian-American restaurants; needs a sentence and is confused with gnocchi and orecchiette."
+		},
+		{
+			"id": "fd_0194",
+			"term": "Orecchiette",
+			"section": "starches",
+			"level": 2,
+			"reason": "Common at good Italian restaurants; guests ask about the shape, and it is confused with cavatelli."
+		},
+		{
+			"id": "fd_0195",
+			"term": "Aioli",
+			"section": "sauces",
+			"level": 2,
+			"reason": "Aioli is a named Chef de Partie example: common at good restaurants, and it needs a sentence to set it apart from mayonnaise."
+		},
+		{
+			"id": "fd_0196",
+			"term": "Béarnaise",
+			"section": "sauces",
+			"level": 2,
+			"reason": "A steakhouse staple that guests often ask about, between level 2 and 3; the packet flag breaks the tie down to 2."
+		},
+		{
+			"id": "fd_0197",
+			"term": "Hollandaise",
+			"section": "sauces",
+			"level": 1,
+			"reason": "Eggs Benedict puts it on nearly every American brunch menu; between 1 and 2, the packet flag breaks the tie down."
+		},
+		{
+			"id": "fd_0198",
+			"term": "Emulsion",
+			"section": "sauces",
+			"level": 2,
+			"reason": "Technique word on upscale menus that always needs explaining; between 2 and 3, the packet flag breaks the tie down."
+		},
+		{
+			"id": "fd_0199",
+			"term": "Jus",
+			"section": "sauces",
+			"level": 1,
+			"reason": "Au jus (French dip, prime rib) is everyday American menu language; between 1 and 2, the packet flag breaks the tie down."
+		},
+		{
+			"id": "fd_0200",
+			"term": "Vinaigrette",
+			"section": "sauces",
+			"level": 1,
+			"reason": "Vinaigrette is a named Commis example: an everyday dressing word on most menus."
+		},
+		{
+			"id": "fd_0201",
+			"term": "Mignonette",
+			"section": "sauces",
+			"level": 2,
+			"reason": "Standard at any oyster bar and needs a sentence; between 2 and 3, the packet flag breaks the tie down."
+		},
+		{
+			"id": "fd_0202",
+			"term": "Gastrique",
+			"section": "sauces",
+			"level": 3,
+			"reason": "Challenge upheld: classical French preparation rarer on menus than Beurre Blanc (level 3), so the packet flag has no tie to break."
+		},
+		{
+			"id": "fd_0203",
+			"term": "Coulis",
+			"section": "sauces",
+			"level": 2,
+			"reason": "Frequent on dessert menus but a guest still needs a sentence on it, including the confusable pair with compote."
+		},
+		{
+			"id": "fd_0204",
+			"term": "Consommé",
+			"section": "sauces",
+			"level": 2,
+			"reason": "Classical, but birria made the word common; the packet flag breaks the 2/3 tie down."
+		},
+		{
+			"id": "fd_0205",
+			"term": "Beurre Blanc",
+			"section": "sauces",
+			"level": 3,
+			"reason": "Beurre Blanc is a named Sous Chef example: a classical French butter sauce."
+		},
+		{
+			"id": "fd_0206",
+			"term": "Demi-Glace",
+			"section": "sauces",
+			"level": 2,
+			"reason": "Challenge upheld: on steakhouse and chain menus, often asked about, one sentence to explain, main confusable with jus."
+		},
+		{
+			"id": "fd_0207",
+			"term": "Velouté",
+			"section": "sauces",
+			"level": 3,
+			"reason": "A mother sauce and fine-dining vocabulary, rarer on American menus than béchamel and rarely known to guests."
+		},
+		{
+			"id": "fd_0208",
+			"term": "Béchamel",
+			"section": "sauces",
+			"level": 2,
+			"reason": "Known through lasagna and croque monsieur; common, needs a sentence, and pairs with velouté as a confusable."
+		},
+		{
+			"id": "fd_0209",
+			"term": "Remoulade",
+			"section": "sauces",
+			"level": 2,
+			"reason": "Common beside crab cakes and fried seafood; needs a sentence to set it apart from tartar sauce."
+		},
+		{
+			"id": "fd_0210",
+			"term": "Chimichurri",
+			"section": "sauces",
+			"level": 2,
+			"reason": "Now widespread on steak menus; needs a sentence and is the main confusable with Italian salsa verde."
+		},
+		{
+			"id": "fd_0211",
+			"term": "Salsa Verde",
+			"section": "sauces",
+			"level": 2,
+			"reason": "Common at good restaurants and a confusable pair twice over, with chimichurri and with Mexican tomatillo salsa."
+		},
+		{
+			"id": "fd_0212",
+			"term": "Pesto",
+			"section": "sauces",
+			"level": 1,
+			"reason": "On pasta, pizza and sandwich menus across America; a guest assumes any server knows it on day one."
+		},
+		{
+			"id": "fd_0213",
+			"term": "Romesco",
+			"section": "sauces",
+			"level": 3,
+			"reason": "A regional Catalan sauce built on specialist products (ñora peppers); on a par with Mostarda."
+		},
+		{
+			"id": "fd_0214",
+			"term": "Stock",
+			"section": "sauces",
+			"level": 1,
+			"reason": "A basic kitchen and menu word that every server is expected to know from the first shift."
+		},
+		{
+			"id": "fd_0215",
+			"term": "Agrodolce",
+			"section": "sauces",
+			"level": 3,
+			"reason": "Regional Italian preparation like Mostarda, rarer than Beurre Blanc and not on the packet; level with its partner Gastrique."
+		},
+		{
+			"id": "fd_0216",
+			"term": "Carpaccio",
+			"section": "preparations",
+			"level": 2,
+			"reason": "On many Italian menus but not most; one half of the main carpaccio/tartare confusable pair that needs a sentence."
+		},
+		{
+			"id": "fd_0217",
+			"term": "Tartare",
+			"section": "preparations",
+			"level": 2,
+			"reason": "Challenge accepted: half of the carpaccio/tartare pair set at 2; common at good restaurants, not most, so no tie for the packet."
+		},
+		{
+			"id": "fd_0218",
+			"term": "Frittata",
+			"section": "preparations",
+			"level": 1,
+			"reason": "An everyday brunch word on most American menus, guessed as an egg dish on day one; also on the packet."
+		},
+		{
+			"id": "fd_0219",
+			"term": "Ragout",
+			"section": "preparations",
+			"level": 2,
+			"reason": "Common at good restaurants but guests ask about it, and it takes a sentence to explain (slow-simmered stew vs ragu)."
+		},
+		{
+			"id": "fd_0220",
+			"term": "Crudo",
+			"section": "preparations",
+			"level": 3,
+			"reason": "Named as a Sous Chef example in the standard; a fine-dining raw-fish preparation."
+		},
+		{
+			"id": "fd_0221",
+			"term": "Ceviche",
+			"section": "preparations",
+			"level": 2,
+			"reason": "Widely seen and one sentence explains it, but it is a key confusable (crudo/escabeche) that guests question."
+		},
+		{
+			"id": "fd_0222",
+			"term": "Gravlax",
+			"section": "preparations",
+			"level": 2,
+			"reason": "Seen at good brunch and Nordic menus; takes a sentence and is the main mix-up with smoked salmon."
+		},
+		{
+			"id": "fd_0223",
+			"term": "Tataki",
+			"section": "preparations",
+			"level": 2,
+			"reason": "Tuna tataki is common at sushi and pan-Asian spots; guests ask how rare it is, so it needs a sentence."
+		},
+		{
+			"id": "fd_0224",
+			"term": "Escabeche",
+			"section": "preparations",
+			"level": 3,
+			"reason": "A rarer classical Spanish preparation, seldom on American menus, and it needs care to separate from ceviche."
+		},
+		{
+			"id": "fd_0225",
+			"term": "Gratin",
+			"section": "preparations",
+			"level": 1,
+			"reason": "Au gratin potatoes are an everyday side on most American menus, so guests expect any server to know it."
+		},
+		{
+			"id": "fd_0226",
+			"term": "Croquette",
+			"section": "preparations",
+			"level": 2,
+			"reason": "Common on tapas and good bistro menus, and it takes a sentence to explain the breaded, creamy fried bite."
+		},
+		{
+			"id": "fd_0227",
+			"term": "Roulade",
+			"section": "preparations",
+			"level": 2,
+			"reason": "Challenge accepted: pork, chicken and cake roulades are common at good and banquet menus; one sentence explains the rolled spiral."
+		},
+		{
+			"id": "fd_0228",
+			"term": "Ballotine",
+			"section": "preparations",
+			"level": 4,
+			"reason": "Named as a Chef example in the standard; a deeply classical boned-and-stuffed preparation."
+		},
+		{
+			"id": "fd_0229",
+			"term": "Cassoulet",
+			"section": "preparations",
+			"level": 3,
+			"reason": "A classical French bistro dish; guests know the name but explaining confit, sausage and beans is fine-dining vocabulary."
+		},
+		{
+			"id": "fd_0230",
+			"term": "Bouillabaisse",
+			"section": "preparations",
+			"level": 3,
+			"reason": "A classical Marseille preparation with rouille; famous name but it is fine-dining vocabulary that needs real explaining."
+		},
+		{
+			"id": "fd_0231",
+			"term": "En Papillote",
+			"section": "preparations",
+			"level": 3,
+			"reason": "A classical French cooking method named in French; appears at fine-dining tables and guests often ask about it."
+		},
+		{
+			"id": "fd_0232",
+			"term": "Meunière",
+			"section": "preparations",
+			"level": 3,
+			"reason": "A classical French preparation (sole meuniere) and brown butter sauce, and it is often confused with beurre blanc."
+		},
+		{
+			"id": "fd_0233",
+			"term": "Amandine",
+			"section": "preparations",
+			"level": 2,
+			"reason": "Trout and green beans almondine are common at good restaurants; one sentence (with almonds) explains it."
+		},
+		{
+			"id": "fd_0004",
+			"term": "Coleslaw",
+			"section": "preparations",
+			"level": 1,
+			"reason": "An everyday side on most American menus, which every guest assumes a server knows; also on the packet."
+		},
+		{
+			"id": "fd_0005",
+			"term": "Hash",
+			"section": "preparations",
+			"level": 1,
+			"reason": "Corned beef hash is an everyday American breakfast word guests expect known on day one; also on the packet."
+		},
+		{
+			"id": "fd_0234",
+			"term": "Beignets",
+			"section": "bread",
+			"level": 2,
+			"reason": "Challenge accepted: not on most American menus and guests ask what it is, like Macaron at 2; not a tie, so the packet flag can't lower it."
+		},
+		{
+			"id": "fd_0235",
+			"term": "Brioche",
+			"section": "bread",
+			"level": 1,
+			"reason": "Everyday word on most American menus (brioche bun, French toast); guests assume servers know it."
+		},
+		{
+			"id": "fd_0236",
+			"term": "Focaccia",
+			"section": "bread",
+			"level": 1,
+			"reason": "Common bread-basket and sandwich word on most American menus; rarely asked about."
+		},
+		{
+			"id": "fd_0237",
+			"term": "Sourdough",
+			"section": "bread",
+			"level": 1,
+			"reason": "Everyday bread word on nearly every American menu; guests know it on sight."
+		},
+		{
+			"id": "fd_0020",
+			"term": "Cornbread",
+			"section": "bread",
+			"level": 1,
+			"reason": "Everyday American menu word; guests know cornbread and seldom ask about it."
+		},
+		{
+			"id": "fd_0238",
+			"term": "Macaron",
+			"section": "bread",
+			"level": 2,
+			"reason": "A named Chef de Partie example in the standard; half of the classic macaron/macaroon confusable pair."
+		},
+		{
+			"id": "fd_0239",
+			"term": "Macaroon",
+			"section": "bread",
+			"level": 2,
+			"reason": "The other half of the main macaron/macaroon confusable pair; needs a sentence to set it apart."
+		},
+		{
+			"id": "fd_0240",
+			"term": "Meringue",
+			"section": "bread",
+			"level": 1,
+			"reason": "Everyday dessert word (lemon meringue pie) that guests already know; on the packet."
+		},
+		{
+			"id": "fd_0241",
+			"term": "Tart",
+			"section": "bread",
+			"level": 1,
+			"reason": "Everyday dessert word on most American menus; guests know a tart, and it was on the packet."
+		},
+		{
+			"id": "fd_0242",
+			"term": "Torte",
+			"section": "bread",
+			"level": 2,
+			"reason": "Less common than tart and forms a main confusable pair with it; needs a sentence to explain."
+		},
+		{
+			"id": "fd_0243",
+			"term": "Pâte à Choux",
+			"section": "bread",
+			"level": 3,
+			"reason": "Classical French pastry preparation; a fine-dining term that seldom appears on everyday menus."
+		},
+		{
+			"id": "fd_0244",
+			"term": "Puff Pastry",
+			"section": "bread",
+			"level": 1,
+			"reason": "Familiar everyday word (Wellington, turnovers); guests know it without explanation."
+		},
+		{
+			"id": "fd_0245",
+			"term": "Clafoutis",
+			"section": "bread",
+			"level": 3,
+			"reason": "Classical French bistro dessert, rare on American menus; takes real explanation, plus the pit warning."
+		},
+		{
+			"id": "fd_0246",
+			"term": "Galette",
+			"section": "bread",
+			"level": 2,
+			"reason": "Common at good restaurants and needs a sentence; confusable with tart and carries two meanings."
+		},
+		{
+			"id": "fd_0247",
+			"term": "Pavlova",
+			"section": "bread",
+			"level": 2,
+			"reason": "Seen at good restaurants and guests often ask about it; needs a sentence to explain."
+		},
+		{
+			"id": "fd_0248",
+			"term": "Soufflé",
+			"section": "bread",
+			"level": 2,
+			"reason": "Well-known word but not on most menus; needs a sentence on the timing and is confusable with mousse."
+		},
+		{
+			"id": "fd_0249",
+			"term": "Crème Anglaise",
+			"section": "custards",
+			"level": 2,
+			"reason": "Classical sauce but common on good dessert menus; paired confusable with pastry cream; packet breaks the tie down."
+		},
+		{
+			"id": "fd_0250",
+			"term": "Custard",
+			"section": "custards",
+			"level": 1,
+			"reason": "Everyday dessert word every guest knows; on most American menus in pies and puddings."
+		},
+		{
+			"id": "fd_0251",
+			"term": "Ganache",
+			"section": "custards",
+			"level": 2,
+			"reason": "Common on good-restaurant dessert menus but guests need a sentence on what it is versus tempered chocolate."
+		},
+		{
+			"id": "fd_0252",
+			"term": "Mousse",
+			"section": "custards",
+			"level": 1,
+			"reason": "Chocolate mousse is an everyday American menu word guests assume a server knows."
+		},
+		{
+			"id": "fd_0253",
+			"term": "Parfait",
+			"section": "custards",
+			"level": 2,
+			"reason": "Word is familiar, but the frozen French mold and savory liver parfait need a sentence; confusable with semifreddo."
+		},
+		{
+			"id": "fd_0254",
+			"term": "Panna Cotta",
+			"section": "custards",
+			"level": 2,
+			"reason": "Challenge upheld: common at good restaurants, not most menus; guests ask and gelatin-set cream needs a sentence, so no tie."
+		},
+		{
+			"id": "fd_0255",
+			"term": "Chocolate Truffle",
+			"section": "custards",
+			"level": 1,
+			"reason": "Everyday sweet word guests know on sight; only the mushroom mix-up needs a quick note."
+		},
+		{
+			"id": "fd_0256",
+			"term": "Gelato",
+			"section": "custards",
+			"level": 2,
+			"reason": "Standard's own level-2 example: common, and the gelato versus ice cream pair needs a sentence."
+		},
+		{
+			"id": "fd_0257",
+			"term": "Granita",
+			"section": "custards",
+			"level": 2,
+			"reason": "Common at a good restaurant; needs a sentence and is a main confusable pair with sorbet."
+		},
+		{
+			"id": "fd_0258",
+			"term": "Sherbet",
+			"section": "custards",
+			"level": 1,
+			"reason": "Everyday American frozen-dessert word; guests assume any server knows it on day one."
+		},
+		{
+			"id": "fd_0259",
+			"term": "Sorbet",
+			"section": "custards",
+			"level": 1,
+			"reason": "On most American dessert menus and a staple palate cleanser; everyday word."
+		},
+		{
+			"id": "fd_0260",
+			"term": "Ice Cream",
+			"section": "custards",
+			"level": 1,
+			"reason": "The most everyday dessert word on any American menu."
+		},
+		{
+			"id": "fd_0261",
+			"term": "Semifreddo",
+			"section": "custards",
+			"level": 2,
+			"reason": "Regular on good Italian dessert menus; guests ask and it takes a sentence to explain as frozen mousse."
+		},
+		{
+			"id": "fd_0262",
+			"term": "Crème Brûlée",
+			"section": "custards",
+			"level": 1,
+			"reason": "Named in the standard as a level-1 example; on most American menus."
+		},
+		{
+			"id": "fd_0263",
+			"term": "Pot de Crème",
+			"section": "custards",
+			"level": 2,
+			"reason": "Common at bistros and good restaurants; needs a sentence to separate it from mousse and creme brulee."
+		},
+		{
+			"id": "fd_0264",
+			"term": "Pastry Cream",
+			"section": "custards",
+			"level": 2,
+			"reason": "Known filling but rarely named on menus; a main confusable pair with creme anglaise that needs a sentence."
+		},
+		{
+			"id": "fd_0265",
+			"term": "Chantilly",
+			"section": "custards",
+			"level": 2,
+			"reason": "Appears on good-restaurant menus under a French name guests ask about; one sentence explains it."
+		},
+		{
+			"id": "fd_0266",
+			"term": "Balsamic",
+			"section": "pantry",
+			"level": 1,
+			"reason": "On most American menus; guests know balsamic on sight and expect any server to."
+		},
+		{
+			"id": "fd_0267",
+			"term": "Banyuls",
+			"section": "pantry",
+			"level": 4,
+			"reason": "Named in the standard as a Chef example; a rare regional fortified wine and vinegar, so the packet flag gives no tie to break."
+		},
+		{
+			"id": "fd_0268",
+			"term": "Saba",
+			"section": "pantry",
+			"level": 4,
+			"reason": "Rare Italian cooked-must syrup, seldom on US menus; same specialist-condiment tier as Banyuls (L4)."
+		},
+		{
+			"id": "fd_0269",
+			"term": "Kimchi",
+			"section": "pantry",
+			"level": 1,
+			"reason": "Now common on American menus and widely known to guests; the packet flag settles any doubt downward."
+		},
+		{
+			"id": "fd_0270",
+			"term": "Compote",
+			"section": "pantry",
+			"level": 1,
+			"reason": "Everyday brunch and dessert word; the packet flag breaks the tie with 2 downward despite the jam confusion."
+		},
+		{
+			"id": "fd_0271",
+			"term": "Marmalade",
+			"section": "pantry",
+			"level": 1,
+			"reason": "Household breakfast word every guest knows; little to explain beyond citrus and peel."
+		},
+		{
+			"id": "fd_0272",
+			"term": "Sherry Vinegar",
+			"section": "pantry",
+			"level": 2,
+			"reason": "Common at good restaurants in dressings and needs a sentence to set it apart from red wine vinegar."
+		},
+		{
+			"id": "fd_0273",
+			"term": "Verjus",
+			"section": "pantry",
+			"level": 4,
+			"reason": "Specialist unripe-grape acid, rarer on menus than Mostarda (standard L3) and in need of a full explanation."
+		},
+		{
+			"id": "fd_0274",
+			"term": "Mostarda",
+			"section": "pantry",
+			"level": 3,
+			"reason": "Named in the standard as a Sous Chef example; a classical Italian condiment on fine cheese boards."
+		},
+		{
+			"id": "fd_0275",
+			"term": "Chutney",
+			"section": "pantry",
+			"level": 2,
+			"reason": "Familiar at good restaurants but needs a sentence; it is confused with jam and mostarda."
+		},
+		{
+			"id": "fd_0276",
+			"term": "Jam",
+			"section": "pantry",
+			"level": 1,
+			"reason": "Everyday word every guest knows; needs no explanation on day one."
+		},
+		{
+			"id": "fd_0277",
+			"term": "Preserved Lemon",
+			"section": "pantry",
+			"level": 2,
+			"reason": "Common on Mediterranean menus at good restaurants, and guests ask what the salt cure does."
+		},
+		{
+			"id": "fd_0278",
+			"term": "Capers",
+			"section": "pantry",
+			"level": 1,
+			"reason": "On most American menus (piccata, smoked salmon); guests assume servers know them."
+		},
+		{
+			"id": "fd_0279",
+			"term": "Cornichon",
+			"section": "pantry",
+			"level": 2,
+			"reason": "Standard on charcuterie boards at good restaurants; needs a sentence to set it apart from a dill pickle."
+		},
+		{
+			"id": "fd_0280",
+			"term": "Miso",
+			"section": "pantry",
+			"level": 2,
+			"reason": "Challenge accepted: common at good restaurants but not on most American menus; no packet flag to break the 1/2 tie down."
+		},
+		{
+			"id": "fd_0281",
+			"term": "Fish Sauce",
+			"section": "pantry",
+			"level": 2,
+			"reason": "Common in Thai and Vietnamese dishes, and guests ask about it for fish allergies; needs a sentence."
+		},
+		{
+			"id": "fd_0282",
+			"term": "Harissa",
+			"section": "pantry",
+			"level": 2,
+			"reason": "Now common at good restaurants, but guests ask how it differs from hot sauce, which takes a sentence."
+		},
+		{
+			"id": "fd_0283",
+			"term": "Pimentón",
+			"section": "pantry",
+			"level": 2,
+			"reason": "Common at good restaurants as smoked paprika; needs a sentence on sweet, hot and smoked styles."
+		},
+		{
+			"id": "fd_0284",
+			"term": "Finishing Salt",
+			"section": "pantry",
+			"level": 2,
+			"reason": "Seen at good restaurants, and guests ask what the flaky salt is for; it takes a sentence to explain."
+		},
+		{
+			"id": "fd_0285",
+			"term": "Heirloom",
+			"section": "language",
+			"level": 1,
+			"reason": "Heirloom tomato is on everyday American menus and guests assume any server knows it; packet card."
+		},
+		{
+			"id": "fd_0286",
+			"term": "Larder",
+			"section": "language",
+			"level": 2,
+			"reason": "Menu heading at good restaurants that needs a sentence; packet breaks the 2-or-3 tie downward."
+		},
+		{
+			"id": "fd_0287",
+			"term": "Garde Manger",
+			"section": "language",
+			"level": 3,
+			"reason": "Classical brigade station, rarely printed on menus; kitchen vocabulary rather than an everyday guest word."
+		},
+		{
+			"id": "fd_0288",
+			"term": "Amuse-Bouche",
+			"section": "language",
+			"level": 2,
+			"reason": "Common at good restaurants, guests ask what it is, and it takes one sentence to explain."
+		},
+		{
+			"id": "fd_0289",
+			"term": "Prix Fixe",
+			"section": "language",
+			"level": 1,
+			"reason": "Named in the standard as a Commis example; everyday menu wording."
+		},
+		{
+			"id": "fd_0290",
+			"term": "Tasting Menu",
+			"section": "language",
+			"level": 1,
+			"reason": "Plain-English menu term guests already know; any server is expected to explain it on day one."
+		},
+		{
+			"id": "fd_0291",
+			"term": "À la Carte",
+			"section": "language",
+			"level": 1,
+			"reason": "Everyday menu phrase on most American menus, steakhouses especially; guests assume servers know it."
+		},
+		{
+			"id": "fd_0292",
+			"term": "Market Price",
+			"section": "language",
+			"level": 1,
+			"reason": "MP is on everyday seafood menus and every server must quote it from day one."
+		},
+		{
+			"id": "fd_0293",
+			"term": "House-Made",
+			"section": "language",
+			"level": 1,
+			"reason": "Plain everyday menu claim on most American menus; needs no specialist knowledge."
+		},
+		{
+			"id": "fd_0294",
+			"term": "Dry-Aged",
+			"section": "language",
+			"level": 2,
+			"reason": "Common on good steakhouse menus, guests often ask, and it takes a sentence to separate from wet-aged."
+		},
+		{
+			"id": "fd_0295",
+			"term": "Grass-Fed",
+			"section": "language",
+			"level": 1,
+			"reason": "On everyday American menus, even burger joints; guests assume any server knows it."
+		},
+		{
+			"id": "fd_0296",
+			"term": "Pasture-Raised",
+			"section": "language",
+			"level": 2,
+			"reason": "Common at good restaurants but a main confusable pair with grass-fed and free-range; needs a sentence."
+		},
+		{
+			"id": "fd_0297",
+			"term": "Heritage Breed",
+			"section": "language",
+			"level": 2,
+			"reason": "Seen at good farm-to-table restaurants; needs a sentence explaining that it names genetics, not feed or welfare."
+		},
+		{
+			"id": "fd_0298",
+			"term": "Wild-Caught",
+			"section": "language",
+			"level": 1,
+			"reason": "Everyday seafood menu word most guests already understand; on most American menus."
+		},
+		{
+			"id": "fd_0299",
+			"term": "Day-Boat",
+			"section": "language",
+			"level": 2,
+			"reason": "Challenge accepted: day-boat scallops are on good American menus, guests ask, one sentence explains; confusable with wild-caught."
+		},
+		{
+			"id": "fd_0300",
+			"term": "Organic",
+			"section": "language",
+			"level": 1,
+			"reason": "Everyday word on most American menus and grocery shelves; any server is assumed to know it."
+		}
+	],
+	"criticChanges": [
+		{
+			"round": 1,
+			"id": "fd_0268",
+			"from": 3,
+			"to": 4,
+			"reason": "Rare Italian cooked-must syrup, seldom on US menus; same specialist-condiment tier as Banyuls (L4)."
+		},
+		{
+			"round": 1,
+			"id": "fd_0176",
+			"from": 3,
+			"to": 4,
+			"reason": "Einkorn sold under a specialist product name, rarer than Carnaroli; it belongs with Acquerello at L4."
+		},
+		{
+			"round": 1,
+			"id": "fd_0138",
+			"from": 3,
+			"to": 4,
+			"reason": "Rarer on American menus than Lion's Mane (a standard L4), so packet cannot pull it down; it is not a tie."
+		},
+		{
+			"round": 1,
+			"id": "fd_0273",
+			"from": 3,
+			"to": 4,
+			"reason": "Specialist unripe-grape acid, rarer on menus than Mostarda (standard L3) and in need of a full explanation."
+		},
+		{
+			"round": 1,
+			"id": "fd_0154",
+			"from": 3,
+			"to": 4,
+			"reason": "French ewe's-milk label almost never printed on US menus; specialist cheese vocabulary like Washed Rind (L4)."
+		},
+		{
+			"round": 1,
+			"id": "fd_0070",
+			"from": 3,
+			"to": 4,
+			"reason": "Spanish cured loin, rare outside tapas bars and rarer than Jamon Iberico (L3); specialist charcuterie."
+		},
+		{
+			"round": 1,
+			"id": "fd_0188",
+			"from": 3,
+			"to": 4,
+			"reason": "Rare fire-roasted green wheat, far less seen than Farro or Bulgur (L2); a specialist grain like Farro Piccolo."
+		}
+	]
+}

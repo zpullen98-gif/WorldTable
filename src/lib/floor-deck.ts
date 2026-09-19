@@ -25,9 +25,19 @@
  * And across all of them the scheduler holds a card to one climb per local
  * day (repertoire.ts RepertoireOptions), so one evening spent in three modes
  * is one evening.
+ *
+ * ## Levels
+ *
+ * Every card sits at one of four brigade levels (1 Commis to 4 Chef). They
+ * GUIDE and never lock: a new reader meets level 1 across every section, then
+ * level 2, because the cards are taken in teachingOrder(), and any level or
+ * all of them can be chosen at any time. The emitted file is in section order
+ * (a level-first file gzipped about 4 KB worse), so the order is made here.
+ * Nothing about a level is stored: which level a reader is "on" is derived
+ * from the log (firstUnmetLevel) every time it is asked.
  */
 
-import type { DeckCard, DeckSection, DeckTrap, DeckTraps, FloorDeck } from './types';
+import type { DeckCard, DeckLevel, DeckLevelInfo, DeckSection, DeckTrap, DeckTraps, FloorDeck } from './types';
 import {
 	DAY_MS,
 	TERM_LADDER_DAYS,
@@ -50,9 +60,9 @@ export const SESSION_LENGTH = 20;
  *
  * Without it a flip-only reader stalls. Flips record `close`, which holds a
  * card on the first rung (two days), so once about forty cards have been seen
- * the due queue fills every session on its own and the second section is never
- * reached. The quota is what makes "section by section until every card has
- * been seen once" actually finish.
+ * the due queue fills every session on its own and the second level is never
+ * reached. The quota is what makes "level by level, and section by section
+ * within a level, until every card has been seen once" actually finish.
  */
 export const NEW_QUOTA = 12;
 
@@ -86,9 +96,109 @@ export function sectionsFromSearch(search: string, known: readonly string[]): Se
 	return wanted.size ? wanted : null;
 }
 
-/** The cards in scope, in deck order: teaching order, then authored order. */
-export function cardsInScope(deck: FloorDeck, scope: ReadonlySet<string> | null): DeckCard[] {
-	return scope ? deck.cards.filter((c) => scope.has(c.section)) : deck.cards;
+/** The levels a reader can choose: the ones with a written card. */
+export function liveLevels(deck: FloorDeck): DeckLevelInfo[] {
+	return deck.levels.filter((l) => l.count > 0);
+}
+
+/**
+ * `?level=1,3`, validated the way `?section=` is: unknown values are dropped,
+ * and an empty or wholly unknown value means every level. Only the exact
+ * integer strings count. `?level=commis` is null, not level 1: the names are
+ * display copy and may be reworded, and a link somebody saved must not change
+ * meaning when one is.
+ */
+export function levelsFromSearch(search: string, known: readonly DeckLevel[]): Set<DeckLevel> | null {
+	const raw = new URLSearchParams(search).get('level');
+	if (!raw) return null;
+	const wanted = new Set<DeckLevel>();
+	for (const part of raw.split(',')) {
+		const hit = known.find((k) => String(k) === part.trim());
+		if (hit !== undefined) wanted.add(hit);
+	}
+	return wanted.size ? wanted : null;
+}
+
+/** Both filters out of a URL, against what the deck actually holds. */
+export function scopeFromSearch(
+	search: string,
+	deck: FloorDeck
+): { scope: Set<string> | null; levels: Set<DeckLevel> | null } {
+	return {
+		scope: sectionsFromSearch(search, liveSections(deck).map((s) => s.key)),
+		levels: levelsFromSearch(search, liveLevels(deck).map((l) => l.level))
+	};
+}
+
+/**
+ * The query string for a scope: '', '?level=1', '?section=a,b' or
+ * '?level=1&section=a,b'. The inverse of scopeFromSearch, which a test holds
+ * it to. Levels are written in key order; sections in the order given.
+ */
+export function scopeQuery(
+	levels: DeckLevel | Iterable<DeckLevel> | null | undefined,
+	sections: Iterable<string> | null | undefined
+): string {
+	const lv = levels == null ? [] : typeof levels === 'number' ? [levels] : [...levels].sort((a, b) => a - b);
+	const sc = sections == null ? [] : [...sections];
+	const parts: string[] = [];
+	if (lv.length) parts.push(`level=${lv.join(',')}`);
+	if (sc.length) parts.push(`section=${sc.join(',')}`);
+	return parts.length ? `?${parts.join('&')}` : '';
+}
+
+const ordered = new WeakMap<readonly DeckCard[], readonly DeckCard[]>();
+
+/**
+ * The order a new reader meets the cards: level 1 first, then level 2, and
+ * within a level the deck's own order, which is DECK_SECTIONS order and then
+ * the order each section was authored in. A STABLE sort by level over the
+ * emitted order, which is section then authored; kept per deck, because every
+ * scope asks for it. Readonly, and frozen, because that cached array is handed
+ * to every caller: one that sorted it in place would reorder every later scope.
+ */
+export function teachingOrder(cards: readonly DeckCard[]): readonly DeckCard[] {
+	let out = ordered.get(cards);
+	if (!out) {
+		out = Object.freeze([...cards].sort((a, b) => a.level - b.level));
+		ordered.set(cards, out);
+	}
+	return out;
+}
+
+/**
+ * The cards in scope, in teaching order. Both filters intersect: `?level=1`
+ * and `?section=fish` together are the Commis fish cards. Null is "every".
+ */
+export function cardsInScope(
+	deck: FloorDeck,
+	sections: ReadonlySet<string> | null,
+	levels: ReadonlySet<DeckLevel> | null = null
+): readonly DeckCard[] {
+	const all = teachingOrder(deck.cards);
+	if (!sections && !levels) return all;
+	return all.filter((c) => (!sections || sections.has(c.section)) && (!levels || levels.has(c.level)));
+}
+
+/** Every level up to and including the highest one chosen. */
+/* Every level up to the highest chosen. It counts up from 1 rather than
+   naming the four, so a fifth level added to the data would not be skipped. */
+function atOrBelow(levels: ReadonlySet<DeckLevel>): Set<DeckLevel> {
+	const top = Math.max(...levels);
+	const out = new Set<DeckLevel>();
+	for (let l = 1; l <= top; l++) out.add(l as DeckLevel);
+	return out;
+}
+
+/** The cards a sitting may lead with what is owed from: under a level scope,
+ *  every level at or below the highest chosen, inside any section filter (see
+ *  pickSession). One rule, so the landing's count and the sitting agree. */
+function owedScope(
+	deck: FloorDeck,
+	sections: ReadonlySet<string> | null,
+	levels: ReadonlySet<DeckLevel> | null
+): readonly DeckCard[] {
+	return cardsInScope(deck, sections, levels?.size ? atOrBelow(levels) : null);
 }
 
 /** This surface's own entries out of the shared log. Never scope by prefix:
@@ -140,6 +250,8 @@ function dueIds(rep: readonly RepertoireEntry[], now: number): string[] {
 export interface SessionOptions {
 	length?: number;
 	scope?: ReadonlySet<string> | null;
+	/** The chosen levels. See pickSession for how far down what is owed reaches. */
+	levels?: ReadonlySet<DeckLevel> | null;
 	/** `misses`: only what is owed from an earlier miss. */
 	focus?: 'misses' | null;
 	newQuota?: number;
@@ -150,10 +262,22 @@ export interface SessionOptions {
  *
  * What is OWED leads: outstanding misses, then what the ladder says is due.
  * While unseen cards remain in scope the session also walks the deck forward,
- * section by section in teaching order and in authored order within a section,
- * spilling into the next section when one runs out. Once every card has been
- * seen it is spaced repetition alone, topped up with whatever comes due soonest.
- * A session is never padded with repeats: a small scope gives a short sitting.
+ * level by level in teaching order (and within a level section by section, in
+ * authored order), spilling into the next section and then the next level
+ * when one runs out. Guidance needs no logic here: `unseen` is taken in scope
+ * order, and scope order IS teaching order. Once every card has been seen it
+ * is spaced repetition alone, topped up with whatever comes due soonest. A
+ * session is never padded with repeats: a small scope gives a short sitting.
+ *
+ * UNDER A LEVEL SCOPE WHAT IS OWED REACHES DOWN, never up. The landing opens
+ * on the first level with unmet cards, so a reader who missed Commis cards
+ * yesterday and has since met every Commis card lands on Chef de Partie; if
+ * the owed lead stayed inside the scope, those misses would be hidden behind
+ * a switch nobody has a reason to touch. So misses and due cards come from
+ * every level at or below the highest one chosen (still inside any section
+ * filter), while new cards and the top-up stay inside the chosen levels. A
+ * Chef card is never pulled into a Commis sitting. Section scopes and "all"
+ * are unchanged.
  *
  * The same function picks a Lineup, handed the VENUE's log instead of a
  * person's: the room's misses first, then what the room is due, then what it
@@ -166,9 +290,13 @@ export function pickSession(
 	opts: SessionOptions = {}
 ): DeckCard[] {
 	const length = opts.length ?? SESSION_LENGTH;
-	const cards = cardsInScope(deck, opts.scope ?? null);
-	const byId = new Map(cards.map((c) => [c.id, c]));
-	const own = deckLog(log, cards);
+	const sections = opts.scope ?? null;
+	const levels = opts.levels?.size ? opts.levels : null;
+	const cards = cardsInScope(deck, sections, levels);
+	const owedFrom = levels ? owedScope(deck, sections, levels) : cards;
+	const inScope = new Set(cards.map((c) => c.id));
+	const byId = new Map(owedFrom.map((c) => [c.id, c]));
+	const own = deckLog(log, owedFrom);
 
 	const misses = outstandingMisses(own).filter((id) => byId.has(id));
 	if (opts.focus === 'misses') return misses.slice(0, length).map((id) => byId.get(id)!);
@@ -190,7 +318,7 @@ export function pickSession(
 	} else {
 		const taken = new Set(lead);
 		const soonest = [...rep]
-			.filter((e) => !taken.has(e.slug))
+			.filter((e) => !taken.has(e.slug) && inScope.has(e.slug))
 			.sort((a, b) => a.dueAt - b.dueAt || a.slug.localeCompare(b.slug))
 			.map((e) => e.slug);
 		ids = [...lead, ...soonest].slice(0, length);
@@ -217,12 +345,45 @@ export interface SectionProgress {
 	total: number;
 }
 
-export function sectionProgress(deck: FloorDeck, log: readonly CookEntry[]): SectionProgress[] {
+/**
+ * Every live section, with how much of it has been met. Given a level, the
+ * counts are AT that level, and a section with no card there is still listed,
+ * at a total of zero, so the landing can say "None at this level" rather than
+ * have the list change shape under the reader.
+ */
+export function sectionProgress(deck: FloorDeck, log: readonly CookEntry[], level?: DeckLevel | null): SectionProgress[] {
 	const seen = new Set(deckLog(log, deck.cards).map((e) => e.slug));
 	return liveSections(deck).map((s) => {
-		const mine = deck.cards.filter((c) => c.section === s.key);
+		const mine = deck.cards.filter((c) => c.section === s.key && (level == null || c.level === level));
 		return { key: s.key, title: s.title, seen: mine.filter((c) => seen.has(c.id)).length, total: mine.length };
 	});
+}
+
+export interface LevelProgress {
+	level: DeckLevel;
+	name: string;
+	blurb: string;
+	seen: number;
+	total: number;
+}
+
+/** Every live level, with how many of its cards have been met at all. */
+export function levelProgress(deck: FloorDeck, log: readonly CookEntry[]): LevelProgress[] {
+	const seen = new Set(deckLog(log, deck.cards).map((e) => e.slug));
+	return liveLevels(deck).map((l) => {
+		const mine = deck.cards.filter((c) => c.level === l.level);
+		return { level: l.level, name: l.name, blurb: l.blurb, seen: mine.filter((c) => seen.has(c.id)).length, total: mine.length };
+	});
+}
+
+/**
+ * The lowest level holding a card the reader has never met: where the landing
+ * opens. Derived from the log every time and never stored, so there is no
+ * "current level" to fall out of step with what was actually studied. Null
+ * once every card has been met, and the landing then opens on all levels.
+ */
+export function firstUnmetLevel(deck: FloorDeck, log: readonly CookEntry[]): DeckLevel | null {
+	return levelProgress(deck, log).find((p) => p.seen < p.total)?.level ?? null;
 }
 
 /** The terms that keep slipping: missed three times or more, ever. */
@@ -242,6 +403,19 @@ export function dueCount(deck: { cards: ReadonlyArray<{ id: string }> }, log: re
 	const owed = new Set(outstandingMisses(own));
 	for (const id of dueIds(deckRepertoire(own, now), now)) owed.add(id);
 	return owed.size;
+}
+
+/** What is owed that a sitting in this scope would lead with, counted by the
+ *  same rule pickSession draws it by. The landing says how many lead the next
+ *  sitting; a deck-wide count would promise cards above the chosen level that
+ *  the sitting never reaches up for. */
+export function owedCount(
+	deck: FloorDeck,
+	log: readonly CookEntry[],
+	now: number,
+	opts: { scope?: ReadonlySet<string> | null; levels?: ReadonlySet<DeckLevel> | null } = {}
+): number {
+	return dueCount({ cards: owedScope(deck, opts.scope ?? null, opts.levels ?? null) }, log, now);
 }
 
 // ── the written test ────────────────────────────────────────────────────────
@@ -300,10 +474,34 @@ export function matchSetFor(cards: readonly DeckCard[], rand: Rand): MatchQuesti
 }
 
 /**
- * One section's test: what is owed first, then what has never been asked, then
- * the rest, the order every round in this app takes (drill.ts orderRound).
+ * What one written test covers: a whole LEVEL across every section, or a
+ * whole SECTION across every level. Never both at once: a level inside one
+ * section can hold two cards, and a test of two is not a test. A level always
+ * holds at least LIMITS.levelMin (the contract), which is one full test.
+ */
+export type TestScope = { level: DeckLevel } | { section: string };
+
+/**
+ * The test a page offers first: a valid `?level=` wins (the lowest given),
+ * else the first valid `?section=`, else the lowest level with a card the
+ * reader has not met (level 1 once everything has been). Null only when the
+ * deck has no live level at all.
+ */
+export function defaultTestScope(search: string, deck: FloorDeck, log: readonly CookEntry[]): TestScope | null {
+	const live = liveLevels(deck).map((l) => l.level);
+	const levels = levelsFromSearch(search, live);
+	if (levels) return { level: Math.min(...levels) as DeckLevel };
+	const sections = sectionsFromSearch(search, liveSections(deck).map((s) => s.key));
+	if (sections) return { section: [...sections][0] };
+	const next = firstUnmetLevel(deck, log) ?? live[0];
+	return next === undefined ? null : { level: next };
+}
+
+/**
+ * One test: what is owed first, then what has never been asked, then the
+ * rest, the order every round in this app takes (drill.ts orderRound).
  *
- * Ten multiple choice and one set of four to match, when the section is big
+ * Ten multiple choice and one set of four to match, when the scope is big
  * enough. A section of 8 to 13 gives up multiple-choice questions to keep the
  * match set; under 8 it is all multiple choice. Accepted and stated: the last
  * pair of a match set falls out by elimination.
@@ -314,9 +512,10 @@ export function buildTest(
 	log: readonly CookEntry[],
 	now: number,
 	rand: Rand,
-	sectionKey: string
+	scope: TestScope
 ): TestQuestion[] {
-	const mine = deck.cards.filter((c) => c.section === sectionKey);
+	// orderRound shuffles what it takes, so the deck's own order is enough here
+	const mine = deck.cards.filter((c) => ('level' in scope ? c.level === scope.level : c.section === scope.section));
 	if (!mine.length) return [];
 	const own = deckLog(log, mine);
 	const misses = outstandingMisses(own);
@@ -441,9 +640,14 @@ export function sayRound(
 	log: readonly CookEntry[],
 	now: number,
 	rand: Rand,
-	opts: { scope?: ReadonlySet<string> | null; houseLines?: readonly string[]; length?: number } = {}
+	opts: {
+		scope?: ReadonlySet<string> | null;
+		levels?: ReadonlySet<DeckLevel> | null;
+		houseLines?: readonly string[];
+		length?: number;
+	} = {}
 ): SayQuestion[] {
-	const cards = cardsInScope(deck, opts.scope ?? null);
+	const cards = cardsInScope(deck, opts.scope ?? null, opts.levels?.size ? opts.levels : null);
 	if (!cards.length) return [];
 	const own = deckLog(log, cards);
 	const misses = outstandingMisses(own);

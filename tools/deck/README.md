@@ -1,9 +1,11 @@
 # The Floor Deck: how a section gets written
 
-The deck is a staff-training set of 300 menu words (see the header of
-`tools/derive/floor-deck.mjs` for what it is and why it is not the Lexicon).
-Every one of the 300 has a minted id and a planned card already. This is the
-procedure that turns a planned section into a written one. The last content
+The deck is a staff-training set of menu words, 281 cards in 14 sections at
+four levels (see the header of `tools/derive/floor-deck.mjs` for what it is
+and why it is not the Lexicon). It shipped at 300 in fifteen; the Southern
+section was removed on 19 Sep 2026, five of its words moving to other sections
+with their ids and the rest retired in the ledger. This is the procedure that
+turns a planned section into a written one. The last content
 pipeline this repo had lived in a session scratchpad and was lost; this one is
 committed.
 
@@ -53,7 +55,7 @@ and nowhere else.
    `tools/deck/audit/<section>.json`, which is committed: why each card reads
    the way it does.
 5. **Build and measure.** `npm run build:data`, then `node tools/deck/measure.mjs`
-   (bytes now, projected at 300, mean prose per section), then
+   (bytes now, projected at the deck's planned size, mean prose per section), then
    `node tools/check-displacement.mjs` (the deck does not join the recipe
    crosslinks, so this must report nothing evicted).
 6. **Prove it.** `npm test`, then confirm `git diff --stat src/lib/data` lists
@@ -72,9 +74,51 @@ Porterhouse cards to prove the Lexicon's pinned search counts hold). Then cured,
 fish, methods, southern, meats, mushrooms, dairy, starches, sauces,
 preparations, bread, custards, pantry, language. When the last planned card is
 written, set `DECK_COMPLETE = true` in `tools/derive/floor-deck.mjs`. Done
-19 Sep 2026: all 300 are written and the flag is on, so a new card is added
+19 Sep 2026: all 300 are written (281 live after the Southern section was
+removed) and the flag is on, so a new card is added
 by minting its id (`mint-ids.mjs`), briefing it with `--only`, and taking it
 through the same steps.
+
+## Levels
+
+Every written card carries a brigade `level`, by its integer key, which is
+what the data and the URLs (`?level=2`) carry. The names live in one constant,
+`DECK_LEVELS` in `tools/derive/floor-deck.mjs`: 1 **Commis**, 2 **Chef de
+Partie**, 3 **Sous Chef**, 4 **Chef**. Nothing is locked; a new reader is
+guided through level 1 across every section before level 2, and any level can
+be opened at any time. The standard each card is placed against:
+
+- **1 Commis**: the everyday menu word a guest assumes any server knows on day
+  one; on most American menus (Ribeye, Salmon, Shrimp, Risotto, Vinaigrette,
+  Grilled, Braised, Parmesan, Creme Brulee, Prix Fixe).
+- **2 Chef de Partie**: common at a good restaurant and needs a sentence to
+  explain; the main confusable pairs (Hanger Steak, Branzino, Gnocchi, Aioli,
+  Confit, Burrata, Gelato, Macaron).
+- **3 Sous Chef**: fine-dining vocabulary: classical sauces and preparations,
+  specialist cuts and products (Coulotte, Turbot, Beurre Blanc, Guanciale,
+  Sweetbreads, Crudo, Mostarda).
+- **4 Chef**: the rare, specialist or deeply classical word a senior server
+  must own (Acquerello, Bottarga, Ballotine, Banyuls, Washed Rind, Lion's Mane).
+- Signals: how often it is on menus, how often guests ask, how much it takes
+  to explain; the packet flag (the house expected it early) breaks ties
+  downward. No quotas; each level holds at least 14 cards (`LIMITS.levelMin`,
+  one full written test), which the contract checks once the deck is complete.
+
+The 281 cards were placed by agents against this standard (an assigner per
+section, a challenger arguing each placement from the floor, a reconciler, then
+one cross-deck critic), with no owner review round. The run's output went
+through `node tools/deck/set-levels.mjs tools/deck/out/levels.json`, which
+writes `level` into each section module through the one serializer, refuses an
+id that is not a live written card or a written card left without a level, and
+writes `tools/deck/audit/levels.json`: every card's level and the reason, plus
+what the critic moved. Re-run it the same way to re-place the deck.
+
+A NEW card gets its level from its writer: the brief hands the writer this
+section (`brief.mjs` reads it from here) and lists `level` among the keys, and
+`validate.mjs` refuses a written card without one. A merge keeps an existing
+card's level (`overlay` in `lib.mjs`, as it keeps `packet`), so a condensing
+pass cannot drop it; a card moves level only by editing its module or
+re-running `set-levels.mjs`.
 
 ## Ids
 

@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0266',
 		term: 'Balsamic',
+		level: 1,
 		packet: true,
 		gist: 'Sweet-sharp Italian vinegar of cooked grape must, aged in wood',
 		guest: "It's the dark, sweet-tart vinegar from Modena in northern Italy. The aged kind is thick enough to drizzle, and a few drops wake up cheese, strawberries or steak.",
@@ -24,6 +25,7 @@ const cards = [
 	{
 		id: 'fd_0267',
 		term: 'Banyuls',
+		level: 4,
 		say: 'bahn-YOOLZ',
 		packet: true,
 		gist: "Sweet fortified Grenache from France's far south, or its vinegar",
@@ -41,6 +43,7 @@ const cards = [
 	{
 		id: 'fd_0268',
 		term: 'Saba',
+		level: 4,
 		say: 'SAH-bah',
 		aliases: ['Sapa', 'Mosto Cotto'],
 		packet: true,
@@ -60,6 +63,7 @@ const cards = [
 	{
 		id: 'fd_0269',
 		term: 'Kimchi',
+		level: 1,
 		say: 'KIM-chee',
 		packet: true,
 		gist: 'Korean salted cabbage, fermented with chili, garlic and ginger',
@@ -79,6 +83,7 @@ const cards = [
 	{
 		id: 'fd_0270',
 		term: 'Compote',
+		level: 1,
 		say: 'KAHM-poht',
 		packet: true,
 		gist: 'Fruit gently stewed in light syrup, loose and spoonable, never set',
@@ -94,6 +99,7 @@ const cards = [
 	{
 		id: 'fd_0271',
 		term: 'Marmalade',
+		level: 1,
 		packet: true,
 		gist: 'Citrus preserve, classically bitter orange, with shreds of peel',
 		guest: 'Marmalade is a citrus jam made with the peel, classically from bitter Seville oranges. It is sweet and tangy with a pleasant bitter edge.',
@@ -111,6 +117,7 @@ const cards = [
 	{
 		id: 'fd_0272',
 		term: 'Sherry Vinegar',
+		level: 2,
 		aliases: ['Vinagre de Jerez'],
 		gist: 'Nutty, sharp Spanish wine acid aged in an oak solera in Jerez',
 		guest: "It's a Spanish vinegar made from sherry and aged in oak barrels, often for years. It is sharp but round and nutty, and it makes a dressing or a sauce taste deeper.",
@@ -127,6 +134,7 @@ const cards = [
 	{
 		id: 'fd_0273',
 		term: 'Verjus',
+		level: 4,
 		say: 'vair-ZHOO',
 		aliases: ['Verjuice'],
 		gist: 'Tart pressed juice of unripe green grapes, milder than vinegar',
@@ -145,6 +153,7 @@ const cards = [
 	{
 		id: 'fd_0274',
 		term: 'Mostarda',
+		level: 3,
 		say: 'moh-STAR-dah',
 		gist: 'Italian candied fruit in syrup sharpened with a hot bite of mustard',
 		guest: "It's Italian candied fruit in a sweet syrup with a hidden kick of mustard. It cuts through rich meats and cheese the way cranberry sauce does for turkey.",
@@ -163,6 +172,7 @@ const cards = [
 	{
 		id: 'fd_0275',
 		term: 'Chutney',
+		level: 2,
 		gist: 'Spiced relish of fruit or herbs, cooked sweet-sour or ground fresh',
 		guest: "It's a spiced relish, often fruit like mango cooked down with vinegar, sugar and spices. Sweet, tangy and a little warm, it wakes up rich or fried food.",
 		why: 'In India the word covers fresh relishes of mint, cilantro, coconut or tamarind made that day. The jarred style Britain made famous cooks fruit slowly with vinegar, sugar and spices until thick, so it keeps and tastes sweet, sour and warm at once.',
@@ -180,6 +190,7 @@ const cards = [
 	{
 		id: 'fd_0276',
 		term: 'Jam',
+		level: 1,
 		gist: 'Fruit boiled with sugar until it sets into a soft, spreadable gel',
 		guest: "It's fruit cooked down with sugar until it thickens into a soft spread. Sweet and bright, it's lovely on warm bread or next to cheese.",
 		why: "Crushed or chopped fruit is boiled with sugar, and the fruit's own pectin, helped by acid, links into a loose gel as water cooks off. Jelly uses only the strained juice. Savory versions, like bacon or onion jam, borrow the name for anything cooked down sticky.",
@@ -196,6 +207,7 @@ const cards = [
 	{
 		id: 'fd_0277',
 		term: 'Preserved Lemon',
+		level: 2,
 		gist: 'Citrus cured for weeks in salt until its rind turns soft and silky',
 		guest: "They're lemons cured in salt for weeks until the peel goes soft. You get a deep, salty, almost floral lemon flavor without the sharp sourness.",
 		why: 'Quartered lemons are packed in salt and their own juice. Over about a month the salt draws out water, and the peel softens and loses its bitterness, turning mellow and perfumed. Cooks usually rinse it and chop the rind into tagines, salads and sauces.',
@@ -213,6 +225,7 @@ const cards = [
 	{
 		id: 'fd_0278',
 		term: 'Capers',
+		level: 1,
 		gist: 'Tiny flower buds from a Mediterranean shrub, cured sharp and briny',
 		guest: "They're little flower buds, pickled or packed in salt, that pop with a salty, tangy bite. A few of them brighten rich fish or a butter sauce.",
 		why: 'The buds are hand-picked before they open, then cured in salt or a vinegar brine. Raw they are bitter, and curing brings out a sharp, faintly mustardy flavor. The smallest, nonpareils, are prized. Caperberries are the larger fruit that forms if a bud is left to flower.',
@@ -228,6 +241,7 @@ const cards = [
 	{
 		id: 'fd_0279',
 		term: 'Cornichon',
+		level: 2,
 		say: 'KOR-nee-shahn',
 		gist: 'Finger-length cucumber picked young and pickled sour with tarragon',
 		guest: "It's a tiny French pickle, crunchy and sharply sour rather than sweet. It's there to cut through the richness of pâté, cheese or cured meats.",
@@ -244,6 +258,7 @@ const cards = [
 	{
 		id: 'fd_0280',
 		term: 'Miso',
+		level: 2,
 		say: 'MEE-soh',
 		gist: 'Salty Japanese paste of soybeans fermented with a grain mold',
 		guest: "It's a Japanese paste of fermented soybeans, salty and deeply savory. Brushed on fish or stirred into soup, it adds a rich, rounded depth.",
@@ -262,6 +277,7 @@ const cards = [
 	{
 		id: 'fd_0281',
 		term: 'Fish Sauce',
+		level: 2,
 		aliases: ['Nam Pla', 'Nuoc Mam'],
 		gist: 'Amber liquid drained from anchovies salted and aged for months',
 		guest: "It's the salty backbone of Thai and Vietnamese cooking, made from fermented anchovies. In the dish it just tastes deep and savory, not fishy.",
@@ -279,6 +295,7 @@ const cards = [
 	{
 		id: 'fd_0282',
 		term: 'Harissa',
+		level: 2,
 		say: 'huh-REE-suh',
 		gist: 'Tunisian red paste of dried chilies, garlic and toasted spices',
 		guest: 'Harissa is a Tunisian chili paste with garlic and warm spices like caraway and coriander. It brings real heat, but it tastes deeper and earthier than a hot sauce.',
@@ -297,6 +314,7 @@ const cards = [
 	{
 		id: 'fd_0283',
 		term: 'Pimentón',
+		level: 2,
 		say: 'pee-men-TOHN',
 		aliases: ['Spanish Paprika'],
 		gist: 'Spanish ground red pepper, often smoked over oak, sweet to hot',
@@ -316,6 +334,7 @@ const cards = [
 	{
 		id: 'fd_0284',
 		term: 'Finishing Salt',
+		level: 2,
 		gist: 'Crunchy crystals sprinkled over a dish just before it goes out',
 		guest: "It's a coarse or flaky salt sprinkled on right before the plate comes out. You get little crunchy bursts of seasoning instead of salt melted into the food.",
 		why: 'Salt added during cooking dissolves and disappears. Crystals added at the last second stay whole, so they crunch and land on the tongue in bright bursts. Common ones are English flaky salt like Maldon and French fleur de sel, raked by hand from the top of salt ponds.',

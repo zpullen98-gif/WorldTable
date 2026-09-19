@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0064',
 		term: 'Andouille',
+		level: 2,
 		say: 'an-DOO-ee',
 		packet: true,
 		gist: 'Coarse, heavily smoked Louisiana pork sausage with garlic and cayenne',
@@ -27,6 +28,7 @@ const cards = [
 	{
 		id: 'fd_0065',
 		term: 'Chorizo',
+		level: 1,
 		say: 'chor-EE-zoh',
 		packet: true,
 		gist: 'Paprika-red pork sausage, dry-cured in Spain and sold raw in Mexico',
@@ -45,6 +47,7 @@ const cards = [
 	{
 		id: 'fd_0066',
 		term: 'Coppa',
+		level: 2,
 		say: 'KOH-pah',
 		aliases: ['Capocollo', 'Capicola'],
 		packet: true,
@@ -65,6 +68,7 @@ const cards = [
 	{
 		id: 'fd_0067',
 		term: 'Country Ham',
+		level: 2,
 		packet: true,
 		gist: 'American pork leg, dry-salted, often smoked, then aged for months',
 		guest: "It's the South's answer to prosciutto, a pork leg packed in salt and aged for months. It's salty, deep and a little funky, so a thin slice goes a long way.",
@@ -83,6 +87,7 @@ const cards = [
 	{
 		id: 'fd_0068',
 		term: 'Guanciale',
+		level: 3,
 		say: 'gwan-CHAH-leh',
 		packet: true,
 		gist: 'Italian cured pork jowl, unsmoked, richer and fattier than belly',
@@ -103,6 +108,7 @@ const cards = [
 	{
 		id: 'fd_0069',
 		term: 'Lardo',
+		level: 3,
 		say: 'LAR-doh',
 		packet: true,
 		gist: 'Italian cured pork back fat, aged with salt and herbs, shaved thin',
@@ -121,6 +127,7 @@ const cards = [
 	{
 		id: 'fd_0070',
 		term: 'Lomo',
+		level: 4,
 		say: 'LOH-moh',
 		aliases: ['Lomo Embuchado', 'Lomo Curado'],
 		packet: true,
@@ -143,6 +150,7 @@ const cards = [
 	{
 		id: 'fd_0071',
 		term: 'Pancetta',
+		level: 2,
 		say: 'pan-CHEH-tah',
 		packet: true,
 		gist: 'Italian pork belly cured with salt and spice, air-dried, not smoked',
@@ -162,6 +170,7 @@ const cards = [
 	{
 		id: 'fd_0072',
 		term: 'Pastrami',
+		level: 1,
 		packet: true,
 		gist: 'Brined beef, crusted in pepper and coriander, smoked, then steamed',
 		guest: "It's beef cured like corned beef, then crusted in cracked pepper and coriander, smoked and steamed until tender. Peppery, smoky and rich.",
@@ -181,6 +190,7 @@ const cards = [
 	{
 		id: 'fd_0073',
 		term: 'Pâté',
+		level: 2,
 		say: 'pah-TAY',
 		packet: true,
 		gist: 'Ground meat, fat, often liver, baked, chilled, spread on toast',
@@ -200,6 +210,7 @@ const cards = [
 	{
 		id: 'fd_0074',
 		term: 'Prosciutto',
+		level: 1,
 		say: 'proh-SHOO-toh',
 		aliases: ['Prosciutto Crudo', 'Prosciutto di Parma', 'Parma Ham', 'San Daniele'],
 		packet: true,
@@ -221,6 +232,7 @@ const cards = [
 	{
 		id: 'fd_0075',
 		term: 'Rillettes',
+		level: 2,
 		say: 'ree-YET',
 		packet: true,
 		gist: 'Meat cooked slowly in its own fat, then shredded into a rich spread',
@@ -237,6 +249,7 @@ const cards = [
 	{
 		id: 'fd_0076',
 		term: 'Speck',
+		level: 3,
 		say: 'spek',
 		aliases: ['Speck Alto Adige'],
 		packet: true,
@@ -258,6 +271,7 @@ const cards = [
 	{
 		id: 'fd_0077',
 		term: 'Tasso',
+		level: 3,
 		say: 'TAH-soh',
 		aliases: ['Tasso Ham'],
 		packet: true,
@@ -278,6 +292,7 @@ const cards = [
 	{
 		id: 'fd_0078',
 		term: 'Charcuterie',
+		level: 1,
 		say: 'shar-KOO-tuh-ree',
 		gist: 'French craft of salting, smoking and preserving meat, mostly pork',
 		guest: "It's the French word for cured and prepared meats, like ham, salami and pâté. A board is a selection made for sharing, with pickles, mustard and bread.",
@@ -295,6 +310,7 @@ const cards = [
 	{
 		id: 'fd_0079',
 		term: 'Bresaola',
+		level: 3,
 		say: 'breh-ZOW-lah',
 		gist: 'Lean beef round, salted with wine and spice, air-dried deep red',
 		guest: "It's very lean air-dried beef from the Italian Alps. Deep red, tender and a little sweet, usually dressed with olive oil and lemon.",
@@ -314,6 +330,7 @@ const cards = [
 	{
 		id: 'fd_0080',
 		term: 'Soppressata',
+		level: 2,
 		say: 'soh-preh-SAH-tah',
 		aliases: ['Sopressata'],
 		gist: 'Coarse-cut pressed dry salami of southern Italy, often hot with chili',
@@ -330,6 +347,7 @@ const cards = [
 	{
 		id: 'fd_0081',
 		term: "'Nduja",
+		level: 2,
 		say: 'en-DOO-yah',
 		gist: 'Soft, fiery Calabrian pork salami that spreads like butter',
 		guest: "It's a spicy, spreadable salami from Calabria in southern Italy. Think of a soft, smoky chili and pork spread that melts into warm bread.",
@@ -348,6 +366,7 @@ const cards = [
 	{
 		id: 'fd_0082',
 		term: 'Jamón Ibérico',
+		level: 3,
 		say: 'hah-MOHN ee-BEH-ree-koh',
 		aliases: ['Pata Negra', 'Ibérico Ham'],
 		gist: "Long-aged dry ham from Spain's native black pigs, carved paper-thin",
@@ -368,6 +387,7 @@ const cards = [
 	{
 		id: 'fd_0083',
 		term: 'Bacon',
+		level: 1,
 		aliases: ['Streaky Bacon', 'Slab Bacon'],
 		gist: 'Pork belly cured with salt and sugar, smoked, then sliced to crisp',
 		guest: "It's pork belly cured with salt and a little sugar, then smoked over wood. Cooked until the fat crisps, it's salty, smoky and a touch sweet.",
@@ -383,6 +403,7 @@ const cards = [
 	{
 		id: 'fd_0084',
 		term: 'Terrine',
+		level: 2,
 		say: 'teh-REEN',
 		gist: 'Loaf of seasoned chopped meats baked in a mold, chilled and sliced',
 		guest: "It's a French country-style meat loaf, served cold in slices. Think of a coarse, rich pâté you eat with a fork, with mustard and pickles.",
@@ -402,6 +423,7 @@ const cards = [
 	{
 		id: 'fd_0085',
 		term: 'Corned Beef',
+		level: 1,
 		aliases: ['Salt Beef'],
 		gist: 'Brisket cured in spiced salt brine, then simmered until fork-tender',
 		guest: "It's beef brisket cured for days in a salty, spiced brine, then simmered until it's tender. It's pink, salty and gently spiced, the heart of a Reuben.",

@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0025',
 		term: 'Boiled',
+		level: 1,
 		packet: true,
 		gist: 'Cooked fully submerged in water at a full, rolling bubble',
 		guest: "It's cooked right in boiling water, which keeps the flavor clean and sweet, so the lobster or potatoes really shine.",
@@ -24,6 +25,7 @@ const cards = [
 	{
 		id: 'fd_0026',
 		term: 'Braised',
+		level: 1,
 		packet: true,
 		gist: 'Often browned, then cooked slowly, covered, in a little liquid',
 		guest: "It's usually seared first, then cooked slowly in a covered pot with wine or stock for hours. It comes out fork-tender, with the cooking liquid as its sauce.",
@@ -37,6 +39,7 @@ const cards = [
 	{
 		id: 'fd_0027',
 		term: 'Brined',
+		level: 1,
 		packet: true,
 		gist: 'Soaked in salted water before cooking to season and stay juicy',
 		guest: "It's soaked in salt water before it's cooked, so it stays juicy and seasoned all the way through. Pork chops and turkey love it.",
@@ -53,6 +56,7 @@ const cards = [
 	{
 		id: 'fd_0028',
 		term: 'Caramelized',
+		level: 1,
 		packet: true,
 		gist: 'Cooked until sugar, natural or added, browns to a nutty sweetness',
 		guest: "It's cooked until its sugars turn golden brown and sweet, the way onions cook down jammy and rich.",
@@ -68,6 +72,7 @@ const cards = [
 	{
 		id: 'fd_0029',
 		term: 'Confit',
+		level: 2,
 		say: 'kohn-FEE',
 		packet: true,
 		gist: 'Cooked slowly and fully submerged in fat at low heat',
@@ -85,6 +90,7 @@ const cards = [
 	{
 		id: 'fd_0030',
 		term: 'Cured',
+		level: 1,
 		packet: true,
 		gist: 'Salted, then often dried or smoked, to firm it and make it keep',
 		guest: "It's been salted, and sometimes smoked or aged, the way prosciutto or lox is. That firms it up and gives it a deep, savory flavor.",
@@ -103,6 +109,7 @@ const cards = [
 	{
 		id: 'fd_0031',
 		term: 'Fried',
+		level: 1,
 		packet: true,
 		gist: 'Cooked in hot oil until the outside turns crisp and golden',
 		guest: "It's cooked in hot oil, so the outside turns crisp and golden while the inside stays moist. Often it's battered or breaded first.",
@@ -121,6 +128,7 @@ const cards = [
 	{
 		id: 'fd_0002',
 		term: 'Chicken-Fried',
+		level: 1,
 		packet: true,
 		gist: 'Meat pounded thin, floured and pan-crisped like Southern chicken',
 		guest: "It means the meat is pounded thin, floured and fried crisp just like fried chicken. Most often it's a beef steak, and it usually comes with a creamy pepper gravy.",
@@ -137,6 +145,7 @@ const cards = [
 	{
 		id: 'fd_0032',
 		term: 'Grilled',
+		level: 1,
 		packet: true,
 		gist: 'Cooked on a grate right over an open flame or glowing coals',
 		guest: "It's cooked over an open flame, which gives it those dark grill marks and a smoky, charred edge.",
@@ -151,6 +160,7 @@ const cards = [
 	{
 		id: 'fd_0033',
 		term: 'Pickled',
+		level: 1,
 		packet: true,
 		gist: 'Kept in a sour liquid, usually vinegar, so it turns tangy and sharp',
 		guest: "It's been soaked in tangy vinegar, so it comes out bright, sour and often a little crunchy. It's there to cut through the richer things on the plate.",
@@ -168,6 +178,7 @@ const cards = [
 	{
 		id: 'fd_0034',
 		term: 'Poached',
+		level: 1,
 		packet: true,
 		gist: 'Cooked in hot liquid that never bubbles, so it stays soft and moist',
 		guest: "It's cooked gently in a flavorful liquid that never quite bubbles, so it stays tender and juicy. It's one of the gentlest ways to cook fish, eggs or chicken.",
@@ -182,6 +193,7 @@ const cards = [
 	{
 		id: 'fd_0035',
 		term: 'Preserved',
+		level: 1,
 		packet: true,
 		gist: 'Made to keep for months by any of several methods, not just one',
 		guest: "It's been made to last, with salt, sugar or vinegar, the way cooks kept summer food for winter. That also concentrates the flavor, so a little goes a long way.",
@@ -197,6 +209,7 @@ const cards = [
 	{
 		id: 'fd_0036',
 		term: 'Puréed',
+		level: 1,
 		say: 'pyoo-RAYD',
 		aliases: ['Purée'],
 		packet: true,
@@ -215,6 +228,7 @@ const cards = [
 	{
 		id: 'fd_0037',
 		term: 'Roasted',
+		level: 1,
 		packet: true,
 		gist: 'Cooked by dry heat in an oven until browned outside and tender inside',
 		guest: "It's cooked in a hot oven, so the outside browns and caramelizes while the inside stays juicy. That browning is where the deep, savory flavor comes from.",
@@ -229,6 +243,7 @@ const cards = [
 	{
 		id: 'fd_0038',
 		term: 'Sautéed',
+		level: 1,
 		say: 'saw-TAYD',
 		packet: true,
 		gist: 'Cooked fast in a little fat in a hot pan, tossed to cook evenly',
@@ -248,6 +263,7 @@ const cards = [
 	{
 		id: 'fd_0039',
 		term: 'Seared',
+		level: 1,
 		packet: true,
 		gist: 'Browned hard on a very hot surface to give it a dark, flavorful crust',
 		guest: "It's cooked in a very hot pan just long enough to build a deep golden crust, so you get a caramelized outside with a tender, juicy inside.",
@@ -266,6 +282,7 @@ const cards = [
 	{
 		id: 'fd_0040',
 		term: 'Simmered',
+		level: 1,
 		packet: true,
 		gist: 'Cooked gently in liquid with small bubbles breaking now and then',
 		guest: "It's cooked slowly in a gently bubbling liquid, so the flavors have time to meld and the meat or beans turn tender. Think of a good soup or a pot of beans.",
@@ -278,6 +295,7 @@ const cards = [
 	{
 		id: 'fd_0041',
 		term: 'Smoked',
+		level: 1,
 		packet: true,
 		gist: 'Flavored, and often slowly cooked, by the fumes of smoldering wood',
 		guest: "It's been cooked or just flavored in the smoke of smoldering wood, so it picks up a deep, sweet smokiness, like good barbecue or smoked salmon.",
@@ -296,6 +314,7 @@ const cards = [
 	{
 		id: 'fd_0042',
 		term: 'Sous Vide',
+		level: 2,
 		say: 'soo-VEED',
 		packet: true,
 		gist: 'Sealed in a bag and held in a warm water bath at its exact doneness',
@@ -315,6 +334,7 @@ const cards = [
 	{
 		id: 'fd_0043',
 		term: 'Wilted',
+		level: 1,
 		packet: true,
 		gist: 'Greens heated just until they slump, still bright and barely cooked',
 		guest: 'The greens are warmed just until they soften, so they are tender but still fresh and bright. Think of a warm salad.',
@@ -329,6 +349,7 @@ const cards = [
 	{
 		id: 'fd_0044',
 		term: 'Blanched',
+		level: 2,
 		gist: 'Dipped briefly in boiling water, then usually chilled in ice water',
 		guest: 'It gets a quick dip in boiling water and then an ice bath, so the vegetables stay bright green with a little snap.',
 		why: 'A minute or two in heavily salted boiling water softens the outside, sets green color and loosens skins; the ice bath stops the cooking right there. Kitchens blanch ahead so a vegetable only needs a quick finish on the line. Blanched almonds are simply almonds with the skins slipped off.',
@@ -345,6 +366,7 @@ const cards = [
 	{
 		id: 'fd_0045',
 		term: 'Steamed',
+		level: 1,
 		gist: 'Cooked by hot vapor rising from water below, without touching it',
 		guest: "It's cooked gently over boiling water, so it stays moist and tender and keeps its clean, natural flavor.",
 		why: 'The food sits in a basket or on a rack above the water, and steam carries heat in fast without the surface ever drying or browning. Nothing leaches into a pot of water, so fish stays delicate and vegetables keep their color. Dumplings and bao get their soft, pillowy skins this way.',
@@ -360,6 +382,7 @@ const cards = [
 	{
 		id: 'fd_0046',
 		term: 'Fermented',
+		level: 2,
 		gist: 'Changed slowly by live microbes, turning tangy, funky or savory',
 		guest: "It's been slowly transformed by yeasts and bacteria, like sourdough or kimchi, so it has a tangy, deep, savory flavor you only get with time.",
 		why: 'Yeasts, bacteria and molds turn sugars into acid, alcohol or gas, and enzymes break proteins into savory depth. That makes the tang in kimchi and yogurt, the funk in miso and fish sauce, and the rise in sourdough. Time does the work: days for kraut, months or years for miso.',
@@ -376,6 +399,7 @@ const cards = [
 	{
 		id: 'fd_0047',
 		term: 'Rendered',
+		level: 2,
 		gist: 'Fat melted slowly out of meat or skin, leaving the rest crisp',
 		guest: 'The fat is slowly melted out so the skin crisps instead of going rubbery, and that fat is often saved to cook with, like duck fat for potatoes.',
 		why: 'Gentle heat melts the fat inside skin or fatty meat so it runs out into the pan. Take it slowly and the skin thins and crisps; rush it and the outside burns over a layer of soft fat. The fat left behind is saved and used: lard, duck fat, schmaltz, tallow.',
@@ -393,6 +417,7 @@ const cards = [
 	{
 		id: 'fd_0048',
 		term: 'Blackened',
+		level: 1,
 		gist: 'Dipped in butter, crusted in spice and cooked dark in a hot skillet',
 		guest: "It's coated in a Cajun spice blend and seared in a very hot cast iron pan, so it gets a dark, spicy crust while the inside stays tender and juicy.",
 		why: 'The fillet is dipped in melted butter, packed with paprika, cayenne, thyme and garlic, and dropped in a skillet heated until it smokes. The butter solids and spices toast almost black in a minute or two, while the inside stays moist. The dark color is toasted spice, not burnt fish.',
@@ -411,6 +436,7 @@ const cards = [
 	{
 		id: 'fd_0049',
 		term: 'Pan-Roasted',
+		level: 2,
 		gist: 'Browned hard on the stove, then finished in a hot oven in one skillet',
 		guest: "It's seared in a hot skillet for a crisp, golden crust, then slid into the oven to finish, so the inside stays juicy and cooks evenly.",
 		why: 'Hard browning on the stove builds the crust, then the same ovenproof skillet goes into a hot oven. Surrounding heat cooks thick cuts through evenly without burning the outside, and many kitchens finish with a butter baste. Searing alone suits thinner pieces.',

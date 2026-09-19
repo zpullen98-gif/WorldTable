@@ -20,6 +20,16 @@
   failure this app already fixed once. The stage takes the viewport's height
   less the mode bar and the dock, and nothing on it is positioned over either.
 
+  ITS OWN LEVEL SWITCH, seeded from `?level=` (the landing's links carry it)
+  and otherwise on all levels: the room is not the reader, so the reader's
+  first unmet level means nothing here. Section counts are at the chosen
+  level. Choosing a level changes what is ASKED and nothing about what is
+  written, which is still only the venue's tally. pickSession's owed lead
+  reaches down here as it does for a reader: what the room missed or is due at
+  the chosen level or below comes first, and only the NEW terms stay at the
+  level. Kept, and said on the switch, because a room that missed a Commis
+  word yesterday should hear it again before a Chef word it has never met.
+
   Read at arm's length: the term runs up to 7rem, the two buttons are 72px and
   carry a glyph and a word, never colour alone. Right advances at once; wrong
   shows the answer large and waits, because that is the teaching moment.
@@ -32,15 +42,24 @@
 	import { house } from '$lib/stores/house.svelte';
 	import { acquireWakeLock } from '$lib/wakeLock';
 	import FloorCard from '$lib/components/FloorCard.svelte';
-	import { LINEUP_LENGTHS, liveSections, pickSession, sectionsFromSearch } from '$lib/floor-deck';
+	import {
+		LINEUP_LENGTHS,
+		levelsFromSearch,
+		liveLevels,
+		liveSections,
+		pickSession,
+		sectionsFromSearch
+	} from '$lib/floor-deck';
 	import type { LineupEntry } from '$lib/lineup';
-	import type { DeckCard, FloorDeck } from '$lib/types';
+	import type { DeckCard, DeckLevel, FloorDeck } from '$lib/types';
 
 	let deck = $state<FloorDeck | null>(null);
 	let failed = $state(false);
 	let search = $state<string | null>(null);
 
 	let picked = $state<string[]>([]);
+	/** '1'..'4' or 'all'; '' until the URL has been read. */
+	let choice = $state('');
 	let length = $state<number>(8);
 	let queue = $state<DeckCard[] | null>(null);
 	let at = $state(0);
@@ -65,8 +84,23 @@
 	onDestroy(() => release?.());
 
 	const sections = $derived(deck ? liveSections(deck) : []);
+	const levels = $derived(deck ? liveLevels(deck) : []);
 	const names = $derived(new Map((deck?.cards ?? []).map((c) => [c.id, c.term])));
 	const titles = $derived(new Map((deck?.sections ?? []).map((s) => [s.key, s.title])));
+	const levelNames = $derived(new Map(levels.map((l) => [l.level, l.name])));
+	const level = $derived<DeckLevel | null>(levels.find((l) => String(l.level) === choice)?.level ?? null);
+	/** section key -> its cards at the chosen level (every level under All) */
+	const counts = $derived(
+		new Map(sections.map((s) => [s.key, (deck?.cards ?? []).filter((c) => c.section === s.key && (!level || c.level === level)).length]))
+	);
+	/* a ticked section with nothing at the chosen level is left out of the ask */
+	const live = $derived(picked.filter((k) => counts.get(k)));
+
+	$effect(() => {
+		if (choice || !levels.length || search === null) return;
+		const wanted = levelsFromSearch(search, levels.map((l) => l.level));
+		choice = wanted ? String(Math.min(...wanted)) : 'all';
+	});
 	const card = $derived(queue ? (queue[at] ?? null) : null);
 
 	$effect(() => {
@@ -83,7 +117,8 @@
 		if (!deck) return;
 		queue = pickSession(deck, house.lineupLog, Date.now(), {
 			length,
-			scope: picked.length ? new Set(picked) : null,
+			scope: live.length ? new Set(live) : null,
+			levels: level ? new Set([level]) : null,
 			// half the lineup is kept for terms the room has never been asked
 			newQuota: Math.ceil(length / 2)
 		});
@@ -186,12 +221,29 @@
 			</p>
 
 			<fieldset class="pick">
-				<legend>Which sections? Leave them all clear for the whole deck.</legend>
+				<legend>Which level? What the room missed at it or below it still comes first.</legend>
+				{#each levels as l (l.level)}
+					<label class:on={choice === String(l.level)}>
+						<input type="radio" name="level" value={String(l.level)} bind:group={choice} />
+						<span class="stitle">{l.name}</span>
+						<span class="scount">{l.count} card{l.count === 1 ? '' : 's'}</span>
+					</label>
+				{/each}
+				<label class:on={choice === 'all'}>
+					<input type="radio" name="level" value="all" bind:group={choice} />
+					<span class="stitle">All levels</span>
+					<span class="scount">{deck.cards.length} cards</span>
+				</label>
+			</fieldset>
+
+			<fieldset class="pick">
+				<legend>Which sections? Leave them all clear for the whole {level ? 'level' : 'deck'}.</legend>
 				{#each sections as s (s.key)}
-					<label class:on={picked.includes(s.key)}>
-						<input type="checkbox" checked={picked.includes(s.key)} onchange={() => toggle(s.key)} />
+					{@const n = counts.get(s.key) ?? 0}
+					<label class:on={picked.includes(s.key) && n > 0} class:none={!n}>
+						<input type="checkbox" checked={picked.includes(s.key) && n > 0} disabled={!n} onchange={() => toggle(s.key)} />
 						<span class="stitle">{s.title}</span>
-						<span class="scount">{s.count} cards</span>
+						<span class="scount">{n ? `${n} card${n === 1 ? '' : 's'}` : 'None at this level'}</span>
 					</label>
 				{/each}
 			</fieldset>
@@ -222,6 +274,7 @@
 						<FloorCard
 							card={m}
 							frame={deck.frame}
+							levelName={levelNames.get(m.level) ?? ''}
 							sectionTitle={titles.get(m.section) ?? ''}
 							{names}
 							flippable={false}
@@ -249,6 +302,7 @@
 					<FloorCard
 						{card}
 						frame={deck.frame}
+						levelName={levelNames.get(card.level) ?? ''}
 						sectionTitle={titles.get(card.section) ?? ''}
 						{names}
 						size="stage"
@@ -300,6 +354,8 @@
 		padding: 8px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card, transparent); cursor: pointer;
 	}
 	.pick label:hover, .pick label.on { border-color: var(--turmeric-deep); }
+	.pick label.none { cursor: default; color: var(--muted); }
+	.pick label.none:hover { border-color: var(--line); }
 	.pick input { width: 18px; height: 18px; accent-color: var(--turmeric-deep); }
 	.lengths { grid-template-columns: repeat(3, minmax(0, 120px)); }
 	.lengths legend { grid-column: 1 / -1; }

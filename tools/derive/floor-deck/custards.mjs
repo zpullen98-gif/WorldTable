@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0249',
 		term: 'Crème Anglaise',
+		level: 2,
 		say: 'KREM ahn-GLAYZ',
 		packet: true,
 		gist: 'Pourable vanilla sauce of yolks and milk, stirred until it coats a spoon',
@@ -27,6 +28,7 @@ const cards = [
 	{
 		id: 'fd_0250',
 		term: 'Custard',
+		level: 1,
 		packet: true,
 		gist: 'Umbrella name for any milk or cream set by egg over gentle heat',
 		guest: "It's milk or cream gently cooked with eggs until it thickens into something smooth and silky. It can be a spoonable pudding, a pie filling or a sauce.",
@@ -45,6 +47,7 @@ const cards = [
 	{
 		id: 'fd_0251',
 		term: 'Ganache',
+		level: 2,
 		say: 'guh-NAHSH',
 		packet: true,
 		gist: 'Chopped chocolate melted into hot cream, glossy and smooth',
@@ -63,6 +66,7 @@ const cards = [
 	{
 		id: 'fd_0252',
 		term: 'Mousse',
+		level: 1,
 		say: 'MOOS',
 		packet: true,
 		gist: 'Chilled sweet dish made airy with whipped cream or beaten egg whites',
@@ -81,6 +85,7 @@ const cards = [
 	{
 		id: 'fd_0253',
 		term: 'Parfait',
+		level: 2,
 		say: 'par-FAY',
 		packet: true,
 		gist: 'Sliced frozen mold of whipped yolks and cream, or layers in a tall glass',
@@ -96,6 +101,7 @@ const cards = [
 	{
 		id: 'fd_0254',
 		term: 'Panna Cotta',
+		level: 2,
 		say: 'PAH-nuh KOH-tuh',
 		packet: true,
 		gist: 'Sweet cream set with gelatin, turned out soft and wobbly',
@@ -114,6 +120,7 @@ const cards = [
 	{
 		id: 'fd_0255',
 		term: 'Chocolate Truffle',
+		level: 1,
 		packet: true,
 		gist: 'Bite-size ball of cocoa and cream, rolled in cocoa powder or dipped',
 		guest: "It's a little ball of chocolate and cream, soft and rich, that melts on the tongue. A one-bite way to end a meal.",
@@ -129,6 +136,7 @@ const cards = [
 	{
 		id: 'fd_0256',
 		term: 'Gelato',
+		level: 2,
 		say: 'jeh-LAH-toh',
 		packet: true,
 		gist: 'Italian frozen dessert, more milk and less air, served softer and warmer',
@@ -147,6 +155,7 @@ const cards = [
 	{
 		id: 'fd_0257',
 		term: 'Granita',
+		level: 2,
 		say: 'gruh-NEE-tuh',
 		packet: true,
 		gist: 'Sweet juice or coffee frozen into loose, grainy ice crystals',
@@ -166,6 +175,7 @@ const cards = [
 	{
 		id: 'fd_0258',
 		term: 'Sherbet',
+		level: 1,
 		say: 'SHER-bit',
 		packet: true,
 		gist: 'Fruit-sugar frozen dessert churned with a small splash of milk',
@@ -180,6 +190,7 @@ const cards = [
 	{
 		id: 'fd_0259',
 		term: 'Sorbet',
+		level: 1,
 		say: 'sor-BAY',
 		packet: true,
 		gist: 'Smooth churned fruit ice on sugar syrup, clean and sharp',
@@ -197,6 +208,7 @@ const cards = [
 	{
 		id: 'fd_0260',
 		term: 'Ice Cream',
+		level: 1,
 		gist: 'Rich, high-fat dairy base churned with plenty of air to scoop',
 		guest: "It's cream, milk and sugar, often with egg yolk, churned as it freezes until thick and smooth. Rich and soft enough to scoop.",
 		why: 'Cream, milk and sugar, often cooked with egg yolks into a custard, are churned as they freeze. Churning keeps ice crystals tiny and beats in air, so it scoops soft. It holds more fat and air than gelato, so it tastes richer but a little less dense.',
@@ -212,6 +224,7 @@ const cards = [
 	{
 		id: 'fd_0261',
 		term: 'Semifreddo',
+		level: 2,
 		say: 'seh-mee-FRED-oh',
 		gist: 'Italian frozen mousse, soft enough to slice when frozen',
 		guest: "It's an Italian frozen mousse, whipped eggs and cream frozen in a mold and sliced. Soft and airy, it melts on your tongue.",
@@ -230,6 +243,7 @@ const cards = [
 	{
 		id: 'fd_0262',
 		term: 'Crème Brûlée',
+		level: 1,
 		say: 'KREM broo-LAY',
 		gist: 'Chilled baked custard under a thin crust of torched sugar',
 		guest: "It's a cold vanilla custard with a layer of sugar torched to glassy caramel. You crack the top with your spoon.",
@@ -246,6 +260,7 @@ const cards = [
 	{
 		id: 'fd_0263',
 		term: 'Pot de Crème',
+		level: 2,
 		say: 'poh duh KREM',
 		gist: 'Soft-set, silky baked custard in its own little cup, often chocolate',
 		guest: "It's a rich baked custard served in a little cup, usually deep chocolate. Silky and spoonable, like the best pudding.",
@@ -259,6 +274,7 @@ const cards = [
 	{
 		id: 'fd_0264',
 		term: 'Pastry Cream',
+		level: 2,
 		aliases: ['Crème Pâtissière'],
 		gist: 'Thick stovetop custard set with starch, piped into eclairs',
 		guest: "It's a thick vanilla custard, the filling inside eclairs and under the fruit on a tart. Smooth, rich and not too sweet.",
@@ -276,6 +292,7 @@ const cards = [
 	{
 		id: 'fd_0265',
 		term: 'Chantilly',
+		level: 2,
 		say: 'shan-TIL-ee',
 		aliases: ['Chantilly Cream', 'Crème Chantilly'],
 		gist: 'Cream whipped soft with sugar and vanilla to spoonable peaks',

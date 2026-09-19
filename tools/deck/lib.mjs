@@ -142,8 +142,14 @@ export function resolveDraft(cards, ledger) {
 
 /**
  * Lay a draft over a section: a draft card REPLACES the card with its id and
- * keeps that card's `packet` flag. A draft never adds an id the roster does
- * not hold and never removes a card.
+ * keeps that card's `packet` flag and its `level`. A draft never adds an id the
+ * roster does not hold and never removes a card.
+ *
+ * The level is kept for the reason the packet flag is: it was decided outside
+ * the authoring run (tools/deck/set-levels.mjs, against the written standard
+ * in README.md), and a condensing pass whose writers never saw it would
+ * otherwise drop it on the next merge. A card that has no level yet (a new
+ * one) takes the draft's.
  *
  * @param {Array<Record<string, any>>} existing
  * @param {Array<Record<string, any>>} draft
@@ -167,6 +173,7 @@ export function overlay(existing, draft) {
 		delete next.planned;
 		if (c.packet === true) next.packet = true;
 		else delete next.packet;
+		if (c.level !== undefined) next.level = c.level;
 		return next;
 	});
 	return { cards, problems };

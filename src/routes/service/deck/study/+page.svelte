@@ -19,6 +19,8 @@
   `?card=<id>` is a LOOK-UP: one card, shown open, recording nothing. It is
   where the Lexicon's backlinks and a card's own "often confused with" links
   land. `?focus=misses` is the result screen's "study these now" door.
+  `?level=` and `?section=` narrow the sitting and intersect (scopeFromSearch);
+  under a level, what is owed from the levels below still leads it.
 
   The URL is read in afterNavigate, never at render: this page is prerendered
   and `url.searchParams` does not exist then. onMount alone would miss a
@@ -36,9 +38,8 @@
 		FLIP_GRADES,
 		deckLog,
 		flipRecordable,
-		liveSections,
 		pickSession,
-		sectionsFromSearch,
+		scopeFromSearch,
 		type FlipJudgment
 	} from '$lib/floor-deck';
 	import type { DeckCard, FloorDeck } from '$lib/types';
@@ -77,6 +78,7 @@
 	const focus = $derived(params.get('focus') === 'misses' ? ('misses' as const) : null);
 	const names = $derived(new Map((deck?.cards ?? []).map((c) => [c.id, c.term])));
 	const titles = $derived(new Map((deck?.sections ?? []).map((s) => [s.key, s.title])));
+	const levelNames = $derived(new Map((deck?.levels ?? []).map((l) => [l.level, l.name])));
 	const lookup = $derived(lookupId && deck ? (deck.cards.find((c) => c.id === lookupId) ?? null) : null);
 	const card = $derived(queue[at] ?? null);
 
@@ -85,8 +87,8 @@
 	   derived queue would reshuffle itself under the reader mid-sitting. */
 	$effect(() => {
 		if (started || !deck || !session.ready || search === null || lookupId) return;
-		const scope = sectionsFromSearch(search, liveSections(deck).map((s) => s.key));
-		queue = pickSession(deck, session.drillLog, Date.now(), { scope, focus });
+		const { scope, levels } = scopeFromSearch(search, deck);
+		queue = pickSession(deck, session.drillLog, Date.now(), { scope, levels, focus });
 		at = 0;
 		revealed = false;
 		judged = {};
@@ -179,6 +181,7 @@
 				<FloorCard
 					card={lookup}
 					frame={deck.frame}
+					levelName={levelNames.get(lookup.level) ?? ''}
 					sectionTitle={titles.get(lookup.section) ?? ''}
 					{names}
 					flippable={false}
@@ -194,7 +197,7 @@
 			<p class="empty" aria-live="polite">Reading your record…</p>
 		{:else if !queue.length}
 			<p class="empty">
-				{focus ? 'Nothing is owed from a miss. That is a good day.' : 'No section in that choice has a card to study yet.'}
+				{focus ? 'Nothing is owed from a miss. That is a good day.' : 'Nothing in that choice yet.'}
 			</p>
 			<p class="tools"><a class="chip" href="{base}/service/deck">The deck</a></p>
 		{:else if finished}
@@ -218,6 +221,7 @@
 				<FloorCard
 					{card}
 					frame={deck.frame}
+					levelName={levelNames.get(card.level) ?? ''}
 					sectionTitle={titles.get(card.section) ?? ''}
 					{names}
 					bind:revealed

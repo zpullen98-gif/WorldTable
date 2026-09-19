@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0138',
 		term: 'Abalone Mushroom',
+		level: 4,
 		say: 'ab-uh-LOH-nee MUSH-room',
 		aliases: ['Abalone Oyster Mushroom'],
 		packet: true,
@@ -25,6 +26,7 @@ const cards = [
 	{
 		id: 'fd_0139',
 		term: 'Beech Mushroom',
+		level: 2,
 		aliases: ['Shimeji', 'Buna-Shimeji', 'Clamshell Mushroom'],
 		packet: true,
 		gist: 'Clump of round brown or white caps, bitter raw and nutty cooked',
@@ -39,6 +41,7 @@ const cards = [
 	{
 		id: 'fd_0140',
 		term: 'Black Trumpet',
+		level: 3,
 		aliases: ['Horn of Plenty', 'Black Chanterelle', 'Trompette de la Mort'],
 		packet: true,
 		gist: 'Thin, hollow, charcoal-dark wild funnel with a deep, smoky flavor',
@@ -59,6 +62,7 @@ const cards = [
 	{
 		id: 'fd_0141',
 		term: 'Chanterelle',
+		level: 2,
 		say: 'shan-tuh-REL',
 		aliases: ['Girolle', 'Golden Chanterelle'],
 		packet: true,
@@ -79,6 +83,7 @@ const cards = [
 	{
 		id: 'fd_0142',
 		term: 'Hen of the Woods',
+		level: 2,
 		aliases: ['Maitake', "Sheep's Head", "Ram's Head"],
 		packet: true,
 		gist: 'Ruffled cluster of gray-brown fronds found at the base of oak trees',
@@ -94,6 +99,7 @@ const cards = [
 	{
 		id: 'fd_0143',
 		term: 'King Trumpet',
+		level: 2,
 		aliases: ['King Oyster Mushroom', 'Eryngii', 'French Horn Mushroom'],
 		packet: true,
 		gist: 'Thick white stem under a small cap, seared in coins like scallops',
@@ -113,6 +119,7 @@ const cards = [
 	{
 		id: 'fd_0144',
 		term: 'Morel',
+		level: 2,
 		say: 'muh-REL',
 		packet: true,
 		gist: 'Hollow, honeycombed spring mushroom, always cooked through',
@@ -132,6 +139,7 @@ const cards = [
 	{
 		id: 'fd_0145',
 		term: 'Oyster Mushroom',
+		level: 1,
 		aliases: ['Pearl Oyster Mushroom', 'Hiratake'],
 		packet: true,
 		gist: 'Soft, fan-shaped gray caps growing in shelves, mild and velvety',
@@ -151,6 +159,7 @@ const cards = [
 	{
 		id: 'fd_0146',
 		term: 'Shiitake',
+		level: 1,
 		say: 'shih-TAH-kee',
 		packet: true,
 		gist: 'Brown East Asian mushroom with a smoky, deeply savory bite',
@@ -171,6 +180,7 @@ const cards = [
 	{
 		id: 'fd_0147',
 		term: 'Truffle',
+		level: 1,
 		packet: true,
 		gist: 'Rare underground fungus found by dogs, prized for its aroma',
 		guest: "It's a rare fungus that grows underground on tree roots, and dogs sniff it out. It's usually shaved fresh over the dish, and the smell is the whole point.",
@@ -188,6 +198,7 @@ const cards = [
 	{
 		id: 'fd_0148',
 		term: 'Truffle Oil',
+		level: 1,
 		gist: 'Finishing drizzle whose truffle scent usually comes from a lab',
 		guest: "It's an oil flavored to smell like truffle, drizzled on at the end. It gives a big, earthy hit of that aroma.",
 		why: 'Most bottles are olive or neutral oil flavored with a manufactured copy of one aroma compound found in white truffle, sometimes with a speck of real truffle for show. It smells louder and flatter than the real thing, and heat drives the aroma off, so it goes on at the end.',
@@ -204,6 +215,7 @@ const cards = [
 	{
 		id: 'fd_0149',
 		term: 'Porcini',
+		level: 2,
 		say: 'por-CHEE-nee',
 		aliases: ['Cep', 'Cèpe', 'King Bolete'],
 		gist: 'Fat-stemmed wild forest mushroom with a sponge under its cap',
@@ -222,6 +234,7 @@ const cards = [
 	{
 		id: 'fd_0150',
 		term: 'Cremini',
+		level: 1,
 		say: 'kreh-MEE-nee',
 		aliases: ['Baby Bella', 'Brown Mushroom'],
 		gist: 'Brown strain of the everyday button, firmer and a little earthier',
@@ -239,6 +252,7 @@ const cards = [
 	{
 		id: 'fd_0151',
 		term: 'Enoki',
+		level: 2,
 		say: 'eh-NOH-kee',
 		aliases: ['Enokitake', 'Golden Needle'],
 		gist: 'Bundle of long, thin white stems with pinhead caps and a crunch',
@@ -254,6 +268,7 @@ const cards = [
 	{
 		id: 'fd_0152',
 		term: "Lion's Mane",
+		level: 4,
 		aliases: ['Pom Pom Mushroom', 'Bearded Tooth'],
 		gist: 'Shaggy white ball of spines that sears up like crab meat',
 		guest: "It's a white, shaggy mushroom that sears up tender and flaky, a lot like crab or lobster. The flavor is mild and a little sweet.",
@@ -270,6 +285,7 @@ const cards = [
 	{
 		id: 'fd_0153',
 		term: 'Chicken of the Woods',
+		level: 4,
 		aliases: ['Sulphur Shelf'],
 		gist: 'Orange shelf fungus off tree trunks that tears into meaty strands',
 		guest: "It's a wild orange mushroom that grows in shelves on trees. Cooked, it pulls apart like chicken breast, with a mild, slightly lemony flavor.",

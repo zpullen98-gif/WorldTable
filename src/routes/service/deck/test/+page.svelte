@@ -1,7 +1,10 @@
 <!--
-  The written test: one section of the Floor Deck, answered cold.
+  The written test: a whole level of the Floor Deck across every section, or
+  one section across every level, answered cold. Never a level inside one
+  section: that can be two cards, and two cards are not a test. Every level
+  holds at least one full test (the contract's LIMITS.levelMin).
 
-  Ten multiple choice and one set of four to match, where the section is big
+  Ten multiple choice and one set of four to match, where the scope is big
   enough (floor-deck.ts buildTest). The key of every question is a card's gist,
   which the build holds term-free, and the wrong answers come from the one
   function the build simulates for an option-length tell, so what was measured
@@ -18,7 +21,9 @@
   calls markStudied() and does NOT dispatch oot:round-complete, because the
   suite's log drops a round-complete with no numbers and keeps one that has
   them. tests/floor-deck.spec.ts holds the result screen to having no figure
-  in it at all. "Question 3 of 11" during the test is a place, not a score.
+  in it at all. "Commis · question 3 of 11" during the test is a place, not a
+  score. Each missed card on the result carries a "Commis · Fish & Shellfish"
+  eyebrow: a level's NAME, which the contract holds to having no digit.
 
   This is the ONLY route that may load the traps (floor-deck-contract.test.ts
   scans for the loader's name). A trap is a wrong answer; it is never shown as
@@ -38,11 +43,13 @@
 	import FloorCard from '$lib/components/FloorCard.svelte';
 	import {
 		buildTest,
+		defaultTestScope,
+		liveLevels,
 		liveSections,
-		sectionsFromSearch,
 		whyWrong,
 		type TestOption,
-		type TestQuestion
+		type TestQuestion,
+		type TestScope
 	} from '$lib/floor-deck';
 	import type { DeckCard, DeckTraps, FloorDeck } from '$lib/types';
 
@@ -51,7 +58,8 @@
 	let failed = $state(false);
 	let search = $state<string | null>(null);
 
-	let sectionKey = $state('');
+	/** One radio group across both fieldsets: 'level:2' or 'section:fish'. */
+	let chosen = $state('');
 	let questions = $state<TestQuestion[] | null>(null);
 	let at = $state(0);
 	/** for the match question: card id -> the id of the gist chosen for it */
@@ -72,20 +80,36 @@
 	});
 
 	const sections = $derived(deck ? liveSections(deck) : []);
+	const levels = $derived(deck ? liveLevels(deck) : []);
 	const names = $derived(new Map((deck?.cards ?? []).map((c) => [c.id, c.term])));
+	const titles = $derived(new Map(sections.map((s) => [s.key, s.title])));
+	const levelNames = $derived(new Map(levels.map((l) => [l.level, l.name])));
 	const q = $derived(questions ? (questions[at] ?? null) : null);
-	const sectionTitle = $derived(sections.find((s) => s.key === sectionKey)?.title ?? '');
 
-	/* the section in the URL is the first choice; otherwise the first section */
+	const scope = $derived.by((): TestScope | null => {
+		const [kind, key] = chosen.split(':');
+		if (kind === 'level') {
+			const hit = levels.find((l) => String(l.level) === key);
+			return hit ? { level: hit.level } : null;
+		}
+		if (kind === 'section' && sections.some((s) => s.key === key)) return { section: key };
+		return null;
+	});
+	const scopeName = $derived(
+		!scope ? '' : 'level' in scope ? (levelNames.get(scope.level) ?? '') : (titles.get(scope.section) ?? '')
+	);
+
+	/* A ?level= in the URL first, then a ?section=, then the lowest level the
+	   reader has not finished. That last needs the record, so it waits for it. */
 	$effect(() => {
-		if (sectionKey || !sections.length || search === null) return;
-		const wanted = sectionsFromSearch(search, sections.map((s) => s.key));
-		sectionKey = wanted ? [...wanted][0] : sections[0].key;
+		if (chosen || !deck || !session.ready || search === null) return;
+		const first = defaultTestScope(search, deck, session.drillLog);
+		if (first) chosen = 'level' in first ? `level:${first.level}` : `section:${first.section}`;
 	});
 
 	function start() {
-		if (!deck || !session.ready) return;
-		questions = buildTest(deck, traps, session.drillLog, Date.now(), Math.random, sectionKey);
+		if (!deck || !session.ready || !scope) return;
+		questions = buildTest(deck, traps, session.drillLog, Date.now(), Math.random, scope);
 		at = 0;
 		matched = {};
 		misses = [];
@@ -157,25 +181,35 @@
 			<p class="empty">The deck is being written. No section is ready to test yet.</p>
 		{:else if !questions}
 			<p class="lede">
-				One section at a time, answered cold. Nothing is marked as you go. At the end you see what
-				you missed and the cards to read, and those cards lead your next sitting.
+				A whole level or one section, answered cold. Nothing is marked as you go. At the end you see
+				what you missed and the cards to read, and those cards lead your next sitting.
 			</p>
 			<fieldset class="pick">
-				<legend>Which section?</legend>
+				<legend>A whole level, every section</legend>
+				{#each levels as l (l.level)}
+					<label class:on={chosen === `level:${l.level}`}>
+						<input type="radio" name="scope" value="level:{l.level}" bind:group={chosen} />
+						<span class="stitle">{l.name}</span>
+						<span class="scount">{l.count} cards</span>
+					</label>
+				{/each}
+			</fieldset>
+			<fieldset class="pick">
+				<legend>Or one section, every level</legend>
 				{#each sections as s (s.key)}
-					<label class:on={sectionKey === s.key}>
-						<input type="radio" name="section" value={s.key} bind:group={sectionKey} />
+					<label class:on={chosen === `section:${s.key}`}>
+						<input type="radio" name="scope" value="section:{s.key}" bind:group={chosen} />
 						<span class="stitle">{s.title}</span>
 						<span class="scount">{s.count} cards</span>
 					</label>
 				{/each}
 			</fieldset>
 			<p class="tools">
-				<button class="chip go" onclick={start} disabled={!session.ready || !sectionKey}>Begin</button>
+				<button class="chip go" onclick={start} disabled={!session.ready || !scope}>Begin</button>
 				<a class="chip" href="{base}/service/deck">The deck</a>
 			</p>
 		{:else if !questions.length}
-			<p class="empty">That section cannot field a test yet.</p>
+			<p class="empty">That choice cannot field a test yet.</p>
 			<p class="tools"><button class="chip" onclick={again}>Choose another</button></p>
 		{:else if done}
 			<div class="result" role="status">
@@ -189,7 +223,8 @@
 						<FloorCard
 							card={m.card}
 							frame={deck.frame}
-							sectionTitle={sectionTitle}
+							levelName={levelNames.get(m.card.level) ?? ''}
+							sectionTitle={titles.get(m.card.section) ?? ''}
 							{names}
 							flippable={false}
 							heading="h3"
@@ -216,7 +251,7 @@
 				</p>
 			</div>
 		{:else if q}
-			<p class="where">{sectionTitle} · question {at + 1} of {questions.length}</p>
+			<p class="where">{scopeName} · question {at + 1} of {questions.length}</p>
 
 			{#if q.kind === 'mc'}
 				<div class="ask">
@@ -268,7 +303,7 @@
 	.empty { padding: 32px 0; color: var(--muted); font-style: italic; }
 	.where { font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--muted); }
 
-	.pick { border: 0; padding: 0; margin: 0 0 6px; display: grid; gap: 8px; }
+	.pick { border: 0; padding: 0; margin: 0 0 18px; display: grid; gap: 8px; }
 	.pick legend {
 		font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase;
 		color: var(--muted); margin-bottom: 8px; padding: 0;

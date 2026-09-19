@@ -632,6 +632,23 @@ export interface DeckSection {
 	count: number;
 }
 
+/**
+ * The four brigade levels: 1 Commis, 2 Chef de Partie, 3 Sous Chef, 4 Chef.
+ * The NUMBER is what data and URLs carry (`?level=2`); the names live in one
+ * constant, DECK_LEVELS in tools/derive/floor-deck.mjs, and arrive as
+ * `FloorDeck.levels` and `DeckIndex.levels`.
+ */
+export type DeckLevel = 1 | 2 | 3 | 4;
+
+export interface DeckLevelInfo {
+	level: DeckLevel;
+	name: string;
+	/** What the words at this level are like. Never about the reader. */
+	blurb: string;
+	/** Written cards at this level. */
+	count: number;
+}
+
 export interface DeckCard {
 	/** Minted and frozen, `fd_` and four digits. Also the card's slug in
 	 *  `session.drillLog`, verbatim. Never display it and never derive it. */
@@ -641,6 +658,9 @@ export interface DeckCard {
 	say?: string;
 	aliases?: string[];
 	section: string;
+	/** Its brigade level, by the frozen numeric key. The name is in
+	 *  `FloorDeck.levels`, never on the card. */
+	level: DeckLevel;
 	/** Term-free. The written test's key and the Lineup's answer key. */
 	gist: string;
 	/** THE GUEST LINE: what is said at the table. Shown first, always. */
@@ -672,6 +692,10 @@ export interface FloorDeck {
 	version: 1;
 	frame: { madeWith: string; confirm: string };
 	sections: DeckSection[];
+	/** All four, in key order. */
+	levels: DeckLevelInfo[];
+	/** In SECTION order, then authored order, never level-first: the engine
+	 *  sorts by level (floor-deck.ts teachingOrder). */
 	cards: DeckCard[];
 }
 
@@ -686,7 +710,9 @@ export type DeckTraps = Record<string, DeckTrap[]>;
 export interface DeckIndex {
 	/** Section key -> title, for the sections that have a card. */
 	sections: Record<string, string>;
-	cards: Array<{ id: string; term: string; section: string; aliases?: string[] }>;
+	/** Level key, as a string ("1"), -> name. */
+	levels: Record<string, string>;
+	cards: Array<{ id: string; term: string; section: string; level: DeckLevel; aliases?: string[] }>;
 	/** Lexicon slug -> the cards that name it as their long entry. */
 	byLexicon: Record<string, string[]>;
 }

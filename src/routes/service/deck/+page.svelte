@@ -13,22 +13,48 @@
   and never as a score. The written test ends on what was missed and no number,
   by the owner's decision, and the landing says nothing the test refuses to.
 
-  Everything below the h1 sits in exactly ONE <article class="sheet">: the
-  paywall contract, see /service/drill.
+  THE LEVEL SWITCH. Four brigade levels and "All levels", nothing locked. It
+  opens on the lowest level holding a card the reader has never met
+  (firstUnmetLevel), derived from the record on every visit and never stored,
+  so it waits for session.ready: a switch that painted on Commis and jumped to
+  Sous Chef a moment later would be a switch nobody trusts. The sections below
+  it are that level's subsections, counted AT the level. "Only what I missed",
+  "keeps slipping" and the look-up stay deck-wide: a miss is owed whatever
+  level it sits at. A sitting under a level scope reaches DOWN for what is
+  owed, never up (floor-deck.ts pickSession), so the note counts what leads
+  the next sitting with owedCount, the same rule, and says when some of the
+  day's owed cards sit outside the choice. The study tiles wait for the switch
+  too: a link painted before the default would open an unscoped sitting.
+
+  Everything below the h1 sits in exactly ONE <article class="sheet">, as on
+  /service/drill (it was the paywall's mask target; the Table is free in full since 2026-09-19).
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
 	import { loadFloorDeck } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
-	import { dueCount, liveSections, sectionProgress, slipping } from '$lib/floor-deck';
+	import {
+		cardsInScope,
+		dueCount,
+		firstUnmetLevel,
+		levelProgress,
+		liveLevels,
+		liveSections,
+		owedCount,
+		scopeQuery,
+		sectionProgress,
+		slipping
+	} from '$lib/floor-deck';
 	import { deckHref } from '$lib/floor-deck-core.mjs';
-	import type { FloorDeck } from '$lib/types';
+	import type { DeckLevel, FloorDeck } from '$lib/types';
 
 	let deck = $state<FloorDeck | null>(null);
 	let failed = $state(false);
 	/** Sections ticked for this visit. Empty means every section. */
 	let picked = $state<string[]>([]);
+	/** '1'..'4' or 'all'; '' until the record is read. Never stored. */
+	let choice = $state('');
 	let now = $state(0);
 
 	onMount(async () => {
@@ -41,14 +67,47 @@
 	});
 
 	const sections = $derived(deck ? liveSections(deck) : []);
-	const progress = $derived(deck && session.ready ? sectionProgress(deck, session.drillLog) : []);
-	const owed = $derived(deck && session.ready && now ? dueCount(deck, session.drillLog, now) : 0);
-	const seenAny = $derived(progress.some((p) => p.seen > 0));
-	const stubborn = $derived(deck && session.ready && now ? slipping(deck, session.drillLog, now) : []);
-	const query = $derived(picked.length ? `?section=${picked.join(',')}` : '');
-	const inScope = $derived(
-		deck ? (picked.length ? deck.cards.filter((c) => picked.includes(c.section)).length : deck.cards.length) : 0
+	const levels = $derived(deck ? liveLevels(deck) : []);
+
+	/* The default, once: the first level with an unmet card, or all of them
+	   when every card has been met. A choice the reader makes is never
+	   overwritten, because this runs only while nothing is chosen. */
+	$effect(() => {
+		if (choice || !deck || !session.ready) return;
+		const first = firstUnmetLevel(deck, session.drillLog);
+		choice = first ? String(first) : 'all';
+	});
+
+	const level = $derived<DeckLevel | null>(
+		choice && choice !== 'all' ? (levels.find((l) => String(l.level) === choice)?.level ?? null) : null
 	);
+	const levelName = $derived(levels.find((l) => l.level === level)?.name ?? '');
+	const byLevel = $derived(deck && session.ready ? levelProgress(deck, session.drillLog) : []);
+	const progress = $derived(deck && session.ready ? sectionProgress(deck, session.drillLog, level) : []);
+	const allProgress = $derived(deck && session.ready ? sectionProgress(deck, session.drillLog) : []);
+	const owed = $derived(deck && session.ready && now ? dueCount(deck, session.drillLog, now) : 0);
+	const seenAny = $derived(allProgress.some((p) => p.seen > 0));
+	const stubborn = $derived(deck && session.ready && now ? slipping(deck, session.drillLog, now) : []);
+	/* A ticked section with nothing at this level drops out of the links, so a
+	   level and a section that share no card never meet in a URL that opens an
+	   empty sitting.
+	   The tick itself is kept: switching back to a level that has the section
+	   brings it back. */
+	const live = $derived(picked.filter((k) => progress.find((p) => p.key === k)?.total));
+	const query = $derived(scopeQuery(level, live));
+	const testQuery = $derived(level ? `?level=${level}` : live.length ? `?section=${live[0]}` : '');
+	/* What the next sitting in THIS choice would lead with, by pickSession's own
+	   rule (it reaches down a level, never up). `owed` stays deck-wide: it is
+	   what the day holds, and it gates the deck-wide misses tile. */
+	const owedHere = $derived(
+		deck && session.ready && now
+			? owedCount(deck, session.drillLog, now, { scope: live.length ? new Set(live) : null, levels: level ? new Set([level]) : null })
+			: 0
+	);
+	const inScope = $derived(
+		deck ? cardsInScope(deck, live.length ? new Set(live) : null, level ? new Set([level]) : null).length : 0
+	);
+	const allSeen = $derived(byLevel.reduce((n, p) => n + p.seen, 0));
 
 	function toggle(key: string) {
 		picked = picked.includes(key) ? picked.filter((k) => k !== key) : [...picked, key];
@@ -78,36 +137,98 @@
 			<p class="note" aria-live="polite">
 				{#if !session.ready}
 					Reading your record…
-				{:else if owed}
+				{:else if owed && owedHere === owed}
 					{owed} card{owed === 1 ? ' is' : 's are'} owed today: what you missed last time, then what has
 					come due. They lead the next sitting.
+				{:else if owedHere}
+					{owed} cards are owed today. The {owedHere === 1 ? 'one' : owedHere} in this choice lead{owedHere === 1
+						? 's'
+						: ''} the next sitting; choose All levels with no section ticked to take every one.
+				{:else if owed}
+					{owed} card{owed === 1 ? ' is' : 's are'} owed today, outside this choice. Choose All levels with
+					no section ticked to take {owed === 1 ? 'it' : 'them'} first.
 				{:else if seenAny}
 					Nothing is owed today. A sitting will carry on through the cards you have not met.
 				{:else}
-					Nothing studied yet. The first sitting starts at the top of the first section.
+					Nothing studied yet. The first sitting starts with {levelName || levels[0]?.name || 'the first level'},
+					at the top of the first section.
 				{/if}
 			</p>
 
-			<h2 class="sec">Sections</h2>
-			<p class="secnote">
-				Tick sections to study only those, or leave them all clear to work through the deck in order.
-			</p>
-			<ul class="sections">
-				{#each sections as s (s.key)}
-					{@const p = progress.find((x) => x.key === s.key)}
-					<li>
-						<label class:on={picked.includes(s.key)}>
-							<input type="checkbox" checked={picked.includes(s.key)} onchange={() => toggle(s.key)} />
-							<span class="stitle">{s.title}</span>
-							<span class="sblurb">{s.blurb}</span>
-							<span class="scount">
-								{#if p && p.seen}{p.seen} of {p.total} met{:else}{s.count} cards{/if}
+			{#if choice}
+				<h2 class="sec" id="levels-h">Level</h2>
+				<p class="secnote">
+					New cards come a level at a time, every section of one before the next. Nothing is locked:
+					open any level, or all of them.
+				</p>
+				<div class="levels" role="radiogroup" aria-labelledby="levels-h">
+					{#each byLevel as l (l.level)}
+						<label class:on={choice === String(l.level)}>
+							<input
+								type="radio"
+								name="level"
+								value={String(l.level)}
+								bind:group={choice}
+								aria-label={l.name}
+								aria-describedby="lv-{l.level}"
+							/>
+							<span class="stitle">{l.name}</span>
+							<span class="sblurb" id="lv-{l.level}">
+								{l.blurb}
+								<span class="scount">{l.seen ? `${l.seen} of ${l.total} met` : `${l.total} card${l.total === 1 ? '' : 's'}`}</span>
 							</span>
 						</label>
-					</li>
-				{/each}
-			</ul>
+					{/each}
+					<label class:on={choice === 'all'}>
+						<input
+							type="radio"
+							name="level"
+							value="all"
+							bind:group={choice}
+							aria-label="All levels"
+							aria-describedby="lv-all"
+						/>
+						<span class="stitle">All levels</span>
+						<span class="sblurb" id="lv-all">
+							The whole deck, still a level at a time.
+							<span class="scount">{allSeen ? `${allSeen} of ${deck.cards.length} met` : `${deck.cards.length} cards`}</span>
+						</span>
+					</label>
+				</div>
 
+				<h2 class="sec">Sections</h2>
+				<p class="secnote">
+					{#if level}
+						The counts are the {levelName} cards in each. Tick sections to study only those, or leave them
+						all clear for the whole level.
+					{:else}
+						Tick sections to study only those, or leave them all clear to work through the deck in order.
+					{/if}
+				</p>
+				<ul class="sections">
+					{#each sections as s (s.key)}
+						{@const p = progress.find((x) => x.key === s.key)}
+						{@const none = !p?.total}
+						<li>
+							<label class:on={picked.includes(s.key) && !none} class:none>
+								<input
+									type="checkbox"
+									checked={picked.includes(s.key) && !none}
+									disabled={none}
+									onchange={() => toggle(s.key)}
+								/>
+								<span class="stitle">{s.title}</span>
+								<span class="sblurb">{s.blurb}</span>
+								<span class="scount">
+									{#if none}None at this level{:else if p && p.seen}{p.seen} of {p.total} met{:else}{p?.total ?? s.count} card{(p?.total ?? s.count) === 1 ? '' : 's'}{/if}
+								</span>
+							</label>
+						</li>
+					{/each}
+				</ul>
+			{/if}
+
+			{#if choice}
 			<h2 class="sec">Study</h2>
 			<ul class="tiles">
 				<li>
@@ -128,11 +249,11 @@
 					</li>
 				{/if}
 				<li>
-					<a href="{base}/service/deck/test{picked.length ? `?section=${picked[0]}` : ''}">
+					<a href="{base}/service/deck/test{testQuery}">
 						<h3>The written test</h3>
 						<p>
-							One section, answered cold. It ends on what you missed and the cards to read, never
-							on a number.
+							A whole level or one section, answered cold. It ends on what you missed and the cards
+							to read, never on a number.
 						</p>
 					</a>
 				</li>
@@ -155,6 +276,7 @@
 					</a>
 				</li>
 			</ul>
+			{/if}
 
 			{#if stubborn.length}
 				<h2 class="sec">The terms that keep slipping</h2>
@@ -197,17 +319,26 @@
 	}
 	.secnote { color: var(--ink-soft); max-width: var(--measure); font-size: var(--t-small); margin-bottom: 12px; }
 
-	.sections { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-	.sections label {
+	.sections, .levels { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+	.sections label, .levels label {
 		display: grid; grid-template-columns: auto 1fr auto; gap: 2px 12px; align-items: baseline;
 		min-height: 44px; padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--radius);
 		background: var(--card, transparent); cursor: pointer;
 	}
-	.sections label:hover, .sections label.on { border-color: var(--turmeric-deep); }
-	.sections input { grid-row: 1 / span 2; align-self: center; width: 18px; height: 18px; accent-color: var(--turmeric-deep); }
+	.sections label:hover, .sections label.on, .levels label:hover, .levels label.on { border-color: var(--turmeric-deep); }
+	.sections input, .levels input { grid-row: 1 / span 2; align-self: center; width: 18px; height: 18px; accent-color: var(--turmeric-deep); }
+	/* the count sits inside the blurb on a level, so it is read with it */
+	.levels .scount { display: block; margin-top: 2px; }
+	/* muted, not hidden: the list keeps its shape as the level changes */
+	.sections label.none { cursor: default; color: var(--muted); }
+	.sections label.none:hover { border-color: var(--line); }
 	.stitle { font-family: var(--display); font-size: 18px; }
 	.sblurb { grid-column: 2 / span 2; color: var(--ink-soft); font-size: var(--t-small); line-height: 1.5; }
 	.scount { font-size: var(--t-micro); color: var(--muted); white-space: nowrap; }
+	/* Pinned to the top-right cell. Left to auto-placement it fell into a third
+	   row, in the checkbox's column, and widened that column by its own text, so
+	   every row's title started at a different indent on a phone. */
+	.sections .scount { grid-column: 3; grid-row: 1; justify-self: end; }
 
 	.tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--gap); }
 	.tiles a {

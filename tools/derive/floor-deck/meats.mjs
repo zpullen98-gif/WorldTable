@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0050',
 		term: 'Escargot',
+		level: 2,
 		say: 'ess-kar-GOH',
 		packet: true,
 		gist: 'Land snails baked in their shells under garlic and parsley butter',
@@ -24,6 +25,7 @@ const cards = [
 	{
 		id: 'fd_0051',
 		term: 'Guinea Hen',
+		level: 2,
 		aliases: ['Guinea Fowl', 'Pintade'],
 		packet: true,
 		gist: 'African farmyard fowl, leaner and a little darker than chicken',
@@ -42,6 +44,7 @@ const cards = [
 	{
 		id: 'fd_0052',
 		term: 'Quail',
+		level: 2,
 		packet: true,
 		gist: 'Tiny farmed game bird, served one or two a plate, mild and juicy',
 		guest: "It's a small bird, about a handful, tender and juicy with a flavor a little richer than chicken dark meat. The legs are meant to be picked up.",
@@ -58,6 +61,7 @@ const cards = [
 	{
 		id: 'fd_0053',
 		term: 'Squab',
+		level: 3,
 		packet: true,
 		gist: 'Young pigeon raised on a farm, deep red meat served rosy',
 		guest: 'Squab is a young farm-raised pigeon. The meat is dark red and rich, closer to duck or even a tender steak than to chicken.',
@@ -75,6 +79,7 @@ const cards = [
 	{
 		id: 'fd_0054',
 		term: 'Sweetbreads',
+		level: 3,
 		packet: true,
 		gist: 'Calf thymus or pancreas, crisp outside and creamy within',
 		guest: "They're a gland, usually the thymus of veal, and neither sweet nor bread. A mild organ meat, nothing like liver, crisp outside and soft and creamy inside.",
@@ -92,6 +97,7 @@ const cards = [
 	{
 		id: 'fd_0055',
 		term: 'Foie Gras',
+		level: 2,
 		say: 'FWAH GRAH',
 		packet: true,
 		gist: 'Specially fattened liver of a duck or goose, silky and buttery',
@@ -112,6 +118,7 @@ const cards = [
 	{
 		id: 'fd_0056',
 		term: 'Duck Breast',
+		level: 1,
 		aliases: ['Magret'],
 		gist: 'Red-meat poultry cut under a thick fat cap, rendered until crisp',
 		guest: "It's the breast of the duck, served rosy and sliced like a steak, rich and tender under crisp, golden skin.",
@@ -129,6 +136,7 @@ const cards = [
 	{
 		id: 'fd_0057',
 		term: 'Poussin',
+		level: 3,
 		say: 'poo-SAN',
 		gist: 'Chicken taken at under a month old, about a pound, one per guest',
 		guest: "It's a baby chicken, small enough that you get the whole bird. Very tender, mild and juicy, with crisp skin all the way around.",
@@ -145,6 +153,7 @@ const cards = [
 	{
 		id: 'fd_0058',
 		term: 'Rabbit',
+		level: 2,
 		gist: 'Small farmed mammal with lean, pale, mild meat, often braised',
 		guest: 'Rabbit is lean, pale and mild, a lot like the dark meat of chicken but a touch sweeter. It is usually braised slowly so it stays juicy.',
 		why: 'Farmed rabbit carries almost no fat marbled through the meat, so it is fine-grained, pale and gentle, closer to chicken than to game. That leanness means the loin dries out fast, so kitchens often cook the loin briefly and braise the legs in wine or stock.',
@@ -160,6 +169,7 @@ const cards = [
 	{
 		id: 'fd_0059',
 		term: 'Venison',
+		level: 2,
 		say: 'VEN-ih-sun',
 		gist: 'Deep red, very lean deer meat, its loin served rare to medium rare',
 		guest: 'Venison is deer, and it eats like a very lean, tender beef filet with a clean, slightly wild flavor. Loin and steaks are at their best rare to medium rare.',
@@ -176,6 +186,7 @@ const cards = [
 	{
 		id: 'fd_0060',
 		term: 'Pheasant',
+		level: 2,
 		gist: 'Long-tailed game bird with a lean, pale breast and a faint wild edge',
 		guest: 'Pheasant is a game bird that eats like a more flavorful chicken, lean and pale with a light wild note. It is a gentle first step into game.',
 		why: 'Most pheasant on menus is farm-raised. The bird is leaner than chicken, so the breast dries easily and is often wrapped in bacon or sauced with cream, while the legs are sinewy and do best braised. The flavor sits just a little deeper than chicken.',
@@ -190,6 +201,7 @@ const cards = [
 	{
 		id: 'fd_0061',
 		term: 'Bone Marrow',
+		level: 2,
 		gist: "Soft beef fat from a leg's hollow core, roasted and spread on toast",
 		guest: 'Bone marrow is the soft center of a beef bone, roasted until it melts. You scoop it onto toast, and it tastes like the best part of a roast, spread like butter.',
 		why: 'Cattle leg bones hold a core of marrow that is mostly fat. Split lengthwise or cut into rounds and roasted in a hot oven, it turns soft and wobbly and tastes deeply beefy and buttery. A sharp parsley salad and salt cut the richness.',
@@ -204,6 +216,7 @@ const cards = [
 	{
 		id: 'fd_0062',
 		term: 'Chicken Liver',
+		level: 2,
 		gist: 'Small, iron-rich chicken organ, silky unless it is overcooked',
 		guest: 'Chicken livers are rich and silky, with a mild, slightly sweet iron flavor. Most often they are whipped with butter into a smooth spread for toast.',
 		why: 'The liver stores iron and vitamin A, which gives it a mineral depth, and it has a fine, tender texture with almost no connective tissue. Overcooked, it turns grainy, so kitchens cook it gently, then blend it with butter into a pâté or bake it into a silky parfait.',
@@ -218,6 +231,7 @@ const cards = [
 	{
 		id: 'fd_0063',
 		term: 'Beef Tongue',
+		level: 2,
 		aliases: ['Lengua'],
 		gist: 'Dense, fatty cow muscle, usually simmered for hours, then sliced',
 		guest: 'Beef tongue is usually simmered until tender, then sliced. It eats like very tender, rich roast beef, with none of the strong taste people expect from organ meats.',

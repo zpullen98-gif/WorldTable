@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0086',
 		term: 'Ribeye Cap',
+		level: 2,
 		aliases: ['Calotte', 'Spinalis', 'Rib Cap'],
 		packet: true,
 		gist: 'Heavily marbled crescent of beef that wraps the outside of a rib steak',
@@ -25,6 +26,7 @@ const cards = [
 	{
 		id: 'fd_0087',
 		term: 'Cheek',
+		level: 2,
 		aliases: ['Beef Cheek', 'Veal Cheek', 'Pork Cheek'],
 		packet: true,
 		gist: 'Hard-working chewing muscle of the face, braised until spoon-soft',
@@ -43,6 +45,7 @@ const cards = [
 	{
 		id: 'fd_0088',
 		term: 'Hanger Steak',
+		level: 2,
 		aliases: ['Onglet', "Butcher's Steak", 'Hanging Tender'],
 		packet: true,
 		gist: 'One thick cut of beef from the diaphragm, loose-grained and deeply mineral',
@@ -59,6 +62,7 @@ const cards = [
 	{
 		id: 'fd_0089',
 		term: 'Ham Hock',
+		level: 1,
 		aliases: ['Pork Hock', 'Pork Knuckle'],
 		packet: true,
 		gist: 'Bony lower leg joint of a pig, usually smoked and simmered to flavor a pot',
@@ -77,6 +81,7 @@ const cards = [
 	{
 		id: 'fd_0090',
 		term: 'Ribeye',
+		level: 1,
 		aliases: ['Rib Eye', 'Scotch Fillet', 'Cowboy Steak', 'Tomahawk'],
 		packet: true,
 		gist: 'Upper rib beef steak, the most marbled of the classic steakhouse cuts',
@@ -95,6 +100,7 @@ const cards = [
 	{
 		id: 'fd_0091',
 		term: 'Shoulder',
+		level: 1,
 		aliases: ['Chuck', 'Pork Butt', 'Boston Butt', 'Picnic'],
 		packet: true,
 		gist: 'Hard-working cut above the front leg that shreds after hours of low heat',
@@ -112,6 +118,7 @@ const cards = [
 	{
 		id: 'fd_0092',
 		term: 'Short Rib',
+		level: 1,
 		aliases: ['Beef Short Ribs', 'Flanken', "Jacob's Ladder"],
 		packet: true,
 		gist: 'Fatty beef on stubby bones from low on the chest, braised until it yields',
@@ -131,6 +138,7 @@ const cards = [
 	{
 		id: 'fd_0093',
 		term: 'Tenderloin',
+		level: 1,
 		aliases: ['Filet Mignon', 'Beef Filet', 'Fillet'],
 		packet: true,
 		gist: 'Small tapered muscle under the spine, the softest, mildest steak cut',
@@ -149,6 +157,7 @@ const cards = [
 	{
 		id: 'fd_0094',
 		term: 'Pork Belly',
+		level: 1,
 		packet: true,
 		gist: 'Fresh, uncured slab from the underside of the pig, layered fat and lean',
 		guest: "It's the same cut as bacon, only fresh. It's very rich, cooked slowly until spoon tender, then crisped on the outside.",
@@ -168,6 +177,7 @@ const cards = [
 	{
 		id: 'fd_0095',
 		term: 'New York Strip',
+		level: 1,
 		aliases: ['Strip Steak', 'Kansas City Strip', 'Striploin'],
 		gist: 'Short loin steak with a firm, tight bite and a band of fat down one edge',
 		guest: "It's the classic steakhouse steak, with a firmer bite and beefier flavor than filet. It's a little leaner than a ribeye, with an edge of fat that crisps on the grill.",
@@ -185,6 +195,7 @@ const cards = [
 	{
 		id: 'fd_0096',
 		term: 'Porterhouse and T-Bone',
+		level: 1,
 		aliases: ['Porterhouse', 'T-Bone'],
 		gist: 'One large steak holding two: strip on one side, tenderloin on the other',
 		guest: "It's two steaks on one T-shaped bone, a New York strip on one side and filet on the other. The porterhouse is the bigger cut, with more filet.",
@@ -203,6 +214,7 @@ const cards = [
 	{
 		id: 'fd_0097',
 		term: 'Flank Steak',
+		level: 2,
 		gist: 'Wide, lean sheet of beef from the lower abdomen with a long grain',
 		guest: "A lean, flat steak with big beefy flavor, cooked hot and fast and sliced thin across the grain, so it's tender with a little chew.",
 		why: 'One flat abdominal muscle from just ahead of the back legs. It works constantly, so it is lean and full of flavor, with long fibers running its whole length. Sliced thin across them it is tender, along them stringy.',
@@ -218,6 +230,7 @@ const cards = [
 	{
 		id: 'fd_0098',
 		term: 'Skirt Steak',
+		level: 2,
 		aliases: ['Arrachera'],
 		gist: 'Long, thin ribbon of beef from under the ribs, loose grained, well marbled',
 		guest: "A long, thin steak with a loose grain and rich marbling, so it's intensely beefy. It's the classic for carne asada.",
@@ -234,6 +247,7 @@ const cards = [
 	{
 		id: 'fd_0099',
 		term: 'Bavette',
+		level: 3,
 		say: 'bah-VET',
 		aliases: ['Sirloin Flap', 'Flap Steak', 'Flap Meat'],
 		gist: 'Loose, open-grained bottom sirloin steak, a French bistro favorite',
@@ -250,6 +264,7 @@ const cards = [
 	{
 		id: 'fd_0100',
 		term: 'Flat Iron Steak',
+		level: 2,
 		aliases: ['Top Blade Steak', "Butler's Steak", 'Oyster Blade'],
 		gist: 'Chuck steak with its tough center gristle cut out, nearly as tender as filet',
 		guest: 'Flat iron is a shoulder steak, second only to filet for tenderness. It has more marbling than filet, so it tastes beefier.',
@@ -267,6 +282,7 @@ const cards = [
 	{
 		id: 'fd_0101',
 		term: 'Brisket',
+		level: 1,
 		gist: 'Tough chest muscle of beef that turns tender only after hours of slow heat',
 		guest: 'Beef from the chest, cooked slowly for hours until tender and juicy, with deep beefy flavor and a rich, melting edge of fat.',
 		why: "The chest muscles carry much of the steer's weight, so they are dense with connective tissue. Hours of low heat, in smoke or a braise, melt it into gelatin for a moist, silky slice. The flat is the lean half and the point the fatty half. Cured, it becomes corned beef and, often, pastrami.",
@@ -284,6 +300,7 @@ const cards = [
 	{
 		id: 'fd_0102',
 		term: 'Oxtail',
+		level: 2,
 		gist: 'Rounds of beef tail, braised until the meat slips off the bone',
 		guest: "Oxtail is the tail of the steer, cut into thick rounds and braised for hours until it falls off the bone. It's rich, sticky and deeply beefy.",
 		why: 'The tail is mostly bone, cartilage and small pockets of hard-working muscle, so it is loaded with collagen. Hours of slow, wet heat melt that into gelatin, giving silky meat and a glossy, sticky sauce. Think short rib, only deeper and more gelatinous.',
@@ -299,6 +316,7 @@ const cards = [
 	{
 		id: 'fd_0103',
 		term: 'Shank',
+		level: 1,
 		gist: 'The lower leg, all sinew around a marrow bone, braised until spoon-tender',
 		guest: "Shank is the lower leg of lamb or veal, braised for hours until it's spoon-tender and slides off the bone. The sauce is made from its own rich juices.",
 		why: 'The lower leg carries the animal all day, so the meat is lean, tough and laced with sinew. Hours of gentle braising melt that sinew into gelatin, giving moist shreds and a sticky sauce. Lamb comes whole on the bone. Veal is often cross-cut around its marrow bone.',
@@ -316,6 +334,7 @@ const cards = [
 	{
 		id: 'fd_0104',
 		term: 'Coulotte',
+		level: 3,
 		say: 'koo-LOT',
 		aliases: ['Picanha', 'Culotte'],
 		gist: 'The triangular cap of the top sirloin, grilled under its own fat',
@@ -335,6 +354,7 @@ const cards = [
 	{
 		id: 'fd_0105',
 		term: 'Rack of Lamb',
+		level: 1,
 		gist: 'The rib section of a young sheep, roasted whole and carved into chops',
 		guest: "Rack of lamb is the rib section, roasted whole and carved into chops on the bone. It's the most tender, mild cut of lamb, the ribeye of the animal.",
 		why: 'Seven or eight ribs with the eye of loin meat attached, a muscle along the back that barely works, so it is fine-grained and tender. The bones are often frenched, meaning scraped clean for looks. It is roasted fast and hot, then cut into single or double chops.',
@@ -351,6 +371,7 @@ const cards = [
 	{
 		id: 'fd_0106',
 		term: 'Pork Chop',
+		level: 1,
 		gist: "A thick slice across the hog's loin, usually on the bone, seared or grilled",
 		guest: "A pork chop is a thick cut from the loin, the pig's answer to a bone-in strip or ribeye. Done right, it's seared outside and juicy in the middle.",
 		why: "Chops are sliced across the loin, the long muscle down the pig's back. It does little work, so it is tender, but it is lean and dries out fast. Kitchens fight that with thick cuts, the bone left in, a brine and a rest. Rib chops carry more fat than center-cut loin chops.",
@@ -368,6 +389,7 @@ const cards = [
 	{
 		id: 'fd_0107',
 		term: 'Wagyu',
+		level: 2,
 		say: 'WAH-gyoo',
 		gist: 'Beef from Japanese cattle breeds prized for dense, fine marbling',
 		guest: "Wagyu is beef from Japanese cattle breeds famous for marbling. The fat runs all through the meat, so it's buttery, tender and so rich that a little goes a long way.",

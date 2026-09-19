@@ -320,8 +320,8 @@
 		<!--
 			Its own noun, deliberately. The mode bar's Practise pill counts DISHES
 			from cookedLog and must keep meaning that; this counts TERMS and says
-			so. Not .def, .flash or .lexcard: those three are a published paywall
-			contract keyed to the tier attribute, held by src/lib/navigation.test.ts.
+			so. (It avoided .def, .flash and .lexcard while those were the paywall's
+			selectors; the World Table is free in full since 2026-09-19.)
 		-->
 		{#if dueTerms.length}
 			<span class="count due">{dueTerms.length} term{dueTerms.length === 1 ? '' : 's'} due</span>
@@ -405,9 +405,8 @@
 	{/if}
 
 	<!--
-		Deck cards the search found. Links and a label, deliberately NOT .lexcard,
-		.def or .flash: those are the paywall's selectors and the regression
-		counts' too. A heading of its own so it reads as a group beside the
+		Deck cards the search found. Links and a label, deliberately NOT .lexcard:
+		the regression counts count those. A heading of its own so it reads as a group beside the
 		category groups below it, which are h2 as well.
 	-->
 	{#if floor.hits.length}
@@ -420,8 +419,9 @@
 							<span class="dterm">{h.term}</span>
 							<span class="dmeta">
 								<!-- One expression, not an {#if}: Svelte trims the space at a
-								     block's edge, and the live page read "Onglet ·Meat Cuts". -->
-								{h.via ? `also called ${h.via} · ${h.sectionTitle}` : h.sectionTitle}
+								     block's edge, and the live page read "Onglet ·Meat Cuts".
+								     "also called Onglet · Chef de Partie · Meat Cuts" -->
+								{[h.via && `also called ${h.via}`, h.levelName, h.sectionTitle].filter(Boolean).join(' · ')}
 							</span>
 						</a>
 					</li>

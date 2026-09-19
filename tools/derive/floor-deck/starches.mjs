@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0172',
 		term: 'Agnolotti',
+		level: 2,
 		say: 'an-yoh-LOH-tee',
 		packet: true,
 		gist: 'Pinched pockets of Piedmontese egg pasta, stuffed with roast meat',
@@ -24,6 +25,7 @@ const cards = [
 	{
 		id: 'fd_0173',
 		term: 'Buckwheat',
+		level: 2,
 		packet: true,
 		gist: 'Dark, earthy seed of a plant related to rhubarb, not a true grain',
 		guest: "It's the dark, earthy seed of a plant related to rhubarb, ground into flour for crepes and noodles. It tastes toasty, a bit like dark rye.",
@@ -42,6 +44,7 @@ const cards = [
 	{
 		id: 'fd_0174',
 		term: 'Bulgur',
+		level: 2,
 		say: 'BUHL-ger',
 		packet: true,
 		gist: 'Wheat parboiled, dried and cracked, so it softens in minutes',
@@ -59,6 +62,7 @@ const cards = [
 	{
 		id: 'fd_0175',
 		term: 'Farro',
+		level: 2,
 		say: 'FAHR-oh',
 		packet: true,
 		gist: 'Ancient hulled wheat, usually emmer, with a big chewy, nutty grain',
@@ -78,6 +82,7 @@ const cards = [
 	{
 		id: 'fd_0176',
 		term: 'Farro Piccolo',
+		level: 4,
 		say: 'FAHR-oh PEE-koh-loh',
 		aliases: ['Einkorn'],
 		packet: true,
@@ -97,6 +102,7 @@ const cards = [
 	{
 		id: 'fd_0177',
 		term: 'Gnocchi',
+		level: 2,
 		say: 'NYOH-kee',
 		packet: true,
 		gist: 'Soft little dumplings of riced potato bound with a bit of flour',
@@ -112,6 +118,7 @@ const cards = [
 	{
 		id: 'fd_0178',
 		term: 'Grits',
+		level: 1,
 		packet: true,
 		gist: 'Coarsely ground dried corn, slow-cooked into a Southern porridge',
 		guest: "Grits are ground dried corn slow-cooked until creamy, often finished with butter. It's the South's comfort food, and great under shrimp.",
@@ -129,6 +136,7 @@ const cards = [
 	{
 		id: 'fd_0007',
 		term: 'Hominy',
+		level: 2,
 		say: 'HAH-muh-nee',
 		packet: true,
 		gist: 'Whole corn kernels steeped in alkali until puffed and chewy',
@@ -148,6 +156,7 @@ const cards = [
 	{
 		id: 'fd_0179',
 		term: 'Polenta',
+		level: 2,
 		say: 'poh-LEN-tuh',
 		packet: true,
 		gist: 'Italian cornmeal cooked into a porridge, served soft or set and grilled',
@@ -165,6 +174,7 @@ const cards = [
 	{
 		id: 'fd_0180',
 		term: 'Quinoa',
+		level: 1,
 		say: 'KEEN-wah',
 		packet: true,
 		gist: 'Tiny Andean seed that cooks up fluffy with a little curled tail',
@@ -185,6 +195,7 @@ const cards = [
 	{
 		id: 'fd_0181',
 		term: 'Risotto',
+		level: 1,
 		say: 'rih-ZOH-toh',
 		packet: true,
 		gist: 'Italian rice stirred with hot broth until creamy from its own starch',
@@ -204,6 +215,7 @@ const cards = [
 	{
 		id: 'fd_0182',
 		term: 'Carnaroli',
+		level: 3,
 		say: 'kar-nah-ROH-lee',
 		packet: true,
 		gist: 'Long, firm Italian risotto rice variety bred near Milan in 1945',
@@ -222,6 +234,7 @@ const cards = [
 	{
 		id: 'fd_0183',
 		term: 'Acquerello',
+		level: 4,
 		say: 'ah-kweh-REL-oh',
 		packet: true,
 		gist: 'Husk-aged risotto rice brand, its germ put back once milled',
@@ -240,6 +253,7 @@ const cards = [
 	{
 		id: 'fd_0184',
 		term: 'Semolina',
+		level: 2,
 		say: 'seh-muh-LEE-nuh',
 		packet: true,
 		gist: 'Coarse, sandy golden meal milled from hard durum wheat',
@@ -259,6 +273,7 @@ const cards = [
 	{
 		id: 'fd_0185',
 		term: 'Tagliatelle',
+		level: 2,
 		say: 'tahl-yah-TEL-ay',
 		packet: true,
 		gist: 'Long, flat ribbons of fresh egg pasta, the classic from Bologna',
@@ -279,6 +294,7 @@ const cards = [
 	{
 		id: 'fd_0186',
 		term: 'Arborio',
+		level: 2,
 		say: 'ar-BOR-ee-oh',
 		gist: 'Plump, pearly short-grain Italian rice, the best known for risotto',
 		guest: "It's the classic Italian risotto rice. The plump grains release lots of starch, so the dish turns rich and creamy.",
@@ -297,6 +313,7 @@ const cards = [
 	{
 		id: 'fd_0187',
 		term: 'Couscous',
+		level: 1,
 		say: 'KOOS-koos',
 		gist: 'Tiny steamed beads of rolled semolina from North Africa',
 		guest: "It's tiny wheat pasta from North Africa, steamed until light and fluffy. It soaks up the broth of whatever stew it's served with.",
@@ -317,6 +334,7 @@ const cards = [
 	{
 		id: 'fd_0188',
 		term: 'Freekeh',
+		level: 4,
 		say: 'FREE-kuh',
 		aliases: ['Farik', 'Frikeh'],
 		gist: 'Green wheat roasted over fire, then rubbed clean and often cracked',
@@ -336,6 +354,7 @@ const cards = [
 	{
 		id: 'fd_0189',
 		term: 'Wild Rice',
+		level: 1,
 		gist: 'Long black seed of a North American lake grass, firm and nutty',
 		guest: "It's the seed of a grass that grows in northern lakes, not true rice. It's chewy and nutty, with a toasty, almost tea-like flavor.",
 		why: 'It comes from Zizania, a water grass native to the Great Lakes, gathered by canoe by the Ojibwe, who call it manoomin. Most sold today is paddy grown in Minnesota and California. The hard dark bran coat keeps it chewy, and cooked grains split to show white inside.',
@@ -354,6 +373,7 @@ const cards = [
 	{
 		id: 'fd_0190',
 		term: 'Pappardelle',
+		level: 2,
 		say: 'pah-pahr-DEL-ay',
 		gist: 'Very wide, flat ribbons of fresh egg pasta, made for heavy meat sauces',
 		guest: "They're wide, silky ribbons of fresh egg pasta. They're built to carry a rich, slow-cooked sauce, so every forkful gets plenty of it.",
@@ -369,6 +389,7 @@ const cards = [
 	{
 		id: 'fd_0191',
 		term: 'Ravioli',
+		level: 1,
 		gist: 'Square pillows of pasta, two sheets pressed together around a filling',
 		guest: "They're little pillows of fresh pasta sealed around a filling, often ricotta or meat. Soft and rich inside, with a tender bite of pasta around it.",
 		why: 'A spoonful of filling goes on one sheet of fresh dough, a second sheet goes over it, and the pillows are pressed and cut apart. That gives a flat, sealed edge on every side. Ricotta and spinach is the classic, but meat, squash and cheese are common too.',
@@ -384,6 +405,7 @@ const cards = [
 	{
 		id: 'fd_0192',
 		term: 'Tortellini',
+		level: 1,
 		say: 'tor-tuh-LEE-nee',
 		gist: 'Small rings of stuffed egg pasta, twisted around a fingertip',
 		guest: "They're little rings of fresh pasta, classically filled with pork and parmesan. In Bologna they come floating in a rich, clear broth.",
@@ -399,6 +421,7 @@ const cards = [
 	{
 		id: 'fd_0193',
 		term: 'Cavatelli',
+		level: 2,
 		say: 'kah-vuh-TEL-ee',
 		gist: 'Short semolina dough curls shaped like tiny split hot dog buns',
 		guest: "They're little hand-rolled pasta curls from southern Italy, like tiny hot dog buns. Dense and chewy, and the hollow holds sauce.",
@@ -414,6 +437,7 @@ const cards = [
 	{
 		id: 'fd_0194',
 		term: 'Orecchiette',
+		level: 2,
 		say: 'or-uh-kee-ET-ay',
 		gist: 'Small cupped disks of semolina dough, thin in the middle',
 		guest: "The name means little ears. They're small cupped pasta from Puglia, chewy at the rim and tender in the middle, and the cup scoops up sauce.",

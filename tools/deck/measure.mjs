@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * What the deck weighs now, and what it will weigh at 300.
+ * What the deck weighs now, and what it will weigh at its planned size (281
+ * live cards in fourteen sections since the Southern section was removed).
  *
  *   node tools/deck/measure.mjs
  *
@@ -8,8 +9,8 @@
  * most DECK_GZ_CEILING bytes, and the study routes and the producer screens
  * share what is left. The
  * build fails when the ceiling is passed; this fails EARLIER, when the rate a
- * section was written at would pass it by the time all 300 are in, which is
- * when trimming one section is still cheaper than trimming fifteen.
+ * section was written at would pass it by the time every planned card is in,
+ * which is when trimming one section is still cheaper than trimming fourteen.
  *
  * Measured, never extrapolated from one card: gzip exploits the vocabulary
  * cards share, so the three hundredth costs less than the first. The atlas

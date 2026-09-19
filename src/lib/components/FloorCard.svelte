@@ -7,14 +7,10 @@
   to the bottom. The page owns which layers are open, so a reader who opens
   "the why" once keeps it open for the rest of the sitting.
 
-  THE PAYWALL CONTRACT. The monorepo's oot-locks.js blurs `.flash .def` for a
-  free visitor. So the root here is class="flash" and every piece of answer
-  text sits in an element with class="def", both written as literal
-  double-quoted class attributes, because src/lib/navigation.test.ts finds
-  them by reading this file. Renaming either fails OPEN: every card's answer
-  ships in clear to a visitor who has not paid. This component is registered
-  in that test's CONTRACT, and the deck's routes render answers only through
-  it, so the contract is kept in one file.
+  The root is class="flash" and the answer text sits in class="def". Those
+  were the monorepo paywall's selectors until the owner made the World Table
+  free in full since 2026-09-19; they are only styling now, and the deck's routes still render
+  answers through this one component.
 
   THE CAUTION LINE is not in a .def and is never authored. The card's data
   carries ingredient nouns only; the sentence around them comes from the
@@ -40,6 +36,7 @@
 	let {
 		card,
 		frame,
+		levelName = '',
 		sectionTitle = '',
 		names,
 		revealed = $bindable(false),
@@ -53,6 +50,9 @@
 	}: {
 		card: DeckCard;
 		frame: FloorDeck['frame'];
+		/** "Commis": the card's level by name. The page passes it; the card
+		 *  carries only the number. */
+		levelName?: string;
 		sectionTitle?: string;
 		/** id -> term, for the "often confused with" links */
 		names?: ReadonlyMap<string, string>;
@@ -71,6 +71,11 @@
 	} = $props();
 
 	const shown = $derived(revealed || !flippable);
+
+	/* ONE expression, never an {#if} per part: Svelte trims whitespace at a
+	   block's edge, and the Lexicon's deck rows shipped reading "Onglet ·Meat
+	   Cuts" that way. "Commis · Fish & Shellfish" */
+	const eyebrow = $derived([levelName, sectionTitle].filter(Boolean).join(' · '));
 
 	/** "beef, often garlic and red wine" */
 	const madeWith = $derived.by(() => {
@@ -97,7 +102,7 @@
 </script>
 
 <div class="flash" class:stage={size === 'stage'} data-card={card.id}>
-	{#if sectionTitle}<p class="eyebrow">{sectionTitle}</p>{/if}
+	{#if eyebrow}<p class="eyebrow">{eyebrow}</p>{/if}
 	<svelte:element this={heading} class="term">{card.term}</svelte:element>
 	{#if card.say}
 		<p class="say"><span class="sr">Pronounced </span>{card.say}</p>

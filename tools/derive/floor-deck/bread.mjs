@@ -7,6 +7,7 @@ const cards = [
 	{
 		id: 'fd_0234',
 		term: 'Beignets',
+		level: 2,
 		say: 'ben-YAYZ',
 		packet: true,
 		gist: 'Squares of yeasted dough, deep-fried and buried in powdered sugar',
@@ -25,6 +26,7 @@ const cards = [
 	{
 		id: 'fd_0235',
 		term: 'Brioche',
+		level: 1,
 		say: 'bree-OHSH',
 		packet: true,
 		gist: 'Soft, golden French loaf enriched with plenty of eggs and butter',
@@ -42,6 +44,7 @@ const cards = [
 	{
 		id: 'fd_0236',
 		term: 'Focaccia',
+		level: 1,
 		say: 'foh-KAH-chuh',
 		packet: true,
 		gist: 'Thick, dimpled Italian flatbread baked in a pan pooled with olive oil',
@@ -60,6 +63,7 @@ const cards = [
 	{
 		id: 'fd_0237',
 		term: 'Sourdough',
+		level: 1,
 		packet: true,
 		gist: 'Tangy bread raised by a living starter of wild yeast and bacteria',
 		guest: "It's bread raised with a natural starter instead of packaged yeast, which gives it a gentle tang, a chewy crumb and a crackly crust.",
@@ -78,6 +82,7 @@ const cards = [
 	{
 		id: 'fd_0020',
 		term: 'Cornbread',
+		level: 1,
 		gist: 'Crusty skillet-baked quick bread of cornmeal and buttermilk',
 		guest: "It's a cornmeal bread baked in a hot iron skillet, so the edges come out crisp and golden. Tender inside with a real toasted corn flavor, and best with butter.",
 		why: 'Cornmeal, buttermilk and egg are leavened with baking soda and poured into a skillet already hot with fat, which fries the crust as it bakes. Southern versions are less sweet and more corn-forward. Northern ones are sweeter and cakier.',
@@ -90,6 +95,7 @@ const cards = [
 	{
 		id: 'fd_0238',
 		term: 'Macaron',
+		level: 2,
 		say: 'mah-kah-ROHN',
 		packet: true,
 		gist: 'Pair of smooth pastel almond meringue shells joined by a filling',
@@ -108,6 +114,7 @@ const cards = [
 	{
 		id: 'fd_0239',
 		term: 'Macaroon',
+		level: 2,
 		say: 'mack-uh-ROON',
 		packet: true,
 		gist: 'Craggy, chewy mound of sweetened shredded coconut and egg white',
@@ -125,6 +132,7 @@ const cards = [
 	{
 		id: 'fd_0240',
 		term: 'Meringue',
+		level: 1,
 		say: 'muh-RANG',
 		packet: true,
 		gist: 'Egg whites whipped stiff with sugar, then baked crisp or torched soft',
@@ -144,6 +152,7 @@ const cards = [
 	{
 		id: 'fd_0241',
 		term: 'Tart',
+		level: 1,
 		aliases: ['Tarte'],
 		packet: true,
 		gist: 'Shallow open pastry shell with straight sides, filled and unmolded',
@@ -163,6 +172,7 @@ const cards = [
 	{
 		id: 'fd_0242',
 		term: 'Torte',
+		level: 2,
 		say: 'TORT',
 		packet: true,
 		gist: 'Dense, rich European cake, often with ground nuts in the batter',
@@ -181,6 +191,7 @@ const cards = [
 	{
 		id: 'fd_0243',
 		term: 'Pâte à Choux',
+		level: 3,
 		say: 'paht-ah-SHOO',
 		aliases: ['Choux'],
 		gist: 'Egg dough cooked on the stove, then baked into hollow shells to fill',
@@ -197,6 +208,7 @@ const cards = [
 	{
 		id: 'fd_0244',
 		term: 'Puff Pastry',
+		level: 1,
 		aliases: ['Pâte Feuilletée'],
 		gist: 'Unyeasted dough folded around butter into hundreds of flaky layers',
 		guest: "It's the buttery, shattering pastry you get in a napoleon or a beef Wellington. Hundreds of paper-thin layers that crackle when you cut in.",
@@ -215,6 +227,7 @@ const cards = [
 	{
 		id: 'fd_0245',
 		term: 'Clafoutis',
+		level: 3,
 		say: 'klah-foo-TEE',
 		gist: 'Fruit baked in a sweet eggy batter that sets like a soft flan',
 		guest: "It's a rustic French dessert of fruit, classically cherries, baked in a sweet custardy batter. Somewhere between a pancake and a flan, best served warm.",
@@ -231,6 +244,7 @@ const cards = [
 	{
 		id: 'fd_0246',
 		term: 'Galette',
+		level: 2,
 		say: 'guh-LET',
 		gist: 'French flat round: a free-form folded-edge pie, or a buckwheat crepe',
 		guest: "It's a rustic French pie baked free-form, with the crust folded up over the filling. In Brittany the same word means a savory buckwheat crepe.",
@@ -246,6 +260,7 @@ const cards = [
 	{
 		id: 'fd_0247',
 		term: 'Pavlova',
+		level: 2,
 		say: 'pav-LOH-vuh',
 		gist: 'Crisp meringue shell with a soft center, heaped with cream and fruit',
 		guest: "It's a meringue cake that's crisp on the outside and soft like marshmallow inside, topped with whipped cream and fresh fruit. Light, sweet and tart at once.",
@@ -263,6 +278,7 @@ const cards = [
 	{
 		id: 'fd_0248',
 		term: 'Soufflé',
+		level: 2,
 		say: 'soo-FLAY',
 		gist: 'Baked egg dish lifted by whipped whites, served puffed and hot',
 		guest: "It's a baked egg dish, savory with cheese or sweet with chocolate, that rises tall and airy around a soft, creamy middle. Made to order, and worth the wait.",

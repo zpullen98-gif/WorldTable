@@ -6,12 +6,13 @@ import shipped from './data/floor-deck.index.json';
 
 const index: DeckIndex = {
 	sections: { mushrooms: 'Mushrooms & Truffles', cured: 'Cured & Preserved Meats' },
+	levels: { '1': 'Commis', '2': 'Chef de Partie', '3': 'Sous Chef', '4': 'Chef' },
 	cards: [
-		{ id: 'fd_0001', term: 'King Oyster Mushroom', section: 'mushrooms', aliases: ['King Trumpet', 'Eryngii'] },
-		{ id: 'fd_0002', term: 'Oyster Mushroom', section: 'mushrooms' },
-		{ id: 'fd_0003', term: 'Jamón Ibérico', section: 'cured', aliases: ['Pata Negra'] },
-		{ id: 'fd_0004', term: "'Nduja", section: 'cured' },
-		{ id: 'fd_0005', term: 'Pâté', section: 'cured' }
+		{ id: 'fd_0001', term: 'King Oyster Mushroom', section: 'mushrooms', level: 2, aliases: ['King Trumpet', 'Eryngii'] },
+		{ id: 'fd_0002', term: 'Oyster Mushroom', section: 'mushrooms', level: 1 },
+		{ id: 'fd_0003', term: 'Jamón Ibérico', section: 'cured', level: 3, aliases: ['Pata Negra'] },
+		{ id: 'fd_0004', term: "'Nduja", section: 'cured', level: 4 },
+		{ id: 'fd_0005', term: 'Pâté', section: 'cured', level: 2 }
 	],
 	byLexicon: { 'king-oyster-mushroom': ['fd_0001'], 'oyster-mushrooms': ['fd_0002', 'fd_0001'], gone: ['fd_9999'] }
 };
@@ -19,7 +20,9 @@ const index: DeckIndex = {
 describe('deckHits', () => {
 	it('finds a card by an alias and says which alias', () => {
 		const { hits } = deckHits(index, 'king trumpet');
-		expect(hits).toEqual([{ id: 'fd_0001', term: 'King Oyster Mushroom', sectionTitle: 'Mushrooms & Truffles', via: 'King Trumpet' }]);
+		expect(hits).toEqual([
+			{ id: 'fd_0001', term: 'King Oyster Mushroom', levelName: 'Chef de Partie', sectionTitle: 'Mushrooms & Truffles', via: 'King Trumpet' }
+		]);
 	});
 
 	it('does not claim an alias when the term itself matched', () => {
@@ -43,6 +46,13 @@ describe('deckHits', () => {
 		expect(hits.map((h) => h.id)).toEqual(['fd_0003', 'fd_0004', 'fd_0005']);
 	});
 
+	/* The level's name is shown on the row and never searched: "chef" is in
+	   three of the four names and would open nearly the whole deck. */
+	it('never searches a level name', () => {
+		expect(deckHits(index, 'chef').hits).toEqual([]);
+		expect(deckHits(index, 'commis').hits).toEqual([]);
+	});
+
 	it('says nothing for one letter, an empty box, or no index', () => {
 		expect(deckHits(index, 'k')).toEqual({ hits: [], more: 0 });
 		expect(deckHits(index, '   ')).toEqual({ hits: [], more: 0 });
@@ -52,7 +62,8 @@ describe('deckHits', () => {
 	it('caps the rows and counts what it left out', () => {
 		const many: DeckIndex = {
 			sections: { cured: 'Cured & Preserved Meats' },
-			cards: Array.from({ length: 20 }, (_, i) => ({ id: `fd_${String(i + 1).padStart(4, '0')}`, term: `Ham ${i}`, section: 'cured' })),
+			levels: { '1': 'Commis' },
+			cards: Array.from({ length: 20 }, (_, i) => ({ id: `fd_${String(i + 1).padStart(4, '0')}`, term: `Ham ${i}`, section: 'cured', level: 1 as const })),
 			byLexicon: {}
 		};
 		const { hits, more } = deckHits(many, 'ham');
@@ -62,7 +73,7 @@ describe('deckHits', () => {
 
 	it('never searches prose: the index it reads has none to search', () => {
 		for (const row of (shipped as unknown as DeckIndex).cards) {
-			expect(Object.keys(row).sort().filter((k) => !['aliases', 'id', 'section', 'term'].includes(k))).toEqual([]);
+			expect(Object.keys(row).sort().filter((k) => !['aliases', 'id', 'level', 'section', 'term'].includes(k))).toEqual([]);
 		}
 	});
 });
@@ -85,8 +96,9 @@ describe('cardsForLexicon', () => {
 describe('the shipped index', () => {
 	const live = shipped as unknown as DeckIndex;
 
-	it('names every section a card sits in', () => {
+	it('names every section a card sits in, and every level', () => {
 		for (const c of live.cards) expect(live.sections[c.section], `${c.id} sits in an unnamed section`).toBeTruthy();
+		for (const c of live.cards) expect(live.levels[String(c.level)], `${c.id} sits at an unnamed level`).toBeTruthy();
 	});
 
 	it('every Lexicon link lands on a card that exists', () => {

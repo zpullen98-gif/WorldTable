@@ -3,14 +3,18 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import {
 	LIMITS,
+	LEVELS,
+	CARD_KEYS,
 	checkCard,
 	checkDeck,
+	checkLevels,
 	assertNoDeckVerdict,
 	genericWords,
 	temperatureProblems,
 	sayProblems
 } from '../../tools/derive/floor-deck-contract.mjs';
-import { DECK_SECTIONS, DECK_GZ_CEILING } from '../../tools/derive/floor-deck.mjs';
+import { DECK_SECTIONS, DECK_LEVELS, DECK_GZ_CEILING } from '../../tools/derive/floor-deck.mjs';
+import { MATCH_SIZE, TEST_MC } from './floor-deck';
 import { slugify } from '../../tools/slugify.mjs';
 import {
 	DECK_ID_RE,
@@ -47,6 +51,7 @@ type Card = { id: string; term: string; [key: string]: any };
 const GOOD: Card = {
 	id: 'fd_0001',
 	term: 'Hanger Steak',
+	level: 2,
 	say: 'HANG-er',
 	aliases: ['Onglet'],
 	gist: 'A loose-grained beef cut from beside the diaphragm, rich, mineral and tender',
@@ -76,6 +81,7 @@ function goodDeck() {
 		...NAMES.map((term, i) => ({
 			id: `fd_000${i + 2}`,
 			term,
+			level: 1,
 			gist: `The ${ORDINAL[i]} fixture beef cut, described at the length an option has to be`,
 			guest: `This is the ${ORDINAL[i]} fixture cut, and a server could say this sentence at a table without reading it from a card.`,
 			why: `The ${ORDINAL[i]} fixture exists so the section reaches its minimum. It carries enough prose to clear the floor on the why field, which is set high on purpose, because a card that cannot say why is only a label.`,
@@ -148,6 +154,52 @@ describe('one card: shape', () => {
 	it('a sentence ends in a stop and a label does not', () => {
 		fails(card({ guest: (GOOD.guest as string).slice(0, -1) }), /guest is a sentence and must end in a stop/);
 		fails(card({ gist: GOOD.gist + '.' }), /gist is a label, not a sentence/);
+	});
+});
+
+describe('one card: its level', () => {
+	it('is required on a written card', () => fails(card({}, ['level']), /level is required/));
+	it('is one of the four integer keys', () => {
+		for (const bad of [0, 5, 1.5]) fails(card({ level: bad }), /it is the integer key 1, 2, 3, 4/);
+	});
+	it('is never a string, not even the right digit, and never a name', () => {
+		fails(card({ level: '1' }), /never a string or a level's name/);
+		fails(card({ level: 'Commis' }), /never a string or a level's name/);
+	});
+	it('a planned card carries none: it is decided when the card is written', () => {
+		fails({ id: 'fd_0009', term: 'Tomahawk', planned: true, level: 1 }, /planned card carries only/);
+	});
+	it('is written under the term', () => {
+		expect(CARD_KEYS.indexOf('level')).toBe(CARD_KEYS.indexOf('term') + 1);
+	});
+});
+
+describe('the levels themselves', () => {
+	const good = () => structuredClone(DECK_LEVELS) as Array<{ level: number; name: string; blurb: string }>;
+	it('the shipped four pass', () => expect(checkLevels(DECK_LEVELS)).toEqual([]));
+	it('are exactly the four keys, in order', () => {
+		expect(checkLevels(good().slice(0, 3)).join()).toMatch(/they are exactly \[1,2,3,4\]/);
+		const swapped = good();
+		[swapped[0], swapped[1]] = [swapped[1], swapped[0]];
+		expect(checkLevels(swapped).join()).toMatch(/in that order/);
+	});
+	it('no two share a name, folded', () => {
+		const l = good();
+		l[3].name = 'sous chef';
+		expect(checkLevels(l).join()).toMatch(/is another level's name/);
+	});
+	it('a name holds no digit, because the result screen holds no figure', () => {
+		const l = good();
+		l[0].name = 'Level 1';
+		expect(checkLevels(l).join()).toMatch(/holds a digit/);
+	});
+	it('a blurb is held to the section blurb limits and the prose rules', () => {
+		const short = good();
+		short[1].blurb = 'Too short to say anything.';
+		expect(checkLevels(short).join()).toMatch(/the blurb is 60 to 160 characters/);
+		const dashed = good();
+		dashed[2].blurb = dashed[2].blurb.replace(':', ' —');
+		expect(checkLevels(dashed).join()).toMatch(/a dash/);
 	});
 });
 
@@ -386,6 +438,15 @@ describe('the deck: identity is the ledger', () => {
 			d.ledger.next = 8;
 		}, /DECK_COMPLETE is true and 1 card\(s\) are still planned: Tomahawk/, { complete: true });
 	});
+	it('a finished deck holds a full written test at every level', () => {
+		// the fixture is six cards: every level is under fourteen
+		broken(() => {}, /level 3 holds 0 written card\(s\); every level holds at least 14/, { complete: true });
+		const d = goodDeck();
+		expect(checkDeck(d.sections, d.ledger, {}).join()).not.toMatch(/every level holds/);
+	});
+	it('the level floor is one full test, by the engine\'s own numbers', () => {
+		expect(LIMITS.levelMin).toBe(TEST_MC + MATCH_SIZE);
+	});
 	it('every packet term keeps a card', () => {
 		broken(() => {}, /the packet term "Short Rib" has no card/, { packetTerms: ['Hanger Steak', 'Short Rib'] });
 	});
@@ -485,6 +546,27 @@ describe('what shipped', () => {
 		}
 		expect(index.cards.map((c) => c.id)).toEqual(deck.cards.map((c) => c.id));
 	});
+	it('declares all four levels in key order, with counts that are the cards\'', () => {
+		expect(deck.levels.map((l) => l.level)).toEqual(LEVELS);
+		expect(deck.levels.map((l) => l.name)).toEqual(DECK_LEVELS.map((l) => l.name));
+		for (const l of deck.levels) {
+			expect(l.count).toBe(deck.cards.filter((c) => c.level === l.level).length);
+			expect(l.count, `level ${l.level}`).toBeGreaterThanOrEqual(LIMITS.levelMin);
+		}
+		for (const c of deck.cards) expect(LEVELS, `${c.id} level`).toContain(c.level);
+	});
+	it('the index carries each card\'s level and every level\'s name', () => {
+		expect(index.levels).toEqual(Object.fromEntries(DECK_LEVELS.map((l) => [String(l.level), l.name])));
+		expect(index.cards.map((c) => c.level)).toEqual(deck.cards.map((c) => c.level));
+	});
+	/* The engine sorts by level (teachingOrder). The FILE stays in section
+	   order, then authored order, because level-first gzipped about 4 KB
+	   worse. This pins that decision: the emitted cards are each section's
+	   authored cards, sections in DECK_SECTIONS order. */
+	it('emits the cards section by section in authored order, never level-first', () => {
+		const authored = DECK_SECTIONS.flatMap((s) => s.cards.filter((c) => c.planned !== true).map((c) => c.id));
+		expect(deck.cards.map((c) => c.id)).toEqual(authored);
+	});
 	/* A pin, so the ceiling moves only in a commit that says why. It moved once,
 	   128,000 to 140,000, with the owner's 2.65 to 2.70 MB cap decision. */
 	it('stays under the ceiling the precache cap was raised for', () => {
@@ -533,7 +615,7 @@ describe('the build and the authoring tools enforce the same contract', () => {
 /**
  * Traps are for the written test. The way that stays true is that nothing else
  * loads them, so the routes and components are scanned for the loader's name,
- * the same way navigation.test.ts scans for the paywall's class names.
+ * the same way navigation.test.ts scans the MODES literal.
  */
 describe('only the written test loads the traps', () => {
 	const walk = (dir: string): string[] =>

@@ -22,7 +22,8 @@ const here = dirname(fileURLToPath(import.meta.url));
 const read = (f: string) => JSON.parse(readFileSync(join(here, '../src/lib/data', f), 'utf8'));
 const INDEX = read('floor-deck.index.json') as {
 	sections: Record<string, string>;
-	cards: Array<{ id: string; term: string; section: string; aliases?: string[] }>;
+	levels: Record<string, string>;
+	cards: Array<{ id: string; term: string; section: string; level: number; aliases?: string[] }>;
 	byLexicon: Record<string, string[]>;
 };
 const LEXICON = read('lexicon.json') as Array<Record<string, unknown> & { term: string; slug: string }>;
@@ -59,7 +60,9 @@ test('a word the Lexicon files under another name still lands on the floor card'
 	const hit = page.locator('.deckhits a', { hasText: card.term });
 	await expect(hit).toBeVisible();
 	// the whole line, spaces included: an {#if} once ate the space after the dot
-	await expect(hit.locator('.dmeta')).toHaveText(`also called ${alias} · ${INDEX.sections[card.section]}`);
+	await expect(hit.locator('.dmeta')).toHaveText(
+		`also called ${alias} · ${INDEX.levels[card.level]} · ${INDEX.sections[card.section]}`
+	);
 	await expect(page.locator('.lexcard')).toHaveCount(0);
 	// the empty state does not tell a reader the kitchen has never heard of it
 	await expect(page.locator('.empty')).toContainText('The Floor Deck does');

@@ -32,7 +32,7 @@
 	import { markStudied } from '$lib/oot-studied';
 	import { gradeFor } from '$lib/drill';
 	import FloorCard from '$lib/components/FloorCard.svelte';
-	import { liveSections, sayRound, sectionsFromSearch, type SayQuestion } from '$lib/floor-deck';
+	import { sayRound, scopeFromSearch, type SayQuestion } from '$lib/floor-deck';
 	import type { DeckCard, FloorDeck } from '$lib/types';
 
 	let deck = $state<FloorDeck | null>(null);
@@ -60,6 +60,7 @@
 
 	const names = $derived(new Map((deck?.cards ?? []).map((c) => [c.id, c.term])));
 	const titles = $derived(new Map((deck?.sections ?? []).map((s) => [s.key, s.title])));
+	const levelNames = $derived(new Map((deck?.levels ?? []).map((l) => [l.level, l.name])));
 	const q = $derived(round ? (round[at] ?? null) : null);
 	const ready = $derived(Boolean(deck) && session.ready && search !== null);
 
@@ -70,8 +71,8 @@
 
 	function start() {
 		if (!deck || search === null) return;
-		const scope = sectionsFromSearch(search, liveSections(deck).map((s) => s.key));
-		round = sayRound(deck, session.drillLog, Date.now(), Math.random, { scope, houseLines });
+		const { scope, levels } = scopeFromSearch(search, deck);
+		round = sayRound(deck, session.drillLog, Date.now(), Math.random, { scope, levels, houseLines });
 		at = 0;
 		said = false;
 		picked = null;
@@ -147,6 +148,7 @@
 						<FloorCard
 							card={m}
 							frame={deck.frame}
+							levelName={levelNames.get(m.level) ?? ''}
 							sectionTitle={titles.get(m.section) ?? ''}
 							{names}
 							flippable={false}
@@ -205,6 +207,7 @@
 				<FloorCard
 					card={q.card}
 					frame={deck.frame}
+					levelName={levelNames.get(q.card.level) ?? ''}
 					sectionTitle={titles.get(q.card.section) ?? ''}
 					{names}
 					flippable={false}

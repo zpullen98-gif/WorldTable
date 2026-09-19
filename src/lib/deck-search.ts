@@ -8,7 +8,8 @@
  * alias, and this is where that alias gets found.
  *
  * Its OWN haystack, and deliberately a thin one: term, aliases, section title.
- * Not the card's prose. The Lexicon's `haystack()` is untouched, so every
+ * Not the card's prose, and not the level's name, which a hit SHOWS but a
+ * search never reads ("chef" is inside "Sous Chef" and "Chef de Partie"). The Lexicon's `haystack()` is untouched, so every
  * count a regression pins ("brisket" shows six entries, "porterhouse" one)
  * stays what it was, and a hit here is a row of links, never a `.lexcard`.
  * Prose is left out because a deck hit is a DOOR ("this word has a card"),
@@ -27,6 +28,9 @@ import type { DeckIndex } from './types';
 export interface DeckHit {
 	id: string;
 	term: string;
+	/** "Commis": shown on the row, and never searched. Level names are
+	 *  brigade words, so "chef" would otherwise open every Chef card. */
+	levelName: string;
 	sectionTitle: string;
 	/** The alias that matched, when the term itself did not. */
 	via?: string;
@@ -73,7 +77,7 @@ export function deckHits(index: DeckIndex | null | undefined, query: string, max
 	index.cards.forEach((row, at) => {
 		const f = foldedRow(row, index);
 		const sectionTitle = index.sections[row.section] ?? '';
-		const base = { id: row.id, term: row.term, sectionTitle };
+		const base = { id: row.id, term: row.term, levelName: index.levels?.[String(row.level)] ?? '', sectionTitle };
 		if (f.term.startsWith(needle)) ranked.push({ rank: 0, at, hit: base });
 		else if (f.term.includes(needle)) ranked.push({ rank: 1, at, hit: base });
 		else {

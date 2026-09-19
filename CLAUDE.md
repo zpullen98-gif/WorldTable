@@ -524,10 +524,13 @@ Lexicon both ways.
 
 ### Data
 
-- Authored: `tools/derive/floor-deck/<section>.mjs` (15 files, machine-written
+- 281 cards in 14 sections (it shipped at 300 in fifteen; the Southern section
+  was removed on the owner's decision, five of its words moving with their ids
+  and the rest retired in the ledger).
+- Authored: `tools/derive/floor-deck/<section>.mjs` (14 files, machine-written
   by `tools/deck/merge.mjs`, hand-editable after), `tools/derive/floor-deck.mjs`
-  (`DECK_SECTIONS` in teaching order, `PACKET_TERMS`, `PACKET_ERRORS`,
-  `DECK_GZ_CEILING`, `DECK_COMPLETE`), and ONE contract,
+  (`DECK_SECTIONS` in teaching order within a level, `DECK_LEVELS`,
+  `PACKET_TERMS`, `PACKET_ERRORS`, `DECK_GZ_CEILING`, `DECK_COMPLETE`), and ONE contract,
   `tools/derive/floor-deck-contract.mjs`, imported by both the build gate and
   the pipeline's validator so they cannot drift.
 - Ids are `fd_NNNN`, minted by `tools/deck/mint-ids.mjs` into the committed
@@ -555,12 +558,53 @@ Lexicon both ways.
   `wrongAnswersFor()` the page calls (`src/lib/floor-deck-core.mjs`): always
   picking the longest or the shortest option must not beat chance by much.
 
+### Levels
+
+Every card sits at one of four brigade levels: **1 Commis, 2 Chef de Partie,
+3 Sous Chef, 4 Chef** (110 / 122 / 35 / 14 at the first placement).
+
+- **The number is the key.** A card, the index and every URL (`?level=1,3`)
+  carry the integer; the names live ONLY in `DECK_LEVELS` and reach the app as
+  `floorDeck.levels` and `index.levels`. The contract refuses a string, a name
+  or a key outside `LEVELS`, and `checkLevels` holds the names to no digit,
+  because the test's result screen names each miss's level and holds no
+  figure. `levelsFromSearch` takes exact integer strings only: `?level=commis`
+  is null. Progress stays keyed on the card id; nothing about a level is
+  stored.
+- **Guided, nothing locked.** The engine makes the order: `teachingOrder` is a
+  stable sort by level over the emitted order, so a new reader meets level 1
+  across every section (in `DECK_SECTIONS` order) before any level 2 card, and
+  `pickSession` needed no change for it. The EMITTED file stays section then
+  authored: level-first gzipped about 4 KB worse, and a contract test pins it.
+- **The landing** opens on `firstUnmetLevel` (derived from the log, held until
+  `session.ready`, never stored) or All once everything has been met; the
+  sections are that level's subsections, counted at the level.
+- **What is owed reaches down, never up.** Under a level scope, misses and due
+  cards come from every level at or below the highest one chosen, so yesterday's
+  Commis misses lead a Chef de Partie sitting; new cards and the top-up stay in
+  scope. Section scopes and All behave as before. The landing's owed note counts
+  by the same rule (`owedCount`), and says when some of the day's owed cards sit
+  outside the choice. The Lineup shares the rule over the venue log. "Only what
+  I missed", "keeps slipping" and the look-up stay deck-wide.
+- **The written test** is a whole level across its sections or a whole section
+  across its levels, never both (`TestScope`); every level holds at least
+  `LIMITS.levelMin` = `TEST_MC + MATCH_SIZE` = 14, checked when complete.
+  `defaultTestScope`: `?level` (lowest), then `?section`, then the lowest
+  unfinished level.
+- Placement: agents against the standard in `tools/deck/README.md` ("Levels"),
+  written in by `tools/deck/set-levels.mjs`, reasons in
+  `tools/deck/audit/levels.json`. A merge keeps an existing card's level.
+- The level name stays OUT of the Lexicon's deck haystack ("chef" would open
+  every Chef card) and shows on the row: "also called X · Commis · Fish &
+  Shellfish". `FloorCard`'s eyebrow is one expression over `[levelName,
+  sectionTitle]`, never an `{#if}` per part.
+
 ### Modes, and what each may write
 
 | Mode | Route | Writes |
 |---|---|---|
 | Flip cards | `/service/deck/study` | `close` or `missed`, once per card per local day; self-judged, so it never promotes |
-| Written test | `/service/deck/test` | `met` or `missed`; ends on the misses and **no number**, by the owner's decision |
+| Written test | `/service/deck/test` | `met` or `missed`; a level or a section; ends on the misses and **no number**, by the owner's decision |
 | Say it back | `/service/deck/say` | `met` or `missed`; the ONE deck mode that sends `oot:round-complete` |
 | Lineup | `/service/deck/lineup` | ONLY `house.lineupLog`; nothing about a person |
 

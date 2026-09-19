@@ -17,10 +17,21 @@ import { fileURLToPath } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const DECK = JSON.parse(readFileSync(join(here, '../src/lib/data/floor-deck.json'), 'utf8')) as {
-	cards: Array<{ id: string; term: string; section: string; guest: string; gist: string }>;
+	cards: Array<{ id: string; term: string; section: string; level: number; guest: string; gist: string }>;
 	sections: Array<{ key: string; title: string; count: number }>;
+	levels: Array<{ level: number; name: string; count: number }>;
 };
-const FIRST = DECK.cards[0];
+/* The first card a new reader meets is the first in TEACHING order: the file
+   is in section order, and the engine takes level 1 across every section
+   first. A stable sort over the file is that order. */
+const FIRST = [...DECK.cards].sort((a, b) => a.level - b.level)[0];
+const LEVEL_NAME = new Map(DECK.levels.map((l) => [l.level, l.name]));
+const TITLE = new Map(DECK.sections.map((s) => [s.key, s.title]));
+/** What the landing prints for a section at a level, for a reader who has met nothing. */
+const countAt = (section: string, level: number) => {
+	const n = DECK.cards.filter((c) => c.section === section && c.level === level).length;
+	return n ? `${n} cards` : 'None at this level';
+};
 
 /** Every drillLog entry on disk, whichever record holds it. */
 async function drillLog(page: Page) {
@@ -49,6 +60,68 @@ test('the landing lists what is written, and nothing that is not', async ({ page
 	// one sheet: the paywall contract
 	await expect(page.locator('article.sheet')).toHaveCount(1);
 	await expect(page.getByRole('link', { name: /Flip cards/ })).toBeVisible();
+});
+
+test('the landing opens a new reader on the first level, and the level switch moves the counts and the links', async ({ page }) => {
+	await goto(page, '/service/deck');
+	// four names and All, exact: "Chef" is inside "Sous Chef" and "Chef de Partie"
+	for (const l of DECK.levels) await expect(page.getByLabel(l.name, { exact: true })).toBeVisible();
+	await expect(page.getByLabel('All levels', { exact: true })).toBeVisible();
+	await expect(page.getByLabel(DECK.levels[0].name, { exact: true })).toBeChecked();
+
+	const flip = page.getByRole('link', { name: /Flip cards/ });
+	const written = page.getByRole('link', { name: /The written test/ });
+	await expect(flip).toHaveAttribute('href', /\/service\/deck\/study\?level=1$/);
+	await expect(written).toHaveAttribute('href', /\/service\/deck\/test\?level=1$/);
+
+	// a section whose count differs between Commis and Sous Chef
+	const moved = DECK.sections.find((s) => countAt(s.key, 1) !== countAt(s.key, 3))!;
+	const row = page.locator('.sections li', { hasText: moved.title });
+	await expect(row.locator('.scount')).toHaveText(countAt(moved.key, 1));
+
+	await page.getByLabel(LEVEL_NAME.get(3)!, { exact: true }).check();
+	await expect(row.locator('.scount')).toHaveText(countAt(moved.key, 3));
+	await expect(flip).toHaveAttribute('href', /\/service\/deck\/study\?level=3$/);
+	await expect(written).toHaveAttribute('href', /\/service\/deck\/test\?level=3$/);
+
+	// All levels: no level in the links, and nothing ticked means nothing narrowed
+	await page.getByLabel('All levels', { exact: true }).check();
+	await expect(flip).toHaveAttribute('href', /\/service\/deck\/study$/);
+	await expect(written).toHaveAttribute('href', /\/service\/deck\/test$/);
+});
+
+test('a sitting starts on the first card in teaching order, with its level named', async ({ page }) => {
+	await goto(page, '/service/deck/study');
+	await expect(page.locator('.flash .term')).toHaveText(FIRST.term);
+	await expect(page.locator('.flash .eyebrow')).toHaveText(`${LEVEL_NAME.get(1)} · ${TITLE.get(FIRST.section)}`);
+
+	/* FIRST alone cannot prove the order: the file's first card is level 1 too.
+	   The first section's first twenty cards in FILE order include level-2
+	   cards, so a sitting that walked the file would show one here. */
+	const commis = new Set(DECK.cards.filter((c) => c.level === 1).map((c) => c.term));
+	const fileOrder = DECK.cards.filter((c) => c.section === FIRST.section).slice(0, 20);
+	expect(fileOrder.some((c) => c.level !== 1), 'the file order no longer tells guided order apart').toBe(true);
+	const seen = new Set<string>();
+	for (let guard = 0; guard < 25 && seen.size < 20; guard++) {
+		const term = (await page.locator('.flash .term').textContent()) ?? '';
+		if (seen.has(term)) break; // Later came back round: the sitting is shorter than twenty
+		seen.add(term);
+		expect(commis.has(term), `${term} is not a ${LEVEL_NAME.get(1)} card`).toBe(true);
+		await page.getByRole('button', { name: /Later/ }).click();
+		await expect(page.locator('.flash .term')).not.toHaveText(term);
+	}
+	expect(seen.size).toBeGreaterThan(1);
+});
+
+test('a level in the URL narrows the sitting to that level', async ({ page }) => {
+	const chef = new Set(DECK.cards.filter((c) => c.level === 4).map((c) => c.term));
+	await goto(page, '/service/deck/study?level=4');
+	for (let i = 0; i < 6; i++) {
+		const term = (await page.locator('.flash .term').textContent()) ?? '';
+		expect(chef.has(term), `${term} is not a ${LEVEL_NAME.get(4)} card`).toBe(true);
+		await expect(page.locator('.flash .eyebrow')).toContainText(`${LEVEL_NAME.get(4)} · `);
+		await page.getByRole('button', { name: /Later/ }).click();
+	}
 });
 
 test('a judgment is written once per card per day, and survives a reload', async ({ page }) => {
@@ -218,8 +291,8 @@ test('the deck opens cold with the network gone', async ({ page, context }) => {
  */
 const SCORE = /\b\d+\s*(?:\/|of|out of)\s*\d+\b|\d+\s*%|\bscore|\bpass(?:ed)?\b|\bfail(?:ed)?\b|\bcorrect\b/i;
 
-async function sitTheTest(page: Page, answer: 'right' | 'wrong') {
-	await goto(page, '/service/deck/test');
+async function sitTheTest(page: Page, answer: 'right' | 'wrong', query = '') {
+	await goto(page, `/service/deck/test${query}`);
 	await page.getByRole('button', { name: 'Begin' }).click();
 	for (let guard = 0; guard < 30; guard++) {
 		if (await page.locator('.result').count()) return;
@@ -283,6 +356,35 @@ test('a bad written test ends on what was missed, each with the card, and no num
 	await page.getByRole('link', { name: 'Study these now' }).click();
 	await expect(page.locator('h1')).toHaveText('What you missed');
 	await expect(page.locator('.where')).toContainText(`of ${Math.min(20, log.length)}`);
+});
+
+test('a level test asks only that level, across its sections, and its result holds no figure', async ({ page }) => {
+	const two = new Set(DECK.cards.filter((c) => c.level === 2).map((c) => c.id));
+	await sitTheTest(page, 'wrong', '?level=2');
+	await page.waitForTimeout(700);
+	const log = await drillLog(page);
+	expect(log.length).toBeGreaterThan(5);
+	for (const e of log) expect(two.has(e.slug), `${e.slug} is not a level-two card`).toBe(true);
+	expect(new Set(log.map((e) => DECK.cards.find((c) => c.id === e.slug)!.section)).size).toBeGreaterThan(1);
+	// each miss is named by level and section, and the page's own words carry no digit
+	await expect(page.locator('.result .flash .eyebrow').first()).toContainText(`${LEVEL_NAME.get(2)} · `);
+	const own = await page.evaluate(() => {
+		const r = document.querySelector('.result')!.cloneNode(true) as HTMLElement;
+		r.querySelectorAll('.flash').forEach((el) => el.remove());
+		return r.textContent ?? '';
+	});
+	expect(own).not.toMatch(/\d/);
+	// and neither does the eyebrow a missed card carries: a level is a name
+	expect((await page.locator('.result .flash .eyebrow').allTextContents()).join(' ')).not.toMatch(/\d/);
+});
+
+test('a section test asks only that section, at every level', async ({ page }) => {
+	const fish = new Set(DECK.cards.filter((c) => c.section === 'fish').map((c) => c.id));
+	await sitTheTest(page, 'right', '?section=fish');
+	await page.waitForTimeout(700);
+	const log = await drillLog(page);
+	expect(log.length).toBeGreaterThan(5);
+	for (const e of log) expect(fish.has(e.slug), `${e.slug} is not a fish card`).toBe(true);
 });
 
 /** The house record's lineup tally, and the session's drill log, straight off disk. */

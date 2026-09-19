@@ -15,71 +15,90 @@
     "pantry": "Pantry, Pickles & Vinegars",
     "language": "Menu Language & Sourcing Words"
   },
+  "levels": {
+    "1": "Commis",
+    "2": "Chef de Partie",
+    "3": "Sous Chef",
+    "4": "Chef"
+  },
   "cards": [
     {
       "id": "fd_0025",
       "term": "Boiled",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0026",
       "term": "Braised",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0027",
       "term": "Brined",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0028",
       "term": "Caramelized",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0029",
       "term": "Confit",
-      "section": "methods"
+      "section": "methods",
+      "level": 2
     },
     {
       "id": "fd_0030",
       "term": "Cured",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0031",
       "term": "Fried",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0002",
       "term": "Chicken-Fried",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0032",
       "term": "Grilled",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0033",
       "term": "Pickled",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0034",
       "term": "Poached",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0035",
       "term": "Preserved",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0036",
       "term": "Puréed",
       "section": "methods",
+      "level": 1,
       "aliases": [
         "Purée"
       ]
@@ -87,77 +106,92 @@
     {
       "id": "fd_0037",
       "term": "Roasted",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0038",
       "term": "Sautéed",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0039",
       "term": "Seared",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0040",
       "term": "Simmered",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0041",
       "term": "Smoked",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0042",
       "term": "Sous Vide",
-      "section": "methods"
+      "section": "methods",
+      "level": 2
     },
     {
       "id": "fd_0043",
       "term": "Wilted",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0044",
       "term": "Blanched",
-      "section": "methods"
+      "section": "methods",
+      "level": 2
     },
     {
       "id": "fd_0045",
       "term": "Steamed",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0046",
       "term": "Fermented",
-      "section": "methods"
+      "section": "methods",
+      "level": 2
     },
     {
       "id": "fd_0047",
       "term": "Rendered",
-      "section": "methods"
+      "section": "methods",
+      "level": 2
     },
     {
       "id": "fd_0048",
       "term": "Blackened",
-      "section": "methods"
+      "section": "methods",
+      "level": 1
     },
     {
       "id": "fd_0049",
       "term": "Pan-Roasted",
-      "section": "methods"
+      "section": "methods",
+      "level": 2
     },
     {
       "id": "fd_0050",
       "term": "Escargot",
-      "section": "meats"
+      "section": "meats",
+      "level": 2
     },
     {
       "id": "fd_0051",
       "term": "Guinea Hen",
       "section": "meats",
+      "level": 2,
       "aliases": [
         "Guinea Fowl",
         "Pintade"
@@ -166,27 +200,32 @@
     {
       "id": "fd_0052",
       "term": "Quail",
-      "section": "meats"
+      "section": "meats",
+      "level": 2
     },
     {
       "id": "fd_0053",
       "term": "Squab",
-      "section": "meats"
+      "section": "meats",
+      "level": 3
     },
     {
       "id": "fd_0054",
       "term": "Sweetbreads",
-      "section": "meats"
+      "section": "meats",
+      "level": 3
     },
     {
       "id": "fd_0055",
       "term": "Foie Gras",
-      "section": "meats"
+      "section": "meats",
+      "level": 2
     },
     {
       "id": "fd_0056",
       "term": "Duck Breast",
       "section": "meats",
+      "level": 1,
       "aliases": [
         "Magret"
       ]
@@ -194,37 +233,44 @@
     {
       "id": "fd_0057",
       "term": "Poussin",
-      "section": "meats"
+      "section": "meats",
+      "level": 3
     },
     {
       "id": "fd_0058",
       "term": "Rabbit",
-      "section": "meats"
+      "section": "meats",
+      "level": 2
     },
     {
       "id": "fd_0059",
       "term": "Venison",
-      "section": "meats"
+      "section": "meats",
+      "level": 2
     },
     {
       "id": "fd_0060",
       "term": "Pheasant",
-      "section": "meats"
+      "section": "meats",
+      "level": 2
     },
     {
       "id": "fd_0061",
       "term": "Bone Marrow",
-      "section": "meats"
+      "section": "meats",
+      "level": 2
     },
     {
       "id": "fd_0062",
       "term": "Chicken Liver",
-      "section": "meats"
+      "section": "meats",
+      "level": 2
     },
     {
       "id": "fd_0063",
       "term": "Beef Tongue",
       "section": "meats",
+      "level": 2,
       "aliases": [
         "Lengua"
       ]
@@ -232,17 +278,20 @@
     {
       "id": "fd_0064",
       "term": "Andouille",
-      "section": "cured"
+      "section": "cured",
+      "level": 2
     },
     {
       "id": "fd_0065",
       "term": "Chorizo",
-      "section": "cured"
+      "section": "cured",
+      "level": 1
     },
     {
       "id": "fd_0066",
       "term": "Coppa",
       "section": "cured",
+      "level": 2,
       "aliases": [
         "Capocollo",
         "Capicola"
@@ -251,22 +300,26 @@
     {
       "id": "fd_0067",
       "term": "Country Ham",
-      "section": "cured"
+      "section": "cured",
+      "level": 2
     },
     {
       "id": "fd_0068",
       "term": "Guanciale",
-      "section": "cured"
+      "section": "cured",
+      "level": 3
     },
     {
       "id": "fd_0069",
       "term": "Lardo",
-      "section": "cured"
+      "section": "cured",
+      "level": 3
     },
     {
       "id": "fd_0070",
       "term": "Lomo",
       "section": "cured",
+      "level": 4,
       "aliases": [
         "Lomo Embuchado",
         "Lomo Curado"
@@ -275,22 +328,26 @@
     {
       "id": "fd_0071",
       "term": "Pancetta",
-      "section": "cured"
+      "section": "cured",
+      "level": 2
     },
     {
       "id": "fd_0072",
       "term": "Pastrami",
-      "section": "cured"
+      "section": "cured",
+      "level": 1
     },
     {
       "id": "fd_0073",
       "term": "Pâté",
-      "section": "cured"
+      "section": "cured",
+      "level": 2
     },
     {
       "id": "fd_0074",
       "term": "Prosciutto",
       "section": "cured",
+      "level": 1,
       "aliases": [
         "Prosciutto Crudo",
         "Prosciutto di Parma",
@@ -301,12 +358,14 @@
     {
       "id": "fd_0075",
       "term": "Rillettes",
-      "section": "cured"
+      "section": "cured",
+      "level": 2
     },
     {
       "id": "fd_0076",
       "term": "Speck",
       "section": "cured",
+      "level": 3,
       "aliases": [
         "Speck Alto Adige"
       ]
@@ -315,6 +374,7 @@
       "id": "fd_0077",
       "term": "Tasso",
       "section": "cured",
+      "level": 3,
       "aliases": [
         "Tasso Ham"
       ]
@@ -322,17 +382,20 @@
     {
       "id": "fd_0078",
       "term": "Charcuterie",
-      "section": "cured"
+      "section": "cured",
+      "level": 1
     },
     {
       "id": "fd_0079",
       "term": "Bresaola",
-      "section": "cured"
+      "section": "cured",
+      "level": 3
     },
     {
       "id": "fd_0080",
       "term": "Soppressata",
       "section": "cured",
+      "level": 2,
       "aliases": [
         "Sopressata"
       ]
@@ -340,12 +403,14 @@
     {
       "id": "fd_0081",
       "term": "'Nduja",
-      "section": "cured"
+      "section": "cured",
+      "level": 2
     },
     {
       "id": "fd_0082",
       "term": "Jamón Ibérico",
       "section": "cured",
+      "level": 3,
       "aliases": [
         "Pata Negra",
         "Ibérico Ham"
@@ -355,6 +420,7 @@
       "id": "fd_0083",
       "term": "Bacon",
       "section": "cured",
+      "level": 1,
       "aliases": [
         "Streaky Bacon",
         "Slab Bacon"
@@ -363,12 +429,14 @@
     {
       "id": "fd_0084",
       "term": "Terrine",
-      "section": "cured"
+      "section": "cured",
+      "level": 2
     },
     {
       "id": "fd_0085",
       "term": "Corned Beef",
       "section": "cured",
+      "level": 1,
       "aliases": [
         "Salt Beef"
       ]
@@ -377,6 +445,7 @@
       "id": "fd_0086",
       "term": "Ribeye Cap",
       "section": "cuts",
+      "level": 2,
       "aliases": [
         "Calotte",
         "Spinalis",
@@ -387,6 +456,7 @@
       "id": "fd_0087",
       "term": "Cheek",
       "section": "cuts",
+      "level": 2,
       "aliases": [
         "Beef Cheek",
         "Veal Cheek",
@@ -397,6 +467,7 @@
       "id": "fd_0088",
       "term": "Hanger Steak",
       "section": "cuts",
+      "level": 2,
       "aliases": [
         "Onglet",
         "Butcher's Steak",
@@ -407,6 +478,7 @@
       "id": "fd_0089",
       "term": "Ham Hock",
       "section": "cuts",
+      "level": 1,
       "aliases": [
         "Pork Hock",
         "Pork Knuckle"
@@ -416,6 +488,7 @@
       "id": "fd_0090",
       "term": "Ribeye",
       "section": "cuts",
+      "level": 1,
       "aliases": [
         "Rib Eye",
         "Scotch Fillet",
@@ -427,6 +500,7 @@
       "id": "fd_0091",
       "term": "Shoulder",
       "section": "cuts",
+      "level": 1,
       "aliases": [
         "Chuck",
         "Pork Butt",
@@ -438,6 +512,7 @@
       "id": "fd_0092",
       "term": "Short Rib",
       "section": "cuts",
+      "level": 1,
       "aliases": [
         "Beef Short Ribs",
         "Flanken",
@@ -448,6 +523,7 @@
       "id": "fd_0093",
       "term": "Tenderloin",
       "section": "cuts",
+      "level": 1,
       "aliases": [
         "Filet Mignon",
         "Beef Filet",
@@ -457,12 +533,14 @@
     {
       "id": "fd_0094",
       "term": "Pork Belly",
-      "section": "cuts"
+      "section": "cuts",
+      "level": 1
     },
     {
       "id": "fd_0095",
       "term": "New York Strip",
       "section": "cuts",
+      "level": 1,
       "aliases": [
         "Strip Steak",
         "Kansas City Strip",
@@ -473,6 +551,7 @@
       "id": "fd_0096",
       "term": "Porterhouse and T-Bone",
       "section": "cuts",
+      "level": 1,
       "aliases": [
         "Porterhouse",
         "T-Bone"
@@ -481,12 +560,14 @@
     {
       "id": "fd_0097",
       "term": "Flank Steak",
-      "section": "cuts"
+      "section": "cuts",
+      "level": 2
     },
     {
       "id": "fd_0098",
       "term": "Skirt Steak",
       "section": "cuts",
+      "level": 2,
       "aliases": [
         "Arrachera"
       ]
@@ -495,6 +576,7 @@
       "id": "fd_0099",
       "term": "Bavette",
       "section": "cuts",
+      "level": 3,
       "aliases": [
         "Sirloin Flap",
         "Flap Steak",
@@ -505,6 +587,7 @@
       "id": "fd_0100",
       "term": "Flat Iron Steak",
       "section": "cuts",
+      "level": 2,
       "aliases": [
         "Top Blade Steak",
         "Butler's Steak",
@@ -514,22 +597,26 @@
     {
       "id": "fd_0101",
       "term": "Brisket",
-      "section": "cuts"
+      "section": "cuts",
+      "level": 1
     },
     {
       "id": "fd_0102",
       "term": "Oxtail",
-      "section": "cuts"
+      "section": "cuts",
+      "level": 2
     },
     {
       "id": "fd_0103",
       "term": "Shank",
-      "section": "cuts"
+      "section": "cuts",
+      "level": 1
     },
     {
       "id": "fd_0104",
       "term": "Coulotte",
       "section": "cuts",
+      "level": 3,
       "aliases": [
         "Picanha",
         "Culotte"
@@ -538,22 +625,26 @@
     {
       "id": "fd_0105",
       "term": "Rack of Lamb",
-      "section": "cuts"
+      "section": "cuts",
+      "level": 1
     },
     {
       "id": "fd_0106",
       "term": "Pork Chop",
-      "section": "cuts"
+      "section": "cuts",
+      "level": 1
     },
     {
       "id": "fd_0107",
       "term": "Wagyu",
-      "section": "cuts"
+      "section": "cuts",
+      "level": 2
     },
     {
       "id": "fd_0108",
       "term": "Arctic Char",
       "section": "fish",
+      "level": 2,
       "aliases": [
         "Char"
       ]
@@ -562,6 +653,7 @@
       "id": "fd_0109",
       "term": "Crawfish",
       "section": "fish",
+      "level": 1,
       "aliases": [
         "Crayfish",
         "Crawdads",
@@ -572,6 +664,7 @@
       "id": "fd_0110",
       "term": "Skate",
       "section": "fish",
+      "level": 2,
       "aliases": [
         "Skate Wing",
         "Raie"
@@ -581,6 +674,7 @@
       "id": "fd_0111",
       "term": "Flounder",
       "section": "fish",
+      "level": 1,
       "aliases": [
         "Fluke",
         "Summer Flounder"
@@ -589,17 +683,20 @@
     {
       "id": "fd_0112",
       "term": "Grouper",
-      "section": "fish"
+      "section": "fish",
+      "level": 1
     },
     {
       "id": "fd_0113",
       "term": "Halibut",
-      "section": "fish"
+      "section": "fish",
+      "level": 1
     },
     {
       "id": "fd_0114",
       "term": "Mussels",
       "section": "fish",
+      "level": 1,
       "aliases": [
         "Moules"
       ]
@@ -607,27 +704,32 @@
     {
       "id": "fd_0115",
       "term": "Oysters",
-      "section": "fish"
+      "section": "fish",
+      "level": 1
     },
     {
       "id": "fd_0116",
       "term": "Roe",
-      "section": "fish"
+      "section": "fish",
+      "level": 2
     },
     {
       "id": "fd_0117",
       "term": "Salmon",
-      "section": "fish"
+      "section": "fish",
+      "level": 1
     },
     {
       "id": "fd_0118",
       "term": "Scallops",
-      "section": "fish"
+      "section": "fish",
+      "level": 1
     },
     {
       "id": "fd_0119",
       "term": "Snapper",
       "section": "fish",
+      "level": 1,
       "aliases": [
         "Red Snapper"
       ]
@@ -635,12 +737,14 @@
     {
       "id": "fd_0120",
       "term": "Sturgeon",
-      "section": "fish"
+      "section": "fish",
+      "level": 3
     },
     {
       "id": "fd_0121",
       "term": "Tilefish",
       "section": "fish",
+      "level": 3,
       "aliases": [
         "Golden Tilefish"
       ]
@@ -648,17 +752,20 @@
     {
       "id": "fd_0122",
       "term": "Trout",
-      "section": "fish"
+      "section": "fish",
+      "level": 1
     },
     {
       "id": "fd_0123",
       "term": "Turbot",
-      "section": "fish"
+      "section": "fish",
+      "level": 3
     },
     {
       "id": "fd_0124",
       "term": "Wreckfish",
       "section": "fish",
+      "level": 3,
       "aliases": [
         "Stone Bass"
       ]
@@ -666,12 +773,14 @@
     {
       "id": "fd_0125",
       "term": "Caviar",
-      "section": "fish"
+      "section": "fish",
+      "level": 2
     },
     {
       "id": "fd_0126",
       "term": "Bottarga",
       "section": "fish",
+      "level": 4,
       "aliases": [
         "Poutargue"
       ]
@@ -680,6 +789,7 @@
       "id": "fd_0127",
       "term": "Branzino",
       "section": "fish",
+      "level": 2,
       "aliases": [
         "Loup de Mer",
         "European Sea Bass",
@@ -689,12 +799,14 @@
     {
       "id": "fd_0128",
       "term": "Black Sea Bass",
-      "section": "fish"
+      "section": "fish",
+      "level": 2
     },
     {
       "id": "fd_0129",
       "term": "Cobia",
       "section": "fish",
+      "level": 3,
       "aliases": [
         "Ling",
         "Lemonfish"
@@ -703,17 +815,20 @@
     {
       "id": "fd_0130",
       "term": "Swordfish",
-      "section": "fish"
+      "section": "fish",
+      "level": 1
     },
     {
       "id": "fd_0131",
       "term": "Tuna",
-      "section": "fish"
+      "section": "fish",
+      "level": 1
     },
     {
       "id": "fd_0132",
       "term": "Monkfish",
       "section": "fish",
+      "level": 2,
       "aliases": [
         "Anglerfish",
         "Lotte"
@@ -723,6 +838,7 @@
       "id": "fd_0133",
       "term": "Shrimp",
       "section": "fish",
+      "level": 1,
       "aliases": [
         "Prawns"
       ]
@@ -730,22 +846,26 @@
     {
       "id": "fd_0134",
       "term": "Blue Crab",
-      "section": "fish"
+      "section": "fish",
+      "level": 2
     },
     {
       "id": "fd_0135",
       "term": "Soft-Shell Crab",
-      "section": "fish"
+      "section": "fish",
+      "level": 2
     },
     {
       "id": "fd_0136",
       "term": "Lobster",
-      "section": "fish"
+      "section": "fish",
+      "level": 1
     },
     {
       "id": "fd_0137",
       "term": "Clams",
       "section": "fish",
+      "level": 1,
       "aliases": [
         "Littlenecks",
         "Quahogs",
@@ -756,6 +876,7 @@
       "id": "fd_0138",
       "term": "Abalone Mushroom",
       "section": "mushrooms",
+      "level": 4,
       "aliases": [
         "Abalone Oyster Mushroom"
       ]
@@ -764,6 +885,7 @@
       "id": "fd_0139",
       "term": "Beech Mushroom",
       "section": "mushrooms",
+      "level": 2,
       "aliases": [
         "Shimeji",
         "Buna-Shimeji",
@@ -774,6 +896,7 @@
       "id": "fd_0140",
       "term": "Black Trumpet",
       "section": "mushrooms",
+      "level": 3,
       "aliases": [
         "Horn of Plenty",
         "Black Chanterelle",
@@ -784,6 +907,7 @@
       "id": "fd_0141",
       "term": "Chanterelle",
       "section": "mushrooms",
+      "level": 2,
       "aliases": [
         "Girolle",
         "Golden Chanterelle"
@@ -793,6 +917,7 @@
       "id": "fd_0142",
       "term": "Hen of the Woods",
       "section": "mushrooms",
+      "level": 2,
       "aliases": [
         "Maitake",
         "Sheep's Head",
@@ -803,6 +928,7 @@
       "id": "fd_0143",
       "term": "King Trumpet",
       "section": "mushrooms",
+      "level": 2,
       "aliases": [
         "King Oyster Mushroom",
         "Eryngii",
@@ -812,12 +938,14 @@
     {
       "id": "fd_0144",
       "term": "Morel",
-      "section": "mushrooms"
+      "section": "mushrooms",
+      "level": 2
     },
     {
       "id": "fd_0145",
       "term": "Oyster Mushroom",
       "section": "mushrooms",
+      "level": 1,
       "aliases": [
         "Pearl Oyster Mushroom",
         "Hiratake"
@@ -826,22 +954,26 @@
     {
       "id": "fd_0146",
       "term": "Shiitake",
-      "section": "mushrooms"
+      "section": "mushrooms",
+      "level": 1
     },
     {
       "id": "fd_0147",
       "term": "Truffle",
-      "section": "mushrooms"
+      "section": "mushrooms",
+      "level": 1
     },
     {
       "id": "fd_0148",
       "term": "Truffle Oil",
-      "section": "mushrooms"
+      "section": "mushrooms",
+      "level": 1
     },
     {
       "id": "fd_0149",
       "term": "Porcini",
       "section": "mushrooms",
+      "level": 2,
       "aliases": [
         "Cep",
         "Cèpe",
@@ -852,6 +984,7 @@
       "id": "fd_0150",
       "term": "Cremini",
       "section": "mushrooms",
+      "level": 1,
       "aliases": [
         "Baby Bella",
         "Brown Mushroom"
@@ -861,6 +994,7 @@
       "id": "fd_0151",
       "term": "Enoki",
       "section": "mushrooms",
+      "level": 2,
       "aliases": [
         "Enokitake",
         "Golden Needle"
@@ -870,6 +1004,7 @@
       "id": "fd_0152",
       "term": "Lion's Mane",
       "section": "mushrooms",
+      "level": 4,
       "aliases": [
         "Pom Pom Mushroom",
         "Bearded Tooth"
@@ -879,6 +1014,7 @@
       "id": "fd_0153",
       "term": "Chicken of the Woods",
       "section": "mushrooms",
+      "level": 4,
       "aliases": [
         "Sulphur Shelf"
       ]
@@ -886,32 +1022,38 @@
     {
       "id": "fd_0154",
       "term": "Brebis",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 4
     },
     {
       "id": "fd_0155",
       "term": "Buttermilk",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 1
     },
     {
       "id": "fd_0156",
       "term": "Chèvre",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 2
     },
     {
       "id": "fd_0157",
       "term": "Crème Fraîche",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 2
     },
     {
       "id": "fd_0158",
       "term": "Fromage Blanc",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 3
     },
     {
       "id": "fd_0159",
       "term": "Parmesan",
       "section": "dairy",
+      "level": 1,
       "aliases": [
         "Parmigiano-Reggiano"
       ]
@@ -920,6 +1062,7 @@
       "id": "fd_0160",
       "term": "Clarified Butter",
       "section": "dairy",
+      "level": 2,
       "aliases": [
         "Drawn Butter"
       ]
@@ -928,6 +1071,7 @@
       "id": "fd_0161",
       "term": "Brown Butter",
       "section": "dairy",
+      "level": 2,
       "aliases": [
         "Beurre Noisette"
       ]
@@ -935,12 +1079,14 @@
     {
       "id": "fd_0162",
       "term": "Ghee",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 2
     },
     {
       "id": "fd_0163",
       "term": "Compound Butter",
       "section": "dairy",
+      "level": 2,
       "aliases": [
         "Beurre Composé"
       ]
@@ -948,22 +1094,26 @@
     {
       "id": "fd_0164",
       "term": "Mascarpone",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 2
     },
     {
       "id": "fd_0165",
       "term": "Ricotta",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 1
     },
     {
       "id": "fd_0166",
       "term": "Burrata",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 2
     },
     {
       "id": "fd_0167",
       "term": "Fresh Mozzarella",
       "section": "dairy",
+      "level": 1,
       "aliases": [
         "Fior di Latte"
       ]
@@ -971,12 +1121,14 @@
     {
       "id": "fd_0168",
       "term": "Feta",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 1
     },
     {
       "id": "fd_0169",
       "term": "Blue Cheese",
       "section": "dairy",
+      "level": 1,
       "aliases": [
         "Bleu Cheese"
       ]
@@ -984,37 +1136,44 @@
     {
       "id": "fd_0170",
       "term": "Bloomy Rind",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 3
     },
     {
       "id": "fd_0171",
       "term": "Washed Rind",
-      "section": "dairy"
+      "section": "dairy",
+      "level": 4
     },
     {
       "id": "fd_0172",
       "term": "Agnolotti",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0173",
       "term": "Buckwheat",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0174",
       "term": "Bulgur",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0175",
       "term": "Farro",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0176",
       "term": "Farro Piccolo",
       "section": "starches",
+      "level": 4,
       "aliases": [
         "Einkorn"
       ]
@@ -1022,67 +1181,80 @@
     {
       "id": "fd_0177",
       "term": "Gnocchi",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0178",
       "term": "Grits",
-      "section": "starches"
+      "section": "starches",
+      "level": 1
     },
     {
       "id": "fd_0007",
       "term": "Hominy",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0179",
       "term": "Polenta",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0180",
       "term": "Quinoa",
-      "section": "starches"
+      "section": "starches",
+      "level": 1
     },
     {
       "id": "fd_0181",
       "term": "Risotto",
-      "section": "starches"
+      "section": "starches",
+      "level": 1
     },
     {
       "id": "fd_0182",
       "term": "Carnaroli",
-      "section": "starches"
+      "section": "starches",
+      "level": 3
     },
     {
       "id": "fd_0183",
       "term": "Acquerello",
-      "section": "starches"
+      "section": "starches",
+      "level": 4
     },
     {
       "id": "fd_0184",
       "term": "Semolina",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0185",
       "term": "Tagliatelle",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0186",
       "term": "Arborio",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0187",
       "term": "Couscous",
-      "section": "starches"
+      "section": "starches",
+      "level": 1
     },
     {
       "id": "fd_0188",
       "term": "Freekeh",
       "section": "starches",
+      "level": 4,
       "aliases": [
         "Farik",
         "Frikeh"
@@ -1091,227 +1263,272 @@
     {
       "id": "fd_0189",
       "term": "Wild Rice",
-      "section": "starches"
+      "section": "starches",
+      "level": 1
     },
     {
       "id": "fd_0190",
       "term": "Pappardelle",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0191",
       "term": "Ravioli",
-      "section": "starches"
+      "section": "starches",
+      "level": 1
     },
     {
       "id": "fd_0192",
       "term": "Tortellini",
-      "section": "starches"
+      "section": "starches",
+      "level": 1
     },
     {
       "id": "fd_0193",
       "term": "Cavatelli",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0194",
       "term": "Orecchiette",
-      "section": "starches"
+      "section": "starches",
+      "level": 2
     },
     {
       "id": "fd_0195",
       "term": "Aioli",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 2
     },
     {
       "id": "fd_0196",
       "term": "Béarnaise",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 2
     },
     {
       "id": "fd_0197",
       "term": "Hollandaise",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 1
     },
     {
       "id": "fd_0198",
       "term": "Emulsion",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 2
     },
     {
       "id": "fd_0199",
       "term": "Jus",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 1
     },
     {
       "id": "fd_0200",
       "term": "Vinaigrette",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 1
     },
     {
       "id": "fd_0201",
       "term": "Mignonette",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 2
     },
     {
       "id": "fd_0202",
       "term": "Gastrique",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 3
     },
     {
       "id": "fd_0203",
       "term": "Coulis",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 2
     },
     {
       "id": "fd_0204",
       "term": "Consommé",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 2
     },
     {
       "id": "fd_0205",
       "term": "Beurre Blanc",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 3
     },
     {
       "id": "fd_0206",
       "term": "Demi-Glace",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 2
     },
     {
       "id": "fd_0207",
       "term": "Velouté",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 3
     },
     {
       "id": "fd_0208",
       "term": "Béchamel",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 2
     },
     {
       "id": "fd_0209",
       "term": "Remoulade",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 2
     },
     {
       "id": "fd_0210",
       "term": "Chimichurri",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 2
     },
     {
       "id": "fd_0211",
       "term": "Salsa Verde",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 2
     },
     {
       "id": "fd_0212",
       "term": "Pesto",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 1
     },
     {
       "id": "fd_0213",
       "term": "Romesco",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 3
     },
     {
       "id": "fd_0214",
       "term": "Stock",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 1
     },
     {
       "id": "fd_0215",
       "term": "Agrodolce",
-      "section": "sauces"
+      "section": "sauces",
+      "level": 3
     },
     {
       "id": "fd_0216",
       "term": "Carpaccio",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 2
     },
     {
       "id": "fd_0217",
       "term": "Tartare",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 2
     },
     {
       "id": "fd_0218",
       "term": "Frittata",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 1
     },
     {
       "id": "fd_0219",
       "term": "Ragout",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 2
     },
     {
       "id": "fd_0220",
       "term": "Crudo",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 3
     },
     {
       "id": "fd_0221",
       "term": "Ceviche",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 2
     },
     {
       "id": "fd_0222",
       "term": "Gravlax",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 2
     },
     {
       "id": "fd_0223",
       "term": "Tataki",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 2
     },
     {
       "id": "fd_0224",
       "term": "Escabeche",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 3
     },
     {
       "id": "fd_0225",
       "term": "Gratin",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 1
     },
     {
       "id": "fd_0226",
       "term": "Croquette",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 2
     },
     {
       "id": "fd_0227",
       "term": "Roulade",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 2
     },
     {
       "id": "fd_0228",
       "term": "Ballotine",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 4
     },
     {
       "id": "fd_0229",
       "term": "Cassoulet",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 3
     },
     {
       "id": "fd_0230",
       "term": "Bouillabaisse",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 3
     },
     {
       "id": "fd_0231",
       "term": "En Papillote",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 3
     },
     {
       "id": "fd_0232",
       "term": "Meunière",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 3
     },
     {
       "id": "fd_0233",
       "term": "Amandine",
       "section": "preparations",
+      "level": 2,
       "aliases": [
         "Almondine"
       ]
@@ -1319,57 +1536,68 @@
     {
       "id": "fd_0004",
       "term": "Coleslaw",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 1
     },
     {
       "id": "fd_0005",
       "term": "Hash",
-      "section": "preparations"
+      "section": "preparations",
+      "level": 1
     },
     {
       "id": "fd_0234",
       "term": "Beignets",
-      "section": "bread"
+      "section": "bread",
+      "level": 2
     },
     {
       "id": "fd_0235",
       "term": "Brioche",
-      "section": "bread"
+      "section": "bread",
+      "level": 1
     },
     {
       "id": "fd_0236",
       "term": "Focaccia",
-      "section": "bread"
+      "section": "bread",
+      "level": 1
     },
     {
       "id": "fd_0237",
       "term": "Sourdough",
-      "section": "bread"
+      "section": "bread",
+      "level": 1
     },
     {
       "id": "fd_0020",
       "term": "Cornbread",
-      "section": "bread"
+      "section": "bread",
+      "level": 1
     },
     {
       "id": "fd_0238",
       "term": "Macaron",
-      "section": "bread"
+      "section": "bread",
+      "level": 2
     },
     {
       "id": "fd_0239",
       "term": "Macaroon",
-      "section": "bread"
+      "section": "bread",
+      "level": 2
     },
     {
       "id": "fd_0240",
       "term": "Meringue",
-      "section": "bread"
+      "section": "bread",
+      "level": 1
     },
     {
       "id": "fd_0241",
       "term": "Tart",
       "section": "bread",
+      "level": 1,
       "aliases": [
         "Tarte"
       ]
@@ -1377,12 +1605,14 @@
     {
       "id": "fd_0242",
       "term": "Torte",
-      "section": "bread"
+      "section": "bread",
+      "level": 2
     },
     {
       "id": "fd_0243",
       "term": "Pâte à Choux",
       "section": "bread",
+      "level": 3,
       "aliases": [
         "Choux"
       ]
@@ -1391,6 +1621,7 @@
       "id": "fd_0244",
       "term": "Puff Pastry",
       "section": "bread",
+      "level": 1,
       "aliases": [
         "Pâte Feuilletée"
       ]
@@ -1398,102 +1629,122 @@
     {
       "id": "fd_0245",
       "term": "Clafoutis",
-      "section": "bread"
+      "section": "bread",
+      "level": 3
     },
     {
       "id": "fd_0246",
       "term": "Galette",
-      "section": "bread"
+      "section": "bread",
+      "level": 2
     },
     {
       "id": "fd_0247",
       "term": "Pavlova",
-      "section": "bread"
+      "section": "bread",
+      "level": 2
     },
     {
       "id": "fd_0248",
       "term": "Soufflé",
-      "section": "bread"
+      "section": "bread",
+      "level": 2
     },
     {
       "id": "fd_0249",
       "term": "Crème Anglaise",
-      "section": "custards"
+      "section": "custards",
+      "level": 2
     },
     {
       "id": "fd_0250",
       "term": "Custard",
-      "section": "custards"
+      "section": "custards",
+      "level": 1
     },
     {
       "id": "fd_0251",
       "term": "Ganache",
-      "section": "custards"
+      "section": "custards",
+      "level": 2
     },
     {
       "id": "fd_0252",
       "term": "Mousse",
-      "section": "custards"
+      "section": "custards",
+      "level": 1
     },
     {
       "id": "fd_0253",
       "term": "Parfait",
-      "section": "custards"
+      "section": "custards",
+      "level": 2
     },
     {
       "id": "fd_0254",
       "term": "Panna Cotta",
-      "section": "custards"
+      "section": "custards",
+      "level": 2
     },
     {
       "id": "fd_0255",
       "term": "Chocolate Truffle",
-      "section": "custards"
+      "section": "custards",
+      "level": 1
     },
     {
       "id": "fd_0256",
       "term": "Gelato",
-      "section": "custards"
+      "section": "custards",
+      "level": 2
     },
     {
       "id": "fd_0257",
       "term": "Granita",
-      "section": "custards"
+      "section": "custards",
+      "level": 2
     },
     {
       "id": "fd_0258",
       "term": "Sherbet",
-      "section": "custards"
+      "section": "custards",
+      "level": 1
     },
     {
       "id": "fd_0259",
       "term": "Sorbet",
-      "section": "custards"
+      "section": "custards",
+      "level": 1
     },
     {
       "id": "fd_0260",
       "term": "Ice Cream",
-      "section": "custards"
+      "section": "custards",
+      "level": 1
     },
     {
       "id": "fd_0261",
       "term": "Semifreddo",
-      "section": "custards"
+      "section": "custards",
+      "level": 2
     },
     {
       "id": "fd_0262",
       "term": "Crème Brûlée",
-      "section": "custards"
+      "section": "custards",
+      "level": 1
     },
     {
       "id": "fd_0263",
       "term": "Pot de Crème",
-      "section": "custards"
+      "section": "custards",
+      "level": 2
     },
     {
       "id": "fd_0264",
       "term": "Pastry Cream",
       "section": "custards",
+      "level": 2,
       "aliases": [
         "Crème Pâtissière"
       ]
@@ -1502,6 +1753,7 @@
       "id": "fd_0265",
       "term": "Chantilly",
       "section": "custards",
+      "level": 2,
       "aliases": [
         "Chantilly Cream",
         "Crème Chantilly"
@@ -1510,17 +1762,20 @@
     {
       "id": "fd_0266",
       "term": "Balsamic",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 1
     },
     {
       "id": "fd_0267",
       "term": "Banyuls",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 4
     },
     {
       "id": "fd_0268",
       "term": "Saba",
       "section": "pantry",
+      "level": 4,
       "aliases": [
         "Sapa",
         "Mosto Cotto"
@@ -1529,22 +1784,26 @@
     {
       "id": "fd_0269",
       "term": "Kimchi",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 1
     },
     {
       "id": "fd_0270",
       "term": "Compote",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 1
     },
     {
       "id": "fd_0271",
       "term": "Marmalade",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 1
     },
     {
       "id": "fd_0272",
       "term": "Sherry Vinegar",
       "section": "pantry",
+      "level": 2,
       "aliases": [
         "Vinagre de Jerez"
       ]
@@ -1553,6 +1812,7 @@
       "id": "fd_0273",
       "term": "Verjus",
       "section": "pantry",
+      "level": 4,
       "aliases": [
         "Verjuice"
       ]
@@ -1560,42 +1820,50 @@
     {
       "id": "fd_0274",
       "term": "Mostarda",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 3
     },
     {
       "id": "fd_0275",
       "term": "Chutney",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 2
     },
     {
       "id": "fd_0276",
       "term": "Jam",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 1
     },
     {
       "id": "fd_0277",
       "term": "Preserved Lemon",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 2
     },
     {
       "id": "fd_0278",
       "term": "Capers",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 1
     },
     {
       "id": "fd_0279",
       "term": "Cornichon",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 2
     },
     {
       "id": "fd_0280",
       "term": "Miso",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 2
     },
     {
       "id": "fd_0281",
       "term": "Fish Sauce",
       "section": "pantry",
+      "level": 2,
       "aliases": [
         "Nam Pla",
         "Nuoc Mam"
@@ -1604,12 +1872,14 @@
     {
       "id": "fd_0282",
       "term": "Harissa",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 2
     },
     {
       "id": "fd_0283",
       "term": "Pimentón",
       "section": "pantry",
+      "level": 2,
       "aliases": [
         "Spanish Paprika"
       ]
@@ -1617,27 +1887,32 @@
     {
       "id": "fd_0284",
       "term": "Finishing Salt",
-      "section": "pantry"
+      "section": "pantry",
+      "level": 2
     },
     {
       "id": "fd_0285",
       "term": "Heirloom",
-      "section": "language"
+      "section": "language",
+      "level": 1
     },
     {
       "id": "fd_0286",
       "term": "Larder",
-      "section": "language"
+      "section": "language",
+      "level": 2
     },
     {
       "id": "fd_0287",
       "term": "Garde Manger",
-      "section": "language"
+      "section": "language",
+      "level": 3
     },
     {
       "id": "fd_0288",
       "term": "Amuse-Bouche",
       "section": "language",
+      "level": 2,
       "aliases": [
         "Amuse",
         "Amuse-Gueule"
@@ -1647,6 +1922,7 @@
       "id": "fd_0289",
       "term": "Prix Fixe",
       "section": "language",
+      "level": 1,
       "aliases": [
         "Table d'Hote",
         "Set Menu"
@@ -1656,6 +1932,7 @@
       "id": "fd_0290",
       "term": "Tasting Menu",
       "section": "language",
+      "level": 1,
       "aliases": [
         "Degustation",
         "Chef's Tasting"
@@ -1664,12 +1941,14 @@
     {
       "id": "fd_0291",
       "term": "À la Carte",
-      "section": "language"
+      "section": "language",
+      "level": 1
     },
     {
       "id": "fd_0292",
       "term": "Market Price",
       "section": "language",
+      "level": 1,
       "aliases": [
         "MP"
       ]
@@ -1677,42 +1956,50 @@
     {
       "id": "fd_0293",
       "term": "House-Made",
-      "section": "language"
+      "section": "language",
+      "level": 1
     },
     {
       "id": "fd_0294",
       "term": "Dry-Aged",
-      "section": "language"
+      "section": "language",
+      "level": 2
     },
     {
       "id": "fd_0295",
       "term": "Grass-Fed",
-      "section": "language"
+      "section": "language",
+      "level": 1
     },
     {
       "id": "fd_0296",
       "term": "Pasture-Raised",
-      "section": "language"
+      "section": "language",
+      "level": 2
     },
     {
       "id": "fd_0297",
       "term": "Heritage Breed",
-      "section": "language"
+      "section": "language",
+      "level": 2
     },
     {
       "id": "fd_0298",
       "term": "Wild-Caught",
-      "section": "language"
+      "section": "language",
+      "level": 1
     },
     {
       "id": "fd_0299",
       "term": "Day-Boat",
-      "section": "language"
+      "section": "language",
+      "level": 2
     },
     {
       "id": "fd_0300",
       "term": "Organic",
-      "section": "language"
+      "section": "language",
+      "level": 1
     }
   ],
   "byLexicon": {
