@@ -400,6 +400,10 @@ export function buildFloorDeck({ recipes }) {
 		cards
 	};
 	const floorDeckIndex = {
+		/* Key to title, for the sections that have a card: the Lexicon shows a
+		   deck hit as "Guanciale, in Cured & Preserved Meats" and must not load
+		   the deck to learn a section's name. */
+		sections: Object.fromEntries(sections.filter((s) => s.count > 0).map((s) => [s.key, s.title])),
 		cards: cards.map((c) => {
 			/** @type {Record<string, any>} */
 			const row = { id: c.id, term: c.term, section: c.section };

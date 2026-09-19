@@ -684,6 +684,8 @@ export type DeckTraps = Record<string, DeckTrap[]>;
 
 /** What the Lexicon and the tiles read without loading the deck. */
 export interface DeckIndex {
+	/** Section key -> title, for the sections that have a card. */
+	sections: Record<string, string>;
 	cards: Array<{ id: string; term: string; section: string; aliases?: string[] }>;
 	/** Lexicon slug -> the cards that name it as their long entry. */
 	byLexicon: Record<string, string[]>;

@@ -6,6 +6,8 @@
 	import { repertoire, dueList, scopeToSlugs, TERM_LADDER_DAYS } from '$lib/repertoire';
 	import { nextTarget, optionsForTerm, gradeForQuiz, QUIZ_LENGTH } from '$lib/lexicon-quiz';
 	import { markStudied } from '$lib/oot-studied';
+	import { deckHits, cardsForLexicon } from '$lib/deck-search';
+	import { deckHref } from '$lib/floor-deck-core.mjs';
 
 	let { data } = $props();
 
@@ -126,6 +128,18 @@
 			}))
 			.sort((a, b) => sortKey(a.name).localeCompare(sortKey(b.name), 'en'));
 	});
+
+	/**
+	 * The Floor Deck, found from here. The deck is the home of a floor term and
+	 * this page links to it both ways, so a search the Lexicon files under
+	 * another name ("king trumpet" is King Oyster Mushroom here) still lands.
+	 *
+	 * Its own thin haystack in deck-search.ts, NOT `haystack()` above: the rows
+	 * below are links, never a .lexcard, so every count a regression pins
+	 * (brisket shows six entries, porterhouse one) is what it was. Only while
+	 * the box holds text: with it empty the deck has a door of its own.
+	 */
+	const floor = $derived(deckHits(data.deckIndex, q));
 
 	/* The directory is an orientation device, and it is only orienting when the
 	   whole corpus is on screen. Once a search or a category filter has cut the
@@ -390,6 +404,35 @@
 		</nav>
 	{/if}
 
+	<!--
+		Deck cards the search found. Links and a label, deliberately NOT .lexcard,
+		.def or .flash: those are the paywall's selectors and the regression
+		counts' too. A heading of its own so it reads as a group beside the
+		category groups below it, which are h2 as well.
+	-->
+	{#if floor.hits.length}
+		<section class="deckhits" aria-labelledby="deckhits-h">
+			<h2 class="deckhead" id="deckhits-h">In the Floor Deck</h2>
+			<ul>
+				{#each floor.hits as h (h.id)}
+					<li>
+						<a href={deckHref(base, h)}>
+							<span class="dterm">{h.term}</span>
+							<span class="dmeta">
+								{#if h.via}also called {h.via} · {/if}{h.sectionTitle}
+							</span>
+						</a>
+					</li>
+				{/each}
+			</ul>
+			{#if floor.more}
+				<p class="dmore">
+					and {floor.more} more. <a href="{base}/service/deck">Open the deck</a> to see them all.
+				</p>
+			{/if}
+		</section>
+	{/if}
+
 	{#each groups as g (g.id)}
 		<section class="group">
 			<h2 class="grouphead" id={g.id}>
@@ -474,6 +517,22 @@
 						{/each}
 						</p>
 					{/if}
+					<!--
+						The way to the floor card, in a paragraph of its OWN and never
+						inside .xrefs: "Demonstrated in" is a contract about dishes, and
+						a regression pins T-Bone & Porterhouse to zero .xrefs links. The
+						same visible-label, role=group shape as the crosslinks, for the
+						reasons written above them. This entry is the long read; the card
+						is what to say at the table, and it links back here.
+					-->
+					{#if cardsForLexicon(data.deckIndex, e.slug).length}
+						<p class="deckref" role="group" aria-label="Floor Deck cards for {e.term}">
+							<span class="xlabel">On the floor</span>
+							{#each cardsForLexicon(data.deckIndex, e.slug) as c (c.id)}
+								<a href={deckHref(base, c)}><span aria-hidden="true">↦</span> {c.term}</a>
+							{/each}
+						</p>
+					{/if}
 				</article>
 			{/each}
 			</div>
@@ -481,7 +540,11 @@
 	{/each}
 
 	{#if !shown.length}
-		<p class="empty">No terms match. Widen the search: the kitchen is large.</p>
+		{#if floor.hits.length}
+			<p class="empty">The Lexicon has no entry by that name. The Floor Deck does: see above.</p>
+		{:else}
+			<p class="empty">No terms match. Widen the search: the kitchen is large.</p>
+		{/if}
 	{/if}
 </div>
 
@@ -642,5 +705,34 @@
 		border: 1px solid var(--line); border-radius: var(--radius); padding: 2px 8px;
 	}
 	.xrefs a:hover { border-color: var(--turmeric); }
+	/* The same furniture as the crosslinks, because it is the same kind of
+	   thing: a labelled row of ways out of this card. */
+	.deckref { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+	.deckref a {
+		font-size: var(--t-small); color: var(--turmeric-deep); text-decoration: none;
+		border: 1px solid var(--line); border-radius: var(--radius); padding: 2px 8px;
+	}
+	.deckref a:hover { border-color: var(--turmeric); }
+
+	.deckhits { margin: 0 0 26px; }
+	.deckhead {
+		font-family: var(--text); font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow);
+		text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line);
+		padding-bottom: 5px; margin: 0 0 10px; font-weight: 500;
+	}
+	.deckhits ul {
+		list-style: none; margin: 0; padding: 0; display: grid; gap: 8px;
+		grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	}
+	.deckhits li a {
+		display: flex; flex-direction: column; justify-content: center; gap: 2px; min-height: 44px;
+		padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--radius);
+		background: var(--card); color: var(--ink); text-decoration: none;
+	}
+	.deckhits li a:hover { border-color: var(--turmeric-deep); }
+	.dterm { font-family: var(--display); font-size: 17px; }
+	.dmeta { font-size: var(--t-small); color: var(--ink-soft); }
+	.dmore { margin-top: 8px; font-size: var(--t-small); color: var(--ink-soft); }
+	.dmore a { color: inherit; }
 	.empty { padding: 60px 20px; text-align: center; color: var(--muted); font-style: italic; }
 </style>
