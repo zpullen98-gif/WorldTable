@@ -58,8 +58,8 @@ test('a word the Lexicon files under another name still lands on the floor card'
 
 	const hit = page.locator('.deckhits a', { hasText: card.term });
 	await expect(hit).toBeVisible();
-	await expect(hit).toContainText(`also called ${alias}`);
-	await expect(hit).toContainText(INDEX.sections[card.section]);
+	// the whole line, spaces included: an {#if} once ate the space after the dot
+	await expect(hit.locator('.dmeta')).toHaveText(`also called ${alias} · ${INDEX.sections[card.section]}`);
 	await expect(page.locator('.lexcard')).toHaveCount(0);
 	// the empty state does not tell a reader the kitchen has never heard of it
 	await expect(page.locator('.empty')).toContainText('The Floor Deck does');

@@ -419,7 +419,9 @@
 						<a href={deckHref(base, h)}>
 							<span class="dterm">{h.term}</span>
 							<span class="dmeta">
-								{#if h.via}also called {h.via} · {/if}{h.sectionTitle}
+								<!-- One expression, not an {#if}: Svelte trims the space at a
+								     block's edge, and the live page read "Onglet ·Meat Cuts". -->
+								{h.via ? `also called ${h.via} · ${h.sectionTitle}` : h.sectionTitle}
 							</span>
 						</a>
 					</li>
