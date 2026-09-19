@@ -158,6 +158,40 @@ test('the offline toast stacks above the timer bar, never over it', async ({ pag
 });
 
 /**
+ * The budget for the four specs below, which are the ones that set foot in the
+ * Library, and the Library is every card in the book: 1,844 `a.card`, a
+ * 16,000-line DOM.
+ *
+ * The app is not slow there. A bare Playwright script makes the tapped journey
+ * (dish, Library, first card) against the same build in 1.6s end to end:
+ * hydrate 0.3, client nav 0.3, first card attached 0.9, click 0.1. What is
+ * slow is the recorder. `trace: 'retain-on-failure'` records EVERY run and
+ * only throws the file away on a pass, and a trace takes a DOM snapshot around
+ * each action and each expect, so every step taken on that grid serialises
+ * the whole of it. Measured on the first tapped spec, same build, one worker,
+ * idle machine:
+ *
+ *   as configured                   31.2s
+ *   trace screenshots off           32.6s
+ *   trace snapshots off              1.8s
+ *   --trace off                      1.2s
+ *
+ * One at a time the three tapped specs take 25 to 27s each, side by side 36
+ * to 38s, and across runs anywhere from 18 to 42s. The default is 30s. They
+ * were born on that line in 2a354b8, passed once, and then failed as "Test
+ * timeout of 30000ms exceeded", which reads exactly like a navigation that
+ * hung and is not one. Nothing about the Library had changed. The first of
+ * the four only lands there and asserts once, had not failed yet, and
+ * measures 22s: the same cost with eight seconds of luck left in it.
+ *
+ * So the budget moves and nothing else does: the same 120s the other specs
+ * that stand on the full grid already carry (filters, regressions), with the
+ * trace left whole for the day one of these fails for a real reason. If one
+ * times out again, run it with `--trace off` before believing it.
+ */
+const LIBRARY_UNDER_TRACE = 120_000;
+
+/**
  * The timer belongs to the cooking process.
  *
  * "+ Timer" sat in the dock on every route, so the home page and the Lexicon
@@ -173,6 +207,7 @@ test('the offline toast stacks above the timer bar, never over it', async ({ pag
  * is what is scoped; keeping one is not.
  */
 test('the timer is offered where cooking happens, and nowhere else', async ({ page }) => {
+	test.setTimeout(LIBRARY_UNDER_TRACE);
 	const add = page.getByRole('button', { name: 'Start a timer' });
 	const bar = page.getByRole('status', { name: 'Kitchen timers' });
 
@@ -220,6 +255,7 @@ test('the timer is offered where cooking happens, and nowhere else', async ({ pa
 test('the launcher appears and disappears on a tapped navigation, not just a reload', async ({
 	page
 }) => {
+	test.setTimeout(LIBRARY_UNDER_TRACE);
 	const add = page.getByRole('button', { name: 'Start a timer' });
 
 	await goto(page, '/recipe/cacio-e-pepe');
@@ -252,6 +288,7 @@ test('the launcher appears and disappears on a tapped navigation, not just a rel
 test('arriving at a dish leaves focus at the top of the page, not on the dock', async ({
 	page
 }) => {
+	test.setTimeout(LIBRARY_UNDER_TRACE);
 	const add = page.getByRole('button', { name: 'Start a timer' });
 
 	await goto(page, '/recipe/cacio-e-pepe');
@@ -280,6 +317,7 @@ test('arriving at a dish leaves focus at the top of the page, not on the dock', 
  * An $effect closes it; this is what says so.
  */
 test('an open timer panel does not travel off the dish', async ({ page }) => {
+	test.setTimeout(LIBRARY_UNDER_TRACE);
 	await goto(page, '/recipe/cacio-e-pepe');
 
 	// A running timer, so the bar itself survives the journey and the panel is
