@@ -12,7 +12,8 @@
     "sauces": "Sauces, Stocks & Dressings",
     "preparations": "Preparations & Style Words",
     "bread": "Bread, Pastry & Cakes",
-    "custards": "Custards, Creams & Frozen Desserts"
+    "custards": "Custards, Creams & Frozen Desserts",
+    "pantry": "Pantry, Pickles & Vinegars"
   },
   "cards": [
     {
@@ -1618,6 +1619,118 @@
         "Chantilly Cream",
         "Crème Chantilly"
       ]
+    },
+    {
+      "id": "fd_0266",
+      "term": "Balsamic",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0267",
+      "term": "Banyuls",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0268",
+      "term": "Saba",
+      "section": "pantry",
+      "aliases": [
+        "Sapa",
+        "Mosto Cotto"
+      ]
+    },
+    {
+      "id": "fd_0269",
+      "term": "Kimchi",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0270",
+      "term": "Compote",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0271",
+      "term": "Marmalade",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0272",
+      "term": "Sherry Vinegar",
+      "section": "pantry",
+      "aliases": [
+        "Vinagre de Jerez"
+      ]
+    },
+    {
+      "id": "fd_0273",
+      "term": "Verjus",
+      "section": "pantry",
+      "aliases": [
+        "Verjuice"
+      ]
+    },
+    {
+      "id": "fd_0274",
+      "term": "Mostarda",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0275",
+      "term": "Chutney",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0276",
+      "term": "Jam",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0277",
+      "term": "Preserved Lemon",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0278",
+      "term": "Capers",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0279",
+      "term": "Cornichon",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0280",
+      "term": "Miso",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0281",
+      "term": "Fish Sauce",
+      "section": "pantry",
+      "aliases": [
+        "Nam Pla",
+        "Nuoc Mam"
+      ]
+    },
+    {
+      "id": "fd_0282",
+      "term": "Harissa",
+      "section": "pantry"
+    },
+    {
+      "id": "fd_0283",
+      "term": "Pimentón",
+      "section": "pantry",
+      "aliases": [
+        "Spanish Paprika"
+      ]
+    },
+    {
+      "id": "fd_0284",
+      "term": "Finishing Salt",
+      "section": "pantry"
     }
   ],
   "byLexicon": {
@@ -1851,6 +1964,30 @@
     ],
     "ganache-bloom-and-chocolate-craft": [
       "fd_0251"
+    ],
+    "kimchi": [
+      "fd_0269"
+    ],
+    "preserved-lemon": [
+      "fd_0277"
+    ],
+    "caper": [
+      "fd_0278"
+    ],
+    "miso": [
+      "fd_0280"
+    ],
+    "fish-sauce": [
+      "fd_0281"
+    ],
+    "harissa": [
+      "fd_0282"
+    ],
+    "paprika-and-pimenton": [
+      "fd_0283"
+    ],
+    "salt-types-and-when-each-wins": [
+      "fd_0284"
     ]
   }
 }

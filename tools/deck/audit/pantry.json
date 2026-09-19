@@ -1,0 +1,466 @@
+{
+	"section": "pantry",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0266",
+				"fd_0267",
+				"fd_0268",
+				"fd_0269",
+				"fd_0270",
+				"fd_0271",
+				"fd_0272",
+				"fd_0273",
+				"fd_0274",
+				"fd_0275",
+				"fd_0276",
+				"fd_0277",
+				"fd_0278",
+				"fd_0279",
+				"fd_0280",
+				"fd_0281",
+				"fd_0282",
+				"fd_0283",
+				"fd_0284"
+			],
+			"findings": [
+				{
+					"id": "fd_0270",
+					"field": "origin",
+					"severity": "wrong",
+					"claim": "from the Latin compositum, something put together",
+					"because": "Compote comes through Old French composte from Latin composita, the feminine of compositus (a mixture), not the neuter compositum.",
+					"fix": "French, from the Latin composita, something put together",
+					"lens": "fact",
+					"key": "pantry-1-fact-1"
+				},
+				{
+					"id": "fd_0273",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Grapes thinned from the vine in early summer",
+					"because": "Verjus grapes come from the green harvest just before or at veraison, which in the northern hemisphere is July into August: midsummer, not early summer.",
+					"fix": "Grapes thinned from the vine in midsummer",
+					"lens": "fact",
+					"key": "pantry-1-fact-2"
+				},
+				{
+					"id": "fd_0268",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "Emilia-Romagna, Italy",
+					"because": "Saba (sapa) is just as traditional in the Marche and Sardinia. Naming only Emilia-Romagna reads as an exclusive origin a guest from Sardinia could correct.",
+					"fix": "Emilia-Romagna, Marche and Sardinia, from the Latin sapa, cooked must",
+					"lens": "fact",
+					"key": "pantry-1-fact-3"
+				},
+				{
+					"id": "fd_0272",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "made from sherry and aged for years in oak barrels",
+					"because": "Only the Reserva (2 years) and Gran Reserva (10 years) grades are aged for years. The basic Vinagre de Jerez grade needs just 6 months, and the card's own why says so. A server will say 'for years' about the house bottle too.",
+					"fix": "made from sherry and aged in oak barrels, often for years",
+					"lens": "floor",
+					"key": "pantry-1-floor-4"
+				},
+				{
+					"id": "fd_0270",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "with the pieces still whole",
+					"because": "Many compotes, including the rhubarb on this card's own menu line and most berry compotes, partly collapse. 'Still whole' promises the guest intact fruit. What makes it compote is that it is loose and chunky rather than set or strained.",
+					"fix": "with the fruit still in soft pieces",
+					"lens": "floor",
+					"key": "pantry-1-floor-5"
+				},
+				{
+					"id": "fd_0270",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Fruit gently stewed in syrup so the pieces keep their shape",
+					"because": "A test-taker could also accept this for its section neighbor Mostarda, which is whole fruit candied in syrup. The gist leaves out the thing that marks compote: it is loose, spoonable and not set.",
+					"fix": "Fruit gently stewed in light syrup, loose and spoonable, never set",
+					"lens": "floor",
+					"key": "pantry-1-floor-6"
+				},
+				{
+					"id": "fd_0273",
+					"field": "line",
+					"severity": "unclear",
+					"claim": "Seared foie gras, verjus grapes, brioche",
+					"because": "Real menus do not say 'verjus grapes'. It reads as a grape variety, and a guest may ask which grape that is. Menus list verjus as a sauce or glaze, or next to the fruit.",
+					"fix": "Seared foie gras, grapes, verjus, brioche",
+					"lens": "floor",
+					"key": "pantry-1-floor-7"
+				},
+				{
+					"id": "fd_0268",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It tastes of raisins and honey",
+					"because": "Saba is grape must alone. When a server says 'honey' at the table, a guest can take it as an ingredient, and someone who avoids honey will turn the dish down, or ask, for no reason.",
+					"fix": "It tastes of rich, jammy raisins",
+					"lens": "floor",
+					"key": "pantry-1-floor-8"
+				},
+				{
+					"id": "fd_0271",
+					"field": "guest",
+					"severity": "style",
+					"claim": "brighter than any berry jam",
+					"because": "This is an oversell and a matter of taste, and a guest can argue with it. The line before it already says what the preserve tastes like.",
+					"fix": "with a pleasant bitter edge",
+					"lens": "floor",
+					"key": "pantry-1-floor-9"
+				},
+				{
+					"id": "fd_0269",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"scallion\"",
+					"because": "Many kimchi recipes thicken the chili paste with a cooked flour porridge. It is often sweet rice flour, but wheat flour is common too, especially in home-style and commercial kimchi. Wheat is something a guest with an allergy needs flagged, and the list does not mention it. Scallion does not matter to an allergic guest, so swapping it out keeps the list at 7 items.",
+					"fix": "sometimes wheat or rice flour",
+					"lens": "safety",
+					"key": "pantry-1-safety-10"
+				},
+				{
+					"id": "fd_0279",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "KOR-nee-shohn",
+					"because": "American dictionaries (Merriam-Webster) give the final syllable as -shahn, and that is how US dining rooms say it; -shohn sounds like the French nasal and will make a new hire hesitate.",
+					"fix": "KOR-nee-shahn",
+					"lens": "fact",
+					"key": "pantry-2-fact-1"
+				},
+				{
+					"id": "fd_0275",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"sometimes coconut\", \"sometimes mustard seed\"",
+					"because": "The why says fresh Indian chutneys are part of the family, and South Indian peanut chutney is a common one, so a peanut flag is missing for a guest with that allergy. Swap out mustard seed, which is the less critical flag.",
+					"fix": "\"sometimes coconut\", \"sometimes peanut\"",
+					"lens": "fact",
+					"key": "pantry-2-fact-2"
+				},
+				{
+					"id": "fd_0280",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"rice\"",
+					"because": "Not every miso has rice in it: hatcho and other mame miso grow the koji on soybeans alone, and mugi miso uses barley in place of rice. Listing rice with no qualifier says it is always there.",
+					"fix": "\"often rice\"",
+					"lens": "fact",
+					"key": "pantry-2-fact-3"
+				},
+				{
+					"id": "fd_0279",
+					"field": "say",
+					"severity": "wrong",
+					"claim": "KOR-nee-shohn",
+					"because": "American dining rooms, and Merriam-Webster, end the word on an 'ahn' sound (KOR-nih-shahn), not 'ohn'. A new hire who says 'shohn' will sound off to guests and to the kitchen.",
+					"fix": "KOR-nee-shahn",
+					"lens": "floor",
+					"key": "pantry-2-floor-4"
+				},
+				{
+					"id": "fd_0280",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "it adds a rich, almost buttery depth",
+					"because": "Miso does not taste buttery. It tastes salty and savory. Glazes like the black cod one often do have real butter in them, so a guest who avoids dairy could hear 'buttery' as a statement about the dish, and the server has no way to answer that.",
+					"fix": "it adds a rich, savory depth",
+					"lens": "floor",
+					"key": "pantry-2-floor-5"
+				},
+				{
+					"id": "fd_0281",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "In the dish it reads as savory depth, not as fishiness.",
+					"because": "'Reads as' is writer's jargon. A nervous new hire saying it aloud sounds like they are reading off a card, and guests will not understand it right away. Plain words do the same job.",
+					"fix": "In the dish it just tastes deep and savory, not fishy.",
+					"lens": "floor",
+					"key": "pantry-2-floor-6"
+				},
+				{
+					"id": "fd_0275",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often onion\"",
+					"because": "Peanut chutney is a standard South Indian table chutney, and roasted peanut or cashew often thickens herb and coconut chutneys. A server asked about nuts needs peanut flagged. Onion matters to no guest with an allergy, and the list is already at its 7-item cap, so swap it out.",
+					"fix": "sometimes peanut",
+					"lens": "safety",
+					"key": "pantry-2-safety-7"
+				},
+				{
+					"id": "fd_0280",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "\"it adds a rich, almost buttery depth\"",
+					"because": "Miso is soybean, salt and grain, with no dairy in it. A guest who avoids milk can hear \"buttery\" as a sign that butter is in the dish, and miso glazes are often finished with real butter, which makes the word even more misleading.",
+					"fix": "it adds a rich, rounded depth",
+					"lens": "safety",
+					"key": "pantry-2-safety-8"
+				},
+				{
+					"id": "fd_0282",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "warm spices like caraway and cumin",
+					"because": "The defining spices of Tunisian harissa, as in the UNESCO 2022 inscription and the card's own lexicon entry, are caraway and coriander. Many recipes add cumin, but it is not what defines the paste.",
+					"fix": "warm spices like caraway and coriander",
+					"lens": "fact",
+					"key": "pantry-3-fact-1"
+				},
+				{
+					"id": "fd_0282",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"cumin\"",
+					"because": "Cumin is a common addition but not part of the classic formula (dried chili, garlic, caraway, coriander, salt, olive oil). Listing it flat implies every harissa has it.",
+					"fix": "often cumin",
+					"lens": "fact",
+					"key": "pantry-3-fact-2"
+				},
+				{
+					"id": "fd_0283",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "which is usually unsmoked and milder",
+					"because": "Sweet pimentón (dulce), the most common kind, has no more heat than ordinary sweet paprika. What sets it apart is smoke and depth, not heat, so \"milder\" tells a server the Spanish kind is hotter.",
+					"fix": "which is usually unsmoked and flatter in flavor",
+					"lens": "fact",
+					"key": "pantry-3-fact-3"
+				},
+				{
+					"id": "fd_0284",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Large crystals added at the last second stay whole",
+					"because": "Fleur de sel, which the same sentence names, is fine and damp, not large crystals or flakes. It crunches because it is added dry and last, not because the crystals are big.",
+					"fix": "Crystals added at the last second stay whole",
+					"lens": "fact",
+					"key": "pantry-3-fact-4"
+				},
+				{
+					"id": "fd_0284",
+					"field": "line",
+					"severity": "style",
+					"claim": "Dry-aged strip, bone marrow butter, flaky salt",
+					"because": "The menu line must carry the term or an alias as written, and \"flaky salt\" is neither: the card lists no aliases. \"Flaky salt\" is how real menus actually print it, and it is the most common finishing salt, so keep the line and add the alias rather than forcing the stiffer \"finishing salt\" onto a menu.",
+					"fix": "aliases: [\"Flaky Salt\"] (line unchanged)",
+					"lens": "floor",
+					"key": "pantry-3-floor-5"
+				},
+				{
+					"key": "pantry-critic-1",
+					"id": "fd_0275",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Chutney is not linked to Chow-Chow (Southern section), the other jarred sweet-sour relish on the roster. Guests and new hires really do mix the two up: 'is chow-chow a kind of chutney?' The link to Mostarda also runs one way only: Mostarda lists Chutney as a confusion, but Chutney has Mostarda only in seeAlsoTerms.",
+					"because": "Chutney is not linked to Chow-Chow (Southern section), the other jarred sweet-sour relish on the roster. Guests and new hires really do mix the two up: 'is chow-chow a kind of chutney?' The link to Mostarda also runs one way only: Mostarda lists Chutney as a confusion, but Chutney has Mostarda only in seeAlsoTerms.",
+					"fix": "Set confusedWithTerms to [\"Jam\", \"Chow-Chow\", \"Mostarda\"], take Mostarda out of seeAlsoTerms and keep Agrodolce there. Widen notThis to cover the new links, e.g. \"Not a jam: vinegar and spice make it savory. Chow-chow is a chopped vegetable pickle, and mostarda is fruit with mustard heat.\" (about 140 characters). If only two links are wanted, keep Jam and Chow-Chow."
+				},
+				{
+					"key": "pantry-critic-2",
+					"id": "fd_0268",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity. At 65 characters the gist is the longest option, 9 over its only trap (56), which comes close to the stated limit. The same pattern, gist longest by about 6, shows on Sherry Vinegar (61 vs 55), Verjus (62 vs 56) and Banyuls (64 vs 57). Across the section the gists average about 64.6 characters and the traps about 62, so 'pick the longest' still wins more than chance.",
+					"because": "Length parity. At 65 characters the gist is the longest option, 9 over its only trap (56), which comes close to the stated limit. The same pattern, gist longest by about 6, shows on Sherry Vinegar (61 vs 55), Verjus (62 vs 56) and Banyuls (64 vs 57). Across the section the gists average about 64.6 characters and the traps about 62, so 'pick the longest' still wins more than chance.",
+					"fix": "Shorten the Saba gist, e.g. \"Thick, sweet syrup of grape must cooked for hours, never soured\" (62). Optionally trim Sherry Vinegar to \"Nutty, sharp Spanish wine acid aged in oak casks in Jerez\" (57) and Verjus to \"Tart juice of unripe green grapes, milder than vinegar\" (54). Do not pad the traps."
+				},
+				{
+					"key": "pantry-critic-3",
+					"id": "fd_0281",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Accuracy. The gist ('salted and aged a year or more') and the why ('in barrels for a year or longer') state a year as the defining minimum. Premium first-press brands age about 12 to 18 months, but much commercial fish sauce ferments for well under a year (6 to 12 months is common). A server would be repeating something that is not true of many bottles.",
+					"because": "Accuracy. The gist ('salted and aged a year or more') and the why ('in barrels for a year or longer') state a year as the defining minimum. Premium first-press brands age about 12 to 18 months, but much commercial fish sauce ferments for well under a year (6 to 12 months is common). A server would be repeating something that is not true of many bottles.",
+					"fix": "Gist: \"Amber liquid drained from anchovies salted and aged for many months\" (about 67). Why: change the first sentence to \"Anchovies are layered with salt in barrels for months, the best for a year or more.\""
+				},
+				{
+					"key": "pantry-critic-4",
+					"id": "fd_0284",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The alias 'Flaky Salt' names one kind of finishing salt, not the same thing sold under another name. The card's own why names fleur de sel, which is moist crystals, not flakes, and the guest line 'It's a flaky salt' carries the same narrowing. The aliases rule is 'other names the SAME thing is sold under'.",
+					"because": "The alias 'Flaky Salt' names one kind of finishing salt, not the same thing sold under another name. The card's own why names fleur de sel, which is moist crystals, not flakes, and the guest line 'It's a flaky salt' carries the same narrowing. The aliases rule is 'other names the SAME thing is sold under'.",
+					"fix": "Drop the 'Flaky Salt' alias; the line 'flaky salt' can stay, because the card's own why lists flaky salt as one of the common finishing salts. Change the guest opening to \"It's a coarse or flaky salt sprinkled on right before the plate comes out.\""
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "pantry-1-fact-1",
+					"action": "applied",
+					"reason": "Origin now reads 'French, from the Latin composita, something put together', which traces the word through Old French composte to the feminine form."
+				},
+				{
+					"finding": "pantry-1-fact-2",
+					"action": "applied",
+					"reason": "The why now says grapes are thinned 'in midsummer', which matches the green harvest around veraison."
+				},
+				{
+					"finding": "pantry-1-fact-3",
+					"action": "applied",
+					"reason": "Origin now names Emilia-Romagna, Marche and Sardinia, from the Latin sapa, cooked must."
+				},
+				{
+					"finding": "pantry-1-floor-4",
+					"action": "applied",
+					"reason": "The guest line now says 'aged in oak barrels, often for years', so it no longer suggests every grade spends years in oak."
+				},
+				{
+					"finding": "pantry-1-floor-5",
+					"action": "applied",
+					"reason": "The guest line now says 'with the fruit still in soft pieces'. The why says 'before it fully breaks down' and notThis says 'with soft pieces', so all three agree."
+				},
+				{
+					"finding": "pantry-1-floor-6",
+					"action": "applied",
+					"reason": "The gist is now 'Fruit gently stewed in light syrup, loose and spoonable, never set', which sets it apart from Mostarda's candied whole fruit."
+				},
+				{
+					"finding": "pantry-1-floor-7",
+					"action": "applied",
+					"reason": "The menu line is now 'Seared foie gras, grapes, verjus, brioche', so verjus no longer reads like a grape variety."
+				},
+				{
+					"finding": "pantry-1-floor-8",
+					"action": "applied",
+					"reason": "Honey is gone from the guest line, which now reads 'It tastes of rich, jammy raisins, lovely over cheese or ice cream.'"
+				},
+				{
+					"finding": "pantry-1-floor-9",
+					"action": "applied",
+					"reason": "The oversell is gone. The guest line now ends 'It is sweet and tangy with a pleasant bitter edge.', which folds in the fix without repeating 'bitter'."
+				},
+				{
+					"finding": "pantry-1-safety-10",
+					"action": "applied",
+					"reason": "Scallion is replaced with 'sometimes rice or wheat flour', which flags the flour porridge used to thicken the paste and keeps the list at 7 items."
+				},
+				{
+					"finding": "pantry-2-fact-1",
+					"action": "applied",
+					"reason": "Changed say to KOR-nee-shahn, which matches the Merriam-Webster -shahn ending that US dining rooms use."
+				},
+				{
+					"finding": "pantry-2-fact-2",
+					"action": "applied",
+					"reason": "Added \"sometimes peanut\". To stay under the 7-item cap I dropped \"often onion\" and kept \"sometimes mustard seed\", because mustard is a regulated allergen in the EU and Canada and onion is the flag guests need least."
+				},
+				{
+					"finding": "pantry-2-fact-3",
+					"action": "applied",
+					"reason": "Changed \"rice\" to \"often rice\", because mame miso such as hatcho is made with no rice and mugi miso is made with barley."
+				},
+				{
+					"finding": "pantry-2-floor-4",
+					"action": "applied",
+					"reason": "Changed say to KOR-nee-shahn, the same fix as pantry-2-fact-1."
+				},
+				{
+					"finding": "pantry-2-floor-5",
+					"action": "applied",
+					"reason": "Removed \"almost buttery\". The guest line now ends \"a rich, rounded depth\", because it already says \"deeply savory\" and repeating savory would sound clumsy."
+				},
+				{
+					"finding": "pantry-2-floor-6",
+					"action": "applied",
+					"reason": "Replaced the sentence with \"In the dish it just tastes deep and savory, not fishy.\""
+				},
+				{
+					"finding": "pantry-2-safety-7",
+					"action": "applied",
+					"reason": "Swapped \"often onion\" for \"sometimes peanut\" in madeWith, and the list stays at 7 items."
+				},
+				{
+					"finding": "pantry-2-safety-8",
+					"action": "applied",
+					"reason": "Guest line now reads \"it adds a rich, rounded depth\", so nothing in it hints at butter."
+				},
+				{
+					"finding": "pantry-3-fact-1",
+					"action": "applied",
+					"reason": "Guest line now says caraway and coriander instead of caraway and cumin; the why also now lists caraway and coriander with 'often cumin'."
+				},
+				{
+					"finding": "pantry-3-fact-2",
+					"action": "applied",
+					"reason": "madeWith 'cumin' changed to 'often cumin'."
+				},
+				{
+					"finding": "pantry-3-fact-3",
+					"action": "applied",
+					"reason": "notThis now reads 'usually unsmoked and flatter in flavor' instead of 'milder', so it no longer suggests pimentón is hotter."
+				},
+				{
+					"finding": "pantry-3-fact-4",
+					"action": "applied",
+					"reason": "Removed 'Large' from the why, so it no longer mislabels fleur de sel; it now reads 'Crystals added at the last second stay whole'."
+				},
+				{
+					"finding": "pantry-3-floor-5",
+					"action": "applied",
+					"reason": "Added the alias 'Flaky Salt' (no other roster card uses that term), so the unchanged menu line now carries an alias."
+				},
+				{
+					"finding": "pantry-critic-1",
+					"action": "applied",
+					"reason": "confusedWithTerms is now Jam, Chow-Chow and Mostarda, Mostarda left seeAlsoTerms and Agrodolce stayed there, and notThis now covers all three (126 characters)."
+				},
+				{
+					"finding": "pantry-critic-2",
+					"action": "applied",
+					"reason": "Shortened the Saba gist to 58 characters, 2 over its 56-character trap, and left the trap as it was. Sherry Vinegar, Verjus and Banyuls are not among the four cards in this pass, so they are unchanged."
+				},
+				{
+					"finding": "pantry-critic-3",
+					"action": "applied",
+					"reason": "Gist now reads aged for months (62 characters, shorter than the 66-character trap). The why now says months, the best for a year or more, and its closing sentence was tightened to keep the why at 285 characters."
+				},
+				{
+					"finding": "pantry-critic-4",
+					"action": "applied",
+					"reason": "Dropped the Flaky Salt alias, the guest line now opens with a coarse or flaky salt, and the gist says crystals instead of flakes (62 characters). The line had carried the term only through that alias, so it now names finishing salt."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0275",
+						"issue": "Chutney is not linked to Chow-Chow (Southern section), the other jarred sweet-sour relish on the roster. Guests and new hires really do mix the two up: 'is chow-chow a kind of chutney?' The link to Mostarda also runs one way only: Mostarda lists Chutney as a confusion, but Chutney has Mostarda only in seeAlsoTerms.",
+						"fix": "Set confusedWithTerms to [\"Jam\", \"Chow-Chow\", \"Mostarda\"], take Mostarda out of seeAlsoTerms and keep Agrodolce there. Widen notThis to cover the new links, e.g. \"Not a jam: vinegar and spice make it savory. Chow-chow is a chopped vegetable pickle, and mostarda is fruit with mustard heat.\" (about 140 characters). If only two links are wanted, keep Jam and Chow-Chow."
+					},
+					{
+						"id": "fd_0268",
+						"issue": "Length parity. At 65 characters the gist is the longest option, 9 over its only trap (56), which comes close to the stated limit. The same pattern, gist longest by about 6, shows on Sherry Vinegar (61 vs 55), Verjus (62 vs 56) and Banyuls (64 vs 57). Across the section the gists average about 64.6 characters and the traps about 62, so 'pick the longest' still wins more than chance.",
+						"fix": "Shorten the Saba gist, e.g. \"Thick, sweet syrup of grape must cooked for hours, never soured\" (62). Optionally trim Sherry Vinegar to \"Nutty, sharp Spanish wine acid aged in oak casks in Jerez\" (57) and Verjus to \"Tart juice of unripe green grapes, milder than vinegar\" (54). Do not pad the traps."
+					},
+					{
+						"id": "fd_0281",
+						"issue": "Accuracy. The gist ('salted and aged a year or more') and the why ('in barrels for a year or longer') state a year as the defining minimum. Premium first-press brands age about 12 to 18 months, but much commercial fish sauce ferments for well under a year (6 to 12 months is common). A server would be repeating something that is not true of many bottles.",
+						"fix": "Gist: \"Amber liquid drained from anchovies salted and aged for many months\" (about 67). Why: change the first sentence to \"Anchovies are layered with salt in barrels for months, the best for a year or more.\""
+					},
+					{
+						"id": "fd_0284",
+						"issue": "The alias 'Flaky Salt' names one kind of finishing salt, not the same thing sold under another name. The card's own why names fleur de sel, which is moist crystals, not flakes, and the guest line 'It's a flaky salt' carries the same narrowing. The aliases rule is 'other names the SAME thing is sold under'.",
+						"fix": "Drop the 'Flaky Salt' alias; the line 'flaky salt' can stay, because the card's own why lists flaky salt as one of the common finishing salts. Change the guest opening to \"It's a coarse or flaky salt sprinkled on right before the plate comes out.\""
+					}
+				],
+				"notes": "Every roster row has a card, and ids and terms match. The prose averages 665 characters a card, under the 720 ceiling. The heaviest cards are Pimentón at 771 and Mostarda at 740, both inside the 900 per-card cap. The Banyuls known packet error is covered: its trap reads 'eastern France' and matches /east/i. No verdict words, no em or en dashes and no banned food-safety substrings turned up. No gist or trap uses a word from its card's mayNotAppearInGistOrTraps list. Every card with an accented letter or a hard name has a say. Every card with confusedWithTerms has a notThis. No two gists or guest lines are hard to tell apart; the closest pairs, Balsamic/Saba and Jam/Compote/Marmalade, each say what sets them apart. Operator notes: (1) Compote lists Coulis as a confusion. Check that the Coulis card in the sauces section links back to Compote. (2) Both Balsamic and Saba could reasonably add Gastrique or Agrodolce to seeAlsoTerms, since guests call balsamic reduction a gastrique, but that is optional. (3) The Mostarda origin says the word comes from 'mosto, grape must'. The usual etymology is Latin mustum ardens, 'burning must', which is better and still checkable."
+			},
+			"acceptedRejected": []
+		}
+	]
+}
