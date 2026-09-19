@@ -1,10 +1,139 @@
 {
   "sections": {
+    "methods": "Cooking Methods",
     "cured": "Cured & Preserved Meats",
     "cuts": "Meat Cuts",
     "fish": "Fish & Shellfish"
   },
   "cards": [
+    {
+      "id": "fd_0025",
+      "term": "Boiled",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0026",
+      "term": "Braised",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0027",
+      "term": "Brined",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0028",
+      "term": "Caramelized",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0029",
+      "term": "Confit",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0030",
+      "term": "Cured",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0031",
+      "term": "Fried",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0032",
+      "term": "Grilled",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0033",
+      "term": "Pickled",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0034",
+      "term": "Poached",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0035",
+      "term": "Preserved",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0036",
+      "term": "Puréed",
+      "section": "methods",
+      "aliases": [
+        "Purée"
+      ]
+    },
+    {
+      "id": "fd_0037",
+      "term": "Roasted",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0038",
+      "term": "Sautéed",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0039",
+      "term": "Seared",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0040",
+      "term": "Simmered",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0041",
+      "term": "Smoked",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0042",
+      "term": "Sous Vide",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0043",
+      "term": "Wilted",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0044",
+      "term": "Blanched",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0045",
+      "term": "Steamed",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0046",
+      "term": "Fermented",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0047",
+      "term": "Rendered",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0048",
+      "term": "Blackened",
+      "section": "methods"
+    },
+    {
+      "id": "fd_0049",
+      "term": "Pan-Roasted",
+      "section": "methods"
+    },
     {
       "id": "fd_0064",
       "term": "Andouille",
@@ -530,6 +659,18 @@
     }
   ],
   "byLexicon": {
+    "confit": [
+      "fd_0029"
+    ],
+    "sous-vide": [
+      "fd_0042"
+    ],
+    "blanch-and-shock": [
+      "fd_0044"
+    ],
+    "schmaltz-and-rendering": [
+      "fd_0047"
+    ],
     "tasso-and-cajun-andouille": [
       "fd_0064",
       "fd_0077"

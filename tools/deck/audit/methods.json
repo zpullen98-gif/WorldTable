@@ -1,0 +1,1182 @@
+{
+	"section": "methods",
+	"passes": [
+		{
+			"merged": "2026-09-19",
+			"pass": "authoring",
+			"cards": [
+				"fd_0025",
+				"fd_0026",
+				"fd_0027",
+				"fd_0028",
+				"fd_0029",
+				"fd_0030",
+				"fd_0031",
+				"fd_0032",
+				"fd_0033",
+				"fd_0034",
+				"fd_0035",
+				"fd_0036",
+				"fd_0037",
+				"fd_0038",
+				"fd_0039",
+				"fd_0040",
+				"fd_0041",
+				"fd_0042",
+				"fd_0043",
+				"fd_0044",
+				"fd_0045",
+				"fd_0046",
+				"fd_0047",
+				"fd_0048",
+				"fd_0049"
+			],
+			"findings": [
+				{
+					"id": "fd_0030",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "Prosciutto, bresaola, gravlax and lox are cured but never cooked, and are served raw.",
+					"because": "Prosciutto cotto is a cooked ham sold under the same name, and kitchens often crisp or bake prosciutto crudo. Only the raw cured form (crudo) is served uncooked, so 'never cooked' is false as written.",
+					"fix": "Prosciutto crudo, bresaola, gravlax and lox are cured, not cooked, and are served raw.",
+					"lens": "fact",
+					"key": "methods-1-fact-1"
+				},
+				{
+					"id": "fd_0030",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "ham and bacon get nitrite, which keeps them pink",
+					"because": "Prosciutto di Parma and several other great raw hams are cured with sea salt alone and no nitrite, so not every ham gets nitrite. The card's own note names prosciutto.",
+					"fix": "most ham and bacon get nitrite, which keeps them pink",
+					"lens": "fact",
+					"key": "methods-1-fact-2"
+				},
+				{
+					"id": "fd_0030",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"salt\", \"often sugar\", \"often curing salt\", \"often pork\", \"sometimes fish\"",
+					"because": "Fish cures like gravlax are classically made with spirits such as aquavit or vodka (this card's linked recipe is aquavit-cured salmon), and alcohol is on the list of things a guest may need flagged.",
+					"fix": "add \"sometimes alcohol\"",
+					"lens": "fact",
+					"key": "methods-1-fact-3"
+				},
+				{
+					"id": "fd_0031",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"frying oil\", \"sometimes peanut oil\", \"often wheat flour\", \"often egg\", \"sometimes breadcrumbs\"",
+					"because": "Fried chicken and many batters are classically soaked in buttermilk or dipped in milk (the card's own line is buttermilk fried chicken), so a guest with a milk allergy is missing a flag.",
+					"fix": "add \"often buttermilk\"",
+					"lens": "fact",
+					"key": "methods-1-fact-4"
+				},
+				{
+					"id": "fd_0028",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Cooked until its natural sugars brown into deep, sweet flavor",
+					"because": "Caramelizing also covers sugar that is added and browned, as on the crème brûlée the why cites, on caramelized bananas or on caramelized nuts. Saying 'natural sugars' contradicts the card's own why and its madeWith entry 'sometimes sugar'.",
+					"fix": "Cooked until sugars, its own or added, brown into deep sweet flavor",
+					"lens": "fact",
+					"key": "methods-1-fact-5"
+				},
+				{
+					"id": "fd_0028",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "Coated in a sticky sauce of melted sugar and butter after cooking",
+					"because": "Menus sell caramelized nuts, bananas and pears that are cooked in sugar and butter until coated, so a new hire could fairly pick this as true. The false part is only the words 'after cooking', which is too thin a distinction to test on.",
+					"fix": "Tossed in a store-bought caramel sauce once the food is cooked",
+					"lens": "fact",
+					"key": "methods-1-fact-6"
+				},
+				{
+					"id": "fd_0026",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Browned, then cooked slowly, covered, in a little liquid",
+					"because": "Browning first is usual for meat but not required. Braised greens, fennel, endive and cabbage, and white braises of veal or chicken, are often not browned. The brief's own lexicon calls it sear 'then' simmer for meat only.",
+					"fix": "Often browned, then cooked slowly, covered, in a little liquid",
+					"lens": "fact",
+					"key": "methods-1-fact-7"
+				},
+				{
+					"id": "fd_0029",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "confit fat stays below a bubble",
+					"because": "At confit heat, about 85 to 95 C (185 to 200 F), the fat shows a steady stream of small bubbles as moisture escapes from the meat. A server who is told 'no bubbles' is being given a false tell. The real difference is that the fat is far below frying heat.",
+					"fix": "confit fat stays far below frying heat",
+					"lens": "fact",
+					"key": "methods-1-fact-8"
+				},
+				{
+					"id": "fd_0030",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "the way prosciutto or bacon is",
+					"because": "Bacon is cured and then cooked, so the example tells a guest that cured food is cooked later. The card's own menu line is house-cured salmon, which is never cooked. Lox matches the plate and, like prosciutto, is eaten uncooked.",
+					"fix": "the way prosciutto or lox is",
+					"lens": "floor",
+					"key": "methods-1-floor-9"
+				},
+				{
+					"id": "fd_0028",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "It's cooked slowly until its natural sugars turn golden brown and sweet. Caramelized onions, for example, go deep, jammy and rich.",
+					"because": "Menus use the word for fast work too: caramelized scallops, bananas, a torched brûlée top. A server reading 'cooked slowly' about a hard-seared scallop would be wrong. 'Go deep' is also awkward to say aloud.",
+					"fix": "It's cooked until its natural sugars turn golden brown and sweet, the way onions cook down deep, jammy and rich.",
+					"lens": "floor",
+					"key": "methods-1-floor-10"
+				},
+				{
+					"id": "fd_0027",
+					"field": "guest",
+					"severity": "style",
+					"claim": "It's soaked in seasoned salt water before it's cooked, so it stays juicy and seasoned all the way through.",
+					"because": "'Seasoned' appears twice in one breath, and the line trips when said aloud. 'Salt water' already says what the brine is.",
+					"fix": "It's soaked in salt water before it's cooked, so it stays juicy and seasoned all the way through.",
+					"lens": "floor",
+					"key": "methods-1-floor-11"
+				},
+				{
+					"id": "fd_0029",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's slow cooked under its own fat, usually duck leg, until it's meltingly tender.",
+					"because": "'Under its own fat' is not how anyone says it at a table, and the aside breaks the sentence up. A new hire will stumble on it. The natural phrase is 'slowly in its own fat'.",
+					"fix": "It's usually duck leg, cooked slowly in its own fat until it's meltingly tender.",
+					"lens": "floor",
+					"key": "methods-1-floor-12"
+				},
+				{
+					"id": "fd_0032",
+					"field": "guest",
+					"severity": "style",
+					"claim": "It's that bold, backyard cookout flavor.",
+					"because": "This is sales copy. It sounds read off a card, and it undersells the grilled swordfish on the card's own line. The first sentence already answers the question and gives the appeal, with the grill marks and the smoky, charred edge.",
+					"fix": "Delete the sentence.",
+					"lens": "floor",
+					"key": "methods-1-floor-13"
+				},
+				{
+					"id": "fd_0025",
+					"field": "guest",
+					"severity": "style",
+					"claim": "the simplest way there is. It keeps the flavor clean and lets the ingredient do the talking.",
+					"because": "'The simplest way there is' makes the dish sound plain rather than something to want, and 'do the talking' is a stock phrase that sounds recited. The honest selling point is a clean, sweet flavor, which is what a boiled lobster or crab gives.",
+					"fix": "which keeps the flavor clean and sweet, so the lobster or potato really shines.",
+					"lens": "floor",
+					"key": "methods-1-floor-14"
+				},
+				{
+					"id": "fd_0031",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"frying oil\", \"sometimes peanut oil\", \"often wheat flour\", \"often egg\", \"sometimes breadcrumbs\"",
+					"because": "Fried coatings are very often soaked or dredged in milk or buttermilk first, and the card's own menu line is \"Buttermilk fried chicken\". Milk is a major allergen that a guest would need flagged, and the list leaves it out.",
+					"fix": "\"frying oil\", \"sometimes peanut oil\", \"often wheat flour\", \"often egg\", \"often buttermilk\", \"sometimes breadcrumbs\"",
+					"lens": "safety",
+					"key": "methods-1-safety-15"
+				},
+				{
+					"id": "fd_0030",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "Prosciutto, bresaola, gravlax and lox are cured but never cooked, and are served raw.",
+					"because": "\"Never cooked\" is an absolute that a server will repeat, and it is false on the plate: prosciutto is often crisped or baked onto pizza. The real fact is that the cure is not cooking, so these are usually served raw.",
+					"fix": "Prosciutto, bresaola, gravlax and lox are cured, not cooked, and are usually served raw.",
+					"lens": "safety",
+					"key": "methods-1-safety-16"
+				},
+				{
+					"id": "fd_0030",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"salt\", \"often sugar\", \"often curing salt\", \"often pork\", \"sometimes fish\"",
+					"because": "Fish cures like gravlax often use a spirit such as aquavit, vodka or gin. The card's own recipe link is dill-and-aquavit-cured salmon. Alcohol is something a guest may need flagged, and the list leaves it out.",
+					"fix": "\"salt\", \"often sugar\", \"often curing salt\", \"often pork\", \"sometimes fish\", \"sometimes spirits\"",
+					"lens": "safety",
+					"key": "methods-1-safety-17"
+				},
+				{
+					"id": "fd_0033",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "so it turns tangy and crisp",
+					"because": "Pickling does not make food crisp. At best it keeps crisp produce crisp, and soft fruit or eggs never turn crisp. Also, the gist calls the liquid a brine, which the notThis then defines as something else.",
+					"fix": "Kept in a sour liquid, usually vinegar, so it turns tangy and sharp",
+					"lens": "fact",
+					"key": "methods-2-fact-1"
+				},
+				{
+					"id": "fd_0033",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "The acid seasons them all the way through and firms their texture, so they stay crisp and sharp",
+					"because": "Acid does not firm raw produce. Pickles stay crisp because they are uncooked (sometimes helped by calcium or tannin), and over weeks they soften in the acid. Pickling also covers eggs and fish (pickled herring), so 'vegetables or fruit' is too narrow.",
+					"fix": "The acid seasons them all the way through, and because they are not cooked they stay crisp and sharp",
+					"lens": "fact",
+					"key": "methods-2-fact-2"
+				},
+				{
+					"id": "fd_0033",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "a brine is salt water that seasons meat before cooking, while a pickle is sour and eaten as it is",
+					"because": "Fermented pickles such as dill or sauerkraut are made in a salt-water brine, and the gist itself says 'sour brine', so a new server gets two conflicting uses of the word.",
+					"fix": "Not brined: brining soaks meat in salt water before cooking, while a pickle is sour and eaten as it is.",
+					"lens": "fact",
+					"key": "methods-2-fact-3"
+				},
+				{
+					"id": "fd_0035",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "acid and oil keep spoilage out",
+					"because": "Oil does not preserve anything. It only shuts out air, and food stored under oil (garlic, herbs) is a known botulism risk. A training card should not teach oil as a preservative.",
+					"fix": "acid, smoke and drying keep spoilage out",
+					"lens": "fact",
+					"key": "methods-2-fact-4"
+				},
+				{
+					"id": "fd_0038",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "frying uses enough oil to surround the food",
+					"because": "The roster's only frying card is Fried, and it covers pan-frying and shallow-frying, where the oil comes partway up the food and does not surround it. The real difference is the amount of fat and the fact that sautéed food is small and gets tossed.",
+					"fix": "Not fried: frying uses a deeper layer of oil, while a sauté uses only a thin film of fat and keeps the food moving.",
+					"lens": "fact",
+					"key": "methods-2-fact-5"
+				},
+				{
+					"id": "fd_0034",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Proteins firm slowly without squeezing out their juice",
+					"because": "Gentle heat reduces moisture loss but does not prevent it. Poached fish and chicken still lose some juice.",
+					"fix": "Proteins firm slowly without squeezing out much juice",
+					"lens": "fact",
+					"key": "methods-2-fact-6"
+				},
+				{
+					"id": "fd_0036",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Food is cooked soft, then blended",
+					"because": "Many purées are never cooked, for example raw fruit purées such as raspberry or mango, and avocado.",
+					"fix": "Food, usually cooked soft first, is blended",
+					"lens": "fact",
+					"key": "methods-2-fact-7"
+				},
+				{
+					"id": "fd_0039",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "a seared steak loses as much moisture",
+					"because": "Tests (McGee, Lopez-Alt) show a steak seared first loses as much juice as an unseared one, sometimes more, so 'as much' understates the case.",
+					"fix": "Searing does not seal in juices; a seared steak loses as much or more. It builds flavor.",
+					"lens": "fact",
+					"key": "methods-2-fact-8"
+				},
+				{
+					"id": "fd_0034",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Cooked gently in barely moving liquid, so it stays soft and moist",
+					"because": "Next to fd_0040's gist ('liquid kept at a gentle bubble'), a new hire could pick either one for Poached or Simmered, since 'gently' and 'barely moving' sound alike. What sets poaching apart is that the liquid never bubbles, and the gist should say that.",
+					"fix": "Cooked in hot liquid that never bubbles, so it stays soft and moist",
+					"lens": "floor",
+					"key": "methods-2-floor-9"
+				},
+				{
+					"id": "fd_0040",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Cooked in liquid kept at a gentle bubble, below a full rolling boil",
+					"because": "Beside fd_0034's gist ('cooked gently in barely moving liquid'), 'gentle bubble' could be accepted for Poached. The two gists need a visible line between them: simmering shows small bubbles and poaching shows none.",
+					"fix": "Cooked in liquid with small, steady bubbles, hotter than poaching",
+					"lens": "floor",
+					"key": "methods-2-floor-10"
+				},
+				{
+					"id": "fd_0034",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's the most delicate way to cook fish, eggs or chicken.",
+					"because": "The superlative oversells, and a guest can argue with it. Sous vide and steaming are at least as gentle.",
+					"fix": "It's one of the gentlest ways to cook fish, eggs or chicken.",
+					"lens": "floor",
+					"key": "methods-2-floor-11"
+				},
+				{
+					"id": "fd_0034",
+					"field": "line",
+					"severity": "unclear",
+					"claim": "Olive oil poached halibut, fennel, saffron broth",
+					"because": "The why lists the poaching liquids as water, stock, wine, milk or butter, and madeWith has no oil. A server who reads this line will not know that oil counts as the liquid, and a guest who asks about the oil gets no answer from the card.",
+					"fix": "Poached halibut, fennel, saffron broth",
+					"lens": "floor",
+					"key": "methods-2-floor-12"
+				},
+				{
+					"id": "fd_0035",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Made to keep for months with salt, sugar, acid or drying",
+					"because": "This gist is also true of Pickled (acid) and Cured (salt), which are both on the roster, so a test-taker could accept it for either of them. What sets this card apart is that it is an umbrella word for many methods, not one method.",
+					"fix": "Any method that makes food keep for months, not one single technique",
+					"lens": "floor",
+					"key": "methods-2-floor-13"
+				},
+				{
+					"id": "fd_0035",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's been put up to last",
+					"because": "'Put up' is old home-canning slang. Many new hires and guests will not know it, so the guest line opens on a phrase that needs its own explanation.",
+					"fix": "It's been made to last",
+					"lens": "floor",
+					"key": "methods-2-floor-14"
+				},
+				{
+					"id": "fd_0036",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Blended or sieved until completely smooth, with no pieces left",
+					"because": "A coulis is also blended and sieved completely smooth, so this gist could be accepted for Coulis. The card's own notThis says thickness is the difference, and the gist leaves thickness out.",
+					"fix": "Blended thick and completely smooth, firm enough to hold its shape",
+					"lens": "floor",
+					"key": "methods-2-floor-15"
+				},
+				{
+					"id": "fd_0036",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "You get the pure flavor of the vegetable in a silky form.",
+					"because": "This oversells. The why says kitchens often loosen a purée with butter, cream or stock, so it can taste richer than the vegetable alone, and a purée is not always made from a vegetable.",
+					"fix": "You get the vegetable's flavor in a rich, silky form.",
+					"lens": "floor",
+					"key": "methods-2-floor-16"
+				},
+				{
+					"id": "fd_0033",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Soaked in a sour brine, usually vinegar",
+					"because": "'Brine' is the head idea of the Brined card, and this card's own notThis defines brine as salt water for meat. Calling a pickle a 'brine' in the gist, and 'vinegar brine' in the guest line, blurs the one difference the new hire has to learn and makes the gist easy to confuse with Brined.",
+					"fix": "Kept in vinegar with salt so it turns tangy, sharp and crisp",
+					"lens": "floor",
+					"key": "methods-2-floor-17"
+				},
+				{
+					"id": "fd_0038",
+					"field": "guest",
+					"severity": "style",
+					"claim": "Nothing heavy, just quick and flavorful.",
+					"because": "This is filler that sounds read off a card and adds nothing to what 'cooked quickly' already said. 'Flavorful' is an empty word to a guest.",
+					"fix": "The quick heat keeps it light.",
+					"lens": "floor",
+					"key": "methods-2-floor-18"
+				},
+				{
+					"id": "fd_0037",
+					"field": "gist",
+					"severity": "style",
+					"claim": "until browned outside and tender in",
+					"because": "'Tender in' reads as a clipped typo when it is shown as an answer option.",
+					"fix": "until browned outside and tender inside",
+					"lens": "floor",
+					"key": "methods-2-floor-19"
+				},
+				{
+					"id": "fd_0039",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "a seared steak loses as much moisture",
+					"because": "'As much' has no comparison, so the reader cannot tell what it is compared to. The fact is that a seared steak loses about as much moisture as one that was not seared.",
+					"fix": "Searing builds flavor; it does not seal in juices or stop moisture loss.",
+					"lens": "floor",
+					"key": "methods-2-floor-20"
+				},
+				{
+					"id": "fd_0035",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "acid and oil keep spoilage out",
+					"because": "Oil does not keep spoilage out. Covering food in oil shuts out air, and low-acid food such as garlic or herbs kept in oil is a known botulism risk. A server who repeats this line is telling a guest that food in oil is protected, and it is not.",
+					"fix": "acid slows spoilage",
+					"lens": "safety",
+					"key": "methods-2-safety-21"
+				},
+				{
+					"id": "fd_0035",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "not factory additives",
+					"because": "This tells the server that preserved items have no additives. That is an assurance the card cannot make: dried and preserved fruit are often sulfured, and bought-in preserves can carry preservatives. The trap is still false without that claim.",
+					"fix": "On a menu it means methods like salt, sugar, acid or drying, not a lab process.",
+					"lens": "safety",
+					"key": "methods-2-safety-22"
+				},
+				{
+					"id": "fd_0035",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"salt\", \"often sugar\", \"sometimes vinegar\", \"sometimes oil\", \"sometimes alcohol\"",
+					"because": "The gist names drying as a method, and dried fruit is commonly treated with sulfites, which are a real flag for some guests. The list leaves them out.",
+					"fix": "add \"sometimes sulfites\"",
+					"lens": "safety",
+					"key": "methods-2-safety-23"
+				},
+				{
+					"id": "fd_0039",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Seared tuna is usually served rare, raw in the center.",
+					"because": "The card's own menu line and recipe are seared scallops. Seared scallops are also served by default with a translucent, barely cooked center. A server should be able to say that plainly, and the note covers tuna only.",
+					"fix": "Seared tuna and scallops are usually served rare, raw or translucent in the center.",
+					"lens": "safety",
+					"key": "methods-2-safety-24"
+				},
+				{
+					"id": "fd_0039",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "(no madeWith list)",
+					"because": "Searing classically uses oil, and many kitchens baste with butter at the end. The line itself has brown butter. With no list, a guest who needs milk flagged gets no prompt.",
+					"fix": "[\"often oil\", \"sometimes butter\"]",
+					"lens": "safety",
+					"key": "methods-2-safety-25"
+				},
+				{
+					"id": "fd_0034",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often stock\", \"sometimes wine\", \"sometimes milk\", \"sometimes butter\"",
+					"because": "The card's own line is olive oil poached halibut, and the why names butter poaching, but oil is missing from the list. Poached eggs are also classically done in water with vinegar. The stock can be fish stock, which matters to a guest who needs fish flagged.",
+					"fix": "[\"often stock\", \"sometimes fish stock\", \"sometimes wine\", \"sometimes milk\", \"sometimes butter\", \"sometimes olive oil\"]",
+					"lens": "safety",
+					"key": "methods-2-safety-26"
+				},
+				{
+					"id": "fd_0037",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note)",
+					"because": "There is a real doneness fact a server should be able to state: roast beef and lamb are usually carved pink, medium rare, unless the guest asks otherwise. The why only covers resting.",
+					"fix": "Roast beef and lamb are usually carved pink, at medium rare, unless asked otherwise.",
+					"lens": "safety",
+					"key": "methods-2-safety-27"
+				},
+				{
+					"id": "fd_0038",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often butter\", \"often oil\", \"often garlic\"",
+					"because": "A sauté is often finished by deglazing the pan with wine, and that alcohol ends up in the dish. The list does not flag it.",
+					"fix": "[\"often butter\", \"often oil\", \"often garlic\", \"sometimes wine\"]",
+					"lens": "safety",
+					"key": "methods-2-safety-28"
+				},
+				{
+					"id": "fd_0041",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "It spent hours over a slow wood fire, so it picks up a deep, sweet smokiness. It tastes like the best barbecue you remember.",
+					"because": "The card covers every smoked item, and the why itself says cold-smoked salmon is never cooked over a fire. Smoked salmon, trout, cheese or quickly hot-smoked fish did not spend hours over a fire and do not taste like barbecue, so a server would be misdescribing them.",
+					"fix": "It's cooked or cured over smoldering wood, so it picks up a deep, sweet smokiness, like good barbecue or smoked salmon.",
+					"lens": "fact",
+					"key": "methods-3-fact-1"
+				},
+				{
+					"id": "fd_0042",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "The bag sits in still water held well below boiling, and no steam is involved.",
+					"because": "An immersion circulator constantly pumps and moves the water, so it is not still. Some kitchens also cook bagged food in a combi oven's low-temperature steam mode, so 'no steam is involved' is not always true. The false part of the trap is 'steamed until cooked through', not whether any steam exists.",
+					"fix": "The bag is held in a water bath at its exact doneness, not steamed until cooked through.",
+					"lens": "fact",
+					"key": "methods-3-fact-2"
+				},
+				{
+					"id": "fd_0042",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "this sits sealed in cooler water",
+					"because": "Sous vide vegetables are usually cooked at about 83 to 85 C (181 to 185 F), which is as hot as a poach or hotter. The real difference is the sealed bag and a bath held at the doneness temperature, not always a cooler bath.",
+					"fix": "this sits sealed in a bath held at its exact doneness.",
+					"lens": "fact",
+					"key": "methods-3-fact-3"
+				},
+				{
+					"id": "fd_0042",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "then seared",
+					"because": "Sous vide eggs, fish, custards and vegetables are often served without a sear, so a server would describe them wrongly.",
+					"fix": "then usually seared",
+					"lens": "fact",
+					"key": "methods-3-fact-4"
+				},
+				{
+					"id": "fd_0043",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "breaks down the leaf's cell walls, so it collapses and releases water",
+					"because": "Greens wilt in seconds because heat damages the cell membranes and the cells lose turgor pressure, which lets water out. The cellulose and pectin cell walls do not break down in a few seconds. That softening takes longer cooking, the stage the card calls stewed.",
+					"fix": "bursts the leaf's cell membranes, so it goes limp and releases water",
+					"lens": "fact",
+					"key": "methods-3-fact-5"
+				},
+				{
+					"id": "fd_0043",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Not sautéed. A sauté browns food in a hot pan; wilted greens only soften and never brown.",
+					"because": "Wilted spinach with garlic, which is the card's own menu line, is usually made in a sauté pan, and many menus call the same dish sautéed spinach. What separates them is the stopping point, not the pan, and a quick sauté does not always brown.",
+					"fix": "Close to a quick sauté, but stopped as soon as the leaves soften, never browned.",
+					"lens": "fact",
+					"key": "methods-3-fact-6"
+				},
+				{
+					"id": "fd_0045",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"often fish\", \"often ginger\", \"often scallion\", \"sometimes soy sauce\"",
+					"because": "On American menus, steamed often means mussels, clams, crab or lobster (the recipe candidates include steamed blue crabs). A guest with a shellfish allergy needs shellfish flagged. The pairs line also names sesame oil, which madeWith leaves out.",
+					"fix": "\"often fish\", \"sometimes shellfish\", \"often ginger\", \"often scallion\", \"sometimes soy sauce\", \"sometimes sesame oil\"",
+					"lens": "fact",
+					"key": "methods-3-fact-7"
+				},
+				{
+					"id": "fd_0046",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "Yeasts and bacteria feed on the food's sugars and turn them into acid, alcohol or gas. That makes the tang in kimchi and yogurt, the funk and savory depth in miso and fish sauce",
+					"because": "The savory depth of miso comes from koji mold (Aspergillus oryzae) enzymes breaking proteins into amino acids such as glutamate. In fish sauce it comes mostly from the fish's own enzymes breaking down protein. Neither comes from yeasts and bacteria turning sugar into acid, alcohol or gas.",
+					"fix": "Microbes turn sugars into acid, alcohol or gas, and proteins into savory depth. That makes the tang in kimchi and yogurt, the funk and savory depth in miso and fish sauce",
+					"lens": "fact",
+					"key": "methods-3-fact-8"
+				},
+				{
+					"id": "fd_0046",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Soured and deepened over time by live yeasts and friendly bacteria",
+					"because": "Many ferments are not soured, including miso, soy sauce and fish sauce. Molds such as koji do the key work in miso, soy sauce and many cheeses, so naming only yeasts and bacteria is incomplete.",
+					"fix": "Transformed over time by live microbes, turning tangy, funky or savory",
+					"lens": "fact",
+					"key": "methods-3-fact-9"
+				},
+				{
+					"id": "fd_0046",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "No heat is involved. Microbes make the sour flavor, and heat would stop them.",
+					"because": "Many ferments are deliberately kept warm: yogurt at about 43 C (110 F), koji rooms and proofing sourdough. Only cooking heat kills the microbes, so 'no heat is involved' is false.",
+					"fix": "Microbes make the sour flavor; cooking heat would kill them, not sour the food.",
+					"lens": "fact",
+					"key": "methods-3-fact-10"
+				},
+				{
+					"id": "fd_0041",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "It spent hours over a slow wood fire, so it picks up a deep, sweet smokiness. It tastes like the best barbecue you remember.",
+					"because": "The line oversells, and it is false for a lot of what the menu calls smoked. The card's own why says cold-smoked salmon is never cooked over a fire. Smoked cheese, smoked salt and a quick hot-smoked trout are not barbecue and do not take hours. A new hire who says this about lox is telling the guest something untrue.",
+					"fix": "It's been cooked or cured in the smoke of smoldering wood, so it picks up a deep, sweet smokiness, like good barbecue.",
+					"lens": "floor",
+					"key": "methods-3-floor-11"
+				},
+				{
+					"id": "fd_0042",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "then seared",
+					"because": "Not everything cooked this way gets seared. Sous vide eggs, carrots, custards and many fish dishes go out with no sear. Steak and chops usually get one, so the line holds for them, but a server who repeats it about a sous vide egg is wrong. A softer verb keeps the guest line true for every dish.",
+					"fix": "then finished",
+					"lens": "floor",
+					"key": "methods-3-floor-12"
+				},
+				{
+					"id": "fd_0047",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "The fat has been slowly melted out, so the skin comes out thin and crackling crisp instead of rubbery.",
+					"because": "Menus often use the word for the fat itself, as in potatoes fried in rendered duck fat or rendered bacon lardons. A guest who asks about 'rendered duck fat potatoes' gets told about skin, which does not answer the question. The gist and why cover both uses, so the guest line should too.",
+					"fix": "The fat is slowly melted out so the skin crisps instead of going rubbery, and that fat is saved to cook with.",
+					"lens": "floor",
+					"key": "methods-3-floor-13"
+				},
+				{
+					"id": "fd_0048",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "over tender, juicy fish",
+					"because": "Blackened chicken, steak, shrimp and pork chops are all common on menus. The madeWith list itself says 'often fish', not always fish. A server who reads this line to a guest asking about blackened chicken is telling them it is fish.",
+					"fix": "while the inside stays tender and juicy",
+					"lens": "floor",
+					"key": "methods-3-floor-14"
+				},
+				{
+					"id": "fd_0046",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's been left to develop with good bacteria",
+					"because": "'Left to develop' is vague, and a guest cannot picture it. It also drops yeast, which the gist and why name as half of the process, and sourdough depends on it. Naming the living cultures and the time is clearer to say out loud.",
+					"fix": "It's been aged with good bacteria and yeasts",
+					"lens": "floor",
+					"key": "methods-3-floor-15"
+				},
+				{
+					"id": "fd_0045",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "(no note; line reads \"Steamed black bass, ginger, scallion, soy\")",
+					"because": "The classic Cantonese steamed fish this card points to is served whole, on the bone. A server has to be able to warn a guest about small bones, and the card never mentions them.",
+					"fix": "Steamed fish often comes whole, on the bone. Warn guests about small bones.",
+					"lens": "safety",
+					"key": "methods-3-safety-16"
+				},
+				{
+					"id": "fd_0045",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"often fish\", \"often ginger\", \"often scallion\", \"sometimes soy sauce\"",
+					"because": "The pairs field names sesame oil, and Cantonese steamed fish is classically finished with a pour of smoking hot oil that is often sesame or peanut. Sesame is a major allergen, so it has to be flagged in madeWith, not only listed as a partner in pairs.",
+					"fix": "\"often fish\", \"often ginger\", \"often scallion\", \"sometimes soy sauce\", \"sometimes sesame oil\"",
+					"lens": "safety",
+					"key": "methods-3-safety-17"
+				},
+				{
+					"id": "fd_0041",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "It comes from the smoke, not from undercooking.",
+					"because": "This tells the server that pink meat is fully cooked. That is an assurance about doneness the server cannot check on a given plate, and smoked poultry (the line is a half chicken) can be pink and also underdone. It is true that the ring comes from smoke gases, so say only that.",
+					"fix": "A pink ring just under the crust of smoked meat is normal. The smoke gases make it.",
+					"lens": "safety",
+					"key": "methods-3-safety-18"
+				},
+				{
+					"id": "fd_0047",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "(no note; line reads \"Duck breast, skin rendered crisp, cherry jus\")",
+					"because": "Rendered duck breast is classically served pink, at medium rare. A guest who orders it expecting it cooked through needs to hear that, and the card is silent about it.",
+					"fix": "Duck breast with rendered skin is classically served pink, at medium rare.",
+					"lens": "safety",
+					"key": "methods-3-safety-19"
+				},
+				{
+					"id": "fd_0048",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "(no note; guest line says \"tender, juicy fish\")",
+					"because": "Blackened tuna and blackened steak are common menu items, and the kitchen usually leaves them rare in the middle under the crust. A server should be able to say so plainly, but the card suggests the inside is always cooked through.",
+					"fix": "Blackened tuna or steak is often left rare in the center. Ask the kitchen.",
+					"lens": "safety",
+					"key": "methods-3-safety-20"
+				},
+				{
+					"id": "fd_0042",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note; why says \"A steak comes out pink from edge to edge\")",
+					"because": "Sous vide meat, including the pork chop in the line, comes out evenly pink by design, at a set doneness. A server should be able to tell a guest that plainly and send any doneness request to the kitchen.",
+					"fix": "Meats come out evenly pink by design. Take any doneness request to the kitchen.",
+					"lens": "safety",
+					"key": "methods-3-safety-21"
+				},
+				{
+					"id": "fd_0046",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "left to develop with good bacteria",
+					"because": "\"Good bacteria\" (and \"friendly bacteria\" in the gist) is heard as a probiotic health claim. Many fermented items, such as a cooked chili glaze or baked sourdough, hold no live cultures by the time they reach the table.",
+					"fix": "left to develop with live cultures",
+					"lens": "safety",
+					"key": "methods-3-safety-22"
+				},
+				{
+					"id": "fd_0046",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "by live yeasts and friendly bacteria",
+					"because": "\"Friendly bacteria\" implies a health benefit, which is a verdict the card cannot make. Any live cultures are often killed by cooking before service.",
+					"fix": "by live yeasts and bacteria at work",
+					"lens": "safety",
+					"key": "methods-3-safety-23"
+				},
+				{
+					"id": "fd_0049",
+					"field": "lexiconSlug",
+					"severity": "unclear",
+					"claim": "searing-and-pan-technique",
+					"because": "The entry is about stovetop searing only (dry pan, don't move it, fond, deglaze, butter baste). It never mentions finishing in the oven, which is what pan-roasting is. So it is the long-form entry for the Seared card, not for this subject. The rule allows a slug only when the entry is the essay on this same subject.",
+					"fix": "Omit lexiconSlug",
+					"lens": "fact",
+					"key": "methods-4-fact-1"
+				},
+				{
+					"id": "fd_0049",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Pan-roasting adds the oven, so it suits thick chops, breasts and fillets.",
+					"because": "Roasted is listed in confusedWithTerms, but notThis only separates the card from Seared. A new server gets no way to tell pan-roasting from plain roasting, which is oven only with no stovetop sear in the same skillet.",
+					"fix": "Pan-roasting adds the oven. Plain roasted skips the stovetop sear.",
+					"lens": "fact",
+					"key": "methods-4-fact-2"
+				},
+				{
+					"id": "fd_0049",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Not simply seared, which is done on the stove alone. Pan-roasting adds the oven, so it suits thick chops, breasts and fillets.",
+					"because": "The card lists Roasted in confusedWithTerms, but notThis only separates it from Seared. A guest who asks \"so it's just roasted?\" gets no answer from the card. Roasted is cooked in the oven only, with no stovetop sear first, and a new server needs that one-line contrast too.",
+					"fix": "Seared is stove only, roasted is oven only. Pan-roasting does both in one skillet, for thick chops, breasts and fillets.",
+					"lens": "floor",
+					"key": "methods-4-floor-3"
+				},
+				{
+					"key": "methods-critic-1",
+					"id": "fd_0040",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The gist \"Cooked in liquid with small bubbles rising, hotter than poaching\" defines Simmered by naming a neighbour. When this gist is shown as a wrong option under the Poached question, the word \"poaching\" gives it away. It also teaches by reference instead of saying what a simmer is.",
+					"because": "The gist \"Cooked in liquid with small bubbles rising, hotter than poaching\" defines Simmered by naming a neighbour. When this gist is shown as a wrong option under the Poached question, the word \"poaching\" gives it away. It also teaches by reference instead of saying what a simmer is.",
+					"fix": "Replace the gist with a term-free line that names no neighbour, e.g. \"Cooked in liquid just under a boil, small bubbles breaking now and then\" (70 chars; the trap-parity rule does not apply because the card has no traps)."
+				},
+				{
+					"key": "methods-critic-2",
+					"id": "fd_0048",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The gist \"Dipped in butter, crusted in spice and seared dark in a hot skillet\" holds the exact term of a card it is confused with (Seared). Under the Seared question, this distractor carries the word the reader is looking for, which makes the item a word-match test rather than a test of meaning.",
+					"because": "The gist \"Dipped in butter, crusted in spice and seared dark in a hot skillet\" holds the exact term of a card it is confused with (Seared). Under the Seared question, this distractor carries the word the reader is looking for, which makes the item a word-match test rather than a test of meaning.",
+					"fix": "Change \"seared dark\" to \"cooked dark\" or \"toasted dark\", e.g. \"Dipped in butter, crusted in spice and cooked dark in a smoking skillet\" (70 chars, keeps the trap within about 1 character)."
+				},
+				{
+					"key": "methods-operator-1",
+					"id": "fd_0036",
+					"lens": "operator",
+					"field": "aliases",
+					"severity": "style",
+					"claim": "null",
+					"because": "The contract refused the dish line: \"cauliflower purée\" carries neither the term (Puréed) nor an alias, and \"purée\" is how a menu actually writes it.",
+					"fix": "Alias \"Purée\" added, so the line, the Lexicon search and say-it-back all know the noun. Gist and trap were already free of it."
+				},
+				{
+					"key": "methods-operator-2",
+					"id": "fd_0041",
+					"lens": "operator",
+					"field": "traps",
+					"severity": "style",
+					"claim": "{\"says\":\"Seasoned with liquid smoke and a rub, then baked quickly in an oven\",\"why\":\"The real thing sits over smoldering wood, usually for hours, not in a quick oven bake.\"}",
+					"because": "The contract refused the trap: \"liquid smoke\" names the term, so under the written test it points at its own answer. Its why also said \"usually for hours\", which the corrected guest line no longer claims.",
+					"fix": "Trap reworded without the term (72 characters against a 66 gist), and its why now says only what is true of cold and hot smoking alike."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "methods-1-fact-1",
+					"action": "applied",
+					"reason": "Note now reads 'Prosciutto crudo, bresaola, gravlax and lox are cured, not cooked, and are usually served raw.', which also answers safety-16."
+				},
+				{
+					"finding": "methods-1-fact-2",
+					"action": "applied",
+					"reason": "Why now says 'most ham and bacon get nitrite', because Parma-style hams are cured with salt alone."
+				},
+				{
+					"finding": "methods-1-fact-3",
+					"action": "applied",
+					"reason": "Added 'sometimes spirits' to madeWith to cover aquavit or vodka fish cures. This is the same change safety-17 asks for."
+				},
+				{
+					"finding": "methods-1-fact-4",
+					"action": "applied",
+					"reason": "Added 'often buttermilk' to madeWith before 'sometimes breadcrumbs'."
+				},
+				{
+					"finding": "methods-1-fact-5",
+					"action": "applied",
+					"reason": "Gist is now 'Cooked until sugar, natural or added, browns to a nutty sweetness' (65 chars), which covers added sugar and leaves out the banned term."
+				},
+				{
+					"finding": "methods-1-fact-6",
+					"action": "applied",
+					"reason": "Trap is now 'Tossed in a store-bought caramel sauce once the food is fully cooked' (68 chars, so the gist is not the longest option). Its why was rewritten so it no longer claims only the food's own sugars brown."
+				},
+				{
+					"finding": "methods-1-fact-7",
+					"action": "applied",
+					"reason": "Gist is now 'Often browned, then cooked slowly, covered, in a little liquid'. The guest line changes the same way to 'usually seared first', so the card is consistent."
+				},
+				{
+					"finding": "methods-1-fact-8",
+					"action": "applied",
+					"reason": "notThis now says 'confit fat stays far below frying heat', which drops the false no-bubbles tell."
+				},
+				{
+					"finding": "methods-1-floor-9",
+					"action": "applied",
+					"reason": "Guest example changed from bacon to lox, 'the way prosciutto or lox is', which matches the house-cured salmon line."
+				},
+				{
+					"finding": "methods-1-floor-10",
+					"action": "applied",
+					"reason": "Guest is now 'It's cooked until its sugars turn golden brown and sweet, the way onions cook down jammy and rich.' It drops 'slowly' and 'go deep', and says 'sugars' rather than 'natural sugars' to match the corrected gist."
+				},
+				{
+					"finding": "methods-1-floor-11",
+					"action": "applied",
+					"reason": "Removed the first 'seasoned', so the line reads 'soaked in salt water'."
+				},
+				{
+					"finding": "methods-1-floor-12",
+					"action": "applied",
+					"reason": "Guest now opens 'It's usually duck leg, cooked slowly in its own fat until it's meltingly tender.'"
+				},
+				{
+					"finding": "methods-1-floor-13",
+					"action": "applied",
+					"reason": "Deleted the 'backyard cookout flavor' sentence. The guest line is now its first sentence (96 chars)."
+				},
+				{
+					"finding": "methods-1-floor-14",
+					"action": "applied",
+					"reason": "Guest is now 'It's cooked right in boiling water, which keeps the flavor clean and sweet, so the lobster or potatoes really shine.'"
+				},
+				{
+					"finding": "methods-1-safety-15",
+					"action": "applied",
+					"reason": "Added 'often buttermilk' to the Fried madeWith list, the same change as fact-4."
+				},
+				{
+					"finding": "methods-1-safety-16",
+					"action": "applied",
+					"reason": "The note drops 'never cooked' and says 'cured, not cooked, and are usually served raw'. It is merged with fact-1's 'prosciutto crudo'."
+				},
+				{
+					"finding": "methods-1-safety-17",
+					"action": "applied",
+					"reason": "Added 'sometimes spirits' to the Cured madeWith list, the same change as fact-3."
+				},
+				{
+					"finding": "methods-2-fact-1",
+					"action": "applied",
+					"reason": "The gist now reads 'Kept in a sour liquid, usually vinegar, so it turns tangy and sharp': 'crisp' and 'brine' are gone."
+				},
+				{
+					"finding": "methods-2-fact-2",
+					"action": "applied",
+					"reason": "The why now covers vegetables, fruit, eggs or fish and says raw vegetables keep their crunch. The claim that acid firms texture is gone, and it does not say every pickle is uncooked, because pickled eggs and beets are cooked first."
+				},
+				{
+					"finding": "methods-2-fact-3",
+					"action": "applied",
+					"reason": "The notThis now uses the suggested wording, which describes brining as a process and does not define the word brine."
+				},
+				{
+					"finding": "methods-2-fact-4",
+					"action": "applied",
+					"reason": "Oil is no longer called a preservative. The why now says salt, sugar and drying pull water out of food and acid slows spoilage."
+				},
+				{
+					"finding": "methods-2-fact-5",
+					"action": "applied",
+					"reason": "The notThis now says frying uses a deeper layer of oil, while a sauté uses a thin film of fat and keeps the food moving."
+				},
+				{
+					"finding": "methods-2-fact-6",
+					"action": "applied",
+					"reason": "Changed to 'without squeezing out much juice'."
+				},
+				{
+					"finding": "methods-2-fact-7",
+					"action": "applied",
+					"reason": "The why now opens 'Food, usually cooked soft first, is blended', and the guest line no longer says it is always cooked."
+				},
+				{
+					"finding": "methods-2-fact-8",
+					"action": "applied",
+					"reason": "The trap why now says a seared steak loses as much moisture as an unseared one, or more."
+				},
+				{
+					"finding": "methods-2-floor-9",
+					"action": "applied",
+					"reason": "The gist is now 'Cooked in hot liquid that never bubbles, so it stays soft and moist'."
+				},
+				{
+					"finding": "methods-2-floor-10",
+					"action": "applied",
+					"reason": "The gist is now 'Cooked in liquid with small bubbles rising, hotter than poaching', which draws a visible line against Poached and still matches the why's 'small bubbles'."
+				},
+				{
+					"finding": "methods-2-floor-11",
+					"action": "applied",
+					"reason": "The guest line now says 'one of the gentlest ways'."
+				},
+				{
+					"finding": "methods-2-floor-12",
+					"action": "applied",
+					"reason": "The line is now 'Poached halibut, fennel, saffron broth'. Oil is also named in the why's list of liquids and added to madeWith, since oil poaching is real."
+				},
+				{
+					"finding": "methods-2-floor-13",
+					"action": "applied",
+					"reason": "The gist is now 'Made to keep for months by any of several methods, not just one', which frames it as an umbrella term and so is no longer also true of Pickled or Cured."
+				},
+				{
+					"finding": "methods-2-floor-14",
+					"action": "applied",
+					"reason": "The guest line now opens 'It's been made to last'."
+				},
+				{
+					"finding": "methods-2-floor-15",
+					"action": "applied",
+					"reason": "The gist now names thickness: 'Blended thick and completely smooth, firm enough to hold its shape'. The trap is still within 10 characters of it."
+				},
+				{
+					"finding": "methods-2-floor-16",
+					"action": "applied",
+					"reason": "The guest line now says 'the flavor of the vegetable or fruit in a rich, silky form'."
+				},
+				{
+					"finding": "methods-2-floor-17",
+					"action": "applied",
+					"reason": "'Brine' is gone from the gist and the guest line. 'Crisp' was not added back, because fact-1 showed it is false."
+				},
+				{
+					"finding": "methods-2-floor-18",
+					"action": "applied",
+					"reason": "The filler sentence became 'The quick heat keeps it light.'"
+				},
+				{
+					"finding": "methods-2-floor-19",
+					"action": "applied",
+					"reason": "The gist now ends 'tender inside'."
+				},
+				{
+					"finding": "methods-2-floor-20",
+					"action": "applied",
+					"reason": "The trap why now names what it compares against: 'as an unseared one, or more'."
+				},
+				{
+					"finding": "methods-2-safety-21",
+					"action": "applied",
+					"reason": "Same fix as fact-4: the why no longer says oil keeps spoilage out."
+				},
+				{
+					"finding": "methods-2-safety-22",
+					"action": "applied",
+					"reason": "The trap why now reads 'On a menu it means methods like salt, sugar, acid or drying, not a lab process.' It no longer claims the item has no additives."
+				},
+				{
+					"finding": "methods-2-safety-23",
+					"action": "applied",
+					"reason": "Added 'sometimes sulfites' to madeWith, since dried fruit is commonly sulfured."
+				},
+				{
+					"finding": "methods-2-safety-24",
+					"action": "applied",
+					"reason": "The note now reads 'Seared tuna is usually served rare, and seared scallops translucent in the center.'"
+				},
+				{
+					"finding": "methods-2-safety-25",
+					"action": "applied",
+					"reason": "Added madeWith: often oil, sometimes butter."
+				},
+				{
+					"finding": "methods-2-safety-26",
+					"action": "applied",
+					"reason": "madeWith now has 'sometimes fish stock' and 'sometimes olive oil' (six items)."
+				},
+				{
+					"finding": "methods-2-safety-27",
+					"action": "applied",
+					"reason": "Added the note 'Roast beef and lamb are usually carved pink, at medium rare, unless asked otherwise.'"
+				},
+				{
+					"finding": "methods-2-safety-28",
+					"action": "applied",
+					"reason": "Added 'sometimes wine' to madeWith, to cover deglazing."
+				},
+				{
+					"finding": "methods-3-fact-1",
+					"action": "applied",
+					"reason": "Guest line now reads 'cooked or just flavored in the smoke of smoldering wood', with no claim of hours over a fire, and compares it to barbecue or smoked salmon."
+				},
+				{
+					"finding": "methods-3-fact-2",
+					"action": "applied",
+					"reason": "The trap's why now reads 'The bag is held in a water bath at its exact doneness, not steamed until cooked through.' The trap still says steamed, so it still matches the known packet error."
+				},
+				{
+					"finding": "methods-3-fact-3",
+					"action": "applied",
+					"reason": "notThis now says the food 'sits sealed in a bath held at its exact doneness' instead of 'cooler water'."
+				},
+				{
+					"finding": "methods-3-fact-4",
+					"action": "applied",
+					"reason": "The guest line now says 'meats get a sear at the end' instead of saying everything is seared, so it stays true for eggs, vegetables and custards."
+				},
+				{
+					"finding": "methods-3-fact-5",
+					"action": "applied",
+					"reason": "The why now says the heat 'bursts the leaf's cell membranes, so it goes limp and releases water' instead of saying the cell walls break down."
+				},
+				{
+					"finding": "methods-3-fact-6",
+					"action": "applied",
+					"reason": "notThis now reads 'Close to a quick sauté, but stopped the moment the leaves soften, before anything browns.' The difference is the stopping point, not the pan."
+				},
+				{
+					"finding": "methods-3-fact-7",
+					"action": "applied",
+					"reason": "Added 'sometimes shellfish' and 'sometimes sesame oil' to madeWith, which now has 6 items."
+				},
+				{
+					"finding": "methods-3-fact-8",
+					"action": "applied",
+					"reason": "The why now credits 'yeasts, bacteria and molds' for turning sugars into acid, alcohol or gas, and says enzymes break proteins into savory depth. That covers koji in miso and the fish's own enzymes in fish sauce."
+				},
+				{
+					"finding": "methods-3-fact-9",
+					"action": "applied",
+					"reason": "The gist is now 'Changed slowly by live microbes, turning tangy, funky or savory' (63 characters, 6 under the trap). It no longer says every ferment is soured or names only yeasts and bacteria."
+				},
+				{
+					"finding": "methods-3-fact-10",
+					"action": "applied",
+					"reason": "The trap's why now reads 'Microbes make the sour flavor over time; cooking heat would kill them, not sour the food.' The false 'no heat is involved' is gone."
+				},
+				{
+					"finding": "methods-3-floor-11",
+					"action": "applied",
+					"reason": "Same fix as methods-3-fact-1: the new guest line holds for cold-smoked, hot-smoked and barbecued items alike."
+				},
+				{
+					"finding": "methods-3-floor-12",
+					"action": "applied",
+					"reason": "Same fix as methods-3-fact-4: 'meats get a sear at the end' keeps the line true for unseared eggs and vegetables and is clearer to a guest than 'finished'."
+				},
+				{
+					"finding": "methods-3-floor-13",
+					"action": "applied",
+					"reason": "The guest line now adds 'that fat is often saved to cook with, like duck fat for potatoes', which covers the rendered-fat use on menus."
+				},
+				{
+					"finding": "methods-3-floor-14",
+					"action": "applied",
+					"reason": "The guest line now ends 'a dark, spicy crust while the inside stays tender and juicy' and no longer says it is fish."
+				},
+				{
+					"finding": "methods-3-floor-15",
+					"action": "applied",
+					"reason": "The guest line now says 'slowly transformed by yeasts and bacteria', which names both cultures and the time instead of 'left to develop with good bacteria'."
+				},
+				{
+					"finding": "methods-3-safety-16",
+					"action": "applied",
+					"reason": "Added the note 'Steamed fish is often served whole, on the bone, so mention the bones to the guest.'"
+				},
+				{
+					"finding": "methods-3-safety-17",
+					"action": "applied",
+					"reason": "Added 'sometimes sesame oil' to madeWith, in the same change as methods-3-fact-7."
+				},
+				{
+					"finding": "methods-3-safety-18",
+					"action": "applied",
+					"reason": "The note now reads 'A pink ring just under the crust of smoked meat is normal. The smoke gases make it.' It no longer says the meat is not undercooked."
+				},
+				{
+					"finding": "methods-3-safety-19",
+					"action": "applied",
+					"reason": "Added the note 'Duck breast with rendered skin is classically served pink, at medium rare.'"
+				},
+				{
+					"finding": "methods-3-safety-20",
+					"action": "applied",
+					"reason": "Added the note 'Blackened tuna is usually served rare in the center, and steak is cooked to order.' The guest line no longer implies the center is always cooked through."
+				},
+				{
+					"finding": "methods-3-safety-21",
+					"action": "applied",
+					"reason": "Added the note 'Steak, chops and duck come out evenly pink by design. Take any doneness request to the kitchen.' It names those meats instead of 'Meats', because sous vide chicken is not served pink."
+				},
+				{
+					"finding": "methods-3-safety-22",
+					"action": "applied",
+					"reason": "The guest line drops 'good bacteria' and says 'slowly transformed by yeasts and bacteria'. It does not say 'live cultures', which would be a claim that they are still alive on the plate."
+				},
+				{
+					"finding": "methods-3-safety-23",
+					"action": "applied",
+					"reason": "The gist no longer says 'friendly bacteria'. It now reads 'Changed slowly by live microbes, turning tangy, funky or savory', which describes the process and makes no health claim."
+				},
+				{
+					"finding": "methods-4-fact-1",
+					"action": "applied",
+					"reason": "Removed lexiconSlug, because the searing-and-pan-technique entry covers stovetop searing and not the oven finish, and no other candidate fits."
+				},
+				{
+					"finding": "methods-4-fact-2",
+					"action": "applied",
+					"reason": "Rewrote notThis to also separate the card from Roasted (oven only, no stovetop sear), merged with the floor finding's wording."
+				},
+				{
+					"finding": "methods-4-floor-3",
+					"action": "applied",
+					"reason": "notThis now reads: seared is stove only, roasted is oven only, and pan-roasting does both in one skillet, which suits thick chops, breasts and fillets."
+				},
+				{
+					"finding": "methods-critic-1",
+					"action": "applied",
+					"reason": "Gist now reads \"Cooked gently in liquid with small bubbles breaking now and then\" (64 chars): it says what a simmer is and names no neighbour, and it also avoids \"boil\", which the suggested fix would have put under the Boiled question."
+				},
+				{
+					"finding": "methods-critic-2",
+					"action": "applied",
+					"reason": "Changed \"seared dark\" to \"cooked dark\" and kept \"hot skillet\", so the gist is 67 chars and stays under the 71-char trap: the gist is never the longest option."
+				},
+				{
+					"finding": "methods-operator-1",
+					"action": "applied",
+					"reason": "Operator: Alias \"Purée\" added, so the line, the Lexicon search and say-it-back all know the noun. Gist and trap were already free of it."
+				},
+				{
+					"finding": "methods-operator-2",
+					"action": "applied",
+					"reason": "Operator: Trap reworded without the term (72 characters against a 66 gist), and its why now says only what is true of cold and hot smoking alike."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0040",
+						"issue": "The gist \"Cooked in liquid with small bubbles rising, hotter than poaching\" defines Simmered by naming a neighbour. When this gist is shown as a wrong option under the Poached question, the word \"poaching\" gives it away. It also teaches by reference instead of saying what a simmer is.",
+						"fix": "Replace the gist with a term-free line that names no neighbour, e.g. \"Cooked in liquid just under a boil, small bubbles breaking now and then\" (70 chars; the trap-parity rule does not apply because the card has no traps)."
+					},
+					{
+						"id": "fd_0048",
+						"issue": "The gist \"Dipped in butter, crusted in spice and seared dark in a hot skillet\" holds the exact term of a card it is confused with (Seared). Under the Seared question, this distractor carries the word the reader is looking for, which makes the item a word-match test rather than a test of meaning.",
+						"fix": "Change \"seared dark\" to \"cooked dark\" or \"toasted dark\", e.g. \"Dipped in butter, crusted in spice and cooked dark in a smoking skillet\" (70 chars, keeps the trap within about 1 character)."
+					}
+				],
+				"notes": "Every one of the 25 roster rows has a card, and each id and term matches the roster. The Sous Vide known packet error is covered: the trap says \\\"steamed\\\", which matches /steam|boil/. Estimated section mean is about 665 characters of prose per card, under the 720 ceiling. The heaviest cards are Sous Vide and Blackened at about 780, with Steamed at about 730. The longest why fields (Blanched 288, Caramelized 287) are under 300. Accented terms (Puréed, Sautéed) have a say, and so do Confit and Sous Vide. I found no verdict words, no banned substrings and no dashes. Every trap is within about 10 characters of its gist, and no gist is the longest option on its card. Optional links the operator could add, none of them required: Braised notThis compares it to a stew but has no link, and Ragout is the stew card on the roster, so add Ragout to Braised seeAlsoTerms. Cured could add Ceviche to seeAlso, because guests often call ceviche \\\"cured\\\". Brined could add Corned Beef to seeAlso, since corned beef is brine-cured. Caramelized could add Crème Brûlée to seeAlso, since its why already uses that comparison. Steamed pairs (\\\"Ginger and scallion, soy sauce, sesame oil, jasmine rice\\\") mostly repeats its madeWith list. Trimming it to \\\"Ginger and scallion, jasmine rice\\\" or dropping it would bring that card closer to the aim."
+			},
+			"acceptedRejected": []
+		}
+	]
+}
