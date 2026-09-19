@@ -332,6 +332,10 @@
 	.oot-today-n {
 		color: var(--oot-accent-deep, currentColor);
 	}
+	/* Every door in the row reads as a chip, not as a link in a sentence. */
+	.todaygo a {
+		text-decoration: none;
+	}
 	.todaygo {
 		display: flex;
 		gap: 8px;
