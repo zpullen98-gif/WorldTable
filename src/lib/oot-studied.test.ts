@@ -59,6 +59,7 @@ describe('every round-complete site goes through the helper', () => {
 		'src/routes/menu/quiz/+page.svelte',
 		'src/routes/practise/firing/+page.svelte',
 		'src/routes/service/drill/+page.svelte',
+		'src/routes/service/deck/study/+page.svelte',
 		'src/lib/stores/session.svelte.ts'
 	];
 

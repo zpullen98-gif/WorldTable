@@ -23,7 +23,7 @@
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
 	import { CHECKED, CHECKED_FLAGS, NOT_SCREENED, list } from '$lib/allergens';
-	import { recipes } from '$lib/data';
+	import { recipes, TOTALS } from '$lib/data';
 
 	/**
 	 * COMPUTED, because the last version of this sentence hardcoded "101 of
@@ -94,6 +94,21 @@
 			</a>
 		</li>
 	</ul>
+
+	<!--
+		The Floor Deck: the menu's own words, one card each. The count is the
+		EMITTED total, so the section appears on the day the first card ships and
+		never promises a deck that is still being written.
+	-->
+	{#if TOTALS.deck}
+		<h2 class="sec">The Floor Deck</h2>
+		<p class="secnote">
+			{TOTALS.deck} menu words, one card each: what to say at the table, why it is so, what it is
+			classically made with, and what it gets mistaken for. Built for a first week on the floor,
+			and it works on a fresh install.
+		</p>
+		<p class="drillcta"><a class="chip" href="{base}/service/deck">Open the deck</a></p>
+	{/if}
 
 	<h2 class="sec">Drill it</h2>
 	<p class="secnote">
