@@ -1,0 +1,780 @@
+{
+ "section": "preparations",
+ "passes": [
+  {
+   "merged": "2026-09-19",
+   "pass": "authoring",
+   "cards": [
+    "fd_0216",
+    "fd_0217",
+    "fd_0218",
+    "fd_0219",
+    "fd_0220",
+    "fd_0221",
+    "fd_0222",
+    "fd_0223",
+    "fd_0224",
+    "fd_0225",
+    "fd_0226",
+    "fd_0227",
+    "fd_0228",
+    "fd_0229",
+    "fd_0230",
+    "fd_0231",
+    "fd_0232",
+    "fd_0233"
+   ],
+   "findings": [
+    {
+     "id": "fd_0217",
+     "field": "traps",
+     "severity": "wrong",
+     "claim": "It is never cooked: the meat is served raw, chopped by knife and never formed into a patty.",
+     "because": "The classic French plate of steak tartare is shaped into a round, flattened patty (often ring-molded) with a well for the yolk, so 'never formed into a patty' is false. What makes the trap false is the grinding and the searing.",
+     "fix": "It is never cooked: the meat is served raw, cut by knife and never ground.",
+     "lens": "fact",
+     "key": "preparations-1-fact-1"
+    },
+    {
+     "id": "fd_0219",
+     "field": "traps",
+     "severity": "wrong",
+     "claim": "Finely ground meat sauce cooked with tomato and tossed with pasta",
+     "because": "On American menus 'ragout' very often names an Italian-style meat sauce over pasta (short rib ragout with pappardelle, for example), so the trap describes what many new hires will actually see the word mean on their own menu. It is a common usage, not a clear mistake. Traditional Bolognese is also chopped or minced, not finely ground.",
+     "fix": "Quick pan sauce of butter and wine swirled together just before plating",
+     "lens": "fact",
+     "key": "preparations-1-fact-2"
+    },
+    {
+     "id": "fd_0219",
+     "field": "say",
+     "severity": "style",
+     "claim": "ra-GOO",
+     "because": "The respelling key has no bare 'a'. The first syllable is the 'ah' sound, so it should be written with the key vowel.",
+     "fix": "rah-GOO",
+     "lens": "fact",
+     "key": "preparations-1-fact-3"
+    },
+    {
+     "id": "fd_0223",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "\"often tuna\", \"sometimes beef\", \"often soy\"",
+     "because": "The original tataki (Kochi's katsuo no tataki) is bonito, not tuna. The ponzu it is served with is classically made with bonito flakes, so beef tataki with ponzu still holds fish, and a guest who flags fish would not see that on this list.",
+     "fix": "\"often tuna\", \"often bonito\", \"sometimes beef\", \"often soy\"",
+     "lens": "fact",
+     "key": "preparations-1-fact-4"
+    },
+    {
+     "id": "fd_0220",
+     "field": "gist",
+     "severity": "unclear",
+     "claim": "Raw fish sliced and dressed with oil and citrus just before serving",
+     "because": "This is also a true description of fd_0216, which is raw slices dressed with olive oil and lemon just before serving. A reader shown both gists for either term could accept either one. What makes this card different is very fresh fish with a light, last-second Italian dressing, not the slicing.",
+     "fix": "Very fresh raw fish dressed simply, Italian style, as it goes out",
+     "lens": "floor",
+     "key": "preparations-1-floor-5"
+    },
+    {
+     "id": "fd_0216",
+     "field": "gist",
+     "severity": "unclear",
+     "claim": "Raw meat or fish sliced paper thin and fanned flat across the plate",
+     "because": "Starting with 'meat or fish' makes this answer overlap with fd_0220, which is raw fish slices on a plate. What sets this card apart is beef first and slices thin enough to cover the plate like a sheet. The gist should lead with that.",
+     "fix": "Raw beef, or sometimes fish, sliced paper thin to cover the plate",
+     "lens": "floor",
+     "key": "preparations-1-floor-6"
+    },
+    {
+     "id": "fd_0223",
+     "field": "note",
+     "severity": "unclear",
+     "claim": "so there is no temperature to ask for",
+     "because": "A day-three server will repeat this to a guest who asks for it more done, and it sounds like a refusal. The kitchen decides whether it can cook the dish further, not the server.",
+     "fix": "Raw at the center by design. Ask the kitchen before promising more heat.",
+     "lens": "floor",
+     "key": "preparations-1-floor-7"
+    },
+    {
+     "id": "fd_0221",
+     "field": "pairs",
+     "severity": "unclear",
+     "claim": "Sweet potato, corn, toasted corn kernels, red onion",
+     "because": "Listing corn twice reads like a mistake to a new hire. The classic plate has two different corns: soft boiled large-kernel corn and crunchy toasted corn.",
+     "fix": "Sweet potato, boiled corn, crunchy toasted corn, red onion",
+     "lens": "floor",
+     "key": "preparations-1-floor-8"
+    },
+    {
+     "id": "fd_0221",
+     "field": "guest",
+     "severity": "unclear",
+     "claim": "The lime firms it up, so it's bright, tangy and refreshing.",
+     "because": "The dish is not bright because the lime firms the fish, so the line does not follow when said aloud. The lime does two separate things: it firms the fish and it gives the tang.",
+     "fix": "The lime firms it and makes it bright, tangy and refreshing.",
+     "lens": "floor",
+     "key": "preparations-1-floor-9"
+    },
+    {
+     "id": "fd_0223",
+     "field": "madeWith",
+     "severity": "verdict",
+     "claim": "often soy\", \"often citrus\"",
+     "because": "The sauce on tataki is classically ponzu, which is made with bonito flakes (fish) and often mirin. On a beef tataki a fish-allergic guest would read only beef, soy and citrus, and nothing flags the fish in the sauce.",
+     "fix": "Add \"sometimes bonito flakes\" as a seventh item: [\"often tuna\", \"sometimes beef\", \"often soy\", \"often citrus\", \"often garlic\", \"sometimes sesame\", \"sometimes bonito flakes\"]",
+     "lens": "safety",
+     "key": "preparations-1-safety-10"
+    },
+    {
+     "id": "fd_0223",
+     "field": "note",
+     "severity": "unclear",
+     "claim": "Rare to raw at the center by design, so there is no temperature to ask for.",
+     "because": "The safety fact a server has to be able to say plainly is that the center is served raw. \"No temperature to ask for\" hides that fact, and a guest could read it as a kitchen rule instead of a raw-service fact.",
+     "fix": "Seared outside only. The center is served raw by design.",
+     "lens": "safety",
+     "key": "preparations-1-safety-11"
+    },
+    {
+     "id": "fd_0219",
+     "field": "madeWith",
+     "severity": "verdict",
+     "claim": "sometimes wheat flour",
+     "because": "A classic French ragout has flour on the meat before browning or flour sprinkled in to thicken the sauce (singer). The linked recipe, ragout de boulettes, is thickened with toasted flour and made with pork. \"Sometimes\" understates the wheat, and the list does not mention pork.",
+     "fix": "[\"often beef\", \"sometimes lamb\", \"sometimes pork\", \"often wine\", \"often wheat flour\"]",
+     "lens": "safety",
+     "key": "preparations-1-safety-12"
+    },
+    {
+     "id": "fd_0221",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "sometimes shrimp",
+     "because": "Ceviche mixto and many menu ceviches use octopus, squid, scallops or other shellfish, not just shrimp. Naming only shrimp makes the flag too narrow for a guest with a shellfish or mollusk allergy.",
+     "fix": "sometimes shellfish",
+     "lens": "safety",
+     "key": "preparations-1-safety-13"
+    },
+    {
+     "id": "fd_0217",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "\"often capers\"",
+     "because": "The why says tuna and salmon tartares use soy and citrus dressings, and those versions often use sesame oil or sesame seeds. Sesame is a major allergen and is not on the list. Capers are already in the guest line and matter less for an allergy, so they can give up their place.",
+     "fix": "\"sometimes sesame\"",
+     "lens": "safety",
+     "key": "preparations-1-safety-14"
+    },
+    {
+     "id": "fd_0216",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "\"beef\"",
+     "because": "The gist and why say carpaccio can be fish as well as beef, and menus sell tuna, salmon and scallop carpaccio. Only beef is listed, so nothing flags fish or shellfish for a guest looking at a seafood carpaccio.",
+     "fix": "\"often beef\", \"sometimes fish\"",
+     "lens": "safety",
+     "key": "preparations-1-safety-15"
+    },
+    {
+     "id": "fd_0228",
+     "field": "notThis",
+     "severity": "wrong",
+     "claim": "A ballotine is always a boned bird or leg rebuilt around stuffing.",
+     "because": "The classic French definition (Larousse) covers any boned, stuffed, rolled and tied piece of poultry, meat, game or fish. Salmon and lamb shoulder ballotines are common, so 'always' is false.",
+     "fix": "A ballotine is a boned leg, bird or fish rebuilt around stuffing.",
+     "lens": "fact",
+     "key": "preparations-2-fact-1"
+    },
+    {
+     "id": "fd_0224",
+     "field": "why",
+     "severity": "unclear",
+     "claim": "Think pickled herring's sunnier Spanish cousin, eaten cool.",
+     "because": "Pickled herring is raw fish cured in vinegar, the very thing the notThis says escabeche is not. Also, the linked recipe (Filipino escabecheng isda) is fried fish served hot in a sweet-sour sauce, so 'eaten cool' does not hold everywhere.",
+     "fix": "Think a gentle pickle, served cool in Spain and often hot in the Philippines.",
+     "lens": "fact",
+     "key": "preparations-2-fact-2"
+    },
+    {
+     "id": "fd_0224",
+     "field": "guest",
+     "severity": "unclear",
+     "claim": "left to marinate in a warm, spiced vinegar and served cool",
+     "because": "Spanish escabeche is served cool, but the Filipino version on the linked recipe is served hot. A server at a kitchen running that recipe would describe the dish wrongly.",
+     "fix": "left to marinate in a warm, spiced vinegar, often served cool",
+     "lens": "fact",
+     "key": "preparations-2-fact-3"
+    },
+    {
+     "id": "fd_0226",
+     "field": "madeWith",
+     "severity": "wrong",
+     "claim": "\"sometimes potato\", \"sometimes ham\"",
+     "because": "The why says fish-filled croquettes are classic, and shrimp (Dutch garnalenkroketten), salt cod and chicken versions are common. The list flags pork but not fish or shellfish, which a guest with an allergy needs to hear. Potato is not something a guest needs flagged.",
+     "fix": "\"sometimes ham\", \"sometimes fish or shellfish\"",
+     "lens": "fact",
+     "key": "preparations-2-fact-4"
+    },
+    {
+     "id": "fd_0227",
+     "field": "why",
+     "severity": "unclear",
+     "claim": "then spread with filling, rolled tight and tied",
+     "because": "The sentence covers sponge cake as well as meat, and nobody ties a cake roulade. Only meat roulades are tied.",
+     "fix": "then spread with filling and rolled tight, meat tied",
+     "lens": "fact",
+     "key": "preparations-2-fact-5"
+    },
+    {
+     "id": "fd_0231",
+     "field": "why",
+     "severity": "unclear",
+     "claim": "Lean white fish does best.",
+     "because": "The card links to a salmon en papillote recipe, and fatty fish like salmon are among the most common and forgiving choices for this method. As written, the sentence contradicts the recipe the card points to.",
+     "fix": "Delicate fish suits it best.",
+     "lens": "fact",
+     "key": "preparations-2-fact-6"
+    },
+    {
+     "id": "fd_0224",
+     "field": "gist",
+     "severity": "wrong",
+     "claim": "then steeped cold in a spiced vinegar",
+     "because": "The card's own guest line and why pour the vinegar over hot or warm and serve it cool. A gist saying 'steeped cold' teaches the opposite, and a server would repeat it.",
+     "fix": "Fish or meat cooked first, then left to cool in a spiced vinegar",
+     "lens": "floor",
+     "key": "preparations-2-floor-7"
+    },
+    {
+     "id": "fd_0224",
+     "field": "say",
+     "severity": "unclear",
+     "claim": "es-kah-BEH-chay",
+     "because": "An American dining room rhymes the stressed syllable with 'bay' (es-kah-BAY-chay). Stressing BEH next to an unstressed 'chay' is hard to sound out cold.",
+     "fix": "es-kah-BAY-chay",
+     "lens": "floor",
+     "key": "preparations-2-floor-8"
+    },
+    {
+     "id": "fd_0229",
+     "field": "guest",
+     "severity": "unclear",
+     "claim": "with duck confit, garlic sausage and pork",
+     "because": "'Confit' is kitchen French a guest will not know, so the guest line creates a second question it cannot answer. Say what it is.",
+     "fix": "with slow-cooked duck, garlic sausage and pork",
+     "lens": "floor",
+     "key": "preparations-2-floor-9"
+    },
+    {
+     "id": "fd_0229",
+     "field": "say",
+     "severity": "style",
+     "claim": "ka-soo-LAY",
+     "because": "'ka' is not in the respelling key. The key's vowel is 'ah'.",
+     "fix": "kah-soo-LAY",
+     "lens": "floor",
+     "key": "preparations-2-floor-10"
+    },
+    {
+     "id": "fd_0227",
+     "field": "guest",
+     "severity": "unclear",
+     "claim": "It's rolled around a filling, then sliced",
+     "because": "The first sentence never says what 'it' is, so it does not answer 'what is that?' The guest hears a shape, not a food.",
+     "fix": "It's thin meat rolled around a filling, then sliced",
+     "lens": "floor",
+     "key": "preparations-2-floor-11"
+    },
+    {
+     "id": "fd_0231",
+     "field": "guest",
+     "severity": "verdict",
+     "claim": "We open it at the table and you get all the aroma.",
+     "because": "This promises a tableside service step that many kitchens skip, since a lot of them plate it opened. A new hire would promise it anyway. The first sentence also never says it is fish.",
+     "fix": "When the pouch is cut open, you get all the aroma.",
+     "lens": "floor",
+     "key": "preparations-2-floor-12"
+    },
+    {
+     "id": "fd_0225",
+     "field": "guest",
+     "severity": "style",
+     "claim": "until the top turns golden and crisp. Our potato one is thin slices baked soft in cream with a crunchy top.",
+     "because": "It says 'crisp top' twice in two sentences, which sounds read off a card. The second 'crunchy top' adds nothing.",
+     "fix": "until the top turns golden and crisp. Our potato one is thin slices baked soft in cream.",
+     "lens": "floor",
+     "key": "preparations-2-floor-13"
+    },
+    {
+     "id": "fd_0224",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "\"fish\", \"sometimes chicken\", \"vinegar\", \"olive oil\", \"often garlic\"",
+     "because": "In the classic Spanish method the fish is usually dredged in wheat flour before it is fried, and the why says it is fried first. A guest avoiding wheat would never guess that from a vinegar dish, so the list should flag the flour.",
+     "fix": "\"fish\", \"sometimes chicken\", \"vinegar\", \"olive oil\", \"often wheat flour\", \"often garlic\"",
+     "lens": "safety",
+     "key": "preparations-2-safety-14"
+    },
+    {
+     "id": "fd_0224",
+     "field": "why",
+     "severity": "verdict",
+     "claim": "the acid seasons and firms the flesh and keeps it",
+     "because": "\"keeps it\" tells a server the vinegar preserves the fish, which can be heard as a promise about how long it keeps or that it needs no refrigeration. The kitchen's storage decides that, not the marinade.",
+     "fix": "the acid seasons and firms the flesh",
+     "lens": "safety",
+     "key": "preparations-2-safety-15"
+    },
+    {
+     "id": "fd_0226",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "\"sometimes potato\"",
+     "because": "The why names fish as a classic filling, and salt cod croquetas are a Spanish staple, but fish is not in the list. The list is already at 7 items, so trade potato, which few guests need flagged, for fish.",
+     "fix": "\"sometimes fish\"",
+     "lens": "safety",
+     "key": "preparations-2-safety-16"
+    },
+    {
+     "id": "fd_0227",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "(no madeWith given)",
+     "because": "The card covers sponge cake roulades, and its linked recipe is a pavlova roulade. Those are made with egg, often cream, and in the sponge version wheat flour. With no list, a server asked about a dessert roulade has nothing to flag.",
+     "fix": "\"often egg\", \"sometimes wheat flour\", \"sometimes cream\", \"sometimes pork\"",
+     "lens": "safety",
+     "key": "preparations-2-safety-17"
+    },
+    {
+     "id": "fd_0228",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "\"chicken\", \"sometimes duck\", \"often pork\", \"often cream\", \"often egg\"",
+     "because": "Pistachios are a classic garnish in ballotine and galantine forcemeats. A guest with a tree nut allergy would not expect nuts inside stuffed chicken, so the list should name them.",
+     "fix": "\"chicken\", \"sometimes duck\", \"often pork\", \"often cream\", \"often egg\", \"sometimes pistachio\"",
+     "lens": "safety",
+     "key": "preparations-2-safety-18"
+    },
+    {
+     "id": "fd_0225",
+     "field": "madeWith",
+     "severity": "unclear",
+     "claim": "\"often cream\", \"often milk\", \"butter\", \"sometimes cheese\", \"sometimes breadcrumbs\"",
+     "because": "Many gratins, such as cauliflower or macaroni, are bound with a béchamel thickened with wheat flour, and the card links to Béchamel. Breadcrumbs are the only wheat the list flags, so a crumb-free gratin would look wheat-free.",
+     "fix": "\"often cream\", \"often milk\", \"butter\", \"sometimes cheese\", \"sometimes wheat flour\", \"sometimes breadcrumbs\"",
+     "lens": "safety",
+     "key": "preparations-2-safety-19"
+    },
+    {
+     "id": "fd_0232",
+     "field": "pairs",
+     "severity": "wrong",
+     "claim": "Sole, trout, boiled potatoes, green beans, capers",
+     "because": "Capers are not a classic partner of meunière. Adding capers (and lemon segments and croutons) makes it a different French garnish, grenobloise. Classic meunière is only brown butter, lemon and parsley, so a server who repeats this list will describe the wrong dish.",
+     "fix": "Sole, trout, boiled potatoes, green beans, spinach",
+     "lens": "fact",
+     "key": "preparations-3-fact-1"
+    },
+    {
+     "id": "fd_0232",
+     "field": "gist",
+     "severity": "unclear",
+     "claim": "Floured fish pan-fried in butter, sauced with browned butter and lemon",
+     "because": "Amandine is built on this same method: floured fish, fried in butter, browned butter and lemon, then almonds on top. So this gist is also a true answer for Amandine, and a new hire tested on Amandine could fairly pick it. The gist has to say that browned butter and lemon are the whole finish.",
+     "fix": "Floured fish fried in butter, dressed only in browned butter and lemon",
+     "lens": "floor",
+     "key": "preparations-3-floor-2"
+    },
+    {
+     "id": "fd_0232",
+     "field": "note",
+     "severity": "unclear",
+     "claim": "(no note; the line is \"Dover sole meunière\" and pairs lists sole and trout)",
+     "because": "Classic sole meunière is often served whole on the bone and filleted at the table, and trout can carry pin bones. A server should be able to say plainly that bones are possible. The why does not say this, so a short note is justified even though it adds length.",
+     "fix": "Sole is often served whole on the bone and filleted tableside, so small bones are possible.",
+     "lens": "safety",
+     "key": "preparations-3-safety-3"
+    },
+    {
+     "key": "preparations-critic-1",
+     "id": "fd_0223",
+     "lens": "critic",
+     "field": "card",
+     "severity": "unclear",
+     "claim": "Tataki's trap 'Meat pounded flat with a mallet, breaded and fried until crisp' is a true description of the roster card Chicken-Fried, whose gist is 'Meat pounded thin, floured and pan-crisped like Southern chicken'. A trap must not describe another card correctly.",
+     "because": "Tataki's trap 'Meat pounded flat with a mallet, breaded and fried until crisp' is a true description of the roster card Chicken-Fried, whose gist is 'Meat pounded thin, floured and pan-crisped like Southern chicken'. A trap must not describe another card correctly.",
+     "fix": "Replace the trap with one that matches no card, e.g. says: 'Thin slices of beef simmered at the table in a sweet soy broth' (61 chars, within parity of the 69-char gist). why: 'That is sukiyaki. This is seared hot for seconds, left raw inside and sliced.'"
+    },
+    {
+     "key": "preparations-critic-2",
+     "id": "fd_0225",
+     "lens": "critic",
+     "field": "card",
+     "severity": "unclear",
+     "claim": "The guest line says 'Our potato one is thin slices baked soft in cream.' This is a generic training card, so the server would be stating a house recipe that may not exist at their restaurant. It is also the only mechanism the guest hears, even though many gratins are not potato.",
+     "because": "The guest line says 'Our potato one is thin slices baked soft in cream.' This is a generic training card, so the server would be stating a house recipe that may not exist at their restaurant. It is also the only mechanism the guest hears, even though many gratins are not potato.",
+     "fix": "Make it generic, e.g. 'It's baked in a shallow dish until the top turns golden and crisp. The classic is thin sliced potatoes baked soft in cream.'"
+    },
+    {
+     "key": "preparations-critic-3",
+     "id": "fd_0226",
+     "lens": "critic",
+     "field": "card",
+     "severity": "unclear",
+     "claim": "The guest line says 'Ours is filled with ham and a silky white sauce.' That states a house recipe as fact on a generic card, and a server would repeat it about a fish or cheese croquette.",
+     "because": "The guest line says 'Ours is filled with ham and a silky white sauce.' That states a house recipe as fact on a generic card, and a server would repeat it about a fish or cheese croquette.",
+     "fix": "Change it to 'A classic filling is ham in a silky white sauce.' or 'The filling is often ham, fish or cheese in a silky white sauce.'"
+    },
+    {
+     "key": "preparations-critic-4",
+     "id": "fd_0227",
+     "lens": "critic",
+     "field": "card",
+     "severity": "unclear",
+     "claim": "The guest line says 'Ours is pork rolled with herbs and greens.' That is house-specific on a generic card, and the section already uses roulade for cake too (the recipe link is a pavlova roulade).",
+     "because": "The guest line says 'Ours is pork rolled with herbs and greens.' That is house-specific on a generic card, and the section already uses roulade for cake too (the recipe link is a pavlova roulade).",
+     "fix": "Change it to 'A savory one is often pork or chicken rolled with herbs and greens.' or drop the sentence."
+    },
+    {
+     "key": "preparations-critic-5",
+     "id": "fd_0228",
+     "lens": "critic",
+     "field": "card",
+     "severity": "unclear",
+     "claim": "The guest line states 'It's a chicken leg with the bone taken out.' But the card's own why and notThis say a ballotine can be a whole bird, a leg or a fish, and madeWith lists duck.",
+     "because": "The guest line states 'It's a chicken leg with the bone taken out.' But the card's own why and notThis say a ballotine can be a whole bird, a leg or a fish, and madeWith lists duck.",
+     "fix": "Hedge it: 'It's usually a chicken leg or bird with the bone taken out, filled with a savory stuffing and rolled.'"
+    },
+    {
+     "key": "preparations-critic-6",
+     "id": "fd_0221",
+     "lens": "critic",
+     "field": "card",
+     "severity": "unclear",
+     "claim": "confusedWithTerms lists Crudo and Escabeche, but notThis only separates Escabeche. The reverse link on Crudo covers it, but a reader on the Ceviche card never learns how to tell ceviche from crudo, which is the more common mix-up at the table.",
+     "because": "confusedWithTerms lists Crudo and Escabeche, but notThis only separates Escabeche. The reverse link on Crudo covers it, but a reader on the Ceviche card never learns how to tell ceviche from crudo, which is the more common mix-up at the table.",
+     "fix": "Make notThis cover both, e.g. 'Not crudo, which is dressed at the last second, and not escabeche, which is cooked first. Ceviche soaks raw in lime.' (about 115 chars)."
+    },
+    {
+     "key": "preparations-critic-7",
+     "id": "fd_0230",
+     "lens": "critic",
+     "field": "card",
+     "severity": "unclear",
+     "claim": "The trap 'Clear, delicate fish broth strained and served without solids' comes close to a true description of the roster card Consommé (a clear, clarified broth; fish consommé exists). A tester could reasonably call it half-true.",
+     "because": "The trap 'Clear, delicate fish broth strained and served without solids' comes close to a true description of the roster card Consommé (a clear, clarified broth; fish consommé exists). A tester could reasonably call it half-true.",
+     "fix": "Use a trap no card matches, e.g. says: 'Thick, creamy seafood soup with potato, thickened with cream' (about 60 chars). why: 'It is a saffron broth with pieces of fish and no cream, served with bread and rouille.'"
+    },
+    {
+     "key": "preparations-operator-1",
+     "id": "fd_0230",
+     "lens": "operator",
+     "field": "traps",
+     "severity": "verdict",
+     "claim": "It is a saffron broth with pieces of fish and no cream, served with bread and rouille.",
+     "because": "A trap why is learned as the right answer, and \"no cream\" is an absence claim a server could repeat about tonight's bowl; the Bread section's refuters held the same rule.",
+     "fix": "Says what the word means instead of what the dish lacks."
+    },
+    {
+     "key": "preparations-operator-2",
+     "id": "fd_0225",
+     "lens": "operator",
+     "field": "traps",
+     "severity": "verdict",
+     "claim": "The word means the browned crust, and many classic versions use no cheese at all.",
+     "because": "\"Many classic versions use no cheese at all\" teaches an absence; a server asked about this gratin should hear the definition, not a promise.",
+     "fix": "Says what the word means instead of what the dish lacks."
+    },
+    {
+     "key": "preparations-operator-3",
+     "id": "fd_0224",
+     "lens": "operator",
+     "field": "recipe",
+     "severity": "style",
+     "claim": "escabecheng-isda",
+     "because": "The build refused the link: \"Escabecheng Isda\" shares no word with \"Escabeche\", and it is the Filipino sweet-and-sour fried fish, a relative of the Spanish escabeche this card teaches, not an example of it.",
+     "fix": "Recipe link removed rather than an alias invented; a card may have no recipe."
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "preparations-1-fact-1",
+     "action": "applied",
+     "reason": "The trap's why now reads 'It is never cooked: the meat is served raw, cut by knife and never ground.', since classic tartare is often shaped into a round, flattened patty."
+    },
+    {
+     "finding": "preparations-1-fact-2",
+     "action": "applied",
+     "reason": "I replaced the trap, because American menus do use ragout for pasta meat sauce. I did not use the suggested pan-sauce wording, because butter swirled into a wine reduction is a true description of the Beurre Blanc card. The new trap is 'Meat stew cooked fast over high heat and served thin and brothy' (63 characters, the same as the gist), and its why says a ragout simmers low and slow to a thick sauce."
+    },
+    {
+     "finding": "preparations-1-fact-3",
+     "action": "applied",
+     "reason": "The say field is now rah-GOO, using the key vowel."
+    },
+    {
+     "finding": "preparations-1-fact-4",
+     "action": "applied",
+     "reason": "madeWith now flags bonito twice: 'often tuna or bonito' for the fish and 'often bonito flakes' for the ponzu, merged with safety-10 so the list stays at 7 items."
+    },
+    {
+     "finding": "preparations-1-floor-5",
+     "action": "applied",
+     "reason": "The gist is now 'Very fresh raw fish dressed simply, Italian style, as it goes out' (65 characters), so it no longer reads as a true description of carpaccio."
+    },
+    {
+     "finding": "preparations-1-floor-6",
+     "action": "applied",
+     "reason": "The gist now leads with beef and the plate-covering slice: 'Raw beef, or sometimes fish, sliced paper thin to cover the plate' (65 characters)."
+    },
+    {
+     "finding": "preparations-1-floor-7",
+     "action": "applied",
+     "reason": "I dropped 'no temperature to ask for'. The note now ends 'Ask the kitchen before promising more heat.' This is merged with safety-11."
+    },
+    {
+     "finding": "preparations-1-floor-8",
+     "action": "applied",
+     "reason": "pairs now reads 'Sweet potato, boiled corn, crunchy toasted corn, red onion'."
+    },
+    {
+     "finding": "preparations-1-floor-9",
+     "action": "applied",
+     "reason": "The guest line now says 'The lime firms it and makes it bright, tangy and refreshing.'"
+    },
+    {
+     "finding": "preparations-1-safety-10",
+     "action": "applied",
+     "reason": "Added 'often bonito flakes' for the ponzu, which is classically made with katsuobushi. Merged with fact-4, so the list is 7 items."
+    },
+    {
+     "finding": "preparations-1-safety-11",
+     "action": "applied",
+     "reason": "The note now opens 'Seared outside only. The center is served raw by design.' and then refers the guest's doneness request to the kitchen."
+    },
+    {
+     "finding": "preparations-1-safety-12",
+     "action": "applied",
+     "reason": "madeWith is now often beef, sometimes lamb, sometimes pork, often wine, often wheat flour. Classic ragout is floured or thickened with flour, and the linked recipe is made with pork."
+    },
+    {
+     "finding": "preparations-1-safety-13",
+     "action": "applied",
+     "reason": "'sometimes shrimp' is now 'sometimes shellfish', so the flag also covers mixto ceviches made with octopus, squid or scallop."
+    },
+    {
+     "finding": "preparations-1-safety-14",
+     "action": "applied",
+     "reason": "I replaced 'often capers' with 'sometimes sesame' for the tuna and salmon versions. Capers are still named in the guest line, the why and the pairs."
+    },
+    {
+     "finding": "preparations-1-safety-15",
+     "action": "applied",
+     "reason": "'beef' is now 'often beef', followed by 'sometimes fish', to cover seafood carpaccio."
+    },
+    {
+     "finding": "preparations-2-fact-1",
+     "action": "applied",
+     "reason": "Dropped 'always' and widened the notThis to 'a boned bird, leg or fish rebuilt around stuffing'."
+    },
+    {
+     "finding": "preparations-2-fact-2",
+     "action": "applied",
+     "reason": "Replaced the pickled herring comparison with 'Think a gentle pickle, served cool in Spain and often hot in the Philippines.'"
+    },
+    {
+     "finding": "preparations-2-fact-3",
+     "action": "applied",
+     "reason": "Guest line now says 'often served cool' instead of 'and served cool'."
+    },
+    {
+     "finding": "preparations-2-fact-4",
+     "action": "applied",
+     "reason": "Swapped 'sometimes potato' for 'sometimes fish or shellfish' and kept 'sometimes ham', so the list stays at 7."
+    },
+    {
+     "finding": "preparations-2-fact-5",
+     "action": "applied",
+     "reason": "Why now reads 'spread with filling and rolled tight, the meat ones tied', so the cake version is no longer tied."
+    },
+    {
+     "finding": "preparations-2-fact-6",
+     "action": "applied",
+     "reason": "Changed 'Lean white fish does best' to 'Delicate fish suits it best', which fits the salmon recipe."
+    },
+    {
+     "finding": "preparations-2-floor-7",
+     "action": "applied",
+     "reason": "Gist is now 'Fish or meat cooked first, then left to cool in a spiced vinegar' (63 chars), which matches the hot-marinade method."
+    },
+    {
+     "finding": "preparations-2-floor-8",
+     "action": "applied",
+     "reason": "Changed the respelling to es-kah-BAY-chay, the usual American dining-room stress."
+    },
+    {
+     "finding": "preparations-2-floor-9",
+     "action": "applied",
+     "reason": "Guest line says 'slow-cooked duck' in place of 'duck confit'."
+    },
+    {
+     "finding": "preparations-2-floor-10",
+     "action": "applied",
+     "reason": "Changed the respelling to kah-soo-LAY to use the key's 'ah'."
+    },
+    {
+     "finding": "preparations-2-floor-11",
+     "action": "applied",
+     "reason": "Guest line opens 'It's thin meat or cake rolled around a filling', so it names a food and covers both kinds of roulade."
+    },
+    {
+     "finding": "preparations-2-floor-12",
+     "action": "applied",
+     "reason": "Removed the tableside promise and named the fish: 'It's fish baked sealed inside a parchment paper pouch... When the pouch is cut open, you get all the aroma.'"
+    },
+    {
+     "finding": "preparations-2-floor-13",
+     "action": "applied",
+     "reason": "Cut the repeated 'with a crunchy top' from the second sentence of the guest line."
+    },
+    {
+     "finding": "preparations-2-safety-14",
+     "action": "applied",
+     "reason": "Added 'often wheat flour' to madeWith, because the fish is usually dredged in flour before it is fried."
+    },
+    {
+     "finding": "preparations-2-safety-15",
+     "action": "applied",
+     "reason": "Dropped 'and keeps it', so the line no longer implies anything about keeping or storage."
+    },
+    {
+     "finding": "preparations-2-safety-16",
+     "action": "applied",
+     "reason": "Combined with fact-4: potato traded out for 'sometimes fish or shellfish'."
+    },
+    {
+     "finding": "preparations-2-safety-17",
+     "action": "applied",
+     "reason": "Added madeWith: often egg, sometimes wheat flour, sometimes cream, sometimes pork."
+    },
+    {
+     "finding": "preparations-2-safety-18",
+     "action": "applied",
+     "reason": "Added 'sometimes pistachio' to madeWith, since pistachio is a classic garnish in the forcemeat."
+    },
+    {
+     "finding": "preparations-2-safety-19",
+     "action": "applied",
+     "reason": "Added 'sometimes wheat flour' to madeWith for gratins bound with béchamel."
+    },
+    {
+     "finding": "preparations-3-fact-1",
+     "action": "applied",
+     "reason": "Swapped capers for spinach in pairs, because capers with lemon segments and croutons make grenobloise, not meunière."
+    },
+    {
+     "finding": "preparations-3-floor-2",
+     "action": "applied",
+     "reason": "Changed the gist to 'Floured fish fried in butter, dressed only in brown butter and lemon' (68 chars). 'Only' now rules out the almond topping, so the gist is no longer true of Amandine, and it is still shorter than the trap."
+    },
+    {
+     "finding": "preparations-3-safety-3",
+     "action": "applied",
+     "reason": "Added a short note, 'Sole may come whole on the bone and be filleted tableside, so small bones are possible.' It is a handling fact the why does not cover."
+    },
+    {
+     "finding": "preparations-critic-1",
+     "action": "applied",
+     "reason": "Replaced the trap, which matched Chicken-Fried, with a sukiyaki description (62 chars); sukiyaki is not on the roster."
+    },
+    {
+     "finding": "preparations-critic-2",
+     "action": "applied",
+     "reason": "The guest line now describes the classic, thin sliced potatoes baked soft in cream, and no longer claims a house recipe."
+    },
+    {
+     "finding": "preparations-critic-3",
+     "action": "applied",
+     "reason": "The guest line now says the filling is often ham, fish or cheese in a silky white sauce, and no longer claims a house recipe."
+    },
+    {
+     "finding": "preparations-critic-4",
+     "action": "applied",
+     "reason": "The guest line now says a savory one is often pork or chicken rolled with herbs and greens, and no longer claims a house recipe."
+    },
+    {
+     "finding": "preparations-critic-5",
+     "action": "applied",
+     "reason": "The guest line is hedged to 'usually a chicken leg or a whole bird', which agrees with the why and notThis."
+    },
+    {
+     "finding": "preparations-critic-6",
+     "action": "applied",
+     "reason": "notThis now separates ceviche from both crudo and escabeche (134 chars)."
+    },
+    {
+     "finding": "preparations-critic-7",
+     "action": "applied",
+     "reason": "Replaced the trap, which was close to Consommé, with a creamy potato seafood soup (60 chars); no roster card matches it."
+    },
+    {
+     "finding": "preparations-operator-1",
+     "action": "applied",
+     "reason": "Operator: the trap why no longer states an absence."
+    },
+    {
+     "finding": "preparations-operator-2",
+     "action": "applied",
+     "reason": "Operator: the trap why no longer states an absence."
+    },
+    {
+     "finding": "preparations-operator-3",
+     "action": "applied",
+     "reason": "Operator: recipe link removed after the merge, by hand, in the section module."
+    }
+   ],
+   "critic": {
+    "ok": false,
+    "problems": [
+     {
+      "id": "fd_0223",
+      "issue": "Tataki's trap 'Meat pounded flat with a mallet, breaded and fried until crisp' is a true description of the roster card Chicken-Fried, whose gist is 'Meat pounded thin, floured and pan-crisped like Southern chicken'. A trap must not describe another card correctly.",
+      "fix": "Replace the trap with one that matches no card, e.g. says: 'Thin slices of beef simmered at the table in a sweet soy broth' (61 chars, within parity of the 69-char gist). why: 'That is sukiyaki. This is seared hot for seconds, left raw inside and sliced.'"
+     },
+     {
+      "id": "fd_0225",
+      "issue": "The guest line says 'Our potato one is thin slices baked soft in cream.' This is a generic training card, so the server would be stating a house recipe that may not exist at their restaurant. It is also the only mechanism the guest hears, even though many gratins are not potato.",
+      "fix": "Make it generic, e.g. 'It's baked in a shallow dish until the top turns golden and crisp. The classic is thin sliced potatoes baked soft in cream.'"
+     },
+     {
+      "id": "fd_0226",
+      "issue": "The guest line says 'Ours is filled with ham and a silky white sauce.' That states a house recipe as fact on a generic card, and a server would repeat it about a fish or cheese croquette.",
+      "fix": "Change it to 'A classic filling is ham in a silky white sauce.' or 'The filling is often ham, fish or cheese in a silky white sauce.'"
+     },
+     {
+      "id": "fd_0227",
+      "issue": "The guest line says 'Ours is pork rolled with herbs and greens.' That is house-specific on a generic card, and the section already uses roulade for cake too (the recipe link is a pavlova roulade).",
+      "fix": "Change it to 'A savory one is often pork or chicken rolled with herbs and greens.' or drop the sentence."
+     },
+     {
+      "id": "fd_0228",
+      "issue": "The guest line states 'It's a chicken leg with the bone taken out.' But the card's own why and notThis say a ballotine can be a whole bird, a leg or a fish, and madeWith lists duck.",
+      "fix": "Hedge it: 'It's usually a chicken leg or bird with the bone taken out, filled with a savory stuffing and rolled.'"
+     },
+     {
+      "id": "fd_0221",
+      "issue": "confusedWithTerms lists Crudo and Escabeche, but notThis only separates Escabeche. The reverse link on Crudo covers it, but a reader on the Ceviche card never learns how to tell ceviche from crudo, which is the more common mix-up at the table.",
+      "fix": "Make notThis cover both, e.g. 'Not crudo, which is dressed at the last second, and not escabeche, which is cooked first. Ceviche soaks raw in lime.' (about 115 chars)."
+     },
+     {
+      "id": "fd_0230",
+      "issue": "The trap 'Clear, delicate fish broth strained and served without solids' comes close to a true description of the roster card Consommé (a clear, clarified broth; fish consommé exists). A tester could reasonably call it half-true.",
+      "fix": "Use a trap no card matches, e.g. says: 'Thick, creamy seafood soup with potato, thickened with cream' (about 60 chars). why: 'It is a saffron broth with pieces of fish and no cream, served with bread and rouille.'"
+     }
+    ],
+    "notes": "I checked the section mechanically: the mean prose length is 669 characters a card, under the 720 ceiling. The lightest cards are 563 (Gratin) and 594 (Croquette), and the heaviest is 800 (Meunière). No card breaks a band. I found no verdict words, no em or en dashes, and none of the banned food-safety substrings. Every roster row has a card. Every term a new hire might stumble on has a say. No gists or guest lines are duplicates. No roster row carries a knownPacketError, so no trap is owed. On trap length, a trap is the longest option on Gratin (71 against a 63 gist), Amandine (74 against 67) and Meunière (73 against 68). All three stay within about 10 characters, so they pass parity. The cross-section links are sound: Carpaccio and Bresaola, Gravlax and Smoked, Meunière and Beurre Blanc, Roulade and Ballotine (both ways), and Ceviche with Escabeche and Crudo (both ways).\n\nTwo softer points I left out of the problems list. First, fish carpaccio and crudo are a genuine menu confusion. Carpaccio has Crudo only in seeAlso, so the operator could promote it to confusedWithTerms on Carpaccio, which means adding a crudo clause to its notThis. Second, the Ballotine trap describes a galantine, which sits near Terrine ('Loaf of seasoned chopped meats baked in a mold, chilled and sliced'). The jelly and poached-poultry details keep it false of Terrine, but if a refuter disagrees, swap it for a different mistake.\n\nThe only lexiconSlug in the section is steaming-and-en-papillote on En Papillote, and it is correct. No other card's lexicon candidates are the same subject, so leaving them out is right. The working copy of the section I measured is at C:\\Users\\zpull\\AppData\\Local\\Temp\\claude\\C--Users-zpull--claude\\ee375187-7803-4126-b577-0cdfe403a999\\scratchpad\\prep.json"
+   },
+   "acceptedRejected": []
+  }
+ ]
+}

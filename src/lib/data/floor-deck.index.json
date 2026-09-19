@@ -10,6 +10,7 @@
     "dairy": "Dairy & Cheese Words",
     "starches": "Grains, Pasta & Starches",
     "sauces": "Sauces, Stocks & Dressings",
+    "preparations": "Preparations & Style Words",
     "bread": "Bread, Pastry & Cakes"
   },
   "cards": [
@@ -1349,6 +1350,99 @@
       "section": "sauces"
     },
     {
+      "id": "fd_0216",
+      "term": "Carpaccio",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0217",
+      "term": "Tartare",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0218",
+      "term": "Frittata",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0219",
+      "term": "Ragout",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0220",
+      "term": "Crudo",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0221",
+      "term": "Ceviche",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0222",
+      "term": "Gravlax",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0223",
+      "term": "Tataki",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0224",
+      "term": "Escabeche",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0225",
+      "term": "Gratin",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0226",
+      "term": "Croquette",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0227",
+      "term": "Roulade",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0228",
+      "term": "Ballotine",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0229",
+      "term": "Cassoulet",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0230",
+      "term": "Bouillabaisse",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0231",
+      "term": "En Papillote",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0232",
+      "term": "Meunière",
+      "section": "preparations"
+    },
+    {
+      "id": "fd_0233",
+      "term": "Amandine",
+      "section": "preparations",
+      "aliases": [
+        "Almondine"
+      ]
+    },
+    {
       "id": "fd_0234",
       "term": "Beignets",
       "section": "bread"
@@ -1648,6 +1742,9 @@
     "stocks-blanc-brun-broth-and-demi": [
       "fd_0206",
       "fd_0214"
+    ],
+    "steaming-and-en-papillote": [
+      "fd_0231"
     ],
     "fermentation-in-bread-yeast-levain-preferments": [
       "fd_0237"
