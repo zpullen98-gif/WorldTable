@@ -58,6 +58,9 @@ test.describe('exactly one tab owns each route', () => {
 		['/menu/quiz', 'Practise'],
 		['/practise/firing', 'Practise'],
 		['/service', 'Service'],
+		['/service/deck', 'Service'],
+		['/service/deck/study', 'Service'],
+		['/service/deck/test', 'Service'],
 		['/menu', 'Menu'],
 		['/menu/costing', 'Menu'],
 		// Every sheet under /menu belongs to the Menu tab, which is the point of

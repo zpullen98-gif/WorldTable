@@ -127,6 +127,15 @@
 						</a>
 					</li>
 				{/if}
+				<li>
+					<a href="{base}/service/deck/test{picked.length ? `?section=${picked[0]}` : ''}">
+						<h3>The written test</h3>
+						<p>
+							One section, answered cold. It ends on what you missed and the cards to read, never
+							on a number.
+						</p>
+					</a>
+				</li>
 			</ul>
 
 			{#if stubborn.length}
