@@ -2,8 +2,19 @@
 	import { base } from '$app/paths';
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
-	import type { MenuDish } from '$lib/persistence/state';
 	import { markStudied } from '$lib/oot-studied';
+	import {
+		QUIZ_LENGTH,
+		DISH_QUIZ_MIN,
+		askFrom,
+		buildDeck,
+		drillableDishes,
+		quizSubjects,
+		type Choice,
+		type DeckCard,
+		type Question
+	} from '$lib/menu-quiz';
+	import { kindLabel } from '$lib/producers';
 
 	/* Drills over The Kitchen's Menu: the dishes entered on /menu. The quiz
 	 * engine is the lexicon page's, ported: ten a round, distractors from the
@@ -14,109 +25,42 @@
 	 * inside Outside Of Time this route is a PAID study surface, and the
 	 * monorepo's lock masks `article.sheet` children on locked routes. An
 	 * overlay alone is not a gate. Standalone, the class is inert.
+	 *
+	 * The question engine lives in lib/menu-quiz.ts, pure and under test, with
+	 * the randomness passed in; that file also says how the house's producers
+	 * join the drill once there are four of them.
 	 */
 
-	const QUIZ_LENGTH = 10;
-	interface Question {
-		kindLabel: string;
-		prompt: string;
-		target: MenuDish;
-		options: MenuDish[];
-	}
-
 	let quiz = $state<Question | null>(null);
-	let picked = $state<MenuDish | null>(null);
+	let picked = $state<Choice | null>(null);
 	let qNum = $state(0);
 	let right = $state(0);
 	let verdict = $state('');
 
 	/* flashcards */
-	let deck = $state<MenuDish[] | null>(null);
+	let deck = $state<DeckCard[] | null>(null);
 	let deckIdx = $state(0);
 	let revealed = $state(false);
 
 	const dishes = $derived(house.dishes);
-	const enough = $derived(dishes.length >= 4);
+	const enough = $derived(dishes.length >= DISH_QUIZ_MIN);
 
-	const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
-
-	function optionsFor(target: MenuDish): MenuDish[] {
-		const sameSection = dishes.filter((d) => d.section === target.section && d.id !== target.id);
-		const chosen = new Map<string, MenuDish>([[target.id, target]]);
-		while (chosen.size < 4) {
-			const cand = pick(sameSection.length >= 3 ? sameSection : dishes);
-			chosen.set(cand.id, cand);
-		}
-		return [...chosen.values()].sort(() => Math.random() - 0.5);
-	}
-
-	/* A dish is drillable when at least one question shape fits it. Price and
-	 * allergen questions demand uniqueness, or the question has two right
-	 * answers and the guest deserves better than a coin flip. */
-	function kindsFor(d: MenuDish): Question[] {
-		const out: Question[] = [];
-		if (d.description)
-			out.push({
-				kindLabel: 'Which dish does the menu describe?',
-				prompt: `“${d.description}”`,
-				target: d,
-				options: optionsFor(d)
-			});
-		if (d.ingredients.length >= 2)
-			out.push({
-				kindLabel: 'Whose ingredients are these?',
-				prompt: d.ingredients.join(' · '),
-				target: d,
-				options: optionsFor(d)
-			});
-		if (d.price && dishes.filter((x) => x.price === d.price).length === 1)
-			out.push({
-				kindLabel: 'Which dish sells at this price?',
-				prompt: d.price,
-				target: d,
-				options: optionsFor(d)
-			});
-		/**
-		 * Only a dish somebody has actually checked may pose an allergen
-		 * question, and uniqueness is only meaningful across dishes that have
-		 * all been checked: an unmarked dish carrying the same allergen looks
-		 * like an absence, which is what would make the "unique" answer wrong.
-		 *
-		 * This refuses on the same ground kindsFor already refuses a non-unique
-		 * allergen: a question with a defensible-looking wrong answer is worse
-		 * than no question, and this is the one deck where the wrong answer gets
-		 * said out loud to a guest.
-		 */
-		const allChecked = dishes.every((x) => x.allergensCheckedAt);
-		const unique =
-			d.allergensCheckedAt && allChecked
-				? d.allergens.find(
-						(a) => dishes.filter((x) => x.allergens.includes(a)).length === 1
-					)
-				: undefined;
-		if (unique)
-			out.push({
-				kindLabel: 'The table asks: which dish carries it?',
-				prompt: unique,
-				target: d,
-				options: optionsFor(d)
-			});
-		return out;
-	}
-
-	const drillable = $derived(dishes.filter((d) => kindsFor(d).length > 0));
+	/* The page's gates count DISHES only, exactly as before the producers
+	   arrived; the producers join the pool the questions are drawn from. */
+	const drillable = $derived(drillableDishes(dishes));
+	const subjects = $derived(quizSubjects(dishes, house.producers));
 
 	/* One drillable dish would mean ten questions with one possible answer:
 	 * a guaranteed 'Chef-level' verdict that teaches nothing and logs a fake
-	 * clean round. Two is the floor, and the round never asks the same dish
+	 * clean round. Two is the floor, and the round never asks the same subject
 	 * twice in a row while an alternative exists. */
-	let lastTargetId = '';
+	let lastSubjectId = '';
 
 	function ask() {
-		const pool = drillable.filter((d) => d.id !== lastTargetId);
-		const target = pick(pool.length ? pool : drillable);
-		lastTargetId = target.id;
-		quiz = pick(kindsFor(target));
+		const next = askFrom(subjects, lastSubjectId, Math.random);
+		if (!next) return;
+		lastSubjectId = next.subjectId;
+		quiz = next.question;
 		picked = null;
 	}
 
@@ -126,11 +70,11 @@
 		qNum = 0;
 		right = 0;
 		verdict = '';
-		lastTargetId = '';
+		lastSubjectId = '';
 		ask();
 	}
 
-	function answer(o: MenuDish) {
+	function answer(o: Choice) {
 		if (picked) return;
 		picked = o;
 		if (o.id === quiz!.target.id) right++;
@@ -166,7 +110,7 @@
 	function startDeck() {
 		quiz = null;
 		verdict = '';
-		deck = [...dishes].sort(() => Math.random() - 0.5);
+		deck = buildDeck(dishes, house.producers, Math.random);
 		deckIdx = 0;
 		revealed = false;
 	}
@@ -247,8 +191,25 @@
 					</div>
 				</div>
 			{:else if deck}
-				{@const d = deck[deckIdx]}
+				{@const card = deck[deckIdx]}
 				<div class="flash">
+					{#if card.kind === 'producer'}
+						{@const p = card.producer}
+						<!-- "Tell me about {producer}": the story is the answer, in the same
+						     .flash .def a dish card uses, so the paywall treats it the same. -->
+						<p class="eyebrow">Card {deckIdx + 1} of {deck.length} · Tell me about</p>
+						<p class="term">{p.name}</p>
+						{#if revealed}
+							<p class="def">{p.story}</p>
+							<p class="def small">
+								{kindLabel(p.kind)}{#if p.place}, {p.place}{/if}.{#if p.supplies}&nbsp;Supplies
+									{p.supplies}.{/if}
+							</p>
+						{:else}
+							<p class="def">Tell the table about them: where they are, what they supply, and the story. Then flip.</p>
+						{/if}
+					{:else}
+					{@const d = card.dish}
 					<p class="eyebrow">Card {deckIdx + 1} of {deck.length} · {d.section}</p>
 					<p class="term">{d.name}</p>
 					{#if revealed}
@@ -269,6 +230,7 @@
 						</p>
 					{:else}
 						<p class="def">Say the description, the build and the allergens, then flip.</p>
+					{/if}
 					{/if}
 					<div class="flashtools">
 						{#if revealed}
