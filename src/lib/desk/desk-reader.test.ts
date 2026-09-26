@@ -146,13 +146,31 @@ describe("Commander's Palace, the dinner menu", () => {
 		expect(dishOf(file, 'Marseilles to Morocco').description).toMatch(/basil crusted Bellegarde baguette$/);
 	});
 
-	it('joins the tilde and star notes to the dish above them, decoration off and the star kept', () => {
-		// '~le Coup du Milieu~' sits alone above Kiss the Crab; it is not title
-		// case (its first word is not capitalised), so it is a note and not a
-		// heading, and it joins the last row under the heading.
-		expect(dishOf(file, 'Chesapeake Bay Scallop Crudo').description).toMatch(/black sesame sunflower crunch le Coup du Milieu$/);
+	it('reads the framed note over Kiss the Crab as its lead-in, and joins the star note to the soufflé above it', () => {
+		// '~le Coup du Milieu~' sits directly over 'Kiss the Crab' with no blank
+		// between them. It is not title case (its first word is not
+		// capitalised), so it is a note and not a heading, and it is the page
+		// labelling the mid-meal drink UNDER it: le coup du milieu is that
+		// drink. It used to join the crudo above, which named the wrong course.
+		const crudo = dishOf(file, 'Chesapeake Bay Scallop Crudo');
+		expect(crudo.description).toMatch(/black sesame sunflower crunch$/);
+		expect(crudo.raw).not.toContain('Coup du Milieu');
+		expect(crudo.lines).toEqual([6, 7]);
+		const crab = unsureOf(file, 'Kiss the Crab');
+		expect(crab.raw).toBe(
+			'~le Coup du Milieu~\nKiss the Crab\nBlue crab-brown butter washed Zacapa No. 23 Solera, banana oleosacrum, dry vermouth, orange peel'
+		);
+		expect(crab.lines).toEqual([9, 11]);
+		expect(crab.why).toContain('The framed note above the name was read as a lead-in to its description.');
+		// The lead-in opens the description, decoration off, joined with a
+		// space the way the reader joins every line.
+		expect((reReadAs(crab, 'dish') as DeskDish).description).toBe(
+			'le Coup du Milieu Blue crab-brown butter washed Zacapa No. 23 Solera, banana oleosacrum, dry vermouth, orange peel'
+		);
 		// '* Must be ordered 20 minutes in advance' sits two blank lines under
-		// the soufflé, the famous note on the famous pudding.
+		// the soufflé and directly over 'Housemade Ice Cream', and it is the
+		// famous note on the famous pudding: a star-led footnote points back at
+		// the item above it and is never a lead-in for the name under it.
 		const souffle = dishOf(file, 'Creole Bread Pudding Soufflé');
 		expect(souffle.description).toBe(
 			'"The Queen of Creole Desserts" ~Finished tableside with warm whiskey cream * Must be ordered 20 minutes in advance'
@@ -162,6 +180,9 @@ describe("Commander's Palace, the dinner menu", () => {
 		);
 		expect(souffle.lines).toEqual([111, 116]);
 		expect(souffle.why).toContain('A note under the item joined it.');
+		const iceCream = dishOf(file, 'Housemade Ice Cream');
+		expect(iceCream.description).toBe('A daily selection of old-fashioned ice cream served in a Pecan Florentine tuile');
+		expect(iceCream.lines).toEqual([117, 119]);
 	});
 
 	it('leaves the tasting items priceless and low, and never invents a price for them', () => {
@@ -210,7 +231,7 @@ describe("Commander's Palace, the dinner menu", () => {
 		expect([...crab.could].sort()).toEqual(['cocktail', 'dish']);
 		expect(crab.confidence).toBe('low');
 		expect(crab.raw).toBe(
-			'Kiss the Crab\nBlue crab-brown butter washed Zacapa No. 23 Solera, banana oleosacrum, dry vermouth, orange peel'
+			'~le Coup du Milieu~\nKiss the Crab\nBlue crab-brown butter washed Zacapa No. 23 Solera, banana oleosacrum, dry vermouth, orange peel'
 		);
 		expect(crab.why.join(' ')).toMatch(/Could be a (?:dish or a cocktail|cocktail or a dish)/);
 	});
@@ -557,10 +578,127 @@ describe('headings, notes and the caps decision', () => {
 	it('reads a framed line as a heading only when its core is title case or capitals', () => {
 		expect(read('~ Mains ~\nRibs 14').items[0].section).toBe('Mains');
 		expect(read('*** SIDES ***\nChips 4').items[0].section).toBe('SIDES');
-		// '~le Coup du Milieu~' starts with a small word, so it is a note.
+		// '~le Coup du Milieu~' starts with a small word, so it is a note, and
+		// it never becomes a row of its own or a section.
 		const file = read('Scallop Crudo\nthinly sliced scallops\n\n~le Coup du Milieu~\nKiss the Crab\nrum, vermouth');
 		expect(file.items.map((i) => i.name)).toEqual(['Scallop Crudo', 'Kiss the Crab']);
-		expect((file.items[0] as DeskDish).description).toBe('thinly sliced scallops le Coup du Milieu');
+		expect(file.items.map((i) => i.section)).toEqual(['', '']);
+		expect(file.unsorted).toEqual([]);
+	});
+
+	it('reads a framed note directly over a name line as the lead-in of that row, and one before a blank line as a note on the row above', () => {
+		// Over the name, no blank between: the note labels the item under it,
+		// leads its description with the frame off, and its raw and lines
+		// cover the note line. The row above is untouched.
+		const below = read('STARTERS\nScallop Crudo\n12\nthinly sliced scallops\n\n~le Coup du Milieu~\nCrab Toast\n14\nblue crab on brioche');
+		expect(below.items.map((i) => i.name)).toEqual(['Scallop Crudo', 'Crab Toast']);
+		expect(below.items[0]).toMatchObject({ description: 'thinly sliced scallops', raw: 'Scallop Crudo\n12\nthinly sliced scallops', lines: [1, 3] });
+		expect(below.items[1]).toMatchObject({
+			kind: 'dish',
+			description: 'le Coup du Milieu blue crab on brioche',
+			price: { printed: '14' },
+			raw: '~le Coup du Milieu~\nCrab Toast\n14\nblue crab on brioche',
+			lines: [5, 8],
+			confidence: 'high'
+		});
+		expect(below.items[1].why).toContain('The framed note above the name was read as a lead-in to its description.');
+		expect(below.items[0].why).not.toContain('A note under the item joined it.');
+		expect(below.unsorted).toEqual([]);
+
+		// Before a blank line: the note is a footnote on the row above, as
+		// before, and the row under the blank starts clean.
+		const above = read('STARTERS\nScallop Crudo\n12\nthinly sliced scallops\n~le Coup du Milieu~\n\nCrab Toast\n14\nblue crab on brioche');
+		expect(above.items[0]).toMatchObject({
+			description: 'thinly sliced scallops le Coup du Milieu',
+			raw: 'Scallop Crudo\n12\nthinly sliced scallops\n~le Coup du Milieu~',
+			lines: [1, 4]
+		});
+		expect(above.items[0].why).toContain('A note under the item joined it.');
+		expect(above.items[1]).toMatchObject({ name: 'Crab Toast', description: 'blue crab on brioche', raw: 'Crab Toast\n14\nblue crab on brioche', lines: [6, 8] });
+		// A heading, a price line or the block's end under the note does the same.
+		const heading = read('Scallop Crudo\nthinly sliced scallops\n~le Coup du Milieu~\nDESSERTS\nSoufflé\n11');
+		expect(heading.items.map((i) => [i.name, (i as DeskDish).description, i.raw])).toEqual([
+			['Scallop Crudo', 'thinly sliced scallops le Coup du Milieu', 'Scallop Crudo\nthinly sliced scallops\n~le Coup du Milieu~'],
+			['Soufflé', '', 'Soufflé\n11']
+		]);
+		expect(heading.items[1].section).toBe('DESSERTS');
+		const priceLine = read('Scallop Crudo\n~le Coup du Milieu~\n12\nKiss the Crab\n14');
+		expect(priceLine.items.map((i) => [i.name, (i as DeskDish).description, i.price.printed])).toEqual([
+			['Scallop Crudo', 'le Coup du Milieu', '12'],
+			['Kiss the Crab', '', '14']
+		]);
+		const end = read('Scallop Crudo\nthinly sliced scallops\n~le Coup du Milieu~');
+		expect(end.items.map((i) => [i.name, (i as DeskDish).description])).toEqual([['Scallop Crudo', 'thinly sliced scallops le Coup du Milieu']]);
+		// Only the FRAMED shape leads: a star-led footnote directly over the
+		// next name stays on the item above it.
+		const star = read('DESSERTS\nSoufflé\n11\n* Must be ordered 20 minutes in advance\nIce Cream\n10');
+		expect(star.items.map((i) => [i.name, (i as DeskDish).description])).toEqual([
+			['Soufflé', '* Must be ordered 20 minutes in advance'],
+			['Ice Cream', '']
+		]);
+		// And only the TILDE frame: a second star closing the line is a shape
+		// FRAMED accepts, and read as framed the footnote led the ice cream.
+		// The star still points back at the soufflé whatever closes the line.
+		const starClosed = read('DESSERTS\nSoufflé\n11\n* Must be ordered in advance *\nIce Cream\n10');
+		expect(starClosed.items.map((i) => [i.name, (i as DeskDish).description, i.raw])).toEqual([
+			['Soufflé', '* Must be ordered in advance *', 'Soufflé\n11\n* Must be ordered in advance *'],
+			['Ice Cream', '', 'Ice Cream\n10']
+		]);
+		expect(starClosed.items[0].why).toContain('A note under the item joined it.');
+		expect(starClosed.items[1].why).not.toContain('The framed note above the name was read as a lead-in to its description.');
+
+		// A title-case heading under a held note keeps its break above: the
+		// held note line is read past the way a consumed price line is, so
+		// 'Mains' is still the section and the note settles on the row above.
+		// Counted as a line above it, 'Mains' was demoted to a dish that took
+		// the note as its description, and every row under it lost its section.
+		const overHeading = read('Scallop Crudo 9\nthinly sliced scallops\n\n~le Coup du Milieu~\nMains\nRibs 14\nChips 4');
+		expect(overHeading.items.map((i) => [i.section, i.name])).toEqual([
+			['', 'Scallop Crudo'],
+			['Mains', 'Ribs'],
+			['Mains', 'Chips']
+		]);
+		expect(overHeading.items[0]).toMatchObject({
+			description: 'thinly sliced scallops le Coup du Milieu',
+			raw: 'Scallop Crudo 9\nthinly sliced scallops\n~le Coup du Milieu~',
+			lines: [0, 3]
+		});
+		expect(overHeading.items[0].why).toContain('A note under the item joined it.');
+		expect(overHeading.unsorted).toEqual([]);
+
+		// Two framed notes stacked over one name both lead it, in page order and
+		// joined with a single space; the row above is untouched, and the
+		// re-read reads the same lines back to the same lead-in. The crab is a
+		// cocktail on the first reading, so 'rum, vermouth' is its spec and not
+		// its description; read again as a dish the same line is description.
+		const stacked = read('Scallop Crudo\n12\nthinly sliced scallops\n\n~le Coup du Milieu~\n~served chilled~\nKiss the Crab\n14\nrum, vermouth');
+		expect(stacked.items[0]).toMatchObject({ name: 'Scallop Crudo', description: 'thinly sliced scallops', raw: 'Scallop Crudo\n12\nthinly sliced scallops', lines: [0, 2] });
+		expect(stacked.items[1]).toMatchObject({
+			kind: 'cocktail',
+			name: 'Kiss the Crab',
+			description: 'le Coup du Milieu served chilled',
+			price: { printed: '14' },
+			raw: '~le Coup du Milieu~\n~served chilled~\nKiss the Crab\n14\nrum, vermouth',
+			lines: [4, 8]
+		});
+		expect(stacked.items[1].why).toContain('The framed note above the name was read as a lead-in to its description.');
+		expect(stacked.unsorted).toEqual([]);
+		expect((reReadAs(stacked.items[1], 'dish') as DeskDish).description).toBe('le Coup du Milieu served chilled rum, vermouth');
+		// With nothing above them, both still lead the name and nothing is set aside.
+		const stackedAlone = read('~le Coup du Milieu~\n~served chilled~\nKiss the Crab\n14\nrum, vermouth');
+		expect(stackedAlone.items.map((i) => [i.kind, i.name, (i as DeskCocktail).description, i.lines])).toEqual([
+			['cocktail', 'Kiss the Crab', 'le Coup du Milieu served chilled', [0, 4]]
+		]);
+		expect(stackedAlone.unsorted).toEqual([]);
+		// Stacked before a blank line, both are footnotes on the row above, in page order.
+		const stackedAbove = read('Scallop Crudo\n12\nthinly sliced scallops\n~le Coup du Milieu~\n~served chilled~\n\nKiss the Crab\n14');
+		expect(stackedAbove.items[0]).toMatchObject({
+			description: 'thinly sliced scallops le Coup du Milieu served chilled',
+			raw: 'Scallop Crudo\n12\nthinly sliced scallops\n~le Coup du Milieu~\n~served chilled~',
+			lines: [0, 4]
+		});
+		expect(stackedAbove.items[1]).toMatchObject({ name: 'Kiss the Crab', raw: 'Kiss the Crab\n14', lines: [6, 7] });
+		expect(stackedAbove.unsorted).toEqual([]);
 	});
 
 	it('joins a starred note to the item above with the star kept, and sets aside one with nothing above', () => {
@@ -855,7 +993,13 @@ describe('reReadAs, a person choosing the kind', () => {
 	it('reads an unsure row as a cocktail from its own lines, keeping the id and the source', () => {
 		const c = reReadAs(crab, 'cocktail');
 		expect(c).toMatchObject({ kind: 'cocktail', id: crab.id, raw: crab.raw, lines: crab.lines, section: crab.section, name: 'Kiss the Crab' });
-		expect((c as DeskCocktail).description).toBe('Blue crab-brown butter washed Zacapa No. 23 Solera, banana oleosacrum, dry vermouth, orange peel');
+		// The row's lines open on the framed note the first reading took as the
+		// lead-in, and the re-read reads it the same way: the name stays the
+		// name line, and the note still leads the description.
+		expect((c as DeskCocktail).description).toBe(
+			'le Coup du Milieu Blue crab-brown butter washed Zacapa No. 23 Solera, banana oleosacrum, dry vermouth, orange peel'
+		);
+		expect(c.why).toContain('The framed note above the name was read as a lead-in to its description.');
 		expect(c.why).toContain("Read again as a cocktail at a person's request.");
 		expect(c.confidence).toBe('low');
 	});
@@ -863,7 +1007,7 @@ describe('reReadAs, a person choosing the kind', () => {
 	it('reads the same row as a dish, and reads a priced wine back with its pours', () => {
 		const d = reReadAs(crab, 'dish') as DeskDish;
 		expect(d.kind).toBe('dish');
-		expect(d.description).toMatch(/^Blue crab-brown butter/);
+		expect(d.description).toMatch(/^le Coup du Milieu Blue crab-brown butter/);
 		const drinks = read(fixture('commanders-drinks.txt'));
 		const w = reReadAs(cocktailOf(drinks, 'Holy Trinity'), 'wine') as DeskWine;
 		expect(w).toMatchObject({ kind: 'wine', name: 'Holy Trinity', price: { printed: '15' }, descriptors: 'trinity infused gin | benedictine | lime' });
