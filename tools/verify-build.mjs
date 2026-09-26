@@ -168,10 +168,11 @@ check('every mode in the bar has a page', () => {
 	// to PARSE: zero hrefs would otherwise pass this check vacuously and then
 	// assert nothing in the loop below. It is not a claim about how many tabs
 	// the app should have, and the message must not say so: the bar went from
-	// ten to five deliberately, and a gate that reads as "you broke the parser"
-	// on correct code is a gate people learn to edit without reading.
+	// ten to five, then to four (Home, Levels, Library, Mine, the one nav the
+	// three apps share) deliberately, and a gate that reads as "you broke the
+	// parser" on correct code is a gate people learn to edit without reading.
 	assert(
-		hrefs.length >= 5,
+		hrefs.length >= 4,
 		`parsed only ${hrefs.length} modes: either the bar lost a tab, or the scanner ` +
 			'no longer recognises the MODES literal (it needs the exact declaration and single-quoted hrefs)'
 	);
@@ -441,6 +442,18 @@ check('the floor deck installs with the app', () => {
 		.map(rel)
 		.filter((r) => !precached.some((u) => u === '/' + r || u === r));
 	assert(!missing.length, `these hold deck data and are NOT in the precache: ${missing.join(', ')}`);
+	return `${chunks.length} chunk(s), all precached`;
+});
+
+check('the levels data installs with the app', () => {
+	/* The four levels' file is what the home paints its cards from and what
+	   every level page lists; a lazily imported levels.json left out of the
+	   precache would open a home with no word and no figure in a walk-in. Found
+	   by a key only that file carries, since chunk names are content hashes. */
+	const chunks = files.filter((f) => extname(f) === '.js' && readFileSync(f, 'utf8').includes('moduleTerms'));
+	assert(chunks.length, 'no built chunk carries "moduleTerms": levels.json never reached the bundle');
+	const missing = chunks.map(rel).filter((r) => !precached.some((u) => u === '/' + r || u === r));
+	assert(!missing.length, `these hold the levels data and are NOT in the precache: ${missing.join(', ')}`);
 	return `${chunks.length} chunk(s), all precached`;
 });
 

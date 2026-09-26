@@ -44,9 +44,19 @@ describe('the MODES literal stays machine-readable', () => {
 		expect(body.includes('['), 'nested hrefs would be scanned as pages').toBe(false);
 	});
 
-	it('keeps the Today tab as an empty href, not a slash', () => {
+	it('keeps the Home tab as an empty href, not a slash', () => {
 		// verify-build maps '' to index.html and everything else to href.slice(1)
 		// + '.html'. '/' therefore computes '.html', which never exists.
-		expect(body.includes("{ href: '', label: 'Today' }")).toBe(true);
+		expect(body.includes("{ href: '', label: 'Home' }")).toBe(true);
+	});
+
+	/**
+	 * The one nav the three apps share: the same four words in the same order
+	 * (the owner's decision, 2026-09-26). The Ledger and the Codex pin theirs
+	 * the same way, so a tab renamed in one app alone fails that app's gate.
+	 */
+	it('reads Home, Levels, Library, Mine, in that order', () => {
+		const labels = [...body.matchAll(/label: '([^']+)'/g)].map((m) => m[1]);
+		expect(labels).toEqual(['Home', 'Levels', 'Library', 'Mine']);
 	});
 });

@@ -84,21 +84,18 @@
 		return () => ro.disconnect();
 	});
 
-	/* Ordered the way the home bands are, and labelled short enough that the bar
-	   does not wrap on a phone in a prep kitchen: seven long names became seven
-	   words. Nothing was removed, because every one of these is a destination a
-	   cook reaches for mid-service. */
+	/* The one nav the three apps share, the same four words in the same order
+	   (the owner's decision, 2026-09-26): Home is the four levels, Levels is
+	   the level you are on, Library is the reference, Mine is your menu with
+	   your record and tools behind it. Every Learn and Practise door moved
+	   inside the levels or behind those four. `/level` is a literal href so the
+	   build verifier can resolve it to a page: it forwards to the level the
+	   record says you are on. */
 	const MODES = [
-		{ href: '', label: 'Today' },
-		{ href: '/learn', label: 'Learn' },
-		{ href: '/practise', label: 'Practise' },
-		{ href: '/service', label: 'Service' },
+		{ href: '', label: 'Home' },
+		{ href: '/level', label: 'Levels' },
 		{ href: '/recipes', label: 'Library' },
-		/* The house's own menu, beside the Library rather than a tile inside a
-		   home band: the Library is the 1,844 dishes somebody else wrote, this is
-		   the handful this kitchen actually sends, and a cook holds the two as a
-		   pair. */
-		{ href: '/menu', label: 'Menu' }
+		{ href: '/menu', label: 'Mine' }
 	];
 
 	/**
@@ -108,16 +105,15 @@
 	 * there would assert on files that can never exist.
 	 *
 	 * Order is longest-prefix-first where two tabs share a stem: /menu/quiz is
-	 * Practise (it is assessed) while /menu itself is the Menu tab, so the quiz
-	 * must be tested first or Menu would claim it.
+	 * Mine (the house's own menu, drilled) and so is everything under /menu, so
+	 * Mine is tested first; the study and practice routes are the Levels tab's,
+	 * because that is where their doors are now.
 	 */
 	const OWNS: Array<[string, string[]]> = [
-		['/practise', ['/practise', '/repertoire', '/menu/quiz']],
-		['/menu', ['/menu']],
-		// /coverage is Service: it is the question a chef asks at four o'clock,
-		// beside the pass, not something they are being taught.
-		['/service', ['/service', '/coverage']],
-		['/learn', ['/learn', '/study', '/technique', '/palate', '/safety']],
+		// the firing drill reads the house's own pass plan, so it is Mine's and
+		// is tested before /practise, which the calibration bench keeps for Levels
+		['/menu', ['/menu', '/repertoire', '/coverage', '/practise/firing']],
+		['/level', ['/level', '/study', '/technique', '/palate', '/safety', '/service', '/practise']],
 		['/recipes', ['/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry']]
 	];
 
@@ -281,9 +277,9 @@
 				aria-current={here ? 'page' : undefined}
 				href="{base}{m.href || '/'}"
 			>
-				{m.label}{#if m.href === '/service' && session.menuCount}<span class="pill"
+				{m.label}{#if m.href === '/menu' && session.menuCount}<span class="pill"
 						>{session.menuCount}</span
-					>{:else if m.href === '/practise' && dueCount}<span class="pill">{dueCount}</span>{/if}
+					>{:else if m.href === '/level' && dueCount}<span class="pill">{dueCount}</span>{/if}
 			</a>
 		{/each}
 		<button
