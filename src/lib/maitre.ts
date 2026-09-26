@@ -4,7 +4,7 @@
  *
  * THE CLIENT IS ONLINE ONLY AND IS NEVER IN THE BUNDLE. The client is
  * static/shared/oot-maitre.js, a classic script the three apps share
- * (canonical here, mirrored byte for byte to the hub), and on its own it is
+ * (canonical here, to be mirrored byte for byte to the hub), and on its own it is
  * about a third of the precache headroom. So it is not imported, not precached
  * (vite.config.ts globIgnores it) and not fetched until a door is pressed with
  * the device online. This module is the only place that fetches it, and
@@ -28,8 +28,10 @@
  * online. hasKey() reads the client's own slot ('oot-maitre-v1') for the one
  * field it needs and returns a boolean, never the key: the same question
  * settings.hasKey() answers, answered without fetching the client, so a
- * family device with no key never fetches it at all and its doors collapse
- * to one chip that says so. The slot name is the one coupling to the client
+ * family device with no key never fetches it on load: its doors collapse to
+ * one chip, and that chip fetches it only to draw her key screen, which
+ * still sends nothing to Anthropic (tests/maitre.spec.ts pins the one fetch
+ * and the zero requests). The slot name is the one coupling to the client
  * this module carries, and it is the plan's.
  *
  * NEVER THE KEY. Nothing here returns it, logs it or passes it on: the client

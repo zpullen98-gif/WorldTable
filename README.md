@@ -85,8 +85,9 @@ as an oracle across all 970 recipes, and asserts the rewrite agrees.
 SvelteKit 2 · Svelte 5 runes · TypeScript · `adapter-static` · `@vite-pwa/sveltekit`
 
 Four runtime dependencies: `minisearch`, `idb-keyval`, and two self-hosted font
-families. No CDN, no analytics, no third-party request of any kind: a build
-check enforces it.
+families. No CDN, no analytics, and no third-party request unless you bring
+your own Anthropic key and press a button that says what it sends (the
+optional Maître d'); a build check enforces the host allowlist.
 
 Deploys itself to GitHub Pages on every push to `master`
 (`.github/workflows/pages.yml`), gated behind the data verification, the unit

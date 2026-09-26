@@ -18,7 +18,8 @@
   The client is fetched by the first door on the page that needs it (a key
   and a network, on mount: the estimate line cannot be printed without her
   price table) and shared by every other through src/lib/maitre.ts. A device
-  with no key never fetches it.
+  with no key never fetches it on load; its one chip fetches it to draw her
+  key screen, which sends nothing.
 
   The work itself is the parent's: `run` receives the client and does the
   request, adopts the result and returns the sentence for the status line.

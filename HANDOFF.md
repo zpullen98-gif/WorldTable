@@ -29,11 +29,11 @@ at **$49.99/month, unlimited staff, one shared login**.
 
 | | |
 |---|---|
-| WorldTable | branch `dish-standards`. The live HEAD is whatever `git log -1` prints; as of 19 Sep 2026 the Floor Deck (300 of 300) and Producers in My Menu are committed and pushed |
+| WorldTable | branch `dish-standards`. The live HEAD is whatever `git log -1` prints; as of 26 Sep 2026 the Menu Desk and the Maître d' are committed at `ea3253d` (five commits ahead of origin, not yet pushed); the Floor Deck (300 of 300) and Producers in My Menu are committed and pushed |
 | OutsideOfTime | branch `main`, HEAD `71e43b27a`, tree clean, **no git remote — never pushed** |
 | Tests | **1,262 unit** (72 files) · **192 e2e** (19 Sep 2026): the whole suite is green |
-| Gates | `verify:data` 55/55 · `build:data` all pass · `verify:derived` clean · `verify:build` **22/22** |
-| Precache | Cap **2.70 MB** gzipped. It moved from 2 MB to 2.5 MB when the corpus grew past 970 recipes, from 2.5 to 2.65 on 2026-09-19 by the owner's decision for the Floor Deck (a staff-training deck that must install with the app; at that raise the precache stood at 2,619,178 bytes), and to 2.70 the same day when three written sections showed the full deck at its written depth would finish within a few KB of 2.65 and the owner chose depth over trimming. `tools/verify-build.mjs` carries both arguments. The live figure is whatever `npm run verify:build` prints; no copy of it is kept here, because every copy went stale |
+| Gates | `verify:data` 55/55 · `build:data` all pass · `verify:derived` clean · `verify:build` **22/22** (19 Sep; a 23rd check, "the Maître d' client ships and is NOT precached", arrived with `1fbf110`) |
+| Precache | Cap **2.70 MB** gzipped. It moved from 2 MB to 2.5 MB when the corpus grew past 970 recipes, from 2.5 to 2.65 on 2026-09-19 by the owner's decision for the Floor Deck (a staff-training deck that must install with the app; at that raise the precache stood at 2,619,178 bytes), and to 2.70 the same day when three written sections showed the full deck at its written depth would finish within a few KB of 2.65 and the owner chose depth over trimming. `tools/verify-build.mjs` carries both arguments. At `ea3253d` (26 Sep 2026, the Menu Desk and the Maître d' in) it printed **2.670 MB**, about 30 KB of headroom: a new route is not affordable, and the elastic part is the desk's wine vocabulary (`CLAUDE.md`, "The Menu Desk and the Maître d'"). The live figure is whatever `npm run verify:build` prints; the copy here is dated because every undated copy went stale |
 | Routes | 35 pages · Derived JSON | 25 files (`floor-deck*.json` joined) |
 | Deploy | `table/` re-synced for the 3 Sep audit pass, at `4942968`. See below. |
 
@@ -63,6 +63,34 @@ nuts, fish, shellfish (and alcohol). Sulphites stay unscreened FOR A REASON:
 the declaration threshold is a concentration, not an ingredient name, and a
 lexical rule would be the confident wrong answer. 60 recipes carry no flag and
 the block renders over every one of them saying what was not looked for.
+
+**The Menu Desk (26 Sep 2026, `ea3253d`).** The `/menu` import panel reads a
+venue's whole menu, pasted, photographed or linked, into one desk file
+(`oot-menu-desk` v1) of dishes, wines and cocktails, offline and free. The
+review table shows the kind on every row, says unsure rather than guess, and
+hands the wines and cocktails to the Codex and the Ledger through the
+`oot-menu-desk-v1` inbox on the shared origin, or as a downloaded desk file
+anywhere else. `src/lib/desk` is the source; `tools/port-desk.mjs` generates
+both wings' `js/menu-desk.js` and `tools/check-port.mjs` proves parity. The
+desk file is a draft, never a store transport: `.wtjson` stays the only
+portability contract. The doctrines are unchanged: no allergen field on any
+shape, no invented price, quantity or spelling, section names as printed,
+`raw` on every row.
+
+**The Maître d' (same commit).** An optional second engine, online only, on
+the owner's own Anthropic key pasted once per device into `oot-maitre-v1`
+(never exported, never namespaced by profile). `static/shared/oot-maitre.js`
+is one classic script, fetched by the first door that needs it, never
+imported, not precached, the only shipped file naming `api.anthropic.com`,
+to be mirrored byte for byte to the hub at Publish B
+(`build-integrity.test.ts` skips until that copy exists, then fails on
+drift). She reads a menu into the same desk file (every price checked
+against the page or blanked), writes the guest line and
+the why on house dishes as marks `by: 'maitre'` until a person keeps them
+(`MenuDish.maitre`, settled by `mergeMaitre` in both merges), and answers Ask
+the Maître d' on the whole house. Only kept guest lines reach the printed
+guest menu. A device with no key gets one chip per door and sends nothing.
+The cost is estimated before every run against a monthly cap the owner sets.
 
 ---
 
@@ -446,7 +474,31 @@ in the app).
 
 ## What's left, ranked
 
-1. **The 62 staleness/maintenance findings from the 3 Sep audit, deferred on
+1. **Push `dish-standards`.** `ea3253d` and the four commits under it are
+   local only.
+2. **The Ledger and Codex desks land in the suite through Phase C.** Both are
+   committed in their own repos (Ledger `6e1c97f`, Codex `2621fbf`, 26 Sep
+   2026: the generated `js/menu-desk.js` named in each `index.html` and
+   `sw.js` ASSETS, the desk screens, her doors and the `maitre` carry).
+   Nothing of it is in the monorepo yet: no `ledger/js/menu-desk.js`, no
+   `codex/js/menu-desk.js`, no `shared/oot-maitre.js`, `SHARED_V` still 30,
+   no `OOT.loadShared` in `oot-config.js`. One follow-up from the build: a
+   framed note directly ABOVE a name with no blank between ("~le Coup du
+   Milieu~" then "Kiss the Crab") labels the item below, and the reader
+   joins it above today; add the case and re-pin the Commander's fixture.
+3. **Publish B in the monorepo sets the in-force date.** Publish A is live:
+   `privacy.html#notice`, the hub's third footer link ("Notice, 25 September
+   2026"), Anthropic in `VENDORS` with its selftest. Publish B ships the
+   mirror `OutsideOfTime/shared/oot-maitre.js` (identical bytes) and the
+   injector's drift check, `OOT.loadShared`, `SHARED_V` 30 to 31 with every
+   `?v=` and CACHE, the wing copies, the `table/` rebuild, and changes the
+   notice wording to "From {date}". Until then the Maître d' exists in source
+   only. Plan: `~/.claude/plans/i-want-to-improve-curious-pebble.md`.
+4. **The first live run settles two API combinations** (`output_config.format`
+   beside `web_fetch`; `web_fetch` on Haiku 4.5). The client's fallbacks
+   remember the answer per device in `settings.fetchMode`; record it in
+   memory and in `CLAUDE.md` when it is known.
+5. **The 62 staleness/maintenance findings from the 3 Sep audit, deferred on
    purpose** (see above). Almost all of it is one shape: a document or a code
    comment stating a corpus figure — 970 recipes, 94 chapters — that
    `verify-build.mjs` now measures at 1,844 and 171. This document's own
@@ -454,11 +506,11 @@ in the app).
    entry above 3 Sep, carries whatever number was true on the date it was
    written. Worth doing as one pass grouped by file rather than by finding,
    since the fix is almost always the same edit repeated.
-2. A handful of dead-code and prose nits from the same audit, filed but not
-   itemised here — low value, batch with #1.
+6. A handful of dead-code and prose nits from the same audit, filed but not
+   itemised here: low value, batch with #5.
 
 Everything from the worklist before the 30 Aug deep pass shipped, and the
-deep pass itself is applied. What remains beyond the two items above is the
+deep pass itself is applied. What remains beyond the items above is the
 standing product questions below, and whatever the next session measures.
 
 ## Open questions for the owner

@@ -507,6 +507,122 @@ travelling and a stale "From ..." credit told to a guest is the worse failure;
 `removeDish` prunes. Nothing is seeded. Drill the Menu asks about producers
 only at four or more (`src/lib/menu-quiz.ts`, `PRODUCER_QUIZ_MIN`).
 
+## The Menu Desk and the Maître d'
+
+The `/menu` import panel (`src/lib/components/MenuImport.svelte`) is The Menu
+Desk: a venue's whole menu in once, by paste, photograph or address, read by
+an offline reader (`src/lib/desk/`) into ONE desk file of dishes, wines and
+cocktails, shown in a review table. Dishes stay here; wines and cocktails go
+to the Codex and the Ledger. The Maître d' is a second engine behind the same
+desk, online only, on the owner's own Anthropic key. The rules that will bite:
+
+- **The desk file is a DRAFT read into a review table, never a store
+  transport.** `oot-menu-desk` v1 (`desk-file.ts`) is what the reader returns,
+  what the inbox holds and what "Import a desk file" opens, and the only thing
+  any app may do with it is put its rows on the table for a person to adopt
+  one by one through `house.addDish`. The page's `doImport` sniffs
+  `format === 'oot-menu-desk'` BEFORE `parseImport`, so a desk file can never
+  reach `house.adopt`. `.wtjson` stays the one portability contract
+  (`FORMAT_VERSION` 3, untouched). "No CSV importer, ever" stands.
+- **The reader never produces allergens and never invents a price, a quantity
+  or a spelling.** No shape under `src/lib/desk` has an allergen field and the
+  key-set tests pin it; `marks` is the (v) and the [GF] the menu PRINTED. A
+  price is `DeskPrice.printed`, exactly as printed, and every `parts[].amount`
+  is a substring of it; "3/4 oz lime" is one spec part and never "4 oz";
+  "glazeover" and "9.S" stay as they arrived. Section names come back as
+  printed, capitals and all. Every row keeps `raw` (the verbatim lines) and
+  `lines`; a line the reader cannot place goes to `unsorted` with a reason. A
+  price that does not occur in `raw` is blanked on the table and flagged in
+  words (`priceInRaw`, `desk-share.ts`), whichever engine read it.
+  `menu-parse.ts` is a thin adapter over `readMenu`; `menu-parse.test.ts` is
+  the regression floor and `desk-reader.test.ts` pins the stacked menus that
+  broke the old parser.
+- **The inbox slot `oot-menu-desk-v1` is read in `onMount` only and never
+  writes a record on load.** It is how the Codex and the Ledger find "9 wines
+  waiting": `/table`, `/codex` and `/ledger` share one origin and its
+  localStorage. Not in `oot-profiles.js` BASES, never exported, 256 KB cap; a
+  draft older than 30 days is deleted on read (a draft, never a record). There
+  is no localStorage in the prerender pass, the `ocrPlan()` rule, so read it
+  nowhere earlier. Every `desk-inbox.ts` function takes its Storage as an
+  argument, so the merge, cap, expiry and taken rules are tested under Node
+  with a Map.
+- **`src/lib/desk` is the source of truth; `js/menu-desk.js` in the Ledger and
+  the Codex is GENERATED.** `node tools/port-desk.mjs` transpiles the seven
+  modules into one IIFE for both wings; `node tools/check-port.mjs` runs the
+  fixtures through both files and the TypeScript, exits 1 on any difference,
+  and proves the two files differ in their first line only. Never hand-edit a
+  port: the three hand copies of the old parser drifted on exactly one line (a
+  five-figure bare price), and a hand edit is that drift with a generator's
+  name on it. Run both after any change under `src/lib/desk`.
+- **The client `static/shared/oot-maitre.js` is loaded lazily, never imported,
+  and NOT precached.** A classic script that installs `window.OOT.maitre`.
+  `src/lib/maitre.ts` is the only thing that fetches it (a script tag, by the
+  first door on the page with a key on the device and the network up; a
+  device with no key never fetches it on load, and its one chip fetches it
+  only to draw her key screen, which still sends nothing to Anthropic:
+  `tests/maitre.spec.ts` pins the one fetch and the zero requests) and reads
+  `window.OOT.maitre` at call time, never captured. `vite.config.ts`
+  `globIgnores` names it and `verify-build.mjs` proves it ships and is not in
+  the manifest. An eager import would put it in the `/menu` chunk, counted
+  against the cap, and break the page offline for everyone. It is the only
+  SHIPPED file allowed to name `api.anthropic.com` (`HOST_ALLOWANCE` in
+  verify-build.mjs); a second place is a second place a menu can be sent
+  from.
+- **The client is mirrored byte for byte to `OutsideOfTime/shared/oot-maitre.js`.**
+  `build-integrity.test.ts` fails on drift once that mirror exists (it skips,
+  with the reason in its name, while the checkout is absent; the mirror is
+  not written yet, it lands with Publish B, and the hub's
+  `inject-oot-bar.mjs --check` must fail the same way rather than overwrite).
+  Copy the canonical file over; never edit the mirror.
+- **The key slot `oot-maitre-v1` is the device's.** One key for the whole
+  origin, never namespaced by profile, never in any export or desk file
+  (`tests/maitre.spec.ts` "no file this app writes carries the key" proves
+  it), never returned by the api (`settings.get()` is the record without its
+  key; `hasKey()` in maitre.ts reads the slot for one boolean and nothing
+  else). The slot name in maitre.ts is the one coupling to the client.
+- **Her marks: kept means `by === 'person'`.** `MenuDish.maitre` is a
+  `MaitreBlock` (`persistence/state.ts`): six marks (`ingredientsNamed`,
+  `say`, `guest`, `why`, `pairs`, `origin`), each `{ value, by, ts, model? }`,
+  plus `kept` notes from the chat. Keep and Edit set `by: 'person'`;
+  everything the client hands back arrives `by: 'maitre'` (`maitre-adopt.ts`).
+  An unkept mark reaches no drill, no guest menu and no deck: `/menu/guest`
+  prints a guest line only when `by === 'person'`, and the drill and the deck
+  read no marks at all. Any new reader of the block gates the same way.
+  `normaliseMaitre` drops any key the shape does not name, `allergens` above
+  all, so no file and no model can smuggle one in through her field.
+- **Both merges NAME the block through `mergeMaitre`.** `mergeSessions`
+  (state.ts) and `adoptImport` (house.ts) both call
+  `withMaitre(winner, mergeMaitre(mine?.maitre, d.maitre))`, pinned by
+  `deep-pass.test.ts`. Per field a person's mark beats hers whatever the
+  stamps, then the newer `ts`, tie mine; `kept` unions on `ts|q`. The marks
+  never ride the dish winner: a colleague's later edit to a description would
+  erase an answer somebody kept.
+- **`saveDish()` carries `maitre`.** It rebuilds the dish field by field from
+  the form and reads `maitre` back off the stored record
+  (`/menu/+page.svelte`); leave that out and the next edit drops every mark,
+  the trap that once lost `Prep.station`.
+- **The precache is nearly full; the live figure is whatever
+  `npm run verify:build` prints, never a number in prose.** A new route is
+  not affordable. The elastic part is the wine vocabulary in `desk-vocab.ts`
+  (`DESK_REGIONS`, `DESK_GRAPES`): it can move to a fetched
+  `static/desk-vocab.json` because the reader is correct without it (an
+  unread descriptor part stays verbatim and the row is low). Never trim the
+  reader or the sorter.
+- **Two API combinations the docs do not state; the client carries the
+  fallbacks.** `output_config.format` beside `web_fetch` in one request, and
+  `web_fetch` on Haiku 4.5 at all. A 400 on the one-step address read sets
+  `settings.fetchMode = 'two-step'` (fetch the page, then read the text on the
+  reader model); a 400 on the fetch step alone sets `'two-step-sonnet'` (the
+  fetch step moves to Sonnet 5). Remembered per device in the key slot; the
+  first live run settles them, so record the answer when it does. Nothing
+  sends `temperature` (a 400 on Opus 5 and Sonnet 5).
+- **Playwright never calls Anthropic.** Every spec that touches her
+  `page.route`s `**/api.anthropic.com/**` with a canned SSE stream, or aborts
+  it; CI has no key and must never need one. `tests/helpers.ts` `TEST_KEY` has
+  the shape of a key and none of its bytes. `src/lib/maitre.test.ts` evaluates
+  the client in `node:vm` with a fake fetch, so no unit test reaches the
+  network either.
+
 ## The Floor Deck: a staff-training deck of menu words
 
 The owner brought a hand-filled restaurant training packet (about 159 terms in
