@@ -321,11 +321,15 @@ test('the bulk send moves the ticked rows to the cellar, the bar, or out', async
 	await expect(page.getByRole('button', { name: 'Add 2 dishes to the menu' })).toBeVisible();
 });
 
-test('the Service page has a tile to the desk, and the engine row names both engines in order', async ({ page }) => {
-	await goto(page, '/service');
-	await expect(page.getByRole('link', { name: /The Menu Desk/ })).toHaveAttribute('href', /\/menu#desk$/);
+test('the desk has its own anchor on My Menu, and the engine row names both engines in order', async ({ page }) => {
+	// The Service hub's tile to the desk went with the hub (the four levels,
+	// 2026-09-26): the desk is Mine's, and the home's Mine door and the Today
+	// line's "Look them over" both land on its own anchor, #desk.
+	await goto(page, '/');
+	await expect(page.locator('nav.quiet .door').nth(3)).toHaveAttribute('href', /\/menu$/);
 
 	await goto(page, '/menu');
+	await expect(page.locator('#desk')).toHaveCount(1);
 	const engines = page.locator('.engines .engine');
 	await expect(engines.nth(0)).toContainText('Read it here');
 	await expect(engines.nth(0)).toContainText('On this device. Free, instant, works offline.');

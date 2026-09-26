@@ -30,9 +30,12 @@ const VIEWS = [
 	{ path: '/pantry', name: 'pantry match' },
 	{ path: '/study', name: 'path of study' },
 	{ path: '/safety', name: 'food safety' },
-	{ path: '/learn', name: 'learn hub' },
-	{ path: '/practise', name: 'practise hub' },
-	{ path: '/service', name: 'service hub' },
+	// The two hubs (/learn, /practise) were retired for the four levels; their
+	// doors live on the level pages now, which are swept in their place.
+	{ path: '/level', name: 'levels forwarder' },
+	{ path: '/level/1', name: 'level page' },
+	{ path: '/level/1/test', name: 'level test' },
+	{ path: '/service', name: 'service track' },
 	{ path: '/service/srv-room', name: 'service track module' },
 	{ path: '/service/drill', name: 'service drill' },
 	{ path: '/service/deck', name: 'floor deck landing' },
@@ -149,6 +152,10 @@ const SEEDED: Array<{ path: string; name: string; ready: string; seed?: (page: P
 	{ path: '/repertoire', name: 'repertoire with dishes cooked', ready: '.rows li' },
 	{ path: '/menu/costing', name: 'costing sheet with dishes costed', ready: '.quadrants li' },
 	{ path: '/coverage', name: 'coverage board with a cooked log', ready: '.people li' },
+	/* The home with a record on it: the level cards' word and figure, the
+	   current card's "Your level", and Today's line all wait for the session
+	   and the levels file; the empty sweep sees four cards with no figure. */
+	{ path: '/', name: 'home with a record on it', ready: '.level.on' },
 	/* The desk with a share on it: the review table, its Kind selects and its
 	   flags only exist once something has been read, and the empty sweep above
 	   sees the doors and nothing else. */

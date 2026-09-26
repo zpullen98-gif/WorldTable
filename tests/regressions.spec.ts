@@ -64,13 +64,20 @@ test('a chapter page has its own h1, and the home dashboard does not skip h2', a
 	await expect(page.getByRole('heading', { level: 1, name: 'The Library' })).toBeVisible();
 	await expect(page.getByRole('heading', { level: 2, name: 'All chapters' })).toBeVisible();
 
+	// The home is the four level cards and one quiet row of four doors, under
+	// the masthead's h1 and nothing else (the owner's decision, 2026-09-26):
+	// no h2, no h3, no band. The cards and the doors are links, not headings.
 	await goto(page, '/');
 	const h1 = page.getByRole('heading', { level: 1 });
 	await expect(h1).toHaveCount(1);
-	for (const name of ['Today', 'Learn', 'Practise', 'Record', 'The library']) {
-		await expect(page.getByRole('heading', { level: 2, name })).toBeVisible();
-	}
+	await expect(page.getByRole('heading', { level: 2 })).toHaveCount(0);
 	await expect(page.getByRole('heading', { level: 3 })).toHaveCount(0);
+	await expect(page.locator('section.levels .level')).toHaveCount(4);
+	const doors = page.locator('nav.quiet .door');
+	await expect(doors).toHaveCount(4);
+	for (const [i, name] of ['Today', 'Library', 'Record', 'Mine'].entries()) {
+		await expect(doors.nth(i).locator('.door-name')).toHaveText(new RegExp(`^${name}`));
+	}
 });
 
 test('L2506 — typing in the Lexicon search keeps recipe cross-links', async ({ page }) => {

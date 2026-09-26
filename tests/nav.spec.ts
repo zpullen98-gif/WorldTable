@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { goto } from './helpers';
+import { goto, seedSession } from './helpers';
 
 /**
- * The five tabs, and the reason this file exists.
+ * The four tabs, and the reason this file exists.
  *
  * The rest of the suite is structurally BLIND to a dead route. tools/serve.mjs
  * answers any unknown path with shell.html at status 200 — that is deliberate,
@@ -15,14 +15,16 @@ import { goto } from './helpers';
  * cannot see is a page that exists and renders the wrong thing — a tab pointing
  * at a route whose component throws, or at SvelteKit's error page. So each tab
  * is asserted to render its own H1 here.
+ *
+ * Home, Levels, Library, Mine: the one nav the three apps share, in that order
+ * (the owner's decision, 2026-09-26). The Levels tab is a literal href that
+ * forwards to the level the record says you are on.
  */
 const TABS = [
-	{ href: '/', label: 'Today', h1: /The World|Today/i },
-	{ href: '/learn', label: 'Learn', h1: /^Learn$/ },
-	{ href: '/practise', label: 'Practise', h1: /^Practise$/ },
-	{ href: '/service', label: 'Service', h1: /^Service$/ },
+	{ href: '/', label: 'Home', h1: /The World/i },
+	{ href: '/level', label: 'Levels', h1: /Commis|Your level/ },
 	{ href: '/recipes', label: 'Library', h1: /^The Library$/ },
-	{ href: '/menu', label: 'Menu', h1: /^My Menu$/ }
+	{ href: '/menu', label: 'Mine', h1: /^My Menu$/ }
 ];
 
 for (const tab of TABS) {
@@ -36,9 +38,24 @@ for (const tab of TABS) {
 	});
 }
 
-test('the bar shows exactly six tabs', async ({ page }) => {
+test('the bar shows exactly four tabs, in the shared order', async ({ page }) => {
 	await goto(page, '/');
-	await expect(page.locator('.modetab')).toHaveCount(6);
+	const tabs = page.locator('.modetab');
+	await expect(tabs).toHaveCount(4);
+	for (const [i, label] of ['Home', 'Levels', 'Library', 'Mine'].entries()) {
+		await expect(tabs.nth(i)).toHaveText(new RegExp(`^${label}`));
+	}
+});
+
+/**
+ * The Levels tab means "the level you are on": a fresh record lands on Level I,
+ * a record that has met Level I lands on Level II. Never a list of four (the
+ * home is that) and never a stored choice.
+ */
+test('the Levels tab forwards to the lowest level not yet met', async ({ page }) => {
+	await goto(page, '/level');
+	await expect(page).toHaveURL(/\/level\/1$/);
+	await expect(page.locator('h1')).toHaveText(/Commis/);
 });
 
 /**
@@ -47,34 +64,36 @@ test('the bar shows exactly six tabs', async ({ page }) => {
  */
 test.describe('exactly one tab owns each route', () => {
 	const ROUTES = [
-		['/', 'Today'],
-		['/learn', 'Learn'],
-		['/study', 'Learn'],
-		['/technique', 'Learn'],
-		['/palate', 'Learn'],
-		['/safety', 'Learn'],
-		['/practise', 'Practise'],
-		['/repertoire', 'Practise'],
-		['/menu/quiz', 'Practise'],
-		['/practise/firing', 'Practise'],
-		['/service', 'Service'],
-		['/service/deck', 'Service'],
-		['/service/deck/study', 'Service'],
-		['/service/deck/test', 'Service'],
-		['/service/deck/say', 'Service'],
-		['/service/deck/lineup', 'Service'],
-		['/menu', 'Menu'],
-		['/menu/costing', 'Menu'],
-		// Every sheet under /menu belongs to the Menu tab, which is the point of
-		// the tab: the house's own menu, its costs, its preps and its waste in
-		// one place. /menu/quiz is the single exception above, claimed by
-		// Practise because it is assessed, and tested first for exactly that.
-		['/menu/preps', 'Menu'],
-		['/menu/producers', 'Menu'],
-		['/menu/prep-board', 'Menu'],
-		['/menu/waste', 'Menu'],
-		['/menu/guest', 'Menu'],
-		['/coverage', 'Service'],
+		['/', 'Home'],
+		['/level/1', 'Levels'],
+		['/level/1/test', 'Levels'],
+		['/study', 'Levels'],
+		['/technique', 'Levels'],
+		['/palate', 'Levels'],
+		['/safety', 'Levels'],
+		['/service', 'Levels'],
+		['/service/deck', 'Levels'],
+		['/service/deck/study', 'Levels'],
+		['/service/deck/test', 'Levels'],
+		['/service/deck/say', 'Levels'],
+		['/service/deck/lineup', 'Levels'],
+		['/service/drill', 'Levels'],
+		['/practise/calibrate', 'Levels'],
+		// the firing drill reads the house's own pass plan: Mine's, from My Menu
+		['/practise/firing', 'Mine'],
+		['/menu', 'Mine'],
+		['/menu/costing', 'Mine'],
+		// Every sheet under /menu belongs to Mine, which is the point of the
+		// tab: the house's own menu, its costs, its preps, its waste, its drill,
+		// and the two boards that read the record, in one place.
+		['/menu/quiz', 'Mine'],
+		['/menu/preps', 'Mine'],
+		['/menu/producers', 'Mine'],
+		['/menu/prep-board', 'Mine'],
+		['/menu/waste', 'Mine'],
+		['/menu/guest', 'Mine'],
+		['/repertoire', 'Mine'],
+		['/coverage', 'Mine'],
 		['/recipes', 'Library'],
 		['/recipe/cacio-e-pepe', 'Library'],
 		['/chapter/italian', 'Library'],
@@ -104,12 +123,8 @@ test.describe('exactly one tab owns each route', () => {
  * into individual family recipes, which do not exist until the feature has been
  * used, and /pantry has none at all until enough ingredients are ticked.
  *
- * A sixth mode tab is still not the answer, though the reason has changed. It
- * used to be that the bar could not hold one: it clipped Service and Library at
- * every common iPhone width. The bar wraps now, so a sixth tab would fit — it
- * would simply cost another row of sticky chrome on a phone. The reason left is
- * the real one: these three are pages the Library tab already OWNS, not modes,
- * and promoting a shelf to a mode says the opposite.
+ * They are pages the Library tab already OWNS, not modes, and promoting a
+ * shelf to a mode says the opposite.
  */
 test('the Library links to the pages its tab claims', async ({ page }) => {
 	await goto(page, '/recipes');
@@ -145,23 +160,17 @@ for (const [route, title] of [
 /**
  * The coverage board, which nothing linked to at all.
  *
- * Measured over all 2179 built pages it had ZERO inbound links, the only route
- * in the app with none. Its one authored link sits behind `{#if manager}` on
- * /practise, and `manager` is false unless the shared Outside Of Time layer is
- * present AND this device has been opted in — a switch that lives in a
- * different wing. Meanwhile the layout's OWNS map lights the SERVICE tab on it,
- * so the tab that claimed the page was the one place that never linked to it,
- * and the page's own exit went to Practise instead.
- *
- * Ungated on the Service hub is safe: there is one record per device now, so
- * the board is simply this device's own stations. It used to carry a line
- * saying the device was not a manager's, which was true then and would be
- * said to everybody now.
+ * Measured over all 2179 built pages it once had ZERO inbound links, the only
+ * route in the app with none. The Service hub carried the entrance for a
+ * while; since the four levels the board is Mine's (it reads this device's
+ * record) and My Menu carries the door, so the way in, the way out and the
+ * lit tab all agree.
  */
-test('the coverage board can be reached and left', async ({ page }) => {
-	await goto(page, '/service');
+test('the coverage board can be reached from My Menu and left', async ({ page }) => {
+	await seedSession(page);
+	await goto(page, '/menu');
 	const link = page.locator('a[href$="/coverage"]');
-	await expect(link, 'Service must offer the coverage board').toHaveCount(1);
+	await expect(link, 'My Menu must offer the coverage board').toHaveCount(1);
 
 	await link.click();
 	await expect(page.locator('h1')).toHaveText(/Coverage/i);
@@ -171,29 +180,23 @@ test('the coverage board can be reached and left', async ({ page }) => {
 
 	// Way out, and it agrees with the tab that is lit.
 	const back = page.locator('.back a');
-	await expect(back).toHaveText('Back to Service');
+	await expect(back).toHaveText('Back to My Menu');
 	await back.click();
-	await expect(page.locator('h1')).toHaveText('Service');
+	await expect(page.locator('h1')).toHaveText('My Menu');
 });
 
 /**
  * The bar at phone widths, which is where it was broken.
  *
  * Measured before the fix at 375 CSS px: clientWidth 375 against scrollWidth
- * 644. Today 74, Learn 73, Practise 114, Service 104, Library 84 is 449px of
- * tabs, plus 20 of gaps and the 44px indent the Outside Of Time chip needs, so
- * 513px of bar in a 375px box. Only THREE tabs were visible at 320, 375, 390
- * and 414. Worse, on /recipes the lit Library tab sat at x 425 to 508 with
- * scrollLeft pinned at 0 — the bar could not show a cook the tab they were
- * standing on, and nothing scrolled it there.
+ * 644, and only THREE tabs visible at 320, 375, 390 and 414. Worse, on
+ * /recipes the lit Library tab sat at x 425 to 508 with scrollLeft pinned at
+ * 0 — the bar could not show a cook the tab they were standing on, and
+ * nothing scrolled it there.
  *
  * The rest of the suite runs at the Playwright default of 1280 and is blind to
- * all of it, which is why it survived this long.
- *
- * Three rejected fixes are recorded in +layout.svelte. The short version:
- * pulling the toggle out buys zero visible tabs because it sits after Library;
- * auto-scrolling the active tab into view hides Today instead; and tightening
- * alone cannot seat five tabs at 320 above the 44px touch floor.
+ * all of it, which is why it survived this long. Four tabs fit more easily
+ * than five did; the floor is the same.
  */
 test.describe('the mode bar fits on a phone', () => {
 	/*
@@ -201,19 +204,13 @@ test.describe('the mode bar fits on a phone', () => {
 	 *
 	 * The bar is pure CSS — flex-wrap plus one media query — so a resize reflows
 	 * it with no JS and no navigation, and four separate loads bought nothing.
-	 * They cost something, though: the first cut ran four extra specs in
-	 * parallel and starved /recipes, the heaviest page in the app at 2179
-	 * dishes, which hydrates in about 13s here against the 15s ceiling in
-	 * helpers.goto. Seven specs failed with nothing wrong with them, and all
-	 * seven passed at --workers=1. Worth knowing: that margin is thin enough
-	 * that this suite is one slow machine away from flaking on its own.
 	 *
-	 * /learn is used because the bar is rendered by +layout.svelte and is
+	 * /level/1 is used because the bar is rendered by +layout.svelte and is
 	 * identical on every route. The one case that needs a Library-lit page uses
 	 * /family, a page that tab owns and which is nearly empty.
 	 */
-	test('all five tabs and the toggle stay reachable from 320 to 600', async ({ page }) => {
-		await goto(page, '/learn');
+	test('all four tabs and the toggle stay reachable from 320 to 600', async ({ page }) => {
+		await goto(page, '/level/1');
 
 		for (const width of [320, 375, 390, 414, 430, 600]) {
 			await page.setViewportSize({ width, height: 800 });
@@ -232,8 +229,7 @@ test.describe('the mode bar fits on a phone', () => {
 					// A bar that overflows is a bar that hides a tab: nothing in the
 					// app says it scrolls, and before this fix nothing scrolled it.
 					overflows: el.scrollWidth > el.clientWidth + 1,
-					// The floor for a one-handed target in a kitchen. Every tab was
-					// under it on height before this change, at every width.
+					// The floor for a one-handed target in a kitchen.
 					undersized: kids
 						.map((k) => ({ t: k.textContent!.trim(), r: k.getBoundingClientRect() }))
 						.filter(({ r }) => r.width < 44 || r.height < 44)
@@ -249,9 +245,6 @@ test.describe('the mode bar fits on a phone', () => {
 
 	test('the tab you are standing on is on screen', async ({ page }) => {
 		await page.setViewportSize({ width: 375, height: 800 });
-		// Library is the LAST tab, so it was the one pushed out of the box — on a
-		// page that tab owns. That was the unrecoverable case: the lit tab sat at
-		// x 425 to 508 in a 375px bar with scrollLeft stuck at 0.
 		await goto(page, '/family');
 		const on = page.locator('.modetab.on');
 		await expect(on).toHaveCount(1);
