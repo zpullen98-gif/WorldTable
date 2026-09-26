@@ -721,6 +721,44 @@ export interface DeckIndex {
  * The brigade's stations: see tools/derive/stations.mjs. The station list is
  * the guide's own; the technique map is authored and gated in both directions.
  */
+/**
+ * The four levels: see tools/derive/levels.mjs. The names live there and in
+ * DECK_LEVELS (gated equal); the placements are authored files the build
+ * checks. Slug lists per subsection per level, keyed by the level as a
+ * string ("1"), which is what JSON makes of an object key anyway.
+ */
+export type SubsectionKey = 'dishes' | 'techniques' | 'lexicon' | 'deck' | 'palate' | 'safety' | 'service';
+
+export interface LevelInfo {
+	level: DeckLevel;
+	name: string;
+	/** What is asked at this level. Never about the reader. */
+	blurb: string;
+}
+
+export interface LevelsData {
+	version: 1;
+	/** All four, in key order. */
+	levels: LevelInfo[];
+	/** The seven, in the order a level page lists them. `counted` false is
+	 *  read and never graded (Food Safety). */
+	subsections: Array<{ key: SubsectionKey; title: string; counted: boolean }>;
+	/** subsection -> level key -> the slugs at that level (deck card ids for
+	 *  the deck, module keys for service, `kind:key` for safety). */
+	items: Record<SubsectionKey, Record<string, string[]>>;
+	/** module key -> its term slugs: the service subsection is counted and
+	 *  tested in terms. */
+	moduleTerms: Record<string, string[]>;
+	/** The techniques that carry a written standard, by slug. */
+	techniqueStandards: string[];
+	/** The calibration ladders' tastes, met at the rung the level names. */
+	tastes: string[];
+	/** What the level page prints for each safety slice. */
+	safety: Record<string, { label: string; anchor: string; kind: 'clause' | 'fact' | 'numeric' | 'gap' }>;
+	/** level key -> subsection -> how many items (terms, for service). */
+	counts: Record<string, Record<SubsectionKey, number>>;
+}
+
 export interface StationsData {
 	stations: Array<{ key: string; name: string; techniques: string[] }>;
 	/** Dishes reachable per station, so a page can size it without techniques.json. */

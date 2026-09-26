@@ -66,7 +66,8 @@ describe('nothing is written until every gate has spoken', () => {
 			'serviceTrackProblems',
 			'drillProblems',
 			'floorDeckProblems',
-			'stationProblems'
+			'stationProblems',
+			'levelProblems'
 		]) {
 			const pushedAt = buildData.indexOf(`problems.push(...${name})`);
 			expect(pushedAt, `problems.push(...${name}) must exist`).toBeGreaterThan(-1);

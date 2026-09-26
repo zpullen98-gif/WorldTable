@@ -27,7 +27,8 @@ import type {
 	DeckTraps,
 	DeckIndex,
 	StationsData,
-	TechniqueStandard
+	TechniqueStandard,
+	LevelsData
 } from './types';
 
 import indexJson from './data/recipes.index.json';
@@ -115,6 +116,16 @@ export async function loadStations(): Promise<StationsData> {
 		stationsCache = (await import('./data/stations.json')).default as unknown as StationsData;
 	}
 	return stationsCache;
+}
+
+/** The four levels: what each holds, and the counts the level cards print.
+ *  Small and precached: the home paints its cards from it. */
+let levelsCache: LevelsData | null = null;
+export async function loadLevels(): Promise<LevelsData> {
+	if (!levelsCache) {
+		levelsCache = (await import('./data/levels.json')).default as unknown as LevelsData;
+	}
+	return levelsCache;
 }
 
 let drillsCache: Drills | null = null;

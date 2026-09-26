@@ -46,6 +46,7 @@ import { buildServiceTrack } from './derive/service-track.mjs';
 import { buildDrills } from './derive/drills.mjs';
 import { gateFloorDeck, buildFloorDeck } from './derive/floor-deck.mjs';
 import { buildStations } from './derive/stations.mjs';
+import { buildLevels } from './derive/levels.mjs';
 import { LADDERS, CUPS, TRIALS, PASS_AT } from './derive/calibration.mjs';
 import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
 import { advanceWait, QUICK_MINUTES } from './derive/advance.mjs';
@@ -1080,6 +1081,25 @@ const {
  */
 const { stations, problems: stationProblems } = buildStations(lexicon, techniques);
 
+/**
+ * The four levels: the authored placements (tools/derive/levels/*.json)
+ * checked against the universe of items this build holds, the deck copied
+ * from its index, and the emitted shape the home and the level pages read.
+ * The build reads the authored files and never writes them; the placement
+ * tool does. See tools/derive/levels.mjs and tools/levels/README.md.
+ */
+const { levels, problems: levelProblems } = buildLevels({
+	study,
+	techniques,
+	lexicon,
+	serviceTrack,
+	palate,
+	sanitation,
+	deckIndex: floorDeckIndex,
+	recipes: index,
+	techniqueStandards
+});
+
 write('recipes.index.json', index);
 write('recipes.full.json', full);
 write('pairings.json', pairingTable);
@@ -1120,6 +1140,7 @@ write('floor-deck.json', floorDeck);
 write('floor-deck.traps.json', floorDeckTraps);
 write('floor-deck.index.json', floorDeckIndex);
 write('stations.json', stations);
+write('levels.json', levels);
 write('calibration.json', {
 	cups: CUPS,
 	trials: TRIALS,
@@ -1934,6 +1955,7 @@ problems.push(...serviceTrackProblems);
 problems.push(...drillProblems);
 problems.push(...floorDeckProblems);
 problems.push(...stationProblems);
+problems.push(...levelProblems);
 
 /**
  * The technique standards: gated in both directions, with the numbers in the

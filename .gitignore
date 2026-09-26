@@ -14,3 +14,5 @@ blob-report/
 
 # Floor Deck authoring drafts and briefs; what is merged lives in tools/derive/floor-deck/ and tools/deck/audit/
 tools/deck/out/
+# The four levels: placement runs and briefs; what is placed lives in tools/derive/levels/ and tools/levels/audit/
+tools/levels/out/
