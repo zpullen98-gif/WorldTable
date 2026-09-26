@@ -626,6 +626,10 @@ describe('only the written test loads the traps', () => {
 		const users = [...walk('src/routes'), ...walk('src/lib/components')]
 			.filter((f) => /\.(svelte|ts)$/.test(f))
 			.filter((f) => readFileSync(f, 'utf8').includes('loadDeckTraps'));
-		for (const f of users) expect(f, `${f} loads the traps`).toMatch(/src\/routes\/service\/deck\/test\//);
+		// Two callers, both tests: the deck's own written test, and the level
+		// test, which asks the deck's written test at its level before the
+		// service and Lexicon questions (src/lib/levels.ts buildLevelTest). A
+		// card still never shows a trap: neither route renders one.
+		for (const f of users) expect(f, `${f} loads the traps`).toMatch(/src\/routes\/(service\/deck\/test|level\/\[n\]\/test)\//);
 	});
 });
