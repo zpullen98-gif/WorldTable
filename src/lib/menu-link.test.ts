@@ -1,5 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
-import { htmlToMenuText, linkToText, type LinkResult } from './menu-link';
+import { htmlToMenuText, linkToText, pageTitle, type LinkResult } from './menu-link';
+import { readMenu } from './desk/desk-reader';
+import { deskSource } from './desk/desk-file';
 
 /**
  * Reading a venue's menu from a link.
@@ -142,6 +144,27 @@ describe('what comes out of a list-based menu page', () => {
 	it('starts with the section heading', () => {
 		expect(lines[0]).toBe('Small Plates');
 	});
+
+	it('reads through to the desk with the price still on its dish', () => {
+		// The link-then-parse loss: the walk put Boquerones, its description and
+		// its price on three lines, and the old parser threw the lone 8 away as
+		// junk. The reader attaches it to the priceless name above.
+		const file = readMenu(text, deskSource('link', 'table', text, { url: 'https://joesdiner.test/menu' }));
+		expect(file.items.map((i) => ({ name: i.name, price: i.price.printed, section: i.section }))).toEqual([
+			{ name: 'Padrón Peppers', price: '6.50', section: 'Small Plates' },
+			{ name: 'Boquerones', price: '8', section: 'Small Plates' },
+			{ name: 'Tortilla', price: '7', section: 'Small Plates' }
+		]);
+		const boquerones = file.items[1];
+		expect(boquerones).toMatchObject({
+			kind: 'dish',
+			description: 'white anchovies & parsley',
+			price: { printed: '8', parts: [{ amount: '8', label: '' }] },
+			confidence: 'high'
+		});
+		expect(file.unsorted).toEqual([]);
+		expect(file.source).toMatchObject({ kind: 'link', url: 'https://joesdiner.test/menu' });
+	});
 });
 
 describe('a page carrying a script and a cookie bar', () => {
@@ -183,7 +206,7 @@ describe('a page carrying a script and a cookie bar', () => {
 		// The house style bans the em dash in the product's prose. This is the
 		// venue's menu, not the product's prose, and rewriting a dish line is
 		// not the importer's business.
-		expect(text).toContain('Al Pastor — 4.00');
+		expect(text).toContain('Al Pastor \u2014 4.00');
 	});
 });
 
@@ -247,11 +270,42 @@ describe('the parts of a page that trip a naive strip', () => {
 		// and breaks every later match against that name.
 		expect(htmlToMenuText('<p>Bouil&shy;labaisse</p>')).toBe('Bouillabaisse');
 		expect(htmlToMenuText('<p>Ta\u200Bcos</p>')).toBe('Tacos');
+		// The word joiner and the byte-order mark were never on this file's own
+		// list. They go now because the stripping is desk-text.ts's, the same
+		// function the paste path runs, so the two doors cannot drift apart.
+		expect(htmlToMenuText('<p>Ta\u2060cos</p>')).toBe('Tacos');
+		expect(htmlToMenuText('<p>\uFEFFTacos</p>')).toBe('Tacos');
 	});
 
 	it('returns nothing for a page with nothing in it', () => {
 		expect(htmlToMenuText('')).toBe('');
 		expect(htmlToMenuText('<html><body>   \n  </body></html>')).toBe('');
+	});
+});
+
+describe('the page title, read before the head is dropped', () => {
+	it('reads the title out of the head, decoded and trimmed', () => {
+		expect(pageTitle(TABLE_MENU)).toBe('La Table');
+		expect(pageTitle('<head><title>\n  Caf&eacute; &amp; Bar  \n</title></head><body></body>')).toBe(
+			'Café & Bar'
+		);
+	});
+
+	it('is empty when the page has none', () => {
+		expect(pageTitle(LIST_MENU)).toBe('');
+		expect(pageTitle('')).toBe('');
+	});
+
+	it('ignores an SVG title in the body, which is an icon and not the venue', () => {
+		expect(pageTitle('<body><svg><title>Instagram icon</title></svg><p>Tacos 4</p></body>')).toBe('');
+		expect(
+			pageTitle('<head><title>Joe</title></head><body><svg><title>Instagram icon</title></svg></body>')
+		).toBe('Joe');
+	});
+
+	it('folds the whitespace and caps a keyword-stuffed title', () => {
+		expect(pageTitle('<title>Joe   Diner\t\tMenu</title>')).toBe('Joe Diner Menu');
+		expect(pageTitle(`<title>${'menu '.repeat(100)}</title>`)).toHaveLength(200);
 	});
 });
 
@@ -323,14 +377,23 @@ describe('the address a cook pastes', () => {
 });
 
 describe('reading the page at the far end', () => {
-	it('hands back the menu text, and nothing that could pass for an allergen', async () => {
+	it('hands back the menu text and the page title, and nothing that could pass for an allergen', async () => {
 		const result = await linkToText('joesdiner.test/menu', fetchReturning(html(TABLE_MENU)));
 		expect(result.ok).toBe(true);
 		if (!result.ok) return;
 		expect(result.text).toContain('Sopa de Lima\t$9');
 		expect(result.text).not.toContain('Home');
-		// The contract the review screen leans on: text, and only text. An
-		// allergen has to be checked dish by dish by a person.
+		expect(result.title).toBe('La Table');
+		// The contract the review screen leans on: text, the page's own title
+		// for the venue box, and nothing else. An allergen has to be checked
+		// dish by dish by a person.
+		expect(Object.keys(result).sort()).toEqual(['ok', 'text', 'title']);
+	});
+
+	it('leaves the title key out altogether when the page had no title', async () => {
+		const result = await linkToText('joesdiner.test/menu', fetchReturning(html(LIST_MENU)));
+		expect(result.ok).toBe(true);
+		if (!result.ok) return;
 		expect(Object.keys(result).sort()).toEqual(['ok', 'text']);
 	});
 
@@ -471,7 +534,7 @@ describe('when the read cannot happen, and the cook needs the next step', () => 
 			).reason
 		];
 		for (const reason of reasons) {
-			expect(reason).not.toContain('—');
+			expect(reason).not.toContain('\u2014');
 			expect(reason).not.toContain(' -- ');
 			expect(reason).not.toMatch(/sorry|unfortunately|oops/i);
 			// One sentence, and it ends like one.

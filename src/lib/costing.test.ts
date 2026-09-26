@@ -4,6 +4,7 @@ import {
 	lineCost,
 	plateCost,
 	parsePrice,
+	priceFigures,
 	dishEconomics,
 	bandFor,
 	engineerMenu,
@@ -96,6 +97,50 @@ describe('the price a venue actually typed', () => {
 			expect(parsePrice(raw as string | null)).toBeNull();
 		}
 	);
+});
+
+describe('a price carrying more than one figure', () => {
+	/**
+	 * The old rule stripped everything but digits, so "12 / 44" costed as 1244
+	 * and "Glass 8 Bottle 30" as 830: a plausible, confident, wrong number on
+	 * the one page a kitchen prices a menu from. Which figure to cost against
+	 * is the venue's call, and the sheet asks rather than guesses.
+	 */
+	it.each([
+		['12 / 44'],
+		['6/9'],
+		['Glass 8 Bottle 30'],
+		['$90 per Person + Optional Wine Pairing ($40)'],
+		['45.00 / 22.50'],
+		['12, 14 or 16']
+	])('refuses %s rather than mashing its figures into one number', (raw) => {
+		expect(parsePrice(raw)).toBeNull();
+	});
+
+	it('still reads the European forms, which are one figure with punctuation inside it', () => {
+		expect(parsePrice('£14.50')).toBe(14.5);
+		expect(parsePrice('14,50')).toBe(14.5);
+		expect(parsePrice('1.500,00')).toBe(1500);
+		expect(parsePrice('€2.350,50')).toBe(2350.5);
+		expect(parsePrice('1,250.00')).toBe(1250);
+		expect(parsePrice('12.-')).toBe(12);
+	});
+
+	it('counts the figures, as printed, for the sheet to name', () => {
+		expect(priceFigures('12 / 44')).toEqual(['12', '44']);
+		expect(priceFigures('Glass 8 Bottle 30')).toEqual(['8', '30']);
+		expect(priceFigures('1.500,00')).toEqual(['1.500,00']);
+		expect(priceFigures('MP')).toEqual([]);
+		// The OCR case: the figure is the 9, and the S stays a letter.
+		expect(priceFigures('9.S')).toEqual(['9']);
+	});
+
+	it('leaves a two-figure dish unpriced in the economics rather than mispriced', () => {
+		const e = dishEconomics([line({ unitCost: 10, usedQty: 0.5 })], '12 / 44');
+		expect(e.price).toBeNull();
+		expect(e.foodCostPct).toBeNull();
+		expect(e.contribution).toBeNull();
+	});
 });
 
 describe('what the plate earns', () => {

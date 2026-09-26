@@ -28,6 +28,7 @@
 		trueUnitCost,
 		lineCost,
 		parsePrice,
+		priceFigures,
 		money,
 		rollUpMenu,
 		resolveLines,
@@ -440,6 +441,24 @@
 	const economicsOf = (id: string, price: string) =>
 		dishEconomics(resolvedFor(id), netPriceOf(price));
 
+	/**
+	 * Why a price that plainly holds a number could not be costed against.
+	 *
+	 * parsePrice refuses a price carrying more than one figure ("12 / 44",
+	 * "Glass 8 Bottle 30") rather than mashing the digits into one wrong
+	 * number, and the refusal has to be SAID: a row reading "no price" over a
+	 * price the cook can see is the sheet contradicting the menu. One sentence,
+	 * naming the printed price and asking for the one figure to use. Empty for
+	 * a price with no digit at all ("MP", blank), which "no price" already
+	 * describes truthfully.
+	 */
+	function priceHint(price: string): string {
+		if (parsePrice(price) !== null || !/\d/.test(price)) return '';
+		const n = priceFigures(price).length;
+		const count = n === 2 ? 'Two figures' : `${n} figures`;
+		return `${count} on this price (${price.trim()}). Type the one to cost against.`;
+	}
+
 	const engineered = $derived(
 		engineerMenu(
 			dishes.map((d) => {
@@ -647,6 +666,12 @@
 										One or more lines cannot be costed: a yield of zero, or a missing number. The
 										total below leaves them out, so it is lower than the real plate cost.
 									</p>
+								{/if}
+								{#if priceHint(d.price)}
+									<!-- A word beside the "no price" reading, never a colour: the price
+									     is right there on the menu and the sheet has to say why it is
+									     not using it. -->
+									<p class="pricehint">{priceHint(d.price)}</p>
 								{/if}
 
 								<table>
@@ -1243,6 +1268,7 @@
 	}
 	.warn,
 	.incomplete,
+	.pricehint,
 	.verdictnote {
 		padding: 9px 13px;
 		border-left: 2px solid var(--turmeric-deep);
@@ -1256,6 +1282,7 @@
 		margin: 0 0 6px;
 	}
 	.incomplete,
+	.pricehint,
 	.verdictnote {
 		margin: 12px 0 0;
 	}

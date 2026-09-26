@@ -41,8 +41,16 @@
  * text are skipped whole.
  */
 
+import { stripInvisible } from './desk/desk-text';
+
 export type LinkResult =
-	| { ok: true; text: string }
+	/**
+	 * `title` is the page's own <title>, read before the head is dropped, and
+	 * present only when the page had one: it is the venue name the Menu Desk
+	 * can offer for the desk file, and nothing more. The key is absent rather
+	 * than empty so the "text and only text" pin in the tests still reads.
+	 */
+	| { ok: true; text: string; title?: string }
 	| { ok: false; reason: string; openUrl: string };
 
 /**
@@ -344,11 +352,14 @@ function decodeEntities(text: string): string {
  * characters go with them: a soft hyphen or a zero-width space inside a dish
  * name is impossible to see on the review screen and would sit in the saved
  * dish forever, quietly failing every later match on its name.
+ *
+ * The stripping is desk-text.ts's stripInvisible and not a regex of this
+ * file's own, so that the link path and the paste path cannot drift: they
+ * once did, and a zero-width joiner the link path removed rode through the
+ * paste path into a saved name.
  */
 function normaliseText(raw: string): string {
-	return decodeEntities(raw)
-		.replace(/[\u00AD\u200B-\u200D\uFEFF]/g, '')
-		.replace(/\s+/g, ' ');
+	return stripInvisible(decodeEntities(raw)).replace(/\s+/g, ' ');
 }
 
 interface Tag {
@@ -589,6 +600,27 @@ export function htmlToMenuText(html: string): string {
 	return tidyLines(out.join(''));
 }
 
+/**
+ * The page's <title>, read BEFORE the head is dropped, because htmlToMenuText
+ * skips the head whole and the title is the one thing in it worth having: it
+ * is the venue's name, nine times in ten, and the Menu Desk offers it as the
+ * desk file's venue rather than asking the cook to type what the page already
+ * said.
+ *
+ * Looked for in the part of the document before <body> only. A page with no
+ * head title and an SVG logo in its body has a <title> too, and "Instagram
+ * icon" is not the venue. Entities are decoded and whitespace folded the way
+ * every other run of page text is; the result is capped because a title tag
+ * is also where a page stuffs its keywords.
+ */
+export function pageTitle(html: string): string {
+	const bodyAt = html.search(/<body[\s>]/i);
+	const head = bodyAt < 0 ? html : html.slice(0, bodyAt);
+	const found = /<title(?:\s[^>]*)?>([\s\S]*?)<\/title\s*>/i.exec(head);
+	if (!found) return '';
+	return normaliseText(found[1]).trim().slice(0, 200);
+}
+
 /** Trims every line, drops the empty ones down to at most one in a row. */
 function tidyLines(text: string): string {
 	const lines = text.split('\n').map((line) => line.replace(/^[ \t]+|[ \t]+$/g, ''));
@@ -721,7 +753,8 @@ export async function linkToText(url: string, fetchImpl?: typeof fetch): Promise
 				target
 			);
 		}
-		return { ok: true, text };
+		const title = looksLikeHtml ? pageTitle(body) : '';
+		return title ? { ok: true, text, title } : { ok: true, text };
 	} finally {
 		clearTimeout(timer);
 	}

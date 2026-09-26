@@ -232,16 +232,43 @@ export function plateCost(lines: CostLine[]): { total: number; complete: boolean
 }
 
 /**
+ * One figure in a printed price: a run of digits with any dots and commas
+ * inside it, so "1,250.00" and "1.500,00" are each ONE figure and "12 / 44"
+ * is two. Anchored on digits at both ends so "9.S" yields the figure 9 and
+ * leaves the S where it was.
+ */
+const PRICE_FIGURE = /\d(?:[\d.,]*\d)?/g;
+
+/**
+ * Every figure a price string carries, in order and as printed. The costing
+ * page uses the count to say why a price could not be costed against.
+ */
+export function priceFigures(raw: string): string[] {
+	return raw.match(PRICE_FIGURE) ?? [];
+}
+
+/**
  * The price a venue typed, which is free text: "14", "£14.50", "$14.50", "14,50".
  *
- * Returns null for anything that is not a number, so an unpriced dish is absent
- * from the menu-engineering pass rather than sitting at the origin pretending
- * to be a dog.
+ * Returns null for anything that is not ONE number, so an unpriced dish is
+ * absent from the menu-engineering pass rather than sitting at the origin
+ * pretending to be a dog.
+ *
+ * ONE FIGURE, OR NOTHING. A menu prints two sizes as "12 / 44", a wine as
+ * "Glass 8 Bottle 30", a tasting menu as "$90 per Person + Optional Wine
+ * Pairing ($40)", and the old strip-everything-but-digits rule read those as
+ * 1244, 830 and 9040: a confident, plausible, wrong number on the one page a
+ * kitchen prices a menu from. Which of the two figures to cost against is the
+ * venue's decision and not this function's guess, so a price carrying more
+ * than one figure comes back null, the dish reads as unpriced, and the sheet
+ * says so beside the price and asks for the one to use.
  */
 export function parsePrice(raw: string | number | null | undefined): number | null {
 	if (typeof raw === 'number') return Number.isFinite(raw) ? raw : null;
 	if (!raw) return null;
-	let cleaned = String(raw).replace(/[^\d.,-]/g, '');
+	const figures = priceFigures(String(raw));
+	if (figures.length !== 1) return null;
+	let cleaned = figures[0];
 	// The full European form: dots as thousands, comma as decimals. "1.500,00"
 	// used to survive the comma rule as "1.500.00" and parseFloat took 1.5:
 	// fifteen hundred became one-and-a-half, silently, on every dish priced
@@ -253,7 +280,6 @@ export function parsePrice(raw: string | number | null | undefined): number | nu
 	cleaned = cleaned
 		.replace(/,(\d{2})$/, '.$1') // 14,50 -> 14.50
 		.replace(/,/g, '');
-	if (!cleaned || !/\d/.test(cleaned)) return null;
 	const n = Number.parseFloat(cleaned);
 	return Number.isFinite(n) ? n : null;
 }

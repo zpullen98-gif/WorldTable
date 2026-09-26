@@ -327,6 +327,15 @@ describe('section headings', () => {
 		}
 	});
 
+	it('keeps a heading\'s printed marks in the section, and reads nothing into them', () => {
+		// 'PUDDINGS (V)' is the section as printed; the bracket is not a tag on
+		// the tart, because a heading's marks belong to no row.
+		const { dishes } = parseMenuText('PUDDINGS (V)\nTart 6');
+		expect(dishes).toHaveLength(1);
+		expect(dishes[0].section).toBe('PUDDINGS (V)');
+		expect(dishes[0].tags).toEqual([]);
+	});
+
 	it('reads a heading that ends in a colon', () => {
 		expect(parseMenuText('Sides:\nChips 4').dishes[0].section).toBe('Sides');
 	});
@@ -429,11 +438,15 @@ describe('names and descriptions', () => {
 		);
 	});
 
-	it('takes two run-on lines and then stops', () => {
-		const { dishes } = parseMenuText('Roast chicken 16\nbread sauce\nand greens\nand a fourth line');
-		expect(dishes[0].description).toBe('bread sauce and greens');
+	it('takes every run-on line until the next item', () => {
+		// The two-line cap is gone: Commander's prints a description that runs
+		// to four lines, and cutting it at two made a dish out of the third.
+		const { dishes } = parseMenuText(
+			'Roast chicken 16\nbread sauce\nand greens\nand a fourth line\nApple pie 6'
+		);
 		expect(dishes).toHaveLength(2);
-		expect(dishes[1].name).toBe('and a fourth line');
+		expect(dishes[0].description).toBe('bread sauce and greens and a fourth line');
+		expect(dishes[1].name).toBe('Apple pie');
 	});
 
 	it('keeps a word an OCR pass split in half with the dish it belongs to', () => {
@@ -445,7 +458,21 @@ describe('names and descriptions', () => {
 	it('never emits a row with no name', () => {
 		expect(parseMenuText('9.50').dishes).toEqual([]);
 		expect(parseMenuText('(v)').dishes).toEqual([]);
+		// A lone price is an orphan, reported in skipped rather than lost; a
+		// price on the line UNDER a name is that name's price. The old parser
+		// threw both away as junk, which is how every price on a stacked menu
+		// went missing.
 		expect(parseMenuText('9.50').skipped).toEqual(['9.50']);
+		expect(rows('Soup of the day\n9.50')).toEqual([
+			{
+				section: '',
+				name: 'Soup of the day',
+				description: '',
+				price: '9.50',
+				tags: [],
+				confidence: 'high'
+			}
+		]);
 	});
 
 	it('takes a takeaway menu number off the front of the dish', () => {
