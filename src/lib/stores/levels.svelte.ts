@@ -21,6 +21,7 @@ import type { DeckLevel, LevelsData } from '../types';
 class LevelsStore {
 	#data = $state<LevelsData | null>(null);
 	#joins = $state<Joins | null>(null);
+	#labels = new Map<string, string>();
 	#loading: Promise<void> | null = null;
 
 	/** Idempotent: the first caller loads, every later one awaits the same promise. */
@@ -28,6 +29,7 @@ class LevelsStore {
 		if (this.#data && this.#joins) return Promise.resolve();
 		if (!this.#loading) {
 			this.#loading = Promise.all([loadLevels(), loadTechniques()]).then(([data, techniques]) => {
+				this.#labels = new Map(techniques.map((t) => [t.slug, t.label]));
 				this.#joins = { techniqueRecipes: new Map(techniques.map((t) => [t.slug, t.recipes])) };
 				this.#data = data;
 			});
@@ -37,6 +39,11 @@ class LevelsStore {
 
 	get data(): LevelsData | null {
 		return this.#data;
+	}
+
+	/** A technique's label, from the same file the join came from. */
+	techniqueLabel(slug: string): string {
+		return this.#labels.get(slug) ?? slug;
 	}
 
 	get ready(): boolean {

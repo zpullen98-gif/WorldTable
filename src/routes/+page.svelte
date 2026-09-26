@@ -1,10 +1,10 @@
 <!--
-  The front door is a dashboard now, not a search result.
+  The front door: four levels and four doors (lib/components/Home.svelte).
 
-  The grid moved to /recipes. It was the whole of this page, and it is why the
-  app read as a collection of world recipes rather than as training: you landed
-  on 970 cards and were left to browse. HomeBands is what remains, and it is
-  what grows.
+  The grid moved to /recipes long ago; the bands that replaced it are gone
+  too (2026-09-26): the home is the four level cards with their word and
+  figure, and one quiet row of doors that are not study. Everything that used
+  to be a band or a tile lives inside the levels or behind those four doors.
 
   The legacy-query redirect below is not decoration. Links to /?q=... exist in
   the wild (the regression suite shipped one), and a prerendered page may not
@@ -24,7 +24,7 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
-	import HomeBands from '$lib/components/HomeBands.svelte';
+	import Home from '$lib/components/Home.svelte';
 	import { hasFilterQuery } from '$lib/urlState';
 
 	let { data } = $props();
@@ -46,9 +46,4 @@
 	});
 </script>
 
-<HomeBands
-	curriculum={data.curriculum}
-	lexiconTotal={data.lexiconTotal}
-	techniqueTotal={data.techniqueTotal}
-	recipeTotal={data.recipeTotal}
-/>
+<Home curriculum={data.curriculum} levelInfo={data.levelInfo} />
