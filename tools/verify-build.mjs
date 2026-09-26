@@ -445,17 +445,42 @@ check('the floor deck installs with the app', () => {
 });
 
 // ── offline integrity ────────────────────────────────────────────────────────
+/*
+ * api.anthropic.com is the one host a shipped file may name, and exactly one
+ * shipped file may name it: the Maitre d' client, which calls out only when a
+ * person has added their own key and pressed a button that says what it
+ * sends. The check's name stays honest because that file is loaded lazily and
+ * nothing in the build references the host at load time. A second file naming
+ * it would be a second place for a menu to be sent, and fails here.
+ */
+const THIRD_PARTY_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com', 'cdn.jsdelivr.net', 'unpkg.com', 'api.anthropic.com'];
+const HOST_ALLOWANCE = { 'api.anthropic.com': 'shared/oot-maitre.js' };
+const MAITRE_CLIENT = 'shared/oot-maitre.js';
+
 check('no third-party resource references', () => {
 	const offenders = [];
 	for (const f of files) {
 		if (!['.html', '.css', '.js'].includes(extname(f))) continue;
 		const text = readFileSync(f, 'utf8');
-		for (const host of ['fonts.googleapis.com', 'fonts.gstatic.com', 'cdn.jsdelivr.net', 'unpkg.com']) {
-			if (text.includes(host)) offenders.push(`${rel(f)} -> ${host}`);
+		for (const host of THIRD_PARTY_HOSTS) {
+			if (text.includes(host) && HOST_ALLOWANCE[host] !== rel(f)) offenders.push(`${rel(f)} -> ${host}`);
 		}
 	}
 	assert(offenders.length === 0, offenders.slice(0, 3).join('; '));
-	return 'fonts self-hosted, no CDNs';
+	return "fonts self-hosted, no CDNs, Anthropic named by the Maitre d' client alone";
+});
+
+check("the Maitre d' client ships and is NOT precached", () => {
+	/* Lazy and online-only by design: it costs no cap bytes and no app breaks
+	   offline without it. A glob change that swept it into the manifest would
+	   pass every size check today and put a client nobody asked for on every
+	   device tomorrow. */
+	assert(existsSync(join(BUILD, MAITRE_CLIENT)), `build/${MAITRE_CLIENT} missing: static/shared/oot-maitre.js did not ship`);
+	const listed = precached.filter((u) => u.split('?')[0].endsWith(MAITRE_CLIENT));
+	assert(listed.length === 0, `precache lists the Maitre d' client: ${listed.join(', ')}`);
+	const text = readFileSync(join(BUILD, MAITRE_CLIENT), 'utf8');
+	assert(text.includes('api.anthropic.com'), 'the shipped client no longer names its host: the allowance above is now dead weight');
+	return 'shipped, lazy, zero cap bytes';
 });
 
 check('fonts are latin subsets only', () => {

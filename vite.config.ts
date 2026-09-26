@@ -102,7 +102,11 @@ export default defineConfig({
 				 */
 				globPatterns: ['**/*.{js,css,woff2,png,svg,webmanifest}'],
 				// sw-shared.js is the worker's own import, not a page asset.
-				globIgnores: ['**/node_modules/**', '**/*.woff', '**/sw-shared.js'],
+				// oot-maitre.js is the Maitre d' client: loaded lazily, only when a
+				// door opens and the device is online, so it costs no cap bytes
+				// and the app never breaks offline without it. verify-build asserts
+				// it stays out of the manifest.
+				globIgnores: ['**/node_modules/**', '**/*.woff', '**/sw-shared.js', '**/shared/oot-maitre.js'],
 				maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
 				/**
 				 * Supplying manifestTransforms REPLACES the SvelteKit plugin's own

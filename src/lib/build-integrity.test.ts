@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const ROOT = process.cwd();
@@ -148,5 +148,45 @@ describe('the build verifier counts from the file the pages come from', () => {
 	it('gates the two recipe files as one corpus in one order', () => {
 		expect(verifyBuild).toContain('the two recipe files are the same corpus, in the same order');
 		expect(verifyBuild).toContain('slug order diverges at');
+	});
+});
+
+describe("the Maitre d' client is one file in two places", () => {
+	/**
+	 * static/shared/oot-maitre.js is the canonical source; the hub carries a
+	 * copy at OutsideOfTime/shared/oot-maitre.js because the two plain wings
+	 * load it from there. Two copies that differ are two clients with two
+	 * ideas of the key slot, the price table and her copy, so drift FAILS
+	 * here (and in inject-oot-bar.mjs --check) rather than being overwritten:
+	 * which side is right is a decision, not a script's guess.
+	 *
+	 * The hub is a sibling checkout on the owner's machine and absent in CI
+	 * and on a fresh clone, so the case skips with its reason in the name.
+	 */
+	const canonical = join(ROOT, 'static', 'shared', 'oot-maitre.js');
+	const mirror = join(ROOT, '..', 'OutsideOfTime', 'shared', 'oot-maitre.js');
+	const mirrored = existsSync(mirror);
+
+	it('ships from static/shared', () => {
+		expect(existsSync(canonical)).toBe(true);
+	});
+
+	it.skipIf(!mirrored)('is byte-identical to OutsideOfTime/shared/oot-maitre.js (skipped when that checkout is absent)', () => {
+		const a = readFileSync(canonical);
+		const b = readFileSync(mirror);
+		let at = 0;
+		while (at < a.length && at < b.length && a[at] === b[at]) at++;
+		const same = a.length === b.length && at === a.length;
+		expect(
+			same,
+			`the two copies diverge at byte ${at} (canonical ${a.length} bytes, mirror ${b.length}): copy the canonical file over, never edit the mirror`
+		).toBe(true);
+	});
+
+	/** The verifier must keep the client out of the precache, or it costs cap bytes on every device. */
+	it('is asserted lazy by the build verifier and ignored by the precache glob', () => {
+		expect(verifyBuild).toContain("the Maitre d' client ships and is NOT precached");
+		const vite = readFileSync(join(ROOT, 'vite.config.ts'), 'utf8');
+		expect(vite).toContain("'**/shared/oot-maitre.js'");
 	});
 });
