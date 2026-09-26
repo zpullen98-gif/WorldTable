@@ -75,7 +75,8 @@
 		</p>
 	</section>
 
-	<h2 class="sec">The numbers the guide states</h2>
+	<!-- The ids are a level page's doors: /safety#numbers, #disciplines, #entries, #gaps. -->
+	<h2 class="sec" id="numbers">The numbers the guide states</h2>
 	<p class="secnote">
 		These are the figures the guide gives, attributed to the entry that gives them. Your local code
 		may set different ones, and where it does, yours governs.
@@ -155,7 +156,7 @@
 		A row with no figure from a source means this page carries none, not that the source has none.
 	</p>
 
-	<h2 class="sec">The disciplines</h2>
+	<h2 class="sec" id="disciplines">The disciplines</h2>
 	<p class="secnote">The guide's own words, unabridged.</p>
 	<ul class="clauses">
 		{#each s.clauses as c (c.anchor + c.key)}
@@ -166,7 +167,7 @@
 		{/each}
 	</ul>
 
-	<h2 class="sec">The two entries, whole</h2>
+	<h2 class="sec" id="entries">The two entries, whole</h2>
 	{#each ['safety', 'inspections'] as key (key)}
 		{@const e = s.entries[key]}
 		<article class="entry">
@@ -179,7 +180,7 @@
 	     as DATA and gated: each gap asserts both that the guide still names the
 	     practice and that it still states no figure for it, so a later edit
 	     cannot quietly fill one with invented regulatory content. -->
-	<h2 class="sec">What the guide names and does not state</h2>
+	<h2 class="sec" id="gaps">What the guide names and does not state</h2>
 	<p class="secnote">
 		Read this as a list of places to look elsewhere: your jurisdiction, your inspector, your
 		written plan. It is not a list of things that do not matter. The code figures above cover some

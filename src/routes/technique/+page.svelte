@@ -1,17 +1,43 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { TOTALS } from '$lib/data';
+	import { afterNavigate } from '$app/navigation';
+	import { page } from '$app/state';
+	import { TOTALS, loadLevels } from '$lib/data';
+	import { NUMERAL, levelFromSearch } from '$lib/levels';
+	import type { DeckLevel } from '$lib/types';
 
 	let { data } = $props();
+
+	/* `?level=2` narrows the index to the techniques placed at that level (the
+	   four levels' door in). Seeded in afterNavigate, never in load: a
+	   prerendered page may not read the query at load time, and the levels
+	   file is a lazy island the index does not otherwise need. Null is every
+	   technique, as the page has always been. */
+	let level = $state<DeckLevel | null>(null);
+	let levelName = $state('');
+	let levelSlugs = $state<Set<string> | null>(null);
+
+	afterNavigate(async () => {
+		const wanted = levelFromSearch(page.url.search);
+		level = wanted;
+		if (!wanted) {
+			levelSlugs = null;
+			return;
+		}
+		const levels = await loadLevels();
+		levelName = levels.levels.find((l) => l.level === wanted)?.name ?? '';
+		levelSlugs = new Set(levels.items.techniques[String(wanted)] ?? []);
+	});
+	const inLevel = (t: { slug: string }) => !levelSlugs || levelSlugs.has(t.slug);
 
 	// Anchored techniques carry a Lexicon definition; the rest are the guide's
 	// particulars: a shaping, a vessel, one dish's one move. Both are worth a
 	// page, but they are not the same kind of thing and shouldn't be one list.
 	const foundations = $derived(
-		data.techniques.filter((t) => t.anchored).sort((a, b) => b.count - a.count)
+		data.techniques.filter((t) => t.anchored && inLevel(t)).sort((a, b) => b.count - a.count)
 	);
 	const particulars = $derived(
-		data.techniques.filter((t) => !t.anchored).sort((a, b) => b.count - a.count)
+		data.techniques.filter((t) => !t.anchored && inLevel(t)).sort((a, b) => b.count - a.count)
 	);
 
 	/** "1 dish", "3 dishes": the index printed "1 dishes · 1 chapters" on four tiles. */
@@ -31,6 +57,12 @@
 		<p class="progress">
 			{data.techniques.length} skills · {data.tagged} of {TOTALS.recipes} dishes carry at least one
 		</p>
+		{#if level}
+			<p class="levelnote" aria-live="polite">
+				Level {NUMERAL[level]}{levelName ? `, ${levelName}` : ''}: {foundations.length + particulars.length} of the
+				skills. <a href="{base}/technique">Every technique</a> · <a href="{base}/level/{level}">Back to Level {NUMERAL[level]}</a>
+			</p>
+		{/if}
 	</header>
 
 	<h2 class="sec">The foundations</h2>
@@ -79,6 +111,19 @@
 		font-size: var(--t-lede);
 		color: var(--ink-soft);
 		max-width: var(--measure);
+	}
+	.levelnote {
+		margin-top: 8px;
+		font-size: var(--t-small);
+		color: var(--ink-soft);
+	}
+	.levelnote a {
+		color: inherit;
+		text-decoration-color: var(--turmeric-deep);
+		text-underline-offset: 3px;
+		/* a 44px row for the thumb, without pushing the line apart */
+		display: inline-block;
+		padding-block: 10px;
 	}
 	.progress {
 		margin-top: 10px;

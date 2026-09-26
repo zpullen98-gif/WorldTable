@@ -40,7 +40,8 @@
 
 	<ol class="semesters">
 		{#each data.study as s (s.n)}
-			<li class="semester">
+			<!-- The id is a level page's door: /study#semester-4 opens on the braise. -->
+			<li class="semester" id="semester-{s.n}">
 				<p class="eyebrow">Semester {s.n}</p>
 				<h2>{s.title}</h2>
 				<p class="desc">{s.description}</p>

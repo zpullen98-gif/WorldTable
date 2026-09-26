@@ -8,11 +8,40 @@
 	import { markStudied } from '$lib/oot-studied';
 	import { deckHits, cardsForLexicon } from '$lib/deck-search';
 	import { deckHref } from '$lib/floor-deck-core.mjs';
+	import { afterNavigate } from '$app/navigation';
+	import { page } from '$app/state';
+	import { loadLevels } from '$lib/data';
+	import { NUMERAL, levelFromSearch } from '$lib/levels';
+	import type { DeckLevel } from '$lib/types';
 
 	let { data } = $props();
 
 	let q = $state('');
 	let category = $state<string | null>(null);
+
+	/* `?level=2` narrows the page to the terms placed at that level (the four
+	   levels' door in), and `&start=flash` or `&start=quiz` opens that mode on
+	   them at once, so a level page's "Flashcards" door lands on cards and not
+	   on a list. Seeded in afterNavigate, never in load: a prerendered page may
+	   not read the query at load time. Null is every term, as it always was. */
+	let level = $state<DeckLevel | null>(null);
+	let levelName = $state('');
+	let levelSlugs = $state<Set<string> | null>(null);
+
+	afterNavigate(async () => {
+		const wanted = levelFromSearch(page.url.search);
+		const start = new URLSearchParams(page.url.search).get('start');
+		level = wanted;
+		if (!wanted) {
+			levelSlugs = null;
+			return;
+		}
+		const levels = await loadLevels();
+		levelName = levels.levels.find((l) => l.level === wanted)?.name ?? '';
+		levelSlugs = new Set(levels.items.lexicon[String(wanted)] ?? []);
+		if (start === 'flash') shuffle();
+		else if (start === 'quiz') startQuiz();
+	});
 
 	/* localeCompare, not a bare .sort(). The project pins collation everywhere it
 	   matters (build-data.mjs does it for techniques and stations with a comment
@@ -85,6 +114,7 @@
 	const shown = $derived.by(() => {
 		const needle = fold(q).trim();
 		return data.lexicon.filter((e) => {
+			if (levelSlugs && !levelSlugs.has(e.slug)) return false;
 			if (category && e.category !== category) return false;
 			if (!needle) return true;
 			return haystack(e).includes(needle);
@@ -317,6 +347,12 @@
 		<button class="chip" onclick={shuffle}>Study mode ▸ flashcards</button>
 		<button class="chip" onclick={startQuiz}>Quiz me ▸ multiple choice</button>
 		<span class="count">{shown.length} of {data.lexicon.length} terms</span>
+		{#if level}
+			<span class="count levelnote"
+				>Level {NUMERAL[level]}{levelName ? `, ${levelName}` : ''}
+				· <a href="{base}/lexicon">Every term</a> · <a href="{base}/level/{level}">Back to Level {NUMERAL[level]}</a></span
+			>
+		{/if}
 		<!--
 			Its own noun, deliberately. The mode bar's Practise pill counts DISHES
 			from cookedLog and must keep meaning that; this counts TERMS and says
@@ -574,6 +610,9 @@
 	/* A form control wearing the chip's coat: its edge is the field edge (3:1). */
 	select.chip { appearance: none; max-width: 260px; border-color: var(--field-line); }
 	.count { font-size: var(--t-small); color: var(--muted); font-variant-numeric: oldstyle-nums; margin-left: auto; }
+	/* The level's note and its two doors, sized for a thumb without a chip. */
+	.levelnote { margin-left: 0; flex: 1 1 100%; }
+	.levelnote a { color: var(--ink-soft); display: inline-block; padding-block: 10px; text-underline-offset: 3px; }
 	/* .count.due, not .due: a bare `.due` here tied .count on specificity and
 	   lost the tie on source order, so the due-terms pill rendered --muted,
 	   identical to the plain count beside it. Two classes beats one regardless

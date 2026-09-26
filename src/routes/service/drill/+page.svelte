@@ -16,11 +16,18 @@
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { afterNavigate } from '$app/navigation';
+	import { page } from '$app/state';
+	import { loadLevels } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
 	import { markStudied } from '$lib/oot-studied';
 	import { repertoire, dueList, scopeToSlugs, TERM_LADDER_DAYS } from '$lib/repertoire';
+	import { NUMERAL, levelFromSearch } from '$lib/levels';
+	import type { DeckLevel } from '$lib/types';
 	import {
 		buildRound,
+		orderRound,
+		optionsFor,
 		verdictFor,
 		gradeFor,
 		ROUND_LENGTH,
@@ -28,6 +35,27 @@
 	} from '$lib/drill';
 
 	let { data } = $props();
+
+	/* `?level=2` asks the round from the modules placed at that level (the four
+	   levels' door in). POOL is what gets asked and FIELD stays all 186 cards,
+	   the rule drill.ts and the Lexicon quiz share. Seeded in afterNavigate,
+	   never in load: a prerendered page may not read the query at load time. */
+	let level = $state<DeckLevel | null>(null);
+	let levelName = $state('');
+	let levelModules = $state<Set<string> | null>(null);
+
+	afterNavigate(async () => {
+		const wanted = levelFromSearch(page.url.search);
+		level = wanted;
+		if (!wanted) {
+			levelModules = null;
+			return;
+		}
+		const levels = await loadLevels();
+		levelName = levels.levels.find((l) => l.level === wanted)?.name ?? '';
+		levelModules = new Set(levels.items.service[String(wanted)] ?? []);
+	});
+	const pool = $derived(levelModules ? data.cards.filter((c) => levelModules!.has(c.moduleId)) : data.cards);
 
 	/** Terms past their re-cook, on the TERM ladder (2/6/14/35/90). */
 	/*
@@ -61,7 +89,14 @@
 	const q = $derived(round ? round[at] : null);
 
 	function start() {
-		round = buildRound(data.cards, due, everDrilled, Math.random);
+		if (pool === data.cards) round = buildRound(data.cards, due, everDrilled, Math.random);
+		else {
+			// the level's pool asked, the whole track as the field: a term is
+			// told from its neighbours across the floor, not from its own module
+			round = orderRound(pool, due, everDrilled, Math.random)
+				.map((target) => optionsFor(target, data.cards, Math.random))
+				.filter((x): x is DrillQuestion => x !== null);
+		}
 		at = 0;
 		picked = null;
 		right = 0;
@@ -121,8 +156,14 @@
 	<article class="sheet">
 		{#if !round}
 			<p class="lede">
-				Ten questions over the {data.cards.length} terms of the service track. The definition
-				appears with its own term taken out; you name it.
+				{#if level}
+					Ten questions over the {pool.length} terms at Level {NUMERAL[level]}{levelName ? `, ${levelName}` : ''},
+					with the whole track as the field. The definition appears with its own term taken out; you name it.
+					<a href="{base}/level/{level}">Back to Level {NUMERAL[level]}</a>
+				{:else}
+					Ten questions over the {data.cards.length} terms of the service track. The definition
+					appears with its own term taken out; you name it.
+				{/if}
 			</p>
 			<p class="note">
 				{#if due.length}
