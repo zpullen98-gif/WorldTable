@@ -10,7 +10,7 @@
  * plate costs) kept under a flat `house` key that profiles.key() never
  * namespaces. See stores/house.svelte.ts for why that line is drawn where it is.
  */
-import type { MenuDish, DishCosting } from './state';
+import type { MenuDish, DishCosting, MaitreBlock, MaitreField, MaitrePatch } from './state';
 /*
  * These moved to state.ts, the LEAF module, and are re-exported here so the
  * store and the pages keep one import site.
@@ -22,8 +22,29 @@ import type { MenuDish, DishCosting } from './state';
  * function bodies rather than at module-eval time". A costing merge living
  * here would have rebuilt it.
  */
-import { localDay, weekStartOf, recentWeeks, normaliseCosting, mergeCostings } from './state';
-export { localDay, weekStartOf, recentWeeks, normaliseCosting, mergeCostings, CLOCK_SKEW_MS } from './state';
+import {
+	localDay,
+	weekStartOf,
+	recentWeeks,
+	normaliseCosting,
+	mergeCostings,
+	normaliseMaitre,
+	mergeMaitre,
+	withMaitre,
+	MAITRE_FIELDS
+} from './state';
+export {
+	localDay,
+	weekStartOf,
+	recentWeeks,
+	normaliseCosting,
+	mergeCostings,
+	CLOCK_SKEW_MS,
+	normaliseMaitre,
+	mergeMaitre,
+	withMaitre,
+	MAITRE_FIELDS
+} from './state';
 import type { CostLine } from '../costing';
 import { mergeItems, type Item } from '../items';
 import { mergeWaste, type WasteEntry } from '../waste';
@@ -322,7 +343,12 @@ export function adoptImport(
 	for (const d of dishes ?? []) {
 		if (!d?.id) continue;
 		const mine = byId.get(d.id);
-		if (!mine || (d.ts ?? 0) > (mine.ts ?? 0)) byId.set(d.id, d);
+		const winner = !mine || (d.ts ?? 0) > (mine.ts ?? 0) ? d : mine;
+		// The Maitre d's marks, NAMED here as in mergeSessions, and settled on
+		// their own stamps rather than riding the winner: a colleague's later
+		// edit to a description must not erase an answer somebody kept. See
+		// mergeMaitre; deep-pass.test.ts pins that both merges carry this line.
+		byId.set(d.id, withMaitre(winner, mergeMaitre(mine?.maitre, d.maitre)));
 	}
 	const nextDishes = [...byId.values()];
 
@@ -471,6 +497,105 @@ export function removeDish(house: HouseRecord, id: string): HouseRecord {
 		eightySix,
 		producers: pruneDish(house.producers ?? [], id)
 	};
+}
+
+/* ---- the Maitre d's marks ------------------------------------------------
+ *
+ * Record-level and pure, so a test can call them; the store wraps each in the
+ * `blocked` guard and a persist. The shape and the merge live in state.ts.
+ *
+ * None of these restamps the dish's `ts`. That stamp is the merge tiebreak for
+ * the dish as a whole (name, section, description, price), and a mark carries
+ * its own: restamping the dish for a mark would let her run on one tablet win
+ * the whole dish over a colleague's description edit on another.
+ */
+
+/** The record with one dish replaced, or the same record when nothing changed. */
+function withDish(house: HouseRecord, id: string, f: (d: MenuDish) => MenuDish): HouseRecord {
+	const cur = house.dishes.find((d) => d.id === id);
+	if (!cur) return house;
+	const next = f(cur);
+	if (next === cur) return house;
+	return { ...house, dishes: house.dishes.map((d) => (d.id === id ? next : d)) };
+}
+
+/**
+ * Write her marks (or a person's edits) onto a dish, field by field.
+ *
+ * HER MARK NEVER DISPLACES A KEPT ONE. A re-run of the guest lines arrives
+ * `by: 'maitre'`, and a mark somebody kept or edited is the house's; the run
+ * writes the fields nobody has kept and leaves the rest. A person's edit
+ * (`by: 'person'`) replaces anything. `kept` is not accepted here at all:
+ * keepMaitreNote is its only door, so a patch cannot empty it by omission.
+ * The patch is screened by normaliseMaitre, which is also how a key the shape
+ * does not name (an allergen mark, say) never reaches the record.
+ */
+export function setMaitre(house: HouseRecord, id: string, patch: MaitrePatch): HouseRecord {
+	const clean = normaliseMaitre(patch);
+	if (!clean) return house;
+	// Marks only. A `kept` that rode in on a hand-built patch is dropped here,
+	// never merged: the type forbids it and the runtime agrees.
+	const { kept: _ignored, ...marks } = clean;
+	return withDish(house, id, (d) => {
+		const cur = d.maitre;
+		const allowed: MaitreBlock = { ...marks };
+		for (const f of MAITRE_FIELDS) {
+			const m = allowed[f];
+			if (m && cur?.[f]?.by === 'person' && m.by !== 'person') delete allowed[f];
+		}
+		if (!Object.keys(allowed).length) return d;
+		return withMaitre(d, { ...cur, ...allowed });
+	});
+}
+
+/**
+ * Keep: the mark becomes the house's. `by` flips to 'person' and `ts` is
+ * re-stamped, so the kept mark outranks her older copy of it on every other
+ * tablet (pickMark). A field with no mark is left alone rather than minted:
+ * there is nothing to keep, and an empty kept mark would reach the guest menu.
+ */
+export function confirmMaitre(house: HouseRecord, id: string, field: MaitreField, now: number = Date.now()): HouseRecord {
+	return withDish(house, id, (d) => {
+		const mark = d.maitre?.[field];
+		if (!mark) return d;
+		return withMaitre(d, { ...d.maitre, [field]: { ...mark, by: 'person', ts: now } });
+	});
+}
+
+/**
+ * Discard one mark. A block left with nothing in it is removed with its key,
+ * so the dish reads exactly as one she never wrote on. The kept notes are not
+ * a field of this kind and stay.
+ */
+export function discardMaitre(house: HouseRecord, id: string, field: MaitreField): HouseRecord {
+	return withDish(house, id, (d) => {
+		if (!d.maitre?.[field]) return d;
+		const { [field]: _dropped, ...rest } = d.maitre;
+		return withMaitre(d, Object.keys(rest).length ? rest : undefined);
+	});
+}
+
+/**
+ * Keep an answer from the chat on this dish. Refuses a blank question or
+ * answer rather than filing a line nobody can read back. Appended and then
+ * unioned on `ts|q` through the block merge, so the same keep pressed twice
+ * in one millisecond is one note.
+ */
+export function keepMaitreNote(
+	house: HouseRecord,
+	id: string,
+	q: string,
+	a: string,
+	now: number = Date.now(),
+	model?: string
+): HouseRecord {
+	const question = q.trim();
+	const answer = a.trim();
+	if (!question || !answer) return house;
+	return withDish(house, id, (d) => {
+		const note = { q: question, a: answer, ts: now, ...(model ? { model } : {}) };
+		return withMaitre(d, mergeMaitre(d.maitre, { kept: [note] }));
+	});
 }
 
 /**

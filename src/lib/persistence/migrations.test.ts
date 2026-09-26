@@ -159,6 +159,40 @@ describe('the 22 renamed slugs follow their records', () => {
 		const out = remapDishSlugs([{ recipeSlug: 'rullep-lse' }, { recipeSlug: 'carbonara' }, {}]);
 		expect(out.map((d) => d.recipeSlug)).toEqual(['rullepolse', 'carbonara', undefined]);
 	});
+
+	/**
+	 * The import shape (parseImport, then remapSessionSlugs and remapDishSlugs)
+	 * spreads a dish whole and never rebuilds it field by field, so the Maitre
+	 * d's block rides through with the slug rename. Pinned, because the day a
+	 * screen here starts rebuilding a dish is the day the block goes the way
+	 * Prep.station once went.
+	 */
+	it('carries a dish’s maitre block through the import shape, slug rename and all', () => {
+		const maitre = {
+			guest: { value: 'An open sandwich, rye under it.', by: 'maitre', ts: 5, model: 'claude-opus-5' },
+			kept: [{ q: 'Which rye?', a: 'The menu does not say.', ts: 6 }]
+		};
+		const file = JSON.stringify({
+			format: FORMAT,
+			version: FORMAT_VERSION,
+			exportedAt: '2026-09-25T00:00:00.000Z',
+			app: { version: '2.0.0', recipeCount: 1710 },
+			data: {
+				...structuredClone(EMPTY_SESSION),
+				menuDishes: [
+					{ id: 'd-1', name: 'Open sandwich', section: 'Lunch', description: '', ingredients: [], allergens: [], price: '', ts: 1, recipeSlug: 'sm-rrebr-d', maitre },
+					{ id: 'd-2', name: 'Plain', section: 'Lunch', description: '', ingredients: [], allergens: [], price: '', ts: 1 }
+				]
+			}
+		});
+		const parsed = parseImport(file);
+		expect(parsed.data.menuDishes[0].recipeSlug).toBe('smorrebrod');
+		expect(parsed.data.menuDishes[0].maitre).toEqual(maitre);
+		expect('maitre' in parsed.data.menuDishes[1]).toBe(false);
+		// and the merge that follows takes it up, screened, not spread
+		const out = mergeSessions(structuredClone(EMPTY_SESSION), parsed.data);
+		expect(out.menuDishes[0].maitre).toEqual(maitre);
+	});
 });
 
 describe('mergeSessions — importing a .wtjson must not destroy what is already here', () => {
@@ -402,6 +436,40 @@ describe('mergeSessions — importing a .wtjson must not destroy what is already
 		});
 		expect(out.menuDishes).toHaveLength(2);
 		expect(out.menuDishes.find((d) => d.id === 'd-aaa')?.name).toBe('The Halibut, renamed');
+	});
+
+	/* The Maitre d's marks ride inside the dish and are NAMED in the merge,
+	 * like every field before them: an export always carries menuDishes, so a
+	 * dish arriving without a block must not carry an empty one over the marks. */
+	const marked = (ts: number) => ({
+		...dish('d-aaa', 'The Halibut', ts),
+		maitre: {
+			guest: { value: 'Line-caught, on the bone.', by: 'maitre' as const, ts: 5, model: 'claude-opus-5' },
+			why: { value: 'The bone keeps it moist.', by: 'person' as const, ts: 6 },
+			kept: [{ q: 'Where is it from?', a: 'The menu does not say.', ts: 7 }]
+		}
+	});
+
+	it('keeps a dish’s marks through an import of the same dish that carries none', () => {
+		const mine = { ...live(), menuDishes: [marked(100)] };
+		const out = mergeSessions(mine, { menuDishes: [dish('d-aaa', 'The Halibut, renamed', 200)] });
+		expect(out.menuDishes[0].name).toBe('The Halibut, renamed');
+		expect(out.menuDishes[0].maitre).toEqual(marked(100).maitre);
+	});
+
+	it('brings a dish’s marks in from a file, and a dish without any stays without any', () => {
+		const out = mergeSessions(
+			{ ...live(), menuDishes: [dish('d-aaa', 'The Halibut', 100), dish('d-bbb', 'The Duck', 50)] },
+			{ menuDishes: [marked(50), dish('d-bbb', 'The Duck', 50)] }
+		);
+		expect(out.menuDishes.find((d) => d.id === 'd-aaa')?.maitre).toEqual(marked(50).maitre);
+		expect('maitre' in out.menuDishes.find((d) => d.id === 'd-bbb')!).toBe(false);
+	});
+
+	it('is idempotent: re-importing your own marked dish changes nothing', () => {
+		const mine = { ...live(), menuDishes: [marked(100)] };
+		const out = mergeSessions(mine, { menuDishes: [marked(100)] });
+		expect(out.menuDishes[0]).toEqual(marked(100));
 	});
 
 	it('describeImport counts incoming menu dishes', () => {

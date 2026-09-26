@@ -54,7 +54,75 @@ export interface MenuDish {
 	price: string;
 	/** Last edit, ms epoch; the import-merge tiebreak. */
 	ts: number;
+	/**
+	 * What the Maitre d' wrote about this dish, and what a person kept.
+	 *
+	 * Every mark carries `by`. "Kept" means `by === 'person'`: Keep and Edit
+	 * both set it. A mark she wrote that nobody has kept is HERS, and an unkept
+	 * mark reaches no drill, no guest menu and no deck. That line is drawn on
+	 * the record and not in the screens, because a screen is the thing that
+	 * forgets: one guest menu reading every mark would put her guess at a table
+	 * in the house's voice.
+	 *
+	 * Inside the dish rather than a sibling like dishCosts, because a mark is
+	 * about this dish and nothing else; but it is never merged WITH the dish.
+	 * The dish wins whole on `ts`, and mergeMaitre then settles the marks on
+	 * their own stamps and unions `kept`, so a colleague's later edit to a
+	 * description cannot erase an answer somebody kept. Every site that
+	 * rebuilds a dish field by field (saveDish in /menu) must carry this or the
+	 * next edit drops it: the trap that once lost Prep.station.
+	 *
+	 * There is no allergen mark and there never will be: see the parser header
+	 * in menu-parse.ts. She is not allowed a word about allergens in any field,
+	 * and normaliseMaitre drops any key this shape does not name.
+	 */
+	maitre?: MaitreBlock;
 }
+
+/**
+ * One thing the Maitre d', or a person, wrote on a record: the value, who it
+ * is by, when, and which model wrote it when it was hers. The SAME shape in all
+ * three apps, so a bottle's marks and a cocktail's marks read like a dish's.
+ *
+ * `ts` is the mark's OWN stamp, never the dish's: Keep re-stamps it, so a mark
+ * a person confirmed on one tablet beats her older unconfirmed one on another.
+ */
+export interface MaitreMark<T = string> {
+	value: T;
+	by: 'maitre' | 'person';
+	ts: number;
+	model?: string;
+}
+
+/** One answer kept from Ask the Maitre d'. Keeping is a person's act, so it carries no `by`. */
+export interface MaitreNote {
+	q: string;
+	a: string;
+	ts: number;
+	model?: string;
+}
+
+export interface MaitreBlock {
+	/**
+	 * The ingredients the menu NAMED, as she read them off the page. A record
+	 * of the printed words, never a claim about what is in the dish.
+	 */
+	ingredientsNamed?: MaitreMark<string[]>;
+	/** The Floor Deck's five: how to say it, the guest line, the why, what it sits with, where it comes from. */
+	say?: MaitreMark;
+	guest?: MaitreMark;
+	why?: MaitreMark;
+	pairs?: MaitreMark;
+	origin?: MaitreMark;
+	/** Answers a person kept from the chat. Unioned on `ts|q` by every merge, never replaced. */
+	kept?: MaitreNote[];
+}
+
+/** The mark fields, in one list, so a loop cannot forget one and a stray key cannot join. */
+export const MAITRE_FIELDS = ['ingredientsNamed', 'say', 'guest', 'why', 'pairs', 'origin'] as const;
+export type MaitreField = (typeof MAITRE_FIELDS)[number];
+/** What setMaitre accepts: marks only. `kept` has its own door, keepMaitreNote. */
+export type MaitrePatch = Partial<Pick<MaitreBlock, MaitreField>>;
 
 export interface SessionState {
 	schemaVersion: number;
@@ -464,6 +532,164 @@ export function mergeStepWindow(current: number[], incoming: number[], cap = 12)
 	return out.reverse();
 }
 
+/* ---- the Maitre d's marks ------------------------------------------------
+ *
+ * Pure and in the leaf module, beside the shape, for the reason mergeCostings
+ * is: mergeSessions needs the merge, and state.ts must not import house.ts
+ * back. house.ts re-exports these so the store and the pages keep one import
+ * site.
+ */
+
+type AnyMark = MaitreMark<string> | MaitreMark<string[]>;
+
+const isString = (v: unknown): v is string => typeof v === 'string';
+const isStringList = (v: unknown): v is string[] => Array.isArray(v) && v.every(isString);
+const validBy = (b: unknown): b is MaitreMark['by'] => b === 'maitre' || b === 'person';
+/**
+ * A value with nothing honest in it. Her answer for "the menu does not say"
+ * is the empty string or the empty list, and that answer is NOT a mark: filed,
+ * it would be a blank line Keep could flip to the house's, and one a file
+ * could carry in already kept, the empty kept mark confirmMaitre's comment
+ * warns would reach the guest menu. A blank is refused at this one screen,
+ * which every write and every merge passes, so a run with nothing to say
+ * leaves the field as it found it. A value that is not blank is stored as
+ * written: nothing here trims or tidies, that would be a spelling fix.
+ * Clearing a field on purpose has its own door, discardMaitre.
+ */
+const isBlank = (v: string | string[]): boolean =>
+	typeof v === 'string' ? !v.trim() : v.every((s) => !s.trim());
+
+/**
+ * One door for a write onto a block, so a loop over MAITRE_FIELDS stays typed
+ * without a cast at every site. The value's shape is checked against the field
+ * by validMark before anything reaches here.
+ */
+const setMark = <F extends MaitreField>(b: MaitreBlock, f: F, m: MaitreBlock[F]) => {
+	b[f] = m;
+};
+
+/** A mark survives only if it is what the store could have written: a checked value with something in it, a known `by`, a finite stamp. */
+function validMark(raw: unknown, list: boolean): AnyMark | undefined {
+	if (!raw || typeof raw !== 'object') return undefined;
+	const m = raw as Record<string, unknown>;
+	const by = m.by;
+	if (!validBy(by) || !Number.isFinite(m.ts)) return undefined;
+	const ts = m.ts as number;
+	const model = typeof m.model === 'string' ? { model: m.model } : {};
+	// Two branches rather than one cast: the value is narrowed by the field it
+	// is for, so a string can never land on ingredientsNamed, or a list on `why`.
+	// Then the blank screen (isBlank): a checked value with nothing in it is
+	// "the menu does not say", and that is no mark.
+	if (list) return isStringList(m.value) && !isBlank(m.value) ? { value: m.value, by, ts, ...model } : undefined;
+	return isString(m.value) && !isBlank(m.value) ? { value: m.value, by, ts, ...model } : undefined;
+}
+
+function validNote(raw: unknown): MaitreNote | undefined {
+	if (!raw || typeof raw !== 'object') return undefined;
+	const n = raw as Record<string, unknown>;
+	if (!isString(n.q) || !isString(n.a) || !Number.isFinite(n.ts)) return undefined;
+	return { q: n.q, a: n.a, ts: n.ts as number, ...(typeof n.model === 'string' ? { model: n.model } : {}) };
+}
+
+/**
+ * Bring a block from any file into the shape, or nothing.
+ *
+ * Screened like every other list the merges take, and for one reason beyond
+ * the usual hand-edited file: the block is a CLOSED set of fields. A key this
+ * shape does not name, `allergens` above all, is dropped here rather than
+ * carried, so no file and no model can smuggle an allergen mark onto a dish
+ * through the one field she is allowed to write. Returns undefined when
+ * nothing survives, so a caller never mints an empty block on a record that
+ * had none.
+ */
+export function normaliseMaitre(raw: unknown): MaitreBlock | undefined {
+	if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return undefined;
+	const r = raw as Record<string, unknown>;
+	const out: MaitreBlock = {};
+	for (const f of MAITRE_FIELDS) {
+		const m = validMark(r[f], f === 'ingredientsNamed');
+		if (m) setMark(out, f, m);
+	}
+	const kept = asArray<unknown>(r.kept).map(validNote).filter((n): n is MaitreNote => !!n);
+	if (kept.length) out.kept = kept.sort((a, b) => a.ts - b.ts);
+	return Object.keys(out).length ? out : undefined;
+}
+
+/**
+ * Which of two marks on one field stands.
+ *
+ * A kept mark (by a person) beats her unkept one whatever the stamps say, and
+ * only then does the newer stamp win. The first rule is what keeps the merge
+ * honest with setMaitre, which refuses to let her mark displace a kept one on
+ * a single tablet: without it, the same re-run that is refused when the kept
+ * mark is already here would win the moment it arrived by file instead. On a
+ * tie mine stands, so re-importing your own export changes nothing.
+ */
+function pickMark(mine: AnyMark | undefined, theirs: AnyMark | undefined): AnyMark | undefined {
+	if (!mine) return theirs;
+	if (!theirs) return mine;
+	const mineKept = mine.by === 'person';
+	const theirsKept = theirs.by === 'person';
+	if (mineKept !== theirsKept) return mineKept ? mine : theirs;
+	return theirs.ts > mine.ts ? theirs : mine;
+}
+
+/**
+ * Merge two blocks for one dish. ONE implementation, called from both
+ * mergeSessions and adoptImport, because the dish merge they share has
+ * already drifted once (the Array.isArray guard the house never got).
+ *
+ * The marks settle per field on their own stamps (pickMark), never as a set
+ * with the dish: the dish wins whole on its `ts`, and if the marks rode with
+ * it a colleague's later edit to a description would erase every line a
+ * person kept. `kept` UNIONS on `ts|q`, because two devices' kept answers are
+ * different answers, not competing versions of one. The trade, the same one
+ * removeWaste makes: a discard does not travel, so a mark discarded here and
+ * still held on another tablet comes back on the next import. An unkept one
+ * comes back hers, reaching nothing, which is the harmless direction.
+ *
+ * THE RULE, for the ports to copy word for word (the plan's "winner's marks"
+ * is read as this, and only this, because the literal reading is the one
+ * that erases a kept `why` on a later description edit). Per field: a
+ * person's mark beats hers whatever the stamps, then the newer ts, tie =
+ * mine; kept unions on ts|q; a dish arriving without a block carries nothing
+ * over. The Ledger backup merge and the Codex transfer merge follow this,
+ * not the dish winner, so the same export settles the same way in all three.
+ */
+export function mergeMaitre(mineRaw: unknown, theirsRaw: unknown): MaitreBlock | undefined {
+	const mine = normaliseMaitre(mineRaw);
+	const theirs = normaliseMaitre(theirsRaw);
+	if (!mine) return theirs;
+	if (!theirs) return mine;
+	const out: MaitreBlock = {};
+	for (const f of MAITRE_FIELDS) {
+		const m = pickMark(mine[f], theirs[f]);
+		if (m) setMark(out, f, m);
+	}
+	const kept = new Map<string, MaitreNote>();
+	for (const n of mine.kept ?? []) kept.set(`${n.ts}|${n.q}`, n);
+	for (const n of theirs.kept ?? []) {
+		const key = `${n.ts}|${n.q}`;
+		if (!kept.has(key)) kept.set(key, n);
+	}
+	if (kept.size) out.kept = [...kept.values()].sort((a, b) => a.ts - b.ts);
+	return out;
+}
+
+/**
+ * The dish with this block, or with none. The key is REMOVED rather than set
+ * to undefined: structuredClone keeps a key whose value is undefined, and
+ * `'maitre' in d` would then be true for a dish that has no marks, the exact
+ * ambiguity normaliseCosting's `sold` comment warns about. Same object back
+ * when nothing changes, so a merge of two dishes without a block leaves an
+ * old record untouched.
+ */
+export function withMaitre(dish: MenuDish, block: MaitreBlock | undefined): MenuDish {
+	if (dish.maitre === block) return dish;
+	const { maitre: _dropped, ...rest } = dish;
+	return block ? { ...rest, maitre: block } : rest;
+}
+
 /**
  * Reconcile an imported session over the live one, field by field.
  *
@@ -619,7 +845,12 @@ export function mergeSessions(
 			for (const d of incoming.menuDishes ?? []) {
 				if (!d || !d.id) continue;
 				const mine = dishes.get(d.id);
-				if (!mine || (d.ts ?? 0) > (mine.ts ?? 0)) dishes.set(d.id, d);
+				const winner = !mine || (d.ts ?? 0) > (mine.ts ?? 0) ? d : mine;
+				// The Maitre d's marks, NAMED, and settled on their own stamps
+				// rather than riding the winner: see mergeMaitre for why a
+				// description edit must not erase a kept answer. The same line
+				// stands in adoptImport, pinned by deep-pass.test.ts.
+				dishes.set(d.id, withMaitre(winner, mergeMaitre(mine?.maitre, d.maitre)));
 			}
 			return [...dishes.values()];
 		})(),

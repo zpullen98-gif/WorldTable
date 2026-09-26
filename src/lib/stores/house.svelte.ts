@@ -46,6 +46,10 @@ import {
 	weekStartOf,
 	removeDish as removeDishFrom,
 	removePrep as removePrepFrom,
+	setMaitre as setMaitreOn,
+	confirmMaitre as confirmMaitreOn,
+	discardMaitre as discardMaitreOn,
+	keepMaitreNote as keepMaitreNoteOn,
 	dishesUsingPrep,
 	localDay,
 	houseSnapshot,
@@ -56,7 +60,7 @@ import {
 	type EightySix,
 	type Prep
 } from '../persistence/house';
-import type { MenuDish, DishCosting, SalesWeek } from '../persistence/state';
+import type { MenuDish, DishCosting, SalesWeek, MaitreField, MaitrePatch } from '../persistence/state';
 import type { CostLine, PricedItem } from '../costing';
 import { recordPrice, recordYield, pricedItems, itemNames, currentPrice, type Item } from '../items';
 import { type WasteEntry } from '../waste';
@@ -242,6 +246,51 @@ class House {
 
 	removeDish(id: string) {
 		this.#r = removeDishFrom(this.#r, id);
+		this.#persist();
+	}
+
+	/* ---- the Maitre d's marks ----------------------------------------------
+	 *
+	 * Thin wrappers over persistence/house.ts, where the rules live and are
+	 * tested. Each refuses while `blocked` BEFORE touching #r, the way adopt()
+	 * does and for its reason: #persist() would refuse the write anyway, but a
+	 * mark rendered on screen over the alert saying the record is untouchable
+	 * would contradict it, and vanish on reload. A person is a person, so these
+	 * are open to everyone, like the 86 board. */
+
+	/** Her marks, or a person's edits (`by: 'person'`). Never displaces a kept mark. */
+	setMaitre(id: string, patch: MaitrePatch) {
+		if (this.#blocked) return;
+		const next = setMaitreOn(this.#r, id, patch);
+		if (next === this.#r) return;
+		this.#r = next;
+		this.#persist();
+	}
+
+	/** Keep: flips the mark to the house's and re-stamps it. */
+	confirmMaitre(id: string, field: MaitreField) {
+		if (this.#blocked) return;
+		const next = confirmMaitreOn(this.#r, id, field, Date.now());
+		if (next === this.#r) return;
+		this.#r = next;
+		this.#persist();
+	}
+
+	/** Discard one mark. The block goes with its key when it empties; kept notes stay. */
+	discardMaitre(id: string, field: MaitreField) {
+		if (this.#blocked) return;
+		const next = discardMaitreOn(this.#r, id, field);
+		if (next === this.#r) return;
+		this.#r = next;
+		this.#persist();
+	}
+
+	/** Keep an answer from the chat on the dish. Blank question or answer: nothing filed. */
+	keepMaitreNote(id: string, q: string, a: string, model?: string) {
+		if (this.#blocked) return;
+		const next = keepMaitreNoteOn(this.#r, id, q, a, Date.now(), model);
+		if (next === this.#r) return;
+		this.#r = next;
 		this.#persist();
 	}
 

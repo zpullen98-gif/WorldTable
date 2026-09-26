@@ -432,6 +432,9 @@
 			// dish back to "not marked", which is the answer that keeps people alive.
 			...(dishForm.checked ? { allergensCheckedAt: Date.now() } : {}),
 			...(linkedSlug ? { recipeSlug: linkedSlug } : {}),
+			// Her marks and the kept notes are not on the form, so they ride in
+			// from the stored record: the Prep.station trap. See MenuDish.maitre.
+			...((prior) => (prior?.maitre ? { maitre: prior.maitre } : {}))(house.dishes.find((d) => d.id === dishForm?.id)),
 			price: dishForm.price.trim(),
 			ts: Date.now()
 		};

@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
 import {
 	EMPTY_HOUSE,
 	readHouse,
@@ -11,9 +12,14 @@ import {
 	houseSnapshot,
 	mergeExportedMenu,
 	housePortable,
+	setMaitre,
+	confirmMaitre,
+	discardMaitre,
+	keepMaitreNote,
+	normaliseMaitre,
 	type HouseRecord
 } from './house';
-import { EMPTY_SESSION, type MenuDish } from './state';
+import { EMPTY_SESSION, type MenuDish, type MaitreMark, type MaitreBlock } from './state';
 import type { CostLine } from '../costing';
 import type { Producer } from '../producers';
 import { describeImport } from './portable';
@@ -472,5 +478,207 @@ describe('the producers travel with the house', () => {
 		};
 		const out = adoptImport(mine, [dish('x')], {}, { producers: [producer('pr-p', { dishIds: ['x'], ts: 3 })] });
 		expect(out.producers[0].dishIds).toEqual([]);
+	});
+});
+
+/**
+ * The Maitre d's marks: what she wrote on a dish, and what a person kept.
+ *
+ * The same three lessons as every collection above (an old record reads, an
+ * import names the field, the export carries it), plus the one that is theirs
+ * alone: "kept" means `by === 'person'`, and her unkept mark must never win
+ * over a kept one, on one tablet or between two.
+ */
+describe("the Maitre d's marks travel with the dish", () => {
+	const mark = (value: string, by: 'maitre' | 'person' = 'maitre', ts = 10): MaitreMark => ({
+		value,
+		by,
+		ts,
+		...(by === 'maitre' ? { model: 'claude-opus-5' } : {})
+	});
+	const block = (): MaitreBlock => ({
+		ingredientsNamed: { value: ['crawfish', 'dark roux', 'rice'], by: 'maitre', ts: 10, model: 'claude-haiku-4-5' },
+		guest: mark('A crawfish stew on rice, the roux dark and nutty.'),
+		why: mark('The roux is taken to the colour of a penny.', 'person', 20),
+		kept: [{ q: 'Where is the crawfish from?', a: 'The menu does not say.', ts: 15, model: 'claude-opus-5' }]
+	});
+	const marked = (id = 'a'): MenuDish => ({ ...dish(id), maitre: block() });
+	const withDishes = (...dishes: MenuDish[]): HouseRecord => ({ ...fresh(), dishes });
+
+	it('a dish carrying her marks round-trips through adoptImport, and twice changes nothing', () => {
+		const once = adoptImport(fresh(), [marked()], {}, {});
+		expect(once.dishes[0].maitre).toEqual(block());
+		const twice = adoptImport(once, [marked()], {}, {});
+		expect(twice.dishes[0].maitre).toEqual(block());
+	});
+
+	it('an old record without a block reads and is left without one', () => {
+		const old = { schemaVersion: HOUSE_VERSION, dishes: [dish('a')], lastWrite: 5 };
+		const { record, blocked } = readHouse(old);
+		expect(blocked).toBe(false);
+		expect('maitre' in record.dishes[0]).toBe(false);
+		// and an import of a pre-feature dish over a pre-feature dish mints no key
+		const out = adoptImport(withDishes(dish('a', 100)), [dish('a', 200)], {}, {});
+		expect('maitre' in out.dishes[0]).toBe(false);
+	});
+
+	it('a block that reads is kept whole on read', () => {
+		const { record } = readHouse({ schemaVersion: HOUSE_VERSION, dishes: [marked()] });
+		expect(record.dishes[0].maitre).toEqual(block());
+	});
+
+	/**
+	 * The shape is CLOSED, and this is the doctrine that does not bend: no
+	 * allergen field on any desk shape, ever. A hand-edited file, or a model
+	 * answering in the wrong shape, cannot put one on a dish through her block.
+	 */
+	it('screens a hand-edited block: an allergens key, a junk mark and a junk note are dropped', () => {
+		const dirty = {
+			allergens: { value: ['nuts'], by: 'maitre', ts: 1 },
+			why: mark('kept'),
+			guest: { value: 12, by: 'maitre', ts: 1 },
+			say: { value: 'gwan-CHAH-leh', by: 'nobody', ts: 1 },
+			pairs: { value: 'a Muscadet', by: 'maitre', ts: 'yesterday' },
+			ingredientsNamed: { value: 'not a list', by: 'maitre', ts: 1 },
+			kept: [{ q: 'ok', a: 'ok', ts: 1 }, { q: 'no answer', ts: 2 }, 'nope', null]
+		};
+		expect(normaliseMaitre(dirty)).toEqual({ why: mark('kept'), kept: [{ q: 'ok', a: 'ok', ts: 1 }] });
+		expect(normaliseMaitre({ allergens: { value: ['nuts'], by: 'maitre', ts: 1 } })).toBeUndefined();
+		expect(normaliseMaitre('nope')).toBeUndefined();
+		expect(normaliseMaitre([])).toBeUndefined();
+		// through the import: nothing survives, so no key is minted
+		const out = adoptImport(fresh(), [{ ...dish('a'), maitre: { allergens: ['nuts'] } as unknown as MaitreBlock }], {}, {});
+		expect('maitre' in out.dishes[0]).toBe(false);
+	});
+
+	/**
+	 * "The menu does not say" is the empty string or the empty list, and that
+	 * is no mark. Filed, a blank would be a line Keep could flip to the house's
+	 * and a file could carry in already kept: an empty kept guest line on the
+	 * guest menu. So a blank is refused at the screen, on every door.
+	 */
+	it('a blank mark is no mark: refused at the screen, by setMaitre, and on the way in from a file', () => {
+		const blanks = {
+			guest: { value: '', by: 'maitre', ts: 1, model: 'claude-opus-5' },
+			why: { value: '   ', by: 'maitre', ts: 1 },
+			ingredientsNamed: { value: [], by: 'maitre', ts: 1 },
+			pairs: { value: '\t\n', by: 'person', ts: 1 },
+			say: mark('gwan-CHAH-leh')
+		};
+		// only the one with something in it survives, and a kept blank is as blank as hers
+		expect(normaliseMaitre(blanks)).toEqual({ say: mark('gwan-CHAH-leh') });
+		expect(normaliseMaitre({ ingredientsNamed: { value: ['', ' '], by: 'maitre', ts: 1 } })).toBeUndefined();
+		// a list with one honest entry stands, and stands as written: nothing is trimmed or tidied
+		expect(normaliseMaitre({ ingredientsNamed: { value: ['', 'rice '], by: 'maitre', ts: 1 } })).toEqual({
+			ingredientsNamed: { value: ['', 'rice '], by: 'maitre', ts: 1 }
+		});
+		// setMaitre with only blanks writes nothing, so a run with nothing to say leaves the record alone
+		const h = withDishes(marked());
+		expect(setMaitre(h, 'a', { guest: { value: '', by: 'maitre', ts: 99 }, why: { value: ' ', by: 'person', ts: 99 } })).toBe(h);
+		const bare = withDishes(dish('a'));
+		expect(setMaitre(bare, 'a', { ingredientsNamed: { value: [], by: 'maitre', ts: 1 } })).toBe(bare);
+		expect('maitre' in setMaitre(bare, 'a', { guest: { value: '', by: 'maitre', ts: 1 } }).dishes[0]).toBe(false);
+		// a blank that arrives already kept does not come in kept: it does not come in at all
+		const imported = adoptImport(fresh(), [{ ...dish('a'), maitre: { guest: { value: '', by: 'person', ts: 1 } } }], {}, {});
+		expect('maitre' in imported.dishes[0]).toBe(false);
+		// and confirmMaitre has nothing to flip, because the blank was never stored
+		expect(confirmMaitre(setMaitre(withDishes(dish('a')), 'a', { guest: { value: '', by: 'maitre', ts: 1 } }), 'a', 'guest', 2).dishes[0].maitre).toBeUndefined();
+	});
+
+	it('setMaitre writes her marks and a person’s edits, never a stray kept', () => {
+		const out = setMaitre(withDishes(dish('a')), 'a', { guest: mark('Hers.'), why: mark('Edited by hand.', 'person') });
+		expect(out.dishes[0].maitre).toEqual({ guest: mark('Hers.'), why: mark('Edited by hand.', 'person') });
+		const sneaked = setMaitre(withDishes(dish('a')), 'a', {
+			guest: mark('Hers.'),
+			kept: [{ q: 'q', a: 'a', ts: 1 }]
+		} as MaitreBlock);
+		expect(sneaked.dishes[0].maitre?.kept).toBeUndefined();
+	});
+
+	it('setMaitre never lets her mark displace a kept one; a person’s edit replaces anything', () => {
+		const h = withDishes(marked());
+		const rerun = setMaitre(h, 'a', { why: mark('Her newer why.', 'maitre', 99), guest: mark('Her newer guest line.', 'maitre', 99) });
+		expect(rerun.dishes[0].maitre?.why).toEqual(block().why);
+		expect(rerun.dishes[0].maitre?.guest?.value).toBe('Her newer guest line.');
+		expect(rerun.dishes[0].maitre?.kept).toEqual(block().kept);
+		const edited = setMaitre(h, 'a', { why: mark('A person rewrote it.', 'person', 99) });
+		expect(edited.dishes[0].maitre?.why?.value).toBe('A person rewrote it.');
+	});
+
+	it('setMaitre returns the same record when there is nothing to write', () => {
+		const h = withDishes(marked());
+		expect(setMaitre(h, 'a', {})).toBe(h);
+		expect(setMaitre(h, 'missing', { guest: mark('x') })).toBe(h);
+		expect(setMaitre(h, 'a', { why: mark('refused', 'maitre', 99) })).toBe(h);
+	});
+
+	it('confirmMaitre flips by to person and re-stamps ts, and only for a mark that exists', () => {
+		const h = withDishes(marked());
+		const out = confirmMaitre(h, 'a', 'guest', 500);
+		expect(out.dishes[0].maitre?.guest).toEqual({ ...block().guest, by: 'person', ts: 500 });
+		// the value and the model are kept: who wrote it is still true after Keep
+		expect(out.dishes[0].maitre?.guest?.model).toBe('claude-opus-5');
+		// the rest of the block is untouched
+		expect(out.dishes[0].maitre?.why).toEqual(block().why);
+		expect(out.dishes[0].maitre?.kept).toEqual(block().kept);
+		expect(confirmMaitre(h, 'a', 'say', 500)).toBe(h);
+		expect(confirmMaitre(h, 'missing', 'guest', 500)).toBe(h);
+		// and the dish's own stamp does not move: a mark is not an edit to the dish
+		expect(out.dishes[0].ts).toBe(100);
+	});
+
+	it('discardMaitre removes one mark, and the key itself once nothing is left', () => {
+		const h = withDishes(marked());
+		const one = discardMaitre(h, 'a', 'guest');
+		expect(one.dishes[0].maitre?.guest).toBeUndefined();
+		expect(one.dishes[0].maitre?.why).toEqual(block().why);
+		expect(discardMaitre(h, 'a', 'say')).toBe(h);
+		const lone = withDishes({ ...dish('a'), maitre: { guest: mark('x') } });
+		expect('maitre' in discardMaitre(lone, 'a', 'guest').dishes[0]).toBe(false);
+		// the kept notes are not a mark and stay
+		const notes = withDishes({ ...dish('a'), maitre: { guest: mark('x'), kept: [{ q: 'q', a: 'a', ts: 1 }] } });
+		expect(discardMaitre(notes, 'a', 'guest').dishes[0].maitre).toEqual({ kept: [{ q: 'q', a: 'a', ts: 1 }] });
+	});
+
+	it('keepMaitreNote appends, refuses a blank, and files the same keep once', () => {
+		const h = withDishes(marked());
+		const out = keepMaitreNote(h, 'a', ' What is the roux? ', 'Flour and fat, cooked dark.', 900, 'claude-opus-5');
+		expect(out.dishes[0].maitre?.kept).toEqual([
+			...block().kept!,
+			{ q: 'What is the roux?', a: 'Flour and fat, cooked dark.', ts: 900, model: 'claude-opus-5' }
+		]);
+		expect(keepMaitreNote(h, 'a', '  ', 'answer', 900)).toBe(h);
+		expect(keepMaitreNote(h, 'a', 'question', '', 900)).toBe(h);
+		expect(keepMaitreNote(h, 'missing', 'q', 'a', 900)).toBe(h);
+		const twice = keepMaitreNote(out, 'a', 'What is the roux?', 'Flour and fat, cooked dark.', 900);
+		expect(twice.dishes[0].maitre?.kept).toHaveLength(2);
+		// on a dish with no block yet, the note is the block
+		const first = keepMaitreNote(withDishes(dish('b')), 'b', 'q', 'a', 1);
+		expect(first.dishes[0].maitre).toEqual({ kept: [{ q: 'q', a: 'a', ts: 1 }] });
+	});
+
+	/**
+	 * The store is a runes module a unit test cannot reach, so the refusal is
+	 * pinned at the source: every mark write checks `blocked` before it touches
+	 * the record, the way adopt() does. A mark rendered on screen over the alert
+	 * saying the record is untouchable would contradict it and vanish on reload.
+	 */
+	it('the store refuses every mark write while blocked, before touching the record', () => {
+		const src = readFileSync('src/lib/stores/house.svelte.ts', 'utf8');
+		for (const name of ['setMaitre', 'confirmMaitre', 'discardMaitre', 'keepMaitreNote']) {
+			const at = src.indexOf(`\t${name}(`);
+			expect(at, `${name} is not on the store`).toBeGreaterThan(-1);
+			const body = src.slice(at, src.indexOf('\n\t}\n', at));
+			expect(body, `${name} does not refuse while blocked`).toContain('if (this.#blocked) return;');
+			expect(body.indexOf('if (this.#blocked) return;')).toBeLessThan(body.indexOf('this.#r ='));
+			expect(body).toContain('this.#persist();');
+		}
+	});
+
+	it('the export carries the marks, kept and unkept alike, and the import takes them back', () => {
+		const snap = houseSnapshot(withDishes(marked()));
+		expect(snap.menuDishes[0].maitre).toEqual(block());
+		const back = adoptImport(fresh(), snap.menuDishes, snap.dishCosts, {});
+		expect(back.dishes[0].maitre).toEqual(block());
 	});
 });
