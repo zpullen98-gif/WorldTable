@@ -111,6 +111,11 @@
 					<div class="dish">
 						<p class="name">{d.name}{#if d.price}<span class="price">{d.price}</span>{/if}</p>
 						{#if d.description}<p class="desc">{d.description}</p>{/if}
+						<!-- The guest line, ONLY once a person kept it (by 'person'). A
+						     line she wrote that nobody kept is hers and reaches no table:
+						     printed here in the house's voice it would be her guess with
+						     the house's name on it. See MenuDish.maitre. -->
+						{#if d.maitre?.guest?.by === 'person'}<p class="desc guestline">{d.maitre.guest.value}</p>{/if}
 					</div>
 				{/each}
 			{/each}
@@ -268,6 +273,10 @@
 		margin-top: 3px;
 		max-width: 48ch;
 		margin-inline: auto;
+	}
+	.guestline {
+		font-style: normal;
+		margin-top: 4px;
 	}
 	.date {
 		font-size: 11px;

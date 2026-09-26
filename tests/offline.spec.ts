@@ -10,6 +10,12 @@ const TOTALS = JSON.parse(
 	readFileSync(join(dirname(fileURLToPath(import.meta.url)), '../src/lib/data/totals.json'), 'utf8')
 ) as { recipes: number; chapters: number; lexicon: number; techniques: number };
 
+/* The Commander's Palace dinner menu, the desk reader's own fixture, pasted whole. */
+const COMMANDERS = readFileSync(
+	join(dirname(fileURLToPath(import.meta.url)), '../src/lib/desk/fixtures/commanders-dinner.txt'),
+	'utf8'
+);
+
 /**
  * The offline contract, in a real Chromium — the one check the embedded dev
  * browser could not perform, because it resolves serviceWorker.register()
@@ -88,7 +94,7 @@ test('the whole app works with the network gone', async ({ page, context }) => {
 	await context.setOffline(false);
 });
 
-test('no request ever leaves the origin', async ({ page }) => {
+test('no request ever leaves the origin', async ({ page, context }) => {
 	const external: string[] = [];
 	page.on('request', (req) => {
 		const url = new URL(req.url());
@@ -100,6 +106,20 @@ test('no request ever leaves the origin', async ({ page }) => {
 	await goto(page, '/recipe/cacio-e-pepe');
 	await goto(page, '/lexicon');
 	await goto(page, '/study');
+
+	// The Menu Desk, with the network gone. The desk opens itself on an empty
+	// menu, and the offline reader is its first engine: a whole page pasted and
+	// read with nothing to fetch, not even her client, because with no key on
+	// the device the second engine is one chip and never a request. The page
+	// is loaded first and the network cut under it, because this spec has no
+	// service worker to serve a cold navigation.
+	await goto(page, '/menu');
+	await context.setOffline(true);
+	await page.getByLabel('Paste your menu').fill(COMMANDERS);
+	await page.getByRole('button', { name: 'Read it here' }).click();
+	await expect(page.locator('.counts')).toHaveText('Read 36 lines: 34 dishes for the kitchen, 2 I could not place.');
+	await expect(page.locator('.engines .engine').nth(1)).toContainText("The Maître d' is not here yet: bring her in ▸");
+	await context.setOffline(false);
 
 	// YouTube links exist as <a href> navigations the user may choose — but the
 	// app itself must never fetch a third-party resource.

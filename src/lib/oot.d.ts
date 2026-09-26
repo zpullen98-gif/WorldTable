@@ -90,5 +90,20 @@ interface Window {
 		gate?: unknown;
 		pass?: OotPass;
 		auth?: unknown;
+		/**
+		 * shared/oot-maitre.js, the Maitre d' client. Installed by the script
+		 * itself, which src/lib/maitre.ts loads lazily and only when a door is
+		 * pressed online: absent until then in EVERY build, wing included, so
+		 * every caller goes through that module's loader and never reads this
+		 * eagerly. The shape is declared beside the loader.
+		 */
+		maitre?: import('./maitre').MaitreApi;
+		/**
+		 * shared/oot-config.js, once the hub carries it: a script tag beside the
+		 * other shared scripts at their ?v=. Optional because the standalone
+		 * build never has it and the hub does not have it yet; maitre.ts falls
+		 * back to its own tag at ${base}/shared/ either way.
+		 */
+		loadShared?(name: string): unknown;
 	};
 }

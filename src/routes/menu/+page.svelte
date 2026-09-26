@@ -3,14 +3,34 @@
 	import { bySlug, formatTime, recipeHref, recipes, TOTALS } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
-	import type { MenuDish } from '$lib/persistence/state';
+	import type { MenuDish, MaitrePatch } from '$lib/persistence/state';
 	import { buildExport, download, parseImport, describeImport } from '$lib/persistence/portable';
 	import { mergeExportedMenu } from '$lib/persistence/house';
 	import { fromLine, producersForDish } from '$lib/producers';
+	import { DESK_FORMAT, readDeskFile, type DeskFile } from '$lib/desk/desk-file';
+	import { deskShare, readDeskInbox } from '$lib/desk/desk-inbox';
+	import { sharedOrigin } from '$lib/desk/desk-share';
 	import Ornament from '$lib/components/Ornament.svelte';
 	import ExportNudge from '$lib/components/ExportNudge.svelte';
 	import MenuImport from '$lib/components/MenuImport.svelte';
-	import { onMount } from 'svelte';
+	import MaitreDoor from '$lib/components/MaitreDoor.svelte';
+	import MaitreLines from '$lib/components/MaitreLines.svelte';
+	import {
+		hasKey,
+		online,
+		installed,
+		openSettings,
+		openChat,
+		maitreMessage,
+		MAITRE_CHANGED,
+		OFFLINE_NOW,
+		type MaitreApi,
+		type MaitreHouse,
+		type MaitreItemIn,
+		type MaitreProgress
+	} from '$lib/maitre';
+	import { adoptLines, LINE_FIELDS, type LineField } from '$lib/maitre-adopt';
+	import { onMount, tick } from 'svelte';
 	import {
 		buildPass,
 		clashesOver,
@@ -239,8 +259,164 @@
 		} catch {
 			return;
 		}
-		if (id.startsWith('dish-')) document.getElementById(id)?.scrollIntoView({ block: 'start' });
+		// #desk is the Menu Desk's own anchor, the one the home band and the
+		// Service tile link to; it sits below the hand form and is only rendered
+		// once the house is ready, for the same reason the dish anchors are.
+		if (id.startsWith('dish-') || id === 'desk') {
+			document.getElementById(id)?.scrollIntoView({ block: 'start' });
+		}
+		// #ask is the chat door: the tools row scrolls into view and her dialog
+		// opens over it, on the family line when there is no key here.
+		if (id === 'ask') {
+			document.querySelector('.tools')?.scrollIntoView({ block: 'start' });
+			void askHer();
+		}
 	});
+
+	/* ---- the Maître d' -----------------------------------------------------
+	 * Three doors on this page: her settings and the chat in the tools row,
+	 * the guest lines at the top of The Kitchen's Menu and on each dish. The
+	 * client behind them is loaded only when a door is pressed online
+	 * (src/lib/maitre.ts); this page only ever knows whether a key is here.
+	 */
+	let herKey = $state(false);
+	let herNet = $state(true);
+	let herMsg = $state('');
+	/** The dishes a bulk run wrote on, listed below the door until the person is done looking. */
+	let reviewIds = $state<string[]>([]);
+	let reviewHead: HTMLHeadingElement | undefined = $state();
+
+	function refreshHer() {
+		herKey = hasKey();
+		herNet = online();
+	}
+	onMount(() => {
+		refreshHer();
+		const on = () => (herNet = true);
+		const off = () => (herNet = false);
+		window.addEventListener('online', on);
+		window.addEventListener('offline', off);
+		window.addEventListener(MAITRE_CHANGED, refreshHer);
+		return () => {
+			window.removeEventListener('online', on);
+			window.removeEventListener('offline', off);
+			window.removeEventListener(MAITRE_CHANGED, refreshHer);
+		};
+	});
+
+	async function herSettings() {
+		herMsg = '';
+		if (!online()) {
+			herNet = false;
+			herMsg = OFFLINE_NOW;
+			return;
+		}
+		try {
+			await openSettings();
+		} catch (e) {
+			herMsg = maitreMessage(e);
+		}
+		refreshHer();
+	}
+
+	/**
+	 * The house as the chat may see it, built FIELD BY FIELD so that nothing
+	 * rides in by accident: never `allergens`, never `allergensCheckedAt`. The
+	 * marks go whole because the client reads only the kept lines out of them
+	 * and sweeps the block it builds for a forbidden key besides. On the shared
+	 * origin the desk's other shares go by name, so she can say a wine is
+	 * waiting next door without seeing its price.
+	 */
+	function herHouse(): MaitreHouse {
+		const dishes = house.dishes.map((d) => ({
+			id: d.id,
+			name: d.name,
+			section: d.section,
+			description: d.description,
+			ingredients: d.ingredients,
+			price: d.price,
+			...(d.maitre ? { maitre: d.maitre } : {})
+		}));
+		const inbox = sharedOrigin(base) ? readDeskInbox() : null;
+		const waiting = inbox
+			? { wines: deskShare(inbox, 'wine').map((i) => i.name), cocktails: deskShare(inbox, 'cocktail').map((i) => i.name) }
+			: null;
+		return { dishes, ...(waiting ? { waiting } : {}) };
+	}
+
+	const isLineField = (f: string): f is LineField => (LINE_FIELDS as readonly string[]).includes(f);
+
+	/**
+	 * Keep this on {dish} as {field}, from the chat. A person pressed it, so
+	 * the mark is theirs (`by: 'person'`) and the answer is also filed with
+	 * its question as a kept note, so the record says where the line came
+	 * from. A throw here is shown by the chat as "could not be kept".
+	 */
+	function keepFromHer(id: string, field: string, q: string, a: string) {
+		if (house.blocked) throw new Error('this tablet is behind and the record cannot be written');
+		if (!isLineField(field)) throw new Error('that is not a line she may write');
+		if (!house.dishes.some((d) => d.id === id)) throw new Error('that dish is not on the menu');
+		const model = installed()?.settings.get().models.chat;
+		const patch: MaitrePatch = {};
+		patch[field] = { value: a, by: 'person', ts: Date.now(), ...(model ? { model } : {}) };
+		house.setMaitre(id, patch);
+		house.keepMaitreNote(id, q, a, model);
+	}
+
+	async function askHer() {
+		herMsg = '';
+		if (!online()) {
+			herNet = false;
+			herMsg = OFFLINE_NOW;
+			return;
+		}
+		try {
+			await openChat({ house: herHouse(), wing: 'table', onKeep: keepFromHer });
+		} catch (e) {
+			herMsg = maitreMessage(e);
+		}
+	}
+
+	/** A dish with any of her five lines on it, hers or kept. */
+	const hasLines = (d: MenuDish) => LINE_FIELDS.some((f) => !!d.maitre?.[f]);
+	const needLines = $derived(house.dishes.filter((d) => !hasLines(d)));
+	/** What she is shown of a dish: the whitelist the client keeps, and never the allergen fields. */
+	const lineItem = (d: MenuDish): MaitreItemIn => ({
+		id: d.id,
+		kind: 'dish',
+		name: d.name,
+		section: d.section,
+		description: d.description,
+		ingredients: d.ingredients,
+		price: d.price
+	});
+	/** The size of what goes, for the estimate line. */
+	const linesChars = $derived(needLines.reduce((n, d) => n + JSON.stringify(lineItem(d)).length, 0));
+
+	/**
+	 * Her five lines on these dishes, written as HER marks. A dish already
+	 * carrying a kept line keeps it: setMaitre never lets her mark displace a
+	 * person's. Returns the sentence for the door's status line. `review`
+	 * is the bulk door's: its run puts the marked dishes in the list below
+	 * it, one dish or many, and that list is what keeps the door on the page
+	 * to say its sentence once every dish has lines.
+	 */
+	async function writeLines(dishes: MenuDish[], api: MaitreApi, opts: { onProgress: (p: MaitreProgress) => void; confirmed: boolean }, review = false) {
+		if (house.blocked) return 'This tablet is behind: nothing she writes can be saved until it updates.';
+		if (!dishes.length) return '';
+		const res = await api.guestLines(dishes.map(lineItem), { wing: 'table', onProgress: opts.onProgress, confirmed: opts.confirmed });
+		const model = res.provenance?.model || api.settings.get().models.write;
+		const marks = adoptLines(res.items, model);
+		for (const [id, patch] of marks) house.setMaitre(id, patch);
+		const n = marks.size;
+		if (review && n) {
+			reviewIds = [...marks.keys()];
+			await tick();
+			reviewHead?.focus();
+		}
+		return n ? `Her lines are on ${n} ${n === 1 ? 'dish' : 'dishes'}, hers until you keep them.` : 'She had nothing honest to write for these.';
+	}
+	const reviewDishes = $derived(reviewIds.map((id) => house.dishes.find((d) => d.id === id)).filter((d): d is MenuDish => !!d));
 
 	onMount(() => {
 		now = Date.now();
@@ -460,6 +636,12 @@
 	/* ---- import / export ------------------------------------------------ */
 	let importMsg = $state('');
 	let fileInput: HTMLInputElement | undefined = $state();
+	/**
+	 * A desk file the session picker was handed, on its way to the Menu Desk.
+	 * It is a DRAFT (see desk-file.ts): its rows go on the review table for a
+	 * person to correct and adopt, and it never reaches house.adopt.
+	 */
+	let deskFile = $state<DeskFile | null>(null);
 
 	function doExport() {
 		// The menu and its costings live in the house record now; the .wtjson
@@ -547,6 +729,25 @@
 				return;
 			}
 
+			// A desk file, sniffed BEFORE parseImport: it is the Menu Desk's own
+			// format, and the only thing this page may do with it is put its rows
+			// on the desk to look over. parseImport would refuse it as "not a
+			// session file", which is true and unhelpful; house.adopt must never
+			// see it, because a draft that merged into the record would be a
+			// menu nobody checked.
+			if (text.includes(DESK_FORMAT)) {
+				const desk = readDeskFile(text);
+				if (!desk) {
+					importMsg = 'That desk file could not be read. It may have been written by a newer version.';
+					return;
+				}
+				deskFile = desk;
+				importMsg = `A desk file: ${desk.items.length} ${desk.items.length === 1 ? 'row is' : 'rows are'} on the Menu Desk below to look over. Nothing is saved until you add them.`;
+				await tick();
+				document.getElementById('desk')?.scrollIntoView({ block: 'start' });
+				return;
+			}
+
 			const parsed = parseImport(text);
 			// The banner reads the two blocks as one view. `session.merge` below is
 			// deliberately given `parsed.data` ALONE: the preps must reach the
@@ -593,7 +794,7 @@
 		<input
 			bind:this={fileInput}
 			type="file"
-			accept=".wtjson,.txt,application/json,text/plain"
+			accept=".wtjson,.json,.txt,application/json,text/plain"
 			onchange={doImport}
 			hidden
 		/>
@@ -602,8 +803,15 @@
 		{#if session.menu.length}
 			<button class="chip" onclick={() => session.clearMenu()}>Clear menu</button>
 		{/if}
+		<!-- Her key screen, always; the chat only once a key is here, because
+		     with none it would open on the same line the key screen opens on. -->
+		<button class="chip" onclick={herSettings}>The Maître d'</button>
+		{#if herKey}
+			<button class="chip" id="ask" onclick={askHer}>Ask the Maître d'</button>
+		{/if}
 	</div>
 	{#if importMsg}<p class="msg" aria-live="polite">{importMsg}</p>{/if}
+	{#if herMsg}<p class="msg" role="alert">{herMsg}</p>{/if}
 	<ExportNudge />
 
 	{#if !stats}
@@ -854,13 +1062,53 @@
 		</p>
 
 		<!--
+			The guest lines, for every dish that has none, while any has none,
+			and while the list from her last run is still up. She writes them
+			as HER marks; the list below the door and the block on each card
+			are the same marks, so keeping a line in one place is keeping it in
+			the other, and nothing reaches the guest menu or the deck until it
+			is kept. The door stays with the list because the run's sentence
+			and its live region live in the door: gated on needLines alone it
+			would fold the moment her marks landed (the store empties needLines
+			as they are written), taking the sentence with it, never rendered
+			and never announced. With nothing left to send the button waits.
+		-->
+		{#if needLines.length || reviewDishes.length}
+			<div class="linesdoor" data-print="hide">
+				<MaitreDoor
+					label="Ask the Maître d' to write the guest lines"
+					lead={needLines.length ? `${needLines.length} ${needLines.length === 1 ? 'dish' : 'dishes'}` : ''}
+					sends="She writes what to say at the table, the why, what it sits with and where it comes from. Nothing is kept until you keep it."
+					task="lines"
+					input={needLines.length ? { items: needLines.length, chars: linesChars } : null}
+					offlineLine={OFFLINE_NOW}
+					run={(api, opts) => writeLines(needLines, api, opts, true)}
+				/>
+			</div>
+		{/if}
+		{#if reviewDishes.length}
+			<section class="herlines" data-print="hide" aria-labelledby="herlines-h">
+				<h3 class="eyebrow" id="herlines-h" tabindex="-1" bind:this={reviewHead}>Her lines, to look over</h3>
+				<p class="hint">
+					Keep, edit or discard each line. The same lines sit on each dish below, so keeping one here
+					is keeping it there.
+				</p>
+				{#each reviewDishes as d (d.id)}
+					<MaitreLines dish={d} named />
+				{/each}
+				<button class="chip" onclick={() => (reviewIds = [])}>Done looking</button>
+			</section>
+		{/if}
+
+		<!--
 			Above the hand form on purpose. A venue arriving here already has a
 			menu printed, photographed or on a website, and typing it in one dish
 			at a time is where most of them stopped. The panel folds itself away
 			once the menu has dishes on it, so it is only in the way on the one
-			visit where it is the whole point.
+			visit where it is the whole point, and opens again when another room
+			has left it a share.
 		-->
-		<MenuImport />
+		<MenuImport desk={deskFile} />
 
 		{#if !dishForm}
 			<button class="chip" onclick={newDish}>Add a dish</button>
@@ -965,6 +1213,10 @@
 							</div>
 							{#if d.description}<p class="dd">{d.description}</p>{/if}
 							{#if from}<p class="dp">{from}</p>{/if}
+							<!-- What to say: her lines with Keep / Edit / Discard, above the
+							     allergen line and never a word about it. Renders nothing
+							     for a dish she has not written on. -->
+							<MaitreLines dish={d} />
 							<!--
 								ALWAYS rendered, never gated on the list being non-empty. This is
 								the screen a server reads standing at a table, and it used to show
@@ -991,6 +1243,17 @@
 									{house.is86(d.id) ? 'Back on' : '86 it'}
 								</button>
 								<button class="chip" onclick={() => editDish(d)}>Edit</button>
+								{#if herKey && herNet && !hasLines(d)}
+									<MaitreDoor
+										compact
+										quiet
+										label="Write the lines for this dish (about a cent)"
+										task="lines"
+										input={{ items: 1, chars: JSON.stringify(lineItem(d)).length }}
+										offlineLine={OFFLINE_NOW}
+										run={(api, opts) => writeLines([d], api, opts)}
+									/>
+								{/if}
 								<button
 									class="chip"
 									onclick={() => {
@@ -1194,5 +1457,16 @@
 	.dishline .pr { margin-left: auto; font-size: var(--t-small); color: var(--muted); font-variant-numeric: oldstyle-nums; }
 	.dishes .dd { font-size: 14.5px; color: var(--ink-soft); max-width: var(--measure); }
 	.dishes .da { font-size: var(--t-micro); color: var(--muted); }
-	.dishtools { display: flex; gap: 8px; margin-top: 6px; }
+	.dishtools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; align-items: center; }
+	.linesdoor { margin: 10px 0 12px; }
+	.herlines {
+		border: 1px solid var(--line);
+		border-left: 3px solid var(--turmeric-deep);
+		border-radius: var(--radius);
+		padding: 12px 16px;
+		margin: 0 0 16px;
+		background: var(--paper-raised);
+	}
+	.herlines .eyebrow:focus-visible { outline: 2px solid var(--turmeric-deep); outline-offset: 3px; }
+	.herlines .hint { margin: 4px 0 8px; }
 </style>

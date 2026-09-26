@@ -20,6 +20,12 @@
  * receipts and business cards. Nothing is downloaded, nothing is sent, and it
  * answers in well under a second.
  *
+ * The picture leaves the device only through the Maître d's door, and that
+ * door is not this module: a separate control on the Menu Desk that says it
+ * sends the picture to Anthropic, on the person's own key, when they press
+ * it (MaitreDoor.svelte over static/shared/oot-maitre.js). This module is
+ * never on that path, and a photograph read here goes nowhere.
+ *
  * There was a second engine here, tesseract.js, for the browsers without one.
  * It came off because the library fetches its worker, its wasm core and its
  * language data from a CDN on first use, and this app ships a build gate that

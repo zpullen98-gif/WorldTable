@@ -64,6 +64,15 @@
 				<p>The printed card, each dish described the way it would be said at the table.</p>
 			</a>
 		</li>
+		<li>
+			<a href="{base}/menu#desk">
+				<h3>The Menu Desk</h3>
+				<p>
+					Paste, photograph or link a venue's menu once. Dishes stay here; wines go to the Codex,
+					cocktails to the Ledger.
+				</p>
+			</a>
+		</li>
 		{#if dishes >= 4}
 			<li>
 				<a href="{base}/menu/quiz">

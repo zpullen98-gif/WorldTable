@@ -19,7 +19,18 @@
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
 	import { repertoire, dueList, sinceLabel } from '$lib/repertoire';
+	import { deskShare, readDeskInbox } from '$lib/desk/desk-inbox';
+	import { readInName, whenRead } from '$lib/desk/desk-share';
 	import { onMount } from 'svelte';
+
+	/* ---- the Menu Desk's share ---------------------------------------------
+	 *
+	 * Read in onMount and nowhere earlier, like the roster row: the inbox is
+	 * localStorage, there is none in the prerender pass, and a draft another
+	 * room left is only worth one line on Today when there is one. The door is
+	 * the desk's own anchor on My Menu.
+	 */
+	let deskWaiting = $state<{ dishes: number; readIn: string; when: string } | null>(null);
 
 	/* ---- the shared row ----------------------------------------------------
 	 *
@@ -59,6 +70,17 @@
 
 	onMount(() => {
 		paintWho();
+		const inbox = readDeskInbox();
+		if (inbox) {
+			const share = deskShare(inbox, 'dish');
+			if (share.length) {
+				deskWaiting = {
+					dishes: share.length,
+					readIn: readInName(inbox.source.readIn),
+					when: whenRead(inbox.source.at)
+				};
+			}
+		}
 		try {
 			const oot = window.OOT;
 			if (!oot || !bandHost) return;
@@ -181,6 +203,18 @@
 						until they do.
 					{/if}
 				</div>
+				{#if deskWaiting}
+					<!-- One line, only while another room's read is waiting for this one. -->
+					<div class="oot-today-sub deskline">
+						<b
+							>{deskWaiting.dishes}
+							{deskWaiting.dishes === 1 ? 'dish' : 'dishes'} from the Menu Desk
+							{deskWaiting.dishes === 1 ? 'is' : 'are'} waiting.</b
+						>
+						Read {deskWaiting.readIn}, {deskWaiting.when}.
+						<a class="oot-chip" href="{base}/menu#desk">Look them over</a>
+					</div>
+				{/if}
 			</div>
 			<!--
 			  Every other door that has something behind it, for anyone: these were
@@ -324,6 +358,17 @@
 	.oot-today-go {
 		text-decoration: none;
 		display: inline-block;
+	}
+	.deskline {
+		margin-top: 8px;
+	}
+	/* The door reads as a chip, sized for a thumb, in the line it belongs to. */
+	.deskline a {
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		margin-left: 4px;
 	}
 	/* The shared rule paints this count in --oot-accent, a mid-tone that reads
 	   3.56:1 on day service. It was always in the student's Today; nobody saw

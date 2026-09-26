@@ -22,6 +22,14 @@
  * nowhere else, carries no cookies (`credentials: 'omit'`) and does not tell
  * the site where the reader came from (`referrerPolicy: 'no-referrer'`).
  *
+ * There is one other way an address can leave the device, and it is not
+ * this file's: when the person asks the Maître d' to read the page, the
+ * address goes to Anthropic, which fetches it for her, and nowhere else. That
+ * is a separate door on the Menu Desk (MaitreDoor.svelte over
+ * static/shared/oot-maitre.js), on the person's own key, pressed by them,
+ * with the sentence that says what it sends printed beside it. It is still
+ * not a proxy: nothing here relays anything, and this file never calls her.
+ *
  * ## Allergens
  *
  * Nothing here returns allergen information, and nothing downstream may invent

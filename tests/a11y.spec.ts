@@ -1,5 +1,5 @@
-import { test, expect } from '@playwright/test';
-import { goto, seedSession } from './helpers';
+import { test, expect, type Page } from '@playwright/test';
+import { cannedDeskFile, goto, seedDesk, seedHouse, seedMaitre, seedSession, TEST_KEY } from './helpers';
 import AxeBuilder from '@axe-core/playwright';
 
 /**
@@ -122,17 +122,46 @@ test('cook mode is reachable and escapable by keyboard alone', async ({ page }) 
  * gated behind user data. That gap hid an unlabelled <select> on the menu page,
  * which axe rates CRITICAL, for as long as the section existed.
  */
-const SEEDED = [
+const NOW = Date.now();
+const hers = (value: string) => ({ value, by: 'maitre', ts: NOW, model: 'claude-opus-5' });
+/**
+ * A dish she has written on and nobody has kept: five rows hers, the eyebrow
+ * saying so, Keep, Edit and Discard on each and the two bulk chips below.
+ * Seeded on the HOUSE record, because that is where marks live and the
+ * session seed has no dish with any.
+ */
+const HER_DISH = {
+	id: 'd1', name: 'Braised cheek', section: 'Mains', description: 'Beef cheek, red wine, roots', ingredients: [], allergens: [], price: '28', ts: NOW,
+	maitre: {
+		say: hers('brayzd cheek'),
+		guest: hers('Beef cheek, braised until it gives. It comes with what the garden had that morning.'),
+		why: hers('The cheek is the one cut a slow oven makes better than a fast pan.'),
+		pairs: hers('I would pour something with a little grip beside it.'),
+		origin: hers('A bistro cut, from every town with a butcher.')
+	}
+};
+
+/* `seed` puts the data on the page; the session seed unless a view needs
+   another record. `ready` is the one selector that only exists once the data
+   rendered, named per view for the reason given in the loop. */
+const SEEDED: Array<{ path: string; name: string; ready: string; seed?: (page: Page) => Promise<void> }> = [
 	{ path: '/menu', name: 'menu worksheet with a menu on it', ready: '.plan li' },
 	{ path: '/repertoire', name: 'repertoire with dishes cooked', ready: '.rows li' },
 	{ path: '/menu/costing', name: 'costing sheet with dishes costed', ready: '.quadrants li' },
-	{ path: '/coverage', name: 'coverage board with a cooked log', ready: '.people li' }
+	{ path: '/coverage', name: 'coverage board with a cooked log', ready: '.people li' },
+	/* The desk with a share on it: the review table, its Kind selects and its
+	   flags only exist once something has been read, and the empty sweep above
+	   sees the doors and nothing else. */
+	{ path: '/menu', name: 'menu worksheet with a desk share waiting', ready: '.review tbody tr', seed: (page) => seedDesk(page, cannedDeskFile()) },
+	/* A dish carrying her unkept lines: the block with its three chips per
+	   row, the word and the rule on each, the bulk chips under it. */
+	{ path: '/menu', name: 'menu worksheet with a dish carrying her unkept lines', ready: '.lines', seed: (page) => seedHouse(page, { dishes: [HER_DISH] }) }
 ];
 
 for (const view of SEEDED) {
 	test(`axe: ${view.name}`, async ({ page }) => {
 		test.setTimeout(120_000);
-		await seedSession(page);
+		await (view.seed ?? seedSession)(page);
 		await goto(page, view.path);
 		// The section under test only exists once the store has hydrated from IDB.
 		// Named per view rather than as one shared selector: a wait that matches
@@ -141,6 +170,120 @@ for (const view of SEEDED) {
 		await page.locator(view.ready).first().waitFor({ timeout: 15_000 });
 
 		const results = await new AxeBuilder({ page })
+			.withTags(['wcag2a', 'wcag2aa'])
+			.options({ resultTypes: ['violations'] })
+			.analyze();
+		const serious = results.violations.filter(
+			(v) => v.impact === 'serious' || v.impact === 'critical'
+		);
+		expect(serious.map((v) => `${v.id}: ${v.help} (${v.nodes.length} nodes)`)).toEqual([]);
+	});
+}
+
+/**
+ * The Menu Desk with rows on it, in both services. The empty-session sweep
+ * sees the desk's doors and never its review table, its Kind selects, its
+ * flags or the rooms below it, because those only render once something has
+ * been read. A share seeded in the inbox renders all of them on load.
+ */
+const DESK_NOW = new Date().toISOString();
+const DESK_ROW = {
+	price: { printed: '12', parts: [{ amount: '12', label: '' }] },
+	marks: [],
+	confidence: 'low',
+	why: ['Could be a dish or a cocktail: the line does not say clearly enough which.'],
+	lines: [0, 1]
+};
+const DESK_SEED = {
+	format: 'oot-menu-desk',
+	version: 1,
+	createdAt: DESK_NOW,
+	source: { kind: 'paste', at: DESK_NOW, reader: 'desk-reader/1', readIn: 'codex', hash: 'a11ydesk' },
+	items: [
+		{ ...DESK_ROW, id: 'k-a11y0001', kind: 'dish', section: 'STARTERS', name: 'Turtle Soup au Sherry', raw: 'Turtle Soup au Sherry\n12', description: 'Veal fond, egg and crushed lemon', ingredientsNamed: [] },
+		{ ...DESK_ROW, id: 'k-a11y0002', kind: 'unsure', section: 'STARTERS', name: 'Kiss the Crab', raw: 'Kiss the Crab\n12', could: ['dish', 'cocktail'] },
+		{ ...DESK_ROW, id: 'k-a11y0003', kind: 'wine', section: 'WINE BY GLASS', name: 'Ployez-Jacquemart', raw: 'Ployez-Jacquemart\n12', producer: '', wine: 'Ployez-Jacquemart', vintage: '2010', region: 'Champagne', country: 'France', grapes: [], style: 'Extra-Brut', bin: '', pours: [], bottle: '', descriptors: 'Extra-Brut, Champagne, France' }
+	],
+	unsorted: [{ raw: 'Price of Entrée includes Soup or Salad and Dessert', line: 9, reason: 'heading-note' }]
+};
+
+for (const { scheme, name: service } of SERVICES) {
+	test(`axe: the Menu Desk with a share on it in ${service} service`, async ({ page }) => {
+		test.setTimeout(120_000);
+		await page.emulateMedia({ colorScheme: scheme });
+		await seedDesk(page, DESK_SEED);
+		await goto(page, '/menu');
+		await page.locator('.review').first().waitFor({ timeout: 15_000 });
+		// Open the rooms below the table as well, so their list and its selects are swept.
+		await page.getByRole('button', { name: /Show the 1 wine for the Codex/ }).click();
+
+		const results = await new AxeBuilder({ page })
+			.withTags(['wcag2a', 'wcag2aa'])
+			.options({ resultTypes: ['violations'] })
+			.analyze();
+		const serious = results.violations.filter(
+			(v) => v.impact === 'serious' || v.impact === 'critical'
+		);
+		expect(serious.map((v) => `${v.id}: ${v.help} (${v.nodes.length} nodes)`)).toEqual([]);
+	});
+}
+
+/**
+ * Her two dialogs, drawn by the client (static/shared/oot-maitre.js) into
+ * this page, in both services. The dialog carries its own palette as tokens
+ * on the element and ignores the page's, which is exactly why both schemes
+ * are swept: a token that leaked from the page would pass in one service and
+ * fail in the other. Included by element, so the page under the backdrop is
+ * not what is being judged. Her host is refused outright; neither dialog
+ * opens with a request anyway, and the chat's Keep and the key screen's Test
+ * are exercised in maitre.spec.ts, not here.
+ */
+for (const { scheme, name: service } of SERVICES) {
+	test(`axe: her key screen has no serious violations in ${service} service`, async ({ page }) => {
+		await page.emulateMedia({ colorScheme: scheme });
+		await page.route('**/api.anthropic.com/**', (route) => route.abort());
+		await goto(page, '/menu');
+		// No key on the device: the screen opens on the family line, with the
+		// key field, the model radios, the cap chips and the ledger under it.
+		await page.getByRole('button', { name: "The Maître d'", exact: true }).click();
+		const dialog = page.locator('dialog#oot-maitre-settings[open]');
+		await expect(dialog).toBeVisible();
+		await expect(dialog).toContainText('Bring her in with a key of your own');
+		// Forget asks in words, inside the same dialog: those buttons are swept too.
+		await dialog.getByRole('button', { name: 'Forget my key' }).click();
+		await expect(dialog).toContainText('Only the key goes.');
+
+		const results = await new AxeBuilder({ page })
+			.include('dialog')
+			.withTags(['wcag2a', 'wcag2aa'])
+			.options({ resultTypes: ['violations'] })
+			.analyze();
+		const serious = results.violations.filter(
+			(v) => v.impact === 'serious' || v.impact === 'critical'
+		);
+		expect(serious.map((v) => `${v.id}: ${v.help} (${v.nodes.length} nodes)`)).toEqual([]);
+	});
+
+	test(`axe: Ask the Maître d' has no serious violations in ${service} service`, async ({ page }) => {
+		await page.emulateMedia({ colorScheme: scheme });
+		await page.route('**/api.anthropic.com/**', (route) => route.abort());
+		// The chat door only renders with a key on the device.
+		await seedMaitre(page, { key: TEST_KEY });
+		await seedHouse(page, { dishes: [HER_DISH] });
+		await goto(page, '/menu');
+		// The house arrives from IDB a beat after hydration; until it does the
+		// menu is empty, the desk is open (two more buttons carry her name, so
+		// the locator is exact) and a click that won the race would send her an
+		// empty house and get the empty-house line instead of the one below.
+		await page.locator('.lines').first().waitFor({ timeout: 15_000 });
+		await page.getByRole('button', { name: "Ask the Maître d'", exact: true }).click();
+		const dialog = page.locator('dialog#oot-maitre-chat[open]');
+		await expect(dialog).toBeVisible();
+		await expect(dialog).toContainText('She can see the house menu, 1 dish, and every line you kept.');
+		await expect(dialog.getByRole('textbox', { name: 'Your question' })).toBeFocused();
+
+		const results = await new AxeBuilder({ page })
+			.include('dialog')
 			.withTags(['wcag2a', 'wcag2aa'])
 			.options({ resultTypes: ['violations'] })
 			.analyze();
