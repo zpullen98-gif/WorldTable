@@ -199,12 +199,15 @@ describe('a flip', () => {
 
 describe('progress is facts, not a score', () => {
 	const deck = fixture({ cuts: 6, fish: 6 });
-	it('says how much of each section has been seen', () => {
+	it('says how much of each section has been met, and a miss alone is not met', () => {
+		// `seen` is met on the ladder (repertoire.ts metSlugs): the same card
+		// twice counts once, and fd_0008, only ever missed, does not count
 		const log = [entry('fd_0001', at(1), 'close'), entry('fd_0001', at(3), 'close'), entry('fd_0008', at(1), 'missed')];
 		expect(sectionProgress(deck, log)).toEqual([
 			{ key: 'cuts', title: 'CUTS', seen: 1, total: 6 },
-			{ key: 'fish', title: 'FISH', seen: 1, total: 6 }
+			{ key: 'fish', title: 'FISH', seen: 0, total: 6 }
 		]);
+		expect(sectionProgress(deck, [...log, entry('fd_0008', at(2), 'met')])[1].seen).toBe(1);
 	});
 	it('names the terms that keep slipping', () => {
 		const log = [1, 3, 5].map((d) => entry('fd_0004', at(d), 'missed'));
@@ -558,7 +561,10 @@ describe('levels', () => {
 	});
 
 	it('progress by level, and by section at a level, is facts', () => {
-		const log = [entry(byLevel(1)[0].id, at(1), 'close'), entry(byLevel(2)[5].id, at(1), 'missed')];
+		// `seen` is MET on the ladder (repertoire.ts metSlugs), the rule the four
+		// levels' cards share: a card only ever missed is not counted, and one
+		// graded close is
+		const log = [entry(byLevel(1)[0].id, at(1), 'close'), entry(byLevel(2)[5].id, at(1), 'missed'), entry(byLevel(2)[4].id, at(1), 'met')];
 		expect(levelProgress(deck, log).map(({ level, name, seen, total }) => ({ level, name, seen, total }))).toEqual([
 			{ level: 1, name: 'Commis', seen: 1, total: 8 },
 			{ level: 2, name: 'Chef de Partie', seen: 1, total: 8 }

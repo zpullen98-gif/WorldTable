@@ -42,6 +42,7 @@ import {
 	DAY_MS,
 	TERM_LADDER_DAYS,
 	dayKey,
+	metSlugs,
 	repertoire,
 	scopeToSlugs,
 	type CookEntry,
@@ -352,7 +353,9 @@ export interface SectionProgress {
  * have the list change shape under the reader.
  */
 export function sectionProgress(deck: FloorDeck, log: readonly CookEntry[], level?: DeckLevel | null): SectionProgress[] {
-	const seen = new Set(deckLog(log, deck.cards).map((e) => e.slug));
+	/* `seen` is MET on the ladder (repertoire.ts metSlugs): a card the reader has
+	   only ever missed does not count, the rule the four levels' cards share. */
+	const seen = metSlugs(deckLog(log, deck.cards));
 	return liveSections(deck).map((s) => {
 		const mine = deck.cards.filter((c) => c.section === s.key && (level == null || c.level === level));
 		return { key: s.key, title: s.title, seen: mine.filter((c) => seen.has(c.id)).length, total: mine.length };
@@ -367,9 +370,10 @@ export interface LevelProgress {
 	total: number;
 }
 
-/** Every live level, with how many of its cards have been met at all. */
+/** Every live level, with how many of its cards have been met (never by a
+ *  miss alone: metSlugs). */
 export function levelProgress(deck: FloorDeck, log: readonly CookEntry[]): LevelProgress[] {
-	const seen = new Set(deckLog(log, deck.cards).map((e) => e.slug));
+	const seen = metSlugs(deckLog(log, deck.cards));
 	return liveLevels(deck).map((l) => {
 		const mine = deck.cards.filter((c) => c.level === l.level);
 		return { level: l.level, name: l.name, blurb: l.blurb, seen: mine.filter((c) => seen.has(c.id)).length, total: mine.length };

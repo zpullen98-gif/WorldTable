@@ -326,6 +326,21 @@ export function dueList(entries: RepertoireEntry[], now: number): RepertoireEntr
  * the home band read "3 of 45 dishes cooked" after one dish was cooked three
  * times. Progress is a set, never a log length.
  */
+/**
+ * The slugs MET on their ladder: graded `met` or `close` at least once, or
+ * cooked with no grade at all (an ungraded cook climbs, see rungFor). An
+ * entry graded `missed` is a meeting, not a met one: a term the reader has
+ * only ever got wrong is not something they know. One rule, so the Floor
+ * Deck's level counts and the four levels' cards agree on what "met" means,
+ * and so the Lexicon quiz (which grades `close` at best) can still meet a
+ * term.
+ */
+export function metSlugs(log: readonly CookEntry[]): Set<string> {
+	const out = new Set<string>();
+	for (const e of log) if (e.grade !== 'missed') out.add(e.slug);
+	return out;
+}
+
 export function cookedSlugs(log: CookEntry[]): Set<string> {
 	return new Set(log.map((e) => e.slug));
 }
