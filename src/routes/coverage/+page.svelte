@@ -317,12 +317,11 @@
 		</div>
 	{/if}
 
-	<!-- Service, not Practise. The layout's OWNS map files /coverage under
-	     Service and the Service tab is what lights here, so an exit to Practise
-	     sent a cook to a page whose tab was not the lit one and which shows no
-	     way back unless this device is a manager's. The Service hub now carries
-	     the entrance, so the way in, the way out and the lit tab all agree. -->
-	<p class="back"><a href="{base}/service">Back to Service</a></p>
+	<!-- Mine, since the four levels: the layout's OWNS map files /coverage
+	     under the Mine tab (the house's own menu and record) and My Menu
+	     carries the entrance, so the way in, the way out and the lit tab all
+	     agree. It was Service before, for the same reason. -->
+	<p class="back"><a href="{base}/menu">Back to My Menu</a></p>
 </div>
 
 <style>

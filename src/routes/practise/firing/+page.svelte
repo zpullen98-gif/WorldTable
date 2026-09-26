@@ -143,8 +143,10 @@
 			first. Reading the plan cold is the skill; the clock is the load.
 		</p>
 		<nav class="tools" data-print="hide">
-			<a class="chip" href="{base}/practise">← Practise</a>
-			<a class="chip" href="{base}/menu">The worksheet</a>
+			<!-- The Practise hub is gone (the four levels, 2026-09-26). The drill
+			     reads the house's own pass plan, so it is Mine's: My Menu carries
+			     its door and is the way back. -->
+			<a class="chip" href="{base}/menu">← My Menu</a>
 		</nav>
 	</header>
 

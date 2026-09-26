@@ -25,6 +25,8 @@ at **$49.99/month, unlimited staff, one shared login**.
 
 **Audience, decided by the owner: chefs, culinary students, AND servers, in ONE app.** The home page's "what do you do?" role question was removed on 2026-09-19: nothing is reordered or hidden by who you are, and every part of the app is for anyone.
 
+**The home is four levels (26 Sep 2026), the same in the Codex and the Ledger:** four level cards with a word and a figure, one quiet row of four doors, the nav `Home · Levels · Library · Mine`, a page per level with the same seven subsections at that level's difficulty, and a level test that ends on what you missed with no score. Nothing is locked. CLAUDE.md "The four levels" and `tools/levels/README.md` are the references.
+
 ## Repo state
 
 | | |
@@ -34,7 +36,7 @@ at **$49.99/month, unlimited staff, one shared login**.
 | Tests | **1,262 unit** (72 files) · **192 e2e** (19 Sep 2026): the whole suite is green |
 | Gates | `verify:data` 55/55 · `build:data` all pass · `verify:derived` clean · `verify:build` **22/22** (19 Sep; a 23rd check, "the Maître d' client ships and is NOT precached", arrived with `1fbf110`) |
 | Precache | Cap **2.70 MB** gzipped. It moved from 2 MB to 2.5 MB when the corpus grew past 970 recipes, from 2.5 to 2.65 on 2026-09-19 by the owner's decision for the Floor Deck (a staff-training deck that must install with the app; at that raise the precache stood at 2,619,178 bytes), and to 2.70 the same day when three written sections showed the full deck at its written depth would finish within a few KB of 2.65 and the owner chose depth over trimming. `tools/verify-build.mjs` carries both arguments. At `ea3253d` (26 Sep 2026, the Menu Desk and the Maître d' in) it printed **2.670 MB**, about 30 KB of headroom: a new route is not affordable, and the elastic part is the desk's wine vocabulary (`CLAUDE.md`, "The Menu Desk and the Maître d'"). The live figure is whatever `npm run verify:build` prints; the copy here is dated because every undated copy went stale |
-| Routes | 35 pages · Derived JSON | 25 files (`floor-deck*.json` joined) |
+| Routes | 36 pages (26 Sep 2026: `/level`, `/level/[n]`, `/level/[n]/test` in; `/learn` and `/practise` out) · Derived JSON | 26 files (`floor-deck*.json` joined; `levels.json` since 26 Sep) |
 | Deploy | `table/` re-synced for the 3 Sep audit pass, at `4942968`. See below. |
 
 ## The corpus
@@ -280,6 +282,37 @@ import a value back into it.
 ---
 
 ## What was built, most recent first
+
+### 26 Sep — the four levels: one home, one nav, one ladder
+
+The owner's decision, shared with the Codex and the Ledger: a cohesive home
+of four level cards (I Commis, II Chef de Partie, III Sous Chef, IV Chef: the
+Floor Deck's ladder, now the whole app's) and one quiet row of four doors
+(Today, Library, Record, Mine · My Menu), the nav `Home · Levels · Library ·
+Mine` in that order, and a page per level: the same seven subsections at each
+level's difficulty (Dishes, Techniques, The Lexicon, The Floor Deck, The
+Palate, Food Safety, Service), each with "N at this level", a word and a
+figure (Untouched, N% met, Met; the level's figure the mean of its
+subsections' shares) and training doors, ending on the level test (untimed,
+across the subsections, ends on what you missed with the right answers and
+no score). Nothing is locked.
+
+811 items were placed against a written standard (`tools/levels/README.md`)
+by agents, no owner review round: an assigner, a challenger from the floor
+and the stove and a reconciler per chunk (97 challenges, 65 moved), one
+cross-subsection critic with one bounded repair (20 moves). The placements
+are data (`tools/derive/levels/*.json`, reasons in the file, the argument in
+`tools/levels/audit/`) with a gate (`tools/derive/levels.mjs`: every item
+placed once, minimums per level, new content fails the build until placed).
+The deck's cards keep their own level and are copied at build.
+
+The engine is `src/lib/levels.ts` (pure; `metSlugs` in `repertoire.ts` is
+the one rule for "met on the ladder", and the deck's counts moved onto it),
+the store `src/lib/stores/levels.svelte.ts`, the pages `Home.svelte`,
+`/level` (a forwarder), `/level/[n]` and `/level/[n]/test`; `?level=` on the
+Lexicon, the technique index and the service drill. Retired: `/learn`,
+`/practise` (the hubs), `HomeBands.svelte`, the Service hub's tiles. CLAUDE.md
+"The four levels" is the reference.
 
 ### 3 Sep — the audit pass
 

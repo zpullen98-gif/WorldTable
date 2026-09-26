@@ -1059,6 +1059,12 @@
 			{:else if house.dishes.length}
 				The drill opens at four dishes: {4 - house.dishes.length} more to go.
 			{/if}
+			<!-- Mine is the menu with the record and the tools behind it (the four
+			     levels' nav, 2026-09-26): the two boards that used to hang off the
+			     Practise and Service tabs have their doors here now. -->
+			<a href="{base}/coverage">The coverage board ▸</a>
+			<a href="{base}/repertoire">The Repertoire ▸</a>
+			<a href="{base}/practise/firing">The firing drill ▸</a>
 		</p>
 
 		<!--

@@ -1,28 +1,29 @@
 <!--
-  Service, the front of house, given an order for the first time.
+  The Service Track: the front of house, given an order.
 
-  176 terms across five atlases, and until now no route through any of them: the
-  Path of Study reads 39 lexicon terms and NONE is front-of-house; the technique
-  table anchors 47 and NONE is front-of-house; 56 of the 176 reach zero recipes,
-  so cross-links cannot surface them either. A server's only surface was a flat
-  479-term alphabetical list.
+  176 terms across five atlases, and until this track no route through any of
+  them: the Path of Study reads 39 lexicon terms and NONE is front-of-house;
+  the technique table anchors 47 and NONE is front-of-house; 56 of the 176
+  reach zero recipes, so cross-links cannot surface them either. A server's
+  only surface was a flat 479-term alphabetical list.
+
+  This is the track's own page since the four levels (2026-09-26): the drill,
+  the modules in teaching order, the two gaps and the untaught bottles. The
+  house tiles it used to carry (the menu, the guest menu, the desk, the
+  coverage board) live behind Mine now, and the Floor Deck is a subsection of
+  every level with its own doors there; a Service hub that repeated both
+  would be a second home.
 
   The two GAPS below are stated on the page's own face, not buried. The guide
   has no steps-of-service curriculum and no allergen curriculum, and a track
-  that quietly skipped them would read as though the ground were covered. Naming
-  them is the honest version and it is also the useful one: it tells a manager
-  exactly what their own induction still has to teach.
-
-  Class names here avoided .lexcard, .def, .flash, .semester and .semesters
-  while those were the monorepo paywall's selectors. The World Table is free in full since 2026-09-19,
-  so nothing blurs them now.
+  that quietly skipped them would read as though the ground were covered.
+  Naming them is the honest version and it is also the useful one: it tells a
+  manager exactly what their own induction still has to teach.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { session } from '$lib/stores/session.svelte';
-	import { house } from '$lib/stores/house.svelte';
 	import { CHECKED, CHECKED_FLAGS, NOT_SCREENED, list } from '$lib/allergens';
-	import { recipes, TOTALS } from '$lib/data';
+	import { recipes } from '$lib/data';
 
 	/**
 	 * COMPUTED, because the last version of this sentence hardcoded "101 of
@@ -34,89 +35,21 @@
 	).length;
 
 	let { data } = $props();
-	const dishes = $derived(house.dishes.length);
 	const track = $derived(data.track);
 </script>
 
-<svelte:head><title>Service · The World Table</title></svelte:head>
+<svelte:head><title>The Service Track · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<header class="head">
-		<h1>Service</h1>
+		<h1>The Service Track</h1>
 		<p class="lede">
 			{track.total} terms, {track.fohTotal} of them from the five atlases (cheese, charcuterie, the
 			bar, wine and the grapes), in the order a floor learns them. Start at the room and the words
-			the kitchen shouts; the Grape Atlas can wait for week three.
+			the kitchen shouts; the Grape Atlas can wait for week three. Each module sits at one of the
+			four levels, and a level's page opens the ones placed there.
 		</p>
 	</header>
-
-	<h2 class="sec">The house</h2>
-	<ul class="tiles">
-		<li>
-			<a href="{base}/menu">
-				<h3>The Kitchen's Menu</h3>
-				<p>{dishes ? `${dishes} dishes entered` : 'The dishes the house actually serves'}.</p>
-			</a>
-		</li>
-		<li>
-			<a href="{base}/menu/guest">
-				<h3>The Guest Menu</h3>
-				<p>The printed card, each dish described the way it would be said at the table.</p>
-			</a>
-		</li>
-		<li>
-			<a href="{base}/menu#desk">
-				<h3>The Menu Desk</h3>
-				<p>
-					Paste, photograph or link a venue's menu once. Dishes stay here; wines go to the Codex,
-					cocktails to the Ledger.
-				</p>
-			</a>
-		</li>
-		{#if dishes >= 4}
-			<li>
-				<a href="{base}/menu/quiz">
-					<h3>Drill the Menu</h3>
-					<p>{dishes} dishes, drilled until they come without thinking.</p>
-				</a>
-			</li>
-		{/if}
-		<!--
-			The coverage board had ZERO inbound links in the whole built app, the
-			only route with none. Its single authored link sits behind {#if manager}
-			on /practise, and `manager` is false unless the shared layer is present
-			AND this device has been opted in — a switch that lives in another wing
-			entirely. Meanwhile the layout's OWNS map lights the SERVICE tab on it,
-			so the tab that claimed the page was the one place never linking to it.
-
-			Ungated here, because the page reads one record, this device's, and
-			says so in its own lede. There are no manager devices in this edition.
-		-->
-		<li>
-			<a href="{base}/coverage">
-				<h3>The Coverage Board</h3>
-				<p>
-					Which stations you have done the work of, and which are still waiting. Kept on
-					this device.
-				</p>
-			</a>
-		</li>
-	</ul>
-
-	<!--
-		The Floor Deck: the menu's own words, one card each. The count is the
-		EMITTED total, so the section appears on the day the first card ships and
-		never promises a deck that is still being written.
-	-->
-	{#if TOTALS.deck}
-		<h2 class="sec">The Floor Deck</h2>
-		<p class="secnote">
-			{TOTALS.deck} menu words, one card each: what to say at the table, why it is so, what it is
-			classically made with, and what it gets mistaken for. Built for a first week on the floor,
-			and it works on a fresh install.
-		</p>
-		<p class="drillcta"><a class="chip" href="{base}/service/deck">Open the deck</a></p>
-	{/if}
 
 	<h2 class="sec">Drill it</h2>
 	<p class="secnote">
@@ -204,37 +137,6 @@
 		max-width: var(--measure);
 		font-size: var(--t-small);
 		margin-bottom: 14px;
-	}
-	.tiles {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-		gap: var(--gap);
-	}
-	.tiles a {
-		display: block;
-		height: 100%;
-		padding: 15px 17px;
-		border: 1px solid var(--line);
-		border-radius: var(--radius);
-		background: var(--card, transparent);
-		color: var(--ink);
-		text-decoration: none;
-	}
-	.tiles a:hover {
-		border-color: var(--turmeric-deep);
-	}
-	.tiles h3 {
-		font-family: var(--display);
-		font-size: 18px;
-		margin-bottom: 5px;
-	}
-	.tiles p {
-		color: var(--ink-soft);
-		font-size: var(--t-small);
-		line-height: 1.5;
 	}
 
 	.trackstep {

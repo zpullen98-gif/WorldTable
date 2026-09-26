@@ -623,6 +623,85 @@ desk, online only, on the owner's own Anthropic key. The rules that will bite:
   the client in `node:vm` with a fake fetch, so no unit test reaches the
   network either.
 
+## The four levels: the home, the nav and the ladder
+
+The owner's decision (2026-09-26), shared with the Codex and the Ledger: one
+cohesive home in all three apps, four levels as the spine, each level the
+same subsections at that level's difficulty, training from there. **Nothing
+is locked**: a level guides, it never bars.
+
+- **The ladder is the Floor Deck's brigade ladder** (I Commis, II Chef de
+  Partie, III Sous Chef, IV Chef), now the whole app's. Names and blurbs live
+  ONCE in `tools/derive/levels.mjs` (`LEVELS`, gated equal to `DECK_LEVELS`;
+  blurbs 60 to 160 chars, no digit, no dash) and reach the app as
+  `levels.json`. The numerals I to IV are the thread the three apps share
+  (`NUMERAL` in `src/lib/levels.ts`).
+- **Seven subsections, the same at every level** (`SUBSECTIONS`): Dishes,
+  Techniques, The Lexicon, The Floor Deck, The Palate, Food Safety (read,
+  never graded), Service. What each holds at each level is an AUTHORED
+  placement in `tools/derive/levels/<subsection>.json` (`{slug, level,
+  reason}`), machine-written by the procedure in `tools/levels/README.md`
+  (the standard, a brief per subsection with every item's signals, an
+  assigner, a challenger and a reconciler per chunk, one cross-subsection
+  critic with one bounded repair; the run's arguments in
+  `tools/levels/audit/`) and hand-editable afterwards. The deck's 281 cards
+  are COPIED from the deck index at build, never re-placed; the library's
+  1,844 recipes are not placed one by one (the level page's library door uses
+  the gated `difficulty` as a proxy); the six calibration tastes follow a
+  fixed rule (`PALATE_RUNG`: met at the rung the level names, Chef asks the
+  top).
+- **The gate** (`buildLevels`, late, `levelProblems` pushed before the mark-id
+  ledger commits): every item placed exactly once and real; with
+  `LEVELS_COMPLETE` on, an item with no level and a level under its
+  `MINIMUMS` fail the build. New content (a technique, a course dish, a
+  Lexicon term outside the track, a module, a fault, a safety slice) fails
+  the build until it is placed: brief it with `--only`, run the workflow for
+  that subsection, write it in with `set-levels.mjs --only`.
+- **Met, one rule** (`repertoire.ts metSlugs`): graded met or close on the
+  ladder, or cooked ungraded; a miss alone is not met. A dish is met when
+  cooked; a technique when a cook on one of its recipes was graded `met` if it
+  carries a standard, else any cook; a term or a deck card by `metSlugs`; a
+  fault when named on a plate; a taste when its ladder is cleared to the
+  level's rung; a module through its terms. The deck's own level and section
+  counts (`floor-deck.ts levelProgress`, `sectionProgress`) read the same
+  rule, so a card met only by missing it stops counting there too.
+- **The figure** (`statOf`): `Untouched`, then `N% met` with N clamped to
+  1..99 (never 0% or 100%), then `Met`; a level's N is the MEAN of its
+  counted subsections' shares, empty ones excluded, so the Lexicon cannot
+  hide the dishes. Never a score, never a streak, on the home. Which level
+  you are on is `firstUnmetLevel`, derived on every read and never stored
+  (`stores/levels.svelte.ts`, ready only once the session is).
+- **The home** (`lib/components/Home.svelte`) is the shared contract and
+  nothing else: `section.levels` with four `a.level` (`lv-num`, `lv-name`,
+  `lv-stat`; the current one `on`, `aria-current`, and the words "Your level"
+  in `lv-here`), then `nav.quiet` with four `a.door`: Today (one item from
+  the lowest unmet level, `todayFromLevel`, with "Today deals from Level N."
+  under it), Library, Record, Mine · My Menu. No h2 or h3 on the home; the
+  regression suite pins it. The Menu Desk's `.deskline` keeps its class,
+  copy and link.
+- **The nav** is `Home · Levels · Library · Mine`, in that order, in all three
+  apps (`navigation.test.ts` pins the words and the order). `/level` is a
+  literal href (so `verify-build`'s scanner resolves it) that forwards to the
+  reader's level; `/level/[n]` is the level page (h1 with the numeral, the
+  blurb, `ol.subsections` with "N at this level", the word and figure, the
+  items and the `a.train` doors, then `a.leveltest`); `/level/[n]/test` is
+  the level test (the deck's written test at the level with its traps, six
+  service questions with all 186 cards as the field, eight Lexicon questions
+  with the whole lexicon as the field; untimed; it ends on what you missed
+  with the right answers and no score; the second route allowed to name
+  `loadDeckTraps`). `OWNS`: Mine holds `/menu`, `/repertoire`, `/coverage`
+  and the firing drill; Levels holds the study, technique, palate, safety,
+  service and calibration routes.
+- **`?level=N`** (exact integers, `levelFromSearch`) narrows `/lexicon` (and
+  `&start=flash|quiz` opens a mode on the level's terms), `/technique` and
+  `/service/drill` (the level's modules as the pool, the whole track as the
+  field), seeded in `afterNavigate`, never in `load`. `/study#semester-N` and
+  `/safety#numbers|disciplines|entries|gaps` are the read doors.
+- **Retired**: `/learn` and `/practise` (the hubs; `practise/firing` and
+  `practise/calibrate` stay), `HomeBands.svelte`, the Service hub's house
+  tiles and deck block (`/service` is the track's own page). A stale install
+  landing on a retired route meets the error page, which names the situation.
+
 ## The Floor Deck: a staff-training deck of menu words
 
 The owner brought a hand-filled restaurant training packet (about 159 terms in
@@ -694,7 +773,10 @@ Every card sits at one of four brigade levels: **1 Commis, 2 Chef de Partie,
   authored: level-first gzipped about 4 KB worse, and a contract test pins it.
 - **The landing** opens on `firstUnmetLevel` (derived from the log, held until
   `session.ready`, never stored) or All once everything has been met; the
-  sections are that level's subsections, counted at the level.
+  sections are that level's subsections, counted at the level. "Met" is the
+  app's one rule (`repertoire.ts metSlugs`, since the four levels): a card
+  graded met or close, never a miss alone, so `seen` in `levelProgress` and
+  `sectionProgress` counts what was met, not what was merely answered.
 - **What is owed reaches down, never up.** Under a level scope, misses and due
   cards come from every level at or below the highest one chosen, so yesterday's
   Commis misses lead a Chef de Partie sitting; new cards and the top-up stay in
