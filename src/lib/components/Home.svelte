@@ -104,7 +104,10 @@
 				data-level={n}
 				aria-current={on ? 'step' : undefined}
 			>
-				<span class="lv-num">{NUMERAL[n]}</span>
+				<!-- no numeral on the card (the owner, 26 Sep 2026); the words stay
+				     for a screen reader, because the Today door, the level page and
+				     its test all name the level as "Level I" -->
+				<span class="sr-only">Level {NUMERAL[n]}</span>
 				<span class="lv-name">{nameOf(n)}</span>
 				<span class="lv-stat">{ready && row ? row.label : ''}</span>
 				{#if on}<span class="lv-here">Your level</span>{/if}
@@ -187,11 +190,16 @@
 		border-color: var(--turmeric-deep);
 		box-shadow: inset 0 0 0 1px var(--turmeric-deep), var(--shadow-card);
 	}
-	.lv-num {
-		font-family: var(--display);
-		font-size: var(--t-h2);
-		line-height: 1;
-		color: var(--turmeric-deep);
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+		border: 0;
 	}
 	.lv-name {
 		font-family: var(--display);

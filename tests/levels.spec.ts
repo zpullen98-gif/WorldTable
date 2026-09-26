@@ -55,13 +55,17 @@ function level1Seed() {
 	return { cookedLog, drillLog, calibrationLog };
 }
 
-test('a new reader sees four Untouched cards, I to IV, and Level I as theirs', async ({ page }) => {
+test('a new reader sees four Untouched cards, Level I to IV to a screen reader and no numeral on sight, and Level I as theirs', async ({ page }) => {
 	await goto(page, '/');
 	await page.locator('.level.on').waitFor();
 	const cards = page.locator('section.levels .level');
 	await expect(cards).toHaveCount(4);
 	for (const [i, numeral] of ['I', 'II', 'III', 'IV'].entries()) {
-		await expect(cards.nth(i).locator('.lv-num')).toHaveText(numeral);
+		await expect(cards.nth(i).locator('.lv-num')).toHaveCount(0);
+		await expect(cards.nth(i).locator('.sr-only')).toHaveText(`Level ${numeral}`);
+		/* hidden, not just present: the words must not paint on the card */
+		const box = await cards.nth(i).locator('.sr-only').boundingBox();
+		expect(box && box.width <= 1 && box.height <= 1).toBe(true);
 		await expect(cards.nth(i).locator('.lv-name')).toHaveText(NAMES[i]);
 		await expect(cards.nth(i).locator('.lv-stat')).toHaveText('Untouched');
 	}

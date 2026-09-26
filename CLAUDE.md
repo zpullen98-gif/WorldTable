@@ -635,7 +635,10 @@ is locked**: a level guides, it never bars.
   ONCE in `tools/derive/levels.mjs` (`LEVELS`, gated equal to `DECK_LEVELS`;
   blurbs 60 to 160 chars, no digit, no dash) and reach the app as
   `levels.json`. The numerals I to IV are the thread the three apps share
-  (`NUMERAL` in `src/lib/levels.ts`).
+  (`NUMERAL` in `src/lib/levels.ts`), in words ("Level I", "The Level I
+  test") and on the level pages' titles; since 26 Sep 2026 the home cards
+  show no numeral (the owner's call), and "Level I" stays on each card as
+  hidden text for a screen reader.
 - **Seven subsections, the same at every level** (`SUBSECTIONS`): Dishes,
   Techniques, The Lexicon, The Floor Deck, The Palate, Food Safety (read,
   never graded), Service. What each holds at each level is an AUTHORED
@@ -672,7 +675,7 @@ is locked**: a level guides, it never bars.
   you are on is `firstUnmetLevel`, derived on every read and never stored
   (`stores/levels.svelte.ts`, ready only once the session is).
 - **The home** (`lib/components/Home.svelte`) is the shared contract and
-  nothing else: `section.levels` with four `a.level` (`lv-num`, `lv-name`,
+  nothing else: `section.levels` with four `a.level` (a hidden `sr-only` "Level I", `lv-name`,
   `lv-stat`; the current one `on`, `aria-current`, and the words "Your level"
   in `lv-here`), then `nav.quiet` with four `a.door`: Today (one item from
   the lowest unmet level, `todayFromLevel`, with "Today deals from Level N."
