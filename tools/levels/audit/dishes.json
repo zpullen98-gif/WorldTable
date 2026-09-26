@@ -1,0 +1,130 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": {
+		"Commis": 14,
+		"Chef de Partie": 18,
+		"Sous Chef": 7,
+		"Chef": 6
+	},
+	"challenges": [
+		{
+			"slug": "the-french-omelette",
+			"proposed": 1,
+			"because": "Semester 1, eight minutes and no wait is the Commis line word for word (opening semester, one technique, put up without notes); difficulty 2 against semester 1 is a tie, and ties break down.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "cacio-e-pepe",
+			"proposed": 1,
+			"because": "The roster lists only salted water and dry-pan toasting, both foundation work, and no emulsion standard; semester 1 against difficulty 2 is a tie that breaks down, and the placement's emulsions line is not a signal on the row.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "soupe-a-loignon",
+			"proposed": 1,
+			"because": "The deck's own Caramelized card sits at level I, deglazing is a named Commis foundation technique, and semester 2 against difficulty 2 is a tie that breaks down.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "barszcz",
+			"proposed": 1,
+			"because": "One technique only, passing through a sieve, in semester 2: that is the Commis dish line exactly, and the placement's reason restates the difficulty gate instead of arguing the tie, which breaks down.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "pizza-margherita",
+			"proposed": 2,
+			"because": "A 90-minute build in the bread semester the Chef de Partie paragraph names, shorter than the 150-minute focaccia placed at II, and the deck's Fermented card sits at level II; no long wait and no multi-component build reaches the Sous Chef line.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "sauce-espagnole-and-demi-glace",
+			"proposed": 3,
+			"because": "The standard names the mother sauces and their children at II, and roux has many recipes and a Lexicon anchor, leaning down; difficulty 3 reads III or IV, and only the semester says IV, so a 240 minute build is the long wait the standard puts at III.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "dry-brined-roast-turkey-with-real-gravy",
+			"proposed": 3,
+			"because": "Every technique exercised is a foundation (brining, roasting, passing a sieve; the deck's Brined card sits at I and names turkey), and IV is for what nobody drills by accident, so difficulty 3 resolves to III as an Advanced plate with a long wait.",
+			"sub": "dishes"
+		}
+	],
+	"dispositions": [
+		{
+			"slug": "the-french-omelette",
+			"action": "kept",
+			"reason": "The standard weighs difficulty before the semester, so difficulty 2 against semester 1 is an ordered decision and not a tie; the row's difficulty is 2, the library's Intermediate gate the Chef de Partie line names.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "cacio-e-pepe",
+			"action": "kept",
+			"reason": "The challenge is right that the emulsion is not on the row, but difficulty 2 is weighed first and leans II, so semester 1 never makes a tie to break.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "soupe-a-loignon",
+			"action": "kept",
+			"reason": "The Caramelized card places the menu word, not this dish, and the Chef de Partie paragraph names caramelising as station work; difficulty 2 on the row is weighed before semester 2 and leans II.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "barszcz",
+			"action": "kept",
+			"reason": "One technique matches the Commis line, but the row's difficulty is 2, the Intermediate gate, and the standard weighs difficulty before the semester, so there is no tie.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "pizza-margherita",
+			"action": "kept",
+			"reason": "Difficulty 3 leans III or IV and is weighed before semester 5; the Fermented card places the menu word, while fermentation as a technique is named in the Sous Chef paragraph, and the tie breaks down only as far as III.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "sauce-espagnole-and-demi-glace",
+			"action": "kept",
+			"reason": "The mother sauces at II are the station's vocabulary, not its dishes; for dishes the standard's IV line names the capstone semester outright, and semester 10 is weighed before the technique ladder, so difficulty 3 resolves to IV with no tie left to break down.",
+			"sub": "dishes"
+		},
+		{
+			"slug": "dry-brined-roast-turkey-with-real-gravy",
+			"action": "kept",
+			"reason": "The Brined card at I places the word, not this dish, and the no-semester clause at IV governs techniques; for dishes the standard names the capstone semester at IV, and semester 10 settles difficulty 3 upward before the technique ladder is reached.",
+			"sub": "dishes"
+		}
+	],
+	"criticChanges": [
+		{
+			"sub": "dishes",
+			"slug": "salt-baked-whole-fish",
+			"from": 2,
+			"to": 4,
+			"because": "Level IV holds three dishes against a minimum of six, and the standard names the capstone semester and a whole fish as Chef dishes: this is both, in semester 10."
+		},
+		{
+			"sub": "dishes",
+			"slug": "central-texas-smoked-brisket",
+			"from": 3,
+			"to": 4,
+			"because": "Level IV is under its minimum and this is the roster's longest project at 720 minutes with difficulty 3, which the standard says leans III or IV: the project dish of the Advanced library."
+		},
+		{
+			"sub": "dishes",
+			"slug": "tacos-al-pastor-home-trompo",
+			"from": 3,
+			"to": 4,
+			"because": "Level IV is under its minimum; difficulty 3 with a 240-minute multi-component build (marinade, trompo, griddle) in the Fire & Smoke semester is the next project dish after the brisket."
+		},
+		{
+			"sub": "dishes",
+			"slug": "the-french-omelette",
+			"from": 2,
+			"to": 1,
+			"because": "The first dish of semester 1 at 8 minutes, one technique and no wait, is the standard's own Commis line; difficulty 2 against semester 1 is a tie, and ties break down."
+		}
+	],
+	"unresolved": [],
+	"notes": "SUPPLY, the finding that matters most: once LEVELS_COMPLETE flips, dishes level IV (3 of a minimum 6) and techniques level IV (1 of a minimum 8) fail the build (tools/derive/levels.mjs, MINIMUMS). The first three dish moves and the first seven technique moves exist to fill those levels; everything else is drift. Lexicon 263/258/32/40 and service 9/31/115/31 terms are all above minimum; no level swallowed a subsection. Palate and safety match the standard's own pairs and slices and I would move nothing there. DECK MISMATCHES left as placed, both defensible: blanch-and-shock at I against the Blanched card at 2 (the standard itself names blanching as a Commis foundation technique and the technique blanching-and-shocking sits at I on 76 recipes, so the essay is plainly broader); steaming-and-en-papillote at I against the En Papillote card at 3 (byLexicon maps only the papillote card; the Steamed card is at 1 and the essay is the everyday steam). PAIRS PLACED APART that I did not move because the standard's signal order decides them: whole-grilled-fish-with-ladolemono at II while filleting-fish and grilling-over-live-coals sit at III and its semester is titled Seafood Mastery, which the standard names at III (difficulty 2 is weighed before the semester, so II stands; the operator may prefer III); jerk-chicken at II over jerk at III, the same pattern; grilling-vs-barbecue-vs-smoking at III while the deck's Grilled and Smoked cards sit at 1 (not mapped to that slug; live fire is named at III); the-wok, wok-technique and wok-hei all at III by the standard's naming, though a wok is handled daily in many kitchens; miso and fish-sauce held at II by their deck cards although miso soup and pad krapow sit at I; srv-bar-bottles at III although well and call orders arrive in the first week (the standard names the bar at IV, the assigner already pulled it down one); gap:sanitizer at 3 among the other gaps at 4, defensible as the guide's own disagreement with itself. The beef cuts at I against the category's II lean follow the deck's everyday-word logic and I left them. SIGNAL TO WEIGH: the lexicon brief's recipeCount caps at 3 for every term, so it cannot separate an everyday atlas entry from a rare one; the atlases were placed on the essay alone. Dish moves 5 (cacio-e-pepe) and technique moves 12 onward fall outside the tenth and are recorded for the operator; of the seven IV fills, paella-and-socarrat is the weakest and khachapuri-shaping, curing-gravlax or churning-ice-cream would serve if the operator prefers a different seventh."
+}

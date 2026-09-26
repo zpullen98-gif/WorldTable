@@ -1,0 +1,203 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": {
+		"Commis": 42,
+		"Chef de Partie": 50,
+		"Sous Chef": 12,
+		"Chef": 8
+	},
+	"challenges": [
+		{
+			"slug": "brining-and-curing",
+			"proposed": 1,
+			"because": "A standard on 88 recipes with a Lexicon anchor is a foundation technique by the Level I test, the deck's Brined and Cured cards both sit at I, and Deep frying's single late semester was outweighed on the same numbers; the wet brine is mixed at first-weeks prep.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "charring-over-open-flame",
+			"proposed": 1,
+			"because": "A standard on 31 recipes with a Lexicon anchor leans down, its category is Heat & Precision (I or II), and the deck's Grilled, Blackened and Smoked cards all sit at I; charring a pepper on the burner grate is a first-weeks job, and a tie breaks down.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "ceviche",
+			"proposed": 2,
+			"because": "A particular on three recipes with no semester leans up one step, not two: raw fish held by lime and salt is the fish-case knowledge of Level II, no difficulty signal supports III, and on the floor ceviche is cut and dressed at the cold station, not at the pass.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "biryani-and-dum",
+			"proposed": 2,
+			"because": "Three recipes and no semester lean a particular of simmered and steamed rice up one step to the station; the long wait and multi-component build clause describes difficulty-3 plates and no difficulty is recorded for it, so the tie breaks down.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "injera",
+			"proposed": 2,
+			"because": "Injera is a griddled flatbread and the standard places bread at Level II: the deck card Fermented sits at level 2, the bread-fermentation card behind sourdough starter at level 1, and nine recipes across three chapters are not the fewest recipes, so the tie breaks down.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "hand-pulled-noodles",
+			"proposed": 2,
+			"because": "Its signals are the same as pierogi and risotto method, four recipes, no semester, no written standard, and both sit at II; its Lexicon entry is gluten and hydration, which the Lexicon rule places at II as baking science, so the tie between II and III breaks down.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "grilling-over-live-coals",
+			"proposed": 2,
+			"because": "The standards ladder was not weighed: 77 recipes with a written standard and a Lexicon anchor lean down, the deck card Grilled sits at level 1, and the whole-service live fire of the Level III line is the pit, already held at III by low and slow smoking; the grill is a station.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "tortillas-on-the-comal",
+			"proposed": 1,
+			"because": "A written standard, 27 recipes and a tools anchor (leans I) with only no semester leaning up is the signal set that put the overnight rest at Commis, and the tie breaks down; the sibling's semester 4 is not this essay's, and the comal is a new cook's first job.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "shucking-shellfish",
+			"proposed": 2,
+			"because": "The standard puts the fish case at Chef de Partie and keeps Sous Chef for seafood mastery; shucking is the raw bar's opening station, given to a cook in week one, and semester 9's lean is earned by the whole fish, not the oyster knife, so the tie breaks down.",
+			"sub": "techniques"
+		}
+	],
+	"dispositions": [
+		{
+			"slug": "brining-and-curing",
+			"action": "moved",
+			"reason": "The challenge wins on consistency: a standard on 88 recipes with a Lexicon anchor is the Level I foundation clause, the deck's Brined and Cured cards sit at I, and Deep frying's late semester was outweighed on the same numbers, so semester 10 cannot lift this one.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "charring-over-open-flame",
+			"action": "moved",
+			"reason": "The challenge wins: standard plus Lexicon anchor lean down, the category is Heat & Precision (I or II), the deck's Grilled, Blackened and Smoked cards all sit at I, and with no semester to weigh the I-or-II tie breaks down.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "ceviche",
+			"action": "moved",
+			"reason": "The challenge wins: the particular clause leans a three-recipe item up one step, not two, no difficulty signal reaches the Level III seafood clause, and the II-or-III tie breaks down.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "biryani-and-dum",
+			"action": "moved",
+			"reason": "The challenge wins: the long wait and multi-component build clause describes Advanced plates by difficulty, and with no difficulty recorded the only signal is the particular clause, which lifts simmered rice one step to II with the tie breaking down.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "injera",
+			"action": "moved",
+			"reason": "The challenge wins: the calibration deck places Fermented at level 2 and the standard places bread at Level II, while nine recipes in three chapters are not the fewest, so the II or III tie breaks down.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "hand-pulled-noodles",
+			"action": "moved",
+			"reason": "The challenge wins: its only anchor is gluten and hydration, which the Lexicon rule places at II as baking science, and pierogi and risotto method carry identical signals at II, so the tie breaks down.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "grilling-over-live-coals",
+			"action": "kept",
+			"reason": "The assigner's level stands: the standard names live fire itself among the Level III techniques and the earliest semester is 7, so two signals agree on III and the Grilled deck card is the everyday menu word, plainly narrower than a 77-recipe live-fire essay.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "tortillas-on-the-comal",
+			"action": "moved",
+			"reason": "The challenge wins on the roster's own signals: a written standard, 27 recipes and a tools-category Lexicon anchor (leans I) against only no semester is exactly the set that placed the overnight rest at Commis, the griddle sibling's semester 4 is not on this row, and the 1-or-2 tie breaks down.",
+			"sub": "techniques"
+		},
+		{
+			"slug": "shucking-shellfish",
+			"action": "kept",
+			"reason": "The assigner's level stands because the row carries a semester of 9, which the standard says leans III, and with no written standard and no Lexicon anchor nothing on the row leans down, so there is no tie for the floor argument to break; the fish case line covers the product words, not a semester 9 technique.",
+			"sub": "techniques"
+		}
+	],
+	"criticChanges": [
+		{
+			"sub": "techniques",
+			"slug": "the-souffle",
+			"from": 3,
+			"to": 4,
+			"because": "Level IV holds one technique against a minimum of eight; one recipe, one chapter, no semester and no standard is the standard's own description of a Chef technique."
+		},
+		{
+			"sub": "techniques",
+			"slug": "the-pretzel-bath",
+			"from": 3,
+			"to": 4,
+			"because": "Level IV is under its minimum; a lye bath on two recipes with no semester and no standard is a technique nobody drills by accident."
+		},
+		{
+			"sub": "techniques",
+			"slug": "tandoor-breads",
+			"from": 3,
+			"to": 4,
+			"because": "Level IV is under its minimum; a technique that needs a tandoor, on five recipes with no semester and no standard, is taught by no semester."
+		},
+		{
+			"sub": "techniques",
+			"slug": "sushi-rice-and-rolling",
+			"from": 3,
+			"to": 4,
+			"because": "Level IV is under its minimum; four recipes, no semester, no standard, and a craft with its own years-long apprenticeship: the standard's fewest-recipes, no-semester line."
+		},
+		{
+			"sub": "techniques",
+			"slug": "hand-pulled-noodles",
+			"from": 2,
+			"to": 4,
+			"because": "Level IV is under its minimum; four recipes, no semester, no standard, and a dough craft harder than lamination, which the standard places at III: a particular with few recipes and no semester leans up."
+		},
+		{
+			"sub": "techniques",
+			"slug": "biryani-and-dum",
+			"from": 2,
+			"to": 4,
+			"because": "Level IV is under its minimum; three recipes, no semester, no standard, and a sealed multi-component build (parboiled rice, marinated meat, the dum seal) that no semester teaches."
+		},
+		{
+			"sub": "techniques",
+			"slug": "paella-and-socarrat",
+			"from": 2,
+			"to": 4,
+			"because": "Level IV is under its minimum; two recipes, no semester, no standard, and the socarrat is a discipline nobody drills by accident: the weakest of the seven fills, so listed last."
+		},
+		{
+			"sub": "techniques",
+			"slug": "steaming-basket-leaf-and-lid",
+			"from": 2,
+			"to": 1,
+			"because": "Its Lexicon term steaming-and-en-papillote sits at I, the deck's Steamed card sits at I, and it carries a standard on 130 recipes; semester 5 against all that is a tie, and ties break down."
+		},
+		{
+			"sub": "techniques",
+			"slug": "the-wobble-and-the-skewer-testing-a-bake",
+			"from": 2,
+			"to": 1,
+			"because": "Its Lexicon anchor doneness-by-touch-sight-and-sound sits at I and it carries a standard on 135 recipes; semester 6 alone held it at II, and ties break down."
+		},
+		{
+			"sub": "techniques",
+			"slug": "trussing",
+			"from": 2,
+			"to": 1,
+			"because": "The Lexicon term trussing sits at I and its anchor butchery-verbs-frenching-butterflying-tying sits at I; a technique should not sit above its own word."
+		},
+		{
+			"sub": "techniques",
+			"slug": "griddle-and-plancha-work",
+			"from": 2,
+			"to": 1,
+			"because": "Its anchor comal-plancha-and-griddles sits at I, tortillas-on-the-comal sits at I, and it carries a standard on 45 recipes; semester 4 alone held it at II, and ties break down."
+		}
+	],
+	"unresolved": [],
+	"notes": "SUPPLY, the finding that matters most: once LEVELS_COMPLETE flips, dishes level IV (3 of a minimum 6) and techniques level IV (1 of a minimum 8) fail the build (tools/derive/levels.mjs, MINIMUMS). The first three dish moves and the first seven technique moves exist to fill those levels; everything else is drift. Lexicon 263/258/32/40 and service 9/31/115/31 terms are all above minimum; no level swallowed a subsection. Palate and safety match the standard's own pairs and slices and I would move nothing there. DECK MISMATCHES left as placed, both defensible: blanch-and-shock at I against the Blanched card at 2 (the standard itself names blanching as a Commis foundation technique and the technique blanching-and-shocking sits at I on 76 recipes, so the essay is plainly broader); steaming-and-en-papillote at I against the En Papillote card at 3 (byLexicon maps only the papillote card; the Steamed card is at 1 and the essay is the everyday steam). PAIRS PLACED APART that I did not move because the standard's signal order decides them: whole-grilled-fish-with-ladolemono at II while filleting-fish and grilling-over-live-coals sit at III and its semester is titled Seafood Mastery, which the standard names at III (difficulty 2 is weighed before the semester, so II stands; the operator may prefer III); jerk-chicken at II over jerk at III, the same pattern; grilling-vs-barbecue-vs-smoking at III while the deck's Grilled and Smoked cards sit at 1 (not mapped to that slug; live fire is named at III); the-wok, wok-technique and wok-hei all at III by the standard's naming, though a wok is handled daily in many kitchens; miso and fish-sauce held at II by their deck cards although miso soup and pad krapow sit at I; srv-bar-bottles at III although well and call orders arrive in the first week (the standard names the bar at IV, the assigner already pulled it down one); gap:sanitizer at 3 among the other gaps at 4, defensible as the guide's own disagreement with itself. The beef cuts at I against the category's II lean follow the deck's everyday-word logic and I left them. SIGNAL TO WEIGH: the lexicon brief's recipeCount caps at 3 for every term, so it cannot separate an everyday atlas entry from a rare one; the atlases were placed on the essay alone. Dish moves 5 (cacio-e-pepe) and technique moves 12 onward fall outside the tenth and are recorded for the operator; of the seven IV fills, paella-and-socarrat is the weakest and khachapuri-shaping, curing-gravlax or churning-ice-cream would serve if the operator prefers a different seventh."
+}

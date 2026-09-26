@@ -1,0 +1,15 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": {
+		"Commis": 2,
+		"Chef de Partie": 2,
+		"Sous Chef": 2,
+		"Chef": 2
+	},
+	"challenges": [],
+	"dispositions": [],
+	"criticChanges": [],
+	"unresolved": [],
+	"notes": "SUPPLY, the finding that matters most: once LEVELS_COMPLETE flips, dishes level IV (3 of a minimum 6) and techniques level IV (1 of a minimum 8) fail the build (tools/derive/levels.mjs, MINIMUMS). The first three dish moves and the first seven technique moves exist to fill those levels; everything else is drift. Lexicon 263/258/32/40 and service 9/31/115/31 terms are all above minimum; no level swallowed a subsection. Palate and safety match the standard's own pairs and slices and I would move nothing there. DECK MISMATCHES left as placed, both defensible: blanch-and-shock at I against the Blanched card at 2 (the standard itself names blanching as a Commis foundation technique and the technique blanching-and-shocking sits at I on 76 recipes, so the essay is plainly broader); steaming-and-en-papillote at I against the En Papillote card at 3 (byLexicon maps only the papillote card; the Steamed card is at 1 and the essay is the everyday steam). PAIRS PLACED APART that I did not move because the standard's signal order decides them: whole-grilled-fish-with-ladolemono at II while filleting-fish and grilling-over-live-coals sit at III and its semester is titled Seafood Mastery, which the standard names at III (difficulty 2 is weighed before the semester, so II stands; the operator may prefer III); jerk-chicken at II over jerk at III, the same pattern; grilling-vs-barbecue-vs-smoking at III while the deck's Grilled and Smoked cards sit at 1 (not mapped to that slug; live fire is named at III); the-wok, wok-technique and wok-hei all at III by the standard's naming, though a wok is handled daily in many kitchens; miso and fish-sauce held at II by their deck cards although miso soup and pad krapow sit at I; srv-bar-bottles at III although well and call orders arrive in the first week (the standard names the bar at IV, the assigner already pulled it down one); gap:sanitizer at 3 among the other gaps at 4, defensible as the guide's own disagreement with itself. The beef cuts at I against the category's II lean follow the deck's everyday-word logic and I left them. SIGNAL TO WEIGH: the lexicon brief's recipeCount caps at 3 for every term, so it cannot separate an everyday atlas entry from a rare one; the atlases were placed on the essay alone. Dish moves 5 (cacio-e-pepe) and technique moves 12 onward fall outside the tenth and are recorded for the operator; of the seven IV fills, paella-and-socarrat is the weakest and khachapuri-shaping, curing-gravlax or churning-ice-cream would serve if the operator prefers a different seventh."
+}

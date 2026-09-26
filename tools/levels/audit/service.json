@@ -1,0 +1,121 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": {
+		"Commis": 4,
+		"Chef de Partie": 8,
+		"Sous Chef": 12,
+		"Chef": 3
+	},
+	"challenges": [
+		{
+			"slug": "srv-grape-atlas",
+			"proposed": 3,
+			"because": "The roster's tenth module is missing from the placements altogether, which the hard rules forbid, and the Sous Chef line names \"the grape atlas\" outright, so it takes III.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-bar-bottles",
+			"proposed": 2,
+			"because": "A well vodka soda, a gin and tonic and a bourbon neat are poured on a server's first Friday; this is the spirits you will pour, the same shelf as the whites and reds at II, and only amari, Chartreuse and absinthe lean up, so the tie breaks down.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-cheese-italy",
+			"proposed": 2,
+			"because": "Parmigiano, mozzarella, burrata, ricotta, mascarpone, gorgonzola, fontina and provolone are on every pizzeria menu, and the module's own outcome is one sentence per cheese, the Chef de Partie line word for word; only Taleggio and Grana Padano need a board.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-cheese-world",
+			"proposed": 2,
+			"because": "The placement's own reason concedes the cheeses are common (cream cheese, Monterey Jack, American, queso fresco, cotija, labneh, paneer), and the standard weighs the atlases by how often a kitchen handles the item with ties breaking down, so a country label cannot carry them to III.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-cheese-isles-north",
+			"proposed": 2,
+			"because": "Five of the seven entries (cheddar, Stilton, aged Gouda, feta, halloumi) are on a steakhouse or Mediterranean menu every night and each needs one sentence, the Chef de Partie test; only brunost and sulguni are rare, and the handling-frequency signal leans II with ties breaking down.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-charc-italy",
+			"proposed": 2,
+			"because": "Prosciutto, mortadella, salame, soppressata, 'nduja, pancetta and coppa are the deli-counter words every Italian menu prints and a second-week server is asked about nightly; the deck places Coppa and Pancetta at II, so the deck cards split two and two with Speck and Bresaola, and a tie breaks down.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-charc-world",
+			"proposed": 2,
+			"because": "The placement's own reason lists its deck cards as two at II (Andouille, Country Ham) against one at III (Tasso) and then resolved that vote upward; with pepperoni, kielbasa and Black Forest ham handled daily, the calibration set and the tie-break both point to II.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-charc-producer",
+			"proposed": 2,
+			"because": "The nitrite question is asked the moment a board lands at a two-top, and the module's own outcome stops at one honest sentence and handing the rest to the chef, which is the Chef de Partie test of a word that needs a sentence; the deck's Cured sits at I, so the tie breaks down.",
+			"sub": "service"
+		}
+	],
+	"dispositions": [
+		{
+			"slug": "srv-grape-atlas",
+			"action": "moved",
+			"reason": "The challenge wins: the module was missing from the placements, and the Sous Chef line names \"the grape atlas\" outright, so it takes III.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-bar-bottles",
+			"action": "kept",
+			"reason": "The Chef de Partie line names the whites and reds, wine only, and the standard places every bar module at IV; the tie is III or IV, already broken down to III, and II is not in it.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-cheese-italy",
+			"action": "kept",
+			"reason": "The Sous Chef line names \"the cheese boards by country\" outright and this module is the Italian board; a named line is not a tie, so the one-sentence test at II does not reach it.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-cheese-world",
+			"action": "kept",
+			"reason": "The atlases-by-frequency signal is a Lexicon tie-breaker, and there is no tie where the Sous Chef line names \"the cheese boards by country\" outright; this is the last board of that run at n 17.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-cheese-isles-north",
+			"action": "kept",
+			"reason": "The Sous Chef line names \"the cheese boards by country\" outright, and this is the British and northern board; the frequency of cheddar and feta does not override a named line.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-charc-italy",
+			"action": "kept",
+			"reason": "The challenge is right that Guanciale is not on this roster and the cards split two and two, and the reason is corrected, but the Sous Chef line names \"the charcuterie boards\" outright, so there is no tie to break.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-charc-world",
+			"action": "kept",
+			"reason": "Three deck cards cover three of ten terms, so the module is plainly broader than its cards, and the Sous Chef line names \"the charcuterie boards\" outright; the cards do not outvote the standard.",
+			"sub": "service"
+		},
+		{
+			"slug": "srv-charc-producer",
+			"action": "kept",
+			"reason": "The nitrite science and the curing chamber are the reference behind the charcuterie boards at III, closing that run at n 23; the deck's Cured at I is an everyday menu word, not the science behind it, so the tie is III or IV and breaks down to III.",
+			"sub": "service"
+		}
+	],
+	"criticChanges": [
+		{
+			"sub": "service",
+			"slug": "srv-cheese-world",
+			"from": 3,
+			"to": 2,
+			"because": "Its ten terms (queso fresco, cotija, paneer, labneh, cream cheese, American cheese) are asked on the floor in the first weeks, unlike the Italian and French boards; the board-by-country line does not hold for a module of everyday cheeses, and placing low costs nothing."
+		}
+	],
+	"unresolved": [],
+	"notes": "SUPPLY, the finding that matters most: once LEVELS_COMPLETE flips, dishes level IV (3 of a minimum 6) and techniques level IV (1 of a minimum 8) fail the build (tools/derive/levels.mjs, MINIMUMS). The first three dish moves and the first seven technique moves exist to fill those levels; everything else is drift. Lexicon 263/258/32/40 and service 9/31/115/31 terms are all above minimum; no level swallowed a subsection. Palate and safety match the standard's own pairs and slices and I would move nothing there. DECK MISMATCHES left as placed, both defensible: blanch-and-shock at I against the Blanched card at 2 (the standard itself names blanching as a Commis foundation technique and the technique blanching-and-shocking sits at I on 76 recipes, so the essay is plainly broader); steaming-and-en-papillote at I against the En Papillote card at 3 (byLexicon maps only the papillote card; the Steamed card is at 1 and the essay is the everyday steam). PAIRS PLACED APART that I did not move because the standard's signal order decides them: whole-grilled-fish-with-ladolemono at II while filleting-fish and grilling-over-live-coals sit at III and its semester is titled Seafood Mastery, which the standard names at III (difficulty 2 is weighed before the semester, so II stands; the operator may prefer III); jerk-chicken at II over jerk at III, the same pattern; grilling-vs-barbecue-vs-smoking at III while the deck's Grilled and Smoked cards sit at 1 (not mapped to that slug; live fire is named at III); the-wok, wok-technique and wok-hei all at III by the standard's naming, though a wok is handled daily in many kitchens; miso and fish-sauce held at II by their deck cards although miso soup and pad krapow sit at I; srv-bar-bottles at III although well and call orders arrive in the first week (the standard names the bar at IV, the assigner already pulled it down one); gap:sanitizer at 3 among the other gaps at 4, defensible as the guide's own disagreement with itself. The beef cuts at I against the category's II lean follow the deck's everyday-word logic and I left them. SIGNAL TO WEIGH: the lexicon brief's recipeCount caps at 3 for every term, so it cannot separate an everyday atlas entry from a rare one; the atlases were placed on the essay alone. Dish moves 5 (cacio-e-pepe) and technique moves 12 onward fall outside the tenth and are recorded for the operator; of the seven IV fills, paella-and-socarrat is the weakest and khachapuri-shaping, curing-gravlax or churning-ice-cream would serve if the operator prefers a different seventh."
+}

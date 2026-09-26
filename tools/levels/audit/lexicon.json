@@ -1,0 +1,886 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": {
+		"Commis": 266,
+		"Chef de Partie": 255,
+		"Sous Chef": 33,
+		"Chef": 39
+	},
+	"challenges": [
+		{
+			"slug": "sirloin-tri-tip-and-picanha",
+			"proposed": 1,
+			"because": "Its signals are identical to Chuck's (three recipes, no deck card, no semester, the cuts category) and Chuck was placed at I; top sirloin is the cheapest steak on the menu and the first steak a new cook is put on, so the 1-or-2 tie breaks down as it did for Chuck.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "sashimi-grade-and-ikejime",
+			"proposed": 2,
+			"because": "Bivalves and Fatty vs. Lean Fish carry the same semester 9 against the fish-case category and were placed at II with the tie broken down; this row adds three recipes leaning down, and the essay opens on 'sashimi-grade', the word a guest asks about every week, not on ikejime.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "crab-vocabulary",
+			"proposed": 1,
+			"because": "The deck places the sibling fish-case product cards (shrimp sizing, scallops dry vs wet, oysters east vs west) at level 1, crab cake and soft-shell crab are on Tuesday menus, three recipes lean down, and the tie with the category's II breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "gyuto",
+			"proposed": 1,
+			"because": "The atlas places by how often a kitchen handles the item, and the gyuto is the chef's knife most cooks on a line actually carry and handle every day; it is the same day-one generalist as the Western profile placed at I, so the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "boning-fillet-and-the-butchery-blades",
+			"proposed": 1,
+			"because": "Three recipes and the Filleting fish technique anchor both lean down, and the boning knife is the blade a first-week cook is handed to break down chickens; the blade is handled daily even though whole-animal butchery as a technique sits at III.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "the-kitchen-torch",
+			"proposed": 1,
+			"because": "Three recipes and a technique anchor (The brûlée torch) lean down, the torch is handled daily on any dessert pass with crème brûlée on the menu and is the tool the newest cook there is given, and the pastry-science lean at II belongs to the custard, not the tool.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "grills-and-smokers-kettle-kamado-offset-pellet",
+			"proposed": 2,
+			"because": "The deck places both Grilled and Smoked at I, three recipes lean down, and a kitchen handles the grill every service; only the semester leans III, and a tie breaks down, so the fleet with its offset and pellet smokers is station work at II, not the Sous Chef's live-fire standard.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "combi-ovens-and-steam",
+			"proposed": 1,
+			"because": "The reason calls the combi a station oven handled daily and then breaks the tie upward, which the standard forbids: the atlases place an item by how often a kitchen handles it, and the combi is the oven a first-week cook is put on for reheats and steamed vegetables, so the tie breaks to I.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "spatchcock-butterfly",
+			"proposed": 1,
+			"because": "Its signals match Trussing exactly (same category, no recipes, no deck card, no semester, no anchor), which this pass placed at I as Knife & Prep work on the day-one roast; flattening a bird is a first-week prep cut and takes one line to explain, so the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "hiring-training-and-retention-economics",
+			"proposed": 3,
+			"because": "Level III is defined as teaching a brigade, and the sous is the one who hires, trains and keeps the hourly cooks whose turnover this essay measures; the category allows III, so the tie with owner's finance breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "fenugreek-seed-leaf-and-blue",
+			"proposed": 2,
+			"because": "Three recipes link it, as many as cumin or coriander, and the seed sits in curry powder, berbere and panch phoron on the ordinary spice rack that the standard places at Level II; the Georgian blue variety alone does not make the essay a specialist product, and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "steaming-and-en-papillote",
+			"proposed": 1,
+			"because": "The III card on this slug is En Papillote, one corner of the essay, while the deck's own Steamed card sits at I; the essay opens on steaming with three recipes and a technique anchor, so it is plainly broader than the card and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "blanch-and-shock",
+			"proposed": 1,
+			"because": "The Commis line of the standard names blanching among the foundation techniques, and three recipes plus the Blanching & shocking anchor lean down; the II card covers the menu word, the essay covers the technique a first-week cook is put on.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "fermentation-and-pickling",
+			"proposed": 2,
+			"because": "The essay opens on quick pickling against lacto-fermentation, the distinction the deck's Fermented card carries at II (Pickled at I), with three recipes and an anchor leaning down; the standard's III fermentation governs a whole service, not the pickled shallot every station makes.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "brining-wet-dry-and-cures",
+			"proposed": 2,
+			"because": "Dry-brining the proteins is nightly station prep, the deck's Brined and Cured cards both sit at I, the Salting anchor leans down and the charcuterie words the standard places at II cover the cures; only semester 7 pulls up, and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "the-souring-spices-amchur-loomi-anardana-and-tamarind",
+			"proposed": 2,
+			"because": "Tamarind sits in the title and in the three linked recipes, a word a kitchen writes on a menu (tamarind glaze) and explains in a sentence, handled in every Indian, Thai and Mexican kitchen; the atlas test is how often a kitchen handles the item.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "the-floral-pantry-rose-orange-blossom-and-mahleb",
+			"proposed": 2,
+			"because": "Rose water and orange blossom water are handled by every pastry section and Middle Eastern kitchen and are asked about on dessert menus, with three linked recipes; mahleb alone is rare, and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "curry-leaf",
+			"proposed": 2,
+			"because": "A fresh aromatic handled as often as lemongrass and makrut lime, which sit at II, with three linked recipes and a menu presence a guest asks about on a Tuesday; the II or III tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "berbere-and-mitmita",
+			"proposed": 2,
+			"because": "Berbere runs the whole East African chapter (three recipes) and is written on good menus as berbere-spiced, the same footing as andouille at II; tasso at III is a product rarely seen on any menu, which berbere no longer is.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "building-the-working-spice-pantry",
+			"proposed": 2,
+			"because": "The essay opens on the core dozen that runs most of the guide's recipes, which is the spice rack itself, placed at II by the standard; it carries no food cost, yield or par figure, so the numbers a sous reads are not in it.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "tempering-eggs-and-chocolate",
+			"proposed": 2,
+			"because": "The essay is one word, two crafts, and tempering eggs is the custard station's daily move (the Custards entry's own deck card sits at Commis and semester 6 reads it), while the category caps Heat & Precision at II; the standard's tempering at Sous Chef is chocolate alone, half the essay.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "velveting-and-marinades",
+			"proposed": 2,
+			"because": "A technique page (Velveting) is built on it and two recipes lean II, Heat & Precision is capped at II by the category, and the standard names the wok at Sous Chef, not the marinade: semester 8 is the only lift, and a marinade is the prep list's job before service, not the pass's.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "reverse-sear-and-the-gray-band",
+			"proposed": 1,
+			"because": "Its row (three recipes, no deck card, no semester, no anchor, Heat & Precision) is identical to Baste, Arroser & Glaze, which was placed at Commis; the same signals cannot land a level apart, and with three recipes leaning down the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "butchery-verbs-frenching-butterflying-tying",
+			"proposed": 1,
+			"because": "Knife & Prep leans I and a technique page (Trussing) is built on it, both leaning down, against one recipe leaning up; tying a bird is a first-week prep job and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "bitterness-the-adult-taste",
+			"proposed": 2,
+			"because": "The essay reads bitterness as a taste to be handled (coffee, char, radicchio on the grill), not the repair-table fault, which is the very reading that kept Fat: The Flavor Carrier at II; the Flavor Atlas leans II and no recipe or semester count as a lift for any other Atlas entry.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "the-aroma-compound-families",
+			"proposed": 2,
+			"because": "Its row (no recipe, no semester, no anchor, Flavor Atlas) is identical to Taste vs. Aroma, placed at II with the note that nothing pulls it lower; nothing in the Sous Chef paragraph names a chemistry map, so the same row cannot sit a level higher and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "flavor-pairing-theory",
+			"proposed": 2,
+			"because": "Its row is identical to Taste vs. Aroma, which sits at II, and the standard names neither pairing nor composition above the station; the special at a station is where a pairing is composed on a Tuesday, so placing it at III hides it from the cook writing that special.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "herb-profiles-bright-vs-resinous",
+			"proposed": 1,
+			"because": "The standard's Commis paragraph names the common herbs as day-one produce, the same line that placed The Allium Spectrum at I over the Flavor Atlas's II, and parsley last, rosemary first is what a cook is told in the first week: the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "smoke-char-and-the-burnt-edge",
+			"proposed": 1,
+			"because": "The placement itself calls it a tie, and ties break down, not to the middle: the deck cards Smoked, Blackened and Grilled all sit at Commis and a technique page (Charring over open flame) is built on it, while the essay is the guest's menu register, not the live-fire technique.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "fresh-fig",
+			"proposed": 1,
+			"because": "In season a fig sits on the starter section of nearly every good menu beside burrata or prosciutto and a guest never asks what it is, so it is handled as often as the apricot placed at I; a I or II tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "key-lime",
+			"proposed": 1,
+			"because": "Key lime is named on every dessert menu in America and carries three linked recipes, the same count that placed lime at I; the essay's one sentence on the species is not enough to hide the word a level above the pie.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "charentais-melon",
+			"proposed": 2,
+			"because": "A melon variety that needs one sentence against the cantaloupe placed at I is the standard's less common produce, not the specialist product behind fine dining; the same II or III tie the brief settled downward for guinea hen.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "damson",
+			"proposed": 2,
+			"because": "Damson has the same profile as gooseberry, placed at II: a tart hedgerow fruit of a short season cooked with sugar, no linked recipe, and no fine-dining specialist use to argue the extra level, so the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "elderberry",
+			"proposed": 2,
+			"because": "The essay opens with a safety clause on raw berries and stems, and a warning the standard puts in the first weeks should not sit at III behind a foraged fruit that is less common produce rather than a fine-dining specialist product.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "rambutan",
+			"proposed": 2,
+			"because": "Rambutan now sits in mainstream supermarkets most of the year and a guest knows it by its hairy shell, so a kitchen handles it about as often as lychee, placed at II; the Sous Chef line is the specialist product behind fine dining, which this is not, and a 2 or 3 tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "mulberry",
+			"proposed": 2,
+			"because": "The reason given is fragility of supply, not fine dining or classical standing: a fruit every guest knows by name that arrives from a grower in season is the standard's less common produce, and a 2 or 3 tie breaks down rather than hiding it behind the pass.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "mirin",
+			"proposed": 1,
+			"because": "Three recipes link it and it sits on the day-one shelf beside soy sauce and rice vinegar, both placed at Commis; the hon-mirin distinction is essay detail, the same kind the placement waved through for firm tofu's coagulant.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "doubanjiang",
+			"proposed": 2,
+			"because": "Three recipes link it (many recipes lean down) and it is a pantry jar opened for mapo tofu and dan dan, not the fine-dining specialist product Sous Chef describes; Tasso is a cured meat, and gochujang with the same three recipes sits at Chef de Partie, so at most a two-or-three tie that breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "00-flour",
+			"proposed": 1,
+			"because": "The row's category is The Grain, Pulse & Seed Atlas, placed by how often a kitchen handles it, not Baking & Pastry Science as the reason claims; three recipes link it and it is the bag opened on day one in any pizza or pasta kitchen, so a one-or-two tie that breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "wood-ear",
+			"proposed": 1,
+			"because": "Three recipes link it, the strongest down-lean on the roster, and dried wood ear is soaked on day one in any kitchen with hot and sour soup on the menu; the sentence on texture is no more than kimchi takes at its Commis card.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "hedgehog-mushroom",
+			"proposed": 2,
+			"because": "Two recipes link it, more than Chanterelle's one at its Chef de Partie card, and it is bought and handled in the same autumn case as chanterelles, unlike Black Trumpet, which links no recipe; a two-or-three tie that breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "black-eyed-pea",
+			"proposed": 2,
+			"because": "The atlas places by how often a kitchen handles the item, and outside the South a kitchen handles black-eyed peas about as seldom as mung beans (placed II); the deck calibrates the regional American staple at II (Country Ham, Andouille), so this is no 1 or 2 tie to break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "sushi-rice",
+			"proposed": 2,
+			"because": "Arborio's deck card sits at Chef de Partie and a general kitchen handles sushi rice no more often than arborio; its rinse, soak and vinegar seasoning is a station standard, not a first-week task, so it belongs with the named specialist rice at II rather than beside long-grain and jasmine.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "fresno-chile",
+			"proposed": 1,
+			"because": "The essay's first line says the Fresno is mistaken for a red jalapeno on every line in America, so a kitchen handles it as often as the jalapeno; the atlas weighs by handling frequency, three recipes link it, and the menu-sentence line belongs to cuts and charcuterie, not a week-one fresh chile.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "habanero",
+			"proposed": 1,
+			"because": "Every produce supplier stocks the habanero beside the jalapeno and serrano, and the salsa and hot-sauce mise of most American kitchens puts it in a cook's hands in the first weeks; a higher Scoville range is what the essay explains, not a reason to hide it, and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "padron-pepper",
+			"proposed": 2,
+			"because": "The padron is the same blistered one-in-ten-hot plate as the shishito placed at II, the standard small plate of every Spanish kitchen in summer; a protected name does not make it the fine-dining specialist product of Level III, and the tie with III breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "tarragon",
+			"proposed": 1,
+			"because": "Tarragon is picked for bearnaise, chicken salad and fines herbes on the same morning mise as dill, placed at I with the same three recipes; the sterile-French buying rule is a purchasing note, not lower handling frequency, so the common herbs line of Level I holds.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "urfa-biber",
+			"proposed": 2,
+			"because": "Urfa is bought off the spice rack exactly as gochugaru, Kashmiri and pasilla are, three recipes link it, and the standard names the spice rack as a Level II line; rarer than Aleppo is a comparison within the rack, not a move to the specialist product line, and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "costing-time-prep-lists-batch-and-cook-chill",
+			"proposed": 1,
+			"because": "The essay opens on the kitchen cooking twice, prep and service, and a written prep list is put in a cook's hand on the first morning with batch production as the day's work; The Professional Kitchen category leans I, the cooling law is one paragraph, and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "tuna-and-winter-fat",
+			"proposed": 2,
+			"because": "No deck card, and the Seasonal Larder and the fish case both lean II; the Tuna Grades row (akami, chūtoro, ōtoro) sits in Fish & Shellfish with three recipes and no card, and toro is the word a sushi bar's server needs a sentence for on any Tuesday: the Chef de Partie line, not the specialist cut.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "oysters-and-the-r-month-rule",
+			"proposed": 1,
+			"because": "The deck holds Oysters: East vs West at Commis, and whether oysters can be eaten in summer is the raw-bar question a server takes in the first week; the Larder's II lean only ties with the deck's own oyster level, and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "alliums-harvest-cure-and-the-spring-exceptions",
+			"proposed": 1,
+			"because": "The standard names onion and garlic among the produce handled on day one, and the essay's whole subject is why that day-one staple keeps; the category lean is the only signal pointing up, a tie the standard breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "tomatoes-the-argument-for-august",
+			"proposed": 1,
+			"because": "The tomato is day-one produce (the same pass places Beefsteak Tomato at I), two recipes attach, and the essay is one rule, August not year-round, that the salad station is told in its first week; category II against day-one produce is a tie, broken down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "asparagus-springs-starting-gun",
+			"proposed": 1,
+			"because": "The same spear's atlas entry is placed at I with three recipes, and the essay is one fact, a six-week spring window, told to the first cook put on trimming the spears; the category lean ties with the day-one item and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "squash-summers-water-winters-starch",
+			"proposed": 1,
+			"because": "Three recipes lean down, Acorn Squash is placed at I in the same pass as first-weeks-of-autumn produce, and zucchini against butternut is the split a prep cook learns in the first week; the category lean only ties with the everyday item, and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "the-global-pantry-what-has-no-season",
+			"proposed": 1,
+			"because": "No recipe and no deck card; it is a frame entry like the Hemisphere Flip, placed at I for the same reason, and its subject is the dried and cured staples the standard names as day-one produce, so the category lean is a tie that breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "green-tomato",
+			"proposed": 1,
+			"because": "Fried green tomatoes is an everyday American menu word every guest already knows and no server needs a sentence for; the atlas signal counts how often a kitchen handles the item, and a seasonal item that needs no explaining is a tie with Level I, and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "burdock-root",
+			"proposed": 2,
+			"because": "Two linked recipes and no fine-dining vocabulary behind it: gobo is less common produce in the sense of the Level II line, not the specialist product behind the classical pass that Level III names, and the tie breaks down so the cook on a Japanese-leaning station is not hidden from it.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "broccolini",
+			"proposed": 1,
+			"because": "Grilled broccolini is a standing side on casual American menus and is handled in the first weeks alongside the broccoli it resembles; the 1993 trade-name history is trivia, not the sentence a guest asks for, so the frequency signal reads Level I and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "little-gem",
+			"proposed": 1,
+			"because": "The atlas signal is how often a kitchen handles the item, and Little Gem is split and washed on the salad bench daily at most restaurants; a lettuce is not less common produce, and a I or II tie breaks down beside romaine at I.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "mustard-greens",
+			"proposed": 1,
+			"because": "Three recipes link it, the roster's highest count, the same as collard greens, and it is picked and washed on the day-one greens bench in every Southern and Chinese kitchen; the word needs no sentence, so the I or II tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "rhubarb",
+			"proposed": 1,
+			"because": "The placement's own reasoning for pumpkin at I (an everyday word, a seasonal staple, three recipes, no explanation needed at the table) applies to rhubarb exactly, and three recipes lean down; a pastry station is still a station a cook is put on in the first weeks.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "rutabaga",
+			"proposed": 1,
+			"because": "Three recipes link it, the highest count in the roster, and it is peeled for the same winter roast and mash as parsnip and turnip, both handled from the first week; a table-side sentence is a guest question, not a kitchen rarity, and the I or II tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "japanese-eggplant",
+			"proposed": 1,
+			"because": "It is a variety of a day-one vegetable, sliced and grilled the same way as the globe, and it is the eggplant most grill and Asian stations buy by default; two recipes link it and the I or II tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "radicchio",
+			"proposed": 1,
+			"because": "Frequency handled is the atlas signal, and radicchio is on the salad bench daily at most restaurants and in every supermarket; the bitterness sentence is a guest question, not a rarity, and with nothing else weighing up the I or II tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "ramps",
+			"proposed": 2,
+			"because": "Ramps are the standard's Seasonal Larder item, which leans II, handled every spring by every farm-to-table kitchen and pickled for the pantry all year; one recipe links them, unlike nettles with none, so the II or III tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "swiss-chard",
+			"proposed": 1,
+			"because": "Three recipes link it and stripping chard stems is first-week prep in any kitchen with a vegetable programme; it is a supermarket leaf no guest asks about, so the I-or-II tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "watercress",
+			"proposed": 1,
+			"because": "Three recipes link it, it is the garnish-station leaf a cook picks in the first week, and no guest asks what watercress is; the atlas signal is a I-or-II tie and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "white-asparagus",
+			"proposed": 2,
+			"because": "Two recipes link it and asparagus is a day-one word; the one sentence it needs (grown under cover) is the standard's Level II less common produce line, not a specialist product like Turbot.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "mushroom-field-guide",
+			"proposed": 1,
+			"because": "The guide covers button, cremini, portobello, shiitake and oyster, the mushrooms a kitchen handles on day one, and sauteed mushrooms is a Commis exemplar; two recipes link it and the tie breaks down.",
+			"sub": "lexicon"
+		}
+	],
+	"dispositions": [
+		{
+			"slug": "sirloin-tri-tip-and-picanha",
+			"action": "moved",
+			"reason": "The challenge wins: the row's signals are identical to Chuck's (three recipes leaning down, the cuts category leaning II, no deck card, no semester), the assigner's comparison to Flank, Skirt & Hanger imports a deck card this term does not have, and a 1-or-2 tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "sashimi-grade-and-ikejime",
+			"action": "moved",
+			"reason": "The challenge wins: Bivalves carries the same semester 9 and three recipes against the fish-case category and was placed at II, this essay opens on sashimi-grade rather than ikejime, and the assigner's Level III reading rests on the semester alone against two signals leaning II, so the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "crab-vocabulary",
+			"action": "moved",
+			"reason": "The challenge wins: crab has no card, but the deck's closest calibration points (shrimp sizing, scallops dry vs wet, oysters east vs west, all deckLevel 1) are the same fish-case product essay, three recipes lean down, and against the category's bare II that is a tie, which breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "gyuto",
+			"action": "moved",
+			"reason": "The challenge wins: the atlas places by handling frequency, a gyuto is the chef's knife many line cooks handle every day, and the assigner's own santoku at I sits below it in handling, so the tie with the Western profile at I breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "boning-fillet-and-the-butchery-blades",
+			"action": "moved",
+			"reason": "The challenge wins: the technique ladder leans down on three recipes plus the Filleting fish anchor, the boning knife is handled most days for chickens and silverskin, and the standard's III belongs to whole-animal butchery as a technique, not to the blade; the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "the-kitchen-torch",
+			"action": "moved",
+			"reason": "The challenge wins: three recipes and the brûlée torch anchor lean down, the deck itself holds custards and meringues at level 1 so the pastry canon gives no II signal, and no field on the roster row points above I.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "grills-and-smokers-kettle-kamado-offset-pellet",
+			"action": "moved",
+			"reason": "The challenge wins: the deck's own Grilled and Smoked cards sit at I, three recipes and daily handling lean down, and semester 7 is the only signal leaning III, so the tie breaks down to II.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "combi-ovens-and-steam",
+			"action": "moved",
+			"reason": "The challenge wins: the assigner's reason admitted a tie and broke it upward, which the standard forbids; daily handling leans down against no recipes leaning up, and the combi is a first-week station, so I.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "spatchcock-butterfly",
+			"action": "moved",
+			"reason": "The challenge wins: every signal matches Trussing, placed at I in this same pass, and a flattened bird is a first-week prep cut, so the tie breaks down to I.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "hiring-training-and-retention-economics",
+			"action": "moved",
+			"reason": "The challenge wins: Level III is defined as what teaching a brigade requires and the sous is the one who hires, trains and keeps the hourly cooks the essay measures, so with the category allowing III or IV and only the turnover ledger pulling up, it is a real tie and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "fenugreek-seed-leaf-and-blue",
+			"action": "moved",
+			"reason": "The challenge wins: the atlas signal is how often a kitchen handles the item, and with three recipe links (as many as cumin) and the seed and leaf in curry powder, berbere, panch phoron and everyday Indian cooking, it is spice rack vocabulary at Level II; the Georgian blue variety is one section, not the essay, so the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "steaming-and-en-papillote",
+			"action": "moved",
+			"reason": "The III card is En Papillote, one corner of an essay that opens on steaming with three recipes and a steaming anchor, so the essay is plainly broader than the card and takes the Steamed card's level I.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "blanch-and-shock",
+			"action": "moved",
+			"reason": "The written standard names blanching among the Commis foundation techniques, which outranks the Blanched menu-word card at II, and three recipes plus the anchor lean down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "fermentation-and-pickling",
+			"action": "moved",
+			"reason": "The essay is the pickled against fermented distinction the deck places at II, with three recipes and an anchor leaning down from a category that leans I or II; the standard's III fermentation is the one that governs a whole service.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "brining-wet-dry-and-cures",
+			"action": "moved",
+			"reason": "Brined and Cured both sit at I, the Salting anchor leans down and the cures are charcuterie words at II, so semester 7 makes at most a tie and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "the-souring-spices-amchur-loomi-anardana-and-tamarind",
+			"action": "moved",
+			"reason": "Tamarind carries all three linked recipes and is handled in every Indian, Thai and Mexican kitchen, so the rarer three make a II or III tie on frequency of handling, which breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "the-floral-pantry-rose-orange-blossom-and-mahleb",
+			"action": "moved",
+			"reason": "Rose water and orange blossom water are handled by every pastry section with three linked recipes; mahleb alone is rare, and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "curry-leaf",
+			"action": "moved",
+			"reason": "Three linked recipes and a menu presence on the footing of lemongrass at II make a II or III tie on how often a kitchen handles it, and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "berbere-and-mitmita",
+			"action": "moved",
+			"reason": "Berbere runs the whole East African chapter on three recipes and is written on menus as berbere-spiced, the andouille footing at II rather than the tasso footing at III.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "building-the-working-spice-pantry",
+			"action": "moved",
+			"reason": "The essay opens on the core dozen, which is the spice rack the standard places at II, and it carries none of the food cost, yield or par figures that would make it a number a sous reads.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "tempering-eggs-and-chocolate",
+			"action": "moved",
+			"reason": "The challenge wins: the row's category is capped at II, its anchor (Tempering chocolate) leans down, and half the essay is the custard move whose deck card sits at Commis, so the standard's Sous Chef tempering covers only the chocolate half and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "velveting-and-marinades",
+			"action": "moved",
+			"reason": "The challenge wins: two recipes lean II, the Velveting anchor leans down and Heat & Precision is capped at II, leaving semester 8 as the sole lift for a marinade the standard never names at Sous Chef.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "reverse-sear-and-the-gray-band",
+			"action": "moved",
+			"reason": "The challenge wins: the row (three recipes, no deck card, no semester, no anchor, Heat & Precision) is signal for signal the row that placed Baste, Arroser & Glaze at Commis, and identical rows cannot sit a level apart when ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "butchery-verbs-frenching-butterflying-tying",
+			"action": "moved",
+			"reason": "The challenge wins: Knife & Prep leans I and the Trussing anchor leans down, two signals against one recipe leaning up, and the essay's verbs are prep, not the Sous Chef butchery.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "bitterness-the-adult-taste",
+			"action": "moved",
+			"reason": "The challenge wins: the essay reads bitterness as a taste handled at the station, not the repair-table fault, and that is exactly the reading that kept Fat: The Flavor Carrier at II; the Atlas leans II with nothing in the row to lift it.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "the-aroma-compound-families",
+			"action": "moved",
+			"reason": "The challenge wins: the row is identical to Taste vs. Aroma at II, and no line of the standard names a chemistry map above the station, so a tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "flavor-pairing-theory",
+			"action": "moved",
+			"reason": "The challenge wins: the row is identical to Taste vs. Aroma at II and the standard names neither pairing nor composition above the station, so the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "herb-profiles-bright-vs-resinous",
+			"action": "moved",
+			"reason": "The challenge wins: the Commis paragraph names the common herbs as day-one produce, the same line that broke Salt and The Allium Spectrum down from the Atlas's II, and the essay opens on parsley.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "smoke-char-and-the-burnt-edge",
+			"action": "kept",
+			"reason": "The assigner's level stands: the roster row's deckLevel is null, so Smoked and Blackened are neighbouring cards rather than this essay's own, and with the Atlas at II and live fire named at Sous Chef the down-leaning anchor settles it at II, not below the category.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "fresh-fig",
+			"action": "kept",
+			"reason": "The atlas places an item by how often a kitchen handles it, and a fig with no linked recipe is handled for a few weeks a year while apricot at I carries three recipes and clementine at I is stocked year round, so this is not a tie.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "key-lime",
+			"action": "moved",
+			"reason": "The challenge wins: three linked recipes lean down exactly as they did for lime, the name is on every dessert menu, and the one-sentence species note leaves a real I or II tie that breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "charentais-melon",
+			"action": "moved",
+			"reason": "The challenge wins: the essay opens by calling it the small French cantaloupe type, one sentence against an everyday fruit, which is the standard's less common produce and the same II or III tie the brief broke down for guinea hen.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "damson",
+			"action": "moved",
+			"reason": "The challenge wins: damson matches gooseberry at II on every signal (tart hedgerow fruit, short season, cooked with sugar, no recipe) and no fine-dining specialist use argues the extra level, so the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "elderberry",
+			"action": "moved",
+			"reason": "The challenge wins: a foraged hedgerow fruit is less common produce rather than a fine-dining specialist product, and hiding an essay that opens on a raw-berry safety clause is the cost the tie-break rule exists to avoid.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "rambutan",
+			"action": "moved",
+			"reason": "The challenge wins: rambutan is now in mainstream supermarkets and is handled about as often as lychee and starfruit, both at II, and the Sous Chef line is the specialist product behind fine dining, which rambutan is not, so the 2 or 3 tie breaks down; longan stays at 3 because it is not in those supermarkets and arrives mostly canned or dried.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "mulberry",
+			"action": "kept",
+			"reason": "The atlas signal is how often a kitchen handles the item, not whether guests know the name, and mulberries do not ship, so a kitchen handles them only through a forager or a grower; the Sous Chef exemplars already place wreckfish and tilefish at 3 on rarity alone, so this is no tie for the down rule to break.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "mirin",
+			"action": "moved",
+			"reason": "The challenge wins: mirin has no deck card, three recipes lean down, and it is handled on the same day-one shelf as soy sauce and rice vinegar; the hon-mirin distinction is essay detail of the kind waved through for firm tofu, so the one-or-two tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "doubanjiang",
+			"action": "moved",
+			"reason": "The challenge wins: Sous Chef is the specialist product behind fine dining, and doubanjiang is a pantry jar with three recipes, the same signals as gochujang at Chef de Partie; Tasso is a cured meat and not the nearest calibration.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "00-flour",
+			"action": "moved",
+			"reason": "The challenge wins: the row's category is the Grain, Pulse & Seed Atlas, placed by handling frequency rather than baking science, and three recipes link a bag opened on day one in any pizza or pasta kitchen, so the one-or-two tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "wood-ear",
+			"action": "kept",
+			"reason": "Chef de Partie stands: the atlas test is how often a kitchen handles the item, and dried wood ear is soaked almost only in Chinese kitchens, unlike kimchi, now an everyday American menu word; King Oyster, the nearest three-recipe East Asian card, sits at Chef de Partie, so this is not a tie.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "hedgehog-mushroom",
+			"action": "moved",
+			"reason": "The challenge wins: two recipes lean down and hedgehog is bought and handled in the same autumn case as Chanterelle, whose card sits at Chef de Partie with one recipe, while Black Trumpet at Sous Chef links no recipe; the two-or-three tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "black-eyed-pea",
+			"action": "kept",
+			"reason": "Country Ham sits at II because it needs a sentence against city ham, not because it is regional; black-eyed peas are stocked dried and tinned nationally, guests know them by name, and mung beans are not, so the frequency signal leans I and the 1 or 2 tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "sushi-rice",
+			"action": "moved",
+			"reason": "The assigner only showed sushi rice is handled more often than glutinous rice, which places it below II's ceiling and not at I; the deck's Arborio card at Chef de Partie is the calibration point for a named rice with a station routine, so this is a decided comparison and not a tie to break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "fresno-chile",
+			"action": "moved",
+			"reason": "The challenge wins: the essay's own first line puts the Fresno on every line in America, the atlas weighs by handling frequency, and the assigner's sentence-of-explanation line belongs to cuts and charcuterie, so the 1-or-2 tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "habanero",
+			"action": "kept",
+			"reason": "The essay opens by setting the habanero apart from the jalapeno and serrano, the two chiles handled daily for salsa; being stocked by every supplier is not being handled on day one, so this is the less common produce line of Level II rather than a tie.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "padron-pepper",
+			"action": "moved",
+			"reason": "The challenge wins: the essay defines the padron against the shishito placed at II, the same blistered small plate handled in tapas bars rather than at the fine-dining pass, a protected name does not make a specialist product, and the 2-or-3 tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "tarragon",
+			"action": "moved",
+			"reason": "The challenge wins: tarragon is picked on the same morning mise as dill with the same three recipes, the sterile-French buying rule is a purchasing note rather than lower handling frequency, and the standard's common herbs line names Level I.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "urfa-biber",
+			"action": "moved",
+			"reason": "The challenge wins: urfa is bought off the spice rack as gochugaru and Kashmiri are, three recipes link it, the standard names the spice rack as a Level II line, and rarer than Aleppo is a comparison within the rack, so the 2-or-3 tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "costing-time-prep-lists-batch-and-cook-chill",
+			"action": "moved",
+			"reason": "The challenge wins: the only signal that fires is the Professional Kitchen category leaning I, the essay opens on prep and service with a written prep list as the first morning's work, the cooling law is one paragraph, and the tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "tuna-and-winter-fat",
+			"action": "moved",
+			"reason": "Every weighed signal (Larder II, fish case II, two recipes, no deck card, no semester) points to II, and the assigner's III rested on essay judgement alone; the fish-case word toro takes a sentence, which is the Chef de Partie line.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "oysters-and-the-r-month-rule",
+			"action": "moved",
+			"reason": "The deck holds Oysters: East vs West at Commis and the mussels and scallops companion essay sits at I on its card, so the calibration set on the same product ties with the category lean and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "alliums-harvest-cure-and-the-spring-exceptions",
+			"action": "kept",
+			"reason": "The day-one line of the standard names the onion and garlic, which places the atlas rows, not the essay; the essay is the cure and the spring exceptions, calendar reasoning with no recipe or deck card, so the Larder's II lean stands unopposed.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "tomatoes-the-argument-for-august",
+			"action": "kept",
+			"reason": "Beefsteak Tomato at I is the atlas row placed by how often it is handled; this essay is the calendar argument itself, no deck card exists for any tomato, and two recipes lean II, so there is no tie for the standard to break.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "asparagus-springs-starting-gun",
+			"action": "kept",
+			"reason": "The atlas row for the spear takes I, but this essay has no recipe and no deck card and its subject is the six-week window argument, exactly the seasonality reasoning the Larder's II lean was written for.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "squash-summers-water-winters-starch",
+			"action": "kept",
+			"reason": "Acorn Squash at I is an atlas row, while this essay's harvest-date split of one family is calendar reasoning with no deck card, and three recipes lean II rather than I, so the category lean is not tied.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "the-global-pantry-what-has-no-season",
+			"action": "moved",
+			"reason": "It is a frame entry like the Hemisphere Flip, already at I, and its subject is the dried and cured staples the standard names as day-one rather than any calendar, so the Larder lean is a tie that breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "green-tomato",
+			"action": "kept",
+			"reason": "The atlas signal is how often a kitchen handles the item, not how familiar the dish name is: green tomatoes arrive for a few weeks at season's end with one linked recipe, so it is not a tie with day-one produce and Level II stands.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "burdock-root",
+			"action": "moved",
+			"reason": "The challenge wins on the standard's own lines: Level II names the less common produce and Level III names the specialist product behind fine-dining vocabulary, which gobo is not, and two linked recipes lean II with the tie breaking down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "broccolini",
+			"action": "moved",
+			"reason": "The challenge wins on frequency: grilled broccolini is a standing weekly side on casual American menus and the 1993 cross is trivia rather than the sentence a menu expects, so the frequency signal makes a tie with Level I and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "little-gem",
+			"action": "kept",
+			"reason": "Little Gem is the lettuce of good restaurants, not of most kitchens, which run romaine and iceberg, and guests ask about it by name; that is the II pattern the Confit and Sous Vide exemplars set, not a tie to break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "mustard-greens",
+			"action": "moved",
+			"reason": "The challenge wins on the atlas signal: three recipes, the roster's highest count, a name that carries its own flavour and needs no sentence, and a daily bench in two whole cuisines' kitchens make a I or II tie, and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "rhubarb",
+			"action": "moved",
+			"reason": "The challenge wins on consistency: rhubarb carries exactly the signals that put pumpkin at I (three recipes, an everyday word, a seasonal staple, no sentence needed), and the pastry station is one a cook stands on in the first weeks.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "rutabaga",
+			"action": "kept",
+			"reason": "Rutabaga is handled less often than parsnip or turnip in most kitchens and is a menu word that takes a sentence to separate from turnip, which is the standard's own II language; three recipes lean down but do not make a tie against the primary atlas signal.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "japanese-eggplant",
+			"action": "moved",
+			"reason": "The challenge wins because the assigner already placed Lacinato kale and Persian cucumber at I as named types of day-one vegetables, and Japanese eggplant with two recipes and no sentence needed is the same case; the I or II tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "radicchio",
+			"action": "kept",
+			"reason": "No recipes link radicchio, it is the chicory of good restaurants rather than the salad bench of most kitchens, and its bitterness takes a sentence at the table, so with nothing leaning down there is no tie to break.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "ramps",
+			"action": "moved",
+			"reason": "The challenge's category claim is wrong (the row sits in The Vegetable Atlas, not the Seasonal Larder) but its frequency fact stands: ramps are handled every spring by farm-to-table kitchens and pickled for the year, with one recipe, which puts them beside purslane at II rather than nettles at III, and the II or III tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "swiss-chard",
+			"action": "moved",
+			"reason": "The challenge wins: three recipes link it (the maximum in the roster) and chard is a supermarket leaf handled in first-week prep, so the atlas signal gives at best a I-or-II tie and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "watercress",
+			"action": "moved",
+			"reason": "The challenge wins: three recipes link it and it is a garnish-station leaf whose name no guest asks about, so the atlas signal is a I-or-II tie and ties break down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "white-asparagus",
+			"action": "moved",
+			"reason": "The challenge wins: two recipes link it and the word is asparagus, which needs one sentence about growing under cover rather than the full explanation a specialist product like Turbot takes, so it is Level II less common produce, and any II-or-III tie breaks down.",
+			"sub": "lexicon"
+		},
+		{
+			"slug": "mushroom-field-guide",
+			"action": "moved",
+			"reason": "The challenge wins: the guide's weight is button, cremini, portobello and shiitake, handled on day one, with sauteed mushrooms a Commis exemplar and two recipes linked, so the king trumpet sentence makes a I-or-II tie at most and ties break down.",
+			"sub": "lexicon"
+		}
+	],
+	"criticChanges": [
+		{
+			"sub": "lexicon",
+			"slug": "brining-wet-dry-and-cures",
+			"from": 2,
+			"to": 1,
+			"because": "Its technique brining-and-curing sits at I on 88 recipes, the deck's Brined and Cured cards sit at I, and salting-to-draw-the-water-out at I is anchored on it; the term sits above everything built on it."
+		},
+		{
+			"sub": "lexicon",
+			"slug": "kombu",
+			"from": 2,
+			"to": 1,
+			"because": "Dashi (technique, I) and miso soup (dish, semester 2, I) are built on it; a cook is handed kombu in the second semester, so the word cannot sit a level above the work."
+		},
+		{
+			"sub": "lexicon",
+			"slug": "bivalves-oysters-clams-mussels-scallops",
+			"from": 2,
+			"to": 1,
+			"because": "The umbrella term sits at II while its members oysters-east-vs-west, scallops-dry-vs-wet-u-10 and mussels-scallops-and-the-cold-water-winter all sit at I."
+		},
+		{
+			"sub": "lexicon",
+			"slug": "prime-cost-the-number-that-runs-the-building",
+			"from": 4,
+			"to": 3,
+			"because": "The standard gives the numbers a sous reads to III (food cost, yield, par) and prime cost is that daily number, food plus labour; Restaurant Finance leans III or IV and ties break down."
+		}
+	],
+	"unresolved": [],
+	"notes": "SUPPLY, the finding that matters most: once LEVELS_COMPLETE flips, dishes level IV (3 of a minimum 6) and techniques level IV (1 of a minimum 8) fail the build (tools/derive/levels.mjs, MINIMUMS). The first three dish moves and the first seven technique moves exist to fill those levels; everything else is drift. Lexicon 263/258/32/40 and service 9/31/115/31 terms are all above minimum; no level swallowed a subsection. Palate and safety match the standard's own pairs and slices and I would move nothing there. DECK MISMATCHES left as placed, both defensible: blanch-and-shock at I against the Blanched card at 2 (the standard itself names blanching as a Commis foundation technique and the technique blanching-and-shocking sits at I on 76 recipes, so the essay is plainly broader); steaming-and-en-papillote at I against the En Papillote card at 3 (byLexicon maps only the papillote card; the Steamed card is at 1 and the essay is the everyday steam). PAIRS PLACED APART that I did not move because the standard's signal order decides them: whole-grilled-fish-with-ladolemono at II while filleting-fish and grilling-over-live-coals sit at III and its semester is titled Seafood Mastery, which the standard names at III (difficulty 2 is weighed before the semester, so II stands; the operator may prefer III); jerk-chicken at II over jerk at III, the same pattern; grilling-vs-barbecue-vs-smoking at III while the deck's Grilled and Smoked cards sit at 1 (not mapped to that slug; live fire is named at III); the-wok, wok-technique and wok-hei all at III by the standard's naming, though a wok is handled daily in many kitchens; miso and fish-sauce held at II by their deck cards although miso soup and pad krapow sit at I; srv-bar-bottles at III although well and call orders arrive in the first week (the standard names the bar at IV, the assigner already pulled it down one); gap:sanitizer at 3 among the other gaps at 4, defensible as the guide's own disagreement with itself. The beef cuts at I against the category's II lean follow the deck's everyday-word logic and I left them. SIGNAL TO WEIGH: the lexicon brief's recipeCount caps at 3 for every term, so it cannot separate an everyday atlas entry from a rare one; the atlases were placed on the essay alone. Dish moves 5 (cacio-e-pepe) and technique moves 12 onward fall outside the tenth and are recorded for the operator; of the seven IV fills, paella-and-socarrat is the weakest and khachapuri-shaping, curing-gravlax or churning-ice-cream would serve if the operator prefers a different seventh."
+}

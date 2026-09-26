@@ -108,13 +108,14 @@ export const LEXICON_PREFERRED = 20;
 
 /** Flip to true when every placed subsection has been placed. From then on an
  *  item with no level and a level under its minimums fail the build. */
-export const LEVELS_COMPLETE = false;
+export const LEVELS_COMPLETE = true;
 
 /** The safety slices' own headings are in the guide's capitals; these two
  *  stay as they are when the rest is put into sentence case. */
 const ACRONYMS = new Set(['FIFO', 'HACCP']);
 
-/** "THE DANGER ZONE" -> "The danger zone"; "FIFO" stays. */
+/** "THE DANGER ZONE" -> "The danger zone"; "FIFO" stays.
+ *  @param {string} s */
 export function sentenceCase(s) {
 	return String(s)
 		.split(' ')
@@ -159,7 +160,8 @@ export function universe(ctx) {
 	const { study, techniques, lexicon, serviceTrack, palate, sanitation, deckIndex, recipes, techniqueStandards } = ctx;
 	const recipe = new Map(recipes.map((r) => [r.slug, r]));
 	const cardLevel = new Map(deckIndex.cards.map((c) => [c.id, c.level]));
-	/** lexicon slug -> the LOWEST level of a deck card naming it */
+	/** lexicon slug -> the LOWEST level of a deck card naming it
+	 *  @param {string} slug */
 	const deckLevelOf = (slug) => {
 		const ids = deckIndex.byLexicon[slug];
 		if (!ids?.length) return null;
@@ -171,6 +173,7 @@ export function universe(ctx) {
 	const semestersOfTerm = new Map();
 	for (const s of study) for (const term of s.terms) (semestersOfTerm.get(term) ?? semestersOfTerm.set(term, []).get(term)).push(s.n);
 	const anchorOf = new Map(techniques.filter((t) => t.lexiconSlug).map((t) => [t.lexiconSlug, t.label]));
+	/** @param {unknown} s */
 	const opens = (s) => String(s ?? '').replace(/\s+/g, ' ').slice(0, 160);
 
 	const dishes = [];
@@ -218,6 +221,7 @@ export function universe(ctx) {
 		}));
 
 	const service = serviceTrack.modules.map((m) => {
+		/** @type {Record<string, number>} */
 		const categories = {};
 		for (const t of m.terms) categories[t.category] = (categories[t.category] ?? 0) + 1;
 		return { slug: m.key, n: m.n, title: m.title, outcome: m.outcome, termCount: m.terms.length, categories, terms: m.terms.map((t) => t.term) };
@@ -235,8 +239,12 @@ export function universe(ctx) {
 	return { dishes, techniques: techniqueRows, lexicon: lexiconRows, service, palate: palateRows, safety };
 }
 
-/** The display name of a universe row, whatever the subsection calls it. */
+/** The display name of a universe row, whatever the subsection calls it.
+ *  @param {Record<string, any>} row */
 export const rowName = (row) => row.name ?? row.label ?? row.term ?? row.title ?? row.slug;
+
+/** @typedef {{ slug: string, level: number, reason: string }} Placement */
+/** @typedef {ReturnType<typeof universe>} Universe */
 
 /**
  * Check one subsection's placements against its universe. Returns problems
@@ -308,14 +316,14 @@ export function buildLevels(ctx) {
 	/** @type {Record<string, Record<string, string[]>>} */
 	const items = {};
 	for (const key of PLACED) {
-		let rows;
+		/** @type {Placement[]} */
+		let rows = [];
 		try {
 			rows = readPlacements(key);
 		} catch (e) {
 			problems.push(String(/** @type {any} */ (e)?.message ?? e));
-			rows = [];
 		}
-		const checked = checkPlacements(key, rows, uni[key]);
+		const checked = checkPlacements(key, rows, uni[/** @type {keyof Universe} */ (key)]);
 		problems.push(...checked.problems);
 		items[key] = checked.byLevel;
 	}
@@ -337,6 +345,7 @@ export function buildLevels(ctx) {
 	/** @type {Record<string, Record<string, number>>} */
 	const counts = {};
 	for (const l of LEVEL_KEYS) {
+		/** @type {Record<string, number>} */
 		const row = {};
 		for (const s of SUBSECTIONS) {
 			const slugs = items[s.key]?.[String(l)] ?? [];

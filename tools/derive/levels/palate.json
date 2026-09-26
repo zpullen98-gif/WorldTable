@@ -1,1 +1,10 @@
-[]
+[
+	{"slug":"flat","level":1,"reason":"The standard's Commis paragraph names the pair the repair table opens with, flat and salty, and this is the first of them."},
+	{"slug":"salty","level":1,"reason":"The standard's Commis paragraph names the pair the repair table opens with, flat and salty, and this is the second of them."},
+	{"slug":"sour","level":2,"reason":"The standard's Chef de Partie paragraph closes with the palate pair sour and sweet, and this is the first of them."},
+	{"slug":"sweet","level":2,"reason":"The standard's Chef de Partie paragraph closes with the palate pair sour and sweet, and this is the second of them."},
+	{"slug":"bitter","level":3,"reason":"The standard's Sous Chef paragraph closes with the palate pair bitter and rich, and this is the first of them."},
+	{"slug":"spicy","level":4,"reason":"The standard's Chef paragraph names spicy and muddy as the faults with the least obvious levers, and this is the first of them."},
+	{"slug":"rich","level":3,"reason":"The standard's Sous Chef paragraph closes with the palate pair bitter and rich, and this is the second of them."},
+	{"slug":"muddy","level":4,"reason":"The standard's Chef paragraph names spicy and muddy as the faults with the least obvious levers, and this is the second of them."}
+]
