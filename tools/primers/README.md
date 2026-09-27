@@ -3,33 +3,35 @@
 A level page says "42 at this level" and lists the items; a primer says what
 those items have in common, which to take first and why, what "met" looks
 like, and what the level above will ask of the same subject. One per level
-per subsection that holds items (31: Level IV has no plates), three to
+per subsection that holds items (31: Chef has no plates), three to
 seven paragraphs, read and never graded, on `/level/[n]/read` with a "Read
 first" door from each subsection of the level page.
 
 The files are authored: `tools/derive/primers/<level>-<subsection>.json`
 (`{level, subsection, lede, paragraphs, cites, next}`), written by the
 procedure below and hand-editable afterwards. `tools/derive/primers.mjs` is
-the gate and the build: shape and lengths, the deck's prose rules (no dash,
-no verdict, no British spelling, no sanitation token the guide never states,
-temperatures in the house form), no scoring or locking language, and every
-cite a real item of this level and subsection that the text names.
-`PRIMERS_COMPLETE` there, once every primer is in, makes a missing one fail
-the build.
+the gate and the build: shape and lengths, the deck's prose rules (no dash, no
+verdict, no British spelling, no sanitation token the guide never states,
+temperatures in the house form), no scoring or locking language, no level by a
+numeral (a level is named, never numbered), and every cite a real item of this
+level and subsection that the text names. `PRIMERS_COMPLETE` there, once every
+primer is in, makes a missing one fail the build.
 
 ## The standard
 
-A primer is written for the cook or server standing at that level, on a
-phone, between services. It names the items placed there by the names the
-app uses, groups them by what they share, says what to take first and why,
-says what "met" means for the subsection in the app's one rule, points to
-the doors the level page opens by their names, and closes on what the level
-above asks (or, at Level IV, what keeps the subject sharp). It draws on each
-item's own text (a definition, a card's why, a standard's marks, a module's
-outcome) and never contradicts it. It never presents an item as this
-level's that is not placed here, never invents a door, never fills a gap in
-the guide with a figure or a rule of its own, and never speaks of unlocking,
-passing or a score: a level guides, it never bars.
+A primer is written for the cook or server standing at that level, on a phone,
+between services. It names the items placed there by the names the app uses,
+groups them by what they share, says what to take first and why, says what
+"met" means for the subsection in the app's one rule, points to the doors the
+level page opens by their names, and closes on what the level above asks (or,
+at Chef, what keeps the subject sharp). It names a level by its name (Commis,
+Chef de Partie, Sous Chef, Chef) and never by a numeral, as the reader meets
+it everywhere else in the app. It draws on each item's own text (a definition,
+a card's why, a standard's marks, a module's outcome) and never contradicts
+it. It never presents an item as this level's that is not placed here, never
+invents a door, never fills a gap in the guide with a figure or a rule of its
+own, and never speaks of unlocking, passing or a score: a level guides, it
+never bars.
 
 ## One run
 

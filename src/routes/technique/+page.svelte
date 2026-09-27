@@ -3,7 +3,7 @@
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import { TOTALS, loadLevels } from '$lib/data';
-	import { NUMERAL, levelFromSearch } from '$lib/levels';
+	import { levelFromSearch } from '$lib/levels';
 	import type { DeckLevel } from '$lib/types';
 
 	let { data } = $props();
@@ -58,9 +58,10 @@
 			{data.techniques.length} skills · {data.tagged} of {TOTALS.recipes} dishes carry at least one
 		</p>
 		{#if level}
+			<!-- the live region stands at once; its words wait for the level's name -->
 			<p class="levelnote" aria-live="polite">
-				Level {NUMERAL[level]}{levelName ? `, ${levelName}` : ''}: {foundations.length + particulars.length} of the
-				skills. <a href="{base}/technique">Every technique</a> · <a href="{base}/level/{level}">Back to Level {NUMERAL[level]}</a>
+				{#if levelName}{levelName}: {foundations.length + particulars.length} of the
+					skills. <a href="{base}/technique">Every technique</a> · <a href="{base}/level/{level}">Back to {levelName}</a>{/if}
 			</p>
 		{/if}
 	</header>

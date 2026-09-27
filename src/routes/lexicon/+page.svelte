@@ -12,7 +12,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import { loadLevels } from '$lib/data';
-	import { NUMERAL, levelFromSearch } from '$lib/levels';
+	import { levelFromSearch } from '$lib/levels';
 	import { loadPlates } from '$lib/data';
 	import { plateHref, plateIndexes } from '$lib/plates';
 	import type { DeckLevel } from '$lib/types';
@@ -359,10 +359,10 @@
 		<button class="chip" onclick={shuffle}>Study mode ▸ flashcards</button>
 		<button class="chip" onclick={startQuiz}>Quiz me ▸ multiple choice</button>
 		<span class="count">{shown.length} of {data.lexicon.length} terms</span>
-		{#if level}
+		{#if level && levelName}
 			<span class="count levelnote"
-				>Level {NUMERAL[level]}{levelName ? `, ${levelName}` : ''}
-				· <a href="{base}/lexicon">Every term</a> · <a href="{base}/level/{level}">Back to Level {NUMERAL[level]}</a></span
+				>{levelName}
+				· <a href="{base}/lexicon">Every term</a> · <a href="{base}/level/{level}">Back to {levelName}</a></span
 			>
 		{/if}
 		<!--

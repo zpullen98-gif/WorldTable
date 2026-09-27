@@ -34,7 +34,7 @@ const good = () => ({
 		para('Knife cuts run under all of it. A technique with a standard is met when a cook on one of its recipes was graded met against it; read the techniques, then take the next one.')
 	],
 	cites: ['sweating', 'searing', 'roux', 'blanching', 'knife-cuts'],
-	next: 'Level II asks for the mother sauces and their children, emulsions and the braise, on the same pan you learned to sear in.'
+	next: 'Chef de Partie asks for the mother sauces and their children, emulsions and the braise, on the same pan you learned to sear in.'
 });
 const gate = (p: unknown) => checkPrimer(p, { key: '1-techniques', items });
 
@@ -76,16 +76,33 @@ describe('checkPrimer', () => {
 		british.lede = 'The pan, the pot and the knife: the flavour of the first weeks in one line.';
 		expect(gate(british).problems.join('\n')).toMatch(/British spelling "flavour"/);
 		const verdict = good();
-		verdict.next = 'Level II asks for the mother sauces, and every one of them is gluten-free when made with cornstarch.';
+		verdict.next = 'Chef de Partie asks for the mother sauces, and every one of them is gluten-free when made with cornstarch.';
 		expect(gate(verdict).problems.join('\n')).toMatch(/verdict language/);
 		const lock = good();
-		lock.next = 'Level II unlocks once every technique here is met; score 80 percent on the test to pass.';
+		lock.next = 'Chef de Partie unlocks once every technique here is met; score 80 percent on the test to pass.';
 		const out = gate(lock).problems.join('\n');
 		expect(out).toMatch(/a level guides and never bars/);
 		// a knife scores a fat cap, and a cook names the allergen protocol: neither is a verdict or a score
 		const knife = good();
 		knife.paragraphs[1] = para('Then searing, after scoring the fat cap in a crosshatch so it renders, and the allergen protocol pinned by the pass is read before the first ticket.');
 		expect(gate(knife).problems).toEqual([]);
+	});
+	it('refuses a level by its numeral: a level is named, never numbered', () => {
+		const one = good();
+		one.next = 'Level II asks for the mother sauces and their children, emulsions and the braise, on the same pan you learned to sear in.';
+		expect(gate(one).problems.join('\n')).toMatch(/next: "Level II": levels are named, never numbered/);
+		const both = good();
+		both.paragraphs[2] = para('Roux and blanching come next, and Levels III and IV take both further, one for the sauces and one for every green vegetable.');
+		expect(gate(both).problems.join('\n')).toMatch(/paragraph 3: "Levels III": levels are named, never numbered/);
+		for (const n of ['I', 'III', 'IV']) {
+			const p = good();
+			p.lede = `The pan, the pot and the knife at Level ${n}: five moves that carry most of the dishes you will cook.`;
+			expect(gate(p).problems.join('\n')).toMatch(/levels are named, never numbered/);
+		}
+		// the names pass, and so does a rung of the tasting ladder
+		const named = good();
+		named.lede = 'At Commis the pan, the pot and the knife: five moves, and the tasting ladder to rung 1 before Sous Chef.';
+		expect(gate(named).problems).toEqual([]);
 	});
 	it('holds the lengths: words across the paragraphs, paragraph count, and every line ending in a stop', () => {
 		const short = good();
@@ -146,7 +163,11 @@ describe('the emitted primers', () => {
 			const words = p.paragraphs.reduce((a, s) => a + s.trim().split(/\s+/).length, 0);
 			expect(words).toBeGreaterThanOrEqual(LIMITS.words[0]);
 			expect(words).toBeLessThanOrEqual(LIMITS.words[1]);
-			for (const s of [p.lede, p.next, ...p.paragraphs]) expect(s, `${p.level}-${p.subsection}`).not.toMatch(/[–—]/);
+			for (const s of [p.lede, p.next, ...p.paragraphs]) {
+				expect(s, `${p.level}-${p.subsection}`).not.toMatch(/[–—]/);
+				// a level is named, never numbered
+				expect(s, `${p.level}-${p.subsection}`).not.toMatch(/\bLevels? (?:I|II|III|IV)\b/);
+			}
 		}
 	});
 	it.skipIf(!has)('covers every level and subsection that holds items once the set is complete', () => {

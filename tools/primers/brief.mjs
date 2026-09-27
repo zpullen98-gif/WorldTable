@@ -18,7 +18,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { BANNED } from '../derive/floor-deck-contract.mjs';
-import { LEVELS, SUBSECTIONS, DOORS, LEVEL_TEST, MET, NUMERAL, OUT_DIR, itemDetail, levelStandard, loadAll, namesAt, palateRungs, primerKey } from './lib.mjs';
+import { LEVELS, SUBSECTIONS, DOORS, LEVEL_TEST, MET, OUT_DIR, itemDetail, levelStandard, loadAll, namesAt, palateRungs, primerKey } from './lib.mjs';
 
 const args = process.argv.slice(2);
 const only = args.includes('--only') ? new Set(args[args.indexOf('--only') + 1].split(',')) : null;
@@ -36,7 +36,7 @@ const RULES = [
 	`None of these substrings (a food-safety curriculum the guide does not teach; the app never supplies what the guide leaves out): ${BANNED.map((b) => JSON.stringify(b)).join(', ')}. "thaw" also catches thawed and thawing.`,
 	'A level guides and never bars, and nothing here is scored: never unlock, locked, score, pass mark, percent, prerequisite, or the % sign. Nothing in a primer is graded.',
 	'The lede, every paragraph and the next line end in a full stop, a question mark or an exclamation mark. No double spaces, no leading or trailing space.',
-	'Prose only: no bullet lists, no headings, no numbering at the start of a paragraph, no markdown. Say "Level II" with the numeral, never "L2" or "level two".'
+	'Prose only: no bullet lists, no headings, no numbering at the start of a paragraph, no markdown. Name a level by its name (Commis, Chef de Partie, Sous Chef, Chef), never a numeral: never "Level II", "L2" or "level two".'
 ];
 
 const primers = [];
@@ -54,7 +54,7 @@ for (const level of LEVELS) {
 		const sampleCards = all.deck.cards.filter((/** @type {any} */ c) => c.level === level).slice(0, 2);
 		const brief = {
 			key,
-			level: { n: level, numeral: NUMERAL[/** @type {1|2|3|4} */ (level)], name: info.name, blurb: info.blurb },
+			level: { n: level, name: info.name, blurb: info.blurb },
 			subsection: { key: s.key, title: s.title, counted: s.counted !== false, position: SUBSECTIONS.indexOf(s) + 1, of: SUBSECTIONS.length },
 			standard: { thisLevel: levelStandard(all.standard, level), whole: all.standard },
 			limits: all.limits,
@@ -92,7 +92,7 @@ console.log(
 			briefDir: OUT_DIR,
 			limits: all.limits,
 			aims: all.aims,
-			levels: all.levels.levels.map((/** @type {any} */ l) => ({ n: l.level, numeral: NUMERAL[/** @type {1|2|3|4} */ (l.level)], name: l.name })),
+			levels: all.levels.levels.map((/** @type {any} */ l) => ({ n: l.level, name: l.name })),
 			primers
 		},
 		null,

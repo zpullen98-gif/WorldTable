@@ -633,15 +633,26 @@ cohesive home in all three apps, four levels as the spine, each level the
 same subsections at that level's difficulty, training from there. **Nothing
 is locked**: a level guides, it never bars.
 
-- **The ladder is the Floor Deck's brigade ladder** (I Commis, II Chef de
-  Partie, III Sous Chef, IV Chef), now the whole app's. Names and blurbs live
-  ONCE in `tools/derive/levels.mjs` (`LEVELS`, gated equal to `DECK_LEVELS`;
-  blurbs 60 to 160 chars, no digit, no dash) and reach the app as
-  `levels.json`. The numerals I to IV are the thread the three apps share
-  (`NUMERAL` in `src/lib/levels.ts`), in words ("Level I", "The Level I
-  test") and on the level pages' titles; since 26 Sep 2026 the home cards
-  show no numeral (the owner's call), and "Level I" stays on each card as
-  hidden text for a screen reader.
+- **The ladder is the Floor Deck's brigade ladder** (Commis, Chef de Partie,
+  Sous Chef, Chef), now the whole app's. Names and blurbs live ONCE in
+  `tools/derive/levels.mjs` (`LEVELS`, gated equal to `DECK_LEVELS`; blurbs
+  60 to 160 chars, no digit, no dash) and reach the app as `levels.json`.
+- **A level is named, never numbered** (the owner, 27 Sep 2026: "any
+  hospitality member would recognize the levels by the names we have given
+  them"). The names are the thread the three apps share, and everything a
+  reader sees or hears takes the level's name from `levels.json`: the level
+  page's title and h1, the crumbs, "The Commis test", "Back to Commis",
+  "Today deals from Commis.", "Commis is met. Chef de Partie begins with",
+  the `?level=` lines on the Lexicon, the technique index and the drill, the
+  plates' meta and eyebrow, the reader's neighbours, the primers' prose. No
+  numeral anywhere, painted or hidden: there is no `NUMERAL` in the app and
+  no `sr-only` numeral on the home cards (the name is the label). The keys 1
+  to 4 stay in the data, the URLs (`/level/2`, `?level=2`), the ids and the
+  record. The primer gate refuses "Level II" in prose (`NUMERAL_RE` in
+  `tools/derive/primers.mjs`); the numerals in the standard
+  (`tools/levels/README.md`) are the placement procedure's shorthand and
+  never reach a reader. A calibration rung ("Level 3 cleared") is a rung,
+  not a level, and keeps its number.
 - **Eight subsections, the same at every level** (`SUBSECTIONS`): Dishes,
   Techniques, The Lexicon, The Floor Deck, The Plates (read, never graded;
   since 27 Sep 2026), The Palate, Food Safety (read, never graded), Service.
@@ -679,17 +690,17 @@ is locked**: a level guides, it never bars.
   you are on is `firstUnmetLevel`, derived on every read and never stored
   (`stores/levels.svelte.ts`, ready only once the session is).
 - **The home** (`lib/components/Home.svelte`) is the shared contract and
-  nothing else: `section.levels` with four `a.level` (a hidden `sr-only` "Level I", `lv-name`,
-  `lv-stat`; the current one `on`, `aria-current`, and the words "Your level"
-  in `lv-here`), then `nav.quiet` with four `a.door`: Today (one item from
-  the lowest unmet level, `todayFromLevel`, with "Today deals from Level N."
-  under it), Library, Record, Mine · My Menu. No h2 or h3 on the home; the
-  regression suite pins it. The Menu Desk's `.deskline` keeps its class,
-  copy and link.
+  nothing else: `section.levels` with four `a.level` (`lv-name`, `lv-stat`;
+  the current one `on`, `aria-current`, and the words "Your level" in
+  `lv-here`), then `nav.quiet` with four `a.door`: Today (one item from the
+  lowest unmet level, `todayFromLevel`, with "Today deals from Commis.", the
+  level's name, under it), Library, Record, Mine · My Menu. No h2 or h3 on
+  the home; the regression suite pins it. The Menu Desk's `.deskline` keeps
+  its class, copy and link.
 - **The nav** is `Home · Levels · Library · Mine`, in that order, in all three
   apps (`navigation.test.ts` pins the words and the order). `/level` is a
   literal href (so `verify-build`'s scanner resolves it) that forwards to the
-  reader's level; `/level/[n]` is the level page (h1 with the numeral, the
+  reader's level; `/level/[n]` is the level page (h1 the level's name, the
   blurb, `ol.subsections` with "N at this level", the word and figure, the
   items and the `a.train` doors, then `a.leveltest`); `/level/[n]/test` is
   the level test (the deck's written test at the level with its traps, six
@@ -760,8 +771,8 @@ without its transcription and its corrections under it.
   them (see "Conventions" and `CAP_MB`).
 - **The eighth level subsection.** `SUBSECTIONS` gained `plates` (counted:
   false, placed: true, after the deck): placed by the standard in
-  `tools/derive/levels/plates.json` with reasons (3 / 16 / 1 / 0; Level IV has
-  none and its line says so), no `MINIMUMS` on purpose, read and never
+  `tools/derive/levels/plates.json` with reasons (3 / 16 / 1 / 0; Chef has
+  none and its line says every plate is read at the levels below), no `MINIMUMS` on purpose, read and never
   graded like Food Safety (`subsectionProgress` returns `NEVER_GRADED`). The
   level page lists the level's plates with doors to the first and to the wall.
 - **The routes.** `/plates` is the wall (five rows by kind, thumbnails lazy
@@ -786,7 +797,7 @@ without its transcription and its corrections under it.
 A level page says "42 at this level" and lists the items; it did not say what
 those forty-two techniques have in common, which to take first, or what the
 level above asks of the same subject. The primers do (27 Sep 2026): one
-written reader per level per subsection that holds items (31; Level IV has
+written reader per level per subsection that holds items (31; Chef has
 no plates), three to seven paragraphs for the cook standing at that level,
 on `/level/[n]/read` with a "Read first" door from each subsection of the
 level page and one above the list. Read, never graded: nothing on the page
@@ -803,7 +814,8 @@ is recorded, and the e2e proves the store stays empty.
   (`checkPrimer`: shape and lengths, the deck contract's `proseProblems` so
   the same dash, verdict, spelling, sanitation-token and temperature rules
   hold, `LOCK_RE` against unlock, score, percent and pass-mark language,
-  and every cite an item placed at that level in that subsection whose name
+  `NUMERAL_RE` against a level by its numeral ("Level II": a level is
+  named), and every cite an item placed at that level in that subsection whose name
   the text carries, `namesItem`) and the build (`buildPrimers`, after
   `buildLevels`, whose `universe` it takes), emitted as `primers.json` with
   each cite's name and href resolved at build so the read page joins

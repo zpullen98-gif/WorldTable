@@ -1,10 +1,11 @@
 <!--
   One level: its seven subsections at this level's difficulty, what each
   holds, how much of it is met, and the doors into training. The same shape
-  in all three apps (the owner's decision, 2026-09-26): h1 with the numeral,
-  the blurb, the level's word and figure, then an ordered list of
-  subsections, each with "N at this level", its own word and figure, its
-  items, and its `train` doors; last, the level test.
+  in all three apps (the owner's decision, 2026-09-26): h1 with the level's
+  name and never a numeral (the owner, 27 Sep 2026), the blurb, the level's
+  word and figure, then an ordered list of subsections, each with "N at
+  this level", its own word and figure, its items, and its `train` doors;
+  last, the level test.
 
   Headings are h1 then h2 and nothing deeper: the item lists sit in a
   <details> whose summary is not a heading.
@@ -20,7 +21,7 @@
 	import { onMount } from 'svelte';
 	import { bySlug, loadDeckIndex, loadLexicon, loadPalate, loadPlates, loadServiceTrack, loadStudy } from '$lib/data';
 	import { levels } from '$lib/stores/levels.svelte';
-	import { NEVER_GRADED, NUMERAL, type SubsectionProgress } from '$lib/levels';
+	import { NEVER_GRADED, type SubsectionProgress } from '$lib/levels';
 	import type { DeckLevel, SubsectionKey } from '$lib/types';
 
 	let { data } = $props();
@@ -131,11 +132,11 @@
 	};
 </script>
 
-<svelte:head><title>Level {NUMERAL[n]}, {data.info.name} · The World Table</title></svelte:head>
+<svelte:head><title>{data.info.name} · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<nav class="crumbs"><a href="{base}/">Home</a></nav>
-	<h1><span class="lv-num">{NUMERAL[n]}</span> {data.info.name}</h1>
+	<h1>{data.info.name}</h1>
 	<p class="lede">{data.info.blurb}</p>
 	<p class="stat" aria-live="polite">
 		{#if row}{row.label}{:else}Reading your record…{/if}{#if on}
@@ -160,7 +161,7 @@
 						· {p.label}
 					{/if}
 					{#if s.key === 'plates' && total === 0}
-						· every plate is read by Level III; read them again for the menu
+						· every plate is read at the levels below; read them again for the menu
 					{/if}
 				</p>
 
@@ -218,17 +219,13 @@
 		{/each}
 	</ol>
 
-	<a class="leveltest" href="{base}/level/{n}/test">The Level {NUMERAL[n]} test</a>
+	<a class="leveltest" href="{base}/level/{n}/test">The {data.info.name} test</a>
 </div>
 
 <style>
 	h1 {
 		font-size: var(--t-h1);
 		margin-bottom: 8px;
-	}
-	h1 .lv-num {
-		color: var(--turmeric-deep);
-		margin-right: 0.15em;
 	}
 	.crumbs {
 		font-size: var(--t-small);

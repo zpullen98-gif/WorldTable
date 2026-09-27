@@ -1,6 +1,7 @@
 <!--
-  The Level N test: one sitting across the level's subsections, untimed, that
-  ends on what you missed with the right answers and no score. The same shape
+  A level's test ("The Commis test", by the level's name and never a
+  numeral): one sitting across the level's subsections, untimed, that ends
+  on what you missed with the right answers and no score. The same shape
   in all three apps (the owner's decision, 2026-09-26).
 
   Composed from the app's existing engines (lib/levels.ts buildLevelTest):
@@ -31,7 +32,7 @@
 	import { levels } from '$lib/stores/levels.svelte';
 	import { markStudied } from '$lib/oot-studied';
 	import FloorCard from '$lib/components/FloorCard.svelte';
-	import { NUMERAL, buildLevelTest, gradeLevelAnswer, type LevelQuestion, type LevelTest } from '$lib/levels';
+	import { buildLevelTest, gradeLevelAnswer, type LevelQuestion, type LevelTest } from '$lib/levels';
 	import { whyWrong, type TestOption } from '$lib/floor-deck';
 	import type { DrillCard } from '$lib/drill';
 	import type { DeckCard, DeckLevel, DeckTraps, FloorDeck, LexiconEntry } from '$lib/types';
@@ -169,11 +170,11 @@
 	const opening = (s: string) => `${s.slice(0, 180)}${s.length > 180 ? '…' : ''}`;
 </script>
 
-<svelte:head><title>The Level {NUMERAL[n]} test · The World Table</title></svelte:head>
+<svelte:head><title>The {data.info.name} test · The World Table</title></svelte:head>
 
 <div class="shell view">
-	<nav class="crumbs"><a href="{base}/">Home</a> · <a href="{base}/level/{n}">Level {NUMERAL[n]}</a></nav>
-	<h1>The Level {NUMERAL[n]} test</h1>
+	<nav class="crumbs"><a href="{base}/">Home</a> · <a href="{base}/level/{n}">{data.info.name}</a></nav>
+	<h1>The {data.info.name} test</h1>
 
 	<article class="sheet">
 		{#if failed}
@@ -182,18 +183,18 @@
 			<p class="empty" aria-live="polite">Opening the test…</p>
 		{:else if !test}
 			<p class="lede">
-				Across every subsection of Level {NUMERAL[n]}, {data.info.name}: the Floor Deck's written
+				Across every subsection of {data.info.name}: the Floor Deck's written
 				test at this level, then the service track, then the Lexicon. Answered cold, with no clock
 				and nothing marked as you go. It ends on what you missed, with the right answers, and no
 				score.
 			</p>
 			<p class="tools">
 				<button class="chip go" onclick={start}>Begin</button>
-				<a class="chip" href="{base}/level/{n}">Back to Level {NUMERAL[n]}</a>
+				<a class="chip" href="{base}/level/{n}">Back to {data.info.name}</a>
 			</p>
 		{:else if !test.questions.length}
 			<p class="empty">This level cannot field a test yet.</p>
-			<p class="tools"><a class="chip" href="{base}/level/{n}">Back to Level {NUMERAL[n]}</a></p>
+			<p class="tools"><a class="chip" href="{base}/level/{n}">Back to {data.info.name}</a></p>
 		{:else if done}
 			<div class="result" role="status">
 				{#if misses.length}
@@ -237,13 +238,13 @@
 					<p class="note">Every term in this test moves up its ladder and comes back later, further apart.</p>
 				{/if}
 				<p class="tools">
-					<a class="chip go" href="{base}/level/{n}">Back to Level {NUMERAL[n]}</a>
+					<a class="chip go" href="{base}/level/{n}">Back to {data.info.name}</a>
 					<button class="chip" onclick={again}>Sit it again</button>
 					<a class="chip" href="{base}/">Home</a>
 				</p>
 			</div>
 		{:else if q}
-			<p class="where">Level {NUMERAL[n]} · {part} · question {at + 1} of {test.questions.length}</p>
+			<p class="where">{data.info.name} · {part} · question {at + 1} of {test.questions.length}</p>
 
 			{#if q.kind === 'deck' && q.q.kind === 'mc'}
 				{@const mc = q.q}

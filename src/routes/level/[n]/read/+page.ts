@@ -27,6 +27,8 @@ export const load: PageLoad = async ({ params }) => {
 	return {
 		level: n as DeckLevel,
 		info,
+		/** every level's name by key, for the doors to the readers either side */
+		names: Object.fromEntries(levels.levels.map((l) => [l.level, l.name])) as Partial<Record<DeckLevel, string>>,
 		primers: primers.primers
 			.filter((p) => p.level === n)
 			.map((p) => ({ ...p, title: titles.get(p.subsection) ?? p.subsection, count: counts[p.subsection] ?? 0 }))

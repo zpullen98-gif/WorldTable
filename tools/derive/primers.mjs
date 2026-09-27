@@ -19,10 +19,11 @@
  * prose rules the deck already enforces (no dash, no verdict, no British
  * spelling, no sanitation token the guide never states, temperatures in the
  * house form), no scoring or locking language (a level guides, it never
- * bars), and every cite a real item of this level and subsection that the
- * text actually names. When `PRIMERS_COMPLETE` is on, every level and
- * subsection that holds items must have its primer, and none may exist for
- * a pair that holds nothing (Level IV has no plates).
+ * bars), no level by a numeral (a level is named), and every cite a real
+ * item of this level and subsection that the text actually names. When
+ * `PRIMERS_COMPLETE` is on, every level and subsection that holds items must
+ * have its primer, and none may exist for a pair that holds nothing (Chef
+ * has no plates).
  */
 
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
@@ -64,6 +65,13 @@ const LOCK_RE = /\b(unlock(?:s|ed|ing)?|locked|lock(?:s|ed|ing)? (?:out|off|behi
  */
 const PRIMER_VERDICT_RE =
 	/\b(contains?|containing|free (?:from|of)|(?:gluten|dairy|nut|egg|soy|shellfish|lactose|wheat)[- ]free|safe (?:for|to)|is safe|are safe|vegan|vegetarian|celiac|coeliac|pregnan)/i;
+
+/**
+ * A level is named, never numbered (the owner, 27 Sep 2026): the reader
+ * meets Commis, Chef de Partie, Sous Chef and Chef, the brigade's own words,
+ * and never "Level II". A calibration rung is a number and stays one.
+ */
+const NUMERAL_RE = /\bLevels? (?:I|II|III|IV)\b/;
 
 const SAFETY_ID = { clause: 'disciplines', fact: 'entries', numeric: 'numbers', gap: 'gaps' };
 
@@ -158,6 +166,8 @@ function checkProse(where, value, range, problems) {
 	if (verdict) problems.push(`${where}: verdict language "${verdict[0]}": a primer may name the allergen protocol and may never say what a dish contains, is free from or is safe for`);
 	const lock = value.match(LOCK_RE);
 	if (lock) problems.push(`${where}: "${lock[0]}": a level guides and never bars, and nothing here is scored`);
+	const numeral = value.match(NUMERAL_RE);
+	if (numeral) problems.push(`${where}: "${numeral[0]}": levels are named, never numbered (Commis, Chef de Partie, Sous Chef, Chef)`);
 	if (!/[.!?]["')]?$/.test(value.trim())) problems.push(`${where}: does not end in a sentence stop`);
 }
 
@@ -298,7 +308,7 @@ export function buildPrimers(ctx) {
 			continue;
 		}
 		if (its.size === 0) {
-			problems.push(`primers/${file.key}.json: nothing is placed there, so there is nothing to prime (Level IV holds no plates)`);
+			problems.push(`primers/${file.key}.json: nothing is placed there, so there is nothing to prime (Chef holds no plates)`);
 			continue;
 		}
 		const r = checkPrimer(file.text, { key: file.key, items: its });

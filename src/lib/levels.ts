@@ -21,7 +21,15 @@
  *
  * The lowest level not yet met, derived from the logs every time it is asked
  * and never stored, so there is no "current level" to fall out of step with
- * what was actually studied. Never null: once every level is met, it is IV.
+ * what was actually studied. Never null: once every level is met, it is the
+ * top one, Chef.
+ *
+ * ## Named, never numbered
+ *
+ * A reader meets a level by its name (Commis, Chef de Partie, Sous Chef,
+ * Chef), the brigade's own words and the thread the three apps share; the
+ * keys 1 to 4 live only in the data, the URLs and the record (the owner,
+ * 27 Sep 2026). Every sentence here takes the name from levels.json.
  *
  * ## What each subsection counts as met
  *
@@ -58,9 +66,6 @@ import { gradeFor, optionsFor, orderRound, type DrillCard, type DrillQuestion, t
 import { gradeForQuiz, nextTarget, optionsForTerm, type LexQuestion, type LexTerm } from './lexicon-quiz';
 
 export const LEVEL_KEYS: readonly DeckLevel[] = [1, 2, 3, 4];
-
-/** The numerals are the shared thread across the three apps. */
-export const NUMERAL: Record<DeckLevel, string> = { 1: 'I', 2: 'II', 3: 'III', 4: 'IV' };
 
 /** How many service and Lexicon questions a level test asks after the deck's. */
 export const LEVEL_TEST = { service: 6, lexicon: 8 } as const;
@@ -117,7 +122,7 @@ export interface SubsectionProgress {
 
 export interface LevelProgress {
 	level: DeckLevel;
-	numeral: string;
+	/** The level's name out of levels.json, the only way a reader meets it. */
 	name: string;
 	blurb: string;
 	subsections: SubsectionProgress[];
@@ -217,8 +222,9 @@ export function levelProgress(data: LevelsData, level: DeckLevel, logs: Logs, jo
 	const label = allMet ? MET : statOf(met, total, share);
 	return {
 		level,
-		numeral: NUMERAL[level],
-		name: info?.name ?? `Level ${NUMERAL[level]}`,
+		// the gate (buildLevels) names every level, so the empty string is a
+		// levels.json that did not load, never a level without a name
+		name: info?.name ?? '',
 		blurb: info?.blurb ?? '',
 		subsections,
 		met,
@@ -233,7 +239,7 @@ export function allLevels(data: LevelsData, logs: Logs, joins: Joins): LevelProg
 	return LEVEL_KEYS.map((l) => levelProgress(data, l, logs, joins));
 }
 
-/** The lowest level not yet met. Never null: IV once everything is. */
+/** The lowest level not yet met. Never null: the top one once everything is. */
 export function firstUnmetLevel(rows: readonly LevelProgress[]): DeckLevel {
 	return rows.find((r) => r.label !== MET)?.level ?? 4;
 }
@@ -258,7 +264,7 @@ export interface TodayLine {
 	line: string;
 	name: string | null;
 	href: string | null;
-	/** "Today deals from Level N." and what is owed. */
+	/** "Today deals from Commis." (the level's name) and what is owed. */
 	sub: string;
 	level: DeckLevel;
 }
@@ -294,8 +300,9 @@ export function todayFromLevel(
 ): TodayLine {
 	const level = firstUnmetLevel(rows);
 	const row = rows.find((r) => r.level === level)!;
+	const name = row.name;
 	const sub = (owed: number) =>
-		`Today deals from Level ${NUMERAL[level]}.` + (owed > 0 ? ` ${owed === 1 ? 'One review is' : `${owed} reviews are`} owed across everything touched.` : '');
+		`Today deals from ${name}.` + (owed > 0 ? ` ${owed === 1 ? 'One review is' : `${owed} reviews are`} owed across everything touched.` : '');
 
 	const cookedRep = repertoire([...logs.cooked], now);
 	const dueDishes = dueList(cookedRep, now);
@@ -313,37 +320,38 @@ export function todayFromLevel(
 	const dishes = row.subsections.find((s) => s.key === 'dishes');
 	const nextDish = dishes?.items.find((s) => !dishes.metSet.has(s));
 	if (nextDish) {
-		const name = names.dish(nextDish);
+		const dish = names.dish(nextDish);
+		const below = rows.find((r) => r.level === level - 1)?.name ?? '';
 		// the first line after a level is met names the milestone once: the
 		// level below is met and this one has not been touched yet
 		const line =
 			level > 1 && row.label === UNTOUCHED
-				? `Level ${NUMERAL[(level - 1) as DeckLevel]} is met. Level ${NUMERAL[level]} begins with ${name}.`
-				: `Cook ${name}, the next dish at Level ${NUMERAL[level]}.`;
-		return { line, name, href: `${basePath}/recipe/${nextDish}`, sub: sub(owed), level };
+				? `${below} is met. ${name} begins with ${dish}.`
+				: `Cook ${dish}, the next dish at ${name}.`;
+		return { line, name: dish, href: `${basePath}/recipe/${nextDish}`, sub: sub(owed), level };
 	}
 
 	const cards = deckWaiting(data, level, logs.drill, now);
 	if (cards > 0) {
-		return { line: `Flip the Floor Deck at Level ${NUMERAL[level]}: ${cards === 1 ? 'one card' : `${cards} cards`} to meet.`, name: null, href: `${basePath}/service/deck/study?level=${level}`, sub: sub(owed), level };
+		return { line: `Flip the Floor Deck at ${name}: ${cards === 1 ? 'one card' : `${cards} cards`} to meet.`, name: null, href: `${basePath}/service/deck/study?level=${level}`, sub: sub(owed), level };
 	}
 
 	const lexicon = row.subsections.find((s) => s.key === 'lexicon');
 	const termsLeft = lexicon ? lexicon.total - lexicon.met : 0;
 	if (termsLeft > 0) {
-		return { line: `Meet ${termsLeft === 1 ? 'one term' : `${termsLeft} terms`} of the Lexicon at Level ${NUMERAL[level]}.`, name: null, href: `${basePath}/lexicon?level=${level}&start=flash`, sub: sub(owed), level };
+		return { line: `Meet ${termsLeft === 1 ? 'one term' : `${termsLeft} terms`} of the Lexicon at ${name}.`, name: null, href: `${basePath}/lexicon?level=${level}&start=flash`, sub: sub(owed), level };
 	}
 
 	const service = row.subsections.find((s) => s.key === 'service');
 	const serviceLeft = service ? service.total - service.met : 0;
 	if (serviceLeft > 0) {
-		return { line: `Meet ${serviceLeft === 1 ? 'one service term' : `${serviceLeft} service terms`} at Level ${NUMERAL[level]}.`, name: null, href: `${basePath}/service/drill?level=${level}`, sub: sub(owed), level };
+		return { line: `Meet ${serviceLeft === 1 ? 'one service term' : `${serviceLeft} service terms`} at ${name}.`, name: null, href: `${basePath}/service/drill?level=${level}`, sub: sub(owed), level };
 	}
 
 	if (row.label !== MET) {
 		// something else at the level is unmet (a technique, a fault): the
 		// level page lists it
-		return { line: `Level ${NUMERAL[level]} has more to meet: open it.`, name: null, href: `${basePath}${levelHref(level)}`, sub: sub(owed), level };
+		return { line: `${name} has more to meet: open it.`, name: null, href: `${basePath}${levelHref(level)}`, sub: sub(owed), level };
 	}
 
 	// firstUnmetLevel only ever names a met level once every level is met

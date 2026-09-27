@@ -14,21 +14,22 @@
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { NUMERAL } from '$lib/levels';
 	import type { DeckLevel } from '$lib/types';
 
 	let { data } = $props();
 	const n = $derived(data.level as DeckLevel);
 	const prev = $derived(n > 1 ? ((n - 1) as DeckLevel) : null);
 	const next = $derived(n < 4 ? ((n + 1) as DeckLevel) : null);
+	/* the neighbours by name: a level is named, never numbered */
+	const nameOf = (l: DeckLevel) => data.names[l] ?? '';
 </script>
 
-<svelte:head><title>Read first · Level {NUMERAL[n]}, {data.info.name} · The World Table</title></svelte:head>
+<svelte:head><title>Read first · {data.info.name} · The World Table</title></svelte:head>
 
 <div class="shell view">
-	<nav class="crumbs"><a href="{base}/">Home</a> · <a href="{base}/level/{n}">Level {NUMERAL[n]}</a></nav>
+	<nav class="crumbs"><a href="{base}/">Home</a> · <a href="{base}/level/{n}">{data.info.name}</a></nav>
 	<p class="eyebrow">Read first</p>
-	<h1><span class="lv-num">{NUMERAL[n]}</span> {data.info.name}</h1>
+	<h1>{data.info.name}</h1>
 	<p class="lede">
 		What each part of this level asks and the order to take it, written for the cook standing at it. Read it before you drill: nothing
 		here is graded or recorded.
@@ -66,9 +67,9 @@
 	{/if}
 
 	<nav class="neighbours" aria-label="Other levels">
-		{#if prev}<a href="{base}/level/{prev}/read">Before: Level {NUMERAL[prev]}</a>{/if}
-		<a href="{base}/level/{n}">The Level {NUMERAL[n]} page</a>
-		{#if next}<a href="{base}/level/{next}/read">Next: Level {NUMERAL[next]}</a>{/if}
+		{#if prev}<a href="{base}/level/{prev}/read">Before: {nameOf(prev)}</a>{/if}
+		<a href="{base}/level/{n}">The {data.info.name} page</a>
+		{#if next}<a href="{base}/level/{next}/read">Next: {nameOf(next)}</a>{/if}
 	</nav>
 </div>
 
@@ -91,10 +92,6 @@
 	h1 {
 		font-size: var(--t-h1);
 		margin: 4px 0 8px;
-	}
-	h1 .lv-num {
-		color: var(--turmeric-deep);
-		margin-right: 0.15em;
 	}
 	.lede {
 		font-size: var(--t-lede);

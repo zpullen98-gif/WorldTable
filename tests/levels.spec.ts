@@ -10,10 +10,12 @@ import { goto, seedSession } from './helpers';
  *
  * Everything the engine decides is unit-tested (src/lib/levels.test.ts). What
  * this proves is that the PAGES say it: that a new reader sees Untouched four
- * times and Level I as theirs, that a record moves the word and the figure and
- * the reader's level, that a level page lists its eight subsections with a
- * count and a door each, that the test sits to its end and ends on what was
- * missed with no number, and that the two retired hubs are honestly gone.
+ * times and Commis as theirs, that a record moves the word and the figure and
+ * the reader's level, that a level is named and never numbered anywhere a
+ * reader meets it (the owner, 27 Sep 2026), that a level page lists its eight
+ * subsections with a count and a door each, that the test sits to its end
+ * and ends on what was missed with no number, and that the two retired hubs
+ * are honestly gone.
  *
  * The answer keys come from the shipped data files, read the way the deck
  * spec reads them: a test sat "right" needs to know the right answers, and a
@@ -36,7 +38,7 @@ const TECHNIQUES = data('techniques.json') as Array<{ slug: string; recipes: str
 const DAY = 86_400_000;
 const NAMES = LEVELS.levels.map((l) => l.name);
 
-/** Everything at Level I met, the way the app itself would have written it. */
+/** Everything at Commis met, the way the app itself would have written it. */
 function level1Seed() {
 	const now = Date.now();
 	const items = LEVELS.items;
@@ -55,17 +57,16 @@ function level1Seed() {
 	return { cookedLog, drillLog, calibrationLog };
 }
 
-test('a new reader sees four Untouched cards, Level I to IV to a screen reader and no numeral on sight, and Level I as theirs', async ({ page }) => {
+test('a new reader sees four Untouched cards, named and never numbered, and Commis as theirs', async ({ page }) => {
 	await goto(page, '/');
 	await page.locator('.level.on').waitFor();
 	const cards = page.locator('section.levels .level');
 	await expect(cards).toHaveCount(4);
-	for (const [i, numeral] of ['I', 'II', 'III', 'IV'].entries()) {
-		await expect(cards.nth(i).locator('.lv-num')).toHaveCount(0);
-		await expect(cards.nth(i).locator('.sr-only')).toHaveText(`Level ${numeral}`);
-		/* hidden, not just present: the words must not paint on the card */
-		const box = await cards.nth(i).locator('.sr-only').boundingBox();
-		expect(box && box.width <= 1 && box.height <= 1).toBe(true);
+	for (let i = 0; i < 4; i++) {
+		/* the name is the label, to the eye and to a screen reader: no numeral,
+		   painted or hidden */
+		await expect(cards.nth(i).locator('.lv-num, .sr-only')).toHaveCount(0);
+		await expect(cards.nth(i)).not.toHaveText(/\b(?:I|II|III|IV)\b/);
 		await expect(cards.nth(i).locator('.lv-name')).toHaveText(NAMES[i]);
 		await expect(cards.nth(i).locator('.lv-stat')).toHaveText('Untouched');
 	}
@@ -76,8 +77,8 @@ test('a new reader sees four Untouched cards, Level I to IV to a screen reader a
 
 	const doors = page.locator('nav.quiet .door');
 	await expect(doors).toHaveCount(4);
-	await expect(doors.nth(0).locator('.door-line')).toContainText('the next dish at Level I');
-	await expect(doors.nth(0).locator('.door-sub')).toHaveText('Today deals from Level I.');
+	await expect(doors.nth(0).locator('.door-line')).toContainText(`the next dish at ${NAMES[0]}`);
+	await expect(doors.nth(0).locator('.door-sub')).toHaveText(`Today deals from ${NAMES[0]}.`);
 	await expect(doors.nth(3).locator('.door-name')).toHaveText('Mine · My Menu');
 });
 
@@ -92,20 +93,20 @@ test('a partial record shows a figure, never a score, and Today leads with what 
 	await expect(page.locator('nav.quiet .door').first().locator('.door-sub')).toContainText('owed across everything touched');
 });
 
-test('a full Level I record reads Met and moves the reader to Level II', async ({ page }) => {
+test('a full Commis record reads Met and moves the reader to Chef de Partie', async ({ page }) => {
 	await seedSession(page, level1Seed());
 	await goto(page, '/');
 	await page.locator('.level.on').waitFor();
 	await expect(page.locator('.level[data-level="1"] .lv-stat')).toHaveText('Met');
 	await expect(page.locator('.level.on')).toHaveAttribute('data-level', '2');
 	const today = page.locator('nav.quiet .door').first();
-	// The seed cooks one recipe per Level I technique, and a recipe can carry
-	// a Level II technique or be a Level II dish, so Level II is not always
-	// untouched: the milestone line ("Level I is met. Level II begins with")
-	// is the engine's to prove (levels.test.ts); the page's part is that Today
-	// now deals from Level II.
-	await expect(today.locator('.door-line')).toContainText('Level II');
-	await expect(today.locator('.door-sub')).toHaveText('Today deals from Level II.');
+	// The seed cooks one recipe per Commis technique, and a recipe can carry
+	// a Chef de Partie technique or be a Chef de Partie dish, so Chef de
+	// Partie is not always untouched: the milestone line ("Commis is met. Chef
+	// de Partie begins with") is the engine's to prove (levels.test.ts); the
+	// page's part is that Today now deals from Chef de Partie.
+	await expect(today.locator('.door-line')).toContainText(NAMES[1]);
+	await expect(today.locator('.door-sub')).toHaveText(`Today deals from ${NAMES[1]}.`);
 
 	// and the Levels tab now forwards there
 	await goto(page, '/level');
@@ -114,7 +115,8 @@ test('a full Level I record reads Met and moves the reader to Level II', async (
 
 test('a level page lists its eight subsections, each with a count and a door, and ends on the test', async ({ page }) => {
 	await goto(page, '/level/1');
-	await expect(page.locator('h1')).toHaveText(/^I\s+Commis$/);
+	await expect(page.locator('h1')).toHaveText(NAMES[0]);
+	await expect(page).toHaveTitle(`${NAMES[0]} · The World Table`);
 	await expect(page.locator('.stat')).toHaveText(/Untouched/);
 	const subs = page.locator('ol.subsections .subsection');
 	await expect(subs).toHaveCount(8);
@@ -129,7 +131,7 @@ test('a level page lists its eight subsections, each with a count and a door, an
 	await subs.nth(0).locator('details summary').click();
 	await expect(subs.nth(0).locator('details li a').first()).not.toHaveText(/-/);
 	const test1 = page.locator('a.leveltest');
-	await expect(test1).toHaveText('The Level I test');
+	await expect(test1).toHaveText(`The ${NAMES[0]} test`);
 	await expect(test1).toHaveAttribute('href', /\/level\/1\/test$/);
 	// no heading deeper than h2
 	await expect(page.getByRole('heading', { level: 3 })).toHaveCount(0);
@@ -205,10 +207,11 @@ async function drillLogOnDisk(page: Page): Promise<string[]> {
 	);
 }
 
-test('the Level I test, sat wrong, logs only Level I slugs and ends without a number', async ({ page }) => {
+test('the Commis test, sat wrong, logs only Commis slugs and ends without a number', async ({ page }) => {
 	test.setTimeout(180_000);
 	await goto(page, '/level/1/test');
-	await expect(page.locator('h1')).toHaveText('The Level I test');
+	await expect(page.locator('h1')).toHaveText(`The ${NAMES[0]} test`);
+	await expect(page.locator('.crumbs a').last()).toHaveText(NAMES[0]);
 	await sit(page, false);
 
 	const result = page.locator('.result');
@@ -231,10 +234,10 @@ test('the Level I test, sat wrong, logs only Level I slugs and ends without a nu
 	]);
 	const logged = await drillLogOnDisk(page);
 	expect(logged.length).toBeGreaterThan(20);
-	for (const slug of logged) expect(level1.has(slug), `${slug} is not a Level I slug`).toBe(true);
+	for (const slug of logged) expect(level1.has(slug), `${slug} is not a Commis slug`).toBe(true);
 });
 
-test('the Level I test, sat right, ends on Nothing missed', async ({ page }) => {
+test('the Commis test, sat right, ends on Nothing missed', async ({ page }) => {
 	test.setTimeout(180_000);
 	await goto(page, '/level/1/test');
 	await sit(page, true);

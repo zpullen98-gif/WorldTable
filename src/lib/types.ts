@@ -851,7 +851,7 @@ export interface Primer {
 	paragraphs: string[];
 	/** Every one an item placed at this level in this subsection that the text names. */
 	cites: PrimerCite[];
-	/** What the level above asks of this subject; at Level IV, what keeps it sharp. */
+	/** What the level above asks of this subject; at Chef, what keeps it sharp. */
 	next: string;
 }
 

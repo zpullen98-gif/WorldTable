@@ -22,7 +22,7 @@
 	import { session } from '$lib/stores/session.svelte';
 	import { markStudied } from '$lib/oot-studied';
 	import { repertoire, dueList, scopeToSlugs, TERM_LADDER_DAYS } from '$lib/repertoire';
-	import { NUMERAL, levelFromSearch } from '$lib/levels';
+	import { levelFromSearch } from '$lib/levels';
 	import type { DeckLevel } from '$lib/types';
 	import {
 		buildRound,
@@ -156,10 +156,10 @@
 	<article class="sheet">
 		{#if !round}
 			<p class="lede">
-				{#if level}
-					Ten questions over the {pool.length} terms at Level {NUMERAL[level]}{levelName ? `, ${levelName}` : ''},
+				{#if level && levelName}
+					Ten questions over the {pool.length} terms at {levelName},
 					with the whole track as the field. The definition appears with its own term taken out; you name it.
-					<a href="{base}/level/{level}">Back to Level {NUMERAL[level]}</a>
+					<a href="{base}/level/{level}">Back to {levelName}</a>
 				{:else}
 					Ten questions over the {data.cards.length} terms of the service track. The definition
 					appears with its own term taken out; you name it.

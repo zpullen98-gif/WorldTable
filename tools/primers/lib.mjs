@@ -20,6 +20,12 @@ export const OUT_DIR = join(HERE, 'out');
 export const AUDIT_DIR = join(HERE, 'audit');
 export const README = join(HERE, 'README.md');
 
+/**
+ * The numerals of the standard's own headings in tools/levels/README.md
+ * ("**Level I, Commis.**"), used to cut a level's paragraph out of it and
+ * nowhere else: a brief hands an author the level's name, never a numeral,
+ * and the gate refuses one in a primer.
+ */
 export const NUMERAL = { 1: 'I', 2: 'II', 3: 'III', 4: 'IV' };
 
 /** Everything the brief reads, read once. */
@@ -208,7 +214,7 @@ export function namesAt(all, subsection, level) {
 	if (!LEVEL_KEYS.includes(level)) return null;
 	const m = all.items.get(primerKey(level, subsection));
 	if (!m) return null;
-	return { level, numeral: NUMERAL[/** @type {1|2|3|4} */ (level)], count: m.size, names: [...m.values()].map((r) => r.name).slice(0, 80) };
+	return { level, name: all.levels.levels.find((/** @type {any} */ l) => l.level === level)?.name ?? '', count: m.size, names: [...m.values()].map((r) => r.name).slice(0, 80) };
 }
 
 export { LEVEL_KEYS as LEVELS, SUBSECTIONS, rowName, primerKey };

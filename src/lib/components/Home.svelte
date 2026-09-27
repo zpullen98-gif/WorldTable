@@ -9,8 +9,8 @@
   contract the three share, identical markup and words; only the CSS is the
   Table's own.
 
-    <section class="levels">   four <a class="level"> cards, I to IV, each with
-                               its name and its word and figure (Untouched,
+    <section class="levels">   four <a class="level"> cards, Commis to Chef, each
+                               with its name and its word and figure (Untouched,
                                N% met, Met); the current one carries `on`,
                                aria-current and the words "Your level"
     <nav class="quiet">        Today, Library, Record, Mine · My Menu
@@ -23,6 +23,10 @@
   a second on every open would be the wrong thing to say first. The names
   and blurbs arrive baked in from the page's load, so the cards themselves
   never wait.
+
+  Named, never numbered (the owner, 27 Sep 2026): a card's name is its
+  label, to the eye and to a screen reader alike, as it is everywhere else
+  a level is spoken of.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
@@ -31,7 +35,7 @@
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
 	import { levels } from '$lib/stores/levels.svelte';
-	import { LEVEL_KEYS, NUMERAL, todayFromLevel, type TodayLine } from '$lib/levels';
+	import { LEVEL_KEYS, todayFromLevel, type TodayLine } from '$lib/levels';
 	import { deskShare, readDeskInbox } from '$lib/desk/desk-inbox';
 	import { readInName, whenRead } from '$lib/desk/desk-share';
 	import type { DeckLevel, LevelInfo } from '$lib/types';
@@ -104,10 +108,6 @@
 				data-level={n}
 				aria-current={on ? 'step' : undefined}
 			>
-				<!-- no numeral on the card (the owner, 26 Sep 2026); the words stay
-				     for a screen reader, because the Today door, the level page and
-				     its test all name the level as "Level I" -->
-				<span class="sr-only">Level {NUMERAL[n]}</span>
 				<span class="lv-name">{nameOf(n)}</span>
 				<span class="lv-stat">{ready && row ? row.label : ''}</span>
 				{#if on}<span class="lv-here">Your level</span>{/if}
@@ -189,17 +189,6 @@
 	.level.on {
 		border-color: var(--turmeric-deep);
 		box-shadow: inset 0 0 0 1px var(--turmeric-deep), var(--shadow-card);
-	}
-	.sr-only {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		margin: -1px;
-		overflow: hidden;
-		clip-path: inset(50%);
-		white-space: nowrap;
-		border: 0;
 	}
 	.lv-name {
 		font-family: var(--display);

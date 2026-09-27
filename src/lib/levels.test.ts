@@ -221,7 +221,7 @@ describe('levelProgress: the mean of the subsections, not the pooled sum', () =>
 		expect(levelProgress(DATA, 1, EMPTY, JOINS).label).toBe(UNTOUCHED);
 		expect(levelProgress(DATA, 1, level1Met(), JOINS).label).toBe(MET);
 	});
-	it('firstUnmetLevel is the lowest not met, and IV once everything is', () => {
+	it('firstUnmetLevel is the lowest not met, and the top one once everything is', () => {
 		expect(firstUnmetLevel(allLevels(DATA, EMPTY, JOINS))).toBe(1);
 		expect(firstUnmetLevel(allLevels(DATA, level1Met(), JOINS))).toBe(2);
 		const rows = allLevels(DATA, EMPTY, JOINS).map((r) => ({ ...r, label: MET }));
@@ -236,30 +236,39 @@ describe('todayFromLevel: one item, in order', () => {
 		const t = today(logs({ cooked: [{ slug: 'd1', at: at(40) }, { slug: 'zz', at: at(30) }] }));
 		expect(t.line).toBe('Cook Dish d1 again. Last made 6 weeks ago.');
 		expect(t.href).toBe('/recipe/d1');
-		expect(t.sub).toBe('Today deals from Level I. 2 reviews are owed across everything touched.');
+		expect(t.sub).toBe('Today deals from Commis. 2 reviews are owed across everything touched.');
 	});
 	it('then the next uncooked course dish at the level', () => {
 		const t = today(EMPTY);
-		expect(t.line).toBe('Cook Dish d1, the next dish at Level I.');
-		expect(t.sub).toBe('Today deals from Level I.');
+		expect(t.line).toBe('Cook Dish d1, the next dish at Commis.');
+		expect(t.sub).toBe('Today deals from Commis.');
 		expect(t.level).toBe(1);
 	});
 	it('then the deck, the Lexicon and service, in that order', () => {
 		const dishes: CookEntry[] = [{ slug: 'd1', at: at(1) }, { slug: 'd2', at: at(1) }];
-		expect(today(logs({ cooked: dishes })).line).toBe('Flip the Floor Deck at Level I: 2 cards to meet.');
+		expect(today(logs({ cooked: dishes })).line).toBe('Flip the Floor Deck at Commis: 2 cards to meet.');
 		const cards = ['fd_0001', 'fd_0002'].map((slug) => ({ slug, at: at(1), grade: 'met' as const }));
-		expect(today(logs({ cooked: dishes, drill: cards })).line).toBe('Meet 4 terms of the Lexicon at Level I.');
+		expect(today(logs({ cooked: dishes, drill: cards })).line).toBe('Meet 4 terms of the Lexicon at Commis.');
 		const terms = ['l1', 'l2', 'l3', 'l4'].map((slug) => ({ slug, at: at(1), grade: 'close' as const }));
-		expect(today(logs({ cooked: dishes, drill: [...cards, ...terms] })).line).toBe('Meet 2 service terms at Level I.');
+		expect(today(logs({ cooked: dishes, drill: [...cards, ...terms] })).line).toBe('Meet 2 service terms at Commis.');
 	});
 	it('says when a level is met and what the next begins with', () => {
 		const t = today(level1Met());
-		expect(t.line).toBe('Level I is met. Level II begins with Dish d3.');
+		expect(t.line).toBe('Commis is met. Chef de Partie begins with Dish d3.');
 		expect(t.href).toBe('/recipe/d3');
-		expect(t.sub).toBe('Today deals from Level II.');
+		expect(t.sub).toBe('Today deals from Chef de Partie.');
 		// once the new level has been touched the milestone line is gone
 		const touched = logs({ ...level1Met(), drill: [...level1Met().drill, { slug: 'l5', at: at(1), grade: 'close' }] });
-		expect(today(touched).line).toBe('Cook Dish d3, the next dish at Level II.');
+		expect(today(touched).line).toBe('Cook Dish d3, the next dish at Chef de Partie.');
+	});
+	it('names the level out of the data, never a numeral', () => {
+		const renamed: LevelsData = { ...DATA, levels: DATA.levels.map((l) => ({ ...l, name: `${l.name} of the house` })) };
+		const t = todayFromLevel(renamed, allLevels(renamed, EMPTY, JOINS), EMPTY, NAMES, NOW);
+		expect(t.line).toBe('Cook Dish d1, the next dish at Commis of the house.');
+		expect(t.sub).toBe('Today deals from Commis of the house.');
+		const met = todayFromLevel(renamed, allLevels(renamed, level1Met(), JOINS), level1Met(), NAMES, NOW);
+		expect(met.line).toBe('Commis of the house is met. Chef de Partie of the house begins with Dish d3.');
+		for (const s of [t.line, t.sub, met.line, met.sub]) expect(s).not.toMatch(/\bLevels? (?:I|II|III|IV)\b/);
 	});
 	it('says when every level is met', () => {
 		const base = level1Met();

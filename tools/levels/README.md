@@ -1,20 +1,21 @@
 # The four levels: how an item gets its level
 
-The home is four level cards (I Commis, II Chef de Partie, III Sous Chef,
-IV Chef: the Floor Deck's brigade ladder, now the whole app's), each level the
-same eight subsections at that level's difficulty, and training from there.
-`tools/derive/levels.mjs` is the one place the names and blurbs are written
-and the gate that holds the placements; the placements themselves are the
-authored files in `tools/derive/levels/<subsection>.json`, machine-written by
-the procedure below and hand-editable afterwards, with the reason for every
-item in the file. Nothing is locked: a level guides, it never bars.
+The home is four level cards (Commis, Chef de Partie, Sous Chef, Chef: the
+Floor Deck's brigade ladder, now the whole app's, named and never numbered
+wherever a reader meets them), each level the same eight subsections at that
+level's difficulty, and training from there. `tools/derive/levels.mjs` is the
+one place the names and blurbs are written and the gate that holds the
+placements; the placements themselves are the authored files in
+`tools/derive/levels/<subsection>.json`, machine-written by the procedure
+below and hand-editable afterwards, with the reason for every item in the
+file. Nothing is locked: a level guides, it never bars.
 
 What is placed here: the 45 course dishes, the 112 techniques, the 593 Lexicon
 terms outside the service track, the 27 service modules (their 186 term cards
 inherit through `moduleTerms`), the 8 palate faults, the 26 read slices of
 food safety (never counted, only read), and the 20 Plates
 (`tools/derive/levels/plates.json`, never counted, only read; no minimum, so
-Level IV may hold none and does). Each level and subsection with items
+Chef may hold none and does). Each level and subsection with items
 also has a PRIMER, a written reader for the cook standing there
 (`tools/primers/README.md`; the gate holds every cite to an item placed at
 that level). The 281 deck cards keep the level in
@@ -24,6 +25,12 @@ everything placed here. The library's 1,844 recipes are not placed one by one:
 the level page's library door uses the gated `difficulty` as a proxy.
 
 ## The standard
+
+The numerals below (I to IV, in the headings and the signals) are this
+procedure's shorthand for the keys 1 to 4, and `tools/primers/lib.mjs
+levelStandard` cuts each level's paragraph out by its heading. A reader
+never meets one: the app names a level (Commis, Chef de Partie, Sous Chef,
+Chef) and never numbers it, and the primer gate refuses a numeral in prose.
 
 **Level I, Commis.** What a cook is asked to know in the first weeks: the
 everyday word a guest assumes any server knows and any cook understands

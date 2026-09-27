@@ -17,6 +17,7 @@ const PLATES = JSON.parse(readFileSync(join(HERE, '..', 'src', 'lib', 'data', 'p
 	plates: Array<{ slug: string; title: string; count: number; corrections: unknown[]; deckSections: string[]; groups: Array<{ items: Array<{ name: string; links?: { deck?: string } }> }> }>;
 };
 const LEVELS = JSON.parse(readFileSync(join(HERE, '..', 'src', 'lib', 'data', 'levels.json'), 'utf8')) as {
+	levels: Array<{ level: number; name: string }>;
 	items: Record<string, Record<string, string[]>>;
 	counts: Record<string, Record<string, number>>;
 };
@@ -33,7 +34,9 @@ test('the wall lists every plate in its five rows, with its level and its count'
 	await expect(page.locator('ul.wall li')).toHaveCount(PLATES.plates.length);
 	await expect(page.getByRole('heading', { level: 2 })).toHaveCount(5);
 	const first = page.locator('ul.wall li').first();
-	await expect(first.locator('.pmeta')).toHaveText(/Level [IV]+/);
+	// a level is named, never numbered
+	await expect(first.locator('.pmeta')).toHaveText(new RegExp(`^(?:${LEVELS.levels.map((l) => l.name).join('|')}) · `));
+	await expect(first.locator('.pmeta')).not.toHaveText(/\bLevel\b/);
 	await expect(first.locator('.pmeta')).toHaveText(/\d+ on the plate/);
 	// the thumbnails are pictures: lazy, sized, decorative (the title is the text)
 	await expect(first.locator('img')).toHaveAttribute('loading', 'lazy');
@@ -98,10 +101,10 @@ test('a level page lists its plates, read and never graded, with a door to the f
 	await expect(sub.locator('details li a').first()).not.toHaveText(/-/);
 });
 
-test('Level IV says plainly that every plate is read by Level III', async ({ page }) => {
+test('Chef says plainly that every plate is read at the levels below', async ({ page }) => {
 	await goto(page, '/level/4');
 	const sub = page.locator('ol.subsections .subsection#plates');
-	await expect(sub.locator('.line')).toContainText('every plate is read by Level III');
+	await expect(sub.locator('.line')).toContainText('every plate is read at the levels below');
 	await expect(sub.locator('a.train', { hasText: 'The wall' })).toBeVisible();
 });
 

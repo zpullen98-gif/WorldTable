@@ -105,7 +105,7 @@ A PRIMER:
 - lede (${range(L.lede)} chars, one sentence): this subsection at this level in one line, the way a chef says it at pre-shift.
 - paragraphs (aim ${range(A.paragraphs)}, at most ${L.paragraphs[1]}; ${range(A.words)} words altogether, never under ${L.words[0]} or over ${L.words[1]}; each ${range(L.paragraph)} chars): the reader. Name the items placed here BY THE NAMES THE BRIEF GIVES; group them by what they share; say what to take first and why; say plainly what "met" means for this subsection, in the brief's own words or a faithful paraphrase; point to the doors by their names. Where the brief gives an item's own text (a definition, a card's why, a standard's marks, a module's outcome), draw on it and never contradict it.
 - cites (at least ${L.citesMin}, or every item when there are fewer): the slugs of items placed HERE that the text names. Every cite must be an item at THIS level in THIS subsection (the brief's "items", nothing else), and the text must carry its name (a plain plural is fine; for a long label with a colon, its head before the colon). Cite only what you name.
-- next (${range(L.next)} chars, one to three sentences): what the level above asks of this subject, drawn from the brief's "neighbours.above" and nothing invented; for Level IV, what keeps this subject sharp once it is met.
+- next (${range(L.next)} chars, one to three sentences): what the level above asks of this subject, drawn from the brief's "neighbours.above" and nothing invented; for Chef, the top level, what keeps this subject sharp once it is met.
 
 HARD RULES (a build gate refuses a primer that breaks one):
 ${B.rulesText || ''}1. No em dash and no en dash. Ranges are "5 to 6". Use a comma, a colon or a full stop.
@@ -115,7 +115,7 @@ ${B.rulesText || ''}1. No em dash and no en dash. Ranges are "5 to 6". Use a com
 5. None of the banned substrings listed in the brief's "rules" (a food-safety curriculum the guide does not teach); the safety primers say what the guide states and what it names without stating, and never fill a gap with a figure or a rule of their own.
 6. A level guides and never bars, and nothing here is scored: never unlock, locked, score, pass mark, percent, prerequisite, or "%".
 7. The lede, every paragraph and the next line end in a full stop, a question mark or an exclamation mark. No double spaces.
-8. Prose only: no bullet lists, no headings, no numbering at the start of a paragraph, no markdown, no quotation of whole definitions. Say "Level II" with the numeral, never "L2" or "level two".
+8. Prose only: no bullet lists, no headings, no numbering at the start of a paragraph, no markdown, no quotation of whole definitions. Name a level by its name (Commis, Chef de Partie, Sous Chef, Chef), never a numeral: never "Level II", "L2" or "level two".
 9. Be right. A wrong claim about a technique or a cut in a reader for cooks gets repeated at the pass. Where the brief's item text says one thing, say that thing; where you are not sure, check (search the web) or leave it out. Never present an item as placed at this level unless it is in the brief's "items".
 10. Voice: plain and direct, second person where it helps ("take the omelette first"), no marketing, no filler, no restating the level's blurb, nothing the reader cannot act on.
 `

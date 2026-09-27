@@ -48,9 +48,9 @@ test('the bar shows exactly four tabs, in the shared order', async ({ page }) =>
 });
 
 /**
- * The Levels tab means "the level you are on": a fresh record lands on Level I,
- * a record that has met Level I lands on Level II. Never a list of four (the
- * home is that) and never a stored choice.
+ * The Levels tab means "the level you are on": a fresh record lands on Commis,
+ * a record that has met Commis lands on Chef de Partie. Never a list of four
+ * (the home is that) and never a stored choice.
  */
 test('the Levels tab forwards to the lowest level not yet met', async ({ page }) => {
 	await goto(page, '/level');

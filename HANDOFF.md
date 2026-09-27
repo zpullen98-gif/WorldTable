@@ -25,7 +25,7 @@ at **$49.99/month, unlimited staff, one shared login**.
 
 **Audience, decided by the owner: chefs, culinary students, AND servers, in ONE app.** The home page's "what do you do?" role question was removed on 2026-09-19: nothing is reordered or hidden by who you are, and every part of the app is for anyone.
 
-**The home is four levels (26 Sep 2026), the same in the Codex and the Ledger:** four level cards with a word and a figure, one quiet row of four doors, the nav `Home · Levels · Library · Mine`, a page per level with the same seven subsections at that level's difficulty, and a level test that ends on what you missed with no score. Nothing is locked. CLAUDE.md "The four levels" and `tools/levels/README.md` are the references.
+**The home is four levels (26 Sep 2026), the same in the Codex and the Ledger:** four level cards with a word and a figure, one quiet row of four doors, the nav `Home · Levels · Library · Mine`, a page per level with the same seven subsections at that level's difficulty, and a level test that ends on what you missed with no score. Nothing is locked. Since 27 Sep 2026 a level is named, never numbered (Commis, Chef de Partie, Sous Chef, Chef), anywhere a reader sees or hears it. CLAUDE.md "The four levels" and `tools/levels/README.md` are the references.
 
 ## Repo state
 
@@ -282,6 +282,22 @@ import a value back into it.
 ---
 
 ## What was built, most recent first
+
+### 27 Sep (latest): the levels named, never numbered
+
+The owner's decision, shared with the Codex and the Ledger: "any hospitality
+member would recognize the levels by the names we have given them". Every
+Roman numeral a reader could see or hear is gone: the level page's title, h1
+and crumbs, "The Commis test" and "Back to Commis", Today's lines ("Today
+deals from Commis."), the `?level=` lines on the Lexicon, the technique index
+and the drill, the plates' meta and eyebrow, the reader's title, crumbs and
+neighbours, the `/level` forwarder's fallback link, the hidden `sr-only`
+numeral on the home cards, and 116 mentions across the 31 primers (rewritten
+to the names, a handful rephrased). `NUMERAL` and `LevelProgress.numeral` are
+gone from the app; the keys 1 to 4 stay in the data, the URLs and the record.
+The primer gate refuses "Level II" in prose (`NUMERAL_RE`), and the brief and
+the author workflow tell an author to name a level. CLAUDE.md "The four
+levels" is the reference.
 
 ### 27 Sep (later) — the primers, the deck at III and IV, the first atlas entries
 

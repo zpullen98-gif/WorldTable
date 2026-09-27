@@ -26,7 +26,6 @@
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { NUMERAL } from '$lib/levels';
 	import { PLATE_QUIZ_LENGTH, displayName, plateHref, plateQuiz, type PlateQuestion } from '$lib/plates';
 
 	let { data } = $props();
@@ -87,7 +86,7 @@
 <div class="shell view">
 	<nav class="crumbs"><a href="{base}/">Home</a> · <a href="{base}/plates">The Plates</a></nav>
 	<p class="eyebrow">
-		{plate.kindTitle}{#if data.level} · Level {NUMERAL[data.level]}{data.levelName ? `, ${data.levelName}` : ''}{/if}
+		{[plate.kindTitle, data.levelName].filter(Boolean).join(' · ')}
 	</p>
 	<h1>{plate.title}</h1>
 	{#if plate.tagline}<p class="lede">{plate.tagline}</p>{/if}

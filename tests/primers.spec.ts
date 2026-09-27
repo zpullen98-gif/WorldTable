@@ -19,6 +19,7 @@ const PRIMERS = (existsSync(FILE) ? JSON.parse(readFileSync(FILE, 'utf8')) : { p
 	primers: Array<{ level: number; subsection: string; lede: string; paragraphs: string[]; cites: Array<{ slug: string; name: string; href: string }>; next: string }>;
 };
 const LEVELS = JSON.parse(readFileSync(join(HERE, '..', 'src', 'lib', 'data', 'levels.json'), 'utf8')) as {
+	levels: Array<{ level: number; name: string }>;
 	subsections: Array<{ key: string; title: string }>;
 	counts: Record<string, Record<string, number>>;
 };
@@ -30,7 +31,9 @@ test('a level reader carries one primer per subsection that has one, in the leve
 	const n = first!.level;
 	const mine = at(n);
 	await goto(page, `/level/${n}/read`);
-	await expect(page.locator('h1')).toContainText(/Commis|Chef de Partie|Sous Chef|Chef/);
+	await expect(page.locator('h1')).toHaveText(LEVELS.levels.find((l) => l.level === n)!.name);
+	// a level is named, never numbered: not in the crumbs, the neighbours or a primer's prose
+	await expect(page.locator('body')).not.toContainText(/\bLevels? (?:I|II|III|IV)\b/);
 	await expect(page.locator('.view > .eyebrow')).toHaveText('Read first');
 	await expect(page.locator('ol.primers .primer')).toHaveCount(mine.length);
 	const order = LEVELS.subsections.map((s) => s.key).filter((k) => mine.some((p) => p.subsection === k));

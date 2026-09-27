@@ -10,7 +10,6 @@
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { NUMERAL } from '$lib/levels';
 	import { plateHref } from '$lib/plates';
 
 	let { data } = $props();
@@ -51,7 +50,7 @@
 							</span>
 							<span class="ptitle">{p.title}</span>
 							<span class="pmeta">
-								{#if p.level}Level {NUMERAL[p.level]}{p.levelName ? `, ${p.levelName}` : ''} · {/if}{p.count} on the plate{#if p.corrections} · {p.corrections} correction{p.corrections === 1 ? '' : 's'}{/if}
+								{[p.levelName, `${p.count} on the plate`, p.corrections ? `${p.corrections} correction${p.corrections === 1 ? '' : 's'}` : ''].filter(Boolean).join(' · ')}
 							</span>
 						</a>
 					</li>

@@ -5,9 +5,10 @@
   build verifier can resolve the tab to a page; a forward, so the tab means
   "the level you are on" rather than a list of four the home already is.
 
-  Prerendered as its heading and one line, under a kilobyte. The forward
-  waits for the record: a jump to Level I that then corrected itself to Level
-  III would be a jump nobody trusts.
+  Prerendered as its heading and one line, under a kilobyte; the line names
+  the first level (named, never numbered), the one name the load bakes in.
+  The forward waits for the record: a jump to Commis that then corrected
+  itself to Sous Chef would be a jump nobody trusts.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
@@ -15,6 +16,8 @@
 	import { onMount } from 'svelte';
 	import { levels } from '$lib/stores/levels.svelte';
 	import { levelHref } from '$lib/levels';
+
+	let { data } = $props();
 
 	onMount(() => {
 		void levels.load();
@@ -31,7 +34,7 @@
 <div class="shell view">
 	<h1>Your level</h1>
 	<p class="lede" aria-live="polite">Opening your level, the lowest not yet met…</p>
-	<p class="note">If nothing opens, start at <a href="{base}/level/1">Level I</a>.</p>
+	<p class="note">If nothing opens, start at <a href="{base}/level/1">{data.first}</a>.</p>
 </div>
 
 <style>
