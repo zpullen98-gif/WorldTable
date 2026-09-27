@@ -277,4 +277,29 @@
 		min-height: 44px;
 		margin-left: 4px;
 	}
+
+    @media screen {
+        .home { padding-top: 28px; padding-bottom: 30px; }
+        .levels { gap: 18px; }
+        .level { min-height: 154px; padding: 24px 22px; gap: 10px; border-color: var(--house-frame); background: var(--house-panel); box-shadow: var(--house-inset), var(--shadow-card); border-radius: 2px; }
+        .level::after { content: ''; position: absolute; right: 12px; bottom: 12px; width: 16px; height: 16px; border-right: 1px solid var(--turmeric-deep); border-bottom: 1px solid var(--turmeric-deep); opacity: .7; pointer-events: none; }
+        .level.on { border-color: var(--turmeric-deep); box-shadow: var(--house-inset), 0 8px 26px #0001; }
+        .lv-name { font-family: var(--house-display); font-size: 1rem; line-height: 1.45; color: var(--turmeric-deep); }
+        .lv-stat { font-size: 1.1rem; color: var(--ink-soft); }
+        .lv-here { font-size: .68rem; letter-spacing: .1em; }
+        .quiet { gap: 18px; border-top: 1px solid var(--line); margin-top: 28px; padding-top: 26px; }
+        .door { padding: 22px; background: var(--house-panel); border-color: var(--house-frame); gap: 12px; }
+        .door-name { font-family: var(--house-display); font-size: .72rem; letter-spacing: .08em; color: var(--turmeric-deep); }
+        .door-line { font-size: 1.2rem; line-height: 1.45; }
+        .door-sub { font-size: .9rem; color: var(--muted); }
+        .level:hover, .door:hover { border-color: var(--turmeric-deep); background: color-mix(in srgb, var(--turmeric) 10%, var(--card)); }
+    }
+    @media screen and (max-width: 599px) {
+        .home { padding-top: 22px; }
+        .levels { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+        .level { min-height: 150px; padding: 20px 15px; }
+        .lv-name { font-size: .86rem; }
+        .quiet { grid-template-columns: 1fr; gap: 12px; padding-top: 22px; margin-top: 22px; }
+        .door { padding: 20px; gap: 7px; }
+    }
 </style>

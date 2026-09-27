@@ -247,4 +247,47 @@
 	.stage .term { font-size: clamp(2.5rem, 11vw, 7rem); overflow-wrap: anywhere; }
 	.stage .say { font-size: clamp(1rem, 3vw, 1.6rem); }
 	.stage .guest { font-size: clamp(1.3rem, 3.6vw, 2.2rem); }
+
+	/* The same binding on every deck surface, from a single study card to a
+	   revealed test answer. No illustration competes with the guest line. */
+	@media screen {
+		.flash {
+			padding: 27px 28px;
+			border-color: var(--house-frame, var(--line-strong));
+			background: var(--house-panel, var(--card));
+			box-shadow: var(--house-inset, none), var(--shadow-card);
+		}
+		.eyebrow, .layer {
+			font-family: var(--house-display, var(--display));
+			font-size: 0.68rem;
+			letter-spacing: 0.065em;
+			line-height: 1.6;
+			color: var(--turmeric-deep);
+		}
+		.eyebrow { margin-bottom: 13px; }
+		.term { font-size: clamp(1.9rem, 4vw, 2.5rem); line-height: 1.2; margin-bottom: 8px; }
+		.say, .aka { font-size: 0.96rem; line-height: 1.45; }
+		.turn { margin-top: 23px; }
+		.back { margin-top: 23px; }
+		.layer { margin-bottom: 8px; }
+		.def { font-family: var(--house-reading, var(--text)); font-size: 1.1rem; line-height: 1.65; }
+		.guest { font-family: var(--display); font-size: 1.45rem; line-height: 1.5; margin-bottom: 22px; }
+		details { border-color: var(--line-strong); }
+		summary { min-height: 48px; font-size: 0.86rem; letter-spacing: 0.045em; }
+		details > :last-child { margin-bottom: 17px; }
+		.caution { padding: 12px 15px; font-size: 0.96rem; line-height: 1.6; }
+		.ctx dt { margin-top: 13px; font-size: 0.76rem; letter-spacing: 0.08em; }
+		.ctx dd { margin-top: 5px; }
+		.links { gap: 4px 15px; font-size: 0.96rem; }
+		.links a { display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: 4px; }
+		.further { padding-top: 14px; }
+		.stage { padding: 30px; }
+		@media (max-width: 520px) {
+			.flash { padding: 23px 20px; }
+			.stage { padding: 24px 20px; }
+		}
+		@media (forced-colors: active) {
+			.flash { background: Canvas; border-color: CanvasText; box-shadow: none; }
+		}
+	}
 </style>

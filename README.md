@@ -1,5 +1,27 @@
 # The World Table
 
+## Explorer's Library visual identity
+
+The World Table shares Outside Of Time's forest green, antique gold and warm
+parchment palette. `src/lib/styles/tokens.css` retains complete day and night
+services; `house-surfaces.css` coordinates the reference pages and kitchen desks.
+The layout provides a full culinary artwork masthead at home and a compact one
+inside. Recipe cards, recipe sheets, Floor Cards and Cook Mode own their screen
+treatments. Print colors stay centralized in `src/lib/styles/print.css`.
+
+The original generated artwork is optimized as
+`static/house/world-table-library-v1.webp`. It is decorative: all titles and
+controls remain real HTML. Its versioned file is kept in the separate
+`oot-table-art-v1` runtime cache after the first visit. The layout warms it only
+after this wing's worker controls the page, including a first arrival from the
+hub; it is not part of the 3 MB core precache. Cinzel is a locally bundled font,
+with its license and notice under `static/fonts/`.
+
+The navigation publishes its measured height through `--modebar-h`, keeping
+sticky filters and anchored dictionary entries clear at every width. Preserve
+that relationship when changing tabs, fonts or spacing. Names, recipes, study
+grading and stored record formats are unchanged by this visual layer.
+
 An offline-first culinary field guide: **970 recipes**, a **479-term chef's
 lexicon**, **103 technique pages**, pantry matching and a ten-semester path of
 study. Installable, fully static, no server anywhere.

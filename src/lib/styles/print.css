@@ -9,7 +9,9 @@
  * would empty a cartridge and read worse.
  */
 @media print {
-	:root {
+	:root,
+	:root[data-service='day'],
+	:root[data-service='night'] {
 		--paper: #fff;
 		--paper-raised: #fff;
 		--card: #fff;
@@ -19,6 +21,12 @@
 		--line: #b9b0a0;
 		--turmeric: #8a6d2e;
 		--turmeric-deep: #8a6d2e;
+		--line-strong: #8b7c63;
+		--field-line: #776b57;
+		--leaf: #365426;
+		--chili: #82362f;
+		--accent-solid: #35563d;
+		--on-accent: #fff;
 	}
 
 	body {

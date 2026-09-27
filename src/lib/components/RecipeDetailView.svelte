@@ -978,4 +978,80 @@
 		color: var(--muted);
 		margin-top: 1px;
 	}
+
+	/* The working page of the culinary library. Decoration stays at the
+	   binding; ingredients, quantities and the method remain plain text. */
+	@media screen {
+		.sheet {
+			max-width: 940px;
+			margin-block: 28px;
+			padding: 30px 34px 38px;
+			background: var(--house-panel, var(--card));
+			border: 1px solid var(--house-frame, var(--line-strong));
+			box-shadow: var(--house-inset, none), var(--shadow-card);
+		}
+		.crumbs { flex-wrap: wrap; row-gap: 0; margin-bottom: 18px; }
+		.crumbs a { padding-block: 8px; text-underline-offset: 4px; }
+		.head h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.12; margin-block: 9px 18px; text-wrap: balance; }
+		.head > .eyebrow,
+		.sec {
+			font-family: var(--house-display, var(--display));
+			font-size: 0.72rem;
+			letter-spacing: 0.075em;
+			line-height: 1.5;
+			color: var(--turmeric-deep);
+		}
+		.sec { padding-bottom: 10px; margin-bottom: 15px; border-color: var(--line-strong); }
+		.stats { gap: 7px; margin-bottom: 20px; }
+		.stats li { padding: 4px 9px; font-size: 0.85rem; }
+		.palate { padding-block: 15px; margin-bottom: 22px; }
+		.palate .sentence { font-size: 1.1rem; line-height: 1.55; }
+		.tools { gap: 9px; padding-bottom: 23px; margin-bottom: 28px; border-bottom: 1px solid var(--line-strong); }
+		.group { border-color: var(--field-line); }
+		.group button { padding: 9px 13px; font-size: 0.9rem; }
+		.group button.on { background: var(--accent-solid); color: var(--on-accent); }
+		.chip { padding: 9px 15px; border-color: var(--house-frame, var(--line-strong)); font-size: 0.9rem; }
+		.cols { gap: 34px; }
+		.ingredients .item { padding-block: 7px; font-size: 1.06rem; line-height: 1.55; }
+		.ingsec { font-family: var(--house-display, var(--display)); font-size: 0.7rem; letter-spacing: 0.055em; padding-top: 18px; }
+		.subbtn { min-height: 44px; min-width: 44px; padding-inline: 8px; font-size: 0.84rem; text-decoration: underline; text-underline-offset: 3px; }
+		.equip { font-size: 0.98rem; line-height: 1.6; }
+		.skills { gap: 8px; }
+		.skills a { min-height: 44px; padding: 8px 11px; font-size: 0.84rem; line-height: 1.35; }
+		.steps .step { padding: 8px 0 13px 36px; font-size: 1.12rem; line-height: 1.65; }
+		.steps .step::before { top: 13px; font-family: var(--house-display, var(--display)); font-size: 0.7rem; }
+		.dur { font-size: 0.78rem; }
+		.standard { margin-top: 32px; padding-top: 22px; }
+		.marks { font-size: 1.06rem; line-height: 1.65; }
+		.note {
+			padding: 23px 25px;
+			border: 1px solid var(--house-frame, var(--line-strong));
+			border-left: 3px solid var(--turmeric-deep);
+			background: var(--paper-raised);
+		}
+		.notebody { font-family: var(--house-reading, var(--text)); font-size: 1.13rem; line-height: 1.7; }
+		.pairing { margin-top: 30px; padding-block: 8px 22px; border-bottom: 1px solid var(--line-strong); }
+		.pairing dt { min-width: 80px; font-family: var(--house-display, var(--display)); font-size: 0.65rem; letter-spacing: 0.06em; }
+		.pairing dd { font-size: 1.2rem; line-height: 1.5; }
+		.why { font-size: 0.95rem; line-height: 1.6; }
+		.notes .hint { font-size: 0.84rem; line-height: 1.55; }
+		.notes textarea { font-size: 1rem; padding: 14px; min-height: 120px; }
+		.films { padding: 22px 25px; border-radius: var(--radius); background: var(--paper-raised); }
+		.vrow { padding-block: 12px; min-height: 44px; }
+		.vlbl { font-size: 1.05rem; }
+		.vsub { font-size: 0.85rem; line-height: 1.5; }
+		@media (max-width: 700px) {
+			.sheet { margin: 18px 12px; padding: 24px 20px 30px; }
+			.cols { gap: 28px; }
+			.note, .films { padding: 20px 17px; }
+		}
+		@media (max-width: 380px) {
+			.sheet { margin-inline: 8px; padding-inline: 16px; }
+			.tools { gap: 8px; }
+			.group button { min-width: 44px; padding-inline: 10px; }
+		}
+		@media (forced-colors: active) {
+			.sheet, .note, .films { background: Canvas; border-color: CanvasText; box-shadow: none; }
+		}
+	}
 </style>

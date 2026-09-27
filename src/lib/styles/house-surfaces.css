@@ -1,0 +1,291 @@
+/* The estate's reference rooms and working desks. Component-owned recipe
+   cards, recipe sheets, Floor Cards and Cook Mode keep their own furniture.
+   Screen-only: printed recipes, menus and costing sheets retain their ink. */
+@media screen {
+	/* Route headings and the Library shelf; no changes to sticky geometry. */
+	.house-main .view > h1,
+	.house-main .view > .head h1,
+	.house-main .libhead h1 {
+		font-family: var(--house-display);
+		font-weight: 500;
+		letter-spacing: 0.025em;
+		line-height: 1.22;
+		text-wrap: balance;
+		color: var(--turmeric-deep);
+	}
+	.house-main .view > .head,
+	.house-main .libhead {
+		border-bottom: 1px solid var(--house-frame);
+		padding-bottom: 20px;
+	}
+	.house-main .view > .crumbs a,
+	.house-main .view .neighbours a {
+		text-underline-offset: 4px;
+		text-decoration-color: var(--house-frame);
+	}
+	.house-main .libhead > .shelf a,
+	.house-main .view .toc a {
+		background: var(--house-panel);
+		border-color: var(--house-frame);
+		box-shadow: var(--house-inset);
+	}
+
+	/* Levels, primers and the curriculum share the chapter furniture. */
+	.house-main .view .subsection,
+	.house-main .view .semester {
+		background: var(--house-panel);
+		border-color: var(--house-frame);
+		box-shadow: var(--house-inset), var(--shadow-card);
+		border-radius: var(--radius);
+	}
+	.house-main .view .subsection { padding: 22px 24px; }
+	.house-main .view .subsection h2,
+	.house-main .view .semester h2,
+	.house-main .view .primer h2 {
+		font-family: var(--house-reading);
+		color: var(--turmeric-deep);
+		font-weight: 500;
+		line-height: 1.25;
+	}
+	.house-main .view .primer {
+		padding: 24px clamp(16px, 3vw, 28px);
+		border: 1px solid var(--house-frame);
+		border-radius: var(--radius);
+		background: var(--house-panel);
+		box-shadow: var(--house-inset);
+	}
+	.house-main .view .primer .para,
+	.house-main .view .primer .plede {
+		line-height: 1.75;
+	}
+	.house-main .view .train,
+	.house-main .view .readfirst {
+		background: var(--paper-raised);
+		border-color: var(--house-frame);
+		text-underline-offset: 4px;
+	}
+	.house-main .view .leveltest {
+		box-shadow: var(--house-inset), var(--shadow-card);
+	}
+	.house-main .view .filmcard {
+		background: var(--house-panel);
+		border-color: var(--house-frame);
+		box-shadow: var(--house-inset);
+	}
+
+	/* Reference catalogues: techniques, Lexicon and the service track. */
+	.house-main .view .tile,
+	.house-main .view .lexcard,
+	.house-main .view .tiles a {
+		background: var(--house-panel);
+		border-color: var(--house-frame);
+		border-radius: var(--radius);
+		box-shadow: var(--house-inset), var(--shadow-card);
+	}
+	.house-main .view .tile:hover,
+	.house-main .view .tiles a:hover {
+		border-color: var(--turmeric-deep);
+	}
+	.house-main .view .lexcard h3,
+	.house-main .view .tile h3,
+	.house-main .view .tiles h3,
+	.house-main .view .svcterm,
+	.house-main .view .steptitle {
+		font-family: var(--house-reading);
+		font-weight: 500;
+		color: var(--turmeric-deep);
+		line-height: 1.3;
+	}
+	.house-main .view .lexcard .def,
+	.house-main .view .svcdef {
+		line-height: 1.7;
+	}
+	.house-main .view .directory a,
+	.house-main .view .deckhits li a {
+		background: var(--paper-raised);
+		border-color: var(--house-frame);
+	}
+	.house-main .view .trackstep > li > a {
+		padding: 16px;
+		margin-bottom: 8px;
+		border: 1px solid var(--house-frame);
+		border-radius: var(--radius);
+		background: var(--house-panel);
+	}
+	.house-main .view .trackstep > li > a:hover {
+		border-color: var(--turmeric-deep);
+	}
+	.house-main .view .svcterms > li {
+		padding: 20px;
+		margin-bottom: 12px;
+		border: 1px solid var(--house-frame);
+		border-radius: var(--radius);
+		background: var(--house-panel);
+	}
+
+	/* Pantry Match and the Family Chapter remain practical working lists. */
+	.house-main .view .cols > aside.shelf {
+		padding: 18px;
+		border: 1px solid var(--house-frame);
+		border-radius: var(--radius);
+		background: var(--house-panel);
+		box-shadow: var(--house-inset);
+	}
+	.house-main .view .techlist,
+	.house-main .view .shelfed {
+		border-color: var(--house-frame);
+	}
+	.house-main .view .results > li {
+		border-color: var(--house-frame);
+	}
+
+	/* Deck setup, level tests and written questions. The answer colors and
+	   markers still belong to the mode; disabled must not dim the verdict. */
+	.house-main .view .sections label,
+	.house-main .view .levels label,
+	.house-main .view .pick label,
+	.house-main .view .ladders .pick {
+		background: var(--house-panel);
+		box-shadow: var(--house-inset);
+	}
+	.house-main .view .ask,
+	.house-main .view .quizdef {
+		background: var(--house-panel);
+		border: 1px solid var(--house-frame);
+		border-radius: var(--radius);
+		padding: clamp(16px, 3vw, 26px);
+		box-shadow: var(--house-inset);
+	}
+	.house-main .view .opt:not(.right):not(.wrong),
+	.house-main .view .option:not(.right):not(.wrong) {
+		background: var(--paper-raised);
+	}
+	.house-main .view .opt:disabled.right,
+	.house-main .view .opt:disabled.wrong,
+	.house-main .view .option:disabled.right,
+	.house-main .view .option:disabled.wrong {
+		opacity: 1;
+	}
+	.house-main .view .ladders .pick:hover {
+		border-color: var(--turmeric-deep);
+	}
+	.house-main .view .cups .cup {
+		background: var(--house-panel);
+		box-shadow: var(--house-inset);
+	}
+
+	/* Plates retain their original pixels, proportions and correction text. */
+	.house-main .view .wall a {
+		padding: 12px;
+		background: var(--house-panel);
+		border-color: var(--house-frame);
+		border-radius: var(--radius);
+		box-shadow: var(--house-inset), var(--shadow-card);
+	}
+	.house-main .view .wall a:hover {
+		border-color: var(--turmeric-deep);
+	}
+	.house-main .view .plate .box {
+		border-color: var(--house-frame);
+		box-shadow: var(--shadow-card);
+	}
+	.house-main .view .corrections {
+		padding: 18px 20px;
+		border: 1px solid var(--house-frame);
+		border-left: 3px solid var(--turmeric-deep);
+		border-radius: 6px;
+		background: var(--paper-raised);
+	}
+
+	/* Palate and safety remain quiet reading rooms, with clear source notes. */
+	.house-main .view .faults,
+	.house-main .view .framing,
+	.house-main .view .entry {
+		padding: 18px 20px;
+		border: 1px solid var(--house-frame);
+		border-radius: var(--radius);
+		background: var(--house-panel);
+	}
+	.house-main .view .faults .fault:last-child {
+		border-bottom: 0;
+	}
+	.house-main .view .framing p,
+	.house-main .view .entry p {
+		line-height: 1.7;
+	}
+
+	/* The venue's desk: menu editing, preps, costs, waste and producers.
+	   Existing table scroll containers, numeric widths and status inks stay. */
+	.house-main .view .dishform,
+	.house-main .view .famform,
+	.house-main .view .editor,
+	.house-main .view .logger {
+		background: var(--house-panel);
+		border: 1px solid var(--house-frame);
+		border-radius: var(--radius);
+		padding: clamp(14px, 2vw, 20px);
+		box-shadow: var(--house-inset);
+	}
+	.house-main .view .itembook > li,
+	.house-main .view .preps > li,
+	.house-main .view .producers > li {
+		background: var(--house-panel);
+		border-color: var(--house-frame);
+		border-radius: var(--radius);
+		box-shadow: var(--house-inset);
+	}
+	.house-main .view .sheetbody table,
+	.house-main .view .editor .lines {
+		background: var(--card);
+	}
+	.house-main .view .sheetbody th,
+	.house-main .view .editor .lines th {
+		background: var(--paper-raised);
+		color: var(--ink-soft);
+	}
+	.house-main .view .counts > li,
+	.house-main .view .plan > li {
+		border-color: var(--house-frame);
+	}
+	.house-main .view .import .confirm {
+		background: var(--house-panel);
+		border-color: var(--house-frame);
+		box-shadow: var(--house-inset), var(--shadow-sheet);
+	}
+
+	/* The personal record and venue coverage: elegant but compact row lists. */
+	.house-main .view .station {
+		padding: 18px 20px;
+		border: 1px solid var(--house-frame);
+		border-radius: var(--radius);
+		background: var(--house-panel);
+	}
+	.house-main .view .rows > li {
+		border-color: var(--house-frame);
+	}
+	.house-main .view .rungs > li {
+		background: var(--paper-raised);
+		border-color: var(--house-frame);
+	}
+	.house-main .view .ways a {
+		background: var(--house-panel);
+		border-color: var(--house-frame);
+	}
+
+	/* Keep the original mobile grid widths and safe-area behavior. */
+	@media (max-width: 599px) {
+		.house-main .view .subsection { padding: 20px; }
+		.house-main .view .svcterms > li,
+		.house-main .view .corrections,
+		.house-main .view .faults,
+		.house-main .view .framing,
+		.house-main .view .entry,
+		.house-main .view .station {
+			padding: 16px;
+		}
+		.house-main .view .trackstep > li > a {
+			gap: 10px;
+			padding: 14px 12px;
+		}
+	}
+}

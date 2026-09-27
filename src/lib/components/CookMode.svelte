@@ -850,4 +850,64 @@
 			display: none;
 		}
 	}
+
+	/* A quiet working bench inside the same house. The step stays large and
+	   timers remain compact; the dialog's scrolling and focus contract is unchanged. */
+	@media screen {
+		.cook {
+			gap: 20px;
+			padding: calc(70px + env(safe-area-inset-top, 0px)) 22px calc(28px + env(safe-area-inset-bottom, 0px));
+			background: var(--paper);
+		}
+		.live {
+			width: min(100%, 780px);
+			padding: 26px 28px;
+			gap: 19px;
+			background: var(--house-panel, var(--card));
+			border: 1px solid var(--house-frame, var(--line-strong));
+			box-shadow: var(--house-inset, none);
+		}
+		.eyebrow {
+			font-family: var(--house-display, var(--display));
+			font-size: 0.72rem;
+			letter-spacing: 0.065em;
+			line-height: 1.65;
+			color: var(--turmeric-deep);
+		}
+		.close { border-color: var(--house-frame, var(--line-strong)); color: var(--ink); }
+		.timerrow { flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 100%; }
+		.clock { font-size: 2.2rem; }
+		.nav, .passbtns { flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 100%; }
+		.chip { min-height: 44px; padding: 10px 18px; font-size: 1rem; line-height: 1.4; border-color: var(--house-frame, var(--line-strong)); }
+		.chip.go { border-color: var(--accent-solid); }
+		.others li { padding: 4px 5px 4px 13px; background: var(--card); border-color: var(--house-frame, var(--line-strong)); }
+		.others li.rang { border-color: var(--chili); }
+		.ox { width: 44px; min-height: 44px; border-color: var(--field-line); }
+		.passmarks, .passfault, .pass .levers, .pass .symptom { width: 100%; max-width: 60ch; text-align: left; line-height: 1.65; }
+		.passmarks { margin-bottom: 0; }
+		.markrow { padding: 10px 8px; border-bottom: 1px solid var(--line); line-height: 1.55; }
+		.markbox { border-color: var(--field-line); border-radius: 2px; }
+		.passfault, .pass .levers span, .passnote { opacity: 1; color: var(--ink-soft); }
+		.passnote { max-width: 60ch; font-size: 0.92rem; line-height: 1.6; margin-top: 0; }
+		.faultpick { justify-content: center; }
+		.faultpick .chip.on { box-shadow: inset 0 -2px 0 var(--turmeric-deep); }
+		.dots { gap: 3px; }
+		.dot { width: 44px; height: 44px; }
+		.dot::before { border-color: var(--field-line); }
+		.awake { font-size: 0.72rem; letter-spacing: 0.08em; line-height: 1.6; }
+		@media (max-width: 520px) {
+			.cook { padding-inline: 14px; }
+			.live { padding: 23px 18px; }
+			.chip { padding-inline: 14px; }
+		}
+		@media (max-height: 460px) {
+			.cook { gap: 9px; padding: 58px 16px 16px; }
+			.live { padding: 14px 18px; gap: 8px; }
+			.clock { font-size: 1.5rem; }
+			.chip { padding: 9px 14px; }
+		}
+		@media (forced-colors: active) {
+			.live { background: Canvas; border-color: CanvasText; box-shadow: none; }
+		}
+	}
 </style>

@@ -1,7 +1,7 @@
 /**
  * The World Table: design tokens.
  *
- * Night service is the default (the original's paper #191612 / turmeric #C2A055).
+ * The Explorer's Library house palette: midnight green, brass and warm parchment.
  * Day is not a handful of overrides on a body class as it was before, but a full
  * parallel token set, so contrast, shadow depth, rule weight and grain opacity
  * can each be tuned for the service they belong to instead of inheriting values
@@ -13,32 +13,28 @@
 
 :root {
 	/* ---- ink & paper ---- */
-	--paper: #191612;
-	--paper-raised: #211d16;
-	--card: #211d16;
-	--ink: #eae2ce;
-	--ink-soft: #c9c0a8;
-	--muted: #9a907a;
-	--line: #3b3628;
-	--line-strong: #4d4735;
-	/* The edge of a text field. --line is a hairline for rules and card edges
-	   and reads 1.4:1 against the card in both services, which is fine for a
-	   rule and fails WCAG 1.4.11 as the only mark of an input's box, which owes
-	   3:1. Fields draw this instead: 3.40:1 on the night card (#211d16), 3.66:1
-	   on night paper; day values below. Leave --line alone. */
-	--field-line: #77705d;
+	--paper: #081510;
+	--paper-raised: #102119;
+	--card: #102119;
+	--ink: #f3e9d5;
+	--ink-soft: #d5cdb9;
+	--muted: #b9b6a1;
+	--line: #43513c;
+	--line-strong: #76603b;
+	/* Field edges are distinct from decorative rules and retain 3:1 contrast. */
+	--field-line: #879377;
 
 	/* ---- accents ---- */
-	--turmeric: #c2a055;
-	--turmeric-deep: #d4b269;
-	--chili: #c08090;
-	--leaf: #8fa57f;
+	--turmeric: #d5b16c;
+	--turmeric-deep: #f1d89e;
+	--chili: #efa59a;
+	--leaf: #aec49b;
 
 	/* Solid accent surfaces (the "go" buttons, active pins) and the ink that
 	   sits on them. A pair, because white-on-gold fails AA in day service:
 	   each service picks a gold dark or light enough for its ink. */
-	--accent-solid: #c2a055;
-	--on-accent: #191612;
+	--accent-solid: #d5b16c;
+	--on-accent: #081510;
 
 	/* ---- depth ---- */
 	--shadow-card: 0 1px 0 rgba(0, 0, 0, 0.35);
@@ -56,9 +52,9 @@
 
 	/* A 1.25 modular scale off a 16px base. Named by role, not by size, so a
 	   change of scale doesn't require touching every component. */
-	--t-micro: 0.6875rem; /* 11px: eyebrows, tabs, counts */
-	--t-small: 0.8125rem; /* 13px  : captions, badges */
-	--t-body: 1rem; /* 16px: running text */
+	--t-micro: 0.75rem; /* 12px: eyebrows, tabs, counts */
+	--t-small: 0.875rem; /* 14px: captions, badges */
+	--t-body: 1.0625rem; /* 17px: running text */
 	--t-lede: 1.125rem; /* 18px: intros */
 	--t-h4: 1.1875rem; /* 19px  card titles */
 	--t-h3: 1.5rem; /* 24px  : section heads */
@@ -70,7 +66,7 @@
 
 	/* ---- rhythm ---- */
 	--rule: 1px;
-	--radius: 2px;
+	--radius: 3px;
 	--gap: 14px;
 	--measure: 66ch;
 
@@ -80,22 +76,22 @@
 /* Day service: the illuminated page rather than the inverted one. */
 @media (prefers-color-scheme: light) {
 	:root:not([data-service='night']) {
-		--paper: #fefdf8;
-		--paper-raised: #fffefb;
-		--card: #fffefb;
-		--ink: #25211a;
-		--ink-soft: #453f33;
-		--muted: #7c7462;
-		--line: #ded5bd;
-		--line-strong: #c8bda0;
-		--field-line: #928870; /* 3.48:1 on the day card #fffefb, 3.45:1 on day paper */
+		--paper: #f3ead8;
+		--paper-raised: #fff8e9;
+		--card: #fff8e9;
+		--ink: #21382a;
+		--ink-soft: #414b3a;
+		--muted: #655d49;
+		--line: #d6c5a2;
+		--line-strong: #ae915d;
+		--field-line: #88795d;
 
-		--turmeric: #a5822f;
-		--turmeric-deep: #7a5f26; /* AA on tinted paper: #8a6d2e measured 4.43:1 */
-		--chili: #a04f63;
-		--leaf: #5f7a4e;
-		--accent-solid: #8a6b21; /* darker than --turmeric: white ink needs 4.5:1 */
-		--on-accent: #fffefb;
+		--turmeric: #856520;
+		--turmeric-deep: #725315;
+		--chili: #943f3a;
+		--leaf: #48633a;
+		--accent-solid: #35563d;
+		--on-accent: #fff8e9;
 
 		--shadow-card: 0 1px 0 rgba(37, 33, 26, 0.06);
 		--shadow-lift: 0 2px 10px rgba(37, 33, 26, 0.12);
@@ -111,22 +107,22 @@
 }
 
 :root[data-service='day'] {
-	--paper: #fefdf8;
-	--paper-raised: #fffefb;
-	--card: #fffefb;
-	--ink: #25211a;
-	--ink-soft: #453f33;
-	--muted: #7c7462;
-	--line: #ded5bd;
-	--line-strong: #c8bda0;
-	--field-line: #928870;
+	--paper: #f3ead8;
+	--paper-raised: #fff8e9;
+	--card: #fff8e9;
+	--ink: #21382a;
+	--ink-soft: #414b3a;
+	--muted: #655d49;
+	--line: #d6c5a2;
+	--line-strong: #ae915d;
+	--field-line: #88795d;
 
-	--turmeric: #a5822f;
-	--turmeric-deep: #7a5f26; /* AA on tinted paper: #8a6d2e measured 4.43:1 */
-	--chili: #a04f63;
-	--leaf: #5f7a4e;
-	--accent-solid: #8a6b21; /* darker than --turmeric: white ink needs 4.5:1 */
-	--on-accent: #fffefb;
+	--turmeric: #856520;
+	--turmeric-deep: #725315;
+	--chili: #943f3a;
+	--leaf: #48633a;
+	--accent-solid: #35563d;
+	--on-accent: #fff8e9;
 
 	--shadow-card: 0 1px 0 rgba(37, 33, 26, 0.06);
 	--shadow-lift: 0 2px 10px rgba(37, 33, 26, 0.12);
@@ -151,12 +147,21 @@
    --------------------------------------------------------------------- */
 :root {
 	--oot-accent: var(--turmeric);
-	/* The accent dark enough to read at label size. turmeric is 3.53:1 on day
-	   paper and turmeric-deep is 5.90:1; the shared layer uses this for its
+	/* The accent dark enough to read at label size on day
+	   paper; the shared layer uses the stronger accent for its
 	   section headings, which are 12.5px uppercase and owe 4.5:1. */
 	--oot-accent-deep: var(--turmeric-deep);
 	--oot-line: var(--line);
 	--oot-ink: var(--ink);
 	--oot-dim: var(--muted);
 	--oot-raise: var(--paper-raised);
+}
+
+/* Presentation tokens shared by the culinary library's screen treatments. */
+:root {
+    --house-display: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+    --house-reading: var(--text);
+    --house-frame: var(--line-strong);
+    --house-panel: linear-gradient(145deg, color-mix(in srgb, var(--turmeric) 7%, var(--card)), var(--card) 70%);
+    --house-inset: inset 0 0 0 4px var(--card), inset 0 0 0 5px color-mix(in srgb, var(--turmeric) 28%, transparent);
 }

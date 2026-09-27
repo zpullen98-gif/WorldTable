@@ -156,4 +156,49 @@
 		border-color: var(--turmeric);
 		color: var(--turmeric-deep);
 	}
+
+	/* A small bound folio. Keep every recipe in the DOM and leave the printed
+	   index-card treatment above intact. */
+	@media screen {
+		.card {
+			padding: 48px 20px 20px;
+			background: var(--house-panel, var(--card));
+			border-color: var(--house-frame, var(--line-strong));
+			box-shadow: var(--house-inset, none), var(--shadow-card);
+		}
+		.card::before {
+			inset: 6px 7px auto;
+			height: 29px;
+			border-bottom: 1px solid var(--line-strong);
+			background: none;
+		}
+		.tab {
+			top: 14px;
+			left: 20px;
+			right: 20px;
+			font-family: var(--house-display, var(--display));
+			font-size: 0.66rem;
+			letter-spacing: 0.045em;
+		}
+		:is(h2, h3) {
+			font-size: 1.4rem;
+			line-height: 1.25;
+			margin-bottom: 9px;
+		}
+		.sub {
+			font-size: 0.94rem;
+			line-height: 1.45;
+			margin-bottom: 15px;
+		}
+		.badges { gap: 7px; font-size: 0.76rem; }
+		.badge { padding: 3px 8px; line-height: 1.4; }
+		.card:hover {
+			transform: translateY(-2px);
+			border-color: var(--turmeric-deep);
+		}
+		@media (forced-colors: active) {
+			.card { background: Canvas; border-color: CanvasText; box-shadow: none; }
+			.card::before { border-color: CanvasText; }
+		}
+	}
 </style>

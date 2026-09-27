@@ -114,7 +114,7 @@ export default defineConfig({
 				 * under client) whenever none of ours starts with client/, so the
 				 * ignore is what keeps them out. verify-build asserts it.
 				 */
-				globIgnores: ['**/node_modules/**', '**/*.woff', '**/sw-shared.js', '**/shared/oot-maitre.js', '**/plates/*.webp'],
+				globIgnores: ['**/node_modules/**', '**/*.woff', '**/sw-shared.js', '**/shared/oot-maitre.js', '**/plates/*.webp', '**/house/*.webp'],
 				maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
 				/**
 				 * Supplying manifestTransforms REPLACES the SvelteKit plugin's own
@@ -219,6 +219,18 @@ export default defineConfig({
 				 * repeated in static/sw-shared.js and the two must agree.
 				 */
 				runtimeCaching: [
+                    // Decorative house artwork loads on first view, like the plates,
+                    // then stays available offline without enlarging the core install.
+                    // Versioned filenames replace art; this cache owns only this wing.
+                    {
+                        urlPattern: ({ url, sameOrigin }) => sameOrigin && /\/house\/world-table-[^/]+\.webp$/.test(url.pathname),
+                        handler: 'CacheFirst',
+                        options: {
+                            cacheName: 'oot-table-art-v1',
+                            cacheableResponse: { statuses: [200] },
+                            expiration: { maxEntries: 4 }
+                        }
+                    },
 					/**
 					 * The Plates' pictures: 6.8 MB of drawings the reader opens one at a
 					 * time, and none of which belongs in the install (the transcriptions

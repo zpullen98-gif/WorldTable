@@ -11,8 +11,41 @@
 	import UpdatePrompt from '$lib/components/UpdatePrompt.svelte';
 	import TimerBar from '$lib/components/TimerBar.svelte';
 	import { bareHtmlPath } from '$lib/htmlPath';
+	import { onMount } from 'svelte';
 
 	let { children } = $props();
+
+	// The decorative image can finish loading before a first service worker
+	// takes control. Request it once after claim so the art's runtime route
+	// keeps that first visit offline too, without adding it to the core install.
+	onMount(() => {
+		if (!('serviceWorker' in navigator)) return;
+		let warmedWorker: ServiceWorker | null = null;
+		const keepArtwork = () => {
+			const worker = navigator.serviceWorker.controller;
+			// An arrival from the hub may still be controlled by its root worker.
+			// Only this wing's worker owns the artwork route. Warm each new edition.
+			if (!worker || worker.scriptURL !== new URL(`${base}/sw.js`, location.href).href || warmedWorker === worker) return;
+			warmedWorker = worker;
+			void fetch(`${base}/house/world-table-library-v1.webp`, { cache: 'force-cache' }).catch(() => {});
+		};
+		keepArtwork();
+		navigator.serviceWorker.addEventListener('controllerchange', keepArtwork);
+		return () => navigator.serviceWorker.removeEventListener('controllerchange', keepArtwork);
+	});
+
+	// Font size, device width and menu counts can all wrap the navigation.
+	// Publish its actual height so anchored terms and sticky rails stay clear.
+	let modebarEl: HTMLElement | undefined = $state();
+	$effect(() => {
+		if (!modebarEl || typeof ResizeObserver === 'undefined') return;
+		const bar = modebarEl;
+		const measure = () => document.documentElement.style.setProperty('--modebar-h', `${Math.ceil(bar.getBoundingClientRect().height)}px`);
+		const observer = new ResizeObserver(measure);
+		measure();
+		observer.observe(bar);
+		return () => observer.disconnect();
+	});
 
 	// One hydrate for the whole app. Views read `session.ready` and show their
 	// own skeleton rather than flashing an empty menu.
@@ -229,9 +262,13 @@
 
 <a class="skip" href="#main">Skip to content</a>
 
-<header>
+<header class="house-masthead" class:house-home={path === '/'}>
+    <picture class="house-art" aria-hidden="true" data-print="hide">
+        <img src="{base}/house/world-table-library-v1.webp" width="1536" height="1024" alt="" fetchpriority="high" decoding="async" />
+    </picture>
 	<div class="shell head-inner">
 		<div class="brand">
+            <p class="house-signature" data-print="hide">Outside Of Time Hospitality</p>
 			<!-- The site name is the page's h1 only on the index. On a recipe or a
 			     chapter the dish/chapter title is the document's real heading, and
 			     two competing h1s make the outline meaningless to a screen reader. -->
@@ -262,7 +299,7 @@
 	</div>
 </header>
 
-<nav class="modebar" data-print="hide" aria-label="Sections">
+<nav class="modebar" data-print="hide" aria-label="Sections" bind:this={modebarEl}>
 	<div class="shell modebar-inner">
 		{#each MODES as m (m.href)}
 			{@const here = isActive(m.href)}
@@ -317,7 +354,7 @@
 	</div>
 {/if}
 
-<main id="main" tabindex="-1">
+<main id="main" class="house-main" tabindex="-1">
 	{@render children()}
 </main>
 
@@ -655,4 +692,45 @@
 			padding-bottom: 20px;
 		}
 	}
+
+    @media screen {
+        .house-masthead { max-width: 1160px; margin: 24px auto 0; padding: 0; min-height: 176px; background: #081510; isolation: isolate; overflow: hidden; border: 1px solid #75613b; border-bottom: 0; }
+        .house-art { position: absolute; inset: 0; z-index: -2; }
+        .house-art img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 39%; opacity: .42; }
+        .house-masthead::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, #03110d70, #08151024 45%, #081510e8); pointer-events: none; }
+        .head-inner { justify-content: center; align-items: center; text-align: center; padding: 32px 24px; min-height: 176px; }
+        .brand { max-width: 100%; }
+        .house-masthead .brandline { padding: 0; font-family: var(--house-display); font-size: clamp(1.75rem, 3.8vw, 2.6rem); font-weight: 500; line-height: 1.2; letter-spacing: .03em; color: #f1d89e; text-shadow: 0 2px 16px #000c; }
+        .house-masthead .brandline em { font-style: normal; color: inherit; }
+        .house-masthead .brand p { color: #eee3cb; }
+        .house-masthead .house-signature { margin: 0 0 14px; font-family: var(--house-display); font-size: .69rem; letter-spacing: .22em; }
+        .house-masthead .eyebrow { font-size: .75rem; letter-spacing: .08em; margin-top: 14px; }
+        .house-home .head-inner { align-items: flex-start; min-height: clamp(400px, 53vw, 610px); padding-top: 40px; }
+        .house-home .brandline { font-size: clamp(2.15rem, 5.8vw, 4.1rem); }
+        .house-home .house-art img { opacity: 1; object-position: 50% 58%; }
+        .house-home::after { background: linear-gradient(180deg, #03100ce8, #03100c9c 34%, transparent 57%, #081510ba); }
+        .modebar { background: var(--paper); border-bottom-color: var(--house-frame); box-shadow: 0 8px 24px #0001; }
+        .modetab { font-family: var(--house-display); font-size: .72rem; color: var(--ink-soft); }
+        .modetab.on { color: var(--turmeric-deep); border-bottom-color: var(--turmeric-deep); }
+        .service { color: var(--ink-soft); }
+        footer { margin-top: 26px; border-top-color: var(--house-frame); }
+    }
+    @media screen and (max-width: 599px) {
+        .house-masthead { margin: 0; border-inline: 0; }
+        .head-inner { min-height: 150px; padding: 32px 20px 22px; }
+        .house-masthead { min-height: 150px; }
+        .house-masthead .house-signature { font-size: .6rem; letter-spacing: .17em; padding-inline: 36px; }
+        .house-masthead .eyebrow { max-width: 32ch; margin: 12px auto 0; line-height: 1.5; letter-spacing: .025em; }
+        .house-masthead .brandline { font-size: clamp(1.6rem, 6.4vw, 2.25rem); }
+        .house-home .brandline { font-size: clamp(2rem, 8.5vw, 3rem); }
+        .house-home .head-inner { min-height: 440px; padding-top: 36px; }
+        .house-home .house-art img { object-position: 49% 62%; }
+        .modetab { padding-inline: 8px; font-size: .66rem; letter-spacing: .04em; }
+    }
+    @media screen and (forced-colors: active) {
+        .house-masthead { background: Canvas; border-color: CanvasText; min-height: auto; }
+        .house-masthead .house-art, .house-masthead::after { display: none; }
+        .house-masthead .head-inner { min-height: auto; padding-block: 30px; }
+        .house-masthead .brandline, .house-masthead .brand p { color: CanvasText; text-shadow: none; }
+    }
 </style>

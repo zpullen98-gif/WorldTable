@@ -21,6 +21,7 @@
 
 @import './lib/styles/tokens.css';
 @import './lib/styles/print.css';
+@import './lib/styles/house-surfaces.css';
 
 *,
 *::before,
@@ -277,4 +278,25 @@ a.chip {
 	padding-inline: 20px;
 	position: relative;
 	z-index: 1;
+}
+
+@font-face {
+    font-family: 'Cinzel'; font-style: normal; font-weight: 400 900; font-display: swap;
+    src: url('./lib/assets/cinzel-latin.woff2') format('woff2');
+}
+
+@media screen {
+    html { scroll-padding-top: calc(var(--modebar-h) + 14px); }
+    body { background: radial-gradient(ellipse at 50% 0, color-mix(in srgb, var(--turmeric) 6%, transparent), transparent 900px), var(--paper); }
+    a { text-underline-offset: 4px; }
+    button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+    button { touch-action: manipulation; }
+    :where(button, a, input, select, textarea, [tabindex]):focus-visible { outline-color: var(--turmeric-deep); outline-width: 3px; outline-offset: 3px; }
+    .house-main { min-height: 38vh; }
+    .house-main :is(h1, h2, h3) { text-wrap: balance; }
+    .house-main :is(input:not([type='checkbox']):not([type='radio']):not([type='range']), select, textarea) { border-color: var(--field-line); }
+    .house-main :is(button.chip, a.chip, .train, .tool-link) { min-height: 44px; }
+    .house-main :is(.chip.go, .chip.on) { font-weight: 600; }
+    :root .house-main .toolbar { top: var(--modebar-h); }
+    :root .house-main .rail > ul { top: calc(var(--modebar-h) + 20px); max-height: calc(100dvh - var(--modebar-h) - 40px); }
 }
