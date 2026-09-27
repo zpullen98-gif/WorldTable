@@ -554,7 +554,11 @@ const cards = [
 		traps: [
 			{ says: 'Shellfish that must always be cooked and is never eaten raw', why: 'Small hard clams like littlenecks are a raw bar staple on the half shell.' }
 		]
-	}
+	},
+	{ id: 'fd_0317', term: 'Uni', planned: true },
+	{ id: 'fd_0318', term: 'Dover Sole', planned: true },
+	{ id: 'fd_0319', term: 'Langoustine', planned: true },
+	{ id: 'fd_0320', term: 'Escolar', planned: true }
 ];
 
 export default cards;

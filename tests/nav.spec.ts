@@ -67,6 +67,7 @@ test.describe('exactly one tab owns each route', () => {
 		['/', 'Home'],
 		['/level/1', 'Levels'],
 		['/level/1/test', 'Levels'],
+		['/level/1/read', 'Levels'],
 		['/study', 'Levels'],
 		['/plates', 'Levels'],
 		['/plates/beef-cuts', 'Levels'],

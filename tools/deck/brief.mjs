@@ -16,7 +16,7 @@
  * and came back at twice the house length.
  */
 
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { LIMITS, AIMS, BANNED, CARD_KEYS, genericWords, identifyingWords } from '../derive/floor-deck-contract.mjs';
 import { DECK_SECTIONS, DECK_LEVELS, PACKET_ERRORS } from '../derive/floor-deck.mjs';
@@ -68,6 +68,16 @@ function recipeCandidates(term) {
 		.slice(0, 4)
 		.map((r) => ({ slug: r.slug, name: r.name }));
 }
+
+/* An expansion roster (tools/deck/add-stubs.mjs) records the level it placed
+   each new word at; the writer gives the card that level rather than
+   deciding again. Absent for the first 300, whose writers placed them. */
+const expansionFile = join(OUT_DIR, 'expansion.levels.json');
+const expansion = existsSync(expansionFile) ? JSON.parse(readFileSync(expansionFile, 'utf8')) : {};
+const intended = (term) => {
+	const row = expansion[`${section.key}|${term}`];
+	return row ? { level: row.level, placedBecause: row.reason, ...(row.lexiconSlug ? { lexiconSlugFromRoster: row.lexiconSlug } : {}) } : {};
+};
 
 const cards = await loadSection(section.key);
 const roster = cards
@@ -140,7 +150,7 @@ process.stdout.write(
 		banned: BANNED,
 		respellingKey: RESPELLING,
 		hasExemplars: exemplars.length > 0,
-		todo: roster.filter((r) => !r.written).map((r) => ({ id: r.id, term: r.term, knownPacketError: Boolean(r.knownPacketError) })),
+		todo: roster.filter((r) => !r.written).map((r) => ({ id: r.id, term: r.term, knownPacketError: Boolean(r.knownPacketError), ...intended(r.term) })),
 		roster: roster.map((r) => ({ id: r.id, term: r.term }))
 	}) + String.fromCharCode(10)
 );

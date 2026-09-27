@@ -405,6 +405,82 @@ const cards = [
 			{ says: 'Beef from cattle massaged daily and fed beer to make the meat tender', why: 'That is mostly legend. The marbling comes from breeding and long, careful feeding.' },
 			{ says: 'A protected name for beef raised only around the city of Kobe', why: 'That describes Kobe, one regional brand. The word covers the Japanese breeds wherever they are raised.' }
 		]
+	},
+	{
+		id: 'fd_0313',
+		term: 'Denver Steak',
+		level: 3,
+		aliases: ['Underblade Steak', 'Zabuton'],
+		gist: 'Marbled steak cut from under the shoulder blade, grilled hot',
+		guest: "It's a marbled steak from under the shoulder blade, one of the few shoulder muscles tender enough to grill. It's rich and beefy, close to a ribeye.",
+		why: 'One muscle under the shoulder blade in the chuck, cut out by hand and named around 2009 after an industry study ranked it among the tenderest on the animal. Heavy marbling makes it rich, the grain runs loose, and it costs well under a ribeye.',
+		madeWith: ['beef', 'salt', 'often butter', 'sometimes garlic'],
+		note: 'Best grilled hot and served medium rare, then sliced across the grain.',
+		notThis: 'Not a flat iron, the top blade above the shoulder blade. This one sits beneath it, with more fat.',
+		seeAlso: ['fd_0091', 'fd_0090'],
+		confusedWith: ['fd_0100'],
+		line: 'Grilled Denver steak, chimichurri, crispy potatoes',
+		traps: [
+			{ says: 'A ribeye trimmed of its cap and sold under a cheaper name', why: 'It is a separate chuck muscle from under the shoulder blade, not a trimmed ribeye.' },
+			{ says: 'Steak from the hind leg, named for the city where it was first sold', why: 'It comes from the shoulder, and Denver is a marketing name, not the place it comes from.' }
+		]
+	},
+	{
+		id: 'fd_0314',
+		term: 'Teres Major',
+		level: 3,
+		say: 'TEH-reez MAY-jer',
+		aliases: ['Petite Tender', 'Shoulder Tender', 'Bistro Filet'],
+		gist: 'Small shoulder muscle roasted whole and sliced like a little filet',
+		guest: "It's a small shoulder muscle that happens to be one of the most tender on the animal. Roasted whole and sliced, it eats like a filet at a friendlier price.",
+		why: 'A small muscle the size of a pork tenderloin, against the shoulder blade, doing little work, so it stays tender. It is cut out by hand, so it is scarce and sold whole. More beef flavor than tenderloin, leaner than ribeye, quick to cook.',
+		madeWith: ['beef', 'salt', 'often butter', 'often thyme'],
+		note: 'Best served medium rare; it is lean, so it dries out past medium.',
+		notThis: 'Not a filet mignon, which is tenderloin from along the spine. This shoulder muscle only eats like one.',
+		seeAlso: ['fd_0100', 'fd_0091'],
+		confusedWith: ['fd_0093'],
+		line: 'Roasted teres major, potato purée, red wine jus',
+		traps: [
+			{ says: 'Tail of the tenderloin, tied into a small roast and sold cheap', why: 'It is a shoulder muscle, nowhere near the tenderloin; it only eats like one.' },
+			{ says: 'The largest muscle on the shoulder, sliced thin for the grill', why: 'It is a small muscle, under a pound, roasted whole and sliced into medallions.' }
+		]
+	},
+	{
+		id: 'fd_0315',
+		term: 'Chateaubriand',
+		level: 3,
+		say: 'shah-toh-bree-AHN',
+		gist: 'Thick center cut of the tenderloin, roasted whole and carved for two',
+		guest: "It's the thick center of the beef tenderloin, roasted whole and carved for two. Very tender and mild, classically with béarnaise, a tarragon sauce made with egg yolk and butter.",
+		why: 'The tenderloin barely works, so it is the tenderest, mildest muscle on the steer. Its center is the thickest, evenest stretch, so one roast cooks evenly and carves into equal slices. Credited to the chef of the writer Chateaubriand, early 1800s.',
+		madeWith: ['beef', 'butter', 'egg yolk', 'often white wine', 'often tarragon'],
+		note: 'One roast, so both guests share one doneness, classically medium rare.',
+		notThis: 'Not a filet mignon, a single steak from the same muscle. This is the thick center roasted whole for two.',
+		seeAlso: ['fd_0093', 'fd_0196', 'fd_0096'],
+		line: 'Chateaubriand for two, béarnaise, pommes château',
+		traps: [
+			{ says: 'Thick rib steak named after the French castle where it was first cooked', why: 'It is tenderloin, not rib, and it is named for a French writer, not a building.' }
+		]
+	},
+	{
+		id: 'fd_0316',
+		term: 'Secreto Ibérico',
+		level: 4,
+		say: 'seh-KREH-toh ee-BEH-ree-koh',
+		aliases: ['Secreto de Bellota', 'Cruceta'],
+		gist: 'Thin marbled sheet of pork from behind the shoulder, hidden by fat',
+		guest: "It's a thin, richly marbled cut of Spanish Ibérico pork from behind the shoulder, grilled hot and fast. Rich and nutty, more like a great steak than a pork chop.",
+		why: 'Ibérico pigs, some acorn-fed, marble fat into the muscle itself, and the secreto is one of their fattiest cuts: a flat fan between shoulder and belly, hidden under a layer of fat, hence the name. Off a fast grill it eats like a marbled skirt steak, sweet and nutty.',
+		madeWith: ['iberico pork', 'salt', 'often olive oil', 'sometimes garlic'],
+		note: 'Spanish kitchens serve it rosy in the center; ask how this kitchen cooks it.',
+		notThis: 'Not jamón ibérico, the cured ham sliced thin. This is a fresh cut for the grill.',
+		seeAlso: ['fd_0098', 'fd_0094', 'fd_0283'],
+		confusedWith: ['fd_0082'],
+		line: 'Grilled secreto ibérico, romesco, charred spring onions',
+		traps: [
+			{ says: 'Lean pork loin cut from a Spanish pig, sold as a thick roast', why: 'It is a thin, fatty sheet from behind the shoulder, not a lean loin roast.' },
+			{ says: 'Pork in a house spice rub whose recipe the kitchen keeps hidden', why: 'The name refers to where the cut hides under a layer of fat, not to a recipe.' }
+		]
 	}
 ];
 

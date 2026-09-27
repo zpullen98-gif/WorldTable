@@ -641,6 +641,43 @@
       "level": 2
     },
     {
+      "id": "fd_0313",
+      "term": "Denver Steak",
+      "section": "cuts",
+      "level": 3,
+      "aliases": [
+        "Underblade Steak",
+        "Zabuton"
+      ]
+    },
+    {
+      "id": "fd_0314",
+      "term": "Teres Major",
+      "section": "cuts",
+      "level": 3,
+      "aliases": [
+        "Petite Tender",
+        "Shoulder Tender",
+        "Bistro Filet"
+      ]
+    },
+    {
+      "id": "fd_0315",
+      "term": "Chateaubriand",
+      "section": "cuts",
+      "level": 3
+    },
+    {
+      "id": "fd_0316",
+      "term": "Secreto Ibérico",
+      "section": "cuts",
+      "level": 4,
+      "aliases": [
+        "Secreto de Bellota",
+        "Cruceta"
+      ]
+    },
+    {
       "id": "fd_0108",
       "term": "Arctic Char",
       "section": "fish",
@@ -1297,6 +1334,45 @@
       "level": 2
     },
     {
+      "id": "fd_0329",
+      "term": "Fregola",
+      "section": "starches",
+      "level": 3,
+      "aliases": [
+        "Fregula",
+        "Fregola Sarda"
+      ]
+    },
+    {
+      "id": "fd_0330",
+      "term": "Chitarra",
+      "section": "starches",
+      "level": 3,
+      "aliases": [
+        "Spaghetti alla Chitarra",
+        "Maccheroni alla Chitarra",
+        "Tonnarelli"
+      ]
+    },
+    {
+      "id": "fd_0331",
+      "term": "Carolina Gold",
+      "section": "starches",
+      "level": 3,
+      "aliases": [
+        "Carolina Gold Rice"
+      ]
+    },
+    {
+      "id": "fd_0332",
+      "term": "Bomba",
+      "section": "starches",
+      "level": 3,
+      "aliases": [
+        "Arroz Bomba"
+      ]
+    },
+    {
       "id": "fd_0195",
       "term": "Aioli",
       "section": "sauces",
@@ -1423,6 +1499,30 @@
       "level": 3
     },
     {
+      "id": "fd_0333",
+      "term": "Bordelaise",
+      "section": "sauces",
+      "level": 3
+    },
+    {
+      "id": "fd_0334",
+      "term": "Gribiche",
+      "section": "sauces",
+      "level": 3
+    },
+    {
+      "id": "fd_0335",
+      "term": "Soubise",
+      "section": "sauces",
+      "level": 3
+    },
+    {
+      "id": "fd_0336",
+      "term": "Nage",
+      "section": "sauces",
+      "level": 4
+    },
+    {
       "id": "fd_0216",
       "term": "Carpaccio",
       "section": "preparations",
@@ -1546,6 +1646,33 @@
       "level": 1
     },
     {
+      "id": "fd_0337",
+      "term": "Torchon",
+      "section": "preparations",
+      "level": 3,
+      "aliases": [
+        "Au Torchon"
+      ]
+    },
+    {
+      "id": "fd_0338",
+      "term": "En Croûte",
+      "section": "preparations",
+      "level": 3
+    },
+    {
+      "id": "fd_0339",
+      "term": "Quenelle",
+      "section": "preparations",
+      "level": 3
+    },
+    {
+      "id": "fd_0340",
+      "term": "Grenobloise",
+      "section": "preparations",
+      "level": 4
+    },
+    {
       "id": "fd_0234",
       "term": "Beignets",
       "section": "bread",
@@ -1649,6 +1776,37 @@
       "term": "Soufflé",
       "section": "bread",
       "level": 2
+    },
+    {
+      "id": "fd_0341",
+      "term": "Dacquoise",
+      "section": "bread",
+      "level": 3
+    },
+    {
+      "id": "fd_0342",
+      "term": "Canelé",
+      "section": "bread",
+      "level": 3,
+      "aliases": [
+        "Cannelé",
+        "Canelé de Bordeaux"
+      ]
+    },
+    {
+      "id": "fd_0343",
+      "term": "Kouign-Amann",
+      "section": "bread",
+      "level": 3
+    },
+    {
+      "id": "fd_0344",
+      "term": "Sablé",
+      "section": "bread",
+      "level": 3,
+      "aliases": [
+        "Sablé Breton"
+      ]
     },
     {
       "id": "fd_0249",
@@ -1757,6 +1915,37 @@
       "aliases": [
         "Chantilly Cream",
         "Crème Chantilly"
+      ]
+    },
+    {
+      "id": "fd_0345",
+      "term": "Sabayon",
+      "section": "custards",
+      "level": 3,
+      "aliases": [
+        "Zabaglione",
+        "Zabaione"
+      ]
+    },
+    {
+      "id": "fd_0346",
+      "term": "Crémeux",
+      "section": "custards",
+      "level": 3
+    },
+    {
+      "id": "fd_0347",
+      "term": "Posset",
+      "section": "custards",
+      "level": 3
+    },
+    {
+      "id": "fd_0348",
+      "term": "Vacherin",
+      "section": "custards",
+      "level": 4,
+      "aliases": [
+        "Vacherin Glacé"
       ]
     },
     {
@@ -1891,6 +2080,24 @@
       "level": 2
     },
     {
+      "id": "fd_0349",
+      "term": "Espelette",
+      "section": "pantry",
+      "level": 3
+    },
+    {
+      "id": "fd_0350",
+      "term": "Yuzu Kosho",
+      "section": "pantry",
+      "level": 3
+    },
+    {
+      "id": "fd_0351",
+      "term": "Black Garlic",
+      "section": "pantry",
+      "level": 3
+    },
+    {
       "id": "fd_0285",
       "term": "Heirloom",
       "section": "language",
@@ -2000,6 +2207,34 @@
       "term": "Organic",
       "section": "language",
       "level": 1
+    },
+    {
+      "id": "fd_0352",
+      "term": "Mignardises",
+      "section": "language",
+      "level": 3
+    },
+    {
+      "id": "fd_0353",
+      "term": "Ikejime",
+      "section": "language",
+      "level": 4
+    },
+    {
+      "id": "fd_0354",
+      "term": "Regenerative",
+      "section": "language",
+      "level": 3,
+      "aliases": [
+        "Regeneratively Raised",
+        "Regeneratively Farmed"
+      ]
+    },
+    {
+      "id": "fd_0355",
+      "term": "Omakase",
+      "section": "language",
+      "level": 3
     }
   ],
   "byLexicon": {
@@ -2016,7 +2251,8 @@
       "fd_0047"
     ],
     "foie-gras-torchon-mi-cuit-and-ethics-of-service": [
-      "fd_0055"
+      "fd_0055",
+      "fd_0337"
     ],
     "tasso-and-cajun-andouille": [
       "fd_0064",
@@ -2249,11 +2485,17 @@
     "salt-types-and-when-each-wins": [
       "fd_0284"
     ],
+    "black-garlic": [
+      "fd_0351"
+    ],
     "dry-aging": [
       "fd_0294"
     ],
     "grass-fed-vs-grain-finished": [
       "fd_0295"
+    ],
+    "sashimi-grade-and-ikejime": [
+      "fd_0353"
     ]
   }
 }

@@ -299,7 +299,11 @@ const cards = [
 		traps: [
 			{ says: 'Farmed mushroom grown on poultry manure, named for how it is raised', why: 'It is wild, grows on tree trunks, and the name comes from its chicken-like texture.' }
 		]
-	}
+	},
+	{ id: 'fd_0321', term: 'White Truffle', planned: true },
+	{ id: 'fd_0322', term: 'Matsutake', planned: true },
+	{ id: 'fd_0323', term: 'Summer Truffle', planned: true },
+	{ id: 'fd_0324', term: 'Hedgehog Mushroom', planned: true }
 ];
 
 export default cards;

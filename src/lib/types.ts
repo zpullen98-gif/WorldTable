@@ -832,3 +832,31 @@ export interface StationsData {
 	/** Techniques the corpus does not actually drill. Never counted. */
 	undrilled: string[];
 }
+
+/* ---- the primers: one reader per level per subsection ---- */
+
+/** An item a primer names, linked where the level page would open it. */
+export interface PrimerCite {
+	slug: string;
+	name: string;
+	/** Without the base: the page prefixes it. */
+	href: string;
+}
+
+export interface Primer {
+	level: DeckLevel;
+	subsection: SubsectionKey;
+	/** One sentence: the subsection at this level, as said at pre-shift. */
+	lede: string;
+	paragraphs: string[];
+	/** Every one an item placed at this level in this subsection that the text names. */
+	cites: PrimerCite[];
+	/** What the level above asks of this subject; at Level IV, what keeps it sharp. */
+	next: string;
+}
+
+export interface PrimersData {
+	version: 1;
+	/** Level order, then the subsections' order; only the pairs written so far. */
+	primers: Primer[];
+}

@@ -142,6 +142,10 @@
 			· <span class="lv-here">Your level</span>{/if}
 	</p>
 
+	{#if data.primed.length}
+		<a class="readfirst" href="{base}/level/{n}/read">Read what this level asks</a>
+	{/if}
+
 	<ol class="subsections">
 		{#each data.subsections as s (s.key)}
 			{@const p = row?.subsections.find((x) => x.key === s.key) ?? null}
@@ -176,6 +180,9 @@
 				{/if}
 
 				<div class="doors">
+					{#if data.primed.includes(s.key)}
+						<a class="train" href="{base}/level/{n}/read#{s.key}">Read first</a>
+					{/if}
 					{#if s.key === 'dishes'}
 						<a class="train" href={semesterDoor(p)}>Read the semester</a>
 						{#if firstUnmet(p)}<a class="train" href="{base}/recipe/{firstUnmet(p)}">Cook the next dish</a>{/if}
@@ -248,6 +255,27 @@
 		text-transform: uppercase;
 		font-size: var(--t-micro);
 		color: var(--turmeric-deep);
+	}
+
+	.readfirst {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		margin-top: 12px;
+		padding: 0 14px;
+		border: var(--rule) solid var(--line);
+		border-radius: var(--radius);
+		background: var(--card);
+		color: var(--ink);
+		font-size: var(--t-small);
+		text-decoration: none;
+	}
+	.readfirst:hover {
+		border-color: var(--turmeric-deep);
+	}
+	.readfirst:focus-visible {
+		outline: 2px solid var(--turmeric-deep);
+		outline-offset: 2px;
 	}
 
 	.subsections {

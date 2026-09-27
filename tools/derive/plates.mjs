@@ -387,6 +387,9 @@ export function buildPlates(ctx) {
 			for (const it of g.items) {
 				const keys = [foldName(it.name)];
 				if (it.sub) keys.push(foldName(`${it.name} ${it.sub}`));
+				/* a short sub is the plate's own alias ("Butter Beans (Lima Beans)",
+				   "Southern Peas (Field Peas)"): a name in its own right, tried last */
+				if (it.sub && it.sub.split(/\s+/).length <= 3 && !/[,:;]/.test(it.sub)) keys.push(foldName(it.sub));
 				/** @type {{ deck?: string, lexicon?: string }} */
 				const links = {};
 				for (const k of keys) {

@@ -35,6 +35,7 @@ const VIEWS = [
 	{ path: '/level', name: 'levels forwarder' },
 	{ path: '/level/1', name: 'level page' },
 	{ path: '/level/1/test', name: 'level test' },
+	{ path: '/level/1/read', name: 'level reader' },
 	{ path: '/plates', name: 'the plates' },
 	{ path: '/plates/beef-cuts', name: 'a plate' },
 	{ path: '/service', name: 'service track' },

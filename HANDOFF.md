@@ -283,6 +283,24 @@ import a value back into it.
 
 ## What was built, most recent first
 
+### 27 Sep (later) — the primers, the deck at III and IV, the first atlas entries
+
+- **The primers**: a written reader per level per subsection (31), on
+  `/level/[n]/read` with a Read first door from every subsection of the level
+  page. Written by 168 agents (author, three refuters, corrector, a critic per
+  level; the Level III and IV critics died on the usage limit, I and II ran
+  with their repairs), gated by `tools/derive/primers.mjs` (every cite an item
+  placed at that level that the text names, the deck's prose rules, no
+  scoring or locking language), `PRIMERS_COMPLETE` on. The Level test
+  sentence is kept once per level by `tools/primers/dedupe-level-test.mjs`.
+- **The Floor Deck at Levels III and IV**: a roster run (43 agents) chose 55
+  words; 31 are written and merged (312 cards; Sous Chef 35 to 61, Chef 14 to
+  19). 24 stubs wait (see `tools/deck/README.md`, "Where it stands");
+  `DECK_COMPLETE` is off until they land.
+- **The atlas**: Huckleberry, Pawpaw and Crabapple entered the Fruit Atlas and
+  the plates now link to them; fifteen more plate items are held for a second
+  run (`tools/atlas/README.md`).
+
 ### 27 Sep — the Plates: twenty illustrated reference plates
 
 The owner drew twenty reference posters (cut charts for chicken, pork and

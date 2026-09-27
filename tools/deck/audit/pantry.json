@@ -461,6 +461,116 @@
 				"notes": "Every roster row has a card, and ids and terms match. The prose averages 665 characters a card, under the 720 ceiling. The heaviest cards are Pimentón at 771 and Mostarda at 740, both inside the 900 per-card cap. The Banyuls known packet error is covered: its trap reads 'eastern France' and matches /east/i. No verdict words, no em or en dashes and no banned food-safety substrings turned up. No gist or trap uses a word from its card's mayNotAppearInGistOrTraps list. Every card with an accented letter or a hard name has a say. Every card with confusedWithTerms has a notThis. No two gists or guest lines are hard to tell apart; the closest pairs, Balsamic/Saba and Jam/Compote/Marmalade, each say what sets them apart. Operator notes: (1) Compote lists Coulis as a confusion. Check that the Coulis card in the sauces section links back to Compote. (2) Both Balsamic and Saba could reasonably add Gastrique or Agrodolce to seeAlsoTerms, since guests call balsamic reduction a gastrique, but that is optional. (3) The Mostarda origin says the word comes from 'mosto, grape must'. The usual etymology is Latin mustum ardens, 'burning must', which is better and still checkable."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-27",
+			"pass": "revision",
+			"cards": [
+				"fd_0349",
+				"fd_0350",
+				"fd_0351"
+			],
+			"findings": [
+				{
+					"id": "fd_0349",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Pimentón is Spanish and smoked",
+					"because": "Pimentón is simply Spanish paprika; only pimentón de la Vera is oak-smoked, while pimentón de Murcia is unsmoked. The roster's own Pimentón card (fd_0283) says 'often smoked' and names Murcia in its origin, so this card contradicts the card it points to.",
+					"fix": "Not smoked paprika. Spanish pimentón is often smoked; this is French, unsmoked, fruitier.",
+					"lens": "fact",
+					"key": "pantry-1-fact-1"
+				},
+				{
+					"id": "fd_0351",
+					"field": "guest",
+					"severity": "style",
+					"claim": "The bite is gone; it tastes more like balsamic.",
+					"because": "The guest line may not carry a semicolon (house rule: no brackets, colons or semicolons in guest); a server reads this aloud as two sentences anyway.",
+					"fix": "The bite is gone. It tastes more like balsamic.",
+					"lens": "floor",
+					"key": "pantry-1-floor-2"
+				},
+				{
+					"id": "fd_0349",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Pimentón is Spanish and smoked",
+					"because": "Only pimentón de la Vera is smoked; pimentón de Murcia is sun-dried and unsmoked. Stated flat, a server will tell a guest every pimentón is smoked, which the deck's own Pimentón card (three spices under one word) will contradict.",
+					"fix": "Not smoked paprika. Spain's pimentón is usually smoked; this is French and fruitier.",
+					"lens": "floor",
+					"key": "pantry-1-floor-3"
+				},
+				{
+					"id": "fd_0351",
+					"field": "gist",
+					"severity": "style",
+					"claim": "Cloves aged warm and damp for weeks until soft, jet black and sweet",
+					"because": "At 67 characters the gist ties the longest trap (67) and runs 6 over the other (61); the brief says the gist must never be the longest option and to shorten the gist rather than pad a trap. 'Jet' adds nothing a test-taker needs.",
+					"fix": "Cloves aged warm and damp for weeks until soft, black and sweet",
+					"lens": "floor",
+					"key": "pantry-1-floor-4"
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "pantry-1-fact-1",
+					"action": "applied",
+					"reason": "notThis now reads 'Spanish pimentón is often smoked' instead of 'is Spanish and smoked', since only pimentón de la Vera is oak-smoked while pimentón de Murcia is unsmoked, matching the roster's Pimentón card."
+				},
+				{
+					"finding": "pantry-1-floor-2",
+					"action": "applied",
+					"reason": "Guest line split at the semicolon into two sentences: 'The bite is gone. It tastes more like balsamic.'"
+				},
+				{
+					"finding": "pantry-1-floor-3",
+					"action": "applied",
+					"reason": "Same change as pantry-1-fact-1: notThis softened to 'often smoked' so a server no longer tells guests every pimentón is smoked."
+				},
+				{
+					"finding": "pantry-1-floor-4",
+					"action": "applied",
+					"reason": "Dropped 'jet' from the gist; it is now 63 characters against traps of 61 and 67, so the gist is no longer the longest option."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0349",
+						"issue": "No `level` on the card. The roster row carries none, so rule 9 makes it the writer's call, and validate.mjs refuses a written card without one.",
+						"fix": "Add `level: 3`. Espelette is fine-dining vocabulary, rarer on American menus than Pimentón (2), and sits with Crudo and Mostarda at Sous Chef."
+					},
+					{
+						"id": "fd_0350",
+						"issue": "No `level` on the card; validate.mjs refuses a written card without one.",
+						"fix": "Add `level: 3`. A specialist Japanese condiment that needs a sentence and shows up beside Crudo (3); not rare enough for 4."
+					},
+					{
+						"id": "fd_0351",
+						"issue": "No `level` on the card; validate.mjs refuses a written card without one.",
+						"fix": "Add `level: 2`. Black garlic is now common at a good restaurant and guests ask about it every night; it takes one sentence, the standard for Chef de Partie, alongside Miso and Harissa."
+					},
+					{
+						"id": "fd_0283",
+						"issue": "Espelette lists Pimentón under confusedWithTerms but Pimentón does not link back, so the pair is linked only one way and a reader drilling Pimentón never meets the confusion. Pimentón's notThis already exists, so the reciprocal link is legal.",
+						"fix": "Add 'fd_0349' to Pimentón's confusedWith (keep seeAlso fd_0065, fd_0041). Optionally sharpen its notThis: 'Not Espelette, the French Basque chili that is never smoked, and not grocery paprika. Ask whether the kitchen uses sweet or hot.'"
+					},
+					{
+						"id": "fd_0349",
+						"issue": "Menu line 'Grilled octopus, espelette, lemon aioli' opens exactly as Pimentón's line does ('Grilled octopus, olive oil potatoes, smoked pimentón'). The two cards are the section's one confusable pair, and a reader flipping both sees the same dish under both terms.",
+						"fix": "Give Espelette a line the Spanish card cannot own, e.g. 'Roast cod, brown butter, espelette' or 'Piperade, Bayonne ham, espelette, fried egg'."
+					},
+					{
+						"id": "fd_0351",
+						"issue": "seeAlsoTerms includes 'Abalone Mushroom', which has no relation to black garlic beyond mushrooms appearing in pairs; a see-also is for related cards, and this one sends the reader nowhere useful.",
+						"fix": "Replace 'Abalone Mushroom' with 'Caramelized' (the slow browning the why describes) or drop to two: ['Balsamic', 'Koji-Aged']."
+					}
+				],
+				"notes": "Checked against the whole on-disk section (tools/derive/floor-deck/pantry.mjs, 19 written cards) plus the three new ones: all 22 roster rows have a card, no duplicate gists or guest lines, no verdict words, dashes, banned substrings, guest punctuation or guest temperatures on the three new cards, all closing-stop rules met, gist/trap length parity within 10 chars and no gist the longest option. Section mean is 672 prose chars per card (ceiling 720); new cards run 711/707/718, so no condensing needed, though Yuzu Kosho's note ('very salty as well as hot', 'pea-sized dab') restates the why and guest and is the cheapest cut if the mean ever tightens; its origin also repeats the why's 'kosho means chili'. Banyuls' knownPacketError trap matches /east/i. Facts on the new cards hold: Gorria variety and AOC 2000 for Espelette; Kyushu dialect kosho = chili; black garlic at 60 to 70 C (140 to 158 F) with no microbial step. Pimentón at 771 prose is the section's longest card, still under the 900 ceiling. Bench term worth promoting later: Ponzu (used as a Yuzu Kosho trap and a real menu word with no card). Pairs to consider linking across sections: Kimchi with Fermented (already seeAlso, arguably confusedWith Pickled); Black Garlic with Roasted as confusedWithTerms since its notThis already argues the distinction."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

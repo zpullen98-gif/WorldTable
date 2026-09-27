@@ -453,6 +453,85 @@ const cards = [
 		traps: [
 			{ says: 'Rich egg-yolk dough stamped into tiny domes with a round cutter', why: 'It is semolina and water dough, dragged by knife and shaped over a thumb.' }
 		]
+	},
+	{
+		id: 'fd_0329',
+		term: 'Fregola',
+		level: 3,
+		say: 'FREH-goh-lah',
+		aliases: ['Fregula', 'Fregola Sarda'],
+		gist: 'Small toasted beads of rolled pasta from Sardinia, nutty and chewy',
+		guest: "It's a Sardinian pasta, little toasted beads that taste nutty and stay pleasantly chewy. They soak up sauce the way risotto does.",
+		why: 'Semolina and water are rubbed in a wide bowl until they roll into small, uneven beads, then dried and toasted in the oven. Toasting browns the surface, so the beads taste nutty and hold a firm chew instead of going soft.',
+		madeWith: ['durum wheat semolina', 'water', 'sometimes saffron'],
+		origin: 'Sardinia, Italy, also spelled fregula on menus',
+		pairs: 'Clams, mussels, saffron, tomato, seafood broth',
+		notThis: 'Not pearl couscous, smooth, pale and uniform. These beads are uneven and toasted to a speckled brown.',
+		seeAlso: ['fd_0184', 'fd_0137'],
+		confusedWith: ['fd_0187'],
+		line: 'Fregola, Manila clams, saffron, bottarga',
+		traps: [
+			{ says: 'Ancient Sardinian grain, toasted whole and then simmered until tender', why: 'It is pasta rolled from semolina and water, not a grain, and the toasting happens after the beads are shaped.' }
+		]
+	},
+	{
+		id: 'fd_0330',
+		term: 'Chitarra',
+		level: 3,
+		say: 'kee-TAHR-rah',
+		aliases: ['Spaghetti alla Chitarra', 'Maccheroni alla Chitarra', 'Tonnarelli'],
+		gist: 'Square-sided fresh egg pasta strands cut on a wire-strung frame',
+		guest: "It's fresh egg pasta from Abruzzo, cut on a frame strung with wires like a guitar, so each strand is square, not round. The square edges grip sauce.",
+		why: 'Egg dough is rolled thin, laid on the chitarra, a wooden frame strung with steel wires, and pressed through with a rolling pin. Each strand comes out with four flat sides and a rough surface that holds sauce better than round spaghetti. Semolina in the dough keeps the bite firm.',
+		madeWith: ['wheat flour', 'egg', 'often semolina'],
+		origin: 'Abruzzo, Italy, named for the guitar, the wire-strung frame that cuts it',
+		pairs: 'Lamb ragù, tomato sauce with tiny meatballs, pecorino',
+		recipe: 'spaghetti-alla-chitarra-the-square-strand',
+		seeAlso: ['fd_0185', 'fd_0190'],
+		line: 'Spaghetti alla chitarra, lamb ragù, pecorino',
+		traps: [
+			{ says: 'Fresh pasta shaped like small guitars, pressed from a mold', why: 'The guitar is the wire-strung frame that cuts the dough, not the shape of the pasta, which is a square-sided strand.' },
+			{ says: 'Dried round strands of durum wheat pasta pushed through a machine die', why: 'It is fresh egg pasta cut by hand on wires, and the strands are square, not round.' }
+		]
+	},
+	{
+		id: 'fd_0331',
+		term: 'Carolina Gold',
+		level: 3,
+		aliases: ['Carolina Gold Rice'],
+		gist: 'Heirloom long-grain rice of the Lowcountry, nutty and lightly sweet',
+		guest: "It's the heirloom rice Charleston was built on, nearly lost and brought back from a seed bank in the 1980s. Nutty, a little sweet, with more flavor than plain white rice.",
+		why: 'Named for the gold of the ripe grain. Grown in the Lowcountry for 200 years by enslaved West African farmers, it was nearly extinct until a Savannah doctor replanted government seed-bank stock in 1986. Steamed dry it is fluffy and separate, stirred slowly it goes creamy like risotto.',
+		madeWith: ['rice', 'often butter'],
+		origin: 'South Carolina Lowcountry, grown there since the late 1600s',
+		pairs: 'Shrimp, country ham, okra, butter beans, brown butter',
+		recipe: 'carolina-gold-rice-pilau',
+		seeAlso: ['fd_0285', 'fd_0178'],
+		line: 'Carolina Gold rice, brown butter, country ham',
+		traps: [
+			{ says: 'Long-grain rice that cooks up yellow, tinted with saffron or turmeric', why: 'The name is for the color of the ripe grain in its husk. Milled and cooked, the rice is white.' },
+			{ says: 'Modern long-grain hybrid bred for Southern rice farms in the 1980s', why: 'It is an heirloom variety grown since the 1600s. The 1980s were its revival from seed-bank stock, not its creation.' }
+		]
+	},
+	{
+		id: 'fd_0332',
+		term: 'Bomba',
+		level: 3,
+		say: 'BOHM-bah',
+		aliases: ['Arroz Bomba'],
+		gist: "Spain's paella rice, short grains that drink broth and stay separate",
+		guest: "It's the Spanish short-grain rice made for paella. It drinks up the broth without going mushy, so every grain stays separate and full of flavor.",
+		why: 'A slow, low-yield variety from Valencia and Murcia, so it costs more than most rice. As it cooks the grain swells wider instead of splitting or going creamy, taking on up to three times its volume in stock while staying firm and separate.',
+		madeWith: ['rice'],
+		origin: 'Valencia and Murcia, Spain, the name is Spanish for bomb',
+		notThis: 'Not a risotto rice. Arborio and Carnaroli shed starch into a creamy sauce. This one stays firm and separate.',
+		seeAlso: ['fd_0283'],
+		confusedWith: ['fd_0186', 'fd_0182'],
+		line: 'Seafood paella, Bomba rice, saffron, shrimp, mussels',
+		traps: [
+			{ says: 'Fiery Calabrian spread of chiles, eggplant and mushrooms packed in oil', why: 'That is a Calabrian condiment sharing only the name. This is a Spanish paella rice.' },
+			{ says: 'Long-grain Spanish rice that cooks light and fluffy for paella', why: 'It is a short, plump grain. Long-grain rice does not absorb enough broth to make a good paella.' }
+		]
 	}
 ];
 

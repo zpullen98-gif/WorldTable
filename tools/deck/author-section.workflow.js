@@ -146,6 +146,7 @@ HARD RULES (a build gate enforces every one; a card that breaks one is thrown ba
 6. The whole card's prose (gist + guest + why + note + origin + pairs + notThis + line) totals ${range(L.cardTotal)} characters, and the SECTION'S MEAN must stay at or under ${L.sectionMean}. Aim each card at about ${L.sectionMean - 60} and write to the AIM ranges, not the ceilings: the pilot section was written to the ceilings, came back 50 characters a card over, and had to be condensed. The cheapest cut is the note that restates the why, so write a note only for a fact the why does not hold.
 7. No two cards share a gist or a guest line. Copy id and term exactly from the roster.
 8. Be right. A confident false statement on a training card gets repeated to guests for years. If you are not sure of a fact, check it (search the web) or leave it out. Prefer the specific and checkable over the impressive.
+9. A todo row that carries "level" was placed there by the expansion roster (its "placedBecause" says why): give the card that level. A row without one is placed by you, against the standard in the brief's "levels".
 `
 
 /* The bulky half of the brief stays on disk and every agent opens it for

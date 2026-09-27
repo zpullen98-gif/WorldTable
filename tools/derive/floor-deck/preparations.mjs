@@ -352,6 +352,82 @@ const cards = [
 		pairs: 'Fried or poached eggs, toast, hot sauce, and rice under Carolina hash',
 		seeAlso: ['fd_0085'],
 		line: 'Corned beef hash, two fried eggs, toast'
+	},
+	{
+		id: 'fd_0337',
+		term: 'Torchon',
+		level: 3,
+		say: 'tor-SHOHN',
+		aliases: ['Au Torchon'],
+		gist: 'Fattened liver rolled tight in cloth, poached and sliced cold',
+		guest: "It's foie gras, rich duck liver, rolled in a cloth, poached and chilled, then sliced into cool rounds. It spreads on warm brioche like the richest butter.",
+		why: 'The raw lobe is deveined, seasoned with salt and often a sweet wine, rolled tight in cloth, poached for minutes and chilled. So little heat leaves it dense and silky, cool and milder than seared foie gras.',
+		madeWith: ['duck or goose liver', 'salt', 'sugar', 'sometimes sweet wine', 'sometimes brandy'],
+		note: 'Half cooked on purpose and served cold, pink and soft at the center.',
+		origin: 'French, a dish towel: the cloth the liver is rolled and poached in',
+		notThis: 'Not a terrine, which is pressed in a mold and sliced in slabs. This is rolled in cloth and cut in rounds.',
+		lexiconSlug: 'foie-gras-torchon-mi-cuit-and-ethics-of-service',
+		seeAlso: ['fd_0055', 'fd_0228', 'fd_0227'],
+		confusedWith: ['fd_0084'],
+		line: 'Foie gras torchon, toasted brioche, fig compote',
+		traps: [
+			{ says: 'Liver salt-cured and air-dried for weeks, then shaved thin like ham', why: 'It is poached briefly and chilled for a day or more, not dried, and served in thick soft rounds.' }
+		]
+	},
+	{
+		id: 'fd_0338',
+		term: 'En Croûte',
+		level: 3,
+		say: 'ahn-KROOT',
+		gist: 'Fish or meat wrapped in pastry and baked, then cut in slices',
+		guest: "It's baked inside a pastry crust, like a beef Wellington. The pastry seals in the juices, so the inside stays moist and the outside turns golden and crisp.",
+		why: 'A whole fillet, tenderloin or seasoned ground meat is wrapped in puff pastry or pie dough, often over mushrooms or spinach, then baked. The pastry insulates, so the inside cooks gently while the crust browns. The kitchen sets the doneness, beef pink at the center, fish just set.',
+		madeWith: ['wheat flour', 'butter', 'often egg wash', 'often beef or salmon', 'often mushrooms', 'sometimes pistachio', 'sometimes gelatin'],
+		origin: 'French, in crust: the pastry a fish, roast or pâté is baked inside',
+		notThis: 'Not en papillote, where food bakes in a paper parcel you tear open. Here the wrapper is pastry and you eat it.',
+		recipe: 'pate-en-croute',
+		seeAlso: ['fd_0244', 'fd_0073'],
+		confusedWith: ['fd_0231'],
+		line: 'Salmon en croûte, spinach, beurre blanc',
+		traps: [
+			{ says: 'Served on top of a thick slice of toasted and buttered country bread', why: 'A croûte alone can mean toast, but en croûte means fully wrapped in pastry and baked.' }
+		]
+	},
+	{
+		id: 'fd_0339',
+		term: 'Quenelle',
+		level: 3,
+		say: 'kuh-NEHL',
+		gist: 'Smooth oval shaped with a spoon, named for a poached fish dumpling',
+		guest: "It's the shape, a smooth oval scooped with a spoon, like a small football of sorbet or cream. On a classic French menu it's a light poached fish dumpling.",
+		why: 'The classic is from Lyon, pike pounded smooth with egg, butter and a cooked flour paste, shaped into ovals and poached until it puffs, light as a soufflé. Chefs borrowed the oval for anything soft, so on most menus the word just means the shape.',
+		madeWith: ['pike or other white fish', 'egg', 'butter', 'often wheat flour', 'cream', 'often crayfish'],
+		note: 'The ingredient list is for the classic fish dumpling only. A quenelle of sorbet or cream is just that scoop.',
+		notThis: 'Not an ice cream scoop. That is a round ball. This is a smooth, pointed oval drawn with a spoon.',
+		seeAlso: ['fd_0259', 'fd_0177', 'fd_0157'],
+		line: 'Warm chocolate tart, quenelle of crème fraîche',
+		traps: [
+			{ says: 'A small puff pastry shell filled with sweet cream or a savory mousse', why: 'It is not baked in pastry. It is a smooth oval of something soft, or a poached dumpling.' }
+		]
+	},
+	{
+		id: 'fd_0340',
+		term: 'Grenobloise',
+		level: 4,
+		say: 'greh-noh-BLWAHZ',
+		gist: 'Brown butter finish with capers, lemon pieces and croutons',
+		guest: "It's a classic French finish for fish, brown butter with capers, fresh lemon pieces and crisp croutons. Nutty, salty, bright and crunchy in one spoonful.",
+		why: 'The floured fish is pan-fried, then the butter is cooked nut-brown and spooned over with capers, diced peeled lemon and croutons. Lemon flesh gives bright bursts instead of a squeeze of juice, and the croutons stay crunchy against the soft fish.',
+		madeWith: ['butter', 'capers', 'lemon', 'wheat flour', 'bread', 'often parsley'],
+		origin: 'French, in the style of Grenoble, the city in the French Alps',
+		notThis: 'Not meunière, which is brown butter, lemon juice and parsley alone. Capers and croutons make it grenobloise.',
+		seeAlso: ['fd_0161', 'fd_0278', 'fd_0110'],
+		confusedWith: ['fd_0232', 'fd_0233'],
+		line: 'Pan-roasted skate wing grenobloise, spinach',
+		traps: [
+			{ says: 'Brown butter finished with toasted walnuts and chopped parsley', why: 'Grenoble is famous for walnuts, but the classic garnish is capers, lemon and croutons.' },
+			{ says: 'Creamy Dijon mustard sauce spooned over floured, pan-fried fish', why: 'Mustard sauce belongs to Dijon. This garnish is brown butter, capers, lemon and croutons.' }
+		]
 	}
 ];
 

@@ -445,7 +445,11 @@ const cards = [
 		seeAlso: ['fd_0038'],
 		confusedWith: ['fd_0039', 'fd_0037'],
 		line: 'Pan-roasted halibut, brown butter, capers, lemon'
-	}
+	},
+	{ id: 'fd_0301', term: 'À la Plancha', planned: true },
+	{ id: 'fd_0302', term: 'Salt-Baked', planned: true },
+	{ id: 'fd_0303', term: 'Lacquered', planned: true },
+	{ id: 'fd_0304', term: 'Koji-Aged', planned: true }
 ];
 
 export default cards;

@@ -781,6 +781,49 @@ without its transcription and its corrections under it.
   atlantic-fish 10, pacific-fish 9, pork-cuts 9, northeastern-fruits 9) are
   the candidates.
 
+## The primers: one reader per level per subsection
+
+A level page says "42 at this level" and lists the items; it did not say what
+those forty-two techniques have in common, which to take first, or what the
+level above asks of the same subject. The primers do (27 Sep 2026): one
+written reader per level per subsection that holds items (31; Level IV has
+no plates), three to seven paragraphs for the cook standing at that level,
+on `/level/[n]/read` with a "Read first" door from each subsection of the
+level page and one above the list. Read, never graded: nothing on the page
+is recorded, and the e2e proves the store stays empty.
+
+- **Authored, gated, emitted.** `tools/derive/primers/<level>-<subsection>.json`
+  is `{level, subsection, lede, paragraphs, cites, next}`, written by the
+  procedure in `tools/primers/README.md` (a brief per primer carrying every
+  item's OWN text out of the emitted files, the standard, what "met" means
+  there, the doors by name and the names at the neighbouring levels; an
+  author, three refuters with different lenses, a corrector, and a critic
+  per level reading its primers together with one bounded repair) and
+  hand-editable afterwards. `tools/derive/primers.mjs` is the gate
+  (`checkPrimer`: shape and lengths, the deck contract's `proseProblems` so
+  the same dash, verdict, spelling, sanitation-token and temperature rules
+  hold, `LOCK_RE` against unlock, score, percent and pass-mark language,
+  and every cite an item placed at that level in that subsection whose name
+  the text carries, `namesItem`) and the build (`buildPrimers`, after
+  `buildLevels`, whose `universe` it takes), emitted as `primers.json` with
+  each cite's name and href resolved at build so the read page joins
+  nothing. `PRIMERS_COMPLETE` makes a missing primer fail the build once all
+  are in.
+- **The page.** `/level/[n]/read` is prerendered from `entries()`; its load
+  returns the primers whole (they ARE the page, unlike the level page whose
+  load bakes only counts). A table of contents, then one `li.primer` per
+  subsection in the level page's order: h2, "N at this level", the lede, the
+  paragraphs, "Named here" as links, "Next", and a `.train` door back to
+  `/level/[n]#key`. The level page's load adds `primed` (the subsections
+  with a primer) and shows "Read first" as the first door of each, and
+  `a.readfirst` above the list. Under Levels in `OWNS`; in the a11y, layout
+  and nav suites; `tests/primers.spec.ts` (skips itself until a primer
+  exists); `verify-build` asserts the chunk is precached and four reader
+  pages are on disk.
+- **Re-running one.** `brief.mjs --only 2-deck`, the workflow, `take.mjs
+  --only 2-deck`, `npm run build:data`. An item moved by `tools/levels/`
+  leaves a cite behind and the gate names it.
+
 ## The Floor Deck: a staff-training deck of menu words
 
 The owner brought a hand-filled restaurant training packet (about 159 terms in
@@ -912,6 +955,11 @@ answers every finding, a critic), `take.mjs`, `validate.mjs`, `merge.mjs`,
 `build:data`, `measure.mjs`, `check-displacement.mjs`, the tests. The refute
 pass is not optional. Measure after every section: the deck and the rest of
 the app share one precache cap.
+
+Expansion at Levels III and IV is its own procedure there ("Expanding at
+Levels III and IV": a roster workflow decides the words, `add-stubs.mjs`
+writes the stubs and the intended levels, `author-all.workflow.js` writes
+every section at once as child runs, `split-run.mjs` feeds `take.mjs`).
 
 Two things the fifteen sections taught, both now in the code: a menu writes
 the plural ("pan-roasted chanterelles"), so dish lines and say-it-back match a

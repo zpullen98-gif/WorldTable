@@ -14,7 +14,10 @@ terms outside the service track, the 27 service modules (their 186 term cards
 inherit through `moduleTerms`), the 8 palate faults, the 26 read slices of
 food safety (never counted, only read), and the 20 Plates
 (`tools/derive/levels/plates.json`, never counted, only read; no minimum, so
-Level IV may hold none and does). The 281 deck cards keep the level in
+Level IV may hold none and does). Each level and subsection with items
+also has a PRIMER, a written reader for the cook standing there
+(`tools/primers/README.md`; the gate holds every cite to an item placed at
+that level). The 281 deck cards keep the level in
 their section modules (`tools/deck/README.md`, "Levels") and are copied from
 the deck index at build; the deck's placements are the calibration set for
 everything placed here. The library's 1,844 recipes are not placed one by one:

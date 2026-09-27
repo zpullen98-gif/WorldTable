@@ -308,6 +308,78 @@ const cards = [
 		traps: [
 			{ says: 'Cooked vanilla custard lightened with whipped cream to fill cakes', why: 'It is simply cream whipped with sugar and vanilla, with nothing cooked into it.' }
 		]
+	},
+	{
+		id: 'fd_0345',
+		term: 'Sabayon',
+		level: 3,
+		say: 'sah-bah-YOHN',
+		aliases: ['Zabaglione', 'Zabaione'],
+		gist: 'Warm, airy foam of yolks whisked with wine over gentle heat',
+		guest: "It's a warm, airy sauce of egg yolks whisked with sweet wine until they froth. Spooned over berries, it tastes like a light custard with a hint of wine.",
+		why: 'Yolks, sugar and wine are whisked over a water bath until they thicken and hold air, so it arrives warm, pale and foamy, lighter than any set custard. Italians make it with Marsala and call it zabaglione; the French pour Champagne or Sauternes.',
+		madeWith: ['egg yolk', 'sugar', 'wine', 'sometimes cream'],
+		note: "Often made to order and served warm, so allow a few minutes. Some of the wine's alcohol stays in it.",
+		notThis: 'Not a chilled pouring custard and not a mousse. It is whisked warm over water and eaten as a foam.',
+		seeAlso: ['fd_0197', 'fd_0261'],
+		confusedWith: ['fd_0249', 'fd_0252'],
+		line: 'Warm Champagne sabayon, summer berries, almond tuile',
+		traps: [
+			{ says: 'Egg whites whipped with sugar and wine into a cold, glossy foam', why: 'It is made from the yolks, not the whites, and it is whisked over heat and served warm.' }
+		]
+	},
+	{
+		id: 'fd_0346',
+		term: 'Crémeux',
+		level: 3,
+		say: 'kray-MUH',
+		gist: 'Custard base set with chocolate or fruit into a dense, silky cream',
+		guest: "It's a rich chocolate or fruit cream built on a custard base, denser than a mousse and softer than a truffle. You drag the crunchy bits through it.",
+		why: 'A custard of yolks and cream is cooked, then melted chocolate, or fruit purée and a little gelatin, is stirred in and it sets cold. No air is whipped in, so it is denser than a mousse, and the custard under it keeps it softer than a ganache and easy to spoon.',
+		madeWith: ['egg yolk', 'cream', 'milk', 'sugar', 'often chocolate', 'sometimes gelatin', 'sometimes butter'],
+		origin: "French, 'creamy'; a modern pastry kitchen word for a set, pipeable cream",
+		notThis: 'Not a mousse, which is whipped light with air, and not a ganache, which is chocolate melted into hot cream with no custard under it.',
+		seeAlso: ['fd_0249'],
+		confusedWith: ['fd_0252', 'fd_0251', 'fd_0263'],
+		line: 'Dark chocolate crémeux, hazelnut praline, brown butter sablé'
+	},
+	{
+		id: 'fd_0347',
+		term: 'Posset',
+		level: 3,
+		say: 'PAH-sit',
+		gist: 'Boiled sweet cream that lemon juice sets soft in the glass',
+		guest: "It's an old English lemon cream, chilled until the lemon juice sets it. Smooth and rich like a panna cotta, but with a real citrus snap.",
+		why: "Cream and sugar are boiled, lemon juice is stirred in, and the acid firms the cream's proteins as it chills, so it sets in the glass. The high fat keeps it smooth, and it sits between a panna cotta and a thick pudding, sharp with citrus.",
+		madeWith: ['cream', 'sugar', 'lemon juice', 'often lemon zest'],
+		origin: 'English; in the Middle Ages a hot drink of milk curdled with wine or ale',
+		notThis: 'Not a panna cotta, which is set with gelatin and turned out of a mold. This sets from the citrus and stays in its glass.',
+		recipe: 'lemon-posset-with-shortbread-fingers',
+		seeAlso: ['fd_0250', 'fd_0262'],
+		confusedWith: ['fd_0254', 'fd_0263'],
+		line: 'Meyer lemon posset, blueberries, brown butter shortbread',
+		traps: [
+			{ says: 'Sharp lemon spread cooked thick with egg yolks, butter and sugar', why: 'That is lemon curd, cooked thick over heat. A posset sets in the glass from cream meeting lemon juice.' }
+		]
+	},
+	{
+		id: 'fd_0348',
+		term: 'Vacherin',
+		level: 4,
+		say: 'vash-uh-RAN',
+		aliases: ['Vacherin Glacé'],
+		gist: 'Crisp meringue shell holding ice cream or sorbet and whipped cream',
+		guest: "It's a crisp meringue shell filled with ice cream or sorbet and whipped cream, so you get crunchy, cold and creamy in one spoonful.",
+		why: 'Egg white and sugar are baked slow into dry, crisp meringue, shaped into a shell or discs, then filled with ice cream or sorbet and whipped cream, or classically just cream and fruit. The dry shell stays crisp against the cold filling, so every bite is crunch, ice and cream.',
+		madeWith: ['egg white', 'sugar', 'cream', 'ice cream or sorbet', 'often fruit'],
+		origin: 'French; a classical dessert that borrowed the name of a round Alpine cheese',
+		notThis: 'Not a pavlova, soft in the middle. This shell is baked dry and crisp, then filled, most often with ice cream.',
+		seeAlso: ['fd_0260', 'fd_0259', 'fd_0265'],
+		confusedWith: ['fd_0247', 'fd_0240', 'fd_0341'],
+		line: 'Strawberry vacherin, vanilla ice cream, Chantilly, basil',
+		traps: [
+			{ says: "Soft, runny Alpine cow's milk cheese ripened in a band of spruce bark", why: 'That is the cheese that shares the name. On a dessert menu it is a meringue shell filled with ice cream.' }
+		]
 	}
 ];
 

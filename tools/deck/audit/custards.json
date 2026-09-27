@@ -869,6 +869,142 @@
 				"notes": "Mechanical checks (measured by script): the section mean is 642 characters of prose per card, so it is under the 720 ceiling. Every card falls between 560 and 718. I found no em or en dashes, no banned substrings and no verdict words (contains, free, allergen, safe, vegan and so on). All 17 roster rows have cards. No row in this section carries knownPacketError, so no trap is mandated. The fd_0255 packet mix-up with the fungus is handled correctly through confusedWithTerms ['Truffle'], and it should NOT become a trap, because it would describe fd_0147 Truffle truthfully. The confusion pairs link in both directions for Gelato/Ice Cream, Sorbet/Sherbet, Sorbet/Granita, Parfait/Semifreddo and Anglaise/Pastry Cream. Two points for the operator. First, gists across the deck freely use other cards' terms ('Italian frozen mousse', 'baked custard', 'scoop of gelato'), which is legal but worth a policy decision for the multiple-choice test. Second, the lexicon slug custards-anglaise-patissiere-and-curds is really the long-form essay for Pastry Cream too, but it is not in fd_0264's lexiconCandidates. The same goes for recipe creme-patissiere-the-boiled-starch-custard, which sits under Custard's candidates. Adding both to fd_0264's candidates would let that card link them."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-27",
+			"pass": "revision",
+			"cards": [
+				"fd_0345",
+				"fd_0346",
+				"fd_0347",
+				"fd_0348"
+			],
+			"findings": [
+				{
+					"id": "fd_0346",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "not a ganache, which sets firm enough to roll into truffles.",
+					"because": "Ganache as a class does not set firm; a 1:1 ganache pours as a glaze or whips soft, and only the chocolate-heavy 2:1 ratio rolls into truffles. The real line between them is that a ganache is chocolate and cream alone, while a crémeux is built on a cooked yolk custard.",
+					"fix": "not a ganache, which is chocolate and cream alone, with no custard under it.",
+					"lens": "fact",
+					"key": "custards-1-fact-1"
+				},
+				{
+					"id": "fd_0348",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "soft in the middle and never frozen. This one is baked dry and crisp, then filled and frozen.",
+					"because": "A vacherin is not always frozen: the classical French and Swiss versions fill the crisp meringue shell with whipped cream and fruit and serve it cold, and only the Vacherin Glacé (the modern menu standard) is filled with ice cream and held frozen. 'Filled and frozen' as the defining test is an overreach; the true tell against pavlova is the dry, crisp shell.",
+					"fix": "soft in the middle. This shell is baked dry and crisp, then filled, most often with ice cream.",
+					"lens": "fact",
+					"key": "custards-1-fact-2"
+				},
+				{
+					"id": "fd_0346",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's a silky, spoonable cream, denser than a mousse and softer than a truffle. It's the deep, smooth part of the plate you drag the crunchy bits through.",
+					"because": "It never says what the thing is made of or tastes of: a guest asking 'what is crémeux?' hears only 'a cream' defined by two other menu words, and 'the deep, smooth part of the plate' sounds read off a card. A crémeux is a chocolate or fruit cream built on a custard base; say so.",
+					"fix": "It's a rich chocolate or fruit cream on a custard base, denser than a mousse and softer than a truffle. You drag the crunchy bits through it.",
+					"lens": "floor",
+					"key": "custards-1-floor-3"
+				},
+				{
+					"id": "fd_0348",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Meringue, egg white and sugar baked slow until dry and crisp, is shaped into a shell or discs,",
+					"because": "The comma-appositive splits subject and verb by twelve words, so read aloud it parses as a list ('meringue, egg white and sugar') before the reader reaches 'is shaped'. Same facts, plain order.",
+					"fix": "Egg white and sugar are baked slow into dry, crisp meringue, shaped into a shell or discs,",
+					"lens": "floor",
+					"key": "custards-1-floor-4"
+				},
+				{
+					"id": "fd_0345",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Made to order and served warm, so it can take a few minutes.",
+					"because": "Whether sabayon is whisked to order or made ahead and held (often stabilized with cream) varies by kitchen; a server repeating 'made to order' as fact will be wrong in half the houses. Hedge the timing; keep the alcohol fact, which is the part a guest needs.",
+					"fix": "Often made to order and served warm, so allow a few minutes. Some of the wine's alcohol stays in it.",
+					"lens": "floor",
+					"key": "custards-1-floor-5"
+				},
+				{
+					"id": "fd_0345",
+					"field": "guest",
+					"severity": "style",
+					"claim": "It's a warm, cloud-light sauce of egg yolks whisked with sweet wine until they froth. It's often spooned over berries, and it eats like a light, boozy custard.",
+					"because": "'Eats like' is kitchen talk, not something a nervous new hire says to a table, and 'boozy' oversells the wine in a dessert that carries only a few spoonfuls of it. Also 'light' appears twice in two sentences.",
+					"fix": "It's a warm, airy sauce of egg yolks whisked with sweet wine until they froth. Often spooned over berries, it tastes like a light custard with a hint of wine.",
+					"lens": "floor",
+					"key": "custards-1-floor-6"
+				},
+				{
+					"id": "fd_0347",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "set soft in the glass by lemon juice alone",
+					"because": "\"Alone\" is an assurance that nothing else sets it, which a guest hears as \"no gelatin, no egg\". Restaurant kitchens often add a sheet of gelatin to a posset for a firmer or turned-out set, so the classic method is not a promise about this kitchen's recipe. Describe the mechanism without the exclusion; madeWith carries the ingredient facts.",
+					"fix": "Boiled sweet cream that lemon juice sets soft in the glass",
+					"lens": "safety",
+					"key": "custards-1-safety-7"
+				},
+				{
+					"id": "fd_0347",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "chilled until it sets from the lemon juice alone",
+					"because": "Same assurance spoken aloud at the table: \"alone\" tells a guest avoiding gelatin or egg that there is none, and recipes vary by kitchen (many restaurant possets carry a little gelatin). Say what sets it without ruling anything out.",
+					"fix": "chilled until the lemon juice sets it",
+					"lens": "safety",
+					"key": "custards-1-safety-8"
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "custards-1-fact-1",
+					"action": "applied",
+					"reason": "Rewrote the ganache half of notThis to the real line, chocolate melted into hot cream with no custard under it, since only a chocolate-heavy ratio rolls into truffles; also changed the why's 'more cream than a ganache' to 'the custard under it keeps it softer than a ganache' so the card agrees with itself."
+				},
+				{
+					"finding": "custards-1-fact-2",
+					"action": "applied",
+					"reason": "notThis now tests pavlova against the dry, crisp shell rather than freezing, and for consistency the gist, guest and why no longer say 'served frozen' or 'held in the freezer'; the why adds that the classical filling is just cream and fruit, with ice cream the modern standard."
+				},
+				{
+					"finding": "custards-1-floor-3",
+					"action": "applied",
+					"reason": "Guest line now says what it is, a rich chocolate or fruit cream built on a custard base, then the mousse/truffle comparison, then the shorter closing sentence; 147 characters."
+				},
+				{
+					"finding": "custards-1-floor-4",
+					"action": "applied",
+					"reason": "Reordered the opening of the why to subject-verb order, 'Egg white and sugar are baked slow into dry, crisp meringue, shaped into a shell or discs,' as proposed."
+				},
+				{
+					"finding": "custards-1-floor-5",
+					"action": "applied",
+					"reason": "Note now reads 'Often made to order and served warm, so allow a few minutes,' keeping the alcohol sentence, since many kitchens make sabayon ahead and hold it."
+				},
+				{
+					"finding": "custards-1-floor-6",
+					"action": "applied",
+					"reason": "Guest line dropped 'eats like' and 'boozy' and the repeated 'light': it is now a warm, airy sauce that tastes like a light custard with a hint of wine, spooned over berries."
+				},
+				{
+					"finding": "custards-1-safety-7",
+					"action": "applied",
+					"reason": "Gist changed to 'Boiled sweet cream that lemon juice sets soft in the glass', removing 'alone' so it no longer promises the absence of gelatin or egg; 58 characters, still shorter than its trap."
+				},
+				{
+					"finding": "custards-1-safety-8",
+					"action": "applied",
+					"reason": "Guest line now says 'chilled until the lemon juice sets it', naming the mechanism without ruling out anything a given kitchen may add."
+				}
+			],
+			"critic": null,
+			"acceptedRejected": []
 		}
 	]
 }

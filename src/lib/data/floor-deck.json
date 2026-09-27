@@ -27,7 +27,7 @@
       "key": "cuts",
       "title": "Meat Cuts",
       "blurb": "Where on the animal a cut comes from decides how it has to be cooked and how it eats. The steaks, the braising cuts and the ones in between.",
-      "count": 22
+      "count": 26
     },
     {
       "key": "fish",
@@ -51,43 +51,43 @@
       "key": "starches",
       "title": "Grains, Pasta & Starches",
       "blurb": "Grains, corn, rice and pasta shapes: what each one is, how it eats, and the names that are easy to mix up.",
-      "count": 24
+      "count": 28
     },
     {
       "key": "sauces",
       "title": "Sauces, Stocks & Dressings",
       "blurb": "The mother sauces and their children, the emulsions, the stocks beneath them and the cold sauces: what goes in each and what it does on the plate.",
-      "count": 21
+      "count": 25
     },
     {
       "key": "preparations",
       "title": "Preparations & Style Words",
       "blurb": "Dish names that are really instructions: raw, cured, stuffed, rolled, baked under a crust, or finished in the classic French manner.",
-      "count": 20
+      "count": 24
     },
     {
       "key": "bread",
       "title": "Bread, Pastry & Cakes",
       "blurb": "Doughs and batters from the bread basket to the dessert menu, and the pairs of words that sound alike and are not the same thing.",
-      "count": 16
+      "count": 20
     },
     {
       "key": "custards",
       "title": "Custards, Creams & Frozen Desserts",
       "blurb": "Everything set with egg, cream, gelatin or cold: the custards, the chocolate work and the frozen desserts, told apart by what goes in them.",
-      "count": 17
+      "count": 21
     },
     {
       "key": "pantry",
       "title": "Pantry, Pickles & Vinegars",
       "blurb": "The jars behind the dish: vinegars and grape musts, pickles and preserves, ferments and the seasonings that finish a plate.",
-      "count": 19
+      "count": 22
     },
     {
       "key": "language",
       "title": "Menu Language & Sourcing Words",
       "blurb": "The words that are not food: how a menu is structured, what the kitchen stations are called, and what a sourcing claim does and does not mean.",
-      "count": 16
+      "count": 20
     }
   ],
   "levels": [
@@ -107,13 +107,13 @@
       "level": 3,
       "name": "Sous Chef",
       "blurb": "Fine-dining vocabulary: the classical sauces and preparations, and the specialist cuts and products behind them.",
-      "count": 35
+      "count": 61
     },
     {
       "level": 4,
       "name": "Chef",
       "blurb": "The rare, specialist and deeply classical words a senior server is expected to own and explain without notes.",
-      "count": 14
+      "count": 19
     }
   ],
   "cards": [
@@ -1709,7 +1709,8 @@
         "fd_0067"
       ],
       "confusedWith": [
-        "fd_0074"
+        "fd_0074",
+        "fd_0316"
       ],
       "line": "Hand-carved jamón ibérico de bellota, pan con tomate"
     },
@@ -1776,7 +1777,8 @@
         "fd_0055"
       ],
       "confusedWith": [
-        "fd_0073"
+        "fd_0073",
+        "fd_0337"
       ],
       "line": "Country pork terrine, cornichons, grain mustard, toast",
       "prompt": "Seasoned chopped pork, liver and fat, often with brandy, are packed into a deep rectangular mold, also called a __, and baked gently in a water bath. Pressed and chilled overnight, it slices clean, showing a mosaic of meat, fat and garnish."
@@ -2046,7 +2048,8 @@
         "fd_0090"
       ],
       "confusedWith": [
-        "fd_0070"
+        "fd_0070",
+        "fd_0314"
       ],
       "line": "8 oz beef tenderloin, bearnaise, pommes puree"
     },
@@ -2246,6 +2249,9 @@
         "fd_0093",
         "fd_0088"
       ],
+      "confusedWith": [
+        "fd_0313"
+      ],
       "line": "Flat iron steak, salsa verde, crispy potatoes",
       "prompt": "It is the top blade muscle from the shoulder, or chuck. A thick seam of gristle runs through its middle, which kept it off menus until meat scientists in Nebraska and Florida showed, around 2002, how to cut it out, leaving two __, well-marbled __."
     },
@@ -2433,6 +2439,124 @@
         "fd_0039"
       ],
       "line": "A5 Wagyu strip, sea salt, fresh wasabi"
+    },
+    {
+      "id": "fd_0313",
+      "term": "Denver Steak",
+      "aliases": [
+        "Underblade Steak",
+        "Zabuton"
+      ],
+      "section": "cuts",
+      "level": 3,
+      "gist": "Marbled steak cut from under the shoulder blade, grilled hot",
+      "guest": "It's a marbled steak from under the shoulder blade, one of the few shoulder muscles tender enough to grill. It's rich and beefy, close to a ribeye.",
+      "why": "One muscle under the shoulder blade in the chuck, cut out by hand and named around 2009 after an industry study ranked it among the tenderest on the animal. Heavy marbling makes it rich, the grain runs loose, and it costs well under a ribeye.",
+      "madeWith": [
+        "beef",
+        "salt",
+        "often butter",
+        "sometimes garlic"
+      ],
+      "note": "Best grilled hot and served medium rare, then sliced across the grain.",
+      "notThis": "Not a flat iron, the top blade above the shoulder blade. This one sits beneath it, with more fat.",
+      "seeAlso": [
+        "fd_0091",
+        "fd_0090"
+      ],
+      "confusedWith": [
+        "fd_0100"
+      ],
+      "line": "Grilled Denver steak, chimichurri, crispy potatoes"
+    },
+    {
+      "id": "fd_0314",
+      "term": "Teres Major",
+      "say": "TEH-reez MAY-jer",
+      "aliases": [
+        "Petite Tender",
+        "Shoulder Tender",
+        "Bistro Filet"
+      ],
+      "section": "cuts",
+      "level": 3,
+      "gist": "Small shoulder muscle roasted whole and sliced like a little filet",
+      "guest": "It's a small shoulder muscle that happens to be one of the most tender on the animal. Roasted whole and sliced, it eats like a filet at a friendlier price.",
+      "why": "A small muscle the size of a pork tenderloin, against the shoulder blade, doing little work, so it stays tender. It is cut out by hand, so it is scarce and sold whole. More beef flavor than tenderloin, leaner than ribeye, quick to cook.",
+      "madeWith": [
+        "beef",
+        "salt",
+        "often butter",
+        "often thyme"
+      ],
+      "note": "Best served medium rare; it is lean, so it dries out past medium.",
+      "notThis": "Not a filet mignon, which is tenderloin from along the spine. This shoulder muscle only eats like one.",
+      "seeAlso": [
+        "fd_0100",
+        "fd_0091"
+      ],
+      "confusedWith": [
+        "fd_0093"
+      ],
+      "line": "Roasted teres major, potato purée, red wine jus"
+    },
+    {
+      "id": "fd_0315",
+      "term": "Chateaubriand",
+      "say": "shah-toh-bree-AHN",
+      "section": "cuts",
+      "level": 3,
+      "gist": "Thick center cut of the tenderloin, roasted whole and carved for two",
+      "guest": "It's the thick center of the beef tenderloin, roasted whole and carved for two. Very tender and mild, classically with béarnaise, a tarragon sauce made with egg yolk and butter.",
+      "why": "The tenderloin barely works, so it is the tenderest, mildest muscle on the steer. Its center is the thickest, evenest stretch, so one roast cooks evenly and carves into equal slices. Credited to the chef of the writer Chateaubriand, early 1800s.",
+      "madeWith": [
+        "beef",
+        "butter",
+        "egg yolk",
+        "often white wine",
+        "often tarragon"
+      ],
+      "note": "One roast, so both guests share one doneness, classically medium rare.",
+      "notThis": "Not a filet mignon, a single steak from the same muscle. This is the thick center roasted whole for two.",
+      "seeAlso": [
+        "fd_0093",
+        "fd_0196",
+        "fd_0096"
+      ],
+      "line": "Chateaubriand for two, béarnaise, pommes château",
+      "prompt": "The tenderloin barely works, so it is the tenderest, mildest muscle on the steer. Its center is the thickest, evenest stretch, so one roast cooks evenly and carves into equal slices. Credited to the chef of the writer __, early 1800s."
+    },
+    {
+      "id": "fd_0316",
+      "term": "Secreto Ibérico",
+      "say": "seh-KREH-toh ee-BEH-ree-koh",
+      "aliases": [
+        "Secreto de Bellota",
+        "Cruceta"
+      ],
+      "section": "cuts",
+      "level": 4,
+      "gist": "Thin marbled sheet of pork from behind the shoulder, hidden by fat",
+      "guest": "It's a thin, richly marbled cut of Spanish Ibérico pork from behind the shoulder, grilled hot and fast. Rich and nutty, more like a great steak than a pork chop.",
+      "why": "Ibérico pigs, some acorn-fed, marble fat into the muscle itself, and the secreto is one of their fattiest cuts: a flat fan between shoulder and belly, hidden under a layer of fat, hence the name. Off a fast grill it eats like a marbled skirt steak, sweet and nutty.",
+      "madeWith": [
+        "iberico pork",
+        "salt",
+        "often olive oil",
+        "sometimes garlic"
+      ],
+      "note": "Spanish kitchens serve it rosy in the center; ask how this kitchen cooks it.",
+      "notThis": "Not jamón ibérico, the cured ham sliced thin. This is a fresh cut for the grill.",
+      "seeAlso": [
+        "fd_0098",
+        "fd_0094",
+        "fd_0283"
+      ],
+      "confusedWith": [
+        "fd_0082"
+      ],
+      "line": "Grilled secreto ibérico, romesco, charred spring onions",
+      "prompt": "__ pigs, some acorn-fed, marble fat into the muscle itself, and the __ is one of their fattiest cuts: a flat fan between shoulder and belly, hidden under a layer of fat, hence the name. Off a fast grill it eats like a marbled skirt steak, sweet and nutty."
     },
     {
       "id": "fd_0108",
@@ -4464,7 +4588,8 @@
       ],
       "confusedWith": [
         "fd_0186",
-        "fd_0183"
+        "fd_0183",
+        "fd_0332"
       ],
       "line": "Carnaroli risotto, saffron, bone marrow"
     },
@@ -4560,7 +4685,8 @@
         "fd_0183"
       ],
       "confusedWith": [
-        "fd_0182"
+        "fd_0182",
+        "fd_0332"
       ],
       "line": "Arborio risotto, spring peas, parmesan",
       "prompt": "A superfino rice named for the town of __ in Piedmont. Its fat grains have a chalky white core and shed surface starch readily, which thickens the broth into a creamy sauce. It softens sooner than carnaroli, so timing matters."
@@ -4589,7 +4715,8 @@
       ],
       "confusedWith": [
         "fd_0174",
-        "fd_0180"
+        "fd_0180",
+        "fd_0329"
       ],
       "line": "Lamb tagine, apricot, saffron couscous"
     },
@@ -4782,6 +4909,116 @@
       "line": "Orecchiette, broccoli rabe, anchovy, chili"
     },
     {
+      "id": "fd_0329",
+      "term": "Fregola",
+      "say": "FREH-goh-lah",
+      "aliases": [
+        "Fregula",
+        "Fregola Sarda"
+      ],
+      "section": "starches",
+      "level": 3,
+      "gist": "Small toasted beads of rolled pasta from Sardinia, nutty and chewy",
+      "guest": "It's a Sardinian pasta, little toasted beads that taste nutty and stay pleasantly chewy. They soak up sauce the way risotto does.",
+      "why": "Semolina and water are rubbed in a wide bowl until they roll into small, uneven beads, then dried and toasted in the oven. Toasting browns the surface, so the beads taste nutty and hold a firm chew instead of going soft.",
+      "madeWith": [
+        "durum wheat semolina",
+        "water",
+        "sometimes saffron"
+      ],
+      "origin": "Sardinia, Italy, also spelled fregula on menus",
+      "pairs": "Clams, mussels, saffron, tomato, seafood broth",
+      "notThis": "Not pearl couscous, smooth, pale and uniform. These beads are uneven and toasted to a speckled brown.",
+      "seeAlso": [
+        "fd_0184",
+        "fd_0137"
+      ],
+      "confusedWith": [
+        "fd_0187"
+      ],
+      "line": "Fregola, Manila clams, saffron, bottarga"
+    },
+    {
+      "id": "fd_0330",
+      "term": "Chitarra",
+      "say": "kee-TAHR-rah",
+      "aliases": [
+        "Spaghetti alla Chitarra",
+        "Maccheroni alla Chitarra",
+        "Tonnarelli"
+      ],
+      "section": "starches",
+      "level": 3,
+      "gist": "Square-sided fresh egg pasta strands cut on a wire-strung frame",
+      "guest": "It's fresh egg pasta from Abruzzo, cut on a frame strung with wires like a guitar, so each strand is square, not round. The square edges grip sauce.",
+      "why": "Egg dough is rolled thin, laid on the chitarra, a wooden frame strung with steel wires, and pressed through with a rolling pin. Each strand comes out with four flat sides and a rough surface that holds sauce better than round spaghetti. Semolina in the dough keeps the bite firm.",
+      "madeWith": [
+        "wheat flour",
+        "egg",
+        "often semolina"
+      ],
+      "origin": "Abruzzo, Italy, named for the guitar, the wire-strung frame that cuts it",
+      "pairs": "Lamb ragù, tomato sauce with tiny meatballs, pecorino",
+      "recipe": "spaghetti-alla-chitarra-the-square-strand",
+      "seeAlso": [
+        "fd_0185",
+        "fd_0190"
+      ],
+      "line": "Spaghetti alla chitarra, lamb ragù, pecorino",
+      "prompt": "Egg dough is rolled thin, laid on the __, a wooden frame strung with steel wires, and pressed through with a rolling pin. Each strand comes out with four flat sides and a rough surface that holds sauce better than round spaghetti. Semolina in the dough keeps the bite firm."
+    },
+    {
+      "id": "fd_0331",
+      "term": "Carolina Gold",
+      "aliases": [
+        "Carolina Gold Rice"
+      ],
+      "section": "starches",
+      "level": 3,
+      "gist": "Heirloom long-grain rice of the Lowcountry, nutty and lightly sweet",
+      "guest": "It's the heirloom rice Charleston was built on, nearly lost and brought back from a seed bank in the 1980s. Nutty, a little sweet, with more flavor than plain white rice.",
+      "why": "Named for the gold of the ripe grain. Grown in the Lowcountry for 200 years by enslaved West African farmers, it was nearly extinct until a Savannah doctor replanted government seed-bank stock in 1986. Steamed dry it is fluffy and separate, stirred slowly it goes creamy like risotto.",
+      "madeWith": [
+        "rice",
+        "often butter"
+      ],
+      "origin": "South Carolina Lowcountry, grown there since the late 1600s",
+      "pairs": "Shrimp, country ham, okra, butter beans, brown butter",
+      "recipe": "carolina-gold-rice-pilau",
+      "seeAlso": [
+        "fd_0285",
+        "fd_0178"
+      ],
+      "line": "Carolina Gold rice, brown butter, country ham",
+      "prompt": "Named for the __ of the ripe grain. Grown in the Lowcountry for 200 years by enslaved West African farmers, it was nearly extinct until a Savannah doctor replanted government seed-bank stock in 1986. Steamed dry it is fluffy and separate, stirred slowly it goes creamy like risotto."
+    },
+    {
+      "id": "fd_0332",
+      "term": "Bomba",
+      "say": "BOHM-bah",
+      "aliases": [
+        "Arroz Bomba"
+      ],
+      "section": "starches",
+      "level": 3,
+      "gist": "Spain's paella rice, short grains that drink broth and stay separate",
+      "guest": "It's the Spanish short-grain rice made for paella. It drinks up the broth without going mushy, so every grain stays separate and full of flavor.",
+      "why": "A slow, low-yield variety from Valencia and Murcia, so it costs more than most rice. As it cooks the grain swells wider instead of splitting or going creamy, taking on up to three times its volume in stock while staying firm and separate.",
+      "madeWith": [
+        "rice"
+      ],
+      "origin": "Valencia and Murcia, Spain, the name is Spanish for bomb",
+      "notThis": "Not a risotto rice. Arborio and Carnaroli shed starch into a creamy sauce. This one stays firm and separate.",
+      "seeAlso": [
+        "fd_0283"
+      ],
+      "confusedWith": [
+        "fd_0186",
+        "fd_0182"
+      ],
+      "line": "Seafood paella, Bomba rice, saffron, shrimp, mussels"
+    },
+    {
       "id": "fd_0195",
       "term": "Aioli",
       "say": "eye-OH-lee",
@@ -4909,7 +5146,8 @@
         "fd_0214"
       ],
       "confusedWith": [
-        "fd_0206"
+        "fd_0206",
+        "fd_0333"
       ],
       "line": "Roast lamb loin, fondant potato, rosemary jus"
     },
@@ -5038,7 +5276,8 @@
       "lexiconSlug": "consomme-and-clarification",
       "recipe": "chicken-consomme-raft-method",
       "confusedWith": [
-        "fd_0214"
+        "fd_0214",
+        "fd_0336"
       ],
       "line": "Oxtail consommé, root vegetables, chervil"
     },
@@ -5098,7 +5337,8 @@
         "fd_0214"
       ],
       "confusedWith": [
-        "fd_0199"
+        "fd_0199",
+        "fd_0333"
       ],
       "line": "Grilled veal chop, potato purée, demi-glace"
     },
@@ -5182,6 +5422,9 @@
       "seeAlso": [
         "fd_0195",
         "fd_0198"
+      ],
+      "confusedWith": [
+        "fd_0334"
       ],
       "line": "Crab cakes, Creole remoulade, pickled okra"
     },
@@ -5359,6 +5602,123 @@
         "fd_0202"
       ],
       "line": "Roast duck breast, cherry agrodolce, farro"
+    },
+    {
+      "id": "fd_0333",
+      "term": "Bordelaise",
+      "say": "bor-duh-LAYZ",
+      "section": "sauces",
+      "level": 3,
+      "gist": "Red wine and shallot reduction on brown stock, finished with marrow",
+      "guest": "It's the classic red wine steak sauce. Shallots and wine cook down into a rich brown sauce, often with bone marrow folded in at the end.",
+      "why": "Shallots, red wine, thyme and bay reduce hard, then simmer into demi-glace, the long-cooked brown veal sauce, so its body is gelatin from bones. Diced marrow stirred in at the end adds silky, beefy richness. Think red wine jus with more depth.",
+      "madeWith": [
+        "red wine",
+        "shallots",
+        "traditionally veal stock",
+        "bone marrow",
+        "butter",
+        "sometimes wheat flour"
+      ],
+      "origin": "French, named for Bordeaux and its red wine",
+      "pairs": "Ribeye, filet, hanger steak, roasted marrow",
+      "notThis": "Not plain red wine jus: it starts from demi-glace and carries marrow. New Orleans uses the name for a garlic butter.",
+      "seeAlso": [
+        "fd_0061"
+      ],
+      "confusedWith": [
+        "fd_0206",
+        "fd_0199"
+      ],
+      "line": "Dry-aged strip steak, bordelaise, potato purée"
+    },
+    {
+      "id": "fd_0334",
+      "term": "Gribiche",
+      "say": "gree-BEESH",
+      "section": "sauces",
+      "level": 3,
+      "gist": "Cold sauce of hard-cooked egg, mustard, oil, pickles and capers",
+      "guest": "It's a cold French egg sauce. Cooked yolks are mashed with mustard and oil until creamy, then chopped egg white, capers, cornichons and herbs go in.",
+      "why": "The yolks are cooked, then mashed with mustard and vinegar and fed oil like a mayonnaise, so it is creamy but looser and a little grainy. Chopped whites, capers, cornichons and herbs make it a sharp relish that cuts rich or fried food.",
+      "madeWith": [
+        "egg",
+        "mustard",
+        "oil",
+        "vinegar",
+        "cornichons",
+        "capers",
+        "herbs"
+      ],
+      "origin": "French, from the classical cold sauce repertoire",
+      "pairs": "Asparagus, poached leeks, sweetbreads, fried fish",
+      "notThis": "Not remoulade, a raw-yolk mayonnaise. Classically these yolks are hard-cooked, though some kitchens start from mayonnaise.",
+      "seeAlso": [
+        "fd_0278",
+        "fd_0279",
+        "fd_0054"
+      ],
+      "confusedWith": [
+        "fd_0209"
+      ],
+      "line": "Grilled asparagus, sauce gribiche, toasted hazelnut"
+    },
+    {
+      "id": "fd_0335",
+      "term": "Soubise",
+      "say": "soo-BEEZ",
+      "section": "sauces",
+      "level": 3,
+      "gist": "Onions cooked soft and pale, then bound with white sauce or cream",
+      "guest": "It's a silky, sweet onion sauce. The onions cook slowly in butter without browning, then go into a creamy white sauce, so it's mild, not sharp.",
+      "why": "Onions sweated slowly in butter lose their bite and turn sweet, kept pale so the sauce stays ivory. Classically they are bound with béchamel or cooked with rice and puréed with cream, then passed smooth, so it is velvety without being heavy.",
+      "madeWith": [
+        "onion",
+        "butter",
+        "milk",
+        "wheat flour",
+        "often cream",
+        "sometimes rice"
+      ],
+      "origin": "French, named for the Prince de Soubise, an 18th century marshal",
+      "pairs": "Lamb, pork chop, roast chicken, sweetbreads, eggs",
+      "notThis": "Not caramelized onion. Nothing browns, so it is pale, sweet and creamy, not dark and jammy.",
+      "seeAlso": [
+        "fd_0208",
+        "fd_0028"
+      ],
+      "line": "Lamb loin, onion soubise, charred spring onion"
+    },
+    {
+      "id": "fd_0336",
+      "term": "Nage",
+      "say": "NAHZH",
+      "section": "sauces",
+      "level": 4,
+      "gist": "Light wine broth that seafood poaches in, then arrives in",
+      "guest": "It's a light, fragrant broth of white wine, vegetables and herbs. Seafood poaches in it and arrives swimming in it, so the broth is the sauce.",
+      "why": "The base is a court bouillon, water and white wine simmered briefly with carrot, shallot, celery and herbs. Shellfish or fish poach gently in it and arrive in that liquid, often with butter whisked in, so it eats as a broth, not a coating sauce.",
+      "madeWith": [
+        "white wine",
+        "shallots",
+        "carrot",
+        "celery",
+        "herbs",
+        "often butter",
+        "sometimes cream"
+      ],
+      "origin": "French, à la nage, served swimming in its broth",
+      "pairs": "Lobster, langoustine, scallops, halibut, mussels",
+      "notThis": "Not consommé, clarified glass-clear and served as soup. This is a simple poaching broth served as the sauce.",
+      "seeAlso": [
+        "fd_0214",
+        "fd_0034",
+        "fd_0136"
+      ],
+      "confusedWith": [
+        "fd_0204"
+      ],
+      "line": "Butter-poached lobster à la nage, spring vegetables"
     },
     {
       "id": "fd_0216",
@@ -5783,6 +6143,9 @@
         "fd_0045",
         "fd_0113"
       ],
+      "confusedWith": [
+        "fd_0338"
+      ],
       "line": "Halibut en papillote, fennel, lemon, white wine"
     },
     {
@@ -5812,7 +6175,8 @@
         "fd_0233"
       ],
       "confusedWith": [
-        "fd_0205"
+        "fd_0205",
+        "fd_0340"
       ],
       "line": "Dover sole meunière, brown butter, lemon, parsley"
     },
@@ -5841,6 +6205,9 @@
         "fd_0232",
         "fd_0161",
         "fd_0122"
+      ],
+      "confusedWith": [
+        "fd_0340"
       ],
       "line": "Trout amandine, brown butter, lemon, haricots verts"
     },
@@ -5893,6 +6260,125 @@
       ],
       "line": "Corned beef hash, two fried eggs, toast",
       "prompt": "Born as a way to use leftovers: cooked meat, often corned or roast beef, is diced with potato and onion and pressed into a hot buttered pan, then left alone so the starch browns into a crust. In South Carolina barbecue joints, __ is instead a soft pork stew spooned over rice."
+    },
+    {
+      "id": "fd_0337",
+      "term": "Torchon",
+      "say": "tor-SHOHN",
+      "aliases": [
+        "Au Torchon"
+      ],
+      "section": "preparations",
+      "level": 3,
+      "gist": "Fattened liver rolled tight in cloth, poached and sliced cold",
+      "guest": "It's foie gras, rich duck liver, rolled in a cloth, poached and chilled, then sliced into cool rounds. It spreads on warm brioche like the richest butter.",
+      "why": "The raw lobe is deveined, seasoned with salt and often a sweet wine, rolled tight in cloth, poached for minutes and chilled. So little heat leaves it dense and silky, cool and milder than seared foie gras.",
+      "madeWith": [
+        "duck or goose liver",
+        "salt",
+        "sugar",
+        "sometimes sweet wine",
+        "sometimes brandy"
+      ],
+      "note": "Half cooked on purpose and served cold, pink and soft at the center.",
+      "origin": "French, a dish towel: the cloth the liver is rolled and poached in",
+      "notThis": "Not a terrine, which is pressed in a mold and sliced in slabs. This is rolled in cloth and cut in rounds.",
+      "lexiconSlug": "foie-gras-torchon-mi-cuit-and-ethics-of-service",
+      "seeAlso": [
+        "fd_0055",
+        "fd_0228",
+        "fd_0227"
+      ],
+      "confusedWith": [
+        "fd_0084"
+      ],
+      "line": "Foie gras torchon, toasted brioche, fig compote"
+    },
+    {
+      "id": "fd_0338",
+      "term": "En Croûte",
+      "say": "ahn-KROOT",
+      "section": "preparations",
+      "level": 3,
+      "gist": "Fish or meat wrapped in pastry and baked, then cut in slices",
+      "guest": "It's baked inside a pastry crust, like a beef Wellington. The pastry seals in the juices, so the inside stays moist and the outside turns golden and crisp.",
+      "why": "A whole fillet, tenderloin or seasoned ground meat is wrapped in puff pastry or pie dough, often over mushrooms or spinach, then baked. The pastry insulates, so the inside cooks gently while the crust browns. The kitchen sets the doneness, beef pink at the center, fish just set.",
+      "madeWith": [
+        "wheat flour",
+        "butter",
+        "often egg wash",
+        "often beef or salmon",
+        "often mushrooms",
+        "sometimes pistachio",
+        "sometimes gelatin"
+      ],
+      "origin": "French, in crust: the pastry a fish, roast or pâté is baked inside",
+      "notThis": "Not en papillote, where food bakes in a paper parcel you tear open. Here the wrapper is pastry and you eat it.",
+      "recipe": "pate-en-croute",
+      "seeAlso": [
+        "fd_0244",
+        "fd_0073"
+      ],
+      "confusedWith": [
+        "fd_0231"
+      ],
+      "line": "Salmon en croûte, spinach, beurre blanc"
+    },
+    {
+      "id": "fd_0339",
+      "term": "Quenelle",
+      "say": "kuh-NEHL",
+      "section": "preparations",
+      "level": 3,
+      "gist": "Smooth oval shaped with a spoon, named for a poached fish dumpling",
+      "guest": "It's the shape, a smooth oval scooped with a spoon, like a small football of sorbet or cream. On a classic French menu it's a light poached fish dumpling.",
+      "why": "The classic is from Lyon, pike pounded smooth with egg, butter and a cooked flour paste, shaped into ovals and poached until it puffs, light as a soufflé. Chefs borrowed the oval for anything soft, so on most menus the word just means the shape.",
+      "madeWith": [
+        "pike or other white fish",
+        "egg",
+        "butter",
+        "often wheat flour",
+        "cream",
+        "often crayfish"
+      ],
+      "note": "The ingredient list is for the classic fish dumpling only. A quenelle of sorbet or cream is just that scoop.",
+      "notThis": "Not an ice cream scoop. That is a round ball. This is a smooth, pointed oval drawn with a spoon.",
+      "seeAlso": [
+        "fd_0259",
+        "fd_0177",
+        "fd_0157"
+      ],
+      "line": "Warm chocolate tart, quenelle of crème fraîche"
+    },
+    {
+      "id": "fd_0340",
+      "term": "Grenobloise",
+      "say": "greh-noh-BLWAHZ",
+      "section": "preparations",
+      "level": 4,
+      "gist": "Brown butter finish with capers, lemon pieces and croutons",
+      "guest": "It's a classic French finish for fish, brown butter with capers, fresh lemon pieces and crisp croutons. Nutty, salty, bright and crunchy in one spoonful.",
+      "why": "The floured fish is pan-fried, then the butter is cooked nut-brown and spooned over with capers, diced peeled lemon and croutons. Lemon flesh gives bright bursts instead of a squeeze of juice, and the croutons stay crunchy against the soft fish.",
+      "madeWith": [
+        "butter",
+        "capers",
+        "lemon",
+        "wheat flour",
+        "bread",
+        "often parsley"
+      ],
+      "origin": "French, in the style of Grenoble, the city in the French Alps",
+      "notThis": "Not meunière, which is brown butter, lemon juice and parsley alone. Capers and croutons make it grenobloise.",
+      "seeAlso": [
+        "fd_0161",
+        "fd_0278",
+        "fd_0110"
+      ],
+      "confusedWith": [
+        "fd_0232",
+        "fd_0233"
+      ],
+      "line": "Pan-roasted skate wing grenobloise, spinach"
     },
     {
       "id": "fd_0234",
@@ -6091,6 +6577,10 @@
         "fd_0238",
         "fd_0248"
       ],
+      "confusedWith": [
+        "fd_0341",
+        "fd_0348"
+      ],
       "line": "Lemon tart, torched meringue, blackberry"
     },
     {
@@ -6211,7 +6701,8 @@
         "fd_0246"
       ],
       "confusedWith": [
-        "fd_0243"
+        "fd_0243",
+        "fd_0343"
       ],
       "line": "Mushroom and leek in puff pastry, Madeira sauce"
     },
@@ -6293,6 +6784,9 @@
         "fd_0240",
         "fd_0265"
       ],
+      "confusedWith": [
+        "fd_0348"
+      ],
       "line": "Pavlova, passion fruit, berries, whipped cream"
     },
     {
@@ -6327,6 +6821,123 @@
       "line": "Gruyère soufflé, frisée, sherry vinaigrette"
     },
     {
+      "id": "fd_0341",
+      "term": "Dacquoise",
+      "say": "dah-KWAHZ",
+      "section": "bread",
+      "level": 3,
+      "gist": "Crisp, chewy nut meringue baked flat as a cake layer or base",
+      "guest": "It's a thin baked meringue made with ground nuts, crisp at the edge and a little chewy inside. It brings crunch and a toasty nut flavor.",
+      "why": "Egg whites are whipped with sugar, folded with ground almonds or hazelnuts, spread in discs and baked until just set. The nuts and the short bake keep it from drying brittle like a plain meringue, so it eats crisp at the edge and tender within, like a large flat macaron shell.",
+      "madeWith": [
+        "egg white",
+        "sugar",
+        "almonds",
+        "often hazelnuts",
+        "sometimes wheat flour"
+      ],
+      "origin": "French, named for Dax in the southwest of France",
+      "notThis": "Not a plain meringue. The ground nuts make it tender and chewy where a plain meringue is brittle and hollow.",
+      "seeAlso": [
+        "fd_0238",
+        "fd_0242",
+        "fd_0348"
+      ],
+      "confusedWith": [
+        "fd_0240",
+        "fd_0348"
+      ],
+      "line": "Hazelnut dacquoise, milk chocolate crémeux, roasted pear"
+    },
+    {
+      "id": "fd_0342",
+      "term": "Canelé",
+      "say": "kan-uh-LAY",
+      "aliases": [
+        "Cannelé",
+        "Canelé de Bordeaux"
+      ],
+      "section": "bread",
+      "level": 3,
+      "gist": "Fluted Bordeaux cake, dark caramel shell, soft custardy middle",
+      "guest": "It's a little cake from Bordeaux, baked in a fluted mold until the outside turns to dark, crisp caramel. Inside it's soft custard with rum and vanilla.",
+      "why": "A thin batter of milk, eggs, flour, sugar, butter, rum and vanilla goes into fluted copper molds coated with beeswax and bakes very hot. The mold and the wax caramelize the outside almost to black while the middle sets like soft custard. It is best the day it is baked.",
+      "madeWith": [
+        "milk",
+        "egg",
+        "wheat flour",
+        "butter",
+        "sugar",
+        "rum",
+        "vanilla"
+      ],
+      "origin": "Bordeaux, France; the name refers to the fluted mold",
+      "notThis": "Not burnt. The near-black shell is caramelized sugar and butter, and a pale one is the failure.",
+      "recipe": "caneles-de-bordeaux",
+      "seeAlso": [
+        "fd_0352",
+        "fd_0262",
+        "fd_0250"
+      ],
+      "line": "Warm canelé, crème fraîche, poached quince"
+    },
+    {
+      "id": "fd_0343",
+      "term": "Kouign-Amann",
+      "say": "kween-ah-MAHN",
+      "section": "bread",
+      "level": 3,
+      "gist": "Layered butter pastry baked until its sugar turns to caramel",
+      "guest": "It's a French butter pastry, croissant-style dough folded with sugar and salted butter and baked until the sugar becomes a crackly caramel shell.",
+      "why": "Yeasted bread dough is folded around salted butter and sugar like a croissant. In the oven the butter steams the layers apart while the sugar melts and caramelizes against the hot pan, so the outside shatters like toffee and the inside stays soft and layered.",
+      "madeWith": [
+        "wheat flour",
+        "salted butter",
+        "sugar",
+        "yeast"
+      ],
+      "origin": "Breton, from Douarnenez in Brittany; the words mean cake and butter",
+      "notThis": "Not puff pastry or a sugared croissant. The sugar is folded inside the yeasted dough and caramelizes in the oven.",
+      "recipe": "kouign-amann",
+      "seeAlso": [
+        "fd_0235",
+        "fd_0028"
+      ],
+      "confusedWith": [
+        "fd_0244"
+      ],
+      "line": "Kouign-Amann, salted caramel, cider-poached apple"
+    },
+    {
+      "id": "fd_0344",
+      "term": "Sablé",
+      "say": "sah-BLAY",
+      "aliases": [
+        "Sablé Breton"
+      ],
+      "section": "bread",
+      "level": 3,
+      "gist": "Crumbly French shortbread, often a crisp base under dessert",
+      "guest": "It's a French shortbread, crisp and crumbly, rich with butter and often a touch of salt. It comes as a cookie or as the crunchy base under fruit and cream.",
+      "why": "Butter is worked into flour and sugar with an egg yolk and almost no liquid, so it stays tender and bakes into fine sandy crumbs, which is what the name means. The Breton version creams soft salted butter with sugar and more yolk, so it bakes thicker and richer.",
+      "madeWith": [
+        "butter",
+        "wheat flour",
+        "sugar",
+        "egg yolk",
+        "salt",
+        "sometimes almonds"
+      ],
+      "origin": "French for sandy, after its crumbly texture",
+      "pairs": "Strawberries, lemon curd, whipped cream, ice cream",
+      "notThis": "Not a crumb crust and not a soft cookie. It is baked as one crisp piece and snaps rather than bends.",
+      "seeAlso": [
+        "fd_0241",
+        "fd_0352"
+      ],
+      "line": "Strawberries, sablé breton, crème fraîche, basil"
+    },
+    {
       "id": "fd_0249",
       "term": "Crème Anglaise",
       "say": "KREM ahn-GLAYZ",
@@ -6351,7 +6962,8 @@
         "fd_0260"
       ],
       "confusedWith": [
-        "fd_0264"
+        "fd_0264",
+        "fd_0345"
       ],
       "line": "Warm chocolate cake, crème anglaise, raspberries"
     },
@@ -6405,6 +7017,9 @@
         "fd_0198",
         "fd_0252"
       ],
+      "confusedWith": [
+        "fd_0346"
+      ],
       "line": "Dark chocolate ganache tart, sea salt, crème fraîche"
     },
     {
@@ -6432,7 +7047,9 @@
       ],
       "confusedWith": [
         "fd_0248",
-        "fd_0263"
+        "fd_0263",
+        "fd_0345",
+        "fd_0346"
       ],
       "line": "Dark chocolate mousse, olive oil, sea salt"
     },
@@ -6488,6 +7105,9 @@
       "seeAlso": [
         "fd_0250",
         "fd_0262"
+      ],
+      "confusedWith": [
+        "fd_0347"
       ],
       "line": "Vanilla bean panna cotta, macerated strawberries"
     },
@@ -6716,7 +7336,9 @@
       "notThis": "Not mousse, which is whipped and airy. Not crème brûlée, which has a torched sugar top.",
       "confusedWith": [
         "fd_0252",
-        "fd_0262"
+        "fd_0262",
+        "fd_0346",
+        "fd_0347"
       ],
       "line": "Dark chocolate pot de crème, sea salt, whipped cream"
     },
@@ -6781,6 +7403,129 @@
         "fd_0264"
       ],
       "line": "Strawberry shortcake, Chantilly cream, mint"
+    },
+    {
+      "id": "fd_0345",
+      "term": "Sabayon",
+      "say": "sah-bah-YOHN",
+      "aliases": [
+        "Zabaglione",
+        "Zabaione"
+      ],
+      "section": "custards",
+      "level": 3,
+      "gist": "Warm, airy foam of yolks whisked with wine over gentle heat",
+      "guest": "It's a warm, airy sauce of egg yolks whisked with sweet wine until they froth. Spooned over berries, it tastes like a light custard with a hint of wine.",
+      "why": "Yolks, sugar and wine are whisked over a water bath until they thicken and hold air, so it arrives warm, pale and foamy, lighter than any set custard. Italians make it with Marsala and call it zabaglione; the French pour Champagne or Sauternes.",
+      "madeWith": [
+        "egg yolk",
+        "sugar",
+        "wine",
+        "sometimes cream"
+      ],
+      "note": "Often made to order and served warm, so allow a few minutes. Some of the wine's alcohol stays in it.",
+      "notThis": "Not a chilled pouring custard and not a mousse. It is whisked warm over water and eaten as a foam.",
+      "seeAlso": [
+        "fd_0197",
+        "fd_0261"
+      ],
+      "confusedWith": [
+        "fd_0249",
+        "fd_0252"
+      ],
+      "line": "Warm Champagne sabayon, summer berries, almond tuile",
+      "prompt": "Yolks, sugar and wine are whisked over a water bath until they thicken and hold air, so it arrives warm, pale and foamy, lighter than any set custard. Italians make it with Marsala and call it __; the French pour Champagne or Sauternes."
+    },
+    {
+      "id": "fd_0346",
+      "term": "Crémeux",
+      "say": "kray-MUH",
+      "section": "custards",
+      "level": 3,
+      "gist": "Custard base set with chocolate or fruit into a dense, silky cream",
+      "guest": "It's a rich chocolate or fruit cream built on a custard base, denser than a mousse and softer than a truffle. You drag the crunchy bits through it.",
+      "why": "A custard of yolks and cream is cooked, then melted chocolate, or fruit purée and a little gelatin, is stirred in and it sets cold. No air is whipped in, so it is denser than a mousse, and the custard under it keeps it softer than a ganache and easy to spoon.",
+      "madeWith": [
+        "egg yolk",
+        "cream",
+        "milk",
+        "sugar",
+        "often chocolate",
+        "sometimes gelatin",
+        "sometimes butter"
+      ],
+      "origin": "French, 'creamy'; a modern pastry kitchen word for a set, pipeable cream",
+      "notThis": "Not a mousse, which is whipped light with air, and not a ganache, which is chocolate melted into hot cream with no custard under it.",
+      "seeAlso": [
+        "fd_0249"
+      ],
+      "confusedWith": [
+        "fd_0252",
+        "fd_0251",
+        "fd_0263"
+      ],
+      "line": "Dark chocolate crémeux, hazelnut praline, brown butter sablé"
+    },
+    {
+      "id": "fd_0347",
+      "term": "Posset",
+      "say": "PAH-sit",
+      "section": "custards",
+      "level": 3,
+      "gist": "Boiled sweet cream that lemon juice sets soft in the glass",
+      "guest": "It's an old English lemon cream, chilled until the lemon juice sets it. Smooth and rich like a panna cotta, but with a real citrus snap.",
+      "why": "Cream and sugar are boiled, lemon juice is stirred in, and the acid firms the cream's proteins as it chills, so it sets in the glass. The high fat keeps it smooth, and it sits between a panna cotta and a thick pudding, sharp with citrus.",
+      "madeWith": [
+        "cream",
+        "sugar",
+        "lemon juice",
+        "often lemon zest"
+      ],
+      "origin": "English; in the Middle Ages a hot drink of milk curdled with wine or ale",
+      "notThis": "Not a panna cotta, which is set with gelatin and turned out of a mold. This sets from the citrus and stays in its glass.",
+      "recipe": "lemon-posset-with-shortbread-fingers",
+      "seeAlso": [
+        "fd_0250",
+        "fd_0262"
+      ],
+      "confusedWith": [
+        "fd_0254",
+        "fd_0263"
+      ],
+      "line": "Meyer lemon posset, blueberries, brown butter shortbread"
+    },
+    {
+      "id": "fd_0348",
+      "term": "Vacherin",
+      "say": "vash-uh-RAN",
+      "aliases": [
+        "Vacherin Glacé"
+      ],
+      "section": "custards",
+      "level": 4,
+      "gist": "Crisp meringue shell holding ice cream or sorbet and whipped cream",
+      "guest": "It's a crisp meringue shell filled with ice cream or sorbet and whipped cream, so you get crunchy, cold and creamy in one spoonful.",
+      "why": "Egg white and sugar are baked slow into dry, crisp meringue, shaped into a shell or discs, then filled with ice cream or sorbet and whipped cream, or classically just cream and fruit. The dry shell stays crisp against the cold filling, so every bite is crunch, ice and cream.",
+      "madeWith": [
+        "egg white",
+        "sugar",
+        "cream",
+        "ice cream or sorbet",
+        "often fruit"
+      ],
+      "origin": "French; a classical dessert that borrowed the name of a round Alpine cheese",
+      "notThis": "Not a pavlova, soft in the middle. This shell is baked dry and crisp, then filled, most often with ice cream.",
+      "seeAlso": [
+        "fd_0260",
+        "fd_0259",
+        "fd_0265"
+      ],
+      "confusedWith": [
+        "fd_0247",
+        "fd_0240",
+        "fd_0341"
+      ],
+      "line": "Strawberry vacherin, vanilla ice cream, Chantilly, basil"
     },
     {
       "id": "fd_0266",
@@ -7239,6 +7984,9 @@
         "fd_0065",
         "fd_0041"
       ],
+      "confusedWith": [
+        "fd_0349"
+      ],
       "line": "Grilled octopus, olive oil potatoes, smoked pimentón"
     },
     {
@@ -7257,6 +8005,77 @@
       "lexiconSlug": "salt-types-and-when-each-wins",
       "line": "Dark chocolate tart, olive oil, finishing salt",
       "prompt": "__ added during cooking dissolves and disappears. Crystals added at the last second stay whole, so they crunch and land on the tongue in bright bursts. Common ones are English flaky __ like Maldon and French fleur de sel, raked by hand from the top of __ ponds."
+    },
+    {
+      "id": "fd_0349",
+      "term": "Espelette",
+      "say": "ehs-peh-LEHT",
+      "section": "pantry",
+      "level": 3,
+      "gist": "Fruity, mild ground red chili from the French Basque country",
+      "guest": "It's a gently warm red chili from the French Basque country, dried and ground. Sunny and fruity rather than hot, more glow than burn.",
+      "why": "The Gorria pepper ripens red around the village of Espelette and is dried and ground fine; the name is protected like Champagne. Far below cayenne on heat, it lets fruit and a faint sweetness through, so cooks use it where paprika would taste flat: eggs, fish, butter sauces.",
+      "madeWith": [
+        "dried red chili"
+      ],
+      "origin": "Espelette, French Basque country; protected name since 2000",
+      "pairs": "Bayonne ham, eggs, octopus, white fish, butter sauces",
+      "notThis": "Not smoked paprika. Spanish pimentón is often smoked; this is French, unsmoked and fruitier.",
+      "recipe": "axoa-de-veau-despelette",
+      "seeAlso": [
+        "fd_0195",
+        "fd_0282"
+      ],
+      "confusedWith": [
+        "fd_0283"
+      ],
+      "line": "Grilled octopus, espelette, lemon aioli",
+      "prompt": "The Gorria pepper ripens red around the village of __ and is dried and ground fine; the name is protected like Champagne. Far below cayenne on heat, it lets fruit and a faint sweetness through, so cooks use it where paprika would taste flat: eggs, fish, butter sauces."
+    },
+    {
+      "id": "fd_0350",
+      "term": "Yuzu Kosho",
+      "say": "YOO-zoo KOH-shoh",
+      "section": "pantry",
+      "level": 3,
+      "gist": "Salty Japanese green chili paste perfumed with citrus zest",
+      "guest": "It's a Japanese paste of green chili, salt and yuzu zest, a citrus between lemon and mandarin. A dab is hot and perfumed, so a little goes a long way.",
+      "why": "From Kyushu in southern Japan, where the local word for chili is kosho. Green chili and green yuzu zest are pounded with salt and left to cure, so the paste is salty, hot and sharp at once under a citrus perfume. It works like hot sauce and a squeeze of citrus in one dot.",
+      "madeWith": [
+        "green chili",
+        "yuzu zest",
+        "salt"
+      ],
+      "note": "Used raw, a pea-sized dab at a time; it is very salty as well as hot.",
+      "origin": "Kyushu, Japan; kosho is the island's word for chili pepper",
+      "pairs": "Oysters, crudo, grilled chicken, hot pot, ramen, steak",
+      "seeAlso": [
+        "fd_0220",
+        "fd_0115"
+      ],
+      "line": "Hamachi crudo, yuzu kosho, olive oil, sea salt",
+      "prompt": "From Kyushu in southern Japan, where the local word for chili is __. Green chili and green __ zest are pounded with salt and left to cure, so the paste is salty, hot and sharp at once under a citrus perfume. It works like hot sauce and a squeeze of citrus in one dot."
+    },
+    {
+      "id": "fd_0351",
+      "term": "Black Garlic",
+      "section": "pantry",
+      "level": 3,
+      "gist": "Cloves aged warm and damp for weeks until soft, black and sweet",
+      "guest": "It's ordinary garlic held warm and humid for weeks until the cloves turn black, soft and sweet. The bite is gone and it tastes more like balsamic.",
+      "why": "Whole heads sit at about 60 to 70 C (140 to 158 F) in high humidity for three weeks or more. Nothing ferments; slow browning turns the sugars dark and sweet as the sharp sulfur compounds mellow. The cloves come out soft as dates, tasting of balsamic and molasses.",
+      "madeWith": [
+        "garlic"
+      ],
+      "origin": "Popularized from Korea in the 2000s; now made worldwide",
+      "pairs": "Mushrooms, steak, roast chicken, butter, aioli",
+      "notThis": "Not roasted or burnt. Roasting takes an hour; this takes weeks and turns the cloves black and sticky.",
+      "lexiconSlug": "black-garlic",
+      "seeAlso": [
+        "fd_0266",
+        "fd_0138"
+      ],
+      "line": "Dry-aged ribeye, black garlic jus, charred leek"
     },
     {
       "id": "fd_0285",
@@ -7334,6 +8153,9 @@
       "origin": "French, mouth amuser, older French amuse-gueule",
       "seeAlso": [
         "fd_0290"
+      ],
+      "confusedWith": [
+        "fd_0352"
       ]
     },
     {
@@ -7355,7 +8177,8 @@
         "fd_0291"
       ],
       "confusedWith": [
-        "fd_0290"
+        "fd_0290",
+        "fd_0355"
       ],
       "line": "Three-course prix fixe, 58 per guest"
     },
@@ -7377,7 +8200,8 @@
         "fd_0288"
       ],
       "confusedWith": [
-        "fd_0289"
+        "fd_0289",
+        "fd_0355"
       ],
       "line": "Seven-course tasting menu, optional wine pairing"
     },
@@ -7470,7 +8294,8 @@
       ],
       "confusedWith": [
         "fd_0296",
-        "fd_0300"
+        "fd_0300",
+        "fd_0354"
       ],
       "line": "Grass-fed strip loin, salsa verde, roasted potatoes",
       "prompt": "Most cattle graze when young, then finish on grain in a feedlot, which builds marbling. __-finished animals stay on forage, so the meat is leaner and deeper red, with yellowish fat from the carotene in __ and a mineral, slightly gamey taste."
@@ -7564,10 +8389,111 @@
       "confusedWith": [
         "fd_0285",
         "fd_0295",
-        "fd_0296"
+        "fd_0296",
+        "fd_0354"
       ],
       "line": "Organic little gem, radish, buttermilk dressing",
       "prompt": "It is a legal claim, overseen by the USDA and checked yearly by certifiers. It rules out GMOs and most synthetic sprays and fertilizers. Livestock eat __ feed, and grazing animals must graze at least 120 days a year. It describes farming method, not flavor."
+    },
+    {
+      "id": "fd_0352",
+      "term": "Mignardises",
+      "say": "meen-yar-DEEZ",
+      "section": "language",
+      "level": 3,
+      "gist": "Tray of tiny sweets sent after dessert to close a tasting menu",
+      "guest": "They're the little sweets that come after dessert, one bite each. Often a chocolate, a macaron, a fruit jelly, sent out with the coffee.",
+      "why": "From the French for dainty. After the plated dessert, the pastry kitchen sends a tray of one-bite sweets, usually chocolates, fruit jellies, macarons, financiers or caramels, to go with coffee. Each is a single bite, so the meal ends on variety rather than fullness.",
+      "madeWith": [
+        "often chocolate",
+        "often butter",
+        "often egg",
+        "often wheat flour",
+        "often almonds",
+        "often cream",
+        "sometimes gelatin"
+      ],
+      "origin": "French, from mignard, dainty: the last line of a tasting menu",
+      "notThis": "Not an amuse-bouche, the savory bite that opens the meal. These are sweet and close it, after dessert.",
+      "seeAlso": [
+        "fd_0290",
+        "fd_0238",
+        "fd_0255"
+      ],
+      "confusedWith": [
+        "fd_0288"
+      ],
+      "line": "Coffee, tea and mignardises"
+    },
+    {
+      "id": "fd_0353",
+      "term": "Ikejime",
+      "say": "ee-keh-JEE-may",
+      "section": "language",
+      "level": 4,
+      "gist": "Fish killed by a spike and bled at once, so the flesh stays firm",
+      "guest": "It's a Japanese way of handling fish, killed instantly and bled as it leaves the water so it never thrashes. The flesh stays firm and clean tasting, most often served raw.",
+      "why": "A spike to the brain kills the fish instantly, it is bled, and often a wire is run down the spine to still the nerves. A fish that dies thrashing floods its muscle with stress chemistry and softens fast; this one stays firm for days and can be rested to deepen its flavor.",
+      "madeWith": [
+        "fish"
+      ],
+      "note": "Most often served raw or barely seared. The word covers only the kill and bleed, not how the fish was frozen or handled since.",
+      "origin": "Japanese: ike, live, and shime, to close: killed while still alive",
+      "notThis": "Not a species, a cut or a cooking method. It says only how the fish was killed and bled.",
+      "lexiconSlug": "sashimi-grade-and-ikejime",
+      "seeAlso": [
+        "fd_0220",
+        "fd_0299",
+        "fd_0298"
+      ],
+      "line": "Ikejime madai, yuzu kosho, shiso"
+    },
+    {
+      "id": "fd_0354",
+      "term": "Regenerative",
+      "aliases": [
+        "Regeneratively Raised",
+        "Regeneratively Farmed"
+      ],
+      "section": "language",
+      "level": 3,
+      "gist": "Farming that sets out to rebuild the soil, with no legal definition",
+      "guest": "It means the farm works to rebuild its soil, moving cattle pasture to pasture and planting cover crops, not just avoiding harm. I can name the farm.",
+      "why": "Sustainable means doing no further harm; this sets out to repair: cover crops, little or no tilling, cattle moved often so the grass recovers. No law or label rule defines the word; only private marks like Regenerative Organic Certified are audited, so the farm's name matters.",
+      "origin": "English, to grow back. Coined for farming by Robert Rodale in the 1980s",
+      "notThis": "Not the same as organic, a federal legal standard with inspections. A farm can be one without the other.",
+      "seeAlso": [
+        "fd_0296",
+        "fd_0297"
+      ],
+      "confusedWith": [
+        "fd_0300",
+        "fd_0295"
+      ],
+      "line": "Grilled bavette from a regenerative farm, chimichurri",
+      "prompt": "Sustainable means doing no further harm; this sets out to repair: cover crops, little or no tilling, cattle moved often so the grass recovers. No law or label rule defines the word; only private marks like __ Organic Certified are audited, so the farm's name matters."
+    },
+    {
+      "id": "fd_0355",
+      "term": "Omakase",
+      "say": "oh-mah-KAH-say",
+      "section": "language",
+      "level": 3,
+      "gist": "Japanese chef's-choice meal with no printed menu, served piece by piece",
+      "guest": "It means leave it to the chef, who picks each course from the best fish in today and adjusts to how you eat. Just tell us anything you'd rather skip.",
+      "why": "Makaseru means to entrust. At a sushi counter the chef builds the meal from the day's fish, nigiri running from lighter to richer, at a set price or tiers. No menu is printed; the chef swaps pieces to the guest's taste and pace. Other kitchens borrow it for any chef's-choice meal.",
+      "note": "Most pieces at a sushi counter are raw fish and nothing is printed ahead, so anything to avoid must be said before the first course.",
+      "origin": "Japanese, o-makase, from makaseru, to entrust: I leave it up to you",
+      "notThis": "Not a printed tasting menu: the chef sets tonight's courses at the counter and can adjust them to you.",
+      "seeAlso": [
+        "fd_0291",
+        "fd_0353"
+      ],
+      "confusedWith": [
+        "fd_0290",
+        "fd_0289"
+      ],
+      "line": "Omakase, 18 courses, counter seating only"
     }
   ]
 }

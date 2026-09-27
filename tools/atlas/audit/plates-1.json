@@ -1,0 +1,567 @@
+{
+ "batch": "plates-1",
+ "entries": [
+  "huckleberry",
+  "pawpaw",
+  "crabapple"
+ ],
+ "findings": [
+  {
+   "field": "d",
+   "severity": "wrong",
+   "claim": "That pigment is anthocyanin, more per gram than any farmed blueberry, and more acid comes with it, since the berry is small and the skin holding both is a bigger share of the fruit.",
+   "because": "Vaccinium membranaceum grown in USDA test plots (Lee, Finn and Wrolstad 2004) measured 167 mg total anthocyanin per 100 g, while highbush cultivars run 73 to 430 mg/100 g, so many farmed blueberries beat it per gram; \"any\" is false. The mechanism is also wrong twice: organic acids sit in the flesh vacuoles, not the skin, and the same study records the huckleberry's pigment in flesh AND skin (the sentence before this one says so too, then this one contradicts it by putting the pigment in the skin). The skin-share argument is the one Lee applied to V. ovatum, not membranaceum. The acid claim itself holds (TA 1.73 g/100 g, pH 2.6, 12.7 Brix against a typical highbush 0.3 to 1.3 g/100 g), but the reason is that wild fruit was never bred for sugar.",
+   "fix": "That pigment is anthocyanin, run through the flesh where a blueberry keeps it in the skin, so it stains; more acid comes with it, since nobody bred the sharpness out of a wild fruit.",
+   "lens": "fact",
+   "key": "huckleberry-fact-1",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "d",
+   "severity": "unsafe",
+   "claim": "Two genera trade under one name, and the seeds tell them apart.",
+   "because": "A third plant sells under the same name: the garden huckleberry of seed catalogs and garden-market tables is a nightshade, Solanum scabrum (often treated as a form of S. nigrum), whose unripe green fruit carries solanine and other glycoalkaloids; it is eaten only fully ripe (black) and cooked. The house rule asks for the look-alike stated as a fact about the plant, and the entry's opening frames the name as covering only two Ericaceae genera, which a gardener's huckleberry pie would not fit. Adding the fact keeps d at about 1080 characters, under the 1200 ceiling.",
+   "fix": "Two genera trade under one name, and the seeds tell them apart; a third, the garden huckleberry of seed catalogs, is a nightshade, Solanum scabrum, whose green fruit carries solanine and is eaten only black ripe and cooked.",
+   "lens": "fact",
+   "key": "huckleberry-fact-2",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "d",
+   "severity": "unclear",
+   "claim": "against baking soda it turns blue-gray",
+   "because": "The existing Blueberry entry in the Fruit Atlas says the same pigment goes \"blue then green-gray in alkali\" and \"rings each fruit teal\", and every kitchen account of soda-heavy muffins reports green. Cyanidin and delphinidin glycosides run purple at pH 7 to 8 and blue to green at 9 to 11, so the color a cook actually sees around a burst berry is green-gray. Agree with the related entry so the two do not name different colors for one reaction.",
+   "fix": "against baking soda it turns green-gray",
+   "lens": "fact",
+   "key": "huckleberry-fact-3",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "store",
+   "severity": "wrong",
+   "claim": "three to five days at most; moisture and a deep pile both bring mold within a day",
+   "because": "Extension guidance (University of Alaska Fairbanks on huckleberries) gives up to a week covered in the refrigerator, and the fruit's low sugar:acid ratio is cited in the literature as favoring storability; \"at most\" sets a false ceiling. Wet or deep-piled fruit does mold fast, but in a cold refrigerator it is a day or two, not reliably one.",
+   "fix": "up to a week; moisture and a deep pile both bring mold in a day or two",
+   "lens": "fact",
+   "key": "huckleberry-fact-4",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "choose",
+   "severity": "unclear",
+   "claim": "glossy black on eastern ones",
+   "because": "The Northwest's coastal evergreen huckleberry, Vaccinium ovatum, is also glossy black and is sold under the same name; it has soft Vaccinium seeds and is far sweeter (19.6 Brix against 12.7 for the mountain type). A cook reading glossy black as eastern would reach for the food mill on fruit that has no nutlets to remove. Naming the coastal type keeps the seed test as the real tell.",
+   "fix": "glossy black on eastern and coastal evergreen types",
+   "lens": "fact",
+   "key": "huckleberry-fact-5",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "prep",
+   "severity": "unclear",
+   "claim": "through a food mill to leave the ten seeds behind",
+   "because": "Gaylussacia nutlets are only a couple of millimeters across; a food mill's medium and coarse discs pass them, and only the fine disc reliably holds them back. Name the disc or the cook will mill the grit straight into the sauce.",
+   "fix": "through a food mill's fine disc to leave the ten seeds behind",
+   "lens": "fact",
+   "key": "huckleberry-fact-6",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "choose",
+   "severity": "unsafe",
+   "claim": "Small, plump and dry, uniformly dark: purple black on mountain types, glossy black on eastern ones, ruby on red huckleberry.",
+   "because": "Every pound is wild picked, as the entry itself says, and the only identification given is color, which the poisonous look-alikes share. Pokeweed (eastern, same August to September window) ripens dark purple black and stains purple; black nightshade and belladonna ripen glossy black; red baneberry grows in the same Northwest woods as red huckleberry and a handful of berries is a cardiac dose for a child. The check that actually separates a Vaccinium or Gaylussacia berry from all of them is the five-pointed calyx crown at the blossom end (opposite the stem) on a berry hanging from a woody shrub: a nightshade wears its green star at the stem end and no crown, pokeweed berries are flattened and dimpled in a drooping spike on a magenta stalk, and baneberries sit in an upright cluster on a soft-stemmed herb. The contract's own precedent is matsutake, whose choose field spends its length on Amanita smithiana; a wild-picked fruit with poisonous look-alikes owes the same sentence, and it belongs here, before any cooking advice. Proposed text totals 670 characters, under the 700 ceiling.",
+   "fix": "Append: \"A true huckleberry, like a blueberry, wears a five-pointed crown at the blossom end and hangs singly from a woody shrub; a black berry with a green star at its stem end instead, or a flattened one in a drooping cluster on a magenta stalk, is a nightshade or pokeweed, and both poison. In the Northwest a red berry in an upright cluster on a soft-stemmed plant is baneberry, not red huckleberry.\"",
+   "lens": "safety",
+   "key": "huckleberry-safety-7",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "d",
+   "severity": "unsafe",
+   "claim": "Two genera trade under one name, and the seeds tell them apart.",
+   "because": "A third plant trades under the name and it is the one a home gardener will hand a cook: the garden huckleberry of seed catalogs (Solanum scabrum or S. melanocerasum, sold as Solanum nigrum var. guineense) is a nightshade, not a Vaccinium or Gaylussacia. Its green and half-ripe fruit holds solanine-type glycoalkaloids, and even the black-ripe fruit is grown to be cooked with sugar, never eaten raw off the bush as a mountain huckleberry is. The entry's raw method and its opening claim that only two genera share the word both leave that cook uninformed. The definition sits at 954 characters, so the sentence fits under the 1200 ceiling.",
+   "fix": "Replace with: \"Two genera trade under one name, and the seeds tell them apart; the garden huckleberry of seed catalogs is a third thing, a nightshade (Solanum) whose green fruit holds glycoalkaloids and which is grown to be used fully black-ripe and cooked.\"",
+   "lens": "safety",
+   "key": "huckleberry-safety-8",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "prep",
+   "severity": "unclear",
+   "claim": "Rinse just before use. Frozen berries bleed as they warm: toss in flour and fold in frozen, last.",
+   "because": "Store says to freeze the fruit unwashed and that it goes \"into the batter straight from the freezer\", so read together the two fields tell the cook that wild, unwashed, unsorted fruit goes into a batter with no rinse at all, while fresh fruit is rinsed. Nothing in the entry resolves which rule applies to the frozen pound, which is most of what is sold. A cook needs to be told the frozen fruit gets a fast cold rinse in a sieve, seconds only, because a long one is what makes it bleed.",
+   "fix": "Replace with: \"Rinse fresh fruit just before use; give frozen fruit seconds under cold water in a sieve, shake it dry and use it at once, since it bleeds as it warms: toss in flour and fold in frozen, last.\"",
+   "lens": "safety",
+   "key": "huckleberry-safety-9",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "d",
+   "severity": "wrong",
+   "claim": "\"That pigment is anthocyanin, more per gram than any farmed blueberry, and more acid comes with it, since the berry is small and the skin holding both is a bigger share of the fruit.\"",
+   "because": "Anthocyanin sits in the skin, so the skin-to-flesh ratio explains the pigment; it does not explain the acid, which is in the flesh (vacuoles), not the skin. The sentence also stakes an absolute (\"any farmed blueberry\") that the entry cannot back and the rules say to leave out where unsure.",
+   "fix": "\"That pigment is anthocyanin, and a small berry carries more of it per gram than a farmed blueberry, because skin is a bigger share of the fruit; the flesh runs more acid too.\"",
+   "lens": "contract",
+   "key": "huckleberry-contract-10",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "store",
+   "severity": "unclear",
+   "claim": "\"For longer, freeze unwashed on a tray, then bag: a year at -18C (0F), and they go into the batter straight from the freezer.\"",
+   "because": "Store says freeze unwashed and bake straight from the freezer; prep says \"Rinse just before use.\" Wild-picked fruit that is frozen unwashed therefore never gets rinsed (it cannot be, since it must not warm). The tail also repeats advice already given in the definition's close and again in prep, three times in one entry.",
+   "fix": "\"For longer, sort, rinse, dry on a towel and freeze on a tray, then bag: a year at -18C (0F).\" (store drops to about 245 characters, still inside 140 to 280)",
+   "lens": "contract",
+   "key": "huckleberry-contract-11",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "methods",
+   "severity": "style",
+   "claim": "\"freezing\"",
+   "because": "The contract asks for verbs or noun forms a cook would use to cook the item; freezing is storage, already covered in store, and none of the three exemplars list a storage step as a method.",
+   "fix": "Drop \"freezing\", or replace it with \"sauces\" (the entry's own food-mill line points there).",
+   "lens": "contract",
+   "key": "huckleberry-contract-12",
+   "slug": "huckleberry"
+  },
+  {
+   "field": "d",
+   "severity": "unsafe",
+   "claim": "The skin and the seeds carry annonaceous acetogenins; the seeds were once used as an emetic, and neither is eaten.",
+   "because": "Read as written, the sentence puts the acetogenins in skin and seed only and leaves the pulp clean. The pulp carries them too: annonacin has been measured in ripe pawpaw pulp (about 0.07 mg per gram fresh in one survey, far higher in freeze-dried pulp in the FDA's LC-HRMS work), and pulp-level acetogenins are the reason the fruit is discussed alongside atypical parkinsonism in the Annonaceae. The seeds and skin are the richest tissues and the rule to leave them is right, but a safety fact stated as skin-and-seed-only is a false boundary. The emetic history is correct (asiminine in the seed, tinctured seed in the 1898 dispensatory).",
+   "fix": "Annonaceous acetogenins run through the plant, richest in seed and skin and present in the pulp too; the seeds were once used as an emetic, and neither skin nor seed is eaten.",
+   "lens": "fact",
+   "key": "pawpaw-fact-1",
+   "slug": "pawpaw"
+  },
+  {
+   "field": "choose",
+   "severity": "wrong",
+   "claim": "Reject a hard green fruit, picked too early to finish",
+   "because": "Contradicts the entry's own store field (\"firm fruit keeps longer cold and finishes at room temperature\") and the postharvest record: pawpaw is climacteric and fruit picked firm but already yielding a little finishes normally in two or three days at room temperature, or holds three to four weeks at 4C and then ripens. Only rock-hard immature fruit fails to ripen. A produce buyer who follows the sentence as written rejects the exact stage the fruit is shipped at.",
+   "fix": "Reject rock-hard fruit with no give at all, picked immature and unable to finish; a firm fruit that yields slightly will ripen on the counter.",
+   "lens": "fact",
+   "key": "pawpaw-fact-2",
+   "slug": "pawpaw"
+  },
+  {
+   "field": "d",
+   "severity": "wrong",
+   "claim": "which is why a long bake flattens the flavor and can turn it bitter",
+   "because": "The ester loss explains the flattening (ethyl hexanoate, ethyl octanoate and the other methyl and ethyl esters are the whole banana-mango note and are volatile), but it does not explain bitterness; losing an aroma compound cannot create a bitter taste. Pawpaw's bitter register comes from oxidized pulp, from skin scraped into the pulp, and from cultivar and ripeness variation, and the Kentucky State cooking guidance treats heat as acceptable in floury or very sweet preparations, warning of flavor loss, not bitterness. The causal \"which is why\" ties a true fact to a false consequence.",
+   "fix": "which is why a long bake flattens the flavor; the bitter note comes from browned pulp and stray skin, not from heat.",
+   "lens": "fact",
+   "key": "pawpaw-fact-3",
+   "slug": "pawpaw"
+  },
+  {
+   "field": "season",
+   "severity": "unclear",
+   "claim": "[9, 10]",
+   "because": "Harvest across most of the native range runs late August to mid-October (Kentucky State gives late August to mid-October; the Ohio valley and the southern states start in August). Two months captures the peak but a cook buying at a Mid-Atlantic or Midwestern market sees the first fruit in the last week of August. The plate prints September to October and carries no correction, so adding August corrects the plate rather than contradicting it.",
+   "fix": "[8, 9, 10]",
+   "lens": "fact",
+   "key": "pawpaw-fact-4",
+   "slug": "pawpaw"
+  },
+  {
+   "field": "d",
+   "severity": "unsafe",
+   "claim": "\"Asimina triloba is a temperate member of the custard apple family\" with no word that this is not the papaya.",
+   "because": "In British, Australian, New Zealand, South African and Caribbean English \"pawpaw\" means Carica papaya, and the Lexicon's own Papaya entry (src/lib/data/lexicon.json, slug papaya) tells the cook its seeds are \"peppery and good crushed into a dressing\" and that green fruit sets off a rubber-latex reaction. Neither entry disambiguates the name. A cook or server who knows the papaya as pawpaw can carry the edible-seed advice across to Asimina, whose seeds carry acetogenins and were used as an emetic, or answer a latex-allergic guest's \"is this papaya?\" wrongly. The look-alike here is the name, and the check that tells them apart belongs in the first sentence, before the seed and skin warning that depends on it.",
+   "fix": "Open with: \"Asimina triloba, not the papaya that carries the same name in much of the English-speaking world: a temperate member of the custard apple family, and the flesh behaves like its tropical cousins...\" (papaya seeds are eaten; these are not, and the entry already says so). Cross-reference Papaya by name.",
+   "lens": "safety",
+   "key": "pawpaw-safety-5",
+   "slug": "pawpaw"
+  },
+  {
+   "field": "d",
+   "severity": "unsafe",
+   "claim": "\"The skin and the seeds carry annonaceous acetogenins; the seeds were once used as an emetic, and neither is eaten.\"",
+   "because": "The sentence is literally true but reads as a verdict that the flesh is free of them. Annonacin, the principal acetogenin and a mitochondrial complex I inhibitor, has been measured in pawpaw pulp as well, at lower levels than skin and seed; it is the compound behind the epidemiological link between habitual soursop consumption and atypical parkinsonism in Guadeloupe, and Asimina belongs to the same family. A cook putting up pawpaw ice cream by the gallon for a season should not be told, by implication, that only the discarded parts carry it. The house rule is a fact about the plant, not a clearance of the flesh.",
+   "fix": "\"Annonaceous acetogenins run through the plant, richest in skin and seed and present at lower levels in the flesh; the seeds were once used as an emetic, and neither skin nor seed is eaten.\" (Longer by a clause because the safety fact demands it; no verdict on the flesh either way.)",
+   "lens": "safety",
+   "key": "pawpaw-safety-6",
+   "slug": "pawpaw"
+  },
+  {
+   "field": "choose",
+   "severity": "unclear",
+   "claim": "Reject a hard green fruit, picked too early to finish",
+   "because": "Green is the ripe color as well (the same sentence says the skin goes only to yellow-green), and the store field says a firm fruit \"finishes at room temperature\", so the two fields contradict each other with the fruit in hand. Pawpaw is climacteric: a mature fruit picked firm does finish; only a rock-hard immature one never will. The defect to reject is the absence of any give, not the color.",
+   "fix": "Reject a rock-hard fruit, picked too early to finish, and anything that smells of alcohol or collapses under a thumb.",
+   "lens": "contract",
+   "key": "pawpaw-contract-7",
+   "slug": "pawpaw"
+  },
+  {
+   "field": "d",
+   "severity": "unclear",
+   "claim": "Asimina triloba is a temperate member of the custard apple family",
+   "because": "The Lexicon already holds Papaya, and \"pawpaw\" is the everyday name for papaya across Australia, New Zealand, South Africa and much of the Caribbean, so a cook reading a supplier list or a recipe from those places will open the wrong entry. The two fruits share nothing in prep or storage. One clause settles it; if length matters, drop the emetic history (\"the seeds were once used as an emetic, and\"), which is history for its own sake and the toxicity fact stands without it.",
+   "fix": "Asimina triloba, not the papaya that Australians call pawpaw, is a temperate member of the custard apple family",
+   "lens": "contract",
+   "key": "pawpaw-contract-8",
+   "slug": "pawpaw"
+  },
+  {
+   "field": "d",
+   "severity": "style",
+   "claim": "the banana and mango in it is a set of esters that are volatile and leave under heat",
+   "because": "A plural subject with a singular verb, and a relative clause doing the work of two adjectives; the reader stops to reparse it. The replacement is shorter and says the same thing.",
+   "fix": "the banana and mango in it are esters, volatile and quick to leave under heat",
+   "lens": "contract",
+   "key": "pawpaw-contract-9",
+   "slug": "pawpaw"
+  },
+  {
+   "field": "d",
+   "severity": "unclear",
+   "claim": "sugar and heat mask it, they do not remove it, so a sharp ornamental passes that dryness into the jar",
+   "because": "Heat does remove astringency given time: procyanidins polymerize into non-astringent red-brown polymers, which is exactly the mechanism the Lexicon's own Quince entry (three or four hours of poaching) and Medlar entry (\"tannins polymerize out of astringency\") state. What is true of a crabapple is that a jelly boil is minutes, not hours, so the conversion never gets far. As written the sentence contradicts two sibling entries; the time is the missing variable.",
+   "fix": "sugar hides it and a short boil cannot polymerize it, so a sharp ornamental passes that dryness into the jar",
+   "lens": "fact",
+   "key": "crabapple-fact-1",
+   "slug": "crabapple"
+  },
+  {
+   "field": "d",
+   "severity": "unclear",
+   "claim": "Boil the strained juice to 104 to 105 C (220 F)",
+   "because": "220 F (104.4 C) is the jelly point only at sea level. The set is 8 F (4 C) above the local boiling point of water, dropping about 2 F per 1000 ft: 216 F at 2000 ft, 211 F at 5000 ft. A cook in Denver or Albuquerque who chases 105 C will boil the jelly a full 10 C past set and get rubber. This is a general jelly fact but the entry is the one that names a number, so it should name the rule.",
+   "fix": "Boil the strained juice 4 C (8 F) past where your water boils, 104.5 C (220 F) at sea level",
+   "lens": "fact",
+   "key": "crabapple-fact-2",
+   "slug": "crabapple"
+  },
+  {
+   "field": "d",
+   "severity": "unclear",
+   "claim": "where an Apple wants lemon or a packet",
+   "because": "A cooking apple (the Lexicon's Cooking Apple, Bramley, with several times a dessert apple's malic acid) sets a jelly on its own, and classic apple jelly is made from tart cookers or windfalls with nothing added. Only a ripe dessert apple is short of acid and pectin. Since Cooking Apple is its own entry, the comparison should say which apple it means.",
+   "fix": "where a dessert Apple wants lemon or a packet",
+   "lens": "fact",
+   "key": "crabapple-fact-3",
+   "slug": "crabapple"
+  },
+  {
+   "field": "choose",
+   "severity": "unclear",
+   "claim": "the round hole of a codling moth",
+   "because": "A codling moth larva's hole, usually at the calyx end, is plugged with reddish-brown crumbly frass, and that plug is what a buyer actually sees; a clean round hole is as likely a bird or a hail scar. On Midwest crabapples the commoner pest is apple maggot, whose sign is a dimpled, pin-pricked skin with brown tunnels in the flesh rather than a hole at all.",
+   "fix": "the frass-plugged hole of a codling moth or the dimpled sting of apple maggot",
+   "lens": "fact",
+   "key": "crabapple-fact-4",
+   "slug": "crabapple"
+  },
+  {
+   "field": "choose",
+   "severity": "unsafe",
+   "claim": "The field ends at \"the round hole of a codling moth\" and says nothing about where the fruit came from, while d sends the cook to \"a sharp ornamental\" for the jar.",
+   "because": "Crabapples are the one Fruit Atlas item routinely picked off landscape and street trees rather than bought, and every Malus is edible, so the only real hazard in the fruit is what was put on the tree. Ornamental crabs are sprayed through the season for apple scab, cedar-apple rust and Japanese beetle with fungicides and systemic insecticides never labeled for a food crop, and a street tree catches road spray besides. The house already states this for foraged Nettles (\"anything gathered from roadsides or sprayed ground\"); the entry that actively points at ornamentals must say it too.",
+   "fix": "Append to choose: \"Pass over a street or landscape tree you do not know: ornamental crabs are sprayed for scab and beetles with products never meant for fruit.\" (choose goes from 272 to about 415 characters, under the 700 ceiling.)",
+   "lens": "safety",
+   "key": "crabapple-safety-5",
+   "slug": "crabapple"
+  },
+  {
+   "field": "choose",
+   "severity": "unsafe",
+   "claim": "d defines the term by size alone, \"Any Malus fruit under 5 cm across is a crabapple\", and no field tells the cook how to know the small red fruit in hand is Malus.",
+   "because": "To a forager the size rule makes any small tree pome a crabapple. The tree it is most often confused with in the same season and the same streets is rowan (mountain ash, Sorbus): cherry-sized orange-red fruit in dense flat clusters, which raw holds parasorbic acid and brings on vomiting and diarrhea (cooking converts it to sorbic acid, which is why rowan jelly exists). Hawthorn is the other small red pome and is edible but stony-seeded. The check that works is the tree, not the fruit: a crabapple hangs singly or in loose bunches on simple apple leaves and cuts to an apple's five-chambered core; rowan carries pinnate leaves and berry clusters. Not deadly, so the lesser of the two choose findings, but it is the look-alike a cook will actually meet.",
+   "fix": "Add to choose, before the reject sentence: \"Check the tree, not the size: a crabapple hangs on simple apple leaves and cuts to a five-chambered core; small orange-red fruit in dense flat clusters on pinnate leaves is rowan, whose raw fruit holds parasorbic acid and purges.\" (About 215 characters; with the spray sentence choose lands near 630, still under 700.)",
+   "lens": "safety",
+   "key": "crabapple-safety-6",
+   "slug": "crabapple"
+  },
+  {
+   "field": "prep",
+   "severity": "unclear",
+   "claim": "\"Seeds carry amygdalin; the bag strains them out.\"",
+   "because": "True for jelly and silent for everything else the same field prescribes: whole pickles keep their cores, and roasting and poaching (both in methods) leave the seeds in the fruit, so the cook is told of a hazard and given a fix that covers one preparation out of four. The fact about the seed is that amygdalin yields cyanide only when the seed is crushed or chewed and its own enzyme gets at it; a whole seed swallowed passes intact, and heat kills the enzyme. The one crabapple preparation that does crush seeds is a butter run through a blender rather than a food mill, which is the same point the Quince entry makes (\"never blend them into the paste\"), and the two entries should agree.",
+   "fix": "Replace with: \"Seeds carry amygdalin, freed only when a seed is crushed or chewed: the jelly bag strains them out, a whole pickle's pass intact, and a butter goes through a mill, never a blender.\" (About 170 characters in place of 50; prep goes to roughly 400, under the 700 ceiling.)",
+   "lens": "safety",
+   "key": "crabapple-safety-7",
+   "slug": "crabapple"
+  },
+  {
+   "field": "prep",
+   "severity": "unsafe",
+   "claim": "methods lists \"raw\" and d names WHITNEY and CHESTNUT as \"sweet enough to eat\", yet nothing in the entry mentions the raw-apple mouth reaction.",
+   "because": "Raw Malus flesh carries Mal d 1, the homolog of the birch pollen allergen, and it itches and swells the mouths of a large share of birch hay-fever sufferers across the northern range where crabapples grow; that, not latex, is the cross-reaction apple is known for (apple sits only on the secondary latex-fruit list). The protein is heat-labile, so it is a raw-fruit fact and vanishes in the pot, which is exactly how the house Hazelnut entry states the same thing (\"the protein that itches mouths breaks down with that heat\"). It must be stated as a fact about the protein, never as a verdict that cooked crabapple is safe for anyone.",
+   "fix": "Append to prep: \"Raw flesh carries Mal d 1, the birch-pollen protein that itches hay-fever mouths and breaks down in the pot.\" (About 110 characters; prep stays near 510 with the amygdalin rewrite, under 700.)",
+   "lens": "safety",
+   "key": "crabapple-safety-8",
+   "slug": "crabapple"
+  },
+  {
+   "field": "d",
+   "severity": "wrong",
+   "claim": "so a crabapple sets alone where an Apple wants lemon or a packet",
+   "because": "The Lexicon already has a Cooking Apple entry, and a Bramley or any high-acid cooker sets a jelly on its own; it is the dessert apple that wants lemon or a packet, which is the comparison the sentence before this one already draws (\"several times the malic acid of a dessert apple\"). As written the entry contradicts a sibling entry and its own previous clause.",
+   "fix": "so a crabapple sets alone where a dessert apple wants lemon",
+   "lens": "contract",
+   "key": "crabapple-contract-9",
+   "slug": "crabapple"
+  },
+  {
+   "field": "d",
+   "severity": "unclear",
+   "claim": "104 to 105 C (220 F)",
+   "because": "A two-degree Celsius range is paired with a single Fahrenheit figure; 104 C is 219 F and 105 C is 221 F. The jelly point is one number, 8 F above boiling water, so give one number in both scales.",
+   "fix": "104.5 C (220 F)",
+   "lens": "contract",
+   "key": "crabapple-contract-10",
+   "slug": "crabapple"
+  },
+  {
+   "field": "store",
+   "severity": "style",
+   "claim": "0 to 4C (32 to 40F)",
+   "because": "The house form in the rules is \"82 C (180 F)\" with a space before the unit, and the definition of this same entry uses that form (\"105 C (220 F)\"); the store field uses the unspaced form, so the entry mixes both. The sealed Apple exemplar uses the unspaced form too, so the gate tolerates it, but one entry should not carry two forms.",
+   "fix": "0 to 4 C (32 to 40 F)",
+   "lens": "contract",
+   "key": "crabapple-contract-11",
+   "slug": "crabapple"
+  },
+  {
+   "field": "prep",
+   "severity": "unclear",
+   "claim": "Seeds carry amygdalin; the bag strains them out.",
+   "because": "The amygdalin fact is correctly stated as a fact about the plant, but the reassurance only holds for jelly: the whole pickles the same field just described keep every seed inside the fruit. A cook reading the two sentences together is told the seeds are gone when, for the pickle, they are not. A safety fact justifies the few extra characters.",
+   "fix": "Seeds carry amygdalin: the jelly bag strains them out; a whole pickle is eaten around its core.",
+   "lens": "contract",
+   "key": "crabapple-contract-12",
+   "slug": "crabapple"
+  }
+ ],
+ "dispositions": [
+  {
+   "finding": "huckleberry-fact-1",
+   "action": "applied",
+   "reason": "Sentence rewritten to: \"That pigment is anthocyanin, carried in the flesh rather than the skin, so it stains everything it touches; more acid comes with it, since nobody has bred the sharpness out of a wild fruit.\" The absolute \"more than any farmed blueberry\" is gone (highbush cultivars span a range that overlaps and exceeds V. membranaceum), the skin-holds-the-acid mechanism is gone (organic acids sit in flesh vacuoles), and the pigment now sits in the flesh, agreeing with the sentence before it."
+  },
+  {
+   "finding": "huckleberry-fact-2",
+   "action": "applied",
+   "reason": "The opening now reads: \"Two genera trade under one name, and the seeds tell them apart; the garden huckleberry of seed catalogs is a third, a nightshade, Solanum scabrum, whose green fruit carries glycoalkaloids and which is picked only dead ripe and black, then cooked.\" I wrote \"glycoalkaloids\" rather than \"solanine\" because S. scabrum's toxins are chiefly solasodine glycosides (solamargine, solasonine); the broader term is the one that is certainly right. d is 1146 characters."
+  },
+  {
+   "finding": "huckleberry-fact-3",
+   "action": "applied",
+   "reason": "Changed to \"against baking soda it turns green-gray\". I checked the Blueberry entry in src/lib/data/lexicon.json: it says \"blue then green-gray in alkali\" and \"rings each fruit teal\", so the two entries now name the same color for the same reaction."
+  },
+  {
+   "finding": "huckleberry-fact-4",
+   "action": "applied",
+   "reason": "Store now reads \"up to a week; moisture and a deep pile both bring mold in a day or two.\" The false \"at most\" ceiling is gone; the mold warning stays but with the realistic cold-refrigerator timing."
+  },
+  {
+   "finding": "huckleberry-fact-5",
+   "action": "applied",
+   "reason": "Choose now reads \"glossy black on eastern and coastal evergreen types\", so a glossy black berry is no longer read as eastern and the seed test in d remains the real tell between Gaylussacia grit and soft Vaccinium seeds."
+  },
+  {
+   "finding": "huckleberry-fact-6",
+   "action": "applied",
+   "reason": "Prep now reads \"Mill a sauce of eastern fruit through the fine disc to leave the ten seeds behind.\" Gaylussacia nutlets are around two millimeters and pass a medium or coarse disc."
+  },
+  {
+   "finding": "huckleberry-safety-7",
+   "action": "applied",
+   "reason": "The look-alike facts were appended to choose, stated as facts about the plants: the five-pointed crown at the blossom end on a woody shrub; a green star at the stem end with no crown is a nightshade; a flattened, dimpled berry in a drooping cluster on a magenta stalk is pokeweed; a red berry in an upright cluster on a soft-stemmed plant is baneberry. Two edits to the proposed text: \"hangs singly\" became \"grows on a woody shrub\", because Gaylussacia baccata bears its berries in short racemes and only the mountain huckleberry bears singly, so \"singly\" would have failed on the eastern fruit; and the child cardiac-dose claim was left out (baneberry is stated as poison, which is certain). Trimmed elsewhere to land at 682 characters, under the 700 ceiling."
+  },
+  {
+   "finding": "huckleberry-safety-8",
+   "action": "applied",
+   "reason": "Merged with fact-2 into one sentence in d, since both findings ask for the same fact: the garden huckleberry is named as a third plant, a nightshade (Solanum scabrum), whose green fruit carries glycoalkaloids and which is picked only dead ripe and black, then cooked. The raw method now applies only to the two Ericaceae genera the reader has just been told apart."
+  },
+  {
+   "finding": "huckleberry-safety-9",
+   "action": "applied",
+   "reason": "Prep now separates the two cases: \"Rinse fresh fruit just before use. Bought frozen fruit gets seconds under cold water in a sieve, then is shaken dry and folded in at once, floured and still frozen, since it bleeds as it warms.\" Home-frozen fruit is rinsed before freezing under the store fix (contract-11), so no fruit in the entry now goes into a batter unrinsed, and the fields no longer contradict each other."
+  },
+  {
+   "finding": "huckleberry-contract-10",
+   "action": "applied",
+   "reason": "The same sentence fact-1 attacks. Both faults it names are corrected: the unbacked absolute \"any farmed blueberry\" is removed and the acid is no longer placed in the skin. The proposed wording was not used verbatim because its skin-share mechanism for the pigment contradicts fact-1 (V. membranaceum carries anthocyanin through the flesh, as the entry's own previous sentence says); one rewrite answers both findings."
+  },
+  {
+   "finding": "huckleberry-contract-11",
+   "action": "applied",
+   "reason": "Store now reads: \"For longer, sort, rinse, dry on a towel and freeze on a tray, then bag: a year at -18C (0F).\" The \"straight from the freezer\" tail is dropped, so the flour-and-fold advice appears in d's close (the cook-does-tomorrow line) and once in prep as the how, not three times. Store is 228 characters."
+  },
+  {
+   "finding": "huckleberry-contract-12",
+   "action": "applied",
+   "reason": "\"freezing\" removed from methods and replaced with \"sauces\", which the food-mill line in prep points to; freezing stays where it belongs, in store."
+  },
+  {
+   "finding": "pawpaw-fact-1",
+   "action": "applied",
+   "reason": "The acetogenin sentence now reads that they run through the plant, richest in skin and seeds and present at lower levels in the flesh; the skin-and-seed-only boundary is gone. The emetic history was dropped at the same time (contract-8's suggestion) to keep the definition well under the ceiling; the toxicity fact stands without it."
+  },
+  {
+   "finding": "pawpaw-fact-2",
+   "action": "applied",
+   "reason": "Choose now says a firm fruit that yields slightly will finish on the counter and tells the buyer to reject a rock-hard one with no give at all, which agrees with the store field and the fruit's climacteric behavior. Color is no longer the defect, since green is also a ripe color."
+  },
+  {
+   "finding": "pawpaw-fact-3",
+   "action": "applied",
+   "reason": "The false consequence is cut: ester loss now explains only the flattening, and the bitter note is attributed to browned pulp and skin scraped into it. I did not add the refuter's 'not from heat' clause, because I am not certain heat never contributes and the rule is to leave out what is unsure."
+  },
+  {
+   "finding": "pawpaw-fact-4",
+   "action": "applied",
+   "reason": "Season is now [8, 9, 10]: harvest across the native range begins in the last week of August. The plate prints September to October with no correction, so this corrects the plate without contradicting a correction."
+  },
+  {
+   "finding": "pawpaw-safety-5",
+   "action": "applied",
+   "reason": "The first sentence now opens 'Asimina triloba, not the papaya that carries the same name across much of the English-speaking world (see Papaya, whose seeds are eaten; these are not)', cross-referencing Papaya by name and putting the edible-seed distinction before the acetogenin warning that depends on it."
+  },
+  {
+   "finding": "pawpaw-safety-6",
+   "action": "applied",
+   "reason": "Same change as fact-1: acetogenins stated as running through the plant, richest in skin and seed, present at lower levels in the flesh, with no verdict on the flesh either way. Merged with fact-1 into one sentence."
+  },
+  {
+   "finding": "pawpaw-contract-7",
+   "action": "applied",
+   "reason": "Same change as fact-2: the rejected defect is now the absence of any give, not the color, and the choose and store fields agree with the fruit in hand."
+  },
+  {
+   "finding": "pawpaw-contract-8",
+   "action": "applied",
+   "reason": "The papaya disambiguation is in the opening clause (merged with safety-5, phrased for the whole English-speaking world rather than Australia alone since the name is used the same way in Britain, South Africa and the Caribbean), and the emetic history was dropped as suggested, bringing the definition to 1143 characters."
+  },
+  {
+   "finding": "pawpaw-contract-9",
+   "action": "applied",
+   "reason": "Replaced with 'the banana and mango in it are esters, volatile and quick to leave under heat', fixing the number agreement and dropping the relative clause."
+  },
+  {
+   "finding": "crabapple-fact-1",
+   "action": "applied",
+   "reason": "Rewrote the tannin sentence so time is the variable: \"sugar hides it and a short jelly boil cannot polymerize it as hours of poaching do for Quince, so a sharp ornamental passes that dryness into the jar.\" This now agrees with the Quince entry (procyanidins driven to red-brown polymers over three or four hours) and the Medlar entry (tannins polymerize out of astringency), and cross-references Quince by name."
+  },
+  {
+   "finding": "crabapple-fact-2",
+   "action": "applied",
+   "reason": "The jelly point is now stated as the rule plus the sea-level figure: \"Boil the strained juice 4 C (8 F) past where your water boils, 104.5 C (220 F) at sea level.\" A cook at altitude reads the offset, not the absolute number."
+  },
+  {
+   "finding": "crabapple-fact-3",
+   "action": "applied",
+   "reason": "The comparison now says which apple it means: \"where a dessert Apple wants lemon or a packet.\" The Cooking Apple entry (Bramley, several times a dessert apple's malic acid) is no longer contradicted, and the sentence now matches its own previous clause. Kept the cross-reference capital on Apple, the house form for a Lexicon entry name."
+  },
+  {
+   "finding": "crabapple-fact-4",
+   "action": "applied",
+   "reason": "The reject clause now reads \"the frass-plugged hole of a codling moth, and the dimpled sting of apple maggot.\" Codling moth entry holes are plugged with reddish-brown frass, usually at the calyx; apple maggot leaves dimpled, pin-pricked skin over brown tunnels, and is the commoner pest on Midwest crabs."
+  },
+  {
+   "finding": "crabapple-safety-5",
+   "action": "applied",
+   "reason": "Added to choose: \"Pass over a street or landscape tree you do not know: ornamental crabs are sprayed for scab and beetles with products never labeled for food.\" Stated as a fact about the tree, matching the Nettles entry's roadside and sprayed-ground rule. Shortened from the proposed wording to keep choose at 698 characters, under the 700 ceiling once the rowan sentence was also added."
+  },
+  {
+   "finding": "crabapple-safety-6",
+   "action": "applied",
+   "reason": "Added to choose, before the spray and reject sentences: \"Check the tree, not the size: a crabapple hangs in loose bunches on simple apple leaves and cuts to a five-chambered core; orange-red fruit in dense flat clusters on pinnate leaves is rowan, whose raw fruit holds parasorbic acid and purges.\" Rowan (Sorbus) is the same-season, same-street look-alike; raw parasorbic acid is emetic and cooking converts it to sorbic acid, which is why the warning is about raw fruit. Hawthorn is edible and was left out for space."
+  },
+  {
+   "finding": "crabapple-safety-7",
+   "action": "applied",
+   "reason": "Replaced the fifty-character sentence with: \"Seeds carry amygdalin, freed only when a seed is crushed or chewed: the jelly bag strains them out, a whole pickle is eaten around its core, and a butter goes through a food mill, never a blender.\" Covers jelly, whole pickle and butter, and agrees with the Quince entry's \"never blend them into the paste.\" Used the contract-12 phrasing for the pickle (eaten around its core) rather than \"pass intact\", since the cook eats around the core rather than swallowing seeds; the heat-kills-the-enzyme clause was left out for space."
+  },
+  {
+   "finding": "crabapple-safety-8",
+   "action": "applied",
+   "reason": "Appended to prep: \"Raw flesh carries Mal d 1, the birch-pollen protein that itches hay-fever mouths and breaks down in the pot.\" Stated as a fact about the protein, in the same register as the Hazelnut entry; no verdict that cooked fruit is safe for anyone. Mal d 1 is present across Malus, so it holds for crabapples."
+  },
+  {
+   "finding": "crabapple-contract-9",
+   "action": "applied",
+   "reason": "The clause now reads \"so a crabapple sets alone where a dessert Apple wants lemon or a packet\", which removes the contradiction with the Cooking Apple entry and with the entry's own previous clause. Kept \"or a packet\" rather than dropping it: a ripe dessert apple runs short of pectin as well as acid, so commercial pectin is a real remedy a cook reaches for, and the clause is correct once it names the dessert apple."
+  },
+  {
+   "finding": "crabapple-contract-10",
+   "action": "applied",
+   "reason": "One number in both scales: \"104.5 C (220 F)\", with the altitude rule beside it; the two-degree Celsius range against a single Fahrenheit figure is gone."
+  },
+  {
+   "finding": "crabapple-contract-11",
+   "action": "applied",
+   "reason": "store now reads \"0 to 4 C (32 to 40 F)\", the spaced house form from the rules (\"82 C (180 F)\"), so the entry carries one temperature form throughout: d uses \"4 C (8 F)\" and \"104.5 C (220 F)\", store uses \"0 to 4 C (32 to 40 F)\"."
+  },
+  {
+   "finding": "crabapple-contract-12",
+   "action": "applied",
+   "reason": "The pickle is now handled explicitly in the amygdalin sentence: \"a whole pickle is eaten around its core\", the exact phrasing proposed, merged into the fuller sentence that safety-7 asked for so the two findings share one fix and the field stays at 535 characters."
+  },
+  {
+   "finding": "field-pea-contract-1",
+   "action": "applied",
+   "reason": "The opening now reads as the fix proposed: the South's family name for crowder, cream, purple hull and the BLACK-EYED PEA, with the clause that elsewhere a field pea is the dry Pisum pea grown for splitting, so a cook holding a Northern or Canadian bag is not sent to the wrong plant. Both trims were taken ('packed square under tan or speckled coats', 'picked when the seed has filled but not dried') and two more sentences were tightened to pay for the mechanism clause finding 3 asked for; the definition sits at 1066 characters, level with its former 1059 and inside the 1200 ceiling."
+  },
+  {
+   "finding": "field-pea-contract-2",
+   "action": "applied",
+   "reason": "The close no longer restates Black-eyed Pea's 'finish off the heat in their pot liquor'. It now closes on what the family entry alone says: cook them in only the liquid you will serve, the liquor is the dish, so taste and season it as you would a soup. Two small departures from the proposed wording: the 'bare simmer, never a boil' clause was dropped from the close because, as the finding itself notes, prep already carries it; and 'season it before the peas are done' became 'taste and season it as you would a soup', because the entry now says salt goes in at the start (finding 3) and a close that implied holding seasoning back would have contradicted it."
+  },
+  {
+   "finding": "field-pea-contract-3",
+   "action": "applied",
+   "reason": "The clause now reads 'Smoked cut and salt go in at the start: smoke needs the whole simmer, and salt softens, not toughens, since sodium loosens the pectin's calcium bridges'. The proposed fix was taken and extended by one short phrase naming the mechanism, because the contract asks for mechanism first and the finding's own reasoning (sodium displacing the calcium and magnesium that bridge the pectin) is the fact that answers the toughens-the-skins belief; without it the sentence is an assertion against what the cook was taught. The cost was paid by trims elsewhere in the definition."
+  },
+  {
+   "finding": "field-pea-contract-4",
+   "action": "applied",
+   "reason": "Store now reads 'Dried, airtight, cool and dry for a year: heat and damp harden the coat and lock the pectin, so it may never soften', naming warm humid storage rather than age as what produces the hard-to-cook seed. One word changed from the proposed text: 'may never soften' rather than 'never softens', since a damp-stored pea usually cooks slowly rather than not at all. Store is 273 characters, inside 140 to 280."
+  },
+  {
+   "finding": "pueblo-chile-fact-1",
+   "action": "applied",
+   "reason": "Removed the invented anatomy. The definition now reads \"Capsaicin sits in the placenta, and Mosco carries more of it:\" and attributes the heat to capsaicinoid load, not placenta width; no source describes a wider placenta in Mosco or the Pueblo Mirasol than in a Hatch or Anaheim pod, and the wall thickness, not the pith, is the entry's real anatomical point."
+  },
+  {
+   "finding": "pueblo-chile-fact-2",
+   "action": "applied",
+   "reason": "Prep now reads \"Gloves: the placenta holds the heat; cut it out for less fire.\" The word \"wide\" is gone, so the prep field no longer repeats the unsupported claim from the definition."
+  },
+  {
+   "finding": "pueblo-chile-fact-3",
+   "action": "applied",
+   "reason": "The Lexicon's own Guajillo entry opens \"Dried mirasol chile\" and Chile Fluency teaches mirasol to GUAJILLO, so a reader would infer the wrong dried form. The definition now says the upright habit and the name are all it shares with the Mexican mirasol that dries to Guajillo, and that this is a long, thick pod roasted green; Guajillo is cross-referenced by name. I did not assert the New Mexican pod-type lineage in the text, since the cook needs only the distinction, not the pedigree."
+  },
+  {
+   "finding": "pueblo-chile-fact-4",
+   "action": "applied",
+   "reason": "The 5,000 to 20,000 figure is kept, as the plate correction uses the same spread, but it is now stated as field variation: \"a pod-to-pod spread in the field, not a fixed number, which is why the roaster grades it\", which also explains the choose field's instruction to ask for the heat grade. I did not adopt the literal \"5,000 Scoville in trials\" wording because I could not confirm a published trial figure for Mosco; describing the spread as pod to pod answers the finding without putting an unverified number in the text. The definition was tightened to 1187 characters to stay under the 1200 ceiling."
+  }
+ ],
+ "critic": null,
+ "placements": [
+  {
+   "slug": "huckleberry",
+   "level": 2,
+   "reason": "The less common produce a station handles by the standard: a wild regional berry on Northwest and mountain menus, bought frozen year round; not a day-one staple, and not rare enough to be specialist."
+  },
+  {
+   "slug": "pawpaw",
+   "level": 3,
+   "reason": "A specialist regional product by the standard: never farmed at scale, a two-day shelf life, on menus only where a forager or a Midwestern grower supplies it, and handled with care for the skin and seeds."
+  },
+  {
+   "slug": "crabapple",
+   "level": 2,
+   "reason": "The less common produce of the standard: an autumn fruit a kitchen meets for jelly, pickling and preserves, explained in a sentence from the apple entry; ties break down."
+  }
+ ],
+ "challenges": [],
+ "placeDispositions": []
+}

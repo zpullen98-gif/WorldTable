@@ -346,6 +346,64 @@ const cards = [
 		traps: [
 			{ says: 'Fine seasoning grain dissolved into a sauce at the end of cooking', why: 'It is coarse and goes on dry, on top, so it stays crunchy instead of dissolving.' }
 		]
+	},
+	{
+		id: 'fd_0349',
+		term: 'Espelette',
+		level: 3,
+		say: 'ehs-peh-LEHT',
+		gist: 'Fruity, mild ground red chili from the French Basque country',
+		guest: "It's a gently warm red chili from the French Basque country, dried and ground. Sunny and fruity rather than hot, more glow than burn.",
+		why: 'The Gorria pepper ripens red around the village of Espelette and is dried and ground fine; the name is protected like Champagne. Far below cayenne on heat, it lets fruit and a faint sweetness through, so cooks use it where paprika would taste flat: eggs, fish, butter sauces.',
+		madeWith: ['dried red chili'],
+		origin: 'Espelette, French Basque country; protected name since 2000',
+		pairs: 'Bayonne ham, eggs, octopus, white fish, butter sauces',
+		notThis: 'Not smoked paprika. Spanish pimentón is often smoked; this is French, unsmoked and fruitier.',
+		recipe: 'axoa-de-veau-despelette',
+		seeAlso: ['fd_0195', 'fd_0282'],
+		confusedWith: ['fd_0283'],
+		line: 'Grilled octopus, espelette, lemon aioli',
+		traps: [
+			{ says: 'Fiery cayenne-strength chili powder used only for its heat', why: 'It is mild, far below cayenne on heat, and prized for fruit and color as much as warmth.' }
+		]
+	},
+	{
+		id: 'fd_0350',
+		term: 'Yuzu Kosho',
+		level: 3,
+		say: 'YOO-zoo KOH-shoh',
+		gist: 'Salty Japanese green chili paste perfumed with citrus zest',
+		guest: "It's a Japanese paste of green chili, salt and yuzu zest, a citrus between lemon and mandarin. A dab is hot and perfumed, so a little goes a long way.",
+		why: 'From Kyushu in southern Japan, where the local word for chili is kosho. Green chili and green yuzu zest are pounded with salt and left to cure, so the paste is salty, hot and sharp at once under a citrus perfume. It works like hot sauce and a squeeze of citrus in one dot.',
+		madeWith: ['green chili', 'yuzu zest', 'salt'],
+		note: 'Used raw, a pea-sized dab at a time; it is very salty as well as hot.',
+		origin: "Kyushu, Japan; kosho is the island's word for chili pepper",
+		pairs: 'Oysters, crudo, grilled chicken, hot pot, ramen, steak',
+		seeAlso: ['fd_0220', 'fd_0115'],
+		line: 'Hamachi crudo, yuzu kosho, olive oil, sea salt',
+		traps: [
+			{ says: 'Soy and citrus dipping sauce poured over dumplings and sashimi', why: 'That is ponzu, a thin liquid. This is a thick salted chili paste holding only the citrus zest.' },
+			{ says: 'Ground black pepper blended with dried citrus zest for steak', why: 'Kosho here is the Kyushu word for chili, not black pepper, and the paste is made fresh and salted.' }
+		]
+	},
+	{
+		id: 'fd_0351',
+		term: 'Black Garlic',
+		level: 3,
+		gist: 'Cloves aged warm and damp for weeks until soft, black and sweet',
+		guest: "It's ordinary garlic held warm and humid for weeks until the cloves turn black, soft and sweet. The bite is gone and it tastes more like balsamic.",
+		why: 'Whole heads sit at about 60 to 70 C (140 to 158 F) in high humidity for three weeks or more. Nothing ferments; slow browning turns the sugars dark and sweet as the sharp sulfur compounds mellow. The cloves come out soft as dates, tasting of balsamic and molasses.',
+		madeWith: ['garlic'],
+		origin: 'Popularized from Korea in the 2000s; now made worldwide',
+		pairs: 'Mushrooms, steak, roast chicken, butter, aioli',
+		notThis: 'Not roasted or burnt. Roasting takes an hour; this takes weeks and turns the cloves black and sticky.',
+		lexiconSlug: 'black-garlic',
+		seeAlso: ['fd_0266', 'fd_0304', 'fd_0138'],
+		line: 'Dry-aged ribeye, black garlic jus, charred leek',
+		traps: [
+			{ says: 'Cloves fermented by bacteria for weeks until sour and pungent', why: 'No microbe is involved: gentle heat and humidity do the work, and the result is sweet, not sour.' },
+			{ says: 'Cloves charred over a flame until the skins blacken and turn bitter', why: 'It is never burnt. Weeks of low warmth turn it black slowly, and the flavor is sweet and mellow.' }
+		]
 	}
 ];
 

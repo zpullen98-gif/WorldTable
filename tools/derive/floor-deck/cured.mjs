@@ -437,7 +437,11 @@ const cards = [
 		traps: [
 			{ says: 'Brisket slow-cooked with sweet corn kernels, an Irish American classic', why: 'Corn here is an old word for the coarse grains of salt used in the cure, not the vegetable.' }
 		]
-	}
+	},
+	{ id: 'fd_0309', term: 'Culatello', planned: true },
+	{ id: 'fd_0310', term: 'Finocchiona', planned: true },
+	{ id: 'fd_0311', term: 'Head Cheese', planned: true },
+	{ id: 'fd_0312', term: 'Boudin Noir', planned: true }
 ];
 
 export default cards;

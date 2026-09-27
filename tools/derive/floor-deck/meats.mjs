@@ -243,7 +243,11 @@ const cards = [
 		traps: [
 			{ says: 'Gristly, strong-tasting organ that stays chewy however long it cooks', why: 'It is a muscle that turns tender with long cooking and tastes like mild roast beef.' }
 		]
-	}
+	},
+	{ id: 'fd_0305', term: 'Tripe', planned: true },
+	{ id: 'fd_0306', term: 'Duck Hearts', planned: true },
+	{ id: 'fd_0307', term: 'Chicken Oysters', planned: true },
+	{ id: 'fd_0308', term: 'Moulard', planned: true }
 ];
 
 export default cards;

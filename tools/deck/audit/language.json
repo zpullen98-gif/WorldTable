@@ -558,6 +558,337 @@
 				"notes": "Section mean is 643 characters of prose per card, under the 720 ceiling. Grass-Fed (765), Day-Boat (729) and Tasting Menu (738) are the longest. All 16 roster rows have cards. I found no verdict words, no dashes and no banned substrings. Every gist and trap sits within the 10-character parity band. The say values pass the contract's sayProblems gate. There is one consistency question for the operator: the custards audit settled on capitalising a stressed one-syllable word (KREM). By that precedent, fd_0287 \"gard mahn-ZHAY\" would become \"GARD mahn-ZHAY\" and fd_0289 \"pree FIKS\" would stay as it is, since there the stress is on FIKS. Garde Manger has a note on raw service, which is fine, but the Larder and Garde Manger pair is the section's one real missing cross-link. The fix above adds a notThis to both cards, about 110 characters each. fd_0289's alias \"Table d'Hote\" is missing its circumflex, \"Table d'Hôte\"; this is cosmetic and the gate does not check it. Checker script: C:\\Users\\zpull\\AppData\\Local\\Temp\\claude\\C--Users-zpull--claude\\ee375187-7803-4126-b577-0cdfe403a999\\scratchpad\\check.js"
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-27",
+			"pass": "revision",
+			"cards": [
+				"fd_0352",
+				"fd_0353",
+				"fd_0354",
+				"fd_0355"
+			],
+			"findings": [
+				{
+					"id": "fd_0353",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "It is a kill and bleed done at the boat, not tank service; the fish is dead long before the kitchen.",
+					"because": "Ikejime names the method of killing (brain spike, bleed, often a spinal wire), not where it happens. It is routinely done on live fish held in tanks at markets and at restaurants themselves, minutes before service, as well as on the boat. The trap's says is still false of the card, but this why is not true.",
+					"fix": "It names the kill and bleed, done on the boat or from a live tank, not tank-to-table cooking.",
+					"lens": "fact",
+					"key": "language-1-fact-1"
+				},
+				{
+					"id": "fd_0353",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "dispatched the Japanese way the instant it came aboard",
+					"because": "Ties the word to the boat, which it does not require; many restaurants ikejime live fish from their own tanks. What matters is that the kill was instant and the fish was bled while alive.",
+					"fix": "dispatched the Japanese way the instant it left the water",
+					"lens": "fact",
+					"key": "language-1-fact-2"
+				},
+				{
+					"id": "fd_0354",
+					"field": "aliases",
+					"severity": "wrong",
+					"claim": "Regenerative Organic Certified",
+					"because": "Not another name for the same thing. ROC is one private certification that requires a USDA Organic base plus audited soil, animal-welfare and labor standards; a farm can be regenerative, and sold as such, without it. Listing it as an alias tells a server the two are interchangeable, which contradicts the card's own why.",
+					"fix": "Drop it; keep \"Regeneratively Raised\" and, if a second alias is wanted, \"Regeneratively Farmed\"",
+					"lens": "fact",
+					"key": "language-1-fact-3"
+				},
+				{
+					"id": "fd_0354",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "Federal farm label, inspected yearly, one step stricter than the usual one",
+					"because": "\"Federal farm label, inspected yearly\" is a true description of Organic, another card on this roster; a reader may pick or reject it for the wrong reason. Point the falsehood at this word instead.",
+					"fix": "Government soil standard for farms, audited yearly, one step above organic",
+					"lens": "fact",
+					"key": "language-1-fact-4"
+				},
+				{
+					"id": "fd_0355",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "Nothing is fixed in advance; the chef changes pieces by the guest's pace.",
+					"because": "Overstated. At most American omakase counters the chef sets that night's progression (often the same pieces for every seat, the count fixed by the price tier); what distinguishes it from a tasting menu is that nothing is printed and the chef can swap or add pieces for the guest, not that nothing is planned.",
+					"fix": "No menu is printed; the chef swaps pieces to the guest's taste and pace.",
+					"lens": "fact",
+					"key": "language-1-fact-5"
+				},
+				{
+					"id": "fd_0355",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "nothing is set in advance, and the chef adjusts the pieces to you.",
+					"because": "Same overstatement: the chef plans the day's sequence around the fish bought that morning, and a guest who has read this card would tell a table the chef improvises every course.",
+					"fix": "the chef chooses tonight's courses and can adjust them to you.",
+					"lens": "fact",
+					"key": "language-1-fact-6"
+				},
+				{
+					"id": "fd_0355",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Here the sequence is not fixed at all; the chef decides as the meal goes.",
+					"because": "\"Not fixed at all\" is false; the chef sets a progression (lighter to richer) before service. The true contrast with kaiseki is who fixes the order: the chef that day, not a tradition.",
+					"fix": "That is kaiseki. Here the chef, not tradition, decides the order of courses.",
+					"lens": "fact",
+					"key": "language-1-fact-7"
+				},
+				{
+					"id": "fd_0353",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "The fish was dispatched the Japanese way the instant it came aboard, so it never thrashed.",
+					"because": "Said aloud, this does not answer what was done: \"dispatched\" is a euphemism a guest has to decode and \"the Japanese way\" names nothing. The guest asked what ikejime is; the answer is that the fish was killed instantly and bled the moment it was caught. Also \"came aboard\" ties it to the boat, and ikejime is just as often done on a live fish from the restaurant's own tank.",
+					"fix": "It's Japanese fish handling. Killed instantly and bled the moment it's caught, so it never thrashes. The flesh stays firm and clean tasting, so it's usually served raw.",
+					"lens": "floor",
+					"key": "language-1-floor-8"
+				},
+				{
+					"id": "fd_0353",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "It is a kill and bleed done at the boat, not tank service; the fish is dead long before the kitchen.",
+					"because": "Ikejime names the method of killing and bleeding, not the place. Sushi houses routinely keep fish live in a tank and do ikejime in the kitchen minutes before service, so \"dead long before the kitchen\" is false often enough that a server will be corrected by a guest who knows.",
+					"fix": "It names how the fish was killed and bled, not where it was kept. A tank fish can be ikejime too.",
+					"lens": "floor",
+					"key": "language-1-floor-9"
+				},
+				{
+					"id": "fd_0353",
+					"field": "say",
+					"severity": "style",
+					"claim": "ee-keh-JEE-meh",
+					"because": "An American dining room finishes Japanese words ending in e with an \"ay\" sound (sake, omakase, karate); the \"eh\" ending is the native vowel, which the brief says not to give.",
+					"fix": "ee-keh-JEE-may",
+					"lens": "floor",
+					"key": "language-1-floor-10"
+				},
+				{
+					"id": "fd_0355",
+					"field": "say",
+					"severity": "style",
+					"claim": "oh-mah-KAH-seh",
+					"because": "American rooms say the final syllable as \"say\" (Merriam-Webster gives the last vowel as long a); \"seh\" is the native pronunciation, which the brief says not to give.",
+					"fix": "oh-mah-KAH-say",
+					"lens": "floor",
+					"key": "language-1-floor-11"
+				},
+				{
+					"id": "fd_0355",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It means I'll leave it to you.",
+					"because": "Spoken at a table there are no quotation marks: a guest hears the server saying they will leave the choice to the guest, the opposite of the meaning. A new hire needs the sentence to carry its own sense. Same length as what it replaces.",
+					"fix": "It means leave it to the chef.",
+					"lens": "floor",
+					"key": "language-1-floor-12"
+				},
+				{
+					"id": "fd_0355",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Nothing is fixed in advance; the chef changes pieces by the guest's pace.",
+					"because": "The card's own menu line reads \"Omakase, 18 courses\": the count, the price and the counter are fixed in advance, only the pieces are not. A hire who repeats \"nothing is fixed\" gets asked how many courses and has no answer the card supports.",
+					"fix": "No piece is fixed in advance; the chef changes them by the guest's pace.",
+					"lens": "floor",
+					"key": "language-1-floor-13"
+				},
+				{
+					"id": "fd_0355",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Not a printed tasting menu: nothing is set in advance, and the chef adjusts the pieces to you.",
+					"because": "Same overclaim as the why: the course count and price are set (the line says 18 courses); it is the pieces that are not. Keep the contrast with a tasting menu on what actually differs.",
+					"fix": "Not a printed tasting menu: no pieces are set in advance, and the chef adjusts them to you.",
+					"lens": "floor",
+					"key": "language-1-floor-14"
+				},
+				{
+					"id": "fd_0354",
+					"field": "aliases",
+					"severity": "wrong",
+					"claim": "Regenerative Organic Certified",
+					"because": "An alias is another name the same thing is sold under. Regenerative Organic Certified is a private, audited certification (Regenerative Organic Alliance) that also requires USDA organic status, and the card's own why draws exactly that distinction: the bare word is an unaudited claim, ROC is not. Listing it as an alias tells a server the two are interchangeable, and a guest who sees ROC on a label will be told less than the mark means.",
+					"fix": "Regeneratively Raised, Regeneratively Farmed",
+					"lens": "floor",
+					"key": "language-1-floor-15"
+				},
+				{
+					"id": "fd_0354",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Ask me which farm.",
+					"because": "A captain never has a server tell a guest to ask them something; the server offers it. \"Ask me\" reads off a card and can land as a challenge. Two characters shorter than what it replaces.",
+					"fix": "I know the farm.",
+					"lens": "floor",
+					"key": "language-1-floor-16"
+				},
+				{
+					"id": "fd_0352",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "A chocolate, a macaron, a fruit jelly, a caramel, sent out with the coffee.",
+					"because": "A nervous hire repeats this list verbatim and the tray tonight may hold none of those four; the card cannot know the house's tray, so the line should signal that these are typical rather than promised. Five characters shorter than what it replaces.",
+					"fix": "Often a chocolate, a macaron, a fruit jelly, sent out with the coffee.",
+					"lens": "floor",
+					"key": "language-1-floor-17"
+				},
+				{
+					"id": "fd_0353",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "That keeps the flesh firm and clean tasting, which is why it's so often served raw.",
+					"because": "The causal link tells a guest the kill method is what makes the fish fit to eat raw. It is not: ikejime governs texture and flavor only; raw service rests on freezing, species and handling the word says nothing about, which is exactly what the linked lexicon entry says. A server will repeat this as an assurance.",
+					"fix": "That keeps the flesh firm and clean tasting, and it's most often served raw.",
+					"lens": "safety",
+					"key": "language-1-safety-18"
+				},
+				{
+					"id": "fd_0353",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note: the card never says plainly that the word covers the kill and nothing after it)",
+					"because": "The guest line names raw service, so the server needs the one handling fact the term does and does not carry: it describes how the fish was killed and bled, not how it was frozen or handled since. Without it the card lets the claim stand in for raw-service handling.",
+					"fix": "Almost always served raw or barely seared. The word says how the fish was killed and bled, nothing about how it was frozen or handled since.",
+					"lens": "safety",
+					"key": "language-1-safety-19"
+				},
+				{
+					"id": "fd_0352",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "often nuts",
+					"because": "The brief asks for nuts by name, and the classic tray is almond: macarons and financiers are almond-flour sweets. The list also omits cream, which is in the chocolates (ganache) and the caramels and matters to a guest with a milk allergy; it is the one item on the tray a server would not think to flag.",
+					"fix": "often chocolate, often butter, often egg, often wheat flour, often almonds, often cream, sometimes gelatin",
+					"lens": "safety",
+					"key": "language-1-safety-20"
+				},
+				{
+					"id": "fd_0355",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note: the card never says most of the meal is raw fish chosen unseen)",
+					"because": "At a sushi counter the courses are mostly raw fish and nothing is printed in advance, so a guest who must avoid something cannot read for it as they would on a menu. That is a real raw-service fact the server should state before the first piece, and the guest line's 'tell us anything you'd rather skip' does not carry it.",
+					"fix": "At a sushi counter most pieces are raw fish and nothing is printed ahead, so anything a guest needs to avoid must be said before the first course.",
+					"lens": "safety",
+					"key": "language-1-safety-21"
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "language-1-fact-1",
+					"action": "applied",
+					"reason": "Trap why now reads that the word names how the fish was killed and bled, not where it was kept, and that a tank fish can be ikejime too."
+				},
+				{
+					"finding": "language-1-fact-2",
+					"action": "applied",
+					"reason": "Guest line no longer ties the kill to the boat: killed instantly and bled the moment it left the water, which covers boat and live tank alike."
+				},
+				{
+					"finding": "language-1-fact-3",
+					"action": "applied",
+					"reason": "Dropped Regenerative Organic Certified from aliases; aliases are now Regeneratively Raised and Regeneratively Farmed, and the why keeps ROC as the one audited private mark."
+				},
+				{
+					"finding": "language-1-fact-4",
+					"action": "applied",
+					"reason": "Trap says replaced with the proposed wording, a government soil standard audited yearly one step above organic, so it is false of this word and not a true description of Organic."
+				},
+				{
+					"finding": "language-1-fact-5",
+					"action": "applied",
+					"reason": "Why now says no menu is printed and the chef swaps pieces to the guest's taste and pace; the gist was also brought in line, with no printed menu and served piece by piece, dropping decided course by course as you eat."
+				},
+				{
+					"finding": "language-1-fact-6",
+					"action": "applied",
+					"reason": "notThis now says the chef sets tonight's courses at the counter and can adjust them to you, dropping nothing is set in advance."
+				},
+				{
+					"finding": "language-1-fact-7",
+					"action": "applied",
+					"reason": "Trap why replaced with the proposed wording: kaiseki is fixed by tradition, here the chef, not tradition, decides the order of courses."
+				},
+				{
+					"finding": "language-1-floor-8",
+					"action": "applied",
+					"reason": "Guest line rewritten in plain words: Japanese fish handling, killed instantly and bled the moment it left the water, so it never thrashed; dispatched and the Japanese way are gone and the boat is no longer implied."
+				},
+				{
+					"finding": "language-1-floor-9",
+					"action": "applied",
+					"reason": "Trap why now uses the proposed wording: it names how the fish was killed and bled, not where it was kept, and a tank fish can be ikejime too."
+				},
+				{
+					"finding": "language-1-floor-10",
+					"action": "applied",
+					"reason": "Respelling changed to ee-keh-JEE-may, the American dining-room ending."
+				},
+				{
+					"finding": "language-1-floor-11",
+					"action": "applied",
+					"reason": "Respelling changed to oh-mah-KAH-say."
+				},
+				{
+					"finding": "language-1-floor-12",
+					"action": "applied",
+					"reason": "Guest opens with It means leave it to the chef, which carries its sense when spoken aloud without quotation marks."
+				},
+				{
+					"finding": "language-1-floor-13",
+					"action": "applied",
+					"reason": "Why no longer says nothing is fixed; it says no menu is printed and the chef swaps pieces, which leaves the course count, price and counter as the fixed things the menu line shows."
+				},
+				{
+					"finding": "language-1-floor-14",
+					"action": "applied",
+					"reason": "notThis keeps the contrast on what differs from a printed tasting menu: the chef sets tonight's courses at the counter and can adjust them to you."
+				},
+				{
+					"finding": "language-1-floor-15",
+					"action": "applied",
+					"reason": "Aliases are now Regeneratively Raised and Regeneratively Farmed; the certification is named only in the why as the audited exception."
+				},
+				{
+					"finding": "language-1-floor-16",
+					"action": "applied",
+					"reason": "Ask me which farm replaced with I can name the farm, the server offering rather than instructing, and the finding's exact wording set aside only because a hire on night one may not yet know the farm and this phrasing prompts them to learn it."
+				},
+				{
+					"finding": "language-1-floor-17",
+					"action": "applied",
+					"reason": "Guest list now opens with Often and drops the caramel, so the examples read as typical rather than promised."
+				},
+				{
+					"finding": "language-1-safety-18",
+					"action": "applied",
+					"reason": "Guest line no longer links the kill method to raw service; it ends with the flesh staying firm and clean tasting, and it's most often served raw."
+				},
+				{
+					"finding": "language-1-safety-19",
+					"action": "applied",
+					"reason": "Added a note: most often served raw or barely seared, and the word covers only the kill and bleed, not how the fish was frozen or handled since; kept compact so the card stays under the total limit."
+				},
+				{
+					"finding": "language-1-safety-20",
+					"action": "applied",
+					"reason": "madeWith now names almonds in place of nuts and adds often cream, giving the seven-item list in the finding."
+				},
+				{
+					"finding": "language-1-safety-21",
+					"action": "applied",
+					"reason": "Added a note that most pieces at a sushi counter are raw fish and nothing is printed ahead, so anything to avoid must be said before the first course; kept shorter than proposed to hold the card total near the aim."
+				}
+			],
+			"critic": null,
+			"acceptedRejected": []
 		}
 	]
 }

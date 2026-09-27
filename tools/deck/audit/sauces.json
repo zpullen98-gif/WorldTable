@@ -798,6 +798,157 @@
 				"notes": "Coverage and the rules I checked. All 21 roster rows have a card. Section mean is 667 chars (ceiling 720); the longest card is fd_0209 at 779 and none is over 900. No verdict words, em or en dashes, or banned substrings (scanned mechanically). Every accented term has a say. The Jus knownPacketError is covered: its trap says 'used only for beef'. No two gists or guest lines are duplicates. Velouté/Béchamel and Chimichurri/Salsa Verde have parallel gists but each names what sets it apart. Confusion pairs Hollandaise/Béarnaise, Hollandaise/Beurre Blanc, Jus/Demi-Glace and Gastrique/Agrodolce are linked both ways. Consommé->Stock and Coulis->Compote are one-way, which is acceptable. Optional ideas: add 'Brown Butter' (fd_0161) to seeAlsoTerms on Beurre Blanc, since guests mix up the beurre sauces. The Agrodolce gist lists raisins and onion as if they were fixed, though the why says 'often'; 'Italian sweet-sour sauce of vinegar and sugar, often with raisins' would be more accurate if it fits the length. Agrodolce notThis (132) and Demi-Glace guest (158) are over their aim ranges but inside the limits. Scratch length script: C:/Users/zpull/AppData/Local/Temp/claude/C--Users-zpull--claude/ee375187-7803-4126-b577-0cdfe403a999/scratchpad/s.py"
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-27",
+			"pass": "revision",
+			"cards": [
+				"fd_0333",
+				"fd_0334",
+				"fd_0335",
+				"fd_0336"
+			],
+			"findings": [
+				{
+					"id": "fd_0336",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "It is a thin, clear poaching broth, never puréed or thickened.",
+					"because": "The card's own why says butter is often whisked in, and a butter-mounted nage is neither glass-clear nor unthickened; the trap's real error is the rice purée of a bisque, so say that.",
+					"fix": "It is a thin poaching broth, never puréed or bound with rice.",
+					"lens": "fact",
+					"key": "sauces-1-fact-1"
+				},
+				{
+					"id": "fd_0335",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "the sauce is bound with milk or cream, not beef broth.",
+					"because": "Escoffier's rice soubise moistens the onions and rice with white consommé or stock before the cream goes in, so 'not beef broth' overreaches; the true error in the trap is the dark, browned gravy.",
+					"fix": "the sauce is bound with milk or cream, never browned.",
+					"lens": "fact",
+					"key": "sauces-1-fact-2"
+				},
+				{
+					"id": "fd_0333",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Shallots and wine cook down into rich veal stock, with soft bits of bone marrow folded in at the end.",
+					"because": "Said at a table it promises two things the plate may not carry: the reduction goes into demi-glace, a finished brown sauce rather than a stock, and many American kitchens build it on beef stock and send it without marrow. A guest told to expect marrow and given none has caught the server out on their first week; the card's own madeWith already hedges the veal.",
+					"fix": "Shallots and wine cook down into a rich brown sauce, often with bone marrow folded in at the end.",
+					"lens": "floor",
+					"key": "sauces-1-floor-3"
+				},
+				{
+					"id": "fd_0336",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "It is a thin, clear poaching broth, never puréed or thickened.",
+					"because": "The card's why says butter is often whisked in, which clouds and lightly enriches the broth, so a butter-mounted nage is neither clear nor unthickened; and 'clear' is the very distinction the notThis reserves for consommé. A sharp reader sees the card contradict itself.",
+					"fix": "It is a thin poaching broth, never puréed into a soup.",
+					"lens": "floor",
+					"key": "sauces-1-floor-4"
+				},
+				{
+					"id": "fd_0336",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "The fish poaches in it and arrives swimming in it",
+					"because": "The card's line and pairs are lobster, langoustine, scallops and mussels; a server standing over a lobster who says 'the fish poaches in it' sounds read off a card. Seafood covers both.",
+					"fix": "Seafood poaches in it and arrives swimming in it",
+					"lens": "floor",
+					"key": "sauces-1-floor-5"
+				},
+				{
+					"id": "fd_0336",
+					"field": "gist",
+					"severity": "style",
+					"claim": "Light aromatic wine broth fish is poached in and then served in",
+					"because": "Read fast as one of four answer options, 'broth fish' is a garden path: the reader parses a compound noun before finding the verb. A relative pronoun fixes it and 'seafood' matches the guest line.",
+					"fix": "Light wine broth that seafood poaches in, then arrives in",
+					"lens": "floor",
+					"key": "sauces-1-floor-6"
+				},
+				{
+					"id": "fd_0333",
+					"field": "why",
+					"severity": "verdict",
+					"claim": "so its body is gelatin, not cream",
+					"because": "\"not cream\" reads as a lacks-dairy assurance, yet the same card lists butter in madeWith and most kitchens mount the sauce with butter. State where the body comes from without naming what is absent.",
+					"fix": "so its body is gelatin from bones",
+					"lens": "safety",
+					"key": "sauces-1-safety-7"
+				},
+				{
+					"id": "fd_0334",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "Here the yolks are hard-cooked and the whites chopped in.",
+					"because": "Stated flat, a server will tell a guest avoiding raw egg that there is none. Escoffier's version is built on cooked yolks, but many modern kitchens build gribiche on a raw-yolk mayonnaise and fold chopped hard-cooked egg through it. The raw-service fact a server needs is that it varies.",
+					"fix": "Not remoulade, a raw-yolk mayonnaise. Classically these yolks are hard-cooked, though some kitchens start from mayonnaise.",
+					"lens": "safety",
+					"key": "sauces-1-safety-8"
+				},
+				{
+					"id": "fd_0335",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "the sauce is bound with milk or cream, not beef broth",
+					"because": "A lacks claim in a trap explanation still gets learned. It is also shaky: Escoffier's rice soubise cooks the onions and rice in white consommé (veal or chicken) before cream and butter. What makes the trap false is the color, so say that.",
+					"fix": "The onions are kept pale and sweet, and the sauce stays ivory and creamy, never deep brown.",
+					"lens": "safety",
+					"key": "sauces-1-safety-9"
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "sauces-1-fact-1",
+					"action": "applied",
+					"reason": "Trap why on Nage now reads 'It is a thin poaching broth, never puréed with rice into a thick soup.', dropping 'clear' and 'thickened' and naming the bisque's rice purée as the real error."
+				},
+				{
+					"finding": "sauces-1-fact-2",
+					"action": "applied",
+					"reason": "Soubise trap why no longer says 'not beef broth'; it now rests on color: 'the sauce stays ivory and creamy, never deep brown.'"
+				},
+				{
+					"finding": "sauces-1-floor-3",
+					"action": "applied",
+					"reason": "Bordelaise guest line now says 'cook down into a rich brown sauce, often with bone marrow folded in at the end', so it promises neither veal stock nor marrow on every plate."
+				},
+				{
+					"finding": "sauces-1-floor-4",
+					"action": "applied",
+					"reason": "Same Nage trap why rewritten to 'thin poaching broth, never puréed with rice into a thick soup', removing 'clear' and 'thickened' so it no longer contradicts the butter-mounted why or borrows consommé's distinction; the trap says was also trimmed to 55 characters for length parity with the new gist."
+				},
+				{
+					"finding": "sauces-1-floor-5",
+					"action": "applied",
+					"reason": "Nage guest line now says 'Seafood poaches in it and arrives swimming in it', matching the lobster and shellfish in pairs and line."
+				},
+				{
+					"finding": "sauces-1-floor-6",
+					"action": "applied",
+					"reason": "Nage gist is now 'Light wine broth that seafood poaches in, then arrives in' (57 characters), removing the 'broth fish' garden path and matching the guest line's 'seafood'."
+				},
+				{
+					"finding": "sauces-1-safety-7",
+					"action": "applied",
+					"reason": "Bordelaise why now says 'so its body is gelatin from bones', naming the source of the body without stating what is absent."
+				},
+				{
+					"finding": "sauces-1-safety-8",
+					"action": "applied",
+					"reason": "Gribiche notThis now reads 'Not remoulade, a raw-yolk mayonnaise. Classically these yolks are hard-cooked, though some kitchens start from mayonnaise.' (122 characters), and the trap why was softened to 'Classically the yolks are hard-cooked' so no field states the cooked yolk as universal."
+				},
+				{
+					"finding": "sauces-1-safety-9",
+					"action": "applied",
+					"reason": "Soubise trap why replaced with the proposed color-based sentence: 'The onions are kept pale and sweet, and the sauce stays ivory and creamy, never deep brown.', removing the lacks claim."
+				}
+			],
+			"critic": null,
+			"acceptedRejected": []
 		}
 	]
 }

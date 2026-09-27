@@ -256,6 +256,80 @@ const cards = [
 		traps: [
 			{ says: 'Grown with no pesticides or sprays of any kind on the plants', why: 'Certified growers may still use approved pesticides, mostly natural ones.' }
 		]
+	},
+	{
+		id: 'fd_0352',
+		term: 'Mignardises',
+		level: 3,
+		say: 'meen-yar-DEEZ',
+		gist: 'Tray of tiny sweets sent after dessert to close a tasting menu',
+		guest: "They're the little sweets that come after dessert, one bite each. Often a chocolate, a macaron, a fruit jelly, sent out with the coffee.",
+		why: 'From the French for dainty. After the plated dessert, the pastry kitchen sends a tray of one-bite sweets, usually chocolates, fruit jellies, macarons, financiers or caramels, to go with coffee. Each is a single bite, so the meal ends on variety rather than fullness.',
+		madeWith: ['often chocolate', 'often butter', 'often egg', 'often wheat flour', 'often almonds', 'often cream', 'sometimes gelatin'],
+		origin: 'French, from mignard, dainty: the last line of a tasting menu',
+		notThis: 'Not an amuse-bouche, the savory bite that opens the meal. These are sweet and close it, after dessert.',
+		seeAlso: ['fd_0290', 'fd_0238', 'fd_0255'],
+		confusedWith: ['fd_0288'],
+		line: 'Coffee, tea and mignardises',
+		traps: [
+			{ says: 'The plated dessert course itself, the one that ends a set tasting menu', why: 'They come after the dessert, not instead of it: one-bite sweets sent with the coffee.' }
+		]
+	},
+	{
+		id: 'fd_0353',
+		term: 'Ikejime',
+		level: 4,
+		say: 'ee-keh-JEE-may',
+		gist: 'Fish killed by a spike and bled at once, so the flesh stays firm',
+		guest: "It's a Japanese way of handling fish, killed instantly and bled as it leaves the water so it never thrashes. The flesh stays firm and clean tasting, most often served raw.",
+		why: 'A spike to the brain kills the fish instantly, it is bled, and often a wire is run down the spine to still the nerves. A fish that dies thrashing floods its muscle with stress chemistry and softens fast; this one stays firm for days and can be rested to deepen its flavor.',
+		madeWith: ['fish'],
+		note: 'Most often served raw or barely seared. The word covers only the kill and bleed, not how the fish was frozen or handled since.',
+		origin: 'Japanese: ike, live, and shime, to close: killed while still alive',
+		notThis: 'Not a species, a cut or a cooking method. It says only how the fish was killed and bled.',
+		lexiconSlug: 'sashimi-grade-and-ikejime',
+		seeAlso: ['fd_0220', 'fd_0299', 'fd_0298'],
+		line: 'Ikejime madai, yuzu kosho, shiso',
+		traps: [
+			{ says: 'Fish kept alive in a tank and cooked to order the moment it is chosen', why: 'It names how the fish was killed and bled, not where it was kept. A tank fish can be ikejime too.' },
+			{ says: 'Fish lightly cured in salt and rice vinegar before it is sliced', why: 'That is shime saba, vinegar-cured mackerel. This word is about how the fish was killed, not cured.' }
+		]
+	},
+	{
+		id: 'fd_0354',
+		term: 'Regenerative',
+		level: 3,
+		aliases: ['Regeneratively Raised', 'Regeneratively Farmed'],
+		gist: 'Farming that sets out to rebuild the soil, with no legal definition',
+		guest: 'It means the farm works to rebuild its soil, moving cattle pasture to pasture and planting cover crops, not just avoiding harm. I can name the farm.',
+		why: "Sustainable means doing no further harm; this sets out to repair: cover crops, little or no tilling, cattle moved often so the grass recovers. No law or label rule defines the word; only private marks like Regenerative Organic Certified are audited, so the farm's name matters.",
+		origin: 'English, to grow back. Coined for farming by Robert Rodale in the 1980s',
+		notThis: 'Not the same as organic, a federal legal standard with inspections. A farm can be one without the other.',
+		seeAlso: ['fd_0296', 'fd_0297'],
+		confusedWith: ['fd_0300', 'fd_0295'],
+		line: 'Grilled bavette from a regenerative farm, chimichurri',
+		traps: [
+			{ says: 'Government soil standard for farms, audited yearly, one step above organic', why: "No government defines the word; only private certifications audit it, so it is the farm's own claim." }
+		]
+	},
+	{
+		id: 'fd_0355',
+		term: 'Omakase',
+		level: 3,
+		say: 'oh-mah-KAH-say',
+		gist: "Japanese chef's-choice meal with no printed menu, served piece by piece",
+		guest: "It means leave it to the chef, who picks each course from the best fish in today and adjusts to how you eat. Just tell us anything you'd rather skip.",
+		why: "Makaseru means to entrust. At a sushi counter the chef builds the meal from the day's fish, nigiri running from lighter to richer, at a set price or tiers. No menu is printed; the chef swaps pieces to the guest's taste and pace. Other kitchens borrow it for any chef's-choice meal.",
+		note: 'Most pieces at a sushi counter are raw fish and nothing is printed ahead, so anything to avoid must be said before the first course.',
+		origin: 'Japanese, o-makase, from makaseru, to entrust: I leave it up to you',
+		notThis: "Not a printed tasting menu: the chef sets tonight's courses at the counter and can adjust them to you.",
+		seeAlso: ['fd_0291', 'fd_0353'],
+		confusedWith: ['fd_0290', 'fd_0289'],
+		line: 'Omakase, 18 courses, counter seating only',
+		traps: [
+			{ says: 'All you can eat sushi service at one fixed price, ordered from a list', why: 'The chef chooses every course; the guest does not order, and the chef sets the count of pieces.' },
+			{ says: 'Formal multi-course Japanese dinner whose sequence is fixed by tradition', why: 'That is kaiseki. Here the chef, not tradition, decides the order of courses.' }
+		]
 	}
 ];
 

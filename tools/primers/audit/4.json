@@ -1,0 +1,1862 @@
+{
+ "level": 4,
+ "primers": {
+  "4-dishes": {
+   "findings": [
+    {
+     "where": "lede",
+     "severity": "wrong",
+     "claim": "and each take a day's planning",
+     "because": "The brief gives Salt-Baked Whole Fish 60 minutes and Baked Alaska 120 minutes, and paragraph 2 itself calls the fish \"the shortest of the six at an hour\"; only the turkey, the brisket and the pastor need a day planned. Also \"each take\" should be \"each takes\".",
+     "fix": "and run from one hour to a twelve-hour day.",
+     "lens": "fact",
+     "key": "4-dishes-fact-1",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "each asks you to schedule the day, hold a standard over a long wait, and finish in front of people",
+     "because": "Not each: the fish is an hour with no long wait, and Sauce Espagnole & Demi-Glace is a base made on the stove, not finished in front of anyone. Only the turkey and Baked Alaska are finished before the room.",
+     "fix": "most ask you to schedule the day and hold a standard over a long wait, and two are finished in front of people",
+     "lens": "fact",
+     "key": "4-dishes-fact-2",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "you judge it by time and touch, not by looking",
+     "because": "A salt crust cannot be judged by touch. The dish is judged by time for its weight, or by a probe thermometer pushed through the crust into the thickest part (or in at the gill opening); every standard method uses one of these.",
+     "fix": "you judge it by time for its weight, or by a probe pushed through the crust, not by looking",
+     "lens": "fact",
+     "key": "4-dishes-fact-3",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "then the trompo roasts and the edges are seared hard on the plancha as you carve",
+     "because": "The brief's item lists \"Roasting in a hot oven\" for Tacos al Pastor (Home Trompo): the home stack is roasted in the oven, not over live fire, then the slices are crisped on the griddle. \"The trompo roasts\" reads as a spit before a fire.",
+     "fix": "then the stack roasts in a hot oven and the slices are seared hard on the plancha as you carve",
+     "lens": "fact",
+     "key": "4-dishes-fact-4",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "Cook the pastor first: it tells you whether your fire holds a zone before you commit a whole brisket to it.",
+     "because": "The home trompo is oven-roasted (brief technique: \"Roasting in a hot oven\"; no live-fire technique is listed for it), so it tests no fire and no two-zone setup. The sound reason to take it first is that it is a four-hour day built from techniques already held (marinating, oven roasting, plancha, searing) before the twelve-hour brisket.",
+     "fix": "Cook the pastor first: it roasts in the oven and finishes on the plancha, a plate you can put up in one day before the brisket takes twelve hours.",
+     "lens": "fact",
+     "key": "4-dishes-fact-5",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "Low and slow smoking is the whole dish",
+     "because": "The brief's item lists three techniques for Central Texas Smoked Brisket: Braising, Low & slow smoking, and Resting meat & slicing against the grain. The wrapped stretch through the stall is a braise in the meat's own juices, so smoking is not the whole dish.",
+     "fix": "Low and slow smoking carries the dish, with a wrapped braise through the middle hours",
+     "lens": "fact",
+     "key": "4-dishes-fact-6",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "lede",
+     "severity": "wrong",
+     "claim": "each take a day's planning",
+     "because": "The brief lists Salt-Baked Whole Fish at 60 minutes and difficulty 2, and the primer's own paragraph 2 calls it \"the shortest of the six at an hour\"; the lede says every one of the six takes a day.",
+     "fix": "and ask for a plan before the heat goes on",
+     "lens": "app",
+     "key": "4-dishes-app-7",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "it tells you whether your fire holds a zone before you commit a whole brisket to it",
+     "because": "The brief's techniques for Tacos al Pastor (Home Trompo) are Griddle & plancha work, Marinating: acid, salt and time, Roasting in a hot oven, and Searing: the hard crust. The home trompo is roasted in the oven and finished on the plancha; it does not test a fire zone, so it cannot tell the cook anything about the smoker's fire before the brisket.",
+     "fix": "it is four hours in the oven and on the plancha before you give twelve to the smoker",
+     "lens": "app",
+     "key": "4-dishes-app-8",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "lede",
+     "severity": "wrong",
+     "claim": "and each take a day's planning",
+     "because": "Salt-Baked Whole Fish is placed here at 60 minutes and difficulty 2 (brief items); it is not a day's planning, so \"each\" is false for one of the six.",
+     "fix": "and all but one take the better part of a day",
+     "lens": "voice",
+     "key": "4-dishes-voice-9",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "each asks you to schedule the day, hold a standard over a long wait, and finish in front of people",
+     "because": "Overgeneralized: the fish is an hour, and demi-glace and brisket are not finished in front of anyone. The brief's shared thread is the semester line \"cooks for a room, not a plate\" and long minutes on five of six.",
+     "fix": "each asks you to plan the whole day and hold a standard through it",
+     "lens": "voice",
+     "key": "4-dishes-voice-10",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "style",
+     "claim": "it teaches the capstone's habit of trusting a method you cannot see into: the fish steams inside its crust and you judge it by time and touch, not by looking",
+     "because": "\"The capstone's habit\" is an invented framing; the brief's capstone line is \"mother sauces at scale, the holiday bird, theater desserts, and the numbers behind them\". The fish also carries no item text in the brief, so the method sentence is unsourced; keep it modest.",
+     "fix": "it teaches you to trust a method you cannot see into: the fish steams inside its crust and you judge it by time, not by looking",
+     "lens": "voice",
+     "key": "4-dishes-voice-11",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "style",
+     "claim": "Then the two theater pieces.",
+     "because": "The brief names the turkey \"the holiday bird\" and reserves \"theater\" for the desserts (\"the holiday bird, theater desserts\"); use the brief's own labels.",
+     "fix": "Then the holiday bird and the theater dessert.",
+     "lens": "voice",
+     "key": "4-dishes-voice-12",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "which is why the capstone places them side by side",
+     "because": "A claim about the app's curriculum ordering that the brief does not make; the only app claims a primer may carry are the doors and the met rule.",
+     "fix": "(delete the clause; end the sentence at \"a table that is watching.\")",
+     "lens": "voice",
+     "key": "4-dishes-voice-13",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "Cook the pastor first",
+     "because": "Paragraph 2 already says \"Take Salt-Baked Whole Fish first\"; a second \"first\" two paragraphs later reads as a contradiction on a phone.",
+     "fix": "Cook the pastor before the brisket",
+     "lens": "voice",
+     "key": "4-dishes-voice-14",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "style",
+     "claim": "the clock runs in hours",
+     "because": "Rule 6 bans locked and unlock; \"clock\" is neither, but a substring gate on \"lock\" would refuse the primer, and the safer word costs nothing.",
+     "fix": "the cook runs in hours",
+     "lens": "voice",
+     "key": "4-dishes-voice-15",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "The doors do the scheduling for you.",
+     "because": "The doors open the Path, the recipe page and the grid at the first dish not yet cooked (brief \"doors\"); they schedule nothing. Say what they do.",
+     "fix": "The doors pick the next dish for you.",
+     "lens": "voice",
+     "key": "4-dishes-voice-16",
+     "primer": "4-dishes"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "style",
+     "claim": "There is nothing else to it, and no one checks the plate but you.",
+     "because": "Filler after the met rule has already been stated in the brief's words (\"A dish is met when it has been cooked and logged\"), and \"no one checks the plate\" is an app claim beyond the doors and the met rule.",
+     "fix": "Nothing else is asked of it.",
+     "lens": "voice",
+     "key": "4-dishes-voice-17",
+     "primer": "4-dishes"
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "4-dishes-fact-1",
+     "action": "applied",
+     "reason": "Lede now ends \"and run from one hour to a twelve-hour day.\" (the fish is 60 minutes, the brisket 720 in the brief), which also removes the \"each take\" agreement slip."
+    },
+    {
+     "finding": "4-dishes-fact-2",
+     "action": "applied",
+     "reason": "Paragraph 1 now reads \"five of the six ask you to schedule the day and hold a standard over a long wait, and two are finished in front of people.\""
+    },
+    {
+     "finding": "4-dishes-fact-3",
+     "action": "applied",
+     "reason": "Paragraph 2 now says you judge the fish \"by time for its weight, or by a probe pushed through the crust, not by looking\"; touch removed."
+    },
+    {
+     "finding": "4-dishes-fact-4",
+     "action": "applied",
+     "reason": "Paragraph 4 now says \"the stack roasts in a hot oven and the slices are seared hard on the plancha as you carve\", matching the brief's listed techniques."
+    },
+    {
+     "finding": "4-dishes-fact-5",
+     "action": "applied",
+     "reason": "The fire-zone claim is gone; the sentence now reads \"Cook the pastor before the brisket: it roasts in the oven and finishes on the plancha, a plate you can put up in one day before you give twelve hours to the smoker.\""
+    },
+    {
+     "finding": "4-dishes-fact-6",
+     "action": "applied",
+     "reason": "Paragraph 4 now says \"Low and slow smoking carries the dish, with a wrapped braise through the middle hours\", reflecting Braising in the brief's technique list."
+    },
+    {
+     "finding": "4-dishes-app-7",
+     "action": "applied",
+     "reason": "Same lede change as fact-1: the six now \"run from one hour to a twelve-hour day\", so no claim that each takes a day."
+    },
+    {
+     "finding": "4-dishes-app-8",
+     "action": "applied",
+     "reason": "Same change as fact-5: the pastor is now described as oven and plancha work done in one day before the brisket's twelve hours, with no claim about testing the fire."
+    },
+    {
+     "finding": "4-dishes-voice-9",
+     "action": "applied",
+     "reason": "Same lede change as fact-1; the false \"each\" is removed in favor of the one-hour-to-twelve-hour span."
+    },
+    {
+     "finding": "4-dishes-voice-10",
+     "action": "applied",
+     "reason": "Same change as fact-2: the shared thread is now stated as five of six with a long wait and two finished before people, which is accurate for the fish and the demi-glace."
+    },
+    {
+     "finding": "4-dishes-voice-11",
+     "action": "applied",
+     "reason": "\"The capstone's habit\" is gone; paragraph 2 now says \"it teaches you to trust a method you cannot see into\" and the judging method is limited to time for weight or a probe."
+    },
+    {
+     "finding": "4-dishes-voice-12",
+     "action": "applied",
+     "reason": "Paragraph 3 now opens \"Then the holiday bird and the theater dessert.\" using the brief's own labels."
+    },
+    {
+     "finding": "4-dishes-voice-13",
+     "action": "applied",
+     "reason": "The clause about the capstone placing them side by side is deleted; the sentence ends at \"a table that is watching.\""
+    },
+    {
+     "finding": "4-dishes-voice-14",
+     "action": "applied",
+     "reason": "Paragraph 4 now says \"Cook the pastor before the brisket\", leaving the fish as the only \"first\"."
+    },
+    {
+     "finding": "4-dishes-voice-15",
+     "action": "applied",
+     "reason": "\"the clock runs in hours\" is now \"the cook is counted in hours\", so no \"lock\" substring remains anywhere in the primer."
+    },
+    {
+     "finding": "4-dishes-voice-16",
+     "action": "applied",
+     "reason": "Paragraph 5 now opens \"The doors pick the next dish for you.\", which is what the brief's doors do."
+    },
+    {
+     "finding": "4-dishes-voice-17",
+     "action": "applied",
+     "reason": "The closing sentence is now \"Nothing else is asked of it.\", dropping the unsupported \"no one checks the plate\" claim."
+    }
+   ]
+  },
+  "4-techniques": {
+   "findings": [
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "rice never stirred once the stock is in",
+     "because": "In the classic method the stock is brought to the boil first and the rice is then sown into it; the rule is not to stir from the moment the rice goes in, which the primer's wording reverses.",
+     "fix": "rice never stirred once it is in the stock",
+     "lens": "fact",
+     "key": "4-techniques-fact-1",
+     "primer": "4-techniques"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "layered with the meat and its marinade",
+     "because": "That is the kacchi build only; in pakki biryani the meat is cooked first and the parboiled rice is layered over the finished curry. Two of the guide's three biryani recipes may take either route.",
+     "fix": "layered with the marinated or part-cooked meat",
+     "lens": "fact",
+     "key": "4-techniques-fact-2",
+     "primer": "4-techniques"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "a slack dough slapped against a wall",
+     "because": "A slack dough is too wet to cling and would slide off the clay; naan and tandoori roti doughs are soft and pliable but firm enough to hold on the wall.",
+     "fix": "a soft dough slapped against a wall",
+     "lens": "fact",
+     "key": "4-techniques-fact-3",
+     "primer": "4-techniques"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "Take the noodles first, because they teach your hands what the other two assume.",
+     "because": "Neither the pretzel bath nor a tandoor bread assumes any pulling skill: both are ordinary kneaded doughs, and hand-pulling is the slowest of the three to learn by months. The primer itself calls the bath the shortest step, so it belongs first.",
+     "fix": "Take the pretzel bath first, one step on an ordinary dough, and leave the noodles for last, because they take longest to learn.",
+     "lens": "fact",
+     "key": "4-techniques-fact-4",
+     "primer": "4-techniques"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "style",
+     "claim": "You take these eight because you own the menu and it should be able to reach for them.",
+     "because": "Restates the Level IV blurb (\"Owning the menu\") and gives the reader nothing to act on. It is also the cheapest cut: the five paragraphs run 546 words against an aim of 340 to 520 (limit 650), and this sentence plus the filler in paragraph 5 brings them to 520.",
+     "fix": "Delete the sentence.",
+     "lens": "voice",
+     "key": "4-techniques-voice-5",
+     "primer": "4-techniques"
+    },
+    {
+     "where": "lede",
+     "severity": "style",
+     "claim": "Eight techniques nobody drills by accident,",
+     "because": "\"the techniques nobody drills by accident\" is the level blurb's own phrase; the lede should say what the subsection is, not repeat the blurb. The brief's facts are one to five recipes each and no semester.",
+     "fix": "Eight techniques on one to five recipes each, taught by no semester,",
+     "lens": "voice",
+     "key": "4-techniques-voice-6",
+     "primer": "4-techniques"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Take biryani first if your kitchen braises, paella if it grills.",
+     "because": "A cook whose kitchen does neither gets no order, and sushi rice, the third of the group, is never placed. Say one order and the reason.",
+     "fix": "Take biryani first, since the sealed pot forgives a minute and socarrat does not; sushi rice last.",
+     "lens": "voice",
+     "key": "4-techniques-voice-7",
+     "primer": "4-techniques"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "the Lexicon anchor under the noodles, gluten and hydration, is the key:",
+     "because": "The commas make \"the noodles, gluten and hydration\" read as a list of three things; the anchor's name (Gluten and Hydration, per the brief's lexiconSlug) needs to stand apart from the noodles.",
+     "fix": "the Lexicon anchor under the noodles (gluten and hydration) is the key:",
+     "lens": "voice",
+     "key": "4-techniques-voice-8",
+     "primer": "4-techniques"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "rests on the second anchor, creaming, foaming and cake structure: the rise is",
+     "because": "Same comma problem: \"the second anchor, creaming, foaming and cake structure\" reads as four items; the anchor is one entry named Creaming, Foaming and Cake Structure.",
+     "fix": "rests on the second anchor (creaming, foaming and cake structure): the rise is",
+     "lens": "voice",
+     "key": "4-techniques-voice-9",
+     "primer": "4-techniques"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "style",
+     "claim": "the fastest route through between services.",
+     "because": "Filler: the door is already described by the brief's own line (\"the page of the first technique not yet met\"), and \"route through\" implies a course to complete, which nothing here is. Cutting it also helps the word count.",
+     "fix": "Delete, ending the sentence at \"not yet met.\"",
+     "lens": "voice",
+     "key": "4-techniques-voice-10",
+     "primer": "4-techniques"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "style",
+     "claim": "Nothing here bars you from this level's Dishes, so read the two lists side by side.",
+     "because": "A claim about the app that is neither a door nor the met rule; the brief's Level IV Dishes (cassoulet, a whole fish, laminated pastry) do not use these techniques, so \"side by side\" gives the reader nothing to do.",
+     "fix": "Delete the sentence, or replace with: This level's Dishes are a separate list; nothing here waits on them.",
+     "lens": "voice",
+     "key": "4-techniques-voice-11",
+     "primer": "4-techniques"
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "4-techniques-fact-1",
+     "action": "applied",
+     "reason": "Changed to \"rice never stirred once it is in the stock\", since in the classic method the rice is sown into stock already at the boil and the no-stir rule starts when the rice goes in."
+    },
+    {
+     "finding": "4-techniques-fact-2",
+     "action": "applied",
+     "reason": "Changed to \"layered with the marinated or part-cooked meat\" so the line covers both the kacchi and the pakki build."
+    },
+    {
+     "finding": "4-techniques-fact-3",
+     "action": "applied",
+     "reason": "Changed \"slack dough\" to \"soft dough\"; a slack dough would not hold on the clay wall."
+    },
+    {
+     "finding": "4-techniques-fact-4",
+     "action": "applied",
+     "reason": "Replaced the order with \"Take the pretzel bath first, one step on an ordinary dough, and the noodles last, because they take longest to learn\", which matches the paragraph's own call that the bath is the shortest step."
+    },
+    {
+     "finding": "4-techniques-voice-5",
+     "action": "applied",
+     "reason": "Deleted the sentence, and also cut the closing \"That is the whole rule\" line and two small phrases so the five paragraphs now run 515 words, inside the 340 to 520 aim."
+    },
+    {
+     "finding": "4-techniques-voice-6",
+     "action": "applied",
+     "reason": "Lede now reads \"Eight techniques on one to five recipes each, taught by no semester, each turning on one moment you have to be present for\", stating the brief's facts instead of the blurb's phrase."
+    },
+    {
+     "finding": "4-techniques-voice-7",
+     "action": "applied",
+     "reason": "Replaced with \"Take biryani first, since the sealed pot forgives a minute and socarrat does not; sushi rice last\", one order with its reason and all three placed."
+    },
+    {
+     "finding": "4-techniques-voice-8",
+     "action": "applied",
+     "reason": "The anchor's name now sits in parentheses: \"the Lexicon anchor under the noodles (gluten and hydration) is the key\"."
+    },
+    {
+     "finding": "4-techniques-voice-9",
+     "action": "applied",
+     "reason": "The anchor's name now sits in parentheses: \"rests on the second anchor (creaming, foaming and cake structure): the rise is\"."
+    },
+    {
+     "finding": "4-techniques-voice-10",
+     "action": "applied",
+     "reason": "Deleted \"the fastest route through between services\"; the sentence now ends at \"not yet met.\""
+    },
+    {
+     "finding": "4-techniques-voice-11",
+     "action": "applied",
+     "reason": "Replaced with \"This level's Dishes are a separate list; nothing here waits on them.\""
+    }
+   ]
+  },
+  "4-lexicon": {
+   "findings": [
+    {
+     "where": "lede",
+     "severity": "wrong",
+     "claim": "stops describing the plate and starts describing the building",
+     "because": "The finance category does not start here. The brief's neighbours.below lists ten Restaurant Finance & Opening entries already placed at Level III (Prime Cost, KPIs & the Daily Dashboard, COGS Control, Labor, Vendors, Hiring, Kitchen Design, FF&E, Menu Economics, Health Inspections), and paragraph 1 itself says Level IV holds \"the rest\" of the category. The lede contradicts the primer's own next line.",
+     "fix": "At Level IV the Lexicon is mostly the building, not the plate: thirty entries on restaurant finance and opening, and nine of the rarest things a kitchen ever handles.",
+     "lens": "fact",
+     "key": "4-lexicon-fact-1",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "Nothing here is cooked.",
+     "because": "The atlas entries placed here are cooked and handled: Lion's Mane (\"Cook it through; raw is not a service option\"), Cardoon (\"boiled first, 20 to 40 minutes in acidulated water\"), Tamarillo (blanch and shock), Matsutake (grill or dashi). Only the finance entries are uncooked.",
+     "fix": "None of it is drilled on a station.",
+     "lens": "fact",
+     "key": "4-lexicon-fact-2",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Startup Costs, Funding, The Pro Forma & Realistic Projections",
+     "because": "For a cook reading this to size an ask, the projections come before the raise: the Concept entry says the plan carries \"full financial projections, and the ask\", and Funding's discipline is to \"raise for the full journey (build + working capital + contingency)\", a figure that only exists once Startup Costs and the Pro Forma are built. Funding read before the Pro Forma has nothing to raise against.",
+     "fix": "Startup Costs, The Pro Forma & Realistic Projections, Funding",
+     "lens": "fact",
+     "key": "4-lexicon-fact-3",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "because every other finance entry answers one line of it",
+     "because": "The Honest List's lines (undercapitalization, rent, concept clarity, can't-count, prime cost drift, partner disputes, second location, standards decay) are answered by perhaps half the entries here; The Tech Stack, Third-Party Delivery Economics, Insurance and Payroll, Taxes & Compliance answer none of them. Overclaim.",
+     "fix": "because most of the finance entries answer one line of it",
+     "lens": "fact",
+     "key": "4-lexicon-fact-4",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "Follow the pointers: The Build-Out leads to Licenses & Permits, Liquor License Economics to Insurance.",
+     "because": "Neither pointer is in the brief. The Build-Out's own pointer is to the kitchen designer (\"next entry\", Kitchen Design & Flow, a Level III item). The chain the brief actually draws is Licenses & Permits to the liquor license (\"the ABC/liquor license (its own entry, its own drama)\"), and the liquor liability line sits in Insurance (\"LIQUOR LIABILITY ... mandatory with an ABC license\"), pointing onward to the dram-shop entry in Service, not the other way.",
+     "fix": "Follow the pointers: Licenses & Permits leads to Liquor License Economics, and the liability that license brings is a line in Insurance.",
+     "lens": "fact",
+     "key": "4-lexicon-fact-5",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "The operating stack reads fastest:",
+     "because": "\"The Operating Stack\" is the brief's own subtitle for Licenses & Permits: The Operating Stack. Borrowing it as a label for The Tech Stack, Third-Party Delivery, Marketing, The Opening, Culture and Growth points the reader at the wrong entry.",
+     "fix": "The running of the room reads fastest:",
+     "lens": "fact",
+     "key": "4-lexicon-fact-6",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "The nine atlas entries turn up for a fortnight a year, each with one handling rule.",
+     "because": "Most of these are not two-week items. Cardoon and Puntarelle are winter vegetables carried for months (Puntarelle's brief text is a Roman winter salad; Cardoon's field blanching runs \"for weeks\" ahead of a long season), Lion's Mane is cultivated year round (the brief distinguishes cultivated mycelium from fruiting body), Mangosteen and Tamarillo are imported across long seasons, and White Truffle runs roughly October to December. Only Matsutake and Medlar are anything like a fortnight, and even they run weeks. The brief gives no season length for any of them.",
+     "fix": "The nine atlas entries come through rarely, each with one handling rule.",
+     "lens": "fact",
+     "key": "4-lexicon-fact-7",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "most Cardoon is field-blanched and boiled in acidulated water first",
+     "because": "The brief's \"most\" governs the boiling (\"Most cardoon is boiled first, 20 to 40 minutes in acidulated water\"); field blanching is \"the traditional answer\" to bitterness and applies to the raw Piedmont gobbo too, which is the exception to the boiling. As written the reader hears that the Piedmont exception is unblanched.",
+     "fix": "Cardoon is field-blanched against its bitterness and most of it is boiled in acidulated water first",
+     "lens": "fact",
+     "key": "4-lexicon-fact-8",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "next",
+     "severity": "wrong",
+     "claim": "comes through for a fortnight",
+     "because": "Matsutake's season in the Pacific Northwest and Japan runs September into November, and a Medlar is picked in late autumn and then bletted two to four weeks (the brief's own figure), so the window is weeks, not a fortnight. The brief states no season length.",
+     "fix": "comes through for a few weeks",
+     "lens": "fact",
+     "key": "4-lexicon-fact-9",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "Follow the pointers: The Build-Out leads to Licenses & Permits, Liquor License Economics to Insurance.",
+     "because": "Neither pointer is in the app's text. The Build-Out points to \"next entry\" (Kitchen Design & Flow, Level III) and to \"the TI entry\"; Liquor License Economics points to the bar, pour-cost and responsible-service entries, never Insurance. The pointers the entries actually carry: Startup Costs says of build-out \"see its entry\", and Licenses & Permits ends its stack with \"the ABC/liquor license (its own entry, its own drama)\".",
+     "fix": "Follow the pointers: Startup Costs leads to The Build-Out, Licenses & Permits to Liquor License Economics.",
+     "lens": "app",
+     "key": "4-lexicon-app-10",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "The nine atlas entries turn up for a fortnight a year, each with one handling rule.",
+     "because": "Not in the brief and not true of the set: Lion's Mane is cultivated (the entry itself speaks of cultured mycelium), Cardoon and Puntarelle are winter crops with a season of months, Mangosteen is an import. Only Matsutake and Medlar fit a fortnight.",
+     "fix": "The nine atlas entries come through rarely, each with one handling rule.",
+     "lens": "app",
+     "key": "4-lexicon-app-11",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "next",
+     "severity": "wrong",
+     "claim": "a lease and a guarantee you can recite in one sentence",
+     "because": "Personal Guarantees & the Good-Guy Clause ends: \"know exactly what you've guaranteed, in one written list, updated\". The one-sentence rule belongs to The Concept & Business Plan (\"one sentence a stranger repeats correctly\"), not to the guarantee.",
+     "fix": "a lease you have read and a written list of what you have guaranteed, kept current",
+     "lens": "app",
+     "key": "4-lexicon-app-12",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "Nothing here is cooked.",
+     "because": "Paragraphs 4 and 5 then give cooking rules for the same items (Lion's Mane in a dry pan, Cardoon boiled in acidulated water, Tamarillo blanched and shocked), and the Lion's Mane entry says \"Cook it through; raw is not a service option\". A cook reads the line, then reads the opposite.",
+     "fix": "No technique is drilled here.",
+     "lens": "app",
+     "key": "4-lexicon-app-13",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "fades three days out of the ground",
+     "because": "The White Truffle entry says \"three days after lifting it is meaningfully weaker\", not gone; a chef reads \"fades three days out\" as finished at three days.",
+     "fix": "is meaningfully weaker three days out of the ground",
+     "lens": "app",
+     "key": "4-lexicon-app-14",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "The operating stack reads fastest:",
+     "because": "\"The Operating Stack\" is the app's own subtitle for Licenses & Permits, named two sentences earlier; the reader will look for that entry and find a list of six others instead.",
+     "fix": "The running of the room reads fastest:",
+     "lens": "app",
+     "key": "4-lexicon-app-15",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "The nine atlas entries turn up for a fortnight a year, each with one handling rule.",
+     "because": "No item text gives a season length. Lion's Mane is bought by shape from cultivated forms (the entry names H. americanum and H. coralloides as branched combs), and Mangosteen and Tamarillo are imports with no fortnight window; only Matsutake, Medlar, White Truffle and Puntarelle read as seasonal. \"Fortnight\" is also a British register for an American reader.",
+     "fix": "The nine atlas entries are rare on the order sheet, each with one handling rule.",
+     "lens": "voice",
+     "key": "4-lexicon-voice-16",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "next",
+     "severity": "wrong",
+     "claim": "comes through for a fortnight and you say its name and its rule before it is gone",
+     "because": "Same invented figure: the brief gives Medlar late autumn and Matsutake by veil grade, never a two-week window; \"fortnight\" repeats paragraph 4 and is British register.",
+     "fix": "comes through in its season and you say its name and its rule before it is gone",
+     "lens": "voice",
+     "key": "4-lexicon-voice-17",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "Follow the pointers: The Build-Out leads to Licenses & Permits, Liquor License Economics to Insurance.",
+     "because": "The brief's entries point differently: The Build-Out points to the kitchen designer (\"next entry\") and the free-rent clock; Licenses & Permits hands off to the liquor license (\"its own entry, its own drama\"); Insurance points back to liquor liability, \"mandatory with an ABC license\". Nothing in Liquor License Economics points to Insurance.",
+     "fix": "Read them in a chain: The Build-Out, then Licenses & Permits, which hands off to Liquor License Economics, then Insurance.",
+     "lens": "voice",
+     "key": "4-lexicon-voice-18",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "The operating stack reads fastest: The Tech Stack, Third-Party Delivery Economics, Marketing & the Regulars Math, The Opening, Culture & the Owner's Job and Growth.",
+     "because": "\"The Operating Stack\" is the subtitle of Licenses & Permits, so reusing it for a different group sends the reader back to the wrong entry, and \"reads fastest\" is filler. Five entries placed here are never named though the lede promises thirty: Site Selection & the Location Math, TI Allowance & Lease Negotiation, The Chart of Accounts & 4-Week Periods, Catering, Events & Revenue Diversification, The Org Chart & Management Structure.",
+     "fix": "The rest go in pairs: Site Selection with TI Allowance & Lease Negotiation, The Chart of Accounts with The Org Chart, The Tech Stack with Third-Party Delivery Economics, Catering with Marketing & the Regulars Math, The Opening with Culture & the Owner's Job, and Growth last.",
+     "lens": "voice",
+     "key": "4-lexicon-voice-19",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "cites",
+     "severity": "misplaced",
+     "claim": "\"growth-second-locations-licensing-and-exit\" closes the list at 34 slugs",
+     "because": "If the five unnamed entries are named (paragraph 3 fix), their slugs must be cited; they are all items at this level in this subsection: site-selection-and-the-location-math, ti-allowance-and-lease-negotiation, the-chart-of-accounts-and-4-week-periods, catering-events-and-revenue-diversification, the-org-chart-and-management-structure.",
+     "fix": "Add the five slugs after \"growth-second-locations-licensing-and-exit\".",
+     "lens": "voice",
+     "key": "4-lexicon-voice-20",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "Nothing here is cooked.",
+     "because": "Paragraph 5 then gives cooking rules from the items themselves: Lion's Mane \"Cook it through; raw is not a service option\", Cardoon \"boiled first, 20 to 40 minutes in acidulated water\". The meaning is that no station drills these; say that.",
+     "fix": "Nothing here is drilled at a station.",
+     "lens": "voice",
+     "key": "4-lexicon-voice-21",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "those decide who owns the name when partners stop speaking",
+     "because": "Who owns the name is Legal Entity & Partnership Agreements alone (\"IP ownership (who owns the NAME\"); Deal Structures & the Investor's Waterfall decides who is paid first (\"investors receive all or most profit distributions FIRST\") and buyout terms.",
+     "fix": "those decide who owns the name, and who is paid first, when partners stop speaking",
+     "lens": "voice",
+     "key": "4-lexicon-voice-22",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "because every other finance entry answers one line of it",
+     "because": "Overclaim. The Honest List names undercapitalization, rent, concept, cook/count splits, prime cost, partner disputes, the second location and standards decay; The Tech Stack, Catering, Insurance and Third-Party Delivery Economics answer none of its lines.",
+     "fix": "because most of the finance entries answer one line of it",
+     "lens": "voice",
+     "key": "4-lexicon-voice-23",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Carry out one figure, break-even in covers a day, the number a host stand can chase.",
+     "because": "\"Carry out\" reads as an instruction to perform a calculation; the sense is to take the figure with you, the Break-Even entry's \"a number the whole team can see, chase, and celebrate crossing\".",
+     "fix": "Carry one figure out with you, break-even in covers a day, the number a host stand can chase.",
+     "lens": "voice",
+     "key": "4-lexicon-voice-24",
+     "primer": "4-lexicon"
+    },
+    {
+     "where": "paragraph 6",
+     "severity": "style",
+     "claim": "Flashcards and Quiz run over this level's terms, and that is where met is decided: a term is met when recalled met or close",
+     "because": "The primer runs 530 words against the aim of 340 to 520 (limit 650), and paragraphs 3 and 5 are the longest at 101 and 108 words; \"and that is where met is decided\" restates what the next clause says.",
+     "fix": "Flashcards and Quiz run over this level's terms, where a term is met when recalled met or close",
+     "lens": "voice",
+     "key": "4-lexicon-voice-25",
+     "primer": "4-lexicon"
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "4-lexicon-fact-1",
+     "action": "applied",
+     "reason": "Lede rewritten to the proposed line ('is mostly the building, not the plate'), since Level III already holds ten finance entries and paragraph 1 says Level IV holds the rest."
+    },
+    {
+     "finding": "4-lexicon-fact-2",
+     "action": "applied",
+     "reason": "'Nothing here is cooked.' replaced with 'Nothing here is drilled at a station.', which no longer contradicts the atlas entries' own cooking rules."
+    },
+    {
+     "finding": "4-lexicon-fact-3",
+     "action": "applied",
+     "reason": "Money spine reordered to Startup Costs, The Pro Forma & Realistic Projections, Funding, so the projections precede the ask as the Concept entry has it."
+    },
+    {
+     "finding": "4-lexicon-fact-4",
+     "action": "applied",
+     "reason": "'every other finance entry' softened to 'most of the finance entries answer one line of it'."
+    },
+    {
+     "finding": "4-lexicon-fact-5",
+     "action": "applied",
+     "reason": "Pointer sentence rewritten to the chain the brief draws: Startup Costs to The Build-Out ('see its entry'), Licenses & Permits to Liquor License Economics ('its own entry'), and the liquor liability line sitting in Insurance."
+    },
+    {
+     "finding": "4-lexicon-fact-6",
+     "action": "applied",
+     "reason": "The label 'operating stack' is gone; the remaining entries are now introduced as 'The rest go in pairs'."
+    },
+    {
+     "finding": "4-lexicon-fact-7",
+     "action": "applied",
+     "reason": "'turn up for a fortnight a year' replaced with 'come through rarely', which the brief supports and no season length contradicts."
+    },
+    {
+     "finding": "4-lexicon-fact-8",
+     "action": "applied",
+     "reason": "Reworded so field blanching applies to Cardoon as such and 'most' governs only the boiling in acidulated water."
+    },
+    {
+     "finding": "4-lexicon-fact-9",
+     "action": "applied",
+     "reason": "'for a fortnight' removed from next; wrote 'comes through in its season' rather than 'a few weeks' because the brief states no season length at all."
+    },
+    {
+     "finding": "4-lexicon-app-10",
+     "action": "applied",
+     "reason": "Same sentence as fact-5: now Startup Costs leads to The Build-Out and Licenses & Permits to Liquor License Economics, exactly the two pointers the entries carry."
+    },
+    {
+     "finding": "4-lexicon-app-11",
+     "action": "applied",
+     "reason": "Fortnight claim removed from paragraph 4 in favor of 'come through rarely'."
+    },
+    {
+     "finding": "4-lexicon-app-12",
+     "action": "applied",
+     "reason": "Next line now reads 'a lease you have read and a written list of what you have guaranteed, kept current', matching the guarantee entry's own rule and leaving the one-sentence test to the Concept entry."
+    },
+    {
+     "finding": "4-lexicon-app-13",
+     "action": "applied",
+     "reason": "'Nothing here is cooked.' replaced with 'Nothing here is drilled at a station.'"
+    },
+    {
+     "finding": "4-lexicon-app-14",
+     "action": "applied",
+     "reason": "White Truffle now 'is meaningfully weaker three days out of the ground', the entry's own words."
+    },
+    {
+     "finding": "4-lexicon-app-15",
+     "action": "applied",
+     "reason": "'The operating stack reads fastest' removed; the group is introduced as 'The rest go in pairs'."
+    },
+    {
+     "finding": "4-lexicon-voice-16",
+     "action": "applied",
+     "reason": "Fortnight line replaced with 'The nine atlas entries come through rarely, each with one handling rule.'"
+    },
+    {
+     "finding": "4-lexicon-voice-17",
+     "action": "applied",
+     "reason": "Next now says 'comes through in its season and you say its name and its rule before it is gone', with the redundant 'season itself' lead-in changed to 'the calendar'."
+    },
+    {
+     "finding": "4-lexicon-voice-18",
+     "action": "applied",
+     "reason": "Pointer sentence rewritten as the chain the brief actually draws (Startup Costs to The Build-Out, Licenses & Permits to Liquor License Economics, the liability line in Insurance); the proposed Build-Out-then-Licenses order was not used because the Build-Out entry points to the kitchen designer, not to Licenses."
+    },
+    {
+     "finding": "4-lexicon-voice-19",
+     "action": "applied",
+     "reason": "New paragraph names all five missing entries in the proposed pairs, using each entry's full name where it has no colon (Site Selection & the Location Math, The Chart of Accounts & 4-Week Periods, The Org Chart & Management Structure, Catering, Events & Revenue Diversification)."
+    },
+    {
+     "finding": "4-lexicon-voice-20",
+     "action": "applied",
+     "reason": "The five slugs are added to cites; all 39 items at this level are now named and cited."
+    },
+    {
+     "finding": "4-lexicon-voice-21",
+     "action": "applied",
+     "reason": "'Nothing here is cooked.' is now 'Nothing here is drilled at a station.'"
+    },
+    {
+     "finding": "4-lexicon-voice-22",
+     "action": "applied",
+     "reason": "Now 'those decide who owns the name, and who is paid first, when partners stop speaking', crediting the waterfall entry for the payout order."
+    },
+    {
+     "finding": "4-lexicon-voice-23",
+     "action": "applied",
+     "reason": "Same change as fact-4: 'most of the finance entries answer one line of it'."
+    },
+    {
+     "finding": "4-lexicon-voice-24",
+     "action": "applied",
+     "reason": "Now 'Carry one figure out with you, break-even in covers a day, the number a host stand can chase.'"
+    },
+    {
+     "finding": "4-lexicon-voice-25",
+     "action": "applied",
+     "reason": "Clause 'and that is where met is decided' cut; paragraphs 1 to 5 also trimmed (banker/landlord aside, fruit descriptions, 'darkness and cold water'), bringing the primer from 530 to 554 words only because naming five more entries per voice-19 added a paragraph, still inside the 650 limit."
+    }
+   ]
+  },
+  "4-deck": {
+   "findings": [
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "a grain older than bread",
+     "because": "Einkorn is older than farming, not older than bread: flatbreads made from wild cereals predate domesticated wheat by thousands of years. The brief's own line is \"one of the first wheats people farmed, about ten thousand years ago.\"",
+     "fix": "a grain from the first farms",
+     "lens": "fact",
+     "key": "4-deck-fact-1",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "named for its springy chew and not for the shellfish",
+     "because": "The brief's origin line says the opposite: \"Named for abalone, the prized sea snail its chewy texture resembles.\" It is named for the shellfish, because of the chew; the not-this line only says it is not the shellfish.",
+     "fix": "named for the shellfish's chew and not the shellfish itself",
+     "lens": "fact",
+     "key": "4-deck-fact-2",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "carnaroli aged a year in the husk",
+     "because": "The brief says \"aged in the husk at least a year\"; the estate also sells longer-aged tins, so \"a year\" understates the mark a chef is asked to own.",
+     "fix": "carnaroli aged at least a year in the husk",
+     "lens": "fact",
+     "key": "4-deck-fact-3",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "a brine bath that grows the orange, tacky, pungent skin",
+     "because": "The brief says the cheese is \"rubbed with brine\" while it ages. A bath reads as submerging, which is the salting step many cheeses get at the start, not the repeated surface wash that makes a washed rind.",
+     "fix": "a brine rub that grows the orange, tacky, pungent skin",
+     "lens": "fact",
+     "key": "4-deck-fact-4",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "Brebis is ewe's milk, nearly twice the fat of cow's",
+     "because": "The card is a cheese, not a milk: \"French for ewe, used for sheep's milk cheeses.\" A cook reading this could say brebis at the pass to mean the milk.",
+     "fix": "Brebis is ewe's milk cheese, the milk nearly twice the fat of cow's",
+     "lens": "fact",
+     "key": "4-deck-fact-5",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "Freekeh is green durum set alight in the field",
+     "because": "The brief says \"usually durum\"; freekeh is made from other green wheats too, and the burning is done in piles after cutting, not to standing wheat.",
+     "fix": "Freekeh is green wheat, usually durum, piled and set alight",
+     "lens": "fact",
+     "key": "4-deck-fact-6",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "read every \"not this\" line twice",
+     "because": "Five of the fourteen cards carry no not-this line in the brief (Bottarga, Lion's Mane, Brebis, Banyuls, Verjus), so a reader looks for lines that are not there.",
+     "fix": "read the not-this lines twice",
+     "lens": "fact",
+     "key": "4-deck-fact-7",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "a grain older than bread",
+     "because": "The brief's Farro Piccolo card says einkorn is \"one of the first wheats people farmed, about ten thousand years ago\"; bread is older than farmed einkorn (flatbreads from wild grain predate farming), so the flourish is false. Use the card's own line.",
+     "fix": "one of the first wheats farmed",
+     "lens": "app",
+     "key": "4-deck-app-8",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "named for its springy chew and not for the shellfish",
+     "because": "The card's origin is \"Named for abalone, the prized sea snail its chewy texture resembles\": it IS named for the shellfish, by way of the chew. The notThis only says it is not the shellfish itself.",
+     "fix": "named for the shellfish's chew, not the shellfish itself",
+     "lens": "app",
+     "key": "4-deck-app-9",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "Brebis is ewe's milk",
+     "because": "The card's gist is \"Cheese made from ewe's milk\" and its origin says brebis is French for ewe; as written the sentence names the milk, not the cheese.",
+     "fix": "Brebis is ewe's milk cheese",
+     "lens": "app",
+     "key": "4-deck-app-10",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "carnaroli aged a year in the husk",
+     "because": "The Acquerello card says \"aged in the husk at least a year\"; \"a year\" reads as a fixed term.",
+     "fix": "carnaroli aged a year or more in the husk",
+     "lens": "app",
+     "key": "4-deck-app-11",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "read every \"not this\" line twice",
+     "because": "Four of the fourteen cards have no notThis line in the brief (Lion's Mane, Brebis, Bottarga, Banyuls), so \"every\" sends the reader looking for lines that are not there.",
+     "fix": "read the \"not this\" lines twice",
+     "lens": "app",
+     "key": "4-deck-app-12",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "a grain older than bread",
+     "because": "The brief's Farro Piccolo card says einkorn is \"one of the first wheats people farmed, about ten thousand years ago\"; baked flatbreads from wild grain predate farming by thousands of years, so the flourish is not right and a cook will repeat it.",
+     "fix": "a grain from the first farms",
+     "lens": "voice",
+     "key": "4-deck-voice-13",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "named for its springy chew and not for the shellfish",
+     "because": "The card's origin line is \"Named for abalone, the prized sea snail its chewy texture resembles\": the mushroom IS named for the shellfish, because of the chew; it is simply not the shellfish.",
+     "fix": "named for the sea snail's springy chew, and no shellfish at all",
+     "lens": "voice",
+     "key": "4-deck-voice-14",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "carnaroli aged a year in the husk",
+     "because": "The card says \"aged in the husk at least a year\".",
+     "fix": "carnaroli aged at least a year in the husk",
+     "lens": "voice",
+     "key": "4-deck-voice-15",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "Brebis is ewe's milk, nearly twice the fat of cow's",
+     "because": "Brebis is the cheese, not the milk (the card: \"French for ewe, used for sheep's milk cheeses\"); and the paragraph opened as \"The three mushrooms\" then walks into dairy with no bridge.",
+     "fix": "Dairy next. Brebis is ewe's milk cheese, nearly twice the fat of cow's",
+     "lens": "voice",
+     "key": "4-deck-voice-16",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "a brine bath that grows",
+     "because": "The card says the cheese \"is rubbed with brine, sometimes with beer, wine or brandy\"; a bath is a different method.",
+     "fix": "a brine rub that grows",
+     "lens": "voice",
+     "key": "4-deck-voice-17",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Take the three pantry bottles together, because guests confuse them and so do cooks.",
+     "because": "The paragraph promises three bottles and then adds Lomo and Bottarga, which are cured cards, not pantry bottles; the reader loses the grouping the primer is meant to give.",
+     "fix": "Take the pantry three and the cured two first, because guests confuse them and so do cooks.",
+     "lens": "voice",
+     "key": "4-deck-voice-18",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "is the technique card of the set",
+     "because": "Ballotine is placed here under preparations; calling it \"the technique card\" reads as if it sits in the level's Techniques subsection, and paragraph 5 already says it is the one you may cook.",
+     "fix": "closes the set",
+     "lens": "voice",
+     "key": "4-deck-voice-19",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "read every \"not this\" line twice",
+     "because": "Four of the fourteen cards carry no not-this line in the brief (Lion's Mane, Bottarga, Brebis, Banyuls), so \"every\" sends the reader looking for lines that are not there.",
+     "fix": "read the not-this lines twice",
+     "lens": "voice",
+     "key": "4-deck-voice-20",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "style",
+     "claim": "Level IV asks for the rare card said plainly, with its origin, what it is not, and a line it belongs on.",
+     "because": "Repeats the lede almost word for word (\"say each one plainly, with what it is not\"), and the paragraphs run 535 words against the aim of 340 to 520 (limit 650); this is the cleanest trim.",
+     "fix": "Level IV asks for each card's origin, what it is not, and a line it belongs on.",
+     "lens": "voice",
+     "key": "4-deck-voice-21",
+     "primer": "4-deck"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "style",
+     "claim": "They reach the pass once a season:",
+     "because": "\"once a season\" is the lede's phrase repeated in the very next paragraph.",
+     "fix": "They reach the pass rarely:",
+     "lens": "voice",
+     "key": "4-deck-voice-22",
+     "primer": "4-deck"
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "4-deck-fact-1",
+     "action": "applied",
+     "reason": "Paragraph 1 now says \"a grain from the first farms\", matching the Farro Piccolo card's \"one of the first wheats people farmed\"."
+    },
+    {
+     "finding": "4-deck-fact-2",
+     "action": "applied",
+     "reason": "Abalone Mushroom is now \"named for the sea snail's chew and not the shellfish itself\", matching the card's origin line."
+    },
+    {
+     "finding": "4-deck-fact-3",
+     "action": "applied",
+     "reason": "Acquerello now reads \"carnaroli aged at least a year in the husk\", the card's own words."
+    },
+    {
+     "finding": "4-deck-fact-4",
+     "action": "applied",
+     "reason": "Washed Rind now says \"a brine rub\", matching the card's \"rubbed with brine\"."
+    },
+    {
+     "finding": "4-deck-fact-5",
+     "action": "applied",
+     "reason": "Brebis now reads \"ewe's milk cheese, the milk nearly twice the fat of cow's\", so the term names the cheese."
+    },
+    {
+     "finding": "4-deck-fact-6",
+     "action": "applied",
+     "reason": "Freekeh now reads \"green wheat, usually durum, cut early, piled and set alight\", matching the card's method and hedge."
+    },
+    {
+     "finding": "4-deck-fact-7",
+     "action": "applied",
+     "reason": "Paragraph 5 now says \"read the not-this lines twice\", dropping \"every\" since five cards carry none."
+    },
+    {
+     "finding": "4-deck-app-8",
+     "action": "applied",
+     "reason": "Same change as fact-1: \"a grain from the first farms\", drawn from the card's line."
+    },
+    {
+     "finding": "4-deck-app-9",
+     "action": "applied",
+     "reason": "Same change as fact-2: named for the sea snail's chew, not the shellfish itself."
+    },
+    {
+     "finding": "4-deck-app-10",
+     "action": "applied",
+     "reason": "Same change as fact-5: \"Brebis is ewe's milk cheese\"."
+    },
+    {
+     "finding": "4-deck-app-11",
+     "action": "applied",
+     "reason": "Same change as fact-3: \"aged at least a year in the husk\", which also answers the fixed-term reading."
+    },
+    {
+     "finding": "4-deck-app-12",
+     "action": "applied",
+     "reason": "Same change as fact-7: \"read the not-this lines twice\"."
+    },
+    {
+     "finding": "4-deck-voice-13",
+     "action": "applied",
+     "reason": "Same change as fact-1: \"a grain from the first farms\"."
+    },
+    {
+     "finding": "4-deck-voice-14",
+     "action": "applied",
+     "reason": "Abalone Mushroom is now named for the sea snail's chew and not the shellfish itself; the sea snail is named as the finding asked, in the card's own framing."
+    },
+    {
+     "finding": "4-deck-voice-15",
+     "action": "applied",
+     "reason": "Same change as fact-3: \"aged at least a year in the husk\"."
+    },
+    {
+     "finding": "4-deck-voice-16",
+     "action": "applied",
+     "reason": "Added the bridge \"Dairy next.\" before Brebis and made Brebis the cheese, not the milk."
+    },
+    {
+     "finding": "4-deck-voice-17",
+     "action": "applied",
+     "reason": "Same change as fact-4: \"a brine rub\"."
+    },
+    {
+     "finding": "4-deck-voice-18",
+     "action": "applied",
+     "reason": "Paragraph 2 now opens \"Take the pantry three and the cured two first\", so Lomo and Bottarga sit inside the promised grouping."
+    },
+    {
+     "finding": "4-deck-voice-19",
+     "action": "applied",
+     "reason": "Ballotine now \"closes the set\" rather than being called the technique card, so it does not read as a Techniques placement."
+    },
+    {
+     "finding": "4-deck-voice-20",
+     "action": "applied",
+     "reason": "Same change as fact-7: \"read the not-this lines twice\"."
+    },
+    {
+     "finding": "4-deck-voice-21",
+     "action": "applied",
+     "reason": "Paragraph 1's last sentence is now \"Level IV asks for each card's origin, what it is not, and a line it belongs on\", and further small trims bring the paragraphs from 535 to about 519 words, inside the aim."
+    },
+    {
+     "finding": "4-deck-voice-22",
+     "action": "applied",
+     "reason": "Paragraph 1 now says \"They reach the pass rarely\", so \"once a season\" appears only in the lede."
+    }
+   ]
+  },
+  "4-palate": {
+   "findings": [
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "and it ends here with spicy and muddy",
+     "because": "The repair table in palate.json runs flat, salty, sour, sweet, bitter, spicy, rich, muddy: rich (a Level III fault) sits between spicy and muddy, so the table does not end with these two. What is true is that they are the last two the level ladder places.",
+     "fix": "and spicy and muddy are the last it places.",
+     "lens": "fact",
+     "key": "4-palate-fact-1",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "There is no ingredient that subtracts heat and none that subtracts brown",
+     "because": "The brief's own lever text for spicy says of dairy or fat: \"Dissolves capsaicin. This is the one that physically removes heat.\" Paragraph 2 repeats that line, so paragraph 1 contradicts both the brief and the primer's next paragraph.",
+     "fix": "Nothing takes the chile or the reduction back out of the pot",
+     "lens": "fact",
+     "key": "4-palate-fact-2",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "Read the order as the table means it: sugar and acid change how the heat is felt, fat and starch and base change how much heat is in each spoon.",
+     "because": "The repair table's definition states what its order means: \"symptom, then levers, in order of gentleness.\" The two-group reading is the primer's own and is fine as such, but it must not be presented as the table's meaning.",
+     "fix": "The table lists levers in order of gentleness. Read these five in two groups: sugar and acid change how the heat is felt, fat, starch and base change how much heat is in each spoon.",
+     "lens": "fact",
+     "key": "4-palate-fact-3",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "reach for fat first and then for more base",
+     "because": "The brief's lever text says more bland base is \"usually the only one that works at service\", and the table's meta-rule is to adjust in small moves and taste after each one. As written the reader pulls two levers in a row and the brief's own verdict on service is lost.",
+     "fix": "reach for fat, the gentlest lever, taste, and expect to end on more base, which the table calls the only one that usually works at service",
+     "lens": "fact",
+     "key": "4-palate-fact-4",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "misplaced",
+     "claim": "Muddy shows that a fault can have exactly one right answer",
+     "because": "The fault the table gives \"no second answer\" is rich (\"Always acid. There is no second answer to this one\"), placed at Level III. Muddy has a single lever listed, which is not the same claim, and the brief does not make it.",
+     "fix": "Muddy shows that a fault can have a single lever on the table",
+     "lens": "fact",
+     "key": "4-palate-fact-5",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "nothing can be taken out of it. There is no ingredient that subtracts heat and none that subtracts brown, so the lever is never the obvious one",
+     "because": "The brief's own lever for spicy reads \"Dairy or fat: Dissolves capsaicin. This is the one that physically removes heat.\" The primer's paragraph 2 repeats that lever correctly, so paragraph 1 contradicts both the app's data and the primer's next paragraph.",
+     "fix": "little can be taken out of it. Only fat pulls heat out, and nothing pulls brown out, so the lever is rarely the obvious one",
+     "lens": "app",
+     "key": "4-palate-app-6",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Read the order as the table means it: sugar and acid change how the heat is felt, fat and starch and base change how much heat is in each spoon.",
+     "because": "The table's order is dairy or fat, sugar, acid, starch, more bland base; the primer's grouping is not that order and the brief attributes no such meaning to it, so \"as the table means it\" claims something the app does not say.",
+     "fix": "Read the five in two groups: sugar and acid change how the heat is felt, fat, starch and base change how much heat is in each spoon.",
+     "lens": "app",
+     "key": "4-palate-app-7",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "There is no ingredient that subtracts heat and none that subtracts brown, so the lever is never the obvious one",
+     "because": "The brief's own lever for spicy reads \"Dairy or fat: Dissolves capsaicin. This is the one that physically removes heat.\" Paragraph 2 says exactly that, so the primer contradicts both the brief and itself two paragraphs apart.",
+     "fix": "Only one lever takes heat out of the pot and none takes out brown, so the obvious move is rarely the whole answer",
+     "lens": "voice",
+     "key": "4-palate-voice-8",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "What these two share is that the plate has too much, and nothing can be taken out of it.",
+     "because": "Paragraph 3 says of muddy \"The fault is not an excess of any one taste but a loss of contrast\", and the brief's symptom is \"every layer present and none of them legible\". Muddy is not \"too much\"; the shared point is only that nothing comes back out.",
+     "fix": "What these two share is that nothing in the plate can be taken back out of it.",
+     "lens": "voice",
+     "key": "4-palate-voice-9",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Read the order as the table means it: sugar and acid change how the heat is felt, fat and starch and base change how much heat is in each spoon.",
+     "because": "The table's order is dairy or fat, sugar, acid, starch, base. The sentence then regroups them out of that order, so \"as the table means it\" sends the reader looking for an order the table does not give. The grouping is fair; the framing is not.",
+     "fix": "Read them in two groups: sugar and acid change how the heat is felt, fat and starch and base change how much heat is in each spoon.",
+     "lens": "voice",
+     "key": "4-palate-voice-10",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "reach for fat first and then for more base",
+     "because": "The brief's item text says of more bland base: \"The honest fix, and usually the only one that works at service.\" Telling the cook at the pass to reach for fat first puts the primer's own order ahead of the table's stated service answer.",
+     "fix": "more base is the answer, fat where the dish takes it",
+     "lens": "voice",
+     "key": "4-palate-voice-11",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "style",
+     "claim": "and that at service the honest lever is usually the dull one",
+     "because": "Repeats paragraph 2 (\"More bland base is the honest fix, and usually the only one that works at service\") inside the same primer, and the primer runs 534 words against an aim of 340 to 520; cutting the clause helps both.",
+     "fix": "(delete the clause, ending the sentence at \"removing it.\")",
+     "lens": "voice",
+     "key": "4-palate-voice-12",
+     "primer": "4-palate"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "because rung 5 is what tells you whether the plate you have just repaired is right or merely less wrong",
+     "because": "The brief describes Calibrate only as \"the tasting ladder, each taste to this level's rung\". A rung on the ladder does not judge a plate; the cook's palate does. As written it is a claim about the app that is not one of the doors or the met rule.",
+     "fix": "because a palate at rung 5 is the one that can tell a repaired plate from a merely less wrong one",
+     "lens": "voice",
+     "key": "4-palate-voice-13",
+     "primer": "4-palate"
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "4-palate-fact-1",
+     "action": "applied",
+     "reason": "Verified in src/lib/data/palate.json that the table runs flat, salty, sour, sweet, bitter, spicy, rich, muddy; paragraph 1 now says spicy and muddy are the last the level ladder places, not the last on the table."
+    },
+    {
+     "finding": "4-palate-fact-2",
+     "action": "applied",
+     "reason": "Paragraph 1 now reads that only fat pulls heat back out and nothing pulls brown out, matching the brief's dairy-or-fat lever and paragraph 2."
+    },
+    {
+     "finding": "4-palate-fact-3",
+     "action": "applied",
+     "reason": "Verified the table's definition says levers run in order of gentleness; paragraph 2 now states that and presents the two-group reading as a reading, not as the table's meaning."
+    },
+    {
+     "finding": "4-palate-fact-4",
+     "action": "applied",
+     "reason": "Paragraph 2 now says more base is the answer at the pass and the table says so, with fat reached for only where the dish takes it, a taste between moves, and the expectation of ending on base."
+    },
+    {
+     "finding": "4-palate-fact-5",
+     "action": "applied",
+     "reason": "Verified the no-second-answer note belongs to rich; paragraph 4 now says muddy shows a fault can have a single lever on the table."
+    },
+    {
+     "finding": "4-palate-app-6",
+     "action": "applied",
+     "reason": "Same defect as fact-2; paragraph 1 now says only fat pulls heat back out and nothing pulls brown out, so the obvious move is rarely the whole answer."
+    },
+    {
+     "finding": "4-palate-app-7",
+     "action": "applied",
+     "reason": "Same defect as fact-3; the phrase as the table means it is gone and the sentence now reads Read the five in two groups."
+    },
+    {
+     "finding": "4-palate-voice-8",
+     "action": "applied",
+     "reason": "Same defect as fact-2 and app-6; paragraph 1 rewritten so the primer no longer contradicts its own paragraph 2 on fat and capsaicin."
+    },
+    {
+     "finding": "4-palate-voice-9",
+     "action": "applied",
+     "reason": "Paragraph 1 no longer says the plate has too much; the shared point is now that the fault is already in the pot and little comes back out, consistent with muddy as a loss of contrast."
+    },
+    {
+     "finding": "4-palate-voice-10",
+     "action": "applied",
+     "reason": "Same defect as fact-3 and app-7; the framing as the table means it is removed and replaced with the table's stated order of gentleness followed by the two-group reading."
+    },
+    {
+     "finding": "4-palate-voice-11",
+     "action": "applied",
+     "reason": "Paragraph 2 now leads with more base as the answer at the pass, crediting the table, and fat only where the dish takes it, so the table's service verdict comes first."
+    },
+    {
+     "finding": "4-palate-voice-12",
+     "action": "applied",
+     "reason": "The clause about the honest lever being the dull one is deleted from paragraph 4, and two other sentences were trimmed, bringing the paragraphs from 534 to 519 words."
+    },
+    {
+     "finding": "4-palate-voice-13",
+     "action": "applied",
+     "reason": "Paragraph 5 now says a palate at rung 5 is the one that can tell a repaired plate from a merely less wrong one, making the judgment the cook's, not the rung's."
+    }
+   ]
+  },
+  "4-safety": {
+   "findings": [
+    {
+     "where": "lede",
+     "severity": "unclear",
+     "claim": "one fact about your inspector",
+     "because": "The item is \"Know your jurisdiction's system (letter grades posted in the window, point scores, risk-based frequency)\": it is a fact about the authority's system, not about the inspector.",
+     "fix": "one fact about your jurisdiction",
+     "lens": "fact",
+     "key": "4-safety-fact-1",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "Levels I to III read what the guide states. Level IV reads the guide against itself.",
+     "because": "The standard places at Level III \"inspections, the disciplines, and the guide's own disagreement with itself\", so reading the guide against itself begins one level down. What is new at Level IV is the silence, per the standard: \"what the guide names and does not state\".",
+     "fix": "Levels I to III read what the guide states, and Level III where it disagrees with itself. Level IV reads where it goes silent.",
+     "lens": "fact",
+     "key": "4-safety-fact-2",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "because it is the only item here with an answer outside your own head",
+     "because": "Paragraph 3 sends every gap's answer to \"your jurisdiction's code and the written plan on your own wall\", which is also outside your head; the real distinction is the brief's kind: one fact, five gaps.",
+     "fix": "because it is the one item here that is a fact and not a gap",
+     "lens": "fact",
+     "key": "4-safety-fact-3",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "not by any book",
+     "because": "What is posted, how it is scored and how often an inspector comes are written into the jurisdiction's adopted code (in the US a version of the FDA Food Code, with frequency by risk category set in it), and paragraph 3 itself points the reader to \"your jurisdiction's code\". The book it is not set by is this guide.",
+     "fix": "not by this guide",
+     "lens": "fact",
+     "key": "4-safety-fact-4",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "the framing changes with the county line",
+     "because": "The authority is a city in New York, a county in Los Angeles and the state elsewhere; the brief's word is jurisdiction.",
+     "fix": "the framing changes with the jurisdiction",
+     "lens": "fact",
+     "key": "4-safety-fact-5",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "how frozen product is brought back to the cook",
+     "because": "\"Brought back to the cook\" reads as returned to the cook; the gap is how product comes out of the freezer and is readied for cooking (the brief: \"Safe thawing is not covered anywhere in the guide\", the word itself barred).",
+     "fix": "how frozen product is brought out for the cook",
+     "lens": "fact",
+     "key": "4-safety-fact-6",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "It does not fill it with a figure, and neither should you from memory: that number belongs to your jurisdiction's code and the written plan on your own wall.",
+     "because": "The sanitation rule bars the primer from supplying the figure, not the chef from knowing it: a chef must hold the reheating and holding figures from memory, they are in every jurisdiction's code and on every manager exam, and a chef who will not act from memory on the line is the fault, not the safeguard.",
+     "fix": "It does not fill it with a figure. You must, and not from this page: that number belongs to your jurisdiction's code and the written plan on your own wall.",
+     "lens": "fact",
+     "key": "4-safety-fact-7",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "The protocol the guide calls service-critical and legal-critical is asserted twice as critical and never specified once.",
+     "because": "A reader cannot tell which protocol is meant; the item is the one for a guest's declared dietary restriction (its own name carries a word the rules bar), so the subject has to be named another way.",
+     "fix": "The protocol for a guest's declared restriction, which the guide calls service-critical and legal-critical, is asserted twice as critical and never specified once.",
+     "lens": "fact",
+     "key": "4-safety-fact-8",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "When the walk-in goes dark you will act within the hour",
+     "because": "\"Within the hour\" is a figure the guide does not give, which the sanitation rule forbids a primer to supply, and it is not right as fact: a closed walk-in holds its temperature for hours (FDA and USDA guidance puts an unopened refrigerator at about 4 hours), so the disposition decision comes later; what starts at once is the clock and the temperature log.",
+     "fix": "When the walk-in goes dark the clock starts",
+     "lens": "fact",
+     "key": "4-safety-fact-9",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "style",
+     "claim": "The power outage's food-disposition rules is a pointer",
+     "because": "Plural subject with a singular verb; the item's name is plural and reads as prose here.",
+     "fix": "The power outage's food-disposition rules are a pointer",
+     "lens": "fact",
+     "key": "4-safety-fact-10",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "Levels I to III read what the guide states. Level IV reads the guide against itself.",
+     "because": "The standard's Level III paragraph already places \"the guide's own disagreement with itself\" at Level III; reading the guide against itself is the level below. This level is, in the standard's words, \"what the guide names and does not state, and the jurisdiction framing.\"",
+     "fix": "Levels I to III read what the guide states. Level IV reads what it names and never states.",
+     "lens": "app",
+     "key": "4-safety-app-11",
+     "primer": "4-safety"
+    },
+    {
+     "where": "lede",
+     "severity": "unclear",
+     "claim": "one fact about your inspector",
+     "because": "The one fact item is \"Know your jurisdiction's system (letter grades posted in the window, point scores, risk-based frequency)\": it is about the jurisdiction's inspection system, not about a person. A cook reading \"your inspector\" expects a fact about the individual at the door.",
+     "fix": "one fact about your jurisdiction",
+     "lens": "app",
+     "key": "4-safety-app-12",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "you will act within the hour",
+     "because": "The item's text is \"A pointer to rules the guide does not contain,\" and the sanitation rule says a primer \"never fills a gap with a figure or a rule of its own.\" \"Within the hour\" reads as a disposition window the guide does not give.",
+     "fix": "you will have to act",
+     "lens": "app",
+     "key": "4-safety-app-13",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 6",
+     "severity": "unclear",
+     "claim": "Met here is the plainest in the app:",
+     "because": "The brief gives only this subsection's met line (\"Food safety is read, never graded: nothing about it is recorded\") and no comparison with other subsections; the superlative is not in the brief.",
+     "fix": "Met here is one line:",
+     "lens": "app",
+     "key": "4-safety-app-14",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "misplaced",
+     "claim": "Levels I to III read what the guide states. Level IV reads the guide against itself.",
+     "because": "The standard places \"the guide's own disagreement with itself\" at Level III, not IV. Level IV's paragraph is \"what the guide names and does not state, and the jurisdiction framing.\" As written the opening hands Level IV the Sous Chef's subject and misstates what Level III did.",
+     "fix": "Levels I to III read what the guide states, and Level III where it disagrees with itself. Level IV reads what the guide names and never states.",
+     "lens": "voice",
+     "key": "4-safety-voice-15",
+     "primer": "4-safety"
+    },
+    {
+     "where": "lede",
+     "severity": "unclear",
+     "claim": "one fact about your inspector",
+     "because": "The one fact placed here is \"Know your jurisdiction's system (letter grades posted in the window, point scores, risk-based frequency)\". It is about the jurisdiction's system, not about a person; the inspector is Level III's framing (\"Inspections\", \"Accompany professionally\").",
+     "fix": "one fact about your jurisdiction",
+     "lens": "voice",
+     "key": "4-safety-voice-16",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "because it is the only item here with an answer outside your own head",
+     "because": "Paragraph 3 then says the gaps' answers live in \"your jurisdiction's code and the written plan on your own wall\", which is also outside the reader's head. The two lines contradict each other; the real distinction is fact versus gap.",
+     "fix": "because it is the one item here that is a fact and not a gap",
+     "lens": "voice",
+     "key": "4-safety-voice-17",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "It does not fill it with a figure, and neither should you from memory: that number belongs to",
+     "because": "The sanitation rule binds the primer, not the chef: \"A primer ... never fills a gap with a figure or a rule of its own.\" Telling a chef not to supply a reheating figure from memory is advice the brief does not give and a working chef cannot act on; the page's silence is the point.",
+     "fix": "It does not fill it with a figure: that number belongs to",
+     "lens": "voice",
+     "key": "4-safety-voice-18",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "you will act within the hour",
+     "because": "Rule 5 and the sanitation line: a safety primer \"never fill[s] a gap with a figure or a rule of their own.\" The item's own text is \"A pointer to rules the guide does not contain.\" \"Within the hour\" is a time figure for power-outage disposition that the guide does not give and the brief does not supply.",
+     "fix": "you will have to act",
+     "lens": "voice",
+     "key": "4-safety-voice-19",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 6",
+     "severity": "wrong",
+     "claim": "Met here is the plainest in the app",
+     "because": "A comparative claim about the app that is neither a door nor the met rule; the brief gives only \"Food safety is read, never graded: nothing about it is recorded.\" and ranks it against nothing.",
+     "fix": "Met here is plain",
+     "lens": "voice",
+     "key": "4-safety-voice-20",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "The page cannot tell you and does not pretend to.",
+     "because": "A claim about the page beyond the doors and the met rule, and one the reader cannot act on; the actionable line is the one before it. The sanitation rule is about gaps, and the jurisdiction item is a fact, not a gap.",
+     "fix": "delete the sentence",
+     "lens": "voice",
+     "key": "4-safety-voice-21",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "Identify hazards, control critical points, document is HACCP compressed to three verbs, with everything that makes those verbs a working system, the limits, the frequency, the verification and the records, absent.",
+     "because": "The item's text is \"HACCP compressed to three verbs. No critical limits, no monitoring frequency, no corrective action, no verification, no record retention.\" The primer's single sentence parks \"absent\" nine words after its subject and reads twice on a phone. Two sentences carry it, still without the banned substrings.",
+     "fix": "Identify hazards, control critical points, document is HACCP compressed to three verbs. What makes those verbs a working system, the limits, the frequency, the verification and the records, is not there.",
+     "lens": "voice",
+     "key": "4-safety-voice-22",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "style",
+     "claim": "The power outage's food-disposition rules is a pointer",
+     "because": "Subject and verb disagree when the label is read as prose (\"rules is\"). Keeping the item's name intact for the cite, frame it as the item.",
+     "fix": "The item The power outage's food-disposition rules is a pointer",
+     "lens": "voice",
+     "key": "4-safety-voice-23",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 6",
+     "severity": "style",
+     "claim": "your jurisdiction and your own written plan begin",
+     "because": "The same motif closes paragraph 3 (\"the written plan on your own wall\"), paragraph 4 (\"your own documents\"), paragraph 6 and the next line (\"a written answer in your own kitchen\"): four returns in 513 words, with the primer already at the top of its aim. Cut one.",
+     "fix": "your jurisdiction and your own plan begin",
+     "lens": "voice",
+     "key": "4-safety-voice-24",
+     "primer": "4-safety"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "a number in another",
+     "because": "The brief's item says \"point scores\"; \"a number\" loses the term the reader will meet on the page and in the inspection report.",
+     "fix": "a point score in another",
+     "lens": "voice",
+     "key": "4-safety-voice-25",
+     "primer": "4-safety"
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "4-safety-fact-1",
+     "action": "applied",
+     "reason": "Lede now reads \"one fact about your jurisdiction\", matching the item \"Know your jurisdiction's system\"."
+    },
+    {
+     "finding": "4-safety-fact-2",
+     "action": "applied",
+     "reason": "Paragraph 1 now opens \"Levels I to III read what the guide states, and Level III where it disagrees with itself. Level IV reads what the guide names and never states.\", per the standard's Level III and Level IV paragraphs."
+    },
+    {
+     "finding": "4-safety-fact-3",
+     "action": "applied",
+     "reason": "Paragraph 2 now says \"because it is the one item here that is a fact and not a gap\", the brief's own kind distinction."
+    },
+    {
+     "finding": "4-safety-fact-4",
+     "action": "applied",
+     "reason": "\"not by any book\" is now \"not by this guide\", since the jurisdiction's adopted code does set what is posted and how often an inspector comes."
+    },
+    {
+     "finding": "4-safety-fact-5",
+     "action": "applied",
+     "reason": "\"the county line\" is now \"the jurisdiction\", the brief's word, since the authority is a city, a county or a state depending on where you are."
+    },
+    {
+     "finding": "4-safety-fact-6",
+     "action": "applied",
+     "reason": "Paragraph 3 now says \"how frozen product is brought out for the cook\", so it reads as readying product rather than returning it."
+    },
+    {
+     "finding": "4-safety-fact-7",
+     "action": "applied",
+     "reason": "The \"neither should you from memory\" advice is gone; paragraph 3 now reads \"It does not fill it with a figure. You must, and not from this page: that number belongs to your jurisdiction's code and the written plan on your own wall.\", binding the primer, not the chef."
+    },
+    {
+     "finding": "4-safety-fact-8",
+     "action": "applied",
+     "reason": "Paragraph 4 now names the subject as \"The protocol for a guest's declared restriction, which the guide calls service-critical and legal-critical\", without the barred word."
+    },
+    {
+     "finding": "4-safety-fact-9",
+     "action": "applied",
+     "reason": "\"within the hour\" is removed; paragraph 5 now reads \"When the walk-in goes dark the clock starts, you will have to act, and the guide will not be what you act from.\", supplying no figure."
+    },
+    {
+     "finding": "4-safety-fact-10",
+     "action": "applied",
+     "reason": "Paragraph 5 now reads \"The power outage's food-disposition rules are a pointer\", with the item's full name kept intact for the cite."
+    },
+    {
+     "finding": "4-safety-app-11",
+     "action": "applied",
+     "reason": "Same change as fact-2: Level III is credited with the guide's disagreement with itself and Level IV with what the guide names and never states."
+    },
+    {
+     "finding": "4-safety-app-12",
+     "action": "applied",
+     "reason": "Same change as fact-1: the lede says \"one fact about your jurisdiction\"."
+    },
+    {
+     "finding": "4-safety-app-13",
+     "action": "applied",
+     "reason": "Same change as fact-9: the time figure is gone and the line says \"the clock starts, you will have to act\"."
+    },
+    {
+     "finding": "4-safety-app-14",
+     "action": "applied",
+     "reason": "Paragraph 6 now says \"Met here is one line:\" and drops the comparison with other subsections that the brief does not make."
+    },
+    {
+     "finding": "4-safety-voice-15",
+     "action": "applied",
+     "reason": "Same change as fact-2 and app-11: the opening no longer hands Level IV the Sous Chef's subject."
+    },
+    {
+     "finding": "4-safety-voice-16",
+     "action": "applied",
+     "reason": "Same change as fact-1: \"your jurisdiction\" in the lede, leaving the inspector to Level III."
+    },
+    {
+     "finding": "4-safety-voice-17",
+     "action": "applied",
+     "reason": "Same change as fact-3: the distinction is now fact versus gap, and no longer contradicts paragraph 3's pointer to the code and the plan."
+    },
+    {
+     "finding": "4-safety-voice-18",
+     "action": "applied",
+     "reason": "\"and neither should you from memory\" is deleted; the sentence now binds the page's silence and sends the chef to the jurisdiction's code and the written plan, which also answers fact-7."
+    },
+    {
+     "finding": "4-safety-voice-19",
+     "action": "applied",
+     "reason": "Same change as fact-9 and app-13: no disposition window is supplied."
+    },
+    {
+     "finding": "4-safety-voice-20",
+     "action": "applied",
+     "reason": "\"the plainest in the app\" is gone; the met line is introduced as \"Met here is one line:\", which also answers app-14."
+    },
+    {
+     "finding": "4-safety-voice-21",
+     "action": "applied",
+     "reason": "The sentence \"The page cannot tell you and does not pretend to.\" is deleted; paragraph 2 now ends on \"Find out which system you are under.\""
+    },
+    {
+     "finding": "4-safety-voice-22",
+     "action": "applied",
+     "reason": "The HACCP sentence is now two: \"...is HACCP compressed to three verbs. What makes those verbs a working system, the limits, the frequency, the verification and the records, is not there.\", with no banned substring."
+    },
+    {
+     "finding": "4-safety-voice-23",
+     "action": "applied",
+     "reason": "The subject and verb now agree (\"rules are a pointer\") and the item's name stays whole for the cite; the plural verb was chosen over the \"The item ...\" framing because fact-10 asked for the same fix more simply."
+    },
+    {
+     "finding": "4-safety-voice-24",
+     "action": "applied",
+     "reason": "Paragraph 6 now closes \"your jurisdiction and your own plan begin\", cutting one return of the written-plan motif; the primer is 519 words."
+    },
+    {
+     "finding": "4-safety-voice-25",
+     "action": "applied",
+     "reason": "\"a number in another\" is now \"a count of points in another\": the item's own term is \"point scores\", but rule 6 bars the word score anywhere in a primer, so points carries the term without it."
+    }
+   ]
+  },
+  "4-service": {
+   "findings": [
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "syrups from simple to rich to oleo",
+     "because": "\"from ... to ... to\" reads as a sweetness ladder, and simple (1:1) to rich (2:1) is one, but oleo saccharum is not a step past rich: it is sugar drawn through citrus peel to pull the oils, a different preparation the brief lists beside them (\"Syrups: Simple, Rich, Oleo & the House Program\"), not above them.",
+     "fix": "syrups, simple and rich and the oleo",
+     "lens": "fact",
+     "key": "4-service-fact-1",
+     "primer": "4-service"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "because every other term sits on those three",
+     "because": "The starting bar, zero-proof cocktails and the spritz are among the module's sixteen terms and do not rest on shake versus stir, dilution or the jigger; the claim overreaches for the terms the paragraph itself lists as the close.",
+     "fix": "because the rest of the build sits on them",
+     "lens": "fact",
+     "key": "4-service-fact-2",
+     "primer": "4-service"
+    },
+    {
+     "where": "lede",
+     "severity": "style",
+     "claim": "then for the numbers that decide whether the room paid for the night",
+     "because": "Figurative for a pre-shift line; the standard says plainly \"Service is bar craft, the cocktail templates and why the shift makes money\", and the module placed here is named Why the Shift Makes Money.",
+     "fix": "then for why the shift makes money",
+     "lens": "voice",
+     "key": "4-service-voice-3",
+     "primer": "4-service"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "share one thread: a guest orders by name, asks what it is, and you answer without notes, while the house counts what that answer sold",
+     "because": "The thread fits only two of the three. Bar Craft's outcome is \"You can build a drink to spec\", not answering a guest; and \"what that answer sold\" is a figure, not an action.",
+     "fix": "share one bar: a guest orders by name, you say what is in it or build it to spec, and the house counts what it sold",
+     "lens": "voice",
+     "key": "4-service-voice-4",
+     "primer": "4-service"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "the Hawthorne, the julep and the double strain",
+     "because": "The term is \"Strainers: Hawthorne, Julep & the Double Strain\"; a bare \"the julep\" reads as the drink to a server who has not stood behind the bar.",
+     "fix": "the Hawthorne and julep strainers and the double strain",
+     "lens": "voice",
+     "key": "4-service-voice-5",
+     "primer": "4-service"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "wine list engineering and the markup question, by-the-glass economics with Coravin and corkage, pour cost, the well, the call and the back bar, covers, turns and dayparts, reservations, no-shows and the book, tipping models with pools, tip credits and service charges, and menu pricing and psychology",
+     "because": "Eight terms, most with their own internal commas, run into one comma list; on a phone \"pour cost, the well, the call and the back bar, covers, turns and dayparts\" cannot be cut back into the brief's terms. Semicolons keep the eight apart without a dash.",
+     "fix": "wine list engineering and the markup question; by-the-glass economics, Coravin and corkage; pour cost; the well, the call and the back bar; covers, turns and dayparts; reservations, no-shows and the book; tipping models, pools, tip credits and service charges; and menu pricing and psychology",
+     "lens": "voice",
+     "key": "4-service-voice-6",
+     "primer": "4-service"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "The first module puts you into the first of the three.",
+     "because": "\"The three\" was just used for the three doors, so \"the first of the three\" reads as a door, not a module. The door is \"The first module\" and at this level that is The Cocktail Templates (module 25).",
+     "fix": "The first module opens The Cocktail Templates.",
+     "lens": "voice",
+     "key": "4-service-voice-7",
+     "primer": "4-service"
+    },
+    {
+     "where": "next",
+     "severity": "style",
+     "claim": "the drill with the whole track as its field, and the bar itself: every drink ordered by name is a template to call",
+     "because": "Repetition inside the primer: \"the whole track as the field\" is already in paragraph 5, and \"ordered by name\" is the third use after paragraphs 1 and 2.",
+     "fix": "the drill, and the bar itself: every order is a template to call",
+     "lens": "voice",
+     "key": "4-service-voice-8",
+     "primer": "4-service"
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "4-service-fact-1",
+     "action": "applied",
+     "reason": "Replaced the ladder \"syrups from simple to rich to oleo\" with \"the syrups (simple, rich and the oleo)\", a flat list matching the brief's term \"Syrups: Simple, Rich, Oleo & the House Program\" so oleo saccharum no longer reads as a step past rich."
+    },
+    {
+     "finding": "4-service-fact-2",
+     "action": "applied",
+     "reason": "Changed \"because every other term sits on those three\" to \"because the rest of the build sits on them\", which no longer claims the starting bar, zero-proof cocktails or the spritz rest on the first three terms."
+    },
+    {
+     "finding": "4-service-voice-3",
+     "action": "applied",
+     "reason": "The lede now ends \"then for why the shift makes money\", naming the module and the standard's own plain phrase instead of the figurative line."
+    },
+    {
+     "finding": "4-service-voice-4",
+     "action": "applied",
+     "reason": "Paragraph 1 now reads \"share one bar: a guest orders by name, you say what is in it or build it to spec, and the house counts what it sold\", covering all three modules including Bar Craft's build-to-spec outcome."
+    },
+    {
+     "finding": "4-service-voice-5",
+     "action": "applied",
+     "reason": "Paragraph 3 now says \"the Hawthorne and julep strainers and the double strain\" so julep reads as the strainer, not the drink."
+    },
+    {
+     "finding": "4-service-voice-6",
+     "action": "applied",
+     "reason": "Paragraph 4's eight terms are now separated by semicolons exactly as the fix proposed, so each of the brief's terms can be cut back out on a phone."
+    },
+    {
+     "finding": "4-service-voice-7",
+     "action": "applied",
+     "reason": "Paragraph 5 now reads \"The first module opens The Cocktail Templates.\" so the door is named by the module it opens rather than as \"the first of the three\"."
+    },
+    {
+     "finding": "4-service-voice-8",
+     "action": "applied",
+     "reason": "The next line now reads \"the drill, and the bar itself: every order is a template to call\", dropping the repeated \"whole track as its field\" and the third \"ordered by name\"."
+    }
+   ]
+  }
+ }
+}

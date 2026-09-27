@@ -830,6 +830,202 @@
 				"notes": "The section mean is 669 characters of prose per card (ceiling 720). The longest cards are fd_0180 (752), fd_0179 (734) and fd_0188 (732), all under 900. Every roster row has a card, and no row carries a knownPacketError. I found no em or en dashes, no banned substrings and no verdict words. Every gist and trap stays free of its own mayNotAppear words. Across the 17 cards with traps, gists average 62.6 characters and traps 62.4, so length gives nothing away. Cross-section links look right: Grits and Hominy are linked, Wild Rice points to Carolina Gold Rice, Buckwheat to Galette, and Couscous to Semolina. Facts I checked with no problem found: Carnaroli bred in 1945 near Milan; Acquerello aged in the husk with its germ put back, from Tenuta Colombara in the province of Vercelli; tagliatelle about 7 to 8 mm against pappardelle at 2 to 3 cm; wild rice mostly paddy grown in Minnesota and California. Optional: the Ravioli notThis names only Agnolotti, although Tortellini is also in its confusedWithTerms. Scratch file of the section prose: C:\\Users\\zpull\\AppData\\Local\\Temp\\claude\\C--Users-zpull--claude\\ee375187-7803-4126-b577-0cdfe403a999\\scratchpad\\s.json"
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-27",
+			"pass": "revision",
+			"cards": [
+				"fd_0329",
+				"fd_0330",
+				"fd_0331",
+				"fd_0332"
+			],
+			"findings": [
+				{
+					"id": "fd_0329",
+					"field": "say",
+					"severity": "wrong",
+					"claim": "freh-GOH-lah",
+					"because": "Italian frégola and Sardinian frègula both stress the FIRST syllable; the card moves the stress to the second, which a Sardinian or Italian restaurant would hear as a mistake and which the card would then teach for years.",
+					"fix": "FREH-goh-lah",
+					"lens": "fact",
+					"key": "starches-1-fact-1"
+				},
+				{
+					"id": "fd_0331",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "brought back by a few farmers",
+					"because": "It was revived by one man, Dr. Richard Schulze, a Savannah eye surgeon, who obtained the seed from a USDA rice research station's seed bank in Texas in 1985 and planted 14 pounds at Turnbridge Plantation in 1986; commercial growers came later.",
+					"fix": "brought back from a seed bank",
+					"lens": "fact",
+					"key": "starches-1-fact-2"
+				},
+				{
+					"id": "fd_0331",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "seed savers brought it back in the 1980s",
+					"because": "The seed survived in a USDA seed bank, not with hobby seed savers, and a Savannah eye surgeon (Richard Schulze) grew it back from that stock in 1985 to 1986; the wording invites a server to tell the wrong story.",
+					"fix": "a Savannah doctor revived it in the 1980s",
+					"lens": "fact",
+					"key": "starches-1-fact-3"
+				},
+				{
+					"id": "fd_0329",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "freh-GOH-lah",
+					"because": "The word is stressed on the first syllable, FREH-goh-lah, and that is how Italian-restaurant floors and most American food writers say it; a second-syllable stress marks the new hire as guessing.",
+					"fix": "FREH-goh-lah",
+					"lens": "floor",
+					"key": "starches-1-floor-4"
+				},
+				{
+					"id": "fd_0329",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "little toasted beads of semolina",
+					"because": "A guest who asked what fregola is will not know semolina either; the plain word answers the question and the why already carries semolina.",
+					"fix": "little toasted beads of pasta",
+					"lens": "floor",
+					"key": "starches-1-floor-5"
+				},
+				{
+					"id": "fd_0329",
+					"field": "card",
+					"severity": "style",
+					"claim": "(no level field)",
+					"because": "The roster placed this card at level 3 and cardKeys and the exemplars all carry level; validate.mjs refuses a written card without one.",
+					"fix": "\"level\": 3",
+					"lens": "floor",
+					"key": "starches-1-floor-6"
+				},
+				{
+					"id": "fd_0330",
+					"field": "card",
+					"severity": "style",
+					"claim": "(no level field)",
+					"because": "The roster placed this card at level 3 and cardKeys and the exemplars all carry level; validate.mjs refuses a written card without one.",
+					"fix": "\"level\": 3",
+					"lens": "floor",
+					"key": "starches-1-floor-7"
+				},
+				{
+					"id": "fd_0331",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "nearly extinct before seed savers brought it back in the 1980s",
+					"because": "The last commercial crop was 1927; the seed that revived it came from a USDA seed bank in Texas, 14 pounds sent to Richard Schulze, who planted it near Savannah in 1986. It was a government seed bank, not seed savers.",
+					"fix": "nearly extinct until seed from a government seed bank was replanted in 1986",
+					"lens": "floor",
+					"key": "starches-1-floor-8"
+				},
+				{
+					"id": "fd_0331",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "nearly lost and brought back by a few farmers",
+					"because": "It was revived by one man, a Savannah eye surgeon and plantation owner, from seed-bank stock; 'a few farmers' is a guess a guest can catch. A server does not need the detail, only a true line.",
+					"fix": "nearly lost and brought back in the 1980s",
+					"lens": "floor",
+					"key": "starches-1-floor-9"
+				},
+				{
+					"id": "fd_0331",
+					"field": "card",
+					"severity": "style",
+					"claim": "(no level field)",
+					"because": "The roster placed this card at level 3 and cardKeys and the exemplars all carry level; validate.mjs refuses a written card without one.",
+					"fix": "\"level\": 3",
+					"lens": "floor",
+					"key": "starches-1-floor-10"
+				},
+				{
+					"id": "fd_0332",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's the rice paella cooks insist on, a Spanish short grain that absorbs up to three times its volume without going mushy.",
+					"because": "'Insist on' oversells (many Valencian cooks use Senia or Bahía), and 'up to three times its volume' is a number read off a card, not something a guest asked for. The why already holds the figure.",
+					"fix": "It's the Spanish short-grain rice made for paella. It drinks up the broth without going mushy, so every grain stays separate and full of flavor.",
+					"lens": "floor",
+					"key": "starches-1-floor-11"
+				},
+				{
+					"id": "fd_0332",
+					"field": "card",
+					"severity": "style",
+					"claim": "(no level field)",
+					"because": "The roster placed this card at level 3 and cardKeys and the exemplars all carry level; validate.mjs refuses a written card without one.",
+					"fix": "\"level\": 3",
+					"lens": "floor",
+					"key": "starches-1-floor-12"
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "starches-1-fact-1",
+					"action": "applied",
+					"reason": "Changed say to FREH-goh-lah; Italian frégola and Sardinian frègula both carry first-syllable stress."
+				},
+				{
+					"finding": "starches-1-fact-2",
+					"action": "applied",
+					"reason": "Guest line now says 'nearly lost and brought back from a seed bank in the 1980s', dropping the false 'by a few farmers'; the seed came from a USDA rice station's seed bank via Richard Schulze in 1985 to 1986."
+				},
+				{
+					"finding": "starches-1-fact-3",
+					"action": "applied",
+					"reason": "Why now reads 'nearly extinct until a Savannah doctor replanted government seed-bank stock in 1986', replacing the seed-savers story; trap 2's why also changed 'saved seed' to 'seed-bank stock' for consistency."
+				},
+				{
+					"finding": "starches-1-floor-4",
+					"action": "applied",
+					"reason": "Same change as fact-1: say is now FREH-goh-lah with first-syllable stress."
+				},
+				{
+					"finding": "starches-1-floor-5",
+					"action": "applied",
+					"reason": "Guest line now says 'little toasted beads that taste nutty' with no semolina (and no doubled 'pasta'); the why still carries semolina."
+				},
+				{
+					"finding": "starches-1-floor-6",
+					"action": "applied",
+					"reason": "Added level 3, the roster's placement, to the Fregola card."
+				},
+				{
+					"finding": "starches-1-floor-7",
+					"action": "applied",
+					"reason": "Added level 3, the roster's placement, to the Chitarra card."
+				},
+				{
+					"finding": "starches-1-floor-8",
+					"action": "applied",
+					"reason": "Why now says it was nearly extinct until a Savannah doctor replanted government seed-bank stock in 1986; the whole why was trimmed to 283 characters to stay inside the limit."
+				},
+				{
+					"finding": "starches-1-floor-9",
+					"action": "applied",
+					"reason": "Guest line drops 'by a few farmers' and now says 'brought back from a seed bank in the 1980s', a true line a guest cannot catch out."
+				},
+				{
+					"finding": "starches-1-floor-10",
+					"action": "applied",
+					"reason": "Added level 3, the roster's placement, to the Carolina Gold card."
+				},
+				{
+					"finding": "starches-1-floor-11",
+					"action": "applied",
+					"reason": "Guest line replaced with the suggested wording: the Spanish short-grain rice made for paella that drinks up broth without going mushy; 'insist on' and the volume figure are gone from the guest line and the figure stays in the why."
+				},
+				{
+					"finding": "starches-1-floor-12",
+					"action": "applied",
+					"reason": "Added level 3, the roster's placement, to the Bomba card."
+				}
+			],
+			"critic": null,
+			"acceptedRejected": []
 		}
 	]
 }

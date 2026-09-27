@@ -1,0 +1,2329 @@
+{
+ "level": 1,
+ "primers": {
+  "1-dishes": {
+   "findings": [
+    {
+     "where": "lede",
+     "severity": "wrong",
+     "claim": "Fourteen Easy plates from the Path's opening semesters",
+     "because": "The brief's items give The French Omelette difficulty 2 (the library's Intermediate), so only thirteen of the fourteen are Easy plates; and five of the fourteen (Crêpes, Panna Cotta, Pad Krapow Moo, Bulgogi, Rau Muong Xao Toi) sit in semesters 6 and 8, which are not the Path's opening semesters. The omelette is placed here by its semester, not its difficulty.",
+     "fix": "Fourteen plates, most of them Easy and most from the Path's opening semesters, each one technique deep, cooked and logged before you move on.",
+     "lens": "fact",
+     "key": "1-dishes-fact-1",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "take The French Omelette before anything else: eight minutes, and the whole of heat control and seasoning in one pan",
+     "because": "The brief marks the omelette difficulty 2, the only plate at this level that is not Easy. The order can stand (its semester says it is where every cook begins) but a commis should be told it is the hardest plate here, or they will read a failed omelette as a failure of the level.",
+     "fix": "take The French Omelette before anything else, knowing it is the one Intermediate plate at this level: eight minutes, and the whole of heat control and seasoning in one pan",
+     "lens": "fact",
+     "key": "1-dishes-fact-2",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "because it is the busiest plate at this level",
+     "because": "The brief lists four techniques for Chicken Piccata and four for Bulgogi (knife cuts, marinating, rendering fat, searing), so piccata is not the busiest plate at the level, only the busiest of its semester.",
+     "fix": "because it is the busiest of the four",
+     "lens": "fact",
+     "key": "1-dishes-fact-3",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "By the third of these, the semester's four moves, sear, deglaze, mount, plate, should be in your hands.",
+     "because": "None of the three placed dishes lists mounting in its techniques (Shrimp Scampi: deglazing and searing; Chicken Teriyaki: resting and slicing; Garides Saganaki: flambé, keeping the cooking liquid, sweating), so the primer promises a move that no item here teaches. The four moves are the semester's blurb, not this level's dishes.",
+     "fix": "By the third of these, sear, deglaze and plate should be in your hands; the mount is the semester's fourth move, and none of these three teaches it.",
+     "lens": "fact",
+     "key": "1-dishes-fact-4",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "each is a pan or a pot you will be handed in your first weeks",
+     "because": "The standard's own text puts the wok among the Level III techniques whose standard governs a whole service, and the flambé pan of Garides Saganaki is not a first-weeks pan either; paragraph 4 itself says five dishes sit further up the Path. \"Each\" overstates it.",
+     "fix": "most are a pan or a pot you will be handed in your first weeks",
+     "lens": "fact",
+     "key": "1-dishes-fact-5",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "next",
+     "severity": "unclear",
+     "claim": "They ask for a braise, a bread or a custard held to a standard",
+     "because": "Three of the eight Level II dishes the line names fit none of those: Cacio e Pepe is an emulsion, Jerk Chicken is fire, Cantonese Steamed Fish is steam. The standard's Level II paragraph leads with the mother sauces, emulsions and pan sauces before the braise, bread and pastry.",
+     "fix": "They ask for an emulsion, a braise, a bread or a custard held to a standard",
+     "lens": "fact",
+     "key": "1-dishes-fact-6",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "lede",
+     "severity": "wrong",
+     "claim": "Fourteen Easy plates from the Path's opening semesters",
+     "because": "Not all fourteen are Easy plates and not all are from the opening semesters. The French Omelette is difficulty 2 (it is placed by semester 1, not by difficulty), and Crêpes, Panna Cotta (semester 6), Pad Krapow Moo, Bulgogi and Rau Muong Xao Toi (semester 8) are not opening-semester dishes. The standard's own line is \"the course's opening semesters and the library's Easy plates\": two groups joined by \"and\", not one group described twice. Paragraph 4 gets this right; the lede contradicts it.",
+     "fix": "Fourteen dishes, the Path's opening semesters and the library's Easy plates, each one technique deep, cooked and logged before you move on.",
+     "lens": "app",
+     "key": "1-dishes-app-7",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "because it is the busiest plate at this level",
+     "because": "Chicken Piccata carries four techniques in the brief (Deglazing & pan sauces, Reducing a sauce, Searing: the hard crust, The coat before the fry), but so does Bulgogi (Knife cuts, Marinating, Rendering fat, Searing), and paragraph 4 itself calls Bulgogi \"the most layered\". Piccata is the busiest of the four in Knife & Fire Foundations, not at the level.",
+     "fix": "because it is the busiest of the four",
+     "lens": "app",
+     "key": "1-dishes-app-8",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "the shortest lesson in restraint on the Path",
+     "because": "Miso Soup is 15 minutes in the brief; The French Omelette (8) and Rau Muong Xao Toi (10) are shorter at this level, so a reader who takes \"shortest\" as a time claim is misled. The brief's own line is the semester description, \"dashi's restraint\".",
+     "fix": "fifteen minutes and the Path's lesson in dashi's restraint",
+     "lens": "app",
+     "key": "1-dishes-app-9",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "lede",
+     "severity": "wrong",
+     "claim": "Fourteen Easy plates from the Path's opening semesters, each one technique deep, cooked and logged before you move on.",
+     "because": "Two of the three claims fail against the brief's items: The French Omelette is difficulty 2, not Easy, and Crêpes, Panna Cotta, Pad Krapow Moo, Bulgogi and Rau Muong Xao Toi sit in semesters 6 and 8, not the opening semesters (paragraph 4 says so itself). \"Before you move on\" also reads as a bar, and a level guides and never bars. The brief's met rule is \"A dish is met when it has been cooked and logged.\"",
+     "fix": "Fourteen plates, nine from the Path's first three semesters and five Easy ones from further up, each met when cooked and logged.",
+     "lens": "voice",
+     "key": "1-dishes-voice-10",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "The standard places the course's opening semesters and the library's Easy plates here",
+     "because": "\"The standard\" is the placement document behind the level page, not a thing the cook on the phone sees or can act on; the line reads as the editor's voice rather than pre-shift. The brief's own words carry without the frame.",
+     "fix": "These are the course's opening semesters and the library's Easy plates",
+     "lens": "voice",
+     "key": "1-dishes-voice-11",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "it is the busiest plate at this level",
+     "because": "Chicken Piccata carries four techniques in the brief (dredge, sear, deglaze, reduce), but so does Bulgogi (knife cuts, marinade, rendering fat, sear), and paragraph 4 calls Bulgogi \"the most layered\". The claim is true only inside the semester.",
+     "fix": "it is the busiest of the four",
+     "lens": "voice",
+     "key": "1-dishes-voice-12",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "style",
+     "claim": "the shortest lesson in restraint on the Path",
+     "because": "An invented superlative. The semester's own line is \"dashi's restraint\", and Miso Soup at 15 minutes is not the shortest dish here (The French Omelette is 8, Rau Muong Xao Toi is 10).",
+     "fix": "the semester's lesson in restraint",
+     "lens": "voice",
+     "key": "1-dishes-voice-13",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "style",
+     "claim": "the base under half the pots in a kitchen",
+     "because": "A figure the brief does not give and the reader cannot check; the item's own text is \"Sweating aromatics: soft, never browned\".",
+     "fix": "the base under most pots in a kitchen",
+     "lens": "voice",
+     "key": "1-dishes-voice-14",
+     "primer": "1-dishes"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "the semester's four moves, sear, deglaze, mount, plate, should be in your hands",
+     "because": "The four moves are buried inside a comma clause and read as a run-on on a phone; the semester's line sets them off: \"sear, deglaze, mount, plate.\"",
+     "fix": "the semester's four moves should be in your hands: sear, deglaze, mount, plate",
+     "lens": "voice",
+     "key": "1-dishes-voice-15",
+     "primer": "1-dishes"
+    },
+    {
+     "key": "1-dishes-critic-1",
+     "primer": "1-dishes",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "Paragraph 3 ends: \"By the third of these, three of the semester's four moves should be in your hands: sear, deglaze, plate. The mount is the fourth, and none of these three teaches it.\" That is wrong. The Shrimp Scampi recipe (src/lib/data/recipes.full.json) has the step \"Mount with butter, add lemon; return shrimp 1 min to finish\" and its note says \"The sauce itself is a butter mount: wine reduced, then cold butter swirled in off the heat.\" A cook told the scampi does not teach the mount will be corrected at the pass.",
+     "because": "Paragraph 3 ends: \"By the third of these, three of the semester's four moves should be in your hands: sear, deglaze, plate. The mount is the fourth, and none of these three teaches it.\" That is wrong. The Shrimp Scampi recipe (src/lib/data/recipes.full.json) has the step \"Mount with butter, add lemon; return shrimp 1 min to finish\" and its note says \"The sauce itself is a butter mount: wine reduced, then cold butter swirled in off the heat.\" A cook told the scampi does not teach the mount will be corrected at the pass.",
+     "fix": "Rewrite the two sentences so the scampi carries the mount. Replace \"Shrimp Scampi repeats the sear and the deglaze from the piccata\" with \"Shrimp Scampi repeats the sear and the deglaze from the piccata and adds the mount, cold butter swirled into the reduced wine off the heat\", and replace the last two sentences of the paragraph with \"By the third of these, the semester's four moves should be in your hands: sear, deglaze, mount, plate.\" Nothing else in the primer changes."
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "1-dishes-fact-1",
+     "action": "applied",
+     "reason": "Lede rewritten to \"Fourteen dishes, nine from the Path's first three semesters and five Easy plates from further up\", which matches the brief (the omelette is difficulty 2 and five dishes sit in semesters 6 and 8)."
+    },
+    {
+     "finding": "1-dishes-fact-2",
+     "action": "applied",
+     "reason": "Paragraph 2 now says to take The French Omelette first \"knowing it is the one Intermediate plate at this level\", so a commis reads its difficulty 2 correctly."
+    },
+    {
+     "finding": "1-dishes-fact-3",
+     "action": "applied",
+     "reason": "Changed \"the busiest plate at this level\" to \"the busiest of the four\", since Bulgogi also carries four techniques in the brief."
+    },
+    {
+     "finding": "1-dishes-fact-4",
+     "action": "applied",
+     "reason": "Paragraph 3 now says three of the four moves (sear, deglaze, plate) should be in hand and that the mount is the fourth and none of these three dishes teaches it, matching the items' technique lists."
+    },
+    {
+     "finding": "1-dishes-fact-5",
+     "action": "applied",
+     "reason": "Changed \"each is a pan or a pot\" to \"most are a pan or a pot\" in paragraph 1, since the wok and flambé dishes sit further up the Path."
+    },
+    {
+     "finding": "1-dishes-fact-6",
+     "action": "applied",
+     "reason": "Next line now reads \"an emulsion, a braise, a bread or a custard\", covering Cacio e Pepe and following the Level II standard's lead with emulsions and pan sauces."
+    },
+    {
+     "finding": "1-dishes-app-7",
+     "action": "applied",
+     "reason": "Same defect as fact-1; the lede now separates the opening-semester dishes from the Easy plates further up rather than describing one group twice."
+    },
+    {
+     "finding": "1-dishes-app-8",
+     "action": "applied",
+     "reason": "Same defect as fact-3; the piccata is now \"the busiest of the four\" in Knife & Fire Foundations, not at the level."
+    },
+    {
+     "finding": "1-dishes-app-9",
+     "action": "applied",
+     "reason": "Removed the \"shortest\" superlative; Miso Soup is now \"fifteen minutes, and the semester's lesson in restraint\", drawn from the semester's own \"dashi's restraint\" line."
+    },
+    {
+     "finding": "1-dishes-voice-10",
+     "action": "applied",
+     "reason": "Lede rewritten to the accurate nine-and-five split and closes on the met rule (\"each met when it has been cooked and logged\") with \"before you move on\" dropped so nothing reads as a bar."
+    },
+    {
+     "finding": "1-dishes-voice-11",
+     "action": "applied",
+     "reason": "Paragraph 1 now says \"These are the course's opening semesters and the library's Easy plates\" without the \"The standard places\" frame."
+    },
+    {
+     "finding": "1-dishes-voice-12",
+     "action": "applied",
+     "reason": "Same defect as fact-3 and app-8; changed to \"the busiest of the four\"."
+    },
+    {
+     "finding": "1-dishes-voice-13",
+     "action": "applied",
+     "reason": "Replaced the invented superlative with \"the semester's lesson in restraint\", the same edit that answers app-9."
+    },
+    {
+     "finding": "1-dishes-voice-14",
+     "action": "applied",
+     "reason": "Changed \"the base under half the pots in a kitchen\" to \"the base under most pots in a kitchen\", dropping the uncheckable figure."
+    },
+    {
+     "finding": "1-dishes-voice-15",
+     "action": "applied",
+     "reason": "The four moves are now set off after a colon (\"should be in your hands: sear, deglaze, plate\"), combined with the fact-4 correction that the mount is the fourth and untaught here."
+    },
+    {
+     "finding": "1-dishes-critic-1",
+     "action": "applied",
+     "reason": "Verified in src/lib/data/recipes.full.json that the Shrimp Scampi step reads \"Mount with butter\" and its note calls the sauce a butter mount, so paragraph 3 now has the scampi carry the mount (cold butter swirled into the reduced wine off the heat) and closes on all four moves, sear, deglaze, mount, plate, with the two false sentences removed."
+    }
+   ]
+  },
+  "1-techniques": {
+   "findings": [
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "Salted water & the float test, the bare simmer and blanching & shocking are one lesson at three heats",
+     "because": "Two of the three run at the same heat. The brief's marks for salted water want a pot that \"returns to its boil quickly after the food goes in and never stops moving\", and blanching wants \"a large volume at a hard rolling boil\"; only the bare simmer sits below the boil. Two heats, not three.",
+     "fix": "Salted water & the float test, blanching & shocking and the bare simmer are one lesson at two heats, the rolling boil and the shiver under it:",
+     "lens": "fact",
+     "key": "1-techniques-fact-1",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "learn which before anything else here",
+     "because": "Paragraph 1 has already said \"Take the board first.\" A cook reading both is told two different first things. The brief's definition only says knowing which of the three verbs a recipe means is the difference between following recipes and cooking.",
+     "fix": "learn which before you take any pan further",
+     "lens": "fact",
+     "key": "1-techniques-fact-2",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "are dry heat at three distances",
+     "because": "Distance is not what separates them: the brief's charring standard names \"flame, a broiler, or bare hot metal\" as charring's own heat, and roasting is \"dry ambient heat in an enclosed oven\" while the broiler is \"top-down radiant heat\". What differs is where the heat comes from.",
+     "fix": "are dry heat from three directions: all around, from above, and straight against the surface",
+     "lens": "fact",
+     "key": "1-techniques-fact-3",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "come down to full commitment, then drying the surface before heat",
+     "because": "\"Fully committed either way\" is brining & curing's mark alone. Salting to draw the water out is met on different marks: salted evenly over every surface, laid out so the water has somewhere to go (a colander, a rack, a sieve over a bowl), visible liquid to show for it, and that liquid squeezed, blotted or poured away. As written the reader would salt and wait and never pour the water off.",
+     "fix": "come down to salt on every face, somewhere for the water to go, that water poured off, and the surface dry before heat",
+     "lens": "fact",
+     "key": "1-techniques-fact-4",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "work down it in the order above",
+     "because": "The order above leaves out eight techniques placed at this level, several among the most used here: Straining & passing through a sieve (148 recipes), Steaming: basket, leaf and lid (130), Mashing & puréeing (114), Frying the paste until the oil splits (95), Dry-pan toasting: spices, seeds and nuts (70), Soaking dried goods back to life (69), Egg wash & the baker's shine (34) and Dashi (29). A cook following the order as given would meet the index and find work it never mentioned.",
+     "fix": "work down it in the order above, then take the pot's other work as recipes call for it: soaking dried goods, steaming, straining & passing through a sieve, mashing & puréeing, dashi, frying the paste until the oil splits, dry-pan toasting and egg wash",
+     "lens": "fact",
+     "key": "1-techniques-fact-5",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "cites",
+     "severity": "misplaced",
+     "claim": "\"whipping-a-meringue\" (the last entry; the list stops at 34 of 42 items)",
+     "because": "If the paragraph 5 fix names the eight techniques, each becomes a named item placed here and must be cited: the rule is cite only what you name, and every named item.",
+     "fix": "add: soaking-dried-goods-back-to-life, steaming-basket-leaf-and-lid, straining-and-passing-through-a-sieve, mashing-and-pureeing, dashi, frying-the-paste-until-the-oil-splits, dry-pan-toasting-spices-seeds-and-nuts, egg-wash-and-the-bakers-shine",
+     "lens": "fact",
+     "key": "1-techniques-fact-6",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "one lesson at three heats",
+     "because": "The brief's marks put Salted water & the float test and Blanching & shocking at the same heat, a rolling boil (\"returns to its boil quickly\", \"a large volume at a hard rolling boil\"); only The bare simmer sits below it. That is two heats, not three, and a cook counting them will look for one that is not there.",
+     "fix": "one lesson, three pots",
+     "lens": "app",
+     "key": "1-techniques-app-7",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "The rest is salt, cold, time and hands.",
+     "because": "\"The rest\" tells the reader this paragraph closes the list, but eight items placed here are never named: Dashi, Dry-pan toasting: spices, seeds and nuts, Egg wash & the baker's shine, Frying the paste until the oil splits, Mashing & puréeing, Soaking dried goods back to life, Steaming: basket, leaf and lid, and Straining & passing through a sieve. All eight carry a written standard, and Straining (148 recipes), Steaming (130), Mashing (114) and Frying the paste (95) sit on more recipes than most of what is named. The brief holds 42 items; the text accounts for 34.",
+     "fix": "Salt, cold, time and hands next. (Then, at the paragraph's end, one sentence the fact demands: \"Steaming, straining & passing through a sieve, mashing & puréeing, frying the paste until the oil splits, dry-pan toasting, soaking dried goods back to life, egg wash and dashi sit here too, each with a written standard.\" Add their slugs to cites: steaming-basket-leaf-and-lid, straining-and-passing-through-a-sieve, mashing-and-pureeing, frying-the-paste-until-the-oil-splits, dry-pan-toasting-spices-seeds-and-nuts, soaking-dried-goods-back-to-life, egg-wash-and-the-bakers-shine, dashi. Word count goes from 513 to about 550, inside the 650 limit.)",
+     "lens": "app",
+     "key": "1-techniques-app-8",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "are the bake's checks",
+     "because": "Only The wobble & the skewer is a test. Shaping by hand and Whipping a meringue are techniques with their own marks (matched pieces with sealed seams; stiff peaks with a slight bow), not checks on a bake, and the sentence goes on to list them as marks, not checks.",
+     "fix": "belong to the bake",
+     "lens": "app",
+     "key": "1-techniques-app-9",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "carry no written standard at this level",
+     "because": "A standard belongs to the technique, not to the level: the brief's items carry \"standard\": false for exactly these six (Caramelizing onions, Brown butter, Poaching eggs, Trussing, Flambé, Sourdough starter), and nothing in the brief gives them one higher up. \"At this level\" implies a standard is waiting above, which a cook would then look for.",
+     "fix": "carry no written standard",
+     "lens": "app",
+     "key": "1-techniques-app-10",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "are one lesson at three heats",
+     "because": "Two of the three run at the same heat. Blanching's first mark is \"A large volume at a hard rolling boil\" and salted water's second mark is a pot that \"returns to its boil quickly\"; only the bare simmer sits below the boil. The third heat of the poach-simmer-boil entry is the poach, which is not in this trio. Paragraph 2 then reuses the same phrase (\"one lesson with three heats\") for the pan, where it is true, so the repetition also reads as filler.",
+     "fix": "are the pot's one lesson at two heats",
+     "lens": "voice",
+     "key": "1-techniques-voice-11",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "learn which before anything else here",
+     "because": "Paragraph 1 already told the reader what to take first (\"Take the board first\"), so a second \"before anything else here\" contradicts the order the primer sets, and it repeats paragraph 1's \"than almost anything else here\" nearly word for word.",
+     "fix": "learn which before the rest of the pan",
+     "lens": "voice",
+     "key": "1-techniques-voice-12",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "and the marks repeat: fully up to heat before anything goes in, air around every piece, and somebody standing at the broiler, where pale turns bitter in seconds",
+     "because": "Only the first mark is shared (roasting and the broiler both ask for full heat first). Air around every piece is roasting's mark, the watcher is the broiler's, and charring's own marks (the surface met the fiercest heat \"with nothing between them\", and \"no acrid edge\") are missing, so \"repeat\" misleads. The broiler's window is \"tens of seconds\" in the brief.",
+     "fix": "and each has its mark: fully up to heat before anything goes in, air around every piece on the tray, nothing between the flame and the surface, and somebody standing at the broiler, where pale turns bitter in tens of seconds",
+     "lens": "voice",
+     "key": "1-techniques-voice-13",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "The rest is salt, cold, time and hands.",
+     "because": "Eight techniques placed at this level with written standards are never named: Steaming: basket, leaf and lid (130 recipes), Straining & passing through a sieve (148), Mashing & puréeing (114), Frying the paste until the oil splits (95), Dry-pan toasting: spices, seeds and nuts (70), Soaking dried goods back to life (69), Egg wash & the baker's shine (34) and Dashi (29). Three of them sit on more recipes than most of what is named. \"The rest\" is therefore false, and paragraph 5's \"work down it in the order above\" gives the reader no place for them. Add the eight slugs to cites when they are named: steaming-basket-leaf-and-lid, straining-and-passing-through-a-sieve, mashing-and-pureeing, frying-the-paste-until-the-oil-splits, dry-pan-toasting-spices-seeds-and-nuts, soaking-dried-goods-back-to-life, egg-wash-and-the-bakers-shine, dashi.",
+     "fix": "Salt, cold, time and hands come next. [and close the paragraph with:] Steaming, straining & passing through a sieve, mashing & puréeing, soaking dried goods back to life, dry-pan toasting, frying the paste until the oil splits, dashi and egg wash carry their own marks on the same index: take each as its recipe comes up, and read its marks before you start.",
+     "lens": "voice",
+     "key": "1-techniques-voice-14",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "carry no written standard at this level",
+     "because": "A standard belongs to the technique, not to the level (the brief marks these six \"standard\": false, full stop). \"At this level\" implies a standard waits for them higher up, which the brief does not say, and the met rule that follows turns on whether a technique has a standard at all.",
+     "fix": "carry no written standard.",
+     "lens": "voice",
+     "key": "1-techniques-voice-15",
+     "primer": "1-techniques"
+    },
+    {
+     "where": "next",
+     "severity": "style",
+     "claim": "Béchamel and Hollandaise, Beurre blanc and Building an emulsion, Braising and Confit, Rendering fat, Kneading dough and Proofing, Sugar stages & caramel, and Tempering a custard",
+     "because": "Every paragraph names techniques in lowercase mid-sentence (\"salted water & the float test\", \"deglazing & pan sauces\"); only the two doors are capitalized as names. Capitals here read as a pasted list, not a sentence.",
+     "fix": "béchamel and hollandaise, beurre blanc and building an emulsion, braising and confit, rendering fat, kneading dough and proofing, sugar stages & caramel, and tempering a custard",
+     "lens": "voice",
+     "key": "1-techniques-voice-16",
+     "primer": "1-techniques"
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "1-techniques-fact-1",
+     "action": "applied",
+     "reason": "Paragraph 1 now reads 'one lesson at two heats, the rolling boil and the shiver under it', with the trio reordered so the three marks that follow the colon match salted water, blanching and the bare simmer in turn."
+    },
+    {
+     "finding": "1-techniques-fact-2",
+     "action": "applied",
+     "reason": "Changed to 'learn which before the rest of the pan', so paragraph 1's 'Take the board first' stays the only first thing."
+    },
+    {
+     "finding": "1-techniques-fact-3",
+     "action": "applied",
+     "reason": "Changed 'dry heat at three distances' to 'dry heat from three directions: all around, from above, and straight against the surface', matching the brief's roasting, broiler and charring standards."
+    },
+    {
+     "finding": "1-techniques-fact-4",
+     "action": "applied",
+     "reason": "Salting to draw the water out now has its own marks (salt on every face, somewhere for the water to go, that water poured off before heat) and brining & curing keeps full commitment, time against weight and thickness, and a dry surface before anything crisps."
+    },
+    {
+     "finding": "1-techniques-fact-5",
+     "action": "applied",
+     "reason": "A new paragraph names all eight missing techniques with a mark each, and the doors line now says 'work down the index in the order above, the last eight as their recipes come up'."
+    },
+    {
+     "finding": "1-techniques-fact-6",
+     "action": "applied",
+     "reason": "Added the eight slugs (soaking-dried-goods-back-to-life, steaming-basket-leaf-and-lid, straining-and-passing-through-a-sieve, mashing-and-pureeing, dashi, frying-the-paste-until-the-oil-splits, dry-pan-toasting-spices-seeds-and-nuts, egg-wash-and-the-bakers-shine); all 42 items are now named and cited."
+    },
+    {
+     "finding": "1-techniques-app-7",
+     "action": "applied",
+     "reason": "The 'three heats' claim is gone; I used 'one lesson at two heats, the rolling boil and the shiver under it' rather than 'three pots', because the heat count is what the marks actually give and it answers the fact and voice findings on the same line."
+    },
+    {
+     "finding": "1-techniques-app-8",
+     "action": "applied",
+     "reason": "'The rest is salt, cold, time and hands.' became 'Salt, cold, time and hands come next.', and the eight unnamed techniques are named with their marks in a new fifth paragraph and cited; total is 611 words, inside the 650 limit."
+    },
+    {
+     "finding": "1-techniques-app-9",
+     "action": "applied",
+     "reason": "Changed 'are the bake's checks' to 'belong to the bake'."
+    },
+    {
+     "finding": "1-techniques-app-10",
+     "action": "applied",
+     "reason": "Dropped 'at this level': the six now 'carry no written standard', full stop, matching standard: false in the brief."
+    },
+    {
+     "finding": "1-techniques-voice-11",
+     "action": "applied",
+     "reason": "Paragraph 1 now says 'one lesson at two heats, the rolling boil and the shiver under it', so the phrase no longer repeats paragraph 2's true 'three heats' for the pan."
+    },
+    {
+     "finding": "1-techniques-voice-12",
+     "action": "applied",
+     "reason": "Changed to 'learn which before the rest of the pan', removing both the contradiction with 'Take the board first' and the near-repeat of paragraph 1's wording."
+    },
+    {
+     "finding": "1-techniques-voice-13",
+     "action": "applied",
+     "reason": "Replaced 'the marks repeat' with 'Each has its marks' and gave each technique its own: oven up to heat and air around every piece for roasting, the broiler lit first and watched with 'tens of seconds', and nothing between flame and surface plus no acrid edge for charring."
+    },
+    {
+     "finding": "1-techniques-voice-14",
+     "action": "applied",
+     "reason": "'The rest' is gone ('Salt, cold, time and hands come next.'), the eight techniques are named with a mark each in a new paragraph and cited, and the doors line tells the reader to take them as their recipes come up."
+    },
+    {
+     "finding": "1-techniques-voice-15",
+     "action": "applied",
+     "reason": "The sentence now ends 'carry no written standard.' with no 'at this level'."
+    },
+    {
+     "finding": "1-techniques-voice-16",
+     "action": "applied",
+     "reason": "The next line now names the Level II techniques in lowercase mid-sentence, matching the paragraphs' treatment of technique names."
+    }
+   ]
+  },
+  "1-lexicon": {
+   "findings": [
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "Chuck wins at braising because hard-working muscle melts into gelatin low, slow and wet, and fights you fast.",
+     "because": "Muscle does not melt into gelatin; collagen does. The brief's Chuck entry says it plainly: \"cook it low, slow, and wet and the collagen melts into gelatin\", and the register sample says the same of braising (\"its connective tissue melts into gelatin\"). A cook who repeats \"muscle melts\" at the pass is wrong.",
+     "fix": "Chuck wins at braising because its connective tissue melts into gelatin low, slow and wet, and it fights you fast.",
+     "lens": "fact",
+     "key": "1-lexicon-fact-1",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "the Repair Table gives the levers in order of gentleness: salt first, then acid, then umami.",
+     "because": "That is the Repair Table's fix for TOO FLAT only (\"salt first; if salted, acid; if bright, umami\"). The other fault placed at Level I is salty, and its levers are different: \"dilute (unsalted liquid, more base), bulk (starch, cream), or counter (acid and a touch of sugar)\". As written, a cook reads salt as the first lever for a salty dish.",
+     "fix": "the Repair Table gives each its levers in order of gentleness: for flat, salt first, then acid, then umami; for salty, dilute, bulk or counter.",
+     "lens": "fact",
+     "key": "1-lexicon-fact-2",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Poach, Simmer, Boil are three temperatures pretending to be one method; Blanch & Shock is how a green vegetable prepped at noon plates at eight. Knife Cuts: The Classical Ladder gives the dice and the julienne their sizes",
+     "because": "The order is unsound for a Commis: the cuts come after five pan verbs, yet \"cook the onions\" assumes the onion is already diced, and the Mirepoix entry's base is \"cut small\" before it is cooked in fat. Knife Cuts sits in the same Knife & Prep group as Mise en Place with the same semester 1. A knife cut belongs before the dish that needs it.",
+     "fix": "Take Mise en Place first, because everything else assumes it: read fully, prep completely, then light the burner. Knife Cuts: The Classical Ladder comes next, before anything hits a pan: it gives the dice and the julienne their sizes and says what matters now: uniformity, not speed. Then the pan verbs, because a recipe says cook the onions and means one of three things. (Then continue with Sweat vs. Sauté vs. Sear through Blanch & Shock, dropping the Knife Cuts sentence from its present place.)",
+     "lens": "fact",
+     "key": "1-lexicon-fact-3",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "because the family entry gives the rule and the single entry gives the exception.",
+     "because": "Only Flat-leaf Parsley is an exception (\"the only one that shrugs off a little heat\"). Thyme confirms the hearty rule (\"an hour in a braise concentrates the flavor\"), Rosemary refines it (\"add a second sprig late\"), and Russet Potato does not give an exception to Starchy vs. Waxy but corrects its mechanism (\"It is the quantity of starch that does the work, not the type\"). Telling a cook every single entry is an exception misreads three of four.",
+     "fix": "because the family entry gives the rule and the single entry gives the particulars, and sometimes the exception.",
+     "lens": "fact",
+     "key": "1-lexicon-fact-4",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "misplaced",
+     "claim": "The cuts here are the ones a Level I station handles, not the whole animal: Chuck, Brisket (Point vs. Flat), Ribeye / Prime Rib, Pork Belly, Ham & Hock, Lamb Primals and Chicken Anatomy for Cooks.",
+     "because": "The sentence presents seven names as the whole of what is placed, but the brief's items at Level I also hold Tenderloin, Strip, T-Bone & Porterhouse, Sirloin, Shank, Oxtail & Cheek, Short Ribs, Grass-fed vs. Grain-finished, Pork Shoulder, Pork Loin vs. Tenderloin, Ribs, Spatchcock, Trussing and six Fish & Shellfish entries. Ten beef cuts is close to the whole steer; \"not the whole animal\" misleads about what the level asks.",
+     "fix": "The cuts here start with the ones a Level I station handles most: Chuck, Brisket (Point vs. Flat), Ribeye / Prime Rib, Pork Belly, Ham & Hock, Lamb Primals and Chicken Anatomy for Cooks, with the rest of the steer, the pig and the fish case placed beside them.",
+     "lens": "fact",
+     "key": "1-lexicon-fact-5",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Round out the verbs with Roux, Slurry & Liaison and Roasting, Baking & Carryover: cook to temperature, pull early, rest.",
+     "because": "The colon hangs \"cook to temperature, pull early, rest\" on both entries, but it is the Roasting entry's lesson only (\"Pull the roast BEFORE target and rest it\"). Roux, Slurry & Liaison is about thickeners chosen \"by the sauce's temperature future\"; a liaison is the one thing you must not boil.",
+     "fix": "Round out the verbs with Roux, Slurry & Liaison, the thickeners, and Roasting, Baking & Carryover, which says cook to temperature, pull early, rest.",
+     "lens": "fact",
+     "key": "1-lexicon-fact-6",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "lede",
+     "severity": "unclear",
+     "claim": "met by recall and never by a single miss.",
+     "because": "The brief's rule is \"a miss alone is never met\". \"Never by a single miss\" reads as though one miss is what undoes a term, or that a miss can never count, which is not the rule; the rule is that a miss on its own does not make a term met.",
+     "fix": "met by recall, never by a miss alone.",
+     "lens": "fact",
+     "key": "1-lexicon-fact-7",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "so a missed card simply comes back.",
+     "because": "The brief's met rule and doors say nothing about a missed card returning; the app's behaviour on a miss is not stated anywhere in the brief, so this is a claim the primer cannot support and a cook may find untrue on the flashcard ladder.",
+     "fix": "so a miss costs you nothing but another look.",
+     "lens": "fact",
+     "key": "1-lexicon-fact-8",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "lede",
+     "severity": "unclear",
+     "claim": "met by recall and never by a single miss",
+     "because": "The brief's met rule is \"a miss alone is never met\"; \"never by a single miss\" reads as if one miss disqualifies a term, which the rule does not say.",
+     "fix": "met by recall, and a miss alone is never met.",
+     "lens": "app",
+     "key": "1-lexicon-app-9",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "The cuts here are the ones a Level I station handles, not the whole animal: Chuck, Brisket (Point vs. Flat), Ribeye / Prime Rib, Pork Belly, Ham & Hock, Lamb Primals and Chicken Anatomy for Cooks.",
+     "because": "The brief places 25 cut, poultry and fish entries at Level I: Beef Cuts & Grades 10 (including Tenderloin (Filet Mignon), Strip (New York Strip), T-Bone & Porterhouse, Sirloin, Tri-Tip & Picanha, Shank, Oxtail & Cheek, Short Ribs (English vs. Flanken)), Pork, Lamb & Poultry 9, and Fish & Shellfish 6 (Bivalves, Oysters East vs. West, Scallops, Shrimp Sizing, Crab Vocabulary, Fillet, Steak, Loin & Collar). The sentence presents seven as \"the cuts here\" and says \"not the whole animal\" when the steak cuts and the fish case are placed here too.",
+     "fix": "The cuts here run to twenty-five, beef, pork, lamb, poultry and the fish case; start with the ones a Level I station handles most: Chuck, Brisket (Point vs. Flat), Ribeye / Prime Rib, Pork Belly, Ham & Hock, Lamb Primals and Chicken Anatomy for Cooks.",
+     "lens": "app",
+     "key": "1-lexicon-app-10",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "because hard-working muscle melts into gelatin low, slow and wet",
+     "because": "The Chuck entry says the collagen melts into gelatin (\"cook it low, slow, and wet and the collagen melts into gelatin\"); muscle does not become gelatin, connective tissue does, and a cook will repeat the claim as written.",
+     "fix": "because its collagen melts into gelatin low, slow and wet",
+     "lens": "app",
+     "key": "1-lexicon-app-11",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "the Repair Table gives the levers in order of gentleness: salt first, then acid, then umami",
+     "because": "Those are the Repair Table's levers for TOO FLAT only; its levers for TOO SALTY are dilute, bulk or counter. The sentence names both faults and then gives one fault's levers as \"the levers\".",
+     "fix": "the Repair Table gives the levers in order of gentleness: for flat, salt, then acid, then umami; for salty, dilute, bulk or counter",
+     "lens": "app",
+     "key": "1-lexicon-app-12",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "because the family entry gives the rule and the single entry gives the exception",
+     "because": "Russet Potato is the Starchy vs. Waxy rule's own first example (\"STARCHY (russet, Idaho, Maris Piper)\"), not an exception, and Thyme and Rosemary sit squarely in the HEARTY family of Hearty vs. Tender Herbs; only Flat-leaf Parsley (\"the only one that shrugs off a little heat\") is an exception.",
+     "fix": "because the family entry gives the rule and the single entry shows it at work",
+     "lens": "app",
+     "key": "1-lexicon-app-13",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "style",
+     "claim": "Round out the verbs with Roux, Slurry & Liaison and Roasting, Baking & Carryover: cook to temperature, pull early, rest.",
+     "because": "The paragraphs total 565 words against the brief's aim of 340 to 520 (the hard limit is 650); paragraphs 2 and 5 carry the excess, and this closing sentence and the two-fault sentence in paragraph 5 are the least load-bearing.",
+     "fix": "Then Roux, Slurry & Liaison and Roasting, Baking & Carryover: pull early, rest.",
+     "lens": "app",
+     "key": "1-lexicon-app-14",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "lede",
+     "severity": "unclear",
+     "claim": "met by recall and never by a single miss",
+     "because": "The brief's met rule is \"a miss alone is never met\"; \"never by a single miss\" reads as one miss undoing a term, the opposite sense.",
+     "fix": "met by recall, never by a miss",
+     "lens": "voice",
+     "key": "1-lexicon-voice-15",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "style",
+     "claim": "the kitchen verbs, the staples handled on day one, the everyday cuts",
+     "because": "\"the staples handled on day one\" is the level blurb verbatim (register: \"the everyday words, the staples handled on day one and the techniques that carry the most dishes\"); rule 10 says never restate the blurb.",
+     "fix": "the pan verbs, the produce you touch first, the everyday cuts",
+     "lens": "voice",
+     "key": "1-lexicon-voice-16",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "the family entry gives the rule and the single entry gives the exception",
+     "because": "Russet Potato is the family entry's own starchy example (its text: high solids, falls into dry mealy cells) and Thyme's entry explains why a hardy herb holds in a braise (thymol); neither entry is an exception to its family rule, each gives the mechanism.",
+     "fix": "the family entry gives the rule and the single entry gives the reason",
+     "lens": "voice",
+     "key": "1-lexicon-voice-17",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "style",
+     "claim": "sixty-one entries",
+     "because": "Paragraph 1 writes \"266 terms\" in figures; one house style for counts.",
+     "fix": "61 entries",
+     "lens": "voice",
+     "key": "1-lexicon-voice-18",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "because hard-working muscle melts into gelatin low, slow and wet",
+     "because": "The Chuck entry: \"cook it low, slow, and wet and the collagen melts into gelatin\"; muscle does not melt, its connective tissue does, and a cook will repeat the line at the pass.",
+     "fix": "because its connective tissue melts into gelatin low, slow and wet",
+     "lens": "voice",
+     "key": "1-lexicon-voice-19",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "The cuts here are the ones a Level I station handles, not the whole animal",
+     "because": "Level I's items also hold Tenderloin, Strip, T-Bone & Porterhouse, Sirloin, Short Ribs, Shank, Pork Shoulder, Pork Loin, Ribs, Spatchcock, Trussing and six Fish & Shellfish entries; the seven named are a sample, and \"not the whole animal\" tells the reader the rest is absent.",
+     "fix": "The cuts here are the ones a Level I station handles; start with Chuck, ...",
+     "lens": "voice",
+     "key": "1-lexicon-voice-20",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "the chart The Palate on this page drills",
+     "because": "A claim about the app that is not a door or the met rule: the brief gives The Palate only as a subsection of two faults, and no drill of the Repair Table chart; the standard's line is \"the two faults the repair table opens with, flat and salty\".",
+     "fix": "delete \", the chart The Palate on this page drills\" and open the next sentence \"Flat and salty are the two faults The Palate on this page opens with, and the Repair Table...\"",
+     "lens": "voice",
+     "key": "1-lexicon-voice-21",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "gives the levers in order of gentleness: salt first, then acid, then umami",
+     "because": "The entry's salt, acid, umami ladder is its TOO FLAT line only; TOO SALTY has its own (dilute, bulk, counter), and the sentence has just named both faults.",
+     "fix": "gives the levers in order of gentleness: for flat, salt first, then acid, then umami; for salty, dilute, bulk or counter",
+     "lens": "voice",
+     "key": "1-lexicon-voice-22",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "Read the terms is the Lexicon at this level",
+     "because": "The door is \"Read the terms: the Lexicon at this level\"; as written the sentence has no working verb and a reader on a phone stumbles.",
+     "fix": "Read the terms opens the Lexicon at this level",
+     "lens": "voice",
+     "key": "1-lexicon-voice-23",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "so a missed card simply comes back",
+     "because": "A claim about the app that is neither a door nor the met rule; the brief says only \"a miss alone is never met\" and nothing about a card returning.",
+     "fix": "delete the clause, ending the sentence at \"a miss alone is never met.\"",
+     "lens": "voice",
+     "key": "1-lexicon-voice-24",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "style",
+     "claim": "Sweat vs. Sauté vs. Sear gives you the three",
+     "because": "The paragraphs run 565 words against the aim of 340 to 520 (limit 650), and \"three\" appears four times across paragraphs 2 and 5 (\"one of three things\", \"gives you the three\", \"three temperatures\", \"three entries\"); trim here and take the deleted app clauses above with it.",
+     "fix": "Sweat vs. Sauté vs. Sear names them",
+     "lens": "voice",
+     "key": "1-lexicon-voice-25",
+     "primer": "1-lexicon"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "style",
+     "claim": "gives the dice and the julienne their sizes and says what matters now: uniformity, not speed",
+     "because": "Over the word aim; the entry's point (\"Speed comes later; uniformity is the exam\") fits in fewer words.",
+     "fix": "sizes the dice and the julienne and asks for uniformity before speed",
+     "lens": "voice",
+     "key": "1-lexicon-voice-26",
+     "primer": "1-lexicon"
+    },
+    {
+     "key": "1-lexicon-critic-1",
+     "primer": "1-lexicon",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "Two points are made again here that other primers on the same page already make. Paragraph 5 lists the repair table's levers for flat (salt, acid, umami) and salty (dilute, bulk, counter), which is the whole of the palate primer's paragraphs 2 and 3. Paragraph 2 opens the pan verbs with \"a recipe says cook the onions and means one of three things\", which is the techniques primer's paragraph 2 line word for word in sense. Read together, the level page says each of these twice.",
+     "because": "Two points are made again here that other primers on the same page already make. Paragraph 5 lists the repair table's levers for flat (salt, acid, umami) and salty (dilute, bulk, counter), which is the whole of the palate primer's paragraphs 2 and 3. Paragraph 2 opens the pan verbs with \"a recipe says cook the onions and means one of three things\", which is the techniques primer's paragraph 2 line word for word in sense. Read together, the level page says each of these twice.",
+     "fix": "In paragraph 5 replace \"Flat and salty, the two faults under The Palate on this page, open the Repair Table, which gives each its levers in order of gentleness: for flat, salt first, then acid, then umami; for salty, dilute, bulk or counter.\" with \"Flat and salty, the two faults under The Palate on this page, open the Repair Table, which gives each its levers in order of gentleness; The Palate primer walks them, so read the entry here for the chart and take the levers there.\" In paragraph 2 replace \"Then the pan verbs, because a recipe says cook the onions and means one of three things. Sweat vs. Sauté vs. Sear names them,\" with \"Then the pan verbs. Sweat vs. Sauté vs. Sear sets the three apart by heat and intent,\". The cites the-repair-table-balancing-a-dish and sweat-vs-saute-vs-sear stay named and stay cited."
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "1-lexicon-fact-1",
+     "action": "applied",
+     "reason": "Paragraph 4 now reads \"because its collagen melts into gelatin low, slow and wet, and it fights you fast\", the Chuck entry's own mechanism."
+    },
+    {
+     "finding": "1-lexicon-fact-2",
+     "action": "applied",
+     "reason": "Paragraph 5 now gives each fault its own levers from the Repair Table: for flat, salt first, then acid, then umami; for salty, dilute, bulk or counter."
+    },
+    {
+     "finding": "1-lexicon-fact-3",
+     "action": "applied",
+     "reason": "Knife Cuts: The Classical Ladder now follows Mise en Place and precedes the pan verbs, with the earlier Knife Cuts sentence removed from after Blanch & Shock."
+    },
+    {
+     "finding": "1-lexicon-fact-4",
+     "action": "applied",
+     "reason": "Paragraph 3 now says the single entry gives the reason, and now and then the exception, which fits Thyme, Rosemary and Russet Potato as mechanism and Flat-leaf Parsley as the one exception."
+    },
+    {
+     "finding": "1-lexicon-fact-5",
+     "action": "applied",
+     "reason": "Paragraph 4 now says the cuts run to 25 entries across the steer, the pig, the lamb, the bird and the fish case, and presents the seven named as where to start, dropping \"not the whole animal\"."
+    },
+    {
+     "finding": "1-lexicon-fact-6",
+     "action": "applied",
+     "reason": "The sentence now separates the two: Roux, Slurry & Liaison for the thickeners, and Roasting, Baking & Carryover, which says pull the roast early and rest it."
+    },
+    {
+     "finding": "1-lexicon-fact-7",
+     "action": "applied",
+     "reason": "The lede now ends \"met by recall, never by a miss alone\", the brief's rule in its own sense."
+    },
+    {
+     "finding": "1-lexicon-fact-8",
+     "action": "applied",
+     "reason": "The unsupported clause about a missed card coming back is deleted; the sentence ends at \"a miss alone is never met\"."
+    },
+    {
+     "finding": "1-lexicon-app-9",
+     "action": "applied",
+     "reason": "Same lede change as fact-7: \"met by recall, never by a miss alone\" keeps the brief's \"alone\" and drops the disqualifying sense."
+    },
+    {
+     "finding": "1-lexicon-app-10",
+     "action": "applied",
+     "reason": "Paragraph 4 now states the count, 25 entries across beef, pork, lamb, poultry and the fish case, and names the seven as the ones to start with."
+    },
+    {
+     "finding": "1-lexicon-app-11",
+     "action": "applied",
+     "reason": "Used this finding's exact wording, \"its collagen melts into gelatin\", matching the Chuck entry."
+    },
+    {
+     "finding": "1-lexicon-app-12",
+     "action": "applied",
+     "reason": "Paragraph 5 now gives the flat levers and the salty levers separately, as the Repair Table entry does."
+    },
+    {
+     "finding": "1-lexicon-app-13",
+     "action": "applied",
+     "reason": "Replaced \"gives the exception\" with \"gives the reason, and now and then the exception\", so Russet Potato, Thyme and Rosemary read as the rule at work and only Flat-leaf Parsley as the exception."
+    },
+    {
+     "finding": "1-lexicon-app-14",
+     "action": "applied",
+     "reason": "Trimmed paragraphs 1 to 5 (the Roux sentence, the Vegetable Atlas sentence, the cuts sentence, the Palate sentence and the deleted app clauses) from 565 to 556 words by the gate's count while adding the two-fault levers and the 25-entry count the fact findings required; 38 named item titles carry much of the remaining count."
+    },
+    {
+     "finding": "1-lexicon-voice-15",
+     "action": "applied",
+     "reason": "The lede was changed to \"met by recall, never by a miss alone\"; the word \"alone\" is kept because the brief's rule is \"a miss alone is never met\" and dropping it would say a miss never counts."
+    },
+    {
+     "finding": "1-lexicon-voice-16",
+     "action": "applied",
+     "reason": "Paragraph 1 now reads \"the pan verbs, the produce you touch first, the everyday cuts\", no longer echoing the level blurb."
+    },
+    {
+     "finding": "1-lexicon-voice-17",
+     "action": "applied",
+     "reason": "Paragraph 3 now says the single entry gives the reason, with \"now and then the exception\" kept for Flat-leaf Parsley, whose entry calls it the only soft herb that shrugs off a little heat."
+    },
+    {
+     "finding": "1-lexicon-voice-18",
+     "action": "applied",
+     "reason": "\"sixty-one entries\" is now \"61 entries\", matching \"266 terms\" and \"25 entries\" in figures."
+    },
+    {
+     "finding": "1-lexicon-voice-19",
+     "action": "applied",
+     "reason": "The clause now reads \"its collagen melts into gelatin\", the Chuck entry's exact term; connective tissue and collagen are the same correction and the brief's word was chosen."
+    },
+    {
+     "finding": "1-lexicon-voice-20",
+     "action": "applied",
+     "reason": "\"not the whole animal\" is gone; the sentence now gives the 25-entry span and opens the seven names with \"start with\"."
+    },
+    {
+     "finding": "1-lexicon-voice-21",
+     "action": "applied",
+     "reason": "Deleted \"the chart The Palate on this page drills\"; the next sentence now says flat and salty, the two faults under The Palate on this page, open the Repair Table, which is the standard's own line."
+    },
+    {
+     "finding": "1-lexicon-voice-22",
+     "action": "applied",
+     "reason": "The levers are now split by fault: for flat, salt first, then acid, then umami; for salty, dilute, bulk or counter."
+    },
+    {
+     "finding": "1-lexicon-voice-23",
+     "action": "applied",
+     "reason": "Now reads \"Read the terms opens the Lexicon at this level\"."
+    },
+    {
+     "finding": "1-lexicon-voice-24",
+     "action": "applied",
+     "reason": "The clause is deleted and the sentence ends at \"a miss alone is never met.\""
+    },
+    {
+     "finding": "1-lexicon-voice-25",
+     "action": "applied",
+     "reason": "Now \"Sweat vs. Sauté vs. Sear names them\"; \"three\" remains only in \"one of three things\", the entry's own \"three temperatures\" and \"the three entries\"."
+    },
+    {
+     "finding": "1-lexicon-voice-26",
+     "action": "applied",
+     "reason": "Now \"it sizes the dice and the julienne and asks for uniformity before speed\", in its new place before the pan verbs."
+    },
+    {
+     "finding": "1-lexicon-critic-1",
+     "action": "applied",
+     "reason": "Paragraph 5 now points to the Palate primer for the flat and salty levers instead of listing them, and paragraph 2 opens the pan verbs with Sweat vs. Sauté vs. Sear set apart by heat and intent rather than the techniques primer's cook-the-onions line; both items stay named and cited."
+    }
+   ]
+  },
+  "1-deck": {
+   "findings": [
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "Braised and Roasted are the slow ones.",
+     "because": "Roasting is not a slow method; it is dry oven heat at whatever pace the cut wants. The brief's own Roasted card says only \"Cooked by dry heat in an oven until browned outside and tender inside\" and contrasts it with braising because \"no liquid goes in\", and the Rack of Lamb card says the rack \"is roasted fast and hot\". Only Braised is the slow, wet, covered method here.",
+     "fix": "Braised is the slow one, half in liquid under a lid; Roasted is dry oven heat, fast for a rack, longer for a bird.",
+     "lens": "fact",
+     "key": "1-deck-fact-1",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "Brined, Cured, Pickled and Smoked happen to food before or instead of cooking.",
+     "because": "Hot smoking is cooking. The Smoked card says \"Hot smoking also cooks it low and slow, which is how brisket goes tender\" and its gist is \"Flavored, and often slowly cooked\". Only cold smoking merely flavors.",
+     "fix": "Brined, Cured and Pickled happen to food before or instead of cooking; Smoked either flavors it cold or cooks it low and slow.",
+     "lens": "fact",
+     "key": "1-deck-fact-2",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "Then Jam, Marmalade and Compote by how far the fruit is cooked",
+     "because": "Jam against Compote is a matter of how far the fruit is cooked (set versus loose), but Marmalade is not: the Marmalade card's not-this is \"Not jam made from any fruit. Marmalade is citrus cooked with its peel, and it should taste a little bitter.\" It is cooked to a set just like jam.",
+     "fix": "Then Jam against Compote by how far the fruit is cooked, and Marmalade as the citrus one with the peel in it",
+     "lens": "fact",
+     "key": "1-deck-fact-3",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "Each card gives a gist, a why, the thing it is not, and a menu line.",
+     "because": "Not every card here carries a not-this. Chicken-Fried, Duck Breast, Ham Hock, Buttermilk, Brioche, Focaccia, Vinaigrette, Frittata, Gratin, Coleslaw, Hash, Custard, Crème Brûlée, Capers and À la Carte, among others, have none in the brief. The later \"the not-this every time\" repeats the overstatement.",
+     "fix": "Each card gives a gist, a why and a menu line, and most give the thing it is not.",
+     "lens": "fact",
+     "key": "1-deck-fact-4",
+     "primer": "1-deck"
+    },
+    {
+     "where": "next",
+     "severity": "unclear",
+     "claim": "and the sauces that grow from these, Béarnaise, Béchamel, Demi-Glace and Aioli",
+     "because": "None of those four grows from the Level II methods, cuts or fish just listed. Béarnaise grows from Hollandaise, a Level I card (\"béarnaise grows from it\"); Béchamel is a roux and milk mother sauce; Demi-Glace is a veal stock reduction (the Jus card: \"a far thicker veal reduction\"); Aioli is an emulsion. Say they are added, not grown.",
+     "fix": "and the sauces the station adds beyond these, Béarnaise, Béchamel, Demi-Glace and Aioli",
+     "lens": "fact",
+     "key": "1-deck-fact-5",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 6",
+     "severity": "unclear",
+     "claim": "Say it back is where a card counts",
+     "because": "The brief's met rule is \"graded met or close in the deck's modes\", plural, so a card can be met in any graded mode. What Say it back alone counts as is a round: the door reads \"the one deck mode that counts as a round\". As written, a reader would think only Say it back can meet a card.",
+     "fix": "Say it back is where a round counts",
+     "lens": "fact",
+     "key": "1-deck-fact-6",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "Mousse by air",
+     "because": "The sentence sorts sweets \"by what holds them\", and air holds nothing. The Mousse card says the base has whipped cream or beaten egg whites folded through it and then \"the fat or a little gelatin holds the bubbles in place\".",
+     "fix": "Mousse by the whipped cream or whites folded in",
+     "lens": "fact",
+     "key": "1-deck-fact-7",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "Bacon, Prosciutto, Pastrami, Corned Beef and Chorizo tie straight back to the methods, so take them next.",
+     "because": "If they tie back to the methods, the sound order is to take them while Brined, Cured and Smoked are fresh, not after the whole block and the fish case. The Pastrami and Corned Beef cards are built on the Brined, Smoked and Simmered cards, Bacon and Prosciutto on Cured. Say which methods, and put them right after the methods rather than at the end of the cuts and fish.",
+     "fix": "Bacon, Prosciutto, Pastrami, Corned Beef and Chorizo tie straight back to Brined, Cured and Smoked, so take them before the block, while those cards are fresh.",
+     "lens": "fact",
+     "key": "1-deck-fact-8",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "fastest in pairs",
+     "because": "What follows are groups of four and five (Parmesan, Ricotta, Feta and Blue Cheese; Stock, Jus, Hollandaise, Vinaigrette and Pesto), not pairs, and only the truffle and the kimchi lines are true pairs.",
+     "fix": "fastest in small groups",
+     "lens": "fact",
+     "key": "1-deck-fact-9",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "Each card gives a gist, a why, the thing it is not, and a menu line.",
+     "because": "38 of the 110 cards carry no notThis (Chicken-Fried, Duck Breast, Chorizo, Ham Hock, Oysters, Vinaigrette, Frittata, Brioche, Sourdough, Custard, Crème Brûlée, Capers, À la Carte among them); every card has a gist, a why and a line.",
+     "fix": "Each card gives a gist, a why and a menu line, and most give the thing it is not.",
+     "lens": "app",
+     "key": "1-deck-app-10",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "and the not-this every time",
+     "because": "Same fact: 38 cards have no not-this, so there is nothing to read every time.",
+     "fix": "and the not-this wherever the card has one",
+     "lens": "app",
+     "key": "1-deck-app-11",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "Braised and Roasted are the slow ones.",
+     "because": "The Roasted card is hot, dry oven air with no word on slowness, and the Rack of Lamb card says it is roasted fast and hot; only the Braised card says hours at gentle heat.",
+     "fix": "Braised is the slow one, Roasted the oven's dry heat.",
+     "lens": "app",
+     "key": "1-deck-app-12",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Brined, Cured, Pickled and Smoked happen to food before or instead of cooking.",
+     "because": "The Smoked card's gist is \"Flavored, and often slowly cooked\": hot smoking is how brisket goes tender, so smoking is not before or instead of cooking.",
+     "fix": "Brined, Cured and Pickled happen to food before or instead of cooking, and Smoked flavors it and often cooks it too.",
+     "lens": "app",
+     "key": "1-deck-app-13",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "Brisket, Short Rib, Shank and Shoulder want hours of low heat and have no doneness to ask for.",
+     "because": "Only the Short Rib card says \"There is no temperature to ask the guest for\"; the Brisket, Shank and Shoulder cards say nothing about doneness.",
+     "fix": "Brisket, Short Rib, Shank and Shoulder want hours of low heat, and braised Short Rib has no temperature to ask for.",
+     "lens": "app",
+     "key": "1-deck-app-14",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "Salmon, Tuna, Swordfish and Halibut come as thick portions",
+     "because": "Only the Swordfish (thick, dense steaks) and Halibut (thick, firm portions) cards say thick; the Salmon card is about oil and soft flakes, the Tuna card about deep red flesh served raw or rare.",
+     "fix": "Swordfish and Halibut come as thick portions, Salmon and Tuna rich and sent short of done",
+     "lens": "app",
+     "key": "1-deck-app-15",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "Then Jam, Marmalade and Compote by how far the fruit is cooked",
+     "because": "Jam against Compote is a matter of cooking to a set; the Marmalade card sets it apart by citrus cooked with its peel and a bitter edge, not by how far it is cooked.",
+     "fix": "Then Jam and Compote by how far the fruit is cooked, Marmalade by its citrus peel",
+     "lens": "app",
+     "key": "1-deck-app-16",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 6",
+     "severity": "unclear",
+     "claim": "Say it back is where a card counts: recall before recognition, the one deck mode that counts as a round.",
+     "because": "The brief's met is \"graded met or close in the deck's modes\", plural; the door says Say it back is the one mode that counts as a round, not the one place a card is met.",
+     "fix": "Say it back is the one deck mode that counts as a round: recall before recognition.",
+     "lens": "app",
+     "key": "1-deck-app-17",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 6",
+     "severity": "wrong",
+     "claim": "so a missed card comes back until you carry it",
+     "because": "The brief's met line ends at \"a miss alone is never met\"; nothing in met, the doors or the level test says a missed card returns.",
+     "fix": "so a miss sends you back to the card",
+     "lens": "app",
+     "key": "1-deck-app-18",
+     "primer": "1-deck"
+    },
+    {
+     "where": "next",
+     "severity": "unclear",
+     "claim": "and the sauces that grow from these, Béarnaise, Béchamel, Demi-Glace and Aioli",
+     "because": "Béchamel and Aioli do not grow from those methods or cuts; the Hollandaise card says béarnaise grows from Hollandaise, which is Level I. neighbours.above lists the four names but not that lineage.",
+     "fix": "and the sauces beside them, Béarnaise, Béchamel, Demi-Glace and Aioli",
+     "lens": "app",
+     "key": "1-deck-app-19",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "Each card gives a gist, a why, the thing it is not, and a menu line.",
+     "because": "38 of the 110 cards in the brief's items have no notThis (Chicken-Fried, Duck Breast, Ribeye, Tenderloin, Brisket, Shank, Tuna, Shrimp, Parmesan, Custard, Market Price and more). Only gist, why and line are on every card.",
+     "fix": "Each card gives a gist, a why and a menu line, and most give the thing it is not.",
+     "lens": "voice",
+     "key": "1-deck-voice-20",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "and the not-this every time, since that is what a guest will confuse it with.",
+     "because": "There is no not-this on 38 of the cards, so \"every time\" sends the reader looking for a line that is not there.",
+     "fix": "and the not-this where there is one, since that is what a guest will confuse it with.",
+     "lens": "voice",
+     "key": "1-deck-voice-21",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "Braised and Roasted are the slow ones.",
+     "because": "The Roasted card says only dry oven heat until browned outside and tender inside, and the Rack of Lamb card says it is roasted fast and hot. Braised is the slow one.",
+     "fix": "Braised is the slow one, and Roasted is the oven's dry heat, fast or slow.",
+     "lens": "voice",
+     "key": "1-deck-voice-22",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "Brined, Cured, Pickled and Smoked happen to food before or instead of cooking.",
+     "because": "The Smoked card reads \"Flavored, and often slowly cooked, by the fumes of smoldering wood\": hot smoking is the cooking, which is how brisket goes tender. Only cold smoking is flavor alone.",
+     "fix": "Brined, Cured and Pickled happen to food before or instead of cooking, and Smoked either flavors it or cooks it low and slow.",
+     "lens": "voice",
+     "key": "1-deck-voice-23",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "style",
+     "claim": "a simmer is not a boil, Seared is not Caramelized, cured is not smoked.",
+     "because": "Three pairs in one list, one lower case, one capitalized, one lower case. The card names are capitalized everywhere else in the primer, and the cite check reads names as written.",
+     "fix": "Simmered is not Boiled, Seared is not Caramelized, Cured is not Smoked.",
+     "lens": "voice",
+     "key": "1-deck-voice-24",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "Salmon, Tuna, Swordfish and Halibut come as thick portions,",
+     "because": "Only the Swordfish and Halibut cards say thick; the Salmon and Tuna cards say nothing of the kind. What the four share on their cards is a doneness note: salmon medium, tuna raw or rare, swordfish and halibut dry out past medium.",
+     "fix": "Salmon, Tuna, Swordfish and Halibut each carry a doneness note,",
+     "lens": "voice",
+     "key": "1-deck-voice-25",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "fastest in pairs:",
+     "because": "What follows is four groups of four and five, not pairs.",
+     "fix": "fastest by family:",
+     "lens": "voice",
+     "key": "1-deck-voice-26",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "Then Jam, Marmalade and Compote by how far the fruit is cooked,",
+     "because": "How far the fruit is cooked separates Jam (boiled until it sets) from Compote (pulled before it breaks down, never set). The Marmalade card sets it apart by something else: citrus cooked with its peel, and a bitter edge.",
+     "fix": "Then Jam against Compote by how far the fruit is cooked, Marmalade by its citrus peel,",
+     "lens": "voice",
+     "key": "1-deck-voice-27",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 6",
+     "severity": "unclear",
+     "claim": "Work the doors in order.",
+     "because": "The brief lists the doors as Flip cards, the written test, Say it back, the deck; the paragraph takes them as Flip cards, Say it back, the written test, the deck. \"In order\" points at the wrong one.",
+     "fix": "Work the doors in this order.",
+     "lens": "voice",
+     "key": "1-deck-voice-28",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 6",
+     "severity": "wrong",
+     "claim": "so a missed card comes back until you carry it.",
+     "because": "Nothing in the doors or the met rule says a missed card comes back. The met rule ends at \"a miss alone is never met\"; the rest is invented app behavior.",
+     "fix": "(cut the clause; end the sentence at \"a miss on its own is never met.\")",
+     "lens": "voice",
+     "key": "1-deck-voice-29",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "style",
+     "claim": "the menu words a guest assumes any server can explain in a sentence.",
+     "because": "The lede already defines the deck as \"the 110 menu words a guest will ask about tonight\", and the same line is the level standard's own blurb restated. One definition is enough.",
+     "fix": "These are the deck's first 110 cards, one to a menu word.",
+     "lens": "voice",
+     "key": "1-deck-voice-30",
+     "primer": "1-deck"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "style",
+     "claim": "(whole paragraph, 695 characters)",
+     "because": "The paragraphs run 551 words against an aim of 340 to 520. This paragraph is the longest and carries the loosest line (the thick-portions claim above); the cuts in paragraphs 1 and 6 above take out about 25 words, and shortening the shellfish clause takes the rest.",
+     "fix": "and the shellfish, Shrimp, Scallops, Oysters and Clams, each with a serving note.",
+     "lens": "voice",
+     "key": "1-deck-voice-31",
+     "primer": "1-deck"
+    },
+    {
+     "key": "1-deck-critic-1",
+     "primer": "1-deck",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "Paragraph 3 says \"Salmon, Tuna, Swordfish and Halibut each carry a doneness note\" and \"braised Short Rib has no temperature to ask for\". The Salmon card (fd_0117) and the Halibut card (fd_0113) carry no doneness note anywhere in gist, why, line or not-this; only Tuna (served raw or seared rare) and Swordfish (cooked further, in its not-this) do. The Short Rib card (fd_0092) says nothing about temperature; its own text is \"braised until it yields\". Both sentences describe what the cards say, and a reader opening the cards will not find it.",
+     "because": "Paragraph 3 says \"Salmon, Tuna, Swordfish and Halibut each carry a doneness note\" and \"braised Short Rib has no temperature to ask for\". The Salmon card (fd_0117) and the Halibut card (fd_0113) carry no doneness note anywhere in gist, why, line or not-this; only Tuna (served raw or seared rare) and Swordfish (cooked further, in its not-this) do. The Short Rib card (fd_0092) says nothing about temperature; its own text is \"braised until it yields\". Both sentences describe what the cards say, and a reader opening the cards will not find it.",
+     "fix": "Replace \"Brisket, Short Rib, Shank and Shoulder want hours of low heat, and braised Short Rib has no temperature to ask for.\" with \"Brisket, Short Rib, Shank and Shoulder want hours of low heat until the meat yields, and none of them is asked for a doneness.\" Replace \"Salmon, Tuna, Swordfish and Halibut each carry a doneness note, Flounder, Snapper and Trout are the mild, lean fish, and Shrimp, Scallops, Oysters and Clams each a serving note.\" with \"Salmon, Tuna, Swordfish and Halibut are the fish sold thick, as portions or steaks, and Tuna is the one that goes out rare; Flounder, Snapper and Trout are the mild, lean fish; Shrimp, Scallops, Oysters and Clams each carry a sizing or serving note, shrimp by the count, oysters on the half shell.\" Cites are unchanged."
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "1-deck-fact-1",
+     "action": "applied",
+     "reason": "Paragraph 2 now reads \"Braised is the slow one, half in liquid under a lid; Roasted is the oven's dry heat, fast or slow\", matching the Roasted card (dry oven heat, no liquid) and the Rack of Lamb card (roasted fast and hot)."
+    },
+    {
+     "finding": "1-deck-fact-2",
+     "action": "applied",
+     "reason": "Paragraph 2 now reads \"Brined, Cured and Pickled happen to food before or instead of cooking; Smoked either flavors it cold or cooks it low and slow\", per the Smoked card's hot and cold smoking."
+    },
+    {
+     "finding": "1-deck-fact-3",
+     "action": "applied",
+     "reason": "Paragraph 4 now reads \"Jam against Compote by how far the fruit is cooked, Marmalade by its citrus peel\", per the Marmalade card's not-this."
+    },
+    {
+     "finding": "1-deck-fact-4",
+     "action": "applied",
+     "reason": "Paragraph 1 now reads \"Each card gives a gist, a why and a menu line, and most give the thing it is not\", and the later clause says \"the not-this where the card has one\"."
+    },
+    {
+     "finding": "1-deck-fact-5",
+     "action": "applied",
+     "reason": "The next line now says \"the sauces beside them, Béarnaise, Béchamel, Demi-Glace and Aioli\", dropping the invented lineage; the four names stay as neighbours.above lists them."
+    },
+    {
+     "finding": "1-deck-fact-6",
+     "action": "applied",
+     "reason": "Paragraph 6 now reads \"Say it back is the one deck mode that counts as a round: recall before recognition\", so met stays with the deck's modes, plural, as the brief's met line says."
+    },
+    {
+     "finding": "1-deck-fact-7",
+     "action": "applied",
+     "reason": "Paragraph 4 now reads \"Mousse by the whipped cream or whites folded in\", per the Mousse card."
+    },
+    {
+     "finding": "1-deck-fact-8",
+     "action": "applied",
+     "reason": "The cured-meat sentence now opens paragraph 3, right after the methods, and names Brined, Cured and Smoked as the cards it ties back to, with \"take them while those cards are fresh\"."
+    },
+    {
+     "finding": "1-deck-fact-9",
+     "action": "applied",
+     "reason": "\"fastest in pairs\" is now \"fastest by family\", which fits the groups of four and five that follow."
+    },
+    {
+     "finding": "1-deck-app-10",
+     "action": "applied",
+     "reason": "Same change as fact-4: paragraph 1 says gist, why and menu line on every card and \"most give the thing it is not\"."
+    },
+    {
+     "finding": "1-deck-app-11",
+     "action": "applied",
+     "reason": "\"the not-this every time\" is now \"the not-this where the card has one\"."
+    },
+    {
+     "finding": "1-deck-app-12",
+     "action": "applied",
+     "reason": "Same change as fact-1: Braised is the slow one, Roasted is the oven's dry heat, fast or slow."
+    },
+    {
+     "finding": "1-deck-app-13",
+     "action": "applied",
+     "reason": "Same change as fact-2: Smoked is set apart as the method that flavors cold or cooks low and slow."
+    },
+    {
+     "finding": "1-deck-app-14",
+     "action": "applied",
+     "reason": "Paragraph 3 now reads \"Brisket, Short Rib, Shank and Shoulder want hours of low heat, and braised Short Rib has no temperature to ask for\", since only the Short Rib card says so."
+    },
+    {
+     "finding": "1-deck-app-15",
+     "action": "applied",
+     "reason": "The thick-portions claim is gone; paragraph 3 now says \"Salmon, Tuna, Swordfish and Halibut each carry a doneness note\", which all four cards do (medium, raw or rare, past medium dries, poor for well done)."
+    },
+    {
+     "finding": "1-deck-app-16",
+     "action": "applied",
+     "reason": "Same change as fact-3: Jam against Compote by how far the fruit is cooked, Marmalade by its citrus peel."
+    },
+    {
+     "finding": "1-deck-app-17",
+     "action": "applied",
+     "reason": "Same change as fact-6: Say it back is described only as the one deck mode that counts as a round."
+    },
+    {
+     "finding": "1-deck-app-18",
+     "action": "applied",
+     "reason": "The invented clause about a missed card coming back is cut; the sentence now ends at \"a miss on its own is never met\", the brief's own met line, with no app behavior added either way."
+    },
+    {
+     "finding": "1-deck-app-19",
+     "action": "applied",
+     "reason": "Same change as fact-5: the next line says \"the sauces beside them\" rather than sauces that grow from the methods or cuts."
+    },
+    {
+     "finding": "1-deck-voice-20",
+     "action": "applied",
+     "reason": "Same change as fact-4 and app-10 in paragraph 1."
+    },
+    {
+     "finding": "1-deck-voice-21",
+     "action": "applied",
+     "reason": "Same change as app-11: \"the not-this where the card has one: that is what a guest will confuse it with\"."
+    },
+    {
+     "finding": "1-deck-voice-22",
+     "action": "applied",
+     "reason": "Used this finding's wording: \"Roasted is the oven's dry heat, fast or slow\", with Braised as the slow one."
+    },
+    {
+     "finding": "1-deck-voice-23",
+     "action": "applied",
+     "reason": "Same change as fact-2 and app-13: Smoked either flavors it cold or cooks it low and slow."
+    },
+    {
+     "finding": "1-deck-voice-24",
+     "action": "applied",
+     "reason": "The closing list of paragraph 2 now reads \"Simmered is not Boiled, Seared is not Caramelized, Cured is not Smoked\", every card name capitalized as written."
+    },
+    {
+     "finding": "1-deck-voice-25",
+     "action": "applied",
+     "reason": "Used this finding's wording: \"Salmon, Tuna, Swordfish and Halibut each carry a doneness note\"."
+    },
+    {
+     "finding": "1-deck-voice-26",
+     "action": "applied",
+     "reason": "Used this finding's wording: \"fastest by family\"."
+    },
+    {
+     "finding": "1-deck-voice-27",
+     "action": "applied",
+     "reason": "Same change as fact-3 and app-16, in this finding's wording: Jam against Compote by how far the fruit is cooked, Marmalade by its citrus peel."
+    },
+    {
+     "finding": "1-deck-voice-28",
+     "action": "applied",
+     "reason": "Paragraph 6 now opens \"Take the doors in this order\", since the paragraph's order (Flip cards, Say it back, the written test, the deck) differs from the brief's listing."
+    },
+    {
+     "finding": "1-deck-voice-29",
+     "action": "applied",
+     "reason": "The clause is cut; the met sentence ends at \"a miss on its own is never met\"."
+    },
+    {
+     "finding": "1-deck-voice-30",
+     "action": "applied",
+     "reason": "Paragraph 1 now opens \"These are the deck's first 110 cards, one to a menu word\", leaving the definition to the lede."
+    },
+    {
+     "finding": "1-deck-voice-31",
+     "action": "applied",
+     "reason": "The shellfish clause is now \"Shrimp, Scallops, Oysters and Clams each a serving note\", the thick-portions claim is gone, and paragraphs 1, 2, 3, 5 and 6 were tightened; the fact corrections in paragraphs 2 and 3 add words back, so the total is 554, inside the 220 to 650 limit and closer to the 520 aim than the fully corrected draft, with the longest paragraph at 703 characters."
+    },
+    {
+     "finding": "1-deck-critic-1",
+     "action": "rejected",
+     "reason": "The critic skipped the cards' note field: Salmon (fd_0117) reads \"Often served medium, still translucent in the center\", Halibut (fd_0113) says kitchens pull it as it turns opaque and it is a poor choice for well done, and Short Rib (fd_0092) says \"There is no temperature to ask the guest for\", so both sentences describe what the cards say; only the shellfish clause was tightened to \"a sizing or serving note\" so Shrimp, sized by count, is covered exactly."
+    }
+   ]
+  },
+  "1-plates": {
+   "findings": [
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "Nothing from them counts toward the Level test at the foot of the page, which is untimed and ends on what you missed with the right answers.",
+     "because": "The brief does not say the plates are left out of the Level test; its levelTest line says the test runs \"across the subsections, ending on what you missed with the right answers and no score\". \"counted: false\" is the level page's item count, not the test. An unsupported claim about the app should not stand.",
+     "fix": "The Level test at the foot of the page is untimed, runs across the subsections and ends on what you missed with the right answers.",
+     "lens": "fact",
+     "key": "1-plates-fact-1",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "You have met this subsection when you can name the piece under your knife, the spice in the unlabeled deli cup and the mushroom in the case, and when you know which card not to trust.",
+     "because": "The brief's one rule for met is \"The plates are read, never graded: nothing about them is recorded.\" The sentence before states it correctly; this one then sets a second bar for \"met\", which contradicts the rule just given.",
+     "fix": "Read them well enough to name the piece under your knife, the spice in the unlabeled deli cup and the mushroom in the case, and to know which card not to trust.",
+     "lens": "fact",
+     "key": "1-plates-fact-2",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "forty spices, and the corrections to carry are these.",
+     "because": "The brief gives Culinary Spices five corrections (\"corrections\": 5) and shows three of them; the wording presents the three as the whole list. The same plate at the wall shows five.",
+     "fix": "forty spices, and three of its five corrections to carry are these.",
+     "lens": "fact",
+     "key": "1-plates-fact-3",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "Read the first plate opens Chicken Cuts, with the transcription beside the picture.",
+     "because": "The brief names the door only as \"Read the first plate.\" and says nothing about which plate it opens or how the transcription is laid out; the transcription line belongs to the wall door. A reader at Level I should not be told what the door shows unless the brief says it.",
+     "fix": "Read the first plate opens the first of the three, Chicken Cuts if the page keeps this order.",
+     "lens": "fact",
+     "key": "1-plates-fact-4",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "All three are day-one material: they name things you will handle this week,",
+     "because": "The standard puts \"the common herbs\" at Level I and \"the spice rack\" and \"the less common produce\" at Level II, and paragraph 4 itself says the eighteen mushrooms are met least often on a first station. \"Day-one\" overstates it; the level blurb says \"the first weeks\".",
+     "fix": "All three are first-weeks material: they name things you will handle early,",
+     "lens": "fact",
+     "key": "1-plates-fact-5",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "You have met this subsection when you can name the piece under your knife, the spice in the unlabeled deli cup and the mushroom in the case, and when you know which card not to trust.",
+     "because": "The brief's met is one rule and nothing else: \"The plates are read, never graded: nothing about them is recorded.\" The paragraph states that correctly two sentences earlier, then closes by inventing a second, competence-based test of met, which is exactly what the brief forbids describing.",
+     "fix": "Read them so you can name the piece under your knife, the spice in the unlabeled deli cup and the mushroom in the case, and so you know which card not to trust.",
+     "lens": "app",
+     "key": "1-plates-app-6",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "Nothing from them counts toward the Level test at the foot of the page, which is untimed and ends on what you missed with the right answers.",
+     "because": "The brief's levelTest line says the test is \"untimed, across the subsections, ending on what you missed with the right answers and no score.\" It does not say the plates are excluded, and \"counts toward\" implies a tally the app does not keep.",
+     "fix": "The Level test at the foot of the page is untimed, runs across the subsections and ends on what you missed with the right answers, with no score.",
+     "lens": "app",
+     "key": "1-plates-app-7",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "Culinary Spices second: forty spices, and the corrections to carry are these.",
+     "because": "The brief gives Culinary Spices five corrections (\"corrections\": 5); the text then lists three as if they were the whole list.",
+     "fix": "Culinary Spices second: forty spices with five corrections, and the three to carry are these.",
+     "lens": "app",
+     "key": "1-plates-app-8",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "its corrections are about names more than handling",
+     "because": "The brief gives The World of Culinary Mushrooms five corrections; the text describes three, all about names, and the reader would take that as the full set.",
+     "fix": "three of its five corrections are about names more than handling",
+     "lens": "app",
+     "key": "1-plates-app-9",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "Read the first plate opens Chicken Cuts, with the transcription beside the picture.",
+     "because": "The brief's door is only \"Read the first plate.\" It does not say which plate that is; Chicken Cuts is merely listed first in items, and the transcription detail belongs to the wall door's text.",
+     "fix": "Read the first plate opens the first of these three with its transcription.",
+     "lens": "app",
+     "key": "1-plates-app-10",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "All three are day-one material: they name things you will handle this week",
+     "because": "The placement standard puts \"the spice rack\" at Level II and \"the common herbs\" at Level I; paragraph 4 itself says the eighteen mushrooms are the ones \"you will meet least often on a first station.\" Calling forty spices and eighteen mushrooms day-one contradicts both.",
+     "fix": "All three name things you will meet in your first weeks",
+     "lens": "app",
+     "key": "1-plates-app-11",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "All three are day-one material: they name things you will handle this week, and what their faults share is that a picture and a label can disagree.",
+     "because": "Paragraph 4 says the mushrooms are the ones \"you will meet least often on a first station\", so the primer contradicts itself; and only the Neck correction is a picture against a label. The paprika note, the doubled basil and the three mushroom names are wrong notes and wrong names, as paragraph 4 itself says (\"about names more than handling\"). The reading order also arrives late: \"Take Chicken Cuts first\" opens paragraph 3 after the chicken corrections have already been given here.",
+     "fix": "Take Chicken Cuts first, because its twelve pieces are the ones you will be asked to portion, and its corrections are the kind you can check with your hands on a bird.",
+     "lens": "voice",
+     "key": "1-plates-voice-12",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "style",
+     "claim": "Take Chicken Cuts first, because its twelve pieces are the ones you will be asked to portion, and its corrections are the kind you can check with your hands on a bird. Culinary Spices second: forty spices, and the corrections to carry are these.",
+     "because": "With that sentence moved to head paragraph 2 it repeats here; the paragraph should open on the spices. Cutting it also brings the total from 518 words, at the top of the 340 to 520 aim, to about 490.",
+     "fix": "Culinary Spices second: forty spices, and three corrections to carry.",
+     "lens": "voice",
+     "key": "1-plates-voice-13",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "Read the first plate opens Chicken Cuts, with the transcription beside the picture.",
+     "because": "The brief names the door only as \"Read the first plate.\" It does not say which plate is first, nor where the transcription sits. A claim about the app that is not one of the doors or the met rule.",
+     "fix": "Read the first plate opens one plate with its transcription.",
+     "lens": "voice",
+     "key": "1-plates-voice-14",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "Nothing from them counts toward the Level test at the foot of the page, which is untimed and ends on what you missed with the right answers.",
+     "because": "The brief's levelTest line says the test runs \"across the subsections\" with no score, and says nothing about the plates being left out. \"Counts toward\" also implies a tally where nothing is scored (rule 6).",
+     "fix": "The Level test at the foot of the page is untimed, runs across the subsections and ends on what you missed with the right answers.",
+     "lens": "voice",
+     "key": "1-plates-voice-15",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "You have met this subsection when you can name the piece under your knife, the spice in the unlabeled deli cup and the mushroom in the case, and when you know which card not to trust.",
+     "because": "The brief's met is one rule and the paragraph has already stated it: \"The plates are read, never graded: nothing about them is recorded.\" A second bar of recall turns met into a test the app does not set.",
+     "fix": "Read them so you can name the piece under your knife, the spice in the unlabeled deli cup and the mushroom in the case, and know which card not to trust.",
+     "lens": "voice",
+     "key": "1-plates-voice-16",
+     "primer": "1-plates"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "style",
+     "claim": "At Level I you have three, Chicken Cuts, Culinary Spices and The World of Culinary Mushrooms.",
+     "because": "The comma after \"three\" runs the count into the list; on a phone it reads as four items.",
+     "fix": "At Level I you have three: Chicken Cuts, Culinary Spices and The World of Culinary Mushrooms.",
+     "lens": "voice",
+     "key": "1-plates-voice-17",
+     "primer": "1-plates"
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "1-plates-fact-1",
+     "action": "applied",
+     "reason": "Replaced the claim that the plates are left out of the Level test with the brief's levelTest line: untimed, across the subsections, ending on what you missed with the right answers (the word score omitted because rule 6 bars it)."
+    },
+    {
+     "finding": "1-plates-fact-2",
+     "action": "applied",
+     "reason": "The closing sentence no longer sets a second bar for met; it now reads as advice, \"Read the three so you can name the piece under your knife...\", leaving the brief's one rule as the only statement of met."
+    },
+    {
+     "finding": "1-plates-fact-3",
+     "action": "applied",
+     "reason": "Paragraph 3 now says \"forty spices with five corrections, and three of them are these\", so the three shown are no longer presented as the whole list."
+    },
+    {
+     "finding": "1-plates-fact-4",
+     "action": "applied",
+     "reason": "The door line now says only \"Read the first plate opens one plate with its transcription\", the transcription being what the wall door says every plate carries; Chicken Cuts and the layout detail are gone."
+    },
+    {
+     "finding": "1-plates-fact-5",
+     "action": "applied",
+     "reason": "The day-one sentence is removed; paragraph 1 now says \"All three name things you will meet in your first weeks\", matching the level blurb and the standard."
+    },
+    {
+     "finding": "1-plates-app-6",
+     "action": "applied",
+     "reason": "Same change as fact-2: the competence-based test of met is rewritten as reading advice (\"Read the three so you can name...\"), so the brief's rule stands alone as met."
+    },
+    {
+     "finding": "1-plates-app-7",
+     "action": "applied",
+     "reason": "Same change as fact-1: \"counts toward\" and the exclusion claim are gone; the sentence now restates the brief's levelTest line, with the word score left out because rule 6 forbids it."
+    },
+    {
+     "finding": "1-plates-app-8",
+     "action": "applied",
+     "reason": "Paragraph 3 now opens \"Culinary Spices second: forty spices with five corrections, and three of them are these.\""
+    },
+    {
+     "finding": "1-plates-app-9",
+     "action": "applied",
+     "reason": "Paragraph 4 now says \"three of its five corrections are about names more than handling\"."
+    },
+    {
+     "finding": "1-plates-app-10",
+     "action": "applied",
+     "reason": "Same change as fact-4: the door now \"opens one plate with its transcription\", with no claim about which plate or where the transcription sits."
+    },
+    {
+     "finding": "1-plates-app-11",
+     "action": "applied",
+     "reason": "Same change as fact-5: the day-one claim is replaced by \"All three name things you will meet in your first weeks\", which no longer contradicts paragraph 4 or the standard."
+    },
+    {
+     "finding": "1-plates-voice-12",
+     "action": "applied",
+     "reason": "Paragraph 2 now opens on \"Take Chicken Cuts first, because its twelve pieces...\" so the reading order comes before the chicken corrections; the picture-versus-label generalization is replaced in paragraph 1 by \"a card can be wrong in its picture, its note or its name\", which fits all three plates."
+    },
+    {
+     "finding": "1-plates-voice-13",
+     "action": "applied",
+     "reason": "The moved sentence no longer repeats in paragraph 3, which now opens on the spices; the whole runs 517 words, inside the 340 to 520 aim."
+    },
+    {
+     "finding": "1-plates-voice-14",
+     "action": "applied",
+     "reason": "The door line is now exactly \"Read the first plate opens one plate with its transcription.\""
+    },
+    {
+     "finding": "1-plates-voice-15",
+     "action": "applied",
+     "reason": "Same change as fact-1: the sentence restates the brief's levelTest line and drops \"counts toward\", with the word score omitted under rule 6."
+    },
+    {
+     "finding": "1-plates-voice-16",
+     "action": "applied",
+     "reason": "Same change as fact-2: rewritten as \"Read the three so you can name the piece under your knife... and so you know which card not to trust\", no second bar of met."
+    },
+    {
+     "finding": "1-plates-voice-17",
+     "action": "applied",
+     "reason": "Now reads \"At Level I you have three: Chicken Cuts, Culinary Spices and The World of Culinary Mushrooms.\""
+    }
+   ]
+  },
+  "1-palate": {
+   "findings": [
+    {
+     "where": "paragraph 1",
+     "severity": "misplaced",
+     "claim": "the pan sauce that sends the guest to the water glass",
+     "because": "Pan sauces are placed at Level II in the brief's standard (\"the mother sauces and their children, emulsions, pan sauces\" under Chef de Partie); a commis at Level I is not building pan sauces every shift. The Level I standard names salted water, simmering, deglazing and roux, so the everyday over-salt a commis meets is a pot or a stock reduced too far, not a finished pan sauce.",
+     "fix": "the stock reduced too far that sends the guest to the water glass",
+     "lens": "fact",
+     "key": "1-palate-fact-1",
+     "primer": "1-palate"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "It is the more common of the two, and its first lever is the same one that causes salty when pulled too hard.",
+     "because": "The brief ranks neither fault by frequency. Its only frequency claim is the salt lever's own line, \"Most flat dishes are unsalted dishes\", and the standard says only that flat and salty are \"the two faults the repair table opens with\", flat listed first. The order of the table is the grounded reason to take flat first.",
+     "fix": "The table opens with it, and its first lever is the same one that causes salty when pulled too hard.",
+     "lens": "app",
+     "key": "1-palate-app-2",
+     "primer": "1-palate"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "you will open the salty page far less often",
+     "because": "The brief's door is \"The repair table: the faults with their levers, in order\"; a fault is an entry in that table, and the primer has not called anything a page before this, so a reader on a phone looks for a page that the doors do not name.",
+     "fix": "you will reach for salty's levers far less often",
+     "lens": "app",
+     "key": "1-palate-app-3",
+     "primer": "1-palate"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "Name the two faults the repair table opens with, flat and salty, on a plate, and take each of the six tastes",
+     "because": "\"on a plate\" dangles after the fault names and reads as if flat and salty are on the plate rather than named there; the met rule is \"named on a plate in the repair table\".",
+     "fix": "Name flat and salty, the two faults the repair table opens with, each on a plate, and take each of the six tastes",
+     "lens": "voice",
+     "key": "1-palate-voice-4",
+     "primer": "1-palate"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "style",
+     "claim": "Three axes, checked in turn, and you stop at the first one that fixes it.",
+     "because": "The sentence before it already says \"the check ends there\", and the paragraph opened with \"Its levers run in a fixed order and the order is the lesson\"; three statements of the same stop rule in one paragraph, in a primer sitting at 519 words against an aim of 520.",
+     "fix": "Delete the sentence.",
+     "lens": "voice",
+     "key": "1-palate-voice-5",
+     "primer": "1-palate"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "style",
+     "claim": "so call it what it is and reach for the base instead.",
+     "because": "\"Call it what it is\" is nothing the reader can act on; the brief's line is \"The potato trick mostly just dilutes.\" and its dilute lever is \"Unsalted liquid, or more of the base.\"",
+     "fix": "so count it as the dilute lever.",
+     "lens": "voice",
+     "key": "1-palate-voice-6",
+     "primer": "1-palate"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "It is the more common of the two, and its first lever",
+     "because": "Nothing in the brief ranks the two faults by frequency; it says only \"Most flat dishes are unsalted dishes.\" The claim is invented.",
+     "fix": "Its first lever",
+     "lens": "voice",
+     "key": "1-palate-voice-7",
+     "primer": "1-palate"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "misplaced",
+     "claim": "you will open the salty page far less often",
+     "because": "There is no salty page in the app; the doors are \"The repair table\" and \"Calibrate\", and salty is a row in the repair table.",
+     "fix": "you will reach for salty's levers far less often",
+     "lens": "voice",
+     "key": "1-palate-voice-8",
+     "primer": "1-palate"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "style",
+     "claim": "because countering changes what the tongue reports and leaves the salt where it was.",
+     "because": "Repeats paragraph 3's \"bend the perception without removing any salt\" in new words; the reader has just been told this.",
+     "fix": "Delete the clause and end at \"before you counter.\"",
+     "lens": "voice",
+     "key": "1-palate-voice-9",
+     "primer": "1-palate"
+    },
+    {
+     "where": "paragraph 6",
+     "severity": "style",
+     "claim": "For this subsection that is flat named on a plate, salty named on a plate, and the six tastes at rung 1.",
+     "because": "Restates the met rule quoted in the sentence immediately before it, and the six tastes to rung 1 have already been stated in paragraphs 1 and 5; the primer is at 519 words, the aim's ceiling.",
+     "fix": "Delete the sentence.",
+     "lens": "voice",
+     "key": "1-palate-voice-10",
+     "primer": "1-palate"
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "1-palate-fact-1",
+     "action": "applied",
+     "reason": "Replaced \"the pan sauce that sends the guest to the water glass\" with \"the stock reduced too far that sends the guest to the water glass\", since pan sauces sit under Level II in the standard while simmering and reduction are Level I work."
+    },
+    {
+     "finding": "1-palate-app-2",
+     "action": "applied",
+     "reason": "Replaced the invented frequency ranking with \"The table opens with it, and its first lever is the same one that causes salty when pulled too hard.\", grounding the order in the standard's own line about the two faults the repair table opens with."
+    },
+    {
+     "finding": "1-palate-app-3",
+     "action": "applied",
+     "reason": "Changed \"open the salty page far less often\" to \"reach for salty's levers far less often\", since salty is an entry in the repair table and no door is called a page."
+    },
+    {
+     "finding": "1-palate-voice-4",
+     "action": "applied",
+     "reason": "Reordered to \"Name flat and salty, the two faults the repair table opens with, each on a plate\" so \"on a plate\" attaches to the naming, matching the met rule."
+    },
+    {
+     "finding": "1-palate-voice-5",
+     "action": "applied",
+     "reason": "Deleted \"Three axes, checked in turn, and you stop at the first one that fixes it.\" from paragraph 2, leaving the stop rule stated once by the umami lever's line."
+    },
+    {
+     "finding": "1-palate-voice-6",
+     "action": "applied",
+     "reason": "Changed \"so call it what it is and reach for the base instead\" to \"so count it as the dilute lever\", which names the lever the brief's line points at."
+    },
+    {
+     "finding": "1-palate-voice-7",
+     "action": "applied",
+     "reason": "The frequency claim is gone; the sentence now reads \"The table opens with it, and its first lever is the same one that causes salty when pulled too hard.\", the same change made for 1-palate-app-2."
+    },
+    {
+     "finding": "1-palate-voice-8",
+     "action": "applied",
+     "reason": "The salty page is gone; the sentence now reads \"you will reach for salty's levers far less often\", the same change made for 1-palate-app-3."
+    },
+    {
+     "finding": "1-palate-voice-9",
+     "action": "applied",
+     "reason": "Deleted the clause after \"before you counter\" so paragraph 4 no longer repeats paragraph 3's point that countering bends perception without removing salt."
+    },
+    {
+     "finding": "1-palate-voice-10",
+     "action": "applied",
+     "reason": "Deleted the restating sentence from paragraph 6; the met rule stands once and the primer now sits at about 463 words, inside the aim."
+    }
+   ]
+  },
+  "1-safety": {
+   "findings": [
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "Food Safety at Level I is the shortest subsection on the page",
+     "because": "The brief's otherSubsections put The Palate at 2 items and The Plates at 3; Food Safety has 6. It is not the shortest.",
+     "fix": "Food Safety at Level I is a short subsection",
+     "lens": "fact",
+     "key": "1-safety-fact-1",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "the guide gives it three vectors and nothing more: raw below ready-to-eat in storage, color-coded boards, and hands and towels. Read that as the places a hazard travels, not as a full procedure.",
+     "because": "The brief's clause reads \"raw below ready-to-eat in storage, color-coded boards, hands and towels as vectors.\" Only hands and towels are named as vectors; storage order and color-coded boards are controls, not routes a hazard travels. Calling all three vectors misreads the item's own text.",
+     "fix": "the guide gives it three lines and nothing more: raw below ready-to-eat in storage, color-coded boards, and hands and towels as vectors. Read that as two controls and the two carriers they answer, not as a full procedure.",
+     "lens": "fact",
+     "key": "1-safety-fact-2",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "the first goes raw at the bottom",
+     "because": "The guide's rule is positional, raw below ready-to-eat, not \"at the bottom\"; raw produce is raw too, and a commis reading \"raw at the bottom\" may shelve washed greens under the chicken. Keep the brief's own words.",
+     "fix": "the first puts raw below ready-to-eat",
+     "lens": "fact",
+     "key": "1-safety-fact-3",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "because that is your kitchen's chart and not the book's",
+     "because": "The guide gives no reason for leaving the colors unstated; the primer supplies one. The sanitation rule asks the primer to say what is stated and what is only named, not to explain the gap.",
+     "fix": "and this primer does not either; the chart on your kitchen's wall does.",
+     "lens": "fact",
+     "key": "1-safety-fact-4",
+     "primer": "1-safety"
+    },
+    {
+     "where": "next",
+     "severity": "unclear",
+     "claim": "what this clause already shows you",
+     "because": "Two different clauses carry these items: the cooling law sits in the danger zone clause, HACCP and the protocol in the FIFO clause. \"This clause\" points at neither.",
+     "fix": "what these clauses already show you",
+     "lens": "fact",
+     "key": "1-safety-fact-5",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "the shortest subsection on the page",
+     "because": "The brief's otherSubsections puts The Palate at 2 items and The Plates at 3 at Level I; Food Safety holds 6, so it is not the shortest.",
+     "fix": "a short subsection",
+     "lens": "app",
+     "key": "1-safety-app-6",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "the guide gives it three vectors and nothing more: raw below ready-to-eat in storage, color-coded boards, and hands and towels. Read that as the places a hazard travels, not as a full procedure.",
+     "because": "The clause reads \"raw below ready-to-eat in storage, color-coded boards, hands and towels as vectors\": only hands and towels are named as vectors; the storage order and the boards are the two controls the guide names beside them, not places a hazard travels.",
+     "fix": "the guide gives it three lines and nothing more: raw below ready-to-eat in storage, color-coded boards, and hands and towels as vectors. Read that as two controls and the vectors they answer, not as a full procedure.",
+     "lens": "app",
+     "key": "1-safety-app-7",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "because that is your kitchen's chart and not the book's",
+     "because": "The guide names color-coded boards and stops; the brief's sanitation rule asks the primer to say which is stated and which is only named, not to supply the guide's reason for the gap.",
+     "fix": "and the primer leaves that gap where the guide left it",
+     "lens": "app",
+     "key": "1-safety-app-8",
+     "primer": "1-safety"
+    },
+    {
+     "where": "next",
+     "severity": "unclear",
+     "claim": "what this clause already shows you",
+     "because": "The four Level II names sit across two clauses: the cooling law and its pans and baths are in THE DANGER ZONE, HACCP and the protocol are in FIFO.",
+     "fix": "what two of these clauses already show you",
+     "lens": "app",
+     "key": "1-safety-app-9",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "the shortest subsection on the page",
+     "because": "The brief's otherSubsections put The Palate at 2 items and The Plates at 3; Food Safety has 6. It is not the shortest.",
+     "fix": "a short subsection",
+     "lens": "voice",
+     "key": "1-safety-voice-10",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "style",
+     "claim": "Nothing about this subsection is recorded. Food safety is read, never graded, so the only thing asked of you is that you read it and carry it to the line.",
+     "because": "Paragraph 5 says the same thing again (\"Met here means you have read it; there is no exercise and nothing is written down about you\"). The met rule needs stating once, and paragraph 5 is where the doors and met belong. The primer sits at 519 words, the top of the aim, so the cut also buys room.",
+     "fix": "The only thing asked of you is that you read it and carry it to the line.",
+     "lens": "voice",
+     "key": "1-safety-voice-11",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "style",
+     "claim": "and you will read those lines because they are on the page, but the cooling law is placed at Level II",
+     "because": "Filler the reader cannot act on; the clause already says the lines are there and paragraph 5 sends the reader to the whole page.",
+     "fix": "but the cooling law is placed at Level II",
+     "lens": "voice",
+     "key": "1-safety-voice-12",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Notice what the guide states and what it only names: the band and the two hours are stated; what a cook does with a pan that has crossed the two hours is not, and this primer does not supply it.",
+     "because": "The sentence sets up a stated/named split, then offers as the \"named\" half something the guide neither states nor names (the clause text is \"the two-hour rule governs everything left in it\", nothing about what follows). The gap is real but it is a silence, not a naming, and the sanitation rule asks the primer to say which is which.",
+     "fix": "Notice what the guide states and what it leaves out: the band and the two hours are stated; what a cook does with a pan that has crossed the two hours is not, and this primer does not supply it.",
+     "lens": "voice",
+     "key": "1-safety-voice-13",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "the guide gives it three vectors and nothing more",
+     "because": "The clause text reads \"raw below ready-to-eat in storage, color-coded boards, hands and towels as vectors.\" Only hands and towels are called vectors; raw below ready-to-eat is a storage rule and boards are a tool. Calling all three vectors misreads the line a cook will meet on the page.",
+     "fix": "the guide gives it three lines and nothing more",
+     "lens": "voice",
+     "key": "1-safety-voice-14",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "because that is your kitchen's chart and not the book's",
+     "because": "The guide gives no reason for leaving the board colors out; the reason is the primer's own, and the sanitation rule says a primer names the gap and never fills it with a rule of its own. \"Your kitchen's chart\" is a rule.",
+     "fix": "and this primer leaves that gap where the guide left it",
+     "lens": "voice",
+     "key": "1-safety-voice-15",
+     "primer": "1-safety"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "the first goes raw at the bottom, the second is a vector the guide names by name",
+     "because": "\"goes raw at the bottom\" is not the guide's wording (\"raw below ready-to-eat in storage\") and \"names by name\" repeats itself.",
+     "fix": "the first puts raw below ready-to-eat, the second the guide names as a vector",
+     "lens": "voice",
+     "key": "1-safety-voice-16",
+     "primer": "1-safety"
+    },
+    {
+     "where": "next",
+     "severity": "unclear",
+     "claim": "Level II takes up what this clause already shows you",
+     "because": "The next line stands alone under the primer and \"this clause\" has no referent; the four Level II names come from two clauses (the cooling law from The danger zone, HACCP and the protocol from FIFO).",
+     "fix": "Level II takes up what the Level I clauses already show you",
+     "lens": "voice",
+     "key": "1-safety-voice-17",
+     "primer": "1-safety"
+    },
+    {
+     "where": "next",
+     "severity": "style",
+     "claim": "the cooling law, with its shallow pans and ice baths and never a stockpot straight into the walk-in, HACCP as the systematized version, identify hazards, control critical points, document, and the protocol the guide calls service-critical and legal-critical.",
+     "because": "One comma-spliced run of three list items each carrying its own comma list; on a phone the reader loses where HACCP's gloss ends and the protocol begins. Semicolons between the three neighbours keep the same words and the same length.",
+     "fix": "the cooling law, its shallow pans and ice baths and never a stockpot straight into the walk-in; HACCP as the systematized version, identify hazards, control critical points, document; and the protocol the guide calls service-critical and legal-critical.",
+     "lens": "voice",
+     "key": "1-safety-voice-18",
+     "primer": "1-safety"
+    },
+    {
+     "key": "1-safety-critic-1",
+     "primer": "1-safety",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "Paragraph 4 says the FIFO clause names HACCP and \"a service-critical and legal-critical protocol beside it\", then \"Both are placed at Level II, so at Level I you take the tape and the pen and leave the system for later.\" The service primer on the same page places the room's version of that protocol at Level I, in What We Screened and What We Did Not: you never answer a guest's question about what is in a dish from the app. Read side by side, one primer defers the protocol to Level II and the other asks it now, and a commis is left unsure which is true. Both are right about their own subsection; the safety primer just does not say so.",
+     "because": "Paragraph 4 says the FIFO clause names HACCP and \"a service-critical and legal-critical protocol beside it\", then \"Both are placed at Level II, so at Level I you take the tape and the pen and leave the system for later.\" The service primer on the same page places the room's version of that protocol at Level I, in What We Screened and What We Did Not: you never answer a guest's question about what is in a dish from the app. Read side by side, one primer defers the protocol to Level II and the other asks it now, and a commis is left unsure which is true. Both are right about their own subsection; the safety primer just does not say so.",
+     "fix": "After \"Both are placed at Level II, so at Level I you take the tape and the pen and leave the system for later.\" add one sentence: \"The room's half of that protocol is not deferred, though: Service on this page already asks it of you, in What We Screened and What We Did Not, as the one question you never answer from the app.\" Keep the wording free of the words rule 4 bans (no allergen, allergy, contains, safe for). The primer grows by about thirty words and stays under the limit."
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "1-safety-fact-1",
+     "action": "applied",
+     "reason": "Paragraph 1 now reads \"a short subsection\"; The Palate (2) and The Plates (3) are smaller than Food Safety's 6."
+    },
+    {
+     "finding": "1-safety-fact-2",
+     "action": "applied",
+     "reason": "Paragraph 3 now says the guide gives it three lines, keeps \"hands and towels as vectors\" as the clause has it, and reads them as two controls and the vectors they answer."
+    },
+    {
+     "finding": "1-safety-fact-3",
+     "action": "applied",
+     "reason": "Paragraph 3 now says \"the first puts raw below ready-to-eat\", the clause's own positional wording."
+    },
+    {
+     "finding": "1-safety-fact-4",
+     "action": "applied",
+     "reason": "The invented reason is gone; paragraph 3 now says the primer leaves that gap where the guide left it, naming the gap without explaining or filling it."
+    },
+    {
+     "finding": "1-safety-fact-5",
+     "action": "applied",
+     "reason": "The next line now reads \"what two of the Level I clauses already show you\", pointing at both the danger zone and FIFO clauses."
+    },
+    {
+     "finding": "1-safety-app-6",
+     "action": "applied",
+     "reason": "Same change as fact-1: \"a short subsection\"."
+    },
+    {
+     "finding": "1-safety-app-7",
+     "action": "applied",
+     "reason": "Same change as fact-2: three lines, hands and towels as vectors, read as two controls and the vectors they answer."
+    },
+    {
+     "finding": "1-safety-app-8",
+     "action": "applied",
+     "reason": "Same change as fact-4: the primer leaves that gap where the guide left it."
+    },
+    {
+     "finding": "1-safety-app-9",
+     "action": "applied",
+     "reason": "Same change as fact-5: \"two of the Level I clauses\" carries the two-clause fact this finding asks for."
+    },
+    {
+     "finding": "1-safety-voice-10",
+     "action": "applied",
+     "reason": "Same change as fact-1: \"a short subsection\"."
+    },
+    {
+     "finding": "1-safety-voice-11",
+     "action": "applied",
+     "reason": "Paragraph 1 now ends on the single sentence \"The only thing asked of you is that you read it and carry it to the line\"; met is stated once, in paragraph 5 with the doors."
+    },
+    {
+     "finding": "1-safety-voice-12",
+     "action": "applied",
+     "reason": "Cut \"and you will read those lines because they are on the page\"; the sentence now runs straight to \"but the cooling law is placed at Level II\"."
+    },
+    {
+     "finding": "1-safety-voice-13",
+     "action": "applied",
+     "reason": "Paragraph 2 now says \"what the guide states and what it leaves out\", since the clause is silent on the crossed pan rather than naming it."
+    },
+    {
+     "finding": "1-safety-voice-14",
+     "action": "applied",
+     "reason": "Same change as fact-2: \"three lines and nothing more\"."
+    },
+    {
+     "finding": "1-safety-voice-15",
+     "action": "applied",
+     "reason": "Same change as fact-4: the kitchen's-chart rule is removed and the primer leaves the gap where the guide left it."
+    },
+    {
+     "finding": "1-safety-voice-16",
+     "action": "applied",
+     "reason": "Paragraph 3 now reads \"the first puts raw below ready-to-eat, the second the guide names as a vector\", the clause's wording and no repetition."
+    },
+    {
+     "finding": "1-safety-voice-17",
+     "action": "applied",
+     "reason": "Same change as fact-5: the next line names \"the Level I clauses\" so it stands alone with a referent."
+    },
+    {
+     "finding": "1-safety-voice-18",
+     "action": "applied",
+     "reason": "The three neighbours in the next line are now separated by semicolons, same words, 321 chars."
+    },
+    {
+     "finding": "1-safety-critic-1",
+     "action": "applied",
+     "reason": "Added the one sentence after the Level II deferral in paragraph 4, pointing to the Service module What We Screened and What We Did Not (confirmed at Level I in 1-service.brief.json) as the room's half asked now, worded without any rule 4 term; the primer is 531 words, paragraph 4 is 846 characters, both inside the limits."
+    }
+   ]
+  },
+  "1-service": {
+   "findings": [
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "Whites go out cold and reds cool.",
+     "because": "The module's outcome sets whites at 7 to 13 C and reds at 15 to 18 C. The top of the white range is a fuller white served chilled, not fridge-cold; \"cold\" tells a server to send a Meursault out at 4 C, which mutes it. Reds at 15 to 18 C are cellar temperature, a touch below the room.",
+     "fix": "Whites go out chilled, reds cool, just under room temperature.",
+     "lens": "fact",
+     "key": "1-service-fact-1",
+     "primer": "1-service"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "Present, open and pour without ceremony, and this one is met.",
+     "because": "The brief's one rule is \"A module is met through its terms: every term of the module recalled met or close in the drill.\" Presenting and pouring is the module's outcome, not what marks it met; paragraph 6 then states the real rule, so the two contradict each other.",
+     "fix": "Present, open and pour without ceremony, and this module's outcome is yours.",
+     "lens": "fact",
+     "key": "1-service-fact-2",
+     "primer": "1-service"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "and met is a cut-off you can run in order",
+     "because": "Same contradiction: the cut-off is the module's outcome; met is the drill recall of its one term (the brief's \"met\" line). Paragraph 3 (\"so met means you can say that\") and paragraph 2 (\"Met here is concrete\") do the same and should read as outcomes too.",
+     "fix": "and its outcome is a cut-off you can run in order",
+     "lens": "fact",
+     "key": "1-service-fact-3",
+     "primer": "1-service"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "when to stop pouring, and how to present and pour when you do.",
+     "because": "\"When you do\" attaches to \"stop pouring\", so the sentence says you present and pour when you stop pouring. The Bottle at the Table is about presenting and pouring a bottle; the cut-off belongs to Responsible Service and the Law.",
+     "fix": "when to stop pouring, and how to present and pour a bottle.",
+     "lens": "fact",
+     "key": "1-service-fact-4",
+     "primer": "1-service"
+    },
+    {
+     "where": "next",
+     "severity": "unclear",
+     "claim": "then the cheese board in The Board: Formula and Families and The Levant, South Asia and the Americas.",
+     "because": "The brief gives only the eight names above; nothing in it says The Levant, South Asia and the Americas is a cheese board module (the standard puts \"cheese boards by country\" at Level III). Name it without asserting its subject.",
+     "fix": "then The Board: Formula and Families, and The Levant, South Asia and the Americas.",
+     "lens": "fact",
+     "key": "1-service-fact-5",
+     "primer": "1-service"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "The module keeps menu format and service school as two separate axes",
+     "because": "The brief's outcome for srv-room says \"The guide keeps MENU FORMAT and SERVICE SCHOOL as two separate axes\": the separation belongs to the guide's definitions, not to the module, which is only the four terms placed here.",
+     "fix": "The guide keeps menu format and service school as two separate axes",
+     "lens": "app",
+     "key": "1-service-app-6",
+     "primer": "1-service"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "are about what you say, and do not say, when a guest speaks to you",
+     "because": "The Room's Vocabulary's four terms are the pass and expediting, the brigade, line slang and service styles; \"86 the halibut\" and \"behind\" are said to the line, not to a guest, so pairing it with the screening module under \"when a guest speaks to you\" misdescribes half the pair.",
+     "fix": "are about words: the ones the room runs on and the one question you never answer from the app.",
+     "lens": "voice",
+     "key": "1-service-voice-7",
+     "primer": "1-service"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "style",
+     "claim": "and how to present and pour when you do",
+     "because": "Repetition inside the primer: the lede already says \"open and pour without ceremony\" and paragraph 5 says \"Present, open and pour without ceremony\"; three tellings of the same phrase in 520 words.",
+     "fix": "and when the bottle goes to the table.",
+     "lens": "voice",
+     "key": "1-service-voice-8",
+     "primer": "1-service"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "misplaced",
+     "claim": "because the rest of the level page assumes it",
+     "because": "A claim about the app that is not one of the doors or the met rule; the brief gives only that The Room's Vocabulary is module 1 and that the door \"The first module.\" opens it.",
+     "fix": "because it is the first module and the first door opens on it.",
+     "lens": "voice",
+     "key": "1-service-voice-9",
+     "primer": "1-service"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "misplaced",
+     "claim": "and take the question to the kitchen",
+     "because": "A rule of the primer's own: the brief's outcome says only \"You never answer an allergen question from the app\" and that you can say what the screen is and what a blank means; it does not say where the question goes, and the guide never supplies what it leaves out.",
+     "fix": "so met means you can say that in your own words to the guest who asks.",
+     "lens": "voice",
+     "key": "1-service-voice-10",
+     "primer": "1-service"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "style",
+     "claim": "one term from the Cocktail & Bar shelf",
+     "because": "The brief lists \"Cocktail & Bar\" as the term's category; \"shelf\" names an app structure the brief does not, and the register samples use no such furniture.",
+     "fix": "one term from Cocktail & Bar",
+     "lens": "voice",
+     "key": "1-service-voice-11",
+     "primer": "1-service"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "style",
+     "claim": "reduced of struck match, and reduced may blow off if you wait",
+     "because": "\"reduced\" is said twice in one clause; the brief's own line is \"reduced (struck match: wait, it may blow off)\".",
+     "fix": "reduced of struck match, which may blow off if you wait.",
+     "lens": "voice",
+     "key": "1-service-voice-12",
+     "primer": "1-service"
+    },
+    {
+     "where": "paragraph 6",
+     "severity": "unclear",
+     "claim": "The first module, which opens The Room's Vocabulary, The track, all 27 modules, and the Drill, which runs",
+     "because": "Three door names, two of them carrying their own comma-bound glosses, in one comma-separated list: on a phone \"The Room's Vocabulary, The track, all 27 modules\" reads as one run of items, and the reader cannot tell where one door ends and the next begins. The brief lists the doors as \"The first module.\", \"The track: all 27 modules.\" and \"Drill: ...\".",
+     "fix": "The first module, which opens The Room's Vocabulary; The track, all 27 modules; and the Drill, which runs",
+     "lens": "voice",
+     "key": "1-service-voice-13",
+     "primer": "1-service"
+    }
+   ],
+   "dispositions": [
+    {
+     "finding": "1-service-fact-1",
+     "action": "applied",
+     "reason": "Paragraph 5 now reads \"Whites go out chilled, reds cool, just under room temperature\", matching the module's 7 to 13 C whites and 15 to 18 C reds without sending a white out fridge-cold."
+    },
+    {
+     "finding": "1-service-fact-2",
+     "action": "applied",
+     "reason": "Paragraph 5 now ends \"Present, open and pour without ceremony, and that is this module's outcome\", so only paragraph 6 states the met rule (every term recalled met or close in the drill)."
+    },
+    {
+     "finding": "1-service-fact-3",
+     "action": "applied",
+     "reason": "Paragraph 4 now says \"its outcome is a cut-off you can run in order\", paragraph 2 says \"Its outcome is concrete\" and paragraph 3 says \"so the outcome is saying that in your own words\", leaving met to the drill rule in paragraph 6."
+    },
+    {
+     "finding": "1-service-fact-4",
+     "action": "applied",
+     "reason": "Paragraph 1 now ends \"when to stop pouring, and the bottle you carry to the table\", so presenting and pouring no longer hangs on stopping the pour."
+    },
+    {
+     "finding": "1-service-fact-5",
+     "action": "applied",
+     "reason": "The next line now names the last two modules without a subject: \"then The Board: Formula and Families, and The Levant, South Asia and the Americas\"."
+    },
+    {
+     "finding": "1-service-app-6",
+     "action": "applied",
+     "reason": "Paragraph 2 now says \"The guide keeps menu format and service school as two separate axes\", as the srv-room outcome states."
+    },
+    {
+     "finding": "1-service-voice-7",
+     "action": "applied",
+     "reason": "Paragraph 1 now describes the first pair as \"about words: the ones the room runs on and the one question you never answer from the app\", which covers line slang said to the line as well as the screening habit."
+    },
+    {
+     "finding": "1-service-voice-8",
+     "action": "applied",
+     "reason": "The third telling of \"present and pour\" in paragraph 1 is gone; the phrase is replaced by \"the bottle you carry to the table\" (worded to also resolve fact-4), leaving the lede and paragraph 5."
+    },
+    {
+     "finding": "1-service-voice-9",
+     "action": "applied",
+     "reason": "Paragraph 2 now says to take The Room's Vocabulary first \"because it is the first module and the first door opens on it\", which is all the brief gives."
+    },
+    {
+     "finding": "1-service-voice-10",
+     "action": "applied",
+     "reason": "\"and take the question to the kitchen\" is removed; paragraph 3 now ends \"so the outcome is saying that in your own words to the guest who asks\", which stays inside the srv-allergens outcome."
+    },
+    {
+     "finding": "1-service-voice-11",
+     "action": "applied",
+     "reason": "Paragraph 4 now reads \"one term from Cocktail & Bar\", the brief's category name with no invented shelf."
+    },
+    {
+     "finding": "1-service-voice-12",
+     "action": "applied",
+     "reason": "Paragraph 5 now reads \"reduced of struck match, which may blow off if you wait\", saying reduced once."
+    },
+    {
+     "finding": "1-service-voice-13",
+     "action": "applied",
+     "reason": "Paragraph 6 now separates the three doors with semicolons: \"The first module, which opens The Room's Vocabulary; The track, all 27 modules; and the Drill, which runs ...\"."
+    }
+   ]
+  }
+ },
+ "critic": {
+  "ok": false,
+  "problems": [
+   {
+    "key": "1-dishes",
+    "issue": "Paragraph 3 ends: \"By the third of these, three of the semester's four moves should be in your hands: sear, deglaze, plate. The mount is the fourth, and none of these three teaches it.\" That is wrong. The Shrimp Scampi recipe (src/lib/data/recipes.full.json) has the step \"Mount with butter, add lemon; return shrimp 1 min to finish\" and its note says \"The sauce itself is a butter mount: wine reduced, then cold butter swirled in off the heat.\" A cook told the scampi does not teach the mount will be corrected at the pass.",
+    "fix": "Rewrite the two sentences so the scampi carries the mount. Replace \"Shrimp Scampi repeats the sear and the deglaze from the piccata\" with \"Shrimp Scampi repeats the sear and the deglaze from the piccata and adds the mount, cold butter swirled into the reduced wine off the heat\", and replace the last two sentences of the paragraph with \"By the third of these, the semester's four moves should be in your hands: sear, deglaze, mount, plate.\" Nothing else in the primer changes."
+   },
+   {
+    "key": "1-deck",
+    "issue": "Paragraph 3 says \"Salmon, Tuna, Swordfish and Halibut each carry a doneness note\" and \"braised Short Rib has no temperature to ask for\". The Salmon card (fd_0117) and the Halibut card (fd_0113) carry no doneness note anywhere in gist, why, line or not-this; only Tuna (served raw or seared rare) and Swordfish (cooked further, in its not-this) do. The Short Rib card (fd_0092) says nothing about temperature; its own text is \"braised until it yields\". Both sentences describe what the cards say, and a reader opening the cards will not find it.",
+    "fix": "Replace \"Brisket, Short Rib, Shank and Shoulder want hours of low heat, and braised Short Rib has no temperature to ask for.\" with \"Brisket, Short Rib, Shank and Shoulder want hours of low heat until the meat yields, and none of them is asked for a doneness.\" Replace \"Salmon, Tuna, Swordfish and Halibut each carry a doneness note, Flounder, Snapper and Trout are the mild, lean fish, and Shrimp, Scallops, Oysters and Clams each a serving note.\" with \"Salmon, Tuna, Swordfish and Halibut are the fish sold thick, as portions or steaks, and Tuna is the one that goes out rare; Flounder, Snapper and Trout are the mild, lean fish; Shrimp, Scallops, Oysters and Clams each carry a sizing or serving note, shrimp by the count, oysters on the half shell.\" Cites are unchanged."
+   },
+   {
+    "key": "1-lexicon",
+    "issue": "Two points are made again here that other primers on the same page already make. Paragraph 5 lists the repair table's levers for flat (salt, acid, umami) and salty (dilute, bulk, counter), which is the whole of the palate primer's paragraphs 2 and 3. Paragraph 2 opens the pan verbs with \"a recipe says cook the onions and means one of three things\", which is the techniques primer's paragraph 2 line word for word in sense. Read together, the level page says each of these twice.",
+    "fix": "In paragraph 5 replace \"Flat and salty, the two faults under The Palate on this page, open the Repair Table, which gives each its levers in order of gentleness: for flat, salt first, then acid, then umami; for salty, dilute, bulk or counter.\" with \"Flat and salty, the two faults under The Palate on this page, open the Repair Table, which gives each its levers in order of gentleness; The Palate primer walks them, so read the entry here for the chart and take the levers there.\" In paragraph 2 replace \"Then the pan verbs, because a recipe says cook the onions and means one of three things. Sweat vs. Sauté vs. Sear names them,\" with \"Then the pan verbs. Sweat vs. Sauté vs. Sear sets the three apart by heat and intent,\". The cites the-repair-table-balancing-a-dish and sweat-vs-saute-vs-sear stay named and stay cited."
+   },
+   {
+    "key": "1-safety",
+    "issue": "Paragraph 4 says the FIFO clause names HACCP and \"a service-critical and legal-critical protocol beside it\", then \"Both are placed at Level II, so at Level I you take the tape and the pen and leave the system for later.\" The service primer on the same page places the room's version of that protocol at Level I, in What We Screened and What We Did Not: you never answer a guest's question about what is in a dish from the app. Read side by side, one primer defers the protocol to Level II and the other asks it now, and a commis is left unsure which is true. Both are right about their own subsection; the safety primer just does not say so.",
+    "fix": "After \"Both are placed at Level II, so at Level I you take the tape and the pen and leave the system for later.\" add one sentence: \"The room's half of that protocol is not deferred, though: Service on this page already asks it of you, in What We Screened and What We Did Not, as the one question you never answer from the app.\" Keep the wording free of the words rule 4 bans (no allergen, allergy, contains, safe for). The primer grows by about thirty words and stays under the limit."
+   }
+  ],
+  "notes": "Things the operator may want, none of them a primer fault. (1) The Level test sentence (untimed, across the subsections, ends on what you missed with the right answers) appears near-verbatim in six of the eight primers (dishes, lexicon, plates, palate, safety, service) because every brief carries a levelTest field; on one level page that is the same sentence six times. If the level page states it once at the foot, the primers could drop it, or the field could be marked as already shown. (2) Service module 2 (srv-allergens) is met through its one term, \\\"Food Safety: The Chef-Owner's Non-Negotiables\\\", but that term is not among the 266 Level I Lexicon items; the drill uses the whole track as its field so nothing is barred, but the module sits at Level I while its only term appears to be placed higher in the Lexicon. Worth a look at the placement. (3) The Plates brief lists only three of the five corrections for Culinary Spices and for The World of Culinary Mushrooms (getsWrong is truncated to three); the plates primer handled it honestly (\\\"three of them are these\\\"), but an author cannot check the other two. (4) Minor and not flagged as a problem: the techniques primer says knife cuts \\\"sit on more recipes than almost anything else here\\\" (150); sweating (198), salted water (188) and the bare simmer (183) carry more, so it is defensible but loose. (5) Verified as correct and left alone: every technique mark quoted in the techniques primer, the deck's 20 methods and 9 language cards, the lexicon's 61 vegetables and 25 cuts, the Chuck and honing definitions, the repair table's \\\"in order of gentleness\\\", all four plate correction counts, the service outcomes, and every name in every next line against neighbours.above."
+ }
+}

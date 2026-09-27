@@ -68,6 +68,7 @@ describe('nothing is written until every gate has spoken', () => {
 			'floorDeckProblems',
 			'stationProblems',
 			'plateProblems',
+			'primerProblems',
 			'levelProblems'
 		]) {
 			const pushedAt = buildData.indexOf(`problems.push(...${name})`);

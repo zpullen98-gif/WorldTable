@@ -294,6 +294,85 @@ const cards = [
 		traps: [
 			{ says: 'Eggs cooked in a pan and folded over a filling, often with cheese', why: 'That is an omelette. This is baked in a deep dish and rises on whipped whites.' }
 		]
+	},
+	{
+		id: 'fd_0341',
+		term: 'Dacquoise',
+		level: 3,
+		say: 'dah-KWAHZ',
+		gist: 'Crisp, chewy nut meringue baked flat as a cake layer or base',
+		guest: "It's a thin baked meringue made with ground nuts, crisp at the edge and a little chewy inside. It brings crunch and a toasty nut flavor.",
+		why: 'Egg whites are whipped with sugar, folded with ground almonds or hazelnuts, spread in discs and baked until just set. The nuts and the short bake keep it from drying brittle like a plain meringue, so it eats crisp at the edge and tender within, like a large flat macaron shell.',
+		madeWith: ['egg white', 'sugar', 'almonds', 'often hazelnuts', 'sometimes wheat flour'],
+		origin: 'French, named for Dax in the southwest of France',
+		notThis: 'Not a plain meringue. The ground nuts make it tender and chewy where a plain meringue is brittle and hollow.',
+		seeAlso: ['fd_0238', 'fd_0242', 'fd_0348'],
+		confusedWith: ['fd_0240'],
+		line: 'Hazelnut dacquoise, milk chocolate crémeux, roasted pear',
+		traps: [
+			{ says: 'Airy sponge of whole eggs, flour and melted butter, cut into layers', why: 'It is not a sponge cake. It is a baked meringue of egg whites, sugar and ground nuts.' },
+			{ says: 'Sweet nut sauce spooned over a plated dessert at the last moment', why: 'It is a baked, crisp layer, not a sauce. The name sounds like a sauce and is not one.' }
+		]
+	},
+	{
+		id: 'fd_0342',
+		term: 'Canelé',
+		level: 3,
+		say: 'kan-uh-LAY',
+		aliases: ['Cannelé', 'Canelé de Bordeaux'],
+		gist: 'Fluted Bordeaux cake, dark caramel shell, soft custardy middle',
+		guest: "It's a little cake from Bordeaux, baked in a fluted mold until the outside turns to dark, crisp caramel. Inside it's soft custard with rum and vanilla.",
+		why: 'A thin batter of milk, eggs, flour, sugar, butter, rum and vanilla goes into fluted copper molds coated with beeswax and bakes very hot. The mold and the wax caramelize the outside almost to black while the middle sets like soft custard. It is best the day it is baked.',
+		madeWith: ['milk', 'egg', 'wheat flour', 'butter', 'sugar', 'rum', 'vanilla'],
+		origin: 'Bordeaux, France; the name refers to the fluted mold',
+		notThis: 'Not burnt. The near-black shell is caramelized sugar and butter, and a pale one is the failure.',
+		recipe: 'caneles-de-bordeaux',
+		seeAlso: ['fd_0352', 'fd_0262', 'fd_0250'],
+		line: 'Warm canelé, crème fraîche, poached quince',
+		traps: [
+			{ says: 'Small pastry whose near-black shell means it was baked too long', why: 'The dark shell is deliberate caramelized sugar and butter, and it is the sign of one baked right.' },
+			{ says: 'Fluted cup of dark chocolate cake baked with a molten center', why: 'It is not chocolate cake. The dark color is caramel and the inside is a rum and vanilla custard.' }
+		]
+	},
+	{
+		id: 'fd_0343',
+		term: 'Kouign-Amann',
+		level: 3,
+		say: 'kween-ah-MAHN',
+		gist: 'Layered butter pastry baked until its sugar turns to caramel',
+		guest: "It's a French butter pastry, croissant-style dough folded with sugar and salted butter and baked until the sugar becomes a crackly caramel shell.",
+		why: 'Yeasted bread dough is folded around salted butter and sugar like a croissant. In the oven the butter steams the layers apart while the sugar melts and caramelizes against the hot pan, so the outside shatters like toffee and the inside stays soft and layered.',
+		madeWith: ['wheat flour', 'salted butter', 'sugar', 'yeast'],
+		origin: 'Breton, from Douarnenez in Brittany; the words mean cake and butter',
+		notThis: 'Not puff pastry or a sugared croissant. The sugar is folded inside the yeasted dough and caramelizes in the oven.',
+		recipe: 'kouign-amann',
+		seeAlso: ['fd_0235', 'fd_0028'],
+		confusedWith: ['fd_0244'],
+		line: 'Kouign-Amann, salted caramel, cider-poached apple',
+		traps: [
+			{ says: 'Plain croissant rolled in sugar after it comes out of the oven', why: 'The sugar goes inside the folds before baking and caramelizes in the heat. Nothing is added after.' },
+			{ says: 'Dense Breton butter cake baked from a smooth creamed batter', why: 'It is layered yeasted dough, not a creamed batter, and its crust is sugar caramelized from inside the folds.' }
+		]
+	},
+	{
+		id: 'fd_0344',
+		term: 'Sablé',
+		level: 3,
+		say: 'sah-BLAY',
+		aliases: ['Sablé Breton'],
+		gist: 'Crumbly French shortbread, often a crisp base under dessert',
+		guest: "It's a French shortbread, crisp and crumbly, rich with butter and often a touch of salt. It comes as a cookie or as the crunchy base under fruit and cream.",
+		why: 'Butter is worked into flour and sugar with an egg yolk and almost no liquid, so it stays tender and bakes into fine sandy crumbs, which is what the name means. The Breton version creams soft salted butter with sugar and more yolk, so it bakes thicker and richer.',
+		madeWith: ['butter', 'wheat flour', 'sugar', 'egg yolk', 'salt', 'sometimes almonds'],
+		origin: 'French for sandy, after its crumbly texture',
+		pairs: 'Strawberries, lemon curd, whipped cream, ice cream',
+		notThis: 'Not a crumb crust and not a soft cookie. It is baked as one crisp piece and snaps rather than bends.',
+		seeAlso: ['fd_0241', 'fd_0352'],
+		line: 'Strawberries, sablé breton, crème fraîche, basil',
+		traps: [
+			{ says: 'Soft, chewy cookie leavened to rise thick and cakey like a scone', why: 'It is a crisp, crumbly shortbread. Softness or chew means it was underbaked or has gone stale.' },
+			{ says: 'Thin crisp caramel wafer named for its sand-colored finish', why: 'The name means sandy for its crumbly texture, not its color, and it is a thick shortbread, not a wafer.' }
+		]
 	}
 ];
 

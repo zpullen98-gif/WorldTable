@@ -103,8 +103,11 @@ export const LEDGER_PATH = join(HERE, 'floor-deck.ledger.json');
 export const DECK_GZ_CEILING = 140_000;
 
 /** Flip to true when the last planned card is written. From then on a stub, a
- *  missing packet term or a packet error with no trap fails the build. */
-export const DECK_COMPLETE = true;
+ *  missing packet term or a packet error with no trap fails the build.
+ *  OFF from 27 Sep 2026 while the Level III and IV expansion (55 minted
+ *  stubs, tools/deck/README.md "Expanding at Levels III and IV") is written;
+ *  back ON when the last section merges. */
+export const DECK_COMPLETE = false;
 
 /**
  * The four brigade levels, and the ONLY place their names are written. A card

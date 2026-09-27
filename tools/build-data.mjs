@@ -48,6 +48,7 @@ import { gateFloorDeck, buildFloorDeck } from './derive/floor-deck.mjs';
 import { buildStations } from './derive/stations.mjs';
 import { buildLevels } from './derive/levels.mjs';
 import { buildPlates } from './derive/plates.mjs';
+import { buildPrimers } from './derive/primers.mjs';
 import { LADDERS, CUPS, TRIALS, PASS_AT } from './derive/calibration.mjs';
 import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
 import { advanceWait, QUICK_MINUTES } from './derive/advance.mjs';
@@ -1097,7 +1098,7 @@ const { stations, problems: stationProblems } = buildStations(lexicon, technique
 const { plates: platesData, problems: plateProblems, notes: plateNotes } = buildPlates({ deck: floorDeck.cards, lexicon });
 for (const n of plateNotes) console.log(`  note: ${n}`);
 
-const { levels, problems: levelProblems } = buildLevels({
+const { levels, problems: levelProblems, universe: levelUniverse } = buildLevels({
 	study,
 	techniques,
 	lexicon,
@@ -1147,11 +1148,19 @@ write('sanitation.json', sanitation);
 write('service-track.json', serviceTrack);
 write('drills.json', drills);
 write('floor-deck.json', floorDeck);
+/*
+ * The primers: one reader per level per subsection, gated against the
+ * levels' own items (every cite an item placed there that the text names).
+ * See tools/derive/primers.mjs and tools/primers/README.md.
+ */
+const { primers: primersData, problems: primerProblems } = buildPrimers({ levels, universe: levelUniverse, deckCards: floorDeck.cards });
+
 write('floor-deck.traps.json', floorDeckTraps);
 write('floor-deck.index.json', floorDeckIndex);
 write('stations.json', stations);
 write('levels.json', levels);
 write('plates.json', platesData);
+write('primers.json', primersData);
 write('calibration.json', {
 	cups: CUPS,
 	trials: TRIALS,
@@ -1967,6 +1976,7 @@ problems.push(...drillProblems);
 problems.push(...floorDeckProblems);
 problems.push(...stationProblems);
 problems.push(...plateProblems);
+problems.push(...primerProblems);
 problems.push(...levelProblems);
 
 /**

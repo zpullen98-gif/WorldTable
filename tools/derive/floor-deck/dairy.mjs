@@ -323,7 +323,11 @@ const cards = [
 		traps: [
 			{ says: 'Aged cheese rinsed in fresh water to mellow it into a clean, mild taste', why: 'It is washed in brine, sometimes with alcohol, and that makes the rind stronger and more pungent.' }
 		]
-	}
+	},
+	{ id: 'fd_0325', term: 'Stracciatella', planned: true },
+	{ id: 'fd_0326', term: 'Triple Crème', planned: true },
+	{ id: 'fd_0327', term: 'Taleggio', planned: true },
+	{ id: 'fd_0328', term: 'Robiola', planned: true }
 ];
 
 export default cards;

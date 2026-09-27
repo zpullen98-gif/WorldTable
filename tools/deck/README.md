@@ -129,6 +129,53 @@ filed under the id, so it is never typed, changed, reused or moved to another
 term: `--accept-rename <id>` records a deliberate rename, `--retire <id> "<why>"`
 retires one for good.
 
+## Expanding at Levels III and IV
+
+At the first placement Level IV held exactly the fourteen cards the floor
+asks for and five sections held no Level IV card at all (methods, custards,
+language, cuts, bread). The expansion (27 Sep 2026) adds words at III and
+IV, section by section, decided by agents and read by a person before a
+stub is written:
+
+1. `node tools/deck/roster-brief.mjs` writes `out/roster.<section>.brief.json`
+   per section (the section's cards with levels, the level standard, the
+   Lexicon's III and IV terms with no card as candidates, the whole deck for
+   duplicates) and prints the Workflow `args`.
+2. `roster.workflow.js` (a copy in the session's working directory): a
+   proposer per section (two to four words at III or IV, each with the
+   reason, the guest's question and a menu line), a challenger from the
+   floor (on menus? already taught under an alias? really III or IV?), a
+   reconciler, then one critic across the deck for duplicates and balance.
+3. `node tools/deck/add-stubs.mjs <run.json>` adds `{ id: 'NEW', term,
+   planned: true }` to each section module through the serializer, refuses
+   a term the deck carries under any term or alias, records each word's
+   intended level and reason in `out/expansion.levels.json` (which
+   `brief.mjs` reads, so the writer gives the card that level: rule 9 in
+   the author workflow) and the argument in `audit/expansion.json`.
+4. `node tools/deck/mint-ids.mjs`, then `brief.mjs <section>` for each
+   section with stubs.
+5. `author-all.workflow.js` runs `author-section.workflow.js` as a child per
+   section in parallel (`args`: `{ childPath, sections: [{ key, args }] }`);
+   `node tools/deck/split-run.mjs <run.json>` writes `out/run.<section>.json`
+   for `take.mjs`. Then validate, merge, build:data, measure and
+   check-displacement per section, as above.
+
+**Where it stands (27 Sep 2026).** The roster placed 55 words (41 at III,
+14 at IV). Eight sections are written, refuted, corrected and merged:
+bread, custards, cuts, language, pantry, preparations, sauces, starches (31
+cards; the deck is 312, Sous Chef 61, Chef 19). The run hit the account's
+usage limit before the correctors of cured, dairy, fish, meats and methods
+answered their refuters, and before the mushrooms author wrote at all, so
+those 24 cards are still `planned: true` stubs and `DECK_COMPLETE` is off
+until they land. Their drafts and findings are in `tools/deck/out/run.<section>.json`;
+the cheapest finish is `brief.mjs <section>` for the six and one
+`author-all.workflow.js` run over them (the stubs keep their minted ids),
+then take, validate, merge, and `DECK_COMPLETE = true`. Two things the run
+taught: the author workflow's card schema has no `level` property, so a
+structured result drops it and the operator fills it from
+`out/expansion.levels.json` before validating; and a guest line of three
+short sentences fails the two-sentence rule more often than any other.
+
 ## What the refuters are for
 
 The atlas's refute passes caught, per batch, outright safety errors that read

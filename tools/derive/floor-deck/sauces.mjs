@@ -388,6 +388,78 @@ const cards = [
 		traps: [
 			{ says: 'Chinese sweet and sour sauce of pineapple, ketchup and cornstarch', why: 'It is Italian, built on vinegar with sugar or honey, often with raisins and onion.' }
 		]
+	},
+	{
+		id: 'fd_0333',
+		term: 'Bordelaise',
+		level: 3,
+		say: 'bor-duh-LAYZ',
+		gist: 'Red wine and shallot reduction on brown stock, finished with marrow',
+		guest: "It's the classic red wine steak sauce. Shallots and wine cook down into a rich brown sauce, often with bone marrow folded in at the end.",
+		why: 'Shallots, red wine, thyme and bay reduce hard, then simmer into demi-glace, the long-cooked brown veal sauce, so its body is gelatin from bones. Diced marrow stirred in at the end adds silky, beefy richness. Think red wine jus with more depth.',
+		madeWith: ['red wine', 'shallots', 'traditionally veal stock', 'bone marrow', 'butter', 'sometimes wheat flour'],
+		origin: 'French, named for Bordeaux and its red wine',
+		pairs: 'Ribeye, filet, hanger steak, roasted marrow',
+		notThis: 'Not plain red wine jus: it starts from demi-glace and carries marrow. New Orleans uses the name for a garlic butter.',
+		seeAlso: ['fd_0061'],
+		confusedWith: ['fd_0206', 'fd_0199'],
+		line: 'Dry-aged strip steak, bordelaise, potato purée'
+	},
+	{
+		id: 'fd_0334',
+		term: 'Gribiche',
+		level: 3,
+		say: 'gree-BEESH',
+		gist: 'Cold sauce of hard-cooked egg, mustard, oil, pickles and capers',
+		guest: "It's a cold French egg sauce. Cooked yolks are mashed with mustard and oil until creamy, then chopped egg white, capers, cornichons and herbs go in.",
+		why: 'The yolks are cooked, then mashed with mustard and vinegar and fed oil like a mayonnaise, so it is creamy but looser and a little grainy. Chopped whites, capers, cornichons and herbs make it a sharp relish that cuts rich or fried food.',
+		madeWith: ['egg', 'mustard', 'oil', 'vinegar', 'cornichons', 'capers', 'herbs'],
+		origin: 'French, from the classical cold sauce repertoire',
+		pairs: 'Asparagus, poached leeks, sweetbreads, fried fish',
+		notThis: 'Not remoulade, a raw-yolk mayonnaise. Classically these yolks are hard-cooked, though some kitchens start from mayonnaise.',
+		seeAlso: ['fd_0278', 'fd_0279', 'fd_0054'],
+		confusedWith: ['fd_0209'],
+		line: 'Grilled asparagus, sauce gribiche, toasted hazelnut',
+		traps: [
+			{ says: 'Smooth pale sauce of raw yolks and oil, no garlic and nothing chopped in', why: 'Classically the yolks are hard-cooked, and chopped egg white, capers and cornichons run all through it.' }
+		]
+	},
+	{
+		id: 'fd_0335',
+		term: 'Soubise',
+		level: 3,
+		say: 'soo-BEEZ',
+		gist: 'Onions cooked soft and pale, then bound with white sauce or cream',
+		guest: "It's a silky, sweet onion sauce. The onions cook slowly in butter without browning, then go into a creamy white sauce, so it's mild, not sharp.",
+		why: 'Onions sweated slowly in butter lose their bite and turn sweet, kept pale so the sauce stays ivory. Classically they are bound with béchamel or cooked with rice and puréed with cream, then passed smooth, so it is velvety without being heavy.',
+		madeWith: ['onion', 'butter', 'milk', 'wheat flour', 'often cream', 'sometimes rice'],
+		origin: 'French, named for the Prince de Soubise, an 18th century marshal',
+		pairs: 'Lamb, pork chop, roast chicken, sweetbreads, eggs',
+		notThis: 'Not caramelized onion. Nothing browns, so it is pale, sweet and creamy, not dark and jammy.',
+		seeAlso: ['fd_0208', 'fd_0028'],
+		line: 'Lamb loin, onion soubise, charred spring onion',
+		traps: [
+			{ says: 'Dark onion gravy simmered with beef broth until deep brown and glossy', why: 'The onions are kept pale and sweet, and the sauce stays ivory and creamy, never deep brown.' }
+		]
+	},
+	{
+		id: 'fd_0336',
+		term: 'Nage',
+		level: 4,
+		say: 'NAHZH',
+		gist: 'Light wine broth that seafood poaches in, then arrives in',
+		guest: "It's a light, fragrant broth of white wine, vegetables and herbs. Seafood poaches in it and arrives swimming in it, so the broth is the sauce.",
+		why: 'The base is a court bouillon, water and white wine simmered briefly with carrot, shallot, celery and herbs. Shellfish or fish poach gently in it and arrive in that liquid, often with butter whisked in, so it eats as a broth, not a coating sauce.',
+		madeWith: ['white wine', 'shallots', 'carrot', 'celery', 'herbs', 'often butter', 'sometimes cream'],
+		origin: 'French, à la nage, served swimming in its broth',
+		pairs: 'Lobster, langoustine, scallops, halibut, mussels',
+		notThis: 'Not consommé, clarified glass-clear and served as soup. This is a simple poaching broth served as the sauce.',
+		seeAlso: ['fd_0214', 'fd_0034', 'fd_0136'],
+		confusedWith: ['fd_0204'],
+		line: 'Butter-poached lobster à la nage, spring vegetables',
+		traps: [
+			{ says: 'Thick shellfish soup puréed with rice, cream and brandy', why: 'It is a thin poaching broth, never puréed with rice into a thick soup.' }
+		]
 	}
 ];
 

@@ -1207,6 +1207,247 @@
 				"notes": "condensed to a mean of 687 characters against a target of 700"
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-27",
+			"pass": "revision",
+			"cards": [
+				"fd_0313",
+				"fd_0314",
+				"fd_0315",
+				"fd_0316"
+			],
+			"findings": [
+				{
+					"id": "fd_0316",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "often acorn-fed",
+					"because": "Acorn-fed (bellota) animals are the minority: in the 2019-2020 Spanish campaign about 20 per cent of Ibérico pigs were bellota, 60 per cent indoor cebo (grain-fed) and 20 per cent cebo de campo. 'Often' would have a server telling guests the pork is acorn-fed when most is not.",
+					"fix": "some acorn-fed",
+					"lens": "fact",
+					"key": "cuts-1-fact-1"
+				},
+				{
+					"id": "fd_0316",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "hidden under the back fat",
+					"because": "The secreto lies in the armpit region between shoulder blade and ribcage, at the upper end of the flank, behind a thick layer of fat. Back fat (tocino) runs along the spine, which is not where this cut hides; the fact that matters is only that fat covers it.",
+					"fix": "hidden under thick fat",
+					"lens": "fact",
+					"key": "cuts-1-fact-2"
+				},
+				{
+					"id": "fd_0316",
+					"field": "traps",
+					"severity": "style",
+					"claim": "Slow-braised pork shoulder cut, cooked for hours until it falls apart",
+					"because": "This is a true description of the roster's Shoulder card (pork shoulder braised or slow-roasted to pulled pork), which the house rule forbids: a trap may not describe another card. The trap is also not the mistake people make about secreto; the common error is taking it for a lean loin cut or the cured product.",
+					"fix": "says: Lean pork tenderloin from a Spanish pig, roasted whole and sliced. why: It is a thin, fatty sheet, not a lean loin roast.",
+					"lens": "fact",
+					"key": "cuts-1-fact-3"
+				},
+				{
+					"id": "fd_0316",
+					"field": "aliases",
+					"severity": "unclear",
+					"claim": "Secreto de Cerdo",
+					"because": "'Secreto de cerdo' is the generic name for the cut from any pig, including white breeds, so it is not another name for the SAME thing as Secreto Ibérico; only 'secreto de cerdo ibérico' is. The Spanish regional synonym for the cut itself is 'cruceta'.",
+					"fix": "Cruceta",
+					"lens": "fact",
+					"key": "cuts-1-fact-4"
+				},
+				{
+					"id": "fd_0314",
+					"field": "traps",
+					"severity": "style",
+					"claim": "Tough shoulder cut that has to braise for hours before it softens",
+					"because": "This is a true description of the roster's Shoulder card (a braising cut), which the house rule forbids: a trap must not describe another card. A tester who has learned Shoulder will read it as that card, not as a wrong answer.",
+					"fix": "says: Tail of the tenderloin, tied into a small roast and sold cheap. why: It is a shoulder muscle, nowhere near the tenderloin; it only eats like one.",
+					"lens": "fact",
+					"key": "cuts-1-fact-5"
+				},
+				{
+					"id": "fd_0313",
+					"field": "traps",
+					"severity": "style",
+					"claim": "Lean braising cut from the shoulder that needs hours in liquid",
+					"because": "Apart from the word 'lean', this describes the roster's Shoulder card (chuck and pork shoulder, braised for hours), and a new hire will read it as that card rather than as a false option. A trap may not be a true description of another card; the real mistake is taking the Denver for a rebranded rib cut.",
+					"fix": "says: A ribeye trimmed of its cap and sold under a cheaper name. why: It is a separate chuck muscle from under the shoulder blade, not a trimmed ribeye.",
+					"lens": "fact",
+					"key": "cuts-1-fact-6"
+				},
+				{
+					"id": "fd_0313",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Marbled steak seamed from under the shoulder blade, grilled hot",
+					"because": "\"Seamed\" is butcher jargon a third-day server has never heard, and this line is a test answer option. Plain \"cut from\" says the same thing.",
+					"fix": "Marbled steak cut from under the shoulder blade, grilled hot",
+					"lens": "floor",
+					"key": "cuts-1-floor-7"
+				},
+				{
+					"id": "fd_0313",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It eats rich and beefy, close to a ribeye.",
+					"because": "\"It eats rich\" is trade talk; said to a guest it sounds read off a card. Plain \"it's\" is what a server would actually say.",
+					"fix": "It's rich and beefy, close to a ribeye.",
+					"lens": "floor",
+					"key": "cuts-1-floor-8"
+				},
+				{
+					"id": "fd_0313",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "seamed out by hand",
+					"because": "\"Seamed out\" is seam-butchery jargon; the server needs a phrase they can repeat to a guest who asks the second question.",
+					"fix": "cut out by hand",
+					"lens": "floor",
+					"key": "cuts-1-floor-9"
+				},
+				{
+					"id": "fd_0314",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "It is seamed out by hand, so it is scarce and sold whole.",
+					"because": "Same jargon: a new hire cannot repeat \"seamed out\" and does not know it means cut out along the muscle's natural seams.",
+					"fix": "It is cut out by hand, so it is scarce and sold whole.",
+					"lens": "floor",
+					"key": "cuts-1-floor-10"
+				},
+				{
+					"id": "fd_0315",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "One roast means one doneness for the whole piece, classically medium rare.",
+					"because": "The floor fact a server needs is that the two guests must agree on a doneness before the order goes in; \"the whole piece\" buries that.",
+					"fix": "One roast, so both guests share one doneness, classically medium rare.",
+					"lens": "floor",
+					"key": "cuts-1-floor-11"
+				},
+				{
+					"id": "fd_0315",
+					"field": "why",
+					"severity": "style",
+					"claim": "Credited to the French writer Chateaubriand's chef, early 1800s.",
+					"because": "The stacked possessive reads badly aloud; the dish is attributed to the chef (Montmireil) of the writer François-René de Chateaubriand, so put the chef first.",
+					"fix": "Credited to the chef of the writer Chateaubriand, early 1800s.",
+					"lens": "floor",
+					"key": "cuts-1-floor-12"
+				},
+				{
+					"id": "fd_0316",
+					"field": "aliases",
+					"severity": "wrong",
+					"claim": "Secreto de Cerdo",
+					"because": "Secreto de cerdo is the same cut from any pig, and on Spanish menus without \"ibérico\" it is usually white pork. Listing it as an alias tells a server plain secreto is Ibérico, which is the whole selling point of this card.",
+					"fix": "Secreto de Bellota",
+					"lens": "floor",
+					"key": "cuts-1-floor-13"
+				},
+				{
+					"id": "fd_0315",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "classically with béarnaise, a tarragon butter sauce.",
+					"because": "Béarnaise is an egg-yolk emulsion mounted with butter over a wine-vinegar and tarragon reduction. Calling it a butter sauce aloud tells a guest with an egg allergy it is only butter, which is an assurance the server cannot give.",
+					"fix": "classically with béarnaise, an egg yolk and butter sauce.",
+					"lens": "safety",
+					"key": "cuts-1-safety-14"
+				},
+				{
+					"id": "fd_0315",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "often egg yolk",
+					"because": "The card itself names béarnaise as the classic sauce, and béarnaise always has egg yolk, so the yolk is classic, not occasional. The classic reduction is also white wine and wine vinegar, an alcohol a guest may need flagged, and the list omits it.",
+					"fix": "beef, butter, egg yolk, often white wine, often tarragon",
+					"lens": "safety",
+					"key": "cuts-1-safety-15"
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "cuts-1-fact-1",
+					"action": "applied",
+					"reason": "Changed 'often acorn-fed' to 'some acorn-fed' in the why: bellota animals are a minority of the Ibérico herd, most being grain-fed cebo."
+				},
+				{
+					"finding": "cuts-1-fact-2",
+					"action": "applied",
+					"reason": "Changed 'hidden under the back fat' to 'hidden under a layer of fat' in the why, and made the same change in the second trap's why, since the cut sits behind the shoulder at the armpit, not along the spine."
+				},
+				{
+					"finding": "cuts-1-fact-3",
+					"action": "applied",
+					"reason": "Replaced the braised-shoulder trap (a true description of the Shoulder card) with the lean-loin mistake: 'Lean pork loin cut from a Spanish pig, sold as a thick roast', with a why saying it is a thin fatty sheet from behind the shoulder; worded as a loin roast so it does not describe the Tenderloin card either."
+				},
+				{
+					"finding": "cuts-1-fact-4",
+					"action": "applied",
+					"reason": "Removed 'Secreto de Cerdo' (the generic cut from any pig) and added 'Cruceta', the Spanish regional synonym confirmed by Salamanca butchers' listings; also removed bare 'Secreto' for the same reason."
+				},
+				{
+					"finding": "cuts-1-fact-5",
+					"action": "applied",
+					"reason": "Replaced the braise-for-hours trap (a true description of the Shoulder card) with 'Tail of the tenderloin, tied into a small roast and sold cheap' and the why that it is a shoulder muscle nowhere near the tenderloin."
+				},
+				{
+					"finding": "cuts-1-fact-6",
+					"action": "applied",
+					"reason": "Replaced the lean-braising-cut trap (which read as the Shoulder card) with 'A ribeye trimmed of its cap and sold under a cheaper name' and a why naming it a separate chuck muscle from under the shoulder blade."
+				},
+				{
+					"finding": "cuts-1-floor-7",
+					"action": "applied",
+					"reason": "Gist now reads 'Marbled steak cut from under the shoulder blade, grilled hot', dropping the butcher word 'seamed'."
+				},
+				{
+					"finding": "cuts-1-floor-8",
+					"action": "applied",
+					"reason": "Guest line now says 'It's rich and beefy, close to a ribeye' instead of 'It eats rich'."
+				},
+				{
+					"finding": "cuts-1-floor-9",
+					"action": "applied",
+					"reason": "Why now says 'cut out by hand' instead of 'seamed out by hand'."
+				},
+				{
+					"finding": "cuts-1-floor-10",
+					"action": "applied",
+					"reason": "Teres Major why now says 'It is cut out by hand, so it is scarce and sold whole.'"
+				},
+				{
+					"finding": "cuts-1-floor-11",
+					"action": "applied",
+					"reason": "Note now reads 'One roast, so both guests share one doneness, classically medium rare.' so the floor fact (both guests must agree) leads."
+				},
+				{
+					"finding": "cuts-1-floor-12",
+					"action": "applied",
+					"reason": "Why now ends 'Credited to the chef of the writer Chateaubriand, early 1800s.' with the chef first and no stacked possessive."
+				},
+				{
+					"finding": "cuts-1-floor-13",
+					"action": "applied",
+					"reason": "Removed 'Secreto de Cerdo' and bare 'Secreto' from aliases so the card no longer implies plain secreto is Ibérico; aliases are now 'Secreto de Bellota' (the acorn-fed grade of this cut as menus print it) and 'Cruceta'."
+				},
+				{
+					"finding": "cuts-1-safety-14",
+					"action": "applied",
+					"reason": "Guest line now describes béarnaise as 'a tarragon sauce made with egg yolk and butter' so the egg yolk is spoken aloud rather than hidden behind 'butter sauce'."
+				},
+				{
+					"finding": "cuts-1-safety-15",
+					"action": "applied",
+					"reason": "madeWith is now beef, butter, egg yolk, often white wine, often tarragon: the yolk is classic because béarnaise is the classic sauce, and the white wine of the classic reduction is flagged."
+				}
+			],
+			"critic": null,
+			"acceptedRejected": []
 		}
 	]
 }

@@ -407,6 +407,42 @@
       "why": "That describes Kobe, one regional brand. The word covers the Japanese breeds wherever they are raised."
     }
   ],
+  "fd_0313": [
+    {
+      "says": "A ribeye trimmed of its cap and sold under a cheaper name",
+      "why": "It is a separate chuck muscle from under the shoulder blade, not a trimmed ribeye."
+    },
+    {
+      "says": "Steak from the hind leg, named for the city where it was first sold",
+      "why": "It comes from the shoulder, and Denver is a marketing name, not the place it comes from."
+    }
+  ],
+  "fd_0314": [
+    {
+      "says": "Tail of the tenderloin, tied into a small roast and sold cheap",
+      "why": "It is a shoulder muscle, nowhere near the tenderloin; it only eats like one."
+    },
+    {
+      "says": "The largest muscle on the shoulder, sliced thin for the grill",
+      "why": "It is a small muscle, under a pound, roasted whole and sliced into medallions."
+    }
+  ],
+  "fd_0315": [
+    {
+      "says": "Thick rib steak named after the French castle where it was first cooked",
+      "why": "It is tenderloin, not rib, and it is named for a French writer, not a building."
+    }
+  ],
+  "fd_0316": [
+    {
+      "says": "Lean pork loin cut from a Spanish pig, sold as a thick roast",
+      "why": "It is a thin, fatty sheet from behind the shoulder, not a lean loin roast."
+    },
+    {
+      "says": "Pork in a house spice rub whose recipe the kitchen keeps hidden",
+      "why": "The name refers to where the cut hides under a layer of fat, not to a recipe."
+    }
+  ],
   "fd_0108": [
     {
       "says": "Lean, white-fleshed relative of cod from polar seas, with large mild flakes",
@@ -833,6 +869,42 @@
       "why": "It is semolina and water dough, dragged by knife and shaped over a thumb."
     }
   ],
+  "fd_0329": [
+    {
+      "says": "Ancient Sardinian grain, toasted whole and then simmered until tender",
+      "why": "It is pasta rolled from semolina and water, not a grain, and the toasting happens after the beads are shaped."
+    }
+  ],
+  "fd_0330": [
+    {
+      "says": "Fresh pasta shaped like small guitars, pressed from a mold",
+      "why": "The guitar is the wire-strung frame that cuts the dough, not the shape of the pasta, which is a square-sided strand."
+    },
+    {
+      "says": "Dried round strands of durum wheat pasta pushed through a machine die",
+      "why": "It is fresh egg pasta cut by hand on wires, and the strands are square, not round."
+    }
+  ],
+  "fd_0331": [
+    {
+      "says": "Long-grain rice that cooks up yellow, tinted with saffron or turmeric",
+      "why": "The name is for the color of the ripe grain in its husk. Milled and cooked, the rice is white."
+    },
+    {
+      "says": "Modern long-grain hybrid bred for Southern rice farms in the 1980s",
+      "why": "It is an heirloom variety grown since the 1600s. The 1980s were its revival from seed-bank stock, not its creation."
+    }
+  ],
+  "fd_0332": [
+    {
+      "says": "Fiery Calabrian spread of chiles, eggplant and mushrooms packed in oil",
+      "why": "That is a Calabrian condiment sharing only the name. This is a Spanish paella rice."
+    },
+    {
+      "says": "Long-grain Spanish rice that cooks light and fluffy for paella",
+      "why": "It is a short, plump grain. Long-grain rice does not absorb enough broth to make a good paella."
+    }
+  ],
   "fd_0195": [
     {
       "says": "Melted garlic butter whisked with lemon juice for dipping",
@@ -929,6 +1001,24 @@
       "why": "It is Italian, built on vinegar with sugar or honey, often with raisins and onion."
     }
   ],
+  "fd_0334": [
+    {
+      "says": "Smooth pale sauce of raw yolks and oil, no garlic and nothing chopped in",
+      "why": "Classically the yolks are hard-cooked, and chopped egg white, capers and cornichons run all through it."
+    }
+  ],
+  "fd_0335": [
+    {
+      "says": "Dark onion gravy simmered with beef broth until deep brown and glossy",
+      "why": "The onions are kept pale and sweet, and the sauce stays ivory and creamy, never deep brown."
+    }
+  ],
+  "fd_0336": [
+    {
+      "says": "Thick shellfish soup puréed with rice, cream and brandy",
+      "why": "It is a thin poaching broth, never puréed with rice into a thick soup."
+    }
+  ],
   "fd_0217": [
     {
       "says": "Beef ground coarse, pressed into a patty and seared rare on the flat top",
@@ -999,6 +1089,34 @@
     {
       "says": "Hot braised red cabbage, stewed soft with apple and vinegar",
       "why": "It is raw cabbage dressed cold, crisp and crunchy, not cooked soft."
+    }
+  ],
+  "fd_0337": [
+    {
+      "says": "Liver salt-cured and air-dried for weeks, then shaved thin like ham",
+      "why": "It is poached briefly and chilled for a day or more, not dried, and served in thick soft rounds."
+    }
+  ],
+  "fd_0338": [
+    {
+      "says": "Served on top of a thick slice of toasted and buttered country bread",
+      "why": "A croûte alone can mean toast, but en croûte means fully wrapped in pastry and baked."
+    }
+  ],
+  "fd_0339": [
+    {
+      "says": "A small puff pastry shell filled with sweet cream or a savory mousse",
+      "why": "It is not baked in pastry. It is a smooth oval of something soft, or a poached dumpling."
+    }
+  ],
+  "fd_0340": [
+    {
+      "says": "Brown butter finished with toasted walnuts and chopped parsley",
+      "why": "Grenoble is famous for walnuts, but the classic garnish is capers, lemon and croutons."
+    },
+    {
+      "says": "Creamy Dijon mustard sauce spooned over floured, pan-fried fish",
+      "why": "Mustard sauce belongs to Dijon. This garnish is brown butter, capers, lemon and croutons."
     }
   ],
   "fd_0234": [
@@ -1079,6 +1197,46 @@
       "why": "That is an omelette. This is baked in a deep dish and rises on whipped whites."
     }
   ],
+  "fd_0341": [
+    {
+      "says": "Airy sponge of whole eggs, flour and melted butter, cut into layers",
+      "why": "It is not a sponge cake. It is a baked meringue of egg whites, sugar and ground nuts."
+    },
+    {
+      "says": "Sweet nut sauce spooned over a plated dessert at the last moment",
+      "why": "It is a baked, crisp layer, not a sauce. The name sounds like a sauce and is not one."
+    }
+  ],
+  "fd_0342": [
+    {
+      "says": "Small pastry whose near-black shell means it was baked too long",
+      "why": "The dark shell is deliberate caramelized sugar and butter, and it is the sign of one baked right."
+    },
+    {
+      "says": "Fluted cup of dark chocolate cake baked with a molten center",
+      "why": "It is not chocolate cake. The dark color is caramel and the inside is a rum and vanilla custard."
+    }
+  ],
+  "fd_0343": [
+    {
+      "says": "Plain croissant rolled in sugar after it comes out of the oven",
+      "why": "The sugar goes inside the folds before baking and caramelizes in the heat. Nothing is added after."
+    },
+    {
+      "says": "Dense Breton butter cake baked from a smooth creamed batter",
+      "why": "It is layered yeasted dough, not a creamed batter, and its crust is sugar caramelized from inside the folds."
+    }
+  ],
+  "fd_0344": [
+    {
+      "says": "Soft, chewy cookie leavened to rise thick and cakey like a scone",
+      "why": "It is a crisp, crumbly shortbread. Softness or chew means it was underbaked or has gone stale."
+    },
+    {
+      "says": "Thin crisp caramel wafer named for its sand-colored finish",
+      "why": "The name means sandy for its crumbly texture, not its color, and it is a thick shortbread, not a wafer."
+    }
+  ],
   "fd_0249": [
     {
       "says": "Sweet sauce of butter, sugar and cream cooked until amber and toffee-like",
@@ -1155,6 +1313,24 @@
     {
       "says": "Cooked vanilla custard lightened with whipped cream to fill cakes",
       "why": "It is simply cream whipped with sugar and vanilla, with nothing cooked into it."
+    }
+  ],
+  "fd_0345": [
+    {
+      "says": "Egg whites whipped with sugar and wine into a cold, glossy foam",
+      "why": "It is made from the yolks, not the whites, and it is whisked over heat and served warm."
+    }
+  ],
+  "fd_0347": [
+    {
+      "says": "Sharp lemon spread cooked thick with egg yolks, butter and sugar",
+      "why": "That is lemon curd, cooked thick over heat. A posset sets in the glass from cream meeting lemon juice."
+    }
+  ],
+  "fd_0348": [
+    {
+      "says": "Soft, runny Alpine cow's milk cheese ripened in a band of spruce bark",
+      "why": "That is the cheese that shares the name. On a dessert menu it is a meringue shell filled with ice cream."
     }
   ],
   "fd_0266": [
@@ -1265,6 +1441,32 @@
       "why": "It is coarse and goes on dry, on top, so it stays crunchy instead of dissolving."
     }
   ],
+  "fd_0349": [
+    {
+      "says": "Fiery cayenne-strength chili powder used only for its heat",
+      "why": "It is mild, far below cayenne on heat, and prized for fruit and color as much as warmth."
+    }
+  ],
+  "fd_0350": [
+    {
+      "says": "Soy and citrus dipping sauce poured over dumplings and sashimi",
+      "why": "That is ponzu, a thin liquid. This is a thick salted chili paste holding only the citrus zest."
+    },
+    {
+      "says": "Ground black pepper blended with dried citrus zest for steak",
+      "why": "Kosho here is the Kyushu word for chili, not black pepper, and the paste is made fresh and salted."
+    }
+  ],
+  "fd_0351": [
+    {
+      "says": "Cloves fermented by bacteria for weeks until sour and pungent",
+      "why": "No microbe is involved: gentle heat and humidity do the work, and the result is sweet, not sour."
+    },
+    {
+      "says": "Cloves charred over a flame until the skins blacken and turn bitter",
+      "why": "It is never burnt. Weeks of low warmth turn it black slowly, and the flavor is sweet and mellow."
+    }
+  ],
   "fd_0285": [
     {
       "says": "Produce certified organic because its seed was never a GMO",
@@ -1357,6 +1559,38 @@
     {
       "says": "Grown with no pesticides or sprays of any kind on the plants",
       "why": "Certified growers may still use approved pesticides, mostly natural ones."
+    }
+  ],
+  "fd_0352": [
+    {
+      "says": "The plated dessert course itself, the one that ends a set tasting menu",
+      "why": "They come after the dessert, not instead of it: one-bite sweets sent with the coffee."
+    }
+  ],
+  "fd_0353": [
+    {
+      "says": "Fish kept alive in a tank and cooked to order the moment it is chosen",
+      "why": "It names how the fish was killed and bled, not where it was kept. A tank fish can be ikejime too."
+    },
+    {
+      "says": "Fish lightly cured in salt and rice vinegar before it is sliced",
+      "why": "That is shime saba, vinegar-cured mackerel. This word is about how the fish was killed, not cured."
+    }
+  ],
+  "fd_0354": [
+    {
+      "says": "Government soil standard for farms, audited yearly, one step above organic",
+      "why": "No government defines the word; only private certifications audit it, so it is the farm's own claim."
+    }
+  ],
+  "fd_0355": [
+    {
+      "says": "All you can eat sushi service at one fixed price, ordered from a list",
+      "why": "The chef chooses every course; the guest does not order, and the chef sets the count of pieces."
+    },
+    {
+      "says": "Formal multi-course Japanese dinner whose sequence is fixed by tradition",
+      "why": "That is kaiseki. Here the chef, not tradition, decides the order of courses."
     }
   ]
 }

@@ -481,6 +481,25 @@ check('the plates ship as text in the install and as pictures on demand', () => 
 	return `${chunks.length} text chunk(s) precached, ${pictures.length} pictures on demand, ${pages} pages`;
 });
 
+check('the primers ship in the install, and each level has its reader page', () => {
+	/* The primers are the text of /level/[n]/read: a lazily imported chunk
+	   found by a key only that file carries, precached so the shell can
+	   rebuild the page offline, and four prerendered pages on disk. The
+	   count of primers is the data's business (PRIMERS_COMPLETE in
+	   tools/derive/primers.mjs); this only proves what is written reaches
+	   the install. */
+	/* Vite emits a small JSON import as an object literal (primers:[) and a
+	   large one as JSON.parse of a string (primers\":[), so the needle allows
+	   the escaped quote. */
+	const chunks = files.filter((f) => extname(f) === '.js' && /primers(?:\\")?:\[/.test(readFileSync(f, 'utf8')));
+	assert(chunks.length, 'no built chunk carries primers:[ : primers.json never reached the bundle');
+	const missing = chunks.map(rel).filter((r) => !precached.some((u) => u === '/' + r || u === r));
+	assert(!missing.length, `these hold the primers and are NOT in the precache: ${missing.join(', ')}`);
+	const pages = [1, 2, 3, 4].filter((n) => html.some((f) => rel(f) === `level/${n}/read.html` || rel(f) === `level/${n}/read/index.html`));
+	assert(pages.length === 4, `${pages.length} of 4 level reader pages on disk`);
+	return `${chunks.length} chunk(s) precached, 4 reader pages`;
+});
+
 // ── offline integrity ────────────────────────────────────────────────────────
 /*
  * api.anthropic.com is the one host a shipped file may name, and exactly one

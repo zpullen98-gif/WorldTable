@@ -392,5 +392,5 @@ export function buildLevels(ctx) {
 			if (counts[String(l)].lexicon < LEXICON_PREFERRED) console.log(`    note: level ${l} holds ${counts[String(l)].lexicon} Lexicon terms; ${LEXICON_PREFERRED} preferred`);
 		}
 	}
-	return { levels, problems };
+	return { levels, problems, universe: uni };
 }

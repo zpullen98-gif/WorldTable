@@ -29,7 +29,8 @@ import type {
 	StationsData,
 	TechniqueStandard,
 	LevelsData,
-	PlatesData
+	PlatesData,
+	PrimersData
 } from './types';
 
 import indexJson from './data/recipes.index.json';
@@ -138,6 +139,16 @@ export async function loadPlates(): Promise<PlatesData> {
 		platesCache = (await import('./data/plates.json')).default as unknown as PlatesData;
 	}
 	return platesCache;
+}
+
+/** The primers: one reader per level per subsection, the text of the
+ *  `/level/[n]/read` pages. Precached, so the shell rebuilds them offline. */
+let primersCache: PrimersData | null = null;
+export async function loadPrimers(): Promise<PrimersData> {
+	if (!primersCache) {
+		primersCache = (await import('./data/primers.json')).default as unknown as PrimersData;
+	}
+	return primersCache;
 }
 
 let drillsCache: Drills | null = null;

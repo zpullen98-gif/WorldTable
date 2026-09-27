@@ -8,7 +8,7 @@
  * the item lists would inline hundreds of slugs into every level page.
  */
 import { error } from '@sveltejs/kit';
-import { loadLevels } from '$lib/data';
+import { loadLevels, loadPrimers } from '$lib/data';
 import type { DeckLevel } from '$lib/types';
 import type { EntryGenerator, PageLoad } from './$types';
 
@@ -18,13 +18,15 @@ export const entries: EntryGenerator = () => [{ n: '1' }, { n: '2' }, { n: '3' }
 
 export const load: PageLoad = async ({ params }) => {
 	const n = Number(params.n);
-	const levels = await loadLevels();
+	const [levels, primers] = await Promise.all([loadLevels(), loadPrimers()]);
 	const info = levels.levels.find((l) => l.level === n);
 	if (!info) error(404, 'Not a level');
 	return {
 		level: n as DeckLevel,
 		info,
 		counts: levels.counts[String(n)],
-		subsections: levels.subsections
+		subsections: levels.subsections,
+		/** the subsections with a primer at this level: each gets a Read first door */
+		primed: primers.primers.filter((p) => p.level === n).map((p) => p.subsection)
 	};
 };
