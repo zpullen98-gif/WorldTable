@@ -44,6 +44,11 @@
       "counted": true
     },
     {
+      "key": "plates",
+      "title": "The Plates",
+      "counted": false
+    },
+    {
       "key": "palate",
       "title": "The Palate",
       "counted": true
@@ -839,6 +844,35 @@
         "cardoon",
         "puntarelle"
       ]
+    },
+    "plates": {
+      "1": [
+        "chicken-cuts",
+        "culinary-spices",
+        "culinary-mushrooms"
+      ],
+      "2": [
+        "pork-cuts",
+        "beef-cuts",
+        "pacific-fish",
+        "atlantic-fish",
+        "gulf-coast-fish",
+        "northwest-vegetables",
+        "northwest-fruits",
+        "southwest-vegetables",
+        "southwest-fruits",
+        "midwest-vegetables",
+        "midwest-fruits",
+        "northeastern-vegetables",
+        "northeastern-fruits",
+        "southeastern-vegetables",
+        "southeastern-fruits",
+        "great-cheeses"
+      ],
+      "3": [
+        "charcuterie"
+      ],
+      "4": []
     },
     "palate": {
       "1": [
@@ -1673,6 +1707,7 @@
       "techniques": 42,
       "lexicon": 266,
       "deck": 110,
+      "plates": 3,
       "palate": 2,
       "safety": 6,
       "service": 9
@@ -1682,6 +1717,7 @@
       "techniques": 50,
       "lexicon": 255,
       "deck": 122,
+      "plates": 16,
       "palate": 2,
       "safety": 4,
       "service": 41
@@ -1691,6 +1727,7 @@
       "techniques": 12,
       "lexicon": 33,
       "deck": 35,
+      "plates": 1,
       "palate": 2,
       "safety": 10,
       "service": 105
@@ -1700,6 +1737,7 @@
       "techniques": 8,
       "lexicon": 39,
       "deck": 14,
+      "plates": 0,
       "palate": 2,
       "safety": 6,
       "service": 31

@@ -47,6 +47,7 @@ import { buildDrills } from './derive/drills.mjs';
 import { gateFloorDeck, buildFloorDeck } from './derive/floor-deck.mjs';
 import { buildStations } from './derive/stations.mjs';
 import { buildLevels } from './derive/levels.mjs';
+import { buildPlates } from './derive/plates.mjs';
 import { LADDERS, CUPS, TRIALS, PASS_AT } from './derive/calibration.mjs';
 import { stepService, recipeService, ADVANCE_MIN } from './derive/service.mjs';
 import { advanceWait, QUICK_MINUTES } from './derive/advance.mjs';
@@ -1088,6 +1089,14 @@ const { stations, problems: stationProblems } = buildStations(lexicon, technique
  * The build reads the authored files and never writes them; the placement
  * tool does. See tools/derive/levels.mjs and tools/levels/README.md.
  */
+/**
+ * The Plates: the twenty authored transcriptions (tools/derive/plates/*.json)
+ * gated and linked to the deck and the Lexicon by name. Built before the
+ * levels, which place them. See tools/derive/plates.mjs.
+ */
+const { plates: platesData, problems: plateProblems, notes: plateNotes } = buildPlates({ deck: floorDeck.cards, lexicon });
+for (const n of plateNotes) console.log(`  note: ${n}`);
+
 const { levels, problems: levelProblems } = buildLevels({
 	study,
 	techniques,
@@ -1097,7 +1106,8 @@ const { levels, problems: levelProblems } = buildLevels({
 	sanitation,
 	deckIndex: floorDeckIndex,
 	recipes: index,
-	techniqueStandards
+	techniqueStandards,
+	plates: platesData.plates
 });
 
 write('recipes.index.json', index);
@@ -1141,6 +1151,7 @@ write('floor-deck.traps.json', floorDeckTraps);
 write('floor-deck.index.json', floorDeckIndex);
 write('stations.json', stations);
 write('levels.json', levels);
+write('plates.json', platesData);
 write('calibration.json', {
 	cups: CUPS,
 	trials: TRIALS,
@@ -1955,6 +1966,7 @@ problems.push(...serviceTrackProblems);
 problems.push(...drillProblems);
 problems.push(...floorDeckProblems);
 problems.push(...stationProblems);
+problems.push(...plateProblems);
 problems.push(...levelProblems);
 
 /**

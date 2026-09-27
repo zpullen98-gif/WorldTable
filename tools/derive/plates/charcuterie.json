@@ -1,0 +1,232 @@
+{
+  "slug": "charcuterie",
+  "title": "The World of Charcuterie & Dried Meats",
+  "tagline": "Tradition, craft, flavor, culture. Preserved by time. Perfected by tradition.",
+  "corners": [],
+  "kind": "board",
+  "regionLine": null,
+  "groups": [
+    {
+      "title": "The meats",
+      "note": null,
+      "items": [
+        {
+          "name": "Prosciutto",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Air-cured ham, delicate, silky, slightly sweet"]
+          ]
+        },
+        {
+          "name": "Jamón Ibérico",
+          "sub": null,
+          "facts": [
+            ["Country", "Spain"],
+            ["Character", "Acorn-fed, rich, nutty, complex"]
+          ]
+        },
+        {
+          "name": "Soppressata",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Coarse grind, bold, garlicky, tangy"]
+          ]
+        },
+        {
+          "name": "Salami",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Finely ground, fermented, versatile"]
+          ]
+        },
+        {
+          "name": "Chorizo",
+          "sub": null,
+          "facts": [
+            ["Country", "Spain"],
+            ["Character", "Smoky, spicy, robust"]
+          ]
+        },
+        {
+          "name": "Culatello",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Tender, mild, exquisite"]
+          ]
+        },
+        {
+          "name": "Salumi Misti",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Mixed cured meats, variety of flavors"]
+          ]
+        },
+        {
+          "name": "Bresaola",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Lean, air-dried beef, fragrant, tender"]
+          ]
+        },
+        {
+          "name": "Pancetta",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Peppered or spiced, rich, savory"]
+          ]
+        },
+        {
+          "name": "Guanciale",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Pork jowl, rich, intense flavor"]
+          ]
+        },
+        {
+          "name": "Lonzino",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Lean, aromatic, refined"]
+          ]
+        },
+        {
+          "name": "Mortadella",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Smooth, delicate, with pistachios"]
+          ]
+        },
+        {
+          "name": "Coppa",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Marbled, tender, peppery"]
+          ]
+        },
+        {
+          "name": "Speck",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Smoked, slightly sweet, robust"]
+          ]
+        },
+        {
+          "name": "Lomo",
+          "sub": null,
+          "facts": [
+            ["Country", "Spain"],
+            ["Character", "Lean, mild, elegant"]
+          ]
+        },
+        {
+          "name": "Filetto",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Character", "Tender, delicate, subtle"]
+          ]
+        },
+        {
+          "name": "Venison Salami",
+          "sub": null,
+          "facts": [
+            ["Country", "Wild Game"],
+            ["Character", "Rich, earthy, bold"]
+          ]
+        },
+        {
+          "name": "Duck Breast",
+          "sub": null,
+          "facts": [
+            ["Country", "France"],
+            ["Character", "Silky, rich, unique"]
+          ]
+        }
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "title": "The art of charcuterie",
+      "lines": [
+        "A world of tradition, craftsmanship and flavor.",
+        "Charcuterie is the art of preserving meat through curing, smoking, drying and aging, creating unique textures, rich flavors and a lasting legacy across cultures."
+      ]
+    },
+    {
+      "title": "Global charcuterie styles",
+      "lines": [
+        "Italian, Spanish",
+        "French, German",
+        "American, Portuguese",
+        "Greek, Scandinavian",
+        "Eastern European"
+      ]
+    },
+    {
+      "title": "Common preservation methods",
+      "lines": [
+        "Curing: Salt, spices, time",
+        "Smoking: Adds flavor & preserves",
+        "Drying: Reduces moisture",
+        "Aging: Develops depth & complexity"
+      ]
+    },
+    {
+      "title": "Popular pairings",
+      "lines": [
+        "Wine: Red, white, sparkling",
+        "Cheese: Soft, hard, blue",
+        "Olives & nuts: Briny, earthy, rich",
+        "Bread: Crusty, artisanal",
+        "Fruit & jams: Sweet, tart, complementary"
+      ]
+    }
+  ],
+  "footer": "Different lands, unique traditions, one table",
+  "illegible": [],
+  "corrections": [
+    {
+      "on": "Jamón Ibérico",
+      "says": "Acorn-fed, rich, nutty, complex",
+      "should": "Only the bellota grades (black and red label) are acorn fed, while cebo de campo (green label) and cebo (white label) Ibérico hams are raised on feed, so say acorn fed only when the label reads de bellota.",
+      "why": "The Spanish Ibérico quality standard grades the ham by the pig's diet, and most Ibérico ham sold in the United States is cebo, not bellota."
+    },
+    {
+      "on": "Salami",
+      "says": "Finely ground, fermented, versatile",
+      "should": "Salami is the family name for fermented, dried sausages and its grind varies by style, fine in Milano but coarser in Genoa and loose in Felino, so it should not be taught as finely ground.",
+      "why": "The plate lists soppressata, itself a coarse salami, as a separate card, and only the Milano style is notably fine."
+    },
+    {
+      "on": "Salumi Misti",
+      "says": "Salumi Misti, Italy, Mixed cured meats, variety of flavors",
+      "should": "Salumi misti is not a product but the Italian menu phrase for a mixed platter of cured meats, so it is a name for the whole board rather than an item on it.",
+      "why": "Salumi is the family name for all Italian cured meats and misti means mixed, which the card's own caption states."
+    },
+    {
+      "on": "Venison Salami",
+      "says": "Country: Wild Game",
+      "should": "Wild Game is not a country or origin, and venison salami sold in the United States is made from farm raised deer, often New Zealand red deer, so tell guests it is farmed venison rather than hunted.",
+      "why": "United States federal and state rules bar the commercial sale of wild harvested game, so any venison a restaurant buys is farmed and inspected."
+    },
+    {
+      "on": "Duck Breast",
+      "says": "Duck Breast, France, Silky, rich, unique",
+      "should": "Plain duck breast names the fresh cut that is seared and served rosy, while the cured product on this board is duck prosciutto (magret séché), a salted and air dried duck breast sliced thin with its fat cap.",
+      "why": "Every other card on the plate names a preserved product, and the picture shows thin cured slices with a fat cap, which is duck prosciutto or smoked duck breast rather than a raw breast."
+    }
+  ]
+}

@@ -18,7 +18,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
-	import { bySlug, loadDeckIndex, loadLexicon, loadPalate, loadServiceTrack, loadStudy } from '$lib/data';
+	import { bySlug, loadDeckIndex, loadLexicon, loadPalate, loadPlates, loadServiceTrack, loadStudy } from '$lib/data';
 	import { levels } from '$lib/stores/levels.svelte';
 	import { NEVER_GRADED, NUMERAL, type SubsectionProgress } from '$lib/levels';
 	import type { DeckLevel, SubsectionKey } from '$lib/types';
@@ -34,18 +34,20 @@
 	onMount(async () => {
 		void levels.load();
 		try {
-			const [lexicon, deck, track, palate, study] = await Promise.all([
+			const [lexicon, deck, track, palate, study, plates] = await Promise.all([
 				loadLexicon(),
 				loadDeckIndex(),
 				loadServiceTrack(),
 				loadPalate(),
-				loadStudy()
+				loadStudy(),
+				loadPlates()
 			]);
 			const map: Record<string, string> = {};
 			for (const e of lexicon) map[e.slug] = e.term;
 			for (const c of deck.cards) map[c.id] = c.term;
 			for (const m of track.modules) map[m.key] = m.title;
 			for (const f of palate.faults) map[f.slug] = f.label;
+			for (const p of plates.plates) map[p.slug] = p.title;
 			names = map;
 			const sem: Record<string, number> = {};
 			for (const s of study) for (const slug of s.recipes) sem[slug] = s.n;
@@ -88,6 +90,8 @@
 				return `${base}/lexicon#${slug}`;
 			case 'deck':
 				return `${base}/service/deck/study?card=${slug}`;
+			case 'plates':
+				return `${base}/plates/${slug}`;
 			case 'palate':
 				return slug.includes('@') ? `${base}/practise/calibrate` : `${base}/palate`;
 			case 'safety':
@@ -151,11 +155,14 @@
 					{:else if p}
 						· {p.label}
 					{/if}
+					{#if s.key === 'plates' && total === 0}
+						· every plate is read by Level III; read them again for the menu
+					{/if}
 				</p>
 
 				{#if p && p.items.length}
 					<details class="items">
-						<summary>{s.key === 'service' ? 'The modules' : s.key === 'palate' ? 'The faults and the tastes' : 'The items'}</summary>
+						<summary>{s.key === 'service' ? 'The modules' : s.key === 'palate' ? 'The faults and the tastes' : s.key === 'plates' ? 'The plates' : 'The items'}</summary>
 						<ul>
 							{#each rowsOf(p) as r (r.slug)}
 								<li>
@@ -185,6 +192,9 @@
 						<a class="train" href="{base}/service/deck/test?level={n}">The written test</a>
 						<a class="train" href="{base}/service/deck/say?level={n}">Say it back</a>
 						<a class="train" href="{base}/service/deck">The deck</a>
+					{:else if s.key === 'plates'}
+						{#if p?.items[0]}<a class="train" href="{base}/plates/{p.items[0]}">Read the first plate</a>{/if}
+						<a class="train" href="{base}/plates">The wall</a>
 					{:else if s.key === 'palate'}
 						<a class="train" href="{base}/palate">The repair table</a>
 						<a class="train" href="{base}/practise/calibrate">Calibrate</a>

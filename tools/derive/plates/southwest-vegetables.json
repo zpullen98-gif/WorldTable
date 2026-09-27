@@ -1,0 +1,275 @@
+{
+ "slug": "southwest-vegetables",
+ "title": "Southwest Vegetables",
+ "tagline": "Local harvests, seasonal flavors, timeless traditions.",
+ "corners": [
+  "From the deserts, mountains and river valleys to the rich soils of the Southwest. A region of bold flavors.",
+  "Same land, different seasons, endless flavors.",
+  "Local fields, desert grown, high elevation, river valleys.",
+  "Southwest vegetables. Bold flavors, deep roots, lasting traditions."
+ ],
+ "kind": "produce",
+ "regionLine": "Arizona, New Mexico, Utah, Colorado, Nevada",
+ "groups": [
+  {
+   "title": "The vegetables",
+   "note": null,
+   "items": [
+    {
+     "name": "Chili Peppers",
+     "sub": null,
+     "facts": [
+      ["Season", "June to October"],
+      ["Flavor", "Spicy, smoky, bright"]
+     ]
+    },
+    {
+     "name": "Bell Peppers",
+     "sub": null,
+     "facts": [
+      ["Season", "July to October"],
+      ["Flavor", "Sweet, crisp, juicy"]
+     ]
+    },
+    {
+     "name": "Pueblo Chiles",
+     "sub": null,
+     "facts": [
+      ["Season", "August to October"],
+      ["Flavor", "Mild, earthy, rich"]
+     ]
+    },
+    {
+     "name": "Tomatillos",
+     "sub": null,
+     "facts": [
+      ["Season", "July to September"],
+      ["Flavor", "Tart, bright, tangy"]
+     ]
+    },
+    {
+     "name": "Corn",
+     "sub": null,
+     "facts": [
+      ["Season", "July to September"],
+      ["Flavor", "Sweet, earthy, crisp"]
+     ]
+    },
+    {
+     "name": "Zucchini",
+     "sub": null,
+     "facts": [
+      ["Season", "June to October"],
+      ["Flavor", "Mild, tender, fresh"]
+     ]
+    },
+    {
+     "name": "Acorn Squash",
+     "sub": null,
+     "facts": [
+      ["Season", "September to November"],
+      ["Flavor", "Nutty, sweet, creamy"]
+     ]
+    },
+    {
+     "name": "Butternut Squash",
+     "sub": null,
+     "facts": [
+      ["Season", "September to November"],
+      ["Flavor", "Sweet, earthy, velvety"]
+     ]
+    },
+    {
+     "name": "Eggplant",
+     "sub": null,
+     "facts": [
+      ["Season", "June to October"],
+      ["Flavor", "Mild, silky, slightly bitter"]
+     ]
+    },
+    {
+     "name": "Green Beans",
+     "sub": null,
+     "facts": [
+      ["Season", "June to September"],
+      ["Flavor", "Crisp, fresh, earthy"]
+     ]
+    },
+    {
+     "name": "Onions",
+     "sub": null,
+     "facts": [
+      ["Season", "August to November"],
+      ["Flavor", "Pungent, sweet, savory"]
+     ]
+    },
+    {
+     "name": "Garlic",
+     "sub": null,
+     "facts": [
+      ["Season", "July to September"],
+      ["Flavor", "Bold, aromatic, spicy"]
+     ]
+    },
+    {
+     "name": "Leek",
+     "sub": null,
+     "facts": [
+      ["Season", "October to March"],
+      ["Flavor", "Mild, sweet, oniony"]
+     ]
+    },
+    {
+     "name": "Cabbage",
+     "sub": null,
+     "facts": [
+      ["Season", "September to November"],
+      ["Flavor", "Crisp, mild, slightly sweet"]
+     ]
+    },
+    {
+     "name": "Kale",
+     "sub": null,
+     "facts": [
+      ["Season", "October to April"],
+      ["Flavor", "Earthy, tangy, robust"]
+     ]
+    },
+    {
+     "name": "Radishes",
+     "sub": null,
+     "facts": [
+      ["Season", "March to October"],
+      ["Flavor", "Peppery, crisp, fresh"]
+     ]
+    },
+    {
+     "name": "Carrots",
+     "sub": null,
+     "facts": [
+      ["Season", "September to November"],
+      ["Flavor", "Sweet, earthy, crunchy"]
+     ]
+    },
+    {
+     "name": "Beets",
+     "sub": null,
+     "facts": [
+      ["Season", "July to October"],
+      ["Flavor", "Earthy, sweet, rich"]
+     ]
+    },
+    {
+     "name": "Turnips",
+     "sub": null,
+     "facts": [
+      ["Season", "September to November"],
+      ["Flavor", "Mild, peppery, earthy"]
+     ]
+    },
+    {
+     "name": "Potatoes",
+     "printed": "Spinach",
+     "sub": null,
+     "facts": [
+      ["Season", "August to November"],
+      ["Flavor", "Hearty, earthy, versatile"]
+     ]
+    },
+    {
+     "name": "Arugula",
+     "sub": null,
+     "facts": [
+      ["Season", "Spring to Fall"],
+      ["Flavor", "Mild, fresh, slightly sweet"]
+     ]
+    },
+    {
+     "name": "Swiss Chard",
+     "sub": null,
+     "facts": [
+      ["Season", "May to October"],
+      ["Flavor", "Earthy, mild, juicy"]
+     ]
+    },
+    {
+     "name": "Collard Greens",
+     "sub": null,
+     "facts": [
+      ["Season", "October to March"],
+      ["Flavor", "Bold, earthy, slightly bitter"]
+     ]
+    },
+    {
+     "name": "Jalapeños",
+     "sub": null,
+     "facts": [
+      ["Season", "June to September"],
+      ["Flavor", "Spicy, fresh, crisp"]
+     ]
+    }
+   ]
+  }
+ ],
+ "panels": [
+  {
+   "title": "The region",
+   "lines": [
+    "Deserts",
+    "Mountains",
+    "Rivers",
+    "Plateaus",
+    "Great food"
+   ]
+  },
+  {
+   "title": "States on the map",
+   "lines": [
+    "Utah, Nevada, Colorado, New Mexico"
+   ]
+  },
+  {
+   "title": "Seasonal highlights",
+   "lines": [
+    "Spring: Greens, Radishes, Asparagus",
+    "Summer: Peppers, Corn, Zucchini",
+    "Fall: Squash, Tomatoes, Root Vegetables",
+    "Winter: Kale, Collards, Carrots"
+   ]
+  },
+  {
+   "title": "Flavor profile key",
+   "lines": [
+    "Sweet, Sour, Salty",
+    "Spicy, Earthy, Nutty",
+    "Crisp, Creamy, Bitter"
+   ]
+  }
+ ],
+ "footer": null,
+ "illegible": [
+  "Bottom row, third card from the left: the card is labeled SPINACH but the drawing is of red and yellow potatoes and its facts (August to November; Hearty, earthy, versatile) read as potato facts, so the item is named Potatoes with the printed label kept in 'printed'.",
+  "Card count: the plate prints 24 vegetable cards (8 across the top row, 2 plus 3 in the second row beside the map, 2 plus 2 in the third row beside the map, 7 across the bottom row); a second full pass at 2x and 3x zoom found no further cards.",
+  "Bottom edge: the strip along the bottom border is a vine ornament only, with no printed footer line."
+ ],
+ "corrections": [
+  {
+   "on": "Pueblo Chiles",
+   "says": "Mild, earthy, rich",
+   "should": "The Pueblo chile, the Mosco and Mirasol type grown around Pueblo, Colorado, is medium hot, hotter than a typical Hatch or Anaheim green chile, so read the profile as medium hot, earthy, meaty rather than mild.",
+   "why": "Pueblo growers and Colorado State University put the Mosco at roughly 5,000 to 20,000 Scoville, several times the heat of an Anaheim and above the Big Jim Hatch, and the growers market it as hotter than Hatch."
+  },
+  {
+   "on": "Potatoes",
+   "says": "SPINACH",
+   "should": "The card is mislabeled and should read Potatoes, since the drawing is red and yellow potatoes and the August to November season and the hearty, earthy, versatile profile are potato facts.",
+   "why": "Spinach is a tender cool season leaf, about 91 percent water in the Lexicon, that no one calls hearty or a storage crop, while the picture plainly shows tubers and the Southwest potato harvest in Colorado's San Luis Valley runs late summer into fall."
+  },
+  {
+   "on": "Arugula",
+   "says": "Mild, fresh, slightly sweet",
+   "should": "Arugula is peppery and nutty with a sharp mustard like bite, so read the profile as peppery, nutty, green rather than mild and sweet.",
+   "why": "The Lexicon entry Arugula teaches that it is a brassica whose chewing releases isothiocyanates, the same reaction that sharpens mustard and horseradish, and only the youngest baby leaf is mild."
+  }
+ ]
+}

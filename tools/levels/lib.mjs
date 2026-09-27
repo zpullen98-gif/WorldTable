@@ -36,7 +36,8 @@ export function loadCtx() {
 		sanitation: data('sanitation.json'),
 		deckIndex: data('floor-deck.index.json'),
 		recipes: data('recipes.index.json'),
-		techniqueStandards: data('technique-standards.json')
+		techniqueStandards: data('technique-standards.json'),
+		plates: data('plates.json').plates
 	};
 }
 

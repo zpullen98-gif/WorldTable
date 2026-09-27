@@ -30,6 +30,9 @@
  *   palate      the 8 faults of the repair table
  *   safety      the 26 read slices of the sanitation entry: never counted,
  *               only read, so the level page can say what to read
+ *   plates      the 20 reference plates (tools/derive/plates.mjs): never
+ *               counted, only read, placed where the standard first asks
+ *               for what the plate shows
  *
  * NOT placed here: the 281 deck cards, which carry their own level in their
  * section modules and are COPIED from the deck index at build (gated equal);
@@ -76,16 +79,17 @@ export const LEVELS = [
 ];
 
 /**
- * The seven subsections, in the order a level page lists them. `placed`
+ * The eight subsections, in the order a level page lists them. `placed`
  * subsections have an authored file; the deck is copied. `counted` ones make
- * the level's figure; Food Safety is read and never graded, and the page says
- * so in place of a figure.
+ * the level's figure; Food Safety and The Plates are read and never graded,
+ * and the page says so in place of a figure.
  */
 export const SUBSECTIONS = [
 	{ key: 'dishes', title: 'Dishes', counted: true, placed: true },
 	{ key: 'techniques', title: 'Techniques', counted: true, placed: true },
 	{ key: 'lexicon', title: 'The Lexicon', counted: true, placed: true },
 	{ key: 'deck', title: 'The Floor Deck', counted: true, placed: false },
+	{ key: 'plates', title: 'The Plates', counted: false, placed: true },
 	{ key: 'palate', title: 'The Palate', counted: true, placed: true },
 	{ key: 'safety', title: 'Food Safety', counted: false, placed: true },
 	{ key: 'service', title: 'Service', counted: true, placed: true }
@@ -99,6 +103,9 @@ export const PLACED = SUBSECTIONS.filter((s) => s.placed).map((s) => s.key);
  * service questions, a deck test is fourteen cards (the contract's levelMin),
  * and a level page with one dish or one technique on it teaches nothing.
  * `service` counts TERMS (through the modules placed there), not modules.
+ * The Plates have no minimum: twenty plates over four levels, placed by the
+ * standard with ties broken down, leave the Chef's level with none of its
+ * own, and the page says so rather than a plate being pushed up to fill it.
  */
 export const MINIMUMS = { dishes: 6, techniques: 8, lexicon: 8, deck: 14, palate: 2, safety: 1, service: 6 };
 
@@ -153,11 +160,12 @@ export function readPlacements(key) {
  *   sanitation: { clauses: Array<{ key: string, anchor: string, text: string }>, facts: Array<{ key: string, anchor: string, evidence: string }>, numeric: Array<{ key: string, label: string, anchor: string, evidence: string }>, gaps: Array<{ key: string, named: string, gap: string }> },
  *   deckIndex: { byLexicon: Record<string, string[]>, cards: Array<{ id: string, level: number }> },
  *   recipes: Array<{ slug: string, name: string, chapter: string, course: string, difficulty: number, minutes: number }>,
- *   techniqueStandards: Array<{ slug: string }>
+ *   techniqueStandards: Array<{ slug: string }>,
+ *   plates: Array<{ slug: string, title: string, kind: string, kindTitle: string, count: number }>
  * }} ctx
  */
 export function universe(ctx) {
-	const { study, techniques, lexicon, serviceTrack, palate, sanitation, deckIndex, recipes, techniqueStandards } = ctx;
+	const { study, techniques, lexicon, serviceTrack, palate, sanitation, deckIndex, recipes, techniqueStandards, plates } = ctx;
 	const recipe = new Map(recipes.map((r) => [r.slug, r]));
 	const cardLevel = new Map(deckIndex.cards.map((c) => [c.id, c.level]));
 	/** lexicon slug -> the LOWEST level of a deck card naming it
@@ -236,7 +244,9 @@ export function universe(ctx) {
 		...sanitation.gaps.map((g) => ({ slug: `gap:${g.key}`, kind: 'gap', label: g.named[0].toUpperCase() + g.named.slice(1), anchor: 'safety', text: g.gap }))
 	];
 
-	return { dishes, techniques: techniqueRows, lexicon: lexiconRows, service, palate: palateRows, safety };
+	const plateRows = plates.map((p) => ({ slug: p.slug, title: p.title, kind: p.kind, kindTitle: p.kindTitle, items: p.count }));
+
+	return { dishes, techniques: techniqueRows, lexicon: lexiconRows, service, palate: palateRows, safety, plates: plateRows };
 }
 
 /** The display name of a universe row, whatever the subsection calls it.

@@ -9,9 +9,12 @@
 	import { deckHits, cardsForLexicon } from '$lib/deck-search';
 	import { deckHref } from '$lib/floor-deck-core.mjs';
 	import { afterNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import { loadLevels } from '$lib/data';
 	import { NUMERAL, levelFromSearch } from '$lib/levels';
+	import { loadPlates } from '$lib/data';
+	import { plateHref, plateIndexes } from '$lib/plates';
 	import type { DeckLevel } from '$lib/types';
 
 	let { data } = $props();
@@ -27,6 +30,15 @@
 	let level = $state<DeckLevel | null>(null);
 	let levelName = $state('');
 	let levelSlugs = $state<Set<string> | null>(null);
+	/** category -> the plates that draw it; empty until the file is in */
+	let platesByCategory = $state<ReadonlyMap<string, Array<{ slug: string; title: string }>>>(new Map());
+	onMount(async () => {
+		try {
+			platesByCategory = plateIndexes(await loadPlates()).byCategory;
+		} catch {
+			/* the Lexicon stands without its plate lines */
+		}
+	});
 
 	afterNavigate(async () => {
 		const wanted = levelFromSearch(page.url.search);
@@ -478,6 +490,12 @@
 				<span class="gn">{g.entries.length}</span>
 				<a class="totop" href="#top" data-print="hide">Top</a>
 			</h2>
+			{#if platesByCategory.get(g.name)?.length}
+				<p class="plateline" data-print="hide">
+					<span class="xlabel">Drawn on</span>
+					{#each platesByCategory.get(g.name) ?? [] as p (p.slug)}<a href={plateHref(base, p.slug)}>{p.title}</a>{/each}
+				</p>
+			{/if}
 			<div class="lexgrid">
 				{#each g.entries as e (e.slug)}
 					<article class="lexcard" id={e.slug}>
@@ -621,6 +639,8 @@
 		color: var(--turmeric-deep);
 	}
 
+	.plateline { font-size: var(--t-small); margin: 6px 0 10px; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; }
+	.plateline a { display: inline-block; padding-block: 6px; color: var(--ink); text-underline-offset: 3px; }
 	.flash {
 		border: 1px solid var(--turmeric); background: var(--card);
 		padding: 24px; margin-bottom: 26px; text-align: center; border-radius: var(--radius);

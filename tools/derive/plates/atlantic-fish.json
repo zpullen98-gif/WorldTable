@@ -1,0 +1,235 @@
+{
+  "slug": "atlantic-fish",
+  "title": "Atlantic Fish",
+  "tagline": "Cuts & Flavor Profiles. Fresh catches, timeless flavors, coast to table.",
+  "corners": [
+    "From the cold north to the warm south, the Atlantic brings extraordinary fish and unforgettable flavor",
+    "Great fish, better meals"
+  ],
+  "kind": "fish",
+  "regionLine": null,
+  "groups": [
+    {
+      "title": "The fish",
+      "note": null,
+      "items": [
+        {
+          "name": "Tuna",
+          "sub": "Atlantic Bluefin, Yellowfin",
+          "facts": [
+            ["Cuts", "Loin, Saku, Belly, Tail"],
+            ["Flavor", "Rich, meaty, clean, buttery"]
+          ]
+        },
+        {
+          "name": "Swordfish",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Loin, Steak, Collar, Tail"],
+            ["Flavor", "Mild, firm, slightly sweet, clean"]
+          ]
+        },
+        {
+          "name": "Cod",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Loins, Belly, Cheeks"],
+            ["Flavor", "Mild, flaky, buttery, clean"]
+          ]
+        },
+        {
+          "name": "Haddock",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Loins, Belly, Cheeks"],
+            ["Flavor", "Mild, flaky, sweet, clean"]
+          ]
+        },
+        {
+          "name": "Halibut",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Cheeks, Collar"],
+            ["Flavor", "Delicate, buttery, mild, clean"]
+          ]
+        },
+        {
+          "name": "Mahi Mahi",
+          "sub": "Dolphin Fish",
+          "facts": [
+            ["Cuts", "Loin, Steak, Belly, Tail"],
+            ["Flavor", "Mild, sweet, firm, fresh"]
+          ]
+        },
+        {
+          "name": "Tilapia",
+          "sub": "Atlantic",
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar"],
+            ["Flavor", "Mild, lean, slightly sweet, clean"]
+          ]
+        },
+        {
+          "name": "Red Snapper",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar"],
+            ["Flavor", "Sweet, firm, moist, clean"]
+          ]
+        },
+        {
+          "name": "Striped Bass",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar"],
+            ["Flavor", "Mild, firm, sweet, clean"]
+          ]
+        },
+        {
+          "name": "Grouper",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar"],
+            ["Flavor", "Rich, firm, meaty, clean"]
+          ]
+        },
+        {
+          "name": "Flounder",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Whole, Collar"],
+            ["Flavor", "Mild, delicate, sweet, clean"]
+          ]
+        },
+        {
+          "name": "Sea Bass",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar"],
+            ["Flavor", "Light, flaky, mild, clean"]
+          ]
+        },
+        {
+          "name": "Bluefish",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar"],
+            ["Flavor", "Rich, firm, slightly oily, bold"]
+          ]
+        },
+        {
+          "name": "Black Sea Bass",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar"],
+            ["Flavor", "Rich, firm, briny, robust"]
+          ]
+        },
+        {
+          "name": "Scallops",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Whole, Adductor, Side"],
+            ["Flavor", "Sweet, tender, buttery, clean"]
+          ]
+        },
+        {
+          "name": "Shrimp",
+          "sub": "Atlantic",
+          "facts": [
+            ["Cuts", "Whole, Peeled, Tail-On"],
+            ["Flavor", "Sweet, tender, briny, clean"]
+          ]
+        }
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "title": "The map",
+      "lines": [
+        "The Atlantic Ocean",
+        "North America",
+        "Europe",
+        "Africa",
+        "South America",
+        "From Cape Cod to the Caribbean",
+        "From the Gulf Stream to the Far North",
+        "The Atlantic feeds the world"
+      ]
+    },
+    {
+      "title": "Atlantic Flavors",
+      "lines": [
+        "Sea, tradition, excellence"
+      ]
+    }
+  ],
+  "footer": "The Atlantic provides, we enhance, you enjoy",
+  "illegible": [
+    "Map heading (top of the middle panel) is printed garbled as 'THE A.ANTIC OCEAN'; read as 'The Atlantic Ocean'",
+    "Map quoted line (middle panel, under the ship) is printed 'to the Carribbean' with a double r; read as 'to the Caribbean'"
+  ],
+  "corrections": [
+    {
+      "on": "Halibut",
+      "says": "Delicate, buttery, mild, clean",
+      "should": "Halibut is a very lean fish that tastes clean and mild and takes its richness from the sauce, so buttery misleads a server.",
+      "why": "Halibut stores its fat in the liver rather than the flesh, and the Floor Deck says it has very little fat and leans on sauce for richness."
+    },
+    {
+      "on": "Tilapia",
+      "says": "Tilapia (Atlantic)",
+      "should": "Tilapia is a farmed freshwater fish, not an Atlantic ocean fish, so the Atlantic tag is wrong.",
+      "why": "Tilapia are African freshwater cichlids raised in ponds and tanks, and none of the tilapia in a fish case is caught at sea."
+    },
+    {
+      "on": "Tilapia",
+      "says": "Fillet, Steak, Belly, Collar",
+      "should": "Tilapia is sold whole or as small skinless fillets, and steak, belly and collar are not tilapia cuts.",
+      "why": "A market tilapia weighs one to two pounds and yields two small fillets, with no meat for a steak, a belly flap or a collar."
+    },
+    {
+      "on": "Grouper",
+      "says": "Rich, firm, meaty, clean",
+      "should": "Grouper is a lean white fish with big firm flakes and a mild, faintly sweet flavor, not a rich one.",
+      "why": "The Floor Deck teaches grouper as lean, firm white meat in big chunky flakes that is lean but holds moisture well."
+    },
+    {
+      "on": "Flounder",
+      "says": "Fillet, Steak, Whole, Collar",
+      "should": "Flounder is sold whole or as thin fillets, and it is too thin and small to give a steak or a collar.",
+      "why": "A steak is a crosscut through the bone of a round bodied fish and a collar is the meaty arc behind the gills of a large fish, and a thin flatfish gives neither."
+    },
+    {
+      "on": "Sea Bass",
+      "says": "Sea Bass",
+      "should": "Plain sea bass names no single Atlantic fish, because in American service it usually means branzino, the European sea bass that is mostly farmed in the Mediterranean, while the wild Atlantic sea bass is the Black Sea Bass already on this plate.",
+      "why": "The Floor Deck Branzino card says it is the Mediterranean one, usually farmed, and not black sea bass, the wild Atlantic fish."
+    },
+    {
+      "on": "Black Sea Bass",
+      "says": "Rich, firm, briny, robust",
+      "should": "Black sea bass is a lean, mild, sweet white fish with a fine flake and skin that sears crisp, not a rich or robust one.",
+      "why": "It is a small fish of a few pounds prized for its clean, delicate flesh, and the Floor Deck teaches it as sweet and mild, firmer than branzino."
+    },
+    {
+      "on": "Scallops",
+      "says": "Whole, Adductor, Side",
+      "should": "Scallops are sold as the adductor muscle, or whole in the shell with the roe, and the small side muscle is a tough tab that is peeled off and discarded rather than a cut that is served.",
+      "why": "The Lexicon teaches that scallops are shucked at sea and sold as the adductor muscle alone, and the side muscle turns rubbery in the pan."
+    },
+    {
+      "on": "Scallops",
+      "says": "Scallops listed among the fish",
+      "should": "Scallops are bivalve shellfish, not fish, so a guest with a shellfish allergy must be told they are shellfish whatever the plate title says.",
+      "why": "A scallop is a two shelled mollusk, and fish and shellfish are handled as separate allergens on the floor."
+    },
+    {
+      "on": "Shrimp",
+      "says": "Shrimp listed among the fish",
+      "should": "Shrimp are crustacean shellfish, not fish, and belong under shellfish for allergen and prep purposes.",
+      "why": "Crustacean shellfish is its own FDA major allergen, separate from fish, and shrimp is the most common one."
+    }
+  ]
+}

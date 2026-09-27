@@ -1,0 +1,276 @@
+{
+ "slug": "gulf-coast-fish",
+ "title": "Gulf Coast Fish Cuts & Flavor Profiles",
+ "tagline": "Fresh waters, rich flavors, coastal traditions.",
+ "corners": [
+  "From the Louisiana marshes to the open Gulf, our waters provide extraordinary fish, each with its own unique flavor."
+ ],
+ "kind": "fish",
+ "regionLine": "Gulf of Mexico, Louisiana, Texas, Mississippi, Alabama, Florida",
+ "groups": [
+  {
+   "title": "The fish",
+   "note": null,
+   "items": [
+    {
+     "name": "Red Snapper",
+     "sub": "Gulf of Mexico",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Collar, Fillet, Skin-on Fillet, Tail"
+      ],
+      [
+       "Flavor",
+       "Mild, sweet, clean"
+      ],
+      [
+       "Best prep",
+       "Grill, Pan sear, Blacken"
+      ]
+     ]
+    },
+    {
+     "name": "Grouper",
+     "sub": "Gulf of Mexico",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Collar, Loin, Tail"
+      ],
+      [
+       "Flavor",
+       "Rich, firm, buttery"
+      ],
+      [
+       "Best prep",
+       "Grill, Bake, Pan sear"
+      ]
+     ]
+    },
+    {
+     "name": "Tuna",
+     "sub": "Gulf of Mexico, Atlantic",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Cheeks, Loin (Sashimi), Belly, Tail"
+      ],
+      [
+       "Flavor",
+       "Bold, meaty, clean"
+      ],
+      [
+       "Best prep",
+       "Sashimi, Grill, Sear"
+      ]
+     ]
+    },
+    {
+     "name": "Mahi Mahi",
+     "sub": "Gulf Stream, Offshore",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Collar, Loin, Fillet, Tail"
+      ],
+      [
+       "Flavor",
+       "Mild, sweet, fresh"
+      ],
+      [
+       "Best prep",
+       "Grill, Bake, Blacken"
+      ]
+     ]
+    },
+    {
+     "name": "Red Fish",
+     "sub": "Louisiana, Texas",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Collar, Fillet, Tail"
+      ],
+      [
+       "Flavor",
+       "Mild, slightly sweet, buttery"
+      ],
+      [
+       "Best prep",
+       "Grill, Pan sear, Bake"
+      ]
+     ]
+    },
+    {
+     "name": "Flounder",
+     "sub": "Gulf of Mexico",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Whole Fillet, Skin-on Fillet, Tail"
+      ],
+      [
+       "Flavor",
+       "Mild, delicate, sweet"
+      ],
+      [
+       "Best prep",
+       "Pan sear, Bake, Fried"
+      ]
+     ]
+    },
+    {
+     "name": "Snapper (Mutton)",
+     "sub": "Gulf of Mexico",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Collar, Fillet, Tail"
+      ],
+      [
+       "Flavor",
+       "Sweet, firm, clean"
+      ],
+      [
+       "Best prep",
+       "Grill, Bake, Ceviche"
+      ]
+     ]
+    },
+    {
+     "name": "Sheepshead",
+     "sub": "Gulf Coast",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Collar, Fillet, Tail"
+      ],
+      [
+       "Flavor",
+       "Rich, firm, slightly sweet"
+      ],
+      [
+       "Best prep",
+       "Grill, Bake, Blacken"
+      ]
+     ]
+    },
+    {
+     "name": "Trout (Sea Trout)",
+     "sub": "Gulf Coast",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Collar, Fillet, Tail"
+      ],
+      [
+       "Flavor",
+       "Mild, fresh, clean"
+      ],
+      [
+       "Best prep",
+       "Grill, Bake, Pan sear"
+      ]
+     ]
+    },
+    {
+     "name": "Cobia",
+     "sub": "Gulf of Mexico",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Collar, Loin, Tail"
+      ],
+      [
+       "Flavor",
+       "Firm, mild, nutty"
+      ],
+      [
+       "Best prep",
+       "Grill, Bake, Sear"
+      ]
+     ]
+    },
+    {
+     "name": "Tarpon",
+     "sub": "Gulf Coast",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Collar, Fillet, Tail"
+      ],
+      [
+       "Flavor",
+       "Rich, firm, clean"
+      ],
+      [
+       "Best prep",
+       "Grill, Bake, Pan sear"
+      ]
+     ]
+    },
+    {
+     "name": "King Mackerel",
+     "sub": "Gulf of Mexico",
+     "facts": [
+      [
+       "Cuts",
+       "Head, Collar, Fillet, Tail"
+      ],
+      [
+       "Flavor",
+       "Rich, meaty, slightly oily"
+      ],
+      [
+       "Best prep",
+       "Grill, Smoke, Blacken"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "panels": [
+  {
+   "title": "The map",
+   "lines": [
+    "The Gulf",
+    "TX, LA, MS, AL, FL",
+    "Gulf of Mexico",
+    "Coastal fish brings out the best in every bite"
+   ]
+  }
+ ],
+ "footer": "Fresh catch, local waters, exceptional flavor.",
+ "illegible": [
+  "Grouper card, bottom edge: a second label 'BEST PREP' is printed below the flavor line with a tiny fragment after it, read as 'Mi' or 'Me'; no full word is legible and it is not carried into the facts.",
+  "Mahi Mahi card: the section header above the flavor line is printed 'BEST OR PROFILP', a garbled 'FLAVOR PROFILE'; the values beneath it are clear and were transcribed as the Flavor and Best prep facts."
+ ],
+ "corrections": [
+  {
+   "on": "Grouper",
+   "says": "Flavor: Rich, firm, buttery",
+   "should": "Grouper is a lean, firm white fish with a mild, faintly sweet flavor and large chunky flakes, not a rich or buttery one.",
+   "why": "The Floor Deck's Grouper card says it is lean but holds moisture well with a flavor that is mild and faintly sweet, and the Lexicon's Fatty vs. Lean Fish entry puts the reef white fish among the lean fish that store fat in the liver, not the flesh."
+  },
+  {
+   "on": "Snapper (Mutton)",
+   "says": "The card pictures a uniformly red snapper like the Red Snapper card.",
+   "should": "Mutton snapper is olive on the back shading to rosy red on the sides, with a small black spot below the rear of the dorsal fin and blue lines on the face, so the black spot is the mark to look for at the case.",
+   "why": "The drawing repeats the Red Snapper card and would teach a cook to identify mutton snapper by the wrong fish."
+  },
+  {
+   "on": "Trout (Sea Trout)",
+   "says": "Trout (Sea Trout), Gulf Coast",
+   "should": "The Gulf Coast sea trout is the spotted seatrout, also called speckled trout, a silver drum with round black spots along the back and tail that is related to redfish and is not a true trout.",
+   "why": "The Floor Deck's Trout card describes farmed rainbow trout, a freshwater salmonid, and the plate's name and drawing invite a cook to confuse the two."
+  },
+  {
+   "on": "Tarpon",
+   "says": "Cuts: Head, Collar, Fillet, Tail; Flavor: Rich, firm, clean; Best prep: Grill, Bake, Pan sear",
+   "should": "Tarpon is a catch and release game fish that is not sold, cut or cooked as food, so treat this card as a mistake and not as a table fish.",
+   "why": "Tarpon flesh is bony and poor eating, there is no commercial tarpon fishery, and Florida allows possession only with a special tag for record attempts, so no fish case or restaurant carries it."
+  }
+ ]
+}

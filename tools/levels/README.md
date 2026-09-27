@@ -2,7 +2,7 @@
 
 The home is four level cards (I Commis, II Chef de Partie, III Sous Chef,
 IV Chef: the Floor Deck's brigade ladder, now the whole app's), each level the
-same seven subsections at that level's difficulty, and training from there.
+same eight subsections at that level's difficulty, and training from there.
 `tools/derive/levels.mjs` is the one place the names and blurbs are written
 and the gate that holds the placements; the placements themselves are the
 authored files in `tools/derive/levels/<subsection>.json`, machine-written by
@@ -11,8 +11,10 @@ item in the file. Nothing is locked: a level guides, it never bars.
 
 What is placed here: the 45 course dishes, the 112 techniques, the 593 Lexicon
 terms outside the service track, the 27 service modules (their 186 term cards
-inherit through `moduleTerms`), the 8 palate faults, and the 26 read slices of
-food safety (never counted, only read). The 281 deck cards keep the level in
+inherit through `moduleTerms`), the 8 palate faults, the 26 read slices of
+food safety (never counted, only read), and the 20 Plates
+(`tools/derive/levels/plates.json`, never counted, only read; no minimum, so
+Level IV may hold none and does). The 281 deck cards keep the level in
 their section modules (`tools/deck/README.md`, "Levels") and are copied from
 the deck index at build; the deck's placements are the calibration set for
 everything placed here. The library's 1,844 recipes are not placed one by one:

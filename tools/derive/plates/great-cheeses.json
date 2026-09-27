@@ -1,0 +1,273 @@
+{
+  "slug": "great-cheeses",
+  "title": "The World's Great Cheeses",
+  "tagline": "Tradition, terroir, time.",
+  "corners": [
+    "Iconic cheeses of the world"
+  ],
+  "kind": "board",
+  "regionLine": null,
+  "groups": [
+    {
+      "title": "The cheeses",
+      "note": null,
+      "items": [
+        {
+          "name": "Brie",
+          "sub": null,
+          "facts": [
+            ["Country", "France"],
+            ["Style", "Soft, creamy, mild"]
+          ]
+        },
+        {
+          "name": "Camembert",
+          "sub": null,
+          "facts": [
+            ["Country", "France"],
+            ["Style", "Earthy, rich, complex"]
+          ]
+        },
+        {
+          "name": "Roquefort",
+          "sub": null,
+          "facts": [
+            ["Country", "France"],
+            ["Style", "Bold, tangy, blue"]
+          ]
+        },
+        {
+          "name": "Comté",
+          "sub": null,
+          "facts": [
+            ["Country", "France"],
+            ["Style", "Bold, tarity, blue"]
+          ]
+        },
+        {
+          "name": "Chèvre",
+          "sub": null,
+          "facts": [
+            ["Country", "France"],
+            ["Style", "Tangy, fresh, bright"]
+          ]
+        },
+        {
+          "name": "Époisses",
+          "sub": null,
+          "facts": [
+            ["Country", "France"],
+            ["Style", "Smoky, rich, pungent"]
+          ]
+        },
+        {
+          "name": "Parmigiano Reggiano",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Style", "Grainy, complex, savory"]
+          ]
+        },
+        {
+          "name": "Mozzarella di Bufala",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Style", "Fresh, milky, delicate"]
+          ]
+        },
+        {
+          "name": "Gorgonzola",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Style", "Creamy, sharp, blue"]
+          ]
+        },
+        {
+          "name": "Pecorino Romano",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Style", "Salty, tangy, robust"]
+          ]
+        },
+        {
+          "name": "Manchego",
+          "sub": null,
+          "facts": [
+            ["Country", "Spain"],
+            ["Style", "Fruity, nutty, firm"]
+          ]
+        },
+        {
+          "name": "Cabrales",
+          "sub": null,
+          "facts": [
+            ["Country", "Spain"],
+            ["Style", "Bold, earthy, blue"]
+          ]
+        },
+        {
+          "name": "Cheddar",
+          "sub": null,
+          "facts": [
+            ["Country", "England"],
+            ["Style", "Sharp, rich, versatile"]
+          ]
+        },
+        {
+          "name": "Stilton",
+          "sub": null,
+          "facts": [
+            ["Country", "England"],
+            ["Style", "Creamy, tangy, blue"]
+          ]
+        },
+        {
+          "name": "Edam",
+          "sub": null,
+          "facts": [
+            ["Country", "Netherlands"],
+            ["Style", "Mild, nutty, smooth"]
+          ]
+        },
+        {
+          "name": "Gouda",
+          "sub": null,
+          "facts": [
+            ["Country", "Netherlands"],
+            ["Style", "Creamy, rich, mellow"]
+          ]
+        },
+        {
+          "name": "Brinza",
+          "sub": null,
+          "facts": [
+            ["Country", "Romania"],
+            ["Style", "Salty, tangy, firm"]
+          ]
+        },
+        {
+          "name": "Feta",
+          "sub": null,
+          "facts": [
+            ["Country", "Greece"],
+            ["Style", "Salty, crumbly, tangy"]
+          ]
+        },
+        {
+          "name": "Havarti",
+          "sub": null,
+          "facts": [
+            ["Country", "Denmark"],
+            ["Style", "Mild, buttery, smooth"]
+          ]
+        },
+        {
+          "name": "Gruyère",
+          "sub": null,
+          "facts": [
+            ["Country", "Switzerland"],
+            ["Style", "Nutty, complex, firm"]
+          ]
+        },
+        {
+          "name": "Blue Shropshire",
+          "sub": null,
+          "facts": [
+            ["Country", "England"],
+            ["Style", "Rich, creamy, blue"]
+          ]
+        },
+        {
+          "name": "Provolone",
+          "sub": null,
+          "facts": [
+            ["Country", "Italy"],
+            ["Style", "Mild, smooth, stretchy"]
+          ]
+        },
+        {
+          "name": "Brie de Meaux",
+          "sub": null,
+          "facts": [
+            ["Country", "France"],
+            ["Style", "Rich, earthy, creamy"]
+          ]
+        },
+        {
+          "name": "Mimolette",
+          "sub": null,
+          "facts": [
+            ["Country", "France"],
+            ["Style", "Nutty, fruity, firm"]
+          ]
+        }
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "title": "Countries",
+      "lines": [
+        "France",
+        "Italy",
+        "Spain",
+        "Switzerland",
+        "England",
+        "Germany",
+        "Netherlands",
+        "Ireland",
+        "Greece",
+        "Portugal",
+        "United States",
+        "Australia",
+        "New Zealand",
+        "Argentina",
+        "South Africa",
+        "And beyond..."
+      ]
+    },
+    {
+      "title": "Cheese categories",
+      "lines": [
+        "Soft cheeses: Creamy, mild, spreadable. Brie, Camembert, Goat Cheese",
+        "Semi-soft cheeses: Smooth, rich, flexible. Havarti, Gouda, Taleggio",
+        "Hard cheeses: Firm, aged, complex. Parmigiano Reggiano, Comté, Cheddar",
+        "Blue cheeses: Bold, pungent, distinctive. Roquefort, Gorgonzola, Stilton",
+        "Fresh cheeses: Light, delicate, clean. Mozzarella, Feta, Ricotta"
+      ]
+    }
+  ],
+  "footer": "Exceptional cheeses, extraordinary places, unforgettable flavors",
+  "illegible": [
+    "Comté card (first row, fourth column), style line: the plate prints 'Bold, tarity, blue', and 'tarity' is not a word; it is most likely a misprint of 'tangy' (the Roquefort card beside it prints 'Bold, tangy, blue'). Transcribed as printed."
+  ],
+  "corrections": [
+    {
+      "on": "Comté",
+      "says": "Bold, tarity, blue",
+      "should": "Comté is a firm, nutty, aged Alpine cheese with no blue veining, so the style line should read something like nutty, firm, complex.",
+      "why": "Comté is a pressed cooked hard cheese, the plate's own Cheese Categories panel files it under Hard cheeses, the wedge pictured is a plain firm cheese, and the line simply repeats the Roquefort card with tangy misprinted as tarity."
+    },
+    {
+      "on": "Époisses",
+      "says": "Smoky, rich, pungent",
+      "should": "Époisses is a washed rind cheese and is never smoked, so smoky should be replaced with a word like meaty or salty.",
+      "why": "Époisses de Bourgogne is washed with brine and marc de Bourgogne, and the app's own deck describes the washed rind family as brine or booze washed and stinky, never smoked."
+    },
+    {
+      "on": "Parmigiano Reggiano",
+      "says": "Pictured as a bright orange crumbly block",
+      "should": "Parmigiano Reggiano has a pale straw yellow paste with a crystalline grain, and the orange block pictured looks like colored cheddar.",
+      "why": "Parmigiano Reggiano is never colored with annatto, so its paste is straw colored and the picture would mislead a server at the counter."
+    },
+    {
+      "on": "Blue Shropshire",
+      "says": "Blue Shropshire, pictured with a white paste",
+      "should": "The cheese is called Shropshire Blue, and its paste is orange from annatto with blue veins rather than the white paste shown.",
+      "why": "Shropshire Blue is the name used by every maker, and it is an annatto tinted Stilton style blue, so both the reversed name and the white paste picture would teach a server to misname and misidentify it."
+    }
+  ]
+}

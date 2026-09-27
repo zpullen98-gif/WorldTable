@@ -1,0 +1,225 @@
+{
+ "slug": "culinary-mushrooms",
+ "title": "The World of Culinary Mushrooms",
+ "tagline": "Flavor profiles, culinary uses, a gastronomic journey.",
+ "corners": [
+  "Small fungi, big flavor",
+  "The right mushroom transforms a dish. Different forests, different flavors. Same extraordinary experience."
+ ],
+ "kind": "pantry",
+ "regionLine": null,
+ "groups": [
+  {
+   "title": "The mushrooms",
+   "note": null,
+   "items": [
+    {
+     "name": "Porcini",
+     "sub": null,
+     "facts": [
+      ["Latin", "Boletus edulis"],
+      ["Flavor", "Earthy, nutty, rich"],
+      ["Best uses", "Risotto, pasta, soups, sauces, grilling"]
+     ]
+    },
+    {
+     "name": "Morel",
+     "sub": null,
+     "facts": [
+      ["Latin", "Morchella spp."],
+      ["Flavor", "Woodsy, earthy, complex"],
+      ["Best uses", "Cream sauces, risotto, stuffings, grilling"]
+     ]
+    },
+    {
+     "name": "Chanterelle",
+     "sub": null,
+     "facts": [
+      ["Latin", "Cantharellus cibarius"],
+      ["Flavor", "Fruity, peppery, slightly sweet"],
+      ["Best uses", "Pasta, omelets, sauces, grilling, sautéing"]
+     ]
+    },
+    {
+     "name": "Truffle",
+     "sub": null,
+     "facts": [
+      ["Latin", "Tuber spp."],
+      ["Flavor", "Intense, earthy, musky"],
+      ["Best uses", "Pasta, risotto, eggs, steak, butter"]
+     ]
+    },
+    {
+     "name": "Shiitake",
+     "sub": null,
+     "facts": [
+      ["Latin", "Lentinula edodes"],
+      ["Flavor", "Savory, smoky, umami"],
+      ["Best uses", "Stir-fries, soups, ramen, grilling, sauces"]
+     ]
+    },
+    {
+     "name": "Oyster",
+     "sub": null,
+     "facts": [
+      ["Latin", "Pleurotus ostreatus"],
+      ["Flavor", "Mild, earthy, slightly sweet"],
+      ["Best uses", "Stir-fries, soups, tacos, pasta, grilling"]
+     ]
+    },
+    {
+     "name": "Cremini",
+     "sub": null,
+     "facts": [
+      ["Latin", "Agaricus bisporus"],
+      ["Flavor", "Earthy, rich, meaty"],
+      ["Best uses", "Grilling, roasting, pasta, soups, sauces"]
+     ]
+    },
+    {
+     "name": "Button",
+     "sub": null,
+     "facts": [
+      ["Latin", "Agaricus bisporus"],
+      ["Flavor", "Mild, clean, fresh"],
+      ["Best uses", "Salads, stir-fries, soups, pasta, pizza"]
+     ]
+    },
+    {
+     "name": "Portobello",
+     "sub": null,
+     "facts": [
+      ["Latin", "Agaricus bisporus"],
+      ["Flavor", "Meaty, earthy, rich"],
+      ["Best uses", "Grilling, burgers, fajitas, roasting, salads"]
+     ]
+    },
+    {
+     "name": "Maitake",
+     "sub": null,
+     "facts": [
+      ["Latin", "Grifola frondosa"],
+      ["Flavor", "Earthy, woodsy, delicate"],
+      ["Best uses", "Stir-fries, soups, risotto, grilling, stews"]
+     ]
+    },
+    {
+     "name": "Enoki",
+     "sub": null,
+     "facts": [
+      ["Latin", "Flammulina velutipes"],
+      ["Flavor", "Mild, crisp, slightly sweet"],
+      ["Best uses", "Hot pots, salads, stir-fries, soups, noodles"]
+     ]
+    },
+    {
+     "name": "King Trumpet",
+     "sub": null,
+     "facts": [
+      ["Latin", "Pleurotus eryngii"],
+      ["Flavor", "Mild, meaty, nutty"],
+      ["Best uses", "Grilling, roasting, stir-fries, pasta, steaks"]
+     ]
+    },
+    {
+     "name": "Black Trumpet",
+     "sub": null,
+     "facts": [
+      ["Latin", "Craterellus cornucopioides"],
+      ["Flavor", "Smoky, fruity, earthy"],
+      ["Best uses", "Sauces, risotto, pasta, grilling, stews"]
+     ]
+    },
+    {
+     "name": "Wood Ear",
+     "sub": null,
+     "facts": [
+      ["Latin", "Auricularia auricula-judae"],
+      ["Flavor", "Mild, crisp, earthy"],
+      ["Best uses", "Stir-fries, soups, salads, noodles, hot pots"]
+     ]
+    },
+    {
+     "name": "Lobster",
+     "sub": null,
+     "facts": [
+      ["Latin", "Hypomyces lactifluorum"],
+      ["Flavor", "Mild, sweet, seafood-like"],
+      ["Best uses", "Pasta, risotto, sauces, soups, sautéing"]
+     ]
+    },
+    {
+     "name": "Puffball",
+     "sub": null,
+     "facts": [
+      ["Latin", "Calvatia gigantea"],
+      ["Flavor", "Mild, delicate, nutty"],
+      ["Best uses", "Stuffing, roasting, soups, grilling"]
+     ]
+    },
+    {
+     "name": "Hen of the Woods",
+     "sub": null,
+     "facts": [
+      ["Latin", "Grifola frondosa"],
+      ["Flavor", "Earthy, woodsy, rich"],
+      ["Best uses", "Roasting, stir-fries, soups, risotto, grilling"]
+     ]
+    },
+    {
+     "name": "Cauliflower",
+     "printed": "Chorioleus",
+     "sub": null,
+     "facts": [
+      ["Latin", "Sparassis crispa"],
+      ["Flavor", "Mild, earthy, slightly sweet"],
+      ["Best uses", "Pasta, risotto, soups, sautéing, grilling"]
+     ]
+    }
+   ]
+  }
+ ],
+ "panels": [
+  {
+   "title": "Quick flavor guide",
+   "lines": [
+    "Earthy, Nutty, Smoky, Fruity",
+    "Meaty, Sweet, Umami, Spicy"
+   ]
+  }
+ ],
+ "footer": "Good ingredients, better meals, a richer life",
+ "illegible": [],
+ "corrections": [
+  {
+   "on": "Enoki",
+   "says": "Flammulina velutipes",
+   "should": "The cultivated enoki sold in shops is Flammulina filiformis, split in 2018 from the European velvet shank Flammulina velutipes, a close cousin rather than the same mushroom.",
+   "why": "The app's Lexicon entry for Enoki opens with Flammulina filiformis and names the 2018 split from the European velvet shank."
+  },
+  {
+   "on": "Wood Ear",
+   "says": "Auricularia auricula-judae",
+   "should": "Most dried black wood ear a kitchen buys is Auricularia heimuer, named in 2014 and long sold under the name of the European jelly ear, Auricularia auricula-judae, and cloud ear is Auricularia cornea.",
+   "why": "The app's Lexicon entry for Wood Ear teaches that the Chinese dried product is Auricularia heimuer and that Auricularia auricula-judae is the elder European jelly ear."
+  },
+  {
+   "on": "Lobster",
+   "says": "Illustrated as an orange cluster of tiered, fan shaped shelves",
+   "should": "A lobster mushroom is a single lumpy, distorted red orange body with white flesh, because Hypomyces lactifluorum is a mold that grows over a Russula or Lactarius and deforms it, so the drawing shows a bracket fungus such as chicken of the woods, not a lobster mushroom.",
+   "why": "The panel draws tiered orange fans, which is the form of chicken of the woods (Laetiporus), and a cook would learn the wrong shape to recognize at the market."
+  },
+  {
+   "on": "Hen of the Woods",
+   "says": "Hen of the Woods (Grifola frondosa): earthy, woodsy, rich",
+   "should": "Hen of the woods and maitake are one mushroom, Grifola frondosa, so this panel repeats the Maitake panel under a second name and should be read as the same entry.",
+   "why": "Both panels print the identical Latin name Grifola frondosa, and the app's Lexicon entry for Maitake opens with Grifola frondosa, hen of the woods, yet the plate gives the one mushroom two flavor profiles (delicate in one panel, rich in the other)."
+  },
+  {
+   "on": "Cauliflower",
+   "says": "Chorioleus (Sparassis crispa)",
+   "should": "The mushroom with the Latin name Sparassis crispa is the cauliflower mushroom, and Chorioleus is not a real mushroom name.",
+   "why": "Sparassis crispa is sold and foraged everywhere as the cauliflower mushroom, its ruffled pale cluster is what the panel draws, and no genus, species or trade name called Chorioleus exists."
+  }
+ ]
+}

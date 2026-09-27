@@ -353,7 +353,12 @@ function deckCost() {
 	return { cards, gz, firstId: emitted[0].id };
 }
 
-const CAP_MB = 2.7;
+/* Raised from 2.7 MB to 3.0 MB on 2026-09-27, by the owner's decision, for
+   the study material: the Plates' transcriptions (twenty reference plates
+   as text, so they read and quiz offline from the first launch; the
+   pictures themselves stay out, see below) and the level primers. At the
+   raise the precache stood at 2.688 MB against the old cap. */
+const CAP_MB = 3.0;
 
 check(`precache stays under ${CAP_MB} MB gzipped`, () => {
 	let raw = 0;
@@ -455,6 +460,25 @@ check('the levels data installs with the app', () => {
 	const missing = chunks.map(rel).filter((r) => !precached.some((u) => u === '/' + r || u === r));
 	assert(!missing.length, `these hold the levels data and are NOT in the precache: ${missing.join(', ')}`);
 	return `${chunks.length} chunk(s), all precached`;
+});
+
+check('the plates ship as text in the install and as pictures on demand', () => {
+	/* Two halves, and the split is the design: the transcriptions are a lazily
+	   imported chunk that installs with the app (found by a key only that
+	   file carries); the pictures are static files the worker keeps only once
+	   opened, and not one of them may be precached, or the install would grow
+	   by seven megabytes for drawings a reader opens one at a time. */
+	const chunks = files.filter((f) => extname(f) === '.js' && readFileSync(f, 'utf8').includes('lexiconCategories'));
+	assert(chunks.length, 'no built chunk carries "lexiconCategories": plates.json never reached the bundle');
+	const missing = chunks.map(rel).filter((r) => !precached.some((u) => u === '/' + r || u === r));
+	assert(!missing.length, `these hold the plates' text and are NOT in the precache: ${missing.join(', ')}`);
+	const pictures = files.filter((f) => rel(f).startsWith('plates/') && f.endsWith('.webp'));
+	assert(pictures.length >= 40, `${pictures.length} plate pictures on disk; twenty plates need a picture and a thumbnail each`);
+	const cached = pictures.map(rel).filter((r) => precached.some((u) => u === '/' + r || u === r));
+	assert(!cached.length, `plate pictures in the precache: ${cached.slice(0, 3).join(', ')}`);
+	const pages = html.filter((f) => rel(f).startsWith('plates/') && rel(f).endsWith('.html')).length;
+	assert(pages >= pictures.length / 2, `${pages} plate pages for ${pictures.length / 2} plates`);
+	return `${chunks.length} text chunk(s) precached, ${pictures.length} pictures on demand, ${pages} pages`;
 });
 
 // ── offline integrity ────────────────────────────────────────────────────────

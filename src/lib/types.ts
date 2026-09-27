@@ -727,7 +727,7 @@ export interface DeckIndex {
  * checks. Slug lists per subsection per level, keyed by the level as a
  * string ("1"), which is what JSON makes of an object key anyway.
  */
-export type SubsectionKey = 'dishes' | 'techniques' | 'lexicon' | 'deck' | 'palate' | 'safety' | 'service';
+export type SubsectionKey = 'dishes' | 'techniques' | 'lexicon' | 'deck' | 'plates' | 'palate' | 'safety' | 'service';
 
 export interface LevelInfo {
 	level: DeckLevel;
@@ -757,6 +757,68 @@ export interface LevelsData {
 	safety: Record<string, { label: string; anchor: string; kind: 'clause' | 'fact' | 'numeric' | 'gap' }>;
 	/** level key -> subsection -> how many items (terms, for service). */
 	counts: Record<string, Record<SubsectionKey, number>>;
+}
+
+/**
+ * The Plates: twenty illustrated reference plates, each transcribed in full.
+ * See tools/derive/plates.mjs for the authored shape and the gate. The image
+ * is opened on demand and never precached; the transcription installs with
+ * the app, so a plate reads, searches and quizzes without its picture.
+ */
+export type PlateKind = 'cuts' | 'fish' | 'produce' | 'pantry' | 'board';
+
+export interface PlateItem {
+	name: string;
+	/** The plate's own spelling, only when it is a misprint of `name`. */
+	printed?: string;
+	/** The parenthetical after the name: "Pacific", "Bluefin, Yellowfin". */
+	sub: string | null;
+	/** [label, value] pairs in the plate's order; the labels are the kind's. */
+	facts: Array<[string, string]>;
+	/** Resolved at build by name: the deck card and the Lexicon entry, if any. */
+	links?: { deck?: string; lexicon?: string };
+}
+
+export interface PlateGroup {
+	/** A cut chart's primal box; empty on the plates that hold one list. */
+	title: string;
+	note: string | null;
+	items: PlateItem[];
+}
+
+export interface PlateCorrection {
+	/** An item, group or panel name on the plate. */
+	on: string;
+	says: string;
+	should: string;
+	why: string;
+}
+
+export interface Plate {
+	slug: string;
+	title: string;
+	tagline: string | null;
+	kind: PlateKind;
+	kindTitle: string;
+	regionLine: string | null;
+	corners: string[];
+	image: { src: string; thumb: string; width: number; height: number };
+	groups: PlateGroup[];
+	panels: Array<{ title: string; lines: string[] }>;
+	footer: string | null;
+	corrections: PlateCorrection[];
+	/** How many items the plate holds. */
+	count: number;
+	/** The deck sections and Lexicon categories it illustrates (two hits or more). */
+	deckSections: string[];
+	lexiconCategories: string[];
+}
+
+export interface PlatesData {
+	version: 1;
+	kinds: Array<{ key: PlateKind; title: string; blurb: string }>;
+	/** In wall order. */
+	plates: Plate[];
 }
 
 export interface StationsData {

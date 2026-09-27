@@ -1,0 +1,213 @@
+{
+  "slug": "chicken-cuts",
+  "title": "Chicken Cuts",
+  "tagline": "Quality meat, timeless tradition. The anatomy of chicken.",
+  "corners": [
+    "Good Food Comes From Great Cuts"
+  ],
+  "kind": "cuts",
+  "regionLine": null,
+  "groups": [
+    {
+      "title": "Neck",
+      "note": "Rich flavor, great for soups & stock",
+      "items": [
+        {
+          "name": "Neck",
+          "sub": "Bone-in",
+          "facts": []
+        }
+      ]
+    },
+    {
+      "title": "Breast",
+      "note": "Lean, mild flavor, versatile",
+      "items": [
+        {
+          "name": "Boneless Skinless Breast",
+          "sub": null,
+          "facts": [
+            ["Cook", "Grill, Bake, Sauté"]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Wing",
+      "note": "Juicy, flavorful, great for appetizers",
+      "items": [
+        {
+          "name": "Wing",
+          "sub": null,
+          "facts": [
+            ["Cook", "Fry, Grill, Bake"]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Tail",
+      "note": "Rich flavor, ideal for stock",
+      "items": [
+        {
+          "name": "Tail",
+          "sub": null,
+          "facts": [
+            ["Cook", "Stock"]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Thigh",
+      "note": "Moist, rich, full of flavor",
+      "items": [
+        {
+          "name": "Thigh",
+          "sub": "Boneless or Bone-in",
+          "facts": []
+        }
+      ]
+    },
+    {
+      "title": "Drumstick",
+      "note": "Flavorful, juicy, great for grilling",
+      "items": [
+        {
+          "name": "Drumstick",
+          "sub": null,
+          "facts": [
+            ["Cook", "Grill, Bake, Fry"]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Bone-in Thigh",
+      "note": "Rich, juicy, flavorful",
+      "items": [
+        {
+          "name": "Bone-in Thigh",
+          "sub": null,
+          "facts": [
+            ["Cook", "Roast, Grill, Braise"]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Boneless Thigh",
+      "note": "Rich, tender, versatile",
+      "items": [
+        {
+          "name": "Boneless Thigh",
+          "sub": null,
+          "facts": [
+            ["Cook", "Sauté, Stir-fry, Grill"]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Chicken Tenderloin",
+      "note": "Lean, tender, quick cooking",
+      "items": [
+        {
+          "name": "Tenderloin",
+          "sub": null,
+          "facts": [
+            ["Cook", "Sauté, Grill, Bake"]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Chicken Cutlet",
+      "note": "Lean, even cooking, great for milanesa",
+      "items": [
+        {
+          "name": "Cutlet",
+          "sub": null,
+          "facts": [
+            ["Cook", "Pan-fry, Bake"]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Whole Legs",
+      "note": "Thigh & drumstick",
+      "items": [
+        {
+          "name": "Leg",
+          "sub": null,
+          "facts": [
+            ["Cook", "Roast, Grill, Braise"]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Liver & Gizzard",
+      "note": "Bold flavor, traditional",
+      "items": [
+        {
+          "name": "Liver & Gizzard",
+          "sub": null,
+          "facts": [
+            ["Cook", "Sauté, Braise"]
+          ]
+        }
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "title": "On the animal",
+      "lines": [
+        "Neck",
+        "Breast",
+        "Wing",
+        "Drumstick",
+        "Thigh",
+        "Tail"
+      ]
+    },
+    {
+      "title": "Cooking methods",
+      "lines": [
+        "Grill",
+        "Roast",
+        "Bake",
+        "Sauté",
+        "Fry",
+        "Braise",
+        "Stir-fry"
+      ]
+    }
+  ],
+  "footer": "Better ingredients, better meals, a richer life",
+  "illegible": [
+    "Wing card (left column, third box): the cut name under the photo is mostly covered by the wing drawing; only 'ing' shows. Read as 'Wing', matching the box heading."
+  ],
+  "corrections": [
+    {
+      "on": "Neck",
+      "says": "Neck (Bone-in), with a photo of thick marbled slabs",
+      "should": "Trust the words on the card and not the picture, because a chicken neck is a slender skin-on cylinder about the width of a finger, while the photo shows chop-thick marbled pieces that look like pork neck bones.",
+      "why": "Chicken necks are long and thin with almost no marbling, and the pictured pieces have the thickness and intramuscular fat of pork neck bones."
+    },
+    {
+      "on": "Thigh",
+      "says": "Thigh (Boneless or Bone-in); Bone-in Thigh; Boneless Thigh",
+      "should": "Read the three thigh cards as one cut sold two ways, bone-in or boneless, not as three different cuts.",
+      "why": "Bone-in and boneless thighs are the same muscle group with or without the bone, and the right-column Thigh card already names both forms before the bottom row repeats them."
+    },
+    {
+      "on": "Liver & Gizzard",
+      "says": "Sauté, Braise",
+      "should": "Sauté the liver quickly and braise or simmer the gizzard, because the two organs need opposite treatment and the shared line does not say which method belongs to which.",
+      "why": "The liver has almost no connective tissue and turns grainy when overcooked, while the gizzard is a tough working muscle whose connective tissue only softens with long moist cooking."
+    }
+  ]
+}

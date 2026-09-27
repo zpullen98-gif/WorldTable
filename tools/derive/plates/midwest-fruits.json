@@ -1,0 +1,277 @@
+{
+  "slug": "midwest-fruits",
+  "title": "Midwest Fruits",
+  "tagline": "Local harvests, seasonal flavors, timeless traditions.",
+  "corners": [
+    "From the Great Lakes to the Prairie Fields, a region of abundant harvests",
+    "Heartland farms, fresh flavors, lasting traditions",
+    "Healthy soil, thriving farms, fresher tomorrows"
+  ],
+  "kind": "produce",
+  "regionLine": "Great Lakes, Prairie Farms, Rolling Fields",
+  "groups": [
+    {
+      "title": "The fruits",
+      "note": null,
+      "items": [
+        {
+          "name": "Apples",
+          "sub": null,
+          "facts": [
+            ["Season", "September to October"],
+            ["Flavor", "Crisp, sweet, tart, aromatic"]
+          ]
+        },
+        {
+          "name": "Cherries",
+          "sub": null,
+          "facts": [
+            ["Season", "June to July"],
+            ["Flavor", "Sweet, juicy, tart, rich"]
+          ]
+        },
+        {
+          "name": "Strawberries",
+          "sub": null,
+          "facts": [
+            ["Season", "May to June"],
+            ["Flavor", "Sweet, bright, juicy, fragrant"]
+          ]
+        },
+        {
+          "name": "Blueberries",
+          "sub": null,
+          "facts": [
+            ["Season", "July to August"],
+            ["Flavor", "Sweet, tangy, juicy, mild"]
+          ]
+        },
+        {
+          "name": "Raspberries",
+          "sub": null,
+          "facts": [
+            ["Season", "July to August"],
+            ["Flavor", "Sweet, tart, juicy, delicate"]
+          ]
+        },
+        {
+          "name": "Blackberries",
+          "sub": null,
+          "facts": [
+            ["Season", "July to September"],
+            ["Flavor", "Bold, tangy, juicy, earthy"]
+          ]
+        },
+        {
+          "name": "Peaches",
+          "sub": null,
+          "facts": [
+            ["Season", "July to August"],
+            ["Flavor", "Sweet, juicy, floral, rich"]
+          ]
+        },
+        {
+          "name": "Plums",
+          "sub": null,
+          "facts": [
+            ["Season", "July to September"],
+            ["Flavor", "Sweet, tart, juicy, velvety"]
+          ]
+        },
+        {
+          "name": "Nectarines",
+          "sub": null,
+          "facts": [
+            ["Season", "July to August"],
+            ["Flavor", "Sweet, smooth, juicy, aromatic"]
+          ]
+        },
+        {
+          "name": "Pears",
+          "sub": null,
+          "facts": [
+            ["Season", "August to October"],
+            ["Flavor", "Sweet, juicy, buttery, mild"]
+          ]
+        },
+        {
+          "name": "Cranberries",
+          "sub": null,
+          "facts": [
+            ["Season", "October to November"],
+            ["Flavor", "Tart, bright, refreshing, tangy"]
+          ]
+        },
+        {
+          "name": "Gooseberries",
+          "sub": null,
+          "facts": [
+            ["Season", "June to July"],
+            ["Flavor", "Tart, tangy, floral, unique"]
+          ]
+        },
+        {
+          "name": "Elderberries",
+          "sub": null,
+          "facts": [
+            ["Season", "July to September"],
+            ["Flavor", "Earthy, tart, musky, rich"]
+          ]
+        },
+        {
+          "name": "Cantaloupe",
+          "sub": null,
+          "facts": [
+            ["Season", "July to August"],
+            ["Flavor", "Sweet, juicy, refreshing, melon"]
+          ]
+        },
+        {
+          "name": "Watermelon",
+          "sub": null,
+          "facts": [
+            ["Season", "July to August"],
+            ["Flavor", "Sweet, crisp, hydrating, refreshing"]
+          ]
+        },
+        {
+          "name": "Huckleberries",
+          "sub": null,
+          "facts": [
+            ["Season", "June to July"],
+            ["Flavor", "Tart, sweet, earthy, wild"]
+          ]
+        },
+        {
+          "name": "Serviceberries",
+          "sub": null,
+          "facts": [
+            ["Season", "June to July"],
+            ["Flavor", "Tart, sweet, juicy, rich"]
+          ]
+        },
+        {
+          "name": "Mulberries",
+          "sub": null,
+          "facts": [
+            ["Season", "June to July"],
+            ["Flavor", "Sweet, earthy, juicy, delicate"]
+          ]
+        },
+        {
+          "name": "Figs",
+          "sub": null,
+          "facts": [
+            ["Season", "August to September"],
+            ["Flavor", "Sweet, rich, honeyed, soft"]
+          ]
+        },
+        {
+          "name": "Quince",
+          "sub": null,
+          "facts": [
+            ["Season", "October to November"],
+            ["Flavor", "Tart, floral, dense, aromatic"]
+          ]
+        },
+        {
+          "name": "Apricots",
+          "sub": null,
+          "facts": [
+            ["Season", "July to August"],
+            ["Flavor", "Sweet, tangy, juicy, velvety"]
+          ]
+        },
+        {
+          "name": "Black Raspberries",
+          "sub": null,
+          "facts": [
+            ["Season", "July to August"],
+            ["Flavor", "Sweet, tart, juicy, complex"]
+          ]
+        },
+        {
+          "name": "Pawpaw",
+          "sub": null,
+          "facts": [
+            ["Season", "September to October"],
+            ["Flavor", "Custard-like, sweet, tropical, rich"]
+          ]
+        },
+        {
+          "name": "Plantain",
+          "sub": null,
+          "facts": [
+            ["Season", "August to October"],
+            ["Flavor", "Starchy, mild, sweet, creamy"]
+          ]
+        },
+        {
+          "name": "Crabapples",
+          "sub": null,
+          "facts": [
+            ["Season", "September to October"],
+            ["Flavor", "Tart, crisp, tangy, bright"]
+          ]
+        }
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "title": "The region",
+      "lines": [
+        "Rich soil",
+        "Clean water",
+        "Strong roots",
+        "Great food"
+      ]
+    },
+    {
+      "title": "The map",
+      "lines": [
+        "States: N. Dakota, S. Dakota, Minnesota, Nebraska, Iowa, Kansas, Missouri, Wisconsin, Illinois, Michigan, Indiana, Ohio",
+        "Lakes: Lake Superior, Lake Michigan, Lake Huron, Lake Erie",
+        "Local fruits, seasonal harvests, Midwestern pride"
+      ]
+    },
+    {
+      "title": "Midwest favorites",
+      "lines": [
+        "Apples, Cherries, Berries, Peaches, Sweet Corn, Hard Squash"
+      ]
+    },
+    {
+      "title": "Local harvests",
+      "lines": [
+        "Farmers Markets, U-Pick Farms, Roadside Stands, Family Farms"
+      ]
+    }
+  ],
+  "footer": "Fresh, local, seasonal.",
+  "illegible": [
+    "Map, the Great Lakes labels: the hand-lettered lake names are distorted; 'Lake Superior' reads close to 'Lake Suprior' and 'Lake Huron' reads close to 'Lake Hurun'; both transcribed as the lake names they clearly stand for. Lake Michigan and Lake Erie are clear.",
+    "Elderberries card, left column, third row, flavor profile: the third word's middle letters are slightly garbled at every zoom; read as 'Musky' and transcribed as musky.",
+    "Card count: the plate prints 25 fruit cards (7 across the top row, 4 pairs down the left side, 4 pairs down the right side, and Mulberries and Figs side by side under the map); a second full pass of every region found no further cards, so the expected count of about 27 overstates this plate by two."
+  ],
+  "corrections": [
+    {
+      "on": "Figs",
+      "says": "Figs, Season August to September",
+      "should": "Figs are a Mediterranean and California crop and not a Midwest harvest, so any fig on a Midwest menu is shipped in rather than picked locally.",
+      "why": "The common fig is not winter hardy across the twelve states on the plate's own map, and the app's Lexicon places the crop in Turkey, Greece, Italy, Spain, the Levant and California, with no Midwest orchard or market crop."
+    },
+    {
+      "on": "Black Raspberries",
+      "says": "Season July to August",
+      "should": "Midwest black raspberries ripen from late June to mid July and are finished well before August, ahead of the red raspberries beside them.",
+      "why": "Black raspberries carry a single early summer crop about two weeks ahead of summer red raspberries, and Ohio, the leading black raspberry state, picks from late June to mid July."
+    },
+    {
+      "on": "Plantain",
+      "says": "Plantain, Season August to October",
+      "should": "Plantains are a tropical cooking banana that cannot be grown in any Midwest state and have no Midwest season, so this card does not belong on a local harvest plate.",
+      "why": "Plantain is a frost tender tropical plant whose United States crop comes from Puerto Rico, Hawaii and imports, and the app's Lexicon teaches it as a vegetable staple of West Africa, the Caribbean and Latin America."
+    }
+  ]
+}

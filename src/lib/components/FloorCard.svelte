@@ -46,6 +46,7 @@
 		turnButton = true,
 		heading = 'h2',
 		before,
+		plate,
 		onflip
 	}: {
 		card: DeckCard;
@@ -67,6 +68,8 @@
 		heading?: 'h2' | 'h3';
 		/** rendered between the term and the answer: "You chose ..." */
 		before?: Snippet;
+		/** the reference plate this card's term is drawn on, if any */
+		plate?: { slug: string; title: string } | null;
 		onflip?: () => void;
 	} = $props();
 
@@ -166,10 +169,11 @@
 				{/if}
 			</details>
 
-			{#if card.lexiconSlug || card.recipe}
+			{#if card.lexiconSlug || card.recipe || plate}
 				<p class="links further">
 					{#if card.lexiconSlug}<a href="{base}/lexicon#{card.lexiconSlug}">The long entry in the Lexicon</a>{/if}
 					{#if card.recipe}<a href="{base}/recipe/{card.recipe}">See it made</a>{/if}
+					{#if plate}<a href="{base}/plates/{plate.slug}">On the plate: {plate.title}</a>{/if}
 				</p>
 			{/if}
 		</div>

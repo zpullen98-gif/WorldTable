@@ -107,9 +107,12 @@ render function by name, stop.
   measurement says we don't have.
 - Prerendering and precaching are separate decisions. The service worker caches
   the shell + data + fonts and rebuilds pages from the `shell.html` navigation
-  fallback. Never precache the prerendered HTML files. The precache has a cap,
-  asserted in `tools/verify-build.mjs` with its history and the live figure;
-  every emitted `.js` chunk counts against it, lazy import or not.
+  fallback. Never precache the prerendered HTML files. The precache has a cap
+  (3.0 MB gzipped since 27 Sep 2026, raised from 2.7 by the owner for the
+  Plates' transcriptions and the study material to come), asserted in
+  `tools/verify-build.mjs` with its history and the live figure; every
+  emitted `.js` chunk counts against it, lazy import or not. Pictures under
+  `static/plates/` are the one thing served on demand and never installed.
 - Day/night are full token sets in `src/lib/styles/tokens.css`, not overrides on
   a body class. Service is read synchronously in `src/app.html` before first
   paint: that is the only reason preferences live in localStorage while
@@ -639,9 +642,10 @@ is locked**: a level guides, it never bars.
   test") and on the level pages' titles; since 26 Sep 2026 the home cards
   show no numeral (the owner's call), and "Level I" stays on each card as
   hidden text for a screen reader.
-- **Seven subsections, the same at every level** (`SUBSECTIONS`): Dishes,
-  Techniques, The Lexicon, The Floor Deck, The Palate, Food Safety (read,
-  never graded), Service. What each holds at each level is an AUTHORED
+- **Eight subsections, the same at every level** (`SUBSECTIONS`): Dishes,
+  Techniques, The Lexicon, The Floor Deck, The Plates (read, never graded;
+  since 27 Sep 2026), The Palate, Food Safety (read, never graded), Service.
+  What each holds at each level is an AUTHORED
   placement in `tools/derive/levels/<subsection>.json` (`{slug, level,
   reason}`), machine-written by the procedure in `tools/levels/README.md`
   (the standard, a brief per subsection with every item's signals, an
@@ -704,6 +708,78 @@ is locked**: a level guides, it never bars.
   `practise/calibrate` stay), `HomeBands.svelte`, the Service hub's house
   tiles and deck block (`/service` is the track's own page). A stale install
   landing on a retired route meets the error page, which names the situation.
+
+## The Plates: twenty illustrated reference plates, read and never graded
+
+The owner drew twenty reference posters (27 Sep 2026) and asked for them as
+study material: three cut charts (chicken, pork, beef), three fish cases
+(Pacific, Atlantic, Gulf Coast), ten regional larders (Northwest, Southwest,
+Midwest, Northeastern, Southeastern; vegetables and fruits), a spice plate, a
+mushroom plate, the great cheeses and a charcuterie board. They are
+GENERATED pictures and they contain real errors (a wrong season, a fish in
+the wrong ocean, a cut on the wrong primal), so the app never shows a plate
+without its transcription and its corrections under it.
+
+- **The data is authored text, not the picture.** `tools/derive/plates/<slug>.json`
+  holds a full transcription of each plate (`groups` of `items` with the
+  printed name, an optional `printed` spelling where the poster misspells,
+  a `sub` line and labelled `facts`; `panels`, `footer`, `corners`,
+  `regionLine`; an `illegible` list for what could not be read; and
+  `corrections`, each `{on, says, should, why}` anchored to an item, group,
+  panel or part name). They were written by a transcribe, verify, two
+  fact-check, judge pipeline (default drop), then read by hand: 463 items, 122
+  corrections, 31 illegible notes. `tools/derive/plates.mjs` is the gate
+  (`checkPlate`: the shape, the kind's fact labels, Title Case names, no
+  duplicate, at least six items, every correction anchored, both picture files
+  on disk and in `images.json`) and the build (`buildPlates`), emitted as
+  `plates.json` and loaded lazily by `loadPlates()`.
+- **Kinds decide the fact labels and the links.** `KINDS`: cuts (Cook), fish
+  (Cuts, Flavor, Best prep), produce (Season, Where, Flavor), pantry (Flavor,
+  Use, Latin, Best uses), board (Country, Style, Character). Every item is
+  matched by folded name (`foldName`: slug plus de-plural) against the deck's
+  terms and aliases and the Lexicon's terms, but only within the deck sections
+  and Lexicon categories the kind may draw from (`LINKABLE`: the oyster
+  mushroom is not the oyster in the fish case), and on the three cut charts a
+  card must name the plate's own animal at least as often as another
+  (`ANIMAL`, over term, aliases, gist, why, note and origin: so the pork
+  plate's Tenderloin does not land on the beef card). Nothing is hand-mapped;
+  64 deck links and 196 Lexicon links at the first build. A plate's
+  `deckSections` and `lexiconCategories` are the sections it hit twice or
+  more (`SECTION_HITS`), and the deck landing ("The plates"), a card's
+  `.further` door ("On the plate") and the Lexicon's "Drawn on" line under a
+  category heading all read those back.
+- **The pictures are on demand, never installed.** `static/plates/<slug>.webp`
+  (q65, about 6.8 MB together) and `<slug>.thumb.webp` (360 px, 662 KB) are
+  served by the app and kept by a Workbox CacheFirst route (`plates-v1`, 48
+  entries, a year) in `vite.config.ts`. The SvelteKit PWA plugin appends its
+  own `client/` glob (which names webp) whenever ours does not start with
+  `client/`, so the ignore `'**/plates/*.webp'` is what keeps them out of the
+  precache; `verify-build` asserts the text chunk is precached, at least 40
+  pictures are on disk and none is in the manifest. Transcriptions are
+  precached (35 KB gzipped) because the owner raised the cap to 3.0 MB for
+  them (see "Conventions" and `CAP_MB`).
+- **The eighth level subsection.** `SUBSECTIONS` gained `plates` (counted:
+  false, placed: true, after the deck): placed by the standard in
+  `tools/derive/levels/plates.json` with reasons (3 / 16 / 1 / 0; Level IV has
+  none and its line says so), no `MINIMUMS` on purpose, read and never
+  graded like Food Safety (`subsectionProgress` returns `NEVER_GRADED`). The
+  level page lists the level's plates with doors to the first and to the wall.
+- **The routes.** `/plates` is the wall (five rows by kind, thumbnails lazy
+  and decorative, each plate's level, count and number of corrections);
+  `/plates/[slug]` (prerendered from `entries()`) is the picture with a
+  full-size link, "What the plate gets wrong" FIRST, then the transcription
+  with its links ("The card" to `/service/deck/study?card=`, "The Lexicon" to
+  `/lexicon#slug`), the panels, an eight-question quiz (`src/lib/plates.ts
+  plateQuiz`: fact, item and group shapes in turn, four options, every item at
+  most once; it RECORDS NOTHING, the e2e proves the drill log stays empty), the
+  edge text and the neighbours. Both routes are under Levels in `OWNS`, in
+  the a11y, layout and nav suites, and `tests/plates.spec.ts`.
+- **Regenerating a plate.** Replace the picture through the scratch sharp
+  script's MAP (full at q65, thumb at 360 px q60, both rows in `images.json`),
+  rewrite its transcription file, and the gate does the rest. The plates that
+  carry the most corrections (southwest-fruits 12, northwest-fruits 11,
+  atlantic-fish 10, pacific-fish 9, pork-cuts 9, northeastern-fruits 9) are
+  the candidates.
 
 ## The Floor Deck: a staff-training deck of menu words
 

@@ -1,0 +1,339 @@
+{
+  "slug": "northeastern-vegetables",
+  "title": "Northeastern Vegetables",
+  "tagline": "Local harvests, seasonal flavors, timeless traditions.",
+  "corners": [
+    "From the fertile fields to the coastal farms of the Northeast, a region of rich harvests",
+    "Same land, different seasons, endless flavors",
+    "Northeastern Vegetables, fresh, local, seasonal"
+  ],
+  "kind": "produce",
+  "regionLine": "Atlantic Coast, Appalachian Mountains, Great Lakes",
+  "groups": [
+    {
+      "title": "The vegetables",
+      "note": null,
+      "items": [
+        {
+          "name": "Asparagus",
+          "sub": null,
+          "facts": [
+            ["Season", "May to June"],
+            ["Where", "New York"],
+            ["Flavor", "Earthy, fresh, slightly bitter"]
+          ]
+        },
+        {
+          "name": "Beets",
+          "sub": null,
+          "facts": [
+            ["Season", "September to October"],
+            ["Where", "Vermont"],
+            ["Flavor", "Sweet, earthy, rich"]
+          ]
+        },
+        {
+          "name": "Broccoli",
+          "sub": null,
+          "facts": [
+            ["Season", "October to November"],
+            ["Where", "Pennsylvania"],
+            ["Flavor", "Mild, fresh, slightly bitter"]
+          ]
+        },
+        {
+          "name": "Brussels Sprouts",
+          "sub": null,
+          "facts": [
+            ["Season", "October to November"],
+            ["Where", "Massachusetts"],
+            ["Flavor", "Nutty, earthy, slightly sweet"]
+          ]
+        },
+        {
+          "name": "Cabbage",
+          "sub": null,
+          "facts": [
+            ["Season", "September to October"],
+            ["Where", "New York"],
+            ["Flavor", "Crisp, mild, slightly sweet"]
+          ]
+        },
+        {
+          "name": "Carrots",
+          "sub": null,
+          "facts": [
+            ["Season", "July to October"],
+            ["Where", "New Jersey"],
+            ["Flavor", "Sweet, earthy, crunchy"]
+          ]
+        },
+        {
+          "name": "Cauliflower",
+          "sub": null,
+          "facts": [
+            ["Season", "October to November"],
+            ["Where", "Virginia"],
+            ["Flavor", "Mild, nutty, creamy"]
+          ]
+        },
+        {
+          "name": "Celery",
+          "sub": null,
+          "facts": [
+            ["Season", "September to October"],
+            ["Where", "Michigan"],
+            ["Flavor", "Crisp, fresh, slightly bitter"]
+          ]
+        },
+        {
+          "name": "Collard Greens",
+          "sub": null,
+          "facts": [
+            ["Season", "November to February"],
+            ["Where", "South Carolina"],
+            ["Flavor", "Earthy, robust, slightly bitter"]
+          ]
+        },
+        {
+          "name": "Cucumbers",
+          "sub": null,
+          "facts": [
+            ["Season", "July to September"],
+            ["Where", "New York"],
+            ["Flavor", "Cool, crisp, refreshing"]
+          ]
+        },
+        {
+          "name": "Eggplant",
+          "sub": null,
+          "facts": [
+            ["Season", "August to September"],
+            ["Where", "New Jersey"],
+            ["Flavor", "Mild, slightly bitter, creamy"]
+          ]
+        },
+        {
+          "name": "Fennel",
+          "sub": null,
+          "facts": [
+            ["Season", "September to October"],
+            ["Where", "New York"],
+            ["Flavor", "Anise, fresh, crisp"]
+          ]
+        },
+        {
+          "name": "Green Beans",
+          "sub": null,
+          "facts": [
+            ["Season", "July to September"],
+            ["Where", "Michigan"],
+            ["Flavor", "Crisp, fresh, slightly sweet"]
+          ]
+        },
+        {
+          "name": "Kale",
+          "sub": null,
+          "facts": [
+            ["Season", "September to November"],
+            ["Where", "Vermont"],
+            ["Flavor", "Earthy, robust, slightly bitter"]
+          ]
+        },
+        {
+          "name": "Leek",
+          "sub": null,
+          "facts": [
+            ["Season", "October to December"],
+            ["Where", "Pennsylvania"],
+            ["Flavor", "Mild, sweet, oniony"]
+          ]
+        },
+        {
+          "name": "Onions",
+          "sub": null,
+          "facts": [
+            ["Season", "August to October"],
+            ["Where", "New York"],
+            ["Flavor", "Pungent, sweet, savory"]
+          ]
+        },
+        {
+          "name": "Potatoes",
+          "sub": null,
+          "facts": [
+            ["Season", "September to November"],
+            ["Where", "Maine"],
+            ["Flavor", "Earthy, hearty, mild"]
+          ]
+        },
+        {
+          "name": "Peas",
+          "sub": null,
+          "facts": [
+            ["Season", "May to July"],
+            ["Where", "New York"],
+            ["Flavor", "Sweet, tender, fresh"]
+          ]
+        },
+        {
+          "name": "Radishes",
+          "sub": null,
+          "facts": [
+            ["Season", "April to June"],
+            ["Where", "New Jersey"],
+            ["Flavor", "Peppery, crisp, fresh"]
+          ]
+        },
+        {
+          "name": "Sweet Corn",
+          "printed": "Sweetcon",
+          "sub": null,
+          "facts": [
+            ["Season", "July to September"],
+            ["Where", "Delaware"],
+            ["Flavor", "Sweet, juicy, tender"]
+          ]
+        },
+        {
+          "name": "Spinach",
+          "printed": "Somatoes",
+          "sub": null,
+          "facts": [
+            ["Season", "April to June"],
+            ["Where", "New York"],
+            ["Flavor", "Mild, earthy, fresh"]
+          ]
+        },
+        {
+          "name": "Tomatoes",
+          "sub": null,
+          "facts": [
+            ["Season", "July to September"],
+            ["Where", "New Jersey"],
+            ["Flavor", "Sweet, tangy, juicy"]
+          ]
+        },
+        {
+          "name": "Winter Squash",
+          "sub": null,
+          "facts": [
+            ["Season", "September to November"],
+            ["Where", "Massachusetts"],
+            ["Flavor", "Nutty, sweet, dense"]
+          ]
+        },
+        {
+          "name": "Zucchini",
+          "sub": null,
+          "facts": [
+            ["Season", "July to September"],
+            ["Where", "New York"],
+            ["Flavor", "Mild, fresh, slightly sweet"]
+          ]
+        },
+        {
+          "name": "Chard",
+          "sub": null,
+          "facts": [
+            ["Season", "May to September"],
+            ["Where", "Vermont"],
+            ["Flavor", "Earthy, mild, tender"]
+          ]
+        },
+        {
+          "name": "Turnips",
+          "sub": null,
+          "facts": [
+            ["Season", "September to November"],
+            ["Where", "Maine"],
+            ["Flavor", "Peppery, sweet, firm"]
+          ]
+        }
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "title": "The region",
+      "lines": [
+        "Mountains",
+        "Forests",
+        "Farms",
+        "Orchards",
+        "Coastlines",
+        "Fresh water",
+        "Local fields, coastal waters, rich soil"
+      ]
+    },
+    {
+      "title": "Seasonal highlights",
+      "lines": [
+        "Spring: Fresh Greens, Herbs",
+        "Summer: Tomatoes, Corn, Zucchini",
+        "Fall: Squash, Apples, Root Vegetables",
+        "Winter: Kale, Cabbage, Potatoes"
+      ]
+    },
+    {
+      "title": "Flavor profile key",
+      "lines": [
+        "Sweet, Sour, Salty, Spicy",
+        "Earthy, Spicy, Creamy, Rich",
+        "Creamy, Mild"
+      ]
+    }
+  ],
+  "footer": "Support local farms, eat seasonal, taste the Northeast",
+  "illegible": [
+    "Bottom row, first card: the title is garbled and reads 'SWEETCON' (the glyph after SWEET may be a doubled T, and no R is visible); taken as Sweet Corn because the letters are closest to it and the facts (Delaware, July to September, sweet, juicy, tender) fit sweet corn, although the drawing shows red and yellow onions",
+    "Bottom row, second card: the title is printed 'SOMATOES' over a drawing of spinach leaves with spinach facts (New York, April to June, mild, earthy, fresh); taken as Spinach",
+    "Radishes card, fourth row right side: the month range is smudged, best reading 'Apr-Jun' (April to June)",
+    "Flavor profile key, bottom right panel: several labels are garbled; row one third label reads 'Salny' (taken as Salty) and fourth label 'Sarhy' (taken as Spicy); row two first label 'Eartlrr' (taken as Earthy) and third label 'Cromy' (taken as Creamy); row three first label 'Cramy' (taken as Creamy); with these readings Spicy and Creamy each appear twice in the key",
+    "Map, upper left: a state label partly hidden under the map border reads 'YORK' with 'OHIO' printed beneath it, and 'OHIO' is printed three times across the map; state labels on the map were not transcribed as facts"
+  ],
+  "corrections": [
+    {
+      "on": "Cauliflower",
+      "says": "Virginia, Oct-Nov",
+      "should": "Cauliflower on a Northeastern plate should be credited to New York, which grows it in quantity for the fall market, keeping the October to November window.",
+      "why": "The Northeast is the six New England states plus New York, New Jersey and Pennsylvania, and Virginia is a Southern state by the standard Census regions."
+    },
+    {
+      "on": "Celery",
+      "says": "Michigan, Sept-Oct",
+      "should": "Celery on a Northeastern plate should be credited to New York, whose Orange County muck soils grow it from late summer into fall.",
+      "why": "Michigan is a Midwestern state, not part of the Northeast, and the plate's own map does not include it."
+    },
+    {
+      "on": "Collard Greens",
+      "says": "South Carolina, Nov-Feb",
+      "should": "Collards on a Northeastern plate should be credited to a Northeastern state such as New York or Pennsylvania, as a fall crop harvested from about September until the ground freezes and sweetened by the first frosts.",
+      "why": "South Carolina is a Southern state, and a November to February field harvest is a Southern winter schedule that Northeastern fields, frozen by January, cannot keep."
+    },
+    {
+      "on": "The region",
+      "says": "OHIO printed three times on the map, with WEST VIRGINIA and VIRGINIA drawn inside the region",
+      "should": "The Northeast is the six New England states plus New York, New Jersey and Pennsylvania, so Ohio, West Virginia and Virginia do not belong on the map and its state labels should not be taught.",
+      "why": "Ohio is a Midwestern state and Virginia and West Virginia are Southern states by the standard Census regions, and the map prints Ohio at three different places, so its geography is unreliable."
+    },
+    {
+      "on": "Green Beans",
+      "says": "Michigan, July-Sept",
+      "should": "Green beans on a Northeastern plate should be credited to New York or Pennsylvania, keeping the July to September window.",
+      "why": "Michigan is a Midwestern state, not part of the Northeast, and New York is one of the country's largest snap bean growers with the same summer season."
+    },
+    {
+      "on": "Sweet Corn",
+      "says": "SWEETCON, printed over a drawing of red and yellow onions",
+      "should": "The card is Sweet Corn; its title is misspelled and its drawing shows onions rather than ears of corn, so read the facts as sweet corn and disregard the picture.",
+      "why": "No ear or husk is drawn, the bulbs shown match the Onions card two rows above, and the facts (July to September, sweet, juicy, tender) describe corn, not onions."
+    },
+    {
+      "on": "Spinach",
+      "says": "SOMATOES",
+      "should": "The card should read Spinach; the printed name is garbled and names no vegetable.",
+      "why": "The drawing is a bunch of spinach leaves, the facts (New York, April to June, mild, earthy, fresh) fit spring spinach, and the real Tomatoes card sits two places to the right."
+    }
+  ]
+}

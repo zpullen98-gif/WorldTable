@@ -32,7 +32,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
-	import { loadFloorDeck } from '$lib/data';
+	import { loadFloorDeck, loadPlates } from '$lib/data';
+	import { plateHref, plateIndexes } from '$lib/plates';
 	import { session } from '$lib/stores/session.svelte';
 	import {
 		cardsInScope,
@@ -51,6 +52,8 @@
 
 	let deck = $state<FloorDeck | null>(null);
 	let failed = $state(false);
+	/** section key -> the plates that illustrate it; empty until the file is in */
+	let platesBySection = $state<ReadonlyMap<string, Array<{ slug: string; title: string }>>>(new Map());
 	/** Sections ticked for this visit. Empty means every section. */
 	let picked = $state<string[]>([]);
 	/** '1'..'4' or 'all'; '' until the record is read. Never stored. */
@@ -64,9 +67,16 @@
 		} catch {
 			failed = true;
 		}
+		try {
+			platesBySection = plateIndexes(await loadPlates()).bySection;
+		} catch {
+			/* the landing stands without its plate links */
+		}
 	});
 
 	const sections = $derived(deck ? liveSections(deck) : []);
+	/** the sections with a plate, in section order, each with its plates */
+	const plated = $derived(sections.map((s) => ({ s, plates: platesBySection.get(s.key) ?? [] })).filter((x) => x.plates.length));
 	const levels = $derived(deck ? liveLevels(deck) : []);
 
 	/* The default, once: the first level with an unmet card, or all of them
@@ -278,6 +288,16 @@
 			</ul>
 			{/if}
 
+			{#if plated.length}
+				<h2 class="sec">The plates</h2>
+				<p class="secnote">The reference plates that show these sections' words drawn: read one before a sitting on its section.</p>
+				<ul class="plated">
+					{#each plated as x (x.s.key)}
+						<li><span class="ptitle">{x.s.title}</span> {#each x.plates as p (p.slug)}<a href={plateHref(base, p.slug)}>{p.title}</a>{/each}</li>
+					{/each}
+				</ul>
+			{/if}
+
 			{#if stubborn.length}
 				<h2 class="sec">The terms that keep slipping</h2>
 				<p class="secnote">Missed three times or more. Worth reading slowly, once, with the why open.</p>
@@ -318,6 +338,10 @@
 		padding-bottom: 5px; margin: 30px 0 12px; font-weight: 500;
 	}
 	.secnote { color: var(--ink-soft); max-width: var(--measure); font-size: var(--t-small); margin-bottom: 12px; }
+	.plated { list-style: none; margin: 0; padding: 0; font-size: var(--t-small); }
+	.plated li { padding: 4px 0; }
+	.plated .ptitle { color: var(--muted); margin-right: 8px; }
+	.plated a { display: inline-block; padding-block: 8px; margin-right: 12px; color: var(--ink); text-underline-offset: 3px; }
 
 	.sections, .levels { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 	.sections label, .levels label {

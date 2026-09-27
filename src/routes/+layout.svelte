@@ -113,7 +113,7 @@
 		// the firing drill reads the house's own pass plan, so it is Mine's and
 		// is tested before /practise, which the calibration bench keeps for Levels
 		['/menu', ['/menu', '/repertoire', '/coverage', '/practise/firing']],
-		['/level', ['/level', '/study', '/technique', '/palate', '/safety', '/service', '/practise']],
+		['/level', ['/level', '/study', '/technique', '/palate', '/safety', '/service', '/practise', '/plates']],
 		['/recipes', ['/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry']]
 	];
 

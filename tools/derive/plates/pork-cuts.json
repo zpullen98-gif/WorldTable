@@ -1,0 +1,167 @@
+{
+  "slug": "pork-cuts",
+  "title": "Pork Cuts",
+  "tagline": "Quality meat, timeless tradition. The anatomy of flavor.",
+  "corners": [
+    "Good food comes from great cuts",
+    "From snout to tail. Every cut has a purpose."
+  ],
+  "kind": "cuts",
+  "regionLine": null,
+  "groups": [
+    {
+      "title": "Shoulder",
+      "note": "Rich, flavorful, great for slow cooking",
+      "items": [
+        { "name": "Boston Butt", "sub": null, "facts": [["Cook", "Roast"]] },
+        { "name": "Picnic Shoulder", "sub": null, "facts": [["Cook", "Roast"]] },
+        { "name": "Shoulder Steak", "sub": null, "facts": [["Cook", "Grill"]] },
+        { "name": "Country-Style Ribs", "sub": null, "facts": [["Cook", "Braise"]] }
+      ]
+    },
+    {
+      "title": "Pork Belly",
+      "note": "Rich, juicy, perfect for curing",
+      "items": [
+        { "name": "Belly Slices", "sub": null, "facts": [["Cook", "Bacon"]] },
+        { "name": "Whole Belly", "sub": null, "facts": [["Cook", "Roast"]] },
+        { "name": "Pork Jowl", "sub": null, "facts": [["Cook", "Grill"]] },
+        { "name": "Pancetta", "sub": null, "facts": [["Cook", "Cure"]] }
+      ]
+    },
+    {
+      "title": "Loin",
+      "note": "Tender, lean, versatile",
+      "items": [
+        { "name": "Pork Chops", "sub": null, "facts": [["Cook", "Grill"]] },
+        { "name": "Tenderloin", "sub": null, "facts": [["Cook", "Roast"]] },
+        { "name": "Loin Roast", "sub": null, "facts": [["Cook", "Roast"]] },
+        { "name": "Loin Steak", "sub": null, "facts": [["Cook", "Grill"]] }
+      ]
+    },
+    {
+      "title": "Rib",
+      "note": "Rich, well-marbled, full of flavor",
+      "items": [
+        { "name": "Spare Ribs", "sub": null, "facts": [["Cook", "Grill, Braise"]] },
+        { "name": "Baby Back Ribs", "sub": null, "facts": [["Cook", "Grill"]] },
+        { "name": "Rib Roast", "sub": null, "facts": [["Cook", "Roast"]] },
+        { "name": "Rib Chop", "sub": null, "facts": [["Cook", "Grill"]] }
+      ]
+    },
+    {
+      "title": "Leg / Ham",
+      "note": "Lean, flavorful, great for roasting",
+      "items": [
+        { "name": "Ham Roast", "sub": null, "facts": [["Cook", "Roast"]] },
+        { "name": "Ham Steak", "sub": null, "facts": [["Cook", "Grill"]] },
+        { "name": "Cured Ham", "sub": null, "facts": [["Cook", "Slice"]] },
+        { "name": "Prosciutto", "sub": null, "facts": [["Cook", "Cure"]] }
+      ]
+    },
+    {
+      "title": "Picnic Shoulder",
+      "note": "Flavorful, tender, great for braising",
+      "items": [
+        { "name": "Picnic Roast", "sub": null, "facts": [["Cook", "Braise"]] },
+        { "name": "Picnic Steak", "sub": null, "facts": [["Cook", "Grill"]] },
+        { "name": "Stuffed Picnic", "sub": null, "facts": [["Cook", "Roast"]] },
+        { "name": "Cubes", "sub": null, "facts": [["Cook", "Stew"]] }
+      ]
+    },
+    {
+      "title": "Belly",
+      "note": "Rich, juicy, perfect for curing",
+      "items": [
+        { "name": "Bacon", "sub": null, "facts": [["Cook", "Fry"]] },
+        { "name": "Pork Belly", "sub": null, "facts": [["Cook", "Roast"]] },
+        { "name": "Lardons", "sub": null, "facts": [["Cook", "Sauté"]] },
+        { "name": "Burnt Ends", "sub": null, "facts": [["Cook", "Smoke"]] }
+      ]
+    },
+    {
+      "title": "Hind Shank",
+      "note": "Rich, gelatinous, great for soups",
+      "items": [
+        { "name": "Shank Cross Cut", "sub": null, "facts": [["Cook", "Braise"]] },
+        { "name": "Hock", "sub": null, "facts": [["Cook", "Braise"]] },
+        { "name": "Trotter", "sub": null, "facts": [["Cook", "Soup"]] },
+        { "name": "Knuckle", "sub": null, "facts": [["Cook", "Braise"]] }
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "title": "On the animal",
+      "lines": [
+        "Ear",
+        "Head",
+        "Shoulder",
+        "Picnic Shoulder",
+        "Loin",
+        "Belly",
+        "Rib",
+        "Leg Ham",
+        "Hind Shank"
+      ]
+    }
+  ],
+  "footer": "Better ingredients, better meals, a richer life",
+  "illegible": [],
+  "corrections": [
+    {
+      "on": "On the animal",
+      "says": "RIB drawn between LOIN and LEG HAM, at the hip",
+      "should": "The rib section sits at the front of the loin, directly behind the shoulder and above the belly, and the band drawn at the hip is the sirloin end of the loin.",
+      "why": "A hog's rib cage is in the front half of the body, so rib chops, rib roasts and baby back ribs all come from the blade end of the loin next to the shoulder, never from beside the leg."
+    },
+    {
+      "on": "Belly Slices",
+      "says": "Belly Slices (Bacon)",
+      "should": "Sliced fresh belly is not bacon; belly becomes bacon only after it is cured and usually smoked, and belly on a menu is fresh meat.",
+      "why": "Calling raw belly slices bacon teaches a server to confuse a fresh cut with a cured product."
+    },
+    {
+      "on": "Pork Jowl",
+      "says": "Pork Jowl (Grill) listed under Pork Belly",
+      "should": "The jowl is the cheek of the pig and comes from the head, not the belly; it is cured as guanciale or jowl bacon, or braised.",
+      "why": "The jowl is cut from the head, well forward of the shoulder, and no part of it is belly."
+    },
+    {
+      "on": "Spare Ribs",
+      "says": "Spare Ribs (Grill/Braise) under the Rib section",
+      "should": "Spare ribs are cut from the belly side of the rib cage, the lower ribs left after the loin and baby backs come off, so they belong with the belly while baby backs, rib chops and rib roast come from the loin.",
+      "why": "In American butchery spare ribs are fabricated from the belly, which is why they are flatter and fattier than baby backs."
+    },
+    {
+      "on": "Picnic Shoulder",
+      "says": "a Picnic Shoulder panel with Picnic Roast (Braise), Picnic Steak, Stuffed Picnic and Cubes, while the Shoulder panel already lists Picnic Shoulder (Roast)",
+      "should": "The picnic is the lower half of the shoulder primal below the Boston butt, not a separate primal, so Picnic Shoulder and Picnic Roast are one cut that should appear once.",
+      "why": "The shoulder splits into the Boston butt above and the picnic below, so the two panels repeat each other."
+    },
+    {
+      "on": "Belly",
+      "says": "a second Belly panel with Bacon (Fry), Pork Belly (Roast), Lardons and Burnt Ends, under the same note as the Pork Belly panel",
+      "should": "The belly is one primal shown twice under two names; Whole Belly and Pork Belly are the same cut, and Belly Slices and Bacon are the same product.",
+      "why": "Both panels carry the identical note and repeat the same cuts under different names, so a trainee would count eight belly cuts where there are about four."
+    },
+    {
+      "on": "Burnt Ends",
+      "says": "Burnt Ends (Smoke)",
+      "should": "Burnt ends are a barbecue dish of cubed smoked meat, classically brisket point and sometimes pork belly, not a cut of the pig.",
+      "why": "No butcher sells a cut called burnt ends; the name describes what the cook makes from the belly."
+    },
+    {
+      "on": "Trotter",
+      "says": "Trotter (Soup) under Hind Shank",
+      "should": "The trotter is the foot, cut off below the hock, and comes from all four legs; it is not part of the shank.",
+      "why": "The shank ends at the hock joint, and the foot below it is its own item used for stock and gelatin."
+    },
+    {
+      "on": "Knuckle",
+      "says": "Hock (Braise) and Knuckle (Braise) as two cuts",
+      "should": "Knuckle is the British and German name for the hock, the joint where the leg meets the foot, as in pork knuckle or Schweinshaxe, so the panel prints one joint twice.",
+      "why": "American butchers sell the lower shank joint as the hock, and the same piece is labeled knuckle in the United Kingdom and Germany."
+    }
+  ]
+}

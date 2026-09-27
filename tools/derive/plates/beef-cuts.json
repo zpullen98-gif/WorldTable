@@ -1,0 +1,133 @@
+{
+  "slug": "beef-cuts",
+  "title": "Beef Cuts",
+  "tagline": "Quality meat, timeless tradition. The anatomy of flavor.",
+  "corners": [
+    "Good food comes from great cuts"
+  ],
+  "kind": "cuts",
+  "regionLine": null,
+  "groups": [
+    {
+      "title": "Chuck",
+      "note": "Rich flavor, well-marbled",
+      "items": [
+        { "name": "Chuck Roast", "sub": null, "facts": [["Cook", "Braised"]] },
+        { "name": "Chuck Steak", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "Chuck Eye Steak", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "Flat Iron Steak", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "Denver Steak", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "Ranch Steak", "sub": null, "facts": [["Cook", "Grilled"]] }
+      ]
+    },
+    {
+      "title": "Brisket & Foreshank",
+      "note": "Rich, flavorful, tender (when cooked low & slow)",
+      "items": [
+        { "name": "Brisket", "sub": null, "facts": [["Cook", "Smoked, Braised"]] },
+        { "name": "Foreshank", "sub": null, "facts": [["Cook", "Braised"]] }
+      ]
+    },
+    {
+      "title": "Rib",
+      "note": "Rich, juicy, flavorful",
+      "items": [
+        { "name": "Ribeye", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "Prime Rib", "sub": null, "facts": [["Cook", "Roasted"]] },
+        { "name": "Back Ribs", "sub": null, "facts": [["Cook", "Smoked, Grilled"]] },
+        { "name": "Ribeye Cap", "sub": null, "facts": [["Cook", "Grilled"]] }
+      ]
+    },
+    {
+      "title": "Short Loin",
+      "note": "Tender, mild, rich",
+      "items": [
+        { "name": "Filet Mignon", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "T-Bone", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "Porterhouse", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "New York Strip", "sub": null, "facts": [["Cook", "Grilled"]] }
+      ]
+    },
+    {
+      "title": "Short Plate",
+      "note": "Rich, bold flavor, great for braising",
+      "items": [
+        { "name": "Short Ribs", "sub": null, "facts": [["Cook", "Braised"]] },
+        { "name": "Skirt Steak", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "Short Rib", "sub": null, "facts": [["Cook", "Grilled, Braised"]] }
+      ]
+    },
+    {
+      "title": "Flank",
+      "note": "Lean, bold flavor, great for marinades",
+      "items": [
+        { "name": "Flank Steak", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "Hanger Steak", "sub": null, "facts": [["Cook", "Grilled"]] }
+      ]
+    },
+    {
+      "title": "Sirloin",
+      "note": "Lean, flavorful, versatile",
+      "items": [
+        { "name": "Top Sirloin", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "Tri-Tip", "sub": null, "facts": [["Cook", "Grilled"]] },
+        { "name": "Sirloin Steak", "sub": null, "facts": [["Cook", "Grilled"]] }
+      ]
+    },
+    {
+      "title": "Round",
+      "note": "Lean, firm, great for roasting",
+      "items": [
+        { "name": "Top Round", "sub": null, "facts": [["Cook", "Roasted"]] },
+        { "name": "Bottom Round", "sub": null, "facts": [["Cook", "Braised"]] },
+        { "name": "Eye of Round", "sub": null, "facts": [["Cook", "Roasted"]] }
+      ]
+    },
+    {
+      "title": "Hind Shank",
+      "note": "Rich, gelatinous, great for broths",
+      "items": [
+        { "name": "Shank Cross Cut", "sub": null, "facts": [["Cook", "Braised"]] }
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "title": "On the animal",
+      "lines": [
+        "Chuck",
+        "Rib",
+        "Short Loin",
+        "Sirloin",
+        "Round",
+        "Brisket",
+        "Fore Shank",
+        "Short Plate",
+        "Flank",
+        "Hind Shank"
+      ]
+    }
+  ],
+  "footer": "Better ingredients, better meals, a richer life",
+  "illegible": [],
+  "corrections": [
+    {
+      "on": "On the animal",
+      "says": "Fore Shank drawn in the body wall between Brisket and Short Plate, under the Rib",
+      "should": "The fore shank is the lower front leg, below the chuck and in front of the brisket, and the space behind the brisket under the ribs is the front of the short plate.",
+      "why": "The shank is the leg that carries the animal, as the app's Shank card teaches, and no leg sits in the body wall where the map puts it."
+    },
+    {
+      "on": "Short Rib",
+      "says": "Short Ribs (Braised) and Short Rib (Grilled, Braised) in one panel",
+      "should": "Short ribs are one cut printed twice, so list them once, braised as the English cut in thick blocks and grilled as the flanken cut sawn thin across the bones.",
+      "why": "The same cut appears under a singular and a plural name in the Short Plate panel, and the Lexicon already teaches the real split as English cut for braising and flanken for fast grilling."
+    },
+    {
+      "on": "Hanger Steak",
+      "says": "Hanger Steak (Grilled) listed under Flank",
+      "should": "Hanger steak belongs with skirt in the short plate, not the flank, since it is the thick central pillar of the diaphragm hanging from the last rib, one per animal.",
+      "why": "The app's Hanger Steak card places it on the diaphragm between the last rib and the loin and its Skirt Steak card places the diaphragm in the plate, so the plate has moved a plate cut into the flank panel."
+    }
+  ]
+}

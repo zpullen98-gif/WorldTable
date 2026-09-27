@@ -30,7 +30,8 @@
 	import { base } from '$app/paths';
 	import { afterNavigate } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import { loadFloorDeck } from '$lib/data';
+	import { loadFloorDeck, loadPlates } from '$lib/data';
+	import { plateIndexes } from '$lib/plates';
 	import { session } from '$lib/stores/session.svelte';
 	import { markStudied } from '$lib/oot-studied';
 	import FloorCard, { type OpenLayers } from '$lib/components/FloorCard.svelte';
@@ -47,6 +48,8 @@
 	let deck = $state<FloorDeck | null>(null);
 	let failed = $state(false);
 	let search = $state<string | null>(null);
+	/** card id -> the plate it is drawn on; empty until the file is in */
+	let plateOf = $state<ReadonlyMap<string, { slug: string; title: string }>>(new Map());
 
 	let queue = $state<DeckCard[]>([]);
 	let at = $state(0);
@@ -65,6 +68,11 @@
 			deck = await loadFloorDeck();
 		} catch {
 			failed = true;
+		}
+		try {
+			plateOf = plateIndexes(await loadPlates()).byCard;
+		} catch {
+			/* a sitting stands without the plate doors */
 		}
 	});
 
@@ -184,6 +192,7 @@
 					levelName={levelNames.get(lookup.level) ?? ''}
 					sectionTitle={titles.get(lookup.section) ?? ''}
 					{names}
+					plate={plateOf.get(lookup.id) ?? null}
 					flippable={false}
 					open={{ why: true, facts: true, context: true }}
 				/>
@@ -224,6 +233,7 @@
 					levelName={levelNames.get(card.level) ?? ''}
 					sectionTitle={titles.get(card.section) ?? ''}
 					{names}
+					plate={plateOf.get(card.id) ?? null}
 					bind:revealed
 					bind:open
 				/>

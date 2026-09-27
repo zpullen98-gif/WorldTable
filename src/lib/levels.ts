@@ -36,6 +36,8 @@
  *               ladder has been cleared to the rung the level names
  *   service     a module's terms, met the way Lexicon terms are
  *   safety      never counted
+ *   plates      never counted: a plate is read, and the deck and the Lexicon
+ *               grade the words it shows
  */
 
 import type { DeckLevel, DeckTraps, FloorDeck, LevelsData, SubsectionKey } from './types';
@@ -196,6 +198,7 @@ export function subsectionProgress(
 			break;
 		}
 		case 'safety':
+		case 'plates':
 			break;
 	}
 	const total = units.length;

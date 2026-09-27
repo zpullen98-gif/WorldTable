@@ -35,8 +35,8 @@ at **$49.99/month, unlimited staff, one shared login**.
 | OutsideOfTime | branch `main`, HEAD `71e43b27a`, tree clean, **no git remote — never pushed** |
 | Tests | **1,262 unit** (72 files) · **192 e2e** (19 Sep 2026): the whole suite is green |
 | Gates | `verify:data` 55/55 · `build:data` all pass · `verify:derived` clean · `verify:build` **22/22** (19 Sep; a 23rd check, "the Maître d' client ships and is NOT precached", arrived with `1fbf110`) |
-| Precache | Cap **2.70 MB** gzipped. It moved from 2 MB to 2.5 MB when the corpus grew past 970 recipes, from 2.5 to 2.65 on 2026-09-19 by the owner's decision for the Floor Deck (a staff-training deck that must install with the app; at that raise the precache stood at 2,619,178 bytes), and to 2.70 the same day when three written sections showed the full deck at its written depth would finish within a few KB of 2.65 and the owner chose depth over trimming. `tools/verify-build.mjs` carries both arguments. At `ea3253d` (26 Sep 2026, the Menu Desk and the Maître d' in) it printed **2.670 MB**, about 30 KB of headroom: a new route is not affordable, and the elastic part is the desk's wine vocabulary (`CLAUDE.md`, "The Menu Desk and the Maître d'"). The live figure is whatever `npm run verify:build` prints; the copy here is dated because every undated copy went stale |
-| Routes | 36 pages (26 Sep 2026: `/level`, `/level/[n]`, `/level/[n]/test` in; `/learn` and `/practise` out) · Derived JSON | 26 files (`floor-deck*.json` joined; `levels.json` since 26 Sep) |
+| Precache | Cap **3.0 MB** gzipped since 27 Sep 2026, raised from 2.70 by the owner ("just increase the constraint") for the Plates' transcriptions and the study material to follow; at the raise the precache stood at 2.688 MB and with the plates in it prints **2.727 MB**. The pictures (7.6 MB of webp under `static/plates/`) are served on demand and never installed; `verify-build` asserts it. The history: it moved from 2 MB to 2.5 MB when the corpus grew past 970 recipes, from 2.5 to 2.65 on 2026-09-19 by the owner's decision for the Floor Deck (a staff-training deck that must install with the app; at that raise the precache stood at 2,619,178 bytes), and to 2.70 the same day when three written sections showed the full deck at its written depth would finish within a few KB of 2.65 and the owner chose depth over trimming. `tools/verify-build.mjs` carries both arguments. At `ea3253d` (26 Sep 2026, the Menu Desk and the Maître d' in) it printed **2.670 MB**, about 30 KB of headroom: a new route is not affordable, and the elastic part is the desk's wine vocabulary (`CLAUDE.md`, "The Menu Desk and the Maître d'"). The live figure is whatever `npm run verify:build` prints; the copy here is dated because every undated copy went stale |
+| Routes | 38 pages (27 Sep 2026: `/plates` and `/plates/[slug]` in; 26 Sep: `/level`, `/level/[n]`, `/level/[n]/test` in, `/learn` and `/practise` out) · Derived JSON | 27 files (`floor-deck*.json` joined; `levels.json` since 26 Sep; `plates.json` since 27 Sep) |
 | Deploy | `table/` re-synced for the 3 Sep audit pass, at `4942968`. See below. |
 
 ## The corpus
@@ -282,6 +282,26 @@ import a value back into it.
 ---
 
 ## What was built, most recent first
+
+### 27 Sep — the Plates: twenty illustrated reference plates
+
+The owner drew twenty reference posters (cut charts for chicken, pork and
+beef; the Pacific, Atlantic and Gulf Coast fish cases; ten regional larders of
+vegetables and fruits; spices; mushrooms; the great cheeses; charcuterie) and
+asked for them as study material across the four levels. They are generated
+pictures with real errors in them, so each ships with a full transcription
+and a list of what it gets wrong, written by a transcribe, verify, fact-check
+twice, judge pipeline (100 agents, default drop) and then read by hand: 463
+items, 122 corrections, 31 illegible notes. The text is precached (35 KB
+gzipped; the owner raised the cap to 3.0 MB for it), the pictures (7.6 MB)
+are on demand behind a runtime cache. Every item links by kind-aware folded
+name to its deck card or Lexicon term (64 and 196), and the deck landing, the
+card and the Lexicon link back. The plates are the eighth level subsection
+(read, never graded; 3 / 16 / 1 / 0, Level IV has none). Routes `/plates`
+and `/plates/[slug]` with an eight-question quiz that records nothing.
+CLAUDE.md "The Plates" is the reference; regenerating the plates with the
+most corrections (southwest-fruits 12, northwest-fruits 11, atlantic-fish 10)
+is the owner's call.
 
 ### 26 Sep — the four levels: one home, one nav, one ladder
 

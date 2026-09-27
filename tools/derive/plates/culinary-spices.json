@@ -1,0 +1,397 @@
+{
+  "slug": "culinary-spices",
+  "title": "Culinary Spices",
+  "tagline": "Flavor, aroma, tradition, global cuisine.",
+  "corners": [
+    "Small ingredients... Big flavors around the world",
+    "Different cultures, different spices, same table",
+    "The right spice doesn't just season your food... it brings it to life."
+  ],
+  "kind": "pantry",
+  "regionLine": null,
+  "groups": [
+    {
+      "title": "The spices",
+      "note": null,
+      "items": [
+        {
+          "name": "Black Pepper",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Hot, pungent, earthy"],
+            ["Use", "Meats, vegetables, sauces"]
+          ]
+        },
+        {
+          "name": "White Pepper",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Mild, earthy, sharp"],
+            ["Use", "Seafood, chicken, light sauces"]
+          ]
+        },
+        {
+          "name": "Green Pepper",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Fresh, citrusy, mild"],
+            ["Use", "Salads, vegetables, fish"]
+          ]
+        },
+        {
+          "name": "Red Pepper",
+          "sub": "Chili",
+          "facts": [
+            ["Flavor", "Spicy, fruity, bold"],
+            ["Use", "Mexican, Asian, hearty dishes"]
+          ]
+        },
+        {
+          "name": "Paprika",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Sweet, smoky, mild"],
+            ["Use", "Chicken, pork, vegetables"]
+          ]
+        },
+        {
+          "name": "Cayenne Pepper",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Hot, sharp, tangy"],
+            ["Use", "Soups, stews, grills"]
+          ]
+        },
+        {
+          "name": "Chili Powder",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Spicy, smoky, rich"],
+            ["Use", "Tacos, chili, BBQ"]
+          ]
+        },
+        {
+          "name": "Cumin",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Earthy, warm, nutty"],
+            ["Use", "Middle Eastern, beans, lamb"]
+          ]
+        },
+        {
+          "name": "Coriander",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Citrusy, nutty, sweet"],
+            ["Use", "Curries, vegetables, chicken"]
+          ]
+        },
+        {
+          "name": "Turmeric",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Earthy, bitter, warm"],
+            ["Use", "Rice, curries, soups"]
+          ]
+        },
+        {
+          "name": "Ginger",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Sharp, zesty, warm"],
+            ["Use", "Stir-fries, tea, marinades"]
+          ]
+        },
+        {
+          "name": "Garlic Powder",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Savory, pungent, rich"],
+            ["Use", "All-purpose, meats, sauces"]
+          ]
+        },
+        {
+          "name": "Onion Powder",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Sweet, sharp, savory"],
+            ["Use", "Meats, vegetables, rubs"]
+          ]
+        },
+        {
+          "name": "Cinnamon",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Sweet, warm, woody"],
+            ["Use", "Desserts, lamb, baked goods"]
+          ]
+        },
+        {
+          "name": "Nutmeg",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Warm, sweet, rich"],
+            ["Use", "Sauces, potatoes, desserts"]
+          ]
+        },
+        {
+          "name": "Allspice",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Sweet, warm, complex"],
+            ["Use", "Meats, cabbage, desserts"]
+          ]
+        },
+        {
+          "name": "Cloves",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Strong, sweet, pungent"],
+            ["Use", "Ham, baked goods, stews"]
+          ]
+        },
+        {
+          "name": "Cardamom",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Floral, sweet, citrusy"],
+            ["Use", "Rice, curries, desserts"]
+          ]
+        },
+        {
+          "name": "Vanilla",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Sweet, floral, creamy"],
+            ["Use", "Desserts, beverages, oats"]
+          ]
+        },
+        {
+          "name": "Saffron",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Earthy, floral, rich"],
+            ["Use", "Rice, seafood, luxury dishes"]
+          ]
+        },
+        {
+          "name": "Rosemary",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Piney, bold, herbal"],
+            ["Use", "Lamb, potatoes, roasts"]
+          ]
+        },
+        {
+          "name": "Thyme",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Earthy, mild, herbal"],
+            ["Use", "Chicken, vegetables, soups"]
+          ]
+        },
+        {
+          "name": "Oregano",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Earthy, robust, slightly bitter"],
+            ["Use", "Italian, tomato sauces, pizza"]
+          ]
+        },
+        {
+          "name": "Basil",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Sweet, peppery, fresh"],
+            ["Use", "Pasta, salads, chicken"]
+          ]
+        },
+        {
+          "name": "Sage",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Earthy, peppery, warm"],
+            ["Use", "Pork, poultry, stuffings"]
+          ]
+        },
+        {
+          "name": "Tarragon",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Anise, mild, fresh"],
+            ["Use", "Chicken, fish, cream sauces"]
+          ]
+        },
+        {
+          "name": "Dill",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Fresh, tangy, light"],
+            ["Use", "Fish, potatoes, salads"]
+          ]
+        },
+        {
+          "name": "Parsley",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Fresh, clean, mild"],
+            ["Use", "Garnish, vegetables, meats"]
+          ]
+        },
+        {
+          "name": "Chives",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Mild, oniony, fresh"],
+            ["Use", "Salads, eggs, soups"]
+          ]
+        },
+        {
+          "name": "Sweet Basil",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Sweet, spicy, fresh"],
+            ["Use", "Italian, pasta, salads"]
+          ]
+        },
+        {
+          "name": "Lemon Pepper",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Citrusy, zesty, peppery"],
+            ["Use", "Chicken, fish, vegetables"]
+          ]
+        },
+        {
+          "name": "Fennel Seed",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Sweet, licorice, warm"],
+            ["Use", "Fish, sausages, roasts"]
+          ]
+        },
+        {
+          "name": "Anise",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Sweet, licorice, warm"],
+            ["Use", "Desserts, meats, breads"]
+          ]
+        },
+        {
+          "name": "Sumac",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Tangy, bright, tart"],
+            ["Use", "Salads, chicken, lamb"]
+          ]
+        },
+        {
+          "name": "Za'atar",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Herbal, tangy, nutty"],
+            ["Use", "Bread, veggies, meats"]
+          ]
+        },
+        {
+          "name": "Harissa",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Spicy, smoky, tangy"],
+            ["Use", "Tagines, grills, soups"]
+          ]
+        },
+        {
+          "name": "Garam Masala",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Warm, complex, rich"],
+            ["Use", "Curries, lentils, meats"]
+          ]
+        },
+        {
+          "name": "Chinese Five Spice",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Sweet, spicy, aromatic"],
+            ["Use", "Duck, pork, stir-fries"]
+          ]
+        },
+        {
+          "name": "Old Bay",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Savory, spicy, briny"],
+            ["Use", "Seafood, chicken, fries"]
+          ]
+        },
+        {
+          "name": "Jerk Seasoning",
+          "sub": null,
+          "facts": [
+            ["Flavor", "Spicy, sweet, smoky"],
+            ["Use", "Pork, chicken, grills"]
+          ]
+        }
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "title": "The power of spices",
+      "lines": [
+        "Enhance flavor",
+        "Add depth",
+        "Create balance",
+        "Tell a story"
+      ]
+    },
+    {
+      "title": "Common spice blends",
+      "lines": [
+        "Italian, Cajun, Curry",
+        "Tandoori, Ras el Hanout",
+        "Herbes de Provence, Baharat",
+        "Five Spice, Garam Masala",
+        "Jerk, Adobo, Taco Seasoning"
+      ]
+    }
+  ],
+  "footer": "Good food, good spices, a richer life",
+  "illegible": [
+    "Sweet Basil card (row 4, sixth card), Use line, second word: the glyphs render as 'Parta'; read as 'Pasta' by context (the Basil card in row 3 prints 'Pasta' clearly)"
+  ],
+  "corrections": [
+    {
+      "on": "Green Pepper",
+      "says": "Green Pepper / Flavor: Fresh, citrusy, mild / Use: Salads, vegetables, fish",
+      "should": "The card shows green peppercorns, the unripe berry of the black pepper vine sold brined or freeze dried, so it should be named Green Peppercorn; in an American kitchen green pepper means a green bell pepper.",
+      "why": "The picture is a bowl of small round green berries beside black and white peppercorns, and the app's Black Pepper and the Pepper Family entry defines green pepper as the unripe berry, fresh and bright, used in steak au poivre vert."
+    },
+    {
+      "on": "Paprika",
+      "says": "Flavor: Sweet, smoky, mild",
+      "should": "Plain paprika is sweet, fruity and mild but not smoky; only Spanish smoked paprika (pimenton de la Vera) tastes of smoke, so the card should say sweet, fruity, mild or name the smoked kind.",
+      "why": "Sweet and Hungarian paprika are air dried ground red peppers with no smoke flavor, and the app's Paprika and Pimenton entry keeps the oak smoked Spanish style separate from the bright, fruity Hungarian kind."
+    },
+    {
+      "on": "Sweet Basil",
+      "says": "Sweet Basil / Flavor: Sweet, spicy, fresh / Use: Italian, pasta, salads",
+      "should": "Sweet basil is the same herb as the Basil card in row 3 (Ocimum basilicum, the common Genovese basil), so the plate lists one herb twice under two names; keep one basil card, or make the second card Thai basil, a different anise scented plant.",
+      "why": "Sweet basil is the standard trade and botanical name for ordinary culinary basil, both cards draw the same broad green leaf and give nearly the same uses, and the app's Thai Basil entry uses sweet basil as the plain name for Genovese basil."
+    },
+    {
+      "on": "Anise",
+      "says": "Anise, drawn as eight pointed star shaped pods",
+      "should": "The picture is star anise, the pod of the Asian tree Illicium verum, a different plant from anise seed; name the card Star Anise, or keep the name Anise and draw the small oval seed of Pimpinella anisum.",
+      "why": "Anise seed is the small gray green Mediterranean seed of pastis, ouzo and pizzelle while star anise is the eight pointed pod of pho, red braised pork and five spice, and the app keeps them as two separate Lexicon entries that share anethole but not personality."
+    },
+    {
+      "on": "Harissa",
+      "says": "Harissa, drawn as a red paste in a bowl, among the dry spices",
+      "should": "Harissa is a Tunisian chili paste of dried chilies pounded with garlic, salt and toasted spices and kept under olive oil, a condiment rather than a dry spice; if a dry blend is meant, call it harissa spice blend.",
+      "why": "The card draws a wet red paste, and the app's Lexicon and Floor Deck both file harissa as a Tunisian red paste of dried chilies, garlic and toasted caraway, coriander and cumin finished under oil."
+    }
+  ]
+}

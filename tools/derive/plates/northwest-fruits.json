@@ -1,0 +1,335 @@
+{
+ "slug": "northwest-fruits",
+ "title": "Northwest Fruits",
+ "tagline": "Local harvests, seasonal flavors, timeless traditions.",
+ "corners": [
+  "From the coastline to the mountains and forests of the Pacific Northwest.",
+  "Same land, different seasons, endless flavors.",
+  "Local fields, forests, coastal waters, mountain valleys.",
+  "Fresh, local, seasonal."
+ ],
+ "kind": "produce",
+ "regionLine": "Washington, Oregon, Idaho, Montana",
+ "groups": [
+  {
+   "title": "The fruits",
+   "note": null,
+   "items": [
+    {
+     "name": "Apples",
+     "sub": null,
+     "facts": [
+      ["Season", "September to October"],
+      ["Flavor", "Crisp, sweet, tart, aromatic"]
+     ]
+    },
+    {
+     "name": "Pears",
+     "sub": null,
+     "facts": [
+      ["Season", "August to October"],
+      ["Flavor", "Juicy, sweet, floral, mild"]
+     ]
+    },
+    {
+     "name": "Cherries",
+     "sub": null,
+     "facts": [
+      ["Season", "June to July"],
+      ["Flavor", "Sweet, tart, rich, juicy"]
+     ]
+    },
+    {
+     "name": "Blueberries",
+     "sub": null,
+     "facts": [
+      ["Season", "July to August"],
+      ["Flavor", "Sweet, tangy, juicy, mild"]
+     ]
+    },
+    {
+     "name": "Raspberries",
+     "sub": null,
+     "facts": [
+      ["Season", "July to August"],
+      ["Flavor", "Sweet, tart, delicate, bright"]
+     ]
+    },
+    {
+     "name": "Blackberries",
+     "sub": null,
+     "facts": [
+      ["Season", "July to September"],
+      ["Flavor", "Tart, sweet, rich, earthy"]
+     ]
+    },
+    {
+     "name": "Strawberries",
+     "sub": null,
+     "facts": [
+      ["Season", "May to July"],
+      ["Flavor", "Sweet, juicy, fragrant, bright"]
+     ]
+    },
+    {
+     "name": "Huckleberries",
+     "sub": null,
+     "facts": [
+      ["Season", "July to July"],
+      ["Flavor", "Tart, sweet, wild, earthy"]
+     ]
+    },
+    {
+     "name": "Marionberries",
+     "sub": null,
+     "facts": [
+      ["Season", "July to August"],
+      ["Flavor", "Tart, sweet, rich, complex"]
+     ]
+    },
+    {
+     "name": "Salmonberries",
+     "sub": null,
+     "facts": [
+      ["Season", "July to August"],
+      ["Flavor", "Sweet, tart, delicate, unique"]
+     ]
+    },
+    {
+     "name": "Currants",
+     "printed": "Currents",
+     "sub": null,
+     "facts": [
+      ["Season", "June to July"],
+      ["Flavor", "Tart, bright, crisp, refreshing"]
+     ]
+    },
+    {
+     "name": "Gooseberries",
+     "sub": null,
+     "facts": [
+      ["Season", "June to July"],
+      ["Flavor", "Tart, herbal, bright, earthy"]
+     ]
+    },
+    {
+     "name": "Plums",
+     "sub": null,
+     "facts": [
+      ["Season", "July to September"],
+      ["Flavor", "Sweet, juicy, rich, velvety"]
+     ]
+    },
+    {
+     "name": "Figs",
+     "sub": null,
+     "facts": [
+      ["Season", "August to October"],
+      ["Flavor", "Sweet, jammy, earthy, rich"]
+     ]
+    },
+    {
+     "name": "Peaches",
+     "sub": null,
+     "facts": [
+      ["Season", "July to September"],
+      ["Flavor", "Sweet, juicy, fragrant, smooth"]
+     ]
+    },
+    {
+     "name": "Nectarines",
+     "sub": null,
+     "facts": [
+      ["Season", "July to September"],
+      ["Flavor", "Sweet, juicy, tangy, smooth"]
+     ]
+    },
+    {
+     "name": "Apricots",
+     "sub": null,
+     "facts": [
+      ["Season", "July to August"],
+      ["Flavor", "Sweet, tart, juicy, delicate"]
+     ]
+    },
+    {
+     "name": "Tart Cherries",
+     "sub": null,
+     "facts": [
+      ["Season", "June to July"],
+      ["Flavor", "Tart, sweet, bright, juicy"]
+     ]
+    },
+    {
+     "name": "Kiwi",
+     "sub": null,
+     "facts": [
+      ["Season", "October to November"],
+      ["Flavor", "Sweet, tart, juicy, complex"]
+     ]
+    },
+    {
+     "name": "Cranberries",
+     "sub": null,
+     "facts": [
+      ["Season", "October to November"],
+      ["Flavor", "Tart, sweet, wild, rich"]
+     ]
+    },
+    {
+     "name": "Elderberries",
+     "sub": null,
+     "facts": [
+      ["Season", "June to August"],
+      ["Flavor", "Tart, floral, earthy, bold"]
+     ]
+    },
+    {
+     "name": "Serviceberries",
+     "sub": null,
+     "facts": [
+      ["Season", "July to August"],
+      ["Flavor", "Sweet, tart, juicy, rare"]
+     ]
+    },
+    {
+     "name": "Hawthorn Berries",
+     "sub": null,
+     "facts": [
+      ["Season", "September to October"],
+      ["Flavor", "Tart, earthy, herbal, complex"]
+     ]
+    },
+    {
+     "name": "Citrus",
+     "sub": "Inland & Coastal",
+     "facts": [
+      ["Season", "November to February"],
+      ["Flavor", "Tart, sweet, zesty, refreshing"]
+     ]
+    },
+    {
+     "name": "Wild Huckleberries",
+     "sub": null,
+     "facts": [
+      ["Season", "July to August"],
+      ["Flavor", "Tart, sweet, wild, rich"]
+     ]
+    }
+   ]
+  }
+ ],
+ "panels": [
+  {
+   "title": "The region",
+   "lines": [
+    "Rainforests",
+    "Mountains",
+    "Rivers",
+    "Coastlines",
+    "Farmlands",
+    "Wild berries",
+    "Orchards",
+    "Great food"
+   ]
+  },
+  {
+   "title": "States on the map",
+   "lines": [
+    "Washington, Oregon, Idaho, Montana",
+    "Pacific Ocean"
+   ]
+  },
+  {
+   "title": "Seasonal highlights",
+   "lines": [
+    "Spring: Berries, Cherries, Apricots",
+    "Summer: Blueberries, Raspberries, Peaches",
+    "Fall: Apples, Pears, Plums",
+    "Winter: Citrus, Cranberries, Storage Fruit"
+   ]
+  },
+  {
+   "title": "Flavor profile key",
+   "lines": [
+    "Sweet, Sour, Salty, Spicy",
+    "Earthy, Floral, Nutty, Bitter"
+   ]
+  }
+ ],
+ "footer": "The Pacific Northwest, bountiful by nature.",
+ "illegible": [
+  "Gooseberries card, right column, second row, flavor profile: the fourth word is printed as a garbled 'Unthy'; read as 'Earthy' from its shape and the pattern of the other cards, and transcribed as earthy.",
+  "Huckleberries card, top row, far right, season: the plate prints 'JULY - JULY', both ends the same month; transcribed as printed, 'July to July', and probably a misprint (the Wild Huckleberries card prints July to August).",
+  "Currants card, right column, top: the plate prints 'CURRENTS' over a drawing of red currants; the name is written Currants and the printed spelling is kept in 'printed'.",
+  "Card count: the plate prints 25 fruit cards (8 across the top row, 8 down the left side in four pairs, 8 down the right side in four pairs, and one Hawthorn Berries card beside the bottom middle landscape); a second full pass of every region found no further cards."
+ ],
+ "corrections": [
+  {
+   "on": "Huckleberries",
+   "says": "JULY - JULY",
+   "should": "Mountain huckleberries ripen from mid July through September, climbing with elevation and peaking in August, so the season reads July to September.",
+   "why": "A season that begins and ends in the same month is a misprint, and the plate's own Wild Huckleberries card prints July to August for the same fruit."
+  },
+  {
+   "on": "Salmonberries",
+   "says": "JULY - AUGUST",
+   "should": "Salmonberries are the first wild berry of the Northwest year, ripening from late May through June and finishing in early July on the coast, so the season reads May to July.",
+   "why": "Rubus spectabilis fruits weeks ahead of the raspberries and blackberries the plate correctly places in July and August, and the bushes are picked bare by the time the plate says the season begins."
+  },
+  {
+   "on": "Currants",
+   "says": "CURRENTS",
+   "should": "The fruit is spelled currants; a current is a flow of water or electricity.",
+   "why": "The card draws red currants on their strigs, and the app's Fruit Atlas carries Redcurrant and Blackcurrant entries under that spelling."
+  },
+  {
+   "on": "Gooseberries",
+   "says": "Tart, Herbal, Bright, Unthy",
+   "should": "The fourth flavor word is earthy; the printed Unthy is a garbled word and not a flavor.",
+   "why": "Unthy is not an English word, and earthy is the only term from the plate's own flavor set that fits the letter shapes and the pattern of the other cards."
+  },
+  {
+   "on": "Elderberries",
+   "says": "JUNE - AUGUST",
+   "should": "Blue and black elderberries in the Northwest ripen from late August into September, so the season reads August to September; June is when the plant flowers, not when it fruits.",
+   "why": "The card draws dark black elderberries, which are a late summer and early fall fruit, and the only elderberry ripe in June is the red elderberry, which cooks avoid."
+  },
+  {
+   "on": "Serviceberries",
+   "says": "illustration of red-orange clustered berries",
+   "should": "Ripe serviceberries, also called saskatoons, are dark purple blue with a dusty bloom and look like blueberries; the red-orange clusters drawn on the card look like mountain ash and should not be used to identify the fruit.",
+   "why": "Amelanchier alnifolia ripens through red to a deep purple blue and is picked only at that stage, so a forager or server matching the picture would pick the wrong shrub."
+  },
+  {
+   "on": "Citrus",
+   "says": "CITRUS (INLAND & COASTAL), NOVEMBER - FEBRUARY",
+   "should": "Citrus is not a Northwest crop; the oranges, lemons and grapefruit on a Northwest menu are shipped in from California, Arizona, Texas, Florida or Mexico, and no inland or coastal citrus belt exists in Washington, Oregon, Idaho or Montana.",
+   "why": "Citrus trees do not survive the winter freezes of any of the four states on the plate's map, and the only Northwest citrus is a few container grown Meyer lemons, which is not a harvest."
+  },
+  {
+   "on": "Wild Huckleberries",
+   "says": "WILD HUCKLEBERRIES, JULY - AUGUST",
+   "should": "This is the same fruit as the Huckleberries card on the top row, and the plate carries one fruit under two names; every huckleberry sold in the Northwest is wild picked, since the plant has never been farmed commercially, so there is no farmed crop to set a wild one against.",
+   "why": "Vaccinium membranaceum and its relatives resist cultivation, both cards carry the same tart, sweet, wild flavor words, and the two cards print overlapping seasons."
+  },
+  {
+   "on": "Wild Huckleberries",
+   "says": "illustration of golden-orange clustered berries",
+   "should": "Huckleberries are dark purple, blue black or red and never golden orange; the drawing looks closer to sea buckthorn or cloudberries and should not be used to identify huckleberries.",
+   "why": "The Huckleberries card on the top row shows the correct dark blue black berries, and no huckleberry species ripens yellow or orange."
+  },
+  {
+   "on": "Seasonal highlights",
+   "says": "Spring: Berries, Cherries, Apricots",
+   "should": "Spring in the Northwest yields rhubarb, the first strawberries and salmonberries; cherries start in mid June and apricots not until July, so both belong under summer.",
+   "why": "The plate's own cards print Cherries as June to July and Apricots as July to August, and the Northwest is a late region where nothing tree ripened is picked before June."
+  },
+  {
+   "on": "Seasonal highlights",
+   "says": "Winter: Citrus, Cranberries, Storage Fruit",
+   "should": "Winter in the Northwest means storage fruit such as apples, pears and kiwi plus frozen or dried berries; citrus is shipped in from other states and cranberries are a fall harvest, picked October to November on the Washington and Oregon coast.",
+   "why": "The plate's own Cranberries card prints October to November, and citrus does not grow in the region at all."
+  }
+ ]
+}

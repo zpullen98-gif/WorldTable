@@ -46,6 +46,7 @@ const DATA: LevelsData = {
 		{ key: 'techniques', title: 'Techniques', counted: true },
 		{ key: 'lexicon', title: 'The Lexicon', counted: true },
 		{ key: 'deck', title: 'The Floor Deck', counted: true },
+		{ key: 'plates', title: 'The Plates', counted: false },
 		{ key: 'palate', title: 'The Palate', counted: true },
 		{ key: 'safety', title: 'Food Safety', counted: false },
 		{ key: 'service', title: 'Service', counted: true }
@@ -55,6 +56,7 @@ const DATA: LevelsData = {
 		techniques: { '1': ['t1'], '2': ['t2'], '3': [], '4': [] },
 		lexicon: { '1': ['l1', 'l2', 'l3', 'l4'], '2': ['l5'], '3': [], '4': [] },
 		deck: { '1': ['fd_0001', 'fd_0002'], '2': ['fd_0003'], '3': [], '4': [] },
+		plates: { '1': ['p1'], '2': [], '3': [], '4': [] },
 		palate: { '1': ['flat', 'salty'], '2': ['sour'], '3': [], '4': [] },
 		safety: { '1': ['clause:X'], '2': [], '3': [], '4': [] },
 		service: { '1': ['m1'], '2': ['m2'], '3': [], '4': [] }
@@ -64,10 +66,10 @@ const DATA: LevelsData = {
 	tastes: ['salt', 'sweet'],
 	safety: { 'clause:X': { label: 'X', anchor: 'safety', kind: 'clause' } },
 	counts: {
-		'1': { dishes: 2, techniques: 1, lexicon: 4, deck: 2, palate: 2, safety: 1, service: 2 },
-		'2': { dishes: 1, techniques: 1, lexicon: 1, deck: 1, palate: 1, safety: 0, service: 1 },
-		'3': { dishes: 1, techniques: 0, lexicon: 0, deck: 0, palate: 0, safety: 0, service: 0 },
-		'4': { dishes: 1, techniques: 0, lexicon: 0, deck: 0, palate: 0, safety: 0, service: 0 }
+		'1': { dishes: 2, techniques: 1, lexicon: 4, deck: 2, plates: 1, palate: 2, safety: 1, service: 2 },
+		'2': { dishes: 1, techniques: 1, lexicon: 1, deck: 1, plates: 0, palate: 1, safety: 0, service: 1 },
+		'3': { dishes: 1, techniques: 0, lexicon: 0, deck: 0, plates: 0, palate: 0, safety: 0, service: 0 },
+		'4': { dishes: 1, techniques: 0, lexicon: 0, deck: 0, plates: 0, palate: 0, safety: 0, service: 0 }
 	}
 };
 
@@ -355,9 +357,10 @@ describe('the shipped file', () => {
 			expect(l.blurb).not.toMatch(/[–—]| -- /);
 		}
 	});
-	it('lists the seven subsections in order, Food Safety uncounted', () => {
+	it('lists the eight subsections in order, Food Safety and The Plates uncounted', () => {
 		expect(data.subsections.map((s) => s.key)).toEqual(SUBSECTIONS.map((s) => s.key));
 		expect(data.subsections.find((s) => s.key === 'safety')?.counted).toBe(false);
+		expect(data.subsections.find((s) => s.key === 'plates')?.counted).toBe(false);
 	});
 	it('copies the deck exactly as the index has it', () => {
 		const deck = shippedDeck as unknown as FloorDeck;

@@ -1,0 +1,326 @@
+{
+ "slug": "southwest-fruits",
+ "title": "Southwest Fruits",
+ "tagline": "Local harvests, seasonal flavors, timeless traditions.",
+ "corners": [
+  "From the deserts, mountains and river valleys to the rich soils of the Southwest. A region of bold flavors.",
+  "Same land, different seasons, endless flavors.",
+  "Local fruits, desert grown, mountain fresh."
+ ],
+ "kind": "produce",
+ "regionLine": "Deserts, Mountains, Plateaus, River Valleys",
+ "groups": [
+  {
+   "title": "The fruits",
+   "note": null,
+   "items": [
+    {
+     "name": "Prickly Pear",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, New Mexico, Texas"],
+      ["Flavor", "Sweet, tart, refreshing"]
+     ]
+    },
+    {
+     "name": "Desert Fig",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, California"],
+      ["Flavor", "Honeyed, rich, slightly tart"]
+     ]
+    },
+    {
+     "name": "Pomegranate",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, California"],
+      ["Flavor", "Tart, juicy, refreshing"]
+     ]
+    },
+    {
+     "name": "Mesquite",
+     "sub": null,
+     "facts": [
+      ["Where", "Southwest Deserts"],
+      ["Flavor", "Earthy, sweet, nutty"]
+     ]
+    },
+    {
+     "name": "Mango",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, California"],
+      ["Flavor", "Sweet, juicy, tropical"]
+     ]
+    },
+    {
+     "name": "Citrus",
+     "sub": "Navel & Valencia",
+     "facts": [
+      ["Where", "Arizona, California"],
+      ["Flavor", "Sweet, tangy, bright"]
+     ]
+    },
+    {
+     "name": "Date",
+     "sub": null,
+     "facts": [
+      ["Where", "California, Arizona"],
+      ["Flavor", "Sweet, rich, caramel"]
+     ]
+    },
+    {
+     "name": "Joshua Tree Fruit",
+     "sub": null,
+     "facts": [
+      ["Where", "California (Mojave)"],
+      ["Flavor", "Sweet, melon-like, crisp"]
+     ]
+    },
+    {
+     "name": "Apricot",
+     "sub": null,
+     "facts": [
+      ["Where", "California, Arizona"],
+      ["Flavor", "Sweet, juicy, mild"]
+     ]
+    },
+    {
+     "name": "Cherry",
+     "sub": null,
+     "facts": [
+      ["Where", "Washington (SW), Arizona"],
+      ["Flavor", "Sweet, tart, juicy"]
+     ]
+    },
+    {
+     "name": "Grape",
+     "sub": null,
+     "facts": [
+      ["Where", "California, Arizona"],
+      ["Flavor", "Sweet, juicy, bold"]
+     ]
+    },
+    {
+     "name": "Fig",
+     "sub": null,
+     "facts": [
+      ["Where", "California, Arizona"],
+      ["Flavor", "Sweet, honeyed, rich"]
+     ]
+    },
+    {
+     "name": "Pecan",
+     "sub": "Fruit",
+     "facts": [
+      ["Where", "Texas, New Mexico"],
+      ["Flavor", "Rich, buttery, nutty"]
+     ]
+    },
+    {
+     "name": "Olive",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, California"],
+      ["Flavor", "Briny, tangy, rich"]
+     ]
+    },
+    {
+     "name": "Watermelon",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, New Mexico"],
+      ["Flavor", "Sweet, juicy, crisp"]
+     ]
+    },
+    {
+     "name": "Cantaloupe",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, California"],
+      ["Flavor", "Sweet, melon-like, refreshing"]
+     ]
+    },
+    {
+     "name": "Blackberry",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, New Mexico"],
+      ["Flavor", "Sweet, tart, earthy"]
+     ]
+    },
+    {
+     "name": "Raspberry",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, California"],
+      ["Flavor", "Sweet, tart, fragrant"]
+     ]
+    },
+    {
+     "name": "Chile Pepper",
+     "sub": null,
+     "facts": [
+      ["Where", "New Mexico, Arizona"],
+      ["Flavor", "Spicy, smoky, bold"]
+     ]
+    },
+    {
+     "name": "Kiwi",
+     "sub": null,
+     "facts": [
+      ["Where", "California, Arizona"],
+      ["Flavor", "Tart, sweet, exotic"]
+     ]
+    },
+    {
+     "name": "Boysenberry",
+     "sub": null,
+     "facts": [
+      ["Where", "California, Oregon (SW)"],
+      ["Flavor", "Sweet, tart, complex"]
+     ]
+    },
+    {
+     "name": "Tangerine",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, California"],
+      ["Flavor", "Sweet, tangy, juicy"]
+     ]
+    },
+    {
+     "name": "Lemon",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, California"],
+      ["Flavor", "Tart, bright, clean"]
+     ]
+    },
+    {
+     "name": "Lime",
+     "sub": null,
+     "facts": [
+      ["Where", "Arizona, California"],
+      ["Flavor", "Tart, zesty, refreshing"]
+     ]
+    }
+   ]
+  }
+ ],
+ "panels": [
+  {
+   "title": "The region",
+   "lines": [
+    "Rich soil",
+    "Clean water",
+    "Abundant sun",
+    "Unique terroir",
+    "Great food"
+   ]
+  },
+  {
+   "title": "States on the map",
+   "lines": [
+    "Nevada, Utah, Colorado, California, Arizona, New Mexico, Texas"
+   ]
+  },
+  {
+   "title": "Seasonal highlights",
+   "lines": [
+    "Spring: Berries, Cherries, Apricots",
+    "Summer: Melons, Peaches, Citrus",
+    "Fall: Pomegranates, Grapes, Figs",
+    "Winter: Citrus, Dates, Pecans"
+   ]
+  },
+  {
+   "title": "Flavor profile key",
+   "lines": [
+    "Sweet, Tart, Juicy",
+    "Crisp, Spicy, Rich",
+    "Earthy, Tangy, Smoky"
+   ]
+  }
+ ],
+ "footer": "Southwest flavors, bold, vibrant, unforgettable.",
+ "illegible": [
+  "Flavor profile key, bottom right: a fourth column of three small round icons at the right edge of the box carries no readable label; only the nine labeled entries were transcribed.",
+  "Card count: the plate prints 24 fruit cards (8 across the top row, 6 down the left side, 6 down the right side, 4 in the bottom middle row); a second full pass of the plate found no further cards."
+ ],
+ "corrections": [
+  {
+   "on": "Prickly Pear",
+   "says": "Flavor: Sweet, tart, refreshing",
+   "should": "Prickly pear is mild and low in acid, floral and watermelon like rather than tart, so add lime when a dish needs acid.",
+   "why": "The pulp sits near pH 5.5, well above the 4.6 line, which is why the app's own entry calls the flavor mild and floral and why anything canned must be acidified."
+  },
+  {
+   "on": "Desert Fig",
+   "says": "Desert Fig, Arizona, California, Honeyed, rich, slightly tart",
+   "should": "There is no distinct fruit called desert fig; this card and the Fig card are the same Ficus carica from the same two states, so read them as one fruit.",
+   "why": "The plate prints Fig (California, Arizona, sweet, honeyed, rich) as a separate card with the same illustration, states and flavor words, and the trade knows only one fig species in varieties such as Black Mission, Calimyrna, Brown Turkey and Kadota."
+  },
+  {
+   "on": "Mesquite",
+   "says": "Mesquite, Southwest Deserts, Earthy, sweet, nutty",
+   "should": "Mesquite is a legume pod that is dried and milled into a sweet flour, not a fruit served fresh, so describe it to guests as a native flour or sweetener.",
+   "why": "The plate's own illustration shows dry bean pods beside a pile of ground meal, and the Prosopis pod is eaten only as milled flour or syrup."
+  },
+  {
+   "on": "Mango",
+   "says": "Mango, Arizona, California, Sweet, juicy, tropical",
+   "should": "Mango is not a Southwest crop; United States mangoes come from Florida, Hawaii and Puerto Rico, and the fruit on a Southwest menu is almost always imported from Mexico.",
+   "why": "Mango is a frost tender tropical tree with no commercial orchards in Arizona and only a token planting in California's Coachella Valley."
+  },
+  {
+   "on": "Citrus",
+   "says": "Citrus (Navel & Valencia)",
+   "should": "Call this card Orange (Navel and Valencia), since those are orange varieties and tangerine, lemon and lime each have their own citrus card on the plate.",
+   "why": "A card named Citrus overlaps the three other citrus cards and leaves a server unsure which fruit it means."
+  },
+  {
+   "on": "Joshua Tree Fruit",
+   "says": "Joshua Tree Fruit, California (Mojave)",
+   "should": "Joshua tree fruit is not a marketed produce item and no kitchen can source it, so treat this card as a historical desert food rather than a fruit you will see or serve.",
+   "why": "The fruit of Yucca brevifolia is fibrous, has never entered the produce trade, and the tree is protected in California, so the sweet, melon like and crisp description matches no market fruit."
+  },
+  {
+   "on": "Cherry",
+   "says": "Where: Washington (SW), Arizona",
+   "should": "Washington is a Pacific Northwest state that is not on this plate's own map; Southwest cherries come from Utah and Colorado's high country.",
+   "why": "The plate's map panel names Nevada, Utah, Colorado, California, Arizona, New Mexico and Texas, and Utah is among the top cherry states while Arizona's low deserts lack the winter chill cherries need."
+  },
+  {
+   "on": "Pecan",
+   "says": "Pecan (Fruit), Rich, buttery, nutty",
+   "should": "Pecan is a tree nut, not a fruit, and belongs with nut and pantry material; its Texas and New Mexico origin is right.",
+   "why": "It is the seed of a hickory, Carya illinoinensis, filed in the app under grains, pulses and seeds as one of the fattest nuts in use, and every kitchen stores and prices it as a nut."
+  },
+  {
+   "on": "Olive",
+   "says": "Olive, Briny, tangy, rich",
+   "should": "Olives straight from the tree are bitter and inedible, so the briny, tangy flavor on this card describes cured olives, a savory pantry item rather than a fresh fruit.",
+   "why": "Raw olives carry oleuropein, a phenolic so bitter it dries the mouth, and every olive ever eaten has been water, brine, lye or salt cured first."
+  },
+  {
+   "on": "Chile Pepper",
+   "says": "Chile Pepper, New Mexico, Arizona, Spicy, smoky, bold",
+   "should": "A chile is botanically a fruit but the kitchen buys, stores and cooks it as a vegetable and spice, so this is the one savory card on the plate and should never be offered to a guest as fruit.",
+   "why": "The app files chiles under vegetables and under the herb and chile material, with the Hatch chile entry covering exactly this New Mexico crop."
+  },
+  {
+   "on": "Kiwi",
+   "says": "Where: California, Arizona",
+   "should": "Kiwifruit is a California crop from the Central Valley and Arizona has no commercial kiwi, so drop Arizona from the card.",
+   "why": "The vine needs winter chill and cannot take desert heat, and nearly all United States kiwifruit is grown in California's San Joaquin and Sacramento valleys."
+  },
+  {
+   "on": "Boysenberry",
+   "says": "Where: California, Oregon (SW)",
+   "should": "Oregon is a Pacific Northwest state that is not on this plate's own map; the boysenberry's Southwest home is California alone, where it was bred in Anaheim.",
+   "why": "The plate's map panel does not include Oregon, so the (SW) tag teaches a wrong region."
+  }
+ ]
+}

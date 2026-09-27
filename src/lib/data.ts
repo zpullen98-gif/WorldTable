@@ -28,7 +28,8 @@ import type {
 	DeckIndex,
 	StationsData,
 	TechniqueStandard,
-	LevelsData
+	LevelsData,
+	PlatesData
 } from './types';
 
 import indexJson from './data/recipes.index.json';
@@ -126,6 +127,17 @@ export async function loadLevels(): Promise<LevelsData> {
 		levelsCache = (await import('./data/levels.json')).default as unknown as LevelsData;
 	}
 	return levelsCache;
+}
+
+/** The Plates' transcriptions: small enough to install, read by the wall, the
+ *  level pages and the pages that link back to a plate. The images are not
+ *  here: a page asks for its picture by URL, on demand. */
+let platesCache: PlatesData | null = null;
+export async function loadPlates(): Promise<PlatesData> {
+	if (!platesCache) {
+		platesCache = (await import('./data/plates.json')).default as unknown as PlatesData;
+	}
+	return platesCache;
 }
 
 let drillsCache: Drills | null = null;

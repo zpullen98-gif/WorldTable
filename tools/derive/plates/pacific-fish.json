@@ -1,0 +1,237 @@
+{
+  "slug": "pacific-fish",
+  "title": "Pacific Fish",
+  "tagline": "Cuts & flavor profiles. Fresh catches, timeless flavors, coast to table.",
+  "corners": [
+    "From the Alaskan waters to the islands of the Pacific. Extraordinary fish, unforgettable flavor.",
+    "Pacific waters, bountiful flavors."
+  ],
+  "kind": "fish",
+  "regionLine": null,
+  "groups": [
+    {
+      "title": "The fish",
+      "note": null,
+      "items": [
+        {
+          "name": "Salmon",
+          "sub": "Pacific",
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Rich, buttery, clean, slightly sweet"]
+          ]
+        },
+        {
+          "name": "Tuna",
+          "sub": "Bluefin, Yellowfin",
+          "facts": [
+            ["Cuts", "Loin, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Bold, meaty, clean, slightly sweet"]
+          ]
+        },
+        {
+          "name": "Halibut",
+          "sub": "Pacific",
+          "facts": [
+            ["Cuts", "Fillet, Steak, Collar, Cheeks, Liver"],
+            ["Flavor", "Mild, buttery, delicate, clean"]
+          ]
+        },
+        {
+          "name": "Cod",
+          "sub": "Pacific",
+          "facts": [
+            ["Cuts", "Fillet, Steak, Loin, Belly, Cheeks"],
+            ["Flavor", "Mild, flaky, lean, clean"]
+          ]
+        },
+        {
+          "name": "Sablefish",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Rich, firm, mild, slightly sweet"]
+          ]
+        },
+        {
+          "name": "Black Cod",
+          "sub": "Chilean Sea Bass",
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Rich, buttery, silky, mild"]
+          ]
+        },
+        {
+          "name": "Rockfish",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Sweet, firm, mild, clean"]
+          ]
+        },
+        {
+          "name": "Yellowtail",
+          "sub": "Hamachi",
+          "facts": [
+            ["Cuts", "Loin, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Rich, buttery, clean, fresh"]
+          ]
+        },
+        {
+          "name": "Swordfish",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Loin, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Mild, firm, meaty, clean"]
+          ]
+        },
+        {
+          "name": "Mahi Mahi",
+          "sub": "Dorado",
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Mild, sweet, firm, fresh"]
+          ]
+        },
+        {
+          "name": "Shrimp",
+          "sub": "Pacific",
+          "facts": [
+            ["Cuts", "Whole, Peeled, Tail-On, Deveined"],
+            ["Flavor", "Sweet, briny, tender, clean"]
+          ]
+        },
+        {
+          "name": "Albacore Tuna",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fiin, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Mild, lean, clean, fresh"]
+          ]
+        },
+        {
+          "name": "Yellowfin Tuna",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Loin, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Rich, meaty, clean, bold"]
+          ]
+        },
+        {
+          "name": "Pacific Red Snapper",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Sweet, firm, mild, clean"]
+          ]
+        },
+        {
+          "name": "Sea Bass",
+          "sub": "Pacific",
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Mild, flaky, sweet, clean"]
+          ]
+        },
+        {
+          "name": "Flounder",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Fillet, Steak, Belly, Collar, Tail"],
+            ["Flavor", "Mild, delicate, sweet, clean"]
+          ]
+        },
+        {
+          "name": "Octopus",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Tentacles, Body, Beak"],
+            ["Flavor", "Rich, tender, briny, unique"]
+          ]
+        },
+        {
+          "name": "Pacific Oysters",
+          "sub": null,
+          "facts": [
+            ["Cuts", "Raw, Grilled, Fried, Steamed"],
+            ["Flavor", "Briny, creamy, fresh, sweet"]
+          ]
+        }
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "title": "The map",
+      "lines": [
+        "The Pacific Ocean",
+        "Asia",
+        "North America",
+        "South America",
+        "Australia",
+        "Different waters, unique flavors",
+        "One incredible ocean"
+      ]
+    }
+  ],
+  "footer": "Save the ocean, support sustainable fisheries, good food, a brighter future.",
+  "illegible": [
+    "Albacore Tuna card, first cut label (third row, second column): the plate prints 'Fiin' under a loin-shaped block; every other tuna card prints 'Loin' in that position, so this is most likely a misprint of 'Loin'. Transcribed as printed."
+  ],
+  "corrections": [
+    {
+      "on": "Tuna",
+      "says": "TUNA (Bluefin / Yellowfin)",
+      "should": "Yellowfin has its own card lower on the plate, so this card should be bluefin alone rather than repeating yellowfin.",
+      "why": "Bluefin and yellowfin are different fish with different fat, and the plate prints yellowfin twice with two different flavor lines."
+    },
+    {
+      "on": "Sablefish",
+      "says": "Rich, Firm, Mild, Slightly Sweet",
+      "should": "Sablefish is soft, oily and velvety with a large silky flake, not firm.",
+      "why": "Sablefish carries some of the highest fat of any Pacific fish, and the plate's own Black Cod card, which is the same fish, correctly says silky and buttery."
+    },
+    {
+      "on": "Black Cod",
+      "says": "BLACK COD (Chilean Sea Bass)",
+      "should": "Black cod is another name for sablefish, which already has its own card on this plate, and Chilean sea bass is a different fish, so the subtitle is wrong and the two cards describe one fish.",
+      "why": "Black cod and sablefish are the same species, Anoplopoma fimbria, while Chilean sea bass is Patagonian toothfish, Dissostichus eleginoides, from the Southern Ocean."
+    },
+    {
+      "on": "Rockfish",
+      "says": "Fillet, Steak, Belly, Collar, Tail",
+      "should": "Rockfish is a small round fish sold whole or as fillets; it is not cut into steaks, belly or tail portions.",
+      "why": "Market rockfish run a few pounds, and steaks are crosscuts of large fish such as salmon and halibut, so this cut list was copied from the large-fish template."
+    },
+    {
+      "on": "Albacore Tuna",
+      "says": "Fiin",
+      "should": "The first cut on the Albacore card is Loin, matching every other tuna card.",
+      "why": "There is no fish cut called fiin, the block drawn is loin shaped, and loin is the thick top quadrant of large fish like tuna."
+    },
+    {
+      "on": "Yellowfin Tuna",
+      "says": "Rich, Meaty, Clean, Bold",
+      "should": "Yellowfin is the lean tuna, so its profile should read lean and meaty rather than rich.",
+      "why": "Yellowfin carries little fat compared with bluefin, whose belly is marbled, and the app's own Tuna card says yellowfin is lean."
+    },
+    {
+      "on": "Pacific Red Snapper",
+      "says": "PACIFIC RED SNAPPER",
+      "should": "On the West Coast, Pacific red snapper is a market name for rockfish, which already has its own card; true red snapper is a Gulf of Mexico and Atlantic reef fish, not a Pacific one.",
+      "why": "California allows several rockfish species to be sold as Pacific red snapper, while the name red snapper properly belongs to Lutjanus campechanus from the Gulf and Atlantic."
+    },
+    {
+      "on": "Flounder",
+      "says": "Fillet, Steak, Belly, Collar, Tail",
+      "should": "Flounder is a thin flatfish sold whole or as four fillets; it is too thin to yield steaks, belly, collar or tail portions.",
+      "why": "Flat fish yield two fillets from the top and two from the bottom, and steaks are crosscuts reserved for thick large fish such as halibut."
+    },
+    {
+      "on": "Octopus",
+      "says": "Tentacles, Body, Beak",
+      "should": "The beak is the hard mouthpart that is cut out and thrown away, not a cut that is served; the edible parts are the tentacles and the body.",
+      "why": "The beak is chitin and inedible, and it is removed with the eyes and ink sac when the octopus is cleaned."
+    }
+  ]
+}

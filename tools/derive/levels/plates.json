@@ -1,0 +1,22 @@
+[
+	{"slug":"chicken-cuts","level":1,"reason":"The standard's Commis paragraph names the staples handled on day one, and a whole chicken is broken down in the first week of any kitchen; the cuts are the everyday ones (breast, thigh, wing, drumstick)."},
+	{"slug":"culinary-spices","level":1,"reason":"The rack spans the common herbs the Commis paragraph names (basil, thyme, oregano, garlic) and the spice rack the Chef de Partie paragraph names; a plate that spans two levels ties, and ties break down."},
+	{"slug":"culinary-mushrooms","level":1,"reason":"Button, cremini, portobello, shiitake and oyster are handled daily and lean I by the Fungi Atlas rule (how often a kitchen handles the item); the morel, the truffle and the chanterelle lean II or III, and the tie breaks down."},
+	{"slug":"pork-cuts","level":2,"reason":"The Chef de Partie paragraph names the cuts and grades a kitchen writes on a menu; the pig's primals and their cooking are that."},
+	{"slug":"beef-cuts","level":2,"reason":"The Chef de Partie paragraph names the cuts and grades; the deck's own Meat Cuts cards for these steaks sit at II (Hanger, Flat Iron), with only the specialist cuts at III."},
+	{"slug":"pacific-fish","level":2,"reason":"The Chef de Partie paragraph names the fish case; the plate is the case for one ocean, with how each fish is cut and how it eats."},
+	{"slug":"atlantic-fish","level":2,"reason":"The Chef de Partie paragraph names the fish case; the plate is the case for one ocean, with how each fish is cut and how it eats."},
+	{"slug":"gulf-coast-fish","level":2,"reason":"The Chef de Partie paragraph names the fish case; the plate is the case for one coast, with how each fish is cut and its best preparation."},
+	{"slug":"northwest-vegetables","level":2,"reason":"The Seasonal Larder leans II by the standard's category rule, and the Chef de Partie paragraph names the less common produce; a region's vegetables by month are that."},
+	{"slug":"northwest-fruits","level":2,"reason":"The Seasonal Larder leans II by the standard's category rule; a region's fruit by month, from the orchard to the wild berries, is that."},
+	{"slug":"southwest-vegetables","level":2,"reason":"The Seasonal Larder leans II by the standard's category rule, and the Chef de Partie paragraph names the less common produce; a region's vegetables by month are that."},
+	{"slug":"southwest-fruits","level":2,"reason":"The Seasonal Larder leans II by the standard's category rule; a region's fruit by state and season, from the desert to the orchard, is that."},
+	{"slug":"midwest-vegetables","level":2,"reason":"The Seasonal Larder leans II by the standard's category rule, and the Chef de Partie paragraph names the less common produce; a region's vegetables by month are that."},
+	{"slug":"midwest-fruits","level":2,"reason":"The Seasonal Larder leans II by the standard's category rule; a region's fruit by month, from the orchard to the pawpaw, is that."},
+	{"slug":"northeastern-vegetables","level":2,"reason":"The Seasonal Larder leans II by the standard's category rule, and the Chef de Partie paragraph names the less common produce; a region's vegetables by state and month are that."},
+	{"slug":"northeastern-fruits","level":2,"reason":"The Seasonal Larder leans II by the standard's category rule; a region's fruit by state is that."},
+	{"slug":"southeastern-vegetables","level":2,"reason":"The Seasonal Larder leans II by the standard's category rule, and the Chef de Partie paragraph names the less common produce; a region's vegetables by state and month, with the cuts, are that."},
+	{"slug":"southeastern-fruits","level":2,"reason":"The Seasonal Larder leans II by the standard's category rule; a region's fruit by state and season, from the citrus to the muscadine, is that."},
+	{"slug":"great-cheeses","level":2,"reason":"The Chef de Partie paragraph names the cheese words a kitchen writes on a menu and expects a sentence for; the board by name, country and style is that."},
+	{"slug":"charcuterie","level":3,"reason":"The Sous Chef paragraph names the charcuterie boards for service and the specialist products of fine dining; culatello, lonzino and filetto are those, and the deck's Cured cards for them sit at III."}
+]

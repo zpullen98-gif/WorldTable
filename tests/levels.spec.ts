@@ -11,7 +11,7 @@ import { goto, seedSession } from './helpers';
  * Everything the engine decides is unit-tested (src/lib/levels.test.ts). What
  * this proves is that the PAGES say it: that a new reader sees Untouched four
  * times and Level I as theirs, that a record moves the word and the figure and
- * the reader's level, that a level page lists its seven subsections with a
+ * the reader's level, that a level page lists its eight subsections with a
  * count and a door each, that the test sits to its end and ends on what was
  * missed with no number, and that the two retired hubs are honestly gone.
  *
@@ -112,17 +112,19 @@ test('a full Level I record reads Met and moves the reader to Level II', async (
 	await expect(page).toHaveURL(/\/level\/2$/);
 });
 
-test('a level page lists its seven subsections, each with a count and a door, and ends on the test', async ({ page }) => {
+test('a level page lists its eight subsections, each with a count and a door, and ends on the test', async ({ page }) => {
 	await goto(page, '/level/1');
 	await expect(page.locator('h1')).toHaveText(/^I\s+Commis$/);
 	await expect(page.locator('.stat')).toHaveText(/Untouched/);
 	const subs = page.locator('ol.subsections .subsection');
-	await expect(subs).toHaveCount(7);
-	for (let i = 0; i < 7; i++) {
+	await expect(subs).toHaveCount(8);
+	for (let i = 0; i < 8; i++) {
 		await expect(subs.nth(i).locator('.line')).toHaveText(/\d+ at this level/);
 		expect(await subs.nth(i).locator('a.train').count()).toBeGreaterThan(0);
 	}
-	await expect(subs.nth(5).locator('.line')).toContainText('Read, never graded');
+	// the two read-only subsections: The Plates (fifth) and Food Safety (seventh)
+	await expect(subs.nth(4).locator('.line')).toContainText('Read, never graded');
+	await expect(subs.nth(6).locator('.line')).toContainText('Read, never graded');
 	// every subsection's rows are named, not slugs: the first dish is a dish
 	await subs.nth(0).locator('details summary').click();
 	await expect(subs.nth(0).locator('details li a').first()).not.toHaveText(/-/);

@@ -1,0 +1,295 @@
+{
+  "slug": "northeastern-fruits",
+  "title": "Northeastern Fruits",
+  "tagline": "Local harvests, seasonal flavors, timeless traditions.",
+  "corners": [
+    "From the Atlantic Coast to the Appalachian Mountains, a region of rich harvests",
+    "Same land, different seasons, endless flavors",
+    "Local fruits, superior flavor, northern roots",
+    "The Northeast, where every season brings something sweet"
+  ],
+  "kind": "produce",
+  "regionLine": "Atlantic Coast, Appalachian Mountains, Great Lakes",
+  "groups": [
+    {
+      "title": "The fruits",
+      "note": null,
+      "items": [
+        {
+          "name": "Apples",
+          "sub": null,
+          "facts": [
+            ["Where", "New York, Vermont, Maine"],
+            ["Flavor", "Crisp, sweet, tart, aromatic"]
+          ]
+        },
+        {
+          "name": "Blueberries",
+          "sub": null,
+          "facts": [
+            ["Where", "Maine, New Hampshire, Vermont"],
+            ["Flavor", "Sweet, tangy, juicy, bright"]
+          ]
+        },
+        {
+          "name": "Cranberries",
+          "sub": null,
+          "facts": [
+            ["Where", "Massachusetts, Wisconsin (N.E. border)"],
+            ["Flavor", "Tart, bright, refreshing, earthy"]
+          ]
+        },
+        {
+          "name": "Peaches",
+          "sub": null,
+          "facts": [
+            ["Where", "New Jersey, Delaware, Maryland"],
+            ["Flavor", "Sweet, juicy, floral, velvety"]
+          ]
+        },
+        {
+          "name": "Pears",
+          "sub": null,
+          "facts": [
+            ["Where", "New York, Pennsylvania, Vermont"],
+            ["Flavor", "Sweet, juicy, crisp, delicate"]
+          ]
+        },
+        {
+          "name": "Cherries",
+          "sub": null,
+          "facts": [
+            ["Where", "New York, Michigan (N.E. border)"],
+            ["Flavor", "Sweet, tart, juicy, rich"]
+          ]
+        },
+        {
+          "name": "Strawberries",
+          "sub": null,
+          "facts": [
+            ["Where", "New Jersey, New York, Massachusetts"],
+            ["Flavor", "Sweet, juicy, fragrant, bright"]
+          ]
+        },
+        {
+          "name": "Blackberries",
+          "sub": null,
+          "facts": [
+            ["Where", "New York, Maine, Vermont"],
+            ["Flavor", "Tart, sweet, juicy, bold"]
+          ]
+        },
+        {
+          "name": "Raspberries",
+          "sub": null,
+          "facts": [
+            ["Where", "New York, Maine, New Hampshire"],
+            ["Flavor", "Sweet, tart, delicate, fragrant"]
+          ]
+        },
+        {
+          "name": "Plums",
+          "sub": null,
+          "facts": [
+            ["Where", "New York, Michigan, Pennsylvania"],
+            ["Flavor", "Sweet, tart, juicy, complex"]
+          ]
+        },
+        {
+          "name": "Quince",
+          "sub": null,
+          "facts": [
+            ["Where", "New Jersey, Pennsylvania, New York"],
+            ["Flavor", "Tart, floral, earthy, aromatic"]
+          ]
+        },
+        {
+          "name": "Figs",
+          "sub": null,
+          "facts": [
+            ["Where", "California (N.E. regions), New York"],
+            ["Flavor", "Sweet, honeyed, rich, velvety"]
+          ]
+        },
+        {
+          "name": "Grapes",
+          "sub": null,
+          "facts": [
+            ["Where", "New York, Pennsylvania, Virginia"],
+            ["Flavor", "Sweet, tart, juicy, complex"]
+          ]
+        },
+        {
+          "name": "Elderberries",
+          "sub": null,
+          "facts": [
+            ["Where", "New England, New York"],
+            ["Flavor", "Tart, earthy, floral, bold"]
+          ]
+        },
+        {
+          "name": "Gooseberries",
+          "sub": null,
+          "facts": [
+            ["Where", "New England, New York"],
+            ["Flavor", "Tart, sweet, tangy, refreshing"]
+          ]
+        },
+        {
+          "name": "Pomegranates",
+          "sub": null,
+          "facts": [
+            ["Where", "New Jersey, California (N.E. regions)"],
+            ["Flavor", "Sweet, tart, juicy, rich"]
+          ]
+        },
+        {
+          "name": "Kiwi",
+          "sub": null,
+          "facts": [
+            ["Where", "New York, Pennsylvania"],
+            ["Flavor", "Tart, sweet, juicy, tropical"]
+          ]
+        },
+        {
+          "name": "Citrus",
+          "sub": null,
+          "facts": [
+            ["Where", "Florida (N.E. coast), Southern states"],
+            ["Flavor", "Tart, sweet, juicy, bright"]
+          ]
+        },
+        {
+          "name": "Persimmons",
+          "sub": null,
+          "facts": [
+            ["Where", "Virginia, Tennessee, North Carolina"],
+            ["Flavor", "Sweet, honeyed, silky, rich"]
+          ]
+        },
+        {
+          "name": "Huckleberries",
+          "sub": null,
+          "facts": [
+            ["Where", "Maine, New Hampshire, Vermont"],
+            ["Flavor", "Tart, sweet, earthy, wild"]
+          ]
+        },
+        {
+          "name": "Serviceberries",
+          "sub": null,
+          "facts": [
+            ["Where", "New England, New York"],
+            ["Flavor", "Tart, sweet, juicy, nutty"]
+          ]
+        }
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "title": "The region",
+      "lines": [
+        "Mountains",
+        "Forests",
+        "Farms",
+        "Orchards",
+        "Coastlines",
+        "Fresh Water"
+      ]
+    },
+    {
+      "title": "The map",
+      "lines": [
+        "Maine",
+        "Vermont",
+        "New Hampshire",
+        "Massachusetts",
+        "New York",
+        "Rhode Island",
+        "Connecticut",
+        "Atlantic Ocean",
+        "Pennsylvania",
+        "New Jersey",
+        "Delaware",
+        "Maryland"
+      ]
+    },
+    {
+      "title": "Local favorites",
+      "lines": [
+        "Apples, Blueberries, Cranberries",
+        "Peaches, Pears, Cherries",
+        "Strawberries, Plums, Raspberries"
+      ]
+    },
+    {
+      "title": "Quick flavor guide",
+      "lines": [
+        "Sweet, Tart, Juicy, Crisp",
+        "Earthy, Floral, Aromatic, Rich"
+      ]
+    }
+  ],
+  "footer": "Fresh fruits, local farms, coastal markets, seasonal harvests",
+  "illegible": [
+    "Map, east of Massachusetts: the Rhode Island label is printed twice and the second copy is garbled (read as 'Rhode Island'); the Delaware label is also printed twice, once smeared, once clear",
+    "Map, two tiny smeared marks that may be ghost labels, one on the coast just south of Connecticut and one at the lower left below the smeared Delaware label (looks like 'Sano'); neither is readable and neither is transcribed"
+  ],
+  "corrections": [
+    {
+      "on": "Cranberries",
+      "says": "Massachusetts, Wisconsin (N.E. border)",
+      "should": "Cranberries in the Northeast come from the bogs of Massachusetts and New Jersey, and Wisconsin, though it grows the most cranberries in the country, is a Midwestern state far from the Northeast.",
+      "why": "Wisconsin borders Michigan, Minnesota, Iowa and Illinois and touches no Northeastern state, so the printed N.E. border qualifier is false, while New Jersey's Pine Barrens bogs are the region's second producer."
+    },
+    {
+      "on": "Cherries",
+      "says": "New York, Michigan (N.E. border)",
+      "should": "Northeastern cherries come from New York and Pennsylvania, and Michigan is a Midwestern state that shares no border with the Northeast.",
+      "why": "Michigan borders Ohio, Indiana and Wisconsin, with Ohio between it and Pennsylvania, so the printed N.E. border qualifier is invented, while Pennsylvania's Adams County is a real cherry district on the plate's own map."
+    },
+    {
+      "on": "Plums",
+      "says": "New York, Michigan, Pennsylvania",
+      "should": "Plums in the Northeast come from New York, Pennsylvania and New Jersey orchards, and Michigan is a Midwestern state outside this plate's region.",
+      "why": "Michigan is not one of the twelve states on the plate's own map, while New Jersey grows plums in the same stone fruit belt as its peaches."
+    },
+    {
+      "on": "Figs",
+      "says": "California (N.E. regions), New York",
+      "should": "Figs are not a Northeastern farm crop; fresh figs on a Northeast menu come from California's Central Valley or are imported, and in New York the fig is only a backyard tree that must be wrapped or buried to survive winter.",
+      "why": "Northeastern California is cold high desert that grows no figs, so California (N.E. regions) is a garbled location, and the fig tree is not winter hardy in New York, so there is no commercial New York crop."
+    },
+    {
+      "on": "Grapes",
+      "says": "New York, Pennsylvania, Virginia",
+      "should": "Northeastern grapes come from New York (Finger Lakes, Lake Erie and Long Island), Pennsylvania (the Lake Erie Concord belt) and New Jersey, and Virginia is a Southern state outside the plate's region.",
+      "why": "Virginia does not appear on the plate's own map, which ends at Maryland, while New Jersey has an established grape and wine industry in the Outer Coastal Plain."
+    },
+    {
+      "on": "Pomegranates",
+      "says": "New Jersey, California (N.E. regions)",
+      "should": "Pomegranates are not a Northeastern crop; the ones on a Northeast menu come from California's San Joaquin Valley, harvested in the fall, and New Jersey has no commercial pomegranate orchards.",
+      "why": "The pomegranate needs long hot dry summers and mild winters that New Jersey does not have, and northeastern California is cold high desert with no pomegranate orchards, so both printed locations are wrong."
+    },
+    {
+      "on": "Kiwi",
+      "says": "New York, Pennsylvania",
+      "should": "The fuzzy brown kiwifruit pictured is a California crop or an import from New Zealand, Italy and Chile; the only kiwi grown in the Northeast is the small smooth skinned hardy kiwi, raised on a few farms in Pennsylvania, New York and New England.",
+      "why": "Fuzzy kiwifruit (Actinidia deliciosa) is not winter hardy in New York or Pennsylvania and has no commercial acreage there, while the grape sized hardy kiwi (Actinidia arguta) is a different fruit that does not match the plate's illustration."
+    },
+    {
+      "on": "Citrus",
+      "says": "Florida (N.E. coast), Southern states",
+      "should": "No citrus grows in the Northeast; the oranges, lemons and grapefruit on a Northeast menu are shipped in from Florida, California and Texas and are not a local Northeastern fruit.",
+      "why": "Citrus trees cannot survive Northeastern winters, and Florida's northeast coast is a Southern location, so the plate's own printed source confirms this is not a regional fruit."
+    },
+    {
+      "on": "Persimmons",
+      "says": "Virginia, Tennessee, North Carolina",
+      "should": "The large orange persimmons pictured are the Asian Fuyu and Hachiya types grown in California; only the small wild American persimmon reaches southern Pennsylvania and New Jersey, and the three states printed are all Southern states outside this plate's region.",
+      "why": "Virginia, Tennessee and North Carolina are not Northeastern states and do not appear on the plate's map, and the Asian persimmon (Diospyros kaki) illustrated is a California crop, not a Northeastern one."
+    }
+  ]
+}

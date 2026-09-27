@@ -1,0 +1,264 @@
+{
+ "slug": "southeastern-vegetables",
+ "title": "Southeastern Vegetables",
+ "tagline": "Fresh, local, seasonal.",
+ "corners": [
+  "From the fertile fields to the Southern table. A celebration of regional harvests.",
+  "Good food grows here"
+ ],
+ "kind": "produce",
+ "regionLine": "Gulf South, Atlantic Coast, Appalachia",
+ "groups": [
+  {
+   "title": "The vegetables",
+   "note": null,
+   "items": [
+    {
+     "name": "Okra",
+     "sub": null,
+     "facts": [
+      ["Season", "July to October"],
+      ["Where", "Florida, Louisiana, Georgia"],
+      ["Flavor", "Grassy, vegetal, mildly sweet, distinctive mucilaginous texture (technically a fruit, culinary a vegetable)"]
+     ]
+    },
+    {
+     "name": "Collard Greens",
+     "sub": null,
+     "facts": [
+      ["Season", "November to February"],
+      ["Where", "Georgia, South Carolina, North Carolina"],
+      ["Flavor", "Earthy, mineral, slightly bitter, hearty"]
+     ]
+    },
+    {
+     "name": "Mustard Greens",
+     "sub": null,
+     "facts": [
+      ["Season", "October to March"],
+      ["Where", "Louisiana, Mississippi, Alabama"],
+      ["Flavor", "Peppery, pungent, pleasantly bitter"]
+     ]
+    },
+    {
+     "name": "Turnip",
+     "sub": null,
+     "facts": [
+      ["Season", "October to February"],
+      ["Where", "Georgia, Alabama, Tennessee"],
+      ["Flavor", "Crisp, peppery, mildly sweet, earthy"]
+     ]
+    },
+    {
+     "name": "Sweet Potato",
+     "sub": null,
+     "facts": [
+      ["Season", "August to November"],
+      ["Where", "N. Carolina, Mississippi, Louisiana"],
+      ["Flavor", "Sweet, earthy, creamy"]
+     ]
+    },
+    {
+     "name": "Southern Peas",
+     "sub": "Field Peas",
+     "facts": [
+      ["Season", "May to August"],
+      ["Where", "Georgia, South Carolina, Alabama"],
+      ["Flavor", "Nutty, earthy, subtly sweet"]
+     ]
+    },
+    {
+     "name": "Butter Beans",
+     "sub": "Lima Beans",
+     "facts": [
+      ["Season", "July to September"],
+      ["Where", "Georgia, Alabama, Mississippi"],
+      ["Flavor", "Creamy, buttery, mildly sweet"]
+     ]
+    },
+    {
+     "name": "Snap Beans",
+     "sub": null,
+     "facts": [
+      ["Season", "May to September"],
+      ["Where", "N. Carolina, Tennessee, Georgia"],
+      ["Flavor", "Crisp, grassy, fresh"]
+     ]
+    },
+    {
+     "name": "Bell Pepper",
+     "sub": null,
+     "facts": [
+      ["Season", "May to October"],
+      ["Where", "Georgia, Florida, South Carolina"],
+      ["Flavor", "Crisp, sweet, vegetal"]
+     ]
+    },
+    {
+     "name": "Eggplant",
+     "sub": null,
+     "facts": [
+      ["Season", "June to October"],
+      ["Where", "Florida, Georgia, Alabama"],
+      ["Flavor", "Mild, earthy, creamy"]
+     ]
+    },
+    {
+     "name": "Summer Squash",
+     "sub": "Yellow Squash",
+     "facts": [
+      ["Season", "May to September"],
+      ["Where", "Florida, Georgia, Tennessee"],
+      ["Flavor", "Tender, mild, grassy, lightly sweet"]
+     ]
+    },
+    {
+     "name": "Zucchini",
+     "sub": null,
+     "facts": [
+      ["Season", "May to September"],
+      ["Where", "Georgia, Florida, Alabama"],
+      ["Flavor", "Mild, fresh, vegetal"]
+     ]
+    },
+    {
+     "name": "Cucumber",
+     "sub": null,
+     "facts": [
+      ["Season", "May to September"],
+      ["Where", "Georgia, Florida, South Carolina"],
+      ["Flavor", "Cool, crisp, refreshing"]
+     ]
+    },
+    {
+     "name": "Cabbage",
+     "sub": null,
+     "facts": [
+      ["Season", "October to March"],
+      ["Where", "N. Carolina, Georgia, Virginia"],
+      ["Flavor", "Crisp, sweet, sulfurous (when cooked)"]
+     ]
+    },
+    {
+     "name": "Broccoli",
+     "sub": null,
+     "facts": [
+      ["Season", "October to March"],
+      ["Where", "California, Georgia, Florida"],
+      ["Flavor", "Green, earthy, mildly bitter"]
+     ]
+    },
+    {
+     "name": "Cauliflower",
+     "sub": null,
+     "facts": [
+      ["Season", "November to February"],
+      ["Where", "Florida, Georgia, South Carolina"],
+      ["Flavor", "Mild, nutty, earthy"]
+     ]
+    },
+    {
+     "name": "Sweet Corn",
+     "sub": null,
+     "facts": [
+      ["Season", "June to September"],
+      ["Where", "Georgia, Louisiana, Mississippi"],
+      ["Flavor", "Sweet, juicy, buttery, grassy"]
+     ]
+    },
+    {
+     "name": "Peanut",
+     "sub": null,
+     "facts": [
+      ["Season", "September to November"],
+      ["Where", "Georgia, Alabama, Florida"],
+      ["Flavor", "Rich, nutty, savory"]
+     ]
+    },
+    {
+     "name": "Pumpkin / Winter Squash",
+     "sub": null,
+     "facts": [
+      ["Season", "October to January"],
+      ["Where", "Tennessee, North Carolina"],
+      ["Flavor", "Sweet, earthy, nutty"]
+     ]
+    }
+   ]
+  }
+ ],
+ "panels": [
+  {
+   "title": "The region",
+   "lines": [
+    "Rich soil",
+    "Warm sun",
+    "Clean water",
+    "Great food"
+   ]
+  },
+  {
+   "title": "The map",
+   "lines": [
+    "The Southeast",
+    "Appalachian Mountains",
+    "N. Carolina",
+    "Tennessee",
+    "S. Carolina",
+    "Mississippi",
+    "Alabama",
+    "Georgia",
+    "Louisiana",
+    "Florida",
+    "Atlantic Ocean",
+    "Gulf of Mexico"
+   ]
+  },
+  {
+   "title": "Vegetable cuts & preparation",
+   "lines": [
+    "Whole",
+    "Sliced",
+    "Diced",
+    "Julienne",
+    "Wedges",
+    "Rounds",
+    "Halved",
+    "Chopped",
+    "Leafy chiffonade"
+   ]
+  },
+  {
+   "title": "Flavor profile key",
+   "lines": [
+    "Sweet",
+    "Bitter",
+    "Earthy",
+    "Grassy",
+    "Peppery",
+    "Nutty",
+    "Creamy",
+    "Crisp",
+    "Juicy",
+    "Savory",
+    "Note: Okra is a fruit botanically, but is culinarily treated as a vegetable."
+   ]
+  }
+ ],
+ "footer": "Local harvests, Southern traditions, seasonal flavors",
+ "illegible": [],
+ "corrections": [
+  {
+   "on": "Southern Peas",
+   "says": "May to August",
+   "should": "Fresh Southern peas in Georgia, South Carolina and Alabama come in from about June through September.",
+   "why": "Cowpeas are sown only after the last frost and need 60 to 90 days to reach the green shell stage, so the fresh crop arrives in early summer and runs into September rather than starting in May."
+  },
+  {
+   "on": "Broccoli",
+   "says": "California, Georgia, Florida",
+   "should": "Broccoli's Where line should name Southeastern states only, such as Georgia, Florida and North Carolina.",
+   "why": "California is on the West Coast and lies outside the Gulf South, Atlantic Coast and Appalachia that the plate's own region line and map define, while every other box names only Southeastern states."
+  }
+ ]
+}
