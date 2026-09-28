@@ -83,6 +83,26 @@
 		break-inside: avoid;
 	}
 
+	/* Keep a portrait teaching plate and its numbered key on a Letter or A4 sheet. */
+	.house-main .plate-folio .art-column {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+	.house-main .plate-folio .teaching-illustration {
+		max-width: 108mm;
+		margin-inline: auto;
+	}
+	.house-main .plate-folio .sources ul {
+		display: block;
+	}
+	.house-main .plate-folio .sources li {
+		margin-bottom: 2mm;
+	}
+	.house-main .plate-folio .sources a {
+		display: inline;
+		min-height: 0;
+	}
+
 	/* Expand the destination of real links; leave in-app anchors silent. */
 	a[href^='http']::after {
 		content: ' (' attr(href) ')';

@@ -86,7 +86,23 @@ test('a venue survives its own export: preps, prices and waste all round-trip', 
 	await expect(page.getByText('from 6.40', { exact: false })).toBeVisible();
 	// The waste rollup: only non-empty if the LOG crossed.
 	await goto(page, '/menu/waste');
-	await expect(page.getByText('Over-prepped', { exact: false }).first()).toBeVisible();
+	// seedHouse dates the bin one hour ago. In the first hour of Monday it
+	// belongs to the previous week, even though the page correctly opens this
+	// week. Follow the exported record's local date instead of the runner's day.
+	const wasteWeek = await page.evaluate((at: number) => {
+		const day = new Date(at);
+		day.setHours(12, 0, 0, 0);
+		day.setDate(day.getDate() - ((day.getDay() + 6) % 7));
+		return `${day.getFullYear()}-${String(day.getMonth() + 1).padStart(2, '0')}-${String(day.getDate()).padStart(2, '0')}`;
+	}, file.house.waste[0].at);
+	await page.getByRole('combobox', { name: 'Week', exact: true }).selectOption(wasteWeek);
+	await expect(page.locator('.bars .rlabel')).toHaveText(['Over-prepped']);
+	// A page-wide text match also finds the form's always-present reason option.
+	// These assertions require the imported entry, including its amount/value.
+	const bin = page.locator('.entries > li').filter({ hasText: 'Demi-glace' });
+	await expect(bin).toHaveCount(1);
+	await expect(bin.locator('.how')).toHaveText('2 × Over-prepped');
+	await expect(bin.locator('.val')).toHaveText('6.00');
 });
 
 test('importing a file the venue already has reports nothing new, and changes nothing', async ({

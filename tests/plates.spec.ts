@@ -145,7 +145,8 @@ test('moving to a neighbouring plate clears a running quiz and closes the archiv
 test('a teaching subject keeps its exact same-plate study link outside the archive', async ({ page }) => {
 	await goto(page, '/plates/beef-cuts');
 	const hanger = page.locator('.subject').filter({ has: page.getByRole('heading', { name: 'Hanger Steak', exact: true }) });
-	await expect(hanger.getByRole('link', { name: 'Practise in the deck: Hanger Steak' })).toHaveAttribute('href', /\/service\/deck\/study\?card=fd_0088$/);
+	// The separate screen-reader suffix can add accessible-name whitespace.
+	await expect(hanger.getByRole('link', { name: /^Practise in the deck\s*:\s*Hanger Steak$/ })).toHaveAttribute('href', /\/service\/deck\/study\?card=fd_0088$/);
 	await expect(page.locator('.poster-archive')).not.toHaveAttribute('open');
 	await goto(page, '/plates/pork-cuts');
 	const tenderloin = page.locator('.subject').filter({ has: page.getByRole('heading', { name: 'Tenderloin', exact: true }) });
