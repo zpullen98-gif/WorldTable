@@ -76,11 +76,7 @@
         "shrimp-scampi",
         "chicken-teriyaki",
         "garides-saganaki",
-        "crepes",
-        "panna-cotta",
-        "pad-krapow-moo",
-        "bulgogi",
-        "rau-muong-xao-toi"
+        "panna-cotta"
       ],
       "2": [
         "cacio-e-pepe",
@@ -92,14 +88,12 @@
         "ragu-alla-bolognese",
         "jamaican-oxtail-stew",
         "rosemary-focaccia",
+        "crepes",
         "creme-brulee",
-        "jerk-chicken",
-        "huli-huli-chicken",
-        "memphis-dry-rub-ribs",
+        "bulgogi",
         "cantonese-steamed-fish",
         "linguine-alle-vongole",
         "miso-glazed-black-cod",
-        "whole-grilled-fish-with-ladolemono",
         "calamari-fritti"
       ],
       "3": [
@@ -109,7 +103,13 @@
         "baguette-de-tradition",
         "tarte-au-citron",
         "profiteroles-pate-a-choux-master",
-        "char-kway-teow"
+        "jerk-chicken",
+        "huli-huli-chicken",
+        "memphis-dry-rub-ribs",
+        "pad-krapow-moo",
+        "char-kway-teow",
+        "rau-muong-xao-toi",
+        "whole-grilled-fish-with-ladolemono"
       ],
       "4": [
         "tacos-al-pastor-home-trompo",
@@ -207,6 +207,7 @@
         "rolling-dolmas",
         "rubbing-fat-into-flour",
         "scoring",
+        "shucking-shellfish",
         "sugar-stages-and-caramel",
         "tadka-blooming-spices-in-fat",
         "tempering-a-custard",
@@ -226,7 +227,6 @@
         "lamination",
         "letter-folding-dough",
         "low-and-slow-smoking",
-        "shucking-shellfish",
         "tempering-chocolate",
         "velveting",
         "wok-technique"
@@ -509,7 +509,9 @@
         "yellow-onion",
         "yellow-squash",
         "yukon-gold-potato",
-        "zucchini"
+        "zucchini",
+        "lima-bean",
+        "chili-powder"
       ],
       "2": [
         "flank-skirt-and-hanger",
@@ -768,7 +770,18 @@
         "white-asparagus",
         "yam",
         "huckleberry",
-        "crabapple"
+        "crabapple",
+        "marionberry",
+        "serviceberry",
+        "hawthorn-berry",
+        "boysenberry",
+        "black-raspberry",
+        "muscadine-grape",
+        "loquat",
+        "field-pea",
+        "puffball",
+        "jerk-seasoning",
+        "mesquite"
       ],
       "3": [
         "guanciale-jowl-and-lardo",
@@ -804,7 +817,9 @@
         "salsify",
         "treviso",
         "winter-melon",
-        "pawpaw"
+        "pawpaw",
+        "salmonberry",
+        "pueblo-chile"
       ],
       "4": [
         "the-concept-and-business-plan",
@@ -1206,15 +1221,23 @@
         "fd_0299"
       ],
       "3": [
+        "fd_0301",
+        "fd_0302",
+        "fd_0303",
         "fd_0053",
         "fd_0054",
         "fd_0057",
+        "fd_0305",
+        "fd_0306",
         "fd_0068",
         "fd_0069",
         "fd_0076",
         "fd_0077",
         "fd_0079",
         "fd_0082",
+        "fd_0310",
+        "fd_0311",
+        "fd_0312",
         "fd_0099",
         "fd_0104",
         "fd_0313",
@@ -1225,9 +1248,18 @@
         "fd_0123",
         "fd_0124",
         "fd_0129",
+        "fd_0317",
+        "fd_0318",
+        "fd_0319",
         "fd_0140",
+        "fd_0321",
+        "fd_0323",
+        "fd_0324",
         "fd_0158",
         "fd_0170",
+        "fd_0325",
+        "fd_0326",
+        "fd_0327",
         "fd_0182",
         "fd_0329",
         "fd_0330",
@@ -1269,14 +1301,21 @@
         "fd_0355"
       ],
       "4": [
+        "fd_0304",
+        "fd_0307",
+        "fd_0308",
         "fd_0070",
+        "fd_0309",
         "fd_0316",
         "fd_0126",
+        "fd_0320",
         "fd_0138",
         "fd_0152",
         "fd_0153",
+        "fd_0322",
         "fd_0154",
         "fd_0171",
+        "fd_0328",
         "fd_0176",
         "fd_0183",
         "fd_0188",
@@ -1737,9 +1776,9 @@
   },
   "counts": {
     "1": {
-      "dishes": 14,
+      "dishes": 10,
       "techniques": 42,
-      "lexicon": 266,
+      "lexicon": 268,
       "deck": 110,
       "plates": 3,
       "palate": 2,
@@ -1747,9 +1786,9 @@
       "service": 9
     },
     "2": {
-      "dishes": 18,
-      "techniques": 50,
-      "lexicon": 257,
+      "dishes": 16,
+      "techniques": 51,
+      "lexicon": 268,
       "deck": 122,
       "plates": 16,
       "palate": 2,
@@ -1757,10 +1796,10 @@
       "service": 41
     },
     "3": {
-      "dishes": 7,
-      "techniques": 12,
-      "lexicon": 34,
-      "deck": 61,
+      "dishes": 13,
+      "techniques": 11,
+      "lexicon": 36,
+      "deck": 78,
       "plates": 1,
       "palate": 2,
       "safety": 10,
@@ -1770,7 +1809,7 @@
       "dishes": 6,
       "techniques": 8,
       "lexicon": 39,
-      "deck": 19,
+      "deck": 26,
       "plates": 0,
       "palate": 2,
       "safety": 6,

@@ -4,7 +4,12 @@
  * author, a refuter and a corrector need, as JSON read from the files that
  * enforce it so nothing is retyped and nothing can drift.
  *
- *   node tools/primers/brief.mjs [--only 1-techniques,2-deck]
+ *   node tools/primers/brief.mjs [--only 1-techniques,2-deck] [--with-level]
+ *
+ * --with-level also briefs every OTHER primer at the levels --only names and
+ * hands each one to the run as "existing", with the path of its authored file: it is not
+ * rewritten, but that level's critic reads it beside the new ones, so a
+ * re-run of two primers still gets the whole level read together.
  *
  * It WRITES one brief per level and subsection that holds items to
  * tools/primers/out/<level>-<subsection>.brief.json (the standard and this
@@ -15,13 +20,20 @@
  * the small object to pass as the Workflow's `args`.
  */
 
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { BANNED } from '../derive/floor-deck-contract.mjs';
+import { PRIMERS_DIR } from '../derive/primers.mjs';
 import { LEVELS, SUBSECTIONS, DOORS, LEVEL_TEST, MET, OUT_DIR, itemDetail, levelStandard, loadAll, namesAt, palateRungs, primerKey } from './lib.mjs';
 
 const args = process.argv.slice(2);
 const only = args.includes('--only') ? new Set(args[args.indexOf('--only') + 1].split(',')) : null;
+const withLevel = args.includes('--with-level');
+if (withLevel && !only) {
+	console.error('--with-level needs --only: it adds the rest of the levels --only names');
+	process.exit(1);
+}
+const onlyLevels = new Set([...(only ?? [])].map((k) => Number(k.split('-')[0])));
 
 const all = loadAll();
 const rungs = palateRungs();
@@ -36,7 +48,8 @@ const RULES = [
 	`None of these substrings (a food-safety curriculum the guide does not teach; the app never supplies what the guide leaves out): ${BANNED.map((b) => JSON.stringify(b)).join(', ')}. "thaw" also catches thawed and thawing.`,
 	'A level guides and never bars, and nothing here is scored: never unlock, locked, score, pass mark, percent, prerequisite, or the % sign. Nothing in a primer is graded.',
 	'The lede, every paragraph and the next line end in a full stop, a question mark or an exclamation mark. No double spaces, no leading or trailing space.',
-	'Prose only: no bullet lists, no headings, no numbering at the start of a paragraph, no markdown. Name a level by its name (Commis, Chef de Partie, Sous Chef, Chef), never a numeral: never "Level II", "L2" or "level two".'
+	'Prose only: no bullet lists, no headings, no numbering at the start of a paragraph, no markdown. Name a level by its name (Commis, Chef de Partie, Sous Chef, Chef), never a numeral: never "Level II", "L2" or "level two".',
+	'Do not state how many items this level or the next holds ("Fourteen dishes", "122 cards"): the level page prints the count above the door, and a count in prose goes stale the day an item moves. The gate refuses a count of this subsection’s items that is not exact. A subset may be counted where it helps ("the two pastry plates").'
 ];
 
 const primers = [];
@@ -48,7 +61,10 @@ for (const level of LEVELS) {
 		const key = primerKey(level, s.key);
 		const items = all.items.get(key);
 		if (!items || items.size === 0) continue;
-		if (only && !only.has(key)) continue;
+		const existing = only && !only.has(key) && withLevel && onlyLevels.has(level) && existsSync(join(PRIMERS_DIR, `${key}.json`))
+			? join(PRIMERS_DIR, `${key}.json`).split(String.fromCharCode(92)).join('/')
+			: null;
+		if (only && !only.has(key) && !existing) continue;
 		const detail = [...items.keys()].map((slug) => itemDetail(s.key, slug, all));
 		const others = SUBSECTIONS.filter((x) => x.key !== s.key).map((x) => ({ key: x.key, title: x.title, count: all.levels.counts[String(level)][x.key], counted: x.counted !== false }));
 		const sampleCards = all.deck.cards.filter((/** @type {any} */ c) => c.level === level).slice(0, 2);
@@ -78,7 +94,7 @@ for (const level of LEVELS) {
 		};
 		const briefPath = join(OUT_DIR, `${key}.brief.json`);
 		writeFileSync(briefPath, JSON.stringify(brief, null, 1) + '\n');
-		primers.push({ key, level, subsection: s.key, title: s.title, count: items.size, briefPath });
+		primers.push({ key, level, subsection: s.key, title: s.title, count: items.size, briefPath, ...(existing ? { existing: true, existingPath: existing } : {}) });
 	}
 }
 

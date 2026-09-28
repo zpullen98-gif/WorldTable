@@ -324,10 +324,80 @@ const cards = [
 			{ says: 'Aged cheese rinsed in fresh water to mellow it into a clean, mild taste', why: 'It is washed in brine, sometimes with alcohol, and that makes the rind stronger and more pungent.' }
 		]
 	},
-	{ id: 'fd_0325', term: 'Stracciatella', planned: true },
-	{ id: 'fd_0326', term: 'Triple Crème', planned: true },
-	{ id: 'fd_0327', term: 'Taleggio', planned: true },
-	{ id: 'fd_0328', term: 'Robiola', planned: true }
+	{
+		id: 'fd_0325',
+		term: 'Stracciatella',
+		level: 3,
+		say: 'strah-chuh-TEL-uh',
+		gist: 'Loose shreds of fresh stretched curd in cream, with no shell',
+		guest: "It's the creamy center of a burrata on its own, soft shreds of fresh mozzarella in cream. Rich and milky, made for spooning over tomatoes or bread.",
+		why: 'Fresh mozzarella curd is stretched in hot water, torn into thin shreds and folded into cream. With no skin to hold it, it spoons like a loose, milky custard, sweeter and richer than mozzarella. It is exactly what spills from a cut burrata.',
+		madeWith: ["cow's milk", 'cream', 'salt', 'often rennet', 'sometimes buffalo milk'],
+		origin: 'Puglia, southern Italy; Italian for little shreds, from stracciare',
+		pairs: 'Heirloom tomatoes, olive oil, crostini, pizza, cured ham',
+		notThis: 'Not burrata, the pouch it fills. Also a Roman egg soup and a chocolate-chip gelato.',
+		seeAlso: ['fd_0167', 'fd_0165'],
+		confusedWith: ['fd_0166'],
+		line: 'Stracciatella, heirloom tomato, basil, grilled bread',
+		traps: [
+			{ says: 'Aged stretched curd dried hard and grated over pasta and soups', why: 'It is fresh, unaged curd loose in cream, and it is spooned, not grated.' }
+		]
+	},
+	{
+		id: 'fd_0326',
+		term: 'Triple Crème',
+		level: 3,
+		say: 'TRIP-uhl KREM',
+		aliases: ['Triple Cream'],
+		gist: 'Extra-rich soft cheese made from milk boosted with added cream',
+		guest: "It's a soft cheese made with extra cream, so it eats like cheesecake crossed with good salted butter. Mild, gently tangy and melting.",
+		why: "Cream is added to the milk before it is set, lifting the fat to at least 75 percent of the cheese's dry weight, well above a Brie. Most wear a thin white bloomy rind. The paste is dense, buttery and slightly tangy, mild enough to open a cheese course.",
+		madeWith: ["cow's milk", 'cream', 'salt', 'white mold cultures', 'often rennet'],
+		origin: 'French for triple cream, a legal French grade of richness',
+		pairs: 'Champagne, strawberries, honey, toasted baguette',
+		notThis: 'Not its own rind style. Most wear a bloomy rind; the name only tells you how much cream went in.',
+		seeAlso: ['fd_0170', 'fd_0164', 'fd_0157'],
+		line: 'Brillat-Savarin triple crème, strawberries, honey',
+		traps: [
+			{ says: 'Soft cheese named for the three milks in it: cow, goat and sheep', why: "The name counts cream, not milks. It is cow's milk made richer with added cream." }
+		]
+	},
+	{
+		id: 'fd_0327',
+		term: 'Taleggio',
+		level: 3,
+		say: 'tah-LEH-joh',
+		gist: "Square Lombardy cow's milk cheese, pungent rind, soft mild paste",
+		guest: "It's a soft cow's milk cheese from northern Italy. The rind smells strong, but inside it's mild, buttery and a little fruity, and it melts beautifully.",
+		why: 'Square slabs age at least 35 days and are washed with brine each week. The damp surface grows a sticky orange rind and a barnyard smell, but that stays outside, so the paste is supple, milky and fruity with a meaty edge. It melts smoothly, so it suits pizza.',
+		madeWith: ["cow's milk", 'salt', 'traditionally calf rennet'],
+		origin: 'Val Taleggio, near Bergamo in Lombardy, made there for centuries',
+		pairs: 'Pear, honey, polenta, mushrooms, Barbera or Nebbiolo',
+		notThis: 'Not robiola, a smaller, paler, milder soft square. Taleggio has the sticky orange rind and the smell.',
+		lexiconSlug: 'taleggio',
+		seeAlso: ['fd_0171', 'fd_0170'],
+		confusedWith: ['fd_0328'],
+		line: 'Pizza bianca, Taleggio, roasted pear, walnut',
+		traps: [
+			{ says: 'Soft cheese whose center tastes just as sharp and funky as its rind', why: 'The smell lives in the rind. The paste inside is mild, milky and fruity.' }
+		]
+	},
+	{
+		id: 'fd_0328',
+		term: 'Robiola',
+		level: 4,
+		say: 'roh-bee-OH-luh',
+		gist: 'Young soft Italian cheese of cow, goat or sheep milk, often blended',
+		guest: "It's a soft, young cheese from northern Italy, often a blend of cow's milk with goat's or sheep's. Creamy and gently tangy, sometimes a little mushroomy.",
+		why: 'It is a family, not one recipe. The curd is set slowly, drained lightly and eaten within days or weeks, so the paste stays soft, moist and tangy. Fresh ones taste of sour cream; small squares with a thin white rind, like Bosina, turn buttery.',
+		madeWith: ["cow's milk", "sometimes goat's milk", "sometimes sheep's milk", 'salt', 'often rennet'],
+		origin: 'Piedmont and Lombardy, in northern Italy',
+		pairs: 'White pizza, stuffed pasta, truffle, focaccia, Arneis',
+		notThis: 'Not Taleggio, the big square with a sticky orange rind. Most robiola is paler and milder.',
+		seeAlso: ['fd_0156', 'fd_0170'],
+		confusedWith: ['fd_0327'],
+		line: 'Robiola agnolotti, brown butter, sage'
+	}
 ];
 
 export default cards;

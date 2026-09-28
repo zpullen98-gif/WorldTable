@@ -29,6 +29,7 @@ const CARD = {
 	properties: {
 		id: { type: 'string', description: 'the roster id, copied exactly' },
 		term: { type: 'string', description: 'the roster term, copied exactly' },
+		level: { type: 'integer', minimum: 1, maximum: 4, description: 'the level the card is placed at (1 Commis, 2 Chef de Partie, 3 Sous Chef, 4 Chef): the todo row’s level when it carries one (rule 9)' },
 		say: str(L.say),
 		aliases: { type: 'array', maxItems: L.aliasesMax, items: str(L.alias) },
 		gist: str(L.gist),

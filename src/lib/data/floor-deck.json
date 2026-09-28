@@ -9,19 +9,19 @@
       "key": "methods",
       "title": "Cooking Methods",
       "blurb": "The verbs on the menu. What each one does to the food, how it shows on the plate, and how to tell the near neighbors apart.",
-      "count": 26
+      "count": 30
     },
     {
       "key": "meats",
       "title": "Poultry, Game & Offal",
       "blurb": "Small birds, game and the organ meats: what each animal is, how rich or mild it eats, and an honest way to describe it to a nervous guest.",
-      "count": 14
+      "count": 18
     },
     {
       "key": "cured",
       "title": "Cured & Preserved Meats",
       "blurb": "The charcuterie board by name: which cut, which country, salted or smoked, cooked or raw, and how each one tastes beside the others.",
-      "count": 22
+      "count": 26
     },
     {
       "key": "cuts",
@@ -33,19 +33,19 @@
       "key": "fish",
       "title": "Fish & Shellfish",
       "blurb": "The fish case: lean or rich, flaky or firm, mild or full, and where it swims. Plus the shellfish and the roes a server gets asked about.",
-      "count": 30
+      "count": 34
     },
     {
       "key": "mushrooms",
       "title": "Mushrooms & Truffles",
       "blurb": "Cultivated and wild mushrooms by texture and flavor, the names one mushroom hides behind, and what a truffle is and is not.",
-      "count": 16
+      "count": 20
     },
     {
       "key": "dairy",
       "title": "Dairy & Cheese Words",
       "blurb": "Butters, cultured creams, fresh cheeses and the style words on a cheese course: which milk, how it is made and how it tastes.",
-      "count": 18
+      "count": 22
     },
     {
       "key": "starches",
@@ -107,13 +107,13 @@
       "level": 3,
       "name": "Sous Chef",
       "blurb": "Fine-dining vocabulary: the classical sauces and preparations, and the specialist cuts and products behind them.",
-      "count": 61
+      "count": 78
     },
     {
       "level": 4,
       "name": "Chef",
       "blurb": "The rare, specialist and deeply classical words a senior server is expected to own and explain without notes.",
-      "count": 19
+      "count": 26
     }
   ],
   "cards": [
@@ -198,7 +198,8 @@
       ],
       "notThis": "Not seared: a sear browns meat protein in minutes. Caramelizing browns sugars, usually slowly.",
       "confusedWith": [
-        "fd_0039"
+        "fd_0039",
+        "fd_0303"
       ],
       "line": "Burger, caramelized onions, gruyère, brioche bun"
     },
@@ -261,6 +262,7 @@
       "confusedWith": [
         "fd_0027",
         "fd_0041",
+        "fd_0302",
         "fd_0294"
       ],
       "line": "House-cured salmon, crème fraîche, rye, pickled shallot",
@@ -336,7 +338,8 @@
       ],
       "confusedWith": [
         "fd_0041",
-        "fd_0048"
+        "fd_0048",
+        "fd_0301"
       ],
       "line": "Grilled swordfish, salsa verde, charred lemon"
     },
@@ -759,6 +762,130 @@
       "line": "Pan-roasted halibut, brown butter, capers, lemon"
     },
     {
+      "id": "fd_0301",
+      "term": "À la Plancha",
+      "say": "ah lah PLAHN-chah",
+      "aliases": [
+        "Plancha"
+      ],
+      "section": "methods",
+      "level": 3,
+      "gist": "Cooked fast on a very hot flat metal griddle, Spanish style",
+      "guest": "It's cooked the Spanish way, on a very hot flat steel griddle, for an even golden crust with no grill marks and a juicy center.",
+      "why": "A thick steel plate is heated until very hot and the food lies flat on it, browning into an even crust. With no grate, octopus and delicate fish cannot fall through, and with no open flame there are no grill stripes or smoky char.",
+      "madeWith": [
+        "often olive oil",
+        "sometimes garlic",
+        "sometimes butter"
+      ],
+      "origin": "Spanish: on the plate, meaning a flat metal griddle",
+      "pairs": "Octopus, shrimp or scallops, olive oil, garlic, lemon",
+      "notThis": "Not grilled: no bars and no open flame, so no grill marks. Seared usually means a pan; this is a wide flat plate.",
+      "lexiconSlug": "comal-plancha-and-griddles",
+      "seeAlso": [
+        "fd_0049"
+      ],
+      "confusedWith": [
+        "fd_0032",
+        "fd_0039"
+      ],
+      "line": "Octopus à la plancha, romesco, crispy potatoes"
+    },
+    {
+      "id": "fd_0302",
+      "term": "Salt-Baked",
+      "aliases": [
+        "Salt-Roasted",
+        "Salt-Crusted"
+      ],
+      "section": "methods",
+      "level": 3,
+      "gist": "Sealed in a thick mineral crust so it steams in its own juices",
+      "guest": "It's sealed in a crust of salt and baked, so it steams in its own juices. The crust is cracked away, leaving it moist and gently seasoned.",
+      "why": "Coarse salt, usually bound with egg white, is packed around a whole fish, beet or celery root and hardens into a shell in the oven. It traps steam, so the inside cooks gently, while skin or peel keeps most salt out. The shell is cracked off and thrown away.",
+      "madeWith": [
+        "coarse salt",
+        "often egg white",
+        "often whole fish",
+        "sometimes herbs",
+        "sometimes wheat flour"
+      ],
+      "note": "When a whole fish is filleted at the table, a few small bones can remain.",
+      "origin": "Spain and Italy for whole fish, Hakka China for chicken",
+      "notThis": "Not cured: the salt is a shell cracked off after cooking, not rubbed in for days.",
+      "recipe": "salt-baked-whole-fish",
+      "seeAlso": [
+        "fd_0027",
+        "fd_0045",
+        "fd_0231"
+      ],
+      "confusedWith": [
+        "fd_0030"
+      ],
+      "line": "Salt-baked branzino for two, lemon, olive oil",
+      "prompt": "Coarse __, usually bound with egg white, is packed around a whole fish, beet or celery root and hardens into a shell in the oven. It traps steam, so the inside cooks gently, while skin or peel keeps most __ out. The shell is cracked off and thrown away."
+    },
+    {
+      "id": "fd_0303",
+      "term": "Lacquered",
+      "section": "methods",
+      "level": 3,
+      "gist": "Glazed in thin coats as it roasts until it sets glossy and dark",
+      "guest": "It's brushed with a sweet, savory glaze again and again as it roasts, so it comes out shiny, dark and sticky, like Chinese barbecue pork.",
+      "why": "Honey, soy, maple or reduced stock is brushed on in thin coats while the meat roasts. Each coat cooks down and sets over the last, building a glossy, dark shell, sweet and savory at once, as the fat beneath renders out.",
+      "madeWith": [
+        "often honey",
+        "often soy sauce",
+        "sometimes hoisin",
+        "sometimes maple syrup",
+        "sometimes wine"
+      ],
+      "note": "Duck breast is usually served pink, at medium rare. A whole duck is cooked through.",
+      "origin": "Named for lacquerware, a finish built up in glossy coats",
+      "pairs": "Duck, pork belly or quail, with something sharp",
+      "notThis": "Not caramelized, which is sugar browning. Here a glaze is painted on in coats and built into a shell.",
+      "seeAlso": [
+        "fd_0037",
+        "fd_0047"
+      ],
+      "confusedWith": [
+        "fd_0028"
+      ],
+      "line": "Lacquered duck breast, charred plum, five-spice jus"
+    },
+    {
+      "id": "fd_0304",
+      "term": "Koji-Aged",
+      "say": "KOH-jee AYJD",
+      "aliases": [
+        "Koji-Cured"
+      ],
+      "section": "methods",
+      "level": 4,
+      "gist": "Coated in a rice mold culture whose enzymes tenderize it in days",
+      "guest": "It sits for days under koji, the mold-grown rice behind miso and sake, which turns the meat tender and deeply savory, like a long dry-age.",
+      "why": "Koji is rice or barley grown with Aspergillus oryzae, the mold behind miso, soy sauce and sake. Its enzymes turn protein into savory amino acids and starch into sugar, so in days, not weeks, the meat softens and turns nutty and rich, much like dry-aging.",
+      "madeWith": [
+        "rice koji",
+        "sometimes barley koji",
+        "often salt",
+        "often beef",
+        "sometimes pork"
+      ],
+      "note": "The coat is usually wiped off first, and its sugars brown fast, so the crust runs darker.",
+      "origin": "Japanese koji, used by American chefs to age meat",
+      "notThis": "Not dry-aged, which takes weeks in cold air. Here a mold culture does it in days.",
+      "seeAlso": [
+        "fd_0280",
+        "fd_0046"
+      ],
+      "confusedWith": [
+        "fd_0294"
+      ],
+      "line": "Koji-aged ribeye, charred scallion, black garlic jus",
+      "prompt": "__ is rice or barley grown with Aspergillus oryzae, the mold behind miso, soy sauce and sake. Its enzymes turn protein into savory amino acids and starch into sugar, so in days, not weeks, the meat softens and turns nutty and rich, much like dry-aging."
+    },
+    {
       "id": "fd_0050",
       "term": "Escargot",
       "say": "ess-kar-GOH",
@@ -1091,6 +1218,7 @@
       ],
       "confusedWith": [
         "fd_0055",
+        "fd_0306",
         "fd_0253"
       ],
       "line": "Chicken liver mousse, pickled shallot, grilled bread",
@@ -1121,6 +1249,120 @@
       ],
       "line": "Lengua tacos, tomatillo salsa, onion, cilantro",
       "prompt": "The __ is a muscle, worked constantly and laced with fat, so it is usually simmered three hours or more. The tough outer skin is then peeled off, leaving fine-grained, rich meat that slices neatly or crisps on a griddle, a lot like soft brisket."
+    },
+    {
+      "id": "fd_0305",
+      "term": "Tripe",
+      "aliases": [
+        "Trippa"
+      ],
+      "section": "meats",
+      "level": 3,
+      "gist": "Cleaned lining of a cow's stomach, simmered until soft",
+      "guest": "Tripe is the lining of a beef stomach, cleaned and simmered for hours. It cooks soft with a gentle chew and a mild taste, and soaks up its sauce.",
+      "why": "A cow's stomach has four chambers. Honeycomb tripe, from the second, is prized for a lacy texture that holds sauce. Kitchens buy it scrubbed and blanched, then simmer it two to three hours until it goes from rubbery to tender, with only a faint beefy taste.",
+      "madeWith": [
+        "beef tripe",
+        "often tomato",
+        "often onion",
+        "sometimes white wine",
+        "sometimes pecorino cheese",
+        "sometimes hominy",
+        "sometimes pork"
+      ],
+      "origin": "Trippa alla romana in Rome, menudo in Mexico, callos in Madrid",
+      "pairs": "Tomato sauce, mint and pecorino, red chile broth, crusty bread",
+      "seeAlso": [
+        "fd_0063",
+        "fd_0007",
+        "fd_0040"
+      ],
+      "line": "Trippa alla romana, tomato, mint, pecorino",
+      "prompt": "A cow's stomach has four chambers. Honeycomb __, from the second, is prized for a lacy texture that holds sauce. Kitchens buy it scrubbed and blanched, then simmer it two to three hours until it goes from rubbery to tender, with only a faint beefy taste."
+    },
+    {
+      "id": "fd_0306",
+      "term": "Duck Hearts",
+      "section": "meats",
+      "level": 3,
+      "gist": "Thumb-sized organ that pumps a bird's blood, eaten like dark meat",
+      "guest": "Duck hearts are pure muscle, so they eat like a tiny steak, meaty with a slight chew and nothing like liver. Most are grilled fast and served pink.",
+      "why": "The heart works nonstop, so it is dense, lean muscle, red with iron-rich myoglobin, closer to duck breast than to liver. Trimmed of fat and vessels, it is seared or skewered and grilled. Gizzards are the other muscle organ, firmer, and often confit.",
+      "madeWith": [
+        "duck heart",
+        "often garlic",
+        "sometimes soy sauce",
+        "sometimes butter"
+      ],
+      "origin": "Heart on the grill: chicken at Japanese yakitori bars, beef in Peruvian anticuchos",
+      "notThis": "Not liver. The heart is a working muscle, so it eats dense and meaty, where liver is soft and iron-strong.",
+      "seeAlso": [
+        "fd_0056",
+        "fd_0063"
+      ],
+      "confusedWith": [
+        "fd_0062"
+      ],
+      "line": "Grilled duck hearts, salsa verde, charred onion",
+      "prompt": "The __ works nonstop, so it is dense, lean muscle, red with iron-rich myoglobin, closer to __ breast than to liver. Trimmed of fat and vessels, it is seared or skewered and grilled. Gizzards are the other muscle organ, firmer, and often confit."
+    },
+    {
+      "id": "fd_0307",
+      "term": "Chicken Oysters",
+      "say": "CHIK-in OY-sterz",
+      "aliases": [
+        "Sot-l'y-laisse"
+      ],
+      "section": "meats",
+      "level": 4,
+      "gist": "Two coin-sized nuggets of dark meat set along a bird's back",
+      "guest": "They are the two little rounds of dark meat along a chicken's backbone, the juiciest bite on the bird. The name comes only from their oyster-like shape.",
+      "why": "Each one sits in a spoon-shaped hollow of the hip bone, on the back just above the thigh. It is a small muscle of dark meat, so it roasts up tender and juicy. Carvers miss them, and one plate takes several birds, so they are a chef's luxury.",
+      "madeWith": [
+        "chicken",
+        "often butter",
+        "sometimes soy sauce"
+      ],
+      "origin": "French sot-l'y-laisse, the bit only a fool leaves on the carcass",
+      "notThis": "Not the shellfish, and not the old slang for testicles. The name is only for the oval shape of the meat.",
+      "seeAlso": [
+        "fd_0057",
+        "fd_0228"
+      ],
+      "confusedWith": [
+        "fd_0115"
+      ],
+      "line": "Roasted chicken oysters, brown butter, sherry jus"
+    },
+    {
+      "id": "fd_0308",
+      "term": "Moulard",
+      "say": "moo-LARD",
+      "aliases": [
+        "Mulard",
+        "Mule Duck"
+      ],
+      "section": "meats",
+      "level": 4,
+      "gist": "Sterile hybrid duck raised for foie gras and a big red breast",
+      "guest": "Moulard is the duck raised for foie gras, a cross of two breeds. Its breast is big, deep red and beefy, closer to a steak than to the duck most people know.",
+      "why": "A cross of a Muscovy drake and a Pekin hen, the moulard is sterile, hardy and large. It gives most of the world's foie gras, and its breast, the magret, is thick, dark and richly fatted, often enough for two. Pekin breast is smaller and milder.",
+      "madeWith": [
+        "duck",
+        "sometimes duck liver",
+        "sometimes red wine",
+        "sometimes honey"
+      ],
+      "note": "The breast is classically seared and served pink, medium rare, then sliced.",
+      "origin": "Raised for foie gras in southwest France and New York's Hudson Valley",
+      "notThis": "Not Pekin, also sold as Long Island duck, the smaller, milder bird behind most US duck breast and Peking duck.",
+      "seeAlso": [
+        "fd_0056",
+        "fd_0055",
+        "fd_0306"
+      ],
+      "line": "Seared Moulard duck breast, cherries, turnips",
+      "prompt": "A cross of a Muscovy drake and a Pekin hen, the __ is sterile, hardy and large. It gives most of the world's foie gras, and its breast, the magret, is thick, dark and richly fatted, often enough for two. Pekin breast is smaller and milder."
     },
     {
       "id": "fd_0064",
@@ -1212,7 +1454,8 @@
         "fd_0078"
       ],
       "confusedWith": [
-        "fd_0074"
+        "fd_0074",
+        "fd_0311"
       ],
       "line": "Coppa, pickled peppers, grilled sourdough"
     },
@@ -1814,6 +2057,128 @@
         "fd_0072"
       ],
       "line": "House corned beef Reuben, sauerkraut, Swiss, rye"
+    },
+    {
+      "id": "fd_0309",
+      "term": "Culatello",
+      "say": "koo-lah-TEL-oh",
+      "aliases": [
+        "Culatello di Zibello"
+      ],
+      "section": "cured",
+      "level": 4,
+      "gist": "Prized boneless heart of the pork leg, cured raw inside a bladder",
+      "guest": "It's the heart of the ham, the finest muscle of the pork leg, aged in the foggy lowlands near Parma. Sweeter, silkier and deeper than prosciutto.",
+      "why": "The best muscle of the hind leg is boned out, salted with pepper, garlic and wine, sewn into a pig's bladder and aged at least ten months in damp cellars by the Po. Fog keeps it soft as it ages. It turns deep red, richer than prosciutto.",
+      "madeWith": [
+        "pork",
+        "salt",
+        "black pepper",
+        "garlic",
+        "often white wine"
+      ],
+      "note": "Served raw, never cooked. The bladder is peeled off and it is sliced paper thin to order.",
+      "origin": "Po River lowlands near Parma, Italy; the name means little backside",
+      "notThis": "Not prosciutto, the whole leg cured on the bone. This is the leg's boned rear muscle, cured in a bladder.",
+      "lexiconSlug": "culatello-di-zibello",
+      "seeAlso": [
+        "fd_0082",
+        "fd_0076"
+      ],
+      "confusedWith": [
+        "fd_0074"
+      ],
+      "line": "Culatello di Zibello, torta fritta, cultured butter"
+    },
+    {
+      "id": "fd_0310",
+      "term": "Finocchiona",
+      "say": "fee-nohk-YOH-nah",
+      "section": "cured",
+      "level": 3,
+      "gist": "Soft Tuscan pork salami perfumed with fennel seed and pepper",
+      "guest": "It's Tuscany's classic salami, seasoned with fennel seed, garlic and black pepper. Soft and rich, with a sweet hint of anise that makes it easy to love.",
+      "why": "Ground pork shoulder and belly is seasoned with fennel seed, garlic, pepper and often red wine, stuffed into casings and air-dried for weeks, never cooked. It stays softer and fattier than most salami, and the fennel gives it a sweet, anise lift.",
+      "madeWith": [
+        "pork",
+        "fennel seed",
+        "garlic",
+        "black pepper",
+        "often red wine"
+      ],
+      "origin": "Tuscany, Italy; from finocchio, the Italian word for fennel",
+      "pairs": "Tuscan bread, aged pecorino, olives, a glass of Chianti",
+      "lexiconSlug": "finocchiona",
+      "seeAlso": [
+        "fd_0080",
+        "fd_0081",
+        "fd_0078"
+      ],
+      "line": "Salumi board: finocchiona, coppa, pecorino, olives"
+    },
+    {
+      "id": "fd_0311",
+      "term": "Head Cheese",
+      "aliases": [
+        "Fromage de Tête",
+        "Coppa di Testa",
+        "Brawn"
+      ],
+      "section": "cured",
+      "level": 3,
+      "gist": "Cooked pork cheek and tongue set in their own jelly, sliced cold",
+      "guest": "It's tender pork from the head, slow-cooked and set in its own savory jelly, then sliced cold. Rich, often with a vinegar tang.",
+      "why": "A pig's head is simmered for hours until its collagen melts into the broth. The meat is picked, seasoned with vinegar and herbs, and chilled in a mold with that broth until it sets. It eats like a tender terrine. The name comes from pressing it like a cheese.",
+      "madeWith": [
+        "pork",
+        "often vinegar",
+        "often parsley",
+        "sometimes gelatin"
+      ],
+      "origin": "Found across Europe; French fromage de tête, Italian coppa di testa",
+      "pairs": "Grainy mustard, cornichons, pickled onion, crusty bread",
+      "notThis": "Not coppa, the cured neck muscle, though Italians call this coppa di testa. This is cooked and jellied.",
+      "lexiconSlug": "head-cheese-and-the-aspic-arts",
+      "seeAlso": [
+        "fd_0084",
+        "fd_0073",
+        "fd_0075"
+      ],
+      "confusedWith": [
+        "fd_0066"
+      ],
+      "line": "House head cheese, grain mustard, pickles, toast",
+      "prompt": "A pig's __ is simmered for hours until its collagen melts into the broth. The meat is picked, seasoned with vinegar and herbs, and chilled in a mold with that broth until it sets. It eats like a tender terrine. The name comes from pressing it like a __."
+    },
+    {
+      "id": "fd_0312",
+      "term": "Boudin Noir",
+      "say": "boo-DAN NWAHR",
+      "aliases": [
+        "Blood Sausage"
+      ],
+      "section": "cured",
+      "level": 3,
+      "gist": "Soft French sausage of pork blood, fat and onion, seared hot",
+      "guest": "It's a blood sausage, rich with onion and warm spice, seared crisp and served hot. Soft, earthy and classic with apples.",
+      "why": "Fresh pork blood is mixed with fat, slow-cooked onion and spice, piped into casings and gently poached, which sets it much like a custard. The kitchen then warms and sears it, so it eats soft and rich inside a crisp skin, with a deep, mineral savor.",
+      "madeWith": [
+        "pork blood",
+        "pork fat",
+        "onion",
+        "often cream",
+        "sometimes apple",
+        "sometimes chestnut"
+      ],
+      "origin": "France; noir is French for black, for its dark color",
+      "notThis": "Not Cajun boudin, Louisiana's pork and rice sausage, nor boudin blanc, the pale one. Kin to Spain's morcilla and Britain's black pudding.",
+      "lexiconSlug": "boudin-noir-and-boudin-blanc",
+      "recipe": "boudin-noir-aux-pommes",
+      "seeAlso": [
+        "fd_0065",
+        "fd_0064"
+      ],
+      "line": "Seared boudin noir, sauteed apples, mashed potato"
     },
     {
       "id": "fd_0086",
@@ -2673,7 +3038,8 @@
         "fd_0233"
       ],
       "confusedWith": [
-        "fd_0113"
+        "fd_0113",
+        "fd_0318"
       ],
       "line": "Pan-fried flounder, lemon, parsley, brown butter",
       "prompt": "A flatfish that lies on the seabed with both eyes on its upper side, left or right depending on the species. Little fat and thin fillets give a fine, soft texture and a mild, sweet taste. __ is summer __, and many American soles are __ too. It cooks in minutes."
@@ -2792,6 +3158,7 @@
         "fd_0114"
       ],
       "confusedWith": [
+        "fd_0307",
         "fd_0145"
       ],
       "line": "Half dozen oysters on the half shell, mignonette, lemon"
@@ -2824,7 +3191,8 @@
       ],
       "confusedWith": [
         "fd_0125",
-        "fd_0126"
+        "fd_0126",
+        "fd_0317"
       ],
       "line": "Salmon roe, buckwheat blini, sour cream, chives",
       "prompt": "__ is the egg mass of a female fish, held in a thin sac. Loosened and salted, the eggs pop and taste of the sea: salmon __ is large and orange, flying fish __ tiny and crunchy. Cooked whole in the sac, like shad __, it firms outside and turns creamy and grainy within."
@@ -3217,6 +3585,9 @@
         "fd_0223",
         "fd_0220"
       ],
+      "confusedWith": [
+        "fd_0320"
+      ],
       "line": "Seared ahi tuna, sesame, cucumber, ponzu",
       "prompt": "__ are warm-bodied ocean sprinters, and their muscle is full of oxygen-carrying myoglobin, which makes it red and beefy. Yellowfin is lean, bigeye a little richer, and bluefin belly is marbled with fat. Albacore is the paler, milder one canned as white __."
     },
@@ -3268,6 +3639,9 @@
       "seeAlso": [
         "fd_0109",
         "fd_0136"
+      ],
+      "confusedWith": [
+        "fd_0319"
       ],
       "line": "Gulf shrimp and grits, tasso gravy, scallion",
       "prompt": "__ are ten-legged crustaceans, wild or farmed, from the Gulf to Asia. The meat is almost pure muscle protein that tightens fast in heat, so a minute too long turns it rubbery. Size is a count per pound: 16/20 means 16 to 20 __, U-15 means under 15."
@@ -3341,6 +3715,9 @@
         "fd_0133",
         "fd_0132"
       ],
+      "confusedWith": [
+        "fd_0319"
+      ],
       "line": "Butter-poached Maine lobster, sweet corn, tarragon"
     },
     {
@@ -3373,6 +3750,128 @@
       ],
       "line": "Linguine with littleneck clams, white wine, chili",
       "prompt": "Two-shelled animals that burrow in sand and mud and filter the water, so they taste of where they grew. Hard shells sell by size: __ small and tender, cherrystones bigger, chowder __ biggest, tough and chopped. Soft-shell __ have a neck skin to peel."
+    },
+    {
+      "id": "fd_0317",
+      "term": "Uni",
+      "say": "OO-nee",
+      "aliases": [
+        "Sea Urchin"
+      ],
+      "section": "fish",
+      "level": 3,
+      "gist": "Custard-soft golden lobes from a spiny, round sea creature",
+      "guest": "Uni is sea urchin, the soft golden lobes inside the shell. It melts like custard and tastes sweet and briny, like the ocean.",
+      "why": "A sea urchin holds five tongue-shaped lobes, the organs that make its eggs or milt. Rich in fat and protein, they melt like custard, and a diet of kelp gives a sweet, briny flavor. Think of an oyster crossed with butter.",
+      "madeWith": [
+        "sea urchin",
+        "often soy sauce",
+        "sometimes rice",
+        "sometimes butter",
+        "sometimes wheat pasta"
+      ],
+      "note": "Usually served raw. Tray-packed uni is often firmed with alum, which can taste faintly bitter.",
+      "origin": "Japanese for sea urchin, sold by source: Hokkaido, Santa Barbara, Maine",
+      "notThis": "Often sold as sea urchin roe, but it is the whole soft gonad, not loose fish eggs like salmon roe.",
+      "seeAlso": [
+        "fd_0220",
+        "fd_0355",
+        "fd_0115"
+      ],
+      "confusedWith": [
+        "fd_0116"
+      ],
+      "line": "Santa Barbara uni, toasted brioche, lemon, chive"
+    },
+    {
+      "id": "fd_0318",
+      "term": "Dover Sole",
+      "aliases": [
+        "Common Sole"
+      ],
+      "section": "fish",
+      "level": 3,
+      "gist": "Slim, oval, one-portion European flatfish, filleted at the table",
+      "guest": "It is the prized European sole, a flatfish flown in and cooked whole, often filleted at your table. The meat is mild, sweet and firm.",
+      "why": "A true sole from the North Sea and English Channel, named for the port that once landed it for London. Its thin fillets are dense, so they stay firm where flounder goes soft, and the bone keeps them moist. Imported fresh, it is priced to match.",
+      "madeWith": [
+        "fish",
+        "butter",
+        "often wheat flour",
+        "often lemon",
+        "often parsley"
+      ],
+      "note": "Served on the bone and lifted off as four fillets, so a stray fine bone is possible.",
+      "notThis": "Not Pacific Dover sole, a cheaper, softer West Coast flounder. Most sole on American menus is flounder.",
+      "seeAlso": [
+        "fd_0232",
+        "fd_0123",
+        "fd_0292"
+      ],
+      "confusedWith": [
+        "fd_0111"
+      ],
+      "line": "Whole Dover sole, brown butter, lemon, potatoes, MP",
+      "prompt": "A true __ from the North Sea and English Channel, named for the port that once landed it for London. Its thin fillets are dense, so they stay firm where flounder goes soft, and the bone keeps them moist. Imported fresh, it is priced to match."
+    },
+    {
+      "id": "fd_0319",
+      "term": "Langoustine",
+      "say": "lang-goo-STEEN",
+      "aliases": [
+        "Norway Lobster",
+        "Dublin Bay Prawn"
+      ],
+      "section": "fish",
+      "level": 3,
+      "gist": "Slim pale-orange sea crustacean, thin-clawed, with a sweet tail",
+      "guest": "A slender cousin of the lobster from the cold North Atlantic. The tail meat is sweeter and more delicate than lobster, almost silky.",
+      "why": "A clawed crustacean that burrows in muddy seabed off Scotland, Ireland and Norway. The meat is in the tail, sweeter and softer than lobster, and it turns mushy a day or two after death, so it ships live or frozen at sea.",
+      "madeWith": [
+        "langoustine",
+        "often butter",
+        "sometimes garlic",
+        "sometimes lemon"
+      ],
+      "note": "Often arrives whole with the head on, for the guest to peel. Sometimes served raw as a crudo.",
+      "origin": "French diminutive of langouste, the spiny lobster",
+      "notThis": "Not scampi as Americans mean it, shrimp in garlic butter. In Italy scampi is this animal.",
+      "seeAlso": [
+        "fd_0109",
+        "fd_0220"
+      ],
+      "confusedWith": [
+        "fd_0133",
+        "fd_0136"
+      ],
+      "line": "Roasted langoustine, brown butter, lemon, herbs"
+    },
+    {
+      "id": "fd_0320",
+      "term": "Escolar",
+      "say": "es-koh-LAHR",
+      "aliases": [
+        "Walu",
+        "Super White Tuna"
+      ],
+      "section": "fish",
+      "level": 4,
+      "gist": "Buttery white deep-sea fish whose oil the body cannot digest",
+      "guest": "A buttery white fish from deep warm water, silky enough to melt on the tongue. It is very rich, so it is best in a small portion.",
+      "why": "A snake mackerel, not a tuna, from deep warm seas. Much of its oil is wax esters, which eat silky and buttery but which people cannot digest. That oil passes through and can upset the stomach, more so in a large serving, so kitchens keep portions small.",
+      "madeWith": [
+        "fish",
+        "often soy sauce",
+        "sometimes butter"
+      ],
+      "notThis": "Not tuna. White tuna on a sushi menu is often this fish, not albacore.",
+      "seeAlso": [
+        "fd_0130"
+      ],
+      "confusedWith": [
+        "fd_0131"
+      ],
+      "line": "Seared escolar, charred scallion, yuzu kosho"
     },
     {
       "id": "fd_0138",
@@ -3489,6 +3988,9 @@
         "fd_0140",
         "fd_0144",
         "fd_0149"
+      ],
+      "confusedWith": [
+        "fd_0324"
       ],
       "line": "Pan-roasted chanterelles, sweet corn, brown butter",
       "prompt": "__ live in partnership with the roots of living trees, which is why they are not grown commercially and nearly all are foraged. Under the cap they carry blunt ridges, not true gills. Firm and a little chewy, they taste fruity and peppery, milder than porcini."
@@ -3689,7 +4191,8 @@
         "fd_0284"
       ],
       "confusedWith": [
-        "fd_0147"
+        "fd_0147",
+        "fd_0321"
       ],
       "line": "Fries, truffle oil, parmesan, parsley",
       "prompt": "Most bottles are olive or neutral __ flavored with a manufactured copy of one aroma compound found in white __, sometimes with a speck of real __ for show. It smells louder and flatter than the real thing, and heat drives the aroma off, so it goes on at the end."
@@ -3809,6 +4312,9 @@
         "fd_0145",
         "fd_0134"
       ],
+      "confusedWith": [
+        "fd_0324"
+      ],
       "line": "Seared lion's mane, brown butter, capers"
     },
     {
@@ -3840,6 +4346,135 @@
       ],
       "line": "Fried chicken of the woods, hot honey, pickles",
       "prompt": "A wild shelf fungus foraged from the trunks of living and dead hardwoods, oak above all, in summer and fall. Its flesh is dense and fibrous rather than soft, so it tears into strands like cooked __. Only the young, tender edges eat well; the older core turns __."
+    },
+    {
+      "id": "fd_0321",
+      "term": "White Truffle",
+      "aliases": [
+        "Alba Truffle",
+        "Tartufo Bianco",
+        "Piedmont Truffle"
+      ],
+      "section": "mushrooms",
+      "level": 3,
+      "gist": "Pale wild Italian autumn truffle, never cooked, sold by the gram",
+      "guest": "It's Italy's prized wild fall truffle, shaved raw over your plate and priced by the gram. The aroma is heady, garlicky and almost honeyed.",
+      "why": "It grows wild on the roots of oak, poplar and hazel in Piedmont, central Italy and the Balkans and resists farming, so rain sets each season's price. Its aroma is fragile and heat drives it off, so it is shaved raw over warm, buttery food.",
+      "madeWith": [
+        "fresh truffle",
+        "often butter",
+        "often egg",
+        "often wheat pasta",
+        "sometimes parmesan",
+        "sometimes rice",
+        "sometimes white wine"
+      ],
+      "origin": "Tartufo bianco d'Alba, from the town of Alba in Piedmont",
+      "notThis": "Not truffle oil, usually flavored with a lab-made copy of one of its aroma compounds.",
+      "lexiconSlug": "white-truffle",
+      "seeAlso": [
+        "fd_0147",
+        "fd_0323",
+        "fd_0183"
+      ],
+      "confusedWith": [
+        "fd_0148"
+      ],
+      "line": "Tajarin, butter, parmigiano, shaved white truffle"
+    },
+    {
+      "id": "fd_0322",
+      "term": "Matsutake",
+      "say": "maht-soo-TAH-kee",
+      "aliases": [
+        "Pine Mushroom"
+      ],
+      "section": "mushrooms",
+      "level": 4,
+      "gist": "Wild Japanese autumn mushroom that smells of pine resin and cinnamon",
+      "guest": "It's a wild mushroom from pine forests, treasured in Japan every fall. It smells of pine and cinnamon and is cooked gently, often in a clear broth.",
+      "why": "It grows on the roots of living pines and has never been farmed. Japan's harvest has shrunk, so most come from China and Korea, plus North America's pine mushroom, a close relative. Hard cooking drives off its spicy scent, so it is torn and cooked gently, in broth or with rice.",
+      "madeWith": [
+        "matsutake mushroom",
+        "often bonito dashi",
+        "often sake",
+        "often soy sauce",
+        "sometimes shrimp",
+        "sometimes chicken",
+        "sometimes ginkgo nut"
+      ],
+      "note": "Graded by the cap: a firm, closed button holds the most aroma and costs the most.",
+      "origin": "Japanese matsu, pine, and take, mushroom",
+      "lexiconSlug": "matsutake",
+      "seeAlso": [
+        "fd_0146",
+        "fd_0147",
+        "fd_0290"
+      ],
+      "line": "Matsutake dobin mushi, shrimp, ginkgo, sudachi"
+    },
+    {
+      "id": "fd_0323",
+      "term": "Summer Truffle",
+      "aliases": [
+        "Scorzone",
+        "Black Summer Truffle"
+      ],
+      "section": "mushrooms",
+      "level": 3,
+      "gist": "Warm-weather black truffle, beige inside, milder and cheaper",
+      "guest": "It's the black truffle of the warmer months. It's milder than the winter one, nutty and earthy, and it costs a good deal less.",
+      "why": "A different species from the winter black truffle, it ripens from late spring, grows across Europe and is also farmed. Inside it is beige with white veins, and its hazelnut and mushroom scent is a fraction as strong, hence the lower price.",
+      "madeWith": [
+        "fresh truffle",
+        "often butter",
+        "often egg",
+        "often wheat pasta",
+        "sometimes parmesan",
+        "sometimes cream"
+      ],
+      "note": "The same species dug in autumn is sold as Burgundy truffle, darker inside and more fragrant.",
+      "notThis": "Not the winter black truffle of Perigord, near-black inside and far stronger. Ask which one a supplement is.",
+      "seeAlso": [
+        "fd_0147",
+        "fd_0321",
+        "fd_0148"
+      ],
+      "line": "Summer truffle tagliolini, butter, parmesan",
+      "prompt": "A different species from the winter black __, it ripens from late spring, grows across Europe and is also farmed. Inside it is beige with white veins, and its hazelnut and mushroom scent is a fraction as strong, hence the lower price."
+    },
+    {
+      "id": "fd_0324",
+      "term": "Hedgehog Mushroom",
+      "aliases": [
+        "Sweet Tooth",
+        "Pied de Mouton",
+        "Wood Hedgehog"
+      ],
+      "section": "mushrooms",
+      "level": 3,
+      "gist": "Buff wild cap with soft spines beneath instead of gills, firm and nutty",
+      "guest": "It's a wild mushroom with soft little spines under the cap, like a hedgehog. It eats like a firmer chanterelle, sweet and nutty with a good bite.",
+      "why": "Foraged under conifers and hardwoods from fall into winter, it lives on tree roots and is not farmed. Soft, pale teeth hang under the cap instead of gills. The flesh is dense, so it stays firm when roasted, with a sweet, nutty, gently peppery flavor.",
+      "madeWith": [
+        "hedgehog mushroom",
+        "often butter",
+        "often shallot",
+        "sometimes garlic",
+        "sometimes cream",
+        "sometimes thyme"
+      ],
+      "origin": "French pied de mouton, meaning sheep's foot",
+      "notThis": "Not chanterelle, which has blunt ridges under the cap, nor lion's mane, a shaggy white ball. This is a cap with soft spines beneath.",
+      "lexiconSlug": "hedgehog-mushroom",
+      "seeAlso": [
+        "fd_0140"
+      ],
+      "confusedWith": [
+        "fd_0141",
+        "fd_0152"
+      ],
+      "line": "Roasted hedgehog mushrooms, chanterelles, brown butter"
     },
     {
       "id": "fd_0154",
@@ -4153,7 +4788,8 @@
       "notThis": "Not fresh mozzarella, which is solid all the way through. Burrata has a creamy, spoonable center.",
       "lexiconSlug": "burrata",
       "confusedWith": [
-        "fd_0167"
+        "fd_0167",
+        "fd_0325"
       ],
       "line": "Burrata, heirloom tomatoes, basil oil, grilled bread"
     },
@@ -4282,6 +4918,118 @@
       ],
       "line": "Washed rind cheese, pear mostarda, rye crisps",
       "prompt": "While it ages the cheese is rubbed with brine, sometimes with beer, wine or brandy. The damp, salty surface grows orange bacteria that make the tacky __ and barnyard smell, while the paste stays supple and savory. Think Taleggio or French Munster."
+    },
+    {
+      "id": "fd_0325",
+      "term": "Stracciatella",
+      "say": "strah-chuh-TEL-uh",
+      "section": "dairy",
+      "level": 3,
+      "gist": "Loose shreds of fresh stretched curd in cream, with no shell",
+      "guest": "It's the creamy center of a burrata on its own, soft shreds of fresh mozzarella in cream. Rich and milky, made for spooning over tomatoes or bread.",
+      "why": "Fresh mozzarella curd is stretched in hot water, torn into thin shreds and folded into cream. With no skin to hold it, it spoons like a loose, milky custard, sweeter and richer than mozzarella. It is exactly what spills from a cut burrata.",
+      "madeWith": [
+        "cow's milk",
+        "cream",
+        "salt",
+        "often rennet",
+        "sometimes buffalo milk"
+      ],
+      "origin": "Puglia, southern Italy; Italian for little shreds, from stracciare",
+      "pairs": "Heirloom tomatoes, olive oil, crostini, pizza, cured ham",
+      "notThis": "Not burrata, the pouch it fills. Also a Roman egg soup and a chocolate-chip gelato.",
+      "seeAlso": [
+        "fd_0167",
+        "fd_0165"
+      ],
+      "confusedWith": [
+        "fd_0166"
+      ],
+      "line": "Stracciatella, heirloom tomato, basil, grilled bread"
+    },
+    {
+      "id": "fd_0326",
+      "term": "Triple Crème",
+      "say": "TRIP-uhl KREM",
+      "aliases": [
+        "Triple Cream"
+      ],
+      "section": "dairy",
+      "level": 3,
+      "gist": "Extra-rich soft cheese made from milk boosted with added cream",
+      "guest": "It's a soft cheese made with extra cream, so it eats like cheesecake crossed with good salted butter. Mild, gently tangy and melting.",
+      "why": "Cream is added to the milk before it is set, lifting the fat to at least 75 percent of the cheese's dry weight, well above a Brie. Most wear a thin white bloomy rind. The paste is dense, buttery and slightly tangy, mild enough to open a cheese course.",
+      "madeWith": [
+        "cow's milk",
+        "cream",
+        "salt",
+        "white mold cultures",
+        "often rennet"
+      ],
+      "origin": "French for triple cream, a legal French grade of richness",
+      "pairs": "Champagne, strawberries, honey, toasted baguette",
+      "notThis": "Not its own rind style. Most wear a bloomy rind; the name only tells you how much cream went in.",
+      "seeAlso": [
+        "fd_0170",
+        "fd_0164",
+        "fd_0157"
+      ],
+      "line": "Brillat-Savarin triple crème, strawberries, honey"
+    },
+    {
+      "id": "fd_0327",
+      "term": "Taleggio",
+      "say": "tah-LEH-joh",
+      "section": "dairy",
+      "level": 3,
+      "gist": "Square Lombardy cow's milk cheese, pungent rind, soft mild paste",
+      "guest": "It's a soft cow's milk cheese from northern Italy. The rind smells strong, but inside it's mild, buttery and a little fruity, and it melts beautifully.",
+      "why": "Square slabs age at least 35 days and are washed with brine each week. The damp surface grows a sticky orange rind and a barnyard smell, but that stays outside, so the paste is supple, milky and fruity with a meaty edge. It melts smoothly, so it suits pizza.",
+      "madeWith": [
+        "cow's milk",
+        "salt",
+        "traditionally calf rennet"
+      ],
+      "origin": "Val Taleggio, near Bergamo in Lombardy, made there for centuries",
+      "pairs": "Pear, honey, polenta, mushrooms, Barbera or Nebbiolo",
+      "notThis": "Not robiola, a smaller, paler, milder soft square. Taleggio has the sticky orange rind and the smell.",
+      "lexiconSlug": "taleggio",
+      "seeAlso": [
+        "fd_0171",
+        "fd_0170"
+      ],
+      "confusedWith": [
+        "fd_0328"
+      ],
+      "line": "Pizza bianca, Taleggio, roasted pear, walnut"
+    },
+    {
+      "id": "fd_0328",
+      "term": "Robiola",
+      "say": "roh-bee-OH-luh",
+      "section": "dairy",
+      "level": 4,
+      "gist": "Young soft Italian cheese of cow, goat or sheep milk, often blended",
+      "guest": "It's a soft, young cheese from northern Italy, often a blend of cow's milk with goat's or sheep's. Creamy and gently tangy, sometimes a little mushroomy.",
+      "why": "It is a family, not one recipe. The curd is set slowly, drained lightly and eaten within days or weeks, so the paste stays soft, moist and tangy. Fresh ones taste of sour cream; small squares with a thin white rind, like Bosina, turn buttery.",
+      "madeWith": [
+        "cow's milk",
+        "sometimes goat's milk",
+        "sometimes sheep's milk",
+        "salt",
+        "often rennet"
+      ],
+      "origin": "Piedmont and Lombardy, in northern Italy",
+      "pairs": "White pizza, stuffed pasta, truffle, focaccia, Arneis",
+      "notThis": "Not Taleggio, the big square with a sticky orange rind. Most robiola is paler and milder.",
+      "seeAlso": [
+        "fd_0156",
+        "fd_0170"
+      ],
+      "confusedWith": [
+        "fd_0327"
+      ],
+      "line": "Robiola agnolotti, brown butter, sage"
     },
     {
       "id": "fd_0172",
@@ -8073,6 +8821,7 @@
       "lexiconSlug": "black-garlic",
       "seeAlso": [
         "fd_0266",
+        "fd_0304",
         "fd_0138"
       ],
       "line": "Dry-aged ribeye, black garlic jus, charred leek"
@@ -8270,6 +9019,7 @@
         "fd_0096"
       ],
       "confusedWith": [
+        "fd_0304",
         "fd_0030"
       ],
       "line": "45-day dry-aged ribeye, bone marrow butter"

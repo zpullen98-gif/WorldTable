@@ -613,6 +613,352 @@
 				"notes": "Section checks otherwise pass. Every one of the 16 roster rows has a card. The section mean is 664 chars (ceiling 720). There are no banned substrings and no verdict words: 'free' appears only in 'trimmed to free them' on Beech, which is not verdict language. There are no em or en dashes. No two gists or guest lines are the same. No roster row carries a knownPacketError, so no trap is required for one. The confusable pairs are linked both ways: Hen of the Woods and Chicken of the Woods, Black Trumpet and King Trumpet, Truffle and Truffle Oil. Oyster Mushroom is linked to Oysters, and Truffle to Chocolate Truffle. Cross-section follow-ups for the operator: (1) check that fd_0255 Chocolate Truffle and fd_0115 Oysters link back to Truffle and Oyster Mushroom in their own confusedWithTerms. (2) King Trumpet could take seeAlso Scallops (fd_0118), because 'king oyster scallops' is a common menu name for it. (3) Chicken of the Woods has seeAlso 'Fried', but its line is 'Fried chicken of the woods', so fd_0002 Chicken-Fried is the closer related card and worth considering. (4) Truffle Oil's gist uses 'truffle', which the genericWords list permits. It is still the card's own head noun, so a mostly-truffle multiple-choice set could be easy. Acceptable as written."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-28",
+			"pass": "revision",
+			"cards": [
+				"fd_0321",
+				"fd_0322",
+				"fd_0323",
+				"fd_0324"
+			],
+			"findings": [
+				{
+					"id": "fd_0323",
+					"field": "aliases",
+					"severity": "wrong",
+					"claim": "\"Burgundy Truffle\"",
+					"because": "An alias must be another name for the same product. Burgundy truffle is the autumn crop of the same species (Tuber aestivum, formerly var. uncinatum). It is sold as a separate, darker, more fragrant and pricier product, which the card's own note says. Listing it as an alias tells a server that a Burgundy truffle supplement is the same thing as a summer truffle one. It also contradicts the gist's 'warm-weather' and the why's 'ripens from late spring'.",
+					"fix": "Drop \"Burgundy Truffle\" from aliases and keep the distinction in the note.",
+					"lens": "fact",
+					"key": "mushrooms-1-fact-1"
+				},
+				{
+					"id": "fd_0321",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "in Piedmont and central Italy",
+					"because": "Tuber magnatum is also dug commercially in Croatian Istria, Slovenia, Hungary and Serbia, and menus often print 'Istrian white truffle'. As written, the card reads as if Italy were the only source, so a server would be wrong-footed by a Balkan-origin supplement.",
+					"fix": "in Italy and the Balkans",
+					"lens": "fact",
+					"key": "mushrooms-1-fact-2"
+				},
+				{
+					"id": "fd_0322",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "is cooked only briefly, often in a clear broth or with rice",
+					"because": "In matsutake gohan, the classic rice dish the line itself points to, the mushroom steams with the rice for the full cooking time. It is handled gently to keep the aroma, but it is not always cooked briefly. The why's 'barely cooked' has the same problem.",
+					"fix": "is cooked gently, often in a clear broth or with rice",
+					"lens": "fact",
+					"key": "mushrooms-1-fact-3"
+				},
+				{
+					"id": "fd_0322",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"sometimes soy sauce\", \"sometimes rice\"",
+					"because": "Classic dobin mushi and matsutake gohan are both seasoned with light soy sauce and sake as a matter of course, so soy (and the wheat in soy sauce) is 'often', not 'sometimes'. Sake (alcohol) is missing entirely, and it matters more to a guest than rice does, which the guest line already names.",
+					"fix": "\"often soy sauce\", \"often sake\" (replace \"sometimes rice\")",
+					"lens": "fact",
+					"key": "mushrooms-1-fact-4"
+				},
+				{
+					"id": "fd_0324",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "for its pale, lumpy cap",
+					"because": "Why the mushroom is called sheep's foot is disputed. Sources credit a hoof-like cap shape, a woolly or velvety surface, or an older sense of 'pied'. The card states one reason as settled fact.",
+					"fix": "likely for its pale, hoof-like cap",
+					"lens": "fact",
+					"key": "mushrooms-1-fact-5"
+				},
+				{
+					"id": "fd_0323",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "It's shaved generously, so you get the look and flavor at a friendlier price.",
+					"because": "This oversells. A summer truffle has a fraction of the winter truffle's aroma (the card's own why says so), so a guest promised 'the flavor' at a lower price will feel misled. 'Shaved generously' is also a kitchen-specific promise the server can't guarantee, and 'friendlier price' is sales copy read off a card.",
+					"fix": "It's the black truffle of the warmer months. It's milder than the winter one, nutty and earthy, and it costs a good deal less.",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-6"
+				},
+				{
+					"id": "fd_0321",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's the rarest truffle, dug wild in northern Italy each fall and shaved raw over your plate.",
+					"because": "'The rarest' is a superlative the server can't back up, and white truffles are also found in central Italy and Istria (the card's own why says central Italy). The bigger floor problem is price: a guest who says yes to a by-the-gram shaving without being told gets a surprise at the check, and the guest line is what the server actually says.",
+					"fix": "It's Italy's prized wild fall truffle, shaved raw over your plate and priced by the gram.",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-7"
+				},
+				{
+					"id": "fd_0323",
+					"field": "aliases",
+					"severity": "unclear",
+					"claim": "\"Burgundy Truffle\"",
+					"because": "The card's note says the autumn crop sold as Burgundy truffle is darker inside and more fragrant. Listing it as a plain alias teaches a new hire to tell a guest that a Burgundy truffle is the mild summer one, which the note contradicts. Leave that fact in the note and take the name out of aliases.",
+					"fix": "[\"Scorzone\", \"Black Summer Truffle\"]",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-8"
+				},
+				{
+					"id": "fd_0323",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "mild in scent and priced low",
+					"because": "A summer truffle is cheap only next to a winter truffle. It is still a costly supplement, so 'priced low' teaches a server to call it cheap. The gist is also 9 characters longer than the card's only trap, so it is the longest option.",
+					"fix": "Warm-weather black truffle, beige inside, milder and far cheaper",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-9"
+				},
+				{
+					"id": "fd_0322",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "mat-soo-TAH-kee",
+					"because": "Under the key, 'mat' reads like 'cat', but American dictionaries (Merriam-Webster: mät-sü-TÄ-kē) and dining rooms open the word with 'maht'. The deck's own Shiitake card uses the same ending as shih-TAH-kee, so only the first syllable needs to change.",
+					"fix": "maht-soo-TAH-kee",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-10"
+				},
+				{
+					"id": "fd_0322",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It smells of pine and cinnamon and is cooked only briefly, often in a clear broth or with rice.",
+					"because": "At 166 characters it is well past the 150 aim, and the trailing list of generic uses is more than a nervous server can say smoothly at a table. Trimming it keeps the scent hook and the broth.",
+					"fix": "It smells of pine and cinnamon and is barely cooked, often in a clear broth.",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-11"
+				},
+				{
+					"id": "fd_0324",
+					"field": "guest",
+					"severity": "style",
+					"claim": "soft little spines under the cap, hence the name.",
+					"because": "'Hence' is written English. Read aloud by a third-day server it sounds read off a card, and naming the animal says the same thing more plainly.",
+					"fix": "soft little spines under the cap, like a hedgehog.",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-12"
+				},
+				{
+					"id": "fd_0322",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"matsutake mushroom\", \"often bonito dashi\", \"often sudachi citrus\", \"sometimes rice\", \"sometimes shrimp\", \"sometimes chicken\", \"sometimes soy sauce\"",
+					"because": "The card's own menu line is dobin mushi with ginkgo, and the classic dobin mushi broth and matsutake gohan are both seasoned with sake and light soy sauce. The list leaves out alcohol (sake) and ginkgo nut, and it lists soy only as 'sometimes'. A guest who avoids alcohol or nuts would not see either flagged. Rice and chicken are the least important items for a guest with an allergy, so they can go to keep the list at 7 items.",
+					"fix": "\"matsutake mushroom\", \"often bonito dashi\", \"often sake\", \"often soy sauce\", \"often sudachi citrus\", \"sometimes shrimp\", \"sometimes ginkgo nut\"",
+					"lens": "safety",
+					"key": "mushrooms-1-safety-13"
+				},
+				{
+					"id": "fd_0321",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"often egg yolk\"",
+					"because": "White truffle is classically shaved over whole fried, scrambled or baked eggs as well as over yolk-rich tajarin. If the list flags only the yolk, a guest allergic to egg white (the more common egg allergy) could read it as saying the white is not there.",
+					"fix": "\"often egg\"",
+					"lens": "safety",
+					"key": "mushrooms-1-safety-14"
+				},
+				{
+					"id": "fd_0321",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"sometimes rice\"",
+					"because": "Rice is on the list because of white truffle risotto, which is classically started with white wine. The alcohol is not flagged, and the list has room for a seventh item.",
+					"fix": "\"sometimes rice\", \"sometimes white wine\"",
+					"lens": "safety",
+					"key": "mushrooms-1-safety-15"
+				},
+				{
+					"key": "mushrooms-critic-1",
+					"id": "fd_0324",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Hedgehog Mushroom and Chanterelle are the classic look-alike pair. Both are buff to golden wild mushrooms of the same season, often sold and plated together (this card's own line and guest line put them side by side). But Chanterelle is only in seeAlsoTerms. The confusion the card does link, Lion's Mane, is the weaker one.",
+					"because": "Hedgehog Mushroom and Chanterelle are the classic look-alike pair. Both are buff to golden wild mushrooms of the same season, often sold and plated together (this card's own line and guest line put them side by side). But Chanterelle is only in seeAlsoTerms. The confusion the card does link, Lion's Mane, is the weaker one.",
+					"fix": "Move \"Chanterelle\" from seeAlsoTerms into confusedWithTerms, so it reads [\"Chanterelle\", \"Lion's Mane\"], and keep Black Trumpet in seeAlsoTerms. Rewrite notThis to cover both under the 150 cap, for example: \"Not chanterelle, which has blunt ridges under the cap, nor lion's mane, a shaggy white ball. This is a cap with soft spines beneath.\""
+				},
+				{
+					"key": "mushrooms-critic-2",
+					"id": "fd_0321",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The note restates the card. \"Priced by the gram\" is already in both the gist and the guest line, and \"autumn\" and \"fall\" already give the season. The note adds only the October to December window, which is the kind of restating note the brief says to cut first. At 702 characters it is also the section's longest card.",
+					"because": "The note restates the card. \"Priced by the gram\" is already in both the gist and the guest line, and \"autumn\" and \"fall\" already give the season. The note adds only the October to December window, which is the kind of restating note the brief says to cut first. At 702 characters it is also the section's longest card.",
+					"fix": "Drop the note (the card falls to about 631 characters). Or replace it with a fact the card does not yet hold, for example: \"Kept whole and wrapped until service, then shaved at the table. The aroma fades within days of digging.\""
+				},
+				{
+					"key": "mushrooms-critic-3",
+					"id": "fd_0324",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The origin guesses at the etymology (\"likely for its pale, hoof-like cap\"). Rule 8 says to leave a fact out when it is not sure, and a server will repeat this reason as fact.",
+					"because": "The origin guesses at the etymology (\"likely for its pale, hoof-like cap\"). Rule 8 says to leave a fact out when it is not sure, and a server will repeat this reason as fact.",
+					"fix": "Drop the guessed reason: \"French pied de mouton, sheep's foot, its name on French menus\", or simply \"French pied de mouton, meaning sheep's foot\"."
+				},
+				{
+					"key": "mushrooms-critic-4",
+					"id": "fd_0322",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The why says \"most now come from China, Korea and North America, where a close relative grows\". It can be read as saying the Chinese and Korean supply is also a relative, when those countries grow the true species and only the North American pine mushroom is the close relative. The why is also 281 characters, above the 260 aim.",
+					"because": "The why says \"most now come from China, Korea and North America, where a close relative grows\". It can be read as saying the Chinese and Korean supply is also a relative, when those countries grow the true species and only the North American pine mushroom is the close relative. The why is also 281 characters, above the 260 aim.",
+					"fix": "Rephrase to \"so most now come from China and Korea, plus North America's pine mushroom, a close relative.\" This removes the ambiguity and trims the why toward the aim."
+				},
+				{
+					"key": "mushrooms-critic-5",
+					"id": "fd_0321",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The level placement looks inverted. White Truffle is placed at level 4 (rare or specialist) while Summer Truffle is at level 3. On American menus the white truffle supplement is the one guests ask about by name every fall, and it is the more famous product of the two. The standard puts specialist products a senior server must know at level 3.",
+					"because": "The level placement looks inverted. White Truffle is placed at level 4 (rare or specialist) while Summer Truffle is at level 3. On American menus the white truffle supplement is the one guests ask about by name every fall, and it is the more famous product of the two. The standard puts specialist products a senior server must know at level 3.",
+					"fix": "Place White Truffle at level 3, alongside Summer Truffle, or give a placement reason for keeping it above Summer Truffle."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "mushrooms-1-fact-1",
+					"action": "applied",
+					"reason": "Dropped \"Burgundy Truffle\" from the Summer Truffle aliases. The note still says the autumn crop is sold as Burgundy truffle and is darker and more fragrant."
+				},
+				{
+					"finding": "mushrooms-1-fact-2",
+					"action": "applied",
+					"reason": "The White Truffle why now reads \"in Piedmont, central Italy and the Balkans\", so a Balkan-origin (Istrian) supplement no longer contradicts the card."
+				},
+				{
+					"finding": "mushrooms-1-fact-3",
+					"action": "applied",
+					"reason": "The guest line now says \"is cooked gently\" in place of \"only briefly\". The why now says the scent \"fades with hard cooking, so it is torn and cooked gently, in broth or with rice\" in place of \"barely cooked\", which fits matsutake gohan."
+				},
+				{
+					"finding": "mushrooms-1-fact-4",
+					"action": "applied",
+					"reason": "Soy sauce moved to \"often\", \"often sake\" was added and \"sometimes rice\" was removed, as part of the merged madeWith fix under safety-13."
+				},
+				{
+					"finding": "mushrooms-1-fact-5",
+					"action": "applied",
+					"reason": "The origin is hedged to \"likely for its pale, hoof-like cap\"."
+				},
+				{
+					"finding": "mushrooms-1-floor-6",
+					"action": "applied",
+					"reason": "Replaced the guest line with the suggested honest one: milder than the winter truffle, nutty and earthy, and a good deal cheaper. It drops \"shaved generously\" and the promise of the same flavor."
+				},
+				{
+					"finding": "mushrooms-1-floor-7",
+					"action": "applied",
+					"reason": "The guest line now opens \"It's Italy's prized wild fall truffle, shaved raw over your plate and priced by the gram\". That drops the unbacked superlative and the northern-Italy-only claim, and tells the guest the price before they order."
+				},
+				{
+					"finding": "mushrooms-1-floor-8",
+					"action": "applied",
+					"reason": "The aliases are now [\"Scorzone\", \"Black Summer Truffle\"]. The Burgundy distinction stays in the note."
+				},
+				{
+					"finding": "mushrooms-1-floor-9",
+					"action": "applied",
+					"reason": "The gist is now \"Warm-weather black truffle, beige inside, milder and cheaper\" (60 characters). The comparative \"cheaper\" replaces \"priced low\". I cut \"far\" from the suggested fix so the gist is shorter than the 61-character trap and is no longer the longest option."
+				},
+				{
+					"finding": "mushrooms-1-floor-10",
+					"action": "applied",
+					"reason": "The respelling is now maht-soo-TAH-kee, matching American dictionary usage and the Shiitake card's ending."
+				},
+				{
+					"finding": "mushrooms-1-floor-11",
+					"action": "applied",
+					"reason": "Trimmed the guest line to end \"is cooked gently, often in a clear broth\" (147 characters). I kept fact-3's \"cooked gently\" in place of this fix's \"barely cooked\", because matsutake cooked with rice is not barely cooked."
+				},
+				{
+					"finding": "mushrooms-1-floor-12",
+					"action": "applied",
+					"reason": "\"hence the name\" is now \"like a hedgehog\" in the guest line."
+				},
+				{
+					"finding": "mushrooms-1-safety-13",
+					"action": "applied",
+					"reason": "madeWith now flags sake, soy sauce (often) and ginkgo nut. I dropped rice as suggested, but kept \"sometimes chicken\" and dropped \"often sudachi citrus\" instead, because a meat flag matters more to a guest than a citrus garnish, and sudachi is still on the menu line. The list stays at 7."
+				},
+				{
+					"finding": "mushrooms-1-safety-14",
+					"action": "applied",
+					"reason": "\"often egg yolk\" is now \"often egg\", so the flag covers whole eggs and the white, not only the yolk."
+				},
+				{
+					"finding": "mushrooms-1-safety-15",
+					"action": "applied",
+					"reason": "Added \"sometimes white wine\" as the seventh madeWith item on White Truffle, to flag the alcohol in the risotto."
+				},
+				{
+					"finding": "mushrooms-critic-1",
+					"action": "applied",
+					"reason": "Chanterelle moved from seeAlsoTerms into confusedWithTerms beside Lion's Mane, Black Trumpet kept in seeAlsoTerms, and notThis rewritten to tell both apart (132 characters)."
+				},
+				{
+					"finding": "mushrooms-critic-2",
+					"action": "applied",
+					"reason": "Dropped the note that restated the price and season, taking White Truffle from 702 to 631 characters."
+				},
+				{
+					"finding": "mushrooms-critic-3",
+					"action": "applied",
+					"reason": "Removed the guessed etymology; origin now reads \"French pied de mouton, meaning sheep's foot\"."
+				},
+				{
+					"finding": "mushrooms-critic-4",
+					"action": "applied",
+					"reason": "The why now says China and Korea, plus North America's pine mushroom, a close relative, so only the North American supply is called a relative; it is tightened from 290 to 278 characters."
+				},
+				{
+					"finding": "mushrooms-critic-5",
+					"action": "applied",
+					"reason": "White Truffle moved to level 3 beside Summer Truffle, because it is the specialist product guests ask for by name every fall, which the standard places at Sous Chef."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0324",
+						"issue": "Hedgehog Mushroom and Chanterelle are the classic look-alike pair. Both are buff to golden wild mushrooms of the same season, often sold and plated together (this card's own line and guest line put them side by side). But Chanterelle is only in seeAlsoTerms. The confusion the card does link, Lion's Mane, is the weaker one.",
+						"fix": "Move \"Chanterelle\" from seeAlsoTerms into confusedWithTerms, so it reads [\"Chanterelle\", \"Lion's Mane\"], and keep Black Trumpet in seeAlsoTerms. Rewrite notThis to cover both under the 150 cap, for example: \"Not chanterelle, which has blunt ridges under the cap, nor lion's mane, a shaggy white ball. This is a cap with soft spines beneath.\""
+					},
+					{
+						"id": "fd_0321",
+						"issue": "The note restates the card. \"Priced by the gram\" is already in both the gist and the guest line, and \"autumn\" and \"fall\" already give the season. The note adds only the October to December window, which is the kind of restating note the brief says to cut first. At 702 characters it is also the section's longest card.",
+						"fix": "Drop the note (the card falls to about 631 characters). Or replace it with a fact the card does not yet hold, for example: \"Kept whole and wrapped until service, then shaved at the table. The aroma fades within days of digging.\""
+					},
+					{
+						"id": "fd_0324",
+						"issue": "The origin guesses at the etymology (\"likely for its pale, hoof-like cap\"). Rule 8 says to leave a fact out when it is not sure, and a server will repeat this reason as fact.",
+						"fix": "Drop the guessed reason: \"French pied de mouton, sheep's foot, its name on French menus\", or simply \"French pied de mouton, meaning sheep's foot\"."
+					},
+					{
+						"id": "fd_0322",
+						"issue": "The why says \"most now come from China, Korea and North America, where a close relative grows\". It can be read as saying the Chinese and Korean supply is also a relative, when those countries grow the true species and only the North American pine mushroom is the close relative. The why is also 281 characters, above the 260 aim.",
+						"fix": "Rephrase to \"so most now come from China and Korea, plus North America's pine mushroom, a close relative.\" This removes the ambiguity and trims the why toward the aim."
+					},
+					{
+						"id": "fd_0321",
+						"issue": "The level placement looks inverted. White Truffle is placed at level 4 (rare or specialist) while Summer Truffle is at level 3. On American menus the white truffle supplement is the one guests ask about by name every fall, and it is the more famous product of the two. The standard puts specialist products a senior server must know at level 3.",
+						"fix": "Place White Truffle at level 3, alongside Summer Truffle, or give a placement reason for keeping it above Summer Truffle."
+					}
+				],
+				"notes": "I checked the whole section of 20 cards: 16 live and 4 new (fd_0321 to fd_0324). Every roster row has a card. No gist or guest line collides with another. None of the four new rows carries a knownPacketError. I found no banned words, verdict language or en/em dashes in the new cards. Traps stay within 10 characters of their gist, and the gist is never the longest option (White Truffle 64 against 67, Summer Truffle 60 against 61). Every madeWith list is under 140 characters joined. The section mean with the four new cards is about 661 characters of prose per card, well under the 720 ceiling. Each new card's total is 663 to 702.\n\nCross-links for the operator to consider, on existing cards this pass does not own:\n(1) fd_0152 Lion's Mane has no confusedWith and no notThis. If fd_0324 keeps Lion's Mane in confusedWithTerms, Lion's Mane should link back to Hedgehog Mushroom, with a notThis such as \"Not hedgehog mushroom, an ordinary cap with spines beneath. This is a shaggy white ball with no cap.\"\n(2) fd_0148 Truffle Oil links to fd_0147 Truffle only. Its why names white truffle as the compound's source, so adding White Truffle (fd_0321) to its confusedWith would make the link go both ways.\n(3) If fd_0324 takes Chanterelle as a confusion, fd_0141 Chanterelle (confusedWith currently empty) could link back to Hedgehog Mushroom.\n(4) Neither fd_0147 Truffle nor any other card is specifically the winter black Perigord truffle, yet fd_0323's notThis leans on it. If the deck grows, \"Black Truffle\" (Perigord) would be worth promoting from the bench. The lexicon already has a black-truffle essay."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

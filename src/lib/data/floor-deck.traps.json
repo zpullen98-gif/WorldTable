@@ -101,6 +101,30 @@
       "why": "It is seared in a hot skillet, and the dark crust is toasted spice, not burnt char."
     }
   ],
+  "fd_0301": [
+    {
+      "says": "Cooked on a soaked wooden board in the oven for a gentle smokiness",
+      "why": "That is plank cooking. This is a bare, very hot steel plate with no wood and no smoke."
+    }
+  ],
+  "fd_0302": [
+    {
+      "says": "Seasoned heavily through the crust, so the flesh eats briny like ham",
+      "why": "The shell traps steam and is thrown away, and the skin or peel keeps the flesh only gently seasoned."
+    }
+  ],
+  "fd_0303": [
+    {
+      "says": "Fried twice in very hot oil until the skin turns glassy and brittle",
+      "why": "Nothing is fried. A glaze is brushed on in coats while it roasts, and it sets glossy and sticky."
+    }
+  ],
+  "fd_0304": [
+    {
+      "says": "Marinated overnight in soy sauce and mirin, then grilled over charcoal",
+      "why": "It is not a soy marinade. Koji, a mold-grown rice, is spread on the raw meat and left for days."
+    }
+  ],
   "fd_0050": [
     {
       "says": "Small sea snails picked from the shell and served chilled with lemon",
@@ -169,6 +193,34 @@
     {
       "says": "Gristly, strong-tasting organ that stays chewy however long it cooks",
       "why": "It is a muscle that turns tender with long cooking and tastes like mild roast beef."
+    }
+  ],
+  "fd_0305": [
+    {
+      "says": "Cleaned pig intestines, boiled and then fried until crisp",
+      "why": "Tripe is stomach lining, most often beef. Intestines are chitterlings, a different cut."
+    }
+  ],
+  "fd_0306": [
+    {
+      "says": "Strong, livery organ with a soft, grainy texture and a bitter edge",
+      "why": "The heart is a muscle, so it eats dense and meaty like dark meat, not soft or livery."
+    }
+  ],
+  "fd_0307": [
+    {
+      "says": "Fried testicles of a rooster, served as a ranch-country bar snack",
+      "why": "They are two small pieces of dark meat from the back. The name describes only the shape."
+    },
+    {
+      "says": "Small shucked shellfish poached gently in a rich chicken broth",
+      "why": "It is chicken meat. The name describes the shape of two small pieces of dark meat."
+    }
+  ],
+  "fd_0308": [
+    {
+      "says": "Village in southwest France whose farms raise the finest ducks",
+      "why": "It is a hybrid duck, a sterile cross of Muscovy and Pekin, not a place or a farm."
     }
   ],
   "fd_0064": [
@@ -291,6 +343,30 @@
     {
       "says": "Brisket slow-cooked with sweet corn kernels, an Irish American classic",
       "why": "Corn here is an old word for the coarse grains of salt used in the cure, not the vegetable."
+    }
+  ],
+  "fd_0309": [
+    {
+      "says": "Pork leg slow-cooked in wine, then chilled and shaved thin for the board",
+      "why": "It is never cooked. It is salted and aged raw, the way prosciutto is."
+    }
+  ],
+  "fd_0310": [
+    {
+      "says": "Pork salami studded with chunks of roasted fennel bulb and onion",
+      "why": "The flavor comes from fennel seed, and sometimes fennel flowers, never the bulb."
+    }
+  ],
+  "fd_0311": [
+    {
+      "says": "Chilled pork loaf bound with melted cheddar, sliced for the board",
+      "why": "The name misleads. It sets in jelly drawn from the long-simmered pork."
+    }
+  ],
+  "fd_0312": [
+    {
+      "says": "Spicy Louisiana sausage of pork, liver and rice, steamed in its casing",
+      "why": "That describes the Cajun rice sausage. This is the French sausage made with pork blood."
     }
   ],
   "fd_0086": [
@@ -599,6 +675,24 @@
       "why": "Small hard clams like littlenecks are a raw bar staple on the half shell."
     }
   ],
+  "fd_0317": [
+    {
+      "says": "Freshwater eel grilled in a sweet soy glaze and laid over rice",
+      "why": "That is unagi, freshwater eel. This is sea urchin, soft and creamy."
+    }
+  ],
+  "fd_0318": [
+    {
+      "says": "Soft, mild flatfish landed off the Pacific coast of California",
+      "why": "That is Pacific Dover sole, a flounder. The true fish comes from European waters."
+    }
+  ],
+  "fd_0319": [
+    {
+      "says": "Young cold-water lobster, caught before its big claws grow in",
+      "why": "It is its own species, fully grown at this size, and never becomes a big-clawed lobster."
+    }
+  ],
   "fd_0138": [
     {
       "says": "Thin slices of sea snail, cut and dressed to look like a mushroom",
@@ -675,6 +769,18 @@
     {
       "says": "Farmed mushroom grown on poultry manure, named for how it is raised",
       "why": "It is wild, grows on tree trunks, and the name comes from its chicken-like texture."
+    }
+  ],
+  "fd_0321": [
+    {
+      "says": "Farmed Italian truffle, slow-cooked into butter to spread its aroma",
+      "why": "It is found wild, never reliably farmed, and heat destroys its aroma, so it is only shaved raw."
+    }
+  ],
+  "fd_0323": [
+    {
+      "says": "Winter black truffle dug early, before its full aroma has set",
+      "why": "It is its own species that ripens in the warm months, not an unripe winter truffle."
     }
   ],
   "fd_0154": [
@@ -759,6 +865,24 @@
     {
       "says": "Aged cheese rinsed in fresh water to mellow it into a clean, mild taste",
       "why": "It is washed in brine, sometimes with alcohol, and that makes the rind stronger and more pungent."
+    }
+  ],
+  "fd_0325": [
+    {
+      "says": "Aged stretched curd dried hard and grated over pasta and soups",
+      "why": "It is fresh, unaged curd loose in cream, and it is spooned, not grated."
+    }
+  ],
+  "fd_0326": [
+    {
+      "says": "Soft cheese named for the three milks in it: cow, goat and sheep",
+      "why": "The name counts cream, not milks. It is cow's milk made richer with added cream."
+    }
+  ],
+  "fd_0327": [
+    {
+      "says": "Soft cheese whose center tastes just as sharp and funky as its rind",
+      "why": "The smell lives in the rind. The paste inside is mild, milky and fruity."
     }
   ],
   "fd_0172": [

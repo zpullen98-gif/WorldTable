@@ -107,7 +107,7 @@ export const DECK_GZ_CEILING = 140_000;
  *  OFF from 27 Sep 2026 while the Level III and IV expansion (55 minted
  *  stubs, tools/deck/README.md "Expanding at Levels III and IV") is written;
  *  back ON when the last section merges. */
-export const DECK_COMPLETE = false;
+export const DECK_COMPLETE = true;
 
 /**
  * The four brigade levels, and the ONLY place their names are written. A card

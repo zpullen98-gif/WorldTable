@@ -1177,6 +1177,227 @@
 				"notes": "Every one of the 25 roster rows has a card, and each id and term matches the roster. The Sous Vide known packet error is covered: the trap says \\\"steamed\\\", which matches /steam|boil/. Estimated section mean is about 665 characters of prose per card, under the 720 ceiling. The heaviest cards are Sous Vide and Blackened at about 780, with Steamed at about 730. The longest why fields (Blanched 288, Caramelized 287) are under 300. Accented terms (Puréed, Sautéed) have a say, and so do Confit and Sous Vide. I found no verdict words, no banned substrings and no dashes. Every trap is within about 10 characters of its gist, and no gist is the longest option on its card. Optional links the operator could add, none of them required: Braised notThis compares it to a stew but has no link, and Ragout is the stew card on the roster, so add Ragout to Braised seeAlsoTerms. Cured could add Ceviche to seeAlso, because guests often call ceviche \\\"cured\\\". Brined could add Corned Beef to seeAlso, since corned beef is brine-cured. Caramelized could add Crème Brûlée to seeAlso, since its why already uses that comparison. Steamed pairs (\\\"Ginger and scallion, soy sauce, sesame oil, jasmine rice\\\") mostly repeats its madeWith list. Trimming it to \\\"Ginger and scallion, jasmine rice\\\" or dropping it would bring that card closer to the aim."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-28",
+			"pass": "revision",
+			"cards": [
+				"fd_0301",
+				"fd_0302",
+				"fd_0303",
+				"fd_0304"
+			],
+			"findings": [
+				{
+					"id": "fd_0303",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Not caramelized: that browns the food's own sugars.",
+					"because": "Caramelizing browns any sugar, natural or added (the deck's own Caramelized card says \"sugar, natural or added\", and the sugar on a creme brulee is added). The sugars in a lacquer glaze caramelize too, so this line contradicts the Caramelized card and gives a false way to tell them apart. The real difference is the painted-on coats.",
+					"fix": "Not caramelized, which is sugar browning. Here a glaze is painted on in coats and built into a shell.",
+					"lens": "fact",
+					"key": "methods-1-fact-1"
+				},
+				{
+					"id": "fd_0304",
+					"field": "origin",
+					"severity": "wrong",
+					"claim": "Japanese koji, taken to meat by modern American chefs",
+					"because": "Japanese cooks marinated meat and fish in koji (shio koji, koji-zuke) long before American chefs used it. What is modern and American is growing koji on meat, or coating meat in it, to age it the way dry-aging does.",
+					"fix": "Japanese koji, used by American chefs to age meat",
+					"lens": "fact",
+					"key": "methods-1-fact-2"
+				},
+				{
+					"id": "fd_0303",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "like Chinese roast duck",
+					"because": "Cantonese and Peking roast duck are coated in maltose syrup once, before drying and roasting, and not brushed again and again. The skin comes out glossy and crisp, not sticky. Char siu (Chinese barbecue pork) is the dish that gets basted with glaze repeatedly as it roasts and comes out sticky, so it is the honest comparison.",
+					"fix": "like Chinese barbecue pork",
+					"lens": "fact",
+					"key": "methods-1-fact-3"
+				},
+				{
+					"id": "fd_0302",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "Old Mediterranean way with whole fish, from Spain to Italy",
+					"because": "The other salt-baked dish on American menus is Hakka salt-baked chicken, found in Cantonese restaurants. Traditionally it is wrapped in paper and buried in hot salt, and many restaurants now poach it in seasoned liquid instead. It has no egg-white crust, so a server who knows only the Mediterranean version will describe it wrongly.",
+					"fix": "Spain and Italy for fish; Hakka China for chicken",
+					"lens": "fact",
+					"key": "methods-1-fact-4"
+				},
+				{
+					"id": "fd_0304",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "The coat is scraped off before cooking",
+					"because": "Wiping the koji off before cooking is common but not universal. Some chefs sear it on to build a deliberate koji crust, so the flat statement is not true in every kitchen.",
+					"fix": "The coat is usually wiped off before cooking, and its sugars brown fast, so the crust runs darker.",
+					"lens": "fact",
+					"key": "methods-1-fact-5"
+				},
+				{
+					"id": "fd_0301",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "and with no flame there are no stripes or char",
+					"because": "Most planchas are heated by a gas flame or an element underneath, so saying there is \"no flame\" misstates the equipment. What the food lacks is contact with an open flame and grill bars. A plancha can also char food if it is pushed hard.",
+					"fix": "and with no open flame, no stripes or char",
+					"lens": "fact",
+					"key": "methods-1-fact-6"
+				},
+				{
+					"id": "fd_0301",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "You get a deep golden crust all over and a tender, juicy center.",
+					"because": "This half repeats the Seared guest line almost word for word (\"deep golden crust ... tender, juicy inside\"), so it does not help when the guest asks the obvious follow-up: how is that different from seared or grilled? \"All over\" also overstates it, because a plancha only browns the faces that touch the plate. The one thing a guest can see is that there are no grill marks, so say that.",
+					"fix": "It's cooked the Spanish way, on a very hot flat steel griddle, for an even golden crust with no grill marks and a juicy center.",
+					"lens": "floor",
+					"key": "methods-1-floor-7"
+				},
+				{
+					"id": "fd_0303",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "like Chinese roast duck",
+					"because": "Cantonese and Peking roast duck are glazed before they go in the oven, not brushed again and again while they roast, and they are known for crisp, glassy skin, not a sticky coat. Guests who know that duck will picture something other than what this card describes. A honey-glazed ham is a picture every guest has of a coat brushed on in layers until it turns shiny and sticky.",
+					"fix": "like a honey-glazed ham",
+					"lens": "floor",
+					"key": "methods-1-floor-8"
+				},
+				{
+					"id": "fd_0304",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's coated in koji, the rice culture behind miso and sake, for a few days.",
+					"because": "When a nervous server reads this aloud it is awkward: \"for a few days\" dangles after the aside. \"Rice culture\" also leaves the guest asking what a culture is. Koji is rice grown with a mold. Saying \"mold-grown rice\" calmly is the honest answer the card is meant to prepare the server to give, and it heads off that follow-up question.",
+					"fix": "It sits for days under koji, the mold-grown rice that makes miso and sake.",
+					"lens": "floor",
+					"key": "methods-1-floor-9"
+				},
+				{
+					"id": "fd_0302",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note; madeWith lists \"often whole fish\" and the shell is \"cracked off, often at the table\")",
+					"because": "The showpiece is a whole fish that is filleted at the table. Pin bones and small rib bones can stay in the flesh, and a server should be able to say so plainly. Nothing on the card says it.",
+					"fix": "A whole fish is filleted at the table, so a few small bones can remain.",
+					"lens": "safety",
+					"key": "methods-1-safety-10"
+				},
+				{
+					"id": "fd_0302",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It comes out moist and gently seasoned, not salty.",
+					"because": "\"Not salty\" is an absolute that a guest on a sodium-restricted diet could take as an assurance. Some salt does get in, especially through cut or peeled surfaces and the cavity of a fish. The why itself says the skin keeps only \"most\" of the salt out.",
+					"fix": "It comes out moist and gently seasoned, rarely salty.",
+					"lens": "safety",
+					"key": "methods-1-safety-11"
+				},
+				{
+					"id": "fd_0303",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note; line is \"Lacquered duck breast, charred plum, five-spice jus\")",
+					"because": "Kitchens cook lacquered duck breast pink, to about medium rare, by default. A whole lacquered duck is cooked through. A server should be able to state that doneness fact, and the why does not hold it.",
+					"fix": "Duck breast is usually served pink, at medium rare. A whole roast duck is cooked through.",
+					"lens": "safety",
+					"key": "methods-1-safety-12"
+				},
+				{
+					"key": "methods-critic-1",
+					"id": "fd_0302",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Salt-Baked's closest relative in the deck, En Papillote (fd_0231, Preparations), is not linked. Both seal a whole fish or a vegetable in the oven so it steams in its own juices, and both are opened at the table. The two gists are also built the same way (\"Sealed in a thick mineral crust so it steams...\" and \"...sealed in a parchment packet to steam in the oven\"). A server should be pointed from one card to the other.",
+					"because": "Salt-Baked's closest relative in the deck, En Papillote (fd_0231, Preparations), is not linked. Both seal a whole fish or a vegetable in the oven so it steams in its own juices, and both are opened at the table. The two gists are also built the same way (\"Sealed in a thick mineral crust so it steams...\" and \"...sealed in a parchment packet to steam in the oven\"). A server should be pointed from one card to the other.",
+					"fix": "Add \"En Papillote\" to seeAlsoTerms, giving [\"Brined\", \"Steamed\", \"En Papillote\"]. Optionally, open notThis with a short contrast, such as \"Not en papillote, which is a paper parchment packet.\" Only do that if the card stays under about 720 characters of prose. It is 711 now, so cut the same amount from the why."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "methods-1-fact-1",
+					"action": "applied",
+					"reason": "Lacquered notThis now reads \"Not caramelized, which is sugar browning. Here a glaze is painted on in coats and built into a shell.\", which no longer contradicts the Caramelized card."
+				},
+				{
+					"finding": "methods-1-fact-2",
+					"action": "applied",
+					"reason": "Koji-Aged origin changed to \"Japanese koji, used by American chefs to age meat\", so it no longer implies koji met meat only in America."
+				},
+				{
+					"finding": "methods-1-fact-3",
+					"action": "applied",
+					"reason": "The Lacquered guest line now compares it to Chinese barbecue pork, the dish that really is basted again and again and comes out sticky, in place of Chinese roast duck."
+				},
+				{
+					"finding": "methods-1-fact-4",
+					"action": "applied",
+					"reason": "Salt-Baked origin changed to \"Spain and Italy for whole fish, Hakka China for chicken\". The why already says \"usually\" egg white, so the Hakka version is not misdescribed."
+				},
+				{
+					"finding": "methods-1-fact-5",
+					"action": "applied",
+					"reason": "The Koji-Aged note now says the coat is \"usually wiped off first\" instead of saying it is always scraped off."
+				},
+				{
+					"finding": "methods-1-fact-6",
+					"action": "applied",
+					"reason": "The À la Plancha why now says \"with no open flame there are no grill stripes or smoky char\". notThis also says \"no open flame\", so it does not misstate how a plancha is heated."
+				},
+				{
+					"finding": "methods-1-floor-7",
+					"action": "applied",
+					"reason": "The À la Plancha guest line was replaced with the suggested line. It names the one visible difference (no grill marks) and drops the overstated \"crust all over\" that also echoed the Seared card."
+				},
+				{
+					"finding": "methods-1-floor-8",
+					"action": "applied",
+					"reason": "Roast duck was removed from the Lacquered guest line as asked. I used Chinese barbecue pork instead of honey-glazed ham because its sweet soy glaze matches the lacquer glazes on the card, and it resolves methods-1-fact-3 with the same change."
+				},
+				{
+					"finding": "methods-1-floor-9",
+					"action": "applied",
+					"reason": "The Koji-Aged guest line now reads \"It sits for days under koji, the mold-grown rice behind miso and sake, which turns the meat tender and deeply savory, like a long dry-age.\", which says mold plainly and fixes the dangling phrase."
+				},
+				{
+					"finding": "methods-1-safety-10",
+					"action": "applied",
+					"reason": "Added the Salt-Baked note \"When a whole fish is filleted at the table, a few small bones can remain.\" I cut \"often at the table\" from the why so the two do not repeat each other."
+				},
+				{
+					"finding": "methods-1-safety-11",
+					"action": "applied",
+					"reason": "The absolute \"not salty\" is gone. The guest line now says the crust is cracked away, leaving it moist and gently seasoned, which gives no promise about sodium. I did not use \"rarely salty\" because it reads awkwardly aloud."
+				},
+				{
+					"finding": "methods-1-safety-12",
+					"action": "applied",
+					"reason": "Added the Lacquered note \"Duck breast is usually served pink, at medium rare. A whole duck is cooked through.\" To keep the card near its aim, I trimmed the why, the pairs and the origin."
+				},
+				{
+					"finding": "methods-critic-1",
+					"action": "applied",
+					"reason": "Added \"En Papillote\" (fd_0231, confirmed on the everyCard roster) to seeAlsoTerms, giving [\"Brined\", \"Steamed\", \"En Papillote\"]; the optional notThis contrast was skipped so the card stays near 716 characters of prose and notThis keeps its job of separating it from Cured, the listed confusion."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0302",
+						"issue": "Salt-Baked's closest relative in the deck, En Papillote (fd_0231, Preparations), is not linked. Both seal a whole fish or a vegetable in the oven so it steams in its own juices, and both are opened at the table. The two gists are also built the same way (\"Sealed in a thick mineral crust so it steams...\" and \"...sealed in a parchment packet to steam in the oven\"). A server should be pointed from one card to the other.",
+						"fix": "Add \"En Papillote\" to seeAlsoTerms, giving [\"Brined\", \"Steamed\", \"En Papillote\"]. Optionally, open notThis with a short contrast, such as \"Not en papillote, which is a paper parchment packet.\" Only do that if the card stays under about 720 characters of prose. It is 711 now, so cut the same amount from the why."
+					}
+				],
+				"notes": "I checked the whole section:\n\n- **Roster coverage:** all four unwritten rows (fd_0301 to fd_0304) have cards. The other 26 rows are written=true and are already in methods.json.\n- **Levels:** they match expansion.levels.json (3, 3, 3, 4).\n- **Hard rules:** no card uses a banned word, an em dash or an en dash. No card states what a dish holds or is free of. Full stops follow the rules.\n- **Prose length:** the four new cards total 679, 711, 757 and 727 characters, a mean of 718.5. Across all 29 method cards the mean is about 676, so the section is under the 720 ceiling.\n- **Trap lengths:** every trap is within 10 characters of its gist, and no gist is the longest option.\n- **Gists and guest lines:** all differ from their neighbours (Seared, Grilled, Pan-Roasted, Roasted, Caramelized, Cured, Steamed).\n- **Pronunciation:** À la Plancha has its required \"say\".\n- **Packet errors:** no new row carries a knownPacketError.\n\n**Missing return links.** Four cards already in this section, plus Dry-Aged in another section, do not point back to the new cards. The new cards list them as confusions, so the missing links sit on the older cards:\n\n- Grilled (fd_0032): confusedWithTerms [Smoked, Blackened] should add \"À la Plancha\".\n- Seared (fd_0039): [Blackened, Sautéed] should add \"À la Plancha\".\n- Caramelized (fd_0028): [Seared] should add \"Lacquered\".\n- Dry-Aged (fd_0294, Language) has no links at all. It should add \"Koji-Aged\" to confusedWithTerms, and its notThis would then be required.\n- Cured (fd_0030): \"Salt-Baked\" could go in seeAlsoTerms. It does not really belong in confusedWithTerms from that side.\n\n**Links for the operator:**\n\n- Miso (fd_0280, Pantry) should add \"Koji-Aged\" to seeAlsoTerms, because the deck has no Koji card.\n- Duck Breast (fd_0056, Meats) could add \"Lacquered\" to seeAlsoTerms.\n\n**Fact checks:** Aspergillus oryzae as the mold behind miso, soy sauce and sake is correct. So is the enzyme mechanism: protein breaks down into savory amino acids and starch into sugar. Koji-aged crusts do brown darker, and the coat is wiped off before cooking. \"Plancha\" does mean plate or sheet. Salt crusts bound with egg white are standard. Hakka salt-baked chicken is real, though traditionally the bird is wrapped in paper and buried in hot salt rather than sealed in a crust. That is acceptable for an origin label. The Koji-Cured alias is the one the expansion reason asked for."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

@@ -626,6 +626,302 @@
 				"notes": "No other problems found. Every roster row has a card, and ids and terms match the roster exactly. The prose mean is 669 characters per card, under the 720 ceiling; the highest totals are Foie Gras at 794 and Chicken Liver at 771. The Quail packet error is covered: its trap reads \"strong, gamy\" and matches /gam[ey]|strong/i. I found no verdict words, no em or en dashes and no banned substrings. The one temperature is on Chicken Liver, 74 C (165 F), and it is correctly formatted. Every accented or hesitation term has a say (Escargot, Foie Gras, Poussin, Venison), and no gist uses its own term or a listed word from mayNotAppearInGistOrTraps. Foie Gras links to both Chicken Liver and Pâté, and Chicken Liver links back to Foie Gras. None of the traps (wild hare, wild boar, sea snails, mountain oysters, laying hen) describes another card on the roster. Two optional trims: Venison says rare to medium rare in its gist, guest line and note, so its note is the easy cut if the mean ever has to drop. Magret could take an optional say such as mah-GRAY, but it is an alias, not the term, so the card does not need one."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-28",
+			"pass": "revision",
+			"cards": [
+				"fd_0305",
+				"fd_0306",
+				"fd_0307",
+				"fd_0308"
+			],
+			"findings": [
+				{
+					"id": "fd_0305",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"beef tripe\", \"often tomato\", \"often onion\", \"sometimes white wine\", \"sometimes pecorino cheese\", \"sometimes hominy\"",
+					"because": "Two of the three dishes the card names are classically made with pork. Callos a la madrilena is cooked with chorizo, morcilla and often ham or pig's trotter, and Mexican menudo is often made with pig's feet. A guest who avoids pork has to see that flagged, and the list has room for a seventh item.",
+					"fix": "Add \"sometimes pork\" as a seventh item: beef tripe, often tomato, often onion, sometimes white wine, sometimes pecorino cheese, sometimes hominy, sometimes pork",
+					"lens": "fact",
+					"key": "meats-1-fact-1"
+				},
+				{
+					"id": "fd_0308",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Hybrid duck breed raised for foie gras and a big red breast",
+					"because": "The moulard is a sterile first-generation cross of a Muscovy drake and a Pekin hen. It cannot breed true, so it is a hybrid and not a breed. The card's own why says so, but the gist, guest line and trap all call it a breed.",
+					"fix": "Sterile hybrid duck raised for foie gras and a big red breast",
+					"lens": "fact",
+					"key": "meats-1-fact-2"
+				},
+				{
+					"id": "fd_0308",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "Moulard is the breed of duck raised for foie gras.",
+					"because": "It is a hybrid cross of two ducks, not a breed. A server who repeats \"breed\" will be corrected by any guest who raises ducks.",
+					"fix": "Moulard is the duck raised for foie gras, a cross of two breeds.",
+					"lens": "fact",
+					"key": "meats-1-fact-3"
+				},
+				{
+					"id": "fd_0308",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "It is a breed, a sterile cross of Muscovy and Pekin ducks, not a place or a farm.",
+					"because": "A sterile cross is a hybrid, not a breed, so the explanation contradicts itself.",
+					"fix": "It is a duck, a sterile cross of Muscovy and Pekin, not a place or a farm.",
+					"lens": "fact",
+					"key": "meats-1-fact-4"
+				},
+				{
+					"id": "fd_0308",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Not Pekin, the smaller, milder Long Island breed behind most American duck breast and Peking duck.",
+					"because": "The Pekin breed comes from China and was brought to Long Island in 1873. \"Long Island duck\" is a name it is sold under, not where the breed comes from, so calling it a Long Island breed misstates its origin.",
+					"fix": "Not Pekin or Long Island duck, the smaller, milder bird behind most US duck breast and Peking duck.",
+					"lens": "fact",
+					"key": "meats-1-fact-5"
+				},
+				{
+					"id": "fd_0308",
+					"field": "aliases",
+					"severity": "unclear",
+					"claim": "(no aliases given)",
+					"because": "The same bird is printed on menus and sold as \"Mulard\" (the French spelling) and in English as \"mule duck\". Without these, a server who reads \"Mulard duck breast\" will not recognize it as this card.",
+					"fix": "\"aliases\": [\"Mulard\", \"Mule Duck\"]",
+					"lens": "fact",
+					"key": "meats-1-fact-6"
+				},
+				{
+					"id": "fd_0307",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "The name is just for their shape.",
+					"because": "The guest line never says the word oyster or what shape is meant, so a guest who fears shellfish is left guessing, and a new hire has nothing plain to repeat. The brief puts this card at this level so the server can say plainly that the dish is chicken and not shellfish. It is longer than the words it replaces because a shellfish-allergy mix-up is a safety matter, and it states where the name comes from, not a verdict on what the dish holds.",
+					"fix": "The name is for their oyster shape, not the shellfish.",
+					"lens": "floor",
+					"key": "meats-1-floor-7"
+				},
+				{
+					"id": "fd_0306",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "they eat like a tiny, tender steak with a rich dark-meat flavor, nothing like liver. They are usually grilled quick.",
+					"because": "Duck heart is dense muscle with a firm, springy chew. The card's own why says dense and its note warns about toughness, so calling it tender oversells it, and a guest expecting filet will be let down. \"Grilled quick\" also sounds casual and leaves out the pink finish the note describes.",
+					"fix": "they eat like a tiny steak, meaty with a slight chew and nothing like liver. Most are grilled fast and served pink.",
+					"lens": "floor",
+					"key": "meats-1-floor-8"
+				},
+				{
+					"id": "fd_0305",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It turns tender and mild and soaks up its sauce, like the heart of a good stew.",
+					"because": "\"Like the heart of a good stew\" tells the guest nothing about the texture, and texture is what a nervous guest is really asking about. Well-cooked tripe is soft but keeps a gentle, slightly bouncy chew. Saying plain \"tender\" oversells it.",
+					"fix": "It cooks soft with a gentle chew and a mild taste, and soaks up its sauce.",
+					"lens": "floor",
+					"key": "meats-1-floor-9"
+				},
+				{
+					"id": "fd_0307",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "Not the shellfish. The name comes from the shape, a small oval like an oyster in its shell.",
+					"because": "This card exists so a server can answer a guest with a shellfish allergy, and the flat 'Not the shellfish' will be repeated at the table as 'there is no shellfish in it'. That is true of the cut, but not always of the plate. Chefs like the pun and sometimes serve chicken oysters with real oysters, oyster sauce or a seafood garnish. The card should say what the word means without vouching for the dish.",
+					"fix": "Not the shellfish: the name is only for the shape. The sauce or garnish can still hold seafood.",
+					"lens": "safety",
+					"key": "meats-1-safety-10"
+				},
+				{
+					"id": "fd_0308",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "(no note)",
+					"because": "The Moulard breast, the magret on the card's own menu line, is classically seared and served pink, medium rare, and sliced. A server must be able to tell a guest that plainly before the order, because this is poultry served undercooked by default. Nothing on the card says it.",
+					"fix": "The breast is classically seared and served pink, medium rare, and sliced.",
+					"lens": "safety",
+					"key": "meats-1-safety-11"
+				},
+				{
+					"id": "fd_0305",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"beef tripe\", \"often tomato\", \"often onion\", \"sometimes white wine\", \"sometimes pecorino cheese\", \"sometimes hominy\"",
+					"because": "The card's origin names callos in Madrid, which is classically cooked with chorizo, morcilla and pig's or calf's foot, and menudo often adds pig's foot. The madeWith list is the only place a guest who avoids pork would see it flagged, and it does not name pork. There is room for a seventh item.",
+					"fix": "add \"sometimes pork\" as a seventh item",
+					"lens": "safety",
+					"key": "meats-1-safety-12"
+				},
+				{
+					"id": "fd_0306",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Best seared fast to pink or braised long.",
+					"because": "When grilled, duck hearts come pink in the middle by default. 'Best' reads as the chef's taste, not as the doneness the guest will actually get, so a server would not know to say it plainly up front.",
+					"fix": "Grilled, they come pink in the middle. Cooked past that and not braised, they turn tough and rubbery.",
+					"lens": "safety",
+					"key": "meats-1-safety-13"
+				},
+				{
+					"key": "meats-critic-1",
+					"id": "fd_0306",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Duck Hearts is confused with liver, and the card treats that as the main confusion: the guest line says \"nothing like liver\", the why says \"closer to duck breast than to liver\", and the only trap describes a livery organ. Chicken Liver (fd_0062) is still listed only in seeAlsoTerms, not in confusedWithTerms. The brief says that when the mistake is \"people confuse it with X\", the card should link X in confusedWithTerms and not rely on a trap. The trap also reads close to a description of liver, since chicken liver turns grainy when overcooked. Separately, the note repeats the guest line's \"served pink\". At 703 characters this is the second-longest new card.",
+					"because": "Duck Hearts is confused with liver, and the card treats that as the main confusion: the guest line says \"nothing like liver\", the why says \"closer to duck breast than to liver\", and the only trap describes a livery organ. Chicken Liver (fd_0062) is still listed only in seeAlsoTerms, not in confusedWithTerms. The brief says that when the mistake is \"people confuse it with X\", the card should link X in confusedWithTerms and not rely on a trap. The trap also reads close to a description of liver, since chicken liver turns grainy when overcooked. Separately, the note repeats the guest line's \"served pink\". At 703 characters this is the second-longest new card.",
+					"fix": "Move \"Chicken Liver\" from seeAlsoTerms to confusedWithTerms, and add notThis: \"Not liver. The heart is a working muscle, so it eats dense and meaty, where liver is soft and iron-strong.\" (98 chars). Drop the note so the card stays near its current length. If the note stays, cut it to the new fact only: \"Cooked well done, they turn tough and rubbery unless braised long.\" Keep the trap, since with the link in place it tests the confusion and no longer stands in for it."
+				},
+				{
+					"key": "meats-critic-2",
+					"id": "fd_0307",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The second sentence of notThis, \"A garnish or sauce can still hold seafood, so ask the kitchen.\", is a guess about what the dish holds. It is outside madeWith, and madeWith lists no seafood, so it hints at an ingredient the card never names, which is verdict-adjacent under rule 1. It also says nothing about what the dish is NOT. A server would repeat it word for word to a guest with a shellfish worry.",
+					"because": "The second sentence of notThis, \"A garnish or sauce can still hold seafood, so ask the kitchen.\", is a guess about what the dish holds. It is outside madeWith, and madeWith lists no seafood, so it hints at an ingredient the card never names, which is verdict-adjacent under rule 1. It also says nothing about what the dish is NOT. A server would repeat it word for word to a guest with a shellfish worry.",
+					"fix": "Replace notThis with: \"Not the shellfish: the name is only for the oval shape. On a menu with oysters, confirm which one the guest means.\" (about 113 chars). The allergy flag stays where it belongs, in madeWith and the app's fixed \"Confirm with the kitchen\" sentence."
+				},
+				{
+					"key": "meats-critic-3",
+					"id": "fd_0307",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The card misses a second real confusion. \"Oysters\" is a long-standing slang word for testicles: Rocky Mountain oysters and prairie oysters, and the Sweetbreads card's trap already uses that meaning. A nervous guest who hears \"chicken oysters\" often asks exactly this. The first trap, chicken-breast nuggets, is a weaker, less common mistake, and it borrows \"nuggets\" from the gist.",
+					"because": "The card misses a second real confusion. \"Oysters\" is a long-standing slang word for testicles: Rocky Mountain oysters and prairie oysters, and the Sweetbreads card's trap already uses that meaning. A nervous guest who hears \"chicken oysters\" often asks exactly this. The first trap, chicken-breast nuggets, is a weaker, less common mistake, and it borrows \"nuggets\" from the gist.",
+					"fix": "Replace the first trap with says \"Fried testicles of a rooster, served as a ranch-country bar snack\" (about 66 chars, so parity with the 59-char gist holds) and why \"They are two small pieces of dark meat from the back. The name describes only the shape.\" Optionally extend the guest line: \"...The name comes only from their shape, nothing else.\""
+				},
+				{
+					"key": "meats-critic-4",
+					"id": "fd_0305",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The alias \"Honeycomb Tripe\" names one type of tripe (from the second stomach chamber), not another name for the same thing. Aliases must be other names the SAME item is sold under, and a blanket-tripe or book-tripe dish would then answer to an alias that describes something else.",
+					"because": "The alias \"Honeycomb Tripe\" names one type of tripe (from the second stomach chamber), not another name for the same thing. Aliases must be other names the SAME item is sold under, and a blanket-tripe or book-tripe dish would then answer to an alias that describes something else.",
+					"fix": "Drop \"Honeycomb Tripe\" from aliases and keep \"Trippa\". The why already teaches honeycomb as a type."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "meats-1-fact-1",
+					"action": "applied",
+					"reason": "Added \"sometimes pork\" as the seventh madeWith item, since callos is classically cooked with chorizo and morcilla and menudo often adds pig's foot."
+				},
+				{
+					"finding": "meats-1-fact-2",
+					"action": "applied",
+					"reason": "The gist now reads \"Sterile hybrid duck raised for foie gras and a big red breast\", because a sterile first-generation cross is a hybrid and not a breed."
+				},
+				{
+					"finding": "meats-1-fact-3",
+					"action": "applied",
+					"reason": "The guest line now opens \"Moulard is the duck raised for foie gras, a cross of two breeds.\""
+				},
+				{
+					"finding": "meats-1-fact-4",
+					"action": "applied",
+					"reason": "The trap's why now says \"It is a hybrid duck, a sterile cross of Muscovy and Pekin, not a place or a farm.\""
+				},
+				{
+					"finding": "meats-1-fact-5",
+					"action": "applied",
+					"reason": "notThis now says Pekin is \"also sold as Long Island duck\" and no longer calls it a Long Island breed, because the breed comes from China."
+				},
+				{
+					"finding": "meats-1-fact-6",
+					"action": "applied",
+					"reason": "Added the aliases Mulard (the French spelling) and Mule Duck (the English name for the same hybrid)."
+				},
+				{
+					"finding": "meats-1-floor-7",
+					"action": "applied",
+					"reason": "The guest line now ends \"The name comes only from their oyster-like shape.\", so it names the oyster and the shape but does not promise that the plate holds no shellfish (see safety-10)."
+				},
+				{
+					"finding": "meats-1-floor-8",
+					"action": "applied",
+					"reason": "The guest line now reads \"a tiny steak, meaty with a slight chew and nothing like liver. Most are grilled fast and served pink.\""
+				},
+				{
+					"finding": "meats-1-floor-9",
+					"action": "applied",
+					"reason": "Replaced the stew simile with \"It cooks soft with a gentle chew and a mild taste, and soaks up its sauce.\""
+				},
+				{
+					"finding": "meats-1-safety-10",
+					"action": "applied",
+					"reason": "notThis now says the name is only for the oval shape, then \"A garnish or sauce can still hold seafood, so ask the kitchen.\" It explains the word without vouching for the dish."
+				},
+				{
+					"finding": "meats-1-safety-11",
+					"action": "applied",
+					"reason": "Added the note \"The breast is classically seared and served pink, medium rare, then sliced.\""
+				},
+				{
+					"finding": "meats-1-safety-12",
+					"action": "applied",
+					"reason": "This is the same change as fact-1: \"sometimes pork\" is added as the seventh madeWith item."
+				},
+				{
+					"finding": "meats-1-safety-13",
+					"action": "applied",
+					"reason": "The note now states the default doneness: \"Grilled, they usually come pink in the middle. Cooked well done, they turn tough and rubbery unless braised long.\""
+				},
+				{
+					"finding": "meats-critic-1",
+					"action": "applied",
+					"reason": "Moved Chicken Liver from seeAlsoTerms to confusedWithTerms, added the suggested notThis (106 chars), dropped the note that repeated \"served pink\", and kept the trap, so the card falls from 703 to 696 characters."
+				},
+				{
+					"finding": "meats-critic-2",
+					"action": "applied",
+					"reason": "Replaced notThis with a sentence about what the dish is not (the shellfish, and the testicle slang) and removed the guess that a garnish might hold seafood, so the allergy flag now lives only in madeWith and the app's fixed sentence."
+				},
+				{
+					"finding": "meats-critic-3",
+					"action": "applied",
+					"reason": "Replaced the chicken-breast nuggets trap with the rooster-testicle trap (65 chars against the 59-char gist) using the suggested why, and taught the slang in notThis. The guest line already says the name comes only from the shape, so it was left as is."
+				},
+				{
+					"finding": "meats-critic-4",
+					"action": "applied",
+					"reason": "Dropped Honeycomb Tripe from aliases and kept Trippa. The why still teaches honeycomb as one type."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0306",
+						"issue": "Duck Hearts is confused with liver, and the card treats that as the main confusion: the guest line says \"nothing like liver\", the why says \"closer to duck breast than to liver\", and the only trap describes a livery organ. Chicken Liver (fd_0062) is still listed only in seeAlsoTerms, not in confusedWithTerms. The brief says that when the mistake is \"people confuse it with X\", the card should link X in confusedWithTerms and not rely on a trap. The trap also reads close to a description of liver, since chicken liver turns grainy when overcooked. Separately, the note repeats the guest line's \"served pink\". At 703 characters this is the second-longest new card.",
+						"fix": "Move \"Chicken Liver\" from seeAlsoTerms to confusedWithTerms, and add notThis: \"Not liver. The heart is a working muscle, so it eats dense and meaty, where liver is soft and iron-strong.\" (98 chars). Drop the note so the card stays near its current length. If the note stays, cut it to the new fact only: \"Cooked well done, they turn tough and rubbery unless braised long.\" Keep the trap, since with the link in place it tests the confusion and no longer stands in for it."
+					},
+					{
+						"id": "fd_0307",
+						"issue": "The second sentence of notThis, \"A garnish or sauce can still hold seafood, so ask the kitchen.\", is a guess about what the dish holds. It is outside madeWith, and madeWith lists no seafood, so it hints at an ingredient the card never names, which is verdict-adjacent under rule 1. It also says nothing about what the dish is NOT. A server would repeat it word for word to a guest with a shellfish worry.",
+						"fix": "Replace notThis with: \"Not the shellfish: the name is only for the oval shape. On a menu with oysters, confirm which one the guest means.\" (about 113 chars). The allergy flag stays where it belongs, in madeWith and the app's fixed \"Confirm with the kitchen\" sentence."
+					},
+					{
+						"id": "fd_0307",
+						"issue": "The card misses a second real confusion. \"Oysters\" is a long-standing slang word for testicles: Rocky Mountain oysters and prairie oysters, and the Sweetbreads card's trap already uses that meaning. A nervous guest who hears \"chicken oysters\" often asks exactly this. The first trap, chicken-breast nuggets, is a weaker, less common mistake, and it borrows \"nuggets\" from the gist.",
+						"fix": "Replace the first trap with says \"Fried testicles of a rooster, served as a ranch-country bar snack\" (about 66 chars, so parity with the 59-char gist holds) and why \"They are two small pieces of dark meat from the back. The name describes only the shape.\" Optionally extend the guest line: \"...The name comes only from their shape, nothing else.\""
+					},
+					{
+						"id": "fd_0305",
+						"issue": "The alias \"Honeycomb Tripe\" names one type of tripe (from the second stomach chamber), not another name for the same thing. Aliases must be other names the SAME item is sold under, and a blanket-tripe or book-tripe dish would then answer to an alias that describes something else.",
+						"fix": "Drop \"Honeycomb Tripe\" from aliases and keep \"Trippa\". The why already teaches honeycomb as a type."
+					}
+				],
+				"notes": "Every roster row has a card: fd_0050 to fd_0063 are already written in src/lib/data/floor-deck.json, and this pass adds fd_0305 to fd_0308. Section prose mean with all 18 cards is 675.6, under the 720 ceiling. The new cards come to 622 / 703 / 683 / 760, every field is inside its band, and gist-to-trap length parity holds on all four. No banned substrings, verdict words, en/em dashes or degree signs in the new cards. The Quail knownPacketError is satisfied by the existing trap \"Tiny wild-shot bird with a strong, gamy flavor and dark, livery meat\". No gist or guest line duplicates an existing one, and the new gists are distinct from their neighbours (Tripe vs Beef Tongue, Moulard vs Duck Breast / Foie Gras). Facts checked and found sound: honeycomb tripe is the second chamber (reticulum); moulard is a sterile Muscovy drake x Pekin hen hybrid giving most foie gras, raised in southwest France and the Hudson Valley; the chicken oyster sits in the hollow of the ilium; sot-l'y-laisse means \"the fool leaves it there\". Cross-section linking: the roster has no Pekin, Muscovy, Chitterlings, Gizzard or Mountain Oysters card, so the notThis prose on Moulard and the trap on Tripe are the right tools. The Moulard why says \"its breast, the magret\", which is consistent with the Duck Breast card's Magret alias and origin line, so no confusion link is needed there. Operator: the shared scratchpad already held an unrelated new.json from another run; I wrote my measurement input to meats-critic-new4.json instead and left the existing file alone."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

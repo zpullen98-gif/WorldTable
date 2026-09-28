@@ -545,6 +545,287 @@
 				"notes": "No card fails the build gate. The section mean is 634 characters of prose against the 720 ceiling. Every card is between 491 and 781 characters, and every field is inside its band. I found no verdict words, no em or en dashes, no banned substrings and no British spellings. No term, alias or listed word appears in a gist or trap. None of the roster rows carries a knownPacketError, so no trap is owed. Both accented terms (Chèvre, Crème Fraîche) have a say line, and every \"say\" follows the key. Pairs linked correctly in both directions: Burrata and Fresh Mozzarella, Bloomy Rind and Washed Rind, Clarified Butter and Ghee. The problems above are the three one-sided confusions and two length-parity cases. Minor points, not worth a gate: several madeWith lists leave out salt and rennet (Feta, Fresh Mozzarella, Burrata), and Brown Butter and Ghee have similar gists, though \"left in\" and \"strained out\" do tell them apart. I found no cross-section confusion missing: Brown Butter to Meunière and Compound Butter to Beurre Blanc are seeAlso links, which is correct."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-28",
+			"pass": "revision",
+			"cards": [
+				"fd_0325",
+				"fd_0326",
+				"fd_0327",
+				"fd_0328"
+			],
+			"findings": [
+				{
+					"id": "fd_0328",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "Roccaverano is at least half goat",
+					"because": "The at-least-50-percent-goat rule is out of date. Regulation (EU) 2023/335 (1 February 2023) renamed the DOP 'Roccaverano' and now requires raw whole goat's milk only. Cow's and sheep's milk are no longer allowed.",
+					"fix": "Milk varies by maker: Roccaverano is all goat, Bosina is cow and sheep.",
+					"lens": "fact",
+					"key": "dairy-1-fact-1"
+				},
+				{
+					"id": "fd_0328",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Robiola is milder and pale.",
+					"because": "This is too broad for a card whose origin names Lombardy. Lombard robiolas such as Robiola della Valsassina are washed-rind squares with a reddish rind. They are made like small Taleggios, so a guest who is served one would hear that it cannot look like this.",
+					"fix": "Not Taleggio, the square with an orange rind and loud smell. Most robiola is milder and pale.",
+					"lens": "fact",
+					"key": "dairy-1-fact-2"
+				},
+				{
+					"id": "fd_0328",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "often a blend of cow's, goat's and sheep's milk",
+					"because": "Three-milk robiola (tre latti) exists but is not the usual kind. Bosina uses two milks, Roccaverano uses goat only, and many robiolas are cow only. As written, the line leads a server to say three milks as the default.",
+					"fix": "often a blend of cow's milk with goat's or sheep's",
+					"lens": "fact",
+					"key": "dairy-1-fact-3"
+				},
+				{
+					"id": "fd_0325",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Firm aged cheese shaved into thin ribbons over pasta and salads",
+					"because": "This trap is a true description of another roster card, Parmesan (fd_0159). A trap must not describe another card on the roster.",
+					"fix": "Aged stretched curd dried hard and grated over pasta and soup",
+					"lens": "fact",
+					"key": "dairy-1-fact-4"
+				},
+				{
+					"id": "fd_0325",
+					"field": "lexiconSlug",
+					"severity": "unclear",
+					"claim": "burrata",
+					"because": "The Burrata entry is the long-form essay on burrata, the filled pouch. This card also lists Burrata as its main confusion (confusedWithTerms). Stracciatella only comes up in that essay's opening sentence, so the essay is not about the same subject.",
+					"fix": "omit lexiconSlug",
+					"lens": "fact",
+					"key": "dairy-1-fact-5"
+				},
+				{
+					"id": "fd_0328",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Not Taleggio, the square with a sticky orange rind and loud smell. Robiola is milder and pale.",
+					"because": "Robiola is a family, as the card's own why says, and some of it is exactly that: Robiola Lombarda and Robiola di Valsassina are washed-rind squares with a reddish-orange rind. A flat 'Robiola is milder and pale' is false for those. The difference that holds on American menus (Bosina, La Tur, tre latte, Roccaverano) is that most robiola is smaller, paler and milder. 'Loud smell' is also slang a new hire should not repeat.",
+					"fix": "Not Taleggio, the big square with a sticky orange rind. Most robiola is paler and milder.",
+					"lens": "floor",
+					"key": "dairy-1-floor-6"
+				},
+				{
+					"id": "fd_0325",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Also the name of a Roman egg soup and a gelato.",
+					"because": "The gelato is the stracciatella most American guests already know, and a server who reads 'a gelato' cannot tell a guest which one. It is the chocolate-chip one. Naming it is what lets a server clear up the confusion at the table. The shorter pouch clause makes room for it.",
+					"fix": "Not burrata, its pouch. Also a Roman egg soup and a chocolate-chip gelato.",
+					"lens": "floor",
+					"key": "dairy-1-floor-7"
+				},
+				{
+					"id": "fd_0325",
+					"field": "say",
+					"severity": "style",
+					"claim": "strah-chah-TEL-lah",
+					"because": "The key asks for how an American dining room says the word, not the Italian double l. Americans reduce the unstressed vowels, and the sibling cards follow that pattern (boo-RAH-tuh, rih-KAH-tuh). A new hire reading 'TEL-lah' tends to stress the ending too.",
+					"fix": "strah-chuh-TEL-uh",
+					"lens": "floor",
+					"key": "dairy-1-floor-8"
+				},
+				{
+					"id": "fd_0328",
+					"field": "say",
+					"severity": "style",
+					"claim": "roh-bee-OH-lah",
+					"because": "An American dining room reduces the final vowel, and the section's other Italian respellings end in -uh (boo-RAH-tuh, rih-KAH-tuh). This one should match.",
+					"fix": "roh-bee-OH-luh",
+					"lens": "floor",
+					"key": "dairy-1-floor-9"
+				},
+				{
+					"id": "fd_0326",
+					"field": "line",
+					"severity": "style",
+					"claim": "Triple crème cheese, strawberries, honey, baguette",
+					"because": "No real menu or cheese list prints 'triple crème cheese'. The style word stands on its own, or follows a named cheese such as Brillat-Savarin. The added 'cheese' is what makes the line look written for a card.",
+					"fix": "Triple crème, strawberries, honey, warm baguette",
+					"lens": "floor",
+					"key": "dairy-1-floor-10"
+				},
+				{
+					"id": "fd_0327",
+					"field": "why",
+					"severity": "style",
+					"claim": "It melts silky, hence pizza.",
+					"because": "This is clipped note-speak. It is not a sentence a new hire can take in or pass on when a guest asks why it is on the pizza.",
+					"fix": "It melts smoothly on pizza.",
+					"lens": "floor",
+					"key": "dairy-1-floor-11"
+				},
+				{
+					"id": "fd_0325",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"cow's milk\", \"cream\", \"salt\", \"sometimes buffalo milk\"",
+					"because": "Stracciatella is made from pasta filata mozzarella curd, and that curd is set with rennet, usually animal rennet. The other three cards in this section flag rennet (Triple Crème and Robiola list \"often rennet\", Taleggio lists \"traditionally calf rennet\"). Leaving it off this card only means a server checking the list for a guest who avoids animal rennet would find nothing to confirm with the kitchen.",
+					"fix": "\"cow's milk\", \"cream\", \"salt\", \"often rennet\", \"sometimes buffalo milk\"",
+					"lens": "safety",
+					"key": "dairy-1-safety-12"
+				},
+				{
+					"key": "dairy-critic-1",
+					"id": "fd_0328",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The note is false. Robiola di Roccaverano DOP has to be at least 50 percent goat's milk, and the rest can be cow's or sheep's milk. So \"Roccaverano is all goat\" is wrong: only some Roccaverano is pure goat. The note also restates the madeWith list and the why ('often a blend', the Bosina example). It is not a doneness, raw-service or handling fact. At 752 characters this is the longest card in the section.",
+					"because": "The note is false. Robiola di Roccaverano DOP has to be at least 50 percent goat's milk, and the rest can be cow's or sheep's milk. So \"Roccaverano is all goat\" is wrong: only some Roccaverano is pure goat. The note also restates the madeWith list and the why ('often a blend', the Bosina example). It is not a doneness, raw-service or handling fact. At 752 characters this is the longest card in the section.",
+					"fix": "Delete the note. That takes the card to 681 characters, and the why and madeWith already cover the milk varying. If a milk fact has to stay, put it in the why as: \"Roccaverano is at least half goat's milk, Bosina is cow and sheep.\""
+				},
+				{
+					"key": "dairy-critic-2",
+					"id": "fd_0327",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The two cards disagree about each other. Robiola (fd_0328) lists Taleggio under confusedWithTerms, but Taleggio lists Robiola under seeAlsoTerms. floor-deck.mjs symmetrises confusedWith, so the emitted Taleggio card ends up with Robiola in both confusedWith and seeAlso, which breaks the 'a term may not be in both' rule. It also carries a confusedWith with no notThis, which breaks the 'notThis REQUIRED whenever confusedWithTerms is given' rule.",
+					"because": "The two cards disagree about each other. Robiola (fd_0328) lists Taleggio under confusedWithTerms, but Taleggio lists Robiola under seeAlsoTerms. floor-deck.mjs symmetrises confusedWith, so the emitted Taleggio card ends up with Robiola in both confusedWith and seeAlso, which breaks the 'a term may not be in both' rule. It also carries a confusedWith with no notThis, which breaks the 'notThis REQUIRED whenever confusedWithTerms is given' rule.",
+					"fix": "On Taleggio, move \"Robiola\" out of seeAlsoTerms and into confusedWithTerms: [\"Robiola\"]. Keep seeAlsoTerms as [\"Washed Rind\", \"Bloomy Rind\"]. Add a notThis, for example: \"Not robiola, a smaller, paler, milder soft square. Taleggio has the sticky orange rind and the smell.\" That is about 100 characters and takes the card to about 733, still well under the section mean."
+				},
+				{
+					"key": "dairy-critic-3",
+					"id": "fd_0326",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The gist leads on the rind ('Soft white-rinded cheese ...'). Wrong options are drawn from gists in the same section, so the Bloomy Rind gist ('Soft cheese under a velvety white mold skin that ripens it inward') can appear as a wrong answer for Triple Crème, and it is broadly true of most triple crèmes. In the other direction, this gist sits beside the Bloomy Rind key as a near-true option. A reader cannot cleanly tell the two apart. What makes this card this card is the added cream, not the rind.",
+					"because": "The gist leads on the rind ('Soft white-rinded cheese ...'). Wrong options are drawn from gists in the same section, so the Bloomy Rind gist ('Soft cheese under a velvety white mold skin that ripens it inward') can appear as a wrong answer for Triple Crème, and it is broadly true of most triple crèmes. In the other direction, this gist sits beside the Bloomy Rind key as a near-true option. A reader cannot cleanly tell the two apart. What makes this card this card is the added cream, not the rind.",
+					"fix": "Rewrite the gist so it leads on the fat and leaves out the rind, for example: \"Extra-rich soft cheese made from milk boosted with added cream\" (61 characters, no 'triple', no closing full stop). The rind stays in the why and the notThis."
+				},
+				{
+					"key": "dairy-critic-4",
+					"id": "fd_0326",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "There is no trap, but the most common real mistake about this term has a clear false answer: guests and new servers read 'triple' as three milks (cow, goat and sheep). Also, 'Brebis' in seeAlsoTerms has no real link to this card. Brebis is a sheep's milk word, and triple crème is cow's milk and cream.",
+					"because": "There is no trap, but the most common real mistake about this term has a clear false answer: guests and new servers read 'triple' as three milks (cow, goat and sheep). Also, 'Brebis' in seeAlsoTerms has no real link to this card. Brebis is a sheep's milk word, and triple crème is cow's milk and cream.",
+					"fix": "Add the trap { says: \"Soft cheese named for the three milks in it: cow, goat and sheep\", why: \"The name counts cream, not milks. It is cow's milk made richer with added cream.\" }. Keep the says within about 10 characters of the revised gist. It is not a true description of Robiola, which is not named for its milks. Replace \"Brebis\" in seeAlsoTerms with \"Crème Fraîche\" (another cream word guests mix up by name), giving seeAlsoTerms [\"Bloomy Rind\", \"Mascarpone\", \"Crème Fraîche\"]."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "dairy-1-fact-1",
+					"action": "applied",
+					"reason": "The note now says Roccaverano is all goat. This follows the 2023 DOP amendment that made it goat's milk only."
+				},
+				{
+					"finding": "dairy-1-fact-2",
+					"action": "applied",
+					"reason": "The notThis now says most robiola is paler and milder. It no longer says all robiola is, because the washed-rind Lombard squares are real. The wording is shared with floor-6."
+				},
+				{
+					"finding": "dairy-1-fact-3",
+					"action": "applied",
+					"reason": "The guest line now reads \"often a blend of cow's milk with goat's or sheep's\", so a server will not give three milks as the default."
+				},
+				{
+					"finding": "dairy-1-fact-4",
+					"action": "applied",
+					"reason": "The trap now reads \"Aged stretched curd dried hard and grated over pasta and soups\". That is false for stracciatella and does not describe any card on the roster. Its why now says \"spooned, not grated\", and the gist was cut to 60 characters so it is no longer the longest option."
+				},
+				{
+					"finding": "dairy-1-fact-5",
+					"action": "applied",
+					"reason": "lexiconSlug is removed. The burrata essay covers the filled pouch, which is this card's main confusion, not stracciatella itself."
+				},
+				{
+					"finding": "dairy-1-floor-6",
+					"action": "applied",
+					"reason": "The notThis now reads \"Not Taleggio, the big square with a sticky orange rind. Most robiola is paler and milder.\" This drops the slang \"loud smell\" and the claim that holds for every robiola."
+				},
+				{
+					"finding": "dairy-1-floor-7",
+					"action": "applied",
+					"reason": "The notThis now names the chocolate-chip gelato. I kept \"the pouch it fills\" rather than \"its pouch\", which reads as if burrata were stracciatella's pouch: \"Not burrata, the pouch it fills. Also a Roman egg soup and a chocolate-chip gelato.\""
+				},
+				{
+					"finding": "dairy-1-floor-8",
+					"action": "applied",
+					"reason": "say is now strah-chuh-TEL-uh, with the reduced vowels an American dining room uses."
+				},
+				{
+					"finding": "dairy-1-floor-9",
+					"action": "applied",
+					"reason": "say is now roh-bee-OH-luh, which matches the section's other Italian respellings."
+				},
+				{
+					"finding": "dairy-1-floor-10",
+					"action": "applied",
+					"reason": "The line drops the added \"cheese\". It now puts the style word after a named cheese, the way cheese lists print it: \"Brillat-Savarin triple crème, strawberries, honey\"."
+				},
+				{
+					"finding": "dairy-1-floor-11",
+					"action": "applied",
+					"reason": "The why now ends with a full sentence, \"It melts smoothly, so it suits pizza.\""
+				},
+				{
+					"finding": "dairy-1-safety-12",
+					"action": "applied",
+					"reason": "\"often rennet\" is added to madeWith, since the mozzarella curd it is made from is set with rennet. This matches the other cards in the section."
+				},
+				{
+					"finding": "dairy-critic-1",
+					"action": "applied",
+					"reason": "Deleted the Robiola note: it said Roccaverano is all goat, but the rules require only at least half goat's milk, and the note also repeated the why and madeWith. The card is now 681 characters."
+				},
+				{
+					"finding": "dairy-critic-2",
+					"action": "applied",
+					"reason": "On Taleggio, moved Robiola from seeAlsoTerms to confusedWithTerms so it matches the Robiola card, and added a notThis that tells the two apart. The card is now 734 characters and the three-card mean is 704."
+				},
+				{
+					"finding": "dairy-critic-3",
+					"action": "applied",
+					"reason": "Rewrote the Triple Crème gist to lead on the added cream instead of the rind (62 characters, the word triple left out), so the Bloomy Rind gist is no longer a near-true wrong option."
+				},
+				{
+					"finding": "dairy-critic-4",
+					"action": "applied",
+					"reason": "Added the trap about three milks (64 characters, within 2 of the gist) with a why saying the name counts cream, and replaced Brebis with Crème Fraîche in seeAlsoTerms."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0328",
+						"issue": "The note is false. Robiola di Roccaverano DOP has to be at least 50 percent goat's milk, and the rest can be cow's or sheep's milk. So \"Roccaverano is all goat\" is wrong: only some Roccaverano is pure goat. The note also restates the madeWith list and the why ('often a blend', the Bosina example). It is not a doneness, raw-service or handling fact. At 752 characters this is the longest card in the section.",
+						"fix": "Delete the note. That takes the card to 681 characters, and the why and madeWith already cover the milk varying. If a milk fact has to stay, put it in the why as: \"Roccaverano is at least half goat's milk, Bosina is cow and sheep.\""
+					},
+					{
+						"id": "fd_0327",
+						"issue": "The two cards disagree about each other. Robiola (fd_0328) lists Taleggio under confusedWithTerms, but Taleggio lists Robiola under seeAlsoTerms. floor-deck.mjs symmetrises confusedWith, so the emitted Taleggio card ends up with Robiola in both confusedWith and seeAlso, which breaks the 'a term may not be in both' rule. It also carries a confusedWith with no notThis, which breaks the 'notThis REQUIRED whenever confusedWithTerms is given' rule.",
+						"fix": "On Taleggio, move \"Robiola\" out of seeAlsoTerms and into confusedWithTerms: [\"Robiola\"]. Keep seeAlsoTerms as [\"Washed Rind\", \"Bloomy Rind\"]. Add a notThis, for example: \"Not robiola, a smaller, paler, milder soft square. Taleggio has the sticky orange rind and the smell.\" That is about 100 characters and takes the card to about 733, still well under the section mean."
+					},
+					{
+						"id": "fd_0326",
+						"issue": "The gist leads on the rind ('Soft white-rinded cheese ...'). Wrong options are drawn from gists in the same section, so the Bloomy Rind gist ('Soft cheese under a velvety white mold skin that ripens it inward') can appear as a wrong answer for Triple Crème, and it is broadly true of most triple crèmes. In the other direction, this gist sits beside the Bloomy Rind key as a near-true option. A reader cannot cleanly tell the two apart. What makes this card this card is the added cream, not the rind.",
+						"fix": "Rewrite the gist so it leads on the fat and leaves out the rind, for example: \"Extra-rich soft cheese made from milk boosted with added cream\" (61 characters, no 'triple', no closing full stop). The rind stays in the why and the notThis."
+					},
+					{
+						"id": "fd_0326",
+						"issue": "There is no trap, but the most common real mistake about this term has a clear false answer: guests and new servers read 'triple' as three milks (cow, goat and sheep). Also, 'Brebis' in seeAlsoTerms has no real link to this card. Brebis is a sheep's milk word, and triple crème is cow's milk and cream.",
+						"fix": "Add the trap { says: \"Soft cheese named for the three milks in it: cow, goat and sheep\", why: \"The name counts cream, not milks. It is cow's milk made richer with added cream.\" }. Keep the says within about 10 characters of the revised gist. It is not a true description of Robiola, which is not named for its milks. Replace \"Brebis\" in seeAlsoTerms with \"Crème Fraîche\" (another cream word guests mix up by name), giving seeAlsoTerms [\"Bloomy Rind\", \"Mascarpone\", \"Crème Fraîche\"]."
+					}
+				],
+				"notes": "Checks that passed: all four todo rows (fd_0325 to fd_0328) have cards, and the 18 written rows already exist in tools/derive/floor-deck/dairy.mjs. The section mean with the four new cards as submitted is 656 characters, under the 720 ceiling. Every card is between 633 and 752 characters. I found no verdict words, no em or en dashes and no banned substrings. Every accented or hard term has a say. No row carries a knownPacketError. The gists and guest lines can all be told apart from their neighbours: Stracciatella and Burrata differ as the loose filling against the pouch. The one exception is Triple Crème against Bloomy Rind, which is raised above. The Stracciatella and Burrata link is one-sided, but floor-deck.mjs symmetrises confusedWith at build time, so Burrata's module needs no edit.\n\nFacts checked: the triple crème grade is at least 75 percent fat in dry matter. Taleggio DOP ages at least 35 days, is washed weekly and uses calf rennet. Robiola Bosina is cow and sheep milk. Robiola di Roccaverano DOP is at least 50 percent goat, so the 'all goat' note is wrong. Source: https://www.piemonteagri.it/qualita/en/products/cheese/374-robiola-di-roccaverano-dop\n\nOwner judgement calls, not gate failures:\n(1) Stracciatella is placed at level 3 while Burrata is at level 2. Stracciatella is now common on good American menus and is the direct confusable of Burrata, so level 2 may fit the standard better.\n(2) Robiola at level 4 is arguable. It shows up often on pizza and pasta menus, so level 3 may fit.\n(3) Robiola's line 'Robiola agnolotti, brown butter, sage' nearly repeats Brown Butter's line 'Butternut squash agnolotti, brown butter, sage'. A different line, such as 'Robiola, truffle honey, focaccia', would read better across the deck.\n(4) The Taleggio gist will sometimes be drawn as a wrong option on the Washed Rind question, and it describes one washed-rind cheese. It is specific enough (square, Lombardy) that I did not raise it as a problem, but a reconciler may want to watch it."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

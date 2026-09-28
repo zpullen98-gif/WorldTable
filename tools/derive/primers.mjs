@@ -78,6 +78,69 @@ const SAFETY_ID = { clause: 'disciplines', fact: 'entries', numeric: 'numbers', 
 /** @param {number} level @param {string} subsection */
 export const primerKey = (level, subsection) => `${level}-${subsection}`;
 
+/* A count in prose goes stale the day an item moves, and on 28 Sep 2026 eight
+   primers were found saying the wrong number (the Sous Chef deck "thirty-five
+   cards" when it held 78). The level page prints the count above the door, so
+   a primer need not say it; when it does, the number must be true. A number
+   written straight before the subsection's own noun ("Fourteen dishes", "122
+   cards") is read as a count and must equal this level's, a neighbouring
+   level's (the next line looks up a rung) or the whole app's. A qualified
+   count is a subset and is left alone: a word between the number and the
+   noun ("five Easy plates"), a definite lead ("the three entries that...",
+   "Those four faults") or a qualifier after it ("30 entries on restaurant
+   finance"). The Lexicon is counted only as "terms": its "entries" are
+   nearly always one atlas or category. */
+export const COUNT_NOUNS = {
+	dishes: ['dishes'],
+	techniques: ['techniques'],
+	lexicon: ['terms'],
+	deck: ['cards'],
+	palate: ['faults'],
+	safety: ['items', 'entries'],
+	service: ['modules'],
+	plates: ['folios']
+};
+const UNITS = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+const TEENS = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+const TENS = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+const NUMBER = `[0-9]+|(?:${TENS.join('|')})(?:[- ](?:${UNITS.join('|')}))?|${TEENS.join('|')}|${UNITS.join('|')}`;
+const SUBSET_BEFORE = new Set(['the', 'those', 'these', 'its', 'their', 'your']);
+const SUBSET_AFTER = new Set(['of', 'on', 'in', 'from', 'that', 'which', 'for', 'you', 'we', 'about']);
+const COUNT_RE = new RegExp(`(^|[^a-z0-9-])(${NUMBER})[ ]+([a-z]+)(?=[^a-z]|$)`, 'gi');
+
+/** "thirty-five" -> 35, "122" -> 122
+ *  @param {string} w */
+export function countValue(w) {
+	const t = w.toLowerCase();
+	if (/^[0-9]+$/.test(t)) return Number(t);
+	const [a, b] = t.split(/[- ]/);
+	if (TENS.includes(a)) return 20 + TENS.indexOf(a) * 10 + (b ? UNITS.indexOf(b) + 1 : 0);
+	if (TEENS.includes(a)) return 10 + TEENS.indexOf(a);
+	return UNITS.indexOf(a) + 1;
+}
+
+/**
+ * Every count the prose states of this subsection's own items that matches
+ * none of the true counts.
+ * @param {string} text
+ * @param {string} subsection
+ * @param {Set<number>} allowed
+ */
+export function staleCounts(text, subsection, allowed) {
+	const nouns = COUNT_NOUNS[/** @type {keyof typeof COUNT_NOUNS} */ (subsection)] ?? [];
+	const out = [];
+	const all = String(text ?? '');
+	for (const m of all.matchAll(COUNT_RE)) {
+		if (!nouns.includes(m[3].toLowerCase())) continue;
+		const lead = all.slice(0, (m.index ?? 0) + m[1].length).toLowerCase().split(/[^a-z]+/).filter(Boolean).pop();
+		const tail = all.slice((m.index ?? 0) + m[0].length).toLowerCase().split(/[^a-z]+/).filter(Boolean)[0];
+		if ((lead && SUBSET_BEFORE.has(lead)) || (tail && SUBSET_AFTER.has(tail))) continue;
+		const n = countValue(m[2]);
+		if (!allowed.has(n)) out.push(`${m[2]} ${m[3]}`);
+	}
+	return out;
+}
+
 /**
  * Where a cite's link goes, without the base: the same doors the level page
  * opens, decided at build so the read page needs no data joins of its own.
@@ -175,8 +238,9 @@ function checkProse(where, value, range, problems) {
  * The gate for one authored primer.
  *
  * @param {unknown} text the file's JSON, parsed
- * @param {{ key: string, items: Map<string, { slug: string, name: string, kind?: string }> }} ctx
- *   the items placed at this level in this subsection, by slug, with the name the text must use
+ * @param {{ key: string, items: Map<string, { slug: string, name: string, kind?: string }>, counts?: { here: number, allowed: Set<number> } }} ctx
+ *   the items placed at this level in this subsection, by slug, with the name the text must use,
+ *   and the counts a number in the prose may state
  * @returns {{ problems: string[], primer: any }}
  */
 export function checkPrimer(text, ctx) {
@@ -204,6 +268,13 @@ export function checkPrimer(text, ctx) {
 		p.paragraphs.forEach((para, i) => checkProse(`${where} paragraph ${i + 1}`, para, /** @type {[number, number]} */ (LIMITS.paragraph), problems));
 		const n = p.paragraphs.reduce((a, s) => a + words(s), 0);
 		if (n < LIMITS.words[0] || n > LIMITS.words[1]) problems.push(`${where}: ${n} words across the paragraphs, wanted ${LIMITS.words[0]} to ${LIMITS.words[1]}`);
+	}
+
+	if (ctx.counts && typeof p.subsection === 'string') {
+		const prose = [p.lede, ...(Array.isArray(p.paragraphs) ? p.paragraphs : []), p.next].join(' ');
+		for (const said of staleCounts(prose, p.subsection, ctx.counts.allowed)) {
+			problems.push(`${where}: says "${said}", but ${p.subsection} holds ${ctx.counts.here} at this level; a count in prose must be exact, or left out (the level page prints it)`);
+		}
 	}
 
 	if (!Array.isArray(p.cites) || p.cites.some((c) => typeof c !== 'string')) problems.push(`${where}: cites is not an array of slugs`);
@@ -311,7 +382,11 @@ export function buildPrimers(ctx) {
 			problems.push(`primers/${file.key}.json: nothing is placed there, so there is nothing to prime (Chef holds no plates)`);
 			continue;
 		}
-		const r = checkPrimer(file.text, { key: file.key, items: its });
+		const [lv, sub] = [Number(file.key.split('-')[0]), file.key.slice(file.key.indexOf('-') + 1)];
+		const sizeAt = (/** @type {number} */ l) => items.get(primerKey(l, sub))?.size ?? 0;
+		const total = LEVEL_KEYS.reduce((n, l) => n + sizeAt(l), 0);
+		const allowed = new Set([sizeAt(lv), total, ...(lv > 1 ? [sizeAt(lv - 1)] : []), ...(lv < LEVEL_KEYS.length ? [sizeAt(lv + 1)] : [])]);
+		const r = checkPrimer(file.text, { key: file.key, items: its, counts: { here: its.size, allowed } });
 		problems.push(...r.problems);
 		if (r.primer) byKey.set(file.key, r.primer);
 	}

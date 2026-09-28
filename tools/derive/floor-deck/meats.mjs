@@ -244,10 +244,79 @@ const cards = [
 			{ says: 'Gristly, strong-tasting organ that stays chewy however long it cooks', why: 'It is a muscle that turns tender with long cooking and tastes like mild roast beef.' }
 		]
 	},
-	{ id: 'fd_0305', term: 'Tripe', planned: true },
-	{ id: 'fd_0306', term: 'Duck Hearts', planned: true },
-	{ id: 'fd_0307', term: 'Chicken Oysters', planned: true },
-	{ id: 'fd_0308', term: 'Moulard', planned: true }
+	{
+		id: 'fd_0305',
+		term: 'Tripe',
+		level: 3,
+		aliases: ['Trippa'],
+		gist: "Cleaned lining of a cow's stomach, simmered until soft",
+		guest: 'Tripe is the lining of a beef stomach, cleaned and simmered for hours. It cooks soft with a gentle chew and a mild taste, and soaks up its sauce.',
+		why: "A cow's stomach has four chambers. Honeycomb tripe, from the second, is prized for a lacy texture that holds sauce. Kitchens buy it scrubbed and blanched, then simmer it two to three hours until it goes from rubbery to tender, with only a faint beefy taste.",
+		madeWith: ['beef tripe', 'often tomato', 'often onion', 'sometimes white wine', 'sometimes pecorino cheese', 'sometimes hominy', 'sometimes pork'],
+		origin: 'Trippa alla romana in Rome, menudo in Mexico, callos in Madrid',
+		pairs: 'Tomato sauce, mint and pecorino, red chile broth, crusty bread',
+		seeAlso: ['fd_0063', 'fd_0007', 'fd_0040'],
+		line: 'Trippa alla romana, tomato, mint, pecorino',
+		traps: [
+			{ says: 'Cleaned pig intestines, boiled and then fried until crisp', why: 'Tripe is stomach lining, most often beef. Intestines are chitterlings, a different cut.' }
+		]
+	},
+	{
+		id: 'fd_0306',
+		term: 'Duck Hearts',
+		level: 3,
+		gist: "Thumb-sized organ that pumps a bird's blood, eaten like dark meat",
+		guest: 'Duck hearts are pure muscle, so they eat like a tiny steak, meaty with a slight chew and nothing like liver. Most are grilled fast and served pink.',
+		why: 'The heart works nonstop, so it is dense, lean muscle, red with iron-rich myoglobin, closer to duck breast than to liver. Trimmed of fat and vessels, it is seared or skewered and grilled. Gizzards are the other muscle organ, firmer, and often confit.',
+		madeWith: ['duck heart', 'often garlic', 'sometimes soy sauce', 'sometimes butter'],
+		origin: 'Heart on the grill: chicken at Japanese yakitori bars, beef in Peruvian anticuchos',
+		notThis: 'Not liver. The heart is a working muscle, so it eats dense and meaty, where liver is soft and iron-strong.',
+		seeAlso: ['fd_0056', 'fd_0063'],
+		confusedWith: ['fd_0062'],
+		line: 'Grilled duck hearts, salsa verde, charred onion',
+		traps: [
+			{ says: 'Strong, livery organ with a soft, grainy texture and a bitter edge', why: 'The heart is a muscle, so it eats dense and meaty like dark meat, not soft or livery.' }
+		]
+	},
+	{
+		id: 'fd_0307',
+		term: 'Chicken Oysters',
+		level: 4,
+		say: 'CHIK-in OY-sterz',
+		aliases: ["Sot-l'y-laisse"],
+		gist: "Two coin-sized nuggets of dark meat set along a bird's back",
+		guest: "They are the two little rounds of dark meat along a chicken's backbone, the juiciest bite on the bird. The name comes only from their oyster-like shape.",
+		why: "Each one sits in a spoon-shaped hollow of the hip bone, on the back just above the thigh. It is a small muscle of dark meat, so it roasts up tender and juicy. Carvers miss them, and one plate takes several birds, so they are a chef's luxury.",
+		madeWith: ['chicken', 'often butter', 'sometimes soy sauce'],
+		origin: "French sot-l'y-laisse, the bit only a fool leaves on the carcass",
+		notThis: 'Not the shellfish, and not the old slang for testicles. The name is only for the oval shape of the meat.',
+		seeAlso: ['fd_0057', 'fd_0228'],
+		confusedWith: ['fd_0115'],
+		line: 'Roasted chicken oysters, brown butter, sherry jus',
+		traps: [
+			{ says: 'Fried testicles of a rooster, served as a ranch-country bar snack', why: 'They are two small pieces of dark meat from the back. The name describes only the shape.' },
+			{ says: 'Small shucked shellfish poached gently in a rich chicken broth', why: 'It is chicken meat. The name describes the shape of two small pieces of dark meat.' }
+		]
+	},
+	{
+		id: 'fd_0308',
+		term: 'Moulard',
+		level: 4,
+		say: 'moo-LARD',
+		aliases: ['Mulard', 'Mule Duck'],
+		gist: 'Sterile hybrid duck raised for foie gras and a big red breast',
+		guest: 'Moulard is the duck raised for foie gras, a cross of two breeds. Its breast is big, deep red and beefy, closer to a steak than to the duck most people know.',
+		why: "A cross of a Muscovy drake and a Pekin hen, the moulard is sterile, hardy and large. It gives most of the world's foie gras, and its breast, the magret, is thick, dark and richly fatted, often enough for two. Pekin breast is smaller and milder.",
+		madeWith: ['duck', 'sometimes duck liver', 'sometimes red wine', 'sometimes honey'],
+		note: 'The breast is classically seared and served pink, medium rare, then sliced.',
+		origin: "Raised for foie gras in southwest France and New York's Hudson Valley",
+		notThis: 'Not Pekin, also sold as Long Island duck, the smaller, milder bird behind most US duck breast and Peking duck.',
+		seeAlso: ['fd_0056', 'fd_0055', 'fd_0306'],
+		line: 'Seared Moulard duck breast, cherries, turnips',
+		traps: [
+			{ says: 'Village in southwest France whose farms raise the finest ducks', why: 'It is a hybrid duck, a sterile cross of Muscovy and Pekin, not a place or a farm.' }
+		]
+	}
 ];
 
 export default cards;

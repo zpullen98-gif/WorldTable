@@ -4,41 +4,41 @@
   "3-dishes": {
    "findings": [
     {
-     "where": "paragraph 3",
+     "where": "paragraph 1",
      "severity": "wrong",
-     "claim": "Pizza Margherita, Country Sourdough Loaf and Baguette de Tradition all rest on fermentation and the pause that does the work",
-     "because": "The brief lists \"Resting dough: the pause that does the work\" on Pizza Margherita and Country Sourdough Loaf only; Baguette de Tradition's techniques are Fermentation, Proofing and Steaming. \"All\" attributes a technique to the baguette that the app does not place on it.",
-     "fix": "Pizza Margherita, Country Sourdough Loaf and Baguette de Tradition all rest on fermentation; the pizza and the loaf add resting dough, the pause that does the work",
+     "claim": "the Tarte au Citron asks for a blind-baked crust, a filling set in a water bath and a whipped meringue",
+     "because": "The recipe cooks the lemon cream over a bain-marie on the stove to a spoon-coating curd, whisks in butter, then sets it with a brief low bake or a chill. Nothing is set in a water bath. The meringue is an optional crown for the meringuée version ('nothing (Paris), or Italian meringue torched').",
+     "fix": "the Tarte au Citron asks for a blind-baked crust, a lemon cream cooked over a bain-marie and, if you crown it, a meringue",
      "lens": "fact",
      "key": "3-dishes-fact-1",
      "primer": "3-dishes"
     },
     {
-     "where": "paragraph 3",
+     "where": "paragraph 1",
      "severity": "wrong",
-     "claim": "the loaf and the baguette add steaming under basket, leaf and lid",
-     "because": "\"Steaming: basket, leaf and lid\" is the technique's title in the app, not how a loaf is steamed. No baguette or country loaf is steamed under a basket or a leaf: a baguette bakes with steam in the oven (a tray of water or injected steam) and a country loaf under a lidded pot's trapped moisture, so the crust stays soft long enough for oven spring before it sets. As written a cook would look for a leaf.",
-     "fix": "the loaf and the baguette add steaming, the moisture in the oven that lets the crust spring before it sets",
+     "claim": "The rest are the stations the standard names outright: live fire, the wok and seafood.",
+     "because": "The Profiteroles (Pâte à Choux Master) belong to none of the paragraph's groups. They are not a long wait and not a live fire, wok or seafood plate, so 'the rest' files a pastry plate under fire, wok and seafood.",
+     "fix": "The Profiteroles (Pâte à Choux Master) are one pastry technique taken to a finish. The rest are the stations the standard names outright: live fire, the wok and seafood.",
      "lens": "fact",
      "key": "3-dishes-fact-2",
      "primer": "3-dishes"
     },
     {
-     "where": "paragraph 5",
-     "severity": "wrong",
-     "claim": "so the half hour is all cooking and the real work is the prep before the flame",
-     "because": "Self-contradicting and reversed. In a 30-minute char kway teow the flame time is two or three minutes per small batch; the rest of the half hour is the mise (noodles loosened, lap cheong sliced, prawns cleaned, chives cut, sauce mixed). The semester's own line says total mise and small batches: prep is most of the clock, not outside it.",
-     "fix": "so most of the half hour is mise and the cooking itself is minutes per batch",
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "each carries a standard that governs a service rather than a single step",
+     "because": "The standard's list of service-governing techniques is tempering, lamination, live fire, the wok, fermentation and butchery. The two pastry plates carry choux, blind baking, a water bath and meringue, none of which is on it. They sit here as Advanced plates with a long wait or a multi-component build.",
+     "fix": "each is a long wait, a build in parts or a station the standard names",
      "lens": "fact",
      "key": "3-dishes-fact-3",
      "primer": "3-dishes"
     },
     {
-     "where": "paragraph 6",
-     "severity": "unclear",
-     "claim": "Log each dish the day you cook it; when all seven are logged, the Level test at the foot of the page is untimed and ends on what you missed with the right answers.",
-     "because": "\"when all seven are logged\" reads as a condition on sitting the test, which the brief does not set: nothing is locked, and the levelTest line describes the test with no gate. A cook at this level would wait to take it.",
-     "fix": "Log each dish the day you cook it; the Level test at the foot of the page is untimed and ends on what you missed with the right answers.",
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "until the garlic and greens go into the pan in one motion",
+     "because": "The recipe fries the garlic first ('Blast garlic in hot oil 10 seconds'), then adds the greens and tosses. They go in one after the other, not together.",
+     "fix": "until the garlic gets its ten seconds and the greens follow before it scorches",
      "lens": "fact",
      "key": "3-dishes-fact-4",
      "primer": "3-dishes"
@@ -46,144 +46,319 @@
     {
      "where": "paragraph 3",
      "severity": "wrong",
-     "claim": "all rest on fermentation and the pause that does the work: flour, water, salt, time. Pizza and the baguette add proofing, the rise before the oven;",
-     "because": "The brief's techniques put \"Resting dough: the pause that does the work\" on Pizza Margherita and Country Sourdough Loaf only; Baguette de Tradition carries Fermentation, Proofing and Steaming, not Resting dough. All three share Fermentation alone.",
-     "fix": "all rest on fermentation: flour, water, salt, time. Pizza and the loaf add resting dough, the pause that does the work; pizza and the baguette add proofing, the rise before the oven;",
-     "lens": "app",
-     "key": "3-dishes-app-5",
+     "claim": "where a hard sear comes before the rest",
+     "because": "The recipe starts with the pounded garlic and chili paste, fried for 15 seconds. The pork goes in after that and is pressed into the wok to sear, not stew. The sear comes second, so it does not come before the rest.",
+     "fix": "where the pork is pressed into the wok to sear, not stew",
+     "lens": "fact",
+     "key": "3-dishes-fact-5",
      "primer": "3-dishes"
     },
     {
-     "where": "paragraph 6",
+     "where": "paragraph 3",
      "severity": "wrong",
-     "claim": "when all seven are logged, the Level test at the foot of the page is untimed and ends on what you missed with the right answers.",
-     "because": "Reads as if logging all seven opens the test, and a level guides and never bars (rule 6). The brief's levelTest is \"untimed, across the subsections, ending on what you missed with the right answers and no score\": it is not a dishes-only test and waits on nothing.",
-     "fix": "The Level test at the foot of the page is untimed, runs across the subsections and ends on what you missed with the right answers.",
+     "claim": "which is why they sit here and not lower",
+     "because": "The brief puts the placement down to doctrine: the standard names 'the wok' at Sous Chef, which 'takes two Easy wok plates up two levels'. The owner still has that question open. Two of the three wok plates are Easy, so the plates are not placed here because they are hard.",
+     "fix": "and the standard sets the wok at Sous Chef",
+     "lens": "fact",
+     "key": "3-dishes-fact-6",
+     "primer": "3-dishes"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "two-zone discipline is the lesson: a hot side and a cooler side, and the patience to move the bird between them",
+     "because": "Two-zone discipline comes from the semester's description, not from either recipe. Both recipes grill over medium coals and turn the bird: jerk with the lid down every 10 minutes, huli huli every 5 to 7 minutes ('huli means turn'), basting as it goes. A cook who follows the recipe will not find a move between zones.",
+     "fix": "the lesson is steady medium coals and the turn: huli means turn, and the sugar in the baste wants to burn if the bird sits",
+     "lens": "fact",
+     "key": "3-dishes-fact-7",
+     "primer": "3-dishes"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "Take the Pizza Margherita first, the shortest of the ferments",
+     "because": "The recipe prefers a cold ferment of 24 to 72 hours 'for flavor', which is longer than the baguette's overnight poolish, and treats 2 hours warm as the fallback. The pizza is only the shortest of the three if you take the same-day dough.",
+     "fix": "Take the Pizza Margherita first, on a same-day dough if you must",
+     "lens": "fact",
+     "key": "3-dishes-fact-8",
+     "primer": "3-dishes"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "runs from marinade to sear to braise to griddle across most of an afternoon",
+     "because": "The recipe marinates the beef overnight if you can, then braises for 3 to 3.5 hours. The work starts the day before, so it does not fit inside one afternoon.",
+     "fix": "runs from an overnight marinade to sear to braise to griddle",
+     "lens": "fact",
+     "key": "3-dishes-fact-9",
+     "primer": "3-dishes"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "The birria waits for any open afternoon",
+     "because": "The recipe's first step is an overnight marinade, so a cook who starts on the afternoon itself skips it.",
+     "fix": "Start the birria's marinade the night before an open afternoon",
+     "lens": "fact",
+     "key": "3-dishes-fact-10",
+     "primer": "3-dishes"
+    },
+    {
+     "where": "next",
+     "severity": "unclear",
+     "claim": "the Advanced library's longest builds",
+     "because": "The standard calls Chef's dishes 'the project dishes of the Advanced library'. Salt-Baked Whole Fish, one of the plates named, is not a long build.",
+     "fix": "the Advanced library's project dishes",
+     "lens": "fact",
+     "key": "3-dishes-fact-11",
+     "primer": "3-dishes"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "The library at this level is the recipe grid filtered to this difficulty, for when you want the whole shelf in view.",
+     "because": "The brief's door is \"the recipe grid filtered to this level's difficulty\", and that means Advanced here. Only six of the dishes placed here are difficulty 3 (birria, pizza, sourdough, baguette, tarte, profiteroles, char kway teow; the list is seven with the char kway teow). Jerk Chicken, Huli Huli Chicken, Memphis Dry-Rub Ribs, Pad Krapow Moo, Rau Muong Xao Toi and the Whole Grilled Fish are difficulty 1 or 2, so they drop out of that grid. The door does not show this level's whole shelf.",
+     "fix": "The library at this level is the recipe grid filtered to Advanced, which leaves out the easier fire and wok plates placed here.",
      "lens": "app",
-     "key": "3-dishes-app-6",
+     "key": "3-dishes-app-12",
+     "primer": "3-dishes"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "The rest are the stations the standard names outright: live fire, the wok and seafood.",
+     "because": "The only pastry this sentence names is the Tarte au Citron. That puts the Profiteroles (Pâte à Choux Master) among \"the rest\". The brief gives the Profiteroles as a Pastry Fundamentals dessert whose one technique is choux pastry. It is not a live fire, wok or seafood plate.",
+     "fix": "The Profiteroles (Pâte à Choux Master) are the other pastry; the rest are the stations the standard names outright: live fire, the wok and seafood.",
+     "lens": "app",
+     "key": "3-dishes-app-13",
      "primer": "3-dishes"
     },
     {
      "where": "lede",
      "severity": "unclear",
-     "claim": "each with a long wait, a second component or a heat that forgives nothing",
-     "because": "The standard says the Advanced plates have \"a long wait or a multi-component build\" and names the wok separately; Profiteroles (Pâte à Choux Master) is 90 minutes and one technique, so \"each\" overclaims against the brief's items.",
-     "fix": "the braise's long wait, the ferments, the pastry builds and the wok",
+     "claim": "cooked until you can teach it",
+     "because": "The brief's met line is \"A dish is met when it has been cooked and logged.\" The lede reads as a stricter bar than that, and it comes before paragraph 5 states the real one.",
+     "fix": "cooked and logged until you could teach it",
      "lens": "app",
-     "key": "3-dishes-app-7",
+     "key": "3-dishes-app-14",
      "primer": "3-dishes"
     },
     {
-     "where": "paragraph 5",
+     "where": "next",
      "severity": "unclear",
-     "claim": "so the half hour is all cooking and the real work is the prep before the flame",
-     "because": "The brief gives Char Kway Teow as 30 minutes with no split between prep and cooking; saying the half hour is all cooking is a figure the data does not carry.",
-     "fix": "so the clock is short and the real work is the prep before the flame",
+     "claim": "the Advanced library's longest builds",
+     "because": "For Chef, the standard gives \"the capstone semester and the project dishes of the Advanced library\". The brief says nothing to show these are the longest builds, and neighbours.above has no minutes for them.",
+     "fix": "the Advanced library's project dishes",
      "lens": "app",
-     "key": "3-dishes-app-8",
-     "primer": "3-dishes"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "all rest on fermentation and the pause that does the work: flour, water, salt, time.",
-     "because": "The brief lists Resting dough: the pause that does the work for Pizza Margherita and Country Sourdough Loaf only; Baguette de Tradition's techniques are Fermentation, Proofing and Steaming. All three share fermentation alone.",
-     "fix": "all rest on fermentation: flour, water, salt, time. Pizza and the loaf add resting dough, the pause that does the work;",
-     "lens": "voice",
-     "key": "3-dishes-voice-9",
-     "primer": "3-dishes"
-    },
-    {
-     "where": "paragraph 6",
-     "severity": "wrong",
-     "claim": "when all seven are logged, the Level test at the foot of the page is untimed and ends on what you missed with the right answers.",
-     "because": "The brief's levelTest has no condition on it: it sits at the foot of the level page, untimed, across the subsections, ending on what you missed with the right answers. A level guides and never bars, so tying the test to all seven being logged is a gate the app does not have and a claim about the app that is not a door or the met rule.",
-     "fix": "The Level test at the foot of the page is untimed, runs across the subsections and ends on what you missed with the right answers.",
-     "lens": "voice",
-     "key": "3-dishes-voice-10",
+     "key": "3-dishes-app-15",
      "primer": "3-dishes"
     },
     {
      "where": "paragraph 1",
-     "severity": "style",
-     "claim": "Level I gave you plates with one technique and no wait; Level II gave you the braise and the sauté station. Level III asks for the Advanced plates: a long wait, a multi-component build, or a heat that gives you no second try.",
-     "because": "Restates the placement standard and repeats the lede almost word for word (long wait, second component or multi-component build, a heat that forgives nothing or gives no second try). Nothing here is actionable, and the primer sits at 519 words against an aim ceiling of 520, so the cut pays for the paragraph 3 correction.",
-     "fix": "Level I was one technique and no wait, and Level II added the braise and the sauté station; these seven are longer, bigger or hotter.",
+     "severity": "wrong",
+     "claim": "These plates sit at Sous Chef because each carries a standard that governs a service rather than a single step.",
+     "because": "This repeats the level blurb, and it is not true of every plate. The brief's thisLevel line reads: \"Dishes are fire and smoke, the wok, seafood mastery, and the library's Advanced plates with a long wait or a multi-component build.\" The birria (braising, griddle, marinating, searing), the tart and the profiteroles are placed for the long wait or the build. None of them carries a technique on the standard's service list (tempering, lamination, live fire, the wok, fermentation, butchery).",
+     "fix": "These plates are fire and smoke, the wok, seafood, or an Advanced plate with a long wait or a build in parts.",
      "lens": "voice",
-     "key": "3-dishes-voice-11",
+     "key": "3-dishes-voice-16",
+     "primer": "3-dishes"
+    },
+    {
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "The rest are the stations the standard names outright: live fire, the wok and seafood.",
+     "because": "The paragraph's groups are the long waits, which are the three breads and the birria, then the builds, which is only the tart. That leaves the Profiteroles (Pâte à Choux Master) under \"the rest\", but they are a pastry plate and belong to none of the stations named.",
+     "fix": "The rest, bar the profiteroles, are the stations the standard names outright: live fire, the wok and seafood.",
+     "lens": "voice",
+     "key": "3-dishes-voice-17",
      "primer": "3-dishes"
     },
     {
      "where": "paragraph 3",
-     "severity": "unclear",
-     "claim": "add steaming under basket, leaf and lid.",
-     "because": "The brief's technique is Steaming: basket, leaf and lid. Read as a method, \"steaming under basket\" is not what happens to a loaf (the basket proofs it, the lid traps the steam), and a cook at Level III will stumble on it.",
-     "fix": "add steaming, basket, leaf and lid.",
+     "severity": "wrong",
+     "claim": "which is why they sit here and not lower",
+     "because": "The primer invents this reason for the placement. The brief says the wok plates sit at Sous Chef because the written standard names \"the wok\" at this level. It also notes that this takes two Easy wok plates up two levels and that the question is left to the owner. Pad Krapow Moo and Rau Muong Xao Toi are difficulty 1. The reader also cannot act on the clause.",
+     "fix": "The wok plates are the fastest cooking in the guide and the least forgiving.",
      "lens": "voice",
-     "key": "3-dishes-voice-12",
+     "key": "3-dishes-voice-18",
      "primer": "3-dishes"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "wrong",
+     "claim": "The library at this level is the recipe grid filtered to this difficulty, for when you want the whole shelf in view.",
+     "because": "The brief describes the door as \"the recipe grid filtered to this level's difficulty.\" Most plates placed here are difficulty 1 or 2: Jerk Chicken, Huli Huli Chicken, Memphis Dry-Rub Ribs, Pad Krapow Moo, Rau Muong Xao Toi and the Whole Grilled Fish. A grid filtered to one difficulty therefore does not put this level's whole shelf in view.",
+     "fix": "The library at this level is the recipe grid filtered to this level's difficulty.",
+     "lens": "voice",
+     "key": "3-dishes-voice-19",
+     "primer": "3-dishes"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "style",
+     "claim": "The birria waits for any open afternoon and rewards the braise you already know.",
+     "because": "This repeats paragraph 1, which already gave the birria as \"across most of an afternoon\". Paragraph 4 also names the three breads again after paragraph 1 grouped them, so the primer describes the same plates twice.",
+     "fix": "The birria rewards the braise you already know.",
+     "lens": "voice",
+     "key": "3-dishes-voice-20",
+     "primer": "3-dishes"
+    },
+    {
+     "where": "lede",
+     "severity": "unclear",
+     "claim": "cooked until you can teach it",
+     "because": "The brief's met rule is \"A dish is met when it has been cooked and logged.\" Read at pre-shift, the lede sets a different bar for a dish at this level. Paragraph 5 then repeats the teaching idea (\"talk a commis through it at the pass\").",
+     "fix": "cooked, logged and cooked again until you can teach it",
+     "lens": "voice",
+     "key": "3-dishes-voice-21",
+     "primer": "3-dishes"
+    },
+    {
+     "where": "next",
+     "severity": "unclear",
+     "claim": "the Advanced library's longest builds",
+     "because": "The brief's Chef line reads \"the capstone semester and the project dishes of the Advanced library\". Baked Alaska and Salt-Baked Whole Fish are project dishes, but nothing in the brief says they are among the longest builds.",
+     "fix": "the Advanced library's project dishes",
+     "lens": "voice",
+     "key": "3-dishes-voice-22",
+     "primer": "3-dishes"
+    },
+    {
+     "key": "3-dishes-critic-1",
+     "primer": "3-dishes",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "Contradicts 3-techniques on where the fire starts. Dishes takes Jerk Chicken first among the fire plates, but Jerk Chicken carries the Jerk technique (brief: Grilling over live coals, Jerk, Marinating). The techniques primer tells the same cook to take Jerk only once the two-zone fire is second nature. Huli Huli Chicken carries Grilling over live coals and Butchery basics but no Jerk.",
+     "because": "Contradicts 3-techniques on where the fire starts. Dishes takes Jerk Chicken first among the fire plates, but Jerk Chicken carries the Jerk technique (brief: Grilling over live coals, Jerk, Marinating). The techniques primer tells the same cook to take Jerk only once the two-zone fire is second nature. Huli Huli Chicken carries Grilling over live coals and Butchery basics but no Jerk.",
+     "fix": "In paragraph 2, open the fire plates with Huli Huli Chicken (the turn, butchery basics before the fire), then Jerk Chicken, then Memphis Dry-Rub Ribs, then the Whole Grilled Fish with Ladolemono. Rewrite the first sentence so the two chickens are no longer taken as one opening pair."
+    },
+    {
+     "key": "3-dishes-critic-2",
+     "primer": "3-dishes",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "Gives no single starting point, and its own doors point somewhere else. The prose orders fire, wok, breads, pastry, with the sourdough starter paragraph opening on 'Start'. But Read the semester and Cook the next dish follow the Path, which opens at the Braise semester on the Birria de Res con Consomé (semester 4, then breads 5, pastry 6, fire 7, wok 8, seafood 9). The Advanced library filter leaves out the fire and wok plates altogether. A cook who reads the primer and then taps the door lands on a dish the primer puts near the end.",
+     "because": "Gives no single starting point, and its own doors point somewhere else. The prose orders fire, wok, breads, pastry, with the sourdough starter paragraph opening on 'Start'. But Read the semester and Cook the next dish follow the Path, which opens at the Braise semester on the Birria de Res con Consomé (semester 4, then breads 5, pastry 6, fire 7, wok 8, seafood 9). The Advanced library filter leaves out the fire and wok plates altogether. A cook who reads the primer and then taps the door lands on a dish the primer puts near the end.",
+     "fix": "Add one plain sentence in the doors paragraph: the two doors go in the Path's semester order (the birria and the braise first, then the breads, the pastry, the fire, the wok and the fish), and the grouping above is how the plates relate, not a competing order. Or reorder the paragraphs to follow the Path. Either way, name one first dish. Fold 'start a sourdough starter' into that sentence as preparation, not as the start."
     }
    ],
    "dispositions": [
     {
      "finding": "3-dishes-fact-1",
      "action": "applied",
-     "reason": "Paragraph 3 now says all three rest on fermentation alone, with resting dough given to the pizza and the loaf only, matching the brief's techniques."
+     "reason": "Checked against the recipe: the lemon cream is cooked over a bain-marie and the meringue is an optional crown. The line now reads 'a lemon cream cooked over a bain-marie and, if you crown it, a meringue'."
     },
     {
      "finding": "3-dishes-fact-2",
      "action": "applied",
-     "reason": "Replaced \"steaming under basket, leaf and lid\" with steaming described as the oven's moisture that lets the crust spring before it sets, so no cook looks for a leaf."
+     "reason": "Added the sentence 'The Profiteroles (Pâte à Choux Master) are one pastry technique taken to a finish.' before 'The rest are the stations...' so the profiteroles are no longer filed under fire, wok and seafood."
     },
     {
      "finding": "3-dishes-fact-3",
      "action": "applied",
-     "reason": "Paragraph 5 now says the clock is short and most of it is mise, with the flame at the very end one small batch at a time, reversing the wrong \"all cooking\" line."
+     "reason": "The service-governing claim is gone. The opening sentence now gives the standard's own grouping (fire and smoke, the wok, seafood, or an Advanced plate with a long wait or a build in parts)."
     },
     {
      "finding": "3-dishes-fact-4",
      "action": "applied",
-     "reason": "Removed \"when all seven are logged\" so the Level test carries no condition; logging and the test are now separate sentences."
+     "reason": "The recipe blasts the garlic for 10 seconds, then the greens go in. The line now reads 'until the garlic gets its ten seconds and the greens follow before it scorches'."
     },
     {
-     "finding": "3-dishes-app-5",
+     "finding": "3-dishes-fact-5",
      "action": "applied",
-     "reason": "Same edit as fact-1: fermentation is the shared base, resting dough is placed on pizza and loaf, proofing on pizza and baguette, steaming on loaf and baguette."
+     "reason": "The recipe fries the garlic-chili paste first, then the pork. The line now reads 'where the pork is pressed into the wok to sear, not stew'."
     },
     {
-     "finding": "3-dishes-app-6",
+     "finding": "3-dishes-fact-6",
      "action": "applied",
-     "reason": "The test sentence now reads that it is untimed, runs across the subsections and ends on what you missed with the right answers, with no gate."
+     "reason": "Removed the invented reason 'which is why they sit here and not lower'. The sentence ends at 'the least forgiving', which also answers voice-18, and it states no placement reason."
     },
     {
-     "finding": "3-dishes-app-7",
+     "finding": "3-dishes-fact-7",
      "action": "applied",
-     "reason": "Lede now reads \"the braise's long wait, the ferments, the pastry builds and the wok\" instead of claiming every plate has a long wait, a second component or an unforgiving heat."
+     "reason": "Replaced the two-zone line with what both recipes do: medium coals, and the turn ('huli means turn'), with the sugar in the baste burning if the chicken sits."
     },
     {
-     "finding": "3-dishes-app-8",
+     "finding": "3-dishes-fact-8",
      "action": "applied",
-     "reason": "Same edit as fact-3: the half-hour is no longer called all cooking and no prep/cook split figure is asserted, only that the clock is short and most of it is mise."
+     "reason": "The recipe prefers a 24 to 72 hour cold ferment. The line is now 'Take the Pizza Margherita first, on a same-day dough if you must'."
     },
     {
-     "finding": "3-dishes-voice-9",
+     "finding": "3-dishes-fact-9",
      "action": "applied",
-     "reason": "Same edit as fact-1 and app-5 in paragraph 3."
+     "reason": "The recipe marinates the meat overnight. The line is now 'runs from an overnight marinade to sear to braise to griddle', with the afternoon claim removed."
     },
     {
-     "finding": "3-dishes-voice-10",
+     "finding": "3-dishes-fact-10",
      "action": "applied",
-     "reason": "Same edit as app-6: the Level test sentence carries no condition and states it runs across the subsections."
+     "reason": "The line is now 'Start the birria's marinade the night before an open afternoon', which follows the recipe's overnight first step."
     },
     {
-     "finding": "3-dishes-voice-11",
+     "finding": "3-dishes-fact-11",
      "action": "applied",
-     "reason": "Paragraph 1 opening cut to the suggested one sentence, removing the restated standard and the lede echo; the primer now sits at 518 words."
+     "reason": "Changed 'longest builds' to 'project dishes', the standard's Chef wording."
     },
     {
-     "finding": "3-dishes-voice-12",
+     "finding": "3-dishes-app-12",
      "action": "applied",
-     "reason": "Same edit as fact-2: \"under\" is gone and steaming is described by what it does to the crust rather than by the technique's title read as a method."
+     "reason": "The app's door links to /recipes?diff=3 at Sous Chef. The line is now 'the recipe grid filtered to Advanced, which leaves out the easier fire and wok plates placed here'."
+    },
+    {
+     "finding": "3-dishes-app-13",
+     "action": "applied",
+     "reason": "Same fix as fact-2: the profiteroles have their own sentence before 'The rest'."
+    },
+    {
+     "finding": "3-dishes-app-14",
+     "action": "applied",
+     "reason": "The lede now reads 'cooked and logged, then cooked again until you could teach it', so it starts from the brief's met rule and adds practice on top."
+    },
+    {
+     "finding": "3-dishes-app-15",
+     "action": "applied",
+     "reason": "Changed 'longest builds' to 'project dishes'."
+    },
+    {
+     "finding": "3-dishes-voice-16",
+     "action": "applied",
+     "reason": "The opening sentence now follows the standard's thisLevel line for Dishes instead of the blurb's service claim."
+    },
+    {
+     "finding": "3-dishes-voice-17",
+     "action": "applied",
+     "reason": "The profiteroles now have their own sentence, so 'The rest' covers only the fire, wok and seafood plates."
+    },
+    {
+     "finding": "3-dishes-voice-18",
+     "action": "applied",
+     "reason": "Dropped the invented placement clause. The sentence ends at 'the least forgiving'."
+    },
+    {
+     "finding": "3-dishes-voice-19",
+     "action": "applied",
+     "reason": "Removed 'for when you want the whole shelf in view'. The door is described as filtered to Advanced (see app-12)."
+    },
+    {
+     "finding": "3-dishes-voice-20",
+     "action": "applied",
+     "reason": "The birria sentence no longer repeats the afternoon claim. It now gives the marinade timing and 'it rewards the braise you already know'. The breads are named again in paragraph 4 on purpose, because that paragraph gives the order to take them in, which paragraph 1 does not."
+    },
+    {
+     "finding": "3-dishes-voice-21",
+     "action": "applied",
+     "reason": "The lede now leads with 'cooked and logged', so the met rule comes first and practice comes after it, and it no longer sets a stricter bar."
+    },
+    {
+     "finding": "3-dishes-critic-1",
+     "action": "applied",
+     "reason": "The fire paragraph now opens on Huli Huli Chicken (butchery basics, then the turn), takes Jerk Chicken only once the two-zone fire is second nature, then Memphis Dry-Rub Ribs; the Whole Grilled Fish follows the wok plates rather than the ribs, because it sits in the Seafood semester after the wok and critic-2 asks for the Path's order."
+    },
+    {
+     "finding": "3-dishes-critic-2",
+     "action": "applied",
+     "reason": "The paragraphs now follow the Path's semester order (birria, breads, pastry, fire, wok, fish), one first dish is named (the birria), the sourdough starter is folded in as preparation rather than the start, and the doors paragraph says both doors keep that order and open on the birria until it is logged (checked against firstUnmet in the level page, which walks this level's items in semester order)."
     }
    ]
   },
@@ -192,201 +367,111 @@
     {
      "where": "paragraph 2",
      "severity": "wrong",
-     "claim": "Low & slow smoking is the same fire on a longer timer",
-     "because": "The brief's own definition for this item opens \"Three fires, three clocks\": grilling is direct high heat for minutes on tender cuts; barbecue is indirect low heat plus wood smoke for hours on collagen cuts (brisket, shoulder, ribs). It is a different fire, a different heat path and a different cut, not the grill left running longer; a sous who reads it as the same fire will set up a direct, hot bed and get the standard's fault.",
-     "fix": "Low & slow smoking is a different fire: indirect, low, fed with wood smoke, for collagen cuts on a clock of hours:",
+     "claim": "Asado fire and Jerk are the same fire in two accents; take them once the two-zone fire is second nature.",
+     "because": "They are not the same fire. For asado, wood burns down in a separate fire and its embers are raked under the parrilla as the cook needs them. Jerk is cooked over pimento (allspice) wood, often covered, so it grills and smokes at once. That puts it between the grate and the smoker, not on a two-zone grill with a different seasoning. A cook told they are one fire will build the wrong one for jerk.",
+     "fix": "Asado fire (embers raked under the grill) and Jerk (pimento wood, grill and smoke at once) come once the two-zone fire is second nature.",
      "lens": "fact",
      "key": "3-techniques-fact-1",
      "primer": "3-techniques"
     },
     {
-     "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "the egg white, cornstarch and soda coat that gives stir-fried meat its silk",
-     "because": "The brief's definition says the coat is egg white, cornstarch \"and a little baking soda or wine\", rested, \"then pre-cooked briefly in oil or water\". Classic velveting uses rice wine; soda is one option, not the rule, and the brief pass through oil or water before the wok is the step that makes velveting velveting. Naming soda as fixed and dropping the pre-cook teaches the technique wrong.",
-     "fix": "the egg white and cornstarch coat with a little soda or wine, rested and passed briefly through oil or water before the wok, that gives stir-fried meat its silk",
+     "where": "paragraph 6",
+     "severity": "unclear",
+     "claim": "let The next technique take you to the first one not yet met, working from the fire outward.",
+     "because": "The brief says the door opens 'the page of the first technique not yet met' in the level's own order. Nothing in the brief says that order runs from the fire outward. The items are listed by slug, with Asado fire first, not Grilling over live coals. A cook who follows the door may land on a technique other than the one this primer says to take first.",
+     "fix": "and The next technique takes you to the first one not yet met.",
      "lens": "fact",
      "key": "3-techniques-fact-2",
      "primer": "3-techniques"
     },
     {
-     "where": "paragraph 2",
+     "where": "paragraph 4",
      "severity": "unclear",
-     "claim": "take them once the grill standard is in your hands",
-     "because": "Asado runs on embers at a distance for hours and jerk is cooked slowly over pimento wood and smoke; both sit nearer the barbecue clock of the shared lexicon page (indirect low heat plus wood smoke) than the grill's direct minutes. Pointing the reader only at the grill standard sends them to the wrong of the two standards for these two.",
-     "fix": "take them once both fire standards are in your hands: asado runs on embers for hours and jerk on pimento smoke",
+     "claim": "the turns are counted, the letter fold being the turn itself.",
+     "because": "A letter fold (folding in thirds) is one kind of turn, the single turn. The book fold (folding in quarters) is the double turn, and many croissant and puff schedules mix the two. Calling the letter fold 'the turn itself' tells a cook that every turn is a letter fold. The brief only says '3 letter-folds ≈ 27 layers; 6 ≈ 729 for classic puff'.",
+     "fix": "the turns are counted, a letter fold being one single turn.",
      "lens": "fact",
      "key": "3-techniques-fact-3",
      "primer": "3-techniques"
     },
     {
-     "where": "paragraph 3",
+     "where": "paragraph 6",
      "severity": "unclear",
-     "claim": "Wok technique's standard is mostly what happens before the burner",
-     "because": "Only the first of the standard's four marks (everything in dry and in order) is prep; the other three (the wok loud throughout, sauce clinging with no pool, vegetables keeping color and bite) are read in the pan and on the plate. The lexicon's \"90% mise\" is about the recipe's labor, not the standard's marks.",
-     "fix": "Wok technique's standard is won in the mise and read in the pan",
-     "lens": "fact",
-     "key": "3-techniques-fact-4",
+     "claim": "let The next technique take you to the first one not yet met, working from the fire outward",
+     "because": "The brief defines the door only as \"the page of the first technique not yet met\". Its order is the app's, and the items are listed from Asado fire and Butchery basics onward, not in this primer's fire-first order. The primer itself says to take Asado fire after the two-zone fire, so a cook who follows the door may land on Asado fire first, against the order paragraph 2 sets.",
+     "fix": "and use The next technique to land on the first one not yet met.",
+     "lens": "app",
+     "key": "3-techniques-app-4",
+     "primer": "3-techniques"
+    },
+    {
+     "where": "lede",
+     "severity": "style",
+     "claim": "Sous Chef techniques are the ones whose standard holds up a whole service",
+     "because": "This is the level blurb reworded (\"the techniques whose standard governs a whole service\"). The house rules forbid restating the blurb, and the level page already prints it just above.",
+     "fix": "At Sous Chef a technique is read from the pass: the fire, the wok, the fold and the knife.",
+     "lens": "voice",
+     "key": "3-techniques-voice-5",
      "primer": "3-techniques"
     },
     {
      "where": "paragraph 1",
+     "severity": "style",
+     "claim": "At this level a technique stops belonging to one station and starts belonging to the pass. A grill run on flames, a crowded wok or butter that shatters in the fold shows on every plate of the night",
+     "because": "The first sentence restates the blurb (\"Running the pass\") again. \"Every plate of the night\" is an overstatement: a lamination fault shows on the pastry, not on every plate. The closing list of four families (live fire, the wok, pastry, the knife) repeats the lede's fire, wok, fold and knife, so the primer says it twice.",
+     "fix": "A grill run on flames, a crowded wok or butter that shatters in the fold shows on the plate, so a sous has to know each well enough to see the fault from across the kitchen and teach the fix.",
+     "lens": "voice",
+     "key": "3-techniques-voice-6",
+     "primer": "3-techniques"
+    },
+    {
+     "where": "paragraph 2",
      "severity": "unclear",
-     "claim": "twelve techniques a sous never runs alone, because a whole service rides on each",
-     "because": "\"Never runs alone\" is not in the brief and reads as if a sous may not cook these unaccompanied, which contradicts the level's guiding-never-barring rule. The brief's line is \"the techniques whose standard governs a whole service\".",
-     "fix": "twelve techniques whose standard governs a whole service, because every plate rides on each",
-     "lens": "fact",
-     "key": "3-techniques-fact-5",
+     "claim": "Asado fire and Jerk are the same fire in two accents",
+     "because": "The brief gives no text of its own for either item. Both share the three-fires Lexicon entry, and nothing in the brief says they are the same fire. Jerk is traditionally cooked over pimento wood and asado over wood embers, so \"the same fire\" is a claim the brief does not support. Rule 9 says to leave out what the brief does not give.",
+     "fix": "Asado fire and Jerk carry no written standard",
+     "lens": "voice",
+     "key": "3-techniques-voice-7",
+     "primer": "3-techniques"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "style",
+     "claim": "sliced meat coated in egg white and cornstarch with a little baking soda or wine, rested, then cooked briefly in oil or water before it meets the wok. That is where stir-fry silk comes from.",
+     "because": "This copies Velveting's definition nearly word for word (\"sliced meat coated in egg white, cornstarch, and a little baking soda or wine, rested, then pre-cooked briefly in oil or water\"). Rule 8 forbids quoting whole definitions: the text should draw on the definition, not copy it.",
+     "fix": "meat coated in egg white and cornstarch, rested and precooked briefly, which is where stir-fry silk comes from.",
+     "lens": "voice",
+     "key": "3-techniques-voice-8",
      "primer": "3-techniques"
     },
     {
      "where": "paragraph 4",
      "severity": "unclear",
-     "claim": "Then the knives, because a chef who butchers understands the animal a recipe cannot teach.",
-     "because": "Butchery basics shares semester 7 with the grill, and the brief's definition says these verbs \"are where cooking begins before heat exists\": the rack is frenched and the roast tied before it meets the coals. Placing the knives third without saying so lets a cook take a grilled rack recipe before the cut it needs.",
-     "fix": "Then the knives, which in the kitchen come before the fire: the rack is frenched and the roast tied before it meets heat, and a chef who butchers understands the animal a recipe cannot teach.",
-     "lens": "fact",
-     "key": "3-techniques-fact-6",
+     "claim": "Shattered butter leaks, warm butter gives you brioche.",
+     "because": "The definition means that butter too warm smears into the dough, so the layers are lost and the crumb comes out like brioche. Read on a phone, \"gives you brioche\" sounds literal and states no fault. The sentence is also a comma splice.",
+     "fix": "Butter too cold shatters and leaks; too warm, it smears in and bakes like brioche.",
+     "lens": "voice",
+     "key": "3-techniques-voice-9",
      "primer": "3-techniques"
     },
     {
-     "where": "lede",
-     "severity": "unclear",
-     "claim": "Twelve techniques whose standard governs a whole service",
-     "because": "Only three of the twelve items carry a written standard (grilling-over-live-coals, low-and-slow-smoking, wok-technique: standard true), and paragraph 1 itself says the other nine have none; the lede also restates the level blurb's phrase word for word.",
-     "fix": "Twelve techniques a whole service rides on",
-     "lens": "app",
-     "key": "3-techniques-app-7",
-     "primer": "3-techniques"
-    },
-    {
-     "where": "next",
-     "severity": "wrong",
-     "claim": "The fire and the wok you met here are what a chef will expect you to teach.",
-     "because": "neighbours.above holds only the eight Level IV technique names; the standard puts \"teaching a brigade\" at Level III, not Level IV, so this sentence attributes to the level above something the brief nowhere gives it.",
-     "fix": "Delete the sentence; the first sentence already carries all eight names from neighbours.above.",
-     "lens": "app",
-     "key": "3-techniques-app-8",
-     "primer": "3-techniques"
-    },
-    {
-     "where": "paragraph 5",
-     "severity": "unclear",
-     "claim": "so that recipe is the door",
-     "because": "The brief's doors are two named training doors (Read the techniques, The next technique) and the Level test, and paragraph 6 uses \"door\" in that sense; calling a recipe \"the door\" muddles the term.",
-     "fix": "so that recipe is the way in",
-     "lens": "app",
-     "key": "3-techniques-app-9",
-     "primer": "3-techniques"
-    },
-    {
-     "where": "lede",
-     "severity": "wrong",
-     "claim": "Twelve techniques whose standard governs a whole service",
-     "because": "Only three of the twelve carry a written standard (paragraph 1 says so: \"The other nine have none\"), so the lede misleads; it also lifts the level blurb's own phrase \"the techniques whose standard governs a whole service\", which rule 10 bars.",
-     "fix": "Twelve techniques a whole service rides on: the fires, the wok, the butchery knives, the shellfish and the laminated dough.",
+     "where": "paragraph 6",
+     "severity": "misplaced",
+     "claim": "let The next technique take you to the first one not yet met, working from the fire outward",
+     "because": "The brief says the door opens \"the page of the first technique not yet met\". It says nothing about ordering the techniques from the fire outward, so this is a claim about the app that is neither a door nor the met rule.",
+     "fix": "and The next technique for the first one not yet met.",
      "lens": "voice",
      "key": "3-techniques-voice-10",
      "primer": "3-techniques"
     },
     {
-     "where": "paragraph 1",
-     "severity": "unclear",
-     "claim": "Level III places twelve techniques a sous never runs alone, because a whole service rides on each: a grill lit wrong ruins every plate off it, a wok that goes quiet sends out a pale stew.",
-     "because": "\"never runs alone\" has no clear meaning for the reader, and the quiet-wok image is repeated in paragraph 3 (\"A wok that falls quiet has been overloaded and is boiling in its own liquid\"). The paragraphs run 573 words against an aim of 340 to 520; this is the first cut.",
-     "fix": "Level III places twelve techniques a whole service rides on: a grill lit wrong ruins every plate off it.",
-     "lens": "voice",
-     "key": "3-techniques-voice-11",
-     "primer": "3-techniques"
-    },
-    {
-     "where": "paragraph 2",
-     "severity": "style",
-     "claim": "Its standard is short.",
-     "because": "Filler the reader cannot act on, in the longest paragraph (158 words, 827 characters against the 900 limit) of a primer already 53 words over the aim.",
-     "fix": "Delete the sentence.",
-     "lens": "voice",
-     "key": "3-techniques-voice-12",
-     "primer": "3-techniques"
-    },
-    {
-     "where": "paragraph 2",
-     "severity": "wrong",
-     "claim": "Low & slow smoking is the same fire on a longer timer",
-     "because": "The brief's definition opens \"Three fires, three clocks\": grilling is direct high heat in minutes, barbecue is indirect low heat plus wood smoke over hours. It is a different fire, not the same one run longer.",
-     "fix": "Low & slow smoking is the second fire, indirect and low, on a clock of hours",
-     "lens": "voice",
-     "key": "3-techniques-voice-13",
-     "primer": "3-techniques"
-    },
-    {
-     "where": "paragraph 2",
-     "severity": "style",
-     "claim": "Asado fire and Jerk open on the same lexicon page",
-     "because": "A claim about what the app does that is neither a door nor the met rule; the brief only gives the three a shared lexicon entry (grilling-vs-barbecue-vs-smoking).",
-     "fix": "Asado fire and Jerk sit under the same lexicon entry",
-     "lens": "voice",
-     "key": "3-techniques-voice-14",
-     "primer": "3-techniques"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "unclear",
-     "claim": "Wok technique's standard is mostly what happens before the burner",
-     "because": "Three of the four marks that follow (the wok loud throughout, every piece coated with no pooled sauce, vegetables keeping color and bite) are read at the burner and on the plate; only \"in dry and in order\" is before it. The sentence contradicts its own list.",
-     "fix": "Wok technique's standard is set before the burner and read on the plate",
-     "lens": "voice",
-     "key": "3-techniques-voice-15",
-     "primer": "3-techniques"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "style",
-     "claim": "The wok is a service of its own.",
-     "because": "Restates the point already made (\"a whole service rides on each\") and adds nothing the reader can act on; a word-count cut.",
-     "fix": "Delete the sentence.",
-     "lens": "voice",
-     "key": "3-techniques-voice-16",
-     "primer": "3-techniques"
-    },
-    {
-     "where": "paragraph 5",
-     "severity": "style",
-     "claim": "one discipline on two pages",
-     "because": "\"Pages\" is a claim about the app's layout, not a door or the met rule; the brief gives the two the same lexicon entry and definition.",
-     "fix": "one discipline under two names",
-     "lens": "voice",
-     "key": "3-techniques-voice-17",
-     "primer": "3-techniques"
-    },
-    {
-     "where": "paragraph 5",
-     "severity": "unclear",
-     "claim": "so that recipe is the door",
-     "because": "\"Door\" is the house term for the training doors this subsection opens (Read the techniques, The next technique); using it for a recipe muddles the word for a reader who meets the doors one paragraph later.",
-     "fix": "so that recipe is the whole of it",
-     "lens": "voice",
-     "key": "3-techniques-voice-18",
-     "primer": "3-techniques"
-    },
-    {
      "where": "paragraph 6",
      "severity": "style",
-     "claim": "The level guides and never bars, and the Level test",
-     "because": "A house rule restated, not something the reader can act on, and the primer is over its word aim.",
-     "fix": "The Level test",
+     "claim": "Met is plain. For the three with a written standard, you cooked one of its recipes and were judged met against its marks.",
+     "because": "\"Met is plain\" is filler, and \"the three ... its recipes\" does not agree in number. The brief's line is: \"A technique that carries a written standard is met when a cook on one of its recipes was graded met against that standard.\"",
+     "fix": "A technique with a written standard is met when you cook one of its recipes and are graded met against its marks.",
      "lens": "voice",
-     "key": "3-techniques-voice-19",
-     "primer": "3-techniques"
-    },
-    {
-     "where": "next",
-     "severity": "wrong",
-     "claim": "The fire and the wok you met here are what a chef will expect you to teach.",
-     "because": "The next line must be drawn from neighbours.above and nothing invented; this sentence is not in the brief's Level IV names or its Level IV paragraph.",
-     "fix": "Delete the sentence.",
-     "lens": "voice",
-     "key": "3-techniques-voice-20",
+     "key": "3-techniques-voice-11",
      "primer": "3-techniques"
     }
    ],
@@ -394,102 +479,57 @@
     {
      "finding": "3-techniques-fact-1",
      "action": "applied",
-     "reason": "Rewrote the sentence as \"Low & slow smoking is a different fire: indirect, low and fed with wood smoke, for collagen cuts on a clock of hours\", matching the brief's barbecue definition."
+     "reason": "Removed 'the same fire in two accents'. The text now says they are not the same fire: asado embers come from a separate fire and are raked under the grill, while jerk cooks over pimento wood, often covered, so it grills and smokes at once."
     },
     {
      "finding": "3-techniques-fact-2",
      "action": "applied",
-     "reason": "Velveting now reads \"the egg white and cornstarch coat with a little soda or wine, rested and passed briefly through oil or water before the wok\", as the brief's definition has it."
+     "reason": "Dropped 'working from the fire outward'. The door now reads 'The next technique takes you to the first one not yet met', matching the brief."
     },
     {
      "finding": "3-techniques-fact-3",
      "action": "applied",
-     "reason": "Asado fire and Jerk now wait on \"both fire standards\", with asado on embers and jerk on pimento smoke named as the reason."
+     "reason": "Changed 'the letter fold being the turn itself' to 'a letter fold being one single turn'."
     },
     {
-     "finding": "3-techniques-fact-4",
+     "finding": "3-techniques-app-4",
      "action": "applied",
-     "reason": "Changed to \"Wok technique's standard is won in the mise and read in the pan\", so the sentence no longer contradicts the three marks read at the burner and on the plate."
+     "reason": "Same fix as fact-2: the fire-outward ordering claim is gone and the door is described only as the brief gives it."
     },
     {
-     "finding": "3-techniques-fact-5",
+     "finding": "3-techniques-voice-5",
      "action": "applied",
-     "reason": "Dropped \"a sous never runs alone\"; paragraph 1 now opens \"Level III places twelve techniques a whole service rides on\"."
+     "reason": "Replaced the lede with the suggested line, which no longer rewords the blurb: 'At Sous Chef a technique is read from the pass: the fire, the wok, the fold and the knife.'"
     },
     {
-     "finding": "3-techniques-fact-6",
+     "finding": "3-techniques-voice-6",
      "action": "applied",
-     "reason": "Paragraph 4 now opens \"Then the knives, which come before the fire: the rack is frenched and the roast tied before it meets heat\", drawing on the brief's \"before heat exists\"."
+     "reason": "Cut the opening sentence that restated the blurb and the four-families sentence that repeated the lede, and changed 'every plate of the night' to 'the plate'. The short remaining sentence is merged into the grilling paragraph."
     },
     {
-     "finding": "3-techniques-app-7",
+     "finding": "3-techniques-voice-7",
      "action": "applied",
-     "reason": "The lede no longer claims a standard for all twelve and no longer lifts the blurb; it reads \"Twelve techniques a whole service rides on: the fires, the wok, the butchery knives, the shellfish and the laminated dough.\""
+     "reason": "Asado fire and Jerk are now described as carrying no written standard, along with the corrected account of the two fires (see fact-1)."
     },
     {
-     "finding": "3-techniques-app-8",
+     "finding": "3-techniques-voice-8",
      "action": "applied",
-     "reason": "Deleted the teaching sentence; next now carries only the eight Level IV names from neighbours.above."
+     "reason": "Replaced the near-verbatim Velveting definition with the shorter paraphrase: 'meat coated in egg white and cornstarch, rested and precooked briefly, which is where stir-fry silk comes from'."
     },
     {
-     "finding": "3-techniques-app-9",
+     "finding": "3-techniques-voice-9",
      "action": "applied",
-     "reason": "Changed \"so that recipe is the door\" to \"so that recipe is the way in\", keeping \"door\" for the training doors."
+     "reason": "Replaced the comma-spliced line with 'Butter too cold shatters and leaks; too warm, it smears in and bakes like brioche.'"
     },
     {
      "finding": "3-techniques-voice-10",
      "action": "applied",
-     "reason": "Lede replaced with the proposed line, which names the fires, the wok, the knives, the shellfish and the laminated dough without claiming a standard for all twelve."
+     "reason": "Same fix as fact-2: the claim about app ordering is removed and the door is described only by the brief's own words."
     },
     {
      "finding": "3-techniques-voice-11",
      "action": "applied",
-     "reason": "Paragraph 1 cut to \"Level III places twelve techniques a whole service rides on: a grill lit wrong ruins every plate off it.\", the quiet-wok image left to paragraph 3 alone; the whole is down from 573 to 576 words after the required additions, with paragraph 2 trimmed under 900 characters."
-    },
-    {
-     "finding": "3-techniques-voice-12",
-     "action": "applied",
-     "reason": "Deleted \"Its standard is short.\""
-    },
-    {
-     "finding": "3-techniques-voice-13",
-     "action": "applied",
-     "reason": "Same change as fact-1: the smoker is now named a different fire, indirect and low, on a clock of hours."
-    },
-    {
-     "finding": "3-techniques-voice-14",
-     "action": "applied",
-     "reason": "Changed \"open on the same lexicon page\" to \"sit under the same lexicon entry\"."
-    },
-    {
-     "finding": "3-techniques-voice-15",
-     "action": "applied",
-     "reason": "Same change as fact-4: the wok standard is \"won in the mise and read in the pan\"."
-    },
-    {
-     "finding": "3-techniques-voice-16",
-     "action": "applied",
-     "reason": "Deleted \"The wok is a service of its own.\""
-    },
-    {
-     "finding": "3-techniques-voice-17",
-     "action": "applied",
-     "reason": "Changed \"one discipline on two pages\" to \"one discipline under two names\"."
-    },
-    {
-     "finding": "3-techniques-voice-18",
-     "action": "applied",
-     "reason": "The recipe is no longer \"the door\"; it is \"the way in\" (the app-9 wording, which answers this finding's concern in the same stroke)."
-    },
-    {
-     "finding": "3-techniques-voice-19",
-     "action": "applied",
-     "reason": "Dropped the restated house rule; the closing sentence now begins \"The Level test at the foot of the page\"."
-    },
-    {
-     "finding": "3-techniques-voice-20",
-     "action": "applied",
-     "reason": "Deleted the teaching sentence from next, as in app-8."
+     "reason": "Removed 'Met is plain' and replaced the sentence that did not agree in number with 'A technique with a written standard is met when you cook one of its recipes and are graded met against its marks.'"
     }
    ]
   },
@@ -498,315 +538,285 @@
     {
      "where": "paragraph 3",
      "severity": "wrong",
-     "claim": "Prime Cost, food and labor summed weekly into the one figure operators live by",
-     "because": "The brief's entry defines it as COGS + TOTAL LABOR, and COGS is food and beverage together; a sous who reads \"food and labor\" leaves the bar out of the number.",
-     "fix": "Prime Cost, cost of goods and labor summed weekly into the one figure operators live by",
+     "claim": "wants it weekly, not at month-end",
+     "because": "The brief's Prime Cost entry says calculate it WEEKLY \"not just at month-end\": the weekly figure comes on top of the month-end figure and does not replace it. As written, the line tells a sous to drop the month-end number.",
+     "fix": "wants it weekly, not just at month-end",
      "lens": "fact",
      "key": "3-lexicon-fact-1",
      "primer": "3-lexicon"
     },
     {
-     "where": "paragraph 3",
-     "severity": "unclear",
-     "claim": "Vendors, Purchasing & Negotiation; Hiring, Training & Retention Economics; Kitchen Design & Flow; and Health Inspections & Crisis Management",
-     "because": "The list is presented as the whole finance group, but FF&E, Smallwares & Opening Inventory is placed here too and the primer never names it anywhere, while paragraph 6 tells the reader to read all thirty-three.",
-     "fix": "Vendors, Purchasing & Negotiation; Hiring, Training & Retention Economics; Kitchen Design & Flow; FF&E, Smallwares & Opening Inventory; and Health Inspections & Crisis Management",
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "the numbers a sous reads every morning",
+     "because": "Only the KPI dashboard is read every morning. In the brief, prime cost is a weekly figure, COGS against theoretical cost is weekly or per period, and the full P&L comes by period. The standard's own phrase is \"the numbers a sous reads\".",
+     "fix": "the numbers a sous reads",
      "lens": "fact",
      "key": "3-lexicon-fact-2",
      "primer": "3-lexicon"
     },
     {
-     "where": "paragraph 4",
+     "where": "paragraph 3",
      "severity": "unclear",
-     "claim": "bloomed in fat until the funk turns to onion depth",
-     "because": "The brief says bloomed for seconds in hot fat, a pinch into the oil first; \"until\" invites a cook to keep it in the fat and scorch it.",
-     "fix": "bloomed for seconds in fat so the funk turns to onion depth",
+     "claim": "Cost a fish at its invoice price rather than its yield and the plate costs more than you think.",
+     "because": "You do not cost a fish \"at its yield\". You cost it at its yielded price: the brief's example is a $12/kg fish at 45% yield that really costs $26/kg on the plate. As written, the sentence sets price against yield as if they were two alternative prices.",
+     "fix": "Cost a fish at its raw invoice price and not its price after trim, and the plate costs more than you think.",
      "lens": "fact",
      "key": "3-lexicon-fact-3",
      "primer": "3-lexicon"
     },
     {
-     "where": "paragraph 5",
-     "severity": "unclear",
-     "claim": "Take these last and take them lightly.",
-     "because": "The same paragraph carries real handling hazards from the brief (nettles inject histamine and are never tasted raw; durian with alcohol leaves people sick), so \"lightly\" undercuts the one rule per item the sentence before asks the reader to keep.",
-     "fix": "Take these last.",
+     "where": "paragraph 3",
+     "severity": "misplaced",
+     "claim": "Read Health Inspections & Crisis Management early: the daily standard is what an inspector merely photographs.",
+     "because": "The paragraph opens \"Then the numbers\", but Health Inspections & Crisis Management is not a numbers entry. It covers inspection readiness and written crisis playbooks, so here it sits in the wrong band.",
+     "fix": "Beside the numbers, read Health Inspections & Crisis Management early: the daily standard is what an inspector merely photographs.",
      "lens": "fact",
      "key": "3-lexicon-fact-4",
      "primer": "3-lexicon"
     },
     {
-     "where": "paragraph 3",
+     "where": "paragraph 1",
      "severity": "unclear",
-     "claim": "Menu Economics is the door into the rest",
-     "because": "On the level page \"door\" names a training door (Read the terms, Flashcards and Quiz, per the brief's \"doors\"); calling a term a door muddles what paragraph 6 then points to.",
-     "fix": "Menu Economics opens the rest",
+     "claim": "the techniques whose standard sets the pace of a service",
+     "because": "The standard says these are techniques whose standard \"governs a whole service\". Setting the pace is a different claim, and it does not fit lamination, which is done at the pastry bench before service.",
+     "fix": "the techniques whose standard governs a whole service",
      "lens": "fact",
      "key": "3-lexicon-fact-5",
      "primer": "3-lexicon"
     },
     {
-     "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "Prime Cost, food and labor summed weekly into the one figure operators live by",
-     "because": "The brief's Prime Cost entry sums COGS and total labor (\"COGS + TOTAL LABOR = PRIME COST\"), and COGS is wider than food cost; the KPI entry keeps the two apart as well (\"COGS by category vs. theoretical\").",
-     "fix": "Prime Cost, COGS and labor summed weekly into the one figure operators live by",
-     "lens": "app",
-     "key": "3-lexicon-app-6",
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "it runs in three bands: the techniques whose standard sets the pace of a service, the numbers a sous reads every morning, and the specialist produce a guest asks about",
+     "because": "Paragraph 4 opens with a fourth group, the spice entries (Asafoetida, Panch Phoron, The Three Heats). Those are neither produce on the board nor a technique band, so the three-band map does not match the order the primer then gives.",
+     "fix": "it runs in bands: the techniques whose standard governs a whole service, the numbers a sous reads, then the spices and the specialist produce a guest asks about",
+     "lens": "fact",
+     "key": "3-lexicon-fact-6",
      "primer": "3-lexicon"
     },
     {
-     "where": "paragraph 1",
-     "severity": "unclear",
-     "claim": "Read them in three groups.",
-     "because": "The reader then gets four: the fires (paragraph 2), the numbers (paragraph 3), \"The third group is product\" (paragraph 4) and \"The rest is the atlas\" (paragraph 5), so the count promised does not match the count delivered.",
-     "fix": "Read them in four groups.",
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "wants it weekly, not at month-end",
+     "because": "The brief's Prime Cost entry says to calculate it \"WEEKLY (the KPI entry's dashboard), not just at month-end\". The weekly figure is added to the month-end figure and does not replace it.",
+     "fix": "wants it weekly, not only at month-end",
      "lens": "app",
      "key": "3-lexicon-app-7",
      "primer": "3-lexicon"
     },
     {
-     "where": "paragraph 3",
+     "where": "paragraph 1",
      "severity": "unclear",
-     "claim": "Menu Economics is the door into the rest",
-     "because": "On the level page \"door\" is the word for the training doors the brief names (\"Read the terms\", \"Flashcards and Quiz\"), and paragraph 6 opens with \"Two doors open on the level page\"; a term called a door reads as a third one.",
-     "fix": "Menu Economics is the way into the rest",
+     "claim": "it runs in three bands: the techniques whose standard sets the pace of a service, the numbers a sous reads every morning, and the specialist produce a guest asks about because it is on tonight's board",
+     "because": "Paragraph 4 opens a fourth group, the Spice Atlas entries (Asafoetida (Hing), Panch Phoron, The Three Heats). These are neither produce on the board nor techniques. As written, the promised order in \"Take them in that order\" does not match the order the reader then gets.",
+     "fix": "it runs in bands: the techniques whose standard sets the pace of a service, the numbers a sous reads every morning, then the spices and the specialist produce a guest asks about because it is on tonight's board",
      "lens": "app",
      "key": "3-lexicon-app-8",
      "primer": "3-lexicon"
     },
     {
+     "where": "paragraph 1",
+     "severity": "style",
+     "claim": "the techniques whose standard sets the pace of a service, the numbers a sous reads every morning",
+     "because": "This restates the level blurb almost word for word (\"the techniques whose standard governs a whole service and the numbers a sous reads\"), which the house rules forbid. The paragraph should tell the reader how the items group, not repeat the page header.",
+     "fix": "the fire and the fold that a whole service leans on, the costs you check before the doors open",
+     "lens": "voice",
+     "key": "3-lexicon-voice-9",
+     "primer": "3-lexicon"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "wants it weekly, not at month-end",
+     "because": "The item's own text says to calculate it \"WEEKLY ... not just at month-end\". The month-end figure is still kept, and the weekly one is added to catch problems sooner.",
+     "fix": "wants it weekly, not only at month-end",
+     "lens": "voice",
+     "key": "3-lexicon-voice-10",
+     "primer": "3-lexicon"
+    },
+    {
      "where": "paragraph 3",
      "severity": "unclear",
-     "claim": "Labor, scheduled to forecast rather than habit",
-     "because": "The item is \"Labor: Scheduling & the Model\"; the bare head \"Labor\" satisfies the cite rule but a reader scanning the Lexicon list will not find a term called Labor, and this is the only item in the paragraph named by its head alone.",
-     "fix": "Labor: Scheduling & the Model, hourly scheduled to forecast rather than habit",
-     "lens": "app",
-     "key": "3-lexicon-app-9",
-     "primer": "3-lexicon"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "style",
-     "claim": "These are the techniques a sous answers for across a whole shift, and each entry gives the discipline in a line:",
-     "because": "The primer runs 609 words against the brief's aim of 340 to 520 (the 650 hard limit holds), and paragraph 3 is 834 characters of a 900 ceiling; this sentence in paragraph 2 restates the level blurb (\"techniques whose standard governs a whole service\") and is the cheapest cut, with the paragraph 3 closer \"You will not run these numbers yet, but you will be asked what they mean at the pass.\" the next.",
-     "fix": "Each entry gives the discipline in a line:",
-     "lens": "app",
-     "key": "3-lexicon-app-10",
-     "primer": "3-lexicon"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "style",
-     "claim": "Then the numbers. Menu Economics is the door into the rest: ... Vendors, Purchasing & Negotiation; Hiring, Training & Retention Economics; Kitchen Design & Flow; and Health Inspections & Crisis Management",
-     "because": "The primer runs to about 609 words against an aim of 340 to 520 (hard limit 650). Paragraph 3 is the longest at 141 words and carries a run of finance names with nothing said about three of them; the count also sits within 41 words of the gate.",
-     "fix": "Cut the three bare names (Vendors, Purchasing & Negotiation; Hiring, Training & Retention Economics; Kitchen Design & Flow) and their cites, or give each one clause and trim paragraph 5's second list instead.",
+     "claim": "Read Health Inspections & Crisis Management early:",
+     "because": "Paragraph 1 says \"Take them in that order\", and this paragraph opens by putting Menu Economics first. \"Early\" then adds a second, unplaced order, inside the numbers paragraph, for an entry that is not a number. A reader on a phone cannot tell where it falls.",
+     "fix": "Read Health Inspections & Crisis Management alongside them:",
      "lens": "voice",
      "key": "3-lexicon-voice-11",
      "primer": "3-lexicon"
     },
     {
      "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "Prime Cost, food and labor summed weekly into the one figure operators live by",
-     "because": "The brief's entry reads \"COGS + TOTAL LABOR = PRIME COST\"; COGS is all goods sold, bar included, not food alone.",
-     "fix": "Prime Cost, COGS and labor summed weekly into the one figure operators live by",
+     "severity": "unclear",
+     "claim": "Labor: Scheduling & the Model schedules to forecast, not habit;",
+     "because": "Putting the full label, with its internal colon, straight in front of a verb makes the sentence hard to parse at a glance. The rules let the text use the head before the colon.",
+     "fix": "Labor schedules to forecast, not habit;",
      "lens": "voice",
      "key": "3-lexicon-voice-12",
      "primer": "3-lexicon"
     },
     {
-     "where": "paragraph 6",
-     "severity": "wrong",
-     "claim": "so a miss only means the card comes back",
-     "because": "A claim about the app that is neither a door nor the met rule. The met rule says only \"a miss alone is never met\"; nothing in the brief says a missed card returns.",
-     "fix": "Delete the clause and end the sentence at \"a miss alone is never met.\"",
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Lamination makes the same point at the pastry bench:",
+     "because": "It is not clear which point is meant. The sentence before it describes a technique-and-equipment bargain, and lamination is neither. What lamination actually shares with the wok is a discipline: matched conditions, rests and counted steps.",
+     "fix": "Lamination asks the same discipline at the pastry bench:",
      "lens": "voice",
      "key": "3-lexicon-voice-13",
      "primer": "3-lexicon"
     },
     {
-     "where": "paragraph 1",
-     "severity": "unclear",
-     "claim": "Read them in three groups.",
-     "because": "The reader then walks four: the fires (paragraph 2), the numbers (3), \"the third group is product\" (4) and \"the rest is the atlas\" (5).",
-     "fix": "Read them in four groups.",
+     "where": "lede",
+     "severity": "style",
+     "claim": "and the rare thing on the board",
+     "because": "\"The board\" appears three times in a short primer: the lede, \"on tonight's board\" in paragraph 1 and \"the dish on the board first\" in paragraph 4. The lede can use a different phrase.",
+     "fix": "and the rare thing a guest asks about",
      "lens": "voice",
      "key": "3-lexicon-voice-14",
      "primer": "3-lexicon"
     },
     {
-     "where": "paragraph 3",
-     "severity": "unclear",
-     "claim": "Menu Economics is the door into the rest",
-     "because": "On the level page \"door\" is the word for the training doors (Read the terms, Flashcards and Quiz); using it for a term muddles the two.",
-     "fix": "Menu Economics comes first",
+     "where": "paragraph 5",
+     "severity": "style",
+     "claim": "The truer check:",
+     "because": "Calling this check \"truer\" sets it against the app's met rule, the one standard the brief gives (recalled met or close, or in the quiz). The self-check can stand beside that rule without outranking it.",
+     "fix": "Then check yourself:",
      "lens": "voice",
      "key": "3-lexicon-voice-15",
      "primer": "3-lexicon"
     },
     {
-     "where": "paragraph 3",
-     "severity": "style",
-     "claim": "the figures a sous is handed on the first day",
-     "because": "Not in the brief; the standard says \"the numbers a sous reads (food cost, yield, par)\".",
-     "fix": "the numbers a sous reads",
-     "lens": "voice",
-     "key": "3-lexicon-voice-16",
-     "primer": "3-lexicon"
-    },
-    {
-     "where": "paragraph 2",
+     "key": "3-lexicon-critic-1",
+     "primer": "3-lexicon",
+     "lens": "critic",
+     "where": "primer",
      "severity": "unclear",
-     "claim": "Take the fires first: Grilling vs. Barbecue vs. Smoking, Wok Hei & Stir-Fry Discipline with The Wok beside it, then Lamination.",
-     "because": "Lamination is not a fire; the lede already names it as \"the fold\", so the group label should carry both.",
-     "fix": "Take the fires and the fold first: Grilling vs. Barbecue vs. Smoking, Wok Hei & Stir-Fry Discipline with The Wok beside it, then Lamination.",
-     "lens": "voice",
-     "key": "3-lexicon-voice-17",
-     "primer": "3-lexicon"
+     "claim": "Repeats the method from the other primers instead of teaching the word. Three things are covered twice or three times. The wok discipline (thin carbon steel preheated to smoking, dry uniform ingredients, small batches) also appears in 3-techniques paragraph 3 and 3-dishes paragraph 3. Lamination (butter and dough at matched plasticity, a rest between folds, turns counted) is near-verbatim in 3-techniques paragraph 4. Health Inspections and Crisis Management is glossed as 'the daily standard is what an inspector merely photographs', which is the 3-safety lede, and that lexicon entry is the very text the Food Safety page reads clause by clause at this level.",
+     "because": "Repeats the method from the other primers instead of teaching the word. Three things are covered twice or three times. The wok discipline (thin carbon steel preheated to smoking, dry uniform ingredients, small batches) also appears in 3-techniques paragraph 3 and 3-dishes paragraph 3. Lamination (butter and dough at matched plasticity, a rest between folds, turns counted) is near-verbatim in 3-techniques paragraph 4. Health Inspections and Crisis Management is glossed as 'the daily standard is what an inspector merely photographs', which is the 3-safety lede, and that lexicon entry is the very text the Food Safety page reads clause by clause at this level.",
+     "fix": "In paragraph 2, keep each term's distinction and drop its method. Wok Hei is the aroma, The Wok is the vessel with its zones, and Lamination is the layered dough the folds build. Send the method to the Techniques reader in one clause. In paragraph 3, replace the inspections gloss with a pointer: it is the entry the Food Safety page reads clause by clause at this level, so read it there. Keep the cites, since the names stay."
     },
     {
-     "where": "paragraph 5",
+     "key": "3-lexicon-critic-2",
+     "primer": "3-lexicon",
+     "lens": "critic",
+     "where": "primer",
      "severity": "unclear",
-     "claim": "The rest is the atlas at the level a kitchen handles it rarely:",
-     "because": "\"at the level a kitchen handles it rarely\" does not parse on a phone; the standard's line is \"the atlases by how often a kitchen handles the item\".",
-     "fix": "The rest is the atlas, the entries a kitchen handles rarely:",
-     "lens": "voice",
-     "key": "3-lexicon-voice-18",
-     "primer": "3-lexicon"
+     "claim": "The next line puts White Truffle at Chef. White Truffle (fd_0321) is a Sous Chef Floor Deck card, and 3-deck names it as this level's. Put side by side, one reader calls White Truffle this level's and the other calls it the level above. The lexicon brief does list White Truffle among Chef's terms, but the cook sees a contradiction.",
+     "because": "The next line puts White Truffle at Chef. White Truffle (fd_0321) is a Sous Chef Floor Deck card, and 3-deck names it as this level's. Put side by side, one reader calls White Truffle this level's and the other calls it the level above. The lexicon brief does list White Truffle among Chef's terms, but the cook sees a contradiction.",
+     "fix": "Drop White Truffle from the next line and keep Matsutake, Mangosteen, Cardoon and Puntarelle. Matsutake is at Chef in both the deck and the lexicon, so it stays consistent."
     },
     {
-     "where": "paragraph 5",
-     "severity": "style",
-     "claim": "Take these last and take them lightly.",
-     "because": "\"Lightly\" reads as licence to skip, but the doors run over all thirty-three and met is recalled per term.",
-     "fix": "Take these last.",
-     "lens": "voice",
-     "key": "3-lexicon-voice-19",
-     "primer": "3-lexicon"
-    },
-    {
-     "where": "paragraph 6",
+     "key": "3-lexicon-critic-3",
+     "primer": "3-lexicon",
+     "lens": "critic",
+     "where": "primer",
      "severity": "unclear",
-     "claim": "A term is met when you have recalled it met or close on the flashcard ladder, or in the quiz",
-     "because": "\"recalled it met\" stumbles; the brief's rule is \"recalled met or close on the flashcard ladder, or in the quiz\".",
-     "fix": "A term is met when it has been recalled met or close on the flashcard ladder, or in the quiz",
-     "lens": "voice",
-     "key": "3-lexicon-voice-20",
-     "primer": "3-lexicon"
+     "claim": "The Level test is described in three readers: 3-dishes, 3-lexicon and 3-service, which names it differently. It is one test across all the subsections, printed once at the foot of the page.",
+     "because": "The Level test is described in three readers: 3-dishes, 3-lexicon and 3-service, which names it differently. It is one test across all the subsections, printed once at the foot of the page.",
+     "fix": "Delete the sentence 'The Level test at the foot of the page ends on what you missed, with the right answers.' from paragraph 5. 3-dishes keeps the one mention."
     }
    ],
    "dispositions": [
     {
      "finding": "3-lexicon-fact-1",
      "action": "applied",
-     "reason": "Prime Cost now reads \"COGS and labor summed weekly\", matching the brief's \"COGS + TOTAL LABOR = PRIME COST\"."
+     "reason": "Now reads \"wants it weekly, not only at month-end\", which matches the entry's \"not just at month-end\": the weekly figure is added and the month-end one stays."
     },
     {
      "finding": "3-lexicon-fact-2",
      "action": "applied",
-     "reason": "FF&E, Smallwares & Opening Inventory is now named in paragraph 3 with its own clause and its slug added to cites, so all thirty-three terms are named."
+     "reason": "Removed \"every morning\". The band is now \"the numbers that run the building\", taken from the Prime Cost entry's title, so it no longer claims a daily cadence."
     },
     {
      "finding": "3-lexicon-fact-3",
      "action": "applied",
-     "reason": "Changed to \"bloomed for seconds in fat so the funk turns to onion depth\", matching the brief's \"BLOOMED for seconds in hot fat\"."
+     "reason": "Now reads \"Cost a fish at its raw invoice price instead of its price after trim and cooking\", which matches the entry's definition of yield (usable product after trim and cooking)."
     },
     {
      "finding": "3-lexicon-fact-4",
      "action": "applied",
-     "reason": "The closing line of paragraph 5 is now \"Take these last.\" with \"and take them lightly\" removed."
+     "reason": "The sentence now opens \"Beside the numbers, read Health Inspections & Crisis Management\", so it no longer sits inside the numbers band."
     },
     {
      "finding": "3-lexicon-fact-5",
      "action": "applied",
-     "reason": "\"Menu Economics is the door into the rest\" became \"Menu Economics comes first\", so \"door\" now names only the two training doors."
+     "reason": "Replaced \"sets the pace of a service\" with \"whose standard a whole service answers to\", which paraphrases the standard's \"governs a whole service\" without copying the blurb (see voice-9)."
     },
     {
-     "finding": "3-lexicon-app-6",
+     "finding": "3-lexicon-fact-6",
      "action": "applied",
-     "reason": "Same change as fact-1: Prime Cost is now \"COGS and labor summed weekly into the one figure operators live by\"."
+     "reason": "Paragraph 1 now says \"it runs in bands\" and lists \"then the spices and the specialist produce\", so the map matches the order the primer then follows."
     },
     {
      "finding": "3-lexicon-app-7",
      "action": "applied",
-     "reason": "Paragraph 1 now ends \"Read them in four groups.\", matching the four groups the reader walks."
+     "reason": "Same change as fact-1: \"not only at month-end\"."
     },
     {
      "finding": "3-lexicon-app-8",
      "action": "applied",
-     "reason": "Same change as fact-5: the term is no longer called a door; it \"comes first\"."
+     "reason": "Same change as fact-6: the spices are now a named band before the specialist produce. \"Sets the pace\" and \"every morning\" were dropped under fact-5 and fact-2."
     },
     {
-     "finding": "3-lexicon-app-9",
+     "finding": "3-lexicon-voice-9",
      "action": "applied",
-     "reason": "The item is now named in full as \"Labor: Scheduling & the Model, hourly scheduled to forecast, not habit\"."
+     "reason": "Rephrased so it no longer copies the blurb (\"the fire and the fold whose standard a whole service answers to, the numbers that run the building\"). I did not use \"costs you check before the doors open\" because it implies a daily cadence the brief gives only for the dashboard."
     },
     {
-     "finding": "3-lexicon-app-10",
+     "finding": "3-lexicon-voice-10",
      "action": "applied",
-     "reason": "The blurb-restating sentence was cut to \"Each entry gives the discipline in a line:\" and the paragraph 3 closer about running the numbers was removed; the primer is now 541 words."
+     "reason": "Same change as fact-1: \"not only at month-end\"."
     },
     {
      "finding": "3-lexicon-voice-11",
      "action": "applied",
-     "reason": "Took the second option: each finance term now carries one clause drawn from its entry (second source, retention as profit center, designed backward from the menu, the small checks before cooking), paragraph 5's handling list was trimmed to three rules, and other lines were tightened to bring the total from 609 to 541 words with paragraph 3 at 887 characters."
+     "reason": "Dropped \"early\" and placed the entry \"Beside the numbers\", so it no longer adds a second order; this is combined with fact-4."
     },
     {
      "finding": "3-lexicon-voice-12",
      "action": "applied",
-     "reason": "Same change as fact-1 and app-6: Prime Cost is now COGS and labor."
+     "reason": "Now reads \"Labor schedules to forecast, not habit\", using the head before the colon, which the cite rule allows."
     },
     {
      "finding": "3-lexicon-voice-13",
      "action": "applied",
-     "reason": "The clause \"so a miss only means the card comes back\" was deleted; the sentence now ends at \"a miss alone is never met.\""
+     "reason": "Now reads \"Lamination asks the same discipline at the pastry bench\"."
     },
     {
      "finding": "3-lexicon-voice-14",
      "action": "applied",
-     "reason": "Same change as app-7: \"Read them in four groups.\""
+     "reason": "The lede now ends \"the rare thing a guest asks you to explain\". This removes one use of \"board\" and does not echo paragraph 1's \"a guest asks about\" word for word."
     },
     {
      "finding": "3-lexicon-voice-15",
      "action": "applied",
-     "reason": "Used this finding's exact wording, \"Menu Economics comes first\", which also answers fact-5 and app-8."
+     "reason": "Replaced \"The truer check:\" with \"Then check yourself:\", so the self-check stands beside the met rule and does not outrank it."
     },
     {
-     "finding": "3-lexicon-voice-16",
+     "finding": "3-lexicon-critic-1",
      "action": "applied",
-     "reason": "Changed to \"food cost, yield and par, the numbers a sous reads\", the standard's own line."
+     "reason": "Paragraph 2 now gives each term's distinction (Wok Hei as the aroma, The Wok as the vessel with its zones, Lamination as the layered dough) and sends the method to the Techniques reader in one sentence; paragraph 3 replaces the inspections gloss with a pointer to the Food Safety page, which reads that entry clause by clause at this level; all cites kept."
     },
     {
-     "finding": "3-lexicon-voice-17",
+     "finding": "3-lexicon-critic-2",
      "action": "applied",
-     "reason": "Paragraph 2 now opens \"Take the fires and the fold first:\" so Lamination sits under its own label."
+     "reason": "White Truffle dropped from the next line, keeping Matsutake, Mangosteen, Cardoon and Puntarelle, so the deck and the lexicon readers no longer contradict each other."
     },
     {
-     "finding": "3-lexicon-voice-18",
+     "finding": "3-lexicon-critic-3",
      "action": "applied",
-     "reason": "Paragraph 5 now opens \"The rest is the atlas, the entries a kitchen handles rarely:\"."
-    },
-    {
-     "finding": "3-lexicon-voice-19",
-     "action": "applied",
-     "reason": "Same change as fact-4: \"Take these last.\""
-    },
-    {
-     "finding": "3-lexicon-voice-20",
-     "action": "applied",
-     "reason": "The met sentence now reads \"A term is met when it has been recalled met or close on the flashcard ladder, or in the quiz; a miss alone is never met.\", the brief's rule verbatim."
+     "reason": "Deleted the Level test sentence from paragraph 5, leaving the one mention to the Dishes reader."
     }
    ]
   },
   "3-deck": {
    "findings": [
     {
-     "where": "paragraph 4",
+     "where": "paragraph 1",
      "severity": "wrong",
-     "claim": "Bouillabaisse and Cassoulet are the long builds",
-     "because": "The brief's Cassoulet card is \"baked for hours\", but its Bouillabaisse card is a hard, fast boil (\"boiled hard in olive oil, tomato, fennel... so the oil emulsifies\") with rouille and toast alongside. It is the multi-component plate of the standard's \"long wait or a multi-component build\", not a long one. A cook told bouillabaisse is a long build will stew it, and the broth will not emulsify.",
-     "fix": "Cassoulet is the long build, baked for hours, and Bouillabaisse the multi-part one, several fish boiled hard, with rouille and bread beside it",
+     "claim": "the wild Black Trumpet, White Truffle and Summer Truffle",
+     "because": "The Summer Truffle card says it \"grows across Europe and is also farmed\". Only Black Trumpet and White Truffle are given as wild and never farmed, so calling all three wild contradicts the card.",
+     "fix": "the wild Black Trumpet and White Truffle, and the Summer Truffle, which is also farmed",
      "lens": "fact",
      "key": "3-deck-fact-1",
      "primer": "3-deck"
@@ -814,19 +824,19 @@
     {
      "where": "paragraph 3",
      "severity": "wrong",
-     "claim": "Cobia carries enough fat to go out raw.",
-     "because": "Fat is not what lets a fish go out raw; freshness and handling are. The brief's card says the fat makes it \"firm, moist and buttery\" and, separately, that it is \"often served raw as crudo\". As written the sentence teaches a false cause.",
-     "fix": "Cobia is fattier than most white fish, firm and buttery, and often goes out raw as crudo.",
+     "claim": "Squab is classically medium rare, so ask before it fires.",
+     "because": "The card's note says \"The breast is classically served medium rare\". The bird is not served medium rare as a whole: the card's own menu line reads \"Roasted squab breast, confit leg\", and the leg is confit.",
+     "fix": "Squab breast is classically medium rare, so ask before it fires.",
      "lens": "fact",
      "key": "3-deck-fact-2",
      "primer": "3-deck"
     },
     {
-     "where": "paragraph 2",
+     "where": "paragraph 1",
      "severity": "unclear",
-     "claim": "so the meat is tender and the cook is short",
-     "because": "True of squab breast and poussin, but Sweetbreads (named in the same sentence) carry a long prep before the sear: the brief's card says \"soaked, blanched, peeled of their membrane and pressed, then seared or fried\". A cook reading \"the cook is short\" will skip the prep.",
-     "fix": "so the meat is tender and the final cook is quick, though Sweetbreads earn a long prep first",
+     "claim": "They fall into three families.",
+     "because": "Many cards the primer names later fit none of the three: Squab, Tasso, Stracciatella, Crudo, Escabeche, Gastrique, Agrodolce, Kouign-Amann, Clafoutis, and all four language cards (Garde Manger, Mignardises, Omakase, Regenerative). Saying the deck falls into three families is false, and the reader will look for the rest in vain.",
+     "fix": "Most fall into three families.",
      "lens": "fact",
      "key": "3-deck-fact-3",
      "primer": "3-deck"
@@ -834,304 +844,264 @@
     {
      "where": "paragraph 2",
      "severity": "unclear",
-     "claim": "The cured board is six answers to where on the animal the piece came from and whether smoke touched it.",
-     "because": "Six cured items are placed here (Guanciale, Lardo, Speck, Tasso, Bresaola, Jamón Ibérico) but only four are named, and \"the animal\" implies one animal when Bresaola is beef round (the brief: \"A single muscle from the beef round\") and Lardo is back fat, not a muscle at all.",
-     "fix": "The cured board is six answers to which animal, where on it, and whether smoke touched it: Lardo is pork back fat shaved thin, Bresaola is lean beef round, and the rest are pork.",
+     "claim": "the other chunkier with fruit and onion",
+     "because": "The brief hedges this every time. The gist says agrodolce is \"often chunky with onion or raisins\", and notThis says it \"is chunkier and often holds fruit and onion\". Plenty of agrodolce is a smooth glaze, so a server who says it always has fruit and onion will be wrong at the table.",
+     "fix": "the other often chunky with fruit and onion",
      "lens": "fact",
      "key": "3-deck-fact-4",
      "primer": "3-deck"
     },
     {
-     "where": "paragraph 3",
+     "where": "paragraph 4",
      "severity": "unclear",
-     "claim": "the five fish are here because each has a nearby cousin the guest will name instead",
-     "because": "Five fish are placed here but only four are named; Sturgeon (fd_0120) is missing, and it has no \"nearby cousin\" on the card, so the sentence's claim does not fit it. The brief's card: \"almost no flake... dense and meaty, often compared to veal or lobster, and it takes smoke beautifully.\"",
-     "fix": "Add after Cobia: \"Sturgeon has almost no flake, eats dense and meaty like veal, and takes smoke.\" (Romesco, Fromage Blanc and Clafoutis are likewise placed here and unnamed; the primer is at 583 words against a 650 limit, so name them in a clause each or leave them uncited.)",
+     "claim": "Leave the pastry and the room's language for last, since they sit furthest from the pass,",
+     "because": "This order is unsound. Garde Manger is a station of the line, not far from the pass, and three items in this paragraph carry a guest warning the cards say must be spoken: Clafoutis pits (\"warn the guest if they are there\"), raw crudo and oysters from Garde Manger (\"Say so when you describe them\"), and Omakase. Those belong with the product notes in paragraph 3, where a guest's question comes back to the pass. They should not come last.",
+     "fix": "Take the pastry and the room's language next, and do not skip their warnings,",
      "lens": "fact",
      "key": "3-deck-fact-5",
      "primer": "3-deck"
     },
     {
-     "where": "paragraph 6",
+     "where": "next",
      "severity": "unclear",
-     "claim": "so a card you fumble simply comes back tomorrow",
-     "because": "The brief states only that the landing shows \"what is owed today\" and that \"a miss alone is never met\"; it does not say a missed card returns the next day. That is a scheduling claim the guide does not make.",
-     "fix": "so a card you fumble simply comes back owed",
+     "claim": "narrows to the rare and deeply classical word",
+     "because": "Of the names given, Koji-Aged is a modern aging method and Ikejime is a Japanese fish-killing technique. Neither is classical in the fine-dining sense, so \"deeply classical\" misdescribes the list it introduces.",
+     "fix": "narrows to the rare word, classical or new,",
      "lens": "fact",
      "key": "3-deck-fact-6",
      "primer": "3-deck"
     },
     {
-     "where": "next",
-     "severity": "wrong",
-     "claim": "among the wild mushrooms",
-     "because": "Abalone Mushroom (Pleurotus cystidiosus) is a farmed oyster mushroom, and Lion's Mane is mostly cultivated in restaurant supply; only Chicken of the Woods is a wild-only catch. The brief lists them as names only, with no \"wild\".",
-     "fix": "among the mushrooms",
-     "lens": "fact",
-     "key": "3-deck-fact-7",
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "They fall into three families.",
+     "because": "The brief's items at this level also include meats (Sweetbreads, Poussin, Tripe, Duck Hearts), dairy (Fromage Blanc, Bloomy Rind, Triple Crème, Taleggio), starches (Carnaroli, Fregola, Bomba, Carolina Gold), pantry (Mostarda, Espelette, Yuzu Kosho, Black Garlic) and the language section (Garde Manger, Mignardises, Omakase, Regenerative). None of these sits in the three families listed, and paragraph 4 goes on to treat the room's language as a group of its own. As written, the sentence claims the three families cover the whole deck at this level.",
+     "fix": "Most fall into three families.",
+     "lens": "app",
+     "key": "3-deck-app-7",
      "primer": "3-deck"
     },
     {
-     "where": "next",
-     "severity": "wrong",
-     "claim": "Lomo and Bottarga on the cured board",
-     "because": "In the app's own deck data Bottarga is placed in the fish section (floor-deck.json: \"term\": \"Bottarga\", \"section\": \"fish\"), not among the cured meats; only Lomo is section \"cured\". The brief's neighbours.above gives names alone, so shelf assignments must match the data.",
-     "fix": "Lomo on the cured board, Bottarga in the fish case",
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "the other chunkier with fruit and onion",
+     "because": "The Gastrique card calls agrodolce \"often chunky with onion or raisins\", and the Agrodolce card says it \"often holds fruit and onion\" and that in Sicily the raisins and onion \"often go in\". The cards never say it always does.",
+     "fix": "the other often chunky with fruit and onion",
      "lens": "app",
      "key": "3-deck-app-8",
      "primer": "3-deck"
     },
     {
-     "where": "next",
-     "severity": "wrong",
-     "claim": "among the wild mushrooms",
-     "because": "Abalone Mushroom's own card says it is \"grown indoors on sawdust or straw\", and Lion's Mane is described without the word wild; only Chicken of the Woods is \"foraged\". The brief gives these three as names only, so \"wild\" is invented and contradicts one card.",
-     "fix": "among the mushrooms",
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "Squab is classically medium rare, so ask before it fires.",
+     "because": "The Squab card's note is about the breast: \"The breast is classically served medium rare.\" Its menu line serves a confit leg next to the roasted breast, so the whole bird is not served medium rare.",
+     "fix": "Squab breast is classically medium rare, so ask before it fires.",
      "lens": "app",
      "key": "3-deck-app-9",
      "primer": "3-deck"
     },
     {
-     "where": "paragraph 6",
+     "where": "paragraph 4",
      "severity": "unclear",
-     "claim": "so a card you fumble simply comes back tomorrow",
-     "because": "The brief's met rule says only \"a miss alone is never met\" and the landing door shows \"what is owed today\"; nothing states when a missed card returns, so \"tomorrow\" is a schedule the app does not promise here.",
-     "fix": "so a card you fumble simply comes back owed.",
+     "claim": "since they sit furthest from the pass",
+     "because": "The Garde Manger card's gist is \"Cold station of the line\", so its plates go through the pass like any other station's. Mignardises go out from the pastry kitchen at the close of a tasting menu. The reason given for the order contradicts the app's own card.",
+     "fix": "Take the pastry and the room's language last, but do not skip them.",
      "lens": "app",
      "key": "3-deck-app-10",
      "primer": "3-deck"
     },
     {
-     "where": "paragraph 2",
+     "where": "next",
      "severity": "unclear",
-     "claim": "so the meat is tender and the cook is short",
-     "because": "\"the cook is short\" reads as the person at the stove; the intended sense is cooking time (Poussin \"roasts fast\", Sweetbreads are \"seared or fried\").",
-     "fix": "so the meat is tender and the cooking is short",
+     "claim": "the rare and deeply classical word",
+     "because": "The Chef standard reads \"the rare, the specialist and the deeply classical word a senior cook or server must own without notes\". The words named next, Ikejime and Koji-Aged, are specialist rather than deeply classical, so dropping \"specialist\" misdescribes what they are.",
+     "fix": "the rare, the specialist and the deeply classical word",
      "lens": "app",
      "key": "3-deck-app-11",
      "primer": "3-deck"
     },
     {
-     "where": "paragraph 3",
-     "severity": "unclear",
-     "claim": "each has a nearby cousin the guest will name instead",
-     "because": "Of the seven cuts and fish placed here, Sturgeon, Tilefish and Cobia carry no not-this line in the brief; only Bavette, Coulotte, Turbot and Wreckfish name a cousin. \"Each\" overstates the data.",
-     "fix": "most have a nearby cousin the guest will name instead",
-     "lens": "app",
-     "key": "3-deck-app-12",
-     "primer": "3-deck"
-    },
-    {
      "where": "paragraph 1",
-     "severity": "style",
-     "claim": "Most cards here are a product with a story behind how it eats, or a classical preparation whose name is the menu's whole description.",
-     "because": "The primer runs 583 words against the brief's aim of 340 to 520 (hard limit 650 is met). This sentence restates the level blurb and can go without loss; paragraph 2 at 714 characters is the next place to trim.",
-     "fix": "",
-     "lens": "app",
-     "key": "3-deck-app-13",
+     "severity": "wrong",
+     "claim": "They fall into three families.",
+     "because": "The deck at this level is wider than the three families named: Squab (cited later), Sweetbreads, Poussin, Tripe and Duck Hearts are meats; Stracciatella and Taleggio are dairy; Carnaroli and Bomba are starches; Espelette and Mostarda are pantry; Garde Manger, Omakase, Mignardises and Regenerative are language cards. Paragraph 4 then brings in 'the room's language' as though it were a fourth family, so the primer contradicts its own grouping.",
+     "fix": "Most fall into three families.",
+     "lens": "voice",
+     "key": "3-deck-voice-12",
      "primer": "3-deck"
     },
     {
-     "where": "paragraph 2",
-     "severity": "wrong",
-     "claim": "youth or tissue that has never worked, so the meat is tender and the cook is short",
-     "because": "Sweetbreads are not idle muscle; the brief's card says they are glands and that \"little muscle means no chew\". Poussin and Squab share youth; Sweetbreads share the absence of muscle, not a muscle that never worked.",
-     "fix": "youth or a gland with almost no muscle, so there is no chew and the cook is short",
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "Leave the pastry and the room's language for last, since they sit furthest from the pass, but do not skip them.",
+     "because": "The reason given is invented and works against the paragraph's own lines. The language cards carry the guest-facing notes that paragraph 3 put first: Garde Manger's crudo and oysters go out raw, and on Omakase anything a guest needs to avoid must be said before the first course. 'But do not skip them' is filler.",
+     "fix": "Take the pastry and the room's language last.",
+     "lens": "voice",
+     "key": "3-deck-voice-13",
+     "primer": "3-deck"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "Open Flip cards to meet the words at this level, then move to Say it back, recall before recognition and the one deck mode that counts as a round. The deck landing shows what is owed today, so start there on a short break.",
+     "because": "This gives two different starting points: first Flip cards, then the deck landing. A cook reading it on a phone cannot tell which door to open first.",
+     "fix": "Start at the deck landing, which shows what is owed today, then Flip cards at this level, then Say it back, recall before recognition and the one deck mode that counts as a round.",
      "lens": "voice",
      "key": "3-deck-voice-14",
      "primer": "3-deck"
     },
     {
      "where": "paragraph 2",
-     "severity": "unclear",
-     "claim": "The cured board is six answers to where on the animal the piece came from and whether smoke touched it.",
-     "because": "Six is right (Guanciale, Lardo, Speck, Tasso, Bresaola, Jamón Ibérico) but the paragraph then gives four; Lardo and Bresaola are placed here and never named anywhere in the primer, so a reader counting to six finds two missing. Either name them or drop the count.",
-     "fix": "The cured board is six answers to where on the animal the piece came from and whether smoke touched it. Lardo is back fat, not lard, shaved thin onto something warm. Bresaola is beef round, cured and dried, not carpaccio.",
+     "severity": "style",
+     "claim": "Learn them in twos and you can explain the line to a new server in one breath.",
+     "because": "This is a promise and filler. The paragraph's first sentence already says to take the pairs first, so this line repeats the instruction.",
+     "fix": "Learn them in twos.",
      "lens": "voice",
      "key": "3-deck-voice-15",
      "primer": "3-deck"
     },
     {
-     "where": "paragraph 3",
+     "where": "paragraph 2",
      "severity": "unclear",
-     "claim": "The two cuts and the five fish are here because each has a nearby cousin the guest will name instead.",
-     "because": "Five fish are placed here but only four are named; Sturgeon is missing from the whole primer. And \"each\" overreaches: the Tilefish, Cobia and Sturgeon cards carry no not-this line, so no cousin is given for them.",
-     "fix": "The two cuts and the five fish are here because most have a nearby cousin the guest will name instead. Sturgeon has almost no flake, eats dense and meaty, and takes smoke.",
+     "claim": "the other chunkier with fruit and onion",
+     "because": "The cards hedge this. Gastrique's notThis says agrodolce is 'often chunky with onion or raisins', and Agrodolce's own card says it 'often holds fruit and onion'. Dropping 'often' makes it a fixed rule, and cooks will repeat that at the pass.",
+     "fix": "the other often chunky with fruit and onion",
      "lens": "voice",
      "key": "3-deck-voice-16",
      "primer": "3-deck"
     },
     {
      "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "Cobia carries enough fat to go out raw.",
-     "because": "The card says it carries more fat than most white fish and is often served raw as crudo; it never makes the fat the reason it goes out raw, and the sentence reads as a fitness-for-raw verdict the brief does not give.",
-     "fix": "Cobia is fatter than most white fish, buttery, and often goes out raw as crudo.",
+     "severity": "unclear",
+     "claim": "Dover Sole is filleted from the bone at the table, so a stray fine bone is possible.",
+     "because": "The Dover Sole card's note says it is served on the bone and lifted off as four fillets. It does not say this happens at the table. Tableside filleting appears only on the Meunière card, and only as 'may'.",
+     "fix": "Dover Sole comes on the bone, so a stray fine bone is possible.",
      "lens": "voice",
      "key": "3-deck-voice-17",
      "primer": "3-deck"
     },
     {
-     "where": "paragraph 4",
+     "where": "paragraph 3",
      "severity": "unclear",
-     "claim": "held just warm because it splits",
-     "because": "The card says too hot and it splits, too cold and it sets. As written it reads as though the sauce splits while held warm.",
-     "fix": "held just warm because heat splits it and cold sets it",
+     "claim": "Squab is classically medium rare, so ask before it fires.",
+     "because": "The card's note is about the breast: 'The breast is classically served medium rare.' The bird as a whole is not described that way.",
+     "fix": "Squab breast is classically medium rare, so ask before it fires.",
      "lens": "voice",
      "key": "3-deck-voice-18",
      "primer": "3-deck"
     },
     {
-     "where": "paragraph 5",
+     "key": "3-deck-critic-1",
+     "primer": "3-deck",
+     "lens": "critic",
+     "where": "primer",
      "severity": "unclear",
-     "claim": "What remains is the larder:",
-     "because": "It says the six items listed are what remains, but Fromage Blanc, Romesco and Clafoutis (with Lardo, Bresaola and Sturgeon) are placed at this level in this subsection and are never named. Do not claim completeness the list does not have.",
-     "fix": "The larder comes last:",
-     "lens": "voice",
-     "key": "3-deck-voice-19",
-     "primer": "3-deck"
+     "claim": "The next line puts Culatello at Chef. 3-service teaches The Italian Salumi at this level, whose outcome is telling 'coppa from culatello', and that module's terms include Culatello di Zibello. One primer puts culatello at Sous Chef and another puts it at Chef.",
+     "because": "The next line puts Culatello at Chef. 3-service teaches The Italian Salumi at this level, whose outcome is telling 'coppa from culatello', and that module's terms include Culatello di Zibello. One primer puts culatello at Sous Chef and another puts it at Chef.",
+     "fix": "Replace Culatello in the next line with another Chef name from neighbours.above that no Sous Chef reader teaches, for example Moulard, Nage or Verjus."
     },
     {
-     "where": "paragraph 5",
-     "severity": "style",
-     "claim": "Take them in that order, meats and board, cuts and fish, sauces and preparations, then the larder, because that is the order a service asks.",
-     "because": "Repetition: paragraphs 2 to 5 already walk the reader through exactly this order, and \"the order a service asks\" is a justification the reader cannot act on. The primer is 583 words against an aim of 340 to 520, and this sentence is the first cut.",
-     "fix": "Take them in that order.",
-     "lens": "voice",
-     "key": "3-deck-voice-20",
-     "primer": "3-deck"
-    },
-    {
-     "where": "paragraph 6",
-     "severity": "wrong",
-     "claim": "so a card you fumble simply comes back tomorrow",
-     "because": "A claim about the app that is neither a door nor the met rule. The brief says only that a miss alone is never met and that the landing shows what is owed today; nothing says a missed card returns the next day.",
-     "fix": "so a card you fumble is simply still owed",
-     "lens": "voice",
-     "key": "3-deck-voice-21",
-     "primer": "3-deck"
-    },
-    {
-     "where": "next",
+     "key": "3-deck-critic-2",
+     "primer": "3-deck",
+     "lens": "critic",
+     "where": "primer",
      "severity": "unclear",
-     "claim": "Lomo and Bottarga on the cured board",
-     "because": "The brief gives Level IV's names and no shelves; Bottarga is cured roe, grated or shaved over a plate, not a board slice, so \"on the cured board\" is the primer's own placement and a misleading one.",
-     "fix": "Lomo and Bottarga among the cured",
-     "lens": "voice",
-     "key": "3-deck-voice-22",
-     "primer": "3-deck"
+     "claim": "The same charcuterie distinction appears in three primers. 'Tell Guanciale from pancetta' in paragraph 3 repeats 3-plates paragraph 2 ('Pancetta is cured belly and guanciale is cured cheek or jowl'). The Service reader drills pancetta in The Italian Salumi as well.",
+     "because": "The same charcuterie distinction appears in three primers. 'Tell Guanciale from pancetta' in paragraph 3 repeats 3-plates paragraph 2 ('Pancetta is cured belly and guanciale is cured cheek or jowl'). The Service reader drills pancetta in The Italian Salumi as well.",
+     "fix": "Drop 'Guanciale from pancetta' from the list of pairs in paragraph 3 and keep Speck from prosciutto, Tasso from andouille and Stracciatella from burrata. Guanciale stays named and cited in paragraph 1."
     }
    ],
    "dispositions": [
     {
      "finding": "3-deck-fact-1",
      "action": "applied",
-     "reason": "Paragraph 4 now says Cassoulet is the long build, baked for hours, and Bouillabaisse the multi-part one, several fish boiled hard so the oil emulsifies, with rouille and toast beside it, matching both cards."
+     "reason": "Changed the phrase to \"the wild Black Trumpet and White Truffle, and the Summer Truffle, which is also farmed\", because the Summer Truffle card says it is also farmed."
     },
     {
      "finding": "3-deck-fact-2",
      "action": "applied",
-     "reason": "Cobia now reads fattier than most white fish, firm and buttery, and often goes out raw as crudo, with no causal link from fat to raw service."
+     "reason": "Changed the line to \"Squab breast is classically medium rare\" to match the card's note, which is about the breast."
     },
     {
      "finding": "3-deck-fact-3",
      "action": "applied",
-     "reason": "The sentence now says the final cooking is quick, though Sweetbreads earn a long prep first, soaked, blanched, peeled and pressed."
+     "reason": "Changed \"They fall into three families\" to \"Most fall into three families\"."
     },
     {
      "finding": "3-deck-fact-4",
      "action": "applied",
-     "reason": "The board line now asks which animal, where on it, and whether smoke touched it, and all six are named, with Lardo as back fat and Bresaola as lean beef round."
+     "reason": "Changed the phrase to \"the other often chunky with fruit and onion\", keeping the cards' hedge."
     },
     {
      "finding": "3-deck-fact-5",
      "action": "applied",
-     "reason": "Sturgeon is added after Cobia in the card's own terms (almost no flake, dense and meaty like veal, takes smoke), and Romesco, Fromage Blanc and Clafoutis are each named in a clause and cited."
+     "reason": "Removed the invented \"furthest from the pass\" reason and opened paragraph 4 with \"Take the pastry and the room's language next, and do not skip their warnings\", so the guest warnings for pits, raw crudo and oysters, and Omakase follow the product notes."
     },
     {
      "finding": "3-deck-fact-6",
      "action": "applied",
-     "reason": "Paragraph 6 now ends with a card you fumble simply comes back owed, which is all the landing door states."
+     "reason": "The next line now reads \"the rare, the specialist and the deeply classical word\", the Chef standard's own words, so Koji-Aged and Ikejime are no longer called deeply classical."
     },
     {
-     "finding": "3-deck-fact-7",
+     "finding": "3-deck-app-7",
      "action": "applied",
-     "reason": "The next line now says among the mushrooms, with wild removed."
+     "reason": "Same change as 3-deck-fact-3: the sentence now reads \"Most fall into three families\"."
     },
     {
      "finding": "3-deck-app-8",
      "action": "applied",
-     "reason": "Verified in src/lib/data/floor-deck.index.json that fd_0126 Bottarga has section fish and Lomo section cured; the next line now reads Lomo on the cured board, Bottarga in the fish case."
+     "reason": "Same change as 3-deck-fact-4: \"often chunky with fruit and onion\"."
     },
     {
      "finding": "3-deck-app-9",
      "action": "applied",
-     "reason": "Same change as fact-7: wild removed, the three now sit among the mushrooms."
+     "reason": "Same change as 3-deck-fact-2: \"Squab breast is classically medium rare\"."
     },
     {
      "finding": "3-deck-app-10",
      "action": "applied",
-     "reason": "Same change as fact-6: the missed card comes back owed, with no tomorrow."
+     "reason": "Removed the \"since they sit furthest from the pass\" reason that contradicted the Garde Manger card. The paragraph now opens with \"Take the pastry and the room's language next, and do not skip their warnings\"."
     },
     {
      "finding": "3-deck-app-11",
      "action": "applied",
-     "reason": "The phrase is now the final cooking is quick, so it cannot read as the person at the stove."
+     "reason": "Restored the standard's wording in the next line: \"the rare, the specialist and the deeply classical word\"."
     },
     {
-     "finding": "3-deck-app-12",
+     "finding": "3-deck-voice-12",
      "action": "applied",
-     "reason": "Each has a nearby cousin is now most have a nearby cousin, since Sturgeon, Tilefish and Cobia carry no not-this line."
+     "reason": "Same change as 3-deck-fact-3: \"Most fall into three families\", so the room's language no longer contradicts the grouping."
     },
     {
-     "finding": "3-deck-app-13",
+     "finding": "3-deck-voice-13",
      "action": "applied",
-     "reason": "The restating sentence is cut from paragraph 1 and the opening is tightened; the six newly named items that other findings required add words back, so the primer lands at about 610 words, inside the 650 limit."
+     "reason": "Removed the invented reason and the filler \"but do not skip them\". The opening now tells the reader to take these cards next and to keep their warnings, which the reader can act on and which fits the guest notes that follow."
     },
     {
      "finding": "3-deck-voice-14",
      "action": "applied",
-     "reason": "The shared fact now reads youth or a gland with almost no muscle, so there is no chew, drawn from the Sweetbreads card's little muscle means no chew."
+     "reason": "The doors now give one order: start at the deck landing, which shows what is owed today, then Flip cards at this level, then Say it back."
     },
     {
      "finding": "3-deck-voice-15",
      "action": "applied",
-     "reason": "Lardo (back fat, not lard, shaved thin onto something warm) and Bresaola (lean beef round, cured and dried, not carpaccio) are now named, so the count of six is met on the page."
-    },
-    {
-     "finding": "3-deck-voice-16",
-     "action": "applied",
-     "reason": "Most replaces each, and Sturgeon is named with its card's own description."
+     "reason": "Cut the closing sentence of paragraph 2 to \"Learn them in twos.\""
     },
     {
      "finding": "3-deck-voice-17",
-     "action": "applied",
-     "reason": "Same change as fact-2: Cobia is described from the card with no fitness-for-raw verdict."
+     "action": "rejected",
+     "reason": "The Dover Sole card's own gist reads \"Slim, oval, one-portion European flatfish, filleted at the table\", and its note says it is served on the bone and lifted off as four fillets, so \"filleted from the bone at the table\" says what the card says."
     },
     {
-     "finding": "3-deck-voice-18",
+     "finding": "3-deck-critic-1",
      "action": "applied",
-     "reason": "Beurre Blanc is now held just warm because heat splits it and cold sets it, matching the card's note."
+     "reason": "Replaced Culatello in the next line with Moulard, a Chef name from neighbours.above that no Sous Chef reader teaches, so culatello is no longer placed at two levels across the primers."
     },
     {
-     "finding": "3-deck-voice-19",
+     "finding": "3-deck-critic-2",
      "action": "applied",
-     "reason": "What remains is the larder is now The larder comes last, and the three previously missing items are named in it or in the sauces paragraph."
-    },
-    {
-     "finding": "3-deck-voice-20",
-     "action": "applied",
-     "reason": "The closing sentence of paragraph 5 is now Take them in that order, with the repeated walk and the justification cut."
-    },
-    {
-     "finding": "3-deck-voice-21",
-     "action": "applied",
-     "reason": "Same change as fact-6: the schedule claim is gone and the card simply comes back owed."
-    },
-    {
-     "finding": "3-deck-voice-22",
-     "action": "applied",
-     "reason": "Bottarga is no longer placed on the cured board; because the deck data puts it in section fish, the text now says Bottarga in the fish case rather than the suggested among the cured, which would contradict the data."
+     "reason": "Dropped 'Guanciale from pancetta' from the pairs in paragraph 3, keeping Speck, Tasso and Stracciatella; Guanciale stays named and cited in paragraph 1."
     }
    ]
   },
@@ -1346,6 +1316,16 @@
      "lens": "voice",
      "key": "3-plates-voice-21",
      "primer": "3-plates"
+    },
+    {
+     "key": "3-plates-critic-1",
+     "primer": "3-plates",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "Reads as if the charcuterie folio were the only place the board is taught at this level. All six of its subjects (Prosciutto di Parma, Pancetta, Guanciale, Salame Milano, Mortadella Bologna, Bresaola della Valtellina) are terms in the Service module The Italian Salumi at this same level, and the Service primer spends two paragraphs on the charcuterie modules. The two readers never point at each other, so a cook reads the board three times without knowing which one is the drill.",
+     "because": "Reads as if the charcuterie folio were the only place the board is taught at this level. All six of its subjects (Prosciutto di Parma, Pancetta, Guanciale, Salame Milano, Mortadella Bologna, Bresaola della Valtellina) are terms in the Service module The Italian Salumi at this same level, and the Service primer spends two paragraphs on the charcuterie modules. The two readers never point at each other, so a cook reads the board three times without knowing which one is the drill.",
+     "fix": "Add one sentence to paragraph 3 or 4: the folio is the picture, and the same six products are drilled as terms in The Italian Salumi on the Service page, where they are met. Keep it to a pointer, and do not restate the Service content."
     }
    ],
    "dispositions": [
@@ -1453,6 +1433,11 @@
      "finding": "3-plates-voice-21",
      "action": "applied",
      "reason": "Paragraph 5 now names The World's Great Cheeses, the Level II plate, on the same wall."
+    },
+    {
+     "finding": "3-plates-critic-1",
+     "action": "applied",
+     "reason": "Added one sentence to paragraph 4 saying the folio is the picture and the drill is The Italian Salumi, the Service module at this level, where the subjects are met; the Service brief lists five of the six there, not guanciale, so the sentence names that exception rather than claiming all six."
     }
    ]
   },
@@ -1818,6 +1803,16 @@
      "lens": "voice",
      "key": "3-safety-voice-16",
      "primer": "3-safety"
+    },
+    {
+     "key": "3-safety-critic-1",
+     "primer": "3-safety",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "Breaks house rule 11, which the refuters missed. 'Ten items are placed here: nine are the Inspections clause, The principle beneath it and seven facts drawn from them, and one is a gap' states the subsection's item count and a total.",
+     "because": "Breaks house rule 11, which the refuters missed. 'Ten items are placed here: nine are the Inspections clause, The principle beneath it and seven facts drawn from them, and one is a gap' states the subsection's item count and a total.",
+     "fix": "Rewrite it without the totals: 'Placed here are the Inspections clause, The principle beneath it, the facts drawn from them, and one gap.' Keep the rest of the paragraph."
     }
    ],
    "dispositions": [
@@ -1900,6 +1895,11 @@
      "finding": "3-safety-voice-16",
      "action": "applied",
      "reason": "Same change as 3-safety-fact-5: the next line names the danger zone in place of \"it\"."
+    },
+    {
+     "finding": "3-safety-critic-1",
+     "action": "applied",
+     "reason": "Replaced the sentence that counted the items with 'Placed here are the Inspections clause, The principle beneath it, the facts drawn from them, and one gap.', which drops both the total and the count of the facts, and left the rest of the paragraph unchanged."
     }
    ]
   },
@@ -2034,6 +2034,16 @@
      "lens": "voice",
      "key": "3-service-voice-13",
      "primer": "3-service"
+    },
+    {
+     "key": "3-service-critic-1",
+     "primer": "3-service",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "Breaks house rule 11, which the refuters missed. 'Twelve modules sit here in four groups' states the subsection's own item count. The same test is also given a different name: this primer calls it 'The Sous Chef test at the foot of the page', while 3-dishes and 3-lexicon call it the Level test, which is the brief's name.",
+     "because": "Breaks house rule 11, which the refuters missed. 'Twelve modules sit here in four groups' states the subsection's own item count. The same test is also given a different name: this primer calls it 'The Sous Chef test at the foot of the page', while 3-dishes and 3-lexicon call it the Level test, which is the brief's name.",
+     "fix": "Change the first paragraph to 'The modules here fall in four groups: one grape atlas, four cheese boards, six charcuterie modules and one bar shelf' (named subsets are allowed). In the last paragraph, call it the Level test, or drop the sentence, since 3-dishes already points to it."
     }
    ],
    "dispositions": [
@@ -2101,8 +2111,69 @@
      "finding": "3-service-voice-13",
      "action": "applied",
      "reason": "Same lede change as fact-2: \"the well and call bottles behind the bar.\""
+    },
+    {
+     "finding": "3-service-critic-1",
+     "action": "applied",
+     "reason": "Replaced 'Twelve modules sit here in four groups' with 'The modules here fall in four groups', which keeps only the named subset counts, and renamed 'The Sous Chef test' to 'The Level test', the brief's name for it."
     }
    ]
   }
+ },
+ "critic": {
+  "ok": false,
+  "problems": [
+   {
+    "key": "3-dishes",
+    "issue": "Contradicts 3-techniques on where the fire starts. Dishes takes Jerk Chicken first among the fire plates, but Jerk Chicken carries the Jerk technique (brief: Grilling over live coals, Jerk, Marinating). The techniques primer tells the same cook to take Jerk only once the two-zone fire is second nature. Huli Huli Chicken carries Grilling over live coals and Butchery basics but no Jerk.",
+    "fix": "In paragraph 2, open the fire plates with Huli Huli Chicken (the turn, butchery basics before the fire), then Jerk Chicken, then Memphis Dry-Rub Ribs, then the Whole Grilled Fish with Ladolemono. Rewrite the first sentence so the two chickens are no longer taken as one opening pair."
+   },
+   {
+    "key": "3-dishes",
+    "issue": "Gives no single starting point, and its own doors point somewhere else. The prose orders fire, wok, breads, pastry, with the sourdough starter paragraph opening on 'Start'. But Read the semester and Cook the next dish follow the Path, which opens at the Braise semester on the Birria de Res con Consomé (semester 4, then breads 5, pastry 6, fire 7, wok 8, seafood 9). The Advanced library filter leaves out the fire and wok plates altogether. A cook who reads the primer and then taps the door lands on a dish the primer puts near the end.",
+    "fix": "Add one plain sentence in the doors paragraph: the two doors go in the Path's semester order (the birria and the braise first, then the breads, the pastry, the fire, the wok and the fish), and the grouping above is how the plates relate, not a competing order. Or reorder the paragraphs to follow the Path. Either way, name one first dish. Fold 'start a sourdough starter' into that sentence as preparation, not as the start."
+   },
+   {
+    "key": "3-lexicon",
+    "issue": "Repeats the method from the other primers instead of teaching the word. Three things are covered twice or three times. The wok discipline (thin carbon steel preheated to smoking, dry uniform ingredients, small batches) also appears in 3-techniques paragraph 3 and 3-dishes paragraph 3. Lamination (butter and dough at matched plasticity, a rest between folds, turns counted) is near-verbatim in 3-techniques paragraph 4. Health Inspections and Crisis Management is glossed as 'the daily standard is what an inspector merely photographs', which is the 3-safety lede, and that lexicon entry is the very text the Food Safety page reads clause by clause at this level.",
+    "fix": "In paragraph 2, keep each term's distinction and drop its method. Wok Hei is the aroma, The Wok is the vessel with its zones, and Lamination is the layered dough the folds build. Send the method to the Techniques reader in one clause. In paragraph 3, replace the inspections gloss with a pointer: it is the entry the Food Safety page reads clause by clause at this level, so read it there. Keep the cites, since the names stay."
+   },
+   {
+    "key": "3-lexicon",
+    "issue": "The next line puts White Truffle at Chef. White Truffle (fd_0321) is a Sous Chef Floor Deck card, and 3-deck names it as this level's. Put side by side, one reader calls White Truffle this level's and the other calls it the level above. The lexicon brief does list White Truffle among Chef's terms, but the cook sees a contradiction.",
+    "fix": "Drop White Truffle from the next line and keep Matsutake, Mangosteen, Cardoon and Puntarelle. Matsutake is at Chef in both the deck and the lexicon, so it stays consistent."
+   },
+   {
+    "key": "3-deck",
+    "issue": "The next line puts Culatello at Chef. 3-service teaches The Italian Salumi at this level, whose outcome is telling 'coppa from culatello', and that module's terms include Culatello di Zibello. One primer puts culatello at Sous Chef and another puts it at Chef.",
+    "fix": "Replace Culatello in the next line with another Chef name from neighbours.above that no Sous Chef reader teaches, for example Moulard, Nage or Verjus."
+   },
+   {
+    "key": "3-deck",
+    "issue": "The same charcuterie distinction appears in three primers. 'Tell Guanciale from pancetta' in paragraph 3 repeats 3-plates paragraph 2 ('Pancetta is cured belly and guanciale is cured cheek or jowl'). The Service reader drills pancetta in The Italian Salumi as well.",
+    "fix": "Drop 'Guanciale from pancetta' from the list of pairs in paragraph 3 and keep Speck from prosciutto, Tasso from andouille and Stracciatella from burrata. Guanciale stays named and cited in paragraph 1."
+   },
+   {
+    "key": "3-plates",
+    "issue": "Reads as if the charcuterie folio were the only place the board is taught at this level. All six of its subjects (Prosciutto di Parma, Pancetta, Guanciale, Salame Milano, Mortadella Bologna, Bresaola della Valtellina) are terms in the Service module The Italian Salumi at this same level, and the Service primer spends two paragraphs on the charcuterie modules. The two readers never point at each other, so a cook reads the board three times without knowing which one is the drill.",
+    "fix": "Add one sentence to paragraph 3 or 4: the folio is the picture, and the same six products are drilled as terms in The Italian Salumi on the Service page, where they are met. Keep it to a pointer, and do not restate the Service content."
+   },
+   {
+    "key": "3-service",
+    "issue": "Breaks house rule 11, which the refuters missed. 'Twelve modules sit here in four groups' states the subsection's own item count. The same test is also given a different name: this primer calls it 'The Sous Chef test at the foot of the page', while 3-dishes and 3-lexicon call it the Level test, which is the brief's name.",
+    "fix": "Change the first paragraph to 'The modules here fall in four groups: one grape atlas, four cheese boards, six charcuterie modules and one bar shelf' (named subsets are allowed). In the last paragraph, call it the Level test, or drop the sentence, since 3-dishes already points to it."
+   },
+   {
+    "key": "3-safety",
+    "issue": "Breaks house rule 11, which the refuters missed. 'Ten items are placed here: nine are the Inspections clause, The principle beneath it and seven facts drawn from them, and one is a gap' states the subsection's item count and a total.",
+    "fix": "Rewrite it without the totals: 'Placed here are the Inspections clause, The principle beneath it, the facts drawn from them, and one gap.' Keep the rest of the paragraph."
+   },
+   {
+    "key": "3-lexicon",
+    "issue": "The Level test is described in three readers: 3-dishes, 3-lexicon and 3-service, which names it differently. It is one test across all the subsections, printed once at the foot of the page.",
+    "fix": "Delete the sentence 'The Level test at the foot of the page ends on what you missed, with the right answers.' from paragraph 5. 3-dishes keeps the one mention."
+   }
+  ],
+  "notes": "I read the four in-flight primers (dishes, techniques, lexicon, deck) from the task text. I read plates, palate, safety and service from C:/Users/zpull/WorldTable/tools/derive/primers/. The 3-dishes.json on disk is an OLDER draft ('Seven Advanced plates...', birria first), not the one under review, so check which version the build takes. Borderline on rule 11, not filed as problems: 3-plates says 'Sous Chef holds a single folio' and its lede says 'One folio'; 3-palate says 'The two placed here' and 'The two faults'. Both counts are exact for one-item and two-item subsections, and the gate allows exact counts, but the rule asks for none. The plates brief's item title is 'The World of Charcuterie & Dried Meats', while the primer uses the live teaching title 'Charcuterie: cut and process' from src/lib/data/plates.json. That is correct for the app, but the brief is stale, and the cite gate may be matching on 'Charcuterie' alone. Doctrine note for the operator: the Commis standard puts the two-hour rule at Commis, while the Chef safety neighbours list 'The two-hour rule governs everything left in it' as a named-not-stated gap. 3-safety's next line follows the Chef list faithfully, but a Commis reader may already have taught the rule. Accuracy spot checks passed: the lexicon larder claims (Treviso precoce/tardivo, Seville, Black Truffle in fat, Nettles, Salsify, Lovage), the plates products against teaching.json, the palate levers and rung 3, and the safety below-level references. The next lines across all eight describe Chef consistently. Beyond the White Truffle and Culatello problems, Salt-Baked is a Sous Chef deck card while Salt-Baked Whole Fish is a Chef dish in the dishes next line. They are different items, so I left it."
  }
 }

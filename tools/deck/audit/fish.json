@@ -1187,6 +1187,282 @@
 				"notes": "I copied every card's prose to the scratchpad and measured it with a script. Section mean is 689 characters, under the 720 ceiling. Every card is between 598 and 795. Every roster row has a card.\n\nHard rules:\n- No verdict words, en or em dashes, or banned food-safety substrings anywhere in the prose.\n- All three knownPacketError traps are present and match: Flounder /left/, Tilefish /shallow/, Caviar /wild/.\n- The only forbidden-word hits in gists or traps are fd_0135 ('shell') and fd_0133 (the alias 'prawn').\n- No term has an accented letter, so 'say' is never required. Turbot, Branzino, Bottarga and Cobia have one. I found no other term a new hire would stumble over.\n\nTies, not reported as problems: gist and trap are the same length on fd_0120, fd_0129, fd_0133 and fd_0135. They are co-longest options, not strictly longest. The operator can decide whether the gate treats a tie as a failure.\n\nConsistency for the operator, not blocking:\n- madeWith names the species on some cards (arctic char, crawfish, skate, flounder, grouper, halibut, monkfish, lobster, clams) and just 'fish' on others (salmon, snapper, trout, tuna and so on). Pick one convention.\n- fd_0135 why writes 'sautes'. The roster uses 'Sautéed', so 'sautés' may be wanted.\n\nPossible lexicon links, left out on purpose:\n- Lobster: lobster-hard-vs-soft-shell\n- Tuna: tuna-grades-akami-chutoro-otoro\n- Blue Crab: crab-vocabulary\n\nEach covers only part of its card's subject, so omitting them is defensible. crab-vocabulary may well be the long-form essay on jumbo lump, lump and backfin, so check it for Blue Crab.\n\nCross-section links worth promoting to seeAlso if there is room: Flounder to Crudo (its note says crudo), and Lobster to Crawfish (Crawfish already links Lobster)."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-28",
+			"pass": "revision",
+			"cards": [
+				"fd_0317",
+				"fd_0318",
+				"fd_0319",
+				"fd_0320"
+			],
+			"findings": [
+				{
+					"id": "fd_0320",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "Much of its oil is wax esters, which people cannot digest, so the flesh eats silky and buttery.",
+					"because": "The 'so' makes being indigestible the cause of the texture. The wax-ester oil itself makes the flesh silky, and separately people cannot digest it. The digestive effect is a different consequence, not what makes the texture.",
+					"fix": "Much of its oil is wax esters, which eat silky and buttery but which people cannot digest.",
+					"lens": "fact",
+					"key": "fish-1-fact-1"
+				},
+				{
+					"id": "fd_0317",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "Served raw.",
+					"because": "Uni is usually raw, but the card's own madeWith (butter, wheat pasta) points to warm preparations: uni pasta, uni butter, grilled uni. A server who repeats 'served raw' about a pasta dish is misinforming the table.",
+					"fix": "Usually raw.",
+					"lens": "fact",
+					"key": "fish-1-fact-2"
+				},
+				{
+					"id": "fd_0317",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Uni is raw sea urchin, soft and creamy.",
+					"because": "A trap's why must be true. Uni means sea urchin whether it is served raw or warmed through, as in pasta or butter, so 'raw' is not part of what it is.",
+					"fix": "Uni is sea urchin, soft and creamy.",
+					"lens": "fact",
+					"key": "fish-1-fact-3"
+				},
+				{
+					"id": "fd_0319",
+					"field": "aliases",
+					"severity": "unclear",
+					"claim": "\"Scampi\"",
+					"because": "On an American menu 'scampi' means shrimp in garlic butter, and the card's own notThis says so. Listing it as an alias lets alias lookup and linking send 'shrimp scampi' to this card. The Italian and British usage is already covered in notThis.",
+					"fix": "Drop \"Scampi\" and keep \"Norway Lobster\" and \"Dublin Bay Prawn\".",
+					"lens": "fact",
+					"key": "fish-1-fact-4"
+				},
+				{
+					"id": "fd_0318",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Firm, fine European flatfish, cooked whole, boned at the table",
+					"because": "Turbot's gist (fd_0123) is 'Prized European flatfish, firm and white...', and turbot is also cooked whole and carved tableside, so a test-taker would accept this gist for Turbot. What sets this fish apart is that it is slim and oval, one fish per guest. Turbot is a big diamond-shaped fish served for sharing.",
+					"fix": "Slim, oval, one-portion European flatfish, filleted at the table",
+					"lens": "floor",
+					"key": "fish-1-floor-5"
+				},
+				{
+					"id": "fd_0318",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It is the classic European sole, flown in and cooked whole in brown butter. Firm, sweet and delicate, and often filleted at the table.",
+					"because": "The line never says it is a flatfish. It also promises brown butter, but preparations vary, and meunière is its own card. 'Firm ... and delicate' contradicts itself, and the second sentence is a fragment that sounds read off a card.",
+					"fix": "It is the prized European sole, a flatfish flown in and cooked whole, often filleted at your table. Mild, sweet and firm.",
+					"lens": "floor",
+					"key": "fish-1-floor-6"
+				},
+				{
+					"id": "fd_0319",
+					"field": "aliases",
+					"severity": "unclear",
+					"claim": "\"Scampi\"",
+					"because": "On an American menu, 'scampi' means shrimp in garlic butter, and the card's own notThis says so. As an alias it tells a new hire that shrimp scampi is this animal, which is the confusion the card is meant to clear up. The Italian name belongs only in notThis.",
+					"fix": "\"Norway Lobster\", \"Dublin Bay Prawn\"",
+					"lens": "floor",
+					"key": "fish-1-floor-7"
+				},
+				{
+					"id": "fd_0319",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Slim pale-orange crustacean with thin claws and a sweet tail",
+					"because": "Nothing in this gist says it lives in the sea, so it could also describe Crawfish (fd_0109: a small clawed crustacean eaten for its tail). Crawfish is freshwater and this animal is from the sea, so the gist needs to say so to keep the two apart.",
+					"fix": "Slim pale-orange sea crustacean, thin-clawed, with a sweet tail",
+					"lens": "floor",
+					"key": "fish-1-floor-8"
+				},
+				{
+					"id": "fd_0319",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "The shell stays pale orange when cooked, so judge doneness by the meat turning opaque.",
+					"because": "Judging doneness is the cook's job, not a server's. What matters on the floor is how the plate arrives: often whole in the shell with the head on, so the guest has to peel it and may want a finger bowl or a warning.",
+					"fix": "Often arrives whole, head on, for the guest to peel at the table.",
+					"lens": "floor",
+					"key": "fish-1-floor-9"
+				},
+				{
+					"id": "fd_0320",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Japan and Italy ban its sale. Most kitchens keep a serving to a few ounces.",
+					"because": "A nervous new hire will repeat this note word for word, and telling a table that two countries ban the fish is the alarming line the placement says a server must avoid. The why already explains the digestion issue. The note should give only the portion fact, which is what the server acts on.",
+					"fix": "Most kitchens keep a serving to a few ounces. Suggest it as a small plate.",
+					"lens": "floor",
+					"key": "fish-1-floor-10"
+				},
+				{
+					"id": "fd_0320",
+					"field": "why",
+					"severity": "verdict",
+					"claim": "In a large serving that oil passes through and can upset the stomach, so kitchens keep portions small.",
+					"because": "This implies a small serving will not upset the stomach, and a server will repeat that as an assurance. The wax-ester effect (keriorrhea) depends on the dose, but sensitive guests react to modest portions too. The card should describe the effect without promising that a small portion is fine.",
+					"fix": "That oil passes through undigested and can upset the stomach, more so in a large serving, so kitchens keep portions small.",
+					"lens": "safety",
+					"key": "fish-1-safety-11"
+				},
+				{
+					"id": "fd_0320",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "Japan and Italy ban its sale. Most kitchens keep a serving to a few ounces.",
+					"because": "A server repeating a foreign sales ban at the table is telling the guest the fish is unsafe. That is a verdict, and it is the alarm the card is meant to avoid. The note also leaves out the real handling fact a server needs: escolar is served raw as sashimi on sushi menus under White Tuna or Super White Tuna.",
+					"fix": "Served raw on sushi menus as white tuna. Most kitchens keep a serving to a few ounces.",
+					"lens": "safety",
+					"key": "fish-1-safety-12"
+				},
+				{
+					"id": "fd_0319",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "The shell stays pale orange when cooked, so judge doneness by the meat turning opaque.",
+					"because": "This is a cook's doneness test that a server never uses. It crowds out the real service facts: on tasting menus langoustine is often served raw as a crudo tail, and it often arrives head-on in the shell. A server needs to be able to say both plainly.",
+					"fix": "Sometimes served raw as a crudo tail. Often served head-on in the shell, which the guest peels.",
+					"lens": "safety",
+					"key": "fish-1-safety-13"
+				},
+				{
+					"key": "fish-critic-1",
+					"id": "fd_0317",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Uni's notThis says flatly \"Not roe, which is fish eggs\", but uni is widely sold and printed on menus as \"sea urchin roe\", and the card's own why calls the lobes the organs that make its eggs. A server who repeats \"it's not roe\" will be contradicting the menu or the guest.",
+					"because": "Uni's notThis says flatly \"Not roe, which is fish eggs\", but uni is widely sold and printed on menus as \"sea urchin roe\", and the card's own why calls the lobes the organs that make its eggs. A server who repeats \"it's not roe\" will be contradicting the menu or the guest.",
+					"fix": "Keep the Roe link but make it accurate, e.g. notThis: \"Often sold as sea urchin roe, but it is the whole soft gonad, not loose fish eggs like salmon roe.\" (about 98 chars, inside the aim)."
+				},
+				{
+					"key": "fish-critic-2",
+					"id": "fd_0320",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Escolar's note adds nothing new. \"Often served raw on sushi menus as white tuna\" repeats the notThis (\"White tuna on a sushi menu is often this fish\"), and \"Most kitchens keep a serving to a few ounces\" repeats the why (\"so kitchens keep portions small\"). The brief says to write a note only for a fact the why does not hold.",
+					"because": "Escolar's note adds nothing new. \"Often served raw on sushi menus as white tuna\" repeats the notThis (\"White tuna on a sushi menu is often this fish\"), and \"Most kitchens keep a serving to a few ounces\" repeats the why (\"so kitchens keep portions small\"). The brief says to write a note only for a fact the why does not hold.",
+					"fix": "Drop the note. The card falls to about 556 characters, still above the 400 floor, and the section mean drops. Alternatively, keep only a fact that appears nowhere else on the card."
+				},
+				{
+					"key": "fish-critic-3",
+					"id": "fd_0319",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Langoustine's only trap (\"Big clawless warm-water crustacean sold mostly as heavy tails\", spiny lobster) is almost word for word the existing Lobster trap (fd_0136: \"Warm-water crustacean with no claws, sold mostly as frozen tails\"). The written test would show the same wrong option on two questions, and the more common mistake about langoustines, that they are baby lobsters, is not tested.",
+					"because": "Langoustine's only trap (\"Big clawless warm-water crustacean sold mostly as heavy tails\", spiny lobster) is almost word for word the existing Lobster trap (fd_0136: \"Warm-water crustacean with no claws, sold mostly as frozen tails\"). The written test would show the same wrong option on two questions, and the more common mistake about langoustines, that they are baby lobsters, is not tested.",
+					"fix": "Replace it with the baby-lobster myth. says: \"Young cold-water lobster, caught before its big claws grow in\" (about 60 chars, within 10 of the 63-char gist). why: \"It is its own species, fully grown at this size, and never becomes a big-clawed lobster.\""
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "fish-1-fact-1",
+					"action": "applied",
+					"reason": "The Escolar why now says the wax esters eat silky and buttery but cannot be digested, so indigestibility is no longer given as the cause of the texture."
+				},
+				{
+					"finding": "fish-1-fact-2",
+					"action": "applied",
+					"reason": "The Uni note now opens 'Usually served raw.' because the madeWith list includes warm dishes such as pasta and butter."
+				},
+				{
+					"finding": "fish-1-fact-3",
+					"action": "applied",
+					"reason": "The trap's why now reads 'This is sea urchin, soft and creamy.' It no longer says raw, and the term is kept out of the trap."
+				},
+				{
+					"finding": "fish-1-fact-4",
+					"action": "applied",
+					"reason": "Scampi is dropped from the Langoustine aliases, leaving Norway Lobster and Dublin Bay Prawn. The Italian usage stays in notThis only."
+				},
+				{
+					"finding": "fish-1-floor-5",
+					"action": "applied",
+					"reason": "The gist is now 'Slim, oval, one-portion European flatfish, filleted at the table' (64 chars), which sets it apart from Turbot, a large fish served for sharing."
+				},
+				{
+					"finding": "fish-1-floor-6",
+					"action": "applied",
+					"reason": "The guest line now calls it a flatfish, no longer promises brown butter, drops the firm-and-delicate contradiction and ends in a full sentence: 'The meat is mild, sweet and firm.'"
+				},
+				{
+					"finding": "fish-1-floor-7",
+					"action": "applied",
+					"reason": "Same change as fish-1-fact-4: Scampi is removed from the aliases so shrimp scampi no longer points to this card."
+				},
+				{
+					"finding": "fish-1-floor-8",
+					"action": "applied",
+					"reason": "The gist now says 'sea crustacean' ('Slim pale-orange sea crustacean, thin-clawed, with a sweet tail'), which separates it from freshwater Crawfish. It is still within 2 characters of the trap."
+				},
+				{
+					"finding": "fish-1-floor-9",
+					"action": "applied",
+					"reason": "The cook's doneness test is replaced with the floor fact: 'Often arrives whole with the head on, for the guest to peel.' This was merged with safety-13 into one note."
+				},
+				{
+					"finding": "fish-1-floor-10",
+					"action": "applied",
+					"reason": "The foreign sales-ban line is removed from the note, and the note keeps the few-ounces portion fact that a server acts on."
+				},
+				{
+					"finding": "fish-1-safety-11",
+					"action": "applied",
+					"reason": "The why now says the oil passes through and can upset the stomach, 'more so in a large serving,' so it no longer implies a small portion is harmless."
+				},
+				{
+					"finding": "fish-1-safety-12",
+					"action": "applied",
+					"reason": "The note is now 'Often served raw on sushi menus as white tuna. Most kitchens keep a serving to a few ounces.' The ban is gone and the raw-service fact is added. It says 'Often' because escolar is also served seared."
+				},
+				{
+					"finding": "fish-1-safety-13",
+					"action": "applied",
+					"reason": "The Langoustine note adds 'Sometimes served raw as a crudo.' next to the head-on, peel-it-yourself fact, in place of the doneness test."
+				},
+				{
+					"finding": "fish-critic-1",
+					"action": "applied",
+					"reason": "Rewrote Uni's notThis to admit it is often sold as sea urchin roe, then explain that it is the whole soft gonad, not loose fish eggs like salmon roe, which keeps the Roe link accurate."
+				},
+				{
+					"finding": "fish-critic-2",
+					"action": "applied",
+					"reason": "Dropped Escolar's note, because both of its facts already appear in the why and the notThis."
+				},
+				{
+					"finding": "fish-critic-3",
+					"action": "applied",
+					"reason": "Replaced the spiny-lobster trap, which duplicated the Lobster card's trap, with the baby-lobster myth (60-char says against the 63-char gist) and a why saying it is its own fully grown species."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0317",
+						"issue": "Uni's notThis says flatly \"Not roe, which is fish eggs\", but uni is widely sold and printed on menus as \"sea urchin roe\", and the card's own why calls the lobes the organs that make its eggs. A server who repeats \"it's not roe\" will be contradicting the menu or the guest.",
+						"fix": "Keep the Roe link but make it accurate, e.g. notThis: \"Often sold as sea urchin roe, but it is the whole soft gonad, not loose fish eggs like salmon roe.\" (about 98 chars, inside the aim)."
+					},
+					{
+						"id": "fd_0320",
+						"issue": "Escolar's note adds nothing new. \"Often served raw on sushi menus as white tuna\" repeats the notThis (\"White tuna on a sushi menu is often this fish\"), and \"Most kitchens keep a serving to a few ounces\" repeats the why (\"so kitchens keep portions small\"). The brief says to write a note only for a fact the why does not hold.",
+						"fix": "Drop the note. The card falls to about 556 characters, still above the 400 floor, and the section mean drops. Alternatively, keep only a fact that appears nowhere else on the card."
+					},
+					{
+						"id": "fd_0319",
+						"issue": "Langoustine's only trap (\"Big clawless warm-water crustacean sold mostly as heavy tails\", spiny lobster) is almost word for word the existing Lobster trap (fd_0136: \"Warm-water crustacean with no claws, sold mostly as frozen tails\"). The written test would show the same wrong option on two questions, and the more common mistake about langoustines, that they are baby lobsters, is not tested.",
+						"fix": "Replace it with the baby-lobster myth. says: \"Young cold-water lobster, caught before its big claws grow in\" (about 60 chars, within 10 of the 63-char gist). why: \"It is its own species, fully grown at this size, and never becomes a big-clawed lobster.\""
+					}
+				],
+				"notes": "I checked all 34 roster rows. fd_0108 to fd_0137 are the existing cards in C:/Users/zpull/WorldTable/tools/deck/out/fish.json, and fd_0317 to fd_0320 are the four new cards given here. No row is missing a card. With the new cards the section mean is 695.2 characters of prose per card, under the 720 ceiling (the 30 existing cards average 697.6; the new ones total 687, 679, 693 and 648). No new gist uses its term or alias. Every trap is within 10 characters of its gist, and no gist is the longest option. I found no em or en dash, no banned substring and no verdict word. The known packet errors all have matching traps: Flounder /left/, Tilefish /shallow/, Caviar /wild/. Every seeAlso and confusedWith term exists in everyCard. I did not raise one-way links as problems: floor-deck.mjs symmetrises confusedWith at build (line 339), so Flounder, Roe, Shrimp, Lobster and Tuna pick up Dover Sole, Uni, Langoustine and Escolar automatically. The Uni, Dover Sole and Langoustine gists are clearly distinct from their neighbours (Roe; Flounder, Turbot and Halibut; Lobster and Crawfish). Escolar's gist is distinct from Cobia's, even though both say buttery. Optional, not blocking: (1) Escolar's seeAlso Swordfish is a weak link; Crudo or Yuzu Kosho (its menu line names yuzu kosho) would serve a server better. (2) Turbot (fd_0123) could add Dover Sole to its seeAlso, since seeAlso is not symmetrised. (3) Escolar at level 4 is defensible, but it is common on sushi menus, so level 3 would also fit the standard. The level choice is the owner's call."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

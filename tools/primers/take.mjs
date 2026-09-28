@@ -43,6 +43,10 @@ mkdirSync(AUDIT_DIR, { recursive: true });
 
 /** @type {string[]} */
 const written = [];
+/** @type {string[]} existing primers the critic read and left alone */
+const keptAsIs = [];
+/** existing primers the critic's repair rewrote: their audit gains the critic's findings */
+const repairedExisting = new Set();
 for (const p of result.primers) {
 	const key = p.key ?? primerKey(p.level, p.subsection);
 	if (!valid.has(key)) {
@@ -54,6 +58,11 @@ for (const p of result.primers) {
 		continue;
 	}
 	if (only && !only.has(key)) continue;
+	if (p.existing && !p.repaired) {
+		keptAsIs.push(key);
+		continue;
+	}
+	if (p.existing) repairedExisting.add(key);
 	const out = { level: p.level, subsection: p.subsection, lede: p.lede, paragraphs: p.paragraphs, cites: p.cites, next: p.next };
 	writeFileSync(join(PRIMERS_DIR, `${key}.json`), JSON.stringify(out, null, 1) + '\n');
 	written.push(key);
@@ -69,10 +78,11 @@ for (const level of LEVELS) {
 	const prior = existsSync(auditFile) ? JSON.parse(readFileSync(auditFile, 'utf8')) : { level, primers: {} };
 	for (const key of mine) {
 		const fs = findings.filter((f) => f.primer === key);
-		prior.primers[key] = {
-			findings: fs,
-			dispositions: fs.map((f) => dispositions.get(f.key) ?? null).filter(Boolean)
-		};
+		const ds = fs.map((f) => dispositions.get(f.key) ?? null).filter(Boolean);
+		const was = prior.primers[key];
+		prior.primers[key] = repairedExisting.has(key) && was
+			? { findings: [...(was.findings ?? []), ...fs], dispositions: [...(was.dispositions ?? []), ...ds] }
+			: { findings: fs, dispositions: ds };
 	}
 	const critic = result.critics?.[String(level)];
 	if (critic) prior.critic = critic;
@@ -85,6 +95,8 @@ for (const f of findings) bySeverity[`${f.lens}:${f.severity}`] = (bySeverity[`$
 console.log(`\n  ${written.length} primer(s) written: ${written.join(', ')}`);
 console.log(`  ${findings.length} finding(s), ${(result.dispositions ?? []).length} disposition(s)`);
 console.log(`  ${Object.entries(bySeverity).map(([k, n]) => `${k} ${n}`).join('  ')}`);
+
+if (keptAsIs.length) console.log(`  ${keptAsIs.length} existing primer(s) read by their critic and left as they were: ${keptAsIs.join(', ')}`);
 
 const serious = findings.filter((f) => f.severity === 'wrong' || f.severity === 'misplaced');
 if (serious.length) {

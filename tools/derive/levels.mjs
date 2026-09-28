@@ -297,6 +297,33 @@ export function checkPlacements(key, rows, items, opts = {}) {
 	return { problems, byLevel, placedCount: placed.size };
 }
 
+/**
+ * A course dish is met when it is cooked and logged, so it may not sit below
+ * a technique it carries: that would ask a cook to meet the dish a level
+ * before the level that teaches how. The Chef de Partie critic found nine
+ * such dishes (27 Sep 2026: the fire and smoke plates, the wok dishes, the
+ * seafood plates, the crêpes and the bulgogi); this holds the ladder to the
+ * rule from now on. Only placed items are compared, so an incomplete run is
+ * not blamed for an item it has not reached.
+ *
+ * @param {Map<string, number>} dishLevels
+ * @param {Map<string, number>} techniqueLevels
+ * @param {Array<{ slug: string, label: string, recipes: string[] }>} techniques
+ */
+export function checkDishTechniques(dishLevels, techniqueLevels, techniques) {
+	const problems = [];
+	for (const t of techniques) {
+		const tl = techniqueLevels.get(t.slug);
+		if (tl === undefined) continue;
+		for (const r of t.recipes) {
+			const dl = dishLevels.get(r);
+			if (dl === undefined || dl >= tl) continue;
+			problems.push(`levels: the dish ${JSON.stringify(r)} sits at ${LEVELS[dl - 1]?.name ?? dl} but carries the technique ${JSON.stringify(t.label)}, placed at ${LEVELS[tl - 1]?.name ?? tl}; a dish sits at or above every technique it carries (raise the dish or lower the technique, with a reason, in tools/derive/levels/)`);
+		}
+	}
+	return problems;
+}
+
 /** The names equal the deck's, the blurbs read as a level's own line. */
 export function checkLevelNames() {
 	const problems = [];
@@ -326,6 +353,8 @@ export function buildLevels(ctx) {
 
 	/** @type {Record<string, Record<string, string[]>>} */
 	const items = {};
+	/** @type {Record<string, Map<string, number>>} */
+	const levelOf = {};
 	for (const key of PLACED) {
 		/** @type {Placement[]} */
 		let rows = [];
@@ -337,7 +366,9 @@ export function buildLevels(ctx) {
 		const checked = checkPlacements(key, rows, uni[/** @type {keyof Universe} */ (key)]);
 		problems.push(...checked.problems);
 		items[key] = checked.byLevel;
+		levelOf[key] = new Map(rows.filter((p) => p && typeof p.slug === 'string').map((p) => [p.slug, p.level]));
 	}
+	problems.push(...checkDishTechniques(levelOf.dishes ?? new Map(), levelOf.techniques ?? new Map(), ctx.techniques));
 
 	/* The deck is copied, never re-placed: a card's level lives in its section
 	   module and the deck's own contract holds it. Every level of the deck

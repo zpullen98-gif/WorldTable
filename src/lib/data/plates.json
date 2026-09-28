@@ -3935,7 +3935,10 @@
                   "Flavor",
                   "Tart, sweet, rich, complex"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "marionberry"
+              }
             },
             {
               "name": "Salmonberries",
@@ -3949,7 +3952,10 @@
                   "Flavor",
                   "Sweet, tart, delicate, unique"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "salmonberry"
+              }
             },
             {
               "name": "Currants",
@@ -4142,7 +4148,10 @@
                   "Flavor",
                   "Sweet, tart, juicy, rare"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "serviceberry"
+              }
             },
             {
               "name": "Hawthorn Berries",
@@ -4156,7 +4165,10 @@
                   "Flavor",
                   "Tart, earthy, herbal, complex"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "hawthorn-berry"
+              }
             },
             {
               "name": "Citrus",
@@ -4504,7 +4516,10 @@
                   "Flavor",
                   "Mild, earthy, rich"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "pueblo-chile"
+              }
             },
             {
               "name": "Tomatillos",
@@ -5047,7 +5062,8 @@
       },
       "deckSections": [],
       "lexiconCategories": [
-        "The Vegetable Atlas"
+        "The Vegetable Atlas",
+        "The Herb & Chile Atlas"
       ]
     },
     {
@@ -5395,7 +5411,10 @@
                   "Flavor",
                   "Sweet, tart, complex"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "boysenberry"
+              }
             },
             {
               "name": "Tangerine",
@@ -6698,7 +6717,10 @@
                   "Flavor",
                   "Tart, sweet, juicy, rich"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "serviceberry"
+              }
             },
             {
               "name": "Mulberries",
@@ -6777,7 +6799,10 @@
                   "Flavor",
                   "Sweet, tart, juicy, complex"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "black-raspberry"
+              }
             },
             {
               "name": "Pawpaw",
@@ -8160,7 +8185,10 @@
                   "Flavor",
                   "Tart, sweet, juicy, nutty"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "serviceberry"
+              }
             }
           ]
         }
@@ -9250,7 +9278,10 @@
                   "Flavor",
                   "Sweet, musky, rich"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "muscadine-grape"
+              }
             },
             {
               "name": "Pineapple",
@@ -9490,7 +9521,10 @@
                   "Flavor",
                   "Sweet, floral, tangy"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "loquat"
+              }
             },
             {
               "name": "Starfruit",
@@ -9865,7 +9899,10 @@
                   "Use",
                   "Tacos, chili, BBQ"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "chili-powder"
+              }
             },
             {
               "name": "Cumin",
@@ -10379,7 +10416,10 @@
                   "Use",
                   "Pork, chicken, grills"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "jerk-seasoning"
+              }
             }
           ]
         }
@@ -10580,6 +10620,7 @@
       },
       "deckSections": [],
       "lexiconCategories": [
+        "The Global Pantry Atlas",
         "Spice Atlas",
         "The Herb & Chile Atlas"
       ]
@@ -10936,7 +10977,10 @@
                   "Best uses",
                   "Stuffing, roasting, soups, grilling"
                 ]
-              ]
+              ],
+              "links": {
+                "lexicon": "puffball"
+              }
             },
             {
               "name": "Hen of the Woods",
@@ -11897,7 +11941,10 @@
                   "Character",
                   "Tender, mild, exquisite"
                 ]
-              ]
+              ],
+              "links": {
+                "deck": "fd_0309"
+              }
             },
             {
               "name": "Salumi Misti",

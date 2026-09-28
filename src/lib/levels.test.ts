@@ -28,7 +28,8 @@ import shippedLevels from './data/levels.json';
 import shippedDeck from './data/floor-deck.json';
 import shippedTraps from './data/floor-deck.traps.json';
 import { DECK_LEVELS } from '../../tools/derive/floor-deck.mjs';
-import { LEVELS_COMPLETE, MINIMUMS, SUBSECTIONS } from '../../tools/derive/levels.mjs';
+import { LEVELS_COMPLETE, MINIMUMS, SUBSECTIONS, checkDishTechniques } from '../../tools/derive/levels.mjs';
+import shippedTechniques from './data/techniques.json';
 
 const DAY = 86_400_000;
 const NOW = Date.UTC(2026, 8, 26, 12);
@@ -401,5 +402,39 @@ describe('the shipped file', () => {
 			const all = ['1', '2', '3', '4'].flatMap((l) => data.items[s.key][l] ?? []);
 			expect(new Set(all).size).toBe(all.length);
 		}
+	});
+});
+
+describe('a dish sits at or above every technique it carries', () => {
+	const tech = [
+		{ slug: 'searing', label: 'Searing', recipes: ['steak', 'wok-greens'] },
+		{ slug: 'wok', label: 'Wok technique', recipes: ['wok-greens'] }
+	];
+
+	it('names a dish placed below its technique, and passes it once raised', () => {
+		const techniques = new Map([['searing', 1], ['wok', 3]]);
+		const low = checkDishTechniques(new Map([['steak', 1], ['wok-greens', 1]]), techniques, tech);
+		expect(low).toHaveLength(1);
+		expect(low[0]).toContain('"wok-greens"');
+		expect(low[0]).toContain('Commis');
+		expect(low[0]).toContain('Sous Chef');
+		expect(checkDishTechniques(new Map([['steak', 1], ['wok-greens', 3]]), techniques, tech)).toEqual([]);
+	});
+
+	it('passes when the technique comes down to the dish instead', () => {
+		expect(checkDishTechniques(new Map([['wok-greens', 1]]), new Map([['searing', 1], ['wok', 1]]), tech)).toEqual([]);
+	});
+
+	it('ignores what is not placed, and library recipes that are not course dishes', () => {
+		expect(checkDishTechniques(new Map([['steak', 1]]), new Map([['wok', 3]]), tech)).toEqual([]);
+		expect(checkDishTechniques(new Map(), new Map([['searing', 4], ['wok', 4]]), tech)).toEqual([]);
+	});
+
+	it('holds on the shipped ladder', () => {
+		const data = shippedLevels as unknown as LevelsData;
+		const levelMap = (key: 'dishes' | 'techniques') =>
+			new Map(['1', '2', '3', '4'].flatMap((l) => (data.items[key][l] ?? []).map((slug: string) => [slug, Number(l)] as [string, number])));
+		const list = (Array.isArray(shippedTechniques) ? shippedTechniques : (shippedTechniques as { techniques: unknown[] }).techniques) as Array<{ slug: string; label: string; recipes: string[] }>;
+		expect(checkDishTechniques(levelMap('dishes'), levelMap('techniques'), list)).toEqual([]);
 	});
 });

@@ -170,11 +170,18 @@ those 24 cards are still `planned: true` stubs and `DECK_COMPLETE` is off
 until they land. Their drafts and findings are in `tools/deck/out/run.<section>.json`;
 the cheapest finish is `brief.mjs <section>` for the six and one
 `author-all.workflow.js` run over them (the stubs keep their minted ids),
-then take, validate, merge, and `DECK_COMPLETE = true`. Two things the run
-taught: the author workflow's card schema has no `level` property, so a
-structured result drops it and the operator fills it from
-`out/expansion.levels.json` before validating; and a guest line of three
-short sentences fails the two-sentence rule more often than any other.
+then take, validate, merge, and `DECK_COMPLETE = true`. A guest line of
+three short sentences fails the two-sentence rule more often than any other.
+
+**Finished 28 Sep 2026.** The 24 were written in one `author-all` run (42
+agents, none lost), every finding disposed, the critics' repairs read against
+the drafts, one word corrected by hand (Finocchiona is ground, not finely: its
+IGP asks a medium grind), and all six sections merged: 336 written of 336,
+`DECK_COMPLETE` on, Commis 110, Chef de Partie 122, Sous Chef 78, Chef 26.
+The section critic moved White Truffle from IV to III (it is the supplement a
+guest asks for by name every autumn, beside Summer Truffle). The card schema
+now carries `level`, so a structured result keeps the writer's level and no
+operator fill is needed.
 
 ## What the refuters are for
 

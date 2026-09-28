@@ -77,6 +77,23 @@ framing. Service is bar craft, the cocktail templates and why the shift makes
 money. On the palate, spicy and muddy, the faults with the least obvious
 levers.
 
+**A dish sits at or above every technique it carries.** A course dish is met
+when it is cooked and logged, so placing it below one of its techniques asks a
+cook to meet the dish before the level that teaches how. `checkDishTechniques`
+in `tools/derive/levels.mjs` holds it at build. It was added on 28 Sep 2026
+after the Chef de Partie primer critic found the fire and smoke plates on live
+coals a level below the coals: nine dishes in all. A panel (the written
+standard, a working chef-instructor, the learner's path; a reconciler; two
+critics) raised eight dishes (crêpes and bulgogi to II; jerk chicken, huli huli
+chicken, Memphis ribs, pad krapow moo, rau muong xao toi and the whole grilled
+fish to III) and lowered one technique (shucking shellfish to II, which keeps
+linguine alle vongole at II: its "shuck" is picking clams already steamed open).
+Two questions of doctrine were left to the owner: the standard puts "the wok"
+and "live fire" at Sous Chef, which takes two Easy wok plates up two levels and
+puts the grill station (a chef de partie's in a classical brigade) a level above
+the brigade's own ladder. Change either phrase in the standard and those dishes
+and techniques come down together.
+
 **Signals, weighed in this order.** The Floor Deck's 281 placements are the
 calibration set: a term whose deck card exists takes the card's level unless
 its essay is plainly broader. Recipe difficulty 1 leans I, 2 leans II, 3 leans

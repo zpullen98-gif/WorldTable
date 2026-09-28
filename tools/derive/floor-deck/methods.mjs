@@ -446,10 +446,86 @@ const cards = [
 		confusedWith: ['fd_0039', 'fd_0037'],
 		line: 'Pan-roasted halibut, brown butter, capers, lemon'
 	},
-	{ id: 'fd_0301', term: 'À la Plancha', planned: true },
-	{ id: 'fd_0302', term: 'Salt-Baked', planned: true },
-	{ id: 'fd_0303', term: 'Lacquered', planned: true },
-	{ id: 'fd_0304', term: 'Koji-Aged', planned: true }
+	{
+		id: 'fd_0301',
+		term: 'À la Plancha',
+		level: 3,
+		say: 'ah lah PLAHN-chah',
+		aliases: ['Plancha'],
+		gist: 'Cooked fast on a very hot flat metal griddle, Spanish style',
+		guest: "It's cooked the Spanish way, on a very hot flat steel griddle, for an even golden crust with no grill marks and a juicy center.",
+		why: 'A thick steel plate is heated until very hot and the food lies flat on it, browning into an even crust. With no grate, octopus and delicate fish cannot fall through, and with no open flame there are no grill stripes or smoky char.',
+		madeWith: ['often olive oil', 'sometimes garlic', 'sometimes butter'],
+		origin: 'Spanish: on the plate, meaning a flat metal griddle',
+		pairs: 'Octopus, shrimp or scallops, olive oil, garlic, lemon',
+		notThis: 'Not grilled: no bars and no open flame, so no grill marks. Seared usually means a pan; this is a wide flat plate.',
+		lexiconSlug: 'comal-plancha-and-griddles',
+		seeAlso: ['fd_0049'],
+		confusedWith: ['fd_0032', 'fd_0039'],
+		line: 'Octopus à la plancha, romesco, crispy potatoes',
+		traps: [
+			{ says: 'Cooked on a soaked wooden board in the oven for a gentle smokiness', why: 'That is plank cooking. This is a bare, very hot steel plate with no wood and no smoke.' }
+		]
+	},
+	{
+		id: 'fd_0302',
+		term: 'Salt-Baked',
+		level: 3,
+		aliases: ['Salt-Roasted', 'Salt-Crusted'],
+		gist: 'Sealed in a thick mineral crust so it steams in its own juices',
+		guest: "It's sealed in a crust of salt and baked, so it steams in its own juices. The crust is cracked away, leaving it moist and gently seasoned.",
+		why: 'Coarse salt, usually bound with egg white, is packed around a whole fish, beet or celery root and hardens into a shell in the oven. It traps steam, so the inside cooks gently, while skin or peel keeps most salt out. The shell is cracked off and thrown away.',
+		madeWith: ['coarse salt', 'often egg white', 'often whole fish', 'sometimes herbs', 'sometimes wheat flour'],
+		note: 'When a whole fish is filleted at the table, a few small bones can remain.',
+		origin: 'Spain and Italy for whole fish, Hakka China for chicken',
+		notThis: 'Not cured: the salt is a shell cracked off after cooking, not rubbed in for days.',
+		recipe: 'salt-baked-whole-fish',
+		seeAlso: ['fd_0027', 'fd_0045', 'fd_0231'],
+		confusedWith: ['fd_0030'],
+		line: 'Salt-baked branzino for two, lemon, olive oil',
+		traps: [
+			{ says: 'Seasoned heavily through the crust, so the flesh eats briny like ham', why: 'The shell traps steam and is thrown away, and the skin or peel keeps the flesh only gently seasoned.' }
+		]
+	},
+	{
+		id: 'fd_0303',
+		term: 'Lacquered',
+		level: 3,
+		gist: 'Glazed in thin coats as it roasts until it sets glossy and dark',
+		guest: "It's brushed with a sweet, savory glaze again and again as it roasts, so it comes out shiny, dark and sticky, like Chinese barbecue pork.",
+		why: 'Honey, soy, maple or reduced stock is brushed on in thin coats while the meat roasts. Each coat cooks down and sets over the last, building a glossy, dark shell, sweet and savory at once, as the fat beneath renders out.',
+		madeWith: ['often honey', 'often soy sauce', 'sometimes hoisin', 'sometimes maple syrup', 'sometimes wine'],
+		note: 'Duck breast is usually served pink, at medium rare. A whole duck is cooked through.',
+		origin: 'Named for lacquerware, a finish built up in glossy coats',
+		pairs: 'Duck, pork belly or quail, with something sharp',
+		notThis: 'Not caramelized, which is sugar browning. Here a glaze is painted on in coats and built into a shell.',
+		seeAlso: ['fd_0037', 'fd_0047'],
+		confusedWith: ['fd_0028'],
+		line: 'Lacquered duck breast, charred plum, five-spice jus',
+		traps: [
+			{ says: 'Fried twice in very hot oil until the skin turns glassy and brittle', why: 'Nothing is fried. A glaze is brushed on in coats while it roasts, and it sets glossy and sticky.' }
+		]
+	},
+	{
+		id: 'fd_0304',
+		term: 'Koji-Aged',
+		level: 4,
+		say: 'KOH-jee AYJD',
+		aliases: ['Koji-Cured'],
+		gist: 'Coated in a rice mold culture whose enzymes tenderize it in days',
+		guest: 'It sits for days under koji, the mold-grown rice behind miso and sake, which turns the meat tender and deeply savory, like a long dry-age.',
+		why: 'Koji is rice or barley grown with Aspergillus oryzae, the mold behind miso, soy sauce and sake. Its enzymes turn protein into savory amino acids and starch into sugar, so in days, not weeks, the meat softens and turns nutty and rich, much like dry-aging.',
+		madeWith: ['rice koji', 'sometimes barley koji', 'often salt', 'often beef', 'sometimes pork'],
+		note: 'The coat is usually wiped off first, and its sugars brown fast, so the crust runs darker.',
+		origin: 'Japanese koji, used by American chefs to age meat',
+		notThis: 'Not dry-aged, which takes weeks in cold air. Here a mold culture does it in days.',
+		seeAlso: ['fd_0280', 'fd_0046'],
+		confusedWith: ['fd_0294'],
+		line: 'Koji-aged ribeye, charred scallion, black garlic jus',
+		traps: [
+			{ says: 'Marinated overnight in soy sauce and mirin, then grilled over charcoal', why: 'It is not a soy marinade. Koji, a mold-grown rice, is spread on the raw meat and left for days.' }
+		]
+	}
 ];
 
 export default cards;

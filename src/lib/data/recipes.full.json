@@ -2557,6 +2557,10 @@
         "term": "The Kitchen Torch"
       },
       {
+        "slug": "lima-bean",
+        "term": "Lima Bean"
+      },
+      {
         "slug": "vanilla",
         "term": "Vanilla"
       }
@@ -4757,6 +4761,10 @@
       {
         "slug": "black-pepper-and-the-pepper-family",
         "term": "Black Pepper & the Pepper Family"
+      },
+      {
+        "slug": "lima-bean",
+        "term": "Lima Bean"
       }
     ],
     "pantryItems": [
@@ -11925,6 +11933,10 @@
       {
         "slug": "sweetness-as-seasoning",
         "term": "Sweetness as Seasoning"
+      },
+      {
+        "slug": "jerk-seasoning",
+        "term": "Jerk Seasoning"
       }
     ],
     "pantryItems": [
@@ -40629,6 +40641,10 @@
       {
         "slug": "pineapple",
         "term": "Pineapple"
+      },
+      {
+        "slug": "mesquite",
+        "term": "Mesquite"
       }
     ],
     "pantryItems": [
@@ -49914,6 +49930,10 @@
       }
     },
     "lexiconTerms": [
+      {
+        "slug": "field-pea",
+        "term": "Field Pea"
+      },
       {
         "slug": "black-eyed-pea",
         "term": "Black-eyed Pea"
@@ -73076,6 +73096,10 @@
     },
     "lexiconTerms": [
       {
+        "slug": "field-pea",
+        "term": "Field Pea"
+      },
+      {
         "slug": "black-eyed-pea",
         "term": "Black-eyed Pea"
       }
@@ -77900,6 +77924,10 @@
       {
         "slug": "masa-harina",
         "term": "Masa Harina"
+      },
+      {
+        "slug": "chili-powder",
+        "term": "Chili Powder"
       }
     ],
     "pantryItems": [
@@ -79128,7 +79156,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "chili-powder",
+        "term": "Chili Powder"
+      }
+    ],
     "pantryItems": [
       "Garlic",
       "Tomato",
@@ -92898,7 +92931,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "chili-powder",
+        "term": "Chili Powder"
+      }
+    ],
     "pantryItems": [
       "Beef",
       "Liver & Offal",
@@ -96379,7 +96417,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "muscadine-grape",
+        "term": "Muscadine Grape"
+      }
+    ],
     "pantryItems": [
       "Grapes",
       "Flour",
@@ -102842,6 +102885,10 @@
     },
     "lexiconTerms": [
       {
+        "slug": "pueblo-chile",
+        "term": "Pueblo Chile"
+      },
+      {
         "slug": "hatch-chile",
         "term": "Hatch Chile"
       }
@@ -105105,6 +105152,10 @@
       {
         "slug": "red-lentil",
         "term": "Red Lentil"
+      },
+      {
+        "slug": "hawthorn-berry",
+        "term": "Hawthorn Berry"
       }
     ],
     "pantryItems": [
@@ -109002,7 +109053,12 @@
         "sub": "A YouTube search for J. Kenji López-Alt and this dish. No affiliation."
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "marionberry",
+        "term": "Marionberry"
+      }
+    ],
     "pantryItems": [
       "Eggs",
       "Lemon",
@@ -118512,6 +118568,10 @@
       {
         "slug": "blackcurrant",
         "term": "Blackcurrant"
+      },
+      {
+        "slug": "muscadine-grape",
+        "term": "Muscadine Grape"
       }
     ],
     "pantryItems": [
@@ -133081,7 +133141,12 @@
         "sub": "Technique films from the Northern Chinese kitchen"
       }
     },
-    "lexiconTerms": [],
+    "lexiconTerms": [
+      {
+        "slug": "hawthorn-berry",
+        "term": "Hawthorn Berry"
+      }
+    ],
     "pantryItems": [
       "Sesame",
       "Sugar"

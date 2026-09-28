@@ -73,6 +73,24 @@ never bars.
 8. **Commit** by explicit path: the authored files, the audits and the
    emitted `src/lib/data/primers.json`.
 
+## Counts, and re-running with the whole level
+
+A count in prose goes stale the day an item moves: on 28 Sep 2026 eight primers
+were found saying the wrong number (the Sous Chef deck said thirty-five cards
+and held 78). The level page prints the count above the door, so the brief now
+tells authors not to restate it, and `staleCounts` in the gate refuses a number
+written straight before the subsection's own noun ("Fourteen dishes", "122
+cards") unless it equals this level's count, a neighbour's or the whole app's.
+A qualified subset is left alone ("the two pastry plates", "30 terms on
+restaurant finance").
+
+`brief.mjs --only <keys> --with-level` briefs every other primer at those levels
+as `existing`: the run does not rewrite them, but each level's critic reads
+them beside the new ones, and a critic's repair can still rewrite one.
+`take.mjs` leaves an existing primer the critic did not touch exactly as it
+was, audit included, and appends the critic's findings to the audit of one it
+did.
+
 ## Re-running one primer
 
 `node tools/primers/brief.mjs --only 2-deck`, the workflow with that output

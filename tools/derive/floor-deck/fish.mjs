@@ -555,10 +555,79 @@ const cards = [
 			{ says: 'Shellfish that must always be cooked and is never eaten raw', why: 'Small hard clams like littlenecks are a raw bar staple on the half shell.' }
 		]
 	},
-	{ id: 'fd_0317', term: 'Uni', planned: true },
-	{ id: 'fd_0318', term: 'Dover Sole', planned: true },
-	{ id: 'fd_0319', term: 'Langoustine', planned: true },
-	{ id: 'fd_0320', term: 'Escolar', planned: true }
+	{
+		id: 'fd_0317',
+		term: 'Uni',
+		level: 3,
+		say: 'OO-nee',
+		aliases: ['Sea Urchin'],
+		gist: 'Custard-soft golden lobes from a spiny, round sea creature',
+		guest: 'Uni is sea urchin, the soft golden lobes inside the shell. It melts like custard and tastes sweet and briny, like the ocean.',
+		why: 'A sea urchin holds five tongue-shaped lobes, the organs that make its eggs or milt. Rich in fat and protein, they melt like custard, and a diet of kelp gives a sweet, briny flavor. Think of an oyster crossed with butter.',
+		madeWith: ['sea urchin', 'often soy sauce', 'sometimes rice', 'sometimes butter', 'sometimes wheat pasta'],
+		note: 'Usually served raw. Tray-packed uni is often firmed with alum, which can taste faintly bitter.',
+		origin: 'Japanese for sea urchin, sold by source: Hokkaido, Santa Barbara, Maine',
+		notThis: 'Often sold as sea urchin roe, but it is the whole soft gonad, not loose fish eggs like salmon roe.',
+		seeAlso: ['fd_0220', 'fd_0355', 'fd_0115'],
+		confusedWith: ['fd_0116'],
+		line: 'Santa Barbara uni, toasted brioche, lemon, chive',
+		traps: [
+			{ says: 'Freshwater eel grilled in a sweet soy glaze and laid over rice', why: 'That is unagi, freshwater eel. This is sea urchin, soft and creamy.' }
+		]
+	},
+	{
+		id: 'fd_0318',
+		term: 'Dover Sole',
+		level: 3,
+		aliases: ['Common Sole'],
+		gist: 'Slim, oval, one-portion European flatfish, filleted at the table',
+		guest: 'It is the prized European sole, a flatfish flown in and cooked whole, often filleted at your table. The meat is mild, sweet and firm.',
+		why: 'A true sole from the North Sea and English Channel, named for the port that once landed it for London. Its thin fillets are dense, so they stay firm where flounder goes soft, and the bone keeps them moist. Imported fresh, it is priced to match.',
+		madeWith: ['fish', 'butter', 'often wheat flour', 'often lemon', 'often parsley'],
+		note: 'Served on the bone and lifted off as four fillets, so a stray fine bone is possible.',
+		notThis: 'Not Pacific Dover sole, a cheaper, softer West Coast flounder. Most sole on American menus is flounder.',
+		seeAlso: ['fd_0232', 'fd_0123', 'fd_0292'],
+		confusedWith: ['fd_0111'],
+		line: 'Whole Dover sole, brown butter, lemon, potatoes, MP',
+		traps: [
+			{ says: 'Soft, mild flatfish landed off the Pacific coast of California', why: 'That is Pacific Dover sole, a flounder. The true fish comes from European waters.' }
+		]
+	},
+	{
+		id: 'fd_0319',
+		term: 'Langoustine',
+		level: 3,
+		say: 'lang-goo-STEEN',
+		aliases: ['Norway Lobster', 'Dublin Bay Prawn'],
+		gist: 'Slim pale-orange sea crustacean, thin-clawed, with a sweet tail',
+		guest: 'A slender cousin of the lobster from the cold North Atlantic. The tail meat is sweeter and more delicate than lobster, almost silky.',
+		why: 'A clawed crustacean that burrows in muddy seabed off Scotland, Ireland and Norway. The meat is in the tail, sweeter and softer than lobster, and it turns mushy a day or two after death, so it ships live or frozen at sea.',
+		madeWith: ['langoustine', 'often butter', 'sometimes garlic', 'sometimes lemon'],
+		note: 'Often arrives whole with the head on, for the guest to peel. Sometimes served raw as a crudo.',
+		origin: 'French diminutive of langouste, the spiny lobster',
+		notThis: 'Not scampi as Americans mean it, shrimp in garlic butter. In Italy scampi is this animal.',
+		seeAlso: ['fd_0109', 'fd_0220'],
+		confusedWith: ['fd_0133', 'fd_0136'],
+		line: 'Roasted langoustine, brown butter, lemon, herbs',
+		traps: [
+			{ says: 'Young cold-water lobster, caught before its big claws grow in', why: 'It is its own species, fully grown at this size, and never becomes a big-clawed lobster.' }
+		]
+	},
+	{
+		id: 'fd_0320',
+		term: 'Escolar',
+		level: 4,
+		say: 'es-koh-LAHR',
+		aliases: ['Walu', 'Super White Tuna'],
+		gist: 'Buttery white deep-sea fish whose oil the body cannot digest',
+		guest: 'A buttery white fish from deep warm water, silky enough to melt on the tongue. It is very rich, so it is best in a small portion.',
+		why: 'A snake mackerel, not a tuna, from deep warm seas. Much of its oil is wax esters, which eat silky and buttery but which people cannot digest. That oil passes through and can upset the stomach, more so in a large serving, so kitchens keep portions small.',
+		madeWith: ['fish', 'often soy sauce', 'sometimes butter'],
+		notThis: 'Not tuna. White tuna on a sushi menu is often this fish, not albacore.',
+		seeAlso: ['fd_0130'],
+		confusedWith: ['fd_0131'],
+		line: 'Seared escolar, charred scallion, yuzu kosho'
+	}
 ];
 
 export default cards;

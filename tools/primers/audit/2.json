@@ -6,19 +6,19 @@
     {
      "where": "paragraph 1",
      "severity": "wrong",
-     "claim": "They come from six semesters of the Path of Study",
-     "because": "The brief's items sit in eight semesters: 1 (Knife & Fire Foundations), 2 (Stocks, Soups & the Simmer), 3 (The Sauté Station), 4 (The Braise), 5 (Bread & Fermentation), 6 (Pastry Fundamentals), 7 (Fire & Smoke) and 9 (Seafood Mastery).",
-     "fix": "They come from eight semesters of the Path of Study",
+     "claim": "Most come from the middle of the Path of Study: the sauté station, the braise, bread, pastry fundamentals and the fish case, with one plate from the wok.",
+     "because": "Fewer than half the items come from the middle semesters (4 to 6: the braise, bread, pastry fundamentals). Cacio e Pepe is semester 1, Soupe à l'Oignon and Barszcz semester 2, Sole Meunière semester 3 (the sauté station), and the fish plates are semester 9, Seafood Mastery, which the standard's own signals place with the late semesters, not the middle. The sentence also leaves out the opening semesters the pasta and the two soups come from.",
+     "fix": "They run from the opening semesters through the sauté station, the braise, bread and pastry fundamentals to the fish case, with one plate from the wok.",
      "lens": "fact",
      "key": "2-dishes-fact-1",
      "primer": "2-dishes"
     },
     {
-     "where": "paragraph 1",
-     "severity": "wrong",
-     "claim": "a recipe with a wait, a mount or a build that no Commis plate asked of you",
-     "because": "Level I already asks for a mount and a wait: Chicken Piccata and Shrimp Scampi finish a pan sauce with butter, Panna Cotta waits to set. What Level II adds is the length of the wait and the size of the build.",
-     "fix": "a recipe with a longer wait, a bigger build or a sauce that has to hold, past what any Commis plate asked of you",
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "Bulgogi, from the wok semester, is thin-cut meat marinated and seared hard.",
+     "because": "The paragraph opens \"The fish case teaches the courage to serve fish barely touched\", so ending it on a beef plate reads as though Bulgogi belongs to the fish case. Bulgogi's semester is The Wok & High Heat, and its techniques are knife cuts, marinating, rendering fat and searing. Nothing in it is fish.",
+     "fix": "Apart from the fish, Bulgogi, from the wok semester, is thin-cut meat marinated and seared hard.",
      "lens": "fact",
      "key": "2-dishes-fact-2",
      "primer": "2-dishes"
@@ -26,359 +26,204 @@
     {
      "where": "paragraph 2",
      "severity": "unclear",
-     "claim": "take them in Path order unless your station is putting one of them up tonight. ... Take Cacio e Pepe first ... Then Sole Meunière ... Then the soups.",
-     "because": "Paragraph 1 says take them in Path order, then paragraph 2 puts Sole Meunière (semester 3) before the two soups (semester 2). The soups also teach the deglaze and the caramelizing that the sauté station and the braise build on.",
-     "fix": "Take Cacio e Pepe first: ... Then the soups. Soupe à l'Oignon ... Barszcz ... Then Sole Meunière, fifteen minutes and the sauté station's exam: dredge, sear for the hard crust, brown the butter, plate.",
+     "claim": "Start at the pan.",
+     "because": "Two of the four plates this paragraph names are pot soups from Stocks, Soups & the Simmer: Soupe à l'Oignon, and Barszcz, whose only listed technique is straining and passing through a sieve. Neither is a pan or sauté-station plate, so a cook told to start at the pan will look for a pan move in the barszcz that the dish does not have.",
+     "fix": "Start at the pan and the soup pot.",
      "lens": "fact",
      "key": "2-dishes-fact-3",
      "primer": "2-dishes"
     },
     {
-     "where": "paragraph 2",
-     "severity": "unclear",
-     "claim": "the whole test is bringing starch, fat and cheese together without the sauce breaking",
-     "because": "The brief's own techniques for Cacio e Pepe are dry-pan toasting and salted water; the pepper is toasted dry before the pasta water and cheese come together, and the primer leaves that step out.",
-     "fix": "the test is toasting the pepper in a dry pan, then bringing starch, fat and cheese together without the sauce breaking",
-     "lens": "fact",
-     "key": "2-dishes-fact-4",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "share one idea: a tough cut, rendered fat, a deglaze, low heat and time until the collagen gives",
-     "because": "Ragù alla Bolognese is ground beef and pork over a soffritto, not a tough cut, and Coq au Vin is a jointed bird. The semester's idea is browned meat, low heat and time; the collagen line fits the beef and the oxtail, not the ragù.",
-     "fix": "share one idea: browned meat, rendered fat, a deglaze, low heat and time until it gives, and for the beef and the oxtail, until the collagen gives",
-     "lens": "fact",
-     "key": "2-dishes-fact-5",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "Bourguignon and the ragù push past three hours and keep the cooking liquid",
-     "because": "The brief gives the ragù 180 minutes, three hours exactly, and Bourguignon 210. Keeping the cooking liquid is listed as the ragù's technique only; Bourguignon's are braising, deglazing, rendering fat and sautéing.",
-     "fix": "Bourguignon is three and a half hours and the level's one named braise; the ragù is three, and its lesson is keeping the cooking liquid",
-     "lens": "fact",
-     "key": "2-dishes-fact-6",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "the oxtail stew is four hours, opens on a caramel and closes on a skimmed, clear liquid",
-     "because": "Jamaican oxtail opens on browning sugar (the brief's Sugar stages & caramel) and finishes as a thick, reduced gravy (the brief lists Reducing a sauce); it is skimmed along the way, but a clear liquid is not the plate.",
-     "fix": "the oxtail stew is four hours, opens on a caramel, is skimmed as it goes and closes on a reduced gravy",
-     "lens": "fact",
-     "key": "2-dishes-fact-7",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 5",
-     "severity": "wrong",
-     "claim": "are Fire & Smoke: marinate, then grill over live coals, and for the ribs, five hours of low and slow smoking",
-     "because": "Memphis Dry-Rub Ribs are rubbed dry, not marinated, and the brief lists only Low & slow smoking for them; marinating and grilling over live coals belong to the two chickens.",
-     "fix": "are Fire & Smoke: the two chickens marinate, then grill over live coals; the ribs are rubbed dry and smoked low and slow for five hours",
-     "lens": "fact",
-     "key": "2-dishes-fact-8",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 5",
-     "severity": "unclear",
-     "claim": "Cantonese Steamed Fish and Miso-Glazed Black Cod are thirty minutes each",
-     "because": "The brief's technique for the black cod is Marinating: acid, salt and time; the miso marinade runs hours to days before the thirty minutes at the broiler, and a cook reading thirty minutes will start it the same day.",
-     "fix": "Cantonese Steamed Fish and Miso-Glazed Black Cod are thirty minutes each at the stove, once the cod has had its days in the miso",
-     "lens": "fact",
-     "key": "2-dishes-fact-9",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 6",
-     "severity": "misplaced",
-     "claim": "When the eighteen are logged, the Level test at the foot of the page runs untimed",
-     "because": "A level guides and never bars; the brief's levelTest is untimed, across the subsections, with no condition on logging, so making it wait on the eighteen invents a gate.",
-     "fix": "The Level test at the foot of the page runs untimed across the subsections",
-     "lens": "fact",
-     "key": "2-dishes-fact-10",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 6",
-     "severity": "unclear",
-     "claim": "the door for an hour between services",
-     "because": "Four of the dishes behind that door run 180 to 300 minutes; an hour between services fits Cacio e Pepe, not Bourguignon.",
-     "fix": "the door to take when you have the clock for it",
-     "lens": "fact",
-     "key": "2-dishes-fact-11",
-     "primer": "2-dishes"
-    },
-    {
      "where": "paragraph 1",
      "severity": "wrong",
-     "claim": "They come from six semesters of the Path of Study",
-     "because": "The eighteen items span eight semesters: 1 (Cacio e Pepe), 2 (the soups), 3 (Sole Meunière), 4 (the four braises), 5 (Rosemary Focaccia), 6 (Crème Brûlée), 7 (Fire & Smoke) and 9 (Seafood Mastery).",
-     "fix": "They come from eight semesters of the Path of Study",
+     "claim": "Most come from the middle of the Path of Study: the sauté station, the braise, bread, pastry fundamentals and the fish case, with one plate from the wok.",
+     "because": "Four of the plates in that list are not from the middle of the Path. Cantonese Steamed Fish, Linguine alle Vongole, Miso-Glazed Black Cod and Calamari Fritti come from semester 9, Seafood Mastery, and Bulgogi comes from semester 8, The Wok & High Heat. The brief's own signals put semesters 7 to 9 with Sous Chef and 4 to 6 in the middle. The fish plates are the semester's own title, Seafood Mastery, not a middle semester called the fish case. Three plates come from the opening semesters: Cacio e Pepe from Knife & Fire Foundations, and Soupe à l'Oignon and Barszcz from Stocks, Soups & the Simmer.",
+     "fix": "Most come from the sauté station, the braise, bread and pastry fundamentals in the middle of the Path of Study, and from Seafood Mastery later on, with one plate from the wok.",
      "lens": "app",
-     "key": "2-dishes-app-12",
+     "key": "2-dishes-app-4",
      "primer": "2-dishes"
     },
     {
      "where": "paragraph 2",
      "severity": "unclear",
-     "claim": "Then Sole Meunière, fifteen minutes and the sauté station's exam: dredge, sear for the hard crust, brown the butter, plate. Then the soups.",
-     "because": "Paragraph 1 tells the reader to take the dishes in Path order, but the soups are semester 2 (Stocks, Soups & the Simmer) and Sole Meunière is semester 3 (The Sauté Station & Pan Sauces); the order given here contradicts the order just prescribed.",
-     "fix": "Then the soups. Soupe à l'Oignon is ninety minutes of caramelizing onions, a deglaze and the broiler; Barszcz is the same clock spent on the pot and then the sieve, a clear soup that shows every shortcut. Then Sole Meunière, fifteen minutes and the sauté station's exam: dredge, sear for the hard crust, brown the butter, plate.",
+     "claim": "Start at the pan.",
+     "because": "Barszcz, the fourth dish in this paragraph, does not cook in a pan. Its one technique is straining and passing through a sieve, and it comes from semester 2, Stocks, Soups & the Simmer. Soupe à l'Oignon is from the same simmer semester. A cook told to start at the pan will look for pan work in Barszcz and not find any.",
+     "fix": "Start at the pan and the pot.",
      "lens": "app",
-     "key": "2-dishes-app-13",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "Bourguignon and the ragù push past three hours and keep the cooking liquid",
-     "because": "Ragù alla Bolognese is 180 minutes, exactly three hours, not past it; Boeuf Bourguignon is 210. And \"Keeping the cooking liquid\" is listed only on the ragù; the Bourguignon's techniques are braising, deglazing, rendering fat and sautéing.",
-     "fix": "Bourguignon is three and a half hours and the ragù three, and the ragù teaches keeping the cooking liquid",
-     "lens": "app",
-     "key": "2-dishes-app-14",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 6",
-     "severity": "wrong",
-     "claim": "When the eighteen are logged, the Level test at the foot of the page runs untimed and ends on what you missed with the right answers.",
-     "because": "The brief's levelTest is untimed, across the subsections, ending on what you missed with the right answers and no score; nothing gates it on the dishes being logged, and a level guides and never bars.",
-     "fix": "The Level test at the foot of the page runs untimed across every subsection and ends on what you missed with the right answers.",
-     "lens": "app",
-     "key": "2-dishes-app-15",
+     "key": "2-dishes-app-5",
      "primer": "2-dishes"
     },
     {
      "where": "paragraph 1",
      "severity": "wrong",
-     "claim": "They come from six semesters of the Path of Study",
-     "because": "The brief's items sit in eight semesters: 1 (Cacio e Pepe), 2 (the soups), 3 (Sole Meunière), 4 (The Braise), 5 (Bread & Fermentation), 6 (Pastry Fundamentals), 7 (Fire & Smoke) and 9 (Seafood Mastery).",
-     "fix": "They come from eight semesters of the Path of Study",
+     "claim": "Most come from the middle of the Path of Study: the sauté station, the braise, bread, pastry fundamentals and the fish case, with one plate from the wok.",
+     "because": "By the brief's semesters, Cacio e Pepe (semester 1), Soupe à l'Oignon and Barszcz (semester 2) come from the opening semesters, and the paragraph leaves them out. The fish plates come from Seafood Mastery (semester 9), which the standard does not count among the middle semesters (sauté, braise, bread, pastry fundamentals). Those four middle semesters hold only half of the plates.",
+     "fix": "They run from the opening semesters through the sauté station, the braise, bread, pastry and the fish case, with one plate from the wok.",
      "lens": "voice",
-     "key": "2-dishes-voice-16",
+     "key": "2-dishes-voice-6",
      "primer": "2-dishes"
     },
     {
      "where": "paragraph 1",
      "severity": "style",
-     "claim": "each built on the one before, so take them in Path order",
-     "because": "Nothing in the brief says the semesters build on one another, and the reader cannot act on it; paragraph 2 then breaks the Path order it prescribes.",
-     "fix": "so take them by semester",
+     "claim": "Most plates here carry several techniques at once, and most carry time. The Commis plates asked for one move with no wait;",
+     "because": "The paragraph mostly restates the standard's line for this level and for the level below, and it gives the reader nothing to act on. It also says \"most\" three times in three sentences, and paragraph 3 uses it again (\"most of this level's hours\"). Sole Meunière (15 minutes) and Cacio e Pepe (20) do not carry time.",
+     "fix": "Most plates here carry several techniques at once. The Commis plates asked for one move with no wait;",
      "lens": "voice",
-     "key": "2-dishes-voice-17",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 1",
-     "severity": "wrong",
-     "claim": "a recipe with a wait, a mount or a build that no Commis plate asked of you",
-     "because": "The standard's Level I dishes are \"one technique, no wait, put up without notes\"; a mount is already asked at Level I (Chicken Piccata is a pan sauce), and Cacio e Pepe here has no wait. What the Level II plates add is a second technique or a wait.",
-     "fix": "a plate with more than one technique, a wait or a build that no Commis plate asked of you",
-     "lens": "voice",
-     "key": "2-dishes-voice-18",
+     "key": "2-dishes-voice-7",
      "primer": "2-dishes"
     },
     {
      "where": "paragraph 2",
      "severity": "unclear",
-     "claim": "Then Sole Meunière, fifteen minutes and the sauté station's exam: dredge, sear for the hard crust, brown the butter, plate. Then the soups. Soupe à l'Oignon is ninety minutes of caramelizing onions, a deglaze and the broiler; Barszcz is the same clock spent on the pot and then the sieve, a clear soup that shows every shortcut.",
-     "because": "Paragraph 1 tells the reader to take the dishes in Path order; Sole Meunière is semester 3 and the soups are semester 2, so the order given here contradicts it.",
-     "fix": "Then the soups. Soupe à l'Oignon is ninety minutes of caramelizing onions, a deglaze and the broiler; Barszcz is the same clock spent on the pot and then the sieve, a clear soup that shows every shortcut. Then Sole Meunière, fifteen minutes and the sauté station's exam: dredge, sear for the hard crust, brown the butter, plate.",
+     "claim": "Start at the pan.",
+     "because": "Soupe à l'Oignon and Barszcz are soups from Stocks, Soups & the Simmer, not pan dishes, so the paragraph's opening does not match what it groups. What these plates actually share is that they come from the opening semesters and the sauté station.",
+     "fix": "Start with the soups and the sauté pan.",
      "lens": "voice",
-     "key": "2-dishes-voice-19",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "style",
-     "claim": "The Braise is the middle of this level and the reason it exists.",
-     "because": "Restates the level blurb (\"the mother sauces and the braise\") as a flourish; the reader cannot act on \"the reason it exists\".",
-     "fix": "Four braises sit in the middle of this level.",
-     "lens": "voice",
-     "key": "2-dishes-voice-20",
-     "primer": "2-dishes"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "Bourguignon and the ragù push past three hours and keep the cooking liquid;",
-     "because": "Ragù alla Bolognese is 180 minutes, exactly three hours, and Boeuf Bourguignon is 210; \"Keeping the cooking liquid\" is listed only for the ragù (the Bourguignon's techniques are braising, deglazing, rendering fat and sautéing).",
-     "fix": "Bourguignon runs three and a half hours, the ragù three and keeps its cooking liquid;",
-     "lens": "voice",
-     "key": "2-dishes-voice-21",
+     "key": "2-dishes-voice-8",
      "primer": "2-dishes"
     },
     {
      "where": "paragraph 3",
      "severity": "unclear",
-     "claim": "closes on a skimmed, clear liquid",
-     "because": "Jamaican Oxtail Stew's techniques are skimming and reducing a sauce; its finish is a skimmed and reduced gravy, not a clear liquid, and a cook reading \"clear\" will stop short of the reduction.",
-     "fix": "closes on a skimmed, reduced sauce",
+     "claim": "the ragù adds keeping the cooking liquid,",
+     "because": "This drops the technique's label into the sentence without saying which liquid is kept or why. A cook reading it cannot tell what to do differently at the ragù.",
+     "fix": "the ragù adds a long, low simmer,",
      "lens": "voice",
-     "key": "2-dishes-voice-22",
+     "key": "2-dishes-voice-9",
      "primer": "2-dishes"
     },
     {
      "where": "paragraph 4",
-     "severity": "unclear",
-     "claim": "are the base of two sciences",
-     "because": "The two sciences are never named; the standard's line is \"pastry and baking science at its base\".",
-     "fix": "are bread and pastry science at its base",
+     "severity": "style",
+     "claim": "Bread and pastry reward precision over speed.",
+     "because": "This is filler with nothing the reader can act on. The focaccia sentence that follows already makes the real point (read the dough, not the clock).",
+     "fix": "Then bread and pastry.",
      "lens": "voice",
-     "key": "2-dishes-voice-23",
+     "key": "2-dishes-voice-10",
+     "primer": "2-dishes"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "misplaced",
+     "claim": "The fish case teaches the courage to serve fish barely touched. ... Bulgogi, from the wok semester, is thin-cut meat marinated and seared hard.",
+     "because": "Bulgogi is a meat plate from The Wok & High Heat, so it does not belong in the fish-case group. The opening line is copied from the Seafood Mastery description and does not fit Calamari Fritti (deep fried) or the clams in Linguine alle Vongole. The rule is to group items by what they share.",
+     "fix": "Open with \"Then the fish case.\" and move the Bulgogi sentence into paragraph 2 after Sole Meunière, since both are searing on high heat.",
+     "lens": "voice",
+     "key": "2-dishes-voice-11",
      "primer": "2-dishes"
     },
     {
      "where": "paragraph 6",
-     "severity": "style",
-     "claim": "Cook the next dish opens that recipe's page, the door for an hour between services.",
-     "because": "\"the door for an hour between services\" is filler and not the brief's door text; half the dishes here are three to five hours, so the hour misleads.",
-     "fix": "Cook the next dish opens that recipe's page.",
+     "severity": "unclear",
+     "claim": "Read the semester opens the Path at the semester that teaches the first dish you have not cooked; Cook the next dish goes straight to its recipe page; The library at this level shows the recipe grid",
+     "because": "The door names run straight into the sentences with nothing to set them apart, so on a phone the line reads as a garble (\"Read the semester opens the Path\").",
+     "fix": "The door \"Read the semester\" opens the Path at the semester that teaches the first dish you have not cooked; \"Cook the next dish\" goes straight to its recipe page; \"The library at this level\" shows the recipe grid",
      "lens": "voice",
-     "key": "2-dishes-voice-24",
+     "key": "2-dishes-voice-12",
      "primer": "2-dishes"
     },
     {
      "where": "paragraph 6",
      "severity": "wrong",
-     "claim": "When the eighteen are logged, the Level test at the foot of the page runs untimed and ends on what you missed with the right answers.",
-     "because": "The brief's Level test is \"untimed, across the subsections, ending on what you missed with the right answers and no score\"; nothing waits on the eighteen being logged, and a level guides and never bars, so \"when the eighteen are logged\" invents a gate. \"Across the subsections\" is also dropped.",
-     "fix": "The Level test at the foot of the page runs untimed across the subsections and ends on what you missed with the right answers.",
+     "claim": "shows the recipe grid at this difficulty when you want another plate on the same moves.",
+     "because": "The brief describes this door only as the recipe grid filtered to this level's difficulty. It does not filter by technique, so \"on the same moves\" claims more than the app does. Crêpes and Bulgogi are difficulty 1, so that grid will not show them either.",
+     "fix": "shows the recipe grid at this level's difficulty when you want another plate.",
      "lens": "voice",
-     "key": "2-dishes-voice-25",
+     "key": "2-dishes-voice-13",
      "primer": "2-dishes"
+    },
+    {
+     "where": "next",
+     "severity": "wrong",
+     "claim": "At Sous Chef the plates run longer and build in parts:",
+     "because": "The Sous Chef names include Pad Krapow Moo and Rau Muong Xao Toi. The standard calls these \"two Easy wok plates\" that went up two levels because the wok sits at Sous Chef, so they do not run longer or build in parts. The standard's own line for Sous Chef dishes is \"fire and smoke, the wok, seafood mastery\", plus Advanced plates with a long wait or a multi-component build.",
+     "fix": "At Sous Chef the plates move to live fire, the wok and longer builds:",
+     "lens": "voice",
+     "key": "2-dishes-voice-14",
+     "primer": "2-dishes"
+    },
+    {
+     "key": "2-dishes-critic-1",
+     "primer": "2-dishes",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "\"The Commis plates asked for one move with no wait\" is wrong by the Commis brief. Chicken Piccata carries four techniques, Garides Saganaki and Panna Cotta three each, and Ratatouille takes 60 minutes.",
+     "because": "\"The Commis plates asked for one move with no wait\" is wrong by the Commis brief. Chicken Piccata carries four techniques, Garides Saganaki and Panna Cotta three each, and Ratatouille takes 60 minutes.",
+     "fix": "Replace the sentence with something true to the data, for example: \"The Commis plates finished inside an hour; these ask you to hold the pan, the pot, the dough and the fish steady, several of them over hours.\""
     }
    ],
    "dispositions": [
     {
      "finding": "2-dishes-fact-1",
      "action": "applied",
-     "reason": "Changed six semesters to eight; the brief's items sit in semesters 1, 2, 3, 4, 5, 6, 7 and 9."
+     "reason": "Paragraph 1's origin sentence now runs from the opening semesters of the Path of Study through the sauté station, the braise, bread and pastry fundamentals to Seafood Mastery, with one plate from the wok. It no longer says most plates come from the middle."
     },
     {
      "finding": "2-dishes-fact-2",
      "action": "applied",
-     "reason": "Dropped the mount (Chicken Piccata and Shrimp Scampi finish a pan sauce at Level I) and now say more than one technique, a wait or a build, following the standard's own Level I line of one technique, no wait."
+     "reason": "The Bulgogi sentence left the fish paragraph. It now sits in paragraph 2 beside Sole Meunière as the same hard sear on marinated thin-cut meat, so it no longer reads as a fish-case plate."
     },
     {
      "finding": "2-dishes-fact-3",
      "action": "applied",
-     "reason": "Reordered paragraph 2 so the two semester 2 soups come before Sole Meunière, semester 3."
+     "reason": "Paragraph 2 now opens \"Start at the pan and the soup pot.\" so it covers Soupe à l'Oignon and Barszcz."
     },
     {
-     "finding": "2-dishes-fact-4",
+     "finding": "2-dishes-app-4",
      "action": "applied",
-     "reason": "Cacio e Pepe's test now opens with toasting the pepper in a dry pan, the brief's first technique for it, before starch, fat and cheese come together."
+     "reason": "Same rewrite as fact-1. The origin sentence names the opening semesters and Seafood Mastery (the brief's semesterTitle) and drops \"most come from the middle\"."
     },
     {
-     "finding": "2-dishes-fact-5",
+     "finding": "2-dishes-app-5",
      "action": "applied",
-     "reason": "The four braises now share browned meat, low heat and time until it gives, with the collagen line kept only for the beef and the oxtail; the deglaze also came out of the shared idea since the oxtail's techniques do not list it."
+     "reason": "Paragraph 2 now opens \"Start at the pan and the soup pot\", which covers Barszcz and Soupe à l'Oignon from Stocks, Soups & the Simmer."
     },
     {
-     "finding": "2-dishes-fact-6",
+     "finding": "2-dishes-voice-6",
      "action": "applied",
-     "reason": "Bourguignon is now three and a half hours (210), the ragù three (180), and keeping the cooking liquid is the ragù's lesson alone."
+     "reason": "Same rewrite as fact-1. The sentence now starts at the opening semesters and ends at Seafood Mastery instead of placing everything in the middle."
     },
     {
-     "finding": "2-dishes-fact-7",
+     "finding": "2-dishes-voice-7",
      "action": "applied",
-     "reason": "The oxtail stew now opens on a caramel, is skimmed as it goes and closes on a reduced sauce, matching the brief's Skimming and Reducing a sauce."
+     "reason": "Removed \"and most carry time\" and replaced the clock clause with \"several of them over hours\", which fits the braises, soups and focaccia and does not make Sole Meunière or Cacio e Pepe long. \"Most\" now appears once in the paragraph."
     },
     {
-     "finding": "2-dishes-fact-8",
+     "finding": "2-dishes-voice-9",
      "action": "applied",
-     "reason": "The two chickens marinate and grill over live coals; the ribs are rubbed dry and smoked low and slow, the brief's only technique for them."
+     "reason": "Changed it to \"the ragù adds a fine dice for its base and a long, low simmer\". The dice is from the ragù's own knife-cuts technique and the simmer from its 180 minutes, so the reader can act on it. A bare long simmer would not set the ragù apart from the other braises."
     },
     {
-     "finding": "2-dishes-fact-9",
+     "finding": "2-dishes-voice-10",
      "action": "applied",
-     "reason": "The black cod's thirty minutes is now at the stove, once the cod has had its days in the miso, so the brief's Marinating technique is visible."
+     "reason": "Replaced \"Bread and pastry reward precision over speed.\" with \"Then bread and pastry.\""
     },
     {
-     "finding": "2-dishes-fact-10",
+     "finding": "2-dishes-voice-11",
      "action": "applied",
-     "reason": "Removed the condition on the eighteen being logged; the Level test now runs untimed across the subsections with no gate."
+     "reason": "Paragraph 5 now opens \"Then the fish case.\" without the semester-description line. The Bulgogi sentence moved into paragraph 2 after Sole Meunière, since both plates are about the hard sear."
     },
     {
-     "finding": "2-dishes-fact-11",
+     "finding": "2-dishes-voice-12",
      "action": "applied",
-     "reason": "Removed the hour between services; Cook the next dish now simply opens that recipe's page."
+     "reason": "Put the three door names in quotation marks and led with \"The door\", so the names stand apart from the sentence around them."
     },
     {
-     "finding": "2-dishes-app-12",
+     "finding": "2-dishes-voice-13",
      "action": "applied",
-     "reason": "Same change as 2-dishes-fact-1: eight semesters."
+     "reason": "Now reads \"shows the recipe grid at this level's difficulty when you want another plate\", matching the brief's door. The unsupported \"on the same moves\" is gone."
     },
     {
-     "finding": "2-dishes-app-13",
+     "finding": "2-dishes-voice-14",
      "action": "applied",
-     "reason": "Same change as 2-dishes-fact-3: the soups now precede Sole Meunière."
+     "reason": "The next line now opens \"At Sous Chef the plates move to live fire, the wok and longer builds\", following the standard's fire and smoke, the wok and Advanced multi-component line. It no longer claims that every plate runs longer, which the Easy wok plates contradicted."
     },
     {
-     "finding": "2-dishes-app-14",
+     "finding": "2-dishes-critic-1",
      "action": "applied",
-     "reason": "Same change as 2-dishes-fact-6: three and a half hours, three hours, and the cooking liquid on the ragù only."
-    },
-    {
-     "finding": "2-dishes-app-15",
-     "action": "applied",
-     "reason": "Same change as 2-dishes-fact-10: no gate on logging, and across the subsections restored."
-    },
-    {
-     "finding": "2-dishes-voice-16",
-     "action": "applied",
-     "reason": "Same change as 2-dishes-fact-1: eight semesters."
-    },
-    {
-     "finding": "2-dishes-voice-17",
-     "action": "applied",
-     "reason": "Dropped each built on the one before and Path order; the sentence now says take them by semester, and paragraph 2 follows semester order."
-    },
-    {
-     "finding": "2-dishes-voice-18",
-     "action": "applied",
-     "reason": "Used the suggested wording: more than one technique, a wait or a build that no Commis plate asked of you."
-    },
-    {
-     "finding": "2-dishes-voice-19",
-     "action": "applied",
-     "reason": "Same change as 2-dishes-fact-3: the soups now precede Sole Meunière."
-    },
-    {
-     "finding": "2-dishes-voice-20",
-     "action": "applied",
-     "reason": "Replaced the flourish with Four braises sit in the middle of this level."
-    },
-    {
-     "finding": "2-dishes-voice-21",
-     "action": "applied",
-     "reason": "Same change as 2-dishes-fact-6."
-    },
-    {
-     "finding": "2-dishes-voice-22",
-     "action": "applied",
-     "reason": "The oxtail now closes on a reduced sauce, not a clear liquid."
-    },
-    {
-     "finding": "2-dishes-voice-23",
-     "action": "applied",
-     "reason": "The two sciences are now named as the standard's line: baking and pastry science at its base."
-    },
-    {
-     "finding": "2-dishes-voice-24",
-     "action": "applied",
-     "reason": "Cut the hour between services; the door sentence is now Cook the next dish opens that recipe's page."
-    },
-    {
-     "finding": "2-dishes-voice-25",
-     "action": "applied",
-     "reason": "Same change as 2-dishes-fact-10: the gate is gone and across the subsections is back."
+     "reason": "Removed the false claim about the Commis plates and replaced it with a claim about this level's own plates that the brief supports: the braises run 110 to 240 minutes and the focaccia 150. I left out the suggested 'inside an hour' line because the Commis brief was not given here and that timing could not be checked."
     }
    ]
   },
@@ -387,19 +232,19 @@
     {
      "where": "paragraph 3",
      "severity": "wrong",
-     "claim": "Marinating carries the level's most used standard, 70 recipes",
-     "because": "The brief's own counts put three standards above it at this level: Proofing 78 recipes, Rendering fat 73, Resting dough 71. Marinating at 70 is fourth.",
-     "fix": "Marinating carries a standard across 70 recipes",
+     "claim": "Then the pastry base, in the order a bake uses it.",
+     "because": "No single bake runs this sequence. Rubbing fat into flour (short pastry) and Creaming butter & sugar (butter cakes) are alternative ways to bring fat and flour together. Kneading and Proofing belong to yeasted dough, and Folding belongs to foams and cakes. A cook who reads 'in the order a bake uses it' will look for one bake that uses all six steps in turn, and there isn't one.",
+     "fix": "Then the pastry base, family by family.",
      "lens": "fact",
      "key": "2-techniques-fact-1",
      "primer": "2-techniques"
     },
     {
-     "where": "paragraph 4",
+     "where": "paragraph 3",
      "severity": "wrong",
-     "claim": "fresh pasta, working with masa, pleating dumplings and handling phyllo ride on them",
-     "because": "Working with masa and Pleating dumplings each carry their own written standard in the brief (standard: true, four marks each). And masa is nixtamalized corn with no gluten: it is never kneaded to satin, never rested to relax gluten, never proofed, so it cannot ride on the loaf's standards.",
-     "fix": "fresh pasta and handling phyllo ride on them; working with masa and pleating dumplings carry standards of their own, and masa is corn, not a gluten dough",
+     "claim": "gentle heat, no boil, and a set judged by how it behaves",
+     "because": "A stirred custard made by Tempering a custard, such as crème anglaise, never sets. The brief's standard judges it when 'it thickens enough to coat the back of a spoon and hold a clean line'. Only The water bath is judged by a set, the trembling centre. Calling both 'a set' teaches a commis to cook anglaise until it sets, and past that point it scrambles.",
+     "fix": "gentle heat, no boil, and doneness judged by how it behaves",
      "lens": "fact",
      "key": "2-techniques-fact-2",
      "primer": "2-techniques"
@@ -407,512 +252,362 @@
     {
      "where": "paragraph 4",
      "severity": "wrong",
-     "claim": "proof by volume and the poke test and never by the clock, then fermentation, which is a rate, not a duration",
-     "because": "A loaf does not proof then ferment. Bulk fermentation comes after kneading and before shaping; proofing is the final rise before the oven (the brief's own Proofing definition: 'the final rise before baking'), and scoring follows proofing. The primer says 'the order the loaf does' and then gives the wrong order.",
-     "fix": "ferment, which is a rate, not a duration, then proof by volume and the poke test and never by the clock, then score",
+     "claim": "and dishes that teach a method in passing: Risotto method, Congee, Shucking shellfish and The seafood boil",
+     "because": "These are techniques in the index, not dishes. Shucking shellfish in particular is a knife skill used on 10 recipes, and nothing about it happens in passing. Calling them dishes also confuses them with the separate Dishes subsection.",
+     "fix": "and single-purpose methods: Risotto method, Congee, Shucking shellfish and The seafood boil",
      "lens": "fact",
      "key": "2-techniques-fact-3",
      "primer": "2-techniques"
     },
     {
-     "where": "paragraph 4",
-     "severity": "wrong",
-     "claim": "Scoring's standard is about the blade, not the loaf: one clean draw at a slant, parallel lines a finger's width apart, through the skin and no deeper than the fat.",
-     "because": "The app's Scoring standard is written for skin over fat, not bread: its marks say the cut 'parts through the skin and stops in the fat beneath', 'red or fibrous flesh has gone too deep', the surface should be 'dry and cold, near 4C', and the fault has the cuts 'bleed as they cook'. A loaf has no fat layer and no flesh, so 'no deeper than the fat' inside 'the order the loaf does' will read as nonsense to a baker and misdirect a cook scoring pork belly or duck.",
-     "fix": "Scoring's standard is written for skin over fat, not for a loaf: one clean draw at a slant on a cold dry surface, parallel lines a finger's width apart, through the skin and stopping in the fat, never the flesh.",
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "and they fall into four families",
+     "because": "Paragraph 4 goes on to add two more groups outside the four families: other kitchens' dough work (Pleating dumplings, Working with masa, Pierogi, Handling phyllo, Fresh pasta) and the risotto, congee, shucking and boil methods. Several placed items with written standards, such as Scoring, sit in neither. The count of families contradicts the primer itself.",
+     "fix": "and most of them fall into four families",
      "lens": "fact",
      "key": "2-techniques-fact-4",
      "primer": "2-techniques"
     },
     {
-     "where": "paragraph 5",
-     "severity": "wrong",
-     "claim": "Pastry is the rest.",
-     "because": "The unnamed remainder is not pastry: arepas, boiling bagels, congee, risotto method, ramen broth, the tagine, the seafood boil, falafel, churros, injera, jollof, gnocchi, pierogi, empanada folding, rolling dolmas, khachapuri, the molcajete, the brûlée torch, churning ice cream. And three pastry standards go unnamed: Creaming butter & sugar (28 recipes), Folding: keeping the air in (34) and Icing & frosting (17), all standard: true in the brief.",
-     "fix": "Pastry is the next family, with three more standards in it: creaming butter & sugar, folding and icing & frosting.",
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Hollandaise and Beurre blanc are that same rule at the pass.",
+     "because": "Paragraph 1 puts Béchamel on the sauce bench beside the emulsions, but Béchamel is a roux-thickened mother sauce, not an emulsion. This is the only place it could be told apart, and the primer never does, so a cook could carry the emulsion rules over to it. The brief's own text for it is the roux: 'white (2 min) for béchamel'.",
+     "fix": "Hollandaise and Beurre blanc are that same rule at the pass; Béchamel is not an emulsion but a white roux thickening milk.",
      "lens": "fact",
      "key": "2-techniques-fact-5",
      "primer": "2-techniques"
     },
     {
+     "where": "paragraph 1",
+     "severity": "wrong",
+     "claim": "The techniques placed here are the ones a station leans on through a whole service, and they fall into four families.",
+     "because": "The brief's items hold many techniques that fit none of the four families. Paragraph 4 sets Pleating dumplings, Working with masa, Pierogi, Handling phyllo, Fresh pasta, Risotto method, Congee, Shucking shellfish and The seafood boil outside them, and others such as Scoring, Choux pastry, Crêpes and Curing gravlax are not named at all. The sentence says every item belongs to a family, and the primer itself contradicts that. \"Governs a whole service\" is also the standard's phrase for Sous Chef (\"the techniques whose standard governs a whole service\"), and the next line reuses it for Sous Chef.",
+     "fix": "The techniques placed here are what running a station requires, and most fall into four families.",
+     "lens": "app",
+     "key": "2-techniques-app-6",
+     "primer": "2-techniques"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "and dishes that teach a method in passing: Risotto method, Congee, Shucking shellfish and The seafood boil.",
+     "because": "All four are items in the Techniques subsection (the brief's \"items\"), not dishes, and the level page has a separate Dishes subsection. Shucking shellfish in particular is a technique across 10 recipes, and none of the four is described as a dish.",
+     "fix": "and narrower methods: Risotto method, Congee, Shucking shellfish and The seafood boil.",
+     "lens": "app",
+     "key": "2-techniques-app-7",
+     "primer": "2-techniques"
+    },
+    {
      "where": "paragraph 2",
      "severity": "unclear",
-     "claim": "Building an emulsion carries the standard, so take it first",
-     "because": "The paragraph opens 'Start with the sauces. Béchamel is the mother sauce...' and then names a second first. A cook reading on a phone gets two starting points.",
-     "fix": "Building an emulsion carries the standard, so take it first of the emulsions",
-     "lens": "fact",
-     "key": "2-techniques-fact-6",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "unclear",
-     "claim": "Curing gravlax and ceviche are salt and acid doing the cooking",
-     "because": "Salt cures gravlax; it draws water and seasons but does not denature the fish the way heat does, and a cook is taught 'cured, not cooked'. Only ceviche's acid stands in for heat (the brief's marinating mark: 'has been cooked by the acid').",
-     "fix": "Curing gravlax and ceviche are salt and acid standing in for heat",
-     "lens": "fact",
-     "key": "2-techniques-fact-7",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "next",
-     "severity": "unclear",
-     "claim": "velveting as the next marinade",
-     "because": "The brief's own entry (velveting-and-marinades) sets velveting apart from a marinade: sliced meat coated in egg white, cornstarch and a little baking soda, rested, then pre-cooked briefly in oil or water; the same entry says marinades work only at the surface. Velveting is a coat and a pre-cook, not a longer marinade.",
-     "fix": "velveting as the coat beyond the marinade",
-     "lens": "fact",
-     "key": "2-techniques-fact-8",
+     "claim": "they teach the two habits the rest of this level assumes",
+     "because": "Much of what is placed here does not depend on either habit. Rubbing fat into flour, Kneading dough, Resting dough, Marinating and Pounding a curry paste are judged by other marks in their own standards, so \"the rest of this level assumes\" overstates the case.",
+     "fix": "they teach two habits much of this level returns to",
+     "lens": "app",
+     "key": "2-techniques-app-8",
      "primer": "2-techniques"
     },
     {
      "where": "paragraph 1",
      "severity": "wrong",
-     "claim": "About half carry a written standard",
-     "because": "The brief's items list 50 techniques and exactly 21 have \"standard\": true (braising, building an emulsion, creaming butter & sugar, fermentation, folding, icing & frosting, kneading, marinating, pie crust & blind baking, pleating dumplings, pounding a curry paste, proofing, rendering fat, resting dough, rubbing fat into flour, scoring, sugar stages & caramel, tadka, tempering a custard, the water bath, working with masa). Twenty-one of fifty is well short of half.",
-     "fix": "Twenty-one carry a written standard",
-     "lens": "app",
-     "key": "2-techniques-app-9",
+     "claim": "The techniques placed here are the ones a station leans on through a whole service, and they fall into four families.",
+     "because": "The brief's items do not fall into four families. Paragraph 4 itself names nine more (Pleating dumplings, Working with masa, Pierogi, Handling phyllo, Fresh pasta, Risotto method, Congee, Shucking shellfish, The seafood boil), and others are placed here without being named, including Scoring, which has a written standard, plus Choux pastry, Crêpes, Arepas and Churning ice cream. The paragraph is also a roll call. Every name in the pastry and flavor groups appears again in paragraphs 3 and 4, and this paragraph gives the reader nothing to do. It is the main reason the primer runs 527 words against an aim of 340 to 520. \"Through a whole service\" also echoes the Sous Chef phrase in the next line (\"what governs a whole service\") and blurs the step between the levels.",
+     "fix": "The techniques placed here are what a station leans on. Béchamel sits with the emulsions on the sauce bench. Confit, Rendering fat and The tagine share the braise's low, patient heat. Pie crust & blind baking and Icing & frosting open and close the pastry run.",
+     "lens": "voice",
+     "key": "2-techniques-voice-9",
+     "primer": "2-techniques"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "wrong",
+     "claim": "they teach the two habits the rest of this level assumes: heat held below the boil, and nothing added faster than the pot can take it.",
+     "because": "The rest of this level does not assume heat below the boil. The Tadka standard puts the fat at about 180 C (350 F) before anything goes in, and the brief's sugar stages run up to caramel, far above the boil. The claim is too broad, and a cook who carries it to the tadka pan will steep the spices instead of blooming them.",
+     "fix": "they teach two habits much of this level leans on: heat held below the boil, and nothing added faster than the pot can take it.",
+     "lens": "voice",
+     "key": "2-techniques-voice-10",
+     "primer": "2-techniques"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Hollandaise and Beurre blanc are that same rule at the pass.",
+     "because": "These sauces are built and held on the sauce station, which is a chef de partie's. In the register, the pass belongs to the Sous Chef (\"Running the pass\"). Putting it here blurs the two levels this primer is meant to separate.",
+     "fix": "Hollandaise and Beurre blanc are that same rule on the sauce station.",
+     "lens": "voice",
+     "key": "2-techniques-voice-11",
+     "primer": "2-techniques"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "Then the pastry base, in the order a bake uses it.",
+     "because": "No single bake uses rubbing in, creaming, folding, kneading, proofing, a custard and caramel in sequence. Rubbing in is for short pastry, creaming is for butter cakes and kneading is for bread. A cook who looks for this order will not find it.",
+     "fix": "Then the pastry and bread base, one habit each.",
+     "lens": "voice",
+     "key": "2-techniques-voice-12",
+     "primer": "2-techniques"
+    },
+    {
+     "where": "paragraph 3",
+     "severity": "unclear",
+     "claim": "Creaming butter & sugar takes minutes, not seconds, until the mix is pale and grown.",
+     "because": "\"Pale and grown\" is clipped past sense. The standard's mark says the mix has \"visibly paled\" and \"grown in volume\".",
+     "fix": "Creaming butter & sugar takes minutes, not seconds, until the mix is pale and grown in volume.",
+     "lens": "voice",
+     "key": "2-techniques-voice-13",
      "primer": "2-techniques"
     },
     {
      "where": "paragraph 3",
      "severity": "wrong",
-     "claim": "Marinating carries the level's most used standard, 70 recipes",
-     "because": "Marinating has recipeCount 70, but three standards at this level sit on more: Proofing 78, Rendering fat 73, Resting dough 71. Marinating is fourth, not first.",
-     "fix": "Marinating carries a standard on 70 recipes",
-     "lens": "app",
-     "key": "2-techniques-app-10",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "paragraph 4",
-     "severity": "wrong",
-     "claim": "fresh pasta, working with masa, pleating dumplings and handling phyllo ride on them",
-     "because": "Read against \"carry standards\" in the same sentence, this says these four have none. The brief has \"standard\": true for working-with-masa (13 recipes, four marks on hydration, rest, the press and the smell of the lime) and for pleating-dumplings (8 recipes, marks on the seal, the dry rim, even pleat count and the thicker center). Only fresh pasta and handling phyllo are met by any cook of a recipe.",
-     "fix": "fresh pasta and handling phyllo ride on them; working with masa and pleating dumplings carry standards of their own",
-     "lens": "app",
-     "key": "2-techniques-app-11",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "paragraph 4",
-     "severity": "wrong",
-     "claim": "proof by volume and the poke test and never by the clock, then fermentation, which is a rate, not a duration",
-     "because": "The sentence promises \"the order the loaf does\", and the brief's own Proofing text calls proofing \"the final rise before baking\", so fermentation cannot come after it. The app's Fermentation is the fermentation-and-pickling standard (bubbles, clean smell, everything under the liquid), which runs before shaping and proof, not after.",
-     "fix": "let fermentation run, which is a rate, not a duration, then proof by volume and the poke test and never by the clock",
-     "lens": "app",
-     "key": "2-techniques-app-12",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "paragraph 5",
-     "severity": "wrong",
-     "claim": "Pastry is the rest.",
-     "because": "The text has named 26 of 50 items; the 24 unnamed are not pastry (ramen broth, congee, risotto method, the seafood boil, the tagine, falafel, jollof & party smoke, arepas, injera, pierogi, empanada folding, rolling dolmas, khachapuri shaping, gnocchi, the molcajete, boiling bagels, churros) and three pastry techniques that DO carry standards go unnamed: creaming butter & sugar (28 recipes), folding: keeping the air in (34) and icing & frosting (17), while pastry items without standards are named. A reader would take the five named as the whole pastry family and miss three standards.",
-     "fix": "Pastry is the last family with standards, and creaming butter & sugar, folding and icing & frosting carry them too (add creaming-butter-and-sugar, folding-keeping-the-air-in and icing-and-frosting to cites).",
-     "lens": "app",
-     "key": "2-techniques-app-13",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "paragraph 1",
-     "severity": "wrong",
-     "claim": "About half carry a written standard",
-     "because": "The brief's items show 21 of the 50 with \"standard\": true (braising, building an emulsion, creaming butter & sugar, fermentation, folding, icing & frosting, kneading, marinating, pie crust, pleating dumplings, pounding a curry paste, proofing, rendering fat, resting dough, rubbing fat into flour, scoring, sugar stages, tadka, tempering a custard, the water bath, working with masa). Two in five is not about half.",
-     "fix": "Twenty-one carry a written standard",
+     "claim": "gentle heat, no boil, and a set judged by how it behaves.",
+     "because": "A tempered stirred custard does not set. Its standard judges it by thickness: \"it thickens enough to coat the back of a spoon and hold a clean line\". Only The water bath is judged on a set.",
+     "fix": "gentle heat, no boil, and doneness judged by how it behaves.",
      "lens": "voice",
      "key": "2-techniques-voice-14",
      "primer": "2-techniques"
     },
     {
-     "where": "paragraph 1",
-     "severity": "style",
-     "claim": "Level I gave you the moves that carry the most recipes. Level II is the moves that carry a station, and fifty sit here.",
-     "because": "Restates the Commis blurb (\"the techniques that carry the most dishes\") and the Chef de Partie blurb (\"Running a station\"), and repeats the lede's \"Fifty\". Nothing here is actionable, and the primer sits at 521 words against an aim of 520; this is the cut that brings it back.",
-     "fix": "Fifty techniques sit here.",
+     "where": "paragraph 4",
+     "severity": "wrong",
+     "claim": "Around these sit other kitchens' dough work, from Pleating dumplings and Working with masa to Pierogi, Handling phyllo and Fresh pasta, and dishes that teach a method in passing: Risotto method, Congee, Shucking shellfish and The seafood boil.",
+     "because": "Risotto method, Congee, Shucking shellfish and The seafood boil are technique entries, not dishes, and Shucking shellfish is not a dish at all. \"Around these sit\" also sidelines Pleating dumplings and Working with masa, yet both carry written standards and are met only when graded. The sentence is a name list the reader cannot act on.",
+     "fix": "Pleating dumplings and Working with masa carry standards of their own: a seam closed its whole length, masa that seals smooth when pinched. Pierogi, Handling phyllo and Fresh pasta are other kitchens' dough work, and Risotto method, Congee, Shucking shellfish and The seafood boil each teach a method through one plate.",
      "lens": "voice",
      "key": "2-techniques-voice-15",
      "primer": "2-techniques"
     },
     {
-     "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "Marinating carries the level's most used standard, 70 recipes",
-     "because": "Marinating is on 70 recipes, but proofing (78), rendering fat (73) and resting dough (71) all carry standards on more, per the brief's recipeCount.",
-     "fix": "Marinating carries a standard on 70 recipes",
+     "where": "paragraph 5",
+     "severity": "unclear",
+     "claim": "Read the techniques opens the index at this level.",
+     "because": "The door's name is not marked, so a reader on a phone meets an instruction followed by a second verb and has to parse it twice. The door is named correctly (\"Read the techniques: the technique index at this level\"). Only the sentence needs to show that it is a name.",
+     "fix": "The Read the techniques door opens the index at this level.",
      "lens": "voice",
      "key": "2-techniques-voice-16",
      "primer": "2-techniques"
     },
     {
-     "where": "paragraph 3",
+     "key": "2-techniques-critic-1",
+     "primer": "2-techniques",
+     "lens": "critic",
+     "where": "primer",
      "severity": "unclear",
-     "claim": "Then the braise, where the Path's fourth semester lands you.",
-     "because": "A claim about the app that is neither a door nor the met rule: braising's semesters [4, 7] are a placement signal in the brief, not something a cook on the Techniques page can act on, and the Path is not opened from here.",
-     "fix": "Then the braise.",
-     "lens": "voice",
-     "key": "2-techniques-voice-17",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "style",
-     "claim": "liquid partway up and trembling never boiling",
-     "because": "Missing the comma the standard's own mark carries (\"it never boils: the surface trembles and no more\"); as written it reads as one run-on phrase.",
-     "fix": "liquid partway up and trembling, never boiling",
-     "lens": "voice",
-     "key": "2-techniques-voice-18",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "paragraph 4",
-     "severity": "wrong",
-     "claim": "fresh pasta, working with masa, pleating dumplings and handling phyllo ride on them",
-     "because": "Working with masa and pleating dumplings each carry their own written standard in the brief (masa: the pinch test, the covered rest, an even 2 mm off the press, the smell of toasted corn; dumplings: the seam closed, a dry rim, even pleats, a wrapper thicker at the center). Neither rides on the wheat-dough standards; masa is not kneaded, rested for gluten or proofed. Only fresh pasta and handling phyllo are standard-less here.",
-     "fix": "Kneading dough, resting dough, proofing, scoring, working with masa and pleating dumplings carry standards; fresh pasta and handling phyllo are met by any of their recipes.",
-     "lens": "voice",
-     "key": "2-techniques-voice-19",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "paragraph 4",
-     "severity": "wrong",
-     "claim": "proof by volume and the poke test and never by the clock, then fermentation, which is a rate, not a duration.",
-     "because": "\"In the order the loaf does\" puts fermentation after proofing; a loaf ferments before it proofs. And the brief's fermentation item is the sauerkraut, kimchi and koji family, with marks on a steady temperature chosen on purpose, visible activity, a clean smell and everything under the liquid; it is not a loaf step.",
-     "fix": "proof by volume and the poke test and never by the clock. Fermentation, sauerkraut and kimchi as much as the loaf, is a rate, not a duration: steady warmth, visible activity, a clean smell, nothing left dry in the air.",
-     "lens": "voice",
-     "key": "2-techniques-voice-20",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "paragraph 4",
-     "severity": "unclear",
-     "claim": "Scoring's standard is about the blade, not the loaf: one clean draw at a slant, parallel lines a finger's width apart, through the skin and no deeper than the fat.",
-     "because": "The standard's marks are written on skin over fat (\"any cut showing red or fibrous flesh has gone too deep\", \"the cuts bleed as they cook\"), a pork belly or duck breast, not bread. Sitting inside the bread bench, \"no deeper than the fat\" means nothing to a cook holding a loaf; say what surface it is.",
-     "fix": "Scoring's standard is written on skin over fat, not on a loaf: one clean draw at a slant, parallel lines a finger's width apart, through the skin and stopping in the fat.",
-     "lens": "voice",
-     "key": "2-techniques-voice-21",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "paragraph 5",
-     "severity": "wrong",
-     "claim": "Pastry is the rest.",
-     "because": "Twenty-four items placed here are never named, among them three that carry standards: creaming butter & sugar (28 recipes: paled, grown, fluffy, still faintly gritty), folding: keeping the air in (34: folded not stirred, stopped when the streaks vanish) and icing & frosting (17: the bake fully cool, smooth, holds its edge). The other twenty-one (arepas, boiling bagels, choux pastry, churning ice cream, churros, congee, crêpes, empanada folding, falafel, gnocchi, injera, jollof & party smoke, khachapuri shaping, pierogi, ramen broth, risotto method, rolling dolmas, the brûlée torch, the molcajete, the seafood boil, the tagine) carry no standard and the reader is never told they exist or how they are met.",
-     "fix": "Pastry carries the last standards, three of them on air and a finish: creaming butter & sugar to pale and fluffy, folding until the streaks just vanish, icing & frosting onto a bake fully cool. The other two dozen, arepas to the tagine, risotto method to ramen broth, carry no standard: cook one recipe and it is met.",
-     "lens": "voice",
-     "key": "2-techniques-voice-22",
-     "primer": "2-techniques"
-    },
-    {
-     "where": "cites",
-     "severity": "unclear",
-     "claim": "\"sugar-stages-and-caramel\"",
-     "because": "Once creaming, folding and icing are named (they are standard-bearing items at this level in this subsection and the text should carry them), their slugs belong in cites; the gate takes cites only for what the text names, so add them together with the paragraph 5 fix.",
-     "fix": "append \"creaming-butter-and-sugar\", \"folding-keeping-the-air-in\", \"icing-and-frosting\"",
-     "lens": "voice",
-     "key": "2-techniques-voice-23",
-     "primer": "2-techniques"
+     "claim": "The two primers disagree on where a cook at this level starts. Paragraph 2 says \"Take Braising and Building an emulsion first\". The dishes primer says \"Start at the pan and the soup pot\" and follows the semester order that its \"Read the semester\" door opens (Cacio e Pepe and the soups, then Sole Meuniere, then the braise, with the fish case last). A technique is met by cooking one of its recipes, and at this level Building an emulsion is carried by Linguine alle Vongole and Calamari Fritti, the plates the dishes primer puts last. Read together, the two leave a cook unsure what to cook first.",
+     "because": "The two primers disagree on where a cook at this level starts. Paragraph 2 says \"Take Braising and Building an emulsion first\". The dishes primer says \"Start at the pan and the soup pot\" and follows the semester order that its \"Read the semester\" door opens (Cacio e Pepe and the soups, then Sole Meuniere, then the braise, with the fish case last). A technique is met by cooking one of its recipes, and at this level Building an emulsion is carried by Linguine alle Vongole and Calamari Fritti, the plates the dishes primer puts last. Read together, the two leave a cook unsure what to cook first.",
+     "fix": "Make the opening of paragraph 2 about reading, not cooking, and tie it to the dishes order. For example: \"Read Braising and Building an emulsion before the others, ahead of the braise plates and the clam and calamari plates on the dishes list that carry them.\" Keep the rest of the paragraph as it is."
     }
    ],
    "dispositions": [
     {
      "finding": "2-techniques-fact-1",
      "action": "applied",
-     "reason": "Changed to \"Marinating carries a standard on 70 recipes\"; the brief puts Proofing at 78, Rendering fat at 73 and Resting dough at 71, so \"most used\" was false."
+     "reason": "Changed 'in the order a bake uses it' to 'each read by its own mark', so paragraph 3 no longer implies that one bake runs all these steps in turn."
     },
     {
      "finding": "2-techniques-fact-2",
      "action": "applied",
-     "reason": "Working with masa and pleating dumplings now sit with the standard-bearers (both are standard: true in the brief), only fresh pasta and handling phyllo are met by any recipe, and a new sentence says masa is corn, not a gluten dough, with its own marks (the pinch that seals, the covered rest, toasted corn) and dumplings' marks (dry rim, closed seam, even pleats)."
+     "reason": "Changed 'a set judged by how it behaves' to 'doneness judged by how it behaves', which fits the custard's coat-the-spoon mark and the water bath's tremble."
     },
     {
      "finding": "2-techniques-fact-3",
      "action": "applied",
-     "reason": "Reordered the loaf so fermentation runs during the rest, before the proof, and proofing (the brief's \"final rise before baking\") comes last, judged by volume and the poke test."
+     "reason": "Risotto method, Congee, Shucking shellfish and The seafood boil are now 'narrower methods, each learned on its own recipes', not dishes."
     },
     {
      "finding": "2-techniques-fact-4",
      "action": "applied",
-     "reason": "Now reads \"Scoring's standard is written on skin over fat, not on a loaf: one clean draw at a slant on a cold dry surface, parallel lines a finger's width apart, through the skin and stopping in the fat, never the flesh\", matching the brief's marks."
+     "reason": "Paragraph 1 now says 'most fall into four families'."
     },
     {
      "finding": "2-techniques-fact-5",
      "action": "applied",
-     "reason": "\"Pastry is the rest\" became \"Pastry carries the last standards\", with creaming butter & sugar, folding and icing & frosting named on their own marks, and the remaining two dozen (arepas to the tagine, risotto method to ramen broth) named as carrying no standard and met by one recipe."
+     "reason": "Paragraph 1 now says Béchamel sits on the sauce bench but is not an emulsion: it is milk thickened with a white roux, as the brief's roux text has it."
     },
     {
-     "finding": "2-techniques-fact-6",
+     "finding": "2-techniques-app-6",
      "action": "applied",
-     "reason": "Changed to \"take it first of the emulsions\" so the paragraph keeps one starting point."
+     "reason": "Paragraph 1 now opens 'what running a station asks, and most fall into four families', which drops the Sous Chef phrase 'whole service' and the claim that every item fits a family."
     },
     {
-     "finding": "2-techniques-fact-7",
+     "finding": "2-techniques-app-7",
      "action": "applied",
-     "reason": "Now \"Curing gravlax is salt and time doing the work, ceviche is acid doing it\", so only ceviche's acid stands in for heat and gravlax is cured, not cooked."
+     "reason": "The four items are now called narrower methods, not dishes."
     },
     {
-     "finding": "2-techniques-fact-8",
+     "finding": "2-techniques-app-8",
      "action": "applied",
-     "reason": "Next line now says \"velveting as the coat beyond the marinade\", matching the brief's entry that sets velveting (egg white, cornstarch, a brief pre-cook) apart from a marinade."
+     "reason": "Changed to 'two habits much of this level leans on'."
     },
     {
-     "finding": "2-techniques-app-9",
+     "finding": "2-techniques-voice-9",
      "action": "applied",
-     "reason": "Paragraph 1 now says twenty-one carry a written standard and twenty-nine are met by any recipe; I counted 21 of 50 with standard: true in the brief."
+     "reason": "Replaced the roll call in paragraph 1 with the family names plus short sentences on Béchamel (as a roux sauce, per fact-5), on Confit, Rendering fat and The tagine, and on Pie crust & blind baking and Icing & frosting; 'through a whole service' is gone."
     },
     {
-     "finding": "2-techniques-app-10",
+     "finding": "2-techniques-voice-10",
      "action": "applied",
-     "reason": "Same change as fact-1: \"Marinating carries a standard on 70 recipes\", no longer called the level's most used."
+     "reason": "Changed to 'two habits much of this level leans on', so tadka and caramel are no longer covered by the below-the-boil habit."
     },
     {
-     "finding": "2-techniques-app-11",
+     "finding": "2-techniques-voice-11",
      "action": "applied",
-     "reason": "Same change as fact-2: working with masa and pleating dumplings moved into the list that carries standards; only fresh pasta and handling phyllo are met by any of their recipes."
+     "reason": "Changed 'at the pass' to 'on the sauce station'."
     },
     {
-     "finding": "2-techniques-app-12",
+     "finding": "2-techniques-voice-12",
      "action": "applied",
-     "reason": "Same change as fact-3: fermentation now runs in the rest before shaping and proof, described as a rate not a duration with the standard's marks (steady warmth chosen on purpose, visible activity, a clean smell), then proof by volume and the poke test."
+     "reason": "Paragraph 3 now opens 'Then the pastry and bread base, each read by its own mark', which drops the order-of-a-bake claim."
     },
     {
-     "finding": "2-techniques-app-13",
+     "finding": "2-techniques-voice-13",
      "action": "applied",
-     "reason": "Creaming butter & sugar, folding and icing & frosting are now named with their marks in paragraph 5, and creaming-butter-and-sugar, folding-keeping-the-air-in and icing-and-frosting were added to cites."
+     "reason": "Changed to 'pale and grown in volume', following the standard's mark."
     },
     {
      "finding": "2-techniques-voice-14",
      "action": "applied",
-     "reason": "Same change as app-9: \"About half\" replaced by twenty-one with a written standard."
+     "reason": "Changed 'a set' to 'doneness judged by how it behaves'."
     },
     {
      "finding": "2-techniques-voice-15",
      "action": "applied",
-     "reason": "Cut the two blurb-restating sentences; paragraph 1 now opens \"Fifty sit here, twenty-one with a written standard\" and the whole primer was tightened elsewhere to absorb the required additions."
+     "reason": "Pleating dumplings and Working with masa now get their standards' marks (a seam closed its whole length, masa that seals smooth when a pinch is rolled shut), and the four methods are no longer called dishes; I wrote 'each learned on its own recipes' rather than 'one plate', because Shucking shellfish carries 10 recipes."
     },
     {
      "finding": "2-techniques-voice-16",
      "action": "applied",
-     "reason": "Same change as fact-1: marinating is no longer called the most used standard."
+     "reason": "Both doors are now marked as names: 'The Read the techniques door' and 'The next technique door'."
     },
     {
-     "finding": "2-techniques-voice-17",
+     "finding": "2-techniques-critic-1",
      "action": "applied",
-     "reason": "The Path's fourth semester clause is gone; paragraph 3 opens \"Then the braise.\""
-    },
-    {
-     "finding": "2-techniques-voice-18",
-     "action": "applied",
-     "reason": "Now \"liquid partway up and trembling, never boiling\"."
-    },
-    {
-     "finding": "2-techniques-voice-19",
-     "action": "applied",
-     "reason": "Same change as fact-2 and app-11: the sentence now lists kneading dough, resting dough, proofing, scoring, working with masa and pleating dumplings as carrying standards, with fresh pasta and handling phyllo met by any of their recipes."
-    },
-    {
-     "finding": "2-techniques-voice-20",
-     "action": "applied",
-     "reason": "Fermentation now precedes the proof and is described with the standard's own marks as a rate, not a duration; I kept it inside the loaf's order rather than naming sauerkraut and kimchi, to hold the paragraph under 900 characters."
-    },
-    {
-     "finding": "2-techniques-voice-21",
-     "action": "applied",
-     "reason": "Same change as fact-4: the sentence names the surface, skin over fat, not a loaf."
-    },
-    {
-     "finding": "2-techniques-voice-22",
-     "action": "applied",
-     "reason": "Same change as fact-5 and app-13: the three pastry standards are named on their marks and the unnamed remainder is named by range (arepas to the tagine, risotto method to ramen broth) as carrying no standard and met by one recipe."
-    },
-    {
-     "finding": "2-techniques-voice-23",
-     "action": "applied",
-     "reason": "Appended creaming-butter-and-sugar, folding-keeping-the-air-in and icing-and-frosting to cites, plus arepas, the-tagine, risotto-method and ramen-broth since the text now names them; every cite was checked against the brief's items."
+     "reason": "Paragraph 2 now opens by telling the cook to read Braising and Building an emulsion first and cook them when the dishes list reaches their plates, so it follows the dishes primer's cooking order; the plates are not named because the brief does not say which dishes carry each technique, and the rest of the paragraph is unchanged."
     }
    ]
   },
   "2-lexicon": {
    "findings": [
     {
-     "where": "paragraph 2",
+     "where": "paragraph 4",
      "severity": "wrong",
-     "claim": "Velveting & Marinades, Pressure & Slow Cooking and Fermentation & Pickling complete the set.",
-     "because": "The brief places two more Heat & Precision terms at Level II that the sentence closes the set without: Tempering Eggs & Chocolate and Infusion: Steeping Flavor into Fat, Cream & Syrup. Saying the set is complete hides them.",
-     "fix": "Velveting & Marinades, Pressure & Slow Cooking, Fermentation & Pickling, Tempering Eggs & Chocolate and Infusion round out the set. (Add tempering-eggs-and-chocolate and infusion-steeping-flavor-into-fat-cream-and-syrup to cites.)",
+     "claim": "because a dried chile takes a new name: the dried poblano is Ancho.",
+     "because": "The Ancho entry says it is the dried RIPE poblano, one that ripens red on the plant, and that Mulato is dried poblano too, from a strain that ripens brown. 'The dried poblano is Ancho' contradicts that. Chile Fluency also limits the renaming to Mexican kitchens ('Mexican kitchens rename chiles when dried'). It is not a rule for every dried chile: chile de arbol keeps its name dried.",
+     "fix": "because in Mexican kitchens a dried chile takes a new name: the ripe red poblano, dried, is Ancho.",
      "lens": "fact",
      "key": "2-lexicon-fact-1",
      "primer": "2-lexicon"
     },
     {
-     "where": "paragraph 2",
-     "severity": "wrong",
-     "claim": "Then Confit, Sous Vide and Consommé & Clarification, the same patience at lower heat: confit is the ancestral sous vide, and sous vide is the confit's grandchild.",
-     "because": "Confit is not lower heat than the braise: the brief has confit poached at about 90 C and the braise at 85 to 95 C, the same band. Consommé & Clarification is a raft heated gently to filter a stock clear, not a low-heat cook, and the colon's explanation covers only confit and sous vide.",
-     "fix": "Then Confit and Sous Vide, gentle heat and patience: confit is the ancestral sous vide, sous vide the confit's grandchild, and Consommé & Clarification the raft that filters a stock clear.",
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "Then Emulsions, where the rescue is always the same: a fresh yolk, and the broken sauce whisked into it.",
+     "because": "The Emulsions entry gives the rescue as 'start fresh with a new yolk (or a spoon of water/mustard)' and whisk the broken sauce into it. Put as 'always a fresh yolk', the line sends a cook to use a yolk on a broken vinaigrette or beurre blanc, and a yolk changes those sauces. The constant part is the method: a fresh base, with the broken sauce whisked into it.",
+     "fix": "Then Emulsions, where the rescue is always the same: a fresh yolk or a spoon of water, and the broken sauce whisked into it.",
      "lens": "fact",
      "key": "2-lexicon-fact-2",
      "primer": "2-lexicon"
     },
     {
-     "where": "paragraph 2",
+     "where": "next",
      "severity": "unclear",
-     "claim": "Braising & Stewing, Emulsions and The Maillard Reaction are the three to explain before service: why a boiled braise turns grainy, why a sauce breaks and how you whisk it back into a fresh yolk, why a wet surface never browns.",
-     "because": "The brief's own Braising & Stewing opens with \"sear for Maillard flavor\": the braise depends on the browning word, so the Maillard Reaction belongs before the braise in the order a cook takes them.",
-     "fix": "The Maillard Reaction, Braising & Stewing and Emulsions are the three to explain before service: why a wet surface never browns, why a boiled braise turns grainy, why a sauce breaks and how you whisk it back into a fresh yolk.",
+     "claim": "Lamination, Wok Hei & Stir-Fry Discipline and Grilling vs. Barbecue vs. Smoking on the line",
+     "because": "Lamination is pastry work: butter locked into dough and folded, done on a cold bench. It is not a technique of the hot line, so putting it 'on the line' tells a cook the wrong station.",
+     "fix": "Lamination at the pastry bench, Wok Hei & Stir-Fry Discipline and Grilling vs. Barbecue vs. Smoking on the line",
      "lens": "fact",
      "key": "2-lexicon-fact-3",
      "primer": "2-lexicon"
     },
     {
-     "where": "paragraph 3",
-     "severity": "unclear",
-     "claim": "Flank, Skirt & Hanger obey one law, high heat, medium-rare at most, rested and sliced thin against the grain",
-     "because": "The brief's law has four parts and opens with the seasoning: \"marinate or salt, blast with high heat to medium-rare MAX, rest, and slice thin against their very obvious grain.\" Dropping the salt or marinade drops the step a Level II cook does first.",
-     "fix": "Flank, Skirt & Hanger obey one law, salt or marinate, high heat, medium-rare at most, rested and sliced thin against the grain",
-     "lens": "fact",
-     "key": "2-lexicon-fact-4",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 5",
-     "severity": "unclear",
-     "claim": "read Toasting, Blooming & the Tadka Doctrine and Building the Working Spice Pantry before the single spices and blends",
-     "because": "The brief's own text for Building the Working Spice Pantry opens \"The capstone: architecture over accumulation\", the entry the atlas closes on. Telling the reader to take it first contradicts the item's framing; it works as the map kept open, not the first read.",
-     "fix": "read Toasting, Blooming & the Tadka Doctrine before the single spices and blends and keep Building the Working Spice Pantry, the atlas's capstone, open as the map",
-     "lens": "fact",
-     "key": "2-lexicon-fact-5",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 5",
-     "severity": "unclear",
-     "claim": "Salt Types & When Each Wins settles arguments: read it on day one.",
-     "because": "The placement standard uses \"day one\" for Level I (\"the produce and staples handled on day one\"); Salt Types & When Each Wins is placed at Level II, so \"day one\" reads as if it were a Commis term.",
-     "fix": "Salt Types & When Each Wins settles arguments: read it first.",
-     "lens": "fact",
-     "key": "2-lexicon-fact-6",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 4",
-     "severity": "unclear",
-     "claim": "Baking science sits at its base.",
-     "because": "\"Its\" has no clear owner; the standard's line is \"pastry and baking science at its base\", where \"its\" is the level. On a phone between services the reader stumbles on the pronoun.",
-     "fix": "Baking science sits at the level's base.",
-     "lens": "fact",
-     "key": "2-lexicon-fact-7",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 2",
-     "severity": "wrong",
-     "claim": "Velveting & Marinades, Pressure & Slow Cooking and Fermentation & Pickling complete the set.",
-     "because": "The brief's Techniques: Heat & Precision category at Level II holds ten items, and two of them, Tempering (Eggs & Chocolate) and Infusion: Steeping Flavor into Fat, Cream & Syrup, are never named, so \"complete the set\" implies a closed count of heat words that the app's data does not support (a cook checking the category will find two more).",
-     "fix": "Velveting & Marinades, Pressure & Slow Cooking and Fermentation & Pickling follow, with Tempering and Infusion behind them. (Add tempering-eggs-and-chocolate and infusion-steeping-flavor-into-fat-cream-and-syrup to cites.)",
-     "lens": "app",
-     "key": "2-lexicon-app-8",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 2",
-     "severity": "wrong",
-     "claim": "Velveting & Marinades, Pressure & Slow Cooking and Fermentation & Pickling complete the set.",
-     "because": "The brief places ten items in Techniques: Heat & Precision at Level II; the paragraph names eight. Tempering (Eggs & Chocolate) and Infusion: Steeping Flavor into Fat, Cream & Syrup are also placed here, so the set is not complete.",
-     "fix": "Velveting & Marinades, Pressure & Slow Cooking and Fermentation & Pickling follow, with Tempering and Infusion behind them. (If the two are named, add cites tempering-eggs-and-chocolate and infusion-steeping-flavor-into-fat-cream-and-syrup; otherwise end the sentence at \"follow.\")",
-     "lens": "voice",
-     "key": "2-lexicon-voice-9",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 2",
-     "severity": "wrong",
-     "claim": "the same patience at lower heat",
-     "because": "The brief's own texts put the braise at a bare tremble (85 to 95 C liquid) and confit poached at about 90 C: confit is not lower heat than the braise, and the consommé raft is heated gently rather than at a lower temperature. Sous Vide is the only one of the three that is plainly lower.",
-     "fix": "the same patience at gentle heat",
-     "lens": "voice",
-     "key": "2-lexicon-voice-10",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 2",
-     "severity": "style",
-     "claim": "confit is the ancestral sous vide, and sous vide is the confit's grandchild",
-     "because": "Both halves are from the brief (Confit: \"the ancestral sous vide\"; Sous Vide: \"the confit's grandchild\") but they say one thing twice inside a single sentence, which is repetition the reader pays for on a phone.",
-     "fix": "confit is the ancestral sous vide",
-     "lens": "voice",
-     "key": "2-lexicon-voice-11",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 6",
-     "severity": "wrong",
-     "claim": "run the ladder a category at a time",
-     "because": "This is a claim about the app that is neither a door nor the met rule. The brief's doors say only \"Flashcards and Quiz: both over this level's terms\"; nothing in the brief says the flashcard ladder can be run by category.",
-     "fix": "run the ladder",
-     "lens": "voice",
-     "key": "2-lexicon-voice-12",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 5",
-     "severity": "unclear",
-     "claim": "read it on day one",
-     "because": "Paragraph 1 tells the reader to start with heat and product and paragraph 2 says \"Take the heat words first\"; telling them to read Salt Types on day one contradicts the order the primer has just set, and \"day one\" belongs to Level I's register (\"the staples handled on day one\").",
-     "fix": "read it with the heat words",
-     "lens": "voice",
-     "key": "2-lexicon-voice-13",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 5",
-     "severity": "unclear",
-     "claim": "the market calendar sets your order",
-     "because": "In a paragraph about the order to take the terms in, \"your order\" reads as reading order, when the brief's line is about menu writing: \"Menu writing begins at the market calendar.\"",
-     "fix": "menu writing begins at the market calendar",
-     "lens": "voice",
-     "key": "2-lexicon-voice-14",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 4",
-     "severity": "unclear",
-     "claim": "Baking science sits at its base.",
-     "because": "\"Its\" has no antecedent: the previous paragraph ended on fish stock. The phrase is lifted from the standard (\"pastry and baking science at its base\"), where \"its\" is the level.",
-     "fix": "Baking science is the level's base.",
-     "lens": "voice",
-     "key": "2-lexicon-voice-15",
-     "primer": "2-lexicon"
-    },
-    {
-     "where": "paragraph 3",
-     "severity": "unclear",
-     "claim": "Flank, Skirt & Hanger obey one law, high heat, medium-rare at most, rested and sliced thin against the grain, and Dry-Aging is",
-     "because": "The comma chain makes \"one law, high heat, medium-rare\" read as a list of three things, and the sentence then runs on into Dry-Aging; the brief's line is one law with four steps.",
-     "fix": "Flank, Skirt & Hanger obey one law: high heat, medium-rare at most, a rest, then sliced thin against the grain. Dry-Aging is",
-     "lens": "voice",
-     "key": "2-lexicon-voice-16",
-     "primer": "2-lexicon"
-    },
-    {
      "where": "paragraph 1",
      "severity": "unclear",
-     "claim": "Most sit in the atlases, the spice rack, the herb and chile shelf, the fruit, fungi, grain and pantry shelves, taken as the menu reaches for them.",
-     "because": "The list makes \"the atlases\" a separate group from the shelves that follow, when the spice rack and the shelves are the atlases; and the Vegetable Atlas, with 46 items the largest single category at this level, is left out of the list.",
-     "fix": "Most sit in the atlases: the spice rack, the herb and chile shelf, the vegetable, fruit, fungi, grain and pantry shelves, taken as the menu reaches for them.",
+     "claim": "where the rescue is always the same: a fresh yolk, and the broken sauce whisked into it",
+     "because": "The brief's Emulsions text gives the rescue as starting fresh with a new yolk \"(or a spoon of water/mustard)\" and whisking the broken sauce into it. \"Always\" plus the yolk alone leaves out the water and mustard starts, which work where a yolk would be wrong, for example a broken beurre blanc or vinaigrette.",
+     "fix": "where the rescue is always the same: a fresh yolk or a spoon of water or mustard, and the broken sauce whisked into it",
+     "lens": "app",
+     "key": "2-lexicon-app-4",
+     "primer": "2-lexicon"
+    },
+    {
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Read Marbling before the steaks:",
+     "because": "The classic steaks (Ribeye / Prime Rib, Strip / New York Strip, Tenderloin / Filet Mignon, T-Bone & Porterhouse) are placed at Commis, in neighbours.below. The beef items placed here are Flank, Skirt & Hanger, Flat Iron, The Round, Wagyu & Kobe and Dry-Aging. \"The steaks\" reads as if a set of steak entries sits at this level.",
+     "fix": "Read Marbling first:",
+     "lens": "app",
+     "key": "2-lexicon-app-5",
+     "primer": "2-lexicon"
+    },
+    {
+     "where": "lede",
+     "severity": "misplaced",
+     "claim": "each owed a sentence at the pass",
+     "because": "In the brief's register, the pass belongs to Sous Chef (\"Sous Chef: Running the pass\"). The primer's own next line also says \"At Sous Chef the Lexicon moves to the pass\", so the lede and the next line contradict each other. The Chef de Partie standard places these words where \"a kitchen writes on a menu and expects a sentence of explanation\".",
+     "fix": "each owed a sentence when the menu names it",
      "lens": "voice",
-     "key": "2-lexicon-voice-17",
+     "key": "2-lexicon-voice-6",
      "primer": "2-lexicon"
     },
     {
      "where": "lede",
      "severity": "style",
-     "claim": "Level II is the station's vocabulary: the words behind the braise, the emulsion, the meat and fish case and the spice rack, each one a sentence you can say at the pass.",
-     "because": "The lede restates the level blurb (\"Running a station: the mother sauces and the braise, the cuts and the fish case, and the words a menu expects a sentence for\") rather than saying what this subsection asks at this level; the house rule is no restating the level's blurb.",
-     "fix": "Level II is the station's vocabulary: heat and product first, then the case, the bake and the spice rack, each word a sentence you can say at the pass.",
+     "claim": "the sauce, the braise, the cut, the fish case and the spice rack",
+     "because": "This list repeats the level blurb (\"the mother sauces and the braise, the cuts and the fish case\"), and the house rules forbid restating the blurb. \"The sauce\" also points at no named item: the paragraphs reach sauce only through Emulsions. Pastry and baking science, a whole paragraph of the primer, is missing from the list.",
+     "fix": "the sear, the emulsion, the cut, the fish case, the baker's math and the spice rack",
      "lens": "voice",
-     "key": "2-lexicon-voice-18",
+     "key": "2-lexicon-voice-7",
+     "primer": "2-lexicon"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "The produce atlases and The Seasonal Larder are a shelf to read by what your menu handles this month",
+     "because": "\"The produce atlases\" names no item, and the sentence cites nothing. A cook cannot act on \"a shelf to read\". The Seasonal Larder entries (Citrus in Winter, Tomatoes: The Argument for August and the rest) are the part the reader can use by month.",
+     "fix": "Read the Seasonal Larder entries by what your menu handles this month",
+     "lens": "voice",
+     "key": "2-lexicon-voice-8",
+     "primer": "2-lexicon"
+    },
+    {
+     "where": "paragraph 4",
+     "severity": "unclear",
+     "claim": "Take Chile Fluency (Fresh & Dried) early, because",
+     "because": "The sentence says \"early\" but comes last in a paragraph that opens \"Then the spice rack\", after the primer has already ordered three groups. A reader following the order cannot tell where \"early\" falls. It is also the third \"Take X first/early\" in the primer (paragraphs 1 and 3), which is repetition.",
+     "fix": "Open the produce with Chile Fluency (Fresh & Dried), because",
+     "lens": "voice",
+     "key": "2-lexicon-voice-9",
+     "primer": "2-lexicon"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "misplaced",
+     "claim": "so a miss simply comes back around",
+     "because": "This is a claim about how the app behaves that neither the doors nor the met rule makes. The brief's met line ends at \"a miss alone is never met\".",
+     "fix": "(delete the clause; end at \"a miss alone is never met.\")",
+     "lens": "voice",
+     "key": "2-lexicon-voice-10",
+     "primer": "2-lexicon"
+    },
+    {
+     "where": "paragraph 5",
+     "severity": "style",
+     "claim": "Take the doors in order.",
+     "because": "This repeats the \"Take X first\" pattern. \"In order\" also says nothing that the next two sentences, which already give the order (Read the terms, then Flashcards and Quiz), do not.",
+     "fix": "(delete; begin \"Read the terms: the Lexicon at this level, ...\")",
+     "lens": "voice",
+     "key": "2-lexicon-voice-11",
+     "primer": "2-lexicon"
+    },
+    {
+     "where": "next",
+     "severity": "unclear",
+     "claim": "Menu Economics: Food Cost, Yield & Par and Prime Cost behind it",
+     "because": "A full title with an internal colon and an ampersand, inside a list that already uses a colon, reads as a run-on. A reader cannot tell where one item ends and the next begins. The house rule allows a long label's head before the colon.",
+     "fix": "Menu Economics and Prime Cost behind it",
+     "lens": "voice",
+     "key": "2-lexicon-voice-12",
      "primer": "2-lexicon"
     },
     {
@@ -921,121 +616,76 @@
      "lens": "critic",
      "where": "primer",
      "severity": "unclear",
-     "claim": "The Level test closer (\"The Level test at the foot of the page is untimed and ends on what you missed with the right answers.\") is the level page's own door, not this subsection's, and the same sentence appears nearly verbatim in 2-dishes, 2-palate, 2-safety and 2-service: five times on one reader page. 2-dishes, the first subsection, keeps it.",
-     "because": "The Level test closer (\"The Level test at the foot of the page is untimed and ends on what you missed with the right answers.\") is the level page's own door, not this subsection's, and the same sentence appears nearly verbatim in 2-dishes, 2-palate, 2-safety and 2-service: five times on one reader page. 2-dishes, the first subsection, keeps it.",
-     "fix": "In the last paragraph delete the sentence \"The Level test at the foot of the page is untimed and ends on what you missed with the right answers.\" so the paragraph runs from \"...let the quiz catch the rest.\" straight to \"When you can give the sentence at the pass without the card, the level has done its job.\""
-    },
-    {
-     "key": "2-lexicon-critic-2",
-     "primer": "2-lexicon",
-     "lens": "critic",
-     "where": "primer",
-     "severity": "unclear",
-     "claim": "The emulsion rescue is explained twice on the page: 2-techniques paragraph 2 gives it (\"a fresh base with the broken sauce whisked into it\") as part of the standard it teaches, and 2-lexicon paragraph 2 repeats it (\"how you whisk it back into a fresh yolk\"). The technique primer owns the fix; the lexicon primer only needs the word.",
-     "because": "The emulsion rescue is explained twice on the page: 2-techniques paragraph 2 gives it (\"a fresh base with the broken sauce whisked into it\") as part of the standard it teaches, and 2-lexicon paragraph 2 repeats it (\"how you whisk it back into a fresh yolk\"). The technique primer owns the fix; the lexicon primer only needs the word.",
-     "fix": "In paragraph 2 change \"why a sauce breaks and how you whisk it back into a fresh yolk\" to \"why a sauce breaks\", so the sentence ends \"...why a boiled braise turns grainy, why a sauce breaks.\""
+     "claim": "Three points repeat the techniques primer almost word for word. (1) The emulsion rescue: \"a fresh yolk or a spoon of water or mustard, and the broken sauce whisked into it\" against the techniques line \"start a fresh base and work the broken sauce into it slowly\". (2) The tadka order: \"hardy spices go into the oil early and delicate ground ones brief and late\" against \"the hardest seeds into hot fat first and the delicate ones last\". (3) The caramel rule: \"you stop stirring once it boils\" against \"nothing stirred once it boils\". On one level page the reader meets each of these twice.",
+     "because": "Three points repeat the techniques primer almost word for word. (1) The emulsion rescue: \"a fresh yolk or a spoon of water or mustard, and the broken sauce whisked into it\" against the techniques line \"start a fresh base and work the broken sauce into it slowly\". (2) The tadka order: \"hardy spices go into the oil early and delicate ground ones brief and late\" against \"the hardest seeds into hot fat first and the delicate ones last\". (3) The caramel rule: \"you stop stirring once it boils\" against \"nothing stirred once it boils\". On one level page the reader meets each of these twice.",
+     "fix": "Let the technique primer keep the hands. Rewrite those three spots in the lexicon as the word a cook explains, drawing only on each entry's own text. Emulsions: fat and water held as droplets by an emulsifier, the physics behind mayonnaise, hollandaise, vinaigrette and beurre blanc, and the same trick as pasta's starchy water. Toasting, Blooming & the Tadka Doctrine: fat carries spice flavor, which is why raw curry powder tastes dusty. Caramel Stages & Sugar Work: the syrup's temperature decides what it becomes, and wet caramel is safer while dry caramel is faster and riskier. Keep crystallization named as the saboteur without the stirring rule."
     }
    ],
    "dispositions": [
     {
      "finding": "2-lexicon-fact-1",
      "action": "applied",
-     "reason": "The closing sentence now names all ten Heat & Precision terms, adding Tempering (Eggs & Chocolate) and Infusion and changing \"complete the set\" to \"round out the set\", with both slugs added to cites."
+     "reason": "Rewrote the clause as 'because in Mexican kitchens a dried chile takes a new name: the ripe red poblano, dried, is Ancho', which matches the Ancho and Chile Fluency entries."
     },
     {
      "finding": "2-lexicon-fact-2",
      "action": "applied",
-     "reason": "Replaced \"the same patience at lower heat\" with \"gentle heat and patience\" for Confit and Sous Vide, and gave Consommé & Clarification its own clause as the raft that filters a stock clear, since the brief puts confit at about 90 C and the braise at 85 to 95 C."
+     "reason": "The Emulsions rescue now reads 'a fresh yolk or a spoon of water or mustard, and the broken sauce whisked into it', following the entry's text."
     },
     {
      "finding": "2-lexicon-fact-3",
      "action": "applied",
-     "reason": "Reordered the three to The Maillard Reaction, Braising & Stewing and Emulsions, with the three explanations reordered to match, because the brief's braise opens with \"sear for Maillard flavor\"."
+     "reason": "The next line now places Lamination 'at the pastry bench' and puts only Wok Hei and Grilling vs. Barbecue vs. Smoking on the line."
     },
     {
-     "finding": "2-lexicon-fact-4",
+     "finding": "2-lexicon-app-4",
      "action": "applied",
-     "reason": "The law now opens with \"salt or marinate\", matching the brief's four-part line for Flank, Skirt & Hanger."
+     "reason": "This is the same change as fact-2: water and mustard starts are now named next to the yolk, as the Emulsions entry gives them."
     },
     {
-     "finding": "2-lexicon-fact-5",
+     "finding": "2-lexicon-app-5",
      "action": "applied",
-     "reason": "The reader is now told to read Toasting, Blooming & the Tadka Doctrine first and keep Building the Working Spice Pantry, named as the atlas's capstone, open as the map, so the capstone is no longer a first read."
+     "reason": "Changed 'Read Marbling before the steaks' to 'Read Marbling first', because the classic steaks are placed at Commis."
     },
     {
-     "finding": "2-lexicon-fact-6",
+     "finding": "2-lexicon-voice-6",
      "action": "applied",
-     "reason": "Replaced \"read it on day one\" with \"read it with the heat words\", removing the Level I register."
+     "reason": "The lede now ends 'each owed a sentence when the menu names it', so it no longer puts the pass at this level or clashes with the next line."
     },
     {
-     "finding": "2-lexicon-fact-7",
+     "finding": "2-lexicon-voice-7",
      "action": "applied",
-     "reason": "Changed \"sits at its base\" to \"sits at the level's base\" so the pronoun has an owner."
+     "reason": "Replaced the lede's list with 'the sear, the emulsion, the cut, the fish case, the baker's math and the spice rack'. Each item now points to a paragraph, and the list no longer repeats the blurb's order."
     },
     {
-     "finding": "2-lexicon-app-8",
+     "finding": "2-lexicon-voice-8",
      "action": "applied",
-     "reason": "Same change as fact-1: Tempering (Eggs & Chocolate) and Infusion are named in the heat paragraph and cited, and the sentence no longer claims a closed set of eight."
+     "reason": "Removed 'the produce atlases' and changed the sentence to 'Then read the Seasonal Larder entries, Citrus in Winter among them, by what your menu handles this month', adding the citrus-in-winter cite."
     },
     {
      "finding": "2-lexicon-voice-9",
      "action": "applied",
-     "reason": "Same change as fact-1: both remaining Heat & Precision terms are named, their slugs are in cites, and \"complete the set\" became \"round out the set\"."
+     "reason": "Moved the Chile Fluency sentence ahead of the Seasonal Larder sentence and opened it with 'Open the produce with', so its place in the order is clear and it no longer repeats 'Take X early'."
     },
     {
      "finding": "2-lexicon-voice-10",
      "action": "applied",
-     "reason": "\"lower heat\" became \"gentle heat\", and the consommé raft was split out of that claim into its own clause."
+     "reason": "Deleted 'so a miss simply comes back around', so the met sentence now ends at 'a miss alone is never met.' as the brief's met line does."
     },
     {
      "finding": "2-lexicon-voice-11",
      "action": "applied",
-     "reason": "Dropped \"sous vide is the confit's grandchild\" and kept only \"confit being the ancestral sous vide\"."
+     "reason": "Deleted 'Take the doors in order.' The paragraph now opens with the first door by name: 'The first door, Read the terms, is the Lexicon at this level'."
     },
     {
      "finding": "2-lexicon-voice-12",
      "action": "applied",
-     "reason": "\"run the ladder a category at a time\" became \"run the ladder\", since the brief's doors say nothing about running flashcards by category."
-    },
-    {
-     "finding": "2-lexicon-voice-13",
-     "action": "applied",
-     "reason": "Salt Types & When Each Wins now says \"read it with the heat words\", in step with the order the first two paragraphs set."
-    },
-    {
-     "finding": "2-lexicon-voice-14",
-     "action": "applied",
-     "reason": "\"the market calendar sets your order\" became \"menu writing begins at the market calendar\", the brief's own line."
-    },
-    {
-     "finding": "2-lexicon-voice-15",
-     "action": "applied",
-     "reason": "The pronoun was replaced with \"the level's base\", giving the sentence its antecedent."
-    },
-    {
-     "finding": "2-lexicon-voice-16",
-     "action": "applied",
-     "reason": "The law now follows a colon as four steps (salt or marinate, high heat to medium-rare at most, a rest, then slice thin against the grain) and Dry-Aging starts its own sentence."
-    },
-    {
-     "finding": "2-lexicon-voice-17",
-     "action": "applied",
-     "reason": "The list now reads \"the atlases: the spice rack, the herb and chile shelf, the vegetable, fruit, fungi, grain and pantry shelves\", making the shelves the atlases and adding the Vegetable Atlas."
-    },
-    {
-     "finding": "2-lexicon-voice-18",
-     "action": "applied",
-     "reason": "The lede now says what the subsection asks at this level (heat and product first, then the case, the bake and the spice rack) instead of restating the level blurb."
+     "reason": "Shortened the long title to its head before the colon: 'Menu Economics and Prime Cost behind it'."
     },
     {
      "finding": "2-lexicon-critic-1",
      "action": "applied",
-     "reason": "Deleted the Level test sentence from the last paragraph so it runs from \"let the quiz catch the rest.\" straight to \"When you can give the sentence at the pass without the card, the level has done its job.\""
-    },
-    {
-     "finding": "2-lexicon-critic-2",
-     "action": "applied",
-     "reason": "Cut the emulsion rescue from paragraph 2 so the sentence now ends \"why a boiled braise turns grainy, why a sauce breaks.\" and the technique primer alone owns the fix."
+     "reason": "The three spots that repeated the techniques primer are now written as the word explained from each entry's own text: Emulsions as fat and water held as droplets by an emulsifier (the physics behind mayonnaise, hollandaise, vinaigrette and beurre blanc, the same trick as starchy pasta water); the Tadka Doctrine as fat carrying spice flavor, which is why raw curry powder tastes dusty; and Caramel Stages as the syrup's temperature deciding what it becomes, wet caramel safer and dry faster and riskier, with crystallization named as the saboteur but no stirring rule. The rescue, the order of the spices and the stirring rule are left to the techniques primer."
     }
    ]
   },
@@ -1270,6 +920,16 @@
      "claim": "Paragraph 2: \"Then the sauces, this level's standard, the mothers and their children\" is an appositive a reader cannot parse; no other primer calls anything \"this level's standard\", and the deck has no standard of its own. The intended sense is that the level's own blurb names the mother sauces.",
      "because": "Paragraph 2: \"Then the sauces, this level's standard, the mothers and their children\" is an appositive a reader cannot parse; no other primer calls anything \"this level's standard\", and the deck has no standard of its own. The intended sense is that the level's own blurb names the mother sauces.",
      "fix": "Change \"Then the sauces, this level's standard, the mothers and their children:\" to \"Then the sauces, the family the level is named for on its page, the mothers and their children:\"."
+    },
+    {
+     "key": "2-deck-critic-1",
+     "primer": "2-deck",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "\"Chef de Partie hands you 122 cards\" is the count rule 11 uses as its own example of what not to write. It is exact today, but the deck is held incomplete (24 stubs, DECK_COMPLETE off), so it will go stale. Two smaller problems: \"the family the level is named for on its page\" overstates the blurb, which only lists \"the mother sauces and the braise\"; and the next line puts \"pâte à choux\" at Sous Chef, while the Choux pastry technique is placed at Chef de Partie, so a cook reading both would think choux is Sous Chef work.",
+     "because": "\"Chef de Partie hands you 122 cards\" is the count rule 11 uses as its own example of what not to write. It is exact today, but the deck is held incomplete (24 stubs, DECK_COMPLETE off), so it will go stale. Two smaller problems: \"the family the level is named for on its page\" overstates the blurb, which only lists \"the mother sauces and the braise\"; and the next line puts \"pâte à choux\" at Sous Chef, while the Choux pastry technique is placed at Chef de Partie, so a cook reading both would think choux is Sous Chef work.",
+     "fix": "Change the opening to \"Chef de Partie hands you the cards the floor asks about\". Change the sauce clause to \"Then the sauces, the mother sauces the level page names first, and their children\". In the next line, handle choux as beurre blanc is already handled: \"the floor card for pâte à choux, a pastry the Chef de Partie techniques already teach\"."
     }
    ],
    "dispositions": [
@@ -1387,6 +1047,11 @@
      "finding": "2-deck-critic-2",
      "action": "applied",
      "reason": "Replaced \"this level's standard\" with \"the family the level is named for on its page\", tying the mother sauces to the Level II blurb rather than to a standard the deck does not have."
+    },
+    {
+     "finding": "2-deck-critic-1",
+     "action": "applied",
+     "reason": "Dropped the count (\"hands you the cards the floor asks about\"), changed the sauce clause to \"the mother sauces the level page names first, and their children\", and moved choux next to beurre blanc as a floor card whose technique Chef de Partie already teaches (both confirmed among the Chef de Partie techniques); the next line was reworded to stay within 420 characters (now 419)."
     }
    ]
   },
@@ -1531,6 +1196,16 @@
      "lens": "voice",
      "key": "2-plates-voice-14",
      "primer": "2-plates"
+    },
+    {
+     "key": "2-plates-critic-1",
+     "primer": "2-plates",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "The lede \"Sixteen folios for running a station\" states the subsection's own count, which rule 11 forbids. The gate's plates count nouns may not catch \"folios\", so it would go stale without warning.",
+     "because": "The lede \"Sixteen folios for running a station\" states the subsection's own count, which rule 11 forbids. The gate's plates count nouns may not catch \"folios\", so it would go stale without warning.",
+     "fix": "Use a lede with no count, for example: \"The folios for running a station: the two big animals, the three fish cases, the vegetables and fruits of five regions, and the cheese board.\" The named subsets can stay."
     }
    ],
    "dispositions": [
@@ -1603,6 +1278,11 @@
      "finding": "2-plates-voice-14",
      "action": "applied",
      "reason": "The \"You are done when\" sentence is deleted and paragraph 5 ends on \"nothing about them is recorded\"; the primer is 528 words with all five paragraphs inside their limits."
+    },
+    {
+     "finding": "2-plates-critic-1",
+     "action": "applied",
+     "reason": "Replaced the lede's count of the subsection's folios with the uncounted lede the critic proposed, keeping the named subsets (two animals, three fish cases, five regions)."
     }
    ]
   },
@@ -1807,6 +1487,16 @@
      "claim": "Same repeated Level test closer as above (fifth copy on the page); the palate primer already ends its met paragraph on its own two doors and does not need it.",
      "because": "Same repeated Level test closer as above (fifth copy on the page); the palate primer already ends its met paragraph on its own two doors and does not need it.",
      "fix": "In the last paragraph delete the final sentence \"Then the Level test at the foot of the level page runs untimed across the subsections and ends on what you missed with the right answers.\" and end the paragraph on \"...since the palate tires.\""
+    },
+    {
+     "key": "2-palate-critic-1",
+     "primer": "2-palate",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "\"the two faults placed here\" (paragraph 4) states this subsection's whole count, and the next line's \"the two faults placed there\" states the next level's count. Rule 11 forbids both.",
+     "because": "\"the two faults placed here\" (paragraph 4) states this subsection's whole count, and the next line's \"the two faults placed there\" states the next level's count. Rule 11 forbids both.",
+     "fix": "Use \"the faults placed here\" and, in the next line, \"Sous Chef asks the same of bitter and rich, the faults placed there, and takes the tasting ladder to its next rung.\""
     }
    ],
    "dispositions": [
@@ -1909,6 +1599,11 @@
      "finding": "2-palate-critic-1",
      "action": "applied",
      "reason": "Deleted the repeated Level test closer from the last paragraph so it ends on \"since the palate tires.\", with the met paragraph still pointing to both doors; word count stays about 450, inside the limits."
+    },
+    {
+     "finding": "2-palate-critic-1",
+     "action": "applied",
+     "reason": "Changed paragraph 4 to \"the faults placed here\" and the next line to \"the faults placed there\" as the fix gives, and for the same rule also dropped \"the two\" from the lede and from paragraph 1's line on the Commis faults."
     }
    ]
   },
@@ -2223,6 +1918,16 @@
      "claim": "\"Met here is the app's one rule: food safety is read, never graded\" collides with 2-techniques, which on the same page says \"Met is the app's one rule: a technique with a written standard is met when...\". Two different rules cannot both be the app's one rule, and a reader taking the phrase literally is left unsure which is meant.",
      "because": "\"Met here is the app's one rule: food safety is read, never graded\" collides with 2-techniques, which on the same page says \"Met is the app's one rule: a technique with a written standard is met when...\". Two different rules cannot both be the app's one rule, and a reader taking the phrase literally is left unsure which is meant.",
      "fix": "Open the last paragraph with \"Nothing here is met or missed: food safety is read, never graded, and nothing about it is recorded.\" and leave the rest of the paragraph as it stands (minus the Level test sentence named in the other finding)."
+    },
+    {
+     "key": "2-safety-critic-1",
+     "primer": "2-safety",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "It states its own item count, \"Four entries sit here in two pairs\", then \"the fourth entry\" and \"these four entries\", which rule 11 forbids. \"a thermometer tests you on it tonight\" is filler the reader cannot act on, and it claims a check the guide does not make.",
+     "because": "It states its own item count, \"Four entries sit here in two pairs\", then \"the fourth entry\" and \"these four entries\", which rule 11 forbids. \"a thermometer tests you on it tonight\" is filler the reader cannot act on, and it claims a check the guide does not make.",
+     "fix": "Use \"The entries here sit in two pairs\", \"The last entry\" and \"this level's entries\". Cut \"a thermometer tests you on it tonight\" and end the sentence at \"Take the cooling pair first.\""
     }
    ],
    "dispositions": [
@@ -2380,6 +2085,11 @@
      "finding": "2-safety-critic-2",
      "action": "applied",
      "reason": "Replaced the \"app's one rule\" opener with \"Nothing here is met or missed: food safety is read, never graded, and nothing about it is recorded.\" and left the rest of the paragraph unchanged."
+    },
+    {
+     "finding": "2-safety-critic-1",
+     "action": "applied",
+     "reason": "Replaced \"Four entries sit here in two pairs\" with \"The entries here sit in two pairs\", both uses of \"the fourth entry\" with \"the last entry\", and \"these four entries\" with \"this level's entries\". Cut the thermometer clause so the sentence ends at \"Take the cooling pair first.\""
     }
    ]
   },
@@ -2564,6 +2274,16 @@
      "claim": "Same repeated Level test closer as above; the service primer's doors paragraph already ends the level's reading, and this fifth copy is the longest of them.",
      "because": "Same repeated Level test closer as above; the service primer's doors paragraph already ends the level's reading, and this fifth copy is the longest of them.",
      "fix": "In the last paragraph delete the final sentence \"The Level test at the foot of the page is there whenever you want it, untimed and across every subsection, ending on what you missed with the right answers.\" and end the paragraph on \"...every term of the module recalled met or close in the drill.\""
+    },
+    {
+     "key": "2-service-critic-1",
+     "primer": "2-service",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "It states its own item count twice, \"Eight modules sit here in four groups\" and \"where these eight sit\", which rule 11 forbids. \"The cheese board closes the level\" is also wrong: it closes this subsection, and the plates primer separately ends on its cheese folio.",
+     "because": "It states its own item count twice, \"Eight modules sit here in four groups\" and \"where these eight sit\", which rule 11 forbids. \"The cheese board closes the level\" is also wrong: it closes this subsection, and the plates primer separately ends on its cheese folio.",
+     "fix": "Use \"The modules here fall into four groups\", \"where this level's modules sit\" and \"The cheese board closes the service track at Chef de Partie\"."
     }
    ],
    "dispositions": [
@@ -2656,6 +2376,11 @@
      "finding": "2-service-critic-1",
      "action": "applied",
      "reason": "Deleted the final Level test sentence from the last paragraph so it now ends on \"every term of the module recalled met or close in the drill.\", leaving the doors paragraph to close the level's reading; word count stays inside the limits and every cite remains a named item from the brief."
+    },
+    {
+     "finding": "2-service-critic-1",
+     "action": "applied",
+     "reason": "Replaced \"Eight modules sit here in four groups\" with \"The modules here fall into four groups\", \"where these eight sit\" with \"where this level's modules sit\", and \"closes the level\" with \"closes the service track at Chef de Partie\"."
     }
    ]
   }
@@ -2664,46 +2389,46 @@
   "ok": false,
   "problems": [
    {
-    "key": "2-lexicon",
-    "issue": "The Level test closer (\"The Level test at the foot of the page is untimed and ends on what you missed with the right answers.\") is the level page's own door, not this subsection's, and the same sentence appears nearly verbatim in 2-dishes, 2-palate, 2-safety and 2-service: five times on one reader page. 2-dishes, the first subsection, keeps it.",
-    "fix": "In the last paragraph delete the sentence \"The Level test at the foot of the page is untimed and ends on what you missed with the right answers.\" so the paragraph runs from \"...let the quiz catch the rest.\" straight to \"When you can give the sentence at the pass without the card, the level has done its job.\""
+    "key": "2-techniques",
+    "issue": "The two primers disagree on where a cook at this level starts. Paragraph 2 says \"Take Braising and Building an emulsion first\". The dishes primer says \"Start at the pan and the soup pot\" and follows the semester order that its \"Read the semester\" door opens (Cacio e Pepe and the soups, then Sole Meuniere, then the braise, with the fish case last). A technique is met by cooking one of its recipes, and at this level Building an emulsion is carried by Linguine alle Vongole and Calamari Fritti, the plates the dishes primer puts last. Read together, the two leave a cook unsure what to cook first.",
+    "fix": "Make the opening of paragraph 2 about reading, not cooking, and tie it to the dishes order. For example: \"Read Braising and Building an emulsion before the others, ahead of the braise plates and the clam and calamari plates on the dishes list that carry them.\" Keep the rest of the paragraph as it is."
    },
    {
     "key": "2-lexicon",
-    "issue": "The emulsion rescue is explained twice on the page: 2-techniques paragraph 2 gives it (\"a fresh base with the broken sauce whisked into it\") as part of the standard it teaches, and 2-lexicon paragraph 2 repeats it (\"how you whisk it back into a fresh yolk\"). The technique primer owns the fix; the lexicon primer only needs the word.",
-    "fix": "In paragraph 2 change \"why a sauce breaks and how you whisk it back into a fresh yolk\" to \"why a sauce breaks\", so the sentence ends \"...why a boiled braise turns grainy, why a sauce breaks.\""
+    "issue": "Three points repeat the techniques primer almost word for word. (1) The emulsion rescue: \"a fresh yolk or a spoon of water or mustard, and the broken sauce whisked into it\" against the techniques line \"start a fresh base and work the broken sauce into it slowly\". (2) The tadka order: \"hardy spices go into the oil early and delicate ground ones brief and late\" against \"the hardest seeds into hot fat first and the delicate ones last\". (3) The caramel rule: \"you stop stirring once it boils\" against \"nothing stirred once it boils\". On one level page the reader meets each of these twice.",
+    "fix": "Let the technique primer keep the hands. Rewrite those three spots in the lexicon as the word a cook explains, drawing only on each entry's own text. Emulsions: fat and water held as droplets by an emulsifier, the physics behind mayonnaise, hollandaise, vinaigrette and beurre blanc, and the same trick as pasta's starchy water. Toasting, Blooming & the Tadka Doctrine: fat carries spice flavor, which is why raw curry powder tastes dusty. Caramel Stages & Sugar Work: the syrup's temperature decides what it becomes, and wet caramel is safer while dry caramel is faster and riskier. Keep crystallization named as the saboteur without the stirring rule."
    },
    {
-    "key": "2-palate",
-    "issue": "Same repeated Level test closer as above (fifth copy on the page); the palate primer already ends its met paragraph on its own two doors and does not need it.",
-    "fix": "In the last paragraph delete the final sentence \"Then the Level test at the foot of the level page runs untimed across the subsections and ends on what you missed with the right answers.\" and end the paragraph on \"...since the palate tires.\""
+    "key": "2-dishes",
+    "issue": "\"The Commis plates asked for one move with no wait\" is wrong by the Commis brief. Chicken Piccata carries four techniques, Garides Saganaki and Panna Cotta three each, and Ratatouille takes 60 minutes.",
+    "fix": "Replace the sentence with something true to the data, for example: \"The Commis plates finished inside an hour; these ask you to hold the pan, the pot, the dough and the fish steady, several of them over hours.\""
    },
    {
-    "key": "2-safety",
-    "issue": "Same repeated Level test closer as above.",
-    "fix": "In the last paragraph delete the final sentence \"The Level test at the foot of the level page is untimed and ends on what you missed with the right answers.\" and end on \"...what the guide names without stating.\""
-   },
-   {
-    "key": "2-safety",
-    "issue": "\"Met here is the app's one rule: food safety is read, never graded\" collides with 2-techniques, which on the same page says \"Met is the app's one rule: a technique with a written standard is met when...\". Two different rules cannot both be the app's one rule, and a reader taking the phrase literally is left unsure which is meant.",
-    "fix": "Open the last paragraph with \"Nothing here is met or missed: food safety is read, never graded, and nothing about it is recorded.\" and leave the rest of the paragraph as it stands (minus the Level test sentence named in the other finding)."
+    "key": "2-deck",
+    "issue": "\"Chef de Partie hands you 122 cards\" is the count rule 11 uses as its own example of what not to write. It is exact today, but the deck is held incomplete (24 stubs, DECK_COMPLETE off), so it will go stale. Two smaller problems: \"the family the level is named for on its page\" overstates the blurb, which only lists \"the mother sauces and the braise\"; and the next line puts \"pâte à choux\" at Sous Chef, while the Choux pastry technique is placed at Chef de Partie, so a cook reading both would think choux is Sous Chef work.",
+    "fix": "Change the opening to \"Chef de Partie hands you the cards the floor asks about\". Change the sauce clause to \"Then the sauces, the mother sauces the level page names first, and their children\". In the next line, handle choux as beurre blanc is already handled: \"the floor card for pâte à choux, a pastry the Chef de Partie techniques already teach\"."
    },
    {
     "key": "2-service",
-    "issue": "Same repeated Level test closer as above; the service primer's doors paragraph already ends the level's reading, and this fifth copy is the longest of them.",
-    "fix": "In the last paragraph delete the final sentence \"The Level test at the foot of the page is there whenever you want it, untimed and across every subsection, ending on what you missed with the right answers.\" and end the paragraph on \"...every term of the module recalled met or close in the drill.\""
+    "issue": "It states its own item count twice, \"Eight modules sit here in four groups\" and \"where these eight sit\", which rule 11 forbids. \"The cheese board closes the level\" is also wrong: it closes this subsection, and the plates primer separately ends on its cheese folio.",
+    "fix": "Use \"The modules here fall into four groups\", \"where this level's modules sit\" and \"The cheese board closes the service track at Chef de Partie\"."
    },
    {
-    "key": "2-deck",
-    "issue": "The next line says \"Level III adds ... velouté, beurre blanc, gastrique and romesco\" while 2-techniques, two primers earlier on the same page, teaches beurre blanc at Level II (\"beurre blanc is reduce, season, mount, plate\"). Both are right (the deck card is placed at Level III, the technique at Level II), but read together they tell a cook the same sauce is this level's and the next level's without saying why.",
-    "fix": "In next, change \"velouté, beurre blanc, gastrique and romesco\" to \"velouté, gastrique and romesco, and the floor card for beurre blanc, the sauce Level II's techniques already mount\". Nothing else in the line changes."
+    "key": "2-safety",
+    "issue": "It states its own item count, \"Four entries sit here in two pairs\", then \"the fourth entry\" and \"these four entries\", which rule 11 forbids. \"a thermometer tests you on it tonight\" is filler the reader cannot act on, and it claims a check the guide does not make.",
+    "fix": "Use \"The entries here sit in two pairs\", \"The last entry\" and \"this level's entries\". Cut \"a thermometer tests you on it tonight\" and end the sentence at \"Take the cooling pair first.\""
    },
    {
-    "key": "2-deck",
-    "issue": "Paragraph 2: \"Then the sauces, this level's standard, the mothers and their children\" is an appositive a reader cannot parse; no other primer calls anything \"this level's standard\", and the deck has no standard of its own. The intended sense is that the level's own blurb names the mother sauces.",
-    "fix": "Change \"Then the sauces, this level's standard, the mothers and their children:\" to \"Then the sauces, the family the level is named for on its page, the mothers and their children:\"."
+    "key": "2-plates",
+    "issue": "The lede \"Sixteen folios for running a station\" states the subsection's own count, which rule 11 forbids. The gate's plates count nouns may not catch \"folios\", so it would go stale without warning.",
+    "fix": "Use a lede with no count, for example: \"The folios for running a station: the two big animals, the three fish cases, the vegetables and fruits of five regions, and the cheese board.\" The named subsets can stay."
+   },
+   {
+    "key": "2-palate",
+    "issue": "\"the two faults placed here\" (paragraph 4) states this subsection's whole count, and the next line's \"the two faults placed there\" states the next level's count. Rule 11 forbids both.",
+    "fix": "Use \"the faults placed here\" and, in the next line, \"Sous Chef asks the same of bitter and rich, the faults placed there, and takes the tasting ladder to its next rung.\""
    }
   ],
-  "notes": "Placement worth the operator's eye, not a primer fault: five Level II dishes are built on techniques the data places at Level III. Jerk Chicken carries Jerk and Grilling over live coals; Huli Huli Chicken carries Grilling over live coals and Butchery basics; Memphis Dry-Rub Ribs carries Low & slow smoking; Whole Grilled Fish with Ladolemono carries Filleting fish and Grilling over live coals; Linguine alle Vongole carries Shucking shellfish. The 2-dishes primer tells the cook to grill over coals and fillet off the grill at Level II, and the 2-techniques next line then says those are Level III techniques. Either the Fire & Smoke dishes and the two fish plates belong a level up, or those techniques a level down. In the same vein the Floor Deck places Beurre Blanc and Meunière at Level III and Hollandaise at Level I, while the beurre blanc and hollandaise techniques and Sole Meunière sit at Level II; a reader meets the same word at two levels three times on this page (the deck fix above softens one of them).\n\nThe 2-safety primer cannot name its fourth item: rule 4 bans the word in its label, so the reader is told about \"the protocol\" and \"the fourth entry\" without learning which protocol. The primer is honest within the rule, but it is the one place on the level page where a cook is pointed at something unnamed. If the gate can allow an item's own label as a name in a safety primer, the primer should say it; otherwise this is the ceiling.\n\nTooling: the technique brief carries standard: true and not the marks, so the 2-techniques author had to reach technique-standards.json for the sentences it paraphrases (scoring on skin over fat, the water bath's 80 to 85 C, the tadka order), and the refuters could not have checked them against the brief. Putting each technique's marks and fault in the brief would let the data refuter do that check. Also, every brief carries the levelTest line, so five of eight authors closed on it; the brief could mark it as the level page's door to mention once per level, or the level page could carry it so no primer has to.\n\nVerified against the briefs and the data with nothing further to fix: the eighteen dishes' minutes, semesters and techniques; the 21 of 50 techniques with a standard and the marks quoted; the 255 lexicon terms and every cited term's text; the 122 deck cards checked by name (ghee, clarified butter, demi-glace, morel, enoki, macaron, coppa, wagyu); the 16 plates and their corrections, and 20 plates on the wall; the two faults and their levers and the rung 2 note; the eight service modules and their outcomes and 27 on the track; the cooling law's figures and the four safety entries; all eight next lines against neighbours.above."
+  "notes": "The Level test sentence appears in both 2-dishes and 2-techniques. I did not flag it, because tools/primers/dedupe-level-test.mjs keeps it only in the last primer that carries it (2-techniques at this level). Run that script after take.mjs. The next lines agree about Sous Chef across all eight primers (live fire and the wok, the standards that govern a service, inspection-ready, charcuterie boards, bitter and rich), and every one I checked matches neighbours.above. Items placed at more than one level agree: beurre blanc, confit, lamination, the cheese material and the flank, skirt and hanger cards. Three softer points were left alone to keep this pass bounded. (1) The plates primer stresses that the hanger is not the flank (it sits with the skirt in the short plate), while the lexicon groups them as Flank, Skirt & Hanger sharing one law. Both are true, but no primer names the difference, and a server could blur it. (2) The techniques primer does not name Scoring, which carries a written standard at this level, or Choux pastry. It does not have to name every item, but Scoring belongs with the pastry and bread marks. (3) 2-deck (536 words) and 2-service (570 words) are over the 520-word aim but inside the 650 limit. The braise gets its sear-and-color explanation in 2-dishes, 2-techniques and 2-lexicon, each from its own angle; I judged that tolerable, not a repeat."
  }
 }

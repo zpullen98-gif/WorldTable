@@ -118,6 +118,7 @@ ${B.rulesText || ''}1. No em dash and no en dash. Ranges are "5 to 6". Use a com
 8. Prose only: no bullet lists, no headings, no numbering at the start of a paragraph, no markdown, no quotation of whole definitions. Name a level by its name (Commis, Chef de Partie, Sous Chef, Chef), never a numeral: never "Level II", "L2" or "level two".
 9. Be right. A wrong claim about a technique or a cut in a reader for cooks gets repeated at the pass. Where the brief's item text says one thing, say that thing; where you are not sure, check (search the web) or leave it out. Never present an item as placed at this level unless it is in the brief's "items".
 10. Voice: plain and direct, second person where it helps ("take the omelette first"), no marketing, no filler, no restating the level's blurb, nothing the reader cannot act on.
+11. Do not state how many items this level or the next holds ("Fourteen dishes", "122 cards"): the level page prints the count, and a count in prose goes stale the day an item moves. The gate refuses a count of the subsection's items that is not exact. A named subset may be counted ("the two pastry plates").
 `
 
 const BRIEF = (p) => `
@@ -195,20 +196,25 @@ ${JSON.stringify(stage.primer, null, 1)}`,
 }
 
 const groups = B.levels.map((l) => B.primers.filter((p) => p.level === l.n)).filter((g) => g.length)
-log(`${B.primers.length} primer(s) to write across ${groups.length} level(s)`)
+log(`${B.primers.filter((p) => !p.existing).length} primer(s) to write across ${groups.length} level(s), ${B.primers.filter((p) => p.existing).length} existing one(s) joining their level's critic unchanged`)
 
 const perLevel = await pipeline(
 	groups,
 	async (group) => {
-		const results = await pipeline(group, author, refute, correct)
-		const done = results.map((r, i) => (r ? { ...r, key: group[i].key, spec: group[i] } : null)).filter(Boolean)
-		if (done.length !== group.length) log(`Level ${group[0].level}: ${group.length - done.length} primer(s) died; re-run with --only for them`)
+		/* an existing primer is not rewritten: it joins the critic as it stands */
+		const fresh = group.filter((p) => !p.existing)
+		const results = await pipeline(fresh, author, refute, correct)
+		const written = results.map((r, i) => (r ? { ...r, key: fresh[i].key, spec: fresh[i] } : null)).filter(Boolean)
+		if (written.length !== fresh.length) log(`Level ${group[0].level}: ${fresh.length - written.length} primer(s) died; re-run with --only for them`)
+		const kept = group.filter((p) => p.existing).map((p) => ({ key: p.key, spec: p, primer: null, findings: [], dispositions: [], existing: true }))
+		const done = group.map((p) => written.find((d) => d.key === p.key) || kept.find((d) => d.key === p.key)).filter(Boolean)
 		return { level: group[0].level, done }
 	},
 	async (stage) => {
 		if (!stage || !stage.done.length) return stage
 		const lv = B.levels.find((l) => l.n === stage.level) || {}
-		const primers = stage.done.map((d) => ({ key: d.key, briefPath: d.spec.briefPath, ...d.primer }))
+		/* an existing primer is not copied into the prompt: the critic reads it from its file */
+		const primers = stage.done.map((d) => (d.existing ? { key: d.key, briefPath: d.spec.briefPath, existingPrimerOnDisk: d.spec.existingPath, note: 'already written; read it from existingPrimerOnDisk' } : { key: d.key, briefPath: d.spec.briefPath, ...d.primer }))
 		const critic = await agent(
 			`${RULES}
 YOU ARE THE CRITIC for Level ${stage.level} (${lv.name}). Read this level's primers TOGETHER, which no author or refuter did; each primer's brief is at the briefPath given with it, open any you need. Look for: the same point made in two or three primers (the danger zone explained in the dishes primer, the techniques primer and the safety primer); a contradiction between them (one says take the dishes first, another the techniques); a "next" line that describes the level above differently from another primer's; a reader that, put beside the others, would leave a cook at this level unsure where to start; an item named as this level's in one primer and as another level's in a second; any house rule the refuters missed. ok is true only if you found nothing. Each problem names the primer key and gives the fix. Keep repairs bounded: this is one pass, and a primer is rewritten only where you name a problem.
@@ -236,8 +242,8 @@ YOU ARE THE CORRECTOR, for the critic's read of the whole level. Answer every fi
 FINDINGS:
 ${JSON.stringify(asFindings, null, 1)}
 
-THE PRIMER:
-${JSON.stringify(d.primer, null, 1)}`,
+${d.existing ? `THE PRIMER is already written: read it IN FULL from ${d.spec.existingPath} and return it whole, changed only where the findings demand.` : `THE PRIMER:
+${JSON.stringify(d.primer, null, 1)}`}`,
 							{ label: `correct:critic:${d.key}`, phase: 'Critic', schema: CORRECTED, effort: 'high' }
 						).then((fixed) => (fixed && fixed.primer ? { key: d.key, primer: fixed.primer, findings: asFindings, dispositions: fixed.dispositions || [] } : null))
 					})
@@ -245,7 +251,7 @@ ${JSON.stringify(d.primer, null, 1)}`,
 			const byKey = new Map(repaired.filter(Boolean).map((r) => [r.key, r]))
 			done = done.map((d) => {
 				const r = byKey.get(d.key)
-				return r ? { ...d, primer: r.primer, findings: [...d.findings, ...r.findings], dispositions: [...d.dispositions, ...r.dispositions] } : d
+				return r ? { ...d, primer: r.primer, findings: [...d.findings, ...r.findings], dispositions: [...d.dispositions, ...r.dispositions], repaired: true } : d
 			})
 		}
 		return { level: stage.level, done, critic }
@@ -253,7 +259,7 @@ ${JSON.stringify(d.primer, null, 1)}`,
 )
 
 const levels = perLevel.filter(Boolean)
-const primers = levels.flatMap((l) => l.done.map((d) => ({ key: d.key, ...d.primer })))
+const primers = levels.flatMap((l) => l.done.map((d) => ({ key: d.key, existing: !!d.existing, repaired: !!d.repaired, ...d.primer })))
 const findings = levels.flatMap((l) => l.done.flatMap((d) => d.findings))
 const dispositions = levels.flatMap((l) => l.done.flatMap((d) => d.dispositions))
 const critics = Object.fromEntries(levels.map((l) => [String(l.level), l.critic]))

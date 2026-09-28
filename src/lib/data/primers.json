@@ -4,13 +4,14 @@
     {
       "level": 1,
       "subsection": "dishes",
-      "lede": "Fourteen dishes, nine from the Path's first three semesters and five Easy plates from further up, each met when it has been cooked and logged.",
+      "lede": "Your first plates teach heat, the knife and the pan a few techniques at a time, and every one of them should go up without notes.",
       "paragraphs": [
-        "At Commis a dish is a single technique with a plate built around it. These are the course's opening semesters and the library's Easy plates: one technique, no wait, put up without notes. Fourteen dishes sit at this level, and most are a pan or a pot you will be handed in your first weeks. What they ask is repetition until your hands stop needing the recipe card.",
-        "Take the four from Knife & Fire Foundations first, and take The French Omelette before anything else, knowing it is the one Intermediate plate at this level: eight minutes, and the whole of heat control and seasoning in one pan. Then Ratatouille for the knife cuts and the sauté, Salade Niçoise for blanching and shocking, and Chicken Piccata last of the four, because it is the busiest of the four: a dredge, a hard sear, a deglaze and a reduction on a single pan.",
-        "Next come the two soups from Stocks, Soups & the Simmer. Miso Soup teaches dashi and soaking dried goods back to life: fifteen minutes, and the semester's lesson in restraint. Pasta e Fagioli teaches sweating aromatics soft and never browned, the base under most pots in a kitchen. Then the three from The Sauté Station & Pan Sauces: Shrimp Scampi repeats the sear and the deglaze from the piccata and adds the mount, cold butter swirled into the reduced wine off the heat; Chicken Teriyaki adds resting meat and slicing against the grain; and Garides Saganaki brings the flambé and the habit of keeping the cooking liquid. By the third of these, the semester's four moves should be in your hands: sear, deglaze, mount, plate.",
-        "The last five sit further up the Path but are Easy plates all the same. Crêpes and Panna Cotta from Pastry Fundamentals are your first precision work: the crêpe is batter and pan control, the panna cotta is a bare simmer held below the boil, a pass through a sieve and the wobble test for the set. The three from The Wok & High Heat, Pad Krapow Moo, Bulgogi and Rau Muong Xao Toi, ask for total mise before the flame goes on, because the cooking is over in minutes. Rau Muong Xao Toi is ten minutes of wok technique, so take it first of the three. Bulgogi is the most layered, with knife cuts, a marinade, rendered fat and a sear, so take it last.",
-        "Use the doors in the order they sit. Read the semester opens the Path of Study at the semester that teaches the first dish you have not yet cooked. Cook the next dish opens that recipe. The library at this level shows the recipe grid filtered to this level's difficulty, when you want to choose rather than follow. A dish is met when it has been cooked and logged, and that is the whole rule: a dish you have read is not met, and a dish you cooked but did not log is not met either. Log it the same shift."
+        "Most of the dishes placed at Commis come from the opening semesters of the Path of Study, and the library rates nearly all of them Easy. Each rests on techniques from your first weeks, and a couple of runs should put it in your hands.",
+        "Start where the Path starts, with Knife & Fire Foundations, and take The French Omelette first. It is eight minutes of heat control, seasoning and pan work, and the library rates it a step harder than the rest here, so cook it until the heat stops surprising you. Ratatouille is the knife-cut dish: dice, julienne and bias, then the sauté. Chicken Piccata strings four moves onto one plate: the dredge, the sear, the deglaze and a reduced pan sauce. Salade Niçoise asks for blanching and shocking, so what you blanch keeps its color and stops cooking the moment it hits the ice.",
+        "Then the simmer. Miso Soup teaches dashi and soaking dried goods back to life, and the semester asks for dashi's restraint and for watching the bubble, not the clock. Pasta e Fagioli teaches sweating aromatics, soft and never browned, which is the onion's patience in a single pot.",
+        "The sauté station follows, the semester the Path calls the line cook's exam. Shrimp Scampi repeats the piccata's sear and deglaze on something that cooks in moments, so pull it once it turns opaque. Chicken Teriyaki is about resting the meat and slicing against the grain before it reaches the plate. Garides Saganaki sweats its aromatics, takes a flambé and keeps its cooking liquid.",
+        "Panna Cotta sits in Pastry Fundamentals, later on the Path, but the library rates it Easy and its techniques are small ones: the liquid held at a bare simmer below the boil, passed through a sieve, and the set judged by the wobble. Cook it whenever you want a dessert on the log.",
+        "A dish is met when it has been cooked and logged, and nothing more is asked of it. Use the Read the semester door to open the Path at the semester that teaches the first dish you have not yet cooked, Cook the next dish to go straight to its recipe page, and The library at this level for the full grid of Easy plates. The Level test at the foot of the page runs across every subsection, untimed, and hands back what you missed with the right answers."
       ],
       "cites": [
         {
@@ -24,14 +25,14 @@
           "href": "/recipe/ratatouille"
         },
         {
-          "slug": "salade-nicoise",
-          "name": "Salade Niçoise",
-          "href": "/recipe/salade-nicoise"
-        },
-        {
           "slug": "chicken-piccata",
           "name": "Chicken Piccata",
           "href": "/recipe/chicken-piccata"
+        },
+        {
+          "slug": "salade-nicoise",
+          "name": "Salade Niçoise",
+          "href": "/recipe/salade-nicoise"
         },
         {
           "slug": "miso-soup",
@@ -59,32 +60,12 @@
           "href": "/recipe/garides-saganaki"
         },
         {
-          "slug": "crepes",
-          "name": "Crêpes",
-          "href": "/recipe/crepes"
-        },
-        {
           "slug": "panna-cotta",
           "name": "Panna Cotta",
           "href": "/recipe/panna-cotta"
-        },
-        {
-          "slug": "pad-krapow-moo",
-          "name": "Pad Krapow Moo",
-          "href": "/recipe/pad-krapow-moo"
-        },
-        {
-          "slug": "bulgogi",
-          "name": "Bulgogi",
-          "href": "/recipe/bulgogi"
-        },
-        {
-          "slug": "rau-muong-xao-toi",
-          "name": "Rau Muong Xao Toi",
-          "href": "/recipe/rau-muong-xao-toi"
         }
       ],
-      "next": "Chef de Partie holds eighteen dishes, the station's work: Cacio e Pepe, Soupe à l'Oignon, Boeuf Bourguignon and Coq au Vin, Rosemary Focaccia and Crème Brûlée, Jerk Chicken and Cantonese Steamed Fish. They ask for an emulsion, a braise, a bread or a custard held to a standard, on the pan-sauce hands you built here."
+      "next": "Chef de Partie moves into the middle semesters and the library's Intermediate plates: the braise in Boeuf Bourguignon and Coq au Vin, bread in Rosemary Focaccia, custard in Crème Brûlée, and fish at the sauté station in Sole Meunière."
     },
     {
       "level": 1,
@@ -315,13 +296,13 @@
     {
       "level": 1,
       "subsection": "lexicon",
-      "lede": "The everyday words: what the ticket says, what the pan is doing and what is on your board, met by recall, never by a miss alone.",
+      "lede": "At Commis the Lexicon is the words the pass will use on you: the prep and pan verbs, the staples, and how to taste.",
       "paragraphs": [
-        "Commis holds 266 terms, the largest subsection on this page, and none of them is rare. This is the vocabulary a ticket and a prep list assume you have: the pan verbs, the produce you touch first, the everyday cuts, the tools on the rack and the words for why a plate tastes wrong. Do not read it front to back. Read it in the order the work meets you.",
-        "Take Mise en Place first, because everything else assumes it: read fully, prep completely, then light the burner. Knife Cuts: The Classical Ladder comes next, before anything hits a pan: it sizes the dice and the julienne and asks for uniformity before speed. Then the pan verbs. Sweat vs. Sauté vs. Sear sets the three apart by heat and intent, Deglaze & Fond says what the browned layer is for, and Searing & Pan Technique is leaving the protein alone until it releases. Poach, Simmer, Boil are three temperatures pretending to be one method; Blanch & Shock is how a green vegetable prepped at noon plates at eight. Then Roux, Slurry & Liaison for the thickeners, and Roasting, Baking & Carryover, which says pull the roast early and rest it.",
-        "Next, the things in your hands. Allium Family and Mirepoix, Trinity, Sofrito & Friends explain why nearly every dish opens with onion in fat, and the Vegetable Atlas, 61 entries and the biggest group here, names each one: Yellow Onion, Garlic, Carrot, Celery, Shallot and Leek. Read Starchy vs. Waxy Potatoes before Russet Potato, and Hearty vs. Tender Herbs before Thyme, Rosemary and Flat-leaf Parsley, because the family entry gives the rule and the single entry gives the reason, and now and then the exception. Learn the fruit, grain and pantry entries the menu uses, then fill in the rest between services.",
-        "The cuts run to 25 entries, the steer, the pig, the lamb, the bird and the fish case; start with Chuck, Brisket (Point vs. Flat), Ribeye / Prime Rib, Pork Belly, Ham & Hock, Lamb Primals and Chicken Anatomy for Cooks. The level asks for the reason behind each: Chuck wins at braising because its collagen melts into gelatin low, slow and wet, and it fights you fast. The tool rack is here too: The Chef's Knife (Western Profile), Sharpening: Whetstones, Burrs & the Truth About Honing (the rod realigns an edge, it does not sharpen one), Thermometers & the Instrument Cluster, Scales & Measuring by Weight and Cast Iron.",
-        "Finish with the three entries that turn cooking into judgment: Tasting & Seasoning Like a Chef, Salt & Perception and The Repair Table: Balancing a Dish. Flat and salty, the two faults under The Palate on this page, open the Repair Table, which gives each its levers in order of gentleness; the Palate primer walks those levers, so read the entry here for the whole chart and take the two faults there. Read the terms opens the Lexicon at this level; read one group, then go straight to Flashcards and Quiz, both over this level's terms. A term is met when you have recalled it met or close on the flashcard ladder, or in the quiz; a miss alone is never met."
+        "Start with the words the first semesters lean on, because the rest of the level hangs on them. Mise en Place is the habit before the skill: read the recipe fully, prep completely, then light the burner. Knife Cuts: The Classical Ladder gives you brunoise, julienne, batonnet and the dice, and uniformity is the exam: speed comes later. Then the pan verbs. Sweat vs. Sauté vs. Sear separates three different flavors that a recipe may lump together as cooking the onions, and Deglaze & Fond turns the browned layer left in the pan into the base of a sauce.",
+        "Take the heat words next, as one family, since each is a decision about temperature. Poach, Simmer, Boil teaches you to watch the bubbles, not the dial. Blanch & Shock is brief boiling in heavily salted water, then an ice bath, the move that lets a short service plate a long mise. Three entries build the sauce corner, taken in this order: Stocks; Roux, Slurry & Liaison; then Reduction, Nappe & Mounting. Skim the stock and never salt it, pick the thickener for the heat the sauce will see next, and reduce before you season. Searing & Pan Technique and Resting, Carryover & the Thermometer close the set: dry the protein, never crowd the pan, cook to temp and not to time.",
+        "The produce and staples are the words on your board from day one. Allium Family, Yellow Onion and Garlic explain why the size of the cut sets the pungency, and why garlic goes in after the onions, off the fiercest heat. Mirepoix, Trinity, Sofrito & Friends names the aromatic bases that open cuisine after cuisine. Starchy vs. Waxy Potatoes tells you to match the potato to the job before the recipe, and Hearty vs. Tender Herbs tells you when each goes in: rosemary and thyme early, basil and parsley at the end. The rest, such as the fruit and vegetable atlases, cuts like Chuck and pans like Cast Iron and Stainless Clad (Tri-Ply), read best as they land on your prep list, not front to back.",
+        "Keep one group open for the whole level: Tasting & Seasoning Like a Chef, Salt & Perception and The Repair Table. Taste at every stage and season in layers. The Palate on this page puts the repair table's first two faults on a plate, lever by lever; here you learn the words your chef will use at the pass when a plate comes back.",
+        "Use the doors in order. Read the terms opens the Lexicon at this level, and Flashcards and Quiz then run over the same words. A term is met once your recall of it is marked met or close on the flashcard ladder, or in the quiz; a miss alone is never met."
       ],
       "cites": [
         {
@@ -345,11 +326,6 @@
           "href": "/lexicon#deglaze-and-fond"
         },
         {
-          "slug": "searing-and-pan-technique",
-          "name": "Searing & Pan Technique",
-          "href": "/lexicon#searing-and-pan-technique"
-        },
-        {
           "slug": "poach-simmer-boil",
           "name": "Poach, Simmer, Boil",
           "href": "/lexicon#poach-simmer-boil"
@@ -360,24 +336,34 @@
           "href": "/lexicon#blanch-and-shock"
         },
         {
+          "slug": "stocks-blanc-brun-broth-and-demi",
+          "name": "Stocks: Blanc, Brun, Broth & Demi",
+          "href": "/lexicon#stocks-blanc-brun-broth-and-demi"
+        },
+        {
           "slug": "roux-slurry-and-liaison",
           "name": "Roux, Slurry & Liaison",
           "href": "/lexicon#roux-slurry-and-liaison"
         },
         {
-          "slug": "roasting-baking-and-carryover",
-          "name": "Roasting, Baking & Carryover",
-          "href": "/lexicon#roasting-baking-and-carryover"
+          "slug": "reduction-nappe-and-mounting",
+          "name": "Reduction, Nappe & Mounting",
+          "href": "/lexicon#reduction-nappe-and-mounting"
+        },
+        {
+          "slug": "searing-and-pan-technique",
+          "name": "Searing & Pan Technique",
+          "href": "/lexicon#searing-and-pan-technique"
+        },
+        {
+          "slug": "resting-carryover-and-the-thermometer",
+          "name": "Resting, Carryover & the Thermometer",
+          "href": "/lexicon#resting-carryover-and-the-thermometer"
         },
         {
           "slug": "allium-family",
           "name": "Allium Family",
           "href": "/lexicon#allium-family"
-        },
-        {
-          "slug": "mirepoix-trinity-sofrito-and-friends",
-          "name": "Mirepoix, Trinity, Sofrito & Friends",
-          "href": "/lexicon#mirepoix-trinity-sofrito-and-friends"
         },
         {
           "slug": "yellow-onion",
@@ -390,24 +376,9 @@
           "href": "/lexicon#garlic"
         },
         {
-          "slug": "carrot",
-          "name": "Carrot",
-          "href": "/lexicon#carrot"
-        },
-        {
-          "slug": "celery",
-          "name": "Celery",
-          "href": "/lexicon#celery"
-        },
-        {
-          "slug": "shallot",
-          "name": "Shallot",
-          "href": "/lexicon#shallot"
-        },
-        {
-          "slug": "leek",
-          "name": "Leek",
-          "href": "/lexicon#leek"
+          "slug": "mirepoix-trinity-sofrito-and-friends",
+          "name": "Mirepoix, Trinity, Sofrito & Friends",
+          "href": "/lexicon#mirepoix-trinity-sofrito-and-friends"
         },
         {
           "slug": "starchy-vs-waxy-potatoes",
@@ -415,29 +386,9 @@
           "href": "/lexicon#starchy-vs-waxy-potatoes"
         },
         {
-          "slug": "russet-potato",
-          "name": "Russet Potato",
-          "href": "/lexicon#russet-potato"
-        },
-        {
           "slug": "hearty-vs-tender-herbs",
           "name": "Hearty vs. Tender Herbs",
           "href": "/lexicon#hearty-vs-tender-herbs"
-        },
-        {
-          "slug": "thyme",
-          "name": "Thyme",
-          "href": "/lexicon#thyme"
-        },
-        {
-          "slug": "rosemary",
-          "name": "Rosemary",
-          "href": "/lexicon#rosemary"
-        },
-        {
-          "slug": "flat-leaf-parsley",
-          "name": "Flat-leaf Parsley",
-          "href": "/lexicon#flat-leaf-parsley"
         },
         {
           "slug": "chuck",
@@ -445,59 +396,14 @@
           "href": "/lexicon#chuck"
         },
         {
-          "slug": "brisket-point-vs-flat",
-          "name": "Brisket (Point vs. Flat)",
-          "href": "/lexicon#brisket-point-vs-flat"
-        },
-        {
-          "slug": "ribeye-prime-rib",
-          "name": "Ribeye / Prime Rib",
-          "href": "/lexicon#ribeye-prime-rib"
-        },
-        {
-          "slug": "pork-belly",
-          "name": "Pork Belly",
-          "href": "/lexicon#pork-belly"
-        },
-        {
-          "slug": "ham-and-hock",
-          "name": "Ham & Hock",
-          "href": "/lexicon#ham-and-hock"
-        },
-        {
-          "slug": "lamb-primals",
-          "name": "Lamb Primals",
-          "href": "/lexicon#lamb-primals"
-        },
-        {
-          "slug": "chicken-anatomy-for-cooks",
-          "name": "Chicken Anatomy for Cooks",
-          "href": "/lexicon#chicken-anatomy-for-cooks"
-        },
-        {
-          "slug": "the-chefs-knife-western-profile",
-          "name": "The Chef's Knife (Western Profile)",
-          "href": "/lexicon#the-chefs-knife-western-profile"
-        },
-        {
-          "slug": "sharpening-whetstones-burrs-and-the-truth-about-honing",
-          "name": "Sharpening: Whetstones, Burrs & the Truth About Honing",
-          "href": "/lexicon#sharpening-whetstones-burrs-and-the-truth-about-honing"
-        },
-        {
-          "slug": "thermometers-and-the-instrument-cluster",
-          "name": "Thermometers & the Instrument Cluster",
-          "href": "/lexicon#thermometers-and-the-instrument-cluster"
-        },
-        {
-          "slug": "scales-and-measuring-by-weight",
-          "name": "Scales & Measuring by Weight",
-          "href": "/lexicon#scales-and-measuring-by-weight"
-        },
-        {
           "slug": "cast-iron",
           "name": "Cast Iron",
           "href": "/lexicon#cast-iron"
+        },
+        {
+          "slug": "stainless-clad-tri-ply",
+          "name": "Stainless Clad (Tri-Ply)",
+          "href": "/lexicon#stainless-clad-tri-ply"
         },
         {
           "slug": "tasting-and-seasoning-like-a-chef",
@@ -515,14 +421,14 @@
           "href": "/lexicon#the-repair-table-balancing-a-dish"
         }
       ],
-      "next": "Chef de Partie asks for the same subject as a menu writes it: the cuts and grades (Flank, Skirt & Hanger, Marbling, Dry-Aging), the fish case (Round Fish vs. Flat Fish, Tuna Grades), Braising & Stewing, Emulsions and The Maillard Reaction, baking science from Gluten & Hydration on, and the spice rack from Cumin to Garam Masala."
+      "next": "At Chef de Partie the Lexicon moves to the station: cuts, grades and aging such as Flank, Skirt & Hanger, Marbling and Dry-Aging; the fish case, starting with Round Fish vs. Flat Fish; techniques such as Emulsions, Confit and Braising & Stewing; baking science in Gluten & Hydration and Chemical Leaveners; and the spice rack in depth, from Saffron and Sichuan Peppercorn & Málà to Garam Masala."
     },
     {
       "level": 1,
       "subsection": "deck",
-      "lede": "The Floor Deck at Commis is the 110 menu words a guest will ask about tonight, taken by method first, then the cuts, the fish case and the larder.",
+      "lede": "The Floor Deck at Commis is the menu words a guest will ask about tonight, taken by method first, then the cuts, the fish case and the larder.",
       "paragraphs": [
-        "These are the deck's first 110 cards, one to a menu word. Each card gives a gist, a why and a menu line, and most give the thing it is not. Read the line first, the way the word reaches you on the floor, then the not-this where the card has one: that is what a guest will confuse it with.",
+        "These are the deck's first cards, one to a menu word. Each card gives a gist, a why and a menu line, and most give the thing it is not. Read the line first, the way the word reaches you on the floor, then the not-this where the card has one: that is what a guest will confuse it with.",
         "Take the twenty methods first; every other card leans on them. Boiled, Simmered and Poached are one ladder of heat in liquid, from a rolling bubble to none at all, and Steamed sits above the water, not in it. Seared, Sautéed, Fried and Grilled are the dry, hot, fast side, with Blackened and Chicken-Fried as two Southern turns in a skillet. Braised is the slow one, half in liquid under a lid; Roasted is the oven's dry heat, fast or slow. Brined, Cured and Pickled happen to food before or instead of cooking; Smoked either flavors it cold or cooks it low and slow. Learn each by the neighbor it is set against: Simmered is not Boiled, Seared is not Caramelized, Cured is not Smoked.",
         "Bacon, Prosciutto, Pastrami, Corned Beef and Chorizo tie straight back to Brined, Cured and Smoked, so take them while those cards are fresh. Then the block: the steakhouse cuts run from Tenderloin, the softest and mildest, through New York Strip to Ribeye, the most marbled, and Porterhouse and T-Bone hold two of them on one bone. Brisket, Short Rib, Shank and Shoulder want hours of low heat, and braised Short Rib has no temperature to ask for. Pork Chop, Rack of Lamb and Duck Breast each say how the kitchen sends them. Salmon, Tuna, Swordfish and Halibut each carry a doneness note, Flounder, Snapper and Trout are the mild, lean fish, and Shrimp, Scallops, Oysters and Clams each carry a sizing or serving note.",
         "The rest is the larder and the dessert menu, fastest by family: Parmesan, Ricotta, Feta and Blue Cheese; Grits, Risotto, Ravioli and Tortellini; Stock, Jus, Hollandaise, Vinaigrette and Pesto; Brioche, Sourdough, Puff Pastry and Tart. Sort the sweets by what holds them: Custard and Crème Brûlée by egg, Mousse by the whipped cream or whites folded in, Ice Cream, Sherbet and Sorbet by how much dairy is churned in. Then Jam against Compote by how far the fruit is cooked, Marmalade by its citrus peel, and Kimchi against a vinegar pickle, the sour grown rather than poured. Among the mushrooms, the pair is Truffle against Truffle Oil.",
@@ -946,9 +852,9 @@
     {
       "level": 1,
       "subsection": "plates",
-      "lede": "Three folios for the first weeks: the chicken on your board, the spices in their whole form and the mushrooms in the walk-in, six subjects to each.",
+      "lede": "Folios for the first weeks: the chicken on your board, the spices in their whole form and the mushrooms in the walk-in, six subjects to each.",
       "paragraphs": [
-        "Each plate is a folio: one illustration keyed to six numbered subjects, a guide that names each one and says how to tell it from its neighbor, and a short list of sources for reading further. Commis holds three of them, Chicken: cuts and giblets, Spices: from fruit to flower and Mushrooms: six cultivated market forms. They are read, never graded, and nothing about them is recorded; the six questions at the foot of each folio are a quiet check for you alone.",
+        "Each plate is a folio: one illustration keyed to six numbered subjects, a guide that names each one and says how to tell it from its neighbor, and a short list of sources for reading further. Commis holds Chicken: cuts and giblets, Spices: from fruit to flower and Mushrooms: six cultivated market forms. They are read, never graded, and nothing about them is recorded; the six questions at the foot of each folio are a quiet check for you alone.",
         "Take the chicken first, because it is the bird you portion this week. Four subjects are the portions. The breast is the white meat of the chest; the thigh sits above the leg joint and the drumstick below it, both dark meat; and the wing carries the small drumette, which belongs to the wing and not the leg. The last two are the giblets a kitchen keeps. The liver is a soft organ, not a muscle cut, and the gizzard is the thick, muscular stomach that grinds the bird's food, which is how you tell the two apart.",
         "Then the spices, each shown whole before it becomes a powder. Black pepper is the fruit of a tropical vine, and black, white and green peppercorns are one species handled three ways. Cumin is slender and ridged where coriander is round, and coriander is the seed of the plant whose leaves you call cilantro. Cinnamon is rolled bark, turmeric is an underground rhizome, and cloves are dried flower buds with no tie to a clove of garlic. The lesson of this folio is origin: know which part of the plant you are holding.",
         "Leave the mushrooms for last. These are market mushrooms, not a guide for foraging. The white button, the cremini and the portobello are one species in three forms, so the color of the cap is not an age clock. Shiitake has an umbrella cap and a stem that can be tough enough to save for stock. Oyster mushrooms grow in fan-shaped clusters and take their name from their form, and maitake, also called hen of the woods, is a frilled cluster rather than a single cap.",
@@ -971,7 +877,7 @@
           "href": "/plates/culinary-mushrooms"
         }
       ],
-      "next": "Chef de Partie hangs sixteen folios: pork and beef, the Pacific, Atlantic and Gulf Coast fish cases, the vegetables and fruits of five regions, and cheese read through its milk, make and maturation."
+      "next": "Chef de Partie hangs the folios for pork and beef, the Pacific, Atlantic and Gulf Coast fish cases, the vegetables and fruits of five regions, and cheese read through its milk, make and maturation."
     },
     {
       "level": 1,
@@ -1004,7 +910,7 @@
       "subsection": "safety",
       "lede": "Four things before you touch a station: the danger zone, the two-hour rule, cross-contamination and FIFO, read once and kept for good.",
       "paragraphs": [
-        "Food Safety at Commis is a short subsection and the one the whole kitchen assumes you already have. Six items sit here and they fold into four ideas: the danger zone, the two-hour rule, cross-contamination and FIFO. The only thing asked of you is that you read it and carry it to the line.",
+        "Food Safety at Commis is a short subsection and the one the whole kitchen assumes you already have. The items here fold into four ideas: the danger zone, the two-hour rule, cross-contamination and FIFO. The only thing asked of you is that you read it and carry it to the line.",
         "Take the danger zone first, because the rest hangs off it. The guide states it as a band, 4 to 60 C (40 to 140 F), where pathogens multiply, and then states the one rule the band produces: the two-hour rule governs everything left in it. The same clause goes on to the cooling law, with its figures, its shallow pans and its ice baths, but the cooling law is placed at Chef de Partie, so read it now as the shape of what comes next. Notice what the guide states and what it leaves out: the band and the two hours are stated; what a cook does with a pan that has crossed the two hours is not, and this primer does not supply it.",
         "Cross-contamination is the second idea, and the guide gives it three lines and nothing more: raw below ready-to-eat in storage, color-coded boards, and hands and towels as vectors. Read that as two controls and the vectors they answer, not as a full procedure. The guide names color-coded boards without stating which color belongs to which product, and this primer leaves that gap where the guide left it. What you can act on today is the order of the walk-in shelf and the towel on your shoulder: the first puts raw below ready-to-eat, the second the guide names as a vector.",
         "FIFO comes last of the four because it is a habit rather than a fact: first in, first out, and the guide's practical gloss is to label and date everything, with its own aside that masking tape and a Sharpie run more restaurants than any software. The same clause names HACCP as the systematized version, identify hazards, control critical points, document, and names a service-critical and legal-critical protocol beside it. Both are placed at Chef de Partie, so at Commis you take the tape and the pen and leave the system for later. The room's half of that protocol is not deferred, though: Service on this page already asks it of you, in What We Screened and What We Did Not, as the one question you never answer from the app. The clause closes on the line worth keeping: none of this is glamour; all of it is the license to do the glamorous parts.",
@@ -1049,12 +955,12 @@
       "subsection": "service",
       "lede": "Service at Commis is the words the room runs on, the screen you never answer from, the cut-off you can run and the bottle you can open and pour without ceremony.",
       "paragraphs": [
-        "Service at Commis is four modules in two pairs. The Room's Vocabulary and What We Screened and What We Did Not are about words: the ones the room runs on and the one question you never answer from the app. Responsible Service and the Law and The Bottle at the Table are about the drink in your hand: when to stop pouring, and the bottle you carry to the table.",
+        "Service at Commis runs in two pairs. The Room's Vocabulary and What We Screened and What We Did Not are about words: the ones the room runs on and the one question you never answer from the app. Responsible Service and the Law and The Bottle at the Table are about the drink in your hand: when to stop pouring, and the bottle you carry to the table.",
         "Take The Room's Vocabulary first, because it is the first module and the first door opens on it. Its four terms are the pass and expediting, the brigade de cuisine, line slang, and service styles with front-of-house fluency. Its outcome is concrete: you act on \"86 the halibut\" without asking, you say \"behind\" without thinking, and you can name who is working the pass. The guide keeps menu format and service school as two separate axes, so state both for your room. Know what it does not teach: \"dupe\" is glossed in four words, and there is no fire or all-day sequencing anywhere, so reading a ticket is your room's lesson and not the track's.",
         "What We Screened and What We Did Not is one term and one habit: you never answer a guest's question about what is in a dish from the app. The recipe screen is a text screen over the ingredient lines. It cannot see a shared fryer, a dusted board or a supplier's label, and a dish showing nothing means the screen found nothing, never that the dish is clear. The screen names what it checked and what it did not on every recipe, so the outcome is saying that in your own words to the guest who asks.",
         "Responsible Service and the Law is one term from Cocktail & Bar, and its outcome is a cut-off you can run in order: slow the pace, water, food, then a clear kind no with a manager behind you. You check anyone who could plausibly be under 30, you know dram-shop liability makes the room civilly liable for a guest it overserved, and you can offer a good zero-proof or a spritz instead of a fourth negroni.",
         "The Bottle at the Table has three terms: the sommelier's service ritual and floor fluency, wine faults, and decanting, temperature and glassware. The taste pour exists to check for faults and not preference. Corked smells of wet cardboard, oxidized of bruised apple, reduced of struck match, which may blow off if you wait. A corked bottle you replace graciously without arguing. Whites go out chilled, reds cool, just under room temperature. Present, open and pour without ceremony, and that is this module's outcome.",
-        "The doors on the level page are The first module, which opens The Room's Vocabulary; The track, all 27 modules; and the Drill, which runs the service drill over this level's modules with the whole track as the field. A module is met through its terms: every term of the module recalled met or close in the drill. The Commis test is untimed, runs across the subsections, and ends on what you missed with the right answers."
+        "The doors on the level page are The first module, which opens The Room's Vocabulary; The track, all 27 modules; and the Drill, which runs the service drill over this level's modules with the whole track as the field. A module is met through its terms: every term of the module recalled met or close in the drill."
       ],
       "cites": [
         {
@@ -1083,14 +989,14 @@
     {
       "level": 2,
       "subsection": "dishes",
-      "lede": "Eighteen plates that run a station: the pan sauce, the braise, bread and custard, live fire and the fish case.",
+      "lede": "At this station a dish is a set of moves you repeat until they hold: the pan sauce, the braise, the dough and the fish.",
       "paragraphs": [
-        "Chef de Partie holds eighteen dishes, every one a difficulty 2 plate: more than one technique, a wait or a build that no Commis plate asked of you. They come from eight semesters of the Path of Study, so take them by semester unless your station is putting one of them up tonight.",
-        "Take Cacio e Pepe first: twenty minutes, and the test is toasting the pepper in a dry pan, then bringing starch, fat and cheese together without the sauce breaking. Then the soups. Soupe à l'Oignon is ninety minutes of caramelizing onions, a deglaze and the broiler; Barszcz is the same clock spent on the pot and then the sieve, a clear soup that shows every shortcut. Then Sole Meunière, fifteen minutes and the sauté station's exam: dredge, sear for the hard crust, brown the butter, plate.",
-        "Four braises sit in the middle of this level. Boeuf Bourguignon, Coq au Vin, Ragù alla Bolognese and Jamaican Oxtail Stew share one idea: browned meat, low heat and time until it gives, and for the beef and the oxtail, until the collagen gives. Take Coq au Vin first, the shortest at 110 minutes and the full sequence of render, deglaze and reduce. Bourguignon runs three and a half hours; the ragù three, and its lesson is keeping the cooking liquid. The oxtail stew is four hours, opens on a caramel, is skimmed as it goes and closes on a reduced sauce.",
-        "Rosemary Focaccia and Crème Brûlée stand alone in their semesters and are baking and pastry science at its base. The focaccia is one technique, proofing, stretched over 150 minutes: reading the dough rather than the timer. The brûlée is precision: temper the custard, pass it through a sieve, set it in a water bath, finish under the torch. Neither forgives a rushed hand.",
-        "Jerk Chicken, Huli Huli Chicken and Memphis Dry-Rub Ribs are Fire & Smoke: the two chickens marinate, then grill over live coals; the ribs are rubbed dry and smoked low and slow for five hours, so take the chickens first. Then the fish case. Cantonese Steamed Fish and Miso-Glazed Black Cod are thirty minutes each at the stove, once the cod has had its days in the miso, and teach the courage to serve fish barely touched, one under the lid, one under the broiler. Linguine alle Vongole and Whole Grilled Fish with Ladolemono both mount an emulsion, one from clam liquor and pasta water, one from oil and lemon over a fish you fillet off the grill. Calamari Fritti closes the level: coat, deep fry, drain on a rack, never paper.",
-        "A dish is met when it has been cooked and logged: not read, not watched, cooked, and the log kept. Read the semester opens the Path of Study at the semester that teaches the first dish you have not yet cooked. Cook the next dish opens that recipe's page. The library at this level is the recipe grid filtered to this level's difficulty. The Chef de Partie test at the foot of the page runs untimed across the subsections and ends on what you missed with the right answers."
+        "Most plates here carry several techniques at once, and the braises and the bread ask you to hold a pot or a dough steady over hours. They run from the opening semesters of the Path of Study through the sauté station, the braise, bread and pastry fundamentals to Seafood Mastery, with one plate from the wok.",
+        "Start at the pan and the soup pot. Cacio e Pepe is toasted pepper, pecorino and the pasta's own starchy water brought into a sauce, and it tells you at once whether your salted water and your timing are right. Sole Meunière is the sauté station in one pan: dredge, sear, then brown butter. Bulgogi, from the wok semester, is the same hard sear on thin-cut meat that has been marinated first. Soupe à l'Oignon teaches the onion's patience, caramelizing slowly and deglazing before the broiler takes the top. Barszcz asks for a clear beet broth, strained and passed through a sieve.",
+        "Then the braise, where most of this level's hours go. Boeuf Bourguignon, Coq au Vin, Ragù alla Bolognese and Jamaican Oxtail Stew each build their base in the pan first, fat rendered or meat seared for color, before low heat and time do the rest. Take Bourguignon first because it sets the method. Coq au Vin adds reducing the sauce to finish, the ragù adds a fine dice for its base and a long, low simmer, and the oxtail adds skimming a long pot clear and taking sugar to caramel for the color of the gravy.",
+        "Then bread and pastry. Rosemary Focaccia is one technique, proofing, and the habit of reading the dough rather than the clock. Crème Brûlée is a custard tempered, strained and baked in a water bath, then finished with the torch. Crêpes look easy and are quick, but an even pan and a thin, even swirl take repetition before every one comes out the same.",
+        "Then the fish case. Cantonese Steamed Fish is steaming and a fine julienne. Miso-Glazed Black Cod is a marinade and the broiler. Linguine alle Vongole is clams steamed open and picked, their juices and the pasta water brought into an emulsion. Calamari Fritti is the coat, the deep fry and draining on a rack, never paper.",
+        "A dish is met when it has been cooked and logged: not read, not watched, cooked. The door \"Read the semester\" opens the Path at the semester that teaches the first dish you have not cooked; \"Cook the next dish\" goes straight to its recipe page; \"The library at this level\" shows the recipe grid at this level's difficulty when you want another plate. The Level test at the foot of the page asks across the subsections and ends on what you missed."
       ],
       "cites": [
         {
@@ -1144,19 +1050,9 @@
           "href": "/recipe/creme-brulee"
         },
         {
-          "slug": "jerk-chicken",
-          "name": "Jerk Chicken",
-          "href": "/recipe/jerk-chicken"
-        },
-        {
-          "slug": "huli-huli-chicken",
-          "name": "Huli Huli Chicken",
-          "href": "/recipe/huli-huli-chicken"
-        },
-        {
-          "slug": "memphis-dry-rub-ribs",
-          "name": "Memphis Dry-Rub Ribs",
-          "href": "/recipe/memphis-dry-rub-ribs"
+          "slug": "crepes",
+          "name": "Crêpes",
+          "href": "/recipe/crepes"
         },
         {
           "slug": "cantonese-steamed-fish",
@@ -1174,40 +1070,34 @@
           "href": "/recipe/linguine-alle-vongole"
         },
         {
-          "slug": "whole-grilled-fish-with-ladolemono",
-          "name": "Whole Grilled Fish with Ladolemono",
-          "href": "/recipe/whole-grilled-fish-with-ladolemono"
-        },
-        {
           "slug": "calamari-fritti",
           "name": "Calamari Fritti",
           "href": "/recipe/calamari-fritti"
+        },
+        {
+          "slug": "bulgogi",
+          "name": "Bulgogi",
+          "href": "/recipe/bulgogi"
         }
       ],
-      "next": "Sous Chef asks for the long wait and the multi-component build: Birria de Res con Consomé, Pizza Margherita, Country Sourdough Loaf, Baguette de Tradition, Tarte au Citron, Profiteroles and Char Kway Teow, the wok, the wild yeast and the choux this level has not yet touched."
+      "next": "At Sous Chef the plates move to live fire, the wok and longer builds: Jerk Chicken and the Whole Grilled Fish with Ladolemono over the coals, Char Kway Teow in the wok, the Country Sourdough Loaf and the Baguette de Tradition from the bread station, and Tarte au Citron and Profiteroles from pastry."
     },
     {
       "level": 2,
       "subsection": "techniques",
-      "lede": "Fifty techniques, and every one of them is what a station is judged on: the sauces, the braise, the dough, the sugar and the spice rack.",
+      "lede": "Chef de Partie technique is the station's work: the braise, the emulsion, the custard and the dough, done the same way every service.",
       "paragraphs": [
-        "Fifty sit here, twenty-one with a written standard; the other twenty-nine are met by cooking any one of their recipes, and the fast way through is by family.",
-        "Start with the sauces. Béchamel is the mother sauce on the roux you already own; beurre blanc is reduce, season, mount, plate; hollandaise and building an emulsion are one physics, fat into the water phase slowly under hard shear, and one rescue: a fresh base with the broken sauce whisked into it. Building an emulsion carries the standard, so take it first of the emulsions: no free fat sits ahead of the work, and at the plate it clings and holds a line.",
-        "Then the braise. Braising has 39 recipes: deep brown before the liquid, liquid partway up and trembling, never boiling, a fork that twists with almost no resistance while the piece lifts out whole. Confit is the same patience in fat; rendering fat is the step before it, cold pan and slow rise. Marinating carries a standard on 70 recipes and one hard lesson: it works at the surface and no further, and longer is a different result, not a better one. Curing gravlax is salt and time doing the work, ceviche is acid doing it; keep the stated time and the stated cold. Tadka is judged on order and sound, hardest seeds first and delicate last; pounding a curry paste on the smear, hard and dry pounded before the wet goes in.",
-        "The bread bench is the biggest family. Kneading dough, resting dough, proofing, scoring, working with masa and pleating dumplings carry standards; fresh pasta and handling phyllo are met by any of their recipes. Take the loaf in its own order: knead to satin and barely tacky; rest until it rolls without springing back, and let fermentation run in that rest as a rate, not a duration: steady warmth chosen on purpose, visible activity, a clean smell; then proof by volume and the poke test, never by the clock. Scoring's standard is written on skin over fat, not on a loaf: one clean draw at a slant on a cold dry surface, parallel lines a finger's width apart, through the skin and stopping in the fat, never the flesh. Masa is corn, not a gluten dough: the pinch that seals, the covered rest, the smell of toasted corn. Dumplings: a dry rim, a closed seam, even pleats.",
-        "Pastry carries the last standards. Rubbing fat into flour and pie crust & blind baking share one catechism, cold fat in visible pieces and a cold shell into a hot oven; tempering a custard and the water bath are the egg held gently, a spoon that holds a line and a center that trembles as one piece; sugar stages & caramel go by a thermometer or a tested stage, never by time. Three more are air and a finish: creaming butter & sugar to pale, grown and still faintly gritty; folding stopped the moment the streaks vanish; icing & frosting onto a bake fully cool. The other two dozen, arepas to the tagine, risotto method to ramen broth, carry no standard: cook one recipe and it is met.",
-        "Met is the app's one rule: a technique with a written standard is met when a cook of one of its recipes was held met against it; one without a standard is met by any cook of one of its recipes. Read the techniques is the index at this level; The next technique opens the first one not yet met."
+        "The techniques placed here are what running a station asks, and most fall into four families: the sauce bench, the slow pot, the pastry and bread base, and the flavor builders. Béchamel sits on the sauce bench but is not an emulsion: it is milk thickened with a white roux. Confit, Rendering fat and The tagine share the braise's low, patient heat. Pie crust & blind baking and Icing & frosting open and close the pastry run.",
+        "Read Braising and Building an emulsion before the others, then cook them when the dishes list reaches the plates that carry them. Both carry written standards, and they teach two habits much of this level leans on: heat held below the boil, and nothing added faster than the pot can take it. A braise goes in deep brown, the liquid comes partway up and only trembles, a fork twists in with almost no resistance while the piece still lifts out whole, and the liquid ends as a sauce that coats a spoon. An emulsion thickens as the fat goes in, and fat never pools ahead of the work. When one breaks, whisking harder does nothing: start a fresh base and work the broken sauce into it slowly. Hollandaise and Beurre blanc are that same rule on the sauce station.",
+        "Then the pastry and bread base, each read by its own mark. Rubbing fat into flour stops early, while pieces of cold fat still show. Creaming butter & sugar takes minutes, not seconds, until the mix is pale and grown in volume. Folding stops the moment the streaks go. Kneading dough ends smooth and barely tacky, Resting dough lets it roll without springing back, and Proofing is judged on volume and the poke test, never by the hour. Tempering a custard and The water bath share one discipline: gentle heat, no boil, and doneness judged by how it behaves. Sugar stages & caramel adds the last: nothing stirred once it boils, every stage read by temperature or test.",
+        "Tadka and Pounding a curry paste are about order: the hardest seeds into hot fat first and the delicate ones last, the hard dry ingredients pounded down before anything wet arrives. Fermentation is a rate, not a duration, so taste it rather than trust the hours. Marinating is the one technique where longer is a different result, not a safer one: keep the stated time and keep it cold. Pleating dumplings and Working with masa carry standards of their own: a seam closed its whole length, masa that seals smooth when a pinch is rolled shut. Pierogi, Handling phyllo and Fresh pasta are other kitchens' dough work, and Risotto method, Congee, Shucking shellfish and The seafood boil are narrower methods, each learned on its own recipes.",
+        "A technique with a written standard is met when you cook one of its recipes and are graded met against that standard; one without a standard is met by cooking any of its recipes. The Read the techniques door opens the index at this level. The next technique door takes you to the first one you have not met. The Level test at the foot of the page runs across the subsections and ends on what you missed, with the right answers."
       ],
       "cites": [
         {
-          "slug": "bechamel-the-mother-sauce",
-          "name": "Béchamel: the mother sauce",
-          "href": "/technique/bechamel-the-mother-sauce"
-        },
-        {
-          "slug": "beurre-blanc",
-          "name": "Beurre blanc",
-          "href": "/technique/beurre-blanc"
+          "slug": "building-an-emulsion",
+          "name": "Building an emulsion",
+          "href": "/technique/building-an-emulsion"
         },
         {
           "slug": "hollandaise",
@@ -1215,9 +1105,14 @@
           "href": "/technique/hollandaise"
         },
         {
-          "slug": "building-an-emulsion",
-          "name": "Building an emulsion",
-          "href": "/technique/building-an-emulsion"
+          "slug": "beurre-blanc",
+          "name": "Beurre blanc",
+          "href": "/technique/beurre-blanc"
+        },
+        {
+          "slug": "bechamel-the-mother-sauce",
+          "name": "Béchamel: the mother sauce",
+          "href": "/technique/bechamel-the-mother-sauce"
         },
         {
           "slug": "braising",
@@ -1235,29 +1130,24 @@
           "href": "/technique/rendering-fat-and-cooking-in-what-runs-out"
         },
         {
-          "slug": "marinating-acid-salt-and-time",
-          "name": "Marinating: acid, salt and time",
-          "href": "/technique/marinating-acid-salt-and-time"
+          "slug": "the-tagine",
+          "name": "The tagine",
+          "href": "/technique/the-tagine"
         },
         {
-          "slug": "curing-gravlax",
-          "name": "Curing gravlax",
-          "href": "/technique/curing-gravlax"
+          "slug": "rubbing-fat-into-flour",
+          "name": "Rubbing fat into flour",
+          "href": "/technique/rubbing-fat-into-flour"
         },
         {
-          "slug": "ceviche",
-          "name": "Ceviche",
-          "href": "/technique/ceviche"
+          "slug": "creaming-butter-and-sugar",
+          "name": "Creaming butter & sugar",
+          "href": "/technique/creaming-butter-and-sugar"
         },
         {
-          "slug": "tadka-blooming-spices-in-fat",
-          "name": "Tadka: blooming spices in fat",
-          "href": "/technique/tadka-blooming-spices-in-fat"
-        },
-        {
-          "slug": "pounding-a-curry-paste",
-          "name": "Pounding a curry paste",
-          "href": "/technique/pounding-a-curry-paste"
+          "slug": "folding-keeping-the-air-in",
+          "name": "Folding: keeping the air in",
+          "href": "/technique/folding-keeping-the-air-in"
         },
         {
           "slug": "kneading-dough",
@@ -1273,41 +1163,6 @@
           "slug": "proofing-the-rise-before-the-oven",
           "name": "Proofing: the rise before the oven",
           "href": "/technique/proofing-the-rise-before-the-oven"
-        },
-        {
-          "slug": "scoring",
-          "name": "Scoring",
-          "href": "/technique/scoring"
-        },
-        {
-          "slug": "fresh-pasta",
-          "name": "Fresh pasta",
-          "href": "/technique/fresh-pasta"
-        },
-        {
-          "slug": "working-with-masa",
-          "name": "Working with masa",
-          "href": "/technique/working-with-masa"
-        },
-        {
-          "slug": "pleating-dumplings",
-          "name": "Pleating dumplings",
-          "href": "/technique/pleating-dumplings"
-        },
-        {
-          "slug": "handling-phyllo",
-          "name": "Handling phyllo",
-          "href": "/technique/handling-phyllo"
-        },
-        {
-          "slug": "fermentation",
-          "name": "Fermentation",
-          "href": "/technique/fermentation"
-        },
-        {
-          "slug": "rubbing-fat-into-flour",
-          "name": "Rubbing fat into flour",
-          "href": "/technique/rubbing-fat-into-flour"
         },
         {
           "slug": "pie-crust-and-blind-baking",
@@ -1330,29 +1185,54 @@
           "href": "/technique/sugar-stages-and-caramel"
         },
         {
-          "slug": "creaming-butter-and-sugar",
-          "name": "Creaming butter & sugar",
-          "href": "/technique/creaming-butter-and-sugar"
-        },
-        {
-          "slug": "folding-keeping-the-air-in",
-          "name": "Folding: keeping the air in",
-          "href": "/technique/folding-keeping-the-air-in"
-        },
-        {
           "slug": "icing-and-frosting",
           "name": "Icing & frosting",
           "href": "/technique/icing-and-frosting"
         },
         {
-          "slug": "arepas",
-          "name": "Arepas",
-          "href": "/technique/arepas"
+          "slug": "tadka-blooming-spices-in-fat",
+          "name": "Tadka: blooming spices in fat",
+          "href": "/technique/tadka-blooming-spices-in-fat"
         },
         {
-          "slug": "the-tagine",
-          "name": "The tagine",
-          "href": "/technique/the-tagine"
+          "slug": "pounding-a-curry-paste",
+          "name": "Pounding a curry paste",
+          "href": "/technique/pounding-a-curry-paste"
+        },
+        {
+          "slug": "marinating-acid-salt-and-time",
+          "name": "Marinating: acid, salt and time",
+          "href": "/technique/marinating-acid-salt-and-time"
+        },
+        {
+          "slug": "fermentation",
+          "name": "Fermentation",
+          "href": "/technique/fermentation"
+        },
+        {
+          "slug": "pleating-dumplings",
+          "name": "Pleating dumplings",
+          "href": "/technique/pleating-dumplings"
+        },
+        {
+          "slug": "working-with-masa",
+          "name": "Working with masa",
+          "href": "/technique/working-with-masa"
+        },
+        {
+          "slug": "pierogi",
+          "name": "Pierogi",
+          "href": "/technique/pierogi"
+        },
+        {
+          "slug": "handling-phyllo",
+          "name": "Handling phyllo",
+          "href": "/technique/handling-phyllo"
+        },
+        {
+          "slug": "fresh-pasta",
+          "name": "Fresh pasta",
+          "href": "/technique/fresh-pasta"
         },
         {
           "slug": "risotto-method",
@@ -1360,26 +1240,40 @@
           "href": "/technique/risotto-method"
         },
         {
-          "slug": "ramen-broth",
-          "name": "Ramen broth",
-          "href": "/technique/ramen-broth"
+          "slug": "congee",
+          "name": "Congee",
+          "href": "/technique/congee"
+        },
+        {
+          "slug": "shucking-shellfish",
+          "name": "Shucking shellfish",
+          "href": "/technique/shucking-shellfish"
+        },
+        {
+          "slug": "the-seafood-boil",
+          "name": "The seafood boil",
+          "href": "/technique/the-seafood-boil"
         }
       ],
-      "next": "Sous Chef asks for the techniques whose standard governs a whole service: lamination and letter-folding dough on the bench you built here, tempering chocolate beside the custard you tempered, velveting as the coat beyond the marinade, and then fire and the knife: grilling over live coals, asado fire, low & slow smoking, jerk, wok technique, butchery basics, filleting fish and shucking shellfish."
+      "next": "At Sous Chef the technique turns to what governs a whole service: Lamination and Letter-folding dough, Tempering chocolate, Butchery basics and Filleting fish, Wok technique and Velveting, and the live fire of Grilling over live coals, Asado fire and Low & slow smoking."
     },
     {
       "level": 2,
       "subsection": "lexicon",
-      "lede": "Chef de Partie is the station's vocabulary: heat and product first, then the case, the bake and the spice rack, each word a sentence you can say at the pass.",
+      "lede": "At this station a word is a method: the sear, the emulsion, the cut, the fish case, the baker's math and the spice rack, each owed a sentence when the menu names it.",
       "paragraphs": [
-        "Chef de Partie puts 255 terms in front of you, and the count is not the point. Most sit in the atlases: the spice rack, the herb and chile shelf, the vegetable, fruit, fungi, grain and pantry shelves, taken as the menu reaches for them. A smaller core, heat and product, runs every plate on your station, so start there.",
-        "Take the heat words first. The Maillard Reaction, Braising & Stewing and Emulsions are the three to explain before service: why a wet surface never browns, why a boiled braise turns grainy, why a sauce breaks. Then Confit and Sous Vide, gentle heat and patience, confit being the ancestral sous vide, and Consommé & Clarification, the raft that filters a stock clear. Velveting & Marinades, Pressure & Slow Cooking, Fermentation & Pickling, Tempering (Eggs & Chocolate) and Infusion round out the set.",
-        "The case comes next. On beef, Marbling is the word under all the others: the grading systems are marbling in different costumes, and more of it forgives higher doneness. Flank, Skirt & Hanger obey one law: salt or marinate, high heat to medium-rare at most, a rest, then slice thin against the grain. Dry-Aging is what the guest pays for in the trimmed loss and the funk. On fish, take Fatty vs. Lean Fish first, since matching method to fat solves half of fish cookery, then Round Fish vs. Flat Fish for the fillet count, and Mother Sauce Fish Stock: Fumet, the one stock where speed is the discipline.",
-        "Baking science sits at the level's base. Gluten & Hydration is the language the rest are written in: flour choice, fat shortening the strands, water as a share of flour weight. Chemical Leaveners and Proofing, Oven Spring & the Crumb follow, one for the quick batter and one for the loaf, and Caramel Stages & Sugar Work is why the station owns a thermometer.",
-        "The atlases are the long tail, and each has a map. For the spice rack, read Toasting, Blooming & the Tadka Doctrine before the single spices and blends, and keep Building the Working Spice Pantry, the atlas's capstone, open as the map: one gives you the sentence to keep, fat carries spices, the other the core dozen. For the Flavor Atlas, start on Tasting Vocabulary & Palate Training, Building Flavor in Layers and Acid Architecture, the three you act on tonight. Across the produce and pantry shelves, Seasonality & Ripeness is the rule the rest illustrate, and menu writing begins at the market calendar. Salt Types & When Each Wins settles arguments: read it with the heat words.",
-        "The doors: Read the terms, then Flashcards and Quiz, both over this level's terms. A term is met when it has been recalled met or close on the flashcard ladder, or in the quiz, and a miss alone is never met, so run the ladder and let the quiz catch the rest. When you can give the sentence at the pass without the card, the level has done its job."
+        "Start with the words your station cooks by. Take The Maillard Reaction first: browning between amino acids and sugars, whose enemies are water and crowding, and a different thing from caramelization, which is sugar alone. Once you can say why a wet steak steams, the sear in Braising & Stewing explains itself. Then Emulsions: fat and water held together as droplets by an emulsifier such as egg yolk or mustard, the physics behind mayonnaise, hollandaise, vinaigrette and beurre blanc, and the same trick as the starchy pasta water that turns oil and butter into a clinging sauce. Confit and Consommé & Clarification finish the group: fat as a gentle cooking medium, and a raft of egg white, ground meat and mirepoix that filters a stock clear.",
+        "The cuts and the fish case come next, because a guest asks about them by name. Read Marbling first: the grades are largely measures of it, and more of it forgives a higher doneness. Flank, Skirt & Hanger share one law: marinate or salt, high heat to medium-rare at most, rest, and slice thin against the grain. Dry-Aging buys flavor through moisture loss and the meat's own enzymes. At the fish case, Round Fish vs. Flat Fish tells you two fillets or four, Fatty vs. Lean Fish tells you smoke or a gentle poach, and Smoked Fish, hot or cold, names two products sharing one word.",
+        "Pastry and baking science sit here at their base. Take Gluten & Hydration first: hydration is water measured against the flour's weight, and baker's math, everything written relative to the flour, is the language every formula scales in. Chemical Leaveners follows: baking soda needs an acid partner and also speeds browning, while baking powder carries its own acid. Caramel Stages & Sugar Work closes the group: the syrup's temperature decides what it becomes, from thread and soft ball through crack to true caramel, and a wet caramel is more forgiving while a dry one is faster and riskier, with crystallization as the saboteur.",
+        "Then the spice rack and the less common produce. Building the Working Spice Pantry names the core dozen, and Toasting, Blooming & the Tadka Doctrine explains why the pan matters: most spice flavor dissolves in fat, not water, which is why raw curry powder tastes dusty and chili crisp works. Acid Architecture and Sweetness as Seasoning are the palate's sour and sweet in words; read them side by side. Open the produce with Chile Fluency (Fresh & Dried), because in Mexican kitchens a dried chile takes a new name: the ripe red poblano, dried, is Ancho. Then read the Seasonal Larder entries, Citrus in Winter among them, by what your menu handles this month, framed by Seasonality & Ripeness.",
+        "The first door, Read the terms, is the Lexicon at this level: take one group at a sitting and say each word aloud as the sentence a server would need. Then Flashcards and Quiz, both over this level's terms. A term is met when you have recalled it met or close on the flashcard ladder or in the quiz; a miss alone is never met."
       ],
       "cites": [
+        {
+          "slug": "the-maillard-reaction",
+          "name": "The Maillard Reaction",
+          "href": "/lexicon#the-maillard-reaction"
+        },
         {
           "slug": "braising-and-stewing",
           "name": "Braising & Stewing",
@@ -1391,49 +1285,14 @@
           "href": "/lexicon#emulsions"
         },
         {
-          "slug": "the-maillard-reaction",
-          "name": "The Maillard Reaction",
-          "href": "/lexicon#the-maillard-reaction"
-        },
-        {
           "slug": "confit",
           "name": "Confit",
           "href": "/lexicon#confit"
         },
         {
-          "slug": "sous-vide",
-          "name": "Sous Vide",
-          "href": "/lexicon#sous-vide"
-        },
-        {
           "slug": "consomme-and-clarification",
           "name": "Consommé & Clarification",
           "href": "/lexicon#consomme-and-clarification"
-        },
-        {
-          "slug": "velveting-and-marinades",
-          "name": "Velveting & Marinades",
-          "href": "/lexicon#velveting-and-marinades"
-        },
-        {
-          "slug": "pressure-and-slow-cooking",
-          "name": "Pressure & Slow Cooking",
-          "href": "/lexicon#pressure-and-slow-cooking"
-        },
-        {
-          "slug": "fermentation-and-pickling",
-          "name": "Fermentation & Pickling",
-          "href": "/lexicon#fermentation-and-pickling"
-        },
-        {
-          "slug": "tempering-eggs-and-chocolate",
-          "name": "Tempering (Eggs & Chocolate)",
-          "href": "/lexicon#tempering-eggs-and-chocolate"
-        },
-        {
-          "slug": "infusion-steeping-flavor-into-fat-cream-and-syrup",
-          "name": "Infusion: Steeping Flavor into Fat, Cream & Syrup",
-          "href": "/lexicon#infusion-steeping-flavor-into-fat-cream-and-syrup"
         },
         {
           "slug": "marbling",
@@ -1451,19 +1310,19 @@
           "href": "/lexicon#dry-aging"
         },
         {
-          "slug": "fatty-vs-lean-fish",
-          "name": "Fatty vs. Lean Fish",
-          "href": "/lexicon#fatty-vs-lean-fish"
-        },
-        {
           "slug": "round-fish-vs-flat-fish",
           "name": "Round Fish vs. Flat Fish",
           "href": "/lexicon#round-fish-vs-flat-fish"
         },
         {
-          "slug": "mother-sauce-fish-stock-fumet",
-          "name": "Mother Sauce Fish Stock: Fumet",
-          "href": "/lexicon#mother-sauce-fish-stock-fumet"
+          "slug": "fatty-vs-lean-fish",
+          "name": "Fatty vs. Lean Fish",
+          "href": "/lexicon#fatty-vs-lean-fish"
+        },
+        {
+          "slug": "smoked-fish-hot-vs-cold",
+          "name": "Smoked Fish: Hot vs. Cold",
+          "href": "/lexicon#smoked-fish-hot-vs-cold"
         },
         {
           "slug": "gluten-and-hydration",
@@ -1476,19 +1335,9 @@
           "href": "/lexicon#chemical-leaveners"
         },
         {
-          "slug": "proofing-oven-spring-and-the-crumb",
-          "name": "Proofing, Oven Spring & the Crumb",
-          "href": "/lexicon#proofing-oven-spring-and-the-crumb"
-        },
-        {
           "slug": "caramel-stages-and-sugar-work",
           "name": "Caramel Stages & Sugar Work",
           "href": "/lexicon#caramel-stages-and-sugar-work"
-        },
-        {
-          "slug": "toasting-blooming-and-the-tadka-doctrine",
-          "name": "Toasting, Blooming & the Tadka Doctrine",
-          "href": "/lexicon#toasting-blooming-and-the-tadka-doctrine"
         },
         {
           "slug": "building-the-working-spice-pantry",
@@ -1496,14 +1345,9 @@
           "href": "/lexicon#building-the-working-spice-pantry"
         },
         {
-          "slug": "tasting-vocabulary-and-palate-training",
-          "name": "Tasting Vocabulary & Palate Training",
-          "href": "/lexicon#tasting-vocabulary-and-palate-training"
-        },
-        {
-          "slug": "building-flavor-in-layers",
-          "name": "Building Flavor in Layers",
-          "href": "/lexicon#building-flavor-in-layers"
+          "slug": "toasting-blooming-and-the-tadka-doctrine",
+          "name": "Toasting, Blooming & the Tadka Doctrine",
+          "href": "/lexicon#toasting-blooming-and-the-tadka-doctrine"
         },
         {
           "slug": "acid-architecture",
@@ -1511,25 +1355,40 @@
           "href": "/lexicon#acid-architecture"
         },
         {
+          "slug": "sweetness-as-seasoning",
+          "name": "Sweetness as Seasoning",
+          "href": "/lexicon#sweetness-as-seasoning"
+        },
+        {
           "slug": "seasonality-and-ripeness",
           "name": "Seasonality & Ripeness",
           "href": "/lexicon#seasonality-and-ripeness"
         },
         {
-          "slug": "salt-types-and-when-each-wins",
-          "name": "Salt Types & When Each Wins",
-          "href": "/lexicon#salt-types-and-when-each-wins"
+          "slug": "chile-fluency-fresh-and-dried",
+          "name": "Chile Fluency (Fresh & Dried)",
+          "href": "/lexicon#chile-fluency-fresh-and-dried"
+        },
+        {
+          "slug": "ancho",
+          "name": "Ancho",
+          "href": "/lexicon#ancho"
+        },
+        {
+          "slug": "citrus-in-winter",
+          "name": "Citrus in Winter",
+          "href": "/lexicon#citrus-in-winter"
         }
       ],
-      "next": "Sous Chef asks for the words that govern a whole service: Lamination, The Wok and Wok Hei & Stir-Fry Discipline, Grilling vs. Barbecue vs. Smoking, the specialist product behind a plate such as Guanciale, Jowl & Lardo or Black Truffle, and the numbers a sous reads in Menu Economics: Food Cost, Yield & Par and Prime Cost."
+      "next": "At Sous Chef the Lexicon moves to the pass and the office: Lamination at the pastry bench, Wok Hei & Stir-Fry Discipline and Grilling vs. Barbecue vs. Smoking on the line, Menu Economics and Prime Cost behind it, and rarer produce such as Black Truffle and Buddha's Hand."
     },
     {
       "level": 2,
       "subsection": "deck",
       "lede": "At Chef de Partie the deck is the menu's second layer: the words a guest points at and expects a sentence back, from confit to 'nduja to pot de crème.",
       "paragraphs": [
-        "Chef de Partie hands you 122 cards the floor asks about: what the thing is, how the kitchen handles it and what it is not. Most carry a note or a not-this line, and that is where the misses happen: coppa is not prosciutto, ghee is not clarified butter, a macaron is not a macaroon. Wherever a card has a pair, learn the pair.",
-        "Take the six methods first, they describe everything else: confit, sous vide, blanched, fermented, rendered and pan-roasted. Confit and rendered pull opposite ways, meat under fat against fat out of meat. Then the sauces, the family the level is named for on its page, the mothers and their children: béchamel is the white base, demi-glace the roasted veal stock reduced by half and the base of bordelaise, béarnaise a child of hollandaise, and emulsion explains why aioli and remoulade hold. The cold, sharp ones travel together, mignonette, chimichurri and salsa verde; coulis is the sweet strained purée under dessert.",
+        "Chef de Partie hands you the cards the floor asks about: what the thing is, how the kitchen handles it and what it is not. Most carry a note or a not-this line, and that is where the misses happen: coppa is not prosciutto, ghee is not clarified butter, a macaron is not a macaroon. Wherever a card has a pair, learn the pair.",
+        "Take the six methods first, they describe everything else: confit, sous vide, blanched, fermented, rendered and pan-roasted. Confit and rendered pull opposite ways, meat under fat against fat out of meat. Then the sauces, the mother sauces the level page names first, and their children: béchamel is the white base, demi-glace the roasted veal stock reduced by half and the base of bordelaise, béarnaise a child of hollandaise, and emulsion explains why aioli and remoulade hold. The cold, sharp ones travel together, mignonette, chimichurri and salsa verde; coulis is the sweet strained purée under dessert.",
         "Cuts come in two kinds of card: the steaks, hanger steak, skirt steak, flank steak, flat iron steak and ribeye cap, plus wagyu, a breed and not a cut, most giving the doneness the kitchen sends, and the braises, cheek and oxtail, with no temperature to ask for. Meats are the lean, farm-raised ones to explain, guinea hen against pheasant, quail, rabbit, venison, and the plates that need an honest word, foie gras, chicken liver, bone marrow, beef tongue. Charcuterie learns in contrasts: pancetta against bacon, coppa against prosciutto, pâté against terrine against rillettes, soppressata against 'nduja. The fish case is branzino against black sea bass, skate, monkfish, arctic char, blue crab and soft-shell crab, roe against caviar.",
         "Dairy is a ladder of clarified butter, brown butter and ghee, then compound butter, chèvre, burrata, mascarpone and crème fraîche. Starches split into shapes and grains, tagliatelle against pappardelle, cavatelli against orecchiette, agnolotti and gnocchi, then farro, bulgur, polenta and arborio. Mushrooms are foraged, chanterelle, morel, porcini, or farmed, king trumpet, hen of the woods, and the notes on morel and enoki say cooked through. The preparations split the raw plate, carpaccio against tartare, ceviche, tataki and gravlax, from the cooked one: ragout, croquette, roulade, amandine.",
         "Pastry runs from beignets, galette, pavlova and soufflé to the custards, crème anglaise against pastry cream, panna cotta and pot de crème, and the frozen four, gelato, granita, parfait and semifreddo. The pantry is the seasoning rack: miso, fish sauce, harissa, pimentón, sherry vinegar, preserved lemon, finishing salt. Language holds the menu's claims, dry-aged, pasture-raised, heritage breed and day-boat, and the not-this line says what each word is not.",
@@ -2072,12 +1931,12 @@
           "href": "/service/deck/study?card=fd_0299"
         }
       ],
-      "next": "Sous Chef adds the specialist word on these shelves: squab, sweetbreads and poussin; guanciale, lardo, speck, tasso, bresaola and jamón ibérico on the board; bavette and coulotte; turbot, sturgeon, tilefish, wreckfish and cobia; velouté, gastrique and romesco, and the floor card for beurre blanc, the sauce Chef de Partie already mounts; crudo and escabeche; pâte à choux and clafoutis; and garde manger itself."
+      "next": "Sous Chef adds the specialist word on these shelves: squab, sweetbreads and poussin; guanciale, lardo, speck, tasso, bresaola and jamón ibérico on the board; bavette and coulotte; turbot, sturgeon, tilefish, wreckfish and cobia; velouté, gastrique and romesco; crudo, escabeche and clafoutis; the floor cards for beurre blanc and pâte à choux, which the Chef de Partie techniques already teach; and garde manger itself."
     },
     {
       "level": 2,
       "subsection": "plates",
-      "lede": "Sixteen folios for running a station: the two big animals, the three fish cases, the vegetables and fruits of five regions, and the cheese board.",
+      "lede": "The folios for running a station: the two big animals, the three fish cases, the vegetables and fruits of five regions, and the cheese board.",
       "paragraphs": [
         "Chef de Partie holds most of the wall. Each folio teaches six subjects with a guide, a line to remember for each and sources to read further; they are read, never graded, and nothing about them is recorded. Read them in four groups, in the order a station meets them: the meat, the fish, the produce and the cheese.",
         "Start with Pork: six useful distinctions and Beef: where the cut begins, because a station orders by cut. The pork folio runs from the Boston butt of the shoulder through the loin and the tenderloin to the fresh belly, the spare ribs and the hock. The beef folio places the chuck roast, the ribeye, the strip steak, the tenderloin, the brisket and the hanger steak on the animal, and its lines to remember are the ones a server gets wrong: marbling is fat within the muscle, the strip loin and the tenderloin are neighboring but separate muscles, and the hanger is not the flank.",
@@ -2172,12 +2031,12 @@
     {
       "level": 2,
       "subsection": "palate",
-      "lede": "Sour and sweet are the Chef de Partie faults: the two a station's own reductions and pan sauces make when the ratio slips, and each one is a lever against the other.",
+      "lede": "Sour and sweet are the Chef de Partie faults: the ones a station's own reductions and pan sauces make when the ratio slips, and each one is a lever against the other.",
       "paragraphs": [
-        "Commis opened the repair table on flat and salty, the two faults on either side of the salt cellar. Chef de Partie moves to sour and sweet. What they share: unlike flat, neither is fixed by adding what is missing. Both are faults of excess, like salty, and excess does not pour back out of a pot. The work at this level is learning what stands against each, in what order, and what each lever costs.",
+        "Commis opened the repair table on flat and salty, the faults on either side of the salt cellar. Chef de Partie moves to sour and sweet. What they share: unlike flat, neither is fixed by adding what is missing. Both are faults of excess, like salty, and excess does not pour back out of a pot. The work at this level is learning what stands against each, in what order, and what each lever costs.",
         "Take sour first, the order the repair table keeps. Its symptom is exact: the acid arrives first and is still there after everything else has gone. Fat buffers rather than removes, so butter mounted in or a spoon of cream softens the edge without touching the acid itself. Sweetness is the other buffer, held below the threshold of tasting sweet: you are covering a fault, not making a sweet sauce. Baking soda neutralizes chemically, but pinches only, because it eats brightness along with the fault. Time mellows on its own, if you have any. Read that list as a lesson in restraint: two levers hide the fault, one changes the pot at a cost, and the last is time, which a service never has.",
         "Then sweet. The symptom is cloying by the third mouthful, with nothing to cut through it. Acid cuts. Salt reframes: the same sugar reads as seasoning rather than dessert. Bitterness opposes it directly, and the table names the sources: coffee, cocoa, char. Heat, the chile kind, distracts from it. Side by side the pair is a mirror: sweetness is the second lever for sour, acid is the first lever for sweet. A fault is a taste that leads and stays; the fix is a measured dose of its lever, tasted after every addition.",
-        "The subsection opens two doors. The repair table holds the faults with their levers, in order: read sour and sweet there lever by lever, then find a real sauce that shows the symptom and name the fault before you reach for anything. Calibrate is the tasting ladder, and at Chef de Partie it asks every taste, salt, sweet, acid, bitter, umami and seasoned, to rung 2. The ladder climbs all six, not only the two faults placed here: it trains the tongue that will catch them.",
+        "The subsection opens two doors. The repair table holds the faults with their levers, in order: read sour and sweet there lever by lever, then find a real sauce that shows the symptom and name the fault before you reach for anything. Calibrate is the tasting ladder, and at Chef de Partie it asks every taste, salt, sweet, acid, bitter, umami and seasoned, to rung 2. The ladder climbs all six, not only the faults placed here: it trains the tongue that will catch them.",
         "Met here means two things: a fault is met when it has been named on a plate in the repair table, and a taste when its ladder is cleared to this level's rung. For this subsection that is sour and sweet each named on a plate, and the six tastes brought to rung 2 on Calibrate. Do the repair table first, because you cannot name what you have not read, and take Calibrate in short sittings between services, since the palate tires."
       ],
       "cites": [
@@ -2192,18 +2051,18 @@
           "href": "/palate"
         }
       ],
-      "next": "Sous Chef asks the same of bitter and rich, the two faults placed there, and takes the tasting ladder to its next rung."
+      "next": "Sous Chef asks the same of bitter and rich, the faults placed there, and takes the tasting ladder to its next rung."
     },
     {
       "level": 2,
       "subsection": "safety",
       "lede": "Food safety at Chef de Partie is the cooling law and the way you actually cool, HACCP as a system, and the allergen protocol, which the guide calls critical twice.",
       "paragraphs": [
-        "Commis gave you the danger zone and the two-hour rule. Chef de Partie asks you to own what happens to the stockpot after service, because a station makes more hot food than one service eats. Four entries sit here in two pairs. The cooling law and the cooling method are one practice, stated as a number and as a technique. HACCP and the fourth entry are two systems a station runs inside. Take the cooling pair first: a thermometer tests you on it tonight.",
+        "Commis gave you the danger zone and the two-hour rule. Chef de Partie asks you to own what happens to the stockpot after service, because a station makes more hot food than one service eats. The entries here sit in two pairs. The cooling law and the cooling method are one practice, stated as a number and as a technique. HACCP and the last entry are two systems a station runs inside. Take the cooling pair first.",
         "The cooling law is the guide's own figure: hot food to 21 C (70 F) within 2 hours, then to 4 C (39 F) within 4 more. The guide gives the two windows and nothing more; how your code counts them is the code's to say. How you get there is the cooling method: shallow pans, ice baths, never a stockpot straight into the walk-in. A full pot holds its heat for hours in a cold room and warms everything shelved around it, the slow cooling the two-hour rule at Commis already governs. Ladle the stock into shallow pans, or stand the pot in an ice bath and stir, and the law becomes something a station can meet.",
         "HACCP is the systematized version of what Commis taught as habit: identify hazards, control critical points, document. Those three verbs are the whole of the entry at Chef de Partie. So read HACCP here as a way of seeing your station, the moments where a time or a temperature decides whether the food is right and the log that proves you watched them. The figures come from your code and your chef, not from the guide.",
-        "The fourth entry is the shortest and the heaviest: the allergen protocol, which the guide calls service-critical and legal-critical. The guide says so twice, and that is the whole of the Chef de Partie entry. What you can act on at Chef de Partie is knowing where your house keeps its protocol, following it as your house set it, and never improvising one.",
-        "Nothing here is met or missed: food safety is read, never graded, and nothing about it is recorded. The level page opens two doors. The first is Read: the Food Safety page at this level's first slice. The second is The whole page. Take the first slice first, these four entries, then read the whole page once for the gaps, what the guide names without stating."
+        "The last entry is the shortest and the heaviest: the allergen protocol, which the guide calls service-critical and legal-critical. The guide says so twice, and that is the whole of the Chef de Partie entry. What you can act on at Chef de Partie is knowing where your house keeps its protocol, following it as your house set it, and never improvising one.",
+        "Nothing here is met or missed: food safety is read, never graded, and nothing about it is recorded. The level page opens two doors. The first is Read: the Food Safety page at this level's first slice. The second is The whole page. Take the first slice first, this level's entries, then read the whole page once for the gaps, what the guide names without stating."
       ],
       "cites": [
         {
@@ -2234,12 +2093,12 @@
       "subsection": "service",
       "lede": "Service at Chef de Partie is the glass explained: how a wine is described, the two pairing games, the bottles you will pour, and the cheese board's formula.",
       "paragraphs": [
-        "Commis gave you the room's vocabulary and the bottle at the table. Chef de Partie asks you to say what is in the glass and put it next to a plate on purpose. Eight modules sit here in four groups: the grammar of wine, the cellar you will pour from, everything that is not wine, and the cheese board.",
+        "Commis gave you the room's vocabulary and the bottle at the table. Chef de Partie asks you to say what is in the glass and put it next to a plate on purpose. The modules here fall into four groups: the grammar of wine, the cellar you will pour from, everything that is not wine, and the cheese board.",
         "Take How a Wine Is Described first, because every module after it uses its seven terms: acidity, tannin, body, dry and off-dry, oak, terroir, vintage. You have it when you answer \"is it dry?\" and \"is it heavy?\" correctly, know that off-dry is not sweet, and can hear which lever a guest means by \"something smooth\". Then The Two Games and the Switches. Every pairing is congruent, echoing the dish, or contrast, opposing it, and one switch does the work: salt loves acid and bubbles, fat wants cutting acid or matching richness, food acid demands equal wine acid, chile is inflamed by alcohol and tannin, sweet dishes need sweeter wine, bitter stacks with tannin, umami makes tannin harsh. Name the game and the switch in one sentence: that is what you say at the table.",
         "The cellar comes next, whites before reds. The Whites You Will Pour leads with three grapes, Chardonnay, Sauvignon Blanc and Riesling, three sentences each, with the aromatic whites beside Sauvignon Blanc. Two facts matter most: Riesling is the answer to chile heat, and Chardonnay's oak level must match the butter level. The Reds You Will Pour runs from the Bordeaux blend and Pinot Noir through the Rhône school and the food-wine trinity to the New World crowd-pleasers; its test is steering a table off Cabernet when the plate is chile or delicate fish. Bubbles, Sherry and the Fortified End sells Champagne as the rescue for almost any plate, not a toast, tells Prosecco from Cava from Pét-Nat, sets Fino beside Manzanilla, and matches Port or Madeira to cheese or chocolate.",
         "Everything That Is Not Wine covers the rest of the list. Beer pairs by its two families, sake climbs a polishing ladder and has a right serving temperature, tea and coffee are a service and not an afterthought, and a guest who is not drinking deserves a genuine non-alcoholic pairing. Take it straight after the cellar, while the pairing games are still fresh.",
-        "The cheese board closes the level, and its spine is a formula. The Board: Formula and Families asks for 3 to 5 cheeses spanning milk, texture and volume, 30 to 50 g a head, always at room temperature an hour out, and asks you to place any cheese in one of five families: fresh, bloomy, washed, semi-hard to hard, or blue. It also says why halloumi holds its shape under heat and gruyère flows. The Levant, South Asia and the Americas then covers the cheeses outside the classical board: paneer, akkawi and nabulsi, labneh, the Mexican trio and the American four, including why American cheese is engineered the way it is. Serve them without apology or condescension.",
-        "Now the doors. Open the first module and work down the list in this order. The track shows all 27 modules and where these eight sit. The drill runs over this level's modules with the whole track as the field, and it is where met is decided: a module is met through its terms, every term of the module recalled met or close in the drill."
+        "The cheese board closes the service track at Chef de Partie, and its spine is a formula. The Board: Formula and Families asks for 3 to 5 cheeses spanning milk, texture and volume, 30 to 50 g a head, always at room temperature an hour out, and asks you to place any cheese in one of five families: fresh, bloomy, washed, semi-hard to hard, or blue. It also says why halloumi holds its shape under heat and gruyère flows. The Levant, South Asia and the Americas then covers the cheeses outside the classical board: paneer, akkawi and nabulsi, labneh, the Mexican trio and the American four, including why American cheese is engineered the way it is. Serve them without apology or condescension.",
+        "Now the doors. Open the first module and work down the list in this order. The track shows all 27 modules and where this level's modules sit. The drill runs over this level's modules with the whole track as the field, and it is where met is decided: a module is met through its terms, every term of the module recalled met or close in the drill."
       ],
       "cites": [
         {
@@ -2288,14 +2147,14 @@
     {
       "level": 3,
       "subsection": "dishes",
-      "lede": "Seven Advanced plates from four semesters: the braise's long wait, the ferments, the pastry builds and the wok, each met once it is cooked and logged.",
+      "lede": "At Sous Chef a dish is a whole station in miniature: live fire, the wok, a long ferment or a build in parts, cooked and logged, then cooked again until you could teach it.",
       "paragraphs": [
-        "Commis was one technique and no wait, and Chef de Partie added the braise and the sauté station; these seven are longer, bigger or hotter. They come from four semesters, The Braise, Bread & Fermentation, Pastry Fundamentals and The Wok & High Heat, and none goes up in one pass without notes. The rule is the same as at every level: a dish is met when it has been cooked and logged.",
-        "Take Birria de Res con Consomé first. The braise is Chef de Partie ground; what is new is the chain: marinating with acid, salt and time, searing the hard crust, braising until the collagen gives, then griddle and plancha work to finish, with the consomé served as its own component. It is 270 minutes, mostly unattended, so start it on a day off. It teaches the habit that carries the rest: several techniques, one standard held across all of them.",
-        "The three ferments belong together. Pizza Margherita, Country Sourdough Loaf and Baguette de Tradition all rest on fermentation: flour, water, salt, time. Pizza and the loaf add resting dough, the pause that does the work; pizza and the baguette add proofing, the rise before the oven; the loaf and the baguette add steaming, the moisture in the oven that lets the crust spring before it sets. Take the pizza first, because at 90 minutes it teaches the dough's schedule without costing a day. Then the baguette at 280 minutes, then the loaf at 300, which needs a sourdough starter on its own calendar, so begin feeding one before you book the loaf's day.",
-        "The two pastry plates come from the semester of precision. Profiteroles (Pâte à Choux Master) asks one technique, choux pastry, in 90 minutes; take it before the tart, because one technique held to a standard is easier to log honestly than three. Tarte au Citron stacks pie crust and blind baking, the water bath and whipping a meringue into one build of 150 minutes, and every layer has to be right for the plate to be right: that is the multi-component build the standard means.",
-        "Char Kway Teow is the outlier: 30 minutes, one technique, the least forgiving cooking in the guide. Wok technique is maximum heat, total mise and small batches, so the clock is short and most of it is mise, with the flame at the very end, one small batch at a time. Take it last, or on any short day when your mise is complete, and do not let the clock fool you into a half-done setup.",
-        "The doors do the ordering for you. Read the semester opens the Path of Study at the semester teaching the first dish you have not cooked: follow it and you take the braise, the breads, the pastry, then the wok. Cook the next dish opens that recipe page. The library at this level shows the grid filtered to this difficulty. Log each dish the day you cook it."
+        "These plates are fire and smoke, the wok, seafood, and the Advanced plates with a long wait or a build in parts. The long waits are the Birria de Res con Consomé, which runs from a marinade to a sear to a braise to the griddle, and the breads: the Pizza Margherita, the Baguette de Tradition and the Country Sourdough Loaf live on fermentation and proofing. The builds in parts are pastry: the Tarte au Citron asks for a blind-baked crust, a lemon cream over a water bath and, if you crown it, a meringue, while the Profiteroles (Pâte à Choux Master) take one pastry technique to a finish.",
+        "Take them in the order of the Path of Study, which is the order the doors follow, and start with the birria. It rewards the braise you already know from Chef de Partie and runs well over four hours, so give it an open afternoon. That week, feed a sourdough starter into life as preparation: the Country Sourdough Loaf leans on one, and a new starter needs time before it can raise a loaf. Then take the breads: the Pizza Margherita first, then the Baguette de Tradition, where proofing and steam decide the crust, then the loaf.",
+        "In pastry, take the Profiteroles before the tart. Choux is one technique carried to a finish, and one is easier to log honestly than three. The Tarte au Citron stacks the crust, the cream and the meringue, and each part can fail on its own.",
+        "The fire plates teach the coals. Take Huli Huli Chicken first: butchery basics before the fire, then the turn, since huli means turn and the sugar in the baste burns if the chicken sits. Jerk Chicken comes next, once the two-zone fire is second nature, because jerk brings a technique of its own to the coals. Memphis Dry-Rub Ribs follow, and low and slow smoking is hours of holding the fire steady on thin blue smoke.",
+        "The wok plates are the fastest cooking in the guide and the least forgiving: maximum heat, total mise and small batches leave no second look. Cook the Rau Muong Xao Toi first and often, until the garlic turns fragrant and the greens follow before it scorches, then the Pad Krapow Moo, where the pork is pressed into the wok to sear, not stew, then Char Kway Teow, the Advanced plate of the three. The Whole Grilled Fish with Ladolemono comes last and brings back the coals: a whole fish over the fire, filleting, and the oil and lemon emulsion that dresses it.",
+        "A dish is met when it has been cooked and logged. Read the semester opens the Path of Study at the semester teaching the first dish you have not cooked, and Cook the next dish goes straight to that recipe; both keep the order above, so they open on the birria until it is logged. The library at this level is the recipe grid filtered to Advanced, which leaves out the fire plates, the fish and the two quicker wok plates placed here. Log each plate the day you cook it, then cook it again until you could talk a commis through it at the pass. The Level test at the foot of the page ends on what you missed, with the right answers."
       ],
       "cites": [
         {
@@ -2329,24 +2188,54 @@
           "href": "/recipe/profiteroles-pate-a-choux-master"
         },
         {
+          "slug": "huli-huli-chicken",
+          "name": "Huli Huli Chicken",
+          "href": "/recipe/huli-huli-chicken"
+        },
+        {
+          "slug": "jerk-chicken",
+          "name": "Jerk Chicken",
+          "href": "/recipe/jerk-chicken"
+        },
+        {
+          "slug": "memphis-dry-rub-ribs",
+          "name": "Memphis Dry-Rub Ribs",
+          "href": "/recipe/memphis-dry-rub-ribs"
+        },
+        {
+          "slug": "rau-muong-xao-toi",
+          "name": "Rau Muong Xao Toi",
+          "href": "/recipe/rau-muong-xao-toi"
+        },
+        {
+          "slug": "pad-krapow-moo",
+          "name": "Pad Krapow Moo",
+          "href": "/recipe/pad-krapow-moo"
+        },
+        {
           "slug": "char-kway-teow",
           "name": "Char Kway Teow",
           "href": "/recipe/char-kway-teow"
+        },
+        {
+          "slug": "whole-grilled-fish-with-ladolemono",
+          "name": "Whole Grilled Fish with Ladolemono",
+          "href": "/recipe/whole-grilled-fish-with-ladolemono"
         }
       ],
-      "next": "Chef asks for the capstone semester and the project dishes of the Advanced library: Tacos al Pastor (Home Trompo), Central Texas Smoked Brisket, Sauce Espagnole & Demi-Glace, Dry-Brined Roast Turkey with Real Gravy, Salt-Baked Whole Fish and Baked Alaska."
+      "next": "At Chef the dishes become projects: the capstone semester and the Advanced library's project dishes, from Central Texas Smoked Brisket and Tacos al Pastor (Home Trompo) to Sauce Espagnole & Demi-Glace, Salt-Baked Whole Fish and Baked Alaska."
     },
     {
       "level": 3,
       "subsection": "techniques",
-      "lede": "Twelve techniques a whole service rides on: the fires, the wok, the butchery knives, the shellfish and the laminated dough.",
+      "lede": "At Sous Chef a technique is read from the pass: the fire, the wok, the fold and the knife.",
       "paragraphs": [
-        "Sous Chef places twelve techniques a whole service rides on: a grill lit wrong ruins every plate off it. Three of them, Grilling over live coals, Low & slow smoking and Wok technique, carry a written standard with marks you can read before you cook. The other nine have none.",
-        "Take the fire first, and Grilling over live coals before the rest, since it carries the most recipes here. Its marks: the fire ready before the food, coals in gray ash with a hot zone and a cooler one on the grate; the grate hot and clean so the food releases when turned; marks browned, not burnt; the inside on target with a thin gradient, not driven through by a flare-up. Low & slow smoking is a different fire: indirect, low and fed with wood smoke, for collagen cuts on a clock of hours. Its marks: thin blue smoke, never white and rolling; a chamber held in a narrow band by the air intake, not by armfuls of fuel; the stall waited out or wrapped through on purpose; doneness read by probe and feel, never by the hour. Asado fire and Jerk sit under the same lexicon entry; take them once both fire standards are in your hands, since asado runs on embers and jerk on pimento smoke.",
-        "Wok technique's standard is won in the mise and read in the pan: everything in dry and in order, the wok loud from first moment to last, every piece coated and glossy with no sauce pooling under it, vegetables keeping their color and a bite at the center. A wok that falls quiet has been overloaded and is boiling in its own liquid. Velveting belongs beside it: the egg white and cornstarch coat with a little soda or wine, rested and passed briefly through oil or water before the wok, that gives stir-fried meat its silk.",
-        "Then the knives, which come before the fire: the rack is frenched and the roast tied before it meets heat, and a chef who butchers understands the animal a recipe cannot teach. Butchery basics is frenching, butterflying and tying, plus stripping the silverskin that never renders. Filleting fish is the flexible blade drawn along the spine and the deba that heads and fillets a whole fish; your edge is your yield, so sharpen first. Shucking shellfish rounds out the seafood semester. Pick the recipe that makes you do the cut, not one where the fishmonger did it for you.",
-        "Leave the pastry for last, because it has no semester behind it. Lamination and Letter-folding dough are one discipline under two names: dough and butter at matched plasticity, cold but bendable, rest between folds so the gluten relaxes, and counted turns. Tempering chocolate has a single recipe, so that recipe is the way in: melt, cool and reheat on the curve so the cocoa butter sets glossy with a snap instead of dull bloom, the same discipline as the custard you tempered at Chef de Partie.",
-        "Open Read the techniques for the index of all twelve, and let The next technique carry you to the first one you have not met. For the three with a standard, met means a cook on one of its recipes was marked met against that standard; for the other nine, any cook of one of their recipes."
+        "A grill run on flames, a crowded wok or butter that shatters in the fold shows on the plate, so a sous has to know each of these well enough to see the fault from across the kitchen and teach the fix. Take Grilling over live coals first. It carries a written standard, sits under more recipes than anything else here, and its marks teach the fire before the food: coals evenly under gray ash with no flames licking through, a hot zone and a cooler one both ready, a hot clean grate the food releases from, marks browned rather than burnt, and an interior at its target with a thin gradient. Low & slow smoking comes next, with its own standard: thin blue smoke, never white and rolling, a chamber held steady with the air intake, the stall waited out or wrapped through on purpose, and doneness read by probe and feel, never by the clock.",
+        "Asado fire and Jerk carry no written standard, and they are not the same fire. For asado, wood burns down in a separate fire and its embers are raked under the grill as the cook needs them. Jerk cooks over pimento wood, often covered, so it grills and smokes at once. Take them once the two-zone fire is second nature.",
+        "Wok technique carries the third standard. Everything goes in dry and in order, the wok stays loud from first moment to last, every piece is glossy with no sauce pooled under it, and the vegetables keep their color and a bite at the center. Its fault is nearly always too much at once or too wet. Take Velveting alongside it: meat coated in egg white and cornstarch, rested and precooked briefly, which is where stir-fry silk comes from.",
+        "Lamination, Letter-folding dough and Tempering chocolate are temperature disciplines with no written standard, so the recipe is the teacher. In lamination the dough and the butter must match, cold but bendable; the dough rests between folds, and the turns are counted, a letter fold being one single turn. Butter too cold shatters and leaks; too warm, it smears in and bakes like brioche. Tempering chocolate is melting, cooling and reheating along a set curve so the cocoa butter sets in its stable form: gloss and snap instead of dull bloom.",
+        "Butchery basics and Filleting fish are where cooking starts before there is heat: frenching a rack, butterflying to an even thickness, tying a roast for even cooking and clean slices, stripping silverskin, and drawing a flexible fillet knife along the spine. A sous reads the yield in the trim bin, and yield follows the edge.",
+        "A technique with a written standard is met when you cook one of its recipes and are graded met against its marks. For the rest, cooking any one of its recipes meets it. Open Read the techniques for the index at this level, and The next technique takes you to the first one not yet met."
       ],
       "cites": [
         {
@@ -2360,11 +2249,6 @@
           "href": "/technique/low-and-slow-smoking"
         },
         {
-          "slug": "wok-technique",
-          "name": "Wok technique",
-          "href": "/technique/wok-technique"
-        },
-        {
           "slug": "asado-fire",
           "name": "Asado fire",
           "href": "/technique/asado-fire"
@@ -2375,24 +2259,14 @@
           "href": "/technique/jerk"
         },
         {
+          "slug": "wok-technique",
+          "name": "Wok technique",
+          "href": "/technique/wok-technique"
+        },
+        {
           "slug": "velveting",
           "name": "Velveting",
           "href": "/technique/velveting"
-        },
-        {
-          "slug": "butchery-basics",
-          "name": "Butchery basics",
-          "href": "/technique/butchery-basics"
-        },
-        {
-          "slug": "filleting-fish",
-          "name": "Filleting fish",
-          "href": "/technique/filleting-fish"
-        },
-        {
-          "slug": "shucking-shellfish",
-          "name": "Shucking shellfish",
-          "href": "/technique/shucking-shellfish"
         },
         {
           "slug": "lamination",
@@ -2408,28 +2282,32 @@
           "slug": "tempering-chocolate",
           "name": "Tempering chocolate",
           "href": "/technique/tempering-chocolate"
+        },
+        {
+          "slug": "butchery-basics",
+          "name": "Butchery basics",
+          "href": "/technique/butchery-basics"
+        },
+        {
+          "slug": "filleting-fish",
+          "name": "Filleting fish",
+          "href": "/technique/filleting-fish"
         }
       ],
-      "next": "Chef asks for the techniques nobody drills by accident, taught by no semester and on the fewest recipes: Mole, The soufflé, Paella & socarrat, Biryani & dum, Hand-pulled noodles, Tandoor breads, Sushi rice & rolling and The pretzel bath."
+      "next": "At Chef the techniques are the ones nobody drills by accident, on the fewest recipes and taught by no semester: Mole, Biryani & dum, Hand-pulled noodles, Paella & socarrat, Tandoor breads and The soufflé among them."
     },
     {
       "level": 3,
       "subsection": "lexicon",
-      "lede": "The words a sous owns: the fires and the wok, the fold, the numbers on the morning sheet, and the products a station cook has heard of but never had to explain.",
+      "lede": "At the pass the words turn specialist and the numbers arrive: the fire, the fold, what a plate really costs and the rare thing a guest asks you to explain.",
       "paragraphs": [
-        "Thirty-three terms sit here and they are not one kind of word. Chef de Partie asked you to explain the menu. Sous Chef asks what runs the service: why the brisket went on at six in the morning, why a fish bought at twelve a kilo is costed at twenty-six on the plate. Read them in four groups.",
-        "Take the fires and the fold first: Grilling vs. Barbecue vs. Smoking, Wok Hei & Stir-Fry Discipline with The Wok beside it as the equipment half, then Lamination. Each entry gives the discipline in a line: the two-zone grate and thin blue smoke; dry ingredients, small batches and food left to sit between tosses; dough and butter at matched plasticity, rested between counted folds. When a cook asks why the stir-fry steams instead of charring, have the answer without looking.",
-        "The numbers next. Menu Economics comes first: food cost, yield and par, the numbers a sous reads; learn yield first, because costing raw invoice prices is the classic mistake. Behind it stand the finance terms: Prime Cost, COGS and labor summed weekly into the one figure operators live by; KPIs & the Daily Dashboard, one page every morning; COGS Control, where actual against theoretical is the leak meter; Labor: Scheduling & the Model, hourly scheduled to forecast, not habit; Vendors, Purchasing & Negotiation, a second source for the critical categories; Hiring, Training & Retention Economics, where retention is a profit center; Kitchen Design & Flow, designed backward from the menu; FF&E, Smallwares & Opening Inventory, the small checks before cooking; and Health Inspections & Crisis Management, where the daily disciplines are the standard the inspection merely photographs.",
-        "The third group is product, the specialist item behind a fine-dining plate. Guanciale, Jowl & Lardo is the cured face and the cured fat; keep its line that fat is a cut of meat. Alpage explains why the Comté buyer asks the season of the wheel. Black Truffle and Black Trumpet both take heat: the truffle's aroma is fat soluble, so it moves into butter, cream and egg; the trumpet is bought on condition and never served raw. Three spices are here because they are chemistry before seasoning: Asafoetida (Hing), bloomed for seconds in fat so the funk turns to onion depth; Panch Phoron, five whole seeds whose crackle is the timer; and The Three Heats, so you prescribe linger, hum or flash on purpose.",
-        "The rest is the atlas, the entries a kitchen handles rarely: the fruit, Buddha's Hand, Durian, Longan, Mulberry and Seville Orange; the herbs and chiles, Cascabel, Lovage and Vietnamese Coriander; the vegetables, Nettles, Salsify, Treviso and Winter Melon. Each carries one handling rule worth keeping: zest the Buddha's Hand and never look for juice, count lovage in leaves, glove the nettles and blanch them on arrival. Take these last.",
-        "Two doors open on the level page. Read the terms first, all thirty-three. Then Flashcards and Quiz, both over this level's terms. A term is met when it has been recalled met or close on the flashcard ladder, or in the quiz; a miss alone is never met."
+        "This is the vocabulary you teach from as well as cook from, and it runs in bands: the fire and the fold whose standard a whole service answers to, the numbers that run the building, then the spices and the specialist produce a guest asks about because it is on tonight's board. Take them in that order.",
+        "Start with the fire and the fold. Grilling vs. Barbecue vs. Smoking separates three fires by their timing: grilling is direct high heat for minutes over a two-zone grate, barbecue is indirect low heat and wood smoke for hours on collagen cuts, and smoking either cooks as it flavors or, cold, flavors cured food without cooking it. Keep the two wok words apart: Wok Hei & Stir-Fry Discipline names the aroma, the smoky, singed-air breath of food and oil vaporizing against hot carbon steel, and The Wok names the vessel, whose sloped walls give a searing base and cooler shoulders to stage ingredients. Lamination is the layered dough itself, butter and dough folded into alternating sheets that oven steam jacks apart. The method behind all three belongs to the Techniques reader.",
+        "Then the numbers, and Menu Economics: Food Cost, Yield & Par first, because the rest lean on it. Cost a fish at its raw invoice price instead of its price after trim and cooking, and the plate costs more than you think. Prime Cost adds total labor to cost of goods and wants it weekly, not only at month-end. COGS Control sets actual against theoretical cost and reads the variance as the leak; Labor schedules to forecast, not habit; KPIs & the Daily Dashboard keeps few numbers on one page. Health Inspections & Crisis Management is the entry the Food Safety page reads clause by clause at this level, so read it there.",
+        "The spice entries teach a behavior more than a taste. Asafoetida (Hing) goes into hot fat first, a pinch, and blooms into savory allium depth; Panch Phoron keeps its seeds whole and uses their crackle as the timer; The Three Heats sorts chile, pepper and mustard heat into linger, hum and flash. The larder is learned by the menu, the dish on the board first: Seville Orange for marmalade and bigarade, Treviso grilled as precoce or raw as tardivo, Black Truffle carried in fat, Nettles blanched on arrival in gloves, Salsify peeled into lemon water, Lovage counted in leaves.",
+        "Open Read the terms, then Flashcards and Quiz over this level's terms. A term is met when you have recalled it met or close on the flashcard ladder, or in the quiz; a miss alone is never met. Then check yourself: can you explain yield to a new cook, or tardivo to a guest, without the card?"
       ],
       "cites": [
-        {
-          "slug": "guanciale-jowl-and-lardo",
-          "name": "Guanciale, Jowl & Lardo",
-          "href": "/lexicon#guanciale-jowl-and-lardo"
-        },
         {
           "slug": "grilling-vs-barbecue-vs-smoking",
           "name": "Grilling vs. Barbecue vs. Smoking",
@@ -2439,6 +2317,11 @@
           "slug": "wok-hei-and-stir-fry-discipline",
           "name": "Wok Hei & Stir-Fry Discipline",
           "href": "/lexicon#wok-hei-and-stir-fry-discipline"
+        },
+        {
+          "slug": "the-wok",
+          "name": "The Wok",
+          "href": "/lexicon#the-wok"
         },
         {
           "slug": "lamination",
@@ -2451,44 +2334,9 @@
           "href": "/lexicon#menu-economics-food-cost-yield-and-par"
         },
         {
-          "slug": "asafoetida-hing",
-          "name": "Asafoetida (Hing)",
-          "href": "/lexicon#asafoetida-hing"
-        },
-        {
-          "slug": "the-three-heats-capsaicin-piperine-and-isothiocyanate",
-          "name": "The Three Heats: Capsaicin, Piperine & Isothiocyanate",
-          "href": "/lexicon#the-three-heats-capsaicin-piperine-and-isothiocyanate"
-        },
-        {
-          "slug": "panch-phoron",
-          "name": "Panch Phoron",
-          "href": "/lexicon#panch-phoron"
-        },
-        {
-          "slug": "the-wok",
-          "name": "The Wok",
-          "href": "/lexicon#the-wok"
-        },
-        {
-          "slug": "kitchen-design-and-flow",
-          "name": "Kitchen Design & Flow",
-          "href": "/lexicon#kitchen-design-and-flow"
-        },
-        {
-          "slug": "ff-and-e-smallwares-and-opening-inventory",
-          "name": "FF&E, Smallwares & Opening Inventory",
-          "href": "/lexicon#ff-and-e-smallwares-and-opening-inventory"
-        },
-        {
           "slug": "prime-cost-the-number-that-runs-the-building",
           "name": "Prime Cost: The Number That Runs the Building",
           "href": "/lexicon#prime-cost-the-number-that-runs-the-building"
-        },
-        {
-          "slug": "kpis-and-the-daily-dashboard",
-          "name": "KPIs & the Daily Dashboard",
-          "href": "/lexicon#kpis-and-the-daily-dashboard"
         },
         {
           "slug": "cogs-control-inventory-variance-and-theft",
@@ -2501,14 +2349,9 @@
           "href": "/lexicon#labor-scheduling-and-the-model"
         },
         {
-          "slug": "vendors-purchasing-and-negotiation",
-          "name": "Vendors, Purchasing & Negotiation",
-          "href": "/lexicon#vendors-purchasing-and-negotiation"
-        },
-        {
-          "slug": "hiring-training-and-retention-economics",
-          "name": "Hiring, Training & Retention Economics",
-          "href": "/lexicon#hiring-training-and-retention-economics"
+          "slug": "kpis-and-the-daily-dashboard",
+          "name": "KPIs & the Daily Dashboard",
+          "href": "/lexicon#kpis-and-the-daily-dashboard"
         },
         {
           "slug": "health-inspections-and-crisis-management",
@@ -2516,29 +2359,19 @@
           "href": "/lexicon#health-inspections-and-crisis-management"
         },
         {
-          "slug": "alpage-cheeses-summer-milk",
-          "name": "Alpage: Cheese's Summer Milk",
-          "href": "/lexicon#alpage-cheeses-summer-milk"
+          "slug": "asafoetida-hing",
+          "name": "Asafoetida (Hing)",
+          "href": "/lexicon#asafoetida-hing"
         },
         {
-          "slug": "buddhas-hand",
-          "name": "Buddha's Hand",
-          "href": "/lexicon#buddhas-hand"
+          "slug": "panch-phoron",
+          "name": "Panch Phoron",
+          "href": "/lexicon#panch-phoron"
         },
         {
-          "slug": "durian",
-          "name": "Durian",
-          "href": "/lexicon#durian"
-        },
-        {
-          "slug": "longan",
-          "name": "Longan",
-          "href": "/lexicon#longan"
-        },
-        {
-          "slug": "mulberry",
-          "name": "Mulberry",
-          "href": "/lexicon#mulberry"
+          "slug": "the-three-heats-capsaicin-piperine-and-isothiocyanate",
+          "name": "The Three Heats: Capsaicin, Piperine & Isothiocyanate",
+          "href": "/lexicon#the-three-heats-capsaicin-piperine-and-isothiocyanate"
         },
         {
           "slug": "seville-orange",
@@ -2546,29 +2379,14 @@
           "href": "/lexicon#seville-orange"
         },
         {
+          "slug": "treviso",
+          "name": "Treviso",
+          "href": "/lexicon#treviso"
+        },
+        {
           "slug": "black-truffle",
           "name": "Black Truffle",
           "href": "/lexicon#black-truffle"
-        },
-        {
-          "slug": "black-trumpet",
-          "name": "Black Trumpet",
-          "href": "/lexicon#black-trumpet"
-        },
-        {
-          "slug": "cascabel",
-          "name": "Cascabel",
-          "href": "/lexicon#cascabel"
-        },
-        {
-          "slug": "lovage",
-          "name": "Lovage",
-          "href": "/lexicon#lovage"
-        },
-        {
-          "slug": "vietnamese-coriander",
-          "name": "Vietnamese Coriander",
-          "href": "/lexicon#vietnamese-coriander"
         },
         {
           "slug": "nettles",
@@ -2581,45 +2399,114 @@
           "href": "/lexicon#salsify"
         },
         {
-          "slug": "treviso",
-          "name": "Treviso",
-          "href": "/lexicon#treviso"
-        },
-        {
-          "slug": "winter-melon",
-          "name": "Winter Melon",
-          "href": "/lexicon#winter-melon"
+          "slug": "lovage",
+          "name": "Lovage",
+          "href": "/lexicon#lovage"
         }
       ],
-      "next": "Chef asks for the owner's numbers rather than the sous's: The Concept & Business Plan, Startup Costs, The Lease, The Restaurant P&L, Break-Even Analysis and Cash Flow, and the rarest atlas entries, White Truffle, Matsutake, Cardoon and Puntarelle."
+      "next": "At Chef the numbers become the whole building: the business plan, the lease, the pro forma, the P&L line by line, break-even and cash flow. The larder goes rarer too, to Matsutake, Mangosteen, Cardoon and Puntarelle, words a senior cook owns without notes."
     },
     {
       "level": 3,
       "subsection": "deck",
-      "lede": "Thirty-five cards a sous explains in one sentence at the pass: the cured board, the specialist cut and fish, the classical sauces and the plates with a long build.",
+      "lede": "At Sous Chef the deck is the classical menu word and the specialist product behind it, known well enough to teach.",
       "paragraphs": [
-        "Chef de Partie asked for the station's vocabulary. Sous Chef asks for what a guest orders once a year and expects the room to explain without hesitation. Read each card's why line as the sentence you will say, and its not-this line as the server's likely mistake.",
-        "Take the meats first; a server asks about them mid-service. Squab, Sweetbreads and Poussin share one fact: youth or a gland with almost no muscle, so there is no chew and the final cooking is quick, though Sweetbreads earn a long prep first, soaked, blanched, peeled and pressed. Squab goes out rosy and turns livery cooked through. The cured board is six answers to which animal, where on it, and whether smoke touched it. Guanciale is jowl, rendered and not sliced for a board. Lardo is back fat, not lard, shaved thin onto something warm. Speck is leg cured with juniper and cold smoked, so not prosciutto. Tasso is shoulder in a cayenne crust, hot smoked. Bresaola is lean beef round, cured and dried, not carpaccio. Jamón Ibérico is the black pig's leg hung 2 to 4 years; its white specks are aging crystals, not a flaw.",
-        "The two cuts and the five fish are here because most have a nearby cousin the guest will name instead. Bavette is the sirloin flap, looser and more marbled than flank. Coulotte is the cap on the top sirloin, Brazil's picanha, not the ribeye cap. Turbot is a firm flatfish rich in gelatin at the bone, not halibut. Tilefish eats crab and tastes sweet like lobster. Wreckfish eats like grouper but is its own deep-water family, a Carolina catch. Cobia is fattier than most white fish, firm and buttery, and often goes out raw as crudo. Sturgeon has almost no flake, eats dense and meaty like veal, and takes smoke.",
-        "The sauces and preparations pair up on purpose. Gastrique and Agrodolce are both sugar and vinegar, one a smooth French syrup, the other chunky and Italian. Beurre Blanc and Meunière are both butter with acid, one cold butter whisked into a shallot reduction and held just warm because heat splits it and cold sets it, the other butter browned to hazelnut over floured fish. Velouté is the mother sauce built on stock, not milk. Romesco is Catalan: dried peppers, nuts and fried bread. Crudo and Escabeche split on whether the fish was ever cooked. Cassoulet is the long build, baked for hours. Bouillabaisse is the multi-part one: several fish boiled hard so the oil emulsifies, rouille and toast beside it. En Papillote is parchment, cut open and not eaten.",
-        "The larder comes last: Carnaroli over arborio because it holds its shape, Black Trumpet split and rinsed for grit, Fromage Blanc smooth and set without heat, a Bloomy Rind whose chalky center means young, not faulty, Pâte à Choux with no yeast and no layers, Clafoutis with its cherry pits possibly left in, Mostarda for the cheese board, and Garde Manger, the cold station whose crudo, tartare and oysters go out raw, and you say so. Take them in that order.",
-        "Start at the deck landing, which shows what is owed today, and work the Flip cards for this level until every why line reads as your own. Then take Say it back, recall before recognition, the one deck mode that counts as a round, and finish with the written test, untimed, ending on what you missed with the right answers and no number. A card is met when it has been graded met or close in the deck's modes; a miss alone is never met, so a card you fumble simply comes back owed."
+        "These cards are the words a fine-dining menu prints without a gloss and expects the floor to carry. Most fall into three families. First, the classical methods, sauces and preparations: À la Plancha, Salt-Baked and Lacquered; Beurre Blanc, Velouté, Bordelaise, Gribiche and Soubise; Meunière, En Papillote, En Croûte, Torchon and Quenelle. Second, specialist product: the cuts, Bavette, Coulotte, Denver Steak, Teres Major and Chateaubriand; the cured meats from Guanciale and Lardo to Speck, Bresaola and Jamón Ibérico; the fish case of Turbot, Dover Sole, Langoustine and Uni; the wild Black Trumpet and White Truffle, and the Summer Truffle, which is also farmed. Third, the pastry section's words, from Pâte à Choux and Canelé to Sabayon, Crémeux and Posset.",
+        "Take the pairs first, because at this level the question is less what a word means than what it is not. Gastrique and Agrodolce are both sugar and vinegar, one a smooth syrup built on caramel, the other often chunky with fruit and onion. Crudo and Escabeche are both set against ceviche: one raw and dressed at the last moment, the other always cooked before it meets the vinegar. En Papillote is a paper parcel torn open; En Croûte is a pastry wrapper you eat. Meunière is browned butter and lemon, where Beurre Blanc is pale butter whisked into a wine reduction. Learn them in twos.",
+        "Then the product, read with its note, because this is where a guest's question comes back to the pass. Bavette and Denver Steak are best at medium rare and sliced across the grain. Chateaubriand is one roast, so both guests share one doneness. Squab breast is classically medium rare, so ask before it fires. Dover Sole is filleted from the bone at the table, so a stray fine bone is possible. Tell Speck from prosciutto, Tasso from andouille and Stracciatella from burrata the way the cards do.",
+        "Take the pastry and the room's language next, and do not skip their warnings. A pale Canelé is the failure, not a dark one. Kouign-Amann folds its sugar inside a yeasted dough. Clafoutis may keep its cherry pits, so ask the kitchen. Garde Manger is the cold station, and its crudo and oysters go out raw. Mignardises close the meal where an amuse-bouche opens it. Omakase prints no menu, so anything a guest needs to avoid is said before the first course, and Regenerative has no legal definition, so the farm's name is what counts.",
+        "Start at the deck landing, which shows what is owed today, then Flip cards at this level, then Say it back, recall before recognition and the one deck mode that counts as a round. A card is met when it has been graded met or close in the deck's modes; a miss alone is never met. The written test for this level is untimed and ends on what you missed with the right answers and no number, so treat its misses as tomorrow's flips."
       ],
       "cites": [
         {
-          "slug": "fd_0053",
-          "name": "Squab",
-          "href": "/service/deck/study?card=fd_0053"
+          "slug": "fd_0301",
+          "name": "À la Plancha",
+          "href": "/service/deck/study?card=fd_0301"
         },
         {
-          "slug": "fd_0054",
-          "name": "Sweetbreads",
-          "href": "/service/deck/study?card=fd_0054"
+          "slug": "fd_0302",
+          "name": "Salt-Baked",
+          "href": "/service/deck/study?card=fd_0302"
         },
         {
-          "slug": "fd_0057",
-          "name": "Poussin",
-          "href": "/service/deck/study?card=fd_0057"
+          "slug": "fd_0303",
+          "name": "Lacquered",
+          "href": "/service/deck/study?card=fd_0303"
+        },
+        {
+          "slug": "fd_0205",
+          "name": "Beurre Blanc",
+          "href": "/service/deck/study?card=fd_0205"
+        },
+        {
+          "slug": "fd_0207",
+          "name": "Velouté",
+          "href": "/service/deck/study?card=fd_0207"
+        },
+        {
+          "slug": "fd_0333",
+          "name": "Bordelaise",
+          "href": "/service/deck/study?card=fd_0333"
+        },
+        {
+          "slug": "fd_0334",
+          "name": "Gribiche",
+          "href": "/service/deck/study?card=fd_0334"
+        },
+        {
+          "slug": "fd_0335",
+          "name": "Soubise",
+          "href": "/service/deck/study?card=fd_0335"
+        },
+        {
+          "slug": "fd_0232",
+          "name": "Meunière",
+          "href": "/service/deck/study?card=fd_0232"
+        },
+        {
+          "slug": "fd_0231",
+          "name": "En Papillote",
+          "href": "/service/deck/study?card=fd_0231"
+        },
+        {
+          "slug": "fd_0338",
+          "name": "En Croûte",
+          "href": "/service/deck/study?card=fd_0338"
+        },
+        {
+          "slug": "fd_0337",
+          "name": "Torchon",
+          "href": "/service/deck/study?card=fd_0337"
+        },
+        {
+          "slug": "fd_0339",
+          "name": "Quenelle",
+          "href": "/service/deck/study?card=fd_0339"
+        },
+        {
+          "slug": "fd_0099",
+          "name": "Bavette",
+          "href": "/service/deck/study?card=fd_0099"
+        },
+        {
+          "slug": "fd_0104",
+          "name": "Coulotte",
+          "href": "/service/deck/study?card=fd_0104"
+        },
+        {
+          "slug": "fd_0313",
+          "name": "Denver Steak",
+          "href": "/service/deck/study?card=fd_0313"
+        },
+        {
+          "slug": "fd_0314",
+          "name": "Teres Major",
+          "href": "/service/deck/study?card=fd_0314"
+        },
+        {
+          "slug": "fd_0315",
+          "name": "Chateaubriand",
+          "href": "/service/deck/study?card=fd_0315"
         },
         {
           "slug": "fd_0068",
@@ -2637,11 +2524,6 @@
           "href": "/service/deck/study?card=fd_0076"
         },
         {
-          "slug": "fd_0077",
-          "name": "Tasso",
-          "href": "/service/deck/study?card=fd_0077"
-        },
-        {
           "slug": "fd_0079",
           "name": "Bresaola",
           "href": "/service/deck/study?card=fd_0079"
@@ -2652,39 +2534,24 @@
           "href": "/service/deck/study?card=fd_0082"
         },
         {
-          "slug": "fd_0099",
-          "name": "Bavette",
-          "href": "/service/deck/study?card=fd_0099"
-        },
-        {
-          "slug": "fd_0104",
-          "name": "Coulotte",
-          "href": "/service/deck/study?card=fd_0104"
-        },
-        {
-          "slug": "fd_0120",
-          "name": "Sturgeon",
-          "href": "/service/deck/study?card=fd_0120"
-        },
-        {
-          "slug": "fd_0121",
-          "name": "Tilefish",
-          "href": "/service/deck/study?card=fd_0121"
-        },
-        {
           "slug": "fd_0123",
           "name": "Turbot",
           "href": "/service/deck/study?card=fd_0123"
         },
         {
-          "slug": "fd_0124",
-          "name": "Wreckfish",
-          "href": "/service/deck/study?card=fd_0124"
+          "slug": "fd_0318",
+          "name": "Dover Sole",
+          "href": "/service/deck/study?card=fd_0318"
         },
         {
-          "slug": "fd_0129",
-          "name": "Cobia",
-          "href": "/service/deck/study?card=fd_0129"
+          "slug": "fd_0319",
+          "name": "Langoustine",
+          "href": "/service/deck/study?card=fd_0319"
+        },
+        {
+          "slug": "fd_0317",
+          "name": "Uni",
+          "href": "/service/deck/study?card=fd_0317"
         },
         {
           "slug": "fd_0140",
@@ -2692,39 +2559,44 @@
           "href": "/service/deck/study?card=fd_0140"
         },
         {
-          "slug": "fd_0158",
-          "name": "Fromage Blanc",
-          "href": "/service/deck/study?card=fd_0158"
+          "slug": "fd_0321",
+          "name": "White Truffle",
+          "href": "/service/deck/study?card=fd_0321"
         },
         {
-          "slug": "fd_0170",
-          "name": "Bloomy Rind",
-          "href": "/service/deck/study?card=fd_0170"
+          "slug": "fd_0323",
+          "name": "Summer Truffle",
+          "href": "/service/deck/study?card=fd_0323"
         },
         {
-          "slug": "fd_0182",
-          "name": "Carnaroli",
-          "href": "/service/deck/study?card=fd_0182"
+          "slug": "fd_0243",
+          "name": "Pâte à Choux",
+          "href": "/service/deck/study?card=fd_0243"
+        },
+        {
+          "slug": "fd_0342",
+          "name": "Canelé",
+          "href": "/service/deck/study?card=fd_0342"
+        },
+        {
+          "slug": "fd_0345",
+          "name": "Sabayon",
+          "href": "/service/deck/study?card=fd_0345"
+        },
+        {
+          "slug": "fd_0346",
+          "name": "Crémeux",
+          "href": "/service/deck/study?card=fd_0346"
+        },
+        {
+          "slug": "fd_0347",
+          "name": "Posset",
+          "href": "/service/deck/study?card=fd_0347"
         },
         {
           "slug": "fd_0202",
           "name": "Gastrique",
           "href": "/service/deck/study?card=fd_0202"
-        },
-        {
-          "slug": "fd_0205",
-          "name": "Beurre Blanc",
-          "href": "/service/deck/study?card=fd_0205"
-        },
-        {
-          "slug": "fd_0207",
-          "name": "Velouté",
-          "href": "/service/deck/study?card=fd_0207"
-        },
-        {
-          "slug": "fd_0213",
-          "name": "Romesco",
-          "href": "/service/deck/study?card=fd_0213"
         },
         {
           "slug": "fd_0215",
@@ -2742,29 +2614,24 @@
           "href": "/service/deck/study?card=fd_0224"
         },
         {
-          "slug": "fd_0229",
-          "name": "Cassoulet",
-          "href": "/service/deck/study?card=fd_0229"
+          "slug": "fd_0053",
+          "name": "Squab",
+          "href": "/service/deck/study?card=fd_0053"
         },
         {
-          "slug": "fd_0230",
-          "name": "Bouillabaisse",
-          "href": "/service/deck/study?card=fd_0230"
+          "slug": "fd_0077",
+          "name": "Tasso",
+          "href": "/service/deck/study?card=fd_0077"
         },
         {
-          "slug": "fd_0231",
-          "name": "En Papillote",
-          "href": "/service/deck/study?card=fd_0231"
+          "slug": "fd_0325",
+          "name": "Stracciatella",
+          "href": "/service/deck/study?card=fd_0325"
         },
         {
-          "slug": "fd_0232",
-          "name": "Meunière",
-          "href": "/service/deck/study?card=fd_0232"
-        },
-        {
-          "slug": "fd_0243",
-          "name": "Pâte à Choux",
-          "href": "/service/deck/study?card=fd_0243"
+          "slug": "fd_0343",
+          "name": "Kouign-Amann",
+          "href": "/service/deck/study?card=fd_0343"
         },
         {
           "slug": "fd_0245",
@@ -2772,17 +2639,27 @@
           "href": "/service/deck/study?card=fd_0245"
         },
         {
-          "slug": "fd_0274",
-          "name": "Mostarda",
-          "href": "/service/deck/study?card=fd_0274"
-        },
-        {
           "slug": "fd_0287",
           "name": "Garde Manger",
           "href": "/service/deck/study?card=fd_0287"
+        },
+        {
+          "slug": "fd_0352",
+          "name": "Mignardises",
+          "href": "/service/deck/study?card=fd_0352"
+        },
+        {
+          "slug": "fd_0355",
+          "name": "Omakase",
+          "href": "/service/deck/study?card=fd_0355"
+        },
+        {
+          "slug": "fd_0354",
+          "name": "Regenerative",
+          "href": "/service/deck/study?card=fd_0354"
         }
       ],
-      "next": "Chef places the rarest of the same shelves: Lomo on the cured board, Bottarga in the fish case, Lion's Mane, Abalone Mushroom and Chicken of the Woods among the mushrooms, Brebis and Washed Rind in the cheese case, Acquerello, Farro Piccolo and Freekeh in the starches, Ballotine among the preparations, and Banyuls, Saba and Verjus in the pantry."
+      "next": "At Chef the deck narrows to the rare, the specialist and the deeply classical word a senior cook or server must own without notes: Ballotine and Grenobloise, Moulard and Secreto Ibérico, Washed Rind, Bottarga, Ikejime and Koji-Aged."
     },
     {
       "level": 3,
@@ -2792,7 +2669,7 @@
         "Sous Chef holds a single folio, Charcuterie: cut and process. Like every folio it teaches six subjects with a guide and sources, and it is read, never graded; nothing about it is recorded. It sits here because a board is judged by the difference between its products, and a sous is the one asked to explain that difference to a guest and to a new cook.",
         "Read it by cut first. Prosciutto di Parma is a dry-cured whole-muscle ham from the rear leg of the pig. Pancetta is cured belly and guanciale is cured cheek or jowl, so the two are different cuts even when both are used for their fat. Bresaola della Valtellina is the beef on the board, a cured whole muscle from the hindquarter, and it is the reminder that not everything on a board is pork.",
         "Then read it by process. Salame Milano is a cured sausage whose fat sits in fine flecks the size of rice grains; Mortadella Bologna is a cooked, finely ground pork sausage set with larger white cubes of fat. That pair carries the folio's main point: charcuterie takes in cooked products as well as dry-cured ones. The guide is a map of product identities, not a curing method, and the specification of the product you serve belongs to its producer, so ask the kitchen which ones the house buys.",
-        "Read the first plate opens this folio, and The wall shows all twenty, the folios read at Commis and Chef de Partie among them; read those again when the menu calls for them. Beneath the guide sits the original poster archive with its recorded correction notes, kept for reference, while the six-subject guide is the lesson."
+        "Read the first plate opens this folio, and The wall shows all twenty, the folios read at Commis and Chef de Partie among them; read those again when the menu calls for them. The folio is the picture, not the drill: every subject on it but guanciale is a term in The Italian Salumi, the Service module at this level, and that drill is where they are met. Beneath the guide sits the original poster archive with its recorded correction notes, kept for reference, while the six-subject guide is the lesson."
       ],
       "cites": [
         {
@@ -2833,7 +2710,7 @@
       "subsection": "safety",
       "lede": "At Sous Chef the inspector is not an event to prepare for: the kitchen you run every day is the one that gets photographed.",
       "paragraphs": [
-        "Commis gave you the danger zone and FIFO, Chef de Partie the cooling law and HACCP as a system. Sous Chef moves the subject from your station to the whole room, because a sous is the one standing there when the inspector walks in and the one who writes up what happens after. Ten items are placed here: nine are the Inspections clause, The principle beneath it and seven facts drawn from them, and one is a gap. Read the Inspections clause first and in full, because every fact at this level is a line lifted out of it.",
+        "Commis gave you the danger zone and FIFO, Chef de Partie the cooling law and HACCP as a system. Sous Chef moves the subject from your station to the whole room, because a sous is the one standing there when the inspector walks in and the one who writes up what happens after. Placed here are the Inspections clause, The principle beneath it, the facts drawn from them, and one gap. Read the Inspections clause first and in full, because every fact at this level is a line lifted out of it.",
         "The first group is the standard itself. The guide says to run the kitchen so ANY moment is inspection-ready, and its capitals are the point: there is no prep week. The daily standard it names is temps logged, FIFO labeled, hand sinks stocked and USED, sanitizer buckets titrated, and USED carries as much weight as ANY, since a stocked sink nobody touches is a finding waiting to be written. Take this group before the other two, because it is the part you can walk the line and check tonight.",
         "The second group is the visit. During it, accompany professionally, correct on the spot what can be, never argue, get every finding in writing. After it, fix, document, retrain at pre-shift, and treat repeat findings as management failures, not staff ones. That last phrase is the sous chef's line in the whole subsection: a finding that comes back is yours, not the commis's. Read these two facts together and in that order, because the second only works if the first left you with paper.",
         "The third group is one of the crisis playbooks, written before it is needed. On a foodborne-illness complaint, take it seriously and kindly, gather specifics, preserve records and product. Then call the insurer and, if credible, the health department yourself, because the cover-up is always worse than the event. The principle beneath the Inspections clause says why: crises are inevitable, scandals are optional, and the difference is preparation, documentation, and guests first, reputation second, ego never. Read the principle twice.",
@@ -2899,12 +2776,12 @@
       "subsection": "service",
       "lede": "Service at Sous Chef is the board and the list: the grapes behind the glass, the cheeses and cured meats by country, and what is in the well and call bottles behind the bar.",
       "paragraphs": [
-        "Chef de Partie gave you how a wine is described and the board's formula. Sous Chef asks you to sell off the list and the board from depth. Twelve modules sit here in four groups: one grape atlas, four cheese boards, six charcuterie modules and one bar shelf. Take them in that order unless you work the bar, where the bottle comes second.",
+        "Chef de Partie gave you how a wine is described and the board's formula. Sous Chef asks you to sell off the list and the board from depth. The modules here fall in four groups: one grape atlas, four cheese boards, six charcuterie modules and one bar shelf. Take them in that order unless you work the bar, where the bottle comes second.",
         "Take The Grape Atlas (Deep Reference) first, because the floor uses it every night. Seventeen varietals, Riesling to Zinfandel, and for each you can say where it comes from, what it smells like and what it does at the table. Work the grapes in pairs, Chardonnay against Sauvignon Blanc, Pinot Noir against Gamay, so each has a neighbor.",
         "The cheese boards come next, in the order the page lists them. The Italian Board and The French Board come first and carry the most cheeses: why the crunch in aged Parmigiano is a feature, Gorgonzola dolce against piccante, why Époisses smells worse than it tastes, and how to stop a guest cutting the nose off a wedge of Comté. Alpine and Iberian sells the melting cheeses on their physics and places Cabrales as the blue that outguns Roquefort. Britain, the Low Countries and the Cold Edge closes the boards with Stilton, aged Gouda, and the four that behave unlike any of them: feta, halloumi, brunost, sulguni.",
         "Charcuterie is the largest group and it has an order. Start with The Charcuterie Board, the two churches of whole muscle and fermented salami on one slicer, because its outcome is the standard you hold the pass to: 3 to 5 meats spanning silk, salame, spreadable and a wildcard, 60 to 90 g a head, whole-muscle sliced translucent and salame in 2 to 3 mm coins on a slight bias, everything at room temperature 20 to 30 minutes out and cut as close to service as possible.",
         "After that the modules go by region. The Italian Salumi tells Parma from San Daniele and coppa from culatello. The Spanish Cure gives you the bellota grades and separates Spanish chorizo from Mexican before a guest orders the wrong one. The French Charcuterie is pâté and terrine cut with a hot wet knife, boudin noir explained to a hesitant table, and the foie gras order handled without improvising. Central Europe, America and the Wider Cure places Black Forest ham, the kielbasa family and country ham's salt. Read How It Was Cured (Reference) last: it answers the nitrite question without a myth, and tells you when to hand it to the chef.",
-        "What Is in the Bottle stands apart from the boards: for any well or call order, what the spirit is made from, roughly what it tastes like and what it substitutes for. The level page opens three doors: the first module, the track of all 27 modules, and Drill, over this level's modules with the whole track as the field. A module is met through its terms: every term recalled met or close in the drill. So take one module, then the drill, and move on when none of its terms is missed. The Sous Chef test at the foot of the page is untimed and ends on what you missed with the right answers."
+        "What Is in the Bottle stands apart from the boards: for any well or call order, what the spirit is made from, roughly what it tastes like and what it substitutes for. The level page opens three doors: the first module, the track of all 27 modules, and Drill, over this level's modules with the whole track as the field. A module is met through its terms: every term recalled met or close in the drill. So take one module, then the drill, and move on when none of its terms is missed. The Level test at the foot of the page is untimed and ends on what you missed with the right answers."
       ],
       "cites": [
         {
@@ -2973,10 +2850,10 @@
     {
       "level": 4,
       "subsection": "dishes",
-      "lede": "Six project dishes, two from the fire and four from the capstone, that cook for a room rather than a plate and run from one hour to a twelve-hour day.",
+      "lede": "Project dishes, two from the fire and the rest from the capstone, that cook for a room rather than a plate and run from one hour to a twelve-hour day.",
       "paragraphs": [
-        "Chef holds six dishes and none of them is a plate you put up between tickets. Two come from Fire & Smoke: Tacos al Pastor (Home Trompo) and Central Texas Smoked Brisket, the semester where live fire is the ingredient and the cook is counted in hours. Four come from The Restaurateur's Capstone, the final semester that cooks for a room, not a plate: Sauce Espagnole & Demi-Glace, Dry-Brined Roast Turkey with Real Gravy, Salt-Baked Whole Fish and Baked Alaska. What they share is not one technique but a plan: five of the six ask you to schedule the day and hold a standard over a long wait, and two are finished in front of people.",
-        "Take Salt-Baked Whole Fish first. It is the shortest of the six at an hour and the only one at difficulty 2, and it teaches you to trust a method you cannot see into: the fish steams inside its crust and you judge it by time for its weight, or by a probe pushed through the crust, not by looking. Next take Sauce Espagnole & Demi-Glace, because it is the base a brown-sauce station stands on: a roux, seared bones, then hours of skimming and reducing until the sauce coats a spoon. It is the mother sauce Chef de Partie named and this level makes at scale.",
+        "None of the dishes at Chef is a plate you put up between tickets. Two come from Fire & Smoke: Tacos al Pastor (Home Trompo) and Central Texas Smoked Brisket, the semester where live fire is the ingredient and the cook is counted in hours. Four come from The Restaurateur's Capstone, the final semester that cooks for a room, not a plate: Sauce Espagnole & Demi-Glace, Dry-Brined Roast Turkey with Real Gravy, Salt-Baked Whole Fish and Baked Alaska. What they share is not one technique but a plan: all but the fish ask you to schedule the day and hold a standard over a long wait, and two are finished in front of people.",
+        "Take Salt-Baked Whole Fish first. It is the shortest here at an hour and the only one at difficulty 2, and it teaches you to trust a method you cannot see into: the fish steams inside its crust and you judge it by time for its weight, or by a probe pushed through the crust, not by looking. Next take Sauce Espagnole & Demi-Glace, because it is the base a brown-sauce station stands on: a roux, seared bones, then hours of skimming and reducing until the sauce coats a spoon. It is the mother sauce Chef de Partie named and this level makes at scale.",
         "Then the holiday bird and the theater dessert. Dry-Brined Roast Turkey with Real Gravy is the bird: the salt goes on a day or more ahead, it roasts in a hot oven, and the gravy is built from the drippings and passed through a sieve so it arrives clean. Baked Alaska is a dessert made to be seen: a meringue whipped stiff enough to insulate the ice cream and cake beneath it, then browned fast. Both are cooked for a table that is watching.",
         "Leave the two fire dishes for days you own from morning to night. Tacos al Pastor (Home Trompo) is four hours: the marinade of acid, salt and time does its work before the stack goes near the heat, then the stack roasts in a hot oven and the slices are seared hard on the plancha as you carve. Central Texas Smoked Brisket is twelve. Low and slow smoking carries the dish, with a wrapped braise through the middle hours, and the last two steps, resting the meat and slicing against the grain, are where most briskets are lost. Cook the pastor before the brisket: it roasts in the oven and finishes on the plancha, a plate you can put up in one day before you give twelve hours to the smoker.",
         "The doors pick the next dish for you. Read the semester opens the Path of Study at the semester teaching the first dish you have not cooked, so start there and read the whole semester before you shop. Cook the next dish takes you straight to that recipe page. The library at this level shows the grid filtered to this difficulty when you want your own order. A dish is met when it has been cooked and logged: cooked once, honestly, and written down. Nothing else is asked of it."
@@ -3013,18 +2890,18 @@
           "href": "/recipe/central-texas-smoked-brisket"
         }
       ],
-      "next": "There is no level above Chef. What keeps these six sharp is the calendar: put the brisket and the bird on it once a season, make demi-glace whenever the stock pot is on anyway, and log each cook so the next one starts from what you learned."
+      "next": "There is no level above Chef. What keeps them sharp is the calendar: put the brisket and the bird on it once a season, make demi-glace whenever the stock pot is on anyway, and log each cook so the next one starts from what you learned."
     },
     {
       "level": 4,
       "subsection": "techniques",
-      "lede": "Eight techniques on one to five recipes each, taught by no semester, each turning on one moment you have to be present for.",
+      "lede": "Techniques on one to five recipes each, taught by no semester, each turning on one moment you have to be present for.",
       "paragraphs": [
         "At Sous Chef the techniques governed a whole service. Here they sit on the fewest recipes in the guide, one to five each, and no semester teaches them. None carries a written standard, so each is met by any cook of one of its recipes.",
-        "Start with the three that make rice the dish: Biryani & dum, Paella & socarrat, Sushi rice & rolling. In biryani the rice is parboiled, layered with the marinated or part-cooked meat, and the pot is sealed and finished on the lowest heat so steam does the last of the cooking; dum is that sealed finish, and the discipline is not lifting the lid. Paella is the opposite instinct: a wide shallow pan, rice never stirred once it is in the stock, and the heat pushed in the last minutes so the bottom sets into socarrat, the toasted crust you hear crackle before you see it. Sushi rice is seasoned with vinegar while still warm and folded with a cutting stroke, then rolled on the mat. Take biryani first, since the sealed pot forgives a minute and socarrat does not; sushi rice last.",
-        "The second group is dough: Hand-pulled noodles, Tandoor breads, The pretzel bath. All three treat gluten as a material, and the Lexicon anchor under the noodles (gluten and hydration) is the key: the elastic network built when wheat's proteins meet water and agitation, developed by kneading and relaxed by rest. A noodle dough is worked hard and rested long so it stretches instead of snapping. Tandoor breads want a soft dough slapped against a wall far hotter than a home oven; on a line you stand in for the wall with a stone or a skillet at full heat. The pretzel bath is the shortest step and the least intuitive: shaped dough dipped in an alkaline solution before it bakes, which is where the deep mahogany color and the tight, chewy skin come from. Take the pretzel bath first, one step on an ordinary dough, and the noodles last, because they take longest to learn.",
-        "Mole and The soufflé stand apart: both are built before the final heat. A mole is stages, dried chiles toasted and soaked, nuts, seeds and spices toasted on their own, everything ground, fried as a paste and thinned into sauce over a long simmer. The failure is a scorched chile, and it takes seconds. The soufflé rests on the second anchor (creaming, foaming and cake structure): the rise is air you built before the oven, whites whipped to a foam and folded into a base, and once air is in you fold and never stir, because every rough stroke costs height. Take the soufflé last, since with one recipe there is nowhere to hide.",
-        "Read the techniques opens the index of all eight. The next technique takes you straight to the first not yet met. This level's Dishes are a separate list; nothing here waits on them."
+        "Start with the three that make rice the dish: Biryani & dum, Paella & socarrat, Sushi rice & rolling. In biryani the rice is parboiled, layered with the marinated or part-cooked meat, and the pot is sealed and finished on the lowest heat so steam does the last of the cooking; dum is that sealed finish, and the discipline is not lifting the lid. Paella is the opposite instinct: a wide shallow pan, rice never stirred once it is in the stock, and the heat pushed in the last minutes so the bottom sets into socarrat, the toasted crust you hear crackle before you see it. Sushi rice is seasoned with vinegar while still warm and folded with a cutting stroke, then rolled on the mat. Within the rice, biryani first, since the sealed pot forgives a minute and socarrat does not, and sushi rice at the end of the group.",
+        "The second group is dough: Hand-pulled noodles, Tandoor breads, The pretzel bath. All three treat gluten as a material, and the Lexicon anchor under the noodles (gluten and hydration) is the key: the elastic network built when wheat's proteins meet water and agitation, developed by kneading and relaxed by rest. A noodle dough is worked hard and rested long so it stretches instead of snapping. Tandoor breads want a soft dough slapped against a wall far hotter than a home oven; on a line, a stone or a skillet at full heat stands in for the wall. The pretzel bath is the shortest step and the least intuitive: shaped dough dipped in an alkaline solution before it bakes, which is where the deep mahogany color and the tight, chewy skin come from. Take the dough next, beginning with the pretzel bath, one step on an ordinary dough, and ending with the noodles, which take longest to learn.",
+        "Mole and The soufflé stand apart: both are built before the final heat. A mole is stages, dried chiles toasted and soaked, nuts, seeds and spices toasted on their own, everything ground, fried as a paste and thinned into sauce over a long simmer. The failure is a scorched chile, and it takes seconds. The soufflé rests on the second anchor (creaming, foaming and cake structure): the rise is air you built before the oven, whites whipped to a foam and folded into a base, and once air is in you fold and never stir, because every rough stroke costs height. Mole follows the dough. Take the soufflé last of all, since with one recipe there is nowhere to hide.",
+        "Read the techniques opens the index at this level. The next technique takes you straight to the first not yet met. This level's Dishes are a separate list; nothing here waits on them."
       ],
       "cites": [
         {
@@ -3068,18 +2945,18 @@
           "href": "/technique/the-souffle"
         }
       ],
-      "next": "Nothing sits above Chef. What keeps these eight sharp is the menu itself: a technique with three recipes in the guide stays in your hands only when one of them is a dish you actually run, and the soufflé, with one, needs a season on the dessert list."
+      "next": "Nothing sits above Chef. What keeps these techniques sharp is the menu itself: a technique with three recipes in the guide stays in your hands only when one of them is a dish you actually run, and the soufflé, with one, needs a season on the dessert list."
     },
     {
       "level": 4,
       "subsection": "lexicon",
-      "lede": "At Chef the Lexicon is mostly the building, not the plate: thirty entries on restaurant finance and opening, and nine of the rarest things a kitchen ever handles.",
+      "lede": "At Chef the Lexicon is mostly the building, not the plate: restaurant finance and opening, and a handful of the rarest things a kitchen ever handles.",
       "paragraphs": [
         "Chef holds the rest of Restaurant Finance & Opening and the last of the Fruit, Fungi and Vegetable atlases. Nothing here is drilled at a station. It is owned, without notes. Take Why Restaurants Fail: The Honest List first, because most of the finance entries answer one line of it. Then read the money spine in order: The Concept & Business Plan, Feasibility & Market Analysis, Startup Costs, The Pro Forma & Realistic Projections, Funding, The Restaurant P&L, Line by Line, Break-Even Analysis and Cash Flow & the Working Capital Trap. The discipline they share: build the number bottom-up, then secure more than the spreadsheet says. Carry one figure out with you, break-even in covers a day, the number a host stand can chase.",
         "The Owner's Capstone names three documents that can follow you home, so read The Lease, Personal Guarantees & the Good-Guy Clause and Payroll, Taxes & Compliance as a set, with Legal Entity & Partnership Agreements and Deal Structures & the Investor's Waterfall beside them: those decide who owns the name, and who is paid first, when partners stop speaking. Follow the pointers: Startup Costs sends you to The Build-Out, Licenses & Permits hands off to Liquor License Economics, and the liability that license brings is a line in Insurance.",
         "The rest go in pairs: Site Selection & the Location Math with TI Allowance & Lease Negotiation, The Chart of Accounts & 4-Week Periods with The Org Chart & Management Structure, The Tech Stack with Third-Party Delivery Economics, Catering, Events & Revenue Diversification with Marketing & the Regulars Math, The Opening with Culture & the Owner's Job, and Growth last.",
-        "The nine atlas entries come through rarely, each with one handling rule. Four fruits: Feijoa drops when ripe and browns fast once cut, so eat it with a spoon; Mangosteen rind carries a bitter latex that stains, so cut shallow, and the lobes on the base count the segments; Medlar is picked hard and bletted for weeks until it yields like a soft persimmon; Tamarillo will not peel raw, so cut a cross, blanch and shock it like a tomato, red types tart, gold sweeter.",
-        "Three fungi are ruled by water. Lion's Mane will not brown until its water is gone: a dry pan, a weight, and only then fat. The scent of Matsutake leaves with the steam: brief fierce heat or a clear dashi. White Truffle goes the same way in a pan and is meaningfully weaker three days out of the ground: shave it at the table, last, over warm fat. Two vegetables are bitterness managed by dark and cold: Cardoon is blanched in the field, and most of it is boiled in acidulated water first; Puntarelle is split into strips and soaked in ice water until it curls, then dressed with anchovy, garlic, vinegar and oil.",
+        "The atlas entries come through rarely, each with one handling rule. Four fruits: Feijoa drops when ripe and browns fast once cut, so eat it with a spoon; Mangosteen rind carries a bitter latex that stains, so cut shallow, and the lobes on the base count the segments; Medlar is picked hard and bletted for weeks until it yields like a soft persimmon; Tamarillo will not peel raw, so cut a cross, blanch and shock it like a tomato, red types tart, gold sweeter.",
+        "Three fungi are ruled by water. Lion's Mane will not brown until its water is gone: a dry pan, a weight, and only then fat. The scent of Matsutake leaves with the steam, so wet or long heat strips it: a brief fierce grill, or torn into a clear dashi. White Truffle goes the same way in a pan and is meaningfully weaker three days out of the ground: shave it at the table, last, over warm fat. Two vegetables are bitterness managed by dark and cold: Cardoon is blanched in the field, and most of it is boiled in acidulated water first; Puntarelle is split into strips and soaked in ice water until it curls, then dressed with anchovy, garlic, vinegar and oil.",
         "Read the terms opens the Lexicon at this level; take one finance entry between services, and the atlas ones at the walk-in, thing in hand. Flashcards and Quiz run over this level's terms, where a term is met when recalled met or close on the flashcard ladder, or in the quiz, and a miss alone is never met."
       ],
       "cites": [
@@ -3284,29 +3161,29 @@
     {
       "level": 4,
       "subsection": "deck",
-      "lede": "Fourteen cards a guest asks about once a season, and at Chef you say each one plainly, with what it is not, and without notes.",
+      "lede": "At Chef the deck is the rare word on a serious menu, and you own each one well enough to explain it at the table without looking.",
       "paragraphs": [
-        "The Floor Deck at Chef is the last fourteen cards of the 281, and not one of them is on a nightly prep list. They reach the pass rarely: a specialist charcuterie, a foraged mushroom, a bottled acid, a grain from the first farms. Sous Chef gave you the working fine-dining case: squab, guanciale, turbot, beurre blanc. Chef asks for each card's origin, what it is not, and a line it belongs on.",
-        "Take the pantry three and the cured two first, because guests confuse them and so do cooks. Verjus is pressed unripe grape juice, unfermented, tart without the vinegar bite that fights a glass of wine. Saba is grape must cooked down for hours, sweet, never soured. Banyuls is a fortified Grenache from Roussillon, or the nutty vinegar aged from it. Say them as a set: green, cooked, fortified. Lomo is the whole Spanish pork loin dried with pimentón and served as is in thin slices, not tenderloin. Bottarga is the salted, pressed, dried roe sac of mullet or tuna, never cooked, grated over the plate at the end like a cheese.",
-        "The three mushrooms share one idea: texture stands in for meat. Lion's Mane pulls into strands like shellfish once pressed and seared hard, and a cool pan only steams it. Chicken of the Woods tears like cooked chicken, only the young edges eat well, and it must be cooked through. Abalone Mushroom is the oyster's thicker cousin, named for the sea snail's chew and not the shellfish itself. Dairy next. Brebis is ewe's milk cheese, the milk nearly twice the fat of cow's, so it eats dense and sweet, milky young and nutty in the aged Pyrenees tommes. Washed Rind is a method, not a milk: a brine rub that grows the orange, tacky, pungent skin, the opposite of the bloomy rind you met at Sous Chef.",
-        "The grains ask you to tell an old wheat from a common one. Farro Piccolo is einkorn, small and quick to cook, softer and sweeter than everyday emmer farro. Freekeh is green wheat, usually durum, cut early, piled and set alight, so it tastes of smoke where bulgur does not. Acquerello is not a variety but a brand: carnaroli aged at least a year in the husk on one Piedmont estate, its germ blended back after milling. The one preparation, Ballotine, closes the set: a boned bird or leg rebuilt around forcemeat, rolled, tied, then poached or roasted, and not a roulade, which rolls a flat sheet.",
-        "Take them in that order, pantry to Ballotine, the one you may cook rather than describe. Open Flip cards for the first pass and read the not-this lines twice. Go to Say it back before the written test: recall before recognition is the one deck mode that counts as a round. The written test is untimed and ends on what you missed with the right answers and no number. The deck landing shows what is owed today. A card is met when it has been graded met or close in the deck's modes; a miss alone is never met."
+        "Most cards carry a not-this line naming what the word gets mistaken for: tenderloin for Lomo, tuna for Escolar, bulgur for Freekeh. Where a card has one, read it as carefully as the why, because that difference is what you will be asked to explain.",
+        "Take first the cards that lean on a word you already hold from Sous Chef, because the difference is the whole lesson. Grenobloise is meunière's brown butter with capers, diced peeled lemon in place of juice, and croutons. Washed Rind is the orange, tacky, pungent opposite of a bloomy rind, and most Robiola is paler and milder than Taleggio. Secreto Ibérico is a fresh cut for a fast grill, not the cured jamón.",
+        "Then the proteins and the cures. Chicken Oysters are the two coin-sized pieces of dark meat on the back above the thigh. Moulard is the sterile hybrid behind most foie gras and a thick magret. Koji-Aged meat is softened in days by a mold culture, where dry-aging takes weeks. Ikejime says only how a fish was killed and bled, never its species or cut. Cured Lomo, Culatello and Bottarga are served uncooked: know which is the whole loin, which the boned rear muscle of the leg cured in a bladder, which the dried roe sac grated like cheese. Much of Escolar's oil is wax esters the body cannot digest, which is why kitchens keep portions small.",
+        "The rest sell on texture, scent or label. Abalone Mushroom holds a springy chew, Lion's Mane sears into strands like crab, Chicken of the Woods tears like cooked chicken and must be cooked through, and Matsutake loses its pine scent to hard cooking. Farro Piccolo is einkorn, Acquerello is a brand of husk-aged carnaroli, Freekeh is green wheat charred and rubbed. Banyuls, Saba and Verjus are three grape products with three different balances of sweet and sour, and Brebis is ewe's milk cheese, rich and sweet. Last, three classics: Nage is a simple poaching broth served as the sauce, not a clarified consommé; a Ballotine is a boned bird or leg rebuilt around forcemeat; a Vacherin is a crisp meringue shell, most often filled with ice cream.",
+        "Open Flip cards for the Floor Deck at this level to read them first, then move to Say it back, recall before recognition, the one deck mode that counts as a round: say the gist, and the not-this where the card has one, aloud before you turn the card. A card is met when it has been graded met or close in the deck's modes; a miss alone is never met. The deck's landing shows what is owed today. The written test for this level is untimed and ends on what you missed, with the right answers and no number."
       ],
       "cites": [
         {
-          "slug": "fd_0273",
-          "name": "Verjus",
-          "href": "/service/deck/study?card=fd_0273"
+          "slug": "fd_0304",
+          "name": "Koji-Aged",
+          "href": "/service/deck/study?card=fd_0304"
         },
         {
-          "slug": "fd_0268",
-          "name": "Saba",
-          "href": "/service/deck/study?card=fd_0268"
+          "slug": "fd_0307",
+          "name": "Chicken Oysters",
+          "href": "/service/deck/study?card=fd_0307"
         },
         {
-          "slug": "fd_0267",
-          "name": "Banyuls",
-          "href": "/service/deck/study?card=fd_0267"
+          "slug": "fd_0308",
+          "name": "Moulard",
+          "href": "/service/deck/study?card=fd_0308"
         },
         {
           "slug": "fd_0070",
@@ -3314,9 +3191,29 @@
           "href": "/service/deck/study?card=fd_0070"
         },
         {
+          "slug": "fd_0309",
+          "name": "Culatello",
+          "href": "/service/deck/study?card=fd_0309"
+        },
+        {
+          "slug": "fd_0316",
+          "name": "Secreto Ibérico",
+          "href": "/service/deck/study?card=fd_0316"
+        },
+        {
           "slug": "fd_0126",
           "name": "Bottarga",
           "href": "/service/deck/study?card=fd_0126"
+        },
+        {
+          "slug": "fd_0320",
+          "name": "Escolar",
+          "href": "/service/deck/study?card=fd_0320"
+        },
+        {
+          "slug": "fd_0138",
+          "name": "Abalone Mushroom",
+          "href": "/service/deck/study?card=fd_0138"
         },
         {
           "slug": "fd_0152",
@@ -3329,9 +3226,9 @@
           "href": "/service/deck/study?card=fd_0153"
         },
         {
-          "slug": "fd_0138",
-          "name": "Abalone Mushroom",
-          "href": "/service/deck/study?card=fd_0138"
+          "slug": "fd_0322",
+          "name": "Matsutake",
+          "href": "/service/deck/study?card=fd_0322"
         },
         {
           "slug": "fd_0154",
@@ -3344,14 +3241,14 @@
           "href": "/service/deck/study?card=fd_0171"
         },
         {
+          "slug": "fd_0328",
+          "name": "Robiola",
+          "href": "/service/deck/study?card=fd_0328"
+        },
+        {
           "slug": "fd_0176",
           "name": "Farro Piccolo",
           "href": "/service/deck/study?card=fd_0176"
-        },
-        {
-          "slug": "fd_0188",
-          "name": "Freekeh",
-          "href": "/service/deck/study?card=fd_0188"
         },
         {
           "slug": "fd_0183",
@@ -3359,22 +3256,62 @@
           "href": "/service/deck/study?card=fd_0183"
         },
         {
+          "slug": "fd_0188",
+          "name": "Freekeh",
+          "href": "/service/deck/study?card=fd_0188"
+        },
+        {
+          "slug": "fd_0336",
+          "name": "Nage",
+          "href": "/service/deck/study?card=fd_0336"
+        },
+        {
           "slug": "fd_0228",
           "name": "Ballotine",
           "href": "/service/deck/study?card=fd_0228"
+        },
+        {
+          "slug": "fd_0340",
+          "name": "Grenobloise",
+          "href": "/service/deck/study?card=fd_0340"
+        },
+        {
+          "slug": "fd_0348",
+          "name": "Vacherin",
+          "href": "/service/deck/study?card=fd_0348"
+        },
+        {
+          "slug": "fd_0267",
+          "name": "Banyuls",
+          "href": "/service/deck/study?card=fd_0267"
+        },
+        {
+          "slug": "fd_0268",
+          "name": "Saba",
+          "href": "/service/deck/study?card=fd_0268"
+        },
+        {
+          "slug": "fd_0273",
+          "name": "Verjus",
+          "href": "/service/deck/study?card=fd_0273"
+        },
+        {
+          "slug": "fd_0353",
+          "name": "Ikejime",
+          "href": "/service/deck/study?card=fd_0353"
         }
       ],
-      "next": "Nothing sits above Chef. What keeps these fourteen sharp is the floor: say Bottarga, Verjus or Ballotine aloud each time one lands on the menu, and open the deck landing whenever a card is owed."
+      "next": "Nothing sits above Chef, so the deck stays sharp through use: come back to Say it back whenever the deck shows cards owed today, and teach these words at pre-shift, because a card you can explain to a new server is a card you own."
     },
     {
       "level": 4,
       "subsection": "palate",
-      "lede": "Spicy and muddy, the two faults with the least obvious levers, and every taste on the ladder taken to rung 5.",
+      "lede": "Spicy and muddy, the faults with the least obvious levers, and every taste on the ladder taken to rung 5.",
       "paragraphs": [
-        "The repair table opens at Commis with flat and salty, the faults with a direct counter, and spicy and muddy are the last the level ladder places. What these two share is that the fault is already in the pot. Only fat pulls heat back out, and nothing pulls brown out, so the obvious move is rarely the whole answer, and that is why they wait for Chef.",
+        "The repair table opens at Commis with flat and salty, the faults with a direct counter, and spicy and muddy are the last the level ladder places. What they share is that the fault is already in the pot. Only fat pulls heat back out, and nothing pulls brown out, so the obvious move is rarely the whole answer, and that is why they wait for Chef.",
         "Take spicy first. The symptom is that the heat has stopped being a flavor and become the only one. The table lists five levers in order of gentleness. Dairy or fat dissolves capsaicin and is the one that physically removes heat. Sugar soothes. Acid refocuses the palate elsewhere. Starch dilutes. More bland base is the honest fix, and usually the only one that works at service. Read the five in two groups: sugar and acid change how the heat is felt, fat, starch and base change how much heat is in each spoon. At the pass, with a sauce that has gone over, more base is the answer, and the table says so. Reach for fat only where the dish takes it, taste, and expect to end on base. Sugar and acid are for a dish that is close, not one that is on fire.",
         "Then muddy. The symptom is deep, brown and indistinct: every layer present and none of them legible. You will meet it in the braise that has reduced all afternoon and the sauce built on a dark stock. The table gives a single lever, brightness at the top: fresh herb, zest, raw allium, the finishing register applied as medicine. The fault is not an excess of any one taste but a loss of contrast, and contrast cannot be cooked back in. The fix sits on the plate, on top, added raw at the last moment.",
-        "The order matters because the two faults teach opposite lessons. Spicy shows the difference between masking a fault and removing it. Muddy shows that a fault can have a single lever on the table and that it can live outside the pot. Owning the menu means going upstream of both: heat concentrates as liquid leaves, so a chile added early to something that will reduce is a decision, and a finishing register belongs on the recipe card, not left to whoever notices at the pass.",
+        "The order matters because these faults teach opposite lessons. Spicy shows the difference between masking a fault and removing it. Muddy shows that a fault can have a single lever on the table and that it can live outside the pot. Owning the menu means going upstream of both: heat concentrates as liquid leaves, so a chile added early to something that will reduce is a decision, and a finishing register belongs on the recipe card, not left to whoever notices at the pass.",
         "Two doors open from this page. The repair table lists the faults with their levers, in order; a fault is met when it has been named on a plate there, so name spicy and muddy on plates you have tasted. Calibrate is the tasting ladder, and at Chef it asks each of the six tastes, salt, sweet, acid, bitter, umami and seasoned, to rung 5; a taste is met when its ladder is cleared to that rung. Take Calibrate alongside the table, because a palate at rung 5 is the one that can tell a repaired plate from a merely less wrong one."
       ],
       "cites": [
@@ -3396,11 +3333,11 @@
       "subsection": "safety",
       "lede": "At Chef the Food Safety page turns over: one fact about your jurisdiction, and five places where the guide names a rule it never writes down.",
       "paragraphs": [
-        "The levels from Commis to Sous Chef read what the guide states, and Sous Chef where it disagrees with itself. Chef reads what the guide names and never states. Six items sit here and only one is a fact you can learn: Know your jurisdiction's system, with letter grades posted in the window in one city, a count of points in another, and a risk-based frequency that decides how often the door opens. The other five are gaps, places where the guide names a subject and never states the rule. A chef owns both, because a chef is the person the missing rule lands on.",
+        "Commis to Chef de Partie read what the guide states, and Sous Chef met the first place it names a rule without stating it, sanitizer buckets titrated to a concentration never given. Chef makes that reading the subject. Only one item here is a fact you can learn: Know your jurisdiction's system, with letter grades posted in the window in one city, a count of points in another, and a risk-based frequency that decides how often the door opens. The other five are gaps, places where the guide names a subject and never states the rule. A chef owns both, because a chef is the person the missing rule lands on.",
         "Take the jurisdiction first, because it is the one item here that is a fact and not a gap. Sous Chef framed one kitchen, one inspector, one set of findings in writing. At Chef the framing changes with the jurisdiction: what is posted, how it is counted and how often anyone comes are set by the authority that holds your permit, not by this guide. Find out which system you are under.",
-        "Then read the gaps in pairs, because they share a shape. Two are half a law. The two-hour rule governs everything left in it, and cooling is given a law of its own, but reheating and keeping food hot on the line are never given one. Raw below ready-to-eat in storage gives the shelf order, and how frozen product is brought out for the cook is not covered anywhere in the guide. In both, the guide states the first half of a process and goes silent on the second. The page marks the silence and stops. It does not fill it with a figure. You must, and not from this page: that number belongs to your jurisdiction's code and the written plan on your own wall.",
+        "Then read the gaps in pairs, because they share a shape. Two are half a law. The two-hour rule governs everything left in the danger zone, and cooling is given a law of its own, but reheating and keeping food hot on the line are never given one. Raw below ready-to-eat in storage gives the shelf order, and how frozen product is brought out for the cook is not covered anywhere in the guide. In both, the guide states the first half of a process and goes silent on the second. The page marks the silence and stops. It does not fill it with a figure. You must, and not from this page: that number belongs to your jurisdiction's code and the written plan on your own wall.",
         "Two more are asserted without being specified. Identify hazards, control critical points, document is HACCP compressed to three verbs. What makes those verbs a working system, the limits, the frequency, the verification and the records, is not there. The protocol for a guest's declared restriction, which the guide calls service-critical and legal-critical, is asserted twice as critical and never specified once. Read both as a list of what your own documents must hold, not as a lesson in how to hold it.",
-        "The last gap is the plainest. The power outage's food-disposition rules are a pointer to rules the guide does not give. When the walk-in goes dark the clock starts, you will have to act, and the guide will not be what you act from. Know where that answer lives before you need it.",
+        "The last gap is the plainest. The power outage's food-disposition rules are a pointer to rules the guide does not give. When the walk-in goes dark you will have to act, and the guide will not be what you act from. Know where that answer lives before you need it.",
         "The doors are two: Read, which opens the Food Safety page at this level's first slice, and The whole page. Take the slice between services and the whole page once, end to end, because a gap only reads correctly beside the statement it leans on. Met here is one line: Food Safety is read, never graded, and nothing about it is recorded. What you carry out is a map of where the guide ends and your jurisdiction and your own plan begin."
       ],
       "cites": [
@@ -3430,18 +3367,18 @@
           "href": "/safety#gaps"
         }
       ],
-      "next": "Nothing sits above Chef. What keeps this sharp is the reread: each time your jurisdiction changes a rule or posts a new grade, walk the six items again and check that every gap the guide names has a written answer in your own kitchen."
+      "next": "Nothing sits above Chef. What keeps this sharp is the reread: each time your jurisdiction changes a rule or posts a new grade, walk this level's items again and check that every gap the guide names has a written answer in your own kitchen."
     },
     {
       "level": 4,
       "subsection": "service",
       "lede": "Service at Chef leaves the cellar and the boards for the bar, then for why the shift makes money.",
       "paragraphs": [
-        "At Sous Chef, Service was the grape atlas and the boards: what is in the bottle and on the slate. Chef holds the last three modules of the track, 25 to 27, and they turn the same server toward the bar and the ledger. The Cocktail Templates, Bar Craft and Why the Shift Makes Money share one bar: a guest orders by name, you say what is in it or build it to spec, and the house counts what it sold. Two are for anyone on the floor; one is for the server who also builds the drink.",
-        "Take The Cocktail Templates first. Seven terms, and every classic collapses into one of them: the sour, the old fashioned, the stirred aristocrats (Martini and Manhattan), highballs and the Collins family, the Negroni and its equal-parts architecture, tiki and the rum canon, and the hot drinks, toddy and Irish coffee among them. Learn the seven and a name you have never poured still answers to a shape you know: you can say what is in it for anything ordered by name.",
-        "Bar Craft (Server-Bartenders Only) is the long one, sixteen terms, for the hands that make the drink. Start with the first law, shake what is cloudy and stir what is clear, then ice and dilution as an ingredient, then the jigger and the spec, because the rest of the build sits on them. After them come the tools and the programs: the Hawthorne and julep strainers and the double strain, egg whites and the dry shake, the syrups (simple, rich and the oleo), the citrus program, the expressed twist, glassware and the chill law, batching, and bar mise within a three-step reach. It closes on the starting bar, zero-proof cocktails and the spritz. If you never stand behind the bar, read it once anyway, so you know what the bartender is doing while your table waits.",
-        "Why the Shift Makes Money comes last because it prices the other two. Eight terms cross wine, bar and finance: wine list engineering and the markup question; by-the-glass economics, Coravin and corkage; pour cost; the well, the call and the back bar; covers, turns and dayparts; reservations, no-shows and the book; tipping models, pools, tip credits and service charges; and menu pricing and psychology. The outcome is plain: you understand what your recommendation does to the room's numbers, where the value bottles sit, what a glass really costs to pour, and how the tip pool you are in actually works.",
-        "The level page opens three doors. The first module opens The Cocktail Templates. The track opens all 27 modules, the right door if the Sous Chef boards have gone faint. The drill is the service drill over this level's modules with the whole track as the field. Met has one rule: a module is met through its terms, every term of the module recalled met or close in the drill. At the foot of the page sits the Chef test, untimed, across the subsections, ending on what you missed with the right answers and nothing tallied."
+        "At Sous Chef, Service was the grape atlas and the boards: what is in the bottle and on the slate. Chef holds the last modules of the track, and they turn the same server toward the bar and the ledger. The Cocktail Templates, Bar Craft and Why the Shift Makes Money share one bar: a guest orders by name, you say what is in it or build it to spec, and the house counts what it sold. Two are for anyone on the floor; one is for the server who also builds the drink.",
+        "Take The Cocktail Templates first. Seven templates, and every classic collapses into one of them: the sour, the old fashioned, the stirred aristocrats (Martini and Manhattan), highballs and the Collins family, the Negroni and its equal-parts architecture, tiki and the rum canon, and the hot drinks, toddy and Irish coffee among them. Learn the seven and a name you have never poured still answers to a shape you know: you can say what is in it for anything ordered by name.",
+        "Bar Craft (Server-Bartenders Only) is the longest module, for the hands that make the drink. Start with the first law, shake what is cloudy and stir what is clear, then ice and dilution as an ingredient, then the jigger and the spec, because the rest of the build sits on them. After them come the tools and the programs: the Hawthorne and julep strainers and the double strain, egg whites and the dry shake, the syrups (simple, rich and the oleo), the citrus program, the expressed twist, glassware and the chill law, batching, and bar mise within a three-step reach. It closes on the starting bar, zero-proof cocktails and the spritz. If you never stand behind the bar, read it once anyway, so you know what the bartender is doing while your table waits.",
+        "Why the Shift Makes Money comes last because it prices the other two. Its terms cross wine, bar and finance: wine list engineering and the markup question; by-the-glass economics, Coravin and corkage; pour cost; the well, the call and the back bar; covers, turns and dayparts; reservations, no-shows and the book; tipping models, pools, tip credits and service charges; and menu pricing and psychology. The outcome is plain: you understand what your recommendation does to the room's numbers, where the value bottles sit, what a glass really costs to pour, and how the tip pool you are in actually works.",
+        "The level page opens three doors. The first module opens The Cocktail Templates. The track opens every module, the right door if the Sous Chef boards have gone faint. The drill is the service drill over this level's modules with the whole track as the field. Met has one rule: a module is met through its terms, every term of the module recalled met or close in the drill."
       ],
       "cites": [
         {

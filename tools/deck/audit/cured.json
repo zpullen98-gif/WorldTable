@@ -979,6 +979,262 @@
 				"notes": "The section is not ready as it stands. I found five problems, one serious and four smaller. The serious one is the Pâté gist (fd_0073), which a reader could not tell apart from the Terrine gist (fd_0084). The other four are confusion links that are one-way or that notThis does not explain (fd_0075 Confit, fd_0068 Bacon, fd_0064 Tasso, fd_0074 Jamón Ibérico). Each fix above gives the replacement text.\n\n**What I checked and found clean**\n- **Length:** I ran a script over all 22 cards. The section mean is 703.7 characters of prose per card against the 720 ceiling. Every card falls between 622 and 768. Every gist, guest, why, note, notThis, origin, pairs and line is inside its band.\n- **Trap parity:** every trap is within 10 characters of its card's gist, and no gist is the longest option. fd_0069 is a tie at 66 and 66.\n- **Banned language:** no hits for verdict words, the banned substrings, em or en dashes, or British spellings.\n- **Roster:** all 22 rows have a card. Ids and terms match the roster.\n- **Duplicates:** no two gists and no two guest lines are the same.\n- **Known packet errors:** the Lomo trap (fd_0070) carries \"tenderloin\". Pastrami trap 1 (fd_0072) carries \"only smoked\" and \"cold\".\n- **Say:** present on every accented term, on the term that opens on an apostrophe, and on every term a new hire would hesitate over. Speck is \"spek\" in lowercase, which matches the key's own one-syllable example \"zhoo\". The validate.mjs search showed no capitals rule for say, but I did not read the respelling check itself.\n- **Links:** I searched validate.mjs, lib.mjs and the other deck scripts and found no symmetry rule for confusedWithTerms. The one-way links above are editorial problems, not gate failures. Every confusedWithTerms and seeAlsoTerms value exists in everyCard, and no term appears in both lists on one card.\n- **Slugs:** every lexiconSlug and recipe comes from its own candidate list. Tasso omits tasso-kabrit, the Haitian goat dish. Lomo takes lomo-embuchado, not lomo-saltado. Rillettes, Bacon, Pastrami and Corned Beef leave lexiconSlug out. All four choices are correct.\n\n**Smaller items for the operator, not blocking**\n1. **Terrine (fd_0084):** madeWith leaves out liver, while its why says \"chopped pork, liver and fat\" and Pâté lists liver. The list is already at 7, and every entry flags something (egg, wheat, milk, nut, gelatin, alcohol). Decide whether liver should replace one. Terrine also says \"pistachios\", where Pâté and Charcuterie say \"pistachio\".\n2. **Pâté (fd_0073):** madeWith says \"liver\" with no qualifier, while its why says \"usually some liver\" and its trap says liver is \"common but not required\". It may be intended as the cautious flag, but it is inconsistent. \"often liver\" would match.\n3. **Coppa (fd_0066):** it lists Prosciutto as a confusion one-way. With the fix above, Prosciutto's list is full at three, so leave this one-way.\n4. **Speck (fd_0076):** its gist is the only ham gist with no place word. It is still distinguishable by \"juniper\" and \"cold smoked\". \"Alpine pork leg cured with juniper, cold smoked, then aged\" (58 characters) would separate it further from the Country Ham gist, which also ends in smoked and aged. Its trap is 67 characters, so check trap parity if you change it.\n5. **Shared lexicon slugs:** Andouille with Tasso, Guanciale with Lardo, and Pâté with Terrine each share one entry. Each is a combined essay, so this looks intended. Make sure the app handles two cards pointing at one entry."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-09-28",
+			"pass": "revision",
+			"cards": [
+				"fd_0309",
+				"fd_0310",
+				"fd_0311",
+				"fd_0312"
+			],
+			"findings": [
+				{
+					"id": "fd_0309",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "This is one boned inner muscle, cured in a bladder.",
+					"because": "Culatello is not an inner muscle, nor strictly a single muscle. The consortium and DOP describe it as the large rear muscle mass of the hind thigh, boned, skinned, separated from the fiocchetto (the smaller part left over) and trimmed into a pear shape. Calling it 'inner' misplaces the cut.",
+					"fix": "This is the leg's boned rear muscle, cured in a bladder.",
+					"lens": "fact",
+					"key": "cured-1-fact-1"
+				},
+				{
+					"id": "fd_0312",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"sometimes apple\", \"sometimes oats\", \"sometimes rice\"",
+					"because": "The card carries the alias Black Pudding, and the classic British black pudding is bound with oatmeal and often pearl barley, a gluten grain. A guest with a gluten allergy needs barley flagged. Apple is mostly the plate's garnish, which the guest line and pairing already cover, and it is not an ingredient an allergic guest needs flagged, so it can give up the seventh slot.",
+					"fix": "pork blood, pork fat, onion, often cream, sometimes oats, sometimes barley, sometimes rice",
+					"lens": "fact",
+					"key": "cured-1-fact-2"
+				},
+				{
+					"id": "fd_0312",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "It's a French blood sausage, made with pork blood, onion and warm spice",
+					"because": "The card carries the aliases Morcilla and Black Pudding, so a server at a Spanish or British-leaning table will read this line aloud and call morcilla or black pudding French. The line also says blood twice, which trips a nervous speaker. Drop the nationality from the spoken line; origin and gist already carry France.",
+					"fix": "It's a blood sausage, rich with onion and warm spice, seared crisp and served hot. Soft, earthy and classic with apples.",
+					"lens": "floor",
+					"key": "cured-1-floor-3"
+				},
+				{
+					"id": "fd_0311",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "Rich, with a bright tang of vinegar.",
+					"because": "Vinegar is only one style. The madeWith list says 'often vinegar', and many French and Italian versions are seasoned with herbs, spice or citrus and have no noticeable tang. A server who promises a tang will be wrong about the house version on many menus.",
+					"fix": "Rich, often with a vinegar tang.",
+					"lens": "floor",
+					"key": "cured-1-floor-4"
+				},
+				{
+					"id": "fd_0311",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Cooked pork cheek, jowl and tongue",
+					"because": "Cheek and jowl are the same part, so the list reads padded. Jowl also points a test-taker toward the Guanciale gist, 'cured pork jowl'.",
+					"fix": "Cooked pork cheek and tongue set in their own jelly, sliced cold",
+					"lens": "floor",
+					"key": "cured-1-floor-5"
+				},
+				{
+					"id": "fd_0309",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "The fog keeps it soft as it ages, deep red and more complex than prosciutto.",
+					"because": "As written, the fog appears to keep it 'deep red and more complex'. A server repeating this sentence gets lost halfway, and the color and depth come from the long aging, not from the fog.",
+					"fix": "Fog keeps it soft as it ages. It turns deep red, richer than prosciutto.",
+					"lens": "floor",
+					"key": "cured-1-floor-6"
+				},
+				{
+					"id": "fd_0312",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"sometimes apple\", \"sometimes oats\", \"sometimes rice\"",
+					"because": "The card carries the aliases Black Pudding and Morcilla, so its list has to cover what those are made with. British black pudding is classically made with barley or oats, which matters to a guest avoiding gluten. Several Spanish morcillas, such as the Burgos and Aragon styles and the sweet Canary one, are made with pine nuts, and some with almonds. Neither barley nor tree nuts appears on the list. Apple is the classic side dish, not an ingredient, and the line and guest fields already say so. The list is capped at 7 items, so apple is the one to drop.",
+					"fix": "\"pork blood\", \"pork fat\", \"onion\", \"often cream\", \"sometimes oats or barley\", \"sometimes rice\", \"sometimes pine nuts\"",
+					"lens": "safety",
+					"key": "cured-1-safety-7"
+				},
+				{
+					"id": "fd_0309",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "The bladder is peeled away first, and it is sliced paper thin to order.",
+					"because": "Culatello is served raw. It is salted and air-cured, never cooked. The why never says so, and the only place the card says 'raw' is the gist, which is a test answer option. A server should be able to say 'served raw' plainly from the card's back. The finocchiona card says 'never cooked' in its why, and this card should say it too. This adds length, but the safety fact justifies it.",
+					"fix": "Served raw: cured, never cooked. The bladder is peeled away and it is sliced paper thin to order.",
+					"lens": "safety",
+					"key": "cured-1-safety-8"
+				},
+				{
+					"id": "fd_0311",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It's not cheese at all.",
+					"because": "A guest avoiding dairy can hear this as a promise that there is no dairy in the dish. The house rule forbids implying what a dish is free from, and house recipes vary. The line only needs to say that the name misleads.",
+					"fix": "The name fools people.",
+					"lens": "safety",
+					"key": "cured-1-safety-9"
+				},
+				{
+					"id": "fd_0311",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "The meat is set by its own natural gelatin, not by dairy.",
+					"because": "'Not by dairy' is a free-from assurance in the one field the rule-check reads line by line. It is also only partly accurate, because the card's own madeWith lists 'sometimes gelatin' that is added, not the head's own. Say what sets it instead of what it lacks.",
+					"fix": "The name misleads. It is set by gelatin from the slow-cooked head.",
+					"lens": "safety",
+					"key": "cured-1-safety-10"
+				},
+				{
+					"key": "cured-critic-1",
+					"id": "fd_0310",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (66 chars) is longer than its only trap (64 chars), so the gist is the longest option on the card. The brief says never let the gist be the longest option.",
+					"because": "Length parity: the gist (66 chars) is longer than its only trap (64 chars), so the gist is the longest option on the card. The brief says never let the gist be the longest option.",
+					"fix": "Shorten the gist, for example to \"Soft Tuscan pork salami perfumed with fennel seed and pepper\" (60). Leave the trap as it is and do not pad it."
+				},
+				{
+					"key": "cured-critic-2",
+					"id": "fd_0312",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity: the gist (71 chars) is longer than its only trap (70) and is also over the 50 to 68 aim.",
+					"because": "Length parity: the gist (71 chars) is longer than its only trap (70) and is also over the 50 to 68 aim.",
+					"fix": "Shorten the gist, for example to \"Soft French sausage of pork blood, fat and onion, seared hot\" (59), and leave the trap alone."
+				},
+				{
+					"key": "cured-critic-3",
+					"id": "fd_0312",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Two of the aliases are wrong. Black Pudding and Morcilla are sister products, not the same thing sold under another name: black pudding is British and built on oats or barley, and morcilla is Spanish, usually with rice and onion. The gist itself calls this a French sausage. The madeWith list has taken on their ingredients (oats or barley, rice, pine nuts or almonds), which are not the classic French build.",
+					"because": "Two of the aliases are wrong. Black Pudding and Morcilla are sister products, not the same thing sold under another name: black pudding is British and built on oats or barley, and morcilla is Spanish, usually with rice and onion. The gist itself calls this a French sausage. The madeWith list has taken on their ingredients (oats or barley, rice, pine nuts or almonds), which are not the classic French build.",
+					"fix": "Keep only the alias \"Blood Sausage\". If the cousins are worth naming, put them in the why or notThis as cousins (\"kin to Spain's morcilla and Britain's black pudding\"). Rebuild madeWith around the French classic: \"pork blood\", \"pork fat\", \"onion\", \"often cream\", \"sometimes apple\", \"sometimes chestnut\"."
+				},
+				{
+					"key": "cured-critic-4",
+					"id": "fd_0311",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The guest line opens with \"Despite the name\". That implies to the guest that the dish holds no cheese, which is a free-from verdict by implication (hard rule 1). A server will repeat it as \"there's no cheese in it\".",
+					"because": "The guest line opens with \"Despite the name\". That implies to the guest that the dish holds no cheese, which is a free-from verdict by implication (hard rule 1). A server will repeat it as \"there's no cheese in it\".",
+					"fix": "Drop the phrase. For example: \"It's tender pork from the head, slow-cooked and set in its own savory jelly, then sliced cold. Rich, often with a vinegar tang.\" The why already explains the name."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "cured-1-fact-1",
+					"action": "applied",
+					"reason": "notThis now reads 'This is the leg's boned rear muscle, cured in a bladder', matching the DOP description of the large rear muscle mass of the thigh."
+				},
+				{
+					"finding": "cured-1-fact-2",
+					"action": "applied",
+					"reason": "Dropped 'sometimes apple' and flagged barley beside oats as 'sometimes oats or barley', merged with the safety-7 list so both findings are answered in the seven slots."
+				},
+				{
+					"finding": "cured-1-floor-3",
+					"action": "applied",
+					"reason": "The guest line drops 'French' and the repeated 'blood': 'It's a blood sausage, rich with onion and warm spice, seared crisp and served hot. Soft, earthy and classic with apples.'"
+				},
+				{
+					"finding": "cured-1-floor-4",
+					"action": "applied",
+					"reason": "The guest line now ends 'Rich, often with a vinegar tang.'"
+				},
+				{
+					"finding": "cured-1-floor-5",
+					"action": "applied",
+					"reason": "The gist now reads 'Cooked pork cheek and tongue set in their own jelly, sliced cold', which removes jowl and the pull toward the Guanciale gist."
+				},
+				{
+					"finding": "cured-1-floor-6",
+					"action": "applied",
+					"reason": "The why's last sentence is split: 'Fog keeps it soft as it ages. It turns deep red, richer than prosciutto.' The ten-month minimum was checked against the DOP specification."
+				},
+				{
+					"finding": "cured-1-safety-7",
+					"action": "applied",
+					"reason": "madeWith is now pork blood, pork fat, onion, often cream, sometimes oats or barley, sometimes rice, sometimes pine nuts or almonds, which covers black pudding grains and the Spanish morcillas made with nuts, and apple is dropped."
+				},
+				{
+					"finding": "cured-1-safety-8",
+					"action": "applied",
+					"reason": "The note now opens 'Served raw, never cooked.' It was trimmed to 'The bladder is peeled off and it is sliced paper thin to order' to limit the growth in length."
+				},
+				{
+					"finding": "cured-1-safety-9",
+					"action": "applied",
+					"reason": "The guest line now opens 'Despite the name, it's tender pork from the head', which keeps the point that the name misleads without anything that could be heard as a promise of no dairy."
+				},
+				{
+					"finding": "cured-1-safety-10",
+					"action": "applied",
+					"reason": "The trap why now reads 'The name misleads. It sets in jelly drawn from the long-simmered pork.', with no free-from wording and no restricted word. The trap says was shortened to 65 characters to stay level with the gist."
+				},
+				{
+					"finding": "cured-critic-1",
+					"action": "applied",
+					"reason": "Shortened the Finocchiona gist to the 60-character version so it is now shorter than its 64-character trap, which was left untouched."
+				},
+				{
+					"finding": "cured-critic-2",
+					"action": "applied",
+					"reason": "Shortened the Boudin Noir gist to 60 characters, inside the aim and 10 under its 70-character trap, which was left alone."
+				},
+				{
+					"finding": "cured-critic-3",
+					"action": "applied",
+					"reason": "Cut the aliases to Blood Sausage only, named morcilla and black pudding as kin in notThis, and rebuilt madeWith around the French classic (pork blood, pork fat, onion, often cream, sometimes apple, sometimes chestnut)."
+				},
+				{
+					"finding": "cured-critic-4",
+					"action": "applied",
+					"reason": "Dropped 'Despite the name' from the Head Cheese guest line so it no longer implies a free-from verdict; the why still explains the name."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0310",
+						"issue": "Length parity: the gist (66 chars) is longer than its only trap (64 chars), so the gist is the longest option on the card. The brief says never let the gist be the longest option.",
+						"fix": "Shorten the gist, for example to \"Soft Tuscan pork salami perfumed with fennel seed and pepper\" (60). Leave the trap as it is and do not pad it."
+					},
+					{
+						"id": "fd_0312",
+						"issue": "Length parity: the gist (71 chars) is longer than its only trap (70) and is also over the 50 to 68 aim.",
+						"fix": "Shorten the gist, for example to \"Soft French sausage of pork blood, fat and onion, seared hot\" (59), and leave the trap alone."
+					},
+					{
+						"id": "fd_0312",
+						"issue": "Two of the aliases are wrong. Black Pudding and Morcilla are sister products, not the same thing sold under another name: black pudding is British and built on oats or barley, and morcilla is Spanish, usually with rice and onion. The gist itself calls this a French sausage. The madeWith list has taken on their ingredients (oats or barley, rice, pine nuts or almonds), which are not the classic French build.",
+						"fix": "Keep only the alias \"Blood Sausage\". If the cousins are worth naming, put them in the why or notThis as cousins (\"kin to Spain's morcilla and Britain's black pudding\"). Rebuild madeWith around the French classic: \"pork blood\", \"pork fat\", \"onion\", \"often cream\", \"sometimes apple\", \"sometimes chestnut\"."
+					},
+					{
+						"id": "fd_0311",
+						"issue": "The guest line opens with \"Despite the name\". That implies to the guest that the dish holds no cheese, which is a free-from verdict by implication (hard rule 1). A server will repeat it as \"there's no cheese in it\".",
+						"fix": "Drop the phrase. For example: \"It's tender pork from the head, slow-cooked and set in its own savory jelly, then sliced cold. Rich, often with a vinegar tang.\" The why already explains the name."
+					},
+					{
+						"id": "fd_0066",
+						"issue": "The confusion link runs one way only. Head Cheese lists Coppa in confusedWithTerms and carries the alias Coppa di Testa, but the Coppa card has no link back. A guest who sees \"coppa di testa\" on a menu is the exact case where the server needs Coppa's card to point to Head Cheese.",
+						"fix": "Add \"Head Cheese\" to Coppa's confusedWith, which currently holds only Prosciutto, and add a clause to Coppa's notThis: \"Coppa di testa is head cheese, cooked and jellied.\""
+					}
+				],
+				"notes": "The section mean is fine: the 22 existing cards average 707, and with the four new ones (759, 635, 741, 640) the mean is about 705, under 720. Every roster row has a card. The two known packet errors (Lomo tenderloin, Pastrami only-smoked) already have matching traps on the existing cards. Every new gist is distinguishable from its neighbours (Culatello vs Prosciutto and Speck, Finocchiona vs Soppressata and 'Nduja, Head Cheese vs Terrine). Culatello's \"at least ten months\" matches the DOP rule (10 months minimum for the smallest pieces). Links I could not add or did not require: (1) Prosciutto's confusedWith is already at the cap of 3 (Speck, Pancetta, Jamón Ibérico), so Culatello cannot be added back; the operator could swap Pancetta out for Culatello, since Pancetta is also linked from Pancetta's own card. (2) Boudin Noir's trap (the Louisiana pork, liver and rice sausage) nearly repeats Andouille's existing trap (\"Soft Louisiana sausage of pork, rice and liver...\"). Both are false for their own cards and Cajun boudin has no card on the roster, so neither breaks a rule, but a written test that draws both cards shows the same wrong option twice. The operator may want to reword one. (3) Head Cheese could add Cheek (fd_0087) as a see-also; optional. (4) Finocchiona's \"Finely ground\" may be off against the IGP spec, which I recall as a medium grind (not checked); \"Ground pork shoulder and belly\" is the safe wording."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

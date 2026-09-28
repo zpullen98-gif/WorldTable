@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { LIMITS, PRIMERS_COMPLETE, checkPrimer, citeHref, namesItem } from '../../tools/derive/primers.mjs';
+import { LIMITS, PRIMERS_COMPLETE, checkPrimer, citeHref, countValue, namesItem, staleCounts } from '../../tools/derive/primers.mjs';
 import type { PrimersData } from './types';
 
 /**
@@ -182,5 +182,34 @@ describe('the emitted primers', () => {
 				else expect(keys.has(`${level}-${sub}`), `${level}-${sub} has nothing to prime`).toBe(false);
 			}
 		}
+	});
+});
+
+describe('a count in prose must be true', () => {
+	it('reads numbers written out and as figures', () => {
+		expect(countValue('Fourteen')).toBe(14);
+		expect(countValue('thirty-five')).toBe(35);
+		expect(countValue('thirty five')).toBe(35);
+		expect(countValue('122')).toBe(122);
+		expect(countValue('two')).toBe(2);
+	});
+
+	it('names a count of the subsection that matches no true count', () => {
+		expect(staleCounts('Fourteen dishes sit here.', 'dishes', new Set([10, 16, 45]))).toEqual(['Fourteen dishes']);
+		expect(staleCounts('Sous Chef holds Thirty-five cards.', 'deck', new Set([78, 122, 26, 336]))).toEqual(['Thirty-five cards']);
+		expect(staleCounts('Ten dishes sit here.', 'dishes', new Set([10, 16, 45]))).toEqual([]);
+	});
+
+	it('leaves subsets alone: a qualifier between, a definite lead, a qualifier after', () => {
+		const truth = new Set([10]);
+		expect(staleCounts('the five Easy plates and two pastry dishes', 'dishes', truth)).toEqual([]);
+		expect(staleCounts('Finish with the three dishes that close the semester.', 'dishes', truth)).toEqual([]);
+		expect(staleCounts('Those four faults are read in the moment.', 'palate', new Set([2]))).toEqual([]);
+		expect(staleCounts('thirty terms on restaurant finance', 'lexicon', new Set([39]))).toEqual([]);
+	});
+
+	it("only counts the subsection’s own noun, and never another subsection’s", () => {
+		expect(staleCounts('Six subjects per folio and twelve techniques in all.', 'dishes', new Set([10]))).toEqual([]);
+		expect(staleCounts('61 entries in the Vegetable Atlas', 'lexicon', new Set([266]))).toEqual([]);
 	});
 });

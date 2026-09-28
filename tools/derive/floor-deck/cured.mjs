@@ -438,10 +438,85 @@ const cards = [
 			{ says: 'Brisket slow-cooked with sweet corn kernels, an Irish American classic', why: 'Corn here is an old word for the coarse grains of salt used in the cure, not the vegetable.' }
 		]
 	},
-	{ id: 'fd_0309', term: 'Culatello', planned: true },
-	{ id: 'fd_0310', term: 'Finocchiona', planned: true },
-	{ id: 'fd_0311', term: 'Head Cheese', planned: true },
-	{ id: 'fd_0312', term: 'Boudin Noir', planned: true }
+	{
+		id: 'fd_0309',
+		term: 'Culatello',
+		level: 4,
+		say: 'koo-lah-TEL-oh',
+		aliases: ['Culatello di Zibello'],
+		gist: 'Prized boneless heart of the pork leg, cured raw inside a bladder',
+		guest: "It's the heart of the ham, the finest muscle of the pork leg, aged in the foggy lowlands near Parma. Sweeter, silkier and deeper than prosciutto.",
+		why: "The best muscle of the hind leg is boned out, salted with pepper, garlic and wine, sewn into a pig's bladder and aged at least ten months in damp cellars by the Po. Fog keeps it soft as it ages. It turns deep red, richer than prosciutto.",
+		madeWith: ['pork', 'salt', 'black pepper', 'garlic', 'often white wine'],
+		note: 'Served raw, never cooked. The bladder is peeled off and it is sliced paper thin to order.',
+		origin: 'Po River lowlands near Parma, Italy; the name means little backside',
+		notThis: "Not prosciutto, the whole leg cured on the bone. This is the leg's boned rear muscle, cured in a bladder.",
+		lexiconSlug: 'culatello-di-zibello',
+		seeAlso: ['fd_0082', 'fd_0076'],
+		confusedWith: ['fd_0074'],
+		line: 'Culatello di Zibello, torta fritta, cultured butter',
+		traps: [
+			{ says: 'Pork leg slow-cooked in wine, then chilled and shaved thin for the board', why: 'It is never cooked. It is salted and aged raw, the way prosciutto is.' }
+		]
+	},
+	{
+		id: 'fd_0310',
+		term: 'Finocchiona',
+		level: 3,
+		say: 'fee-nohk-YOH-nah',
+		gist: 'Soft Tuscan pork salami perfumed with fennel seed and pepper',
+		guest: "It's Tuscany's classic salami, seasoned with fennel seed, garlic and black pepper. Soft and rich, with a sweet hint of anise that makes it easy to love.",
+		why: 'Ground pork shoulder and belly is seasoned with fennel seed, garlic, pepper and often red wine, stuffed into casings and air-dried for weeks, never cooked. It stays softer and fattier than most salami, and the fennel gives it a sweet, anise lift.',
+		madeWith: ['pork', 'fennel seed', 'garlic', 'black pepper', 'often red wine'],
+		origin: 'Tuscany, Italy; from finocchio, the Italian word for fennel',
+		pairs: 'Tuscan bread, aged pecorino, olives, a glass of Chianti',
+		lexiconSlug: 'finocchiona',
+		seeAlso: ['fd_0080', 'fd_0081', 'fd_0078'],
+		line: 'Salumi board: finocchiona, coppa, pecorino, olives',
+		traps: [
+			{ says: 'Pork salami studded with chunks of roasted fennel bulb and onion', why: 'The flavor comes from fennel seed, and sometimes fennel flowers, never the bulb.' }
+		]
+	},
+	{
+		id: 'fd_0311',
+		term: 'Head Cheese',
+		level: 3,
+		aliases: ['Fromage de Tête', 'Coppa di Testa', 'Brawn'],
+		gist: 'Cooked pork cheek and tongue set in their own jelly, sliced cold',
+		guest: "It's tender pork from the head, slow-cooked and set in its own savory jelly, then sliced cold. Rich, often with a vinegar tang.",
+		why: "A pig's head is simmered for hours until its collagen melts into the broth. The meat is picked, seasoned with vinegar and herbs, and chilled in a mold with that broth until it sets. It eats like a tender terrine. The name comes from pressing it like a cheese.",
+		madeWith: ['pork', 'often vinegar', 'often parsley', 'sometimes gelatin'],
+		origin: 'Found across Europe; French fromage de tête, Italian coppa di testa',
+		pairs: 'Grainy mustard, cornichons, pickled onion, crusty bread',
+		notThis: 'Not coppa, the cured neck muscle, though Italians call this coppa di testa. This is cooked and jellied.',
+		lexiconSlug: 'head-cheese-and-the-aspic-arts',
+		seeAlso: ['fd_0084', 'fd_0073', 'fd_0075'],
+		confusedWith: ['fd_0066'],
+		line: 'House head cheese, grain mustard, pickles, toast',
+		traps: [
+			{ says: 'Chilled pork loaf bound with melted cheddar, sliced for the board', why: 'The name misleads. It sets in jelly drawn from the long-simmered pork.' }
+		]
+	},
+	{
+		id: 'fd_0312',
+		term: 'Boudin Noir',
+		level: 3,
+		say: 'boo-DAN NWAHR',
+		aliases: ['Blood Sausage'],
+		gist: 'Soft French sausage of pork blood, fat and onion, seared hot',
+		guest: "It's a blood sausage, rich with onion and warm spice, seared crisp and served hot. Soft, earthy and classic with apples.",
+		why: 'Fresh pork blood is mixed with fat, slow-cooked onion and spice, piped into casings and gently poached, which sets it much like a custard. The kitchen then warms and sears it, so it eats soft and rich inside a crisp skin, with a deep, mineral savor.',
+		madeWith: ['pork blood', 'pork fat', 'onion', 'often cream', 'sometimes apple', 'sometimes chestnut'],
+		origin: 'France; noir is French for black, for its dark color',
+		notThis: "Not Cajun boudin, Louisiana's pork and rice sausage, nor boudin blanc, the pale one. Kin to Spain's morcilla and Britain's black pudding.",
+		lexiconSlug: 'boudin-noir-and-boudin-blanc',
+		recipe: 'boudin-noir-aux-pommes',
+		seeAlso: ['fd_0065', 'fd_0064'],
+		line: 'Seared boudin noir, sauteed apples, mashed potato',
+		traps: [
+			{ says: 'Spicy Louisiana sausage of pork, liver and rice, steamed in its casing', why: 'That describes the Cajun rice sausage. This is the French sausage made with pork blood.' }
+		]
+	}
 ];
 
 export default cards;

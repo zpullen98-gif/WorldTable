@@ -300,10 +300,74 @@ const cards = [
 			{ says: 'Farmed mushroom grown on poultry manure, named for how it is raised', why: 'It is wild, grows on tree trunks, and the name comes from its chicken-like texture.' }
 		]
 	},
-	{ id: 'fd_0321', term: 'White Truffle', planned: true },
-	{ id: 'fd_0322', term: 'Matsutake', planned: true },
-	{ id: 'fd_0323', term: 'Summer Truffle', planned: true },
-	{ id: 'fd_0324', term: 'Hedgehog Mushroom', planned: true }
+	{
+		id: 'fd_0321',
+		term: 'White Truffle',
+		level: 3,
+		aliases: ['Alba Truffle', 'Tartufo Bianco', 'Piedmont Truffle'],
+		gist: 'Pale wild Italian autumn truffle, never cooked, sold by the gram',
+		guest: "It's Italy's prized wild fall truffle, shaved raw over your plate and priced by the gram. The aroma is heady, garlicky and almost honeyed.",
+		why: "It grows wild on the roots of oak, poplar and hazel in Piedmont, central Italy and the Balkans and resists farming, so rain sets each season's price. Its aroma is fragile and heat drives it off, so it is shaved raw over warm, buttery food.",
+		madeWith: ['fresh truffle', 'often butter', 'often egg', 'often wheat pasta', 'sometimes parmesan', 'sometimes rice', 'sometimes white wine'],
+		origin: "Tartufo bianco d'Alba, from the town of Alba in Piedmont",
+		notThis: 'Not truffle oil, usually flavored with a lab-made copy of one of its aroma compounds.',
+		lexiconSlug: 'white-truffle',
+		seeAlso: ['fd_0147', 'fd_0323', 'fd_0183'],
+		confusedWith: ['fd_0148'],
+		line: 'Tajarin, butter, parmigiano, shaved white truffle',
+		traps: [
+			{ says: 'Farmed Italian truffle, slow-cooked into butter to spread its aroma', why: 'It is found wild, never reliably farmed, and heat destroys its aroma, so it is only shaved raw.' }
+		]
+	},
+	{
+		id: 'fd_0322',
+		term: 'Matsutake',
+		level: 4,
+		say: 'maht-soo-TAH-kee',
+		aliases: ['Pine Mushroom'],
+		gist: 'Wild Japanese autumn mushroom that smells of pine resin and cinnamon',
+		guest: "It's a wild mushroom from pine forests, treasured in Japan every fall. It smells of pine and cinnamon and is cooked gently, often in a clear broth.",
+		why: "It grows on the roots of living pines and has never been farmed. Japan's harvest has shrunk, so most come from China and Korea, plus North America's pine mushroom, a close relative. Hard cooking drives off its spicy scent, so it is torn and cooked gently, in broth or with rice.",
+		madeWith: ['matsutake mushroom', 'often bonito dashi', 'often sake', 'often soy sauce', 'sometimes shrimp', 'sometimes chicken', 'sometimes ginkgo nut'],
+		note: 'Graded by the cap: a firm, closed button holds the most aroma and costs the most.',
+		origin: 'Japanese matsu, pine, and take, mushroom',
+		lexiconSlug: 'matsutake',
+		seeAlso: ['fd_0146', 'fd_0147', 'fd_0290'],
+		line: 'Matsutake dobin mushi, shrimp, ginkgo, sudachi'
+	},
+	{
+		id: 'fd_0323',
+		term: 'Summer Truffle',
+		level: 3,
+		aliases: ['Scorzone', 'Black Summer Truffle'],
+		gist: 'Warm-weather black truffle, beige inside, milder and cheaper',
+		guest: "It's the black truffle of the warmer months. It's milder than the winter one, nutty and earthy, and it costs a good deal less.",
+		why: 'A different species from the winter black truffle, it ripens from late spring, grows across Europe and is also farmed. Inside it is beige with white veins, and its hazelnut and mushroom scent is a fraction as strong, hence the lower price.',
+		madeWith: ['fresh truffle', 'often butter', 'often egg', 'often wheat pasta', 'sometimes parmesan', 'sometimes cream'],
+		note: 'The same species dug in autumn is sold as Burgundy truffle, darker inside and more fragrant.',
+		notThis: 'Not the winter black truffle of Perigord, near-black inside and far stronger. Ask which one a supplement is.',
+		seeAlso: ['fd_0147', 'fd_0321', 'fd_0148'],
+		line: 'Summer truffle tagliolini, butter, parmesan',
+		traps: [
+			{ says: 'Winter black truffle dug early, before its full aroma has set', why: 'It is its own species that ripens in the warm months, not an unripe winter truffle.' }
+		]
+	},
+	{
+		id: 'fd_0324',
+		term: 'Hedgehog Mushroom',
+		level: 3,
+		aliases: ['Sweet Tooth', 'Pied de Mouton', 'Wood Hedgehog'],
+		gist: 'Buff wild cap with soft spines beneath instead of gills, firm and nutty',
+		guest: "It's a wild mushroom with soft little spines under the cap, like a hedgehog. It eats like a firmer chanterelle, sweet and nutty with a good bite.",
+		why: 'Foraged under conifers and hardwoods from fall into winter, it lives on tree roots and is not farmed. Soft, pale teeth hang under the cap instead of gills. The flesh is dense, so it stays firm when roasted, with a sweet, nutty, gently peppery flavor.',
+		madeWith: ['hedgehog mushroom', 'often butter', 'often shallot', 'sometimes garlic', 'sometimes cream', 'sometimes thyme'],
+		origin: "French pied de mouton, meaning sheep's foot",
+		notThis: "Not chanterelle, which has blunt ridges under the cap, nor lion's mane, a shaggy white ball. This is a cap with soft spines beneath.",
+		lexiconSlug: 'hedgehog-mushroom',
+		seeAlso: ['fd_0140'],
+		confusedWith: ['fd_0141', 'fd_0152'],
+		line: 'Roasted hedgehog mushrooms, chanterelles, brown butter'
+	}
 ];
 
 export default cards;

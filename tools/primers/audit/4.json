@@ -172,6 +172,16 @@
      "lens": "voice",
      "key": "4-dishes-voice-17",
      "primer": "4-dishes"
+    },
+    {
+     "key": "4-dishes-critic-1",
+     "primer": "4-dishes",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "It states the subsection's count in several places: \"Six project dishes\" (lede), \"Chef holds six dishes\", \"the shortest of the six\", \"five of the six\" and \"these six\" (next). Rule 11 forbids this even when the count is exact. The named subsets (\"Two come from Fire & Smoke\", \"Four come from The Restaurateur's Capstone\") are allowed.",
+     "because": "It states the subsection's count in several places: \"Six project dishes\" (lede), \"Chef holds six dishes\", \"the shortest of the six\", \"five of the six\" and \"these six\" (next). Rule 11 forbids this even when the count is exact. The named subsets (\"Two come from Fire & Smoke\", \"Four come from The Restaurateur's Capstone\") are allowed.",
+     "fix": "Lede: \"Project dishes, two from the fire and the rest from the capstone, that cook for a room rather than a plate and run from one hour to a twelve-hour day.\" Paragraph 1 opens: \"None of the dishes at Chef is a plate you put up between tickets.\" Change \"five of the six ask you\" to \"all but the fish ask you\". Change \"the shortest of the six\" to \"the shortest here\". Next: \"What keeps them sharp is the calendar ...\"."
     }
    ],
    "dispositions": [
@@ -259,6 +269,11 @@
      "finding": "4-dishes-voice-17",
      "action": "applied",
      "reason": "The closing sentence is now \"Nothing else is asked of it.\", dropping the unsupported \"no one checks the plate\" claim."
+    },
+    {
+     "finding": "4-dishes-critic-1",
+     "action": "applied",
+     "reason": "Removed every count of the whole subsection: the lede now says 'two from the fire and the rest from the capstone', paragraph 1 opens 'None of the dishes at Chef is a plate you put up between tickets', 'five of the six' became 'all but the fish', 'the shortest of the six' became 'the shortest here', and next reads 'What keeps them sharp'; the named subsets (Two from Fire & Smoke, Four from the Capstone, the two fire dishes) stay."
     }
    ]
   },
@@ -373,6 +388,16 @@
      "lens": "voice",
      "key": "4-techniques-voice-11",
      "primer": "4-techniques"
+    },
+    {
+     "key": "4-techniques-critic-1",
+     "primer": "4-techniques",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "The reader cannot tell where to start. It names three firsts (\"Start with the three that make rice\", \"Take biryani first\", \"Take the pretzel bath first\") and three lasts (\"sushi rice last\", \"the noodles last\", \"Take the soufflé last\"). Put beside the others, which each give one clear first, this one leaves a Chef cook unsure. It also counts the subsection's items (\"Eight techniques\" in the lede, \"the index of all eight\", \"these eight\" in next), which rule 11 forbids even when the count is exact.",
+     "because": "The reader cannot tell where to start. It names three firsts (\"Start with the three that make rice\", \"Take biryani first\", \"Take the pretzel bath first\") and three lasts (\"sushi rice last\", \"the noodles last\", \"Take the soufflé last\"). Put beside the others, which each give one clear first, this one leaves a Chef cook unsure. It also counts the subsection's items (\"Eight techniques\" in the lede, \"the index of all eight\", \"these eight\" in next), which rule 11 forbids even when the count is exact.",
+     "fix": "Give one route. Paragraph 2 keeps \"Start with the three that make rice\" and changes the within-group order to \"within the rice, biryani first ... sushi rice at the end of the group\". Paragraph 3 changes \"Take the pretzel bath first ... and the noodles last\" to \"Then the dough, beginning with the pretzel bath, one step on an ordinary dough, and ending with the noodles, which take longest to learn.\" Paragraph 4 keeps \"Take the soufflé last\" as the only overall last. Lede: \"Techniques on one to five recipes each, taught by no semester, each turning on one moment you have to be present for.\" Paragraph 5: \"Read the techniques opens the index at this level.\" Next: \"What keeps them sharp is the menu itself ...\"."
     }
    ],
    "dispositions": [
@@ -430,6 +455,11 @@
      "finding": "4-techniques-voice-11",
      "action": "applied",
      "reason": "Replaced with \"This level's Dishes are a separate list; nothing here waits on them.\""
+    },
+    {
+     "finding": "4-techniques-critic-1",
+     "action": "applied",
+     "reason": "The primer now gives one route: rice first (biryani first, sushi rice at the end of that group), then dough (starting with the pretzel bath and ending with the noodles), then mole, with the soufflé as the only overall last; all three counts of the subsection ('Eight techniques', 'all eight', 'these eight') are gone, and the dough paragraph was trimmed to stay under 900 characters."
     }
    ]
   },
@@ -684,6 +714,16 @@
      "lens": "voice",
      "key": "4-lexicon-voice-25",
      "primer": "4-lexicon"
+    },
+    {
+     "key": "4-lexicon-critic-1",
+     "primer": "4-lexicon",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "(1) It counts the subsection's items: \"thirty entries on restaurant finance and opening, and nine of the rarest\" (lede, which together make exactly the 39 the page prints) and \"The nine atlas entries\" (paragraph 4). (2) On Matsutake it reads as a contradiction of 4-deck. The lexicon says \"brief fierce heat\", while the deck primer, following its card, says the mushroom \"loses its pine scent to hard cooking\". A cook reading both at this level gets opposite heat instructions for the same mushroom.",
+     "because": "(1) It counts the subsection's items: \"thirty entries on restaurant finance and opening, and nine of the rarest\" (lede, which together make exactly the 39 the page prints) and \"The nine atlas entries\" (paragraph 4). (2) On Matsutake it reads as a contradiction of 4-deck. The lexicon says \"brief fierce heat\", while the deck primer, following its card, says the mushroom \"loses its pine scent to hard cooking\". A cook reading both at this level gets opposite heat instructions for the same mushroom.",
+     "fix": "(1) Lede: \"At Chef the Lexicon is mostly the building, not the plate: restaurant finance and opening, and a handful of the rarest things a kitchen ever handles.\" Paragraph 4 opens: \"The atlas entries come through rarely, each with one handling rule.\" The subset counts (\"Four fruits\", \"Three fungi\", \"Two vegetables\") may stay. (2) Use the atlas entry's own words: \"The scent of Matsutake leaves with the steam, so wet or long heat strips it: a brief fierce grill, or torn into a clear dashi.\" This keeps it compatible with the deck's \"hard cooking\"."
     }
    ],
    "dispositions": [
@@ -811,37 +851,42 @@
      "finding": "4-lexicon-voice-25",
      "action": "applied",
      "reason": "Clause 'and that is where met is decided' cut; paragraphs 1 to 5 also trimmed (banker/landlord aside, fruit descriptions, 'darkness and cold water'), bringing the primer from 530 to 554 words only because naming five more entries per voice-19 added a paragraph, still inside the 650 limit."
+    },
+    {
+     "finding": "4-lexicon-critic-1",
+     "action": "applied",
+     "reason": "Took the counts out: the lede now reads \"a handful of the rarest things\" in place of \"thirty entries ... and nine\", and paragraph 4 opens \"The atlas entries come through rarely\"; the Matsutake line now uses the atlas entry's own reason (\"wet or long heat strips it: a brief fierce grill, or torn into a clear dashi\"), which agrees with the deck's warning against hard cooking."
     }
    ]
   },
   "4-deck": {
    "findings": [
     {
-     "where": "paragraph 1",
+     "where": "paragraph 2",
      "severity": "wrong",
-     "claim": "a grain older than bread",
-     "because": "Einkorn is older than farming, not older than bread: flatbreads made from wild cereals predate domesticated wheat by thousands of years. The brief's own line is \"one of the first wheats people farmed, about ten thousand years ago.\"",
-     "fix": "a grain from the first farms",
+     "claim": "Take first the cards that lean on a word you already hold from Sous Chef",
+     "because": "Nage is grouped here against consommé, but Consommé is a Chef de Partie card (floor-deck.json, level 2) and is not in the brief's Sous Chef names. Meunière, Bloomy Rind, Taleggio and Jamón Ibérico are Sous Chef cards, so only the level named is wrong.",
+     "fix": "Take first the cards that lean on a word you already hold from the levels below",
      "lens": "fact",
      "key": "4-deck-fact-1",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 3",
+     "where": "paragraph 2",
      "severity": "wrong",
-     "claim": "named for its springy chew and not for the shellfish",
-     "because": "The brief's origin line says the opposite: \"Named for abalone, the prized sea snail its chewy texture resembles.\" It is named for the shellfish, because of the chew; the not-this line only says it is not the shellfish.",
-     "fix": "named for the shellfish's chew and not the shellfish itself",
+     "claim": "Grenobloise is meunière plus capers, diced peeled lemon and croutons.",
+     "because": "The card says the lemon flesh gives bright bursts \"instead of a squeeze of juice\". Meunière is brown butter, lemon juice and parsley, so \"meunière plus\" puts the juice back in and adds lemon pieces on top. The card says the diced lemon takes the juice's place.",
+     "fix": "Grenobloise is meunière's brown butter with capers, diced peeled lemon and croutons.",
      "lens": "fact",
      "key": "4-deck-fact-2",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 4",
+     "where": "paragraph 3",
      "severity": "wrong",
-     "claim": "carnaroli aged a year in the husk",
-     "because": "The brief says \"aged in the husk at least a year\"; the estate also sells longer-aged tins, so \"a year\" understates the mark a chef is asked to own.",
-     "fix": "carnaroli aged at least a year in the husk",
+     "claim": "Lomo, Culatello and Bottarga are never cooked",
+     "because": "The Lomo card's not-this line says that on a Latin American menu lomo can mean fresh beef, and fresh beef is cooked. Only the cured pork loin is \"air-dried, not cooked\", so \"never cooked\" contradicts the card's own warning.",
+     "fix": "Cured Lomo, Culatello and Bottarga are served uncooked",
      "lens": "fact",
      "key": "4-deck-fact-3",
      "primer": "4-deck"
@@ -849,29 +894,29 @@
     {
      "where": "paragraph 3",
      "severity": "unclear",
-     "claim": "a brine bath that grows the orange, tacky, pungent skin",
-     "because": "The brief says the cheese is \"rubbed with brine\" while it ages. A bath reads as submerging, which is the salting step many cheeses get at the start, not the repeated surface wash that makes a washed rind.",
-     "fix": "a brine rub that grows the orange, tacky, pungent skin",
+     "claim": "its oil is wax esters the body cannot digest",
+     "because": "The card says \"Much of its oil is wax esters\", not all of it.",
+     "fix": "much of its oil is wax esters the body cannot digest",
      "lens": "fact",
      "key": "4-deck-fact-4",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 3",
+     "where": "paragraph 2",
      "severity": "unclear",
-     "claim": "Brebis is ewe's milk, nearly twice the fat of cow's",
-     "because": "The card is a cheese, not a milk: \"French for ewe, used for sheep's milk cheeses.\" A cook reading this could say brebis at the pass to mean the milk.",
-     "fix": "Brebis is ewe's milk cheese, the milk nearly twice the fat of cow's",
+     "claim": "Robiola is paler and milder than Taleggio",
+     "because": "The card hedges this. It says \"Most robiola is paler and milder\", because robiola is a family of cheeses and not one recipe.",
+     "fix": "most Robiola is paler and milder than Taleggio",
      "lens": "fact",
      "key": "4-deck-fact-5",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 4",
+     "where": "paragraph 1",
      "severity": "unclear",
-     "claim": "Freekeh is green durum set alight in the field",
-     "because": "The brief says \"usually durum\"; freekeh is made from other green wheats too, and the burning is done in piles after cutting, not to standing wheat.",
-     "fix": "Freekeh is green wheat, usually durum, piled and set alight",
+     "claim": "Nearly every one has a near twin a guest will confuse it with, and the card's not-this line is where most of the owning happens.",
+     "because": "Six of the cards have no not-this line: Bottarga, Lion's Mane, Matsutake, Brebis, Banyuls and Verjus. A cook who looks for the line on those cards will not find it.",
+     "fix": "Most have a near twin a guest will confuse it with, and where a card has a not-this line, that is where most of the owning happens.",
      "lens": "fact",
      "key": "4-deck-fact-6",
      "primer": "4-deck"
@@ -879,49 +924,49 @@
     {
      "where": "paragraph 5",
      "severity": "unclear",
-     "claim": "read every \"not this\" line twice",
-     "because": "Five of the fourteen cards carry no not-this line in the brief (Bottarga, Lion's Mane, Brebis, Banyuls, Verjus), so a reader looks for lines that are not there.",
-     "fix": "read the not-this lines twice",
+     "claim": "Open Flip cards for the Floor Deck at this level to meet them",
+     "because": "Here \"meet\" only means reading the cards for the first time, but the same paragraph defines met as graded met or close in the deck's modes. A reader can take this to mean that flipping a card meets it.",
+     "fix": "Open Flip cards for the Floor Deck at this level to read them first",
      "lens": "fact",
      "key": "4-deck-fact-7",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 1",
+     "where": "paragraph 2",
      "severity": "wrong",
-     "claim": "a grain older than bread",
-     "because": "The brief's Farro Piccolo card says einkorn is \"one of the first wheats people farmed, about ten thousand years ago\"; bread is older than farmed einkorn (flatbreads from wild grain predate farming), so the flourish is false. Use the card's own line.",
-     "fix": "one of the first wheats farmed",
+     "claim": "Nage is a simple poaching broth served as the sauce, not a clarified consommé.",
+     "because": "The paragraph opens on \"cards that lean on a word you already hold from Sous Chef\", but consommé is not among the brief's neighbours.below names for Sous Chef. Meunière, Bloomy Rind, Taleggio and Jamón Ibérico are all there, so the other four comparisons hold. Consommé is not, so the frame does not fit Nage.",
+     "fix": "Move the Nage sentence into paragraph 4, beside Ballotine and Vacherin (\"Nage is a simple poaching broth served as the sauce, not a clarified consommé.\"), and keep paragraph 2 to the four Sous Chef pairs.",
      "lens": "app",
      "key": "4-deck-app-8",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "named for its springy chew and not for the shellfish",
-     "because": "The card's origin is \"Named for abalone, the prized sea snail its chewy texture resembles\": it IS named for the shellfish, by way of the chew. The notThis only says it is not the shellfish itself.",
-     "fix": "named for the shellfish's chew, not the shellfish itself",
+     "where": "paragraph 2",
+     "severity": "unclear",
+     "claim": "Grenobloise is meunière plus capers, diced peeled lemon and croutons.",
+     "because": "The brief gives meunière as brown butter, lemon juice and parsley. In grenobloise, the diced lemon flesh replaces the juice (\"bright bursts instead of a squeeze of juice\"), and the card says capers and croutons are what make it grenobloise. \"Plus\" suggests the juice and the diced lemon both go in.",
+     "fix": "Grenobloise is meunière's brown butter with capers, diced peeled lemon in place of juice, and croutons.",
      "lens": "app",
      "key": "4-deck-app-9",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 3",
+     "where": "paragraph 2",
      "severity": "unclear",
-     "claim": "Brebis is ewe's milk",
-     "because": "The card's gist is \"Cheese made from ewe's milk\" and its origin says brebis is French for ewe; as written the sentence names the milk, not the cheese.",
-     "fix": "Brebis is ewe's milk cheese",
+     "claim": "Robiola is paler and milder than Taleggio.",
+     "because": "The card hedges this. Its not-this line reads \"Most robiola is paler and milder\", and the why calls robiola \"a family, not one recipe\".",
+     "fix": "Most Robiola is paler and milder than Taleggio.",
      "lens": "app",
      "key": "4-deck-app-10",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 4",
-     "severity": "unclear",
-     "claim": "carnaroli aged a year in the husk",
-     "because": "The Acquerello card says \"aged in the husk at least a year\"; \"a year\" reads as a fixed term.",
-     "fix": "carnaroli aged a year or more in the husk",
+     "where": "paragraph 3",
+     "severity": "wrong",
+     "claim": "its oil is wax esters the body cannot digest",
+     "because": "The card says \"Much of its oil is wax esters\", not all of it. It also says the upset is \"more so in a large serving\", and that is why portions are kept small.",
+     "fix": "much of its oil is wax esters the body cannot digest",
      "lens": "app",
      "key": "4-deck-app-11",
      "primer": "4-deck"
@@ -929,111 +974,81 @@
     {
      "where": "paragraph 5",
      "severity": "unclear",
-     "claim": "read every \"not this\" line twice",
-     "because": "Four of the fourteen cards have no notThis line in the brief (Lion's Mane, Brebis, Bottarga, Banyuls), so \"every\" sends the reader looking for lines that are not there.",
-     "fix": "read the \"not this\" lines twice",
+     "claim": "say the gist and the not-this aloud before you turn the card",
+     "because": "Five cards placed here have no not-this line in the brief: Bottarga, Lion's Mane, Matsutake, Banyuls and Verjus. A cook following this instruction on those cards has nothing to say back.",
+     "fix": "say the gist, and the not-this where the card has one, aloud before you turn the card",
      "lens": "app",
      "key": "4-deck-app-12",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 1",
+     "where": "paragraph 2",
      "severity": "wrong",
-     "claim": "a grain older than bread",
-     "because": "The brief's Farro Piccolo card says einkorn is \"one of the first wheats people farmed, about ten thousand years ago\"; baked flatbreads from wild grain predate farming by thousands of years, so the flourish is not right and a cook will repeat it.",
-     "fix": "a grain from the first farms",
+     "claim": "Take first the cards that lean on a word you already hold from Sous Chef ... Nage is a simple poaching broth served as the sauce, not a clarified consommé.",
+     "because": "Consommé is not in the brief's Sous Chef deck names (neighbours.below). Nage does not lean on a word held from Sous Chef, so it does not belong in a group defined that way. The other four do: Meunière, Bloomy Rind, Taleggio and Jamón Ibérico are all at Sous Chef.",
+     "fix": "Move the Nage sentence into paragraph 4, where it becomes: \"Nage is a simple poaching broth served as the sauce, not a consommé.\" Paragraph 2 then ends at \"not the cured jamón.\"",
      "lens": "voice",
      "key": "4-deck-voice-13",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 3",
-     "severity": "wrong",
-     "claim": "named for its springy chew and not for the shellfish",
-     "because": "The card's origin line is \"Named for abalone, the prized sea snail its chewy texture resembles\": the mushroom IS named for the shellfish, because of the chew; it is simply not the shellfish.",
-     "fix": "named for the sea snail's springy chew, and no shellfish at all",
+     "where": "paragraph 1",
+     "severity": "style",
+     "claim": "These are the cards a senior cook or server meets on the most ambitious menus: rare product, a specialist method, a classical name.",
+     "because": "This restates the level standard (\"the rare, the specialist and the deeply classical word a senior cook or server must own\") and the Chef blurb, and gives the reader nothing to act on. Rule 10 forbids restating the level's blurb.",
+     "fix": "Cut the sentence and open on the not-this line.",
      "lens": "voice",
      "key": "4-deck-voice-14",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 4",
-     "severity": "wrong",
-     "claim": "carnaroli aged a year in the husk",
-     "because": "The card says \"aged in the husk at least a year\".",
-     "fix": "carnaroli aged at least a year in the husk",
+     "where": "paragraph 1",
+     "severity": "unclear",
+     "claim": "Nearly every one has a near twin a guest will confuse it with, and the card's not-this line is where most of the owning happens.",
+     "because": "Six cards have no not-this line: Bottarga, Lion's Mane, Matsutake, Brebis, Banyuls and Verjus. Several of the lines are not about a guest's confusion either: Lomo versus tenderloin, Ikejime is not a species, Acquerello is a brand and not a variety. \"Where most of the owning happens\" is a flourish that repeats \"own\" from the lede and the next line.",
+     "fix": "Most cards carry a not-this line naming what the word gets mistaken for.",
      "lens": "voice",
      "key": "4-deck-voice-15",
      "primer": "4-deck"
     },
     {
      "where": "paragraph 3",
-     "severity": "unclear",
-     "claim": "Brebis is ewe's milk, nearly twice the fat of cow's",
-     "because": "Brebis is the cheese, not the milk (the card: \"French for ewe, used for sheep's milk cheeses\"); and the paragraph opened as \"The three mushrooms\" then walks into dairy with no bridge.",
-     "fix": "Dairy next. Brebis is ewe's milk cheese, nearly twice the fat of cow's",
+     "severity": "style",
+     "claim": "Escolar sits here too; its oil",
+     "because": "\"Sits here too\" is filler. It also tacks the fish onto the end of a group it was never introduced with.",
+     "fix": "Escolar's oil",
      "lens": "voice",
      "key": "4-deck-voice-16",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 3",
+     "where": "paragraph 4",
      "severity": "unclear",
-     "claim": "a brine bath that grows",
-     "because": "The card says the cheese \"is rubbed with brine, sometimes with beer, wine or brandy\"; a bath is a different method.",
-     "fix": "a brine rub that grows",
+     "claim": "The rest sell on texture, scent or label. ... Brebis, Ballotine and Vacherin close it out:",
+     "because": "Ballotine, a preparation, and Vacherin, a dessert, do not sell on texture, scent or label, so the grouping line fails for the last sentence. \"Close it out\" is filler.",
+     "fix": "Last, three classics:",
      "lens": "voice",
      "key": "4-deck-voice-17",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 2",
+     "where": "paragraph 5",
      "severity": "unclear",
-     "claim": "Take the three pantry bottles together, because guests confuse them and so do cooks.",
-     "because": "The paragraph promises three bottles and then adds Lomo and Bottarga, which are cured cards, not pantry bottles; the reader loses the grouping the primer is meant to give.",
-     "fix": "Take the pantry three and the cured two first, because guests confuse them and so do cooks.",
+     "claim": "Open Flip cards for the Floor Deck at this level to meet them",
+     "because": "\"Meet\" is the app's term of art. The brief's met rule is that a card is met only when graded met or close in the deck's modes. Saying you open Flip cards \"to meet them\" blurs that with a first look, two sentences before the rule is stated.",
+     "fix": "Open Flip cards for the Floor Deck at this level to see them first",
      "lens": "voice",
      "key": "4-deck-voice-18",
      "primer": "4-deck"
     },
     {
-     "where": "paragraph 4",
-     "severity": "unclear",
-     "claim": "is the technique card of the set",
-     "because": "Ballotine is placed here under preparations; calling it \"the technique card\" reads as if it sits in the level's Techniques subsection, and paragraph 5 already says it is the one you may cook.",
-     "fix": "closes the set",
-     "lens": "voice",
-     "key": "4-deck-voice-19",
-     "primer": "4-deck"
-    },
-    {
      "where": "paragraph 5",
      "severity": "unclear",
-     "claim": "read every \"not this\" line twice",
-     "because": "Four of the fourteen cards carry no not-this line in the brief (Lion's Mane, Bottarga, Brebis, Banyuls), so \"every\" sends the reader looking for lines that are not there.",
-     "fix": "read the not-this lines twice",
+     "claim": "The deck, the landing, shows what is owed today.",
+     "because": "The door's line, \"The deck: the landing, with what is owed today\", has been pasted in as a double appositive. A reader stops on \"The deck, the landing\" and cannot tell whether that is one place or two.",
+     "fix": "The deck's landing shows what is owed today.",
      "lens": "voice",
-     "key": "4-deck-voice-20",
-     "primer": "4-deck"
-    },
-    {
-     "where": "paragraph 1",
-     "severity": "style",
-     "claim": "Level IV asks for the rare card said plainly, with its origin, what it is not, and a line it belongs on.",
-     "because": "Repeats the lede almost word for word (\"say each one plainly, with what it is not\"), and the paragraphs run 535 words against the aim of 340 to 520 (limit 650); this is the cleanest trim.",
-     "fix": "Level IV asks for each card's origin, what it is not, and a line it belongs on.",
-     "lens": "voice",
-     "key": "4-deck-voice-21",
-     "primer": "4-deck"
-    },
-    {
-     "where": "paragraph 1",
-     "severity": "style",
-     "claim": "They reach the pass once a season:",
-     "because": "\"once a season\" is the lede's phrase repeated in the very next paragraph.",
-     "fix": "They reach the pass rarely:",
-     "lens": "voice",
-     "key": "4-deck-voice-22",
+     "key": "4-deck-voice-19",
      "primer": "4-deck"
     }
    ],
@@ -1041,112 +1056,97 @@
     {
      "finding": "4-deck-fact-1",
      "action": "applied",
-     "reason": "Paragraph 1 now says \"a grain from the first farms\", matching the Farro Piccolo card's \"one of the first wheats people farmed\"."
+     "reason": "Moved the Nage sentence out of paragraph 2 and into the classics in paragraph 4. The group that leans on Sous Chef words now holds only the four pairs whose words are at Sous Chef: Meunière, Bloomy Rind, Taleggio and Jamón Ibérico, so \"from Sous Chef\" is now accurate."
     },
     {
      "finding": "4-deck-fact-2",
      "action": "applied",
-     "reason": "Abalone Mushroom is now \"named for the sea snail's chew and not the shellfish itself\", matching the card's origin line."
+     "reason": "Rewrote the Grenobloise sentence as \"meunière's brown butter with capers, diced peeled lemon in place of juice, and croutons\", so the diced lemon takes the juice's place, as the card says."
     },
     {
      "finding": "4-deck-fact-3",
      "action": "applied",
-     "reason": "Acquerello now reads \"carnaroli aged at least a year in the husk\", the card's own words."
+     "reason": "Changed \"Lomo, Culatello and Bottarga are never cooked\" to \"Cured Lomo, Culatello and Bottarga are served uncooked\". This leaves room for the fresh beef that the Lomo card mentions."
     },
     {
      "finding": "4-deck-fact-4",
      "action": "applied",
-     "reason": "Washed Rind now says \"a brine rub\", matching the card's \"rubbed with brine\"."
+     "reason": "Now reads \"Much of Escolar's oil is wax esters the body cannot digest\", following the card's wording."
     },
     {
      "finding": "4-deck-fact-5",
      "action": "applied",
-     "reason": "Brebis now reads \"ewe's milk cheese, the milk nearly twice the fat of cow's\", so the term names the cheese."
+     "reason": "Now reads \"most Robiola is paler and milder than Taleggio\", following the card's hedge."
     },
     {
      "finding": "4-deck-fact-6",
      "action": "applied",
-     "reason": "Freekeh now reads \"green wheat, usually durum, cut early, piled and set alight\", matching the card's method and hedge."
+     "reason": "Paragraph 1 now says \"Most cards carry a not-this line\" and \"Where a card has one, read it...\", so it no longer suggests that every card has one. Six cards do not."
     },
     {
      "finding": "4-deck-fact-7",
      "action": "applied",
-     "reason": "Paragraph 5 now says \"read the not-this lines twice\", dropping \"every\" since five cards carry none."
+     "reason": "Changed \"to meet them\" to \"to read them first\", so a first look is not confused with the app's meaning of met."
     },
     {
      "finding": "4-deck-app-8",
      "action": "applied",
-     "reason": "Same change as fact-1: \"a grain from the first farms\", drawn from the card's line."
+     "reason": "Moved the Nage sentence into paragraph 4 beside Ballotine and Vacherin: \"Nage is a simple poaching broth served as the sauce, not a clarified consommé\". Paragraph 2 keeps only the four Sous Chef pairs."
     },
     {
      "finding": "4-deck-app-9",
      "action": "applied",
-     "reason": "Same change as fact-2: named for the sea snail's chew, not the shellfish itself."
+     "reason": "Used the suggested wording: \"meunière's brown butter with capers, diced peeled lemon in place of juice, and croutons\"."
     },
     {
      "finding": "4-deck-app-10",
      "action": "applied",
-     "reason": "Same change as fact-5: \"Brebis is ewe's milk cheese\"."
+     "reason": "Changed to \"most Robiola is paler and milder than Taleggio\"."
     },
     {
      "finding": "4-deck-app-11",
      "action": "applied",
-     "reason": "Same change as fact-3: \"aged at least a year in the husk\", which also answers the fixed-term reading."
+     "reason": "Changed to \"Much of Escolar's oil is wax esters\". The existing \"kitchens keep portions small\" already carries the card's reason about large servings."
     },
     {
      "finding": "4-deck-app-12",
      "action": "applied",
-     "reason": "Same change as fact-7: \"read the not-this lines twice\"."
+     "reason": "Changed to \"say the gist, and the not-this where the card has one, aloud before you turn the card\". Brebis also has no not-this line, so the count is six rather than five, and the new wording covers all six."
     },
     {
      "finding": "4-deck-voice-13",
      "action": "applied",
-     "reason": "Same change as fact-1: \"a grain from the first farms\"."
+     "reason": "Nage moved to paragraph 4 among the classics, and paragraph 2 now ends at \"not the cured jamón\". I kept \"clarified\" before consommé because the card's not-this line uses it."
     },
     {
      "finding": "4-deck-voice-14",
      "action": "applied",
-     "reason": "Abalone Mushroom is now named for the sea snail's chew and not the shellfish itself; the sea snail is named as the finding asked, in the card's own framing."
+     "reason": "Cut the sentence that restated the standard, so paragraph 1 now opens on the not-this line."
     },
     {
      "finding": "4-deck-voice-15",
      "action": "applied",
-     "reason": "Same change as fact-3: \"aged at least a year in the husk\"."
+     "reason": "Replaced the sentence with \"Most cards carry a not-this line naming what the word gets mistaken for\", followed by three examples from the cards (tenderloin, tuna, bulgur). The \"where most of the owning happens\" flourish is gone."
     },
     {
      "finding": "4-deck-voice-16",
      "action": "applied",
-     "reason": "Added the bridge \"Dairy next.\" before Brebis and made Brebis the cheese, not the milk."
+     "reason": "Dropped \"sits here too\". The sentence now opens \"Much of Escolar's oil is...\"."
     },
     {
      "finding": "4-deck-voice-17",
      "action": "applied",
-     "reason": "Same change as fact-4: \"a brine rub\"."
+     "reason": "Moved Brebis into the texture, scent and label group as ewe's milk cheese, rich and sweet. The last sentence now opens \"Last, three classics:\" and covers Nage, Ballotine and Vacherin."
     },
     {
      "finding": "4-deck-voice-18",
      "action": "applied",
-     "reason": "Paragraph 2 now opens \"Take the pantry three and the cured two first\", so Lomo and Bottarga sit inside the promised grouping."
+     "reason": "Changed \"to meet them\" to \"to read them first\", which answers this finding and fact-7 alike."
     },
     {
      "finding": "4-deck-voice-19",
      "action": "applied",
-     "reason": "Ballotine now \"closes the set\" rather than being called the technique card, so it does not read as a Techniques placement."
-    },
-    {
-     "finding": "4-deck-voice-20",
-     "action": "applied",
-     "reason": "Same change as fact-7: \"read the not-this lines twice\"."
-    },
-    {
-     "finding": "4-deck-voice-21",
-     "action": "applied",
-     "reason": "Paragraph 1's last sentence is now \"Level IV asks for each card's origin, what it is not, and a line it belongs on\", and further small trims bring the paragraphs from 535 to about 519 words, inside the aim."
-    },
-    {
-     "finding": "4-deck-voice-22",
-     "action": "applied",
-     "reason": "Paragraph 1 now says \"They reach the pass rarely\", so \"once a season\" appears only in the lede."
+     "reason": "Replaced the double appositive with \"The deck's landing shows what is owed today.\""
     }
    ]
   },
@@ -1281,6 +1281,16 @@
      "lens": "voice",
      "key": "4-palate-voice-13",
      "primer": "4-palate"
+    },
+    {
+     "key": "4-palate-critic-1",
+     "primer": "4-palate",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "The lede counts the subsection's items (\"the two faults with the least obvious levers\"), and spicy and muddy are this level's only items. Rule 11 forbids stating the count even when it is exact, and every other house text says \"the faults with the least obvious levers\".",
+     "because": "The lede counts the subsection's items (\"the two faults with the least obvious levers\"), and spicy and muddy are this level's only items. Rule 11 forbids stating the count even when it is exact, and every other house text says \"the faults with the least obvious levers\".",
+     "fix": "Lede: \"Spicy and muddy, the faults with the least obvious levers, and every taste on the ladder taken to rung 5.\""
     }
    ],
    "dispositions": [
@@ -1348,6 +1358,11 @@
      "finding": "4-palate-voice-13",
      "action": "applied",
      "reason": "Paragraph 5 now says a palate at rung 5 is the one that can tell a repaired plate from a merely less wrong one, making the judgment the cook's, not the rung's."
+    },
+    {
+     "finding": "4-palate-critic-1",
+     "action": "applied",
+     "reason": "The lede now reads 'the faults with the least obvious levers', as the fix asked. For the same reason, the two other places that counted the items ('these two' in the first paragraph and 'the two faults' in the fourth) became 'they' and 'these faults'."
     }
    ]
   },
@@ -1602,6 +1617,16 @@
      "lens": "voice",
      "key": "4-safety-voice-25",
      "primer": "4-safety"
+    },
+    {
+     "key": "4-safety-critic-1",
+     "primer": "4-safety",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "(1) A wrong claim about the level below: \"The levels from Commis to Sous Chef read what the guide states, and Sous Chef where it disagrees with itself.\" Sous Chef's one gap (Sanitizer buckets titrated) is a subject the guide names without stating, not a self-contradiction. The 3-safety primer itself says \"the level above makes a subject of it\". So \"Chef reads what the guide names and never states\" should present Chef as widening that, not as new. (2) It counts the items: \"Six items sit here\", and in next \"walk the six items again\". (3) \"When the walk-in goes dark the clock starts\" implies a timed rule the guide never gives, which is the gap-filling the brief's sanitation note forbids. (4) \"The two-hour rule governs everything left in it\" leaves \"it\" dangling, because the danger zone is never named.",
+     "because": "(1) A wrong claim about the level below: \"The levels from Commis to Sous Chef read what the guide states, and Sous Chef where it disagrees with itself.\" Sous Chef's one gap (Sanitizer buckets titrated) is a subject the guide names without stating, not a self-contradiction. The 3-safety primer itself says \"the level above makes a subject of it\". So \"Chef reads what the guide names and never states\" should present Chef as widening that, not as new. (2) It counts the items: \"Six items sit here\", and in next \"walk the six items again\". (3) \"When the walk-in goes dark the clock starts\" implies a timed rule the guide never gives, which is the gap-filling the brief's sanitation note forbids. (4) \"The two-hour rule governs everything left in it\" leaves \"it\" dangling, because the danger zone is never named.",
+     "fix": "Paragraph 1 opens: \"Commis to Chef de Partie read what the guide states, and Sous Chef met the first place it names a rule without stating it, sanitizer buckets titrated to a concentration never given. Chef makes that reading the subject.\" Change \"Six items sit here and only one is a fact you can learn\" to \"Only one item here is a fact you can learn\". Change the next line's \"walk the six items again\" to \"walk this level's items again\". Change \"When the walk-in goes dark the clock starts, you will have to act\" to \"When the walk-in goes dark you will have to act\". Change \"everything left in it\" to \"everything left in the danger zone\"."
     }
    ],
    "dispositions": [
@@ -1729,6 +1754,11 @@
      "finding": "4-safety-voice-25",
      "action": "applied",
      "reason": "\"a number in another\" is now \"a count of points in another\": the item's own term is \"point scores\", but rule 6 bars the word score anywhere in a primer, so points carries the term without it."
+    },
+    {
+     "finding": "4-safety-critic-1",
+     "action": "applied",
+     "reason": "Made all four changes: paragraph 1 now says Sous Chef met the first unstated rule (sanitizer buckets titrated) and Chef makes that reading the subject; removed both counts of the items (\"Six items sit here\" and \"walk the six items again\"); cut \"the clock starts\"; and changed \"left in it\" to \"left in the danger zone\". The gap:reheating cite still matches the item by its first two words, \"two-hour rule\"."
     }
    ]
   },
@@ -1813,6 +1843,16 @@
      "lens": "voice",
      "key": "4-service-voice-8",
      "primer": "4-service"
+    },
+    {
+     "key": "4-service-critic-1",
+     "primer": "4-service",
+     "lens": "critic",
+     "where": "primer",
+     "severity": "unclear",
+     "claim": "(1) The closing sentence of paragraph 5 describes the level test (\"the Chef test, untimed, across the subsections, ending on what you missed ...\"). That test is not a Service door. The deck primer already describes it, because there it is a deck door (\"The written test\"). No other Chef primer does this, so the same point is made twice. (2) It counts the items: \"the last three modules of the track, 25 to 27\". It also puts \"all 27 modules\" in prose, a count that goes stale the day a module moves, even though it repeats the door label.",
+     "because": "(1) The closing sentence of paragraph 5 describes the level test (\"the Chef test, untimed, across the subsections, ending on what you missed ...\"). That test is not a Service door. The deck primer already describes it, because there it is a deck door (\"The written test\"). No other Chef primer does this, so the same point is made twice. (2) It counts the items: \"the last three modules of the track, 25 to 27\". It also puts \"all 27 modules\" in prose, a count that goes stale the day a module moves, even though it repeats the door label.",
+     "fix": "Delete the sentence \"At the foot of the page sits the Chef test, untimed, across the subsections, ending on what you missed with the right answers and nothing tallied.\" Paragraph 1: \"Chef holds the last modules of the track, and they turn the same server toward the bar and the ledger.\" Paragraph 5: \"The track opens every module, the right door if the Sous Chef boards have gone faint.\" The per-module term counts may stay as subsets, though \"sixteen terms\" could simply become \"the long one\"."
     }
    ],
    "dispositions": [
@@ -1855,8 +1895,49 @@
      "finding": "4-service-voice-8",
      "action": "applied",
      "reason": "The next line now reads \"the drill, and the bar itself: every order is a template to call\", dropping the repeated \"whole track as its field\" and the third \"ordered by name\"."
+    },
+    {
+     "finding": "4-service-critic-1",
+     "action": "applied",
+     "reason": "Deleted the level-test sentence from paragraph 5, and removed the module counts: paragraph 1 now reads \"the last modules of the track\" and paragraph 5 now reads \"The track opens every module\". Per-module term counts are now \"Seven templates\", \"the longest module\" and \"Its terms\", so nothing in the prose goes stale."
     }
    ]
   }
+ },
+ "critic": {
+  "ok": false,
+  "problems": [
+   {
+    "key": "4-techniques",
+    "issue": "The reader cannot tell where to start. It names three firsts (\"Start with the three that make rice\", \"Take biryani first\", \"Take the pretzel bath first\") and three lasts (\"sushi rice last\", \"the noodles last\", \"Take the soufflé last\"). Put beside the others, which each give one clear first, this one leaves a Chef cook unsure. It also counts the subsection's items (\"Eight techniques\" in the lede, \"the index of all eight\", \"these eight\" in next), which rule 11 forbids even when the count is exact.",
+    "fix": "Give one route. Paragraph 2 keeps \"Start with the three that make rice\" and changes the within-group order to \"within the rice, biryani first ... sushi rice at the end of the group\". Paragraph 3 changes \"Take the pretzel bath first ... and the noodles last\" to \"Then the dough, beginning with the pretzel bath, one step on an ordinary dough, and ending with the noodles, which take longest to learn.\" Paragraph 4 keeps \"Take the soufflé last\" as the only overall last. Lede: \"Techniques on one to five recipes each, taught by no semester, each turning on one moment you have to be present for.\" Paragraph 5: \"Read the techniques opens the index at this level.\" Next: \"What keeps them sharp is the menu itself ...\"."
+   },
+   {
+    "key": "4-dishes",
+    "issue": "It states the subsection's count in several places: \"Six project dishes\" (lede), \"Chef holds six dishes\", \"the shortest of the six\", \"five of the six\" and \"these six\" (next). Rule 11 forbids this even when the count is exact. The named subsets (\"Two come from Fire & Smoke\", \"Four come from The Restaurateur's Capstone\") are allowed.",
+    "fix": "Lede: \"Project dishes, two from the fire and the rest from the capstone, that cook for a room rather than a plate and run from one hour to a twelve-hour day.\" Paragraph 1 opens: \"None of the dishes at Chef is a plate you put up between tickets.\" Change \"five of the six ask you\" to \"all but the fish ask you\". Change \"the shortest of the six\" to \"the shortest here\". Next: \"What keeps them sharp is the calendar ...\"."
+   },
+   {
+    "key": "4-lexicon",
+    "issue": "(1) It counts the subsection's items: \"thirty entries on restaurant finance and opening, and nine of the rarest\" (lede, which together make exactly the 39 the page prints) and \"The nine atlas entries\" (paragraph 4). (2) On Matsutake it reads as a contradiction of 4-deck. The lexicon says \"brief fierce heat\", while the deck primer, following its card, says the mushroom \"loses its pine scent to hard cooking\". A cook reading both at this level gets opposite heat instructions for the same mushroom.",
+    "fix": "(1) Lede: \"At Chef the Lexicon is mostly the building, not the plate: restaurant finance and opening, and a handful of the rarest things a kitchen ever handles.\" Paragraph 4 opens: \"The atlas entries come through rarely, each with one handling rule.\" The subset counts (\"Four fruits\", \"Three fungi\", \"Two vegetables\") may stay. (2) Use the atlas entry's own words: \"The scent of Matsutake leaves with the steam, so wet or long heat strips it: a brief fierce grill, or torn into a clear dashi.\" This keeps it compatible with the deck's \"hard cooking\"."
+   },
+   {
+    "key": "4-safety",
+    "issue": "(1) A wrong claim about the level below: \"The levels from Commis to Sous Chef read what the guide states, and Sous Chef where it disagrees with itself.\" Sous Chef's one gap (Sanitizer buckets titrated) is a subject the guide names without stating, not a self-contradiction. The 3-safety primer itself says \"the level above makes a subject of it\". So \"Chef reads what the guide names and never states\" should present Chef as widening that, not as new. (2) It counts the items: \"Six items sit here\", and in next \"walk the six items again\". (3) \"When the walk-in goes dark the clock starts\" implies a timed rule the guide never gives, which is the gap-filling the brief's sanitation note forbids. (4) \"The two-hour rule governs everything left in it\" leaves \"it\" dangling, because the danger zone is never named.",
+    "fix": "Paragraph 1 opens: \"Commis to Chef de Partie read what the guide states, and Sous Chef met the first place it names a rule without stating it, sanitizer buckets titrated to a concentration never given. Chef makes that reading the subject.\" Change \"Six items sit here and only one is a fact you can learn\" to \"Only one item here is a fact you can learn\". Change the next line's \"walk the six items again\" to \"walk this level's items again\". Change \"When the walk-in goes dark the clock starts, you will have to act\" to \"When the walk-in goes dark you will have to act\". Change \"everything left in it\" to \"everything left in the danger zone\"."
+   },
+   {
+    "key": "4-service",
+    "issue": "(1) The closing sentence of paragraph 5 describes the level test (\"the Chef test, untimed, across the subsections, ending on what you missed ...\"). That test is not a Service door. The deck primer already describes it, because there it is a deck door (\"The written test\"). No other Chef primer does this, so the same point is made twice. (2) It counts the items: \"the last three modules of the track, 25 to 27\". It also puts \"all 27 modules\" in prose, a count that goes stale the day a module moves, even though it repeats the door label.",
+    "fix": "Delete the sentence \"At the foot of the page sits the Chef test, untimed, across the subsections, ending on what you missed with the right answers and nothing tallied.\" Paragraph 1: \"Chef holds the last modules of the track, and they turn the same server toward the bar and the ledger.\" Paragraph 5: \"The track opens every module, the right door if the Sous Chef boards have gone faint.\" The per-module term counts may stay as subsets, though \"sixteen terms\" could simply become \"the long one\"."
+   },
+   {
+    "key": "4-palate",
+    "issue": "The lede counts the subsection's items (\"the two faults with the least obvious levers\"), and spicy and muddy are this level's only items. Rule 11 forbids stating the count even when it is exact, and every other house text says \"the faults with the least obvious levers\".",
+    "fix": "Lede: \"Spicy and muddy, the faults with the least obvious levers, and every taste on the ladder taken to rung 5.\""
+   }
+  ],
+  "notes": "The source data disagrees with itself, and the operator should resolve it. Deck card fd_0322 (Matsutake) says the mushroom is \"torn and cooked gently, in broth or with rice\". The Fungi Atlas entry for matsutake says \"Brief fierce heat on a grill, or torn into clear dashi\". The primer fix above only makes the two readers compatible (both blame long or wet heat). The card and the atlas entry still disagree on grill versus gentle cooking.\n\nLion's Mane is placed at Chef in both the Floor Deck (fd_0152) and the Lexicon (lions-mane, deckLevel 4). Both primers teach how to cook it. Their advice agrees (a hot or dry pan before fat), so I left the overlap alone.\n\nIn 4-safety, gap:allergenMethod is described (\"the protocol for a guest's declared restriction\") but not cited. That is unavoidable: its label contains the banned word \"allergen\", so no compliant text can carry its name. The gate should either accept a paraphrase for this slug or give the item a citable short label.\n\nThe level test comes up in two briefs in two forms: as the deck's \"The written test\" door, and as each brief's levelTest line. If they are the same test, the deck brief's door should say so, so that later passes do not describe it twice.\n\n4-deck itself needed no change beyond the Matsutake wording noted above. It is the only Chef primer that avoids counting its items."
  }
 }
