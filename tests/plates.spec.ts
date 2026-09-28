@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { goto } from './helpers';
+import type { Plate } from '../src/lib/types';
 
 /**
  * The Plates, as a reader meets them: the wall, one plate's page with its
@@ -13,9 +14,7 @@ import { goto } from './helpers';
  * proves is that the PAGES say it, and that the quiz records nothing.
  */
 const HERE = dirname(fileURLToPath(import.meta.url));
-const PLATES = JSON.parse(readFileSync(join(HERE, '..', 'src', 'lib', 'data', 'plates.json'), 'utf8')) as {
-	plates: Array<{ slug: string; title: string; count: number; corrections: unknown[]; deckSections: string[]; groups: Array<{ items: Array<{ name: string; links?: { deck?: string } }> }> }>;
-};
+const PLATES = JSON.parse(readFileSync(join(HERE, '..', 'src', 'lib', 'data', 'plates.json'), 'utf8')) as { plates: Plate[] };
 const LEVELS = JSON.parse(readFileSync(join(HERE, '..', 'src', 'lib', 'data', 'levels.json'), 'utf8')) as {
 	levels: Array<{ level: number; name: string }>;
 	items: Record<string, Record<string, string[]>>;
@@ -37,30 +36,120 @@ test('the wall lists every plate in its five rows, with its level and its count'
 	// a level is named, never numbered
 	await expect(first.locator('.pmeta')).toHaveText(new RegExp(`^(?:${LEVELS.levels.map((l) => l.name).join('|')}) · `));
 	await expect(first.locator('.pmeta')).not.toHaveText(/\bLevel\b/);
-	await expect(first.locator('.pmeta')).toHaveText(/\d+ on the plate/);
+	await expect(first.locator('.pmeta')).toHaveText(/6 illustrated subjects/);
+	await expect(page.locator('.note')).toContainText('463 entries');
 	// the thumbnails are pictures: lazy, sized, decorative (the title is the text)
 	await expect(first.locator('img')).toHaveAttribute('loading', 'lazy');
 	await expect(first.locator('img')).toHaveAttribute('alt', '');
 });
 
-test('a plate page shows its picture, names what it gets wrong, transcribes it whole and links its cards', async ({ page }) => {
+test('a plate teaches six subjects and preserves every original entry and correction in its archive', async ({ page, request }) => {
 	const p = withCorrection;
 	await goto(page, `/plates/${p.slug}`);
-	await expect(page.locator('h1')).toHaveText(p.title);
+	await expect(page.locator('h1')).toHaveText(p.teaching.title);
 	const img = page.locator('figure.plate img');
-	await expect(img).toHaveAttribute('alt', new RegExp(p.title));
-	await expect(img).toHaveAttribute('src', new RegExp(`/plates/${p.slug}\\.webp$`));
-	await expect(page.locator('figcaption a')).toHaveAttribute('target', '_blank');
+	await expect(img).toHaveAttribute('alt', /six illustrated subjects/);
+	await expect(img).toHaveAttribute('src', new RegExp(`/plates/${p.slug}-v2\\.webp$`));
+	await expect(page.locator('.subjects > li')).toHaveCount(6);
+	await expect(page.locator('.illustration-key > li')).toHaveCount(6);
+	await expect(page.locator('.subject h3')).toHaveText(p.teaching.subjects.map(subject => subject.name));
+	await expect(page.locator('.sources li')).toHaveCount(p.teaching.sources.length);
+	const archive = page.locator('details.poster-archive');
+	await expect(archive).not.toHaveAttribute('open');
+	await archive.locator('summary').click();
 	if (p.corrections.length) {
-		await expect(page.locator('.corrections li')).toHaveCount(p.corrections.length);
-		await expect(page.locator('.corrections h2')).toHaveText('What the plate gets wrong');
+		await expect(archive.locator('.archive-corrections li')).toHaveCount(p.corrections.length);
+		await expect(archive.locator('.archive-corrections h3')).toHaveText('Recorded correction notes');
+		await expect(archive.locator('.archive-note').first()).toContainText('unresolved or conflicting claims');
 	}
 	await expect(page.locator('.items li')).toHaveCount(p.count);
 	const linked = p.groups.flatMap((g) => g.items).filter((it) => it.links?.deck).length;
 	if (linked) await expect(page.locator('.items a', { hasText: 'The card' }).first()).toHaveAttribute('href', /service\/deck\/study\?card=fd_\d{4}$/);
 	// the text is in the HTML before any script runs
-	const html = await page.content();
+	const html = await (await request.get(`/plates/${p.slug}`)).text();
 	expect(html).toContain(p.groups[0].items[0].name);
+	expect(html).toContain(p.teaching.subjects[0].summary);
+});
+
+test('the image viewer supports zoom keys, Escape and return focus without navigation', async ({ page }) => {
+	await goto(page, `/plates/${PLATES.plates[0].slug}`);
+	const opener = page.getByRole('button', { name: 'Enlarge illustration' });
+	await opener.click();
+	const dialog = page.getByRole('dialog');
+	await expect(dialog).toBeVisible();
+	await page.keyboard.press('+');
+	await expect(dialog.locator('.zoom-value')).toHaveText('150%');
+	await page.keyboard.press('0');
+	await expect(dialog.locator('.zoom-value')).toHaveText('100%');
+	await page.keyboard.press('Escape');
+	await expect(dialog).not.toBeVisible();
+	await expect(opener).toBeFocused();
+	expect(await page.evaluate(() => document.body.style.overflow)).not.toBe('hidden');
+});
+
+test('the complete illustration and its key stay in view beside a desktop lesson', async ({ page }) => {
+	await page.setViewportSize({ width: 1280, height: 714 });
+	await goto(page, '/plates/beef-cuts');
+	await page.locator('.subject').nth(2).scrollIntoViewIfNeeded();
+	const picture = page.locator('.illustration-box > img');
+	await expect(picture).toHaveCSS('object-fit', 'contain');
+	const layout = await picture.evaluate(image => {
+		const img = image as HTMLImageElement;
+		const rect = img.getBoundingClientRect();
+		const box = img.parentElement!.getBoundingClientRect();
+		const lastKey = document.querySelector('.illustration-key li:last-child')!.getBoundingClientRect();
+		return {
+			image: { top: rect.top, left: rect.left, right: rect.right, bottom: rect.bottom, height: rect.height },
+			box: { top: box.top, left: box.left, right: box.right, bottom: box.bottom },
+			keyBottom: lastKey.bottom,
+			viewport: innerHeight,
+			overflow: document.documentElement.scrollWidth > innerWidth
+		};
+	});
+	// Contain only protects the entire artwork when the image element itself
+	// fits the frame; intrinsic grid sizing previously pushed its final row out.
+	expect(layout.image.height).toBeGreaterThan(200);
+	expect(layout.image.top).toBeGreaterThanOrEqual(0);
+	expect(layout.image.top).toBeCloseTo(layout.box.top, 0);
+	expect(layout.image.left).toBeCloseTo(layout.box.left, 0);
+	expect(layout.image.right).toBeCloseTo(layout.box.right, 0);
+	expect(layout.image.bottom).toBeCloseTo(layout.box.bottom, 0);
+	expect(layout.image.bottom).toBeLessThan(layout.keyBottom);
+	expect(layout.keyBottom).toBeLessThanOrEqual(layout.viewport);
+	expect(layout.overflow).toBe(false);
+});
+
+test('a missing illustration leaves the teaching guide usable and the phone page inside its gutters', async ({ page }) => {
+	await page.setViewportSize({ width: 320, height: 800 });
+	await page.route('**/plates/*-v2.webp', route => route.abort());
+	await goto(page, '/plates/beef-cuts');
+	await expect(page.locator('.image-unavailable')).toBeVisible();
+	await expect(page.getByRole('button', { name: 'Enlarge illustration' })).toBeDisabled();
+	await expect(page.locator('.subjects > li')).toHaveCount(6);
+	await expect(page.locator('.subject h3').first()).toBeVisible();
+	expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(320);
+});
+
+test('moving to a neighbouring plate clears a running quiz and closes the archive', async ({ page }) => {
+	await goto(page, `/plates/${PLATES.plates[0].slug}`);
+	await page.getByRole('button', { name: 'Ask me about this plate' }).click();
+	await page.locator('.opts .opt').first().click();
+	await page.locator('.poster-archive summary').click();
+	await page.locator('.neighbours a').filter({ hasText: /^Next:/ }).click();
+	await expect(page.locator('h1')).toHaveText(PLATES.plates[1].teaching.title);
+	await expect(page.locator('.quiz .flash')).toHaveCount(0);
+	await expect(page.getByRole('button', { name: 'Ask me about this plate' })).toBeVisible();
+	await expect(page.locator('.poster-archive')).not.toHaveAttribute('open');
+});
+
+test('a teaching subject keeps its exact same-plate study link outside the archive', async ({ page }) => {
+	await goto(page, '/plates/beef-cuts');
+	const hanger = page.locator('.subject').filter({ has: page.getByRole('heading', { name: 'Hanger Steak', exact: true }) });
+	await expect(hanger.getByRole('link', { name: 'Practise in the deck: Hanger Steak' })).toHaveAttribute('href', /\/service\/deck\/study\?card=fd_0088$/);
+	await expect(page.locator('.poster-archive')).not.toHaveAttribute('open');
+	await goto(page, '/plates/pork-cuts');
+	const tenderloin = page.locator('.subject').filter({ has: page.getByRole('heading', { name: 'Tenderloin', exact: true }) });
+	await expect(tenderloin.locator('.subject-links')).toHaveCount(0);
 });
 
 test('the quiz asks from the plate, ends on how it went, and records nothing', async ({ page }) => {

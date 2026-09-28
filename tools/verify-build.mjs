@@ -472,12 +472,22 @@ check('the plates ship as text in the install and as pictures on demand', () => 
 	assert(chunks.length, 'no built chunk carries "lexiconCategories": plates.json never reached the bundle');
 	const missing = chunks.map(rel).filter((r) => !precached.some((u) => u === '/' + r || u === r));
 	assert(!missing.length, `these hold the plates' text and are NOT in the precache: ${missing.join(', ')}`);
+	const plateData = JSON.parse(readFileSync(join(ROOT, 'src/lib/data/plates.json'), 'utf8'));
 	const pictures = files.filter((f) => rel(f).startsWith('plates/') && f.endsWith('.webp'));
-	assert(pictures.length >= 40, `${pictures.length} plate pictures on disk; twenty plates need a picture and a thumbnail each`);
+	/* An archival original is a third picture, not a second teaching page.
+	   Verify the actual graph rather than dividing the file count by two. */
+	for (const plate of plateData.plates) {
+		assert(/-v\d+\.webp$/.test(plate.image.src), `${plate.slug}: teaching image URL is not versioned`);
+		assert(/-v\d+\.thumb\.webp$/.test(plate.image.thumb), `${plate.slug}: teaching thumbnail URL is not versioned`);
+		for (const resource of [plate.image.src, plate.image.thumb, `plates/archive/${plate.slug}.webp`]) {
+			assert(existsSync(join(BUILD, resource)), `${plate.slug}: missing picture ${resource}`);
+		}
+		assert(existsSync(join(BUILD, `plates/${plate.slug}.html`)) || existsSync(join(BUILD, `plates/${plate.slug}/index.html`)), `${plate.slug}: no prerendered teaching page`);
+	}
 	const cached = pictures.map(rel).filter((r) => precached.some((u) => u === '/' + r || u === r));
 	assert(!cached.length, `plate pictures in the precache: ${cached.slice(0, 3).join(', ')}`);
 	const pages = html.filter((f) => rel(f).startsWith('plates/') && rel(f).endsWith('.html')).length;
-	assert(pages >= pictures.length / 2, `${pages} plate pages for ${pictures.length / 2} plates`);
+	assert(pages >= plateData.plates.length, `${pages} plate pages for ${plateData.plates.length} plates`);
 	return `${chunks.length} text chunk(s) precached, ${pictures.length} pictures on demand, ${pages} pages`;
 });
 

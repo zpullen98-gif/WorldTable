@@ -792,6 +792,17 @@ without its transcription and its corrections under it.
   atlantic-fish 10, pacific-fish 9, pork-cuts 9, northeastern-fruits 9) are
   the candidates.
 
+### Teaching folio replacement, 27 September 2026
+
+The preceding Plates notes describe the archived first edition. The current
+edition replaces the default twenty posters with twenty six-subject specimen
+folios and source-backed HTML teaching guides. See `docs/teaching-folios.md`
+for the content, imagery, archive, cache and publication contracts. Quiz answers
+now come only from `tools/derive/plates/teaching.json`, never the original
+transcriptions or their historical correction notes. All original posters and
+463 entries are retained in the explicitly labeled archive. New images use
+versioned `-v2` filenames and are still excluded from the offline core install.
+
 ## The primers: one reader per level per subsection
 
 A level page says "42 at this level" and lists the items; it did not say what

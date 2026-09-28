@@ -14,7 +14,7 @@
     {
       "key": "produce",
       "title": "The larder by region",
-      "blurb": "What grows where and when: five regions, a vegetable plate and a fruit plate each."
+      "blurb": "Five regional study selections: recognize the crop, its edible part and useful distinctions."
     },
     {
       "key": "pantry",
@@ -39,10 +39,10 @@
         "Good Food Comes From Great Cuts"
       ],
       "image": {
-        "src": "plates/chicken-cuts.webp",
-        "thumb": "plates/chicken-cuts.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/chicken-cuts-v2.webp",
+        "thumb": "plates/chicken-cuts-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -275,6 +275,137 @@
         }
       ],
       "count": 12,
+      "teaching": {
+        "title": "Chicken: cuts and giblets",
+        "intro": "Locate four familiar portions, then distinguish two organs used in the kitchen.",
+        "scope": "These are selected chicken portions, not a complete butchery diagram. Skin, bone and trimming vary by supplier.",
+        "subjects": [
+          {
+            "id": "breast",
+            "name": "Breast",
+            "summary": "The broad chest portion that supplies the principal white meat of a chicken.",
+            "facts": [
+              [
+                "Part",
+                "Chest muscles."
+              ],
+              [
+                "Character",
+                "White meat, unlike the leg portions."
+              ]
+            ],
+            "distinction": "A breast is not a thigh or a drumstick.",
+            "image": "Pale pink boneless breast with a broad rounded end and tapered tip."
+          },
+          {
+            "id": "thigh",
+            "name": "Thigh",
+            "summary": "The dark meat portion of the upper leg, between the body and the drumstick.",
+            "facts": [
+              [
+                "Part",
+                "Upper leg."
+              ],
+              [
+                "Character",
+                "Dark meat."
+              ]
+            ],
+            "distinction": "The thigh is above the leg joint; the drumstick is below it.",
+            "image": "Raw skin-on thigh, broad and compact, with exposed dark pink cut edge."
+          },
+          {
+            "id": "drumstick",
+            "name": "Drumstick",
+            "summary": "The lower leg portion with a narrow bone end and a rounded mass of dark meat.",
+            "facts": [
+              [
+                "Part",
+                "Lower leg."
+              ],
+              [
+                "Character",
+                "Dark meat."
+              ]
+            ],
+            "distinction": "A drumstick is a leg cut; a drumette is part of the wing.",
+            "image": "Raw skin-on lower leg, one tapered bone end and a bulbous meaty end."
+          },
+          {
+            "id": "wing",
+            "name": "Wing",
+            "summary": "The jointed upper limb, commonly divided into a drumette, flat and tip.",
+            "facts": [
+              [
+                "Part",
+                "Wing."
+              ],
+              [
+                "Structure",
+                "Three connected sections."
+              ]
+            ],
+            "distinction": "The small drumette belongs to the wing, not the leg.",
+            "image": "Whole raw wing bent naturally, showing drumette, two-bone flat and pointed tip."
+          },
+          {
+            "id": "liver",
+            "name": "Liver",
+            "summary": "The soft, lobed organ that produces bile and is included among chicken giblets.",
+            "facts": [
+              [
+                "Part",
+                "Digestive organ."
+              ],
+              [
+                "Giblets",
+                "Grouped with the heart and gizzard."
+              ]
+            ],
+            "distinction": "The liver is an organ, not a skeletal muscle cut.",
+            "image": "Smooth dark reddish-brown lobed chicken liver."
+          },
+          {
+            "id": "gizzard",
+            "name": "Gizzard",
+            "summary": "The thick, muscular stomach that mechanically grinds a bird's food.",
+            "facts": [
+              [
+                "Part",
+                "Muscular stomach."
+              ],
+              [
+                "Giblets",
+                "Grouped with the heart and liver."
+              ]
+            ],
+            "distinction": "Its grinding function distinguishes it from the liver.",
+            "image": "Cleaned split gizzard showing two firm dark pink muscular lobes."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Poultry Extension: muscular system",
+            "url": "https://poultry.extension.org/articles/poultry-anatomy/avian-muscular-system/"
+          },
+          {
+            "title": "Poultry Extension: external anatomy",
+            "url": "https://poultry.extension.org/articles/poultry-anatomy/external-anatomy-of-chickens/"
+          },
+          {
+            "title": "USDA AMS: wing portions",
+            "url": "https://www.ams.usda.gov/book/wing"
+          },
+          {
+            "title": "Poultry Extension: digestive system",
+            "url": "https://poultry.extension.org/articles/poultry-anatomy/avian-digestive-system/"
+          },
+          {
+            "title": "Poultry Extension: giblets",
+            "url": "https://poultry.extension.org/glossary/giblets/"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": []
     },
@@ -290,10 +421,10 @@
         "From snout to tail. Every cut has a purpose."
       ],
       "image": {
-        "src": "plates/pork-cuts.webp",
-        "thumb": "plates/pork-cuts.thumb.webp",
-        "width": 1536,
-        "height": 1024
+        "src": "plates/pork-cuts-v2.webp",
+        "thumb": "plates/pork-cuts-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -758,6 +889,149 @@
         }
       ],
       "count": 32,
+      "teaching": {
+        "title": "Pork: six useful distinctions",
+        "intro": "Learn the cut before choosing the preparation: shoulder, back, belly, ribs and lower leg.",
+        "scope": "U.S. retail cut names are used here. Curing and smoking describe processing, not the anatomical location.",
+        "subjects": [
+          {
+            "id": "boston-butt",
+            "name": "Boston Butt (Shoulder)",
+            "summary": "A shoulder cut from the upper front of the pig, despite its misleading name.",
+            "facts": [
+              [
+                "Part",
+                "Upper shoulder."
+              ],
+              [
+                "Kitchen",
+                "Commonly slow roasted or braised for pulled pork."
+              ]
+            ],
+            "distinction": "The butt is a shoulder cut, not the rear ham.",
+            "image": "Thick irregular raw pork shoulder roast with visible marbling and fat seams."
+          },
+          {
+            "id": "pork-loin",
+            "name": "Loin",
+            "summary": "The broad back section used for pork roasts and chops.",
+            "facts": [
+              [
+                "Part",
+                "Back, between shoulder and rear leg."
+              ],
+              [
+                "Form",
+                "Sold as a substantial roast or cut into chops."
+              ]
+            ],
+            "distinction": "A loin roast is larger and broader than a tenderloin.",
+            "image": "Raw broad boneless pork loin roast with pale pink muscle and a fat cap."
+          },
+          {
+            "id": "pork-tenderloin",
+            "name": "Tenderloin",
+            "summary": "A small, slender, tender muscle from the loin, usually sold as a long boneless piece.",
+            "facts": [
+              [
+                "Part",
+                "Within the loin section."
+              ],
+              [
+                "Character",
+                "Lean and mild."
+              ]
+            ],
+            "distinction": "Tenderloin and loin roast are different cuts and sizes.",
+            "image": "Long narrow pale pink boneless pork tenderloin tapering at one end."
+          },
+          {
+            "id": "fresh-belly",
+            "name": "Fresh Belly",
+            "summary": "The uncured underside cut with alternating layers of meat and fat.",
+            "facts": [
+              [
+                "Part",
+                "Underside of the pig."
+              ],
+              [
+                "Kitchen",
+                "Roasting and braising are common uses."
+              ]
+            ],
+            "distinction": "Bacon is a cured product; fresh belly has not undergone that process.",
+            "image": "Rectangular slab of uncured belly, pale skin above distinct pink and white layers."
+          },
+          {
+            "id": "spare-ribs",
+            "name": "Spare Ribs",
+            "summary": "A rib rack from the belly side, below the loin ribs.",
+            "facts": [
+              [
+                "Part",
+                "Belly side of the rib cage."
+              ],
+              [
+                "Form",
+                "St. Louis ribs are a trimmed form of spare ribs."
+              ]
+            ],
+            "distinction": "Baby back ribs come from the loin area, not this belly section.",
+            "image": "Broad raw pork spare rib rack with repeated long bones and meat between them."
+          },
+          {
+            "id": "hock",
+            "name": "Hock",
+            "summary": "A lower leg cut surrounding a joint, distinct from the foot.",
+            "facts": [
+              [
+                "Part",
+                "Front or hind lower leg."
+              ],
+              [
+                "Form",
+                "Available fresh, or separately cured and smoked."
+              ]
+            ],
+            "distinction": "A fresh hock and a smoked hock are not interchangeable product descriptions.",
+            "image": "Unsmoked raw skin-on hock, compact round cut with bone visible at one end."
+          }
+        ],
+        "sources": [
+          {
+            "title": "National Pork Board: shoulder",
+            "url": "https://new.pork.org/cuts/pork-shoulder/"
+          },
+          {
+            "title": "National Pork Board: loin roast",
+            "url": "https://new.pork.org/cuts/pork-loin-roast/"
+          },
+          {
+            "title": "National Pork Board: tenderloin",
+            "url": "https://pork.org/cuts/pork-tenderloin/"
+          },
+          {
+            "title": "National Pork Board: belly",
+            "url": "https://pork.org/cuts/pork-belly/"
+          },
+          {
+            "title": "National Pork Board: ribs",
+            "url": "https://pork.org/cuts/pork-ribs/"
+          },
+          {
+            "title": "USDA AMS: fresh pork specifications",
+            "url": "https://www.ams.usda.gov/sites/default/files/media/IMPS_400_Fresh_Pork%5B1%5D.pdf"
+          },
+          {
+            "title": "Utah State Extension: pork cut chart",
+            "url": "https://extension.usu.edu/sanpete/files/2022SwineStudyPages.pdf"
+          },
+          {
+            "title": "USDA AMS: cured pork specifications",
+            "url": "https://www.ams.usda.gov/sites/default/files/media/LSimps500.pdf"
+          }
+        ]
+      },
       "deckSections": [
         "cuts",
         "cured"
@@ -775,10 +1049,10 @@
         "Good food comes from great cuts"
       ],
       "image": {
-        "src": "plates/beef-cuts.webp",
-        "thumb": "plates/beef-cuts.thumb.webp",
-        "width": 1536,
-        "height": 1024
+        "src": "plates/beef-cuts-v2.webp",
+        "thumb": "plates/beef-cuts-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -1197,6 +1471,149 @@
         }
       ],
       "count": 28,
+      "teaching": {
+        "title": "Beef: where the cut begins",
+        "intro": "Connect six common cuts to their anatomical origins and useful kitchen distinctions.",
+        "scope": "These U.S. cut names describe selected portions. The corrected guide takes precedence over the original poster archive.",
+        "subjects": [
+          {
+            "id": "chuck-roast",
+            "name": "Chuck Roast",
+            "summary": "A roast from the shoulder region, a familiar choice for slow-cooked beef.",
+            "facts": [
+              [
+                "Part",
+                "Chuck, the shoulder region."
+              ],
+              [
+                "Kitchen",
+                "Pot roasting and braising suit many chuck roasts."
+              ]
+            ],
+            "distinction": "Chuck is a region with several muscles, not one uniform steak.",
+            "image": "Raw thick chuck roast with irregular muscle seams and visible marbling."
+          },
+          {
+            "id": "ribeye",
+            "name": "Ribeye",
+            "summary": "A rib-section steak recognized for generous fat marbling within the meat.",
+            "facts": [
+              [
+                "Part",
+                "Rib primal."
+              ],
+              [
+                "Character",
+                "Rich flavor and a tender texture."
+              ]
+            ],
+            "distinction": "Marbling is fat within the muscle; it differs from an outer fat cap.",
+            "image": "Raw oval ribeye with central eye, curved cap muscle and fine white marbling."
+          },
+          {
+            "id": "strip-steak",
+            "name": "Strip Steak",
+            "summary": "A steak cut from the strip loin beside the backbone, near the tenderloin.",
+            "facts": [
+              [
+                "Part",
+                "Short loin."
+              ],
+              [
+                "Form",
+                "The strip loin can be cut into steaks or kept as a roast."
+              ]
+            ],
+            "distinction": "Strip loin and tenderloin are neighboring but distinct muscles.",
+            "image": "Raw broad oblong strip steak with a clear fat strip along one edge."
+          },
+          {
+            "id": "beef-tenderloin",
+            "name": "Tenderloin",
+            "summary": "The exceptionally tender loin muscle commonly portioned into filet mignon steaks.",
+            "facts": [
+              [
+                "Part",
+                "Loin."
+              ],
+              [
+                "Character",
+                "Fine texture with comparatively little fat."
+              ]
+            ],
+            "distinction": "Tenderloin is not the same muscle as strip loin or ribeye.",
+            "image": "Whole long raw beef tenderloin, broad at one end and tapering at the other, with fine grain and little visible fat."
+          },
+          {
+            "id": "brisket",
+            "name": "Brisket",
+            "summary": "The breast cut below the chuck and in front of the short plate.",
+            "facts": [
+              [
+                "Part",
+                "Breast."
+              ],
+              [
+                "Kitchen",
+                "Long, slow cooking is characteristic."
+              ]
+            ],
+            "distinction": "Brisket is separate from the short plate and its diaphragm cuts.",
+            "image": "Raw broad flat brisket slab with a visible thick fat layer along one side."
+          },
+          {
+            "id": "hanger-steak",
+            "name": "Hanger Steak",
+            "summary": "A cut from the diaphragm, associated with the short plate rather than the flank.",
+            "facts": [
+              [
+                "Part",
+                "Diaphragm; short plate."
+              ],
+              [
+                "Structure",
+                "A central connective membrane separates its sections."
+              ]
+            ],
+            "distinction": "Hanger and flank are different cuts. The original poster placed hanger incorrectly.",
+            "image": "Two long raw dark red hanger lobes with coarse lengthwise grain and central seam."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Beef Checkoff: shoulder roast",
+            "url": "https://www.beefitswhatsfordinner.com/cuts/cut/44477/shoulder-roast"
+          },
+          {
+            "title": "Beef Checkoff: ribeye",
+            "url": "https://www.beefitswhatsfordinner.com/cuts/cut/2468/ribeye-steak"
+          },
+          {
+            "title": "Beef Checkoff: strip loin",
+            "url": "https://www.beefitswhatsfordinner.com/cuts/cut/2836/strip-loin-boneless"
+          },
+          {
+            "title": "Beef Checkoff: tenderloin",
+            "url": "https://www.beefitswhatsfordinner.com/cuts/cut/2841/tenderloin-bone-in"
+          },
+          {
+            "title": "Beef Checkoff: brisket",
+            "url": "https://www.beefitswhatsfordinner.com/cuts/cut/2951/brisket"
+          },
+          {
+            "title": "Beef Checkoff: hanging tender",
+            "url": "https://www.beefitswhatsfordinner.com/cuts/cut/44488/hanging-tender"
+          },
+          {
+            "title": "Beef Checkoff: tenderloin steaks and broiling cuts",
+            "url": "https://www.beefitswhatsfordinner.com/cuts/collection/33340/best-beef-cuts-for-broiling"
+          },
+          {
+            "title": "Beef Checkoff: hanger steak",
+            "url": "https://www.beefitswhatsfordinner.com/cuts/cut/2826/hanger-steak"
+          }
+        ]
+      },
       "deckSections": [
         "cuts"
       ],
@@ -1214,10 +1631,10 @@
         "Pacific waters, bountiful flavors."
       ],
       "image": {
-        "src": "plates/pacific-fish.webp",
-        "thumb": "plates/pacific-fish.thumb.webp",
-        "width": 1536,
-        "height": 1024
+        "src": "plates/pacific-fish-v2.webp",
+        "thumb": "plates/pacific-fish-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -1569,6 +1986,141 @@
         }
       ],
       "count": 18,
+      "teaching": {
+        "title": "Pacific: six seafood identities",
+        "intro": "Read body shape, fins and markings before relying on a market nickname.",
+        "scope": "Selected species, shown as recognition illustrations rather than identification certificates. These waters are not exclusive ranges; provenance and availability require supplier records.",
+        "subjects": [
+          {
+            "id": "chinook-salmon",
+            "name": "Chinook Salmon",
+            "summary": "The Pacific salmon also called king, with black spots on both lobes of the tail.",
+            "facts": [
+              [
+                "Look for",
+                "Silver sides and a blue-green back."
+              ],
+              [
+                "Species",
+                "Oncorhynchus tshawytscha"
+              ]
+            ],
+            "distinction": "King is another name for Chinook, not a different fish.",
+            "image": "Whole silver Chinook, dark back and black spots on both tail lobes."
+          },
+          {
+            "id": "pacific-halibut",
+            "name": "Pacific Halibut",
+            "summary": "A flat, diamond-shaped fish with both eyes on its upper side.",
+            "facts": [
+              [
+                "Look for",
+                "Mottled brown upper side; pale underside."
+              ],
+              [
+                "Species",
+                "Hippoglossus stenolepis"
+              ]
+            ],
+            "distinction": "A flatfish has a very different body plan from a round fish.",
+            "image": "Whole diamond-shaped halibut seen from above, both eyes on visible upper side."
+          },
+          {
+            "id": "pacific-cod",
+            "name": "Pacific Cod",
+            "summary": "A gray-brown North Pacific fish with a conspicuous whisker-like chin barbel.",
+            "facts": [
+              [
+                "Look for",
+                "Dark mottling, a pale belly and dusky fins."
+              ],
+              [
+                "Species",
+                "Gadus macrocephalus"
+              ]
+            ],
+            "distinction": "The chin barbel helps distinguish it from the fish sold as black cod.",
+            "image": "Whole gray-brown mottled cod with a distinct chin barbel and three dorsal fins."
+          },
+          {
+            "id": "sablefish",
+            "name": "Sablefish",
+            "summary": "The North Pacific fish marketed as black cod, although it is not a member of the cod family.",
+            "facts": [
+              [
+                "Look for",
+                "An elongated, dark-bodied fish."
+              ],
+              [
+                "Species",
+                "Anoplopoma fimbria"
+              ]
+            ],
+            "distinction": "A market nickname does not establish a species or family.",
+            "image": "Whole dark charcoal sablefish, elongated body and no cod-like chin barbel."
+          },
+          {
+            "id": "albacore-tuna",
+            "name": "Albacore Tuna",
+            "summary": "A streamlined tuna with exceptionally long pectoral fins reaching far back along the body.",
+            "facts": [
+              [
+                "Look for",
+                "Dark blue back, silver sides and a pale tail edge."
+              ],
+              [
+                "Species",
+                "Thunnus alalunga"
+              ]
+            ],
+            "distinction": "The long pectoral fins are a key feature in the NOAA profile.",
+            "image": "Whole silver-blue torpedo-shaped albacore with unmistakably long pectoral fins."
+          },
+          {
+            "id": "pacific-sardine",
+            "name": "Pacific Sardine",
+            "summary": "A small schooling fish with a blue-green back and rows of dark spots along its sides.",
+            "facts": [
+              [
+                "Look for",
+                "Pale flanks with dark lateral spots."
+              ],
+              [
+                "Species",
+                "Sardinops sagax"
+              ]
+            ],
+            "distinction": "This is a named sardine species, not a label for every small canned fish.",
+            "image": "Two small whole silver sardines, blue-green backs and dark flank spots."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NOAA Fisheries: Chinook Salmon",
+            "url": "https://www.fisheries.noaa.gov/species/chinook-salmon"
+          },
+          {
+            "title": "NOAA Fisheries: Pacific Halibut",
+            "url": "https://www.fisheries.noaa.gov/species/pacific-halibut"
+          },
+          {
+            "title": "NOAA Fisheries: Pacific Cod",
+            "url": "https://www.fisheries.noaa.gov/species/pacific-cod"
+          },
+          {
+            "title": "NOAA Fisheries: Sablefish",
+            "url": "https://www.fisheries.noaa.gov/species/sablefish"
+          },
+          {
+            "title": "NOAA Fisheries: Albacore Tuna",
+            "url": "https://www.fisheries.noaa.gov/species/pacific-albacore-tuna"
+          },
+          {
+            "title": "NOAA Fisheries: Pacific Sardine",
+            "url": "https://www.fisheries.noaa.gov/species/pacific-sardine"
+          }
+        ]
+      },
       "deckSections": [
         "fish"
       ],
@@ -1586,10 +2138,10 @@
         "Great fish, better meals"
       ],
       "image": {
-        "src": "plates/atlantic-fish.webp",
-        "thumb": "plates/atlantic-fish.thumb.webp",
-        "width": 1536,
-        "height": 1024
+        "src": "plates/atlantic-fish-v2.webp",
+        "thumb": "plates/atlantic-fish-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -1935,6 +2487,141 @@
         }
       ],
       "count": 16,
+      "teaching": {
+        "title": "Atlantic: fish and shellfish",
+        "intro": "Compare four finfish with two shellfish, keeping the species names precise.",
+        "scope": "Selected species, shown as recognition illustrations rather than identification certificates. These waters are not exclusive ranges; provenance and availability require supplier records.",
+        "subjects": [
+          {
+            "id": "atlantic-cod",
+            "name": "Atlantic Cod",
+            "summary": "A heavy-bodied North Atlantic fish with a chin barbel, mottled skin and a clear lateral line.",
+            "facts": [
+              [
+                "Look for",
+                "Large head, pale belly and dark speckles."
+              ],
+              [
+                "Species",
+                "Gadus morhua"
+              ]
+            ],
+            "distinction": "Haddock has a distinct dark thumbprint; cod is more mottled.",
+            "image": "Whole mottled olive cod with chin barbel, pale lateral line and three dorsal fins."
+          },
+          {
+            "id": "haddock",
+            "name": "Haddock",
+            "summary": "A cod-family fish bearing a conspicuous black thumbprint on each side.",
+            "facts": [
+              [
+                "Look for",
+                "Less mottled than Atlantic cod."
+              ],
+              [
+                "Species",
+                "Melanogrammus aeglefinus"
+              ]
+            ],
+            "distinction": "The dark side patch is the memorable contrast with cod.",
+            "image": "Whole silvery haddock with dark lateral line and a black patch above the pectoral fin."
+          },
+          {
+            "id": "atlantic-mackerel",
+            "name": "Atlantic Mackerel",
+            "summary": "A spindle-shaped fish with a blue-green back crossed by many dark wavy bars.",
+            "facts": [
+              [
+                "Look for",
+                "Silver belly and a narrow, tapered body."
+              ],
+              [
+                "Species",
+                "Scomber scombrus"
+              ]
+            ],
+            "distinction": "The wavy back markings differ from a sardine's side spots.",
+            "image": "Whole slender mackerel with blue-green back, strong wavy black bars and silver belly."
+          },
+          {
+            "id": "black-sea-bass",
+            "name": "Black Sea Bass",
+            "summary": "A dark coastal fish whose dorsal fin has pale spots and bands.",
+            "facts": [
+              [
+                "Look for",
+                "Black to dusky brown body with dark fins."
+              ],
+              [
+                "Species",
+                "Centropristis striata"
+              ]
+            ],
+            "distinction": "The full species name matters; sea bass alone covers different fish.",
+            "image": "Whole dark charcoal sea bass, raised spiny dorsal fin with pale markings."
+          },
+          {
+            "id": "atlantic-sea-scallop",
+            "name": "Atlantic Sea Scallop",
+            "summary": "A two-shelled mollusk whose adductor muscle is the portion commonly served in the United States.",
+            "facts": [
+              [
+                "Look for",
+                "A relatively smooth, saucer-shaped shell."
+              ],
+              [
+                "Species",
+                "Placopecten magellanicus"
+              ]
+            ],
+            "distinction": "Sea scallop shells lack the strong ribs seen on many other scallops.",
+            "image": "Relatively smooth reddish-brown scallop shell, softly fluted edge, ivory adductor meat."
+          },
+          {
+            "id": "american-lobster",
+            "name": "American Lobster",
+            "summary": "A large crustacean with one heavy crusher claw and one finer-edged cutting claw.",
+            "facts": [
+              [
+                "Look for",
+                "Live animals are usually olive or greenish brown."
+              ],
+              [
+                "Species",
+                "Homarus americanus"
+              ]
+            ],
+            "distinction": "The familiar bright red color belongs to the cooked form.",
+            "image": "Whole uncooked olive-brown lobster with two visibly unequal large claws."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NOAA Fisheries: Atlantic Cod",
+            "url": "https://www.fisheries.noaa.gov/species/atlantic-cod"
+          },
+          {
+            "title": "NOAA Fisheries: Haddock",
+            "url": "https://www.fisheries.noaa.gov/species/haddock"
+          },
+          {
+            "title": "NOAA Fisheries: Atlantic Mackerel",
+            "url": "https://www.fisheries.noaa.gov/species/atlantic-mackerel"
+          },
+          {
+            "title": "NOAA Fisheries: Black Sea Bass",
+            "url": "https://www.fisheries.noaa.gov/species/black-sea-bass"
+          },
+          {
+            "title": "NOAA Fisheries: Atlantic Sea Scallop",
+            "url": "https://www.fisheries.noaa.gov/species/atlantic-sea-scallop"
+          },
+          {
+            "title": "NOAA Fisheries: American Lobster",
+            "url": "https://www.fisheries.noaa.gov/species/american-lobster"
+          }
+        ]
+      },
       "deckSections": [
         "fish"
       ],
@@ -1951,10 +2638,10 @@
         "From the Louisiana marshes to the open Gulf, our waters provide extraordinary fish, each with its own unique flavor."
       ],
       "image": {
-        "src": "plates/gulf-coast-fish.webp",
-        "thumb": "plates/gulf-coast-fish.thumb.webp",
-        "width": 1536,
-        "height": 1024
+        "src": "plates/gulf-coast-fish-v2.webp",
+        "thumb": "plates/gulf-coast-fish-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -2234,6 +2921,141 @@
         }
       ],
       "count": 12,
+      "teaching": {
+        "title": "Gulf Coast: reef, open water and shore",
+        "intro": "Six contrasting forms introduce the range of seafood associated with Gulf Coast menus.",
+        "scope": "Selected species, shown as recognition illustrations rather than identification certificates. These waters are not exclusive ranges; provenance and availability require supplier records.",
+        "subjects": [
+          {
+            "id": "red-snapper",
+            "name": "Red Snapper",
+            "summary": "A reddish fish with a sloping triangular face and enlarged canine teeth.",
+            "facts": [
+              [
+                "Look for",
+                "Red tones vary; deeper-water fish can be redder."
+              ],
+              [
+                "Species",
+                "Lutjanus campechanus"
+              ]
+            ],
+            "distinction": "Red snapper names a species, not every red-colored reef fish.",
+            "image": "Whole pink-red snapper with triangular face, spiny dorsal and small canine teeth."
+          },
+          {
+            "id": "red-grouper",
+            "name": "Red Grouper",
+            "summary": "A robust, large-mouthed fish with a reddish-brown body and occasional pale spots.",
+            "facts": [
+              [
+                "Look for",
+                "A broad head and a projecting lower jaw."
+              ],
+              [
+                "Species",
+                "Epinephelus morio"
+              ]
+            ],
+            "distinction": "Its heavy build contrasts with the more pointed snapper profile.",
+            "image": "Whole stout reddish-brown grouper, broad mouth and scattered pale side spots."
+          },
+          {
+            "id": "mahi-mahi",
+            "name": "Mahi Mahi",
+            "summary": "A brightly colored surface-water fish with a green-blue back and gold or silver lower body.",
+            "facts": [
+              [
+                "Look for",
+                "Adult males have a square forehead; females are rounder."
+              ],
+              [
+                "Species",
+                "Coryphaena hippurus"
+              ]
+            ],
+            "distinction": "The dolphinfish name refers to a fish, not a marine mammal.",
+            "image": "Whole male mahi mahi, tall blunt forehead, long dorsal fin, green-blue and gold body."
+          },
+          {
+            "id": "yellowfin-tuna",
+            "name": "Yellowfin Tuna",
+            "summary": "A torpedo-shaped tuna with bright yellow dorsal and anal fins and yellow finlets.",
+            "facts": [
+              [
+                "Look for",
+                "Dark blue back and yellow-to-silver underside."
+              ],
+              [
+                "Species",
+                "Thunnus albacares"
+              ]
+            ],
+            "distinction": "Those yellow fins distinguish the pictured form from albacore.",
+            "image": "Whole adult yellowfin with long yellow dorsal and anal fins and yellow finlets."
+          },
+          {
+            "id": "white-shrimp",
+            "name": "White Shrimp",
+            "summary": "A light gray shrimp with very long antennae and a greenish tail.",
+            "facts": [
+              [
+                "Look for",
+                "The carapace lacks grooves."
+              ],
+              [
+                "Species",
+                "Litopenaeus setiferus"
+              ]
+            ],
+            "distinction": "White is a species name here, not a claim that the raw shell is pure white.",
+            "image": "Whole translucent gray shrimp, very long antennae and subtle green tail, never cooked pink."
+          },
+          {
+            "id": "blue-crab",
+            "name": "Blue Crab",
+            "summary": "A swimming crab with blue claws and flattened rear legs shaped like paddles.",
+            "facts": [
+              [
+                "Look for",
+                "Blue to olive-green shell."
+              ],
+              [
+                "Species",
+                "Callinectes sapidus"
+              ]
+            ],
+            "distinction": "Its paddle-shaped rear legs are the useful visual cue.",
+            "image": "Whole uncooked blue crab from above, olive shell, blue claws and rear swimming paddles."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NOAA Fisheries: Red Snapper",
+            "url": "https://www.fisheries.noaa.gov/species/red-snapper"
+          },
+          {
+            "title": "NOAA Fisheries: Red Grouper",
+            "url": "https://www.fisheries.noaa.gov/species/red-grouper"
+          },
+          {
+            "title": "NOAA Fisheries: Mahi Mahi",
+            "url": "https://www.fisheries.noaa.gov/species/atlantic-mahi-mahi"
+          },
+          {
+            "title": "NOAA Fisheries: Yellowfin Tuna",
+            "url": "https://www.fisheries.noaa.gov/species/atlantic-yellowfin-tuna"
+          },
+          {
+            "title": "NOAA Fisheries: White Shrimp",
+            "url": "https://www.fisheries.noaa.gov/species/white-shrimp"
+          },
+          {
+            "title": "NOAA Fisheries: Blue Crab",
+            "url": "https://www.fisheries.noaa.gov/species/blue-crab"
+          }
+        ]
+      },
       "deckSections": [
         "fish"
       ],
@@ -2252,10 +3074,10 @@
         "Local fields, forests, coastal waters, mountain valleys."
       ],
       "image": {
-        "src": "plates/northwest-vegetables.webp",
-        "thumb": "plates/northwest-vegetables.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/northwest-vegetables-v2.webp",
+        "thumb": "plates/northwest-vegetables-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -2800,6 +3622,145 @@
         }
       ],
       "count": 29,
+      "teaching": {
+        "title": "Northwest vegetables: from shoot to squash",
+        "intro": "Identify six plant parts: shoots, roots, buds, bulbs and mature fruit.",
+        "scope": "A representative study selection, not a map of native or exclusive crops. Cultivar, grower, weather, storage and imports change availability; confirm the local harvest with the supplier.",
+        "subjects": [
+          {
+            "id": "asparagus",
+            "name": "Asparagus",
+            "summary": "Tender young shoots harvested as pointed spears.",
+            "facts": [
+              [
+                "Food form",
+                "Young stem shoots."
+              ],
+              [
+                "Notice",
+                "A perennial vegetable."
+              ]
+            ],
+            "distinction": "The spear is a shoot, not a root.",
+            "image": "A short bundle of green asparagus spears with tightly closed purple-green tips."
+          },
+          {
+            "id": "beet",
+            "name": "Beet",
+            "summary": "A swollen, usually rounded root crop with edible leafy tops.",
+            "facts": [
+              [
+                "Food form",
+                "Root and greens."
+              ],
+              [
+                "Notice",
+                "Cultivars include red and golden forms."
+              ]
+            ],
+            "distinction": "The root and the greens offer different textures.",
+            "image": "Deep red beet with stems and leaves, one cut face."
+          },
+          {
+            "id": "broccoli",
+            "name": "Broccoli",
+            "summary": "A branching green head made of tightly packed, unopened flower buds.",
+            "facts": [
+              [
+                "Food form",
+                "Flower buds and stalk."
+              ],
+              [
+                "Notice",
+                "The head is harvested before flowers open."
+              ]
+            ],
+            "distinction": "The head is not a compact ball of leaves like cabbage.",
+            "image": "Green broccoli crown with branching pale-green stalk and fine bud texture."
+          },
+          {
+            "id": "carrot",
+            "name": "Carrot",
+            "summary": "A fleshy, tapered taproot, commonly orange.",
+            "facts": [
+              [
+                "Food form",
+                "Taproot."
+              ],
+              [
+                "Notice",
+                "Other root colors also occur."
+              ]
+            ],
+            "distinction": "A carrot is a root, unlike a potato stem tuber.",
+            "image": "Orange carrots with slender tips and feathery green tops."
+          },
+          {
+            "id": "onion",
+            "name": "Onion",
+            "summary": "An edible bulb with layers beneath a dry outer skin.",
+            "facts": [
+              [
+                "Food form",
+                "Bulb and green tops."
+              ],
+              [
+                "Notice",
+                "Bulbs and tops can be used raw or cooked."
+              ]
+            ],
+            "distinction": "A bulb differs from a solid root or stem tuber.",
+            "image": "Golden-brown onion and a cut half showing concentric layers."
+          },
+          {
+            "id": "butternut",
+            "name": "Winter Squash (Butternut)",
+            "summary": "A mature, hard-rinded squash with a long neck and a rounded seed cavity.",
+            "facts": [
+              [
+                "Food form",
+                "Mature squash fruit."
+              ],
+              [
+                "Notice",
+                "Orange flesh within a tan rind."
+              ]
+            ],
+            "distinction": "Winter squash is harvested mature; summer squash is picked young.",
+            "image": "Tan butternut squash with orange cut half and seeds only in the bulbous end."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NC State Extension: Asparagus",
+            "url": "https://plants.ces.ncsu.edu/plants/asparagus-officinalis/"
+          },
+          {
+            "title": "NC State Extension: Beet",
+            "url": "https://plants.ces.ncsu.edu/plants/beta-vulgaris-garden-beet-group/"
+          },
+          {
+            "title": "NC State Extension: Broccoli",
+            "url": "https://plants.ces.ncsu.edu/plants/brassica-oleracea-cauliflower-broccoli-group/"
+          },
+          {
+            "title": "NC State Extension: Carrot",
+            "url": "https://plants.ces.ncsu.edu/plants/daucus-carota-subsp-sativus/"
+          },
+          {
+            "title": "NC State Extension: Onion",
+            "url": "https://plants.ces.ncsu.edu/plants/allium-cepa/"
+          },
+          {
+            "title": "NC State Extension: Winter Squash (Butternut)",
+            "url": "https://plants.ces.ncsu.edu/plants/cucurbita-moschata/"
+          },
+          {
+            "title": "University of Minnesota Extension: vegetable harvest stages",
+            "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/harvesting-and-storing-home-garden-vegetables"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": [
         "The Vegetable Atlas"
@@ -2819,10 +3780,10 @@
         "Fresh, local, seasonal."
       ],
       "image": {
-        "src": "plates/northwest-fruits.webp",
-        "thumb": "plates/northwest-fruits.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/northwest-fruits-v2.webp",
+        "thumb": "plates/northwest-fruits-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -3336,6 +4297,141 @@
         }
       ],
       "count": 25,
+      "teaching": {
+        "title": "Northwest fruits: orchard and bramble",
+        "intro": "Contrast core fruits, a stone fruit and three very different berries.",
+        "scope": "A representative study selection, not a map of native or exclusive crops. Cultivar, grower, weather, storage and imports change availability; confirm the local harvest with the supplier.",
+        "subjects": [
+          {
+            "id": "apple",
+            "name": "Apple",
+            "summary": "A crisp tree fruit with seeds held in a central core.",
+            "facts": [
+              [
+                "Food form",
+                "Pome fruit."
+              ],
+              [
+                "Notice",
+                "Cultivars differ in color, texture and cooking use."
+              ]
+            ],
+            "distinction": "A core differs from the single stone in a peach.",
+            "image": "Red apple with a cut half showing the core."
+          },
+          {
+            "id": "pear",
+            "name": "Pear",
+            "summary": "A tree fruit often shaped with a broad base and a narrower neck.",
+            "facts": [
+              [
+                "Food form",
+                "Pome fruit."
+              ],
+              [
+                "Notice",
+                "Cultivars vary in shape and color."
+              ]
+            ],
+            "distinction": "Pears have a seed core, not a single stone.",
+            "image": "Green-gold pear with a cut half showing its core."
+          },
+          {
+            "id": "sweet-cherry",
+            "name": "Sweet Cherry",
+            "summary": "A small, fleshy tree fruit surrounding one hard stone, often eaten fresh.",
+            "facts": [
+              [
+                "Food form",
+                "Stone fruit."
+              ],
+              [
+                "Notice",
+                "Cultivars can be yellow or red."
+              ]
+            ],
+            "distinction": "Sweet and tart cherries are distinct culinary categories.",
+            "image": "Deep red sweet cherries on slender stems, one cut to show its stone."
+          },
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "summary": "A small blue berry bearing a crown-shaped calyx at its tip.",
+            "facts": [
+              [
+                "Food form",
+                "Shrub-grown berry."
+              ],
+              [
+                "Notice",
+                "Cultivars have different harvest windows."
+              ]
+            ],
+            "distinction": "Blueberries are not miniature grapes.",
+            "image": "Blue berries with powdery bloom and clearly visible five-point crowns."
+          },
+          {
+            "id": "raspberry",
+            "name": "Raspberry",
+            "summary": "A cluster of small drupelets that leaves its core behind when picked.",
+            "facts": [
+              [
+                "Food form",
+                "Bramble fruit."
+              ],
+              [
+                "Notice",
+                "The picked fruit is hollow."
+              ]
+            ],
+            "distinction": "Blackberries retain their core.",
+            "image": "Red raspberries, one turned to reveal the hollow center."
+          },
+          {
+            "id": "blackberry",
+            "name": "Blackberry",
+            "summary": "A dark bramble fruit made of drupelets around a core that remains inside when picked.",
+            "facts": [
+              [
+                "Food form",
+                "Bramble fruit."
+              ],
+              [
+                "Notice",
+                "The core stays with the fruit."
+              ]
+            ],
+            "distinction": "A black raspberry is hollow; a blackberry is not.",
+            "image": "Glossy black-purple blackberries with large drupelets and a cut fruit showing the core."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NC State Extension: Apple",
+            "url": "https://plants.ces.ncsu.edu/plants/malus-domestica/"
+          },
+          {
+            "title": "NC State Extension: Pear",
+            "url": "https://plants.ces.ncsu.edu/plants/pyrus-communis/"
+          },
+          {
+            "title": "NC State Extension: Sweet Cherry",
+            "url": "https://plants.ces.ncsu.edu/plants/prunus-avium/"
+          },
+          {
+            "title": "NC State Extension: Blueberry",
+            "url": "https://plants.ces.ncsu.edu/plants/vaccinium-corymbosum/"
+          },
+          {
+            "title": "University of Maryland Extension: Blackberry",
+            "url": "https://extension.umd.edu/resource/growing-raspberries-and-blackberries-home-garden"
+          },
+          {
+            "title": "University of Maryland Extension: fruit groups",
+            "url": "https://www.extension.umd.edu/resource/starting-home-fruit-garden"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": [
         "The Fruit Atlas"
@@ -3355,10 +4451,10 @@
         "Southwest vegetables. Bold flavors, deep roots, lasting traditions."
       ],
       "image": {
-        "src": "plates/southwest-vegetables.webp",
-        "thumb": "plates/southwest-vegetables.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/southwest-vegetables-v2.webp",
+        "thumb": "plates/southwest-vegetables-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -3810,6 +4906,145 @@
         }
       ],
       "count": 24,
+      "teaching": {
+        "title": "Southwest vegetables: peppers and garden fruits",
+        "intro": "Separate flavor, shape and harvest stage without assuming a fixed heat or season.",
+        "scope": "A representative study selection, not a map of native or exclusive crops. Cultivar, grower, weather, storage and imports change availability; confirm the local harvest with the supplier.",
+        "subjects": [
+          {
+            "id": "chile",
+            "name": "Chile Pepper",
+            "summary": "An elongated Capsicum fruit used for varying degrees of heat.",
+            "facts": [
+              [
+                "Food form",
+                "Pepper fruit."
+              ],
+              [
+                "Notice",
+                "Heat varies by cultivar and growing conditions."
+              ]
+            ],
+            "distinction": "The pictured Anaheim-style form does not promise a fixed heat level.",
+            "image": "Long smooth green Anaheim-style chile with a tapered point."
+          },
+          {
+            "id": "tomatillo",
+            "name": "Tomatillo",
+            "summary": "A small, tart, tomato-like fruit enclosed by a papery husk.",
+            "facts": [
+              [
+                "Food form",
+                "Husked fruit."
+              ],
+              [
+                "Notice",
+                "Often used green."
+              ]
+            ],
+            "distinction": "It is not simply an unripe tomato.",
+            "image": "Round green tomatillos with dry papery husks peeled back."
+          },
+          {
+            "id": "sweet-corn",
+            "name": "Sweet Corn",
+            "summary": "Tender kernels arranged in rows on an ear, harvested while still juicy.",
+            "facts": [
+              [
+                "Food form",
+                "Immature kernels on a cob."
+              ],
+              [
+                "Notice",
+                "Kernels at harvest release milky juice."
+              ]
+            ],
+            "distinction": "Sweet corn is harvested before dry grain corn.",
+            "image": "Yellow sweet corn ear with rows of kernels and green husk peeled back."
+          },
+          {
+            "id": "zucchini",
+            "name": "Zucchini",
+            "summary": "An elongated summer squash picked while its skin and seeds are tender.",
+            "facts": [
+              [
+                "Food form",
+                "Immature squash fruit."
+              ],
+              [
+                "Notice",
+                "Green, gray and golden forms exist."
+              ]
+            ],
+            "distinction": "It is a summer squash, even when used in a warm cooked dish.",
+            "image": "Long smooth dark green zucchini with pale cut round and tiny seeds."
+          },
+          {
+            "id": "bell-pepper",
+            "name": "Bell Pepper",
+            "summary": "A blocky, sweet pepper with thick walls and a hollow seed cavity.",
+            "facts": [
+              [
+                "Food form",
+                "Pepper fruit."
+              ],
+              [
+                "Notice",
+                "Mature fruit colors vary by cultivar."
+              ]
+            ],
+            "distinction": "Bell peppers lack the pungency of hot chile types.",
+            "image": "Glossy red blocky bell pepper and half showing hollow ribs and pale seeds."
+          },
+          {
+            "id": "butternut",
+            "name": "Winter Squash (Butternut)",
+            "summary": "A mature, hard-rinded squash with a long neck and a rounded seed cavity.",
+            "facts": [
+              [
+                "Food form",
+                "Mature squash fruit."
+              ],
+              [
+                "Notice",
+                "Orange flesh within a tan rind."
+              ]
+            ],
+            "distinction": "Winter squash is harvested mature; summer squash is picked young.",
+            "image": "Tan butternut squash with orange cut half and seeds only in the bulbous end."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NC State Extension: Chile Pepper",
+            "url": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/"
+          },
+          {
+            "title": "NC State Extension: Tomatillo",
+            "url": "https://plants.ces.ncsu.edu/plants/physalis-philadelphica/"
+          },
+          {
+            "title": "University of Maryland Extension: Sweet Corn",
+            "url": "https://www.extension.umd.edu/resource/growing-sweet-corn-home-garden"
+          },
+          {
+            "title": "University of Maryland Extension: Zucchini",
+            "url": "https://www.extension.umd.edu/resource/growing-summer-squash-zucchini-home-garden"
+          },
+          {
+            "title": "NC State Extension: Bell Pepper",
+            "url": "https://plants.ces.ncsu.edu/plants/capsicum-annuum-grossum-group/"
+          },
+          {
+            "title": "NC State Extension: Winter Squash (Butternut)",
+            "url": "https://plants.ces.ncsu.edu/plants/cucurbita-moschata/"
+          },
+          {
+            "title": "University of Minnesota Extension: vegetable harvest stages",
+            "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/harvesting-and-storing-home-garden-vegetables"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": [
         "The Vegetable Atlas"
@@ -3828,10 +5063,10 @@
         "Local fruits, desert grown, mountain fresh."
       ],
       "image": {
-        "src": "plates/southwest-fruits.webp",
-        "thumb": "plates/southwest-fruits.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/southwest-fruits-v2.webp",
+        "thumb": "plates/southwest-fruits-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -4324,6 +5559,149 @@
         }
       ],
       "count": 24,
+      "teaching": {
+        "title": "Southwest fruits: cactus, palm and orchard",
+        "intro": "Look inside each fruit to distinguish its seeds, segments, flesh and rind.",
+        "scope": "A representative study selection, not a map of native or exclusive crops. Cultivar, grower, weather, storage and imports change availability; confirm the local harvest with the supplier.",
+        "subjects": [
+          {
+            "id": "prickly-pear",
+            "name": "Prickly Pear",
+            "summary": "The fleshy fruit of an Opuntia cactus, distinct from its flattened green pads.",
+            "facts": [
+              [
+                "Food form",
+                "Cactus fruit."
+              ],
+              [
+                "Notice",
+                "Fruit color varies with species and cultivar."
+              ]
+            ],
+            "distinction": "The fruit and the pad are different parts of the cactus.",
+            "image": "Magenta-red oval cactus fruits, one opened to show small seeds, a small pad behind."
+          },
+          {
+            "id": "pomegranate",
+            "name": "Pomegranate",
+            "summary": "A round, leathery fruit containing many juicy seed coverings inside pale partitions.",
+            "facts": [
+              [
+                "Food form",
+                "Fruit with fleshy seeds."
+              ],
+              [
+                "Notice",
+                "The juice has a sweet-tart character."
+              ]
+            ],
+            "distinction": "The juicy interior differs from the thick outer rind.",
+            "image": "Deep red pomegranate cut open to reveal ruby arils and pale membranes."
+          },
+          {
+            "id": "date",
+            "name": "Date",
+            "summary": "A sweet, oblong palm fruit with one elongated seed.",
+            "facts": [
+              [
+                "Food form",
+                "Palm fruit."
+              ],
+              [
+                "Notice",
+                "Commercial dates come from Phoenix dactylifera."
+              ]
+            ],
+            "distinction": "Date palm fruit is not a dried plum.",
+            "image": "Amber-brown wrinkled dates, one split to show its long seed."
+          },
+          {
+            "id": "orange",
+            "name": "Orange",
+            "summary": "A citrus fruit with a peel surrounding juicy segments.",
+            "facts": [
+              [
+                "Food form",
+                "Sweet orange fruit."
+              ],
+              [
+                "Notice",
+                "Sweet orange is a citrus hybrid."
+              ]
+            ],
+            "distinction": "Its segments differ from the seed-filled cavity of a melon.",
+            "image": "Whole bright orange and a half showing radial juicy segments."
+          },
+          {
+            "id": "fig",
+            "name": "Fig",
+            "summary": "A soft fruiting structure with tiny flowers and fruits enclosed inside.",
+            "facts": [
+              [
+                "Food form",
+                "Fruit of the common fig."
+              ],
+              [
+                "Notice",
+                "Skin color varies among cultivars."
+              ]
+            ],
+            "distinction": "The flowers develop inside, not as an obvious outer blossom.",
+            "image": "Purple fig with a cut half exposing a pink seedy interior."
+          },
+          {
+            "id": "watermelon",
+            "name": "Watermelon",
+            "summary": "A large, juicy vine fruit with a substantial rind.",
+            "facts": [
+              [
+                "Food form",
+                "Melon fruit."
+              ],
+              [
+                "Notice",
+                "Flesh can be red, pink or yellow."
+              ]
+            ],
+            "distinction": "Seeded and seedless cultivars both exist.",
+            "image": "Green striped melon and red wedge with black seeds and pale rind."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NC State Extension: Prickly Pear",
+            "url": "https://plants.ces.ncsu.edu/plants/opuntia/"
+          },
+          {
+            "title": "NC State Extension: Pomegranate",
+            "url": "https://plants.ces.ncsu.edu/plants/punica-granatum/"
+          },
+          {
+            "title": "University of Arizona Arboretum: Date",
+            "url": "https://arboretum.arizona.edu/palmsmain"
+          },
+          {
+            "title": "NC State Extension: Orange",
+            "url": "https://plants.ces.ncsu.edu/plants/citrus-x-sinensis/"
+          },
+          {
+            "title": "NC State Extension: Fig",
+            "url": "https://plants.ces.ncsu.edu/plants/ficus-carica/"
+          },
+          {
+            "title": "NC State Extension: Watermelon",
+            "url": "https://plants.ces.ncsu.edu/plants/citrullus-lanatus/"
+          },
+          {
+            "title": "University of Florida IFAS: true date palm",
+            "url": "https://ask.ifas.ufl.edu/publication/FR314"
+          },
+          {
+            "title": "FAO: date fruit and seed structure",
+            "url": "https://www.fao.org/4/Y4360E/y4360e05.htm"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": [
         "The Fruit Atlas"
@@ -4342,10 +5720,10 @@
         "Healthy soil, strong farms, bright futures"
       ],
       "image": {
-        "src": "plates/midwest-vegetables.webp",
-        "thumb": "plates/midwest-vegetables.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/midwest-vegetables-v2.webp",
+        "thumb": "plates/midwest-vegetables-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -4872,6 +6250,145 @@
         }
       ],
       "count": 28,
+      "teaching": {
+        "title": "Midwest vegetables: the garden table",
+        "intro": "Read the differences between kernels, fruit, tuber, pod, leaf and squash.",
+        "scope": "A representative study selection, not a map of native or exclusive crops. Cultivar, grower, weather, storage and imports change availability; confirm the local harvest with the supplier.",
+        "subjects": [
+          {
+            "id": "sweet-corn",
+            "name": "Sweet Corn",
+            "summary": "Tender kernels arranged in rows on an ear, harvested while still juicy.",
+            "facts": [
+              [
+                "Food form",
+                "Immature kernels on a cob."
+              ],
+              [
+                "Notice",
+                "Kernels at harvest release milky juice."
+              ]
+            ],
+            "distinction": "Sweet corn is harvested before dry grain corn.",
+            "image": "Yellow sweet corn ear with rows of kernels and green husk peeled back."
+          },
+          {
+            "id": "tomato",
+            "name": "Tomato",
+            "summary": "A fleshy, seed-bearing fruit used as a vegetable in the kitchen.",
+            "facts": [
+              [
+                "Food form",
+                "Fruit of a warm-season plant."
+              ],
+              [
+                "Notice",
+                "Cultivars vary greatly in size and color."
+              ]
+            ],
+            "distinction": "Botanical fruit and culinary vegetable describe different things.",
+            "image": "Ripe red tomato with green calyx and cut half showing seed chambers."
+          },
+          {
+            "id": "potato",
+            "name": "Potato",
+            "summary": "An underground stem tuber with buds called eyes.",
+            "facts": [
+              [
+                "Food form",
+                "Stem tuber."
+              ],
+              [
+                "Notice",
+                "The eyes are growing points."
+              ]
+            ],
+            "distinction": "A sweet potato is a storage root, not this kind of tuber.",
+            "image": "Brown-skinned potatoes, shallow eyes visible, one cut to show pale flesh."
+          },
+          {
+            "id": "green-bean",
+            "name": "Green Bean",
+            "summary": "A common bean harvested as a tender pod before its seeds become prominent.",
+            "facts": [
+              [
+                "Food form",
+                "Immature pod."
+              ],
+              [
+                "Notice",
+                "Green, yellow and purple pod types exist."
+              ]
+            ],
+            "distinction": "Snap beans differ from beans grown for mature dry seeds.",
+            "image": "Slender green bean pods with one opened to show small immature seeds."
+          },
+          {
+            "id": "cabbage",
+            "name": "Cabbage",
+            "summary": "A compact head made of leaves wrapped tightly around one another.",
+            "facts": [
+              [
+                "Food form",
+                "Leaf head."
+              ],
+              [
+                "Notice",
+                "Heads can be round, flattened or pointed."
+              ]
+            ],
+            "distinction": "The head is leafy, unlike broccoli's flower buds.",
+            "image": "Round green cabbage with overlapping leaves and a cut wedge."
+          },
+          {
+            "id": "butternut",
+            "name": "Winter Squash (Butternut)",
+            "summary": "A mature, hard-rinded squash with a long neck and a rounded seed cavity.",
+            "facts": [
+              [
+                "Food form",
+                "Mature squash fruit."
+              ],
+              [
+                "Notice",
+                "Orange flesh within a tan rind."
+              ]
+            ],
+            "distinction": "Winter squash is harvested mature; summer squash is picked young.",
+            "image": "Tan butternut squash with orange cut half and seeds only in the bulbous end."
+          }
+        ],
+        "sources": [
+          {
+            "title": "University of Maryland Extension: Sweet Corn",
+            "url": "https://www.extension.umd.edu/resource/growing-sweet-corn-home-garden"
+          },
+          {
+            "title": "NC State Extension: Tomato",
+            "url": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/"
+          },
+          {
+            "title": "NC State Extension: Potato",
+            "url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/"
+          },
+          {
+            "title": "University of Minnesota Extension: Green Bean",
+            "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-beans"
+          },
+          {
+            "title": "University of Minnesota Extension: Cabbage",
+            "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-cabbage"
+          },
+          {
+            "title": "NC State Extension: Winter Squash (Butternut)",
+            "url": "https://plants.ces.ncsu.edu/plants/cucurbita-moschata/"
+          },
+          {
+            "title": "University of Minnesota Extension: vegetable harvest stages",
+            "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/harvesting-and-storing-home-garden-vegetables"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": [
         "The Vegetable Atlas"
@@ -4890,10 +6407,10 @@
         "Healthy soil, thriving farms, fresher tomorrows"
       ],
       "image": {
-        "src": "plates/midwest-fruits.webp",
-        "thumb": "plates/midwest-fruits.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/midwest-fruits-v2.webp",
+        "thumb": "plates/midwest-fruits-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -5369,6 +6886,149 @@
         }
       ],
       "count": 25,
+      "teaching": {
+        "title": "Midwest fruits: six market forms",
+        "intro": "Compare pome, stone, berry, grape and melon forms familiar to the fruit stand.",
+        "scope": "A representative study selection, not a map of native or exclusive crops. Cultivar, grower, weather, storage and imports change availability; confirm the local harvest with the supplier.",
+        "subjects": [
+          {
+            "id": "apple",
+            "name": "Apple",
+            "summary": "A crisp tree fruit with seeds held in a central core.",
+            "facts": [
+              [
+                "Food form",
+                "Pome fruit."
+              ],
+              [
+                "Notice",
+                "Cultivars differ in color, texture and cooking use."
+              ]
+            ],
+            "distinction": "A core differs from the single stone in a peach.",
+            "image": "Red apple with a cut half showing the core."
+          },
+          {
+            "id": "tart-cherry",
+            "name": "Tart Cherry",
+            "summary": "A sour red stone fruit commonly used in cherry pies.",
+            "facts": [
+              [
+                "Food form",
+                "Stone fruit."
+              ],
+              [
+                "Notice",
+                "Also called sour cherry."
+              ]
+            ],
+            "distinction": "It differs from the sweet cherry often served fresh.",
+            "image": "Small bright red tart cherries, one cut to show its central stone."
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "summary": "A red fruit with small seed-like achenes on its outer surface.",
+            "facts": [
+              [
+                "Food form",
+                "Fruit of a low-growing plant."
+              ],
+              [
+                "Notice",
+                "Garden strawberries spread by runners."
+              ]
+            ],
+            "distinction": "Those outer dots are tiny fruits, each containing a seed.",
+            "image": "Red strawberry with green calyx and visible surface achenes."
+          },
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "summary": "A small blue berry bearing a crown-shaped calyx at its tip.",
+            "facts": [
+              [
+                "Food form",
+                "Shrub-grown berry."
+              ],
+              [
+                "Notice",
+                "Cultivars have different harvest windows."
+              ]
+            ],
+            "distinction": "Blueberries are not miniature grapes.",
+            "image": "Blue berries with powdery bloom and clearly visible five-point crowns."
+          },
+          {
+            "id": "concord-grape",
+            "name": "Grape (Concord)",
+            "summary": "A dark purple, seeded grape commonly used for juice and jelly.",
+            "facts": [
+              [
+                "Food form",
+                "Fruit borne in bunches on a vine."
+              ],
+              [
+                "Notice",
+                "Concord has a pronounced flavor."
+              ]
+            ],
+            "distinction": "Concord and muscadine are different grape types.",
+            "image": "Loose bunch of round purple Concord grapes with a dusty bloom."
+          },
+          {
+            "id": "cantaloupe",
+            "name": "Cantaloupe",
+            "summary": "An orange-fleshed muskmelon with a netted rind and a central seed cavity.",
+            "facts": [
+              [
+                "Food form",
+                "Melon fruit."
+              ],
+              [
+                "Notice",
+                "A netted rind surrounds a central seed cavity."
+              ]
+            ],
+            "distinction": "Cantaloupe and watermelon are different melon crops.",
+            "image": "Tan netted round melon with a cut orange-fleshed wedge and central seeds."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NC State Extension: Apple",
+            "url": "https://plants.ces.ncsu.edu/plants/malus-domestica/"
+          },
+          {
+            "title": "NC State Extension: Tart Cherry",
+            "url": "https://plants.ces.ncsu.edu/plants/prunus-cerasus/"
+          },
+          {
+            "title": "NC State Extension: Strawberry",
+            "url": "https://plants.ces.ncsu.edu/plants/fragaria-x-ananassa/"
+          },
+          {
+            "title": "NC State Extension: Blueberry",
+            "url": "https://plants.ces.ncsu.edu/plants/vaccinium-corymbosum/"
+          },
+          {
+            "title": "Jordan Valley Water Conservancy District: Grape (Concord)",
+            "url": "https://conservationgardenpark.jvwcd.gov/plants/222/concord-grape/"
+          },
+          {
+            "title": "NC State Extension: Cantaloupe",
+            "url": "https://plants.ces.ncsu.edu/plants/cucumis-melo/"
+          },
+          {
+            "title": "University of Maryland Extension: fruit groups",
+            "url": "https://www.extension.umd.edu/resource/starting-home-fruit-garden"
+          },
+          {
+            "title": "University of Maryland Extension: muskmelon types",
+            "url": "https://extension.umd.edu/sites/extension.umd.edu/files/2026-02/Muskmelons%20and%20Mixed%20Melons.pdf"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": [
         "The Fruit Atlas"
@@ -5387,10 +7047,10 @@
         "Northeastern Vegetables, fresh, local, seasonal"
       ],
       "image": {
-        "src": "plates/northeastern-vegetables.webp",
-        "thumb": "plates/northeastern-vegetables.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/northeastern-vegetables-v2.webp",
+        "thumb": "plates/northeastern-vegetables-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -5995,6 +7655,145 @@
         }
       ],
       "count": 26,
+      "teaching": {
+        "title": "Northeast vegetables: shoot, seed and root",
+        "intro": "A compact lesson in the edible parts beneath familiar market names.",
+        "scope": "A representative study selection, not a map of native or exclusive crops. Cultivar, grower, weather, storage and imports change availability; confirm the local harvest with the supplier.",
+        "subjects": [
+          {
+            "id": "asparagus",
+            "name": "Asparagus",
+            "summary": "Tender young shoots harvested as pointed spears.",
+            "facts": [
+              [
+                "Food form",
+                "Young stem shoots."
+              ],
+              [
+                "Notice",
+                "A perennial vegetable."
+              ]
+            ],
+            "distinction": "The spear is a shoot, not a root.",
+            "image": "A short bundle of green asparagus spears with tightly closed purple-green tips."
+          },
+          {
+            "id": "garden-pea",
+            "name": "Pea (Garden)",
+            "summary": "A shelling pea whose round seeds are removed from the pod.",
+            "facts": [
+              [
+                "Food form",
+                "Seeds inside a pod."
+              ],
+              [
+                "Notice",
+                "Also called English or shelling pea."
+              ]
+            ],
+            "distinction": "Snow and snap peas are selected for edible pods.",
+            "image": "Open bright green garden pea pod holding round peas."
+          },
+          {
+            "id": "beet",
+            "name": "Beet",
+            "summary": "A swollen, usually rounded root crop with edible leafy tops.",
+            "facts": [
+              [
+                "Food form",
+                "Root and greens."
+              ],
+              [
+                "Notice",
+                "Cultivars include red and golden forms."
+              ]
+            ],
+            "distinction": "The root and the greens offer different textures.",
+            "image": "Deep red beet with stems and leaves, one cut face."
+          },
+          {
+            "id": "carrot",
+            "name": "Carrot",
+            "summary": "A fleshy, tapered taproot, commonly orange.",
+            "facts": [
+              [
+                "Food form",
+                "Taproot."
+              ],
+              [
+                "Notice",
+                "Other root colors also occur."
+              ]
+            ],
+            "distinction": "A carrot is a root, unlike a potato stem tuber.",
+            "image": "Orange carrots with slender tips and feathery green tops."
+          },
+          {
+            "id": "potato",
+            "name": "Potato",
+            "summary": "An underground stem tuber with buds called eyes.",
+            "facts": [
+              [
+                "Food form",
+                "Stem tuber."
+              ],
+              [
+                "Notice",
+                "The eyes are growing points."
+              ]
+            ],
+            "distinction": "A sweet potato is a storage root, not this kind of tuber.",
+            "image": "Brown-skinned potatoes, shallow eyes visible, one cut to show pale flesh."
+          },
+          {
+            "id": "butternut",
+            "name": "Winter Squash (Butternut)",
+            "summary": "A mature, hard-rinded squash with a long neck and a rounded seed cavity.",
+            "facts": [
+              [
+                "Food form",
+                "Mature squash fruit."
+              ],
+              [
+                "Notice",
+                "Orange flesh within a tan rind."
+              ]
+            ],
+            "distinction": "Winter squash is harvested mature; summer squash is picked young.",
+            "image": "Tan butternut squash with orange cut half and seeds only in the bulbous end."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NC State Extension: Asparagus",
+            "url": "https://plants.ces.ncsu.edu/plants/asparagus-officinalis/"
+          },
+          {
+            "title": "University of Minnesota Extension: Pea (Garden)",
+            "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-peas"
+          },
+          {
+            "title": "NC State Extension: Beet",
+            "url": "https://plants.ces.ncsu.edu/plants/beta-vulgaris-garden-beet-group/"
+          },
+          {
+            "title": "NC State Extension: Carrot",
+            "url": "https://plants.ces.ncsu.edu/plants/daucus-carota-subsp-sativus/"
+          },
+          {
+            "title": "NC State Extension: Potato",
+            "url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/"
+          },
+          {
+            "title": "NC State Extension: Winter Squash (Butternut)",
+            "url": "https://plants.ces.ncsu.edu/plants/cucurbita-moschata/"
+          },
+          {
+            "title": "University of Minnesota Extension: vegetable harvest stages",
+            "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/harvesting-and-storing-home-garden-vegetables"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": [
         "The Vegetable Atlas"
@@ -6014,10 +7813,10 @@
         "The Northeast, where every season brings something sweet"
       ],
       "image": {
-        "src": "plates/northeastern-fruits.webp",
-        "thumb": "plates/northeastern-fruits.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/northeastern-fruits-v2.webp",
+        "thumb": "plates/northeastern-fruits-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -6469,6 +8268,145 @@
         }
       ],
       "count": 21,
+      "teaching": {
+        "title": "Northeast fruits: orchard and vine",
+        "intro": "Recognize six fruits by their structure rather than by color alone.",
+        "scope": "A representative study selection, not a map of native or exclusive crops. Cultivar, grower, weather, storage and imports change availability; confirm the local harvest with the supplier.",
+        "subjects": [
+          {
+            "id": "apple",
+            "name": "Apple",
+            "summary": "A crisp tree fruit with seeds held in a central core.",
+            "facts": [
+              [
+                "Food form",
+                "Pome fruit."
+              ],
+              [
+                "Notice",
+                "Cultivars differ in color, texture and cooking use."
+              ]
+            ],
+            "distinction": "A core differs from the single stone in a peach.",
+            "image": "Red apple with a cut half showing the core."
+          },
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "summary": "A small blue berry bearing a crown-shaped calyx at its tip.",
+            "facts": [
+              [
+                "Food form",
+                "Shrub-grown berry."
+              ],
+              [
+                "Notice",
+                "Cultivars have different harvest windows."
+              ]
+            ],
+            "distinction": "Blueberries are not miniature grapes.",
+            "image": "Blue berries with powdery bloom and clearly visible five-point crowns."
+          },
+          {
+            "id": "cranberry",
+            "name": "Cranberry",
+            "summary": "A small red berry produced by a low, trailing plant adapted to acidic, moist ground.",
+            "facts": [
+              [
+                "Food form",
+                "Berry of a trailing evergreen plant."
+              ],
+              [
+                "Notice",
+                "Commercial plantings can tolerate periodic flooding."
+              ]
+            ],
+            "distinction": "The plant grows in soil; flooding does not mean the fruit grows underwater.",
+            "image": "Small deep red cranberries, one cut crosswise."
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "summary": "A fuzzy-skinned stone fruit with flesh surrounding a single hard pit.",
+            "facts": [
+              [
+                "Food form",
+                "Stone fruit."
+              ],
+              [
+                "Notice",
+                "Peaches and nectarines belong to the same species."
+              ]
+            ],
+            "distinction": "Nectarines have smooth skin; peaches are fuzzy.",
+            "image": "Golden-red fuzzy peach with a cut half showing its stone."
+          },
+          {
+            "id": "pear",
+            "name": "Pear",
+            "summary": "A tree fruit often shaped with a broad base and a narrower neck.",
+            "facts": [
+              [
+                "Food form",
+                "Pome fruit."
+              ],
+              [
+                "Notice",
+                "Cultivars vary in shape and color."
+              ]
+            ],
+            "distinction": "Pears have a seed core, not a single stone.",
+            "image": "Green-gold pear with a cut half showing its core."
+          },
+          {
+            "id": "concord-grape",
+            "name": "Grape (Concord)",
+            "summary": "A dark purple, seeded grape commonly used for juice and jelly.",
+            "facts": [
+              [
+                "Food form",
+                "Fruit borne in bunches on a vine."
+              ],
+              [
+                "Notice",
+                "Concord has a pronounced flavor."
+              ]
+            ],
+            "distinction": "Concord and muscadine are different grape types.",
+            "image": "Loose bunch of round purple Concord grapes with a dusty bloom."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NC State Extension: Apple",
+            "url": "https://plants.ces.ncsu.edu/plants/malus-domestica/"
+          },
+          {
+            "title": "NC State Extension: Blueberry",
+            "url": "https://plants.ces.ncsu.edu/plants/vaccinium-corymbosum/"
+          },
+          {
+            "title": "NC State Extension: Cranberry",
+            "url": "https://plants.ces.ncsu.edu/plants/vaccinium-macrocarpon/"
+          },
+          {
+            "title": "NC State Extension: Peach",
+            "url": "https://plants.ces.ncsu.edu/plants/prunus-persica/"
+          },
+          {
+            "title": "NC State Extension: Pear",
+            "url": "https://plants.ces.ncsu.edu/plants/pyrus-communis/"
+          },
+          {
+            "title": "Jordan Valley Water Conservancy District: Grape (Concord)",
+            "url": "https://conservationgardenpark.jvwcd.gov/plants/222/concord-grape/"
+          },
+          {
+            "title": "University of Maryland Extension: fruit groups",
+            "url": "https://www.extension.umd.edu/resource/starting-home-fruit-garden"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": [
         "The Fruit Atlas"
@@ -6486,10 +8424,10 @@
         "Good food grows here"
       ],
       "image": {
-        "src": "plates/southeastern-vegetables.webp",
-        "thumb": "plates/southeastern-vegetables.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/southeastern-vegetables-v2.webp",
+        "thumb": "plates/southeastern-vegetables-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -6951,6 +8889,141 @@
         }
       ],
       "count": 19,
+      "teaching": {
+        "title": "Southeast vegetables: leaves, pods and roots",
+        "intro": "Learn the edible part behind six familiar Southern ingredients.",
+        "scope": "A representative study selection, not a map of native or exclusive crops. Cultivar, grower, weather, storage and imports change availability; confirm the local harvest with the supplier.",
+        "subjects": [
+          {
+            "id": "okra",
+            "name": "Okra",
+            "summary": "A ridged, edible seed pod that can thicken dishes through its mucilage.",
+            "facts": [
+              [
+                "Food form",
+                "Young pod."
+              ],
+              [
+                "Notice",
+                "A warm-season member of the mallow family."
+              ]
+            ],
+            "distinction": "The pod is a fruiting structure, not a root.",
+            "image": "Slender green ridged okra pods and star-shaped cut rounds."
+          },
+          {
+            "id": "collard",
+            "name": "Collard Greens",
+            "summary": "Large, broad brassica leaves grown without forming a tight cabbage head.",
+            "facts": [
+              [
+                "Food form",
+                "Leaves."
+              ],
+              [
+                "Notice",
+                "Cooking softens their robust character."
+              ]
+            ],
+            "distinction": "Collards remain open-leaved rather than heading like cabbage.",
+            "image": "Bundle of large deep green collard leaves with thick pale central veins."
+          },
+          {
+            "id": "sweet-potato",
+            "name": "Sweet Potato",
+            "summary": "A thickened storage root, often shown with orange flesh.",
+            "facts": [
+              [
+                "Food form",
+                "Storage root."
+              ],
+              [
+                "Notice",
+                "Flesh and skin colors vary by cultivar."
+              ]
+            ],
+            "distinction": "It differs botanically from both potato and true yam.",
+            "image": "Copper-skinned sweet potatoes with an orange cut face."
+          },
+          {
+            "id": "southern-pea",
+            "name": "Southern Pea (Black-eyed)",
+            "summary": "A cowpea with pale seeds marked by a dark eye.",
+            "facts": [
+              [
+                "Food form",
+                "Cowpea seeds."
+              ],
+              [
+                "Notice",
+                "A warm-season legume."
+              ]
+            ],
+            "distinction": "Cowpeas differ from cool-season garden peas.",
+            "image": "Cream-colored black-eyed peas beside an opened long tan pod."
+          },
+          {
+            "id": "summer-squash",
+            "name": "Summer Squash (Crookneck)",
+            "summary": "A yellow squash with a curved neck, picked before the rind hardens.",
+            "facts": [
+              [
+                "Food form",
+                "Immature squash fruit."
+              ],
+              [
+                "Notice",
+                "Young skin remains tender."
+              ]
+            ],
+            "distinction": "Summer and winter squash describe harvest and use, not just calendar dates.",
+            "image": "Yellow crookneck squash, slender bent neck and bulbous base."
+          },
+          {
+            "id": "peanut",
+            "name": "Peanut",
+            "summary": "A legume whose seed-filled pods develop underground.",
+            "facts": [
+              [
+                "Food form",
+                "Seeds inside pods."
+              ],
+              [
+                "Notice",
+                "The familiar shell is the pod."
+              ]
+            ],
+            "distinction": "Despite the name, it is not a tree nut.",
+            "image": "Tan textured peanut pods with one opened to reveal two reddish-skinned seeds."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NC State Extension: Okra",
+            "url": "https://plants.ces.ncsu.edu/plants/abelmoschus-esculentus/"
+          },
+          {
+            "title": "NC State Extension: Collard Greens",
+            "url": "https://plants.ces.ncsu.edu/plants/brassica-oleracea-collards-group/"
+          },
+          {
+            "title": "NC State Extension: Sweet Potato",
+            "url": "https://plants.ces.ncsu.edu/plants/ipomoea-batatas/"
+          },
+          {
+            "title": "University of Minnesota Extension: Southern Pea (Black-eyed)",
+            "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-beans"
+          },
+          {
+            "title": "University of Maryland Extension: Summer Squash (Crookneck)",
+            "url": "https://www.extension.umd.edu/resource/growing-summer-squash-zucchini-home-garden"
+          },
+          {
+            "title": "NC State Extension: Peanut",
+            "url": "https://plants.ces.ncsu.edu/plants/arachis-hypogaea/"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": [
         "The Vegetable Atlas"
@@ -6968,10 +9041,10 @@
         "Same land, different seasons, endless flavors"
       ],
       "image": {
-        "src": "plates/southeastern-fruits.webp",
-        "thumb": "plates/southeastern-fruits.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/southeastern-fruits-v2.webp",
+        "thumb": "plates/southeastern-fruits-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -7533,6 +9606,141 @@
         }
       ],
       "count": 24,
+      "teaching": {
+        "title": "Southeast fruits: from peach to muscadine",
+        "intro": "Explore contrasting fruit forms, including the thick-skinned muscadine.",
+        "scope": "A representative study selection, not a map of native or exclusive crops. Cultivar, grower, weather, storage and imports change availability; confirm the local harvest with the supplier.",
+        "subjects": [
+          {
+            "id": "peach",
+            "name": "Peach",
+            "summary": "A fuzzy-skinned stone fruit with flesh surrounding a single hard pit.",
+            "facts": [
+              [
+                "Food form",
+                "Stone fruit."
+              ],
+              [
+                "Notice",
+                "Peaches and nectarines belong to the same species."
+              ]
+            ],
+            "distinction": "Nectarines have smooth skin; peaches are fuzzy.",
+            "image": "Golden-red fuzzy peach with a cut half showing its stone."
+          },
+          {
+            "id": "orange",
+            "name": "Orange",
+            "summary": "A citrus fruit with a peel surrounding juicy segments.",
+            "facts": [
+              [
+                "Food form",
+                "Sweet orange fruit."
+              ],
+              [
+                "Notice",
+                "Sweet orange is a citrus hybrid."
+              ]
+            ],
+            "distinction": "Its segments differ from the seed-filled cavity of a melon.",
+            "image": "Whole bright orange and a half showing radial juicy segments."
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "summary": "A red fruit with small seed-like achenes on its outer surface.",
+            "facts": [
+              [
+                "Food form",
+                "Fruit of a low-growing plant."
+              ],
+              [
+                "Notice",
+                "Garden strawberries spread by runners."
+              ]
+            ],
+            "distinction": "Those outer dots are tiny fruits, each containing a seed.",
+            "image": "Red strawberry with green calyx and visible surface achenes."
+          },
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "summary": "A small blue berry bearing a crown-shaped calyx at its tip.",
+            "facts": [
+              [
+                "Food form",
+                "Shrub-grown berry."
+              ],
+              [
+                "Notice",
+                "Cultivars have different harvest windows."
+              ]
+            ],
+            "distinction": "Blueberries are not miniature grapes.",
+            "image": "Blue berries with powdery bloom and clearly visible five-point crowns."
+          },
+          {
+            "id": "watermelon",
+            "name": "Watermelon",
+            "summary": "A large, juicy vine fruit with a substantial rind.",
+            "facts": [
+              [
+                "Food form",
+                "Melon fruit."
+              ],
+              [
+                "Notice",
+                "Flesh can be red, pink or yellow."
+              ]
+            ],
+            "distinction": "Seeded and seedless cultivars both exist.",
+            "image": "Green striped melon and red wedge with black seeds and pale rind."
+          },
+          {
+            "id": "muscadine",
+            "name": "Muscadine Grape",
+            "summary": "A large, thick-skinned grape that grows singly or in small groups.",
+            "facts": [
+              [
+                "Food form",
+                "Fruit of a southern U.S. native vine."
+              ],
+              [
+                "Notice",
+                "Cultivars may be bronze or purple-black."
+              ]
+            ],
+            "distinction": "Its loose grouping differs from a dense Concord bunch.",
+            "image": "Several large bronze and purple-black muscadines in a small loose cluster."
+          }
+        ],
+        "sources": [
+          {
+            "title": "NC State Extension: Peach",
+            "url": "https://plants.ces.ncsu.edu/plants/prunus-persica/"
+          },
+          {
+            "title": "NC State Extension: Orange",
+            "url": "https://plants.ces.ncsu.edu/plants/citrus-x-sinensis/"
+          },
+          {
+            "title": "NC State Extension: Strawberry",
+            "url": "https://plants.ces.ncsu.edu/plants/fragaria-x-ananassa/"
+          },
+          {
+            "title": "NC State Extension: Blueberry",
+            "url": "https://plants.ces.ncsu.edu/plants/vaccinium-corymbosum/"
+          },
+          {
+            "title": "NC State Extension: Watermelon",
+            "url": "https://plants.ces.ncsu.edu/plants/citrullus-lanatus/"
+          },
+          {
+            "title": "NC State Extension: Muscadine Grape",
+            "url": "https://plants.ces.ncsu.edu/plants/vitis-rotundifolia/"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": [
         "The Fruit Atlas"
@@ -7551,10 +9759,10 @@
         "The right spice doesn't just season your food... it brings it to life."
       ],
       "image": {
-        "src": "plates/culinary-spices.webp",
-        "thumb": "plates/culinary-spices.thumb.webp",
-        "width": 1312,
-        "height": 1199
+        "src": "plates/culinary-spices-v2.webp",
+        "thumb": "plates/culinary-spices-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -8231,6 +10439,145 @@
         }
       ],
       "count": 40,
+      "teaching": {
+        "title": "Spices: from fruit to flower",
+        "intro": "Whole ingredients reveal a spice's origin before it becomes a powder.",
+        "scope": "These six single ingredients are not blends. The cinnamon drawing represents the general bark form, not a certified species.",
+        "subjects": [
+          {
+            "id": "black-pepper",
+            "name": "Black Pepper",
+            "summary": "Small peppercorns made from the fruit of the tropical vine Piper nigrum.",
+            "facts": [
+              [
+                "Plant part",
+                "Fruit."
+              ],
+              [
+                "Character",
+                "Pungent; used whole or ground."
+              ]
+            ],
+            "distinction": "Black, white and green peppercorns come from the same species but differ in harvest and processing.",
+            "image": "Small dark wrinkled peppercorns in a neat loose pile."
+          },
+          {
+            "id": "cumin",
+            "name": "Cumin",
+            "summary": "Slender, tan, ridged spice fruits used as a whole or ground seasoning.",
+            "facts": [
+              [
+                "Plant part",
+                "Dried fruits."
+              ],
+              [
+                "Plant",
+                "Cuminum cyminum."
+              ]
+            ],
+            "distinction": "Cumin is not coriander; their shapes and aromas differ.",
+            "image": "Slender tan-brown cumin seeds with clear lengthwise ridges."
+          },
+          {
+            "id": "coriander",
+            "name": "Coriander",
+            "summary": "The round, tan seed spice from the same plant whose leaves are called cilantro.",
+            "facts": [
+              [
+                "Plant part",
+                "Mature seed spice."
+              ],
+              [
+                "Plant",
+                "Coriandrum sativum."
+              ]
+            ],
+            "distinction": "Cilantro leaves and coriander spice are different parts of one plant.",
+            "image": "Round pale tan coriander seeds with delicate ridged surfaces."
+          },
+          {
+            "id": "cinnamon",
+            "name": "Cinnamon",
+            "summary": "An aromatic spice made from tree bark, sold as rolled quills or powder.",
+            "facts": [
+              [
+                "Plant part",
+                "Inner bark."
+              ],
+              [
+                "Forms",
+                "Several Cinnamomum species supply cinnamon spices."
+              ]
+            ],
+            "distinction": "A cinnamon quill is rolled bark, not a hollow stem.",
+            "image": "Brown rolled cinnamon bark sticks with visible curled cut ends."
+          },
+          {
+            "id": "turmeric",
+            "name": "Turmeric",
+            "summary": "A yellow-orange spice obtained from the underground rhizomes of Curcuma longa.",
+            "facts": [
+              [
+                "Plant part",
+                "Rhizome, an underground stem."
+              ],
+              [
+                "Form",
+                "Fresh rhizome or processed ground spice."
+              ]
+            ],
+            "distinction": "Its rhizome is different from a seed or a true root.",
+            "image": "Knobbly tan turmeric rhizomes, one cut open to show vivid orange flesh."
+          },
+          {
+            "id": "cloves",
+            "name": "Cloves",
+            "summary": "Dried, unopened flower buds with a small rounded head and a narrow stalk-like base.",
+            "facts": [
+              [
+                "Plant part",
+                "Flower buds."
+              ],
+              [
+                "Plant",
+                "Syzygium aromaticum."
+              ]
+            ],
+            "distinction": "A clove spice bud is unrelated to a clove of garlic.",
+            "image": "Dark brown nail-shaped cloves with intact rounded bud heads."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Kew: Piper nigrum",
+            "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A682369-1/general-information"
+          },
+          {
+            "title": "Kew: Cuminum cyminum",
+            "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A840882-1/general-information"
+          },
+          {
+            "title": "NC State Extension: coriander",
+            "url": "https://plants.ces.ncsu.edu/plants/coriandrum-sativum/"
+          },
+          {
+            "title": "Kew: cinnamon",
+            "url": "https://www.kew.org/plants/cinnamon"
+          },
+          {
+            "title": "NC State Extension: turmeric",
+            "url": "https://plants.ces.ncsu.edu/plants/curcuma-longa/"
+          },
+          {
+            "title": "Kew: the plants behind Christmas spices",
+            "url": "https://www.kew.org/read-and-watch/christmas-spices"
+          },
+          {
+            "title": "Herb Society of America: cumin fruits and ridges",
+            "url": "https://www.herbsociety.org/file_download/inline/c8b2e7db-c6fd-4e02-be23-3f5a6fc34c77"
+          }
+        ]
+      },
       "deckSections": [],
       "lexiconCategories": [
         "Spice Atlas",
@@ -8249,10 +10596,10 @@
         "The right mushroom transforms a dish. Different forests, different flavors. Same extraordinary experience."
       ],
       "image": {
-        "src": "plates/culinary-mushrooms.webp",
-        "thumb": "plates/culinary-mushrooms.thumb.webp",
-        "width": 1224,
-        "height": 1285
+        "src": "plates/culinary-mushrooms-v2.webp",
+        "thumb": "plates/culinary-mushrooms-v2.thumb.webp",
+        "width": 1024,
+        "height": 1536
       },
       "groups": [
         {
@@ -8677,6 +11024,145 @@
         }
       ],
       "count": 18,
+      "teaching": {
+        "title": "Mushrooms: six cultivated market forms",
+        "intro": "Compare cap, gill and cluster shapes, including three forms of one familiar species.",
+        "scope": "This is a guide to purchased culinary mushrooms, not a wild-foraging identification guide. The first three subjects intentionally share a species.",
+        "subjects": [
+          {
+            "id": "white-button",
+            "name": "White Button",
+            "summary": "A small, white-capped cultivated form of Agaricus bisporus.",
+            "facts": [
+              [
+                "Character",
+                "Mild flavor."
+              ],
+              [
+                "Form",
+                "Compact cap and short stem."
+              ]
+            ],
+            "distinction": "White button, cremini and portobello belong to the same species; cap color alone is not an age clock.",
+            "image": "Small closed white button mushrooms with smooth rounded caps."
+          },
+          {
+            "id": "cremini",
+            "name": "Cremini",
+            "summary": "A small brown-capped cultivated form also known as baby bella.",
+            "facts": [
+              [
+                "Species",
+                "Agaricus bisporus."
+              ],
+              [
+                "Character",
+                "Firm texture and savory flavor."
+              ]
+            ],
+            "distinction": "Cremini and portobello are brown forms of the same species.",
+            "image": "Small closed chestnut-brown cremini caps with short pale stems."
+          },
+          {
+            "id": "portobello",
+            "name": "Portobello",
+            "summary": "The broad, open-capped form of Agaricus bisporus, with prominent dark gills.",
+            "facts": [
+              [
+                "Character",
+                "Dense, substantial texture."
+              ],
+              [
+                "Kitchen",
+                "Often grilled or cooked as a whole cap."
+              ]
+            ],
+            "distinction": "Portabella is an alternative spelling, not another species.",
+            "image": "Large open brown cap with underside tilted to show dark radiating gills."
+          },
+          {
+            "id": "shiitake",
+            "name": "Shiitake",
+            "summary": "An umbrella-capped mushroom with tan gills and a stem that can be fibrous.",
+            "facts": [
+              [
+                "Species",
+                "Lentinula edodes."
+              ],
+              [
+                "Character",
+                "Rich, woodsy flavor."
+              ]
+            ],
+            "distinction": "A tough stem can be removed and used to flavor stock.",
+            "image": "Brown umbrella cap with pale gills and a curved slender stem."
+          },
+          {
+            "id": "oyster-mushroom",
+            "name": "Oyster",
+            "summary": "A cultivated mushroom sold in clusters of overlapping, fan-shaped caps.",
+            "facts": [
+              [
+                "Form",
+                "Clustered growth."
+              ],
+              [
+                "Kitchen",
+                "Clusters can be cooked whole or separated."
+              ]
+            ],
+            "distinction": "The seafood name refers to its form; it is a fungus.",
+            "image": "Cluster of pale gray oyster fans with gills running toward their joined stems."
+          },
+          {
+            "id": "maitake",
+            "name": "Maitake",
+            "summary": "A clustered mushroom with many rippling, feather-like fronds, also called hen of the woods.",
+            "facts": [
+              [
+                "Species",
+                "Grifola frondosa."
+              ],
+              [
+                "Character",
+                "Woodsy flavor and delicate edges."
+              ]
+            ],
+            "distinction": "Its frilled cluster differs from a single large portobello cap.",
+            "image": "Dense gray-brown maitake cluster composed of many small rippling fans."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Mushroom Council: white button",
+            "url": "https://www.mushroomcouncil.com/mushroom-101/varieties/white-button/"
+          },
+          {
+            "title": "Mushroom Council: crimini",
+            "url": "https://www.mushroomcouncil.com/mushroom-101/varieties/crimini/"
+          },
+          {
+            "title": "Mushroom Council: portabella",
+            "url": "https://www.mushroomcouncil.com/mushroom-101/varieties/portabella/"
+          },
+          {
+            "title": "Mushroom Council: shiitake",
+            "url": "https://www.mushroomcouncil.com/mushroom-101/varieties/shiitake/"
+          },
+          {
+            "title": "Mushroom Council: oyster",
+            "url": "https://www.mushroomcouncil.com/mushroom-101/varieties/oyster/"
+          },
+          {
+            "title": "Mushroom Council: maitake",
+            "url": "https://www.mushroomcouncil.com/mushroom-101/varieties/maitake/"
+          },
+          {
+            "title": "Penn State Extension: white and brown Agaricus strains",
+            "url": "https://extension.psu.edu/basic-procedures-for-agaricus-mushroom-growing"
+          }
+        ]
+      },
       "deckSections": [
         "mushrooms"
       ],
@@ -8695,8 +11181,8 @@
         "Iconic cheeses of the world"
       ],
       "image": {
-        "src": "plates/great-cheeses.webp",
-        "thumb": "plates/great-cheeses.thumb.webp",
+        "src": "plates/great-cheeses-v2.webp",
+        "thumb": "plates/great-cheeses-v2.thumb.webp",
         "width": 1024,
         "height": 1536
       },
@@ -9143,6 +11629,153 @@
         }
       ],
       "count": 24,
+      "teaching": {
+        "title": "Cheese: milk, make and maturation",
+        "intro": "Read a cheese through its milk, texture and method before relying on color.",
+        "scope": "The illustration shows representative forms. Producer, age and handling affect texture and flavor; protected names identify particular products.",
+        "subjects": [
+          {
+            "id": "parmigiano",
+            "name": "Parmigiano Reggiano",
+            "summary": "A hard, matured cheese with a granular structure that breaks into irregular pieces.",
+            "facts": [
+              [
+                "Character",
+                "Texture becomes more granular with age."
+              ],
+              [
+                "Milk",
+                "Cow's milk."
+              ]
+            ],
+            "distinction": "Its pale interior may contain small crystals; they are not blue mold.",
+            "image": "Pale straw hard cheese wedge with rough fractured face, small crystals and dark rind."
+          },
+          {
+            "id": "cheddar",
+            "name": "Cheddar",
+            "summary": "A firm cheese available in white and colored forms and a range of maturities.",
+            "facts": [
+              [
+                "Character",
+                "Flavor develops with aging."
+              ],
+              [
+                "Milk",
+                "Cow's milk."
+              ]
+            ],
+            "distinction": "An orange color does not by itself indicate greater age or stronger flavor.",
+            "image": "Solid firm Cheddar wedge with a dense face, no large holes or blue veins."
+          },
+          {
+            "id": "brie",
+            "name": "Brie",
+            "summary": "A soft cheese with a white surface rind surrounding a creamy interior.",
+            "facts": [
+              [
+                "Milk",
+                "Cow's milk."
+              ],
+              [
+                "Ripening",
+                "The interior softens as the cheese ripens."
+              ]
+            ],
+            "distinction": "The white outer rind differs from blue veins inside a cheese.",
+            "image": "Round white-rinded Brie with a cut wedge exposing a smooth creamy interior."
+          },
+          {
+            "id": "roquefort",
+            "name": "Roquefort",
+            "summary": "A sheep's milk cheese with blue-green veins in an ivory interior.",
+            "facts": [
+              [
+                "Milk",
+                "Raw sheep's milk."
+              ],
+              [
+                "Ripening",
+                "Penicillium roqueforti develops within the cheese."
+              ]
+            ],
+            "distinction": "Roquefort is not an orange-colored blue cheese.",
+            "image": "Moist ivory wedge with irregular blue-green veins, never orange paste."
+          },
+          {
+            "id": "buffalo-mozzarella",
+            "name": "Mozzarella di Bufala Campana",
+            "summary": "A fresh stretched-curd cheese made with buffalo milk.",
+            "facts": [
+              [
+                "Milk",
+                "Buffalo milk."
+              ],
+              [
+                "Method",
+                "Curd is stretched, then shaped."
+              ]
+            ],
+            "distinction": "Mozzarella can also be made with cow's milk; this full name identifies the buffalo product.",
+            "image": "Smooth porcelain-white mozzarella ball with a cut piece revealing moist layered curd."
+          },
+          {
+            "id": "comte",
+            "name": "Comté",
+            "summary": "A matured raw cow's milk cheese from the Jura, made with a cooked and pressed curd.",
+            "facts": [
+              [
+                "Milk",
+                "Raw cow's milk."
+              ],
+              [
+                "Method",
+                "Cooked, pressed and matured."
+              ]
+            ],
+            "distinction": "Cooked curd describes cheesemaking, not a ready-made hot cheese dish.",
+            "image": "Pale straw Comté wedge with natural brown rind and a mostly closed interior."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Parmigiano Reggiano Consortium: sensory guide",
+            "url": "https://www.parmigianoreggiano.com/product-guide-sensory-analysis"
+          },
+          {
+            "title": "Cabot Creamery: cheese questions",
+            "url": "https://cabotcreamery.com/pages/faq"
+          },
+          {
+            "title": "Président: Brie",
+            "url": "https://presidentcheese.com/products/brie-cheese/president-brie-round/"
+          },
+          {
+            "title": "Roquefort Confederation: natural ripening",
+            "url": "https://www.roquefort.fr/en/natural-ripening/"
+          },
+          {
+            "title": "Mozzarella di Bufala Campana Consortium: production",
+            "url": "https://www.mozzarelladop.it/bufala-campana/produzione"
+          },
+          {
+            "title": "Comté Interprofessional Committee: cheese profile",
+            "url": "https://www.comte.com/portrait-dun-grand-fromage/"
+          },
+          {
+            "title": "Parmigiano Reggiano Consortium: ingredients and maturation",
+            "url": "https://www.parmigianoreggiano.com/en-US/faq"
+          },
+          {
+            "title": "Roquefort Confederation: sheep milk",
+            "url": "https://www.roquefort.fr/en/roquefort-a-raw-milk-sheep-cheese/"
+          },
+          {
+            "title": "U.S. Dairy: Cheddar styles and color",
+            "url": "https://www.usdairy.com/news-articles/all-about-cheddar-cheese"
+          }
+        ]
+      },
       "deckSections": [
         "dairy"
       ],
@@ -9159,8 +11792,8 @@
       "regionLine": null,
       "corners": [],
       "image": {
-        "src": "plates/charcuterie.webp",
-        "thumb": "plates/charcuterie.thumb.webp",
+        "src": "plates/charcuterie-v2.webp",
+        "thumb": "plates/charcuterie-v2.thumb.webp",
         "width": 1024,
         "height": 1536
       },
@@ -9527,6 +12160,141 @@
         }
       ],
       "count": 18,
+      "teaching": {
+        "title": "Charcuterie: cut and process",
+        "intro": "Distinguish whole muscle from sausage, pork from beef, and curing from cooking.",
+        "scope": "These are finished product identities, not home-curing instructions. Ingredient and process details can vary; use the producer's specification for the product served.",
+        "subjects": [
+          {
+            "id": "prosciutto",
+            "name": "Prosciutto di Parma",
+            "summary": "A dry-cured whole-muscle ham made from the rear leg of the pig.",
+            "facts": [
+              [
+                "Cut",
+                "Pork hind leg."
+              ],
+              [
+                "Method",
+                "Salted and matured."
+              ]
+            ],
+            "distinction": "Prosciutto di Parma is a cured ham, not a cooked ham or a ground sausage.",
+            "image": "Rose-pink translucent ham slices with a white fat edge beside a cured ham piece."
+          },
+          {
+            "id": "pancetta",
+            "name": "Pancetta",
+            "summary": "Cured pork belly, often presented as a slab or rolled into a cylinder.",
+            "facts": [
+              [
+                "Cut",
+                "Belly."
+              ],
+              [
+                "Appearance",
+                "Alternating lean and fat."
+              ]
+            ],
+            "distinction": "Its belly origin distinguishes it from cheek-based guanciale.",
+            "image": "Rolled pancetta with a cut spiral of pink meat and white fat."
+          },
+          {
+            "id": "guanciale",
+            "name": "Guanciale",
+            "summary": "A cured pork cheek or jowl cut with a substantial proportion of fat.",
+            "facts": [
+              [
+                "Cut",
+                "Cheek and jowl."
+              ],
+              [
+                "Kitchen",
+                "Used to flavor pasta dishes."
+              ]
+            ],
+            "distinction": "The anatomical cut differs from pancetta even when both are used for their fat.",
+            "image": "Thick triangular cured jowl with broad ivory fat and a narrow pink meat band."
+          },
+          {
+            "id": "salame-milano",
+            "name": "Salame Milano",
+            "summary": "A cured sausage recognized by its fine, rice-grain-like distribution of meat and fat.",
+            "facts": [
+              [
+                "Form",
+                "Ground meat sausage."
+              ],
+              [
+                "Texture",
+                "Fine grain."
+              ]
+            ],
+            "distinction": "The small fat particles differ from mortadella's larger white cubes.",
+            "image": "Cylindrical red salami with a sliced face densely speckled with tiny white fat pieces."
+          },
+          {
+            "id": "mortadella",
+            "name": "Mortadella Bologna",
+            "summary": "A cooked, finely ground pork sausage containing distinct cubes of pork fat.",
+            "facts": [
+              [
+                "Method",
+                "Ground, stuffed and cooked."
+              ],
+              [
+                "Appearance",
+                "Pink interior with visible white fat cubes."
+              ]
+            ],
+            "distinction": "Charcuterie includes cooked products as well as dry-cured ones.",
+            "image": "Large smooth pink sausage cross-section with evenly spaced white fat cubes."
+          },
+          {
+            "id": "bresaola",
+            "name": "Bresaola della Valtellina",
+            "summary": "A cured whole-muscle beef product made from selected hindquarter cuts.",
+            "facts": [
+              [
+                "Meat",
+                "Beef."
+              ],
+              [
+                "Form",
+                "Whole muscle, seasoned and matured."
+              ]
+            ],
+            "distinction": "It differs from the pork products elsewhere on this board.",
+            "image": "Lean deep red cured beef slices with minimal fat beside a dark exterior piece."
+          }
+        ],
+        "sources": [
+          {
+            "title": "Prosciutto di Parma Consortium: production",
+            "url": "https://www.prosciuttodiparma.com/en/making-parma-ham/"
+          },
+          {
+            "title": "Levoni: rolled cured pancetta",
+            "url": "https://www.levoni.it/en-us/products/sliced-deli-meats/tradizionale-range/rolled-dry-cured-pancetta"
+          },
+          {
+            "title": "Levoni: guanciale cut and use",
+            "url": "https://www.levoni.it/en-us/products/the-specialities/smoked-guanciale"
+          },
+          {
+            "title": "Levoni: Salame Milano",
+            "url": "https://www.levoni.it/it/salumi/salumi-affettati/linea-classica/salame-milano"
+          },
+          {
+            "title": "Mortadella Bologna Consortium: product",
+            "url": "https://mortadellabologna.com/en/prodotto/"
+          },
+          {
+            "title": "Bresaola della Valtellina Consortium: product",
+            "url": "https://bresaolavaltellina.it/en/product/"
+          }
+        ]
+      },
       "deckSections": [
         "cured"
       ],

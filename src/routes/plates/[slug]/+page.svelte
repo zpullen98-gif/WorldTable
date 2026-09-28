@@ -1,40 +1,19 @@
-<!--
-  One plate.
-
-  The picture first, in a box of its own proportions so the page does not
-  jump while it arrives; it is fetched on demand and kept by the worker
-  afterwards. A link opens it at full size for the small print. Then, right
-  under the picture, WHAT THE PLATE GETS WRONG, when it does: the plate is a
-  drawing that was generated, and a poster that teaches a wrong fact to a
-  new hire is worse than no poster, so the corrections sit where the eye
-  lands after the picture, not in a footnote.
-
-  Then the transcription, the whole plate as text: every card with its facts
-  as the plate prints them, linked to the deck card and the Lexicon entry
-  where one exists; the side panels; the words printed around the edge. It
-  is the plate for a screen reader, for search, and for a reader whose
-  picture has not arrived.
-
-  Last, the quiz: eight questions drawn from the plate, options and all, so
-  a right answer proves the plate was read. Nothing is recorded, and the
-  page says so; the ladders belong to the deck and the Lexicon, which grade
-  what they ask.
-
-  Headings: h1, then h2 for the four parts, h3 for a cut chart's primal
-  groups. Items are list rows, not headings: forty h4s would drown the
-  outline the way 779 h2s once drowned the Lexicon's.
--->
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { PLATE_QUIZ_LENGTH, displayName, plateHref, plateQuiz, type PlateQuestion } from '$lib/plates';
+	import { tick } from 'svelte';
+	import PlateIllustration from '$lib/components/PlateIllustration.svelte';
+	import PlateArchive from '$lib/components/PlateArchive.svelte';
+	import { PLATE_QUIZ_LENGTH, plateHref, plateQuiz, type PlateQuestion } from '$lib/plates';
 
 	let { data } = $props();
 	const plate = $derived(data.plate);
-
-	const facts = (item: { facts: Array<[string, string]> }) => item.facts.filter((f) => f[1].trim());
-	const edge = $derived([plate.tagline, ...plate.corners, plate.regionLine, plate.footer].filter((s): s is string => Boolean(s)));
-
-	/* ---- the quiz: in memory, never stored ---- */
+	const teaching = $derived(plate.teaching);
+	function subjectLinks(name: string) {
+		// Reuse only an unambiguous exact item in this same plate. No fuzzy,
+		// cross-species or cross-plate matching is introduced by the guide.
+		const matches = plate.groups.flatMap(group => group.items).filter(item => item.name === name && !item.sub);
+		return matches.length === 1 ? matches[0].links : undefined;
+	}
 	let questions = $state<PlateQuestion[]>([]);
 	let at = $state(0);
 	let picked = $state<string | null>(null);
@@ -42,190 +21,142 @@
 	let missed = $state<Array<{ about: string; answer: string }>>([]);
 	let finished = $state(false);
 	let announce = $state('');
+	let questionPanel = $state<HTMLDivElement>();
+	let startButton = $state<HTMLButtonElement>();
 	const q = $derived(questions[at] ?? null);
 
-	function start() {
-		questions = plateQuiz(plate, Math.random);
+	function close() {
+		questions = [];
 		at = 0;
 		picked = null;
 		right = 0;
 		missed = [];
 		finished = false;
-		announce = questions.length ? `Question 1 of ${questions.length}.` : '';
+		announce = '';
 	}
-	function answer(o: string) {
-		if (!q || picked) return;
-		picked = o;
-		if (o === q.answer) {
+	$effect(() => { void plate.slug; close(); });
+	async function start() {
+		close();
+		questions = plateQuiz(plate, Math.random);
+		announce = questions.length ? 'Question 1 of ' + questions.length + '.' : '';
+		await tick();
+		questionPanel?.focus({ preventScroll: true });
+	}
+	async function stop() { close(); await tick(); startButton?.focus({ preventScroll: true }); }
+	function answer(option: string) {
+		if (!q || picked !== null) return;
+		picked = option;
+		if (option === q.answer) {
 			right++;
-			announce = 'Right.';
+			announce = 'Correct. ' + q.answer + '.';
 		} else {
 			missed = [...missed, { about: q.about, answer: q.answer }];
-			announce = `Not that. The plate says ${q.answer}.`;
+			announce = 'The answer is ' + q.answer + '.';
 		}
 	}
-	function next() {
+	async function next() {
 		if (at + 1 >= questions.length) {
 			finished = true;
-			announce = `Finished: ${right} of ${questions.length}.`;
+			announce = 'Finished: ' + right + ' of ' + questions.length + '.';
+			await tick();
+			questionPanel?.focus({ preventScroll: true });
 			return;
 		}
 		at++;
 		picked = null;
-		announce = `Question ${at + 1} of ${questions.length}.`;
-	}
-	function close() {
-		questions = [];
-		finished = false;
-		announce = '';
+		announce = 'Question ' + (at + 1) + ' of ' + questions.length + '.';
+		await tick();
+		questionPanel?.focus({ preventScroll: true });
 	}
 </script>
 
-<svelte:head><title>{plate.title} · The Plates · The World Table</title></svelte:head>
+<svelte:head><title>{teaching.title} · The Plates · The World Table</title></svelte:head>
 
-<div class="shell view">
+<div class="shell view plate-folio">
 	<nav class="crumbs"><a href="{base}/">Home</a> · <a href="{base}/plates">The Plates</a></nav>
-	<p class="eyebrow">
-		{[plate.kindTitle, data.levelName].filter(Boolean).join(' · ')}
-	</p>
-	<h1>{plate.title}</h1>
-	{#if plate.tagline}<p class="lede">{plate.tagline}</p>{/if}
-	<p class="stat">{plate.count} on the plate · read, never graded</p>
+	<header class="folio-intro">
+		<p class="eyebrow">{[plate.kindTitle, data.levelName].filter(Boolean).join(' · ')}</p>
+		<h1>{teaching.title}</h1>
+		<p class="lede">{teaching.intro}</p>
+		<p class="stat">{teaching.subjects.length} illustrated subjects · {plate.count} original archive entries · read, never graded</p>
+	</header>
+	<nav class="folio-jumps" aria-label="On this plate">
+		<a href="#teaching-guide">Read the guide</a><a href="#plate-check">Check your understanding</a><a href="#plate-sources">Sources</a>
+	</nav>
 
-	<figure class="plate">
-		<span class="box" style="aspect-ratio: {plate.image.width} / {plate.image.height}">
-			<img
-				src="{base}/{plate.image.src}"
-				alt="{plate.title}: an illustrated reference plate. Its full text is transcribed below."
-				width={plate.image.width}
-				height={plate.image.height}
-				decoding="async"
-			/>
-		</span>
-		<figcaption>
-			<a href="{base}/{plate.image.src}" target="_blank" rel="noopener">Open the plate at full size</a>
-			<span class="muted">for the small print. Pinch to zoom on a phone.</span>
-		</figcaption>
-	</figure>
-
-	{#if plate.corrections.length}
-		<section class="corrections" aria-labelledby="corr-h">
-			<h2 id="corr-h">What the plate gets wrong</h2>
-			<p class="secnote">
-				The picture was generated, and these are its errors of fact, checked against the kitchen and
-				the Lexicon. Read the plate with them.
-			</p>
-			<ul>
-				{#each plate.corrections as c (c.on + c.says)}
-					<li>
-						<strong>{c.on}</strong> <span class="says">prints “{c.says}”.</span>
-						{c.should}
-						<span class="why">{c.why}</span>
+	<div class="folio-spread">
+		<div class="art-column">
+			<PlateIllustration src="{base}/{plate.image.src}" title={teaching.title} width={plate.image.width} height={plate.image.height} />
+			<ol class="illustration-key" aria-label="Illustration key, read left to right from the top row">
+				{#each teaching.subjects as subject, index (subject.id)}
+					<li><a href="#subject-{subject.id}"><span aria-hidden="true">{index + 1}</span>{subject.name}</a></li>
+				{/each}
+			</ol>
+			<p class="key-note">Read left to right, from the top row.</p>
+		</div>
+		<section class="teaching-guide" id="teaching-guide" aria-labelledby="teaching-h">
+			<p class="eyebrow">The field guide</p>
+			<h2 id="teaching-h">Look closely. Learn the difference.</h2>
+			<p class="scope-note">{teaching.scope}</p>
+			<ol class="subjects">
+				{#each teaching.subjects as subject, index (subject.id)}
+					{@const links = subjectLinks(subject.name)}
+					<li class="subject" id="subject-{subject.id}">
+						<div class="subject-heading"><span class="subject-number" aria-hidden="true">{index + 1}</span><h3>{subject.name}</h3></div>
+						<p class="subject-summary">{subject.summary}</p>
+						<dl class="subject-facts">{#each subject.facts as fact (fact[0])}<div><dt>{fact[0]}</dt><dd>{fact[1]}</dd></div>{/each}</dl>
+						<p class="distinction"><strong>Remember</strong> {subject.distinction}</p>
+						{#if links?.deck || links?.lexicon}
+							<div class="subject-links">
+								{#if links.deck}<a href="{base}/service/deck/study?card={links.deck}">Practise in the deck<span class="sr-only">: {subject.name}</span></a>{/if}
+								{#if links.lexicon}<a href="{base}/lexicon#{links.lexicon}">Read the Lexicon<span class="sr-only">: {subject.name}</span></a>{/if}
+							</div>
+						{/if}
 					</li>
 				{/each}
-			</ul>
+			</ol>
 		</section>
-	{/if}
+	</div>
 
-	<section class="text" aria-labelledby="text-h">
-		<h2 id="text-h">On the plate</h2>
-		{#each plate.groups as g, gi (gi)}
-			{#if g.title}
-				<h3>{g.title}</h3>
-				{#if g.note}<p class="gnote">{g.note}</p>{/if}
-			{/if}
-			<ul class="items">
-				{#each g.items as it (displayName(it))}
-					<li>
-						<span class="name">
-							{it.name}{#if it.sub}<span class="sub"> ({it.sub})</span>{/if}
-							{#if it.printed}<span class="printed">printed “{it.printed}”</span>{/if}
-						</span>
-						{#if facts(it).length}
-							<span class="facts">
-								{#each facts(it) as f (f[0])}<span class="fact"><span class="flabel">{f[0]}</span> {f[1]}</span>{/each}
-							</span>
-						{/if}
-						{#if it.links?.deck || it.links?.lexicon}
-							<span class="links">
-								{#if it.links.deck}<a href="{base}/service/deck/study?card={it.links.deck}">The card</a>{/if}
-								{#if it.links.lexicon}<a href="{base}/lexicon#{it.links.lexicon}">The Lexicon</a>{/if}
-							</span>
-						{/if}
-					</li>
-				{/each}
-			</ul>
-		{/each}
+	<section class="sources" id="plate-sources" aria-labelledby="sources-h">
+		<h2 id="sources-h">Read further</h2>
+		<p class="secnote">The teaching notes draw on these references. The illustration is a study aid; use the written guide for the distinctions.</p>
+		<ul>{#each teaching.sources as source (source.url)}<li><a href={source.url} target="_blank" rel="noopener">{source.title}<span class="sr-only"> in a new tab</span></a></li>{/each}</ul>
 	</section>
 
-	{#if plate.panels.length}
-		<section class="panels" aria-labelledby="panels-h">
-			<h2 id="panels-h">Also on the plate</h2>
-			{#each plate.panels as pan (pan.title)}
-				<h3>{pan.title}</h3>
-				<ul>
-					{#each pan.lines as line, i (i)}<li>{line}</li>{/each}
-				</ul>
-			{/each}
-		</section>
-	{/if}
-
-	<section class="quiz" aria-labelledby="quiz-h">
-		<h2 id="quiz-h">Quiz yourself</h2>
-		<p class="secnote">
-			Up to {PLATE_QUIZ_LENGTH} questions drawn from the plate, answers and all. Nothing is recorded:
-			the plate is a reference, and the deck and the Lexicon are where a word is graded.
-		</p>
-		<p class="live" aria-live="polite">{announce}</p>
+	<section class="quiz" id="plate-check" aria-labelledby="quiz-h" data-print="hide">
+		<p class="eyebrow">A moment to recall</p>
+		<h2 id="quiz-h">Check your understanding</h2>
+		<p class="secnote">Up to {PLATE_QUIZ_LENGTH} questions from the teaching guide. Nothing is recorded; this is a quiet self-check.</p>
+		<p class="live sr-only" aria-live="polite">{announce}</p>
 		{#if finished}
-			<div class="flash">
-				<p class="term">{right} of {questions.length}</p>
+			<div class="flash" bind:this={questionPanel} tabindex="-1" role="group" aria-label="Self-check results" aria-describedby="plate-result">
+				<p class="term" id="plate-result">{right} of {questions.length}</p>
 				{#if missed.length}
-					<p class="def">The plate says otherwise on:</p>
-					<ul class="missed">
-						{#each missed as m (m.about + m.answer)}<li><strong>{m.about}</strong>: {m.answer}</li>{/each}
-					</ul>
-				{:else}
-					<p class="def">Every answer as the plate prints it.</p>
-				{/if}
-				<div class="flashtools">
-					<button class="chip" onclick={start}>Again</button>
-					<button class="chip" onclick={close}>Close</button>
-				</div>
+					<p class="def">Return to these subjects in the guide:</p>
+					<ul class="missed">{#each missed as miss, index (index)}<li><strong>{miss.answer}</strong>{#if miss.about !== miss.answer}<span>{miss.about}</span>{/if}</li>{/each}</ul>
+				{:else}<p class="def">You recognized every subject in this self-check.</p>{/if}
+				<div class="flashtools"><button class="chip" onclick={start}>Again</button><button class="chip" onclick={stop}>Close self-check</button></div>
 			</div>
 		{:else if q}
-			<div class="flash">
+			<div class="flash" bind:this={questionPanel} tabindex="-1" role="group" aria-label="Self-check question" aria-describedby="plate-question">
 				<p class="eyebrow">Question {at + 1} of {questions.length}</p>
-				<p class="def prompt">{q.prompt}</p>
+				<p class="def prompt" id="plate-question">{q.prompt}</p>
 				<div class="opts">
-					{#each q.options as o (o)}
-						<button
-							class="opt"
-							class:right={picked && o === q.answer}
-							class:wrong={picked === o && o !== q.answer}
-							disabled={!!picked && o !== picked && o !== q.answer}
-							onclick={() => answer(o)}
-						>
-							{o}
-						</button>
+					{#each q.options as option (option)}
+						<button class="opt" class:right={picked !== null && option === q.answer} class:wrong={picked === option && option !== q.answer} disabled={picked !== null} onclick={() => answer(option)}>{option}</button>
 					{/each}
 				</div>
+				{#if picked !== null}<p class="answer-note">{picked === q.answer ? 'Correct.' : 'The answer is ' + q.answer + '.'}</p>{/if}
 				<div class="flashtools">
-					{#if picked}
-						<button class="chip go" onclick={next}>{at + 1 >= questions.length ? 'See how it went' : 'Next question'}</button>
-					{/if}
-					<button class="chip" onclick={close}>Close</button>
+					{#if picked !== null}<button class="chip go" onclick={next}>{at + 1 >= questions.length ? 'See how it went' : 'Next question'}</button>{/if}
+					<button class="chip" onclick={stop}>Close self-check</button>
 				</div>
 			</div>
-		{:else}
-			<button class="chip go start" onclick={start}>Ask me about this plate</button>
-		{/if}
+		{:else}<button class="chip go start" bind:this={startButton} onclick={start}>Ask me about this plate</button>{/if}
 	</section>
 
-	{#if edge.length}
-		<p class="edge">Printed around the edge: {edge.join(' · ')}</p>
-	{/if}
-
+	<PlateArchive {plate} />
 	<nav class="neighbours" aria-label="Other plates">
 		{#if data.prev}<a href={plateHref(base, data.prev.slug)}>Before: {data.prev.title}</a>{/if}
 		<a href="{base}/plates">The wall</a>
@@ -234,85 +165,57 @@
 </div>
 
 <style>
-	.view { padding-block: 26px 80px; max-width: 900px; }
-	.crumbs { font-size: var(--t-small); margin-bottom: 8px; }
-	.crumbs a { display: inline-block; padding-block: 10px; color: var(--muted); }
-	.eyebrow {
-		font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase;
-		color: var(--turmeric-deep);
+	.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+	.view { padding-block: 26px 80px; max-width: 1180px; }
+	.crumbs { font-size: var(--t-small); margin-bottom: 8px; }.crumbs a { display: inline-block; min-height: 44px; padding-block: 10px; color: var(--muted); }
+	.folio-intro { max-width: 800px; }
+	.eyebrow { font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--turmeric-deep); }
+	h1 { font-family: var(--house-display); font-size: clamp(30px, 4vw, 48px); font-weight: 500; line-height: 1.2; margin: 8px 0 16px; }
+	.lede { font-size: var(--t-lede); color: var(--ink-soft); max-width: var(--measure); line-height: 1.6; }
+	.stat { margin-top: 12px; font-size: var(--t-small); color: var(--muted); }
+	.folio-jumps { display: flex; flex-wrap: wrap; gap: 0 22px; padding: 10px 0 18px; margin: 12px 0 24px; border-bottom: 1px solid var(--house-frame); }
+	.folio-jumps a { min-height: 44px; display: inline-flex; align-items: center; color: var(--ink); font-size: var(--t-small); text-underline-offset: 4px; }
+	.art-column { min-width: 0; align-self: start; }
+	.illustration-key { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); list-style: none; padding: 12px 0 0; margin: 0; gap: 2px 12px; }
+	.illustration-key a { display: flex; align-items: center; gap: 9px; min-height: 44px; line-height: 1.3; color: var(--ink); font-size: var(--t-small); text-decoration: none; overflow-wrap: anywhere; }
+	.illustration-key a:hover { text-decoration: underline; text-underline-offset: 4px; }
+	.illustration-key a > span { font-family: var(--house-display); font-size: 16px; color: var(--turmeric-deep); width: 18px; flex-shrink: 0; text-align: center; }
+	.key-note { margin-top: 6px; font-size: var(--t-micro); color: var(--muted); }
+	.teaching-guide { min-width: 0; margin-top: 30px; }
+	h2 { font-family: var(--house-display); font-weight: 500; font-size: clamp(23px, 2.4vw, 29px); line-height: 1.35; margin: 7px 0 12px; }
+	.scope-note { color: var(--ink-soft); font-size: 17px; line-height: 1.6; }
+	.subjects { list-style: none; padding: 0; margin: 22px 0 0; }
+	.subject { padding: 22px 0; border-top: 1px solid var(--house-frame); scroll-margin-top: calc(var(--modebar-h) + 28px); }
+	.subject-heading { display: flex; align-items: baseline; gap: 12px; }
+	.subject-number { font-family: var(--house-display); color: var(--turmeric-deep); font-size: 19px; width: 26px; flex-shrink: 0; }
+	h3 { margin: 0; font-family: var(--house-display); font-size: 21px; font-weight: 500; line-height: 1.4; }
+	.subject-summary { margin: 10px 0 14px; line-height: 1.65; font-size: 18px; color: var(--ink); }
+	.subject-facts { margin: 0; color: var(--ink-soft); font-size: 17px; line-height: 1.55; }
+	.subject-facts > div { display: grid; grid-template-columns: minmax(74px, .3fr) minmax(0, 1fr); gap: 10px; padding: 5px 0; }
+	.subject-facts dt { font-size: 14px; font-weight: 600; color: var(--muted); }.subject-facts dd { margin: 0; }
+	.distinction { margin: 14px 0 0; padding: 10px 13px; border-left: 2px solid var(--turmeric-deep); background: var(--paper-raised); color: var(--ink-soft); font-size: 17px; line-height: 1.6; }
+	.distinction strong { color: var(--ink); }
+	.subject-links { display: flex; flex-wrap: wrap; gap: 0 20px; margin-top: 6px; }.subject-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); font-size: var(--t-small); text-underline-offset: 4px; }
+	.sources, .quiz { border-top: 1px solid var(--house-frame); margin-top: 32px; padding-top: 24px; }
+	.secnote { color: var(--ink-soft); max-width: var(--measure); font-size: 17px; line-height: 1.6; }
+	.sources ul { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 4px 22px; }
+	.sources a { min-height: 44px; display: inline-flex; align-items: center; color: var(--ink); font-size: var(--t-small); }
+	.live { min-height: 1.4em; margin-top: 10px; color: var(--muted); font-size: var(--t-small); }.start { min-height: 44px; }
+	.flash { border: 1px solid var(--house-frame); background: var(--house-panel); padding: 26px; margin-top: 8px; border-radius: 3px; text-align: center; }
+	.term { font-family: var(--house-display); font-size: 30px; margin: 0 0 12px; }
+	.def { max-width: 60ch; margin: 10px auto 18px; color: var(--ink-soft); }.prompt { font-family: var(--display); font-size: 23px; line-height: 1.45; color: var(--ink); }
+	.opts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-width: 720px; margin: 0 auto 16px; }
+	.opt { border: 1px solid var(--line-strong); background: var(--paper); padding: 13px 16px; min-height: 48px; border-radius: 3px; cursor: pointer; font: 18px/1.45 var(--display); color: var(--ink); }
+	.opt:hover:not(:disabled) { border-color: var(--turmeric-deep); }.opt:disabled { cursor: default; opacity: 1; color: var(--muted); }
+	.opt.right { border: 2px solid var(--leaf); color: var(--leaf); font-weight: 600; }.opt.wrong { border: 2px solid var(--chili); color: var(--chili); }
+	.answer-note { margin: 12px 0; color: var(--ink); }.flashtools { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }.flashtools .chip { min-height: 44px; }
+	.missed { list-style: none; margin: 0 auto 20px; padding: 0; max-width: 60ch; text-align: left; color: var(--ink-soft); }.missed li { padding: 9px 0; }.missed span { display: block; font-size: var(--t-small); }
+	.neighbours { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 28px; border-top: 1px solid var(--line); padding-top: 14px; font-size: var(--t-small); }.neighbours a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); }
+	@media screen and (min-width: 850px) {
+		.folio-spread { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 36px; align-items: start; }
+		.teaching-guide { margin-top: 0; }
+		/* Reserve the keys and control first; the artwork fits the remaining view. */
+		.art-column { position: sticky; top: calc(var(--modebar-h) + 14px); height: min(850px, calc(100dvh - var(--modebar-h) - 28px)); display: grid; grid-template-rows: minmax(0, 1fr) auto auto; }
 	}
-	h1 { font-size: var(--t-h1); margin: 4px 0 8px; }
-	.lede { font-size: var(--t-lede); color: var(--ink-soft); max-width: var(--measure); }
-	.stat { margin-top: 8px; font-size: var(--t-small); color: var(--muted); font-variant-numeric: tabular-nums; }
-
-	.plate { margin: 20px 0 0; }
-	.box {
-		display: block; width: 100%; background: var(--paper-raised);
-		border: var(--rule) solid var(--line); border-radius: var(--radius); overflow: hidden;
-	}
-	.box img { display: block; width: 100%; height: 100%; }
-	figcaption { margin-top: 8px; font-size: var(--t-small); }
-	figcaption a { color: var(--ink); display: inline-block; padding-block: 8px; text-underline-offset: 3px; }
-	.muted { color: var(--muted); }
-
-	section { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--line); }
-	h2 { font-family: var(--display); font-size: var(--t-h3); margin-bottom: 4px; }
-	h3 { font-family: var(--display); font-size: var(--t-h4); margin: 16px 0 2px; }
-	.secnote { color: var(--ink-soft); max-width: var(--measure); font-size: var(--t-small); margin-bottom: 10px; }
-	.gnote { font-size: var(--t-small); color: var(--muted); margin-bottom: 4px; }
-
-	/* the corrections: a caution, the /service "gaps" idiom, and never a verdict colour */
-	.corrections ul { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
-	.corrections li {
-		border-left: 2px solid var(--turmeric-deep); background: var(--paper-raised);
-		padding: 10px 14px; margin: 0 0 8px; line-height: 1.45;
-	}
-	.corrections .says { color: var(--muted); }
-	.corrections .why { display: block; margin-top: 2px; font-size: var(--t-small); color: var(--muted); }
-
-	.items { list-style: none; margin: 0; padding: 0; }
-	.items li { padding: 8px 0; border-bottom: 1px solid var(--line); line-height: 1.45; }
-	.items li:last-child { border-bottom: 0; }
-	.name { font-family: var(--display); font-size: var(--t-h4); }
-	.sub { color: var(--muted); font-size: var(--t-body); }
-	.printed { margin-left: 8px; font-size: var(--t-small); color: var(--muted); font-style: italic; }
-	.facts { display: block; font-size: var(--t-small); color: var(--ink-soft); }
-	.fact { margin-right: 14px; }
-	.flabel {
-		font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase;
-		color: var(--muted); margin-right: 4px;
-	}
-	.links { display: block; margin-top: 2px; font-size: var(--t-small); }
-	.links a { display: inline-block; padding-block: 6px; margin-right: 14px; color: var(--ink); text-underline-offset: 3px; }
-
-	.panels ul { margin: 0 0 6px; padding-left: 1.2em; color: var(--ink-soft); font-size: var(--t-small); }
-	.panels li { padding: 2px 0; }
-
-	.live { min-height: 1.4em; font-size: var(--t-small); color: var(--muted); }
-	.start { min-height: 44px; }
-	.flash {
-		border: 1px solid var(--turmeric); background: var(--card);
-		padding: 24px; margin-top: 8px; text-align: center; border-radius: var(--radius);
-	}
-	.flash .eyebrow { color: var(--muted); }
-	.flash .term { font-family: var(--display); font-size: var(--t-h2); margin: 6px 0 10px; }
-	.flash .def { max-width: 62ch; margin: 0 auto 14px; color: var(--ink-soft); }
-	.prompt { font-family: var(--display); font-size: 20px; line-height: 1.4; color: var(--ink); }
-	.opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; max-width: 640px; margin: 0 auto 14px; }
-	.opt {
-		border: 1px solid var(--line); background: var(--paper); padding: 10px 14px; min-height: 44px;
-		border-radius: var(--radius); cursor: pointer; font-family: var(--display); font-size: 16px; color: var(--ink);
-	}
-	.opt:hover:not(:disabled) { border-color: var(--turmeric); }
-	.opt:disabled { opacity: 0.45; cursor: default; }
-	.opt.right { border-color: var(--leaf); color: var(--leaf); font-weight: 600; opacity: 1; }
-	.opt.wrong { border-color: var(--chili); color: var(--chili); opacity: 1; }
-	.flashtools { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; align-items: center; }
-	.flashtools .chip { min-height: 44px; }
-	.missed { list-style: none; margin: 0 auto 14px; padding: 0; max-width: 62ch; text-align: left; font-size: var(--t-small); color: var(--ink-soft); }
-	.missed li { padding: 4px 0; }
-
-	.edge { margin-top: 26px; font-size: var(--t-small); color: var(--muted); font-style: italic; max-width: var(--measure); }
-	.neighbours { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--line); font-size: var(--t-small); }
-	.neighbours a { display: inline-block; padding-block: 10px; color: var(--ink); text-underline-offset: 3px; }
+	@media (max-width: 520px) { .folio-jumps { gap: 0 16px; }.subject-facts > div { display: block; }.subject-facts dt { margin-bottom: 2px; }.subject-heading { gap: 8px; }h3 { font-size: 20px; }.flash { padding: 20px 14px; }.opts { grid-template-columns: 1fr; }.prompt { font-size: 21px; } }
 </style>

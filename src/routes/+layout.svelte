@@ -15,23 +15,58 @@
 
 	let { children } = $props();
 
-	// The decorative image can finish loading before a first service worker
-	// takes control. Request it once after claim so the art's runtime route
-	// keeps that first visit offline too, without adding it to the core install.
+	// Images can finish before the first worker takes control. Re-request only
+	// loaded pictures after claim so a direct plate visit is retained offline.
+	// This never starts lazy pictures the reader has not opened, and adds no
+	// artwork to the core install. Each newly controlling edition gets a turn.
 	onMount(() => {
 		if (!('serviceWorker' in navigator)) return;
 		let warmedWorker: ServiceWorker | null = null;
-		const keepArtwork = () => {
+		let warmedUrls = new Set<string>();
+		const ownWorkerUrl = new URL(`${base}/sw.js`, location.href).href;
+		const plateRoot = `${base}/plates/`;
+		const keepUrl = (url: string) => {
 			const worker = navigator.serviceWorker.controller;
 			// An arrival from the hub may still be controlled by its root worker.
-			// Only this wing's worker owns the artwork route. Warm each new edition.
-			if (!worker || worker.scriptURL !== new URL(`${base}/sw.js`, location.href).href || warmedWorker === worker) return;
-			warmedWorker = worker;
-			void fetch(`${base}/house/world-table-library-v1.webp`, { cache: 'force-cache' }).catch(() => {});
+			if (!worker || worker.scriptURL !== ownWorkerUrl) return;
+			if (worker !== warmedWorker) {
+				warmedWorker = worker;
+				warmedUrls = new Set();
+			}
+			if (warmedUrls.has(url)) return;
+			const urls = warmedUrls;
+			urls.add(url);
+			void fetch(url, { cache: 'force-cache' }).then((response) => {
+				if (!response.ok) urls.delete(url);
+			}).catch(() => urls.delete(url));
 		};
-		keepArtwork();
+		const keepLoadedPlate = (img: HTMLImageElement) => {
+			// Complete is also true for a failed image; naturalWidth rules that out.
+			if (!img.complete || img.naturalWidth === 0) return;
+			const url = new URL(img.currentSrc || img.src, document.baseURI);
+			if (url.origin !== location.origin || url.search || !url.pathname.startsWith(plateRoot)) return;
+			const file = url.pathname.slice(plateRoot.length);
+			// Archive art is eligible only if an actual <img> has already loaded it.
+			if (!/^(?:[a-z0-9-]+-v2(?:\.thumb)?|archive\/[a-z0-9-]+)\.webp$/.test(file)) return;
+			url.hash = '';
+			keepUrl(url.href);
+		};
+		const keepArtwork = () => {
+			keepUrl(new URL(`${base}/house/world-table-library-v1.webp`, location.href).href);
+			for (const img of document.images) keepLoadedPlate(img);
+		};
+		const onImageLoad = (event: Event) => {
+			if (event.target instanceof HTMLImageElement) keepLoadedPlate(event.target);
+		};
+		// Image load does not bubble. Capture covers later lazy loads, images
+		// introduced by route navigation and pictures opened in the viewer.
+		document.addEventListener('load', onImageLoad, true);
 		navigator.serviceWorker.addEventListener('controllerchange', keepArtwork);
-		return () => navigator.serviceWorker.removeEventListener('controllerchange', keepArtwork);
+		keepArtwork();
+		return () => {
+			document.removeEventListener('load', onImageLoad, true);
+			navigator.serviceWorker.removeEventListener('controllerchange', keepArtwork);
+		};
 	});
 
 	// Font size, device width and menu counts can all wrap the navigation.

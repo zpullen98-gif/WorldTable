@@ -114,7 +114,7 @@ export default defineConfig({
 				 * under client) whenever none of ours starts with client/, so the
 				 * ignore is what keeps them out. verify-build asserts it.
 				 */
-				globIgnores: ['**/node_modules/**', '**/*.woff', '**/sw-shared.js', '**/shared/oot-maitre.js', '**/plates/*.webp', '**/house/*.webp'],
+				globIgnores: ['**/node_modules/**', '**/*.woff', '**/sw-shared.js', '**/shared/oot-maitre.js', '**/plates/**/*.webp', '**/house/*.webp'],
 				maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
 				/**
 				 * Supplying manifestTransforms REPLACES the SvelteKit plugin's own
@@ -232,20 +232,23 @@ export default defineConfig({
                         }
                     },
 					/**
-					 * The Plates' pictures: 6.8 MB of drawings the reader opens one at a
+					 * The Plates' pictures: versioned teaching folios and original archives
+					 * the reader opens one at a
 					 * time, and none of which belongs in the install (the transcriptions
 					 * do, and those are a precached chunk). A plate opened once is kept,
-					 * so it reads again in a walk-in; forty entries hold every plate and
-					 * its thumbnail. The glob above never sees .webp, and verify-build
+					 * so it reads again in a walk-in; eighty entries hold the twenty folios,
+					 * their thumbnails and the original archive, with room for old entries.
+					 * A new art revision uses a new URL, so CacheFirst cannot mask a redraw.
+					 * The glob above never sees .webp, and verify-build
 					 * asserts that none of them is precached.
 					 */
 					{
-						urlPattern: ({ url, sameOrigin }) => sameOrigin && /\/plates\/[^/]+\.webp$/.test(url.pathname),
+						urlPattern: ({ url, sameOrigin }) => sameOrigin && /\/plates\/(?:archive\/)?[^/]+\.webp$/.test(url.pathname),
 						handler: 'CacheFirst',
 						options: {
 							cacheName: 'plates-v1',
 							cacheableResponse: { statuses: [0, 200] },
-							expiration: { maxEntries: 48, maxAgeSeconds: 365 * 24 * 60 * 60 }
+							expiration: { maxEntries: 80, maxAgeSeconds: 365 * 24 * 60 * 60 }
 						}
 					},
 					{

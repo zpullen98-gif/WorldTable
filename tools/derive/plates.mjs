@@ -1,5 +1,5 @@
 /**
- * The Plates: twenty illustrated reference plates, transcribed in full.
+ * The Plates: twenty reviewed six-subject guides and their original archives.
  *
  * ## What it is
  *
@@ -7,12 +7,11 @@
  * (chicken, pork, beef), the three fish cases (Pacific, Atlantic, Gulf), the
  * larder of five regions (a vegetable plate and a fruit plate each), the
  * spice rack, the mushrooms, the cheese board and the charcuterie board. Each
- * ships as an image the reader opens on demand (static/plates/<slug>.webp,
- * never precached: six megabytes of pictures do not belong in the install)
- * and as a TRANSCRIPTION that does install with the app: every card on the
- * plate, its facts as the plate prints them, the side panels, the corners
- * and the footer, so the plate can be searched, read by a screen reader,
- * quizzed, and read at all when the picture has not arrived.
+ * now ships a versioned six-subject illustration opened on demand, plus a
+ * reviewed text guide that installs with the app. The original picture is
+ * preserved in static/plates/archive/. Its complete transcription, panels,
+ * corrections and links remain a separately presented archive. Only the
+ * reviewed teaching guide supplies the quiz; old printed errors never do.
  *
  * ## The authored files
  *
@@ -23,6 +22,9 @@
  * images.json beside them is written by the encoder and records each image's
  * pixel size, which the page needs for a box that does not jump. The build
  * reads the files and never writes them.
+ * teaching.json beside them contains a map from every plate slug to its
+ * current title, intro, scope, six subjects in image order and primary source
+ * links. It is independently validated and never inferred from the archive.
  *
  *   slug, title, kind      kind is one of KINDS
  *   tagline, corners,      the plate's own words around the subject, as
@@ -78,12 +80,13 @@ import { slugify } from '../slugify.mjs';
 const HERE = dirname(fileURLToPath(import.meta.url));
 export const PLATES_DIR = join(HERE, 'plates');
 export const IMAGES_DIR = join(HERE, '..', '..', 'static', 'plates');
+export const PLATE_IMAGE_REVISION = 'v2';
 
 /** The kinds, and how the wall groups them, in wall order. */
 export const KINDS = [
 	{ key: 'cuts', title: 'The cuts', blurb: 'Where on the animal a cut comes from, and how that decides the cooking.' },
 	{ key: 'fish', title: 'The fish case', blurb: 'Three waters, the fish that come out of each, how they are cut and how they eat.' },
-	{ key: 'produce', title: 'The larder by region', blurb: 'What grows where and when: five regions, a vegetable plate and a fruit plate each.' },
+	{ key: 'produce', title: 'The larder by region', blurb: 'Five regional study selections: recognize the crop, its edible part and useful distinctions.' },
 	{ key: 'pantry', title: 'The pantry', blurb: 'The spice rack and the mushroom basket, with what each one tastes of and where it goes.' },
 	{ key: 'board', title: 'The board', blurb: 'The cheese board and the charcuterie board by name, country and character.' }
 ];
@@ -150,6 +153,56 @@ export function readImages() {
 	const file = join(PLATES_DIR, 'images.json');
 	if (!existsSync(file)) throw new Error(`BUILD INPUT MISSING: ${file} (run the plate encoder)`);
 	return JSON.parse(readFileSync(file, 'utf8'));
+}
+
+/** Reviewed copy is authored separately so no archive correction can silently
+ *  become a current lesson. Missing or invalid guides stop data publication.
+ *  @returns {Record<string, import('../../src/lib/types').PlateTeaching>}
+ */
+export function readTeaching() {
+	const file = join(PLATES_DIR, 'teaching.json');
+	if (!existsSync(file)) throw new Error(`BUILD INPUT MISSING: ${file}`);
+	return JSON.parse(readFileSync(file, 'utf8'));
+}
+
+/** @param {string} slug @param {unknown} value @returns {string[]} */
+export function checkTeaching(slug, value) {
+	/** @type {string[]} */
+	const problems = [];
+	/** @param {string} message */
+	const err = (message) => problems.push(`plates/${slug} teaching: ${message}`);
+	/** @param {unknown} s */
+	const nonempty = (s) => typeof s === 'string' && !!s.trim();
+	if (!value || typeof value !== 'object' || Array.isArray(value)) return [`plates/${slug} teaching: guide must be an object`];
+	const guide = /** @type {import('../../src/lib/types').PlateTeaching} */ (value);
+	for (const key of Object.keys(guide)) if (!['title', 'intro', 'scope', 'subjects', 'sources'].includes(key)) err(`unknown key ${key}`);
+	for (const key of ['title', 'intro', 'scope']) if (!nonempty(guide[/** @type {'title' | 'intro' | 'scope'} */ (key)])) err(`${key} must be non-empty`);
+	if (DASH.test(JSON.stringify(guide))) err('use plain punctuation rather than long or doubled dashes');
+	if (!Array.isArray(guide.subjects) || guide.subjects.length !== 6) err('exactly six subjects required in illustration order');
+	const ids = new Set();
+	const names = new Set();
+	const summaries = new Set();
+	for (const [i, s] of (Array.isArray(guide.subjects) ? guide.subjects : []).entries()) {
+		if (!s || typeof s !== 'object') { err(`subject ${i + 1} must be an object`); continue; }
+		for (const key of Object.keys(s)) if (!['id', 'name', 'summary', 'distinction', 'image', 'facts'].includes(key)) err(`subject ${i + 1}: unknown key ${key}`);
+		for (const key of ['id', 'name', 'summary', 'distinction', 'image']) if (!nonempty(s[/** @type {'id' | 'name' | 'summary' | 'distinction' | 'image'} */ (key)])) err(`subject ${i + 1}: ${key} must be non-empty`);
+		if (typeof s.id !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(s.id)) err(`subject ${i + 1}: invalid id`);
+		if (ids.has(s.id)) err(`duplicate subject id ${s.id}`);
+		if (names.has(s.name)) err(`duplicate subject name ${s.name}`);
+		if (summaries.has(s.summary)) err(`duplicate quiz description for ${s.name}`);
+		ids.add(s.id); names.add(s.name); summaries.add(s.summary);
+		if (!Array.isArray(s.facts) || !s.facts.length || s.facts.some((f) => !Array.isArray(f) || f.length !== 2 || !f.every(nonempty))) err(`subject ${i + 1}: facts must be non-empty label/value pairs`);
+	}
+	if (!Array.isArray(guide.sources) || !guide.sources.length) err('at least one primary source required');
+	const urls = new Set();
+	for (const source of Array.isArray(guide.sources) ? guide.sources : []) {
+		if (!source || !nonempty(source.title) || !nonempty(source.url)) { err('source title and URL required'); continue; }
+		try { if (new URL(source.url).protocol !== 'https:') err(`source must use HTTPS: ${source.url}`); }
+		catch { err(`invalid source URL: ${source.url}`); }
+		if (urls.has(source.url)) err(`duplicate source URL: ${source.url}`);
+		urls.add(source.url);
+	}
+	return problems;
 }
 
 /**
@@ -278,7 +331,7 @@ export function checkPlate(slug, text, images) {
 
 	const image = images.get(slug);
 	if (!image) err('no entry in plates/images.json: run the encoder');
-	for (const f of [`${slug}.webp`, `${slug}.thumb.webp`]) {
+	for (const f of [`${slug}-${PLATE_IMAGE_REVISION}.webp`, `${slug}-${PLATE_IMAGE_REVISION}.thumb.webp`, `archive/${slug}.webp`]) {
 		if (!existsSync(join(IMAGES_DIR, f))) err(`static/plates/${f} is missing`);
 	}
 
@@ -294,7 +347,7 @@ export function checkPlate(slug, text, images) {
 			kindTitle: kind?.title ?? p.kind,
 			regionLine: p.regionLine ?? null,
 			corners: p.corners,
-			image: { src: `plates/${slug}.webp`, thumb: `plates/${slug}.thumb.webp`, width: image?.width ?? 0, height: image?.height ?? 0 },
+			image: { src: `plates/${slug}-${PLATE_IMAGE_REVISION}.webp`, thumb: `plates/${slug}-${PLATE_IMAGE_REVISION}.thumb.webp`, width: image?.width ?? 0, height: image?.height ?? 0 },
 			groups: p.groups.map((/** @type {any} */ g) => ({
 				title: g.title.trim(),
 				note: g.note ?? null,
@@ -321,7 +374,7 @@ export function checkPlate(slug, text, images) {
  *   lexicon: Array<{ slug: string, term: string, category: string, definition?: string }>
  * }} ctx
  */
-export function buildPlates(ctx) {
+	export function buildPlates(ctx) {
 	/** @type {string[]} */
 	const problems = [];
 	/** @type {string[]} */
@@ -334,6 +387,16 @@ export function buildPlates(ctx) {
 	} catch (e) {
 		problems.push(String(/** @type {any} */ (e)?.message ?? e));
 	}
+	/** @type {Record<string, import('../../src/lib/types').PlateTeaching>} */
+	let teaching = {};
+	try {
+		teaching = readTeaching();
+		if (!teaching || typeof teaching !== 'object' || Array.isArray(teaching)) throw new Error('plates teaching: expected a map of plate slugs');
+		for (const slug of Object.keys(teaching)) if (!ORDER.includes(slug)) problems.push(`plates teaching: unknown plate ${slug}`);
+	} catch (e) {
+		problems.push(String(/** @type {any} */ (e)?.message ?? e));
+		teaching = {};
+	}
 
 	/* the links' targets, folded once; a name may reach several cards or
 	   entries (a Tenderloin of beef and one of pork), and the kind decides */
@@ -343,14 +406,18 @@ export function buildPlates(ctx) {
 		const text = [c.term, ...(c.aliases ?? []), c.gist, c.why, c.note, c.origin].filter(Boolean).join(' ');
 		for (const n of [c.term, ...(c.aliases ?? [])]) {
 			const k = foldName(n);
-			(deckByName.get(k) ?? deckByName.set(k, []).get(k)).push({ id: c.id, section: c.section, text });
+			const matches = deckByName.get(k) ?? [];
+			matches.push({ id: c.id, section: c.section, text });
+			deckByName.set(k, matches);
 		}
 	}
 	/** @type {Map<string, Array<{ slug: string, category: string, text: string }>>} */
 	const lexByName = new Map();
 	for (const e of ctx.lexicon) {
 		const k = foldName(e.term);
-		(lexByName.get(k) ?? lexByName.set(k, []).get(k)).push({ slug: e.slug, category: e.category, text: `${e.term} ${e.definition ?? ''}` });
+		const matches = lexByName.get(k) ?? [];
+		matches.push({ slug: e.slug, category: e.category, text: `${e.term} ${e.definition ?? ''}` });
+		lexByName.set(k, matches);
 	}
 
 	const seen = new Set(ORDER);
@@ -358,6 +425,8 @@ export function buildPlates(ctx) {
 
 	const plates = [];
 	for (const slug of ORDER) {
+		const teachingProblems = checkTeaching(slug, teaching[slug]);
+		problems.push(...teachingProblems);
 		let text = '';
 		try {
 			text = readPlate(slug).text;
@@ -368,13 +437,13 @@ export function buildPlates(ctx) {
 		const r = checkPlate(slug, text, images);
 		problems.push(...r.problems);
 		notes.push(...r.notes);
-		if (!r.plate) continue;
+		if (!r.plate || teachingProblems.length) continue;
 
 		/** @type {Record<string, number>} */
 		const sectionHits = {};
 		/** @type {Record<string, number>} */
 		const categoryHits = {};
-		const may = LINKABLE[/** @type {keyof typeof LINKABLE} */ (r.plate.kind)];
+		const may = /** @type {{deck: string[], lexicon: string[]}} */ (LINKABLE[/** @type {keyof typeof LINKABLE} */ (r.plate.kind)]);
 		const animal = ANIMAL[/** @type {keyof typeof ANIMAL} */ (slug)];
 		/** @param {string} text */
 		const ownAnimal = (text) => {
@@ -403,6 +472,7 @@ export function buildPlates(ctx) {
 		}
 		plates.push({
 			...r.plate,
+			teaching: teaching[slug],
 			deckSections: Object.keys(sectionHits).filter((s) => sectionHits[s] >= SECTION_HITS),
 			lexiconCategories: Object.keys(categoryHits).filter((c) => categoryHits[c] >= SECTION_HITS)
 		});

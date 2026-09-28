@@ -24,7 +24,9 @@ export async function load() {
 			const level = levelOf.get(p.slug) ?? null;
 			return {
 				slug: p.slug,
-				title: p.title,
+				title: p.teaching.title,
+				intro: p.teaching.intro,
+				subjects: p.teaching.subjects.length,
 				kind: p.kind,
 				count: p.count,
 				image: { thumb: p.image.thumb, width: p.image.width, height: p.image.height },

@@ -760,10 +760,10 @@ export interface LevelsData {
 }
 
 /**
- * The Plates: twenty illustrated reference plates, each transcribed in full.
- * See tools/derive/plates.mjs for the authored shape and the gate. The image
- * is opened on demand and never precached; the transcription installs with
- * the app, so a plate reads, searches and quizzes without its picture.
+ * The Plates: twenty reviewed guides with their full original archives.
+ * See tools/derive/plates.mjs for the authored shapes and gates. Images load
+ * on demand; the reviewed lessons and original text install with the app.
+ * The quiz uses only the reviewed guide, including when pictures are offline.
  */
 export type PlateKind = 'cuts' | 'fish' | 'produce' | 'pantry' | 'board';
 
@@ -794,6 +794,27 @@ export interface PlateCorrection {
 	why: string;
 }
 
+/** Reviewed guide for the six numbered subjects in the current illustration. */
+export interface PlateSubject {
+	id: string;
+	name: string;
+	/** Identifying description used by the self-check; never an archival fact. */
+	summary: string;
+	distinction: string;
+	/** Art direction retained for review, not displayed as teaching copy. */
+	image: string;
+	facts: Array<[string, string]>;
+}
+
+export interface PlateTeaching {
+	title: string;
+	intro: string;
+	scope: string;
+	/** Reading order: top left/right, middle left/right, bottom left/right. */
+	subjects: PlateSubject[];
+	sources: Array<{ title: string; url: string }>;
+}
+
 export interface Plate {
 	slug: string;
 	title: string;
@@ -803,11 +824,13 @@ export interface Plate {
 	regionLine: string | null;
 	corners: string[];
 	image: { src: string; thumb: string; width: number; height: number };
+	teaching: PlateTeaching;
+	/** Original poster text retained as an archive, never used by the quiz. */
 	groups: PlateGroup[];
 	panels: Array<{ title: string; lines: string[] }>;
 	footer: string | null;
 	corrections: PlateCorrection[];
-	/** How many items the plate holds. */
+	/** How many items the original poster archive holds. */
 	count: number;
 	/** The deck sections and Lexicon categories it illustrates (two hits or more). */
 	deckSections: string[];
