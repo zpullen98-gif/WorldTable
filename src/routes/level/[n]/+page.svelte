@@ -21,6 +21,7 @@
 	import { onMount } from 'svelte';
 	import { bySlug, loadDeckIndex, loadLexicon, loadPalate, loadPlates, loadServiceTrack, loadStudy } from '$lib/data';
 	import { levels } from '$lib/stores/levels.svelte';
+	import { plateTitle } from '$lib/plates';
 	import { NEVER_GRADED, type SubsectionProgress } from '$lib/levels';
 	import type { DeckLevel, SubsectionKey } from '$lib/types';
 
@@ -48,7 +49,7 @@
 			for (const c of deck.cards) map[c.id] = c.term;
 			for (const m of track.modules) map[m.key] = m.title;
 			for (const f of palate.faults) map[f.slug] = f.label;
-			for (const p of plates.plates) map[p.slug] = p.title;
+			for (const p of plates.plates) map[p.slug] = plateTitle(p);
 			names = map;
 			const sem: Record<string, number> = {};
 			for (const s of study) for (const slug of s.recipes) sem[slug] = s.n;

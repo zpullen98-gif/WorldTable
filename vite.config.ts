@@ -246,6 +246,11 @@ export default defineConfig({
 						urlPattern: ({ url, sameOrigin }) => sameOrigin && /\/plates\/(?:archive\/)?[^/]+\.webp$/.test(url.pathname),
 						handler: 'CacheFirst',
 						options: {
+							/* No oot- prefix, deliberately, like the Codex's codexmaps-v1: the
+							   prefix exists so no wing's reaper deletes another's cache, and
+							   nothing on the origin reaps unprefixed names. Renaming would
+							   strand every device's downloaded plate art under the old name,
+							   since Workbox never deletes a cache it does not own. */
 							cacheName: 'plates-v1',
 							cacheableResponse: { statuses: [0, 200] },
 							expiration: { maxEntries: 80, maxAgeSeconds: 365 * 24 * 60 * 60 }

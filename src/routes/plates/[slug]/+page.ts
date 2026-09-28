@@ -8,6 +8,7 @@
  */
 import { error } from '@sveltejs/kit';
 import { loadLevels, loadPlates } from '$lib/data';
+import { plateTitle } from '$lib/plates';
 import type { DeckLevel } from '$lib/types';
 
 export const prerender = true;
@@ -34,7 +35,7 @@ export async function load({ params }) {
 		plate,
 		level,
 		levelName,
-		prev: prev ? { slug: prev.slug, title: prev.title } : null,
-		next: next ? { slug: next.slug, title: next.title } : null
+		prev: prev ? { slug: prev.slug, title: plateTitle(prev) } : null,
+		next: next ? { slug: next.slug, title: plateTitle(next) } : null
 	};
 }

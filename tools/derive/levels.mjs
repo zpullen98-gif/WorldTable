@@ -161,7 +161,7 @@ export function readPlacements(key) {
  *   deckIndex: { byLexicon: Record<string, string[]>, cards: Array<{ id: string, level: number }> },
  *   recipes: Array<{ slug: string, name: string, chapter: string, course: string, difficulty: number, minutes: number }>,
  *   techniqueStandards: Array<{ slug: string }>,
- *   plates: Array<{ slug: string, title: string, kind: string, kindTitle: string, count: number }>
+ *   plates: Array<{ slug: string, title: string, kind: string, kindTitle: string, count: number, teaching?: { title: string } }>
  * }} ctx
  */
 export function universe(ctx) {
@@ -244,7 +244,8 @@ export function universe(ctx) {
 		...sanitation.gaps.map((g) => ({ slug: `gap:${g.key}`, kind: 'gap', label: g.named[0].toUpperCase() + g.named.slice(1), anchor: 'safety', text: g.gap }))
 	];
 
-	const plateRows = plates.map((p) => ({ slug: p.slug, title: p.title, kind: p.kind, kindTitle: p.kindTitle, items: p.count }));
+	/* named by the folio's title, as every page names a plate now */
+	const plateRows = plates.map((p) => ({ slug: p.slug, title: p.teaching?.title ?? p.title, kind: p.kind, kindTitle: p.kindTitle, items: p.count }));
 
 	return { dishes, techniques: techniqueRows, lexicon: lexiconRows, service, palate: palateRows, safety, plates: plateRows };
 }

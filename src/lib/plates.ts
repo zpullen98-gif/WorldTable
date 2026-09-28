@@ -21,6 +21,24 @@ export interface PlateRef {
 	title: string;
 }
 
+/** A plate's name wherever it is named: the folio's title, since the folio
+ *  is what the plate's page now teaches; the poster title only as a fallback. */
+export function plateTitle(p: Plate): string {
+	return p.teaching?.title ?? p.title;
+}
+
+/**
+ * The deck card and Lexicon entry for one of a folio's six subjects: an
+ * unambiguous exact item of the same plate's transcription, with no sub-name.
+ * No fuzzy, cross-species or cross-plate matching. This is the one rule the
+ * folio page and the deck's "On the plate" door share, so a card's door only
+ * ever lands on a folio that teaches the card's subject.
+ */
+export function folioSubjectLinks(p: Plate, name: string): PlateItem['links'] | undefined {
+	const matches = p.groups.flatMap((g) => g.items).filter((it) => it.name === name && !it.sub);
+	return matches.length === 1 ? matches[0].links : undefined;
+}
+
 export interface PlateIndexes {
 	bySlug: ReadonlyMap<string, Plate>;
 	/** Deck section key -> the plates that illustrate it, in wall order. */
@@ -40,15 +58,17 @@ export function plateIndexes(data: PlatesData): PlateIndexes {
 	const byCard = new Map<string, PlateRef>();
 	const byLexicon = new Map<string, PlateRef>();
 	for (const p of data.plates) {
-		const ref = { slug: p.slug, title: p.title };
+		const ref = { slug: p.slug, title: plateTitle(p) };
 		bySlug.set(p.slug, p);
 		for (const s of p.deckSections) (bySection.get(s) ?? bySection.set(s, []).get(s)!).push(ref);
 		for (const c of p.lexiconCategories) (byCategory.get(c) ?? byCategory.set(c, []).get(c)!).push(ref);
-		for (const g of p.groups) {
-			for (const it of g.items) {
-				if (it.links?.deck && !byCard.has(it.links.deck)) byCard.set(it.links.deck, ref);
-				if (it.links?.lexicon && !byLexicon.has(it.links.lexicon)) byLexicon.set(it.links.lexicon, ref);
-			}
+		/* a card or a term points at a plate only when the folio teaches it as
+		   one of its six subjects; a term that survives only in the collapsed
+		   poster archive gets no door */
+		for (const s of p.teaching?.subjects ?? []) {
+			const links = folioSubjectLinks(p, s.name);
+			if (links?.deck && !byCard.has(links.deck)) byCard.set(links.deck, ref);
+			if (links?.lexicon && !byLexicon.has(links.lexicon)) byLexicon.set(links.lexicon, ref);
 		}
 	}
 	return { bySlug, bySection, byCategory, byCard, byLexicon };

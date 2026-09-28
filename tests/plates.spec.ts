@@ -22,8 +22,20 @@ const LEVELS = JSON.parse(readFileSync(join(HERE, '..', 'src', 'lib', 'data', 'l
 };
 
 const withCorrection = PLATES.plates.find((p) => p.corrections.length) ?? PLATES.plates[0];
+/* a card door exists only for a folio subject, linked the folio's way: an
+   unambiguous exact item of the same plate with no sub-name ($lib/plates
+   folioSubjectLinks); a card linked only from the poster archive gets none */
+const subjectCard = (p: Plate, name: string) => {
+	const m = p.groups.flatMap((g) => g.items).filter((it) => it.name === name && !it.sub);
+	return m.length === 1 ? m[0].links?.deck : undefined;
+};
+const onFolio = new Set(PLATES.plates.flatMap((p) => p.teaching.subjects.map((s) => subjectCard(p, s.name)).filter(Boolean)));
 const cardOnPlate = (() => {
-	for (const p of PLATES.plates) for (const g of p.groups) for (const it of g.items) if (it.links?.deck) return { plate: p, id: it.links.deck };
+	for (const p of PLATES.plates) for (const s of p.teaching.subjects) { const id = subjectCard(p, s.name); if (id) return { plate: p, id }; }
+	return null;
+})();
+const cardOnlyInArchive = (() => {
+	for (const p of PLATES.plates) for (const g of p.groups) for (const it of g.items) if (it.links?.deck && !onFolio.has(it.links.deck)) return it.links.deck;
 	return null;
 })();
 
@@ -208,4 +220,10 @@ test('the deck landing and a card link to the plates that draw them', async ({ p
 	test.skip(!cardOnPlate, 'no card on any plate');
 	await goto(page, `/service/deck/study?card=${cardOnPlate!.id}`);
 	await expect(page.locator('.further a', { hasText: 'On the plate' })).toHaveAttribute('href', new RegExp(`/plates/${cardOnPlate!.plate.slug}$`));
+	await expect(page.locator('.further a', { hasText: 'On the plate' })).toContainText(cardOnPlate!.plate.teaching.title);
+
+	test.skip(!cardOnlyInArchive, 'every linked card is on a folio');
+	await goto(page, `/service/deck/study?card=${cardOnlyInArchive}`);
+	await expect(page.locator('.further')).toBeVisible();
+	await expect(page.locator('.further a', { hasText: 'On the plate' })).toHaveCount(0);
 });

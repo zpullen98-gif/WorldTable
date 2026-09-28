@@ -3,17 +3,15 @@
 	import { tick } from 'svelte';
 	import PlateIllustration from '$lib/components/PlateIllustration.svelte';
 	import PlateArchive from '$lib/components/PlateArchive.svelte';
-	import { PLATE_QUIZ_LENGTH, plateHref, plateQuiz, type PlateQuestion } from '$lib/plates';
+	import { PLATE_QUIZ_LENGTH, folioSubjectLinks, plateHref, plateQuiz, type PlateQuestion } from '$lib/plates';
 
 	let { data } = $props();
 	const plate = $derived(data.plate);
 	const teaching = $derived(plate.teaching);
-	function subjectLinks(name: string) {
-		// Reuse only an unambiguous exact item in this same plate. No fuzzy,
-		// cross-species or cross-plate matching is introduced by the guide.
-		const matches = plate.groups.flatMap(group => group.items).filter(item => item.name === name && !item.sub);
-		return matches.length === 1 ? matches[0].links : undefined;
-	}
+	// Reuse only an unambiguous exact item in this same plate. No fuzzy,
+	// cross-species or cross-plate matching is introduced by the guide. The
+	// rule lives in $lib/plates so the deck's "On the plate" door shares it.
+	const subjectLinks = (name: string) => folioSubjectLinks(plate, name);
 	let questions = $state<PlateQuestion[]>([]);
 	let at = $state(0);
 	let picked = $state<string | null>(null);
