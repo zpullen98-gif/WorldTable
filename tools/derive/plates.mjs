@@ -84,11 +84,11 @@ export const PLATE_IMAGE_REVISION = 'v2';
 
 /** The kinds, and how the wall groups them, in wall order. */
 export const KINDS = [
-	{ key: 'cuts', title: 'The cuts', blurb: 'Where on the animal a cut comes from, and how that decides the cooking.' },
-	{ key: 'fish', title: 'The fish case', blurb: 'Three waters, the fish that come out of each, how they are cut and how they eat.' },
+	{ key: 'cuts', title: 'The cuts', blurb: 'Connect familiar portions to their place on the animal and the distinctions that matter in the kitchen.' },
+	{ key: 'fish', title: 'The fish case', blurb: 'Compare selected fish and shellfish through body shape, markings and market names.' },
 	{ key: 'produce', title: 'The larder by region', blurb: 'Five regional study selections: recognize the crop, its edible part and useful distinctions.' },
-	{ key: 'pantry', title: 'The pantry', blurb: 'The spice rack and the mushroom basket, with what each one tastes of and where it goes.' },
-	{ key: 'board', title: 'The board', blurb: 'The cheese board and the charcuterie board by name, country and character.' }
+	{ key: 'pantry', title: 'The pantry', blurb: 'Look closely at spice forms and culinary mushrooms, with clear distinctions between familiar names.' },
+	{ key: 'board', title: 'The board', blurb: 'Explore cheese through milk and maturation, and charcuterie through the cut and its preparation.' }
 ];
 
 /** The fact labels each kind may use, in the order the page prints them. */
