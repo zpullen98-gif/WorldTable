@@ -1398,6 +1398,297 @@
 				"notes": "I checked the whole section:\n\n- **Roster coverage:** all four unwritten rows (fd_0301 to fd_0304) have cards. The other 26 rows are written=true and are already in methods.json.\n- **Levels:** they match expansion.levels.json (3, 3, 3, 4).\n- **Hard rules:** no card uses a banned word, an em dash or an en dash. No card states what a dish holds or is free of. Full stops follow the rules.\n- **Prose length:** the four new cards total 679, 711, 757 and 727 characters, a mean of 718.5. Across all 29 method cards the mean is about 676, so the section is under the 720 ceiling.\n- **Trap lengths:** every trap is within 10 characters of its gist, and no gist is the longest option.\n- **Gists and guest lines:** all differ from their neighbours (Seared, Grilled, Pan-Roasted, Roasted, Caramelized, Cured, Steamed).\n- **Pronunciation:** À la Plancha has its required \"say\".\n- **Packet errors:** no new row carries a knownPacketError.\n\n**Missing return links.** Four cards already in this section, plus Dry-Aged in another section, do not point back to the new cards. The new cards list them as confusions, so the missing links sit on the older cards:\n\n- Grilled (fd_0032): confusedWithTerms [Smoked, Blackened] should add \"À la Plancha\".\n- Seared (fd_0039): [Blackened, Sautéed] should add \"À la Plancha\".\n- Caramelized (fd_0028): [Seared] should add \"Lacquered\".\n- Dry-Aged (fd_0294, Language) has no links at all. It should add \"Koji-Aged\" to confusedWithTerms, and its notThis would then be required.\n- Cured (fd_0030): \"Salt-Baked\" could go in seeAlsoTerms. It does not really belong in confusedWithTerms from that side.\n\n**Links for the operator:**\n\n- Miso (fd_0280, Pantry) should add \"Koji-Aged\" to seeAlsoTerms, because the deck has no Koji card.\n- Duck Breast (fd_0056, Meats) could add \"Lacquered\" to seeAlsoTerms.\n\n**Fact checks:** Aspergillus oryzae as the mold behind miso, soy sauce and sake is correct. So is the enzyme mechanism: protein breaks down into savory amino acids and starch into sugar. Koji-aged crusts do brown darker, and the coat is wiped off before cooking. \"Plancha\" does mean plate or sheet. Salt crusts bound with egg white are standard. Hakka salt-baked chicken is real, though traditionally the bird is wrapped in paper and buried in hot salt rather than sealed in a crust. That is acceptable for an origin label. The Koji-Cured alias is the one the expansion reason asked for."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0356",
+				"fd_0357",
+				"fd_0358",
+				"fd_0359"
+			],
+			"findings": [
+				{
+					"id": "fd_0358",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Cooked over white oak charcoal that burns hot and nearly smokeless",
+					"because": "The 'white' in the name belongs to the charcoal (shirozumi), which gets a pale coat when it is smothered in sand and ash. The wood is ubame oak (Quercus phillyraeoides), an evergreen oak in section Ilex. In English, 'white oak' means Quercus alba and its section, so the gist names the wrong tree.",
+					"fix": "Cooked over dense white charcoal, burning hot and nearly smokeless",
+					"lens": "fact",
+					"key": "methods-1-fact-1"
+				},
+				{
+					"id": "fd_0359",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Meat from animals fed on dried grass, for a sweeter, grassier taste",
+					"because": "A trap must not truly describe another card. Grass-fed cattle (fd_0295) are legally allowed hay, which is dried grass, and their meat is sold as tasting grassier, so this line is close to a true description of Grass-Fed. If the feed mix-up is a real confusion, Grass-Fed belongs in confusedWithTerms. The common real mistake is thinking the hay gets eaten.",
+					"fix": "says: Food coated in a crust of dried grass that is eaten with it / why: The hay only perfumes the food and is never eaten, even at the table.",
+					"lens": "fact",
+					"key": "methods-1-fact-2"
+				},
+				{
+					"id": "fd_0359",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Dry hay catches fast and burns hot and brief, so its smoke is lighter and sweeter than wood smoke, smelling of toasted grass.",
+					"because": "How fast hay burns explains why the smoke is light, but not why it is sweet. The sweet, hay-like smell comes from aromatics in the dried grass, chiefly coumarin. The 'so' gives the wrong cause for the sweetness.",
+					"fix": "Hay burns fast and its dried grass holds sweet aromatics, so its smoke is lighter and sweeter than wood smoke.",
+					"lens": "fact",
+					"key": "methods-1-fact-3"
+				},
+				{
+					"id": "fd_0359",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often lamb\", \"sometimes chicken\", \"sometimes egg\", \"sometimes cheese\"",
+					"because": "Hay-smoked butter and hay-infused cream (in ice cream, custard and crème fraîche) are among the most common uses on tasting menus. A guest with a milk allergy needs dairy flagged beyond cheese.",
+					"fix": "\"often lamb\", \"sometimes chicken\", \"sometimes egg\", \"sometimes butter or cream\", \"sometimes cheese\"",
+					"lens": "fact",
+					"key": "methods-1-fact-4"
+				},
+				{
+					"id": "fd_0358",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "wood and briquettes add smoke and flare",
+					"because": "Flare-ups come from fat dripping onto hot coals, and that happens over binchotan too: yakitori cooks fan and move skewers to control it. Wood and briquettes really do differ in their own smoke and odor (briquettes from their binders), not in flare.",
+					"fix": "wood and briquettes add smoke and odor",
+					"lens": "fact",
+					"key": "methods-1-fact-5"
+				},
+				{
+					"id": "fd_0357",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "sometimes mayonnaise",
+					"because": "Aburi rolls and nigiri are often topped with Japanese mayonnaise, which is made with egg yolk. A new hire reading the allergy list may not connect mayonnaise with egg, so egg should be named.",
+					"fix": "sometimes egg mayonnaise",
+					"lens": "fact",
+					"key": "methods-1-fact-6"
+				},
+				{
+					"id": "fd_0358",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "often soy",
+					"because": "Yakitori tare, the classic glaze on binchotan-grilled skewers, is soy simmered with mirin and often sake. Both are alcohol, and the brief asks for alcohol to be flagged.",
+					"fix": "often soy, often mirin",
+					"lens": "fact",
+					"key": "methods-1-fact-7"
+				},
+				{
+					"id": "fd_0356",
+					"field": "guest",
+					"severity": "style",
+					"claim": "Think the best sashimi, turned up a notch.",
+					"because": "This oversells and sounds like ad copy. A nervous new hire saying it sounds read-off-a-card, and 'turned up a notch' doesn't tell the guest what changes. The honest difference is that the fish is firmer and more savory than plain sashimi.",
+					"fix": "Like sashimi, firmer and more savory.",
+					"lens": "floor",
+					"key": "methods-1-floor-8"
+				},
+				{
+					"id": "fd_0358",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Cooked over white oak charcoal that burns hot and nearly smokeless",
+					"because": "'White' belongs to the charcoal (Japanese shirozumi, 'white charcoal'), not to the tree. Binchotan is made from ubame oak, not white oak. A server who learns 'white oak charcoal' will tell guests it is American white oak. The guest line already gets this right with 'Japanese white charcoal'.",
+					"fix": "Cooked over dense Japanese oak charcoal, hot and nearly smokeless",
+					"lens": "floor",
+					"key": "methods-1-floor-9"
+				},
+				{
+					"id": "fd_0359",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "grassy smoke on lamb, eggs or potatoes.",
+					"because": "The guest is asking about one dish, so a list of what the method can be used on sounds read off a card. It also misses the question this card was placed to answer: guests ask whether they eat the hay. Right now that answer is only in the note, which the server doesn't say aloud.",
+					"fix": "grassy smoke. You don't eat the hay.",
+					"lens": "floor",
+					"key": "methods-1-floor-10"
+				},
+				{
+					"id": "fd_0359",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "The hay is there for aroma and is not eaten, even when it comes to the table.",
+					"because": "Gist and guest line say the food is \"cooked\", but a minutes-long hay smoke often goes over raw or cold items (cured mackerel, trout, beef tartare, butter, cream). A server could tell a guest a hay-smoked raw item is cooked. The card should say that a brief hay smoke does not cook food.",
+					"fix": "A quick hay smoke does not cook: hay-smoked fish or tartare may be raw. The hay itself is not eaten.",
+					"lens": "safety",
+					"key": "methods-1-safety-11"
+				},
+				{
+					"id": "fd_0356",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"fish\", \"kelp\", \"often salt\", \"sometimes sake\"",
+					"because": "Kobujime is not fish-only. Toyama's best-known version uses white shrimp (shiro-ebi kobujime), and scallop is common too. A shellfish-allergic guest reading a list that names only fish could take it as a shellfish all-clear.",
+					"fix": "\"fish\", \"sometimes shrimp or scallop\", \"kelp\", \"often salt\", \"sometimes sake\"",
+					"lens": "safety",
+					"key": "methods-1-safety-12"
+				},
+				{
+					"id": "fd_0357",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"fish\", ... \"sometimes mayonnaise\"",
+					"because": "Scallop (hotate) aburi is a standard nigiri, so shellfish belongs on the list. The mayonnaise on aburi is usually Japanese egg-yolk mayo, and the bare word does not flag egg to a server. An egg-allergic guest needs egg named.",
+					"fix": "\"fish\", \"sometimes scallop\", \"sometimes wagyu beef\", \"often sushi rice\", \"sometimes soy\", \"sometimes egg-yolk mayonnaise\"",
+					"lens": "safety",
+					"key": "methods-1-safety-13"
+				},
+				{
+					"id": "fd_0358",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"often soy\"",
+					"because": "On binchotan yakitori and robata, \"soy\" stands for tare. Classic tare is soy reduced with mirin and often sake, so it holds alcohol. The list flags soy but not alcohol, and the line on this card is a tare dish.",
+					"fix": "\"often soy\", \"often mirin\"",
+					"lens": "safety",
+					"key": "methods-1-safety-14"
+				},
+				{
+					"key": "methods-critic-1",
+					"id": "fd_0357",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The trap 'Fish cooked through over charcoal, then glazed in a sweet soy sauce' is close to a true description of Binchotan-Grilled, whose card lists fish, soy and mirin and whose line is glazed with tare. A reader who has learned that card could take this option as describing a real method on the roster.",
+					"because": "The trap 'Fish cooked through over charcoal, then glazed in a sweet soy sauce' is close to a true description of Binchotan-Grilled, whose card lists fish, soy and mirin and whose line is glazed with tare. A reader who has learned that card could take this option as describing a real method on the roster.",
+					"fix": "Replace it with a mistake that is false of every card, for example says 'Raw fish slices splashed with sizzling oil so the edges just turn white' (68 chars, close to the gist's 65), why 'No hot oil is used. A flame touches only the top of the piece for seconds.'"
+				},
+				{
+					"key": "methods-critic-2",
+					"id": "fd_0356",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Gravlax (fd_0222, preparations, 'Salmon cured raw under salt, sugar and dill, then sliced thin') is the closest raw-fish cure on the roster, and guests mix up 'kombu-cured salmon' with gravlax. The pair is not linked.",
+					"because": "Gravlax (fd_0222, preparations, 'Salmon cured raw under salt, sugar and dill, then sliced thin') is the closest raw-fish cure on the roster, and guests mix up 'kombu-cured salmon' with gravlax. The pair is not linked.",
+					"fix": "Set confusedWithTerms to [\"Cured\", \"Koji-Aged\", \"Gravlax\"] and widen notThis to cover both neighbors in about 100 chars, for example 'Not gravlax, buried in salt and sugar for days, nor koji-aged meat. Kelp firms raw fish in hours.'"
+				},
+				{
+					"key": "methods-critic-3",
+					"id": "fd_0359",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The note's second sentence ('The hay is never eaten.') repeats the guest line ('you don't eat it') and the trap's why. At 761 chars this card is the longest of the four, against an aim of 660, and the guest line (157) is over the 150 aim.",
+					"because": "The note's second sentence ('The hay is never eaten.') repeats the guest line ('you don't eat it') and the trap's why. At 761 chars this card is the longest of the four, against an aim of 660, and the guest line (157) is over the 150 aim.",
+					"fix": "Cut the note to 'A quick hay smoke does not cook food, so hay-smoked fish or tartare may still be raw.' and drop 'old' or 'toasty,' from the guest line to bring it to 150 or under."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "methods-1-fact-1",
+					"action": "applied",
+					"reason": "Gist now reads 'Cooked over dense Japanese white charcoal, hot and nearly smokeless', so 'white' belongs to the charcoal, and the why now names ubame oak as the wood."
+				},
+				{
+					"finding": "methods-1-fact-2",
+					"action": "applied",
+					"reason": "Replaced the feed trap, which came close to describing Grass-Fed, with the real mistake that the hay is eaten: 'Food baked in a crust of dried grass, which is eaten with the dish' (66 chars, gist 64)."
+				},
+				{
+					"finding": "methods-1-fact-3",
+					"action": "applied",
+					"reason": "The why now gives two causes: fast burning makes the smoke lighter, and the sweetness comes from aromatics in the dried grass, chiefly coumarin."
+				},
+				{
+					"finding": "methods-1-fact-4",
+					"action": "applied",
+					"reason": "Added 'sometimes butter or cream' to madeWith so dairy is flagged beyond cheese."
+				},
+				{
+					"finding": "methods-1-fact-5",
+					"action": "applied",
+					"reason": "notThis now says wood and briquettes 'add their own smoke and odor'. Flare comes from dripping fat, which happens over binchotan too, so it no longer appears."
+				},
+				{
+					"finding": "methods-1-fact-6",
+					"action": "applied",
+					"reason": "Changed 'sometimes mayonnaise' to 'sometimes egg-yolk mayonnaise' so egg is named."
+				},
+				{
+					"finding": "methods-1-fact-7",
+					"action": "applied",
+					"reason": "Added 'often mirin' to madeWith so the alcohol in tare is flagged."
+				},
+				{
+					"finding": "methods-1-floor-8",
+					"action": "applied",
+					"reason": "Replaced the ad-copy close with the honest comparison: 'It eats like sashimi, just firmer and fuller.'"
+				},
+				{
+					"finding": "methods-1-floor-9",
+					"action": "applied",
+					"reason": "Same fix as methods-1-fact-1: the gist now says 'Japanese white charcoal', which matches the guest line, and the why names ubame oak."
+				},
+				{
+					"finding": "methods-1-floor-10",
+					"action": "applied",
+					"reason": "The guest line drops the list of foods and answers the real question: 'The hay is just for aroma, you don't eat it.'"
+				},
+				{
+					"finding": "methods-1-safety-11",
+					"action": "applied",
+					"reason": "The note now says a quick hay smoke does not cook food, so hay-smoked fish or tartare may still be raw. The gist and guest line say 'roasted in or held/smoked over' instead of 'cooked', and the gist was shortened to 64 so the trap stays the longer option."
+				},
+				{
+					"finding": "methods-1-safety-12",
+					"action": "applied",
+					"reason": "Added 'sometimes shrimp or scallop' to madeWith, since Toyama's shiro-ebi kobujime and scallop kobujime are standard."
+				},
+				{
+					"finding": "methods-1-safety-13",
+					"action": "applied",
+					"reason": "madeWith now reads fish, sometimes scallop, sometimes wagyu beef, often sushi rice, sometimes soy, sometimes egg-yolk mayonnaise, which flags both shellfish and egg."
+				},
+				{
+					"finding": "methods-1-safety-14",
+					"action": "applied",
+					"reason": "Same fix as methods-1-fact-7: 'often mirin' sits beside 'often soy', so the alcohol in tare is flagged."
+				},
+				{
+					"finding": "methods-critic-1",
+					"action": "applied",
+					"reason": "Replaced the charcoal-and-soy-glaze trap with 'Raw fish slices splashed with hot oil so the edges just turn white' (66 chars against the 65-char gist), which is false of every card on the roster (no new-style sashimi card exists), with why 'No hot oil is used. A flame touches only the top of the piece for seconds.'"
+				},
+				{
+					"finding": "methods-critic-2",
+					"action": "applied",
+					"reason": "Added Gravlax to confusedWithTerms (now Cured, Koji-Aged, Gravlax) and rewrote notThis to cover both neighbors in 97 chars; the card now totals 694."
+				},
+				{
+					"finding": "methods-critic-3",
+					"action": "applied",
+					"reason": "Cut the note's repeated 'The hay is never eaten.' and removed 'old' and 'toasty,' from the guest line (now 144 chars); the card falls from 761 to 724 chars."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0357",
+						"issue": "The trap 'Fish cooked through over charcoal, then glazed in a sweet soy sauce' is close to a true description of Binchotan-Grilled, whose card lists fish, soy and mirin and whose line is glazed with tare. A reader who has learned that card could take this option as describing a real method on the roster.",
+						"fix": "Replace it with a mistake that is false of every card, for example says 'Raw fish slices splashed with sizzling oil so the edges just turn white' (68 chars, close to the gist's 65), why 'No hot oil is used. A flame touches only the top of the piece for seconds.'"
+					},
+					{
+						"id": "fd_0356",
+						"issue": "Gravlax (fd_0222, preparations, 'Salmon cured raw under salt, sugar and dill, then sliced thin') is the closest raw-fish cure on the roster, and guests mix up 'kombu-cured salmon' with gravlax. The pair is not linked.",
+						"fix": "Set confusedWithTerms to [\"Cured\", \"Koji-Aged\", \"Gravlax\"] and widen notThis to cover both neighbors in about 100 chars, for example 'Not gravlax, buried in salt and sugar for days, nor koji-aged meat. Kelp firms raw fish in hours.'"
+					},
+					{
+						"id": "fd_0359",
+						"issue": "The note's second sentence ('The hay is never eaten.') repeats the guest line ('you don't eat it') and the trap's why. At 761 chars this card is the longest of the four, against an aim of 660, and the guest line (157) is over the 150 aim.",
+						"fix": "Cut the note to 'A quick hay smoke does not cook food, so hay-smoked fish or tartare may still be raw.' and drop 'old' or 'toasty,' from the guest line to bring it to 150 or under."
+					}
+				],
+				"notes": "I checked the whole section. All 34 roster rows have cards: 30 were already written in src/lib/data/floor-deck.json and the 4 new ones (fd_0356 to fd_0359) are the batch under review. Including them, the section averages 679 chars of prose per card, under the 720 ceiling. The new cards' totals are 684, 673, 711 and 761. The one knownPacketError in this section (fd_0042 Sous Vide, steam/boil) is already matched by a trap in floor-deck.traps.json. I found no verdict words, banned substrings, em or en dashes, or British spellings in the four new cards. Each new gist can be told apart from its neighbors' gists (Cured, Koji-Aged, Seared, Tataki, Grilled, Smoked) and from the other new cards'. Every trap is within about 10 chars of its card's gist. Each guest line answers \"what is that?\". Leaving out lexiconSlug was right in all four cases: kombu, the-kitchen-torch and smoked-fish-hot-vs-cold are essays on other subjects. The level-4 placements come from expansion.levels.json. Optional points, not blockers: (1) The links run one way only. Cured and Koji-Aged do not list Kombu-Cured, Seared and Tataki do not list Aburi, Grilled does not list Binchotan-Grilled, and Smoked does not list Hay-Smoked. If the app does not make confusedWith symmetric, add the back-links when the four are merged. (2) Aburi could take aliases 'Torched' and 'Flame-Seared': the expansion audit's own menu line prints 'Aburi Otoro Nigiri, Torched'. (3) The Hay-Smoked origin 'Old French farmhouse cooking' is narrow, because hay cooking is pan-European (French jambon au foin, Alpine and Italian hay cooking). 'Old European farmhouse cooking, revived by New Nordic chefs' is the safer claim. (4) The Binchotan-Grilled why says the food 'tastes of itself, not of smoke'. Fat dripping on the coals at a yakitori grill does give some smoke, so 'not of wood smoke' would be the more exact wording. (5) The facts I checked hold up: kobujime as a Toyama specialty, shime meaning to tighten, aburu meaning to sear or scorch, Bitchu-ya Chozaemon of Tanabe in the Genroku era (about 1700), white charcoal smothered in sand and ash, and coumarin as the source of hay's sweet smell."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

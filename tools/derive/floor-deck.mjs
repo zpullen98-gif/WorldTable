@@ -99,8 +99,12 @@ export const LEDGER_PATH = join(HERE, 'floor-deck.ledger.json');
  *  line, ~121 KB at the last section's marginal rate, and the owner asked for
  *  depth over trimming. This leaves ~16 KB for sections that run long and
  *  still keeps the deck's growth well inside what the cap raise bought, so the
- *  producer screens and the study routes are never squeezed by prose. */
-export const DECK_GZ_CEILING = 140_000;
+ *  producer screens and the study routes are never squeezed by prose.
+ *  RAISED to 165,000 on 2 Oct 2026 when the owner asked for the Chef level to
+ *  be expanded (it held 26 cards against Commis 110): 64 Chef cards took the
+ *  deck to 400 at an unchanged 391 B a card, 156 KB. The whole-app precache
+ *  cap (3.0 MB, the owner's) still binds and verify:build holds it. */
+export const DECK_GZ_CEILING = 165_000;
 
 /** Flip to true when the last planned card is written. From then on a stub, a
  *  missing packet term or a packet error with no trap fails the build.

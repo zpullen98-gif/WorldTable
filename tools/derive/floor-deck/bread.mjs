@@ -373,6 +373,78 @@ const cards = [
 			{ says: 'Soft, chewy cookie leavened to rise thick and cakey like a scone', why: 'It is a crisp, crumbly shortbread. Softness or chew means it was underbaked or has gone stale.' },
 			{ says: 'Thin crisp caramel wafer named for its sand-colored finish', why: 'The name means sandy for its crumbly texture, not its color, and it is a thick shortbread, not a wafer.' }
 		]
+	},
+	{
+		id: 'fd_0401',
+		term: 'Saint-Honoré',
+		level: 4,
+		say: 'san-toh-noh-RAY',
+		aliases: ['Gâteau Saint-Honoré'],
+		gist: 'Pastry base topped with caramel-dipped cream puffs and cream',
+		guest: "It's a classic French cake built on a crisp pastry base, ringed with little cream puffs dipped in caramel and piled with light vanilla cream.",
+		why: 'A disc of puff or short pastry is ringed with choux, then crowned with small cream puffs dipped in caramel that sets hard. The center is piped with Chiboust, pastry cream lightened with meringue, or today often whipped cream, so each bite is crisp, crackly and soft.',
+		madeWith: ['wheat flour', 'butter', 'egg', 'milk', 'sugar', 'cream', 'sometimes gelatin'],
+		note: 'The caramel sets glass-hard and cracks like candy. Humid air turns it sticky, so it is at its best the day it is made.',
+		origin: "Paris, 1840s, named for the patron saint of bakers and the shop's street",
+		seeAlso: ['fd_0243', 'fd_0406', 'fd_0265'],
+		line: 'Gâteau Saint-Honoré, vanilla Chiboust, burnt caramel',
+		traps: [
+			{ says: 'Tall cone of caramel-glued cream puffs stacked high for weddings', why: 'That is a croquembouche. This is a low round cake, a ring of puffs on a flat pastry base.' }
+		]
+	},
+	{
+		id: 'fd_0402',
+		term: 'Paris-Brest',
+		level: 4,
+		say: 'pah-ree-BREST',
+		gist: 'Eclair-dough ring split and filled with hazelnut praline cream',
+		guest: "It's a ring of crisp cream-puff pastry filled with rich hazelnut praline cream. It is shaped like a bicycle wheel, after a famous French bike race.",
+		why: 'Choux is piped in a ring, scattered with sliced almonds and baked hollow and crisp. It is split and piped full of praline mousseline, pastry cream beaten with butter and ground caramelized hazelnuts. Think of a giant eclair with a toasted nut buttercream.',
+		madeWith: ['wheat flour', 'butter', 'egg', 'milk', 'hazelnuts', 'almonds', 'sugar'],
+		origin: 'French, 1910, for the Paris-Brest-Paris bike race, shaped like a wheel',
+		recipe: 'paris-brest',
+		seeAlso: ['fd_0243', 'fd_0264', 'fd_0401'],
+		line: 'Paris-Brest, hazelnut praline cream, toasted almonds',
+		traps: [
+			{ says: 'Fried ring of choux dough glazed with honey, a breakfast pastry', why: 'It is baked, not fried, and served as a cream-filled dessert rather than a glazed doughnut.' }
+		]
+	},
+	{
+		id: 'fd_0403',
+		term: 'Feuilletine',
+		level: 4,
+		say: 'fuh-yuh-TEEN',
+		gist: 'Crushed flakes of crisp baked crepe, used as a crunch layer',
+		guest: "It's made of crushed, paper-thin crepe cookies folded into chocolate or praline. It gives the dessert a light, crackly crunch, like a fine wafer.",
+		why: 'A thin batter of flour, sugar, butter and milk is baked into lace-thin Breton crepes until brittle, then crushed into flakes. Chocolate or praline paste coats them, so the crunch survives inside a mousse cake where a plain wafer would go soggy.',
+		madeWith: ['wheat flour', 'sugar', 'butter', 'milk', 'often barley malt', 'sometimes chocolate', 'sometimes hazelnuts or almonds'],
+		origin: 'French, from feuillet, a thin leaf, for its papery flakes',
+		notThis: 'Not puff pastry, pâte feuilletée, which is folded dough baked in layers. These are loose flakes of crushed crepe.',
+		seeAlso: ['fd_0346', 'fd_0252'],
+		confusedWith: ['fd_0244'],
+		line: 'Milk chocolate crémeux, hazelnut feuilletine crunch',
+		traps: [
+			{ says: 'Toasted rice cereal bound with chocolate into a crunchy layer', why: 'Puffed rice is a home shortcut. This is crushed crepe, baked from a wheat flour batter.' }
+		]
+	},
+	{
+		id: 'fd_0404',
+		term: 'Kataifi',
+		level: 4,
+		say: 'kah-tah-EE-fee',
+		aliases: ['Kadaif', 'Kadayif', 'Shredded Phyllo'],
+		gist: 'Fine threads of wheat pastry wrapped around fillings and crisped',
+		guest: "It's a phyllo-style pastry spun into fine threads, wrapped around the filling and baked or fried golden. It shatters into a crisp, buttery nest.",
+		why: 'A thin flour and water batter is streamed through tiny holes onto a hot spinning plate, setting into hair-fine threads. Wrapped around a filling and brushed with butter, the strands crisp into a crunchy nest. In desserts it is soaked in syrup, like baklava.',
+		madeWith: ['wheat flour', 'often butter', 'sometimes cornstarch', 'sometimes pistachios', 'sometimes walnuts', 'sometimes almonds', 'sometimes sugar syrup'],
+		origin: 'Greek spelling of Turkish kadayif, from Ottoman and Arabic kitchens',
+		notThis: 'Not a rice or glass noodle, though it looks like one. It is a wheat pastry spun into threads.',
+		seeAlso: ['fd_0244', 'fd_0403'],
+		line: 'Kataifi-wrapped shrimp, lemon, Aleppo pepper honey',
+		traps: [
+			{ says: 'Thin rice noodles fried crisp and wrapped around seafood', why: 'It is a wheat pastry spun from flour batter, not a rice noodle, though it looks like one.' },
+			{ says: 'Thin sheets of pastry layered with nuts and soaked in honey syrup', why: 'That is baklava, built from flat sheets. These are loose threads, like shredded wheat.' }
+		]
 	}
 ];
 

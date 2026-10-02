@@ -571,6 +571,243 @@
 				"notes": "Checked against the whole on-disk section (tools/derive/floor-deck/pantry.mjs, 19 written cards) plus the three new ones: all 22 roster rows have a card, no duplicate gists or guest lines, no verdict words, dashes, banned substrings, guest punctuation or guest temperatures on the three new cards, all closing-stop rules met, gist/trap length parity within 10 chars and no gist the longest option. Section mean is 672 prose chars per card (ceiling 720); new cards run 711/707/718, so no condensing needed, though Yuzu Kosho's note ('very salty as well as hot', 'pea-sized dab') restates the why and guest and is the cheapest cut if the mean ever tightens; its origin also repeats the why's 'kosho means chili'. Banyuls' knownPacketError trap matches /east/i. Facts on the new cards hold: Gorria variety and AOC 2000 for Espelette; Kyushu dialect kosho = chili; black garlic at 60 to 70 C (140 to 158 F) with no microbial step. Pimentón at 771 prose is the section's longest card, still under the 900 ceiling. Bench term worth promoting later: Ponzu (used as a Yuzu Kosho trap and a real menu word with no card). Pairs to consider linking across sections: Kimchi with Fermented (already seeAlso, arguably confusedWith Pickled); Black Garlic with Roasted as confusedWithTerms since its notThis already argues the distinction."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0410",
+				"fd_0411",
+				"fd_0412",
+				"fd_0413",
+				"fd_0414"
+			],
+			"findings": [
+				{
+					"id": "fd_0411",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "It tastes warm, sweet and savory, never fiery.",
+					"because": "Many vadouvan recipes, including Pondicherry ones, include dried red chili or black pepper. It is usually mild, but heat varies by producer, so 'never' is an assurance a server cannot back.",
+					"fix": "It tastes warm, sweet and savory, and is seldom hot.",
+					"lens": "fact",
+					"key": "pantry-1-fact-1"
+				},
+				{
+					"id": "fd_0411",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"shallot\", \"onion\", \"garlic\", \"mustard seed\", \"fenugreek\", \"cumin\", \"often curry leaf\"",
+					"because": "The aromatics are fried in oil, and traditional vadagam-style blends use sesame oil (alongside castor or coconut oil) and often urad dal lentils. Sesame is a major allergen and the list never flags it. Curry leaf is not an allergy concern, so it is the slot to give up.",
+					"fix": "\"shallot\", \"onion\", \"garlic\", \"mustard seed\", \"fenugreek\", \"cumin\", \"oil, sometimes sesame\"",
+					"lens": "fact",
+					"key": "pantry-1-fact-2"
+				},
+				{
+					"id": "fd_0412",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"ume fruit\", \"salt\", \"often red shiso\"",
+					"because": "A common commercial style, katsuo-ume, is finished with bonito flakes (fish), and honey-ume (hachimitsu umeboshi) is common too. A guest with a fish allergy needs that flagged, and the list has room for it.",
+					"fix": "\"ume fruit\", \"salt\", \"often red shiso\", \"sometimes bonito flakes\", \"sometimes honey\"",
+					"lens": "fact",
+					"key": "pantry-1-fact-3"
+				},
+				{
+					"id": "fd_0412",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Too sour to eat fresh,",
+					"because": "Sourness is not the main reason. Raw ume are not eaten because the unripe fruit and its pit hold amygdalin, which makes them mildly toxic until they are salted or cooked. Better to leave the reason out than give a misleading one.",
+					"fix": "Inedible raw,",
+					"lens": "fact",
+					"key": "pantry-1-fact-4"
+				},
+				{
+					"id": "fd_0411",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It tastes warm, sweet and savory, never fiery.",
+					"because": "Vadouvan recipes and commercial blends often include dried chili or cayenne, and its madeWith list does not rule it out. A guest who avoids heat will hear 'never fiery' as a promise, and the server cannot keep it for every kitchen's blend.",
+					"fix": "It tastes warm, sweet and savory, mostly mild.",
+					"lens": "floor",
+					"key": "pantry-1-floor-5"
+				},
+				{
+					"id": "fd_0413",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "Kitchens now make their own from beef, squid or mushrooms, and a few drops add deep, savory seasoning.",
+					"because": "The list leaves out fish, so a nervous server will repeat it as 'this garum is not fish'. Many modern house garums are still made from fish, and the card's own note says to ask which base this one uses. 'Add deep, savory seasoning' also sounds read off a card.",
+					"fix": "Chefs now ferment their own from fish, meat or mushrooms, and a few drops give deep savory flavor.",
+					"lens": "floor",
+					"key": "pantry-1-floor-6"
+				},
+				{
+					"id": "fd_0410",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It makes the dish taste deeply savory and of the sea, not fishy.",
+					"because": "Colatura is anchovy liquid and plainly tastes of anchovy. Saying 'not fishy' oversells it, and a guest who dislikes fish may order on that promise and send the dish back.",
+					"fix": "It gives the dish a deep, savory taste of the sea.",
+					"lens": "floor",
+					"key": "pantry-1-floor-7"
+				},
+				{
+					"id": "fd_0411",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "It tastes warm, sweet and savory, never fiery.",
+					"because": "\"Never\" is an absolute assurance about heat that a guest who avoids chili could rely on. Many vadouvan blends, both house-made and bought, include red chili flakes or cayenne. The blend is usually mild, but a kitchen's version can carry some chili.",
+					"fix": "It tastes warm, sweet and savory, and usually mild.",
+					"lens": "safety",
+					"key": "pantry-1-safety-8"
+				},
+				{
+					"id": "fd_0413",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "Kitchens now make their own from beef, squid or mushrooms",
+					"because": "The first sentence calls it fish sauce, and the second then leaves fish out of the modern bases. A guest with a fish allergy can hear that as an assurance that this kitchen's garum is not made from fish. Many modern house garums are still fish-based, and the card's own madeWith opens with fish. This adds a few characters because it is a safety fact.",
+					"fix": "Kitchens now make their own from fish, squid, beef or mushrooms",
+					"lens": "safety",
+					"key": "pantry-1-safety-9"
+				},
+				{
+					"id": "fd_0414",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Cooks pierce them into stews or grind them",
+					"because": "The card leaves out a handling fact a server should be able to state. A whole black lime simmered in a stew stays a hard, hollow shell with bitter seeds inside. It is meant to be pressed for flavor and set aside, not bitten into whole. This is the same kind of fact as the umeboshi pit note. Adding the note makes the card longer, but it is a safety fact.",
+					"fix": "Add note: \"Cooked whole in a stew, it stays a hard shell with bitter seeds. Press it for flavor rather than biting into it.\"",
+					"lens": "safety",
+					"key": "pantry-1-safety-10"
+				},
+				{
+					"key": "pantry-critic-1",
+					"id": "fd_0410",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The Colatura gist is hard to tell apart from the live Fish Sauce gist (fd_0281). The Fish Sauce gist reads \"Amber liquid drained from anchovies salted and aged for months\", and that is a TRUE description of colatura. The Colatura gist reads \"Amber Italian anchovy liquid aged in barrels on the Amalfi coast\". The two share amber, anchovy, liquid and aged. Whichever card is being tested, the other gist sits among the options as a defensible right answer.",
+					"because": "The Colatura gist is hard to tell apart from the live Fish Sauce gist (fd_0281). The Fish Sauce gist reads \"Amber liquid drained from anchovies salted and aged for months\", and that is a TRUE description of colatura. The Colatura gist reads \"Amber Italian anchovy liquid aged in barrels on the Amalfi coast\". The two share amber, anchovy, liquid and aged. Whichever card is being tested, the other gist sits among the options as a defensible right answer.",
+					"fix": "Lead the Colatura gist on what Fish Sauce is not, and drop \"amber\". For example: \"Italian anchovy drippings from one Amalfi coast town, used by the drop\" (70 chars; the trap is 69). Also mark Southeast Asia on fd_0281's gist, for example: \"Southeast Asian amber sauce drained from anchovies salted for months\"."
+				},
+				{
+					"key": "pantry-critic-2",
+					"id": "fd_0413",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The first madeWith item, \"classically fish\", falls inside the fixed sentence \"Classically made with ...\". The card would then read \"Classically made with classically fish, salt, often koji...\".",
+					"because": "The first madeWith item, \"classically fish\", falls inside the fixed sentence \"Classically made with ...\". The card would then read \"Classically made with classically fish, salt, often koji...\".",
+					"fix": "Change \"classically fish\" to \"traditionally fish\" (or plain \"fish\"). Keep the other items."
+				},
+				{
+					"key": "pantry-critic-3",
+					"id": "fd_0412",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The alias \"Ume\" names something else. Ume is the raw fruit, and the card's own why calls it \"inedible raw\". An alias must be the SAME thing sold under another name, and a menu reading \"ume\" may mean the fruit, an ume dressing or ume vinegar, not the salt-dried pickle.",
+					"because": "The alias \"Ume\" names something else. Ume is the raw fruit, and the card's own why calls it \"inedible raw\". An alias must be the SAME thing sold under another name, and a menu reading \"ume\" may mean the fruit, an ume dressing or ume vinegar, not the salt-dried pickle.",
+					"fix": "Remove \"Ume\" from aliases and keep \"Pickled Plum\". You may add \"Ume Plum\" only if you have checked that it is the menu name for the pickle."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "pantry-1-fact-1",
+					"action": "applied",
+					"reason": "Guest line now ends 'It tastes warm, sweet and savory, and is usually mild.', dropping 'never fiery'; the trap's why was softened to 'usually mild' to match."
+				},
+				{
+					"finding": "pantry-1-fact-2",
+					"action": "applied",
+					"reason": "Replaced 'often curry leaf' with 'sometimes sesame oil' in madeWith (written as one noun phrase so the app's list sentence still reads cleanly); curry leaf stays in the why."
+				},
+				{
+					"finding": "pantry-1-fact-3",
+					"action": "applied",
+					"reason": "madeWith now adds 'sometimes bonito flakes' and 'sometimes honey' for katsuo-ume and honey-ume styles."
+				},
+				{
+					"finding": "pantry-1-fact-4",
+					"action": "applied",
+					"reason": "Why now opens that clause with 'Inedible raw,' in place of 'Too sour to eat fresh,'."
+				},
+				{
+					"finding": "pantry-1-floor-5",
+					"action": "applied",
+					"reason": "Same guest-line change as pantry-1-fact-1: 'never fiery' replaced by 'and is usually mild'."
+				},
+				{
+					"finding": "pantry-1-floor-6",
+					"action": "applied",
+					"reason": "Guest line now reads 'Kitchens now ferment their own from fish, squid, beef or mushrooms, and a few drops give deep savory flavor.', so fish is named and the stilted phrase is gone."
+				},
+				{
+					"finding": "pantry-1-floor-7",
+					"action": "applied",
+					"reason": "Second guest sentence is now 'It gives the dish a deep, savory taste of the sea.', so the card no longer says 'not fishy'."
+				},
+				{
+					"finding": "pantry-1-safety-8",
+					"action": "applied",
+					"reason": "Same guest-line change as pantry-1-fact-1; the card no longer makes any absolute claim about heat."
+				},
+				{
+					"finding": "pantry-1-safety-9",
+					"action": "applied",
+					"reason": "The modern bases now lead with fish ('from fish, squid, beef or mushrooms'), merged with the floor-6 wording."
+				},
+				{
+					"finding": "pantry-1-safety-10",
+					"action": "applied",
+					"reason": "Added the note 'Whole in a stew, it stays tough and holds bitter seeds. Press it for juice rather than eating it.' Wording is softened from 'hard shell' because long simmering does soften the skin somewhat. The card is now 765 characters."
+				},
+				{
+					"finding": "pantry-critic-1",
+					"action": "applied",
+					"reason": "Colatura's gist now reads \"Italian anchovy drippings from one Amalfi coast town, used by the drop\" (70 characters against a 69-character trap) and no longer says amber or aged. fd_0281 Fish Sauce was not in this repair set, so its gist still needs the Southeast Asia marker in its own pass."
+				},
+				{
+					"finding": "pantry-critic-2",
+					"action": "applied",
+					"reason": "Changed the first Garum madeWith item from \"classically fish\" to \"traditionally fish\" and kept the other items."
+				},
+				{
+					"finding": "pantry-critic-3",
+					"action": "applied",
+					"reason": "Removed \"Ume\" from the Umeboshi aliases and kept \"Pickled Plum\". I added no \"Ume Plum\" alias because I did not check that it is a menu name for the pickle."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0410",
+						"issue": "The Colatura gist is hard to tell apart from the live Fish Sauce gist (fd_0281). The Fish Sauce gist reads \"Amber liquid drained from anchovies salted and aged for months\", and that is a TRUE description of colatura. The Colatura gist reads \"Amber Italian anchovy liquid aged in barrels on the Amalfi coast\". The two share amber, anchovy, liquid and aged. Whichever card is being tested, the other gist sits among the options as a defensible right answer.",
+						"fix": "Lead the Colatura gist on what Fish Sauce is not, and drop \"amber\". For example: \"Italian anchovy drippings from one Amalfi coast town, used by the drop\" (70 chars; the trap is 69). Also mark Southeast Asia on fd_0281's gist, for example: \"Southeast Asian amber sauce drained from anchovies salted for months\"."
+					},
+					{
+						"id": "fd_0281",
+						"issue": "Fish Sauce has no confusedWithTerms and no notThis. The two new cards both name it as their confusion (Colatura and Garum each list Fish Sauce in confusedWithTerms), so the link only runs one way. It is the main confusable trio of this section.",
+						"fix": "On fd_0281 add confusedWithTerms [\"Colatura\", \"Garum\"] and a notThis, for example: \"Not colatura, the Amalfi coast's anchovy extract, or garum, the Roman idea. This is the Thai and Vietnamese staple.\""
+					},
+					{
+						"id": "fd_0413",
+						"issue": "The first madeWith item, \"classically fish\", falls inside the fixed sentence \"Classically made with ...\". The card would then read \"Classically made with classically fish, salt, often koji...\".",
+						"fix": "Change \"classically fish\" to \"traditionally fish\" (or plain \"fish\"). Keep the other items."
+					},
+					{
+						"id": "fd_0412",
+						"issue": "The alias \"Ume\" names something else. Ume is the raw fruit, and the card's own why calls it \"inedible raw\". An alias must be the SAME thing sold under another name, and a menu reading \"ume\" may mean the fruit, an ume dressing or ume vinegar, not the salt-dried pickle.",
+						"fix": "Remove \"Ume\" from aliases and keep \"Pickled Plum\". You may add \"Ume Plum\" only if you have checked that it is the menu name for the pickle."
+					}
+				],
+				"notes": "I checked completeness against the brief. The roster has 27 rows: 22 written live cards in src/lib/data/floor-deck.json plus the 5 new cards here, so every row has a card. I measured the section mean at about 677 characters of prose per card with the new five included, under the 720 ceiling. By card: Colatura 663, Vadouvan 665, Umeboshi 682, Garum 722, Black Lime 766, which is the longest and could lose its note if the mean ever gets tight. A scan of all five new cards (prose and traps) for the banned words, verdict language, em and en dashes and British spelling found nothing. The one knownPacketError in the roster (fd_0267 Banyuls, east) already has its matching trap in floor-deck.traps.json. All seeAlso and confusedWith terms exist in everyCard (Bottarga, Brown Butter, Koji-Aged, Fermented, Miso, Harissa, Preserved Lemon, Capers, Yuzu Kosho, Black Garlic). The traps stay within 10 characters of their gists, and no gist is the longest option.\n\nOptional links: fd_0351 Black Garlic could carry Black Lime back in confusedWithTerms, since only Black Lime names the pair. Black Lime has no seeAlsoTerms, and Preserved Lemon (salt-cured citrus) and Umeboshi are natural ones.\n\nLevel judgement for the operator: all five new rows came with no level and were placed at 4 (Chef). Umeboshi and Black Lime are arguably 3 (Sous Chef), the same tier as Yuzu Kosho, Black Garlic and Espelette in this section. That is a call, not a gate failure."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

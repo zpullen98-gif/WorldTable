@@ -1448,6 +1448,262 @@
 			],
 			"critic": null,
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0370",
+				"fd_0371",
+				"fd_0372",
+				"fd_0373"
+			],
+			"findings": [
+				{
+					"id": "fd_0373",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Not Ibérico, Spain's black acorn-fed pig.",
+					"because": "Ibérico is a breed, not a feed. Only the bellota grade is finished on acorns; cebo and cebo de campo Ibérico are grain-fed, and much Ibérico is a Duroc cross. If the card calls Ibérico simply the acorn-fed pig, servers will tell guests that every Ibérico dish is acorn-fed.",
+					"fix": "Not Ibérico, Spain's black pig.",
+					"lens": "fact",
+					"key": "cuts-1-fact-1"
+				},
+				{
+					"id": "fd_0373",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "with soft, heavily marbled fat",
+					"because": "Marbling is fat running through the lean, so the meat is marbled. The fat itself is not. As written, the line describes the fat the wrong way round.",
+					"fix": "Curly-coated Hungarian lard pig with soft fat and marbled meat",
+					"lens": "fact",
+					"key": "cuts-1-fact-2"
+				},
+				{
+					"id": "fd_0371",
+					"field": "aliases",
+					"severity": "unclear",
+					"claim": "Presa de Bellota",
+					"because": "De bellota is a grade within Ibérico: it means the pig was finished on acorns. It is not another name for the cut. Presa from cebo (grain-fed) pigs is sold as Presa Ibérica but must not be called de bellota, so listing the grade as an alias tells a server the two are the same.",
+					"fix": "Remove \"Presa de Bellota\" from aliases and keep \"Ibérico Presa\" (the line can still carry \"de bellota\").",
+					"lens": "fact",
+					"key": "cuts-1-fact-3"
+				},
+				{
+					"id": "fd_0371",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "Grilled to pink it eats like a marbled beef steak, dark red and sweet.",
+					"because": "Dark red describes the raw meat. Cooked as the card says, it is pink, so this sentence contradicts itself.",
+					"fix": "Grilled to pink it eats like a marbled beef steak, rich and sweet.",
+					"lens": "fact",
+					"key": "cuts-1-fact-4"
+				},
+				{
+					"id": "fd_0371",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's a prized cut of Spanish Ibérico pork, grilled pink like a beef steak. Deeply marbled, juicy and nutty, guests often compare it to a ribeye.",
+					"because": "It never says which cut it is, so it does not answer \"what is that?\" and could be read out for Secreto Ibérico, whose guest line is nearly the same (Spanish Ibérico pork, nutty, like a steak). \"Guests often compare it to\" sounds read off a card, and the second sentence is a dangling modifier a nervous server will trip on. The presa is the thick muscle at the shoulder end of the loin.",
+					"fix": "It's the thick, marbled shoulder-end cut of Spanish Ibérico pork, grilled pink like a steak. Juicy and nutty, it eats like a ribeye.",
+					"lens": "floor",
+					"key": "cuts-1-floor-5"
+				},
+				{
+					"id": "fd_0370",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "set on a crisp crouton",
+					"because": "To an American guest a crouton is a salad cube, so \"set on a crisp crouton\" paints the wrong picture. The classical crouton is a round of bread fried in butter.",
+					"fix": "set on fried bread",
+					"lens": "floor",
+					"key": "cuts-1-floor-6"
+				},
+				{
+					"id": "fd_0373",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "with soft, heavily marbled fat",
+					"because": "Marbling is fat running through the lean. The fat itself is not marbled. The breed has soft fat and marbled meat, and a server who learns \"marbled fat\" will repeat the muddle to guests.",
+					"fix": "Curly-coated Hungarian lard pig with marbled meat and soft fat",
+					"lens": "floor",
+					"key": "cuts-1-floor-7"
+				},
+				{
+					"id": "fd_0373",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "and blond, red or swallow-bellied.",
+					"because": "\"Swallow-bellied\" is breeders' jargon that a new hire cannot use or picture. That variety has a black back and a pale belly.",
+					"fix": "and blond, red or black-backed.",
+					"lens": "floor",
+					"key": "cuts-1-floor-8"
+				},
+				{
+					"id": "fd_0370",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "sometimes pork fat",
+					"because": "The card's own why says the rounds are \"often wrapped in a thin band of fat\". Classically that band is pork fatback or bacon. Listing pork as only \"sometimes\" understates it for a guest who avoids pork, and it contradicts the why.",
+					"fix": "often pork fat",
+					"lens": "safety",
+					"key": "cuts-1-safety-9"
+				},
+				{
+					"id": "fd_0371",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "Lean Spanish pork loin cut that has to be cooked all the way through",
+					"because": "The test marks this option false, and its why reads \"Spanish kitchens serve it pink\". Together they teach a server that the advice to cook pork through is a mistake, which a guest could take as an assurance about undercooked pork. The real falsehoods here are that the cut is lean and that it is loin. Make the doneness half wrong without turning food-safety advice into the wrong answer.",
+					"fix": "says: \"Lean Spanish pork loin cut, best braised slowly until it falls apart\"; why: \"This is one of the most marbled pork cuts, and it is grilled like a steak.\"",
+					"lens": "safety",
+					"key": "cuts-1-safety-10"
+				},
+				{
+					"key": "cuts-critic-1",
+					"id": "fd_0370",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The gist reads \"Small, neat round of beef filet...\". \"Beef Filet\" is a listed alias of Tenderloin (fd_0093), and this card is confusedWith Tenderloin. When Tenderloin is the term being tested and this gist appears as a wrong option, it carries Tenderloin's own name. A reader who knows that filet means tenderloin will pick it, so the option is ambiguous.",
+					"because": "The gist reads \"Small, neat round of beef filet...\". \"Beef Filet\" is a listed alias of Tenderloin (fd_0093), and this card is confusedWith Tenderloin. When Tenderloin is the term being tested and this gist appears as a wrong option, it carries Tenderloin's own name. A reader who knows that filet means tenderloin will pick it, so the option is ambiguous.",
+					"fix": "Keep any Tenderloin alias out of the gist. For example: \"Small round beef medallion, tied, seared and set on fried bread\" (63 chars, still longer than nothing and within about 6 of the 69-char trap)."
+				},
+				{
+					"key": "cuts-critic-2",
+					"id": "fd_0370",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The why opens almost word for word like Chateaubriand's (fd_0315) why. Tournedos: \"The tenderloin barely works, so it is the tenderest, mildest beef muscle.\" Chateaubriand: \"The tenderloin barely works, so it is the tenderest, mildest muscle on the steer.\" A reader studying the two related cards sees the same sentence twice, and nothing in it sets tournedos apart.",
+					"because": "The why opens almost word for word like Chateaubriand's (fd_0315) why. Tournedos: \"The tenderloin barely works, so it is the tenderest, mildest beef muscle.\" Chateaubriand: \"The tenderloin barely works, so it is the tenderest, mildest muscle on the steer.\" A reader studying the two related cards sees the same sentence twice, and nothing in it sets tournedos apart.",
+					"fix": "Open on what makes tournedos different. For example: \"Cut from the narrow end of the tenderloin, past the thick center that goes to chateaubriand, tournedos are small rounds, often wrapped in a thin band of fat and tied so they hold their shape, then seared and set on butter-fried bread that soaks up the sauce.\" Check that this stays within the 160 to 300 range."
+				},
+				{
+					"key": "cuts-critic-3",
+					"id": "fd_0372",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The gist reads \"Huge Tuscan T-bone, cut thick...\". \"T-Bone\" is part of the term of Porterhouse and T-Bone (fd_0096). When that card is tested and this gist appears as a wrong option, the option names the term, and it is literally true, because a fiorentina is a T-bone or porterhouse. The distractor can be defended as a correct answer.",
+					"because": "The gist reads \"Huge Tuscan T-bone, cut thick...\". \"T-Bone\" is part of the term of Porterhouse and T-Bone (fd_0096). When that card is tested and this gist appears as a wrong option, the option names the term, and it is literally true, because a fiorentina is a T-bone or porterhouse. The distractor can be defended as a correct answer.",
+					"fix": "Describe it without the other card's name. For example: \"Huge Tuscan steak on the bone, cut thick and wood-grilled rare to share\" (68 chars; the trap is 61, so the gap stays near 7). Or shorten to \"Huge Tuscan steak cut thick on the bone, grilled over wood, rare\" (63)."
+				},
+				{
+					"key": "cuts-critic-4",
+					"id": "fd_0373",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The notThis is entirely about Ibérico (\"Not Ibérico, Spain's black pig...\"). Mangalitsa and Ibérico really are mixed up: both are fat-heavy heritage pigs, and both are sold as cured ham and as premium chops. But the card does not link any Ibérico card, so the test never sets the two side by side.",
+					"because": "The notThis is entirely about Ibérico (\"Not Ibérico, Spain's black pig...\"). Mangalitsa and Ibérico really are mixed up: both are fat-heavy heritage pigs, and both are sold as cured ham and as premium chops. But the card does not link any Ibérico card, so the test never sets the two side by side.",
+					"fix": "Add confusedWithTerms: [\"Jamón Ibérico\"]. The current notThis already covers it. Optionally change \"blond, red or black-backed\" to \"blond, red or swallow-bellied\", the breed's recognised color varieties."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "cuts-1-fact-1",
+					"action": "applied",
+					"reason": "notThis now reads \"Not Ibérico, Spain's black pig.\" Ibérico is a breed, and only the bellota grade is finished on acorns."
+				},
+				{
+					"finding": "cuts-1-fact-2",
+					"action": "applied",
+					"reason": "The gist now reads \"Curly-coated Hungarian lard pig with marbled meat and soft fat\" (62 chars), so the marbling belongs to the meat and the softness to the fat."
+				},
+				{
+					"finding": "cuts-1-fact-3",
+					"action": "applied",
+					"reason": "Removed \"Presa de Bellota\" from aliases and kept \"Ibérico Presa\". The menu line still prints \"de bellota\" as the grade."
+				},
+				{
+					"finding": "cuts-1-fact-4",
+					"action": "applied",
+					"reason": "The why's last sentence now ends \"rich and sweet\" in place of \"dark red and sweet\", so it no longer clashes with the pink doneness."
+				},
+				{
+					"finding": "cuts-1-floor-5",
+					"action": "applied",
+					"reason": "The guest line now names the cut as the thick, marbled shoulder-end cut of Ibérico pork, which sets it apart from Secreto. It also drops \"guests often compare\" and the dangling modifier (132 chars)."
+				},
+				{
+					"finding": "cuts-1-floor-6",
+					"action": "applied",
+					"reason": "The guest line now says \"set on a round of fried bread\" in place of \"a crisp crouton\", which matches the classical butter-fried round."
+				},
+				{
+					"finding": "cuts-1-floor-7",
+					"action": "applied",
+					"reason": "Same change as cuts-1-fact-2: the gist now reads \"Curly-coated Hungarian lard pig with marbled meat and soft fat\", in this finding's word order."
+				},
+				{
+					"finding": "cuts-1-floor-8",
+					"action": "applied",
+					"reason": "Replaced \"swallow-bellied\" with \"black-backed\" in notThis, a picture a new hire can use for the dark-backed, pale-bellied variety."
+				},
+				{
+					"finding": "cuts-1-safety-9",
+					"action": "applied",
+					"reason": "Changed madeWith \"sometimes pork fat\" to \"often pork fat\" and moved it ahead of the \"sometimes\" items. Classical tournedos are barded with pork fatback, as the why says."
+				},
+				{
+					"finding": "cuts-1-safety-10",
+					"action": "applied",
+					"reason": "The trap now says \"Lean Spanish pork loin cut, best braised slowly until it falls apart\" (68 chars, gist 64), and its why is \"This is one of the most marbled pork cuts, and it is grilled like a steak.\" No cook-through advice is marked false now."
+				},
+				{
+					"finding": "cuts-critic-1",
+					"action": "applied",
+					"reason": "Gist is now \"Small round beef medallion, tied, seared and set on fried bread\" (63 chars), which carries no Tenderloin alias and stays shorter than the 69-char trap."
+				},
+				{
+					"finding": "cuts-critic-2",
+					"action": "applied",
+					"reason": "The why now opens on what sets tournedos apart: cut from the slimmer part of the tenderloin, past the center that goes to chateaubriand, then tied, seared and set on fried bread (255 chars)."
+				},
+				{
+					"finding": "cuts-critic-3",
+					"action": "applied",
+					"reason": "Gist is now \"Thick Tuscan steak on the bone, wood-grilled rare to share\" (58 chars), which drops the T-bone name and comes in under the 61-char trap, so the gist is no longer the longest option."
+				},
+				{
+					"finding": "cuts-critic-4",
+					"action": "applied",
+					"reason": "Added confusedWithTerms [\"Jamón Ibérico\"] and changed notThis to the breed's recognized colors: blond, red or swallow-bellied."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0370",
+						"issue": "The gist reads \"Small, neat round of beef filet...\". \"Beef Filet\" is a listed alias of Tenderloin (fd_0093), and this card is confusedWith Tenderloin. When Tenderloin is the term being tested and this gist appears as a wrong option, it carries Tenderloin's own name. A reader who knows that filet means tenderloin will pick it, so the option is ambiguous.",
+						"fix": "Keep any Tenderloin alias out of the gist. For example: \"Small round beef medallion, tied, seared and set on fried bread\" (63 chars, still longer than nothing and within about 6 of the 69-char trap)."
+					},
+					{
+						"id": "fd_0370",
+						"issue": "The why opens almost word for word like Chateaubriand's (fd_0315) why. Tournedos: \"The tenderloin barely works, so it is the tenderest, mildest beef muscle.\" Chateaubriand: \"The tenderloin barely works, so it is the tenderest, mildest muscle on the steer.\" A reader studying the two related cards sees the same sentence twice, and nothing in it sets tournedos apart.",
+						"fix": "Open on what makes tournedos different. For example: \"Cut from the narrow end of the tenderloin, past the thick center that goes to chateaubriand, tournedos are small rounds, often wrapped in a thin band of fat and tied so they hold their shape, then seared and set on butter-fried bread that soaks up the sauce.\" Check that this stays within the 160 to 300 range."
+					},
+					{
+						"id": "fd_0372",
+						"issue": "The gist reads \"Huge Tuscan T-bone, cut thick...\". \"T-Bone\" is part of the term of Porterhouse and T-Bone (fd_0096). When that card is tested and this gist appears as a wrong option, the option names the term, and it is literally true, because a fiorentina is a T-bone or porterhouse. The distractor can be defended as a correct answer.",
+						"fix": "Describe it without the other card's name. For example: \"Huge Tuscan steak on the bone, cut thick and wood-grilled rare to share\" (68 chars; the trap is 61, so the gap stays near 7). Or shorten to \"Huge Tuscan steak cut thick on the bone, grilled over wood, rare\" (63)."
+					},
+					{
+						"id": "fd_0316",
+						"issue": "The Secreto/Presa link only runs one way. Presa Ibérica (fd_0371) lists Secreto Ibérico in confusedWithTerms and explains the difference in notThis. Secreto Ibérico, the existing card, only lists Jamón Ibérico (fd_0082). These two Ibérico grilling cuts are the most-confused pair this batch adds, and both sides of the test should get it.",
+						"fix": "Add 'fd_0371' to fd_0316's confusedWith, giving ['fd_0082', 'fd_0371']. Widen its notThis to cover both within 150 chars. For example: \"Not jamón ibérico, the cured ham, nor presa, the thick loin-end steak. This is a thin fresh sheet for the grill.\""
+					},
+					{
+						"id": "fd_0373",
+						"issue": "The notThis is entirely about Ibérico (\"Not Ibérico, Spain's black pig...\"). Mangalitsa and Ibérico really are mixed up: both are fat-heavy heritage pigs, and both are sold as cured ham and as premium chops. But the card does not link any Ibérico card, so the test never sets the two side by side.",
+						"fix": "Add confusedWithTerms: [\"Jamón Ibérico\"]. The current notThis already covers it. Optionally change \"blond, red or black-backed\" to \"blond, red or swallow-bellied\", the breed's recognised color varieties."
+					}
+				],
+				"notes": "I checked these four new cards (fd_0370 to fd_0373) against the whole section. The other 26 roster rows are already written in tools/derive/floor-deck/cuts.mjs, so no roster row is missing a card. None of these four has a knownPacketError, so no trap is required. Every field is within its limit. I scanned for verdict words, banned substrings, en and em dashes, and British spellings and found none. The new cards total 678, 621, 738 and 696 characters of prose. The section mean is 688.8 over 30 cards, under the 720 ceiling. All four have a say, and both accented terms carry one. In every case the gist is no longer than its trap.\n\nOptional, not a gate failure: Bistecca (fd_0372) is 738 characters, above the 660 aim. Its note repeats the \"served rare\" in the guest line and the why. The cheapest trim is to cut the note to \\\"Many kitchens will not cook it past medium rare.\\\"\n\nThe Presa trap reads \\\"Lean Spanish pork loin cut, best braised slowly...\\\". It is very close to Secreto's first trap, \\\"Lean pork loin cut from a Spanish pig, sold as a thick roast\\\". That is legal, but the writer may want a different mistake on Presa.\n\nCross-section: Rossini (fd_0400, preparations) is still planned. Tournedos lists it under seeAlso, and its writer should link back to Tournedos (fd_0370). The level choices are defensible: Tournedos is at 4 while Chateaubriand is at 3, and either is acceptable."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

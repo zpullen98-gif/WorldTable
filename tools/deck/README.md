@@ -192,3 +192,5 @@ server had written that shoulder is "very tender", that heirloom means "organic,
 no GMOs", that sous vide is "steaming water". The refute pass is not optional,
 and a finding is never dropped because its card could not be found: it stops
 the merge instead.
+
+**The Chef expansion, 2 Oct 2026.** The owner found the top level far too light (Chef held 26 cards against Commis 110). One roster run asked for Level 4 words only (args `aims.levels: [4]` and a rule saying so; the roster workflow takes both), 64 words through the challenger, reconciler and critic (Osetra moved down to III), then one `author-all` run over fourteen sections (96 agents, none lost). Two existing cards were mended by hand where the new words made them wrong: Omakase's second trap described the new Kaiseki card truly (now kaiten sushi), and Chicken Oysters' trap named its own word. The deck is 400 written of 400, Chef 88, at an unchanged 391 B a card; `DECK_GZ_CEILING` moved to 165,000 with the test pin, inside the owner's 3.0 MB precache (2.887 MB). A run of more than about 40 KB of args is passed by writing a copy of the workflow with the args embedded and running it by path.

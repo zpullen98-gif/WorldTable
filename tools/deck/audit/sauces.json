@@ -949,6 +949,183 @@
 			],
 			"critic": null,
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0392",
+				"fd_0393",
+				"fd_0394",
+				"fd_0395",
+				"fd_0396"
+			],
+			"findings": [
+				{
+					"id": "fd_0392",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "Butter is already an emulsion of fat and water, and the extra water keeps it one, so it stays creamy, not oily.",
+					"because": "Solid butter is water droplets held in fat. Beurre monté is the reverse: fat droplets held in water, steadied by butter's milk proteins. The extra water does not keep butter's emulsion. It lets that emulsion flip into a new one that stays liquid without breaking. As written, a server would explain the mechanism backwards.",
+					"fix": "Butter is water held in fat. The extra water flips it to fat held in water, so it stays creamy, not oily.",
+					"lens": "fact",
+					"key": "sauces-1-fact-1"
+				},
+				{
+					"id": "fd_0396",
+					"field": "pairs",
+					"severity": "unclear",
+					"claim": "Chicken with morels, river trout, Comté cheese",
+					"because": "Comté is the classic partner for vin jaune the wine, not for the cream sauce. Nobody sauces Comté. On the plate, the Jura classics with the sauce are chicken with morels, trout and veal sweetbreads (ris de veau au vin jaune et morilles).",
+					"fix": "Chicken with morels, river trout, veal sweetbreads",
+					"lens": "fact",
+					"key": "sauces-1-fact-2"
+				},
+				{
+					"id": "fd_0392",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "The lobster is gently poached in it, which keeps it tender and sweet.",
+					"because": "A server repeats this card verbatim, and the why says kitchens also baste meat and glaze vegetables in it. On a halibut, beef or carrot plate, 'the lobster' answers a question the guest did not ask and suggests shellfish on a plate that may not have any.",
+					"fix": "Lobster or fish gently poached in it stays tender and sweet.",
+					"lens": "floor",
+					"key": "sauces-1-floor-3"
+				},
+				{
+					"id": "fd_0392",
+					"field": "line",
+					"severity": "unclear",
+					"claim": "Butter-poached Maine lobster, beurre monté, sweet corn",
+					"because": "Listed as a separate comma component, it reads like a sauce on the side, but on the plate it is the poaching medium. It also nearly repeats the Lobster card's line ('Butter-poached Maine lobster, sweet corn, tarragon'), so the two cards' menus look copied. Menus that name it put it in the cooking method.",
+					"fix": "Maine lobster poached in beurre monté, sweet corn",
+					"lens": "floor",
+					"key": "sauces-1-floor-4"
+				},
+				{
+					"id": "fd_0393",
+					"field": "say",
+					"severity": "style",
+					"claim": "mahl-TEHZ",
+					"because": "Every other -aise sauce in this deck ends in the American dining-room '-AYZ' (bair-NAYZ, bor-duh-LAYZ, HAH-luhn-dayz). A new hire who learned those will stumble over a different vowel here, and guests say mal-TAYZ.",
+					"fix": "mahl-TAYZ",
+					"lens": "floor",
+					"key": "sauces-1-floor-5"
+				},
+				{
+					"id": "fd_0394",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Deep and sweet, and lovely with fish too.",
+					"because": "Per the placement note, the question guests always ask is whether it is American, and this line does not answer it. The 'too' also makes it sound like the sauce is for a different dish when it is served on the monkfish or sole in front of them. 'Deep and sweet' already says the same thing as 'rich'.",
+					"fix": "Despite the name, it's a French classic.",
+					"lens": "floor",
+					"key": "sauces-1-floor-6"
+				},
+				{
+					"id": "fd_0395",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "with chopped black truffle and no cream or cheese.",
+					"because": "This reads as a dairy-free assurance, yet madeWith lists often butter and kitchens do finish the sauce with butter. The trap only needs to say it is not a cream sauce, without claiming anything is absent.",
+					"fix": "It is a brown veal and Madeira sauce with chopped black truffle, not a cream sauce.",
+					"lens": "safety",
+					"key": "sauces-1-safety-7"
+				},
+				{
+					"id": "fd_0393",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "(no note given)",
+					"because": "The sauce is hollandaise, and its yolks are only warmed gently, to roughly 60 to 70 C (140 to 160 F). They are never cooked firm, which makes this a lightly cooked egg dish, and guests ask about that. A server should be able to say so plainly. It is a missing handling fact, so it justifies adding a note.",
+					"fix": "The egg yolks are warmed only gently, never cooked firm, so this is a lightly cooked egg sauce.",
+					"lens": "safety",
+					"key": "sauces-1-safety-8"
+				},
+				{
+					"id": "fd_0396",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"vin jaune\"",
+					"because": "The app's sentence reads \"Classically made with vin jaune, cream...\", and a new hire checking for alcohol may not know that vin jaune is wine. The why also says some cooks add a raw splash at the end, so the alcohol flag has to be readable on its face.",
+					"fix": "vin jaune wine",
+					"lens": "safety",
+					"key": "sauces-1-safety-9"
+				},
+				{
+					"key": "sauces-critic-1",
+					"id": "fd_0395",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Sauce Périgueux and Bordelaise are a pair people really do mix up. Both are glossy brown sauces built on demi-glace with wine reduced in, and both go on filet. The card hints at the contrast in its why (\"a red wine steak sauce\") but never names Bordelaise or links to it. It also has no notThis, so a new hire gets no way to tell the two apart at the table.",
+					"because": "Sauce Périgueux and Bordelaise are a pair people really do mix up. Both are glossy brown sauces built on demi-glace with wine reduced in, and both go on filet. The card hints at the contrast in its why (\"a red wine steak sauce\") but never names Bordelaise or links to it. It also has no notThis, so a new hire gets no way to tell the two apart at the table.",
+					"fix": "Add confusedWithTerms [\"Bordelaise\"] and a notThis such as \"Not bordelaise: Madeira and chopped black truffle instead of red wine and bone marrow.\" (about 80 characters). That takes the card's prose from 626 to about 706, and the section mean stays well under 720. Optionally change the why's last sentence to \"Richer and more perfumed than bordelaise.\" Demi-Glace stays in seeAlsoTerms."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "sauces-1-fact-1",
+					"action": "applied",
+					"reason": "The why now says butter is water held in fat and the extra water flips it to fat held in water, which is the correct oil-in-water mechanism (why 242 chars)."
+				},
+				{
+					"finding": "sauces-1-fact-2",
+					"action": "applied",
+					"reason": "Pairs now reads 'Chicken with morels, river trout, veal sweetbreads', dropping Comte, which partners the wine and not the sauce."
+				},
+				{
+					"finding": "sauces-1-floor-3",
+					"action": "applied",
+					"reason": "The second guest sentence is now 'Lobster or fish gently poached in it stays tender and sweet.', so it no longer assumes lobster is on the plate."
+				},
+				{
+					"finding": "sauces-1-floor-4",
+					"action": "applied",
+					"reason": "Line is now 'Maine lobster poached in beurre monté, sweet corn', which names it as the cooking method and no longer echoes the Lobster card's line."
+				},
+				{
+					"finding": "sauces-1-floor-5",
+					"action": "applied",
+					"reason": "Say changed to mahl-TAYZ, to match the deck's American -AYZ endings (bair-NAYZ, HAH-luhn-dayz)."
+				},
+				{
+					"finding": "sauces-1-floor-6",
+					"action": "applied",
+					"reason": "The guest line's second sentence is now 'Despite the name, it's a French classic.', which answers the question guests ask and drops the misleading 'too'."
+				},
+				{
+					"finding": "sauces-1-safety-7",
+					"action": "applied",
+					"reason": "The trap why now reads 'It is a brown veal and Madeira sauce with chopped black truffle, not a cream sauce.' (83 chars), so it no longer reads as a no-dairy assurance."
+				},
+				{
+					"finding": "sauces-1-safety-8",
+					"action": "applied",
+					"reason": "Added a note in the same wording as the live Hollandaise card: 'The yolks are only gently warmed, never set firm. Ask the kitchen whether it uses pasteurized eggs.' The card total is now 776."
+				},
+				{
+					"finding": "sauces-1-safety-9",
+					"action": "applied",
+					"reason": "The madeWith item is now 'vin jaune wine', so the alcohol is plain in the 'Classically made with' sentence."
+				},
+				{
+					"finding": "sauces-critic-1",
+					"action": "applied",
+					"reason": "Added confusedWithTerms [\"Bordelaise\"], a notThis that separates them (red wine, shallot and bone marrow against Madeira and black truffle), and changed the why's last sentence to name bordelaise; Demi-Glace stays in seeAlsoTerms and the prose now totals about 712 characters."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0395",
+						"issue": "Sauce Périgueux and Bordelaise are a pair people really do mix up. Both are glossy brown sauces built on demi-glace with wine reduced in, and both go on filet. The card hints at the contrast in its why (\"a red wine steak sauce\") but never names Bordelaise or links to it. It also has no notThis, so a new hire gets no way to tell the two apart at the table.",
+						"fix": "Add confusedWithTerms [\"Bordelaise\"] and a notThis such as \"Not bordelaise: Madeira and chopped black truffle instead of red wine and bone marrow.\" (about 80 characters). That takes the card's prose from 626 to about 706, and the section mean stays well under 720. Optionally change the why's last sentence to \"Richer and more perfumed than bordelaise.\" Demi-Glace stays in seeAlsoTerms."
+					}
+				],
+				"notes": "What I checked: all 30 roster rows are covered. fd_0195 to fd_0336 are already written in src/lib/data/floor-deck.json, and the 5 new cards are fd_0392 to fd_0396. I measured the new cards with a script. The prose mean of the 5 new cards is 695 and the mean of all 30 is 674, so both are under 720. Every field is inside its band. Every trap is within 10 characters of its gist and no gist is the longest option. No banned words, verdict words, en dashes or em dashes. No gist or trap uses a mayNotAppearInGistOrTraps word. Every confusedWithTerms and seeAlsoTerms entry exists in everyCard. No new gist or guest line is hard to tell from another card's, including Hollandaise, Béarnaise, Beurre Blanc and Clarified Butter. No knownPacketError applies to these five cards; the only one is Jus, which is already written. All five have a say, as their accented letters or French words require. Leaving out lexiconSlug is correct on all five: the candidates are Monterey Jack, fish fumet and fish sauce, none of them the same subject. The recipe slug on Beurre Monté is valid. I checked the facts and they hold: vin jaune has at least 60 months in barrel under yeast; beurre monté breaks above about 88 C (190 F); the américaine origin is hedged with \"likely\"; armoricaine is a variant name for the same sauce; and Tournedos Rossini is classically served with Périgueux.\n\nPairs that should be linked from the cards already written (one-way links today):\n- Hollandaise (fd_0197) should add Sauce Maltaise to its seeAlso or confusedWith.\n- Beurre Blanc (fd_0205) should add Beurre Monté to its confusedWith, since Beurre Monté already lists Beurre Blanc.\n- Optionally, Clarified Butter (fd_0160) could list Beurre Monté under seeAlso.\n\nSmall points, not rule breaks:\n- The Maltaise note is word for word the Hollandaise note. That is allowed, but the operator may want it reworded or dropped. Maltaise is the longest new card at 776 characters, so dropping it would save 99 characters.\n- The author placed all five at level 4 (the brief has no level row for them). Beurre Monté could fairly sit at level 3 next to Beurre Blanc, since it shows up often on fine-dining lobster menus. That is the owner's call.\n- Rossini (fd_0400, preparations) is in everyCard but not yet written in floor-deck.json. The seeAlso link will only resolve once that card lands."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

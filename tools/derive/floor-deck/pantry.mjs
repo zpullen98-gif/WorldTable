@@ -404,6 +404,94 @@ const cards = [
 			{ says: 'Cloves fermented by bacteria for weeks until sour and pungent', why: 'No microbe is involved: gentle heat and humidity do the work, and the result is sweet, not sour.' },
 			{ says: 'Cloves charred over a flame until the skins blacken and turn bitter', why: 'It is never burnt. Weeks of low warmth turn it black slowly, and the flavor is sweet and mellow.' }
 		]
+	},
+	{
+		id: 'fd_0410',
+		term: 'Colatura',
+		level: 4,
+		say: 'koh-lah-TOO-rah',
+		aliases: ['Colatura di Alici'],
+		gist: 'Italian anchovy drippings from one Amalfi coast town, used by the drop',
+		guest: "It's an amber anchovy extract from the Amalfi coast, used a few drops at a time. It gives the dish a deep, savory taste of the sea.",
+		why: 'Spring anchovies from Cetara are layered with salt in wooden barrels under a weight for months. The liquid they release is collected, poured back through the fish and drained from a hole in the barrel. It is kin to Thai fish sauce, but cleaner and rounder.',
+		madeWith: ['anchovy', 'salt'],
+		origin: 'Cetara, Amalfi coast; Italian for what is strained, from colare',
+		notThis: "Not Southeast Asian fish sauce, though close kin. This is one Italian town's anchovy extract.",
+		seeAlso: ['fd_0126'],
+		confusedWith: ['fd_0281', 'fd_0413'],
+		line: 'Spaghetti, colatura di alici, garlic, chili, breadcrumbs',
+		traps: [
+			{ says: 'Thick Italian paste of salted anchovies pounded smooth with olive oil', why: 'It is a clear liquid that drips from salted anchovies, not a paste.' }
+		]
+	},
+	{
+		id: 'fd_0411',
+		term: 'Vadouvan',
+		level: 4,
+		say: 'VAH-doo-vahn',
+		gist: 'French-Indian curry spice blend built on browned, dried shallot',
+		guest: 'Vadouvan is a French take on Indian curry spices, cooked with shallots and garlic, then dried. It tastes warm, sweet and savory, and is usually mild.',
+		why: 'It grew from vadagam, sun-dried balls of onion, garlic and spice from south India, and the French version leans on shallot. The aromatics are browned slowly with mustard seed, cumin, fenugreek and curry leaf, then dried, so it tastes sweeter and rounder than curry powder.',
+		madeWith: ['shallot', 'onion', 'garlic', 'mustard seed', 'fenugreek', 'cumin', 'sometimes sesame oil'],
+		origin: 'Pondicherry, once French India; from Tamil vadagam, sun-dried spice balls',
+		pairs: 'Carrots, cauliflower, scallops, lamb, brown butter, yogurt',
+		seeAlso: ['fd_0282', 'fd_0161'],
+		line: 'Roasted carrots, vadouvan butter, yogurt, cilantro',
+		traps: [
+			{ says: 'Fiery ground dried red chili from southern India, prized for its heat', why: 'It is a sweet, usually mild blend built on cooked shallot and garlic, not a chili.' }
+		]
+	},
+	{
+		id: 'fd_0412',
+		term: 'Umeboshi',
+		level: 4,
+		say: 'oo-meh-BOH-shee',
+		aliases: ['Pickled Plum'],
+		gist: 'Japanese stone fruit salt-cured until wrinkled, sour and salty',
+		guest: 'Umeboshi is a Japanese pickled plum, a cousin of the apricot, cured in salt. It is startlingly sour and salty, a bright jolt beside rice or fish.',
+		why: 'Ume are picked in early summer, packed in salt for weeks under a weight, then dried in the sun. Red shiso leaves are often added and turn them pink. Inedible raw, the fruit ends up sharp as lemon and salty as an olive, used sparingly like a caper.',
+		madeWith: ['ume fruit', 'salt', 'often red shiso', 'sometimes bonito flakes', 'sometimes honey'],
+		note: 'A whole one holds a hard pit. Often the flesh is puréed instead, so check whether it comes whole.',
+		origin: 'Japan; ume, the fruit, plus boshi, dried',
+		pairs: 'Rice, onigiri, cucumber, crudo, grilled chicken, shiso',
+		seeAlso: ['fd_0277', 'fd_0350', 'fd_0278'],
+		line: 'Tuna crudo, umeboshi, cucumber, shiso',
+		traps: [
+			{ says: 'Pink pickled ginger slices served beside sushi to clear the palate', why: 'That is gari. This is a salted, sun-dried fruit, far more sour and salty.' }
+		]
+	},
+	{
+		id: 'fd_0413',
+		term: 'Garum',
+		level: 4,
+		say: 'GAH-ruhm',
+		gist: 'Roman fish seasoning fermented in salt, revived in modern kitchens',
+		guest: 'Garum was the fish sauce of ancient Rome. Kitchens now ferment their own from fish, squid, beef or mushrooms, and a few drops give deep savory flavor.',
+		why: "Romans left fish and salt in the sun for months until the fish's own enzymes broke it into liquid. Modern versions, made famous by Noma, add koji, the mold behind miso and soy sauce, and are kept warm for weeks, so almost any protein becomes a savory sauce.",
+		madeWith: ['traditionally fish', 'salt', 'often koji', 'sometimes beef', 'sometimes squid', 'sometimes mushroom', 'sometimes barley'],
+		note: 'The name no longer says what it is made from. Ask the kitchen which base this one uses.',
+		notThis: "Not colatura, one town's anchovy extract. Garum is the Roman idea, and a modern one may be built on meat or mushroom.",
+		seeAlso: ['fd_0304', 'fd_0280', 'fd_0046'],
+		confusedWith: ['fd_0410', 'fd_0281'],
+		line: 'Dry-aged beef tartare, beef garum, rye crisps'
+	},
+	{
+		id: 'fd_0414',
+		term: 'Black Lime',
+		level: 4,
+		aliases: ['Loomi', 'Dried Lime', 'Omani Lime'],
+		gist: 'Whole small citrus boiled in brine and sun-dried until dark and sour',
+		guest: "It's a whole lime dried in the sun until it turns black. It tastes sour, earthy and a little smoky, and it lifts stews, lamb and rice.",
+		why: 'Limes are boiled briefly in salt water, then left in the sun for weeks until hard, hollow and dark. Drying concentrates the sourness and adds a musky, faintly smoky, fermented edge. Cooks pierce them into stews or grind them, like a darker, earthier sumac.',
+		madeWith: ['lime', 'salt'],
+		note: 'Whole in a stew, it stays tough and holds bitter seeds. Press it for juice rather than eating it.',
+		origin: 'Oman and the Persian Gulf; loomi in Arabic, limoo amani in Persian',
+		notThis: 'Not black garlic, which is aged slowly until sweet. This is dried citrus fruit, and it stays sour.',
+		confusedWith: ['fd_0351'],
+		line: 'Grilled lamb shoulder, black lime, saffron rice',
+		traps: [
+			{ says: 'Unripe green fruit charred over hot coals, then squeezed over grilled meat', why: 'It is never charred. It is brined and dried in the sun until hard and black.' }
+		]
 	}
 ];
 

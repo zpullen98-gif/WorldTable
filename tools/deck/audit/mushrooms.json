@@ -959,6 +959,168 @@
 				"notes": "I checked the whole section of 20 cards: 16 live and 4 new (fd_0321 to fd_0324). Every roster row has a card. No gist or guest line collides with another. None of the four new rows carries a knownPacketError. I found no banned words, verdict language or en/em dashes in the new cards. Traps stay within 10 characters of their gist, and the gist is never the longest option (White Truffle 64 against 67, Summer Truffle 60 against 61). Every madeWith list is under 140 characters joined. The section mean with the four new cards is about 661 characters of prose per card, well under the 720 ceiling. Each new card's total is 663 to 702.\n\nCross-links for the operator to consider, on existing cards this pass does not own:\n(1) fd_0152 Lion's Mane has no confusedWith and no notThis. If fd_0324 keeps Lion's Mane in confusedWithTerms, Lion's Mane should link back to Hedgehog Mushroom, with a notThis such as \"Not hedgehog mushroom, an ordinary cap with spines beneath. This is a shaggy white ball with no cap.\"\n(2) fd_0148 Truffle Oil links to fd_0147 Truffle only. Its why names white truffle as the compound's source, so adding White Truffle (fd_0321) to its confusedWith would make the link go both ways.\n(3) If fd_0324 takes Chanterelle as a confusion, fd_0141 Chanterelle (confusedWith currently empty) could link back to Hedgehog Mushroom.\n(4) Neither fd_0147 Truffle nor any other card is specifically the winter black Perigord truffle, yet fd_0323's notThis leans on it. If the deck grows, \"Black Truffle\" (Perigord) would be worth promoting from the bench. The lexicon already has a black-truffle essay."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0379",
+				"fd_0380",
+				"fd_0381",
+				"fd_0382",
+				"fd_0383"
+			],
+			"findings": [
+				{
+					"id": "fd_0383",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "Drying concentrates sotolon, the same aroma found in fenugreek",
+					"because": "Fresh candy caps hold very little sotolon. Their fresh aroma compound is quabalactone III, and drying breaks it down into sotolon. That is why a fresh one smells faint and a dried one smells strongly of maple. Drying makes the sotolon; it does not concentrate it.",
+					"fix": "Drying creates sotolon, the same aroma found in fenugreek",
+					"lens": "fact",
+					"key": "mushrooms-1-fact-1"
+				},
+				{
+					"id": "fd_0383",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"egg yolk\"",
+					"because": "Egg yolk is listed with no qualifier, which tells the reader every candy cap dessert has it. A classic panna cotta, the dish on this card's own line, is cream set with gelatin and has no egg. Ice creams and custards often do use yolk. The qualifier matters because egg is a flag a guest acts on.",
+					"fix": "\"often egg yolk\"",
+					"lens": "fact",
+					"key": "mushrooms-1-fact-2"
+				},
+				{
+					"id": "fd_0381",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's a wild mushroom another fungus has turned bright red-orange, like a cooked shell.",
+					"because": "The guest asked about a dish with 'lobster' in its name. This line never ties the name to lobster: 'a cooked shell' leaves out what kind of shell. The object-first clause 'a wild mushroom another fungus has turned' is also hard to say aloud, and a nervous new hire will trip on it.",
+					"fix": "It's a wild mushroom a second fungus turns red-orange, like a cooked lobster.",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-3"
+				},
+				{
+					"id": "fd_0383",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Pastry chefs steep it into ice cream and custard.",
+					"because": "This is a kitchen fact. It does not tell the guest what the dessert in front of them tastes like. A guest who hears 'mushroom' on a dessert menu mainly wants to know it tastes of maple and burnt sugar, not of mushroom, and this line leaves that unanswered.",
+					"fix": "In dessert it tastes of maple and burnt sugar, not mushroom.",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-4"
+				},
+				{
+					"id": "fd_0382",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "(no say given)",
+					"because": "The term includes 'chanterelle', and the deck already gives the Chanterelle card (fd_0141) the respelling shan-tuh-REL because new hires hesitate over that word. The same hesitation applies here, so this card needs a respelling too.",
+					"fix": "YEL-oh-foot shan-tuh-REL",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-5"
+				},
+				{
+					"id": "fd_0382",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "It's tender and earthy, with a gentle peppery note.",
+					"because": "'Gentle peppery' repeats the golden Chanterelle card's guest line almost word for word ('a gentle, peppery flavor'). This card's own why says the yellowfoot is 'earthier and milder than the golden one'. So the line blurs exactly the difference the server is meant to explain, and it gives a flavor claim the why does not back up.",
+					"fix": "It's tender and earthy, milder than the golden one.",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-6"
+				},
+				{
+					"id": "fd_0379",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "like the famous fall one",
+					"because": "A guest cannot tell which truffle 'the famous fall one' means, so the comparison does not land and leads to a follow-up question. The guest line may use names, and 'Alba' is the word guests know.",
+					"fix": "like the Alba truffle",
+					"lens": "floor",
+					"key": "mushrooms-1-floor-7"
+				},
+				{
+					"id": "fd_0381",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "Not seafood. The name is for the color and smell only, so for a shellfish question ask the kitchen about the dish.",
+					"because": "A server will repeat \"Not seafood\" on its own to a guest who asks about shellfish. Said that way, it is a blanket assurance about the plate, and lobster mushrooms are often cooked in shellfish stock or served beside real lobster. The fact needs to stay attached to the mushroom only, and the referral to the kitchen needs to stay in the same breath.",
+					"fix": "The mushroom is not lobster, just named for its color and smell. For a shellfish question, ask the kitchen about the dish.",
+					"lens": "safety",
+					"key": "mushrooms-1-safety-8"
+				},
+				{
+					"key": "mushrooms-critic-1",
+					"id": "fd_0381",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "There is a real confusion with no link. Lion's Mane (fd_0152, this section) is the mushroom sold as a lobster or crab stand-in: its guest line says it sears up \"a lot like crab or lobster\". A guest who asks whether \"the lobster mushroom\" is the one that eats like lobster is mixing up these two cards, and neither card mentions the other. The current notThis also says the mushroom is \"named for its color and smell\", but the card's own origin gives the name as coming from the color alone.",
+					"because": "There is a real confusion with no link. Lion's Mane (fd_0152, this section) is the mushroom sold as a lobster or crab stand-in: its guest line says it sears up \"a lot like crab or lobster\". A guest who asks whether \"the lobster mushroom\" is the one that eats like lobster is mixing up these two cards, and neither card mentions the other. The current notThis also says the mushroom is \"named for its color and smell\", but the card's own origin gives the name as coming from the color alone.",
+					"fix": "Add \"Lion's Mane\" to confusedWithTerms, giving [\"Lobster\", \"Lion's Mane\"]. Rewrite notThis so it covers both cards and agrees with origin, in about 120 characters, e.g. \"Not lobster, just named for its color, nor lion's mane, the white mushroom cooked like crab. Ask the kitchen about shellfish.\""
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "mushrooms-1-fact-1",
+					"action": "applied",
+					"reason": "The why now says drying creates sotolon instead of concentrating it, because the fresh precursor (quabalactone III) breaks down into sotolon as the mushroom dries."
+				},
+				{
+					"finding": "mushrooms-1-fact-2",
+					"action": "applied",
+					"reason": "Changed madeWith \"egg yolk\" to \"often egg yolk\", since a classic panna cotta is set with gelatin and has no yolk."
+				},
+				{
+					"finding": "mushrooms-1-floor-3",
+					"action": "applied",
+					"reason": "The guest line now reads \"a wild mushroom that a second fungus turns bright red-orange, like a cooked lobster shell\", which ties the name to lobster and is easier to say aloud."
+				},
+				{
+					"finding": "mushrooms-1-floor-4",
+					"action": "applied",
+					"reason": "Replaced the kitchen sentence in the guest line with \"In dessert it tastes of maple and burnt sugar, not of mushroom.\""
+				},
+				{
+					"finding": "mushrooms-1-floor-5",
+					"action": "applied",
+					"reason": "Added the say respelling \"YEL-oh-foot shan-tuh-REL\", which matches the Chanterelle card's respelling."
+				},
+				{
+					"finding": "mushrooms-1-floor-6",
+					"action": "applied",
+					"reason": "Changed the guest line's second sentence to \"It's tender and earthy, and milder than the golden one.\" so it matches the why and no longer echoes the golden Chanterelle card."
+				},
+				{
+					"finding": "mushrooms-1-floor-7",
+					"action": "applied",
+					"reason": "Replaced \"like the famous fall one\" with \"like the Alba truffle in fall\" so the guest knows which truffle is meant."
+				},
+				{
+					"finding": "mushrooms-1-safety-8",
+					"action": "applied",
+					"reason": "Rewrote notThis as \"The mushroom is not lobster, just named for its color and smell. For a shellfish question, ask the kitchen about the dish.\" so the fact applies only to the mushroom and the kitchen referral comes in the same breath."
+				},
+				{
+					"finding": "mushrooms-critic-1",
+					"action": "applied",
+					"reason": "Added Lion's Mane to confusedWithTerms and rewrote notThis to cover both Lobster and Lion's Mane and to say the name comes from color alone, matching the origin."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0381",
+						"issue": "There is a real confusion with no link. Lion's Mane (fd_0152, this section) is the mushroom sold as a lobster or crab stand-in: its guest line says it sears up \"a lot like crab or lobster\". A guest who asks whether \"the lobster mushroom\" is the one that eats like lobster is mixing up these two cards, and neither card mentions the other. The current notThis also says the mushroom is \"named for its color and smell\", but the card's own origin gives the name as coming from the color alone.",
+						"fix": "Add \"Lion's Mane\" to confusedWithTerms, giving [\"Lobster\", \"Lion's Mane\"]. Rewrite notThis so it covers both cards and agrees with origin, in about 120 characters, e.g. \"Not lobster, just named for its color, nor lion's mane, the white mushroom cooked like crab. Ask the kitchen about shellfish.\""
+					}
+				],
+				"notes": "I checked all 25 roster rows. The 20 existing cards are in tools/derive/floor-deck/mushrooms.mjs. The five new cards (fd_0379 to fd_0383) sit there as planned stubs, and each one has a draft.\n\nLengths are fine. The new cards total 653 to 723 characters each, and the section mean with them is 662, under the 720 ceiling. Every trap is within about 8 characters of its gist, and no gist is the longest option. I found no verdict words, no banned substrings, no dashes and no British spellings.\n\nNo new roster row carries a knownPacketError. Every term with an accent or a hard spelling has a say (Bianchetto, Huitlacoche, Yellowfoot Chanterelle).\n\nBack-links on existing cards need no edit. tools/derive/floor-deck.mjs (around line 339) makes confusedWith run both ways and caps each card at 4. After the build, White Truffle gains Bianchetto, Truffle gains Huitlacoche (3 links), Chanterelle and Black Trumpet each gain Yellowfoot, and Lobster gains Lobster Mushroom. All stay within the cap.\n\nI checked the candy cap chemistry on the web. Fresh candy caps have little smell. Drying forms quabalactone III, which water turns into sotolon, the main aroma of fenugreek. So the why's \\\"Drying creates sotolon\\\" is a fair simplification.\n\nOptional polish, not gate failures:\n- (a) White Truffle's authored notThis names only truffle oil. A clause like \\\"nor bianchetto, the cheaper spring white truffle\\\" would fit, since a white truffle offered in spring is usually bianchetto.\n- (b) The writer placed all five new cards at level 4. Huitlacoche is on many Mexican menus and arguably belongs at level 3 (Sous Chef). Lobster Mushroom at 4 matches Chicken of the Woods.\n- (c) Huitlacoche's seeAlso Black Trumpet is a thin link, and its origin gives the language but not what the word means. The usual reading of the Nahuatl is disputed, so leaving the meaning out is defensible.\n- (d) Bianchetto's gist has the phrase \\\"white truffle\\\" in it. That is allowed (truffle is a generic word), and \\\"spring\\\" still tells it apart from White Truffle's \\\"autumn\\\"."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

@@ -627,6 +627,102 @@ const cards = [
 		seeAlso: ['fd_0130'],
 		confusedWith: ['fd_0131'],
 		line: 'Seared escolar, charred scallion, yuzu kosho'
+	},
+	{
+		id: 'fd_0374',
+		term: 'Osetra',
+		level: 3,
+		say: 'oh-SEH-truh',
+		aliases: ['Ossetra', 'Oscietra'],
+		gist: 'Medium amber to brown sturgeon pearls with a nutty, briny taste',
+		guest: "It's a farmed sturgeon caviar with medium, golden brown pearls, nutty and buttery with a clean, briny finish.",
+		why: 'The roe of the Russian sturgeon, now farmed from Europe to China. A female needs about ten years to carry eggs, hence the price. Its beads are larger than Siberian caviar and smaller than Kaluga or Beluga.',
+		madeWith: ['sturgeon roe', 'salt', 'often wheat flour blini', 'often crème fraîche', 'sometimes egg'],
+		note: 'Salt-cured, never cooked, and served chilled. Lighter golden grades sell at a premium.',
+		origin: 'From the Russian word for sturgeon; once Caspian, now farmed worldwide',
+		lexiconSlug: 'roe-caviar-ikura-tobiko-bottarga',
+		seeAlso: ['fd_0125', 'fd_0120', 'fd_0116'],
+		line: 'Ossetra caviar, warm potato pancake, chive crème fraîche',
+		traps: [
+			{ says: 'Largest and palest gray sturgeon pearls, from the biggest fish of all', why: 'That is Beluga. These beads are medium sized and run from amber to brown.' }
+		]
+	},
+	{
+		id: 'fd_0375',
+		term: 'Belon Oysters',
+		level: 4,
+		say: 'beh-LOHN OY-sterz',
+		aliases: ['European Flat Oyster', 'Maine Belons'],
+		gist: 'Round, flat-shelled European oyster with a sharp, coppery finish',
+		guest: "It's the European flat oyster, with a round, wide shell. Firm and meaty, with a bold, coppery finish oyster lovers chase.",
+		why: "A different species from the cupped oysters on most lists, made famous in Brittany's Belon estuary and grown in Maine since the 1950s. The firm bite and long metallic finish are the species, not a flaw. Slow growth and scarcity set the price.",
+		madeWith: ['oysters', 'often lemon', 'often vinegar', 'sometimes shallot'],
+		note: 'Served raw and alive on the half shell. Best in the cold months, since summer flats spawn and turn milky.',
+		origin: 'Named for the Belon river in Brittany, France',
+		notThis: 'Not the teardrop cupped oysters on most lists. This shell is round and flat, the finish far stronger.',
+		seeAlso: ['fd_0115', 'fd_0201'],
+		line: 'Maine Belon oysters on the half shell, mignonette',
+		traps: [
+			{ says: 'Small, deep-cupped Pacific oyster with a mild, cucumber-sweet finish', why: 'That is the Kumamoto. This is a broad, flat European oyster with a strong metallic finish.' }
+		]
+	},
+	{
+		id: 'fd_0376',
+		term: 'Peekytoe Crab',
+		level: 4,
+		say: 'PEE-kee-toh',
+		aliases: ['Maine Rock Crab', 'Atlantic Rock Crab'],
+		gist: 'Small Maine crab once tossed from lobster traps, sweet meat',
+		guest: "It's a small Maine crab, picked by hand into fine, sweet, delicate meat, softer and lighter than blue crab.",
+		why: 'Atlantic rock crab, long thrown back from Maine lobster traps until a Portland dealer began selling it as peekytoe and New York chefs took it up in the 1990s. The meat is picked by hand into pink-flecked shreds, finer and more delicate than blue crab lump.',
+		madeWith: ['rock crab', 'often lemon', 'often crème fraîche', 'sometimes egg yolk', 'sometimes avocado'],
+		note: 'Sold cooked and hand-picked, often served cold or just warmed. A stray bit of shell can slip through.',
+		origin: 'Maine dialect picked toe, picked meaning pointed, for its sharp in-turned legs',
+		notThis: 'Not Chesapeake blue crab. This meat comes in fine shreds, never jumbo lumps.',
+		seeAlso: ['fd_0136'],
+		confusedWith: ['fd_0134'],
+		line: 'Peekytoe crab salad, avocado, green apple, lemon',
+		traps: [
+			{ says: 'Large West Coast crab, steamed and cracked whole at the table', why: 'That is Dungeness. This is a small Maine crab sold as hand-picked meat.' }
+		]
+	},
+	{
+		id: 'fd_0377',
+		term: 'Nantucket Bay Scallops',
+		level: 4,
+		aliases: ['Nantucket Bays'],
+		gist: 'Tiny, very sweet wild shellfish muscle with a short winter season',
+		guest: 'Tiny wild scallops from Nantucket, in season only a few winter months. Sweeter than sea scallops, so they need only the lightest touch.',
+		why: 'A smaller species than the sea scallop, dredged from shallow eelgrass beds and shucked by hand ashore. Each is about the size of a thumbnail, so sweet and delicate it is seared for seconds or served raw. Small catch, slow shucking, high price.',
+		madeWith: ['scallops', 'often butter', 'often lemon'],
+		note: 'Commercial season runs November 1 to March 31, and only adults with a growth ring may be taken.',
+		origin: "Nantucket Island's harbor and ponds, off Cape Cod, Massachusetts",
+		notThis: 'Not sea scallops, which are far larger, nor cheap frozen bay scallops sold all year.',
+		seeAlso: ['fd_0118', 'fd_0161'],
+		line: 'Seared Nantucket bay scallops, brown butter, lemon',
+		traps: [
+			{ says: 'Small farmed shellfish muscle, frozen and shipped year-round from China', why: "These are wild and fresh, taken only from November to March in Nantucket's harbor and ponds." }
+		]
+	},
+	{
+		id: 'fd_0378',
+		term: 'Rouget',
+		level: 4,
+		say: 'roo-ZHAY',
+		aliases: ['Red Mullet', 'Rouget Barbet'],
+		gist: 'Small rosy Mediterranean fish with chin whiskers, rich and sweet',
+		guest: 'Rouget is red mullet, a small rosy Mediterranean fish. The skin crisps beautifully, and the flesh is rich, with a sweet hint of shellfish.',
+		why: 'A small fish that probes the sandy seabed with two chin whiskers, feeding on shrimp and crabs. That diet gives its white flesh a rich, almost shellfish flavor, fuller than snapper or bass. Thin fillets are seared fast, skin side down.',
+		madeWith: ['fish', 'often olive oil', 'sometimes butter', 'sometimes saffron'],
+		note: 'The fillets keep fine pin bones that are hard to pull, so a word to the guest helps.',
+		origin: 'French for red mullet, from rouge, red; Mediterranean and eastern Atlantic',
+		notThis: 'Not red snapper, a larger Gulf reef fish, nor the gray mullet whose dried roe is bottarga.',
+		seeAlso: ['fd_0126', 'fd_0127'],
+		confusedWith: ['fd_0119'],
+		line: 'Seared rouget, fennel, saffron, black olive',
+		traps: [
+			{ says: 'Gray, oily estuary fish, fried or smoked across the Gulf South', why: 'That is gray or striped mullet. This is a small red sea fish with rich, sweet white flesh.' }
+		]
 	}
 ];
 

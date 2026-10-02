@@ -826,6 +826,271 @@
 				"notes": "Checks that passed: all four todo rows (fd_0325 to fd_0328) have cards, and the 18 written rows already exist in tools/derive/floor-deck/dairy.mjs. The section mean with the four new cards as submitted is 656 characters, under the 720 ceiling. Every card is between 633 and 752 characters. I found no verdict words, no em or en dashes and no banned substrings. Every accented or hard term has a say. No row carries a knownPacketError. The gists and guest lines can all be told apart from their neighbours: Stracciatella and Burrata differ as the loose filling against the pouch. The one exception is Triple Crème against Bloomy Rind, which is raised above. The Stracciatella and Burrata link is one-sided, but floor-deck.mjs symmetrises confusedWith at build time, so Burrata's module needs no edit.\n\nFacts checked: the triple crème grade is at least 75 percent fat in dry matter. Taleggio DOP ages at least 35 days, is washed weekly and uses calf rennet. Robiola Bosina is cow and sheep milk. Robiola di Roccaverano DOP is at least 50 percent goat, so the 'all goat' note is wrong. Source: https://www.piemonteagri.it/qualita/en/products/cheese/374-robiola-di-roccaverano-dop\n\nOwner judgement calls, not gate failures:\n(1) Stracciatella is placed at level 3 while Burrata is at level 2. Stracciatella is now common on good American menus and is the direct confusable of Burrata, so level 2 may fit the standard better.\n(2) Robiola at level 4 is arguable. It shows up often on pizza and pasta menus, so level 3 may fit.\n(3) Robiola's line 'Robiola agnolotti, brown butter, sage' nearly repeats Brown Butter's line 'Butternut squash agnolotti, brown butter, sage'. A different line, such as 'Robiola, truffle honey, focaccia', would read better across the deck.\n(4) The Taleggio gist will sometimes be drawn as a wrong option on the Washed Rind question, and it describes one washed-rind cheese. It is specific enough (square, Lombardy) that I did not raise it as a problem, but a reconciler may want to watch it."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0384",
+				"fd_0385",
+				"fd_0386"
+			],
+			"findings": [
+				{
+					"id": "fd_0386",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Goat cheese whose grey coat is a mold that must be cut away",
+					"because": "Half of this is true. On aged ash-ripened goat cheeses such as Selles-sur-Cher and Valençay, the grey-blue coat is partly mold (Penicillium, Geotrichum) growing over the ash. Only the 'must be cut away' part is false, and the trap's why ('The grey is plant ash dusted on by hand') is wrong for these cheeses, so a server who learns from it would tell a guest the grey-blue rind is only ash.",
+					"fix": "says: \"Goat cheese whose grey coat is a burnt crust that must be cut away\"; why: \"The grey is plant ash dusted on before aging, and it is eaten with the rind.\"",
+					"lens": "fact",
+					"key": "dairy-1-fact-1"
+				},
+				{
+					"id": "fd_0385",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "often rennet",
+					"because": "The Époisses AOP rules require rennet. The curd sets mostly by slow lactic action, but a small dose of rennet is always added. 'Often' tells a guest who avoids animal rennet that some wheels might be made without it, and none are.",
+					"fix": "rennet",
+					"lens": "fact",
+					"key": "dairy-1-fact-2"
+				},
+				{
+					"id": "fd_0384",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It tastes richer and more floral.",
+					"because": "The comparative has nothing to compare to: the guest's next question is 'richer than what?'. The point of the word is that it beats the same cheese made from valley or winter milk, so the line should say so in one breath.",
+					"fix": "The wheel was made up in a mountain hut in summer, from cows on alpine grass and flowers, so it's more floral than the valley version.",
+					"lens": "floor",
+					"key": "dairy-1-floor-3"
+				},
+				{
+					"id": "fd_0384",
+					"field": "note",
+					"severity": "style",
+					"claim": "Confirm with the kitchen when a guest asks.",
+					"because": "This repeats the fixed sentence the app already adds after madeWith ('Confirm with the kitchen'). It sounds read off a card, and it costs characters without adding a fact.",
+					"fix": "Almost always made from raw, unpasteurized milk.",
+					"lens": "floor",
+					"key": "dairy-1-floor-4"
+				},
+				{
+					"id": "fd_0386",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Goat cheese whose grey coat is a mold that must be cut away",
+					"because": "Half of this is true. On aged cheeses like Selles-sur-Cher and Valençay, the blue-grey coat is mold growing through the ash, so a server who knows the cheese could fairly pick it. The trap's why ('The grey is plant ash') leaves the mold out. Use a mistake that is wholly false.",
+					"fix": "Goat cheese rolled in cracked black pepper until its outside is grey",
+					"lens": "floor",
+					"key": "dairy-1-floor-5"
+				},
+				{
+					"id": "fd_0386",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "The grey is plant ash dusted on by hand, and it is edible with the rind.",
+					"because": "This has to match the replacement trap above, and it should not claim the whole grey coat is ash, because on aged cheeses part of it is mold.",
+					"fix": "No pepper: the grey is plant ash dusted on by hand, and it tastes of almost nothing.",
+					"lens": "floor",
+					"key": "dairy-1-floor-6"
+				},
+				{
+					"id": "fd_0385",
+					"field": "line",
+					"severity": "unclear",
+					"claim": "Époisses, warm baguette, cornichons, Chablis",
+					"because": "Cornichons go with raclette and charcuterie, not with Époisses. The classic partners are bread and a white Burgundy such as Chablis, sometimes with walnuts. A new hire who learns this line will suggest the wrong garnish.",
+					"fix": "Époisses, warm baguette, walnuts, Chablis",
+					"lens": "floor",
+					"key": "dairy-1-floor-7"
+				},
+				{
+					"id": "fd_0386",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "The grey coat and any grey line through the middle are edible.",
+					"because": "\"Edible\" is a safety assurance a server will repeat as \"it's safe to eat\", and \"any grey line\" vouches for something the server cannot see. Loire ash cheeses such as Valençay and Selles-sur-Cher have no middle line. That line belongs to Humboldt Fog or Morbier. The real handling fact is missing: Valençay, Selles-sur-Cher and Sainte-Maure AOP must be made from raw goat's milk. Young cheeses sold in the US are pasteurized, because raw-milk cheese aged under 60 days cannot be sold there.",
+					"fix": "French originals are made from raw milk, most sold in the US are pasteurized. Confirm with the kitchen.",
+					"lens": "safety",
+					"key": "dairy-1-safety-8"
+				},
+				{
+					"id": "fd_0386",
+					"field": "traps",
+					"severity": "verdict",
+					"claim": "The grey is plant ash dusted on by hand, and it is edible with the rind.",
+					"because": "This is an edibility assurance inside a trap. It is also inaccurate: on an aged cheese the grey-blue coat is ash under a mold rind that grows through it, not ash alone.",
+					"fix": "The grey is plant ash under a thin mold rind, eaten with the cheese.",
+					"lens": "safety",
+					"key": "dairy-1-safety-9"
+				},
+				{
+					"id": "fd_0386",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "dusted with edible vegetable ash",
+					"because": "\"Edible\" in the guest line is a spoken safety assurance. Say what the ash is and leave out any word that vouches for it.",
+					"fix": "dusted with vegetable ash",
+					"lens": "safety",
+					"key": "dairy-1-safety-10"
+				},
+				{
+					"id": "fd_0386",
+					"field": "gist",
+					"severity": "verdict",
+					"claim": "dusted in edible charcoal",
+					"because": "\"Edible\" is an implied safety verdict, and the gist is shown as an answer that gets memorized and repeated.",
+					"fix": "dusted in vegetable charcoal",
+					"lens": "safety",
+					"key": "dairy-1-safety-11"
+				},
+				{
+					"id": "fd_0385",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Ripe ones run, so it often comes in its wooden box with a spoon.",
+					"because": "The card says nothing about the milk, although this is the raw-service fact a server gets asked about. The Époisses AOP allows raw or pasteurized milk: the largest producer, Berthaut, pasteurizes and others make it from raw milk. Without this, the card says nothing either way, and a server may guess. A missing safety fact can lengthen the card.",
+					"fix": "Ripe ones run and come boxed with a spoon. Raw or pasteurized milk by producer, so confirm with the kitchen.",
+					"lens": "safety",
+					"key": "dairy-1-safety-12"
+				},
+				{
+					"id": "fd_0384",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"cow's milk\"",
+					"because": "Alpage cheeses are mostly cow's milk, but Swiss Alpkäse and some tommes d'alpage are made with goat's milk or a mix. A guest who reacts to goat's milk would not be warned.",
+					"fix": "\"cow's milk\", \"sometimes goat's milk\"",
+					"lens": "safety",
+					"key": "dairy-1-safety-13"
+				},
+				{
+					"key": "dairy-critic-1",
+					"id": "fd_0386",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "seeAlsoTerms includes Washed Rind. Ash-ripened goat cheeses grow a thin, wrinkled mold rind (the card's own why says so). They are never brine-washed. Linking Washed Rind points a new hire at the wrong rind family, and could become 'it's a washed-rind goat cheese' at the table.",
+					"because": "seeAlsoTerms includes Washed Rind. Ash-ripened goat cheeses grow a thin, wrinkled mold rind (the card's own why says so). They are never brine-washed. Linking Washed Rind points a new hire at the wrong rind family, and could become 'it's a washed-rind goat cheese' at the table.",
+					"fix": "Remove Washed Rind from seeAlsoTerms and keep Bloomy Rind. If a second link is wanted, use Triple Crème or Robiola, or simply leave it at one."
+				},
+				{
+					"key": "dairy-critic-2",
+					"id": "fd_0385",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The note says 'Ripe ones run and come boxed with a spoon.' That reads as if a spoon ships inside the box, which a server could repeat to a guest. The real handling fact is that a ripe one is served in its wooden box and eaten with a spoon.",
+					"because": "The note says 'Ripe ones run and come boxed with a spoon.' That reads as if a spoon ships inside the box, which a server could repeat to a guest. The real handling fact is that a ripe one is served in its wooden box and eaten with a spoon.",
+					"fix": "Rewrite the note as: \"A ripe one runs, so it is served in its box with a spoon. Makers use raw or pasteurized milk, and US wheels are pasteurized.\" (about 120 characters; total stays well under 900)."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "dairy-1-fact-1",
+					"action": "applied",
+					"reason": "The second trap now says the grey coat is a burnt crust that must be cut away, which is wholly false (66 characters against a 65-character gist). Its why no longer says the whole coat is ash: it now says the coat is plant ash, often under a thin mold rind."
+				},
+				{
+					"finding": "dairy-1-fact-2",
+					"action": "applied",
+					"reason": "Changed 'often rennet' to 'rennet', since the Époisses AOP sets the curd mostly by lactic action but always adds a small dose of rennet."
+				},
+				{
+					"finding": "dairy-1-floor-3",
+					"action": "applied",
+					"reason": "The guest line now says what it is compared with: '...alpine grass and flowers, so it's more floral than the valley version.' (145 characters)."
+				},
+				{
+					"finding": "dairy-1-floor-4",
+					"action": "applied",
+					"reason": "Cut the sentence that repeated the app's fixed 'Confirm with the kitchen' line. The note is now 'Almost always made from raw, unpasteurized milk.'"
+				},
+				{
+					"finding": "dairy-1-floor-5",
+					"action": "applied",
+					"reason": "Replaced the half-true mold trap with a wholly false one. I used the burnt-crust wording from dairy-1-fact-1 instead of the pepper wording, because thinking the grey coat must be cut off is the mistake guests actually make."
+				},
+				{
+					"finding": "dairy-1-floor-6",
+					"action": "applied",
+					"reason": "The trap's why now matches the new trap and no longer says the whole coat is ash: 'Not burnt: the grey is plant ash, often under a thin mold rind, and the rind is eaten.' I also changed the smoked trap's why to say the grey 'starts as' ash, so the two agree."
+				},
+				{
+					"finding": "dairy-1-floor-7",
+					"action": "applied",
+					"reason": "Changed the line to 'Époisses, warm baguette, walnuts, Chablis', so it no longer pairs the cheese with cornichons."
+				},
+				{
+					"finding": "dairy-1-safety-8",
+					"action": "applied",
+					"reason": "Removed the 'edible' claim and the grey middle line that Loire ash cheeses do not have. The note now says 'French originals like Valençay are raw-milk. Young ones sold in the US are pasteurized by law.' This is because the AOP requires raw milk, and raw-milk cheese aged under 60 days cannot be sold in the US. I left out 'Confirm with the kitchen' because the app already adds that sentence."
+				},
+				{
+					"finding": "dairy-1-safety-9",
+					"action": "applied",
+					"reason": "The trap's why no longer says 'edible' and no longer says the coat is ash alone. It now reads 'plant ash, often under a thin mold rind, and the rind is eaten.'"
+				},
+				{
+					"finding": "dairy-1-safety-10",
+					"action": "applied",
+					"reason": "Guest line now says 'dusted with vegetable ash', so it no longer says 'edible'."
+				},
+				{
+					"finding": "dairy-1-safety-11",
+					"action": "applied",
+					"reason": "Gist is now 'Young goat cheese dusted in vegetable charcoal so a rind can grow' (65 characters). It no longer says 'edible' and still avoids 'ash' and 'ripened'."
+				},
+				{
+					"finding": "dairy-1-safety-12",
+					"action": "applied",
+					"reason": "Note is now 'Ripe ones run and come boxed with a spoon. Makers use raw or pasteurized milk, and US wheels are pasteurized.' The AOP allows either milk, and imports aged under 60 days must be pasteurized. The card totals 740 characters, and the three cards average 706, which is under the 720 ceiling."
+				},
+				{
+					"finding": "dairy-1-safety-13",
+					"action": "applied",
+					"reason": "Added 'sometimes goat's milk' to madeWith, because some Alpkäse and tommes d'alpage are made with goat's milk or a mix."
+				},
+				{
+					"finding": "dairy-critic-1",
+					"action": "applied",
+					"reason": "Removed Washed Rind from fd_0386 seeAlsoTerms and left Bloomy Rind as the only link, since ash-ripened goat cheeses grow a mold rind and are never brine-washed."
+				},
+				{
+					"finding": "dairy-critic-2",
+					"action": "applied",
+					"reason": "Rewrote the fd_0385 note to say a ripe one runs and is served in its box with a spoon, so it no longer reads as if a spoon ships in the box. The note is 121 characters and the card total stays well under 900."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0327",
+						"issue": "The Époisses card (fd_0385) lists Taleggio in confusedWithTerms, but Taleggio does not link back. Every other confusable pair in this section is linked from both sides: Ghee with Clarified Butter and Brown Butter, Ricotta with Mascarpone and Fromage Blanc, Chèvre with Feta, Burrata with Fresh Mozzarella, Bloomy Rind with Washed Rind, Taleggio with Robiola. So a reader on the Taleggio card never sees the runny Burgundy square-versus-round confusion.",
+						"fix": "On Taleggio, set confusedWith to ['fd_0328', 'fd_0385'] and widen notThis to cover both, for example: \"Not robiola, which is paler and milder, nor Époisses, which is round and runny. Taleggio is a firmer square with a sticky orange rind.\" (about 125 characters)."
+					},
+					{
+						"id": "fd_0156",
+						"issue": "The Ash-Ripened card (fd_0386) lists Chèvre in confusedWithTerms, but Chèvre does not link back. Chèvre's own why says that aged it 'firms and grows a rind', which is exactly where the two blur, so the pair should be linked from both sides like the rest of the section.",
+						"fix": "On Chèvre, add fd_0386 to confusedWith (beside fd_0168) and extend notThis, for example: \"Not feta, which is brined, saltier and firmer. Not an ash-ripened goat cheese either, which ages weeks under a grey rind.\" (about 120 characters)."
+					},
+					{
+						"id": "fd_0386",
+						"issue": "seeAlsoTerms includes Washed Rind. Ash-ripened goat cheeses grow a thin, wrinkled mold rind (the card's own why says so). They are never brine-washed. Linking Washed Rind points a new hire at the wrong rind family, and could become 'it's a washed-rind goat cheese' at the table.",
+						"fix": "Remove Washed Rind from seeAlsoTerms and keep Bloomy Rind. If a second link is wanted, use Triple Crème or Robiola, or simply leave it at one."
+					},
+					{
+						"id": "fd_0385",
+						"issue": "The note says 'Ripe ones run and come boxed with a spoon.' That reads as if a spoon ships inside the box, which a server could repeat to a guest. The real handling fact is that a ripe one is served in its wooden box and eaten with a spoon.",
+						"fix": "Rewrite the note as: \"A ripe one runs, so it is served in its box with a spoon. Makers use raw or pasteurized milk, and US wheels are pasteurized.\" (about 120 characters; total stays well under 900)."
+					}
+				],
+				"notes": "The whole section has a card for every roster row: 22 already written in tools/derive/floor-deck/dairy.mjs, plus the three new ones, Alpage, Époisses and Ash-Ripened. Including the new three, the section mean is about 664 characters of prose per card, under the 720 ceiling. The new three come to 632, 740 and 747. No knownPacketError appears in this roster, so no trap is owed for one. I found no verdict language, no dashes and no banned substrings in the new cards, and none of their gists uses its own term or an alias. Gist and trap lengths are at parity: every trap is within 6 characters of its gist, and the gist is never the longest option. All three gists and guest lines are distinct from their neighbours (Washed Rind, Taleggio, Chèvre). Fact checks: the Valençay AOP specification requires raw, whole goat's milk (INAO cahier des charges), so the Ash-Ripened note holds; Époisses' minimum four weeks of washing with marc and its 1950s revival by Berthaut are correct; the 60-day rule makes US Époisses and young ash-ripened imports pasteurized. An optional cross-section link: Alpage (fd_0384) could take seeAlsoTerms ['Grass-Fed', 'Pasture-Raised'] from the language section, since the card's whole point is summer grass milk. Alpage also has no pairs line; origin is enough for context, but 'Quince paste, walnuts, Chasselas or Jura white' would help the second question. Small inconsistency on Alpage: the gist says 'from cows', while madeWith allows 'sometimes goat's milk'. That is acceptable but could be tightened to 'from herds on high pasture'."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

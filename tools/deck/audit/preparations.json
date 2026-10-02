@@ -1016,6 +1016,347 @@
 			],
 			"critic": null,
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0397",
+				"fd_0398",
+				"fd_0399",
+				"fd_0400"
+			],
+			"findings": [
+				{
+					"id": "fd_0397",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Not a ballotine, which is usually roasted and served hot.",
+					"because": "The classical ballotine is braised or poached, not usually roasted, and the deck's own Ballotine card (fd_0228) says \"Poached or roasted\". What reliably separates the two is the serving temperature: a ballotine is usually served hot and a galantine cold.",
+					"fix": "Not a ballotine, which is usually served hot. A galantine is poached and served cold.",
+					"lens": "fact",
+					"key": "preparations-1-fact-1"
+				},
+				{
+					"id": "fd_0397",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"chicken\", \"sometimes duck\", ... (no alcohol listed)",
+					"because": "The classical galantine forcemeat is marinated in brandy (Cognac) or Madeira, so a guest who avoids alcohol needs it flagged. The list is already at 7 items, so the two bird entries are merged to make room.",
+					"fix": "\"chicken or duck\", \"often pork\", \"often egg\", \"sometimes cream\", \"sometimes pistachios\", \"often gelatin\", \"often brandy or madeira\"",
+					"lens": "fact",
+					"key": "preparations-1-fact-2"
+				},
+				{
+					"id": "fd_0399",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"often duck liver\", \"sometimes salmon\", \"sometimes tuna\", \"sometimes chocolate\", \"sometimes egg\", \"sometimes butter\"",
+					"because": "Foie gras mi-cuit, the card's main example and menu line, is classically seasoned with Sauternes, port, Armagnac or Cognac before it is cooked. The list leaves out the alcohol flag, and there is room for a seventh item.",
+					"fix": "add \"often brandy or sweet wine\" as a seventh item",
+					"lens": "fact",
+					"key": "preparations-1-fact-3"
+				},
+				{
+					"id": "fd_0398",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Not en croûte, pastry wrapped around a whole roast.",
+					"because": "The En Croûte card (fd_0338) covers a fillet, a tenderloin or seasoned ground meat baked in pastry, salmon included, not only a whole roast. The real difference is shape: en croûte is a wrapped log that is sliced, and this is a sealed domed round.",
+					"fix": "Not en croûte, pastry wrapped around a fillet or roast. This is a sealed, domed round pie.",
+					"lens": "fact",
+					"key": "preparations-1-fact-4"
+				},
+				{
+					"id": "fd_0398",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"sometimes almonds\" (no alcohol listed)",
+					"because": "The classic almond cream in a pithivier is commonly flavored with rum, and savory game or foie gras versions often take brandy or Madeira. The alcohol flag is missing, and the list has room for a seventh item.",
+					"fix": "add \"sometimes rum or brandy\" as a seventh item",
+					"lens": "fact",
+					"key": "preparations-1-fact-5"
+				},
+				{
+					"id": "fd_0400",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "The foie gras comes seared and pink.",
+					"because": "Seared foie gras is not cooked to a pink doneness like meat. It is crusted outside and warm and soft, nearly molten, at the center. If a server says \"pink\", a guest may ask for it more done.",
+					"fix": "The foie gras comes seared, soft at the center.",
+					"lens": "fact",
+					"key": "preparations-1-fact-6"
+				},
+				{
+					"id": "fd_0399",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It means half cooked. It's warmed just enough, so foie gras stays silky, fish stays rosy in the middle and chocolate cake stays molten.",
+					"because": "The brief says guests reliably ask whether a mi-cuit dish is raw, and this line never answers that. 'Warmed' also suggests a warm plate, but foie gras mi-cuit is usually served chilled. A nervous server reciting all three foods for one dish sounds read off a card.",
+					"fix": "It means half cooked. It's gently cooked, not raw, so foie gras stays silky, fish rosy and chocolate cake molten.",
+					"lens": "floor",
+					"key": "preparations-1-floor-7"
+				},
+				{
+					"id": "fd_0399",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Braised for half a day, until soft enough to fall apart under a spoon",
+					"because": "This is a true description of the Braised card (fd_0026) and of braised Short Rib, both on the roster, so it breaks the rule that a trap must not describe another card. A mistake guests really make is reading 'half' as a half portion.",
+					"fix": "Half portion, the smaller of two sizes a dish is offered in",
+					"lens": "floor",
+					"key": "preparations-1-floor-8"
+				},
+				{
+					"id": "fd_0399",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Cooked only partway on purpose, left silky, rosy or molten inside",
+					"because": "Tataki (seared outside, raw inside) is on the roster, and a test taker could accept this gist for it. What sets mi-cuit apart is gentle half-cooking across liver, fish and chocolate.",
+					"fix": "Gently half cooked: liver silky, fish rosy, chocolate molten",
+					"lens": "floor",
+					"key": "preparations-1-floor-9"
+				},
+				{
+					"id": "fd_0400",
+					"field": "guest",
+					"severity": "style",
+					"claim": "It's the grandest steak of the French classics,",
+					"because": "This is an unprovable superlative and oversells the dish. The guest line should make the guest want it honestly, and a server who says 'grandest' invites a challenge from a knowing guest.",
+					"fix": "It's a classic French luxury steak,",
+					"lens": "floor",
+					"key": "preparations-1-floor-10"
+				},
+				{
+					"id": "fd_0400",
+					"field": "note",
+					"severity": "style",
+					"claim": "Take the filet's doneness, most kitchens suggest rare to medium rare.",
+					"because": "Comma splice. It reads as one run-on instruction, and a new hire may take 'most kitchens suggest' as part of the order.",
+					"fix": "Take the filet's doneness. Most kitchens suggest rare to medium rare.",
+					"lens": "floor",
+					"key": "preparations-1-floor-11"
+				},
+				{
+					"id": "fd_0398",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "pastry wrapped around a whole roast",
+					"because": "The deck's own En Croûte card (fd_0338) covers fish or meat wrapped in pastry, as in salmon en croûte or beef Wellington, not only a whole roast. A server comparing the two cards would get mixed signals.",
+					"fix": "pastry wrapped around a fillet or roast",
+					"lens": "floor",
+					"key": "preparations-1-floor-12"
+				},
+				{
+					"id": "fd_0399",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "Not raw like crudo. It has been heated, gently, so the outside is set and the center soft.",
+					"because": "\"Not raw\" is an assurance a guest avoiding undercooked food will rely on. The center of mi-cuit fish is still translucent, essentially raw, and mi-cuit foie gras and a molten chocolate center (raw-set egg) are deliberately undercooked. The true distinction from crudo is only that the outside has been heated.",
+					"fix": "Not crudo, which is never heated. The outside is set, but the center stays barely cooked.",
+					"lens": "safety",
+					"key": "preparations-1-safety-13"
+				},
+				{
+					"id": "fd_0399",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "The soft, pink or translucent center is intended. Take any request to cook it more to the kitchen.",
+					"because": "The note never says plainly that the dish is undercooked, which is the raw-service fact a server must be able to state. With the fish center translucent, the foie gras pink and the cake's egg center molten, it is served undercooked by design. This safety fact justifies the slightly longer line.",
+					"fix": "Served undercooked by design: the pink or translucent center is intended. Take any request to cook it more to the kitchen.",
+					"lens": "safety",
+					"key": "preparations-1-safety-14"
+				},
+				{
+					"id": "fd_0399",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"often duck liver\", \"sometimes salmon\", \"sometimes tuna\", \"sometimes chocolate\", \"sometimes egg\", \"sometimes butter\"",
+					"because": "Two flags a guest needs are missing. Foie gras mi-cuit is classically cured with brandy, Armagnac, port or Sauternes (alcohol), and a chocolate mi-cuit is a cake batter made with wheat flour. Putting the two fish on one line frees a slot and keeps the list at 7.",
+					"fix": "often duck liver, sometimes salmon or tuna, sometimes chocolate, sometimes egg, sometimes butter, sometimes wheat flour, sometimes brandy or wine",
+					"lens": "safety",
+					"key": "preparations-1-safety-15"
+				},
+				{
+					"id": "fd_0397",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"sometimes duck\" ... \"sometimes pistachios\"",
+					"because": "Classical galantine forcemeat is marinated with brandy, cognac or Madeira, so it holds alcohol, and the list leaves that out. The list also flags pistachios (a tree nut) as only \"sometimes\", although the card's own why says the forcemeat is \"often\" made with pistachios. Duck is no allergy flag and is already named in the guest line, so its slot can go to alcohol.",
+					"fix": "chicken, often pork, often egg, sometimes cream, often pistachios, often brandy, often gelatin",
+					"lens": "safety",
+					"key": "preparations-1-safety-16"
+				},
+				{
+					"id": "fd_0398",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"wheat flour\", \"butter\", \"egg\", \"often duck or game\", \"sometimes foie gras\", \"sometimes almonds\"",
+					"because": "A savory duck or game pithivier filling is classically a forcemeat bound with pork (pork shoulder or back fat). A guest who avoids pork would not be warned by this list. Adding the item lengthens the list to 7, which is allowed for a safety flag.",
+					"fix": "wheat flour, butter, egg, often duck or game, often pork, sometimes foie gras, sometimes almonds",
+					"lens": "safety",
+					"key": "preparations-1-safety-17"
+				},
+				{
+					"key": "preparations-critic-1",
+					"id": "fd_0399",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Mi-Cuit is linked only to Crudo, but the confusion people actually make is with Tataki (fd_0223), whose gist is 'Fish or beef seared for seconds, rare inside'. That is almost the same as this card's notThis, 'The outside is set, but the center stays barely cooked'. A server who knows both cards could not tell them apart from the notThis, and the two cards are not linked.",
+					"because": "Mi-Cuit is linked only to Crudo, but the confusion people actually make is with Tataki (fd_0223), whose gist is 'Fish or beef seared for seconds, rare inside'. That is almost the same as this card's notThis, 'The outside is set, but the center stays barely cooked'. A server who knows both cards could not tell them apart from the notThis, and the two cards are not linked.",
+					"fix": "Set confusedWithTerms to [\"Tataki\", \"Crudo\"]. Rewrite notThis to cover both, for example: \"Not tataki, seared hard so the center stays raw, and not crudo, never heated. This is cooked gently all the way through, just short of done.\" (about 140 chars)."
+				},
+				{
+					"key": "preparations-critic-2",
+					"id": "fd_0397",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "confusedWithTerms names Terrine, but the notThis covers only Ballotine. A server asked 'so it's a terrine?' has no line to answer with.",
+					"because": "confusedWithTerms names Terrine, but the notThis covers only Ballotine. A server asked 'so it's a terrine?' has no line to answer with.",
+					"fix": "Rewrite notThis to cover both, for example: \"Not a ballotine, usually served hot, or a terrine, a ground-meat loaf baked in a mold. This is a whole boned bird, poached and served cold.\" (about 135 chars)."
+				},
+				{
+					"key": "preparations-critic-3",
+					"id": "fd_0399",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The card misses a common menu sense. On fruit and vegetables (tomates mi-cuites, figues mi-cuites, mi-cuit dates), mi-cuit means semi-dried or oven-dried, not half cooked in the liver or fish sense. A server reading 'mi-cuit tomatoes' from this card would describe them wrongly.",
+					"because": "The card misses a common menu sense. On fruit and vegetables (tomates mi-cuites, figues mi-cuites, mi-cuit dates), mi-cuit means semi-dried or oven-dried, not half cooked in the liver or fish sense. A server reading 'mi-cuit tomatoes' from this card would describe them wrongly.",
+					"fix": "Add one short clause to the why, for example \"On tomatoes or figs it means semi-dried, soft and concentrated.\" To keep the card near its current 757 characters, trim the note to \"Pink or translucent at the center by design. Take any request to cook it more to the kitchen.\""
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "preparations-1-fact-1",
+					"action": "applied",
+					"reason": "notThis now reads 'Not a ballotine, which is usually served hot. A galantine is poached and served cold.', so it drops the claim that a ballotine is usually roasted."
+				},
+				{
+					"finding": "preparations-1-fact-2",
+					"action": "applied",
+					"reason": "Merged the two birds into 'chicken or duck' and added 'often brandy or madeira', which keeps the list at 7 items."
+				},
+				{
+					"finding": "preparations-1-fact-3",
+					"action": "applied",
+					"reason": "Added 'often brandy or sweet wine' to the Mi-Cuit list. To keep the list at 7 it was combined with the safety-15 change, which merges the two fish into one item."
+				},
+				{
+					"finding": "preparations-1-fact-4",
+					"action": "applied",
+					"reason": "notThis now reads 'Not en croûte, pastry wrapped around a fillet or roast. This is a sealed, domed round pie, often for two.'"
+				},
+				{
+					"finding": "preparations-1-fact-5",
+					"action": "applied",
+					"reason": "Added 'sometimes rum or brandy'. To make room for it and for pork (safety-17) within 7 items, duck, game and foie gras now share one item, 'often duck, game or foie gras'."
+				},
+				{
+					"finding": "preparations-1-fact-6",
+					"action": "applied",
+					"reason": "The note now says 'The foie gras comes seared, soft at the center.' instead of 'pink'."
+				},
+				{
+					"finding": "preparations-1-floor-7",
+					"action": "applied",
+					"reason": "Rewrote the guest line as 'It's cooked gently and only partway, so foie gras stays silky and fish stays rosy, barely cooked in the middle.' This drops 'warmed' and the run of three foods. I left out the proposed 'not raw' because of safety-13: the center is barely cooked, so it is honest without promising doneness."
+				},
+				{
+					"finding": "preparations-1-floor-8",
+					"action": "applied",
+					"reason": "Replaced the braising trap, which described the Braised card, with 'Half portion, the smaller of two sizes a dish is offered in' (59 characters against a 60-character gist) and a why saying the word names the cooking, not the portion size."
+				},
+				{
+					"finding": "preparations-1-floor-9",
+					"action": "applied",
+					"reason": "The gist is now 'Gently half cooked: liver silky, fish rosy, chocolate molten' (60 characters, without 'cuit'), which sets it apart from Tataki's seared-outside, raw-inside fish."
+				},
+				{
+					"finding": "preparations-1-floor-10",
+					"action": "applied",
+					"reason": "The guest line now opens 'It's a classic French luxury steak,' instead of the superlative 'grandest'."
+				},
+				{
+					"finding": "preparations-1-floor-11",
+					"action": "applied",
+					"reason": "Split the comma splice into two sentences: 'Take the filet's doneness. Most kitchens suggest rare to medium rare.'"
+				},
+				{
+					"finding": "preparations-1-floor-12",
+					"action": "applied",
+					"reason": "Same change as fact-4: en croûte is now described as pastry wrapped around a fillet or roast."
+				},
+				{
+					"finding": "preparations-1-safety-13",
+					"action": "applied",
+					"reason": "notThis now reads 'Not crudo, which is never heated. The outside is set, but the center stays barely cooked.', which removes the 'not raw' assurance."
+				},
+				{
+					"finding": "preparations-1-safety-14",
+					"action": "applied",
+					"reason": "The note now reads 'Served undercooked by design: the pink or translucent center is intended. Take any request to cook it more to the kitchen.'"
+				},
+				{
+					"finding": "preparations-1-safety-15",
+					"action": "applied",
+					"reason": "The list is now often duck liver, sometimes salmon or tuna, sometimes chocolate, sometimes egg, sometimes butter, sometimes wheat flour, often brandy or sweet wine (7 items). Alcohol is 'often' because it goes with the foie gras, which the list already marks as often."
+				},
+				{
+					"finding": "preparations-1-safety-16",
+					"action": "applied",
+					"reason": "Pistachios are now 'often', matching the why, and the list flags 'often brandy or madeira'. Duck is merged into 'chicken or duck' rather than dropped, so the list stays at 7."
+				},
+				{
+					"finding": "preparations-1-safety-17",
+					"action": "applied",
+					"reason": "Added 'often pork' for the savory forcemeat. The list stays at 7 because duck, game and foie gras now share one item."
+				},
+				{
+					"finding": "preparations-critic-1",
+					"action": "applied",
+					"reason": "Set confusedWithTerms to Tataki and Crudo, and rewrote notThis to separate it from both: tataki is seared hard with a raw center, crudo is never heated, and mi-cuit is cooked gently through to just short of done."
+				},
+				{
+					"finding": "preparations-critic-2",
+					"action": "applied",
+					"reason": "Rewrote notThis to cover both confusions: a ballotine is usually served hot, a terrine is forcemeat baked in a mold, and a galantine is a whole boned bird, poached and served cold. The origin was trimmed to keep the card short."
+				},
+				{
+					"finding": "preparations-critic-3",
+					"action": "applied",
+					"reason": "Added the semi-dried sense for tomatoes and figs to the why, tightened the why and the guest line, and cut the note to the suggested shorter wording. The card now runs about 769 characters."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0399",
+						"issue": "Mi-Cuit is linked only to Crudo, but the confusion people actually make is with Tataki (fd_0223), whose gist is 'Fish or beef seared for seconds, rare inside'. That is almost the same as this card's notThis, 'The outside is set, but the center stays barely cooked'. A server who knows both cards could not tell them apart from the notThis, and the two cards are not linked.",
+						"fix": "Set confusedWithTerms to [\"Tataki\", \"Crudo\"]. Rewrite notThis to cover both, for example: \"Not tataki, seared hard so the center stays raw, and not crudo, never heated. This is cooked gently all the way through, just short of done.\" (about 140 chars)."
+					},
+					{
+						"id": "fd_0397",
+						"issue": "confusedWithTerms names Terrine, but the notThis covers only Ballotine. A server asked 'so it's a terrine?' has no line to answer with.",
+						"fix": "Rewrite notThis to cover both, for example: \"Not a ballotine, usually served hot, or a terrine, a ground-meat loaf baked in a mold. This is a whole boned bird, poached and served cold.\" (about 135 chars)."
+					},
+					{
+						"id": "fd_0228",
+						"issue": "Ballotine is already written, and its confusedWith lists only Roulade. Galantine (fd_0397) now names Ballotine as its first confusion, and the two are the classic confused pair, but Ballotine does not link back and its notThis does not tell them apart.",
+						"fix": "Add \"Galantine\" to Ballotine's confusedWithTerms. Optionally add to its notThis: \"Not a galantine, which is poached in cloth and served cold.\""
+					},
+					{
+						"id": "fd_0399",
+						"issue": "The card misses a common menu sense. On fruit and vegetables (tomates mi-cuites, figues mi-cuites, mi-cuit dates), mi-cuit means semi-dried or oven-dried, not half cooked in the liver or fish sense. A server reading 'mi-cuit tomatoes' from this card would describe them wrongly.",
+						"fix": "Add one short clause to the why, for example \"On tomatoes or figs it means semi-dried, soft and concentrated.\" To keep the card near its current 757 characters, trim the note to \"Pink or translucent at the center by design. Take any request to cook it more to the kitchen.\""
+					}
+				],
+				"notes": "Checked and clean:\n- **Roster coverage:** 24 roster rows are already written. The 4 unwritten rows (fd_0397 to fd_0400) all have cards here, so no row is missing.\n- **Section mean:** 24 existing cards average 677 characters; with the new 4 (670, 690, 757, 758) the section mean is 683, under the 720 ceiling.\n- **Length parity:** every trap is within 10 characters of its gist, and no gist is the longest option. Galantine is 63 against 69, Mi-Cuit 60 against 59, Rossini 65 against 62.\n- **Required say:** every new card has one.\n- **Known packet errors:** none in this batch.\n- **Banned words, verdicts, dashes, temperatures:** none found.\n\nOptional cross-links worth doing:\n- En Croûte (fd_0338) could add \"Pithivier\" to its seeAlso or confusedWith, so that link runs both ways.\n- Torchon (fd_0337) could add \"Mi-Cuit\" to its seeAlso, since a torchon is the classic mi-cuit foie gras and its note already says \"half cooked on purpose\".\n\nMinor points for the operator:\n- Pithivier's seeAlso \"Galette\" points to a card about a rustic free-form pie or buckwheat crepe. The galette des rois, which really is a sweet pithivier, is not that card, so the link may mislead. Consider dropping it.\n- Rossini's madeWith item \"bread\" could read \"wheat bread\" so the wheat is flagged as plainly as the \"wheat flour\" the brief asks for.\n- Two cards the new cards point to, Tournedos (fd_0370) and Pâté en Croûte (fd_0365), are not in the current src/lib/data/floor-deck.json. They are in everyCard, so the links are valid, but they will only resolve once the expansion is written."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

@@ -328,8 +328,92 @@ const cards = [
 		line: 'Omakase, 18 courses, counter seating only',
 		traps: [
 			{ says: 'All you can eat sushi service at one fixed price, ordered from a list', why: 'The chef chooses every course; the guest does not order, and the chef sets the count of pieces.' },
-			{ says: 'Formal multi-course Japanese dinner whose sequence is fixed by tradition', why: 'That is kaiseki. Here the chef, not tradition, decides the order of courses.' }
+			{ says: 'Sushi on a conveyor belt that guests pick from as the plates pass', why: 'That is kaiten sushi. Here the chef serves each piece across the counter, in an order the chef chooses.' }
 		]
+	},
+	{
+		id: 'fd_0415',
+		term: 'Kaiseki',
+		level: 4,
+		say: 'kye-SEH-kee',
+		gist: 'Formal Japanese dinner of seasonal courses in a set, named order',
+		guest: "It is Japan's classic formal meal, a long run of small courses in a set order, each on its own dish and each tied to the season.",
+		why: 'It grew from the meal served before the tea ceremony. The order is fixed: a small opener, a seasonal platter, sashimi, a simmered dish, something grilled, then rice, pickles and soup. The chef composes each course to the month, down to the plates.',
+		madeWith: ['fish', 'soy', 'often wheat', 'often shellfish', 'often sake or mirin', 'sometimes sesame', 'sometimes egg'],
+		note: 'Sashimi is a set course, so expect raw fish. Changes need notice ahead.',
+		origin: 'Japanese, breast stone: the warm stone Zen monks held to quiet hunger',
+		notThis: "Not omakase, the chef's pick from the day's fish. Here tradition fixes the order and the season sets each course. Kappo is the looser counter version.",
+		confusedWith: ['fd_0355', 'fd_0290', 'fd_0419'],
+		line: 'Autumn kaiseki, nine courses, sake pairing available',
+		traps: [
+			{ says: 'Lacquered box of many small Japanese dishes, all served at once', why: 'Courses arrive one at a time in a fixed order, each on its own dish, not packed together in a box.' }
+		]
+	},
+	{
+		id: 'fd_0416',
+		term: 'Label Rouge',
+		level: 4,
+		say: 'lah-BEL ROOZH',
+		gist: 'French government mark of superior quality, set product by product',
+		guest: "It's France's red quality seal. Its chicken is a slow-growing breed raised outdoors longer for deeper flavor, and its salmon is farmed in roomier pens.",
+		why: 'A French state mark since 1960, granted against a written standard for each product and audited. Chicken: slow-growing breeds, outdoor runs, at least 81 days old, against about 40 for a supermarket bird. Salmon, Scottish since 1992: lower stocking density, set feed.',
+		origin: 'French, red label, after the red seal printed on the pack',
+		notThis: 'It makes no wild or organic promise. The salmon is farmed, and the mark rates quality, not origin.',
+		seeAlso: ['fd_0297', 'fd_0296'],
+		confusedWith: ['fd_0300', 'fd_0298'],
+		line: 'Roast Label Rouge chicken, morels, vin jaune',
+		traps: [
+			{ says: 'Premium French chicken brand raised by a single family farm group', why: 'It is a government quality mark that many separate farms and producers can earn, not a brand.' },
+			{ says: 'Seal promising the fish was caught wild in cold Scottish sea lochs', why: 'The salmon that carries it is farmed. The mark covers how it is raised and fed, not a wild catch.' }
+		]
+	},
+	{
+		id: 'fd_0417',
+		term: 'Dry-Farmed',
+		level: 4,
+		gist: 'Crops left unwatered once rooted, living on stored winter rain',
+		guest: 'The farmer stops watering once the plants take hold, so they live on rain stored in the soil. The fruit comes in smaller, denser and more intense.',
+		why: 'Winter rain soaks deep into the soil, and once the plants take hold the grower stops irrigating, so roots chase that moisture down. Less water means smaller, denser tomatoes, potatoes or melons with concentrated flavor and thicker skin. Yields drop, so it costs more.',
+		origin: 'An old practice of rain-fed climates, revived by California growers',
+		notThis: 'Not sun-dried or dried fruit. The crop is sold fresh; only the field went without irrigation.',
+		seeAlso: ['fd_0285', 'fd_0300', 'fd_0354'],
+		line: 'Dry-farmed Early Girl tomatoes, burrata, basil',
+		traps: [
+			{ says: 'Fruit left to wither in the sun after picking to concentrate sugar', why: 'The crop is sold fresh. Only the field goes unwatered while it grows.' }
+		]
+	},
+	{
+		id: 'fd_0418',
+		term: 'Trou Normand',
+		level: 4,
+		say: 'TROO nor-MAHN',
+		gist: 'Mid-meal pause of apple brandy, often poured over a small sorbet',
+		guest: "It's a little pause mid-meal, apple sorbet with a pour of Calvados, the apple brandy of Normandy. It clears your palate for the courses to come.",
+		why: 'At long Norman feasts a glass of Calvados was drunk between courses, said to dig a hole for what was left. Kitchens now serve a small sorbet, often green apple, with the brandy poured over. Cold, sharp and strong, it cuts through richness.',
+		madeWith: ['apple brandy', 'apple', 'sugar', 'sometimes egg white'],
+		note: 'The brandy is poured at full strength and never cooked off, and the sorbet may hold spirit too. Name it to every guest and ask the kitchen for its swap.',
+		origin: 'French, Norman hole: the gap a mid-feast Calvados makes for more',
+		notThis: 'Not just a sorbet course: the point is the apple brandy, and the sorbet carries it.',
+		seeAlso: ['fd_0290', 'fd_0288'],
+		confusedWith: ['fd_0259'],
+		line: 'Trou normand, green apple sorbet, Calvados',
+		traps: [
+			{ says: 'Whole apple baked in a pastry crust, served warm with fresh cream', why: 'It is a small cold pause in the middle of the meal, brandy over sorbet, not a baked dessert.' }
+		]
+	},
+	{
+		id: 'fd_0419',
+		term: 'Kappo',
+		level: 4,
+		say: 'KAH-poh',
+		gist: 'Japanese counter where the chef grills, simmers and fries before you',
+		guest: "You sit at the counter and the chef cooks right in front of you, from raw fish to grilled and simmered dishes, like dinner in the chef's own kitchen.",
+		why: 'The counter puts the guest beside the cutting board and the stove. Sashimi, grilled, simmered and fried dishes come straight across, often as a set course with room to order more and talk with the chef. Looser than kaiseki, broader than sushi.',
+		madeWith: ['fish', 'soy', 'often shellfish', 'often wheat flour', 'often egg', 'often sake or mirin', 'sometimes sesame'],
+		origin: 'Japanese, to cut and to cook, the two halves of the craft',
+		notThis: "Not a sushi counter, and not kaiseki's fixed order. Many kappo counters serve their course omakase-style.",
+		confusedWith: ['fd_0355', 'fd_0415'],
+		line: 'Kappo counter tasting, eight courses, sake by the glass'
 	}
 ];
 

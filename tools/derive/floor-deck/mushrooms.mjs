@@ -367,6 +367,100 @@ const cards = [
 		seeAlso: ['fd_0140'],
 		confusedWith: ['fd_0141', 'fd_0152'],
 		line: 'Roasted hedgehog mushrooms, chanterelles, brown butter'
+	},
+	{
+		id: 'fd_0379',
+		term: 'Bianchetto Truffle',
+		level: 4,
+		say: 'bee-ahn-KET-oh',
+		aliases: ['Marzuolo', 'Tartufo Bianchetto'],
+		gist: 'Smaller spring white truffle, sharper and more garlicky',
+		guest: "It's Italy's spring white truffle, shaved over the dish like the Alba truffle in fall. It's sharper and more garlicky, and it costs far less.",
+		why: 'A different species from the Alba white truffle, it grows on the roots of pine, oak and poplar across Italy and Europe, and it is now farmed. It ripens from about January to April. Inside it darkens to reddish brown, and its scent is garlicky rather than honeyed.',
+		madeWith: ['fresh truffle', 'often butter', 'often egg', 'often wheat pasta', 'sometimes parmesan'],
+		origin: 'Italian for little white one; marzuolo means the March truffle',
+		notThis: 'Not the Alba white truffle, a fall species. A white truffle offered in spring is almost always this one.',
+		seeAlso: ['fd_0147', 'fd_0323', 'fd_0148'],
+		confusedWith: ['fd_0321'],
+		line: 'Tagliolini, butter, shaved bianchetto truffle',
+		traps: [
+			{ says: 'The Alba white truffle itself, simply dug later in the spring', why: 'It is a separate species, smaller and sharper, and worth a fraction of the Alba price.' },
+			{ says: 'Young white truffle dug before it ripens, sold at a discount', why: 'It is a ripe truffle of its own species; the name means little white one, not unripe.' }
+		]
+	},
+	{
+		id: 'fd_0380',
+		term: 'Huitlacoche',
+		level: 4,
+		say: 'weet-lah-KOH-chay',
+		aliases: ['Cuitlacoche', 'Corn Smut', 'Mexican Truffle'],
+		gist: 'Fungus that swells ears of corn into soft, inky gray kernels',
+		guest: "It's a fungus that grows on ears of corn, a real delicacy in Mexico. It tastes earthy and smoky, like a mushroom with a little sweet corn.",
+		why: 'A fungus infects growing corn and swells the kernels into silvery gray lobes that are black inside. It is picked young, while still moist, and cooked down with onion, chile and epazote. It eats soft and creamy, earthy like a mushroom, with a sweet corn note.',
+		madeWith: ['huitlacoche', 'often onion', 'often garlic', 'often chile', 'often epazote', 'sometimes cheese', 'sometimes corn tortilla'],
+		note: 'It cooks down to a glossy black filling. The color is normal, not burnt.',
+		origin: 'Nahuatl, the Aztec language of central Mexico',
+		notThis: 'Not a truffle, though menus call it Mexican truffle. It grows on corn above ground, not under trees.',
+		seeAlso: ['fd_0140'],
+		confusedWith: ['fd_0147'],
+		line: 'Huitlacoche quesadilla, Oaxaca cheese, salsa verde',
+		traps: [
+			{ says: 'Wild black truffle dug from the oak forests of the Mexican highlands', why: 'It is not a truffle and grows on corn plants, not underground on tree roots.' },
+			{ says: 'Corn kernels charred black in a dry pan until smoky and sweet', why: 'The black color comes from a fungus growing in the kernels, not from charring.' }
+		]
+	},
+	{
+		id: 'fd_0381',
+		term: 'Lobster Mushroom',
+		level: 4,
+		gist: 'Wild mushroom turned red-orange and firm by a mold over it',
+		guest: "It's a wild mushroom that a second fungus turns bright red-orange, like a cooked lobster shell. Firm and meaty, with a mild, faintly sea-like sweetness.",
+		why: 'It starts as a plain white milk cap or brittlegill. A parasitic mold coats it, turns the skin red-orange, smooths the gills and firms the flesh. It is foraged in North America from summer into fall, stays dense when cooked and smells faintly of the sea.',
+		madeWith: ['lobster mushroom', 'often butter', 'often garlic', 'sometimes cream', 'sometimes white wine'],
+		origin: 'Named for its color, the red-orange of a cooked lobster shell',
+		notThis: "Not lobster, just named for its color, nor lion's mane, the white mushroom cooked like crab. Ask the kitchen about shellfish.",
+		seeAlso: ['fd_0153', 'fd_0141'],
+		confusedWith: ['fd_0136', 'fd_0152'],
+		line: 'Lobster mushrooms, sweet corn, brown butter, tarragon',
+		traps: [
+			{ says: 'Its own wild species, red-orange from the day it first sprouts', why: 'It is another mushroom made red and firm by a parasitic mold, not a species of its own.' },
+			{ says: 'Farmed orange oyster mushroom bred for a shellfish-like taste', why: 'It is wild and foraged, a host mushroom changed by a mold, and it is not farmed.' }
+		]
+	},
+	{
+		id: 'fd_0382',
+		term: 'Yellowfoot Chanterelle',
+		level: 4,
+		say: 'YEL-oh-foot shan-tuh-REL',
+		aliases: ['Winter Chanterelle', 'Funnel Chanterelle', 'Yellow Legs'],
+		gist: 'Small wild winter funnel, brown top on a hollow golden stem',
+		guest: "It's a small winter cousin of the golden chanterelle, with a brown cap and a yellow stem. It's tender and earthy, and milder than the golden one.",
+		why: 'Foraged, not farmed, it fruits in mossy conifer forest from fall into winter, after golden chanterelles fade. Its thin cap and hollow stem cook in a minute, so it eats tender rather than meaty, earthier and milder than the golden one. It dries well.',
+		madeWith: ['yellowfoot mushroom', 'often butter', 'often shallot', 'sometimes cream', 'sometimes thyme'],
+		pairs: 'Roast squash, sage, brown butter, game birds, wild rice',
+		notThis: 'Not the golden chanterelle, thick and fleshy, nor the black trumpet, its near-black cousin. Look for the yellow stem.',
+		seeAlso: ['fd_0324'],
+		confusedWith: ['fd_0141', 'fd_0140'],
+		line: 'Yellowfoot chanterelles, roast squash, sage, brown butter',
+		traps: [
+			{ says: 'Young golden mushroom picked early, before its cap opens out', why: 'It is a separate, smaller species with a brown cap and hollow stem, not a young golden one.' }
+		]
+	},
+	{
+		id: 'fd_0383',
+		term: 'Candy Cap',
+		level: 4,
+		gist: 'Tiny wild West Coast mushroom that dries to a maple scent',
+		guest: "It's a little wild California mushroom that smells just like maple syrup once it's dried. In dessert it tastes of maple and burnt sugar, not of mushroom.",
+		why: 'A small orange-brown milk cap foraged in West Coast forests in the winter rains. Drying creates sotolon, the same aroma found in fenugreek, so it smells of maple syrup and burnt sugar. Steeped in warm cream, it flavors custards and ice cream.',
+		madeWith: ['dried candy cap mushroom', 'cream', 'milk', 'often egg yolk', 'sugar', 'sometimes gelatin'],
+		pairs: 'Ice cream, panna cotta, custard, pears, pecans, brown butter',
+		notThis: 'Not candy and not maple syrup. It is a wild mushroom that smells of maple once it is dried.',
+		seeAlso: ['fd_0260', 'fd_0254', 'fd_0250'],
+		line: 'Candy cap panna cotta, poached pear, pecan crumble',
+		traps: [
+			{ says: 'Wild mushroom preserved in maple syrup and used as a garnish', why: 'The maple smell is its own, from drying; it is not soaked in or sweetened with syrup.' }
+		]
 	}
 ];
 

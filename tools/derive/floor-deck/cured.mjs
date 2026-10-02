@@ -516,6 +516,98 @@ const cards = [
 		traps: [
 			{ says: 'Spicy Louisiana sausage of pork, liver and rice, steamed in its casing', why: 'That describes the Cajun rice sausage. This is the French sausage made with pork blood.' }
 		]
+	},
+	{
+		id: 'fd_0365',
+		term: 'Pâté en Croûte',
+		level: 4,
+		say: 'pah-TAY ahn-KROOT',
+		gist: 'Meat loaf baked in a decorated crust, sealed with jelly, served cold',
+		guest: "It's a classic French meat pie, served cold in thick slices. A rich pâté baked in golden pastry, often with pistachio or foie gras set in the middle.",
+		why: 'Pork or game forcemeat, often inlaid with duck, foie gras or pistachio, is baked in a tall pastry case with steam holes on top. Baking shrinks the meat, so savory aspic is poured in to fill the gap. It slices clean: crisp crust, firm meat, a band of jelly.',
+		madeWith: ['pork', 'wheat flour', 'butter', 'egg', 'gelatin', 'often pistachio', 'often brandy'],
+		notThis: 'Not a hot pastry dish like beef Wellington. This one is baked ahead, chilled and sliced.',
+		lexiconSlug: 'pate-en-croute',
+		recipe: 'pate-en-croute',
+		seeAlso: ['fd_0073', 'fd_0084', 'fd_0055'],
+		confusedWith: ['fd_0338'],
+		line: 'Duck and pistachio pâté en croûte, cornichons, mustard',
+		traps: []
+	},
+	{
+		id: 'fd_0366',
+		term: 'Boudin Blanc',
+		level: 3,
+		say: 'boo-DAN BLAHN',
+		gist: 'Pale, mild French sausage of pork or chicken, milk and egg',
+		guest: "It's France's white sausage, pork or chicken made silky with milk and egg, then browned in butter. Mild, soft and a holiday classic, sometimes with truffle.",
+		why: 'Finely ground pork, chicken or veal is blended with milk or cream, egg and often a little bread or flour, piped into casings and poached. White meat, never smoked, keeps it pale and mild, with a fine, almost mousse-like texture, softer than any bratwurst.',
+		madeWith: ['pork', 'milk', 'egg', 'often cream', 'often butter', 'sometimes chicken', 'sometimes bread or flour'],
+		note: 'Already poached, so the kitchen only browns it, and gently, or the skin splits.',
+		notThis: 'Not boudin noir, made with blood, nor Cajun boudin, a spicy pork and rice link of the same name.',
+		lexiconSlug: 'boudin-noir-and-boudin-blanc',
+		seeAlso: ['fd_0147'],
+		confusedWith: ['fd_0312'],
+		line: 'Truffled boudin blanc, potato puree, sauteed apples',
+		traps: [
+			{ says: 'Smoked white pork sausage, cured hard and sliced thin on the board', why: 'It is poached fresh, never smoked or dry-cured, and it is served warm, not sliced raw.' }
+		]
+	},
+	{
+		id: 'fd_0367',
+		term: 'Sobrasada',
+		level: 4,
+		say: 'soh-brah-SAH-dah',
+		aliases: ['Sobrassada'],
+		gist: 'Spreadable Mallorcan pork sausage cured with paprika',
+		guest: "It's Mallorca's spreadable cured sausage, pork and paprika, rich and usually mellow rather than fiery. It's best warm on toast with a drizzle of honey.",
+		why: "Pork and a large share of fat are ground fine with pimentón and salt, cased and cured in the island's damp, cool air for weeks to months. That humidity keeps it soft, so it stays a red paste. Beside 'nduja it is sweeter and gentler: paprika, not chile.",
+		madeWith: ['pork', 'pork fat', 'paprika', 'salt', 'often black pepper', 'sometimes hot pepper'],
+		note: 'Cured raw, not cooked, though kitchens often warm it on the toast.',
+		origin: 'Mallorca, Spain; Sobrassada de Mallorca is a protected name',
+		notThis: "Not 'nduja, the Calabrian spread, which is chile-hot. This one is paprika-led and usually mild.",
+		lexiconSlug: 'sobrasada',
+		seeAlso: ['fd_0065', 'fd_0283'],
+		confusedWith: ['fd_0081'],
+		line: 'Grilled bread, sobrasada, honey, flaky salt',
+		traps: [
+			{ says: 'Spicy Spanish pork pâté, baked in a mold and served chilled', why: 'It is a raw sausage cured in its casing, never baked or molded.' }
+		]
+	},
+	{
+		id: 'fd_0368',
+		term: 'Cotechino',
+		level: 4,
+		say: 'koh-teh-KEE-noh',
+		gist: 'Large Italian pork sausage soft with rind, simmered and served hot',
+		guest: "It's a big, soft pork sausage from northern Italy, simmered for hours and served hot in thick slices. Italians eat it with lentils at New Year for luck.",
+		why: 'Pork meat, fat and a large share of salted pork rind are ground with spice and stuffed into a thick casing. Simmered slowly, the rind melts into gelatin, so it slices soft, sticky and rich, more like a braise than a salami. It is never eaten raw.',
+		madeWith: ['pork', 'pork rind', 'pork fat', 'black pepper', 'often nutmeg', 'often cinnamon', 'sometimes wine'],
+		origin: 'Modena, Emilia-Romagna; from cotica, Italian for pork rind',
+		notThis: "Not zampone, the same filling stuffed into a boned pig's trotter. Same flavor, different wrapper.",
+		recipe: 'cotechino-con-lenticchie',
+		seeAlso: ['fd_0274'],
+		line: 'Cotechino, braised lentils, mostarda',
+		traps: []
+	},
+	{
+		id: 'fd_0369',
+		term: 'Andouillette',
+		level: 4,
+		say: 'ahn-doo-YET',
+		gist: 'French sausage of pork intestine and stomach, strong-smelling',
+		guest: "It's a French bistro sausage of pork intestines, grilled and served with mustard and fries. It smells strong and funky, and its fans love it.",
+		why: 'Strips of pork intestine and stomach, seasoned with onion, wine and pepper, are packed into a casing and poached, then grilled to order. Cut it and you see the strips. It is chewy and rich, the smell is farmyard, and it is nothing like smoky Cajun andouille.',
+		madeWith: ['pork intestine', 'pork stomach', 'onion', 'often white wine', 'sometimes mustard', 'sometimes veal'],
+		note: 'Warn guests about the strong smell before they order. It is a feature, not a fault.',
+		origin: 'Troyes and Lyon, France; the name means little andouille',
+		notThis: "Not andouille, Louisiana's smoked pork sausage for gumbo. Same root word, different sausage.",
+		seeAlso: ['fd_0305', 'fd_0366'],
+		confusedWith: ['fd_0064'],
+		line: 'Grilled andouillette, Dijon mustard sauce, frites',
+		traps: [
+			{ says: 'Mild little French pork breakfast link, finely ground and lean', why: 'It is coarse, made from intestine and stomach, and famous for a strong, earthy smell.' }
+		]
 	}
 ];
 

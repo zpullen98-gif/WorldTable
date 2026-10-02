@@ -808,6 +808,207 @@
 			],
 			"critic": null,
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0401",
+				"fd_0402",
+				"fd_0403",
+				"fd_0404"
+			],
+			"findings": [
+				{
+					"id": "fd_0402",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "often almonds",
+					"because": "Sliced or flaked almonds scattered on the choux ring before baking are part of the classic build (the deck's own paris-brest recipe uses 30 g flaked almonds), and classic praliné is often half almond. A guest with an almond allergy needs it flagged as standard, not occasional.",
+					"fix": "almonds",
+					"lens": "fact",
+					"key": "bread-1-fact-1"
+				},
+				{
+					"id": "fd_0402",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "French, 1910, for the Paris to Brest bike race, shaped like a wheel",
+					"because": "The race it honors is Paris-Brest-Paris, a round trip founded in 1891; the cake was made in 1910 by Louis Durand of Maisons-Laffitte. Calling it a Paris to Brest race misnames the event a guest may know.",
+					"fix": "1910, for the Paris-Brest-Paris bike race, shaped like a wheel",
+					"lens": "fact",
+					"key": "bread-1-fact-2"
+				},
+				{
+					"id": "fd_0404",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"water\", \"sometimes cornstarch\"",
+					"because": "The Greek kataifi dessert is classically filled with walnuts AND almonds (Turkish versions lean on pistachio). Almonds are missing while water and cornstarch, which no guest needs flagged, take two of the seven slots.",
+					"fix": "replace \"water\" with \"sometimes almonds\"",
+					"lens": "fact",
+					"key": "bread-1-fact-3"
+				},
+				{
+					"id": "fd_0404",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's shredded phyllo pastry, fine as threads",
+					"because": "Kataifi is not cut from phyllo sheets: as the card's own why says, it is a thin batter streamed onto a hot spinning plate. 'Shredded phyllo' is a retail label, not how it is made, and telling a guest it is shredded phyllo contradicts the why.",
+					"fix": "It's a phyllo-style pastry spun into fine threads",
+					"lens": "fact",
+					"key": "bread-1-fact-4"
+				},
+				{
+					"id": "fd_0402",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's a ring of crisp choux pastry filled with a rich hazelnut praline cream.",
+					"because": "\"Choux\" is kitchen jargon most guests do not know, and a nervous new hire may stumble saying it aloud. Guests know cream-puff pastry, and the card's own why compares it to an eclair.",
+					"fix": "It's a ring of crisp cream-puff pastry filled with rich hazelnut praline cream.",
+					"lens": "floor",
+					"key": "bread-1-floor-5"
+				},
+				{
+					"id": "fd_0403",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's tiny flakes of crisp baked crepe folded into chocolate or praline.",
+					"because": "A guest hears \"crepe\" and pictures a soft pancake, so \"baked crepe\" confuses them more than it helps. Feuilletine is crushed lace-thin crepe cookies (crepes dentelles), and the card's own gist and why already say they are wafer-thin and brittle. \"It's tiny flakes\" also stumbles when said aloud.",
+					"fix": "It's crushed paper-thin crepe cookies folded into chocolate or praline.",
+					"lens": "floor",
+					"key": "bread-1-floor-6"
+				},
+				{
+					"id": "fd_0401",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "sant-oh-noh-RAY",
+					"because": "A new hire reads \"sant\" as English \"saint\" or \"Santa\". American dining rooms run the nasal syllable into a T-sound liaison, giving san-toh-noh-RAY, and that respelling reads cleanly under the key.",
+					"fix": "san-toh-noh-RAY",
+					"lens": "floor",
+					"key": "bread-1-floor-7"
+				},
+				{
+					"id": "fd_0403",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "sometimes hazelnuts",
+					"because": "The praline that binds feuilletine into a crunch layer is classically almond and hazelnut together, as in the standard almond-hazelnut praline pastes pastry kitchens buy. Listing only hazelnuts lets a server with an almond-allergic guest miss the almond. The why says the flakes are coated in praline paste without naming the nut, so the madeWith list is the only place the almond can be flagged.",
+					"fix": "sometimes hazelnuts or almonds",
+					"lens": "safety",
+					"key": "bread-1-safety-8"
+				},
+				{
+					"key": "bread-critic-1",
+					"id": "fd_0402",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The gist \"Wheel of choux pastry split and filled with hazelnut praline cream\" contains \"choux\". That is the alias of Pâte à Choux (fd_0243), and \"choux\" is on fd_0243's mayNotAppearInGistOrTraps list. When this gist is drawn as a wrong option under Pâte à Choux, the echoed term pulls the reader to the wrong answer. At 66 characters it is also longer than its only trap (63), so the gist is the longest option.",
+					"because": "The gist \"Wheel of choux pastry split and filled with hazelnut praline cream\" contains \"choux\". That is the alias of Pâte à Choux (fd_0243), and \"choux\" is on fd_0243's mayNotAppearInGistOrTraps list. When this gist is drawn as a wrong option under Pâte à Choux, the echoed term pulls the reader to the wrong answer. At 66 characters it is also longer than its only trap (63), so the gist is the longest option.",
+					"fix": "Use gist \"Eclair-dough wheel split and filled with hazelnut praline cream\" (63). It is term-free for both cards and no longer than the trap."
+				},
+				{
+					"key": "bread-critic-2",
+					"id": "fd_0401",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity. The gist (67) is longer than the card's only trap (64), so the right answer is the longest option, which the brief forbids.",
+					"because": "Length parity. The gist (67) is longer than the card's only trap (64), so the right answer is the longest option, which the brief forbids.",
+					"fix": "Shorten the gist to \"Pastry base topped with caramel-dipped cream puffs and cream\" (60), or to anything 63 or under that keeps the caramel-dipped puffs on a flat base. Do not lengthen the trap."
+				},
+				{
+					"key": "bread-critic-3",
+					"id": "fd_0403",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Length parity. The gist (64) is longer than the card's only trap (61), so the right answer is the longest option.",
+					"because": "Length parity. The gist (64) is longer than the card's only trap (61), so the right answer is the longest option.",
+					"fix": "Shorten the gist to \"Crushed flakes of brittle baked crepe, used as a crunch layer\" (61)."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "bread-1-fact-1",
+					"action": "applied",
+					"reason": "Changed \"often almonds\" to \"almonds\" in madeWith, since the classic ring is scattered with flaked almonds (as the card's own why, line and the paris-brest recipe show)."
+				},
+				{
+					"finding": "bread-1-fact-2",
+					"action": "applied",
+					"reason": "Origin now reads \"French, 1910, for the Paris-Brest-Paris bike race, shaped like a wheel\", naming the round-trip race correctly."
+				},
+				{
+					"finding": "bread-1-fact-3",
+					"action": "applied",
+					"reason": "Replaced \"water\" with \"sometimes almonds\" in madeWith so the almond in Greek walnut-and-almond kataifi fillings is flagged; cornstarch kept as a minor binder."
+				},
+				{
+					"finding": "bread-1-fact-4",
+					"action": "applied",
+					"reason": "Guest line now opens \"It's a phyllo-style pastry spun into fine threads\", which matches the why's spun-batter method; the retail alias Shredded Phyllo stays in aliases."
+				},
+				{
+					"finding": "bread-1-floor-5",
+					"action": "applied",
+					"reason": "Guest line now says \"crisp cream-puff pastry\" instead of \"choux\" (147 chars), removing the kitchen jargon."
+				},
+				{
+					"finding": "bread-1-floor-6",
+					"action": "applied",
+					"reason": "Guest line now reads \"It's made of crushed, paper-thin crepe cookies folded into chocolate or praline\", matching the crepes dentelles it is made from and reading cleanly aloud."
+				},
+				{
+					"finding": "bread-1-floor-7",
+					"action": "applied",
+					"reason": "Respelling changed to san-toh-noh-RAY, which carries the liaison T and does not read as English \"saint\"."
+				},
+				{
+					"finding": "bread-1-safety-8",
+					"action": "applied",
+					"reason": "Changed \"sometimes hazelnuts\" to \"sometimes hazelnuts or almonds\" because classic praline is made with both nuts, so the almond is flagged."
+				},
+				{
+					"finding": "bread-critic-1",
+					"action": "applied",
+					"reason": "Gist changed to \"Eclair-dough ring split and filled with hazelnut praline cream\" (62), which drops \"choux\" and now runs one character under the 63-character trap rather than tying it."
+				},
+				{
+					"finding": "bread-critic-2",
+					"action": "applied",
+					"reason": "Gist shortened to the suggested \"Pastry base topped with caramel-dipped cream puffs and cream\" (60), below the 64-character trap and free of saint/honore."
+				},
+				{
+					"finding": "bread-critic-3",
+					"action": "applied",
+					"reason": "Gist shortened to \"Crushed flakes of crisp baked crepe, used as a crunch layer\" (59), two under the 61-character trap so it no longer ties as the longest option."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0402",
+						"issue": "The gist \"Wheel of choux pastry split and filled with hazelnut praline cream\" contains \"choux\". That is the alias of Pâte à Choux (fd_0243), and \"choux\" is on fd_0243's mayNotAppearInGistOrTraps list. When this gist is drawn as a wrong option under Pâte à Choux, the echoed term pulls the reader to the wrong answer. At 66 characters it is also longer than its only trap (63), so the gist is the longest option.",
+						"fix": "Use gist \"Eclair-dough wheel split and filled with hazelnut praline cream\" (63). It is term-free for both cards and no longer than the trap."
+					},
+					{
+						"id": "fd_0401",
+						"issue": "Length parity. The gist (67) is longer than the card's only trap (64), so the right answer is the longest option, which the brief forbids.",
+						"fix": "Shorten the gist to \"Pastry base topped with caramel-dipped cream puffs and cream\" (60), or to anything 63 or under that keeps the caramel-dipped puffs on a flat base. Do not lengthen the trap."
+					},
+					{
+						"id": "fd_0403",
+						"issue": "Length parity. The gist (64) is longer than the card's only trap (61), so the right answer is the longest option.",
+						"fix": "Shorten the gist to \"Crushed flakes of brittle baked crepe, used as a crunch layer\" (61)."
+					}
+				],
+				"notes": "I checked the whole section: all 24 roster rows have cards. The 20 existing cards are in C:/Users/zpull/WorldTable/tools/derive/floor-deck/bread.mjs, and fd_0401 to fd_0404 are still stubs there. With the four new cards counted, the section mean is 657 characters, under the 720 ceiling. Card totals: 0401 716, 0402 590, 0403 674, 0404 675.\n\nClean on all four new cards:\n- Verdict words: none.\n- Banned substrings: none.\n- Dashes: no em or en dashes.\n- Full-stop rules: followed.\n- Respellings: every new card has a \"say\".\n- Overlap: no gist or guest line collides with another card in the section.\n- Links: every seeAlso and confusedWith term exists in everyCard (Chiboust fd_0406, Chantilly fd_0265, Pastry Cream fd_0264, Crémeux fd_0346, Mousse fd_0252).\n- Traps: the croquembouche and baklava traps describe no card on the roster.\n- Known packet error: the only one is on fd_0239 Macaroon, and it is already met. Its trap \"Two little sponge cakes sandwiched...\" matches /sandwich/.\n- Facts checked: Chiboust's shop on rue Saint-Honoré in the 1840s, Saint Honoré as patron saint of bakers, Paris-Brest in 1910 for the bike race with sliced almonds on top, feuilletine as crushed crêpes dentelle, kataifi batter streamed onto a spinning plate.\n\nOptional for the operator:\n1. The Feuilletine to Puff Pastry confusion runs one way only. Puff Pastry (fd_0244) lists only fd_0243 in confusedWith, so adding fd_0403 there would link the feuilletine / pâte feuilletée confusion from both sides. This is only needed if the build does not mirror links itself.\n2. Level placement. The author put all four new rows at level 4 (Chef). Saint-Honoré, Feuilletine and Kataifi fit that. Paris-Brest is arguably level 3 (Sous Chef): it is a standard dessert-menu word at a good restaurant.\n3. Kataifi's guest line calls it \"phyllo-style\". That matches the trade name (\"shredded phyllo\"), but the why rightly says it is a spun batter, not stretched dough. It is acceptable as written. Knafeh / kunafa threads are the same product, which is worth knowing if an alias is ever wanted.\n4. The existing cards often break gist length parity too (Beignets 65 vs 60, Focaccia 69 vs 64, Sourdough 65 vs 62). The gate does not seem to check it, so a section-wide pass would help if the longest-option score matters."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

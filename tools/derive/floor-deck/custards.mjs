@@ -380,6 +380,93 @@ const cards = [
 		traps: [
 			{ says: "Soft, runny Alpine cow's milk cheese ripened in a band of spruce bark", why: 'That is the cheese that shares the name. On a dessert menu it is a meringue shell filled with ice cream.' }
 		]
+	},
+	{
+		id: 'fd_0405',
+		term: 'Île Flottante',
+		level: 4,
+		say: 'eel floh-TAHNT',
+		aliases: ['Floating Island', 'Oeufs à la Neige'],
+		gist: 'Soft poached meringue clouds served on a pool of cold vanilla sauce',
+		guest: "It's a French classic, soft clouds of meringue poached in milk and set on a cool vanilla custard sauce, finished with caramel and often toasted almonds.",
+		why: 'Sweet whipped egg whites are poached by the spoonful in barely simmering milk, or set as one mound in a water bath, so they stay soft and marshmallowy. The milk often becomes the crème anglaise beneath. It eats like a sweet cloud on silk.',
+		madeWith: ['egg white', 'egg yolk', 'milk', 'sugar', 'often vanilla', 'often almonds'],
+		origin: "French for 'floating island'; also sold as oeufs à la neige, 'snow eggs'",
+		notThis: 'Not a pavlova, which is baked with a crisp shell. These are cooked soft in milk or a water bath.',
+		seeAlso: ['fd_0249', 'fd_0240', 'fd_0250'],
+		confusedWith: ['fd_0247'],
+		line: 'Île flottante, vanilla crème anglaise, caramel, toasted almonds'
+	},
+	{
+		id: 'fd_0406',
+		term: 'Chiboust',
+		level: 4,
+		say: 'shee-BOOST',
+		gist: 'Pastry cream lightened with cooked meringue and set, often torched',
+		guest: "It's a silky custard lightened with meringue, often with a crackly torched sugar top like a crème brûlée.",
+		why: 'Hot pastry cream is folded with Italian meringue, whites whipped with boiling sugar syrup, plus a little gelatin so it holds a clean edge. It eats lighter than pastry cream and richer than mousse, and sugared on top it torches like a brûlée.',
+		madeWith: ['milk', 'egg yolk', 'egg white', 'sugar', 'gelatin', 'often wheat flour'],
+		origin: 'Paris, 1840s, named for the pastry cook whose shop created the Saint-Honoré',
+		notThis: 'Not plain pastry cream, which is thick and dense. This one is lightened with meringue.',
+		seeAlso: ['fd_0401', 'fd_0240', 'fd_0262'],
+		confusedWith: ['fd_0264'],
+		line: 'Meyer lemon chiboust, blueberries, brown butter crumble',
+		traps: [
+			{ says: 'Pastry cream lightened with folded whipped cream, then piped chilled', why: 'That is diplomat cream. This one is lightened with cooked meringue, not whipped cream.' }
+		]
+	},
+	{
+		id: 'fd_0407',
+		term: 'Bavarois',
+		level: 4,
+		say: 'bah-vahr-WAH',
+		aliases: ['Bavarian Cream', 'Crème Bavaroise'],
+		gist: 'Yolk custard set with gelatin and whipped cream, turned out of a mold',
+		guest: "It's a classic French molded cream, a silky custard set with gelatin and lightened with whipped cream. Cool, smooth and lighter than it looks.",
+		why: 'It starts as crème anglaise, milk and yolks stirred until thick. Gelatin is melted in, whipped cream folded through as it cools, and it sets in a mold. It turns out with clean sides and eats cool, light and custardy, eggier than panna cotta and firmer than mousse.',
+		madeWith: ['milk', 'egg yolk', 'cream', 'sugar', 'gelatin', 'often vanilla'],
+		origin: "French for 'Bavarian', a 19th-century classic with an unclear tie to Bavaria",
+		notThis: 'Not panna cotta, which is sweet cream set with gelatin. A bavarois starts from a yolk custard.',
+		seeAlso: ['fd_0249', 'fd_0265'],
+		confusedWith: ['fd_0254', 'fd_0252'],
+		line: 'Vanilla bavarois, poached rhubarb, almond tuile'
+	},
+	{
+		id: 'fd_0408',
+		term: 'Chocolate Marquise',
+		level: 4,
+		say: 'CHAWK-lit mar-KEEZ',
+		gist: 'Dense unbaked slab of dark cocoa, butter and yolks, set cold',
+		guest: "It's dark chocolate, butter and egg yolks chilled into a block and sliced, never baked. Dense and silky, like the center of a truffle.",
+		why: 'Melted chocolate and butter are folded with yolks and sugar, sometimes whipped cream, then set cold in a loaf mold. With no oven and little air, it is denser than mousse and silkier than a flourless cake, and it melts as it warms.',
+		madeWith: ['dark chocolate', 'butter', 'egg yolk', 'sugar', 'often cream', 'sometimes liqueur'],
+		note: 'Classic recipes leave the yolks uncooked, set only by cold chocolate and butter. Ask how the house makes it.',
+		notThis: 'Not a mousse, which is airy, or a flourless cake, which is baked. A marquise never sees the oven.',
+		seeAlso: ['fd_0251', 'fd_0255', 'fd_0346'],
+		confusedWith: ['fd_0252', 'fd_0242'],
+		line: 'Chocolate marquise, crème anglaise, raspberries',
+		traps: [
+			{ says: 'Rich cocoa cake baked until just set, served warm from the oven', why: 'It is never baked. It is set cold in a mold and served chilled.' }
+		]
+	},
+	{
+		id: 'fd_0409',
+		term: 'Nougat Glacé',
+		level: 4,
+		say: 'NOO-gut glah-SAY',
+		gist: 'Honey meringue and cream frozen with nut brittle and candied fruit',
+		guest: "It's a frozen French dessert of honey meringue and whipped cream, packed with toasted nuts and candied fruit, sliced like a cake.",
+		why: 'Hot honey and sugar syrup is whipped into egg whites, a cooked meringue that stays soft when frozen, then folded with whipped cream, nut brittle and candied fruit. Never churned, it is set in a mold and sliced, a frozen, creamy take on the candy.',
+		madeWith: ['egg white', 'honey', 'cream', 'almonds', 'often pistachios', 'often hazelnuts', 'often candied fruit'],
+		origin: "French, 'iced nougat'; a frozen take on the honey nougat of Provence",
+		notThis: 'Not a parfait or most semifreddos, which rest on whipped yolks. This is honey meringue full of nut brittle.',
+		seeAlso: ['fd_0240', 'fd_0348'],
+		confusedWith: ['fd_0261', 'fd_0253'],
+		line: 'Nougat glacé, pistachio, raspberry coulis',
+		traps: [
+			{ says: 'Honey ice cream churned with chopped nuts and scooped like gelato', why: 'It is never churned. It is a meringue and cream mixture frozen in a mold and sliced.' },
+			{ says: 'Chewy honey and almond candy, cut into bars and served straight frozen', why: 'It is a soft frozen cream, not a candy. Only the brittle and candied fruit inside give it crunch or chew.' }
+		]
 	}
 ];
 

@@ -889,6 +889,353 @@
 			],
 			"critic": null,
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0415",
+				"fd_0416",
+				"fd_0417",
+				"fd_0418",
+				"fd_0419"
+			],
+			"findings": [
+				{
+					"id": "fd_0415",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"fish\", \"rice\", \"soy\", \"often shellfish\"",
+					"because": "Kaiseki cooking relies on soy sauce, which is brewed with wheat, and on sake and mirin in its simmered and grilled courses. Sesame is also common. Wheat and alcohol are the flags a guest is most likely to need, and the list leaves both out.",
+					"fix": "\"fish\", \"rice\", \"soy\", \"often wheat\", \"often shellfish\", \"often sake or mirin\", \"sometimes sesame\"",
+					"lens": "fact",
+					"key": "language-1-fact-2"
+				},
+				{
+					"id": "fd_0419",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"fish\", \"soy\", \"rice\", \"often shellfish\"",
+					"because": "The card's own why lists fried dishes. At a kappo counter that usually means tempura or karaage, coated in wheat flour and often egg batter. Soy sauce is brewed with wheat, and sake and mirin season the simmered dishes. Wheat, egg and alcohol all go unflagged.",
+					"fix": "\"fish\", \"soy\", \"rice\", \"often wheat flour\", \"often shellfish\", \"sometimes egg\", \"often sake or mirin\"",
+					"lens": "fact",
+					"key": "language-1-fact-3"
+				},
+				{
+					"id": "fd_0419",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Not omakase, which centers on sushi, and not kaiseki, a fixed formal order.",
+					"because": "Omakase means chef's choice and is not limited to sushi. The deck's own Omakase card says other kitchens borrow the word for any chef's-choice meal. Many kappo counters serve their set course omakase-style, so \"not omakase\" tells a server something false.",
+					"fix": "Not a sushi counter and not kaiseki's fixed formal order. The chef may still choose for you, omakase-style.",
+					"lens": "fact",
+					"key": "language-1-fact-4"
+				},
+				{
+					"id": "fd_0415",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Not omakase, where the chef improvises from the day's fish.",
+					"because": "Kaiseki is also chef-composed, so \"chef's choice\" is not the difference. Omakase is not improvised either; it is planned from the day's fish and adjusted to the guest. The real differences are the form fixed by tradition and the tie to the season.",
+					"fix": "Not omakase, the chef's pick from the day's fish. Here tradition fixes the order and the season sets each course.",
+					"lens": "fact",
+					"key": "language-1-fact-5"
+				},
+				{
+					"id": "fd_0415",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It is Japan's most formal meal",
+					"because": "Historically honzen ryori, the ceremonial banquet, was the most formal Japanese meal. Tea kaiseki grew up as a deliberately simpler alternative to it. Kaiseki is better called Japan's classic haute cuisine than its most formal meal.",
+					"fix": "It is Japan's classic formal meal",
+					"lens": "fact",
+					"key": "language-1-fact-6"
+				},
+				{
+					"id": "fd_0417",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Crops given no watering once planted, living on stored winter rain",
+					"because": "Dry-farm growers usually water transplants once or a few times at planting, then stop once the plants are established. The card's own guest line and why say \"once the plants take hold\", so the gist contradicts them.",
+					"fix": "Crops left unwatered once rooted, living on stored winter rain",
+					"lens": "fact",
+					"key": "language-1-fact-7"
+				},
+				{
+					"id": "fd_0417",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "smaller, denser tomatoes, potatoes or melons with concentrated sugar and thicker skin",
+					"because": "Concentrated sugar holds for tomatoes and melons but not for potatoes. Dry-farmed potatoes are prized for dense flesh and flavor, not sweetness.",
+					"fix": "smaller, denser tomatoes, potatoes or melons with concentrated flavor and thicker skin",
+					"lens": "fact",
+					"key": "language-1-fact-8"
+				},
+				{
+					"id": "fd_0416",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's France's red quality seal. The chickens are slower-growing breeds raised outdoors about twice as long",
+					"because": "Label Rouge covers many products, including salmon, beef, lamb and pork. A server reading this line about Label Rouge Scottish salmon, the most common US menu use, would tell the guest about chickens.",
+					"fix": "It's France's red quality seal, earned to a strict standard. Its chickens are slow-growing breeds raised outdoors about twice as long",
+					"lens": "fact",
+					"key": "language-1-fact-9"
+				},
+				{
+					"id": "fd_0418",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "The spirit is poured over the sorbet, so mention it",
+					"because": "Kitchens serve it several ways: brandy poured over the sorbet, brandy churned into the sorbet, or a plain glass of Calvados. The alcohol warning should not depend on seeing a pour, because a sorbet made with Calvados still has the spirit in it.",
+					"fix": "The apple brandy may be poured over or churned in, so mention it",
+					"lens": "fact",
+					"key": "language-1-fact-10"
+				},
+				{
+					"id": "fd_0416",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "The chickens are slower-growing breeds raised outdoors about twice as long, so the meat is firmer and deeper in flavor.",
+					"because": "The guest line only works for chicken. The sourcing note says the commonest US menu use is Label Rouge Scottish salmon, and a new hire who reads this line at a salmon table tells the guest about chickens. The guest line should cover both of the products the server will actually meet.",
+					"fix": "It's France's red quality seal. The chicken is a slow breed raised outdoors longer for deeper flavor, and the salmon is farmed in roomier pens.",
+					"lens": "floor",
+					"key": "language-1-floor-11"
+				},
+				{
+					"id": "fd_0419",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Not omakase, which centers on sushi",
+					"because": "Omakase means 'leave it to the chef'. It is a way of ordering, not a sushi format, and kappo counters very often serve their set course omakase-style. Telling a guest the two are opposites is the exact mistake that gets a server caught out. The real contrast is with kaiseki's fixed formal order, plus the broad range of cooking at the counter.",
+					"fix": "Omakase is a way to order, and kappo counters often serve it. Unlike kaiseki, the order is not fixed and formal.",
+					"lens": "floor",
+					"key": "language-1-floor-12"
+				},
+				{
+					"id": "fd_0419",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Japanese chef's counter where food is cut and cooked in front of you",
+					"because": "An omakase sushi counter also cuts food in front of you, so a test-taker would accept this gist for Omakase (fd_0355), whose gist describes a chef's-choice meal served piece by piece. What makes this card this card is the range of cooked dishes (grilled, simmered, fried) made across the counter.",
+					"fix": "Japanese counter where the chef grills, simmers and fries before you",
+					"lens": "floor",
+					"key": "language-1-floor-13"
+				},
+				{
+					"id": "fd_0418",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It wakes you up for the courses to come.",
+					"because": "This oversells, and alcohol does not wake anyone up. The traditional claim, which the card's own why gives, is that the course makes room and cuts through richness: it is a palate reset.",
+					"fix": "It clears your palate for the courses to come.",
+					"lens": "floor",
+					"key": "language-1-floor-14"
+				},
+				{
+					"id": "fd_0417",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Crops given no watering once planted",
+					"because": "Dry-farmed tomatoes are normally watered in at transplant, and sometimes until they establish. Irrigation stops once the roots have taken hold, as the card's own guest and why lines say. The gist contradicts the rest of the card.",
+					"fix": "Crops not watered once established, living on stored winter rain",
+					"lens": "floor",
+					"key": "language-1-floor-15"
+				},
+				{
+					"id": "fd_0418",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "The spirit is poured over the sorbet, so mention it to every guest and know the kitchen's swap without it.",
+					"because": "This tells the server that taking the pour away removes the alcohol. Many kitchens make the sorbet itself with Calvados (Calvados sorbet is the commonest version), so a sorbet served without the pour can still hold spirit. The brandy is also poured cold and at full strength, so none of it cooks off. A server repeating this note could hand alcohol to a guest who does not drink. A safety fact, so the longer wording is justified.",
+					"fix": "The brandy is poured on at full strength and never cooked off, and the sorbet may hold spirit too. Name it to every guest and ask the kitchen for its swap.",
+					"lens": "safety",
+					"key": "language-1-safety-16"
+				},
+				{
+					"id": "fd_0418",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "apple sorbet with a splash of Calvados",
+					"because": "'A splash' tells the guest the amount of spirit is trivial. The pour is usually a real measure of a brandy around 40 per cent alcohol, poured raw. A guest who is driving or does not drink should hear plainly that it is a pour of brandy.",
+					"fix": "apple sorbet with a pour of Calvados",
+					"lens": "safety",
+					"key": "language-1-safety-17"
+				},
+				{
+					"id": "fd_0419",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"fish\", \"soy\", \"rice\", \"often shellfish\"",
+					"because": "The card says fried dishes come across the counter. Japanese frying is classically tempura, a batter of wheat flour and egg. Chawanmushi, the egg custard, is a counter standard. Kappo cooking also uses sake and mirin. Soy sauce is brewed with wheat. A guest with an egg, wheat or alcohol allergy gets no flag from this list. Rice can go to stay within the 7-item cap, since it is not an allergy flag.",
+					"fix": "\"fish\", \"soy\", \"often shellfish\", \"often wheat flour\", \"often egg\", \"often sake\", \"sometimes sesame\"",
+					"lens": "safety",
+					"key": "language-1-safety-18"
+				},
+				{
+					"id": "fd_0415",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"fish\", \"rice\", \"soy\", \"often shellfish\"",
+					"because": "Kaiseki is seasoned throughout with sake and mirin. Goma-dofu (sesame tofu) and chawanmushi (egg custard) are classic courses. Soy sauce, usually the light usukuchi kind, is brewed with wheat. As written, a guest with a sesame, egg, wheat or alcohol allergy is not flagged. Rice can go to stay within the 7-item cap.",
+					"fix": "\"fish\", \"soy\", \"often wheat\", \"often shellfish\", \"often sake\", \"sometimes sesame\", \"sometimes egg\"",
+					"lens": "safety",
+					"key": "language-1-safety-19"
+				},
+				{
+					"id": "fd_0416",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Not wild and not organic.",
+					"because": "A server could repeat this as an assurance that the product is not organic. Label Rouge is a separate standard from organic, and some Label Rouge products are also certified organic (AB). The correct point is that the mark does not mean organic.",
+					"fix": "No wild or organic promise.",
+					"lens": "safety",
+					"key": "language-1-safety-20"
+				},
+				{
+					"key": "language-critic-1",
+					"id": "fd_0415",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Kaiseki lists Kappo under seeAlsoTerms, but fd_0419 Kappo lists Kaiseki under confusedWithTerms and its notThis contrasts the two (\"not kaiseki's fixed order\"). The pair is a real confusion: restaurants sell \"kappo kaiseki\", and Kappo's why ends \"Looser than kaiseki\". It is shown as a confusion on one card and as a related term on the other.",
+					"because": "Kaiseki lists Kappo under seeAlsoTerms, but fd_0419 Kappo lists Kaiseki under confusedWithTerms and its notThis contrasts the two (\"not kaiseki's fixed order\"). The pair is a real confusion: restaurants sell \"kappo kaiseki\", and Kappo's why ends \"Looser than kaiseki\". It is shown as a confusion on one card and as a related term on the other.",
+					"fix": "Move Kappo from seeAlsoTerms to confusedWithTerms on fd_0415, giving [Omakase, Tasting Menu, Kappo], and drop seeAlsoTerms. Optionally add to the end of the notThis \"Kappo is the looser counter version.\" (the card is at 754 chars, so keep that addition short or cut the same number of characters from the note)."
+				},
+				{
+					"id": "fd_0355",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Formal multi-course Japanese dinner whose sequence is fixed by tradition",
+					"because": "Kaiseki (fd_0415) is now on the roster, and this trap is a true description of it. A trap may not truly describe another card, so a reader taking the Kaiseki test sees a near-copy of the correct answer marked wrong on the Omakase test.",
+					"fix": "Remove this trap and add \"Kaiseki\" to confusedWithTerms (the notThis already covers the difference).",
+					"lens": "fact",
+					"key": "language-1-fact-1"
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "language-1-fact-2",
+					"action": "applied",
+					"reason": "Kaiseki madeWith now flags wheat (soy sauce), sake or mirin, sesame and egg alongside fish, soy and shellfish; rice dropped to stay within seven items."
+				},
+				{
+					"finding": "language-1-fact-3",
+					"action": "applied",
+					"reason": "Kappo madeWith now flags wheat flour, egg and sake or mirin for the fried and simmered dishes; merged with safety-18 into one seven-item list."
+				},
+				{
+					"finding": "language-1-fact-4",
+					"action": "applied",
+					"reason": "Kappo notThis no longer calls omakase sushi-only or opposite: it now reads not a sushi counter, not kaiseki's fixed order, and notes many kappo counters serve their course omakase-style."
+				},
+				{
+					"finding": "language-1-fact-5",
+					"action": "applied",
+					"reason": "Kaiseki notThis now uses the suggested contrast: omakase is the chef's pick from the day's fish, while kaiseki's order is fixed by tradition and each course set by the season."
+				},
+				{
+					"finding": "language-1-fact-6",
+					"action": "applied",
+					"reason": "Kaiseki guest line now says Japan's classic formal meal, not its most formal meal, since honzen ryori was the more ceremonial banquet."
+				},
+				{
+					"finding": "language-1-fact-7",
+					"action": "applied",
+					"reason": "Dry-Farmed gist now reads crops left unwatered once rooted, which matches the guest and why lines (watered in at planting, then stopped)."
+				},
+				{
+					"finding": "language-1-fact-8",
+					"action": "applied",
+					"reason": "Dry-Farmed why now says concentrated flavor instead of concentrated sugar, so it holds for potatoes as well."
+				},
+				{
+					"finding": "language-1-fact-9",
+					"action": "applied",
+					"reason": "Label Rouge guest line now covers salmon and chicken: slow-growing chicken raised outdoors longer, salmon farmed in roomier pens (merged with floor-11)."
+				},
+				{
+					"finding": "language-1-fact-10",
+					"action": "applied",
+					"reason": "Trou Normand note no longer depends on seeing a pour: it says the sorbet may hold spirit too (merged with safety-16)."
+				},
+				{
+					"finding": "language-1-floor-11",
+					"action": "applied",
+					"reason": "Guest line rewritten to cover both products: chicken that is a slow-growing breed raised outdoors longer for deeper flavor, and salmon farmed in roomier pens."
+				},
+				{
+					"finding": "language-1-floor-12",
+					"action": "applied",
+					"reason": "Kappo notThis now treats omakase as a way of ordering that many kappo counters use, and keeps the contrast with kaiseki's fixed order and with a sushi counter."
+				},
+				{
+					"finding": "language-1-floor-13",
+					"action": "applied",
+					"reason": "Kappo gist now names the range of cooking that sets it apart from a sushi omakase: Japanese counter where the chef grills, simmers and fries before you."
+				},
+				{
+					"finding": "language-1-floor-14",
+					"action": "applied",
+					"reason": "Trou Normand guest line now says it clears your palate for the courses to come, not that it wakes you up."
+				},
+				{
+					"finding": "language-1-floor-15",
+					"action": "applied",
+					"reason": "Same fix as fact-7: the gist now says unwatered once rooted (62 chars), which matches the rest of the card."
+				},
+				{
+					"finding": "language-1-safety-16",
+					"action": "applied",
+					"reason": "Note now says the brandy is poured at full strength and never cooked off, that the sorbet may hold spirit too, and to name it to every guest and ask the kitchen for its swap."
+				},
+				{
+					"finding": "language-1-safety-17",
+					"action": "applied",
+					"reason": "Guest line now says a pour of Calvados instead of a splash, so the amount of spirit is not played down."
+				},
+				{
+					"finding": "language-1-safety-18",
+					"action": "applied",
+					"reason": "Kappo madeWith is now fish, soy, often shellfish, often wheat flour, often egg, often sake or mirin, sometimes sesame; rice dropped for the seven-item cap."
+				},
+				{
+					"finding": "language-1-safety-19",
+					"action": "applied",
+					"reason": "Kaiseki madeWith is now fish, soy, often wheat, often shellfish, often sake or mirin, sometimes sesame, sometimes egg; rice dropped for the seven-item cap."
+				},
+				{
+					"finding": "language-1-safety-20",
+					"action": "applied",
+					"reason": "Label Rouge notThis now reads makes no wild or organic promise, so it cannot be repeated as an assurance that the product is not organic; also trimmed to keep the section mean under 720."
+				},
+				{
+					"finding": "language-critic-1",
+					"action": "applied",
+					"reason": "Moved Kappo from seeAlsoTerms to confusedWithTerms (now Omakase, Tasting Menu, Kappo), dropped seeAlsoTerms, added \"Kappo is the looser counter version.\" to notThis, and trimmed the note by 10 characters to offset the added length."
+				},
+				{
+					"finding": "language-1-fact-1",
+					"action": "applied",
+					"reason": "Placed by hand: fd_0355 Omakase trap 2 now reads conveyor-belt (kaiten) sushi, which no card teaches; the old trap was a true description of the new Kaiseki card (fd_0415)."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0355",
+						"issue": "Adding Kaiseki makes one of Omakase's existing traps a true description of another card. The second trap on fd_0355 reads \"Formal multi-course Japanese dinner whose sequence is fixed by tradition\", and its own why begins \"That is kaiseki.\" That trap is now a correct description of fd_0415 Kaiseki, whose gist is \"Formal Japanese dinner of seasonal courses in a set, named order\". The rule says a trap must not truly describe another card, and that this kind of mix-up goes in confusedWithTerms. Omakase's confusedWithTerms is [Tasting Menu, Prix Fixe], so the link to Kaiseki only runs one way.",
+						"fix": "In floor-deck.traps.json, take that second trap off fd_0355. If a replacement is wanted, use a mistake that is false of every card, for example says \"Japanese tavern menu of small plates ordered one at a time to share\" (64 chars), why \"That is an izakaya. Here the guest orders nothing: the chef chooses each course.\" Add \"Kaiseki\" to fd_0355 confusedWithTerms, which then reads Tasting Menu, Prix Fixe, Kaiseki. The existing notThis can stay, but it would be better as \"Not a printed tasting menu or kaiseki's set order: the chef sets tonight's courses at the counter.\""
+					},
+					{
+						"id": "fd_0415",
+						"issue": "Kaiseki lists Kappo under seeAlsoTerms, but fd_0419 Kappo lists Kaiseki under confusedWithTerms and its notThis contrasts the two (\"not kaiseki's fixed order\"). The pair is a real confusion: restaurants sell \"kappo kaiseki\", and Kappo's why ends \"Looser than kaiseki\". It is shown as a confusion on one card and as a related term on the other.",
+						"fix": "Move Kappo from seeAlsoTerms to confusedWithTerms on fd_0415, giving [Omakase, Tasting Menu, Kappo], and drop seeAlsoTerms. Optionally add to the end of the notThis \"Kappo is the looser counter version.\" (the card is at 754 chars, so keep that addition short or cut the same number of characters from the note)."
+					}
+				],
+				"notes": "I checked all 25 roster rows. 20 are already written and live in src/lib/data/floor-deck.json. The 5 new cards (fd_0415 to fd_0419) all have a card and a level, so no row is missing. On prose length, the new cards average 716 chars (Trou Normand is highest at 788, Kaiseki next at 754). The 20 existing cards average 672 and the whole section 681, under the 720 ceiling. A scan of the new cards found no verdict words, no banned substrings and no en or em dashes. No term or alias shows up in a gist or trap, and every trap is within 10 characters of its gist without the gist being the longest option. The one known packet error (fd_0285 Heirloom) already has a matching organic/GMO trap. The four accented or foreign terms all have a say: Kaiseki, Label Rouge, Trou Normand and Kappo. Dry-Farmed has none, which is correct. Each guest line answers \\\"what is that?\\\". The new gists are easy to tell apart from Omakase, Tasting Menu, Prix Fixe and Sorbet. The facts I spot-checked hold up: Label Rouge dates from 1960, the chicken minimum is 81 days, and Scottish salmon was the first non-French product to carry the mark, in 1992. Kappo means cut and cook, Kaiseki means breast stone, and Trou Normand means the Norman hole. There are links that run only one way, which no rule requires to be paired: Tasting Menu does not link Kaiseki, Sorbet does not link Trou Normand, and Organic and Wild-Caught do not link Label Rouge. The operator could add Kaiseki to Tasting Menu's seeAlso. On level, Dry-Farmed is set to 4 (Chef). \\\"Dry-farmed tomatoes\\\" is a fairly common California menu line, so a reconciler might argue for 3 (Sous Chef). The writer's call stands."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

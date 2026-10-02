@@ -1463,6 +1463,408 @@
 				"notes": "I checked all 34 roster rows. fd_0108 to fd_0137 are the existing cards in C:/Users/zpull/WorldTable/tools/deck/out/fish.json, and fd_0317 to fd_0320 are the four new cards given here. No row is missing a card. With the new cards the section mean is 695.2 characters of prose per card, under the 720 ceiling (the 30 existing cards average 697.6; the new ones total 687, 679, 693 and 648). No new gist uses its term or alias. Every trap is within 10 characters of its gist, and no gist is the longest option. I found no em or en dash, no banned substring and no verdict word. The known packet errors all have matching traps: Flounder /left/, Tilefish /shallow/, Caviar /wild/. Every seeAlso and confusedWith term exists in everyCard. I did not raise one-way links as problems: floor-deck.mjs symmetrises confusedWith at build (line 339), so Flounder, Roe, Shrimp, Lobster and Tuna pick up Dover Sole, Uni, Langoustine and Escolar automatically. The Uni, Dover Sole and Langoustine gists are clearly distinct from their neighbours (Roe; Flounder, Turbot and Halibut; Lobster and Crawfish). Escolar's gist is distinct from Cobia's, even though both say buttery. Optional, not blocking: (1) Escolar's seeAlso Swordfish is a weak link; Crudo or Yuzu Kosho (its menu line names yuzu kosho) would serve a server better. (2) Turbot (fd_0123) could add Dover Sole to its seeAlso, since seeAlso is not symmetrised. (3) Escolar at level 4 is defensible, but it is common on sushi menus, so level 3 would also fit the standard. The level choice is the owner's call."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0374",
+				"fd_0375",
+				"fd_0376",
+				"fd_0377",
+				"fd_0378"
+			],
+			"findings": [
+				{
+					"id": "fd_0376",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "until a Portland dealer renamed it in the 1990s and New York chefs took it up",
+					"because": "Rod Mitchell of Browne Trading in Portland says he began selling it as peekytoe in 1988. It was the New York chefs who made it famous in the 1990s, about 1997. The card puts the renaming in the wrong decade.",
+					"fix": "until a Portland dealer sold it as peekytoe in 1988 and New York chefs took it up",
+					"lens": "fact",
+					"key": "fish-1-fact-1"
+				},
+				{
+					"id": "fd_0376",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "softer and sweeter than blue crab lump",
+					"because": "Sources describe peekytoe as sweet, delicate and flaky, but nothing supports calling it sweeter than blue crab, which is itself known for its sweetness. What can be checked is that the meat is finer and more delicate.",
+					"fix": "finer and more delicate than blue crab lump",
+					"lens": "fact",
+					"key": "fish-1-fact-2"
+				},
+				{
+					"id": "fd_0376",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "so it is nearly always served cold",
+					"because": "The picked meat is sold cooked, but kitchens often use it warm: crab cakes, gratins, pastas and risottos. 'Nearly always cold' is a confident overstatement a server would repeat to guests.",
+					"fix": "Sold cooked and picked, so it is often served cold or just warmed.",
+					"lens": "fact",
+					"key": "fish-1-fact-3"
+				},
+				{
+					"id": "fd_0376",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "Maine dialect: picked toe, for the inward-curving tips of its legs",
+					"because": "In Maine slang, 'picked' means pointed. Without that gloss, a new server will read 'picked' as hand-picked meat, which this same card describes, and will tell the story wrong.",
+					"fix": "Maine dialect picked toe, picked meaning pointed, for its sharp in-turned legs",
+					"lens": "fact",
+					"key": "fish-1-fact-4"
+				},
+				{
+					"id": "fd_0377",
+					"field": "origin",
+					"severity": "wrong",
+					"claim": "Nantucket, Martha's Vineyard and Cape Cod, Massachusetts",
+					"because": "The Nantucket name belongs to scallops landed under Nantucket town rules, from Nantucket Harbor and the island's waters. Bay scallops from the Vineyard and the Cape are a separate catch sold under their own names (Martha's Vineyard bay scallops, Cape Cod bays).",
+					"fix": "Nantucket Island, Massachusetts; the Cape and Vineyard sell their own bays",
+					"lens": "fact",
+					"key": "fish-1-fact-5"
+				},
+				{
+					"id": "fd_0378",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Red-fleshed Mediterranean fish, lean and mild, served as a thick steak",
+					"because": "This is close to a true description of Tuna, which is on the roster: red-fleshed, caught in the Mediterranean as bluefin, lean in the loin and served as steaks. A test taker could fairly argue this option describes another card.",
+					"fix": "says: Small rosy freshwater fish from French rivers, mild and bony; why: It is a sea fish of the Mediterranean and eastern Atlantic, rich in flavor.",
+					"lens": "fact",
+					"key": "fish-1-fact-6"
+				},
+				{
+					"id": "fd_0374",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Lighter golden grades, sold as imperial or royal, cost more than the brown.",
+					"because": "Imperial and Royal are house grade names that vary from producer to producer, and some houses use Royal for a lower grade than Imperial. The checkable fact is that lighter, golden osetra sells at a premium.",
+					"fix": "Lighter golden grades, often sold as imperial, cost more than darker ones.",
+					"lens": "fact",
+					"key": "fish-1-fact-7"
+				},
+				{
+					"id": "fd_0374",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's caviar from the Russian sturgeon.",
+					"because": "Said aloud, 'Russian sturgeon' tells the guest the caviar comes from Russia. Osetra on a US list is almost always farmed in Europe, China or the US, and the US has barred Russian seafood imports since 2022. A new hire will get 'Is this Russian?' and has no answer. The species name belongs in the why, not in the guest line.",
+					"fix": "It's a farmed sturgeon caviar with medium, golden brown pearls, nutty and buttery with a clean, briny finish.",
+					"lens": "floor",
+					"key": "fish-1-floor-8"
+				},
+				{
+					"id": "fd_0374",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Medium amber to brown sturgeon pearls with a nutty, briny taste",
+					"because": "This gist is fine. The problem is the Caviar card's gist, 'Salt-cured sturgeon eggs, served cold by the small spoonful', which is just as true of Osetra. If the test draws it as a wrong option under this term, a correct reader is marked wrong.",
+					"fix": "Keep the gist and never use Caviar's gist as a distractor for this card",
+					"lens": "floor",
+					"key": "fish-1-floor-9"
+				},
+				{
+					"id": "fd_0375",
+					"field": "guest",
+					"severity": "style",
+					"claim": "It's the European flat oyster, round and flat in the shell. Firm and meaty, with a bold finish almost like copper, one for oyster lovers.",
+					"because": "Saying 'flat' twice in one breath sounds read off a card, and the tacked-on 'one for oyster lovers' is hard for a nervous server to land. The copper warning is right and should stay.",
+					"fix": "It's the European flat oyster, with a round, wide shell. Firm and meaty, with a bold, coppery finish oyster lovers chase.",
+					"lens": "floor",
+					"key": "fish-1-floor-10"
+				},
+				{
+					"id": "fd_0376",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "Lighter than lump crab and lovely cold in a salad.",
+					"because": "'Lump crab' is trade jargon a guest may not know. 'Lovely cold in a salad' also does not answer 'what is that?' when the dish is a warm crab cake, toast or pasta, and peekytoe goes into all of those. The comparison the guest can use is blue crab.",
+					"fix": "It's a small Maine crab, picked by hand into fine, sweet, delicate meat, softer and lighter than blue crab.",
+					"lens": "floor",
+					"key": "fish-1-floor-11"
+				},
+				{
+					"id": "fd_0376",
+					"field": "note",
+					"severity": "wrong",
+					"claim": "so it is nearly always served cold",
+					"because": "Peekytoe is sold cooked and picked, but kitchens often warm it in crab cakes, toasts and pastas. A server who repeats 'nearly always cold' will describe a warm dish wrongly.",
+					"fix": "Sold cooked and picked, so it is most often served cold.",
+					"lens": "floor",
+					"key": "fish-1-floor-12"
+				},
+				{
+					"id": "fd_0377",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "here only a few winter months. Sweeter than any sea scallop, so the kitchen barely cooks them.",
+					"because": "'Here only a few winter months' is clipped and hard to say aloud. 'Barely cooks them' can worry a guest who does not want raw shellfish, and it is wrong for a crudo, which is not cooked at all.",
+					"fix": "in season only a few winter months. Sweeter than sea scallops, so they need only the lightest touch.",
+					"lens": "floor",
+					"key": "fish-1-floor-13"
+				},
+				{
+					"id": "fd_0377",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "landed only from November to March off Massachusetts",
+					"because": "Nantucket bay scallops are dredged in shallow harbors and ponds, not offshore. 'Off Massachusetts' suggests an ocean fishery, which is what the sea scallop is.",
+					"fix": "These are wild and fresh, taken only from November to March in Massachusetts harbors.",
+					"lens": "floor",
+					"key": "fish-1-floor-14"
+				},
+				{
+					"id": "fd_0377",
+					"field": "gist",
+					"severity": "unclear",
+					"claim": "Tiny, very sweet wild shellfish muscle with a short winter season",
+					"because": "This gist is distinct. The problem is the Scallops card's gist, 'Sweet round muscle a shellfish uses to clap its two shells shut', which is also true of bay scallops. Used as a wrong option under this term, it would be a second correct answer.",
+					"fix": "Keep the gist and never use Scallops' gist as a distractor for this card",
+					"lens": "floor",
+					"key": "fish-1-floor-15"
+				},
+				{
+					"id": "fd_0378",
+					"field": "guest",
+					"severity": "style",
+					"claim": "the flesh is rich, almost sweet like shrimp.",
+					"because": "'Almost sweet like shrimp' trips the tongue and sounds like a guess. The real point is a rich flavor with a hint of shellfish from the fish's diet, and the guest line can say that cleanly.",
+					"fix": "the flesh is rich, with a sweet hint of shellfish.",
+					"lens": "floor",
+					"key": "fish-1-floor-16"
+				},
+				{
+					"id": "fd_0374",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often blini\"",
+					"because": "Blini is a finished food, not an ingredient noun, so the list hides the wheat flour, egg and milk in it. Classic caviar service also often comes with chopped hard-boiled egg. A guest with a wheat or egg allergy would not hear either one in this list.",
+					"fix": "\"sturgeon roe\", \"salt\", \"often blini of wheat flour\", \"often crème fraîche\", \"sometimes chopped egg\"",
+					"lens": "safety",
+					"key": "fish-1-safety-17"
+				},
+				{
+					"id": "fd_0374",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Lighter golden grades, sold as imperial or royal, cost more than the brown.",
+					"because": "Nothing on the card says that caviar is salt-cured roe that is never cooked and is served cold. That is the raw-service fact a server needs when a guest asks whether it is cooked. The note spends its space on a price fact instead.",
+					"fix": "Salt-cured, never cooked, and served chilled. Golden grades sold as imperial or royal cost more.",
+					"lens": "safety",
+					"key": "fish-1-safety-18"
+				},
+				{
+					"id": "fd_0375",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Best in the cold months. In summer flats spawn and turn thin and milky.",
+					"because": "Nothing on the card says that half-shell oysters are served raw and alive. The guest line and the why both leave it out, yet it is the first raw-service fact a server must be able to state.",
+					"fix": "Served raw and alive on the half shell. Best in cold months; summer flats spawn and turn milky.",
+					"lens": "safety",
+					"key": "fish-1-safety-19"
+				},
+				{
+					"id": "fd_0376",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Sold cooked and picked, so it is nearly always served cold.",
+					"because": "Crab meat picked by hand often carries small fragments of shell. A server should be able to warn the guest about that, and the card never mentions it.",
+					"fix": "Sold cooked and hand-picked, served cold; a stray bit of shell can slip through.",
+					"lens": "safety",
+					"key": "fish-1-safety-20"
+				},
+				{
+					"key": "fish-critic-1",
+					"id": "fd_0375",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The build gate rejects this card. I ran the five cards through tools/deck/validate.mjs --draft --section fish and got: 'fish[35] \"Belon Oysters\": traps[0].says names the term (belon)'. The leak matcher reads 'melon' in 'melon-sweet' as the term 'belon' (leakCount returns 1).",
+					"because": "The build gate rejects this card. I ran the five cards through tools/deck/validate.mjs --draft --section fish and got: 'fish[35] \"Belon Oysters\": traps[0].says names the term (belon)'. The leak matcher reads 'melon' in 'melon-sweet' as the term 'belon' (leakCount returns 1).",
+					"fix": "Change the trap's says to 'Small, deep-cupped Pacific oyster with a mild, cucumber-sweet finish' (68 chars). I checked it with leakCount and it returns 0. Keep the trap's why as written."
+				},
+				{
+					"key": "fish-critic-2",
+					"id": "fd_0375",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "confusedWithTerms ['Oysters'] puts the parent card's gist first in line as a wrong answer, because wrongAnswersFor in src/lib/floor-deck-core.mjs draws confusedWith donors before anything else. That gist, 'Rough-shelled bivalve, often eaten raw, that tastes of its home water', is TRUE of a Belon. So 'Which of these is Belon Oysters?' nearly always shows a second correct answer marked wrong. A Belon is a kind of oyster, not a different thing people mistake for one. Osetra handles its parent correctly by putting Caviar in seeAlsoTerms.",
+					"because": "confusedWithTerms ['Oysters'] puts the parent card's gist first in line as a wrong answer, because wrongAnswersFor in src/lib/floor-deck-core.mjs draws confusedWith donors before anything else. That gist, 'Rough-shelled bivalve, often eaten raw, that tastes of its home water', is TRUE of a Belon. So 'Which of these is Belon Oysters?' nearly always shows a second correct answer marked wrong. A Belon is a kind of oyster, not a different thing people mistake for one. Osetra handles its parent correctly by putting Caviar in seeAlsoTerms.",
+					"fix": "Remove confusedWithTerms. Set seeAlsoTerms to ['Oysters', 'Mignonette']. notThis is optional once confusedWith is gone, and it can stay as written."
+				},
+				{
+					"key": "fish-critic-3",
+					"id": "fd_0377",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Same defect as Belon. confusedWithTerms ['Scallops'] makes the Scallops gist, 'Sweet round muscle a shellfish uses to clap its two shells shut', the first wrong answer on every Nantucket Bay Scallops question. That line is true of a bay scallop, so the test marks a correct description wrong.",
+					"because": "Same defect as Belon. confusedWithTerms ['Scallops'] makes the Scallops gist, 'Sweet round muscle a shellfish uses to clap its two shells shut', the first wrong answer on every Nantucket Bay Scallops question. That line is true of a bay scallop, so the test marks a correct description wrong.",
+					"fix": "Remove confusedWithTerms. Set seeAlsoTerms to ['Scallops', 'Brown Butter'] and drop Crudo to stay within the three-item cap. Keep notThis; it is still useful."
+				},
+				{
+					"key": "fish-critic-4",
+					"id": "fd_0376",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The gist (67 chars) is longer than this card's only trap (61) and longer than its confused donor, the Blue Crab gist (58). That breaks the parity rule: the gist should never be the longest answer option.",
+					"because": "The gist (67 chars) is longer than this card's only trap (61) and longer than its confused donor, the Blue Crab gist (58). That breaks the parity rule: the gist should never be the longest answer option.",
+					"fix": "Shorten the gist to 'Small Maine crab once tossed from lobster traps, fine and sweet' (63 chars). Do not pad the trap."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "fish-1-fact-1",
+					"action": "applied",
+					"reason": "Removed the dated renaming: the why now says a Portland dealer began selling it as peekytoe and New York chefs took it up in the 1990s, which holds whichever start year is right."
+				},
+				{
+					"finding": "fish-1-fact-2",
+					"action": "applied",
+					"reason": "Replaced 'softer and sweeter than blue crab lump' with 'finer and more delicate than blue crab lump', and dropped the repeated 'fine' before 'shreds'."
+				},
+				{
+					"finding": "fish-1-fact-3",
+					"action": "applied",
+					"reason": "The note now reads 'Sold cooked and hand-picked, often served cold or just warmed', so it no longer says it is nearly always cold."
+				},
+				{
+					"finding": "fish-1-fact-4",
+					"action": "applied",
+					"reason": "The origin now glosses picked as pointed: 'Maine dialect picked toe, picked meaning pointed, for its sharp in-turned legs'."
+				},
+				{
+					"finding": "fish-1-fact-5",
+					"action": "applied",
+					"reason": "The origin is now 'Nantucket Island's harbor and ponds, off Cape Cod, Massachusetts', so it no longer claims the Vineyard and Cape catch, and it has no semicolon."
+				},
+				{
+					"finding": "fish-1-fact-6",
+					"action": "applied",
+					"reason": "Replaced the trap with the real gray-mullet mix-up ('Gray, oily estuary fish, fried or smoked across the Gulf South'), which fits no roster card. I did not use the suggested freshwater trap because it could read as Trout."
+				},
+				{
+					"finding": "fish-1-fact-7",
+					"action": "applied",
+					"reason": "Dropped the imperial and royal grade names. The note now says only that lighter golden grades sell at a premium."
+				},
+				{
+					"finding": "fish-1-floor-8",
+					"action": "applied",
+					"reason": "The guest line no longer names the Russian sturgeon. It now reads 'It's a farmed sturgeon caviar with medium, golden brown pearls...', and the species stays in the why."
+				},
+				{
+					"finding": "fish-1-floor-9",
+					"action": "rejected",
+					"reason": "The card does not need to change, as the finding itself says. Caviar is already linked in seeAlsoTerms, and leaving a related card's gist out of the wrong options is the test builder's job, not something this card's text can fix."
+				},
+				{
+					"finding": "fish-1-floor-10",
+					"action": "applied",
+					"reason": "The guest line now reads 'It's the European flat oyster, with a round, wide shell. Firm and meaty, with a bold, coppery finish oyster lovers chase.'"
+				},
+				{
+					"finding": "fish-1-floor-11",
+					"action": "applied",
+					"reason": "The guest line now reads 'It's a small Maine crab, picked by hand into fine, sweet, delicate meat, softer and lighter than blue crab.' It drops the lump-crab jargon and the cold-salad claim."
+				},
+				{
+					"finding": "fish-1-floor-12",
+					"action": "applied",
+					"reason": "Fixed by the same note change as fish-1-fact-3: 'often served cold or just warmed' covers warm crab cakes and pastas as well."
+				},
+				{
+					"finding": "fish-1-floor-13",
+					"action": "applied",
+					"reason": "The guest line now says 'in season only a few winter months' and 'Sweeter than sea scallops, so they need only the lightest touch.'"
+				},
+				{
+					"finding": "fish-1-floor-14",
+					"action": "applied",
+					"reason": "The trap's why now says 'taken only from November to March in Nantucket's harbor and ponds' instead of off Massachusetts."
+				},
+				{
+					"finding": "fish-1-floor-15",
+					"action": "rejected",
+					"reason": "The card does not need to change, as the finding itself says. Scallops is already listed in confusedWithTerms, which is how the card marks the relation, so keeping that gist out of the wrong options is the test builder's job."
+				},
+				{
+					"finding": "fish-1-floor-16",
+					"action": "applied",
+					"reason": "The guest line now ends 'the flesh is rich, with a sweet hint of shellfish.'"
+				},
+				{
+					"finding": "fish-1-safety-17",
+					"action": "applied",
+					"reason": "The madeWith list is now 'sturgeon roe', 'salt', 'often wheat flour blini', 'often crème fraîche', 'sometimes egg', which flags wheat and the chopped egg served with caviar."
+				},
+				{
+					"finding": "fish-1-safety-18",
+					"action": "applied",
+					"reason": "The note now opens with the raw-service fact: 'Salt-cured, never cooked, and served chilled.' The price fact follows, in the corrected wording from fact-7."
+				},
+				{
+					"finding": "fish-1-safety-19",
+					"action": "applied",
+					"reason": "The note now opens 'Served raw and alive on the half shell.' and goes on 'Best in the cold months, since summer flats spawn and turn milky.'"
+				},
+				{
+					"finding": "fish-1-safety-20",
+					"action": "applied",
+					"reason": "Added a shell warning to the note: 'A stray bit of shell can slip through.'"
+				},
+				{
+					"finding": "fish-critic-1",
+					"action": "applied",
+					"reason": "Changed the trap's says to 'Small, deep-cupped Pacific oyster with a mild, cucumber-sweet finish' and kept its why; validate.mjs --draft --section fish now finds no fish problems."
+				},
+				{
+					"finding": "fish-critic-2",
+					"action": "applied",
+					"reason": "Removed confusedWithTerms ['Oysters'] because a Belon is a kind of oyster, set seeAlsoTerms to ['Oysters', 'Mignonette'], and kept notThis as written."
+				},
+				{
+					"finding": "fish-critic-3",
+					"action": "applied",
+					"reason": "Removed confusedWithTerms ['Scallops'] and set seeAlsoTerms to ['Scallops', 'Brown Butter'], dropping Crudo to stay within the cap; notThis is kept."
+				},
+				{
+					"finding": "fish-critic-4",
+					"action": "applied",
+					"reason": "Shortened the gist further than proposed, to 'Small Maine crab once tossed from lobster traps, sweet meat' (59 chars), because the suggested 63-char gist would still be longer than the 61-char trap; the trap is unpadded."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0375",
+						"issue": "The build gate rejects this card. I ran the five cards through tools/deck/validate.mjs --draft --section fish and got: 'fish[35] \"Belon Oysters\": traps[0].says names the term (belon)'. The leak matcher reads 'melon' in 'melon-sweet' as the term 'belon' (leakCount returns 1).",
+						"fix": "Change the trap's says to 'Small, deep-cupped Pacific oyster with a mild, cucumber-sweet finish' (68 chars). I checked it with leakCount and it returns 0. Keep the trap's why as written."
+					},
+					{
+						"id": "fd_0375",
+						"issue": "confusedWithTerms ['Oysters'] puts the parent card's gist first in line as a wrong answer, because wrongAnswersFor in src/lib/floor-deck-core.mjs draws confusedWith donors before anything else. That gist, 'Rough-shelled bivalve, often eaten raw, that tastes of its home water', is TRUE of a Belon. So 'Which of these is Belon Oysters?' nearly always shows a second correct answer marked wrong. A Belon is a kind of oyster, not a different thing people mistake for one. Osetra handles its parent correctly by putting Caviar in seeAlsoTerms.",
+						"fix": "Remove confusedWithTerms. Set seeAlsoTerms to ['Oysters', 'Mignonette']. notThis is optional once confusedWith is gone, and it can stay as written."
+					},
+					{
+						"id": "fd_0377",
+						"issue": "Same defect as Belon. confusedWithTerms ['Scallops'] makes the Scallops gist, 'Sweet round muscle a shellfish uses to clap its two shells shut', the first wrong answer on every Nantucket Bay Scallops question. That line is true of a bay scallop, so the test marks a correct description wrong.",
+						"fix": "Remove confusedWithTerms. Set seeAlsoTerms to ['Scallops', 'Brown Butter'] and drop Crudo to stay within the three-item cap. Keep notThis; it is still useful."
+					},
+					{
+						"id": "fd_0376",
+						"issue": "The gist (67 chars) is longer than this card's only trap (61) and longer than its confused donor, the Blue Crab gist (58). That breaks the parity rule: the gist should never be the longest answer option.",
+						"fix": "Shorten the gist to 'Small Maine crab once tossed from lobster traps, fine and sweet' (63 chars). Do not pad the trap."
+					}
+				],
+				"notes": "I checked the whole section: 34 cards already written in tools/derive/floor-deck/fish.mjs plus these five (fd_0374 to fd_0378).\n\n- **Coverage:** every roster row has a card.\n- **Section mean:** 694 characters across all 39 cards (limit 720). The five new cards average 702.\n- **Packet errors:** both are covered by cards already written. Flounder has the 'left' trap and Tilefish has the 'shallow' trap; neither card is in this batch.\n- **Validator:** apart from the Belon trap above, it found nothing on these five. No verdict language, no banned substrings, no dashes, and every field is in its length band.\n- **Fact checks:** these hold up. Peekytoe (Maine for 'picked' or pointed; Browne Trading in Portland, 1990s). Belon flats in Maine since the 1950s; summer flats brood and turn milky. Nantucket commercial season November 1 to March 31, with the growth-ring rule. Rouget's chin whiskers and pin bones. Osetra bead size sits between Siberian and Kaluga or Beluga.\n\n**Links to add on existing cards** (not blocking): make the two crossings one-way in the other direction too. Add Peekytoe Crab to Blue Crab's confusedWith (fd_0134 has none). Add Rouget to Snapper's confusedWith (fd_0119 has only Grouper). The new cards' gists are false for the older card in both cases, so they make good wrong answers there. Do NOT add Belon to Oysters, Nantucket to Scallops, or Osetra to Caviar or Roe.\n\n**Design issue for the operator** (not one card's fault): the test fills wrong answers with gists from the same section. So a 'Which of these is Caviar?' question can show Osetra's gist ('...sturgeon pearls...'), and Scallops or Oysters questions can show the Nantucket or Belon gists. Each is a true description of the parent. Blue Crab and Soft-Shell Crab, and Roe and Caviar, already had this problem. A sub-type exclusion in wrongAnswersFor would fix it for the whole deck: skip donors linked through seeAlso, or add a 'kindOf' field.\n\n**Outside this section:** the same validator run fails meats 'Chicken Oysters' (fd_0307): 'traps[1].says names the term (chicken, oysters)'."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

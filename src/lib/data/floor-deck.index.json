@@ -216,6 +216,38 @@
       ]
     },
     {
+      "id": "fd_0356",
+      "term": "Kombu-Cured",
+      "section": "methods",
+      "level": 4,
+      "aliases": [
+        "Kobujime",
+        "Konbujime"
+      ]
+    },
+    {
+      "id": "fd_0357",
+      "term": "Aburi",
+      "section": "methods",
+      "level": 4
+    },
+    {
+      "id": "fd_0358",
+      "term": "Binchotan-Grilled",
+      "section": "methods",
+      "level": 4
+    },
+    {
+      "id": "fd_0359",
+      "term": "Hay-Smoked",
+      "section": "methods",
+      "level": 4,
+      "aliases": [
+        "Hay-Roasted",
+        "Cooked in Hay"
+      ]
+    },
+    {
       "id": "fd_0050",
       "term": "Escargot",
       "section": "meats",
@@ -341,6 +373,52 @@
       "aliases": [
         "Mulard",
         "Mule Duck"
+      ]
+    },
+    {
+      "id": "fd_0360",
+      "term": "Grouse",
+      "section": "meats",
+      "level": 4
+    },
+    {
+      "id": "fd_0361",
+      "term": "Hare",
+      "section": "meats",
+      "level": 4,
+      "aliases": [
+        "Lièvre",
+        "Lepre"
+      ]
+    },
+    {
+      "id": "fd_0362",
+      "term": "Cockscomb",
+      "section": "meats",
+      "level": 4,
+      "aliases": [
+        "Crête de Coq",
+        "Rooster Comb",
+        "Cock's Comb"
+      ]
+    },
+    {
+      "id": "fd_0363",
+      "term": "Blue Foot Chicken",
+      "section": "meats",
+      "level": 4,
+      "aliases": [
+        "Poulet Bleu"
+      ]
+    },
+    {
+      "id": "fd_0364",
+      "term": "Calf's Brains",
+      "section": "meats",
+      "level": 4,
+      "aliases": [
+        "Veal Brains",
+        "Cervelle de Veau"
       ]
     },
     {
@@ -543,6 +621,39 @@
       "aliases": [
         "Blood Sausage"
       ]
+    },
+    {
+      "id": "fd_0365",
+      "term": "Pâté en Croûte",
+      "section": "cured",
+      "level": 4
+    },
+    {
+      "id": "fd_0366",
+      "term": "Boudin Blanc",
+      "section": "cured",
+      "level": 3
+    },
+    {
+      "id": "fd_0367",
+      "term": "Sobrasada",
+      "section": "cured",
+      "level": 4,
+      "aliases": [
+        "Sobrassada"
+      ]
+    },
+    {
+      "id": "fd_0368",
+      "term": "Cotechino",
+      "section": "cured",
+      "level": 4
+    },
+    {
+      "id": "fd_0369",
+      "term": "Andouillette",
+      "section": "cured",
+      "level": 4
     },
     {
       "id": "fd_0086",
@@ -778,6 +889,42 @@
       "aliases": [
         "Secreto de Bellota",
         "Cruceta"
+      ]
+    },
+    {
+      "id": "fd_0370",
+      "term": "Tournedos",
+      "section": "cuts",
+      "level": 4
+    },
+    {
+      "id": "fd_0371",
+      "term": "Presa Ibérica",
+      "section": "cuts",
+      "level": 4,
+      "aliases": [
+        "Ibérico Presa"
+      ]
+    },
+    {
+      "id": "fd_0372",
+      "term": "Bistecca alla Fiorentina",
+      "section": "cuts",
+      "level": 4,
+      "aliases": [
+        "Fiorentina",
+        "Florentine Steak"
+      ]
+    },
+    {
+      "id": "fd_0373",
+      "term": "Mangalitsa",
+      "section": "cuts",
+      "level": 4,
+      "aliases": [
+        "Mangalica",
+        "Mangalitza",
+        "Woolly Pig"
       ]
     },
     {
@@ -1051,6 +1198,55 @@
       ]
     },
     {
+      "id": "fd_0374",
+      "term": "Osetra",
+      "section": "fish",
+      "level": 3,
+      "aliases": [
+        "Ossetra",
+        "Oscietra"
+      ]
+    },
+    {
+      "id": "fd_0375",
+      "term": "Belon Oysters",
+      "section": "fish",
+      "level": 4,
+      "aliases": [
+        "European Flat Oyster",
+        "Maine Belons"
+      ]
+    },
+    {
+      "id": "fd_0376",
+      "term": "Peekytoe Crab",
+      "section": "fish",
+      "level": 4,
+      "aliases": [
+        "Maine Rock Crab",
+        "Atlantic Rock Crab"
+      ]
+    },
+    {
+      "id": "fd_0377",
+      "term": "Nantucket Bay Scallops",
+      "section": "fish",
+      "level": 4,
+      "aliases": [
+        "Nantucket Bays"
+      ]
+    },
+    {
+      "id": "fd_0378",
+      "term": "Rouget",
+      "section": "fish",
+      "level": 4,
+      "aliases": [
+        "Red Mullet",
+        "Rouget Barbet"
+      ]
+    },
+    {
       "id": "fd_0138",
       "term": "Abalone Mushroom",
       "section": "mushrooms",
@@ -1239,6 +1435,50 @@
       ]
     },
     {
+      "id": "fd_0379",
+      "term": "Bianchetto Truffle",
+      "section": "mushrooms",
+      "level": 4,
+      "aliases": [
+        "Marzuolo",
+        "Tartufo Bianchetto"
+      ]
+    },
+    {
+      "id": "fd_0380",
+      "term": "Huitlacoche",
+      "section": "mushrooms",
+      "level": 4,
+      "aliases": [
+        "Cuitlacoche",
+        "Corn Smut",
+        "Mexican Truffle"
+      ]
+    },
+    {
+      "id": "fd_0381",
+      "term": "Lobster Mushroom",
+      "section": "mushrooms",
+      "level": 4
+    },
+    {
+      "id": "fd_0382",
+      "term": "Yellowfoot Chanterelle",
+      "section": "mushrooms",
+      "level": 4,
+      "aliases": [
+        "Winter Chanterelle",
+        "Funnel Chanterelle",
+        "Yellow Legs"
+      ]
+    },
+    {
+      "id": "fd_0383",
+      "term": "Candy Cap",
+      "section": "mushrooms",
+      "level": 4
+    },
+    {
       "id": "fd_0154",
       "term": "Brebis",
       "section": "dairy",
@@ -1390,6 +1630,32 @@
       "term": "Robiola",
       "section": "dairy",
       "level": 4
+    },
+    {
+      "id": "fd_0384",
+      "term": "Alpage",
+      "section": "dairy",
+      "level": 4,
+      "aliases": [
+        "Fromage d'Alpage",
+        "Alpkäse"
+      ]
+    },
+    {
+      "id": "fd_0385",
+      "term": "Époisses",
+      "section": "dairy",
+      "level": 4
+    },
+    {
+      "id": "fd_0386",
+      "term": "Ash-Ripened",
+      "section": "dairy",
+      "level": 4,
+      "aliases": [
+        "Cendré",
+        "Ash-Coated"
+      ]
     },
     {
       "id": "fd_0172",
@@ -1582,6 +1848,47 @@
       ]
     },
     {
+      "id": "fd_0387",
+      "term": "Tajarin",
+      "section": "starches",
+      "level": 4
+    },
+    {
+      "id": "fd_0388",
+      "term": "Uovo in Raviolo",
+      "section": "starches",
+      "level": 4,
+      "aliases": [
+        "Egg Yolk Raviolo"
+      ]
+    },
+    {
+      "id": "fd_0389",
+      "term": "Corzetti",
+      "section": "starches",
+      "level": 4,
+      "aliases": [
+        "Croxetti",
+        "Corzetti Stampati"
+      ]
+    },
+    {
+      "id": "fd_0390",
+      "term": "Vialone Nano",
+      "section": "starches",
+      "level": 4
+    },
+    {
+      "id": "fd_0391",
+      "term": "Middlins",
+      "section": "starches",
+      "level": 4,
+      "aliases": [
+        "Rice Grits",
+        "Rice Middlins"
+      ]
+    },
+    {
       "id": "fd_0195",
       "term": "Aioli",
       "section": "sauces",
@@ -1730,6 +2037,46 @@
       "term": "Nage",
       "section": "sauces",
       "level": 4
+    },
+    {
+      "id": "fd_0392",
+      "term": "Beurre Monté",
+      "section": "sauces",
+      "level": 4
+    },
+    {
+      "id": "fd_0393",
+      "term": "Sauce Maltaise",
+      "section": "sauces",
+      "level": 4,
+      "aliases": [
+        "Maltese Sauce"
+      ]
+    },
+    {
+      "id": "fd_0394",
+      "term": "Sauce Américaine",
+      "section": "sauces",
+      "level": 4,
+      "aliases": [
+        "Sauce Armoricaine"
+      ]
+    },
+    {
+      "id": "fd_0395",
+      "term": "Sauce Périgueux",
+      "section": "sauces",
+      "level": 4
+    },
+    {
+      "id": "fd_0396",
+      "term": "Sauce Vin Jaune",
+      "section": "sauces",
+      "level": 4,
+      "aliases": [
+        "Vin Jaune Sauce",
+        "Vin Jaune Cream"
+      ]
     },
     {
       "id": "fd_0216",
@@ -1882,6 +2229,36 @@
       "level": 4
     },
     {
+      "id": "fd_0397",
+      "term": "Galantine",
+      "section": "preparations",
+      "level": 4
+    },
+    {
+      "id": "fd_0398",
+      "term": "Pithivier",
+      "section": "preparations",
+      "level": 4,
+      "aliases": [
+        "Pithiviers"
+      ]
+    },
+    {
+      "id": "fd_0399",
+      "term": "Mi-Cuit",
+      "section": "preparations",
+      "level": 4
+    },
+    {
+      "id": "fd_0400",
+      "term": "Rossini",
+      "section": "preparations",
+      "level": 4,
+      "aliases": [
+        "Tournedos Rossini"
+      ]
+    },
+    {
       "id": "fd_0234",
       "term": "Beignets",
       "section": "bread",
@@ -2015,6 +2392,38 @@
       "level": 3,
       "aliases": [
         "Sablé Breton"
+      ]
+    },
+    {
+      "id": "fd_0401",
+      "term": "Saint-Honoré",
+      "section": "bread",
+      "level": 4,
+      "aliases": [
+        "Gâteau Saint-Honoré"
+      ]
+    },
+    {
+      "id": "fd_0402",
+      "term": "Paris-Brest",
+      "section": "bread",
+      "level": 4
+    },
+    {
+      "id": "fd_0403",
+      "term": "Feuilletine",
+      "section": "bread",
+      "level": 4
+    },
+    {
+      "id": "fd_0404",
+      "term": "Kataifi",
+      "section": "bread",
+      "level": 4,
+      "aliases": [
+        "Kadaif",
+        "Kadayif",
+        "Shredded Phyllo"
       ]
     },
     {
@@ -2156,6 +2565,44 @@
       "aliases": [
         "Vacherin Glacé"
       ]
+    },
+    {
+      "id": "fd_0405",
+      "term": "Île Flottante",
+      "section": "custards",
+      "level": 4,
+      "aliases": [
+        "Floating Island",
+        "Oeufs à la Neige"
+      ]
+    },
+    {
+      "id": "fd_0406",
+      "term": "Chiboust",
+      "section": "custards",
+      "level": 4
+    },
+    {
+      "id": "fd_0407",
+      "term": "Bavarois",
+      "section": "custards",
+      "level": 4,
+      "aliases": [
+        "Bavarian Cream",
+        "Crème Bavaroise"
+      ]
+    },
+    {
+      "id": "fd_0408",
+      "term": "Chocolate Marquise",
+      "section": "custards",
+      "level": 4
+    },
+    {
+      "id": "fd_0409",
+      "term": "Nougat Glacé",
+      "section": "custards",
+      "level": 4
     },
     {
       "id": "fd_0266",
@@ -2307,6 +2754,47 @@
       "level": 3
     },
     {
+      "id": "fd_0410",
+      "term": "Colatura",
+      "section": "pantry",
+      "level": 4,
+      "aliases": [
+        "Colatura di Alici"
+      ]
+    },
+    {
+      "id": "fd_0411",
+      "term": "Vadouvan",
+      "section": "pantry",
+      "level": 4
+    },
+    {
+      "id": "fd_0412",
+      "term": "Umeboshi",
+      "section": "pantry",
+      "level": 4,
+      "aliases": [
+        "Pickled Plum"
+      ]
+    },
+    {
+      "id": "fd_0413",
+      "term": "Garum",
+      "section": "pantry",
+      "level": 4
+    },
+    {
+      "id": "fd_0414",
+      "term": "Black Lime",
+      "section": "pantry",
+      "level": 4,
+      "aliases": [
+        "Loomi",
+        "Dried Lime",
+        "Omani Lime"
+      ]
+    },
+    {
       "id": "fd_0285",
       "term": "Heirloom",
       "section": "language",
@@ -2444,6 +2932,36 @@
       "term": "Omakase",
       "section": "language",
       "level": 3
+    },
+    {
+      "id": "fd_0415",
+      "term": "Kaiseki",
+      "section": "language",
+      "level": 4
+    },
+    {
+      "id": "fd_0416",
+      "term": "Label Rouge",
+      "section": "language",
+      "level": 4
+    },
+    {
+      "id": "fd_0417",
+      "term": "Dry-Farmed",
+      "section": "language",
+      "level": 4
+    },
+    {
+      "id": "fd_0418",
+      "term": "Trou Normand",
+      "section": "language",
+      "level": 4
+    },
+    {
+      "id": "fd_0419",
+      "term": "Kappo",
+      "section": "language",
+      "level": 4
     }
   ],
   "byLexicon": {
@@ -2464,7 +2982,8 @@
     ],
     "foie-gras-torchon-mi-cuit-and-ethics-of-service": [
       "fd_0055",
-      "fd_0337"
+      "fd_0337",
+      "fd_0399"
     ],
     "tasso-and-cajun-andouille": [
       "fd_0064",
@@ -2524,7 +3043,14 @@
       "fd_0311"
     ],
     "boudin-noir-and-boudin-blanc": [
-      "fd_0312"
+      "fd_0312",
+      "fd_0366"
+    ],
+    "pate-en-croute": [
+      "fd_0365"
+    ],
+    "sobrasada": [
+      "fd_0367"
     ],
     "shank-oxtail-and-cheek": [
       "fd_0087",
@@ -2578,7 +3104,8 @@
     "roe-caviar-ikura-tobiko-bottarga": [
       "fd_0116",
       "fd_0125",
-      "fd_0126"
+      "fd_0126",
+      "fd_0374"
     ],
     "wild-salmon-the-run-calendar": [
       "fd_0117"
@@ -2645,6 +3172,12 @@
     ],
     "taleggio": [
       "fd_0327"
+    ],
+    "alpage-cheeses-summer-milk": [
+      "fd_0384"
+    ],
+    "epoisses": [
+      "fd_0385"
     ],
     "buckwheat": [
       "fd_0173"

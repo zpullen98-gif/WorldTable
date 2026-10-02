@@ -481,6 +481,80 @@ const cards = [
 			{ says: 'Lean pork loin cut from a Spanish pig, sold as a thick roast', why: 'It is a thin, fatty sheet from behind the shoulder, not a lean loin roast.' },
 			{ says: 'Pork in a house spice rub whose recipe the kitchen keeps hidden', why: 'The name refers to where the cut hides under a layer of fat, not to a recipe.' }
 		]
+	},
+	{
+		id: 'fd_0370',
+		term: 'Tournedos',
+		level: 4,
+		say: 'TOOR-nuh-doh',
+		gist: 'Small round beef medallion, tied, seared and set on fried bread',
+		guest: 'Tournedos are small, thick rounds of beef tenderloin, seared in butter and set on a round of fried bread with a rich sauce. Classic French.',
+		why: 'Cut from the slimmer part of the tenderloin, past the thick center that goes to chateaubriand, tournedos are small rounds, often wrapped in a thin band of fat and tied to hold their shape, then seared and set on butter-fried bread that soaks up the sauce.',
+		madeWith: ['beef', 'butter', 'often wheat bread', 'often madeira', 'often pork fat', 'sometimes foie gras', 'sometimes truffle'],
+		origin: "Classical French; Rossini's version is named for the Italian composer",
+		notThis: 'Not just a filet mignon: same muscle, but smaller, tied, and served on a crouton with a sauce.',
+		seeAlso: ['fd_0400', 'fd_0315'],
+		confusedWith: ['fd_0093'],
+		line: 'Tournedos Rossini, seared foie gras, black truffle, Madeira sauce',
+		traps: [
+			{ says: 'Thick round steak cut from the sirloin, beefier and firmer than filet', why: 'These rounds come from the tenderloin, the same muscle as filet mignon, not the sirloin.' }
+		]
+	},
+	{
+		id: 'fd_0371',
+		term: 'Presa Ibérica',
+		level: 4,
+		say: 'PREH-sah ee-BEH-ree-kah',
+		aliases: ['Ibérico Presa'],
+		gist: 'Thick, marbled Spanish pork steak from where shoulder meets loin',
+		guest: "It's the thick, marbled shoulder-end cut of Spanish Ibérico pork, grilled pink like a steak. Juicy and nutty, it eats like a ribeye.",
+		why: 'Iberian black pigs, the finest finished on acorns, marble fat right into the muscle. The presa is a thick, oval muscle at the head of the loin where it joins the shoulder, only two per pig. Grilled to pink it eats like a marbled beef steak, rich and sweet.',
+		madeWith: ['iberico pork', 'salt', 'often olive oil'],
+		notThis: 'Not secreto, the thin fatty sheet from behind the shoulder. Presa is a thick, rounded muscle carved into slices.',
+		seeAlso: ['fd_0082', 'fd_0090'],
+		confusedWith: ['fd_0316'],
+		line: 'Grilled presa ibérica de bellota, romesco, padrón peppers',
+		traps: [
+			{ says: 'Lean Spanish pork loin cut, best braised slowly until it falls apart', why: 'This is one of the most marbled pork cuts, and it is grilled like a steak.' }
+		]
+	},
+	{
+		id: 'fd_0372',
+		term: 'Bistecca alla Fiorentina',
+		level: 4,
+		say: 'bee-STEH-kah AH-lah fyor-en-TEE-nah',
+		aliases: ['Fiorentina', 'Florentine Steak'],
+		gist: 'Thick Tuscan steak on the bone, wood-grilled rare to share',
+		guest: "It's Florence's famous steak, a huge, thick T-bone grilled over wood, served rare and sliced off the bone to share. Smoky and deeply beefy.",
+		why: "Cut about three fingers thick across the short loin, so it holds both strip and filet, traditionally from Chianina, Tuscany's big white cattle. Fierce embers char the crust while the center stays rare. Salted after the grill, sold by weight, for two or more.",
+		madeWith: ['beef', 'salt', 'often black pepper', 'often olive oil'],
+		note: 'Tradition serves it rare, and many kitchens will not cook it past medium rare.',
+		origin: 'Florence, Tuscany; bistecca is Italian borrowed from English beefsteak',
+		pairs: 'White cannellini beans, roast potatoes, a glass of Chianti Classico',
+		seeAlso: ['fd_0096', 'fd_0315'],
+		line: 'Bistecca alla fiorentina for two, cannellini beans, rosemary potatoes',
+		traps: [
+			{ says: 'Beef steak served Florence style, on a bed of creamed spinach', why: 'Florentine on a French menu means spinach, but this Tuscan steak comes plain off the grill.' }
+		]
+	},
+	{
+		id: 'fd_0373',
+		term: 'Mangalitsa',
+		level: 4,
+		say: 'man-gah-LEET-sah',
+		aliases: ['Mangalica', 'Mangalitza', 'Woolly Pig'],
+		gist: 'Curly-coated Hungarian lard pig with marbled meat and soft fat',
+		guest: 'Mangalitsa is a rare Hungarian pig with a woolly coat, raised for its fat. The pork is dark and marbled, with fat so soft it melts on your tongue.',
+		why: 'Bred in 19th-century Hungary as a lard pig, it grows slowly and lays down far more fat than modern pork, inside the muscle as well as around it. That fat is soft and melts low, so chops eat rich and silky. Think Wagyu, for pork. It nearly vanished by the 1990s.',
+		madeWith: ['pork'],
+		note: 'The thick, soft white fat is the point of the breed, not trim the kitchen missed.',
+		notThis: "Not Ibérico, Spain's black pig. This one is Hungarian, woolly, and blond, red or swallow-bellied.",
+		seeAlso: ['fd_0297', 'fd_0107', 'fd_0069'],
+		confusedWith: ['fd_0082'],
+		line: 'Mangalitsa pork chop, charred cabbage, apple mustard',
+		traps: [
+			{ says: 'Hungarian pork sausage, cured and spiced hard with smoked paprika', why: 'It is a breed of pig, sold as fresh chops and cured cuts, not a sausage.' }
+		]
 	}
 ];
 

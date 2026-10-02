@@ -295,7 +295,7 @@ const cards = [
 		line: 'Roasted chicken oysters, brown butter, sherry jus',
 		traps: [
 			{ says: 'Fried testicles of a rooster, served as a ranch-country bar snack', why: 'They are two small pieces of dark meat from the back. The name describes only the shape.' },
-			{ says: 'Small shucked shellfish poached gently in a rich chicken broth', why: 'It is chicken meat. The name describes the shape of two small pieces of dark meat.' }
+			{ says: 'Small shucked shellfish poached gently in a rich poultry broth', why: 'It is chicken meat. The name describes the shape of two small pieces of dark meat.' }
 		]
 	},
 	{
@@ -315,6 +315,98 @@ const cards = [
 		line: 'Seared Moulard duck breast, cherries, turnips',
 		traps: [
 			{ says: 'Village in southwest France whose farms raise the finest ducks', why: 'It is a hybrid duck, a sterile cross of Muscovy and Pekin, not a place or a farm.' }
+		]
+	},
+	{
+		id: 'fd_0360',
+		term: 'Grouse',
+		level: 4,
+		gist: 'Wild bird of the British heather moors, dark, livery and strong',
+		guest: 'Grouse is a truly wild bird from the British moors, here only from mid-August into winter. It is dark and rich, with a deep game flavor bolder than pheasant.',
+		why: 'Red grouse cannot be farmed: every bird lives wild on heather moors and is shot in season. A heather diet and a life on the wing make the breast all dark, iron-rich meat with a deep, slightly bitter, livery flavor, far bolder than pheasant or quail.',
+		madeWith: ['grouse', 'often butter', 'often bacon', 'sometimes wheat bread', 'sometimes milk', 'sometimes red wine'],
+		note: 'Shot in the wild, so a stray pellet can turn up. Classically roasted and served pink.',
+		origin: 'Scotland and northern England, from 12 August, the Glorious Twelfth',
+		notThis: 'Not pheasant, a milder bird usually farmed. Grouse is wild only, darker and far stronger.',
+		seeAlso: ['fd_0053', 'fd_0361', 'fd_0059'],
+		confusedWith: ['fd_0060'],
+		line: 'Roast grouse, bread sauce, game chips, watercress',
+		traps: [
+			{ says: 'Farm-reared Scottish bird with pale, mild meat, roasted well done', why: 'Grouse cannot be farmed. It is wild, dark-fleshed and strong, and is served pink.' }
+		]
+	},
+	{
+		id: 'fd_0361',
+		term: 'Hare',
+		level: 4,
+		aliases: ['Lièvre', 'Lepre'],
+		gist: 'Wild long-legged cousin of rabbit, dark red and deeply gamey',
+		guest: 'Hare is the wild cousin of rabbit, but darker, richer and deeply gamey. It is usually braised slowly in red wine.',
+		why: 'Hares live wild in open country and survive on speed, born furred and ready to run. That working muscle is dark red and iron-rich, with a strong game flavor far from pale farmed rabbit. The lean saddle is roasted pink and the legs braised for hours.',
+		madeWith: ['hare', 'often red wine', 'often bacon', 'often wheat flour', "sometimes hare's blood", 'sometimes egg', 'sometimes foie gras'],
+		note: "Wild and shot, so a stray pellet can turn up. Classic sauces are thickened with the hare's blood.",
+		origin: 'Autumn and winter game, lièvre in French, lepre in Italian',
+		notThis: 'Not rabbit, usually farmed, with pale, mild meat. Hare is wild, larger, darker and much gamier.',
+		recipe: 'jugged-hare',
+		seeAlso: ['fd_0059', 'fd_0360', 'fd_0190'],
+		confusedWith: ['fd_0058'],
+		line: 'Pappardelle with braised hare, juniper and red wine',
+		traps: [
+			{ says: 'A bigger breed of farmed rabbit with the same pale, mild meat', why: 'Hare is a separate wild species with dark red, strongly flavored meat.' }
+		]
+	},
+	{
+		id: 'fd_0362',
+		term: 'Cockscomb',
+		level: 4,
+		say: 'KOKS-kohm',
+		aliases: ['Crête de Coq', 'Rooster Comb', "Cock's Comb"],
+		gist: 'Fleshy red crest of a rooster, braised soft and gelatinous',
+		guest: "It's the red crest from a rooster's head, braised until silky, then often fried crisp outside. The flavor is mild, and it eats like tender braised pork skin.",
+		why: "The comb is thick skin over collagen-rich tissue, with no muscle. Blanched so its thin outer skin slips off, then simmered until tender, it turns soft and gelatinous, like a braised pig's trotter, and takes the flavor of its sauce.",
+		madeWith: ['rooster', 'often chicken stock', 'sometimes butter', 'sometimes wheat flour', 'sometimes egg', 'sometimes madeira'],
+		origin: "French crête de coq, classic in financière garnish and Piedmont's finanziera",
+		seeAlso: ['fd_0054', 'fd_0305', 'fd_0364'],
+		line: 'Fried cockscomb, sauce gribiche, pickled shallot',
+		traps: [
+			{ says: 'Ruffled red garden flower grown for its velvety, crested blooms', why: "That is the celosia plant, which shares the name. On a menu it means the rooster's crest." }
+		]
+	},
+	{
+		id: 'fd_0363',
+		term: 'Blue Foot Chicken',
+		level: 4,
+		aliases: ['Poulet Bleu'],
+		gist: "Slow-grown chicken bred in Canada to rival France's Bresse",
+		guest: "It's a breed made to match France's famous Bresse chicken. Raised more than twice as long as most chickens, it has firmer meat and deeper flavor.",
+		why: 'Bred in British Columbia from the 1980s as an answer to Poulet de Bresse, it has white feathers, a red comb and steel-blue feet. Raised 14 to 16 weeks, more than twice as long as a supermarket broiler, it has firmer, tastier meat and skin that roasts crisp.',
+		madeWith: ['chicken', 'often butter', 'sometimes cream', 'sometimes morels', 'sometimes truffle', 'sometimes white wine'],
+		note: 'Often sold with the head and blue feet still on, as proof of the breed.',
+		pairs: 'Roasted whole for two, morels and cream, truffle under the skin',
+		notThis: 'Not Poulet de Bresse, the protected French bird it was bred to match, very rare in the US.',
+		seeAlso: ['fd_0057', 'fd_0051', 'fd_0144'],
+		line: 'Roasted blue foot chicken for two, morels, vin jaune',
+		traps: [
+			{ says: "Chicken flown in from France's Bresse region under strict rules", why: 'It is a North American breed made to match Bresse. True French Bresse is very rare here.' }
+		]
+	},
+	{
+		id: 'fd_0364',
+		term: "Calf's Brains",
+		level: 4,
+		aliases: ['Veal Brains', 'Cervelle de Veau'],
+		gist: 'Custard-soft organ from a veal skull, seared in brown butter',
+		guest: "Calf's brains are very soft and creamy, like a delicate custard, and mild in flavor. They're usually poached, then browned in butter with capers.",
+		why: 'Soaked, peeled of a thin membrane and gently poached in vinegared water to firm them just enough to slice, they are fatty nerve tissue with no muscle at all, so they eat soft and creamy, milder than sweetbreads and nothing like liver.',
+		madeWith: ['veal', 'often butter', 'often wheat flour', 'often capers', 'sometimes egg', 'sometimes vinegar', 'sometimes lemon'],
+		note: "US rules bar brain only from cattle 30 months and older. Send a guest's health questions to a manager.",
+		origin: 'French bistro classic, cervelle de veau au beurre noir',
+		notThis: 'Not sweetbreads, the firmer thymus or pancreas. Brains are softer still, almost like a set custard.',
+		seeAlso: ['fd_0161', 'fd_0278', 'fd_0362'],
+		confusedWith: ['fd_0054'],
+		line: "Calf's brains, brown butter, capers, parsley",
+		traps: [
+			{ says: 'Dense, chewy organ with a strong iron flavor, much like liver', why: 'Brains are very soft and mild, nearer a custard than liver in both texture and taste.' }
 		]
 	}
 ];

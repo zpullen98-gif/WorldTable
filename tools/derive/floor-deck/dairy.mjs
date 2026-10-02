@@ -397,6 +397,65 @@ const cards = [
 		seeAlso: ['fd_0156', 'fd_0170'],
 		confusedWith: ['fd_0327'],
 		line: 'Robiola agnolotti, brown butter, sage'
+	},
+	{
+		id: 'fd_0384',
+		term: 'Alpage',
+		level: 4,
+		say: 'ahl-PAHZH',
+		aliases: ["Fromage d'Alpage", 'Alpkäse'],
+		gist: 'Mountain cheese made in a summer hut from cows on high pasture',
+		guest: "It means the wheel was made in a mountain hut in summer, from cows grazing alpine grass and flowers, so it's more floral than the valley version.",
+		why: 'Each summer the herds climb to high pastures and the cheese is made right there, often in copper over a wood fire. Fresh grass and wildflowers give a deeper yellow paste and a floral, nutty depth that shifts batch to batch, unlike steadier valley wheels.',
+		madeWith: ["cow's milk", "sometimes goat's milk", 'salt', 'traditionally calf rennet'],
+		note: 'Almost always made from raw, unpasteurized milk.',
+		origin: 'French for a high summer pasture in the Alps, and the cheese made on it',
+		lexiconSlug: 'alpage-cheeses-summer-milk',
+		line: "Beaufort Chalet d'Alpage, quince paste, walnut bread",
+		traps: [
+			{ says: 'Hard cheese made from winter milk of cows fed on dried mountain hay', why: 'It is the opposite: summer milk from cows grazing fresh grass on high pasture.' }
+		]
+	},
+	{
+		id: 'fd_0385',
+		term: 'Époisses',
+		level: 4,
+		say: 'ay-PWAHS',
+		gist: 'Round, runny Burgundy cheese with a brandy-washed orange rind',
+		guest: "It's a soft Burgundy cheese washed in local brandy as it ages. It smells bold, but inside it's creamy, salty and savory.",
+		why: 'The curd sets slowly, then for at least four weeks the rind is washed with brine and marc de Bourgogne, a local grape brandy. Orange bacteria grow on the damp surface and bring the meaty aroma, while the paste softens until it runs.',
+		madeWith: ["cow's milk", 'salt', 'brandy', 'rennet'],
+		note: 'A ripe one runs, so it is served in its box with a spoon. Makers use raw or pasteurized milk, and US wheels are pasteurized.',
+		origin: 'The village of Époisses in Burgundy, revived from near loss in the 1950s',
+		notThis: 'Not Taleggio, a larger, firmer Italian square. Époisses is round, runs when ripe and smells far stronger.',
+		lexiconSlug: 'epoisses',
+		seeAlso: ['fd_0171'],
+		confusedWith: ['fd_0327'],
+		line: 'Époisses, warm baguette, walnuts, Chablis',
+		traps: [
+			{ says: 'Hard Burgundy cheese aged in brandy barrels, grated over pasta', why: 'It is soft and runny when ripe, and the brandy is washed onto the rind, not used for barrels.' },
+			{ says: 'Soft cheese whose rind is soaked in red Burgundy wine for color', why: 'The rind is washed with brine and marc, a grape brandy, and the orange comes from bacteria.' }
+		]
+	},
+	{
+		id: 'fd_0386',
+		term: 'Ash-Ripened',
+		level: 4,
+		aliases: ['Cendré', 'Ash-Coated'],
+		gist: 'Young goat cheese dusted in vegetable charcoal so a rind can grow',
+		guest: "It's a goat cheese dusted with vegetable ash, which helps the rind grow. The rind is soft and earthy, and inside it's bright, lemony and creamy.",
+		why: 'Charred plant matter mixed with salt is dusted on the young cheese. It tames the acid at the surface so molds can take hold and grow a thin, wrinkled rind, which softens the paste just beneath. The ash itself tastes of almost nothing.',
+		madeWith: ["goat's milk", "sometimes cow's milk", 'vegetable ash', 'salt', 'often rennet'],
+		note: 'French originals like Valençay are raw-milk. Young ones sold in the US are pasteurized by law.',
+		origin: 'French cendré, from Loire Valley goat cheeses like Valençay',
+		notThis: 'Not plain chèvre, which is fresh and rindless. These age a few weeks, so they are denser and rinded.',
+		seeAlso: ['fd_0170'],
+		confusedWith: ['fd_0156'],
+		line: 'Ash-ripened goat cheese, honeycomb, candied walnuts',
+		traps: [
+			{ says: 'Goat cheese smoked over a wood fire until its outside turns grey', why: 'Nothing is smoked: the grey starts as a dusting of plant ash put on by hand.' },
+			{ says: 'Goat cheese whose grey coat is a burnt crust that must be cut away', why: 'Not burnt: the grey is plant ash, often under a thin mold rind, and the rind is eaten.' }
+		]
 	}
 ];
 

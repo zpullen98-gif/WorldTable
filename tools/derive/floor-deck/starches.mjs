@@ -532,6 +532,99 @@ const cards = [
 			{ says: 'Fiery Calabrian spread of chiles, eggplant and mushrooms packed in oil', why: 'That is a Calabrian condiment sharing only the name. This is a Spanish paella rice.' },
 			{ says: 'Long-grain Spanish rice that cooks light and fluffy for paella', why: 'It is a short, plump grain. Long-grain rice does not absorb enough broth to make a good paella.' }
 		]
+	},
+	{
+		id: 'fd_0387',
+		term: 'Tajarin',
+		level: 4,
+		say: 'tah-yah-REEN',
+		gist: 'Very thin Piedmont egg pasta ribbons from a yolk-rich dough',
+		guest: "It's thin egg pasta from Piedmont, made with almost all yolks, so it's golden and silky. In the fall it's the classic base for white truffle.",
+		why: 'The dough takes 30 to 40 yolks per kilo of flour, against about 10 whole eggs for ordinary egg pasta, so it is deep gold, rich and tender. Cut no wider than about 2 millimeters, the fine strands want light sauces: butter, sage, meat juices or truffle.',
+		madeWith: ['wheat flour', 'egg yolk', 'often butter', 'often parmesan'],
+		origin: 'Langhe hills of Piedmont, local dialect for tagliolini',
+		pairs: 'Shaved white truffle, butter and sage, sausage ragu',
+		notThis: 'Not tagliatelle, the wider Bologna ribbon of whole-egg dough. These are far finer and richer in yolk.',
+		seeAlso: ['fd_0321', 'fd_0172'],
+		confusedWith: ['fd_0185'],
+		line: '40-yolk tajarin, butter, shaved white truffle',
+		traps: [
+			{ says: 'North African stew slow-cooked in a clay pot with a tall cone lid', why: 'That is a tagine. This is a fine egg pasta from Piedmont in northern Italy.' }
+		]
+	},
+	{
+		id: 'fd_0388',
+		term: 'Uovo in Raviolo',
+		level: 4,
+		say: 'WOH-voh een rah-vee-OH-loh',
+		aliases: ['Egg Yolk Raviolo'],
+		gist: 'One big pasta pocket of ricotta around a whole, runny yolk',
+		guest: "It's one big raviolo filled with ricotta and a whole egg yolk. Cut into it and the yolk runs out and mixes with the butter and parmesan into a sauce.",
+		why: 'Created in 1974 by Nino Bergese and Valentino Marcattilii at San Domenico in Imola. A ring of ricotta and spinach walls in a raw yolk under thin egg pasta. It boils for only 2 to 3 minutes, enough to cook the pasta while the yolk just warms, so it runs.',
+		madeWith: ['egg yolk', 'wheat flour', 'ricotta', 'butter', 'parmesan', 'often spinach', 'sometimes truffle'],
+		note: 'The yolk goes in raw and is only warmed, never cooked through. Tell any guest who wants egg cooked firm.',
+		origin: 'San Domenico, Imola, 1974, Italian for egg in a raviolo',
+		pairs: 'Melted butter, parmesan, shaved white truffle in season',
+		notThis: 'Not a plate of ravioli. It is one large piece, and the yolk inside becomes the sauce.',
+		seeAlso: ['fd_0165', 'fd_0321'],
+		confusedWith: ['fd_0191'],
+		line: 'Uovo in raviolo, brown butter, parmesan, white truffle',
+		traps: [
+			{ says: 'Small square pasta pockets stuffed with chopped hard-boiled egg', why: 'It is one large piece, and the yolk goes in raw and stays runny so it can be the sauce.' }
+		]
+	},
+	{
+		id: 'fd_0389',
+		term: 'Corzetti',
+		level: 4,
+		say: 'kor-ZET-ee',
+		aliases: ['Croxetti', 'Corzetti Stampati'],
+		gist: 'Thin coins of pasta embossed on both faces by a carved wooden stamp',
+		guest: "They're thin coins of fresh pasta from Liguria, each pressed with a carved wooden stamp. The pattern catches a light sauce like pesto.",
+		why: 'A wooden stamp, often pearwood, cuts each disk, then its two halves press a design into both sides. Genoese families once carved their crests into them. The raised pattern grips a thin sauce, and the flat, firm coin eats chewier than a ribbon.',
+		madeWith: ['wheat flour', 'egg', 'often white wine', 'often pine nuts', 'often parmesan', 'sometimes walnuts'],
+		origin: 'Liguria, named for the corzetto, a Genoese coin of the 1300s',
+		pairs: 'Pesto, walnut sauce, marjoram and pine nuts, butter',
+		seeAlso: ['fd_0212', 'fd_0194'],
+		line: 'Hand-stamped corzetti, walnut sauce, marjoram'
+	},
+	{
+		id: 'fd_0390',
+		term: 'Vialone Nano',
+		level: 4,
+		say: 'vee-ah-LOH-nay NAH-noh',
+		gist: 'Round Veneto risotto rice that gives a loose, flowing finish',
+		guest: "It's the risotto rice of Venice and Verona. It soaks up broth quickly and makes a looser, silkier risotto that flows across the plate like a wave.",
+		why: "A semifino rice bred in 1937 from Vialone and a short-stalked variety called Nano. The round grain drinks broth fast and its starch makes a creamy, loose risotto all'onda, on the wave, while the core holds. It is smaller and rounder than carnaroli.",
+		madeWith: ['rice', 'often broth', 'often white wine', 'often butter', 'often parmesan'],
+		origin: 'Bassa Veronese, Veneto, nano is Italian for dwarf, for the short plant',
+		notThis: 'Not arborio, a bigger grain that turns stickier, or carnaroli, longer and firmer. This one is smaller and gives the loosest risotto.',
+		seeAlso: ['fd_0181', 'fd_0183'],
+		confusedWith: ['fd_0182', 'fd_0186'],
+		line: 'Vialone Nano risotto, radicchio, Monte Veronese',
+		traps: [
+			{ says: 'Miniature Italian rice with grains half the size of a normal grain', why: 'The dwarf in the name is the short plant. The grain is a normal medium size, a little smaller than carnaroli.' }
+		]
+	},
+	{
+		id: 'fd_0391',
+		term: 'Middlins',
+		level: 4,
+		say: 'MID-linz',
+		aliases: ['Rice Grits', 'Rice Middlins'],
+		gist: 'Broken heirloom Lowcountry rice, cooked up creamy like risotto',
+		guest: "They're broken bits of Carolina Gold, the heirloom Charleston rice. They cook up creamy like risotto, with a soft bite and a sweet rice flavor.",
+		why: 'Carolina Gold has a fragile grain that cracks in threshing and milling. Those short pieces sold cheap and became the everyday rice of Lowcountry kitchens. Small pieces shed starch fast, so they turn glossy and creamy yet keep a springy bite. Think risotto, not corn.',
+		madeWith: ['rice', 'often butter', 'sometimes cream'],
+		origin: 'South Carolina Lowcountry milling term for mid-size broken rice',
+		pairs: 'Shrimp, country ham, collards, pan gravy, a soft egg',
+		notThis: 'Not corn grits. These are broken rice, pearlier and silkier, though cooked and served the same way.',
+		seeAlso: ['fd_0331', 'fd_0181'],
+		confusedWith: ['fd_0178'],
+		line: 'Carolina Gold rice middlins, shrimp, country ham gravy',
+		traps: [
+			{ says: 'Cleaned pork intestines simmered for hours, a Southern soul food dish', why: 'Those are chitlins, a sound-alike. These are broken pieces of heirloom rice.' }
+		]
 	}
 ];
 

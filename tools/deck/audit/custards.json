@@ -1005,6 +1005,237 @@
 			],
 			"critic": null,
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0405",
+				"fd_0406",
+				"fd_0407",
+				"fd_0408",
+				"fd_0409"
+			],
+			"findings": [
+				{
+					"id": "fd_0405",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "Not a pavlova or any baked meringue. These are poached soft, with no crust but the caramel.",
+					"because": "In strict French usage the île flottante is one large meringue baked in a mold in a water bath (bain-marie) in the oven. Œufs à la neige are the spoonfuls poached in milk. Since the card gives both names, 'not any baked meringue' is false for the dish under its own name. What sets both apart from a pavlova is that they stay soft and white with no crisp shell, not that they never see an oven.",
+					"fix": "Not a pavlova, baked crisp. These are cooked soft in milk or a water bath, with no crust.",
+					"lens": "fact",
+					"key": "custards-1-fact-1"
+				},
+				{
+					"id": "fd_0405",
+					"field": "why",
+					"claim": "Egg whites whipped with sugar are spooned into barely simmering milk, which sets them into soft, marshmallowy clouds with no browning.",
+					"severity": "unclear",
+					"because": "This only describes the œufs à la neige method. The classic île flottante is one mound set in a mold in a water bath, so a server who has seen a molded island on the plate would be left without an answer.",
+					"fix": "Sweet whipped whites are poached in barely simmering milk, or set as one mound in a water bath, soft and marshmallowy.",
+					"lens": "fact",
+					"key": "custards-1-fact-2"
+				},
+				{
+					"id": "fd_0406",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "sometimes wheat flour",
+					"because": "Chiboust is built on pastry cream, and the deck's own Pastry Cream card (fd_0264) lists 'wheat flour' with no qualifier, cornstarch being the alternative. Classic crème pâtissière is thickened with flour. Saying 'sometimes' plays down a wheat flag that a guest who avoids wheat would rely on, and it contradicts the parent card.",
+					"fix": "often wheat flour",
+					"lens": "fact",
+					"key": "custards-1-fact-3"
+				},
+				{
+					"id": "fd_0409",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "often pistachios",
+					"because": "Classic nougat glacé nougatine is very often made with hazelnuts as well as almonds and pistachios. Published recipes routinely list almonds, hazelnuts and pistachios together, and the deck's Semifreddo card flags hazelnut. The list is at its 7-item cap, so hazelnut has to be folded into an existing item or a guest with a tree-nut allergy loses a named nut.",
+					"fix": "often pistachios or hazelnuts",
+					"lens": "fact",
+					"key": "custards-1-fact-4"
+				},
+				{
+					"id": "fd_0409",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "Only the nut brittle inside is chewy or crisp.",
+					"because": "Nut brittle (nougatine) is crisp, not chewy. The chew comes from the candied fruit. As written, the trap's 'why' teaches a false texture.",
+					"fix": "Only the brittle and candied fruit inside give it crunch or chew.",
+					"lens": "fact",
+					"key": "custards-1-fact-5"
+				},
+				{
+					"id": "fd_0407",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "richer than panna cotta",
+					"because": "Panna cotta is set heavy cream, often richer in fat than a bavarois built on milk anglaise and lightened with whipped cream. The real difference is the egg custard base, so 'richer' is a doubtful comparison a guest could challenge.",
+					"fix": "eggier than panna cotta",
+					"lens": "fact",
+					"key": "custards-1-fact-6"
+				},
+				{
+					"id": "fd_0405",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "finished with caramel and toasted almonds",
+					"because": "The card's own madeWith says 'often almonds', and kitchens finish this dish with pistachios, praline or nothing at all. Said flatly at the table, it is a nut-identity assurance that a guest asking about nuts will rely on. A safety fact justifies the extra word.",
+					"fix": "finished with caramel and often toasted almonds",
+					"lens": "floor",
+					"key": "custards-1-floor-7"
+				},
+				{
+					"id": "fd_0406",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's a light, silky cream, pastry cream folded with meringue, often finished with a crackly torched sugar top like a crème brûlée.",
+					"because": "Said aloud, 'cream, pastry cream' trips a nervous new hire, and 'pastry cream' is a kitchen word that guests don't use. The Pastry Cream card itself calls it a thick custard, which is the plain word a guest understands.",
+					"fix": "It's a silky custard lightened with meringue, often with a crackly torched sugar top like a crème brûlée.",
+					"lens": "floor",
+					"key": "custards-1-floor-8"
+				},
+				{
+					"id": "fd_0407",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "vanilla custard set and lightened with whipped cream. Cool and silky, and lighter than it looks.",
+					"because": "Bavarois is just as often raspberry, strawberry, chocolate or coffee, and only the sample menu line says vanilla. A server reading this line would tell a guest that a raspberry bavarois is vanilla custard. 'Set and lightened with whipped cream' also suggests the cream does the setting, when the gelatin does.",
+					"fix": "a silky custard lightened with whipped cream and chilled to hold its shape.",
+					"lens": "floor",
+					"key": "custards-1-floor-9"
+				},
+				{
+					"id": "fd_0409",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "Only the nut brittle inside is chewy or crisp.",
+					"because": "Brittle is crisp and never chewy. The chew comes from the candied fruit, so as written the explanation of why the trap is wrong is itself wrong.",
+					"fix": "Only the brittle and candied fruit inside give it crunch or chew.",
+					"lens": "floor",
+					"key": "custards-1-floor-10"
+				},
+				{
+					"id": "fd_0407",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "Not panna cotta, which is cream and gelatin with no egg.",
+					"because": "This is a free-from assurance about another dish. A server who repeats it tells a guest that panna cotta lacks egg, but recipes vary, and some kitchens add yolk or set it with egg. Describe what panna cotta is made with, not what it lacks.",
+					"fix": "Not panna cotta, which is sweet cream set with gelatin.",
+					"lens": "safety",
+					"key": "custards-1-safety-11"
+				},
+				{
+					"id": "fd_0406",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "often gelatin",
+					"because": "Gelatin is part of the classic definition of chiboust: it is what lets the meringue-lightened cream hold an edge, and the card's own why says 'plus a little gelatin'. Guests who avoid pork or beef products need it flagged as a standard ingredient, not an occasional one.",
+					"fix": "gelatin",
+					"lens": "safety",
+					"key": "custards-1-safety-12"
+				},
+				{
+					"id": "fd_0406",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "sometimes wheat flour",
+					"because": "The base is classic French pastry cream, which is thickened with wheat flour (or starch alongside it) as standard. 'Sometimes' understates a wheat ingredient that a guest who must avoid wheat needs to hear about first.",
+					"fix": "often wheat flour",
+					"lens": "safety",
+					"key": "custards-1-safety-13"
+				},
+				{
+					"id": "fd_0409",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "sugar",
+					"because": "Classic nougat glacé folds in nougatine and toasted nuts. Almonds and pistachio are the usual nuts, and hazelnuts are common as well. Each nut has to be named for a guest with a nut allergy, but hazelnut is missing and the list is at its 7-item cap. The honey and the brittle already cover sugar, so it is the cheapest item to drop. Candied fruit is also often soaked in kirsch or Grand Marnier, and in a frozen dessert that is never cooked, the alcohol stays in.",
+					"fix": "often hazelnuts",
+					"lens": "safety",
+					"key": "custards-1-safety-14"
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "custards-1-fact-1",
+					"action": "applied",
+					"reason": "notThis now reads 'Not a pavlova, which is baked with a crisp shell. These are cooked soft in milk or a water bath.', dropping the false 'not any baked meringue'."
+				},
+				{
+					"finding": "custards-1-fact-2",
+					"action": "applied",
+					"reason": "The why now names both methods: spoonfuls poached in milk, or one mound set in a water bath, both staying soft and marshmallowy. The trailing comparison was trimmed to keep the length on aim."
+				},
+				{
+					"finding": "custards-1-fact-3",
+					"action": "applied",
+					"reason": "madeWith 'sometimes wheat flour' is now 'often wheat flour', in line with the flour-thickened pastry cream base."
+				},
+				{
+					"finding": "custards-1-fact-4",
+					"action": "applied",
+					"reason": "Hazelnut is now named as its own item, 'often hazelnuts', which made room by dropping 'sugar' (the honey and brittle already cover it, per safety-14). 'often pistachios' stays as it was."
+				},
+				{
+					"finding": "custards-1-fact-5",
+					"action": "applied",
+					"reason": "The second trap's why now reads 'Only the brittle and candied fruit inside give it crunch or chew.', so the crunch is credited to the brittle and the chew to the fruit."
+				},
+				{
+					"finding": "custards-1-fact-6",
+					"action": "applied",
+					"reason": "The why now says 'eggier than panna cotta' in place of 'richer than panna cotta', so it names the real difference, the yolk custard base."
+				},
+				{
+					"finding": "custards-1-floor-7",
+					"action": "applied",
+					"reason": "The guest line now ends 'finished with caramel and often toasted almonds', so it matches madeWith and makes no flat claim about which nut is used."
+				},
+				{
+					"finding": "custards-1-floor-8",
+					"action": "applied",
+					"reason": "The guest line is now 'It's a silky custard lightened with meringue, often with a crackly torched sugar top like a crème brûlée.', which drops the 'cream, pastry cream' stumble and the kitchen word."
+				},
+				{
+					"finding": "custards-1-floor-9",
+					"action": "applied",
+					"reason": "The guest line no longer says vanilla. It now says 'a silky custard set with gelatin and lightened with whipped cream', which credits the setting to gelatin, not the cream."
+				},
+				{
+					"finding": "custards-1-floor-10",
+					"action": "applied",
+					"reason": "This is the same fix as fact-5: the trap's why now credits crunch to the brittle and chew to the candied fruit."
+				},
+				{
+					"finding": "custards-1-safety-11",
+					"action": "applied",
+					"reason": "notThis now reads 'Not panna cotta, which is sweet cream set with gelatin.' It says what panna cotta is made with and no longer says what it lacks."
+				},
+				{
+					"finding": "custards-1-safety-12",
+					"action": "applied",
+					"reason": "madeWith 'often gelatin' is now plain 'gelatin', since gelatin is part of the classic chiboust and the why already describes it."
+				},
+				{
+					"finding": "custards-1-safety-13",
+					"action": "applied",
+					"reason": "This is the same change as fact-3: 'sometimes wheat flour' is now 'often wheat flour'."
+				},
+				{
+					"finding": "custards-1-safety-14",
+					"action": "applied",
+					"reason": "'sugar' was dropped from madeWith and 'often hazelnuts' added, which keeps the list at 7 items with every nut named. Liqueur in candied fruit was not added because the list is at its cap."
+				}
+			],
+			"critic": {
+				"ok": true,
+				"problems": [],
+				"notes": "I found no problems that need fixing in this section.\n\n**Coverage:** all 26 roster rows have a card. The 21 cards already written are in src/lib/data/floor-deck.json, and the five new ones (fd_0405 to fd_0409) are complete. None of the rows has a knownPacketError.\n\n**Length:** new cards total 628 to 692 characters of prose each, mean 668. The section mean, counting all 26 cards, is 653.5, under the 720 ceiling.\n\n**Banned words:** none. I found no verdict words, no em or en dashes, and none of the food-safety curriculum substrings.\n\n**Rules met:**\n- Both accented terms (Île Flottante, Nougat Glacé) have a \"say\", and so do Chiboust, Bavarois and Marquise.\n- No gist uses its own term or anything on its mayNotAppearInGistOrTraps list.\n- No gist is the longest option: Chiboust gist 66 vs trap 68, Marquise 60 vs 63, Nougat Glacé 66 vs 65 and 70. Every trap is within 10 characters of its gist.\n- None of the traps describes another card on the roster. The diplomat cream, warm baked cocoa cake and nougat candy they describe have no cards.\n- Each new card can be told apart from its neighbours: Bavarois (yolk custard, gelatin, mold) from Panna Cotta and Mousse, Chiboust from Pastry Cream, and Nougat Glacé (honey meringue) from Parfait and Semifreddo (whipped yolks).\n\n**For the operator, none of which is a card defect:**\n\n1. **The new Mousse links will be dropped on Mousse's side.** Bavarois and Chocolate Marquise both list Mousse in confusedWithTerms. tools/derive/floor-deck.mjs makes links two-way but cuts each card's list at 4 (slice(0, 4)). Mousse (fd_0252) already shows 4: Soufflé, Pot de Crème, Sabayon, Crémeux. So the two new links show on the new cards but not on Mousse. If you want them there, trim Mousse's list or raise the cap. The other new two-way links have room:\n   - Panna Cotta to Bavarois\n   - Pastry Cream to Chiboust\n   - Semifreddo and Parfait to Nougat Glacé\n   - Torte to Marquise\n   - Pavlova to Île Flottante\n\n2. **Two level calls to review.** All five new cards are level 4. Île Flottante, sold as Floating Island in bistros, arguably fits level 3 next to Sabayon and Posset; Chocolate Marquise could go either way. Chiboust, Bavarois and Nougat Glacé are rightly 4. The deck has 26 level-4 cards now.\n\n3. **The Marquise to Torte link is approximate.** The real mix-up is with flourless chocolate cake, which has no card, and Torte is the nearest one. The notThis already names the flourless cake. If a Flourless Chocolate Cake card is ever added, re-point the link to it.\n\n4. **Purists split Île Flottante from oeufs à la neige.** To them, île flottante is one baked meringue and oeufs à la neige are the poached spoonfuls. The why covers both methods, so the alias is acceptable, but the gist and guest line describe the poached form."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

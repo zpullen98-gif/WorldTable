@@ -525,6 +525,78 @@ const cards = [
 		traps: [
 			{ says: 'Marinated overnight in soy sauce and mirin, then grilled over charcoal', why: 'It is not a soy marinade. Koji, a mold-grown rice, is spread on the raw meat and left for days.' }
 		]
+	},
+	{
+		id: 'fd_0356',
+		term: 'Kombu-Cured',
+		level: 4,
+		say: 'KOHM-boo KYOORD',
+		aliases: ['Kobujime', 'Konbujime'],
+		gist: 'Raw fish pressed between sheets of kelp to firm and season it',
+		guest: 'The raw fish rests wrapped in sheets of kelp, which firms it gently and gives it a deep, savory sweetness. It eats like sashimi, just firmer and fuller.',
+		why: 'Kelp sheets, often wiped with sake, draw water from raw fish while their glutamate, the compound behind umami, seeps in. Over a few hours to a day the flesh firms, turns glassy and gains depth. It is gentler than a salt cure, so the fish still eats as sashimi.',
+		madeWith: ['fish', 'sometimes shrimp or scallop', 'kelp', 'often salt', 'sometimes sake'],
+		origin: 'Japanese kobujime, a Toyama specialty, from kobu, kelp, and shime, to tighten',
+		notThis: 'Not gravlax, buried in salt and sugar for days, nor koji-aged meat. Kelp firms raw fish in hours.',
+		seeAlso: ['fd_0220', 'fd_0355'],
+		confusedWith: ['fd_0030', 'fd_0304', 'fd_0222'],
+		line: 'Kombu-cured fluke, yuzu kosho, shiso, olive oil',
+		traps: [
+			{ says: 'Raw fish soaked overnight in soy sauce and sweet rice wine', why: 'No marinade is involved. Dry kelp sheets pull water out and season the fish from the outside.' },
+			{ says: 'Fish wrapped in seaweed and steamed until just cooked', why: 'Nothing cooks it. The kelp only firms and seasons the fish, which is served raw.' }
+		]
+	},
+	{
+		id: 'fd_0357',
+		term: 'Aburi',
+		level: 4,
+		say: 'ah-BOO-ree',
+		gist: 'Raw fish touched by a flame on top only, fat softened, center raw',
+		guest: "It's raw fish, or sometimes wagyu, kissed with a flame just on top, so the fat melts and turns a little smoky while the inside stays cool and silky.",
+		why: 'A torch or glowing charcoal is held over the surface for seconds. The top fat melts and the edges catch a light char, while the flesh below stays raw. It suits rich cuts like salmon belly, fatty tuna, mackerel and wagyu, where melting fat is the point.',
+		madeWith: ['fish', 'sometimes scallop', 'sometimes wagyu beef', 'often sushi rice', 'sometimes soy', 'sometimes egg-yolk mayonnaise'],
+		origin: 'Japanese, from aburu, to sear or scorch over a flame',
+		notThis: 'Not tataki, seared all round and then sliced. Here only the top of a raw piece, often on its rice, meets the flame.',
+		seeAlso: ['fd_0355', 'fd_0107'],
+		confusedWith: ['fd_0039', 'fd_0223'],
+		line: 'Aburi salmon belly nigiri, yuzu, sea salt',
+		traps: [
+			{ says: 'Raw fish slices splashed with hot oil so the edges just turn white', why: 'No hot oil is used. A flame touches only the top of the piece for seconds.' }
+		]
+	},
+	{
+		id: 'fd_0358',
+		term: 'Binchotan-Grilled',
+		level: 4,
+		say: 'BIN-choh-tahn GRILLD',
+		gist: 'Cooked over dense Japanese white charcoal, hot and nearly smokeless',
+		guest: "It's cooked over Japanese white charcoal, which burns very hot and clean, so you get a crisp, deeply browned outside without a heavy smoky taste.",
+		why: 'Ubame oak is charred slowly in a kiln, then pulled out glowing and smothered in sand and ash, leaving dense, almost pure carbon. It burns for hours with little flame or smoke and fierce, even heat, so the outside browns fast and the food tastes of itself, not of smoke.',
+		madeWith: ['often chicken', 'sometimes beef', 'sometimes fish', 'often soy', 'often mirin'],
+		origin: 'Japanese white charcoal, named for a Wakayama maker of about 1700',
+		notThis: 'Not ordinary grilling: wood and briquettes add their own smoke and odor, while this charcoal gives clean, steady heat.',
+		seeAlso: ['fd_0357', 'fd_0041'],
+		confusedWith: ['fd_0032'],
+		line: 'Binchotan-grilled chicken thigh, tare, scallion'
+	},
+	{
+		id: 'fd_0359',
+		term: 'Hay-Smoked',
+		level: 4,
+		aliases: ['Hay-Roasted', 'Cooked in Hay'],
+		gist: 'Roasted in or held over smoldering dried grass for a sweet aroma',
+		guest: "It's roasted in or smoked over smoldering hay, a farmhouse trick that leaves a sweet, grassy smoke. The hay is just for aroma, you don't eat it.",
+		why: 'Hay burns fast and brief, so its smoke is lighter than wood smoke, and dried grass holds sweet aromatics, chiefly coumarin. Food is packed in hay and roasted in a closed pot, or held over it for minutes: a quick kiss of smoke, not slow barbecue.',
+		madeWith: ['often lamb', 'sometimes chicken', 'sometimes egg', 'sometimes butter or cream', 'sometimes cheese'],
+		note: 'A quick hay smoke does not cook food, so hay-smoked fish or tartare may still be raw.',
+		origin: 'Old French farmhouse cooking, revived by Nordic chefs',
+		notThis: 'Not wood-smoked: hay burns fast and sweet, giving a lighter, grassier smoke than hardwood.',
+		seeAlso: ['fd_0037'],
+		confusedWith: ['fd_0041'],
+		line: 'Hay-smoked lamb loin, sunchoke, salsa verde',
+		traps: [
+			{ says: 'Food baked in a crust of dried grass, which is eaten with the dish', why: 'The hay only perfumes the food and is never eaten, even when it comes to the table.' }
+		]
 	}
 ];
 

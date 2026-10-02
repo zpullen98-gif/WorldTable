@@ -1026,6 +1026,218 @@
 			],
 			"critic": null,
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0387",
+				"fd_0388",
+				"fd_0389",
+				"fd_0390",
+				"fd_0391"
+			],
+			"findings": [
+				{
+					"id": "fd_0387",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Hair-fine Piedmont egg pasta ribbons cut from a dough of yolks",
+					"because": "Tajarin are thin ribbons of about 2 to 3 mm. They are not hair-fine. Hair-fine describes capelli d'angelo (angel hair), so a server repeating this gist would mislead the guest about the shape.",
+					"fix": "Thin Piedmont egg pasta ribbons cut from a dough rich in yolks",
+					"lens": "fact",
+					"key": "starches-1-fact-1"
+				},
+				{
+					"id": "fd_0390",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"rice\", \"often butter\", \"often parmesan\"",
+					"because": "The list already describes the finished risotto because it names butter and parmesan, so it should also flag what a classic risotto is built on. That means white wine, which is alcohol, added after the toast, and the broth, which may be chicken, meat or fish. A guest avoiding alcohol or fish would otherwise get no flag.",
+					"fix": "[\"rice\", \"often butter\", \"often parmesan\", \"often white wine\", \"often broth\"]",
+					"lens": "fact",
+					"key": "starches-1-fact-2"
+				},
+				{
+					"id": "fd_0389",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "A two-part wooden stamp, often pearwood, cuts each disk and presses a design into both sides at once.",
+					"because": "The cutting and the stamping are two separate steps. The hollow cutter end of the stamp cuts the disk first. The disk is then pressed between the two carved halves, which emboss both faces together. As written, the sentence reads as if one motion does both.",
+					"fix": "A wooden stamp, often pearwood, cuts each disk, then its two halves press a design into both sides.",
+					"lens": "fact",
+					"key": "starches-1-fact-3"
+				},
+				{
+					"id": "fd_0387",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "It's Piedmont's hand-cut egg pasta, made with almost nothing but yolks, so it's golden and silky. In the fall it carries shaved white truffle.",
+					"because": "The guest line never says the pasta is thin, and thinness is what sets it apart from tagliatelle, so the guest still does not know what arrives. 'Hand-cut' promises something many kitchens do not do, because tajarin is often cut by machine. 'In the fall it carries shaved white truffle' sounds like the truffle comes with the dish, when it is usually a costly supplement.",
+					"fix": "It's thin egg pasta from Piedmont, made with almost all yolks, so it's golden and silky. In the fall it's the classic base for white truffle.",
+					"lens": "floor",
+					"key": "starches-1-floor-4"
+				},
+				{
+					"id": "fd_0387",
+					"field": "gist",
+					"severity": "wrong",
+					"claim": "Hair-fine Piedmont egg pasta ribbons",
+					"because": "The card's own why gives a width of about 2 millimeters. That is a fine ribbon, not hair-fine. 'Hair-fine' describes angel hair (capelli d'angelo), so a server repeating it would set the wrong expectation.",
+					"fix": "Very thin Piedmont egg pasta ribbons",
+					"lens": "floor",
+					"key": "starches-1-floor-5"
+				},
+				{
+					"id": "fd_0391",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "an old Lowcountry staple. They cook up creamy like risotto, with a little pop and a sweet rice flavor.",
+					"because": "Middlins have no pop. They cook soft and creamy with a gentle springy bite, which is what the card's own why says, so 'pop' oversells a texture the guest will not get. Many guests also do not know the word 'Lowcountry'. Charleston, the city the Carolina Gold card names, lands at the table.",
+					"fix": "They're broken bits of Carolina Gold, the heirloom Charleston rice. They cook up creamy like risotto, with a soft bite and a sweet rice flavor.",
+					"lens": "floor",
+					"key": "starches-1-floor-6"
+				},
+				{
+					"id": "fd_0389",
+					"field": "say",
+					"severity": "unclear",
+					"claim": "kor-TSET-ee",
+					"because": "This is the Italian sound. American dining rooms usually say the z as a plain z, and a stressed syllable that opens on 'TS' is the hardest sound on the card for a nervous new hire to say. The respelling should give the American dining-room version.",
+					"fix": "kor-ZET-ee",
+					"lens": "floor",
+					"key": "starches-1-floor-7"
+				},
+				{
+					"id": "fd_0390",
+					"field": "line",
+					"severity": "style",
+					"claim": "Vialone Nano risotto, spring peas, pancetta",
+					"because": "This nearly repeats the Arborio card's line ('Arborio risotto, spring peas, parmesan'), so the menu line teaches nothing about why a kitchen would name this rice. A line with Veneto partners reads like a real menu and says more about the rice.",
+					"fix": "Vialone Nano risotto, radicchio, Monte Veronese",
+					"lens": "floor",
+					"key": "starches-1-floor-8"
+				},
+				{
+					"id": "fd_0390",
+					"field": "madeWith",
+					"severity": "verdict",
+					"claim": "\"rice\", \"often butter\", \"often parmesan\"",
+					"because": "The list describes the risotto, and a classic risotto is built on broth and finished with a splash of dry white wine before the butter and cheese. Alcohol is one of the flags this list exists to carry. A guest who avoids alcohol and reads this list would conclude there is none in the dish.",
+					"fix": "[\"rice\", \"often broth\", \"often white wine\", \"often butter\", \"often parmesan\"]",
+					"lens": "safety",
+					"key": "starches-1-safety-9"
+				},
+				{
+					"id": "fd_0388",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "The yolk is only warmed, never set. A guest who wants egg cooked firm should know before ordering.",
+					"because": "The safety fact a server has to say plainly is that the yolk goes in raw and is served undercooked and runny. \"Never set\" is kitchen shorthand, and a new hire may not turn it into a plain statement at the table. This is a raw-service fact, so a few extra characters are justified.",
+					"fix": "The yolk goes in raw and is only warmed, never cooked through. Tell any guest who wants egg cooked firm.",
+					"lens": "safety",
+					"key": "starches-1-safety-10"
+				},
+				{
+					"key": "starches-critic-1",
+					"id": "fd_0390",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Vialone Nano lists Arborio in confusedWithTerms, but its notThis only separates it from Carnaroli. A server whose guest asks 'is that like Arborio?' gets no way to tell the two apart, and Arborio is the more likely confusion because both grains are plump and round.",
+					"because": "Vialone Nano lists Arborio in confusedWithTerms, but its notThis only separates it from Carnaroli. A server whose guest asks 'is that like Arborio?' gets no way to tell the two apart, and Arborio is the more likely confusion because both grains are plump and round.",
+					"fix": "Rewrite notThis to cover both, inside the 60 to 100 aim. Suggested: \"Not arborio, which is bigger and turns stickier, or carnaroli, which is longer and firmer. This one gives the loosest risotto.\" (about 120 characters, still under the 150 limit). Or drop Arborio from confusedWithTerms and keep it in seeAlsoTerms."
+				},
+				{
+					"key": "starches-critic-2",
+					"id": "fd_0391",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "In the gist, 'cooked creamy like porridge' echoes the Grits gist ('slow-cooked into a Southern porridge'), and the 'heirloom Lowcountry rice' part echoes the Carolina Gold gist ('Heirloom long-grain rice of the Lowcountry'). So this one answer option sits between its two nearest neighbours, and it is the longest gist in the batch (68). The card's own why says 'Think risotto, not corn', and the gist should carry that distinction.",
+					"because": "In the gist, 'cooked creamy like porridge' echoes the Grits gist ('slow-cooked into a Southern porridge'), and the 'heirloom Lowcountry rice' part echoes the Carolina Gold gist ('Heirloom long-grain rice of the Lowcountry'). So this one answer option sits between its two nearest neighbours, and it is the longest gist in the batch (68). The card's own why says 'Think risotto, not corn', and the gist should carry that distinction.",
+					"fix": "Change the gist to something like \"Broken grains of heirloom Carolina rice, cooked creamy like risotto\" (66 characters), or \"Broken heirloom rice from the Lowcountry, cooked up creamy like risotto\". Either is term-free and stays within 10 characters of the chitlins trap (69)."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "starches-1-fact-1",
+					"action": "applied",
+					"reason": "Replaced 'Hair-fine' with 'Very thin' and tightened the gist to 'Very thin Piedmont egg pasta ribbons from a yolk-rich dough' (59 chars, within 10 of its 65-char trap)."
+				},
+				{
+					"finding": "starches-1-floor-5",
+					"action": "applied",
+					"reason": "Same gist change as starches-1-fact-1: 'Very thin' now replaces 'Hair-fine', so the gist no longer suggests angel hair."
+				},
+				{
+					"finding": "starches-1-floor-4",
+					"action": "applied",
+					"reason": "Took the suggested guest line: it now says the pasta is thin, drops 'hand-cut', and calls it the classic base for white truffle instead of implying the truffle comes with it."
+				},
+				{
+					"finding": "starches-1-fact-2",
+					"action": "applied",
+					"reason": "madeWith is now rice, often broth, often white wine, often butter, often parmesan, so the alcohol and broth of a classic risotto are flagged."
+				},
+				{
+					"finding": "starches-1-safety-9",
+					"action": "applied",
+					"reason": "Same madeWith change as starches-1-fact-2, in the suggested order: broth and white wine come before butter and parmesan."
+				},
+				{
+					"finding": "starches-1-fact-3",
+					"action": "applied",
+					"reason": "Rewrote the why's first sentence so cutting and stamping are two steps: 'A wooden stamp, often pearwood, cuts each disk, then its two halves press a design into both sides.'"
+				},
+				{
+					"finding": "starches-1-floor-6",
+					"action": "applied",
+					"reason": "The guest line now says Charleston instead of Lowcountry and 'a soft bite' instead of 'a little pop', which matches the springy bite in the why."
+				},
+				{
+					"finding": "starches-1-floor-7",
+					"action": "applied",
+					"reason": "Changed say to kor-ZET-ee, the American dining-room sound, which the respelling key asks for over the Italian ts."
+				},
+				{
+					"finding": "starches-1-floor-8",
+					"action": "applied",
+					"reason": "New menu line 'Vialone Nano risotto, radicchio, Monte Veronese' uses Veneto partners and no longer echoes the Arborio card's line."
+				},
+				{
+					"finding": "starches-1-safety-10",
+					"action": "applied",
+					"reason": "Note now reads 'The yolk goes in raw and is only warmed, never cooked through. Tell any guest who wants egg cooked firm.' The card total is 813 and the section mean is 706."
+				},
+				{
+					"finding": "starches-critic-1",
+					"action": "applied",
+					"reason": "I rewrote notThis to tell it apart from both grains: arborio is bigger and turns stickier, carnaroli is longer and firmer, and this one is smaller and gives the loosest risotto (132 characters, under the 150 limit). Arborio stays in confusedWithTerms."
+				},
+				{
+					"finding": "starches-critic-2",
+					"action": "applied",
+					"reason": "The new gist is 'Broken heirloom Lowcountry rice, cooked up creamy like risotto' (62 characters). It drops the porridge echo of Grits and points to risotto, and the 69-character chitlins trap stays within 10 characters of it."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0390",
+						"issue": "Vialone Nano lists Arborio in confusedWithTerms, but its notThis only separates it from Carnaroli. A server whose guest asks 'is that like Arborio?' gets no way to tell the two apart, and Arborio is the more likely confusion because both grains are plump and round.",
+						"fix": "Rewrite notThis to cover both, inside the 60 to 100 aim. Suggested: \"Not arborio, which is bigger and turns stickier, or carnaroli, which is longer and firmer. This one gives the loosest risotto.\" (about 120 characters, still under the 150 limit). Or drop Arborio from confusedWithTerms and keep it in seeAlsoTerms."
+					},
+					{
+						"id": "fd_0391",
+						"issue": "In the gist, 'cooked creamy like porridge' echoes the Grits gist ('slow-cooked into a Southern porridge'), and the 'heirloom Lowcountry rice' part echoes the Carolina Gold gist ('Heirloom long-grain rice of the Lowcountry'). So this one answer option sits between its two nearest neighbours, and it is the longest gist in the batch (68). The card's own why says 'Think risotto, not corn', and the gist should carry that distinction.",
+						"fix": "Change the gist to something like \"Broken grains of heirloom Carolina rice, cooked creamy like risotto\" (66 characters), or \"Broken heirloom rice from the Lowcountry, cooked up creamy like risotto\". Either is term-free and stays within 10 characters of the chitlins trap (69)."
+					}
+				],
+				"notes": "All 33 roster rows have a card: 28 are already live in src/lib/data/floor-deck.json and the 5 new ones are in this batch. No knownPacketError exists in this section's brief. I found no verdict words, banned substrings or dashes. Every new card has a say and a level, every guest line answers 'what is that?', and every trap is within 10 characters of its gist without the gist being the longest option. Prose totals per card: Tajarin 702, Uovo 813, Corzetti 600, Vialone 671, Middlins 745. The 28 existing cards average 669.9, all 33 average 675.4 (ceiling 720) and the new five average 706.2.\n\nReverse links the operator should add, if the build does not mirror confusedWith on its own:\n- Tagliatelle to Tajarin\n- Ravioli to Uovo in Raviolo\n- Carnaroli and Arborio to Vialone Nano\n- Grits to Middlins (the Grits card currently lists only Polenta and Hominy)\n- seeAlso from Carolina Gold to Middlins\n\nOptional tightening, not gate failures:\n(1) Uovo in Raviolo is the longest card (813). Its note restates the why's last clause ('the yolk just warms, so it runs'). Keep the note, because it is the real raw-service fact, and trim the why sentence to 'It boils for only 2 to 3 minutes, so the yolk stays runny.'\n(2) Corzetti origin states as fact that the name comes from the 14th-century Genoese corzetto coin. A competing derivation exists (croxetti, 'little crosses', from the cross stamped on them, which is the alias the card already lists). Consider 'probably named for...' or 'often said to be named for...'.\n(3) Tajarin's 'no wider than about 2 millimeters' is fine with the hedge. Many sources give 2 to 3 mm, so 'about 2 to 3 millimeters' is the safer wording.\n(4) Watch Tajarin against Chitarra. Both are thin fresh egg strands, so a seeAlso link is worth adding; it is not a confusion."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

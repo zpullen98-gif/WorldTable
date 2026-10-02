@@ -570,7 +570,9 @@ describe('what shipped', () => {
 	/* A pin, so the ceiling moves only in a commit that says why. It moved once,
 	   128,000 to 140,000, with the owner's 2.65 to 2.70 MB cap decision. */
 	it('stays under the ceiling the precache cap was raised for', () => {
-		expect(DECK_GZ_CEILING).toBeLessThanOrEqual(140_000);
+		// 140,000 until 2 Oct 2026; raised to 165,000 when the owner asked for the
+		// Chef level expanded (64 cards, 400 in all). Move this pin only with them.
+		expect(DECK_GZ_CEILING).toBeLessThanOrEqual(165_000);
 	});
 });
 

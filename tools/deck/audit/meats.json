@@ -922,6 +922,353 @@
 				"notes": "Every roster row has a card: fd_0050 to fd_0063 are already written in src/lib/data/floor-deck.json, and this pass adds fd_0305 to fd_0308. Section prose mean with all 18 cards is 675.6, under the 720 ceiling. The new cards come to 622 / 703 / 683 / 760, every field is inside its band, and gist-to-trap length parity holds on all four. No banned substrings, verdict words, en/em dashes or degree signs in the new cards. The Quail knownPacketError is satisfied by the existing trap \"Tiny wild-shot bird with a strong, gamy flavor and dark, livery meat\". No gist or guest line duplicates an existing one, and the new gists are distinct from their neighbours (Tripe vs Beef Tongue, Moulard vs Duck Breast / Foie Gras). Facts checked and found sound: honeycomb tripe is the second chamber (reticulum); moulard is a sterile Muscovy drake x Pekin hen hybrid giving most foie gras, raised in southwest France and the Hudson Valley; the chicken oyster sits in the hollow of the ilium; sot-l'y-laisse means \"the fool leaves it there\". Cross-section linking: the roster has no Pekin, Muscovy, Chitterlings, Gizzard or Mountain Oysters card, so the notThis prose on Moulard and the trap on Tripe are the right tools. The Moulard why says \"its breast, the magret\", which is consistent with the Duck Breast card's Magret alias and origin line, so no confusion link is needed there. Operator: the shared scratchpad already held an unrelated new.json from another run; I wrote my measurement input to meats-critic-new4.json instead and left the existing file alone."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0360",
+				"fd_0361",
+				"fd_0362",
+				"fd_0363",
+				"fd_0364"
+			],
+			"findings": [
+				{
+					"id": "fd_0360",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "a truly wild bird from the Scottish moors, here only in the fall",
+					"because": "Red grouse is shot on moors across Britain, with a large share of the bag from northern England (Yorkshire, Durham, Northumberland), not only Scotland. The season opens 12 August and runs to 10 December, so the first and most prized birds arrive in late summer, not the fall.",
+					"fix": "a truly wild bird from the British moors, here only from mid-August into winter",
+					"lens": "fact",
+					"key": "meats-1-fact-1"
+				},
+				{
+					"id": "fd_0360",
+					"field": "origin",
+					"severity": "unclear",
+					"claim": "Scottish moors, in season from 12 August, the Glorious Twelfth",
+					"because": "Red grouse are shot in Scotland and northern England; a server told only Scotland will be wrong when the kitchen's birds come from Yorkshire.",
+					"fix": "British moors, Scotland and northern England, in season from 12 August",
+					"lens": "fact",
+					"key": "meats-1-fact-2"
+				},
+				{
+					"id": "fd_0361",
+					"field": "madeWith",
+					"severity": "wrong",
+					"claim": "\"hare\", \"often red wine\", \"often bacon\", \"sometimes hare's blood\", \"sometimes port\", \"sometimes foie gras\"",
+					"because": "Jugged hare and civet dredge the joints in flour before browning, and the card's own line is pappardelle, an egg and wheat pasta. A guest with a wheat or egg allergy gets no flag. Port is redundant once red wine flags alcohol.",
+					"fix": "\"hare\", \"often red wine\", \"often bacon\", \"often wheat flour\", \"sometimes hare's blood\", \"sometimes egg\", \"sometimes foie gras\"",
+					"lens": "fact",
+					"key": "meats-1-fact-3"
+				},
+				{
+					"id": "fd_0361",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Not rabbit, a farmed animal with pale, mild meat.",
+					"because": "Rabbit is also hunted wild (common in Britain and Europe). The real tells are species and meat color. Rabbit is usually farmed on US menus, but it is not farmed by definition.",
+					"fix": "Not rabbit, usually farmed, with pale, mild meat.",
+					"lens": "fact",
+					"key": "meats-1-fact-4"
+				},
+				{
+					"id": "fd_0364",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "they have almost no muscle, so they eat soft and creamy",
+					"because": "Brain has no muscle at all. It is soft, fat-rich nerve tissue, and that fat and water, not a small amount of muscle, is why it eats creamy.",
+					"fix": "they are fatty nerve tissue, no muscle, so they eat soft and creamy",
+					"lens": "fact",
+					"key": "meats-1-fact-5"
+				},
+				{
+					"id": "fd_0364",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "Not sweetbreads, the firmer thymus gland.",
+					"because": "Sweetbreads are the thymus or the pancreas, and menus sell both. Naming only the thymus contradicts what the Sweetbreads card teaches.",
+					"fix": "Not sweetbreads, the firmer thymus or pancreas.",
+					"lens": "fact",
+					"key": "meats-1-fact-6"
+				},
+				{
+					"id": "fd_0364",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "\"often wheat flour\", \"often capers\", \"sometimes vinegar\", \"sometimes lemon\"",
+					"because": "Fried brains (Italian cervella fritta, the American brain sandwich, the breaded nose-to-tail fritter) are classically dipped in egg and crumbed, so egg needs a flag. The list has room for a seventh item.",
+					"fix": "add \"sometimes egg\"",
+					"lens": "fact",
+					"key": "meats-1-fact-7"
+				},
+				{
+					"id": "fd_0362",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "The comb is mostly skin and connective tissue with little muscle.",
+					"because": "A comb holds no muscle at all. It is thickened skin whose core is collagen and hyaluronic-acid-rich tissue (combs are a commercial source of hyaluronic acid), and that tissue is why it braises gelatinous.",
+					"fix": "The comb is thick skin over collagen-rich tissue, with no muscle.",
+					"lens": "fact",
+					"key": "meats-1-fact-8"
+				},
+				{
+					"id": "fd_0362",
+					"field": "traps",
+					"severity": "unclear",
+					"claim": "Ruffled red garden flower whose leaves are used as a garnish",
+					"because": "The trap's why says this describes celosia. Celosia is grown for its flowers, and its leaves are eaten as a cooked green, not as a garnish, so the why does not hold as written.",
+					"fix": "Ruffled red garden flower whose blooms are used as a garnish",
+					"lens": "fact",
+					"key": "meats-1-fact-9"
+				},
+				{
+					"id": "fd_0364",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "Asked about mad cow? US rules bar brain only from cattle 30 months and older. Veal calves are a few months old.",
+					"because": "Framed as a scripted answer to a health worry, it tells the server to reassure the guest that the dish carries no risk. That is a safety verdict, which hard rule 1 forbids. The regulation is worth keeping as a fact, but the health question belongs to a manager or the kitchen, not to a third-day server.",
+					"fix": "US rules bar brain from cattle 30 months and older, and veal calves are months old. Send health questions to a manager.",
+					"lens": "floor",
+					"key": "meats-1-floor-10"
+				},
+				{
+					"id": "fd_0364",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "They're poached, then browned in butter with capers.",
+					"because": "This states one classic preparation as tonight's fact. Kitchens also bread and fry brains, serve them with gribiche, or put them in ravioli. A server who repeats this line at a table where the dish is fried is wrong to the guest's face. The hare card hedges with \"usually\", and this one should too.",
+					"fix": "Usually poached, then browned in butter with capers.",
+					"lens": "floor",
+					"key": "meats-1-floor-11"
+				},
+				{
+					"id": "fd_0364",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "they have almost no muscle",
+					"because": "Brain is nerve tissue, mostly water and fat, with no muscle at all. \"Almost no muscle\" leaves the server with the wrong picture when a guest asks why it is so soft.",
+					"fix": "they hold no muscle at all",
+					"lens": "floor",
+					"key": "meats-1-floor-12"
+				},
+				{
+					"id": "fd_0364",
+					"field": "why",
+					"severity": "unclear",
+					"claim": "gently poached in acidulated water",
+					"because": "\"Acidulated\" is kitchen jargon that a new hire cannot pass on. It means water sharpened with vinegar or lemon.",
+					"fix": "gently poached in vinegared water",
+					"lens": "floor",
+					"key": "meats-1-floor-13"
+				},
+				{
+					"id": "fd_0364",
+					"field": "notThis",
+					"severity": "wrong",
+					"claim": "the firmer thymus gland",
+					"because": "Sweetbreads can be either the thymus or the pancreas, and the deck's Sweetbreads card covers both. Naming only the thymus teaches half the fact.",
+					"fix": "the firmer glands",
+					"lens": "floor",
+					"key": "meats-1-floor-14"
+				},
+				{
+					"id": "fd_0360",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "the boldest bird we serve",
+					"because": "This overclaims on behalf of a menu the card cannot see. The restaurant may serve no other bird, or a stronger one such as woodcock, so the server would be stating something false. The honest comparison is to the familiar birds.",
+					"fix": "bolder than pheasant",
+					"lens": "floor",
+					"key": "meats-1-floor-15"
+				},
+				{
+					"id": "fd_0362",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "braised until soft and silky, often fried crisp",
+					"because": "Heard aloud, \"soft and silky\" and \"fried crisp\" sound like a contradiction. The guest needs the order: it is braised first, then crisped on the outside.",
+					"fix": "braised until silky, then often fried crisp outside",
+					"lens": "floor",
+					"key": "meats-1-floor-16"
+				},
+				{
+					"id": "fd_0363",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "real chicken flavor",
+					"because": "This oversells by implying that ordinary chicken has no flavor, and a guest can push back on it. The honest claim is that the flavor is deeper.",
+					"fix": "deeper flavor",
+					"lens": "floor",
+					"key": "meats-1-floor-17"
+				},
+				{
+					"id": "fd_0364",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "Asked about mad cow? US rules bar brain only from cattle 30 months and older. Veal calves are a few months old.",
+					"because": "The rule is stated correctly (FSIS bars brain as a specified risk material only from cattle 30 months and older). But putting the calves' age right after it implies the dish is safe, so a server ends up giving a medical assurance at the table. The card can state the rule, but a guest's health question should go to a manager.",
+					"fix": "US rules bar brain only from cattle 30 months and older. Send health questions to a manager.",
+					"lens": "safety",
+					"key": "meats-1-safety-18"
+				},
+				{
+					"id": "fd_0361",
+					"field": "note",
+					"severity": "unclear",
+					"claim": "Classic sauces are thickened with the hare's own blood. Ask the kitchen how tonight's is made.",
+					"because": "Hare, like the grouse on the card before it, is wild game that is usually shot, so lead shot can turn up in the meat. A server should be able to say that plainly. The grouse card does say it, and this card does not.",
+					"fix": "Wild and shot, so a stray pellet can turn up. Classic sauces are thickened with the hare's blood.",
+					"lens": "safety",
+					"key": "meats-1-safety-19"
+				},
+				{
+					"id": "fd_0360",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "sometimes bread",
+					"because": "Bread sauce and the fried bread croute under a roast grouse are both made from wheat bread. A guest who avoids wheat needs to hear the grain named, and 'bread' alone does not name it.",
+					"fix": "sometimes wheat bread",
+					"lens": "safety",
+					"key": "meats-1-safety-20"
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "meats-1-fact-1",
+					"action": "applied",
+					"reason": "Guest line now says the bird comes from the British moors and is here from mid-August into winter, since the season runs 12 August to 10 December. The gist now says British heather moors to match."
+				},
+				{
+					"finding": "meats-1-fact-2",
+					"action": "applied",
+					"reason": "Origin now reads 'Scotland and northern England, from 12 August, the Glorious Twelfth', so it names both grouse regions and keeps the date's name."
+				},
+				{
+					"finding": "meats-1-fact-3",
+					"action": "applied",
+					"reason": "madeWith now lists 'often wheat flour' and 'sometimes egg' (the egg is for pappardelle). 'sometimes port' is dropped because red wine already flags alcohol, which keeps the list at seven items."
+				},
+				{
+					"finding": "meats-1-fact-4",
+					"action": "applied",
+					"reason": "notThis now reads 'Not rabbit, usually farmed, with pale, mild meat.' Rabbit is also hunted wild, so it is no longer called farmed by definition."
+				},
+				{
+					"finding": "meats-1-fact-5",
+					"action": "applied",
+					"reason": "The why now says brains are 'fatty nerve tissue with no muscle at all', in place of 'almost no muscle'."
+				},
+				{
+					"finding": "meats-1-fact-6",
+					"action": "applied",
+					"reason": "notThis now reads 'the firmer thymus or pancreas', which matches the Sweetbreads card."
+				},
+				{
+					"finding": "meats-1-fact-7",
+					"action": "applied",
+					"reason": "Added 'sometimes egg' for breaded and fried preparations. madeWith now has seven items."
+				},
+				{
+					"finding": "meats-1-fact-8",
+					"action": "applied",
+					"reason": "The why now opens 'The comb is thick skin over collagen-rich tissue, with no muscle.'"
+				},
+				{
+					"finding": "meats-1-fact-9",
+					"action": "applied",
+					"reason": "The trap now reads 'Ruffled red garden flower grown for its velvety, crested blooms' (63 characters against the 58-character gist). This is true of celosia and avoids the doubtful garnish claim, so the trap's why still holds."
+				},
+				{
+					"finding": "meats-1-floor-10",
+					"action": "applied",
+					"reason": "The scripted 'Asked about mad cow?' framing and the calves' age that implied an assurance are gone. The note now states the rule and sends a guest's health questions to a manager, which is the same change as safety-18."
+				},
+				{
+					"finding": "meats-1-floor-11",
+					"action": "applied",
+					"reason": "The guest line is now hedged: 'They're usually poached, then browned in butter with capers.'"
+				},
+				{
+					"finding": "meats-1-floor-12",
+					"action": "applied",
+					"reason": "The why now says 'no muscle at all', applied together with fact-5."
+				},
+				{
+					"finding": "meats-1-floor-13",
+					"action": "applied",
+					"reason": "'acidulated water' is now 'vinegared water'."
+				},
+				{
+					"finding": "meats-1-floor-14",
+					"action": "applied",
+					"reason": "notThis now names both glands, 'the firmer thymus or pancreas'. This uses fact-6's more specific wording."
+				},
+				{
+					"finding": "meats-1-floor-15",
+					"action": "applied",
+					"reason": "'the boldest bird we serve' is now 'bolder than pheasant', which compares the bird to a familiar one and claims nothing about the menu."
+				},
+				{
+					"finding": "meats-1-floor-16",
+					"action": "applied",
+					"reason": "The guest line now says 'braised until silky, then often fried crisp outside', so the order is clear."
+				},
+				{
+					"finding": "meats-1-floor-17",
+					"action": "applied",
+					"reason": "'real chicken flavor' is now 'deeper flavor'."
+				},
+				{
+					"finding": "meats-1-safety-18",
+					"action": "applied",
+					"reason": "The note now reads 'US rules bar brain only from cattle 30 months and older. Send a guest's health questions to a manager.' The rule stays, and the implied safety assurance is gone."
+				},
+				{
+					"finding": "meats-1-safety-19",
+					"action": "applied",
+					"reason": "The hare note now reads 'Wild and shot, so a stray pellet can turn up. Classic sauces are thickened with the hare's blood.'"
+				},
+				{
+					"finding": "meats-1-safety-20",
+					"action": "applied",
+					"reason": "'sometimes bread' is now 'sometimes wheat bread'."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0058",
+						"issue": "Rabbit's existing trap (src/lib/data/floor-deck.traps.json) says \"Dark, gamy meat of a wild hare, hung for days before it is cooked\". Hare (fd_0361) is now on the roster, so that trap is a TRUE description of another card, which hard rule 'a trap must not be a true description of another card' forbids. In a Rabbit test it marks a correct answer for Hare as wrong.",
+						"fix": "Replace the Rabbit trap with a mistake that is false of every card, e.g. says \"Young goat meat, lean and pale, slow-roasted on the bone for hours\" (or drop the trap), and carry the hare confusion through confusedWithTerms instead (next item)."
+					},
+					{
+						"id": "fd_0058",
+						"issue": "Rabbit and Hare are the most common mix-up in the section. The new Hare card links to Rabbit in confusedWithTerms, but Rabbit has no confusedWith entry back to Hare, and it has no notThis.",
+						"fix": "Add confusedWithTerms [\"Hare\"] to Rabbit and the notThis that then becomes required, e.g. \"Not hare, its wild cousin, which is larger, dark red and strongly gamy. Menu rabbit is farmed and pale.\" (about 95 chars; Rabbit's prose is 609, so this fits)."
+					},
+					{
+						"id": "fd_0051",
+						"issue": "Guinea Hen's existing trap says \"Wild game bird shot in season, every bit as dark and strong as venison\". With Grouse (fd_0360) now on the roster, that line is close to a true description of Grouse: wild, shot in season, dark and strong.",
+						"fix": "Rewrite the trap so it cannot describe Grouse, e.g. says \"Young farm pigeon with deep red meat, best served rare like steak\" is ruled out because that is Squab. Use something false of every bird instead, e.g. \"Small wild duck of African rivers, with a thick fat cap and red meat\", or drop the trap."
+					},
+					{
+						"id": "fd_0060",
+						"issue": "Grouse lists Pheasant in confusedWithTerms, but Pheasant links back only to Guinea Hen. Grouse vs pheasant is the classic autumn game-bird confusion.",
+						"fix": "Add \"Grouse\" to Pheasant's confusedWithTerms, giving [\"Guinea Hen\", \"Grouse\"]. Extend Pheasant's notThis to cover both and stay within 150 chars, e.g. \"Not guinea hen, a farm fowl that eats much the same, or grouse, a wild bird far darker and stronger.\""
+					},
+					{
+						"id": "fd_0054",
+						"issue": "Calf's Brains lists Sweetbreads in confusedWithTerms, but Sweetbreads has no confusedWith back to Calf's Brains and no notThis. Brains and sweetbreads are the two soft, creamy veal offals, both served in brown butter with capers, and guests mix them up.",
+						"fix": "Add confusedWithTerms [\"Calf's Brains\"] to Sweetbreads, and add the required notThis, e.g. \"Not calf's brains, which are softer still, like a set custard. Sweetbreads are glands and hold a little more bite.\" (Sweetbreads is at 565 chars, so this fits)."
+					}
+				],
+				"notes": "I checked the five new cards (fd_0360 to fd_0364) against every rule, and each passes on its own. The roster is complete: all 23 rows have cards. Every field is inside its range. No verdict words, dashes or banned strings. Each trap is within 10 characters of its gist, and no gist is the longest option. No gist or guest line repeats. The section mean is fine: the new five average 705 characters of prose and all 23 cards average 681, against the 720 ceiling. The Quail packet error already has its matching trap (\\\"strong, gamy... livery\\\"). I checked the Blue Foot facts against Wikipedia: British Columbia, Peter Thiessen, from the 1980s, 14 to 16 weeks, white bird with a red comb and steel-blue feet. One source says 17 weeks, so \\\"more than twice as long\\\" holds either way.\n\nAll five problems are on cards that were already written. Adding the new terms made them stale, and the earlier authors could not have seen it.\n\nSmaller points, for the operator to decide:\n(1) Calf's Brains: the gist says \\\"seared in brown butter\\\" but the origin says \\\"au beurre noir\\\", which is black butter, and the madeWith lists vinegar. Both are fine for American menus, but \\\"seared in browned butter\\\" or simply \\\"pan-seared\\\" would remove the mismatch.\n(2) Cockscomb's guest line compares it to braised pork skin and its why compares it to a pig's trotter. Picking one would be tidier.\n(3) Cockscomb's line uses \\\"sauce gribiche\\\", and Gribiche (fd_0334) is a card. It could go in seeAlso if one of the current three gives way.\n(4) Placing Blue Foot Chicken at level 4 is arguable. It shows up on good American menus more often than grouse or cockscomb, and \\\"needs a sentence to explain\\\" fits level 3. The meats levels would then be 4:6 and 3:6.\n(5) Grouse could add Partridge or Woodcock as aliases or cards in a later expansion. Neither is on the 400-card roster."
+			},
+			"acceptedRejected": []
 		}
 	]
 }

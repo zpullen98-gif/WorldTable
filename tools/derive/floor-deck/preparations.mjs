@@ -428,6 +428,80 @@ const cards = [
 			{ says: 'Brown butter finished with toasted walnuts and chopped parsley', why: 'Grenoble is famous for walnuts, but the classic garnish is capers, lemon and croutons.' },
 			{ says: 'Creamy Dijon mustard sauce spooned over floured, pan-fried fish', why: 'Mustard sauce belongs to Dijon. This garnish is brown butter, capers, lemon and croutons.' }
 		]
+	},
+	{
+		id: 'fd_0397',
+		term: 'Galantine',
+		level: 4,
+		say: 'GAL-uhn-teen',
+		gist: 'Boned whole bird, stuffed, rolled and poached, then served cold',
+		guest: "It's a whole bird, usually chicken or duck, boned, stuffed, rolled and gently poached. It's served cold in neat slices, each one a mosaic of filling.",
+		why: 'The cook bones the bird keeping the skin whole, fills it with a forcemeat of ground meat, often with pistachios or truffle, then rolls it tight in cloth and poaches it in stock. Chilled, it sets firm and slices like a terrine, often glazed in jelly.',
+		madeWith: ['chicken or duck', 'often pork', 'often egg', 'sometimes cream', 'often pistachios', 'often gelatin', 'often brandy or madeira'],
+		origin: 'Classical French cold kitchen, a grand-buffet showpiece',
+		notThis: 'Not a ballotine, usually served hot, or a terrine, a forcemeat baked in a mold. This is a whole boned bird, poached and served cold.',
+		seeAlso: ['fd_0227', 'fd_0337'],
+		confusedWith: ['fd_0228', 'fd_0084'],
+		line: 'Chicken galantine, pistachio, cornichons, grain mustard',
+		traps: [
+			{ says: 'Bird roasted whole on the bone with stuffing, carved hot at the table', why: 'It is boned before it is stuffed, and it is poached, chilled and served cold.' }
+		]
+	},
+	{
+		id: 'fd_0398',
+		term: 'Pithivier',
+		level: 4,
+		say: 'pee-tee-VYAY',
+		aliases: ['Pithiviers'],
+		gist: 'Domed round pie of two puff pastry discs, sealed and scored in curves',
+		guest: "It's a golden domed pie of flaky puff pastry, scored like a pinwheel. Inside is a rich filling, often duck or game, or almond cream for dessert.",
+		why: 'Two rounds of puff pastry are sealed over a domed filling, the edge scalloped, the top scored in curved rays and glazed with egg. The pastry rises and shatters while the filling cooks sealed in its own juices. The original holds sweet almond cream.',
+		madeWith: ['wheat flour', 'butter', 'egg', 'often duck or game', 'sometimes foie gras', 'sometimes pork', 'sometimes almonds'],
+		origin: 'Named for Pithiviers, a French town south of Paris famed for the almond one',
+		notThis: 'Not en croûte, pastry wrapped around a fillet or roast. This is a sealed, domed round pie, often for two.',
+		seeAlso: ['fd_0244', 'fd_0365', 'fd_0246'],
+		confusedWith: ['fd_0338'],
+		line: 'Duck and foie gras pithivier for two, Madeira jus'
+	},
+	{
+		id: 'fd_0399',
+		term: 'Mi-Cuit',
+		level: 4,
+		say: 'mee-KWEE',
+		gist: 'Gently half cooked: liver silky, fish rosy, chocolate molten',
+		guest: "It means half cooked. It's cooked gently and only partway, so foie gras stays silky and fish stays rosy in the middle.",
+		why: 'Heated gently and briefly, well short of done, and often chilled after. Foie gras stays dense and silky, fish stays translucent at the center, and a small chocolate cake pulled early flows like lava cake. On tomatoes or figs it means semi-dried, soft and concentrated.',
+		madeWith: ['often duck liver', 'sometimes salmon or tuna', 'sometimes chocolate', 'sometimes egg', 'sometimes butter', 'sometimes flour', 'often brandy'],
+		note: 'Pink or translucent at the center by design. Take any request to cook it more to the kitchen.',
+		origin: 'French for half-cooked, the step between raw and fully cooked',
+		notThis: 'Not tataki, seared hard with a raw center, or crudo, never heated. This is cooked gently through, just short of done.',
+		lexiconSlug: 'foie-gras-torchon-mi-cuit-and-ethics-of-service',
+		seeAlso: ['fd_0337', 'fd_0055', 'fd_0042'],
+		confusedWith: ['fd_0223', 'fd_0220'],
+		line: 'Foie gras mi-cuit, Sauternes jelly, toasted brioche',
+		traps: [
+			{ says: 'Half portion, the smaller of two sizes a dish is offered in', why: 'The word names how gently the food is cooked, not the size of the portion.' }
+		]
+	},
+	{
+		id: 'fd_0400',
+		term: 'Rossini',
+		level: 4,
+		say: 'roh-SEE-nee',
+		aliases: ['Tournedos Rossini'],
+		gist: 'Filet steak on a fried crouton, topped with foie gras and truffle',
+		guest: "It's a classic French luxury steak, a filet on buttery toast topped with seared foie gras, black truffle and a Madeira sauce.",
+		why: 'Named for Gioachino Rossini, composer and Paris gourmand. A thick filet medallion is seared in butter and set on a crouton that soaks up its juices, then crowned with seared foie gras, black truffle and Madeira sauce. Richness on richness.',
+		madeWith: ['beef', 'foie gras', 'black truffle', 'bread', 'butter', 'madeira wine', 'often veal stock'],
+		note: "Take the filet's doneness. Most kitchens suggest rare to medium rare. The foie gras comes seared, soft at the center.",
+		origin: 'Paris, 1800s, named for the composer of The Barber of Seville',
+		notThis: 'Not a plain tournedos, the filet medallion alone. Rossini names the crouton, foie gras and truffle.',
+		seeAlso: ['fd_0055', 'fd_0147', 'fd_0093'],
+		confusedWith: ['fd_0370'],
+		line: 'Tournedos Rossini, foie gras, black truffle, Madeira',
+		traps: [
+			{ says: 'Thin Italian veal cutlet pounded flat, breaded and fried crisp', why: 'It is a French beef filet dish, named for an Italian composer, not an Italian cutlet.' }
+		]
 	}
 ];
 

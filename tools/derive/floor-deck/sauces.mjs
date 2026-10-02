@@ -460,6 +460,103 @@ const cards = [
 		traps: [
 			{ says: 'Thick shellfish soup puréed with rice, cream and brandy', why: 'It is a thin poaching broth, never puréed with rice into a thick soup.' }
 		]
+	},
+	{
+		id: 'fd_0392',
+		term: 'Beurre Monté',
+		level: 4,
+		say: 'BURR mohn-TAY',
+		gist: 'Butter whisked into a little water and held warm as a bath',
+		guest: "It's butter whisked into a little water so it stays creamy instead of oily. Lobster or fish gently poached in it stays tender and sweet.",
+		why: 'Cold butter is whisked piece by piece into a spoonful of simmering water. Butter is water held in fat. The extra water flips it to fat held in water, so it stays creamy, not oily. Kitchens poach lobster in it, baste meat and glaze vegetables.',
+		madeWith: ['butter', 'water'],
+		note: 'Held warm, below about 88 C (190 F). Any hotter and it splits into fat and water.',
+		origin: 'French for mounted butter, from monter au beurre, to whisk in butter',
+		notThis: 'Not beurre blanc: no wine, vinegar or shallot, so it is mild and works mostly as a cooking bath.',
+		recipe: 'beurre-monte-butter-held-liquid',
+		seeAlso: ['fd_0198', 'fd_0136', 'fd_0160'],
+		confusedWith: ['fd_0205'],
+		line: 'Maine lobster poached in beurre monté, sweet corn',
+		traps: [
+			{ says: 'Plain melted butter, left to sit warm in a pan beside the stove', why: 'Plain melted butter separates into fat and milky water. This stays whisked into one creamy liquid.' }
+		]
+	},
+	{
+		id: 'fd_0393',
+		term: 'Sauce Maltaise',
+		level: 4,
+		say: 'mahl-TAYZ',
+		aliases: ['Maltese Sauce'],
+		gist: 'Warm egg-yolk butter sauce made with blood orange juice and zest',
+		guest: "It's hollandaise, the warm silky butter sauce, finished with blood orange juice and zest. Bright and a little sweet, and a spring classic with asparagus.",
+		why: 'Egg yolks are whisked over gentle heat and thickened with melted butter, exactly as for hollandaise, then blood orange juice and grated zest go in. The orange gives a rosy color and a sweeter, berry-like tartness that flatters asparagus.',
+		madeWith: ['egg yolk', 'butter', 'blood orange juice', 'orange zest', 'sometimes lemon juice'],
+		note: 'The yolks are only gently warmed, never set firm. Ask the kitchen whether it uses pasteurized eggs.',
+		origin: 'French for Maltese, after the blood oranges long linked to Malta',
+		pairs: 'White and green asparagus, poached fish, artichokes',
+		notThis: 'Not plain hollandaise: blood orange turns it pale coral and sweeter.',
+		seeAlso: ['fd_0196', 'fd_0198'],
+		confusedWith: ['fd_0197'],
+		line: 'White asparagus, sauce maltaise, chervil',
+		traps: [
+			{ says: 'Bitter orange sauce on a brown stock base, poured over roast duck', why: 'That is sauce bigarade. This is an egg-yolk butter sauce made with blood orange.' }
+		]
+	},
+	{
+		id: 'fd_0394',
+		term: 'Sauce Américaine',
+		level: 4,
+		say: 'ah-meh-ree-KEHN',
+		aliases: ['Sauce Armoricaine'],
+		gist: 'Lobster shells simmered down with tomato, cognac and wine',
+		guest: "It's a rich lobster sauce, made by cooking the shells with tomato, white wine and a splash of cognac. Despite the name, it's a French classic.",
+		why: 'Lobster in the shell is seared until red, flamed with cognac, then simmered with white wine, tomato, shallot and tarragon. The shells give up sweet, roasted flavor and color, and the reduced liquid is finished with butter. Close to bisque, but thinner and brighter.',
+		madeWith: ['lobster', 'tomato', 'shallot', 'cognac', 'white wine', 'butter', 'often fish stock'],
+		origin: 'French for American style, likely named by a Paris chef back from America',
+		pairs: 'Lobster, sole, monkfish, scallops, rice pilaf',
+		notThis: 'Nothing American in it. Some menus print armoricaine, after old Brittany: the same sauce.',
+		seeAlso: ['fd_0136', 'fd_0132', 'fd_0318'],
+		line: 'Roasted monkfish, sauce américaine, fennel',
+		traps: [
+			{ says: 'Sweet, smoky tomato glaze in the style of American barbecue', why: 'The name is French. It is a lobster sauce of shells, tomato, cognac and white wine.' }
+		]
+	},
+	{
+		id: 'fd_0395',
+		term: 'Sauce Périgueux',
+		level: 4,
+		say: 'peh-ree-GUH',
+		gist: 'Brown veal sauce with Madeira and chopped black winter truffle',
+		guest: "It's a rich brown sauce made with Madeira wine and finished with chopped black truffle. Deep, glossy and earthy, the classic partner for filet and foie gras.",
+		why: 'It starts from demi-glace, veal stock reduced to a glossy sauce. Madeira, a fortified wine, is cooked in for sweet, nutty depth, then black truffle is chopped in at the end so its earthy aroma stays bright. Richer and more perfumed than bordelaise.',
+		madeWith: ['traditionally veal stock', 'madeira', 'black truffle', 'often butter', 'often wheat flour'],
+		origin: 'Named for Périgueux, capital of the Périgord black truffle country',
+		pairs: 'Tournedos Rossini, foie gras, beef filet, squab',
+		notThis: 'Not bordelaise, which is red wine, shallot and bone marrow. This one is Madeira and black truffle.',
+		seeAlso: ['fd_0147', 'fd_0206', 'fd_0400'],
+		confusedWith: ['fd_0333'],
+		line: 'Tournedos Rossini, sauce périgueux',
+		traps: [
+			{ says: 'Cream sauce perfumed with truffle oil and finished with parmesan', why: 'It is a brown veal and Madeira sauce with chopped black truffle, not a cream sauce.' }
+		]
+	},
+	{
+		id: 'fd_0396',
+		term: 'Sauce Vin Jaune',
+		level: 4,
+		say: 'VAN ZHOHN',
+		aliases: ['Vin Jaune Sauce', 'Vin Jaune Cream'],
+		gist: 'Cream sauce built on a nutty, sherry-like wine from the Jura',
+		guest: "It's a cream sauce made with vin jaune, a rare golden wine from eastern France that tastes of walnuts and spice. A classic with chicken and morel mushrooms.",
+		why: 'Vin jaune is Savagnin aged at least five years in barrels never topped up, under a film of yeast, much like fino sherry but unfortified. Reduced with shallot and cream, its walnut and curry-spice tang seasons the sauce. Some cooks add a splash at the end for aroma.',
+		madeWith: ['vin jaune wine', 'cream', 'shallot', 'butter', 'often chicken stock', 'often morels'],
+		origin: 'French for yellow wine, from the Jura hills near Switzerland',
+		pairs: 'Chicken with morels, river trout, veal sweetbreads',
+		seeAlso: ['fd_0144', 'fd_0207'],
+		line: 'Roast chicken, morels, sauce vin jaune',
+		traps: [
+			{ says: 'Sweet cream sauce made with a golden, late-harvest dessert wine', why: 'The wine is bone dry and nutty, aged under yeast, not sweet. The sauce is savory.' }
+		]
 	}
 ];
 

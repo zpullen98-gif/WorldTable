@@ -125,6 +125,28 @@
       "why": "It is not a soy marinade. Koji, a mold-grown rice, is spread on the raw meat and left for days."
     }
   ],
+  "fd_0356": [
+    {
+      "says": "Raw fish soaked overnight in soy sauce and sweet rice wine",
+      "why": "No marinade is involved. Dry kelp sheets pull water out and season the fish from the outside."
+    },
+    {
+      "says": "Fish wrapped in seaweed and steamed until just cooked",
+      "why": "Nothing cooks it. The kelp only firms and seasons the fish, which is served raw."
+    }
+  ],
+  "fd_0357": [
+    {
+      "says": "Raw fish slices splashed with hot oil so the edges just turn white",
+      "why": "No hot oil is used. A flame touches only the top of the piece for seconds."
+    }
+  ],
+  "fd_0359": [
+    {
+      "says": "Food baked in a crust of dried grass, which is eaten with the dish",
+      "why": "The hay only perfumes the food and is never eaten, even when it comes to the table."
+    }
+  ],
   "fd_0050": [
     {
       "says": "Small sea snails picked from the shell and served chilled with lemon",
@@ -213,7 +235,7 @@
       "why": "They are two small pieces of dark meat from the back. The name describes only the shape."
     },
     {
-      "says": "Small shucked shellfish poached gently in a rich chicken broth",
+      "says": "Small shucked shellfish poached gently in a rich poultry broth",
       "why": "It is chicken meat. The name describes the shape of two small pieces of dark meat."
     }
   ],
@@ -221,6 +243,36 @@
     {
       "says": "Village in southwest France whose farms raise the finest ducks",
       "why": "It is a hybrid duck, a sterile cross of Muscovy and Pekin, not a place or a farm."
+    }
+  ],
+  "fd_0360": [
+    {
+      "says": "Farm-reared Scottish bird with pale, mild meat, roasted well done",
+      "why": "Grouse cannot be farmed. It is wild, dark-fleshed and strong, and is served pink."
+    }
+  ],
+  "fd_0361": [
+    {
+      "says": "A bigger breed of farmed rabbit with the same pale, mild meat",
+      "why": "Hare is a separate wild species with dark red, strongly flavored meat."
+    }
+  ],
+  "fd_0362": [
+    {
+      "says": "Ruffled red garden flower grown for its velvety, crested blooms",
+      "why": "That is the celosia plant, which shares the name. On a menu it means the rooster's crest."
+    }
+  ],
+  "fd_0363": [
+    {
+      "says": "Chicken flown in from France's Bresse region under strict rules",
+      "why": "It is a North American breed made to match Bresse. True French Bresse is very rare here."
+    }
+  ],
+  "fd_0364": [
+    {
+      "says": "Dense, chewy organ with a strong iron flavor, much like liver",
+      "why": "Brains are very soft and mild, nearer a custard than liver in both texture and taste."
     }
   ],
   "fd_0064": [
@@ -367,6 +419,24 @@
     {
       "says": "Spicy Louisiana sausage of pork, liver and rice, steamed in its casing",
       "why": "That describes the Cajun rice sausage. This is the French sausage made with pork blood."
+    }
+  ],
+  "fd_0366": [
+    {
+      "says": "Smoked white pork sausage, cured hard and sliced thin on the board",
+      "why": "It is poached fresh, never smoked or dry-cured, and it is served warm, not sliced raw."
+    }
+  ],
+  "fd_0367": [
+    {
+      "says": "Spicy Spanish pork pâté, baked in a mold and served chilled",
+      "why": "It is a raw sausage cured in its casing, never baked or molded."
+    }
+  ],
+  "fd_0369": [
+    {
+      "says": "Mild little French pork breakfast link, finely ground and lean",
+      "why": "It is coarse, made from intestine and stomach, and famous for a strong, earthy smell."
     }
   ],
   "fd_0086": [
@@ -517,6 +587,30 @@
     {
       "says": "Pork in a house spice rub whose recipe the kitchen keeps hidden",
       "why": "The name refers to where the cut hides under a layer of fat, not to a recipe."
+    }
+  ],
+  "fd_0370": [
+    {
+      "says": "Thick round steak cut from the sirloin, beefier and firmer than filet",
+      "why": "These rounds come from the tenderloin, the same muscle as filet mignon, not the sirloin."
+    }
+  ],
+  "fd_0371": [
+    {
+      "says": "Lean Spanish pork loin cut, best braised slowly until it falls apart",
+      "why": "This is one of the most marbled pork cuts, and it is grilled like a steak."
+    }
+  ],
+  "fd_0372": [
+    {
+      "says": "Beef steak served Florence style, on a bed of creamed spinach",
+      "why": "Florentine on a French menu means spinach, but this Tuscan steak comes plain off the grill."
+    }
+  ],
+  "fd_0373": [
+    {
+      "says": "Hungarian pork sausage, cured and spiced hard with smoked paprika",
+      "why": "It is a breed of pig, sold as fresh chops and cured cuts, not a sausage."
     }
   ],
   "fd_0108": [
@@ -693,6 +787,36 @@
       "why": "It is its own species, fully grown at this size, and never becomes a big-clawed lobster."
     }
   ],
+  "fd_0374": [
+    {
+      "says": "Largest and palest gray sturgeon pearls, from the biggest fish of all",
+      "why": "That is Beluga. These beads are medium sized and run from amber to brown."
+    }
+  ],
+  "fd_0375": [
+    {
+      "says": "Small, deep-cupped Pacific oyster with a mild, cucumber-sweet finish",
+      "why": "That is the Kumamoto. This is a broad, flat European oyster with a strong metallic finish."
+    }
+  ],
+  "fd_0376": [
+    {
+      "says": "Large West Coast crab, steamed and cracked whole at the table",
+      "why": "That is Dungeness. This is a small Maine crab sold as hand-picked meat."
+    }
+  ],
+  "fd_0377": [
+    {
+      "says": "Small farmed shellfish muscle, frozen and shipped year-round from China",
+      "why": "These are wild and fresh, taken only from November to March in Nantucket's harbor and ponds."
+    }
+  ],
+  "fd_0378": [
+    {
+      "says": "Gray, oily estuary fish, fried or smoked across the Gulf South",
+      "why": "That is gray or striped mullet. This is a small red sea fish with rich, sweet white flesh."
+    }
+  ],
   "fd_0138": [
     {
       "says": "Thin slices of sea snail, cut and dressed to look like a mushroom",
@@ -781,6 +905,48 @@
     {
       "says": "Winter black truffle dug early, before its full aroma has set",
       "why": "It is its own species that ripens in the warm months, not an unripe winter truffle."
+    }
+  ],
+  "fd_0379": [
+    {
+      "says": "The Alba white truffle itself, simply dug later in the spring",
+      "why": "It is a separate species, smaller and sharper, and worth a fraction of the Alba price."
+    },
+    {
+      "says": "Young white truffle dug before it ripens, sold at a discount",
+      "why": "It is a ripe truffle of its own species; the name means little white one, not unripe."
+    }
+  ],
+  "fd_0380": [
+    {
+      "says": "Wild black truffle dug from the oak forests of the Mexican highlands",
+      "why": "It is not a truffle and grows on corn plants, not underground on tree roots."
+    },
+    {
+      "says": "Corn kernels charred black in a dry pan until smoky and sweet",
+      "why": "The black color comes from a fungus growing in the kernels, not from charring."
+    }
+  ],
+  "fd_0381": [
+    {
+      "says": "Its own wild species, red-orange from the day it first sprouts",
+      "why": "It is another mushroom made red and firm by a parasitic mold, not a species of its own."
+    },
+    {
+      "says": "Farmed orange oyster mushroom bred for a shellfish-like taste",
+      "why": "It is wild and foraged, a host mushroom changed by a mold, and it is not farmed."
+    }
+  ],
+  "fd_0382": [
+    {
+      "says": "Young golden mushroom picked early, before its cap opens out",
+      "why": "It is a separate, smaller species with a brown cap and hollow stem, not a young golden one."
+    }
+  ],
+  "fd_0383": [
+    {
+      "says": "Wild mushroom preserved in maple syrup and used as a garnish",
+      "why": "The maple smell is its own, from drying; it is not soaked in or sweetened with syrup."
     }
   ],
   "fd_0154": [
@@ -883,6 +1049,32 @@
     {
       "says": "Soft cheese whose center tastes just as sharp and funky as its rind",
       "why": "The smell lives in the rind. The paste inside is mild, milky and fruity."
+    }
+  ],
+  "fd_0384": [
+    {
+      "says": "Hard cheese made from winter milk of cows fed on dried mountain hay",
+      "why": "It is the opposite: summer milk from cows grazing fresh grass on high pasture."
+    }
+  ],
+  "fd_0385": [
+    {
+      "says": "Hard Burgundy cheese aged in brandy barrels, grated over pasta",
+      "why": "It is soft and runny when ripe, and the brandy is washed onto the rind, not used for barrels."
+    },
+    {
+      "says": "Soft cheese whose rind is soaked in red Burgundy wine for color",
+      "why": "The rind is washed with brine and marc, a grape brandy, and the orange comes from bacteria."
+    }
+  ],
+  "fd_0386": [
+    {
+      "says": "Goat cheese smoked over a wood fire until its outside turns grey",
+      "why": "Nothing is smoked: the grey starts as a dusting of plant ash put on by hand."
+    },
+    {
+      "says": "Goat cheese whose grey coat is a burnt crust that must be cut away",
+      "why": "Not burnt: the grey is plant ash, often under a thin mold rind, and the rind is eaten."
     }
   ],
   "fd_0172": [
@@ -1029,6 +1221,30 @@
       "why": "It is a short, plump grain. Long-grain rice does not absorb enough broth to make a good paella."
     }
   ],
+  "fd_0387": [
+    {
+      "says": "North African stew slow-cooked in a clay pot with a tall cone lid",
+      "why": "That is a tagine. This is a fine egg pasta from Piedmont in northern Italy."
+    }
+  ],
+  "fd_0388": [
+    {
+      "says": "Small square pasta pockets stuffed with chopped hard-boiled egg",
+      "why": "It is one large piece, and the yolk goes in raw and stays runny so it can be the sauce."
+    }
+  ],
+  "fd_0390": [
+    {
+      "says": "Miniature Italian rice with grains half the size of a normal grain",
+      "why": "The dwarf in the name is the short plant. The grain is a normal medium size, a little smaller than carnaroli."
+    }
+  ],
+  "fd_0391": [
+    {
+      "says": "Cleaned pork intestines simmered for hours, a Southern soul food dish",
+      "why": "Those are chitlins, a sound-alike. These are broken pieces of heirloom rice."
+    }
+  ],
   "fd_0195": [
     {
       "says": "Melted garlic butter whisked with lemon juice for dipping",
@@ -1143,6 +1359,36 @@
       "why": "It is a thin poaching broth, never puréed with rice into a thick soup."
     }
   ],
+  "fd_0392": [
+    {
+      "says": "Plain melted butter, left to sit warm in a pan beside the stove",
+      "why": "Plain melted butter separates into fat and milky water. This stays whisked into one creamy liquid."
+    }
+  ],
+  "fd_0393": [
+    {
+      "says": "Bitter orange sauce on a brown stock base, poured over roast duck",
+      "why": "That is sauce bigarade. This is an egg-yolk butter sauce made with blood orange."
+    }
+  ],
+  "fd_0394": [
+    {
+      "says": "Sweet, smoky tomato glaze in the style of American barbecue",
+      "why": "The name is French. It is a lobster sauce of shells, tomato, cognac and white wine."
+    }
+  ],
+  "fd_0395": [
+    {
+      "says": "Cream sauce perfumed with truffle oil and finished with parmesan",
+      "why": "It is a brown veal and Madeira sauce with chopped black truffle, not a cream sauce."
+    }
+  ],
+  "fd_0396": [
+    {
+      "says": "Sweet cream sauce made with a golden, late-harvest dessert wine",
+      "why": "The wine is bone dry and nutty, aged under yeast, not sweet. The sauce is savory."
+    }
+  ],
   "fd_0217": [
     {
       "says": "Beef ground coarse, pressed into a patty and seared rare on the flat top",
@@ -1241,6 +1487,24 @@
     {
       "says": "Creamy Dijon mustard sauce spooned over floured, pan-fried fish",
       "why": "Mustard sauce belongs to Dijon. This garnish is brown butter, capers, lemon and croutons."
+    }
+  ],
+  "fd_0397": [
+    {
+      "says": "Bird roasted whole on the bone with stuffing, carved hot at the table",
+      "why": "It is boned before it is stuffed, and it is poached, chilled and served cold."
+    }
+  ],
+  "fd_0399": [
+    {
+      "says": "Half portion, the smaller of two sizes a dish is offered in",
+      "why": "The word names how gently the food is cooked, not the size of the portion."
+    }
+  ],
+  "fd_0400": [
+    {
+      "says": "Thin Italian veal cutlet pounded flat, breaded and fried crisp",
+      "why": "It is a French beef filet dish, named for an Italian composer, not an Italian cutlet."
     }
   ],
   "fd_0234": [
@@ -1361,6 +1625,34 @@
       "why": "The name means sandy for its crumbly texture, not its color, and it is a thick shortbread, not a wafer."
     }
   ],
+  "fd_0401": [
+    {
+      "says": "Tall cone of caramel-glued cream puffs stacked high for weddings",
+      "why": "That is a croquembouche. This is a low round cake, a ring of puffs on a flat pastry base."
+    }
+  ],
+  "fd_0402": [
+    {
+      "says": "Fried ring of choux dough glazed with honey, a breakfast pastry",
+      "why": "It is baked, not fried, and served as a cream-filled dessert rather than a glazed doughnut."
+    }
+  ],
+  "fd_0403": [
+    {
+      "says": "Toasted rice cereal bound with chocolate into a crunchy layer",
+      "why": "Puffed rice is a home shortcut. This is crushed crepe, baked from a wheat flour batter."
+    }
+  ],
+  "fd_0404": [
+    {
+      "says": "Thin rice noodles fried crisp and wrapped around seafood",
+      "why": "It is a wheat pastry spun from flour batter, not a rice noodle, though it looks like one."
+    },
+    {
+      "says": "Thin sheets of pastry layered with nuts and soaked in honey syrup",
+      "why": "That is baklava, built from flat sheets. These are loose threads, like shredded wheat."
+    }
+  ],
   "fd_0249": [
     {
       "says": "Sweet sauce of butter, sugar and cream cooked until amber and toffee-like",
@@ -1455,6 +1747,28 @@
     {
       "says": "Soft, runny Alpine cow's milk cheese ripened in a band of spruce bark",
       "why": "That is the cheese that shares the name. On a dessert menu it is a meringue shell filled with ice cream."
+    }
+  ],
+  "fd_0406": [
+    {
+      "says": "Pastry cream lightened with folded whipped cream, then piped chilled",
+      "why": "That is diplomat cream. This one is lightened with cooked meringue, not whipped cream."
+    }
+  ],
+  "fd_0408": [
+    {
+      "says": "Rich cocoa cake baked until just set, served warm from the oven",
+      "why": "It is never baked. It is set cold in a mold and served chilled."
+    }
+  ],
+  "fd_0409": [
+    {
+      "says": "Honey ice cream churned with chopped nuts and scooped like gelato",
+      "why": "It is never churned. It is a meringue and cream mixture frozen in a mold and sliced."
+    },
+    {
+      "says": "Chewy honey and almond candy, cut into bars and served straight frozen",
+      "why": "It is a soft frozen cream, not a candy. Only the brittle and candied fruit inside give it crunch or chew."
     }
   ],
   "fd_0266": [
@@ -1591,6 +1905,30 @@
       "why": "It is never burnt. Weeks of low warmth turn it black slowly, and the flavor is sweet and mellow."
     }
   ],
+  "fd_0410": [
+    {
+      "says": "Thick Italian paste of salted anchovies pounded smooth with olive oil",
+      "why": "It is a clear liquid that drips from salted anchovies, not a paste."
+    }
+  ],
+  "fd_0411": [
+    {
+      "says": "Fiery ground dried red chili from southern India, prized for its heat",
+      "why": "It is a sweet, usually mild blend built on cooked shallot and garlic, not a chili."
+    }
+  ],
+  "fd_0412": [
+    {
+      "says": "Pink pickled ginger slices served beside sushi to clear the palate",
+      "why": "That is gari. This is a salted, sun-dried fruit, far more sour and salty."
+    }
+  ],
+  "fd_0414": [
+    {
+      "says": "Unripe green fruit charred over hot coals, then squeezed over grilled meat",
+      "why": "It is never charred. It is brined and dried in the sun until hard and black."
+    }
+  ],
   "fd_0285": [
     {
       "says": "Produce certified organic because its seed was never a GMO",
@@ -1713,8 +2051,36 @@
       "why": "The chef chooses every course; the guest does not order, and the chef sets the count of pieces."
     },
     {
-      "says": "Formal multi-course Japanese dinner whose sequence is fixed by tradition",
-      "why": "That is kaiseki. Here the chef, not tradition, decides the order of courses."
+      "says": "Sushi on a conveyor belt that guests pick from as the plates pass",
+      "why": "That is kaiten sushi. Here the chef serves each piece across the counter, in an order the chef chooses."
+    }
+  ],
+  "fd_0415": [
+    {
+      "says": "Lacquered box of many small Japanese dishes, all served at once",
+      "why": "Courses arrive one at a time in a fixed order, each on its own dish, not packed together in a box."
+    }
+  ],
+  "fd_0416": [
+    {
+      "says": "Premium French chicken brand raised by a single family farm group",
+      "why": "It is a government quality mark that many separate farms and producers can earn, not a brand."
+    },
+    {
+      "says": "Seal promising the fish was caught wild in cold Scottish sea lochs",
+      "why": "The salmon that carries it is farmed. The mark covers how it is raised and fed, not a wild catch."
+    }
+  ],
+  "fd_0417": [
+    {
+      "says": "Fruit left to wither in the sun after picking to concentrate sugar",
+      "why": "The crop is sold fresh. Only the field goes unwatered while it grows."
+    }
+  ],
+  "fd_0418": [
+    {
+      "says": "Whole apple baked in a pastry crust, served warm with fresh cream",
+      "why": "It is a small cold pause in the middle of the meal, brandy over sorbet, not a baked dessert."
     }
   ]
 }

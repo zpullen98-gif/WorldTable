@@ -1235,6 +1235,278 @@
 				"notes": "The section mean is fine: the 22 existing cards average 707, and with the four new ones (759, 635, 741, 640) the mean is about 705, under 720. Every roster row has a card. The two known packet errors (Lomo tenderloin, Pastrami only-smoked) already have matching traps on the existing cards. Every new gist is distinguishable from its neighbours (Culatello vs Prosciutto and Speck, Finocchiona vs Soppressata and 'Nduja, Head Cheese vs Terrine). Culatello's \"at least ten months\" matches the DOP rule (10 months minimum for the smallest pieces). Links I could not add or did not require: (1) Prosciutto's confusedWith is already at the cap of 3 (Speck, Pancetta, Jamón Ibérico), so Culatello cannot be added back; the operator could swap Pancetta out for Culatello, since Pancetta is also linked from Pancetta's own card. (2) Boudin Noir's trap (the Louisiana pork, liver and rice sausage) nearly repeats Andouille's existing trap (\"Soft Louisiana sausage of pork, rice and liver...\"). Both are false for their own cards and Cajun boudin has no card on the roster, so neither breaks a rule, but a written test that draws both cards shows the same wrong option twice. The operator may want to reword one. (3) Head Cheese could add Cheek (fd_0087) as a see-also; optional. (4) Finocchiona's \"Finely ground\" may be off against the IGP spec, which I recall as a medium grind (not checked); \"Ground pork shoulder and belly\" is the safe wording."
 			},
 			"acceptedRejected": []
+		},
+		{
+			"merged": "2026-10-02",
+			"pass": "revision",
+			"cards": [
+				"fd_0365",
+				"fd_0366",
+				"fd_0367",
+				"fd_0368",
+				"fd_0369"
+			],
+			"findings": [
+				{
+					"id": "fd_0365",
+					"field": "why",
+					"severity": "wrong",
+					"claim": "Cooling, the meat shrinks, so savory aspic is poured in to fill the gap.",
+					"because": "The forcemeat shrinks while it bakes, as fat and juices render out and run off. That gap is there when it comes out of the oven, and the aspic goes in once it has partly cooled.",
+					"fix": "Baking shrinks the meat, so savory aspic is poured in to fill the gap.",
+					"lens": "fact",
+					"key": "cured-1-fact-1"
+				},
+				{
+					"id": "fd_0365",
+					"field": "note",
+					"severity": "verdict",
+					"claim": "Served cold or cool, never warmed.",
+					"because": "The classic board piece is served cold, but it is not true that it is never warmed. Pâté lorrain and the old pâté chaud are crusted pâtés served warm, and a guest who is told 'never' will repeat it.",
+					"fix": "Classically served cold or cool.",
+					"lens": "fact",
+					"key": "cured-1-fact-2"
+				},
+				{
+					"id": "fd_0367",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "and it is paprika-mild, not spicy.",
+					"because": "There is a hot sobrasada (picante, made with hot pepper), and the card's own madeWith lists 'sometimes hot pepper'. The trap's why is meant to be true, and this part is not true of every sobrasada. Baked in a mold is the false part on its own.",
+					"fix": "It is a raw sausage cured in its casing, never baked or molded.",
+					"lens": "fact",
+					"key": "cured-1-fact-3"
+				},
+				{
+					"id": "fd_0369",
+					"field": "say",
+					"severity": "wrong",
+					"claim": "ahn-doo-ee-YET",
+					"because": "Andouillette has three syllables in French (an-dou-illette) and in American dining rooms. The 'ill' is a y glide, not an extra 'ee' syllable, so this respelling adds a syllable that no one says.",
+					"fix": "ahn-doo-YET",
+					"lens": "fact",
+					"key": "cured-1-fact-4"
+				},
+				{
+					"id": "fd_0369",
+					"field": "say",
+					"severity": "wrong",
+					"claim": "ahn-doo-ee-YET",
+					"because": "Andouillette has three syllables, ahn-doo-YET (French an-dou-illette, the 'ill' is a y glide, not an extra 'ee' syllable). American dining rooms say ahn-doo-YET; the four-syllable version teaches a new hire a mispronunciation.",
+					"fix": "ahn-doo-YET",
+					"lens": "floor",
+					"key": "cured-1-floor-5"
+				},
+				{
+					"id": "fd_0369",
+					"field": "guest",
+					"severity": "wrong",
+					"claim": "sausage of pork tripe, grilled and served with mustard and fries. It has a strong, earthy aroma that its fans love.",
+					"because": "In American English tripe means stomach, but andouillette is mostly chitterlings (intestines). 'Earthy aroma' also undersells a smell the card itself says to warn guests about, so the guest line oversells and invites a returned plate. Say plainly what it is and that it smells strong.",
+					"fix": "It's a French bistro sausage of pork intestines, grilled and served with mustard and fries. It smells strong and funky, and its fans love it.",
+					"lens": "floor",
+					"key": "cured-1-floor-6"
+				},
+				{
+					"id": "fd_0369",
+					"field": "line",
+					"severity": "unclear",
+					"claim": "Grilled andouillette AAAAA, Dijon mustard sauce, frites",
+					"because": "Nothing on the card explains AAAAA (the seal of the Association Amicale des Amateurs d'Authentique Andouillette), so a guest asking 'what's the five A's?' leaves the new hire stuck. It is also rare on American menus.",
+					"fix": "Grilled andouillette, Dijon mustard sauce, frites",
+					"lens": "floor",
+					"key": "cured-1-floor-7"
+				},
+				{
+					"id": "fd_0368",
+					"field": "guest",
+					"severity": "unclear",
+					"claim": "from Emilia-Romagna",
+					"because": "A nervous third-day server will trip over Emilia-Romagna aloud, and the guest gains nothing from it. The origin field already names Modena, Emilia-Romagna.",
+					"fix": "from northern Italy",
+					"lens": "floor",
+					"key": "cured-1-floor-8"
+				},
+				{
+					"id": "fd_0367",
+					"field": "notThis",
+					"severity": "unclear",
+					"claim": "This one is paprika-sweet and mild.",
+					"because": "Sobrassada also comes picante, made with hot pimentón, and the card's own madeWith lists 'sometimes hot pepper'. An absolute 'mild' gets repeated to a guest who then gets the hot version.",
+					"fix": "This one is usually paprika-mild.",
+					"lens": "floor",
+					"key": "cured-1-floor-9"
+				},
+				{
+					"id": "fd_0366",
+					"field": "why",
+					"severity": "verdict",
+					"claim": "With no blood and no smoke it stays pale and mild",
+					"because": "Guests ask this card's question directly, and \"with no blood\" tells them the sausage is free of blood. The house rule bans any wording that says what a dish lacks. The card can describe what the sausage is made of and leave the contrast with blood to the notThis line about boudin noir.",
+					"fix": "White meat, never smoked: it stays pale and mild",
+					"lens": "safety",
+					"key": "cured-1-safety-10"
+				},
+				{
+					"id": "fd_0366",
+					"field": "madeWith",
+					"severity": "unclear",
+					"claim": "sometimes bread",
+					"because": "Many recipes bind boudin blanc with flour or breadcrumbs instead of bread. A guest who needs to avoid wheat should see flour named on the list, and \"bread\" alone does not cover the flour-bound version.",
+					"fix": "sometimes bread or flour",
+					"lens": "safety",
+					"key": "cured-1-safety-11"
+				},
+				{
+					"id": "fd_0367",
+					"field": "notThis",
+					"severity": "verdict",
+					"claim": "This one is paprika-sweet and mild.",
+					"because": "Sobrassada de Mallorca is made in a sweet (dulce) style and a hot (picante) style; the picante is tied with red string. The card's own madeWith lists \"sometimes hot pepper\". Telling a heat-sensitive guest it is mild is an assurance the kitchen's version may not meet.",
+					"fix": "This one is paprika-led and usually mild.",
+					"lens": "safety",
+					"key": "cured-1-safety-12"
+				},
+				{
+					"id": "fd_0367",
+					"field": "traps",
+					"severity": "wrong",
+					"claim": "and it is paprika-mild, not spicy.",
+					"because": "A hot (picante) sobrasada exists, so \"not spicy\" is not true of every sobrasada. What makes the trap false is that it is called a baked, chilled pâté, so the explanation should rest on that.",
+					"fix": "It is a raw sausage cured in its casing, never baked in a mold or served chilled.",
+					"lens": "safety",
+					"key": "cured-1-safety-13"
+				},
+				{
+					"id": "fd_0367",
+					"field": "guest",
+					"severity": "verdict",
+					"claim": "rich and mellow rather than fiery",
+					"because": "A server will repeat this as a promise that the sausage is not hot, but the picante style is hot. The line should describe the usual style without ruling heat out.",
+					"fix": "rich and usually mellow rather than fiery",
+					"lens": "safety",
+					"key": "cured-1-safety-14"
+				},
+				{
+					"key": "cured-critic-1",
+					"id": "fd_0365",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "The note restates what the card already says. 'Served cold' is in the gist, the guest line and notThis, and the jelly is explained in the why ('aspic is poured in to fill the gap... a band of jelly'). The brief names this as the cheapest cut: a note should hold a fact the why does not.",
+					"because": "The note restates what the card already says. 'Served cold' is in the gist, the guest line and notThis, and the jelly is explained in the why ('aspic is poured in to fill the gap... a band of jelly'). The brief names this as the cheapest cut: a note should hold a fact the why does not.",
+					"fix": "Delete the note. The card drops from 699 to 615 characters and loses nothing. If you want to keep a note, use a fact the card lacks, e.g. 'Sliced to order with a serrated knife so the crust does not shatter.'"
+				},
+				{
+					"key": "cured-critic-2",
+					"id": "fd_0366",
+					"lens": "critic",
+					"field": "card",
+					"severity": "unclear",
+					"claim": "Boudin Blanc is placed at level 4 (Chef), but its confusable sibling Boudin Noir (fd_0312) is at level 3. The two share one Lexicon entry and are taught as a pair. Boudin blanc is at least as common on American menus, especially at the holidays, so the standard does not support placing it a level higher.",
+					"because": "Boudin Blanc is placed at level 4 (Chef), but its confusable sibling Boudin Noir (fd_0312) is at level 3. The two share one Lexicon entry and are taught as a pair. Boudin blanc is at least as common on American menus, especially at the holidays, so the standard does not support placing it a level higher.",
+					"fix": "Set level to 3 so the two boudins are learned together."
+				}
+			],
+			"dispositions": [
+				{
+					"finding": "cured-1-fact-1",
+					"action": "applied",
+					"reason": "The why now says 'Baking shrinks the meat, so savory aspic is poured in to fill the gap.' (256 chars)."
+				},
+				{
+					"finding": "cured-1-fact-2",
+					"action": "applied",
+					"reason": "The note now reads 'Classically served cold or cool.' and the absolute 'never warmed' is gone."
+				},
+				{
+					"finding": "cured-1-fact-3",
+					"action": "applied",
+					"reason": "The trap's why now reads 'It is a raw sausage cured in its casing, never baked or molded.' so it no longer rules out the picante style."
+				},
+				{
+					"finding": "cured-1-fact-4",
+					"action": "applied",
+					"reason": "say changed from ahn-doo-ee-YET to the three-syllable ahn-doo-YET."
+				},
+				{
+					"finding": "cured-1-floor-5",
+					"action": "applied",
+					"reason": "This duplicates fact-4. say is now ahn-doo-YET."
+				},
+				{
+					"finding": "cured-1-floor-6",
+					"action": "applied",
+					"reason": "The guest line now names pork intestines, not tripe, and says plainly that it smells strong and funky (141 chars)."
+				},
+				{
+					"finding": "cured-1-floor-7",
+					"action": "applied",
+					"reason": "AAAAA removed from the menu line, which now reads 'Grilled andouillette, Dijon mustard sauce, frites'."
+				},
+				{
+					"finding": "cured-1-floor-8",
+					"action": "applied",
+					"reason": "The guest line now says 'from northern Italy'. Modena, Emilia-Romagna stays in origin."
+				},
+				{
+					"finding": "cured-1-floor-9",
+					"action": "applied",
+					"reason": "notThis now says 'This one is paprika-led and usually mild.' so it allows for the picante style (the same edit answers safety-12)."
+				},
+				{
+					"finding": "cured-1-safety-10",
+					"action": "applied",
+					"reason": "The why no longer says 'with no blood'. It now reads 'White meat, never smoked, keeps it pale and mild', and the contrast with blood stays in notThis."
+				},
+				{
+					"finding": "cured-1-safety-11",
+					"action": "applied",
+					"reason": "The madeWith item is now 'sometimes bread or flour', and the why says 'often a little bread or flour' to match."
+				},
+				{
+					"finding": "cured-1-safety-12",
+					"action": "applied",
+					"reason": "notThis now reads 'This one is paprika-led and usually mild.'"
+				},
+				{
+					"finding": "cured-1-safety-13",
+					"action": "applied",
+					"reason": "The trap's why now rests on the false part, baked and molded: 'It is a raw sausage cured in its casing, never baked or molded.' I left out 'served chilled' because sobrasada is often kept and served cold from the fridge."
+				},
+				{
+					"finding": "cured-1-safety-14",
+					"action": "applied",
+					"reason": "The guest line now says 'rich and usually mellow rather than fiery' (151 chars)."
+				},
+				{
+					"finding": "cured-critic-1",
+					"action": "applied",
+					"reason": "Deleted the note on Pâté en Croûte, since the gist, guest line, why and notThis already say it is served cold and explain the jelly; the card's prose drops to about 615 characters."
+				},
+				{
+					"finding": "cured-critic-2",
+					"action": "applied",
+					"reason": "Moved Boudin Blanc from level 4 to level 3 to match Boudin Noir (fd_0312, level 3), which shares its Lexicon entry. Its roster row had no assigned level, and the standard puts a specialist charcuterie item at Sous Chef."
+				}
+			],
+			"critic": {
+				"ok": false,
+				"problems": [
+					{
+						"id": "fd_0365",
+						"issue": "The note restates what the card already says. 'Served cold' is in the gist, the guest line and notThis, and the jelly is explained in the why ('aspic is poured in to fill the gap... a band of jelly'). The brief names this as the cheapest cut: a note should hold a fact the why does not.",
+						"fix": "Delete the note. The card drops from 699 to 615 characters and loses nothing. If you want to keep a note, use a fact the card lacks, e.g. 'Sliced to order with a serrated knife so the crust does not shatter.'"
+					},
+					{
+						"id": "fd_0366",
+						"issue": "Boudin Blanc is placed at level 4 (Chef), but its confusable sibling Boudin Noir (fd_0312) is at level 3. The two share one Lexicon entry and are taught as a pair. Boudin blanc is at least as common on American menus, especially at the holidays, so the standard does not support placing it a level higher.",
+						"fix": "Set level to 3 so the two boudins are learned together."
+					}
+				],
+				"notes": "I checked the whole section. All 31 roster rows have a card: the 26 existing cards are written=true and these 5 are new. The section mean with the new cards is 704.5 characters (the 26 existing cards average 705.2), under the 720 ceiling. New card totals: 0365 699, 0366 695, 0367 718, 0368 655, 0369 740. None of the 5 rows has a knownPacketError; the two in this section are fd_0070 and fd_0072, both already written. I found no verdict words, banned substrings, dashes or full-stop errors. Every term with an accent or an opening apostrophe has a say, and each respelling follows the key. Every gist is distinguishable from its neighbours: Pâté en Croûte vs Terrine (crust and jelly), Sobrasada vs 'Nduja (paprika vs fiery), Andouillette vs Andouille. Every trap is within 10 characters of its gist, and no gist is the longest option. Confusion links: tools/derive/floor-deck.mjs (line 339) symmetrises confusedWith, so Andouille, Boudin Noir and 'Nduja need no edits to link back. On Andouille that makes Tasso plus Andouillette, under the cap of 4. Optional: Sobrasada is often called 'spreadable chorizo', so Chorizo (fd_0065) could move from seeAlsoTerms to confusedWithTerms on fd_0367. If it does, notThis needs a clause for it, so I left it as a judgement call rather than a problem. Optional: Cotechino has no trap. A real, common mistake would fit, e.g. says 'Dry-cured Italian pork salami, sliced thin and served cold on the board' / why 'It is a fresh, rind-rich sausage that must be simmered and is served hot.' Fact spot-checks passed: cotica = pork rind; New Year cotechino with lentils; Troyes/Lyon andouillette with veal in the Lyon style; Sobrassada de Mallorca protected name (IGP); aspic poured into the gap after baking."
+			},
+			"acceptedRejected": []
 		}
 	]
 }
