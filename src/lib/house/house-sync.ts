@@ -19,15 +19,33 @@
  *      nothing moves); every shared mark settles by pickMark; kept unions.
  *      Written only when something changed.
  *   2. No twin by id: a twin by FOLDED NAME within the same house is re-keyed
- *      to the item's id through the adapter's rename and reported renamed.
- *      Only then a twin-less item becomes a row.
+ *      to the item's id through the adapter's rename and reported renamed,
+ *      with the former id beside the new one so the wing can run its own
+ *      rename door. Only then a twin-less item becomes a row, and not even
+ *      then when a row of another house on the device already holds the id
+ *      in the projection: the wing's list keys by id, so the item waits and
+ *      is reported row-held.
  *   3. A row with no house, or with a house not on the device, is adopted
  *      into the current house and its item added.
- *   4. A row whose house is current and that has no item leaves only when the
- *      house's tombstone for it is newer than the row's last touch; otherwise
- *      the item is added.
+ *   4. A row that has no item leaves only when the house's tombstone for it
+ *      is newer than the row's last touch; otherwise the item is added. The
+ *      row's scope has no bearing on which stamp is newer: a backup from
+ *      before the house, or from a device this one does not know, must not
+ *      bring back what a person deleted, nor take the tombstone with it. The
+ *      touch is read over every mark on the row's block, including the ones
+ *      the House has no field for, so a person's keep there counts.
  *   5. syncIn REMOVES nothing else, ever. An empty house with a full
  *      projection adopts the rows, never the reverse.
+ *   6. Every row and every item of the house carries the id of the house
+ *      being synced, whatever stamp a stored item arrived with.
+ *   7. A row whose id the client's key sweep would refuse (FORBIDDEN_KEY;
+ *      the wings mint eight random base36 characters, so 'nut', 'free' or
+ *      'safe' can land in one) never enters the house under that id,
+ *      because a tombstone in `removed` is a KEY: the day the item is
+ *      removed, its id would make the record one the client refuses and
+ *      the pack one no device imports. The row is re-keyed to a fresh id
+ *      through the adapter's rename, as a name twin is, and reported
+ *      renamed with the former id beside it.
  *
  * NO ALLERGEN FIELD ON ANY SHAPE HERE. A wing's row may carry fields of its
  * own that the House never sees; toRow carries every such field whole from
@@ -36,8 +54,9 @@
  * House by this door.
  */
 import type { House, HouseItem, ItemKind, Mark, Note } from './house-schema';
-import { isMark, isNote } from './house-schema';
-import { lastTouch, listOfKind, mergeKept, pickMark, sameJson } from './house-merge';
+import { ID_PREFIXES, isMark, isNote, mintId } from './house-schema';
+import { FORBIDDEN_KEY } from './house-normalise';
+import { listOfKind, mergeKept, pickMark, sameJson } from './house-merge';
 
 /* -------------------------------------------------------------------------
  * The shapes
@@ -95,7 +114,16 @@ export interface SyncAdapter<R extends SyncRow> {
 	shared: readonly string[];
 	marks: readonly string[];
 	toRow: (item: HouseItem, prevRow: R | undefined) => R;
-	fromRow: (row: R) => HouseItem;
+	/**
+	 * The row as an item. With a reference item, a shared field whose value on
+	 * the row is the reference's own value written out reads back as the
+	 * reference's value, not as the codec's reading of the text: the Codex
+	 * keeps grapes as one string, and a grape entry with a comma of its own
+	 * must not come back as two entries because the cellar row was newer.
+	 */
+	fromRow: (row: R, ref?: HouseItem) => HouseItem;
+	/** When a person last touched the row: its stamp, or any mark a person kept on its block, or any note kept, whichever is latest. */
+	rowTouch: (row: R) => number;
 	rename: (row: R, newId: string) => R;
 	foldName: (name: string) => string;
 	rowKey: (row: R) => string;
@@ -106,12 +134,19 @@ export interface SyncAdapter<R extends SyncRow> {
  * What happened to one id. A row the wing must write is one reported
  * row-updated, row-added, renamed or adopted (an adopted row is stamped with
  * the house id, and a twin's stamp is reported row-updated beside it); a row
- * reported row-removed has left the list the sync returns.
+ * reported row-removed has left the list the sync returns. A renamed change
+ * carries the former id in from, so the wing can read the old name off its
+ * own row by that id and run its own rename door (the Ledger's SRS card is
+ * keyed by name). A row-held change names an item with no row because a row
+ * of another house on the device holds the id in the projection: nothing to
+ * write, and the house keeps the item.
  */
-export type SyncWhat = 'row-updated' | 'item-updated' | 'row-added' | 'item-added' | 'row-removed' | 'renamed' | 'adopted';
+export type SyncWhat = 'row-updated' | 'item-updated' | 'row-added' | 'item-added' | 'row-removed' | 'row-held' | 'renamed' | 'adopted';
 export interface SyncChange {
 	id: string;
 	what: SyncWhat;
+	/** On renamed: the id the row carried before it was re-keyed to the item's. */
+	from?: string;
 }
 
 export interface SyncOpts {
@@ -125,6 +160,8 @@ export interface SyncOpts {
 	 * safe direction.
 	 */
 	knownHouses?: readonly string[];
+	/** The random source for the fresh id a re-keyed row gets (rule 7); Math.random when absent. */
+	rand?: () => number;
 }
 
 export interface SyncResult<R extends SyncRow> {
@@ -149,21 +186,20 @@ const rowStamp = (v: unknown): number => (typeof v === 'number' && Number.isFini
 const copyList = (v: unknown): string[] => rowTextList(v).slice();
 
 /**
- * The Ledger's placeholder for an empty glass or garnish: its save door writes
- * a lone em dash there, and its barText reads a lone hyphen, en dash or em
- * dash back as empty. Detected by code point and written by code point, so
+ * The Ledger's placeholder for an empty glass or garnish: the standalone
+ * writes a lone em dash there, and the wing's barText reads a lone hyphen,
+ * en dash or em dash back as empty. The wing itself stores the empty string
+ * and draws the dash at display time, and every row the sync writes goes
+ * through the wing's own door, so the sync reads the placeholder and never
+ * writes it: a row written with the dash would come back through the door
+ * empty and be reported updated on every boot. Detected by code point, so
  * no dash is spelled in this file and the publish gate's count stands.
  */
 const PLACEHOLDER_CODES = [0x2d, 0x2013, 0x2014];
-const PLACEHOLDER = String.fromCharCode(0x2014);
 function readPlaceholder(v: unknown): string {
 	const s = rowText(v);
 	const t = s.trim();
 	return t.length === 1 && PLACEHOLDER_CODES.includes(t.charCodeAt(0)) ? '' : s;
-}
-function writePlaceholder(v: unknown): string {
-	const s = rowText(v);
-	return s.trim() ? s : PLACEHOLDER;
 }
 
 /** The Ledger files a drink with no family or spirit under Other, and so does a row written here. */
@@ -241,8 +277,8 @@ export const LEDGER_COCKTAIL: ProjectionSpec<SyncRow> = {
 		plain('name'),
 		{ item: 'spec', row: 'spec', out: copyList, in: copyList },
 		plain('method'),
-		{ item: 'glass', row: 'glass', out: writePlaceholder, in: readPlaceholder },
-		{ item: 'garnish', row: 'garnish', out: writePlaceholder, in: readPlaceholder },
+		{ item: 'glass', row: 'glass', in: readPlaceholder },
+		{ item: 'garnish', row: 'garnish', in: readPlaceholder },
 		plain('note'),
 		{ item: 'family', row: 'family', out: writeOther },
 		{ item: 'spirit', row: 'spirit', out: writeOther },
@@ -352,15 +388,40 @@ export function adapterFrom<R extends SyncRow>(spec: ProjectionSpec<R>): SyncAda
 		return spec.finish ? spec.finish(row) : row;
 	};
 
-	const fromRow = (row: R): HouseItem => {
+	const fromRow = (row: R, ref?: HouseItem): HouseItem => {
 		const out: Fields = { id: row.id, house: rowText(row.house), kind: spec.kind, name: '', ...spec.blank(row) };
-		for (const f of spec.shared) out[f.item] = f.in ? f.in(row[f.row]) : rowText(row[f.row]);
+		const refFields = ref as unknown as Fields | undefined;
+		for (const f of spec.shared) {
+			const raw = row[f.row];
+			/* The reference's value, when the row holds that value written out:
+			   the text is the same, so the reading must be the same. */
+			if (refFields && f.out && f.item in refFields && sameJson(f.out(refFields[f.item]), raw)) {
+				const v = refFields[f.item];
+				out[f.item] = Array.isArray(v) ? v.slice() : v;
+			} else out[f.item] = f.in ? f.in(raw) : rowText(raw);
+		}
 		if (spec.derive) Object.assign(out, spec.derive(row));
 		const block = readBlock(row.maitre, spec.marks);
 		for (const f of spec.marks) if (isMark(block[f])) out[f] = copyMark(block[f] as Mark<unknown>);
 		if (block.kept) out.kept = (block.kept as Note[]).map((n) => ({ ...n }));
 		out.ts = rowStamp(row.ts);
 		return out as unknown as HouseItem;
+	};
+
+	/* lastTouch's rule over the row's whole block, not the shared marks alone:
+	   the Ledger keeps her marks on method, glass and garnish there, and a
+	   person's keep on one of them is a touch the tombstone rule must see. */
+	const rowTouch = (row: R): number => {
+		let t = rowStamp(row.ts);
+		const block = row.maitre;
+		if (!block || typeof block !== 'object' || Array.isArray(block)) return t;
+		const b = block as Fields;
+		for (const f of Object.keys(b)) {
+			const m = b[f];
+			if (isMark(m) && m.by === 'person' && m.ts > t) t = m.ts;
+		}
+		if (Array.isArray(b.kept)) for (const n of b.kept) if (isNote(n) && n.ts > t) t = n.ts;
+		return t;
 	};
 
 	const derived = spec.derive ? Object.keys(spec.derive({ id: '', ts: 0 } as R)) : [];
@@ -370,6 +431,7 @@ export function adapterFrom<R extends SyncRow>(spec: ProjectionSpec<R>): SyncAda
 		marks: spec.marks,
 		toRow,
 		fromRow,
+		rowTouch,
 		rename: (row, newId) => ({ ...row, id: newId }),
 		foldName: spec.foldName,
 		rowKey: (row) => spec.foldName(spec.rowName(row)),
@@ -396,7 +458,7 @@ type Scope = 'ours' | 'adoptable' | 'foreign';
  */
 function settleTwin<R extends SyncRow>(item: HouseItem, row: R, houseId: string, adapter: SyncAdapter<R>): { item: HouseItem; row: R } {
 	const mine = item as unknown as Fields;
-	const rowItem = adapter.fromRow(row) as unknown as Fields;
+	const rowItem = adapter.fromRow(row, item) as unknown as Fields;
 	const settled: Fields = {};
 	for (const f of adapter.marks) {
 		const m = pickMark(
@@ -461,8 +523,12 @@ export function syncIn<R extends SyncRow>(
 	const claimed = new Set<number>();
 	const byId = new Map<string, number>();
 	const byKey = new Map<string, number[]>();
+	const heldByOthers = new Set<string>();
 	rows.forEach((row, i) => {
-		if (scopes[i] === 'foreign') return;
+		if (scopes[i] === 'foreign') {
+			heldByOthers.add(row.id);
+			return;
+		}
 		if (!byId.has(row.id)) byId.set(row.id, i);
 		const key = adapter.rowKey(row);
 		const at = byKey.get(key);
@@ -470,6 +536,17 @@ export function syncIn<R extends SyncRow>(
 		else byKey.set(key, [i]);
 	});
 	const itemIds = new Set(items.map((item) => item.id));
+	/* Every id in play, so a fresh id (rule 7) clashes with no item and no row, this house's or another's. */
+	const taken = new Set<string>(itemIds);
+	rows.forEach((row) => taken.add(row.id));
+	const prefix: string = ID_PREFIXES[list];
+	const rand = opts.rand || Math.random;
+	const freshId = (): string => {
+		let id = mintId(prefix, taken, rand);
+		for (let tries = 0; tries < 100 && FORBIDDEN_KEY.test(id); tries++) id = mintId(prefix, taken, rand);
+		taken.add(id);
+		return id;
+	};
 
 	const itemsOut: HouseItem[] = [];
 	const newRows: R[] = [];
@@ -478,9 +555,19 @@ export function syncIn<R extends SyncRow>(
 	const removed: Record<string, number> = { ...house.removed };
 	const seenItems = new Set<string>();
 
-	for (const item of items) {
-		if (seenItems.has(item.id)) continue;
-		seenItems.add(item.id);
+	for (const stored of items) {
+		if (seenItems.has(stored.id)) continue;
+		seenItems.add(stored.id);
+		/* Rule 6: the item of this house carries this house's id. A stored
+		   record comes back raw, and an item stamped with another house on the
+		   device would file a row foreign to the next run, so the stamp is set
+		   right here and the house reported changed. */
+		let item = stored;
+		if (stored.house !== house.id) {
+			item = { ...stored, house: house.id } as HouseItem;
+			changes.push({ id: item.id, what: 'item-updated' });
+			houseChanged = true;
+		}
 		let at = byId.get(item.id);
 		if (at === undefined || claimed.has(at)) {
 			at = undefined;
@@ -489,15 +576,21 @@ export function syncIn<R extends SyncRow>(
 			const free = cands.find((i) => !claimed.has(i) && !itemIds.has(rows[i].id));
 			if (free !== undefined) {
 				rowsOut[free] = adapter.rename(rows[free], item.id);
-				changes.push({ id: item.id, what: 'renamed' });
+				changes.push({ id: item.id, what: 'renamed', from: rows[free].id });
 				rowsChanged = true;
 				at = free;
 			}
 		}
 		if (at === undefined) {
-			newRows.push(adapter.toRow(item, undefined));
-			changes.push({ id: item.id, what: 'row-added' });
-			rowsChanged = true;
+			if (heldByOthers.has(item.id)) {
+				/* Another house's row holds the id: the wing's list keys by id, so
+				   a second row would shadow or overwrite it. The item waits. */
+				changes.push({ id: item.id, what: 'row-held' });
+			} else {
+				newRows.push(adapter.toRow(item, undefined));
+				changes.push({ id: item.id, what: 'row-added' });
+				rowsChanged = true;
+			}
 			itemsOut.push(item);
 			continue;
 		}
@@ -522,26 +615,35 @@ export function syncIn<R extends SyncRow>(
 		if (claimed.has(i) || scopes[i] === 'foreign') return;
 		if (seenItems.has(row.id)) return;
 		seenItems.add(row.id);
-		const asItem = adapter.fromRow(row);
-		if (scopes[i] === 'adoptable') {
-			/* A person's row arriving: adopted whole, and a tombstone under its id is
-			   stale evidence against a row that is here now, so it goes. */
-			rowsOut[i] = { ...row, house: house.id };
-			changes.push({ id: row.id, what: 'adopted' });
+		/* Rule 4 first, whatever the row's scope: a tombstone newer than the
+		   row's last touch is a delete the row has not seen, and the row goes.
+		   An older tombstone is stale evidence against a row a person touched
+		   since, so it goes instead and the row stays. */
+		const tomb = removed[row.id];
+		if (tomb !== undefined && tomb > adapter.rowTouch(row)) {
+			rowsOut[i] = undefined;
+			changes.push({ id: row.id, what: 'row-removed' });
 			rowsChanged = true;
-			delete removed[row.id];
-		} else {
-			const tomb = removed[row.id];
-			if (tomb !== undefined && tomb > lastTouch(asItem, adapter.marks)) {
-				rowsOut[i] = undefined;
-				changes.push({ id: row.id, what: 'row-removed' });
-				rowsChanged = true;
-				return;
-			}
-			if (tomb !== undefined) delete removed[row.id];
+			return;
+		}
+		if (tomb !== undefined) delete removed[row.id];
+		/* Rule 7: an id the key sweep would refuse is re-keyed before it enters. */
+		let rowIn: R = row;
+		if (FORBIDDEN_KEY.test(row.id)) {
+			rowIn = adapter.rename(row, freshId());
+			rowsOut[i] = rowIn;
+			changes.push({ id: rowIn.id, what: 'renamed', from: row.id });
+			rowsChanged = true;
+		}
+		const asItem = adapter.fromRow(rowIn);
+		if (scopes[i] === 'adoptable') {
+			/* A person's row arriving: adopted whole, stamped with the house. */
+			rowsOut[i] = { ...rowIn, house: house.id };
+			changes.push({ id: rowIn.id, what: 'adopted' });
+			rowsChanged = true;
 		}
 		itemsOut.push({ ...asItem, house: house.id } as HouseItem);
-		changes.push({ id: row.id, what: 'item-added' });
+		changes.push({ id: rowIn.id, what: 'item-added' });
 		houseChanged = true;
 	});
 
@@ -561,5 +663,8 @@ export function syncOut<R extends SyncRow>(kind: ItemKind, house: House, adapter
 	if (!list) throw new Error('syncOut: no list for the kind ' + kind);
 	const prev = new Map<string, R>();
 	for (const row of prevRows) if (!prev.has(row.id)) prev.set(row.id, row);
-	return (house[list] as unknown as HouseItem[]).map((item) => adapter.toRow(item, prev.get(item.id)));
+	/* Rule 6 here too: the rows of this house carry this house's id. */
+	return (house[list] as unknown as HouseItem[]).map((item) =>
+		adapter.toRow(item.house === house.id ? item : ({ ...item, house: house.id } as HouseItem), prev.get(item.id))
+	);
 }

@@ -24,12 +24,16 @@
  *
  * A PACK NEVER OVERWRITES A HOUSE SILENTLY. A pack whose house id is not on
  * the device is added as a new house; it becomes current only when the
- * device had no index at all, or when the only house on it is a hand house
- * with nothing in it. A pack whose id IS on the device is added under a
- * fresh id ("Add as a new house", the items keeping theirs) or merged into
- * the house it names ("Merge into"), which ends on a count. The index write
- * an import makes is a person's act, the second of the two that may create
- * an index (mintHouse in house-store.ts is the first).
+ * device has no current house (no index, or an index whose current is
+ * null, as after the last house was removed), or when the only house on it
+ * is a hand house with nothing in it. A pack whose id IS on the device is
+ * added under a fresh id ("Add as a new house", the items keeping theirs)
+ * or merged into the house it names ("Merge into"), which ends on a count.
+ * "On the device" means deviceIds (house-store.ts): the index's houses and
+ * any record the index does not list, so a record a save left unlisted is
+ * never written over either. The index write an import makes is a person's
+ * act, the second of the two that may create an index (mintHouse in
+ * house-store.ts is the first).
  */
 import { ID_PREFIXES, mintId } from './house-schema';
 import type { House, HouseIndex, HouseStub } from './house-schema';
@@ -39,7 +43,7 @@ import { validateHouse } from './house-validate';
 import type { Problem } from './house-validate';
 import { mergeHouse } from './house-merge';
 import type { MergeCounts } from './house-merge';
-import { loadHouse, putHouse, readIndex, saveHouse, storeSaid, writeIndex } from './house-store';
+import { deviceIds, loadHouse, putHouse, readIndex, saveHouse, storeSaid, writeIndex } from './house-store';
 import type { HouseStorage } from './house-store';
 
 /* -------------------------------------------------------------------------
@@ -182,13 +186,15 @@ export function countItems(house: House): number {
 
 /**
  * The rule for the current pointer on an import: a new house becomes
- * current when the device had no index at all, or when its only house is a
- * hand house with nothing in it (the implicit "My house" a person minted a
- * moment ago and never filled). Otherwise it is listed behind the current
- * house and the screen offers "Open it now?".
+ * current when the device has no current house (no index at all, or an
+ * index pointing at none, which is what the last removal leaves and what
+ * mintHouse takes the same way), or when its only house is a hand house
+ * with nothing in it (the implicit "My house" a person minted a moment ago
+ * and never filled). Otherwise it is listed behind the current house and
+ * the screen offers "Open it now?".
  */
 export async function packBecomesCurrent(storage: HouseStorage, index: HouseIndex | null): Promise<boolean> {
-	if (!index) return true;
+	if (!index || index.current === null) return true;
 	if (index.list.length !== 1) return false;
 	const only = index.list[0];
 	if (only.began !== 'hand') return false;
@@ -227,8 +233,8 @@ export async function importPack(
 	const read = readPack(pack, { rand });
 	if (!read.ok) return read;
 	let house = read.house;
+	const onDevice = new Set<string>(await deviceIds(storage));
 	const index = readIndex(storage);
-	const onDevice = new Set<string>(index ? index.list.map((s) => s.id) : []);
 	const into = choice.mode === 'merge' ? choice.into || house.id : '';
 
 	if (into && onDevice.has(into)) {

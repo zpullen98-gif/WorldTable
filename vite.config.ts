@@ -8,21 +8,23 @@ import { SvelteKitPWA } from '@vite-pwa/sveltekit';
 // subpath, so deploying there is just: BASE_PATH=/WorldTable npm run build
 const base = (process.env.BASE_PATH ?? '') as '' | `/${string}`;
 
+// The wing build, as opposed to a standalone one. The wing is the only build
+// whose pages load the product's shared scripts, so it is the only one whose
+// worker should go looking for them (see static/sw-shared.js).
+const isWing = base === '/table';
 // Built into Outside Of Time, this app is one wing of a single installable
 // product and must point at that product's manifest at the origin root, or the
-// browser offers a second, competing install from every recipe page. Built on
-// its own it keeps its own. MANIFEST_HREF is what says which.
-const manifestHref = process.env.MANIFEST_HREF ?? `${base}/manifest.webmanifest`;
+// browser offers a second, competing install from every recipe page. This repo
+// ships no manifest of its own any more, so a standalone build links none: an
+// empty href renders no link (see src/routes/+layout.svelte) rather than one
+// that 404s on every page. MANIFEST_HREF overrides either default, the same
+// rule tools/build-pages.mjs applies.
+const manifestHref = process.env.MANIFEST_HREF ?? (isWing ? '/manifest.webmanifest' : '');
 // The home-screen label follows the same fact. iOS reads this meta rather than
 // the manifest on older versions, so a wing labelled "World Table" would put a
 // second, differently named icon on the phone of somebody who installed the
 // whole product.
 const appName = process.env.APP_NAME ?? 'World Table';
-// The wing build, as opposed to a standalone one. The wing is the only build
-// whose pages load the product's shared scripts, so it is the only one whose
-// worker should go looking for them (see static/sw-shared.js).
-const isWing = base === '/table';
-
 export default defineConfig({
 	// The safety page says when it was BUILT and deliberately never says
 	// "current as of": an offline-first app cannot know when a food code

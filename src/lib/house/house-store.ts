@@ -263,8 +263,11 @@ function idbOpen(factory: IDBFactory, onClose: () => void): Promise<IDBDatabase 
  * The browser's storage: the index in localStorage, the houses in
  * IndexedDB through the raw API, no library. The database is opened once
  * and the connection kept; a failed transaction drops it so the next call
- * opens afresh. Every read is caught and reads as nothing; every write
- * measures first and refuses whole with its reason.
+ * opens afresh, and so does an open the browser refused, because a private
+ * window or a phone granting storage late refuses the first open and takes
+ * the second, and one refusal at boot must not pin every later read to
+ * nothing until a reload. Every read is caught and reads as nothing; every
+ * write measures first and refuses whole with its reason.
  */
 export function idbStorage(win: HouseWindow): HouseStorage {
 	let opening: Promise<IDBDatabase | null> | null = null;
@@ -281,7 +284,13 @@ export function idbStorage(win: HouseWindow): HouseStorage {
 	const open = (): Promise<IDBDatabase | null> => {
 		if (!opening) {
 			const f = factory();
-			opening = f ? idbOpen(f, reset) : Promise.resolve(null);
+			const raw: Promise<IDBDatabase | null> = f ? idbOpen(f, reset) : Promise.resolve(null);
+			/* A refused open is never cached: the next call opens afresh. */
+			const cached: Promise<IDBDatabase | null> = raw.then((db) => {
+				if (!db && opening === cached) opening = null;
+				return db;
+			});
+			opening = cached;
 		}
 		return opening;
 	};
@@ -413,6 +422,33 @@ function stubOf(index: HouseIndex, id: string): HouseStub | undefined {
 	return index.list.find((s) => s.id === id);
 }
 
+/**
+ * Every house id the device holds: the index's, in its order, and then any
+ * record the index does not list, because a save never makes an index
+ * (saveHouse below) and an index write can be refused after a record
+ * landed, so the index is not the device. This is the one answer to "is
+ * this id on the device" that a mint and an import may take, so neither
+ * ever writes over a record the index forgot. A list the storage cannot
+ * give reads as the index alone.
+ */
+export async function deviceIds(storage: HouseStorage): Promise<string[]> {
+	const out = listHouses(storage).map((s) => s.id);
+	const seen = new Set<string>(out);
+	let stored: string[] = [];
+	try {
+		stored = await storage.list();
+	} catch {
+		stored = [];
+	}
+	for (const id of stored) {
+		if (typeof id === 'string' && id && !seen.has(id)) {
+			seen.add(id);
+			out.push(id);
+		}
+	}
+	return out;
+}
+
 /* -------------------------------------------------------------------------
  * The records
  * ---------------------------------------------------------------------- */
@@ -488,11 +524,13 @@ export type MintResult = { ok: true; house: House; current: boolean } | { ok: fa
  * first export. The first house on a device becomes current; a later one is
  * listed behind the current and the caller switches when it means to. A
  * refused index write takes the record back out, so the device never holds
- * a house its index does not know.
+ * a house its index does not know. The fresh id is drawn against every id
+ * the device holds, listed or not, so a record the index forgot is never
+ * written over.
  */
 export async function mintHouse(storage: HouseStorage, name: string, began: Began, now: number, rand: () => number = Math.random): Promise<MintResult> {
+	const taken = new Set<string>(await deviceIds(storage));
 	const index = readIndex(storage);
-	const taken = new Set<string>(index ? index.list.map((s) => s.id) : []);
 	const id = mintId(ID_PREFIXES.house, taken, rand);
 	const house = emptyHouse(id, name.trim() ? name.trim() : MY_HOUSE, began, now);
 	const saved = await putHouse(storage, house, now);
@@ -511,22 +549,30 @@ export async function mintHouse(storage: HouseStorage, name: string, began: Bega
  * The current pointer moved to a house on the index; the previous current
  * id comes back (null when there was none). An id not on the index is a
  * caller's error and is thrown, so a screen can never point at a house the
- * device does not hold. The projections are the wings' to replace; this
- * moves the pointer and nothing else.
+ * device does not hold; an index write the device refused is thrown too,
+ * so a caller never takes a switch that did not land and shows a house the
+ * device does not point at. The projections are the wings' to replace;
+ * this moves the pointer and nothing else.
  */
 export function switchTo(storage: HouseStorage, id: string): string | null {
 	const index = readIndex(storage);
 	if (!index || !stubOf(index, id)) throw new Error('switchTo: no house ' + id + ' on this device');
 	const previous = index.current;
-	if (previous !== id) writeIndex(storage, { v: 1, current: id, list: index.list });
+	if (previous !== id && !writeIndex(storage, { v: 1, current: id, list: index.list })) {
+		throw new Error('switchTo: the device refused to write the index');
+	}
 	return previous;
 }
 
 /**
- * A house removed from the device, record and stub, only when the person
+ * A house removed from the device, stub and record, only when the person
  * typed its name (the name as the index holds it, outer spaces aside). The
- * current pointer moves to the first house left, or to none. SRS cards and
- * the wings' own rows are left where they are: removal of a house is not
+ * current pointer moves to the first house left, or to none. The index is
+ * written first and the record deleted second: a refused index write then
+ * changes nothing and false means nothing was removed, while a record the
+ * delete could not reach is at worst an orphan the index no longer lists,
+ * which deviceIds still sees and nothing writes over. SRS cards and the
+ * wings' own rows are left where they are: removal of a house is not
  * removal of what a person learned.
  */
 export async function removeHouse(storage: HouseStorage, id: string, typedName: string): Promise<boolean> {
@@ -534,14 +580,15 @@ export async function removeHouse(storage: HouseStorage, id: string, typedName: 
 	const stub = index ? stubOf(index, id) : undefined;
 	if (!index || !stub) return false;
 	if (typedName.trim() !== stub.name.trim()) return false;
+	const list = index.list.filter((s) => s.id !== id);
+	const current = index.current === id ? (list.length ? list[0].id : null) : index.current;
+	if (!writeIndex(storage, { v: 1, current, list })) return false;
 	try {
 		await storage.remove(id);
 	} catch {
-		return false;
+		/* the stub is gone and the record is an orphan; deviceIds still lists it */
 	}
-	const list = index.list.filter((s) => s.id !== id);
-	const current = index.current === id ? (list.length ? list[0].id : null) : index.current;
-	return writeIndex(storage, { v: 1, current, list });
+	return true;
 }
 
 /** The house renamed, record and stub; a blank name is refused and nothing is written. */

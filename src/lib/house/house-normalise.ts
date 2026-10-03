@@ -35,9 +35,13 @@
  * minted afresh and the report says so, and every reference to the old id
  * inside the house (a pairing, a course, a mix-up, a first pick, an upsell,
  * a term's items) follows it, so a pack whose dishes came in under the
- * desk's 'k-' mint keeps its pairings. A fresh id is drawn again when it
- * would match the client's FORBIDDEN_KEY, because a tombstone in `removed`
- * is a KEY, and the client sweeps keys.
+ * desk's 'k-' mint keeps its pairings. An id that would match the client's
+ * FORBIDDEN_KEY is minted afresh as well, and a fresh id is drawn again
+ * while it would, because a tombstone in `removed` is a KEY and the client
+ * sweeps keys: the day such an item is removed, its id would make the
+ * record one the client refuses and the pack one no device imports. For
+ * the same reason a tombstone already under such a key is dropped and
+ * named in the report; no item in the shape can carry that id.
  */
 import { BUILD_STEPS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, MARK_FIELDS, PROSE_MAX, mintId } from './house-schema';
 import type {
@@ -328,6 +332,7 @@ function claimId(raw: unknown, prefix: string, path: string, ctx: Ctx): string {
 	if (!old) why = 'no id';
 	else if (old.indexOf('|') >= 0 || old.indexOf(':') >= 0) why = 'the id ' + old + ' carries a pipe or a colon';
 	else if (old.slice(0, prefix.length) !== prefix) why = 'the id ' + old + ' does not start with ' + prefix;
+	else if (FORBIDDEN_KEY.test(old)) why = 'the id ' + old + ' would be refused as a key by the client sweep';
 	else if (ctx.taken.has(old)) why = 'the id ' + old + ' is already taken in this house';
 	if (!why) {
 		ctx.taken.add(old);
@@ -538,13 +543,18 @@ function normaliseSource(v: unknown): HouseSource {
 }
 
 /** The tombstones: id to stamp, a key kept only with a finite number under it, at most LIST_MAX of them. */
-function normaliseRemoved(v: unknown): Record<string, number> {
+/** The tombstones, id to stamp; a tombstone under a key the client sweep refuses is dropped and named, since no item in the shape carries that id. */
+function normaliseRemoved(v: unknown, report: NormaliseReport[]): Record<string, number> {
 	const out: Record<string, number> = {};
 	if (!isRaw(v)) return out;
 	let n = 0;
 	for (const k of Object.keys(v)) {
 		const stamp = v[k];
 		if (!k || typeof stamp !== 'number' || !Number.isFinite(stamp)) continue;
+		if (FORBIDDEN_KEY.test(k)) {
+			report.push({ path: 'house.removed.' + k, code: 'forbidden', said: 'a tombstone under a key the client refuses was dropped' });
+			continue;
+		}
 		out[k] = stamp;
 		if (++n >= LIST_MAX) break;
 	}
@@ -619,8 +629,8 @@ const BEGAN: readonly Began[] = ['pack', 'desk', 'hand'];
  * Any value, as a House in the shape, with the report of what changed. The
  * random source is an argument so a test mints the same ids every run. The
  * client's key sweep runs twice: over what came in, so a key that was
- * dropped is still named, and over what goes out, which can only find a
- * tombstone in `removed` whose id happens to match the rule.
+ * dropped is still named, and over what goes out, which finds nothing a
+ * House in the shape can hold and stands as the proof of that.
  */
 export function normaliseHouse(raw: unknown, opts: { rand?: () => number } = {}): { house: House; report: NormaliseReport[] } {
 	const r = asRecord(raw);
@@ -653,7 +663,7 @@ export function normaliseHouse(raw: unknown, opts: { rand?: () => number } = {})
 		mustKnows: asList(r.mustKnows).map((k, i) => normaliseMustKnow(k, i, ctx)),
 		askAtLineup: asList(r.askAtLineup).map((a, i) => normaliseAsk(a, i, ctx)),
 		disputes: asList(r.disputes).map((u, i) => normaliseDispute(u, i, ctx)),
-		removed: normaliseRemoved(r.removed),
+		removed: normaliseRemoved(r.removed, report),
 		build: normaliseBuild(r.build),
 		began: oneOf(r.began, BEGAN, 'hand'),
 		createdAt: asText(r.createdAt),

@@ -162,7 +162,10 @@ describe('the Ledger placeholder against the wing\'s own door', () => {
 		const house = clone(fixture);
 		items(house, w)[0].glass = '';
 		const out = rowsOf(house, w);
-		expect(out[0].glass).toBe(EM);
+		/* The sync writes what the wing stores: a row written with the dash
+		   could never rest, since toRow over the filed row would write the
+		   dash again and the change below could not be empty. */
+		expect(out[0].glass).toBe('');
 		const filed = out.map(door);
 		expect(filed[0].glass).toBe('');
 		const r = syncIn(w.kind, filed, house, w.adapter, { now: NOW, knownHouses: [HOUSE_ID] });

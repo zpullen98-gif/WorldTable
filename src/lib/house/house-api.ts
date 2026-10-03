@@ -34,7 +34,14 @@
  * Keep, Edit and Discard are theirs. Every mark goes through the
  * normaliser's door (normaliseMark), so a key the client refuses cannot
  * ride in on a value, and removeItem writes a tombstone newer than the
- * item's last touch so the sync honours it on every wing.
+ * item's last touch so the sync honours it on every wing. A tombstone is a
+ * KEY in `removed`, so an id the client's sweep would refuse gets none: the
+ * sync re-keys such a row before it enters (its rule 7), and an item that
+ * still carries one is dropped without a tombstone rather than written as
+ * a key that would make the record unsendable and the pack unimportable.
+ *
+ * ON THE DEVICE means deviceIds (house-store.ts), the index's houses and
+ * any record the index does not list, wherever this file walks the device.
  */
 import {
 	BUILD_STEPS,
@@ -50,11 +57,11 @@ import {
 	isMark
 } from './house-schema';
 import type { Began, House, HouseList, HouseStub, ItemKind, Mark } from './house-schema';
-import { markKind, normaliseHouse, normaliseMark } from './house-normalise';
+import { FORBIDDEN_KEY, markKind, normaliseHouse, normaliseMark } from './house-normalise';
 import { lastTouch, listOfKind } from './house-merge';
 import { codexWine, ledgerCocktail, syncIn, syncOut, tableDish } from './house-sync';
 import type { SyncAdapter, SyncChange, SyncRow } from './house-sync';
-import { currentId, listHouses, loadHouse, mintHouse, removeHouse, renameHouse, saveHouse, switchTo } from './house-store';
+import { currentId, deviceIds, listHouses, loadHouse, mintHouse, removeHouse, renameHouse, saveHouse, switchTo } from './house-store';
 import type { HouseStorage, SaveResult } from './house-store';
 import { buildPack, importPack, packFilename, readPack } from './house-pack';
 import type { ImportChoice, ImportResult, PackFile, PackFrom, ReadPack } from './house-pack';
@@ -87,7 +94,7 @@ export interface HouseApiOpts {
 	from?: PackFrom;
 }
 
-/** What put comes back with: the row as the house now holds it (a new id when a name twin was re-keyed, null when a tombstone removed it). */
+/** What put comes back with: the row as the house now holds it (a new id when a name twin was re-keyed, null when a tombstone removed it or another house's row holds the id). */
 export interface PutRow<R extends SyncRow = SyncRow> {
 	ok: boolean;
 	row: R | null;
@@ -115,7 +122,7 @@ export interface HouseApi {
 	current(): House | null;
 	currentId(): string | null;
 	list(): HouseStub[];
-	/** The pointer moved and the house loaded; null when the id is not on the device. The projections are the wing's to replace, through rows(). */
+	/** The pointer moved and the house loaded; null, with memory left alone, when the id is not on the device or the device refused the pointer. The projections are the wing's to replace, through rows(). */
 	switchTo(id: string): Promise<House | null>;
 	/** A new empty house, current when the device had none; null when the device refused. */
 	mintHouse(name: string, began?: Began): Promise<House | null>;
@@ -133,7 +140,7 @@ export interface HouseApi {
 	setCard(fields: Partial<HouseCard>): Promise<boolean>;
 	/** A tombstone written and the item dropped, so the wings' rows follow. */
 	removeItem(target: ItemKind | HouseList, id: string): Promise<boolean>;
-	/** Every item name of one kind on every house on the device, for an orphan sweep. */
+	/** Every item name of one kind on every house on the device, listed on the index or not, for an orphan sweep. */
 	names(kind: ItemKind): Promise<string[]>;
 	readPack(text: unknown): ReadPack;
 	importPack(pack: unknown, choice: ImportChoice): Promise<ImportResult>;
@@ -247,7 +254,15 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 		switchTo: async (id) => {
 			await ready();
 			if (!listHouses(storage).some((s) => s.id === id)) return null;
-			if (currentId(storage) !== id) switchTo(storage, id);
+			if (currentId(storage) !== id) {
+				/* A refused pointer write is thrown by the store; the memory copy
+				   stays with the house the device still points at. */
+				try {
+					switchTo(storage, id);
+				} catch {
+					return null;
+				}
+			}
 			house = await loadHouse(storage, id);
 			fire('switch');
 			return house;
@@ -286,10 +301,11 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 			await ready();
 			if (!house) return { ok: false, row: null, said: NO_HOUSE_SAID };
 			const adapter = adapterFor(kind) as unknown as SyncAdapter<R>;
-			const res = syncIn<R>(kind, [row], house, adapter, { now: now(), knownHouses: known() });
+			const res = syncIn<R>(kind, [row], house, adapter, { now: now(), knownHouses: known(), rand });
 			/* The one row asked about: under its own id, under the item's id when a
-			   name twin was re-keyed, or gone when a tombstone was newer. The rows
-			   the sync would add for the house's other items are not this call's. */
+			   name twin or a refused id was re-keyed (the change carries the former
+			   id in from), or gone when a tombstone was newer. The rows the sync
+			   would add for the house's other items are not this call's. */
 			let out: R | null = res.rows.find((r) => r.id === row.id) || null;
 			const renamed = res.changes.find((c) => c.what === 'renamed');
 			if (renamed) out = res.rows.find((r) => r.id === renamed.id) || null;
@@ -304,7 +320,7 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 			await ready();
 			if (!house) return { ok: false, rows: rows.slice(), changes: [], said: NO_HOUSE_SAID };
 			const adapter = adapterFor(kind) as unknown as SyncAdapter<R>;
-			const res = syncIn<R>(kind, rows, house, adapter, { now: now(), knownHouses: known() });
+			const res = syncIn<R>(kind, rows, house, adapter, { now: now(), knownHouses: known(), rand });
 			if (res.house !== house) {
 				const saved = await commit(res.house, 'sync');
 				if (!saved.ok) return { ok: false, rows: res.rows, changes: res.changes, said: saved.said };
@@ -375,9 +391,14 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 			const items = itemsOf(house, list);
 			const item = items.find((i) => i.id === id);
 			/* The tombstone must be newer than the item's last touch (a kept mark
-			   re-stamps the mark, not the item), or the sync would read it as stale. */
+			   re-stamps the mark, not the item), or the sync would read it as stale.
+			   An id the client's key sweep would refuse gets no tombstone at all:
+			   the item is dropped, the wing's own delete has taken the row, and
+			   the record stays one the client sends and every device imports. */
 			const stamp = item ? Math.max(now(), lastTouch(item, MARK_FIELDS[list]) + 1) : now();
-			const next = { ...house, [list]: items.filter((i) => i.id !== id), removed: { ...house.removed, [id]: stamp } } as House;
+			const removed = FORBIDDEN_KEY.test(id) ? house.removed : { ...house.removed, [id]: stamp };
+			if (!item && removed === house.removed) return true;
+			const next = { ...house, [list]: items.filter((i) => i.id !== id), removed } as House;
 			return (await commit(next, 'remove-item')).ok;
 		},
 
@@ -387,8 +408,8 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 			if (!list) return [];
 			const out: string[] = [];
 			const seen = new Set<string>();
-			for (const stub of listHouses(storage)) {
-				const h = house && house.id === stub.id ? house : await loadHouse(storage, stub.id);
+			for (const id of await deviceIds(storage)) {
+				const h = house && house.id === id ? house : await loadHouse(storage, id);
 				if (!h) continue;
 				for (const item of itemsOf(h, list)) {
 					const name = typeof item.name === 'string' ? item.name.trim() : '';

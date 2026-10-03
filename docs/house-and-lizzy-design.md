@@ -162,7 +162,7 @@ Import by file (`<input type=file accept=.json,application/json>`) or by address
 | Wing | Projection | Shared fields (both ways) | Projection-only | House-only |
 |---|---|---|---|---|
 | Table | `HouseRecord.dishes` (IndexedDB) | id, house, name, section, description, ingredients, price, the floor five, ingredientsNamed, kept, ts | allergens, allergensCheckedAt, recipeSlug | parts, lines, pairing, serviceNote, meals, prices, marks, signature |
-| Ledger | `progress.bar` | id, house (only when set), name, spec, method, glass, garnish, note, family, spirit, price, the nine `maitre` fields, kept, ts | draft (derived by `saveBarRecord`), the `—` placeholders (read as empty, written back as `—`) | parts, lines, upsells, zeroProof, serviceNote |
+| Ledger | `progress.bar` | id, house (only when set), name, spec, method, glass, garnish, note, family, spirit, price, the nine `maitre` fields, kept, ts | draft (derived by `saveBarRecord`), a lone dash placeholder in glass or garnish (read as empty, written back as the empty string the wing's own door stores; the sync never writes the dash) | parts, lines, upsells, zeroProof, serviceNote |
 | Codex | `ST.cellar` | id, house (only when set), producer, name, vintage, region, grapes (joined `', '` on the row), style, glass, bottle, note, say, guest, why, pairs, origin, kept, ts | nothing beyond the form | profile, goesWith, firstPickIds, serve, pours, serviceNote |
 
 `syncIn(kind, rows, house, adapter)` and `syncOut(...)` take `adapter = { toRow(item, prevRow), fromRow(row), rename(row, newId) }`. The rules:

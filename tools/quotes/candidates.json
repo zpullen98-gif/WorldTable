@@ -304,13 +304,17 @@
       "hunger",
       "pleasure"
     ],
-    "confidence": "high",
+    "confidence": "medium",
     "adapted": true,
-    "adaptedNote": "The sentence is cut after \"succulent texture\"; it goes on through the wine to his losing the empty feeling and beginning to be happy.",
-    "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "adaptedNote": "The sentence is cut after \"succulent texture\", before its main clause; it goes on through the wine to his losing the empty feeling and beginning to be happy and to make plans.",
+    "note": "Pulled on 3 October 2026: as cut the text is a subordinate clause with no main clause and dangles; the whole sentence runs to 71 words and the shortest complete cut (\"As I ate the oysters ... succulent texture, I lost the empty feeling and began to be happy and to make plans\") is 47, over the cap of 40.",
+    "checkedBy": "claude-code (one web search, the sentence located whole; the pull needs no second)",
     "checkedOn": "2026-10-03",
-    "evidence": "The oysters and Sancerre scene that closes the first chapter."
+    "evidence": "The oysters scene that closes the first chapter; the chapter names \"the dry white wine they had there\", not Sancerre. The whole sentence is quoted at Goodreads (quote 8455) and at foodreference.com (Moveable Feast).",
+    "urls": [
+      "https://www.goodreads.com/quotes/8455-as-i-ate-the-oysters-with-their-strong-taste-of",
+      "https://www.foodreference.com/html/qmoveablefeast.html"
+    ]
   },
   {
     "id": "q-eh09",
@@ -638,13 +642,16 @@
       "craft",
       "discipline"
     ],
-    "confidence": "high",
+    "confidence": "medium",
     "adapted": true,
     "adaptedNote": "The first sentence's clauses on discoloured food and bad flavour are cut for length.",
-    "note": "Book X describes the master's own habits; the passage is about him, in Legge's wording.",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "Pulled on 3 October 2026: Book X is the compilers' description of the master's habits (\"He did not eat...\"), not words Confucius spoke, and the text stitched the tail of X.8.3 onto X.8.4 as one utterance. Not words the Maitre d' may put in his mouth; it could return only as a description of him, which the bank has no shape for.",
+    "checkedBy": "claude-code (one web search, the passage located in Legge; the pull needs no second)",
     "checkedOn": "2026-10-03",
-    "evidence": "Book X, chapter 8, sections 3 and 4."
+    "evidence": "Legge's X.8.3 reads \"He did not eat what was discoloured, or what was of a bad flavour, nor anything which was ill-cooked, or was not in season\", confirmed at the Confucian Analects in James Legge's Translation (oaks.nvg.org); it describes him.",
+    "urls": [
+      "http://oaks.nvg.org/analects-legge.html"
+    ]
   },
   {
     "id": "q-cf09",
@@ -1156,14 +1163,14 @@
   {
     "id": "q-ok01",
     "text": "Here with a Loaf of Bread beneath the Bough, a Flask of Wine, a Book of Verse, and Thou beside me singing in the Wilderness, and Wilderness is Paradise enow.",
-    "who": "Omar Khayyam",
+    "who": "Edward FitzGerald",
     "work": "Rubaiyat of Omar Khayyam",
     "year": "1859",
     "source": {
       "kind": "book",
-      "ref": "Edward FitzGerald's first edition (1859), quatrain XI",
-      "language": "Persian",
-      "translation": "translation"
+      "ref": "FitzGerald's first edition (1859), quatrain XI; his free rendering after Omar Khayyam, and the words are his",
+      "language": "English",
+      "translation": "original"
     },
     "tags": [
       "wine",
@@ -1173,22 +1180,26 @@
     "confidence": "high",
     "adapted": true,
     "adaptedNote": "The two dashes, before \"and Thou\" and after \"Wilderness\", are commas; the line breaks are run on.",
-    "note": "FitzGerald's rendering is free. The fifth edition (1889) recasts the quatrain as \"A Book of Verses underneath the Bough, a Jug of Wine, a Loaf of Bread\" and ends \"Oh, Wilderness were Paradise enow!\"; the first edition is quoted.",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "Credited to FitzGerald, not Khayyam: the 1859 English is FitzGerald's own composition after the Persian, and quatrain XI is a composite of his. The fifth edition (1889) recasts it as \"A Book of Verses underneath the Bough, a Jug of Wine, a Loaf of Bread\" and ends \"Oh, Wilderness were Paradise enow!\"; the first edition is quoted.",
+    "checkedBy": "claude-code (two independent web searches, the passage located; fetch blocked at the proxy)",
     "checkedOn": "2026-10-03",
-    "evidence": "Quatrain XI of the 1859 edition."
+    "evidence": "Quatrain XI of the 1859 edition, as printed in the Project Gutenberg text (ebook 35260) and in the full text at therubaiyatofomarkhayyam.com, both naming FitzGerald as the writer of the English.",
+    "urls": [
+      "https://www.gutenberg.org/files/35260/35260-h/35260-h.htm",
+      "https://www.therubaiyatofomarkhayyam.com/rubaiyat-full-text/"
+    ]
   },
   {
     "id": "q-ok02",
     "text": "Come, fill the Cup, and in the Fire of Spring the Winter Garment of Repentance fling: the Bird of Time has but a little way to fly, and Lo! the Bird is on the Wing.",
-    "who": "Omar Khayyam",
+    "who": "Edward FitzGerald",
     "work": "Rubaiyat of Omar Khayyam",
     "year": "1859",
     "source": {
       "kind": "book",
-      "ref": "Edward FitzGerald's first edition (1859), quatrain VII",
-      "language": "Persian",
-      "translation": "adapted"
+      "ref": "FitzGerald's first edition (1859), quatrain VII; his free rendering after Omar Khayyam, and the words are his",
+      "language": "English",
+      "translation": "original"
     },
     "tags": [
       "wine",
@@ -1198,10 +1209,14 @@
     "confidence": "high",
     "adapted": true,
     "adaptedNote": "The dash before \"and Lo!\" is a comma; the line breaks are run on.",
-    "note": "FitzGerald's rendering.",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "Credited to FitzGerald, not Khayyam: the 1859 English is FitzGerald's own rendering after the Persian.",
+    "checkedBy": "claude-code (two independent web searches, the passage located; fetch blocked at the proxy)",
     "checkedOn": "2026-10-03",
-    "evidence": "Quatrain VII of the 1859 edition."
+    "evidence": "Quatrain VII of the 1859 edition, as printed at lieder.net (Come, fill the Cup, and in the fire of Spring) and at allpoetry.com (Rubaiyat of Omar Khayyam by Edward FitzGerald).",
+    "urls": [
+      "https://www.lieder.net/lieder/get_text.html?TextId=27135",
+      "https://allpoetry.com/Rubiyt-of-Omar-Khayym"
+    ]
   },
   {
     "id": "q-ok03",
@@ -1622,13 +1637,13 @@
   },
   {
     "id": "q-jc01",
-    "text": "This is a book for the servantless American cook who can be unconcerned on occasion with budgets, waistlines, time tables, children's meals, the parent-chauffeur-den-mother syndrome, or anything else which might interfere with the enjoyment of producing something wonderful to eat.",
+    "text": "This is a book for the servantless American cook who can be unconcerned on occasion with budgets, waistlines, time schedules, children's meals, the parent-chauffeur-den-mother syndrome, or anything else which might interfere with the enjoyment of producing something wonderful to eat.",
     "who": "Julia Child",
-    "work": "Mastering the Art of French Cooking",
+    "work": "Mastering the Art of French Cooking (with Simone Beck and Louisette Bertholle)",
     "year": "1961",
     "source": {
       "kind": "book",
-      "ref": "Foreword, first sentence (Knopf, 1961), with Simone Beck and Louisette Bertholle",
+      "ref": "Foreword, first sentence (Knopf, 1961); the foreword is signed by all three authors",
       "language": "English",
       "translation": "original"
     },
@@ -1639,10 +1654,14 @@
     ],
     "confidence": "high",
     "adapted": false,
-    "note": "Exactly forty words.",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "Exactly forty words. The foreword is signed by Child, Beck and Bertholle together, so the two co-authors are credited in work; the shipped bank had \"time tables\" for the book's \"time schedules\" until 3 October 2026.",
+    "checkedBy": "claude-code (two independent web searches, the passage located; fetch blocked at the proxy)",
     "checkedOn": "2026-10-03",
-    "evidence": "The first sentence of the foreword to volume one."
+    "evidence": "The first sentence of the foreword to volume one, quoted with \"time schedules\" by Paste Magazine (Life-Changing Cookbooks: Mastering the Art of French Cooking in the Time of Grunge) and by Jolin from Scratch (julia child and food + politics), both naming the three co-authors.",
+    "urls": [
+      "https://www.pastemagazine.com/food/julia-child/life-changing-cookbooks-mastering-the-art-of-frenc",
+      "https://jolinfromscratch.substack.com/p/julia-child-and-food-politics"
+    ]
   },
   {
     "id": "q-jc02",
@@ -1976,11 +1995,11 @@
     "id": "q-vt01",
     "text": "The best is the enemy of the good.",
     "who": "Voltaire",
-    "work": "Philosophical Dictionary",
-    "year": "1764",
+    "work": "La Bégueule",
+    "year": "1772",
     "source": {
       "kind": "book",
-      "ref": "Dictionnaire philosophique, the article Art dramatique",
+      "ref": "La Bégueule, conte moral (1772), the opening couplet: Dans ses écrits, un sage Italien / Dit que le mieux est l'ennemi du bien",
       "language": "French",
       "translation": "translation"
     },
@@ -1990,10 +2009,14 @@
     ],
     "confidence": "high",
     "adapted": false,
-    "note": "Le mieux est l'ennemi du bien; he gives it as an Italian proverb.",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "Le mieux est l'ennemi du bien; Voltaire gives it as a wise Italian's saying, so the line is a proverb in his mouth. It also stands at the head of the article Art dramatique in Questions sur l'Encyclopédie (1770), folded into later editions of the Dictionnaire philosophique; the 1764 Dictionnaire had no such article, which is why the bank placed it wrongly until 3 October 2026.",
+    "checkedBy": "claude-code (two independent web searches, the passage located; fetch blocked at the proxy)",
     "checkedOn": "2026-10-03",
-    "evidence": "The article Art dramatique, 1764."
+    "evidence": "The second line of La Bégueule, quoted with the couplet by the Wiktionnaire entry for le mieux est l'ennemi du bien and by dicocitations (citation 158799), both dating it 1772.",
+    "urls": [
+      "https://fr.wiktionary.org/wiki/le_mieux_est_l%E2%80%99ennemi_du_bien",
+      "https://www.dicocitations.com/citations/citation-158799.php"
+    ]
   },
   {
     "id": "q-gs01",

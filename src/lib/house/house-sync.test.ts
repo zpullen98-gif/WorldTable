@@ -322,6 +322,28 @@ describe('the three adapters', () => {
 				expect(b.changes.filter((c) => c.what === 'row-removed')).toEqual([]);
 			});
 
+			it('re-keys a row whose id the client sweep would refuse before it enters the house, and reports the former id', () => {
+				const house = clone(fixture);
+				const rows = rowsOf(house, w);
+				const bad = { ...rows[0], id: rows[0].id.slice(0, 2) + 'nutfree1', name: 'A new one', ts: T0 + 1 };
+				let n = 3;
+				const rand = () => {
+					n = (n * 9301 + 49297) % 233280;
+					return n / 233280;
+				};
+				const r = syncIn(w.kind, [...rows, bad], house, w.adapter, { now: NOW, rand });
+				const renamed = r.changes.find((c) => c.what === 'renamed' && c.from === bad.id);
+				expect(renamed).toBeDefined();
+				if (!renamed) return;
+				expect(renamed.id).not.toMatch(FORBIDDEN_KEY);
+				expect(renamed.id.slice(0, 2)).toBe(bad.id.slice(0, 2));
+				expect(what(r.changes, renamed.id)).toEqual(['item-added', 'renamed']);
+				expect(r.rows.map((x) => x.id)).not.toContain(bad.id);
+				expect(r.rows.map((x) => x.id)).toContain(renamed.id);
+				expect(items(r.house, w).map((i) => i.id)).toEqual([...items(house, w).map((i) => i.id), renamed.id]);
+				for (const k of keysDeep(r.house)) expect(k).not.toMatch(FORBIDDEN_KEY);
+			});
+
 			it('never empties a projection for an empty house, in either stamping', () => {
 				const rows = rowsOf(fixture, w);
 				const empty = emptyHouse(HOUSE_ID, 'My house', 'hand', T0);
@@ -339,16 +361,20 @@ describe('the three adapters', () => {
 			it('leaves a row of another house on the device alone, and adopts one from a house the device does not know', () => {
 				const house = clone(fixture);
 				const rows = rowsOf(house, w).map((row) => ({ ...row, house: 'h-elsewhr1' }));
+				/* The other house's rows hold the ids, and the wing's list keys by
+				   id (the Ledger's findIndex, the Codex's first hit), so no second
+				   row is filed under one: the items wait, reported row-held. */
 				const known = syncIn(w.kind, rows, house, w.adapter, { now: NOW, knownHouses: [HOUSE_ID, 'h-elsewhr1'] });
-				for (const row of rows) expect(what(known.changes, row.id)).toEqual(['row-added']);
-				expect(known.rows).toHaveLength(rows.length * 2);
-				expect(known.rows.slice(0, rows.length)).toEqual(rows);
+				for (const row of rows) expect(what(known.changes, row.id)).toEqual(['row-held']);
+				expect(known.rows).toBe(rows);
+				expect(known.house).toBe(house);
 				const unknown = syncIn(w.kind, rows, house, w.adapter, { now: NOW, knownHouses: [HOUSE_ID] });
 				for (const row of rows) expect(what(unknown.changes, row.id)).toEqual(['adopted', 'row-updated']);
 				expect(unknown.house).toBe(house);
 				for (const row of unknown.rows) expect(row.house).toBe(HOUSE_ID);
 				const noIndex = syncIn(w.kind, rows, house, w.adapter, { now: NOW });
-				for (const row of rows) expect(what(noIndex.changes, row.id)).toEqual(['row-added']);
+				for (const row of rows) expect(what(noIndex.changes, row.id)).toEqual(['row-held']);
+				expect(noIndex.rows).toBe(rows);
 			});
 
 			it('drops a row only under a tombstone newer than its last touch, and clears a stale one', () => {
@@ -401,7 +427,12 @@ describe('the three adapters', () => {
 });
 
 describe('the Ledger placeholder', () => {
-	it('reads a lone hyphen, en dash or em dash as empty and writes the em dash back', () => {
+	it('reads a lone hyphen, en dash or em dash as empty and writes the empty string the wing stores', () => {
+		/* The standalone wrote the dash into the record; the wing stores '' and
+		   draws the dash at display time, and every sync row goes through the
+		   wing's door, so a row written with the dash would come back empty and
+		   be reported updated on every boot. The sync reads the dash, never
+		   writes it. */
 		const base = ledgerCocktail.toRow(fixture.cocktails[0], undefined);
 		for (const ph of ['-', EN, EM]) {
 			const item = ledgerCocktail.fromRow({ ...base, glass: ph, garnish: ' ' + ph + ' ' }) as HouseCocktail;
@@ -409,16 +440,25 @@ describe('the Ledger placeholder', () => {
 			expect(item.garnish).toBe('');
 		}
 		const back = ledgerCocktail.toRow({ ...fixture.cocktails[0], glass: '', garnish: '  ' }, undefined);
-		expect(back.glass).toBe(EM);
-		expect(back.garnish).toBe(EM);
+		expect(back.glass).toBe('');
+		expect(back.garnish).toBe('  ');
 		expect((ledgerCocktail.fromRow({ ...base, glass: 'Coupe' }) as HouseCocktail).glass).toBe('Coupe');
-		const row = { ...base, glass: EM, garnish: EM };
 		const house = clone(fixture);
 		house.cocktails[0].glass = '';
 		house.cocktails[0].garnish = '';
+		const row = { ...base, glass: '', garnish: '' };
 		const r = syncIn('cocktail', [row, ledgerCocktail.toRow(fixture.cocktails[1], undefined)], house, ledgerCocktail, { now: NOW });
 		expect(r.changes).toEqual([]);
-		expect(JSON.stringify(r.rows[0])).toBe(JSON.stringify(row));
+		expect(r.rows).toEqual([row, ledgerCocktail.toRow(fixture.cocktails[1], undefined)]);
+		/* A standalone record still carrying the dash reads as empty, and the
+		   one write that follows is the wing's own value, after which it rests. */
+		const dashed = { ...base, glass: EM, garnish: EM };
+		const d = syncIn('cocktail', [dashed, ledgerCocktail.toRow(fixture.cocktails[1], undefined)], house, ledgerCocktail, { now: NOW });
+		expect(d.house).toBe(house);
+		expect(d.rows[0].glass).toBe('');
+		expect(d.rows[0].garnish).toBe('');
+		const again = syncIn('cocktail', d.rows, d.house, ledgerCocktail, { now: NOW });
+		expect(again.changes).toEqual([]);
 	});
 
 	it('derives draft from the spec, files an empty family or spirit under Other, and carries house only when set', () => {

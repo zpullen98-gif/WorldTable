@@ -41,6 +41,7 @@
  * top of the file; check-port.mjs asserts the rest is byte-identical.
  */
 import path from 'node:path';
+import { existsSync } from 'node:fs';
 import { ROOT, unitFor, unitsIn, portModules, assertClean, writePorts, runMain } from './port-core.mjs';
 
 /* The engine's pieces check-port.mjs reads through this file. */
@@ -90,17 +91,37 @@ export const GLOBALS = [
  */
 const BUILT = ['parseWineText', 'deskInbox'];
 
+/**
+ * Where a wing's checkout is. LEDGER_DIR and CODEX_DIR are this tool's own
+ * overrides; LEDGER_SRC and CODEX_SRC are the names the site's tools/lib.mjs
+ * reads, honoured here so one environment serves both repos. With neither
+ * set, the sibling is looked for under the repo's proper name and then
+ * under the lower-case name a clone lands with on some machines, and the
+ * first that exists wins. Nothing found falls back to the proper name, so
+ * the message that follows names a path rather than nothing.
+ * @param {string} dirVar this tool's override, LEDGER_DIR or CODEX_DIR
+ * @param {string} srcVar the site's override, LEDGER_SRC or CODEX_SRC
+ * @param {string[]} siblings the sibling names to try, in order
+ * @returns {string}
+ */
+function wingDir(dirVar, srcVar, siblings) {
+	const named = process.env[dirVar] || process.env[srcVar];
+	if (named) return named;
+	const candidates = siblings.map((name) => path.resolve(ROOT, '..', name));
+	return candidates.find((dir) => existsSync(dir)) ?? candidates[0];
+}
+
 /** Where the two copies go. The sibling repos, unless the environment says otherwise. */
 export const TARGETS = [
 	{
 		app: 'ledger',
 		name: "The Bartender's Ledger",
-		file: path.join(process.env.LEDGER_DIR || path.resolve(ROOT, '..', 'BartendersLedger'), 'js', 'menu-desk.js')
+		file: path.join(wingDir('LEDGER_DIR', 'LEDGER_SRC', ['BartendersLedger', 'bartendersledger']), 'js', 'menu-desk.js')
 	},
 	{
 		app: 'codex',
 		name: "The Sommelier's Codex",
-		file: path.join(process.env.CODEX_DIR || path.resolve(ROOT, '..', 'SommeliersCodex'), 'js', 'menu-desk.js')
+		file: path.join(wingDir('CODEX_DIR', 'CODEX_SRC', ['SommeliersCodex', 'sommelierscodex']), 'js', 'menu-desk.js')
 	}
 ];
 

@@ -159,13 +159,30 @@ describe('keys outside the shape', () => {
 		expect(house).toEqual(fixture());
 	});
 
-	it('names in the report a tombstone whose id matches the client rule, because a tombstone is a key', () => {
+	it('drops a tombstone whose id matches the client rule and names it, because a tombstone is a key', () => {
 		const raw = fixture();
-		raw.removed = { 'd-peanut01': 1790000000000 };
+		raw.removed = { 'd-peanut01': 1790000000000, 'd-aaaaaaaa': 5 };
 		const { house, report } = normaliseHouse(raw);
-		expect(house.removed).toEqual({ 'd-peanut01': 1790000000000 });
-		const still = report.filter((r) => r.code === 'forbidden' && /still on the record/.test(r.said));
-		expect(still.map((r) => r.path)).toEqual(['house.removed.d-peanut01']);
+		expect(house.removed).toEqual({ 'd-aaaaaaaa': 5 });
+		const dropped = report.filter((r) => r.code === 'forbidden' && /dropped/.test(r.said));
+		expect(dropped.map((r) => r.path)).toEqual(['house.removed.d-peanut01']);
+		expect(report.filter((r) => /still on the record/.test(r.said))).toEqual([]);
+		expect(forbiddenKeys(house, 'house', [])).toEqual([]);
+	});
+
+	it('mints afresh an item id that matches the client rule, with its references following', () => {
+		const raw = fixture();
+		const old = dish(raw, 0).id as string;
+		dish(raw, 0).id = 'd-nutloaf1';
+		for (const t of raw.tastings as Raw[]) for (const c of t.courses as Raw[]) c.dishIds = (c.dishIds as string[]).map((id) => (id === old ? 'd-nutloaf1' : id));
+		const { house, report } = normaliseHouse(raw, { rand: seeded(5) });
+		const fresh = house.dishes[0].id;
+		expect(fresh).not.toBe('d-nutloaf1');
+		expect(fresh).not.toMatch(FORBIDDEN_KEY);
+		expect(report.find((r) => r.code === 'id' && r.path === 'house.dishes[0].id')?.said).toMatch(/refused as a key/);
+		const refs = house.tastings.flatMap((t) => t.courses.flatMap((c) => c.dishIds));
+		expect(refs).not.toContain('d-nutloaf1');
+		expect(refs.filter((id) => id === fresh).length).toBeGreaterThan(0);
 	});
 });
 
