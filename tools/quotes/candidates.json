@@ -19,9 +19,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Dis-moi ce que tu manges, je te dirai ce que tu es. Often shortened to \"you are what you eat\", which is not his wording.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The fourth of the twenty aphorisms that open the book, printed before the first Meditation in every edition."
+    "evidence": "Web search 2026-10-03: Wikiquote and Wikipedia show the line as Aphorism IV of Physiologie du gout, with the French Dis-moi ce que tu manges, je te dirai ce que tu es; the English wording matches the common translation. Earlier note: the fourth of the twenty aphorisms that open the book.",
+    "urls": [
+      "https://en.wikiquote.org/wiki/Jean_Anthelme_Brillat-Savarin",
+      "https://en.wikipedia.org/wiki/Jean_Anthelme_Brillat-Savarin"
+    ]
   },
   {
     "id": "q-bs05",
@@ -43,9 +47,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Le Createur, en obligeant l'homme a manger pour vivre, l'y invite par l'appetit, et l'en recompense par le plaisir.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Aphorism V of the opening aphorisms."
+    "evidence": "Web search 2026-10-03: Lib Quotes and the Adelaide ebook of The Physiology of Taste show the aphorism; the translations vary (invites him by appetite, and rewards him with pleasure / invites him to do so by appetite, and rewards him by pleasure) but all give it to the opening aphorisms. Our text is a translation of the French in the note.",
+    "urls": [
+      "https://libquotes.com/jean-anthelme-brillat-savarin/quote/lbh7w4b",
+      "https://ebooks.adelaide.edu.au/b/brillat/savarin/b85p/complete.html"
+    ]
   },
   {
     "id": "q-bs07",
@@ -67,9 +75,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Le plaisir de la table est de tous les ages, de toutes les conditions, de tous les pays et de tous les jours; il peut s'associer a tous les autres plaisirs, et reste le dernier pour nous consoler de leur perte.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Aphorism VII of the opening aphorisms."
+    "evidence": "Web search 2026-10-03: AZQuotes and Etiquipedia show The pleasure of the table belongs to all ages, to all conditions, to all countries attributed to The Physiology of Taste (1825); the second half differs by translator (and to all eras; it mingles with all other pleasures, and remains at last to console us for their departure). Our text follows the French in the note.",
+    "urls": [
+      "https://www.azquotes.com/quote/930317",
+      "https://etiquipedia.blogspot.com/2015/01/etiquette-from-brillat-savarins.html"
+    ]
   },
   {
     "id": "q-bs09",
@@ -91,9 +103,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "La decouverte d'un mets nouveau fait plus pour le bonheur du genre humain que la decouverte d'une etoile.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Aphorism IX of the opening aphorisms; the most quoted line in the book."
+    "evidence": "Web search 2026-10-03: Today in Science and Goodreads show the exact wording, The discovery of a new dish does more for the happiness of mankind than the discovery of a star, as Aphorism IX of the 1825 book.",
+    "urls": [
+      "https://todayinsci.com/B/BrillatSavarin_Jean/BrillatSavarinJean-Quotations.htm",
+      "https://www.goodreads.com/author/quotes/118185.Jean_Anthelme_Brillat_Savarin"
+    ]
   },
   {
     "id": "q-bs10",
@@ -115,9 +131,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Ceux qui s'indigerent ou qui s'enivrent ne savent ni boire ni manger.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Aphorism X of the opening aphorisms."
+    "evidence": "Web search 2026-10-03: Food Reference and AZQuotes give the aphorism to The Physiology of Taste in several translations (Those who give themselves indigestion or get drunk, do not know how to eat or drink; Those persons who suffer from indigestion, or who become drunk, are utterly ignorant of the true principles of eating and drinking). Our text is a close translation of the French in the note; attribution holds.",
+    "urls": [
+      "https://www.foodreference.com/html/qdigestion.html",
+      "https://www.azquotes.com/author/13032-Jean_Anthelme_Brillat_Savarin/tag/eating"
+    ]
   },
   {
     "id": "q-bs20",
@@ -139,9 +159,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Convier quelqu'un, c'est se charger de son bonheur pendant tout le temps qu'il est sous notre toit.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Aphorism XX, the last of the opening aphorisms."
+    "evidence": "Web search 2026-10-03: the Adelaide ebook and Lib Quotes show the twentieth aphorism as To invite a person to your house is to take charge of his happiness as long as he be beneath your roof. Our text is a fresh translation of the French in the note; attribution to Aphorism XX holds.",
+    "urls": [
+      "https://ebooks.adelaide.edu.au/b/brillat/savarin/b85p/part2.html",
+      "https://libquotes.com/jean-anthelme-brillat-savarin"
+    ]
   },
   {
     "id": "q-jt01",
@@ -163,9 +187,13 @@
     "adapted": true,
     "adaptedNote": "The original sets \"social drinks\" in quotation marks; the marks are dropped so the line reads as one sentence.",
     "note": "The first printed cocktail book; its preface opens with this line.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Opening sentence of the preface to the 1862 first edition."
+    "evidence": "Web search 2026-10-03: the Internet Archive scan of the Bar-Tender's Guide and the Smithsonian Libraries page show the preface opening In all ages of the world, and in all countries, men have indulged in social drinks, from the 1862 book.",
+    "urls": [
+      "https://ia804506.us.archive.org/10/items/bartendersguideo00thom/bartendersguideo00thom_hocr.html",
+      "https://library.si.edu/donate/adopt-a-book/how-mix-drinks"
+    ]
   },
   {
     "id": "q-hc01",
@@ -187,19 +215,23 @@
     "adapted": true,
     "adaptedNote": "The punctuation between the clauses is regularised; the words are his.",
     "note": "One of the numbered hints printed before the recipes.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The hints page before the recipes in the 1930 first edition; the line is reprinted in every facsimile."
+    "evidence": "Web search 2026-10-03: the EUVS facsimile of the 1930 Savoy Cocktail Book (page 9) and a review quoting the hints show Shake the shaker as hard as you can; don't just rock it; you are trying to wake it up, not send it to sleep! under the hints for the young mixer. Only the punctuation differs, as the adaptedNote says.",
+    "urls": [
+      "https://euvs-vintage-cocktail-books.cld.bz/1930-The-Savoy-Cocktail-Book/9/",
+      "https://twelvebottles.wordpress.com/2011/04/05/from-the-12bb-library-the-savoy-cocktail-book/"
+    ]
   },
   {
     "id": "q-bd01",
     "text": "The proper union of gin and vermouth is a great and sudden glory; it is one of the happiest marriages on earth, and one of the shortest-lived.",
     "who": "Bernard DeVoto",
     "work": "The Hour",
-    "year": "1948",
+    "year": "1951",
     "source": {
       "kind": "book",
-      "ref": "The Hour: A Cocktail Manifesto (Houghton Mifflin, 1948), the chapter on the martini",
+      "ref": "The Hour: A Cocktail Manifesto (Houghton Mifflin, 1951), the chapter on the martini",
       "language": "English",
       "translation": "original"
     },
@@ -209,10 +241,14 @@
     ],
     "confidence": "high",
     "adapted": false,
-    "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "Year corrected from 1948 to 1951 on the web search of 2026-10-03: The Hour was published by Houghton Mifflin in 1951; the martini material first ran in Harper's in 1949.",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The martini passage of The Hour; quoted on the jacket of the 2010 reissue."
+    "evidence": "Web search 2026-10-03: Lib Quotes and The Martini Hour show the exact wording, The proper union of gin and vermouth is a great and sudden glory; it is one of the happiest marriages on earth, and one of the shortest lived, from The Hour (1951). Wording confirmed; the year and ref corrected to 1951.",
+    "urls": [
+      "https://libquotes.com/bernard-de-voto",
+      "https://themartinihour.blog/ipse-dixit/"
+    ]
   },
   {
     "id": "q-tp01",
@@ -233,9 +269,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Often given to Dean Aldrich or to anonymous; it is Peacock's in Melincourt, chapter XVI.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Chapter XVI of Melincourt (1817)."
+    "evidence": "Web search 2026-10-03: Brookston Beer Bulletin gives the line, There are two reasons for drinking: one is, when you are thirsty, to cure it; the other, when you are not thirsty, to prevent it, to Thomas Love Peacock, Melincourt (1817); the Gutenberg text of Melincourt is listed.",
+    "urls": [
+      "https://brookstonbeerbulletin.com/beer-quotes/",
+      "https://www.gutenberg.org/ebooks/75943"
+    ]
   },
   {
     "id": "q-eh01",
@@ -257,13 +297,17 @@
     "confidence": "high",
     "adapted": false,
     "note": "Printed as the epigraph, attributed there to a remark made to a friend in 1950.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The epigraph page of the 1964 edition and the 2009 restored edition."
+    "evidence": "Web search 2026-10-03: Lib Quotes and Wikipedia show the exact wording of the epigraph of A Moveable Feast (1964), said to a friend in 1950, with the title suggested by A. E. Hotchner.",
+    "urls": [
+      "https://libquotes.com/ernest-hemingway/quote/lbv6e9e",
+      "https://en.wikipedia.org/wiki/A_Moveable_Feast"
+    ]
   },
   {
     "id": "q-eh02",
-    "text": "Wine is one of the most civilized things in the world and one of the most natural things of the world that has been brought to the greatest perfection.",
+    "text": "Wine is one of the most civilized things in the world and one of the natural things of the world that has been brought to the greatest perfection.",
     "who": "Ernest Hemingway",
     "work": "Death in the Afternoon",
     "year": "1932",
@@ -280,11 +324,15 @@
     ],
     "confidence": "high",
     "adapted": true,
-    "adaptedNote": "The sentence is cut after \"perfection\"; it continues with the range of enjoyment it offers.",
+    "adaptedNote": "The sentence is cut after \"perfection\"; it continues with the range for enjoyment and appreciation it offers. Wording adjusted on the web search of 2026-10-03: the source reads \"one of the natural things\", not \"one of the most natural things\".",
     "note": "American spelling of civilized is his.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Chapter 1 of Death in the Afternoon, where wine stands for an appreciation that must be learned."
+    "evidence": "Web search 2026-10-03: Goodreads and Lib Quotes show the passage from Death in the Afternoon as Wine is one of the most civilized things in the world and one of the natural things of the world that has been brought to the greatest perfection, and it offers a greater range for enjoyment and appreciation than, possibly, any other purely sensory thing. Text set to that wording, cut after perfection.",
+    "urls": [
+      "https://www.goodreads.com/quotes/117220-wine-is-one-of-the-most-civilized-things-in-the",
+      "https://libquotes.com/ernest-hemingway/quote/lbo8s7z"
+    ]
   },
   {
     "id": "q-eh03",
@@ -358,9 +406,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Quand je danse, je danse; quand je dors, je dors.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Book III, chapter 13, Of Experience, near the end, on taking pleasures as they come."
+    "evidence": "Web search 2026-10-03: buboquote and libquotes show the wording \"When I dance, I dance; when I sleep, I sleep\" and the fuller passage (\"yes, and when I walk alone in the beautiful orchard\"), attributed to Montaigne's Essays, Of Experience.",
+    "urls": [
+      "https://www.buboquote.com/en/quote/7589-montaigne-when-i-dance-i-dance-when-i-sleep-i-sleep",
+      "https://libquotes.com/michel-de-montaigne/quote/lby1j4m"
+    ]
   },
   {
     "id": "q-mm02",
@@ -381,13 +433,17 @@
     "confidence": "high",
     "adapted": false,
     "note": "C'est de quoi j'ai le plus de peur que la peur. Older than the Roosevelt line it resembles.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Book I, chapter 18, Of Fear, opening paragraph."
+    "evidence": "Web search 2026-10-03: wist.info shows \"The thing I fear most is fear\" as Essays, Book 1, Of Fear (De la Peur), Screech 1.18, with Wikiquote and Wikisource (Ives, Volume 1, Chapter 18) agreeing on the chapter.",
+    "urls": [
+      "https://wist.info/montaigne-michel-de/78530/",
+      "https://en.wikiquote.org/wiki/Michel_de_Montaigne"
+    ]
   },
   {
     "id": "q-ep01",
-    "text": "Of all the things which wisdom provides to make life entirely happy, much the greatest is the possession of friendship.",
+    "text": "Of all the things which wisdom acquires to produce the blessedness of the complete life, far the greatest is the possession of friendship.",
     "who": "Epicurus",
     "work": "Principal Doctrines",
     "year": "c. 300 BC",
@@ -404,10 +460,14 @@
     ],
     "confidence": "high",
     "adapted": false,
-    "note": "Translation after R. D. Hicks (Loeb, 1925).",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "Translation by Cyril Bailey, Epicurus: The Extant Remains (1926). Hicks (Loeb, 1925) has \"by far the most important is the acquisition of friends\".",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Principal Doctrine 27 in every numbering."
+    "evidence": "Web search 2026-10-03: the Epicurus Wiki page for Principal Doctrine 27 shows Bailey's wording, \"Of all the things which wisdom acquires to produce the blessedness of the complete life, far the greatest is the possession of friendship\". The earlier text was a blend of translations; wording adjusted to Bailey's sourced wording (21 words).",
+    "urls": [
+      "https://wiki.epicurism.info/Principal_Doctrine_27/",
+      "https://www.epicureanfriends.com/wcf/principal-doctrines/"
+    ]
   },
   {
     "id": "q-ep02",
@@ -430,9 +490,13 @@
     "adapted": true,
     "adaptedNote": "\"You must\" and \"beforehand\" are dropped from the opening for length; the rest is Gummere's wording.",
     "note": "Seneca quotes it as Epicurus's; the Greek original is lost. Translation after R. M. Gummere (Loeb, 1917).",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Letter 19, section 10."
+    "evidence": "Web search 2026-10-03: the Loeb Classical Library page for Seneca, Epistle XIX, shows Gummere's wording, \"You must reflect carefully beforehand with whom you are to eat and drink, rather than what you are to eat and drink. For a dinner of meats without the company of a friend is like the life of a lion or a wolf\", given as Epicurus's saying.",
+    "urls": [
+      "https://www.loebclassics.com/view/seneca_younger-epistles/1917/pb_LCL075.131.xml",
+      "https://newepicurean.com/suggested-reading/senecas-references-to-epicurus/"
+    ]
   },
   {
     "id": "q-ep03",
@@ -454,9 +518,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Translation after R. D. Hicks (Loeb, 1925); it continues \"while bread and water confer the highest possible pleasure when they are brought to hungry lips\".",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Diogenes Laertius X.130 to 131."
+    "evidence": "Web search 2026-10-03: the Internet Classics Archive text of the Letter to Menoeceus shows \"Plain fare gives as much pleasure as a costly diet, when once the pain of want has been removed, while bread and water confer the highest possible pleasure when they are brought to hungry lips\".",
+    "urls": [
+      "https://classics.mit.edu/Epicurus/menoec.html",
+      "https://antigonejournal.com/2024/02/epicurus-on-pleasure/"
+    ]
   },
   {
     "id": "q-sn01",
@@ -478,9 +546,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Non qui parum habet, sed qui plus cupit, pauper est. Seneca gives it as Epicurus's saying; the letter is his.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Letter 2, section 6; translation after R. M. Gummere (Loeb, 1917)."
+    "evidence": "Web search 2026-10-03: The Stoic Letters (Letter II, On Discursiveness in Reading) and libquotes show \"It is not the man who has too little, but the man who craves more, that is poor\", with the letter crediting the thought to Epicurus (\"into the enemy's camp, not as a deserter, but as a scout\").",
+    "urls": [
+      "https://thestoicletters.medium.com/letter-ii-25a4edf7077b",
+      "https://libquotes.com/seneca/quote/lbj0o9m"
+    ]
   },
   {
     "id": "q-sn02",
@@ -502,9 +574,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Non exiguum temporis habemus, sed multum perdidimus.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Chapter 1, section 3; translation after J. W. Basore (Loeb, 1932)."
+    "evidence": "Web search 2026-10-03: Looking out Loud and Farnam Street show \"It is not that we have a short space of time, but that we waste much of it\" as the opening of On the Shortness of Life, addressed to Paulinus, c. 49.",
+    "urls": [
+      "https://www.lookingoutloud.com/not-short-time-to-live-but-we-waste-it-seneca/",
+      "https://fs.blog/seneca-on-the-shortness-of-time/"
+    ]
   },
   {
     "id": "q-sn09",
@@ -548,9 +624,13 @@
     "adapted": true,
     "adaptedNote": "Long's dash before \"I am rising\" is a colon.",
     "note": "Long's wording; other translators give \"reluctantly\" for unwillingly.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Book V, section 1, the opening sentence."
+    "evidence": "Web search 2026-10-03: the Internet Classics Archive and Wikisource texts of Long's Meditations, Book V, open \"In the morning when thou risest unwillingly, let this thought be present\" followed by a dash and \"I am rising to the work of a human being\"; the colon here stands for Long's dash.",
+    "urls": [
+      "https://classics.mit.edu/Antoninus/meditations.5.five.html",
+      "https://en.wikisource.org/wiki/The_Thoughts_of_the_Emperor_Marcus_Aurelius_Antoninus/Book_V"
+    ]
   },
   {
     "id": "q-ec01",
@@ -573,9 +653,13 @@
     "adapted": true,
     "adaptedNote": "The middle sentence (if you tell me that you desire a fig, I answer you that there must be time) is cut for length.",
     "note": "Recorded by Arrian.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Book I, chapter 15, the closing lines."
+    "evidence": "Web search 2026-10-03: Wikiquote and AZQuotes show \"No great thing is created suddenly, any more than a bunch of grapes or a fig. If you tell me that you desire a fig, I answer you that there must be time. Let it first blossom, then bear fruit, then ripen\", Discourses I.15. Higginson's 1866 edition has \"No thing great is created suddenly\"; Long's order is kept here.",
+    "urls": [
+      "https://en.wikiquote.org/wiki/Epictetus",
+      "https://www.azquotes.com/quote/90347"
+    ]
   },
   {
     "id": "q-cf01",
@@ -597,9 +681,13 @@
     "adapted": true,
     "adaptedNote": "Legge's dash before \"this is knowledge\" is a semicolon.",
     "note": "Legge's wording.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Book II, chapter 17."
+    "evidence": "Web search 2026-10-03: snippets quote Legge's Analects II.17, \"When you know a thing, to hold that you know it; and when you do not know a thing, to allow that you do not know it\", followed by a dash and \"this is knowledge\"; the semicolon here stands for Legge's dash.",
+    "urls": [
+      "https://jianxu.substack.com/p/when-you-know-a-thing-to-hold-that",
+      "https://www.rodneyohebsion.com/2-17.htm"
+    ]
   },
   {
     "id": "q-cf02",
@@ -621,9 +709,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Legge's wording of the second sentence of the Analects.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Book I, chapter 1."
+    "evidence": "Web search 2026-10-03: Standard Ebooks' Legge text of Analects Book I opens \"Is it not pleasant to learn with a constant perseverance and application? Is it not delightful to have friends coming from distant quarters?\".",
+    "urls": [
+      "https://standardebooks.org/ebooks/confucius/analects/james-legge/text/chapter-1",
+      "https://ebooks.adelaide.edu.au/c/confucius/c748a/complete.html"
+    ]
   },
   {
     "id": "q-cf03",
@@ -695,9 +787,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Other translators give \"frying a small fish\"; the sense, do not keep turning it, is the same.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Chapter 60, first line."
+    "evidence": "Web search 2026-10-03: the Sacred Texts copy of Legge's Tao Teh King (Sacred Books of the East 39), chapter 60, opens \"Governing a great state is like cooking small fish\".",
+    "urls": [
+      "https://sacred-texts.com/tao/sbe39/sbe39067.htm",
+      "https://www.egreenway.com/taoism/ttclz60.htm"
+    ]
   },
   {
     "id": "q-lt02",
@@ -719,9 +815,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Usually given as \"a journey of a thousand miles begins with a single step\"; Legge keeps the li.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Chapter 64."
+    "evidence": "sacred-texts.com (Legge full text) and egreenway.com chapter 64 show Legge's line: The journey of a thousand li commenced with a single step.",
+    "urls": [
+      "https://sacred-texts.com/tao/taote.htm",
+      "https://www.egreenway.com/taoism/ttclz64.htm"
+    ]
   },
   {
     "id": "q-hdt1",
@@ -743,9 +843,13 @@
     "adapted": true,
     "adaptedNote": "Cut after \"teach\"; the sentence continues \"and not, when I came to die, discover that I had not lived\".",
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The second chapter of Walden."
+    "evidence": "SparkNotes Walden quotes page shows the full sentence from Where I Lived, and What I Lived For, ending and not, when I came to die, discover that I had not lived; the cut is as the adaptedNote says.",
+    "urls": [
+      "https://www.sparknotes.com/lit/walden/quotes/page/3/",
+      "https://en.wikipedia.org/wiki/Walden"
+    ]
   },
   {
     "id": "q-hdt2",
@@ -766,9 +870,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The Economy chapter, in the passage on what a house costs."
+    "evidence": "Goodreads and buboquote show the exact wording and attribute it to Walden; or, Life in the Woods (Economy).",
+    "urls": [
+      "https://www.goodreads.com/quotes/103804-the-cost-of-a-thing-is-the-amount-of-what",
+      "https://www.buboquote.com/en/quote/4252-thoreau-the-cost-of-a-thing-is-the-amount-of-what-i-will-call-life-which-is-required-to-be"
+    ]
   },
   {
     "id": "q-mt01",
@@ -788,9 +896,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "The next sentence, on vegetating in one little corner of the earth, is often run on; it is cut here for length.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The Conclusion of The Innocents Abroad."
+    "evidence": "Quote Investigator and WIST both place the sentence, with and many of our people need it sorely on these accounts, in the Conclusion of The Innocents Abroad (1869).",
+    "urls": [
+      "https://quoteinvestigator.com/2025/09/20/travel-need/",
+      "https://wist.info/twain-mark/3949/"
+    ]
   },
   {
     "id": "q-mt02",
@@ -812,13 +924,17 @@
     "adapted": true,
     "adaptedNote": "The dash before \"not absence of fear\" is a colon here.",
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Chapter 12 epigraph from the Calendar."
+    "evidence": "Wikiquote and Quote Investigator show Courage is resistance to fear, mastery of fear, with a dash before not absence of fear, as the Calendar epigraph of chapter 12 (The Shame of Judge Driscoll); the dash is a colon here as the adaptedNote says.",
+    "urls": [
+      "https://en.wikiquote.org/wiki/Pudd'nhead_Wilson",
+      "https://quoteinvestigator.com/2019/11/26/courage-fear/"
+    ]
   },
   {
     "id": "q-mt03",
-    "text": "Truth is the most valuable thing we have. Economize it.",
+    "text": "Truth is the most valuable thing we have. Let us economize it.",
     "who": "Mark Twain",
     "work": "Following the Equator",
     "year": "1897",
@@ -833,10 +949,14 @@
     ],
     "confidence": "high",
     "adapted": false,
-    "note": "American spelling of economize is his.",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "American spelling of economize is his. Wording adjusted on 2026-10-03 from Economize it to the source's Let us economize it.",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Chapter 7 epigraph of Following the Equator."
+    "evidence": "Wikisource chapter 7 and the Virginia Twain archive's Pudd'nhead Wilson's New Calendar page show the epigraph as Truth is the most valuable thing we have. Let us economize it.",
+    "urls": [
+      "https://en.wikisource.org/wiki/Following_the_Equator/Chapter_7",
+      "https://twain.lib.virginia.edu/wilson/pwequat.html"
+    ]
   },
   {
     "id": "q-mt04",
@@ -857,9 +977,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Chapter 23 epigraph of Following the Equator."
+    "evidence": "Wikiquote's Following the Equator page lists the line under chapter 23 as a Pudd'nhead Wilson's New Calendar epigraph; Goodreads shows the same wording.",
+    "urls": [
+      "https://en.wikiquote.org/wiki/Following_the_Equator",
+      "https://www.goodreads.com/quotes/141149-be-careless-in-your-dress-if-you-must-but-keep"
+    ]
   },
   {
     "id": "q-mt05",
@@ -925,9 +1049,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Act I of the play, first performed February 1892."
+    "evidence": "Project Gutenberg's text of Lady Windermere's Fan and WIST give the line to Lord Darlington in Act I.",
+    "urls": [
+      "https://www.gutenberg.org/files/790/790-h/790-h.htm",
+      "https://wist.info/wilde-oscar/52618/"
+    ]
   },
   {
     "id": "q-ow02",
@@ -948,9 +1076,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Act III."
+    "evidence": "literaturepage.com shows the Act III text of Lady Windermere's Fan with Lord Darlington saying \"We are all in the gutter, but some of us are looking at the stars.\" in reply to Dumby; Shmoop gives the same line, play and speaker.",
+    "urls": [
+      "https://www.literaturepage.com/read/lady-windermeres-fan-48.html",
+      "https://www.shmoop.com/quotes/all-in-the-gutter-but-some-of-us-are-looking-at-the-stars.html"
+    ]
   },
   {
     "id": "q-ow03",
@@ -971,9 +1103,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Act I."
+    "evidence": "literaturepage.com shows the Act I text of The Importance of Being Earnest with Algernon saying \"The truth is rarely pure and never simple.\" after Jack calls his story the pure and simple truth; eNotes attributes the same words to Algernon in Act I.",
+    "urls": [
+      "https://www.literaturepage.com/read/importance-of-being-earnest-9.html",
+      "https://www.enotes.com/topics/importance-being/questions/from-play-importance-being-earnest-what-does-324590"
+    ]
   },
   {
     "id": "q-ow04",
@@ -1023,7 +1159,7 @@
   },
   {
     "id": "q-pl01",
-    "text": "It has passed into a proverb that in wine there is truth.",
+    "text": "It has become quite a common proverb that in wine there is truth.",
     "who": "Pliny the Elder",
     "work": "Natural History",
     "year": "c. 77",
@@ -1039,10 +1175,14 @@
     ],
     "confidence": "high",
     "adapted": false,
-    "note": "Vulgoque veritas iam attributa vino est. The three-word tag \"in vino veritas\" is a later compression, not his sentence.",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "Vulgoque veritas iam attributa vino est. The three-word tag \"in vino veritas\" is a later compression, not his sentence. Wording adjusted on 2026-10-03 to the Bostock and Riley translation at Perseus, which reads \"It has become quite a common proverb that in wine there is truth.\"; the earlier text read \"It has passed into a proverb that in wine there is truth.\"",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Book XIV, the close of the section on drunkenness."
+    "evidence": "Perseus (Bostock and Riley translation of Natural History, Book XIV, chapter 28, on drunkenness) reads \"It has become quite a common proverb that in wine there is truth.\"; allgreatquotes.com shows the same English beside the Latin \"Volgoque veritas iam attributa vino est.\"",
+    "urls": [
+      "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0137%3Abook%3D14",
+      "https://www.allgreatquotes.com/in-wine-there-is-truth-pliny/"
+    ]
   },
   {
     "id": "q-pl02",
@@ -1063,9 +1203,14 @@
     "confidence": "high",
     "adapted": false,
     "note": "Fortes fortuna iuvat; the proverb is older (Terence), and the Younger reports his uncle saying it as he ordered the ships toward the eruption.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Letter VI.16, section 11."
+    "evidence": "Perseus holds Pliny the Younger, Letters 6.16, where section 11 reads \"Fortes\" inquit \"fortuna iuvat: Pomponianum pete.\"; the quemdixerechaos translation renders it \"Fortune favours the brave: head for Pomponianus\", and Wikipedia records the Elder saying it as he turned the fleet toward Vesuvius. English renderings split between \"bold\" and \"brave\"; \"bold\" is kept as the usual English proverb form.",
+    "urls": [
+      "http://www.perseus.tufts.edu/hopper/text?doc=Plin.+Ep.+6.16",
+      "https://quemdixerechaos.com/2013/01/01/translatingplinypt6/",
+      "https://en.wikipedia.org/wiki/Fortune_favours_the_bold"
+    ]
   },
   {
     "id": "q-hr01",
@@ -1086,9 +1231,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Carpe diem, quam minimum credula postero.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The last line of Odes I.11, to Leuconoe."
+    "evidence": "Wikipedia (Carpe diem) gives Odes I.11, 23 BC, Latin \"carpe diem quam minimum credula postero\", literally \"pluck the day, trusting as little as possible in the next one\"; classicalstudies.support shows the same line closing the ode to Leuconoe. \"Seize the day\" is the conventional English for carpe.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Carpe_diem",
+      "https://classicalstudies.support/about/the-latin-page/horace-odes-1-11/"
+    ]
   },
   {
     "id": "q-hr02",
@@ -1110,9 +1259,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Nunc est bibendum, nunc pede libero pulsanda tellus. The Cleopatra ode.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Odes I.37, opening."
+    "evidence": "timelessmyths.com (Nunc est bibendum, Odes Book 1 Poem 37, 23 BC, the Cleopatra ode) opens \"Nunc est bibendum, nunc pede libero pulsanda tellus\", rendered \"Now is the time to drink, now we must hit the earth with free feet\"; the Classics Library anthology shows the same opening lines. The English here is a close translation of the Latin.",
+    "urls": [
+      "https://timelessmyths.com/literature/rome/horace/odes-1-37/",
+      "https://classicalanthology.theclassicslibrary.com/2020/08/08/nunc-est-bibendum-odes-137/"
+    ]
   },
   {
     "id": "q-hr03",
@@ -1132,9 +1285,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Caelum non animum mutant qui trans mare currunt.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Epistle I.11, to Bullatius."
+    "evidence": "Perseus holds Horace, Epistles book 1, poem 11, with the line \"caelum non animum mutant qui trans mare currunt\"; buboquote.com attributes \"They change the sky, not their soul, who run across the sea.\" to Horace, Epistles, and Wikipedia's List of Latin phrases gives the same line and source.",
+    "urls": [
+      "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A2008.01.0539%3Abook%3D1%3Apoem%3D11",
+      "https://www.buboquote.com/en/quote/65-horace-they-change-the-sky-not-their-soul-who-run-across-the-sea"
+    ]
   },
   {
     "id": "q-hr04",
@@ -1156,9 +1313,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Nil sine magno vita labore dedit mortalibus.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Satire I.9, the bore on the Via Sacra."
+    "evidence": "Scaife (Perseus) holds Horace, Satires 1.9 with \"nil sine magno vita labore dedit mortalibus\" at lines 59 to 60; Wikiquote (Horace) gives the line from Satires I.9 with the rendering \"Life grants nothing to us mortals without hard work.\" The English here is a close translation of the same Latin.",
+    "urls": [
+      "https://scaife.perseus.org/reader/urn:cts:latinLit:phi0893.phi004.perseus-lat2:1.9/",
+      "https://en.wikiquote.org/wiki/Horace"
+    ]
   },
   {
     "id": "q-ok01",
@@ -1261,9 +1422,13 @@
     "adapted": true,
     "adaptedNote": "The two dashes are a colon and a comma.",
     "note": "Often shortened to \"never, never, never give up\", which he did not say.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The Harrow speech of 29 October 1941, printed in The Unrelenting Struggle (1942)."
+    "evidence": "TIME and the National Churchill Museum print the Harrow School speech of 29 October 1941 with the sentence \"Never give in, never give in, never, never, never, never, in nothing, great or small, large or petty, never give in except to convictions of honour and good sense\"; the original sets the two clauses off with dashes.",
+    "urls": [
+      "https://content.time.com/time/specials/packages/article/0,28804,1898670_1898671_1898655,00.html",
+      "https://www.nationalchurchillmuseum.org/never-give-in-never-never-never.html"
+    ]
   },
   {
     "id": "q-wc02",
@@ -1331,9 +1496,13 @@
     "adapted": true,
     "adaptedNote": "The sentence on the burden of Time is cut between \"question\" and \"But with what?\".",
     "note": "Il faut etre toujours ivre. Tout est la: c'est l'unique question. Mais de quoi? De vin, de poesie ou de vertu, a votre guise. Mais enivrez-vous.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Prose poem XXXIII of Le Spleen de Paris (Petits poemes en prose)."
+    "evidence": "poets.org prints Enivrez-vous (Be Drunk) from Paris Spleen, 1869, with \"wine, poetry or virtue, as you wish. But be drunk\"; Goodreads carries the translation \"One should always be drunk. That's all that matters... But with what? With wine, with poetry, or with virtue, as you choose. But get drunk.\" The English wording varies by translator; ours follows the French.",
+    "urls": [
+      "https://poets.org/poem/be-drunk",
+      "https://www.goodreads.com/quotes/133904-with-wine-poetry-or-virtue-as-you-choose-but-get"
+    ]
   },
   {
     "id": "q-cb02",
@@ -1353,9 +1522,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "Un soir, l'ame du vin chantait dans les bouteilles.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The opening line of L'Ame du vin, the first of the wine poems."
+    "evidence": "Wikisource and poetryverse print The Soul of Wine from Les Fleurs du mal; the first line is rendered \"One eve in the bottle sang the soul of wine\" and \"One night, from bottles, sang the soul of wine\" by different translators. Our line is a plain rendering of \"Un soir, l'ame du vin chantait dans les bouteilles\".",
+    "urls": [
+      "https://en.wikisource.org/wiki/Poems_of_Charles_Baudelaire/The_Soul_of_Wine",
+      "https://www.poetryverse.com/charles-baudelaire-poems/the-soul-of-wine"
+    ]
   },
   {
     "id": "q-co01",
@@ -1400,9 +1573,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Chapter 1, the passage comparing the two college meals."
+    "evidence": "Goodreads prints the chapter 1 passage of A Room of One's Own: \"a good dinner is of great importance to good talk. One cannot think well, love well, sleep well, if one has not dined well.\"",
+    "urls": [
+      "https://www.goodreads.com/quotes/311437-a-good-dinner-is-of-great-importance-to-good-talk",
+      "https://www.azquotes.com/quote/320670"
+    ]
   },
   {
     "id": "q-vw02",
@@ -1423,9 +1600,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Chapter 1, the sentence before the one above."
+    "evidence": "Shmoop quotes the chapter 1 dinner at the women's college with \"The lamp in the spine does not light on beef and prunes\", and the University of Virginia text of A Room of One's Own carries the passage.",
+    "urls": [
+      "https://www.shmoop.com/study-guides/room-of-ones-own/constrasting-regions-oxbridge-fernham-quotes.html",
+      "https://anthologydev.lib.virginia.edu/work/Woolf/woolf-room-of-ones-own.pdf"
+    ]
   },
   {
     "id": "q-jb01",
@@ -1443,12 +1624,16 @@
       "table",
       "hospitality"
     ],
-    "confidence": "high",
+    "confidence": "medium",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The first sentence of the book's introduction."
+    "evidence": "BrainyQuote and The Quotations Page attribute \"Food is our common ground, a universal experience\" to James Beard, but no result names Beard on Food or any other work; two searches found quotation sites only.",
+    "urls": [
+      "https://www.brainyquote.com/quotes/james_beard_140985",
+      "https://www.quotationspage.com/quote/33518.html"
+    ]
   },
   {
     "id": "q-ab01",
@@ -1469,9 +1654,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "The paragraph goes on: whole cuisines are a matter of three or four ingredients.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "How to Cook Like the Pros, the paragraph on shallots, butter and stock."
+    "evidence": "Goodreads lists \"Good food is very often, even most often, simple food\" among the quotations from Kitchen Confidential, and the Ripening's notes on the book carry it too.",
+    "urls": [
+      "https://www.goodreads.com/work/quotes/4219-kitchen-confidential-adventures-in-the-culinary-underbelly",
+      "http://www.theripening.com/2019/03/notes-quotes-kitchen-confidential-anthony-bourdain.html"
+    ]
   },
   {
     "id": "q-ab02",
@@ -1494,9 +1683,13 @@
     "adapted": true,
     "adaptedNote": "The dash before \"not an artist\" is a comma.",
     "note": "It continues: the great cathedrals of Europe were built by craftsmen, though not designed by them.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Who Cooks?, the passage on craft against art."
+    "evidence": "Goodreads and Newsweek print the Kitchen Confidential passage \"Cooking is a craft, I like to think, and a good cook is a craftsman, not an artist. There's nothing wrong with that: the great cathedrals of Europe were built by craftsmen\", the original using a dash before \"not an artist\".",
+    "urls": [
+      "https://www.goodreads.com/work/quotes/4219-kitchen-confidential-adventures-in-the-culinary-underbelly",
+      "https://www.newsweek.com/remembering-anthony-bourdain-two-years-after-his-death-his-most-ravenous-quotes-about-food-life-1509414"
+    ]
   },
   {
     "id": "q-ab03",
@@ -1562,9 +1755,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The foreword, answering why she writes about food."
+    "evidence": "Web search 2026-10-03: Goodreads and Slate show the sentence word for word, from the foreword of The Gastronomical Me (1943), followed by So it happens that when I write of hunger, I am really writing about love. Earlier note: the foreword, answering why she writes about food.",
+    "urls": [
+      "https://www.goodreads.com/work/quotes/295064-the-gastronomical-me",
+      "https://slate.com/culture/2013/11/the-gastronomical-me-by-mfk-fisher-70th-anniversary-of-the-seminal-food-book.html"
+    ]
   },
   {
     "id": "q-mf02",
@@ -1586,9 +1783,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The foreword, the sentence before her answer to why she writes about hunger."
+    "evidence": "Web search 2026-10-03: BrainyQuote shows the sentence with this wording, from The Gastronomical Me, running on to And that is my answer, when people ask me: Why do you write about hunger, and not wars or love? Goodreads carries a variant without the article (There is communion of more). Earlier note: the foreword, the sentence before her answer to why she writes about hunger.",
+    "urls": [
+      "https://www.brainyquote.com/quotes/m_f_k_fisher_395612",
+      "https://www.goodreads.com/quotes/304454-there-is-communion-of-more-than-our-bodies-when-bread"
+    ]
   },
   {
     "id": "q-mf03",
@@ -1671,7 +1872,7 @@
     "year": "2006",
     "source": {
       "kind": "book",
-      "ref": "My Life in France, with Alex Prud'homme (Knopf, 2006), the closing pages",
+      "ref": "My Life in France, with Alex Prud'homme (Knopf, 2006), chapter 9",
       "language": "English",
       "translation": "adapted"
     },
@@ -1684,9 +1885,13 @@
     "adapted": true,
     "adaptedNote": "The dash after \"cook\" is a comma.",
     "note": "Given there as her invariable advice to people.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The last pages of My Life in France."
+    "evidence": "Web search 2026-10-03: Goodreads and AZQuotes show the sentence from My Life in France, prefaced by This is my invariable advice to people and with a dash after cook where this entry has a comma, as the adaptedNote records. Earlier note: the last pages of My Life in France.",
+    "urls": [
+      "https://www.goodreads.com/work/quotes/1602216-my-life-in-france",
+      "https://www.azquotes.com/quote/387338"
+    ]
   },
   {
     "id": "q-jc03",
@@ -1750,12 +1955,15 @@
       "craft",
       "work"
     ],
-    "confidence": "high",
+    "confidence": "medium",
     "adapted": false,
-    "note": "The sentence goes on to say the book is for those who enjoy the labour of entertaining their friends.",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "The sentence goes on to say the book is for those who enjoy the labour of entertaining their friends. Web search 2026-10-03: the only sources that quote the sentence (AZQuotes, with the preceding words Good cooking is honest, sincere and simple) place it in French Provincial Cooking (1960), not French Country Cooking (1951); no snippet supports the 1951 book, so the work is in doubt until the introduction of each is read.",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "The introduction to French Country Cooking."
+    "evidence": "Web search 2026-10-03: AZQuotes shows the wording but attributes it to French Provincial Cooking, Penguin edition p. 23; nothing found places it in French Country Cooking. Confidence lowered to medium.",
+    "urls": [
+      "https://www.azquotes.com/author/27936-Elizabeth_David"
+    ]
   },
   {
     "id": "q-fp01",
@@ -1870,13 +2078,17 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Boswell's entry for 5 August 1763."
+    "evidence": "Web search 2026-10-03: Wikiquote shows the sentence word for word within the longer passage (For my part, I mind my belly very studiously, and very carefully; for I look upon it, that he who does not mind his belly will hardly mind anything else) and places it in Boswell's Life of Johnson under 5 August 1763; Jack Lynch's online text of the 1763 section carries the same. Earlier note: Boswell's entry for 5 August 1763.",
+    "urls": [
+      "https://en.wikiquote.org/wiki/Samuel_Johnson",
+      "https://jacklynch.net/Texts/BLJ/blj63.html"
+    ]
   },
   {
     "id": "q-sj02",
-    "text": "There is nothing which has yet been contrived by man by which so much happiness is produced as by a good tavern or inn.",
+    "text": "There is nothing which has yet been contrived by man, by which so much happiness is produced as by a good tavern or inn.",
     "who": "Samuel Johnson",
     "work": "as recorded by Boswell, The Life of Samuel Johnson",
     "year": "1776",
@@ -1894,9 +2106,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Boswell's entry for 21 March 1776, at the Chapel House inn."
+    "evidence": "Web search 2026-10-03: Project Gutenberg's Life of Johnson and Wikiquote show the sentence under 21 March 1776 with a comma after man (contrived by man, by which), which this entry now carries. Earlier note: Boswell's entry for 21 March 1776, at the Chapel House inn.",
+    "urls": [
+      "https://www.gutenberg.org/files/1564/1564-h/1564-h.htm",
+      "https://en.wikiquote.org/wiki/Inns"
+    ]
   },
   {
     "id": "q-js01",
@@ -1917,9 +2133,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "\"Eat\" is the eighteenth-century past tense and is kept.",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Dialogue II."
+    "evidence": "Web search 2026-10-03: Wikisource's text of Polite Conversation, Dialogue II, gives Colonel Atwit the line He was a bold man that first eat an oyster; Quote Investigator confirms the wording and the dialogue and notes the thought is older than Swift. Earlier note: Dialogue II.",
+    "urls": [
+      "https://en.wikisource.org/wiki/The_Works_of_the_Rev._Jonathan_Swift/Volume_8/Polite_Conversation_-_Dialog_II.",
+      "https://quoteinvestigator.com/2020/01/11/oyster/"
+    ]
   },
   {
     "id": "q-jm01",
@@ -1939,10 +2159,14 @@
     ],
     "confidence": "high",
     "adapted": false,
-    "note": "Il faut manger pour vivre et non pas vivre pour manger. The sense is older (Socrates by way of Cicero); the line is Moliere's.",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "Il faut manger pour vivre et non pas vivre pour manger. The sense is older (Socrates by way of Cicero); the line is Moliere's. Web search 2026-10-03: modern editions number the passage act III, scene 5 (Valere answering Maitre Jacques before Harpagon); the 1669 edition runs the act's opening as one scene, which is the numbering the source ref keeps.",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Act III, scene 1."
+    "evidence": "Web search 2026-10-03: Wikisource's scan of the 1669 L'Avare and France Pittoresque show Valere's line qu'il faut manger pour vivre, et non pas vivre pour manger, of which this is the plain translation; the sources give the scene as act III, scene 5 in modern numbering. Earlier note: act III, scene 1.",
+    "urls": [
+      "https://fr.wikisource.org/wiki/Page:Moli%C3%A8re_-_L%E2%80%99Avare_1669.djvu/88",
+      "https://www.france-pittoresque.com/spip.php?article5317="
+    ]
   },
   {
     "id": "q-ws01",
@@ -1964,13 +2188,17 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Act I, scene 4, the banquet at York Place."
+    "evidence": "Web search 2026-10-03: the Folger text of Henry VIII, act 1, scene 4, and Open Source Shakespeare's Guildford lines show Good company, good wine, good welcome, / Can make good people, spoken by Sir Henry Guildford at York Place. Earlier note: act I, scene 4, the banquet at York Place.",
+    "urls": [
+      "https://www.folger.edu/explore/shakespeares-works/henry-viii/read/1/4/",
+      "https://www.opensourceshakespeare.org/views/plays/characters/charlines.php?CharID=Guildford&WorkID=henry8&cues=1"
+    ]
   },
   {
     "id": "q-mc01",
-    "text": "Hunger is the best sauce in the world.",
+    "text": "The best sauce in the world is hunger, and as the poor are never without that, they always eat with a relish.",
     "who": "Miguel de Cervantes",
     "work": "Don Quixote",
     "year": "1615",
@@ -1986,10 +2214,14 @@
     ],
     "confidence": "high",
     "adapted": false,
-    "note": "La mejor salsa del mundo es la hambre. A proverb Sancho repeats; the sense is in Cicero too.",
-    "checkedBy": "claude-code (no live search this session)",
+    "note": "La mejor salsa del mundo es la hambre. A proverb spoken by Teresa Panza to Sancho (the earlier note gave it to Sancho; the search corrected the speaker); the sense is in Cicero too.",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Part II, chapter 5."
+    "evidence": "Web search 2026-10-03: the Centro Virtual Cervantes edition of Don Quijote, part II, chapter V, carries la mejor salsa del mundo es la hambre; OKDiario shows the line is Teresa Panza's, in her talk with Sancho, so the note now names her. Earlier note: part II, chapter 5.",
+    "urls": [
+      "https://cvc.cervantes.es/Literatura/clasicos/quijote/edicion/parte2/cap05/default.htm",
+      "https://okdiario.com/curiosidades/que-quiere-decir-proverbio-don-quijote-mejor-salsa-del-mundo-hambre-20396263"
+    ]
   },
   {
     "id": "q-vt01",
@@ -2037,9 +2269,13 @@
     "confidence": "high",
     "adapted": false,
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Act I."
+    "evidence": "Web search 2026-10-03: Goodreads' Man and Superman quotes and the Full Text Archive copy of the play show There is no love sincerer than the love of food, Tanner's line in act I. Earlier note: act I.",
+    "urls": [
+      "https://www.goodreads.com/work/quotes/376394-man-and-superman",
+      "https://fulltextarchive.com/page/MAN-AND-SUPERMAN2"
+    ]
   },
   {
     "id": "q-rs01",
@@ -2060,9 +2296,13 @@
     "adapted": true,
     "adaptedNote": "The opening \"For my part,\" is dropped.",
     "note": "",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Cheylard and Luc."
+    "evidence": "Web search 2026-10-03: Project Gutenberg and Wikisource show the passage in the chapter Cheylard and Luc: For my part, I travel not to go anywhere, but to go. I travel for travel's sake. The great affair is to move. The dropped For my part is recorded in adaptedNote. Earlier note: Cheylard and Luc.",
+    "urls": [
+      "https://www.gutenberg.org/files/535/535-h/535-h.htm",
+      "https://en.wikisource.org/wiki/The_Annotated_'Travels_with_a_Donkey_in_the_C%C3%A9vennes'/Cheylard_And_Luc"
+    ]
   },
   {
     "id": "q-rs02",
@@ -2082,8 +2322,12 @@
     "confidence": "high",
     "adapted": false,
     "note": "Usually quoted without \"the\"; the sentence in the book ends \"...and the wine is bottled poetry\".",
-    "checkedBy": "claude-code (no live search this session)",
+    "checkedBy": "claude-code (web search 2026-10-03)",
     "checkedOn": "2026-10-03",
-    "evidence": "Napa Wine, on the Californian vineyards."
+    "evidence": "Napa Wine, on the Californian vineyards. Web search 2026-10-03: barrypopik.com quotes the sentence from The Silverado Squatters (1883) as \"...and the wine is bottled poetry\", noting the much quoted form drops \"the\"; Project Gutenberg carries the full text of the book.",
+    "urls": [
+      "https://www.gutenberg.org/files/516/516-h/516-h.htm",
+      "https://www.barrypopik.com/index.php/new_york_city/entry/wine_is_bottled_poetry_wine_is_poetry_in_a_bottle"
+    ]
   }
 ]
