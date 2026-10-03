@@ -56,17 +56,19 @@ if (args.includes('--help') || args.includes('-h')) {
 	console.log(`build-brennans.mjs: ${REL(PARSED)} plus ${REL(OVERRIDES)} into ${REL(OUT)}.
 
   --mint        allow a new id to be minted for a slug the ledger (${REL(LEDGER)}) lacks
-  --stamp <ms>  the one build stamp on every mark (default: now)
+  --stamp <ms>  the one build stamp on every mark (default: the shipped edition's fixed stamp; --now takes the clock)
   --verbose     print every principle mapped
   --help        this text
 
 Writes ${REL(OUT)}, ${REL(DASH_LOG)}, ${REL(SPELL_LOG)} and, with --mint, ${REL(LEDGER)}.`);
 	process.exit(0);
 }
-checkArgs(args, ['--mint', '--stamp', '--verbose'], ['--stamp'], fail);
+checkArgs(args, ['--mint', '--stamp', '--verbose', '--now'], ['--stamp'], fail);
 const MINT = args.includes('--mint');
 const stampAt = args.indexOf('--stamp');
-const BUILD_TS = stampAt >= 0 ? Number(args[stampAt + 1]) : Date.now();
+/* Fixed by default so a rebuild is byte for byte the pack that shipped (the mirror gate holds the
+   site's copy to this one): --stamp sets another, --now takes the clock for a fresh edition. */
+const BUILD_TS = stampAt >= 0 ? Number(args[stampAt + 1]) : args.includes('--now') ? Date.now() : 1790758800000;
 if (!Number.isFinite(BUILD_TS)) fail('--stamp must be a number of milliseconds');
 
 function fail(msg) {

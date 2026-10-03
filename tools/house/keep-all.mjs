@@ -28,18 +28,20 @@ if (args.includes('--help') || args.includes('-h')) {
 	console.log(`keep-all.mjs: flip every mark in ${REL(HOUSE_JSON)} to by 'person' and write ${REL(PACK)}.
 
   --owner-reviewed  required: the owner has reviewed the pack and asks for every mark kept
-  --stamp <ms>      the stamp on the flipped marks and the pack (default: now)
+  --stamp <ms>      the stamp on the flipped marks and the pack (default: the shipped edition's fixed stamp; --now takes the clock)
   --file <path>     another built house to keep
   --help            this text`);
 	process.exit(0);
 }
 function fail(msg) { console.error('keep-all: ' + msg); process.exit(1); }
-checkArgs(args, ['--owner-reviewed', '--stamp', '--file'], ['--stamp', '--file'], fail);
+checkArgs(args, ['--owner-reviewed', '--stamp', '--file', '--now'], ['--stamp', '--file'], fail);
 if (!args.includes('--owner-reviewed')) fail('refused: every mark is flipped to a person\'s only with --owner-reviewed, the owner\'s own say so');
 const fileAt = args.indexOf('--file');
 const FILE = fileAt >= 0 ? args[fileAt + 1] : HOUSE_JSON;
 const stampAt = args.indexOf('--stamp');
-const KEEP_TS = stampAt >= 0 ? Number(args[stampAt + 1]) : Date.now();
+/* Fixed by default so a rebuild is byte for byte the pack that shipped (the mirror gate holds the
+   site's copy to this one): --stamp sets another, --now takes the clock for a fresh edition. */
+const KEEP_TS = stampAt >= 0 ? Number(args[stampAt + 1]) : args.includes('--now') ? Date.now() : 1790845200000;
 if (!Number.isFinite(KEEP_TS)) fail('--stamp must be a number of milliseconds');
 if (!FILE || !fs.existsSync(FILE)) fail(`${REL(FILE)}: missing; run build-brennans.mjs first`);
 if (!fs.existsSync(GUIDE)) fail(`${REL(GUIDE)}: missing`);
