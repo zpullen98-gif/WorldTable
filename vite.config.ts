@@ -106,6 +106,12 @@ export default defineConfig({
 				// door opens and the device is online, so it costs no cap bytes
 				// and the app never breaks offline without it. verify-build asserts
 				// it stays out of the manifest.
+				// oot-house.js (the House engine ported for the plain wings),
+				// oot-house-ui.js (their read-and-keep screen), oot-quotes.js (the
+				// quote bank) and shared/packs/ (the house packs) ship from
+				// static/shared for the two plain wings and the hub; the Table
+				// imports the House from src/lib/house and never loads them, so
+				// none may cost cap bytes. verify-build asserts each one too.
 				/**
 				 * The Plates' pictures (static/plates/*.webp, 6.8 MB) are opened on
 				 * demand and kept by the runtime route below, never installed. The
@@ -114,7 +120,18 @@ export default defineConfig({
 				 * under client) whenever none of ours starts with client/, so the
 				 * ignore is what keeps them out. verify-build asserts it.
 				 */
-				globIgnores: ['**/node_modules/**', '**/*.woff', '**/sw-shared.js', '**/shared/oot-maitre.js', '**/plates/**/*.webp', '**/house/*.webp'],
+				globIgnores: [
+					'**/node_modules/**',
+					'**/*.woff',
+					'**/sw-shared.js',
+					'**/shared/oot-maitre.js',
+					'**/shared/oot-house.js',
+					'**/shared/oot-house-ui.js',
+					'**/shared/oot-quotes.js',
+					'**/shared/packs/**',
+					'**/plates/**/*.webp',
+					'**/house/*.webp'
+				],
 				maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
 				/**
 				 * Supplying manifestTransforms REPLACES the SvelteKit plugin's own

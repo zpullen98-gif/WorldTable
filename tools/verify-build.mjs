@@ -357,8 +357,17 @@ function deckCost() {
    the study material: the Plates' transcriptions (twenty reference plates
    as text, so they read and quiz offline from the first launch; the
    pictures themselves stay out, see below) and the level primers. At the
-   raise the precache stood at 2.688 MB against the old cap. */
-const CAP_MB = 3.0;
+   raise the precache stood at 2.688 MB against the old cap.
+
+   Raised from 3.0 MB to 3.5 MB on 2026-10-03, by the owner's decision of
+   that day to raise every cap that constrains the House: the House engine
+   the Table imports from src/lib/house, the /menu screens that read and
+   keep her marks, and the quiz modes that drill them. The ported engine,
+   the wings' house screen, the quote bank and the packs stay lazy and out
+   of the manifest (SHARED_LAZY below), so what the raise buys is the
+   Table's own screens. At the raise the precache stood at 2.887 MB against
+   the old cap. */
+const CAP_MB = 3.5;
 
 check(`precache stays under ${CAP_MB} MB gzipped`, () => {
 	let raw = 0;
@@ -547,6 +556,44 @@ check("the Maitre d' client ships and is NOT precached", () => {
 	const text = readFileSync(join(BUILD, MAITRE_CLIENT), 'utf8');
 	assert(text.includes('api.anthropic.com'), 'the shipped client no longer names its host: the allowance above is now dead weight');
 	return 'shipped, lazy, zero cap bytes';
+});
+
+/*
+ * The other shared files the plain wings and the hub load from this build's
+ * static/shared, and the Table itself never loads: the House engine ported
+ * for a wing with no bundler (the Table imports src/lib/house directly), the
+ * wings' read-and-keep screen, and the quote bank. Each must ship, each must
+ * stay out of the precache (a glob change that swept one in would pass every
+ * size check today and install a script nobody asked for tomorrow), and
+ * none may name the one host the allowance above reserves for the client:
+ * a second file naming it is a second place for a menu to be sent. The
+ * maitre check keeps its own label and its own host assertion above; these
+ * are its siblings, generalised over the list so the next lazy file is one
+ * line here.
+ */
+const SHARED_LAZY = ['shared/oot-house.js', 'shared/oot-house-ui.js', 'shared/oot-quotes.js'];
+const SHARED_PACKS = 'shared/packs';
+
+for (const lazy of SHARED_LAZY) {
+	check(`${lazy} ships and is NOT precached`, () => {
+		assert(existsSync(join(BUILD, lazy)), `build/${lazy} missing: static/${lazy} did not ship`);
+		const listed = precached.filter((u) => u.split('?')[0].endsWith(lazy));
+		assert(listed.length === 0, `precache lists ${lazy}: ${listed.join(', ')}`);
+		const text = readFileSync(join(BUILD, lazy), 'utf8');
+		for (const host of Object.keys(HOST_ALLOWANCE)) {
+			assert(!text.includes(host), `${lazy} names ${host}, which only ${HOST_ALLOWANCE[host]} may name`);
+		}
+		return 'shipped, lazy, zero cap bytes';
+	});
+}
+
+check('the house packs, when shipped, are NOT precached', () => {
+	const dir = join(BUILD, SHARED_PACKS);
+	if (!existsSync(dir)) return 'no packs shipped yet';
+	const packs = walk(dir).map(rel);
+	const listed = precached.filter((u) => u.split('?')[0].replace(/^\//, '').startsWith(SHARED_PACKS + '/'));
+	assert(listed.length === 0, `precache lists a pack: ${listed.join(', ')}`);
+	return `${packs.length} pack(s) on demand`;
 });
 
 check('fonts are latin subsets only', () => {

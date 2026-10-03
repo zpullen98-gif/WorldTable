@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const ROOT = process.cwd();
@@ -160,30 +160,63 @@ describe("the Maitre d' client is one file in two places", () => {
 	 * copy at OutsideOfTime/shared/oot-maitre.js because the two plain wings
 	 * load it from there. Two copies that differ are two clients with two
 	 * ideas of the key slot, the price table and her copy, so drift FAILS
-	 * here (and in inject-oot-bar.mjs --check) rather than being overwritten:
+	 * here (and in the site's check-mirror) rather than being overwritten:
 	 * which side is right is a decision, not a script's guess.
 	 *
-	 * The hub is a sibling checkout on the owner's machine and absent in CI
-	 * and on a fresh clone, so the case skips with its reason in the name.
+	 * The same holds for every other shared file written here and copied to
+	 * the site: the ported House engine, the wings' house screen, the quote
+	 * bank and the packs. Each is mirrored below when it exists here.
+	 *
+	 * The site is a sibling checkout on the owner's machine and absent in CI
+	 * and on a fresh clone, so the cases skip with the reason in the name.
+	 * OOT_SITE names the checkout; without it the sibling is looked for under
+	 * its old name, OutsideOfTime, then under the Pages name the site
+	 * publishes as, the same two the site's own tools and check-house-ui try.
 	 */
-	const canonical = join(ROOT, 'static', 'shared', 'oot-maitre.js');
-	const mirror = join(ROOT, '..', 'OutsideOfTime', 'shared', 'oot-maitre.js');
-	const mirrored = existsSync(mirror);
+	const SHARED = join(ROOT, 'static', 'shared');
+	const canonical = join(SHARED, 'oot-maitre.js');
+	const siteCandidates = process.env.OOT_SITE
+		? [process.env.OOT_SITE]
+		: [join(ROOT, '..', 'OutsideOfTime'), join(ROOT, '..', 'zpullen98-gif.github.io')];
+	const site = siteCandidates.find((dir) => existsSync(join(dir, 'shared')));
+	const mirrorDir = site ? join(site, 'shared') : null;
 
 	it('ships from static/shared', () => {
 		expect(existsSync(canonical)).toBe(true);
 	});
 
-	it.skipIf(!mirrored)('is byte-identical to OutsideOfTime/shared/oot-maitre.js (skipped when that checkout is absent)', () => {
-		const a = readFileSync(canonical);
-		const b = readFileSync(mirror);
+	/** The first byte at which two buffers part, or -1 when they are the same bytes. */
+	const diverge = (a: Buffer, b: Buffer): number => {
 		let at = 0;
 		while (at < a.length && at < b.length && a[at] === b[at]) at++;
-		const same = a.length === b.length && at === a.length;
-		expect(
-			same,
-			`the two copies diverge at byte ${at} (canonical ${a.length} bytes, mirror ${b.length}): copy the canonical file over, never edit the mirror`
-		).toBe(true);
+		return a.length === b.length && at === a.length ? -1 : at;
+	};
+
+	const MIRRORED = ['oot-maitre.js', 'oot-house.js', 'oot-house-ui.js', 'oot-quotes.js'];
+	for (const name of MIRRORED) {
+		const here = join(SHARED, name);
+		const there = mirrorDir ? join(mirrorDir, name) : null;
+		const mirrored = !!there && existsSync(here) && existsSync(there);
+		it.skipIf(!mirrored)(`${name} is byte-identical to the site's shared/${name} (skipped when that checkout or the copy is absent)`, () => {
+			const a = readFileSync(here);
+			const b = readFileSync(there as string);
+			const at = diverge(a, b);
+			expect(
+				at,
+				`the two copies of ${name} diverge at byte ${at} (canonical ${a.length} bytes, mirror ${b.length}): copy the canonical file over, never edit the mirror`
+			).toBe(-1);
+		});
+	}
+
+	const packsHere = join(SHARED, 'packs');
+	const packs = existsSync(packsHere) ? readdirSync(packsHere).filter((f) => f.endsWith('.json')) : [];
+	it.skipIf(!mirrorDir || packs.length === 0)('every pack under static/shared/packs is byte-identical on the site (skipped when either side has none)', () => {
+		for (const name of packs) {
+			const there = join(mirrorDir as string, 'packs', name);
+			expect(existsSync(there), `the site has no shared/packs/${name}: copy it over`).toBe(true);
+			const at = diverge(readFileSync(join(packsHere, name)), readFileSync(there));
+			expect(at, `shared/packs/${name} diverges at byte ${at}: copy the canonical file over, never edit the mirror`).toBe(-1);
+		}
 	});
 
 	/** The verifier must keep the client out of the precache, or it costs cap bytes on every device. */
@@ -191,5 +224,18 @@ describe("the Maitre d' client is one file in two places", () => {
 		expect(verifyBuild).toContain("the Maitre d' client ships and is NOT precached");
 		const vite = readFileSync(join(ROOT, 'vite.config.ts'), 'utf8');
 		expect(vite).toContain("'**/shared/oot-maitre.js'");
+	});
+
+	/** And its siblings the same way: each lazy file named by the verifier's list and by the glob. */
+	it('keeps the ported House, the house screen, the quote bank and the packs out of the precache too', () => {
+		expect(verifyBuild).toMatch(/const SHARED_LAZY = \[([^\]]*)\]/);
+		const list = (verifyBuild.match(/const SHARED_LAZY = \[([^\]]*)\]/) as RegExpMatchArray)[1];
+		const vite = readFileSync(join(ROOT, 'vite.config.ts'), 'utf8');
+		for (const name of ['oot-house.js', 'oot-house-ui.js', 'oot-quotes.js']) {
+			expect(list, `verify-build's SHARED_LAZY must name shared/${name}`).toContain(`'shared/${name}'`);
+			expect(vite, `vite.config.ts globIgnores must name shared/${name}`).toContain(`'**/shared/${name}'`);
+		}
+		expect(vite).toContain("'**/shared/packs/**'");
+		expect(verifyBuild).toContain('the house packs, when shipped, are NOT precached');
 	});
 });
