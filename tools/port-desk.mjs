@@ -14,6 +14,7 @@
  * discipline, and they drifted on exactly one line (the Codex let a bare
  * price run to five figures, the other two capped it at three). A hand port
  * of seven modules and 4,000 lines would drift on the first Tuesday. This file
+ * names the modules, the globals and the targets; the engine in port-core.mjs
  * reads the modules, transpiles each with the TypeScript compiler already in
  * node_modules, strips the import and export statements, and joins them in
  * dependency order, so the port IS the source and a change to the source is
@@ -26,32 +27,25 @@
  * silent overwrite. One IIFE keeps them all in; what comes out is the short
  * list in GLOBALS, and nothing else. The seven modules were written knowing
  * this (desk-text.ts copies foldText rather than importing it, for the same
- * reason), and this tool refuses the port if two modules ever declare the
+ * reason), and the engine refuses the port if two modules ever declare the
  * same top-level name, because inside one function scope a second `const`
  * of the same name is a syntax error and a second `function` is a silent
  * replacement.
  *
- * WHY ES2017 AND WHY THE ESCAPES. ES2017 is what the two wings' oldest
- * supported browsers run without help; object spread and optional chaining
- * are compiled down, and the one compiler helper that needs (__assign) is
- * emitted once rather than once per module. Every character outside ASCII
- * inside a regex literal is rewritten as a \uXXXX escape, because the
- * suite's publish gate counts em dashes across the built tree and one dash
- * inside a character class, shipped twice, would spend the baseline; the
- * gate counts the escape separately and on purpose. Word lists keep their
- * accents: they are data, and a region printed with an accent should match.
+ * The target, the escapes and the clean gate are port-core.mjs's and are
+ * explained there; the House port (port-house.mjs) shares them, so the two
+ * ports cannot drift from each other either.
  *
  * The two outputs differ in their first line and nowhere else. The first
  * line names the app, so a copy pasted into the wrong tree says so at the
  * top of the file; check-port.mjs asserts the rest is byte-identical.
  */
-import ts from 'typescript';
-import vm from 'node:vm';
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { ROOT, unitFor, unitsIn, portModules, assertClean, writePorts, runMain } from './port-core.mjs';
 
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+/* The engine's pieces check-port.mjs reads through this file. */
+export { DASH, assertClean } from './port-core.mjs';
+
 const DESK = path.join(ROOT, 'src', 'lib', 'desk');
 
 /**
@@ -89,6 +83,13 @@ export const GLOBALS = [
 	'readInName', 'whenRead', 'roomName', 'deskCounts', 'countsLine', 'handList', 'priceInRaw'
 ];
 
+/**
+ * The two names the door out builds itself rather than reads off a module:
+ * parseWineText is parseMenuText under its old name, deskInbox is the inbox
+ * object assembled below.
+ */
+const BUILT = ['parseWineText', 'deskInbox'];
+
 /** Where the two copies go. The sibling repos, unless the environment says otherwise. */
 export const TARGETS = [
 	{
@@ -103,103 +104,15 @@ export const TARGETS = [
 	}
 ];
 
-/** The em dash, however it is spelled, and the double hyphen: what the publish gate counts. Built from escapes, so this file passes the rule it enforces. */
-export const DASH = new RegExp(['\\u2014', '&' + 'mdash;', '&#' + '8212;', '&#' + 'x2014;', ' ' + '-- '].join('|'), 'g');
-
 /* -------------------------------------------------------------------------
- * Transpile and strip
+ * The words around the modules
  * ---------------------------------------------------------------------- */
-
-/** One module through the compiler, with its comments, or a thrown diagnostic. */
-function transpile(file, label) {
-	const src = readFileSync(file, 'utf8');
-	const out = ts.transpileModule(src, {
-		fileName: label,
-		reportDiagnostics: true,
-		compilerOptions: {
-			target: ts.ScriptTarget.ES2017,
-			module: ts.ModuleKind.ESNext,
-			removeComments: false,
-			newLine: ts.NewLineKind.LineFeed,
-			importHelpers: false,
-			isolatedModules: true
-		}
-	});
-	if (out.diagnostics && out.diagnostics.length) {
-		const said = out.diagnostics.map((d) => ts.flattenDiagnosticMessageText(d.messageText, '\n')).join('\n');
-		throw new Error(`${label}: the compiler refused it:\n${said}`);
-	}
-	return out.outputText;
-}
-
-/** A character outside ASCII as its \uXXXX escape; a surrogate half is escaped on its own, which every regex mode reads as the pair. */
-function escapeRegex(text) {
-	return text.replace(/[^\x00-\x7f]/g, (ch) => '\\u' + ch.charCodeAt(0).toString(16).padStart(4, '0'));
-}
 
 /**
- * The compiled module as a script body: imports and export lists gone, the
- * `export` keyword off every declaration, compiler helpers lifted out into
- * `helpers` (one copy for the whole bundle), every regex literal ASCII.
- * Returns the body and the names it declares at the top level, so the
- * caller can refuse a collision before the bundle is written.
+ * The paragraphs every copy carries under its first line. Written dash-free on purpose.
+ * @param {string} date the day of the run, as YYYY-MM-DD
+ * @returns {string}
  */
-function toScriptBody(js, label, helpers) {
-	const sf = ts.createSourceFile(label + '.js', js, ts.ScriptTarget.ES2017, true, ts.ScriptKind.JS);
-	const edits = [];
-	const declared = [];
-	const cut = (start, end) => edits.push({ start, end, text: '' });
-	/* Take the line break with the statement, so a stripped import leaves no blank line behind. */
-	const lineEnd = (end) => (js[end] === '\n' ? end + 1 : end);
-
-	for (const st of sf.statements) {
-		if (ts.isImportDeclaration(st) || ts.isExportDeclaration(st) || ts.isExportAssignment(st)) {
-			cut(st.getStart(sf), lineEnd(st.getEnd()));
-			continue;
-		}
-		const mods = ts.canHaveModifiers(st) ? ts.getModifiers(st) : undefined;
-		const exp = mods && mods.find((m) => m.kind === ts.SyntaxKind.ExportKeyword);
-		if (exp) {
-			const gap = js.slice(exp.getEnd()).match(/^\s*/)[0].length;
-			cut(exp.getStart(sf), exp.getEnd() + gap);
-		}
-		if (ts.isFunctionDeclaration(st) && st.name) declared.push(st.name.text);
-		if (ts.isClassDeclaration(st) && st.name) declared.push(st.name.text);
-		if (ts.isVariableStatement(st)) {
-			const names = st.declarationList.declarations.filter((d) => ts.isIdentifier(d.name)).map((d) => d.name.text);
-			/* A compiler helper: __assign for an object spread at ES2017. TS
-			   emits one per module that needs it; the bundle keeps the first. */
-			if (names.length === 1 && /^__[A-Za-z]+$/.test(names[0])) {
-				if (!helpers.has(names[0])) helpers.set(names[0], js.slice(st.getStart(sf), st.getEnd()));
-				cut(st.getStart(sf), lineEnd(st.getEnd()));
-				continue;
-			}
-			declared.push(...names);
-		}
-	}
-
-	const walk = (node) => {
-		if (ts.isRegularExpressionLiteral(node)) {
-			const text = node.getText(sf);
-			const escaped = escapeRegex(text);
-			if (escaped !== text) edits.push({ start: node.getStart(sf), end: node.getEnd(), text: escaped });
-		}
-		ts.forEachChild(node, walk);
-	};
-	walk(sf);
-
-	/* From the back, so an earlier edit cannot move a later one. Nothing here overlaps: a stripped keyword and a regex inside the same statement are different spans. */
-	edits.sort((a, b) => b.start - a.start);
-	let out = js;
-	for (const e of edits) out = out.slice(0, e.start) + e.text + out.slice(e.end);
-	return { body: out.replace(/\r\n?/g, '\n').replace(/\n{3,}/g, '\n\n').trim() + '\n', declared };
-}
-
-/* -------------------------------------------------------------------------
- * Assemble
- * ---------------------------------------------------------------------- */
-
-/** The paragraphs every copy carries under its first line. Written dash-free on purpose. */
 function headerBody(date) {
 	return [
 		`   GENERATED by WorldTable/tools/port-desk.mjs from src/lib/desk on ${date}; do not edit; regenerate with node tools/port-desk.mjs.`,
@@ -254,30 +167,10 @@ function headerBody(date) {
  * Everything but the first line: the header body, the var list, the IIFE
  * with the helpers, the seven bodies and the door out. Pure, so a test can
  * generate in memory and compare.
+ * @param {Date} [now] the clock, for the date in the header
+ * @returns {string}
  */
 export function generateShared(now = new Date()) {
-	const helpers = new Map();
-	const parts = [];
-	const owner = new Map();
-	const units = MODULES.map((m) => ({ label: `src/lib/desk/${m}.ts`, file: path.join(DESK, m + '.ts') }));
-	units.push({ label: 'src/lib/menu-parse.ts', file: ADAPTER });
-	for (const u of units) {
-		const { body, declared } = toScriptBody(transpile(u.file, u.label), path.basename(u.file, '.ts'), helpers);
-		for (const name of declared) {
-			if (owner.has(name)) {
-				throw new Error(`${u.label} declares "${name}", which ${owner.get(name)} already declares; inside one IIFE that is a collision. Rename one of them in the source.`);
-			}
-			owner.set(name, u.label);
-		}
-		parts.push(`/* ==================== ${u.label} ==================== */\n${body}`);
-	}
-	for (const g of GLOBALS) {
-		/* The door out reads these names from the module scope; a global the
-		   modules do not define would come out undefined and fail at first use,
-		   in the app, not here. parseWineText and deskInbox are built below. */
-		if (g !== 'parseWineText' && g !== 'deskInbox' && !owner.has(g)) throw new Error(`no module declares "${g}", so it cannot be exposed`);
-	}
-
 	const date = now.toISOString().slice(0, 10);
 	const exposeList = GLOBALS.map((g) => {
 		if (g === 'deskInbox') return '\tdeskInbox: inbox';
@@ -286,76 +179,55 @@ export function generateShared(now = new Date()) {
 	}).join(',\n');
 	const assign = GLOBALS.map((g) => `\t${g} = api.${g};`).join('\n');
 
-	return [
-		headerBody(date),
-		`var ${GLOBALS.join(', ')};`,
-		'(function (expose) {',
-		"'use strict';",
-		helpers.size
-			? `/* The compiler's own helpers, emitted once for the whole file. */\n${[...helpers.values()].join('\n')}\n`
-			: '',
-		parts.join('\n'),
-		'/* ==================== the door out ==================== */',
-		'/* The inbox as one object, so the five calls a wing makes read as one',
-		'   thing: deskInbox.read(), deskInbox.share(file, "wine"), deskInbox.taken("wine").',
-		'   The rest come out under their own names: a wing that reads a menu itself',
-		'   calls deskSource for the source block, hashText for the "already read"',
-		'   check, and the desk-share words for the sentence under the read. */',
-		'var inbox = {',
-		'\tDESK_INBOX_KEY: DESK_INBOX_KEY,',
-		'\twrite: writeDeskInbox,',
-		'\tread: readDeskInbox,',
-		'\tshare: deskShare,',
-		'\ttaken: markDeskTaken,',
-		'\tclear: clearDeskInbox',
-		'};',
-		'expose({',
-		exposeList,
-		'});',
-		'})(function (api) {',
-		'\t/* Outside the IIFE, where the vars above are in reach and the module',
-		'\t   names inside cannot shadow them. */',
-		assign,
-		'});',
-		''
-	].join('\n');
+	return portModules({
+		units: [...unitsIn(DESK, MODULES), unitFor(ADAPTER)],
+		header: headerBody(date),
+		prelude: [`var ${GLOBALS.join(', ')};`],
+		opener: ['(function (expose) {', "'use strict';"],
+		/* The door out reads these names from the module scope; a global the
+		   modules do not define would come out undefined and fail at first use,
+		   in the app, not here. */
+		expects: GLOBALS.filter((g) => !BUILT.includes(g)),
+		door: [
+			'/* The inbox as one object, so the five calls a wing makes read as one',
+			'   thing: deskInbox.read(), deskInbox.share(file, "wine"), deskInbox.taken("wine").',
+			'   The rest come out under their own names: a wing that reads a menu itself',
+			'   calls deskSource for the source block, hashText for the "already read"',
+			'   check, and the desk-share words for the sentence under the read. */',
+			'var inbox = {',
+			'\tDESK_INBOX_KEY: DESK_INBOX_KEY,',
+			'\twrite: writeDeskInbox,',
+			'\tread: readDeskInbox,',
+			'\tshare: deskShare,',
+			'\ttaken: markDeskTaken,',
+			'\tclear: clearDeskInbox',
+			'};',
+			'expose({',
+			exposeList,
+			'});',
+			'})(function (api) {',
+			'\t/* Outside the IIFE, where the vars above are in reach and the module',
+			'\t   names inside cannot shadow them. */',
+			assign,
+			'});'
+		]
+	});
 }
 
-/** The first line: the app, so a copy in the wrong tree says so at the top. */
+/**
+ * The first line: the app, so a copy in the wrong tree says so at the top.
+ * @param {{ name: string }} target
+ * @returns {string}
+ */
 export function firstLine(target) {
 	return `/* ${target.name}, js/menu-desk.js: the Menu Desk (reader, sorter, desk file, inbox) as one classic script.`;
 }
 
-/* -------------------------------------------------------------------------
- * Assert, then write
- * ---------------------------------------------------------------------- */
-
 /**
- * What must hold before a byte is written: the script parses, it carries no
- * em dash or double hyphen in any spelling, no regex literal carries a
- * character outside ASCII, and no carriage return rode in from a source.
+ * Both files, asserted clean and ready to write.
+ * @param {Date} [now]
+ * @returns {Array<{ app: string, name: string, file: string, text: string }>}
  */
-export function assertClean(text, label) {
-	const problems = [];
-	try {
-		new vm.Script(text, { filename: label });
-	} catch (e) {
-		problems.push(`does not parse as a script: ${e.message}`);
-	}
-	const dashes = text.match(DASH);
-	if (dashes) problems.push(`carries ${dashes.length} em dash(es) or double hyphen(s); the publish gate would count them`);
-	if (text.includes('\r')) problems.push('carries a carriage return');
-	const sf = ts.createSourceFile(label, text, ts.ScriptTarget.ES2017, true, ts.ScriptKind.JS);
-	const walk = (node) => {
-		if (ts.isRegularExpressionLiteral(node) && /[^\x00-\x7f]/.test(node.getText(sf))) {
-			problems.push(`a regex literal still carries a character outside ASCII: ${node.getText(sf).slice(0, 60)}`);
-		}
-		ts.forEachChild(node, walk);
-	};
-	walk(sf);
-	if (problems.length) throw new Error(`${label}:\n  ${problems.join('\n  ')}`);
-}
-
 export function generate(now = new Date()) {
 	const shared = generateShared(now);
 	return TARGETS.map((t) => {
@@ -366,26 +238,8 @@ export function generate(now = new Date()) {
 }
 
 function main() {
-	const dry = process.argv.includes('--dry-run');
-	const files = generate();
-	for (const f of files) {
-		const lines = f.text.split('\n').length;
-		if (dry) {
-			console.log(`  ok  ${f.app}: ${lines} lines, ${f.text.length} chars, not written (--dry-run)`);
-			continue;
-		}
-		mkdirSync(path.dirname(f.file), { recursive: true });
-		writeFileSync(f.file, f.text, 'utf8');
-		console.log(`  ok  ${f.app}: ${lines} lines, ${f.text.length} chars -> ${f.file}`);
-	}
+	writePorts(generate(), process.argv.includes('--dry-run'));
 	console.log('  now: node tools/check-port.mjs');
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-	try {
-		main();
-	} catch (e) {
-		console.error('  port-desk: ' + (e && e.message ? e.message : e));
-		process.exit(1);
-	}
-}
+runMain('port-desk', import.meta.url, main);

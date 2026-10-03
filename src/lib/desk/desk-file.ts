@@ -181,17 +181,19 @@ export interface DeskFile {
 /**
  * A desk file describes a menu, and a menu is a page or two. Two thousand rows
  * is a hotel's every outlet at once; a file past it is a log, a database dump
- * or a fault, and is refused whole rather than reviewed in part. Six hundred
- * characters holds the longest description on Commander's page with room to
- * spare, and it is the cap on EVERY string so that a single field cannot carry
- * a novel into the 256 KB inbox.
+ * or a fault, and is refused whole rather than reviewed in part. Four thousand
+ * characters holds the longest description on Commander's page many times
+ * over and a forty-five second line with its pairing block beside it, and it
+ * is the cap on EVERY string so that a single field cannot carry a novel into
+ * the 2 MB inbox.
  */
 export const DESK_MAX_ITEMS = 2000;
-export const DESK_MAX_STRING = 600;
-/** The cap on any list inside a row: marks, grapes, spec lines, why. */
-const MAX_LIST = 200;
-/** Lines the reader set aside, matching menu-parse.ts's MAX_LINES. */
-const MAX_UNSORTED = 5000;
+/* 4,000, raised from 600 on 3 October 2026 for the House: a 45-second line plus a pairing block exceeds 600. */
+export const DESK_MAX_STRING = 4000;
+/** The cap on any list inside a row: marks, grapes, spec lines, why. 2,000, raised from 200 for the House's longer lists (a pairing block's why, a tasting's courses). */
+const MAX_LIST = 2000;
+/** Lines the reader set aside, matching desk-reader.ts's MAX_LINES, raised with it to 20,000. */
+const MAX_UNSORTED = 20000;
 
 /* -------------------------------------------------------------------------
  * Minting, naming, building

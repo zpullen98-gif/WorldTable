@@ -1,0 +1,2066 @@
+[
+  {
+    "id": "q-bs04",
+    "text": "Tell me what you eat, and I shall tell you what you are.",
+    "who": "Jean Anthelme Brillat-Savarin",
+    "work": "The Physiology of Taste",
+    "year": "1825",
+    "source": {
+      "kind": "book",
+      "ref": "Physiologie du gout (1825), Aphorismes du professeur, aphorism IV",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "table",
+      "character",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Dis-moi ce que tu manges, je te dirai ce que tu es. Often shortened to \"you are what you eat\", which is not his wording.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The fourth of the twenty aphorisms that open the book, printed before the first Meditation in every edition."
+  },
+  {
+    "id": "q-bs05",
+    "text": "The Creator, in obliging man to eat in order to live, invites him by appetite and rewards him by pleasure.",
+    "who": "Jean Anthelme Brillat-Savarin",
+    "work": "The Physiology of Taste",
+    "year": "1825",
+    "source": {
+      "kind": "book",
+      "ref": "Physiologie du gout (1825), Aphorismes du professeur, aphorism V",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "pleasure",
+      "hunger",
+      "table"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Le Createur, en obligeant l'homme a manger pour vivre, l'y invite par l'appetit, et l'en recompense par le plaisir.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Aphorism V of the opening aphorisms."
+  },
+  {
+    "id": "q-bs07",
+    "text": "The pleasure of the table belongs to all ages, to all conditions, to all countries and to all days; it can be joined to all other pleasures, and remains the last to console us for their loss.",
+    "who": "Jean Anthelme Brillat-Savarin",
+    "work": "The Physiology of Taste",
+    "year": "1825",
+    "source": {
+      "kind": "book",
+      "ref": "Physiologie du gout (1825), Aphorismes du professeur, aphorism VII",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "table",
+      "pleasure",
+      "hospitality"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Le plaisir de la table est de tous les ages, de toutes les conditions, de tous les pays et de tous les jours; il peut s'associer a tous les autres plaisirs, et reste le dernier pour nous consoler de leur perte.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Aphorism VII of the opening aphorisms."
+  },
+  {
+    "id": "q-bs09",
+    "text": "The discovery of a new dish does more for the happiness of mankind than the discovery of a star.",
+    "who": "Jean Anthelme Brillat-Savarin",
+    "work": "The Physiology of Taste",
+    "year": "1825",
+    "source": {
+      "kind": "book",
+      "ref": "Physiologie du gout (1825), Aphorismes du professeur, aphorism IX",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "kitchen",
+      "craft",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "La decouverte d'un mets nouveau fait plus pour le bonheur du genre humain que la decouverte d'une etoile.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Aphorism IX of the opening aphorisms; the most quoted line in the book."
+  },
+  {
+    "id": "q-bs10",
+    "text": "Those who get indigestion or who get drunk do not know how to eat or to drink.",
+    "who": "Jean Anthelme Brillat-Savarin",
+    "work": "The Physiology of Taste",
+    "year": "1825",
+    "source": {
+      "kind": "book",
+      "ref": "Physiologie du gout (1825), Aphorismes du professeur, aphorism X",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "table",
+      "wine",
+      "discipline"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Ceux qui s'indigerent ou qui s'enivrent ne savent ni boire ni manger.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Aphorism X of the opening aphorisms."
+  },
+  {
+    "id": "q-bs20",
+    "text": "To invite someone is to take charge of his happiness for as long as he is under our roof.",
+    "who": "Jean Anthelme Brillat-Savarin",
+    "work": "The Physiology of Taste",
+    "year": "1825",
+    "source": {
+      "kind": "book",
+      "ref": "Physiologie du gout (1825), Aphorismes du professeur, aphorism XX, the last",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "hospitality",
+      "generosity",
+      "table"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Convier quelqu'un, c'est se charger de son bonheur pendant tout le temps qu'il est sous notre toit.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Aphorism XX, the last of the opening aphorisms."
+  },
+  {
+    "id": "q-jt01",
+    "text": "In all ages of the world, and in all countries, men have indulged in social drinks.",
+    "who": "Jerry Thomas",
+    "work": "How to Mix Drinks, or The Bon-Vivant's Companion",
+    "year": "1862",
+    "source": {
+      "kind": "book",
+      "ref": "Preface, first sentence (Dick and Fitzgerald, New York, 1862)",
+      "language": "English",
+      "translation": "adapted"
+    },
+    "tags": [
+      "bar",
+      "history"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The original sets \"social drinks\" in quotation marks; the marks are dropped so the line reads as one sentence.",
+    "note": "The first printed cocktail book; its preface opens with this line.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Opening sentence of the preface to the 1862 first edition."
+  },
+  {
+    "id": "q-hc01",
+    "text": "Shake the shaker as hard as you can: don't just rock it, you are trying to wake it up, not send it to sleep!",
+    "who": "Harry Craddock",
+    "work": "The Savoy Cocktail Book",
+    "year": "1930",
+    "source": {
+      "kind": "book",
+      "ref": "A few hints for the young mixer, front matter (Constable, London, 1930)",
+      "language": "English",
+      "translation": "adapted"
+    },
+    "tags": [
+      "bar",
+      "craft"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The punctuation between the clauses is regularised; the words are his.",
+    "note": "One of the numbered hints printed before the recipes.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The hints page before the recipes in the 1930 first edition; the line is reprinted in every facsimile."
+  },
+  {
+    "id": "q-bd01",
+    "text": "The proper union of gin and vermouth is a great and sudden glory; it is one of the happiest marriages on earth, and one of the shortest-lived.",
+    "who": "Bernard DeVoto",
+    "work": "The Hour",
+    "year": "1948",
+    "source": {
+      "kind": "book",
+      "ref": "The Hour: A Cocktail Manifesto (Houghton Mifflin, 1948), the chapter on the martini",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "bar",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The martini passage of The Hour; quoted on the jacket of the 2010 reissue."
+  },
+  {
+    "id": "q-tp01",
+    "text": "There are two reasons for drinking: one is, when you are thirsty, to cure it; the other, when you are not thirsty, to prevent it.",
+    "who": "Thomas Love Peacock",
+    "work": "Melincourt",
+    "year": "1817",
+    "source": {
+      "kind": "book",
+      "ref": "Melincourt, chapter XVI",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "bar",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Often given to Dean Aldrich or to anonymous; it is Peacock's in Melincourt, chapter XVI.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Chapter XVI of Melincourt (1817)."
+  },
+  {
+    "id": "q-eh01",
+    "text": "If you are lucky enough to have lived in Paris as a young man, then wherever you go for the rest of your life, it stays with you, for Paris is a moveable feast.",
+    "who": "Ernest Hemingway",
+    "work": "A Moveable Feast",
+    "year": "1964",
+    "source": {
+      "kind": "book",
+      "ref": "Epigraph, from a remark to a friend in 1950 (Scribner, 1964)",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "travel",
+      "pleasure",
+      "memory"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Printed as the epigraph, attributed there to a remark made to a friend in 1950.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The epigraph page of the 1964 edition and the 2009 restored edition."
+  },
+  {
+    "id": "q-eh02",
+    "text": "Wine is one of the most civilized things in the world and one of the most natural things of the world that has been brought to the greatest perfection.",
+    "who": "Ernest Hemingway",
+    "work": "Death in the Afternoon",
+    "year": "1932",
+    "source": {
+      "kind": "book",
+      "ref": "Chapter 1 (Scribner, 1932), the passage on wine and the appreciation of the bullfight",
+      "language": "English",
+      "translation": "adapted"
+    },
+    "tags": [
+      "wine",
+      "pleasure",
+      "craft"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The sentence is cut after \"perfection\"; it continues with the range of enjoyment it offers.",
+    "note": "American spelling of civilized is his.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Chapter 1 of Death in the Afternoon, where wine stands for an appreciation that must be learned."
+  },
+  {
+    "id": "q-eh03",
+    "text": "As I ate the oysters with their strong taste of the sea and their faint metallic taste that the cold white wine washed away, leaving only the sea taste and the succulent texture.",
+    "who": "Ernest Hemingway",
+    "work": "A Moveable Feast",
+    "year": "1964",
+    "source": {
+      "kind": "book",
+      "ref": "Chapter 1, A Good Café on the Place St-Michel (Scribner, 1964)",
+      "language": "English",
+      "translation": "adapted"
+    },
+    "tags": [
+      "table",
+      "wine",
+      "hunger",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The sentence is cut after \"succulent texture\"; it goes on through the wine to his losing the empty feeling and beginning to be happy.",
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The oysters and Sancerre scene that closes the first chapter."
+  },
+  {
+    "id": "q-eh09",
+    "text": "Write drunk, edit sober.",
+    "who": "Ernest Hemingway",
+    "work": "",
+    "year": "",
+    "source": {
+      "kind": "citation",
+      "ref": "No work; the line is not in his books, letters or interviews",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "craft"
+    ],
+    "confidence": "low",
+    "adapted": false,
+    "note": "A famous orphan. The nearest real source is a line in Peter De Vries's novel Reuben, Reuben (1964). Never ship it under his name.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "None: no passage can be placed. Kept here so the misattribution is on record."
+  },
+  {
+    "id": "q-mm01",
+    "text": "When I dance, I dance; when I sleep, I sleep.",
+    "who": "Michel de Montaigne",
+    "work": "Essays",
+    "year": "1588",
+    "source": {
+      "kind": "essay",
+      "ref": "Essais, book III, chapter 13, De l'experience",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "pleasure",
+      "discipline",
+      "presence"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Quand je danse, je danse; quand je dors, je dors.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Book III, chapter 13, Of Experience, near the end, on taking pleasures as they come."
+  },
+  {
+    "id": "q-mm02",
+    "text": "The thing I fear most is fear.",
+    "who": "Michel de Montaigne",
+    "work": "Essays",
+    "year": "1580",
+    "source": {
+      "kind": "essay",
+      "ref": "Essais, book I, chapter 18, De la peur",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "fear",
+      "courage"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "C'est de quoi j'ai le plus de peur que la peur. Older than the Roosevelt line it resembles.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Book I, chapter 18, Of Fear, opening paragraph."
+  },
+  {
+    "id": "q-ep01",
+    "text": "Of all the things which wisdom provides to make life entirely happy, much the greatest is the possession of friendship.",
+    "who": "Epicurus",
+    "work": "Principal Doctrines",
+    "year": "c. 300 BC",
+    "source": {
+      "kind": "book",
+      "ref": "Kyriai Doxai XXVII, preserved in Diogenes Laertius, Lives X",
+      "language": "Greek",
+      "translation": "translation"
+    },
+    "tags": [
+      "generosity",
+      "friendship",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Translation after R. D. Hicks (Loeb, 1925).",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Principal Doctrine 27 in every numbering."
+  },
+  {
+    "id": "q-ep02",
+    "text": "Reflect carefully with whom you are to eat and drink, rather than what you are to eat and drink; for a dinner of meats without the company of a friend is like the life of a lion or a wolf.",
+    "who": "Epicurus",
+    "work": "as quoted by Seneca, Letters to Lucilius",
+    "year": "c. 64",
+    "source": {
+      "kind": "letter",
+      "ref": "Seneca, Epistulae Morales 19.10, quoting Epicurus",
+      "language": "Latin",
+      "translation": "translation"
+    },
+    "tags": [
+      "table",
+      "hospitality",
+      "generosity"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "\"You must\" and \"beforehand\" are dropped from the opening for length; the rest is Gummere's wording.",
+    "note": "Seneca quotes it as Epicurus's; the Greek original is lost. Translation after R. M. Gummere (Loeb, 1917).",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Letter 19, section 10."
+  },
+  {
+    "id": "q-ep03",
+    "text": "Plain fare gives as much pleasure as a costly diet, when once the pain of want has been removed.",
+    "who": "Epicurus",
+    "work": "Letter to Menoeceus",
+    "year": "c. 300 BC",
+    "source": {
+      "kind": "letter",
+      "ref": "Letter to Menoeceus, in Diogenes Laertius, Lives X.130",
+      "language": "Greek",
+      "translation": "translation"
+    },
+    "tags": [
+      "hunger",
+      "pleasure",
+      "table"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Translation after R. D. Hicks (Loeb, 1925); it continues \"while bread and water confer the highest possible pleasure when they are brought to hungry lips\".",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Diogenes Laertius X.130 to 131."
+  },
+  {
+    "id": "q-sn01",
+    "text": "It is not the man who has too little, but the man who craves more, that is poor.",
+    "who": "Seneca",
+    "work": "Letters to Lucilius",
+    "year": "c. 64",
+    "source": {
+      "kind": "letter",
+      "ref": "Epistulae Morales 2.6, where Seneca quotes it from Epicurus",
+      "language": "Latin",
+      "translation": "translation"
+    },
+    "tags": [
+      "discipline",
+      "hunger",
+      "generosity"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Non qui parum habet, sed qui plus cupit, pauper est. Seneca gives it as Epicurus's saying; the letter is his.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Letter 2, section 6; translation after R. M. Gummere (Loeb, 1917)."
+  },
+  {
+    "id": "q-sn02",
+    "text": "It is not that we have a short space of time, but that we waste much of it.",
+    "who": "Seneca",
+    "work": "On the Shortness of Life",
+    "year": "c. 49",
+    "source": {
+      "kind": "essay",
+      "ref": "De Brevitate Vitae 1.3",
+      "language": "Latin",
+      "translation": "translation"
+    },
+    "tags": [
+      "discipline",
+      "work",
+      "time"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Non exiguum temporis habemus, sed multum perdidimus.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Chapter 1, section 3; translation after J. W. Basore (Loeb, 1932)."
+  },
+  {
+    "id": "q-sn09",
+    "text": "Luck is what happens when preparation meets opportunity.",
+    "who": "Seneca",
+    "work": "",
+    "year": "",
+    "source": {
+      "kind": "citation",
+      "ref": "No work; not in Seneca",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "work"
+    ],
+    "confidence": "low",
+    "adapted": false,
+    "note": "A twentieth-century line pinned on Seneca by quotation sites; nothing like it is in his Latin. Never ship it.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "None; on record as a misattribution."
+  },
+  {
+    "id": "q-ma01",
+    "text": "In the morning when thou risest unwillingly, let this thought be present: I am rising to the work of a human being.",
+    "who": "Marcus Aurelius",
+    "work": "Meditations",
+    "year": "c. 170",
+    "source": {
+      "kind": "book",
+      "ref": "Meditations V.1, George Long's translation (1862)",
+      "language": "Greek",
+      "translation": "translation"
+    },
+    "tags": [
+      "work",
+      "discipline"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "Long's dash before \"I am rising\" is a colon.",
+    "note": "Long's wording; other translators give \"reluctantly\" for unwillingly.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Book V, section 1, the opening sentence."
+  },
+  {
+    "id": "q-ec01",
+    "text": "No great thing is created suddenly, any more than a bunch of grapes or a fig. Let it first blossom, then bear fruit, then ripen.",
+    "who": "Epictetus",
+    "work": "Discourses",
+    "year": "c. 108",
+    "source": {
+      "kind": "book",
+      "ref": "Discourses I.15.7 to 8, George Long's translation (1877)",
+      "language": "Greek",
+      "translation": "translation"
+    },
+    "tags": [
+      "patience",
+      "craft",
+      "wine"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The middle sentence (if you tell me that you desire a fig, I answer you that there must be time) is cut for length.",
+    "note": "Recorded by Arrian.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Book I, chapter 15, the closing lines."
+  },
+  {
+    "id": "q-cf01",
+    "text": "When you know a thing, to hold that you know it; and when you do not know a thing, to allow that you do not know it; this is knowledge.",
+    "who": "Confucius",
+    "work": "Analects",
+    "year": "c. 450 BC",
+    "source": {
+      "kind": "book",
+      "ref": "Analects II.17, James Legge's translation (1861)",
+      "language": "Chinese",
+      "translation": "translation"
+    },
+    "tags": [
+      "honesty",
+      "discipline"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "Legge's dash before \"this is knowledge\" is a semicolon.",
+    "note": "Legge's wording.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Book II, chapter 17."
+  },
+  {
+    "id": "q-cf02",
+    "text": "Is it not delightful to have friends coming from distant quarters?",
+    "who": "Confucius",
+    "work": "Analects",
+    "year": "c. 450 BC",
+    "source": {
+      "kind": "book",
+      "ref": "Analects I.1, James Legge's translation (1861)",
+      "language": "Chinese",
+      "translation": "translation"
+    },
+    "tags": [
+      "hospitality",
+      "travel",
+      "generosity"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Legge's wording of the second sentence of the Analects.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Book I, chapter 1."
+  },
+  {
+    "id": "q-cf03",
+    "text": "He did not eat anything which was ill-cooked, or was not in season. He did not eat meat which was not cut properly, nor what was served without its proper sauce.",
+    "who": "Confucius",
+    "work": "Analects",
+    "year": "c. 450 BC",
+    "source": {
+      "kind": "book",
+      "ref": "Analects X.8, James Legge's translation (1861)",
+      "language": "Chinese",
+      "translation": "translation"
+    },
+    "tags": [
+      "kitchen",
+      "craft",
+      "discipline"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The first sentence's clauses on discoloured food and bad flavour are cut for length.",
+    "note": "Book X describes the master's own habits; the passage is about him, in Legge's wording.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Book X, chapter 8, sections 3 and 4."
+  },
+  {
+    "id": "q-cf09",
+    "text": "Choose a job you love, and you will never have to work a day in your life.",
+    "who": "Confucius",
+    "work": "",
+    "year": "",
+    "source": {
+      "kind": "citation",
+      "ref": "No work; not in the Analects",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "work"
+    ],
+    "confidence": "low",
+    "adapted": false,
+    "note": "A \"Confucius says\" invention of the twentieth century. Never ship it.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "None; on record as a misattribution."
+  },
+  {
+    "id": "q-lt01",
+    "text": "Governing a great state is like cooking small fish.",
+    "who": "Lao Tzu",
+    "work": "Tao Te Ching",
+    "year": "c. 400 BC",
+    "source": {
+      "kind": "book",
+      "ref": "Chapter 60, James Legge's translation (1891)",
+      "language": "Chinese",
+      "translation": "translation"
+    },
+    "tags": [
+      "kitchen",
+      "patience",
+      "craft"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Other translators give \"frying a small fish\"; the sense, do not keep turning it, is the same.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Chapter 60, first line."
+  },
+  {
+    "id": "q-lt02",
+    "text": "The journey of a thousand li commenced with a single step.",
+    "who": "Lao Tzu",
+    "work": "Tao Te Ching",
+    "year": "c. 400 BC",
+    "source": {
+      "kind": "book",
+      "ref": "Chapter 64, James Legge's translation (1891)",
+      "language": "Chinese",
+      "translation": "translation"
+    },
+    "tags": [
+      "patience",
+      "travel",
+      "work"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Usually given as \"a journey of a thousand miles begins with a single step\"; Legge keeps the li.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Chapter 64."
+  },
+  {
+    "id": "q-hdt1",
+    "text": "I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach.",
+    "who": "Henry David Thoreau",
+    "work": "Walden",
+    "year": "1854",
+    "source": {
+      "kind": "book",
+      "ref": "Chapter 2, Where I Lived, and What I Lived For",
+      "language": "English",
+      "translation": "adapted"
+    },
+    "tags": [
+      "discipline",
+      "honesty"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "Cut after \"teach\"; the sentence continues \"and not, when I came to die, discover that I had not lived\".",
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The second chapter of Walden."
+  },
+  {
+    "id": "q-hdt2",
+    "text": "The cost of a thing is the amount of what I will call life which is required to be exchanged for it, immediately or in the long run.",
+    "who": "Henry David Thoreau",
+    "work": "Walden",
+    "year": "1854",
+    "source": {
+      "kind": "book",
+      "ref": "Chapter 1, Economy",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "work",
+      "discipline"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The Economy chapter, in the passage on what a house costs."
+  },
+  {
+    "id": "q-mt01",
+    "text": "Travel is fatal to prejudice, bigotry, and narrow-mindedness, and many of our people need it sorely on these accounts.",
+    "who": "Mark Twain",
+    "work": "The Innocents Abroad",
+    "year": "1869",
+    "source": {
+      "kind": "book",
+      "ref": "Conclusion",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "travel"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "The next sentence, on vegetating in one little corner of the earth, is often run on; it is cut here for length.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The Conclusion of The Innocents Abroad."
+  },
+  {
+    "id": "q-mt02",
+    "text": "Courage is resistance to fear, mastery of fear: not absence of fear.",
+    "who": "Mark Twain",
+    "work": "Pudd'nhead Wilson",
+    "year": "1894",
+    "source": {
+      "kind": "book",
+      "ref": "Pudd'nhead Wilson's Calendar, the heading of chapter 12",
+      "language": "English",
+      "translation": "adapted"
+    },
+    "tags": [
+      "fear",
+      "courage"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The dash before \"not absence of fear\" is a colon here.",
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Chapter 12 epigraph from the Calendar."
+  },
+  {
+    "id": "q-mt03",
+    "text": "Truth is the most valuable thing we have. Economize it.",
+    "who": "Mark Twain",
+    "work": "Following the Equator",
+    "year": "1897",
+    "source": {
+      "kind": "book",
+      "ref": "Pudd'nhead Wilson's New Calendar, the heading of chapter 7",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "honesty"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "American spelling of economize is his.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Chapter 7 epigraph of Following the Equator."
+  },
+  {
+    "id": "q-mt04",
+    "text": "Be careless in your dress if you must, but keep a tidy soul.",
+    "who": "Mark Twain",
+    "work": "Following the Equator",
+    "year": "1897",
+    "source": {
+      "kind": "book",
+      "ref": "Pudd'nhead Wilson's New Calendar, the heading of chapter 23",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "honesty",
+      "discipline"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Chapter 23 epigraph of Following the Equator."
+  },
+  {
+    "id": "q-mt05",
+    "text": "Part of the secret of success in life is to eat what you like and let the food fight it out inside.",
+    "who": "Mark Twain",
+    "work": "Notebook",
+    "year": "1898",
+    "source": {
+      "kind": "book",
+      "ref": "Mark Twain's Notebook, ed. A. B. Paine (1935), an 1898 entry",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "pleasure"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "Genuinely from the notebooks as Paine printed them, but the entry's date and exact wording are not placed well enough to ship.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Paine's 1935 edition of the notebooks; year from memory."
+  },
+  {
+    "id": "q-mt09",
+    "text": "The secret of getting ahead is getting started.",
+    "who": "Mark Twain",
+    "work": "",
+    "year": "",
+    "source": {
+      "kind": "citation",
+      "ref": "No work; not in Twain",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "work"
+    ],
+    "confidence": "low",
+    "adapted": false,
+    "note": "One of Twain's many orphans; the earliest printings are twentieth century and unsigned. Never ship it.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "None; on record as a misattribution."
+  },
+  {
+    "id": "q-ow01",
+    "text": "I can resist everything except temptation.",
+    "who": "Oscar Wilde",
+    "work": "Lady Windermere's Fan",
+    "year": "1892",
+    "source": {
+      "kind": "book",
+      "ref": "Act I, Lord Darlington",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "pleasure",
+      "wit"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Act I of the play, first performed February 1892."
+  },
+  {
+    "id": "q-ow02",
+    "text": "We are all in the gutter, but some of us are looking at the stars.",
+    "who": "Oscar Wilde",
+    "work": "Lady Windermere's Fan",
+    "year": "1892",
+    "source": {
+      "kind": "book",
+      "ref": "Act III, Lord Darlington",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "pleasure",
+      "hope"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Act III."
+  },
+  {
+    "id": "q-ow03",
+    "text": "The truth is rarely pure and never simple.",
+    "who": "Oscar Wilde",
+    "work": "The Importance of Being Earnest",
+    "year": "1895",
+    "source": {
+      "kind": "book",
+      "ref": "Act I, Algernon",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "honesty",
+      "wit"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Act I."
+  },
+  {
+    "id": "q-ow04",
+    "text": "After a good dinner one can forgive anybody, even one's own relations.",
+    "who": "Oscar Wilde",
+    "work": "A Woman of No Importance",
+    "year": "1893",
+    "source": {
+      "kind": "book",
+      "ref": "A Woman of No Importance; the act and speaker are not placed from memory",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "generosity",
+      "wit"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "The line is Wilde's and from this play, but I cannot place the act or the speaker with certainty, so it is not shipped.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The play; placement unverified."
+  },
+  {
+    "id": "q-ow09",
+    "text": "Be yourself; everyone else is already taken.",
+    "who": "Oscar Wilde",
+    "work": "",
+    "year": "",
+    "source": {
+      "kind": "citation",
+      "ref": "No work; not in Wilde",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "wit"
+    ],
+    "confidence": "low",
+    "adapted": false,
+    "note": "A late twentieth-century line with no appearance in his works or letters. Never ship it.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "None; on record as a misattribution."
+  },
+  {
+    "id": "q-pl01",
+    "text": "It has passed into a proverb that in wine there is truth.",
+    "who": "Pliny the Elder",
+    "work": "Natural History",
+    "year": "c. 77",
+    "source": {
+      "kind": "book",
+      "ref": "Naturalis Historia XIV.141 (book 14, chapter 28)",
+      "language": "Latin",
+      "translation": "translation"
+    },
+    "tags": [
+      "wine",
+      "honesty"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Vulgoque veritas iam attributa vino est. The three-word tag \"in vino veritas\" is a later compression, not his sentence.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Book XIV, the close of the section on drunkenness."
+  },
+  {
+    "id": "q-pl02",
+    "text": "Fortune favours the bold.",
+    "who": "Pliny the Elder",
+    "work": "as reported by Pliny the Younger, Letters",
+    "year": "79",
+    "source": {
+      "kind": "letter",
+      "ref": "Pliny the Younger, Epistulae VI.16, to Tacitus, on the eruption of Vesuvius",
+      "language": "Latin",
+      "translation": "translation"
+    },
+    "tags": [
+      "courage",
+      "fear"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Fortes fortuna iuvat; the proverb is older (Terence), and the Younger reports his uncle saying it as he ordered the ships toward the eruption.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Letter VI.16, section 11."
+  },
+  {
+    "id": "q-hr01",
+    "text": "Seize the day, trusting as little as possible in the next.",
+    "who": "Horace",
+    "work": "Odes",
+    "year": "23 BC",
+    "source": {
+      "kind": "book",
+      "ref": "Odes I.11, line 8",
+      "language": "Latin",
+      "translation": "translation"
+    },
+    "tags": [
+      "pleasure",
+      "time"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Carpe diem, quam minimum credula postero.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The last line of Odes I.11, to Leuconoe."
+  },
+  {
+    "id": "q-hr02",
+    "text": "Now is the time for drinking, now the time to beat the earth with unfettered foot.",
+    "who": "Horace",
+    "work": "Odes",
+    "year": "23 BC",
+    "source": {
+      "kind": "book",
+      "ref": "Odes I.37, lines 1 to 2",
+      "language": "Latin",
+      "translation": "translation"
+    },
+    "tags": [
+      "wine",
+      "bar",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Nunc est bibendum, nunc pede libero pulsanda tellus. The Cleopatra ode.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Odes I.37, opening."
+  },
+  {
+    "id": "q-hr03",
+    "text": "They change their sky, not their soul, who run across the sea.",
+    "who": "Horace",
+    "work": "Epistles",
+    "year": "20 BC",
+    "source": {
+      "kind": "letter",
+      "ref": "Epistles I.11, line 27",
+      "language": "Latin",
+      "translation": "translation"
+    },
+    "tags": [
+      "travel"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Caelum non animum mutant qui trans mare currunt.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Epistle I.11, to Bullatius."
+  },
+  {
+    "id": "q-hr04",
+    "text": "Life grants nothing to mortals without great labour.",
+    "who": "Horace",
+    "work": "Satires",
+    "year": "35 BC",
+    "source": {
+      "kind": "book",
+      "ref": "Satires I.9, lines 59 to 60",
+      "language": "Latin",
+      "translation": "translation"
+    },
+    "tags": [
+      "work",
+      "craft",
+      "discipline"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Nil sine magno vita labore dedit mortalibus.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Satire I.9, the bore on the Via Sacra."
+  },
+  {
+    "id": "q-ok01",
+    "text": "Here with a Loaf of Bread beneath the Bough, a Flask of Wine, a Book of Verse, and Thou beside me singing in the Wilderness, and Wilderness is Paradise enow.",
+    "who": "Omar Khayyam",
+    "work": "Rubaiyat of Omar Khayyam",
+    "year": "1859",
+    "source": {
+      "kind": "book",
+      "ref": "Edward FitzGerald's first edition (1859), quatrain XI",
+      "language": "Persian",
+      "translation": "translation"
+    },
+    "tags": [
+      "wine",
+      "table",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The two dashes, before \"and Thou\" and after \"Wilderness\", are commas; the line breaks are run on.",
+    "note": "FitzGerald's rendering is free. The fifth edition (1889) recasts the quatrain as \"A Book of Verses underneath the Bough, a Jug of Wine, a Loaf of Bread\" and ends \"Oh, Wilderness were Paradise enow!\"; the first edition is quoted.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Quatrain XI of the 1859 edition."
+  },
+  {
+    "id": "q-ok02",
+    "text": "Come, fill the Cup, and in the Fire of Spring the Winter Garment of Repentance fling: the Bird of Time has but a little way to fly, and Lo! the Bird is on the Wing.",
+    "who": "Omar Khayyam",
+    "work": "Rubaiyat of Omar Khayyam",
+    "year": "1859",
+    "source": {
+      "kind": "book",
+      "ref": "Edward FitzGerald's first edition (1859), quatrain VII",
+      "language": "Persian",
+      "translation": "adapted"
+    },
+    "tags": [
+      "wine",
+      "time",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The dash before \"and Lo!\" is a comma; the line breaks are run on.",
+    "note": "FitzGerald's rendering.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Quatrain VII of the 1859 edition."
+  },
+  {
+    "id": "q-ok03",
+    "text": "I often wonder what the Vintners buy one half so precious as the Goods they sell.",
+    "who": "Omar Khayyam",
+    "work": "Rubaiyat of Omar Khayyam",
+    "year": "1859",
+    "source": {
+      "kind": "book",
+      "ref": "Edward FitzGerald, first edition quatrain LXXI; fifth edition XCV",
+      "language": "Persian",
+      "translation": "translation"
+    },
+    "tags": [
+      "wine",
+      "bar"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "Two forms circulate: \"the Goods they sell\" and \"the stuff they sell\", and I cannot say from memory which edition carries which. Not shipped until placed.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The quatrain exists in both editions; the wording is unsettled."
+  },
+  {
+    "id": "q-wc01",
+    "text": "Never give in, never give in, never, never, never, never: in nothing, great or small, large or petty, never give in except to convictions of honour and good sense.",
+    "who": "Winston Churchill",
+    "work": "Speech at Harrow School",
+    "year": "1941",
+    "source": {
+      "kind": "speech",
+      "ref": "Harrow School, 29 October 1941",
+      "language": "English",
+      "translation": "adapted"
+    },
+    "tags": [
+      "discipline",
+      "courage"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The two dashes are a colon and a comma.",
+    "note": "Often shortened to \"never, never, never give up\", which he did not say.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The Harrow speech of 29 October 1941, printed in The Unrelenting Struggle (1942)."
+  },
+  {
+    "id": "q-wc02",
+    "text": "I have taken more out of alcohol than alcohol has taken out of me.",
+    "who": "Winston Churchill",
+    "work": "",
+    "year": "",
+    "source": {
+      "kind": "citation",
+      "ref": "Reported by his private secretary; no speech or book of his own",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "bar",
+      "wit"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "Well attested as reported speech but not his own writing, and the occasion is not placed. Not shipped.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Secondary reports only."
+  },
+  {
+    "id": "q-wc09",
+    "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    "who": "Winston Churchill",
+    "work": "",
+    "year": "",
+    "source": {
+      "kind": "citation",
+      "ref": "No work; not in his speeches or books",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "courage"
+    ],
+    "confidence": "low",
+    "adapted": false,
+    "note": "The Churchill Society lists it among the lines he never said. Never ship it.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "None; on record as a misattribution."
+  },
+  {
+    "id": "q-cb01",
+    "text": "One should always be drunk. That is all there is to it: it is the only question. But with what? With wine, with poetry, or with virtue, as you choose. But get drunk.",
+    "who": "Charles Baudelaire",
+    "work": "Paris Spleen",
+    "year": "1869",
+    "source": {
+      "kind": "book",
+      "ref": "Le Spleen de Paris, XXXIII, Enivrez-vous",
+      "language": "French",
+      "translation": "adapted"
+    },
+    "tags": [
+      "wine",
+      "pleasure",
+      "time"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The sentence on the burden of Time is cut between \"question\" and \"But with what?\".",
+    "note": "Il faut etre toujours ivre. Tout est la: c'est l'unique question. Mais de quoi? De vin, de poesie ou de vertu, a votre guise. Mais enivrez-vous.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Prose poem XXXIII of Le Spleen de Paris (Petits poemes en prose)."
+  },
+  {
+    "id": "q-cb02",
+    "text": "One evening, the soul of wine sang in the bottles.",
+    "who": "Charles Baudelaire",
+    "work": "The Flowers of Evil",
+    "year": "1857",
+    "source": {
+      "kind": "book",
+      "ref": "Les Fleurs du mal, Le Vin, L'Ame du vin, first line",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "wine"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Un soir, l'ame du vin chantait dans les bouteilles.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The opening line of L'Ame du vin, the first of the wine poems."
+  },
+  {
+    "id": "q-co01",
+    "text": "If I cannot have too many truffles, I will do without truffles.",
+    "who": "Colette",
+    "work": "Prisons et paradis",
+    "year": "1932",
+    "source": {
+      "kind": "essay",
+      "ref": "Prisons et paradis (1932), the piece on the truffle",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "table",
+      "pleasure"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "Widely cited to this book; I cannot give the French sentence from memory with certainty, so it is not shipped.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The truffle essay in Prisons et paradis; wording unverified."
+  },
+  {
+    "id": "q-vw01",
+    "text": "One cannot think well, love well, sleep well, if one has not dined well.",
+    "who": "Virginia Woolf",
+    "work": "A Room of One's Own",
+    "year": "1929",
+    "source": {
+      "kind": "essay",
+      "ref": "Chapter 1, after the dinner at the women's college",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "hunger",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Chapter 1, the passage comparing the two college meals."
+  },
+  {
+    "id": "q-vw02",
+    "text": "The lamp in the spine does not light on beef and prunes.",
+    "who": "Virginia Woolf",
+    "work": "A Room of One's Own",
+    "year": "1929",
+    "source": {
+      "kind": "essay",
+      "ref": "Chapter 1, the same passage",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "hunger"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Chapter 1, the sentence before the one above."
+  },
+  {
+    "id": "q-jb01",
+    "text": "Food is our common ground, a universal experience.",
+    "who": "James Beard",
+    "work": "Beard on Food",
+    "year": "1974",
+    "source": {
+      "kind": "book",
+      "ref": "Beard on Food (Knopf, 1974), the opening of the introduction",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "hospitality"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The first sentence of the book's introduction."
+  },
+  {
+    "id": "q-ab01",
+    "text": "Good food is very often, even most often, simple food.",
+    "who": "Anthony Bourdain",
+    "work": "Kitchen Confidential",
+    "year": "2000",
+    "source": {
+      "kind": "book",
+      "ref": "Kitchen Confidential (Bloomsbury, 2000), the chapter How to Cook Like the Pros",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "kitchen",
+      "craft"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "The paragraph goes on: whole cuisines are a matter of three or four ingredients.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "How to Cook Like the Pros, the paragraph on shallots, butter and stock."
+  },
+  {
+    "id": "q-ab02",
+    "text": "Cooking is a craft, I like to think, and a good cook is a craftsman, not an artist.",
+    "who": "Anthony Bourdain",
+    "work": "Kitchen Confidential",
+    "year": "2000",
+    "source": {
+      "kind": "book",
+      "ref": "Kitchen Confidential (Bloomsbury, 2000), the chapter Who Cooks?",
+      "language": "English",
+      "translation": "adapted"
+    },
+    "tags": [
+      "kitchen",
+      "craft",
+      "work"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The dash before \"not an artist\" is a comma.",
+    "note": "It continues: the great cathedrals of Europe were built by craftsmen, though not designed by them.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Who Cooks?, the passage on craft against art."
+  },
+  {
+    "id": "q-ab03",
+    "text": "Your body is not a temple, it's an amusement park. Enjoy the ride.",
+    "who": "Anthony Bourdain",
+    "work": "Kitchen Confidential",
+    "year": "2000",
+    "source": {
+      "kind": "book",
+      "ref": "Kitchen Confidential; the chapter is not placed from memory",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "pleasure"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "His, and from this book, but I cannot place the chapter, so it is not shipped.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Kitchen Confidential; placement unverified."
+  },
+  {
+    "id": "q-ab04",
+    "text": "Travel isn't always pretty. It isn't always comfortable. Sometimes it hurts, it even breaks your heart. But that's okay. The journey changes you; it should change you.",
+    "who": "Anthony Bourdain",
+    "work": "No Reservations: Around the World on an Empty Stomach",
+    "year": "2007",
+    "source": {
+      "kind": "book",
+      "ref": "No Reservations (Bloomsbury, 2007); also spoken in the programme's narration",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "travel"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "The words are his from the programme; whether the book prints them in this form I cannot say from memory. Not shipped.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Programme narration; book page unverified."
+  },
+  {
+    "id": "q-mf01",
+    "text": "It seems to me that our three basic needs, for food and security and love, are so mixed and mingled and entwined that we cannot straightly think of one without the others.",
+    "who": "M. F. K. Fisher",
+    "work": "The Gastronomical Me",
+    "year": "1943",
+    "source": {
+      "kind": "book",
+      "ref": "Foreword (Duell, Sloan and Pearce, 1943)",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "hunger",
+      "table",
+      "generosity"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The foreword, answering why she writes about food."
+  },
+  {
+    "id": "q-mf02",
+    "text": "There is a communion of more than our bodies when bread is broken and wine drunk.",
+    "who": "M. F. K. Fisher",
+    "work": "The Gastronomical Me",
+    "year": "1943",
+    "source": {
+      "kind": "book",
+      "ref": "Foreword (Duell, Sloan and Pearce, 1943)",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "wine",
+      "hospitality"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The foreword, the sentence before her answer to why she writes about hunger."
+  },
+  {
+    "id": "q-mf03",
+    "text": "Sharing food with another human being is an intimate act that should not be indulged in lightly.",
+    "who": "M. F. K. Fisher",
+    "work": "An Alphabet for Gourmets",
+    "year": "1949",
+    "source": {
+      "kind": "book",
+      "ref": "An Alphabet for Gourmets (1949); the letter is not placed from memory",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "hospitality"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "Hers, but I cannot place the chapter, so it is not shipped.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Placement unverified."
+  },
+  {
+    "id": "q-mf09",
+    "text": "First we eat, then we do everything else.",
+    "who": "M. F. K. Fisher",
+    "work": "",
+    "year": "",
+    "source": {
+      "kind": "citation",
+      "ref": "No work placed",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table"
+    ],
+    "confidence": "low",
+    "adapted": false,
+    "note": "Pinned on her everywhere; no passage in her books carries it. Never ship it.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "None; on record as a misattribution."
+  },
+  {
+    "id": "q-jc01",
+    "text": "This is a book for the servantless American cook who can be unconcerned on occasion with budgets, waistlines, time tables, children's meals, the parent-chauffeur-den-mother syndrome, or anything else which might interfere with the enjoyment of producing something wonderful to eat.",
+    "who": "Julia Child",
+    "work": "Mastering the Art of French Cooking",
+    "year": "1961",
+    "source": {
+      "kind": "book",
+      "ref": "Foreword, first sentence (Knopf, 1961), with Simone Beck and Louisette Bertholle",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "kitchen",
+      "pleasure",
+      "craft"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Exactly forty words.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The first sentence of the foreword to volume one."
+  },
+  {
+    "id": "q-jc02",
+    "text": "Learn how to cook, try new recipes, learn from your mistakes, be fearless, and above all have fun!",
+    "who": "Julia Child",
+    "work": "My Life in France",
+    "year": "2006",
+    "source": {
+      "kind": "book",
+      "ref": "My Life in France, with Alex Prud'homme (Knopf, 2006), the closing pages",
+      "language": "English",
+      "translation": "adapted"
+    },
+    "tags": [
+      "kitchen",
+      "fear",
+      "craft"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The dash after \"cook\" is a comma.",
+    "note": "Given there as her invariable advice to people.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The last pages of My Life in France."
+  },
+  {
+    "id": "q-jc03",
+    "text": "The only real stumbling block is fear of failure. In cooking you've got to have a what-the-hell attitude.",
+    "who": "Julia Child",
+    "work": "Julia Child and More Company",
+    "year": "1979",
+    "source": {
+      "kind": "book",
+      "ref": "Julia Child and More Company (Knopf, 1979), introduction",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "fear",
+      "kitchen"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "Hers, and usually cited to this book, but I cannot stake the placement from memory. Not shipped.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Placement unverified."
+  },
+  {
+    "id": "q-jc09",
+    "text": "People who love to eat are always the best people.",
+    "who": "Julia Child",
+    "work": "",
+    "year": "",
+    "source": {
+      "kind": "citation",
+      "ref": "No work placed",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table"
+    ],
+    "confidence": "low",
+    "adapted": false,
+    "note": "Quoted everywhere, placed nowhere. Never ship it under her name.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "None; on record as a misattribution."
+  },
+  {
+    "id": "q-ed01",
+    "text": "Good food is always a trouble and its preparation should be regarded as a labour of love.",
+    "who": "Elizabeth David",
+    "work": "French Country Cooking",
+    "year": "1951",
+    "source": {
+      "kind": "book",
+      "ref": "French Country Cooking (John Lehmann, 1951), introduction",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "kitchen",
+      "craft",
+      "work"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "The sentence goes on to say the book is for those who enjoy the labour of entertaining their friends.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The introduction to French Country Cooking."
+  },
+  {
+    "id": "q-fp01",
+    "text": "Success is the sum of a lot of small things done correctly.",
+    "who": "Fernand Point",
+    "work": "Ma Gastronomie",
+    "year": "1969",
+    "source": {
+      "kind": "book",
+      "ref": "Ma Gastronomie (Flammarion, 1969), the notebook maxims",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "craft",
+      "discipline",
+      "kitchen"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "Among the maxims printed from his notebooks; the French wording is not certain from memory. Not shipped.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The maxims in Ma Gastronomie; wording unverified."
+  },
+  {
+    "id": "q-ae01",
+    "text": "Keep it simple.",
+    "who": "Auguste Escoffier",
+    "work": "",
+    "year": "",
+    "source": {
+      "kind": "citation",
+      "ref": "Faites simple, his motto, reported in his memoirs and by his pupils",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "kitchen",
+      "craft"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "Two words everyone agrees he said; no single passage of his own to point to. Not shipped.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Reported speech."
+  },
+  {
+    "id": "q-aw01",
+    "text": "Good food should be a right, not a privilege.",
+    "who": "Alice Waters",
+    "work": "",
+    "year": "",
+    "source": {
+      "kind": "citation",
+      "ref": "Said in many talks and interviews; no single text placed",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "generosity"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "Hers in substance; no occasion placed. Not shipped.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Reported speech."
+  },
+  {
+    "id": "q-mh01",
+    "text": "What people do with food is an act that reveals how they construe the world.",
+    "who": "Marcella Hazan",
+    "work": "Essentials of Classic Italian Cooking",
+    "year": "1992",
+    "source": {
+      "kind": "book",
+      "ref": "Essentials of Classic Italian Cooking (Knopf, 1992), introduction",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "kitchen"
+    ],
+    "confidence": "medium",
+    "adapted": false,
+    "note": "Cited to the introduction; wording not staked from memory. Not shipped.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Placement unverified."
+  },
+  {
+    "id": "q-sj01",
+    "text": "I look upon it, that he who does not mind his belly will hardly mind anything else.",
+    "who": "Samuel Johnson",
+    "work": "as recorded by Boswell, The Life of Samuel Johnson",
+    "year": "1763",
+    "source": {
+      "kind": "book",
+      "ref": "Boswell, Life of Johnson (1791), under 5 August 1763",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "hunger",
+      "discipline"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Boswell's entry for 5 August 1763."
+  },
+  {
+    "id": "q-sj02",
+    "text": "There is nothing which has yet been contrived by man by which so much happiness is produced as by a good tavern or inn.",
+    "who": "Samuel Johnson",
+    "work": "as recorded by Boswell, The Life of Samuel Johnson",
+    "year": "1776",
+    "source": {
+      "kind": "book",
+      "ref": "Boswell, Life of Johnson (1791), under 21 March 1776",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "hospitality",
+      "bar",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Boswell's entry for 21 March 1776, at the Chapel House inn."
+  },
+  {
+    "id": "q-js01",
+    "text": "He was a bold man that first eat an oyster.",
+    "who": "Jonathan Swift",
+    "work": "Polite Conversation",
+    "year": "1738",
+    "source": {
+      "kind": "book",
+      "ref": "A Complete Collection of Genteel and Ingenious Conversation, Dialogue II",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "courage"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "\"Eat\" is the eighteenth-century past tense and is kept.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Dialogue II."
+  },
+  {
+    "id": "q-jm01",
+    "text": "One must eat to live, and not live to eat.",
+    "who": "Molière",
+    "work": "The Miser",
+    "year": "1668",
+    "source": {
+      "kind": "book",
+      "ref": "L'Avare, act III, scene 1, Valere",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "table",
+      "discipline"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Il faut manger pour vivre et non pas vivre pour manger. The sense is older (Socrates by way of Cicero); the line is Moliere's.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Act III, scene 1."
+  },
+  {
+    "id": "q-ws01",
+    "text": "Good company, good wine, good welcome, can make good people.",
+    "who": "William Shakespeare",
+    "work": "Henry VIII",
+    "year": "1613",
+    "source": {
+      "kind": "book",
+      "ref": "Henry VIII, act I, scene 4, Guildford",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "hospitality",
+      "wine",
+      "table"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Act I, scene 4, the banquet at York Place."
+  },
+  {
+    "id": "q-mc01",
+    "text": "Hunger is the best sauce in the world.",
+    "who": "Miguel de Cervantes",
+    "work": "Don Quixote",
+    "year": "1615",
+    "source": {
+      "kind": "book",
+      "ref": "Don Quixote, part II, chapter 5",
+      "language": "Spanish",
+      "translation": "translation"
+    },
+    "tags": [
+      "hunger",
+      "table"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "La mejor salsa del mundo es la hambre. A proverb Sancho repeats; the sense is in Cicero too.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Part II, chapter 5."
+  },
+  {
+    "id": "q-vt01",
+    "text": "The best is the enemy of the good.",
+    "who": "Voltaire",
+    "work": "Philosophical Dictionary",
+    "year": "1764",
+    "source": {
+      "kind": "book",
+      "ref": "Dictionnaire philosophique, the article Art dramatique",
+      "language": "French",
+      "translation": "translation"
+    },
+    "tags": [
+      "craft",
+      "discipline"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Le mieux est l'ennemi du bien; he gives it as an Italian proverb.",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "The article Art dramatique, 1764."
+  },
+  {
+    "id": "q-gs01",
+    "text": "There is no love sincerer than the love of food.",
+    "who": "George Bernard Shaw",
+    "work": "Man and Superman",
+    "year": "1903",
+    "source": {
+      "kind": "book",
+      "ref": "Man and Superman, act I, Tanner",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "table",
+      "pleasure"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Act I."
+  },
+  {
+    "id": "q-rs01",
+    "text": "I travel not to go anywhere, but to go. I travel for travel's sake. The great affair is to move.",
+    "who": "Robert Louis Stevenson",
+    "work": "Travels with a Donkey in the Cévennes",
+    "year": "1879",
+    "source": {
+      "kind": "book",
+      "ref": "The chapter Cheylard and Luc",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "travel"
+    ],
+    "confidence": "high",
+    "adapted": true,
+    "adaptedNote": "The opening \"For my part,\" is dropped.",
+    "note": "",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Cheylard and Luc."
+  },
+  {
+    "id": "q-rs02",
+    "text": "The wine is bottled poetry.",
+    "who": "Robert Louis Stevenson",
+    "work": "The Silverado Squatters",
+    "year": "1883",
+    "source": {
+      "kind": "book",
+      "ref": "The chapter Napa Wine",
+      "language": "English",
+      "translation": "original"
+    },
+    "tags": [
+      "wine"
+    ],
+    "confidence": "high",
+    "adapted": false,
+    "note": "Usually quoted without \"the\"; the sentence in the book ends \"...and the wine is bottled poetry\".",
+    "checkedBy": "claude-code (no live search this session)",
+    "checkedOn": "2026-10-03",
+    "evidence": "Napa Wine, on the Californian vineyards."
+  }
+]

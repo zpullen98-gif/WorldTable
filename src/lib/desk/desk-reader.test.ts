@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { readMenu, reReadAs, priceParts, TRUNCATION_NOTICE } from './desk-reader';
+import { readMenu, reReadAs, priceParts, MAX_LINES, TRUNCATION_NOTICE } from './desk-reader';
 import { deskSource, type DeskFile, type DeskItem, type DeskWine, type DeskCocktail, type DeskDish, type DeskUnsure } from './desk-file';
 
 /**
@@ -1042,11 +1042,16 @@ describe('the reader is total', () => {
 	});
 
 	it('stops at the size guard and says so in the notice rather than reading half a menu in silence', () => {
-		const huge = 'Crispy squid 9.50\n'.repeat(20000);
+		/* Stacked, one row per four lines, so the twenty thousand lines read
+		   mint five thousand ids, and read with real dice: the fixed dice above
+		   cycle after about ten thousand draws, which is not enough ids for a
+		   read this size, and the mint would wait for a free one for ever. */
+		const huge = 'Shrimp & Tasso Henican\n15.50\nWild shrimp stuffed with tasso ham, pickled okra and pepper jelly\n\n'.repeat(15000);
 		const started = Date.now();
-		const file = read(huge);
+		const file = readMenu(huge, deskSource('paste', 'table', huge, { now: NOW }), { now: NOW });
 		expect(Date.now() - started).toBeLessThan(5000);
-		expect(file.items.length).toBeLessThanOrEqual(5000);
+		expect(file.items.length).toBeLessThanOrEqual(MAX_LINES);
+		expect(Math.max(...file.items.map((i) => i.lines[1]))).toBeLessThan(MAX_LINES);
 		expect(file.notice).toBe(TRUNCATION_NOTICE);
 		expect('notice' in read('Olives 4')).toBe(false);
 	});

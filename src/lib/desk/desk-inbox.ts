@@ -53,11 +53,15 @@ export const DESK_INBOX_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 /**
  * The cap, in characters of the JSON text, which is the unit setItem is
  * measured in. A read of Commander's whole page is under 40 KB; a 300-row
- * hotel list is about 90 KB; 256 KB leaves room for three apps' reads to merge
- * and is a twentieth of the origin's usual 5 MB, which the three apps share.
- * Over it, the write is refused whole and the caller offers the download.
+ * hotel list is about 90 KB; a whole restaurant read at once (every menu, the
+ * wine list and the bar, which the House hands through here) runs to hundreds
+ * of KB, and 2 MB leaves room for three apps' reads to merge inside the
+ * origin's usual 5 MB, which the three apps share. Over it, the write is
+ * refused whole and the caller offers the download; a browser that refuses
+ * the write sooner is caught below as `refused`.
  */
-export const DESK_INBOX_CAP = 256 * 1024;
+/* 2 MB, raised from 256 KB on 3 October 2026 for the House: a whole restaurant read must pass the inbox. */
+export const DESK_INBOX_CAP = 2 * 1024 * 1024;
 
 /** The three methods this module uses, so a test can pass a Map-backed one. */
 export interface DeskStorage {

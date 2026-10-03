@@ -26,7 +26,7 @@ import {
 /**
  * The slot three apps share. What is under test is the set of rules the plan
  * fixed: merge by kind and folded name with the newer read winning, a taken
- * kind replaced and its mark cleared, the 256 KB cap refusing whole, the
+ * kind replaced and its mark cleared, the 2 MB cap refusing whole, the
  * thirty-day expiry of the draft, and the key deleted once every room has
  * taken its share. A Map stands in for localStorage so every rule runs under
  * plain Node; a `refuse` flag stands in for private browsing.
@@ -152,7 +152,7 @@ describe('writing and reading the slot', () => {
 		const before = storage.map.get(DESK_INBOX_KEY);
 
 		const huge = desk(
-			Array.from({ length: 500 }, (_, i) => dish(`Dish ${i}`, { description: 'x'.repeat(600) }))
+			Array.from({ length: 600 }, (_, i) => dish(`Dish ${i}`, { description: 'x'.repeat(4000) }))
 		);
 		expect(JSON.stringify(huge).length).toBeGreaterThan(DESK_INBOX_CAP);
 		const result = writeDeskInbox(huge, storage, NOW);
@@ -166,7 +166,7 @@ describe('writing and reading the slot', () => {
 		const said = [
 			writeDeskInbox(desk([dish('Soup')]), null, NOW),
 			writeDeskInbox(desk([dish('Soup')]), fakeStorage({ refuse: true }), NOW),
-			writeDeskInbox(desk([dish('x', { description: 'x'.repeat(600) })].concat(Array.from({ length: 499 }, (_, i) => dish(`D${i}`, { description: 'x'.repeat(600) })))), fakeStorage(), NOW)
+			writeDeskInbox(desk([dish('x', { description: 'x'.repeat(4000) })].concat(Array.from({ length: 599 }, (_, i) => dish(`D${i}`, { description: 'x'.repeat(4000) })))), fakeStorage(), NOW)
 		];
 		for (const r of said) {
 			expect(r.ok).toBe(false);

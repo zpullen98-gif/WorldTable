@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { parseMenuText } from './menu-parse';
+import { MAX_LINES } from './desk/desk-reader';
 import type { ParsedDish } from './menu-parse';
 
 /**
@@ -624,12 +625,13 @@ describe('the parser is total', () => {
 	});
 
 	it('stops at the size guard and says so rather than reading half a menu in silence', () => {
-		const huge = 'Crispy squid 9.50\n'.repeat(20000);
+		/* Stacked, one row per four lines, so the twenty thousand lines read mint five thousand ids and read in time. */
+		const huge = 'Shrimp & Tasso Henican\n15.50\nWild shrimp stuffed with tasso ham, pickled okra and pepper jelly\n\n'.repeat(15000);
 		const started = Date.now();
 		const { dishes, skipped } = parseMenuText(huge);
 		expect(Date.now() - started).toBeLessThan(5000);
-		expect(dishes.length).toBeLessThanOrEqual(5000);
-		expect(skipped[skipped.length - 1]).toMatch(/^Only the first 200,000 characters were read/);
+		expect(dishes.length).toBeLessThanOrEqual(MAX_LINES);
+		expect(skipped[skipped.length - 1]).toMatch(/^Only the first 1,000,000 characters were read/);
 	});
 });
 

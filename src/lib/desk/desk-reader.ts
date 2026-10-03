@@ -98,18 +98,19 @@ import { classify } from './desk-sort';
 
 /**
  * The size guard. A menu is a page or two: a long one runs to about 6kB of text,
- * and a photographed one is shorter still. The cap sits two orders of magnitude
- * above that because this runs synchronously on the main thread of a tab and the
- * input is a paste box, which means one day it will contain a novel, a whole PDF
- * dump or a log file. Everything past the cap is dropped rather than read, and
- * the desk file's `notice` says so in words, because reading half a menu and
- * saying nothing about it would be the reader lying about how much of the page
- * it saw.
+ * and a photographed one is shorter still. The cap sits far above that, because
+ * a whole wine list pasted at once runs to a few hundred kB, and because this
+ * runs synchronously on the main thread of a tab and the input is a paste box,
+ * which means one day it will contain a novel, a whole PDF dump or a log file.
+ * Everything past the cap is dropped rather than read, and the desk file's
+ * `notice` says so in words, because reading half a menu and saying nothing
+ * about it would be the reader lying about how much of the page it saw.
  */
-export const MAX_CHARS = 200_000;
-export const MAX_LINES = 5_000;
+/* 1,000,000 characters and 20,000 lines, raised from 200,000 and 5,000 on 3 October 2026 for the House: a whole wine list pasted at once. */
+export const MAX_CHARS = 1_000_000;
+export const MAX_LINES = 20_000;
 export const TRUNCATION_NOTICE =
-	'Only the first 200,000 characters were read. Split the menu up and bring the rest in separately.';
+	'Only the first 1,000,000 characters were read. Split the menu up and bring the rest in separately.';
 
 /**
  * How far back from the end of a line a price is allowed to start, in tokens.
