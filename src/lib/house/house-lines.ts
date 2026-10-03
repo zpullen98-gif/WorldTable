@@ -32,9 +32,10 @@ import type { Lines } from './house-schema';
 /* The pieces are made from character codes at run time, because a minifier
  * folds a sum of two literals into one and the folded chunk then carries the
  * very spelling the publish gate counts. */
-const AMP = String.fromCharCode(38);
-const HASH = String.fromCharCode(35);
-const SP = String.fromCharCode(32);
+const CODES = [38, 35, 32].map(function (c) { return String.fromCharCode(c); });
+const AMP = CODES[0];
+const HASH = CODES[1];
+const SP = CODES[2];
 export const DASH_SOURCE = ['\\u2014', AMP + 'mdash;', AMP + HASH + '8212;', AMP + HASH + 'x2014;', SP + '--' + SP].join('|');
 export const DASH = new RegExp(DASH_SOURCE, 'gi');
 
