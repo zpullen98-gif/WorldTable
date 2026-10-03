@@ -503,3 +503,235 @@ test('the lists open one editor at a time: an answer being written closes when a
 	await expect(lists.getByRole('textbox', { name: 'The term' })).toHaveCount(1);
 	await expect(lists.getByRole('button', { name: 'Save the answer' }), 'the add panel opened beside the answer form').toHaveCount(0);
 });
+
+/* ---------------------------------------------------------------------------
+ * The offline drills on /menu/quiz: the widened kept fixture seeded where the
+ * store's api reads it, a question answered with the score and the
+ * explanation on screen, a card flipped, a pairing answered, the answers in
+ * their own slot and none of it in the session export.
+ * ------------------------------------------------------------------------- */
+
+const DRILL_FIXTURE = join(HERE, '../src/lib/house/fixtures/house-drill.json');
+const drillFixture = () => JSON.parse(readFileSync(DRILL_FIXTURE, 'utf8')) as Record<string, any>;
+const DRILLED_SLOT = 'oot-house-drilled-v1';
+const drilledSlot = (page: Page) =>
+	page.evaluate((key) => JSON.parse(localStorage.getItem(key) ?? '[]') as Array<{ k: string; v: string; at: number }>, DRILLED_SLOT);
+
+test('?mode=drill deals from the kept house: an answer shows the score and the explanation, and records to the slot', async ({ page }) => {
+	await seedHouses(page, [drillFixture()]);
+	await goto(page, '/menu/quiz?mode=drill');
+	await expect(page.getByRole('button', { name: 'Drill the house' })).toHaveAttribute('aria-pressed', 'true');
+	await expect(page.locator('.count').first()).toContainText('The Lantern Room · 12 of 12 kinds deal');
+	// Every kind deals over the fixture, so no still-needed line.
+	await expect(page.locator('.needs')).toHaveCount(0);
+	await page.getByRole('button', { name: 'Deal ▸' }).click();
+	const card = page.locator('.flash.drill');
+	await expect(card.locator('.eyebrow')).toContainText('question 1 of 10');
+	await expect(card.locator('.score')).toHaveText('0 right of 0 answered');
+	const opts = card.locator('.opt');
+	await expect(opts).toHaveCount(4);
+	await opts.first().click();
+	await expect(card.locator('.answer')).toContainText('The answer:');
+	await expect(card.locator('.answer')).toContainText(/^(Right\.|Not that one\.)/);
+	await expect(card.locator('.score')).toHaveText(/^[01] right of 1 answered$/);
+	// The right answer is marked whichever was picked.
+	await expect(card.locator('.opt.right')).toHaveCount(1);
+	const slot = await drilledSlot(page);
+	expect(slot).toHaveLength(1);
+	expect(slot[0].k).toMatch(/^house:h-lantern0:[^:]+:[A-Za-z]+$/);
+	expect(['met', 'missed']).toContain(slot[0].v);
+	await expect(page.locator('.count').first()).toContainText('1 answer kept on this device');
+});
+
+test('the kinds row narrows the round, the answer carries its explanation, and every chip is 44px tall', async ({ page }) => {
+	await seedHouses(page, [drillFixture()]);
+	await goto(page, '/menu/quiz?mode=drill');
+	const kinds = page.locator('.kinds .chip');
+	await expect(kinds).toHaveCount(12);
+	for (const b of await page.locator('.chip, .opt').all()) {
+		const box = await b.boundingBox();
+		if (box) expect(box.height).toBeGreaterThanOrEqual(44);
+	}
+	// Unticking every kind but Sauce leaves a round of sauce questions alone,
+	// and the explanation under the answer is the dish's kept five parts.
+	for (const k of await kinds.all()) {
+		const name = (await k.textContent())!.trim();
+		if (name !== 'Sauce') await k.click();
+	}
+	await expect(page.getByRole('button', { name: 'Sauce', exact: true })).toHaveAttribute('aria-pressed', 'true');
+	await expect(page.getByRole('button', { name: 'Grapes, off' })).toBeVisible();
+	await page.getByRole('button', { name: 'Deal ▸' }).click();
+	const card = page.locator('.flash.drill');
+	await expect(card.locator('.eyebrow')).toContainText('question 1 of');
+	const stem = (await card.locator('.eyebrow').textContent())!;
+	expect(stem).toMatch(/sauce/i);
+	await card.locator('.opt').first().click();
+	await expect(card.locator('.answer .why')).not.toBeEmpty();
+	await expect(card.locator('.score')).toHaveText(/^[01] right of 1 answered$/);
+});
+
+test('?mode=cards flips a card and Got it moves the count on', async ({ page }) => {
+	await seedHouses(page, [drillFixture()]);
+	await goto(page, '/menu/quiz?mode=cards');
+	await expect(page.getByRole('button', { name: 'Flip cards' })).toHaveAttribute('aria-pressed', 'true');
+	await page.getByRole('button', { name: 'Shuffle the cards ▸' }).click();
+	const card = page.locator('.flash.card');
+	await expect(card).toHaveAttribute('data-flipped', 'no');
+	await expect(card.locator('.eyebrow')).toContainText(/^Card 1 of \d+ · .+ · hidden$/);
+	await page.getByRole('button', { name: 'Flip ↦' }).click();
+	await expect(card).toHaveAttribute('data-flipped', 'yes');
+	await expect(card.locator('.def.back')).not.toBeEmpty();
+	await page.getByRole('button', { name: 'Got it' }).click();
+	await expect(card.locator('.eyebrow')).toContainText(/^Card 2 of \d+ · .+ · hidden$/);
+	const slot = await drilledSlot(page);
+	expect(slot).toHaveLength(1);
+	expect(slot[0].v).toBe('met');
+	expect(slot[0].k).toMatch(/^house:h-lantern0:[^:]+:card-[A-Za-z]+$/);
+});
+
+test('?mode=pair deals the pairings over house wines and drinks, and says it back in words', async ({ page }) => {
+	const h = drillFixture();
+	await seedHouses(page, [h]);
+	await goto(page, '/menu/quiz?mode=pair');
+	await page.getByRole('button', { name: 'Deal the pairings ▸' }).click();
+	const card = page.locator('.flash.drill');
+	const eyebrow = (await card.locator('.eyebrow').textContent())!;
+	const options = (await card.locator('.opt').allTextContents()).map((s) => s.trim());
+	expect(options).toHaveLength(4);
+	if (/first pick/i.test(eyebrow)) {
+		const wines = h.wines.map((w: any) => w.name);
+		for (const o of options) expect(wines).toContain(o);
+	} else {
+		const drinks = h.cocktails.map((c: any) => c.name);
+		for (const o of options) expect(drinks).toContain(o);
+	}
+	await card.locator('.opt').nth(2).click();
+	await expect(card.locator('.answer')).toContainText('The answer:');
+	await expect(card.locator('.score')).toHaveText(/^[01] right of 1 answered$/);
+	expect(await drilledSlot(page)).toHaveLength(1);
+});
+
+test('a whole round marks the day studied, records every answer, and the session export carries none of it', async ({ page }) => {
+	test.setTimeout(60_000);
+	await seedHouses(page, [drillFixture()]);
+	await goto(page, '/menu/quiz?mode=drill');
+	await page.getByRole('button', { name: 'Deal ▸' }).click();
+	const card = page.locator('.flash.drill');
+	for (let i = 0; i < 10; i++) {
+		await card.locator('.opt').first().click();
+		if (i === 9) {
+			// Standalone there is no shared layer; a stand-in for its profiles
+			// counts the one markStudied a finished round makes, set only now so
+			// nothing else on the page reads it.
+			await page.evaluate(() => {
+				const w = window as unknown as { OOT?: unknown; __studied: number };
+				w.__studied = 0;
+				w.OOT = { profiles: { markStudied: () => (w.__studied += 1), touch: () => {} } };
+			});
+		}
+		await card.getByRole('button', { name: i === 9 ? 'Finish ↦' : 'Next ↦' }).click();
+	}
+	await expect(page.locator('.flash[role="status"] .eyebrow')).toHaveText('Round complete');
+	await expect(page.locator('.flash[role="status"] .term')).toHaveText(/^\d+ right of 10$/);
+	expect(await page.evaluate(() => (window as unknown as { __studied: number }).__studied)).toBe(1);
+	const slot = await drilledSlot(page);
+	expect(slot).toHaveLength(10);
+	for (const e of slot) expect(e.k.startsWith('house:h-lantern0:')).toBe(true);
+
+	// The .wtjson through the real button on /menu: the slot is not in it.
+	await goto(page, '/menu');
+	const exporting = page.waitForEvent('download');
+	await page.getByRole('button', { name: 'Export session' }).click();
+	const exported = readFileSync((await (await exporting).path())!, 'utf8');
+	expect(() => JSON.parse(exported)).not.toThrow();
+	expect(exported).not.toContain(DRILLED_SLOT);
+	expect(exported).not.toContain('house:h-lantern0:');
+});
+
+test('?mode=say is a chip that says it needs the Maitre d and opens nothing', async ({ page }) => {
+	await seedHouses(page, [drillFixture()]);
+	await goto(page, '/menu/quiz?mode=say');
+	await expect(page.getByRole('button', { name: 'Say it back' })).toHaveAttribute('aria-pressed', 'true');
+	await expect(page.getByRole('status')).toContainText('needs the Maître d’');
+	await expect(page.locator('.flash')).toHaveCount(0);
+	await expect(page.locator('dialog[open]')).toHaveCount(0);
+});
+
+test('the drill deals with the worker on and the network off: nothing it needs is fetched', async ({ page, context }) => {
+	test.setTimeout(90_000);
+	await seedHouses(page, [drillFixture()]);
+	await goto(page, '/');
+	await page.evaluate(async () => {
+		await navigator.serviceWorker.ready;
+		if (!navigator.serviceWorker.controller) {
+			await new Promise<void>((resolve) => {
+				navigator.serviceWorker.addEventListener('controllerchange', () => resolve(), { once: true });
+				if (navigator.serviceWorker.controller) resolve();
+			});
+		}
+	});
+	await expect
+		.poll(
+			async () =>
+				page.evaluate(async () => {
+					let n = 0;
+					for (const name of await caches.keys()) n += (await (await caches.open(name)).keys()).length;
+					return n;
+				}),
+			{ timeout: 40_000 }
+		)
+		.toBeGreaterThan(40);
+
+	await context.setOffline(true);
+	// A deep link never visited online: the shell answers, the House is on the device.
+	await goto(page, '/menu/quiz?mode=drill');
+	await page.getByRole('button', { name: 'Deal ▸' }).click();
+	const card = page.locator('.flash.drill');
+	await card.locator('.opt').first().click();
+	await expect(card.locator('.answer')).toContainText('The answer:');
+	await page.getByRole('button', { name: 'Flip cards' }).click();
+	await page.getByRole('button', { name: 'Shuffle the cards ▸' }).click();
+	await page.getByRole('button', { name: 'Flip ↦' }).click();
+	await expect(page.locator('.flash.card')).toHaveAttribute('data-flipped', 'yes');
+	await context.setOffline(false);
+});
+
+/* ---------------------------------------------------------------------------
+ * Adversarial cases on the drills: each names the hole it proves.
+ * ------------------------------------------------------------------------- */
+
+test('adversarial: every state on the drill page is a word, the round length and the mode as well as the kinds', async ({ page }) => {
+	await seedHouses(page, [drillFixture()]);
+	await goto(page, '/menu/quiz?mode=drill');
+	// The kinds row says ', off' beside a kind not chosen; the round length
+	// and the mode chips say nothing, so which is chosen is a border alone.
+	const ten = page.getByRole('button', { name: /A round of 10/ });
+	const whole = page.getByRole('button', { name: /The whole pool/ });
+	const tenText = (await ten.textContent())!.trim();
+	const wholeText = (await whole.textContent())!.trim();
+	expect(wholeText, 'the unchosen length carries no word for its state').toMatch(/off|not chosen/);
+	await whole.click();
+	expect((await ten.textContent())!.trim(), 'the chosen length reads the same as the unchosen').not.toBe(tenText);
+	const dishes = page.getByRole('button', { name: /^The dishes/ });
+	expect((await dishes.textContent())!.trim(), 'an unchosen mode carries no word for its state').toMatch(/off|not chosen/);
+});
+
+test('adversarial: an empty house and a device with no IndexedDB both open the drill without an error', async ({ page }) => {
+	const errors: string[] = [];
+	page.on('pageerror', (e) => errors.push(String(e)));
+	await seedHouses(page, [JSON.parse(readFileSync(FIXTURE, 'utf8'))]);
+	await goto(page, '/menu/quiz?mode=drill');
+	await expect(page.locator('.needs li').first()).toBeVisible();
+	await expect(page.getByRole('button', { name: 'Nothing deals yet' })).toBeDisabled();
+	await page.getByRole('button', { name: 'Pairings' }).click();
+	await expect(page.getByRole('button', { name: 'Nothing deals yet' })).toBeDisabled();
+
+	const bare = await page.context().newPage();
+	bare.on('pageerror', (e) => errors.push(String(e)));
+	await bare.addInitScript(() => {
+		Object.defineProperty(window, 'indexedDB', { value: undefined, configurable: true });
+	});
+	await goto(bare, '/menu/quiz?mode=cards');
+	await expect(bare.locator('.empty').first()).toContainText('No house on this device yet');
+	expect(errors).toEqual([]);
+});
