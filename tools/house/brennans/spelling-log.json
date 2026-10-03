@@ -1,0 +1,162 @@
+{
+	"about": "Every string the spelling map changed while building the Brennan's house: the research writes British English and the house is American, so each British form became its American spelling.",
+	"count": 19,
+	"changes": [
+		{
+			"path": "model.wines[0].profile",
+			"before": "Extra Brut means very little added sugar, under six grams a litre: very dry, with citrus, orchard fruit, brioche and a firm, chalky finish. The live list shows $28 a glass; the restaurant’s own drinks page shows $30 — check the current price.",
+			"after": "Extra Brut means very little added sugar, under six grams a liter: very dry, with citrus, orchard fruit, brioche and a firm, chalky finish. The live list shows $28 a glass; the restaurant’s own drinks page shows $30 — check the current price.",
+			"words": [
+				"litre"
+			]
+		},
+		{
+			"path": "model.wines[0].kept[0].a",
+			"before": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, so it is drier than a standard Brut; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labelled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Bubbles page lists a bottle at $125, $75 during Bubbles.",
+			"after": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, so it is drier than a standard Brut; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labeled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Bubbles page lists a bottle at $125, $75 during Bubbles.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "model.wines[4].profile",
+			"before": "Light-bodied Mosel Riesling from old vines: green apple, peach, slate and racy acidity. It is off-dry: a touch of sweetness, about twenty grams of sugar a litre, with only 11.5% alcohol and racy Mosel acidity, which is why it is our glass for spice and for the maple on the duck. The estate is at Ürzig in the Middle Mosel, a family with roots to 1510. Taste it at lineup if the vintage has changed.",
+			"after": "Light-bodied Mosel Riesling from old vines: green apple, peach, slate and racy acidity. It is off-dry: a touch of sweetness, about twenty grams of sugar a liter, with only 11.5% alcohol and racy Mosel acidity, which is why it is our glass for spice and for the maple on the duck. The estate is at Ürzig in the Middle Mosel, a family with roots to 1510. Taste it at lineup if the vintage has changed.",
+			"words": [
+				"litre"
+			]
+		},
+		{
+			"path": "model.wines[14].origin",
+			"before": "All Syrah from fifty year old vines on two parcels beside Châteauneuf-du-Pape, nine kilometres from Orange, farmed organically without certification; unusual in the south, where Grenache usually leads.",
+			"after": "All Syrah from fifty year old vines on two parcels beside Châteauneuf-du-Pape, nine kilometers from Orange, farmed organically without certification; unusual in the south, where Grenache usually leads.",
+			"words": [
+				"kilometres"
+			]
+		},
+		{
+			"path": "model.cocktails[5].guest",
+			"before": "Seedlip Grove 42, a British citrus non-alcoholic spirit at 0.0 per cent alcohol, with local watermelon and tonic: bright and dry, $15.",
+			"after": "Seedlip Grove 42, a British citrus non-alcoholic spirit at 0.0 percent alcohol, with local watermelon and tonic: bright and dry, $15.",
+			"words": [
+				"per cent"
+			]
+		},
+		{
+			"path": "model.cocktails[6].guest",
+			"before": "Lyre's non-alcoholic agave spirit from Australia, basil puree and lime, $14; Lyre's is labelled under 0.5 per cent alcohol, so call it non-alcoholic, not zero.",
+			"after": "Lyre's non-alcoholic agave spirit from Australia, basil puree and lime, $14; Lyre's is labeled under 0.5 percent alcohol, so call it non-alcoholic, not zero.",
+			"words": [
+				"labelled",
+				"per cent"
+			]
+		},
+		{
+			"path": "model.tastings[1].note",
+			"before": "Five courses. Wine pairing supplement $120, five 4 oz pours: Charles Lafitte Brut, Fichet Mâcon-Igé 2024, Louis Jadot Beaune 1er Cru 2023, Paul Hobbs Coombsville Cabernet 2021, La Tour Vieille Banyuls Reserva. Open the Jadot 20 to 30 minutes ahead, the Hobbs 30 to 60; pour the Banyuls before the Snickers lands. Three of the five pours are variables between the guide and the house page: the lobster pour (Fichet Mâcon-Igé 2024 or Domaine Matrot Meursault 2023), the redfish pour (Jadot Beaune 1er Cru 2023 or Jadot Beaune Bressandes 1er Cru 2022) and the dessert pour (La Tour Vieille Banyuls Reserva or M. Chapoutier Banyuls); the Lafitte and the Paul Hobbs are the pours both sources share. The duck course is printed two ways. Read the printed card on shift. The pairing costs more than the food; do not apologise for it.",
+			"after": "Five courses. Wine pairing supplement $120, five 4 oz pours: Charles Lafitte Brut, Fichet Mâcon-Igé 2024, Louis Jadot Beaune 1er Cru 2023, Paul Hobbs Coombsville Cabernet 2021, La Tour Vieille Banyuls Reserva. Open the Jadot 20 to 30 minutes ahead, the Hobbs 30 to 60; pour the Banyuls before the Snickers lands. Three of the five pours are variables between the guide and the house page: the lobster pour (Fichet Mâcon-Igé 2024 or Domaine Matrot Meursault 2023), the redfish pour (Jadot Beaune 1er Cru 2023 or Jadot Beaune Bressandes 1er Cru 2022) and the dessert pour (La Tour Vieille Banyuls Reserva or M. Chapoutier Banyuls); the Lafitte and the Paul Hobbs are the pours both sources share. The duck course is printed two ways. Read the printed card on shift. The pairing costs more than the food; do not apologize for it.",
+			"words": [
+				"apologise"
+			]
+		},
+		{
+			"path": "model.terms[32].toGuest",
+			"before": "Burrata is fresh mozzarella with a creamy centre, on the Creole tomato tostada.",
+			"after": "Burrata is fresh mozzarella with a creamy center, on the Creole tomato tostada.",
+			"words": [
+				"centre"
+			]
+		},
+		{
+			"path": "model.terms[38].toGuest",
+			"before": "Chateaubriand is the thick centre cut of the beef tenderloin, roasted for two.",
+			"after": "Chateaubriand is the thick center cut of the beef tenderloin, roasted for two.",
+			"words": [
+				"centre"
+			]
+		},
+		{
+			"path": "model.terms[84].toGuest",
+			"before": "Extra Brut means under six grams of sugar a litre, very dry; our house Champagne is one.",
+			"after": "Extra Brut means under six grams of sugar a liter, very dry; our house Champagne is one.",
+			"words": [
+				"litre"
+			]
+		},
+		{
+			"path": "model.terms[96].toGuest",
+			"before": "Seedlip is a British non-alcoholic spirit; Grove 42 is its citrus one, at 0.0 per cent, in the Catalina Island.",
+			"after": "Seedlip is a British non-alcoholic spirit; Grove 42 is its citrus one, at 0.0 percent, in the Catalina Island.",
+			"words": [
+				"per cent"
+			]
+		},
+		{
+			"path": "model.terms[97].toGuest",
+			"before": "Lyre's is an Australian non-alcoholic spirit, labelled under 0.5 per cent alcohol; its agave is in the Black Hills.",
+			"after": "Lyre's is an Australian non-alcoholic spirit, labeled under 0.5 percent alcohol; its agave is in the Black Hills.",
+			"words": [
+				"labelled",
+				"per cent"
+			]
+		},
+		{
+			"path": "model.scenarios[8].principle",
+			"before": "State the advisory, never decide for the guest, never moralise, have a cooked alternative ready.",
+			"after": "State the advisory, never decide for the guest, never moralize, have a cooked alternative ready.",
+			"words": [
+				"moralise"
+			]
+		},
+		{
+			"path": "model.scenarios[11].you",
+			"before": "We have a children’s menu, I’ll bring it over. From ours, the cheddar grits, an egg any style, bacon and the French toast are the favourites. When the Bananas Foster is lit she’ll love it from her seat; we keep little ones back from the cart.",
+			"after": "We have a children’s menu, I’ll bring it over. From ours, the cheddar grits, an egg any style, bacon and the French toast are the favorites. When the Bananas Foster is lit she’ll love it from her seat; we keep little ones back from the cart.",
+			"words": [
+				"favourites"
+			]
+		},
+		{
+			"path": "model.scenarios[14].principle",
+			"before": "The reason, the same theatre, check before promising, a small consolation.",
+			"after": "The reason, the same theater, check before promising, a small consolation.",
+			"words": [
+				"theatre"
+			]
+		},
+		{
+			"path": "model.mustKnows[9].body",
+			"before": "Catalina Island (Seedlip Grove 42, local watermelon, tonic) $15 and Black Hills (Lyre’s N/A agave, basil purée, lime) $14. Offer them to guests who skip the flambé or the milk punch. Seedlip Grove 42 is 0.0 per cent alcohol; Lyre's is labelled under 0.5 per cent, so call the Black Hills non-alcoholic, not zero.",
+			"after": "Catalina Island (Seedlip Grove 42, local watermelon, tonic) $15 and Black Hills (Lyre’s N/A agave, basil purée, lime) $14. Offer them to guests who skip the flambé or the milk punch. Seedlip Grove 42 is 0.0 percent alcohol; Lyre's is labeled under 0.5 percent, so call the Black Hills non-alcoholic, not zero.",
+			"words": [
+				"per cent",
+				"labelled",
+				"per cent"
+			]
+		},
+		{
+			"path": "model.mustKnows[17].body",
+			"before": "Our wine director is Sam Bortugno, an Advanced Sommelier, in post since September 2023; confirm at lineup that he is on the floor tonight and how to call a sommelier to a table. Braithe Gill is beverage director for the Ralph Brennan Restaurant Group, a certified sommelier and a 2026 James Beard semifinalist; the research also recorded her as Braithe Tidwell, who led the programme when the Grand Award was regained in 2021, so do not call her the wine director.",
+			"after": "Our wine director is Sam Bortugno, an Advanced Sommelier, in post since September 2023; confirm at lineup that he is on the floor tonight and how to call a sommelier to a table. Braithe Gill is beverage director for the Ralph Brennan Restaurant Group, a certified sommelier and a 2026 James Beard semifinalist; the research also recorded her as Braithe Tidwell, who led the program when the Grand Award was regained in 2021, so do not call her the wine director.",
+			"words": [
+				"programme"
+			]
+		},
+		{
+			"path": "model.mustKnows[23].body",
+			"before": "Brennan's has captains; staff train for months before cooking Bananas Foster tableside, and a new server does not flame a pan before sign off. Erick Schmitt is general manager per the house's 2026 team directory; confirm the spelling on the page. Who performs the flambé, the Friday sabrage, the Chateaubriand carving, the papillote opening and the Coravin pours, and how the floor is organised, are lineup questions.",
+			"after": "Brennan's has captains; staff train for months before cooking Bananas Foster tableside, and a new server does not flame a pan before sign off. Erick Schmitt is general manager per the house's 2026 team directory; confirm the spelling on the page. Who performs the flambé, the Friday sabrage, the Chateaubriand carving, the papillote opening and the Coravin pours, and how the floor is organized, are lineup questions.",
+			"words": [
+				"organised"
+			]
+		},
+		{
+			"path": "model.asks[1].question",
+			"before": "Is the house Champagne $28 or $30 a glass today, and is the bottle a Brennan's labelled Piper-Heidsieck Essentiel or a bespoke blend? What is the dosage and disgorgement date?",
+			"after": "Is the house Champagne $28 or $30 a glass today, and is the bottle a Brennan's labeled Piper-Heidsieck Essentiel or a bespoke blend? What is the dosage and disgorgement date?",
+			"words": [
+				"labelled"
+			]
+		}
+	]
+}

@@ -1,0 +1,2035 @@
+{
+	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
+	"count": 400,
+	"changes": [
+		{
+			"path": "model.card.sources[0].title",
+			"before": "Brennan’s — Breakfast & Lunch menu",
+			"after": "Brennan’s, Breakfast & Lunch menu"
+		},
+		{
+			"path": "model.card.sources[1].title",
+			"before": "Brennan’s — Dinner menu",
+			"after": "Brennan’s, Dinner menu"
+		},
+		{
+			"path": "model.card.sources[2].title",
+			"before": "Brennan’s — Traditional Breakfast at Brennan’s ($80)",
+			"after": "Brennan’s, Traditional Breakfast at Brennan’s ($80)"
+		},
+		{
+			"path": "model.card.sources[3].title",
+			"before": "Brennan’s — Dinner Tasting Menu ($80)",
+			"after": "Brennan’s, Dinner Tasting Menu ($80)"
+		},
+		{
+			"path": "model.card.sources[4].title",
+			"before": "Brennan’s — Dessert menu",
+			"after": "Brennan’s, Dessert menu"
+		},
+		{
+			"path": "model.card.sources[5].title",
+			"before": "Brennan’s — Cocktails & Wine by the Glass",
+			"after": "Brennan’s, Cocktails & Wine by the Glass"
+		},
+		{
+			"path": "model.card.sources[6].title",
+			"before": "Brennan’s — Bubbles at Brennan’s",
+			"after": "Brennan’s, Bubbles at Brennan’s"
+		},
+		{
+			"path": "model.card.sources[7].title",
+			"before": "Brennan’s — Wine Menu (links to Binwise)",
+			"after": "Brennan’s, Wine Menu (links to Binwise)"
+		},
+		{
+			"path": "model.card.sources[9].title",
+			"before": "Brennan’s — Wine Room",
+			"after": "Brennan’s, Wine Room"
+		},
+		{
+			"path": "model.card.sources[10].title",
+			"before": "Brennan’s — Bananas Foster recipe and history",
+			"after": "Brennan’s, Bananas Foster recipe and history"
+		},
+		{
+			"path": "model.card.sources[11].title",
+			"before": "Wikipedia — Bananas Foster",
+			"after": "Wikipedia, Bananas Foster"
+		},
+		{
+			"path": "model.card.sources[12].title",
+			"before": "Brennan’s — FAQs (dress code)",
+			"after": "Brennan’s, FAQs (dress code)"
+		},
+		{
+			"path": "model.dishes[0].description",
+			"before": "Oatmeal–pecan–raisin crumble, brown sugar glaze, sweetened crème fraîche",
+			"after": "Oatmeal-pecan-raisin crumble, brown sugar glaze, sweetened crème fraîche"
+		},
+		{
+			"path": "model.dishes[0].lines.s20",
+			"before": "The Traditional Breakfast begins with a baked apple, filled with an oatmeal, pecan and raisin crumble, glazed with brown sugar and served with sweetened crème fraîche — like a warm apple crisp.",
+			"after": "The Traditional Breakfast begins with a baked apple, filled with an oatmeal, pecan and raisin crumble, glazed with brown sugar and served with sweetened crème fraîche, like a warm apple crisp."
+		},
+		{
+			"path": "model.dishes[0].lines.s45",
+			"before": "Breakfast at Brennan’s has always been a long, celebratory meal, and the baked apple is a gentle start. The apple is baked until soft, with a crumble of oatmeal, pecans and raisins, then glazed with brown sugar. Sweetened crème fraîche — a slightly tangy cultured cream — balances the sweetness. It’s warm and comforting, and it comes after your Brandy Milk Punch eye opener, before the soup.",
+			"after": "Breakfast at Brennan’s has always been a long, celebratory meal, and the baked apple is a gentle start. The apple is baked until soft, with a crumble of oatmeal, pecans and raisins, then glazed with brown sugar. Sweetened crème fraîche, a slightly tangy cultured cream, balances the sweetness. It’s warm and comforting, and it comes after your Brandy Milk Punch eye opener, before the soup."
+		},
+		{
+			"path": "model.dishes[0].serviceNote",
+			"before": "Breakfast tasting ($80) includes tasting portions and all listed drinks. Tree nuts (pecans), dairy; oats may carry gluten — confirm.",
+			"after": "Breakfast tasting ($80) includes tasting portions and all listed drinks. Tree nuts (pecans), dairy; oats may carry gluten, confirm."
+		},
+		{
+			"path": "model.dishes[0].pairing.sayIt",
+			"before": "The tasting includes its own drinks, but if you’d like wine, a half-bottle of Mosel Auslese tastes of baked apple and honey — and it carries you right through to the Bananas Foster.",
+			"after": "The tasting includes its own drinks, but if you’d like wine, a half-bottle of Mosel Auslese tastes of baked apple and honey, and it carries you right through to the Bananas Foster."
+		},
+		{
+			"path": "model.dishes[0].pairing.whyThisWine",
+			"before": "It’s a warm, sweet baked apple, so a sweet Riesling is the match. It’s honeyed but bright — like biting into a crisp apple — and it keeps the course light.",
+			"after": "It’s a warm, sweet baked apple, so a sweet Riesling is the match. It’s honeyed but bright, like biting into a crisp apple, and it keeps the course light."
+		},
+		{
+			"path": "model.dishes[0].pairing.secondWhy",
+			"before": "A lighter glass of the Berres Riesling — taste it first: if it’s off-dry it works; if it’s dry, the glaze will make it taste tart.",
+			"after": "A lighter glass of the Berres Riesling, taste it first: if it’s off-dry it works; if it’s dry, the glaze will make it taste tart."
+		},
+		{
+			"path": "model.dishes[0].pairing.serve",
+			"before": "The Traditional Breakfast includes a Brandy Milk Punch here; offer wine only as an extra. The 375 ml half-bottle carries through to Bananas Foster — 2–3 oz pours in a small glass.",
+			"after": "The Traditional Breakfast includes a Brandy Milk Punch here; offer wine only as an extra. The 375 ml half-bottle carries through to Bananas Foster, 2 to 3 oz pours in a small glass."
+		},
+		{
+			"path": "model.dishes[0].pairing.zeroProofText",
+			"before": "For guests skipping the milk punch: Café Glacé de la Maison — its cardamom-clove syrup echoes the baked-apple spice.",
+			"after": "For guests skipping the milk punch: Café Glacé de la Maison, its cardamom-clove syrup echoes the baked-apple spice."
+		},
+		{
+			"path": "model.dishes[0].pairing.zeroProofWhy",
+			"before": "For guests skipping the milk punch — its cardamom-clove syrup echoes the baked-apple spice.",
+			"after": "For guests skipping the milk punch, its cardamom-clove syrup echoes the baked-apple spice."
+		},
+		{
+			"path": "model.dishes[1].description",
+			"before": "Potato rösti, garlic spinach — with a 4 oz pour of Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône",
+			"after": "Potato rösti, garlic spinach, with a 4 oz pour of Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône"
+		},
+		{
+			"path": "model.dishes[1].lines.s20",
+			"before": "Our fourth course is a petite filet mignon with a potato rösti — a crisp, Swiss-style shredded potato cake — and garlic spinach, poured with Domaine de Châteaumar’s Côtes du Rhône.",
+			"after": "Our fourth course is a petite filet mignon with a potato rösti, a crisp, Swiss-style shredded potato cake, and garlic spinach, poured with Domaine de Châteaumar’s Côtes du Rhône."
+		},
+		{
+			"path": "model.dishes[1].lines.s45",
+			"before": "The last savory course is the steak — a classic part of a grand New Orleans breakfast. It’s a petite filet mignon, the most tender cut, with a potato rösti, a Swiss-style cake of shredded potato fried golden and crisp, and garlicky wilted spinach. We pour a four-ounce glass of Domaine de Châteaumar’s ‘Cuvée Vincent’ Côtes du Rhône — juicy, soft and just right for red meat at breakfast.",
+			"after": "The last savory course is the steak, a classic part of a grand New Orleans breakfast. It’s a petite filet mignon, the most tender cut, with a potato rösti, a Swiss-style cake of shredded potato fried golden and crisp, and garlicky wilted spinach. We pour a four-ounce glass of Domaine de Châteaumar’s ‘Cuvée Vincent’ Côtes du Rhône, juicy, soft and just right for red meat at breakfast."
+		},
+		{
+			"path": "model.dishes[1].pairing.sayIt",
+			"before": "This course comes with a glass of Côtes du Rhône — juicy and soft, perfect for the filet.",
+			"after": "This course comes with a glass of Côtes du Rhône, juicy and soft, perfect for the filet."
+		},
+		{
+			"path": "model.dishes[1].pairing.whyThisWine",
+			"before": "This course comes with a Côtes du Rhône. It’s juicy and soft — enough for the steak but not heavy for breakfast — and the pepper in the wine picks up the garlic spinach.",
+			"after": "This course comes with a Côtes du Rhône. It’s juicy and soft, enough for the steak but not heavy for breakfast, and the pepper in the wine picks up the garlic spinach."
+		},
+		{
+			"path": "model.dishes[1].pairing.stepUp",
+			"before": "Inglenook Rubicon 2010 by the glass: aged Cabernet blend, now silky, with cedar and tobacco — a luxurious filet upgrade.",
+			"after": "Inglenook Rubicon 2010 by the glass: aged Cabernet blend, now silky, with cedar and tobacco, a luxurious filet upgrade."
+		},
+		{
+			"path": "model.dishes[1].pairing.serve",
+			"before": "Included 4 oz pour on the Traditional Breakfast; pour as the course fires. Slightly cool, 58–60°F, standard red glass. Take filet temperatures with the tasting order.",
+			"after": "Included 4 oz pour on the Traditional Breakfast; pour as the course fires. Slightly cool, 58 to 60°F, standard red glass. Take filet temperatures with the tasting order."
+		},
+		{
+			"path": "model.dishes[2].parts.sauce",
+			"before": "’nduja — spicy, spreadable Calabrian pork sausage",
+			"after": "’nduja, spicy, spreadable Calabrian pork sausage"
+		},
+		{
+			"path": "model.dishes[2].lines.s20",
+			"before": "Our Louisiana BBQ Lobster is lobster done in the New Orleans barbecue style, over a white bean stew with ’nduja — a soft, spicy Calabrian pork sausage that melts into the beans.",
+			"after": "Our Louisiana BBQ Lobster is lobster done in the New Orleans barbecue style, over a white bean stew with ’nduja, a soft, spicy Calabrian pork sausage that melts into the beans."
+		},
+		{
+			"path": "model.dishes[2].lines.s45",
+			"before": "New Orleans “barbecue” isn’t a smoker or a tomato sauce — it’s the buttery, peppery style made famous by barbecue shrimp. Here it’s lobster, which is sweet and rich. It sits on a white bean stew with ’nduja — en-DOO-yah — a spreadable, spicy pork sausage from Calabria in southern Italy, which melts into the beans and gives them a warm, red-pepper heat. Rich, spicy and comforting. We pour a Mâcon Chardonnay from Burgundy with it.",
+			"after": "New Orleans “barbecue” isn’t a smoker or a tomato sauce, it’s the buttery, peppery style made famous by barbecue shrimp. Here it’s lobster, which is sweet and rich. It sits on a white bean stew with ’nduja, en-DOO-yah, a spreadable, spicy pork sausage from Calabria in southern Italy, which melts into the beans and gives them a warm, red-pepper heat. Rich, spicy and comforting. We pour a Mâcon Chardonnay from Burgundy with it."
+		},
+		{
+			"path": "model.dishes[2].pairing.sayIt",
+			"before": "With the lobster we pour the Fichet Mâcon-Igé — Chardonnay with body for the lobster and a clean finish against the spice.",
+			"after": "With the lobster we pour the Fichet Mâcon-Igé, Chardonnay with body for the lobster and a clean finish against the spice."
+		},
+		{
+			"path": "model.dishes[2].pairing.serve",
+			"before": "Included 4 oz pour on the $120 dinner-tasting pairing — pour just before the course lands. 50–53°F in a white-wine glass.",
+			"after": "Included 4 oz pour on the $120 dinner-tasting pairing, pour just before the course lands. 50 to 53°F in a white-wine glass."
+		},
+		{
+			"path": "model.dishes[3].description",
+			"before": "Cane syrup–glazed peaches, candied hazelnuts",
+			"after": "Cane syrup-glazed peaches, candied hazelnuts"
+		},
+		{
+			"path": "model.dishes[3].parts.sauce",
+			"before": "cane syrup–glazed peaches",
+			"after": "cane syrup-glazed peaches"
+		},
+		{
+			"path": "model.dishes[3].lines.s10",
+			"before": "Roasted Rohan duck breast with cane syrup–glazed peaches and candied hazelnuts.",
+			"after": "Roasted Rohan duck breast with cane syrup-glazed peaches and candied hazelnuts."
+		},
+		{
+			"path": "model.dishes[3].lines.s20",
+			"before": "Our fourth course is roasted Rohan duck breast with peaches glazed in Louisiana cane syrup and candied hazelnuts — rich duck, sweet fruit and a little crunch.",
+			"after": "Our fourth course is roasted Rohan duck breast with peaches glazed in Louisiana cane syrup and candied hazelnuts, rich duck, sweet fruit and a little crunch."
+		},
+		{
+			"path": "model.dishes[3].serviceNote",
+			"before": "Duck is usually served medium-rare to medium — confirm the kitchen’s standard and mention it. Tree nuts (hazelnuts). Dinner tasting course four.",
+			"after": "Duck is usually served medium-rare to medium, confirm the kitchen’s standard and mention it. Tree nuts (hazelnuts). Dinner tasting course four."
+		},
+		{
+			"path": "model.dishes[3].pairing.sayIt",
+			"before": "With the duck, the Paul Hobbs Coombsville Cabernet — dark fruit for the peaches and structure for the rich meat.",
+			"after": "With the duck, the Paul Hobbs Coombsville Cabernet, dark fruit for the peaches and structure for the rich meat."
+		},
+		{
+			"path": "model.dishes[3].pairing.palate",
+			"before": "Duck breast is red and fatty enough to carry Cabernet: the tannin binds with fat and protein, and the wine tastes rounder. Ripe dark fruit keeps pace with the cane-syrup peaches, and Coombsville freshness stops it turning jammy. The glaze’s sweetness can firm up tannin, so let the fruit lead — duck and peach in the same bite. The candied hazelnuts echo the cocoa.",
+			"after": "Duck breast is red and fatty enough to carry Cabernet: the tannin binds with fat and protein, and the wine tastes rounder. Ripe dark fruit keeps pace with the cane-syrup peaches, and Coombsville freshness stops it turning jammy. The glaze’s sweetness can firm up tannin, so let the fruit lead, duck and peach in the same bite. The candied hazelnuts echo the cocoa."
+		},
+		{
+			"path": "model.dishes[3].pairing.serve",
+			"before": "Included 4 oz pour on the dinner-tasting pairing; open the bottle 30–60 minutes ahead. 60–64°F in a Bordeaux glass. For a guest who wants Pinot, offer the Bourgogne.",
+			"after": "Included 4 oz pour on the dinner-tasting pairing; open the bottle 30 to 60 minutes ahead. 60 to 64°F in a Bordeaux glass. For a guest who wants Pinot, offer the Bourgogne."
+		},
+		{
+			"path": "model.dishes[4].parts.sides",
+			"before": "blackberry financier biscuits — small, buttery almond cakes",
+			"after": "blackberry financier biscuits, small, buttery almond cakes"
+		},
+		{
+			"path": "model.dishes[4].lines.s20",
+			"before": "Our Blackberry Trifle layers blackberry curd and lemon curd with coconut chia pudding and little blackberry financier biscuits — bright, tart and creamy, a lovely lighter way to begin breakfast.",
+			"after": "Our Blackberry Trifle layers blackberry curd and lemon curd with coconut chia pudding and little blackberry financier biscuits: bright, tart and creamy, a lovely lighter way to begin breakfast."
+		},
+		{
+			"path": "model.dishes[4].lines.s45",
+			"before": "It’s one of our sweet starters, and a nice one to share. A trifle is a layered dessert, and ours goes blackberry curd, lemon curd and coconut chia pudding — chia seeds soaked until they turn into a soft, spoonable pudding — with blackberry financiers, which are small, buttery almond cakes, for texture. It’s tart and fruity more than sugary, so it wakes you up rather than weighing you down. Put it in the middle of the table while you look at the egg dishes.",
+			"after": "It’s one of our sweet starters, and a nice one to share. A trifle is a layered dessert, and ours goes blackberry curd, lemon curd and coconut chia pudding, chia seeds soaked until they turn into a soft, spoonable pudding, with blackberry financiers, which are small, buttery almond cakes, for texture. It’s tart and fruity more than sugary, so it wakes you up rather than weighing you down. Put it in the middle of the table while you look at the egg dishes."
+		},
+		{
+			"path": "model.dishes[4].serviceNote",
+			"before": "Coconut; eggs and dairy (curds); gluten and likely almonds (financiers are traditionally made with almond flour — confirm). Chia has a seedy texture — mention it for guests who dislike that. Sweet: suggest it to share.",
+			"after": "Coconut; eggs and dairy (curds); gluten and likely almonds (financiers are traditionally made with almond flour, confirm). Chia has a seedy texture, mention it for guests who dislike that. Sweet: suggest it to share."
+		},
+		{
+			"path": "model.dishes[4].pairing.sayIt",
+			"before": "If you’d like wine with it, a half-bottle of Mosel Auslese is lovely — honeyed and sweet, with bright acidity for the curds, and it carries on to dessert.",
+			"after": "If you’d like wine with it, a half-bottle of Mosel Auslese is lovely: honeyed and sweet, with bright acidity for the curds, and it carries on to dessert."
+		},
+		{
+			"path": "model.dishes[4].pairing.serve",
+			"before": "Sold as a 375 ml half-bottle, about four dessert pours. Suggest it when the table orders sweet starters — it carries on to Bananas Foster. Small white or dessert glass, 2–3 oz.",
+			"after": "Sold as a 375 ml half-bottle, about four dessert pours. Suggest it when the table orders sweet starters, it carries on to Bananas Foster. Small white or dessert glass, 2 to 3 oz."
+		},
+		{
+			"path": "model.dishes[5].lines.s10",
+			"before": "Framboise French Toast — our citrus brioche with mascarpone mousse, raspberry coulis and local raspberries.",
+			"after": "Framboise French Toast, our citrus brioche with mascarpone mousse, raspberry coulis and local raspberries."
+		},
+		{
+			"path": "model.dishes[5].lines.s20",
+			"before": "Framboise is French for raspberry. We make French toast from our housemade citrus brioche and finish it with mascarpone mousse, a raspberry coulis and fresh local raspberries — soft, rich and bright.",
+			"after": "Framboise is French for raspberry. We make French toast from our housemade citrus brioche and finish it with mascarpone mousse, a raspberry coulis and fresh local raspberries, soft, rich and bright."
+		},
+		{
+			"path": "model.dishes[5].lines.s45",
+			"before": "Framboise — frahm-BWAHZ — is French for raspberry, and that’s the star here. We bake our own citrus brioche, a rich, buttery egg bread, and turn it into French toast. Mascarpone, a rich Italian cream cheese whipped into a light mousse, adds richness, the raspberry coulis — a smooth fruit sauce — adds tartness, and fresh local raspberries go on top. It sits with our starters, so it’s perfect to share for the table, or as your sweet course.",
+			"after": "Framboise, frahm-BWAHZ, is French for raspberry, and that’s the star here. We bake our own citrus brioche, a rich, buttery egg bread, and turn it into French toast. Mascarpone, a rich Italian cream cheese whipped into a light mousse, adds richness, the raspberry coulis, a smooth fruit sauce, adds tartness, and fresh local raspberries go on top. It sits with our starters, so it’s perfect to share for the table, or as your sweet course.",
+			"override": 42
+		},
+		{
+			"path": "model.dishes[5].serviceNote",
+			"before": "Gluten, eggs, dairy (brioche, custard, mascarpone). Listed as a starter — upsell it for the table to share. Pronounce framboise frahm-BWAHZ.",
+			"after": "Gluten, eggs, dairy (brioche, custard, mascarpone). Listed as a starter, upsell it for the table to share. Pronounce framboise frahm-BWAHZ."
+		},
+		{
+			"path": "model.dishes[5].pairing.sayIt",
+			"before": "With something this sweet a dry wine turns tart — a glass from a half-bottle of Mosel Auslese keeps the raspberries juicy and the brioche light.",
+			"after": "With something this sweet a dry wine turns tart, a glass from a half-bottle of Mosel Auslese keeps the raspberries juicy and the brioche light."
+		},
+		{
+			"path": "model.dishes[5].pairing.whyThisWine",
+			"before": "This is sweet, so a dry wine would taste sour next to it. The Mosel Riesling is honeyed but zippy — the raspberries stay juicy, and it keeps the rich brioche feeling light.",
+			"after": "This is sweet, so a dry wine would taste sour next to it. The Mosel Riesling is honeyed but zippy, the raspberries stay juicy, and it keeps the rich brioche feeling light."
+		},
+		{
+			"path": "model.dishes[5].pairing.serve",
+			"before": "375 ml half-bottle, about four dessert pours — ideal when a table shares sweet starters and wants to carry it to Bananas Foster. Pour 2–3 oz in a small white glass as the plate lands.",
+			"after": "375 ml half-bottle, about four dessert pours, ideal when a table shares sweet starters and wants to carry it to Bananas Foster. Pour 2 to 3 oz in a small white glass as the plate lands."
+		},
+		{
+			"path": "model.dishes[5].pairing.zeroProofText",
+			"before": "Our New Orleans–style coffee with chicory: roast and gentle bitterness balance the sweet mousse and berries.",
+			"after": "Our New Orleans-style coffee with chicory: roast and gentle bitterness balance the sweet mousse and berries."
+		},
+		{
+			"path": "model.dishes[5].pairing.zeroProof",
+			"before": "New Orleans–style coffee with chicory",
+			"after": "New Orleans-style coffee with chicory"
+		},
+		{
+			"path": "model.dishes[6].lines.s10",
+			"before": "Our Café Brûlot Coffee Cake — chicory coffee and bittersweet chocolate, pecans, spiced citrus glaze and whipped crème fraîche.",
+			"after": "Our Café Brûlot Coffee Cake: chicory coffee and bittersweet chocolate, pecans, spiced citrus glaze and whipped crème fraîche."
+		},
+		{
+			"path": "model.dishes[6].lines.s45",
+			"before": "Café brûlot is a classic New Orleans after-dinner coffee — flamed with brandy, orange and lemon peel, cinnamon and clove. This cake borrows those flavors: chicory coffee and bittersweet chocolate in the cake, a glaze with citrus and warm spice, and pecans for crunch. Whipped crème fraîche, a slightly tangy cream, keeps it from being too sweet. It’s a great one to share with a cup of our coffee and chicory.",
+			"after": "Café brûlot is a classic New Orleans after-dinner coffee: flamed with brandy, orange and lemon peel, cinnamon and clove. This cake borrows those flavors: chicory coffee and bittersweet chocolate in the cake, a glaze with citrus and warm spice, and pecans for crunch. Whipped crème fraîche, a slightly tangy cream, keeps it from being too sweet. It’s a great one to share with a cup of our coffee and chicory."
+		},
+		{
+			"path": "model.dishes[6].pairing.sayIt",
+			"before": "If you’d like a glass with it, Banyuls — a sweet red from the south of France — is a classic with chocolate and coffee. Otherwise, our chicory coffee is perfect.",
+			"after": "If you’d like a glass with it, Banyuls, a sweet red from the south of France, is a classic with chocolate and coffee. Otherwise, our chicory coffee is perfect."
+		},
+		{
+			"path": "model.dishes[6].pairing.serve",
+			"before": "Banyuls is the dinner tasting’s dessert pour — confirm it can be poured at breakfast before offering. 2–3 oz in a small dessert glass, slightly cool; offer coffee alongside.",
+			"after": "Banyuls is the dinner tasting’s dessert pour, confirm it can be poured at breakfast before offering. 2 to 3 oz in a small dessert glass, slightly cool; offer coffee alongside."
+		},
+		{
+			"path": "model.dishes[6].pairing.zeroProofText",
+			"before": "New Orleans–style coffee with chicory — the classic — or the Café Glacé de la Maison if the guest wants it cold.",
+			"after": "New Orleans-style coffee with chicory, the classic, or the Café Glacé de la Maison if the guest wants it cold."
+		},
+		{
+			"path": "model.dishes[6].pairing.zeroProof",
+			"before": "New Orleans–style coffee with chicory",
+			"after": "New Orleans-style coffee with chicory"
+		},
+		{
+			"path": "model.dishes[6].pairing.zeroProofWhy",
+			"before": "the classic — or the Café Glacé de la Maison if the guest wants it cold.",
+			"after": "the classic, or the Café Glacé de la Maison if the guest wants it cold."
+		},
+		{
+			"path": "model.dishes[7].lines.s20",
+			"before": "Our Louisiana Oysters come in New Orleans BBQ sauce — which here means buttery and peppery, not smoky or tomato — with pickled collard greens, shallots and a crunchy fried saltine crumble.",
+			"after": "Our Louisiana Oysters come in New Orleans BBQ sauce, which here means buttery and peppery, not smoky or tomato, with pickled collard greens, shallots and a crunchy fried saltine crumble."
+		},
+		{
+			"path": "model.dishes[7].lines.s45",
+			"before": "In New Orleans, “barbecue” doesn’t mean a smoker or a tomato sauce — it’s the style made famous by barbecue shrimp: a rich, buttery sauce with lots of black pepper and savory Worcestershire. We pair it with Louisiana oysters, then add pickled collard greens for a sharp, bright bite, shallots, and a fried saltine crumble for crunch. It’s rich and peppery, a real New Orleans flavor, and great to share before your eggs.",
+			"after": "In New Orleans, “barbecue” doesn’t mean a smoker or a tomato sauce, it’s the style made famous by barbecue shrimp: a rich, buttery sauce with lots of black pepper and savory Worcestershire. We pair it with Louisiana oysters, then add pickled collard greens for a sharp, bright bite, shallots, and a fried saltine crumble for crunch. It’s rich and peppery, a real New Orleans flavor, and great to share before your eggs."
+		},
+		{
+			"path": "model.dishes[7].pairing.sayIt",
+			"before": "With the oysters I’d pour the Gainey Chardonnay — creamy enough for the butter sauce, fresh enough for the pickled greens.",
+			"after": "With the oysters I’d pour the Gainey Chardonnay, creamy enough for the butter sauce, fresh enough for the pickled greens."
+		},
+		{
+			"path": "model.dishes[7].pairing.whyThisWine",
+			"before": "The sauce is butter and black pepper, so I want a white with some body. This California Chardonnay is creamy but fresh — it matches the butter and keeps the pickled greens bright.",
+			"after": "The sauce is butter and black pepper, so I want a white with some body. This California Chardonnay is creamy but fresh, it matches the butter and keeps the pickled greens bright."
+		},
+		{
+			"path": "model.dishes[7].pairing.serve",
+			"before": "Pour as the oysters fire. Serve around 50°F — less cold than a crisp white — so the creamy texture shows. Larger white-wine glass.",
+			"after": "Pour as the oysters fire. Serve around 50°F, less cold than a crisp white, so the creamy texture shows. Larger white-wine glass."
+		},
+		{
+			"path": "model.dishes[7].pairing.avoid",
+			"before": "Avoid lean, green whites that the butter flattens, and tannic reds — tannin with oysters tastes metallic.",
+			"after": "Avoid lean, green whites that the butter flattens, and tannic reds, tannin with oysters tastes metallic."
+		},
+		{
+			"path": "model.dishes[8].lines.s45",
+			"before": "Creole tomatoes are Louisiana’s summer tomato — juicy, sweet and a little tart — and here they’re mixed with heirlooms and served simply. Burrata is fresh mozzarella with a soft, creamy center, so it’s cool and rich against the acidity. The tostada — a crisp flat shell — is made in-house with okra, and smoked tomato water, a clear, intensely tomatoey broth, adds a whisper of smoke. It’s light, seasonal and gone when the tomatoes are, so I’d grab it now.",
+			"after": "Creole tomatoes are Louisiana’s summer tomato, juicy, sweet and a little tart, and here they’re mixed with heirlooms and served simply. Burrata is fresh mozzarella with a soft, creamy center, so it’s cool and rich against the acidity. The tostada, a crisp flat shell, is made in-house with okra, and smoked tomato water, a clear, intensely tomatoey broth, adds a whisper of smoke. It’s light, seasonal and gone when the tomatoes are, so I’d grab it now."
+		},
+		{
+			"path": "model.dishes[8].serviceNote",
+			"before": "No meat listed — confirm with the kitchen for vegetarians. Dairy (burrata). Ask about gluten in the okra tostada. Seasonal: Creole tomatoes are a summer crop, so expect it to change as the season turns.",
+			"after": "No meat listed, confirm with the kitchen for vegetarians. Dairy (burrata). Ask about gluten in the okra tostada. Seasonal: Creole tomatoes are a summer crop, so expect it to change as the season turns."
+		},
+		{
+			"path": "model.dishes[8].pairing.sayIt",
+			"before": "With the tomatoes, the Minuty rosé from Provence is exactly right — dry, bright and refreshing.",
+			"after": "With the tomatoes, the Minuty rosé from Provence is exactly right, dry, bright and refreshing."
+		},
+		{
+			"path": "model.dishes[8].pairing.whyThisWine",
+			"before": "Fresh tomatoes are naturally tart, so the wine needs to be bright too. This Provence rosé is dry and delicate — it makes the tomatoes taste sweeter and loves the creamy burrata.",
+			"after": "Fresh tomatoes are naturally tart, so the wine needs to be bright too. This Provence rosé is dry and delicate, it makes the tomatoes taste sweeter and loves the creamy burrata."
+		},
+		{
+			"path": "model.dishes[9].parts.sides",
+			"before": "fines herbes — parsley, chives, tarragon and chervil",
+			"after": "fines herbes: parsley, chives, tarragon and chervil"
+		},
+		{
+			"path": "model.dishes[9].lines.s20",
+			"before": "Our Louisiana Crab Claws come in a warm brown butter vinaigrette — nutty browned butter with a bright, tangy edge — finished with fines herbes, the classic French mix of delicate herbs.",
+			"after": "Our Louisiana Crab Claws come in a warm brown butter vinaigrette, nutty browned butter with a bright, tangy edge, finished with fines herbes, the classic French mix of delicate herbs."
+		},
+		{
+			"path": "model.dishes[9].lines.s45",
+			"before": "Crab claws are a Louisiana favorite — sweet, delicate crab meat you pick up and eat right off the claw. We dress ours in a warm brown butter vinaigrette: butter cooked until it turns nutty and toasty, balanced with acidity so it’s rich but bright. Fines herbes — parsley, chives, tarragon and chervil — finish it with a soft, fresh green note. It’s simple and elegant, and it’s great for the table to share.",
+			"after": "Crab claws are a Louisiana favorite, sweet, delicate crab meat you pick up and eat right off the claw. We dress ours in a warm brown butter vinaigrette: butter cooked until it turns nutty and toasty, balanced with acidity so it’s rich but bright. Fines herbes, parsley, chives, tarragon and chervil, finish it with a soft, fresh green note. It’s simple and elegant, and it’s great for the table to share."
+		},
+		{
+			"path": "model.dishes[9].serviceNote",
+			"before": "Shellfish (crab), dairy (butter). Finger food — bring napkins and a plate for shells per house standard. Fines herbes is feen ZAIRB.",
+			"after": "Shellfish (crab), dairy (butter). Finger food, bring napkins and a plate for shells per house standard. Fines herbes is feen ZAIRB."
+		},
+		{
+			"path": "model.dishes[9].pairing.sayIt",
+			"before": "Brown butter and white Burgundy are a dream — the Leflaive Mâcon has that same nutty richness with a clean, bright finish.",
+			"after": "Brown butter and white Burgundy are a dream, the Leflaive Mâcon has that same nutty richness with a clean, bright finish."
+		},
+		{
+			"path": "model.dishes[9].pairing.whyThisWine",
+			"before": "Brown butter and white Burgundy are a dream. The Leflaive has a gentle richness like the butter and bright acidity for the vinaigrette — it makes the crab taste sweeter.",
+			"after": "Brown butter and white Burgundy are a dream. The Leflaive has a gentle richness like the butter and bright acidity for the vinaigrette, it makes the crab taste sweeter."
+		},
+		{
+			"path": "model.dishes[9].pairing.serve",
+			"before": "Coravin pour, 50–54°F, in a white Burgundy bowl. Pour as the claws land, and bring the shell plate and napkins at the same time.",
+			"after": "Coravin pour, 50 to 54°F, in a white Burgundy bowl. Pour as the claws land, and bring the shell plate and napkins at the same time."
+		},
+		{
+			"path": "model.dishes[9].pairing.avoid",
+			"before": "Avoid heavily oaked Chardonnay — oak plus brown butter turns heavy — and reds, whose tannin turns metallic with crab.",
+			"after": "Avoid heavily oaked Chardonnay, oak plus brown butter turns heavy, and reds, whose tannin turns metallic with crab."
+		},
+		{
+			"path": "model.dishes[10].lines.s20",
+			"before": "Our Grand Isle Jewel oysters come from the Louisiana coast and are served raw, with a mignonette — the classic shallot-and-vinegar oyster sauce — made with preserved Fresno chili for a little warmth.",
+			"after": "Our Grand Isle Jewel oysters come from the Louisiana coast and are served raw, with a mignonette, the classic shallot-and-vinegar oyster sauce, made with preserved Fresno chili for a little warmth."
+		},
+		{
+			"path": "model.dishes[10].lines.s45",
+			"before": "Grand Isle is a barrier island on Louisiana’s coast, and these oysters are named for it. We serve them raw, very simply, so you taste the oyster: clean, briny and cold. A mignonette is the classic raw bar sauce, vinegar, shallot and cracked pepper, and ours is made with preserved Fresno chili, so it’s tangy with just a gentle warmth. Parsley adds a green note. They open our dinner tasting, too — a perfect first bite with Champagne.",
+			"after": "Grand Isle is a barrier island on Louisiana’s coast, and these oysters are named for it. We serve them raw, very simply, so you taste the oyster: clean, briny and cold. A mignonette is the classic raw bar sauce, vinegar, shallot and cracked pepper, and ours is made with preserved Fresno chili, so it’s tangy with just a gentle warmth. Parsley adds a green note. They open our dinner tasting, too, a perfect first bite with Champagne.",
+			"override": 25
+		},
+		{
+			"path": "model.dishes[10].serviceNote",
+			"before": "Raw shellfish: give the consumer advisory — raw oysters carry risk, especially for guests who are pregnant, immunocompromised or have liver disease. Fresno chili is mild. Know the count per order. On the dinner tasting they’re paired with Charles Lafitte Brut.",
+			"after": "Raw shellfish: give the consumer advisory: raw oysters carry risk, especially for guests who are pregnant, immunocompromised or have liver disease. Fresno chili is mild. Know the count per order. On the dinner tasting they’re paired with Charles Lafitte Brut."
+		},
+		{
+			"path": "model.dishes[10].pairing.sayIt",
+			"before": "Oysters and Champagne — our house Piper-Heidsieck is Extra Brut, so it’s very dry and crisp, perfect with the brine.",
+			"after": "Oysters and Champagne: our house Piper-Heidsieck is Extra Brut, so it’s very dry and crisp, perfect with the brine."
+		},
+		{
+			"path": "model.dishes[11].parts.main",
+			"before": "Steak tartare — raw, finely chopped beef",
+			"after": "Steak tartare, raw, finely chopped beef"
+		},
+		{
+			"path": "model.dishes[11].lines.s45",
+			"before": "It’s a playful take on steak tartare. Tartare is raw beef, finely chopped and seasoned, and instead of toast we pipe it into a crisp potato shell shaped like a cannoli. Crème fraîche, a tangy cultured cream, keeps it cool and silky. The egg yolk is cured until firm and grated over the top, the way Italians grate bottarga, cured fish roe — it adds a rich, salty finish. Two or three bites, and a great way to start.",
+			"after": "It’s a playful take on steak tartare. Tartare is raw beef, finely chopped and seasoned, and instead of toast we pipe it into a crisp potato shell shaped like a cannoli. Crème fraîche, a tangy cultured cream, keeps it cool and silky. The egg yolk is cured until firm and grated over the top, the way Italians grate bottarga, cured fish roe, it adds a rich, salty finish. Two or three bites, and a great way to start."
+		},
+		{
+			"path": "model.dishes[11].serviceNote",
+			"before": "Raw beef and cured egg yolk — consumer advisory. Dairy (crème fraîche). Ask about gluten and the fryer for the potato shell. Handheld; suggest eating it in a couple of bites. Bottarga is boh-TAR-gah.",
+			"after": "Raw beef and cured egg yolk, consumer advisory. Dairy (crème fraîche). Ask about gluten and the fryer for the potato shell. Handheld; suggest eating it in a couple of bites. Bottarga is boh-TAR-gah."
+		},
+		{
+			"path": "model.dishes[11].pairing.sayIt",
+			"before": "With the tartare I love a sparkling rosé — the Pierre Sparr is all Pinot Noir, so it has a little red fruit for the beef.",
+			"after": "With the tartare I love a sparkling rosé, the Pierre Sparr is all Pinot Noir, so it has a little red fruit for the beef."
+		},
+		{
+			"path": "model.dishes[11].pairing.whyThisWine",
+			"before": "It’s steak tartare in a crispy potato shell, so I love a dry sparkling rosé. It’s all Pinot Noir — a little red fruit for the beef and bubbles for the crunch.",
+			"after": "It’s steak tartare in a crispy potato shell, so I love a dry sparkling rosé. It’s all Pinot Noir, a little red fruit for the beef and bubbles for the crunch."
+		},
+		{
+			"path": "model.dishes[11].pairing.palate",
+			"before": "The potato shell brings fryer richness and the crème fraîche coats the palate; bubbles and acidity cleanse both. Raw beef has no char and little fat, so it wants red fruit rather than tannin, and Pinot Noir’s strawberry and currant meet it gently. The cured yolk’s salt makes the wine taste fruitier, and the finish is savory, bright and clean — ready for the next bite.",
+			"after": "The potato shell brings fryer richness and the crème fraîche coats the palate; bubbles and acidity cleanse both. Raw beef has no char and little fat, so it wants red fruit rather than tannin, and Pinot Noir’s strawberry and currant meet it gently. The cured yolk’s salt makes the wine taste fruitier, and the finish is savory, bright and clean, ready for the next bite."
+		},
+		{
+			"path": "model.dishes[11].pairing.secondWhy",
+			"before": "A light red Burgundy — low tannin, bright acid — for a still red.",
+			"after": "A light red Burgundy, low tannin, bright acid, for a still red."
+		},
+		{
+			"path": "model.dishes[11].pairing.serve",
+			"before": "Pour as the starter fires; 43–46°F in a flute or tulip.",
+			"after": "Pour as the starter fires; 43 to 46°F in a flute or tulip."
+		},
+		{
+			"path": "model.dishes[12].parts.main",
+			"before": "Turtle soup — 100% turtle meat",
+			"after": "Turtle soup, 100% turtle meat"
+		},
+		{
+			"path": "model.dishes[12].lines.s10",
+			"before": "Our Turtle Soup — 100% turtle meat, brown butter spinach and grated egg, finished with aged Sherry. A Brennan’s classic.",
+			"after": "Our Turtle Soup: 100% turtle meat, brown butter spinach and grated egg, finished with aged Sherry. A Brennan’s classic."
+		},
+		{
+			"path": "model.dishes[12].lines.s20",
+			"before": "Our Turtle Soup is made with 100% turtle meat, with brown butter spinach and grated egg, and aged Sherry for a nutty lift at the end — rich, savory and very New Orleans.",
+			"after": "Our Turtle Soup is made with 100% turtle meat, with brown butter spinach and grated egg, and aged Sherry for a nutty lift at the end, rich, savory and very New Orleans."
+		},
+		{
+			"path": "model.dishes[12].lines.s45",
+			"before": "Turtle soup is one of the great Creole soups, and ours is made with 100% turtle meat. It’s deep and savory — if you’ve never had turtle, think of a rich, finely chopped stew. Brown butter spinach adds a toasty, earthy note, the grated egg adds richness, and aged Sherry brings a nutty, dry lift that cuts the richness. It’s also the soup on our Traditional Breakfast, so if you want one bowl that tells you what Brennan’s is about, this is it.",
+			"after": "Turtle soup is one of the great Creole soups, and ours is made with 100% turtle meat. It’s deep and savory: if you’ve never had turtle, think of a rich, finely chopped stew. Brown butter spinach adds a toasty, earthy note, the grated egg adds richness, and aged Sherry brings a nutty, dry lift that cuts the richness. It’s also the soup on our Traditional Breakfast, so if you want one bowl that tells you what Brennan’s is about, this is it.",
+			"override": 47
+		},
+		{
+			"path": "model.dishes[12].serviceNote",
+			"before": "Contains alcohol (Sherry) — flag it for guests avoiding alcohol. Egg; dairy (brown butter). Creole turtle soups are usually roux-thickened, so ask the kitchen about gluten. On the breakfast tasting, guests choose this or the gumbo (served with a Bloody Bull). Say “turtle” plainly — many guests are trying it for the first time.",
+			"after": "Contains alcohol (Sherry), flag it for guests avoiding alcohol. Egg; dairy (brown butter). Creole turtle soups are usually roux-thickened, so ask the kitchen about gluten. On the breakfast tasting, guests choose this or the gumbo (served with a Bloody Bull). Say “turtle” plainly, many guests are trying it for the first time."
+		},
+		{
+			"path": "model.dishes[12].pairing.sayIt",
+			"before": "With the turtle soup I love a glass of our house Champagne from Piper-Heidsieck — it’s very dry, so it lifts the richness and picks up the Sherry.",
+			"after": "With the turtle soup I love a glass of our house Champagne from Piper-Heidsieck, it’s very dry, so it lifts the richness and picks up the Sherry."
+		},
+		{
+			"path": "model.dishes[12].pairing.whyThisWine",
+			"before": "Turtle soup is rich and finished with Sherry. Our house Champagne is very dry, so the bubbles clean your palate between spoonfuls, and its toasty flavor picks up the Sherry — every bite tastes like the first.",
+			"after": "Turtle soup is rich and finished with Sherry. Our house Champagne is very dry, so the bubbles clean your palate between spoonfuls, and its toasty flavor picks up the Sherry, every bite tastes like the first."
+		},
+		{
+			"path": "model.dishes[12].pairing.palate",
+			"before": "The first spoonful coats the palate with fat, gelatin and savory depth. The Champagne’s acidity and bubbles scrub that coating away, so the next spoonful tastes as vivid as the first. Its toasty, autolytic notes meet the nutty aged Sherry rather than fighting it, and because the wine carries almost no sugar it never turns sweet or cloying against the salty soup — the finish stays long, dry and clean.",
+			"after": "The first spoonful coats the palate with fat, gelatin and savory depth. The Champagne’s acidity and bubbles scrub that coating away, so the next spoonful tastes as vivid as the first. Its toasty, autolytic notes meet the nutty aged Sherry rather than fighting it, and because the wine carries almost no sugar it never turns sweet or cloying against the salty soup, the finish stays long, dry and clean."
+		},
+		{
+			"path": "model.dishes[12].pairing.avoid",
+			"before": "Avoid tannic reds — salt and Sherry make tannin taste bitter and metallic — and oaky Chardonnay, whose vanilla sweetness muddies the nutty Sherry.",
+			"after": "Avoid tannic reds, salt and Sherry make tannin taste bitter and metallic, and oaky Chardonnay, whose vanilla sweetness muddies the nutty Sherry."
+		},
+		{
+			"path": "model.dishes[12].pairing.zeroProofText",
+			"before": "Café Glacé de la Maison — chicory cold brew’s roast mirrors the Sherry’s nuttiness — or the Catalina Island for a bright, bubbly reset.",
+			"after": "Café Glacé de la Maison, chicory cold brew’s roast mirrors the Sherry’s nuttiness, or the Catalina Island for a bright, bubbly reset."
+		},
+		{
+			"path": "model.dishes[12].pairing.zeroProofWhy",
+			"before": "chicory cold brew’s roast mirrors the Sherry’s nuttiness — or the Catalina Island for a bright, bubbly reset.",
+			"after": "chicory cold brew’s roast mirrors the Sherry’s nuttiness, or the Catalina Island for a bright, bubbly reset."
+		},
+		{
+			"path": "model.dishes[13].lines.s10",
+			"before": "Our Seafood Gumbo — shrimp, crab and oysters with smoky andouille, over Louisiana popcorn rice.",
+			"after": "Our Seafood Gumbo: shrimp, crab and oysters with smoky andouille, over Louisiana popcorn rice."
+		},
+		{
+			"path": "model.dishes[13].lines.s20",
+			"before": "Our Seafood Gumbo is loaded with shrimp, crab and oysters, with andouille sausage for smoke and a little spice, over popcorn rice — a fragrant Louisiana long-grain that really does smell a little like popcorn.",
+			"after": "Our Seafood Gumbo is loaded with shrimp, crab and oysters, with andouille sausage for smoke and a little spice, over popcorn rice, a fragrant Louisiana long-grain that really does smell a little like popcorn."
+		},
+		{
+			"path": "model.dishes[13].lines.s45",
+			"before": "Gumbo is the dish that says Louisiana, and ours is all about the seafood: shrimp, crab and oysters, so you get sweetness and a little brine in every spoonful. Andouille — a coarse, smoked Cajun pork sausage — gives it a savory, smoky backbone and a gentle warmth. It’s served over popcorn rice, a Louisiana long-grain with a nutty, toasty aroma. It’s hearty, so it’s a great start before one of the egg dishes, and it’s the other choice on our Traditional Breakfast.",
+			"after": "Gumbo is the dish that says Louisiana, and ours is all about the seafood: shrimp, crab and oysters, so you get sweetness and a little brine in every spoonful. Andouille, a coarse, smoked Cajun pork sausage, gives it a savory, smoky backbone and a gentle warmth. It’s served over popcorn rice, a Louisiana long-grain with a nutty, toasty aroma. It’s hearty, so it’s a great start before one of the egg dishes, and it’s the other choice on our Traditional Breakfast."
+		},
+		{
+			"path": "model.dishes[13].serviceNote",
+			"before": "Shellfish (shrimp, crab, oysters) and pork (andouille). Gumbo is usually built on a roux — ask the kitchen about gluten. Mild to moderate spice. Breakfast tasting guests choose this or the turtle soup.",
+			"after": "Shellfish (shrimp, crab, oysters) and pork (andouille). Gumbo is usually built on a roux, ask the kitchen about gluten. Mild to moderate spice. Breakfast tasting guests choose this or the turtle soup."
+		},
+		{
+			"path": "model.dishes[13].pairing.sayIt",
+			"before": "With gumbo I reach for Riesling — the C.H. Berres from the Mosel is light and bright, and it plays beautifully with the spice and the seafood.",
+			"after": "With gumbo I reach for Riesling, the C.H. Berres from the Mosel is light and bright, and it plays beautifully with the spice and the seafood."
+		},
+		{
+			"path": "model.dishes[13].pairing.serve",
+			"before": "Pour as the gumbo is fired. Taste this bottle at lineup so you can tell the guest honestly whether it’s dry or off-dry. Keep it well chilled — heat reads hotter with warm wine.",
+			"after": "Pour as the gumbo is fired. Taste this bottle at lineup so you can tell the guest honestly whether it’s dry or off-dry. Keep it well chilled, heat reads hotter with warm wine."
+		},
+		{
+			"path": "model.dishes[14].parts.sides",
+			"before": "Leidenheimer crisps — from New Orleans’ classic French-bread bakery",
+			"after": "Leidenheimer crisps, from New Orleans’ classic French-bread bakery"
+		},
+		{
+			"path": "model.dishes[14].lines.s10",
+			"before": "Our Creole Caesar — crisp gem lettuce in a smoked oyster dressing, with Grana Padano and Leidenheimer crisps.",
+			"after": "Our Creole Caesar, crisp gem lettuce in a smoked oyster dressing, with Grana Padano and Leidenheimer crisps."
+		},
+		{
+			"path": "model.dishes[14].lines.s45",
+			"before": "It’s our Louisiana take on a Caesar. Gem lettuce is small, sweet and very crisp, so it holds up to a creamy dressing — and ours is made with smoked oysters, which bring a savory, smoky depth. Grana Padano, a nutty Italian hard cheese, adds salt and richness, and the crisps come from Leidenheimer, the bakery behind New Orleans’ po-boy bread. It’s a great, lighter start before an egg dish or the redfish.",
+			"after": "It’s our Louisiana take on a Caesar. Gem lettuce is small, sweet and very crisp, so it holds up to a creamy dressing, and ours is made with smoked oysters, which bring a savory, smoky depth. Grana Padano, a nutty Italian hard cheese, adds salt and richness, and the crisps come from Leidenheimer, the bakery behind New Orleans’ po-boy bread. It’s a great, lighter start before an egg dish or the redfish."
+		},
+		{
+			"path": "model.dishes[14].serviceNote",
+			"before": "Shellfish: the dressing is made with smoked oysters — always mention it; guests don’t expect shellfish in a Caesar. Dairy (Grana Padano), gluten (bread crisps). Ask the kitchen about raw egg and anchovy in the dressing.",
+			"after": "Shellfish: the dressing is made with smoked oysters, always mention it; guests don’t expect shellfish in a Caesar. Dairy (Grana Padano), gluten (bread crisps). Ask the kitchen about raw egg and anchovy in the dressing."
+		},
+		{
+			"path": "model.dishes[14].pairing.sayIt",
+			"before": "With the Caesar I’d pour the Albariño — citrusy, with a salty edge that’s perfect with the smoked oyster dressing.",
+			"after": "With the Caesar I’d pour the Albariño, citrusy, with a salty edge that’s perfect with the smoked oyster dressing."
+		},
+		{
+			"path": "model.dishes[14].pairing.whyThisWine",
+			"before": "The dressing is made with smoked oysters, so I want a seafood wine. Albariño comes from Spain’s Atlantic coast — lemony, with a little salty edge — and it keeps the creamy dressing light.",
+			"after": "The dressing is made with smoked oysters, so I want a seafood wine. Albariño comes from Spain’s Atlantic coast, lemony, with a little salty edge, and it keeps the creamy dressing light."
+		},
+		{
+			"path": "model.dishes[14].pairing.palate",
+			"before": "The dressing’s tang would make a soft wine taste flat, but Albariño’s acidity meets it head-on and stays fresh. Salt from the Grana Padano and smoked oyster makes the wine seem rounder and fruitier, while its saline edge links to the oyster’s brine. The citrus cuts the creamy coating, and the smoke reads as savory rather than ashy. You finish on salt, lemon and sea — a clean slate for the next course.",
+			"after": "The dressing’s tang would make a soft wine taste flat, but Albariño’s acidity meets it head-on and stays fresh. Salt from the Grana Padano and smoked oyster makes the wine seem rounder and fruitier, while its saline edge links to the oyster’s brine. The citrus cuts the creamy coating, and the smoke reads as savory rather than ashy. You finish on salt, lemon and sea, a clean slate for the next course."
+		},
+		{
+			"path": "model.dishes[14].pairing.secondWhy",
+			"before": "Dry Champagne if the table is already drinking bubbles — salt and cream love bubbles.",
+			"after": "Dry Champagne if the table is already drinking bubbles, salt and cream love bubbles."
+		},
+		{
+			"path": "model.dishes[15].lines.s10",
+			"before": "Eggs Hussarde — poached eggs, coffee-cured Canadian bacon and our own English muffins, with hollandaise and marchand de vin.",
+			"after": "Eggs Hussarde: poached eggs, coffee-cured Canadian bacon and our own English muffins, with hollandaise and marchand de vin."
+		},
+		{
+			"path": "model.dishes[15].lines.s20",
+			"before": "Eggs Hussarde is our signature egg dish: housemade English muffins, coffee-cured Canadian bacon and poached eggs, with two sauces — buttery hollandaise and marchand de vin, a savory red wine sauce.",
+			"after": "Eggs Hussarde is our signature egg dish: housemade English muffins, coffee-cured Canadian bacon and poached eggs, with two sauces, buttery hollandaise and marchand de vin, a savory red wine sauce."
+		},
+		{
+			"path": "model.dishes[15].lines.s45",
+			"before": "Eggs Hussarde is the New Orleans cousin of Eggs Benedict, and it’s the egg dish we’re known for. We make our own English muffins, and the Canadian bacon is cured with coffee, so it’s smoky and a little roasty. Then come two sauces: marchand de vin — “wine merchant’s sauce,” a savory red wine and mushroom sauce — and hollandaise, the buttery, lemony one. Rich, savory and bright all at once. It’s the heart of our Traditional Breakfast, so if it’s your first breakfast at Brennan’s, this is the one.",
+			"after": "Eggs Hussarde is the New Orleans cousin of Eggs Benedict, and it’s the egg dish we’re known for. We make our own English muffins, and the Canadian bacon is cured with coffee, so it’s smoky and a little roasty. Then come two sauces: marchand de vin, “wine merchant’s sauce,” a savory red wine and mushroom sauce, and hollandaise, the buttery, lemony one. Rich, savory and bright all at once. It’s the heart of our Traditional Breakfast, so if it’s your first breakfast at Brennan’s, this is the one.",
+			"override": 11
+		},
+		{
+			"path": "model.dishes[15].pairing.sayIt",
+			"before": "Eggs and Champagne are made for each other — our house Piper-Heidsieck is very dry, so it keeps the hollandaise feeling light.",
+			"after": "Eggs and Champagne are made for each other, our house Piper-Heidsieck is very dry, so it keeps the hollandaise feeling light."
+		},
+		{
+			"path": "model.dishes[15].pairing.palate",
+			"before": "Yolk and hollandaise coat the tongue and blunt most wines. The Champagne’s acidity and bubbles lift that coating so each bite tastes fresh. The dry finish sharpens the salty, coffee-cured bacon, and the Pinot-based body stands up to the winey marchand de vin instead of disappearing. Toasty autolytic notes meet the toasted muffin, and the rhythm stays clean — rich bite, bright sip, repeat.",
+			"after": "Yolk and hollandaise coat the tongue and blunt most wines. The Champagne’s acidity and bubbles lift that coating so each bite tastes fresh. The dry finish sharpens the salty, coffee-cured bacon, and the Pinot-based body stands up to the winey marchand de vin instead of disappearing. Toasty autolytic notes meet the toasted muffin, and the rhythm stays clean: rich bite, bright sip, repeat."
+		},
+		{
+			"path": "model.dishes[15].pairing.stepUp",
+			"before": "Rare by the glass, from the bottle under the Coravin Sparkling stopper: Chardonnay-led vintage Champagne with deeper toasted-almond richness — a celebration upgrade with the same clean cut.",
+			"after": "Rare by the glass, from the bottle under the Coravin Sparkling stopper: Chardonnay-led vintage Champagne with deeper toasted-almond richness, a celebration upgrade with the same clean cut.",
+			"override": 333
+		},
+		{
+			"path": "model.dishes[15].pairing.serve",
+			"before": "Pour as the eggs are fired. On the Traditional Breakfast the included pour is Charles Lafitte Brut, 4 oz — don’t double-pour. À la carte, Piper-Heidsieck by the glass in a tulip.",
+			"after": "Pour as the eggs are fired. On the Traditional Breakfast the included pour is Charles Lafitte Brut, 4 oz, don’t double-pour. À la carte, Piper-Heidsieck by the glass in a tulip."
+		},
+		{
+			"path": "model.dishes[15].pairing.avoid",
+			"before": "Avoid oaky Chardonnay — oak and hollandaise turn heavy and flabby — and firm-tannin reds, which taste metallic against egg yolk.",
+			"after": "Avoid oaky Chardonnay, oak and hollandaise turn heavy and flabby, and firm-tannin reds, which taste metallic against egg yolk."
+		},
+		{
+			"path": "model.dishes[16].parts.sauce",
+			"before": "Choron sauce — béarnaise with tomato",
+			"after": "Choron sauce, béarnaise with tomato"
+		},
+		{
+			"path": "model.dishes[16].lines.s10",
+			"before": "Eggs Sardou — poached eggs, crispy artichokes and Parmesan creamed spinach, finished with Choron sauce.",
+			"after": "Eggs Sardou: poached eggs, crispy artichokes and Parmesan creamed spinach, finished with Choron sauce."
+		},
+		{
+			"path": "model.dishes[16].lines.s20",
+			"before": "Eggs Sardou is a New Orleans classic: poached eggs with crispy artichokes and Parmesan creamed spinach, finished with Choron — a béarnaise, the tarragon butter sauce, brightened with tomato.",
+			"after": "Eggs Sardou is a New Orleans classic: poached eggs with crispy artichokes and Parmesan creamed spinach, finished with Choron: a béarnaise, the tarragon butter sauce, brightened with tomato."
+		},
+		{
+			"path": "model.dishes[16].lines.s45",
+			"before": "Eggs Sardou is one of the classic New Orleans egg dishes — it was created at Antoine's for the French playwright Victorien Sardou, and ours is the creamed spinach version. Ours pairs poached eggs with crispy artichokes and creamed spinach made with Parmesan. Instead of hollandaise, it’s finished with Choron sauce: a béarnaise — butter, egg yolk, shallot and tarragon — with tomato folded in, so it’s tangy and herbal. It’s rich, but the artichokes and tomato keep it bright. It’s also our meatless egg dish.",
+			"after": "Eggs Sardou is one of the classic New Orleans egg dishes, it was created at Antoine's for the French playwright Victorien Sardou, and ours is the creamed spinach version. Ours pairs poached eggs with crispy artichokes and creamed spinach made with Parmesan. Instead of hollandaise, it’s finished with Choron sauce: a béarnaise, butter, egg yolk, shallot and tarragon, with tomato folded in, so it’s tangy and herbal. It’s rich, but the artichokes and tomato keep it bright. It’s also our meatless egg dish.",
+			"override": 8
+		},
+		{
+			"path": "model.dishes[16].serviceNote",
+			"before": "No meat listed — confirm the creamed spinach and sauce with the kitchen for strict vegetarians. Eggs, dairy (Parmesan, cream, butter). Crispy artichokes are likely breaded or fried — ask about gluten. Sardou is sar-DOO.",
+			"after": "No meat listed, confirm the creamed spinach and sauce with the kitchen for strict vegetarians. Eggs, dairy (Parmesan, cream, butter). Crispy artichokes are likely breaded or fried, ask about gluten. Sardou is sar-DOO."
+		},
+		{
+			"path": "model.dishes[16].pairing.sayIt",
+			"before": "Artichokes are tricky with wine, but a Loire Sauvignon Blanc loves them — the Durand is crisp and herbal.",
+			"after": "Artichokes are tricky with wine, but a Loire Sauvignon Blanc loves them, the Durand is crisp and herbal."
+		},
+		{
+			"path": "model.dishes[16].pairing.whyThisWine",
+			"before": "Artichokes are tricky — they make many wines taste strange. This Loire Sauvignon Blanc is crisp and herbal, so it loves the artichokes and the tarragon in the sauce, and it lightens the creamed spinach.",
+			"after": "Artichokes are tricky, they make many wines taste strange. This Loire Sauvignon Blanc is crisp and herbal, so it loves the artichokes and the tarragon in the sauce, and it lightens the creamed spinach."
+		},
+		{
+			"path": "model.dishes[17].description",
+			"before": "Red wine–braised short rib débris, Creole-spiced potato, soft-boiled egg, hollandaise, marchand de vin sauce",
+			"after": "Red wine-braised short rib débris, Creole-spiced potato, soft-boiled egg, hollandaise, marchand de vin sauce"
+		},
+		{
+			"path": "model.dishes[17].parts.main",
+			"before": "Short rib débris — braised in red wine and pulled",
+			"after": "Short rib débris, braised in red wine and pulled"
+		},
+		{
+			"path": "model.dishes[17].lines.s10",
+			"before": "Eggs Owen — red wine–braised short rib débris, Creole-spiced potato and a soft-boiled egg, with hollandaise and marchand de vin.",
+			"after": "Eggs Owen: red wine-braised short rib débris, Creole-spiced potato and a soft-boiled egg, with hollandaise and marchand de vin."
+		},
+		{
+			"path": "model.dishes[17].lines.s45",
+			"before": "If you want something hearty, this is it. Débris — DAY-bree — is the New Orleans word for slow-cooked meat that falls apart into its own gravy, and ours is short rib braised in red wine. It sits with a Creole-spiced potato and a soft-boiled egg, so the yolk runs into everything. Then two sauces: hollandaise for richness, and marchand de vin, a savory red wine and mushroom sauce that doubles down on the braise. Think of it as steak and eggs, New Orleans style.",
+			"after": "If you want something hearty, this is it. Débris, DAY-bree, is the New Orleans word for slow-cooked meat that falls apart into its own gravy, and ours is short rib braised in red wine. It sits with a Creole-spiced potato and a soft-boiled egg, so the yolk runs into everything. Then two sauces: hollandaise for richness, and marchand de vin, a savory red wine and mushroom sauce that doubles down on the braise. Think of it as steak and eggs, New Orleans style.",
+			"override": 15
+		},
+		{
+			"path": "model.dishes[17].serviceNote",
+			"before": "Beef; eggs (soft-boiled, and in hollandaise), dairy; red wine in the braise and sauce. Mild spice. Guests may guess it’s named for founder Owen Brennan — the menu doesn’t say, so confirm at lineup before you tell that story.",
+			"after": "Beef; eggs (soft-boiled, and in hollandaise), dairy; red wine in the braise and sauce. Mild spice. Guests may guess it’s named for founder Owen Brennan, the menu doesn’t say, so confirm at lineup before you tell that story."
+		},
+		{
+			"path": "model.dishes[17].pairing.sayIt",
+			"before": "With the short rib I’d pour the Durban from the Southern Rhône — ripe and generous, but soft enough for breakfast.",
+			"after": "With the short rib I’d pour the Durban from the Southern Rhône, ripe and generous, but soft enough for breakfast."
+		},
+		{
+			"path": "model.dishes[17].pairing.whyThisWine",
+			"before": "The short rib is braised in red wine, so a red makes sense. This Southern Rhône is ripe and generous with soft tannins — enough for the beef, gentle with the eggs and spice.",
+			"after": "The short rib is braised in red wine, so a red makes sense. This Southern Rhône is ripe and generous with soft tannins, enough for the beef, gentle with the eggs and spice."
+		},
+		{
+			"path": "model.dishes[17].pairing.serve",
+			"before": "Pour as the eggs fire. Serve cellar-cool, around 60°F — a few minutes in the ice bucket if the bar runs warm. Standard red glass.",
+			"after": "Pour as the eggs fire. Serve cellar-cool, around 60°F, a few minutes in the ice bucket if the bar runs warm. Standard red glass."
+		},
+		{
+			"path": "model.dishes[18].parts.technique",
+			"before": "confit — cooked slowly in its own fat",
+			"after": "confit, cooked slowly in its own fat"
+		},
+		{
+			"path": "model.dishes[18].lines.s45",
+			"before": "This is chicken and waffles gone luxurious. The duck leg is confit — cured and cooked slowly in its own fat until it’s tender, with crisp skin. It sits on a savory cornbread and chive waffle, and the foie gras butter melts in for extra richness. Mustard maple syrup brings sweet with a little tang to balance all that, and a sunny-side-up egg ties it together. Sweet, savory, rich — it’s a showstopper for a brunch guest who wants something different.",
+			"after": "This is chicken and waffles gone luxurious. The duck leg is confit, cured and cooked slowly in its own fat until it’s tender, with crisp skin. It sits on a savory cornbread and chive waffle, and the foie gras butter melts in for extra richness. Mustard maple syrup brings sweet with a little tang to balance all that, and a sunny-side-up egg ties it together. Sweet, savory, rich, it’s a showstopper for a brunch guest who wants something different."
+		},
+		{
+			"path": "model.dishes[18].serviceNote",
+			"before": "Foie gras (some guests avoid it — ask the kitchen if it can be left off). Eggs, dairy; the waffle likely contains wheat flour — confirm for gluten. Rich — suggest a lighter starter alongside.",
+			"after": "Foie gras (some guests avoid it, ask the kitchen if it can be left off). Eggs, dairy; the waffle likely contains wheat flour, confirm for gluten. Rich, suggest a lighter starter alongside."
+		},
+		{
+			"path": "model.dishes[18].pairing.sayIt",
+			"before": "With the duck and maple, the Berres Riesling is lovely — bright acidity for the richness, ripe fruit for the syrup.",
+			"after": "With the duck and maple, the Berres Riesling is lovely, bright acidity for the richness, ripe fruit for the syrup."
+		},
+		{
+			"path": "model.dishes[18].pairing.whyThisWine",
+			"before": "It’s rich duck with maple syrup, so I want brightness and a touch of fruit. This German Riesling cuts the richness and loves the maple — it keeps every bite fresh.",
+			"after": "It’s rich duck with maple syrup, so I want brightness and a touch of fruit. This German Riesling cuts the richness and loves the maple, it keeps every bite fresh."
+		},
+		{
+			"path": "model.dishes[19].lines.s20",
+			"before": "Our Shrimp & Grits puts Louisiana shrimp in a Creole sauce with tasso over a fried pimento cheese grit cake — creamy inside, crisp outside — with crunchy fried okra chips on top.",
+			"after": "Our Shrimp & Grits puts Louisiana shrimp in a Creole sauce with tasso over a fried pimento cheese grit cake, creamy inside, crisp outside, with crunchy fried okra chips on top."
+		},
+		{
+			"path": "model.dishes[19].lines.s45",
+			"before": "Our take on shrimp and grits has a twist: instead of a bowl of grits, the grits are made with pimento cheese, set into a cake and fried, so they’re crisp outside and creamy inside. Louisiana shrimp go on top in Creole sauce — a tomato-based sauce with the holy trinity of onion, celery and bell pepper — with tasso, a smoky, spiced Cajun ham, for depth. Fried okra chips add crunch. It’s one of the best values on the menu.",
+			"after": "Our take on shrimp and grits has a twist: instead of a bowl of grits, the grits are made with pimento cheese, set into a cake and fried, so they’re crisp outside and creamy inside. Louisiana shrimp go on top in Creole sauce, a tomato-based sauce with the holy trinity of onion, celery and bell pepper, with tasso, a smoky, spiced Cajun ham, for depth. Fried okra chips add crunch. It’s one of the best values on the menu."
+		},
+		{
+			"path": "model.dishes[19].pairing.sayIt",
+			"before": "With the shrimp and grits, the Minuty rosé is perfect — dry and refreshing, great with the tomato and a little spice.",
+			"after": "With the shrimp and grits, the Minuty rosé is perfect, dry and refreshing, great with the tomato and a little spice."
+		},
+		{
+			"path": "model.dishes[19].pairing.whyThisWine",
+			"before": "The Creole sauce is tomato with a little smoke and spice. A dry Provence rosé has the brightness for the tomato and just enough fruit for the tasso — refreshing with every bite.",
+			"after": "The Creole sauce is tomato with a little smoke and spice. A dry Provence rosé has the brightness for the tomato and just enough fruit for the tasso, refreshing with every bite."
+		},
+		{
+			"path": "model.dishes[19].pairing.avoid",
+			"before": "Avoid oaky Chardonnay — oak and smoke pile up — and tannic reds, which turn metallic with shrimp and hotter with tasso.",
+			"after": "Avoid oaky Chardonnay, oak and smoke pile up, and tannic reds, which turn metallic with shrimp and hotter with tasso."
+		},
+		{
+			"path": "model.dishes[20].parts.technique",
+			"before": "cooked to order — know today’s fish and preparation",
+			"after": "cooked to order, know today’s fish and preparation"
+		},
+		{
+			"path": "model.dishes[20].lines.s45",
+			"before": "This is our Gulf fish plate — the fish changes with what’s fresh, and I can tell you what it is today. It’s topped with Louisiana lump crab, the sweet, meaty pieces from the body of the crab. The sauce is a pecan bordelaise, so it’s nutty and savory. Underneath, a silky cauliflower purée and wilted collard greens, which bring a little earthiness. Lighter than the egg dishes but still very satisfying.",
+			"after": "This is our Gulf fish plate, the fish changes with what’s fresh, and I can tell you what it is today. It’s topped with Louisiana lump crab, the sweet, meaty pieces from the body of the crab. The sauce is a pecan bordelaise, so it’s nutty and savory. Underneath, a silky cauliflower purée and wilted collard greens, which bring a little earthiness. Lighter than the egg dishes but still very satisfying."
+		},
+		{
+			"path": "model.dishes[20].serviceNote",
+			"before": "Know today’s fish. Fish, shellfish (crab), tree nuts (pecans); likely dairy. Confirm what the kitchen means by bordelaise — the classic French sauce is red wine–based; in New Orleans the word often means garlic butter.",
+			"after": "Know today’s fish. Fish, shellfish (crab), tree nuts (pecans); likely dairy. Confirm what the kitchen means by bordelaise, the classic French sauce is red wine-based; in New Orleans the word often means garlic butter."
+		},
+		{
+			"path": "model.dishes[20].pairing.sayIt",
+			"before": "I’d pour the Gainey Chardonnay — creamy enough for the pecans and crab, fresh enough for the fish.",
+			"after": "I’d pour the Gainey Chardonnay, creamy enough for the pecans and crab, fresh enough for the fish."
+		},
+		{
+			"path": "model.dishes[20].pairing.whyThisWine",
+			"before": "The pecan sauce and cauliflower purée are rich and nutty, so I’d pour a white with some body. This California Chardonnay is creamy but fresh — it keeps the fish and crab tasting delicate.",
+			"after": "The pecan sauce and cauliflower purée are rich and nutty, so I’d pour a white with some body. This California Chardonnay is creamy but fresh, it keeps the fish and crab tasting delicate."
+		},
+		{
+			"path": "model.dishes[20].pairing.palate",
+			"before": "Pecans and butter need a white with texture; the Chardonnay’s creaminess meets the purée and sauce at the same weight, so the dish doesn’t make the wine taste thin. Its acidity keeps the delicate fish in focus and brightens the sweet crab. Against the collards’ mild bitterness, the wine’s ripe fruit rounds the edges, and the finish lands on citrus rather than butter — rich but lifted.",
+			"after": "Pecans and butter need a white with texture; the Chardonnay’s creaminess meets the purée and sauce at the same weight, so the dish doesn’t make the wine taste thin. Its acidity keeps the delicate fish in focus and brightens the sweet crab. Against the collards’ mild bitterness, the wine’s ripe fruit rounds the edges, and the finish lands on citrus rather than butter, rich but lifted."
+		},
+		{
+			"path": "model.dishes[20].pairing.secondWhy",
+			"before": "A light red Burgundy if the guest prefers red — low tannin keeps it friendly to fish.",
+			"after": "A light red Burgundy if the guest prefers red, low tannin keeps it friendly to fish."
+		},
+		{
+			"path": "model.dishes[20].pairing.avoid",
+			"before": "Avoid tannic reds — tannin turns metallic with fish and crab — and lean, green whites that the pecan butter flattens.",
+			"after": "Avoid tannic reds, tannin turns metallic with fish and crab, and lean, green whites that the pecan butter flattens."
+		},
+		{
+			"path": "model.dishes[21].lines.s10",
+			"before": "Our Crab & Corn Omelette — lump crab, roasted sweet corn, miso butter, lemon, basil and a Marcona almond gremolata.",
+			"after": "Our Crab & Corn Omelette: lump crab, roasted sweet corn, miso butter, lemon, basil and a Marcona almond gremolata."
+		},
+		{
+			"path": "model.dishes[21].lines.s45",
+			"before": "It’s a summer-in-Louisiana omelette. Lump crab and roasted sweet corn are both naturally sweet, so they’re a perfect match. Our house-made miso butter adds a savory, almost nutty depth, and lemon and basil keep it fresh. On top, a gremolata — a bright Italian mix of herbs and citrus zest — made with Marcona almonds, the rich, tender Spanish almonds, for crunch. It’s a lighter choice that still feels special.",
+			"after": "It’s a summer-in-Louisiana omelette. Lump crab and roasted sweet corn are both naturally sweet, so they’re a perfect match. Our house-made miso butter adds a savory, almost nutty depth, and lemon and basil keep it fresh. On top, a gremolata, a bright Italian mix of herbs and citrus zest, made with Marcona almonds, the rich, tender Spanish almonds, for crunch. It’s a lighter choice that still feels special."
+		},
+		{
+			"path": "model.dishes[21].pairing.sayIt",
+			"before": "If you love white Burgundy, the Leflaive Mâcon is a beautiful match — rich enough for the crab and butter, bright enough for the lemon.",
+			"after": "If you love white Burgundy, the Leflaive Mâcon is a beautiful match, rich enough for the crab and butter, bright enough for the lemon."
+		},
+		{
+			"path": "model.dishes[21].pairing.serve",
+			"before": "Poured by Coravin — present the bottle and pour through the needle; no cork is pulled. 50–54°F in a white Burgundy bowl.",
+			"after": "Poured by Coravin, present the bottle and pour through the needle; no cork is pulled. 50 to 54°F in a white Burgundy bowl."
+		},
+		{
+			"path": "model.dishes[21].pairing.avoid",
+			"before": "Avoid tannic reds — miso and egg yolk make tannin taste bitter and metallic — and heavy, buttery Chardonnay that smothers the crab.",
+			"after": "Avoid tannic reds, miso and egg yolk make tannin taste bitter and metallic, and heavy, buttery Chardonnay that smothers the crab."
+		},
+		{
+			"path": "model.dishes[22].lines.s20",
+			"before": "Our Creole-Spiced Hanger Steak is Creekstone Prime hanger with a smoked potato pavé — thin potato slices layered and crisped — a sunny-side-up Vital Farms egg and classic French béarnaise.",
+			"after": "Our Creole-Spiced Hanger Steak is Creekstone Prime hanger with a smoked potato pavé, thin potato slices layered and crisped, a sunny-side-up Vital Farms egg and classic French béarnaise."
+		},
+		{
+			"path": "model.dishes[22].lines.s45",
+			"before": "This is steak and eggs done properly. Hanger is a butcher’s favorite cut — loose-grained and very beefy — and ours is Prime grade from Creekstone Farms, seasoned with Creole spice. The potato pavé is thin slices layered, pressed and crisped, with a smoky note. A sunny-side-up egg from Vital Farms gives you a runny yolk, and béarnaise — butter, egg yolk, shallot and tarragon — is the classic steak sauce. How would you like it cooked?",
+			"after": "This is steak and eggs done properly. Hanger is a butcher’s favorite cut, loose-grained and very beefy, and ours is Prime grade from Creekstone Farms, seasoned with Creole spice. The potato pavé is thin slices layered, pressed and crisped, with a smoky note. A sunny-side-up egg from Vital Farms gives you a runny yolk, and béarnaise, butter, egg yolk, shallot and tarragon, is the classic steak sauce. How would you like it cooked?"
+		},
+		{
+			"path": "model.dishes[22].serviceNote",
+			"before": "Ask temperature — hanger is at its best medium-rare to medium. Eggs (runny yolk, béarnaise), dairy. Mild spice. Different plate from dinner’s Creole Hanger Steak — don’t mix them up.",
+			"after": "Ask temperature, hanger is at its best medium-rare to medium. Eggs (runny yolk, béarnaise), dairy. Mild spice. Different plate from dinner’s Creole Hanger Steak, don’t mix them up."
+		},
+		{
+			"path": "model.dishes[22].pairing.why",
+			"before": "A Cabernet–Merlot Bordeaux has the tannin and cassis to stand up to beef and cut through the béarnaise.",
+			"after": "A Cabernet-Merlot Bordeaux has the tannin and cassis to stand up to beef and cut through the béarnaise."
+		},
+		{
+			"path": "model.dishes[22].pairing.sayIt",
+			"before": "With the steak, the Moulin d’Issan is a classic Bordeaux — cassis and cedar, with the structure for beef and béarnaise.",
+			"after": "With the steak, the Moulin d’Issan is a classic Bordeaux, cassis and cedar, with the structure for beef and béarnaise."
+		},
+		{
+			"path": "model.dishes[22].pairing.whyThisWine",
+			"before": "A classic Bordeaux with steak and béarnaise. It has enough structure for the beef and cuts the richness of the sauce — cassis and cedar, not too heavy for midday.",
+			"after": "A classic Bordeaux with steak and béarnaise. It has enough structure for the beef and cuts the richness of the sauce, cassis and cedar, not too heavy for midday."
+		},
+		{
+			"path": "model.dishes[22].pairing.serve",
+			"before": "Pour as the steak fires so the glass has a few minutes to open. About 60–62°F in a Bordeaux glass. Take the steak temperature first.",
+			"after": "Pour as the steak fires so the glass has a few minutes to open. About 60 to 62°F in a Bordeaux glass. Take the steak temperature first."
+		},
+		{
+			"path": "model.dishes[22].pairing.avoid",
+			"before": "Avoid high-alcohol, jammy reds — alcohol amplifies the Creole spice — and crisp whites, which the béarnaise and beef flatten.",
+			"after": "Avoid high-alcohol, jammy reds, alcohol amplifies the Creole spice, and crisp whites, which the béarnaise and beef flatten."
+		},
+		{
+			"path": "model.dishes[23].description",
+			"before": "Creekstone Farms beef tenderloin, roasted & glazed summer squash, sauce Foyot — serves two",
+			"after": "Creekstone Farms beef tenderloin, roasted & glazed summer squash, sauce Foyot, serves two"
+		},
+		{
+			"path": "model.dishes[23].parts.main",
+			"before": "Creekstone Farms beef tenderloin — the thick center cut",
+			"after": "Creekstone Farms beef tenderloin, the thick center cut"
+		},
+		{
+			"path": "model.dishes[23].parts.sauce",
+			"before": "sauce Foyot — béarnaise enriched with meat glaze",
+			"after": "sauce Foyot, béarnaise enriched with meat glaze"
+		},
+		{
+			"path": "model.dishes[23].lines.s10",
+			"before": "Our Chateaubriand for two — roasted Creekstone Farms tenderloin with glazed summer squash and sauce Foyot.",
+			"after": "Our Chateaubriand for two, roasted Creekstone Farms tenderloin with glazed summer squash and sauce Foyot."
+		},
+		{
+			"path": "model.dishes[23].lines.s20",
+			"before": "The Roasted Chateaubriand serves two: the thick center of a Creekstone Farms beef tenderloin, roasted whole, with roasted and glazed summer squash and sauce Foyot — a béarnaise enriched with meat glaze.",
+			"after": "The Roasted Chateaubriand serves two: the thick center of a Creekstone Farms beef tenderloin, roasted whole, with roasted and glazed summer squash and sauce Foyot, a béarnaise enriched with meat glaze."
+		},
+		{
+			"path": "model.dishes[23].lines.s45",
+			"before": "Chateaubriand is the classic French cut for two: the thickest, most tender center of the beef tenderloin, roasted whole so it stays juicy. Ours is Creekstone Farms beef. The sauce is Foyot — fwah-YO — which is béarnaise, the tarragon butter sauce, made even richer with a reduced meat glaze. Roasted and glazed summer squash balances it. It’s a celebration dish, and with a side of mushrooms or the shells and cheese, it’s a full feast for two.",
+			"after": "Chateaubriand is the classic French cut for two: the thickest, most tender center of the beef tenderloin, roasted whole so it stays juicy. Ours is Creekstone Farms beef. The sauce is Foyot, fwah-YO, which is béarnaise, the tarragon butter sauce, made even richer with a reduced meat glaze. Roasted and glazed summer squash balances it. It’s a celebration dish, and with a side of mushrooms or the shells and cheese, it’s a full feast for two."
+		},
+		{
+			"path": "model.dishes[23].serviceNote",
+			"before": "Serves two, $120. Ask temperature once for the table. A whole roast takes longer — confirm timing with the kitchen and set expectations. Dairy and eggs (Foyot). Ask at lineup whether it’s carved tableside or in the kitchen. Natural side upsells: Maggie’s Mushrooms, Shells & Cheese ($12 each).",
+			"after": "Serves two, $120. Ask temperature once for the table. A whole roast takes longer, confirm timing with the kitchen and set expectations. Dairy and eggs (Foyot). Ask at lineup whether it’s carved tableside or in the kitchen. Natural side upsells: Maggie’s Mushrooms, Shells & Cheese ($12 each)."
+		},
+		{
+			"path": "model.dishes[23].pairing.sayIt",
+			"before": "For the Chateaubriand, we pour the 2010 Inglenook Rubicon by the glass — a Napa legend with real age on it, powerful but silky. Or I can bring our sommelier for a red Burgundy from our cellar.",
+			"after": "For the Chateaubriand, we pour the 2010 Inglenook Rubicon by the glass, a Napa legend with real age on it, powerful but silky. Or I can bring our sommelier for a red Burgundy from our cellar.",
+			"override": 60
+		},
+		{
+			"path": "model.dishes[23].pairing.secondWhy",
+			"before": "For finesse over power: a Premier Cru red Burgundy — tenderloin is delicate, and Pinot Noir lets it shine.",
+			"after": "For finesse over power: a Premier Cru red Burgundy, tenderloin is delicate, and Pinot Noir lets it shine."
+		},
+		{
+			"path": "model.dishes[23].pairing.serve",
+			"before": "$70 by the glass. Keep the bottle upright and pour gently to leave any sediment behind. Bordeaux glass, 60–64°F. For a red Burgundy from the cellar, bring in the sommelier.",
+			"after": "$70 by the glass. Keep the bottle upright and pour gently to leave any sediment behind. Bordeaux glass, 60 to 64°F. For a red Burgundy from the cellar, bring in the sommelier."
+		},
+		{
+			"path": "model.dishes[24].parts.technique",
+			"before": "cooked in the Véronique style — fish with grapes",
+			"after": "cooked in the Véronique style, fish with grapes"
+		},
+		{
+			"path": "model.dishes[24].lines.s10",
+			"before": "Redfish Véronique — hibiscus-pickled grapes, braised leeks and fingerlings, with a preserved lemon beurre blanc.",
+			"after": "Redfish Véronique: hibiscus-pickled grapes, braised leeks and fingerlings, with a preserved lemon beurre blanc."
+		},
+		{
+			"path": "model.dishes[24].lines.s20",
+			"before": "Our Redfish Véronique is a classic French idea with a Louisiana fish: redfish with grapes — ours are pickled with hibiscus — plus braised leeks, fingerling potatoes and a preserved lemon beurre blanc.",
+			"after": "Our Redfish Véronique is a classic French idea with a Louisiana fish: redfish with grapes, ours are pickled with hibiscus, plus braised leeks, fingerling potatoes and a preserved lemon beurre blanc."
+		},
+		{
+			"path": "model.dishes[24].lines.s45",
+			"before": "“Véronique” — vay-ro-NEEK — is the French classic of fish with grapes. We make it with Louisiana redfish, which is mild and flaky. The grapes are pickled with hibiscus, so they’re sweet, tart and floral. Braised leeks are soft and gently sweet, fingerling potatoes make it satisfying, and a beurre blanc — a butter sauce with white wine — gets brightness from preserved lemon. It’s elegant and balanced, and it’s on our dinner tasting too.",
+			"after": "“Véronique”, vay-ro-NEEK, is the French classic of fish with grapes. We make it with Louisiana redfish, which is mild and flaky. The grapes are pickled with hibiscus, so they’re sweet, tart and floral. Braised leeks are soft and gently sweet, fingerling potatoes make it satisfying, and a beurre blanc, a butter sauce with white wine, gets brightness from preserved lemon. It’s elegant and balanced, and it’s on our dinner tasting too."
+		},
+		{
+			"path": "model.dishes[24].serviceNote",
+			"before": "Fish, dairy (beurre blanc). Redfish is a firm, mild Gulf fish. On the dinner tasting it’s paired with Louis Jadot Beaune 1er Cru — a good talking point for red with fish.",
+			"after": "Fish, dairy (beurre blanc). Redfish is a firm, mild Gulf fish. On the dinner tasting it’s paired with Louis Jadot Beaune 1er Cru, a good talking point for red with fish."
+		},
+		{
+			"path": "model.dishes[24].pairing.sayIt",
+			"before": "With the redfish I’d pour the Leflaive Mâcon — beurre blanc and white Burgundy are a classic, and it has the brightness for the lemon.",
+			"after": "With the redfish I’d pour the Leflaive Mâcon, beurre blanc and white Burgundy are a classic, and it has the brightness for the lemon."
+		},
+		{
+			"path": "model.dishes[24].pairing.secondWhy",
+			"before": "What our tasting pours: a light, bright Premier Cru Beaune — the red fruit loves the hibiscus grapes.",
+			"after": "What our tasting pours: a light, bright Premier Cru Beaune, the red fruit loves the hibiscus grapes."
+		},
+		{
+			"path": "model.dishes[24].pairing.serve",
+			"before": "Coravin pour, 50–54°F, in a white Burgundy bowl. On the dinner tasting this course is paired with Louis Jadot Beaune 1er Cru — be ready to explain why a light red works too.",
+			"after": "Coravin pour, 50 to 54°F, in a white Burgundy bowl. On the dinner tasting this course is paired with Louis Jadot Beaune 1er Cru, be ready to explain why a light red works too."
+		},
+		{
+			"path": "model.dishes[24].pairing.avoid",
+			"before": "Avoid big, oaky Chardonnay — oak fights preserved lemon and turns bitter — and tannic reds, which taste metallic with fish.",
+			"after": "Avoid big, oaky Chardonnay, oak fights preserved lemon and turns bitter, and tannic reds, which taste metallic with fish."
+		},
+		{
+			"path": "model.dishes[25].description",
+			"before": "Banana leaf–wrapped Gulf fish, Louisiana crab, sorghum, Marcona almonds, Castelvetrano olives, tomato",
+			"after": "Banana leaf-wrapped Gulf fish, Louisiana crab, sorghum, Marcona almonds, Castelvetrano olives, tomato"
+		},
+		{
+			"path": "model.dishes[25].lines.s45",
+			"before": "En papillote — ahn pah-pee-YOHT — means cooked sealed in a wrapper, and here the wrapper is a banana leaf, so the fish steams gently in its own juices and stays very moist. Inside, Louisiana crab adds sweetness, tomato and Castelvetrano olives — bright green, mild and buttery — give it a Mediterranean feel, and Marcona almonds and sorghum, a chewy ancient grain, add nutty texture. It’s a lighter entrée that’s still full of flavor.",
+			"after": "En papillote, ahn pah-pee-YOHT, means cooked sealed in a wrapper, and here the wrapper is a banana leaf, so the fish steams gently in its own juices and stays very moist. Inside, Louisiana crab adds sweetness, tomato and Castelvetrano olives, bright green, mild and buttery, give it a Mediterranean feel, and Marcona almonds and sorghum, a chewy ancient grain, add nutty texture. It’s a lighter entrée that’s still full of flavor."
+		},
+		{
+			"path": "model.dishes[25].serviceNote",
+			"before": "Know today’s fish. Fish, shellfish (crab), tree nuts (Marcona almonds). Sorghum is gluten-free, but confirm the whole dish. Ask at lineup whether it’s opened at the table — if so, warn guests about the steam.",
+			"after": "Know today’s fish. Fish, shellfish (crab), tree nuts (Marcona almonds). Sorghum is gluten-free, but confirm the whole dish. Ask at lineup whether it’s opened at the table, if so, warn guests about the steam."
+		},
+		{
+			"path": "model.dishes[25].pairing.sayIt",
+			"before": "With the papillote, the Albariño is perfect — citrusy and a little salty, made for seafood with olives and tomato.",
+			"after": "With the papillote, the Albariño is perfect, citrusy and a little salty, made for seafood with olives and tomato."
+		},
+		{
+			"path": "model.dishes[25].pairing.whyThisWine",
+			"before": "The fish is steamed with tomato, olives and crab, so it’s delicate and briny. Albariño is from Spain’s Atlantic coast — lemony, with a salty edge — made for exactly this kind of seafood.",
+			"after": "The fish is steamed with tomato, olives and crab, so it’s delicate and briny. Albariño is from Spain’s Atlantic coast, lemony, with a salty edge, made for exactly this kind of seafood."
+		},
+		{
+			"path": "model.dishes[26].description",
+			"before": "Sweet tea–brined and fried Cornish hen, turnips & shallots, mustard cream sauce",
+			"after": "Sweet tea-brined and fried Cornish hen, turnips & shallots, mustard cream sauce"
+		},
+		{
+			"path": "model.dishes[26].lines.s10",
+			"before": "Our Poussin à la Moutarde — a sweet tea–brined, fried Cornish hen with turnips, shallots and mustard cream sauce.",
+			"after": "Our Poussin à la Moutarde: a sweet tea-brined, fried Cornish hen with turnips, shallots and mustard cream sauce."
+		},
+		{
+			"path": "model.dishes[26].lines.s20",
+			"before": "Poussin à la moutarde means young chicken with mustard. Ours is a Cornish hen brined in sweet tea and fried, with turnips and shallots and a mustard cream sauce — Southern fried chicken meets French bistro.",
+			"after": "Poussin à la moutarde means young chicken with mustard. Ours is a Cornish hen brined in sweet tea and fried, with turnips and shallots and a mustard cream sauce, Southern fried chicken meets French bistro."
+		},
+		{
+			"path": "model.dishes[26].lines.s45",
+			"before": "It’s where a French bistro meets a Southern kitchen. Poussin — poo-SAN — is a young, small chicken, and we use a Cornish hen. It’s brined in sweet tea, which seasons it and keeps it juicy, then fried until crisp. The classic French pairing is mustard, so there’s a mustard cream sauce — tangy and rich — with turnips and shallots for a gentle sweetness. It’s comforting and one of the best values on the dinner menu.",
+			"after": "It’s where a French bistro meets a Southern kitchen. Poussin, poo-SAN, is a young, small chicken, and we use a Cornish hen. It’s brined in sweet tea, which seasons it and keeps it juicy, then fried until crisp. The classic French pairing is mustard, so there’s a mustard cream sauce, tangy and rich, with turnips and shallots for a gentle sweetness. It’s comforting and one of the best values on the dinner menu."
+		},
+		{
+			"path": "model.dishes[26].serviceNote",
+			"before": "Poultry; dairy (cream sauce), mustard; likely gluten (fried coating) — confirm. Whole small bird; may have bones.",
+			"after": "Poultry; dairy (cream sauce), mustard; likely gluten (fried coating), confirm. Whole small bird; may have bones."
+		},
+		{
+			"path": "model.dishes[26].pairing.sayIt",
+			"before": "With the hen I’d pour the Gainey Chardonnay — creamy enough for the mustard sauce, fresh enough for the fried crust.",
+			"after": "With the hen I’d pour the Gainey Chardonnay, creamy enough for the mustard sauce, fresh enough for the fried crust."
+		},
+		{
+			"path": "model.dishes[26].pairing.whyThisWine",
+			"before": "The hen is fried, with a creamy mustard sauce. This California Chardonnay has the body for the cream and fresh acidity for the crispy skin — rich with rich, but still bright.",
+			"after": "The hen is fried, with a creamy mustard sauce. This California Chardonnay has the body for the cream and fresh acidity for the crispy skin, rich with rich, but still bright."
+		},
+		{
+			"path": "model.dishes[26].pairing.palate",
+			"before": "The cream sauce and the Chardonnay’s texture meet at the same weight, so the sauce feels silky, not heavy. The wine’s acidity cuts the fried crust and makes the meat taste juicier. Mustard’s pungency is tamed by ripe apple fruit, and the turnips’ mild bitterness is rounded off. The finish goes creamy, then bright — like a squeeze of lemon on fried chicken.",
+			"after": "The cream sauce and the Chardonnay’s texture meet at the same weight, so the sauce feels silky, not heavy. The wine’s acidity cuts the fried crust and makes the meat taste juicier. Mustard’s pungency is tamed by ripe apple fruit, and the turnips’ mild bitterness is rounded off. The finish goes creamy, then bright, like a squeeze of lemon on fried chicken."
+		},
+		{
+			"path": "model.dishes[26].pairing.secondWhy",
+			"before": "Sparkling rosé — bubbles and fried chicken are a classic.",
+			"after": "Sparkling rosé, bubbles and fried chicken are a classic."
+		},
+		{
+			"path": "model.dishes[26].pairing.stepUp",
+			"before": "Leflaive Mâcon-Verzé by Coravin: finer, chalkier Chardonnay from Burgundy — Dijon mustard’s home region — with the texture for the cream.",
+			"after": "Leflaive Mâcon-Verzé by Coravin: finer, chalkier Chardonnay from Burgundy, Dijon mustard’s home region, with the texture for the cream."
+		},
+		{
+			"path": "model.dishes[26].pairing.avoid",
+			"before": "Avoid tannic reds — tannin with mustard cream turns bitter — and very lean whites that the cream flattens.",
+			"after": "Avoid tannic reds, tannin with mustard cream turns bitter, and very lean whites that the cream flattens."
+		},
+		{
+			"path": "model.dishes[27].parts.technique",
+			"before": "blackened — coated in spices and seared in a very hot pan",
+			"after": "blackened, coated in spices and seared in a very hot pan"
+		},
+		{
+			"path": "model.dishes[27].lines.s45",
+			"before": "It’s our vegetarian entrée, and it’s full of flavor. The tofu comes from Tien Dat, a Vietnamese family co-op across the river that presses it fresh every week. We blacken it — the Louisiana technique of coating in spices and searing in a very hot pan — so it gets a dark, spiced crust. Rice grits are broken rice cooked creamy like grits, and preserved shiitake mushrooms bring deep, savory flavor. Spiced, earthy and satisfying — you won’t miss the meat.",
+			"after": "It’s our vegetarian entrée, and it’s full of flavor. The tofu comes from Tien Dat, a Vietnamese family co-op across the river that presses it fresh every week. We blacken it, the Louisiana technique of coating in spices and searing in a very hot pan, so it gets a dark, spiced crust. Rice grits are broken rice cooked creamy like grits, and preserved shiitake mushrooms bring deep, savory flavor. Spiced, earthy and satisfying, you won’t miss the meat.",
+			"override": 72
+		},
+		{
+			"path": "model.dishes[27].serviceNote",
+			"before": "Soy. Ask the kitchen whether it’s fully vegan — blackening is traditionally done with butter — and whether the rice grits use any stock. Rice is naturally gluten-free; confirm the spice blend and mushrooms. Moderate spice.",
+			"after": "Soy. Ask the kitchen whether it’s fully vegan, blackening is traditionally done with butter, and whether the rice grits use any stock. Rice is naturally gluten-free; confirm the spice blend and mushrooms. Moderate spice."
+		},
+		{
+			"path": "model.dishes[27].pairing.sayIt",
+			"before": "With the tofu I’d pour our Bourgogne Pinot Noir — light, with an earthy note that loves mushrooms.",
+			"after": "With the tofu I’d pour our Bourgogne Pinot Noir, light, with an earthy note that loves mushrooms."
+		},
+		{
+			"path": "model.dishes[27].pairing.whyThisWine",
+			"before": "The tofu has a spicy crust and earthy mushrooms. This red Burgundy is light and silky with an earthy note — it loves mushrooms and won’t make the spice feel hotter.",
+			"after": "The tofu has a spicy crust and earthy mushrooms. This red Burgundy is light and silky with an earthy note, it loves mushrooms and won’t make the spice feel hotter."
+		},
+		{
+			"path": "model.dishes[27].pairing.serve",
+			"before": "Serve slightly cool, 55–58°F, in a Burgundy bowl — a few minutes in the ice bucket if the bar runs warm.",
+			"after": "Serve slightly cool, 55 to 58°F, in a Burgundy bowl, a few minutes in the ice bucket if the bar runs warm."
+		},
+		{
+			"path": "model.dishes[28].lines.s45",
+			"before": "Hanger is a butcher’s favorite — loose-grained and very beefy — and ours is Creekstone Farms beef seasoned with our own Creole spice. Broccolini is glazed with Madeira, the fortified wine, so it’s a little sweet and nutty. Persillade — pair-see-YAHD — is chopped parsley and garlic, and we add pepitas, pumpkin seeds, for crunch. Chili crisp, a crunchy chili oil, brings heat. Bold, spiced and fun. How do you like your steak?",
+			"after": "Hanger is a butcher’s favorite, loose-grained and very beefy, and ours is Creekstone Farms beef seasoned with our own Creole spice. Broccolini is glazed with Madeira, the fortified wine, so it’s a little sweet and nutty. Persillade, pair-see-YAHD, is chopped parsley and garlic, and we add pepitas, pumpkin seeds, for crunch. Chili crisp, a crunchy chili oil, brings heat. Bold, spiced and fun. How do you like your steak?"
+		},
+		{
+			"path": "model.dishes[28].serviceNote",
+			"before": "Ask temperature — best medium-rare to medium. Chili crisp brings real heat — warn spice-shy guests and offer it on the side if the kitchen agrees. Pumpkin seeds; the chili crisp may contain soy or sesame — ask. Different plate from the breakfast/lunch hanger.",
+			"after": "Ask temperature, best medium-rare to medium. Chili crisp brings real heat, warn spice-shy guests and offer it on the side if the kitchen agrees. Pumpkin seeds; the chili crisp may contain soy or sesame, ask. Different plate from the breakfast/lunch hanger."
+		},
+		{
+			"path": "model.dishes[28].pairing.sayIt",
+			"before": "With the hanger, the Durban from the Southern Rhône — ripe and generous, with soft tannins that love a little spice.",
+			"after": "With the hanger, the Durban from the Southern Rhône, ripe and generous, with soft tannins that love a little spice."
+		},
+		{
+			"path": "model.dishes[28].pairing.serve",
+			"before": "Serve cooler than usual, about 58°F — a few minutes in the ice bucket — so alcohol doesn’t amplify the chili. Standard red glass; pour as the steak fires.",
+			"after": "Serve cooler than usual, about 58°F, a few minutes in the ice bucket, so alcohol doesn’t amplify the chili. Standard red glass; pour as the steak fires."
+		},
+		{
+			"path": "model.dishes[29].lines.s10",
+			"before": "Our housemade pork sausage patty — a classic breakfast side.",
+			"after": "Our housemade pork sausage patty, a classic breakfast side."
+		},
+		{
+			"path": "model.dishes[29].lines.s20",
+			"before": "A housemade pork sausage patty — savory and well seasoned, great alongside any of the egg dishes.",
+			"after": "A housemade pork sausage patty, savory and well seasoned, great alongside any of the egg dishes."
+		},
+		{
+			"path": "model.dishes[30].lines.s10",
+			"before": "Thick-cut bacon — a great add to any breakfast.",
+			"after": "Thick-cut bacon, a great add to any breakfast."
+		},
+		{
+			"path": "model.dishes[30].lines.s20",
+			"before": "Thick-cut bacon — meaty, smoky and crisp at the edges. It’s perfect with the Eggs Sardou or the omelette.",
+			"after": "Thick-cut bacon, meaty, smoky and crisp at the edges. It’s perfect with the Eggs Sardou or the omelette."
+		},
+		{
+			"path": "model.dishes[30].lines.s45",
+			"before": "Our bacon is cut thick, so it stays meaty in the middle while the edges crisp up — smoky, salty and satisfying. It’s a natural add-on to the meatless egg dishes like the Eggs Sardou or the Crab & Corn Omelette, or to share around the table.",
+			"after": "Our bacon is cut thick, so it stays meaty in the middle while the edges crisp up, smoky, salty and satisfying. It’s a natural add-on to the meatless egg dishes like the Eggs Sardou or the Crab & Corn Omelette, or to share around the table."
+		},
+		{
+			"path": "model.dishes[31].lines.s10",
+			"before": "A buttermilk biscuit — flaky, tender and warm.",
+			"after": "A buttermilk biscuit, flaky, tender and warm."
+		},
+		{
+			"path": "model.dishes[31].lines.s20",
+			"before": "Our buttermilk biscuit is a Southern classic — tender and flaky, with a gentle tang from the buttermilk. Great for mopping up hollandaise.",
+			"after": "Our buttermilk biscuit is a Southern classic, tender and flaky, with a gentle tang from the buttermilk. Great for mopping up hollandaise."
+		},
+		{
+			"path": "model.dishes[32].lines.s10",
+			"before": "An egg any style — add one to anything.",
+			"after": "An egg any style, add one to anything."
+		},
+		{
+			"path": "model.dishes[32].lines.s20",
+			"before": "An egg cooked any way you like — scrambled, fried, poached — to add to a side, the hanger steak or a bowl of grits.",
+			"after": "An egg cooked any way you like, scrambled, fried, poached, to add to a side, the hanger steak or a bowl of grits."
+		},
+		{
+			"path": "model.dishes[32].lines.s45",
+			"before": "If you’d like an extra egg, we’ll cook it any way you like — scrambled, over easy, sunny-side up, poached. It’s a simple way to make the grits or the Brabant potatoes into a small meal, or to add a little more to the steak.",
+			"after": "If you’d like an extra egg, we’ll cook it any way you like: scrambled, over easy, sunny-side up, poached. It’s a simple way to make the grits or the Brabant potatoes into a small meal, or to add a little more to the steak."
+		},
+		{
+			"path": "model.dishes[33].lines.s10",
+			"before": "Creamy cheddar grits — Southern comfort in a bowl.",
+			"after": "Creamy cheddar grits, Southern comfort in a bowl."
+		},
+		{
+			"path": "model.dishes[33].lines.s20",
+			"before": "Our cheddar grits are creamy grits with cheddar stirred in — the Southern breakfast staple.",
+			"after": "Our cheddar grits are creamy grits with cheddar stirred in, the Southern breakfast staple."
+		},
+		{
+			"path": "model.dishes[33].lines.s45",
+			"before": "Grits are coarsely ground corn, cooked slowly until creamy — the Southern answer to polenta. Ours have cheddar stirred in, so they’re rich and a little sharp. They’re perfect with an egg any style or alongside the bacon or sausage.",
+			"after": "Grits are coarsely ground corn, cooked slowly until creamy, the Southern answer to polenta. Ours have cheddar stirred in, so they’re rich and a little sharp. They’re perfect with an egg any style or alongside the bacon or sausage."
+		},
+		{
+			"path": "model.dishes[33].serviceNote",
+			"before": "Dairy (cheddar, likely butter). Corn is gluten-free — confirm preparation.",
+			"after": "Dairy (cheddar, likely butter). Corn is gluten-free, confirm preparation."
+		},
+		{
+			"path": "model.dishes[34].parts.technique",
+			"before": "cubed and fried crisp — New Orleans Brabant style",
+			"after": "cubed and fried crisp, New Orleans Brabant style"
+		},
+		{
+			"path": "model.dishes[34].lines.s10",
+			"before": "Brabant potatoes — New Orleans’ crispy cubed potatoes.",
+			"after": "Brabant potatoes, New Orleans’ crispy cubed potatoes."
+		},
+		{
+			"path": "model.dishes[34].lines.s20",
+			"before": "Brabant potatoes are a New Orleans classic — cubes of potato cooked until golden and crisp outside, fluffy inside, traditionally tossed with garlic and parsley.",
+			"after": "Brabant potatoes are a New Orleans classic: cubes of potato cooked until golden and crisp outside, fluffy inside, traditionally tossed with garlic and parsley."
+		},
+		{
+			"path": "model.dishes[35].lines.s10",
+			"before": "Creamed spinach — rich and silky, a classic steakhouse side.",
+			"after": "Creamed spinach, rich and silky, a classic steakhouse side."
+		},
+		{
+			"path": "model.dishes[35].lines.s20",
+			"before": "Our creamed spinach is rich and silky — spinach cooked down in cream. It’s great with the hanger steak or alongside the eggs.",
+			"after": "Our creamed spinach is rich and silky, spinach cooked down in cream. It’s great with the hanger steak or alongside the eggs."
+		},
+		{
+			"path": "model.dishes[36].lines.s10",
+			"before": "Our succotash — glazed summer vegetables with Nueske’s bacon.",
+			"after": "Our succotash, glazed summer vegetables with Nueske’s bacon."
+		},
+		{
+			"path": "model.dishes[36].lines.s45",
+			"before": "Succotash is a Native American dish of corn and beans, some four hundred years old, that the South adopted — traditionally corn and lima beans — and ours is a mix of glazed summer vegetables, sweet and bright, with Nueske’s bacon, a Wisconsin bacon known for its deep applewood smoke. It’s a great partner for the Chateaubriand or the hen, and it’s seasonal, so it’s best right now.",
+			"after": "Succotash is a Native American dish of corn and beans, some four hundred years old, that the South adopted, traditionally corn and lima beans, and ours is a mix of glazed summer vegetables, sweet and bright, with Nueske’s bacon, a Wisconsin bacon known for its deep applewood smoke. It’s a great partner for the Chateaubriand or the hen, and it’s seasonal, so it’s best right now.",
+			"override": 23
+		},
+		{
+			"path": "model.dishes[36].serviceNote",
+			"before": "Pork (bacon) — not vegetarian. Seasonal; confirm tonight’s vegetables.",
+			"after": "Pork (bacon), not vegetarian. Seasonal; confirm tonight’s vegetables."
+		},
+		{
+			"path": "model.dishes[37].lines.s10",
+			"before": "Smoked cauliflower with preserved lemon and harissa — smoky, bright and a little spicy.",
+			"after": "Smoked cauliflower with preserved lemon and harissa, smoky, bright and a little spicy."
+		},
+		{
+			"path": "model.dishes[37].lines.s20",
+			"before": "Our smoked cauliflower is finished with preserved lemon and harissa, the North African chili paste — smoky, bright and gently spicy.",
+			"after": "Our smoked cauliflower is finished with preserved lemon and harissa, the North African chili paste, smoky, bright and gently spicy."
+		},
+		{
+			"path": "model.dishes[37].lines.s45",
+			"before": "We smoke the cauliflower so it picks up a deep, savory flavor, then finish it with preserved lemon — lemons cured in salt, which taste intensely citrusy and a little floral — and harissa, a North African chili paste with warm spice. Smoky, bright and gently spicy, it’s a great vegetable side and a good partner for the tofu or the fish.",
+			"after": "We smoke the cauliflower so it picks up a deep, savory flavor, then finish it with preserved lemon, lemons cured in salt, which taste intensely citrusy and a little floral, and harissa, a North African chili paste with warm spice. Smoky, bright and gently spicy, it’s a great vegetable side and a good partner for the tofu or the fish."
+		},
+		{
+			"path": "model.dishes[37].serviceNote",
+			"before": "Moderate heat (harissa). Likely vegetarian — confirm.",
+			"after": "Moderate heat (harissa). Likely vegetarian, confirm."
+		},
+		{
+			"path": "model.dishes[38].lines.s10",
+			"before": "Shells & Cheese — pasta shells in a Mimolette and Abita Amber fondue with Grana Padano.",
+			"after": "Shells & Cheese, pasta shells in a Mimolette and Abita Amber fondue with Grana Padano."
+		},
+		{
+			"path": "model.dishes[38].lines.s45",
+			"before": "It’s our take on mac and cheese. Shells hold the sauce in every curve, and the sauce is a fondue of Mimolette — mee-mo-LET — a bright-orange French cheese that’s nutty and a little sweet as it ages, made with Abita Amber, a Louisiana beer, for a malty depth. Grana Padano adds a salty finish. It’s perfect with the Chateaubriand or the hanger steak.",
+			"after": "It’s our take on mac and cheese. Shells hold the sauce in every curve, and the sauce is a fondue of Mimolette, mee-mo-LET, a bright-orange French cheese that’s nutty and a little sweet as it ages, made with Abita Amber, a Louisiana beer, for a malty depth. Grana Padano adds a salty finish. It’s perfect with the Chateaubriand or the hanger steak."
+		},
+		{
+			"path": "model.dishes[38].serviceNote",
+			"before": "Gluten (pasta, beer), dairy. Contains beer — alcohol mostly cooked, not all.",
+			"after": "Gluten (pasta, beer), dairy. Contains beer, alcohol mostly cooked, not all."
+		},
+		{
+			"path": "model.dishes[39].lines.s10",
+			"before": "Maggie’s Mushrooms — our mushroom side, a perfect partner for the steaks and the Chateaubriand.",
+			"after": "Maggie’s Mushrooms, our mushroom side, a perfect partner for the steaks and the Chateaubriand."
+		},
+		{
+			"path": "model.dishes[39].lines.s20",
+			"before": "Maggie’s Mushrooms is our mushroom side — earthy and savory, a natural with the Chateaubriand, the hanger steak or the blackened tofu.",
+			"after": "Maggie’s Mushrooms is our mushroom side: earthy and savory, a natural with the Chateaubriand, the hanger steak or the blackened tofu."
+		},
+		{
+			"path": "model.dishes[39].lines.s45",
+			"before": "Maggie’s Mushrooms is our mushroom side, and mushrooms are one of the best things you can put next to beef — their earthy, savory flavor makes a steak taste even beefier. It’s wonderful with the Chateaubriand, the hanger steak, or with the blackened tofu for a vegetarian meal. I’d be happy to tell you exactly how the kitchen is preparing them tonight.",
+			"after": "Maggie’s Mushrooms is our mushroom side, and mushrooms are one of the best things you can put next to beef, their earthy, savory flavor makes a steak taste even beefier. It’s wonderful with the Chateaubriand, the hanger steak, or with the blackened tofu for a vegetarian meal. I’d be happy to tell you exactly how the kitchen is preparing them tonight."
+		},
+		{
+			"path": "model.dishes[39].serviceNote",
+			"before": "The menu prints no description. At lineup, learn the mushroom varieties, how they’re cooked, who Maggie is, and whether it’s vegetarian (butter, stock) — then tighten these lines.",
+			"after": "The menu prints no description. At lineup, learn the mushroom varieties, how they’re cooked, who Maggie is, and whether it’s vegetarian (butter, stock), then tighten these lines."
+		},
+		{
+			"path": "model.dishes[40].lines.s10",
+			"before": "South Louisiana Rice Dressing — the Cajun cousin of dirty rice.",
+			"after": "South Louisiana Rice Dressing, the Cajun cousin of dirty rice."
+		},
+		{
+			"path": "model.dishes[40].lines.s20",
+			"before": "Rice dressing is a South Louisiana classic — rice cooked with savory seasoned meat and the holy trinity of onion, celery and bell pepper. Think of it as dirty rice’s Cajun cousin.",
+			"after": "Rice dressing is a South Louisiana classic, rice cooked with savory seasoned meat and the holy trinity of onion, celery and bell pepper. Think of it as dirty rice’s Cajun cousin."
+		},
+		{
+			"path": "model.dishes[40].lines.s45",
+			"before": "Rice dressing is what South Louisiana families serve at Sunday dinners and holidays. Traditionally it’s rice cooked with well-seasoned ground meat — often including liver for depth — and the holy trinity of onion, celery and bell pepper. It’s savory and hearty, a lot like dirty rice. It’s a great partner for the poussin or the hanger steak. I can check exactly what goes into ours tonight.",
+			"after": "Rice dressing is what South Louisiana families serve at Sunday dinners and holidays. Traditionally it’s rice cooked with well-seasoned ground meat, often including liver for depth, and the holy trinity of onion, celery and bell pepper. It’s savory and hearty, a lot like dirty rice. It’s a great partner for the poussin or the hanger steak. I can check exactly what goes into ours tonight."
+		},
+		{
+			"path": "model.dishes[41].description",
+			"before": "Invented in 1951 at Brennan’s — bananas, butter, brown sugar, cinnamon, rum, housemade vanilla ice cream, flambéed tableside (minimum 2 people per order)",
+			"after": "Invented in 1951 at Brennan’s: bananas, butter, brown sugar, cinnamon, rum, housemade vanilla ice cream, flambéed tableside (minimum 2 people per order)"
+		},
+		{
+			"path": "model.dishes[41].lines.s10",
+			"before": "Bananas Foster — invented here in 1951 — flambéed right at your table and spooned over our vanilla ice cream.",
+			"after": "Bananas Foster, invented here in 1951, flambéed right at your table and spooned over our vanilla ice cream."
+		},
+		{
+			"path": "model.dishes[41].lines.s45",
+			"before": "Bananas Foster was born here in 1951 — Owen Brennan asked his sister Ella and chef Paul Blangé for a banana dessert, and named it for his friend Richard Foster. Butter, brown sugar and cinnamon melt into a caramel… then banana liqueur, and the bananas go in to soften. Now the rum — please sit back just a little — and there’s the flame. As it burns, the caramel deepens. We spoon the bananas over our vanilla ice cream, then the warm sauce. Enjoy — this year, it turns seventy-five.",
+			"after": "Bananas Foster was born here in 1951, Owen Brennan asked his sister Ella and chef Paul Blangé for a banana dessert, and named it for his friend Richard Foster. Butter, brown sugar and cinnamon melt into a caramel… then banana liqueur, and the bananas go in to soften. Now the rum, please sit back just a little, and there’s the flame. As it burns, the caramel deepens. We spoon the bananas over our vanilla ice cream, then the warm sauce. Enjoy, this year, it turns seventy-five.",
+			"override": 4
+		},
+		{
+			"path": "model.dishes[41].serviceNote",
+			"before": "Minimum 2 people per order ($14). Seed it with the entrée order. The printed menu says rum; Brennan’s own published recipe also uses banana liqueur — follow the house procedure you’re trained on. TABLESIDE SAFETY: (1) Set the cart where nothing hangs overhead and away from drapes, décor and air vents; clear menus, napkins and paper from it. (2) Guests seated and back from the cart; no one leaning in; watch children, loose sleeves and long hair. (3) Measure the rum into a small vessel first — never pour from the bottle near a flame. (4) Pull the pan off the flame to add rum, then tilt the far edge toward the flame to ignite, away from you and the guests. (5) Never add alcohol to a lit pan. (6) Keep a lid or cover within reach to smother, and know where the extinguisher is. (7) Let the flame burn out before plating; turn the burner off before you leave the cart. Flambéing doesn’t remove all the alcohol — tell guests who avoid it. Dairy (butter, ice cream); ice cream likely contains egg. On the breakfast tasting it comes with Congregation Coffee & Chicory.",
+			"after": "Minimum 2 people per order ($14). Seed it with the entrée order. The printed menu says rum; Brennan’s own published recipe also uses banana liqueur, follow the house procedure you’re trained on. TABLESIDE SAFETY: (1) Set the cart where nothing hangs overhead and away from drapes, décor and air vents; clear menus, napkins and paper from it. (2) Guests seated and back from the cart; no one leaning in; watch children, loose sleeves and long hair. (3) Measure the rum into a small vessel first, never pour from the bottle near a flame. (4) Pull the pan off the flame to add rum, then tilt the far edge toward the flame to ignite, away from you and the guests. (5) Never add alcohol to a lit pan. (6) Keep a lid or cover within reach to smother, and know where the extinguisher is. (7) Let the flame burn out before plating; turn the burner off before you leave the cart. Flambéing doesn’t remove all the alcohol, tell guests who avoid it. Dairy (butter, ice cream); ice cream likely contains egg. On the breakfast tasting it comes with Congregation Coffee & Chicory."
+		},
+		{
+			"path": "model.dishes[41].pairing.sayIt",
+			"before": "If you’d like a glass, a Mosel Auslese is gorgeous with it — honeyed and tropical, but bright. Or it’s perfect with our coffee and chicory.",
+			"after": "If you’d like a glass, a Mosel Auslese is gorgeous with it, honeyed and tropical, but bright. Or it’s perfect with our coffee and chicory."
+		},
+		{
+			"path": "model.dishes[41].pairing.serve",
+			"before": "Pour before the flambé starts, so no glass is set down near the flame. 375 ml half-bottle, 2–3 oz pours in a small glass, 45–50°F. The breakfast tasting includes coffee and chicory here.",
+			"after": "Pour before the flambé starts, so no glass is set down near the flame. 375 ml half-bottle, 2 to 3 oz pours in a small glass, 45 to 50°F. The breakfast tasting includes coffee and chicory here."
+		},
+		{
+			"path": "model.dishes[41].pairing.zeroProofText",
+			"before": "Congregation Coffee & Chicory, as the breakfast tasting pours it — roast and bitterness balance the caramel.",
+			"after": "Congregation Coffee & Chicory, as the breakfast tasting pours it, roast and bitterness balance the caramel."
+		},
+		{
+			"path": "model.dishes[41].pairing.zeroProofWhy",
+			"before": "as the breakfast tasting pours it — roast and bitterness balance the caramel.",
+			"after": "as the breakfast tasting pours it, roast and bitterness balance the caramel."
+		},
+		{
+			"path": "model.dishes[42].description",
+			"before": "Flambéed tableside — fresh tart black cherries, housemade vanilla ice cream, Luxardo sauce",
+			"after": "Flambéed tableside: fresh tart black cherries, housemade vanilla ice cream, Luxardo sauce"
+		},
+		{
+			"path": "model.dishes[42].parts.sauce",
+			"before": "Luxardo sauce — Luxardo is the Italian house famous for maraschino cherries",
+			"after": "Luxardo sauce, Luxardo is the Italian house famous for maraschino cherries"
+		},
+		{
+			"path": "model.dishes[42].lines.s10",
+			"before": "Cherries Jubilee — tart black cherries in a Luxardo sauce, flambéed at your table over vanilla ice cream.",
+			"after": "Cherries Jubilee, tart black cherries in a Luxardo sauce, flambéed at your table over vanilla ice cream."
+		},
+		{
+			"path": "model.dishes[42].lines.s20",
+			"before": "Cherries Jubilee is the other flambé classic: fresh, tart black cherries in a Luxardo sauce — named for the Italian maraschino cherry house — flamed right at your table and spooned over our housemade vanilla ice cream.",
+			"after": "Cherries Jubilee is the other flambé classic: fresh, tart black cherries in a Luxardo sauce, named for the Italian maraschino cherry house, flamed right at your table and spooned over our housemade vanilla ice cream."
+		},
+		{
+			"path": "model.dishes[42].lines.s45",
+			"before": "Cherries Jubilee is a grand old flambé dessert, and we make it right at your table. Fresh black cherries — tart and juicy — go into a warm Luxardo sauce — Luxardo is the Italian house famous for maraschino cherries and liqueur. We light it, and as the flame burns, the sauce deepens and the cherries soften. Then it all goes over our housemade vanilla ice cream, warm and cold together. If Bananas Foster isn’t your thing, or you want two flambés for the table, this is the one.",
+			"after": "Cherries Jubilee is a grand old flambé dessert, and we make it right at your table. Fresh black cherries, tart and juicy, go into a warm Luxardo sauce, Luxardo is the Italian house famous for maraschino cherries and liqueur. We light it, and as the flame burns, the sauce deepens and the cherries soften. Then it all goes over our housemade vanilla ice cream, warm and cold together. If Bananas Foster isn’t your thing, or you want two flambés for the table, this is the one."
+		},
+		{
+			"path": "model.dishes[42].serviceNote",
+			"before": "Flambéed tableside — follow the same safety steps as Bananas Foster. Cherries may contain pits — confirm with the kitchen whether they’re pitted and warn guests if not. Dairy; alcohol not fully burned off. No minimum is printed (Foster’s is two) — confirm at lineup.",
+			"after": "Flambéed tableside, follow the same safety steps as Bananas Foster. Cherries may contain pits, confirm with the kitchen whether they’re pitted and warn guests if not. Dairy; alcohol not fully burned off. No minimum is printed (Foster’s is two), confirm at lineup."
+		},
+		{
+			"path": "model.dishes[42].pairing.sayIt",
+			"before": "With the cherries, a glass of Banyuls — a sweet Grenache from France — tastes of fig, caramel and cocoa. It’s lovely with it.",
+			"after": "With the cherries, a glass of Banyuls, a sweet Grenache from France, tastes of fig, caramel and cocoa. It’s lovely with it.",
+			"override": 126
+		},
+		{
+			"path": "model.dishes[42].pairing.whyThisWine",
+			"before": "Banyuls is a sweet red from the south of France that tastes of fig, caramel and cocoa — so the cherries taste even brighter, and it’s lovely with the vanilla ice cream.",
+			"after": "Banyuls is a sweet red from the south of France that tastes of fig, caramel and cocoa, so the cherries taste even brighter, and it’s lovely with the vanilla ice cream.",
+			"override": 127
+		},
+		{
+			"path": "model.dishes[42].pairing.serve",
+			"before": "Banyuls is the dinner tasting’s pour — confirm it’s available à la carte. Pour 2–3 oz in a small dessert glass, slightly cool, before the flambé begins.",
+			"after": "Banyuls is the dinner tasting’s pour, confirm it’s available à la carte. Pour 2 to 3 oz in a small dessert glass, slightly cool, before the flambé begins."
+		},
+		{
+			"path": "model.dishes[42].pairing.zeroProofText",
+			"before": "New Orleans–style coffee with chicory: roast and bitterness balance sweet cherries and ice cream.",
+			"after": "New Orleans-style coffee with chicory: roast and bitterness balance sweet cherries and ice cream."
+		},
+		{
+			"path": "model.dishes[42].pairing.zeroProof",
+			"before": "New Orleans–style coffee with chicory",
+			"after": "New Orleans-style coffee with chicory"
+		},
+		{
+			"path": "model.dishes[43].parts.main",
+			"before": "Bread pudding — bread baked in a sweet custard",
+			"after": "Bread pudding, bread baked in a sweet custard"
+		},
+		{
+			"path": "model.dishes[43].lines.s20",
+			"before": "Our New Orleans Bread Pudding comes with a warm whiskey caramel, buttermilk ice cream — a little tangy — and pralines, the classic New Orleans pecan candy, for crunch.",
+			"after": "Our New Orleans Bread Pudding comes with a warm whiskey caramel, buttermilk ice cream, a little tangy, and pralines, the classic New Orleans pecan candy, for crunch."
+		},
+		{
+			"path": "model.dishes[43].lines.s45",
+			"before": "Bread pudding is New Orleans’ comfort dessert — bread soaked in a sweet custard and baked until soft inside and golden on top. Ours gets a whiskey caramel, rich and a little boozy, and buttermilk ice cream, which has a gentle tang that keeps it from being too sweet. Pralines — PRAW-leens — are the New Orleans candy of pecans, butter and brown sugar, and they add crunch. Warm and cold, sweet and tangy.",
+			"after": "Bread pudding is New Orleans’ comfort dessert, bread soaked in a sweet custard and baked until soft inside and golden on top. Ours gets a whiskey caramel, rich and a little boozy, and buttermilk ice cream, which has a gentle tang that keeps it from being too sweet. Pralines, PRAW-leens, are the New Orleans candy of pecans, butter and brown sugar, and they add crunch. Warm and cold, sweet and tangy."
+		},
+		{
+			"path": "model.dishes[43].pairing.sayIt",
+			"before": "With the bread pudding, a glass of Mosel Auslese — honeyed and sweet, with enough acidity to keep it bright.",
+			"after": "With the bread pudding, a glass of Mosel Auslese, honeyed and sweet, with enough acidity to keep it bright."
+		},
+		{
+			"path": "model.dishes[43].pairing.serve",
+			"before": "375 ml half-bottle, 2–3 oz pours in a small dessert or white glass, 45–50°F. Pour as the dessert order fires.",
+			"after": "375 ml half-bottle, 2 to 3 oz pours in a small dessert or white glass, 45 to 50°F. Pour as the dessert order fires."
+		},
+		{
+			"path": "model.dishes[43].pairing.zeroProofText",
+			"before": "New Orleans–style coffee with chicory: roast and bitterness cut the caramel’s sweetness.",
+			"after": "New Orleans-style coffee with chicory: roast and bitterness cut the caramel’s sweetness."
+		},
+		{
+			"path": "model.dishes[43].pairing.zeroProof",
+			"before": "New Orleans–style coffee with chicory",
+			"after": "New Orleans-style coffee with chicory"
+		},
+		{
+			"path": "model.dishes[44].lines.s10",
+			"before": "The Snickers — milk chocolate Bavarian cream, caramel custard, nougat ice cream and roasted peanuts.",
+			"after": "The Snickers: milk chocolate Bavarian cream, caramel custard, nougat ice cream and roasted peanuts."
+		},
+		{
+			"path": "model.dishes[44].lines.s20",
+			"before": "The Snickers is our grown-up candy bar: a milk chocolate Bavarian cream, caramel custard, nougat ice cream and roasted peanuts — all the flavors you know, done as a plated dessert.",
+			"after": "The Snickers is our grown-up candy bar: a milk chocolate Bavarian cream, caramel custard, nougat ice cream and roasted peanuts, all the flavors you know, done as a plated dessert."
+		},
+		{
+			"path": "model.dishes[44].lines.s45",
+			"before": "You can guess the inspiration. Each part of the candy bar becomes its own dessert: a milk chocolate Bavarian — a light, set cream, somewhere between a mousse and a custard — plus a silky caramel custard, nougat turned into ice cream, and roasted peanuts for salt and crunch. It’s nostalgic and fun, but refined. It closes our dinner tasting with a glass of Banyuls, a sweet red from France — chocolate’s best friend.",
+			"after": "You can guess the inspiration. Each part of the candy bar becomes its own dessert: a milk chocolate Bavarian, a light, set cream, somewhere between a mousse and a custard, plus a silky caramel custard, nougat turned into ice cream, and roasted peanuts for salt and crunch. It’s nostalgic and fun, but refined. It closes our dinner tasting with a glass of Banyuls, a sweet red from France, chocolate’s best friend."
+		},
+		{
+			"path": "model.dishes[44].serviceNote",
+			"before": "PEANUTS — confirm before ordering. Dairy, eggs. Bavarian creams are usually set with gelatin — ask the kitchen for vegetarian guests. Dinner tasting course five.",
+			"after": "PEANUTS, confirm before ordering. Dairy, eggs. Bavarian creams are usually set with gelatin, ask the kitchen for vegetarian guests. Dinner tasting course five."
+		},
+		{
+			"path": "model.dishes[44].pairing.sayIt",
+			"before": "With the Snickers, we pour Banyuls — a sweet fortified red from France. With chocolate and caramel, it’s the classic.",
+			"after": "With the Snickers, we pour Banyuls, a sweet fortified red from France. With chocolate and caramel, it’s the classic."
+		},
+		{
+			"path": "model.dishes[44].pairing.whyThisWine",
+			"before": "Chocolate makes most wines taste bitter, but Banyuls — a sweet red from the south of France — has its own cocoa and cherry flavors. With caramel and peanuts, it’s a grown-up candy bar.",
+			"after": "Chocolate makes most wines taste bitter, but Banyuls, a sweet red from the south of France, has its own cocoa and cherry flavors. With caramel and peanuts, it’s a grown-up candy bar."
+		},
+		{
+			"path": "model.dishes[44].pairing.zeroProofText",
+			"before": "New Orleans–style coffee with chicory: its roast and bitterness balance milk chocolate and caramel.",
+			"after": "New Orleans-style coffee with chicory: its roast and bitterness balance milk chocolate and caramel."
+		},
+		{
+			"path": "model.dishes[44].pairing.zeroProof",
+			"before": "New Orleans–style coffee with chicory",
+			"after": "New Orleans-style coffee with chicory"
+		},
+		{
+			"path": "model.dishes[45].lines.s10",
+			"before": "Our Lemon Tart — yuzu mousse, lemon jelly, sweet pastry crumb and toasted meringue.",
+			"after": "Our Lemon Tart: yuzu mousse, lemon jelly, sweet pastry crumb and toasted meringue."
+		},
+		{
+			"path": "model.dishes[45].lines.s20",
+			"before": "Our Lemon Tart is bright and light: a yuzu mousse — yuzu is a fragrant Japanese citrus — with lemon jelly, a sweet pastry crumb and toasted meringue.",
+			"after": "Our Lemon Tart is bright and light: a yuzu mousse, yuzu is a fragrant Japanese citrus, with lemon jelly, a sweet pastry crumb and toasted meringue."
+		},
+		{
+			"path": "model.dishes[45].lines.s45",
+			"before": "If you want something bright after a rich meal, this is it. It has everything you love about a lemon meringue tart: yuzu mousse — yuzu is a Japanese citrus that tastes like lemon, lime and mandarin at once — with a lemon jelly, a sweet pastry crumb for crunch, and toasted meringue, soft and marshmallowy. Tart, airy and refreshing.",
+			"after": "If you want something bright after a rich meal, this is it. It has everything you love about a lemon meringue tart: yuzu mousse, yuzu is a Japanese citrus that tastes like lemon, lime and mandarin at once, with a lemon jelly, a sweet pastry crumb for crunch, and toasted meringue, soft and marshmallowy. Tart, airy and refreshing."
+		},
+		{
+			"path": "model.dishes[45].serviceNote",
+			"before": "Eggs (meringue, mousse), dairy, gluten (pastry). The lightest dessert — suggest it after a rich meal.",
+			"after": "Eggs (meringue, mousse), dairy, gluten (pastry). The lightest dessert, suggest it after a rich meal."
+		},
+		{
+			"path": "model.dishes[45].pairing.sayIt",
+			"before": "Citrus desserts are hard on wine, but a sweet Mosel Riesling loves them — the Auslese has the acidity to match.",
+			"after": "Citrus desserts are hard on wine, but a sweet Mosel Riesling loves them, the Auslese has the acidity to match."
+		},
+		{
+			"path": "model.dishes[45].pairing.serve",
+			"before": "375 ml half-bottle, 2–3 oz pours, 45–50°F in a small dessert or white glass. Pour as the dessert fires.",
+			"after": "375 ml half-bottle, 2 to 3 oz pours, 45 to 50°F in a small dessert or white glass. Pour as the dessert fires."
+		},
+		{
+			"path": "model.dishes[46].parts.technique",
+			"before": "charred and caramelized, tarte Tatin–style",
+			"after": "charred and caramelized, tarte Tatin-style"
+		},
+		{
+			"path": "model.dishes[46].lines.s10",
+			"before": "Pineapple Tarte Tatin — charred pineapple on puff pastry, with sweetened condensed anglaise and whipped vanilla mousse.",
+			"after": "Pineapple Tarte Tatin, charred pineapple on puff pastry, with sweetened condensed anglaise and whipped vanilla mousse."
+		},
+		{
+			"path": "model.dishes[46].lines.s45",
+			"before": "Tarte Tatin — tart tah-TAN — is the famous French upside-down tart, usually apples caramelized in butter and sugar on crisp pastry. We make it with pineapple, charred so it’s caramelized with a little smoky edge. Puff pastry gives it flaky layers, and the anglaise — a pourable vanilla custard — is made with sweetened condensed milk for a rich, caramel-milk flavor. Whipped vanilla mousse keeps it light. Tropical, buttery and bright.",
+			"after": "Tarte Tatin, tart tah-TAN, is the famous French upside-down tart, usually apples caramelized in butter and sugar on crisp pastry. We make it with pineapple, charred so it’s caramelized with a little smoky edge. Puff pastry gives it flaky layers, and the anglaise, a pourable vanilla custard, is made with sweetened condensed milk for a rich, caramel-milk flavor. Whipped vanilla mousse keeps it light. Tropical, buttery and bright."
+		},
+		{
+			"path": "model.dishes[46].pairing.sayIt",
+			"before": "With the pineapple, a Mosel Auslese is lovely — it has pineapple and honey notes of its own, and it stays bright.",
+			"after": "With the pineapple, a Mosel Auslese is lovely, it has pineapple and honey notes of its own, and it stays bright."
+		},
+		{
+			"path": "model.dishes[46].pairing.serve",
+			"before": "375 ml half-bottle, 2–3 oz pours, 45–50°F in a small dessert or white glass; pour as dessert is fired.",
+			"after": "375 ml half-bottle, 2 to 3 oz pours, 45 to 50°F in a small dessert or white glass; pour as dessert is fired."
+		},
+		{
+			"path": "model.wines[0].profile",
+			"before": "Extra Brut means very little added sugar, under six grams a liter: very dry, with citrus, orchard fruit, brioche and a firm, chalky finish. The live list shows $28 a glass; the restaurant’s own drinks page shows $30 — check the current price.",
+			"after": "Extra Brut means very little added sugar, under six grams a liter: very dry, with citrus, orchard fruit, brioche and a firm, chalky finish. The live list shows $28 a glass; the restaurant’s own drinks page shows $30, check the current price.",
+			"override": 94
+		},
+		{
+			"path": "model.wines[0].sayIt",
+			"before": "Our house Champagne is from Piper-Heidsieck and carries the Brennan’s name — it’s Extra Brut, so it’s very dry and crisp, a beautiful way to start.",
+			"after": "Our house Champagne is from Piper-Heidsieck and carries the Brennan’s name: it’s Extra Brut, so it’s very dry and crisp, a beautiful way to start."
+		},
+		{
+			"path": "model.wines[0].goesWith",
+			"before": "Turtle soup, raw oysters, Eggs Hussarde, the Creole Caesar, anything fried or salty — the house bubbles morning and night.",
+			"after": "Turtle soup, raw oysters, Eggs Hussarde, the Creole Caesar, anything fried or salty, the house bubbles morning and night."
+		},
+		{
+			"path": "model.wines[0].serve",
+			"before": "Serve 43–46°F in a tulip or white-wine glass. Ice bucket, half ice and half water. Hold cork and cage together, turn the bottle, and ease the cork out with a quiet sigh.",
+			"after": "Serve 43 to 46°F in a tulip or white-wine glass. Ice bucket, half ice and half water. Hold cork and cage together, turn the bottle, and ease the cork out with a quiet sigh."
+		},
+		{
+			"path": "model.wines[1].sayIt",
+			"before": "If you’d like something pink and festive, the Pierre Sparr is a sparkling rosé from Alsace — made like Champagne, all Pinot Noir, dry with bright berry fruit.",
+			"after": "If you’d like something pink and festive, the Pierre Sparr is a sparkling rosé from Alsace: made like Champagne, all Pinot Noir, dry with bright berry fruit."
+		},
+		{
+			"path": "model.wines[1].serve",
+			"before": "Serve 43–46°F in a flute or tulip. Ice bucket, half ice and half water. Tilt the glass and pour in two stages so the creamy mousse doesn’t overflow.",
+			"after": "Serve 43 to 46°F in a flute or tulip. Ice bucket, half ice and half water. Tilt the glass and pour in two stages so the creamy mousse doesn’t overflow."
+		},
+		{
+			"path": "model.wines[2].profile",
+			"before": "Rare began as Piper-Heidsieck’s prestige cuvée and is now run as its own house, Rare Champagne; first vintage 1976, only about a dozen vintages ever declared. Chardonnay-led, from a single vintage: white peach, candied citrus, toasted almond and a long, fine mousse. Poured by the glass from an opened bottle kept fresh under the Coravin Sparkling stopper, which re-pressurizes it with CO2, so a single glass is possible. (The restaurant’s own drinks page lists a 2013 Rare Millésime at the same price — check which vintage is open.)",
+			"after": "Rare began as Piper-Heidsieck’s prestige cuvée and is now run as its own house, Rare Champagne; first vintage 1976, only about a dozen vintages ever declared. Chardonnay-led, from a single vintage: white peach, candied citrus, toasted almond and a long, fine mousse. Poured by the glass from an opened bottle kept fresh under the Coravin Sparkling stopper, which re-pressurizes it with CO2, so a single glass is possible. (The restaurant’s own drinks page lists a 2013 Rare Millésime at the same price, check which vintage is open.)",
+			"override": 98
+		},
+		{
+			"path": "model.wines[2].sayIt",
+			"before": "If it’s a special occasion, we pour Rare by the glass — a prestige vintage Champagne we keep fresh under a Coravin Sparkling stopper. It’s a rare chance to taste a wine like this without buying the bottle.",
+			"after": "If it’s a special occasion, we pour Rare by the glass, a prestige vintage Champagne we keep fresh under a Coravin Sparkling stopper. It’s a rare chance to taste a wine like this without buying the bottle.",
+			"override": 99
+		},
+		{
+			"path": "model.wines[2].serve",
+			"before": "Serve 46–50°F — a touch warmer than the house bubbles, to show vintage complexity — in a tulip or white-wine glass. Coravin-preserved: reseal right after each pour and present the bottle to the guest.",
+			"after": "Serve 46 to 50°F, a touch warmer than the house bubbles, to show vintage complexity, in a tulip or white-wine glass. Coravin-preserved: reseal right after each pour and present the bottle to the guest."
+		},
+		{
+			"path": "model.wines[3].profile",
+			"before": "The pairing Champagne on both tasting menus (4 oz pours): with the Eggs Hussarde at breakfast and the Grand Isle Jewel oysters at dinner. Dry, fresh citrus and apple with a light toasty note. Not on the by-the-glass list — ask whether it can be poured à la carte. A house with roots to 1834, now part of the Vranken-Pommery group; the blend is led by Pinot Noir and Meunier with Chardonnay.",
+			"after": "The pairing Champagne on both tasting menus (4 oz pours): with the Eggs Hussarde at breakfast and the Grand Isle Jewel oysters at dinner. Dry, fresh citrus and apple with a light toasty note. Not on the by-the-glass list, ask whether it can be poured à la carte. A house with roots to 1834, now part of the Vranken-Pommery group; the blend is led by Pinot Noir and Meunier with Chardonnay.",
+			"override": 102
+		},
+		{
+			"path": "model.wines[3].sayIt",
+			"before": "On the tasting we pour Charles Lafitte Brut — a crisp, dry Champagne that wakes the palate up for everything after it.",
+			"after": "On the tasting we pour Charles Lafitte Brut, a crisp, dry Champagne that wakes the palate up for everything after it."
+		},
+		{
+			"path": "model.wines[3].serve",
+			"before": "Serve 43–46°F in a tulip for the tasting’s 4 oz pours. Keep the open bottle stoppered and iced between courses; pour just before the Hussarde or the oysters land.",
+			"after": "Serve 43 to 46°F in a tulip for the tasting’s 4 oz pours. Keep the open bottle stoppered and iced between courses; pour just before the Hussarde or the oysters land."
+		},
+		{
+			"path": "model.wines[4].sayIt",
+			"before": "With anything spicy I love the Berres Riesling from the Mosel — light, bright acidity with ripe stone fruit that cools the heat.",
+			"after": "With anything spicy I love the Berres Riesling from the Mosel, light, bright acidity with ripe stone fruit that cools the heat."
+		},
+		{
+			"path": "model.wines[4].serve",
+			"before": "Serve 45–48°F in a white-wine glass; no decanting. Taste the bottle at lineup so you know whether it reads dry or off-dry, and keep it well chilled with spicy dishes.",
+			"after": "Serve 45 to 48°F in a white-wine glass; no decanting. Taste the bottle at lineup so you know whether it reads dry or off-dry, and keep it well chilled with spicy dishes."
+		},
+		{
+			"path": "model.wines[5].sayIt",
+			"before": "The Albariño comes from Spain’s Atlantic coast — citrusy with a salty edge, made for seafood.",
+			"after": "The Albariño comes from Spain’s Atlantic coast, citrusy with a salty edge, made for seafood."
+		},
+		{
+			"path": "model.wines[5].serve",
+			"before": "Serve 45–48°F in a white-wine glass; no decanting. Keep the bottle iced between pours — its saline, sea-spray freshness fades as it warms.",
+			"after": "Serve 45 to 48°F in a white-wine glass; no decanting. Keep the bottle iced between pours, its saline, sea-spray freshness fades as it warms."
+		},
+		{
+			"path": "model.wines[6].sayIt",
+			"before": "The Loire Sauvignon Blanc is crisp and herbal — it’s one of the few wines that really loves artichokes.",
+			"after": "The Loire Sauvignon Blanc is crisp and herbal, it’s one of the few wines that really loves artichokes."
+		},
+		{
+			"path": "model.wines[6].serve",
+			"before": "Serve 45–48°F in a white-wine glass; no decanting. Keep it in the ice bucket so the acidity stays sharp against artichokes, tomatoes and herbs.",
+			"after": "Serve 45 to 48°F in a white-wine glass; no decanting. Keep it in the ice bucket so the acidity stays sharp against artichokes, tomatoes and herbs."
+		},
+		{
+			"path": "model.wines[7].serve",
+			"before": "Serve 50–54°F in a larger white or Chardonnay glass; no decanting. If it comes out too cold, rest it a few minutes out of the ice — the creamy texture needs a little warmth.",
+			"after": "Serve 50 to 54°F in a larger white or Chardonnay glass; no decanting. If it comes out too cold, rest it a few minutes out of the ice, the creamy texture needs a little warmth."
+		},
+		{
+			"path": "model.wines[8].sayIt",
+			"before": "If you love white Burgundy, we pour Leflaive’s Mâcon by the glass — a legendary estate, with the richness for butter sauces and the freshness for seafood.",
+			"after": "If you love white Burgundy, we pour Leflaive’s Mâcon by the glass, a legendary estate, with the richness for butter sauces and the freshness for seafood."
+		},
+		{
+			"path": "model.wines[8].serve",
+			"before": "Serve 50–54°F in a white Burgundy bowl. Poured by Coravin: needle through the cork, pour, and return the bottle to the cooler. Present the label — the estate name matters to Burgundy lovers.",
+			"after": "Serve 50 to 54°F in a white Burgundy bowl. Poured by Coravin: needle through the cork, pour, and return the bottle to the cooler. Present the label, the estate name matters to Burgundy lovers."
+		},
+		{
+			"path": "model.wines[9].sayIt",
+			"before": "With the lobster we pour a Mâcon from Burgundy — Chardonnay with enough body for the lobster and a fresh finish against the spice.",
+			"after": "With the lobster we pour a Mâcon from Burgundy, Chardonnay with enough body for the lobster and a fresh finish against the spice."
+		},
+		{
+			"path": "model.wines[9].serve",
+			"before": "Serve 50–53°F in a white-wine glass for the tasting’s 4 oz pour. Open at the start of service and keep it in a cooler rather than an ice bath so it doesn’t over-chill.",
+			"after": "Serve 50 to 53°F in a white-wine glass for the tasting’s 4 oz pour. Open at the start of service and keep it in a cooler rather than an ice bath so it doesn’t over-chill."
+		},
+		{
+			"path": "model.wines[10].sayIt",
+			"before": "The Minuty is a classic Provence rosé — pale, dry and refreshing, lovely with tomatoes and shrimp.",
+			"after": "The Minuty is a classic Provence rosé: pale, dry and refreshing, lovely with tomatoes and shrimp."
+		},
+		{
+			"path": "model.wines[10].serve",
+			"before": "Serve 45–48°F in a white-wine glass; ice bucket, half ice and half water. No decanting. The pale Provence color is part of the appeal — let the guest see it poured.",
+			"after": "Serve 45 to 48°F in a white-wine glass; ice bucket, half ice and half water. No decanting. The pale Provence color is part of the appeal, let the guest see it poured."
+		},
+		{
+			"path": "model.wines[11].section",
+			"before": "Light reds — Pinot Noir",
+			"after": "Light reds, Pinot Noir"
+		},
+		{
+			"path": "model.wines[11].group",
+			"before": "Light reds — Pinot Noir By the glass · tasting pour",
+			"after": "Light reds, Pinot Noir By the glass · tasting pour"
+		},
+		{
+			"path": "model.wines[11].serve",
+			"before": "Serve 55–58°F in a Burgundy bowl; no decanting. If the back bar runs warm, give the bottle ten to fifteen minutes in the ice bucket before pouring.",
+			"after": "Serve 55 to 58°F in a Burgundy bowl; no decanting. If the back bar runs warm, give the bottle ten to fifteen minutes in the ice bucket before pouring."
+		},
+		{
+			"path": "model.wines[12].section",
+			"before": "Light reds — Pinot Noir",
+			"after": "Light reds, Pinot Noir"
+		},
+		{
+			"path": "model.wines[12].group",
+			"before": "Light reds — Pinot Noir By the glass · tasting pour",
+			"after": "Light reds, Pinot Noir By the glass · tasting pour"
+		},
+		{
+			"path": "model.wines[12].sayIt",
+			"before": "On the tasting we pour a Premier Cru Beaune with the redfish — a light, bright red Burgundy that loves the pickled grapes.",
+			"after": "On the tasting we pour a Premier Cru Beaune with the redfish, a light, bright red Burgundy that loves the pickled grapes."
+		},
+		{
+			"path": "model.wines[12].serve",
+			"before": "Serve 57–60°F in a Burgundy bowl for the tasting’s 4 oz pour. No decanting; open 20–30 minutes ahead so the young Premier Cru shows its perfume.",
+			"after": "Serve 57 to 60°F in a Burgundy bowl for the tasting’s 4 oz pour. No decanting; open 20 to 30 minutes ahead so the young Premier Cru shows its perfume."
+		},
+		{
+			"path": "model.wines[13].profile",
+			"before": "Ripe dark cherry, plum, dried herbs and pepper; round tannins. Durban is famous for its sweet Muscat — this is the dry red.",
+			"after": "Ripe dark cherry, plum, dried herbs and pepper; round tannins. Durban is famous for its sweet Muscat, this is the dry red."
+		},
+		{
+			"path": "model.wines[13].sayIt",
+			"before": "The Durban is a Southern Rhône red — ripe and generous with soft tannins, so it handles spice and richness beautifully.",
+			"after": "The Durban is a Southern Rhône red, ripe and generous with soft tannins, so it handles spice and richness beautifully."
+		},
+		{
+			"path": "model.wines[13].serve",
+			"before": "Serve 58–62°F in a standard red glass; no decanting needed. Grenache is ripe and generous — a few minutes in the ice bucket keeps the alcohol in check with spicy plates.",
+			"after": "Serve 58 to 62°F in a standard red glass; no decanting needed. Grenache is ripe and generous, a few minutes in the ice bucket keeps the alcohol in check with spicy plates."
+		},
+		{
+			"path": "model.wines[14].sayIt",
+			"before": "With the filet we pour a Côtes du Rhône — juicy and soft, just right for red meat at breakfast.",
+			"after": "With the filet we pour a Côtes du Rhône, juicy and soft, just right for red meat at breakfast."
+		},
+		{
+			"path": "model.wines[14].serve",
+			"before": "Serve 58–60°F in a standard red glass for the tasting’s 4 oz pour. No decanting. Slightly cool keeps this juicy old-vine Syrah fresh at breakfast. No vintage is printed on the tasting menu: check the bottle before quoting a year.",
+			"after": "Serve 58 to 60°F in a standard red glass for the tasting’s 4 oz pour. No decanting. Slightly cool keeps this juicy old-vine Syrah fresh at breakfast. No vintage is printed on the tasting menu: check the bottle before quoting a year.",
+			"override": 114
+		},
+		{
+			"path": "model.wines[15].sayIt",
+			"before": "For the steak, the Moulin d’Issan is a classic Bordeaux — cassis and cedar with enough structure for the béarnaise.",
+			"after": "For the steak, the Moulin d’Issan is a classic Bordeaux, cassis and cedar with enough structure for the béarnaise."
+		},
+		{
+			"path": "model.wines[15].serve",
+			"before": "Serve 60–62°F in a Bordeaux glass. No decanting by the glass; if a table takes a bottle, open or decant it 20–30 minutes ahead to soften the tannin.",
+			"after": "Serve 60 to 62°F in a Bordeaux glass. No decanting by the glass; if a table takes a bottle, open or decant it 20 to 30 minutes ahead to soften the tannin."
+		},
+		{
+			"path": "model.wines[16].sayIt",
+			"before": "For the Chateaubriand, we pour the 2010 Inglenook Rubicon by the glass — a Napa legend with sixteen years of age, so it’s powerful but silky.",
+			"after": "For the Chateaubriand, we pour the 2010 Inglenook Rubicon by the glass, a Napa legend with sixteen years of age, so it’s powerful but silky."
+		},
+		{
+			"path": "model.wines[16].serve",
+			"before": "Serve 60–64°F in a large Bordeaux glass. A sixteen-year-old Cabernet can throw sediment: keep the bottle upright, pour slowly and leave the last inch behind. Present the label — it’s a Napa icon.",
+			"after": "Serve 60 to 64°F in a large Bordeaux glass. A sixteen-year-old Cabernet can throw sediment: keep the bottle upright, pour slowly and leave the last inch behind. Present the label, it’s a Napa icon."
+		},
+		{
+			"path": "model.wines[17].sayIt",
+			"before": "With the duck we pour Paul Hobbs Cabernet from Coombsville — dark fruit to meet the peaches and structure for the rich meat.",
+			"after": "With the duck we pour Paul Hobbs Cabernet from Coombsville, dark fruit to meet the peaches and structure for the rich meat."
+		},
+		{
+			"path": "model.wines[17].serve",
+			"before": "Serve 60–64°F in a Bordeaux glass for the tasting’s 4 oz pour. Open or decant 30–60 minutes ahead — young Cabernet with firm structure opens with air.",
+			"after": "Serve 60 to 64°F in a Bordeaux glass for the tasting’s 4 oz pour. Open or decant 30 to 60 minutes ahead, young Cabernet with firm structure opens with air."
+		},
+		{
+			"path": "model.wines[18].sayIt",
+			"before": "For dessert, a half-bottle of Mosel Auslese is a treat — honeyed and sweet, but with so much acidity it never feels heavy. It’s perfect to share.",
+			"after": "For dessert, a half-bottle of Mosel Auslese is a treat, honeyed and sweet, but with so much acidity it never feels heavy. It’s perfect to share."
+		},
+		{
+			"path": "model.wines[18].goesWith",
+			"before": "Bananas Foster, bread pudding, the lemon tart, pineapple tarte Tatin — and the sweet breakfast starters: trifle, French toast, baked apple.",
+			"after": "Bananas Foster, bread pudding, the lemon tart, pineapple tarte Tatin, and the sweet breakfast starters: trifle, French toast, baked apple."
+		},
+		{
+			"path": "model.wines[18].serve",
+			"before": "Serve 45–50°F in a small white or dessert glass, 2–3 oz pours — the 375 ml half-bottle gives about four. Recork and refrigerate; tartrate crystals in older Riesling are harmless.",
+			"after": "Serve 45 to 50°F in a small white or dessert glass, 2 to 3 oz pours, the 375 ml half-bottle gives about four. Recork and refrigerate; tartrate crystals in older Riesling are harmless."
+		},
+		{
+			"path": "model.wines[19].sayIt",
+			"before": "Banyuls is a sweet red from the south of France — fig, caramel and coffee. With chocolate, it’s the classic.",
+			"after": "Banyuls is a sweet red from the south of France, fig, caramel and coffee. With chocolate, it’s the classic.",
+			"override": 122
+		},
+		{
+			"path": "model.wines[19].serve",
+			"before": "Serve slightly cool, about 55°F, in a small dessert glass: 2–3 oz, or 4 oz on the tasting. No decanting. Fortified, it keeps for weeks once open — recork and store cool.",
+			"after": "Serve slightly cool, about 55°F, in a small dessert glass: 2 to 3 oz, or 4 oz on the tasting. No decanting. Fortified, it keeps for weeks once open, recork and store cool."
+		},
+		{
+			"path": "model.cocktails[0].lines.s10",
+			"before": "Our Brandy Milk Punch — brandy, cream, vanilla bean and nutmeg. The classic New Orleans eye opener.",
+			"after": "Our Brandy Milk Punch: brandy, cream, vanilla bean and nutmeg. The classic New Orleans eye opener."
+		},
+		{
+			"path": "model.cocktails[0].lines.s20",
+			"before": "The Brandy Milk Punch is New Orleans’ classic breakfast cocktail: brandy with heavy cream and vanilla bean, finished with nutmeg — cold, creamy and gently boozy.",
+			"after": "The Brandy Milk Punch is New Orleans’ classic breakfast cocktail: brandy with heavy cream and vanilla bean, finished with nutmeg, cold, creamy and gently boozy."
+		},
+		{
+			"path": "model.cocktails[0].lines.s45",
+			"before": "In New Orleans, a proper breakfast starts with an “eye opener,” and the Brandy Milk Punch is the classic. It’s brandy with heavy cream and real vanilla bean, served cold with fresh nutmeg on top — think of a lighter, boozier eggnog without the egg. It’s creamy, smooth and a little sweet, and it’s how our Traditional Breakfast begins. Shall I start you with one?",
+			"after": "In New Orleans, a proper breakfast starts with an “eye opener,” and the Brandy Milk Punch is the classic. It’s brandy with heavy cream and real vanilla bean, served cold with fresh nutmeg on top, think of a lighter, boozier eggnog without the egg. It’s creamy, smooth and a little sweet, and it’s how our Traditional Breakfast begins. Shall I start you with one?"
+		},
+		{
+			"path": "model.cocktails[0].serviceNote",
+			"before": "Dairy. Alcohol. It opens the Traditional Breakfast tasting. Offer it at the greeting — it’s the first sale of the morning.",
+			"after": "Dairy. Alcohol. It opens the Traditional Breakfast tasting. Offer it at the greeting, it’s the first sale of the morning."
+		},
+		{
+			"path": "model.cocktails[1].lines.s10",
+			"before": "The Bloody Bull — our Bloody Mary made with beef bouillon. A Brennan’s breakfast classic.",
+			"after": "The Bloody Bull, our Bloody Mary made with beef bouillon. A Brennan’s breakfast classic."
+		},
+		{
+			"path": "model.cocktails[1].lines.s20",
+			"before": "A Bloody Bull is a Bloody Mary with beef bouillon added — vodka, our housemade Bloody Mary mix and bouillon — so it’s savory, rich and extra satisfying.",
+			"after": "A Bloody Bull is a Bloody Mary with beef bouillon added, vodka, our housemade Bloody Mary mix and bouillon, so it’s savory, rich and extra satisfying."
+		},
+		{
+			"path": "model.cocktails[1].lines.s45",
+			"before": "The Bloody Bull is a Brennan’s breakfast classic: our housemade Bloody Mary mix and vodka, with beef bouillon — a clear, savory beef broth — stirred in. The bouillon gives it a rich, meaty depth, almost like a spicy, chilled consommé. It’s the drink we pour with the soup course on our Traditional Breakfast, and it’s wonderful with the turtle soup. If you prefer it classic, our Brennan’s Bloody Mary comes with pickled okra and spicy beans.",
+			"after": "The Bloody Bull is a Brennan’s breakfast classic: our housemade Bloody Mary mix and vodka, with beef bouillon, a clear, savory beef broth, stirred in. The bouillon gives it a rich, meaty depth, almost like a spicy, chilled consommé. It’s the drink we pour with the soup course on our Traditional Breakfast, and it’s wonderful with the turtle soup. If you prefer it classic, our Brennan’s Bloody Mary comes with pickled okra and spicy beans."
+		},
+		{
+			"path": "model.cocktails[1].serviceNote",
+			"before": "Contains beef — not vegetarian (offer the Brennan’s Bloody Mary, $11, and ask the bar about the mix). Spice level from the mix; Bloody Mary mixes usually include Worcestershire (anchovy). Alcohol.",
+			"after": "Contains beef: not vegetarian (offer the Brennan’s Bloody Mary, $11, and ask the bar about the mix). Spice level from the mix; Bloody Mary mixes usually include Worcestershire (anchovy). Alcohol."
+		},
+		{
+			"path": "model.cocktails[2].lines.s10",
+			"before": "The Classic Sazerac — Sazerac rye, Peychaud’s bitters and a Herbsaint rinse. New Orleans’ own cocktail.",
+			"after": "The Classic Sazerac, Sazerac rye, Peychaud’s bitters and a Herbsaint rinse. New Orleans’ own cocktail."
+		},
+		{
+			"path": "model.cocktails[2].lines.s20",
+			"before": "The Sazerac is New Orleans’ official cocktail: Sazerac rye whiskey and Peychaud’s bitters, served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934 — spicy, aromatic and strong.",
+			"after": "The Sazerac is New Orleans’ official cocktail: Sazerac rye whiskey and Peychaud’s bitters, served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934, spicy, aromatic and strong.",
+			"override": 30
+		},
+		{
+			"path": "model.cocktails[2].lines.s45",
+			"before": "The Sazerac is New Orleans’ official cocktail, named so by the Louisiana Legislature in 2008: the city’s, not the state’s. It’s Sazerac rye whiskey, stirred with Peychaud’s — a bright red New Orleans bitters with anise and cherry notes — and served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934, so you get its aroma without much of its flavor. It’s spirit-forward, spicy and aromatic. If you’d like to go further, we have two luxury versions: Thompson’s Dream with Willett rye, and Origin Story with Cognac and absinthe.",
+			"after": "The Sazerac is New Orleans’ official cocktail, named so by the Louisiana Legislature in 2008: the city’s, not the state’s. It’s Sazerac rye whiskey, stirred with Peychaud’s, a bright red New Orleans bitters with anise and cherry notes, and served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934, so you get its aroma without much of its flavor. It’s spirit-forward, spicy and aromatic. If you’d like to go further, we have two luxury versions: Thompson’s Dream with Willett rye, and Origin Story with Cognac and absinthe.",
+			"override": 32
+		},
+		{
+			"path": "model.cocktails[2].serviceNote",
+			"before": "Spirit-forward and strong — classically served up, without ice (confirm the bar’s build). Upsells: Thompson’s Dream ($20, Willett 4-year rye, Bitter Truth Creole Bitters, St. George absinthe rinse) and Origin Story ($40, Dudognon Cognac, barrel-aged Peychaud’s, Jade Nouvelle-Orléans absinthe). Herbsaint is ERB-saint.",
+			"after": "Spirit-forward and strong, classically served up, without ice (confirm the bar’s build). Upsells: Thompson’s Dream ($20, Willett 4-year rye, Bitter Truth Creole Bitters, St. George absinthe rinse) and Origin Story ($40, Dudognon Cognac, barrel-aged Peychaud’s, Jade Nouvelle-Orléans absinthe). Herbsaint is ERB-saint."
+		},
+		{
+			"path": "model.cocktails[3].lines.s10",
+			"before": "Brennan’s Irish Coffee — chicory coffee, brown sugar and Tullamore Dew under whipped cream.",
+			"after": "Brennan’s Irish Coffee, chicory coffee, brown sugar and Tullamore Dew under whipped cream."
+		},
+		{
+			"path": "model.cocktails[3].lines.s20",
+			"before": "Our Irish Coffee uses our dark roast coffee with chicory, sweetened with brown sugar, with Tullamore Dew Irish whiskey and a cap of whipped cream — warm, sweet and smooth.",
+			"after": "Our Irish Coffee uses our dark roast coffee with chicory, sweetened with brown sugar, with Tullamore Dew Irish whiskey and a cap of whipped cream, warm, sweet and smooth."
+		},
+		{
+			"path": "model.cocktails[3].lines.s45",
+			"before": "It’s an Irish coffee with a New Orleans accent. We start with our dark roast coffee with chicory — roasted chicory root, a New Orleans tradition that adds a roasty, almost chocolatey depth — sweeten it with brown sugar, add Tullamore Dew Irish whiskey, and top it with whipped cream. You sip the hot coffee through the cool cream. It’s perfect with Bananas Foster or bread pudding.",
+			"after": "It’s an Irish coffee with a New Orleans accent. We start with our dark roast coffee with chicory, roasted chicory root, a New Orleans tradition that adds a roasty, almost chocolatey depth, sweeten it with brown sugar, add Tullamore Dew Irish whiskey, and top it with whipped cream. You sip the hot coffee through the cool cream. It’s perfect with Bananas Foster or bread pudding."
+		},
+		{
+			"path": "model.cocktails[4].lines.s10",
+			"before": "Our Dulce de Leche dessert cocktail — Don Q rum with banana rum butter sauce, crème de cacao and cream.",
+			"after": "Our Dulce de Leche dessert cocktail, Don Q rum with banana rum butter sauce, crème de cacao and cream.",
+			"override": 34
+		},
+		{
+			"path": "model.cocktails[4].lines.s20",
+			"before": "The Dulce de Leche is a dessert in a glass: Brennan’s Blender’s Reserve Don Q rum with crème de cacao, cream and a banana rum butter sauce — all the flavors of Bananas Foster, in a cocktail.",
+			"after": "The Dulce de Leche is a dessert in a glass: Brennan’s Blender’s Reserve Don Q rum with crème de cacao, cream and a banana rum butter sauce, all the flavors of Bananas Foster, in a cocktail."
+		},
+		{
+			"path": "model.cocktails[4].lines.s45",
+			"before": "If you love Bananas Foster, this is its cocktail cousin. It’s made with Brennan’s Blender’s Reserve, a Don Q rum that carries our name, with crème de cacao for chocolate, cream, and a banana rum butter sauce — buttery, caramel and banana, just like the Foster. It’s rich and sweet, so it works as dessert on its own, or with a spoonful of something warm.",
+			"after": "If you love Bananas Foster, this is its cocktail cousin. It’s made with Brennan’s Blender’s Reserve, a Don Q rum that carries our name, with crème de cacao for chocolate, cream, and a banana rum butter sauce: buttery, caramel and banana, just like the Foster. It’s rich and sweet, so it works as dessert on its own, or with a spoonful of something warm."
+		},
+		{
+			"path": "model.cocktails[4].serviceNote",
+			"before": "Dairy; alcohol. Confirm the Blender’s Reserve story at lineup before telling it — the menu names it only as Brennan’s Blender’s Reserve Don Q Rum. Other dessert cocktails: Tiramisu ($11), Affogato ($16).",
+			"after": "Dairy; alcohol. Confirm the Blender’s Reserve story at lineup before telling it, the menu names it only as Brennan’s Blender’s Reserve Don Q Rum. Other dessert cocktails: Tiramisu ($11), Affogato ($16)."
+		},
+		{
+			"path": "model.terms[0].toGuest",
+			"before": "Eggs Hussarde is New Orleans’ answer to Eggs Benedict — with a red wine sauce as well as hollandaise.",
+			"after": "Eggs Hussarde is New Orleans’ answer to Eggs Benedict, with a red wine sauce as well as hollandaise."
+		},
+		{
+			"path": "model.terms[4].toGuest",
+			"before": "Béarnaise is a rich butter sauce with tarragon — the classic sauce for steak.",
+			"after": "Béarnaise is a rich butter sauce with tarragon, the classic sauce for steak."
+		},
+		{
+			"path": "model.terms[5].toGuest",
+			"before": "Choron is a béarnaise with tomato — tangy and herbal.",
+			"after": "Choron is a béarnaise with tomato, tangy and herbal."
+		},
+		{
+			"path": "model.terms[8].toGuest",
+			"before": "Véronique means fish with grapes — ours are pickled with hibiscus.",
+			"after": "Véronique means fish with grapes, ours are pickled with hibiscus."
+		},
+		{
+			"path": "model.terms[13].toGuest",
+			"before": "Persillade is a fresh parsley-and-garlic topping — ours has pumpkin seeds for crunch.",
+			"after": "Persillade is a fresh parsley-and-garlic topping, ours has pumpkin seeds for crunch."
+		},
+		{
+			"path": "model.terms[15].toGuest",
+			"before": "The egg yolk is cured and grated over the top, like bottarga — it adds a rich, salty finish.",
+			"after": "The egg yolk is cured and grated over the top, like bottarga, it adds a rich, salty finish."
+		},
+		{
+			"path": "model.terms[17].toGuest",
+			"before": "Milk punch is our classic breakfast cocktail — brandy, cream, vanilla and nutmeg.",
+			"after": "Milk punch is our classic breakfast cocktail: brandy, cream, vanilla and nutmeg."
+		},
+		{
+			"path": "model.terms[18].toGuest",
+			"before": "A Bloody Bull is a Bloody Mary with beef broth — savory and rich.",
+			"after": "A Bloody Bull is a Bloody Mary with beef broth, savory and rich."
+		},
+		{
+			"path": "model.terms[19].toGuest",
+			"before": "Chicory is a roasted root we blend into our coffee — the New Orleans way.",
+			"after": "Chicory is a roasted root we blend into our coffee, the New Orleans way."
+		},
+		{
+			"path": "model.terms[20].toGuest",
+			"before": "Café brûlot is New Orleans’ spiced, flamed coffee — the cake borrows its flavors.",
+			"after": "Café brûlot is New Orleans’ spiced, flamed coffee, the cake borrows its flavors."
+		},
+		{
+			"path": "model.terms[23].toGuest",
+			"before": "Tarte Tatin is the French upside-down caramelized tart — ours is pineapple.",
+			"after": "Tarte Tatin is the French upside-down caramelized tart, ours is pineapple."
+		},
+		{
+			"path": "model.scenarios[0].guest",
+			"before": "It’s our first time — what’s the real Brennan’s breakfast?",
+			"after": "It’s our first time, what’s the real Brennan’s breakfast?"
+		},
+		{
+			"path": "model.scenarios[1].guest",
+			"before": "Just me — can I get the Bananas Foster?",
+			"after": "Just me, can I get the Bananas Foster?"
+		},
+		{
+			"path": "model.scenarios[1].you",
+			"before": "It’s made in one pan at the table for at least two people, so the minimum order is two. If you’d like a flambé just for you, Cherries Jubilee is also finished at the table — let me check with the kitchen on a single order. And the Dulce de Leche is the Foster in a glass.",
+			"after": "It’s made in one pan at the table for at least two people, so the minimum order is two. If you’d like a flambé just for you, Cherries Jubilee is also finished at the table, let me check with the kitchen on a single order. And the Dulce de Leche is the Foster in a glass.",
+			"override": 222
+		},
+		{
+			"path": "model.scenarios[1].principle",
+			"before": "Explain the reason for the rule, then offer an alternative with the same theater — and check before you promise. Confirm at lineup whether a single Cherries Jubilee is possible before offering it, so you are not promising twice.",
+			"after": "Explain the reason for the rule, then offer an alternative with the same theater, and check before you promise. Confirm at lineup whether a single Cherries Jubilee is possible before offering it, so you are not promising twice.",
+			"override": 223
+		},
+		{
+			"path": "model.scenarios[5].you",
+			"before": "Two directions: by the glass, the 2010 Inglenook Rubicon — Napa Cabernet with sixteen years of age, so it’s powerful but silky, $70. Or, for elegance, a red Burgundy from our cellar — I’d love to bring our sommelier over to pick one with you.",
+			"after": "Two directions: by the glass, the 2010 Inglenook Rubicon: Napa Cabernet with sixteen years of age, so it’s powerful but silky, $70. Or, for elegance, a red Burgundy from our cellar, I’d love to bring our sommelier over to pick one with you."
+		},
+		{
+			"path": "model.scenarios[6].guest",
+			"before": "It’s our anniversary — something special to start?",
+			"after": "It’s our anniversary, something special to start?"
+		},
+		{
+			"path": "model.scenarios[6].you",
+			"before": "Congratulations! We pour a prestige vintage Champagne by the glass — Rare, kept fresh under a Coravin stopper, at $75. For something lighter, our house Piper-Heidsieck Extra Brut. And if you’re here on a Friday at 5, we saber Champagne in the courtyard.",
+			"after": "Congratulations! We pour a prestige vintage Champagne by the glass: Rare, kept fresh under a Coravin stopper, at $75. For something lighter, our house Piper-Heidsieck Extra Brut. And if you’re here on a Friday at 5, we saber Champagne in the courtyard.",
+			"override": 229
+		},
+		{
+			"path": "model.mixUps[0].difference",
+			"before": "Eggs Hussarde is the classic: housemade English muffin, coffee-cured Canadian bacon, poached eggs, hollandaise and marchand de vin ($27). Eggs Owen is heartier: red wine–braised short rib débris, Creole-spiced potato and a soft-boiled egg with the same two sauces ($32).",
+			"after": "Eggs Hussarde is the classic: housemade English muffin, coffee-cured Canadian bacon, poached eggs, hollandaise and marchand de vin ($27). Eggs Owen is heartier: red wine-braised short rib débris, Creole-spiced potato and a soft-boiled egg with the same two sauces ($32)."
+		},
+		{
+			"path": "model.mixUps[0].ask",
+			"before": "Do you want the classic Brennan’s egg dish, or something heartier — more like steak and eggs?",
+			"after": "Do you want the classic Brennan’s egg dish, or something heartier, more like steak and eggs?"
+		},
+		{
+			"path": "model.mixUps[1].difference",
+			"before": "Turtle soup is 100% turtle meat with brown butter spinach, grated egg and aged Sherry — rich, dark and savory. The gumbo is seafood — shrimp, crab, oysters — with smoky andouille over popcorn rice. Both $13; the breakfast tasting offers either.",
+			"after": "Turtle soup is 100% turtle meat with brown butter spinach, grated egg and aged Sherry, rich, dark and savory. The gumbo is seafood, shrimp, crab, oysters, with smoky andouille over popcorn rice. Both $13; the breakfast tasting offers either."
+		},
+		{
+			"path": "model.mixUps[2].difference",
+			"before": "The breakfast/lunch hanger ($38) is Creekstone Prime with smoked potato pavé, a sunny-side-up egg and béarnaise — steak and eggs. The dinner hanger ($42) has housemade Creole spice, Madeira-glazed broccolini, pepita persillade and chili crisp — spicier, with no egg.",
+			"after": "The breakfast/lunch hanger ($38) is Creekstone Prime with smoked potato pavé, a sunny-side-up egg and béarnaise, steak and eggs. The dinner hanger ($42) has housemade Creole spice, Madeira-glazed broccolini, pepita persillade and chili crisp, spicier, with no egg."
+		},
+		{
+			"path": "model.mixUps[2].ask",
+			"before": "Mostly a matter of meal — at dinner, ask: “Do you enjoy a little heat? The chili crisp brings some.”",
+			"after": "Mostly a matter of meal, at dinner, ask: “Do you enjoy a little heat? The chili crisp brings some.”"
+		},
+		{
+			"path": "model.mixUps[3].difference",
+			"before": "Both are flambéed tableside over housemade vanilla ice cream. Bananas Foster (invented here in 1951) is bananas in butter, brown sugar, cinnamon and rum — rich and caramel. Cherries Jubilee is fresh tart black cherries in Luxardo sauce — brighter and fruitier.",
+			"after": "Both are flambéed tableside over housemade vanilla ice cream. Bananas Foster (invented here in 1951) is bananas in butter, brown sugar, cinnamon and rum, rich and caramel. Cherries Jubilee is fresh tart black cherries in Luxardo sauce, brighter and fruitier."
+		},
+		{
+			"path": "model.mixUps[3].ask",
+			"before": "Would you like something rich and caramelly, or tart and fruity? Or both, for the table — two flambés.",
+			"after": "Would you like something rich and caramelly, or tart and fruity? Or both, for the table, two flambés."
+		},
+		{
+			"path": "model.mustKnows[0].body",
+			"before": "Invented at Brennan’s in 1951 — Owen Brennan challenged his sister Ella and chef Paul Blangé to create a banana dessert (the house's own page and Ralph Brennan credit Ella with Blangé; the commission is also called the Metropolitan Crime Commission), named for Richard Foster, Owen’s friend and chairman of the New Orleans Crime Commission. Flambéed tableside, $14, minimum 2 people per order; 2026 is its 75th year.",
+			"after": "Invented at Brennan’s in 1951: Owen Brennan challenged his sister Ella and chef Paul Blangé to create a banana dessert (the house's own page and Ralph Brennan credit Ella with Blangé; the commission is also called the Metropolitan Crime Commission), named for Richard Foster, Owen’s friend and chairman of the New Orleans Crime Commission. Flambéed tableside, $14, minimum 2 people per order; 2026 is its 75th year.",
+			"override": 257
+		},
+		{
+			"path": "model.mustKnows[1].body",
+			"before": "Two desserts are flambéed at the table: Bananas Foster and Cherries Jubilee. Chef Kris Padalino (executive chef since June 2025) has said she wants to bring back more tableside cooking — ask at training who performs it (server or captain) and learn the house procedure.",
+			"after": "Two desserts are flambéed at the table: Bananas Foster and Cherries Jubilee. Chef Kris Padalino (executive chef since June 2025) has said she wants to bring back more tableside cooking, ask at training who performs it (server or captain) and learn the house procedure."
+		},
+		{
+			"path": "model.mustKnows[2].body",
+			"before": "Breakfast & lunch (Mon–Fri 9–2, Sat–Sun 8–2): 7 appetizers (including three sweet starters), 8 entrées, 7 sides. Dinner (nightly 6–10): 7 appetizers, 6 entrées, 5 sides at $12. One dessert menu, linked from both. Turtle soup, gumbo and the Creole Caesar appear at both meals.",
+			"after": "Breakfast & lunch (Mon-Fri 9 to 2, Sat-Sun 8 to 2): 7 appetizers (including three sweet starters), 8 entrées, 7 sides. Dinner (nightly 6 to 10): 7 appetizers, 6 entrées, 5 sides at $12. One dessert menu, linked from both. Turtle soup, gumbo and the Creole Caesar appear at both meals."
+		},
+		{
+			"path": "model.mustKnows[3].title",
+			"before": "Traditional Breakfast at Brennan’s — $80",
+			"after": "Traditional Breakfast at Brennan’s, $80"
+		},
+		{
+			"path": "model.mustKnows[4].title",
+			"before": "Dinner tasting — $80",
+			"after": "Dinner tasting, $80"
+		},
+		{
+			"path": "model.mustKnows[5].body",
+			"before": "Menus checked 2026-09-26; none carries a date. Dinner is a late-summer menu (Creole tomatoes, summer squash, glazed summer vegetables, peaches) and the cocktail list is themed “Summer Vacations of 1946” — expect a fall change soon.",
+			"after": "Menus checked 2026-09-26; none carries a date. Dinner is a late-summer menu (Creole tomatoes, summer squash, glazed summer vegetables, peaches) and the cocktail list is themed “Summer Vacations of 1946”, expect a fall change soon."
+		},
+		{
+			"path": "model.mustKnows[6].body",
+			"before": "Brennan's first won the Wine Spectator Grand Award in 1983, lost the cellar to Katrina in 2005 when a month without power cooked about 35,000 bottles, and won it back in 2021 after rebuilding to more than 15,000 bottles, with Burgundy and Champagne the deep end of the list; the Wine Spectator listing shows about 3,600 selections and more than 19,000 bottles, deepest in Burgundy, Bordeaux and California. Confirm the award years from the listing at lineup. The live by-the-glass list (Binwise) pours Rare Brut 2012 and Leflaive Mâcon-Verzé by Coravin, plus Inglenook Rubicon 2010 at $70. The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013) — check the list you’re handed on shift.",
+			"after": "Brennan's first won the Wine Spectator Grand Award in 1983, lost the cellar to Katrina in 2005 when a month without power cooked about 35,000 bottles, and won it back in 2021 after rebuilding to more than 15,000 bottles, with Burgundy and Champagne the deep end of the list; the Wine Spectator listing shows about 3,600 selections and more than 19,000 bottles, deepest in Burgundy, Bordeaux and California. Confirm the award years from the listing at lineup. The live by-the-glass list (Binwise) pours Rare Brut 2012 and Leflaive Mâcon-Verzé by Coravin, plus Inglenook Rubicon 2010 at $70. The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013), check the list you’re handed on shift.",
+			"override": 258
+		},
+		{
+			"path": "model.mustKnows[7].body",
+			"before": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans– style with chicory, a single-origin Papua New Guinea from Congregation Coffee, and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
+			"after": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans-style with chicory, a single-origin Papua New Guinea from Congregation Coffee, and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
+			"override": 259
+		},
+		{
+			"path": "model.mustKnows[8].body",
+			"before": "Roost Bar & Courtyard, Mon–Fri 2–6; Champagne sabering Fridays at 5. Rosé bottles $50–125 (Mirabelle to Pommery), bubbly cocktails $12–20 (Brennan’s Champagne Cocktail $20), and bar snacks: Creole spiced nuts $6, crawfish meat pies with chive rémoulade $16, fries with pink sauce $8, fried pickles $14, popcorn shrimp $15, cheese board $24, Roost Burger $17. The hours are dated 26 September 2026 and disputed (an older guest description gives Tuesday to Friday 2 to 7): confirm on shift. Sabering has been advertised weekly for about a decade; confirm each Friday with the host stand, and check the courtyard is not privately booked before promising it. Mirabelle is Schramsberg's California sparkling rosé, so say sparkling rosé for the bottom of that range and keep the word Champagne for the Pommery.",
+			"after": "Roost Bar & Courtyard, Mon-Fri 2 to 6; Champagne sabering Fridays at 5. Rosé bottles $50 to 125 (Mirabelle to Pommery), bubbly cocktails $12 to 20 (Brennan’s Champagne Cocktail $20), and bar snacks: Creole spiced nuts $6, crawfish meat pies with chive rémoulade $16, fries with pink sauce $8, fried pickles $14, popcorn shrimp $15, cheese board $24, Roost Burger $17. The hours are dated 26 September 2026 and disputed (an older guest description gives Tuesday to Friday 2 to 7): confirm on shift. Sabering has been advertised weekly for about a decade; confirm each Friday with the host stand, and check the courtyard is not privately booked before promising it. Mirabelle is Schramsberg's California sparkling rosé, so say sparkling rosé for the bottom of that range and keep the word Champagne for the Pommery.",
+			"override": 260
+		}
+	]
+}

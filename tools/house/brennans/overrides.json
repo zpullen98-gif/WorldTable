@@ -1,0 +1,3705 @@
+{
+  "about": "Every departure from the server guide that the Brennan's pack makes, each with its reason and its source, so a reader can audit the pack against the guide (house/brennans/guide.txt, menus read 26 September 2026) and the research under house/brennans/research/. The builder (house/build-brennans.mjs) applies the entries in order after parsing and before dash stripping; a replace whose 'from' is not found fails the build. Verdict ids (chef-dishes-b-4, gap-pron-6 and so on) are the ids in research/verified-facts.json; 'pdf-corrections pN' points at research/pdf-corrections.json by page. A still-unverifiable fact is placed nowhere as a fact; a refuted claim appears only as its correction. Prices are never touched here. Targets: house | dish:<name> | wine:<name> | cocktail:<name> | tasting:<name> | term:<term> | scenario:<title> | mixup:<a> vs <b> | mustknow:<title> | <list>:+ to add. Ops: set (default), replace {from,to}, append, add.",
+  "principles": {
+    "map": {
+      "bubbles": "fat",
+      "umami": "salt",
+      "smoke": "bridge",
+      "temp": null,
+      "texture": null
+    },
+    "reason": "The guide prints five pairing principles outside the engine's nine. In the guide's own formula (p3) bubbles sit under Fat (butter and fried food want acidity or bubbles), umami under Salt & umami, and smoke is listed under Bridge (a shared flavour: herbs, citrus, smoke, mushroom, butter, toast), so each maps there when the block does not already carry that principle; temp and texture have no home among the nine and are dropped. The builder logs every change in its report."
+  },
+  "entries": [
+    {
+      "target": "house",
+      "field": "phone",
+      "value": "504-525-9711",
+      "reason": "The reservations line; parties larger than six ring it",
+      "source": "gap-floor-3"
+    },
+    {
+      "target": "house",
+      "field": "site",
+      "value": "brennansneworleans.com",
+      "reason": "Every source URL on p51 is on this domain",
+      "source": "pdf p51"
+    },
+    {
+      "target": "house",
+      "field": "meals",
+      "value": [
+        {
+          "name": "Breakfast & lunch",
+          "days": "Monday to Friday",
+          "hours": "9 am to 2 pm"
+        },
+        {
+          "name": "Breakfast & lunch",
+          "days": "Saturday and Sunday",
+          "hours": "8 am to 2 pm"
+        },
+        {
+          "name": "Dinner",
+          "days": "Nightly",
+          "hours": "6 pm to 10 pm"
+        },
+        {
+          "name": "Bubbles at Brennan's",
+          "days": "Monday to Friday",
+          "hours": "2 pm to 6 pm in the Roost Bar and Courtyard, Champagne sabered Fridays at 5; confirm on shift"
+        }
+      ],
+      "reason": "The hours the guide's must-knows print (Menu structure, Bubbles at Brennan's), dated 26 September 2026; the Bubbles hours are disputed and carry a confirm",
+      "source": "pdf p49; pdf-factcheck-6; pdf-corrections p49 (Bubbles)"
+    },
+    {
+      "target": "house",
+      "field": "history",
+      "value": "Owen Brennan opened the restaurant on Bourbon Street in July 1946, and it has been at 417 Royal Street since 1956. Owen died in November 1955, before the move; Ella Brennan found the backing and the family opened Royal Street in 1956. The building dates from 1795, was the first bank in Louisiana and later the home of Paul Morphy, the chess champion; the bank's initials survive in the balcony ironwork. The family split in November 1973, settled in 1974: Owen's widow Maude and sons Pip, Jimmy and Ted kept Royal Street, and Ella's side took Commander's Palace. Brennan's closed in June 2013 and reopened in November 2014 under Ralph Brennan and Terry White after a restoration of the whole house. Paul Blange, the first chef, created Bananas Foster and Eggs Hussarde; Michael Roussel, Lazone Randolph, Slade Rushing and Ryan Hacker followed him, and Kris Padalino has led the kitchen since June 2025. 2026 is the 80th year.",
+      "reason": "The history the guide omits: Owen's death in 1955, the 2013 closure and the November 2014 reopening under Ralph Brennan and Terry White, the building of 1795 and Paul Morphy, the family split, the chef lineage",
+      "source": "chef-history-15; pdf-corrections p50; dossier-the-kitchen section 1; dossier-the-floor section 3 items 1, 2, 19"
+    },
+    {
+      "target": "dish:World Famous Bananas Foster",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Owen Brennan asked his chef, Paul Blangé, for a dessert with bananas, and named it for his friend Richard Foster.",
+        "to": "Owen Brennan asked his sister Ella and chef Paul Blangé for a banana dessert, and named it for his friend Richard Foster."
+      },
+      "reason": "Ella Brennan credited with Paul Blange, as the house's own page and Ralph Brennan tell it",
+      "source": "pdf-corrections p33 and p49 (high); dossier-the-floor section 3 item 5"
+    },
+    {
+      "target": "dish:World Famous Bananas Foster",
+      "field": "origin",
+      "value": "Invented here in 1951, when Owen Brennan asked his sister Ella and chef Paul Blange for a banana dessert, and named for his friend Richard Foster, chairman of the New Orleans Crime Commission (also called the Metropolitan Crime Commission). New Orleans was then the main port for bananas from Central America. Butter, light brown sugar and cinnamon, banana liqueur, then the bananas, then aged rum set alight at the table, over housemade vanilla ice cream.",
+      "reason": "The origin as the research verified it, with both names of the commission",
+      "source": "pdf-corrections p33; gap-recipes-2; chef-dishes-c-5"
+    },
+    {
+      "target": "dish:World Famous Bananas Foster",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Does the recipe use banana liqueur as well as rum?",
+        "a": "Our published recipe uses both banana liqueur and rum, in equal measure; the menu prints rum. Say rum and a splash of banana liqueur once the kitchen confirms the cart build."
+      },
+      "reason": "forThePack",
+      "source": "gap-recipes-1; chef-dishes-c-5"
+    },
+    {
+      "target": "dish:World Famous Bananas Foster",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Rum, butter, brown sugar and flambeed caramel sit in the caramel and nut group, whose textbook partners are oxidative fortifieds, so Banyuls Reserva would lead and the Auslese would be the bright second for contrast. The Auslese stays first in this pack because the Banyuls is a tasting pour and is not confirmed a la carte; nothing changes until that answer exists."
+      },
+      "reason": "The master sommelier's verdict kept as a second opinion",
+      "source": "dossier-the-cellar section 4.3; pdf-corrections p33"
+    },
+    {
+      "target": "dish:Eggs Sardou",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "the name goes back to the French playwright Victorien Sardou. Ours pairs",
+        "to": "it was created at Antoine's for the French playwright Victorien Sardou, and ours is the creamed spinach version. Ours pairs"
+      },
+      "reason": "Created at Antoine's; never let a guest infer Brennan's invented it",
+      "source": "chef-dishes-b-4; pdf-corrections p18 (high)"
+    },
+    {
+      "target": "dish:Eggs Sardou",
+      "field": "origin",
+      "value": "Eggs Sardou was created at Antoine's, usually dated 1908, for the French playwright Victorien Sardou. The original was poached eggs on artichoke bottoms with hollandaise, anchovy, ham and truffle, with no spinach. The creamed spinach most kitchens use now came later. Ours fries the artichokes, makes the spinach with Parmesan and swaps hollandaise for Choron, a bearnaise with tomato.",
+      "reason": "forThePack",
+      "source": "chef-dishes-b-4"
+    },
+    {
+      "target": "dish:Eggs Sardou",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: the artichoke exception. Artichokes are hard on most wines and Loire Sauvignon Blanc loves them."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "dish:Eggs Hussarde",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "a savory red wine reduction",
+        "to": "a savory red wine and mushroom sauce"
+      },
+      "reason": "The New Orleans marchand de vin, including the house's published recipe, is a brown sauce with mushrooms, never a reduction; the p2 wording is the better one",
+      "source": "pdf-corrections p17 (high); dossier-the-floor section 3 item 18"
+    },
+    {
+      "target": "dish:Eggs Hussarde",
+      "field": "parts.sauce",
+      "op": "replace",
+      "value": {
+        "from": "a red wine reduction",
+        "to": "a savory red wine and mushroom sauce"
+      },
+      "reason": "same",
+      "source": "pdf-corrections p17"
+    },
+    {
+      "target": "dish:Eggs Hussarde",
+      "field": "origin",
+      "value": "Paul Blange, the house's first chef, is credited with creating Eggs Hussarde here, with Bananas Foster and Chicken Pontalba; it is the New Orleans answer to Eggs Benedict, with marchand de vin as well as hollandaise.",
+      "reason": "The 'created here' line, carried as origin with a confirm flag in askAtLineup (blocks origin) rather than inside the timed lines",
+      "source": "pdf-corrections p17 (medium); dossier-the-floor section 3 item 4; chef-history-15"
+    },
+    {
+      "target": "dish:Eggs Hussarde",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why is the second choice a still Pinot and not the pink bubbles?",
+        "a": "With Eggs Hussarde the house Champagne is the pour. For a guest who wants red, the Bourgogne Pinot Noir is light enough for the yolk and meets the red wine in the marchand de vin. For a guest who wants bubbles but something pink, the Pierre Sparr is all Pinot Noir, dry, with red fruit for the sauce."
+      },
+      "reason": "forThePack",
+      "source": "somm-pairings-8"
+    },
+    {
+      "target": "dish:Eggs Owen",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "a red wine reduction that doubles down on the braise",
+        "to": "a savory red wine and mushroom sauce that doubles down on the braise"
+      },
+      "reason": "marchand de vin wording",
+      "source": "pdf-corrections p17"
+    },
+    {
+      "target": "dish:Eggs Owen",
+      "field": "origin",
+      "value": "Debris, DAY-bree, is the New Orleans word for the shreds of slow cooked meat that fall into their own gravy. Mother's on Poydras Street, open since 1938, made the word famous: its story is that founder Simon Landry asked a customer whether he wanted some of the debris from the roast beef carving board. Ours is short rib braised in red wine until it falls apart.",
+      "reason": "forThePack",
+      "source": "chef-dishes-b-8"
+    },
+    {
+      "target": "dish:Eggs Owen",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Is Eggs Owen named for Owen Brennan?",
+        "a": "Owen Brennan opened the restaurant in 1946 and died in 1955. Do not say Eggs Owen is named for him unless a manager confirms it; the menu does not say. Eggs Owen today is short rib braised in red wine until it falls apart, over a Creole spiced potato, with a soft boiled egg and the same two sauces as the Hussarde. Use the current menu wording only; older write ups describe a poached egg and hash version that is gone."
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-b-6; chef-dishes-b-7"
+    },
+    {
+      "target": "dish:Eggs Owen",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: both sauces are red wine, so the Durban's ripe Grenache meets them."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "dish:Roasted Rohan Duck Breast",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Rohan is a specialty duck breed with rich, flavorful meat",
+        "to": "Rohan is a special cross raised in New York for its tender, rosy meat"
+      },
+      "reason": "Rohan is a cross bred for D'Artagnan and raised in New York, not a breed",
+      "source": "pdf-corrections p7 (high); gap-sourcing-8"
+    },
+    {
+      "target": "dish:Roasted Rohan Duck Breast",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Louisiana’s dark, molasses-like sugarcane syrup",
+        "to": "Louisiana’s own sugarcane syrup, lighter and more buttery than molasses"
+      },
+      "reason": "Cane syrup is milder and thinner than molasses",
+      "source": "pdf-corrections p7 (medium)"
+    },
+    {
+      "target": "dish:Roasted Rohan Duck Breast",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Which duck plate is on the dinner tasting tonight?",
+        "a": "Course four is Rohan duck, a specialty duck raised for rich, rosy meat. Confirm tonight's preparation with the kitchen before describing it: the website now lists a hazelnut crust with sweet potato puree, winter squash and sage, while the late summer menu had cane syrup glazed peaches and candied hazelnuts. Do not say peaches or squash from memory."
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-a-6; gap-tasting-6"
+    },
+    {
+      "target": "dish:Roasted Rohan Duck Breast",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "A young Napa Cabernet against cane syrup peaches is a real tension and the guide admits it. From the list the Durban is the better technical red: ripe fruit, round tannin, body for the fat. The guide's avoid line excludes tart light reds while its second choice is a light Bourgogne; a ripe 2023 Bourgogne is not tart, which is why it stands."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3; pdf-corrections p7"
+    },
+    {
+      "target": "dish:Succotash",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Succotash is a classic Southern side",
+        "to": "Succotash is a Native American dish of corn and beans, some four hundred years old, that the South adopted"
+      },
+      "reason": "Succotash is Native American in origin (Narragansett), not Southern",
+      "source": "pdf-corrections p31 (high)"
+    },
+    {
+      "target": "dish:Succotash",
+      "field": "lines.s20",
+      "op": "replace",
+      "value": {
+        "from": "Succotash is the Southern summer vegetable mix",
+        "to": "Succotash is the old Native American corn and bean dish the South adopted"
+      },
+      "reason": "same",
+      "source": "pdf-corrections p31"
+    },
+    {
+      "target": "dish:Grand Isle Jewel Oysters",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "A mignonette is the classic French oyster sauce, vinegar and shallot,",
+        "to": "A mignonette is the classic raw bar sauce, vinegar, shallot and cracked pepper,"
+      },
+      "reason": "Mignonette includes cracked pepper, which is what the word means",
+      "source": "pdf-corrections p13 (high)"
+    },
+    {
+      "target": "dish:Grand Isle Jewel Oysters",
+      "field": "origin",
+      "value": "Grand Isle Jewels are farmed oysters from Grand Isle on the Louisiana coast, raised in floating cages above the seabed and tumbled so they grow a deep cup and a clean shell. The brand brought the island's farmers together in 2025 and honors the late Jules Melancon, the first permitted to farm off bottom in 2012; the menu's singular Jewel is the plural brand Jewels. Clean, briny and cold, served raw with a preserved Fresno chili mignonette.",
+      "reason": "forThePack",
+      "source": "chef-dishes-a-2; gap-sourcing-3"
+    },
+    {
+      "target": "dish:Grand Isle Jewel Oysters",
+      "field": "pairing.stepUp",
+      "value": "If it is a special occasion, we pour Rare by the glass: Piper-Heidsieck's prestige vintage Champagne, Chardonnay-led from Grand Cru vineyards, kept fresh under a Coravin Sparkling stopper. It has the chalky precision raw oysters love, with toasted almond on the finish.",
+      "reason": "forThePack; the vintage is left out of the line because 2012 or 2013 is disputed (see disputes and askAtLineup)",
+      "source": "somm-pairings-25; pdf-corrections p41 (Coravin Sparkling)"
+    },
+    {
+      "target": "dish:Grand Isle Jewel Oysters",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Catalina Island or Black Hills with the raw oysters?",
+        "a": "Keep the guide's Catalina Island as the printed pick: the mignonette already supplies acid and the tonic supplies the one thing the plate lacks, bubbles. A server may offer the Black Hills to a guest who wants lime and basil with the mignonette. Test both at lineup. Fresno is a red Californian chili from the 1950s, about the heat of a jalapeno but fruitier and thinner walled; preserved and stirred into the mignonette it gives a gentle warmth, not real heat."
+      },
+      "reason": "forThePack",
+      "source": "somm-pairings-21; chef-dishes-a-25; dossier-the-cellar section 4.4"
+    },
+    {
+      "target": "dish:Grand Isle Jewel Oysters",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: salt and acid. The salt makes the wine taste fuller and the bubbles keep the oyster fresh. A chalky, Chardonnay-led vintage Champagne is a standard oyster step up, so the Rare stays."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar sections 4.2 and 4.5"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "lines.s20",
+      "op": "replace",
+      "value": {
+        "from": "Herbsaint, our local anise liqueur",
+        "to": "Herbsaint, the anise liqueur created in New Orleans in 1934"
+      },
+      "reason": "Herbsaint was created in New Orleans in 1934 and is distilled in Kentucky today, so 'local' misleads on the place of production",
+      "source": "pdf-corrections p39 and p51 (high)"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Herbsaint, a local anise liqueur",
+        "to": "Herbsaint, the anise liqueur created in New Orleans in 1934"
+      },
+      "reason": "same",
+      "source": "pdf-corrections p39"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "The Sazerac is New Orleans’ official cocktail.",
+        "to": "The Sazerac is New Orleans’ official cocktail, named so by the Louisiana Legislature in 2008: the city’s, not the state’s."
+      },
+      "reason": "Official cocktail of the city, 2008",
+      "source": "pdf-corrections p39 (high); dossier-the-floor section 3 item 8"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What is the classic Sazerac build, and is it ours?",
+        "a": "The Classic Sazerac at Brennan's is Sazerac rye stirred with Peychaud's bitters, served without ice in a glass rinsed with Herbsaint (ERB-saint), $13; confirm sugar and lemon peel with the bar. The Sazerac Company's own recipe is a sugar cube, three dashes of Peychaud's, an ounce and a half of Sazerac Rye, a quarter ounce of Herbsaint and a lemon peel, built across two glasses and served neat in a chilled rocks glass; the IBA version is Cognac based with absinthe. Give those as the classic, never as the house build. If a guest asks for it on the rocks, check with the bar before promising it. Two luxury versions: Thompson's Dream with Willett rye, and Origin Story with Cognac and absinthe; the price ladder is $13, $20 and $40."
+      },
+      "reason": "forThePack; the 'served up' wording in the service note is a person's words and stands, the rocks glass correction lives here",
+      "source": "bar-signature-18; floor-service-19; gap-roost-3; pdf-corrections p39"
+    },
+    {
+      "target": "cocktail:Dulce de Leche",
+      "field": "lines.s10",
+      "op": "replace",
+      "value": {
+        "from": "Brennan’s own Don Q rum",
+        "to": "Don Q rum"
+      },
+      "reason": "The 10 second line asserted a private blend the service note on the same page says must be confirmed at lineup",
+      "source": "pdf-corrections p40 (medium); gap-sourcing-5"
+    },
+    {
+      "target": "cocktail:Dulce de Leche",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What is Brennan's Blender's Reserve?",
+        "a": "An aged Puerto Rican rum from Don Q; say 'selected for Brennan's' only once the beverage team confirms the private cask story. Don Q's Blender's Reserve is a blend of rums aged 5 to 18 years, and Don Q sells restaurant named private casks of it."
+      },
+      "reason": "forThePack",
+      "source": "gap-sourcing-5"
+    },
+    {
+      "target": "dish:Cherries Jubilee",
+      "field": "origin",
+      "value": "Cherries Jubilee is older than Bananas Foster: Escoffier made it for Queen Victoria's jubilee in the 1890s. Luxardo is the Italian house famous for maraschino, founded in 1821 in Zara, now Zadar in Croatia, by Girolamo Luxardo from the rosolio maraschino his wife Maria Canevari made at home; the distillery was lost in the Second World War and the family restarted it in 1947 at Torreglia near Padua, where it grows its own marasca cherries.",
+      "reason": "forThePack and the Escoffier origin the guide omits",
+      "source": "chef-dishes-c-9; pdf-corrections p34 (medium)"
+    },
+    {
+      "target": "dish:New Orleans Bread Pudding",
+      "field": "origin",
+      "value": "Bread pudding is an old European thrift dish for stale bread that became a New Orleans staple; the Picayune's Creole Cook Book of 1901 already prints a baked bread pudding with raisins and custard. The warm whiskey sauce is a 20th century New Orleans restaurant signature, made famous at the Bon Ton Cafe. Ours takes it a step further with a whiskey caramel, buttermilk ice cream and pralines.",
+      "reason": "forThePack",
+      "source": "chef-dishes-c-15"
+    },
+    {
+      "target": "dish:New Orleans Bread Pudding",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Whiskey caramel, brown sugar and pecan praline bridge to fortified wine, so the Banyuls would lead and the Auslese would be second. The Auslese stays first here until the Banyuls is confirmed a la carte."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3; pdf-corrections p35"
+    },
+    {
+      "target": "dish:Brabant Potatoes",
+      "field": "origin",
+      "value": "Brabant potatoes are an old New Orleans restaurant side, in the Picayune's Creole Cook Book since the early 1900s and named for the Brabant region of Belgium and the Netherlands. Cubes of potato fried golden and crisp, fluffy inside, finished with garlic butter and parsley.",
+      "reason": "forThePack",
+      "source": "chef-dishes-c-16"
+    },
+    {
+      "target": "dish:Brabant Potatoes",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "fromRe": "Brabant \\S bra-BAHNT \\S potatoes",
+        "to": "Brabant potatoes, bra-BAHN in French and bruh-BANT on many local floors,"
+      },
+      "reason": "The printed bra-BAHNT is a hybrid; ask the floor which the house uses",
+      "source": "pdf-corrections p50 (medium)"
+    },
+    {
+      "target": "dish:Creamed Spinach",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "It’s the same kind of creamy spinach that sits under our Eggs Sardou, and it’s a lovely partner",
+        "to": "It’s a lovely partner"
+      },
+      "reason": "A house detail inferred, not printed; the service note itself says to ask whether it is the Sardou's spinach",
+      "source": "pdf-corrections p31 (low); the guide's p2 rule against inventing house details"
+    },
+    {
+      "target": "dish:Framboise French Toast",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Mascarpone mousse, a light whipped Italian cream cheese, adds richness",
+        "to": "Mascarpone, a rich Italian cream cheese whipped into a light mousse, adds richness"
+      },
+      "reason": "Mascarpone itself is not whipped; the mousse is",
+      "source": "pdf-corrections p8 (high)"
+    },
+    {
+      "target": "dish:Framboise French Toast",
+      "field": "pairing.second",
+      "value": "",
+      "reason": "The Pierre Sparr is dropped as second choice: the guide predicts its own failure and its avoid line forbids the style",
+      "source": "pdf-corrections p9 (high); dossier-the-cellar section 4.1 item 5"
+    },
+    {
+      "target": "dish:Framboise French Toast",
+      "field": "pairing.secondWhy",
+      "value": "No dry wine on the list beats the Auslese with the mascarpone and coulis. For a guest set on dry bubbles, say plainly that it will taste drier next to the mousse and let them choose; otherwise offer the coffee with chicory.",
+      "reason": "same",
+      "source": "pdf-corrections p9"
+    },
+    {
+      "target": "dish:Blackberry Trifle",
+      "field": "pairing.second",
+      "value": "",
+      "reason": "The Pierre Sparr is dropped as second choice on the Trifle",
+      "source": "pdf-corrections p8 (high); dossier-the-cellar section 4.1 item 5"
+    },
+    {
+      "target": "dish:Blackberry Trifle",
+      "field": "pairing.secondWhy",
+      "value": "No dry wine on the list beats the Auslese with the berry curds. For a guest set on dry bubbles, say plainly that the sweet curds will make it taste drier and tarter and let them choose; otherwise offer the Catalina Island.",
+      "reason": "same",
+      "source": "pdf-corrections p8"
+    },
+    {
+      "target": "dish:Turtle Soup",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "the grated egg gives it body",
+        "to": "the grated egg adds richness"
+      },
+      "reason": "The body comes from the flour and the turtle; the egg is a garnish",
+      "source": "pdf-corrections p14 (medium)"
+    },
+    {
+      "target": "dish:Turtle Soup",
+      "field": "origin",
+      "value": "It is made with farm raised Louisiana freshwater turtle, not wild or endangered turtle. Many New Orleans turtle soups, including the famous one at Commander's Palace, stretch the turtle with veal and beef; ours is 100 percent turtle meat, with brown butter spinach, grated egg and a splash of aged Sherry at the end.",
+      "reason": "forThePack",
+      "source": "chef-dishes-a-5; chef-dishes-a-27"
+    },
+    {
+      "target": "dish:Turtle Soup",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Our house Champagne is Piper-Heidsieck's Extra Brut: very dry, with brioche and toasted nut from its time on the lees that pick up the Sherry while the bubbles clear the richness. For a step up, Rare is seventy percent Chardonnay with grilled almond and candied orange that meet the Sherry even more closely. Neither wine is oxidative; the Sherry echo is a fair secondary point behind dryness and bubbles."
+      },
+      "reason": "forThePack; the lees age and the dosage are left out, because nothing ties the Brennan's label to the Essentiel cuvee and the wine's own kept note says not to quote either until the sommelier confirms the bottle (the figures stay in the askAtLineup question)",
+      "source": "somm-pairings-7; dossier-the-cellar section 4.2; somm-whites-1"
+    },
+    {
+      "target": "dish:Turtle Soup",
+      "field": "pairing.stepUp",
+      "op": "replace",
+      "value": {
+        "from": "Rare Brut 2012 on Coravin:",
+        "to": "Rare by the glass, from the bottle under the Coravin Sparkling stopper:"
+      },
+      "reason": "The vintage is disputed and the device is the sparkling stopper",
+      "source": "pdf-corrections p41 (Coravin), p13 and p41 (vintage)"
+    },
+    {
+      "target": "dish:Louisiana Oysters",
+      "field": "origin",
+      "value": "New Orleans barbecue is not a smoker or a tomato sauce: it is the buttery, peppery style made famous by barbecue shrimp. Our Louisiana Oysters come in that sauce with pickled collard greens, shallots and a fried saltine crumble.",
+      "reason": "forThePack; the Worcestershire clause in the 45 second line stands as the definition of the style, which the guide's rules allow, and the house recipe goes to lineup",
+      "source": "chef-dishes-a-1"
+    },
+    {
+      "target": "dish:Louisiana Oysters",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Gainey first and Leflaive as the step up is the right order here, as the guide prints it: the butter sauce wants a creamy Chardonnay, and lean, green whites make butter taste flat."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.1 item 4"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "With the crab claws the Leflaive Macon is the pour: its nutty richness mirrors the brown butter and its acidity meets the vinaigrette. For a guest who wants something leaner, the Durand Loire Sauvignon Blanc works because the dressing is a vinaigrette, so its acid has something to meet; that is not true of the BBQ butter on the oysters. For bubbles, the house Extra Brut or Rare. The Gainey Chardonnay is the lower priced creamy option, not a change of style; the dossier would lead with the Gainey and keep the Leflaive as the step up on both crab dishes once the Gainey is confirmed to read fresh rather than oaky."
+      },
+      "reason": "forThePack and the price to plate opinion",
+      "source": "somm-pairings-19; dossier-the-cellar section 4.1 item 4"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "How do I describe the claws so nobody expects a cold cocktail claw?",
+        "a": "Our crab claws come warm, dressed in a brown butter vinaigrette, and you eat the meat straight off the claw. Say warm and off the claw when you describe them; use the pincer as a handle, bite and slide the cartilage out."
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-a-15; pdf-corrections p12"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "pairing.stepUp",
+      "op": "replace",
+      "value": {
+        "from": "Rare Brut 2012 on Coravin:",
+        "to": "Rare by the glass, from the bottle under the Coravin Sparkling stopper:"
+      },
+      "reason": "vintage disputed; sparkling stopper",
+      "source": "pdf-corrections p41"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Leflaive at $40 is first pick for a $28 omelette. The guide already uses Gainey first and Leflaive as the step up on the oysters, the Pecan Gulf Fish and the Poussin; the dossier would use the same order on both crab dishes after confirming the Gainey reads fresh rather than oaky. The Leflaive stays first in this pack as the guide prints it."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.1 item 4"
+    },
+    {
+      "target": "dish:Steak Tartare Cannoli",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What is the egg yolk bottarga, and is it on other dishes?",
+        "a": "The egg yolk on the Steak Tartare Cannoli is cured and grated over the top like bottarga, the Italian cured fish roe, for a rich, salty finish. It is the only dish on the current menus with it; do not mention the Ricotta Gnudi, which is off the menu."
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-a-24"
+    },
+    {
+      "target": "dish:Steak Tartare Cannoli",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: bubbles and fat, and the rose rule is real, red fruit for raw beef."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "origin",
+      "value": "Sauce Foyot, fwah-YO, is bearnaise made richer with a reduced meat glaze; Escoffier lists it as Foyot or Valois. It is named for the Restaurant Foyot, which stood on the rue de Tournon opposite the Senate in Paris until 1937 and took its name from Nicolas Foyot, once chef to King Louis-Philippe.",
+      "reason": "forThePack",
+      "source": "chef-dishes-b-19"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "pairing.sayIt",
+      "op": "replace",
+      "value": {
+        "from": "a red Burgundy from upstairs",
+        "to": "a red Burgundy from our cellar"
+      },
+      "reason": "The two scripts placed the bottles in different parts of the building; one phrase, the cellar, until a manager confirms where the Wine Room sits",
+      "source": "pdf-corrections p24 and p48 (high)"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Aged Cabernet with lean tenderloin and sauce Foyot is textbook. $70 a glass is $140 for two, close to a bottle; the Moulin d'Issan is the classic at $16; name the Beaune as second choice only if it is poured a la carte; the sommelier handoff for a red Burgundy is right."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3; pdf-corrections p24"
+    },
+    {
+      "target": "dish:Petite Filet Mignon",
+      "field": "pairing.why",
+      "op": "replace",
+      "value": {
+        "from": "A soft, juicy Grenache-based Rhône red",
+        "to": "A soft, juicy old-vine Syrah from the Southern Rhône"
+      },
+      "reason": "Cuvee Vincent is all Syrah from old vines beside Chateauneuf; do not call it Grenache based",
+      "source": "chef-dishes-a-8; gap-pron-3"
+    },
+    {
+      "target": "dish:Petite Filet Mignon",
+      "field": "pairing.palate",
+      "op": "replace",
+      "value": {
+        "from": "this Grenache’s soft tannins",
+        "to": "this Syrah’s soft tannins"
+      },
+      "reason": "The same correction as pairing.why: Cuvee Vincent is all Syrah, so the palate line cannot call it a Grenache",
+      "source": "chef-dishes-a-8; gap-pron-3"
+    },
+    {
+      "target": "dish:Petite Filet Mignon",
+      "field": "pairing.palate",
+      "op": "replace",
+      "value": {
+        "from": "Raspberry and kirsch fruit lift the mild meat",
+        "to": "Black raspberry fruit lifts the mild meat"
+      },
+      "reason": "Cuvee Vincent shows black raspberry and black pepper, not the raspberry and kirsch of a Grenache",
+      "source": "chef-dishes-a-8"
+    },
+    {
+      "target": "dish:Petite Filet Mignon",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What do we pour with the filet, and what is it?",
+        "a": "With the filet we pour Domaine de Chateaumar 'Cuvee Vincent', a Cotes du Rhone from the Southern Rhone made from old vine Syrah: black raspberry, black pepper, soft tannins, juicy and just right for red meat at breakfast. No vintage is printed on the tasting menu; check the bottle before quoting a year."
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-a-8; pdf-corrections p45"
+    },
+    {
+      "target": "dish:Louisiana BBQ Lobster",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Which white is poured with the lobster tonight?",
+        "a": "With the lobster we pour a white Burgundy, Chardonnay with body for the lobster and butter and a fresh finish against the spicy nduja. Check the supplement card for tonight's producer before naming it: the website lists Domaine Matrot Meursault 2023, the September card listed Fichet Macon-Ige 2024. By the heat rule the Berres Riesling is the sharper tool for the nduja: if it runs hot, the Berres is lighter and a touch sweeter, and we can swap it."
+      },
+      "reason": "forThePack and the second opinion",
+      "source": "chef-dishes-a-7; gap-tasting-7; dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "dish:Baked Apple",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "How is the baked apple made?",
+        "a": "A whole apple, peeled and cored, baked until soft under a crumble of rolled oats, pecans, raisins, brown sugar and cinnamon, then glazed with brown sugar and served with sweetened creme fraiche. Warm, soft and cinnamon sweet, a gentle start to the breakfast. The cellar dossier calls its Auslese pairing the best block in the book."
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-a-9; dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "dish:Seafood Gumbo",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Does the dining room gumbo follow the published recipe?",
+        "a": "Our published gumbo recipe starts with a dark mahogany roux, andouille and okra in crab stock, and the shrimp, crab and oysters go in at the very end so they stay tender; the published recipe carries okra, tomato and file, which the menu does not list, so say published recipe, never menu. Confirm at lineup that the dining room gumbo follows it before you say so to a guest."
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-a-10; gap-recipes-4"
+    },
+    {
+      "target": "dish:Seafood Gumbo",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "With the seafood gumbo I reach for the Berres Riesling: low alcohol, no tannin and a touch of sweetness, so it cools the andouille's spice and keeps the shrimp, crab and oysters tasting sweet. If the guest wants red, the Bourgogne Pinot Noir is light enough for the smoky sausage; it is the alternative, not the first choice."
+      },
+      "reason": "forThePack",
+      "source": "somm-pairings-10"
+    },
+    {
+      "target": "dish:Duck Confit Waffle",
+      "field": "pairing.serve",
+      "op": "replace",
+      "value": {
+        "from": "Taste the bottle before recommending: if it’s off-dry, lead with it; if bone-dry, mention the maple may make it seem tarter.",
+        "to": "The Berres is off-dry, so lead with it; taste the open bottle at lineup if the vintage has changed."
+      },
+      "reason": "The Berres sweetness is settled by the importer's sheet (20.7 g/l residual sugar at 11.5 percent): off-dry",
+      "source": "somm-pairings-3; gap-pron-1; pdf-corrections p20"
+    },
+    {
+      "target": "dish:Duck Confit Waffle",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "With the duck confit waffle the Berres Riesling is the pour: it is off-dry, so its ripe fruit keeps pace with the maple while its acidity cuts the confit fat and the foie gras butter. For a guest who wants red, the Bourgogne Pinot Noir, served cool, is the classic with duck. The Auslese is sold only as an $80 half-bottle; do not offer it by the glass unless a manager has said it can be poured that way."
+      },
+      "reason": "forThePack",
+      "source": "somm-pairings-11"
+    },
+    {
+      "target": "dish:Blackened Tofu",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "The tofu comes from Tien Dat, made here in New Orleans.",
+        "to": "The tofu comes from Tien Dat, a Vietnamese family co-op across the river that presses it fresh every week."
+      },
+      "reason": "Tien Dat is on the West Bank, not Orleans Parish",
+      "source": "gap-sourcing-1; gap-sourcing-2"
+    },
+    {
+      "target": "dish:Blackened Tofu",
+      "field": "parts.main",
+      "value": "Tien Dat tofu, pressed fresh each week across the river",
+      "reason": "same",
+      "source": "gap-sourcing-1"
+    },
+    {
+      "target": "dish:Blackened Tofu",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: umami hates tannin, heat hates alcohol, mushroom is the bridge; say cayenne only if the kitchen confirms the blend."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "dish:Maggie’s Mushrooms",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Who is Maggie?",
+        "a": "Mushroom Maggie's Farm at St Francisville, run by Maggie Long and Cyrus Lester since 2018, grows lion's mane, oyster, shiitake and other mushrooms for New Orleans restaurants, but no source links it to Brennan's. Name the farm only after the chef confirms at lineup; until then say 'our mushroom side'."
+      },
+      "reason": "forThePack",
+      "source": "gap-sourcing-4; pdf-corrections p32"
+    },
+    {
+      "target": "dish:Creole Tomato Tostada",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: acid matches acid. Fresh tomatoes are tart, so the wine has to be bright too, and the burrata softens the edge."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar sections 4.3 and 4.5"
+    },
+    {
+      "target": "dish:Creole Caesar",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: unoaked and saline, so the smoke does not turn bitter and the umami has no tannin to harden; the Extra Brut second is an equal."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "dish:Creole Hanger Steak",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: the chili crisp has real heat, so the red should be ripe and soft, served cool, and the Durban is that wine."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar sections 4.3 and 4.5"
+    },
+    {
+      "target": "dish:The Snickers",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: chocolate makes dry wine bitter and salt makes a sweet wine sweeter; 4 oz is generous, 2 to 3 oz is the norm."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "dish:Lemon Tart",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: only sweet plus piercing acid survives the yuzu and lemon; the Banyuls avoid line is right."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "dish:Gulf Fish en Papillote",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: Albarino's salt and citrus for the olives, tomato and crab."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "dish:Poussin à la Moutarde",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "The cellar dossier's second opinion on the pairing?",
+        "a": "Confirmed: Gainey for the mustard cream; the Sparr is a co-equal for fried chicken."
+      },
+      "reason": "second opinion",
+      "source": "dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "pairs",
+      "value": "The eye opener that begins the Traditional Breakfast; offer it at the greeting, before the baked apple.",
+      "reason": "The drink's place on the breakfast tasting",
+      "source": "pdf p38, p49; gap-tasting-1"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Is there a published recipe?",
+        "a": "No house recipe page for the Brandy Milk Punch is published; quote the four menu ingredients only: brandy, heavy cream, vanilla bean, nutmeg."
+      },
+      "reason": "forThePack",
+      "source": "gap-recipes-7"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "pairs",
+      "value": "Poured with the soup course on the Traditional Breakfast; wonderful with the turtle soup.",
+      "reason": "The drink's place on the breakfast tasting",
+      "source": "pdf p39, p49"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "origin",
+      "value": "The Bloody Bull is a Bloody Mary with beef bouillon stirred in, and the drink histories credit Brennan's with it: the story is that Owen Brennan beefed up a Bloody Mary for his breakfast service in the 1950s. Say the house is credited with it; do not say it was invented here as a flat fact. The Bull Shot, vodka and cold beef bouillon, was invented in 1952 at the Caucus Club in Detroit.",
+      "reason": "forThePack",
+      "source": "bar-signature-20"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "pairs",
+      "value": "Before dinner or with the steak; the Herbsaint rinse and the Peychaud's suit the Creole hanger.",
+      "reason": "The bar dossier's one breath line and the guide's spirit forward note",
+      "source": "dossier-the-bar section 18; pdf p39"
+    },
+    {
+      "target": "cocktail:Brennan’s Irish Coffee",
+      "field": "pairs",
+      "value": "With Bananas Foster or the bread pudding, as the 45 second line says; on both the breakfast and the dessert menu.",
+      "reason": "The guide's own line",
+      "source": "pdf p39 to p40"
+    },
+    {
+      "target": "cocktail:Dulce de Leche",
+      "field": "pairs",
+      "value": "Dessert on its own, or the Foster in a glass for a guest dining alone.",
+      "reason": "The guide's 45 second line and the floor dossier's Foster for one scenario",
+      "source": "pdf p40; dossier-the-floor section 8"
+    },
+    {
+      "target": "cocktail:Catalina Island",
+      "field": "guest",
+      "value": "Seedlip Grove 42, a British citrus non-alcoholic spirit at 0.0 per cent alcohol, with local watermelon and tonic: bright and dry, $15.",
+      "reason": "forThePack",
+      "source": "bar-signature-30"
+    },
+    {
+      "target": "cocktail:Catalina Island",
+      "field": "pairs",
+      "value": "Stands in for Champagne and rose: the oysters, the Caesar, the Hussarde, the sweet starters and the lemon and pineapple desserts.",
+      "reason": "The guide's two bucket rule",
+      "source": "dossier-the-cellar section 4.4; pdf p47, p50"
+    },
+    {
+      "target": "cocktail:Black Hills",
+      "field": "guest",
+      "value": "Lyre's non-alcoholic agave spirit from Australia, basil puree and lime, $14; Lyre's is labelled under 0.5 per cent alcohol, so call it non-alcoholic, not zero.",
+      "reason": "forThePack: Seedlip Grove 42 is 0.0 percent, Lyre's is under 0.5 percent",
+      "source": "bar-signature-30"
+    },
+    {
+      "target": "cocktail:Black Hills",
+      "field": "pairs",
+      "value": "Stands in for a crisp white or a soft red: the gumbo, the crab, the steaks and the tofu.",
+      "reason": "The guide's two bucket rule",
+      "source": "dossier-the-cellar section 4.4; pdf p50"
+    },
+    {
+      "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "Extra Brut means very little added sugar: bone-dry,",
+        "to": "Extra Brut means very little added sugar, under six grams a litre: very dry,"
+      },
+      "reason": "Bone dry strictly means Brut Nature",
+      "source": "pdf-corrections p41 (medium)"
+    },
+    {
+      "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+      "field": "serviceNote",
+      "op": "append",
+      "value": "The live list prints the glass at $28; the restaurant's own drinks page prints $30. Confirm at lineup and quote the list in hand.",
+      "reason": "The guide's own discrepancy, written into the wine's service note for the owner to settle",
+      "source": "pdf p41, p49; plan decision"
+    },
+    {
+      "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Is it a bespoke blend or the Essentiel under our label?",
+        "a": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, so it is drier than a standard Brut; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labelled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Bubbles page lists a bottle at $125, $75 during Bubbles."
+      },
+      "reason": "forThePack",
+      "source": "somm-whites-1; gap-wine-7; gap-wine-8; pdf-corrections p41"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "Rare began as Piper-Heidsieck’s prestige cuvée.",
+        "to": "Rare began as Piper-Heidsieck’s prestige cuvée and is now run as its own house, Rare Champagne; first vintage 1976, only about a dozen vintages ever declared."
+      },
+      "reason": "Rare has been its own house since 2018",
+      "source": "pdf-corrections p41 (medium)"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "Poured with a Coravin so a single glass is possible.",
+        "to": "Poured by the glass from an opened bottle kept fresh under the Coravin Sparkling stopper, which re-pressurizes it with CO2, so a single glass is possible."
+      },
+      "reason": "A needle Coravin cannot be used on Champagne; the Rare is opened and stoppered, the Leflaive is poured by needle",
+      "source": "pdf-corrections p41 (high)"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "sayIt",
+      "op": "replace",
+      "value": {
+        "from": "we open with a Coravin",
+        "to": "we keep fresh under a Coravin Sparkling stopper"
+      },
+      "reason": "same",
+      "source": "pdf-corrections p41"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "serviceNote",
+      "op": "append",
+      "value": "The live list prints Rare Brut 2012; the restaurant's own drinks page prints a 2013 Rare Millesime at the same price. Read the label at lineup before naming the vintage.",
+      "reason": "The guide's own discrepancy, written into the wine's service note",
+      "source": "pdf p41, p49; plan decision"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What is Rare, in one breath?",
+        "a": "Rare is a real vintage of the prestige cuvee, mostly Chardonnay, about ten years on its lees; the $75 Coravin glass is a fair way into a bottle that retails around $250. Check with the bar whether the 2012 or the 2013 is open before naming the vintage. Serve a touch warmer than the house bubbles so the toast, almond and candied citrus show."
+      },
+      "reason": "forThePack",
+      "source": "gap-wine-9; somm-pairings-25; pdf-corrections p41 (temperature, low)"
+    },
+    {
+      "target": "wine:Charles Lafitte Brut Champagne NV",
+      "field": "profile",
+      "op": "append",
+      "value": "A house with roots to 1834, now part of the Vranken-Pommery group; the blend is led by Pinot Noir and Meunier with Chardonnay.",
+      "reason": "The guide gives no house story",
+      "source": "pdf-corrections p42 (medium)"
+    },
+    {
+      "target": "wine:C.H. Berres ‘Old Vines’ Riesling 2022",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "Taste the current bottle so you can tell guests honestly how dry or off-dry it is.",
+        "to": "It is off-dry: a touch of sweetness, about twenty grams of sugar a litre, with only 11.5% alcohol and racy Mosel acidity, which is why it is our glass for spice and for the maple on the duck. The estate is at Ürzig in the Middle Mosel, a family with roots to 1510. Taste it at lineup if the vintage has changed."
+      },
+      "reason": "The sweetness settled by the importer's sheet; the village and family added",
+      "source": "somm-pairings-3; gap-pron-1; pdf-corrections p42"
+    },
+    {
+      "target": "wine:Pazo das Bruxas Albariño 2025",
+      "field": "profile",
+      "op": "append",
+      "value": "Made by Familia Torres at its Rías Baixas estate; the name means manor of the witches.",
+      "reason": "The most recognisable producer name on the white list",
+      "source": "pdf-corrections p42 (medium); gap-pron-8"
+    },
+    {
+      "target": "wine:Domaine Durand Sauvignon Blanc 2025",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Which appellation is it?",
+        "a": "No appellation is printed anywhere in the guide. Say 'Loire Sauvignon Blanc' rather than naming Sancerre until the label is read at lineup."
+      },
+      "reason": "forThePack; the guide's p42 entry names no appellation",
+      "source": "pdf-corrections p42 (low)"
+    },
+    {
+      "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "profile",
+      "op": "append",
+      "value": "Château London is a named vineyard parcel at Igé, old limestone with some vines over a hundred years old, no castle and nothing to do with England; the wine is from Domaine Fichet of Igé, a family estate farmed by the Fichet brothers, mostly steel with a touch of old oak, not the Meursault Fichet.",
+      "reason": "The name prompts questions",
+      "source": "pdf-corrections p43 (medium); gap-pron-4"
+    },
+    {
+      "target": "wine:Gainey Estate Vineyards Chardonnay 2023",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Is it Sta. Rita Hills?",
+        "a": "Gainey farms in both the Santa Ynez Valley and the Sta. Rita Hills and its Chardonnays have carried either appellation; confirm the appellation on the bottle in service. The 'Santa Barbara County' phrase in the say it line is safe either way."
+      },
+      "reason": "forThePack",
+      "source": "pdf-corrections p43 (low)"
+    },
+    {
+      "target": "wine:Louis Jadot Beaune 1er Cru 2023",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "Premier Cru is Burgundy’s second-highest vineyard tier.",
+        "to": "Premier Cru is Burgundy’s second-highest vineyard tier, and the highest in Beaune, which has no Grand Cru."
+      },
+      "reason": "Beaune has no Grand Cru",
+      "source": "pdf-corrections p44 (high)"
+    },
+    {
+      "target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
+      "field": "origin",
+      "value": "A father and son family domaine, Domaine Robert et Damien Martin at Davayé in the Mâconnais, southern Burgundy, founded in 1982 by Robert and run by his son Damien, about twenty hectares.",
+      "reason": "forThePack",
+      "source": "gap-pron-2"
+    },
+    {
+      "target": "wine:Domaine de Durban Beaumes-de-Venise Rouge 2024",
+      "field": "grapes",
+      "value": [
+        "Grenache",
+        "Syrah"
+      ],
+      "reason": "Naming the partner grape explains the pepper note; confirm proportions from the label",
+      "source": "pdf-corrections p44 (low)"
+    },
+    {
+      "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône",
+      "field": "grapes",
+      "value": [
+        "Syrah"
+      ],
+      "reason": "Cuvee Vincent is all Syrah from fifty year old vines on two parcels bordering Chateauneuf-du-Pape; the guide's 'Grenache-based' is wrong",
+      "source": "chef-dishes-a-8; gap-pron-3"
+    },
+    {
+      "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "Southern Rhône style: raspberry, kirsch, a little pepper, soft tannins.",
+        "to": "Southern Rhône style, all Syrah: black raspberry, black pepper, soft tannins."
+      },
+      "reason": "The profile must agree with the grapes, origin and serve lines: all Syrah, black raspberry and black pepper",
+      "source": "chef-dishes-a-8; gap-pron-3"
+    },
+    {
+      "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône",
+      "field": "serve",
+      "op": "replace",
+      "value": {
+        "from": "keeps this juicy Grenache fresh",
+        "to": "keeps this juicy old-vine Syrah fresh"
+      },
+      "reason": "same",
+      "source": "chef-dishes-a-8"
+    },
+    {
+      "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône",
+      "field": "serve",
+      "op": "append",
+      "value": "No vintage is printed on the tasting menu: check the bottle before quoting a year.",
+      "reason": "Every other wine prints a vintage; a Cotes du Rhone turns over every year",
+      "source": "pdf-corrections p45 (high)"
+    },
+    {
+      "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône",
+      "field": "origin",
+      "value": "All Syrah from fifty year old vines on two parcels beside Châteauneuf-du-Pape, nine kilometres from Orange, farmed organically without certification; unusual in the south, where Grenache usually leads.",
+      "reason": "forThePack",
+      "source": "gap-pron-3"
+    },
+    {
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2023",
+      "field": "grapes",
+      "value": [
+        "Merlot",
+        "Cabernet Sauvignon"
+      ],
+      "reason": "Moulin d'Issan is Merlot led; give no percentage, the blend varies by vintage and sources disagree",
+      "source": "pdf-corrections p45 (medium); gap-pron-5"
+    },
+    {
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2023",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "From the team behind Château d’Issan in Margaux:",
+        "to": "From the team behind Château d’Issan in Margaux, Merlot-led with Cabernet Sauvignon, named for a ruined seventeenth century windmill:"
+      },
+      "reason": "same",
+      "source": "gap-pron-5"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "How is the open bottle kept?",
+        "a": "Stand the bottle upright a day ahead; pour with Coravin if the house uses it for this wine, otherwise stopper, refrigerate and sell through the same night; never decant it for more than about thirty minutes. An opened sixteen year old wine fades within about a day. Confirm the house method at lineup."
+      },
+      "reason": "forThePack",
+      "source": "pdf-corrections p45 (medium)"
+    },
+    {
+      "target": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "a decade of age adds depth",
+        "to": "twelve years of age add depth"
+      },
+      "reason": "Menus read in September 2026; a 2014 is twelve years old",
+      "source": "pdf-corrections p46 (high)"
+    },
+    {
+      "target": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "Sweet late-harvest Riesling",
+        "to": "Sweet Auslese Riesling, a selected harvest a tier above late-harvest Spätlese,"
+      },
+      "reason": "Late harvest is Spatlese; Auslese is selected harvest",
+      "source": "pdf-corrections p46 (medium)"
+    },
+    {
+      "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "A sweet, fortified red: black cherry, fig, cocoa, coffee.",
+        "to": "A sweet, fortified red, aged the oxidative way: dried fig, walnut, caramel, coffee and orange peel; the Rimage is the fresh black cherry style, if a guest asks."
+      },
+      "reason": "La Tour Vieille's Reserva is oxidatively aged; fresh black cherry describes the Rimage",
+      "source": "pdf-corrections p46 (medium); somm-reds-29"
+    },
+    {
+      "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+      "field": "sayIt",
+      "op": "replace",
+      "value": {
+        "from": "cherry, cocoa and coffee",
+        "to": "fig, caramel and coffee"
+      },
+      "reason": "same",
+      "source": "pdf-corrections p46"
+    },
+    {
+      "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+      "field": "origin",
+      "value": "Banyuls is a sweet fortified red, a vin doux naturel, from the schist terraces around Banyuls-sur-Mer in Roussillon, French Catalonia. It must be at least half Grenache noir, and fermentation is stopped with neutral grape spirit so the grape's own sugar stays in the wine. Banyuls Grand Cru is at least three quarters Grenache noir and spends at least thirty months in wood. Our pour is the La Tour Vieille Reserva: fig, caramel, cocoa and coffee, the classic with chocolate.",
+      "reason": "forThePack",
+      "source": "somm-reds-29"
+    },
+    {
+      "target": "dish:Cherries Jubilee",
+      "field": "pairing.why",
+      "op": "replace",
+      "value": {
+        "from": "Banyuls’ black-cherry and cocoa fruit echoes the cherries",
+        "to": "Banyuls’ kirsch warmth and nutty, caramel depth meet the maraschino in the sauce"
+      },
+      "reason": "The cherry meets cherry line depends on the Rimage style; the Reserva leads with fig, walnut and caramel",
+      "source": "pdf-corrections p46 (medium)"
+    },
+    {
+      "target": "dish:Cherries Jubilee",
+      "field": "pairing.palate",
+      "op": "replace",
+      "value": {
+        "from": "Cherry meets cherry: the Banyuls’ black-cherry fruit amplifies the flambéed cherries,",
+        "to": "The Banyuls’ kirsch warmth and dried fig meet the flambéed cherries and the maraschino note in the sauce,"
+      },
+      "reason": "same",
+      "source": "pdf-corrections p46"
+    },
+    {
+      "target": "dish:Cherries Jubilee",
+      "field": "pairing.sayIt",
+      "op": "replace",
+      "value": {
+        "from": "tastes like black cherry and cocoa",
+        "to": "tastes of fig, caramel and cocoa"
+      },
+      "reason": "same",
+      "source": "pdf-corrections p46"
+    },
+    {
+      "target": "dish:Cherries Jubilee",
+      "field": "pairing.whyThisWine",
+      "op": "replace",
+      "value": {
+        "from": "tastes of black cherry and cocoa",
+        "to": "tastes of fig, caramel and cocoa"
+      },
+      "reason": "same",
+      "source": "pdf-corrections p46"
+    },
+    {
+      "target": "tasting:Traditional Breakfast at Brennan’s",
+      "field": "note",
+      "op": "append",
+      "value": "Watch the table's intake: a milk punch, a Bloody Bull, 4 oz of Champagne and 4 oz of red before a rum flambé is roughly four drinks in a morning, so offer the Catalina Island or the Black Hills in place of any pour without being asked; the tasting price does not change. The Champagne on the Hussarde course is disputed: the guide prints Charles Lafitte Brut, the house page has shown Brennan's Essential by Piper-Heidsieck; confirm at lineup.",
+      "reason": "The master sommelier's watch the intake line and the Hussarde pour dispute",
+      "source": "pdf-corrections p5 (medium); gap-tasting-2; dossier-the-cellar section 4.3"
+    },
+    {
+      "target": "tasting:Dinner tasting",
+      "field": "note",
+      "op": "append",
+      "value": "Three of the five pours are variables between the guide and the house page: the lobster pour (Fichet Mâcon-Igé 2024 or Domaine Matrot Meursault 2023), the redfish pour (Jadot Beaune 1er Cru 2023 or Jadot Beaune Bressandes 1er Cru 2022) and the dessert pour (La Tour Vieille Banyuls Reserva or M. Chapoutier Banyuls); the Lafitte and the Paul Hobbs are the pours both sources share. The duck course is printed two ways. Read the printed card on shift. The pairing costs more than the food; do not apologise for it.",
+      "reason": "forThePack",
+      "source": "gap-tasting-4; gap-tasting-5; gap-tasting-6; gap-tasting-7; dossier-the-floor section 4"
+    },
+    {
+      "target": "term:Beurre blanc",
+      "field": "say",
+      "value": "burr BLAHN",
+      "reason": "The final c of blanc is silent; the K is an anglicism",
+      "source": "pdf-corrections p50 (medium)"
+    },
+    {
+      "target": "term:Choron",
+      "field": "say",
+      "value": "sho-ROHN",
+      "reason": "The r starts the stressed last syllable",
+      "source": "pdf-corrections p50 (medium)"
+    },
+    {
+      "target": "term:Marchand de vin",
+      "field": "say",
+      "value": "mar-SHAHN duh VAN",
+      "reason": "The second syllable is a nasal ahn",
+      "source": "pdf-corrections p50 (low)"
+    },
+    {
+      "target": "term:Marchand de vin",
+      "field": "toGuest",
+      "value": "Marchand de vin is a savory red wine and mushroom sauce; it gives the eggs a deep, rich note.",
+      "reason": "Never 'reduction'; the house sauce has mushrooms",
+      "source": "pdf-corrections p17; plan correction"
+    },
+    {
+      "target": "term:Brabant potatoes",
+      "field": "say",
+      "value": "bra-BAHN or bruh-BANT (ask the floor)",
+      "reason": "The printed bra-BAHNT is a hybrid",
+      "source": "pdf-corrections p50 (medium)"
+    },
+    {
+      "target": "term:Mignonette",
+      "field": "say",
+      "value": "meen-yo-NET (min-yuh-NET is also accepted)",
+      "reason": "The first vowel is a long ee in French",
+      "source": "pdf-corrections p50 (low)"
+    },
+    {
+      "target": "term:Mignonette",
+      "field": "toGuest",
+      "value": "Mignonette is the classic raw bar sauce for oysters, vinegar, shallot and cracked pepper; ours has preserved Fresno chili.",
+      "reason": "Mignonette includes cracked pepper",
+      "source": "pdf-corrections p13"
+    },
+    {
+      "target": "term:Herbsaint",
+      "field": "say",
+      "value": "ERB-sant (ERB-saint also heard); never sound the H",
+      "reason": "Locals clip the second syllable",
+      "source": "pdf-corrections p51 (low)"
+    },
+    {
+      "target": "term:Herbsaint",
+      "field": "toGuest",
+      "value": "Herbsaint is the anise liqueur created in New Orleans in 1934, just a rinse in the Sazerac glass for aroma.",
+      "reason": "Created here, distilled in Kentucky today",
+      "source": "pdf-corrections p51 (high)"
+    },
+    {
+      "target": "term:Tasso",
+      "field": "say",
+      "value": "TAH-so (TASS-oh is also heard; confirm the house habit)",
+      "reason": "Both are heard in Louisiana",
+      "source": "pdf-corrections p51 (medium)"
+    },
+    {
+      "target": "term:Tasso",
+      "field": "toGuest",
+      "value": "Tasso is Cajun spiced, cured and smoked pork, used to season the sauce.",
+      "reason": "Tasso is cured pork shoulder, not a leg ham",
+      "source": "pdf-corrections p21 and p51"
+    },
+    {
+      "target": "term:En papillote",
+      "field": "toGuest",
+      "value": "En papillote means in paper; here we use a banana leaf instead, so the fish steams in its own juices and stays moist.",
+      "reason": "Papillote literally means a paper wrapper",
+      "source": "pdf-corrections p26 (medium)"
+    },
+    {
+      "target": "term:Milk punch",
+      "field": "say",
+      "value": "As it reads: milk punch.",
+      "reason": "The guide prints a lone dash for the respelling",
+      "source": "pdf p50"
+    },
+    {
+      "target": "term:Bloody Bull",
+      "field": "say",
+      "value": "As it reads: Bloody Bull.",
+      "reason": "same",
+      "source": "pdf p50"
+    },
+    {
+      "target": "term:Popcorn rice",
+      "field": "say",
+      "value": "As it reads: popcorn rice.",
+      "reason": "same",
+      "source": "pdf p51"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Framboise",
+        "say": "frahm-BWAHZ",
+        "toGuest": "Framboise is French for raspberry; the French toast is finished with raspberry coulis and local raspberries."
+      },
+      "reason": "widened lexicon, said nightly",
+      "source": "pdf p9; dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Fines herbes",
+        "say": "feen ZAIRB",
+        "toGuest": "Fines herbes is the classic French mix of delicate herbs, parsley, chives, tarragon and chervil, on the crab claws."
+      },
+      "reason": "widened lexicon",
+      "source": "pdf p12; dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Mimolette",
+        "say": "mee-mo-LET",
+        "toGuest": "Mimolette is a bright orange French cheese from Lille, nutty and a little sweet as it ages, dyed with annatto; it makes the fondue on the shells and cheese."
+      },
+      "reason": "widened lexicon",
+      "source": "pdf p32; pdf-corrections p32 (low)"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Pralines",
+        "say": "PRAH-leen, never PRAY-leen",
+        "toGuest": "Pralines are the New Orleans pecan and brown sugar candies crumbled over the bread pudding."
+      },
+      "reason": "widened lexicon",
+      "source": "pdf p35; dossier-the-floor section 3 item 22"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Rösti",
+        "say": "RUHSH-tee",
+        "toGuest": "Rösti is the Swiss grated potato cake under the petite filet on the breakfast tasting."
+      },
+      "reason": "widened lexicon",
+      "source": "pdf p5"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Mascarpone",
+        "say": "mahs-kar-POH-neh",
+        "toGuest": "Mascarpone is a rich Italian cream cheese, whipped into a light mousse for the French toast."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13; pdf-corrections p8"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Shiitake",
+        "say": "shee-TAH-keh",
+        "toGuest": "Shiitake are the savory Japanese mushrooms, preserved, on the blackened tofu."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Burrata",
+        "say": "boo-RAH-tah",
+        "toGuest": "Burrata is fresh mozzarella with a creamy centre, on the Creole tomato tostada."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Grana Padano",
+        "say": "GRAH-nah pah-DAH-noh",
+        "toGuest": "Grana Padano is a hard, nutty Italian cheese like Parmesan, on the Caesar and the shells and cheese."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Castelvetrano",
+        "say": "kah-stel-veh-TRAH-noh",
+        "toGuest": "Castelvetrano olives are the bright green, mild and buttery Sicilian olives in the papillote."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Gremolata",
+        "say": "greh-moh-LAH-tah",
+        "toGuest": "Gremolata is a fresh chopped topping; ours is Marcona almond with lemon and basil on the crab and corn omelette."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Harissa",
+        "say": "hah-REE-sah",
+        "toGuest": "Harissa is the North African chili paste that seasons the smoked cauliflower."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Yuzu",
+        "say": "YOO-zoo",
+        "toGuest": "Yuzu is a fragrant Japanese citrus; its mousse is the heart of the lemon tart."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Chateaubriand",
+        "say": "shah-toh-bree-AHN",
+        "toGuest": "Chateaubriand is the thick centre cut of the beef tenderloin, roasted for two."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Confit",
+        "say": "kohn-FEE",
+        "toGuest": "Confit is meat cured and cooked slowly in its own fat until tender; the duck leg on the waffle."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13; pdf p20"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Pavé",
+        "say": "pah-VAY",
+        "toGuest": "Pavé means paving stone; the smoked potato pavé is layered potato pressed and cut into a neat block."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Andouille",
+        "say": "ahn-DOO-ee",
+        "toGuest": "Andouille is the smoky Louisiana pork sausage in the gumbo."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Gumbo",
+        "say": "GUM-boh",
+        "toGuest": "Gumbo is the Louisiana stew built on a dark roux; ours is seafood with andouille over popcorn rice."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Luxardo",
+        "say": "loo-KSAR-doh (look-SAR-doh is common)",
+        "toGuest": "Luxardo is the Italian family house famous for maraschino cherries and the liqueur, founded in 1821 and in Italy since 1947; its sauce dresses the Cherries Jubilee."
+      },
+      "reason": "producer line",
+      "source": "chef-dishes-c-9; dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Peychaud's",
+        "say": "PAY-shoze",
+        "toGuest": "Peychaud's is the bright red New Orleans bitters with anise and cherry notes in the Sazerac; the story puts Antoine Peychaud's pharmacy a few doors up Royal Street, so confirm it at lineup before telling it."
+      },
+      "reason": "producer line; the 437 Royal address is (expert, medium) and the research says to confirm it at lineup before using it as a floor story, so the line says so",
+      "source": "dossier-the-kitchen section 13; dossier-the-floor section 3 item 10"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Sazerac",
+        "say": "SAZ-uh-rak",
+        "toGuest": "The Sazerac is New Orleans' official cocktail, rye stirred with Peychaud's in a glass rinsed with Herbsaint."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13; pdf p39"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Crème fraîche",
+        "say": "krem FRESH",
+        "toGuest": "Crème fraîche is a slightly tangy cultured cream, sweetened on the baked apple and whipped on the coffee cake."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Financier",
+        "say": "fee-nahn-SYAY",
+        "toGuest": "Financiers are small, buttery almond cakes; the blackberry ones give the trifle its texture."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13; pdf p7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Bavarois",
+        "say": "bav-ar-WAH",
+        "toGuest": "A bavarois, or Bavarian, is a set cream; the Snickers starts with a Bavarian milk chocolate."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Blangé",
+        "say": "blahn-ZHAY",
+        "toGuest": "Paul Blangé was the house's first chef, who led the kitchen until the 1970s and created Bananas Foster and Eggs Hussarde."
+      },
+      "reason": "widened lexicon; Roussel became executive chef in 1974, before Blange's death in 1977, so 'until the 1970s' is what the research supports and no start year is stated",
+      "source": "dossier-the-kitchen section 13; chef-history-15"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Escoffier",
+        "say": "es-koff-ee-AY",
+        "toGuest": "Escoffier was the great French chef who wrote down sauce Foyot and made Cherries Jubilee for Queen Victoria."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 13; chef-dishes-b-19"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Guéridon",
+        "say": "gay-ree-DOHN",
+        "toGuest": "The guéridon is the cart the Bananas Foster is made on at your table."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-kitchen section 12"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Fresno chili",
+        "say": "FREZ-noh",
+        "toGuest": "Fresno is a red Californian chili from the 1950s, about the heat of a jalapeño but fruitier; preserved in the mignonette it gives a gentle warmth, not real heat."
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-a-25"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Creole and Cajun",
+        "say": "As it reads: Creole, Cajun.",
+        "toGuest": "Creole is New Orleans city cooking, French and Spanish at the root with more butter, cream and sauces; Cajun is the country cooking of Acadiana, one pot, dark roux and spicier. Brennan's is Creole."
+      },
+      "reason": "widened lexicon",
+      "source": "dossier-the-floor section 8 (expert definitions)"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Piper-Heidsieck",
+        "say": "As it reads: Piper-Heidsieck (no research respelling; ask the sommelier)",
+        "toGuest": "Piper-Heidsieck is the Champagne house behind our house bubbles, bottled under the Brennan's name as an Extra Brut, very dry."
+      },
+      "reason": "wine name said nightly",
+      "source": "pdf p41; gap-wine-8"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Rare",
+        "say": "As it reads: Rare.",
+        "toGuest": "Rare is the prestige vintage Champagne that began at Piper-Heidsieck and is now its own house; we pour it by the glass from a bottle kept fresh under a Coravin Sparkling stopper."
+      },
+      "reason": "wine name",
+      "source": "pdf p41; pdf-corrections p41; gap-pron-8"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Pierre Sparr",
+        "say": "pee-AIR SHPAR",
+        "toGuest": "Pierre Sparr is an Alsace house; its sparkling rosé is all Pinot Noir, made like Champagne, dry with bright berry fruit."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-7; pdf p41"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Charles Lafitte",
+        "say": "sharl lah-FEET",
+        "toGuest": "Charles Lafitte is the crisp, dry Champagne poured on both tasting menus, a house with roots to 1834 in the Vranken-Pommery group."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-7; pdf-corrections p42"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "C.H. Berres",
+        "say": "BEH-ress",
+        "toGuest": "C.H. Berres is an old Mosel family estate at Ürzig; its Old Vines Riesling is our off-dry glass for spice and for the duck waffle."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-8; pdf-corrections p42"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Pazo das Bruxas",
+        "say": "PAH-tho dahs BROO-shas",
+        "toGuest": "Pazo das Bruxas, the manor of the witches, is Familia Torres's Albariño from Spain's Atlantic coast, citrusy with a salty edge."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-8; pdf-corrections p42"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Albariño",
+        "say": "As it reads: Albariño (no research respelling; ask the sommelier)",
+        "toGuest": "Albariño is the crisp, saline white grape of Rías Baixas in Galicia, made for seafood."
+      },
+      "reason": "wine word said nightly",
+      "source": "pdf p42"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Domaine Durand",
+        "say": "doh-MEN dur-AHN",
+        "toGuest": "Domaine Durand is our Loire Sauvignon Blanc, crisp and herbal, the wine that loves artichokes."
+      },
+      "reason": "wine name",
+      "source": "pdf p42; gap-pron-7 (Durban is dur-BAHN; Durand by analogy, expert)"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Gainey",
+        "say": "GAY-nee (worth an ear check with the sommelier)",
+        "toGuest": "Gainey is a Santa Barbara County estate; its Chardonnay is creamy but fresh, our first pick for the butter sauces."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-8; pdf p43"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Leflaive",
+        "say": "luh-FLEV",
+        "toGuest": "Domaine Leflaive is one of Burgundy's great white wine estates, famous for Puligny-Montrachet; we pour its Mâcon by the glass by Coravin."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-7; pdf p43"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Mâcon-Verzé",
+        "say": "mah-KAWN vair-ZAY",
+        "toGuest": "Mâcon-Verzé is the village appellation in southern Burgundy where Leflaive makes this Chardonnay."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Fichet",
+        "say": "fee-SHAY",
+        "toGuest": "Domaine Fichet is a family estate at Igé in the Mâconnais; its Château London is a named vineyard parcel, no castle and nothing to do with England."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-4; gap-pron-7; pdf-corrections p43"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Mâcon-Igé",
+        "say": "mah-KAWN ee-ZHAY",
+        "toGuest": "Mâcon-Igé is the village appellation of the Fichet Chardonnay poured with the lobster on the dinner tasting."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Minuty",
+        "say": "mee-nu-TEE",
+        "toGuest": "Minuty is a Provence estate; its Prestige rosé is pale, dry and refreshing, lovely with tomatoes and shrimp."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-7; pdf p43"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Damien Martin",
+        "say": "dah-mee-EN mar-TAN",
+        "toGuest": "Damien Martin runs his family's domaine at Davayé in the Mâconnais; his Bourgogne Pinot Noir is our light, silky red by the glass."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-2; gap-pron-7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Louis Jadot",
+        "say": "loo-EE zhah-DOH",
+        "toGuest": "Louis Jadot is the Burgundy house whose Beaune Premier Cru is poured with the redfish on the dinner tasting; Beaune has no Grand Cru, so Premier Cru is its top tier."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-6; pdf-corrections p44"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Beaune",
+        "say": "BOHN",
+        "toGuest": "Beaune is the wine capital of Burgundy and the village behind the Jadot Premier Cru on the tasting."
+      },
+      "reason": "wine word",
+      "source": "pdf p44"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Beaumes-de-Venise",
+        "say": "BOHM duh vuh-NEEZ",
+        "toGuest": "Beaumes-de-Venise is a Southern Rhône village famous for sweet Muscat; the Durban we pour is its dry red, ripe Grenache with Syrah."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-6; pdf p44"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Durban",
+        "say": "dur-BAHN",
+        "toGuest": "Domaine de Durban is the Beaumes-de-Venise estate behind our ripe, soft Southern Rhône red."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Châteaumar",
+        "say": "shah-toh-MAR",
+        "toGuest": "Domaine de Châteaumar makes the Cuvée Vincent Côtes du Rhône poured with the filet at breakfast: old vine Syrah from beside Châteauneuf-du-Pape, juicy and soft."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-3; gap-pron-7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Moulin d'Issan",
+        "say": "moo-LAN dee-SAHN",
+        "toGuest": "Moulin d'Issan is the Bordeaux from the Château d'Issan team in Margaux, Merlot led with Cabernet, cassis and cedar for the steak."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-5; gap-pron-7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Inglenook Rubicon",
+        "say": "As it reads: Inglenook Rubicon.",
+        "toGuest": "Rubicon is Inglenook's flagship Napa Cabernet from Rutherford; our 2010 has sixteen years of age, powerful but silky, $70 the glass."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-8; pdf p45"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Paul Hobbs",
+        "say": "As it reads: Paul Hobbs.",
+        "toGuest": "Paul Hobbs is the Napa winemaker whose Coombsville Cabernet is poured with the duck on the dinner tasting."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-8; pdf p45"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Coombsville",
+        "say": "KOOMZ-vil",
+        "toGuest": "Coombsville is one of Napa's cooler corners, near the town of Napa, so its Cabernet keeps its freshness."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-8; pdf p45"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Dr. Hermann",
+        "say": "HAIR-mahn",
+        "toGuest": "Dr. Hermann is the Mosel estate behind our sweet Erdener Prälat Auslese, the $80 half-bottle for dessert."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-8; pdf p46"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Erdener Prälat",
+        "say": "AIR-den-er PRAY-laht",
+        "toGuest": "Erdener Prälat is one of the Mosel's famous steep vineyards, the source of our Auslese."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-8; pdf p46"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Auslese",
+        "say": "OWS-lay-zuh",
+        "toGuest": "Auslese means selected harvest, a tier above late harvest Spätlese: sweet, honeyed Riesling with bright acidity."
+      },
+      "reason": "wine word",
+      "source": "pdf-corrections p46"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "La Tour Vieille",
+        "say": "lah TOOR vee-AY",
+        "toGuest": "La Tour Vieille is the Banyuls estate whose Reserva, fig, caramel and coffee, is the dessert pour on the dinner tasting."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-7; pdf p46"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Banyuls",
+        "say": "bahn-YOOLS",
+        "toGuest": "Banyuls is a sweet fortified red from the schist terraces of Roussillon, at least half Grenache, the classic with chocolate."
+      },
+      "reason": "wine name",
+      "source": "gap-pron-6; somm-reds-29"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Coravin",
+        "say": "KOR-uh-vin",
+        "toGuest": "Coravin lets us pour a single glass and keep the bottle fresh: a needle through the cork for the Leflaive, a sparkling stopper on the opened bottle for the Rare."
+      },
+      "reason": "wine word said nightly",
+      "source": "pdf p41, p43; pdf-corrections p41"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Extra Brut",
+        "say": "As it reads: Extra Brut.",
+        "toGuest": "Extra Brut means under six grams of sugar a litre, very dry; our house Champagne is one."
+      },
+      "reason": "wine word",
+      "source": "pdf-corrections p41"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Creekstone Farms",
+        "say": "As it reads: Creekstone.",
+        "toGuest": "Creekstone Farms is Black Angus beef from a Kansas producer; the breakfast hanger is USDA Prime."
+      },
+      "reason": "producer line for a name printed on the menu; whether Creekstone holds a Certified Humane label is unverified (gap-fill-7: do not print it), so the line keeps to Black Angus, Kansas and the Prime grade",
+      "source": "dossier-the-kitchen section 11; gap-sourcing-8; gap-fill-7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Vital Farms",
+        "say": "As it reads: Vital Farms.",
+        "toGuest": "Vital Farms is pasture raised eggs; every hen gets over a hundred square feet of grass."
+      },
+      "reason": "producer line",
+      "source": "dossier-the-kitchen section 11"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Rohan duck",
+        "say": "ROH-han",
+        "toGuest": "Rohan is a special cross bred for the D'Artagnan company and raised in New York's Hudson Valley for tender, rosy meat."
+      },
+      "reason": "producer line; corrects the guide's 'breed'",
+      "source": "gap-sourcing-8; pdf-corrections p7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "D'Artagnan",
+        "say": "As it reads: D'Artagnan (no research respelling; ask the kitchen)",
+        "toGuest": "D'Artagnan is the New York purveyor that raises the Rohan duck; do not volunteer the name unless asked."
+      },
+      "reason": "producer line",
+      "source": "gap-sourcing-8; dossier-the-kitchen section 11"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Two Brooks Farm",
+        "say": "As it reads: Two Brooks.",
+        "toGuest": "Rice grits are the broken grains from Two Brooks Farm at Sumner in the Mississippi Delta, a family rice farm since 1992; not Louisiana."
+      },
+      "reason": "forThePack",
+      "source": "gap-sourcing-7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Tien Dat",
+        "say": "ask the kitchen",
+        "toGuest": "The tofu is made across the river by Tien Dat, a Vietnamese family co-op, pressed fresh every week."
+      },
+      "reason": "forThePack",
+      "source": "gap-sourcing-1; gap-sourcing-2"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Leidenheimer",
+        "say": "LY-den-hy-mer",
+        "toGuest": "The Caesar's crisps are made from Leidenheimer, the po-boy bread of New Orleans since 1896."
+      },
+      "reason": "producer line",
+      "source": "dossier-the-kitchen section 11; gap-sourcing-8"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Nueske's",
+        "say": "NOO-skeez (contested, ask)",
+        "toGuest": "Nueske's is the Wisconsin bacon famous for real applewood smoke, since 1933; it is in the succotash."
+      },
+      "reason": "producer line",
+      "source": "dossier-the-kitchen section 11; gap-sourcing-8"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Abita Amber",
+        "say": "uh-BEE-tuh",
+        "toGuest": "Abita Amber is the Louisiana lager from Abita Springs, brewed since 1986; it goes into the Mimolette fondue on the shells and cheese."
+      },
+      "reason": "producer line",
+      "source": "dossier-the-kitchen section 11; gap-sourcing-8"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Tullamore D.E.W.",
+        "say": "TULL-uh-more DEW",
+        "toGuest": "Tullamore D.E.W. is the Irish whiskey in our Irish Coffee; the initials are the founder's, Daniel E. Williams."
+      },
+      "reason": "producer line",
+      "source": "pdf-corrections p39 (low)"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Don Q",
+        "say": "DON KYOO",
+        "toGuest": "Don Q is a Puerto Rican rum house; the menu lists its Blender's Reserve as a Brennan's selection in the Dulce de Leche."
+      },
+      "reason": "producer line",
+      "source": "gap-sourcing-5; gap5-b04"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Seedlip",
+        "say": "SEED-lip",
+        "toGuest": "Seedlip is a British non-alcoholic spirit; Grove 42 is its citrus one, at 0.0 per cent, in the Catalina Island."
+      },
+      "reason": "producer line",
+      "source": "bar-signature-30"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Lyre's",
+        "say": "LY-erz",
+        "toGuest": "Lyre's is an Australian non-alcoholic spirit, labelled under 0.5 per cent alcohol; its agave is in the Black Hills."
+      },
+      "reason": "producer line",
+      "source": "bar-signature-30; gap5-b07"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Grand Isle Jewel",
+        "say": "As it reads: Grand Isle Jewel.",
+        "toGuest": "Grand Isle Jewels are oysters farmed in floating cages off Grand Isle, a brand launched in 2025 by the island's growers; the menu's singular Jewel is the plural brand."
+      },
+      "reason": "forThePack",
+      "source": "gap-sourcing-3; chef-dishes-a-2"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Maggie's Mushrooms",
+        "say": "As it reads: Maggie's.",
+        "toGuest": "Our mushroom side; the kitchen says which mushrooms and how they are cooked tonight."
+      },
+      "reason": "The farm is named only after the chef confirms",
+      "source": "gap-sourcing-4"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Congregation Coffee",
+        "say": "As it reads: Congregation.",
+        "toGuest": "Congregation Coffee roasts in Algiers, across the river; read tonight's single origin from the coffee card rather than naming it from memory."
+      },
+      "reason": "forThePack",
+      "source": "gap-sourcing-6"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Chicory",
+        "say": "CHICK-uh-ree",
+        "toGuest": "Chicory is a roasted root blended into coffee the New Orleans way, roasty and almost chocolatey."
+      },
+      "reason": "duplicate guard: the guide's term is kept; this entry is skipped by the builder if the term exists",
+      "source": "pdf p50"
+    },
+    {
+      "target": "scenario:Foster for one",
+      "field": "you",
+      "op": "append",
+      "value": "And the Dulce de Leche is the Foster in a glass.",
+      "reason": "The dossier's correction: a fallback with the same flavours",
+      "source": "dossier-the-floor section 8; pdf-corrections p47"
+    },
+    {
+      "target": "scenario:Foster for one",
+      "field": "principle",
+      "op": "append",
+      "value": "Confirm at lineup whether a single Cherries Jubilee is possible before offering it, so you are not promising twice.",
+      "reason": "same",
+      "source": "pdf-corrections p47 (medium)"
+    },
+    {
+      "target": "scenario:No alcohol",
+      "field": "you",
+      "op": "replace",
+      "value": {
+        "from": "Most of it burns off, but not all of it, so I wouldn’t",
+        "to": "Some of it burns off, but most of it stays, so I wouldn’t"
+      },
+      "reason": "About three quarters of the alcohol remains after a flame",
+      "source": "pdf-corrections p47 (high); dossier-the-floor section 3 item 6"
+    },
+    {
+      "target": "scenario:Vegetarian at dinner",
+      "field": "you",
+      "value": "The Creole Tomato Tostada to start, then the Blackened Tofu, it’s local Tien Dat tofu with rice grits and shiitakes, and the Smoked Cauliflower on the side. Let me confirm with the kitchen about butter and stocks. At breakfast: Eggs Sardou or the Framboise French Toast, with the same check.",
+      "reason": "The guide's line continues after its closing quote; the breakfast tail is folded in as one line",
+      "source": "pdf p47"
+    },
+    {
+      "target": "scenario:Shellfish allergy",
+      "field": "guest",
+      "value": "I’m allergic to shellfish.",
+      "reason": "The guest's word stays in the guest line",
+      "source": "pdf p47"
+    },
+    {
+      "target": "scenario:Shellfish allergy",
+      "field": "you",
+      "value": "Thank you for telling me. I’m writing it on the ticket and the chef will go through your choices with me. Where the menu lists shellfish: on both menus, the gumbo and the Creole Caesar’s smoked oyster dressing; at breakfast and lunch, the Louisiana Oysters, the Pecan Gulf Fish with crab, the Crab & Corn Omelette and the Shrimp & Grits; at dinner, the Grand Isle Jewel Oysters, the Louisiana Crab Claws, the Gulf Fish en Papillote with crab, and the Louisiana BBQ Lobster on the tasting. Give me two minutes and I’ll come back with what the chef is happy to send.",
+      "reason": "Rewritten per the plan: names every dish the menu lists with shellfish, on both menus, at breakfast and lunch and at dinner (the guide's script left out the Louisiana Oysters and the Shrimp & Grits, and a first draft left out the four dinner plates), and ends by deferring to the kitchen instead of clearing two dishes itself",
+      "source": "pdf-corrections p47 (high); dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:Shellfish allergy",
+      "field": "principle",
+      "value": "Name what the menu prints, never what is probably fine; the kitchen clears the dish, not you; flag the ticket and tell the captain.",
+      "reason": "same",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:Celebration",
+      "field": "you",
+      "op": "replace",
+      "value": {
+        "fromRe": "Rare Brut 2012, opened with a Coravin \\S at \\$75",
+        "to": "Rare, kept fresh under a Coravin stopper, at $75"
+      },
+      "reason": "The vintage is disputed and the cork has been pulled on a sparkling Coravin pour",
+      "source": "pdf-corrections p41; dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:Celebration",
+      "field": "principle",
+      "op": "append",
+      "value": "Check the vintage and the sabering schedule before you say either.",
+      "reason": "same",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Shellfish and nuts at one table",
+        "guest": "My husband is allergic to shellfish and I’m allergic to tree nuts.",
+        "you": "Thank you both. It goes on the ticket and the chef walks through your choices with me before I promise anything. The menu lists shellfish in the gumbo, the Caesar dressing, the oysters, the crab dishes and the shrimp; and nuts in the pecan fish, the omelette, the papillote, the duck and the coffee cake. Two minutes with the kitchen.",
+        "principle": "Name what is printed, let the kitchen give the final answer, flag the ticket, tell the captain."
+      },
+      "reason": "addition; the guest's words carry the word allergic, the you line names what the menu prints and defers",
+      "source": "dossier-the-floor section 8, twenty-one more"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Pregnant guest and raw oysters",
+        "guest": "I’m pregnant. Are the oysters OK?",
+        "you": "The Grand Isle oysters are served raw, and the menu carries the advisory that raw shellfish carries a risk, especially in pregnancy. I can’t advise you medically, so that’s your call. For the same brininess cooked, the Crab Claws come warm in brown butter, and at breakfast the Louisiana Oysters are cooked in BBQ sauce.",
+        "principle": "State the advisory, never decide for the guest, never moralise, have a cooked alternative ready."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Vegan at breakfast",
+        "guest": "I’m vegan. What can I have?",
+        "you": "Honestly, our breakfast is built on eggs and butter, so I won’t guess. The chef can usually build something and I’d rather ask her than improvise. Grits, Brabant potatoes and the fruit starters are where she usually starts, and every one needs a question about butter or dairy.",
+        "principle": "Honesty, then the kitchen, never a guessed plate."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Gluten",
+        "guest": "I avoid gluten.",
+        "you": "The obvious ones are the English muffins, the biscuit, the French toast and the bread pudding. Where it hides I won’t guess: the soups may be roux based, the artichokes and the grit cake are fried, and the fryer and the blackening spice need a question. Let me have the kitchen go through it with me.",
+        "principle": "Separate the obvious from the hidden; send the hidden to the kitchen."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "A child at the table",
+        "guest": "Anything for a six-year-old?",
+        "you": "We have a children’s menu, I’ll bring it over. From ours, the cheddar grits, an egg any style, bacon and the French toast are the favourites. When the Bananas Foster is lit she’ll love it from her seat; we keep little ones back from the cart.",
+        "principle": "Child’s order in first and out fast; cart distance; make the flame a treat. Carry the real card; the children’s menu is not in the guide."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8; gap-kids-9"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Creole versus Cajun",
+        "guest": "What’s the difference between Creole and Cajun?",
+        "you": "Creole is New Orleans city cooking: French and Spanish at the root, African and Caribbean hands in it, more butter, cream and tomato, more sauces. Cajun is the country cooking of Acadiana, from the Acadian exiles, one pot, dark roux, rustic and spicier. Brennan’s is Creole. You’ll hear me say Cajun for a few ingredients, like the tasso in the shrimp and grits.",
+        "principle": "Two sentences, then back to the menu."
+      },
+      "reason": "addition (expert definitions; the guide says only French-Creole)",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "The tourist who wants the one thing",
+        "guest": "We’re here once. What do we order?",
+        "you": "At breakfast, the Traditional Breakfast at $80 is the whole story: milk punch, baked apple, turtle soup or gumbo with a Bloody Bull, Eggs Hussarde, a petite filet, and Bananas Foster at the table, drinks included. À la carte, it’s the Turtle Soup, the Eggs Hussarde and the Bananas Foster for two.",
+        "principle": "One clear answer, then a shorter one."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Bananas Foster alone, at dinner",
+        "guest": "I’m dining alone and I came for the Bananas Foster.",
+        "you": "You came to the right place. It’s made in one pan for two, so the order is for two; that’s the pan, not a rule about company. If you’d like the full flame for one, I’ll ask whether we can do a single Cherries Jubilee tonight, and the Dulce de Leche is the Foster in a glass.",
+        "principle": "The reason, the same theatre, check before promising, a small consolation."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "A cheaper bottle for the Chateaubriand",
+        "guest": "Seventy dollars a glass is more than we want to spend.",
+        "you": "Absolutely. The Moulin d’Issan Bordeaux at $16 has the cassis and cedar for the beef, and the Durban Southern Rhône at $18 is riper and softer. For a bottle, let me bring our sommelier with the list; tell her roughly where you’d like to land and she’ll find the best value there.",
+        "principle": "Two prices from the list, then the list and the sommelier; never a bottle price from memory; the guest names the budget privately."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "In a hurry before a tour",
+        "guest": "We have a swamp tour at one. Can we be out in forty-five minutes?",
+        "you": "Yes, if we order now and I put the whole table in at once. I’d steer you to the egg dishes and the soup rather than the Chateaubriand or the flambé today, and I’ll bring the check with your last course.",
+        "principle": "Ask the clock, set the pace, tell the kitchen, bring the check early."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "A birthday",
+        "guest": "It’s my mother’s birthday.",
+        "you": "Happy birthday to her. A little fuss, or something quieter? I can pour her a glass of the Rare Champagne to start, and the Bananas Foster is made at the table for the two of you, which is the best candle we have.",
+        "principle": "Loud or quiet first; note it on the ticket."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Turtle soup too rich",
+        "guest": "This is too rich for me.",
+        "you": "I’m sorry, that’s on me for not saying how rich it is. Let me take it away. The gumbo is lighter and brinier, or the Creole Caesar if you’d like something crisp. Either is on me to swap.",
+        "principle": "The five A’s: awareness, acknowledgement, apology, action, additional generosity (Danny Meyer, Setting the Table, 2006). Tell the manager so the comp is recorded."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "A wine sent back",
+        "guest": "This doesn’t taste right.",
+        "you": "Thank you for saying so. I’ll take it away and bring a fresh glass, or something different if you’d prefer. Shall I bring our sommelier to taste it with you?",
+        "principle": "Never debate a send back; tell the sommelier so a faulty by the glass bottle is pulled before it reaches another table."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "A Sazerac on the rocks",
+        "guest": "Sazerac on the rocks, please.",
+        "you": "Of course. The classic here is served without ice in a chilled glass rinsed with Herbsaint, so it stays spirit forward; over ice it softens as it sits. Let me ask the bar to build it on a large cube for you.",
+        "principle": "Say the classic once, then make the guest’s drink the guest’s way. The over ice build is expert knowledge, not the guide’s; the guide tells you to confirm the bar’s build, so ask."
+      },
+      "reason": "addition; carries the Sazerac on the rocks confirm flag",
+      "source": "dossier-the-floor section 8; floor-service-19"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Ketchup with the Brabant potatoes",
+        "guest": "Could I get some ketchup for the potatoes?",
+        "you": "Of course, right away.",
+        "principle": "A ramekin, without a flicker."
+      },
+      "reason": "addition; the guest line is written from the dossier's title",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Is the tofu vegan?",
+        "guest": "Is the Blackened Tofu vegan?",
+        "you": "Good question, and I’d rather check than guess. Blackening is traditionally done with butter, and I want to confirm the rice grits are cooked without stock. One moment with the kitchen.",
+        "principle": "The guide flags exactly these two questions; defer every time."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "What is Blender’s Reserve?",
+        "guest": "What’s Brennan’s Blender’s Reserve rum?",
+        "you": "Don Q is a Puerto Rican rum house, and the menu lists that rum as a Brennan’s reserve blend. I don’t want to tell you the story wrong, so let me ask our bar manager how it was chosen.",
+        "principle": "Say what the menu prints, nothing more, until lineup confirms."
+      },
+      "reason": "addition; carries the Dulce de Leche confirm flag",
+      "source": "dossier-the-floor section 8; gap-sourcing-5"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Is Eggs Owen for Owen Brennan?",
+        "guest": "Is Eggs Owen named after Owen Brennan?",
+        "you": "Owen Brennan founded the restaurant in 1946, so it’s a fair guess, but the menu doesn’t say and I’d rather not invent it. What I can tell you is the plate: short rib braised in red wine, a Creole spiced potato and a soft boiled egg with both sauces.",
+        "principle": "Never an unconfirmed house story; pivot to the plate."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8; chef-dishes-b-6"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Dress code for tonight",
+        "guest": "My son only has shorts with him.",
+        "you": "Our dinner code is dressy casual, jackets preferred, and we ask guests to avoid athletic or cut-off shorts, sleeveless or decal T-shirts, hats and open-toed shoes for men. Let me ask the manager what’s workable tonight so there’s no surprise at the door.",
+        "principle": "Say the code, hand enforcement to the host stand."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8; gap-kids-10"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "One tasting, one à la carte",
+        "guest": "I’ll do the tasting menu and she’ll order à la carte. Does that work?",
+        "you": "Let me check with the kitchen on tonight’s pacing; a tasting runs five courses and I want your plates to land with them. The Chateaubriand isn’t ideal for a split table because it’s for two.",
+        "principle": "Pacing is a kitchen question; protect both guests from waiting."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Is the gumbo hot?",
+        "guest": "Is the gumbo spicy?",
+        "you": "Mild to moderate: smoky andouille and a gentle warmth, not heat. I can bring hot sauce, or if you’re spice shy the turtle soup has none.",
+        "principle": "The guide’s spice words, and both directions."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "The sabering",
+        "guest": "You cut Champagne open with a sword?",
+        "you": "We do, in the courtyard, during Bubbles at Brennan’s; the guide says Fridays at 5. It’s a bar team ritual, so be in the courtyard a few minutes early. Rosé bottles run from $50 to $125 and there are bar snacks out there.",
+        "principle": "Time, place and price range; never promise who sabers or that it happens every week without confirming."
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8; gap-floor-9"
+    },
+    {
+      "target": "mixup:+",
+      "op": "add",
+      "value": {
+        "a": "Louisiana Oysters",
+        "b": "Grand Isle Jewel Oysters",
+        "difference": "The Louisiana Oysters are the breakfast and lunch starter, $19, cooked in the buttery New Orleans BBQ sauce with pickled collards and a saltine crumble. The Grand Isle Jewel Oysters are the dinner starter, $22, served raw and cold with a preserved Fresno chili mignonette and the raw advisory.",
+        "ask": "Cooked and buttery, or raw and cold?"
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8, dishes guests mix up"
+    },
+    {
+      "target": "mixup:+",
+      "op": "add",
+      "value": {
+        "a": "Pecan Gulf Fish",
+        "b": "Gulf Fish en Papillote",
+        "difference": "The Pecan Gulf Fish is the breakfast and lunch entrée, $31, with lump crab, pecan bordelaise, cauliflower purée and collards. The Gulf Fish en Papillote is the dinner entrée, $38, steamed in a banana leaf with crab, Castelvetrano olives, tomato, sorghum and Marcona almonds.",
+        "ask": "A rich pecan butter sauce, or the lighter banana leaf parcel with olives and tomato?"
+      },
+      "reason": "addition; the dossier's allergen clause is left out of her line",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "mixup:+",
+      "op": "add",
+      "value": {
+        "a": "Brandy Milk Punch",
+        "b": "Dulce de Leche",
+        "difference": "The Brandy Milk Punch, $12, is the breakfast eye opener: brandy, cream, vanilla bean and nutmeg, cold and creamy. The Dulce de Leche, $14, is the dessert cocktail: Don Q rum, crème de cacao, banana rum butter sauce and cream, the Foster in a glass.",
+        "ask": "To start the morning, or to finish the meal?"
+      },
+      "reason": "addition",
+      "source": "dossier-the-floor section 8"
+    },
+    {
+      "target": "mustknow:Bananas Foster",
+      "field": "body",
+      "op": "replace",
+      "value": {
+        "from": "Owen Brennan challenged chef Paul Blangé to create a banana dessert",
+        "to": "Owen Brennan challenged his sister Ella and chef Paul Blangé to create a banana dessert (the house's own page and Ralph Brennan credit Ella with Blangé; the commission is also called the Metropolitan Crime Commission)"
+      },
+      "reason": "Ella Brennan credited; both names of the commission",
+      "source": "pdf-corrections p49 and p33; gap-recipes-2"
+    },
+    {
+      "target": "mustknow:Bananas Foster",
+      "field": "body",
+      "op": "replace",
+      "value": {
+        "from": " The restaurant calls it the most-ordered item on the menu.",
+        "to": ""
+      },
+      "reason": "Could not be verified; moved to askAtLineup",
+      "source": "pdf-corrections p49 (low)"
+    },
+    {
+      "target": "mustknow:Wine program",
+      "field": "body",
+      "op": "replace",
+      "value": {
+        "from": "Wine Spectator Grand Award cellar, strong in Burgundy and Champagne.",
+        "to": "Brennan's first won the Wine Spectator Grand Award in 1983, lost the cellar to Katrina in 2005 when a month without power cooked about 35,000 bottles, and won it back in 2021 after rebuilding to more than 15,000 bottles, with Burgundy and Champagne the deep end of the list; the Wine Spectator listing shows about 3,600 selections and more than 19,000 bottles, deepest in Burgundy, Bordeaux and California. Confirm the award years from the listing at lineup."
+      },
+      "reason": "forThePack; the award years are also a confirm item",
+      "source": "somm-program-2; gap-wine-1; gap-wine-2; pdf-corrections p49"
+    },
+    {
+      "target": "mustknow:Eye openers & coffee",
+      "field": "body",
+      "op": "append",
+      "value": "Congregation roasts in Algiers; read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
+      "reason": "forThePack",
+      "source": "gap-sourcing-6"
+    },
+    {
+      "target": "mustknow:Bubbles at Brennan’s",
+      "field": "body",
+      "op": "append",
+      "value": "The hours are dated 26 September 2026 and disputed (an older guest description gives Tuesday to Friday 2 to 7): confirm on shift. Sabering has been advertised weekly for about a decade; confirm each Friday with the host stand, and check the courtyard is not privately booked before promising it. Mirabelle is Schramsberg's California sparkling rosé, so say sparkling rosé for the bottom of that range and keep the word Champagne for the Pommery.",
+      "reason": "forThePack and the hours dispute",
+      "source": "pdf-corrections p49 (Bubbles); gap-floor-9; pdf-factcheck-6; dossier-the-cellar section 1"
+    },
+    {
+      "target": "mustknow:Spirit-free",
+      "field": "body",
+      "op": "append",
+      "value": "Seedlip Grove 42 is 0.0 per cent alcohol; Lyre's is labelled under 0.5 per cent, so call the Black Hills non-alcoholic, not zero.",
+      "reason": "forThePack",
+      "source": "bar-signature-30"
+    },
+    {
+      "target": "mustknow:Dress code & dietary",
+      "field": "body",
+      "op": "replace",
+      "value": {
+        "fromRe": " The kitchen can accommodate most allergies and restrictions \\S ask guests to note them at the reservation, and always confirm with the kitchen\\.",
+        "to": ""
+      },
+      "reason": "same",
+      "source": "pdf p50"
+    },
+    {
+      "target": "mustknow:Dress code & dietary",
+      "field": "title",
+      "value": "Dress code",
+      "reason": "The dietary sentence moves to its own must-know, phrased without the word the validator refuses in a line of hers",
+      "source": "pdf p50"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Dietary needs: guests note them at the reservation, and the kitchen always confirms",
+        "body": "The kitchen can accommodate most restrictions. Ask guests to note them at the reservation, write them on the ticket, and let the kitchen clear every choice: the kitchen, not the server, says what a dish can do."
+      },
+      "reason": "The guide's p50 sentence, carried without the word the validator's allergen-talk rule refuses",
+      "source": "pdf p50"
+    },
+    {
+      "target": "mustknow:80th anniversary",
+      "field": "body",
+      "op": "append",
+      "value": "Owen Brennan died in 1955; the family opened Royal Street in 1956. Brennan's closed in 2013 and reopened in November 2014 under Ralph Brennan and Terry White.",
+      "reason": "The guide implies continuity",
+      "source": "pdf-corrections p50 (medium); dossier-the-floor section 3"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "The chefs",
+        "body": "Paul Blangé, the chef behind Bananas Foster, led the kitchen until the 1970s. Michael Roussel, who started here in 1956 and trained under Blangé, became executive chef in 1974 and retired in 2005 after 49 years. Lazone Randolph, who began as a dishwasher in 1965, succeeded him in 2005 and gave his name to Chicken Lazone. Slade Rushing ran the kitchen from the 2014 reopening to 2019 and Ryan Hacker from late 2019 to spring 2025. Our executive chef is Kris Padalino, who took over in June 2025 after eight years in this kitchen as pastry chef and executive sous chef; she trained at Le Cordon Bleu in Pasadena and cooked in Los Angeles and Denver before New Orleans."
+      },
+      "reason": "forThePack",
+      "source": "chef-history-15; chef-dishes-a-23; pdf-factcheck-4"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "The building and the family",
+        "body": "1795: it was Louisiana's first bank, then the home of Paul Morphy, the chess champion; look for the bank's initials in the balcony ironwork. Owen Brennan opened on Bourbon Street in July 1946 and the house moved here in 1956, after Owen's death in November 1955, with Ella Brennan finding the backing. The family split in November 1973, settled in 1974: Owen's side kept Royal Street, Ella's side took Commander's Palace; Brennan's of Houston belongs to Ella's side, so a guest who ate at Brennan's in Houston ate at a cousin. The house closed on 28 June 2013 and reopened on 25 November 2014 under Ralph Brennan and Terry White after seventeen months of restoration."
+      },
+      "reason": "widened must-knows from the research",
+      "source": "dossier-the-kitchen section 1; dossier-the-floor section 3"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "The courtyard turtles",
+        "body": "Ten turtles were found living in the courtyard during the 2014 renovation and adopted; Slade Rushing named them for sauces: Béchamel, Hollandaise, Espagnole, Tomate and Velouté, then Rémoulade, Ravigote, Bordelaise, Mignonette and Cocktail, the only male. Their return to the fountain in 2015 began the annual Slowest Second Line on Earth. Say it before the guest asks: the turtle soup is not the turtles."
+      },
+      "reason": "widened must-knows",
+      "source": "dossier-the-kitchen section 1 (house press release; Axios New Orleans 1 May 2026)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "The by-the-glass list",
+        "body": "Our by-the-glass list runs to twenty wines: thirteen glass pours from $14 to $75, an $80 half-bottle of Mosel Auslese for dessert, and six wines poured only as part of the tasting menus. If a guest wants one of the tasting wines on its own, ask before promising it. Check the list you are handed on shift: the website shows an older one."
+      },
+      "reason": "forThePack",
+      "source": "somm-program-4"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "The wine team",
+        "body": "Our wine director is Sam Bortugno, an Advanced Sommelier, in post since September 2023; confirm at lineup that he is on the floor tonight and how to call a sommelier to a table. Braithe Gill is beverage director for the Ralph Brennan Restaurant Group, a certified sommelier and a 2026 James Beard semifinalist; the research also recorded her as Braithe Tidwell, who led the programme when the Grand Award was regained in 2021, so do not call her the wine director."
+      },
+      "reason": "forThePack",
+      "source": "gap-wine-3; gap-wine-4; gap-roost-4"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "The Wine Room and private events",
+        "body": "The Wine Room is our smallest private room, seating 16, in the old carriage house and stables beside the cellar, with a sixteen foot table milled from one sinker cypress; bookings go through the events office on 504-934-3376, with a minimum that depends on the date. Nine bookable spaces, seated and reception: King's 36 and 40, Queen's 24 and 30, Havana 60 and 75, Morphy 12 and 12, Chanteclair 100 and 160, Roost Bar 20 and 30, Audubon 50 and 60, Wine Room 16 and 16, Courtyard 50 and 75; events from 15 to 500. For private parties, corkage is $25 a bottle, a magnum $50 counting as two, six bottles at most; the dining room policy is not published, ask a manager."
+      },
+      "reason": "forThePack",
+      "source": "gap-wine-5; gap-wine-6; gap-floor-4"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Reservations",
+        "body": "Reservations are on OpenTable, open 60 days ahead; parties larger than six ring 504-525-9711."
+      },
+      "reason": "forThePack",
+      "source": "gap-floor-3"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Parking and the street",
+        "body": "Royal Street is a pedestrian mall from 11 in the morning, so there is no drop off at the door at lunch; the street is open to cars when breakfast opens and all evening. We validate parking at two garages, 535 Chartres and 716 Iberville, for up to three hours; check the current rates and whether valet is on tonight with the host stand, since the two readings of the FAQ disagree on valet."
+      },
+      "reason": "forThePack",
+      "source": "floor-service-16; gap-floor-5"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Holidays",
+        "body": "Christmas Eve: breakfast and lunch à la carte, dinner 5:30 to 9 with a three course $85 menu. New Year's Eve: breakfast and lunch à la carte, dinner 6 to 10 à la carte. The year is unconfirmed; re-read each season. Réveillon proper is advertised at the sister house Ralph's on the Park; Brennan's frames Christmas Eve as its holiday dinner."
+      },
+      "reason": "forThePack",
+      "source": "gap-floor-6; gap-floor-7"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "The Ralph Brennan Restaurant Group",
+        "body": "The group runs Brennan's, Napoleon House, Red Fish Grill, Ralph's on the Park, Cafe NOMA, Jazz Kitchen Coastal Grill and Patio, and Beignets Expressed."
+      },
+      "reason": "forThePack",
+      "source": "gap-floor-8"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Who does what on the floor",
+        "body": "Brennan's has captains; staff train for months before cooking Bananas Foster tableside, and a new server does not flame a pan before sign off. Erick Schmitt is general manager per the house's 2026 team directory; confirm the spelling on the page. Who performs the flambé, the Friday sabrage, the Chateaubriand carving, the papillote opening and the Coravin pours, and how the floor is organised, are lineup questions."
+      },
+      "reason": "forThePack",
+      "source": "gap-floor-1; gap-floor-2; critique"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "The children's menu",
+        "body": "For children ten and under, at breakfast and at dinner; the web card read 3 October 2026 prints every item at $25.00, confirm on the live card. Breakfast: Eggs Any Style with Toast and Bacon; Popcorn Shrimp with Brabant Potatoes; Vanilla French Toast with Fresh Berries and Whipped Cream; Grilled Cheese Sandwich with Brabant Potatoes, each with a kid's drink, sliced fresh fruit first and a scoop of vanilla ice cream after. Dinner: Fried Gulf Shrimp with French Fries; Buttered Noodles with Cheese; Sautéed Gulf Fish with Potato and Green Beans; Grilled Cheese Sandwich with French Fries, each with a kid's drink, a salami and cheese starter and vanilla ice cream; tell parents the starter is salami and cheese, not fruit. High chairs are available. The dress code states no exemption for children: say the house asks for dressy casual and leave enforcement to the host. The guide never mentions the card; it is a web fact."
+      },
+      "reason": "forThePack (the kids' menu the guide never read)",
+      "source": "gap-kids-1 to gap-kids-10"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "The Roost Bar and the cocktail list",
+        "body": "The themed list, 'Summer Vacations of 1946', read online 3 October 2026: Yellowstone $18 (Uncle Nearest 1884 whiskey, Peychaud's Aperitivo, honey and turmeric syrup, lemon), Miami Beach $14 (sparkling wine, local watermelon juice, citrus), Niagara Falls $15 (gin, Lillet Blanc, tomato water, lemon), Havana $17 (Appleton 12 rum, Sfumato Rabarbaro, brown sugar, lime, ginger beer), Acapulco $16 (Milagro Silver tequila, mezcal, melon and basil purée); the Catalina Island and the Black Hills sit under a Temperance heading on the same page. A fall change was expected and no search shows one, so say 'our current list', never 'our summer list', and confirm the list you are handed on shift. The Roost Bar's luxury cocktails, served only there: Flamingo $28 (Chopin vodka, Monkey 47 gin, dragonfruit, lemon, Taittinger La Française Champagne), Birdcage $31 (a smoked Old Fashioned on Rabbit Hole Dareringer bourbon, Angostura, orange, cherry) and Spoonbill $36 (Hendrick's gin, Cap Corse Mattei Blanc quinquina, chive oil, a spoon of caviar); measures, glass and garnish to confirm on shift. The printed bar menu is sectioned Sazerac project, featured cocktails and Brennan's classics, and is still unread."
+      },
+      "reason": "forThePack",
+      "source": "bar-list-12; gap-roost-1; gap-roost-2; gap-roost-5; gap-roost-7; gap-tasting-8; dossier-the-bar section 11"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Bananas Foster Day 2026",
+        "body": "On 6 April 2026 we threw a courtyard party for the dessert's 75th birthday: a Champagne sabering, free tastes for the first 75 guests, a flame competition and the crowning of a Banana King."
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-c-4"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Hours and the week",
+        "body": "Breakfast and lunch run 9 to 2 on weekdays and 8 to 2 at weekends, dinner is every night 6 to 10, and Bubbles at Brennan's happy hour is weekdays 2 to 6 in the Roost Bar and Courtyard, with Champagne sabered on Fridays at 5. Dress is dressy casual, jackets preferred at dinner, and no athletic shorts, sleeveless shirts, hats or open toed shoes for gentlemen. Dated 3 October 2026."
+      },
+      "reason": "forThePack",
+      "source": "pdf-factcheck-6"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Café Brûlot is a cake, not a drink, on today's menus",
+        "body": "The only Brûlot item is the Café Brûlot Coffee Cake. Café Brûlot Diabolique, the flamed brandy and chicory coffee, was devised at Antoine's by Jules Alciatore around 1890; the house served it in the family era and the cookbook carries a recipe, but it is on no current menu and only two things are flamed at the table, both desserts. Do not offer it as a drink until the house confirms it."
+      },
+      "reason": "widened must-knows",
+      "source": "dossier-the-bar section 12"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Champagne is poured with the Eggs Hussarde on the Traditional Breakfast today: Charles Lafitte Brut, as the guide prints, or Brennan's Essential by Piper-Heidsieck, as the house page has shown?",
+        "askWhom": "sommelier",
+        "items": [
+          "Eggs Hussarde"
+        ],
+        "blocksField": ""
+      },
+      "reason": "disputed",
+      "source": "gap-tasting-2; pdf-corrections p49"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the house Champagne $28 or $30 a glass today, and is the bottle a Brennan's labelled Piper-Heidsieck Essentiel or a bespoke blend? What is the dosage and disgorgement date?",
+        "askWhom": "sommelier",
+        "items": [
+          "Brennan’s Essential by Piper-Heidsieck Extra Brut NV"
+        ]
+      },
+      "reason": "the guide's own discrepancy",
+      "source": "pdf p41, p49; somm-whites-1"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Rare vintage is open under the Coravin Sparkling stopper: 2012, as the live list prints, or the 2013 Millésime on the restaurant's drinks page? And which device and log procedure does the bar use for it and for the Leflaive?",
+        "askWhom": "sommelier",
+        "items": [
+          "Rare Brut 2012 (Coravin)",
+          "Domaine Leflaive Mâcon-Verzé 2022 (Coravin)"
+        ]
+      },
+      "reason": "the guide's own discrepancy",
+      "source": "pdf p41, p49; pdf-corrections p41"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Taste the open Berres Riesling and record the label ABV: the importer's sheet says off-dry (20.7 g/l residual sugar, 11.5%). Print one answer; six pairings hinge on it.",
+        "askWhom": "sommelier",
+        "items": [
+          "C.H. Berres ‘Old Vines’ Riesling 2022",
+          "Seafood Gumbo",
+          "Duck Confit Waffle"
+        ]
+      },
+      "reason": "confirm on shift",
+      "source": "gap-pron-1; somm-pairings-3"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the Banyuls and the Jadot Beaune poured à la carte, at breakfast and at dinner, and at what price per 2 to 3 oz? If not, the coffee cake, the Cherries Jubilee and the Snickers are coffee only, and the Chateaubriand's second choice becomes the Moulin d'Issan.",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine La Tour Vieille Banyuls Reserva NV",
+          "Louis Jadot Beaune 1er Cru 2023",
+          "Café Brûlot Coffee Cake",
+          "Cherries Jubilee",
+          "The Snickers",
+          "Roasted Chateaubriand",
+          "Redfish Véronique"
+        ],
+        "blocksField": "pairing"
+      },
+      "reason": "a training guide must not teach a server to offer a wine the house may not sell by the glass; blocks the pairing until answered",
+      "source": "pdf-corrections p10, p24, p35; dossier-the-cellar section 4.1"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Can the Dr. Hermann Auslese be rung as a single 2 to 3 oz pour at a glass price, or only as the $80 half-bottle?",
+        "askWhom": "manager",
+        "items": [
+          "Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+          "Duck Confit Waffle"
+        ]
+      },
+      "reason": "forThePack",
+      "source": "somm-pairings-11"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which duck plate is on the dinner tasting tonight: the roasted Rohan breast with cane syrup glazed peaches and candied hazelnuts (guide, 26 September) or the hazelnut crusted dry aged Rohan with sweet potato purée, winter squash and sage (house page)? What temperature does the kitchen serve it?",
+        "askWhom": "chef",
+        "items": [
+          "Roasted Rohan Duck Breast"
+        ],
+        "blocksField": "lines"
+      },
+      "reason": "disputed; blocks the timed lines until answered",
+      "source": "chef-dishes-a-6; gap-tasting-6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which white is poured with the lobster on the dinner tasting tonight: Fichet Mâcon-Igé 2024 (guide) or Domaine Matrot Meursault 2023 (house page)? And the redfish pour, Jadot Beaune 1er Cru 2023 or Beaune Bressandes 2022, and the dessert pour, La Tour Vieille or M. Chapoutier Banyuls?",
+        "askWhom": "sommelier",
+        "items": [
+          "Louisiana BBQ Lobster",
+          "Redfish Véronique",
+          "The Snickers"
+        ],
+        "blocksField": "pairing"
+      },
+      "reason": "disputed; blocks the pairing until answered",
+      "source": "chef-dishes-a-7; gap-tasting-7"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the $80 dinner tasting and the $120 pairing supplement correct as printed? May a guest swap included pours for the spirit-free drinks at no charge, or decline a pour and reduce the price?",
+        "askWhom": "manager",
+        "items": []
+      },
+      "reason": "confirm on shift",
+      "source": "pdf-corrections p49 (low); gap-tasting-3; dossier-the-cellar section 6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Bubbles at Brennan's: are the days and hours still Monday to Friday 2 to 6, who sabers on Fridays at 5, which bottle, and may guests take part?",
+        "askWhom": "manager",
+        "items": []
+      },
+      "reason": "disputed",
+      "source": "pdf-corrections p49; gap-floor-9"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who performs the tableside flambé (server, captain or a dedicated cart person), how long is the training, and is there a sign off before a new server lights a pan? Does the house still dust cinnamon into the flame?",
+        "askWhom": "manager",
+        "items": [
+          "World Famous Bananas Foster",
+          "Cherries Jubilee"
+        ]
+      },
+      "reason": "the guide leaves the performer unknown",
+      "source": "pdf-corrections p49; gap-floor-1; dossier-the-kitchen section 12"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the cart build for Bananas Foster use banana liqueur as well as rum, as the published recipe does, or rum only as the menu prints? Which rum?",
+        "askWhom": "chef",
+        "items": [
+          "World Famous Bananas Foster"
+        ]
+      },
+      "reason": "forThePack",
+      "source": "gap-recipes-1"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is Bananas Foster the most ordered item on the menu, as the guide said, and does the restaurant want servers to say so? The published figure elsewhere is about 35,000 pounds of bananas a year.",
+        "askWhom": "manager",
+        "items": [
+          "World Famous Bananas Foster"
+        ]
+      },
+      "reason": "unverified claim moved out of the must-know",
+      "source": "pdf-corrections p49 (low)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The house's preferred telling of the Bananas Foster origin: Owen challenging Blangé, or Ella and Blangé adapting their mother's dish? And which name for the commission?",
+        "askWhom": "manager",
+        "items": [
+          "World Famous Bananas Foster"
+        ]
+      },
+      "reason": "disputed",
+      "source": "open-questions; dossier-the-floor section 9 item 5"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is Brennan's Blender's Reserve Don Q rum: a private cask selected for Brennan's, a bespoke blend, or a label? Who chose it and when?",
+        "askWhom": "bar",
+        "items": [
+          "Dulce de Leche"
+        ],
+        "blocksField": "origin"
+      },
+      "reason": "the Dulce de Leche confirm flag",
+      "source": "gap-sourcing-5; pdf p40"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the house tell Eggs Hussarde as created here by Paul Blangé? Confirm the house wording before servers say 'created here'.",
+        "askWhom": "manager",
+        "items": [
+          "Eggs Hussarde"
+        ],
+        "blocksField": "origin"
+      },
+      "reason": "the Eggs Hussarde confirm flag",
+      "source": "pdf-corrections p17 (medium)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The Classic Sazerac build: sugar cube or syrup, dash count, lemon peel in or out, the glass, and whether the bar will build it on a large cube if a guest asks for it on the rocks.",
+        "askWhom": "bar",
+        "items": [
+          "Classic Sazerac"
+        ]
+      },
+      "reason": "the Sazerac on the rocks confirm flag",
+      "source": "floor-service-19; bar-signature-18; pdf-corrections p39"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Black Hills built on Lyre's Agave Blanco or Agave Reserva, and are the Catalina Island and the Black Hills permanent or part of the themed list? Which tonic?",
+        "askWhom": "bar",
+        "items": [
+          "Black Hills",
+          "Catalina Island"
+        ]
+      },
+      "reason": "forThePack",
+      "source": "bar-signature-30; dossier-the-bar section 11"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How is the marchand de vin built tonight: the house recipe with ham, mushroom and onion, or a plain shallot and red wine reduction? No house recipe page is published.",
+        "askWhom": "chef",
+        "items": [
+          "Eggs Hussarde",
+          "Eggs Owen"
+        ]
+      },
+      "reason": "forThePack; the pack says 'red wine and mushroom sauce' on the plan's instruction",
+      "source": "gap-recipes-6; pdf-corrections p2 and p17"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What exactly is in the New Orleans BBQ sauce on the Louisiana Oysters and the BBQ Lobster (Worcestershire, anchovy, smoked chili butter), how are the oysters cooked, and how many per order? Does the 'nduja carry real heat?",
+        "askWhom": "chef",
+        "items": [
+          "Louisiana Oysters",
+          "Louisiana BBQ Lobster"
+        ]
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-a-1; dossier-the-cellar section 6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the dining room turtle soup follow the published recipe (all turtle, thickened with flour, beef stock, finished with egg, spinach, lemon and sherry)? Is the sherry added in the kitchen or tableside? Who is the current turtle supplier?",
+        "askWhom": "chef",
+        "items": [
+          "Turtle Soup"
+        ]
+      },
+      "reason": "forThePack; the gluten question lives here, never in a line of hers",
+      "source": "gap-recipes-3; chef-dishes-a-5; chef-dishes-a-27"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the dining room gumbo follow the published recipe (a flour roux, okra, tomato, filé)? Is the seafood finished to order?",
+        "askWhom": "chef",
+        "items": [
+          "Seafood Gumbo"
+        ]
+      },
+      "reason": "forThePack; the roux question lives here",
+      "source": "gap-recipes-4; chef-dishes-a-10"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the published hollandaise (butter, egg yolks, lemon, Champagne vinegar, Crystal, cayenne, sea salt) the one served on the Hussarde and the Owen?",
+        "askWhom": "chef",
+        "items": [
+          "Eggs Hussarde",
+          "Eggs Owen"
+        ]
+      },
+      "reason": "forThePack",
+      "source": "gap-recipes-5"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the Eggs Sardou artichokes breaded in panko as the published recipe has them (two artichokes, two eggs, Parmesan creamed spinach), and is the breakfast creamed spinach side the same preparation?",
+        "askWhom": "chef",
+        "items": [
+          "Eggs Sardou",
+          "Creamed Spinach"
+        ]
+      },
+      "reason": "forThePack",
+      "source": "gap-recipes-8; pdf-corrections p31"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Brabant potatoes: how are they finished (garlic butter and parsley) and in which fryer? Which pronunciation does the floor use, bra-BAHN or bruh-BANT?",
+        "askWhom": "chef",
+        "items": [
+          "Brabant Potatoes"
+        ]
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-c-16; pdf-corrections p50"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is Maggie's Mushrooms sourced from Mushroom Maggie's Farm at St Francisville, and what are tonight's varieties and preparation (butter, stock)?",
+        "askWhom": "chef",
+        "items": [
+          "Maggie’s Mushrooms"
+        ],
+        "blocksField": "origin"
+      },
+      "reason": "forThePack",
+      "source": "gap-sourcing-4"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Luxardo product is in the Cherries Jubilee sauce and which spirit is flamed at the table? Can a single Cherries Jubilee be ordered?",
+        "askWhom": "chef",
+        "items": [
+          "Cherries Jubilee"
+        ]
+      },
+      "reason": "confirm on shift",
+      "source": "pdf-corrections p34, p47"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Blackened Tofu made with oil rather than butter, and do the rice grits use stock, so that it can be sold as vegan? Is the blackening blend cayenne based?",
+        "askWhom": "chef",
+        "items": [
+          "Blackened Tofu"
+        ]
+      },
+      "reason": "the guide's own question",
+      "source": "pdf p47; dossier-the-cellar section 6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is tonight's pecan bordelaise garlic butter or red wine based? It decides white versus Pinot on the Pecan Gulf Fish. What is today's Gulf fish?",
+        "askWhom": "chef",
+        "items": [
+          "Pecan Gulf Fish"
+        ]
+      },
+      "reason": "confirm on shift",
+      "source": "dossier-the-cellar section 6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Chateaubriand carved tableside or in the kitchen, and what cooking time should we quote? Is the papillote opened at the table, and by whom?",
+        "askWhom": "chef",
+        "items": [
+          "Roasted Chateaubriand",
+          "Gulf Fish en Papillote"
+        ]
+      },
+      "reason": "the rituals have no named performer",
+      "source": "critique; open-questions"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is Eggs Owen named for Owen Brennan, and does the house want servers to tell that story?",
+        "askWhom": "manager",
+        "items": [
+          "Eggs Owen"
+        ]
+      },
+      "reason": "forThePack",
+      "source": "chef-dishes-b-6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the Gainey Chardonnay read fresh rather than oaky, and which appellation and tier is on the bottle (Sta. Rita Hills or Santa Ynez Valley)? If fresh, the cellar dossier would lead with it on both crab dishes and keep the Leflaive as the step up.",
+        "askWhom": "sommelier",
+        "items": [
+          "Gainey Estate Vineyards Chardonnay 2023",
+          "Louisiana Crab Claws",
+          "Crab & Corn Omelette"
+        ]
+      },
+      "reason": "the second opinion's condition",
+      "source": "dossier-the-cellar section 4.1; pdf-corrections p43"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Loire appellation is on the Domaine Durand label, and who are the producer and importer of the Damien Martin Bourgogne? Is the Minuty still the 2024 and the Pazo das Bruxas the 2025?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Durand Sauvignon Blanc 2025",
+          "Damien Martin Bourgogne Pinot Noir 2023",
+          "Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+          "Pazo das Bruxas Albariño 2025"
+        ]
+      },
+      "reason": "confirm on shift",
+      "source": "pdf-corrections p42; dossier-the-cellar section 6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which vintage of the Châteaumar Cuvée Vincent is open for the breakfast tasting, and is it the Côtes du Rhône rather than the estate's Châteauneuf of the same name? What is the printed 2023 blend of the Moulin d'Issan and the 2024 blend of the Durban?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône",
+          "Moulin d’Issan Bordeaux Supérieur 2023",
+          "Domaine de Durban Beaumes-de-Venise Rouge 2024"
+        ]
+      },
+      "reason": "confirm on shift",
+      "source": "pdf-corrections p44, p45; gap-pron-5"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How is the Inglenook Rubicon 2010 preserved between $70 pours, how far ahead is it stood upright, and is it still the 2010? Is the Paul Hobbs the Coombsville appellation bottling and is it decanted at the start of service?",
+        "askWhom": "sommelier",
+        "items": [
+          "Inglenook ‘Rubicon’ 2010",
+          "Paul Hobbs Coombsville Cabernet Sauvignon 2021"
+        ]
+      },
+      "reason": "forThePack",
+      "source": "pdf-corrections p45; dossier-the-cellar section 6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Charles Lafitte cuvée is poured on the tastings, can it be poured à la carte, and at what price?",
+        "askWhom": "sommelier",
+        "items": [
+          "Charles Lafitte Brut Champagne NV"
+        ]
+      },
+      "reason": "the guide's own question on p42",
+      "source": "pdf p42; dossier-the-cellar section 6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Grand Award years does the Wine Spectator listing give (1983 to 2005, regained 2021), is the award current this year, and how many bottles and selections are in the cellar now?",
+        "askWhom": "sommelier",
+        "items": []
+      },
+      "reason": "the Grand Award years as a confirm item",
+      "source": "somm-program-2; gap-wine-1; pdf-corrections p49"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Where is the Wine Room and where are the bottles kept (the scripts said 'upstairs' and 'the cellar'), who is on the floor as sommelier tonight, and how does a server summon one?",
+        "askWhom": "manager",
+        "items": []
+      },
+      "reason": "forThePack",
+      "source": "pdf-corrections p24 and p48; gap-wine-3"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is valet offered, at which services and at what price, and are the two validated garages (535 Chartres and 716 Iberville) still current? Confirm the children's menu prices on the live card, and what the kid's drink is.",
+        "askWhom": "manager",
+        "items": []
+      },
+      "reason": "forThePack",
+      "source": "gap-floor-5; floor-service-16; gap-kids-2; gap-kids-8"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Has the glass list, the dinner menu or the cocktail list changed since 26 September 2026? The guide expected a fall change; the cocktails page snippet priced Bananas Foster at $12 against the guide's $14.",
+        "askWhom": "manager",
+        "items": [
+          "World Famous Bananas Foster"
+        ]
+      },
+      "reason": "forThePack",
+      "source": "gap-roost-6; gap-tasting-8; pdf p49"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Luxardo cherries, which whiskey in the bread pudding caramel, does the vanilla ice cream contain egg, is the Snickers Bavarian set with gelatin, and does the nougat ice cream carry nuts besides the peanuts? Kitchen questions for the dessert cards.",
+        "askWhom": "chef",
+        "items": [
+          "Cherries Jubilee",
+          "New Orleans Bread Pudding",
+          "The Snickers",
+          "World Famous Bananas Foster"
+        ]
+      },
+      "reason": "the open questions the kitchen dossier collected; the ingredient questions live here, never in a line of hers",
+      "source": "open-questions"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which pronunciations does the house use: hoo-SARD or hoo-ZARD for Hussarde, TAH-so or TASS-oh, bra-BAHN or bruh-BANT, and how does the kitchen say Tien Dat and Nueske's?",
+        "askWhom": "manager",
+        "items": [
+          "Eggs Hussarde",
+          "Brabant Potatoes",
+          "Blackened Tofu",
+          "Succotash"
+        ]
+      },
+      "reason": "pronunciation verdicts to spot check",
+      "source": "open-questions; dossier-the-kitchen section 13"
+    },
+    {
+      "target": "dispute:+",
+      "op": "add",
+      "value": {
+        "item": "Eggs Hussarde",
+        "field": "tasting pour",
+        "a": {
+          "text": "Charles Lafitte Brut, 4 oz",
+          "source": "the server guide, p49",
+          "date": "2026-09-26"
+        },
+        "b": {
+          "text": "Brennan's Essential by Piper-Heidsieck",
+          "source": "the house breakfast tasting page and OpenTable, as indexed",
+          "date": "2026-10-03"
+        }
+      },
+      "reason": "the Hussarde Champagne",
+      "source": "gap-tasting-2; pdf-corrections p49"
+    },
+    {
+      "target": "dispute:+",
+      "op": "add",
+      "value": {
+        "item": "Louisiana BBQ Lobster",
+        "field": "tasting pour",
+        "a": {
+          "text": "Fichet 'Chateau London' Macon-Ige 2024",
+          "source": "the server guide, p6 and p49",
+          "date": "2026-09-26"
+        },
+        "b": {
+          "text": "Domaine Matrot Meursault 2023",
+          "source": "the house dinner tasting page, as indexed",
+          "date": "2026-10-03"
+        }
+      },
+      "reason": "the lobster pour",
+      "source": "chef-dishes-a-7; gap-tasting-7"
+    },
+    {
+      "target": "dispute:+",
+      "op": "add",
+      "value": {
+        "item": "Roasted Rohan Duck Breast",
+        "field": "description",
+        "a": {
+          "text": "Roasted Rohan duck breast, cane syrup glazed peaches, candied hazelnuts",
+          "source": "the server guide, p6 to p7 and p49",
+          "date": "2026-09-26"
+        },
+        "b": {
+          "text": "Hazelnut crusted duck: 14 day dry aged Rohan, brown butter and sweet potato puree, local winter squash, sage, duck jus",
+          "source": "the house dinner tasting page, as indexed",
+          "date": "2026-10-03"
+        }
+      },
+      "reason": "the duck course",
+      "source": "chef-dishes-a-6; gap-tasting-6"
+    },
+    {
+      "target": "dispute:+",
+      "op": "add",
+      "value": {
+        "item": "Rare Brut 2012 (Coravin)",
+        "field": "vintage",
+        "a": {
+          "text": "2012",
+          "source": "the live Binwise list, via the server guide p41",
+          "date": "2026-09-26"
+        },
+        "b": {
+          "text": "2013 Rare Millesime",
+          "source": "the restaurant's own Cocktails & Wine by the Glass page",
+          "date": "2026-09-26"
+        }
+      },
+      "reason": "the Rare vintage",
+      "source": "pdf p41, p49; pdf-corrections p13 and p41"
+    },
+    {
+      "target": "dispute:+",
+      "op": "add",
+      "value": {
+        "item": "Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+        "field": "glass",
+        "a": {
+          "text": "$28",
+          "source": "the live Binwise list, via the server guide p41",
+          "date": "2026-09-26"
+        },
+        "b": {
+          "text": "$30",
+          "source": "the restaurant's own Cocktails & Wine by the Glass page",
+          "date": "2026-09-26"
+        }
+      },
+      "reason": "the house Champagne price",
+      "source": "pdf p41, p49"
+    },
+    {
+      "target": "dispute:+",
+      "op": "add",
+      "value": {
+        "item": "",
+        "field": "Bubbles at Brennan's hours",
+        "a": {
+          "text": "Monday to Friday 2 to 6, sabering Fridays at 5",
+          "source": "the server guide, p49",
+          "date": "2026-09-26"
+        },
+        "b": {
+          "text": "Tuesday to Friday 2 to 7",
+          "source": "an older guest description (Tripadvisor), undated",
+          "date": ""
+        }
+      },
+      "reason": "the Bubbles hours",
+      "source": "pdf-corrections p49 (low); dossier-the-floor section 9 item 2"
+    },
+    {
+      "target": "dispute:+",
+      "op": "add",
+      "value": {
+        "item": "World Famous Bananas Foster",
+        "field": "origin",
+        "a": {
+          "text": "Owen Brennan challenged chef Paul Blange; named for Richard Foster of the New Orleans Crime Commission",
+          "source": "the server guide, p33 and p49",
+          "date": "2026-09-26"
+        },
+        "b": {
+          "text": "Ella Brennan and Paul Blange created it together; the commission is also called the Metropolitan Crime Commission",
+          "source": "the house Traditions and recipe pages; Axios New Orleans 6 April 2026 quoting Ralph Brennan",
+          "date": "2026-10-03"
+        }
+      },
+      "reason": "the Foster credit",
+      "source": "pdf-corrections p33 and p49; dossier-the-floor section 9 items 4 and 5"
+    },
+    {
+      "target": "dish:Creole Caesar",
+      "field": "pairing.serve",
+      "op": "replace",
+      "value": {
+        "to": " Mention the smoked oyster dressing as you pour.",
+        "fromRe": " Mention the smoked-oyster dressing as you pour \\S it doubles as your shellfish-allergy check\\."
+      },
+      "reason": "The validator refuses allergen talk in a line of hers; the dressing is still named, and the service note (a person's words) keeps the check",
+      "source": "pdf p17; the engine's allergen-talk rule"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the Creole Caesar dressing contain raw egg or anchovy beside the smoked oysters, and are the oysters smoked in house?",
+        "askWhom": "chef",
+        "items": [
+          "Creole Caesar"
+        ]
+      },
+      "reason": "the guide's own service note question",
+      "source": "pdf p17; dossier-the-cellar section 6"
+    },
+    {
+      "target": "dish:Eggs Hussarde",
+      "field": "pairing.stepUp",
+      "op": "replace",
+      "value": {
+        "from": "Rare Brut 2012 on Coravin:",
+        "to": "Rare by the glass, from the bottle under the Coravin Sparkling stopper:"
+      },
+      "reason": "The vintage is disputed and the device is the sparkling stopper",
+      "source": "pdf-corrections p41 (Coravin), p13 and p41 (vintage)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which supplier provides the farm-raised Louisiana turtle for the Turtle Soup today? Confirm the current supplier with the kitchen before naming one to a guest.",
+        "askWhom": "chef",
+        "items": [
+          "Turtle Soup"
+        ]
+      },
+      "reason": "the research asks for the supplier to be confirmed before it is named",
+      "source": "verified-facts chef-dishes-a-5"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The children’s menu: is every item still one price at breakfast and at dinner, what is on it today, and are high chairs on hand? The page was never read for the pack; quote the live card and confirm the count with the host stand.",
+        "askWhom": "manager",
+        "items": []
+      },
+      "reason": "the kids’ menu was never read; its price and the high chairs are confirm items",
+      "source": "verified-facts gap-kids-2 and gap-kids-7"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The Roost Bar luxury cocktails (Flamingo, Birdcage, Spoonbill): the measures, glass and garnish for each, and whether the two premium Sazeracs (Thompson’s Dream and Origin Story) are rung under the Sazerac section or the luxury page.",
+        "askWhom": "bar",
+        "items": [
+          "Classic Sazerac"
+        ]
+      },
+      "reason": "the Luxury Roost page was never read; measures, glass and garnish are confirm items and the two premium Sazeracs sit on present evidence only",
+      "source": "verified-facts gap-roost-1 and gap-roost-3; guide p39 for the two names"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who is the general manager tonight, and how is the name spelled? The house site’s team page lists Erick Schmitt; confirm the spelling on the page before a server uses it.",
+        "askWhom": "manager",
+        "items": []
+      },
+      "reason": "the research asks for the spelling to be confirmed on the page",
+      "source": "verified-facts gap-floor-2"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Holiday services: are Christmas Eve (breakfast and lunch a la carte, dinner 5:30 to 9 with a three course menu) and New Year’s Eve (breakfast and lunch a la carte, dinner 6 to 10 a la carte) as the house site printed, and for which year? Re read the page each season.",
+        "askWhom": "manager",
+        "items": []
+      },
+      "reason": "the holiday hours carry no year and are a confirm item each season",
+      "source": "verified-facts gap-floor-6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the sourcing names printed on the menus still current: Creekstone Farms, Vital Farms, D’Artagnan, Two Brooks, Leidenheimer, Nueske’s, Tien Dat tofu and Maggie’s Mushrooms? Confirm each at lineup before a server names it.",
+        "askWhom": "chef",
+        "items": [
+          "Creole-Spiced Hanger Steak",
+          "Blackened Tofu"
+        ]
+      },
+      "reason": "the research confirms the printed sourcing line from a snippet and asks that each name be confirmed before it is said",
+      "source": "verified-facts gap-sourcing-2 and gap-sourcing-4; guide p28"
+    }
+  ]
+}
