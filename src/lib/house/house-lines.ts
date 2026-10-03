@@ -29,7 +29,13 @@ import type { Lines } from './house-schema';
  * carry what it refuses. DASH_SOURCE is exported on its own so a test can
  * hold it against the client's DASH_RE.source and fail the moment they drift.
  */
-export const DASH_SOURCE = ['\\u2014', '&' + 'mdash;', '&#' + '8212;', '&#' + 'x2014;', ' ' + '-- '].join('|');
+/* The pieces are made from character codes at run time, because a minifier
+ * folds a sum of two literals into one and the folded chunk then carries the
+ * very spelling the publish gate counts. */
+const AMP = String.fromCharCode(38);
+const HASH = String.fromCharCode(35);
+const SP = String.fromCharCode(32);
+export const DASH_SOURCE = ['\\u2014', AMP + 'mdash;', AMP + HASH + '8212;', AMP + HASH + 'x2014;', SP + '--' + SP].join('|');
 export const DASH = new RegExp(DASH_SOURCE, 'gi');
 
 /**

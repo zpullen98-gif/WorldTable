@@ -336,3 +336,46 @@ export function sseAnswer(text: string, stop = 'end_turn') {
 	s += sseEvent('message_stop', { type: 'message_stop' });
 	return s;
 }
+
+/* ---- the House ----------------------------------------------------------
+ * The House lives in two slots (src/lib/house/house-store.ts): the index in
+ * localStorage under oot-houses-v1, the records in IndexedDB oot-house /
+ * houses, one per house keyed by its id. A spec seeds both the way the store
+ * writes them, so the page wakes into a house it did not mint. Same seed
+ * switch as every other seed. */
+
+/** The index slot, as house-schema.ts names it. */
+export const HOUSE_INDEX_KEY = 'oot-houses-v1';
+
+/**
+ * Put one or more houses on the device before the page loads, the first
+ * current unless `current` names another. Each house is a full record in
+ * the House's shape (the fixture src/lib/house/fixtures/house-min.json is
+ * one); the stub on the index is derived from it the way putHouse derives
+ * it.
+ */
+export async function seedHouses(page: Page, houses: Array<Record<string, unknown>>, current?: string) {
+	await page.addInitScript(
+		([key, list, cur]) => {
+			if (localStorage.getItem('__wt_seed_off')) return;
+			const now = Date.now();
+			const stubs = (list as Array<Record<string, unknown>>).map((h) => ({
+				id: h.id,
+				name: h.name,
+				ts: now,
+				bytes: JSON.stringify(h).length,
+				began: h.began ?? 'pack'
+			}));
+			localStorage.setItem(key as string, JSON.stringify({ v: 1, current: cur ?? stubs[0]?.id ?? null, list: stubs }));
+			const open = indexedDB.open('oot-house', 1);
+			open.onupgradeneeded = () => {
+				if (!open.result.objectStoreNames.contains('houses')) open.result.createObjectStore('houses');
+			};
+			open.onsuccess = () => {
+				const tx = open.result.transaction('houses', 'readwrite');
+				for (const h of list as Array<Record<string, unknown>>) tx.objectStore('houses').put(h, h.id as string);
+			};
+		},
+		[HOUSE_INDEX_KEY, houses, current ?? null] as [string, Array<Record<string, unknown>>, string | null]
+	);
+}

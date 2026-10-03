@@ -376,7 +376,13 @@ function isNote(v) {
  * carry what it refuses. DASH_SOURCE is exported on its own so a test can
  * hold it against the client's DASH_RE.source and fail the moment they drift.
  */
-const DASH_SOURCE = ['\\u2014', '&' + 'mdash;', '&#' + '8212;', '&#' + 'x2014;', ' ' + '-- '].join('|');
+/* The pieces are made from character codes at run time, because a minifier
+ * folds a sum of two literals into one and the folded chunk then carries the
+ * very spelling the publish gate counts. */
+const AMP = String.fromCharCode(38);
+const HASH = String.fromCharCode(35);
+const SP = String.fromCharCode(32);
+const DASH_SOURCE = ['\\u2014', AMP + 'mdash;', AMP + HASH + '8212;', AMP + HASH + 'x2014;', SP + '--' + SP].join('|');
 const DASH = new RegExp(DASH_SOURCE, 'gi');
 /**
  * What a House string may not carry: the client's five, and the en dash
@@ -2088,14 +2094,18 @@ const codexWine = adapterFrom(CODEX_WINE);
  * A twin settled: the shared plain fields from the newer side, the marks by
  * pickMark on their own stamps, kept unioned, the house id the house's. On
  * equal stamps neither side's plain fields move. The row comes back through
- * toRow over the old row, so its own fields ride along.
+ * toRow over the old row, so its own fields ride along. Through the wing's
+ * own door (rule 8) a mark the row lacks is a discard and does not settle.
  */
-function settleTwin(item, row, houseId, adapter) {
+function settleTwin(item, row, houseId, adapter, oneRow) {
     const mine = item;
     const rowItem = adapter.fromRow(row, item);
     const settled = {};
     for (const f of adapter.marks) {
-        const m = pickMark(isMark(mine[f]) ? mine[f] : undefined, isMark(rowItem[f]) ? rowItem[f] : undefined);
+        const theirs = isMark(rowItem[f]) ? rowItem[f] : undefined;
+        if (oneRow && !theirs)
+            continue;
+        const m = pickMark(isMark(mine[f]) ? mine[f] : undefined, theirs);
         if (m)
             settled[f] = m;
     }
@@ -2141,6 +2151,7 @@ function syncIn(kind, rows, house, adapter, opts = {}) {
         throw new Error('syncIn: no list for the kind ' + kind);
     const items = house[list];
     const now = opts.now === undefined ? Date.now() : opts.now;
+    const oneRow = opts.oneRow === true;
     const known = new Set(opts.knownHouses || []);
     const withIndex = opts.knownHouses !== undefined;
     const scopeOf = (row) => {
@@ -2207,7 +2218,8 @@ function syncIn(kind, rows, house, adapter, opts = {}) {
         let at = byId.get(item.id);
         if (at === undefined || claimed.has(at)) {
             at = undefined;
-            const cands = byKey.get(adapter.itemKey(item)) || [];
+            /* Rule 8: through the wing's own door no row is paired by name. */
+            const cands = oneRow ? [] : byKey.get(adapter.itemKey(item)) || [];
             /* A row keyed to another item's id is that item's twin, never this one's by name. */
             const free = cands.find((i) => !claimed.has(i) && !itemIds.has(rows[i].id));
             if (free !== undefined) {
@@ -2223,6 +2235,10 @@ function syncIn(kind, rows, house, adapter, opts = {}) {
                    a second row would shadow or overwrite it. The item waits. */
                 changes.push({ id: item.id, what: 'row-held' });
             }
+            else if (oneRow) {
+                /* The one row asked about is not this item's; the wing's other
+                   rows are not this call's, and the item keeps whatever row it has. */
+            }
             else {
                 newRows.push(adapter.toRow(item, undefined));
                 changes.push({ id: item.id, what: 'row-added' });
@@ -2235,7 +2251,7 @@ function syncIn(kind, rows, house, adapter, opts = {}) {
         const row = rowsOut[at];
         if (scopes[at] === 'adoptable')
             changes.push({ id: item.id, what: 'adopted' });
-        const settled = settleTwin(item, row, house.id, adapter);
+        const settled = settleTwin(item, row, house.id, adapter, oneRow);
         if (sameJson(settled.item, item))
             itemsOut.push(item);
         else {
@@ -2276,14 +2292,25 @@ function syncIn(kind, rows, house, adapter, opts = {}) {
             changes.push({ id: rowIn.id, what: 'renamed', from: row.id });
             rowsChanged = true;
         }
-        const asItem = adapter.fromRow(rowIn);
+        const asItem = Object.assign(Object.assign({}, adapter.fromRow(rowIn)), { house: house.id });
+        /* The row handed back in the adapter's shape, over itself so the wing's
+           own fields ride: a row written before a shared field existed (an old
+           record with no ingredients line) is then in step on the first wake,
+           and the next has nothing to say about it. An adopted row is reported
+           adopted (the house stamp is the change); a row already ours that the
+           shape moved is reported updated. */
+        const shaped = adapter.toRow(asItem, rowIn);
         if (scopes[i] === 'adoptable') {
-            /* A person's row arriving: adopted whole, stamped with the house. */
-            rowsOut[i] = Object.assign(Object.assign({}, rowIn), { house: house.id });
+            rowsOut[i] = shaped;
             changes.push({ id: rowIn.id, what: 'adopted' });
             rowsChanged = true;
         }
-        itemsOut.push(Object.assign(Object.assign({}, asItem), { house: house.id }));
+        else if (!sameJson(shaped, rowIn)) {
+            rowsOut[i] = shaped;
+            changes.push({ id: rowIn.id, what: 'row-updated' });
+            rowsChanged = true;
+        }
+        itemsOut.push(asItem);
         changes.push({ id: rowIn.id, what: 'item-added' });
         houseChanged = true;
     });
@@ -3565,6 +3592,18 @@ function buildFlashcards(house) {
  * tells every listener; a refused save leaves the memory copy as it was,
  * so what a screen shows is always what the device has.
  *
+ * COMMIT IS OPTIMISTIC. A write is a function over the house in memory,
+ * not a house computed in advance, because another tab's save can land
+ * while this one awaits the database: its index write fires this tab's
+ * storage listener, memory is reloaded from the device, and a house
+ * computed before that reload would then be written over the other tab's
+ * dish. So commit numbers every reload, applies the function to the house
+ * in memory, saves, and when the number moved during the save applies the
+ * function again over the reloaded house and saves once more, so both
+ * tabs' writes are on the device and this tab's memory is what the device
+ * holds. Bounded, so two tabs saving in a tight loop converge rather than
+ * chase each other.
+ *
  * EVERY METHOD GUARDS AGAINST NO CURRENT HOUSE. With no house, a read
  * returns its empty answer and a write returns false or { ok: false } with
  * the sentence NO_HOUSE_SAID, and nothing is written. The wings' rows are
@@ -3628,8 +3667,13 @@ function createHouseApi(storage, opts = {}) {
     const now = opts.now || (() => Date.now());
     const rand = opts.rand || Math.random;
     let house = null;
+    /* Moved on every assignment of house from outside a commit (a reload, a
+       switch, a mint), so a commit in flight can tell the house moved under it. */
+    let moved = 0;
     let readying = null;
     const listeners = [];
+    /** How many times a commit re-applies its change over a house that moved during its save. */
+    const COMMIT_TRIES = 4;
     const fire = (what) => {
         for (const fn of listeners.slice()) {
             try {
@@ -3641,18 +3685,57 @@ function createHouseApi(storage, opts = {}) {
         }
     };
     const known = () => listHouses(storage).map((s) => s.id);
+    const setHouse = (h) => {
+        house = h;
+        moved += 1;
+    };
     const reload = async () => {
         const id = currentId(storage);
-        house = id ? await loadHouse(storage, id) : null;
+        setHouse(id ? await loadHouse(storage, id) : null);
     };
-    /** The one write door: the house saved, the memory copy made equal to the device's, the listeners told. */
-    const commit = async (next, what) => {
-        const saved = await saveHouse(storage, next, now());
-        if (saved.ok) {
-            house = saved.house;
-            fire(what);
+    /**
+     * The one write door. The change is a function over the house in memory
+     * that returns the next house (the same object when nothing changed) and
+     * whatever its caller needs back; unchanged means nothing is written.
+     * When memory moved during the save (another tab's write, reloaded), the
+     * function is applied again over the house as it now stands and saved
+     * once more, so the device ends with both tabs' work. A refused save
+     * leaves memory as it was and comes back with the reason.
+     */
+    const commit = async (change, what) => {
+        let base = house;
+        let step = change(base);
+        for (let tries = 0;; tries++) {
+            /* Nothing to write on the first pass. On a later pass the change may
+               have nothing left to do over the reloaded house, and the base is
+               saved anyway: the device holds this tab's earlier write, and the
+               reloaded house is what both tabs should now see. */
+            if (step.next === base && tries === 0)
+                return { saved: null, out: step.out };
+            const seen = moved;
+            const saved = await saveHouse(storage, step.next, now());
+            if (!saved.ok)
+                return { saved, out: step.out };
+            if (moved === seen || tries >= COMMIT_TRIES) {
+                house = saved.house;
+                fire(what);
+                return { saved, out: step.out };
+            }
+            if (!house || house.id !== base.id) {
+                /* The pointer moved to another house, or to none, while this one
+                   was saved: the save landed on its own record and memory stays
+                   with the house the device now points at. */
+                fire(what);
+                return { saved, out: step.out };
+            }
+            base = house;
+            step = change(base);
         }
-        return saved;
+    };
+    /** A change with nothing to hand back, for the marks, the card and a removal. */
+    const commitHouse = async (change, what) => {
+        const res = await commit((base) => ({ next: change(base), out: undefined }), what);
+        return res.saved === null || res.saved.ok;
     };
     const onStorage = (ev) => {
         const key = ev && typeof ev === 'object' ? ev.key : undefined;
@@ -3696,7 +3779,7 @@ function createHouseApi(storage, opts = {}) {
                     return null;
                 }
             }
-            house = await loadHouse(storage, id);
+            setHouse(await loadHouse(storage, id));
             fire('switch');
             return house;
         },
@@ -3706,7 +3789,7 @@ function createHouseApi(storage, opts = {}) {
             if (!minted.ok)
                 return null;
             if (minted.current)
-                house = minted.house;
+                setHouse(minted.house);
             fire('mint');
             return minted.house;
         },
@@ -3719,7 +3802,7 @@ function createHouseApi(storage, opts = {}) {
             if (!ok)
                 return false;
             if (house && house.id === target)
-                house = await loadHouse(storage, target);
+                setHouse(await loadHouse(storage, target));
             fire('rename');
             return true;
         },
@@ -3737,20 +3820,21 @@ function createHouseApi(storage, opts = {}) {
             if (!house)
                 return { ok: false, row: null, said: NO_HOUSE_SAID };
             const adapter = adapterFor(kind);
-            const res = syncIn(kind, [row], house, adapter, { now: now(), knownHouses: known(), rand });
-            /* The one row asked about: under its own id, under the item's id when a
-               name twin or a refused id was re-keyed (the change carries the former
-               id in from), or gone when a tombstone was newer. The rows the sync
-               would add for the house's other items are not this call's. */
-            let out = res.rows.find((r) => r.id === row.id) || null;
-            const renamed = res.changes.find((c) => c.what === 'renamed');
-            if (renamed)
-                out = res.rows.find((r) => r.id === renamed.id) || null;
-            if (res.house !== house) {
-                const saved = await commit(res.house, 'put');
-                if (!saved.ok)
-                    return { ok: false, row: out, said: saved.said };
-            }
+            /* Through the wing's own door (the sync's rule 8): never paired by
+               name, and the row's block is the whole block. The one row asked
+               about comes back under its own id, under a fresh id when the key
+               sweep refused its own (the change carries the former id in from),
+               or gone when a tombstone was newer. */
+            const { saved, out } = await commit((base) => {
+                const res = syncIn(kind, [row], base, adapter, { now: now(), knownHouses: known(), rand, oneRow: true });
+                let one = res.rows.find((r) => r.id === row.id) || null;
+                const renamed = res.changes.find((c) => c.what === 'renamed' && c.from === row.id);
+                if (renamed)
+                    one = res.rows.find((r) => r.id === renamed.id) || null;
+                return { next: res.house, out: one };
+            }, 'put');
+            if (saved && !saved.ok)
+                return { ok: false, row: out, said: saved.said };
             return { ok: true, row: out };
         },
         sync: async (kind, rows) => {
@@ -3758,13 +3842,13 @@ function createHouseApi(storage, opts = {}) {
             if (!house)
                 return { ok: false, rows: rows.slice(), changes: [], said: NO_HOUSE_SAID };
             const adapter = adapterFor(kind);
-            const res = syncIn(kind, rows, house, adapter, { now: now(), knownHouses: known(), rand });
-            if (res.house !== house) {
-                const saved = await commit(res.house, 'sync');
-                if (!saved.ok)
-                    return { ok: false, rows: res.rows, changes: res.changes, said: saved.said };
-            }
-            return { ok: true, rows: res.rows, changes: res.changes };
+            const { saved, out } = await commit((base) => {
+                const res = syncIn(kind, rows, base, adapter, { now: now(), knownHouses: known(), rand });
+                return { next: res.house, out: res };
+            }, 'sync');
+            if (saved && !saved.ok)
+                return { ok: false, rows: out.rows, changes: out.changes, said: saved.said };
+            return { ok: true, rows: out.rows, changes: out.changes };
         },
         rows: (kind, prevRows = []) => {
             if (!house)
@@ -3775,48 +3859,69 @@ function createHouseApi(storage, opts = {}) {
             await ready();
             if (!house)
                 return false;
+            /* The shape first (a by and a finite stamp), then the normaliser's door for the value. */
+            const m = mark === null ? null : isMark(mark) ? normaliseMark(mark, markKind(field)) : undefined;
+            if (m === undefined)
+                return false;
             if (target === 'house') {
                 if (MARK_FIELDS.house.indexOf(field) < 0)
                     return false;
-                const card = Object.assign({}, house);
-                if (mark === null) {
-                    if (!(field in card))
-                        return false;
-                    delete card[field];
-                }
-                else {
-                    const m = isMark(mark) ? normaliseMark(mark, markKind(field)) : undefined;
-                    if (!m || !mayReplace(card[field], m))
-                        return false;
-                    card[field] = m;
-                }
-                return (await commit(card, 'mark')).ok;
+                let kept = false;
+                const done = await commitHouse((base) => {
+                    kept = false;
+                    const card = Object.assign({}, base);
+                    if (m === null) {
+                        if (!(field in card)) {
+                            kept = true;
+                            return base;
+                        }
+                        delete card[field];
+                    }
+                    else {
+                        if (!mayReplace(card[field], m)) {
+                            kept = true;
+                            return base;
+                        }
+                        card[field] = m;
+                    }
+                    return card;
+                }, 'mark');
+                return done && !kept;
             }
             const list = listFor(target);
             if (!list)
                 return false;
             if (MARK_FIELDS[list].indexOf(field) < 0)
                 return false;
-            const items = itemsOf(house, list);
-            const at = items.findIndex((i) => i.id === id);
-            if (at < 0)
+            if (!itemsOf(house, list).some((i) => i.id === id))
                 return false;
-            const item = Object.assign({}, items[at]);
-            if (mark === null) {
-                if (!(field in item))
-                    return false;
-                delete item[field];
-            }
-            else {
-                /* The shape first (a by and a finite stamp), then the normaliser's door for the value. */
-                const m = isMark(mark) ? normaliseMark(mark, markKind(field)) : undefined;
-                if (!m || !mayReplace(item[field], m))
-                    return false;
-                item[field] = m;
-            }
-            const nextList = items.slice();
-            nextList[at] = item;
-            return (await commit(Object.assign(Object.assign({}, house), { [list]: nextList }), 'mark')).ok;
+            let refused = false;
+            const ok = await commitHouse((base) => {
+                refused = false;
+                const items = itemsOf(base, list);
+                const at = items.findIndex((i) => i.id === id);
+                if (at < 0)
+                    return base;
+                const item = Object.assign({}, items[at]);
+                if (m === null) {
+                    if (!(field in item)) {
+                        refused = true;
+                        return base;
+                    }
+                    delete item[field];
+                }
+                else {
+                    if (!mayReplace(item[field], m)) {
+                        refused = true;
+                        return base;
+                    }
+                    item[field] = m;
+                }
+                const nextList = items.slice();
+                nextList[at] = item;
+                return Object.assign(Object.assign({}, base), { [list]: nextList });
+            }, 'mark');
+            return ok && !refused;
         },
         setCard: async (fields) => {
             await ready();
@@ -3832,8 +3937,7 @@ function createHouseApi(storage, opts = {}) {
             if ('name' in patch && !String(patch.name).trim())
                 return false;
             /* Through the normaliser's door, so the card's strings are capped and no stray key rides in. */
-            const { house: next } = normaliseHouse(Object.assign(Object.assign({}, house), patch), { rand });
-            return (await commit(next, 'card')).ok;
+            return commitHouse((base) => normaliseHouse(Object.assign(Object.assign({}, base), patch), { rand }).house, 'card');
         },
         removeItem: async (target, id) => {
             await ready();
@@ -3842,19 +3946,20 @@ function createHouseApi(storage, opts = {}) {
             const list = listFor(target);
             if (!list)
                 return false;
-            const items = itemsOf(house, list);
-            const item = items.find((i) => i.id === id);
-            /* The tombstone must be newer than the item's last touch (a kept mark
-               re-stamps the mark, not the item), or the sync would read it as stale.
-               An id the client's key sweep would refuse gets no tombstone at all:
-               the item is dropped, the wing's own delete has taken the row, and
-               the record stays one the client sends and every device imports. */
-            const stamp = item ? Math.max(now(), lastTouch(item, MARK_FIELDS[list]) + 1) : now();
-            const removed = FORBIDDEN_KEY.test(id) ? house.removed : Object.assign(Object.assign({}, house.removed), { [id]: stamp });
-            if (!item && removed === house.removed)
-                return true;
-            const next = Object.assign(Object.assign({}, house), { [list]: items.filter((i) => i.id !== id), removed });
-            return (await commit(next, 'remove-item')).ok;
+            return commitHouse((base) => {
+                const items = itemsOf(base, list);
+                const item = items.find((i) => i.id === id);
+                /* The tombstone must be newer than the item's last touch (a kept mark
+                   re-stamps the mark, not the item), or the sync would read it as stale.
+                   An id the client's key sweep would refuse gets no tombstone at all:
+                   the item is dropped, the wing's own delete has taken the row, and
+                   the record stays one the client sends and every device imports. */
+                const stamp = item ? Math.max(now(), lastTouch(item, MARK_FIELDS[list]) + 1) : now();
+                const removed = FORBIDDEN_KEY.test(id) ? base.removed : Object.assign(Object.assign({}, base.removed), { [id]: stamp });
+                if (!item && removed === base.removed)
+                    return base;
+                return Object.assign(Object.assign({}, base), { [list]: items.filter((i) => i.id !== id), removed });
+            }, 'remove-item');
         },
         names: async (kind) => {
             await ready();

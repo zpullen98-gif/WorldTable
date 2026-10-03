@@ -71,10 +71,38 @@ import {
 	type Producer
 } from '../producers';
 import { resolveLines, plateCost, prepPortionCost } from '../costing';
+import { createHouseApi, type HouseApi } from '../house/house-api';
+import { idbStorage } from '../house/house-store';
+import { HOUSE_INDEX_KEY } from '../house/house-schema';
+import { withHouse } from '../persistence/state';
+import { putDish, rekeyDish, removeDishFromHouse, switchHouse, wakeHouse } from './house-wake';
 
 export type { HouseRecord, EightySix, Prep };
 
 const store = browser ? createStore('world-table', 'state') : undefined;
+
+/*
+ * THE HOUSE (src/lib/house): the restaurant the dishes belong to, one record
+ * per house in its own IndexedDB database with a small index in localStorage
+ * (HOUSE_INDEX_KEY), shared with the Codex and the Ledger on the one origin.
+ * The dishes here are a PROJECTION of the current house's dishes
+ * (house-sync.ts): the hydrate wake brings the two into step, and every
+ * mutator below writes its own record first and the House second, through
+ * house-wake.ts. The api is built once per window, lazily, behind typeof
+ * window, so a prerendered page never touches storage in load; the Table
+ * bundles the house modules directly and the port is for the two vanilla
+ * wings. Allergens never travel: the adapter carries the row's own fields
+ * whole and names none of them.
+ */
+let houseApi: HouseApi | undefined;
+function apiFor(): HouseApi | undefined {
+	if (typeof window === 'undefined') return undefined;
+	if (!houseApi) houseApi = createHouseApi(idbStorage(window), { win: window, from: 'table' });
+	return houseApi;
+}
+
+/** How long another tab's index write waits before this one re-syncs; a burst of saves is one wake. */
+const RESYNC_MS = 300;
 
 class House {
 	#r = $state<HouseRecord>(structuredClone(EMPTY_HOUSE));
@@ -102,6 +130,22 @@ class House {
 	 */
 	#storagePersisted = $state<boolean | null>(null);
 	#storageAsked = false;
+	/**
+	 * The House's last refusal in words, or empty. A refused House write (the
+	 * cap, no database, a quota) leaves this record as saved and is printed by
+	 * the page; it never throws into a mutator's caller.
+	 */
+	#houseRefusal = $state('');
+	/**
+	 * Every House write in one line, so a put cannot land in the middle of the
+	 * hydrate wake and a re-sync cannot overlap a put: each waits for the one
+	 * before it. Never rejects; every step catches its own.
+	 */
+	#houseQueue: Promise<void> = Promise.resolve();
+	#resyncTimer: ReturnType<typeof setTimeout> | undefined;
+	#listening = false;
+	/** How many dishes the last pack import added, for the one line the page prints after it; this page's lifetime only. */
+	#packAdded = $state(0);
 
 	get ready() {
 		return this.#ready;
@@ -128,6 +172,18 @@ class House {
 	/** How stale the last export is; see exportNudge() in persistence/house.ts. */
 	get exportNudge(): { days: number | null } | null {
 		return exportNudge(this.#r);
+	}
+	/** The House api for this window, or undefined on the server. The pages' doors (switch, new, import, export) go through it. */
+	get api(): HouseApi | undefined {
+		return apiFor();
+	}
+	/** The House's last refusal in words, for the page to print; empty when the last write landed. */
+	get houseRefusal(): string {
+		return this.#houseRefusal;
+	}
+	/** Dishes added by the last pack import on this page, or 0: the page says once that a pack never carries allergens. */
+	get packAdded(): number {
+		return this.#packAdded;
 	}
 
 	/**
@@ -216,10 +272,14 @@ class House {
 			// empty AND refuse to persist.
 			this.#blocked = true;
 		}
-		if (this.#blocked) {
-			this.#ready = true;
-			return;
-		}
+		/* Ready HERE, before the absorb below: the record has been read, so the
+		   hydration guard in #persist() has nothing left to guard against, and
+		   with ready still false that guard made the absorb's persist a no-op.
+		   The absorbed dishes and their costings then lived in memory alone
+		   until some later mutator wrote, which on a device with no house, or
+		   one already in step, was the whole session. */
+		this.#ready = true;
+		if (this.#blocked) return;
 		try {
 			const next = absorbSession(this.#r, await loadSession());
 			if (next !== this.#r) {
@@ -229,7 +289,172 @@ class House {
 		} catch {
 			/* nothing to absorb is not an error */
 		}
-		this.#ready = true;
+		/* The House wake, after ready and never while blocked: the dishes
+		   brought into step with the current house, written back and persisted
+		   once when a change is reported. Then another tab's index write
+		   re-runs it, debounced. */
+		this.#listenForHouse();
+		await this.#syncWithHouse();
+	}
+
+	/* ---- the House ------------------------------------------------------- */
+
+	/**
+	 * The wake over the current house: see house-wake.ts. Serialised with
+	 * every other House write. It runs over a snapshot, and the result is
+	 * taken only when no mutation landed meanwhile (lastWrite is the witness);
+	 * when one did, the wake goes once more, behind the put that mutation
+	 * queued, so the two converge instead of one writing over the other.
+	 */
+	#syncWithHouse(again = true): Promise<void> {
+		const api = apiFor();
+		if (!api || !browser || this.#blocked || !this.#ready) return Promise.resolve();
+		const run = async () => {
+			if (this.#blocked) return;
+			const snap = $state.snapshot(this.#r) as HouseRecord;
+			const { record, refusal } = await wakeHouse(api, snap);
+			if (this.#blocked) return;
+			if (record !== snap) {
+				if (snap.lastWrite === this.#r.lastWrite) {
+					this.#r = record;
+					this.#persist();
+				} else if (again) {
+					void this.#syncWithHouse(false);
+				}
+			}
+			this.#houseRefusal = refusal ?? '';
+		};
+		return this.#enqueueHouse(run);
+	}
+
+	/** One House write after the ones before it; a failure is a sentence on the page, never a throw. */
+	#enqueueHouse(op: () => Promise<void>): Promise<void> {
+		const next = this.#houseQueue.then(op).catch((err) => {
+			this.#houseRefusal = 'The House could not be written: ' + (err instanceof Error ? err.message : String(err));
+		});
+		this.#houseQueue = next;
+		return next;
+	}
+
+	/**
+	 * Projection first, House second: called by every mutator AFTER its own
+	 * persist. Guarded by blocked and by ready (a put before the wake would
+	 * race it; the queue orders the two anyway). A re-keyed id (a name twin
+	 * in the house, or an id the key sweep refuses) moves every id-keyed map
+	 * and the dish; a house stamp the row gained is written on the dish.
+	 */
+	#putToHouse(dish: MenuDish) {
+		const api = apiFor();
+		if (!api || !browser || this.#blocked || !this.#ready) return;
+		void this.#enqueueHouse(async () => {
+			if (this.#blocked) return;
+			const res = await putDish(api, $state.snapshot(dish) as MenuDish);
+			if (this.#blocked) return;
+			let next = this.#r;
+			if (res.rekey) {
+				const { from, to } = res.rekey;
+				next = rekeyDish(next, from, to);
+				next = { ...next, dishes: next.dishes.map((d) => (d.id === from ? withHouse({ ...d, id: to }, res.house || d.house) : d)) };
+			} else if (res.house) {
+				next = { ...next, dishes: next.dishes.map((d) => (d.id === dish.id ? withHouse(d, res.house) : d)) };
+			}
+			if (next !== this.#r) {
+				this.#r = next;
+				this.#persist(false);
+			}
+			this.#houseRefusal = res.refusal ?? '';
+		});
+	}
+
+	/** The tombstone, after the Table's own delete, so no device brings the dish back. */
+	#removeFromHouse(id: string) {
+		const api = apiFor();
+		if (!api || !browser || this.#blocked || !this.#ready) return;
+		void this.#enqueueHouse(async () => {
+			if (this.#blocked) return;
+			const res = await removeDishFromHouse(api, id);
+			this.#houseRefusal = res.refusal ?? '';
+		});
+	}
+
+	/**
+	 * Another tab's write to the House index (a switch, a mint, a save that
+	 * touched the stub) re-runs the wake, debounced so a burst is one sync.
+	 * The api's own listener on the same event reloads the house first; the
+	 * wake runs after the debounce and against the index's current pointer.
+	 */
+	#listenForHouse() {
+		if (this.#listening || typeof window === 'undefined') return;
+		this.#listening = true;
+		try {
+			window.addEventListener('storage', (ev: StorageEvent) => {
+				if (ev.key !== null && ev.key !== HOUSE_INDEX_KEY) return;
+				if (this.#blocked) return;
+				if (this.#resyncTimer !== undefined) clearTimeout(this.#resyncTimer);
+				this.#resyncTimer = setTimeout(() => {
+					this.#resyncTimer = undefined;
+					void this.#resyncWithHouse();
+				}, RESYNC_MS);
+			});
+		} catch {
+			/* a window with no events has no other tabs */
+		}
+	}
+
+	/* ---- the doors the house bar calls ----------------------------------- */
+
+	/** The wake, awaitable: after New house made the first house, or a pack became current, the dishes here join it. */
+	syncHouse(): Promise<void> {
+		return this.#syncWithHouse();
+	}
+
+	/**
+	 * Another house opened: the rows synced out, the pointer moved, the
+	 * projection replaced through the adapter, saved once. See switchHouse in
+	 * house-wake.ts. False when the device refused or the id is not on it.
+	 */
+	switchHouse(id: string): Promise<boolean> {
+		const api = apiFor();
+		if (!api || !browser || this.#blocked || !this.#ready) return Promise.resolve(false);
+		let ok = false;
+		return this.#enqueueHouse(async () => {
+			if (this.#blocked) return;
+			const snap = $state.snapshot(this.#r) as HouseRecord;
+			const res = await switchHouse(api, snap, id);
+			if (this.#blocked) return;
+			this.#houseRefusal = res.refusal ?? '';
+			if (!res.ok) return;
+			/* The switch ran over a snapshot, and only the dishes are its to
+			   replace: the costings, the 86 board, the producers and the waste
+			   log are the LIVE record's, so an edit to any of them on another
+			   route during the await is not written over by the snapshot's
+			   copy. The re-keys the outgoing sync asked for are applied to the
+			   live record here, by id, for the same reason. A dish mutation that
+			   landed meanwhile belongs to the house that was open and is queued
+			   behind this one as a put, so the replaced projection stands and
+			   the put files it into the house that is open now. One edit on a
+			   closing house is the trade; a venue's menu written over is not. */
+			let next = this.#r;
+			for (const { from, to } of res.rekeys) next = rekeyDish(next, from, to);
+			this.#r = { ...next, dishes: res.record.dishes };
+			this.#persist();
+			ok = true;
+		}).then(() => ok);
+	}
+
+	/** A pack import added dishes: the page says once that a pack never carries allergens. */
+	notePackImport(count: number) {
+		this.#packAdded = Number.isFinite(count) && count > 0 ? Math.round(count) : 0;
+	}
+
+	/** The wake again, with the api's memory copy realigned to the index's pointer first. */
+	async #resyncWithHouse() {
+		const api = apiFor();
+		if (!api || this.#blocked) return;
+		await api.ready();
+		const id = api.currentId();
+		if (id && api.current()?.id !== id) await api.switchTo(id);
+		await this.#syncWithHouse();
 	}
 
 	/* ---- the menu -------------------------------------------------------- */
@@ -237,16 +462,19 @@ class House {
 	addDish(d: MenuDish) {
 		this.#r = { ...this.#r, dishes: [...this.#r.dishes, d], absorbed: [...this.#r.absorbed, d.id] };
 		this.#persist();
+		this.#putToHouse(d);
 	}
 
 	updateDish(d: MenuDish) {
 		this.#r = { ...this.#r, dishes: this.#r.dishes.map((e) => (e.id === d.id ? d : e)) };
 		this.#persist();
+		this.#putToHouse(d);
 	}
 
 	removeDish(id: string) {
 		this.#r = removeDishFrom(this.#r, id);
 		this.#persist();
+		this.#removeFromHouse(id);
 	}
 
 	/* ---- the Maitre d's marks ----------------------------------------------
@@ -265,6 +493,7 @@ class House {
 		if (next === this.#r) return;
 		this.#r = next;
 		this.#persist();
+		this.#putDishById(id);
 	}
 
 	/** Keep: flips the mark to the house's and re-stamps it. */
@@ -274,6 +503,7 @@ class House {
 		if (next === this.#r) return;
 		this.#r = next;
 		this.#persist();
+		this.#putDishById(id);
 	}
 
 	/** Discard one mark. The block goes with its key when it empties; kept notes stay. */
@@ -283,6 +513,7 @@ class House {
 		if (next === this.#r) return;
 		this.#r = next;
 		this.#persist();
+		this.#putDishById(id);
 	}
 
 	/** Keep an answer from the chat on the dish. Blank question or answer: nothing filed. */
@@ -292,6 +523,13 @@ class House {
 		if (next === this.#r) return;
 		this.#r = next;
 		this.#persist();
+		this.#putDishById(id);
+	}
+
+	/** The dish by id into the House, after a mark moved on it. */
+	#putDishById(id: string) {
+		const d = this.#r.dishes.find((e) => e.id === id);
+		if (d) this.#putToHouse(d);
 	}
 
 	/* ---- 86 --------------------------------------------------------------
@@ -412,6 +650,11 @@ class House {
 		if (this.#blocked) return;
 		this.#r = adoptImport(this.#r, dishes, costs, incoming);
 		this.#persist();
+		/* And into the House, through the door the wake uses: a menu brought
+		   in by file reached the House only at the next boot's wake, and a pass
+		   tablet open for days never boots, so the Codex and the Ledger woke
+		   into a house without it and a pack exported meanwhile left it out. */
+		void this.#syncWithHouse();
 	}
 
 	/* ---- preps ------------------------------------------------------------

@@ -1,5 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
-import { cannedDeskFile, goto, seedDesk, seedHouse, seedMaitre, seedSession, TEST_KEY } from './helpers';
+import { cannedDeskFile, goto, seedDesk, seedHouse, seedHouses, seedMaitre, seedSession, TEST_KEY } from './helpers';
+import { readFileSync } from 'node:fs';
 import AxeBuilder from '@axe-core/playwright';
 
 /**
@@ -165,8 +166,15 @@ const SEEDED: Array<{ path: string; name: string; ready: string; seed?: (page: P
 	{ path: '/menu', name: 'menu worksheet with a desk share waiting', ready: '.review tbody tr', seed: (page) => seedDesk(page, cannedDeskFile()) },
 	/* A dish carrying her unkept lines: the block with its three chips per
 	   row, the word and the rule on each, the bulk chips under it. */
-	{ path: '/menu', name: 'menu worksheet with a dish carrying her unkept lines', ready: '.lines', seed: (page) => seedHouse(page, { dishes: [HER_DISH] }) }
+	{ path: '/menu', name: 'menu worksheet with a dish carrying her unkept lines', ready: '.lines', seed: (page) => seedHouse(page, { dishes: [HER_DISH] }) },
+	/* The house bar with a house on the device: the line names it, every door
+	   is live, and the dishes the wake projected are on the list. The empty
+	   sweep sees the no-house line and four disabled doors. */
+	{ path: '/menu', name: 'menu worksheet with a house on the device', ready: '.dishes li', seed: (page) => seedHouses(page, [HOUSE_FIXTURE()]) }
 ];
+
+/** The House's own fixture, the one house.spec.ts imports and switches. */
+const HOUSE_FIXTURE = () => JSON.parse(readFileSync('src/lib/house/fixtures/house-min.json', 'utf8')) as Record<string, unknown>;
 
 for (const view of SEEDED) {
 	test(`axe: ${view.name}`, async ({ page }) => {

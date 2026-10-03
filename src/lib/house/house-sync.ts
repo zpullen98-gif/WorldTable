@@ -46,6 +46,19 @@
  *      the pack one no device imports. The row is re-keyed to a fresh id
  *      through the adapter's rename, as a name twin is, and reported
  *      renamed with the former id beside it.
+ *   8. ONE ROW THROUGH THE WING'S OWN DOOR (opts.oneRow, the api's put) is
+ *      not the wing's whole list, and two rules bend for it. Rule 2 does
+ *      not run: the wake has already paired every name twin, so a row
+ *      with no twin by id is a dish the person just added, and pairing it
+ *      with an item by name would re-key it onto an id the wing's list
+ *      already holds under the item's own row (the put cannot see that
+ *      row). It is added as a new item. And the row's block is the whole
+ *      block: a shared mark the item holds and the row lacks is a mark
+ *      the person DISCARDED on the wing, and it leaves the item, her mark
+ *      or a kept one alike (a person's Discard is theirs, as their Keep
+ *      is). A wing therefore hands put the row with its block whole, as
+ *      the Table's saveDish carries maitre; the whole-list wake keeps the
+ *      merge, because a wake's rows may be a backup older than the house.
  *
  * NO ALLERGEN FIELD ON ANY SHAPE HERE. A wing's row may carry fields of its
  * own that the House never sees; toRow carries every such field whole from
@@ -162,6 +175,8 @@ export interface SyncOpts {
 	knownHouses?: readonly string[];
 	/** The random source for the fresh id a re-keyed row gets (rule 7); Math.random when absent. */
 	rand?: () => number;
+	/** Rule 8: the rows are one row the wing just saved through its own door, not its whole list. */
+	oneRow?: boolean;
 }
 
 export interface SyncResult<R extends SyncRow> {
@@ -454,17 +469,17 @@ type Scope = 'ours' | 'adoptable' | 'foreign';
  * A twin settled: the shared plain fields from the newer side, the marks by
  * pickMark on their own stamps, kept unioned, the house id the house's. On
  * equal stamps neither side's plain fields move. The row comes back through
- * toRow over the old row, so its own fields ride along.
+ * toRow over the old row, so its own fields ride along. Through the wing's
+ * own door (rule 8) a mark the row lacks is a discard and does not settle.
  */
-function settleTwin<R extends SyncRow>(item: HouseItem, row: R, houseId: string, adapter: SyncAdapter<R>): { item: HouseItem; row: R } {
+function settleTwin<R extends SyncRow>(item: HouseItem, row: R, houseId: string, adapter: SyncAdapter<R>, oneRow: boolean): { item: HouseItem; row: R } {
 	const mine = item as unknown as Fields;
 	const rowItem = adapter.fromRow(row, item) as unknown as Fields;
 	const settled: Fields = {};
 	for (const f of adapter.marks) {
-		const m = pickMark(
-			isMark(mine[f]) ? (mine[f] as Mark<unknown>) : undefined,
-			isMark(rowItem[f]) ? (rowItem[f] as Mark<unknown>) : undefined
-		);
+		const theirs = isMark(rowItem[f]) ? (rowItem[f] as Mark<unknown>) : undefined;
+		if (oneRow && !theirs) continue;
+		const m = pickMark(isMark(mine[f]) ? (mine[f] as Mark<unknown>) : undefined, theirs);
 		if (m) settled[f] = m;
 	}
 	const kept = mergeKept(mine.kept as unknown[] | undefined, rowItem.kept as unknown[] | undefined);
@@ -509,6 +524,7 @@ export function syncIn<R extends SyncRow>(
 	if (!list) throw new Error('syncIn: no list for the kind ' + kind);
 	const items = house[list] as unknown as HouseItem[];
 	const now = opts.now === undefined ? Date.now() : opts.now;
+	const oneRow = opts.oneRow === true;
 	const known = new Set<string>(opts.knownHouses || []);
 	const withIndex = opts.knownHouses !== undefined;
 	const scopeOf = (row: R): Scope => {
@@ -571,7 +587,8 @@ export function syncIn<R extends SyncRow>(
 		let at = byId.get(item.id);
 		if (at === undefined || claimed.has(at)) {
 			at = undefined;
-			const cands = byKey.get(adapter.itemKey(item)) || [];
+			/* Rule 8: through the wing's own door no row is paired by name. */
+			const cands = oneRow ? [] : byKey.get(adapter.itemKey(item)) || [];
 			/* A row keyed to another item's id is that item's twin, never this one's by name. */
 			const free = cands.find((i) => !claimed.has(i) && !itemIds.has(rows[i].id));
 			if (free !== undefined) {
@@ -586,6 +603,9 @@ export function syncIn<R extends SyncRow>(
 				/* Another house's row holds the id: the wing's list keys by id, so
 				   a second row would shadow or overwrite it. The item waits. */
 				changes.push({ id: item.id, what: 'row-held' });
+			} else if (oneRow) {
+				/* The one row asked about is not this item's; the wing's other
+				   rows are not this call's, and the item keeps whatever row it has. */
 			} else {
 				newRows.push(adapter.toRow(item, undefined));
 				changes.push({ id: item.id, what: 'row-added' });
@@ -597,7 +617,7 @@ export function syncIn<R extends SyncRow>(
 		claimed.add(at);
 		const row = rowsOut[at] as R;
 		if (scopes[at] === 'adoptable') changes.push({ id: item.id, what: 'adopted' });
-		const settled = settleTwin(item, row, house.id, adapter);
+		const settled = settleTwin(item, row, house.id, adapter, oneRow);
 		if (sameJson(settled.item, item)) itemsOut.push(item);
 		else {
 			itemsOut.push(settled.item);
@@ -635,14 +655,24 @@ export function syncIn<R extends SyncRow>(
 			changes.push({ id: rowIn.id, what: 'renamed', from: row.id });
 			rowsChanged = true;
 		}
-		const asItem = adapter.fromRow(rowIn);
+		const asItem = { ...adapter.fromRow(rowIn), house: house.id } as HouseItem;
+		/* The row handed back in the adapter's shape, over itself so the wing's
+		   own fields ride: a row written before a shared field existed (an old
+		   record with no ingredients line) is then in step on the first wake,
+		   and the next has nothing to say about it. An adopted row is reported
+		   adopted (the house stamp is the change); a row already ours that the
+		   shape moved is reported updated. */
+		const shaped = adapter.toRow(asItem, rowIn);
 		if (scopes[i] === 'adoptable') {
-			/* A person's row arriving: adopted whole, stamped with the house. */
-			rowsOut[i] = { ...rowIn, house: house.id };
+			rowsOut[i] = shaped;
 			changes.push({ id: rowIn.id, what: 'adopted' });
 			rowsChanged = true;
+		} else if (!sameJson(shaped, rowIn)) {
+			rowsOut[i] = shaped;
+			changes.push({ id: rowIn.id, what: 'row-updated' });
+			rowsChanged = true;
 		}
-		itemsOut.push({ ...asItem, house: house.id } as HouseItem);
+		itemsOut.push(asItem);
 		changes.push({ id: rowIn.id, what: 'item-added' });
 		houseChanged = true;
 	});

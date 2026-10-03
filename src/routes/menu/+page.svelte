@@ -13,6 +13,7 @@
 	import Ornament from '$lib/components/Ornament.svelte';
 	import ExportNudge from '$lib/components/ExportNudge.svelte';
 	import MenuImport from '$lib/components/MenuImport.svelte';
+	import HouseBar from '$lib/components/HouseBar.svelte';
 	import MaitreDoor from '$lib/components/MaitreDoor.svelte';
 	import MaitreLines from '$lib/components/MaitreLines.svelte';
 	import {
@@ -610,7 +611,12 @@
 			...(linkedSlug ? { recipeSlug: linkedSlug } : {}),
 			// Her marks and the kept notes are not on the form, so they ride in
 			// from the stored record: the Prep.station trap. See MenuDish.maitre.
-			...((prior) => (prior?.maitre ? { maitre: prior.maitre } : {}))(house.dishes.find((d) => d.id === dishForm?.id)),
+			// And the House it belongs to, by the same door: the Prep.station trap
+			// again, pinned by deep-pass.test.ts ('a saved dish keeps house').
+			...((prior) => ({
+				...(prior?.maitre ? { maitre: prior.maitre } : {}),
+				...(prior?.house ? { house: prior.house } : {})
+			}))(house.dishes.find((d) => d.id === dishForm?.id)),
 			price: dishForm.price.trim(),
 			ts: Date.now()
 		};
@@ -777,6 +783,11 @@
 			coverage and prep load, then builds a consolidated shopping list.
 		</p>
 	</header>
+
+	<!-- The house this menu belongs to, and the doors into the list of houses
+	     on the device. Prerendered as the no-house line; it reads the device
+	     in onMount only (HouseBar.svelte). -->
+	<HouseBar />
 
 	<div class="tools" data-print="hide">
 		<button
@@ -1044,6 +1055,16 @@
 		</p>
 	{/if}
 
+	{#if house.houseRefusal}
+		<!--
+			The Table's own record was saved; the House (the restaurant this menu
+			belongs to, shared with the Codex and the Ledger) refused its copy.
+			Projection first, House second: nothing on this page is lost, and the
+			sentence says the way out. See stores/house.svelte.ts.
+		-->
+		<p class="blocked" role="alert">{house.houseRefusal}</p>
+	{/if}
+
 	<section class="kitchen">
 		<h2 class="sec">The Kitchen’s Menu</h2>
 		<p class="hint">
@@ -1192,6 +1213,12 @@
 			</div>
 		{/if}
 
+		<!-- After a pack import that added dishes: the one thing a pack never
+		     carries, said once above the list it filled. The allergen line on
+		     each dish below still reads "not marked" until a person looks. -->
+		{#if house.packAdded}
+			<p class="packline" role="status">A pack never carries allergens; mark each at lineup.</p>
+		{/if}
 		{#if !house.dishes.length && !dishForm}
 			<p class="empty">
 				Nothing entered yet. Start with the dish the kitchen is proudest of: four dishes in, the

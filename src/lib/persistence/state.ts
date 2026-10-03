@@ -77,6 +77,18 @@ export interface MenuDish {
 	 * and normaliseMaitre drops any key this shape does not name.
 	 */
 	maitre?: MaitreBlock;
+	/**
+	 * The House this dish is a projection of: the id of the record in
+	 * src/lib/house, set only when non-empty. Absent on every dish written
+	 * before the House existed and on a dish of an implicit house (rows with
+	 * no house on the device), which the hydrate sync adopts into the current
+	 * house once a person has minted one. Carried by every site that rebuilds
+	 * a dish field by field (saveDish, mergeSessions, adoptImport): see
+	 * withHouse, pinned by deep-pass.test.ts. Nothing of the House's own
+	 * (parts, lines, pairing, the service note) ever sits on this row, and
+	 * the allergen line never leaves it.
+	 */
+	house?: string;
 }
 
 /**
@@ -691,6 +703,22 @@ export function withMaitre(dish: MenuDish, block: MaitreBlock | undefined): Menu
 }
 
 /**
+ * The dish stamped with a House id, or with none: the same rule as withMaitre
+ * (the key is removed, never set to undefined, and the same object comes back
+ * when nothing changes). A blank id reads as none, so a dish never carries
+ * `house: ''`. The merges take the WINNER's own house and only fall back to
+ * the other side's when the winner has none: two devices on one house agree,
+ * and a dish from before the House took its stamp from whichever side has
+ * one.
+ */
+export function withHouse(dish: MenuDish, houseId: string | undefined): MenuDish {
+	const id = typeof houseId === 'string' && houseId ? houseId : undefined;
+	if ((dish.house || undefined) === id) return dish;
+	const { house: _dropped, ...rest } = dish;
+	return id ? { ...rest, house: id } : rest;
+}
+
+/**
  * Reconcile an imported session over the live one, field by field.
  *
  * Lives here as a pure function rather than inside the store because the store
@@ -850,7 +878,10 @@ export function mergeSessions(
 				// rather than riding the winner: see mergeMaitre for why a
 				// description edit must not erase a kept answer. The same line
 				// stands in adoptImport, pinned by deep-pass.test.ts.
-				dishes.set(d.id, withMaitre(winner, mergeMaitre(mine?.maitre, d.maitre)));
+				// The House id, NAMED: the winner's own, else the other side's. See
+				// withHouse; the same line stands in adoptImport.
+				const merged = withMaitre(winner, mergeMaitre(mine?.maitre, d.maitre));
+				dishes.set(d.id, withHouse(merged, winner.house || mine?.house || d.house));
 			}
 			return [...dishes.values()];
 		})(),

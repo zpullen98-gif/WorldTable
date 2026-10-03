@@ -201,14 +201,18 @@ describe('the round trip', () => {
 		expect(api.current()).toBe(before);
 	});
 
-	it('put re-keys a name twin to the item\'s id and reports a removed row as null', async () => {
+	it('put never pairs by name (the wake has; the item\'s own row is on the wing) and reports a removed row as null', async () => {
 		const { api } = make();
 		await api.importPack(packText, { mode: 'new' });
+		/* A second dish with a twin name through the wing's own door is a new
+		   item: re-keying it onto d-chicken1 would put two rows under one id on
+		   a wing that already holds the item's own row. */
 		const twin = { ...dishRow('d-twin0001', 'lantern ROAST chicken', T0 + 1), house: fixture.id };
 		const put = await api.put('dish', twin);
 		expect(put.ok).toBe(true);
-		expect(put.row && put.row.id).toBe('d-chicken1');
-		expect(api.current()?.dishes.map((d) => d.id)).toEqual(['d-chicken1', 'd-beetrt01']);
+		expect(put.row && put.row.id).toBe('d-twin0001');
+		expect(api.current()?.dishes.map((d) => d.id)).toEqual(['d-chicken1', 'd-beetrt01', 'd-twin0001']);
+		await api.removeItem('dish', 'd-twin0001');
 
 		/* The wing's row predates the delete, as a row on another tab would; a tombstone is honoured only when newer. */
 		await api.removeItem('dish', 'd-beetrt01');

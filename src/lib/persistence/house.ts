@@ -31,6 +31,7 @@ import {
 	normaliseMaitre,
 	mergeMaitre,
 	withMaitre,
+	withHouse,
 	MAITRE_FIELDS
 } from './state';
 export {
@@ -43,6 +44,7 @@ export {
 	normaliseMaitre,
 	mergeMaitre,
 	withMaitre,
+	withHouse,
 	MAITRE_FIELDS
 } from './state';
 import type { CostLine } from '../costing';
@@ -348,7 +350,10 @@ export function adoptImport(
 		// their own stamps rather than riding the winner: a colleague's later
 		// edit to a description must not erase an answer somebody kept. See
 		// mergeMaitre; deep-pass.test.ts pins that both merges carry this line.
-		byId.set(d.id, withMaitre(winner, mergeMaitre(mine?.maitre, d.maitre)));
+		// And the House id, NAMED here as in mergeSessions: the winner's own,
+		// else the other side's (withHouse in state.ts).
+		const merged = withMaitre(winner, mergeMaitre(mine?.maitre, d.maitre));
+		byId.set(d.id, withHouse(merged, winner.house || mine?.house || d.house));
 	}
 	const nextDishes = [...byId.values()];
 

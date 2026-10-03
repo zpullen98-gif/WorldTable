@@ -227,3 +227,63 @@ describe('finding: a description edit must not erase a kept answer', () => {
 		expect('maitre' in house.dishes[0]).toBe(false);
 	});
 });
+
+describe('the House id on a dish: named everywhere a dish is rebuilt, like maitre', () => {
+	const base = (): MenuDish => ({
+		id: 'd-gumbo',
+		name: 'Gumbo',
+		section: 'Mains',
+		description: 'Dark roux, andouille, okra.',
+		ingredients: [],
+		allergens: [],
+		price: '22',
+		ts: 100
+	});
+	const housed = (): MenuDish => ({ ...base(), house: 'h-brennans' });
+	const edited = (): MenuDish => ({ ...base(), description: 'Dark roux, andouille, okra, rice.', ts: 200 });
+
+	it('a saved dish keeps house: saveDish reads it off the stored record beside maitre', () => {
+		const page = readFileSync('src/routes/menu/+page.svelte', 'utf8');
+		const save = page.slice(page.indexOf('function saveDish()'), page.indexOf('const dishSections'));
+		expect(save).toContain('prior.maitre');
+		expect(save).toContain('prior.house');
+		expect(save).toContain('{ house: prior.house }');
+	});
+
+	it('both merges NAME house with withHouse, beside mergeMaitre', () => {
+		const state = readFileSync('src/lib/persistence/state.ts', 'utf8');
+		const dishes = state.slice(state.indexOf('menuDishes: (() => {'), state.indexOf('dishCosts: (() => {'));
+		expect(dishes).toContain('withHouse(');
+		const house = readFileSync('src/lib/persistence/house.ts', 'utf8');
+		const adopt = house.slice(house.indexOf('export function adoptImport('), house.indexOf('const nextDishes'));
+		expect(adopt).toContain('withHouse(');
+	});
+
+	it('mergeSessions: the winner carries its own house, and a dish with none takes the other side\'s', () => {
+		// the newer edit has no house: it wins the dish and takes the stamp
+		const forward = mergeSessions({ ...structuredClone(EMPTY_SESSION), menuDishes: [housed()] }, { menuDishes: [edited()] });
+		expect(forward.menuDishes[0].description).toBe('Dark roux, andouille, okra, rice.');
+		expect(forward.menuDishes[0].house).toBe('h-brennans');
+		const back = mergeSessions({ ...structuredClone(EMPTY_SESSION), menuDishes: [edited()] }, { menuDishes: [housed()] });
+		expect(back.menuDishes[0].house).toBe('h-brennans');
+		// two houses: the winner's own stands
+		const other = mergeSessions(
+			{ ...structuredClone(EMPTY_SESSION), menuDishes: [{ ...housed(), house: 'h-mine' }] },
+			{ menuDishes: [{ ...edited(), house: 'h-theirs' }] }
+		);
+		expect(other.menuDishes[0].house).toBe('h-theirs');
+		// no house anywhere: no key is minted
+		const none = mergeSessions({ ...structuredClone(EMPTY_SESSION), menuDishes: [base()] }, { menuDishes: [edited()] });
+		expect('house' in none.menuDishes[0]).toBe(false);
+	});
+
+	it('adoptImport: the same, on the live house path', () => {
+		const out = adoptImport({ ...structuredClone(EMPTY_HOUSE), dishes: [housed()] }, [edited()], {}, {});
+		expect(out.dishes[0].description).toBe('Dark roux, andouille, okra, rice.');
+		expect(out.dishes[0].house).toBe('h-brennans');
+		const back = adoptImport({ ...structuredClone(EMPTY_HOUSE), dishes: [edited()] }, [housed()], {}, {});
+		expect(back.dishes[0].house).toBe('h-brennans');
+		const none = adoptImport({ ...structuredClone(EMPTY_HOUSE), dishes: [base()] }, [edited()], {}, {});
+		expect('house' in none.dishes[0]).toBe(false);
+	});
+});
