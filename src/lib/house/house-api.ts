@@ -89,7 +89,7 @@ export const NO_HOUSE_SAID = 'There is no house on this device yet. Make one, or
 export const HOUSE_PARTS = { dish: DISH_PARTS, wine: WINE_PARTS, cocktail: COCKTAIL_PARTS } as const;
 
 /** What changed, for the listeners. 'storage' is another tab's write; 'ready' is the first read. */
-export type ChangeWhat = 'ready' | 'storage' | 'switch' | 'mint' | 'rename' | 'remove' | 'put' | 'sync' | 'mark' | 'card' | 'remove-item' | 'import';
+export type ChangeWhat = 'ready' | 'storage' | 'switch' | 'mint' | 'rename' | 'remove' | 'put' | 'sync' | 'mark' | 'card' | 'field' | 'entry' | 'remove-item' | 'import';
 export type ChangeListener = (house: House | null, what: ChangeWhat) => void;
 
 /** The one thing a window must offer: the storage event, so another tab's write reaches this one. */
@@ -128,6 +128,29 @@ export type MarkTarget = ItemKind | HouseList | 'house';
 export const CARD_KEYS = ['name', 'address', 'phone', 'site', 'meals', 'dressCode', 'menusReadOn', 'sources'] as const;
 export type HouseCard = Pick<House, (typeof CARD_KEYS)[number]>;
 
+/**
+ * The House-only plain fields a screen may set on an item, by kind: the
+ * service note (a person's words, never hers) on every kind, a dish's
+ * signature flag, a wine's pours. Everything shared with the wing (the name,
+ * the price, the spec, the grapes and the rest) comes through the wing's own
+ * row and put, and a mark goes through setMark, so setItemField refuses them.
+ */
+export const ITEM_FIELDS = {
+	dish: ['serviceNote', 'signature'],
+	wine: ['serviceNote', 'pours'],
+	cocktail: ['serviceNote']
+} as const satisfies Record<ItemKind, readonly string[]>;
+export interface ItemFields {
+	serviceNote: string;
+	signature: boolean;
+	pours: string[];
+}
+
+/** The lists putListItem writes: every list whose records have no wing row of their own. */
+export const PUT_LISTS = ['tastings', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes'] as const satisfies readonly HouseList[];
+export type PutList = (typeof PUT_LISTS)[number];
+export type ListEntry<L extends PutList> = House[L][number];
+
 export interface HouseApi {
 	/** The current house read into memory and the storage listener attached. Reads, never writes. Safe to call twice. */
 	ready(): Promise<void>;
@@ -150,6 +173,10 @@ export interface HouseApi {
 	/** A mark set (null discards it) on an item of a list, or on the card with target 'house'. */
 	setMark(target: MarkTarget, id: string, field: string, mark: unknown): Promise<boolean>;
 	setCard(fields: Partial<HouseCard>): Promise<boolean>;
+	/** The House-only plain fields of one item set, through the normaliser; false on an unknown key, a shared field, a missing item or an empty patch. */
+	setItemField(kind: ItemKind, id: string, patch: Partial<ItemFields>): Promise<boolean>;
+	/** One entry of a list added or replaced by id (minted with the list's prefix when absent), its unnamed marks kept; the saved entry, or null when refused. */
+	putListItem<L extends PutList>(list: L, item: Partial<ListEntry<L>>): Promise<ListEntry<L> | null>;
 	/** A tombstone written and the item dropped, so the wings' rows follow. */
 	removeItem(target: ItemKind | HouseList, id: string): Promise<boolean>;
 	/** Every item name of one kind on every house on the device, listed on the index or not, for an orphan sweep. */
@@ -212,6 +239,10 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 	/* Moved on every assignment of house from outside a commit (a reload, a
 	   switch, a mint), so a commit in flight can tell the house moved under it. */
 	let moved = 0;
+	/** The commits in flight, in order: every commit waits for the one before
+	    it to land before it reads the house, so two writes in one tab never
+	    read one base and the later never buries the earlier. */
+	let writing: Promise<unknown> = Promise.resolve();
 	let readying: Promise<void> | null = null;
 	const listeners: ChangeListener[] = [];
 	/** How many times a commit re-applies its change over a house that moved during its save. */
@@ -243,8 +274,21 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 	 * function is applied again over the house as it now stands and saved
 	 * once more, so the device ends with both tabs' work. A refused save
 	 * leaves memory as it was and comes back with the reason.
+	 *
+	 * Commits are serialised: a commit that starts while another is saving
+	 * waits for that save to land (ok or refused) and only then reads the
+	 * house, so a Keep pressed beside a sync, or two Keeps in one tick, each
+	 * build on the other's work. The `moved` loop below still covers a
+	 * reload, a switch or a mint that lands during a save, which run outside
+	 * this chain.
 	 */
-	const commit = async <T>(change: (base: House) => { next: House; out: T }, what: ChangeWhat): Promise<{ saved: SaveResult | null; out: T }> => {
+	const commit = <T>(change: (base: House) => { next: House; out: T }, what: ChangeWhat): Promise<{ saved: SaveResult | null; out: T }> => {
+		const run = () => commitNow(change, what);
+		const turn = writing.then(run, run);
+		writing = turn.catch(() => undefined);
+		return turn;
+	};
+	const commitNow = async <T>(change: (base: House) => { next: House; out: T }, what: ChangeWhat): Promise<{ saved: SaveResult | null; out: T }> => {
 		let base = house as House;
 		let step = change(base);
 		for (let tries = 0; ; tries++) {
@@ -458,6 +502,91 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 			if ('name' in patch && !String(patch.name).trim()) return false;
 			/* Through the normaliser's door, so the card's strings are capped and no stray key rides in. */
 			return commitHouse((base) => normaliseHouse({ ...base, ...patch }, { rand }).house, 'card');
+		},
+
+		setItemField: async (kind, id, patch) => {
+			await ready();
+			if (!house) return false;
+			const list = listOfKind(kind);
+			const allowed = (ITEM_FIELDS as Record<string, readonly string[] | undefined>)[kind];
+			if (!list || !allowed) return false;
+			if (!patch || typeof patch !== 'object' || Array.isArray(patch)) return false;
+			/* Every key named must be one of the kind's own: a shared field, a mark
+			   or a key the client refuses is a refusal of the whole patch, not a
+			   silent drop, so a screen learns its wiring is wrong. */
+			const given = patch as Record<string, unknown>;
+			const fields: Record<string, unknown> = {};
+			for (const k of Object.keys(given)) {
+				if (allowed.indexOf(k) < 0) return false;
+				if (given[k] !== undefined) fields[k] = given[k];
+			}
+			if (!Object.keys(fields).length) return false;
+			if (!itemsOf(house, list).some((i) => i.id === id)) return false;
+			return commitHouse((base) => {
+				const items = itemsOf(base, list);
+				const at = items.findIndex((i) => i.id === id);
+				if (at < 0) return base;
+				/* A fresh stamp, newer than the item's own, so the merge carries
+				   the note to another device; the wing's row keeps its own stamp
+				   and its shared fields, since the sync never moves a House-only
+				   field with a row. Then the normaliser's door, which caps the
+				   note, reads the flag as a flag and the pours as a list. */
+				const next: Listed = { ...items[at], ...fields, ts: Math.max(now(), items[at].ts + 1) };
+				const nextList = items.slice();
+				nextList[at] = next;
+				return normaliseHouse({ ...base, [list]: nextList }, { rand }).house;
+			}, 'field');
+		},
+
+		putListItem: async (list, item) => {
+			await ready();
+			if (!house) return null;
+			if ((PUT_LISTS as readonly string[]).indexOf(list) < 0) return null;
+			if (!item || typeof item !== 'object' || Array.isArray(item)) return null;
+			const given = item as Record<string, unknown>;
+			const marks = MARK_FIELDS[list] as readonly string[];
+			const { saved, out } = await commit((base) => {
+				const items = itemsOf(base, list);
+				const id = typeof given.id === 'string' ? given.id : '';
+				const at = id ? items.findIndex((i) => i.id === id) : -1;
+				const stored = at >= 0 ? items[at] : undefined;
+				/* The stored entry under the patch: a plain field the patch names
+				   is replaced, one it does not name is kept, and an undefined is
+				   not a value. A mark the patch names takes the field only through
+				   setMark's rules (the shape, the normaliser, hers never over a
+				   kept one); otherwise the stored mark stays, and a discard is
+				   setMark(list, id, field, null), never a null here. */
+				const next: Listed = { ...(stored || {}), ts: 0 } as Listed;
+				for (const k of Object.keys(given)) {
+					if (given[k] === undefined || k === 'ts') continue;
+					if (marks.indexOf(k) >= 0) {
+						const m = isMark(given[k]) ? normaliseMark(given[k], markKind(k)) : undefined;
+						if (m && mayReplace(next[k], m)) next[k] = m;
+						continue;
+					}
+					next[k] = given[k];
+				}
+				if (!id) delete (next as Record<string, unknown>).id;
+				/* Newer than what it replaces, and newer than a tombstone on the
+				   same id, which is lifted: an entry put back by hand is wanted. */
+				const tomb = id && typeof base.removed[id] === 'number' ? base.removed[id] : 0;
+				next.ts = Math.max(now(), stored ? stored.ts + 1 : 0, tomb + 1);
+				const nextList = items.slice();
+				const index = at >= 0 ? at : nextList.length;
+				nextList[index] = next;
+				let removed = base.removed;
+				if (tomb) {
+					removed = { ...base.removed };
+					delete removed[id];
+				}
+				/* The normaliser's door for every field, and the mint for an entry
+				   with no id: the list keeps its order, so the entry comes back at
+				   the same index with the id the normaliser claimed or minted. */
+				const normalised = normaliseHouse({ ...base, [list]: nextList, removed }, { rand }).house;
+				return { next: normalised, out: itemsOf(normalised, list)[index] };
+			}, 'entry');
+			if (saved && !saved.ok) return null;
+			return (out as unknown as ListEntry<typeof list>) || null;
 		},
 
 		removeItem: async (target, id) => {

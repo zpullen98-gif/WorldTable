@@ -174,7 +174,18 @@ export function mergeItem<T extends Listed>(mine: T, theirs: T, marks?: readonly
 	const kept = mergeKept(a.kept as unknown[] | undefined, b.kept as unknown[] | undefined);
 	if (kept.length) out.kept = kept;
 	else delete out.kept;
+	/* The service note is a person's words on one device, and a copy made
+	   before they wrote it carries an empty string under a stamp that may be
+	   newer (a pack re-stamped on export, a row edit on another wing). The
+	   note travels by presence: an empty side never blanks a written one, and
+	   two written notes settle with the plain fields, by the newer stamp. */
+	const loser = winner === a ? b : a;
+	if (!noteText(out.serviceNote) && noteText(loser.serviceNote)) out.serviceNote = loser.serviceNote;
 	return out as T;
+}
+
+function noteText(v: unknown): string {
+	return typeof v === 'string' ? v.trim() : '';
 }
 
 /* -------------------------------------------------------------------------

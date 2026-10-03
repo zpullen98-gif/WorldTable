@@ -86,6 +86,13 @@ export const LIB = {
 	stripDashes: 'stripDashes',
 	wordCount: 'wordCount',
 	lineProblems: 'lineProblems',
+	/* the labels and caps a screen reads at the top level, beside their place under constants */
+	DISH_PARTS: 'DISH_PARTS',
+	COCKTAIL_PARTS: 'COCKTAIL_PARTS',
+	WINE_PARTS: 'WINE_PARTS',
+	LINE_CAPS: 'LINE_CAPS',
+	PRINCIPLES: 'PRINCIPLES',
+	BUILD_STEPS: 'BUILD_STEPS',
 	/* merging and syncing */
 	mergeHouse: 'mergeHouse',
 	mergeItem: 'mergeItem',
@@ -147,7 +154,7 @@ export const CONSTANTS = [
 	'BUILD_STEPS', 'ITEM_KINDS', 'HOUSE_LISTS', 'DISH_MARKS', 'WINE_MARKS', 'COCKTAIL_MARKS', 'MARK_FIELDS',
 	'ID_PREFIXES', 'KEYS', 'KEPT_CAP', 'MARK_KINDS', 'FORBIDDEN_KEY', 'DASH', 'DASH_SOURCE',
 	'FATAL_CODES', 'NEVER_FATAL', 'ALLERGEN_TALK', 'ALLERGEN_WORD', 'QUOTE_WORDS',
-	'PACK_FORMAT', 'PACK_VERSION', 'MY_HOUSE', 'MAP_HOUSE_PREFIX', 'NO_HOUSE_SAID', 'HOUSE_PARTS', 'CARD_KEYS'
+	'PACK_FORMAT', 'PACK_VERSION', 'MY_HOUSE', 'MAP_HOUSE_PREFIX', 'NO_HOUSE_SAID', 'HOUSE_PARTS', 'CARD_KEYS', 'ITEM_FIELDS', 'PUT_LISTS'
 ];
 
 /* -------------------------------------------------------------------------

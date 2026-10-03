@@ -14,6 +14,8 @@
 	import ExportNudge from '$lib/components/ExportNudge.svelte';
 	import MenuImport from '$lib/components/MenuImport.svelte';
 	import HouseBar from '$lib/components/HouseBar.svelte';
+	import HouseCard from '$lib/components/HouseCard.svelte';
+	import HouseLists from '$lib/components/HouseLists.svelte';
 	import MaitreDoor from '$lib/components/MaitreDoor.svelte';
 	import MaitreLines from '$lib/components/MaitreLines.svelte';
 	import {
@@ -543,7 +545,15 @@
 		/* The producers ticked for this dish. Held in the form and written to the
 		   PRODUCERS on save, never onto the MenuDish: see lib/producers.ts. */
 		producerIds: string[];
+		/* The service note: a PERSON's words on the House's own item, under the
+		   fixed eyebrow. Read off house.houseDish on edit and written to the
+		   House AFTER the dish (house.setDishField), never onto the MenuDish and
+		   never by her. The eyebrow is the only place this form says the word
+		   it says, and it says only to confirm at lineup. */
+		serviceNote: string;
 	}>(null);
+	/** The fixed eyebrow over the service note: the same words in every wing. */
+	const NOTE_EYEBROW = 'Your words. Allergens: confirm at lineup.';
 
 	function mintDishId() {
 		let s = 'd-';
@@ -553,7 +563,8 @@
 	function newDish() {
 		dishForm = {
 			id: null, name: '', section: '', description: '', ingredients: '',
-			allergens: [], checked: false, price: '', recipeSlug: '', producerIds: []
+			allergens: [], checked: false, price: '', recipeSlug: '', producerIds: [],
+			serviceNote: ''
 		};
 	}
 	function editDish(d: MenuDish) {
@@ -562,7 +573,8 @@
 			ingredients: d.ingredients.join('\n'), allergens: [...d.allergens],
 			checked: Boolean(d.allergensCheckedAt), price: d.price,
 			recipeSlug: d.recipeSlug ?? '',
-			producerIds: producersForDish(house.producers, d.id).map((p) => p.id)
+			producerIds: producersForDish(house.producers, d.id).map((p) => p.id),
+			serviceNote: house.houseDish(d.id)?.serviceNote ?? ''
 		};
 	}
 	function toggleProducer(id: string) {
@@ -627,6 +639,10 @@
 		// producers, which is also the only time the form offers them, so a
 		// venue with none never takes a write for nothing.
 		if (house.producers.length) house.setDishProducers(rec.id, dishForm.producerIds);
+		// The service note goes to the House AFTER the dish: projection first,
+		// House second. The store queues it behind the put the save made, so
+		// the item is there when it lands, and writes nothing when it is unchanged.
+		house.setDishField(rec.id, { serviceNote: dishForm.serviceNote.trim() });
 		dishForm = null;
 	}
 	const dishSections = $derived.by(() => {
@@ -788,6 +804,8 @@
 	     on the device. Prerendered as the no-house line; it reads the device
 	     in onMount only (HouseBar.svelte). -->
 	<HouseBar />
+	<!-- The house card: nothing until a house is current (HouseCard.svelte). -->
+	<HouseCard />
 
 	<div class="tools" data-print="hide">
 		<button
@@ -1204,6 +1222,12 @@
 					<input type="checkbox" bind:checked={dishForm.checked} />
 					I have checked the allergens on this dish against its build
 				</label>
+				<!-- The service note: a person's words on the House's item, under the
+				     fixed eyebrow, saved after the dish. Never hers. -->
+				<label class="notefield">
+					<span class="noteeyebrow">{NOTE_EYEBROW}</span>
+					<textarea rows="2" bind:value={dishForm.serviceNote} aria-label="Service note, your words"></textarea>
+				</label>
 				<div class="frow">
 					<button class="chip" onclick={saveDish} disabled={!dishForm.name.trim()}>
 						{dishForm.id ? 'Save the dish' : 'Add to the menu'}
@@ -1307,6 +1331,11 @@
 				</ul>
 			</div>
 		{/each}
+
+		<!-- The house's own lists, under the menu it serves: the words, the
+		     table, the mix-ups, the must-knows, the tastings and the lineup
+		     register (HouseLists.svelte). Nothing until a house is current. -->
+		<HouseLists />
 	</section>
 </div>
 
@@ -1401,6 +1430,11 @@
 	/* The affirmation reads as a statement the user is making, so it sits
 	   apart from the grid of allergen boxes rather than inside it. */
 	.affirm { display: block; margin: 10px 0 0; }
+	.notefield { display: block; margin: 6px 0 0; }
+	.noteeyebrow {
+		display: block; font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow);
+		text-transform: uppercase; color: var(--muted); margin: 0 0 4px;
+	}
 	/* A real colour token, never stacked opacity: the shared home CSS dims
 	   muted text with opacity and lands at 2.32:1 against a 4.5:1 target. */
 	.da.unchecked { color: var(--chili); font-weight: 600; }

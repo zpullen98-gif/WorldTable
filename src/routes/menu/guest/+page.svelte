@@ -51,6 +51,14 @@
 	});
 
 	const famBySlug = $derived(new Map(session.familyRecipes.map((r) => [r.slug, r])));
+
+	/** The kept twenty second line on the House's item for a dish, or empty: by 'person' only, like the guest line above. */
+	function keptS20(id: string): string {
+		/* house.houseDish reads house.current, which reads the store's tick, so the template re-runs this when the house saves. */
+		const item = house.houseDish(id);
+		if (!item?.lines || item.lines.by !== 'person') return '';
+		return (item.lines.value as { s20?: string }).s20?.trim() ?? '';
+	}
 	const pinned = $derived(
 		session.menu.map((s) => bySlug.get(s) ?? famBySlug.get(s)).filter(Boolean)
 	);
@@ -116,6 +124,9 @@
 						     printed here in the house's voice it would be her guess with
 						     the house's name on it. See MenuDish.maitre. -->
 						{#if d.maitre?.guest?.by === 'person'}<p class="desc guestline">{d.maitre.guest.value}</p>{/if}
+						<!-- The twenty second line off the House's own item, by the same
+						     rule: printed only once a person kept it. -->
+						{#if keptS20(d.id)}<p class="desc s20">{keptS20(d.id)}</p>{/if}
 					</div>
 				{/each}
 			{/each}
@@ -274,7 +285,8 @@
 		max-width: 48ch;
 		margin-inline: auto;
 	}
-	.guestline {
+	.guestline,
+	.s20 {
 		font-style: normal;
 		margin-top: 4px;
 	}

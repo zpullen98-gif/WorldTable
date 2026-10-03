@@ -73,7 +73,7 @@ import {
 import { resolveLines, plateCost, prepPortionCost } from '../costing';
 import { createHouseApi, type HouseApi } from '../house/house-api';
 import { idbStorage } from '../house/house-store';
-import { HOUSE_INDEX_KEY } from '../house/house-schema';
+import { HOUSE_INDEX_KEY, type House as HouseDoc, type HouseDish } from '../house/house-schema';
 import { withHouse } from '../persistence/state';
 import { putDish, rekeyDish, removeDishFromHouse, switchHouse, wakeHouse } from './house-wake';
 
@@ -146,6 +146,17 @@ class House {
 	#listening = false;
 	/** How many dishes the last pack import added, for the one line the page prints after it; this page's lifetime only. */
 	#packAdded = $state(0);
+	/**
+	 * Moved on every change the House api reports (ready, a save, a switch,
+	 * another tab's write), so a component that reads house.api.current()
+	 * inside a $derived that also reads this re-derives when the house
+	 * moves. The api's record is a plain object outside Svelte's reach; this
+	 * counter is the one signal that stands in for it.
+	 */
+	#houseTick = $state(0);
+	#watching = false;
+	/** The re-keys the House asked for on this page (from, to), so a write queued by the old id finds the dish. */
+	#rekeyed = new Map<string, string>();
 
 	get ready() {
 		return this.#ready;
@@ -175,7 +186,30 @@ class House {
 	}
 	/** The House api for this window, or undefined on the server. The pages' doors (switch, new, import, export) go through it. */
 	get api(): HouseApi | undefined {
-		return apiFor();
+		const api = apiFor();
+		if (api && !this.#watching) {
+			this.#watching = true;
+			api.onChange(() => {
+				this.#houseTick += 1;
+			});
+		}
+		return api;
+	}
+	/** The signal a component reads beside house.api.current(): see #houseTick. */
+	get houseTick(): number {
+		return this.#houseTick;
+	}
+	/** The current House, re-derived with the tick; null on the server and before the api is ready. */
+	get current(): HouseDoc | null {
+		this.#houseTick;
+		return this.api?.current() ?? null;
+	}
+	/** The House's own item for a dish on this menu, or undefined: where the parts, the lines, the pairing and the service note live. */
+	houseDish(id: string): HouseDish | undefined {
+		const h = this.current;
+		if (!h) return undefined;
+		const to = this.#rekeyed.get(id);
+		return h.dishes.find((d) => d.id === id) ?? (to ? h.dishes.find((d) => d.id === to) : undefined);
 	}
 	/** The House's last refusal in words, for the page to print; empty when the last write landed. */
 	get houseRefusal(): string {
@@ -353,6 +387,7 @@ class House {
 			let next = this.#r;
 			if (res.rekey) {
 				const { from, to } = res.rekey;
+				this.#rekeyed.set(from, to);
 				next = rekeyDish(next, from, to);
 				next = { ...next, dishes: next.dishes.map((d) => (d.id === from ? withHouse({ ...d, id: to }, res.house || d.house) : d)) };
 			} else if (res.house) {
@@ -363,6 +398,30 @@ class House {
 				this.#persist(false);
 			}
 			this.#houseRefusal = res.refusal ?? '';
+		});
+	}
+
+	/**
+	 * A House-only plain field on a dish (the service note, the signature
+	 * flag), written AFTER the dish: it is queued behind the put the save
+	 * made, so the item is in the House when the write lands, and a re-key
+	 * the put asked for is followed. A value already on the item is not
+	 * written again, so a save that left the note alone leaves the stamp
+	 * alone too. Projection first, House second, like every mutator here.
+	 */
+	setDishField(id: string, patch: { serviceNote?: string; signature?: boolean }) {
+		const api = apiFor();
+		if (!api || !browser || this.#blocked || !this.#ready) return;
+		void this.#enqueueHouse(async () => {
+			if (this.#blocked) return;
+			const item = this.houseDish(id);
+			if (!item) return;
+			const fields: { serviceNote?: string; signature?: boolean } = {};
+			if (patch.serviceNote !== undefined && patch.serviceNote !== item.serviceNote) fields.serviceNote = patch.serviceNote;
+			if (patch.signature !== undefined && patch.signature !== item.signature) fields.signature = patch.signature;
+			if (!Object.keys(fields).length) return;
+			const ok = await api.setItemField('dish', item.id, fields);
+			if (!ok) this.#houseRefusal = 'The House did not take the note on this dish.';
 		});
 	}
 

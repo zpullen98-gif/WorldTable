@@ -566,6 +566,16 @@ async function checkApi(T, P) {
 	same(step, await apiT.setCard({ dressCode: 'Anything clean', allergens: 'x' }), await apiP.setCard({ dressCode: 'Anything clean', allergens: 'x' }));
 	dump();
 	same('setCard blank name', await apiT.setCard({ name: '  ' }), await apiP.setCard({ name: '  ' }));
+	step = 'setItemField';
+	same(step, await apiT.setItemField('dish', 'd-beetrt01', { serviceNote: 'Ask the pass about the crust.', signature: true }), await apiP.setItemField('dish', 'd-beetrt01', { serviceNote: 'Ask the pass about the crust.', signature: true }));
+	dump();
+	same('setItemField (a shared field refused)', await apiT.setItemField('dish', 'd-beetrt01', { name: 'x' }), await apiP.setItemField('dish', 'd-beetrt01', { name: 'x' }));
+	step = 'putListItem (minted)';
+	same(step, await apiT.putListItem('lexicon', { term: 'Mirepoix', itemIds: [] }), await apiP.putListItem('lexicon', { term: 'Mirepoix', itemIds: [] }));
+	dump();
+	step = 'putListItem (replaced by id)';
+	same(step, await apiT.putListItem('mustKnows', { id: 'k-lastord1', title: 'Last orders, ten sharp' }), await apiP.putListItem('mustKnows', { id: 'k-lastord1', title: 'Last orders, ten sharp' }));
+	dump();
 
 	clock = LATER + 1000;
 	for (const kind of ['dish', 'wine', 'cocktail']) {
@@ -623,7 +633,7 @@ async function checkApi(T, P) {
 	same(step, await apiT.remove(second ? second.id : 'h-none', 'Second, renamed'), await apiP.remove(second ? second.id : 'h-none', 'Second, renamed'));
 	dump();
 	same('list at the end', apiT.list(), apiP.list());
-	said.push(`the api over a Map agrees step by step through import, mark, card, put, sync, removeItem, pack, mint, rename, switch, merge and remove (${mapT.size} keys on the device at the end)`);
+	said.push(`the api over a Map agrees step by step through import, mark, card, field, entry, put, sync, removeItem, pack, mint, rename, switch, merge and remove (${mapT.size} keys on the device at the end)`);
 }
 
 async function main() {

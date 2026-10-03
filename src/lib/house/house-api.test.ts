@@ -2,14 +2,15 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
-import { HOUSE_INDEX_KEY, KEYS, LINE_CAPS, DISH_PARTS, WINE_PARTS, COCKTAIL_PARTS } from './house-schema';
+import { HOUSE_INDEX_KEY, ID_PREFIXES, KEYS, LINE_CAPS, DISH_PARTS, PROSE_MAX, WINE_PARTS, COCKTAIL_PARTS } from './house-schema';
 import type { House, HouseDish, Mark } from './house-schema';
-import { lastTouch } from './house-merge';
-import { mapStorage } from './house-store';
+import { lastTouch, mergeHouse } from './house-merge';
+import { MAP_HOUSE_PREFIX, mapStorage } from './house-store';
 import type { HouseStorage } from './house-store';
 import type { SyncRow } from './house-sync';
 import { buildPack } from './house-pack';
-import { CARD_KEYS, NO_HOUSE_SAID, adapterFor, createHouseApi, listFor } from './house-api';
+import { CARD_KEYS, ITEM_FIELDS, NO_HOUSE_SAID, PUT_LISTS, adapterFor, createHouseApi, listFor } from './house-api';
+import type { PutList } from './house-api';
 import type { ChangeWhat, HouseApi, HouseEventWindow } from './house-api';
 import { assertClean, portModules, unitsIn } from '../../../tools/port-core.mjs';
 
@@ -82,6 +83,13 @@ const nextChange = (api: HouseApi): Promise<ChangeWhat> =>
 		});
 	});
 
+/** A write and the change it fired, together; the write must fire one or this never settles. */
+const nextChangeOf = async <T>(api: HouseApi, fn: () => Promise<T>): Promise<[T, ChangeWhat]> => {
+	const what = nextChange(api);
+	const out = await fn();
+	return [out, await what];
+};
+
 const packText = JSON.stringify(buildPack(fixture, 'tools', T0));
 
 const dishRow = (id: string, name: string, ts: number): SyncRow => ({
@@ -104,7 +112,7 @@ describe('the api object', () => {
 		expect(Object.keys(api).sort()).toEqual(
 			[
 				'ready', 'current', 'currentId', 'list', 'switchTo', 'mintHouse', 'rename', 'remove',
-				'put', 'sync', 'rows', 'setMark', 'setCard', 'removeItem', 'names',
+				'put', 'sync', 'rows', 'setMark', 'setCard', 'setItemField', 'putListItem', 'removeItem', 'names',
 				'readPack', 'importPack', 'buildPack', 'onChange',
 				'HOUSE_INDEX_KEY', 'HOUSE_MAX_BYTES', 'LINE_CAPS', 'DISH_PARTS', 'WINE_PARTS', 'COCKTAIL_PARTS', 'PARTS', 'PRINCIPLES', 'BUILD_STEPS'
 			].sort()
@@ -527,6 +535,208 @@ describe('setCard', () => {
 });
 
 /* -------------------------------------------------------------------------
+ * The two plain doors: an item's House-only fields, and a list's entries
+ * ---------------------------------------------------------------------- */
+
+describe('setItemField', () => {
+	it('sets a House-only plain field through the normaliser, stamps the item and reads it back', async () => {
+		const { api, backing, clock } = make();
+		await api.importPack(packText, { mode: 'new' });
+		const before = api.current()?.dishes[1].ts as number;
+		clock.at = T0 + 10;
+		expect(await nextChangeOf(api, () => api.setItemField('dish', 'd-beetrt01', { serviceNote: 'Ask the pass about the crust.', signature: true }))).toEqual([true, 'field']);
+		const dish = api.current()?.dishes[1] as HouseDish;
+		expect(dish.serviceNote).toBe('Ask the pass about the crust.');
+		expect(dish.signature).toBe(true);
+		expect(dish.ts).toBe(T0 + 10);
+		expect(dish.ts).toBeGreaterThan(before);
+		expect(dish.name).toBe(fixture.dishes[1].name);
+		expect(await api.setItemField('wine', 'w-lantern1', { pours: ['125ml', '175ml', 'bottle'] })).toBe(true);
+		expect(api.current()?.wines[0].pours).toEqual(['125ml', '175ml', 'bottle']);
+		expect(api.current()?.wines[0].say).toEqual(fixture.wines[0].say);
+		/* The normaliser's door: the note capped, a flag read as a flag, a list read as a list. */
+		expect(await api.setItemField('cocktail', 'b-verjus01', { serviceNote: 'x'.repeat(PROSE_MAX + 50) })).toBe(true);
+		expect(api.current()?.cocktails[1].serviceNote.length).toBe(PROSE_MAX);
+		expect(await api.setItemField('dish', 'd-beetrt01', { signature: 'yes' as never })).toBe(true);
+		expect(api.current()?.dishes[1].signature).toBe(false);
+		expect(await api.setItemField('wine', 'w-lantern1', { pours: 'a glass' as never })).toBe(true);
+		expect(api.current()?.wines[0].pours).toEqual([]);
+		/* A write with the clock stood still is still newer than the item it replaces. */
+		expect(await api.setItemField('dish', 'd-beetrt01', { serviceNote: 'Again.' })).toBe(true);
+		expect(api.current()?.dishes[1].ts).toBeGreaterThan(T0 + 10);
+		for (const [, text] of backing) for (const k of keysDeep(JSON.parse(text))) expect(k).not.toMatch(FORBIDDEN_KEY);
+	});
+
+	it('refuses an unknown key, a shared field, a mark, a field of another kind, a missing item and an empty patch, writing nothing', async () => {
+		const { api, backing } = make();
+		await api.importPack(packText, { mode: 'new' });
+		const snap = JSON.stringify([...backing]);
+		expect(await api.setItemField('dish', 'd-beetrt01', { ['aller' + 'gens']: 'x' } as never)).toBe(false);
+		expect(await api.setItemField('dish', 'd-beetrt01', { name: 'x' } as never)).toBe(false);
+		expect(await api.setItemField('dish', 'd-beetrt01', { price: '9' } as never)).toBe(false);
+		expect(await api.setItemField('dish', 'd-beetrt01', { description: 'x' } as never)).toBe(false);
+		expect(await api.setItemField('wine', 'w-lantern1', { grapes: ['x'] } as never)).toBe(false);
+		expect(await api.setItemField('cocktail', 'b-verjus01', { spec: ['x'] } as never)).toBe(false);
+		expect(await api.setItemField('dish', 'd-beetrt01', { say: mark('x', 'person', T0) } as never)).toBe(false);
+		expect(await api.setItemField('dish', 'd-beetrt01', { ts: T0 } as never)).toBe(false);
+		expect(await api.setItemField('cocktail', 'b-verjus01', { signature: true })).toBe(false);
+		expect(await api.setItemField('dish', 'd-beetrt01', { pours: ['x'] })).toBe(false);
+		/* One wrong key refuses the whole patch: the good key beside it is not written either. */
+		expect(await api.setItemField('dish', 'd-beetrt01', { serviceNote: 'x', name: 'y' } as never)).toBe(false);
+		expect(await api.setItemField('dish', 'd-nope0000', { serviceNote: 'x' })).toBe(false);
+		expect(await api.setItemField('dish', 'd-beetrt01', {})).toBe(false);
+		expect(await api.setItemField('dish', 'd-beetrt01', { serviceNote: undefined })).toBe(false);
+		expect(await api.setItemField('dish', 'd-beetrt01', null as never)).toBe(false);
+		expect(await api.setItemField('tastings' as never, 't-harbour1', { serviceNote: 'x' })).toBe(false);
+		expect(JSON.stringify([...backing])).toBe(snap);
+		expect(api.current()?.dishes[1].serviceNote).toBe(fixture.dishes[1].serviceNote);
+		for (const kind of Object.keys(ITEM_FIELDS)) for (const k of ITEM_FIELDS[kind as keyof typeof ITEM_FIELDS]) expect(k).not.toMatch(FORBIDDEN_KEY);
+	});
+
+	it('a sync after it leaves the note alone, whichever side is newer', async () => {
+		const { api, clock } = make();
+		await api.importPack(packText, { mode: 'new' });
+		const rows = api.rows<SyncRow>('dish', []);
+		clock.at = T0 + 10;
+		expect(await api.setItemField('dish', 'd-beetrt01', { serviceNote: 'Mine, not the menu\'s.', signature: true })).toBe(true);
+		/* The wing's rows as they were, older than the write. */
+		clock.at = T0 + 20;
+		let out = await api.sync('dish', rows);
+		expect(out.ok).toBe(true);
+		let dish = api.current()?.dishes.find((d) => d.id === 'd-beetrt01') as HouseDish;
+		expect(dish.serviceNote).toBe('Mine, not the menu\'s.');
+		expect(dish.signature).toBe(true);
+		/* A row edited on the wing after the write: its shared fields win, the note stays, and no row ever carries it. */
+		const edited = rows.map((r) => (r.id === 'd-beetrt01' ? { ...r, name: 'Beetroot, renamed', ts: T0 + 30 } : r));
+		clock.at = T0 + 40;
+		out = await api.sync('dish', edited);
+		expect(out.ok).toBe(true);
+		dish = api.current()?.dishes.find((d) => d.id === 'd-beetrt01') as HouseDish;
+		expect(dish.name).toBe('Beetroot, renamed');
+		expect(dish.serviceNote).toBe('Mine, not the menu\'s.');
+		expect(dish.signature).toBe(true);
+		for (const r of out.rows) {
+			expect(r).not.toHaveProperty('serviceNote');
+			expect(r).not.toHaveProperty('signature');
+		}
+	});
+
+	it('the merge of two houses carries the note by the newer ts, both ways round', async () => {
+		const a = make();
+		const b = make();
+		await a.api.importPack(packText, { mode: 'new' });
+		await b.api.importPack(packText, { mode: 'new' });
+		a.clock.at = T0 + 10;
+		expect(await a.api.setItemField('dish', 'd-beetrt01', { serviceNote: 'Written first.' })).toBe(true);
+		b.clock.at = T0 + 40;
+		expect(await b.api.setItemField('dish', 'd-beetrt01', { serviceNote: 'Written later, elsewhere.' })).toBe(true);
+		const ha = a.api.current() as House;
+		const hb = b.api.current() as House;
+		const ab = mergeHouse(ha, hb).house.dishes.find((d) => d.id === 'd-beetrt01') as HouseDish;
+		const ba = mergeHouse(hb, ha).house.dishes.find((d) => d.id === 'd-beetrt01') as HouseDish;
+		expect(ab.serviceNote).toBe('Written later, elsewhere.');
+		expect(ba.serviceNote).toBe('Written later, elsewhere.');
+		expect(ab.ts).toBe(T0 + 40);
+		expect(ba).toEqual(ab);
+	});
+});
+
+describe('putListItem', () => {
+	const minimal: Record<PutList, Record<string, unknown>> = {
+		tastings: { name: 'The long table', price: '85', meal: 'dinner', courses: [] },
+		lexicon: { term: 'Mirepoix', itemIds: ['d-chicken1'] },
+		scenarios: { title: 'The table in a hurry', guest: 'We have forty minutes.', itemIds: [] },
+		mixUps: { aId: 'd-chicken1', bId: 'd-beetrt01' },
+		mustKnows: { title: 'The lift is out' },
+		askAtLineup: { question: 'Is the gravy made on the bones?', askWhom: 'chef', itemIds: ['d-chicken1'] },
+		disputes: { field: 'glass', a: { text: 'Coupe', source: 'the menu', date: '2026-10-01' }, b: { text: 'Rocks', source: 'the bar', date: '2026-10-02' } }
+	};
+
+	it('mints the list\'s own prefix when the id is absent, stamps ts, and files the entry on every list', async () => {
+		const { api, backing, clock } = make();
+		await api.importPack(packText, { mode: 'new' });
+		clock.at = T0 + 5;
+		for (const list of PUT_LISTS) {
+			const count = (api.current() as House)[list].length;
+			const [entry, what] = await nextChangeOf(api, () => api.putListItem(list, { ...minimal[list], ts: 5 } as never));
+			expect(what).toBe('entry');
+			expect(entry).not.toBeNull();
+			const saved = entry as { id: string; ts: number };
+			expect(saved.id.slice(0, 2)).toBe(ID_PREFIXES[list]);
+			expect(saved.id.length).toBe(10);
+			expect(saved.ts).toBe(T0 + 5);
+			const held = (api.current() as House)[list] as Array<{ id: string }>;
+			expect(held.length).toBe(count + 1);
+			expect(held[held.length - 1]).toEqual(saved);
+		}
+		const term = api.current()?.lexicon[2];
+		expect(term?.term).toBe('Mirepoix');
+		expect(term?.itemIds).toEqual(['d-chicken1']);
+		const ask = api.current()?.askAtLineup[1];
+		expect(ask?.askWhom).toBe('chef');
+		for (const [, text] of backing) for (const k of keysDeep(JSON.parse(text))) expect(k).not.toMatch(FORBIDDEN_KEY);
+	});
+
+	it('replaces by id, keeps the marks the patch does not name, takes a named mark only by setMark\'s rules, and normalises every field', async () => {
+		const { api, clock } = make();
+		await api.importPack(packText, { mode: 'new' });
+		const stored = clone(fixture.lexicon[0]);
+		clock.at = T0 + 7;
+		const entry = await api.putListItem('lexicon', { id: 'x-verjus01', term: 'Verjus, said VAIR-zhoo', itemIds: ['b-verjus01'], ['aller' + 'gens']: 'x' } as never);
+		expect(entry?.id).toBe('x-verjus01');
+		expect(entry?.term).toBe('Verjus, said VAIR-zhoo');
+		expect(entry?.itemIds).toEqual(['b-verjus01']);
+		expect(entry?.ts).toBe(T0 + 7);
+		expect(entry?.say).toEqual(stored.say);
+		expect(entry?.toGuest).toEqual(stored.toGuest);
+		expect(entry).not.toHaveProperty('aller' + 'gens');
+		expect(api.current()?.lexicon.length).toBe(fixture.lexicon.length);
+		expect(api.current()?.lexicon[0]).toEqual(entry);
+		/* Hers never over a kept mark, even through this door; a person's edit does take it; a null or a wrong shape leaves it alone. */
+		const hers = await api.putListItem('lexicon', { id: 'x-verjus01', say: mark('Hers.', 'maitre', T0 + 8) });
+		expect(hers?.say).toEqual(stored.say);
+		const edited = await api.putListItem('lexicon', { id: 'x-verjus01', say: mark('VAIR-zhoo.', 'person', T0 + 8) });
+		expect(edited?.say).toEqual(mark('VAIR-zhoo.', 'person', T0 + 8));
+		const left = await api.putListItem('lexicon', { id: 'x-verjus01', say: null, toGuest: { value: 'x' } } as never);
+		expect(left?.say).toEqual(mark('VAIR-zhoo.', 'person', T0 + 8));
+		expect(left?.toGuest).toEqual(stored.toGuest);
+		/* A field of the wrong type goes through the normaliser: a number is not a term, a string is not a list. */
+		const odd = await api.putListItem('lexicon', { id: 'x-verjus01', term: 7, itemIds: 'd-chicken1' } as never);
+		expect(odd?.term).toBe('');
+		expect(odd?.itemIds).toEqual([]);
+		/* An id given but not held is filed under that id when it is a sound one, and re-minted when it is not. */
+		const given = await api.putListItem('mustKnows', { id: 'k-byhand01', title: 'By hand' });
+		expect(given?.id).toBe('k-byhand01');
+		const wrong = await api.putListItem('mustKnows', { id: 'x-wrongpre', title: 'Wrong prefix' });
+		expect(wrong?.id.slice(0, 2)).toBe('k-');
+		expect(wrong?.id).not.toBe('x-wrongpre');
+		expect(api.current()?.mustKnows.map((k) => k.title)).toEqual([fixture.mustKnows[0].title, 'By hand', 'Wrong prefix']);
+	});
+
+	it('refuses an item list, a bad shape and no house; removeItem writes a tombstone and a put under the same id lifts it', async () => {
+		const empty = make();
+		expect(await empty.api.putListItem('lexicon', minimal.lexicon)).toBeNull();
+		expect(empty.backing.size).toBe(0);
+		const { api, clock } = make();
+		await api.importPack(packText, { mode: 'new' });
+		expect(await api.putListItem('dishes' as never, { name: 'x' } as never)).toBeNull();
+		expect(await api.putListItem('dish' as never, { name: 'x' } as never)).toBeNull();
+		expect(await api.putListItem('lexicon', null as never)).toBeNull();
+		expect(await api.putListItem('lexicon', ['x'] as never)).toBeNull();
+		clock.at = T0 + 3;
+		expect(await api.removeItem('lexicon', 'x-saltbak1')).toBe(true);
+		const tomb = api.current()?.removed['x-saltbak1'] as number;
+		expect(tomb).toBeGreaterThan(fixture.lexicon[1].ts);
+		expect(api.current()?.lexicon.map((t) => t.id)).toEqual(['x-verjus01']);
+		const back = await api.putListItem('lexicon', { id: 'x-saltbak1', term: 'Salt baked', itemIds: ['d-beetrt01'] });
+		expect(back?.id).toBe('x-saltbak1');
+		expect(back?.ts).toBeGreaterThan(tomb);
+		expect(api.current()?.removed).not.toHaveProperty('x-saltbak1');
+		expect(api.current()?.lexicon.map((t) => t.id)).toEqual(['x-verjus01', 'x-saltbak1']);
+	});
+});
+
+/* -------------------------------------------------------------------------
  * A refused save
  * ---------------------------------------------------------------------- */
 
@@ -600,5 +810,52 @@ describe('the nine modules as one script', () => {
 		expect(api.current()?.dishes.map((d: HouseDish) => d.id)).toEqual(['d-chicken1', 'd-beetrt01']);
 		expect(await api.names('cocktail')).toEqual(['The Lantern Collins', 'Verjus and Tonic']);
 		expect(JSON.parse(backing.get(HOUSE_INDEX_KEY) || '').current).toBe(fixture.id);
+	});
+});
+
+/* -------------------------------------------------------------------------
+ * Two writes in flight in one tab. The commit door serialises the writes it
+ * is handed: a commit that starts while another is saving waits for that
+ * save to land and only then reads the house, so a Keep pressed while the
+ * hydrate wake's sync is still saving, or a Keep all that fires the store's
+ * queued put beside its own setMark, ends with both on the record. Before
+ * the chain, two writes that started in one tick read one base and the
+ * later save landed whole over the earlier.
+ * ---------------------------------------------------------------------- */
+describe('two writes in flight in one tab', () => {
+	it('a Keep pressed while the sync is in flight lands beside it, never under it', async () => {
+		const { api, clock } = make();
+		await api.importPack(packText, { mode: 'new' });
+		const rows = api.rows<SyncRow>('dish', []);
+		const edited = rows.map((r) => (r.id === 'd-beetrt01' ? { ...r, name: 'Beetroot, renamed', ts: T0 + 30 } : r));
+		clock.at = T0 + 40;
+		const kept = mark('BEET root, as it reads.', 'person', T0 + 40);
+		const [sync, ok] = await Promise.all([api.sync('dish', edited), api.setMark('dish', 'd-beetrt01', 'say', kept)]);
+		expect(sync.ok).toBe(true);
+		expect(ok).toBe(true);
+		const dish = api.current()?.dishes.find((d) => d.id === 'd-beetrt01') as HouseDish;
+		expect(dish.name).toBe('Beetroot, renamed');
+		expect(dish.say).toEqual(kept);
+	});
+
+	it('two Keeps pressed in one tick both land, in memory and on the device', async () => {
+		const { api, backing } = make();
+		await api.importPack(packText, { mode: 'new' });
+		const say = mark('BEET root, as it reads.', 'person', T0 + 1);
+		const guest = mark('Salt baked beetroot with apple.', 'person', T0 + 1);
+		const [a, b] = await Promise.all([
+			api.setMark('dish', 'd-beetrt01', 'say', say),
+			api.setMark('dish', 'd-beetrt01', 'guest', guest)
+		]);
+		expect(a).toBe(true);
+		expect(b).toBe(true);
+		const dish = api.current()?.dishes.find((d) => d.id === 'd-beetrt01') as HouseDish;
+		expect(dish.say).toEqual(say);
+		expect(dish.guest).toEqual(guest);
+		const id = api.currentId() as string;
+		const stored = JSON.parse(backing.get(MAP_HOUSE_PREFIX + id) as string) as House;
+		const onDevice = stored.dishes.find((d) => d.id === 'd-beetrt01') as HouseDish;
+		expect(onDevice.say).toEqual(say);
+		expect(onDevice.guest).toEqual(guest);
 	});
 });

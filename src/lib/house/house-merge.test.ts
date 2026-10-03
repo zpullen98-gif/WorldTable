@@ -5,6 +5,7 @@ import { HOUSE_LISTS, MARK_FIELDS, emptyHouse } from './house-schema';
 import type { House, HouseDish, Mark, Note } from './house-schema';
 import { KEPT_CAP } from './house-normalise';
 import { lastTouch, listOfKind, mergeHouse, mergeItem, mergeKept, pickMark, sameJson } from './house-merge';
+import type { Listed } from './house-merge';
 
 /**
  * The merge is the one place a kept line can be lost in silence, so what is
@@ -169,6 +170,18 @@ describe('mergeItem', () => {
 		const merged = mergeItem(plainA, plainB);
 		for (const f of MARK_FIELDS.dishes) expect(f in merged, f).toBe(false);
 		expect('kept' in merged).toBe(false);
+	});
+
+	it('carries a service note by presence: an empty newer side never blanks a written one', () => {
+		const mine = { id: 'd-1', ts: 10, name: 'A', serviceNote: 'Confirm the stock at lineup.' } as unknown as Listed;
+		const theirs = { id: 'd-1', ts: 20, name: 'A renamed', serviceNote: '' } as unknown as Listed;
+		const out = mergeItem(mine, theirs) as unknown as Record<string, unknown>;
+		expect(out.name).toBe('A renamed');
+		expect(out.serviceNote).toBe('Confirm the stock at lineup.');
+		const back = mergeItem(theirs, mine) as unknown as Record<string, unknown>;
+		expect(back.serviceNote).toBe('Confirm the stock at lineup.');
+		const both = mergeItem(mine, { ...theirs, serviceNote: 'Theirs, newer.' } as unknown as Listed) as unknown as Record<string, unknown>;
+		expect(both.serviceNote).toBe('Theirs, newer.');
 	});
 
 	it('finds the marks by shape on a record without a kind, or takes them by name', () => {
