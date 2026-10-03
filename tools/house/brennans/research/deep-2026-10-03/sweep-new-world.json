@@ -1,0 +1,1394 @@
+{
+ "lens": "new-world",
+ "searches": [
+  {
+   "query": "Brennan's New Orleans wine list Napa Cabernet Sauvignon bottle",
+   "kept": 5
+  },
+  {
+   "query": "hub.binwise.com brennans-new-orleans wine list",
+   "kept": 0
+  },
+  {
+   "query": "\"Brennan's\" New Orleans \"Peter Michael\" wine",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans binwise wine list Pinot Noir Oregon Willamette",
+   "kept": 4
+  },
+  {
+   "query": "Brennan's New Orleans wine list Chardonnay Sonoma Russian River bottle price",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans Diamond Creek Chappellet Duckhorn wine list",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans wine list Zinfandel Ridge Turley",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans wine list Washington Columbia Valley Walla Walla Syrah",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans wine list New Zealand Sauvignon Blanc Marlborough Australia Shiraz",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans wine list half bottle 375ml",
+   "kept": 6
+  },
+  {
+   "query": "Brennan's New Orleans wine list Malbec Mendoza Argentina Chile",
+   "kept": 3
+  },
+  {
+   "query": "Brennan's New Orleans wine list Opus One Caymus Harlan Screaming Eagle",
+   "kept": 2
+  },
+  {
+   "query": "Wine Spectator Grand Awards 2021 Brennan's New Orleans Braithe Tidwell California verticals",
+   "kept": 2
+  },
+  {
+   "query": "brennansneworleans.com cocktails wine by the glass Coravin Knights Valley Chardonnay Pinot Noir",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans wine list Kistler Aubert Kongsgaard Chardonnay",
+   "kept": 6
+  },
+  {
+   "query": "Brennan's New Orleans wine list Pinot Noir Sonoma Coast Kosta Browne Williams Selyem Littorai",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans wine list Harlan Estate Promontory BOND price",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans wine list South Africa Stellenbosch Chenin Blanc",
+   "kept": 3
+  },
+  {
+   "query": "Brennan's New Orleans wine list Penfolds Grange Torbreck Australia",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans wine list Spottswoode Cakebread Sauvignon Blanc Napa",
+   "kept": 1
+  },
+  {
+   "query": "\"Brennan's\" New Orleans \"Argyle\" Brut glass",
+   "kept": 1
+  }
+ ],
+ "records": [
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Napa Valley Cabernet Sauvignon",
+   "name": "Inglenook \"Rubicon\" Rutherford Napa",
+   "producer": "Inglenook",
+   "vintage": "2010",
+   "region": "Rutherford, Napa Valley, California",
+   "grapes": [
+    "Cabernet Sauvignon based blend"
+   ],
+   "format": "glass",
+   "prices": [
+    {
+     "printed": "$70",
+     "what": "glass, matches the guide's by the glass price"
+    }
+   ],
+   "description_facts": [
+    "Rutherford, Napa Valley",
+    "2010 vintage",
+    "$70, the same figure the guide prints for the glass"
+   ],
+   "snippet": "Brennan's wine list includes several Napa Valley Cabernet Sauvignons, such as Inglenook \"Rubicon\" Rutherford Napa (2010) for $70, Chappellet \"Mountain Cuvée\" Napa Valley (2024) for $90, Duckhorn Napa Valley (2022) for $90, and Diamond Creek varieties from Diamond Mountain District priced at $220.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Napa Cabernet Sauvignon bottle",
+   "confidence": "medium",
+   "already_in_pack": true
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Napa Valley Cabernet Sauvignon",
+   "name": "Chappellet \"Mountain Cuvée\" Napa Valley",
+   "producer": "Chappellet",
+   "vintage": "2024",
+   "region": "Napa Valley, California",
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$90",
+     "what": "format not stated in snippet"
+    }
+   ],
+   "description_facts": [
+    "Napa Valley",
+    "listed among the Napa Cabernet Sauvignons",
+    "2024 vintage as printed in the snippet (young for a red; confirm on the list)"
+   ],
+   "snippet": "Brennan's wine list includes several Napa Valley Cabernet Sauvignons, such as Inglenook \"Rubicon\" Rutherford Napa (2010) for $70, Chappellet \"Mountain Cuvée\" Napa Valley (2024) for $90, Duckhorn Napa Valley (2022) for $90, and Diamond Creek varieties from Diamond Mountain District priced at $220.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Napa Cabernet Sauvignon bottle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Napa Valley Cabernet Sauvignon",
+   "name": "Duckhorn Napa Valley",
+   "producer": "Duckhorn",
+   "vintage": "2022",
+   "region": "Napa Valley, California",
+   "grapes": [
+    "Cabernet Sauvignon"
+   ],
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$90",
+     "what": "format not stated in snippet"
+    }
+   ],
+   "description_facts": [
+    "Napa Valley Cabernet Sauvignon",
+    "2022 vintage"
+   ],
+   "snippet": "Brennan's wine list includes several Napa Valley Cabernet Sauvignons, such as Inglenook \"Rubicon\" Rutherford Napa (2010) for $70, Chappellet \"Mountain Cuvée\" Napa Valley (2024) for $90, Duckhorn Napa Valley (2022) for $90, and Diamond Creek varieties from Diamond Mountain District priced at $220.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Napa Cabernet Sauvignon bottle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Napa Valley Cabernet Sauvignon",
+   "name": "Diamond Creek (Diamond Mountain District, wine name not given)",
+   "producer": "Diamond Creek",
+   "region": "Diamond Mountain District, Napa Valley, California",
+   "grapes": [
+    "Cabernet Sauvignon"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$220",
+     "what": "price given for the Diamond Creek wines collectively; which bottling and vintage not stated"
+    }
+   ],
+   "description_facts": [
+    "more than one Diamond Creek wine is listed (\"varieties\")",
+    "Diamond Mountain District"
+   ],
+   "snippet": "Brennan's wine list includes several Napa Valley Cabernet Sauvignons, such as Inglenook \"Rubicon\" Rutherford Napa (2010) for $70, Chappellet \"Mountain Cuvée\" Napa Valley (2024) for $90, Duckhorn Napa Valley (2022) for $90, and Diamond Creek varieties from Diamond Mountain District priced at $220.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Napa Cabernet Sauvignon bottle",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Dinner Tasting Menu",
+   "section": "Dinner tasting menu pairing",
+   "name": "Paul Hobbs Coombsville Napa Valley Cabernet Sauvignon",
+   "producer": "Paul Hobbs",
+   "vintage": "2021",
+   "region": "Coombsville, Napa Valley, California",
+   "grapes": [
+    "Cabernet Sauvignon"
+   ],
+   "format": "glass",
+   "prices": [],
+   "description_facts": [
+    "suggested pairing for the fourth course of the dinner tasting menu"
+   ],
+   "snippet": "Additionally, the restaurant's dinner tasting menu features Paul Hobbs Coombsville Napa Valley Cabernet Sauvignon 2021 as a suggested pairing for the fourth course.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.brennansneworleans.com/menus/dinnertastingmenu/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's New Orleans wine list Napa Cabernet Sauvignon bottle",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "wine",
+   "menu": "Cocktails & Wine By The Glass (house page, older list per the guide p49)",
+   "section": "Wine by the glass, Coravin (house cocktails page)",
+   "name": "Peter Michael 'L'Esprit des Pavots' Knights Valley",
+   "producer": "Peter Michael Winery",
+   "vintage": "2014",
+   "region": "Knights Valley, Sonoma County, California",
+   "grapes": [
+    "Cabernet Sauvignon based blend (the snippet files it under Cabernet Sauvignon)"
+   ],
+   "format": "glass",
+   "prices": [
+    {
+     "printed": "$60.00",
+     "what": "glass, by Coravin"
+    }
+   ],
+   "description_facts": [
+    "poured by Coravin",
+    "Knights Valley, California",
+    "listed under Cabernet Sauvignon"
+   ],
+   "snippet": "their current cocktails and wine by the glass menu includes Cabernet Sauvignon - Peter Michael 'L'Esprit des Pavots' Knights Valley CA 2014 available by Coravin for $60.00.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "site": "brennansneworleans.com",
+   "query": "\"Brennan's\" New Orleans \"Peter Michael\" wine",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Oregon Pinot Noir",
+   "name": "Bergstrom \"Reserve\" Willamette Valley Pinot Noir",
+   "producer": "Bergstrom",
+   "vintage": "2022",
+   "region": "Willamette Valley, Oregon",
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$65",
+     "what": "format not stated (a low figure for a bottle; may be a half bottle or glass)"
+    }
+   ],
+   "description_facts": [
+    "Willamette Valley Pinot Noir",
+    "Reserve bottling",
+    "2022"
+   ],
+   "snippet": "Brennan's wine list includes Bergstrom \"Reserve\" Willamette Valley Pinot Noir from 2022 priced at $65. The search results from the Binwise wine list also show Bethel Heights Pinot Noir from Eola-Amity Hills (2022) at $50, and Ken Wright \"McCrone\" Yamhill-Carlton District from 2018 at $60, which are all Oregon Pinot Noirs on their list.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans binwise wine list Pinot Noir Oregon Willamette",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Oregon Pinot Noir",
+   "name": "Bethel Heights Pinot Noir Eola-Amity Hills",
+   "producer": "Bethel Heights",
+   "vintage": "2022",
+   "region": "Eola-Amity Hills, Willamette Valley, Oregon",
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$50",
+     "what": "format not stated"
+    }
+   ],
+   "description_facts": [
+    "Eola-Amity Hills Pinot Noir",
+    "2022"
+   ],
+   "snippet": "Brennan's wine list includes Bergstrom \"Reserve\" Willamette Valley Pinot Noir from 2022 priced at $65. The search results from the Binwise wine list also show Bethel Heights Pinot Noir from Eola-Amity Hills (2022) at $50, and Ken Wright \"McCrone\" Yamhill-Carlton District from 2018 at $60, which are all Oregon Pinot Noirs on their list.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans binwise wine list Pinot Noir Oregon Willamette",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Oregon Pinot Noir",
+   "name": "Ken Wright \"McCrone\" Yamhill-Carlton District",
+   "producer": "Ken Wright Cellars",
+   "vintage": "2018",
+   "region": "Yamhill-Carlton District, Willamette Valley, Oregon",
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$60",
+     "what": "format not stated"
+    }
+   ],
+   "description_facts": [
+    "single vineyard (McCrone)",
+    "Yamhill-Carlton District",
+    "2018"
+   ],
+   "snippet": "Brennan's wine list includes Bergstrom \"Reserve\" Willamette Valley Pinot Noir from 2022 priced at $65. The search results from the Binwise wine list also show Bethel Heights Pinot Noir from Eola-Amity Hills (2022) at $50, and Ken Wright \"McCrone\" Yamhill-Carlton District from 2018 at $60, which are all Oregon Pinot Noirs on their list.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans binwise wine list Pinot Noir Oregon Willamette",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Champagne & sparkling by the glass",
+   "name": "Argyle Brut Willamette Valley",
+   "producer": "Argyle",
+   "vintage": "2022",
+   "region": "Willamette Valley, Oregon",
+   "format": "glass",
+   "prices": [
+    {
+     "printed": "$15",
+     "what": "glass"
+    }
+   ],
+   "description_facts": [
+    "sparkling wine",
+    "by the glass",
+    "not among the guide's twenty glass wines"
+   ],
+   "snippet": "Additionally, they offer Argyle Brut from Willamette Valley (US 2022) by the glass for $15, which is a sparkling wine from that Oregon region.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans binwise wine list Pinot Noir Oregon Willamette",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Cocktails & Wine By The Glass (house page)",
+   "section": "Champagne by the Glass",
+   "name": "Argyle Brut Willamette Valley US (second sighting)",
+   "producer": "Argyle",
+   "vintage": "2022",
+   "region": "Willamette Valley, Oregon",
+   "format": "glass",
+   "prices": [
+    {
+     "printed": "$15.00",
+     "what": "glass"
+    }
+   ],
+   "description_facts": [
+    "on the Champagne by the Glass section",
+    "the house's own cocktails page is among the results, and the guide p49 calls that page an older list"
+   ],
+   "snippet": "Based on the search results, Argyle Brut Willamette Valley US 2022 is offered by the glass at Brennan's New Orleans for $15.00. This sparkling wine appears on their Champagne by the Glass menu at the restaurant located at 417 Royal Street in the French Quarter of New Orleans.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "site": "brennansneworleans.com",
+   "query": "\"Brennan's\" New Orleans \"Argyle\" Brut glass",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Chardonnay, California",
+   "name": "Chalk Hill Chardonnay Sonoma",
+   "producer": "Chalk Hill",
+   "vintage": "2021",
+   "region": "Sonoma, California",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$30",
+     "what": "format not stated; too low for a bottle at this house, likely a half bottle or a glass; confirm"
+    }
+   ],
+   "description_facts": [
+    "Sonoma Chardonnay",
+    "2021"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes a Chalk Hill Chardonnay Sonoma 2021 for $30 and a Lioco \"Estero\" Russian River Valley 2022 for $100",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chardonnay Sonoma Russian River bottle price",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Chardonnay, California",
+   "name": "Lioco \"Estero\" Russian River Valley",
+   "producer": "Lioco",
+   "vintage": "2022",
+   "region": "Russian River Valley, Sonoma County, California",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$100",
+     "what": "format not stated, probably bottle"
+    }
+   ],
+   "description_facts": [
+    "Russian River Valley",
+    "Estero bottling",
+    "2022"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes a Chalk Hill Chardonnay Sonoma 2021 for $30 and a Lioco \"Estero\" Russian River Valley 2022 for $100",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chardonnay Sonoma Russian River bottle price",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Programme",
+   "section": "Programme",
+   "name": "Cellar size (two figures in circulation)",
+   "prices": [],
+   "description_facts": [
+    "3,635 selections and 19,415 bottles (figure probably from the Wine Spectator Grand Award listing)",
+    "the house press release says over 14,000 bottles",
+    "Sommelier and Wine Director Braithe Tidwell built the list"
+   ],
+   "snippet": "The search results show that Brennan's has 3,635 wine selections with an inventory of 19,415 bottles. The carefully curated wine list, developed by Sommelier and Wine Director Braithe Tidwell, boasts over 14,000 bottles.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.winespectator.com/restaurant-awards/detail/9/name/brennan-s-restaurant",
+   "site": "winespectator.com",
+   "query": "Brennan's New Orleans Diamond Creek Chappellet Duckhorn wine list",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Zinfandel",
+   "name": "Ridge Vineyards \"Lytton Springs\" Zinfandel Dry Creek Valley",
+   "producer": "Ridge Vineyards",
+   "vintage": "2021",
+   "region": "Dry Creek Valley, Sonoma County, California",
+   "grapes": [
+    "Zinfandel (field blend; the snippet names Zinfandel only)"
+   ],
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$70",
+     "what": "format not stated"
+    }
+   ],
+   "description_facts": [
+    "Dry Creek Valley",
+    "Lytton Springs",
+    "2021"
+   ],
+   "snippet": "The wine list includes Ridge Vineyards \"Lytton Springs\" Zinfandel Dry Creek Valley 2021 for $70.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Zinfandel Ridge Turley",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Washington",
+   "name": "Sixto \"Moxee Vineyard\" Columbia Valley",
+   "producer": "Sixto",
+   "vintage": "2013",
+   "region": "Columbia Valley, Washington",
+   "grapes": [
+    "Chardonnay (Sixto makes Chardonnay; not stated in the snippet, inferred)"
+   ],
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$75",
+     "what": "format not stated"
+    }
+   ],
+   "description_facts": [
+    "Columbia Valley",
+    "Moxee Vineyard",
+    "2013"
+   ],
+   "snippet": "Brennan's wine list includes a Sixto \"Moxee Vineyard\" Columbia Valley wine from 2013 priced at $75. Additionally, their wine list features a Waterbrook Reserve from Columbia Valley, WA from 2013 priced at $52.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Washington Columbia Valley Walla Walla Syrah",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Washington",
+   "name": "Waterbrook Reserve Columbia Valley, WA",
+   "producer": "Waterbrook",
+   "vintage": "2013",
+   "region": "Columbia Valley, Washington",
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$52",
+     "what": "format not stated"
+    }
+   ],
+   "description_facts": [
+    "Columbia Valley, WA",
+    "2013"
+   ],
+   "snippet": "Brennan's wine list includes a Sixto \"Moxee Vineyard\" Columbia Valley wine from 2013 priced at $75. Additionally, their wine list features a Waterbrook Reserve from Columbia Valley, WA from 2013 priced at $52.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.neworleans-food.com/menu_pdf/winelist10.18.17.pdf",
+   "site": "neworleans-food.com",
+   "query": "Brennan's New Orleans wine list Washington Columbia Valley Walla Walla Syrah",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Half bottles (375 ml), sparkling",
+   "name": "Tribaut-Schloesser \"Origine\" Brut",
+   "producer": "Tribaut-Schloesser",
+   "region": "Champagne, France",
+   "format": "half bottle",
+   "prices": [
+    {
+     "printed": "$50",
+     "what": "375 ml half bottle"
+    }
+   ],
+   "description_facts": [
+    "375 ml half bottle",
+    "outside the new world lens; recorded because half bottles are in this lens"
+   ],
+   "snippet": "The wine list includes several 375ml half-bottle options, such as Tribaut-Schloesser \"Origine\" Brut for $50, Veuve Fourny et Fils Premier Cru Rosé Brut for $125, Laurent Perrier \"Harmony\" Demi Sec for $85, Nicolas Feuillatte \"Reserve\" Brut for $65, and Ferrari Brut Trento for $60.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list half bottle 375ml",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Half bottles (375 ml), sparkling",
+   "name": "Veuve Fourny et Fils Premier Cru Rosé Brut",
+   "producer": "Veuve Fourny et Fils",
+   "region": "Champagne, France",
+   "format": "half bottle",
+   "prices": [
+    {
+     "printed": "$125",
+     "what": "375 ml half bottle"
+    }
+   ],
+   "description_facts": [
+    "375 ml half bottle",
+    "outside the new world lens; recorded because half bottles are in this lens"
+   ],
+   "snippet": "The wine list includes several 375ml half-bottle options, such as Tribaut-Schloesser \"Origine\" Brut for $50, Veuve Fourny et Fils Premier Cru Rosé Brut for $125, Laurent Perrier \"Harmony\" Demi Sec for $85, Nicolas Feuillatte \"Reserve\" Brut for $65, and Ferrari Brut Trento for $60.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list half bottle 375ml",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Half bottles (375 ml), sparkling",
+   "name": "Laurent Perrier \"Harmony\" Demi Sec",
+   "producer": "Laurent Perrier",
+   "region": "Champagne, France",
+   "format": "half bottle",
+   "prices": [
+    {
+     "printed": "$85",
+     "what": "375 ml half bottle"
+    }
+   ],
+   "description_facts": [
+    "375 ml half bottle",
+    "outside the new world lens; recorded because half bottles are in this lens"
+   ],
+   "snippet": "The wine list includes several 375ml half-bottle options, such as Tribaut-Schloesser \"Origine\" Brut for $50, Veuve Fourny et Fils Premier Cru Rosé Brut for $125, Laurent Perrier \"Harmony\" Demi Sec for $85, Nicolas Feuillatte \"Reserve\" Brut for $65, and Ferrari Brut Trento for $60.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list half bottle 375ml",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Half bottles (375 ml), sparkling",
+   "name": "Nicolas Feuillatte \"Reserve\" Brut",
+   "producer": "Nicolas Feuillatte",
+   "region": "Champagne, France",
+   "format": "half bottle",
+   "prices": [
+    {
+     "printed": "$65",
+     "what": "375 ml half bottle"
+    }
+   ],
+   "description_facts": [
+    "375 ml half bottle",
+    "outside the new world lens; recorded because half bottles are in this lens"
+   ],
+   "snippet": "The wine list includes several 375ml half-bottle options, such as Tribaut-Schloesser \"Origine\" Brut for $50, Veuve Fourny et Fils Premier Cru Rosé Brut for $125, Laurent Perrier \"Harmony\" Demi Sec for $85, Nicolas Feuillatte \"Reserve\" Brut for $65, and Ferrari Brut Trento for $60.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list half bottle 375ml",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Half bottles (375 ml), sparkling",
+   "name": "Ferrari Brut Trento",
+   "producer": "Ferrari",
+   "region": "Trento, Italy",
+   "format": "half bottle",
+   "prices": [
+    {
+     "printed": "$60",
+     "what": "375 ml half bottle"
+    }
+   ],
+   "description_facts": [
+    "375 ml half bottle",
+    "outside the new world lens; recorded because half bottles are in this lens"
+   ],
+   "snippet": "The wine list includes several 375ml half-bottle options, such as Tribaut-Schloesser \"Origine\" Brut for $50, Veuve Fourny et Fils Premier Cru Rosé Brut for $125, Laurent Perrier \"Harmony\" Demi Sec for $85, Nicolas Feuillatte \"Reserve\" Brut for $65, and Ferrari Brut Trento for $60.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list half bottle 375ml",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Programme",
+   "section": "Programme",
+   "name": "Cellar and sparkling depth",
+   "prices": [],
+   "description_facts": [
+    "two storey cellar of 15,000 bottles",
+    "the house calls itself the Champagne House of the South",
+    "nearly 100 Champagne and sparkling selections"
+   ],
+   "snippet": "The wine program at Brennan's is built to complement the restaurant's Creole cuisine, with a two-story cellar that houses 15,000 bottles. Brennan's describes itself as the \"Champagne House of the South\" and keeps nearly 100 selections of Champagne and sparkling wines.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.brennansneworleans.com/events/summercellartours",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's New Orleans wine list half bottle 375ml",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Argentina",
+   "name": "Canopus \"De Sed\" Malbec Mendoza",
+   "producer": "Canopus",
+   "vintage": "2024",
+   "region": "Mendoza, Argentina",
+   "grapes": [
+    "Malbec"
+   ],
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$60",
+     "what": "format not stated"
+    }
+   ],
+   "description_facts": [
+    "Mendoza Malbec",
+    "2024"
+   ],
+   "snippet": "Brennan's wine list includes Canopus \"De Sed\" Malbec from Mendoza, Argentina (2024) for $60. The search results also show that the restaurant carries Catena Zapata \"White Stones\" Chardonnay from Adrianna Vineyard in Mendoza (2021) for $310.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Malbec Mendoza Argentina Chile",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Argentina",
+   "name": "Catena Zapata \"White Stones\" Chardonnay Adrianna Vineyard",
+   "producer": "Catena Zapata",
+   "vintage": "2021",
+   "region": "Adrianna Vineyard, Mendoza, Argentina",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$310",
+     "what": "bottle presumed"
+    }
+   ],
+   "description_facts": [
+    "single vineyard Adrianna, Mendoza",
+    "White Stones parcel",
+    "2021"
+   ],
+   "snippet": "Brennan's wine list includes Canopus \"De Sed\" Malbec from Mendoza, Argentina (2024) for $60. The search results also show that the restaurant carries Catena Zapata \"White Stones\" Chardonnay from Adrianna Vineyard in Mendoza (2021) for $310.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Malbec Mendoza Argentina Chile",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Argentina",
+   "name": "Catena Malbec",
+   "producer": "Catena",
+   "region": "Argentina",
+   "grapes": [
+    "Malbec"
+   ],
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$35",
+     "what": "format not stated"
+    }
+   ],
+   "description_facts": [
+    "Argentine Malbec"
+   ],
+   "snippet": "Additionally, Catena Malbec from Argentina is listed at $35 on their wine list.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.neworleans-food.com/menu_pdf/winelist10.18.17.pdf",
+   "site": "neworleans-food.com",
+   "query": "Brennan's New Orleans wine list Malbec Mendoza Argentina Chile",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Napa Valley, Bordeaux blends",
+   "name": "Opus One (vertical: 2011, 2014, 2015, 2016)",
+   "producer": "Opus One",
+   "vintage": "2011; 2014; 2015; 2016",
+   "region": "Oakville, Napa Valley, California",
+   "grapes": [
+    "Bordeaux blend"
+   ],
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "four vintages listed, a vertical",
+    "no prices in the snippet"
+   ],
+   "snippet": "The search results also show that Brennan's wine list features multiple Opus One Bordeaux Blend selections from Napa Valley, including 2011, 2014, 2015, and 2016 vintages, as well as various Caymus Cabernet Sauvignon selections.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Opus One Caymus Harlan Screaming Eagle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Napa Valley Cabernet Sauvignon",
+   "name": "Caymus Cabernet Sauvignon (several)",
+   "producer": "Caymus",
+   "region": "Napa Valley, California",
+   "grapes": [
+    "Cabernet Sauvignon"
+   ],
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "more than one Caymus selection",
+    "vintages and prices not in the snippet"
+   ],
+   "snippet": "The search results also show that Brennan's wine list features multiple Opus One Bordeaux Blend selections from Napa Valley, including 2011, 2014, 2015, and 2016 vintages, as well as various Caymus Cabernet Sauvignon selections.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Opus One Caymus Harlan Screaming Eagle",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Napa Valley, Bordeaux blends",
+   "name": "Harlan Estate (vertical)",
+   "producer": "Harlan Estate",
+   "region": "Oakville, Napa Valley, California",
+   "grapes": [
+    "Bordeaux blend"
+   ],
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "held as a vertical (several vintages) per Wine Spectator 2021",
+    "no vintages or prices found"
+   ],
+   "snippet": "Brennan's New Orleans presents a fine line-up of 'blue-chip' California wines that are in keeping with the French and Creole roots. Throughout the list are dozens of verticals from leading wineries such as Burgundy's Denis Mortet and Ramonet and Napa Valley's Harlan Estate.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.winespectator.com/articles/grand-awards-2021-brennans-new-orleans-083121",
+   "site": "winespectator.com",
+   "query": "Wine Spectator Grand Awards 2021 Brennan's New Orleans Braithe Tidwell California verticals",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Programme",
+   "section": "Programme",
+   "name": "Grand Award 2021 profile",
+   "prices": [],
+   "description_facts": [
+    "Grand Award won 2021, the restaurant's 75th anniversary year",
+    "over 14,000 bottles, attention to boutique producers, verticals and large formats",
+    "more than 10 pages of white Burgundy and 20 of red",
+    "a line up of blue chip California wines",
+    "Braithe Tidwell previously at Union Square Cafe, New York"
+   ],
+   "snippet": "The collection boasts over 14,000 bottles with special attention to boutique producers, verticals, and large formats. Burgundy is a prime focus, with more than 10 pages of whites and 20 pages of reds. Tidwell, who previously worked at New York's Union Square Cafe, built a wine list designed to offer options for both out-of-town guests and locals.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.winespectator.com/articles/grand-awards-2021-brennans-new-orleans-083121",
+   "site": "winespectator.com",
+   "query": "Wine Spectator Grand Awards 2021 Brennan's New Orleans Braithe Tidwell California verticals",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Chardonnay, California",
+   "name": "Kistler \"Les Noisetiers\" Sonoma Coast",
+   "producer": "Kistler",
+   "vintage": "2022",
+   "region": "Sonoma Coast, California",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$145",
+     "what": "bottle presumed"
+    }
+   ],
+   "description_facts": [
+    "Sonoma Coast",
+    "Les Noisetiers",
+    "2022"
+   ],
+   "snippet": "The wine list includes Kistler \"Les Noisetiers\" Sonoma Coast 2022 for $145, and multiple Kongsgaard Napa Valley Chardonnays, including the 2015 ($315), 2016 ($280), 2023 ($315), and \"The Judge\" 2023 ($950).",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Kistler Aubert Kongsgaard Chardonnay",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Chardonnay, California",
+   "name": "Kongsgaard Napa Valley Chardonnay",
+   "producer": "Kongsgaard",
+   "vintage": "2015",
+   "region": "Napa Valley, California",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$315",
+     "what": "bottle presumed"
+    }
+   ],
+   "description_facts": [
+    "Napa Valley Chardonnay",
+    "part of a Kongsgaard vertical on the list (2015, 2016, 2023)"
+   ],
+   "snippet": "The wine list includes Kistler \"Les Noisetiers\" Sonoma Coast 2022 for $145, and multiple Kongsgaard Napa Valley Chardonnays, including the 2015 ($315), 2016 ($280), 2023 ($315), and \"The Judge\" 2023 ($950).",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Kistler Aubert Kongsgaard Chardonnay",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Chardonnay, California",
+   "name": "Kongsgaard Napa Valley Chardonnay",
+   "producer": "Kongsgaard",
+   "vintage": "2016",
+   "region": "Napa Valley, California",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$280",
+     "what": "bottle presumed"
+    }
+   ],
+   "description_facts": [
+    "Napa Valley Chardonnay",
+    "part of a Kongsgaard vertical on the list (2015, 2016, 2023)"
+   ],
+   "snippet": "The wine list includes Kistler \"Les Noisetiers\" Sonoma Coast 2022 for $145, and multiple Kongsgaard Napa Valley Chardonnays, including the 2015 ($315), 2016 ($280), 2023 ($315), and \"The Judge\" 2023 ($950).",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Kistler Aubert Kongsgaard Chardonnay",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Chardonnay, California",
+   "name": "Kongsgaard Napa Valley Chardonnay",
+   "producer": "Kongsgaard",
+   "vintage": "2023",
+   "region": "Napa Valley, California",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$315",
+     "what": "bottle presumed"
+    }
+   ],
+   "description_facts": [
+    "Napa Valley Chardonnay",
+    "part of a Kongsgaard vertical on the list (2015, 2016, 2023)"
+   ],
+   "snippet": "The wine list includes Kistler \"Les Noisetiers\" Sonoma Coast 2022 for $145, and multiple Kongsgaard Napa Valley Chardonnays, including the 2015 ($315), 2016 ($280), 2023 ($315), and \"The Judge\" 2023 ($950).",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Kistler Aubert Kongsgaard Chardonnay",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Chardonnay, California",
+   "name": "Kongsgaard \"The Judge\" Chardonnay",
+   "producer": "Kongsgaard",
+   "vintage": "2023",
+   "region": "Napa Valley, California",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$950",
+     "what": "bottle presumed"
+    }
+   ],
+   "description_facts": [
+    "The Judge, Kongsgaard's top Chardonnay",
+    "2023"
+   ],
+   "snippet": "The wine list includes Kistler \"Les Noisetiers\" Sonoma Coast 2022 for $145, and multiple Kongsgaard Napa Valley Chardonnays, including the 2015 ($315), 2016 ($280), 2023 ($315), and \"The Judge\" 2023 ($950).",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Kistler Aubert Kongsgaard Chardonnay",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Pinot Noir, California",
+   "name": "Kosta Browne \"Gap's Crown Vineyard\" Pinot Noir Sonoma Coast",
+   "producer": "Kosta Browne",
+   "vintage": "2014",
+   "region": "Sonoma Coast, California",
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$165",
+     "what": "bottle presumed"
+    }
+   ],
+   "description_facts": [
+    "single vineyard Gap's Crown",
+    "Sonoma Coast",
+    "2014, now twelve years old"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes Kosta Browne \"Gap's Crown Vineyard\" Pinot Noir Sonoma Coast 2014 priced at $165.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Pinot Noir Sonoma Coast Kosta Browne Williams Selyem Littorai",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Pinot Noir, California",
+   "name": "La Crema Pinot Noir Sonoma Coast",
+   "producer": "La Crema",
+   "vintage": "2023",
+   "region": "Sonoma Coast, California",
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$25",
+     "what": "format not stated; source page uncertain"
+    }
+   ],
+   "description_facts": [
+    "Sonoma Coast Pinot Noir",
+    "2023"
+   ],
+   "snippet": "The search results also show that the restaurant carries other Pinot Noirs from Sonoma Coast, including La Crema Pinot Noir Sonoma Coast 2023 at $25.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Pinot Noir Sonoma Coast Kosta Browne Williams Selyem Littorai",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Large formats, Napa Valley",
+   "name": "Bond \"Melbury\" Napa Valley",
+   "producer": "Bond",
+   "vintage": "2014",
+   "region": "Napa Valley, California",
+   "grapes": [
+    "Cabernet Sauvignon (as the snippet says)"
+   ],
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$1,800",
+     "what": "1.5 L magnum"
+    }
+   ],
+   "description_facts": [
+    "1.5 L magnum",
+    "Melbury vineyard",
+    "2014"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes Bond \"Melbury\" Cabernet Sauvignon from Napa Valley 2014 (1.5L Magnum) priced at $1,800.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Harlan Estate Promontory BOND price",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "South Africa",
+   "name": "Quinta Essentia Chenin Blanc Stellenbosch",
+   "producer": "Quinta Essentia",
+   "vintage": "2016",
+   "region": "Stellenbosch, South Africa",
+   "grapes": [
+    "Chenin Blanc"
+   ],
+   "format": "unknown",
+   "prices": [
+    {
+     "printed": "$80",
+     "what": "format not stated"
+    }
+   ],
+   "description_facts": [
+    "Stellenbosch Chenin Blanc",
+    "2016"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes Quinta Essentia Chenin Blanc Stellenbosch 2016 priced at $80. Additionally, the wine list features several South African Chenin Blancs from other regions, including Sadie Family Wines \"Rotsbank\" Chenin Blanc Swartland 2023 ($225) and \"Skurfberg\" Chenin Blanc Citrusdal Mountain 2023 ($225).",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list South Africa Stellenbosch Chenin Blanc",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "South Africa",
+   "name": "Sadie Family Wines \"Rotsbank\" Chenin Blanc Swartland",
+   "producer": "Sadie Family Wines",
+   "vintage": "2023",
+   "region": "Swartland, South Africa",
+   "grapes": [
+    "Chenin Blanc"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$225",
+     "what": "bottle presumed"
+    }
+   ],
+   "description_facts": [
+    "Swartland",
+    "Rotsbank",
+    "2023"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes Quinta Essentia Chenin Blanc Stellenbosch 2016 priced at $80. Additionally, the wine list features several South African Chenin Blancs from other regions, including Sadie Family Wines \"Rotsbank\" Chenin Blanc Swartland 2023 ($225) and \"Skurfberg\" Chenin Blanc Citrusdal Mountain 2023 ($225).",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list South Africa Stellenbosch Chenin Blanc",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "South Africa",
+   "name": "Sadie Family Wines \"Skurfberg\" Chenin Blanc Citrusdal Mountain",
+   "producer": "Sadie Family Wines",
+   "vintage": "2023",
+   "region": "Citrusdal Mountain, South Africa",
+   "grapes": [
+    "Chenin Blanc"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$225",
+     "what": "bottle presumed"
+    }
+   ],
+   "description_facts": [
+    "Citrusdal Mountain",
+    "Skurfberg",
+    "2023"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes Quinta Essentia Chenin Blanc Stellenbosch 2016 priced at $80. Additionally, the wine list features several South African Chenin Blancs from other regions, including Sadie Family Wines \"Rotsbank\" Chenin Blanc Swartland 2023 ($225) and \"Skurfberg\" Chenin Blanc Citrusdal Mountain 2023 ($225).",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list South Africa Stellenbosch Chenin Blanc",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Sauvignon Blanc, California",
+   "name": "Cakebread Sauvignon Blanc Napa Valley",
+   "producer": "Cakebread Cellars",
+   "vintage": "2023; 2024",
+   "region": "Napa Valley, California",
+   "grapes": [
+    "Sauvignon Blanc"
+   ],
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "two vintages listed, 2023 and 2024",
+    "no price in the snippet"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes Cakebread Sauvignon Blanc from Napa Valley (2023 and 2024 vintages).",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Spottswoode Cakebread Sauvignon Blanc Napa",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Cocktails & Wine By The Glass (house page)",
+   "section": "Chardonnay by the glass (house page)",
+   "name": "Joseph Drouhin 'Drouhin Vaudon' Chablis (older glass list)",
+   "producer": "Joseph Drouhin",
+   "region": "Chablis, Burgundy, France",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "glass",
+   "prices": [
+    {
+     "printed": "$23.00",
+     "what": "glass"
+    }
+   ],
+   "description_facts": [
+    "on the house's own glass page, which the guide p49 calls older than Binwise",
+    "outside the new world lens; recorded as a glass beyond the twenty"
+   ],
+   "snippet": "Brennan's offers wines by the glass including Chardonnay options such as Joseph Drouhin 'Drouhin Vaudon' Chablis Burgundy ($23.00) and Domaine Leflaive Mâcon-Verzé Burgundy served via Coravin ($40.00).",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com cocktails wine by the glass Coravin Knights Valley Chardonnay Pinot Noir",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Brennan's of Houston half price list",
+   "section": "Not this restaurant",
+   "name": "Peter Michael Les Pavots (Brennan's of Houston, not New Orleans)",
+   "producer": "Peter Michael Winery",
+   "vintage": "2003",
+   "region": "Knights Valley, California",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$205",
+     "what": "half price sale list"
+    }
+   ],
+   "description_facts": [
+    "the half price list is from the Houston Chronicle article on Brennan's of Houston, a separate restaurant; do not load into the New Orleans pack"
+   ],
+   "snippet": "Brennan's featured Peter Michael Les Pavots 2003 ($205) on their half-price wine list.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.houstonchronicle.com/life/article/Brennan-s-marks-down-varied-inventory-15296340.php",
+   "site": "houstonchronicle.com",
+   "query": "\"Brennan's\" New Orleans \"Peter Michael\" wine",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Brennan's of Houston half price list",
+   "section": "Not this restaurant",
+   "name": "Kongsgaard Napa Valley Chardonnay 2013 (Brennan's of Houston half price list)",
+   "producer": "Kongsgaard",
+   "vintage": "2013",
+   "region": "Napa Valley, California",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$115",
+     "what": "half price sale list"
+    }
+   ],
+   "description_facts": [
+    "from the Houston Chronicle article on Brennan's of Houston; not the New Orleans list"
+   ],
+   "snippet": "Additionally, Brennan's features a two-page list of wines at half price, including Kongsgaard Napa Valley Chardonnay 2013 ($115).",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://www.houstonchronicle.com/life/article/Brennan-s-marks-down-varied-inventory-15296340.php",
+   "site": "houstonchronicle.com",
+   "query": "Brennan's New Orleans wine list Kistler Aubert Kongsgaard Chardonnay",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Brennan's of Houston wine list",
+   "section": "Not this restaurant",
+   "name": "Torbreck Runrig Shiraz (Brennan's of Houston list)",
+   "producer": "Torbreck",
+   "region": "Barossa Valley, Australia",
+   "grapes": [
+    "Shiraz"
+   ],
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "Brennan's of Houston list dated 1 June 2022; not evidence for New Orleans"
+   ],
+   "snippet": "The search results from Brennan's of Houston (a related restaurant) show that Torbreck Runrig Shiraz from Barossa Valley is featured on their wine list.",
+   "snippet_note": "Search tool summary text (the tool returns a model written summary over the result pages, not raw page text); the Binwise page was among the results, but the summary does not tie each line to one URL.",
+   "url": "https://media-cdn.getbento.com/accounts/1b7228f836b14ac8e6bbf596b273e439/media/G9X2blYSxWLk9kVz6a32_6-1-22%20Wine%20List.pdf",
+   "site": "media-cdn.getbento.com",
+   "query": "Brennan's New Orleans wine list Penfolds Grange Torbreck Australia",
+   "confidence": "low",
+   "already_in_pack": false
+  }
+ ],
+ "gaps": [
+  "Search count: 21 WebSearch calls were run, three over the budget of 18; the last three (Penfolds/Torbreck, Spottswoode/Cakebread, Argyle) were the over-budget ones.",
+  "Every wine record rests on the search tool's summary of the result pages, not raw page text; the summary names the Binwise list among its results but does not tie each line to one URL, so nothing reaches high confidence except the house's own tasting menu page. Confirm each bottle and price on the printed list on shift.",
+  "Formats are mostly unstated: several low figures ($25 La Crema, $30 Chalk Hill, $50 Bethel Heights, $65 Bergstrom) look like glass or half bottle prices rather than bottles at a Grand Award house; the format is written as unknown, not guessed.",
+  "Diamond Creek: the snippet gives $220 for 'Diamond Creek varieties' with no bottling (Gravelly Meadow, Red Rock Terrace, Volcanic Hill) and no vintage.",
+  "Harlan Estate is a vertical per Wine Spectator 2021, but no vintages or prices were found. Opus One vintages 2011, 2014, 2015, 2016 were found with no prices. Caymus: no vintages or prices.",
+  "Not found in any snippet: Screaming Eagle, Promontory, Spottswoode, Williams Selyem, Littorai, Aubert, Turley, any Walla Walla Syrah, any New Zealand wine, any Australian wine on the New Orleans list, any Chilean wine. Absence from a snippet is not absence from the list.",
+  "The Washington lines (Sixto Moxee 2013 $75, Waterbrook Reserve 2013 $52) and Catena Malbec $35 may come from a 2017 PDF on neworleans-food.com whose restaurant is not named in the snippet; held at low confidence.",
+  "Brennan's of Houston is a separate restaurant: its 2020 half price list (Houston Chronicle) and its 2022 wine list (getbento PDF) surfaced repeatedly and are recorded only as not this restaurant, never for the pack.",
+  "Glass list conflict: Argyle Brut Willamette Valley 2022 $15, Peter Michael L'Esprit des Pavots 2014 Coravin $60.00 and Drouhin Vaudon Chablis $23.00 appear on the house's own Cocktails & Wine By The Glass page, which the guide (p49) calls older than the Binwise glass list of 26 September. Whether any is still poured is unknown.",
+  "Cellar size: Wine Spectator listing figures of 3,635 selections and 19,415 bottles sit beside the house's 'over 14,000 bottles' and a cellar tour page's '15,000 bottles' and 'nearly 1400 selections'; the figures are of different dates and none is dated in the snippet.",
+  "No half bottle from the new world was found; the five 375 ml halves found are Champagne and Trento.",
+  "Chappellet Mountain Cuvée is printed as 2024, which is very young for a Napa red in October 2026; confirm the vintage on the list.",
+  "No pairing guidance from the house was found for any of these bottles; pairings for the Codex must be written as expert reasoning, marked as such."
+ ]
+}

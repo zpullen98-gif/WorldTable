@@ -1,0 +1,673 @@
+{
+ "lens": "champagne",
+ "note": "Search tool returns a summarised snippet, not raw page text; quoted text is the snippet as returned.",
+ "searches": [
+  {
+   "query": "Brennan's New Orleans wine list Champagne binwise",
+   "kept": 3
+  },
+  {
+   "query": "\"Brennan's\" New Orleans \"Bubbles at Brennan's\" Champagne rosé Pommery Mirabelle",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans Champagne sabering Friday Roost bar",
+   "kept": 0
+  },
+  {
+   "query": "hub.binwise.com brennans-new-orleans Krug Dom Perignon Salon Champagne bottle price",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans \"Champagne House of the South\" nearly 100 Champagnes grower",
+   "kept": 1
+  },
+  {
+   "query": "Champagne Bureau USA Top 10 Restaurants Bars Brennan's New Orleans",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans tableside Champagne cart",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans Champagne Experience Champagne Day event Tock Pommery",
+   "kept": 1
+  },
+  {
+   "query": "\"Brennan's\" New Orleans Krug OR Billecart OR Taittinger OR Delamotte Champagne happy hour bottle",
+   "kept": 1
+  },
+  {
+   "query": "brennansneworleans.com bubbles at brennans happy hour Taittinger \"La Française\" Billecart-Salmon magnum Krug Grande Cuvée",
+   "kept": 3
+  },
+  {
+   "query": "\"Bubbles & Breakfast At Brennan's\" Billecart Champagne",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans wine list Champagne rosé Ruinart OR \"Dom Pérignon\" OR Cristal OR Salon OR \"Bollinger\"",
+   "kept": 0
+  },
+  {
+   "query": "brennansneworleans.com cocktails wine by the glass \"half bottles\" \"large format\" Krug Champagne price",
+   "kept": 5
+  },
+  {
+   "query": "Wine Spectator Brennan's New Orleans Grand Award Champagne strengths selections",
+   "kept": 3
+  },
+  {
+   "query": "Brennan's New Orleans 1959 vintage Champagne cellar carriage house 17,000 bottles",
+   "kept": 1
+  },
+  {
+   "query": "Billecart-Salmon \"Brennan's 80th Anniversary\" Sous Bois",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans \"Champagne Half Bottles\" OR \"Champagne Large Format\" Dom Pérignon Ruinart Veuve Clicquot magnum",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans \"Bubbles at Brennan's\" menu rosé bottle Schramsberg Mirabelle Pommery Brut Rosé price champagne cocktail",
+   "kept": 3
+  }
+ ],
+ "records": [
+  {
+   "kind": "wine",
+   "menu": "Cocktails & Wine By The Glass (house drinks page)",
+   "section": "Champagne Half Bottles",
+   "name": "Krug 'Grand Cuvée' Brut NV",
+   "producer": "Krug",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "half bottle",
+   "prices": [
+    {
+     "printed": "$305.00",
+     "what": "half bottle (375 ml), list price"
+    }
+   ],
+   "description_facts": [
+    "Listed under Champagne Half Bottles on the house drinks page",
+    "The house page spells it 'Grand Cuvée' (the producer spells it Grande Cuvée)"
+   ],
+   "snippet": "## Champagne Half Bottles\nKrug 'Grand Cuvée' Brut NV is priced at $305.00",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "site": "brennansneworleans.com",
+   "confidence": "high",
+   "already_in_pack": false,
+   "query": "brennansneworleans.com cocktails wine by the glass \"half bottles\" \"large format\" Krug Champagne price"
+  },
+  {
+   "kind": "wine",
+   "menu": "Cocktails & Wine By The Glass (house drinks page)",
+   "section": "Champagne Large Format",
+   "name": "Billecart-Salmon 'Brennan's 80th Anniversary' Brut Sous Bois Champagne FR NV (Oak Aged)",
+   "producer": "Billecart-Salmon",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$350.00",
+     "what": "1.5L magnum"
+    }
+   ],
+   "description_facts": [
+    "A Brennan's 80th Anniversary bottling (the house opened 1946, so 2026 is the 80th year)",
+    "Brut Sous Bois, oak aged, as printed",
+    "Search summary adds (third-party retail pages, not the house): Sous Bois is vinified entirely in oak from equal parts Pinot Meunier, Pinot Noir and Chardonnay"
+   ],
+   "snippet": "The large format champagnes available include Billecart-Salmon 'Brennan's 80th Anniversary' Brut Sous Bois Champagne FR NV (Oak Aged) 1.5L Magnum for $350.00",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "site": "brennansneworleans.com",
+   "confidence": "high",
+   "already_in_pack": false,
+   "query": "brennansneworleans.com cocktails wine by the glass \"half bottles\" \"large format\" Krug Champagne price"
+  },
+  {
+   "kind": "wine",
+   "menu": "Cocktails & Wine By The Glass (house drinks page)",
+   "section": "Champagne Large Format",
+   "name": "Bollinger \"Special Cuvée\" Brut NV",
+   "producer": "Bollinger",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$450.00",
+     "what": "1.5 L magnum"
+    }
+   ],
+   "description_facts": [
+    "Listed under Champagne Large Format as a 1.5 L magnum"
+   ],
+   "snippet": "Bollinger \"Special Cuvée\" Brut NV 1.5 L Magnum for $450.00",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "site": "brennansneworleans.com",
+   "confidence": "high",
+   "already_in_pack": false,
+   "query": "brennansneworleans.com cocktails wine by the glass \"half bottles\" \"large format\" Krug Champagne price"
+  },
+  {
+   "kind": "wine",
+   "menu": "Cocktails & Wine By The Glass (house drinks page)",
+   "section": "Champagne Large Format",
+   "name": "Piper-Heidsieck 'Cuvée' Brut NV",
+   "producer": "Piper-Heidsieck",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$275.00",
+     "what": "1.5L magnum"
+    }
+   ],
+   "description_facts": [
+    "Listed under Champagne Large Format as a 1.5L magnum"
+   ],
+   "snippet": "Piper-Heidsieck 'Cuvée' Brut NV 1.5L Magnum for $275.00",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "site": "brennansneworleans.com",
+   "confidence": "high",
+   "already_in_pack": false,
+   "query": "brennansneworleans.com cocktails wine by the glass \"half bottles\" \"large format\" Krug Champagne price"
+  },
+  {
+   "kind": "wine",
+   "menu": "Cocktails & Wine By The Glass (house drinks page)",
+   "section": "Champagne Large Format",
+   "name": "Taittinger \"La Francaise\" Brut NV",
+   "producer": "Taittinger",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "double magnum (3L)",
+   "prices": [
+    {
+     "printed": "$650.00",
+     "what": "3L double magnum"
+    }
+   ],
+   "description_facts": [
+    "Listed under Champagne Large Format as a 3L double magnum"
+   ],
+   "snippet": "Taittinger \"La Francaise\" Brut NV 3L Double Magnum for $650.00",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "site": "brennansneworleans.com",
+   "confidence": "high",
+   "already_in_pack": false,
+   "query": "brennansneworleans.com cocktails wine by the glass \"half bottles\" \"large format\" Krug Champagne price"
+  },
+  {
+   "kind": "wine",
+   "menu": "Bubbles at Brennan's happy hour",
+   "section": "Champagne bottles (discounted)",
+   "name": "Taittinger 'La Française' Brut Champagne NV",
+   "producer": "Taittinger",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$115",
+     "what": "bottle, regular price (\"Originally\")"
+    },
+    {
+     "printed": "$65.00",
+     "what": "bottle, Bubbles at Brennan's happy hour price"
+    }
+   ],
+   "description_facts": [
+    "Offered as a deeply discounted bottle at Bubbles at Brennan's",
+    "Happy hour runs in the Roost Bar + Courtyard"
+   ],
+   "snippet": "Taittinger 'La Française' Brut Champagne NV (Originally $115, offered at $65.00)",
+   "url": "https://www.brennansneworleans.com/events/bubbles-at-brennans-happy-hour",
+   "site": "brennansneworleans.com",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "seen_on_page_date": "not dated; the summary named the events page and the menu page together, so which page carries the price is uncertain",
+   "query": "brennansneworleans.com bubbles at brennans happy hour Taittinger \"La Française\" Billecart-Salmon magnum Krug Grande Cuvée"
+  },
+  {
+   "kind": "wine",
+   "menu": "Bubbles at Brennan's happy hour",
+   "section": "Champagne bottles (discounted)",
+   "name": "Billecart-Salmon Brut Réserve Champagne NV",
+   "producer": "Billecart-Salmon",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$220",
+     "what": "1.5L magnum, regular price (\"Originally\")"
+    },
+    {
+     "printed": "$140.00",
+     "what": "1.5L magnum, happy hour price"
+    }
+   ],
+   "description_facts": [
+    "Offered as a 1.5L magnum at Bubbles at Brennan's"
+   ],
+   "snippet": "Billecart-Salmon Brut Réserve Champagne NV 1.5L Magnum (Originally $220, offered at $140.00)",
+   "url": "https://www.brennansneworleans.com/events/bubbles-at-brennans-happy-hour",
+   "site": "brennansneworleans.com",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "query": "brennansneworleans.com bubbles at brennans happy hour Taittinger \"La Française\" Billecart-Salmon magnum Krug Grande Cuvée"
+  },
+  {
+   "kind": "wine",
+   "menu": "Bubbles at Brennan's happy hour",
+   "section": "Rosé bottles (discounted)",
+   "name": "Mirabelle Brut Rosé North Coast NV",
+   "producer": "Schramsberg (Mirabelle label; producer identity from one search result and the house cellar dossier, not this snippet)",
+   "vintage": "NV",
+   "region": "North Coast, California",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$80",
+     "what": "bottle, regular price (\"originally\")"
+    },
+    {
+     "printed": "$50",
+     "what": "bottle, happy hour price"
+    }
+   ],
+   "description_facts": [
+    "Sparkling rosé from California's North Coast, not Champagne",
+    "Bottom of the Bubbles rosé range ($50 matches the guide's 'rosé bottles $50 to $125')"
+   ],
+   "snippet": "The Mirabelle Brut Rosé from North Coast NV is originally priced at $80, but costs $50 during happy hour.",
+   "url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+   "site": "brennansneworleans.com",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "query": "Brennan's New Orleans \"Bubbles at Brennan's\" menu rosé bottle Schramsberg Mirabelle Pommery Brut Rosé price champagne cocktail"
+  },
+  {
+   "kind": "wine",
+   "menu": "Bubbles at Brennan's happy hour",
+   "section": "Rosé bottles (discounted)",
+   "name": "Charles Heidsieck Brut Rosé Reserve Champagne NV",
+   "producer": "Charles Heidsieck",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$225",
+     "what": "bottle, regular price (\"originally\")"
+    },
+    {
+     "printed": "$145",
+     "what": "bottle, happy hour price"
+    }
+   ],
+   "description_facts": [
+    "Rosé Champagne on the Bubbles at Brennan's list"
+   ],
+   "snippet": "The menu also features other champagnes including Charles Heidsieck Brut Rosé Reserve Champagne NV (originally $225, happy hour price $145)",
+   "url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+   "site": "brennansneworleans.com",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "query": "Brennan's New Orleans \"Bubbles at Brennan's\" menu rosé bottle Schramsberg Mirabelle Pommery Brut Rosé price champagne cocktail"
+  },
+  {
+   "kind": "wine",
+   "menu": "Roost Bar + Courtyard / wine list (unspecified)",
+   "section": "Champagne",
+   "name": "Dom Pérignon Brut Champagne 2015",
+   "producer": "Dom Pérignon (Moët & Chandon)",
+   "vintage": "2015",
+   "region": "Champagne, France",
+   "format": "bottle (format not stated)",
+   "prices": [],
+   "description_facts": [
+    "Named among Brennan's Champagne offerings in a search summary; no price in the snippet"
+   ],
+   "snippet": "Brennan's New Orleans offers champagne in their Roost Bar + Courtyard, including a Billecart-Salmon Brut Réserve Champagne NV in 1.5L Magnum format and Dom Pérignon Brut Champagne 2015.",
+   "url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+   "site": "brennansneworleans.com",
+   "confidence": "low",
+   "already_in_pack": false,
+   "query": "Brennan's New Orleans \"Champagne Half Bottles\" OR \"Champagne Large Format\" Dom Pérignon Ruinart Veuve Clicquot magnum"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise, inferred)",
+   "section": "Champagne Large Format",
+   "name": "Dom Ruinart Blanc de Blancs Brut",
+   "producer": "Ruinart",
+   "vintage": "not printed in snippet",
+   "region": "Champagne, France",
+   "format": "magnum",
+   "prices": [],
+   "description_facts": [
+    "Blanc de Blancs prestige cuvée in 1.5L magnum, per search summary; no vintage or price in the snippet"
+   ],
+   "snippet": "Brennan's wine list includes champagne in magnum sizes, such as Dom Ruinart Blanc de Blancs Brut in 1.5L Magnum",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "confidence": "low",
+   "already_in_pack": false,
+   "query": "Brennan's New Orleans \"Champagne Half Bottles\" OR \"Champagne Large Format\" Dom Pérignon Ruinart Veuve Clicquot magnum"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (unspecified)",
+   "section": "Champagne",
+   "name": "Krug Grande Cuvée 170ème Édition Champagne",
+   "producer": "Krug",
+   "vintage": "NV (170th Edition)",
+   "region": "Champagne, France",
+   "format": "bottle (format not stated)",
+   "prices": [],
+   "description_facts": [
+    "Named among Brennan's selections in a search summary; a later search of the house page did not find it on the current menu",
+    "May be the same wine as the Krug half bottle above (edition not printed there)"
+   ],
+   "snippet": "Additionally, selections like a Krug Grande Cuvée 170ème Édition Champagne are among the offerings",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "site": "brennansneworleans.com",
+   "confidence": "low",
+   "already_in_pack": false,
+   "query": "\"Brennan's\" New Orleans Krug OR Billecart OR Taittinger OR Delamotte Champagne happy hour bottle"
+  },
+  {
+   "kind": "wine",
+   "menu": "By the glass (older list)",
+   "section": "Champagne by the glass",
+   "name": "Delamotte \"Brennan's Label\" Brut Champagne NV",
+   "producer": "Delamotte",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "glass",
+   "prices": [
+    {
+     "printed": "$20",
+     "what": "glass"
+    }
+   ],
+   "description_facts": [
+    "A custom Brennan's label by Delamotte, 'one of the oldest champagne houses in France' (q9 summary)",
+    "Likely superseded: the September 2026 list's house Champagne is Brennan's Essential by Piper-Heidsieck"
+   ],
+   "snippet": "The wine list includes Champagne selections by the glass such as Delamotte \"Brennan's Label\" Brut Champagne NV for $20, Waris-Larmandier \"Racines de Trois\" Brut Champagne NV for $26, and Jean Vesselle Rosé de Saignée Brut Champagne NV for $28.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (summary also drew on winespectator.com)",
+   "confidence": "low",
+   "already_in_pack": false,
+   "seen_on_page_date": "undated; likely an older list",
+   "query": "Brennan's New Orleans wine list Champagne binwise"
+  },
+  {
+   "kind": "wine",
+   "menu": "By the glass (older list)",
+   "section": "Champagne by the glass",
+   "name": "Waris-Larmandier \"Racines de Trois\" Brut Champagne NV",
+   "producer": "Waris-Larmandier (grower)",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "glass",
+   "prices": [
+    {
+     "printed": "$26",
+     "what": "glass"
+    }
+   ],
+   "description_facts": [
+    "Grower Champagne once poured by the glass; not on the September 2026 by-the-glass list"
+   ],
+   "snippet": "Waris-Larmandier \"Racines de Trois\" Brut Champagne NV for $26",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "confidence": "low",
+   "already_in_pack": false,
+   "seen_on_page_date": "undated; likely an older list",
+   "query": "Brennan's New Orleans wine list Champagne binwise"
+  },
+  {
+   "kind": "wine",
+   "menu": "By the glass (older list)",
+   "section": "Champagne by the glass",
+   "name": "Jean Vesselle Rosé de Saignée Brut Champagne NV",
+   "producer": "Jean Vesselle (grower, Bouzy)",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "glass",
+   "prices": [
+    {
+     "printed": "$28",
+     "what": "glass"
+    }
+   ],
+   "description_facts": [
+    "Rosé de saignée Champagne once poured by the glass; not on the September 2026 by-the-glass list",
+    "Bouzy village is general knowledge, not in the snippet"
+   ],
+   "snippet": "Jean Vesselle Rosé de Saignée Brut Champagne NV for $28.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "confidence": "low",
+   "already_in_pack": false,
+   "seen_on_page_date": "undated; likely an older list",
+   "query": "Brennan's New Orleans wine list Champagne binwise"
+  },
+  {
+   "kind": "wine",
+   "menu": "Personal collection (large format)",
+   "section": "Large format vintage Champagne",
+   "name": "Delamotte Blanc de Blancs Brut 1970",
+   "producer": "Delamotte",
+   "vintage": "1970",
+   "region": "Champagne, France",
+   "format": "large format (size not stated)",
+   "prices": [],
+   "description_facts": [
+    "One end of the range of large format Champagnes in Brennan's personal collection"
+   ],
+   "snippet": "Large format Champagnes are part of Brennan's personal collection from Delamotte Blanc de Blancs Brut, 1970 to Dom Pérignon \"Luminous\" Brut Rosé, 2000.",
+   "url": "https://www.winespectator.com/articles/grand-awards-2021-brennans-new-orleans-083121",
+   "site": "winespectator.com",
+   "confidence": "low",
+   "already_in_pack": false,
+   "seen_on_page_date": "2021 article",
+   "query": "Wine Spectator Brennan's New Orleans Grand Award Champagne strengths selections"
+  },
+  {
+   "kind": "wine",
+   "menu": "Personal collection (large format)",
+   "section": "Large format vintage Champagne",
+   "name": "Dom Pérignon \"Luminous\" Brut Rosé 2000",
+   "producer": "Dom Pérignon",
+   "vintage": "2000",
+   "region": "Champagne, France",
+   "format": "large format (size not stated)",
+   "prices": [],
+   "description_facts": [
+    "Other end of the large format range in Brennan's personal collection"
+   ],
+   "snippet": "Large format Champagnes are part of Brennan's personal collection from Delamotte Blanc de Blancs Brut, 1970 to Dom Pérignon \"Luminous\" Brut Rosé, 2000.",
+   "url": "https://www.winespectator.com/articles/grand-awards-2021-brennans-new-orleans-083121",
+   "site": "winespectator.com",
+   "confidence": "low",
+   "already_in_pack": false,
+   "seen_on_page_date": "2021 article",
+   "query": "Wine Spectator Brennan's New Orleans Grand Award Champagne strengths selections"
+  },
+  {
+   "kind": "wine",
+   "menu": "Sabering class",
+   "section": "Event",
+   "name": "Pommery Brut Royal Champagne NV",
+   "producer": "Pommery",
+   "vintage": "NV",
+   "region": "Champagne, France",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$120 + tax (gratuity included)",
+     "what": "sabering class ticket, includes sabering one bottle"
+    },
+    {
+     "printed": "$20 + tax (gratuity included)",
+     "what": "spectator ticket with one glass of Champagne"
+    }
+   ],
+   "description_facts": [
+    "The bottle guests learn to saber with at the International Champagne Day class, Friday 23 October 2026, classes 9:00 to 10:00 AM or 12:00 to 1:00 PM",
+    "Guided by Brennan's 'Master of Sabrage'",
+    "Limited breakfast/lunch menu follows both classes"
+   ],
+   "snippet": "The Sabering Class Ticket costs $120 + tax (gratuity included) and includes one class ticket for a guest to learn to saber with a bottle of Pommery Brut Royal Champagne NV.",
+   "url": "https://www.exploretock.com/brennans/event/621293",
+   "site": "exploretock.com",
+   "confidence": "high",
+   "already_in_pack": false,
+   "seen_on_page_date": "event dated 23 October 2026",
+   "query": "Brennan's New Orleans Champagne Experience Champagne Day event Tock Pommery"
+  },
+  {
+   "kind": "cocktail",
+   "menu": "Bubbles at Brennan's happy hour",
+   "section": "Champagne cocktails",
+   "name": "Brennan's Champagne Cocktail",
+   "prices": [
+    {
+     "printed": "$15",
+     "what": "cocktail (happy hour menu as summarised)"
+    }
+   ],
+   "description_facts": [
+    "Piper-Heidsieck 1785 Brut Champagne, Angostura Bitters and a Demerara Sugar Cube",
+    "Conflicts with the pack's $20 price; may be a happy hour price or an older menu"
+   ],
+   "snippet": "The Brennan's Champagne Cocktail is made with Piper-Heidsieck 1785 Brut Champagne, Angostura Bitters, and a Demerara Sugar Cube, priced at $15.",
+   "url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+   "site": "brennansneworleans.com",
+   "confidence": "medium",
+   "already_in_pack": true,
+   "query": "Brennan's New Orleans \"Bubbles at Brennan's\" menu rosé bottle Schramsberg Mirabelle Pommery Brut Rosé price champagne cocktail"
+  },
+  {
+   "kind": "fact",
+   "menu": "Champagne programme",
+   "section": "facts",
+   "name": "Brennan's calls itself the 'Champagne House of the South' and its cellar keeps nearly 100 selections of Champagne and sparkling wine.",
+   "description_facts": [
+    "Brennan's calls itself the 'Champagne House of the South' and its cellar keeps nearly 100 selections of Champagne and sparkling wine."
+   ],
+   "snippet": "As the self-proclaimed \"Champagne House of the South,\" Brennan's cellar keeps nearly 100 selections of Champagne and sparkling wines.",
+   "url": "https://www.brennansneworleans.com/roost-bar/",
+   "site": "brennansneworleans.com",
+   "confidence": "high",
+   "already_in_pack": false,
+   "prices": [],
+   "query": "Brennan's New Orleans \"Champagne House of the South\" nearly 100 Champagnes grower"
+  },
+  {
+   "kind": "fact",
+   "menu": "Champagne programme",
+   "section": "facts",
+   "name": "Vintage Champagne selections go back to 1959.",
+   "description_facts": [
+    "Vintage Champagne selections go back to 1959."
+   ],
+   "snippet": "Brennan's has vintage Champagne selections that go back to 1959.",
+   "url": "https://www.winespectator.com/articles/new-orleans-restaurants-with-spiced-up-wine-lists",
+   "site": "winespectator.com",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "prices": [],
+   "query": "Brennan's New Orleans 1959 vintage Champagne cellar carriage house 17,000 bottles"
+  },
+  {
+   "kind": "fact",
+   "menu": "Champagne programme",
+   "section": "facts",
+   "name": "Named to the Bureau du Champagne USA fifth annual Top 10 Bars and Restaurants for Enjoying Champagne (2026 list), citing a tableside Champagne cart, a weekly sabering tradition and a Champagne Day experience.",
+   "description_facts": [
+    "Named to the Bureau du Champagne USA fifth annual Top 10 Bars and Restaurants for Enjoying Champagne (2026 list), citing a tableside Champagne cart, a weekly sabering tradition and a Champagne Day experience."
+   ],
+   "snippet": "Guests can enjoy an extensive Champagne selection, a tableside Champagne cart, a weekly sabering tradition and a memorable Champagne Day experience",
+   "url": "https://www.wboc.com/online_features/press_releases/bureau-du-champagne-usa-announces-america-s-top-10-bars-and-restaurants-for-enjoying-champagne/article_18382f9a-071d-52a7-9532-958aa7d68985.html",
+   "site": "wboc.com",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "prices": [],
+   "query": "Champagne Bureau USA Top 10 Restaurants Bars Brennan's New Orleans"
+  },
+  {
+   "kind": "fact",
+   "menu": "Champagne programme",
+   "section": "facts",
+   "name": "Bubbles at Brennan's: Roost Bar + Courtyard, Thursday to Monday 2 to 6 pm, Friday 9 am to 6 pm, Champagne sabering Fridays at 5 pm on the patio. Hours differ by source (the guide says Monday to Friday 2 to 6; an older source says Monday to Thursday).",
+   "description_facts": [
+    "Bubbles at Brennan's: Roost Bar + Courtyard, Thursday to Monday 2 to 6 pm, Friday 9 am to 6 pm, Champagne sabering Fridays at 5 pm on the patio. Hours differ by source (the guide says Monday to Friday 2 to 6; an older source says Monday to Thursday)."
+   ],
+   "snippet": "The happy hour runs Thursday-Monday, 2-6 pm, with Friday hours from 9 am - 6 pm, plus Champagne Sabering Fridays at 5 pm.",
+   "url": "https://www.brennansneworleans.com/events/bubbles-at-brennans-happy-hour",
+   "site": "brennansneworleans.com",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "prices": [],
+   "query": "brennansneworleans.com bubbles at brennans happy hour Taittinger \"La Française\" Billecart-Salmon magnum Krug Grande Cuvée"
+  },
+  {
+   "kind": "fact",
+   "menu": "Champagne programme",
+   "section": "facts",
+   "name": "Wine Spectator lists 3,635 selections and 19,415 bottles, Grand Award 2021 to 2025, strengths including Champagne.",
+   "description_facts": [
+    "Wine Spectator lists 3,635 selections and 19,415 bottles, Grand Award 2021 to 2025, strengths including Champagne."
+   ],
+   "snippet": "Brennan's wine strengths include Burgundy, Bordeaux, California, Rhône, Champagne, and wines from France and Italy, with 3,635 selections and an inventory of 19,415 bottles.",
+   "url": "https://www.winespectator.com/restaurant-awards/detail/9/name/brennan-s-restaurant",
+   "site": "winespectator.com",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "prices": [],
+   "query": "Wine Spectator Brennan's New Orleans Grand Award Champagne strengths selections"
+  },
+  {
+   "kind": "fact",
+   "menu": "Champagne programme",
+   "section": "facts",
+   "name": "Past event: Bubbles & Breakfast with Billecart-Salmon, Saturday 22 March, Upstairs Havana Room, four courses with tasting pours (Cured Salmon on Brioche, Endive and Arugula Salad, Eggs Hussarde, Strawberries with White Chocolate and Truffle), $175 per person inclusive.",
+   "description_facts": [
+    "Past event: Bubbles & Breakfast with Billecart-Salmon, Saturday 22 March, Upstairs Havana Room, four courses with tasting pours (Cured Salmon on Brioche, Endive and Arugula Salad, Eggs Hussarde, Strawberries with White Chocolate and Truffle), $175 per person inclusive."
+   ],
+   "snippet": "The meal consisted of 4 courses paired with tasting pours of Billecart-Salmon Champagne, including: Cured Salmon on Brioche, an Endive and Arugula Salad, Eggs Hussarde (a Brennan's original), and Strawberries with White Chocolate and Truffle. The cost was $175 per person",
+   "url": "https://www.brennansneworleans.com/events/billecartchampagne",
+   "site": "brennansneworleans.com",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "prices": [],
+   "query": "\"Bubbles & Breakfast At Brennan's\" Billecart Champagne"
+  }
+ ],
+ "gaps": [
+  "The full Binwise bottle list was never read: no search returned its Champagne section line by line, so the nearly 100 Champagne and sparkling selections are mostly unnamed here.",
+  "No grower Champagne on the current list confirmed; Waris-Larmandier and Jean Vesselle appear only on an undated, likely older by-the-glass list.",
+  "No standard 750 ml bottle prices for Krug, Dom Pérignon, Cristal, Salon, Bollinger, Ruinart or Billecart found; searches for Cristal and Salon at Brennan's returned nothing.",
+  "Dom Pérignon 2015 and Dom Ruinart magnum carry no price or section in the snippets; Dom Ruinart vintage unknown.",
+  "Whether Krug Grande Cuvée 170ème Édition is still listed, and whether the $305 half bottle is that edition, is unconfirmed.",
+  "The Pommery rosé at the top of the guide's 'rosé bottles $50 to $125' range was not found by name or price; Charles Heidsieck Brut Rosé at $145 happy hour exceeds that range, so the Bubbles menu may have changed.",
+  "Bubbles at Brennan's days conflict across sources (Thursday to Monday vs Monday to Friday vs Monday to Thursday); confirm at lineup.",
+  "Brennan's Champagne Cocktail: $15 with Piper-Heidsieck 1785 in one summary vs $20 in the pack; confirm which is current and whether $15 is a happy hour price.",
+  "Nothing new found on Coravin: no snippet mentioned Coravin or the Rare Brut 2012 by-the-glass pour beyond what the guide holds.",
+  "Search results are model summaries of pages, not raw page text; every price should be re-read from the live page before it enters the pack.",
+  "Piper-Heidsieck 'Cuvée' Brut magnum may be the producer's Cuvée Brut (also known as 1785); not confirmed."
+ ]
+}

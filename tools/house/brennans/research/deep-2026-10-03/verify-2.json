@@ -1,0 +1,914 @@
+{
+ "date": "2026-10-03",
+ "refuter_queries_run": 14,
+ "budget_note": "The session web search budget (200 calls) ran out after 14 refuter queries; every record not touched by those queries is marked unverifiable, not held.",
+ "method": "Held means a fresh, differently worded search snippet (or the house server guide read from the live lists on 26 September 2026) confirms the item at the printed vintage and price at Brennan's New Orleans. Refuted means wrong restaurant, superseded on the live list, or out of date. Unverifiable means one source only.",
+ "counts": {
+  "held": 28,
+  "unverifiable": 63,
+  "refuted": 9
+ },
+ "verdicts": [
+  {
+   "lens": "france-other",
+   "index": 0,
+   "name": "Château Clarke Listrac-Médoc 2010",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. Magnum, vintage and price match. The fresh snippet also shows a Cos 2015 magnum at $600, not in the sweep. Fresh query: \"Brennan's New Orleans wine list Cos d'Estournel Montrose Saint-Estèphe magnum Château Clarke\".",
+   "evidence_snippet": "Brennan's wine list includes Château Clarke Listrac-Médoc Bordeaux 1.5L Magnum 2010 for $450, Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2014 for $1200, and Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2015 for $600. The search results also show that Château Montrose Saint-Estèphe 2ème Cru Classé 2018 is listed at $440.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 1,
+   "name": "Château Cos d'Estournel 2014",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. Magnum, vintage and price match. The fresh snippet also shows a Cos 2015 magnum at $600, not in the sweep. Fresh query: \"Brennan's New Orleans wine list Cos d'Estournel Montrose Saint-Estèphe magnum Château Clarke\".",
+   "evidence_snippet": "Brennan's wine list includes Château Clarke Listrac-Médoc Bordeaux 1.5L Magnum 2010 for $450, Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2014 for $1200, and Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2015 for $600. The search results also show that Château Montrose Saint-Estèphe 2ème Cru Classé 2018 is listed at $440.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 2,
+   "name": "Château Cos d'Estournel (vertical in 750 ml, 1989 to 2020)",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries). The fresh Bordeaux snippet named only the Cos 2014 and 2015 magnums; the 1989 at $635 and the 1989 to 2020 vertical were not echoed.",
+   "evidence_snippet": "Château Clarke Listrac-Médoc Bordeaux 1.5L Magnum 2010 is priced at $450, and Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2014 is priced at $1200 on Brennan's wine list. Additionally, the restaurant also carries multiple vintages of Château Cos d'Estournel in standard bottles ranging from 1989 to 2020, with prices varying by vintage. | Château Montrose Saint-Estèphe 2018: $440 ... Château Cos d'Estournel 1989: $635 ... I was unable to find Château Ferrière Margaux 2016 with a specific price in the search results, though the wine list appears to include Château Ferrière.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 3,
+   "name": "Château Montrose Saint-Estèphe 2ème Cru Classé 2018",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. Montrose 2018 at $440 matches. Fresh query: \"Brennan's New Orleans wine list Cos d'Estournel Montrose Saint-Estèphe magnum Château Clarke\".",
+   "evidence_snippet": "Brennan's wine list includes Château Clarke Listrac-Médoc Bordeaux 1.5L Magnum 2010 for $450, Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2014 for $1200, and Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2015 for $600. The search results also show that Château Montrose Saint-Estèphe 2ème Cru Classé 2018 is listed at $440.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 4,
+   "name": "Château Ferrière Margaux 3ème Cru Classé 2016",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The Brennan's New Orleans wine list includes classified Bordeaux wines from the regions you mentioned, such as Château Ferriere Margaux 3ème Cru Classé 2016, Château Léoville-Las Cases Saint-Julien 2ème Cru Classé 2020, Château Lynch-Bages Pauillac 5th Cru Classé 2020, Château Montrose Saint-Estèphe 2ème Cru Classé 2018, and Château Mouton-Rothschild Pauillac 1er Cru Classé 2004.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 5,
+   "name": "Château Léoville-Las Cases Saint-Julien 2ème Cru Classé 2020",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The Brennan's New Orleans wine list includes classified Bordeaux wines from the regions you mentioned, such as Château Ferriere Margaux 3ème Cru Classé 2016, Château Léoville-Las Cases Saint-Julien 2ème Cru Classé 2020, Château Lynch-Bages Pauillac 5th Cru Classé 2020, Château Montrose Saint-Estèphe 2ème Cru Classé 2018, and Château Mouton-Rothschild Pauillac 1er Cru Classé 2004.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 6,
+   "name": "Château Lynch-Bages Pauillac 5ème Cru Classé 2020",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The Brennan's New Orleans wine list includes classified Bordeaux wines from the regions you mentioned, such as Château Ferriere Margaux 3ème Cru Classé 2016, Château Léoville-Las Cases Saint-Julien 2ème Cru Classé 2020, Château Lynch-Bages Pauillac 5th Cru Classé 2020, Château Montrose Saint-Estèphe 2ème Cru Classé 2018, and Château Mouton-Rothschild Pauillac 1er Cru Classé 2004.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 7,
+   "name": "Château Mouton-Rothschild Pauillac 1er Cru Classé 2004",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The Brennan's New Orleans wine list includes classified Bordeaux wines from the regions you mentioned, such as Château Ferriere Margaux 3ème Cru Classé 2016, Château Léoville-Las Cases Saint-Julien 2ème Cru Classé 2020, Château Lynch-Bages Pauillac 5th Cru Classé 2020, Château Montrose Saint-Estèphe 2ème Cru Classé 2018, and Château Mouton-Rothschild Pauillac 1er Cru Classé 2004.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 8,
+   "name": "Château Gombaude-Guillot Pomerol 2011",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The wine list includes several Pomerol and Saint-Émilion Châteaux with various vintage years and magnum (1.5L) formats, including selections like Château Gombaude-Guillot Pomerol from 2011 in magnum format priced at $500, and Château La Lagune Haut-Médoc in magnum format from 2004 priced at $500.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 9,
+   "name": "Château La Lagune Haut-Médoc 2004",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The wine list includes several Pomerol and Saint-Émilion Châteaux with various vintage years and magnum (1.5L) formats, including selections like Château Gombaude-Guillot Pomerol from 2011 in magnum format priced at $500, and Château La Lagune Haut-Médoc in magnum format from 2004 priced at $500.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 10,
+   "name": "Moulin d'Issan Bordeaux Supérieur 2021",
+   "verdict": "refuted",
+   "why": "Refuted as the current pour: the house guide, reading the live Binwise glass list on 26 September 2026, prints the 2023 vintage at the same $16; the 2021 comes from the older website glass page (the guide says that page lists an older, different glass list). Keep the wine and price, change the vintage to 2023.",
+   "evidence_snippet": "Moulin d’Issan Bordeaux Supérieur 2023 $16 glass",
+   "url": "/home/user/worldtable/tools/house/brennans/guide.txt (house server guide, menus read 26 September 2026) line 2476"
+  },
+  {
+   "lens": "france-other",
+   "index": 11,
+   "name": "Domaine du Pegau 'Cuvée Laurence' Châteauneuf-du-Pape 2012",
+   "verdict": "unverifiable",
+   "why": "A fresh query on the Pegau cuvée and Brennan's found no snippet tying it to the Brennan's list; the sweep's Binwise summary remains the only source. Fresh query: \"\"Brennan's\" wine list Domaine du Pegau \"Cuvée Laurence\" magnum\".",
+   "evidence_snippet": "However, I did not find specific information about this wine being listed on Brennan's wine list. The search results show general information about the producer and the wine, as well as availability through various wine retailers, but no specific references to Brennan's restaurant or their wine list inventory.",
+   "url": "https://www.wine-searcher.com/find/dom+du+pegau+chateauneuf+pape+cuvee+lawrence+rhone+france"
+  },
+  {
+   "lens": "france-other",
+   "index": 12,
+   "name": "Domaine du Pegau 'Cuvée da Capo' Châteauneuf-du-Pape 2010",
+   "verdict": "unverifiable",
+   "why": "A fresh query on the Pegau cuvée and Brennan's found no snippet tying it to the Brennan's list; the sweep's Binwise summary remains the only source. Fresh query: \"\"Brennan's\" wine list Domaine du Pegau \"Cuvée Laurence\" magnum\".",
+   "evidence_snippet": "However, I did not find specific information about this wine being listed on Brennan's wine list. The search results show general information about the producer and the wine, as well as availability through various wine retailers, but no specific references to Brennan's restaurant or their wine list inventory.",
+   "url": "https://www.wine-searcher.com/find/dom+du+pegau+chateauneuf+pape+cuvee+lawrence+rhone+france"
+  },
+  {
+   "lens": "france-other",
+   "index": 13,
+   "name": "Château de Beaucastel Châteauneuf-du-Pape 2022",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Domaine du Pegau \"Cuvée Laurence\" Châteauneuf-du-Pape available as a 1.5L Magnum from 2012 (priced at $720); Domaine Pegau, Cuvée de Capo 2010 (priced at $700) ... Château de Beaucastel 2022 vintage available on the list",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 14,
+   "name": "Château de Beaucastel Châteauneuf-du-Pape (Œnothèque release) 1998",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. All four Œnothèque vintages and prices match exactly. Fresh query: \"Brennan's New Orleans wine list Beaucastel Œnothèque Châteauneuf-du-Pape binwise\".",
+   "evidence_snippet": "The restaurant carries multiple vintages of Château de Beaucastel Œnothèque Châteauneuf-du-Pape, including the 1998 vintage ($420), 2000 vintage ($350), 2006 vintage ($300), and 2007 vintage ($275).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 15,
+   "name": "Château de Beaucastel Châteauneuf-du-Pape (Œnothèque release) 2000",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. All four Œnothèque vintages and prices match exactly. Fresh query: \"Brennan's New Orleans wine list Beaucastel Œnothèque Châteauneuf-du-Pape binwise\".",
+   "evidence_snippet": "The restaurant carries multiple vintages of Château de Beaucastel Œnothèque Châteauneuf-du-Pape, including the 1998 vintage ($420), 2000 vintage ($350), 2006 vintage ($300), and 2007 vintage ($275).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 16,
+   "name": "Château de Beaucastel Châteauneuf-du-Pape (Œnothèque release) 2006",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. All four Œnothèque vintages and prices match exactly. Fresh query: \"Brennan's New Orleans wine list Beaucastel Œnothèque Châteauneuf-du-Pape binwise\".",
+   "evidence_snippet": "The restaurant carries multiple vintages of Château de Beaucastel Œnothèque Châteauneuf-du-Pape, including the 1998 vintage ($420), 2000 vintage ($350), 2006 vintage ($300), and 2007 vintage ($275).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 17,
+   "name": "Château de Beaucastel Châteauneuf-du-Pape (Œnothèque release) 2007",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. All four Œnothèque vintages and prices match exactly. Fresh query: \"Brennan's New Orleans wine list Beaucastel Œnothèque Châteauneuf-du-Pape binwise\".",
+   "evidence_snippet": "The restaurant carries multiple vintages of Château de Beaucastel Œnothèque Châteauneuf-du-Pape, including the 1998 vintage ($420), 2000 vintage ($350), 2006 vintage ($300), and 2007 vintage ($275).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 18,
+   "name": "Château de Beaucastel 'Hommage à Jacques Perrin' Châteauneuf-du-Pape 2021",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's New Orleans wine list includes several Château de Beaucastel options, including older vintages from their Œnothèque collection (1998 at $420, 2000 at $350, 2006 at $300, 2007 at $275) and the \"Hommage Jacques Perrin\" 2021 vintage at $630.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 19,
+   "name": "Paul Jaboulet Aîné Hermitage 'La Chapelle' 1999",
+   "verdict": "refuted",
+   "why": "Refuted as a current listing: the only snippet describes a half-price list from the era when Brennan's held Grand Awards from 1983 to 2005, before Hurricane Katrina destroyed the cellar (a fresh Bordeaux query snippet: \"Brennan's lost its Grand Award winning cellar to the aftermath of Hurricane Katrina, but rebuilt the program and reclaimed the award in 2021\"). The \"two-page list of wines at half price\" wording is also the Houston Chronicle's description of Brennan's of Houston. Either way the $143 1999 is not a current Brennan's New Orleans bottle. Fresh query: \"Wine Spectator wine restaurants for Rhône fans Brennan's Jaboulet La Chapelle 1999\".",
+   "evidence_snippet": "Brennan's in New Orleans features a wine list where each diner gets a two-page list of wines featured at half price, including Paul Jaboulet Aîné Hermitage La Chapelle 1999 ($143). The restaurant won Wine Spectator Grand Awards from 1983 to 2005.",
+   "url": "https://www.winespectator.com/articles/wine-restaurants-for-rhone-fans"
+  },
+  {
+   "lens": "france-other",
+   "index": 20,
+   "name": "Edmond et Anne Vatan 'Clos la Néore' Sancerre 2021",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Sancerre: Edmond et Anne Vatan \"Clos la Néore\" Sancerre in 1.5L Magnum format (2021) for $920, and Lucien Crochet Sancerre in 1.5L Magnum (2024) for $185. Vouvray: Domaine Huet Pétillant Vouvray (2019) for $90 and Domaine Huet \"Le Mont\" Vouvray Demi-Sec (2023) for $60",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 21,
+   "name": "Lucien Crochet Sancerre 2024",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Sancerre: Edmond et Anne Vatan \"Clos la Néore\" Sancerre in 1.5L Magnum format (2021) for $920, and Lucien Crochet Sancerre in 1.5L Magnum (2024) for $185. Vouvray: Domaine Huet Pétillant Vouvray (2019) for $90 and Domaine Huet \"Le Mont\" Vouvray Demi-Sec (2023) for $60",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 22,
+   "name": "Domaine Huet Pétillant Vouvray 2019",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Sancerre: Edmond et Anne Vatan \"Clos la Néore\" Sancerre in 1.5L Magnum format (2021) for $920, and Lucien Crochet Sancerre in 1.5L Magnum (2024) for $185. Vouvray: Domaine Huet Pétillant Vouvray (2019) for $90 and Domaine Huet \"Le Mont\" Vouvray Demi-Sec (2023) for $60",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 23,
+   "name": "Domaine Huet 'Le Mont' Vouvray Demi-Sec 2023",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Sancerre: Edmond et Anne Vatan \"Clos la Néore\" Sancerre in 1.5L Magnum format (2021) for $920, and Lucien Crochet Sancerre in 1.5L Magnum (2024) for $185. Vouvray: Domaine Huet Pétillant Vouvray (2019) for $90 and Domaine Huet \"Le Mont\" Vouvray Demi-Sec (2023) for $60",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 24,
+   "name": "Trimbach 'Clos Sainte Hune' Riesling 2009",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's carries Domaine F.E. Trimbach \"Clos Sainte Hune\" Riesling Alsace in a 1.5L Magnum 2009 format for $985. Additionally, they stock F.E. Trimbach \"Cuvée Frédéric Emile\" Riesling Alsace in a 1.5L Magnum 2014 for $500.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 25,
+   "name": "Trimbach 'Cuvée Frédéric Emile' Riesling 2014",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's carries Domaine F.E. Trimbach \"Clos Sainte Hune\" Riesling Alsace in a 1.5L Magnum 2009 format for $985. Additionally, they stock F.E. Trimbach \"Cuvée Frédéric Emile\" Riesling Alsace in a 1.5L Magnum 2014 for $500.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 26,
+   "name": "French focus of the program",
+   "verdict": "held",
+   "why": "Held: the fresh snippets repeat the French focus (Wine Spectator: \"The program's main focuses are Burgundy and other French wine regions, namely Bordeaux and the Rhône Valley\", returned again on the Napa query) and the 17,000 bottle figure appears in the earlier verified pass (gap-fill-4.md). Fresh query: \"Brennan's New Orleans wine list Cos d'Estournel Montrose Saint-Estèphe magnum Château Clarke\".",
+   "evidence_snippet": "Brennan's wine list includes Château Clarke Listrac-Médoc Bordeaux 1.5L Magnum 2010 for $450, Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2014 for $1200, and Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2015 for $600. The search results also show that Château Montrose Saint-Estèphe 2ème Cru Classé 2018 is listed at $440.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "france-other",
+   "index": 27,
+   "name": "List sections",
+   "verdict": "held",
+   "why": "Held in part: the earlier verified pass carries \"nearly 1,400 labels\" and \"more than 15,000 bottles\"; the fresh Binwise snippets show magnum (large format) and Rhône sections. Half-bottle and by-the-glass sections are named by the house guide. The exact section titles were not quoted afresh.",
+   "evidence_snippet": "dozens of verticals (Denis Mortet, Ramonet, Harlan); the printed cellar figures are \"more than 15,000 bottles\", \"nearly 1,400 labels\", a \"17,000-bottle inventory\"",
+   "url": "/home/user/worldtable/tools/house/brennans/research/gap-fill-4.md line 2 (earlier verified pass, Wine Spectator)"
+  },
+  {
+   "lens": "france-other",
+   "index": 28,
+   "name": "Size counts disagree by source and year",
+   "verdict": "held",
+   "why": "Held: the fresh snippet repeats \"approximately 3,000 selections\" and another returned \"over 14,000 bottles\"; the disagreement the record describes is real. Fresh query: \"Brennan's New Orleans wine list Cos d'Estournel Montrose Saint-Estèphe magnum Château Clarke\".",
+   "evidence_snippet": "Brennan's wine list includes Château Clarke Listrac-Médoc Bordeaux 1.5L Magnum 2010 for $450, Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2014 for $1200, and Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2015 for $600. The search results also show that Château Montrose Saint-Estèphe 2ème Cru Classé 2018 is listed at $440.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 0,
+   "name": "Massolino \"Vigna Rionda\" Serralunga d'Alba Barolo 2004",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's carries multiple wines from the producers you mentioned, including Massolino \"Vigna Rionda\" Serralunga d'Alba Barolo in a 1.5L Magnum from 2004 priced at $860, Oddero \"Gallina\" Barbaresco in a 1.5L Magnum from 2005 for $580, Oddero Barolo in a 1.5L Magnum from 2021 for $375, Oddero \"Bussia - Vigna Mondoca\" Riserva Monforte d'Alba Barolo in magnums from various years (2008-2011) ranging from $475-$485, and Gaja Barbaresco from 2020 priced at $400.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 1,
+   "name": "Oddero \"Gallina\" Barbaresco 2005",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's carries multiple wines from the producers you mentioned, including Massolino \"Vigna Rionda\" Serralunga d'Alba Barolo in a 1.5L Magnum from 2004 priced at $860, Oddero \"Gallina\" Barbaresco in a 1.5L Magnum from 2005 for $580, Oddero Barolo in a 1.5L Magnum from 2021 for $375, Oddero \"Bussia - Vigna Mondoca\" Riserva Monforte d'Alba Barolo in magnums from various years (2008-2011) ranging from $475-$485, and Gaja Barbaresco from 2020 priced at $400.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 2,
+   "name": "Oddero Barolo 2021",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's carries multiple wines from the producers you mentioned, including Massolino \"Vigna Rionda\" Serralunga d'Alba Barolo in a 1.5L Magnum from 2004 priced at $860, Oddero \"Gallina\" Barbaresco in a 1.5L Magnum from 2005 for $580, Oddero Barolo in a 1.5L Magnum from 2021 for $375, Oddero \"Bussia - Vigna Mondoca\" Riserva Monforte d'Alba Barolo in magnums from various years (2008-2011) ranging from $475-$485, and Gaja Barbaresco from 2020 priced at $400.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 3,
+   "name": "Oddero \"Bussia - Vigna Mondoca\" Riserva Monforte d'Alba Barolo (several vintages) 2008 to 2011 (vintages within the range not itemised)",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's carries multiple wines from the producers you mentioned, including Massolino \"Vigna Rionda\" Serralunga d'Alba Barolo in a 1.5L Magnum from 2004 priced at $860, Oddero \"Gallina\" Barbaresco in a 1.5L Magnum from 2005 for $580, Oddero Barolo in a 1.5L Magnum from 2021 for $375, Oddero \"Bussia - Vigna Mondoca\" Riserva Monforte d'Alba Barolo in magnums from various years (2008-2011) ranging from $475-$485, and Gaja Barbaresco from 2020 priced at $400.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 4,
+   "name": "Gaja Barbaresco 2020",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's carries multiple wines from the producers you mentioned, including Massolino \"Vigna Rionda\" Serralunga d'Alba Barolo in a 1.5L Magnum from 2004 priced at $860, Oddero \"Gallina\" Barbaresco in a 1.5L Magnum from 2005 for $580, Oddero Barolo in a 1.5L Magnum from 2021 for $375, Oddero \"Bussia - Vigna Mondoca\" Riserva Monforte d'Alba Barolo in magnums from various years (2008-2011) ranging from $475-$485, and Gaja Barbaresco from 2020 priced at $400.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 5,
+   "name": "Luigi Giordano \"Montestefano\" Barbaresco",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries). Low confidence: no vintage or price was ever given, and no fresh snippet named the wine.",
+   "evidence_snippet": "The search returned Brennan's New Orleans wine list from hub.binwise.com, which includes several Barolo and Barbaresco wines from Piedmont, such as selections from producers like Oddero, Gaja, and Massolino. ... Multiple Barbaresco options like Luigi Giordano \"Montestefano\" Barbaresco and Oddero \"Gallina\" Barbaresco ... Barolo selections including Massolino \"Vigna Rionda\" Serralunga d'Alba Barolo and Oddero Barolo",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 6,
+   "name": "Fuglini Brunello di Montalcino Riserva (as printed; probably Fuligni) 2013",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. Magnum, vintage and price match; the list spells it \"Fuglini\" again, so the probable Fuligni misspelling is the list's own. Fresh query: \"Brennan's New Orleans wine list Brunello Poggio di Sotto magnum Fuligni Sesti\".",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Poggio di Sotto Brunello di Montalcino in 1.5L Magnum 2019 for $2,100, Sesti Brunello di Montalcino in 1.5L Magnum 2019 for $600, and Fuglini Brunello di Montalcino Riserva in 1.5L Magnum 2013 for $825.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 7,
+   "name": "Le Ragnaie Brunello di Montalcino 2021",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The Binwise database shows several Brunello di Montalcino offerings on Brennan's wine list, including: Fuglini Brunello di Montalcino Riserva Tuscany • 1.5L Magnum 2013 priced at $825; Le Ragnaie Brunello di Montalcino • 1.5L Magnum 2021 priced at $375; Pieve Santa Restituta Gaja Brunello di Montalcino • 1.5L Magnum 2019 priced at $650; Poggio di Sotto Brunello di Montalcino • 1.5L Magnum 2019 priced at $2,100; Sesti Brunello di Montalcino • 1.5L Magnum 2019 priced at $600",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 8,
+   "name": "Pieve Santa Restituta Gaja Brunello di Montalcino 2019",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The Binwise database shows several Brunello di Montalcino offerings on Brennan's wine list, including: Fuglini Brunello di Montalcino Riserva Tuscany • 1.5L Magnum 2013 priced at $825; Le Ragnaie Brunello di Montalcino • 1.5L Magnum 2021 priced at $375; Pieve Santa Restituta Gaja Brunello di Montalcino • 1.5L Magnum 2019 priced at $650; Poggio di Sotto Brunello di Montalcino • 1.5L Magnum 2019 priced at $2,100; Sesti Brunello di Montalcino • 1.5L Magnum 2019 priced at $600",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 9,
+   "name": "Poggio di Sotto Brunello di Montalcino 2019",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. Magnum, vintage and price match; the list spells it \"Fuglini\" again, so the probable Fuligni misspelling is the list's own. Fresh query: \"Brennan's New Orleans wine list Brunello Poggio di Sotto magnum Fuligni Sesti\".",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Poggio di Sotto Brunello di Montalcino in 1.5L Magnum 2019 for $2,100, Sesti Brunello di Montalcino in 1.5L Magnum 2019 for $600, and Fuglini Brunello di Montalcino Riserva in 1.5L Magnum 2013 for $825.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 10,
+   "name": "Sesti Brunello di Montalcino 2019",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. Magnum, vintage and price match; the list spells it \"Fuglini\" again, so the probable Fuligni misspelling is the list's own. Fresh query: \"Brennan's New Orleans wine list Brunello Poggio di Sotto magnum Fuligni Sesti\".",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Poggio di Sotto Brunello di Montalcino in 1.5L Magnum 2019 for $2,100, Sesti Brunello di Montalcino in 1.5L Magnum 2019 for $600, and Fuglini Brunello di Montalcino Riserva in 1.5L Magnum 2013 for $825.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 11,
+   "name": "Keller \"PIUS\" Riesling Auslese (as summarised) 2022",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. Keller \"PIUS\" 2022 at $245 matches. Caution: Keller's Pius is normally a dry Riesling, so the \"Auslese\" label may be the list's own error; quote the list as printed and confirm with the sommelier. Fresh query: \"Brennan's New Orleans wine list Keller Riesling Rheinhessen Dönhoff Schloss Gobelsburg\".",
+   "evidence_snippet": "Keller \"PIUS\" Riesling Auslese Rheinhessen 2022 is listed for $245 on Brennan's wine list. Dönhoff \"Niederhäuser Hermannshöhle\" Riesling Goldkapsel Auslese Nahe 2023 is priced at $145, and Dönhoff \"Oberhäuser Brücke\" Riesling Goldkapsel Auslese Nahe 2023 is priced at $135. Schloss Gobelsburg Erste Lage \"Lamm\" Grüner Veltliner Kamptal 2021 is listed for $105, and Schloss Gobelsburg \"Heiligenstein\" Riesling Kamptal 2021 is priced at $95.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 12,
+   "name": "Dönhoff Riesling (selections, unnamed)",
+   "verdict": "held",
+   "why": "Held and sharpened: the fresh Binwise snippet names the Dönhoff selections: Niederhäuser Hermannshöhle Riesling Goldkapsel Auslese Nahe 2023 at $145 and Oberhäuser Brücke Riesling Goldkapsel Auslese Nahe 2023 at $135. Replace the unnamed record with these two. Fresh query: \"Brennan's New Orleans wine list Keller Riesling Rheinhessen Dönhoff Schloss Gobelsburg\".",
+   "evidence_snippet": "Keller \"PIUS\" Riesling Auslese Rheinhessen 2022 is listed for $245 on Brennan's wine list. Dönhoff \"Niederhäuser Hermannshöhle\" Riesling Goldkapsel Auslese Nahe 2023 is priced at $145, and Dönhoff \"Oberhäuser Brücke\" Riesling Goldkapsel Auslese Nahe 2023 is priced at $135. Schloss Gobelsburg Erste Lage \"Lamm\" Grüner Veltliner Kamptal 2021 is listed for $105, and Schloss Gobelsburg \"Heiligenstein\" Riesling Kamptal 2021 is priced at $95.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 13,
+   "name": "Dr. Hermann \"Erdener Prälat\" Riesling Auslese 2014",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's New Orleans wine list on Binwise includes German Rieslings such as Keller \"PIUS\" Riesling Auslese from Rheinhessen (2022, $245), Dönhoff selections, and Dr. Hermann \"Erdener Prälat\" Riesling Auslese from Mosel (2014, $80). For Austria, they offer Schloss Gobelsburg Erste Lage \"Lamm\" Grüner Veltliner from Kamptal (2021, $105) and Schloss Gobelsburg \"Heiligenstein\" Riesling from Kamptal (2021, $95).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 14,
+   "name": "Schloss Gobelsburg Erste Lage \"Lamm\" Grüner Veltliner 2021",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. Vintage 2021 and price match. Fresh query: \"Brennan's New Orleans wine list Keller Riesling Rheinhessen Dönhoff Schloss Gobelsburg\".",
+   "evidence_snippet": "Keller \"PIUS\" Riesling Auslese Rheinhessen 2022 is listed for $245 on Brennan's wine list. Dönhoff \"Niederhäuser Hermannshöhle\" Riesling Goldkapsel Auslese Nahe 2023 is priced at $145, and Dönhoff \"Oberhäuser Brücke\" Riesling Goldkapsel Auslese Nahe 2023 is priced at $135. Schloss Gobelsburg Erste Lage \"Lamm\" Grüner Veltliner Kamptal 2021 is listed for $105, and Schloss Gobelsburg \"Heiligenstein\" Riesling Kamptal 2021 is priced at $95.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 15,
+   "name": "Schloss Gobelsburg \"Heiligenstein\" Riesling 2021",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. Vintage 2021 and price match. Fresh query: \"Brennan's New Orleans wine list Keller Riesling Rheinhessen Dönhoff Schloss Gobelsburg\".",
+   "evidence_snippet": "Keller \"PIUS\" Riesling Auslese Rheinhessen 2022 is listed for $245 on Brennan's wine list. Dönhoff \"Niederhäuser Hermannshöhle\" Riesling Goldkapsel Auslese Nahe 2023 is priced at $145, and Dönhoff \"Oberhäuser Brücke\" Riesling Goldkapsel Auslese Nahe 2023 is priced at $135. Schloss Gobelsburg Erste Lage \"Lamm\" Grüner Veltliner Kamptal 2021 is listed for $105, and Schloss Gobelsburg \"Heiligenstein\" Riesling Kamptal 2021 is priced at $95.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 16,
+   "name": "Blandy's Sercial Madeira 1940",
+   "verdict": "held",
+   "why": "Held: a fresh query returns the house's own dessert menu PDF with the same wines, vintages and prices under Fortified & Dessert Wines. Fresh query: \"Brennan's New Orleans dessert menu Blandy's Sercial 1940 D'Oliveiras Boal 1968\".",
+   "evidence_snippet": "Brennan's dessert menu lists Blandy's Sercial Madeira 1940 for $65 and D'Oliveiras Boal Madeira 1968 for $70 under their Brandy and Fortified & Dessert Wines section.",
+   "url": "https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf"
+  },
+  {
+   "lens": "old-world",
+   "index": 17,
+   "name": "D'Oliveiras Boal Madeira 1968",
+   "verdict": "held",
+   "why": "Held: a fresh query returns the house's own dessert menu PDF with the same wines, vintages and prices under Fortified & Dessert Wines. Fresh query: \"Brennan's New Orleans dessert menu Blandy's Sercial 1940 D'Oliveiras Boal 1968\".",
+   "evidence_snippet": "Brennan's dessert menu lists Blandy's Sercial Madeira 1940 for $65 and D'Oliveiras Boal Madeira 1968 for $70 under their Brandy and Fortified & Dessert Wines section.",
+   "url": "https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf"
+  },
+  {
+   "lens": "old-world",
+   "index": 18,
+   "name": "Rare Wine Co. \"NY Malmsey\" Madeira",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries). The fresh query on the house dessert PDF confirmed its Fortified & Dessert section and the two vintage Madeiras, but its snippet did not echo this line.",
+   "evidence_snippet": "Blandy's Sercial Madeira 1940: $65; Rare Wine Co. \"NY Malmsey\" Madeira: $14; Ramos Pinto Porto 30 yr Tawny: $25; El Maestro Sierra Pedro Ximenez Sherry: $11; Château Les Justices Sauternes 2014: $18. This information comes from Brennan's dessert menu PDF, which lists their fortified and dessert wine selections with prices.",
+   "url": "https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf"
+  },
+  {
+   "lens": "old-world",
+   "index": 19,
+   "name": "Ramos Pinto Porto 30 yr Tawny",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries). The fresh query on the house dessert PDF confirmed its Fortified & Dessert section and the two vintage Madeiras, but its snippet did not echo this line.",
+   "evidence_snippet": "Blandy's Sercial Madeira 1940: $65; Rare Wine Co. \"NY Malmsey\" Madeira: $14; Ramos Pinto Porto 30 yr Tawny: $25; El Maestro Sierra Pedro Ximenez Sherry: $11; Château Les Justices Sauternes 2014: $18. This information comes from Brennan's dessert menu PDF, which lists their fortified and dessert wine selections with prices.",
+   "url": "https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf"
+  },
+  {
+   "lens": "old-world",
+   "index": 20,
+   "name": "Quinta Noval Porto 10yr Tawny",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries). The fresh query on the house dessert PDF confirmed its Fortified & Dessert section and the two vintage Madeiras, but its snippet did not echo this line.",
+   "evidence_snippet": "D'Oliveiras Boal Madeira 1968 is priced at $70 per glass, and Quinta Noval Porto 10yr Tawny is $12 per glass. The search results show these are listed under the \"Fortified & Dessert Wines\" section of Brennan's dessert menu. However, I did not find pricing information for Tokaji or Banyuls dessert wines on the menu in these search results. | The dessert wine selection includes Blandy's Sercial Madeira 1940 ($65), D'Oliveiras Boal Madeira 1968 ($70), Rare Wine Co. \"NY Malmsey\" Madeira ($14), Ramos Pinto Porto 30 yr Tawny ($25), Quinta Noval Porto 10yr Tawny ($12), and El Maestro Sierra Pedro Ximenez Sherry ($11).",
+   "url": "https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf"
+  },
+  {
+   "lens": "old-world",
+   "index": 21,
+   "name": "El Maestro Sierra Pedro Ximenez Sherry",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries). The fresh query on the house dessert PDF confirmed its Fortified & Dessert section and the two vintage Madeiras, but its snippet did not echo this line.",
+   "evidence_snippet": "Blandy's Sercial Madeira 1940: $65; Rare Wine Co. \"NY Malmsey\" Madeira: $14; Ramos Pinto Porto 30 yr Tawny: $25; El Maestro Sierra Pedro Ximenez Sherry: $11; Château Les Justices Sauternes 2014: $18. This information comes from Brennan's dessert menu PDF, which lists their fortified and dessert wine selections with prices.",
+   "url": "https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf"
+  },
+  {
+   "lens": "old-world",
+   "index": 22,
+   "name": "Château Les Justices Sauternes 2014",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries). The fresh query on the house dessert PDF confirmed its Fortified & Dessert section and the two vintage Madeiras, but its snippet did not echo this line.",
+   "evidence_snippet": "Blandy's Sercial Madeira 1940: $65; Rare Wine Co. \"NY Malmsey\" Madeira: $14; Ramos Pinto Porto 30 yr Tawny: $25; El Maestro Sierra Pedro Ximenez Sherry: $11; Château Les Justices Sauternes 2014: $18. This information comes from Brennan's dessert menu PDF, which lists their fortified and dessert wine selections with prices. | Brennan's New Orleans offers fortified and dessert wines including Madeira, Port, Sherry, and Sauternes, such as Blandy's Sercial Madeira 1940, Rare Wine Co. \"NY Malmsey\" Madeira, Ramos Pinto Porto 30 yr Tawny, El Maestro Sierra Pedro Ximenez Sherry, and Château Les Justices Sauternes 2014.",
+   "url": "https://www.brennansneworleans.com/uploads/pages/bno-dessert.pdf"
+  },
+  {
+   "lens": "old-world",
+   "index": 23,
+   "name": "Size and shape of the list",
+   "verdict": "held",
+   "why": "Held: the fresh snippets repeat \"the wine list now boasts over 14,000 bottles\" and returned the Winning Wines press release page (brennansneworleans.com/press-releases/winning-wines/). Fresh query: \"Brennan's New Orleans Napa Cabernet wine list Chappellet Mountain Cuvée Duckhorn Inglenook Rubicon\".",
+   "evidence_snippet": "The wine list includes Inglenook \"Rubicon\" Rutherford Napa from 2010 priced at $70, Chappellet \"Mountain Cuvée\" Napa Valley 2024 at $90, and Duckhorn Napa Valley 2022 at $90.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "old-world",
+   "index": 24,
+   "name": "Italian large formats and verticals",
+   "verdict": "held",
+   "why": "Held: the fresh Brunello snippet shows three Italian magnums (2013 and 2019) on the Binwise list and calls Italy \"one of the strengths of the program\", with \"special attention to boutique producers, verticals and large formats\". Fresh query: \"Brennan's New Orleans wine list Brunello Poggio di Sotto magnum Fuligni Sesti\".",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Poggio di Sotto Brunello di Montalcino in 1.5L Magnum 2019 for $2,100, Sesti Brunello di Montalcino in 1.5L Magnum 2019 for $600, and Fuglini Brunello di Montalcino Riserva in 1.5L Magnum 2013 for $825.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 0,
+   "name": "Inglenook \"Rubicon\" Rutherford Napa 2010",
+   "verdict": "held",
+   "why": "Held: the house guide lists the Inglenook Rubicon 2010 at $70 a glass from the live Binwise list, and a fresh Binwise query repeats \"Inglenook \\\"Rubicon\\\" Rutherford Napa from 2010 priced at $70\".",
+   "evidence_snippet": "Inglenook ‘Rubicon’ 2010 $70 glass",
+   "url": "/home/user/worldtable/tools/house/brennans/guide.txt (house server guide, menus read 26 September 2026) line 2490"
+  },
+  {
+   "lens": "new-world",
+   "index": 1,
+   "name": "Chappellet \"Mountain Cuvée\" Napa Valley 2024",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. Vintage and $90 match. Format still unknown: the $90 sits beside the $70 glass price of the Rubicon, so whether it is a glass or bottle price is not settled. Fresh query: \"Brennan's New Orleans Napa Cabernet wine list Chappellet Mountain Cuvée Duckhorn Inglenook Rubicon\".",
+   "evidence_snippet": "The wine list includes Inglenook \"Rubicon\" Rutherford Napa from 2010 priced at $70, Chappellet \"Mountain Cuvée\" Napa Valley 2024 at $90, and Duckhorn Napa Valley 2022 at $90.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 2,
+   "name": "Duckhorn Napa Valley 2022",
+   "verdict": "held",
+   "why": "Same Binwise list resummarised by a fresh, differently worded query, so it confirms the item, vintage and price as the house list prints them; it is not a second independent publisher. Vintage and $90 match. Format still unknown: the $90 sits beside the $70 glass price of the Rubicon, so whether it is a glass or bottle price is not settled. Fresh query: \"Brennan's New Orleans Napa Cabernet wine list Chappellet Mountain Cuvée Duckhorn Inglenook Rubicon\".",
+   "evidence_snippet": "The wine list includes Inglenook \"Rubicon\" Rutherford Napa from 2010 priced at $70, Chappellet \"Mountain Cuvée\" Napa Valley 2024 at $90, and Duckhorn Napa Valley 2022 at $90.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 3,
+   "name": "Diamond Creek (Diamond Mountain District, wine name not given)",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries). Low confidence and no fresh snippet.",
+   "evidence_snippet": "Brennan's wine list includes several Napa Valley Cabernet Sauvignons, such as Inglenook \"Rubicon\" Rutherford Napa (2010) for $70, Chappellet \"Mountain Cuvée\" Napa Valley (2024) for $90, Duckhorn Napa Valley (2022) for $90, and Diamond Creek varieties from Diamond Mountain District priced at $220.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 4,
+   "name": "Paul Hobbs Coombsville Napa Valley Cabernet Sauvignon 2021",
+   "verdict": "held",
+   "why": "Held: the house guide names Paul Hobbs Coombsville Cabernet Sauvignon 2021 as the dinner tasting course four pairing with the Rohan duck. No glass price is printed for it.",
+   "evidence_snippet": "WINE                           Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+   "url": "/home/user/worldtable/tools/house/brennans/guide.txt (house server guide, menus read 26 September 2026) line 327 (dinner tasting course four, Rohan duck)"
+  },
+  {
+   "lens": "new-world",
+   "index": 5,
+   "name": "Peter Michael 'L'Esprit des Pavots' Knights Valley 2014",
+   "verdict": "refuted",
+   "why": "Refuted as a current glass pour: the house guide, reading the live Binwise glass list on 26 September 2026, lists 20 glass wines and this is not among them; it names this wine as part of the older glass list on the website page. It was served; it is not on the list a server will be handed now.",
+   "evidence_snippet": "The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013), check the list you’re handed on shift.",
+   "url": "/home/user/worldtable/tools/house/brennans/guide.txt (house server guide, menus read 26 September 2026) lines 2701 to 2703, p49 Wine program"
+  },
+  {
+   "lens": "new-world",
+   "index": 6,
+   "name": "Bergstrom \"Reserve\" Willamette Valley Pinot Noir 2022",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's wine list includes Bergstrom \"Reserve\" Willamette Valley Pinot Noir from 2022 priced at $65. The search results from the Binwise wine list also show Bethel Heights Pinot Noir from Eola-Amity Hills (2022) at $50, and Ken Wright \"McCrone\" Yamhill-Carlton District from 2018 at $60, which are all Oregon Pinot Noirs on their list.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 7,
+   "name": "Bethel Heights Pinot Noir Eola-Amity Hills 2022",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's wine list includes Bergstrom \"Reserve\" Willamette Valley Pinot Noir from 2022 priced at $65. The search results from the Binwise wine list also show Bethel Heights Pinot Noir from Eola-Amity Hills (2022) at $50, and Ken Wright \"McCrone\" Yamhill-Carlton District from 2018 at $60, which are all Oregon Pinot Noirs on their list.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 8,
+   "name": "Ken Wright \"McCrone\" Yamhill-Carlton District 2018",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's wine list includes Bergstrom \"Reserve\" Willamette Valley Pinot Noir from 2022 priced at $65. The search results from the Binwise wine list also show Bethel Heights Pinot Noir from Eola-Amity Hills (2022) at $50, and Ken Wright \"McCrone\" Yamhill-Carlton District from 2018 at $60, which are all Oregon Pinot Noirs on their list.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 9,
+   "name": "Argyle Brut Willamette Valley 2022",
+   "verdict": "refuted",
+   "why": "Refuted as a current glass pour: the house guide's live Binwise glass list (26 September 2026) has three sparkling glasses, Brennan's Essential by Piper-Heidsieck Extra Brut NV $28, Pierre Sparr Brut Rosé Crémant d'Alsace NV $18 and Rare Brut 2012 (Coravin) $75, and no Argyle; the Argyle line comes from the older website glass page.",
+   "evidence_snippet": "The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013), check the list you’re handed on shift.",
+   "url": "/home/user/worldtable/tools/house/brennans/guide.txt (house server guide, menus read 26 September 2026) lines 2701 to 2703, p49 Wine program"
+  },
+  {
+   "lens": "new-world",
+   "index": 10,
+   "name": "Argyle Brut Willamette Valley US (second sighting) 2022",
+   "verdict": "refuted",
+   "why": "Refuted as a current glass pour: the house guide's live Binwise glass list (26 September 2026) has three sparkling glasses, Brennan's Essential by Piper-Heidsieck Extra Brut NV $28, Pierre Sparr Brut Rosé Crémant d'Alsace NV $18 and Rare Brut 2012 (Coravin) $75, and no Argyle; the Argyle line comes from the older website glass page.",
+   "evidence_snippet": "The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013), check the list you’re handed on shift.",
+   "url": "/home/user/worldtable/tools/house/brennans/guide.txt (house server guide, menus read 26 September 2026) lines 2701 to 2703, p49 Wine program"
+  },
+  {
+   "lens": "new-world",
+   "index": 11,
+   "name": "Chalk Hill Chardonnay Sonoma 2021",
+   "verdict": "unverifiable",
+   "why": "A fresh query found no snippet placing this wine on the Brennan's list; the low price ($25 to $30) is close to retail and may not be a list price at all. One weak source only. Fresh query: \"Brennan's New Orleans wine list Chalk Hill Chardonnay La Crema Pinot Noir Sonoma Coast price\".",
+   "evidence_snippet": "The search results show that Brennan's New Orleans offers Pinot Noir - Routestock Sonoma Coast CA 2024 for $17.00 by the glass. However, the search results don't show the Chalk Hill Chardonnay or La Crema Pinot Noir specifically on Brennan's New Orleans current wine list.",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/"
+  },
+  {
+   "lens": "new-world",
+   "index": 12,
+   "name": "Lioco \"Estero\" Russian River Valley 2022",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's New Orleans wine list includes a Chalk Hill Chardonnay Sonoma 2021 for $30 and a Lioco \"Estero\" Russian River Valley 2022 for $100",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 13,
+   "name": "Cellar size (two figures in circulation)",
+   "verdict": "unverifiable",
+   "why": "The fresh snippets give \"approximately 3,000 selections\" and \"over 14,000 bottles\"; neither repeats 3,635 selections or 19,415 bottles. One source only for those two figures. Fresh query: \"Brennan's New Orleans wine list Cos d'Estournel Montrose Saint-Estèphe magnum Château Clarke\".",
+   "evidence_snippet": "Brennan's wine list includes Château Clarke Listrac-Médoc Bordeaux 1.5L Magnum 2010 for $450, Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2014 for $1200, and Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2015 for $600. The search results also show that Château Montrose Saint-Estèphe 2ème Cru Classé 2018 is listed at $440.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 14,
+   "name": "Ridge Vineyards \"Lytton Springs\" Zinfandel Dry Creek Valley 2021",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The wine list includes Ridge Vineyards \"Lytton Springs\" Zinfandel Dry Creek Valley 2021 for $70.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 15,
+   "name": "Sixto \"Moxee Vineyard\" Columbia Valley 2013",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries). Low confidence and no fresh snippet.",
+   "evidence_snippet": "Brennan's wine list includes a Sixto \"Moxee Vineyard\" Columbia Valley wine from 2013 priced at $75. Additionally, their wine list features a Waterbrook Reserve from Columbia Valley, WA from 2013 priced at $52.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 16,
+   "name": "Waterbrook Reserve Columbia Valley, WA 2013",
+   "verdict": "unverifiable",
+   "why": "The source is a 2017 PDF on neworleans-food.com whose restaurant is not identified, nine years old; no fresh snippet ties it to Brennan's New Orleans. Fresh query: \"neworleans-food.com winelist10.18.17 wine list restaurant\".",
+   "evidence_snippet": "the specific URL format \"neworleans-food.com/winelist10.18.17\" doesn't appear in these results.",
+   "url": "https://www.neworleans.com/blog/post/strong-wine-programs-in-new-orleans/"
+  },
+  {
+   "lens": "new-world",
+   "index": 17,
+   "name": "Tribaut-Schloesser \"Origine\" Brut",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The wine list includes several 375ml half-bottle options, such as Tribaut-Schloesser \"Origine\" Brut for $50, Veuve Fourny et Fils Premier Cru Rosé Brut for $125, Laurent Perrier \"Harmony\" Demi Sec for $85, Nicolas Feuillatte \"Reserve\" Brut for $65, and Ferrari Brut Trento for $60.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 18,
+   "name": "Veuve Fourny et Fils Premier Cru Rosé Brut",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The wine list includes several 375ml half-bottle options, such as Tribaut-Schloesser \"Origine\" Brut for $50, Veuve Fourny et Fils Premier Cru Rosé Brut for $125, Laurent Perrier \"Harmony\" Demi Sec for $85, Nicolas Feuillatte \"Reserve\" Brut for $65, and Ferrari Brut Trento for $60.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 19,
+   "name": "Laurent Perrier \"Harmony\" Demi Sec",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The wine list includes several 375ml half-bottle options, such as Tribaut-Schloesser \"Origine\" Brut for $50, Veuve Fourny et Fils Premier Cru Rosé Brut for $125, Laurent Perrier \"Harmony\" Demi Sec for $85, Nicolas Feuillatte \"Reserve\" Brut for $65, and Ferrari Brut Trento for $60.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 20,
+   "name": "Nicolas Feuillatte \"Reserve\" Brut",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The wine list includes several 375ml half-bottle options, such as Tribaut-Schloesser \"Origine\" Brut for $50, Veuve Fourny et Fils Premier Cru Rosé Brut for $125, Laurent Perrier \"Harmony\" Demi Sec for $85, Nicolas Feuillatte \"Reserve\" Brut for $65, and Ferrari Brut Trento for $60.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 21,
+   "name": "Ferrari Brut Trento",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The wine list includes several 375ml half-bottle options, such as Tribaut-Schloesser \"Origine\" Brut for $50, Veuve Fourny et Fils Premier Cru Rosé Brut for $125, Laurent Perrier \"Harmony\" Demi Sec for $85, Nicolas Feuillatte \"Reserve\" Brut for $65, and Ferrari Brut Trento for $60.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 22,
+   "name": "Cellar and sparkling depth",
+   "verdict": "held",
+   "why": "Held: the earlier verified pass records the 15,000 bottle two-storey cellar and the \"Champagne House of the South\" with close to 100 Champagnes; the summer cellar tours page (brennansneworleans.com/events/summercellartours) appeared again in a fresh query.",
+   "evidence_snippet": "The house also keeps close to 100 Champagnes and calls itself the Champagne House of the South.",
+   "url": "/home/user/worldtable/tools/house/brennans/research/gap-fill-4.md line 181"
+  },
+  {
+   "lens": "new-world",
+   "index": 23,
+   "name": "Canopus \"De Sed\" Malbec Mendoza 2024",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's wine list includes Canopus \"De Sed\" Malbec from Mendoza, Argentina (2024) for $60. The search results also show that the restaurant carries Catena Zapata \"White Stones\" Chardonnay from Adrianna Vineyard in Mendoza (2021) for $310.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 24,
+   "name": "Catena Zapata \"White Stones\" Chardonnay Adrianna Vineyard 2021",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's wine list includes Canopus \"De Sed\" Malbec from Mendoza, Argentina (2024) for $60. The search results also show that the restaurant carries Catena Zapata \"White Stones\" Chardonnay from Adrianna Vineyard in Mendoza (2021) for $310.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 25,
+   "name": "Catena Malbec",
+   "verdict": "unverifiable",
+   "why": "The source is a 2017 PDF on neworleans-food.com whose restaurant is not identified, nine years old; no fresh snippet ties it to Brennan's New Orleans. Fresh query: \"neworleans-food.com winelist10.18.17 wine list restaurant\".",
+   "evidence_snippet": "the specific URL format \"neworleans-food.com/winelist10.18.17\" doesn't appear in these results.",
+   "url": "https://www.neworleans.com/blog/post/strong-wine-programs-in-new-orleans/"
+  },
+  {
+   "lens": "new-world",
+   "index": 26,
+   "name": "Opus One (vertical: 2011, 2014, 2015, 2016) 2011; 2014; 2015; 2016",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "The search results also show that Brennan's wine list features multiple Opus One Bordeaux Blend selections from Napa Valley, including 2011, 2014, 2015, and 2016 vintages, as well as various Caymus Cabernet Sauvignon selections.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 27,
+   "name": "Caymus Cabernet Sauvignon (several)",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries). Low confidence and no fresh snippet.",
+   "evidence_snippet": "The search results also show that Brennan's wine list features multiple Opus One Bordeaux Blend selections from Napa Valley, including 2011, 2014, 2015, and 2016 vintages, as well as various Caymus Cabernet Sauvignon selections.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 28,
+   "name": "Harlan Estate (vertical)",
+   "verdict": "held",
+   "why": "Held: the earlier verified pass (Wine Spectator) names Harlan among the dozens of verticals. No vintages or prices are known.",
+   "evidence_snippet": "dozens of verticals (Denis Mortet, Ramonet, Harlan); the printed cellar figures are \"more than 15,000 bottles\", \"nearly 1,400 labels\", a \"17,000-bottle inventory\"",
+   "url": "/home/user/worldtable/tools/house/brennans/research/gap-fill-4.md line 2 (earlier verified pass, Wine Spectator)"
+  },
+  {
+   "lens": "new-world",
+   "index": 29,
+   "name": "Grand Award 2021 profile",
+   "verdict": "held",
+   "why": "Held: a fresh snippet confirms the Grand Award was reclaimed in 2021 after Katrina and the Wine Spectator Grand Awards Class of 2021 article was returned; over 14,000 bottles is repeated. Fresh query: \"Brennan's New Orleans wine list Cos d'Estournel Montrose Saint-Estèphe magnum Château Clarke\".",
+   "evidence_snippet": "Brennan's wine list includes Château Clarke Listrac-Médoc Bordeaux 1.5L Magnum 2010 for $450, Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2014 for $1200, and Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2015 for $600. The search results also show that Château Montrose Saint-Estèphe 2ème Cru Classé 2018 is listed at $440.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 30,
+   "name": "Kistler \"Les Noisetiers\" Sonoma Coast 2022",
+   "verdict": "unverifiable",
+   "why": "Conflicting vintage: a fresh snippet names Kistler Les Noisetiers Sonoma Coast 2023, not 2022, and gives no price; the snippet may also blend in another restaurant's list (the link it returned is a Blvd wine list PDF). Fresh query: \"Brennan's New Orleans Kongsgaard \"The Judge\" Chardonnay wine list Kistler Les Noisetiers\".",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Kistler Les Noisetiers Sonoma Coast 2023, Kongsgaard Napa 2022, and Kongsgaard \"The Judge\" Napa 2023.",
+   "url": "https://media-cdn.getbento.com/accounts/de6c85e5381c94f81a2cdbf582ff1bc5/media/dDyJDivbQruzettG6eNQ_Blvd_wine_list_6.1.26.Formatting.pdf"
+  },
+  {
+   "lens": "new-world",
+   "index": 31,
+   "name": "Kongsgaard Napa Valley Chardonnay 2015",
+   "verdict": "unverifiable",
+   "why": "A fresh snippet names \"Kongsgaard Napa 2022\" rather than the 2015, 2016 and 2023 the sweep itemises, with no prices, and its returned link is another restaurant's list. Not confirmed. Fresh query: \"Brennan's New Orleans Kongsgaard \"The Judge\" Chardonnay wine list Kistler Les Noisetiers\".",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Kistler Les Noisetiers Sonoma Coast 2023, Kongsgaard Napa 2022, and Kongsgaard \"The Judge\" Napa 2023.",
+   "url": "https://media-cdn.getbento.com/accounts/de6c85e5381c94f81a2cdbf582ff1bc5/media/dDyJDivbQruzettG6eNQ_Blvd_wine_list_6.1.26.Formatting.pdf"
+  },
+  {
+   "lens": "new-world",
+   "index": 32,
+   "name": "Kongsgaard Napa Valley Chardonnay 2016",
+   "verdict": "unverifiable",
+   "why": "A fresh snippet names \"Kongsgaard Napa 2022\" rather than the 2015, 2016 and 2023 the sweep itemises, with no prices, and its returned link is another restaurant's list. Not confirmed. Fresh query: \"Brennan's New Orleans Kongsgaard \"The Judge\" Chardonnay wine list Kistler Les Noisetiers\".",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Kistler Les Noisetiers Sonoma Coast 2023, Kongsgaard Napa 2022, and Kongsgaard \"The Judge\" Napa 2023.",
+   "url": "https://media-cdn.getbento.com/accounts/de6c85e5381c94f81a2cdbf582ff1bc5/media/dDyJDivbQruzettG6eNQ_Blvd_wine_list_6.1.26.Formatting.pdf"
+  },
+  {
+   "lens": "new-world",
+   "index": 33,
+   "name": "Kongsgaard Napa Valley Chardonnay 2023",
+   "verdict": "unverifiable",
+   "why": "A fresh snippet names \"Kongsgaard Napa 2022\" rather than the 2015, 2016 and 2023 the sweep itemises, with no prices, and its returned link is another restaurant's list. Not confirmed. Fresh query: \"Brennan's New Orleans Kongsgaard \"The Judge\" Chardonnay wine list Kistler Les Noisetiers\".",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Kistler Les Noisetiers Sonoma Coast 2023, Kongsgaard Napa 2022, and Kongsgaard \"The Judge\" Napa 2023.",
+   "url": "https://media-cdn.getbento.com/accounts/de6c85e5381c94f81a2cdbf582ff1bc5/media/dDyJDivbQruzettG6eNQ_Blvd_wine_list_6.1.26.Formatting.pdf"
+  },
+  {
+   "lens": "new-world",
+   "index": 34,
+   "name": "Kongsgaard \"The Judge\" Chardonnay 2023",
+   "verdict": "unverifiable",
+   "why": "The 2023 vintage of The Judge is echoed by a fresh snippet, but with no price and with a link to another restaurant's list; the $950 stands on one source. Fresh query: \"Brennan's New Orleans Kongsgaard \"The Judge\" Chardonnay wine list Kistler Les Noisetiers\".",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Kistler Les Noisetiers Sonoma Coast 2023, Kongsgaard Napa 2022, and Kongsgaard \"The Judge\" Napa 2023.",
+   "url": "https://media-cdn.getbento.com/accounts/de6c85e5381c94f81a2cdbf582ff1bc5/media/dDyJDivbQruzettG6eNQ_Blvd_wine_list_6.1.26.Formatting.pdf"
+  },
+  {
+   "lens": "new-world",
+   "index": 35,
+   "name": "Kosta Browne \"Gap's Crown Vineyard\" Pinot Noir Sonoma Coast 2014",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Kosta Browne \"Gap's Crown Vineyard\" Pinot Noir Sonoma Coast 2014 priced at $165.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 36,
+   "name": "La Crema Pinot Noir Sonoma Coast 2023",
+   "verdict": "unverifiable",
+   "why": "A fresh query found no snippet placing this wine on the Brennan's list; the low price ($25 to $30) is close to retail and may not be a list price at all. One weak source only. Fresh query: \"Brennan's New Orleans wine list Chalk Hill Chardonnay La Crema Pinot Noir Sonoma Coast price\".",
+   "evidence_snippet": "The search results show that Brennan's New Orleans offers Pinot Noir - Routestock Sonoma Coast CA 2024 for $17.00 by the glass. However, the search results don't show the Chalk Hill Chardonnay or La Crema Pinot Noir specifically on Brennan's New Orleans current wine list.",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/"
+  },
+  {
+   "lens": "new-world",
+   "index": 37,
+   "name": "Bond \"Melbury\" Napa Valley 2014",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Bond \"Melbury\" Cabernet Sauvignon from Napa Valley 2014 (1.5L Magnum) priced at $1,800.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 38,
+   "name": "Quinta Essentia Chenin Blanc Stellenbosch 2016",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Quinta Essentia Chenin Blanc Stellenbosch 2016 priced at $80. Additionally, the wine list features several South African Chenin Blancs from other regions, including Sadie Family Wines \"Rotsbank\" Chenin Blanc Swartland 2023 ($225) and \"Skurfberg\" Chenin Blanc Citrusdal Mountain 2023 ($225).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 39,
+   "name": "Sadie Family Wines \"Rotsbank\" Chenin Blanc Swartland 2023",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Quinta Essentia Chenin Blanc Stellenbosch 2016 priced at $80. Additionally, the wine list features several South African Chenin Blancs from other regions, including Sadie Family Wines \"Rotsbank\" Chenin Blanc Swartland 2023 ($225) and \"Skurfberg\" Chenin Blanc Citrusdal Mountain 2023 ($225).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 40,
+   "name": "Sadie Family Wines \"Skurfberg\" Chenin Blanc Citrusdal Mountain 2023",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Quinta Essentia Chenin Blanc Stellenbosch 2016 priced at $80. Additionally, the wine list features several South African Chenin Blancs from other regions, including Sadie Family Wines \"Rotsbank\" Chenin Blanc Swartland 2023 ($225) and \"Skurfberg\" Chenin Blanc Citrusdal Mountain 2023 ($225).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 41,
+   "name": "Cakebread Sauvignon Blanc Napa Valley 2023; 2024",
+   "verdict": "unverifiable",
+   "why": "Single source only: the sweep snippet from https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html. Not re-confirmed by an independent snippet in this pass (the session web search budget ran out after 14 refuter queries).",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Cakebread Sauvignon Blanc from Napa Valley (2023 and 2024 vintages).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html"
+  },
+  {
+   "lens": "new-world",
+   "index": 42,
+   "name": "Joseph Drouhin 'Drouhin Vaudon' Chablis (older glass list)",
+   "verdict": "refuted",
+   "why": "Refuted as a current glass pour: the house guide, reading the live Binwise glass list on 26 September 2026, lists 20 glass wines and this is not among them; it names this wine as part of the older glass list on the website page. It was served; it is not on the list a server will be handed now.",
+   "evidence_snippet": "The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013), check the list you’re handed on shift.",
+   "url": "/home/user/worldtable/tools/house/brennans/guide.txt (house server guide, menus read 26 September 2026) lines 2701 to 2703, p49 Wine program"
+  },
+  {
+   "lens": "new-world",
+   "index": 43,
+   "name": "Peter Michael Les Pavots (Brennan's of Houston, not New Orleans) 2003",
+   "verdict": "refuted",
+   "why": "Wrong restaurant: the source is Brennan's of Houston (Houston Chronicle article on its half-price list, or the Brennan's of Houston wine list PDF), a separate restaurant. The sweep itself flags it. Do not carry it into the Brennan's New Orleans pack.",
+   "evidence_snippet": "Brennan's featured Peter Michael Les Pavots 2003 ($205) on their half-price wine list.",
+   "url": "https://www.houstonchronicle.com/life/article/Brennan-s-marks-down-varied-inventory-15296340.php"
+  },
+  {
+   "lens": "new-world",
+   "index": 44,
+   "name": "Kongsgaard Napa Valley Chardonnay 2013 (Brennan's of Houston half price list)",
+   "verdict": "refuted",
+   "why": "Wrong restaurant: the source is Brennan's of Houston (Houston Chronicle article on its half-price list, or the Brennan's of Houston wine list PDF), a separate restaurant. The sweep itself flags it. Do not carry it into the Brennan's New Orleans pack.",
+   "evidence_snippet": "Additionally, Brennan's features a two-page list of wines at half price, including Kongsgaard Napa Valley Chardonnay 2013 ($115).",
+   "url": "https://www.houstonchronicle.com/life/article/Brennan-s-marks-down-varied-inventory-15296340.php"
+  },
+  {
+   "lens": "new-world",
+   "index": 45,
+   "name": "Torbreck Runrig Shiraz (Brennan's of Houston list)",
+   "verdict": "refuted",
+   "why": "Wrong restaurant: the source is Brennan's of Houston (Houston Chronicle article on its half-price list, or the Brennan's of Houston wine list PDF), a separate restaurant. The sweep itself flags it. Do not carry it into the Brennan's New Orleans pack.",
+   "evidence_snippet": "The search results from Brennan's of Houston (a related restaurant) show that Torbreck Runrig Shiraz from Barossa Valley is featured on their wine list.",
+   "url": "https://media-cdn.getbento.com/accounts/1b7228f836b14ac8e6bbf596b273e439/media/G9X2blYSxWLk9kVz6a32_6-1-22%20Wine%20List.pdf"
+  }
+ ],
+ "pass": "verify-2"
+}

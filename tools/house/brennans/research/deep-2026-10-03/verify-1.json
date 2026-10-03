@@ -1,0 +1,1350 @@
+{
+ "generated": "2026-10-03",
+ "refuter": "verify-1",
+ "sources_read": [
+  "sweep-champagne.json",
+  "sweep-burgundy-white.json",
+  "sweep-burgundy-red.json",
+  "/home/user/worldtable/tools/house/brennans/guide.txt"
+ ],
+ "method": "Fresh WebSearch only; 20 searches run before the session search budget was exhausted (200 of 200), so records not reached default to unverifiable. Held means the house page or the Binwise list said it again in a fresh snippet, or the 26 September guide confirms it. No record was refuted outright: conflicts are marked unverifiable with the conflicting evidence quoted.",
+ "counts": {
+  "held": 34,
+  "refuted": 0,
+  "unverifiable": 114
+ },
+ "verdicts": [
+  {
+   "lens": "champagne",
+   "name": "Krug 'Grand Cuvée' Brut NV",
+   "verdict": "held",
+   "why": "Fresh search re-surfaced the house drinks page with the same name, format and $305.00 half bottle price.",
+   "evidence_snippet": "Brennan's New Orleans offers Krug 'Grand Cuvée' Brut NV in half bottles for $305.00.",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "query": "Brennan's New Orleans Champagne half bottles Krug Grand Cuvée 375"
+  },
+  {
+   "lens": "champagne",
+   "name": "Billecart-Salmon 'Brennan's 80th Anniversary' Brut Sous Bois Champagne FR NV (Oak Aged)",
+   "verdict": "unverifiable",
+   "why": "House drinks page is the only source (the sweep's own snippet); the fresh large format search returned the Bollinger and Taittinger lines but not this one, so it was not re-observed. Low risk, but single source.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "champagne",
+   "name": "Bollinger \"Special Cuvée\" Brut NV",
+   "verdict": "held",
+   "why": "Fresh search re-surfaced the house drinks page: 1.5 L magnum at $450.00.",
+   "evidence_snippet": "Bollinger \"Special Cuvée\" Brut NV 1.5 L Magnum - $450.00. Taittinger \"La Francaise\" Brut NV 3L Double Magnum - $650.00",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "query": "Brennan's New Orleans Champagne Large Format Bollinger Special Cuvée magnum Taittinger double magnum"
+  },
+  {
+   "lens": "champagne",
+   "name": "Piper-Heidsieck 'Cuvée' Brut NV",
+   "verdict": "unverifiable",
+   "why": "Not re-observed: the fresh large format search printed the Bollinger and Taittinger magnums only. Single house page snippet.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "champagne",
+   "name": "Taittinger \"La Francaise\" Brut NV",
+   "verdict": "held",
+   "why": "Fresh search re-surfaced the house drinks page: 3L double magnum at $650.00.",
+   "evidence_snippet": "Bollinger \"Special Cuvée\" Brut NV 1.5 L Magnum - $450.00. Taittinger \"La Francaise\" Brut NV 3L Double Magnum - $650.00",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "query": "Brennan's New Orleans Champagne Large Format Bollinger Special Cuvée magnum Taittinger double magnum"
+  },
+  {
+   "lens": "champagne",
+   "name": "Taittinger 'La Française' Brut Champagne NV",
+   "verdict": "held",
+   "why": "House happy hour event page, fresh search: originally $115, happy hour $65.00.",
+   "evidence_snippet": "Taittinger 'La Française' Brut Champagne NV: Originally $115, happy hour price $65.00. Billecart-Salmon Brut Réserve Champagne NV 1.5L Magnum: Originally $220, happy hour price $140.00. Charles Heidsieck Brut Rosé Reserve Champagne NV: Original price $225, happy hour price $145.00. The happy hour is held Thursday-Monday from 2-6 pm, Friday 9 am - 6 pm, plus Champagne Sabering on Fridays at 5 pm in the Roost Bar and Courtyard.",
+   "url": "https://www.brennansneworleans.com/events/bubbles-at-brennans-happy-hour",
+   "query": "Bubbles at Brennan's happy hour Taittinger La Française Billecart-Salmon magnum Charles Heidsieck rosé price"
+  },
+  {
+   "lens": "champagne",
+   "name": "Billecart-Salmon Brut Réserve Champagne NV",
+   "verdict": "held",
+   "why": "House happy hour event page, fresh search: magnum originally $220, happy hour $140.00.",
+   "evidence_snippet": "Taittinger 'La Française' Brut Champagne NV: Originally $115, happy hour price $65.00. Billecart-Salmon Brut Réserve Champagne NV 1.5L Magnum: Originally $220, happy hour price $140.00. Charles Heidsieck Brut Rosé Reserve Champagne NV: Original price $225, happy hour price $145.00. The happy hour is held Thursday-Monday from 2-6 pm, Friday 9 am - 6 pm, plus Champagne Sabering on Fridays at 5 pm in the Roost Bar and Courtyard.",
+   "url": "https://www.brennansneworleans.com/events/bubbles-at-brennans-happy-hour",
+   "query": "Bubbles at Brennan's happy hour Taittinger La Française Billecart-Salmon magnum Charles Heidsieck rosé price"
+  },
+  {
+   "lens": "champagne",
+   "name": "Mirabelle Brut Rosé North Coast NV",
+   "verdict": "held",
+   "why": "Second source: the 26 September guide's Bubbles summary reads 'Rosé bottles $50-125 (Mirabelle to Pommery)', matching the $50 happy hour price.",
+   "evidence_snippet": "Bubbles at Brennan's  Roost Bar & Courtyard, Mon-Fri 2-6; Champagne sabering Fridays at 5. Rosé bottles $50-125 (Mirabelle to Pommery)",
+   "url": "/home/user/worldtable/tools/house/brennans/guide.txt",
+   "query": ""
+  },
+  {
+   "lens": "champagne",
+   "name": "Charles Heidsieck Brut Rosé Reserve Champagne NV",
+   "verdict": "held",
+   "why": "House happy hour event page, fresh search: originally $225, happy hour $145.00.",
+   "evidence_snippet": "Taittinger 'La Française' Brut Champagne NV: Originally $115, happy hour price $65.00. Billecart-Salmon Brut Réserve Champagne NV 1.5L Magnum: Originally $220, happy hour price $140.00. Charles Heidsieck Brut Rosé Reserve Champagne NV: Original price $225, happy hour price $145.00. The happy hour is held Thursday-Monday from 2-6 pm, Friday 9 am - 6 pm, plus Champagne Sabering on Fridays at 5 pm in the Roost Bar and Courtyard.",
+   "url": "https://www.brennansneworleans.com/events/bubbles-at-brennans-happy-hour",
+   "query": "Bubbles at Brennan's happy hour Taittinger La Française Billecart-Salmon magnum Charles Heidsieck rosé price"
+  },
+  {
+   "lens": "champagne",
+   "name": "Dom Pérignon Brut Champagne 2015",
+   "verdict": "unverifiable",
+   "why": "Fresh search for Dom Pérignon 2015 at the Roost found no Brennan's result; the sweep's snippet is partial and carries no price.",
+   "evidence_snippet": "the search results don't contain specific information about \"Brennan's Roost Bar\" or a particular collection combining these specific champagnes together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's Roost Bar Dom Pérignon 2015 Krug 170ème Édition Dom Ruinart magnum"
+  },
+  {
+   "lens": "champagne",
+   "name": "Dom Ruinart Blanc de Blancs Brut",
+   "verdict": "unverifiable",
+   "why": "No independent snippet; the fresh search returned only retail and other restaurants' lists. No vintage or price.",
+   "evidence_snippet": "the search results don't contain specific information about \"Brennan's Roost Bar\" or a particular collection combining these specific champagnes together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's Roost Bar Dom Pérignon 2015 Krug 170ème Édition Dom Ruinart magnum"
+  },
+  {
+   "lens": "champagne",
+   "name": "Krug Grande Cuvée 170ème Édition Champagne",
+   "verdict": "unverifiable",
+   "why": "No independent snippet; the fresh search found no Brennan's listing of the 170ème Édition.",
+   "evidence_snippet": "the search results don't contain specific information about \"Brennan's Roost Bar\" or a particular collection combining these specific champagnes together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's Roost Bar Dom Pérignon 2015 Krug 170ème Édition Dom Ruinart magnum"
+  },
+  {
+   "lens": "champagne",
+   "name": "Delamotte \"Brennan's Label\" Brut Champagne NV",
+   "verdict": "unverifiable",
+   "why": "A Brennan's private label Delamotte exists (house event page), but the $20 glass price is not reconfirmed and the 26 September glass list pours Brennan's Essential by Piper-Heidsieck Extra Brut at $28 as the house Champagne, so this glass line is at best an older list.",
+   "evidence_snippet": "Brennan's has released a Private Label Delamotte Champagne. ... Jean Vesselle 'Oeil de Perdrix', Brut, Champagne priced at $148 per glass; Waris-Larmandier 'Racines des Trois', Brut, Champagne priced at $116 per glass ... Brennan's cellar boasts approximately 3,000 selections with vintage Champagne selections that go back to 1959.",
+   "url": "https://www.brennansneworleans.com/events/delamottechampagne",
+   "query": "Brennan's New Orleans wine by the glass Delamotte Brennan's Label Waris-Larmandier Jean Vesselle"
+  },
+  {
+   "lens": "champagne",
+   "name": "Waris-Larmandier \"Racines de Trois\" Brut Champagne NV",
+   "verdict": "unverifiable",
+   "why": "Conflicting evidence: the fresh summary prints Waris-Larmandier 'Racines des Trois' at $116 (labelled per glass, surely a bottle) and its result set mixed in another restaurant's list (a getbento HNL 2026 PDF). The 26 September glass list carries no Waris-Larmandier. The $26 glass price cannot be held.",
+   "evidence_snippet": "Brennan's has released a Private Label Delamotte Champagne. ... Jean Vesselle 'Oeil de Perdrix', Brut, Champagne priced at $148 per glass; Waris-Larmandier 'Racines des Trois', Brut, Champagne priced at $116 per glass ... Brennan's cellar boasts approximately 3,000 selections with vintage Champagne selections that go back to 1959.",
+   "url": "https://www.brennansneworleans.com/events/delamottechampagne",
+   "query": "Brennan's New Orleans wine by the glass Delamotte Brennan's Label Waris-Larmandier Jean Vesselle"
+  },
+  {
+   "lens": "champagne",
+   "name": "Jean Vesselle Rosé de Saignée Brut Champagne NV",
+   "verdict": "unverifiable",
+   "why": "Conflicting evidence: the fresh summary names Jean Vesselle 'Oeil de Perdrix' at $148, not the Rosé de Saignée at $28, from a mixed result set; the 26 September glass list carries no Jean Vesselle.",
+   "evidence_snippet": "Brennan's has released a Private Label Delamotte Champagne. ... Jean Vesselle 'Oeil de Perdrix', Brut, Champagne priced at $148 per glass; Waris-Larmandier 'Racines des Trois', Brut, Champagne priced at $116 per glass ... Brennan's cellar boasts approximately 3,000 selections with vintage Champagne selections that go back to 1959.",
+   "url": "https://www.brennansneworleans.com/events/delamottechampagne",
+   "query": "Brennan's New Orleans wine by the glass Delamotte Brennan's Label Waris-Larmandier Jean Vesselle"
+  },
+  {
+   "lens": "champagne",
+   "name": "Delamotte Blanc de Blancs Brut 1970",
+   "verdict": "unverifiable",
+   "why": "Fresh search aimed at the Wine Spectator line found no snippet tying Delamotte 1970 to Brennan's; single old source.",
+   "evidence_snippet": "they don't mention Brennan's New Orleans restaurant, large format bottles, a 1970 vintage of Delamotte Blanc de Blancs, or Dom Pérignon Luminous 2000 specifically",
+   "url": "(no Brennan's result)",
+   "query": "Wine Spectator Brennan's New Orleans large format Champagne Delamotte Blanc de Blancs 1970 Dom Pérignon Luminous 2000"
+  },
+  {
+   "lens": "champagne",
+   "name": "Dom Pérignon \"Luminous\" Brut Rosé 2000",
+   "verdict": "unverifiable",
+   "why": "As above: no fresh snippet ties Dom Pérignon Luminous Rosé 2000 to Brennan's.",
+   "evidence_snippet": "they don't mention Brennan's New Orleans restaurant, large format bottles, a 1970 vintage of Delamotte Blanc de Blancs, or Dom Pérignon Luminous 2000 specifically",
+   "url": "(no Brennan's result)",
+   "query": "Wine Spectator Brennan's New Orleans large format Champagne Delamotte Blanc de Blancs 1970 Dom Pérignon Luminous 2000"
+  },
+  {
+   "lens": "champagne",
+   "name": "Pommery Brut Royal Champagne NV",
+   "verdict": "held",
+   "why": "Tock and the house events page agree: $120 + tax class with a bottle of Pommery Brut Royal NV, $20 spectator ticket with a glass. The current listing is International Champagne Day, Friday 23 October 2026, 9 to 10 am or noon to 1 pm, in the Courtyard.",
+   "evidence_snippet": "Brennan's is offering an International Champagne Day Champagne Sabering Class on Friday, October 23, 2026 ... The cost is $120 per ticket (plus tax), and it includes one class ticket for a guest to learn to saber with a bottle of Pommery Brut Royal Champagne NV. ... There's also a $20 spectator ticket option that includes admission and one glass of Champagne",
+   "url": "https://www.exploretock.com/brennans/event/621293",
+   "query": "Brennan's New Orleans Champagne sabering class Tock Pommery Brut Royal $120"
+  },
+  {
+   "lens": "champagne",
+   "name": "Brennan's Champagne Cocktail",
+   "verdict": "unverifiable",
+   "why": "The house Bubbles page snippet repeats $15.00, but the 26 September guide read the same page as 'Brennan's Champagne Cocktail $20'. Item and build are confirmed; the price is in conflict, so the printed $15 cannot be held. Confirm on shift.",
+   "evidence_snippet": "Brennan's Champagne Cocktail, made with Piper-Heidsieck 1785 Brut Champagne, Angostura Bitters, and a Demerara Sugar Cube, is priced at $15.00.",
+   "url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+   "query": "Brennan's Champagne Cocktail Piper-Heidsieck 1785 Angostura demerara sugar cube price"
+  },
+  {
+   "lens": "champagne",
+   "name": "Brennan's calls itself the 'Champagne House of the South' and its cellar keeps nearly 100 selections of Champagne and sparkling wine.",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "champagne",
+   "name": "Vintage Champagne selections go back to 1959.",
+   "verdict": "held",
+   "why": "A fresh snippet (neworleans.com and Wine Spectator results) repeats that vintage Champagne selections go back to 1959.",
+   "evidence_snippet": "Brennan's has released a Private Label Delamotte Champagne. ... Jean Vesselle 'Oeil de Perdrix', Brut, Champagne priced at $148 per glass; Waris-Larmandier 'Racines des Trois', Brut, Champagne priced at $116 per glass ... Brennan's cellar boasts approximately 3,000 selections with vintage Champagne selections that go back to 1959.",
+   "url": "https://www.brennansneworleans.com/events/delamottechampagne",
+   "query": "Brennan's New Orleans wine by the glass Delamotte Brennan's Label Waris-Larmandier Jean Vesselle"
+  },
+  {
+   "lens": "champagne",
+   "name": "Named to the Bureau du Champagne USA fifth annual Top 10 Bars and Restaurants for Enjoying Champagne (2026 list), citing a tableside Champagne cart, a weekly sabering tradition and a Champagne Day experience.",
+   "verdict": "held",
+   "why": "The house press release title in fresh results confirms the Champagne Bureau USA Top 10 award.",
+   "evidence_snippet": "Champagne Bureau USA Awards Brennan's \"Top 10 Restaurants & Bars In America\" (result title)",
+   "url": "https://www.brennansneworleans.com/press-releases/champagne-bureau-usa-awards-brennans-top-10-restaurants-bars-in-america/",
+   "query": "Brennan's New Orleans Champagne sabering class Tock Pommery Brut Royal $120"
+  },
+  {
+   "lens": "champagne",
+   "name": "Bubbles at Brennan's: Roost Bar + Courtyard, Thursday to Monday 2 to 6 pm, Friday 9 am to 6 pm, Champagne sabering Fridays at 5 pm on the patio. Hours differ by source (the guide says Monday to Friday 2 to 6; an older source says Monday to Thursday).",
+   "verdict": "held",
+   "why": "The house happy hour event page, fresh search, repeats Thursday to Monday 2 to 6 pm, Friday 9 am to 6 pm, sabering Fridays at 5 pm. The 26 September guide's 'Mon-Fri 2-6' still conflicts; the house page is the better source.",
+   "evidence_snippet": "Taittinger 'La Française' Brut Champagne NV: Originally $115, happy hour price $65.00. Billecart-Salmon Brut Réserve Champagne NV 1.5L Magnum: Originally $220, happy hour price $140.00. Charles Heidsieck Brut Rosé Reserve Champagne NV: Original price $225, happy hour price $145.00. The happy hour is held Thursday-Monday from 2-6 pm, Friday 9 am - 6 pm, plus Champagne Sabering on Fridays at 5 pm in the Roost Bar and Courtyard.",
+   "url": "https://www.brennansneworleans.com/events/bubbles-at-brennans-happy-hour",
+   "query": "Bubbles at Brennan's happy hour Taittinger La Française Billecart-Salmon magnum Charles Heidsieck rosé price"
+  },
+  {
+   "lens": "champagne",
+   "name": "Wine Spectator lists 3,635 selections and 19,415 bottles, Grand Award 2021 to 2025, strengths including Champagne.",
+   "verdict": "unverifiable",
+   "why": "Fresh snippets give different counts: Wine Spectator's New Orleans roundup says 'approximately 3,000 selections' and the house press release 'over 14,000 bottles', not 3,635 and 19,415. The figures may be from different years; none is held.",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Domaine Coche-Dury Corton-Charlemagne 2013 priced at $5,500, Domaine Follin-Arbelet Corton-Charlemagne 2021 at $659, and Domaine Ponsot Corton-Charlemagne 2013 at $938. ... Brennan's wine list boasts over 14,000 bottles",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Corton-Charlemagne Coche-Dury 2013 Ponsot Follin-Arbelet"
+  },
+  {
+   "lens": "champagne",
+   "name": "Past event: Bubbles & Breakfast with Billecart-Salmon, Saturday 22 March, Upstairs Havana Room, four courses with tasting pours (Cured Salmon on Brioche, Endive and Arugula Salad, Eggs Hussarde, Strawberries with White Chocolate and Truffle), $175 per person inclusive.",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Louis Michel & Fils \"Montmains\" 1er Cru Chablis",
+   "verdict": "unverifiable",
+   "why": "Conflict: a fresh Binwise snippet lists Louis Michel 'Montmains' as 2023 at $65, including a 375 ml half bottle 2023 at $65, not 2017 at $48. The 2017 line may be stale; the format of the $48 price was never stated.",
+   "evidence_snippet": "Domaine Louis Michel \"Montmains\" Chablis Burgundy 2023 is listed at $65, and Thierry & Pascale Matrot Bourgogne Blanc Burgundy 2022 is listed at $45. Additionally, Domaine Louis Michel \"Montmains\" 375ml Half-bottle 2023 is available for $65.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans binwise half bottles Chablis Louis Michel Montmains Lavantureux Matrot Bourgogne Blanc"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Roland Lavantureux Chablis",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine François Raveneau \"Butteaux\" 1er Cru Chablis (1.5L)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine François Raveneau \"Butteaux\" 1er Cru Chablis (1.5L)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Christian Moreau \"Les Clos - Clos des Hospices\"",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Billaud-Simon \"Blanchot\"",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine François Raveneau \"Blanchot\"",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats Raveneau 'Blanchot' 2018 at $1,255.",
+   "evidence_snippet": "Domaine François Raveneau \"Blanchot\" Chablis Grand Cru 2018 is listed at $1,255 on the Brennan's New Orleans wine list at hub.binwise.com. ... Jean-Paul & Benoît Droin \"Montée de Tonnerre\" 2024 is listed at $225 on the Brennan's wine list.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "hub.binwise.com brennans-new-orleans Raveneau Blanchot Montée de Tonnerre Chablis Grand Cru price"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Jean Collet et Fils \"Valmur\"",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Vincent Dauvissat \"Les Clos\"",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine François Raveneau \"Montée de Tonnerre\"",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine François Raveneau \"Montée de Tonnerre\"",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine William Fevre \"Montée de Tonnerre\"",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Jean-Paul & Benoît Droin \"Montée de Tonnerre\"",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats Droin 'Montée de Tonnerre' 2024 at $225.",
+   "evidence_snippet": "Domaine François Raveneau \"Blanchot\" Chablis Grand Cru 2018 is listed at $1,255 on the Brennan's New Orleans wine list at hub.binwise.com. ... Jean-Paul & Benoît Droin \"Montée de Tonnerre\" 2024 is listed at $225 on the Brennan's wine list.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "hub.binwise.com brennans-new-orleans Raveneau Blanchot Montée de Tonnerre Chablis Grand Cru price"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Louis Jadot Chablis Premier Cru \"Montée de Tonnerre\"",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\"",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats 'Clavoillon' 2020 at $820.",
+   "evidence_snippet": "The restaurant has a Domaine Leflaive Mâcon-Verzé from 2022 (available by Coravin) on their by-the-glass wine program. ... Domaine Leflaive 2017 ($200), 2020 ($315), and 2021 ($350); Several \"Sous le Dos d'Ane\" selections from vintages 2008-2020, ranging from $300-$820; \"Clavoillon\" selections including 2020 ($820) and 2022 ($875); \"Les Combettes\" offerings from 2012 ($485) and 2022 ($1,240); \"Les Folatières\" from 2013 ($485) ... the specific vintages you mentioned (2016, 2021, 2022) were not detailed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Domaine Leflaive Puligny-Montrachet 2016 2021 2022 Chevalier-Montrachet Bâtard-Montrachet"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\"",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats 'Clavoillon' 2022 at $875.",
+   "evidence_snippet": "The restaurant has a Domaine Leflaive Mâcon-Verzé from 2022 (available by Coravin) on their by-the-glass wine program. ... Domaine Leflaive 2017 ($200), 2020 ($315), and 2021 ($350); Several \"Sous le Dos d'Ane\" selections from vintages 2008-2020, ranging from $300-$820; \"Clavoillon\" selections including 2020 ($820) and 2022 ($875); \"Les Combettes\" offerings from 2012 ($485) and 2022 ($1,240); \"Les Folatières\" from 2013 ($485) ... the specific vintages you mentioned (2016, 2021, 2022) were not detailed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Domaine Leflaive Puligny-Montrachet 2016 2021 2022 Chevalier-Montrachet Bâtard-Montrachet"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Leflaive Puligny-Montrachet",
+   "verdict": "unverifiable",
+   "why": "Conflict: the fresh Binwise summary lists an unnamed 'Domaine Leflaive' at 2017 $200, 2020 $315, 2021 $350, which does not match this record's 2021 at $520, and names no village Puligny. Not held.",
+   "evidence_snippet": "The restaurant has a Domaine Leflaive Mâcon-Verzé from 2022 (available by Coravin) on their by-the-glass wine program. ... Domaine Leflaive 2017 ($200), 2020 ($315), and 2021 ($350); Several \"Sous le Dos d'Ane\" selections from vintages 2008-2020, ranging from $300-$820; \"Clavoillon\" selections including 2020 ($820) and 2022 ($875); \"Les Combettes\" offerings from 2012 ($485) and 2022 ($1,240); \"Les Folatières\" from 2013 ($485) ... the specific vintages you mentioned (2016, 2021, 2022) were not detailed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Domaine Leflaive Puligny-Montrachet 2016 2021 2022 Chevalier-Montrachet Bâtard-Montrachet"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Leflaive Puligny-Montrachet",
+   "verdict": "unverifiable",
+   "why": "Conflict: the fresh Binwise summary lists an unnamed 'Domaine Leflaive' at 2017 $200, 2020 $315, 2021 $350, which does not match this record's 2021 at $520, and names no village Puligny. Not held.",
+   "evidence_snippet": "The restaurant has a Domaine Leflaive Mâcon-Verzé from 2022 (available by Coravin) on their by-the-glass wine program. ... Domaine Leflaive 2017 ($200), 2020 ($315), and 2021 ($350); Several \"Sous le Dos d'Ane\" selections from vintages 2008-2020, ranging from $300-$820; \"Clavoillon\" selections including 2020 ($820) and 2022 ($875); \"Les Combettes\" offerings from 2012 ($485) and 2022 ($1,240); \"Les Folatières\" from 2013 ($485) ... the specific vintages you mentioned (2016, 2021, 2022) were not detailed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Domaine Leflaive Puligny-Montrachet 2016 2021 2022 Chevalier-Montrachet Bâtard-Montrachet"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Leflaive Puligny-Montrachet",
+   "verdict": "unverifiable",
+   "why": "Conflict: the fresh Binwise summary lists an unnamed 'Domaine Leflaive' at 2017 $200, 2020 $315, 2021 $350, which does not match this record's 2021 at $520, and names no village Puligny. Not held.",
+   "evidence_snippet": "The restaurant has a Domaine Leflaive Mâcon-Verzé from 2022 (available by Coravin) on their by-the-glass wine program. ... Domaine Leflaive 2017 ($200), 2020 ($315), and 2021 ($350); Several \"Sous le Dos d'Ane\" selections from vintages 2008-2020, ranging from $300-$820; \"Clavoillon\" selections including 2020 ($820) and 2022 ($875); \"Les Combettes\" offerings from 2012 ($485) and 2022 ($1,240); \"Les Folatières\" from 2013 ($485) ... the specific vintages you mentioned (2016, 2021, 2022) were not detailed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Domaine Leflaive Puligny-Montrachet 2016 2021 2022 Chevalier-Montrachet Bâtard-Montrachet"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Leflaive Mâcon-Verzé (Coravin)",
+   "verdict": "held",
+   "why": "The 26 September guide prints 'Domaine Leflaive Mâcon-Verzé 2022 (Coravin) $40 glass' and a fresh Binwise snippet repeats the 2022 by Coravin.",
+   "evidence_snippet": "The restaurant has a Domaine Leflaive Mâcon-Verzé from 2022 (available by Coravin) on their by-the-glass wine program. ... Domaine Leflaive 2017 ($200), 2020 ($315), and 2021 ($350); Several \"Sous le Dos d'Ane\" selections from vintages 2008-2020, ranging from $300-$820; \"Clavoillon\" selections including 2020 ($820) and 2022 ($875); \"Les Combettes\" offerings from 2012 ($485) and 2022 ($1,240); \"Les Folatières\" from 2013 ($485) ... the specific vintages you mentioned (2016, 2021, 2022) were not detailed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Domaine Leflaive Puligny-Montrachet 2016 2021 2022 Chevalier-Montrachet Bâtard-Montrachet"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Dujac Puligny-Montrachet Premier Cru \"Les Folatières\"",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats Dujac 'Les Folatières' 2019 at $444.",
+   "evidence_snippet": "Domaine Dujac \"Les Folatières\" (Puligny-Montrachet Premier Cru): Domaine Dujac \"Les Folatières\" 2019 - $444; 2022 - $615; 2023 - $615",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Leflaive Puligny-Montrachet Clavoillon Dujac Folatières price"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Dujac Puligny-Montrachet Premier Cru \"Les Folatières\"",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats 2022 at $615.",
+   "evidence_snippet": "Domaine Dujac \"Les Folatières\" (Puligny-Montrachet Premier Cru): Domaine Dujac \"Les Folatières\" 2019 - $444; 2022 - $615; 2023 - $615",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Leflaive Puligny-Montrachet Clavoillon Dujac Folatières price"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Dujac Puligny-Montrachet Premier Cru \"Les Folatières\"",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet confirms the 2023 and supplies the price the sweep lacked: $615 (copy as printed; it equals the 2022, so confirm on the list).",
+   "evidence_snippet": "Domaine Dujac \"Les Folatières\" (Puligny-Montrachet Premier Cru): Domaine Dujac \"Les Folatières\" 2019 - $444; 2022 - $615; 2023 - $615",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Leflaive Puligny-Montrachet Clavoillon Dujac Folatières price"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Etienne Sauzet Puligny-Montrachet",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Etienne Sauzet Puligny-Montrachet",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Vincent et Sophie Morey \"Les Embrazées\" Premier Cru Chassagne-Montrachet (1.5L)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Bouard-Bonnefoy Chassagne-Montrachet Premier Cru",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Alex Moreau Chassagne-Montrachet Premier Cru",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Bouard-Bonnefoy Chassagne-Montrachet",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Bruno Colin Chassagne-Montrachet",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Faiveley Chassagne-Montrachet",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Louis Jadot Meursault",
+   "verdict": "unverifiable",
+   "why": "Fresh Meursault search found no Brennan's listing; single sweep summary.",
+   "evidence_snippet": "I did not find a specific listing on Brennan's New Orleans wine list for all those exact combinations together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Meursault Bernard Bonin Genevrières Antoine Jobard Charmes Comtes Lafon 2011"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Florent Garaudet \"Vieilles Vignes\" Meursault (1.5L)",
+   "verdict": "unverifiable",
+   "why": "Fresh Meursault search found no Brennan's listing.",
+   "evidence_snippet": "I did not find a specific listing on Brennan's New Orleans wine list for all those exact combinations together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Meursault Bernard Bonin Genevrières Antoine Jobard Charmes Comtes Lafon 2011"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Antoine Jobard Meursault",
+   "verdict": "unverifiable",
+   "why": "Fresh Meursault search found no Brennan's listing.",
+   "evidence_snippet": "I did not find a specific listing on Brennan's New Orleans wine list for all those exact combinations together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Meursault Bernard Bonin Genevrières Antoine Jobard Charmes Comtes Lafon 2011"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Antoine Jobard Meursault Premier Cru \"Charmes\"",
+   "verdict": "unverifiable",
+   "why": "Fresh Meursault search found no Brennan's listing.",
+   "evidence_snippet": "I did not find a specific listing on Brennan's New Orleans wine list for all those exact combinations together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Meursault Bernard Bonin Genevrières Antoine Jobard Charmes Comtes Lafon 2011"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Bernard Bonin Meursault \"Genevrières\"",
+   "verdict": "unverifiable",
+   "why": "Fresh Meursault search found no Brennan's listing.",
+   "evidence_snippet": "I did not find a specific listing on Brennan's New Orleans wine list for all those exact combinations together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Meursault Bernard Bonin Genevrières Antoine Jobard Charmes Comtes Lafon 2011"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Bernard Bonin Meursault \"Les Charmes du Milieu\"",
+   "verdict": "unverifiable",
+   "why": "Fresh Meursault search found no Brennan's listing.",
+   "evidence_snippet": "I did not find a specific listing on Brennan's New Orleans wine list for all those exact combinations together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Meursault Bernard Bonin Genevrières Antoine Jobard Charmes Comtes Lafon 2011"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Bernard Bonin Meursault \"Clos du Cromin\"",
+   "verdict": "unverifiable",
+   "why": "Fresh Meursault search found no Brennan's listing.",
+   "evidence_snippet": "I did not find a specific listing on Brennan's New Orleans wine list for all those exact combinations together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Meursault Bernard Bonin Genevrières Antoine Jobard Charmes Comtes Lafon 2011"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Bernard Bonin Meursault \"Clos du Cromin\"",
+   "verdict": "unverifiable",
+   "why": "Fresh Meursault search found no Brennan's listing.",
+   "evidence_snippet": "I did not find a specific listing on Brennan's New Orleans wine list for all those exact combinations together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Meursault Bernard Bonin Genevrières Antoine Jobard Charmes Comtes Lafon 2011"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Marchand-Tawse \"Genevrières\" Premier Cru Meursault (3L)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine des Comtes Lafon Meursault Premier Cru \"Charmes\"",
+   "verdict": "unverifiable",
+   "why": "Fresh Meursault search returned a 2011 Lafon Meursault priced 1500 on another New Orleans list (Doris Metropolitan's Binwise PDF appeared in results), not Brennan's; nothing ties the $585 Charmes to Brennan's.",
+   "evidence_snippet": "I did not find a specific listing on Brennan's New Orleans wine list for all those exact combinations together.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Meursault Bernard Bonin Genevrières Antoine Jobard Charmes Comtes Lafon 2011"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Bouchard Père & Fils Corton-Charlemagne Grand Cru (1.5L)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Coche-Dury Corton-Charlemagne Grand Cru",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats Coche-Dury Corton-Charlemagne 2013 at $5,500.",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Domaine Coche-Dury Corton-Charlemagne 2013 priced at $5,500, Domaine Follin-Arbelet Corton-Charlemagne 2021 at $659, and Domaine Ponsot Corton-Charlemagne 2013 at $938. ... Brennan's wine list boasts over 14,000 bottles",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Corton-Charlemagne Coche-Dury 2013 Ponsot Follin-Arbelet"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Follin-Arbelet Corton-Charlemagne Grand Cru",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats Follin-Arbelet 2021 at $659.",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Domaine Coche-Dury Corton-Charlemagne 2013 priced at $5,500, Domaine Follin-Arbelet Corton-Charlemagne 2021 at $659, and Domaine Ponsot Corton-Charlemagne 2013 at $938. ... Brennan's wine list boasts over 14,000 bottles",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Corton-Charlemagne Coche-Dury 2013 Ponsot Follin-Arbelet"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Ponsot Corton-Charlemagne Grand Cru",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats Ponsot Corton-Charlemagne 2013 at $938.",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Domaine Coche-Dury Corton-Charlemagne 2013 priced at $5,500, Domaine Follin-Arbelet Corton-Charlemagne 2021 at $659, and Domaine Ponsot Corton-Charlemagne 2013 at $938. ... Brennan's wine list boasts over 14,000 bottles",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Corton-Charlemagne Coche-Dury 2013 Ponsot Follin-Arbelet"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine de la Romanée-Conti Corton-Charlemagne Grand Cru",
+   "verdict": "held",
+   "why": "Presence of DRC Corton-Charlemagne 2020 confirmed by a fresh Binwise summary, which prints $17,556. That figure is anomalous (above the DRC Montrachet it quotes) and is not to be used until read on the list itself.",
+   "evidence_snippet": "According to Brennan's New Orleans wine list, the 2020 Domaine de la Romanée-Conti Corton-Charlemagne Grand Cru is priced at $17,556. The search results also show that the 2020 Domaine de la Romanée-Conti Montrachet Grand Cru at Brennan's is priced at $11,500.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Domaine de la Romanée-Conti Montrachet Corton-Charlemagne 2020 price"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Etienne Sauzet Montrachet Grand Cru",
+   "verdict": "unverifiable",
+   "why": "Fresh Montrachet search did not place Sauzet Montrachet 2023 on Brennan's list.",
+   "evidence_snippet": "the search results do not contain specific details about the particular vintages (Sauzet 2023, Ponsot 2013, or Marc Colin/Bernard Moreau specific vintages) on Brennan's current wine list ... the list includes dozens of verticals from leading Burgundy wineries such as Denis Mortet and Ramonet.",
+   "url": "https://www.winespectator.com/articles/new-orleans-restaurants-with-spiced-up-wine-lists",
+   "query": "Brennan's New Orleans wine list Montrachet Grand Cru Sauzet 2023 Ponsot 2013 Bâtard-Montrachet Marc Colin Bernard Moreau"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Ponsot Montrachet Grand Cru",
+   "verdict": "unverifiable",
+   "why": "Fresh Montrachet search did not place Ponsot Montrachet 2013 on Brennan's list.",
+   "evidence_snippet": "the search results do not contain specific details about the particular vintages (Sauzet 2023, Ponsot 2013, or Marc Colin/Bernard Moreau specific vintages) on Brennan's current wine list ... the list includes dozens of verticals from leading Burgundy wineries such as Denis Mortet and Ramonet.",
+   "url": "https://www.winespectator.com/articles/new-orleans-restaurants-with-spiced-up-wine-lists",
+   "query": "Brennan's New Orleans wine list Montrachet Grand Cru Sauzet 2023 Ponsot 2013 Bâtard-Montrachet Marc Colin Bernard Moreau"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine de la Romanée-Conti Montrachet Grand Cru (several vintages)",
+   "verdict": "unverifiable",
+   "why": "Conflict: a fresh Binwise summary speaks of DRC Montrachet 2020 at $11,500, outside this record's 2011 to 2015 range at $5,800 to $8,000. Range record, low confidence; not held.",
+   "evidence_snippet": "According to Brennan's New Orleans wine list, the 2020 Domaine de la Romanée-Conti Corton-Charlemagne Grand Cru is priced at $17,556. The search results also show that the 2020 Domaine de la Romanée-Conti Montrachet Grand Cru at Brennan's is priced at $11,500.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Domaine de la Romanée-Conti Montrachet Corton-Charlemagne 2020 price"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Leflaive Chevalier-Montrachet Grand Cru (several vintages)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Michel Niellon Chevalier-Montrachet Grand Cru",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Bernard Moreau Bâtard-Montrachet Grand Cru",
+   "verdict": "unverifiable",
+   "why": "Fresh search did not place Bernard Moreau Bâtard 2014 on Brennan's list.",
+   "evidence_snippet": "the search results do not contain specific details about the particular vintages (Sauzet 2023, Ponsot 2013, or Marc Colin/Bernard Moreau specific vintages) on Brennan's current wine list ... the list includes dozens of verticals from leading Burgundy wineries such as Denis Mortet and Ramonet.",
+   "url": "https://www.winespectator.com/articles/new-orleans-restaurants-with-spiced-up-wine-lists",
+   "query": "Brennan's New Orleans wine list Montrachet Grand Cru Sauzet 2023 Ponsot 2013 Bâtard-Montrachet Marc Colin Bernard Moreau"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Leflaive Bâtard-Montrachet Grand Cru (several vintages)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Marc Colin Bâtard-Montrachet Grand Cru",
+   "verdict": "unverifiable",
+   "why": "Fresh search did not place Marc Colin Bâtard 2015 on Brennan's list.",
+   "evidence_snippet": "the search results do not contain specific details about the particular vintages (Sauzet 2023, Ponsot 2013, or Marc Colin/Bernard Moreau specific vintages) on Brennan's current wine list ... the list includes dozens of verticals from leading Burgundy wineries such as Denis Mortet and Ramonet.",
+   "url": "https://www.winespectator.com/articles/new-orleans-restaurants-with-spiced-up-wine-lists",
+   "query": "Brennan's New Orleans wine list Montrachet Grand Cru Sauzet 2023 Ponsot 2013 Bâtard-Montrachet Marc Colin Bernard Moreau"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Morey-Coffinet Bâtard-Montrachet Grand Cru",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Carrette \"Les Crays\" Pouilly-Fuissé (1.5L)",
+   "verdict": "unverifiable",
+   "why": "Fresh Mâconnais search did not place it on Brennan's list.",
+   "evidence_snippet": "the specific Pouilly-Fuissé wines you mentioned (Eric Forest 24 Carats, Roc des Boutires, Carrette Les Crays, Héritiers Lafon Milly-Lamartine) do not appear in the search results I retrieved.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Pouilly-Fuissé Eric Forest 24 Carats Roc des Boutires Carrette Les Crays Héritiers Lafon Milly-Lamartine"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Leflaive Mâcon-Verzé (bottle)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine Leflaive Mâcon-Verzé (bottle)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Domaine du Roc des Boutires \"En Bertilionne\" Pouilly-Fuissé",
+   "verdict": "unverifiable",
+   "why": "Fresh Mâconnais search did not place it.",
+   "evidence_snippet": "the specific Pouilly-Fuissé wines you mentioned (Eric Forest 24 Carats, Roc des Boutires, Carrette Les Crays, Héritiers Lafon Milly-Lamartine) do not appear in the search results I retrieved.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Pouilly-Fuissé Eric Forest 24 Carats Roc des Boutires Carrette Les Crays Héritiers Lafon Milly-Lamartine"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Eric Forest \"24 Carats\" Pouilly-Fuissé",
+   "verdict": "unverifiable",
+   "why": "Fresh Mâconnais search did not place it; the $325 for a 750 ml Pouilly-Fuissé also looks wrong in format.",
+   "evidence_snippet": "the specific Pouilly-Fuissé wines you mentioned (Eric Forest 24 Carats, Roc des Boutires, Carrette Les Crays, Héritiers Lafon Milly-Lamartine) do not appear in the search results I retrieved.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Pouilly-Fuissé Eric Forest 24 Carats Roc des Boutires Carrette Les Crays Héritiers Lafon Milly-Lamartine"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Les Héritiers du Comte Lafon Mâcon Milly-Lamartine",
+   "verdict": "unverifiable",
+   "why": "Fresh Mâconnais search did not place it.",
+   "evidence_snippet": "the specific Pouilly-Fuissé wines you mentioned (Eric Forest 24 Carats, Roc des Boutires, Carrette Les Crays, Héritiers Lafon Milly-Lamartine) do not appear in the search results I retrieved.",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans wine list Pouilly-Fuissé Eric Forest 24 Carats Roc des Boutires Carrette Les Crays Héritiers Lafon Milly-Lamartine"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Thierry & Pascale Matrot Bourgogne Blanc",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats Matrot Bourgogne Blanc 2022 at $45 (format still unstated; plausibly the half bottle section).",
+   "evidence_snippet": "Domaine Louis Michel \"Montmains\" Chablis Burgundy 2023 is listed at $65, and Thierry & Pascale Matrot Bourgogne Blanc Burgundy 2022 is listed at $45. Additionally, Domaine Louis Michel \"Montmains\" 375ml Half-bottle 2023 is available for $65.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans binwise half bottles Chablis Louis Michel Montmains Lavantureux Matrot Bourgogne Blanc"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Cellar size and focus",
+   "verdict": "held",
+   "why": "Fresh Wine Spectator snippet repeats the Katrina loss and 2021 reclaim of the Grand Award.",
+   "evidence_snippet": "the search results do not contain specific details about the particular vintages (Sauzet 2023, Ponsot 2013, or Marc Colin/Bernard Moreau specific vintages) on Brennan's current wine list ... the list includes dozens of verticals from leading Burgundy wineries such as Denis Mortet and Ramonet.",
+   "url": "https://www.winespectator.com/articles/new-orleans-restaurants-with-spiced-up-wine-lists",
+   "query": "Brennan's New Orleans wine list Montrachet Grand Cru Sauzet 2023 Ponsot 2013 Bâtard-Montrachet Marc Colin Bernard Moreau"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "Bottle count and wine director (press release, undated)",
+   "verdict": "held",
+   "why": "A fresh result repeats 'Brennan's wine list boasts over 14,000 bottles' (house press release, Winning Wines). Undated, so treat as historical.",
+   "evidence_snippet": "Brennan's New Orleans wine list includes Domaine Coche-Dury Corton-Charlemagne 2013 priced at $5,500, Domaine Follin-Arbelet Corton-Charlemagne 2021 at $659, and Domaine Ponsot Corton-Charlemagne 2013 at $938. ... Brennan's wine list boasts over 14,000 bottles",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Corton-Charlemagne Coche-Dury 2013 Ponsot Follin-Arbelet"
+  },
+  {
+   "lens": "burgundy-white",
+   "name": "A half-bottle section exists",
+   "verdict": "held",
+   "why": "A fresh Binwise snippet shows a 375 ml half bottle (Louis Michel Montmains 2023, $65), so the half bottle section exists.",
+   "evidence_snippet": "Domaine Louis Michel \"Montmains\" Chablis Burgundy 2023 is listed at $65, and Thierry & Pascale Matrot Bourgogne Blanc Burgundy 2022 is listed at $45. Additionally, Domaine Louis Michel \"Montmains\" 375ml Half-bottle 2023 is available for $65.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans binwise half bottles Chablis Louis Michel Montmains Lavantureux Matrot Bourgogne Blanc"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Damien Martin Pinot Noir Bourgogne 2023",
+   "verdict": "held",
+   "why": "The 26 September guide prints 'Damien Martin Bourgogne Pinot Noir 2023 $17 glass', confirming the Binwise listing.",
+   "evidence_snippet": "Damien Martin Bourgogne Pinot Noir 2023 $17 glass",
+   "url": "/home/user/worldtable/tools/house/brennans/guide.txt",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Faiveley Bourgogne (Pinot Noir) 2022",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Burgundy depth: more than 10 pages of whites and 20 pages of reds",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Two-storey cellar, second floor nearly all Burgundy",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Top crus plus lesser-known finds",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Denis Mortet verticals",
+   "verdict": "held",
+   "why": "Fresh Wine Spectator snippet repeats 'dozens of verticals from leading Burgundy wineries such as Denis Mortet and Ramonet'.",
+   "evidence_snippet": "the search results do not contain specific details about the particular vintages (Sauzet 2023, Ponsot 2013, or Marc Colin/Bernard Moreau specific vintages) on Brennan's current wine list ... the list includes dozens of verticals from leading Burgundy wineries such as Denis Mortet and Ramonet.",
+   "url": "https://www.winespectator.com/articles/new-orleans-restaurants-with-spiced-up-wine-lists",
+   "query": "Brennan's New Orleans wine list Montrachet Grand Cru Sauzet 2023 Ponsot 2013 Bâtard-Montrachet Marc Colin Bernard Moreau"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine de la Romanée-Conti Romanée-Conti Grand Cru 2010",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine de la Romanée-Conti Romanée-Conti Grand Cru (several vintages)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine de la Romanée-Conti La Tâche Grand Cru (several vintages)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine de la Romanée-Conti Echézeaux Grand Cru, magnum 2012",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Ponsot Chambertin-Clos de Bèze Grand Cru 2013",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Camille Giroud Chambertin Grand Cru 2006",
+   "verdict": "unverifiable",
+   "why": "Fresh Chambertin search returned no Brennan's list result.",
+   "evidence_snippet": "(summary named the producers in general terms only; no Brennan's list result)",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans binwise Chambertin Trapet Camille Giroud Ponsot Gevrey-Chambertin Corbeaux"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Ponsot Chambertin Grand Cru 2013",
+   "verdict": "unverifiable",
+   "why": "Fresh Chambertin search returned no Brennan's list result.",
+   "evidence_snippet": "(summary named the producers in general terms only; no Brennan's list result)",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans binwise Chambertin Trapet Camille Giroud Ponsot Gevrey-Chambertin Corbeaux"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Trapet Chambertin Grand Cru 2006",
+   "verdict": "unverifiable",
+   "why": "Fresh Chambertin search returned no Brennan's list result.",
+   "evidence_snippet": "(summary named the producers in general terms only; no Brennan's list result)",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans binwise Chambertin Trapet Camille Giroud Ponsot Gevrey-Chambertin Corbeaux"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Trapet Chambertin Grand Cru 2012",
+   "verdict": "unverifiable",
+   "why": "Fresh Chambertin search returned no Brennan's list result.",
+   "evidence_snippet": "(summary named the producers in general terms only; no Brennan's list result)",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans binwise Chambertin Trapet Camille Giroud Ponsot Gevrey-Chambertin Corbeaux"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Arnaud Mortet Gevrey-Chambertin 1er Cru \"La Perrière\" 2016",
+   "verdict": "unverifiable",
+   "why": "Fresh Gevrey search returned no Brennan's list result.",
+   "evidence_snippet": "(summary named the producers in general terms only; no Brennan's list result)",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans binwise Chambertin Trapet Camille Giroud Ponsot Gevrey-Chambertin Corbeaux"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Bruno Clavelier Gevrey-Chambertin 1er Cru \"Les Corbeaux\" Vieilles Vignes 2019",
+   "verdict": "unverifiable",
+   "why": "Fresh Gevrey search returned no Brennan's list result.",
+   "evidence_snippet": "(summary named the producers in general terms only; no Brennan's list result)",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans binwise Chambertin Trapet Camille Giroud Ponsot Gevrey-Chambertin Corbeaux"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Bernard Dugat-Py Gevrey-Chambertin 1er Cru \"Les Corbeaux\" 2013",
+   "verdict": "unverifiable",
+   "why": "Fresh Gevrey search returned no Brennan's list result.",
+   "evidence_snippet": "(summary named the producers in general terms only; no Brennan's list result)",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans binwise Chambertin Trapet Camille Giroud Ponsot Gevrey-Chambertin Corbeaux"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Bernard Dugat-Py Gevrey-Chambertin 1er Cru \"Les Corbeaux\" 2014",
+   "verdict": "unverifiable",
+   "why": "Fresh Gevrey search returned no Brennan's list result.",
+   "evidence_snippet": "(summary named the producers in general terms only; no Brennan's list result)",
+   "url": "(no Brennan's result)",
+   "query": "Brennan's New Orleans binwise Chambertin Trapet Camille Giroud Ponsot Gevrey-Chambertin Corbeaux"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Bruno Clavelier Chambolle-Musigny 1er Cru \"La Combe d'Orveau\" (several vintages)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine A.F. Gros Chambolle-Musigny (cuvée not named)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Dujac Chambolle-Musigny (cuvée not named)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Faiveley Chambolle-Musigny (cuvée not named)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Georges Roumier Chambolle-Musigny (cuvée not named)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Dujac Clos de la Roche Grand Cru 2016",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats Dujac Clos de la Roche 2016 at $700.",
+   "evidence_snippet": "The Domaine Dujac Clos de la Roche Grand Cru 2016 is priced at $700 for a regular bottle on Brennan's wine list, with a 1.5L Magnum available for $1400. ... specific pricing for the Grivot Vosne-Romanée 2016 on Brennan's list wasn't clearly displayed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Dujac Clos de la Roche 2016 Grivot Vosne-Romanée Roumier price"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Dujac Clos de la Roche Grand Cru 2016",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats the 2016 1.5L magnum at $1400.",
+   "evidence_snippet": "The Domaine Dujac Clos de la Roche Grand Cru 2016 is priced at $700 for a regular bottle on Brennan's wine list, with a 1.5L Magnum available for $1400. ... specific pricing for the Grivot Vosne-Romanée 2016 on Brennan's list wasn't clearly displayed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Dujac Clos de la Roche 2016 Grivot Vosne-Romanée Roumier price"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Dujac Clos de la Roche Grand Cru 2021",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Dujac Clos de la Roche Grand Cru 2022",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Dujac Clos de la Roche Grand Cru 2023",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Georges Roumier (wine not named in snippet) 2012",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Georges Roumier (wine not named in snippet) 2023",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Dujac Morey-Saint-Denis 1er Cru \"Monts Luisants\" (several vintages)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Jean Grivot Vosne-Romanée (tier and climat not named in snippet) 2011",
+   "verdict": "unverifiable",
+   "why": "Fresh search noted Grivot Vosne-Romanée on the list but printed no price or vintage; cuvée never named.",
+   "evidence_snippet": "The Domaine Dujac Clos de la Roche Grand Cru 2016 is priced at $700 for a regular bottle on Brennan's wine list, with a 1.5L Magnum available for $1400. ... specific pricing for the Grivot Vosne-Romanée 2016 on Brennan's list wasn't clearly displayed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Dujac Clos de la Roche 2016 Grivot Vosne-Romanée Roumier price"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Jean Grivot Vosne-Romanée (tier and climat not named in snippet) 2015",
+   "verdict": "unverifiable",
+   "why": "As for 2011: Grivot present, price and climat unconfirmed.",
+   "evidence_snippet": "The Domaine Dujac Clos de la Roche Grand Cru 2016 is priced at $700 for a regular bottle on Brennan's wine list, with a 1.5L Magnum available for $1400. ... specific pricing for the Grivot Vosne-Romanée 2016 on Brennan's list wasn't clearly displayed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Dujac Clos de la Roche 2016 Grivot Vosne-Romanée Roumier price"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Jean Grivot Vosne-Romanée (tier and climat not named in snippet) 2016",
+   "verdict": "unverifiable",
+   "why": "Grivot present, 2016 price not displayed in the fresh snippet.",
+   "evidence_snippet": "The Domaine Dujac Clos de la Roche Grand Cru 2016 is priced at $700 for a regular bottle on Brennan's wine list, with a 1.5L Magnum available for $1400. ... specific pricing for the Grivot Vosne-Romanée 2016 on Brennan's list wasn't clearly displayed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Dujac Clos de la Roche 2016 Grivot Vosne-Romanée Roumier price"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Jean Grivot Vosne-Romanée (tier and climat not named in snippet) 2019",
+   "verdict": "unverifiable",
+   "why": "Grivot present, price and climat unconfirmed.",
+   "evidence_snippet": "The Domaine Dujac Clos de la Roche Grand Cru 2016 is priced at $700 for a regular bottle on Brennan's wine list, with a 1.5L Magnum available for $1400. ... specific pricing for the Grivot Vosne-Romanée 2016 on Brennan's list wasn't clearly displayed",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Dujac Clos de la Roche 2016 Grivot Vosne-Romanée Roumier price"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Méo-Camuzet Vosne-Romanée (tier and climat not named in snippet) 2014",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Albert Bichot (Domaine du Clos Frantin) Nuits-Saint-Georges 1er Cru 2017",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Antonin Rodet Nuits-Saint-Georges 1er Cru \"Clos de Thorey\" 2015",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Henri Gouges Nuits-Saint-Georges 1er Cru \"Aux Chaignots\" 2021",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Henri Gouges Nuits-Saint-Georges 1er Cru \"Clos des Porrets-Saint-Georges\" 2021",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Bitouzet-Prieur Volnay 2020",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Louis Jadot Pommard 2020",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Albert Bichot Pommard 1er Cru \"Les Rugiens\" 2017",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Volnay 1er Cru (several, producers not named)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Bouchard Père & Fils Savigny-lès-Beaune 1er Cru \"Les Lavières\" 2022",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Pierre Guillemot Savigny-lès-Beaune \"Dessus Les Golardes\" 2015",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Pierre Guillemot Savigny-lès-Beaune \"Vieilles Vignes\" 2015",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Louis Jadot Beaune 1er Cru \"Bressandes\" 2022",
+   "verdict": "unverifiable",
+   "why": "Conflict: the 26 September guide names the tasting pour 'Louis Jadot Beaune 1er Cru 2023', not Bressandes 2022; the menu card changes, so confirm at lineup.",
+   "evidence_snippet": "Wine pairing supplement $120 (4 oz pours): Charles Lafitte Brut, Fichet Mâcon-Igé 2024, Louis Jadot Beaune 1er Cru 2023, Paul Hobbs Coombsville Cabernet 2021, La Tour Vieille Banyuls Reserva.",
+   "url": "/home/user/worldtable/tools/house/brennans/guide.txt",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Jean Foillard Morgon \"Côte du Py\", magnum 2023",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats Foillard Côte du Py magnum 2023 at $250.",
+   "evidence_snippet": "Jean Foillard \"Côte du Py\" Morgon Beaujolais is available in 1.5L Magnum format, with 2023 vintage priced at $250 and 2024 vintage at $270. Guy Breton Fleurie Beaujolais is offered in 1.5L Magnum format, with the 2021 vintage priced at $225. Domaine Coudert \"Clos de la Roilette\" Fleurie is listed on the wine list. Château Cambon Beaujolais (2022) is available by the glass for $19.00.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Beaujolais Foillard Côte du Py magnum Guy Breton Fleurie Clos de la Roilette Château Cambon"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Jean Foillard Morgon \"Côte du Py\", magnum 2024",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats the 2024 magnum at $270.",
+   "evidence_snippet": "Jean Foillard \"Côte du Py\" Morgon Beaujolais is available in 1.5L Magnum format, with 2023 vintage priced at $250 and 2024 vintage at $270. Guy Breton Fleurie Beaujolais is offered in 1.5L Magnum format, with the 2021 vintage priced at $225. Domaine Coudert \"Clos de la Roilette\" Fleurie is listed on the wine list. Château Cambon Beaujolais (2022) is available by the glass for $19.00.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Beaujolais Foillard Côte du Py magnum Guy Breton Fleurie Clos de la Roilette Château Cambon"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Guy Breton Fleurie, magnum 2021",
+   "verdict": "held",
+   "why": "Fresh Binwise snippet repeats Guy Breton Fleurie magnum 2021 at $225.",
+   "evidence_snippet": "Jean Foillard \"Côte du Py\" Morgon Beaujolais is available in 1.5L Magnum format, with 2023 vintage priced at $250 and 2024 vintage at $270. Guy Breton Fleurie Beaujolais is offered in 1.5L Magnum format, with the 2021 vintage priced at $225. Domaine Coudert \"Clos de la Roilette\" Fleurie is listed on the wine list. Château Cambon Beaujolais (2022) is available by the glass for $19.00.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Beaujolais Foillard Côte du Py magnum Guy Breton Fleurie Clos de la Roilette Château Cambon"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Coudert Fleurie \"Clos de la Roilette\" 2015",
+   "verdict": "unverifiable",
+   "why": "A fresh Binwise snippet confirms Coudert 'Clos de la Roilette' Fleurie is listed, but not the 2015 vintage or the $95 price.",
+   "evidence_snippet": "Jean Foillard \"Côte du Py\" Morgon Beaujolais is available in 1.5L Magnum format, with 2023 vintage priced at $250 and 2024 vintage at $270. Guy Breton Fleurie Beaujolais is offered in 1.5L Magnum format, with the 2021 vintage priced at $225. Domaine Coudert \"Clos de la Roilette\" Fleurie is listed on the wine list. Château Cambon Beaujolais (2022) is available by the glass for $19.00.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Beaujolais Foillard Côte du Py magnum Guy Breton Fleurie Clos de la Roilette Château Cambon"
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Château des Jacques Moulin-à-Vent \"Clos du Grand Carquelin\" 2022",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Jules Desjourneys Fleurie \"Les Moriers\"",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Domaine Coudert Moulin-à-Vent",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Guy Breton Morgon (other selections)",
+   "verdict": "unverifiable",
+   "why": "No fresh search (25 allowed; the session search budget ran out after 20) surfaced an independent snippet for this record; it rests on the sweep's single search summary only.",
+   "evidence_snippet": "",
+   "url": "",
+   "query": ""
+  },
+  {
+   "lens": "burgundy-red",
+   "name": "Château Cambon Beaujolais",
+   "verdict": "unverifiable",
+   "why": "A fresh Binwise snippet gives Château Cambon Beaujolais 2022 at $19.00 by the glass, but the 26 September glass list in the guide carries no Cambon, so this is likely an older glass list. Not held as current.",
+   "evidence_snippet": "Jean Foillard \"Côte du Py\" Morgon Beaujolais is available in 1.5L Magnum format, with 2023 vintage priced at $250 and 2024 vintage at $270. Guy Breton Fleurie Beaujolais is offered in 1.5L Magnum format, with the 2021 vintage priced at $225. Domaine Coudert \"Clos de la Roilette\" Fleurie is listed on the wine list. Château Cambon Beaujolais (2022) is available by the glass for $19.00.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "query": "Brennan's New Orleans wine list Beaujolais Foillard Côte du Py magnum Guy Breton Fleurie Clos de la Roilette Château Cambon"
+  }
+ ]
+}

@@ -1,0 +1,797 @@
+{
+ "lens": "france-other",
+ "searches": [
+  {
+   "query": "Brennan's New Orleans wine list Bordeaux binwise",
+   "kept": 2
+  },
+  {
+   "query": "brennansneworleans.com cocktails wine by the glass Bordeaux Rhone half bottles large format",
+   "kept": 3
+  },
+  {
+   "query": "hub.binwise.com brennans-new-orleans Chateauneuf-du-Pape",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans wine list \"Cos d'Estournel\" OR \"Château Clarke\" Bordeaux price",
+   "kept": 3
+  },
+  {
+   "query": "Brennan's New Orleans wine list \"Domaine du Pegau\" OR \"Beaucastel\" OR \"Clos Saint-Jean\" price vintage",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans wine list Hermitage Côte-Rôtie Guigal Chave Jaboulet",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans wine list Sancerre Vouvray Chinon Loire bottle",
+   "kept": 4
+  },
+  {
+   "query": "Brennan's New Orleans wine list Alsace Trimbach Zind-Humbrecht Riesling Gewurztraminer",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans wine list Pétrus OR Lafite OR \"Château Margaux\" OR Latour OR \"Haut-Brion\" OR \"Cheval Blanc\"",
+   "kept": 1
+  },
+  {
+   "query": "hub.binwise.com brennans-new-orleans Pauillac Saint-Julien Margaux classé",
+   "kept": 5
+  },
+  {
+   "query": "hub.binwise.com brennans-new-orleans Pomerol Saint-Émilion",
+   "kept": 0
+  },
+  {
+   "query": "hub.binwise.com brennans-new-orleans Bandol OR Languedoc OR Provence OR Jura OR Cahors",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans \"Mouton-Rothschild\" 2004 OR \"Lynch-Bages\" 2020 OR \"Léoville-Las Cases\" 2020 price",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans wine list \"Montrose\" 2018 OR \"Ferriere\" 2016 OR \"Cos d'Estournel\" 1989 price",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans wine list \"Beaucastel\" 2022 price Châteauneuf \"Rhône Valley\" half bottle",
+   "kept": 5
+  },
+  {
+   "query": "hub.binwise.com brennans-new-orleans Côte-Rôtie Hermitage Cornas Saint-Joseph price",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans wine list Sauternes \"d'Yquem\" OR \"Haut-Brion Blanc\" OR \"Pessac-Léognan\" price",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans wine list \"Pomerol\" \"Saint-Émilion\" Château vintage $ magnum",
+   "kept": 3
+  }
+ ],
+ "records": [
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Bordeaux (large format)",
+   "name": "Château Clarke Listrac-Médoc",
+   "producer": "Château Clarke",
+   "vintage": "2010",
+   "region": "Listrac-Médoc, Bordeaux, France",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$450",
+     "what": "1.5L magnum, list price"
+    }
+   ],
+   "description_facts": [
+    "Listed as a 1.5L magnum, vintage 2010",
+    "Appellation Listrac-Médoc, left bank Bordeaux"
+   ],
+   "snippet": "Château Clarke Listrac-Médoc Bordeaux 1.5L Magnum 2010 is priced at $450, and Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2014 is priced at $1200 on Brennan's wine list. Additionally, the restaurant also carries multiple vintages of Château Cos d'Estournel in standard bottles ranging from 1989 to 2020, with prices varying by vintage.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Cos d'Estournel\" OR \"Château Clarke\" Bordeaux price",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Bordeaux (large format)",
+   "name": "Château Cos d'Estournel",
+   "producer": "Château Cos d'Estournel",
+   "vintage": "2014",
+   "region": "Saint-Estèphe, Bordeaux, France",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$1200",
+     "what": "1.5L magnum, list price (snippet prints no cents)"
+    }
+   ],
+   "description_facts": [
+    "Listed as 2ème Cru Classé Saint-Estèphe",
+    "1.5L magnum, vintage 2014"
+   ],
+   "snippet": "Château Clarke Listrac-Médoc Bordeaux 1.5L Magnum 2010 is priced at $450, and Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2014 is priced at $1200 on Brennan's wine list. Additionally, the restaurant also carries multiple vintages of Château Cos d'Estournel in standard bottles ranging from 1989 to 2020, with prices varying by vintage.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Cos d'Estournel\" OR \"Château Clarke\" Bordeaux price",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Bordeaux",
+   "name": "Château Cos d'Estournel (vertical in 750 ml, 1989 to 2020)",
+   "producer": "Château Cos d'Estournel",
+   "vintage": "1989",
+   "region": "Saint-Estèphe, Bordeaux, France",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$635",
+     "what": "1989 bottle, list price"
+    }
+   ],
+   "description_facts": [
+    "The list carries Cos d'Estournel in standard bottles from 1989 to 2020 (per the summary), prices varying by vintage",
+    "The 1989 is priced at $635; the other vintages and their prices were not shown"
+   ],
+   "snippet": "Château Clarke Listrac-Médoc Bordeaux 1.5L Magnum 2010 is priced at $450, and Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux 1.5L Magnum 2014 is priced at $1200 on Brennan's wine list. Additionally, the restaurant also carries multiple vintages of Château Cos d'Estournel in standard bottles ranging from 1989 to 2020, with prices varying by vintage. | Château Montrose Saint-Estèphe 2018: $440 ... Château Cos d'Estournel 1989: $635 ... I was unable to find Château Ferrière Margaux 2016 with a specific price in the search results, though the wine list appears to include Château Ferrière.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Montrose\" 2018 OR \"Ferriere\" 2016 OR \"Cos d'Estournel\" 1989 price",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Bordeaux",
+   "name": "Château Montrose Saint-Estèphe 2ème Cru Classé",
+   "producer": "Château Montrose",
+   "vintage": "2018",
+   "region": "Saint-Estèphe, Bordeaux, France",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$440",
+     "what": "bottle, list price"
+    }
+   ],
+   "description_facts": [
+    "Second growth (2ème Cru Classé) of Saint-Estèphe per the list wording in the Q10 summary",
+    "Vintage 2018"
+   ],
+   "snippet": "Château Montrose Saint-Estèphe 2018: $440 ... Château Cos d'Estournel 1989: $635 ... I was unable to find Château Ferrière Margaux 2016 with a specific price in the search results, though the wine list appears to include Château Ferrière.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Montrose\" 2018 OR \"Ferriere\" 2016 OR \"Cos d'Estournel\" 1989 price",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Bordeaux",
+   "name": "Château Ferrière Margaux 3ème Cru Classé",
+   "producer": "Château Ferrière",
+   "vintage": "2016",
+   "region": "Margaux, Bordeaux, France",
+   "prices": [],
+   "description_facts": [
+    "Listed as Margaux 3ème Cru Classé, vintage 2016",
+    "No price surfaced in two searches"
+   ],
+   "snippet": "The Brennan's New Orleans wine list includes classified Bordeaux wines from the regions you mentioned, such as Château Ferriere Margaux 3ème Cru Classé 2016, Château Léoville-Las Cases Saint-Julien 2ème Cru Classé 2020, Château Lynch-Bages Pauillac 5th Cru Classé 2020, Château Montrose Saint-Estèphe 2ème Cru Classé 2018, and Château Mouton-Rothschild Pauillac 1er Cru Classé 2004.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "hub.binwise.com brennans-new-orleans Pauillac Saint-Julien Margaux classé",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Bordeaux",
+   "name": "Château Léoville-Las Cases Saint-Julien 2ème Cru Classé",
+   "producer": "Château Léoville-Las Cases",
+   "vintage": "2020",
+   "region": "Saint-Julien, Bordeaux, France",
+   "prices": [],
+   "description_facts": [
+    "Listed as Saint-Julien 2ème Cru Classé, vintage 2020",
+    "No Brennan's price surfaced; a follow-up search returned only retail prices, which are not recorded"
+   ],
+   "snippet": "The Brennan's New Orleans wine list includes classified Bordeaux wines from the regions you mentioned, such as Château Ferriere Margaux 3ème Cru Classé 2016, Château Léoville-Las Cases Saint-Julien 2ème Cru Classé 2020, Château Lynch-Bages Pauillac 5th Cru Classé 2020, Château Montrose Saint-Estèphe 2ème Cru Classé 2018, and Château Mouton-Rothschild Pauillac 1er Cru Classé 2004.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "hub.binwise.com brennans-new-orleans Pauillac Saint-Julien Margaux classé",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Bordeaux",
+   "name": "Château Lynch-Bages Pauillac 5ème Cru Classé",
+   "producer": "Château Lynch-Bages",
+   "vintage": "2020",
+   "region": "Pauillac, Bordeaux, France",
+   "prices": [],
+   "description_facts": [
+    "Listed as Pauillac fifth growth, vintage 2020",
+    "No Brennan's price surfaced"
+   ],
+   "snippet": "The Brennan's New Orleans wine list includes classified Bordeaux wines from the regions you mentioned, such as Château Ferriere Margaux 3ème Cru Classé 2016, Château Léoville-Las Cases Saint-Julien 2ème Cru Classé 2020, Château Lynch-Bages Pauillac 5th Cru Classé 2020, Château Montrose Saint-Estèphe 2ème Cru Classé 2018, and Château Mouton-Rothschild Pauillac 1er Cru Classé 2004.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "hub.binwise.com brennans-new-orleans Pauillac Saint-Julien Margaux classé",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Bordeaux",
+   "name": "Château Mouton-Rothschild Pauillac 1er Cru Classé",
+   "producer": "Château Mouton-Rothschild",
+   "vintage": "2004",
+   "region": "Pauillac, Bordeaux, France",
+   "prices": [],
+   "description_facts": [
+    "Listed as Pauillac 1er Cru Classé (first growth), vintage 2004",
+    "The only first growth any search tied to the Brennan's list; no price surfaced"
+   ],
+   "snippet": "The Brennan's New Orleans wine list includes classified Bordeaux wines from the regions you mentioned, such as Château Ferriere Margaux 3ème Cru Classé 2016, Château Léoville-Las Cases Saint-Julien 2ème Cru Classé 2020, Château Lynch-Bages Pauillac 5th Cru Classé 2020, Château Montrose Saint-Estèphe 2ème Cru Classé 2018, and Château Mouton-Rothschild Pauillac 1er Cru Classé 2004.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "hub.binwise.com brennans-new-orleans Pauillac Saint-Julien Margaux classé",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Bordeaux (large format)",
+   "name": "Château Gombaude-Guillot Pomerol",
+   "producer": "Château Gombaude-Guillot",
+   "vintage": "2011",
+   "region": "Pomerol, Bordeaux, France",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$500",
+     "what": "1.5L magnum, list price"
+    }
+   ],
+   "description_facts": [
+    "Right bank: Pomerol",
+    "1.5L magnum, vintage 2011"
+   ],
+   "snippet": "The wine list includes several Pomerol and Saint-Émilion Châteaux with various vintage years and magnum (1.5L) formats, including selections like Château Gombaude-Guillot Pomerol from 2011 in magnum format priced at $500, and Château La Lagune Haut-Médoc in magnum format from 2004 priced at $500.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Pomerol\" \"Saint-Émilion\" Château vintage $ magnum",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Bordeaux (large format)",
+   "name": "Château La Lagune Haut-Médoc",
+   "producer": "Château La Lagune",
+   "vintage": "2004",
+   "region": "Haut-Médoc, Bordeaux, France",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$500",
+     "what": "1.5L magnum, list price"
+    }
+   ],
+   "description_facts": [
+    "1.5L magnum, vintage 2004",
+    "Appellation Haut-Médoc"
+   ],
+   "snippet": "The wine list includes several Pomerol and Saint-Émilion Châteaux with various vintage years and magnum (1.5L) formats, including selections like Château Gombaude-Guillot Pomerol from 2011 in magnum format priced at $500, and Château La Lagune Haut-Médoc in magnum format from 2004 priced at $500.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Pomerol\" \"Saint-Émilion\" Château vintage $ magnum",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Cocktails & Wine By The Glass (house drinks page)",
+   "section": "Red wine by the glass",
+   "name": "Moulin d'Issan Bordeaux Supérieur",
+   "producer": "Château d'Issan",
+   "vintage": "2021",
+   "region": "Bordeaux Supérieur, France",
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Merlot"
+   ],
+   "format": "glass",
+   "prices": [
+    {
+     "printed": "$16.00",
+     "what": "glass, house drinks page"
+    }
+   ],
+   "description_facts": [
+    "The house's own drinks page prints vintage 2021; the Binwise list read 26 September 2026 printed 2023 at $16, so the two pages disagree on vintage, as they do for Rare",
+    "Already in the pack as the 2023"
+   ],
+   "snippet": "Their red wine selections by the glass include a Cabernet Sauvignon Blend from Moulin D'Issan Bordeaux Supérieur from France (2021) for $16.00.",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "site": "brennansneworleans.com (search engine summary)",
+   "query": "brennansneworleans.com cocktails wine by the glass Bordeaux Rhone half bottles large format",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Rhône Valley (large format)",
+   "name": "Domaine du Pegau 'Cuvée Laurence' Châteauneuf-du-Pape",
+   "producer": "Domaine du Pegau",
+   "vintage": "2012",
+   "region": "Châteauneuf-du-Pape, Southern Rhône, France",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$720",
+     "what": "1.5L magnum, list price"
+    }
+   ],
+   "description_facts": [
+    "1.5L magnum, vintage 2012"
+   ],
+   "snippet": "Domaine du Pegau \"Cuvée Laurence\" Châteauneuf-du-Pape available as a 1.5L Magnum from 2012 (priced at $720); Domaine Pegau, Cuvée de Capo 2010 (priced at $700) ... Château de Beaucastel 2022 vintage available on the list",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Domaine du Pegau\" OR \"Beaucastel\" OR \"Clos Saint-Jean\" price vintage",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Rhône Valley",
+   "name": "Domaine du Pegau 'Cuvée da Capo' Châteauneuf-du-Pape",
+   "producer": "Domaine du Pegau",
+   "vintage": "2010",
+   "region": "Châteauneuf-du-Pape, Southern Rhône, France",
+   "prices": [
+    {
+     "printed": "$700",
+     "what": "list price; format not stated in the snippet"
+    }
+   ],
+   "description_facts": [
+    "The snippet spells it 'Cuvée de Capo'; the producer's cuvée is 'Cuvée da Capo'. Confirm the list spelling",
+    "Vintage 2010"
+   ],
+   "snippet": "Domaine du Pegau \"Cuvée Laurence\" Châteauneuf-du-Pape available as a 1.5L Magnum from 2012 (priced at $720); Domaine Pegau, Cuvée de Capo 2010 (priced at $700) ... Château de Beaucastel 2022 vintage available on the list",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Domaine du Pegau\" OR \"Beaucastel\" OR \"Clos Saint-Jean\" price vintage",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Rhône Valley",
+   "name": "Château de Beaucastel Châteauneuf-du-Pape",
+   "producer": "Château de Beaucastel",
+   "vintage": "2022",
+   "region": "Châteauneuf-du-Pape, Southern Rhône, France",
+   "prices": [],
+   "description_facts": [
+    "The 2022 is on the list per the summary; no Brennan's price surfaced (only retail prices, not recorded)"
+   ],
+   "snippet": "Domaine du Pegau \"Cuvée Laurence\" Châteauneuf-du-Pape available as a 1.5L Magnum from 2012 (priced at $720); Domaine Pegau, Cuvée de Capo 2010 (priced at $700) ... Château de Beaucastel 2022 vintage available on the list",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Domaine du Pegau\" OR \"Beaucastel\" OR \"Clos Saint-Jean\" price vintage",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Rhône Valley",
+   "name": "Château de Beaucastel Châteauneuf-du-Pape (Œnothèque release)",
+   "producer": "Château de Beaucastel",
+   "vintage": "1998",
+   "region": "Châteauneuf-du-Pape, Southern Rhône, France",
+   "prices": [
+    {
+     "printed": "$420",
+     "what": "list price; format not stated, presumably 750 ml but unconfirmed"
+    }
+   ],
+   "description_facts": [
+    "Œnothèque is Beaucastel's late release from the estate cellar, per the snippet's wording 'Œnothèque collection'",
+    "Vintage 1998, priced at $420"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes several Château de Beaucastel options, including older vintages from their Œnothèque collection (1998 at $420, 2000 at $350, 2006 at $300, 2007 at $275) and the \"Hommage Jacques Perrin\" 2021 vintage at $630.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Beaucastel\" 2022 price Châteauneuf \"Rhône Valley\" half bottle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Rhône Valley",
+   "name": "Château de Beaucastel Châteauneuf-du-Pape (Œnothèque release)",
+   "producer": "Château de Beaucastel",
+   "vintage": "2000",
+   "region": "Châteauneuf-du-Pape, Southern Rhône, France",
+   "prices": [
+    {
+     "printed": "$350",
+     "what": "list price; format not stated, presumably 750 ml but unconfirmed"
+    }
+   ],
+   "description_facts": [
+    "Œnothèque is Beaucastel's late release from the estate cellar, per the snippet's wording 'Œnothèque collection'",
+    "Vintage 2000, priced at $350"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes several Château de Beaucastel options, including older vintages from their Œnothèque collection (1998 at $420, 2000 at $350, 2006 at $300, 2007 at $275) and the \"Hommage Jacques Perrin\" 2021 vintage at $630.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Beaucastel\" 2022 price Châteauneuf \"Rhône Valley\" half bottle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Rhône Valley",
+   "name": "Château de Beaucastel Châteauneuf-du-Pape (Œnothèque release)",
+   "producer": "Château de Beaucastel",
+   "vintage": "2006",
+   "region": "Châteauneuf-du-Pape, Southern Rhône, France",
+   "prices": [
+    {
+     "printed": "$300",
+     "what": "list price; format not stated, presumably 750 ml but unconfirmed"
+    }
+   ],
+   "description_facts": [
+    "Œnothèque is Beaucastel's late release from the estate cellar, per the snippet's wording 'Œnothèque collection'",
+    "Vintage 2006, priced at $300"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes several Château de Beaucastel options, including older vintages from their Œnothèque collection (1998 at $420, 2000 at $350, 2006 at $300, 2007 at $275) and the \"Hommage Jacques Perrin\" 2021 vintage at $630.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Beaucastel\" 2022 price Châteauneuf \"Rhône Valley\" half bottle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Rhône Valley",
+   "name": "Château de Beaucastel Châteauneuf-du-Pape (Œnothèque release)",
+   "producer": "Château de Beaucastel",
+   "vintage": "2007",
+   "region": "Châteauneuf-du-Pape, Southern Rhône, France",
+   "prices": [
+    {
+     "printed": "$275",
+     "what": "list price; format not stated, presumably 750 ml but unconfirmed"
+    }
+   ],
+   "description_facts": [
+    "Œnothèque is Beaucastel's late release from the estate cellar, per the snippet's wording 'Œnothèque collection'",
+    "Vintage 2007, priced at $275"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes several Château de Beaucastel options, including older vintages from their Œnothèque collection (1998 at $420, 2000 at $350, 2006 at $300, 2007 at $275) and the \"Hommage Jacques Perrin\" 2021 vintage at $630.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Beaucastel\" 2022 price Châteauneuf \"Rhône Valley\" half bottle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Rhône Valley",
+   "name": "Château de Beaucastel 'Hommage à Jacques Perrin' Châteauneuf-du-Pape",
+   "producer": "Château de Beaucastel",
+   "vintage": "2021",
+   "region": "Châteauneuf-du-Pape, Southern Rhône, France",
+   "prices": [
+    {
+     "printed": "$630",
+     "what": "list price; format not stated"
+    }
+   ],
+   "description_facts": [
+    "Beaucastel's top red, printed in the snippet as 'Hommage Jacques Perrin'",
+    "Vintage 2021"
+   ],
+   "snippet": "Brennan's New Orleans wine list includes several Château de Beaucastel options, including older vintages from their Œnothèque collection (1998 at $420, 2000 at $350, 2006 at $300, 2007 at $275) and the \"Hommage Jacques Perrin\" 2021 vintage at $630.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list \"Beaucastel\" 2022 price Châteauneuf \"Rhône Valley\" half bottle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Rhône Valley",
+   "name": "Paul Jaboulet Aîné Hermitage 'La Chapelle'",
+   "producer": "Paul Jaboulet Aîné",
+   "vintage": "1999",
+   "region": "Hermitage, Northern Rhône, France",
+   "prices": [
+    {
+     "printed": "$143",
+     "what": "as printed in the snippet, said to be from a 'half-price wine list'; the source page and date were not shown"
+    }
+   ],
+   "description_facts": [
+    "Only Northern Rhône bottle any search tied to Brennan's",
+    "Probably an older Wine Spectator article or promotion; not confirmed on the current list"
+   ],
+   "snippet": "The search results indicate that Paul Jaboulet Aîné Hermitage La Chapelle 1999 ($143) is featured on their half-price wine list.",
+   "url": "https://www.winespectator.com/articles/wine-restaurants-for-rhone-fans",
+   "site": "winespectator.com (unclear which result the summary drew on)",
+   "query": "Brennan's New Orleans wine list Hermitage Côte-Rôtie Guigal Chave Jaboulet",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Loire (large format)",
+   "name": "Edmond et Anne Vatan 'Clos la Néore' Sancerre",
+   "producer": "Edmond et Anne Vatan",
+   "vintage": "2021",
+   "region": "Sancerre, Loire, France",
+   "grapes": [
+    "Sauvignon Blanc"
+   ],
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$920",
+     "what": "1.5L magnum, list price"
+    }
+   ],
+   "description_facts": [
+    "1.5L magnum, vintage 2021"
+   ],
+   "snippet": "Sancerre: Edmond et Anne Vatan \"Clos la Néore\" Sancerre in 1.5L Magnum format (2021) for $920, and Lucien Crochet Sancerre in 1.5L Magnum (2024) for $185. Vouvray: Domaine Huet Pétillant Vouvray (2019) for $90 and Domaine Huet \"Le Mont\" Vouvray Demi-Sec (2023) for $60",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list Sancerre Vouvray Chinon Loire bottle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Loire (large format)",
+   "name": "Lucien Crochet Sancerre",
+   "producer": "Lucien Crochet",
+   "vintage": "2024",
+   "region": "Sancerre, Loire, France",
+   "grapes": [
+    "Sauvignon Blanc"
+   ],
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$185",
+     "what": "1.5L magnum, list price"
+    }
+   ],
+   "description_facts": [
+    "1.5L magnum, vintage 2024"
+   ],
+   "snippet": "Sancerre: Edmond et Anne Vatan \"Clos la Néore\" Sancerre in 1.5L Magnum format (2021) for $920, and Lucien Crochet Sancerre in 1.5L Magnum (2024) for $185. Vouvray: Domaine Huet Pétillant Vouvray (2019) for $90 and Domaine Huet \"Le Mont\" Vouvray Demi-Sec (2023) for $60",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list Sancerre Vouvray Chinon Loire bottle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Loire",
+   "name": "Domaine Huet Pétillant Vouvray",
+   "producer": "Domaine Huet",
+   "vintage": "2019",
+   "region": "Vouvray, Loire, France",
+   "grapes": [
+    "Chenin Blanc"
+   ],
+   "prices": [
+    {
+     "printed": "$90",
+     "what": "list price; format not stated"
+    }
+   ],
+   "description_facts": [
+    "Sparkling (pétillant) Vouvray, vintage 2019"
+   ],
+   "snippet": "Sancerre: Edmond et Anne Vatan \"Clos la Néore\" Sancerre in 1.5L Magnum format (2021) for $920, and Lucien Crochet Sancerre in 1.5L Magnum (2024) for $185. Vouvray: Domaine Huet Pétillant Vouvray (2019) for $90 and Domaine Huet \"Le Mont\" Vouvray Demi-Sec (2023) for $60",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list Sancerre Vouvray Chinon Loire bottle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Loire",
+   "name": "Domaine Huet 'Le Mont' Vouvray Demi-Sec",
+   "producer": "Domaine Huet",
+   "vintage": "2023",
+   "region": "Vouvray, Loire, France",
+   "grapes": [
+    "Chenin Blanc"
+   ],
+   "prices": [
+    {
+     "printed": "$60",
+     "what": "list price; format not stated, the low price may mean a half bottle, unconfirmed"
+    }
+   ],
+   "description_facts": [
+    "Demi-sec (off-dry), single vineyard Le Mont, vintage 2023"
+   ],
+   "snippet": "Sancerre: Edmond et Anne Vatan \"Clos la Néore\" Sancerre in 1.5L Magnum format (2021) for $920, and Lucien Crochet Sancerre in 1.5L Magnum (2024) for $185. Vouvray: Domaine Huet Pétillant Vouvray (2019) for $90 and Domaine Huet \"Le Mont\" Vouvray Demi-Sec (2023) for $60",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list Sancerre Vouvray Chinon Loire bottle",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Alsace (large format)",
+   "name": "Trimbach 'Clos Sainte Hune' Riesling",
+   "producer": "F.E. Trimbach",
+   "vintage": "2009",
+   "region": "Alsace, France",
+   "grapes": [
+    "Riesling"
+   ],
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$985",
+     "what": "1.5L magnum, list price"
+    }
+   ],
+   "description_facts": [
+    "1.5L magnum, vintage 2009"
+   ],
+   "snippet": "Brennan's carries Domaine F.E. Trimbach \"Clos Sainte Hune\" Riesling Alsace in a 1.5L Magnum 2009 format for $985. Additionally, they stock F.E. Trimbach \"Cuvée Frédéric Emile\" Riesling Alsace in a 1.5L Magnum 2014 for $500.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list Alsace Trimbach Zind-Humbrecht Riesling Gewurztraminer",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Alsace (large format)",
+   "name": "Trimbach 'Cuvée Frédéric Emile' Riesling",
+   "producer": "F.E. Trimbach",
+   "vintage": "2014",
+   "region": "Alsace, France",
+   "grapes": [
+    "Riesling"
+   ],
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$500",
+     "what": "1.5L magnum, list price"
+    }
+   ],
+   "description_facts": [
+    "1.5L magnum, vintage 2014"
+   ],
+   "snippet": "Brennan's carries Domaine F.E. Trimbach \"Clos Sainte Hune\" Riesling Alsace in a 1.5L Magnum 2009 format for $985. Additionally, they stock F.E. Trimbach \"Cuvée Frédéric Emile\" Riesling Alsace in a 1.5L Magnum 2014 for $500.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com (search engine summary of the Brennan's Binwise result)",
+   "query": "Brennan's New Orleans wine list Alsace Trimbach Zind-Humbrecht Riesling Gewurztraminer",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Wine program",
+   "section": "Cellar",
+   "name": "French focus of the program",
+   "prices": [],
+   "description_facts": [
+    "Main focuses are Burgundy, then Bordeaux and the Rhône Valley, chosen for the city's ties to France",
+    "Inventory of 17,000 bottles kept in a former carriage house with stables"
+   ],
+   "snippet": "Brennan's has a 17,000-bottle inventory stored in what was formerly a carriage house with stables, with the program's main focuses on Burgundy and other French wine regions, namely Bordeaux and the Rhône Valley, to commemorate the city's historical ties to France.",
+   "url": "https://www.winespectator.com/articles/new-orleans-restaurants-with-spiced-up-wine-lists",
+   "site": "winespectator.com (search engine summary)",
+   "query": "Brennan's New Orleans wine list Bordeaux binwise",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Wine program",
+   "section": "Cellar",
+   "name": "List sections",
+   "prices": [],
+   "description_facts": [
+    "The list has sections for by the glass, half bottles, large formats, Bordeaux and Rhône Valley",
+    "Nearly 1,400 labels and over 15,000 bottles; Saturday sommelier cellar tours with three tasting portions and light bites"
+   ],
+   "snippet": "The wine list includes dedicated sections for by the glass selections, half-bottles, large formats, Bordeaux, and Rhône Valley wines. Brennan's wine cellar is home to nearly 1,400 labels and over 15,000 bottles, and the restaurant offers guided sommelier cellar tours on Saturdays that include three tasting portions and light bites.",
+   "url": "https://www.brennansneworleans.com/menus/cocktails/",
+   "site": "brennansneworleans.com and thescoutguide.com (search engine summary)",
+   "query": "brennansneworleans.com cocktails wine by the glass Bordeaux Rhone half bottles large format",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Wine program",
+   "section": "Cellar",
+   "name": "Size counts disagree by source and year",
+   "prices": [],
+   "description_facts": [
+    "Counts quoted: 14,125 bottles and about 3,000 selections (Wine Spectator); over 14,000 bottles (house press release); 15,000 bottles and nearly 1,400 labels; 17,000 bottles",
+    "Wine Spectator lists strengths as Burgundy, Bordeaux, California, Rhône, Champagne, France and Italy; Grand Award since 2021",
+    "Wine Director named as Braithe Tidwell in the 'Winning Wines' press release (date not shown)"
+   ],
+   "snippet": "Brennan's offers a range of prices among their 14,125 bottles, and the cellar boasts approximately 3,000 selections. ... Brennan's strengths include Burgundy, Bordeaux, California, Rhône, Champagne, France, and Italy. The restaurant has held a Wine Spectator Grand Award since 2021. | The carefully curated wine list, developed by Sommelier and Wine Director Ms. Braithe Tidwell, now boasts over 14,000 bottles.",
+   "url": "https://www.winespectator.com/restaurant-awards/detail/9/name/brennan-s-restaurant",
+   "site": "winespectator.com and brennansneworleans.com/press-releases/winning-wines (search engine summary)",
+   "query": "Brennan's New Orleans wine list Hermitage Côte-Rôtie Guigal Chave Jaboulet ; Brennan's New Orleans wine list \"Pomerol\" \"Saint-Émilion\" Château vintage $ magnum",
+   "confidence": "medium",
+   "already_in_pack": false
+  }
+ ],
+ "gaps": [
+  "Every record above stands on a search engine's summary of the Binwise result, not a raw page snippet; Binwise and the house site cannot be read directly here, so all Binwise records are held at medium, never high. Check each against the printed list on shift.",
+  "The Q5 summary also named Paul Pillot 'Clos Saint-Jean' (2020 $285, 2021 $345, 2023 $400) and Philippe Colin 'Clos Saint-Jean' 2005 ($155) under a Châteauneuf query. Those are Chassagne-Montrachet (Burgundy) premier cru wines, not the Châteauneuf domaine Clos Saint-Jean; they are left for the Burgundy lens and not recorded here. Whether the Châteauneuf Clos Saint-Jean is on the list is unconfirmed.",
+  "No price found for Ferrière 2016, Léoville-Las Cases 2020, Lynch-Bages 2020, Mouton-Rothschild 2004 or Beaucastel 2022.",
+  "Cos d'Estournel vintages between 1989 and 2020 and their prices are not known.",
+  "No other first growth (Lafite, Latour, Margaux, Haut-Brion) and no Pétrus, Cheval Blanc, Ausone or Yquem surfaced; absence in search is not absence from the list.",
+  "No Pomerol or Saint-Émilion bottle beyond Gombaude-Guillot 2011 magnum surfaced; no Saint-Émilion name at all.",
+  "No white Bordeaux, Pessac-Léognan or Sauternes surfaced.",
+  "Northern Rhône: nothing current found (no Côte-Rôtie, Cornas, Saint-Joseph, Crozes); the only Hermitage, Jaboulet La Chapelle 1999 at $143, comes from an undated 'half-price' mention and is low confidence. A Q16 summary quoted Guigal, Chave and Sorrel prices from other restaurants' Binwise lists; none recorded.",
+  "Loire: no Chinon, Savennières, Pouilly-Fumé or Muscadet surfaced. Huet 'Le Mont' Demi-Sec 2023 at $60 may be a half bottle: confirm.",
+  "Alsace: only Trimbach magnums surfaced; no Zind-Humbrecht, Weinbach or Gewurztraminer confirmed. The Pierre Sparr crémant is already in the pack.",
+  "Provence beyond the Minuty glass pour, Bandol, Languedoc, Roussillon, Jura, Savoie, Cahors and the South West: nothing tied to Brennan's. The Q12 summary named Tempier, Simone, Trévallon, Aupilhac and others from other restaurants' Binwise lists; none recorded.",
+  "Moulin d'Issan: the house drinks page prints 2021 at $16.00, Binwise (26 September) printed 2023 at $16. Name the open vintage at lineup.",
+  "Fall menu changes after 26 September were not checked by this lens."
+ ]
+}

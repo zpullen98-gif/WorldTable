@@ -1,0 +1,1577 @@
+{
+ "lens": "burgundy-red",
+ "note": "The search tool returns a summarised snippet, not raw page text; each snippet field quotes the summary as returned. Searches marked [site hub.binwise.com] were run with allowed_domains set to hub.binwise.com.",
+ "searches": [
+  {
+   "query": "Brennan's New Orleans wine list red Burgundy binwise",
+   "kept": 3
+  },
+  {
+   "query": "hub.binwise.com brennans-new-orleans Bourgogne Rouge Gevrey-Chambertin Vosne-Romanée",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans sommelier Burgundy cellar Domaine de la Romanée-Conti",
+   "kept": 2
+  },
+  {
+   "query": "\"Brennan's\" New Orleans \"Romanée-Conti\" \"$15,000\" Ponsot Clos de Bèze Wine Spectator",
+   "kept": 1
+  },
+  {
+   "query": "Wine Spectator \"Wine Restaurants for Burgundy Fans\" Brennan's New Orleans",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans wine list Pinot Noir Domaine Faiveley Bourgogne 2022 price",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans wine list Volnay OR Pommard OR \"Chambolle-Musigny\" OR \"Nuits-Saint-Georges\" premier cru",
+   "kept": 7
+  },
+  {
+   "query": "Brennan's New Orleans Beaujolais Morgon OR Fleurie OR \"Moulin-a-Vent\" wine list",
+   "kept": 4
+  },
+  {
+   "query": "Brennan's Royal Street Burgundy dinner wine pairing Louis Jadot OR Drouhin OR \"Domaine Leroy\" OR Rousseau",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans wine list Gevrey-Chambertin Armand Rousseau OR Denis Mortet OR Fourrier OR Bachelet",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans wine list Vosne-Romanée Echezeaux OR \"Clos de Vougeot\" OR \"Richebourg\" grand cru",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans wine list Corton OR \"Aloxe-Corton\" OR \"Savigny-lès-Beaune\" OR \"Morey-Saint-Denis\" Burgundy red",
+   "kept": 4
+  },
+  {
+   "query": "Brennan's New Orleans Gevrey-Chambertin premier cru grand cru Chambertin price [site hub.binwise.com]",
+   "kept": 8
+  },
+  {
+   "query": "Brennan's New Orleans Vosne-Romanée Echezeaux Romanée-Conti La Tâche price [site hub.binwise.com]",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans Beaujolais Foillard Morgon Breton Coudert Moulin-à-Vent price [site hub.binwise.com]",
+   "kept": 5
+  },
+  {
+   "query": "Brennan's New Orleans Pommard Volnay premier cru Rugiens Taillepieds Clos des Ducs price [site hub.binwise.com]",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans Chambolle-Musigny Roumier Dujac Bonnes-Mares Musigny Clos de la Roche price [site hub.binwise.com]",
+   "kept": 7
+  },
+  {
+   "query": "Brennan's New Orleans Echézeaux Clos de Vougeot Corton grand cru Vosne-Romanée premier cru price [site hub.binwise.com]",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans Nuits-Saint-Georges Gouges Bichot Rodet Bourgogne Rouge \"Côte de Nuits-Villages\" price [site hub.binwise.com]",
+   "kept": 4
+  },
+  {
+   "query": "Brennan's New Orleans Vosne-Romanée Méo-Camuzet OR Grivot OR Cathiard OR Gros OR Arnoux price [site hub.binwise.com]",
+   "kept": 5
+  },
+  {
+   "query": "brennansneworleans.com dinner tasting menu \"Beaune Bressandes\" Jadot Château Cambon Beaujolais glass",
+   "kept": 0
+  }
+ ],
+ "records": [
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, regional",
+   "name": "Damien Martin Pinot Noir Bourgogne",
+   "producer": "Damien Martin",
+   "vintage": "2023",
+   "region": "Bourgogne (regional), Burgundy",
+   "grapes": "Pinot Noir",
+   "format": "glass",
+   "prices": [],
+   "description_facts": [
+    "Listed on Binwise as Pinot Noir, Burgundy, France, 2023",
+    "The server guide already carries it as the $17 glass; this snippet gives no price"
+   ],
+   "snippet": "The list includes red Burgundy wines such as Pinot Noir from Damien Martin (Burgundy FR 2023) and Domaine Faiveley Bourgogne (FR 2022).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list red Burgundy binwise",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": true
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, regional",
+   "name": "Domaine Faiveley Bourgogne (Pinot Noir)",
+   "producer": "Domaine Faiveley",
+   "vintage": "2022",
+   "region": "Bourgogne (regional), Burgundy",
+   "grapes": "Pinot Noir",
+   "prices": [],
+   "description_facts": [
+    "Listed on Binwise as Domaine Faiveley Bourgogne, France, 2022",
+    "Format (glass or bottle) and price not in snippet; a search for its price returned only retail figures, which are not used"
+   ],
+   "snippet": "The list includes red Burgundy wines such as Pinot Noir from Damien Martin (Burgundy FR 2023) and Domaine Faiveley Bourgogne (FR 2022).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list red Burgundy binwise",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Wine programme",
+   "section": "Programme",
+   "name": "Burgundy depth: more than 10 pages of whites and 20 pages of reds",
+   "region": "Burgundy",
+   "prices": [],
+   "description_facts": [
+    "Burgundy runs to more than 10 pages of whites and 20 pages of reds (Wine Spectator, Grand Award Class of 2021 article; figure dated 2021)"
+   ],
+   "snippet": "the program's main focuses are Burgundy and other French wine regions, namely Bordeaux and the Rhône Valley, and Burgundy is a prime focus, with more than 10 pages of whites and 20 pages of reds.",
+   "url": "https://www.winespectator.com/articles/grand-awards-2021-brennans-new-orleans-083121",
+   "site": "winespectator.com",
+   "query": "Brennan's New Orleans wine list red Burgundy binwise",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Wine programme",
+   "section": "Programme",
+   "name": "Two-storey cellar, second floor nearly all Burgundy",
+   "region": "Burgundy",
+   "prices": [],
+   "description_facts": [
+    "Cellar is two storeys, about 15,000 bottles",
+    "Nearly the entire second floor holds Burgundy (answers the guide's 'upstairs' line for red Burgundy)",
+    "Wine director named as Braithe Tidwell in the article; article undated in snippet, confirm current role"
+   ],
+   "snippet": "Brennan's two-story cellar houses 15,000 bottles, with nearly the entire second floor devoted solely to Burgundian wines. Wine director Braithe Tidwell leans into the city's French heritage for the wine list, which offers a rock-solid Burgundy category.",
+   "url": "https://www.winespectator.com/articles/wine-restaurants-for-burgundy-fans",
+   "site": "winespectator.com",
+   "query": "Brennan's New Orleans sommelier Burgundy cellar Domaine de la Romanée-Conti",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Wine programme",
+   "section": "Programme",
+   "name": "Top crus plus lesser-known finds",
+   "region": "Burgundy",
+   "prices": [],
+   "description_facts": [
+    "Burgundy list holds top crus and lesser-known finds",
+    "California and Italy also well represented; strong top Bordeaux"
+   ],
+   "snippet": "Wine director Braithe Tidwell leans into the city's French heritage for the wine list, which offers a rock-solid Burgundy category. The top crus are represented, along with lesser-known finds. While other regions of the world are well-represented (especially California and Italy), the French theme continues with a strong showing of top Bordeaux châteaus and blue-ribbon Champagnes.",
+   "url": "https://www.winespectator.com/articles/wine-restaurants-for-burgundy-fans",
+   "site": "winespectator.com",
+   "query": "Wine Spectator \"Wine Restaurants for Burgundy Fans\" Brennan's New Orleans",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Wine programme",
+   "section": "Programme",
+   "name": "Denis Mortet verticals",
+   "region": "Gevrey-Chambertin, Côte de Nuits",
+   "prices": [],
+   "description_facts": [
+    "About 3,000 selections (Wine Spectator, undated in snippet)",
+    "Verticals of Domaine Denis Mortet (Gevrey-Chambertin); specific wines, vintages and prices not in snippet"
+   ],
+   "snippet": "The program's main focuses are Burgundy and other French wine regions, namely Bordeaux and the Rhône Valley ... the wine list includes dozens of verticals from leading wineries such as Burgundy's Denis Mortet.",
+   "url": "https://www.winespectator.com/articles/new-orleans-restaurants-with-spiced-up-wine-lists",
+   "site": "winespectator.com",
+   "query": "Brennan's New Orleans wine list Gevrey-Chambertin Armand Rousseau OR Denis Mortet OR Fourrier OR Bachelet",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Romanée-Conti Grand Cru",
+   "producer": "Domaine de la Romanée-Conti",
+   "vintage": "2010",
+   "region": "Vosne-Romanée, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$15,000",
+     "what": "bottle, as quoted by Wine Spectator in 2021"
+    }
+   ],
+   "description_facts": [
+    "Grand cru monopole of DRC; 2010 quoted at $15,000 in the 2021 Grand Award article",
+    "2021 figure; the current Binwise range (record below) supersedes it"
+   ],
+   "snippet": "Diners can enjoy such rarities like 2010 DRC Romanée-Conti ($15,000) or 2013 Domaine Ponsot Clos de Bèze ($1,535).",
+   "url": "https://www.winespectator.com/articles/grand-awards-2021-brennans-new-orleans-083121",
+   "site": "winespectator.com",
+   "query": "Brennan's New Orleans sommelier Burgundy cellar Domaine de la Romanée-Conti",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Romanée-Conti Grand Cru (several vintages)",
+   "producer": "Domaine de la Romanée-Conti",
+   "vintage": "range 2007 to 2022, individual vintages not itemised",
+   "region": "Vosne-Romanée, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$12,500 to $16,000",
+     "what": "bottle, range across vintages; per-vintage prices not in snippet"
+    }
+   ],
+   "description_facts": [
+    "Several vintages of DRC Romanée-Conti on the live list, spanning 2007 to 2022",
+    "Range only; read each vintage's price on the list"
+   ],
+   "snippet": "Romanée-Conti Grand Cru - ranging from $12,500 to $16,000 depending on vintage (2007-2022) (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Vosne-Romanée Echezeaux Romanée-Conti La Tâche price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "La Tâche Grand Cru (several vintages)",
+   "producer": "Domaine de la Romanée-Conti",
+   "vintage": "range 2004 to 2022, individual vintages not itemised",
+   "region": "Vosne-Romanée, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$3,000 to $5,500",
+     "what": "bottle, range across vintages"
+    }
+   ],
+   "description_facts": [
+    "Several vintages of DRC La Tâche, 2004 to 2022",
+    "Producer inferred as DRC from context (La Tâche is a DRC monopole); snippet names only the wine"
+   ],
+   "snippet": "La Tâche Grand Cru - ranging from $3,000 to $5,500 depending on vintage (2004-2022) (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Vosne-Romanée Echezeaux Romanée-Conti La Tâche price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru, large format",
+   "name": "Echézeaux Grand Cru, magnum",
+   "producer": "Domaine de la Romanée-Conti",
+   "vintage": "2012",
+   "region": "Flagey-Echézeaux (Vosne-Romanée), Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$4,200",
+     "what": "1.5L magnum"
+    }
+   ],
+   "description_facts": [
+    "DRC Echézeaux 2012 in 1.5L magnum at $4,200"
+   ],
+   "snippet": "Domaine de la Romanée-Conti Grand Cru Echézeaux Burgundy from 2012 is priced at $4,200 for a 1.5L Magnum. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Echézeaux Clos de Vougeot Corton grand cru Vosne-Romanée premier cru price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Chambertin-Clos de Bèze Grand Cru",
+   "producer": "Domaine Ponsot",
+   "vintage": "2013",
+   "region": "Gevrey-Chambertin, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$1,535",
+     "what": "bottle, as quoted by Wine Spectator in 2021"
+    }
+   ],
+   "description_facts": [
+    "Ponsot Clos de Bèze 2013 quoted at $1,535 in 2021; current price unknown"
+   ],
+   "snippet": "Diners can enjoy such rarities like 2010 DRC Romanée-Conti ($15,000) or 2013 Domaine Ponsot Clos de Bèze ($1,535).",
+   "url": "https://www.winespectator.com/articles/grand-awards-2021-brennans-new-orleans-083121",
+   "site": "winespectator.com",
+   "query": "\"Brennan's\" New Orleans \"Romanée-Conti\" \"$15,000\" Ponsot Clos de Bèze Wine Spectator",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Chambertin Grand Cru",
+   "producer": "Camille Giroud",
+   "vintage": "2006",
+   "region": "Gevrey-Chambertin, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$540",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Camille Giroud Chambertin Grand Cru 2006 at $540 on the live list"
+   ],
+   "snippet": "For Chambertin Grand Cru, they offer: Camille Giroud 2006 for $540, Domaine Ponsot 2013 for $1,780, and Domaine Trapet 2006 for $405 and 2012 for $675. For Gevrey-Chambertin Premier Cru, Brennan's offers selections including Arnaud Mortet \"La Perrière\" 2016 for $410, Bruno Clavelier \"Les Corbeaux\" Vieilles Vignes 2019 for $675, and Bernard Dugat-Py \"Les Corbeaux\" 2013 for $725 and 2014 for $710. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Gevrey-Chambertin premier cru grand cru Chambertin price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Chambertin Grand Cru",
+   "producer": "Domaine Ponsot",
+   "vintage": "2013",
+   "region": "Gevrey-Chambertin, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$1,780",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Domaine Ponsot Chambertin Grand Cru 2013 at $1,780 on the live list",
+    "The Ponsot 2013 may be the Clos de Bèze Wine Spectator priced at $1,535 in 2021; the snippet says Chambertin Grand Cru, so confirm the exact cru"
+   ],
+   "snippet": "For Chambertin Grand Cru, they offer: Camille Giroud 2006 for $540, Domaine Ponsot 2013 for $1,780, and Domaine Trapet 2006 for $405 and 2012 for $675. For Gevrey-Chambertin Premier Cru, Brennan's offers selections including Arnaud Mortet \"La Perrière\" 2016 for $410, Bruno Clavelier \"Les Corbeaux\" Vieilles Vignes 2019 for $675, and Bernard Dugat-Py \"Les Corbeaux\" 2013 for $725 and 2014 for $710. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Gevrey-Chambertin premier cru grand cru Chambertin price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Chambertin Grand Cru",
+   "producer": "Domaine Trapet",
+   "vintage": "2006",
+   "region": "Gevrey-Chambertin, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$405",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Domaine Trapet Chambertin Grand Cru 2006 at $405 on the live list"
+   ],
+   "snippet": "For Chambertin Grand Cru, they offer: Camille Giroud 2006 for $540, Domaine Ponsot 2013 for $1,780, and Domaine Trapet 2006 for $405 and 2012 for $675. For Gevrey-Chambertin Premier Cru, Brennan's offers selections including Arnaud Mortet \"La Perrière\" 2016 for $410, Bruno Clavelier \"Les Corbeaux\" Vieilles Vignes 2019 for $675, and Bernard Dugat-Py \"Les Corbeaux\" 2013 for $725 and 2014 for $710. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Gevrey-Chambertin premier cru grand cru Chambertin price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Chambertin Grand Cru",
+   "producer": "Domaine Trapet",
+   "vintage": "2012",
+   "region": "Gevrey-Chambertin, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$675",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Domaine Trapet Chambertin Grand Cru 2012 at $675 on the live list"
+   ],
+   "snippet": "For Chambertin Grand Cru, they offer: Camille Giroud 2006 for $540, Domaine Ponsot 2013 for $1,780, and Domaine Trapet 2006 for $405 and 2012 for $675. For Gevrey-Chambertin Premier Cru, Brennan's offers selections including Arnaud Mortet \"La Perrière\" 2016 for $410, Bruno Clavelier \"Les Corbeaux\" Vieilles Vignes 2019 for $675, and Bernard Dugat-Py \"Les Corbeaux\" 2013 for $725 and 2014 for $710. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Gevrey-Chambertin premier cru grand cru Chambertin price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Gevrey-Chambertin 1er Cru \"La Perrière\"",
+   "producer": "Arnaud Mortet",
+   "vintage": "2016",
+   "region": "Gevrey-Chambertin, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$410",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Arnaud Mortet Gevrey-Chambertin 1er Cru \"La Perrière\" 2016 at $410"
+   ],
+   "snippet": "For Chambertin Grand Cru, they offer: Camille Giroud 2006 for $540, Domaine Ponsot 2013 for $1,780, and Domaine Trapet 2006 for $405 and 2012 for $675. For Gevrey-Chambertin Premier Cru, Brennan's offers selections including Arnaud Mortet \"La Perrière\" 2016 for $410, Bruno Clavelier \"Les Corbeaux\" Vieilles Vignes 2019 for $675, and Bernard Dugat-Py \"Les Corbeaux\" 2013 for $725 and 2014 for $710. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Gevrey-Chambertin premier cru grand cru Chambertin price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Gevrey-Chambertin 1er Cru \"Les Corbeaux\" Vieilles Vignes",
+   "producer": "Bruno Clavelier",
+   "vintage": "2019",
+   "region": "Gevrey-Chambertin, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$675",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Bruno Clavelier Gevrey-Chambertin 1er Cru \"Les Corbeaux\" Vieilles Vignes 2019 at $675"
+   ],
+   "snippet": "For Chambertin Grand Cru, they offer: Camille Giroud 2006 for $540, Domaine Ponsot 2013 for $1,780, and Domaine Trapet 2006 for $405 and 2012 for $675. For Gevrey-Chambertin Premier Cru, Brennan's offers selections including Arnaud Mortet \"La Perrière\" 2016 for $410, Bruno Clavelier \"Les Corbeaux\" Vieilles Vignes 2019 for $675, and Bernard Dugat-Py \"Les Corbeaux\" 2013 for $725 and 2014 for $710. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Gevrey-Chambertin premier cru grand cru Chambertin price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Gevrey-Chambertin 1er Cru \"Les Corbeaux\"",
+   "producer": "Bernard Dugat-Py",
+   "vintage": "2013",
+   "region": "Gevrey-Chambertin, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$725",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Bernard Dugat-Py Gevrey-Chambertin 1er Cru \"Les Corbeaux\" 2013 at $725"
+   ],
+   "snippet": "For Chambertin Grand Cru, they offer: Camille Giroud 2006 for $540, Domaine Ponsot 2013 for $1,780, and Domaine Trapet 2006 for $405 and 2012 for $675. For Gevrey-Chambertin Premier Cru, Brennan's offers selections including Arnaud Mortet \"La Perrière\" 2016 for $410, Bruno Clavelier \"Les Corbeaux\" Vieilles Vignes 2019 for $675, and Bernard Dugat-Py \"Les Corbeaux\" 2013 for $725 and 2014 for $710. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Gevrey-Chambertin premier cru grand cru Chambertin price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Gevrey-Chambertin 1er Cru \"Les Corbeaux\"",
+   "producer": "Bernard Dugat-Py",
+   "vintage": "2014",
+   "region": "Gevrey-Chambertin, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$710",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Bernard Dugat-Py Gevrey-Chambertin 1er Cru \"Les Corbeaux\" 2014 at $710"
+   ],
+   "snippet": "For Chambertin Grand Cru, they offer: Camille Giroud 2006 for $540, Domaine Ponsot 2013 for $1,780, and Domaine Trapet 2006 for $405 and 2012 for $675. For Gevrey-Chambertin Premier Cru, Brennan's offers selections including Arnaud Mortet \"La Perrière\" 2016 for $410, Bruno Clavelier \"Les Corbeaux\" Vieilles Vignes 2019 for $675, and Bernard Dugat-Py \"Les Corbeaux\" 2013 for $725 and 2014 for $710. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Gevrey-Chambertin premier cru grand cru Chambertin price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Chambolle-Musigny 1er Cru \"La Combe d'Orveau\" (several vintages)",
+   "producer": "Bruno Clavelier",
+   "vintage": "several, not itemised",
+   "region": "Chambolle-Musigny, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$375-$720",
+     "what": "bottle, range across vintages"
+    }
+   ],
+   "description_facts": [
+    "Several vintages of Clavelier Combe d'Orveau, $375 to $720"
+   ],
+   "snippet": "For Chambolle-Musigny, the restaurant has multiple Premier Cru options including Bruno Clavelier \"La Combe d'Orveau\" from various vintages ranging from $375-$720, as well as other Chambolle-Musigny selections from producers like Domaine A.F. Gros, Domaine Dujac, Domaine Faiveley, and Domaine Georges Roumier. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Volnay OR Pommard OR \"Chambolle-Musigny\" OR \"Nuits-Saint-Georges\" premier cru",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, Chambolle-Musigny",
+   "name": "Chambolle-Musigny (cuvée not named)",
+   "producer": "Domaine A.F. Gros",
+   "region": "Chambolle-Musigny, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "Domaine A.F. Gros has at least one Chambolle-Musigny on the list; tier, cuvée, vintage and price not in snippet"
+   ],
+   "snippet": "For Chambolle-Musigny, the restaurant has multiple Premier Cru options including Bruno Clavelier \"La Combe d'Orveau\" from various vintages ranging from $375-$720, as well as other Chambolle-Musigny selections from producers like Domaine A.F. Gros, Domaine Dujac, Domaine Faiveley, and Domaine Georges Roumier. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Volnay OR Pommard OR \"Chambolle-Musigny\" OR \"Nuits-Saint-Georges\" premier cru",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, Chambolle-Musigny",
+   "name": "Chambolle-Musigny (cuvée not named)",
+   "producer": "Domaine Dujac",
+   "region": "Chambolle-Musigny, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "Domaine Dujac has at least one Chambolle-Musigny on the list; tier, cuvée, vintage and price not in snippet"
+   ],
+   "snippet": "For Chambolle-Musigny, the restaurant has multiple Premier Cru options including Bruno Clavelier \"La Combe d'Orveau\" from various vintages ranging from $375-$720, as well as other Chambolle-Musigny selections from producers like Domaine A.F. Gros, Domaine Dujac, Domaine Faiveley, and Domaine Georges Roumier. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Volnay OR Pommard OR \"Chambolle-Musigny\" OR \"Nuits-Saint-Georges\" premier cru",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, Chambolle-Musigny",
+   "name": "Chambolle-Musigny (cuvée not named)",
+   "producer": "Domaine Faiveley",
+   "region": "Chambolle-Musigny, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "Domaine Faiveley has at least one Chambolle-Musigny on the list; tier, cuvée, vintage and price not in snippet"
+   ],
+   "snippet": "For Chambolle-Musigny, the restaurant has multiple Premier Cru options including Bruno Clavelier \"La Combe d'Orveau\" from various vintages ranging from $375-$720, as well as other Chambolle-Musigny selections from producers like Domaine A.F. Gros, Domaine Dujac, Domaine Faiveley, and Domaine Georges Roumier. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Volnay OR Pommard OR \"Chambolle-Musigny\" OR \"Nuits-Saint-Georges\" premier cru",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, Chambolle-Musigny",
+   "name": "Chambolle-Musigny (cuvée not named)",
+   "producer": "Domaine Georges Roumier",
+   "region": "Chambolle-Musigny, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "Domaine Georges Roumier has at least one Chambolle-Musigny on the list; tier, cuvée, vintage and price not in snippet"
+   ],
+   "snippet": "For Chambolle-Musigny, the restaurant has multiple Premier Cru options including Bruno Clavelier \"La Combe d'Orveau\" from various vintages ranging from $375-$720, as well as other Chambolle-Musigny selections from producers like Domaine A.F. Gros, Domaine Dujac, Domaine Faiveley, and Domaine Georges Roumier. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Volnay OR Pommard OR \"Chambolle-Musigny\" OR \"Nuits-Saint-Georges\" premier cru",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Clos de la Roche Grand Cru",
+   "producer": "Domaine Dujac",
+   "vintage": "2016",
+   "region": "Morey-Saint-Denis, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$700",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Dujac Clos de la Roche 2016 at $700"
+   ],
+   "snippet": "Domaine Dujac Clos de la Roche Grand Cru 2016: $700 (standard), $1400 (1.5L Magnum); Domaine Dujac Clos de la Roche 2021: $1605, 2022: $1375, 2023: $1300; Domaine Georges Roumier 2012: $1100, 2023: $2550 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Chambolle-Musigny Roumier Dujac Bonnes-Mares Musigny Clos de la Roche price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Clos de la Roche Grand Cru",
+   "producer": "Domaine Dujac",
+   "vintage": "2016",
+   "region": "Morey-Saint-Denis, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$1400",
+     "what": "1.5L magnum"
+    }
+   ],
+   "description_facts": [
+    "Dujac Clos de la Roche 2016 at $1400 in 1.5L magnum"
+   ],
+   "snippet": "Domaine Dujac Clos de la Roche Grand Cru 2016: $700 (standard), $1400 (1.5L Magnum); Domaine Dujac Clos de la Roche 2021: $1605, 2022: $1375, 2023: $1300; Domaine Georges Roumier 2012: $1100, 2023: $2550 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Chambolle-Musigny Roumier Dujac Bonnes-Mares Musigny Clos de la Roche price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Clos de la Roche Grand Cru",
+   "producer": "Domaine Dujac",
+   "vintage": "2021",
+   "region": "Morey-Saint-Denis, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$1605",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Dujac Clos de la Roche 2021 at $1605"
+   ],
+   "snippet": "Domaine Dujac Clos de la Roche Grand Cru 2016: $700 (standard), $1400 (1.5L Magnum); Domaine Dujac Clos de la Roche 2021: $1605, 2022: $1375, 2023: $1300; Domaine Georges Roumier 2012: $1100, 2023: $2550 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Chambolle-Musigny Roumier Dujac Bonnes-Mares Musigny Clos de la Roche price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Clos de la Roche Grand Cru",
+   "producer": "Domaine Dujac",
+   "vintage": "2022",
+   "region": "Morey-Saint-Denis, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$1375",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Dujac Clos de la Roche 2022 at $1375"
+   ],
+   "snippet": "Domaine Dujac Clos de la Roche Grand Cru 2016: $700 (standard), $1400 (1.5L Magnum); Domaine Dujac Clos de la Roche 2021: $1605, 2022: $1375, 2023: $1300; Domaine Georges Roumier 2012: $1100, 2023: $2550 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Chambolle-Musigny Roumier Dujac Bonnes-Mares Musigny Clos de la Roche price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, grand cru",
+   "name": "Clos de la Roche Grand Cru",
+   "producer": "Domaine Dujac",
+   "vintage": "2023",
+   "region": "Morey-Saint-Denis, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$1300",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Dujac Clos de la Roche 2023 at $1300"
+   ],
+   "snippet": "Domaine Dujac Clos de la Roche Grand Cru 2016: $700 (standard), $1400 (1.5L Magnum); Domaine Dujac Clos de la Roche 2021: $1605, 2022: $1375, 2023: $1300; Domaine Georges Roumier 2012: $1100, 2023: $2550 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Chambolle-Musigny Roumier Dujac Bonnes-Mares Musigny Clos de la Roche price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy",
+   "name": "Domaine Georges Roumier (wine not named in snippet)",
+   "producer": "Domaine Georges Roumier",
+   "vintage": "2012",
+   "region": "Chambolle-Musigny, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$1100",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "A Roumier wine, 2012, at $1100; the summary does not say which cuvée (the query named Bonnes-Mares and Musigny, so it may be either, or another): confirm on the list"
+   ],
+   "snippet": "Domaine Dujac Clos de la Roche Grand Cru 2016: $700 (standard), $1400 (1.5L Magnum); Domaine Dujac Clos de la Roche 2021: $1605, 2022: $1375, 2023: $1300; Domaine Georges Roumier 2012: $1100, 2023: $2550 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Chambolle-Musigny Roumier Dujac Bonnes-Mares Musigny Clos de la Roche price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy",
+   "name": "Domaine Georges Roumier (wine not named in snippet)",
+   "producer": "Domaine Georges Roumier",
+   "vintage": "2023",
+   "region": "Chambolle-Musigny, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$2550",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "A Roumier wine, 2023, at $2550; the summary does not say which cuvée (the query named Bonnes-Mares and Musigny, so it may be either, or another): confirm on the list"
+   ],
+   "snippet": "Domaine Dujac Clos de la Roche Grand Cru 2016: $700 (standard), $1400 (1.5L Magnum); Domaine Dujac Clos de la Roche 2021: $1605, 2022: $1375, 2023: $1300; Domaine Georges Roumier 2012: $1100, 2023: $2550 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Chambolle-Musigny Roumier Dujac Bonnes-Mares Musigny Clos de la Roche price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Morey-Saint-Denis 1er Cru \"Monts Luisants\" (several vintages)",
+   "producer": "Domaine Dujac",
+   "vintage": "several, not itemised",
+   "region": "Morey-Saint-Denis, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "Dujac Monts Luisants in several vintages; prices not in snippet",
+    "Monts Luisants is red here per the red Burgundy context of the query; Dujac also makes a white Monts Luisants, so confirm colour"
+   ],
+   "snippet": "Several Morey-Saint-Denis Premier Cru selections including Domaine Dujac \"Monts Luisants\" from various vintages (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Corton OR \"Aloxe-Corton\" OR \"Savigny-lès-Beaune\" OR \"Morey-Saint-Denis\" Burgundy red",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, Vosne-Romanée",
+   "name": "Vosne-Romanée (tier and climat not named in snippet)",
+   "producer": "Domaine Jean Grivot",
+   "vintage": "2011",
+   "region": "Vosne-Romanée, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$475",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "A Grivot Vosne-Romanée 2011 at $475; at these prices likely a premier cru, but the snippet does not say: confirm"
+   ],
+   "snippet": "From Brennan's New Orleans: Domaine Jean Grivot 2011: $475; Domaine Jean Grivot 2015: $520; Domaine Jean Grivot 2016: $570; Domaine Jean Grivot 2019: $750; Domaine Méo-Camuzet 2014: $540 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Vosne-Romanée Méo-Camuzet OR Grivot OR Cathiard OR Gros OR Arnoux price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, Vosne-Romanée",
+   "name": "Vosne-Romanée (tier and climat not named in snippet)",
+   "producer": "Domaine Jean Grivot",
+   "vintage": "2015",
+   "region": "Vosne-Romanée, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$520",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "A Grivot Vosne-Romanée 2015 at $520; at these prices likely a premier cru, but the snippet does not say: confirm"
+   ],
+   "snippet": "From Brennan's New Orleans: Domaine Jean Grivot 2011: $475; Domaine Jean Grivot 2015: $520; Domaine Jean Grivot 2016: $570; Domaine Jean Grivot 2019: $750; Domaine Méo-Camuzet 2014: $540 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Vosne-Romanée Méo-Camuzet OR Grivot OR Cathiard OR Gros OR Arnoux price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, Vosne-Romanée",
+   "name": "Vosne-Romanée (tier and climat not named in snippet)",
+   "producer": "Domaine Jean Grivot",
+   "vintage": "2016",
+   "region": "Vosne-Romanée, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$570",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "A Grivot Vosne-Romanée 2016 at $570; at these prices likely a premier cru, but the snippet does not say: confirm"
+   ],
+   "snippet": "From Brennan's New Orleans: Domaine Jean Grivot 2011: $475; Domaine Jean Grivot 2015: $520; Domaine Jean Grivot 2016: $570; Domaine Jean Grivot 2019: $750; Domaine Méo-Camuzet 2014: $540 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Vosne-Romanée Méo-Camuzet OR Grivot OR Cathiard OR Gros OR Arnoux price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, Vosne-Romanée",
+   "name": "Vosne-Romanée (tier and climat not named in snippet)",
+   "producer": "Domaine Jean Grivot",
+   "vintage": "2019",
+   "region": "Vosne-Romanée, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$750",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "A Grivot Vosne-Romanée 2019 at $750; at these prices likely a premier cru, but the snippet does not say: confirm"
+   ],
+   "snippet": "From Brennan's New Orleans: Domaine Jean Grivot 2011: $475; Domaine Jean Grivot 2015: $520; Domaine Jean Grivot 2016: $570; Domaine Jean Grivot 2019: $750; Domaine Méo-Camuzet 2014: $540 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Vosne-Romanée Méo-Camuzet OR Grivot OR Cathiard OR Gros OR Arnoux price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, Vosne-Romanée",
+   "name": "Vosne-Romanée (tier and climat not named in snippet)",
+   "producer": "Domaine Méo-Camuzet",
+   "vintage": "2014",
+   "region": "Vosne-Romanée, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$540",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "A Méo-Camuzet Vosne-Romanée 2014 at $540; tier not in snippet"
+   ],
+   "snippet": "From Brennan's New Orleans: Domaine Jean Grivot 2011: $475; Domaine Jean Grivot 2015: $520; Domaine Jean Grivot 2016: $570; Domaine Jean Grivot 2019: $750; Domaine Méo-Camuzet 2014: $540 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Vosne-Romanée Méo-Camuzet OR Grivot OR Cathiard OR Gros OR Arnoux price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Nuits-Saint-Georges 1er Cru",
+   "producer": "Albert Bichot (Domaine du Clos Frantin)",
+   "vintage": "2017",
+   "region": "Nuits-Saint-Georges, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$185",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Albert Bichot (Domaine du Clos Frantin) Nuits-Saint-Georges 1er Cru 2017 at $185"
+   ],
+   "snippet": "Albert Bichot \"Domaine du Clos Frantin\" 2017 Nuits-Saint-Georges Premier Cru priced at $185, and Antonin Rodet \"Clos de Thorey\" 2015 at $175. ... Domaine Henri Gouges wines from Brennan's, with their \"Aux Chaignots\" 2021 at $295 and \"Clos des Porrets-Saint-Georges\" 2021 at $285. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Nuits-Saint-Georges Gouges Bichot Rodet Bourgogne Rouge \"Côte de Nuits-Villages\" price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Nuits-Saint-Georges 1er Cru \"Clos de Thorey\"",
+   "producer": "Antonin Rodet",
+   "vintage": "2015",
+   "region": "Nuits-Saint-Georges, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$175",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Antonin Rodet Nuits-Saint-Georges 1er Cru \"Clos de Thorey\" 2015 at $175"
+   ],
+   "snippet": "Albert Bichot \"Domaine du Clos Frantin\" 2017 Nuits-Saint-Georges Premier Cru priced at $185, and Antonin Rodet \"Clos de Thorey\" 2015 at $175. ... Domaine Henri Gouges wines from Brennan's, with their \"Aux Chaignots\" 2021 at $295 and \"Clos des Porrets-Saint-Georges\" 2021 at $285. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Nuits-Saint-Georges Gouges Bichot Rodet Bourgogne Rouge \"Côte de Nuits-Villages\" price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Nuits-Saint-Georges 1er Cru \"Aux Chaignots\"",
+   "producer": "Domaine Henri Gouges",
+   "vintage": "2021",
+   "region": "Nuits-Saint-Georges, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$295",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Domaine Henri Gouges Nuits-Saint-Georges 1er Cru \"Aux Chaignots\" 2021 at $295"
+   ],
+   "snippet": "Albert Bichot \"Domaine du Clos Frantin\" 2017 Nuits-Saint-Georges Premier Cru priced at $185, and Antonin Rodet \"Clos de Thorey\" 2015 at $175. ... Domaine Henri Gouges wines from Brennan's, with their \"Aux Chaignots\" 2021 at $295 and \"Clos des Porrets-Saint-Georges\" 2021 at $285. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Nuits-Saint-Georges Gouges Bichot Rodet Bourgogne Rouge \"Côte de Nuits-Villages\" price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Nuits-Saint-Georges 1er Cru \"Clos des Porrets-Saint-Georges\"",
+   "producer": "Domaine Henri Gouges",
+   "vintage": "2021",
+   "region": "Nuits-Saint-Georges, Côte de Nuits",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$285",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Domaine Henri Gouges Nuits-Saint-Georges 1er Cru \"Clos des Porrets-Saint-Georges\" 2021 at $285"
+   ],
+   "snippet": "Albert Bichot \"Domaine du Clos Frantin\" 2017 Nuits-Saint-Georges Premier Cru priced at $185, and Antonin Rodet \"Clos de Thorey\" 2015 at $175. ... Domaine Henri Gouges wines from Brennan's, with their \"Aux Chaignots\" 2021 at $295 and \"Clos des Porrets-Saint-Georges\" 2021 at $285. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Nuits-Saint-Georges Gouges Bichot Rodet Bourgogne Rouge \"Côte de Nuits-Villages\" price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, village",
+   "name": "Volnay",
+   "producer": "Bitouzet-Prieur",
+   "vintage": "2020",
+   "region": "Volnay, Côte de Beaune",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$100",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Bitouzet-Prieur Volnay 2020 at $100"
+   ],
+   "snippet": "Brennan's New Orleans carries Bitouzet-Prieur Volnay 2020 for $100, and Louis Jadot Pommard 2020 for $110. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Volnay OR Pommard OR \"Chambolle-Musigny\" OR \"Nuits-Saint-Georges\" premier cru",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, village",
+   "name": "Pommard",
+   "producer": "Louis Jadot",
+   "vintage": "2020",
+   "region": "Pommard, Côte de Beaune",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$110",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Louis Jadot Pommard 2020 at $110"
+   ],
+   "snippet": "Brennan's New Orleans carries Bitouzet-Prieur Volnay 2020 for $100, and Louis Jadot Pommard 2020 for $110. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Volnay OR Pommard OR \"Chambolle-Musigny\" OR \"Nuits-Saint-Georges\" premier cru",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Pommard 1er Cru \"Les Rugiens\"",
+   "producer": "Albert Bichot",
+   "vintage": "2017",
+   "region": "Pommard, Côte de Beaune",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$255",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Bichot Pommard Rugiens 2017 at $255"
+   ],
+   "snippet": "Pommard Premier Cru options including Albert Bichot \"Les Rugiens\" 2017 at $255 and Volnay Premier Cru selections ranging from $220 to $1700 depending on the producer and vintage. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Pommard Volnay premier cru Rugiens Taillepieds Clos des Ducs price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Volnay 1er Cru (several, producers not named)",
+   "vintage": "several",
+   "region": "Volnay, Côte de Beaune",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$220 to $1700",
+     "what": "bottle, range"
+    }
+   ],
+   "description_facts": [
+    "Volnay premier crus span $220 to $1700; producers and climats not in snippet"
+   ],
+   "snippet": "Pommard Premier Cru options including Albert Bichot \"Les Rugiens\" 2017 at $255 and Volnay Premier Cru selections ranging from $220 to $1700 depending on the producer and vintage. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Pommard Volnay premier cru Rugiens Taillepieds Clos des Ducs price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, premier cru",
+   "name": "Savigny-lès-Beaune 1er Cru \"Les Lavières\"",
+   "producer": "Bouchard Père & Fils",
+   "vintage": "2022",
+   "region": "Savigny-lès-Beaune, Côte de Beaune",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$80",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Bouchard Lavières 2022 at $80, the lowest priced premier cru red Burgundy seen in this sweep"
+   ],
+   "snippet": "Bouchard Père & Fils Premier Cru \"Les Lavières\" Savigny-Lès-Beaune 2022 for $80; Pierre Guillemot \"Dessus Les Golardes\" Savigny-Lès-Beaune 2015 for $140; Pierre Guillemot \"Vieilles Vignes\" Savigny-Lès-Beaune 2015 for $95 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Corton OR \"Aloxe-Corton\" OR \"Savigny-lès-Beaune\" OR \"Morey-Saint-Denis\" Burgundy red",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, village",
+   "name": "Savigny-lès-Beaune \"Dessus Les Golardes\"",
+   "producer": "Pierre Guillemot",
+   "vintage": "2015",
+   "region": "Savigny-lès-Beaune, Côte de Beaune",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$140",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Guillemot Dessus Les Golardes 2015 at $140; a mature bottle"
+   ],
+   "snippet": "Bouchard Père & Fils Premier Cru \"Les Lavières\" Savigny-Lès-Beaune 2022 for $80; Pierre Guillemot \"Dessus Les Golardes\" Savigny-Lès-Beaune 2015 for $140; Pierre Guillemot \"Vieilles Vignes\" Savigny-Lès-Beaune 2015 for $95 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Corton OR \"Aloxe-Corton\" OR \"Savigny-lès-Beaune\" OR \"Morey-Saint-Denis\" Burgundy red",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Red Burgundy, village",
+   "name": "Savigny-lès-Beaune \"Vieilles Vignes\"",
+   "producer": "Pierre Guillemot",
+   "vintage": "2015",
+   "region": "Savigny-lès-Beaune, Côte de Beaune",
+   "grapes": "Pinot Noir",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$95",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Guillemot Vieilles Vignes 2015 at $95"
+   ],
+   "snippet": "Bouchard Père & Fils Premier Cru \"Les Lavières\" Savigny-Lès-Beaune 2022 for $80; Pierre Guillemot \"Dessus Les Golardes\" Savigny-Lès-Beaune 2015 for $140; Pierre Guillemot \"Vieilles Vignes\" Savigny-Lès-Beaune 2015 for $95 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Corton OR \"Aloxe-Corton\" OR \"Savigny-lès-Beaune\" OR \"Morey-Saint-Denis\" Burgundy red",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Dinner Tasting Menu $80",
+   "section": "Dinner tasting menu, third course pairing",
+   "name": "Beaune 1er Cru \"Bressandes\"",
+   "producer": "Louis Jadot",
+   "vintage": "2022",
+   "region": "Beaune, Côte de Beaune",
+   "grapes": "Pinot Noir",
+   "format": "glass",
+   "prices": [],
+   "description_facts": [
+    "Paired with the third course (Redfish Véronique) on the dinner tasting page",
+    "The 80th Anniversary tasting page shows Jadot Beaune 1er Cru 2023 instead; the pack holds the 2023. Two cards live at once (also in second-pass.md): confirm at lineup"
+   ],
+   "snippet": "For their dinner tasting menu, Brennan's suggests Louis Jadot Beaune Bressandes 1er Cru Burgundy 2022 for the third course ... their 80th Anniversary Tasting Menu features Louis Jadot 1er Cru Beaune, Burgundy Pinot Noir 2023 for the third course.",
+   "url": "https://www.brennansneworleans.com/menus/dinnertastingmenu/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's Royal Street Burgundy dinner wine pairing Louis Jadot OR Drouhin OR \"Domaine Leroy\" OR Rousseau",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Beaujolais, cru",
+   "name": "Morgon \"Côte du Py\", magnum",
+   "producer": "Jean Foillard",
+   "vintage": "2023",
+   "region": "Morgon, Beaujolais",
+   "grapes": "Gamay",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$250",
+     "what": "1.5L magnum"
+    }
+   ],
+   "description_facts": [
+    "Foillard Côte du Py 2023 magnum at $250"
+   ],
+   "snippet": "Jean Foillard \"Côte du Py\" Morgon Beaujolais 1.5L Magnum 2023 costs $250, and the 2024 vintage is $270. ... Guy Breton Fleurie Beaujolais 1.5L Magnum 2021 for $225; Domaine Coudert \"Clos de la Roilette\" Fleurie 2015 for $95; Chateau des Jacques \"Clos du Grand Carquelin\" Moulin-à-Vent 2022 for $110 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Beaujolais Foillard Morgon Breton Coudert Moulin-à-Vent price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Beaujolais, cru",
+   "name": "Morgon \"Côte du Py\", magnum",
+   "producer": "Jean Foillard",
+   "vintage": "2024",
+   "region": "Morgon, Beaujolais",
+   "grapes": "Gamay",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$270",
+     "what": "1.5L magnum"
+    }
+   ],
+   "description_facts": [
+    "Foillard Côte du Py 2024 magnum at $270 (the summary says 'the 2024 vintage'; format assumed magnum by its placement, confirm)"
+   ],
+   "snippet": "Jean Foillard \"Côte du Py\" Morgon Beaujolais 1.5L Magnum 2023 costs $250, and the 2024 vintage is $270. ... Guy Breton Fleurie Beaujolais 1.5L Magnum 2021 for $225; Domaine Coudert \"Clos de la Roilette\" Fleurie 2015 for $95; Chateau des Jacques \"Clos du Grand Carquelin\" Moulin-à-Vent 2022 for $110 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Beaujolais Foillard Morgon Breton Coudert Moulin-à-Vent price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Beaujolais, cru",
+   "name": "Fleurie, magnum",
+   "producer": "Guy Breton",
+   "vintage": "2021",
+   "region": "Fleurie, Beaujolais",
+   "grapes": "Gamay",
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$225",
+     "what": "1.5L magnum"
+    }
+   ],
+   "description_facts": [
+    "Guy Breton Fleurie 2021 magnum at $225"
+   ],
+   "snippet": "Jean Foillard \"Côte du Py\" Morgon Beaujolais 1.5L Magnum 2023 costs $250, and the 2024 vintage is $270. ... Guy Breton Fleurie Beaujolais 1.5L Magnum 2021 for $225; Domaine Coudert \"Clos de la Roilette\" Fleurie 2015 for $95; Chateau des Jacques \"Clos du Grand Carquelin\" Moulin-à-Vent 2022 for $110 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Beaujolais Foillard Morgon Breton Coudert Moulin-à-Vent price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Beaujolais, cru",
+   "name": "Fleurie \"Clos de la Roilette\"",
+   "producer": "Domaine Coudert",
+   "vintage": "2015",
+   "region": "Fleurie, Beaujolais",
+   "grapes": "Gamay",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$95",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Coudert Clos de la Roilette 2015 at $95; a mature cru Beaujolais"
+   ],
+   "snippet": "Jean Foillard \"Côte du Py\" Morgon Beaujolais 1.5L Magnum 2023 costs $250, and the 2024 vintage is $270. ... Guy Breton Fleurie Beaujolais 1.5L Magnum 2021 for $225; Domaine Coudert \"Clos de la Roilette\" Fleurie 2015 for $95; Chateau des Jacques \"Clos du Grand Carquelin\" Moulin-à-Vent 2022 for $110 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Beaujolais Foillard Morgon Breton Coudert Moulin-à-Vent price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Beaujolais, cru",
+   "name": "Moulin-à-Vent \"Clos du Grand Carquelin\"",
+   "producer": "Château des Jacques",
+   "vintage": "2022",
+   "region": "Moulin-à-Vent, Beaujolais",
+   "grapes": "Gamay",
+   "format": "bottle",
+   "prices": [
+    {
+     "printed": "$110",
+     "what": "bottle"
+    }
+   ],
+   "description_facts": [
+    "Château des Jacques Grand Carquelin 2022 at $110"
+   ],
+   "snippet": "Jean Foillard \"Côte du Py\" Morgon Beaujolais 1.5L Magnum 2023 costs $250, and the 2024 vintage is $270. ... Guy Breton Fleurie Beaujolais 1.5L Magnum 2021 for $225; Domaine Coudert \"Clos de la Roilette\" Fleurie 2015 for $95; Chateau des Jacques \"Clos du Grand Carquelin\" Moulin-à-Vent 2022 for $110 (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Beaujolais Foillard Morgon Breton Coudert Moulin-à-Vent price [site hub.binwise.com]",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Beaujolais, cru",
+   "name": "Fleurie \"Les Moriers\"",
+   "producer": "Jules Desjourneys",
+   "region": "Fleurie, Beaujolais",
+   "grapes": "Gamay",
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "On the list; vintage and price not in snippet"
+   ],
+   "snippet": "Brennan's New Orleans carries multiple Beaujolais wines including Guy Breton Fleurie Beaujolais (1.5L Magnum 2021), Jean Foillard \"Côte du Py\" Morgon Beaujolais options, Jules Desjourneys \"Les Moriers\" Fleurie Beaujolais, Chateau des Jacques \"Clos du Grand Carquelin\" Moulin-à-Vent, Domaine Coudert Moulin-à-Vent, and various other Morgon selections from producers like Jean Foillard and Guy Breton. ... the restaurant offers Gamay - Château Cambon Beaujolais for $19.00 by the glass. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Beaujolais Morgon OR Fleurie OR \"Moulin-a-Vent\" wine list",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Beaujolais, cru",
+   "name": "Moulin-à-Vent",
+   "producer": "Domaine Coudert",
+   "region": "Moulin-à-Vent, Beaujolais",
+   "grapes": "Gamay",
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "Summary places a Coudert Moulin-à-Vent on the list; Coudert's known cru is Fleurie (Clos de la Roilette, record above), so this may be a summariser slip: confirm"
+   ],
+   "snippet": "Brennan's New Orleans carries multiple Beaujolais wines including Guy Breton Fleurie Beaujolais (1.5L Magnum 2021), Jean Foillard \"Côte du Py\" Morgon Beaujolais options, Jules Desjourneys \"Les Moriers\" Fleurie Beaujolais, Chateau des Jacques \"Clos du Grand Carquelin\" Moulin-à-Vent, Domaine Coudert Moulin-à-Vent, and various other Morgon selections from producers like Jean Foillard and Guy Breton. ... the restaurant offers Gamay - Château Cambon Beaujolais for $19.00 by the glass. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Beaujolais Morgon OR Fleurie OR \"Moulin-a-Vent\" wine list",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "Beaujolais, cru",
+   "name": "Morgon (other selections)",
+   "producer": "Guy Breton",
+   "region": "Morgon, Beaujolais",
+   "grapes": "Gamay",
+   "format": "bottle",
+   "prices": [],
+   "description_facts": [
+    "Summary says various other Morgon selections from Foillard and Breton; none itemised"
+   ],
+   "snippet": "Brennan's New Orleans carries multiple Beaujolais wines including Guy Breton Fleurie Beaujolais (1.5L Magnum 2021), Jean Foillard \"Côte du Py\" Morgon Beaujolais options, Jules Desjourneys \"Les Moriers\" Fleurie Beaujolais, Chateau des Jacques \"Clos du Grand Carquelin\" Moulin-à-Vent, Domaine Coudert Moulin-à-Vent, and various other Morgon selections from producers like Jean Foillard and Guy Breton. ... the restaurant offers Gamay - Château Cambon Beaujolais for $19.00 by the glass. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Beaujolais Morgon OR Fleurie OR \"Moulin-a-Vent\" wine list",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise bottle list)",
+   "section": "By the glass (source page unclear)",
+   "name": "Château Cambon Beaujolais",
+   "producer": "Château Cambon",
+   "region": "Beaujolais",
+   "grapes": "Gamay",
+   "format": "glass",
+   "prices": [
+    {
+     "printed": "$19.00",
+     "what": "glass"
+    }
+   ],
+   "description_facts": [
+    "Gamay, Château Cambon Beaujolais at $19.00 by the glass",
+    "Not among the 20 glass wines read on Binwise on 26 September 2026 and not in the pack; the summary blended Binwise with the restaurant's older cocktails page (brennansneworleans.com/menus/cocktails/), so it may be a stale glass list entry or a fall addition: confirm on shift"
+   ],
+   "snippet": "Brennan's New Orleans carries multiple Beaujolais wines including Guy Breton Fleurie Beaujolais (1.5L Magnum 2021), Jean Foillard \"Côte du Py\" Morgon Beaujolais options, Jules Desjourneys \"Les Moriers\" Fleurie Beaujolais, Chateau des Jacques \"Clos du Grand Carquelin\" Moulin-à-Vent, Domaine Coudert Moulin-à-Vent, and various other Morgon selections from producers like Jean Foillard and Guy Breton. ... the restaurant offers Gamay - Château Cambon Beaujolais for $19.00 by the glass. (search tool summary of the Binwise page, not raw list text)",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans Beaujolais Morgon OR Fleurie OR \"Moulin-a-Vent\" wine list",
+   "seen_on_page_date": "2026-10-03 (search index; crawl date unknown)",
+   "confidence": "low",
+   "already_in_pack": false
+  }
+ ],
+ "gaps": [
+  "The Binwise bottle list itself could not be read; every bottle record stands on a search engine summary of it, not raw list text. Section names, page order, half bottles and bin numbers are unknown.",
+  "Wine Spectator says about 20 pages of red Burgundy; this sweep itemised about 50 entries, a small fraction. Unseen: Clos de Vougeot, Corton and Aloxe-Corton, Bonnes-Mares and Musigny named as such, Richebourg, Romanée-Saint-Vivant, Grands Echézeaux, Clos de Tart, Côte de Nuits-Villages, Marsannay, Fixin, Santenay, Chassagne rouge, Monthelie, Mercurey and the Côte Chalonnaise.",
+  "Searches for Clos de Vougeot, Corton, Richebourg and Vosne village or premier cru climats returned nothing specific for Brennan's.",
+  "Armand Rousseau, Fourrier and Bachelet: not confirmed on the list; only Denis Mortet (verticals) and Arnaud Mortet were confirmed among Gevrey names.",
+  "Domaine Leroy, Leroy d'Auvenay, Comte de Vogüé, Mugnier, Lafarge, d'Angerville, Comte Armand: no evidence either way.",
+  "Roumier entries (2012 $1100, 2023 $2550) carry no cuvée name; the Grivot and Méo-Camuzet Vosne entries carry no tier or climat.",
+  "Volnay premier crus ($220 to $1700) and the DRC Romanée-Conti ($12,500 to $16,000) and La Tâche ($3,000 to $5,500) ranges are not itemised by vintage.",
+  "Domaine Faiveley Bourgogne 2022: format and price unknown; it may be a glass pour added after 26 September or a bottle.",
+  "Château Cambon Beaujolais $19.00 glass: source page unclear (Binwise or the stale cocktails page).",
+  "Which Jadot Beaune is pouring on the dinner tasting (Bressandes 2022 on the dinner tasting page or Beaune 1er Cru 2023 on the 80th Anniversary page) is still unresolved.",
+  "No crawl date for any Binwise snippet; prices may predate the fall 2026 list.",
+  "No pairing guidance for any bottle came from the house; pairing suggestions for these wines must be written as the Codex's own recommendations, not as Brennan's."
+ ]
+}

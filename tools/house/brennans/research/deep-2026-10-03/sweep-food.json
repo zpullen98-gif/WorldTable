@@ -1,0 +1,1199 @@
+{
+ "lens": "food",
+ "searches": [
+  {
+   "query": "Brennan's New Orleans fall menu 2026",
+   "kept": 0
+  },
+  {
+   "query": "brennansneworleans.com dinner menu Chateaubriand Redfish Véronique price",
+   "kept": 2
+  },
+  {
+   "query": "brennansneworleans.com breakfast lunch menu Eggs Hussarde Eggs Sardou $",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's 80th Anniversary Dinner Tasting Menu courses",
+   "kept": 6
+  },
+  {
+   "query": "Brennan's New Orleans Thanksgiving 2026 three-course menu $80",
+   "kept": 1
+  },
+  {
+   "query": "brennansneworleans.com restaurant week menu",
+   "kept": 7
+  },
+  {
+   "query": "\"Thanksgiving Day At Brennan's\" turkey course Padalino menu",
+   "kept": 6
+  },
+  {
+   "query": "Brennan's New Orleans Christmas Eve Reveillon dinner menu",
+   "kept": 3
+  },
+  {
+   "query": "brennansneworleans.com dessert menu Bananas Foster Cherries Jubilee Lemon Tart price",
+   "kept": 3
+  },
+  {
+   "query": "Brennan's Roost Bar menu bar bites crawfish meat pies fried pickles Roost burger",
+   "kept": 6
+  },
+  {
+   "query": "\"Breakfast with Santa\" Brennan's New Orleans menu price",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's Traditional Breakfast $80 courses Baked Apple Eggs Hussarde Bananas Foster Brandy Milk Punch",
+   "kept": 3
+  },
+  {
+   "query": "myneworleans Christmas Eve at Brennan's Hacker Pomegranate Braised Short Rib dessert",
+   "kept": 1
+  },
+  {
+   "query": "axios New Orleans Brennan's 80th anniversary menu 1946 dishes",
+   "kept": 1
+  },
+  {
+   "query": "brennansneworleans.com dinner menu Turtle Soup Seafood Gumbo Steak Tartare Cannoli Crab Claws Pecan Gulf Fish",
+   "kept": 5
+  },
+  {
+   "query": "brennansneworleans.com breakfast and lunch Duck Confit Waffle Shrimp & Grits Pecan Gulf Fish Eggs Owen price",
+   "kept": 4
+  },
+  {
+   "query": "brennansneworleans.com dinner Roasted Rohan Duck Breast Poussin à la Moutarde Gulf Fish en Papillote Louisiana BBQ Lobster price",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans New Year's Eve 2025 dinner menu",
+   "kept": 1
+  }
+ ],
+ "records": [
+  {
+   "kind": "dish",
+   "menu": "Dinner",
+   "section": "Entrees",
+   "name": "Roasted Chateaubriand",
+   "prices": [
+    {
+     "printed": "$120.00",
+     "what": "serves 2"
+    }
+   ],
+   "description_facts": [
+    "Creekstone Farms beef tenderloin",
+    "Serves two",
+    "Price $120.00 agrees with the pack's $120"
+   ],
+   "snippet": "Roasted Chateaubriand (Creekstone Farms Beef Tenderloin, serves 2): $120.00",
+   "url": "https://www.brennansneworleans.com/menus/dinner/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dinner menu Chateaubriand Redfish Véronique price",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Dinner",
+   "section": "Entrees",
+   "name": "Redfish Véronique",
+   "prices": [
+    {
+     "printed": "$36.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Hibiscus-pickled grapes",
+    "Braised leeks",
+    "Fingerling potatoes",
+    "Preserved lemon beurre blanc",
+    "Price agrees with the pack"
+   ],
+   "snippet": "Redfish Véronique (Hibiscus-pickled Grapes, Braised Leeks, Fingerling Potatoes, Preserved Lemon Beurre Blanc): $36.00",
+   "url": "https://www.brennansneworleans.com/menus/dinner/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dinner menu Chateaubriand Redfish Véronique price",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Dinner",
+   "section": "Appetizers",
+   "name": "Turtle Soup",
+   "prices": [
+    {
+     "printed": "$13.00",
+     "what": "bowl"
+    }
+   ],
+   "description_facts": [
+    "100% turtle meat",
+    "Brown butter spinach",
+    "Grated egg",
+    "Aged sherry"
+   ],
+   "snippet": "Turtle Soup: 100% Turtle Meat, Brown Butter Spinach, Grated Egg, Aged Sherry ($13.00)",
+   "url": "https://www.brennansneworleans.com/menus/dinner/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dinner menu Turtle Soup Seafood Gumbo Steak Tartare Cannoli Crab Claws Pecan Gulf Fish",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Dinner",
+   "section": "Appetizers",
+   "name": "Seafood Gumbo",
+   "prices": [
+    {
+     "printed": "$13.00",
+     "what": "bowl"
+    }
+   ],
+   "description_facts": [
+    "Shrimp, crab, andouille, oysters",
+    "Popcorn rice"
+   ],
+   "snippet": "Seafood Gumbo: Shrimp, Crab, Andouille, Oysters, Popcorn Rice ($13.00)",
+   "url": "https://www.brennansneworleans.com/menus/dinner/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dinner menu Turtle Soup Seafood Gumbo Steak Tartare Cannoli Crab Claws Pecan Gulf Fish",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Dinner",
+   "section": "Appetizers",
+   "name": "Louisiana Crab Claws",
+   "prices": [
+    {
+     "printed": "$22.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Warm brown butter vinaigrette",
+    "Fines herbes (printed Fines Herbs in the snippet)"
+   ],
+   "snippet": "Louisiana Crab Claws: Warm Brown Butter Vinaigrette, Fines Herbs ($22.00)",
+   "url": "https://www.brennansneworleans.com/menus/dinner/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dinner menu Turtle Soup Seafood Gumbo Steak Tartare Cannoli Crab Claws Pecan Gulf Fish",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Dinner",
+   "section": "Appetizers",
+   "name": "Steak Tartare Cannoli",
+   "prices": [
+    {
+     "printed": "$17.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Potato cannoli",
+    "Crème fraîche",
+    "Egg yolk bottarga"
+   ],
+   "snippet": "Steak Tartare Cannoli: Potato Cannoli, Crème Fraîche, Egg Yolk Bottarga ($17.00)",
+   "url": "https://www.brennansneworleans.com/menus/dinner/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dinner menu Turtle Soup Seafood Gumbo Steak Tartare Cannoli Crab Claws Pecan Gulf Fish",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Dinner",
+   "section": "Entrees",
+   "name": "Gulf Fish en Papillote",
+   "prices": [
+    {
+     "printed": "$38.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Price agrees with the pack; no description in the snippet"
+   ],
+   "snippet": "Gulf Fish en Papillote: $38.00",
+   "url": "https://www.brennansneworleans.com/menus/dinner/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dinner Roasted Rohan Duck Breast Poussin à la Moutarde Gulf Fish en Papillote Louisiana BBQ Lobster price",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Dinner",
+   "section": "Entrees",
+   "name": "Poussin à la Moutarde",
+   "prices": [
+    {
+     "printed": "$29.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Price agrees with the pack; the description comes from the Restaurant Week record"
+   ],
+   "snippet": "Poussin à la Moutarde: $29.00",
+   "url": "https://www.brennansneworleans.com/menus/dinner/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dinner Roasted Rohan Duck Breast Poussin à la Moutarde Gulf Fish en Papillote Louisiana BBQ Lobster price",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Gallery of signature dishes",
+   "section": "Gallery",
+   "name": "Gulf Fish Amandine",
+   "prices": [],
+   "description_facts": [
+    "Appears in the house's gallery of dishes, not on the current dinner menu in the snippet; no price or description"
+   ],
+   "snippet": "Gulf Fish Amandine is among Brennan's dishes, though I didn't find specific current pricing or full descriptions for this item on the current dinner menu in the search results.",
+   "url": "https://www.brennansneworleans.com/gallery/brennans-dishes/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dinner menu Turtle Soup Seafood Gumbo Steak Tartare Cannoli Crab Claws Pecan Gulf Fish",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Breakfast and lunch",
+   "section": "Brennan's eggs",
+   "name": "Eggs Hussarde",
+   "prices": [
+    {
+     "printed": "$27.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Housemade English muffins",
+    "Coffee-cured Canadian bacon",
+    "Hollandaise",
+    "Poached eggs",
+    "Marchand de vin sauce"
+   ],
+   "snippet": "Eggs Hussarde: Housemade English Muffins, Coffee-cured Canadian Bacon, Hollandaise, Poached Eggs, Marchand De Vin Sauce, $27.00",
+   "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com breakfast lunch menu Eggs Hussarde Eggs Sardou $",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Breakfast and lunch",
+   "section": "Brennan's eggs",
+   "name": "Eggs Sardou",
+   "prices": [
+    {
+     "printed": "$26.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Crispy artichokes",
+    "Poached eggs",
+    "Parmesan creamed spinach",
+    "Choron sauce"
+   ],
+   "snippet": "Eggs Sardou: Crispy Artichokes, Poached Eggs, Parmesan Creamed Spinach, Choron Sauce, $26.00",
+   "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com breakfast lunch menu Eggs Hussarde Eggs Sardou $",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Breakfast and lunch",
+   "section": "Entrees",
+   "name": "Duck Confit Waffle",
+   "prices": [
+    {
+     "printed": "$32.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Rohan duck leg",
+    "Cornbread and chive waffle",
+    "Foie gras butter",
+    "Mustard maple syrup",
+    "Sunny-side-up egg"
+   ],
+   "snippet": "Duck Confit Waffle: Rohan Duck Leg, Cornbread & Chive Waffle, Foie Gras Butter, Mustard Maple Syrup, Sunny-side-up Egg $32.00",
+   "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com breakfast and lunch Duck Confit Waffle Shrimp & Grits Pecan Gulf Fish Eggs Owen price",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Breakfast and lunch",
+   "section": "Entrees",
+   "name": "New Orleans Shrimp & Grits",
+   "prices": [
+    {
+     "printed": "$25.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Louisiana shrimp",
+    "Fried pimento cheese grit cake",
+    "Tasso",
+    "Creole sauce",
+    "Fried okra chips"
+   ],
+   "snippet": "New Orleans Shrimp & Grits: Louisiana Shrimp, Fried Pimento Cheese Grit Cake, Tasso, Creole Sauce, Fried Okra Chips $25.00",
+   "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com breakfast and lunch Duck Confit Waffle Shrimp & Grits Pecan Gulf Fish Eggs Owen price",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Breakfast and lunch",
+   "section": "Entrees",
+   "name": "Pecan Gulf Fish",
+   "prices": [
+    {
+     "printed": "$31.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Louisiana lump crab",
+    "Pecan bordelaise",
+    "Cauliflower purée",
+    "Wilted collard greens"
+   ],
+   "snippet": "Pecan Gulf Fish: $31.00 Louisiana lump crab, pecan bordelaise, cauliflower purée, wilted collard greens",
+   "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com breakfast and lunch Duck Confit Waffle Shrimp & Grits Pecan Gulf Fish Eggs Owen price",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "fact",
+   "menu": "Breakfast and lunch",
+   "section": "Story",
+   "name": "Breakfast at Brennan's and the birth of brunch",
+   "prices": [],
+   "description_facts": [
+    "The house credits Breakfast at Brennan's as Owen Brennan's answer to the 1948 best seller Dinner at Antoine's",
+    "Owen Brennan ran the Old Absinthe House and opened Owen Brennan's Vieux Carré Restaurant on Bourbon Street in 1946"
+   ],
+   "snippet": "brunch as we know it is a derivation of \"Breakfast at Brennan's,\" Owen Brennan's answer to the 1948 best-seller, Dinner at Antoine's. ... In 1946 he opened Owen Brennan's Vieux Carré Restaurant on Bourbon Street, where Bananas Foster, Breakfast at Brennan's, and history were made in the process.",
+   "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com breakfast and lunch Duck Confit Waffle Shrimp & Grits Pecan Gulf Fish Eggs Owen price",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Dessert",
+   "section": "Brennan's Originals",
+   "name": "World Famous Bananas Foster",
+   "prices": [
+    {
+     "printed": "$14.00",
+     "what": "per person, minimum of 2"
+    }
+   ],
+   "description_facts": [
+    "Invented in 1951 at Brennan's",
+    "Bananas, butter, brown sugar, cinnamon, rum, housemade vanilla ice cream",
+    "Flambéed tableside",
+    "Minimum of 2 people per order"
+   ],
+   "snippet": "World Famous Bananas Foster, $14.00 (Invented in 1951 at Brennan's, made with bananas, butter, brown sugar, cinnamon, rum, and housemade vanilla ice cream, flambéed tableside with a minimum of 2 people per order)",
+   "url": "https://www.brennansneworleans.com/menus/dessert/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dessert menu Bananas Foster Cherries Jubilee Lemon Tart price",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Dessert",
+   "section": "Brennan's Originals",
+   "name": "Cherries Jubilee",
+   "prices": [
+    {
+     "printed": "$14.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Fresh tart black cherries",
+    "Housemade vanilla ice cream",
+    "Luxardo sauce",
+    "Flambéed tableside"
+   ],
+   "snippet": "Cherries Jubilee, $14.00 (Fresh tart black cherries, housemade vanilla ice cream, and Luxardo sauce, flambéed tableside)",
+   "url": "https://www.brennansneworleans.com/menus/dessert/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dessert menu Bananas Foster Cherries Jubilee Lemon Tart price",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Dessert",
+   "section": "Desserts",
+   "name": "Lemon Tart",
+   "prices": [
+    {
+     "printed": "$14.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Yuzu mousse",
+    "Lemon jelly",
+    "Sweet pastry crumb",
+    "Toasted meringue"
+   ],
+   "snippet": "Lemon Tart, $14.00 (Yuzu mousse, lemon jelly, sweet pastry crumb, and toasted meringue)",
+   "url": "https://www.brennansneworleans.com/menus/dessert/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com dessert menu Bananas Foster Cherries Jubilee Lemon Tart price",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "80th Anniversary Dinner Tasting Menu ($80)",
+   "section": "First course",
+   "name": "Grand Isle Jewel Oysters (tasting course)",
+   "prices": [
+    {
+     "printed": "$80",
+     "what": "whole five course menu"
+    },
+    {
+     "printed": "$120",
+     "what": "wine pairing supplement, 4 oz pours"
+    }
+   ],
+   "description_facts": [
+    "Served raw",
+    "Preserved Fresno chile mignonette",
+    "Parsley",
+    "The snippet spells it Grande Isle"
+   ],
+   "snippet": "First Course: Grande Isle Jewel Oysters, Served Raw, Preserved Fresno Chile Mignonette, Parsley ... Wine pairings are available for an additional $120 supplement with 4-ounce pours.",
+   "url": "https://www.brennansneworleans.com/events/taste-of-brennans-menus",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's 80th Anniversary Dinner Tasting Menu courses",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "80th Anniversary Dinner Tasting Menu ($80)",
+   "section": "Second course",
+   "name": "Louisiana BBQ Lobster",
+   "prices": [],
+   "description_facts": [
+    "'Nduja",
+    "White bean stew"
+   ],
+   "snippet": "Second Course: Louisiana BBQ Lobster, 'nduja, White Bean Stew",
+   "url": "https://www.brennansneworleans.com/events/taste-of-brennans-menus",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's 80th Anniversary Dinner Tasting Menu courses",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "80th Anniversary Dinner Tasting Menu ($80)",
+   "section": "Third course",
+   "name": "Redfish Véronique (tasting course)",
+   "prices": [],
+   "description_facts": [
+    "Same build as the à la carte plate"
+   ],
+   "snippet": "Third Course: Redfish Véronique, Hibiscus-pickled Grapes, Braised Leeks, Fingerling Potatoes, Preserved Lemon Beurre Blanc",
+   "url": "https://www.brennansneworleans.com/events/taste-of-brennans-menus",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's 80th Anniversary Dinner Tasting Menu courses",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "80th Anniversary Dinner Tasting Menu ($80)",
+   "section": "Fourth course",
+   "name": "Hazelnut-Crusted Duck",
+   "prices": [],
+   "description_facts": [
+    "14-day dry-aged Rohan duck",
+    "Brown butter and sweet potato purée",
+    "Local winter squash",
+    "Sage",
+    "Duck jus",
+    "Replaces the pack's Roasted Rohan Duck Breast with cane syrup peaches (the late summer plate); the autumn plate on the live index"
+   ],
+   "snippet": "Fourth Course: Hazelnut-Crusted Duck, 14-day Dry-aged Rohan Duck, Brown Butter & Sweet Potato Purée, Local Winter Squash, Sage, Duck Jus",
+   "url": "https://www.brennansneworleans.com/events/taste-of-brennans-menus",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's 80th Anniversary Dinner Tasting Menu courses",
+   "confidence": "high",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "80th Anniversary Dinner Tasting Menu ($80)",
+   "section": "Fifth course",
+   "name": "World Famous Bananas Foster (tasting course)",
+   "prices": [],
+   "description_facts": [
+    "Flambéed tableside with housemade vanilla bean ice cream",
+    "Paired with Brennan's private-blend Congregation Coffee and Chicory",
+    "Note: an earlier snippet set The Snickers with Banyuls as this card's dessert; the two cards disagree"
+   ],
+   "snippet": "Fifth Course: World Famous Bananas Foster, flambéed tableside and served with housemade vanilla bean ice cream and paired with Brennan's private-blend Congregation Coffee & Chicory",
+   "url": "https://www.brennansneworleans.com/events/taste-of-brennans-menus",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's 80th Anniversary Dinner Tasting Menu courses",
+   "confidence": "medium",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Traditional Breakfast at Brennan's ($80)",
+   "section": "First course",
+   "name": "Baked Apple",
+   "prices": [
+    {
+     "printed": "$80",
+     "what": "whole menu, tasting portions and all drinks listed"
+    }
+   ],
+   "description_facts": [
+    "Oatmeal-pecan-raisin crumble",
+    "Brown sugar glaze",
+    "Sweetened crème fraîche"
+   ],
+   "snippet": "First Course: Baked Apple. Features oatmeal-pecan-raisin crumble, brown sugar glaze, and sweetened crème fraiche.",
+   "url": "https://www.brennansneworleans.com/menus/breakfasttastingmenu/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's Traditional Breakfast $80 courses Baked Apple Eggs Hussarde Bananas Foster Brandy Milk Punch",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Traditional Breakfast at Brennan's ($80)",
+   "section": "Third course",
+   "name": "Eggs Hussarde (tasting course)",
+   "prices": [],
+   "description_facts": [
+    "Housemade English muffin, coffee-cured Canadian bacon, hollandaise, poached egg, marchand de vin",
+    "Paired with Charles Lafitte Brut Champagne"
+   ],
+   "snippet": "Third Course: Eggs Hussarde. Includes a housemade English muffin, coffee-cured Canadian bacon, hollandaise, poached egg, and Marchand De Vin sauce, paired with Charles Lafitte Brut Champagne.",
+   "url": "https://www.brennansneworleans.com/menus/breakfasttastingmenu/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's Traditional Breakfast $80 courses Baked Apple Eggs Hussarde Bananas Foster Brandy Milk Punch",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Traditional Breakfast at Brennan's ($80)",
+   "section": "Fifth course",
+   "name": "Bananas Foster (tasting course)",
+   "prices": [],
+   "description_facts": [
+    "Bananas, butter, brown sugar, cinnamon, rum, housemade vanilla bean ice cream, flambéed tableside",
+    "Paired with Brennan's private blend Congregation coffee and chicory"
+   ],
+   "snippet": "Fifth Course: Bananas Foster. Features bananas, butter, brown sugar, cinnamon, rum, housemade vanilla bean ice cream, flambéed tableside, and is paired with Brennan's private blend congregation coffee & chicory.",
+   "url": "https://www.brennansneworleans.com/menus/breakfasttastingmenu/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's Traditional Breakfast $80 courses Baked Apple Eggs Hussarde Bananas Foster Brandy Milk Punch",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "fact",
+   "menu": "80th Anniversary Tasting Menus",
+   "section": "Overview",
+   "name": "80th anniversary tasting menus draw on the classics",
+   "prices": [],
+   "description_facts": [
+    "The 80th anniversary tasting menus feature Baked Apple, Turtle Soup, Seafood Gumbo, Eggs Hussarde and Bananas Foster"
+   ],
+   "snippet": "The restaurant has created special 80th Anniversary Tasting Menus featuring dishes like Baked Apple with Oatmeal-pecan-raisin Crumble, Turtle Soup, Seafood Gumbo, Egg Hussarde, and the World Famous Bananas Foster.",
+   "url": "https://www.brennansneworleans.com/events/taste-of-brennans-menus",
+   "site": "brennansneworleans.com",
+   "query": "axios New Orleans Brennan's 80th anniversary menu 1946 dishes",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Restaurant Week (June 8 to 14, year not printed)",
+   "section": "Overview",
+   "name": "Restaurant Week prix fixe",
+   "prices": [
+    {
+     "printed": "$36",
+     "what": "2 course brunch"
+    },
+    {
+     "printed": "$56",
+     "what": "3 course dinner"
+    }
+   ],
+   "description_facts": [
+    "Brunch and dinner, June 8 to 14",
+    "Past menu for October 2026: year not in the snippet"
+   ],
+   "snippet": "The menu is available at brunch and dinner from June 8-14. 2 Course Brunch, $36 ... 3 Course Dinner, $56",
+   "url": "https://www.brennansneworleans.com/restaurant-week/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com restaurant week menu",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Restaurant Week (June 8 to 14, year not printed)",
+   "section": "Brunch second course",
+   "name": "Eggs Benedict",
+   "prices": [],
+   "description_facts": [
+    "Housemade English muffins",
+    "Coffee-cured Canadian bacon",
+    "Hollandaise",
+    "Poached eggs",
+    "Not on the pack's breakfast card; the house's recipe page is Artisanal Eggs Benedict"
+   ],
+   "snippet": "Second course choices are Eggs Benedict (Housemade English Muffins, Coffee-Cured Canadian Bacon, Hollandaise, Poached Eggs) or New Orleans Shrimp & Grits",
+   "url": "https://www.brennansneworleans.com/restaurant-week/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com restaurant week menu",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Restaurant Week (June 8 to 14, year not printed)",
+   "section": "Dinner dessert",
+   "name": "Blackberry Crepes",
+   "prices": [],
+   "description_facts": [
+    "Flambéed tableside",
+    "Citrus vanilla-scented cream cheese",
+    "Not in the pack; a third tableside flambé alongside Foster and Jubilee when it ran"
+   ],
+   "snippet": "For dessert, choose between Louisiana Bread Pudding (Whiskey Caramel, Buttermilk Ice Cream, Pralines) or Blackberry Crepes (Flambéed Tableside, Citrus Vanilla-scented Cream Cheese).",
+   "url": "https://www.brennansneworleans.com/restaurant-week/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com restaurant week menu",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Restaurant Week (June 8 to 14, year not printed)",
+   "section": "Dinner second course",
+   "name": "Poussin à la Moutarde",
+   "prices": [],
+   "description_facts": [
+    "Sweet tea-brined and fried Cornish hen",
+    "Turnips and shallots",
+    "Mustard cream sauce"
+   ],
+   "snippet": "Poussin à la Moutarde (Sweet Tea-brined And Fried Cornish Hen, Turnips & Shallots, Mustard Cream Sauce)",
+   "url": "https://www.brennansneworleans.com/restaurant-week/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com restaurant week menu",
+   "confidence": "medium",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Restaurant Week (June 8 to 14, year not printed)",
+   "section": "Dinner first course",
+   "name": "Creole Caesar",
+   "prices": [],
+   "description_facts": [
+    "Gem lettuce",
+    "Smoked oyster dressing",
+    "Grana Padano",
+    "Leidenheimer crisps"
+   ],
+   "snippet": "Creole Caesar (Gem Lettuce, Smoked Oyster Dressing, Grana Padano Cheese, Leidenheimer Crisps)",
+   "url": "https://www.brennansneworleans.com/restaurant-week/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com restaurant week menu",
+   "confidence": "medium",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Restaurant Week (June 8 to 14, year not printed)",
+   "section": "Brunch first course",
+   "name": "Café Brûlot Coffee Cake",
+   "prices": [],
+   "description_facts": [
+    "Chicory coffee and bittersweet chocolate cake",
+    "Pecans",
+    "Spiced citrus glaze",
+    "Whipped crème fraîche"
+   ],
+   "snippet": "Café Brûlot Coffee Cake (Chicory Coffee & Bittersweet Chocolate Cake, Pecans, Spiced Citrus Glaze, Whipped Crème Fraîche)",
+   "url": "https://www.brennansneworleans.com/restaurant-week/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com restaurant week menu",
+   "confidence": "medium",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Restaurant Week (June 8 to 14, year not printed)",
+   "section": "Dinner dessert",
+   "name": "Louisiana Bread Pudding",
+   "prices": [],
+   "description_facts": [
+    "Whiskey caramel",
+    "Buttermilk ice cream",
+    "Pralines",
+    "Named Louisiana Bread Pudding here, New Orleans Bread Pudding in the pack"
+   ],
+   "snippet": "Louisiana Bread Pudding (Whiskey Caramel, Buttermilk Ice Cream, Pralines)",
+   "url": "https://www.brennansneworleans.com/restaurant-week/",
+   "site": "brennansneworleans.com",
+   "query": "brennansneworleans.com restaurant week menu",
+   "confidence": "medium",
+   "already_in_pack": true
+  },
+  {
+   "kind": "fact",
+   "menu": "Thanksgiving Day 2026",
+   "section": "Overview",
+   "name": "Chef Kris Padalino's 3-Course Thanksgiving Menu",
+   "prices": [
+    {
+     "printed": "$80",
+     "what": "per adult, beverages, tax and gratuity not included"
+    },
+    {
+     "printed": "$35",
+     "what": "per child"
+    },
+    {
+     "printed": "$5",
+     "what": "optional upcharge for tableside Bananas Foster"
+    }
+   ],
+   "description_facts": [
+    "One item from each course",
+    "Snippets disagree on the date: one says November 26, 2026 (a Thursday), another says Thursday, November 27, open 12 pm to 7 pm (November 27 fell on a Thursday in 2025, so that line is likely last year's)",
+    "Names Chef Kris Padalino"
+   ],
+   "snippet": "Brennan's is offering Chef Kris Padalino's 3-Course Thanksgiving Menu for $80. On Thursday, November 27 (Thanksgiving Day), Brennan's will be open from 12 pm to 7 pm ... with an optional $5 upcharge for the legendary tableside-flambéed Bananas Foster. [first search summary: a three-course prix fix menu for $80 per person for adults and $35 for children on November 26, 2026]",
+   "url": "https://www.brennansneworleans.com/events/thanksgivingdayatbrennans",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's New Orleans Thanksgiving 2026 three-course menu $80",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Thanksgiving Day 2026",
+   "section": "Prix fixe",
+   "name": "Turtle Soup (Thanksgiving first course)",
+   "prices": [],
+   "description_facts": [
+    "First course option",
+    "Snippet text is a summary and may mix years; confirm the 2026 card"
+   ],
+   "snippet": "first course options include classic turtle soup, seafood gumbo, sweet potato ravioli, and other dishes. The second and main course offers options including buttermilk brined turkey breast with cornbread dressing, a pecan crusted redfish, veal grillades, and more.",
+   "url": "https://www.brennansneworleans.com/events/thanksgivingdayatbrennans",
+   "site": "brennansneworleans.com",
+   "query": "\"Thanksgiving Day At Brennan's\" turkey course Padalino menu",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Thanksgiving Day 2026",
+   "section": "Prix fixe",
+   "name": "Seafood Gumbo (Thanksgiving first course)",
+   "prices": [],
+   "description_facts": [
+    "First course option",
+    "Snippet text is a summary and may mix years; confirm the 2026 card"
+   ],
+   "snippet": "first course options include classic turtle soup, seafood gumbo, sweet potato ravioli, and other dishes. The second and main course offers options including buttermilk brined turkey breast with cornbread dressing, a pecan crusted redfish, veal grillades, and more.",
+   "url": "https://www.brennansneworleans.com/events/thanksgivingdayatbrennans",
+   "site": "brennansneworleans.com",
+   "query": "\"Thanksgiving Day At Brennan's\" turkey course Padalino menu",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Thanksgiving Day 2026",
+   "section": "Prix fixe",
+   "name": "Sweet Potato Ravioli",
+   "prices": [],
+   "description_facts": [
+    "First course option; no further description",
+    "Snippet text is a summary and may mix years; confirm the 2026 card"
+   ],
+   "snippet": "first course options include classic turtle soup, seafood gumbo, sweet potato ravioli, and other dishes. The second and main course offers options including buttermilk brined turkey breast with cornbread dressing, a pecan crusted redfish, veal grillades, and more.",
+   "url": "https://www.brennansneworleans.com/events/thanksgivingdayatbrennans",
+   "site": "brennansneworleans.com",
+   "query": "\"Thanksgiving Day At Brennan's\" turkey course Padalino menu",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Thanksgiving Day 2026",
+   "section": "Prix fixe",
+   "name": "Buttermilk Brined Turkey Breast with Cornbread Dressing",
+   "prices": [],
+   "description_facts": [
+    "Main course option",
+    "Snippet text is a summary and may mix years; confirm the 2026 card"
+   ],
+   "snippet": "first course options include classic turtle soup, seafood gumbo, sweet potato ravioli, and other dishes. The second and main course offers options including buttermilk brined turkey breast with cornbread dressing, a pecan crusted redfish, veal grillades, and more.",
+   "url": "https://www.brennansneworleans.com/events/thanksgivingdayatbrennans",
+   "site": "brennansneworleans.com",
+   "query": "\"Thanksgiving Day At Brennan's\" turkey course Padalino menu",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Thanksgiving Day 2026",
+   "section": "Prix fixe",
+   "name": "Pecan Crusted Redfish",
+   "prices": [],
+   "description_facts": [
+    "Main course option; no further description",
+    "Snippet text is a summary and may mix years; confirm the 2026 card"
+   ],
+   "snippet": "first course options include classic turtle soup, seafood gumbo, sweet potato ravioli, and other dishes. The second and main course offers options including buttermilk brined turkey breast with cornbread dressing, a pecan crusted redfish, veal grillades, and more.",
+   "url": "https://www.brennansneworleans.com/events/thanksgivingdayatbrennans",
+   "site": "brennansneworleans.com",
+   "query": "\"Thanksgiving Day At Brennan's\" turkey course Padalino menu",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Thanksgiving Day 2026",
+   "section": "Prix fixe",
+   "name": "Veal Grillades",
+   "prices": [],
+   "description_facts": [
+    "Main course option; no further description",
+    "Snippet text is a summary and may mix years; confirm the 2026 card"
+   ],
+   "snippet": "first course options include classic turtle soup, seafood gumbo, sweet potato ravioli, and other dishes. The second and main course offers options including buttermilk brined turkey breast with cornbread dressing, a pecan crusted redfish, veal grillades, and more.",
+   "url": "https://www.brennansneworleans.com/events/thanksgivingdayatbrennans",
+   "site": "brennansneworleans.com",
+   "query": "\"Thanksgiving Day At Brennan's\" turkey course Padalino menu",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Christmas Eve dinner (year not printed)",
+   "section": "Overview",
+   "name": "Christmas Eve three-course menu",
+   "prices": [
+    {
+     "printed": "$85",
+     "what": "three courses, printed $85++ in a second snippet"
+    }
+   ],
+   "description_facts": [
+    "Dinner 5:30 to 9:00 pm; breakfast and lunch à la carte that day",
+    "Credited to Executive Chef Ryan Hacker, so it predates the current chef team: a past year's card"
+   ],
+   "snippet": "Brennan's offers a spirited three-course holiday menu for $85 on Christmas Eve from Executive Chef Ryan Hacker ... Cavatelli featuring Duck Confit, Wild Mushroom Ragu, and Winter Squash or the Foie Gras Terrine with a Cherry & Macadamia Nut Chutney and Cornbread Madeleines.",
+   "url": "https://www.myneworleans.com/reveillon-revival-at-ralphs-on-the-park-christmas-eve-at-brennans/",
+   "site": "myneworleans.com",
+   "query": "Brennan's New Orleans Christmas Eve Reveillon dinner menu",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Christmas Eve dinner (year not printed)",
+   "section": "Starters",
+   "name": "Duck Confit Cavatelli",
+   "prices": [],
+   "description_facts": [
+    "Duck confit",
+    "Wild mushroom ragu",
+    "Winter squash"
+   ],
+   "snippet": "Brennan's offers a spirited three-course holiday menu for $85 on Christmas Eve from Executive Chef Ryan Hacker ... Cavatelli featuring Duck Confit, Wild Mushroom Ragu, and Winter Squash or the Foie Gras Terrine with a Cherry & Macadamia Nut Chutney and Cornbread Madeleines.",
+   "url": "https://www.myneworleans.com/reveillon-revival-at-ralphs-on-the-park-christmas-eve-at-brennans/",
+   "site": "myneworleans.com",
+   "query": "Brennan's New Orleans Christmas Eve Reveillon dinner menu",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Christmas Eve dinner (year not printed)",
+   "section": "Starters",
+   "name": "Foie Gras Terrine",
+   "prices": [],
+   "description_facts": [
+    "Cherry and macadamia nut chutney",
+    "Cornbread madeleines"
+   ],
+   "snippet": "Brennan's offers a spirited three-course holiday menu for $85 on Christmas Eve from Executive Chef Ryan Hacker ... Cavatelli featuring Duck Confit, Wild Mushroom Ragu, and Winter Squash or the Foie Gras Terrine with a Cherry & Macadamia Nut Chutney and Cornbread Madeleines.",
+   "url": "https://www.myneworleans.com/reveillon-revival-at-ralphs-on-the-park-christmas-eve-at-brennans/",
+   "site": "myneworleans.com",
+   "query": "Brennan's New Orleans Christmas Eve Reveillon dinner menu",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Christmas Eve dinner (year not printed)",
+   "section": "Entrées",
+   "name": "Pomegranate Braised Short Rib",
+   "prices": [],
+   "description_facts": [
+    "Roasted Brussels sprouts",
+    "Turnip purée",
+    "Marcona almonds"
+   ],
+   "snippet": "One of the savory entrée options on the menu was the Pomegranate Braised Short Rib served with Roasted Brussels Sprouts, Turnip Purée, and Marcona Almonds.",
+   "url": "https://www.myneworleans.com/reveillon-revival-at-ralphs-on-the-park-christmas-eve-at-brennans/",
+   "site": "myneworleans.com",
+   "query": "myneworleans Christmas Eve at Brennan's Hacker Pomegranate Braised Short Rib dessert",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "New Year's Eve",
+   "section": "Overview",
+   "name": "New Year's Eve is à la carte",
+   "prices": [],
+   "description_facts": [
+    "Open Wednesday, December 31 for dinner 6 to 10 pm with the à la carte menu (December 31 was a Wednesday in 2025)",
+    "No special NYE prix fixe surfaced"
+   ],
+   "snippet": "Brennan's will be open on Wednesday, December 31 (New Year's Eve) for dinner from 6-10 pm with an a la carte menu.",
+   "url": "https://www.brennansneworleans.com/events/holidayhours",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's New Orleans New Year's Eve 2025 dinner menu",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Breakfast with Santa (Tock event)",
+   "section": "Event menu",
+   "name": "Breakfast with Santa",
+   "prices": [
+    {
+     "printed": "$90",
+     "what": "adult, gratuity included"
+    },
+    {
+     "printed": "$66",
+     "what": "child ages 2 to 12, gratuity included"
+    }
+   ],
+   "description_facts": [
+    "Housemade biscuits and bacon",
+    "Strawberries and cream",
+    "A duo of Brennan's eggs: half Eggs Sardou, half Eggs Hussarde",
+    "Bananas Foster action station",
+    "Courtyard games, Santa photos, face painting, cookie decorating",
+    "Dated Thursday, December 21 in the snippet (a 2023 date); 2026 date not found"
+   ],
+   "snippet": "The adult price for Breakfast with Santa is $90 (with gratuity included), and the children's price (ages 2-12) is $66 (with gratuity included). The menu includes housemade biscuits and bacon, strawberries and cream, a duo of Brennan's eggs (half Eggs Sardou and half Eggs Hussarde), and a Bananas Foster action station.",
+   "url": "https://www.exploretock.com/brennans/event/441747",
+   "site": "exploretock.com",
+   "query": "\"Breakfast with Santa\" Brennan's New Orleans menu price",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "dish",
+   "menu": "Bubbles at Brennan's / Roost Bar",
+   "section": "Bar snacks",
+   "name": "Crawfish Meat Pies",
+   "prices": [
+    {
+     "printed": "$16.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "Chive rémoulade"
+   ],
+   "snippet": "Bar Snacks (available Monday-Friday, 2-6 pm): Crawfish Meat Pies, Chive Remoulade $16.00; Fried Pickles, Medley Of Housemade Pickles & Chive Cream $14.00; The Roost Burger, 2 Beef Short Rib Patties, Bacon, Cheese, Pickles, Onions, Tomato Jam, Special Sauce $17.00 ... French Fries with Pink Sauce for $8.00 and a Cheese Board with Selection Of 3 Cheeses, Seasonal Chutney, Brennan's Honey, Fruit & Nut Bread for $24.00.",
+   "url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's Roost Bar menu bar bites crawfish meat pies fried pickles Roost burger",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Bubbles at Brennan's / Roost Bar",
+   "section": "Bar snacks",
+   "name": "Fried Pickles",
+   "prices": [
+    {
+     "printed": "$14.00",
+     "what": "plate"
+    }
+   ],
+   "description_facts": [
+    "A medley of housemade pickles",
+    "Chive cream",
+    "Fills the pack's bare description"
+   ],
+   "snippet": "Bar Snacks (available Monday-Friday, 2-6 pm): Crawfish Meat Pies, Chive Remoulade $16.00; Fried Pickles, Medley Of Housemade Pickles & Chive Cream $14.00; The Roost Burger, 2 Beef Short Rib Patties, Bacon, Cheese, Pickles, Onions, Tomato Jam, Special Sauce $17.00 ... French Fries with Pink Sauce for $8.00 and a Cheese Board with Selection Of 3 Cheeses, Seasonal Chutney, Brennan's Honey, Fruit & Nut Bread for $24.00.",
+   "url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's Roost Bar menu bar bites crawfish meat pies fried pickles Roost burger",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Bubbles at Brennan's / Roost Bar",
+   "section": "Bar snacks",
+   "name": "The Roost Burger",
+   "prices": [
+    {
+     "printed": "$17.00",
+     "what": "burger"
+    }
+   ],
+   "description_facts": [
+    "Two beef short rib patties",
+    "Bacon, cheese, pickles, onions",
+    "Tomato jam",
+    "Special sauce",
+    "Fills the pack's bare description"
+   ],
+   "snippet": "Bar Snacks (available Monday-Friday, 2-6 pm): Crawfish Meat Pies, Chive Remoulade $16.00; Fried Pickles, Medley Of Housemade Pickles & Chive Cream $14.00; The Roost Burger, 2 Beef Short Rib Patties, Bacon, Cheese, Pickles, Onions, Tomato Jam, Special Sauce $17.00 ... French Fries with Pink Sauce for $8.00 and a Cheese Board with Selection Of 3 Cheeses, Seasonal Chutney, Brennan's Honey, Fruit & Nut Bread for $24.00.",
+   "url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's Roost Bar menu bar bites crawfish meat pies fried pickles Roost burger",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Bubbles at Brennan's / Roost Bar",
+   "section": "Bar snacks",
+   "name": "French Fries with Pink Sauce",
+   "prices": [
+    {
+     "printed": "$8.00",
+     "what": "basket"
+    }
+   ],
+   "description_facts": [
+    "Pink sauce"
+   ],
+   "snippet": "Bar Snacks (available Monday-Friday, 2-6 pm): Crawfish Meat Pies, Chive Remoulade $16.00; Fried Pickles, Medley Of Housemade Pickles & Chive Cream $14.00; The Roost Burger, 2 Beef Short Rib Patties, Bacon, Cheese, Pickles, Onions, Tomato Jam, Special Sauce $17.00 ... French Fries with Pink Sauce for $8.00 and a Cheese Board with Selection Of 3 Cheeses, Seasonal Chutney, Brennan's Honey, Fruit & Nut Bread for $24.00.",
+   "url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's Roost Bar menu bar bites crawfish meat pies fried pickles Roost burger",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "dish",
+   "menu": "Bubbles at Brennan's / Roost Bar",
+   "section": "Bar snacks",
+   "name": "Cheese Board",
+   "prices": [
+    {
+     "printed": "$24.00",
+     "what": "board"
+    }
+   ],
+   "description_facts": [
+    "A selection of three cheeses",
+    "Seasonal chutney",
+    "Brennan's honey",
+    "Fruit and nut bread",
+    "Fills the pack's bare description"
+   ],
+   "snippet": "Bar Snacks (available Monday-Friday, 2-6 pm): Crawfish Meat Pies, Chive Remoulade $16.00; Fried Pickles, Medley Of Housemade Pickles & Chive Cream $14.00; The Roost Burger, 2 Beef Short Rib Patties, Bacon, Cheese, Pickles, Onions, Tomato Jam, Special Sauce $17.00 ... French Fries with Pink Sauce for $8.00 and a Cheese Board with Selection Of 3 Cheeses, Seasonal Chutney, Brennan's Honey, Fruit & Nut Bread for $24.00.",
+   "url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's Roost Bar menu bar bites crawfish meat pies fried pickles Roost burger",
+   "confidence": "high",
+   "already_in_pack": true
+  },
+  {
+   "kind": "fact",
+   "menu": "Bubbles at Brennan's / Roost Bar",
+   "section": "Hours",
+   "name": "Roost Bar snack hours",
+   "prices": [],
+   "description_facts": [
+    "Snippet gives bar snacks Monday to Friday 2 to 6 pm, and also the Roost open Thursday to Monday 2 to 6 pm with Friday 9 am to 6 pm: the two lines disagree; confirm at lineup"
+   ],
+   "snippet": "Bar Snacks (available Monday-Friday, 2-6 pm) ... The Roost Bar is located in the courtyard and is open Thursday-Monday, 2-6 pm, with extended hours on Friday from 9 am: 6 pm.",
+   "url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's Roost Bar menu bar bites crawfish meat pies fried pickles Roost burger",
+   "confidence": "medium",
+   "already_in_pack": false
+  }
+ ],
+ "gaps": [
+  "WebSearch here returns a search-engine summary over each result, not raw page text; every snippet field quotes that summary, so a word may be paraphrased even where the house's page is the source. Prices matched the guide of 26 September in every case, which supports them.",
+  "No fall 2026 dinner or breakfast card surfaced: no search showed a new dish or a dish gone since 26 September. Every à la carte price found ($13 soups, $17 tartare, $22 claws, $26 Sardou, $27 Hussarde, $25 shrimp and grits, $31 Pecan Gulf Fish, $32 duck waffle, $29 poussin, $36 redfish, $38 papillote, $120 Chateaubriand, $14 desserts) agrees with the pack.",
+  "The dinner tasting: the 80th anniversary card now ends on Bananas Foster with Congregation coffee, while an earlier snippet (second-pass.md) ended it on The Snickers with Banyuls. Which dessert is poured tonight is a lineup question; the duck course on both live snippets is the Hazelnut-Crusted Duck with winter squash, an autumn plate not in the pack.",
+  "Traditional Breakfast: courses two and four were not in any snippet this run (the guide's card has them).",
+  "Thanksgiving 2026: the full course list, the desserts and the children's $35 menu were not printed; the date conflicts between November 26, 2026 and a stale Thursday, November 27 line.",
+  "Christmas Eve 2026, Reveillon 2026, New Year's Eve 2026 and Breakfast with Santa 2026: no 2026 card surfaced. The Christmas Eve dishes found are credited to Executive Chef Ryan Hacker and are a past year's; the Santa event snippet carries a December 21 date.",
+  "Restaurant Week: the June 8 to 14 menu prints no year; Eggs Benedict and Blackberry Crepes appear only there.",
+  "Bubbles at Brennan's: Creole Spiced Nuts ($6 in the pack) and Popcorn Shrimp ($15 in the pack) did not appear in this run's snippets; Roost snack hours conflict within one snippet.",
+  "Dessert: New Orleans Bread Pudding, The Snickers, Pineapple Tarte Tatin and Blackberry Trifle prices were not re-seen this run (the pack holds them from the guide).",
+  "Breakfast and lunch: Eggs Owen, Crab and Corn Omelette, Creole-Spiced Hanger Steak, Framboise French Toast, Creole Tomato Tostada and the sides were not re-seen this run; Gulf Fish Amandine sits only in the house gallery.",
+  "No original 1946 menu or story of individual dishes beyond Bananas Foster (1951) and the Breakfast at Brennan's origin surfaced."
+ ]
+}

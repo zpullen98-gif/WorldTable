@@ -1,0 +1,1894 @@
+{
+ "lens": "burgundy-white",
+ "searches": [
+  {
+   "query": "Brennan's New Orleans wine list Meursault Puligny-Montrachet binwise",
+   "kept": 2
+  },
+  {
+   "query": "hub.binwise.com brennans-new-orleans wine list Chablis",
+   "kept": 6
+  },
+  {
+   "query": "Brennan's Royal Street wine list white Burgundy Corton-Charlemagne",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans binwise Meursault",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Leflaive",
+   "kept": 6
+  },
+  {
+   "query": "Brennan's New Orleans wine list Chassagne-Montrachet",
+   "kept": 6
+  },
+  {
+   "query": "Brennan's New Orleans wine list Meursault Roulot Coche-Dury price",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans wine list Corton-Charlemagne Grand Cru Bonneau du Martray",
+   "kept": 0
+  },
+  {
+   "query": "Brennan's New Orleans wine list Pouilly-Fuissé Mâcon Saint-Véran",
+   "kept": 6
+  },
+  {
+   "query": "Brennan's New Orleans wine list Meursault Premier Cru Perrières Charmes Genevrières",
+   "kept": 2
+  },
+  {
+   "query": "Brennan's New Orleans wine list Raveneau Chablis Grand Cru Valmur Les Clos",
+   "kept": 3
+  },
+  {
+   "query": "Brennan's New Orleans wine list Bâtard-Montrachet Chevalier-Montrachet Montrachet Grand Cru",
+   "kept": 9
+  },
+  {
+   "query": "\"Brennan's New Orleans\" Corton-Charlemagne Grand Cru wine list",
+   "kept": 5
+  },
+  {
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Premier Cru Sauzet Carillon Folatières Pucelles",
+   "kept": 5
+  },
+  {
+   "query": "Brennan's New Orleans wine list Saint-Aubin Bourgogne Blanc Drouhin Jadot",
+   "kept": 1
+  },
+  {
+   "query": "Brennan's New Orleans wine list Chablis Premier Cru Dauvissat Fèvre Moreau Montée de Tonnerre",
+   "kept": 5
+  },
+  {
+   "query": "Brennan's New Orleans wine list Meursault Jadot Garaudet Jobard Bonin 2022 2023",
+   "kept": 8
+  },
+  {
+   "query": "Brennan's New Orleans wine list half bottle 375ml white Burgundy Chardonnay",
+   "kept": 1
+  }
+ ],
+ "records": [
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Domaine Louis Michel & Fils \"Montmains\" 1er Cru Chablis",
+   "producer": "Domaine Louis Michel & Fils",
+   "region": "Chablis Premier Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown (price suggests glass or half bottle; not stated)",
+   "prices": [
+    {
+     "printed": "$48",
+     "what": "unknown (price suggests glass or half bottle; not stated)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Chablis, Montmains climat",
+    "Listed at $48; format not given in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes several Chablis options, including Domaine Louis Michel & Fils \"Montmains\" 1er Cru Chablis from Burgundy (2017) at $48, and Domaine Roland Lavantureux Chablis from Burgundy (2016) at $40.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "hub.binwise.com brennans-new-orleans wine list Chablis",
+   "confidence": "low",
+   "already_in_pack": false,
+   "vintage": "2017"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Domaine Roland Lavantureux Chablis",
+   "producer": "Domaine Roland Lavantureux",
+   "region": "Chablis, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown (price suggests glass or half bottle; not stated)",
+   "prices": [
+    {
+     "printed": "$40",
+     "what": "unknown (price suggests glass or half bottle; not stated)"
+    }
+   ],
+   "description_facts": [
+    "Village Chablis",
+    "Listed at $40; format not given in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes several Chablis options, including Domaine Louis Michel & Fils \"Montmains\" 1er Cru Chablis from Burgundy (2017) at $48, and Domaine Roland Lavantureux Chablis from Burgundy (2016) at $40.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "hub.binwise.com brennans-new-orleans wine list Chablis",
+   "confidence": "low",
+   "already_in_pack": false,
+   "vintage": "2016"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Domaine François Raveneau \"Butteaux\" 1er Cru Chablis (1.5L)",
+   "producer": "Domaine François Raveneau",
+   "region": "Chablis Premier Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$840",
+     "what": "magnum"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Chablis, Butteaux",
+    "1.5L magnum",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "the list features larger format bottles including Domaine François Raveneau \"Butteaux\" 1er Cru Chablis in a 1.5L Magnum from 2014 at $840 and 2015 at $800.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "hub.binwise.com brennans-new-orleans wine list Chablis",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2014"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Domaine François Raveneau \"Butteaux\" 1er Cru Chablis (1.5L)",
+   "producer": "Domaine François Raveneau",
+   "region": "Chablis Premier Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$800",
+     "what": "magnum"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Chablis, Butteaux",
+    "1.5L magnum",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "the list features larger format bottles including Domaine François Raveneau \"Butteaux\" 1er Cru Chablis in a 1.5L Magnum from 2014 at $840 and 2015 at $800.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "hub.binwise.com brennans-new-orleans wine list Chablis",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2015"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Christian Moreau \"Les Clos - Clos des Hospices\"",
+   "producer": "Christian Moreau",
+   "region": "Chablis Grand Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$210",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Chablis, Les Clos, Clos des Hospices parcel",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "There are also grand cru Chablis options including Christian Moreau \"Les Clos - Clos des Hospices\" 2012 at $210 and Domaine Billaud-Simon \"Blanchot\" 2016 at $230.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "hub.binwise.com brennans-new-orleans wine list Chablis",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2012"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Domaine Billaud-Simon \"Blanchot\"",
+   "producer": "Domaine Billaud-Simon",
+   "region": "Chablis Grand Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$230",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Chablis, Blanchot",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "There are also grand cru Chablis options including Christian Moreau \"Les Clos - Clos des Hospices\" 2012 at $210 and Domaine Billaud-Simon \"Blanchot\" 2016 at $230.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "hub.binwise.com brennans-new-orleans wine list Chablis",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2016"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Domaine François Raveneau \"Blanchot\"",
+   "producer": "Domaine François Raveneau",
+   "region": "Chablis Grand Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$1,255",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Chablis, Blanchot",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Chablis Grand Cru selections featuring Domaine François Raveneau \"Blanchot\" 2018 for $1,255, as well as other Grand Cru Chablis options like Domaine Jean Collet et Fils \"Valmur\" 2020 for $195 and Domaine Vincent Dauvissat \"Les Clos\" 2023 for $440.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Raveneau Chablis Grand Cru Valmur Les Clos",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2018"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Domaine Jean Collet et Fils \"Valmur\"",
+   "producer": "Domaine Jean Collet et Fils",
+   "region": "Chablis Grand Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$195",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Chablis, Valmur",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Chablis Grand Cru selections featuring Domaine François Raveneau \"Blanchot\" 2018 for $1,255, as well as other Grand Cru Chablis options like Domaine Jean Collet et Fils \"Valmur\" 2020 for $195 and Domaine Vincent Dauvissat \"Les Clos\" 2023 for $440.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Raveneau Chablis Grand Cru Valmur Les Clos",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2020"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Domaine Vincent Dauvissat \"Les Clos\"",
+   "producer": "Domaine Vincent Dauvissat",
+   "region": "Chablis Grand Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$440",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Chablis, Les Clos",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Chablis Grand Cru selections featuring Domaine François Raveneau \"Blanchot\" 2018 for $1,255, as well as other Grand Cru Chablis options like Domaine Jean Collet et Fils \"Valmur\" 2020 for $195 and Domaine Vincent Dauvissat \"Les Clos\" 2023 for $440.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Raveneau Chablis Grand Cru Valmur Les Clos",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2023"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Domaine François Raveneau \"Montée de Tonnerre\"",
+   "producer": "Domaine François Raveneau",
+   "region": "Chablis Premier Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$1,035",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Chablis, Montée de Tonnerre",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Domaine François Raveneau \"Montée de Tonnerre\" 2020 is priced at $1,035 and the 2022 vintage at $920. Domaine William Fevre \"Montée de Tonnerre\" 2017 is listed at $265, and Jean-Paul & Benoît Droin \"Montée de Tonnerre\" 2024 is available at $225.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chablis Premier Cru Dauvissat Fèvre Moreau Montée de Tonnerre",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2020"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Domaine François Raveneau \"Montée de Tonnerre\"",
+   "producer": "Domaine François Raveneau",
+   "region": "Chablis Premier Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$920",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Chablis, Montée de Tonnerre",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Domaine François Raveneau \"Montée de Tonnerre\" 2020 is priced at $1,035 and the 2022 vintage at $920. Domaine William Fevre \"Montée de Tonnerre\" 2017 is listed at $265, and Jean-Paul & Benoît Droin \"Montée de Tonnerre\" 2024 is available at $225.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chablis Premier Cru Dauvissat Fèvre Moreau Montée de Tonnerre",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Domaine William Fevre \"Montée de Tonnerre\"",
+   "producer": "Domaine William Fevre",
+   "region": "Chablis Premier Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$265",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Chablis, Montée de Tonnerre",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Domaine François Raveneau \"Montée de Tonnerre\" 2020 is priced at $1,035 and the 2022 vintage at $920. Domaine William Fevre \"Montée de Tonnerre\" 2017 is listed at $265, and Jean-Paul & Benoît Droin \"Montée de Tonnerre\" 2024 is available at $225.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chablis Premier Cru Dauvissat Fèvre Moreau Montée de Tonnerre",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2017"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Jean-Paul & Benoît Droin \"Montée de Tonnerre\"",
+   "producer": "Jean-Paul & Benoît Droin",
+   "region": "Chablis Premier Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$225",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Chablis, Montée de Tonnerre",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Domaine François Raveneau \"Montée de Tonnerre\" 2020 is priced at $1,035 and the 2022 vintage at $920. Domaine William Fevre \"Montée de Tonnerre\" 2017 is listed at $265, and Jean-Paul & Benoît Droin \"Montée de Tonnerre\" 2024 is available at $225.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chablis Premier Cru Dauvissat Fèvre Moreau Montée de Tonnerre",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2024"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Chablis",
+   "name": "Louis Jadot Chablis Premier Cru \"Montée de Tonnerre\"",
+   "producer": "Louis Jadot",
+   "region": "Chablis Premier Cru, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [],
+   "description_facts": [
+    "Listed under Chablis Premier Cru Montée de Tonnerre",
+    "Vintage and price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes offerings from multiple producers including Domaine François Raveneau, Domaine William Fevre, Jean-Paul & Benoît Droin, and Louis Jadot in the Chablis Premier Cru Montée de Tonnerre section.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chablis Premier Cru Dauvissat Fèvre Moreau Montée de Tonnerre",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\"",
+   "producer": "Domaine Leflaive",
+   "region": "Puligny-Montrachet Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$820",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Puligny-Montrachet, Clavoillon",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\" 2020 at $820 - Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\" 2022 at $875 - Domaine Leflaive Puligny-Montrachet 2016 at $340 - Domaine Leflaive Puligny-Montrachet 2021 at $520 - Domaine Leflaive Puligny-Montrachet 2022 at $665",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Leflaive",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2020"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\"",
+   "producer": "Domaine Leflaive",
+   "region": "Puligny-Montrachet Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$875",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Puligny-Montrachet, Clavoillon",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\" 2020 at $820 - Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\" 2022 at $875 - Domaine Leflaive Puligny-Montrachet 2016 at $340 - Domaine Leflaive Puligny-Montrachet 2021 at $520 - Domaine Leflaive Puligny-Montrachet 2022 at $665",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Leflaive",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Leflaive Puligny-Montrachet",
+   "producer": "Domaine Leflaive",
+   "region": "Puligny-Montrachet, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$340",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Village Puligny-Montrachet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\" 2020 at $820 - Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\" 2022 at $875 - Domaine Leflaive Puligny-Montrachet 2016 at $340 - Domaine Leflaive Puligny-Montrachet 2021 at $520 - Domaine Leflaive Puligny-Montrachet 2022 at $665",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Leflaive",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2016"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Leflaive Puligny-Montrachet",
+   "producer": "Domaine Leflaive",
+   "region": "Puligny-Montrachet, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$520",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Village Puligny-Montrachet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\" 2020 at $820 - Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\" 2022 at $875 - Domaine Leflaive Puligny-Montrachet 2016 at $340 - Domaine Leflaive Puligny-Montrachet 2021 at $520 - Domaine Leflaive Puligny-Montrachet 2022 at $665",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Leflaive",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2021"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Leflaive Puligny-Montrachet",
+   "producer": "Domaine Leflaive",
+   "region": "Puligny-Montrachet, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$665",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Village Puligny-Montrachet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\" 2020 at $820 - Domaine Leflaive Puligny-Montrachet Premier Cru \"Clavoillon\" 2022 at $875 - Domaine Leflaive Puligny-Montrachet 2016 at $340 - Domaine Leflaive Puligny-Montrachet 2021 at $520 - Domaine Leflaive Puligny-Montrachet 2022 at $665",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Leflaive",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "Wines by the glass",
+   "name": "Domaine Leflaive Mâcon-Verzé (Coravin)",
+   "producer": "Domaine Leflaive",
+   "region": "Mâcon-Verzé, Mâconnais",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "glass",
+   "prices": [
+    {
+     "printed": "$40",
+     "what": "glass"
+    }
+   ],
+   "description_facts": [
+    "Poured by Coravin",
+    "Matches the server guide's glass price",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Additionally, they also carry an entry-level Domaine Leflaive Mâcon-Verzé Burgundy 2022 (available via Coravin) for $40",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Leflaive",
+   "confidence": "high",
+   "already_in_pack": true,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Dujac Puligny-Montrachet Premier Cru \"Les Folatières\"",
+   "producer": "Domaine Dujac",
+   "region": "Puligny-Montrachet Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$444",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Puligny-Montrachet, Les Folatières",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's carries Domaine Dujac \"Les Folatières\" 2019 for $444, 2022 for $615, and 2023 as a vintage on their list. Additionally, they stock Domaine Etienne Sauzet Puligny-Montrachet from 2023 and 2024.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Premier Cru Sauzet Carillon Folatières Pucelles",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2019"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Dujac Puligny-Montrachet Premier Cru \"Les Folatières\"",
+   "producer": "Domaine Dujac",
+   "region": "Puligny-Montrachet Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$615",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Puligny-Montrachet, Les Folatières",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's carries Domaine Dujac \"Les Folatières\" 2019 for $444, 2022 for $615, and 2023 as a vintage on their list. Additionally, they stock Domaine Etienne Sauzet Puligny-Montrachet from 2023 and 2024.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Premier Cru Sauzet Carillon Folatières Pucelles",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Dujac Puligny-Montrachet Premier Cru \"Les Folatières\"",
+   "producer": "Domaine Dujac",
+   "region": "Puligny-Montrachet Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [],
+   "description_facts": [
+    "Premier Cru Puligny-Montrachet, Les Folatières",
+    "Price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's carries Domaine Dujac \"Les Folatières\" 2019 for $444, 2022 for $615, and 2023 as a vintage on their list. Additionally, they stock Domaine Etienne Sauzet Puligny-Montrachet from 2023 and 2024.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Premier Cru Sauzet Carillon Folatières Pucelles",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2023"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Etienne Sauzet Puligny-Montrachet",
+   "producer": "Domaine Etienne Sauzet",
+   "region": "Puligny-Montrachet, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [],
+   "description_facts": [
+    "Puligny-Montrachet; tier and price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's carries Domaine Dujac \"Les Folatières\" 2019 for $444, 2022 for $615, and 2023 as a vintage on their list. Additionally, they stock Domaine Etienne Sauzet Puligny-Montrachet from 2023 and 2024.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Premier Cru Sauzet Carillon Folatières Pucelles",
+   "confidence": "low",
+   "already_in_pack": false,
+   "vintage": "2023"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Etienne Sauzet Puligny-Montrachet",
+   "producer": "Domaine Etienne Sauzet",
+   "region": "Puligny-Montrachet, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [],
+   "description_facts": [
+    "Puligny-Montrachet; tier and price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's carries Domaine Dujac \"Les Folatières\" 2019 for $444, 2022 for $615, and 2023 as a vintage on their list. Additionally, they stock Domaine Etienne Sauzet Puligny-Montrachet from 2023 and 2024.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Puligny-Montrachet Premier Cru Sauzet Carillon Folatières Pucelles",
+   "confidence": "low",
+   "already_in_pack": false,
+   "vintage": "2024"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Vincent et Sophie Morey \"Les Embrazées\" Premier Cru Chassagne-Montrachet (1.5L)",
+   "producer": "Vincent et Sophie Morey",
+   "region": "Chassagne-Montrachet Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$485",
+     "what": "magnum"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Chassagne-Montrachet, Les Embrazées",
+    "1.5L magnum",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Vincent et Sophie Morey \"Les Embrazées\" Premier Cru Chassagne-Montrachet 1.5L Magnum 2023 priced at $485. Additionally, the list features various Chassagne-Montrachet Premier Cru options from producers like Bouard-Bonnefoy, Domaine Alex Moreau, and others, as well as regular Chassagne-Montrachet bottles from producers including Bouard-Bonnefoy, Bruno Colin, and Domaine Faiveley.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chassagne-Montrachet",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2023"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Bouard-Bonnefoy Chassagne-Montrachet Premier Cru",
+   "producer": "Bouard-Bonnefoy",
+   "region": "Chassagne-Montrachet Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [],
+   "description_facts": [
+    "Chassagne-Montrachet Premier Cru; climat, vintage and price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Vincent et Sophie Morey \"Les Embrazées\" Premier Cru Chassagne-Montrachet 1.5L Magnum 2023 priced at $485. Additionally, the list features various Chassagne-Montrachet Premier Cru options from producers like Bouard-Bonnefoy, Domaine Alex Moreau, and others, as well as regular Chassagne-Montrachet bottles from producers including Bouard-Bonnefoy, Bruno Colin, and Domaine Faiveley.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chassagne-Montrachet",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Alex Moreau Chassagne-Montrachet Premier Cru",
+   "producer": "Domaine Alex Moreau",
+   "region": "Chassagne-Montrachet Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [],
+   "description_facts": [
+    "Chassagne-Montrachet Premier Cru; climat, vintage and price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Vincent et Sophie Morey \"Les Embrazées\" Premier Cru Chassagne-Montrachet 1.5L Magnum 2023 priced at $485. Additionally, the list features various Chassagne-Montrachet Premier Cru options from producers like Bouard-Bonnefoy, Domaine Alex Moreau, and others, as well as regular Chassagne-Montrachet bottles from producers including Bouard-Bonnefoy, Bruno Colin, and Domaine Faiveley.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chassagne-Montrachet",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Bouard-Bonnefoy Chassagne-Montrachet",
+   "producer": "Bouard-Bonnefoy",
+   "region": "Chassagne-Montrachet, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [],
+   "description_facts": [
+    "Village Chassagne-Montrachet; vintage and price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Vincent et Sophie Morey \"Les Embrazées\" Premier Cru Chassagne-Montrachet 1.5L Magnum 2023 priced at $485. Additionally, the list features various Chassagne-Montrachet Premier Cru options from producers like Bouard-Bonnefoy, Domaine Alex Moreau, and others, as well as regular Chassagne-Montrachet bottles from producers including Bouard-Bonnefoy, Bruno Colin, and Domaine Faiveley.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chassagne-Montrachet",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Bruno Colin Chassagne-Montrachet",
+   "producer": "Bruno Colin",
+   "region": "Chassagne-Montrachet, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [],
+   "description_facts": [
+    "Village Chassagne-Montrachet; vintage and price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Vincent et Sophie Morey \"Les Embrazées\" Premier Cru Chassagne-Montrachet 1.5L Magnum 2023 priced at $485. Additionally, the list features various Chassagne-Montrachet Premier Cru options from producers like Bouard-Bonnefoy, Domaine Alex Moreau, and others, as well as regular Chassagne-Montrachet bottles from producers including Bouard-Bonnefoy, Bruno Colin, and Domaine Faiveley.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chassagne-Montrachet",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Faiveley Chassagne-Montrachet",
+   "producer": "Domaine Faiveley",
+   "region": "Chassagne-Montrachet, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [],
+   "description_facts": [
+    "Village Chassagne-Montrachet; vintage and price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Vincent et Sophie Morey \"Les Embrazées\" Premier Cru Chassagne-Montrachet 1.5L Magnum 2023 priced at $485. Additionally, the list features various Chassagne-Montrachet Premier Cru options from producers like Bouard-Bonnefoy, Domaine Alex Moreau, and others, as well as regular Chassagne-Montrachet bottles from producers including Bouard-Bonnefoy, Bruno Colin, and Domaine Faiveley.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Chassagne-Montrachet",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Louis Jadot Meursault",
+   "producer": "Louis Jadot",
+   "region": "Meursault, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$115",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Village Meursault from Maison Louis Jadot",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Louis Jadot Meursault Burgundy 2022 for $115 ... Domaine Florent Garaudet \"Vieilles Vignes\" Meursault in a 1.5L Magnum 2022 for $435 - Antoine Jobard Meursault 2023 for $465 - Antoine Jobard \"Charmes\" Premier Cru 2023 for $700 - Bernard Bonin \"Genevrières\" 2022 for $1,650 - Bernard Bonin \"Les Charmes du Milieu\" 2023 for $1,450 - Bernard Bonin \"Clos du Cromin\" 2022 for $700 - Bernard Bonin \"Clos du Cromin\" 2023 for $750",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Meursault Jadot Garaudet Jobard Bonin 2022 2023",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine Florent Garaudet \"Vieilles Vignes\" Meursault (1.5L)",
+   "producer": "Domaine Florent Garaudet",
+   "region": "Meursault, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$435",
+     "what": "magnum"
+    }
+   ],
+   "description_facts": [
+    "Old vines (Vieilles Vignes) Meursault",
+    "1.5L magnum",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Louis Jadot Meursault Burgundy 2022 for $115 ... Domaine Florent Garaudet \"Vieilles Vignes\" Meursault in a 1.5L Magnum 2022 for $435 - Antoine Jobard Meursault 2023 for $465 - Antoine Jobard \"Charmes\" Premier Cru 2023 for $700 - Bernard Bonin \"Genevrières\" 2022 for $1,650 - Bernard Bonin \"Les Charmes du Milieu\" 2023 for $1,450 - Bernard Bonin \"Clos du Cromin\" 2022 for $700 - Bernard Bonin \"Clos du Cromin\" 2023 for $750",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Meursault Jadot Garaudet Jobard Bonin 2022 2023",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Antoine Jobard Meursault",
+   "producer": "Antoine Jobard",
+   "region": "Meursault, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$465",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Village Meursault",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Louis Jadot Meursault Burgundy 2022 for $115 ... Domaine Florent Garaudet \"Vieilles Vignes\" Meursault in a 1.5L Magnum 2022 for $435 - Antoine Jobard Meursault 2023 for $465 - Antoine Jobard \"Charmes\" Premier Cru 2023 for $700 - Bernard Bonin \"Genevrières\" 2022 for $1,650 - Bernard Bonin \"Les Charmes du Milieu\" 2023 for $1,450 - Bernard Bonin \"Clos du Cromin\" 2022 for $700 - Bernard Bonin \"Clos du Cromin\" 2023 for $750",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Meursault Jadot Garaudet Jobard Bonin 2022 2023",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2023"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Antoine Jobard Meursault Premier Cru \"Charmes\"",
+   "producer": "Antoine Jobard",
+   "region": "Meursault Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$700",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Meursault, Charmes",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Louis Jadot Meursault Burgundy 2022 for $115 ... Domaine Florent Garaudet \"Vieilles Vignes\" Meursault in a 1.5L Magnum 2022 for $435 - Antoine Jobard Meursault 2023 for $465 - Antoine Jobard \"Charmes\" Premier Cru 2023 for $700 - Bernard Bonin \"Genevrières\" 2022 for $1,650 - Bernard Bonin \"Les Charmes du Milieu\" 2023 for $1,450 - Bernard Bonin \"Clos du Cromin\" 2022 for $700 - Bernard Bonin \"Clos du Cromin\" 2023 for $750",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Meursault Jadot Garaudet Jobard Bonin 2022 2023",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2023"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Bernard Bonin Meursault \"Genevrières\"",
+   "producer": "Bernard Bonin",
+   "region": "Meursault Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$1,650",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Genevrières, a Meursault Premier Cru climat (snippet 10 calls it Premier Cru)",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Louis Jadot Meursault Burgundy 2022 for $115 ... Domaine Florent Garaudet \"Vieilles Vignes\" Meursault in a 1.5L Magnum 2022 for $435 - Antoine Jobard Meursault 2023 for $465 - Antoine Jobard \"Charmes\" Premier Cru 2023 for $700 - Bernard Bonin \"Genevrières\" 2022 for $1,650 - Bernard Bonin \"Les Charmes du Milieu\" 2023 for $1,450 - Bernard Bonin \"Clos du Cromin\" 2022 for $700 - Bernard Bonin \"Clos du Cromin\" 2023 for $750",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Meursault Jadot Garaudet Jobard Bonin 2022 2023",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Bernard Bonin Meursault \"Les Charmes du Milieu\"",
+   "producer": "Bernard Bonin",
+   "region": "Meursault Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$1,450",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Charmes du Milieu, within Meursault Premier Cru Charmes (snippet 10 groups it with Premier Cru)",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Louis Jadot Meursault Burgundy 2022 for $115 ... Domaine Florent Garaudet \"Vieilles Vignes\" Meursault in a 1.5L Magnum 2022 for $435 - Antoine Jobard Meursault 2023 for $465 - Antoine Jobard \"Charmes\" Premier Cru 2023 for $700 - Bernard Bonin \"Genevrières\" 2022 for $1,650 - Bernard Bonin \"Les Charmes du Milieu\" 2023 for $1,450 - Bernard Bonin \"Clos du Cromin\" 2022 for $700 - Bernard Bonin \"Clos du Cromin\" 2023 for $750",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Meursault Jadot Garaudet Jobard Bonin 2022 2023",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2023"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Bernard Bonin Meursault \"Clos du Cromin\"",
+   "producer": "Bernard Bonin",
+   "region": "Meursault, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$700",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Clos du Cromin, a named Meursault village climat (tier not stated in snippet)",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Louis Jadot Meursault Burgundy 2022 for $115 ... Domaine Florent Garaudet \"Vieilles Vignes\" Meursault in a 1.5L Magnum 2022 for $435 - Antoine Jobard Meursault 2023 for $465 - Antoine Jobard \"Charmes\" Premier Cru 2023 for $700 - Bernard Bonin \"Genevrières\" 2022 for $1,650 - Bernard Bonin \"Les Charmes du Milieu\" 2023 for $1,450 - Bernard Bonin \"Clos du Cromin\" 2022 for $700 - Bernard Bonin \"Clos du Cromin\" 2023 for $750",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Meursault Jadot Garaudet Jobard Bonin 2022 2023",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Bernard Bonin Meursault \"Clos du Cromin\"",
+   "producer": "Bernard Bonin",
+   "region": "Meursault, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$750",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Clos du Cromin, a named Meursault village climat (tier not stated in snippet)",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Louis Jadot Meursault Burgundy 2022 for $115 ... Domaine Florent Garaudet \"Vieilles Vignes\" Meursault in a 1.5L Magnum 2022 for $435 - Antoine Jobard Meursault 2023 for $465 - Antoine Jobard \"Charmes\" Premier Cru 2023 for $700 - Bernard Bonin \"Genevrières\" 2022 for $1,650 - Bernard Bonin \"Les Charmes du Milieu\" 2023 for $1,450 - Bernard Bonin \"Clos du Cromin\" 2022 for $700 - Bernard Bonin \"Clos du Cromin\" 2023 for $750",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Meursault Jadot Garaudet Jobard Bonin 2022 2023",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2023"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Marchand-Tawse \"Genevrières\" Premier Cru Meursault (3L)",
+   "producer": "Marchand-Tawse",
+   "region": "Meursault Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "double magnum (3L)",
+   "prices": [
+    {
+     "printed": "$1600",
+     "what": "double magnum (3L)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Meursault, Genevrières",
+    "3L double magnum",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Marchand-Tawse \"Genevrières\" Premier Cru Meursault in a 3L Double Magnum from 2016 priced at $1600. The search also shows that Brennan's carries several Meursault Premier Cru wines including Antoine Jobard \"Charmes\" (2023) at $700, Bernard Bonin \"Genevrières\" (2022) at $1650, Bernard Bonin \"Les Charmes du Milieu\" (2023) at $1450, and Domaine des Comtes Lafon \"Charmes\" (2011) at $585.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Meursault Premier Cru Perrières Charmes Genevrières",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2016"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Cote de Beaune",
+   "name": "Domaine des Comtes Lafon Meursault Premier Cru \"Charmes\"",
+   "producer": "Domaine des Comtes Lafon",
+   "region": "Meursault Premier Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$585",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Premier Cru Meursault, Charmes",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The wine list includes Marchand-Tawse \"Genevrières\" Premier Cru Meursault in a 3L Double Magnum from 2016 priced at $1600. The search also shows that Brennan's carries several Meursault Premier Cru wines including Antoine Jobard \"Charmes\" (2023) at $700, Bernard Bonin \"Genevrières\" (2022) at $1650, Bernard Bonin \"Les Charmes du Milieu\" (2023) at $1450, and Domaine des Comtes Lafon \"Charmes\" (2011) at $585.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Meursault Premier Cru Perrières Charmes Genevrières",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2011"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Bouchard Père & Fils Corton-Charlemagne Grand Cru (1.5L)",
+   "producer": "Bouchard Père & Fils",
+   "region": "Corton-Charlemagne Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$1365",
+     "what": "magnum"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Corton-Charlemagne",
+    "1.5L magnum",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's features multiple Corton-Charlemagne Grand Cru selections, including options from Bouchard Père & Fils (2020, 1.5L Magnum for $1365), Domaine Coche-Dury (2013 for $5500), Domaine Follin-Arbelet (2021 for $659), Domaine Ponsot (2013 for $938), and Domaine de la Romanée-Conti (2020).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "\"Brennan's New Orleans\" Corton-Charlemagne Grand Cru wine list",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2020"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine Coche-Dury Corton-Charlemagne Grand Cru",
+   "producer": "Domaine Coche-Dury",
+   "region": "Corton-Charlemagne Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$5500",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Corton-Charlemagne",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's features multiple Corton-Charlemagne Grand Cru selections, including options from Bouchard Père & Fils (2020, 1.5L Magnum for $1365), Domaine Coche-Dury (2013 for $5500), Domaine Follin-Arbelet (2021 for $659), Domaine Ponsot (2013 for $938), and Domaine de la Romanée-Conti (2020).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "\"Brennan's New Orleans\" Corton-Charlemagne Grand Cru wine list",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2013"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine Follin-Arbelet Corton-Charlemagne Grand Cru",
+   "producer": "Domaine Follin-Arbelet",
+   "region": "Corton-Charlemagne Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$659",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Corton-Charlemagne",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's features multiple Corton-Charlemagne Grand Cru selections, including options from Bouchard Père & Fils (2020, 1.5L Magnum for $1365), Domaine Coche-Dury (2013 for $5500), Domaine Follin-Arbelet (2021 for $659), Domaine Ponsot (2013 for $938), and Domaine de la Romanée-Conti (2020).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "\"Brennan's New Orleans\" Corton-Charlemagne Grand Cru wine list",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2021"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine Ponsot Corton-Charlemagne Grand Cru",
+   "producer": "Domaine Ponsot",
+   "region": "Corton-Charlemagne Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$938",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Corton-Charlemagne",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's features multiple Corton-Charlemagne Grand Cru selections, including options from Bouchard Père & Fils (2020, 1.5L Magnum for $1365), Domaine Coche-Dury (2013 for $5500), Domaine Follin-Arbelet (2021 for $659), Domaine Ponsot (2013 for $938), and Domaine de la Romanée-Conti (2020).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "\"Brennan's New Orleans\" Corton-Charlemagne Grand Cru wine list",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2013"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine de la Romanée-Conti Corton-Charlemagne Grand Cru",
+   "producer": "Domaine de la Romanée-Conti",
+   "region": "Corton-Charlemagne Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [],
+   "description_facts": [
+    "Grand Cru Corton-Charlemagne",
+    "Price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's features multiple Corton-Charlemagne Grand Cru selections, including options from Bouchard Père & Fils (2020, 1.5L Magnum for $1365), Domaine Coche-Dury (2013 for $5500), Domaine Follin-Arbelet (2021 for $659), Domaine Ponsot (2013 for $938), and Domaine de la Romanée-Conti (2020).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "\"Brennan's New Orleans\" Corton-Charlemagne Grand Cru wine list",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2020"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine Etienne Sauzet Montrachet Grand Cru",
+   "producer": "Domaine Etienne Sauzet",
+   "region": "Montrachet Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$3900",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Le Montrachet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The restaurant carries Montrachet Grand Cru from producers including Domaine Etienne Sauzet (2023 at $3900), Domaine Ponsot (2013 at $4225), and Domaine de la Romanée-Conti (multiple vintages ranging from 2011 to 2015 at prices from $5800-$8000). For Chevalier-Montrachet Grand Cru, they offer selections from Domaine Leflaive across multiple vintages (2012-2022, ranging from $1600-$5000), and Domaine Michel Niellon. Their Bâtard-Montrachet Grand Cru selections include Bernard Moreau (2014 at $925), Domaine Leflaive (2009-2022 with prices ranging from $1300-$2900), Domaine Marc Colin (2015 at $875), and Domaine Morey-Coffinet (2022).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Bâtard-Montrachet Chevalier-Montrachet Montrachet Grand Cru",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2023"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine Ponsot Montrachet Grand Cru",
+   "producer": "Domaine Ponsot",
+   "region": "Montrachet Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$4225",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Le Montrachet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The restaurant carries Montrachet Grand Cru from producers including Domaine Etienne Sauzet (2023 at $3900), Domaine Ponsot (2013 at $4225), and Domaine de la Romanée-Conti (multiple vintages ranging from 2011 to 2015 at prices from $5800-$8000). For Chevalier-Montrachet Grand Cru, they offer selections from Domaine Leflaive across multiple vintages (2012-2022, ranging from $1600-$5000), and Domaine Michel Niellon. Their Bâtard-Montrachet Grand Cru selections include Bernard Moreau (2014 at $925), Domaine Leflaive (2009-2022 with prices ranging from $1300-$2900), Domaine Marc Colin (2015 at $875), and Domaine Morey-Coffinet (2022).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Bâtard-Montrachet Chevalier-Montrachet Montrachet Grand Cru",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2013"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine de la Romanée-Conti Montrachet Grand Cru (several vintages)",
+   "producer": "Domaine de la Romanée-Conti",
+   "region": "Montrachet Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$5800-$8000",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Le Montrachet",
+    "Price is a range across vintages; per-vintage prices not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The restaurant carries Montrachet Grand Cru from producers including Domaine Etienne Sauzet (2023 at $3900), Domaine Ponsot (2013 at $4225), and Domaine de la Romanée-Conti (multiple vintages ranging from 2011 to 2015 at prices from $5800-$8000). For Chevalier-Montrachet Grand Cru, they offer selections from Domaine Leflaive across multiple vintages (2012-2022, ranging from $1600-$5000), and Domaine Michel Niellon. Their Bâtard-Montrachet Grand Cru selections include Bernard Moreau (2014 at $925), Domaine Leflaive (2009-2022 with prices ranging from $1300-$2900), Domaine Marc Colin (2015 at $875), and Domaine Morey-Coffinet (2022).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Bâtard-Montrachet Chevalier-Montrachet Montrachet Grand Cru",
+   "confidence": "low",
+   "already_in_pack": false,
+   "vintage": "2011 to 2015 (range, individual vintages not given)"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine Leflaive Chevalier-Montrachet Grand Cru (several vintages)",
+   "producer": "Domaine Leflaive",
+   "region": "Chevalier-Montrachet Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$1600-$5000",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Chevalier-Montrachet",
+    "Range across vintages; per-vintage prices not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The restaurant carries Montrachet Grand Cru from producers including Domaine Etienne Sauzet (2023 at $3900), Domaine Ponsot (2013 at $4225), and Domaine de la Romanée-Conti (multiple vintages ranging from 2011 to 2015 at prices from $5800-$8000). For Chevalier-Montrachet Grand Cru, they offer selections from Domaine Leflaive across multiple vintages (2012-2022, ranging from $1600-$5000), and Domaine Michel Niellon. Their Bâtard-Montrachet Grand Cru selections include Bernard Moreau (2014 at $925), Domaine Leflaive (2009-2022 with prices ranging from $1300-$2900), Domaine Marc Colin (2015 at $875), and Domaine Morey-Coffinet (2022).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Bâtard-Montrachet Chevalier-Montrachet Montrachet Grand Cru",
+   "confidence": "low",
+   "already_in_pack": false,
+   "vintage": "2012-2022 (range)"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine Michel Niellon Chevalier-Montrachet Grand Cru",
+   "producer": "Domaine Michel Niellon",
+   "region": "Chevalier-Montrachet Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [],
+   "description_facts": [
+    "Grand Cru Chevalier-Montrachet",
+    "Vintage and price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The restaurant carries Montrachet Grand Cru from producers including Domaine Etienne Sauzet (2023 at $3900), Domaine Ponsot (2013 at $4225), and Domaine de la Romanée-Conti (multiple vintages ranging from 2011 to 2015 at prices from $5800-$8000). For Chevalier-Montrachet Grand Cru, they offer selections from Domaine Leflaive across multiple vintages (2012-2022, ranging from $1600-$5000), and Domaine Michel Niellon. Their Bâtard-Montrachet Grand Cru selections include Bernard Moreau (2014 at $925), Domaine Leflaive (2009-2022 with prices ranging from $1300-$2900), Domaine Marc Colin (2015 at $875), and Domaine Morey-Coffinet (2022).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Bâtard-Montrachet Chevalier-Montrachet Montrachet Grand Cru",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Bernard Moreau Bâtard-Montrachet Grand Cru",
+   "producer": "Bernard Moreau",
+   "region": "Bâtard-Montrachet Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$925",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Bâtard-Montrachet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The restaurant carries Montrachet Grand Cru from producers including Domaine Etienne Sauzet (2023 at $3900), Domaine Ponsot (2013 at $4225), and Domaine de la Romanée-Conti (multiple vintages ranging from 2011 to 2015 at prices from $5800-$8000). For Chevalier-Montrachet Grand Cru, they offer selections from Domaine Leflaive across multiple vintages (2012-2022, ranging from $1600-$5000), and Domaine Michel Niellon. Their Bâtard-Montrachet Grand Cru selections include Bernard Moreau (2014 at $925), Domaine Leflaive (2009-2022 with prices ranging from $1300-$2900), Domaine Marc Colin (2015 at $875), and Domaine Morey-Coffinet (2022).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Bâtard-Montrachet Chevalier-Montrachet Montrachet Grand Cru",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2014"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine Leflaive Bâtard-Montrachet Grand Cru (several vintages)",
+   "producer": "Domaine Leflaive",
+   "region": "Bâtard-Montrachet Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$1300-$2900",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Bâtard-Montrachet",
+    "Range across vintages; per-vintage prices not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The restaurant carries Montrachet Grand Cru from producers including Domaine Etienne Sauzet (2023 at $3900), Domaine Ponsot (2013 at $4225), and Domaine de la Romanée-Conti (multiple vintages ranging from 2011 to 2015 at prices from $5800-$8000). For Chevalier-Montrachet Grand Cru, they offer selections from Domaine Leflaive across multiple vintages (2012-2022, ranging from $1600-$5000), and Domaine Michel Niellon. Their Bâtard-Montrachet Grand Cru selections include Bernard Moreau (2014 at $925), Domaine Leflaive (2009-2022 with prices ranging from $1300-$2900), Domaine Marc Colin (2015 at $875), and Domaine Morey-Coffinet (2022).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Bâtard-Montrachet Chevalier-Montrachet Montrachet Grand Cru",
+   "confidence": "low",
+   "already_in_pack": false,
+   "vintage": "2009-2022 (range)"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine Marc Colin Bâtard-Montrachet Grand Cru",
+   "producer": "Domaine Marc Colin",
+   "region": "Bâtard-Montrachet Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$875",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Grand Cru Bâtard-Montrachet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The restaurant carries Montrachet Grand Cru from producers including Domaine Etienne Sauzet (2023 at $3900), Domaine Ponsot (2013 at $4225), and Domaine de la Romanée-Conti (multiple vintages ranging from 2011 to 2015 at prices from $5800-$8000). For Chevalier-Montrachet Grand Cru, they offer selections from Domaine Leflaive across multiple vintages (2012-2022, ranging from $1600-$5000), and Domaine Michel Niellon. Their Bâtard-Montrachet Grand Cru selections include Bernard Moreau (2014 at $925), Domaine Leflaive (2009-2022 with prices ranging from $1300-$2900), Domaine Marc Colin (2015 at $875), and Domaine Morey-Coffinet (2022).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Bâtard-Montrachet Chevalier-Montrachet Montrachet Grand Cru",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2015"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Grand Cru",
+   "name": "Domaine Morey-Coffinet Bâtard-Montrachet Grand Cru",
+   "producer": "Domaine Morey-Coffinet",
+   "region": "Bâtard-Montrachet Grand Cru, Cote de Beaune",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown",
+   "prices": [],
+   "description_facts": [
+    "Grand Cru Bâtard-Montrachet",
+    "Price not in the snippet",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "The restaurant carries Montrachet Grand Cru from producers including Domaine Etienne Sauzet (2023 at $3900), Domaine Ponsot (2013 at $4225), and Domaine de la Romanée-Conti (multiple vintages ranging from 2011 to 2015 at prices from $5800-$8000). For Chevalier-Montrachet Grand Cru, they offer selections from Domaine Leflaive across multiple vintages (2012-2022, ranging from $1600-$5000), and Domaine Michel Niellon. Their Bâtard-Montrachet Grand Cru selections include Bernard Moreau (2014 at $925), Domaine Leflaive (2009-2022 with prices ranging from $1300-$2900), Domaine Marc Colin (2015 at $875), and Domaine Morey-Coffinet (2022).",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Bâtard-Montrachet Chevalier-Montrachet Montrachet Grand Cru",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Maconnais",
+   "name": "Domaine Carrette \"Les Crays\" Pouilly-Fuissé (1.5L)",
+   "producer": "Domaine Carrette",
+   "region": "Pouilly-Fuissé, Mâconnais",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "magnum",
+   "prices": [
+    {
+     "printed": "$275",
+     "what": "magnum"
+    }
+   ],
+   "description_facts": [
+    "Pouilly-Fuissé, Les Crays",
+    "1.5L magnum",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's wine list includes Domaine Carrette \"Les Crays\" Pouilly-Fuissé (1.5L Magnum, 2022) for $275, and Domaine Leflaive Mâcon Verzé (2020 for $150 and 2021 for $160). The list also features several other Mâconnais selections, including Domaine du Roc des Boutires \"En Bertilionne\" Pouilly-Fuissé (2020) for $90, Eric Forest \"24 Carats\" Pouilly-Fuissé (2022) for $325, and Les Héritiers du Comte Lafon Mâcon Milly-Lamartine (2023) for $100.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Pouilly-Fuissé Mâcon Saint-Véran",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Maconnais",
+   "name": "Domaine Leflaive Mâcon-Verzé (bottle)",
+   "producer": "Domaine Leflaive",
+   "region": "Mâcon-Verzé, Mâconnais",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$150",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Same wine as the Coravin glass but older vintages, sold by the bottle",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's wine list includes Domaine Carrette \"Les Crays\" Pouilly-Fuissé (1.5L Magnum, 2022) for $275, and Domaine Leflaive Mâcon Verzé (2020 for $150 and 2021 for $160). The list also features several other Mâconnais selections, including Domaine du Roc des Boutires \"En Bertilionne\" Pouilly-Fuissé (2020) for $90, Eric Forest \"24 Carats\" Pouilly-Fuissé (2022) for $325, and Les Héritiers du Comte Lafon Mâcon Milly-Lamartine (2023) for $100.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Pouilly-Fuissé Mâcon Saint-Véran",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2020"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Maconnais",
+   "name": "Domaine Leflaive Mâcon-Verzé (bottle)",
+   "producer": "Domaine Leflaive",
+   "region": "Mâcon-Verzé, Mâconnais",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$160",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Same wine as the Coravin glass but older vintages, sold by the bottle",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's wine list includes Domaine Carrette \"Les Crays\" Pouilly-Fuissé (1.5L Magnum, 2022) for $275, and Domaine Leflaive Mâcon Verzé (2020 for $150 and 2021 for $160). The list also features several other Mâconnais selections, including Domaine du Roc des Boutires \"En Bertilionne\" Pouilly-Fuissé (2020) for $90, Eric Forest \"24 Carats\" Pouilly-Fuissé (2022) for $325, and Les Héritiers du Comte Lafon Mâcon Milly-Lamartine (2023) for $100.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Pouilly-Fuissé Mâcon Saint-Véran",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2021"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Maconnais",
+   "name": "Domaine du Roc des Boutires \"En Bertilionne\" Pouilly-Fuissé",
+   "producer": "Domaine du Roc des Boutires",
+   "region": "Pouilly-Fuissé, Mâconnais",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$90",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Pouilly-Fuissé, En Bertilionne",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's wine list includes Domaine Carrette \"Les Crays\" Pouilly-Fuissé (1.5L Magnum, 2022) for $275, and Domaine Leflaive Mâcon Verzé (2020 for $150 and 2021 for $160). The list also features several other Mâconnais selections, including Domaine du Roc des Boutires \"En Bertilionne\" Pouilly-Fuissé (2020) for $90, Eric Forest \"24 Carats\" Pouilly-Fuissé (2022) for $325, and Les Héritiers du Comte Lafon Mâcon Milly-Lamartine (2023) for $100.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Pouilly-Fuissé Mâcon Saint-Véran",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2020"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Maconnais",
+   "name": "Eric Forest \"24 Carats\" Pouilly-Fuissé",
+   "producer": "Eric Forest",
+   "region": "Pouilly-Fuissé, Mâconnais",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown (price high for a 750ml; format not stated)",
+   "prices": [
+    {
+     "printed": "$325",
+     "what": "unknown (price high for a 750ml; format not stated)"
+    }
+   ],
+   "description_facts": [
+    "Pouilly-Fuissé cuvée 24 Carats",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's wine list includes Domaine Carrette \"Les Crays\" Pouilly-Fuissé (1.5L Magnum, 2022) for $275, and Domaine Leflaive Mâcon Verzé (2020 for $150 and 2021 for $160). The list also features several other Mâconnais selections, including Domaine du Roc des Boutires \"En Bertilionne\" Pouilly-Fuissé (2020) for $90, Eric Forest \"24 Carats\" Pouilly-Fuissé (2022) for $325, and Les Héritiers du Comte Lafon Mâcon Milly-Lamartine (2023) for $100.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Pouilly-Fuissé Mâcon Saint-Véran",
+   "confidence": "low",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, Maconnais",
+   "name": "Les Héritiers du Comte Lafon Mâcon Milly-Lamartine",
+   "producer": "Les Héritiers du Comte Lafon",
+   "region": "Mâcon Milly-Lamartine, Mâconnais",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "bottle (assumed, not stated)",
+   "prices": [
+    {
+     "printed": "$100",
+     "what": "bottle (assumed, not stated)"
+    }
+   ],
+   "description_facts": [
+    "Mâconnais estate of the Lafon family",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's wine list includes Domaine Carrette \"Les Crays\" Pouilly-Fuissé (1.5L Magnum, 2022) for $275, and Domaine Leflaive Mâcon Verzé (2020 for $150 and 2021 for $160). The list also features several other Mâconnais selections, including Domaine du Roc des Boutires \"En Bertilionne\" Pouilly-Fuissé (2020) for $90, Eric Forest \"24 Carats\" Pouilly-Fuissé (2022) for $325, and Les Héritiers du Comte Lafon Mâcon Milly-Lamartine (2023) for $100.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Pouilly-Fuissé Mâcon Saint-Véran",
+   "confidence": "medium",
+   "already_in_pack": false,
+   "vintage": "2023"
+  },
+  {
+   "kind": "wine",
+   "menu": "Wine list (Binwise)",
+   "section": "White Burgundy, regional",
+   "name": "Thierry & Pascale Matrot Bourgogne Blanc",
+   "producer": "Thierry & Pascale Matrot",
+   "region": "Bourgogne Blanc, Burgundy",
+   "grapes": [
+    "Chardonnay"
+   ],
+   "format": "unknown (price suggests glass or half bottle; not stated)",
+   "prices": [
+    {
+     "printed": "$45",
+     "what": "unknown (price suggests glass or half bottle; not stated)"
+    }
+   ],
+   "description_facts": [
+    "Regional Bourgogne Blanc",
+    "Snippet is the search tool's summary of the indexed Binwise page, undated; the page's index date is unknown."
+   ],
+   "snippet": "Brennan's New Orleans wine list includes Thierry & Pascale Matrot Bourgogne Blanc from Burgundy 2022 for $45.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list Saint-Aubin Bourgogne Blanc Drouhin Jadot",
+   "confidence": "low",
+   "already_in_pack": false,
+   "vintage": "2022"
+  },
+  {
+   "kind": "fact",
+   "menu": "Wine programme",
+   "section": "Cellar",
+   "name": "Cellar size and focus",
+   "prices": [],
+   "description_facts": [
+    "Grand Award reclaimed in 2021 after the Katrina loss",
+    "About 3,000 selections",
+    "Focus: Burgundy, Bordeaux, Rhône"
+   ],
+   "snippet": "Brennan's lost its Grand Award-winning cellar to the aftermath of Hurricane Katrina, but rebuilt the program and reclaimed the award in 2021. Today the cellar boasts approximately 3,000 selections. ... The program's main focuses are Burgundy and other French wine regions, namely Bordeaux and the Rhône Valley",
+   "url": "https://www.winespectator.com/restaurant-awards/detail/9/name/brennan-s-restaurant",
+   "site": "winespectator.com",
+   "query": "Brennan's New Orleans wine list Meursault Puligny-Montrachet binwise",
+   "confidence": "medium",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Wine programme",
+   "section": "Cellar",
+   "name": "Bottle count and wine director (press release, undated)",
+   "prices": [],
+   "description_facts": [
+    "Over 14,000 bottles at the time of the release",
+    "Release names the wine director; date unknown, so the name may be stale and is not for the pack, which names nobody"
+   ],
+   "snippet": "Brennan's carefully curated wine list, developed by Sommelier and Wine Director Ms. Braithe Tidwell with counsel and support from the owners, now boasts over 14,000 bottles.",
+   "url": "https://www.brennansneworleans.com/press-releases/winning-wines/",
+   "site": "brennansneworleans.com",
+   "query": "Brennan's New Orleans wine list Meursault Puligny-Montrachet binwise",
+   "confidence": "low",
+   "already_in_pack": false
+  },
+  {
+   "kind": "fact",
+   "menu": "Wine list (Binwise)",
+   "section": "Half bottles",
+   "name": "A half-bottle section exists",
+   "prices": [],
+   "description_facts": [
+    "The list has a half-bottle section",
+    "No white Burgundy half bottle was named or priced in the snippet"
+   ],
+   "snippet": "Brennan's wine list on Binwise ... includes sections for Half-bottles ... there are references to 375ml half-bottle options available on their wine list.",
+   "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+   "site": "hub.binwise.com",
+   "query": "Brennan's New Orleans wine list half bottle 375ml white Burgundy Chardonnay",
+   "confidence": "low",
+   "already_in_pack": false
+  }
+ ],
+ "gaps": [
+  "Every record rests on the search tool's synthesised summary of the Binwise page, not raw page text; prices and vintages are copied as the summary printed them but should be confirmed against the live list on shift.",
+  "The Binwise page's index date is unknown; several vintages (2012 to 2017) and low prices suggest some entries may be stale or may be glass, half-bottle or older list lines.",
+  "Format (750ml bottle, glass, half bottle) is not stated for most entries; only magnums and the double magnum are explicit. The $40 Lavantureux Chablis, $48 Louis Michel Montmains and $45 Matrot Bourgogne Blanc are too cheap for typical Grand Award bottle pricing and may be by-the-glass or half-bottle lines; unresolved.",
+  "No Roulot, no Raveneau Valmur or Les Clos, and no Coche-Dury Meursault surfaced for Brennan's; a Coche-Dury Corton-Charlemagne did. Absence from snippets is not absence from the list.",
+  "No Drouhin white surfaced on the bottle list; the server guide notes the restaurant's own cocktails page once listed a Drouhin Chablis by the glass.",
+  "Saint-Aubin wines and other Louis Jadot whites are said to be on the list but no producer, vintage or price came through.",
+  "Chassagne-Montrachet: Bouard-Bonnefoy, Alex Moreau, Bruno Colin and Faiveley named without vintage or price.",
+  "Leflaive Chevalier- and Bâtard-Montrachet and DRC Montrachet appear only as vintage and price ranges; per-vintage prices unknown.",
+  "Puligny: Sauzet village 2023 and 2024 named without price; Pucelles, Combettes, Carillon not found.",
+  "Rejected: a Bonneau du Martray Corton-Charlemagne surfaced only on Brennan's of Houston's list (a different restaurant) and on unnamed lists; not recorded as Brennan's New Orleans.",
+  "Meursault: Roulot, Coche-Dury village and Perrières not found; Lafon Charmes 2011 is the only Lafon Meursault seen.",
+  "No white Burgundy half bottle was named or priced."
+ ]
+}
