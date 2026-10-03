@@ -115,6 +115,22 @@
 		if (panel === 'rename' && current) renameTo = current.name;
 	}
 
+	/** Her press: the shipped pack the boot held (her own dishes, no house) is loaded and opened. */
+	async function loadHeld() {
+		busy = true;
+		error = '';
+		try {
+			const ok = await house.loadHeldPack();
+			if (!ok) error = house.houseRefusal || 'The pack could not be loaded on this device.';
+			else {
+				refresh();
+				live = `${current?.name ?? 'The house'} is open.`;
+			}
+		} finally {
+			busy = false;
+		}
+	}
+
 	async function onSwitch(ev: Event) {
 		const id = (ev.currentTarget as HTMLSelectElement).value;
 		if (!api || !id || id === api.currentId()) return;
@@ -310,6 +326,8 @@
 
 <section class="housebar" aria-labelledby="house-line" data-print="hide">
 	<h2 id="house-line" class="houseline">{line}</h2>
+	{#if house.packLine}<p class="autoline" role="status">{house.packLine}</p>{/if}
+	{#if house.packHeld}<p><button class="chip go" onclick={loadHeld} disabled={busy}>Load the pack</button></p>{/if}
 	<p class="live" role="status" aria-live="polite">{live}</p>
 
 	<div class="chips" role="group" aria-label="The house">
@@ -391,6 +409,7 @@
 		padding: 12px 0 16px;
 		border-bottom: 1px solid var(--line);
 	}
+	.autoline { font-size: var(--t-small); color: var(--ink-soft); margin: 2px 0 6px; }
 	.houseline {
 		font-size: var(--t-body, 16px);
 		font-weight: 500;

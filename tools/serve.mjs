@@ -71,6 +71,21 @@ createServer(async (req, res) => {
 		return;
 	}
 
+	/*
+	 * The shipped house pack, withheld when the suite asks (SERVE_NO_PACKS=1,
+	 * set by playwright.config.ts). The Table loads its pack by itself at boot,
+	 * so without this every spec would open on a device that already holds
+	 * Brennan's, and the specs that assert a fresh device, an empty menu or a
+	 * seeded house would be asserting the pack instead. tests/house.spec.ts
+	 * serves the real file through page.route where a spec wants it. A 404,
+	 * not the shell fallback, because a missing pack is what a host without
+	 * one answers.
+	 */
+	if (process.env.SERVE_NO_PACKS === '1' && /\/shared\/packs\//.test(url)) {
+		res.writeHead(404, { 'cache-control': 'no-cache' }).end('not found');
+		return;
+	}
+
 	let file = null;
 	let served = base;
 	if (url.endsWith('/')) {

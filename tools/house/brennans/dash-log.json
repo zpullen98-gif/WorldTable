@@ -1815,8 +1815,9 @@
 		},
 		{
 			"path": "model.cocktails[2].serviceNote",
-			"before": "Spirit-forward and strong — classically served up, without ice (confirm the bar’s build). Upsells: Thompson’s Dream ($20, Willett 4-year rye, Bitter Truth Creole Bitters, St. George absinthe rinse) and Origin Story ($40, Dudognon Cognac, barrel-aged Peychaud’s, Jade Nouvelle-Orléans absinthe). Herbsaint is ERB-saint.",
-			"after": "Spirit-forward and strong, classically served up, without ice (confirm the bar’s build). Upsells: Thompson’s Dream ($20, Willett 4-year rye, Bitter Truth Creole Bitters, St. George absinthe rinse) and Origin Story ($40, Dudognon Cognac, barrel-aged Peychaud’s, Jade Nouvelle-Orléans absinthe). Herbsaint is ERB-saint."
+			"before": "Spirit-forward and strong — served without ice (confirm the glass and the bar’s build). Upsells: Thompson’s Dream ($20, Willett 4-year rye, Bitter Truth Creole Bitters, St. George absinthe rinse) and Origin Story ($40, Dudognon Cognac, barrel-aged Peychaud’s, Jade Nouvelle-Orléans absinthe). Herbsaint is ERB-saint.",
+			"after": "Spirit-forward and strong, served without ice (confirm the glass and the bar’s build). Upsells: Thompson’s Dream ($20, Willett 4-year rye, Bitter Truth Creole Bitters, St. George absinthe rinse) and Origin Story ($40, Dudognon Cognac, barrel-aged Peychaud’s, Jade Nouvelle-Orléans absinthe). Herbsaint is ERB-saint.",
+			"override": 399
 		},
 		{
 			"path": "model.cocktails[3].lines.s10",

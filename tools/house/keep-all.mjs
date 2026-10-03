@@ -1,6 +1,13 @@
 #!/usr/bin/env node
 /* keep-all.mjs: the built house with every mark flipped to by 'person', written as the pack.
 
+   THE EDITION RULE. The pack carries house.pack = { id, builtBy, builtAt, version: 1 }, and this
+   tool stamps every mark (kept or not before the run), every kept note, every record's ts on every
+   list, the build steps and lastWrite with exactly Date.parse(house.pack.builtAt). A mark or a
+   record on a device that still carries that one stamp is the edition's own; any other stamp was
+   a person's edit there. The default builtAt is engine.mjs EDITION_BUILT_AT, fixed, so a rebuild
+   is byte for byte the same; --stamp or --now set another for a fresh edition.
+
    The owner has asked for the Brennan's pack as reviewed, so with --owner-reviewed every mark the
    build wrote by 'maitre' (the card's history, every mark on every dish, wine, cocktail, term,
    scenario, mix-up and must-know) becomes by 'person' with a fresh stamp, which is what kept means
@@ -21,7 +28,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadEngine, GUIDE, HOUSE_JSON, PACK, REL, countProblems, describe, checkArgs } from './engine.mjs';
+import { loadEngine, GUIDE, HOUSE_JSON, PACK, REL, countProblems, describe, checkArgs, sourceText as pageText, EDITION_TS } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -41,7 +48,7 @@ const FILE = fileAt >= 0 ? args[fileAt + 1] : HOUSE_JSON;
 const stampAt = args.indexOf('--stamp');
 /* Fixed by default so a rebuild is byte for byte the pack that shipped (the mirror gate holds the
    site's copy to this one): --stamp sets another, --now takes the clock for a fresh edition. */
-const KEEP_TS = stampAt >= 0 ? Number(args[stampAt + 1]) : args.includes('--now') ? Date.now() : 1790845200000;
+const KEEP_TS = stampAt >= 0 ? Number(args[stampAt + 1]) : args.includes('--now') ? Date.now() : EDITION_TS;
 if (!Number.isFinite(KEEP_TS)) fail('--stamp must be a number of milliseconds');
 if (!FILE || !fs.existsSync(FILE)) fail(`${REL(FILE)}: missing; run build-brennans.mjs first`);
 if (!fs.existsSync(GUIDE)) fail(`${REL(GUIDE)}: missing`);
@@ -55,7 +62,7 @@ if (changed.length) fail(`${REL(FILE)}: the normaliser changed it: ` + changed.m
 if (!lib.sameJson(house, input)) fail(`${REL(FILE)}: the normaliser changed the record (a key outside the shape, a blank mark, a mark by nobody, or a stamp that was not a number); run validate-pack for the detail`);
 
 /* The validator over the unflipped house, while her marks are still hers. */
-const sourceText = fs.readFileSync(GUIDE, 'utf8');
+const sourceText = pageText(fail);
 const before = lib.validateHouse(house, { sourceText, fatal: C.FATAL_CODES });
 for (const p of before.problems) if (p.fatal) console.error(`keep-all: FATAL ${p.code} ${describe(house, p.path)}: ${p.said}`);
 if (before.fatalCount) fail(`${REL(FILE)}: ${before.fatalCount} fatal problem(s) before the flip; nothing written`);
@@ -66,9 +73,9 @@ let already = 0;
 function flip(owner, field) {
 	const m = owner[field];
 	if (!lib.isMark(m)) return;
-	if (m.by === 'person') { already++; return; }
+	if (m.by === 'person') already++;
+	else flipped++;
 	owner[field] = { value: m.value, by: 'person', ts: KEEP_TS };
-	flipped++;
 }
 for (const field of C.MARK_FIELDS.house) flip(house, field);
 for (const list of C.HOUSE_LISTS) {
@@ -76,6 +83,18 @@ for (const list of C.HOUSE_LISTS) {
 	if (!fields.length) continue;
 	for (const row of house[list]) for (const field of fields) flip(row, field);
 }
+/* Every record's ts and every kept note's ts carry the edition stamp too, and so do the build
+   steps and lastWrite: one stamp across the whole edition. */
+let records = 0;
+for (const list of C.HOUSE_LISTS) for (const row of house[list]) {
+	row.ts = KEEP_TS;
+	records++;
+	if (Array.isArray(row.kept)) for (const note of row.kept) note.ts = KEEP_TS;
+}
+for (const step of Object.keys(house.build)) house.build[step] = KEEP_TS;
+const builtAt = new Date(KEEP_TS).toISOString();
+house.pack = { id: house.pack && house.pack.id ? house.pack.id : 'brennans-new-orleans', builtBy: house.pack && house.pack.builtBy ? house.pack.builtBy : 'claude-code', builtAt, version: 1 };
+if (Date.parse(house.pack.builtAt) !== KEEP_TS) fail(`the pack's builtAt ${house.pack.builtAt} does not parse back to the stamp ${KEEP_TS}`);
 let left = 0;
 lib.forbiddenKeys(house, 'house', []);
 const walk = (v) => {
@@ -103,4 +122,4 @@ for (const c of counts) console.error('keep-all: count: ' + c);
 if (fatalCount || counts.length) fail(`${REL(PACK)}: ${fatalCount} fatal problem(s) and ${counts.length} count(s) off on the re-read`);
 const flags = {};
 for (const p of problems) flags[p.code] = (flags[p.code] || 0) + 1;
-console.log(`keep-all: ${REL(PACK)}: ${flipped} marks flipped to person (${already} already), ${fs.statSync(PACK).size} bytes on disk, read back and valid; advisory flags ${JSON.stringify(flags)}`);
+console.log(`keep-all: ${REL(PACK)}: ${flipped} marks flipped to person (${already} already), every mark and ${records} records stamped ${KEEP_TS} (builtAt ${builtAt}), ${fs.statSync(PACK).size} bytes on disk, read back and valid; advisory flags ${JSON.stringify(flags)}`);

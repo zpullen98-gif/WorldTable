@@ -2,9 +2,16 @@
 /* check-pack.mjs: the gate that holds the written Brennan's pack.
 
    Reads packs/brennans-new-orleans.v1.oothouse.json with the engine's readPack (the same door a
-   wing imports through), refuses a fatal problem, asserts the counts (54 dishes and cocktails:
-   47 dishes, 5 signature drinks, 2 spirit-free; 20 wines; 2 tastings; 13 sources; 60 or more terms;
-   28 or more scenarios; 4 or more mix-ups; the must-knows; a lineup register; the five disputes),
+   wing imports through), refuses a fatal problem, asserts the counts engine.mjs countProblems
+   names (the dishes with the children's menu and the Bubbles snacks, every drink the house pours
+   with the coffees and the juice among the zero-proof ones, 20 wines, the tastings, the sources,
+   the terms, the scenarios, the mix-ups, the must-knows, the lineup register, the disputes),
+   holds the edition rule (every mark, every kept note and every record carries exactly
+   Date.parse(house.pack.builtAt)), holds every drink to its parts, lines and two or three upsells
+   that are other house drinks, a spirit-free drink's upsells to spirit-free drinks, every wine to
+   its timed lines, and every children's plate to no pairing at all, holds every drill stem to one
+   record (engine.mjs stemProblems) and every upsell to a drink poured where the guest sits
+   (upsellRoomProblems),
    asserts that no string anywhere in the file carries a dash of any spelling, that every id wears
    its list's prefix (h- d- w- b- t- x- s- m- k- a- u-) and is unique, that every mark is by 'person'
    (the pack is the reviewed one), that the pack's format and version are the engine's, and that the
@@ -20,7 +27,7 @@
    Runs from any directory. Exits 1 with the file and the rule on failure, one line on success. */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs } from './engine.mjs';
+import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -96,16 +103,56 @@ for (const list of C.HOUSE_LISTS) for (const row of house[list]) for (const fiel
 if (unkept > 5) F(`${unkept} marks are not by person in all`);
 for (const d of house.dishes) {
 	if (!d.parts || !d.lines) F(`dish ${d.name} lacks parts or lines`);
-	if (d.section !== 'Sides' && !d.pairing) F(`dish ${d.name} lacks a pairing`);
+	const child = CHILD_SECTIONS.includes(d.section);
+	if (d.section !== 'Sides' && !child && d.section !== SNACK_SECTION && !d.pairing) F(`dish ${d.name} lacks a pairing`);
+	if (child && (d.pairing || d.pairs)) F(`dish ${d.name} is a child's plate and carries a pairing; none is ever invented for one`);
 	if (!d.say || !d.guest) F(`dish ${d.name} lacks say or guest`);
+	if (d.section !== 'Sides' && !d.why) F(`dish ${d.name} lacks a why line`);
 }
-for (const w of house.wines) if (!w.profile || !w.goesWith || !w.serve || !w.parts || !w.producer || !w.grapes.length) F(`wine ${w.name} lacks a profile, goesWith, serve, parts, producer or grapes`);
-for (const c of house.cocktails) if (!c.spec.length || !c.parts) F(`cocktail ${c.name} lacks a spec or parts`);
+for (const w of house.wines) {
+	if (!w.profile || !w.goesWith || !w.serve || !w.parts || !w.producer || !w.grapes.length) F(`wine ${w.name} lacks a profile, goesWith, serve, parts, producer or grapes`);
+	if (!w.lines || !w.lines.value.s10 || !w.lines.value.s20 || !w.lines.value.s45) F(`wine ${w.name} lacks the three timed lines`);
+}
+const drinkIds = new Map(house.cocktails.map((c) => [c.id, c]));
+for (const c of house.cocktails) {
+	if (!c.spec.length || !c.parts) F(`cocktail ${c.name} lacks a spec or parts`);
+	if (!c.lines || !c.say || !c.guest || !c.why) F(`cocktail ${c.name} lacks the timed lines, say, guest or why`);
+	const ups = c.upsells ? c.upsells.value : [];
+	if (ups.length < 2 || ups.length > 3) F(`cocktail ${c.name} carries ${ups.length} upsells; every drink carries two or three`);
+	for (const id of ups) {
+		const to = drinkIds.get(id);
+		if (!to || id === c.id) F(`cocktail ${c.name}: the upsell ${id} is not another house drink`);
+		else if (c.zeroProof && !to.zeroProof) F(`cocktail ${c.name} is spirit-free and upsells ${to.name}, which is not`);
+	}
+}
+/* Every zero-proof pick a pairing names in its words resolves to a drink when the house pours one by that name. */
+const coffees = house.dishes.filter((d) => d.pairing && d.pairing.value.zeroProofId && /coffee/i.test((drinkIds.get(d.pairing.value.zeroProofId) || {}).family || '')).length;
+if (coffees !== 9) F(`${coffees} pairings take a coffee as their zero-proof pick, expected the guide's 9`);
+
+/* The edition rule: one stamp, Date.parse(house.pack.builtAt), on every mark, kept note and record. */
+const EDITION = house.pack ? Date.parse(house.pack.builtAt) : NaN;
+if (!Number.isFinite(EDITION)) F('house.pack.builtAt is not a date');
+let offStamp = 0;
+const stampOk = (ts, where) => { if (ts !== EDITION) { offStamp++; if (offStamp <= 5) F(`${where} carries ${ts}, not the edition stamp ${EDITION}`); } };
+for (const field of C.MARK_FIELDS.house) if (lib.isMark(house[field])) stampOk(house[field].ts, 'house.' + field);
+for (const list of C.HOUSE_LISTS) house[list].forEach((row, i) => {
+	stampOk(row.ts, `${list}[${i}].ts`);
+	for (const field of C.MARK_FIELDS[list]) if (lib.isMark(row[field])) stampOk(row[field].ts, `${list}[${i}].${field}`);
+	if (Array.isArray(row.kept)) row.kept.forEach((k, j) => stampOk(k.ts, `${list}[${i}].kept[${j}]`));
+});
+for (const step of Object.keys(house.build || {})) stampOk(house.build[step], 'house.build.' + step);
+stampOk(house.lastWrite, 'house.lastWrite');
+if (offStamp > 5) F(`${offStamp} stamps differ from the edition stamp in all`);
 for (const t of house.tastings) for (const c of t.courses) if (!c.dishIds.length && !c.pourId) F(`tasting ${t.name} course ${c.n} names no dish and no pour`);
+
+/* No two records share a drill stem, no filler part or unconfirmed glass is drilled, and every
+   upsell is poured where the guest who is offered it sits. */
+for (const s of stemProblems(house)) F('stem: ' + s);
+for (const r of upsellRoomProblems(house)) F('upsell-room: ' + r);
 
 /* The counts, the validator with the guide as the page, and the round trip. */
 for (const c of countProblems(house)) F('count: ' + c);
-const { problems, fatalCount } = lib.validateHouse(house, { sourceText: fs.readFileSync(GUIDE, 'utf8'), fatal: C.FATAL_CODES });
+const { problems, fatalCount } = lib.validateHouse(house, { sourceText: pageText(fail), fatal: C.FATAL_CODES });
 for (const p of problems) if (p.fatal) F(`FATAL ${p.code} ${describe(house, p.path)}: ${p.said}`);
 const flags = {};
 for (const p of problems) if (!p.fatal) flags[p.code] = (flags[p.code] || 0) + 1;
@@ -121,4 +168,4 @@ if (failures.length) {
 	fail(`${failures.length} failure(s)`);
 }
 const zero = house.cocktails.filter((c) => c.zeroProof).length;
-console.log(`check-pack: ${REL(FILE)}: ${Buffer.byteLength(text)} bytes; ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free), ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.sources.length} sources, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes; ${marks} marks all by person; 0 dashes; 0 British spellings; ids ${seen.size} unique with their prefixes; 0 fatal; advisory ${JSON.stringify(flags)}; round trip holds`);
+console.log(`check-pack: ${REL(FILE)}: ${Buffer.byteLength(text)} bytes; edition ${house.pack.builtAt}, every stamp ${EDITION}; ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free, ${coffees} pairings on a coffee), ${house.wines.length} wines (${house.wines.filter((w) => w.lines).length} with timed lines), ${house.tastings.length} tastings, ${house.sources.length} sources, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes; ${marks} marks all by person; 0 dashes; 0 British spellings; ids ${seen.size} unique with their prefixes; 0 fatal; advisory ${JSON.stringify(flags)}; round trip holds`);

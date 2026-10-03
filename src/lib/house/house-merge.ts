@@ -230,7 +230,7 @@ function laterDate(mine: string, theirs: string): string {
  * (a printed card has none, and two printed cards are two sources). On a
  * collision the later readOn stands, tie mine.
  */
-function mergeSources(mine: readonly HouseSource[], theirs: readonly HouseSource[]): HouseSource[] {
+export function mergeSources(mine: readonly HouseSource[], theirs: readonly HouseSource[]): HouseSource[] {
 	const keyOf = (s: HouseSource) => (s.url ? 'u|' + s.url : 't|' + s.title);
 	const out = new Map<string, HouseSource>();
 	for (const s of mine) if (!out.has(keyOf(s))) out.set(keyOf(s), s);

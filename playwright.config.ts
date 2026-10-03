@@ -44,6 +44,13 @@ export default defineConfig({
 		 * behaves like the real static host the build ships to.
 		 */
 		command: 'node tools/serve.mjs 4173',
+		/**
+		 * The Table fetches its shipped house pack at boot. The suite withholds
+		 * it (tools/serve.mjs answers 404 under /shared/packs/) so a spec opens
+		 * on the device it seeds and nothing else; tests/house.spec.ts serves
+		 * the real pack through page.route where the auto-load is the subject.
+		 */
+		env: { SERVE_NO_PACKS: '1' },
 		url: 'http://localhost:4173',
 		/**
 		 * Never reuse. vite preview (sirv) builds its file manifest at STARTUP:

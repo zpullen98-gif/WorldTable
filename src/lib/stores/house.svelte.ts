@@ -32,6 +32,7 @@
  * reason mergeSessions() does: a runes module is unreachable from a test.
  */
 import { browser } from '$app/environment';
+import { base } from '$app/paths';
 import { get, set, createStore } from 'idb-keyval';
 import { loadSession } from '../persistence/db';
 import * as profiles from '../profiles';
@@ -76,6 +77,7 @@ import { idbStorage } from '../house/house-store';
 import { HOUSE_INDEX_KEY, type House as HouseDoc, type HouseDish } from '../house/house-schema';
 import { withHouse } from '../persistence/state';
 import { putDish, rekeyDish, removeDishFromHouse, switchHouse, wakeHouse } from './house-wake';
+import { heldLine, packId, packLine } from '../house-autoload';
 
 export type { HouseRecord, EightySix, Prep };
 
@@ -103,6 +105,17 @@ function apiFor(): HouseApi | undefined {
 
 /** How long another tab's index write waits before this one re-syncs; a burst of saves is one wake. */
 const RESYNC_MS = 300;
+
+/**
+ * THE SHIPPED PACK, loaded at boot. The one constant per wing that names the
+ * pack this personal site carries, same origin, beside the shared scripts.
+ * Set it to '' and nothing is fetched: that is how it is turned off for other
+ * users. At boot, after the record is read and the House wake has run, the
+ * store fetches it (online only, never blocking the boot, every failure
+ * quiet), hands the text to ensurePack, and brings the menu into step through
+ * its own sync. The same edition on a second boot writes nothing.
+ */
+export const DEFAULT_PACK = `${base}/shared/packs/brennans-new-orleans.v1.oothouse.json`;
 
 class House {
 	#r = $state<HouseRecord>(structuredClone(EMPTY_HOUSE));
@@ -157,6 +170,17 @@ class House {
 	#watching = false;
 	/** The re-keys the House asked for on this page (from, to), so a write queued by the old id finds the dish. */
 	#rekeyed = new Map<string, string>();
+	/** The one quiet line the shipped pack's auto-load leaves on the house bar, once per page lifetime; empty when nothing changed. */
+	#packLine = $state('');
+	/**
+	 * The shipped pack's text, held and NOT written, when the boot found her
+	 * own dishes on the menu and no house: Brennan's would become current by
+	 * itself and the wake would file her rows under it, a write with no act of
+	 * hers. The house bar offers it instead, and loadHeldPack() is the press.
+	 */
+	#heldPack = $state('');
+	/** Settles when the boot's auto-load is done, whatever it came to; for the page and the tests, never awaited by the boot. */
+	#autoLoaded: Promise<void> = Promise.resolve();
 
 	get ready() {
 		return this.#ready;
@@ -218,6 +242,18 @@ class House {
 	/** Dishes added by the last pack import on this page, or 0: the page says once that a pack never carries allergens. */
 	get packAdded(): number {
 		return this.#packAdded;
+	}
+	/** What the boot's auto-load of the shipped pack did, in one line, or empty. */
+	get packLine(): string {
+		return this.#packLine;
+	}
+	/** True while the shipped pack is held for her press: see #heldPack. */
+	get packHeld(): boolean {
+		return !!this.#heldPack;
+	}
+	/** Settles once the boot's auto-load has finished or given up. */
+	get autoLoaded(): Promise<void> {
+		return this.#autoLoaded;
 	}
 
 	/**
@@ -329,6 +365,97 @@ class House {
 		   re-runs it, debounced. */
 		this.#listenForHouse();
 		await this.#syncWithHouse();
+		/* The shipped pack, after the wake and never awaited: the boot is done
+		   whatever the network does. */
+		this.#autoLoaded = this.#autoLoad();
+	}
+
+	/**
+	 * The shipped pack through ensurePack: fetched with cache 'no-cache' so a
+	 * republished edition is seen, skipped offline, every failure quiet. An
+	 * added house that became current, or a refreshed edition, reaches the
+	 * menu through the store's own sync, queued behind the ensurePack write.
+	 * Never throws, never blocks.
+	 */
+	async #autoLoad(): Promise<void> {
+		try {
+			if (!DEFAULT_PACK || typeof fetch !== 'function') return;
+			if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
+			const api = apiFor();
+			if (!api || this.#blocked) return;
+			const res = await fetch(DEFAULT_PACK, { cache: 'no-cache' });
+			if (!res.ok) return;
+			const text = await res.text();
+			if (this.#blocked) return;
+			/* Her own dishes and no house: they are an implicit house, and no
+			   write happens without her act. The engine makes an added pack
+			   current when no house is (packBecomesCurrent), and the next wake
+			   would adopt her rows into it, so the pack is held, not added, and
+			   the house bar asks. A device already holding the pack, or one with
+			   a house, or an empty menu, goes on as below. */
+			await api.ready();
+			if (!api.current() && this.#r.dishes.length > 0 && !api.list().some((h) => h.id === packId(text))) {
+				this.#heldPack = text;
+				this.#packLine = heldLine(text);
+				return;
+			}
+			let result: Awaited<ReturnType<HouseApi['ensurePack']>> | null = null;
+			await this.#enqueueHouse(async () => {
+				if (this.#blocked) return;
+				result = await api.ensurePack(text);
+			});
+			const done = result as Awaited<ReturnType<HouseApi['ensurePack']>> | null;
+			if (!done || this.#blocked) return;
+			if ((done.action === 'added' && done.current) || done.action === 'refreshed') {
+				/* Twice, deliberately. The first pass projects the house's items
+				   into rows; only the second meets them as twins and settles them
+				   (mergeKept sorts the kept notes by stamp then question, and the
+				   pack keeps the guide's order), so without it that one settling
+				   write lands on the NEXT boot, and a second boot of the same
+				   edition must write nothing. In step already, the second pass
+				   changes nothing and writes nothing. */
+				await this.#syncWithHouse();
+				await this.#syncWithHouse();
+			}
+			const line = packLine(done, text);
+			if (line) this.#packLine = line;
+			if (done.action === 'added' && done.current) this.notePackImport(api.current()?.dishes.length ?? 0);
+		} catch {
+			/* offline, a missing file, a refused read: the boot goes on as it was */
+		}
+	}
+
+	/**
+	 * Her press on the house bar's Load button: the held pack added and made
+	 * current through ensurePack, then the menu brought into step through the
+	 * store's own sync, exactly as Import a pack does with a pack that becomes
+	 * current. False when nothing was held or the device refused.
+	 */
+	async loadHeldPack(): Promise<boolean> {
+		const api = apiFor();
+		const text = this.#heldPack;
+		if (!api || !text || this.#blocked || !this.#ready) return false;
+		let done: Awaited<ReturnType<HouseApi['ensurePack']>> | null = null;
+		await this.#enqueueHouse(async () => {
+			if (this.#blocked) return;
+			done = await api.ensurePack(text, { makeCurrent: true });
+		});
+		const res = done as Awaited<ReturnType<HouseApi['ensurePack']>> | null;
+		if (!res || res.action === 'refused') {
+			if (res) this.#houseRefusal = res.said;
+			return false;
+		}
+		this.#heldPack = '';
+		if (res.action === 'added' && !res.current) {
+			const ok = await this.switchHouse(res.id);
+			if (!ok) return false;
+		} else {
+			await this.#syncWithHouse();
+			await this.#syncWithHouse();
+		}
+		this.#packLine = packLine(res.action === 'added' ? { ...res, current: true } : res, text);
+		this.notePackImport(api.current()?.dishes.length ?? 0);
+		return true;
 	}
 
 	/* ---- the House ------------------------------------------------------- */

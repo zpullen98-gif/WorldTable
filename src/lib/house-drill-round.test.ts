@@ -54,11 +54,12 @@ describe('the fixture', () => {
 
 describe('modeFromSearch', () => {
 	it('reads ?mode= and falls back to the dishes', () => {
-		expect(QUIZ_MODES).toEqual(['dish', 'drill', 'cards', 'pair', 'say']);
+		expect(QUIZ_MODES).toEqual(['dish', 'drill', 'cards', 'pair', 'say', 'guest']);
 		expect(modeFromSearch('?mode=drill')).toBe('drill');
 		expect(modeFromSearch('?mode=cards')).toBe('cards');
 		expect(modeFromSearch('?mode=pair')).toBe('pair');
 		expect(modeFromSearch('?mode=say')).toBe('say');
+		expect(modeFromSearch('?mode=guest')).toBe('guest');
 		expect(modeFromSearch('?mode=level')).toBe('dish');
 		expect(modeFromSearch('')).toBe('dish');
 		for (const m of QUIZ_MODES) expect(MODE_LABELS[m]).not.toMatch(DASH);

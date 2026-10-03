@@ -42,6 +42,29 @@
 		type QuizMode
 	} from '$lib/house-drill-round';
 	import { drilledCount, drilledKey, markDrilled } from '$lib/house-drilled';
+	import {
+		LENGTH_CHIPS,
+		SAY_KINDS,
+		SAY_KIND_CHIPS,
+		SAY_LENGTHS,
+		SERVICE_EYEBROW,
+		SPEECH_SENTENCE,
+		VERDICT_WORDS,
+		gradeGuest,
+		gradeSaid,
+		guestDeck,
+		guestKey,
+		lengthFor,
+		pickNext,
+		sayCounts,
+		sayKey,
+		saySections,
+		serviceNoteOf,
+		type GuestCard
+	} from '$lib/house-say';
+	import type { SaidGrade, SayLength, ScenarioGrade } from '$lib/house/house-drills';
+	import { LINE_CAPS, type ItemKind } from '$lib/house/house-schema';
+	import { wordCount } from '$lib/house/house-lines';
 
 	/* Drills over The Kitchen's Menu: the dishes entered on /menu. The quiz
 	 * engine is the lexicon page's, ported: ten a round, distractors from the
@@ -65,7 +88,13 @@
 	 * over every kind readyKinds allows, narrowed by the kinds row; 'cards' is
 	 * buildFlashcards as flip cards; 'pair' is the pairing drill over
 	 * firstPickFor and zeroProofFor. All three read KEPT marks only, by the
-	 * generators' own gate. 'say' needs the Maitre d' and opens nothing here.
+	 * generators' own gate. 'say' is Say it back and 'guest' is Guest at the
+	 * table, both offline with no key: what is typed (or spoken, where the
+	 * browser has a speech service) is graded on the device by gradeSaid and
+	 * gradeScenario against the KEPT line or answer ($lib/house-say), and
+	 * nothing is recorded until Record it is pressed. Allergens stay with the
+	 * kitchen: a service note shows only as the person's own words under the
+	 * fixed eyebrow.
 	 *
 	 * WHAT A HOUSE DRILL WRITES: markDrilled() into its own localStorage slot
 	 * (lib/house-drilled.ts, never exported, capped) and markStudied() once per
@@ -291,12 +320,181 @@
 		resetRound();
 		cDone = false;
 		cards = [];
+		recogniser?.stop();
+		sayReset();
+		gCard = null;
+		guestReset();
+	}
+
+	/* ---- Say it back, offline -------------------------------------------- */
+
+	let sayKinds = $state<ItemKind[]>(['dish']);
+	const sections = $derived(current ? saySections(current, sayKinds) : []);
+	const sayList = $derived(sections.flatMap((s) => s.items));
+	const sayHave = $derived(current ? sayCounts(current) : { dish: 0, cocktail: 0, wine: 0 });
+	let sayId = $state('');
+	const sayItem = $derived(sayList.find((i) => i.id === sayId) ?? null);
+	let sayLen = $state<SayLength>('s20');
+	const lenNow = $derived(lengthFor(sayItem, sayLen));
+	const capNow = $derived(LINE_CAPS[lenNow]);
+	let sayText = $state('');
+	const sayWords = $derived(wordCount(sayText));
+	let sayGrade = $state<SaidGrade | null>(null);
+	let sayRecorded = $state(false);
+	const sayNote = $derived(current && sayGrade ? serviceNoteOf(current, sayGrade.itemId) : '');
+
+	/* The item in hand stays while it is on the list; otherwise the first. */
+	$effect(() => {
+		if (sayList.length && !sayList.some((i) => i.id === sayId)) sayId = sayList[0].id;
+	});
+
+	function sayReset() {
+		sayText = '';
+		sayGrade = null;
+		sayRecorded = false;
+	}
+
+	function toggleSayKind(k: ItemKind) {
+		const now = sayKinds.includes(k) ? sayKinds.filter((x) => x !== k) : SAY_KINDS.filter((x) => x === k || sayKinds.includes(x));
+		// Never nothing: unticking the last kind puts the dishes back.
+		sayKinds = now.length ? now : ['dish'];
+		sayReset();
+	}
+
+	function sayPick(id: string) {
+		sayId = id;
+		sayReset();
+	}
+
+	function sayNext() {
+		const next = pickNext(sayList, sayId, Math.random);
+		if (next) sayPick(next.id);
+	}
+
+	function sayCheck() {
+		if (!current || !sayItem) return;
+		sayGrade = gradeSaid(current, sayItem.id, lenNow, sayText);
+		sayRecorded = false;
+	}
+
+	function sayRecord() {
+		if (!current || !sayGrade || sayRecorded) return;
+		markDrilled(sayKey(current.id, sayGrade.itemId, sayGrade.length), sayGrade.verdict);
+		// One completed attempt is a day studied; nothing about a level moves.
+		markStudied();
+		sayRecorded = true;
+		refreshKept();
+	}
+
+	/* ---- Guest at the table, offline ------------------------------------- */
+
+	const guestCards = $derived(current ? guestDeck(current) : []);
+	const guestScenarios = $derived(guestCards.filter((c) => c.kind === 'scenario').length);
+	let gCard = $state<GuestCard | null>(null);
+	let gText = $state('');
+	const gWords = $derived(wordCount(gText));
+	let gGrade = $state<ScenarioGrade | null>(null);
+	let gRecorded = $state(false);
+
+	function guestReset() {
+		gText = '';
+		gGrade = null;
+		gRecorded = false;
+	}
+
+	function guestDeal() {
+		const next = pickNext(guestCards, gCard?.id ?? '', Math.random);
+		gCard = next;
+		guestReset();
+	}
+
+	function guestCheck() {
+		if (!current || !gCard) return;
+		gGrade = gradeGuest(current, gCard, gText);
+		gRecorded = false;
+	}
+
+	function guestRecord() {
+		if (!current || !gCard || !gGrade || gRecorded) return;
+		markDrilled(guestKey(current.id, gCard.id), gGrade.verdict);
+		markStudied();
+		gRecorded = true;
+		refreshKept();
+	}
+
+	/* ---- the browser's speech service, only where it exists --------------- */
+
+	type Recogniser = {
+		lang: string;
+		interimResults: boolean;
+		continuous: boolean;
+		onresult: ((ev: { results: ArrayLike<ArrayLike<{ transcript: string }>> }) => void) | null;
+		onend: (() => void) | null;
+		onerror: ((ev: { error?: string }) => void) | null;
+		start(): void;
+		stop(): void;
+	};
+	let speechOk = $state(false);
+	let listening = $state<'' | 'say' | 'guest'>('');
+	let speechSaid = $state('');
+	let recogniser: Recogniser | null = null;
+
+	function speechCtor(): (new () => Recogniser) | null {
+		if (typeof window === 'undefined') return null;
+		const w = window as unknown as { SpeechRecognition?: new () => Recogniser; webkitSpeechRecognition?: new () => Recogniser };
+		return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null;
+	}
+
+	function speak(target: 'say' | 'guest') {
+		if (listening) {
+			recogniser?.stop();
+			return;
+		}
+		const Ctor = speechCtor();
+		if (!Ctor) return;
+		speechSaid = '';
+		try {
+			const rec = new Ctor();
+			rec.lang = (typeof navigator !== 'undefined' && navigator.language) || 'en-GB';
+			rec.interimResults = false;
+			rec.continuous = false;
+			rec.onresult = (ev) => {
+				let heard = '';
+				for (let i = 0; i < ev.results.length; i++) heard += (heard ? ' ' : '') + (ev.results[i][0]?.transcript ?? '');
+				heard = heard.trim();
+				if (!heard) return;
+				if (target === 'say') {
+					sayText = sayText.trim() ? sayText.trim() + ' ' + heard : heard;
+					sayGrade = null;
+					sayRecorded = false;
+				} else {
+					gText = gText.trim() ? gText.trim() + ' ' + heard : heard;
+					gGrade = null;
+					gRecorded = false;
+				}
+			};
+			rec.onerror = (ev) => {
+				speechSaid = 'The speech service did not hear that' + (ev && ev.error ? ` (${ev.error})` : '') + '. Type it instead.';
+			};
+			rec.onend = () => {
+				listening = '';
+				recogniser = null;
+			};
+			recogniser = rec;
+			listening = target;
+			rec.start();
+		} catch {
+			listening = '';
+			recogniser = null;
+			speechSaid = 'The speech service would not start. Type it instead.';
+		}
 	}
 
 	/* Seeded from the query in afterNavigate, never in load: a prerendered
 	   page may not read the query at load time. Only the mode is read; the
 	   round itself waits for a chip. */
 	afterNavigate(() => {
+		speechOk = !!speechCtor();
 		setMode(modeFromSearch(page.url.search));
 	});
 </script>
@@ -321,12 +519,7 @@
 			{/each}
 		</nav>
 
-		{#if mode === 'say'}
-			<p class="empty" role="status">
-				Say it back needs the Maître d’ and is not on this page yet. Nothing opens here; the
-				other modes work offline.
-			</p>
-		{:else if mode !== 'dish'}
+		{#if mode !== 'dish'}
 			{#if !current}
 				<p class="empty">
 					No house on this device yet. The house drills read what a house has kept: start one or
@@ -378,6 +571,171 @@
 						</button>
 					</div>
 					{#if rSaid}<p class="count" role="status">{rSaid}</p>{/if}
+				{/if}
+			{:else if mode === 'say'}
+				<p class="count">
+					{current.name} · Say it back, on this device with no key · {keptHere} {keptHere === 1 ? 'answer' : 'answers'} kept on this device
+				</p>
+				<p class="kitchen">Allergens are the kitchen’s: confirm them at lineup, never from a drill.</p>
+				<div class="kinds" role="group" aria-label="What to say back">
+					{#each SAY_KINDS as k (k)}
+						<button class="chip kind" class:on={sayKinds.includes(k)} aria-pressed={sayKinds.includes(k)} disabled={!sayHave[k]} onclick={() => toggleSayKind(k)}>
+							{SAY_KIND_CHIPS[k]}, {sayHave[k]}{!sayHave[k] ? ', none kept' : sayKinds.includes(k) ? ', chosen' : ', off'}
+						</button>
+					{/each}
+				</div>
+				{#if !sayList.length}
+					<p class="empty">Nothing here has a kept timed line yet. Keep a ten, twenty or forty five second line on My Menu and it can be said back here.</p>
+				{:else}
+					<div class="say flash">
+						<div class="pickrow">
+							<label class="fieldlabel" for="say-item">The item</label>
+							<select id="say-item" class="chip pick" value={sayId} onchange={(e) => sayPick((e.currentTarget as HTMLSelectElement).value)}>
+								{#each sections as sec (sec.section + sec.items[0].id)}
+									<optgroup label={sec.section}>
+										{#each sec.items as it (it.id)}<option value={it.id}>{it.name}</option>{/each}
+									</optgroup>
+								{/each}
+							</select>
+							<button class="chip" onclick={sayNext}>Next, at random ↦</button>
+						</div>
+						<div class="tools" role="group" aria-label="How long">
+							{#each SAY_LENGTHS as l (l)}
+								{@const has = !!sayItem && sayItem.lengths.includes(l)}
+								<button class="chip len" class:on={lenNow === l} aria-pressed={lenNow === l} disabled={!has} onclick={() => { sayLen = l; sayGrade = null; sayRecorded = false; }}>
+									{LENGTH_CHIPS[l]}{!has ? ', not kept' : lenNow === l ? ', chosen' : ', off'}
+								</button>
+							{/each}
+						</div>
+						<p class="eyebrow">{sayItem?.name ?? ''} · the {LENGTH_CHIPS[lenNow]} line, {capNow} words at most</p>
+						<label class="fieldlabel" for="say-text">What you would say at the table</label>
+						<textarea id="say-text" class="said" rows="5" bind:value={sayText} oninput={() => { sayGrade = null; sayRecorded = false; }}></textarea>
+						<p class="wc" class:over={sayWords > capNow} aria-live="polite">
+							{sayWords} of {capNow} words{sayWords > capNow ? `, ${sayWords - capNow} over the cap` : ', within the cap'}
+						</p>
+						{#if speechOk}
+							<div class="speakrow">
+								<button class="chip" aria-pressed={listening === 'say'} onclick={() => speak('say')}>{listening === 'say' ? 'Listening: press to stop' : 'Speak'}</button>
+								<span class="small">{SPEECH_SENTENCE}</span>
+							</div>
+						{/if}
+						{#if speechSaid}<p class="small" role="status">{speechSaid}</p>{/if}
+						<div class="flashtools">
+							<button class="chip go" disabled={!sayText.trim()} onclick={sayCheck}>Check</button>
+						</div>
+					</div>
+
+					{#if sayGrade}
+						<div class="flash graded say-grade" role="status">
+							<p class="eyebrow">{sayGrade.name} · {LENGTH_CHIPS[sayGrade.length]}</p>
+							<p class="term verdict" data-verdict={sayGrade.verdict}>{VERDICT_WORDS[sayGrade.verdict]}</p>
+							<p class="def small">{sayGrade.words} of {sayGrade.cap} words · {sayGrade.nameSaid ? 'the name said' : 'the name not said'}</p>
+							<ul class="parts">
+								{#each sayGrade.parts as p (p.key)}
+									<li data-hit={p.inLine ? (p.hit ? 'hit' : 'missed') : 'not in this line'}>
+										<b>{p.inLine ? (p.hit ? 'Hit' : 'Missed') : 'Not in this line'}</b>: {p.label}
+									</li>
+								{/each}
+							</ul>
+							{#if sayGrade.notes.length}
+								<ul class="notes">
+									{#each sayGrade.notes as n (n)}<li>{n}</li>{/each}
+								</ul>
+							{/if}
+							<div class="beside">
+								<div>
+									<p class="eyebrow">Your kept line</p>
+									<p class="def kept">{sayGrade.keptLine}</p>
+								</div>
+								<div>
+									<p class="eyebrow">What you said</p>
+									<p class="def yours">{sayText}</p>
+								</div>
+							</div>
+							{#if sayNote}
+								<p class="eyebrow">{SERVICE_EYEBROW}</p>
+								<p class="def small note">{sayNote}</p>
+							{/if}
+							<div class="flashtools">
+								<button class="chip go" disabled={sayRecorded} onclick={sayRecord}>{sayRecorded ? 'Recorded' : 'Record it'}</button>
+								<button class="chip" onclick={sayReset}>Try again</button>
+								<button class="chip" onclick={sayNext}>Next, at random ↦</button>
+							</div>
+						</div>
+					{/if}
+				{/if}
+			{:else if mode === 'guest'}
+				<p class="count">
+					{current.name} · Guest at the table, on this device with no key · {guestScenarios} {guestScenarios === 1 ? 'guest' : 'guests'} and {guestCards.length - guestScenarios} which is which · {keptHere} {keptHere === 1 ? 'answer' : 'answers'} kept on this device
+				</p>
+				<p class="kitchen">Allergens are the kitchen’s: when a guest asks, confirm with the kitchen at lineup, never from a drill.</p>
+				{#if !guestCards.length}
+					<p class="empty">No kept guest answers yet. Keep an answer on a scenario, or a difference on a mix-up, on My Menu and the guest can sit down here.</p>
+				{:else if !gCard}
+					<div class="tools">
+						<button class="chip go" onclick={guestDeal}>Seat a guest ▸</button>
+					</div>
+				{:else}
+					<div class="flash guest">
+						<p class="eyebrow">{gCard.kind === 'mixUp' ? 'Which is which' : 'A guest'} · {gCard.title}</p>
+						<p class="term">The guest says</p>
+						<blockquote class="def guestsays">{gCard.guest}</blockquote>
+						<label class="fieldlabel" for="guest-text">What you would say back</label>
+						<textarea id="guest-text" class="said" rows="5" bind:value={gText} oninput={() => { gGrade = null; gRecorded = false; }}></textarea>
+						<p class="wc" aria-live="polite">{gWords} {gWords === 1 ? 'word' : 'words'}</p>
+						{#if speechOk}
+							<div class="speakrow">
+								<button class="chip" aria-pressed={listening === 'guest'} onclick={() => speak('guest')}>{listening === 'guest' ? 'Listening: press to stop' : 'Speak'}</button>
+								<span class="small">{SPEECH_SENTENCE}</span>
+							</div>
+						{/if}
+						{#if speechSaid}<p class="small" role="status">{speechSaid}</p>{/if}
+						<div class="flashtools">
+							<button class="chip go" disabled={!gText.trim()} onclick={guestCheck}>Check</button>
+							<button class="chip" onclick={guestDeal}>Another guest ↦</button>
+						</div>
+					</div>
+
+					{#if gGrade}
+						<div class="flash graded guest-grade" role="status">
+							<p class="eyebrow">{gGrade.title}</p>
+							<p class="term verdict" data-verdict={gGrade.verdict}>{VERDICT_WORDS[gGrade.verdict]}</p>
+							<ul class="parts">
+								{#each gGrade.clauses as c (c.key)}
+									<li data-hit={c.hit ? 'hit' : 'missed'}><b>{c.hit ? 'Hit' : 'Missed'}</b>: {c.label}</li>
+								{/each}
+							</ul>
+							{#if gGrade.items.length}
+								<p class="def small">
+									{#each gGrade.items as it, i (it.id)}{i ? ' · ' : ''}{it.name}, {it.named ? 'named' : 'not named'}{/each}
+								</p>
+							{/if}
+							{#if gGrade.notes.length}
+								<ul class="notes">
+									{#each gGrade.notes as n (n)}<li>{n}</li>{/each}
+								</ul>
+							{/if}
+							<div class="beside">
+								<div>
+									<p class="eyebrow">Your kept answer</p>
+									<p class="def kept">{gGrade.keptYou}</p>
+								</div>
+								<div>
+									<p class="eyebrow">What you said</p>
+									<p class="def yours">{gText}</p>
+								</div>
+							</div>
+							{#if gGrade.principle}
+								<p class="eyebrow">The principle</p>
+								<p class="def principle">{gGrade.principle}</p>
+							{/if}
+							<div class="flashtools">
+								<button class="chip go" disabled={gRecorded} onclick={guestRecord}>{gRecorded ? 'Recorded' : 'Record it'}</button>
+								<button class="chip" onclick={guestReset}>Try again</button>
+								<button class="chip" onclick={guestDeal}>Another guest ↦</button>
+							</div>
+						</div>
+					{/if}
 				{/if}
 			{:else if mode === 'cards'}
 				<p class="count">
@@ -657,4 +1015,27 @@
 	.opt.wrong { border-color: var(--chili); }
 	.opt:disabled { opacity: 0.55; cursor: default; }
 	.flashtools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+
+	/* Say it back and Guest at the table. Every state is a word on the page:
+	   the verdict, each part's Hit or Missed, the word count against the cap. */
+	.kitchen { font-size: var(--t-small); color: var(--ink-soft); max-width: var(--measure); margin: 4px 0 10px; }
+	.pickrow, .speakrow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+	.fieldlabel { display: block; font-size: var(--t-small); color: var(--muted); margin: 8px 0 4px; width: 100%; }
+	.pick { flex: 1 1 220px; max-width: 100%; }
+	.said {
+		width: 100%; min-height: 110px; padding: 10px 12px; border: 1px solid var(--line);
+		border-radius: var(--radius); background: var(--paper, transparent); color: inherit;
+		font: inherit; line-height: 1.5; box-sizing: border-box;
+	}
+	.wc { font-size: var(--t-small); color: var(--muted); margin: 4px 0 8px; }
+	.wc.over { font-weight: 600; }
+	.small { font-size: var(--t-small); color: var(--muted); }
+	.verdict { margin-bottom: 4px; }
+	.parts, .notes { margin: 8px 0; padding-left: 18px; max-width: var(--measure); }
+	.parts li, .notes li { margin-bottom: 4px; }
+	.parts li[data-hit='missed'] b { text-decoration: underline; }
+	.notes { color: var(--ink-soft); font-size: var(--t-small); }
+	.beside { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 10px 0; }
+	.beside .def { white-space: pre-wrap; overflow-wrap: anywhere; }
+	.guestsays { font-family: var(--display); font-size: 18px; font-style: italic; margin: 6px 0 10px; padding-left: 12px; border-left: 2px solid var(--line); }
 </style>

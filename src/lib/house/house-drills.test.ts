@@ -24,7 +24,15 @@ import {
 	termToGuest,
 	wineGoesWith,
 	wineGrapes,
-	zeroProofFor
+	zeroProofFor,
+	gradeSaid,
+	gradeScenario,
+	sayable,
+	roleable,
+	numberWords,
+	CAP_NAMES,
+	GRADE_MET,
+	GRADE_CLOSE
 } from './house-drills';
 import type { DrillKind, DrillQuestion, Flashcard, Rand } from './house-drills';
 import { HOUSE_LISTS, ID_PREFIXES, KEYS } from './house-schema';
@@ -516,5 +524,244 @@ describe('the flashcards', () => {
 			expect(list).toBeDefined();
 			expect(c.itemId.startsWith(ID_PREFIXES[list])).toBe(true);
 		}
+	});
+});
+
+/* -------------------------------------------------------------------------
+ * Say it back and Guest at the table, graded offline
+ * ---------------------------------------------------------------------- */
+
+const DRILL_FIXTURE = JSON.parse(readFileSync(here('./fixtures/house-drill.json'), 'utf8')) as House;
+const E_GRAVE = String.fromCharCode(0xe8);
+const I_CIRC = String.fromCharCode(0xee);
+const CURLY = String.fromCharCode(0x2019);
+
+describe('gradeSaid', () => {
+	it('meets a good answer: every part named, within the cap, the name said', () => {
+		const said = 'The Lantern Roast Chicken is half a corn fed chicken roasted over the embers, with a rosemary gravy, leeks and crushed potatoes; smoky skin and a lift of lemon.';
+		const g = gradeSaid(fixture, 'd-chicken1', 's20', said);
+		expect(g).not.toBeNull();
+		if (!g) return;
+		expect(g.verdict).toBe('met');
+		expect(g.coverage).toBe(1);
+		expect(g.cap).toBe(50);
+		expect(g.over).toBe(0);
+		expect(g.nameSaid).toBe(true);
+		expect(g.kind).toBe('dish');
+		expect(g.name).toBe('Lantern Roast Chicken');
+		expect(g.keptLine).toBe(fixture.dishes[0].lines?.value.s20);
+		expect(g.parts.map((p) => p.key)).toEqual(['main', 'technique', 'sauce', 'sides', 'taste']);
+		expect(g.parts.map((p) => p.label)).toEqual(Object.values(DISH_PARTS_LABELS));
+		expect(g.parts.every((p) => p.hit && p.matched.length > 0)).toBe(true);
+		expect(g.notes).toEqual(['Every part is there, within the cap.']);
+	});
+
+	it('the kept line said back word for word meets, every length, every sayable item', () => {
+		for (const house of [fixture, DRILL_FIXTURE]) {
+			for (const item of sayable(house)) {
+				const all = [...house.dishes, ...house.wines, ...house.cocktails];
+				const lines = all.find((i) => i.id === item.id)?.lines?.value as Lines;
+				for (const len of item.lengths) {
+					const g = gradeSaid(house, item.id, len, lines[len]);
+					expect(g?.verdict, item.id + ' ' + len).toBe('met');
+					expect(g?.coverage, item.id + ' ' + len).toBe(1);
+				}
+			}
+		}
+	});
+
+	it('demands only the parts the kept line of that length carries, and shows the rest', () => {
+		const h = clone(fixture);
+		(h.dishes[0].lines as Mark<Lines>).value.s10 = 'Half a corn fed chicken over the embers.';
+		const g = gradeSaid(h, 'd-chicken1', 's10', 'Half a corn fed chicken over the embers.');
+		expect(g?.verdict).toBe('met');
+		expect(g?.parts.filter((p) => p.inLine).map((p) => p.key)).toEqual(['main', 'technique']);
+		expect(g?.parts.find((p) => p.key === 'sauce')?.hit).toBe(false);
+		expect(g?.notes).toEqual(['Say the name: Lantern Roast Chicken.', 'Every part is there, within the cap.']);
+	});
+
+	it('calls a thin answer close and a thinner one missed, and says what to name', () => {
+		const close = gradeSaid(fixture, 'd-chicken1', 's20', 'Chicken with potatoes and gravy.');
+		expect(close?.verdict).toBe('close');
+		expect(close?.coverage).toBe(0.6);
+		expect(close?.nameSaid).toBe(false);
+		expect(close?.notes).toEqual([
+			'Name the technique: Roasted over embers, rested, carved at the pass',
+			'Say how it tastes: Smoky skin, sweet leek, a sharp lift from the lemon',
+			'Say the name: Lantern Roast Chicken.',
+			'There is room for more: the cap is fifty words and you used five.'
+		]);
+		const missed = gradeSaid(fixture, 'd-chicken1', 's20', 'It is a nice plate of food.');
+		expect(missed?.verdict).toBe('missed');
+		expect(missed?.coverage).toBe(0);
+		expect(missed?.notes[0]).toBe('Name the main ingredient: Half a corn fed chicken');
+		expect(missed?.notes).toContain('Name the sauce and key flavours: Rosemary gravy from the roasting juices');
+		expect(missed?.notes).toContain('Name the accompaniments: Leeks and crushed potatoes');
+	});
+
+	it('says how far over the cap, in words, and an over cap answer is never met', () => {
+		const long = fixture.dishes[0].lines?.value.s20 || '';
+		const g = gradeSaid(fixture, 'd-chicken1', 's10', long);
+		expect(g).not.toBeNull();
+		if (!g) return;
+		expect(g.cap).toBe(25);
+		expect(g.over).toBe(g.words - 25);
+		expect(g.over).toBeGreaterThan(0);
+		expect(g.verdict).toBe('close');
+		const cap = numberWords(g.over);
+		expect(g.notes).toContain(cap.charAt(0).toUpperCase() + cap.slice(1) + ' words over the ten second cap.');
+		const one = gradeSaid(fixture, 'd-chicken1', 's10', 'Lantern Roast Chicken: half a corn fed chicken roasted over embers, rosemary gravy, leeks and crushed potatoes, smoky skin and a sharp lemon lift, carved, really.');
+		expect(one?.words).toBe(26);
+		expect(one?.notes).toContain('One word over the ten second cap.');
+	});
+
+	it('never grades her unkept line, a missing item, a blank length or an item with no lines', () => {
+		expect(gradeSaid(DRILL_FIXTURE, 'd-unkept01', 's20', 'Smoked eel on toast with horseradish cream.')).toBeNull();
+		const hersOnly = clone(fixture);
+		(hersOnly.dishes[0].lines as Mark<Lines>).by = 'maitre';
+		expect(gradeSaid(hersOnly, 'd-chicken1', 's20', 'Half a corn fed chicken.')).toBeNull();
+		expect(gradeSaid(fixture, 'd-nowhere1', 's20', 'Anything.')).toBeNull();
+		expect(gradeSaid(fixture, 'd-beetrt01', 's20', 'Beetroot.')).toBeNull();
+		const blank = clone(fixture);
+		(blank.dishes[0].lines as Mark<Lines>).value.s45 = '';
+		expect(gradeSaid(blank, 'd-chicken1', 's45', 'Half a corn fed chicken.')).toBeNull();
+		expect(gradeSaid(fixture, 'd-chicken1', 's99' as 's10', 'Half a corn fed chicken.')).toBeNull();
+	});
+
+	it('reads only kept parts: with hers unkept, the kept line\'s clauses stand in', () => {
+		const h = clone(fixture);
+		(h.dishes[0].parts as Mark<FormulaParts>).by = 'maitre';
+		const g = gradeSaid(h, 'd-chicken1', 's10', fixture.dishes[0].lines?.value.s10 || '');
+		expect(g?.parts.every((p) => /^c[0-9]+$/.test(p.key))).toBe(true);
+		expect(g?.verdict).toBe('met');
+		const thin = gradeSaid(h, 'd-chicken1', 's10', 'A chicken.');
+		expect(thin?.verdict).not.toBe('met');
+		expect(thin?.notes.some((n) => n.startsWith('You left out: '))).toBe(true);
+		expect(JSON.stringify(thin)).not.toContain('Rosemary gravy from the roasting juices');
+	});
+
+	it('folds case and accents and strips a light suffix, so glazed meets glaze and creme fraiche meets the printed spelling', () => {
+		const h = clone(fixture);
+		const parts = (h.dishes[0].parts as Mark<FormulaParts>).value;
+		parts.sauce = 'Brown sugar glaze';
+		parts.sides = 'Sweetened cr' + E_GRAVE + 'me fra' + I_CIRC + 'che';
+		parts.main = 'Brennan' + CURLY + 's chicken';
+		const g = gradeSaid(h, 'd-chicken1', 's20', 'CHICKEN, GLAZED with sugar, creme fraiche, roasting over embers, smoky.');
+		const by = Object.fromEntries((g?.parts || []).map((p) => [p.key, p]));
+		expect(by.sauce.hit).toBe(true);
+		expect(by.sauce.matched).toContain('glaz');
+		expect(by.sides.hit).toBe(true);
+		expect(by.sides.terms).toContain('fraich');
+		expect(by.main.terms).toEqual(['brennan', 'chicken']);
+		expect(g?.verdict).toBe('met');
+	});
+
+	it('grades a wine and a cocktail by their own labels, and leaves a part with no terms out of the share', () => {
+		const wine = gradeSaid(fixture, 'w-lantern1', 's10', 'Bacchus from the chalk, cool fermented in steel, green apple, the roast chicken, crisp.');
+		expect(wine?.kind).toBe('wine');
+		expect(wine?.verdict).toBe('met');
+		const thin = gradeSaid(fixture, 'b-collins1', 's10', 'Gin and soda.');
+		expect(thin?.kind).toBe('cocktail');
+		expect(thin?.notes).toContain('Name the glass and garnish: A highball with a rosemary sprig');
+		expect(thin?.notes.some((n) => n.startsWith('Name the the'))).toBe(false);
+		const h = clone(DRILL_FIXTURE);
+		const lamb = gradeSaid(h, 'd-lambsh01', 's20', 'Lamb with an anchovy jus and white beans.');
+		const graded = (lamb?.parts || []).filter((p) => p.terms.length && p.inLine);
+		expect(graded.map((p) => p.key)).toEqual(['sauce', 'sides']);
+		expect(lamb?.coverage).toBe(1);
+	});
+
+	it('an empty answer is missed and says so; a note never speaks of allergens and carries no dash', () => {
+		const g = gradeSaid(fixture, 'd-chicken1', 's20', '   ');
+		expect(g?.verdict).toBe('missed');
+		expect(g?.words).toBe(0);
+		expect(g?.notes).toEqual(['Nothing was said yet. Say the line aloud, or type it, then grade it.']);
+		for (const said of ['', 'Chicken.', 'Half a corn fed chicken roasted over embers.', fixture.dishes[0].lines?.value.s45 || '']) {
+			for (const len of ['s10', 's20', 's45'] as const) {
+				const out = gradeSaid(fixture, 'd-chicken1', len, said);
+				for (const n of out?.notes || []) {
+					expect(n).not.toMatch(/allerg|contain|gluten|dairy|nut/i);
+					expect(n).not.toMatch(DASH);
+				}
+			}
+		}
+	});
+
+	it('is pure: the same words give the same grade', () => {
+		const said = 'Half a chicken with leeks.';
+		expect(gradeSaid(fixture, 'd-chicken1', 's20', said)).toEqual(gradeSaid(clone(fixture), 'd-chicken1', 's20', said));
+	});
+});
+
+const DISH_PARTS_LABELS = { main: 'main ingredient', technique: 'technique', sauce: 'sauce and key flavours', sides: 'accompaniments', taste: 'how it tastes' };
+
+describe('gradeScenario', () => {
+	const kept = fixture.scenarios[0].you?.value || '';
+
+	it('meets the kept answer, names the items it names, and returns the card', () => {
+		const g = gradeScenario(fixture, 's-hurry001', kept);
+		expect(g).not.toBeNull();
+		if (!g) return;
+		expect(g.verdict).toBe('met');
+		expect(g.coverage).toBe(1);
+		expect(g.title).toBe('A table in a hurry');
+		expect(g.guest).toBe(fixture.scenarios[0].guest);
+		expect(g.keptYou).toBe(kept);
+		expect(g.principle).toBe(fixture.scenarios[0].principle?.value);
+		expect(g.matched).toEqual(g.terms);
+		expect(g.items.map((i) => i.id)).toEqual(['d-beetrt01', 'd-chicken1']);
+		expect(g.items.find((i) => i.id === 'd-beetrt01')?.named).toBe(true);
+		expect(g.itemsNamed).toContain('Beetroot and Apple Salad');
+		expect(g.notes).toEqual(['That answers the guest the way you kept it.']);
+	});
+
+	it('a paraphrase that keeps the substance meets; a thin one is missed with the clauses and the principle', () => {
+		const para = gradeScenario(fixture, 's-hurry001', 'The beetroot salad comes plated cold, and the chicken is twenty minutes off the embers. Order both now and I will let the pass know.');
+		expect(para?.verdict).toBe('met');
+		const thin = gradeScenario(fixture, 's-hurry001', 'Let me check with the kitchen.');
+		expect(thin?.verdict).toBe('missed');
+		expect(thin?.notes).toContain('You left out: The beetroot salad is plated cold and the chicken comes off the embers in twenty minutes');
+		expect(thin?.notes).toContain('Name the Beetroot and Apple Salad.');
+		expect(thin?.notes[thin.notes.length - 1]).toBe('The principle: ' + fixture.scenarios[0].principle?.value);
+		const half = gradeScenario(fixture, 's-hurry001', 'Order both now and I will tell the pass.');
+		expect(half?.verdict).toBe('close');
+		expect(half?.coverage).toBe(0.5);
+	});
+
+	it('returns null with no kept answer or no such scenario, and an empty answer is missed', () => {
+		const h = clone(fixture);
+		(h.scenarios[0].you as Mark).by = 'maitre';
+		expect(gradeScenario(h, 's-hurry001', kept)).toBeNull();
+		delete h.scenarios[0].you;
+		expect(gradeScenario(h, 's-hurry001', kept)).toBeNull();
+		expect(gradeScenario(fixture, 's-nowhere1', kept)).toBeNull();
+		const empty = gradeScenario(fixture, 's-hurry001', '');
+		expect(empty?.verdict).toBe('missed');
+		expect(empty?.notes).toEqual(['Nothing was said yet. Answer the guest aloud, or type it, then grade it.']);
+	});
+});
+
+describe('sayable and roleable', () => {
+	it('list the items with a kept lines mark, by kind, and the scenarios with a kept answer', () => {
+		expect(sayable(fixture).map((i) => i.id)).toEqual(['d-chicken1', 'w-lantern1', 'b-collins1']);
+		expect(sayable(fixture, 'wine')).toEqual([{ id: 'w-lantern1', kind: 'wine', name: fixture.wines[0].name, section: fixture.wines[0].section, lengths: ['s10', 's20', 's45'] }]);
+		expect(sayable(DRILL_FIXTURE, 'dish').map((i) => i.id)).not.toContain('d-unkept01');
+		expect(sayable(DRILL_FIXTURE, 'dish').map((i) => i.id)).toEqual(['d-chicken1', 'd-lambsh01', 'd-seabas01', 'd-mushrm01', 'd-lemont01']);
+		expect(roleable(fixture)).toEqual([{ id: 's-hurry001', title: 'A table in a hurry', guest: fixture.scenarios[0].guest }]);
+		const h = clone(fixture);
+		(h.scenarios[0].you as Mark).by = 'maitre';
+		expect(roleable(h)).toEqual([]);
+		for (const item of sayable(fixture)) for (const len of item.lengths) expect(gradeSaid(fixture, item.id, len, 'x')).not.toBeNull();
+	});
+});
+
+describe('the words a grade says', () => {
+	it('spell numbers the British way with no hyphen, and name each cap', () => {
+		expect([0, 1, 12, 20, 45, 99, 100, 104, 110, 1000, 2025].map(numberWords)).toEqual([
+			'zero', 'one', 'twelve', 'twenty', 'forty five', 'ninety nine', 'one hundred', 'one hundred and four', 'one hundred and ten', 'one thousand', 'two thousand and twenty five'
+		]);
+		expect(CAP_NAMES).toEqual({ s10: 'ten second', s20: 'twenty second', s45: 'forty five second' });
+		expect(GRADE_MET).toBe(0.8);
+		expect(GRADE_CLOSE).toBe(0.5);
 	});
 });

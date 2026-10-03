@@ -52,6 +52,14 @@
  * still carries one is dropped without a tombstone rather than written as
  * a key that would make the record unsendable and the pack unimportable.
  *
+ * THE SHIPPED PACK AT BOOT. ensurePack is the one door every wing calls
+ * with the text of the pack it ships: a house the device lacks is added
+ * (current when the device has none, or its current house is an empty hand
+ * house, or the caller asks); a newer edition refreshes the copy on the
+ * device by the edition rule in house-pack.ts, so whatever a person kept,
+ * edited or removed stands; the same or an older edition writes nothing.
+ * A refresh never moves the current pointer.
+ *
  * ON THE DEVICE means deviceIds (house-store.ts), the index's houses and
  * any record the index does not list, wherever this file walks the device.
  */
@@ -75,8 +83,8 @@ import { codexWine, ledgerCocktail, syncIn, syncOut, tableDish } from './house-s
 import type { SyncAdapter, SyncChange, SyncRow } from './house-sync';
 import { currentId, deviceIds, listHouses, loadHouse, mintHouse, removeHouse, renameHouse, saveHouse, switchTo } from './house-store';
 import type { HouseStorage, SaveResult } from './house-store';
-import { buildPack, importPack, packFilename, readPack } from './house-pack';
-import type { ImportChoice, ImportResult, PackFile, PackFrom, ReadPack } from './house-pack';
+import { buildPack, countItems, editionBuiltAt, importPack, packFilename, readPack, refreshEdition } from './house-pack';
+import type { ImportChoice, ImportResult, PackFile, PackFrom, ReadPack, RefreshCounts } from './house-pack';
 
 /* -------------------------------------------------------------------------
  * The shapes
@@ -146,6 +154,22 @@ export interface ItemFields {
 	pours: string[];
 }
 
+/** What ensurePack may be asked: make the pack's house current when it is added, whatever the device holds. */
+export interface EnsureOpts {
+	makeCurrent?: boolean;
+}
+
+/**
+ * What ensurePack comes back with: the house added (and whether it is now
+ * current), refreshed by a newer edition (with the counts), already the
+ * shipped edition or newer (nothing written), or refused with the sentence.
+ */
+export type EnsureResult =
+	| { action: 'added'; id: string; current: boolean }
+	| { action: 'refreshed'; id: string; counts: RefreshCounts }
+	| { action: 'current'; id: string }
+	| { action: 'refused'; said: string };
+
 /** The lists putListItem writes: every list whose records have no wing row of their own. */
 export const PUT_LISTS = ['tastings', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes'] as const satisfies readonly HouseList[];
 export type PutList = (typeof PUT_LISTS)[number];
@@ -183,6 +207,13 @@ export interface HouseApi {
 	names(kind: ItemKind): Promise<string[]>;
 	readPack(text: unknown): ReadPack;
 	importPack(pack: unknown, choice: ImportChoice): Promise<ImportResult>;
+	/**
+	 * The one door a wing calls at boot with the shipped pack's text: the
+	 * house added when the device lacks it, refreshed by the edition rule
+	 * when the shipped edition is newer, else left alone. Never switches the
+	 * current house on a refresh.
+	 */
+	ensurePack(text: unknown, opts?: EnsureOpts): Promise<EnsureResult>;
 	/** The current house as a pack, with its file name and text; null with no house. */
 	buildPack(from?: PackFrom): { pack: PackFile; filename: string; text: string } | null;
 	/** A listener for every save, a switch, and another tab's write; returns the function that removes it. */
@@ -639,6 +670,64 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 				fire('import');
 			}
 			return result;
+		},
+
+		ensurePack: async (text, ensureOpts = {}) => {
+			await ready();
+			const read = readPack(text, { rand });
+			if (!read.ok) return { action: 'refused', said: read.said };
+			const shipped = read.house;
+			const id = shipped.id;
+			const onDevice = new Set<string>(await deviceIds(storage));
+
+			if (!onDevice.has(id)) {
+				/* The current house before the add: none, or a hand house with
+				   nothing in it, gives way to the pack, as does a caller's ask. */
+				const before = currentId(storage);
+				const was = before ? (house && house.id === before ? house : await loadHouse(storage, before)) : null;
+				const giveWay = !before || !was || (was.began === 'hand' && countItems(was) === 0) || !!ensureOpts.makeCurrent;
+				const result = await importPack(storage, text, { mode: 'new' }, now(), rand);
+				if (!result.ok) return { action: 'refused', said: result.said };
+				let current = result.current;
+				if (!current && giveWay) {
+					try {
+						switchTo(storage, result.added);
+						current = true;
+					} catch {
+						current = false;
+					}
+				}
+				await reload();
+				fire('import');
+				return { action: 'added', id: result.added, current };
+			}
+
+			const stored = house && house.id === id ? house : await loadHouse(storage, id);
+			if (!stored) return { action: 'refused', said: 'The house this pack refreshes could not be read from this device.' };
+			if (!(editionBuiltAt(shipped) > editionBuiltAt(stored))) return { action: 'current', id };
+
+			let counts: RefreshCounts = { added: 0, updated: 0, kept: 0 };
+			if (house && house.id === id) {
+				/* The current house: through the one write door, so a tab's own
+				   writes in flight land beside the refresh, never under it. */
+				const { saved, out } = await commit((base) => {
+					if (!(editionBuiltAt(shipped) > editionBuiltAt(base))) return { next: base, out: null };
+					const res = refreshEdition(base, shipped);
+					return { next: res.house, out: res.counts };
+				}, 'import');
+				if (saved && !saved.ok) return { action: 'refused', said: saved.said };
+				if (!out) return { action: 'current', id };
+				counts = out;
+			} else {
+				/* Another house on the device: saved on its own record, the current
+				   house and the pointer left exactly as they were. */
+				const res = refreshEdition(stored, shipped);
+				const saved = await saveHouse(storage, res.house, now());
+				if (!saved.ok) return { action: 'refused', said: saved.said };
+				counts = res.counts;
+				fire('import');
+			}
+			return { action: 'refreshed', id, counts };
 		},
 
 		buildPack: (from) => {

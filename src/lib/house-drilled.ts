@@ -33,8 +33,11 @@
 export const HOUSE_DRILLED_KEY = 'oot-house-drilled-v1';
 export const HOUSE_DRILLED_CAP = 2000;
 
-/** What a person said of their own answer: right, or not. */
-export type DrillVerdict = 'met' | 'missed';
+/**
+ * What an answer came to: right or not for a pick or a card, and for Say it
+ * back and Guest at the table the grader's middle word as well, close.
+ */
+export type DrillVerdict = 'met' | 'close' | 'missed';
 
 export interface DrilledEntry {
 	/** `house:<houseId>:<itemId>:<kind>` */
@@ -78,7 +81,7 @@ function isEntry(v: unknown): v is DrilledEntry {
 	return (
 		typeof e.k === 'string' &&
 		e.k.startsWith('house:') &&
-		(e.v === 'met' || e.v === 'missed') &&
+		(e.v === 'met' || e.v === 'close' || e.v === 'missed') &&
 		typeof e.at === 'number' &&
 		Number.isFinite(e.at)
 	);
@@ -113,7 +116,7 @@ export function markDrilled(
 	if (typeof key !== 'string' || !/^house:[^:]+:[^:]+:[^:]+$/.test(key)) {
 		return { ok: false, reason: 'not a house drill key', count: readDrilled(storage).length };
 	}
-	if (verdict !== 'met' && verdict !== 'missed') {
+	if (verdict !== 'met' && verdict !== 'close' && verdict !== 'missed') {
 		return { ok: false, reason: 'not a verdict', count: readDrilled(storage).length };
 	}
 	const list = readDrilled(storage);

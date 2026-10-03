@@ -46,9 +46,10 @@ const HOUSE = path.join(ROOT, 'src', 'lib', 'house');
 
 /**
  * The ten, in dependency order: each may use only what sits above it.
- * house-drills imports the schema alone and could sit anywhere above the
- * api; it sits beside the pack so the api, which imports nothing of the
- * drills, closes the list.
+ * house-drills imports the schema and the lines (wordCount, for the
+ * graders' word caps) and could sit anywhere below them and above the api;
+ * it sits beside the pack so the api, which imports nothing of the drills,
+ * closes the list.
  */
 export const MODULES = [
 	'house-schema',
@@ -118,11 +119,22 @@ export const LIB = {
 	mergeSaid: 'mergeSaid',
 	countItems: 'countItems',
 	restampHouse: 'restampHouse',
+	/* a newer edition of a shipped pack, by the edition rule (api.ensurePack is the door) */
+	refreshEdition: 'refreshEdition',
+	editionStamp: 'editionStamp',
+	editionItemStamp: 'editionItemStamp',
+	editionBuiltAt: 'editionBuiltAt',
 	/* the drills */
 	dealQuestion: 'dealQuestion',
 	drillableCounts: 'drillableCounts',
 	readyKinds: 'readyKinds',
 	buildFlashcards: 'buildFlashcards',
+	/* Say it back and Guest at the table, graded offline: also under drills */
+	gradeSaid: 'gradeSaid',
+	gradeScenario: 'gradeScenario',
+	sayable: 'sayable',
+	roleable: 'roleable',
+	numberWords: 'numberWords',
 	/* the schema's helpers */
 	mintId: 'mintId',
 	emptyHouse: 'emptyHouse',
@@ -145,7 +157,9 @@ export const ADAPTERS = { dish: 'tableDish', wine: 'codexWine', cocktail: 'ledge
 
 /** The twelve generators under OOT.houseLib.drills, beside the four functions in LIB and the drill constants. */
 export const DRILLS = ['lineToDish', 'sauceOf', 'sidesOf', 'firstPickFor', 'zeroProofFor', 'termToGuest', 'sayIt', 'mixUp', 'wineGrapes', 'wineGoesWith', 'cocktailGlass', 'cocktailSpec'];
-export const DRILL_CONSTANTS = ['DRILL_KINDS', 'DRILL_LABELS', 'DRILL_FLOORS', 'DRILL_FLOOR', 'OPTION_COUNT', 'LINE_LABELS', 'FLASHCARD_KINDS'];
+/** The offline graders and their listings, under OOT.houseLib.drills and at the top level of OOT.houseLib (through LIB). */
+export const GRADERS = ['gradeSaid', 'gradeScenario', 'sayable', 'roleable', 'numberWords'];
+export const DRILL_CONSTANTS = ['DRILL_KINDS', 'DRILL_LABELS', 'DRILL_FLOORS', 'DRILL_FLOOR', 'OPTION_COUNT', 'LINE_LABELS', 'FLASHCARD_KINDS', 'GRADE_MET', 'GRADE_CLOSE', 'CAP_NAMES'];
 
 /** The constants under OOT.houseLib.constants: the schema's, the caps, the key regex and the validator's lists. */
 export const CONSTANTS = [
@@ -190,7 +204,10 @@ export function header(date) {
 		'   boot is ready for the house. window.OOT.houseLib carries every pure',
 		'   function and constant the modules export, so a wing and a Node check can',
 		'   call the normaliser, the validator, the merge, the sync, the pack reader',
-		'   and the drills on their own.',
+		'   and the drills on their own, the offline graders among them (gradeSaid',
+		'   and gradeScenario, no model and no network). A wing hands the pack it',
+		'   ships to OOT.house.ensurePack at boot: added when the device lacks it,',
+		'   refreshed by a newer edition with every touch of a person kept.',
 		'',
 		'   THE RULES TRAVEL WITH THE CODE. No allergen field exists on any shape and',
 		'   the normaliser drops any key the client would refuse, at every depth. A',
@@ -225,7 +242,7 @@ export function header(date) {
 export function door() {
 	const libLines = Object.entries(LIB).map(([key, name]) => `\t${key}: ${name},`);
 	const adapterLines = Object.entries(ADAPTERS).map(([key, name]) => `\t\t${key}: ${name},`);
-	const drillLines = [...DRILLS, ...DRILL_CONSTANTS].map((name) => `\t\t${name}: ${name},`);
+	const drillLines = [...DRILLS, ...GRADERS, ...DRILL_CONSTANTS].map((name) => `\t\t${name}: ${name},`);
 	const constantLines = CONSTANTS.map((name) => `\t\t${name}: ${name},`);
 	const trimComma = (/** @type {string[]} */ lines) => lines.map((l, i) => (i === lines.length - 1 ? l.replace(/,$/, '') : l));
 	return [
@@ -289,7 +306,7 @@ export function door() {
  */
 export function generate(now = new Date()) {
 	const date = now.toISOString().slice(0, 10);
-	const expects = [...new Set([...Object.values(LIB), ...Object.values(ADAPTERS), ...DRILLS, ...DRILL_CONSTANTS, ...CONSTANTS])];
+	const expects = [...new Set([...Object.values(LIB), ...Object.values(ADAPTERS), ...DRILLS, ...GRADERS, ...DRILL_CONSTANTS, ...CONSTANTS])];
 	const text = portModules({
 		units: unitsIn(HOUSE, MODULES),
 		header: header(date),

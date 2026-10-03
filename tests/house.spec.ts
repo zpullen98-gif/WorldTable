@@ -3,7 +3,7 @@ import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { goto, HOUSE_INDEX_KEY, seedHouses } from './helpers';
+import { goto, HOUSE_INDEX_KEY, seedHouse, seedHouses } from './helpers';
 
 /**
  * The house bar on /menu, through the real page: the prerendered no-house
@@ -648,13 +648,224 @@ test('a whole round marks the day studied, records every answer, and the session
 	expect(exported).not.toContain('house:h-lantern0:');
 });
 
-test('?mode=say is a chip that says it needs the Maitre d and opens nothing', async ({ page }) => {
-	await seedHouses(page, [drillFixture()]);
+/* ---------------------------------------------------------------------------
+ * Say it back and Guest at the table, offline with no key: a typed line graded
+ * on the device against the kept line, nothing recorded until Record it, the
+ * guest's answer graded against the kept answer, and no request to her host.
+ * ------------------------------------------------------------------------- */
+
+const keptLine = (h: Record<string, any>, name: string, len: 's10' | 's20' | 's45') =>
+	h.dishes.find((d: any) => d.name === name).lines.value[len] as string;
+
+test('?mode=say grades a typed line on the device and records only on Record it', async ({ page }) => {
+	const toHer = watchAnthropic(page);
+	const h = drillFixture();
+	await seedHouses(page, [h]);
 	await goto(page, '/menu/quiz?mode=say');
-	await expect(page.getByRole('button', { name: 'Say it back' })).toHaveAttribute('aria-pressed', 'true');
-	await expect(page.getByRole('status')).toContainText('needs the Maître d’');
-	await expect(page.locator('.flash')).toHaveCount(0);
-	await expect(page.locator('dialog[open]')).toHaveCount(0);
+	await expect(page.getByRole('button', { name: /^Say it back/ })).toHaveAttribute('aria-pressed', 'true');
+	await expect(page.locator('.count').first()).toContainText('The Lantern Room · Say it back, on this device with no key');
+	// The list holds kept lines only: her unkept Smoked Eel Toast is not on it.
+	const options = (await page.locator('#say-item option').allTextContents()).map((t) => t.trim());
+	expect(options).toContain('Lantern Roast Chicken');
+	expect(options).not.toContain('Smoked Eel Toast');
+	await page.locator('#say-item').selectOption({ label: 'Lantern Roast Chicken' });
+	await page.getByRole('button', { name: /^20 seconds/ }).click();
+	await expect(page.getByRole('button', { name: /^20 seconds/ })).toHaveAttribute('aria-pressed', 'true');
+
+	const line = keptLine(h, 'Lantern Roast Chicken', 's20');
+	await page.getByLabel('What you would say at the table').fill(line);
+	await expect(page.locator('.wc')).toContainText(/of 50 words, within the cap/);
+	await page.getByRole('button', { name: 'Check', exact: true }).click();
+	const graded = page.locator('.say-grade');
+	await expect(graded.locator('.verdict')).toHaveText('Met');
+	await expect(graded.locator('.parts li').first()).toContainText(/^(Hit|Missed|Not in this line): /);
+	await expect(graded.locator('.kept')).toHaveText(line);
+	// Graded, and nothing recorded yet.
+	expect(await drilledSlot(page)).toEqual([]);
+	await graded.getByRole('button', { name: 'Record it' }).click();
+	await expect(graded.getByRole('button', { name: 'Recorded' })).toBeDisabled();
+	const slot = await drilledSlot(page);
+	expect(slot).toHaveLength(1);
+	expect(slot[0].k).toBe(`house:h-lantern0:${h.dishes.find((d: any) => d.name === 'Lantern Roast Chicken').id}:say-s20`);
+	expect(slot[0].v).toBe('met');
+
+	// Try again clears the box and the grade; a stray line grades missed, words and all.
+	await graded.getByRole('button', { name: 'Try again' }).click();
+	await expect(page.locator('.say-grade')).toHaveCount(0);
+	await page.getByLabel('What you would say at the table').fill('It is lovely tonight.');
+	await page.getByRole('button', { name: 'Check', exact: true }).click();
+	await expect(page.locator('.say-grade .verdict')).toHaveText('Missed');
+	await expect(page.locator('.say-grade .notes li').first()).not.toBeEmpty();
+	expect(await drilledSlot(page)).toHaveLength(1);
+
+	// The drinks and wines join when chosen.
+	await page.getByRole('button', { name: /^Drinks, 1/ }).click();
+	await expect(page.locator('#say-item option')).toContainText(['The Lantern Collins']);
+	for (const b of await page.locator('.chip, textarea').all()) {
+		const box = await b.boundingBox();
+		if (box) expect(box.height).toBeGreaterThanOrEqual(44);
+	}
+	expect(toHer).toEqual([]);
+});
+
+test('Speak shows only where the browser has a speech service, with the sentence, and fills the box', async ({ page }) => {
+	await seedHouses(page, [drillFixture()]);
+	await page.addInitScript(() => {
+		class FakeRecognition {
+			lang = '';
+			interimResults = false;
+			continuous = false;
+			onresult: ((ev: unknown) => void) | null = null;
+			onend: (() => void) | null = null;
+			onerror: ((ev: unknown) => void) | null = null;
+			start() {
+				setTimeout(() => {
+					this.onresult?.({ results: [[{ transcript: 'half a chicken over the embers' }]] });
+					this.onend?.();
+				}, 50);
+			}
+			stop() {
+				this.onend?.();
+			}
+		}
+		Object.defineProperty(window, 'SpeechRecognition', { value: FakeRecognition, configurable: true });
+	});
+	await goto(page, '/menu/quiz?mode=say');
+	await expect(page.locator('.speakrow')).toContainText("Your voice goes to your browser's speech service, not to Anthropic.");
+	await page.getByRole('button', { name: 'Speak', exact: true }).click();
+	await expect(page.getByLabel('What you would say at the table')).toHaveValue('half a chicken over the embers');
+
+	const bare = await page.context().newPage();
+	await bare.addInitScript(() => {
+		Object.defineProperty(window, 'SpeechRecognition', { value: undefined, configurable: true });
+		Object.defineProperty(window, 'webkitSpeechRecognition', { value: undefined, configurable: true });
+	});
+	await goto(bare, '/menu/quiz?mode=say');
+	await expect(bare.locator('#say-text')).toBeVisible();
+	await expect(bare.getByRole('button', { name: 'Speak', exact: true })).toHaveCount(0);
+});
+
+test('?mode=guest deals a kept guest, grades the answer, shows the kept answer and records only on Record it', async ({ page }) => {
+	const toHer = watchAnthropic(page);
+	const h = drillFixture();
+	await seedHouses(page, [h]);
+	await goto(page, '/menu/quiz?mode=guest');
+	await expect(page.getByRole('button', { name: /^Guest at the table/ })).toHaveAttribute('aria-pressed', 'true');
+	await page.getByRole('button', { name: 'Seat a guest ▸' }).click();
+	const card = page.locator('.flash.guest');
+	const eyebrow = (await card.locator('.eyebrow').textContent())!;
+	const guestSays = (await card.locator('.guestsays').textContent())!.trim();
+	// The answer the house kept for whichever card was dealt.
+	const sc = h.scenarios.find((s: any) => s.guest === guestSays);
+	const mix = h.mixUps.find((x: any) => x.ask?.value === guestSays);
+	expect(/Which is which/.test(eyebrow)).toBe(!sc);
+	const kept: string = sc ? sc.you.value : mix.difference.value;
+	expect(kept).toBeTruthy();
+	await page.getByLabel('What you would say back').fill(kept);
+	await card.getByRole('button', { name: 'Check', exact: true }).click();
+	const graded = page.locator('.guest-grade');
+	await expect(graded.locator('.verdict')).toHaveText(/^(Met|Close)$/);
+	await expect(graded.locator('.kept')).toHaveText(kept);
+	expect(await drilledSlot(page)).toEqual([]);
+	await graded.getByRole('button', { name: 'Record it' }).click();
+	const slot = await drilledSlot(page);
+	expect(slot).toHaveLength(1);
+	expect(slot[0].k).toMatch(/^house:h-lantern0:[sm]-[^:]+:guest$/);
+	expect(['met', 'close']).toContain(slot[0].v);
+	expect(toHer).toEqual([]);
+});
+
+/* ---------------------------------------------------------------------------
+ * The shipped pack loads itself: a fresh device opens /menu and Brennan's is
+ * there, and a second boot of the same edition writes nothing.
+ * ------------------------------------------------------------------------- */
+
+const PACK_FILE = join(HERE, '../static/shared/packs/brennans-new-orleans.v1.oothouse.json');
+
+async function servePack(page: Page): Promise<{ hits: number }> {
+	const seen = { hits: 0 };
+	const body = readFileSync(PACK_FILE, 'utf8');
+	await page.route('**/shared/packs/brennans-new-orleans.v1.oothouse.json', (route) => {
+		seen.hits += 1;
+		return route.fulfill({ status: 200, contentType: 'application/json', body });
+	});
+	return seen;
+}
+
+test('a fresh device opens /menu and the Brennan’s pack loads itself; a second boot writes nothing', async ({ page }) => {
+	test.setTimeout(60_000);
+	const toHer = watchAnthropic(page);
+	const pack = JSON.parse(readFileSync(PACK_FILE, 'utf8')).house;
+	const seen = await servePack(page);
+	await goto(page, '/menu');
+	await expect(houseLine(page)).toContainText(`${pack.name} · ${pack.dishes.length} dishes here · ${pack.wines.length} wines in the Codex · ${pack.cocktails.length} drinks in the Ledger`);
+	await expect(page.locator('.housebar .autoline')).toHaveText(
+		`${pack.name} is loaded: ${pack.dishes.length} dishes, ${pack.cocktails.length} drinks, ${pack.wines.length} wines.`
+	);
+	await expect(dishNames(page)).toHaveCount(pack.dishes.length);
+	await expect(dishNames(page).first()).toHaveText(pack.dishes[0].name);
+	expect(seen.hits).toBe(1);
+	await expect.poll(async () => (await onDevice(page)).dishes.length).toBe(pack.dishes.length);
+	const first = await onDevice(page);
+	expect(first.index.current).toBe(pack.id);
+	const before = await houseRecord(page, pack.id);
+	expect(before.pack.builtAt).toBe(pack.pack.builtAt);
+
+	// The second boot: the same edition, fetched again, and nothing written.
+	await page.reload();
+	await page.waitForSelector('html[data-hydrated]');
+	await expect.poll(() => seen.hits).toBe(2);
+	await expect(houseLine(page)).toContainText(`${pack.name} · ${pack.dishes.length} dishes here`);
+	await page.waitForTimeout(800);
+	await expect(page.locator('.housebar .autoline')).toHaveCount(0);
+	const after = await houseRecord(page, pack.id);
+	expect(after.lastWrite).toBe(before.lastWrite);
+	expect(JSON.stringify(after)).toBe(JSON.stringify(before));
+	const second = await onDevice(page);
+	expect(second.index).toEqual(first.index);
+	expect(second.dishes.length).toBe(pack.dishes.length);
+
+	// And Say it back reads the pack's kept lines straight away.
+	await goto(page, '/menu/quiz?mode=say');
+	await expect(page.locator('#say-item option')).toHaveCount(pack.dishes.filter((d: any) => d.lines?.by === 'person').length);
+	expect(toHer).toEqual([]);
+});
+
+test('her own dishes and no house: the pack is held, nothing is written, and Load the pack is her act', async ({ page }) => {
+	test.setTimeout(60_000);
+	const pack = JSON.parse(readFileSync(PACK_FILE, 'utf8')).house;
+	await seedHouse(page); // the Table's own record: Braised cheek, d1, no house
+	const seen = await servePack(page);
+	await goto(page, '/menu');
+	await expect(page.locator('.housebar .autoline')).toHaveText(
+		`${pack.name} is ready to load: ${pack.dishes.length} dishes, ${pack.cocktails.length} drinks, ${pack.wines.length} wines. Your own dishes stay as they are until you press Load the pack; loading files them under it.`
+	);
+	expect(seen.hits).toBe(1);
+	await expect(houseLine(page)).toHaveText(NO_HOUSE_LINE);
+	await expect(dishNames(page)).toHaveText(['Braised cheek']);
+	await page.waitForTimeout(800);
+	const held = await onDevice(page);
+	expect(held.index, 'no house is written by the boot').toBeNull();
+	expect(held.dishes.map((d: any) => [d.name, 'house' in d])).toEqual([['Braised cheek', false]]);
+	const load = page.getByRole('button', { name: 'Load the pack' });
+	expect((await load.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+	await load.click();
+	await expect(houseLine(page)).toContainText(`${pack.name} · `);
+	await expect(page.locator('.housebar .autoline')).toHaveText(
+		`${pack.name} is loaded: ${pack.dishes.length} dishes, ${pack.cocktails.length} drinks, ${pack.wines.length} wines.`
+	);
+	await expect(load).toHaveCount(0);
+	await expect.poll(async () => (await onDevice(page)).index?.current ?? null).toBe(pack.id);
+});
+
+test('with the pack withheld the boot goes on quietly with no house and no error', async ({ page }) => {
+	const errors: string[] = [];
+	page.on('pageerror', (e) => errors.push(String(e)));
+	await page.route('**/shared/packs/**', (route) => route.fulfill({ status: 404, body: 'not found' }));
+	await goto(page, '/menu');
+	await expect(houseLine(page)).toHaveText(NO_HOUSE_LINE);
+	await expect(page.locator('.housebar .autoline')).toHaveCount(0);
+	expect(errors).toEqual([]);
 });
 
 test('the drill deals with the worker on and the network off: nothing it needs is fetched', async ({ page, context }) => {
@@ -693,6 +904,20 @@ test('the drill deals with the worker on and the network off: nothing it needs i
 	await page.getByRole('button', { name: 'Shuffle the cards ▸' }).click();
 	await page.getByRole('button', { name: 'Flip ↦' }).click();
 	await expect(page.locator('.flash.card')).toHaveAttribute('data-flipped', 'yes');
+
+	// Say it back, offline: typed, checked and graded on the device.
+	await page.getByRole('button', { name: /^Say it back/ }).click();
+	await page.locator('#say-item').selectOption({ label: 'Lantern Roast Chicken' });
+	await page.getByRole('button', { name: /^10 seconds/ }).click();
+	await page.getByLabel('What you would say at the table').fill(keptLine(drillFixture(), 'Lantern Roast Chicken', 's10'));
+	await page.getByRole('button', { name: 'Check', exact: true }).click();
+	await expect(page.locator('.say-grade .verdict')).toHaveText('Met');
+	// And Guest at the table deals and grades with the network off too.
+	await page.getByRole('button', { name: /^Guest at the table/ }).click();
+	await page.getByRole('button', { name: 'Seat a guest ▸' }).click();
+	await page.getByLabel('What you would say back').fill('Let me check with the kitchen.');
+	await page.locator('.flash.guest').getByRole('button', { name: 'Check', exact: true }).click();
+	await expect(page.locator('.guest-grade .verdict')).toHaveText(/^(Met|Close|Missed)$/);
 	await context.setOffline(false);
 });
 

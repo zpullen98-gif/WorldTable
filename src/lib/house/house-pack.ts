@@ -35,13 +35,13 @@
  * act, the second of the two that may create an index (mintHouse in
  * house-store.ts is the first).
  */
-import { ID_PREFIXES, mintId } from './house-schema';
-import type { House, HouseIndex, HouseStub } from './house-schema';
+import { BUILD_STEPS, HOUSE_LISTS, ID_PREFIXES, MARK_FIELDS, isMark, mintId } from './house-schema';
+import type { BuildStep, House, HouseIndex, HouseStub, Mark } from './house-schema';
 import { normaliseHouse } from './house-normalise';
 import type { NormaliseReport } from './house-normalise';
 import { validateHouse } from './house-validate';
 import type { Problem } from './house-validate';
-import { mergeHouse } from './house-merge';
+import { mergeHouse, mergeKept, mergeSources, pickMark, sameJson } from './house-merge';
 import type { MergeCounts } from './house-merge';
 import { deviceIds, loadHouse, putHouse, readIndex, saveHouse, storeSaid, writeIndex } from './house-store';
 import type { HouseStorage } from './house-store';
@@ -267,3 +267,200 @@ export async function importPack(
 	}
 	return { ok: true, added: house.id, current: becomesCurrent, problems: read.problems, said: house.name + ' added.' };
 }
+
+/* -------------------------------------------------------------------------
+ * A newer edition of a shipped pack
+ * ---------------------------------------------------------------------- */
+
+/**
+ * THE EDITION RULE. A shipped pack is built with every mark and every
+ * item's ts stamped with one number, Date.parse(house.pack.builtAt), so on
+ * a device a mark or an item still carrying that one stamp is the
+ * edition's own, and one carrying any other stamp was touched there (a
+ * Keep, an Edit, a row saved by a wing). A copy already on a device may be
+ * an older edition built before the rule, so the stamp is never read off
+ * the pack field: it is found as the single most frequent stamp, because
+ * the edition's stamp is shared by hundreds of records and each touch
+ * carries its own. Marks and items are counted apart, since an older
+ * edition stamped its items a day before its marks.
+ */
+
+type Rec = Record<string, unknown> & { id: string; ts: number };
+
+/** The most frequent of a list of stamps, the earlier on a tie; null for none. */
+function modeStamp(stamps: readonly number[]): number | null {
+	const seen = new Map<number, number>();
+	for (const t of stamps) if (Number.isFinite(t)) seen.set(t, (seen.get(t) || 0) + 1);
+	let best: number | null = null;
+	let count = 0;
+	for (const [t, n] of seen) {
+		if (n > count || (n === count && best !== null && t < best)) {
+			best = t;
+			count = n;
+		}
+	}
+	return best;
+}
+
+/** Every record of the ten lists, flat. */
+function editionRecords(house: House): Rec[] {
+	const out: Rec[] = [];
+	for (const list of HOUSE_LISTS) for (const r of house[list] as unknown as Rec[]) out.push(r);
+	return out;
+}
+
+/** The edition's mark stamp on a house: the most frequent ts over every mark on every record and the card's history. */
+export function editionStamp(house: House): number | null {
+	const stamps: number[] = [];
+	if (isMark(house.history)) stamps.push(house.history.ts);
+	for (const list of HOUSE_LISTS) {
+		const fields = MARK_FIELDS[list] as readonly string[];
+		for (const r of house[list] as unknown as Rec[]) {
+			for (const f of fields) {
+				const m = r[f];
+				if (isMark(m)) stamps.push(m.ts);
+			}
+		}
+	}
+	return modeStamp(stamps);
+}
+
+/** The edition's item stamp on a house: the most frequent ts over every record of the ten lists. */
+export function editionItemStamp(house: House): number | null {
+	return modeStamp(editionRecords(house).map((r) => r.ts));
+}
+
+/** When an edition was built, from its pack stamp; zero when it carries none or an unreadable one. */
+export function editionBuiltAt(house: House): number {
+	const t = house.pack ? Date.parse(house.pack.builtAt) : NaN;
+	return Number.isFinite(t) ? t : 0;
+}
+
+/** What a refresh did: items the edition added, items it brought up to date, items where a person's touch stood. */
+export interface RefreshCounts {
+	added: number;
+	updated: number;
+	kept: number;
+}
+
+/**
+ * One record of the device copy refreshed by the shipped edition's twin.
+ * The plain fields come whole from the shipped record when the device
+ * record still carries the edition's item stamp, else the device's stand.
+ * Each mark: a device mark carrying any other stamp than the edition's was
+ * touched and stands (a mark of hers made on the device yields to a kept
+ * shipped one, by pickMark); otherwise the shipped mark takes the field, or
+ * the field goes when the new edition carries none. Kept notes union.
+ * Returns the record and whether a person's touch stood against a
+ * shipped value that differed.
+ */
+function refreshRecord(mine: Rec, theirs: Rec, marks: readonly string[], markStamp: number | null, itemStamp: number | null): { rec: Rec; kept: boolean } {
+	const plainTouched = itemStamp === null || mine.ts !== itemStamp;
+	const out: Record<string, unknown> = plainTouched ? { ...mine } : { ...theirs, id: mine.id };
+	let kept = false;
+	if (plainTouched) {
+		for (const k of Object.keys(theirs)) {
+			if (k === 'kept' || k === 'ts' || k === 'house' || marks.indexOf(k) >= 0) continue;
+			if (!sameJson(mine[k], theirs[k])) kept = true;
+		}
+	}
+	for (const f of marks) {
+		const m = isMark(mine[f]) ? (mine[f] as Mark<unknown>) : undefined;
+		const t = isMark(theirs[f]) ? (theirs[f] as Mark<unknown>) : undefined;
+		let pick: Mark<unknown> | undefined;
+		if (m && (markStamp === null || m.ts !== markStamp)) {
+			pick = m.by === 'person' ? m : pickMark(m, t);
+			if (pick === m && t && !sameJson(m, t)) kept = true;
+		} else pick = t;
+		if (pick) out[f] = pick;
+		else delete out[f];
+	}
+	const notes = mergeKept(mine.kept as unknown[] | undefined, theirs.kept as unknown[] | undefined);
+	if (notes.length) out.kept = notes;
+	else delete out.kept;
+	return { rec: out as Rec, kept };
+}
+
+/**
+ * The device copy of a shipped house refreshed by a newer edition, by the
+ * edition rule, with nothing a person wrote, kept, edited or removed lost:
+ *
+ *   a record the shipped edition has and the device lacks is added, unless
+ *   a tombstone on the device is newer than the device copy's edition (a
+ *   person removed it; an older tombstone is lifted with the add);
+ *   a twin is refreshed by refreshRecord;
+ *   a record only the device holds stays (a person's own, or one the new
+ *   edition dropped, which a person may still be learning);
+ *   the card's history settles as a mark; the card's plain fields follow
+ *   the shipped edition, except the name, which a rename made the
+ *   person's and which the device keeps; sources union; each build step
+ *   keeps its latest stamp; tombstones union on the newer stamp;
+ *   the pack stamp becomes the shipped one; id, began and createdAt stay.
+ *
+ * Shipped records come first in the shipped order, then the device's own.
+ * Pure: the clock is the caller's, through the save.
+ */
+export function refreshEdition(device: House, shipped: House): { house: House; counts: RefreshCounts } {
+	const counts: RefreshCounts = { added: 0, updated: 0, kept: 0 };
+	const markStamp = editionStamp(device);
+	const itemStamp = editionItemStamp(device);
+	const edition = Math.max(markStamp === null ? 0 : markStamp, itemStamp === null ? 0 : itemStamp, editionBuiltAt(device));
+	const removed: Record<string, number> = { ...device.removed };
+	for (const id of Object.keys(shipped.removed)) {
+		const t = shipped.removed[id];
+		if (!(id in removed) || t > removed[id]) removed[id] = t;
+	}
+	const out: Record<string, unknown> = { ...device };
+	for (const list of HOUSE_LISTS) {
+		const marks = MARK_FIELDS[list] as readonly string[];
+		const mine = device[list] as unknown as Rec[];
+		const mineById = new Map<string, Rec>();
+		for (const r of mine) if (!mineById.has(r.id)) mineById.set(r.id, r);
+		const next: Rec[] = [];
+		const seen = new Set<string>();
+		for (const raw of shipped[list] as unknown as Rec[]) {
+			if (seen.has(raw.id)) continue;
+			seen.add(raw.id);
+			const t: Rec = 'house' in raw ? ({ ...raw, house: device.id } as Rec) : raw;
+			const m = mineById.get(t.id);
+			if (!m) {
+				const tomb = device.removed[t.id];
+				if (typeof tomb === 'number' && tomb > edition) continue;
+				if (typeof tomb === 'number') delete removed[t.id];
+				next.push(t);
+				counts.added++;
+				continue;
+			}
+			const { rec, kept } = refreshRecord(m, t, marks, markStamp, itemStamp);
+			next.push(rec);
+			if (kept) counts.kept++;
+			if (!sameJson(rec, m)) counts.updated++;
+		}
+		for (const m of mine) {
+			if (seen.has(m.id)) continue;
+			seen.add(m.id);
+			next.push(m);
+		}
+		out[list] = next;
+	}
+	for (const f of ['address', 'phone', 'site', 'meals', 'dressCode'] as const) out[f] = shipped[f];
+	out.menusReadOn = shipped.menusReadOn > device.menusReadOn ? shipped.menusReadOn : device.menusReadOn;
+	out.sources = mergeSources(shipped.sources, device.sources);
+	const hm = isMark(device.history) ? device.history : undefined;
+	const ht = isMark(shipped.history) ? shipped.history : undefined;
+	const history = hm && (markStamp === null || hm.ts !== markStamp) ? (hm.by === 'person' ? hm : pickMark(hm, ht)) : ht;
+	if (history) out.history = history;
+	else delete out.history;
+	const build: Partial<Record<BuildStep, number>> = {};
+	for (const step of BUILD_STEPS) {
+		const a = device.build[step];
+		const b = shipped.build[step];
+		const best = a === undefined ? b : b === undefined ? a : Math.max(a, b);
+		if (best !== undefined) build[step] = best;
+	}
+	out.build = build;
+	out.removed = removed;
+	if (shipped.pack) out.pack = { ...shipped.pack };
+	return { house: out as unknown as House, counts };
+}
+

@@ -2,13 +2,13 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
-import { HOUSE_INDEX_KEY, ID_PREFIXES, KEYS, LINE_CAPS, DISH_PARTS, PROSE_MAX, WINE_PARTS, COCKTAIL_PARTS } from './house-schema';
+import { HOUSE_INDEX_KEY, HOUSE_LISTS, ID_PREFIXES, KEYS, LINE_CAPS, DISH_PARTS, MARK_FIELDS, PROSE_MAX, WINE_PARTS, COCKTAIL_PARTS, isMark } from './house-schema';
 import type { House, HouseDish, Mark } from './house-schema';
 import { lastTouch, mergeHouse } from './house-merge';
 import { MAP_HOUSE_PREFIX, mapStorage } from './house-store';
 import type { HouseStorage } from './house-store';
 import type { SyncRow } from './house-sync';
-import { buildPack } from './house-pack';
+import { buildPack, editionItemStamp, editionStamp, refreshEdition } from './house-pack';
 import { CARD_KEYS, ITEM_FIELDS, NO_HOUSE_SAID, PUT_LISTS, adapterFor, createHouseApi, listFor } from './house-api';
 import type { PutList } from './house-api';
 import type { ChangeWhat, HouseApi, HouseEventWindow } from './house-api';
@@ -113,7 +113,7 @@ describe('the api object', () => {
 			[
 				'ready', 'current', 'currentId', 'list', 'switchTo', 'mintHouse', 'rename', 'remove',
 				'put', 'sync', 'rows', 'setMark', 'setCard', 'setItemField', 'putListItem', 'removeItem', 'names',
-				'readPack', 'importPack', 'buildPack', 'onChange',
+				'readPack', 'importPack', 'ensurePack', 'buildPack', 'onChange',
 				'HOUSE_INDEX_KEY', 'HOUSE_MAX_BYTES', 'LINE_CAPS', 'DISH_PARTS', 'WINE_PARTS', 'COCKTAIL_PARTS', 'PARTS', 'PRINCIPLES', 'BUILD_STEPS'
 			].sort()
 		);
@@ -773,6 +773,16 @@ describe('a refused save', () => {
 describe('the nine modules as one script', () => {
 	const MODULES = ['house-schema', 'house-lines', 'house-normalise', 'house-validate', 'house-merge', 'house-sync', 'house-store', 'house-pack', 'house-api'];
 
+	it('every module the port joins is ASCII, dash free and free of a carriage return, comments and all', () => {
+		const DASHES = new RegExp(['\\u2014', '\\u2013', '&' + 'mdash;', '&#' + '8212;', '&#' + 'x2014;', ' ' + '-- '].join('|'));
+		for (const m of [...MODULES, 'house-drills']) {
+			const text = readFileSync(here('./' + m + '.ts'), 'utf8');
+			expect(text, m).not.toMatch(DASHES);
+			expect(text.includes('\r'), m).toBe(false);
+			expect(/[^\x00-\x7F]/.test(text), m + ' carries a character outside ASCII').toBe(false);
+		}
+	});
+
 	it('bundle into one IIFE with no name collision, pass the clean gate, and run in an empty context', () => {
 		const text = portModules({ units: unitsIn(here('.'), MODULES), header: '/* a dry run of the House port */' });
 		expect(() => assertClean(text, 'oot-house.js (dry run)')).not.toThrow();
@@ -857,5 +867,209 @@ describe('two writes in flight in one tab', () => {
 		const onDevice = stored.dishes.find((d) => d.id === 'd-beetrt01') as HouseDish;
 		expect(onDevice.say).toEqual(say);
 		expect(onDevice.guest).toEqual(guest);
+	});
+});
+
+/* -------------------------------------------------------------------------
+ * ensurePack: the shipped pack at boot. The edition rule: a pack is built
+ * with every mark and every item stamped with one number, so a record still
+ * carrying it is the edition's and any other stamp is a person's touch. The
+ * first edition here is stamped the way the older Brennan's edition was,
+ * its items a day before its marks, so the stamps are found by frequency
+ * and never read off the pack field.
+ * ---------------------------------------------------------------------- */
+
+const B1 = Date.parse('2026-09-28T10:00:00.000Z');
+const B2 = Date.parse('2026-10-03T21:00:00.000Z');
+const DAY = 86_400_000;
+
+/** A copy of a house as an edition: the pack stamp, every mark at markTs and every record at itemTs. */
+function asEdition(h: House, builtAt: number, itemTs = builtAt, markTs = builtAt): House {
+	const out = clone(h);
+	out.pack = { id: 'house-min', builtBy: 'the fixture', builtAt: new Date(builtAt).toISOString(), version: 1 };
+	if (out.history) out.history.ts = markTs;
+	for (const list of HOUSE_LISTS) {
+		for (const rec of out[list] as unknown as Array<Record<string, unknown>>) {
+			rec.ts = itemTs;
+			for (const f of MARK_FIELDS[list] as readonly string[]) {
+				const m = rec[f];
+				if (isMark(m)) m.ts = markTs;
+			}
+		}
+	}
+	return out;
+}
+const editionText = (h: House) => JSON.stringify(buildPack(h, 'tools', T0));
+
+/** The second edition: changes the person did not touch, changes they did, a new dish and a new scenario. */
+function secondEdition(): House {
+	const h = asEdition(fixture, B2);
+	const chicken = h.dishes.find((d) => d.id === 'd-chicken1') as HouseDish;
+	chicken.description = 'Half a chicken from the embers, the second edition.';
+	if (chicken.parts) chicken.parts.value.sauce = 'Rosemary and lemon gravy, the second edition';
+	if (chicken.lines) chicken.lines.value.s10 = 'The second edition line for the chicken.';
+	const beet = h.dishes.find((d) => d.id === 'd-beetrt01') as HouseDish;
+	beet.description = 'The salad the second edition rewrote.';
+	h.wines[0].region = 'The second edition region';
+	if (h.wines[0].parts) h.wines[0].parts.value.taste = 'The second edition taste';
+	h.dishes.push({ ...clone(beet), id: 'd-newdish1', name: 'Smoked Trout', description: 'New in the second edition.' });
+	h.scenarios.push({ ...clone(h.scenarios[0]), id: 's-newscen1', title: 'A second edition scenario' });
+	return h;
+}
+
+describe('ensurePack', () => {
+	it('adds the pack to an empty device and makes it current; the same text again writes nothing', async () => {
+		const { api, backing } = make();
+		await api.ready();
+		const text = editionText(asEdition(fixture, B1, B1 - DAY));
+		const [res, what] = await nextChangeOf(api, () => api.ensurePack(text));
+		expect(res).toEqual({ action: 'added', id: fixture.id, current: true });
+		expect(what).toBe('import');
+		expect(api.current()?.id).toBe(fixture.id);
+		const before = JSON.stringify([...backing.entries()]);
+		let fired = 0;
+		api.onChange(() => fired++);
+		expect(await api.ensurePack(text)).toEqual({ action: 'current', id: fixture.id });
+		expect(await api.ensurePack(editionText(asEdition(fixture, B1 - DAY)))).toEqual({ action: 'current', id: fixture.id });
+		expect(JSON.stringify([...backing.entries()])).toBe(before);
+		expect(fired).toBe(0);
+	});
+
+	it('gives way over an empty hand house, stays behind a house with work in it, and makeCurrent asks', async () => {
+		const text = editionText(asEdition(fixture, B1));
+		const empty = make();
+		const mine = await empty.api.mintHouse('My house');
+		expect(mine).not.toBeNull();
+		expect(await empty.api.ensurePack(text)).toEqual({ action: 'added', id: fixture.id, current: true });
+		expect(empty.api.currentId()).toBe(fixture.id);
+		expect(empty.api.list().length).toBe(2);
+
+		const busy = make();
+		const own = await busy.api.mintHouse('The Corner Table');
+		await busy.api.put('dish', dishRow('d-mysoup01', 'Leek Soup', T0));
+		const added = await busy.api.ensurePack(text);
+		expect(added).toEqual({ action: 'added', id: fixture.id, current: false });
+		expect(busy.api.currentId()).toBe(own?.id);
+		expect(busy.api.current()?.id).toBe(own?.id);
+
+		const asked = make();
+		const theirs = await asked.api.mintHouse('The Corner Table');
+		await asked.api.put('dish', dishRow('d-mysoup01', 'Leek Soup', T0));
+		expect(await asked.api.ensurePack(text, { makeCurrent: true })).toEqual({ action: 'added', id: fixture.id, current: true });
+		expect(asked.api.currentId()).toBe(fixture.id);
+		expect(asked.api.list().map((s) => s.id)).toEqual([theirs?.id, fixture.id]);
+	});
+
+	it('refuses what is not a pack, and writes nothing', async () => {
+		const { api, backing } = make();
+		await api.ready();
+		const res = await api.ensurePack('{ not json');
+		expect(res.action).toBe('refused');
+		expect(res.action === 'refused' && res.said).toMatch(/not a house pack/);
+		expect((await api.ensurePack(JSON.stringify({ format: 'other' }))).action).toBe('refused');
+		expect(backing.size).toBe(0);
+	});
+
+	it('finds the edition stamps by frequency, marks and items apart', () => {
+		const h = asEdition(fixture, B1, B1 - DAY);
+		expect(editionStamp(h)).toBe(B1);
+		expect(editionItemStamp(h)).toBe(B1 - DAY);
+		const touched = clone(h);
+		if (touched.dishes[0].lines) touched.dishes[0].lines.ts = T0;
+		touched.wines[0].ts = T0;
+		expect(editionStamp(touched)).toBe(B1);
+		expect(editionItemStamp(touched)).toBe(B1 - DAY);
+	});
+
+	it('refreshes by a newer edition: a person\'s edited mark, edited item and removal stand, the rest follows the edition', async () => {
+		const { api, clock, backing } = make();
+		await api.ready();
+		const first = asEdition(fixture, B1, B1 - DAY);
+		expect((await api.ensurePack(editionText(first))).action).toBe('added');
+
+		/* The person's touches: an edited line, a removed dish, a service note
+		   (which stamps the wine), and a scenario answer of their own. */
+		clock.at = T0 + 1000;
+		const myLines = { s10: 'My own ten second chicken line.', s20: 'My own twenty.', s45: 'My own forty five.' };
+		expect(await api.setMark('dish', 'd-chicken1', 'lines', mark(myLines, 'person', T0 + 1000))).toBe(true);
+		expect(await api.removeItem('dish', 'd-beetrt01')).toBe(true);
+		expect(await api.setItemField('wine', 'w-lantern1', { serviceNote: 'Ask the sommelier about the vintage.' })).toBe(true);
+		const tomb = api.current()?.removed['d-beetrt01'];
+		expect(typeof tomb).toBe('number');
+
+		/* A second house made current, so the refresh lands on a house that is not. */
+		clock.at = T0 + 2000;
+		const other = await api.mintHouse('The Corner Table');
+		await api.switchTo(other?.id || '');
+		expect(api.currentId()).toBe(other?.id);
+
+		clock.at = T0 + 3000;
+		const second = secondEdition();
+		const [res, what] = await nextChangeOf(api, () => api.ensurePack(editionText(second)));
+		expect(what).toBe('import');
+		expect(res.action).toBe('refreshed');
+		if (res.action !== 'refreshed') return;
+		expect(res.id).toBe(fixture.id);
+		expect(res.counts.added).toBe(2);
+		expect(api.currentId()).toBe(other?.id);
+		expect(api.current()?.id).toBe(other?.id);
+
+		const raw = backing.get(MAP_HOUSE_PREFIX + fixture.id);
+		const h = JSON.parse(raw || '{}') as House;
+		const chicken = h.dishes.find((d) => d.id === 'd-chicken1') as HouseDish;
+		expect(chicken.lines).toEqual(mark(myLines, 'person', T0 + 1000));
+		expect(chicken.parts?.value.sauce).toBe('Rosemary and lemon gravy, the second edition');
+		expect(chicken.parts?.ts).toBe(B2);
+		expect(chicken.description).toBe('Half a chicken from the embers, the second edition.');
+		expect(chicken.ts).toBe(B2);
+		expect(h.dishes.some((d) => d.id === 'd-beetrt01')).toBe(false);
+		expect(h.removed['d-beetrt01']).toBe(tomb);
+		expect(h.dishes.some((d) => d.id === 'd-newdish1')).toBe(true);
+		expect(h.scenarios.some((s) => s.id === 's-newscen1')).toBe(true);
+		const wine = h.wines[0];
+		expect(wine.serviceNote).toBe('Ask the sommelier about the vintage.');
+		expect(wine.region).toBe(fixture.wines[0].region);
+		expect(wine.parts?.value.taste).toBe('The second edition taste');
+		expect(res.counts.kept).toBeGreaterThanOrEqual(2);
+		expect(res.counts.updated).toBeGreaterThanOrEqual(2);
+		expect(h.pack?.builtAt).toBe(new Date(B2).toISOString());
+
+		/* The same edition again: nothing written, nothing fired. */
+		const before = JSON.stringify([...backing.entries()]);
+		expect(await api.ensurePack(editionText(second))).toEqual({ action: 'current', id: fixture.id });
+		expect(JSON.stringify([...backing.entries()])).toBe(before);
+	});
+
+	it('refreshes the current house through the write door, and memory is what the device holds', async () => {
+		const { api, clock, backing } = make();
+		await api.ready();
+		await api.ensurePack(editionText(asEdition(fixture, B1)));
+		clock.at = T0 + 1000;
+		const res = await api.ensurePack(editionText(secondEdition()));
+		expect(res.action).toBe('refreshed');
+		expect(api.currentId()).toBe(fixture.id);
+		const stored = JSON.parse(backing.get(MAP_HOUSE_PREFIX + fixture.id) || '{}');
+		expect(api.current()).toEqual(stored);
+		/* Untouched, so every edition change landed, the beetroot rewrite with it. */
+		expect(stored.dishes.find((d: HouseDish) => d.id === 'd-beetrt01').description).toBe('The salad the second edition rewrote.');
+		expect(stored.dishes.find((d: HouseDish) => d.id === 'd-chicken1').lines.value.s10).toBe('The second edition line for the chicken.');
+		expect(stored.wines[0].region).toBe('The second edition region');
+	});
+
+	it('refreshEdition alone: her mark made on the device yields to a kept shipped one, and an old tombstone is lifted', () => {
+		const device = asEdition(fixture, B1);
+		const chicken = device.dishes[0];
+		chicken.guest = mark('Hers, on the device.', 'maitre', T0);
+		device.removed['d-gone0001'] = B1 - DAY;
+		const shipped = asEdition(fixture, B2);
+		shipped.dishes[0].guest = mark('Kept in the edition.', 'person', B2);
+		shipped.dishes.push({ ...clone(shipped.dishes[1]), id: 'd-gone0001', name: 'Back Again' });
+		const { house, counts } = refreshEdition(device, shipped);
+		expect(house.dishes[0].guest?.value).toBe('Kept in the edition.');
+		expect(house.dishes.some((d) => d.id === 'd-gone0001')).toBe(true);
+		expect('d-gone0001' in house.removed).toBe(false);
+		expect(counts.added).toBe(1);
+		expect(house.id).toBe(device.id);
+		expect(house.dishes.every((d) => d.house === device.id)).toBe(true);
 	});
 });

@@ -1,5 +1,5 @@
 {
-  "about": "Every departure from the server guide that the Brennan's pack makes, each with its reason and its source, so a reader can audit the pack against the guide (house/brennans/guide.txt, menus read 26 September 2026) and the research under house/brennans/research/. The builder (house/build-brennans.mjs) applies the entries in order after parsing and before dash stripping; a replace whose 'from' is not found fails the build. Verdict ids (chef-dishes-b-4, gap-pron-6 and so on) are the ids in research/verified-facts.json; 'pdf-corrections pN' points at research/pdf-corrections.json by page. A still-unverifiable fact is placed nowhere as a fact; a refuted claim appears only as its correction. Prices are never touched here. Targets: house | dish:<name> | wine:<name> | cocktail:<name> | tasting:<name> | term:<term> | scenario:<title> | mixup:<a> vs <b> | mustknow:<title> | <list>:+ to add. Ops: set (default), replace {from,to}, append, add.",
+  "about": "Every departure from the server guide that the Brennan's pack makes, each with its reason and its source, so a reader can audit the pack against the guide (house/brennans/guide.txt, menus read 26 September 2026) and the research under house/brennans/research/. The builder (house/build-brennans.mjs) applies the entries in order after parsing and before dash stripping; a replace whose 'from' is not found fails the build. Verdict ids (chef-dishes-b-4, gap-pron-6 and so on) are the ids in research/verified-facts.json; 'pdf-corrections pN' points at research/pdf-corrections.json by page. A still-unverifiable fact is placed nowhere as a fact; a refuted claim appears only as its correction. Prices are never touched here. Targets: house | dish:<name> | wine:<name> | cocktail:<name> | tasting:<name> | term:<term> | scenario:<title> | mixup:<a> vs <b> | mustknow:<title> | <list>:+ to add. Ops: set (default), replace {from,to}, append, add. From the 3 October 2026 edition, an add on dish:+ or cocktail:+ files a whole item the guide prints only as a price line or a must-know, or a house page the research read prints (the 1946 list, the Luxury Roost Bar cocktails, the premium Sazeracs, the eye openers, the coffees and juice, the children's menu, the Bubbles snacks); every such price stands verbatim on guide.txt or on a snapshot under house/brennans/pages/ whose first line names its source.",
   "principles": {
     "map": {
       "bubbles": "fat",
@@ -426,10 +426,10 @@
       "op": "replace",
       "value": {
         "fromRe": "Brabant \\S bra-BAHNT \\S potatoes",
-        "to": "Brabant potatoes, bra-BAHN in French and bruh-BANT on many local floors,"
+        "to": "Brabant, bra-BAHNT, potatoes"
       },
-      "reason": "The printed bra-BAHNT is a hybrid; ask the floor which the house uses",
-      "source": "pdf-corrections p50 (medium)"
+      "reason": "The guide's own respelling, kept with commas for the dashes; the floor's usage (bra-BAHN or bruh-BANT, pdf-corrections p50, medium) is a lineup question, never a second answer in the line",
+      "source": "pdf p31, p50; chef-dishes-c-16; pdf-corrections p50 (medium)"
     },
     {
       "target": "dish:Creamed Spinach",
@@ -1329,9 +1329,9 @@
     {
       "target": "term:Brabant potatoes",
       "field": "say",
-      "value": "bra-BAHN or bruh-BANT (ask the floor)",
-      "reason": "The printed bra-BAHNT is a hybrid",
-      "source": "pdf-corrections p50 (medium)"
+      "value": "bra-BAHNT",
+      "reason": "The guide prints bra-BAHNT twice (the Brabant potatoes card, p31, and the Menu words, p50), and the verified chef-dishes-c-16 reads it the same; pdf-corrections p50 (medium) calls it a hybrid of bra-BAHN and bruh-BANT, so which the floor says is a lineup question, never two answers on a card",
+      "source": "pdf p31, p50; chef-dishes-c-16; pdf-corrections p50 (medium) as the lineup question"
     },
     {
       "target": "term:Mignonette",
@@ -1629,10 +1629,10 @@
       "value": {
         "term": "Sazerac",
         "say": "SAZ-uh-rak",
-        "toGuest": "The Sazerac is New Orleans' official cocktail, rye stirred with Peychaud's in a glass rinsed with Herbsaint."
+        "toGuest": "The Sazerac is New Orleans' official cocktail: ours is rye stirred with Peychaud's in a glass rinsed with Herbsaint, and the first Sazeracs were made on Cognac, as our Origin Story is."
       },
-      "reason": "widened lexicon",
-      "source": "dossier-the-kitchen section 13; pdf p39"
+      "reason": "widened lexicon; the line names the Cognac origin so it is true of every Sazerac it is linked to, the Classic, Thompson's Dream and Origin Story (the review asked to drop Origin Story; it is a Sazerac on the guide's own page, so the line was mended instead)",
+      "source": "dossier-the-kitchen section 13; pdf p39; gap-roost-3; dossier-the-bar section 7"
     },
     {
       "target": "term:+",
@@ -2378,11 +2378,18 @@
       "value": {
         "title": "A child at the table",
         "guest": "Anything for a six-year-old?",
-        "you": "We have a children’s menu, I’ll bring it over. From ours, the cheddar grits, an egg any style, bacon and the French toast are the favourites. When the Bananas Foster is lit she’ll love it from her seat; we keep little ones back from the cart.",
-        "principle": "Child’s order in first and out fast; cart distance; make the flame a treat. Carry the real card; the children’s menu is not in the guide."
+        "you": "Yes, our children's menu is for ten and under, $25.00 for three courses with a drink. If she likes things plain, the grilled cheese or the buttered noodles; at breakfast, the vanilla French toast with berries and whipped cream. I'll put her order in first so it comes out quickly, and when the Bananas Foster is lit she'll love it from her seat; we keep little ones back from the cart.",
+        "principle": "Child's order in first and out fast; cart distance; make the flame a treat. Read from the children's card for the meal and confirm today's kid's drink.",
+        "items": [
+          "Grilled Cheese Sandwich with Brabant Potatoes",
+          "Grilled Cheese Sandwich with French Fries",
+          "Buttered Noodles with Cheese",
+          "Vanilla French Toast with Fresh Berries and Whipped Cream",
+          "World Famous Bananas Foster"
+        ]
       },
-      "reason": "addition",
-      "source": "dossier-the-floor section 8; gap-kids-9"
+      "reason": "addition; rewritten from the children's plates now in the pack, so it no longer sends a child to the adult menu or says the card is missing",
+      "source": "dossier-the-floor section 8; gap-kids-1 to gap-kids-9; pages/brennansneworleans-kids-menus-2026-10-03.txt"
     },
     {
       "target": "scenario:+",
@@ -3213,7 +3220,7 @@
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "Brabant potatoes: how are they finished (garlic butter and parsley) and in which fryer? Which pronunciation does the floor use, bra-BAHN or bruh-BANT?",
+        "question": "Brabant potatoes: how are they finished (garlic butter and parsley) and in which fryer? The guide prints bra-BAHNT; does the floor say it that way, or bra-BAHN or bruh-BANT?",
         "askWhom": "chef",
         "items": [
           "Brabant Potatoes"
@@ -3401,12 +3408,12 @@
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "Is valet offered, at which services and at what price, and are the two validated garages (535 Chartres and 716 Iberville) still current? Confirm the children's menu prices on the live card, and what the kid's drink is.",
+        "question": "Is valet offered, at which services and at what price, and are the two validated garages (535 Chartres and 716 Iberville) still current?",
         "askWhom": "manager",
         "items": []
       },
-      "reason": "forThePack",
-      "source": "gap-floor-5; floor-service-16; gap-kids-2; gap-kids-8"
+      "reason": "forThePack; the children's menu half moved to its own question, which now links the eight plates",
+      "source": "gap-floor-5; floor-service-16"
     },
     {
       "target": "ask:+",
@@ -3441,7 +3448,7 @@
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "Which pronunciations does the house use: hoo-SARD or hoo-ZARD for Hussarde, TAH-so or TASS-oh, bra-BAHN or bruh-BANT, and how does the kitchen say Tien Dat and Nueske's?",
+        "question": "Which pronunciations does the house use: hoo-SARD or hoo-ZARD for Hussarde, TAH-so or TASS-oh, bra-BAHNT as the guide prints it or bra-BAHN or bruh-BANT, and how does the kitchen say Tien Dat and Nueske's?",
         "askWhom": "manager",
         "items": [
           "Eggs Hussarde",
@@ -3645,25 +3652,36 @@
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "The children’s menu: is every item still one price at breakfast and at dinner, what is on it today, and are high chairs on hand? The page was never read for the pack; quote the live card and confirm the count with the host stand.",
+        "question": "The children's menu: is every plate still $25.00 at breakfast and at dinner, what is today's kid's drink, and how many high chairs are on hand?",
         "askWhom": "manager",
-        "items": []
+        "items": [
+          "Eggs Any Style with Toast and Bacon",
+          "Popcorn Shrimp with Brabant Potatoes",
+          "Vanilla French Toast with Fresh Berries and Whipped Cream",
+          "Grilled Cheese Sandwich with Brabant Potatoes",
+          "Fried Gulf Shrimp with French Fries",
+          "Buttered Noodles with Cheese",
+          "Sautéed Gulf Fish with Potato and Green Beans",
+          "Grilled Cheese Sandwich with French Fries"
+        ]
       },
-      "reason": "the kids’ menu was never read; its price and the high chairs are confirm items",
-      "source": "verified-facts gap-kids-2 and gap-kids-7"
+      "reason": "The children's card is now in the pack from the web card as read on 3 October 2026; what stays to confirm is the price, the kid's drink and the high chairs",
+      "source": "verified-facts gap-kids-2, gap-kids-7 and gap-kids-8; pages/brennansneworleans-kids-menus-2026-10-03.txt"
     },
     {
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "The Roost Bar luxury cocktails (Flamingo, Birdcage, Spoonbill): the measures, glass and garnish for each, and whether the two premium Sazeracs (Thompson’s Dream and Origin Story) are rung under the Sazerac section or the luxury page.",
+        "question": "Are the two premium Sazeracs (Thompson’s Dream and Origin Story) rung under the Sazerac section or on the luxury page?",
         "askWhom": "bar",
         "items": [
-          "Classic Sazerac"
+          "Classic Sazerac",
+          "Thompson’s Dream",
+          "Origin Story"
         ]
       },
-      "reason": "the Luxury Roost page was never read; measures, glass and garnish are confirm items and the two premium Sazeracs sit on present evidence only",
-      "source": "verified-facts gap-roost-1 and gap-roost-3; guide p39 for the two names"
+      "reason": "The measures, glass and garnish of the three Roost cocktails each have their own question now; this one keeps only where the premium Sazeracs are rung",
+      "source": "verified-facts gap-roost-3; guide p39 for the two names"
     },
     {
       "target": "ask:+",
@@ -3700,6 +3718,2338 @@
       },
       "reason": "the research confirms the printed sourcing line from a snippet and asks that each name be confirmed before it is said",
       "source": "verified-facts gap-sourcing-2 and gap-sourcing-4; guide p28"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Sfumato Rabarbaro",
+        "say": "sfoo-MAH-toh rah-BAR-bah-roh",
+        "toGuest": "Sfumato Rabarbaro is an Italian rhubarb amaro with a smoky edge; it gives the Havana its bittersweet depth."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); the product from bar-list-12"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Lillet Blanc",
+        "say": "lee-LAY BLAHN",
+        "toGuest": "Lillet Blanc is a light French aperitif wine, floral and citrusy; it softens the gin in the Niagara Falls."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); bar-list-12"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Peychaud's Aperitivo",
+        "say": "PAY-shoze ah-peh-ree-TEE-voh",
+        "toGuest": "Peychaud's Aperitivo is a bittersweet red aperitif under the same New Orleans name as our Sazerac bitters; it gives the Yellowstone its edge."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "Peychaud's: the research respelling (dossier-the-kitchen, PAY-shoze); aperitivo: standard respelling (no research respelling found); bar-list-12"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Uncle Nearest",
+        "say": "UN-kul NEER-ist",
+        "toGuest": "Uncle Nearest 1884 is the small batch whiskey at the heart of the Yellowstone."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); bar-list-12"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Appleton Estate",
+        "say": "AP-ul-tun es-TAYT",
+        "toGuest": "Appleton Estate 12 Year Old is an aged rum, rich with brown sugar and oak; it is the base of the Havana."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); bar-list-12"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Milagro",
+        "say": "mee-LAH-groh",
+        "toGuest": "Milagro Silver is an unaged tequila, clean and bright; it is the base of the Acapulco."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); bar-list-12"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Monkey 47",
+        "say": "MUNG-kee forty-SEV-en",
+        "toGuest": "Monkey 47 is a Black Forest gin bottled at 47 percent, with a big botanical lift; it goes into the Flamingo."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); gap-roost-live section 1 (Black Forest dry gin at 47 percent)"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Chopin",
+        "say": "SHOH-pan",
+        "toGuest": "Chopin is a Polish potato vodka, smooth and round; it goes into the Flamingo."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); gap-roost-live section 1 (Polish potato vodka)"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Taittinger",
+        "say": "teh-tan-ZHAY (TAT-in-jer is often heard)",
+        "toGuest": "Taittinger is one of the great Champagne houses; its La Française is the Champagne in the Flamingo."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); gap-roost-1"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Rabbit Hole Dareringer",
+        "say": "RAB-it hole DAIR-ring-er",
+        "toGuest": "Rabbit Hole Dareringer is a Kentucky straight bourbon from Louisville, finished in PX sherry casks; it is the base of the Birdcage."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); gap-roost-live section 1"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Cap Corse Mattei",
+        "say": "kap KORS mah-TAY",
+        "toGuest": "Cap Corse Mattei Blanc is a Corsican quinquina, a wine aperitif with a gentle bitterness; it goes into the Spoonbill."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); gap-roost-live section 1 (Corsican quinquina aperitif wine)"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Quinquina",
+        "say": "kan-kee-NAH",
+        "toGuest": "A quinquina is a wine aperitif with a gentle bitterness, from the same bark that gives tonic water its bite."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); gap-roost-live section 1"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Hendrick's",
+        "say": "HEN-dricks",
+        "toGuest": "Hendrick's is a Scottish gin with cucumber and rose; it is the base of the Spoonbill."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); gap-roost-live section 1 (Scottish gin with cucumber and rose)"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Willett",
+        "say": "WILL-it",
+        "toGuest": "Willett is a family distillery in Bardstown, Kentucky, founded in 1936; its 4-year rye makes Thompson's Dream."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); dossier-the-bar section 6"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Dudognon",
+        "say": "doo-doh-NYOHN",
+        "toGuest": "Dudognon is a family Cognac estate in Grande Champagne, Cognac's first growth; it is the base of Origin Story."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); dossier-the-bar section 7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Jade Nouvelle-Orléans",
+        "say": "ZHAHD noo-VEL or-lay-AHN",
+        "toGuest": "Jade Nouvelle-Orléans is an absinthe created by a New Orleans native as a tribute to the city's nineteenth century absinthe houses; it is in Origin Story."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); dossier-the-bar section 7"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "St. George",
+        "say": "saint JORJ",
+        "toGuest": "St. George Absinthe Verte, from California, was the first American absinthe made legally after the 1912 ban; it rinses the glass for Thompson's Dream."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); dossier-the-bar sections 5 and 6"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Bitter Truth",
+        "say": "As it reads: Bitter Truth.",
+        "toGuest": "The Bitter Truth is a bitters maker from Munich; its Creole Bitters are a tribute to the New Orleans style, built for the Sazerac."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "as it reads; dossier-the-bar section 6"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Café glacé",
+        "say": "ka-FAY gla-SAY",
+        "toGuest": "Café glacé is French for iced coffee; ours is chicory cold brew with cardamom-clove syrup and orange flower foam."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); pdf p49; dossier-the-bar section 12"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Rémoulade",
+        "say": "ray-moo-LAHD",
+        "toGuest": "Rémoulade is a tangy, herby sauce for dipping; ours carries chives and comes with the crawfish meat pies."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); pdf p49"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Mezcal",
+        "say": "mez-KAL",
+        "toGuest": "Mezcal is tequila's smoky agave cousin; it goes into the Acapulco."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); bar-list-12"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Angostura",
+        "say": "ang-guh-STOO-ruh",
+        "toGuest": "Angostura is the classic aromatic bitters of an Old Fashioned; it goes into the Birdcage."
+      },
+      "reason": "A hard name the new drinks or snacks bring to the table",
+      "source": "standard respelling (no research respelling found); gap-roost-1"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Yellowstone",
+        "section": "Summer Vacations of 1946",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "price": "$18.00",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$18.00"
+          },
+          {
+            "meal": "Dinner",
+            "printed": "$18.00"
+          }
+        ],
+        "spec": [
+          "Uncle Nearest 1884 Small Batch Whiskey",
+          "Peychaud's Aperitivo",
+          "housemade honey and turmeric syrup",
+          "lemon"
+        ],
+        "family": "Whiskey sour family",
+        "spirit": "Whiskey",
+        "zeroProof": false,
+        "note": "From the house cocktails page, Summer Vacations of 1946, as the search index read it on 3 October 2026. Measures, method, glass and garnish are not printed, and a fall list was expected: read the list you are handed on shift.",
+        "parts": {
+          "main": "Uncle Nearest 1884 small batch whiskey",
+          "technique": "whiskey balanced with honey syrup and lemon; the method and measures are not printed",
+          "sauce": "Peychaud's Aperitivo, housemade honey and turmeric syrup, lemon",
+          "sides": "",
+          "taste": "honeyed and bright, a bittersweet aperitivo edge over the whiskey and a warm note of turmeric"
+        },
+        "lines": {
+          "s10": "The Yellowstone: Uncle Nearest whiskey with Peychaud's Aperitivo, our honey and turmeric syrup, and lemon.",
+          "s20": "From our Summer Vacations of 1946 list, the Yellowstone is Uncle Nearest 1884 whiskey with lemon, our housemade honey and turmeric syrup and Peychaud's Aperitivo: honeyed, bright and a little bittersweet.",
+          "s45": "Our cocktail list is themed Summer Vacations of 1946, the year Brennan's opened, and the Yellowstone is the national park trip. It's Uncle Nearest 1884, a small batch whiskey, with fresh lemon, a honey and turmeric syrup we make here, and Peychaud's Aperitivo, a bittersweet red aperitif under the same New Orleans name as our Sazerac bitters. Honey and lemon make it easy to drink, and the aperitivo gives it a grown-up edge. If you like a whiskey sour, you'll like this."
+        },
+        "say": "YELLOW-stone. Peychaud's is PAY-shoze.",
+        "guest": "Uncle Nearest whiskey with honey, turmeric, lemon and Peychaud's Aperitivo: honeyed, bright and a little bittersweet.",
+        "why": "Sell it to the whiskey sour drinker and to anyone who wants something lighter than a Sazerac; at $18.00 it is the top of the 1946 list.",
+        "upsells": [
+          "Classic Sazerac",
+          "Thompson’s Dream",
+          "Black Hills"
+        ]
+      },
+      "reason": "The 1946 list as the cocktails page printed it on 3 October 2026; upsells are a bartender's read: the Sazerac as the next round for a guest who likes the Peychaud's name, Thompson's Dream as the step up, the Black Hills as the spirit-free sour",
+      "source": "bar-list-12; gap-roost-2; pages/brennansneworleans-cocktails-2026-10-03.txt; pdf p50 (opened 1946)"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Miami Beach",
+        "section": "Summer Vacations of 1946",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "price": "$14.00",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$14.00"
+          },
+          {
+            "meal": "Dinner",
+            "printed": "$14.00"
+          }
+        ],
+        "spec": [
+          "sparkling wine",
+          "local watermelon juice",
+          "fresh citrus"
+        ],
+        "family": "Sparkling cocktail",
+        "spirit": "Sparkling wine",
+        "zeroProof": false,
+        "note": "From the house cocktails page, Summer Vacations of 1946, as the search index read it on 3 October 2026. Measures, method, glass and garnish are not printed, and a fall list was expected: read the list you are handed on shift.",
+        "parts": {
+          "main": "sparkling wine",
+          "technique": "sparkling wine with fresh juice; the method and measures are not printed",
+          "sauce": "local watermelon juice and fresh citrus",
+          "sides": "",
+          "taste": "light, fizzy and fruity, watermelon brightened by citrus"
+        },
+        "lines": {
+          "s10": "The Miami Beach: sparkling wine with local watermelon juice and fresh citrus. Light and summery.",
+          "s20": "The Miami Beach is the lightest drink on our 1946 list: sparkling wine with local watermelon juice and fresh citrus. Fizzy, fruity and gentler than a spirit cocktail, it is a lovely brunch or courtyard drink.",
+          "s45": "If you'd like something light, the Miami Beach is the beach stop on our Summer Vacations of 1946 list. It's sparkling wine with local watermelon juice and fresh citrus, so it's fizzy, fruity and gentle, lighter than a spirit cocktail. It's a natural at brunch or out in the courtyard. If you'd love the same idea without alcohol, our Catalina Island is watermelon and tonic, and to go grander after your meal, come up to the Roost Bar for the Flamingo, made with Taittinger Champagne."
+        },
+        "say": "As it reads: Miami Beach.",
+        "guest": "Sparkling wine with local watermelon juice and fresh citrus: fizzy, fruity and light.",
+        "why": "The easy yes at brunch and in the courtyard, and the lowest price on the 1946 list at $14.00; the sparkling twin of the Catalina Island.",
+        "upsells": [
+          "Acapulco",
+          "Niagara Falls",
+          "Catalina Island"
+        ]
+      },
+      "reason": "The 1946 list as printed; upsells, all poured in the dining room at the same meals: the Acapulco as the fruit-forward next round, the Niagara Falls as the other light, crisp drink, the Catalina Island as the spirit-free watermelon twin. The Flamingo is poured only in the Roost Bar, so it is a 'come to the Roost after' line in the forty-five seconds, never an upsell",
+      "source": "bar-list-12; gap-roost-1; gap-roost-2; pages/brennansneworleans-cocktails-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Niagara Falls",
+        "section": "Summer Vacations of 1946",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "price": "$15.00",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$15.00"
+          },
+          {
+            "meal": "Dinner",
+            "printed": "$15.00"
+          }
+        ],
+        "spec": [
+          "gin",
+          "Lillet Blanc",
+          "tomato water",
+          "lemon"
+        ],
+        "family": "Gin cocktail, savory",
+        "spirit": "Gin",
+        "zeroProof": false,
+        "note": "From the house cocktails page, Summer Vacations of 1946, as the search index read it on 3 October 2026. Measures, method, glass and garnish are not printed, and a fall list was expected: read the list you are handed on shift.",
+        "parts": {
+          "main": "gin",
+          "technique": "gin with an aperitif wine and lemon; the method and measures are not printed",
+          "sauce": "Lillet Blanc, tomato water, lemon",
+          "sides": "",
+          "taste": "crisp and savory, the clean freshness of tomato with citrus and a soft floral wine note"
+        },
+        "lines": {
+          "s10": "The Niagara Falls: gin, Lillet Blanc, tomato water and lemon. Crisp, savory and refreshing.",
+          "s20": "The Niagara Falls is gin with Lillet Blanc, a light French aperitif wine, plus tomato water and lemon: crisp and savory, like the freshest part of a ripe tomato, with a soft floral note.",
+          "s45": "The Niagara Falls is the gin drink on our 1946 list. It's gin with Lillet Blanc, a light French aperitif wine, then tomato water, the clear juice of ripe tomatoes, and fresh lemon. So it tastes crisp and savory rather than sweet, with a gentle floral, citrusy lift from the Lillet. It's lovely before a meal and with oysters or the Creole tomato tostada. If you like a martini but want something lighter, this is the one. After your meal, our Roost Bar pours the Spoonbill, the grand gin drink."
+        },
+        "say": "Lillet Blanc is lee-LAY BLAHN.",
+        "guest": "Gin with Lillet Blanc, tomato water and lemon: crisp, savory and refreshing.",
+        "why": "The savory, not sweet, drink on the list: offer it to a martini or gin drinker and before oysters.",
+        "upsells": [
+          "Miami Beach",
+          "Acapulco",
+          "Catalina Island"
+        ]
+      },
+      "reason": "The 1946 list as printed; upsells, all poured in the dining room at the same meals: the Miami Beach as the other light, crisp round, the Acapulco as the herbal next round, the Catalina Island as the spirit-free twin (the guide pairs watermelon with tomato). The Spoonbill is poured only in the Roost Bar, so it is a 'come to the Roost after' line, never an upsell",
+      "source": "bar-list-12; gap-roost-2; pages/brennansneworleans-cocktails-2026-10-03.txt; pdf p11 (Catalina Island with the tostada)"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Havana",
+        "section": "Summer Vacations of 1946",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "price": "$17.00",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$17.00"
+          },
+          {
+            "meal": "Dinner",
+            "printed": "$17.00"
+          }
+        ],
+        "spec": [
+          "Appleton Estate 12 Year Old rum",
+          "Sfumato Rabarbaro",
+          "brown sugar syrup",
+          "lime",
+          "ginger beer"
+        ],
+        "family": "Rum and ginger beer",
+        "spirit": "Rum",
+        "zeroProof": false,
+        "note": "From the house cocktails page, Summer Vacations of 1946, as the search index read it on 3 October 2026. Measures, method, glass and garnish are not printed, and a fall list was expected: read the list you are handed on shift.",
+        "parts": {
+          "main": "Appleton Estate 12 Year Old rum",
+          "technique": "aged rum lengthened with ginger beer; the method and measures are not printed",
+          "sauce": "Sfumato Rabarbaro, brown sugar syrup, lime, ginger beer",
+          "sides": "",
+          "taste": "rich aged rum and brown sugar, ginger spice and lime, with a smoky bittersweet edge"
+        },
+        "lines": {
+          "s10": "The Havana: Appleton 12 rum with Sfumato Rabarbaro, brown sugar, lime and ginger beer.",
+          "s20": "The Havana is Appleton Estate 12 Year Old rum with brown sugar syrup, lime and ginger beer, and Sfumato Rabarbaro, a smoky Italian rhubarb amaro: spicy, rich and refreshing at once.",
+          "s45": "The Havana is the island stop on our 1946 list. It's built on Appleton Estate 12 Year Old, an aged rum with plenty of brown sugar and oak, with more brown sugar syrup, fresh lime and spicy ginger beer, so it drinks like a richer rum and ginger. Then Sfumato Rabarbaro, an Italian rhubarb amaro with a smoky edge, adds depth and a bittersweet finish. If you like a dark and stormy, this is your drink."
+        },
+        "say": "Sfumato Rabarbaro is sfoo-MAH-toh rah-BAR-bah-roh.",
+        "guest": "Aged Appleton rum with brown sugar, lime, ginger beer and a smoky rhubarb amaro: spicy, rich and refreshing.",
+        "why": "The brown spirit drink that still refreshes: sell it to the rum and ginger drinker, and as the next round after a Sazerac on a warm day.",
+        "upsells": [
+          "Yellowstone",
+          "Dulce de Leche",
+          "Black Hills"
+        ]
+      },
+      "reason": "The 1946 list as printed; upsells, all poured in the dining room at the same meals: the Yellowstone as the brown spirit step up on the same list, the Dulce de Leche as the rum dessert round, the Black Hills as the spirit-free lime twin. The Birdcage is poured only in the Roost Bar, so it is never an upsell from the dining room",
+      "source": "bar-list-12; gap-roost-2; pages/brennansneworleans-cocktails-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Acapulco",
+        "section": "Summer Vacations of 1946",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "price": "$16.00",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$16.00"
+          },
+          {
+            "meal": "Dinner",
+            "printed": "$16.00"
+          }
+        ],
+        "spec": [
+          "Milagro Silver Tequila",
+          "mezcal",
+          "melon and basil purée"
+        ],
+        "family": "Agave cocktail",
+        "spirit": "Tequila and mezcal",
+        "zeroProof": false,
+        "note": "From the house cocktails page, Summer Vacations of 1946, as the search index read it on 3 October 2026. Measures, method, glass and garnish are not printed, and a fall list was expected: read the list you are handed on shift.",
+        "parts": {
+          "main": "Milagro Silver tequila with mezcal",
+          "technique": "tequila and mezcal with a fresh fruit and herb purée; the method and measures are not printed",
+          "sauce": "melon and basil purée",
+          "sides": "",
+          "taste": "juicy melon and green basil over clean agave, with a hint of smoke from the mezcal"
+        },
+        "lines": {
+          "s10": "The Acapulco: Milagro Silver tequila and mezcal with a melon and basil purée. Fresh and herbal.",
+          "s20": "The Acapulco is Milagro Silver tequila with mezcal and a melon and basil purée: fresh and fruity, green and herbal, with a hint of smoke from the mezcal.",
+          "s45": "The Acapulco is the Pacific beach on our 1946 list. It's Milagro Silver, an unaged tequila, with mezcal, tequila's smoky agave cousin, and a fresh purée of melon and basil. You taste juicy melon first, then green basil, then clean agave with a hint of smoke. It's bright and easy to drink. If you'd like the same feel without alcohol, the Black Hills is agave, basil and lime, and it's spirit-free."
+        },
+        "say": "ah-kah-POOL-koh. Milagro is mee-LAH-groh; mezcal is mez-KAL.",
+        "guest": "Milagro Silver tequila and mezcal with a melon and basil purée: fresh, herbal and a little smoky.",
+        "why": "For the tequila or margarita drinker; the spirited twin of the Black Hills, which shares its agave and basil.",
+        "upsells": [
+          "Black Hills",
+          "Havana"
+        ]
+      },
+      "reason": "The 1946 list as printed; upsells: the Black Hills as the spirit-free twin (agave and basil), the Havana as the next round",
+      "source": "bar-list-12; gap-roost-2; pages/brennansneworleans-cocktails-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Flamingo",
+        "section": "Luxury Roost Bar Cocktails",
+        "meals": [
+          "Roost Bar & Lounge"
+        ],
+        "price": "$28.00",
+        "prices": [
+          {
+            "meal": "Roost Bar & Lounge",
+            "printed": "$28.00"
+          }
+        ],
+        "spec": [
+          "Chopin Vodka",
+          "Monkey 47 Schwarzwald Gin",
+          "dragonfruit",
+          "lemon",
+          "Taittinger La Française Champagne"
+        ],
+        "family": "Champagne cocktail",
+        "spirit": "Vodka and gin",
+        "zeroProof": false,
+        "note": "From the Luxury Roost Bar Cocktails page as the search index read it on 3 October 2026, poured only in the Roost Bar and Lounge. Measures, glass and garnish are not printed: confirm with the bar.",
+        "parts": {
+          "main": "Chopin vodka and Monkey 47 Schwarzwald gin",
+          "technique": "vodka and gin with fruit and lemon and Taittinger Champagne; the method and measures are not printed",
+          "sauce": "dragonfruit, lemon, Taittinger La Française Champagne",
+          "sides": "",
+          "taste": "bright, fruity and dry, citrus and gin botanicals under fine Champagne bubbles"
+        },
+        "lines": {
+          "s10": "The Flamingo: Chopin vodka and Monkey 47 gin with dragonfruit, lemon and Taittinger Champagne. Only in the Roost Bar.",
+          "s20": "The Flamingo is one of our three luxury cocktails, poured only in the Roost Bar: Chopin vodka and Monkey 47 gin with dragonfruit and lemon, and Taittinger La Française Champagne. Bright, fruity and celebratory.",
+          "s45": "Our Roost Bar keeps three luxury cocktails, and the Flamingo is the celebration. It pairs Chopin, a Polish potato vodka, with Monkey 47, a Black Forest gin with a big botanical lift, then dragonfruit, fresh lemon and Taittinger La Française Champagne. You get bright fruit and citrus, then fine bubbles, celebratory from the first sip. It's $28.00 and poured only in the Roost Bar and Lounge, so it's a fine reason to start or end the evening there."
+        },
+        "say": "Chopin is SHOH-pan; Taittinger is teh-tan-ZHAY.",
+        "guest": "Chopin vodka and Monkey 47 gin with dragonfruit, lemon and Taittinger Champagne: bright, fruity and celebratory.",
+        "why": "The Roost's celebration drink at $28.00: offer it for an anniversary or a birthday when the guest wants a cocktail rather than a glass of Rare.",
+        "upsells": [
+          "Spoonbill",
+          "Birdcage"
+        ]
+      },
+      "reason": "The luxury page as the search index read it twice on 3 October 2026; the snippet spells the house Tattinger and the producer is Taittinger; upsells: the other two luxury drinks, since the page pours them exclusively in the Roost Bar and Lounge and a Roost drink upsells among the Roost's own",
+      "source": "gap-roost-1; research/gap-roost-live-2026-10-03.md section 1; pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Birdcage",
+        "section": "Luxury Roost Bar Cocktails",
+        "meals": [
+          "Roost Bar & Lounge"
+        ],
+        "price": "$31.00",
+        "prices": [
+          {
+            "meal": "Roost Bar & Lounge",
+            "printed": "$31.00"
+          }
+        ],
+        "spec": [
+          "Rabbit Hole Dareringer Bourbon",
+          "Angostura bitters",
+          "orange",
+          "cherry"
+        ],
+        "method": "a smoked Old Fashioned (the smoking method is not printed)",
+        "family": "Old Fashioned, smoked",
+        "spirit": "Bourbon",
+        "zeroProof": false,
+        "note": "From the Luxury Roost Bar Cocktails page as the search index read it on 3 October 2026, poured only in the Roost Bar and Lounge. Measures, glass and garnish are not printed: confirm with the bar.",
+        "parts": {
+          "main": "Rabbit Hole Dareringer bourbon",
+          "technique": "built as an Old Fashioned and smoked; the smoking method and measures are not printed",
+          "sauce": "Angostura bitters, orange, cherry",
+          "sides": "",
+          "taste": "rich bourbon with dried fruit from the sherry cask finish, bitters, orange and cherry, wrapped in smoke"
+        },
+        "lines": {
+          "s10": "The Birdcage: a smoked Old Fashioned on Rabbit Hole Dareringer bourbon, with Angostura bitters, orange and cherry.",
+          "s20": "The Birdcage is our smoked Old Fashioned, made with Rabbit Hole Dareringer, a Kentucky bourbon finished in sherry casks, with Angostura bitters, orange and cherry: rich, smoky and smooth. Only in the Roost Bar.",
+          "s45": "If you love an Old Fashioned, the Birdcage is the luxury version, poured only in our Roost Bar. It's Rabbit Hole Dareringer, a Kentucky straight bourbon from Louisville finished in PX sherry casks, so it carries dried fruit and a little extra richness. It's built with Angostura bitters, orange and cherry, then smoked, so the first thing you meet is the aroma. Rich, smoky and smooth, a slow sipper at $31.00."
+        },
+        "say": "Dareringer is DAIR-ring-er; Angostura is ang-guh-STOO-ruh.",
+        "guest": "Our smoked Old Fashioned on Rabbit Hole Dareringer bourbon, with Angostura, orange and cherry: rich, smoky and smooth.",
+        "why": "The Old Fashioned drinker's step up at $31.00, poured only in the Roost; offer it to the guest who comes up to the bar after dinner for a slow nightcap.",
+        "upsells": [
+          "Spoonbill",
+          "Flamingo"
+        ]
+      },
+      "reason": "The luxury page as read; the bourbon facts are the research's product notes; upsells: the other two luxury drinks, poured in the same room; the premium Sazeracs are dining room drinks and so not an upsell from the Roost",
+      "source": "gap-roost-1; research/gap-roost-live-2026-10-03.md section 1 (expert, high on the products); pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Spoonbill",
+        "section": "Luxury Roost Bar Cocktails",
+        "meals": [
+          "Roost Bar & Lounge"
+        ],
+        "price": "$36.00",
+        "prices": [
+          {
+            "meal": "Roost Bar & Lounge",
+            "printed": "$36.00"
+          }
+        ],
+        "spec": [
+          "Hendrick's Gin",
+          "Cap Corse Mattei Blanc Quinquina vermouth",
+          "chive oil"
+        ],
+        "garnish": "a spoon of caviar",
+        "family": "Martini style",
+        "spirit": "Gin",
+        "zeroProof": false,
+        "note": "From the Luxury Roost Bar Cocktails page as the search index read it on 3 October 2026, poured only in the Roost Bar and Lounge. Measures, glass and garnish are not printed: confirm with the bar.",
+        "parts": {
+          "main": "Hendrick's gin",
+          "technique": "gin and a Corsican quinquina with chive oil; the method and measures are not printed",
+          "sauce": "Cap Corse Mattei Blanc quinquina, chive oil",
+          "sides": "a spoon of caviar served alongside",
+          "taste": "cool cucumber and rose from the gin, a gentle bitter wine note, savory green chive, then the salt of caviar"
+        },
+        "lines": {
+          "s10": "The Spoonbill: Hendrick's gin and Cap Corse Mattei Blanc quinquina with chive oil, served with a spoon of caviar.",
+          "s20": "The Spoonbill is the grandest of our three luxury cocktails: Hendrick's gin with Cap Corse Mattei Blanc, a Corsican quinquina aperitif, and chive oil, served with a spoon of caviar. Savory, cool and elegant, only in the Roost Bar.",
+          "s45": "The Spoonbill is the grandest of the three luxury cocktails in our Roost Bar. It's Hendrick's, a Scottish gin with cucumber and rose, with Cap Corse Mattei Blanc, a Corsican quinquina, which is an aperitif wine with a gentle bitterness, and chive oil for a savory, green note. It comes with a spoon of caviar, so you taste cool gin and then the salt of the caviar. It's $36.00, a martini drinker's treat."
+        },
+        "say": "Cap Corse Mattei is kap KORS mah-TAY; quinquina is kan-kee-NAH.",
+        "guest": "Hendrick's gin and Cap Corse Mattei Blanc quinquina with chive oil, served with a spoon of caviar.",
+        "why": "The martini drinker's luxury at $36.00 in the Roost; the caviar makes it a moment, so offer it at the start of a celebration.",
+        "upsells": [
+          "Flamingo",
+          "Birdcage"
+        ]
+      },
+      "reason": "The luxury page as read; the gin and quinquina facts are the research's product notes; upsells: the other two luxury drinks",
+      "source": "gap-roost-1; research/gap-roost-live-2026-10-03.md section 1; pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Thompson’s Dream",
+        "section": "Premium Sazeracs",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "price": "$20",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$20"
+          },
+          {
+            "meal": "Dinner",
+            "printed": "$20"
+          }
+        ],
+        "spec": [
+          "Willett 4-year rye",
+          "Bitter Truth Creole Bitters",
+          "St. George absinthe rinse"
+        ],
+        "family": "Sazerac",
+        "spirit": "Rye whiskey",
+        "zeroProof": false,
+        "note": "Printed in the guide only inside the Classic Sazerac service note (pdf p39) with its build and price; the cocktails page shows the Sazerac's premium variations at $20.00 and $40.00. No measures, glass or garnish printed: the build follows the Classic, so confirm with the bar.",
+        "parts": {
+          "main": "Willett 4-year rye",
+          "technique": "built in the Sazerac pattern into a glass rinsed with St. George absinthe; the measures are not printed",
+          "sauce": "Bitter Truth Creole Bitters, St. George absinthe rinse",
+          "sides": "",
+          "taste": "louder rye spice and more heat than the Classic, with a greener, more herbal rinse"
+        },
+        "lines": {
+          "s10": "Thompson's Dream: our Sazerac stepped up, with Willett rye, Bitter Truth Creole Bitters and a St. George absinthe rinse.",
+          "s20": "Thompson's Dream is the first step up from our Classic Sazerac: Willett 4-year rye with Bitter Truth Creole Bitters, in a glass rinsed with St. George absinthe. Spicier and bolder, for a guest who already loves Sazeracs.",
+          "s45": "If you love the Sazerac, Thompson's Dream is the next rung. We use Willett 4-year rye, from a family distillery in Bardstown, Kentucky, which runs spicier and stronger than the classic's rye. The bitters are Bitter Truth Creole Bitters, made in Munich in the Creole style, and the glass is rinsed with St. George absinthe, the first American absinthe made legally after the old ban. Louder spice, a greener rinse, and it's $20. For a nightcap, our Roost Bar pours the Birdcage, a smoked Old Fashioned."
+        },
+        "say": "Willett is WILL-it; St. George is saint JORJ.",
+        "guest": "Our Sazerac stepped up: Willett 4-year rye, Bitter Truth Creole Bitters and a St. George absinthe rinse.",
+        "why": "The Sazerac ladder's middle rung at $20: offer it whenever a guest orders a second Sazerac.",
+        "origin": "The name is the house's own; no Willett bottling carries it, so say it is probably named for Thompson Willett, who founded the Willett distillery in Bardstown in 1936.",
+        "upsells": [
+          "Origin Story",
+          "Yellowstone"
+        ]
+      },
+      "reason": "The guide prints the build and price in the Sazerac service note; lines built from those printed parts and the research's product notes; upsells, both poured in the dining room at the same meals: Origin Story as the top rung, the Yellowstone as the lighter whiskey round. The Birdcage is poured only in the Roost Bar, so it is a 'come to the Roost after' line, never an upsell",
+      "source": "pdf p39; floor-service-19; gap-roost-3; dossier-the-bar section 6"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Origin Story",
+        "section": "Premium Sazeracs",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "price": "$40",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$40"
+          },
+          {
+            "meal": "Dinner",
+            "printed": "$40"
+          }
+        ],
+        "spec": [
+          "Dudognon Cognac",
+          "barrel-aged Peychaud's",
+          "Jade Nouvelle-Orléans absinthe"
+        ],
+        "family": "Sazerac",
+        "spirit": "Cognac",
+        "zeroProof": false,
+        "note": "Printed in the guide only inside the Classic Sazerac service note (pdf p39) with its build and price, the highest cocktail price the guide prints. No measures, glass or garnish printed; which Dudognon, and who ages the bitters, are lineup questions.",
+        "parts": {
+          "main": "Dudognon Cognac",
+          "technique": "built in the Sazerac pattern on Cognac with Jade absinthe; the measures are not printed",
+          "sauce": "barrel-aged Peychaud's, Jade Nouvelle-Orléans absinthe",
+          "sides": "",
+          "taste": "rounder than the Classic: grape, dried fruit and oak, a softer bitters note and a floral wormwood aroma"
+        },
+        "lines": {
+          "s10": "Origin Story: the Sazerac on Cognac, the way it began, with Dudognon, barrel-aged Peychaud's and Jade absinthe.",
+          "s20": "Origin Story is our top Sazerac: Dudognon Cognac with barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe. The first Sazeracs were Cognac and Peychaud's, so this is the drink the way it began, rounder and richer.",
+          "s45": "Origin Story is the Sazerac the way it began. The first Sazeracs were Cognac and Peychaud's, before rye took over, so we use Dudognon, a family estate in Grande Champagne, Cognac's first growth, with Peychaud's bitters rested in a barrel and Jade Nouvelle-Orléans absinthe, created by a New Orleans native as a tribute to the city's old absinthe houses. It's rounder than the classic: grape, dried fruit and oak with a floral finish. It's $40. After dinner, come up to the Roost Bar for the Birdcage, our smoked Old Fashioned."
+        },
+        "say": "Dudognon is doo-doh-NYOHN; Jade Nouvelle-Orléans is ZHAHD noo-VEL or-lay-AHN.",
+        "guest": "The Sazerac the way it began, on Cognac: Dudognon, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe.",
+        "why": "The top of the Sazerac ladder at $40: offer it at the Chateaubriand table or after the dinner tasting.",
+        "origin": "The first Sazeracs were Cognac and Peychaud's; rye took over once phylloxera made Cognac scarce in the 1870s and 1880s, so say the way it began, Cognac and Peychaud's, rather than the way it was first made.",
+        "upsells": [
+          "Thompson’s Dream",
+          "Brennan’s Irish Coffee"
+        ]
+      },
+      "reason": "The guide prints the build and price in the Sazerac service note; lines from those parts and the research's product and history notes; upsells, both poured in the dining room at the same meals: Thompson's Dream as the rye round, since nothing sits above it, and the Irish Coffee as the after-dinner close. The Birdcage is poured only in the Roost Bar, so it is a 'come to the Roost after' line, never an upsell",
+      "source": "pdf p39; gap-roost-3; dossier-the-bar sections 5 and 7"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Brennan’s Bloody Mary",
+        "section": "Eye openers",
+        "meals": [
+          "Breakfast & lunch"
+        ],
+        "price": "$11",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$11"
+          }
+        ],
+        "spec": [
+          "pickled okra",
+          "spicy beans"
+        ],
+        "garnish": "pickled okra and spicy beans",
+        "family": "Bloody Mary",
+        "spirit": "Vodka",
+        "zeroProof": false,
+        "note": "Printed in the guide only as an eye opener with its price and garnish (pdf p49) and as the Bloody Bull's alternative (pdf p39); no menu line. Ask the bar about the mix and the vodka.",
+        "parts": {
+          "main": "vodka, as a Bloody Mary is; the bar's spec is not printed",
+          "technique": "a Bloody Mary; ask the bar about the mix",
+          "sauce": "the Bloody Mary mix; ask the bar whether it is the Bloody Bull's housemade mix",
+          "sides": "pickled okra and spicy beans",
+          "taste": "savory, tangy and spicy, with a pickled crunch"
+        },
+        "lines": {
+          "s10": "Brennan's Bloody Mary, with pickled okra and spicy beans. A classic New Orleans eye opener.",
+          "s20": "Our Bloody Mary is one of our classic eye openers, and it comes with pickled okra and spicy beans: savory, tangy and bright. If you'd like it richer, the Bloody Bull adds beef bouillon.",
+          "s45": "Our Bloody Mary is one of the classic eye openers, the morning drinks New Orleans is known for. It comes with pickled okra and spicy beans, so you get a pickled crunch with the savory, tangy drink. It's the one to choose if you don't eat beef, because our other classic, the Bloody Bull, is the same idea with beef bouillon stirred in for a richer, meatier drink. Ask me about the spice level and I'll check with the bar."
+        },
+        "say": "As it reads: Bloody Mary.",
+        "guest": "Our Bloody Mary, with pickled okra and spicy beans: savory, tangy and bright.",
+        "why": "The eye opener for a guest who skips the beef in the Bloody Bull, at $11.",
+        "upsells": [
+          "Bloody Bull",
+          "Brandy Milk Punch",
+          "Catalina Island"
+        ]
+      },
+      "reason": "The guide prices it among the eye openers and offers it as the Bull's alternative; upsells: the Bull as the house classic step up, the milk punch as the next round, the Catalina Island as the spirit-free choice",
+      "source": "pdf p39, p49; dossier-the-bar section 4"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Brennan’s Champagne Cocktail",
+        "section": "Bubbles at Brennan's",
+        "meals": [
+          "Bubbles at Brennan's"
+        ],
+        "price": "$20",
+        "prices": [
+          {
+            "meal": "Bubbles at Brennan's",
+            "printed": "$20"
+          }
+        ],
+        "spec": [
+          "Champagne"
+        ],
+        "family": "Champagne cocktail",
+        "spirit": "Champagne",
+        "zeroProof": false,
+        "note": "Printed in the guide only by name and price at Bubbles at Brennan's (pdf p49), the one bubbly cocktail named; no build is printed. Ask the bar: bitters, sugar, Cognac or not, which wine, the glass.",
+        "parts": {
+          "main": "Champagne",
+          "technique": "the build is not printed; the classic is Champagne over a bitters-soaked sugar cube, so ask the bar for ours",
+          "sauce": "",
+          "sides": "",
+          "taste": "dry and sparkling; the classic keeps fizzing from the sugar cube up"
+        },
+        "lines": {
+          "s10": "Brennan's Champagne Cocktail, the house bubbly cocktail at Bubbles at Brennan's in the Roost Bar and courtyard.",
+          "s20": "Brennan's Champagne Cocktail is the one bubbly cocktail the house names at Bubbles at Brennan's. The classic is dry Champagne poured over a bitters-soaked sugar cube, so it keeps fizzing; I'll confirm our build with the bar.",
+          "s45": "At Bubbles at Brennan's, our afternoon Champagne service in the Roost Bar and courtyard, the house cocktail is Brennan's Champagne Cocktail at $20. The classic version, printed back in 1862, is a sugar cube soaked in bitters with dry Champagne poured over it, so it keeps fizzing from the bottom up, and some bars add a splash of Cognac. Our bar has its own build, and I'll tell you exactly what's in it. If you're here on a Friday at 5, stay for the sabering."
+        },
+        "say": "As it reads: Champagne Cocktail.",
+        "guest": "Our Champagne cocktail from Bubbles at Brennan's; the classic is Champagne over a bitters-soaked sugar cube.",
+        "why": "The one bubbly cocktail the guide names at Bubbles, $20; offer it in the courtyard and to anyone celebrating who wants more than a glass.",
+        "upsells": [
+          "Flamingo",
+          "Spoonbill"
+        ]
+      },
+      "reason": "The guide names it and prices it; the classic build is the research's and is said as the classic, never as the house build; upsells: Bubbles at Brennan's is held in the Roost Bar (and the courtyard), so the two luxury Roost drinks are the step up for a guest in the Roost; a courtyard guest is invited up to the bar rather than promised one at the table",
+      "source": "pdf p49; dossier-the-bar section 10"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "New Orleans-Style Coffee with Chicory",
+        "section": "Coffee & juice",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "price": "$11",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$11"
+          },
+          {
+            "meal": "Dinner",
+            "printed": "$11"
+          }
+        ],
+        "spec": [
+          "New Orleans-style coffee",
+          "chicory"
+        ],
+        "family": "Coffee",
+        "spirit": "",
+        "zeroProof": true,
+        "note": "Priced in the guide's Eye openers and coffee must-know (pdf p49): one $11 is printed before all three coffees, so whether each is $11 is a lineup question. The breakfast tasting pours it as Brennan's Private Blend Congregation Coffee and Chicory.",
+        "parts": {
+          "main": "coffee blended with roasted chicory root",
+          "technique": "brewed hot, New Orleans style",
+          "sauce": "chicory: roasty, gently bitter, almost chocolatey",
+          "sides": "served hot; ask how the guest takes it",
+          "taste": "dark, roasty and smooth, with a gentle bitterness that balances dessert"
+        },
+        "lines": {
+          "s10": "Our New Orleans-style coffee with chicory: roasty, smooth and gently bitter, the classic with dessert.",
+          "s20": "Our coffee is New Orleans style, blended with chicory, a roasted root the city has added to its coffee for generations. It's dark, roasty and smooth, and its gentle bitterness is perfect with Bananas Foster or bread pudding.",
+          "s45": "New Orleans coffee means coffee with chicory. Chicory is a roasted root; the city's habit is usually traced to wartime shortages in the 1860s, and it stuck because it adds body and a cocoa-like bitterness without any caffeine of its own. Our breakfast tasting pours Brennan's private blend from Congregation Coffee, an Algiers Point roaster. It's dark and smooth, and that bitterness is exactly what balances sweet desserts like the Bananas Foster, the bread pudding or the Snickers."
+        },
+        "say": "Chicory is CHICK-uh-ree.",
+        "guest": "Our New Orleans-style coffee with chicory: dark, roasty and smooth, with a gentle bitterness.",
+        "why": "The guide's zero-proof pick for the sweet plates: the French toast, the coffee cake, Bananas Foster, Cherries Jubilee, the bread pudding and the Snickers.",
+        "origin": "Chicory is the roasted root of Cichorium intybus; the New Orleans habit is usually traced to Civil War blockade shortages, with a French precedent. It adds body and a cocoa-like bitterness and no caffeine.",
+        "upsells": [
+          "Café Glacé de la Maison",
+          "Congregation Single-Origin Coffee"
+        ]
+      },
+      "reason": "The guide prices the coffees and names this one as the zero-proof pick on six dessert pairings; a spirit-free drink upsells only to spirit-free drinks, since the guest may not drink",
+      "source": "pdf p49; dossier-the-bar sections 8 and 12; gap-fill-2 (breakfast tasting page names the private blend)"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Congregation Single-Origin Coffee",
+        "section": "Coffee & juice",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "price": "$11",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$11"
+          },
+          {
+            "meal": "Dinner",
+            "printed": "$11"
+          }
+        ],
+        "spec": [
+          "single-origin Papua New Guinea",
+          "Congregation Coffee"
+        ],
+        "family": "Coffee",
+        "spirit": "",
+        "zeroProof": true,
+        "note": "Priced in the guide's Eye openers and coffee must-know (pdf p49), which prints a Papua New Guinea; no public listing shows that origin from Congregation, which rotates its single origins. Read the origin from the coffee card on shift.",
+        "parts": {
+          "main": "a single-origin coffee from Congregation Coffee",
+          "technique": "brewed hot; the origin on the card changes with the season",
+          "sauce": "one place's character, with no chicory",
+          "sides": "served hot",
+          "taste": "cleaner and brighter than the chicory blend; read today's tasting notes on the coffee card"
+        },
+        "lines": {
+          "s10": "Our single-origin coffee from Congregation Coffee, the Algiers Point roaster: a clean, bright cup, no chicory.",
+          "s20": "If you'd like coffee without chicory, we pour a single-origin coffee roasted by Congregation Coffee in Algiers Point, just across the river. It's a cleaner, brighter cup, and I'll tell you today's origin from the coffee card.",
+          "s45": "For a guest who wants coffee on its own terms, we pour a single-origin coffee from Congregation Coffee, a roaster in Algiers Point, across the river from the French Quarter. Single origin means the beans come from one place, so the cup tastes of that place rather than a blend, and there's no chicory, so it's cleaner and brighter than our New Orleans-style coffee. Congregation rotates its origins with the seasons, so I'll read you today's from the coffee card."
+        },
+        "say": "Say Congregation as it reads; single origin means the beans come from one place.",
+        "guest": "A single-origin coffee from Congregation Coffee in Algiers Point: a clean, bright cup, no chicory.",
+        "why": "For the coffee lover who wants no chicory; read the origin off the card on shift rather than naming Papua New Guinea from memory.",
+        "upsells": [
+          "New Orleans-Style Coffee with Chicory",
+          "Café Glacé de la Maison"
+        ]
+      },
+      "reason": "The guide prices it; the origin it prints is unconfirmed, so the lines name no country; spirit-free upsells only",
+      "source": "pdf p49; gap-sourcing-6; dossier-the-floor (Congregation in Algiers Point)"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Café Glacé de la Maison",
+        "section": "Coffee & juice",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "price": "$11",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$11"
+          },
+          {
+            "meal": "Dinner",
+            "printed": "$11"
+          }
+        ],
+        "spec": [
+          "chicory cold brew",
+          "cardamom-clove syrup",
+          "orange flower foam"
+        ],
+        "family": "Coffee",
+        "spirit": "",
+        "zeroProof": true,
+        "note": "Priced and built in the guide's Eye openers and coffee must-know (pdf p49); the guide pours it as the zero-proof pick with the baked apple, the turtle soup and the duck confit waffle.",
+        "parts": {
+          "main": "chicory cold brew",
+          "technique": "cold brewed and served cold",
+          "sauce": "cardamom-clove syrup, orange flower foam",
+          "sides": "orange flower foam on top",
+          "taste": "cold, roasty and lightly sweet, with warm spice and a floral orange lift"
+        },
+        "lines": {
+          "s10": "Café Glacé de la Maison: our chicory cold brew with cardamom-clove syrup and orange flower foam.",
+          "s20": "Café Glacé de la Maison is our house iced coffee: chicory cold brew sweetened with a cardamom and clove syrup, under an orange flower foam. Cold, roasty, gently spiced and floral, and no alcohol.",
+          "s45": "Café glacé is French for iced coffee, and ours is the house version. We start with chicory cold brew, so it's smooth and roasty, sweeten it with a syrup of cardamom and clove, the clove a nod to the city's flamed café brûlot, and top it with an orange flower foam. It's cold, lightly sweet and fragrant. It's lovely with the baked apple or the duck confit waffle, and it's the drink for anyone skipping the milk punch."
+        },
+        "say": "ka-FAY gla-SAY duh lah may-ZOHN.",
+        "guest": "Our chicory cold brew with cardamom-clove syrup and orange flower foam: cold, roasty, gently spiced.",
+        "why": "The guide's zero-proof pick for the baked apple, the turtle soup and the duck confit waffle, and the cold choice with the coffee cake; offer it to anyone skipping the milk punch.",
+        "upsells": [
+          "New Orleans-Style Coffee with Chicory",
+          "Black Hills"
+        ]
+      },
+      "reason": "The guide prices and builds it and names it as the zero-proof pick on three pairings; spirit-free upsells only",
+      "source": "pdf p49; pdf p8, p13, p25 (zero-proof picks); dossier-the-bar section 12"
+    },
+    {
+      "target": "cocktail:+",
+      "op": "add",
+      "value": {
+        "name": "Revive Cold-Pressed Juice",
+        "section": "Coffee & juice",
+        "meals": [
+          "Breakfast & lunch"
+        ],
+        "price": "$10",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$10"
+          }
+        ],
+        "spec": [
+          "Revive cold-pressed juice"
+        ],
+        "family": "Juice",
+        "spirit": "",
+        "zeroProof": true,
+        "note": "Priced in the guide's Eye openers and coffee must-know (pdf p49) and used in no pairing; the flavors are not printed, so ask the bar which juices are in today.",
+        "parts": {
+          "main": "cold-pressed juice from Revive",
+          "technique": "cold-pressed rather than heated",
+          "sauce": "",
+          "sides": "served cold",
+          "taste": "fresh and bright; it depends on today's juice"
+        },
+        "lines": {
+          "s10": "Revive cold-pressed juice: fresh, cold and spirit-free. I'll tell you today's flavors.",
+          "s20": "We also pour Revive cold-pressed juice, pressed fresh rather than heated, so it tastes bright and lively. It's a lovely morning drink with no alcohol and no caffeine; I'll check which flavors the bar has today.",
+          "s45": "For a fresh, spirit-free start, we pour Revive cold-pressed juice at $10. Cold pressing squeezes the produce without heat, which keeps the juice bright and lively. It's a good choice for a guest who wants no alcohol and no caffeine, and for anyone who'd like something light with breakfast. The flavors change, so I'll check with the bar and tell you exactly what we have today."
+        },
+        "say": "As it reads: Revive.",
+        "guest": "Revive cold-pressed juice: fresh and bright, with no alcohol and no caffeine.",
+        "why": "The guide prices it and never pairs it; offer it to the guest who wants neither alcohol nor caffeine.",
+        "upsells": [
+          "Catalina Island",
+          "Black Hills"
+        ]
+      },
+      "reason": "The guide prices it; nothing about its flavours is printed, so the lines promise none; spirit-free upsells only",
+      "source": "pdf p49; dossier-the-cellar (the juice is never used)"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Children's breakfast",
+        "meals": [
+          "Breakfast & lunch"
+        ],
+        "price": "$25.00",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$25.00"
+          }
+        ],
+        "name": "Eggs Any Style with Toast and Bacon",
+        "description": "Eggs any style, toast, bacon",
+        "parts": {
+          "main": "eggs",
+          "technique": "cooked any style, the way the child asks; confirm the styles with the kitchen",
+          "sauce": "",
+          "sides": "toast and bacon",
+          "taste": "a simple, warm breakfast a child knows"
+        },
+        "lines": {
+          "s10": "Eggs any style with toast and bacon, from our children's breakfast. Fresh fruit first, vanilla ice cream after.",
+          "s20": "For children ten and under, breakfast is a three-course set at $25: sliced fresh fruit first, then eggs any style with toast and bacon, then a scoop of vanilla ice cream, with a kid's drink included.",
+          "s45": "Our children's menu is for ten and under, and every plate is $25 for three courses with a drink: sliced fresh fruit to start, then the plate, and a scoop of vanilla ice cream to finish. The eggs any style come with toast and bacon, so a child can have the eggs cooked just the way they like them at home, and I'll tell the kitchen exactly how. Ask me what the kid's drink is today and I'll check with the bar."
+        },
+        "say": "As it reads: eggs any style.",
+        "guest": "Eggs any style with toast and bacon, in our three-course children's breakfast: fruit first, ice cream after.",
+        "why": "One set price for the whole children's breakfast: fruit, the plate, ice cream and a drink, for ten and under."
+      },
+      "reason": "The children's menu as the search index read it on 3 October 2026: the name verbatim, the one price, the three-course shape; no pairing is ever invented for a child's plate; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "gap-kids-1 to gap-kids-8; pages/brennansneworleans-kids-menus-2026-10-03.txt"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Children's breakfast",
+        "meals": [
+          "Breakfast & lunch"
+        ],
+        "price": "$25.00",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$25.00"
+          }
+        ],
+        "name": "Popcorn Shrimp with Brabant Potatoes",
+        "description": "Popcorn shrimp, Brabant potatoes",
+        "parts": {
+          "main": "shrimp",
+          "technique": "fried in bite-size pieces, as popcorn shrimp are",
+          "sauce": "",
+          "sides": "with the popcorn shrimp at breakfast: Brabant potatoes",
+          "taste": "crunchy, golden and bite-size, with crisp cubed potatoes"
+        },
+        "lines": {
+          "s10": "Popcorn shrimp with Brabant potatoes, from our children's breakfast. Fresh fruit first, vanilla ice cream after.",
+          "s20": "On the children's breakfast, popcorn shrimp come with Brabant potatoes, our crispy cubed potatoes. It's $25 for three courses: fresh fruit, the plate and a scoop of vanilla ice cream, with a kid's drink.",
+          "s45": "Our children's menu is for ten and under, and every plate is $25 for three courses with a drink: sliced fresh fruit to start, then the plate, and a scoop of vanilla ice cream to finish. The popcorn shrimp are bite-size fried shrimp, easy for small hands, with Brabant potatoes, New Orleans' crispy cubed potatoes. Ask me what the kid's drink is today and I'll check with the bar."
+        },
+        "say": "Popcorn shrimp with Brabant, bra-BAHNT, potatoes.",
+        "guest": "Bite-size popcorn shrimp with crispy Brabant potatoes, in our three-course children's breakfast.",
+        "why": "One set price for the whole children's breakfast: fruit, the plate, ice cream and a drink, for ten and under."
+      },
+      "reason": "The children's menu as the search index read it on 3 October 2026: the name verbatim, the one price, the three-course shape; no pairing is ever invented for a child's plate; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "gap-kids-1 to gap-kids-8; pages/brennansneworleans-kids-menus-2026-10-03.txt"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Children's breakfast",
+        "meals": [
+          "Breakfast & lunch"
+        ],
+        "price": "$25.00",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$25.00"
+          }
+        ],
+        "name": "Vanilla French Toast with Fresh Berries and Whipped Cream",
+        "description": "Vanilla French toast, fresh berries, whipped cream",
+        "parts": {
+          "main": "French toast",
+          "technique": "vanilla French toast, griddled",
+          "sauce": "whipped cream",
+          "sides": "fresh berries",
+          "taste": "sweet, soft and vanilla-scented, with bright berries"
+        },
+        "lines": {
+          "s10": "Vanilla French toast with fresh berries and whipped cream, from our children's breakfast.",
+          "s20": "The children's vanilla French toast comes with fresh berries and whipped cream. It's part of a $25 set for ten and under: fresh fruit first, then the French toast, then a scoop of vanilla ice cream, with a drink.",
+          "s45": "Our children's menu is for ten and under, and every plate is $25 for three courses with a drink: sliced fresh fruit to start, then the plate, and a scoop of vanilla ice cream to finish. The vanilla French toast is the sweet choice, soft and vanilla-scented with fresh berries and whipped cream, so it's a favorite for a child with a sweet tooth. Ask me what the kid's drink is today and I'll check with the bar."
+        },
+        "say": "As it reads: French toast.",
+        "guest": "Vanilla French toast with fresh berries and whipped cream, in our three-course children's breakfast.",
+        "why": "One set price for the whole children's breakfast: fruit, the plate, ice cream and a drink, for ten and under."
+      },
+      "reason": "The children's menu as the search index read it on 3 October 2026: the name verbatim, the one price, the three-course shape; no pairing is ever invented for a child's plate; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "gap-kids-1 to gap-kids-8; pages/brennansneworleans-kids-menus-2026-10-03.txt"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Children's breakfast",
+        "meals": [
+          "Breakfast & lunch"
+        ],
+        "price": "$25.00",
+        "prices": [
+          {
+            "meal": "Breakfast & lunch",
+            "printed": "$25.00"
+          }
+        ],
+        "name": "Grilled Cheese Sandwich with Brabant Potatoes",
+        "description": "Grilled cheese sandwich, Brabant potatoes",
+        "parts": {
+          "main": "cheese",
+          "technique": "a grilled sandwich",
+          "sauce": "",
+          "sides": "with the grilled cheese at breakfast: Brabant potatoes",
+          "taste": "warm, melty and crisp, with crisp cubed potatoes"
+        },
+        "lines": {
+          "s10": "A grilled cheese sandwich with Brabant potatoes, from our children's breakfast.",
+          "s20": "For a child who wants something simple, the grilled cheese sandwich comes with Brabant potatoes, our crispy cubed potatoes. It's $25 for three courses: fresh fruit, the sandwich, then vanilla ice cream, with a kid's drink.",
+          "s45": "Our children's menu is for ten and under, and every plate is $25 for three courses with a drink: sliced fresh fruit to start, then the plate, and a scoop of vanilla ice cream to finish. The grilled cheese sandwich is the simple, safe choice for a picky eater, warm and melty, with Brabant potatoes, New Orleans' crispy cubed potatoes. Ask me what the kid's drink is today and I'll check with the bar."
+        },
+        "say": "Grilled cheese with Brabant, bra-BAHNT, potatoes.",
+        "guest": "A grilled cheese sandwich with crispy Brabant potatoes, in our three-course children's breakfast.",
+        "why": "One set price for the whole children's breakfast: fruit, the plate, ice cream and a drink, for ten and under."
+      },
+      "reason": "The children's menu as the search index read it on 3 October 2026: the name verbatim, the one price, the three-course shape; no pairing is ever invented for a child's plate; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "gap-kids-1 to gap-kids-8; pages/brennansneworleans-kids-menus-2026-10-03.txt"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Children's dinner",
+        "meals": [
+          "Dinner"
+        ],
+        "price": "$25.00",
+        "prices": [
+          {
+            "meal": "Dinner",
+            "printed": "$25.00"
+          }
+        ],
+        "name": "Fried Gulf Shrimp with French Fries",
+        "description": "Fried Gulf shrimp, French fries",
+        "parts": {
+          "main": "Gulf shrimp",
+          "technique": "fried",
+          "sauce": "",
+          "sides": "with the fried Gulf shrimp: French fries",
+          "taste": "crisp, golden and sweet, with fries"
+        },
+        "lines": {
+          "s10": "Fried Gulf shrimp with French fries, from our children's dinner. Salami and cheese first, vanilla ice cream after.",
+          "s20": "On the children's dinner, fried Gulf shrimp come with French fries. It's $25 for ten and under, three courses with a drink: a salami and cheese starter, the shrimp, then a scoop of vanilla ice cream.",
+          "s45": "Our children's menu is for ten and under, and every plate is $25 for three courses with a drink: a salami and cheese starter, then the plate, and a scoop of vanilla ice cream to finish. The fried Gulf shrimp are local shrimp fried golden, with French fries, the dinner plate most children reach for first. Ask me what the kid's drink is today and I'll check with the bar."
+        },
+        "say": "As it reads: fried Gulf shrimp.",
+        "guest": "Fried Gulf shrimp with French fries, in our three-course children's dinner.",
+        "why": "One set price for the whole children's dinner: salami and cheese, the plate, ice cream and a drink, for ten and under."
+      },
+      "reason": "The children's menu as the search index read it on 3 October 2026: the name verbatim, the one price, the three-course shape; no pairing is ever invented for a child's plate; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "gap-kids-1 to gap-kids-8; pages/brennansneworleans-kids-menus-2026-10-03.txt"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Children's dinner",
+        "meals": [
+          "Dinner"
+        ],
+        "price": "$25.00",
+        "prices": [
+          {
+            "meal": "Dinner",
+            "printed": "$25.00"
+          }
+        ],
+        "name": "Buttered Noodles with Cheese",
+        "description": "Buttered noodles, cheese",
+        "parts": {
+          "main": "noodles",
+          "technique": "tossed in butter",
+          "sauce": "butter and cheese",
+          "sides": "",
+          "taste": "soft, buttery and mild"
+        },
+        "lines": {
+          "s10": "Buttered noodles with cheese, from our children's dinner. Salami and cheese first, vanilla ice cream after.",
+          "s20": "For a child who likes it plain, the buttered noodles with cheese are soft, buttery and mild. It's $25 for three courses: a salami and cheese starter, the noodles, then vanilla ice cream, with a kid's drink.",
+          "s45": "Our children's menu is for ten and under, and every plate is $25 for three courses with a drink: a salami and cheese starter, then the plate, and a scoop of vanilla ice cream to finish. The buttered noodles with cheese are the mildest plate on the card, soft and buttery, for a child who likes things plain. Ask me what the kid's drink is today and I'll check with the bar."
+        },
+        "say": "As it reads: buttered noodles.",
+        "guest": "Buttered noodles with cheese, in our three-course children's dinner.",
+        "why": "One set price for the whole children's dinner: salami and cheese, the plate, ice cream and a drink, for ten and under."
+      },
+      "reason": "The children's menu as the search index read it on 3 October 2026: the name verbatim, the one price, the three-course shape; no pairing is ever invented for a child's plate; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "gap-kids-1 to gap-kids-8; pages/brennansneworleans-kids-menus-2026-10-03.txt"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Children's dinner",
+        "meals": [
+          "Dinner"
+        ],
+        "price": "$25.00",
+        "prices": [
+          {
+            "meal": "Dinner",
+            "printed": "$25.00"
+          }
+        ],
+        "name": "Sautéed Gulf Fish with Potato and Green Beans",
+        "description": "Sautéed Gulf fish, potato, green beans",
+        "parts": {
+          "main": "Gulf fish",
+          "technique": "sautéed; ask the kitchen today's fish",
+          "sauce": "",
+          "sides": "potato and green beans",
+          "taste": "light, flaky and mild, with simple vegetables"
+        },
+        "lines": {
+          "s10": "Sautéed Gulf fish with potato and green beans, from our children's dinner.",
+          "s20": "The children's sautéed Gulf fish comes with potato and green beans, the lightest dinner plate. It's $25 for three courses: a salami and cheese starter, the fish, then vanilla ice cream, with a kid's drink.",
+          "s45": "Our children's menu is for ten and under, and every plate is $25 for three courses with a drink: a salami and cheese starter, then the plate, and a scoop of vanilla ice cream to finish. The sautéed Gulf fish is the light, grown-up choice, a mild local fish with potato and green beans. I'll tell you today's fish. Ask me what the kid's drink is today and I'll check with the bar."
+        },
+        "say": "Sautéed is soh-TAYD.",
+        "guest": "Sautéed Gulf fish with potato and green beans, in our three-course children's dinner.",
+        "why": "One set price for the whole children's dinner: salami and cheese, the plate, ice cream and a drink, for ten and under."
+      },
+      "reason": "The children's menu as the search index read it on 3 October 2026: the name verbatim, the one price, the three-course shape; no pairing is ever invented for a child's plate; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "gap-kids-1 to gap-kids-8; pages/brennansneworleans-kids-menus-2026-10-03.txt"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Children's dinner",
+        "meals": [
+          "Dinner"
+        ],
+        "price": "$25.00",
+        "prices": [
+          {
+            "meal": "Dinner",
+            "printed": "$25.00"
+          }
+        ],
+        "name": "Grilled Cheese Sandwich with French Fries",
+        "description": "Grilled cheese sandwich, French fries",
+        "parts": {
+          "main": "cheese",
+          "technique": "a grilled sandwich",
+          "sauce": "",
+          "sides": "with the grilled cheese at dinner: French fries",
+          "taste": "warm, melty and crisp, with fries"
+        },
+        "lines": {
+          "s10": "A grilled cheese sandwich with French fries, from our children's dinner.",
+          "s20": "For a child who wants something simple at dinner, the grilled cheese sandwich comes with French fries. It's $25 for three courses: a salami and cheese starter, the sandwich, then vanilla ice cream, with a kid's drink.",
+          "s45": "Our children's menu is for ten and under, and every plate is $25 for three courses with a drink: a salami and cheese starter, then the plate, and a scoop of vanilla ice cream to finish. The grilled cheese sandwich with French fries is the simple, safe choice for a picky eater. Ask me what the kid's drink is today and I'll check with the bar."
+        },
+        "say": "As it reads: grilled cheese with French fries.",
+        "guest": "A grilled cheese sandwich with French fries, in our three-course children's dinner.",
+        "why": "One set price for the whole children's dinner: salami and cheese, the plate, ice cream and a drink, for ten and under."
+      },
+      "reason": "The children's menu as the search index read it on 3 October 2026: the name verbatim, the one price, the three-course shape; no pairing is ever invented for a child's plate; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "gap-kids-1 to gap-kids-8; pages/brennansneworleans-kids-menus-2026-10-03.txt"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Roost Bar & Bubbles snacks",
+        "meals": [
+          "Bubbles at Brennan's"
+        ],
+        "prices": [
+          {
+            "meal": "Bubbles at Brennan's",
+            "printed": "$6"
+          }
+        ],
+        "name": "Creole Spiced Nuts",
+        "price": "$6",
+        "description": "Creole spiced nuts",
+        "parts": {
+          "main": "nuts; the mix is not printed",
+          "technique": "seasoned with Creole spice",
+          "sauce": "Creole spice",
+          "sides": "a bar bowl to share",
+          "taste": "salty and warm with spice, crunchy"
+        },
+        "lines": {
+          "s10": "Creole spiced nuts: a salty, spicy bowl for the bar or the courtyard.",
+          "s20": "At Bubbles at Brennan's we set out Creole spiced nuts, a salty, warmly spiced bowl that's made for a glass of Champagne or a Sazerac.",
+          "s45": "At Bubbles at Brennan's, in the Roost Bar and courtyard, the simplest snack is a bowl of Creole spiced nuts at $6. They're salty and warm with Creole spice and plenty of crunch, which is exactly what you want with bubbles or a spirit-forward drink: salt makes Champagne taste fuller, and spice and crunch stand up to a Sazerac. It's the easy order while a table decides on the rest."
+        },
+        "say": "As it reads: Creole spiced nuts.",
+        "guest": "Creole spiced nuts: salty, warmly spiced and crunchy, made for a glass of bubbles.",
+        "why": "The cheapest snack on the Bubbles list, $6, and the one to suggest the moment a drink lands.",
+        "pairs": "With the house Champagne or a Classic Sazerac: salt and spice want bubbles or a spirit-forward drink."
+      },
+      "reason": "The Bubbles snacks the guide's must-know prices; parts and lines describe only what the name prints, and every unprinted build is a question for the kitchen; the pairing line is a bartender's and sommelier's suggestion to a house drink or wine, never a pairing block",
+      "source": "pdf p49 (Bubbles at Brennan's); dossier-the-bar section 10"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Roost Bar & Bubbles snacks",
+        "meals": [
+          "Bubbles at Brennan's"
+        ],
+        "prices": [
+          {
+            "meal": "Bubbles at Brennan's",
+            "printed": "$16"
+          }
+        ],
+        "name": "Crawfish Meat Pies",
+        "price": "$16",
+        "description": "Crawfish meat pies, chive rémoulade",
+        "parts": {
+          "main": "crawfish",
+          "technique": "hand pies filled with crawfish; the kitchen's method is not printed",
+          "sauce": "chive rémoulade",
+          "sides": "chive rémoulade for dipping",
+          "taste": "savory crawfish in pastry with a cool, tangy, herby dip"
+        },
+        "lines": {
+          "s10": "Crawfish meat pies with chive rémoulade, a Louisiana bar snack.",
+          "s20": "Our crawfish meat pies are Louisiana hand pies filled with crawfish, served with a chive rémoulade for dipping: savory pastry and a cool, tangy, herby sauce. Lovely with bubbles.",
+          "s45": "Meat pies are a Louisiana tradition, and at Bubbles we fill ours with crawfish and serve them with a chive rémoulade, a tangy, herby sauce for dipping. You get savory crawfish in pastry, then the cool, bright rémoulade. They're $16 and made for sharing over a glass of bubbles: the Pierre Sparr rosé or the house Champagne both cut the pastry beautifully."
+        },
+        "say": "Rémoulade is ray-moo-LAHD.",
+        "guest": "Crawfish meat pies with a chive rémoulade for dipping: savory crawfish in pastry and a cool, tangy sauce.",
+        "why": "The most Louisiana snack on the Bubbles list, $16; offer it to visitors who want a local taste in the courtyard.",
+        "pairs": "With the Pierre Sparr rosé or the house Champagne: bubbles and acid for pastry and rémoulade."
+      },
+      "reason": "The Bubbles snacks the guide's must-know prices; parts and lines describe only what the name prints, and every unprinted build is a question for the kitchen; the pairing line is a bartender's and sommelier's suggestion to a house drink or wine, never a pairing block",
+      "source": "pdf p49 (Bubbles at Brennan's); dossier-the-bar section 10"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Roost Bar & Bubbles snacks",
+        "meals": [
+          "Bubbles at Brennan's"
+        ],
+        "prices": [
+          {
+            "meal": "Bubbles at Brennan's",
+            "printed": "$8"
+          }
+        ],
+        "name": "Fries with Pink Sauce",
+        "price": "$8",
+        "description": "Fries, pink sauce",
+        "parts": {
+          "main": "French fries",
+          "technique": "fried",
+          "sauce": "pink sauce; ask the kitchen what is in it",
+          "sides": "a basket to share",
+          "taste": "crisp and salty with a dipping sauce"
+        },
+        "lines": {
+          "s10": "Fries with pink sauce, the easy bar basket to share.",
+          "s20": "Our fries come with pink sauce for dipping, crisp, salty and easy to share at $8. Salty fried food loves bubbles, so they're a natural with a glass of Champagne or a Miami Beach.",
+          "s45": "For something easy to share at Bubbles, the fries with pink sauce are $8: crisp, salty fries with our pink dipping sauce. Salt and fried food are the best friends a glass of bubbles has, because the acidity and the fizz clean the palate after every bite, so they're a natural with the house Champagne or a Miami Beach. If you'd like to know what goes into the pink sauce, I'll ask the kitchen."
+        },
+        "say": "As it reads: fries with pink sauce.",
+        "guest": "Crisp fries with our pink dipping sauce, easy to share.",
+        "why": "The easy add for a table with drinks and no food, $8; salt sells the next glass.",
+        "pairs": "With the house Champagne or a Miami Beach: salt and fried food love bubbles."
+      },
+      "reason": "The Bubbles snacks the guide's must-know prices; parts and lines describe only what the name prints, and every unprinted build is a question for the kitchen; the pairing line is a bartender's and sommelier's suggestion to a house drink or wine, never a pairing block",
+      "source": "pdf p49 (Bubbles at Brennan's); dossier-the-bar section 10"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Roost Bar & Bubbles snacks",
+        "meals": [
+          "Bubbles at Brennan's"
+        ],
+        "prices": [
+          {
+            "meal": "Bubbles at Brennan's",
+            "printed": "$14"
+          }
+        ],
+        "name": "Fried Pickles",
+        "price": "$14",
+        "description": "Fried pickles",
+        "parts": {
+          "main": "pickles",
+          "technique": "fried",
+          "sauce": "",
+          "sides": "",
+          "taste": "crunchy outside, sour and juicy inside"
+        },
+        "lines": {
+          "s10": "Fried pickles: crunchy outside, sour and juicy inside, a Southern bar favorite.",
+          "s20": "Our fried pickles are crunchy outside and sour and juicy inside, a Southern bar favorite at $14. A crisp, bright drink is the match: the Albariño or the Niagara Falls.",
+          "s45": "Fried pickles are a Southern bar classic, and ours are $14 at Bubbles: a crunchy outside, then the sour, juicy pickle inside. That sourness wants a drink with as much acidity as the pickle, or the drink tastes flat, so I'd pour the Albariño, with its salty, citrusy snap, or the Niagara Falls, gin with tomato water and lemon. I'll check with the kitchen what dip comes with them today."
+        },
+        "say": "As it reads: fried pickles.",
+        "guest": "Fried pickles: crunchy outside, sour and juicy inside.",
+        "why": "A fun share for a group at the bar, $14; sell it with a crisp, acidic drink.",
+        "pairs": "With the Pazo das Bruxas Albariño or the Niagara Falls: acid meets acid, and a crisp drink cuts the fry."
+      },
+      "reason": "The Bubbles snacks the guide's must-know prices; parts and lines describe only what the name prints, and every unprinted build is a question for the kitchen; the pairing line is a bartender's and sommelier's suggestion to a house drink or wine, never a pairing block; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "pdf p49 (Bubbles at Brennan's); dossier-the-bar section 10"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Roost Bar & Bubbles snacks",
+        "meals": [
+          "Bubbles at Brennan's"
+        ],
+        "prices": [
+          {
+            "meal": "Bubbles at Brennan's",
+            "printed": "$15"
+          }
+        ],
+        "name": "Popcorn Shrimp",
+        "price": "$15",
+        "description": "Popcorn shrimp",
+        "parts": {
+          "main": "shrimp",
+          "technique": "fried in bite-size pieces",
+          "sauce": "",
+          "sides": "",
+          "taste": "crunchy and golden, with sweet shrimp inside"
+        },
+        "lines": {
+          "s10": "Popcorn shrimp: bite-size fried shrimp to share over a drink.",
+          "s20": "Our popcorn shrimp are bite-size fried shrimp, crunchy and golden with sweet shrimp inside, $15 to share. With bubbles or the Albariño, they're perfect in the courtyard.",
+          "s45": "Popcorn shrimp are bite-size fried shrimp, and at Bubbles they're $15 to share: crunchy and golden outside, sweet shrimp inside. Fried seafood loves bubbles and crisp whites, so I'd pour the house Champagne, or the Albariño from Spain's Atlantic coast, whose salty edge is made for seafood. They're an easy order for a table that wants something more than nuts but not a full meal."
+        },
+        "say": "As it reads: popcorn shrimp.",
+        "guest": "Bite-size fried popcorn shrimp, crunchy and golden, to share over a drink.",
+        "why": "The seafood snack on the Bubbles list, $15; the step up from fries for a table staying a while.",
+        "pairs": "With the house Champagne or the Pazo das Bruxas Albariño: bubbles or a salty, crisp white for fried seafood."
+      },
+      "reason": "The Bubbles snacks the guide's must-know prices; parts and lines describe only what the name prints, and every unprinted build is a question for the kitchen; the pairing line is a bartender's and sommelier's suggestion to a house drink or wine, never a pairing block; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "pdf p49 (Bubbles at Brennan's); dossier-the-bar section 10"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Roost Bar & Bubbles snacks",
+        "meals": [
+          "Bubbles at Brennan's"
+        ],
+        "prices": [
+          {
+            "meal": "Bubbles at Brennan's",
+            "printed": "$24"
+          }
+        ],
+        "name": "Cheese Board",
+        "price": "$24",
+        "description": "Cheese board",
+        "parts": {
+          "main": "cheeses; tonight's are not printed",
+          "technique": "served as a board to share",
+          "sauce": "",
+          "sides": "",
+          "taste": "it depends on tonight's cheeses; learn them at lineup"
+        },
+        "lines": {
+          "s10": "The cheese board, our largest snack to share at Bubbles. I can tell you tonight's cheeses.",
+          "s20": "The cheese board is our largest snack at Bubbles, $24 to share over a bottle. The cheeses change, so let me tell you tonight's, and I'll suggest a glass to go with them.",
+          "s45": "The cheese board is the biggest snack on the Bubbles list, $24, and the one for a table settling in over a bottle of rosé or a round of glasses. The selection changes, so I learn tonight's cheeses at lineup and tell you what's on it rather than guess. Bubbles and sparkling rosé are wonderful with most cheeses, and if you'd like a red, the Moulin d'Issan is a classic match; our sommelier can help too."
+        },
+        "say": "As it reads: cheese board.",
+        "guest": "Our cheese board to share; I can tell you tonight's cheeses.",
+        "why": "The largest snack, $24, and the natural partner for a bottle of rosé from the Bubbles list.",
+        "pairs": "With the Pierre Sparr rosé or the Moulin d'Issan, depending on tonight's cheeses; ask the sommelier."
+      },
+      "reason": "The Bubbles snacks the guide's must-know prices; parts and lines describe only what the name prints, and every unprinted build is a question for the kitchen; the pairing line is a bartender's and sommelier's suggestion to a house drink or wine, never a pairing block; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "pdf p49 (Bubbles at Brennan's); dossier-the-bar section 10"
+    },
+    {
+      "target": "dish:+",
+      "op": "add",
+      "value": {
+        "section": "Roost Bar & Bubbles snacks",
+        "meals": [
+          "Bubbles at Brennan's"
+        ],
+        "prices": [
+          {
+            "meal": "Bubbles at Brennan's",
+            "printed": "$17"
+          }
+        ],
+        "name": "Roost Burger",
+        "price": "$17",
+        "description": "Roost Burger",
+        "parts": {
+          "main": "a burger; the build is not printed",
+          "technique": "the Roost Bar's burger; ask the kitchen how it is built",
+          "sauce": "",
+          "sides": "",
+          "taste": "learn tonight's build at lineup before you describe it"
+        },
+        "lines": {
+          "s10": "The Roost Burger, our bar burger at Bubbles. I can tell you how it is built.",
+          "s20": "The Roost Burger is the bar's own burger, $17, the heartiest thing on the Bubbles list. Let me tell you exactly how the kitchen builds it tonight.",
+          "s45": "If you'd like a proper meal at the bar, the Roost Burger is the Roost Bar's own burger, $17, and the heartiest thing on the Bubbles menu. The menu doesn't spell out the build, so I check it with the kitchen rather than guess, and I'll tell you exactly what's on it and how they cook it. With a burger I'd pour the Moulin d'Issan, a classic Bordeaux, or the Havana if you'd like a cocktail."
+        },
+        "say": "As it reads: Roost Burger.",
+        "guest": "The Roost Bar's own burger, the heartiest thing on the Bubbles list.",
+        "why": "The one full plate on the Bubbles list, $17; offer it to a guest who wants dinner at the bar.",
+        "pairs": "With the Moulin d'Issan Bordeaux or the Havana: tannin or ginger spice for a burger."
+      },
+      "reason": "The Bubbles snacks the guide's must-know prices; parts and lines describe only what the name prints, and every unprinted build is a question for the kitchen; the pairing line is a bartender's and sommelier's suggestion to a house drink or wine, never a pairing block; drill stems are unique per item and a part nobody printed is left empty (review of 3 October 2026)",
+      "source": "pdf p49 (Bubbles at Brennan's); dossier-the-bar section 10"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "why",
+      "value": "The first sale of the morning: offer it at the greeting; it opens the Traditional Breakfast.",
+      "reason": "A why line from the guide's own service note",
+      "source": "pdf p38"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "upsells",
+      "value": [
+        "Bloody Bull",
+        "Brennan’s Irish Coffee",
+        "Café Glacé de la Maison"
+      ],
+      "reason": "Upsells as a bartender sells the breakfast bar, every one poured in the dining room at breakfast: the Bull as the next round with the soup, the Irish Coffee as the warm brandy-and-cream close, the Café Glacé as the cold, spirit-free choice the guide names for guests skipping the milk punch. The Champagne Cocktail is poured only at Bubbles at Brennan's, so it is not an upsell at breakfast",
+      "source": "pdf p38; pdf p8 (Café Glacé for guests skipping the milk punch)"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "why",
+      "value": "The savory eye opener and the soup course's drink on the Traditional Breakfast; a guest who skips beef takes the Brennan's Bloody Mary.",
+      "reason": "A why line from the guide's own service note",
+      "source": "pdf p38, p39"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "upsells",
+      "value": [
+        "Brennan’s Bloody Mary",
+        "Brandy Milk Punch",
+        "Black Hills"
+      ],
+      "reason": "Upsells: the Bloody Mary the guide offers in its place, the milk punch as the next round, the Black Hills as the spirit-free choice",
+      "source": "pdf p39"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "why",
+      "value": "New Orleans' official cocktail and the first rung of the house's Sazerac ladder: $13, then Thompson's Dream at $20 and Origin Story at $40.",
+      "reason": "A why line from the guide's service note and the cocktails page's premium variations",
+      "source": "pdf p39; gap-roost-3"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "upsells",
+      "value": [
+        "Thompson’s Dream",
+        "Origin Story"
+      ],
+      "reason": "The two upsells the guide prints in the service note",
+      "source": "pdf p39"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "classically served up, without ice (confirm the bar’s build)",
+        "to": "served without ice (confirm the glass and the bar’s build)"
+      },
+      "reason": "The glass field is left empty, as on every drink whose glass the house has not printed, because a glass is the answer of the cocktailGlass drill. 'Served up' reads as a stemmed glass while the Sazerac Company's recipe glass is a chilled rocks glass; that recipe stays in the kept note as the classic, never the house build, and the note keeps the guide's no ice and confirm",
+      "source": "pdf p39; bar-signature-18; dossier-the-bar section 5; pdf-corrections p39"
+    },
+    {
+      "target": "cocktail:Brennan’s Irish Coffee",
+      "field": "why",
+      "value": "The dessert upsell: offer it with Bananas Foster or the bread pudding, at breakfast, lunch or dinner.",
+      "reason": "A why line from the guide's own service note",
+      "source": "pdf p39"
+    },
+    {
+      "target": "cocktail:Brennan’s Irish Coffee",
+      "field": "upsells",
+      "value": [
+        "Dulce de Leche",
+        "New Orleans-Style Coffee with Chicory"
+      ],
+      "reason": "Upsells: the Dulce de Leche as the other dessert cocktail, the chicory coffee as its spirit-free twin",
+      "source": "pdf p39, p40"
+    },
+    {
+      "target": "cocktail:Dulce de Leche",
+      "field": "why",
+      "value": "Bananas Foster in a glass: offer it to the guest who loves the Foster, or as dessert on its own.",
+      "reason": "A why line from the guide's own 45 second line",
+      "source": "pdf p40"
+    },
+    {
+      "target": "cocktail:Dulce de Leche",
+      "field": "upsells",
+      "value": [
+        "Brennan’s Irish Coffee",
+        "Café Glacé de la Maison"
+      ],
+      "reason": "Upsells: the Irish Coffee as the other dessert drink, the Café Glacé as the spirit-free dessert coffee",
+      "source": "pdf p39, p40, p49"
+    },
+    {
+      "target": "cocktail:Catalina Island",
+      "field": "note",
+      "value": "From the guide's Spirit-free must-know (pdf p50), under Temperance, 1946 on the cocktails page: parts as printed, no measures. Offer it to guests who skip the flambé or the milk punch.",
+      "reason": "No longer a draft: it now carries lines and upsells",
+      "source": "pdf p50; gap-roost-2"
+    },
+    {
+      "target": "cocktail:Catalina Island",
+      "field": "lines",
+      "value": {
+        "s10": "The Catalina Island: Seedlip Grove 42 with local watermelon and tonic. Bright, dry and spirit-free.",
+        "s20": "The Catalina Island is our spirit-free highball: Seedlip Grove 42, a citrus non-alcoholic spirit, with local watermelon and tonic. Bright, dry and refreshing, with real bubbles, so it does at the table what Champagne does.",
+        "s45": "If you're not drinking, the Catalina Island is the one I'd start with. It's Seedlip Grove 42, a distilled non-alcoholic spirit built on citrus, with fresh local watermelon and tonic. The tonic gives it bubbles and a gentle bitterness and the watermelon a little sweetness, so it's bright, dry and grown-up rather than sugary. Because it has bubbles and lift, it does what Champagne does with our oysters, the Hussarde and anything fried. It's $15."
+      },
+      "reason": "Lines from the guide's spirit-free must-know and its zero-proof pairings",
+      "source": "pdf p50; pdf zero-proof lines; dossier-the-bar section 11"
+    },
+    {
+      "target": "cocktail:Catalina Island",
+      "field": "why",
+      "value": "The guide's zero-proof stand-in for Champagne and rosé: its pick with the oysters, the Caesar, the Hussarde, the omelette, the duck, the tostada and the sweet starters.",
+      "reason": "A why line from the guide's zero-proof picks",
+      "source": "pdf zero-proof lines"
+    },
+    {
+      "target": "cocktail:Catalina Island",
+      "field": "upsells",
+      "value": [
+        "Black Hills",
+        "Café Glacé de la Maison"
+      ],
+      "reason": "A spirit-free drink upsells only to spirit-free drinks poured at the same meals: the Black Hills as the next round, the Café Glacé as the cold coffee round. Revive juice is poured at breakfast and lunch only, and the Catalina Island is poured at dinner too, so the juice is not its upsell",
+      "source": "pdf p49, p50"
+    },
+    {
+      "target": "cocktail:Black Hills",
+      "field": "note",
+      "value": "From the guide's Spirit-free must-know (pdf p50), under Temperance, 1946 on the cocktails page: parts as printed, no measures. Lyre's is labeled under 0.5 percent alcohol, so say non-alcoholic, not zero.",
+      "reason": "No longer a draft: it now carries lines and upsells",
+      "source": "pdf p50; gap-roost-2"
+    },
+    {
+      "target": "cocktail:Black Hills",
+      "field": "lines",
+      "value": {
+        "s10": "The Black Hills: Lyre's non-alcoholic agave with basil purée and lime. A spirit-free margarita idea.",
+        "s20": "The Black Hills is our spirit-free take on a margarita: Lyre's non-alcoholic agave spirit with basil purée and fresh lime. Herbal, sharp and refreshing, and non-alcoholic rather than zero, under half a percent.",
+        "s45": "The Black Hills is a margarita idea without the tequila. It's built on Lyre's non-alcoholic agave spirit, with a fresh basil purée and lime, so it's green, herbal and sharp, with a little earthiness from the agave. That acidity is why it works with rich food: it cuts butter, cream and spice the way a crisp white wine would. One honest note: Lyre's is labeled under half a percent alcohol, so call it non-alcoholic rather than alcohol-free. It's $14."
+      },
+      "reason": "Lines from the guide's spirit-free must-know and its zero-proof pairings, with the research's correction on the strength",
+      "source": "pdf p50; dossier-the-bar section 11 (Lyre's under 0.5 percent)"
+    },
+    {
+      "target": "cocktail:Black Hills",
+      "field": "why",
+      "value": "The guide's zero-proof stand-in for a crisp white or a soft red: its pick with the egg dishes, the gumbo, the steaks, the fish and the tofu.",
+      "reason": "A why line from the guide's zero-proof picks",
+      "source": "pdf zero-proof lines"
+    },
+    {
+      "target": "cocktail:Black Hills",
+      "field": "upsells",
+      "value": [
+        "Catalina Island",
+        "Café Glacé de la Maison"
+      ],
+      "reason": "A spirit-free drink upsells only to spirit-free drinks",
+      "source": "pdf p49, p50"
+    },
+    {
+      "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+      "field": "lines",
+      "value": {
+        "s10": "Our house Champagne, Brennan's Essential by Piper-Heidsieck: Extra Brut, very dry and crisp, a beautiful way to start.",
+        "s20": "Our house Champagne is from Piper-Heidsieck and carries the Brennan's name. It's Extra Brut, so very dry: citrus, orchard fruit and brioche with a firm, chalky finish, lovely with turtle soup, oysters and the Hussarde.",
+        "s45": "Our house Champagne is Brennan's Essential, a Piper-Heidsieck Extra Brut labeled for us, a blend of Pinot Noir, Meunier and Chardonnay. Extra Brut means very little added sugar, so it's very dry and crisp: citrus, orchard fruit, a little brioche and a firm, chalky finish. That dryness and those fine bubbles cut through rich, salty food, which is why it's our first pick with the turtle soup, raw oysters and Eggs Hussarde, morning and night."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Pierre Sparr Brut Rosé Crémant d’Alsace NV",
+      "field": "lines",
+      "value": {
+        "s10": "The Pierre Sparr: a sparkling rosé from Alsace, all Pinot Noir, dry with bright berry fruit.",
+        "s20": "If you'd like something pink and festive, the Pierre Sparr is a Crémant d'Alsace rosé, made like Champagne from all Pinot Noir: strawberry and red currant, dry, with a creamy mousse, at a friendlier price.",
+        "s45": "The Pierre Sparr is a Crémant d'Alsace rosé. Crémant means it's made the same way as Champagne, with the second fermentation in the bottle, and in Alsace a rosé crémant must be all Pinot Noir. So you get strawberry and red currant, dry, with a creamy mousse, at a friendlier price than Champagne. The red fruit and bubbles make it our first pick with the steak tartare cannoli, and it's lovely with the fried hen, the Sardou and the Owen, or a brunch celebration."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "lines",
+      "value": {
+        "s10": "Rare Brut 2012, a prestige vintage Champagne we pour by the glass from a bottle kept under Coravin.",
+        "s20": "For a special occasion, we pour Rare by the glass: a prestige vintage Champagne, Chardonnay-led, with white peach, candied citrus, toasted almond and a long, fine mousse. A rare chance to taste it without buying the bottle.",
+        "s45": "Rare began as Piper-Heidsieck's prestige cuvée and is now its own Champagne house, with only about a dozen vintages ever declared. It's Chardonnay-led, from a single vintage, so it shows white peach, candied citrus, toasted almond and a long, fine mousse. We keep the opened bottle fresh under a Coravin Sparkling stopper, which is why we can pour a single glass. It's wonderful with raw oysters or crab claws, or on its own for a celebration. I'll confirm whether the 2012 or the 2013 is open."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Charles Lafitte Brut Champagne NV",
+      "field": "lines",
+      "value": {
+        "s10": "Charles Lafitte Brut, the crisp, dry Champagne we pour on both tasting menus.",
+        "s20": "On the tastings we pour Charles Lafitte Brut, a dry Champagne with fresh citrus and apple and a light toasty note. It wakes the palate up, with the Eggs Hussarde at breakfast and the oysters at dinner.",
+        "s45": "Charles Lafitte is the pairing Champagne on both of our tasting menus, a 4 oz pour with the Eggs Hussarde at breakfast and the Grand Isle Jewel oysters at dinner. It's a Brut, a blend led by Pinot Noir and Meunier with Chardonnay, from a house with roots to 1834: dry, with fresh citrus and apple and a light toasty note. Its job is to wake the palate up for everything after it. It isn't on the by-the-glass list, so I'd check with the bar before promising a glass."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:C.H. Berres ‘Old Vines’ Riesling 2022",
+      "field": "lines",
+      "value": {
+        "s10": "The Berres Old Vines Riesling from the Mosel: light, racy and off-dry, our glass for anything spicy.",
+        "s20": "With anything spicy I love the Berres Riesling from the Mosel: light, with green apple, peach and slate, racy acidity and a touch of sweetness that cools the heat. Low in alcohol, too, at 11.5%.",
+        "s45": "The Berres is an old vines Riesling from the Mosel in Germany, from a family estate at Ürzig. It's light-bodied, with green apple, peach and a slaty, mineral note, racy acidity and a touch of sweetness, at only 11.5% alcohol. That little sweetness is what cools spice, so it's our first pick with the seafood gumbo and the duck confit waffle, and it loves the chili crisp and the 'nduja on the lobster. We taste it at lineup so I can tell you honestly how sweet today's bottle is."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Pazo das Bruxas Albariño 2025",
+      "field": "lines",
+      "value": {
+        "s10": "The Albariño from Spain's Atlantic coast: citrusy, unoaked, with a salty edge made for seafood.",
+        "s20": "The Albariño comes from Rías Baixas on Spain's Atlantic coast: lemon and white peach with a saline, sea-spray snap, unoaked and fresh. It's made for seafood, the Caesar and the fish en papillote.",
+        "s45": "The Albariño is from Pazo das Bruxas, the Familia Torres estate in Rías Baixas, on the Atlantic coast of Galicia in Spain; the name means manor of the witches. It's unoaked and fresh: lemon, white peach and an almost sea-spray, saline snap. That salty freshness makes it a natural with oysters, our Creole Caesar with its smoked oyster dressing, and the Gulf fish en papillote with olives and tomato. We keep it iced, because the freshness fades as it warms."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Domaine Durand Sauvignon Blanc 2025",
+      "field": "lines",
+      "value": {
+        "s10": "The Domaine Durand: a Loire Sauvignon Blanc, crisp, herbal and bone-dry, one of the few wines that loves artichokes.",
+        "s20": "Our Loire Sauvignon Blanc from Domaine Durand is bone-dry and zippy: grapefruit, cut grass and a flinty note. It's one of the few wines that really loves artichokes, so it's my pick with the Eggs Sardou.",
+        "s45": "The Domaine Durand is a Sauvignon Blanc from France's Loire Valley, fermented in steel with no oak, so it's bone-dry and zippy: grapefruit, cut grass and a flinty note. Artichokes make most wines taste odd, but this one's sharp, herbal acidity stands up to them, which is why it's our first pick with the Eggs Sardou. It also loves tomatoes, fresh herbs and the crab claws. We keep it in the ice bucket so the acidity stays sharp."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Gainey Estate Vineyards Chardonnay 2023",
+      "field": "lines",
+      "value": {
+        "s10": "The Gainey Chardonnay from Santa Barbara County: creamy but fresh, with lemon curd and baked apple.",
+        "s20": "For something rounder, the Gainey Chardonnay from Santa Barbara County has lemon curd and baked apple and a creamy texture, but its ocean-cooled climate keeps it fresh. Lovely with butter sauces and pecans.",
+        "s45": "The Gainey is a cool-climate California Chardonnay from Santa Barbara County, where the ocean cools the vineyards. That gives it two things at once: a creamy texture, with lemon curd and baked apple, and bright acidity to keep it fresh. So it's our first pick for butter and cream: the BBQ Louisiana oysters, the pecan Gulf fish and the poussin with mustard cream. We serve it a little warmer than the crisp whites so the creamy texture shows."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2022 (Coravin)",
+      "field": "lines",
+      "value": {
+        "s10": "Leflaive's Mâcon-Verzé by the glass: white Burgundy from a legendary estate, rich enough for butter, fresh enough for seafood.",
+        "s20": "If you love white Burgundy, we pour Leflaive's Mâcon-Verzé by the glass, from a legendary estate best known for Puligny-Montrachet: citrus, white flowers, a fine chalky texture and gentle richness for butter sauces and crab.",
+        "s45": "Domaine Leflaive is one of Burgundy's great white-wine estates, best known for Puligny-Montrachet, and this is their Chardonnay from Verzé in the Mâconnais. It's citrus and white flowers with a fine, chalky texture and a gentle richness. That balance of richness and freshness is why it's our first pick with the crab and corn omelette, the crab claws and the redfish in beurre blanc. We pour it by Coravin, a needle through the cork, so a single glass is possible, and I'll show you the label."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "lines",
+      "value": {
+        "s10": "On the dinner tasting, a Mâcon-Igé from Domaine Fichet: Chardonnay with body for the lobster and a fresh finish.",
+        "s20": "With the lobster on the dinner tasting we pour a Mâcon from Burgundy, Fichet's Château London: Chardonnay with apple, citrus and a gentle roundness, enough body for the lobster and a fresh finish against the spice.",
+        "s45": "The second course of our dinner tasting, the Louisiana BBQ lobster, comes with a 4 oz pour of Fichet's Château London Mâcon-Igé. It's Chardonnay from the Mâconnais in Burgundy, from a family estate at Igé; Château London is the name of a vineyard parcel on old limestone, not a castle and nothing to do with England. Mostly steel with a touch of old oak, it's apple and citrus with a gentle roundness and a fresh finish, enough body for lobster and lift against the spice."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+      "field": "lines",
+      "value": {
+        "s10": "The Minuty, a classic Provence rosé: pale, dry and refreshing, lovely with tomatoes and shrimp.",
+        "s20": "The Minuty Prestige is a classic Provence rosé, pale and dry: white peach, wild strawberry and citrus zest with a light mineral finish. Lovely with the Creole tomato tostada, shrimp and grits, or the courtyard on a warm afternoon.",
+        "s45": "Minuty is one of the classic names of Provence rosé, and the Prestige is pale, dry and refreshing, a Grenache-led wine pressed pale and bottled young. You get white peach, wild strawberry and citrus zest, with a light mineral finish. Its freshness and red fruit are made for tomatoes and shrimp, so it's our first pick with the Creole tomato tostada and the New Orleans shrimp and grits, and it's lovely in the courtyard on a warm afternoon. I like to pour it where you can see that pale color."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
+      "field": "lines",
+      "value": {
+        "s10": "Our Bourgogne Pinot Noir from Damien Martin: light and silky, red cherry, a red that won't overpower the plate.",
+        "s20": "If you'd like a red that won't overpower the plate, our Bourgogne Pinot Noir from Damien Martin is light and silky: red cherry, raspberry and a touch of earth, with light tannin and fresh acidity.",
+        "s45": "The Damien Martin is red Burgundy by the glass, from a father and son family domaine at Davayé in the Mâconnais. It's Pinot Noir, light and silky: red cherry, raspberry and a touch of earth, with light tannin and fresh acidity. A light red like this goes where a big red would bully the food, so it's our first pick with the blackened tofu, and it loves duck, mushrooms and the marchand de vin on the egg dishes. We serve it slightly cool, around 55 to 58 degrees."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Louis Jadot Beaune 1er Cru 2023",
+      "field": "lines",
+      "value": {
+        "s10": "On the dinner tasting, Louis Jadot's Beaune Premier Cru: a light, bright red Burgundy that loves the redfish.",
+        "s20": "On the tasting we pour a Premier Cru Beaune from Louis Jadot with the redfish: bright red fruit, a silky texture and a savory edge, a light red Burgundy that loves the pickled grapes.",
+        "s45": "The third course of our dinner tasting, the Redfish Véronique, comes with a 4 oz pour of Louis Jadot's Beaune Premier Cru. Premier Cru is Burgundy's second-highest vineyard tier, and the highest in Beaune, which has no Grand Cru. It's Pinot Noir with bright red fruit, a silky texture and a savory edge, light enough for fish and lovely with the pickled grapes. We open it 20 to 30 minutes ahead so the young wine shows its perfume."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Domaine de Durban Beaumes-de-Venise Rouge 2024",
+      "field": "lines",
+      "value": {
+        "s10": "The Durban, a Southern Rhône red: ripe and generous with soft tannins, for spice and richness.",
+        "s20": "The Durban is a Beaumes-de-Venise red from the Southern Rhône: ripe dark cherry, plum, dried herbs and pepper with round tannins, so it handles spice and richness beautifully, like the Eggs Owen and the Creole hanger steak.",
+        "s45": "Domaine de Durban is famous for its sweet Muscat, but this is the estate's dry red, a Grenache and Syrah blend from the Beaumes-de-Venise cru in the Southern Rhône. It's ripe and generous: dark cherry, plum, dried herbs and pepper, with round, soft tannins. That ripeness and pepper stand up to spice and braise, so it's our first pick with the Eggs Owen and its short rib débris, and with the Creole hanger steak and its chili crisp."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône",
+      "field": "lines",
+      "value": {
+        "s10": "With the petite filet on the breakfast tasting, a Côtes du Rhône from Châteaumar: juicy, soft and all Syrah.",
+        "s20": "With the filet on the Traditional Breakfast we pour Domaine de Châteaumar's Cuvée Vincent, a Côtes du Rhône: all Syrah, with black raspberry, black pepper and soft tannins, juicy and just right for red meat at breakfast.",
+        "s45": "The fourth course of our Traditional Breakfast, the petite filet mignon, comes with a 4 oz pour of Domaine de Châteaumar's Cuvée Vincent, a Côtes du Rhône. It's all Syrah from fifty year old vines on two parcels beside Châteauneuf-du-Pape, which is unusual in the south, where Grenache usually leads. It's juicy and soft: black raspberry, black pepper and gentle tannins. We serve it slightly cool to keep it fresh in the morning, and I'll check the bottle before I quote a vintage."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2023",
+      "field": "lines",
+      "value": {
+        "s10": "The Moulin d'Issan, a classic Bordeaux: cassis and cedar with enough structure for steak and béarnaise.",
+        "s20": "For the steak, the Moulin d'Issan is a classic Bordeaux from the team behind Château d'Issan in Margaux: Merlot-led with Cabernet Sauvignon, cassis, plum and cedar, medium-bodied with polished tannin for the béarnaise.",
+        "s45": "The Moulin d'Issan comes from the team behind Château d'Issan, a classic estate in Margaux, and it's named for a ruined seventeenth century windmill. It's a Bordeaux Supérieur, Merlot-led with Cabernet Sauvignon: cassis, plum and cedar, medium-bodied with polished tannins. That structure is what a steak with béarnaise wants, so it's our first pick with the Creole-spiced hanger steak, and it suits the filet too. If you take a bottle, we'll open it 20 to 30 minutes ahead."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "lines",
+      "value": {
+        "s10": "The 2010 Inglenook Rubicon by the glass: a Napa legend with sixteen years of age, powerful but silky.",
+        "s20": "For the Chateaubriand, we pour the 2010 Inglenook Rubicon by the glass, a Napa legend from Rutherford with sixteen years of age: blackcurrant, cedar, tobacco and earth, powerful but silky, the tannins softened by time.",
+        "s45": "Rubicon is Inglenook's flagship, a Cabernet Sauvignon based wine from Rutherford in the Napa Valley, and our glass is the 2010, sixteen years old. Age has softened the tannins, so it's powerful but silky: blackcurrant, cedar, tobacco and earth. That depth is made for the Roasted Chateaubriand and its sauce Foyot, and for the hanger steak. An older wine can throw sediment, so we keep the bottle upright and pour slowly, and I'll show you the label: it's a Napa icon."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+      "field": "lines",
+      "value": {
+        "s10": "With the duck on the dinner tasting, Paul Hobbs Coombsville Cabernet: dark fruit and firm structure, kept fresh by a cool site.",
+        "s20": "With the Rohan duck on the dinner tasting we pour Paul Hobbs Cabernet from Coombsville: dark fruit and cocoa to meet the peaches, and firm structure for the rich meat. Coombsville is one of Napa's cooler corners, so it stays fresh.",
+        "s45": "The fourth course of our dinner tasting, the roasted Rohan duck, comes with a 4 oz pour of Paul Hobbs Coombsville Cabernet Sauvignon. Coombsville is one of Napa's cooler corners, so the wine keeps its freshness while carrying dark fruit and cocoa on a firm structure. The dark fruit meets the glazed peaches, the candied hazelnuts echo the cocoa, and the structure stands up to rich duck. It's young, so we open or decant it 30 to 60 minutes ahead."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+      "field": "lines",
+      "value": {
+        "s10": "For dessert, a half-bottle of Dr. Hermann's Mosel Auslese: honeyed and sweet, but bright enough never to feel heavy.",
+        "s20": "For dessert, a half-bottle of Mosel Auslese from Dr. Hermann is a treat: apricot, honey and pineapple with electric acidity, so it's sweet but never heavy. It pours about four dessert glasses, perfect to share.",
+        "s45": "The Dr. Hermann is a Riesling Auslese, a selected-harvest wine a tier above late-harvest Spätlese, from the steep Erdener Prälat vineyard in the Mosel. Twelve years of age add depth to apricot, honey and pineapple, and its electric acidity keeps the sweetness lively. Because it's sweeter than our desserts, it never tastes sour beside them: it's our first pick with Bananas Foster, the bread pudding, the lemon tart, the tarte Tatin and the sweet breakfast starters. The half-bottle pours about four glasses."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+      "field": "lines",
+      "value": {
+        "s10": "On the dinner tasting, Banyuls from La Tour Vieille: a sweet red from the south of France, fig, caramel and coffee.",
+        "s20": "Banyuls is a sweet fortified red from the south of France, and the La Tour Vieille Reserva is dried fig, walnut, caramel, coffee and orange peel. With chocolate it's the classic, so we pour it with the Snickers.",
+        "s45": "Banyuls is a sweet, fortified red from the schist terraces of Roussillon in French Catalonia, made mostly from Grenache. Grape spirit stops the fermentation, so the grape's own sugar stays in the wine, and the Reserva is aged the oxidative way: dried fig, walnut, caramel, coffee and orange peel. It's the classic wine for chocolate, which is why it closes our dinner tasting with the Snickers, and it loves the Cherries Jubilee and the coffee cake. We serve it slightly cool."
+      },
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Like a Sazerac, but lighter",
+        "guest": "I love a Sazerac, but I'd like something lighter tonight.",
+        "you": "Then I'd go one of two ways. The Yellowstone on our current list is whiskey with lemon, honey and turmeric and Peychaud's Aperitivo, so it shares the Peychaud's name but drinks bright and easy, $18.00. Or the Niagara Falls, gin with Lillet Blanc, tomato water and lemon, crisp and savory, $15.00. And if the Sazerac itself is calling, it's $13.",
+        "principle": "Name what they love about the drink, then offer the same family in a lighter shape with the price of each; say 'current list', because the cocktail list changes with the season.",
+        "items": [
+          "Yellowstone",
+          "Niagara Falls",
+          "Classic Sazerac"
+        ]
+      },
+      "reason": "A guest conversation a new server meets with the drinks, in the guide's format, kept to prices the house prints; its items named so the links are exact",
+      "source": "bar-list-12; pdf p39; pages/brennansneworleans-cocktails-2026-10-03.txt"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "What are the luxury cocktails worth?",
+        "guest": "The Roost Bar cocktails cost a lot more. What makes them worth it?",
+        "you": "The bottles and the moment. The Flamingo is Chopin vodka and Monkey 47 gin with dragonfruit, lemon and Taittinger Champagne, $28.00. The Birdcage is a smoked Old Fashioned on Rabbit Hole Dareringer, a bourbon finished in sherry casks, $31.00. The Spoonbill is Hendrick's gin and Cap Corse Mattei Blanc with chive oil, served with a spoon of caviar, $36.00. If you'd rather stay classic, the Sazerac is $13 and Thompson's Dream is $20.",
+        "principle": "Sell the bottles and the theater, never the price: give each drink its one special thing, then name a classic at a lower price so nobody feels pushed.",
+        "items": [
+          "Flamingo",
+          "Birdcage",
+          "Spoonbill",
+          "Classic Sazerac",
+          "Thompson’s Dream"
+        ]
+      },
+      "reason": "A guest conversation a new server meets with the drinks, in the guide's format, kept to prices the house prints; its items named so the links are exact",
+      "source": "gap-roost-1; gap-roost-3; pdf p39; pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "A round of brunch cocktails",
+        "guest": "We're celebrating. What should the four of us start with at brunch?",
+        "you": "For a brunch table I'd mix it: a Brandy Milk Punch, our classic eye opener, $12; a Bloody Bull or our Bloody Mary with pickled okra, $13 and $11; and the Miami Beach, sparkling wine with watermelon and citrus, $14.00. If anyone isn't drinking, the Catalina Island is watermelon and tonic, $15. Shall I bring a mix so everyone can taste?",
+        "principle": "Offer a spread across the styles, creamy, savory and sparkling, with one spirit-free choice, and give each price once.",
+        "items": [
+          "Brandy Milk Punch",
+          "Bloody Bull",
+          "Brennan’s Bloody Mary",
+          "Miami Beach",
+          "Catalina Island"
+        ]
+      },
+      "reason": "A guest conversation a new server meets with the drinks, in the guide's format, kept to prices the house prints; its items named so the links are exact",
+      "source": "pdf p38, p49, p50; bar-list-12"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "Not drinking tonight",
+        "guest": "I'm not drinking tonight. What do you have?",
+        "you": "Plenty. The Catalina Island is Seedlip Grove 42, watermelon and tonic, bright and bubbly, $15; the Black Hills is a margarita idea with Lyre's agave, basil and lime, $14, non-alcoholic rather than zero; and our Café Glacé de la Maison is chicory cold brew with cardamom-clove syrup, $11. With dessert, our chicory coffee is the classic. And I'll steer you past the dishes cooked with alcohol, like the Foster and the turtle soup.",
+        "principle": "Treat a spirit-free guest as a guest with a drink order: three real drinks with their prices, honesty that Lyre's is under half a percent, and the dishes cooked with alcohol named before they order.",
+        "items": [
+          "Catalina Island",
+          "Black Hills",
+          "Café Glacé de la Maison",
+          "New Orleans-Style Coffee with Chicory",
+          "World Famous Bananas Foster",
+          "Turtle Soup"
+        ]
+      },
+      "reason": "A guest conversation a new server meets with the drinks, in the guide's format, kept to prices the house prints; its items named so the links are exact",
+      "source": "pdf p47 (No alcohol), p49, p50; dossier-the-bar section 11"
+    },
+    {
+      "target": "scenario:+",
+      "op": "add",
+      "value": {
+        "title": "What is on the children's menu?",
+        "guest": "What can our seven-year-old have, and how much is it?",
+        "you": "Our children's menu is for ten and under, $25.00 for three courses with a drink. At breakfast it's sliced fresh fruit first, then eggs any style with toast and bacon, popcorn shrimp with Brabant potatoes, vanilla French toast with berries and whipped cream, or a grilled cheese with Brabant potatoes, and a scoop of vanilla ice cream to finish. At dinner it's a salami and cheese starter, then fried Gulf shrimp with French fries, buttered noodles with cheese, sautéed Gulf fish with potato and green beans, or a grilled cheese with French fries, and the same ice cream. I'll check today's kid's drink with the bar.",
+        "principle": "Read the card for the meal they are at: the age, the one price and the three-course shape, then the four plates, and confirm the drink rather than promising one.",
+        "items": [
+          "Eggs Any Style with Toast and Bacon",
+          "Popcorn Shrimp with Brabant Potatoes",
+          "Vanilla French Toast with Fresh Berries and Whipped Cream",
+          "Grilled Cheese Sandwich with Brabant Potatoes",
+          "Fried Gulf Shrimp with French Fries",
+          "Buttered Noodles with Cheese",
+          "Sautéed Gulf Fish with Potato and Green Beans",
+          "Grilled Cheese Sandwich with French Fries"
+        ]
+      },
+      "reason": "A guest conversation a new server meets with the drinks, in the guide's format, kept to prices the house prints; its items named so the links are exact",
+      "source": "gap-kids-1 to gap-kids-8; pages/brennansneworleans-kids-menus-2026-10-03.txt"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the 1946 list still poured, and what replaced it? The Yellowstone ($18.00): still on, and its measures, glass and garnish?",
+        "askWhom": "bar",
+        "items": [
+          "Yellowstone"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "bar-list-12; gap-roost-5"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the 1946 list still poured, and what replaced it? The Miami Beach ($14.00): still on, which sparkling wine, and its glass and garnish?",
+        "askWhom": "bar",
+        "items": [
+          "Miami Beach"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "bar-list-12; gap-roost-5"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the 1946 list still poured, and what replaced it? The Niagara Falls ($15.00): still on, which gin, and its glass and garnish?",
+        "askWhom": "bar",
+        "items": [
+          "Niagara Falls"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "bar-list-12; gap-roost-5"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the 1946 list still poured, and what replaced it? The Havana ($17.00): still on, and its measures, glass and garnish?",
+        "askWhom": "bar",
+        "items": [
+          "Havana"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "bar-list-12; gap-roost-5"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the 1946 list still poured, and what replaced it? The Acapulco ($16.00): still on, which mezcal, and its glass and garnish?",
+        "askWhom": "bar",
+        "items": [
+          "Acapulco"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "bar-list-12; gap-roost-5"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Flamingo ($28.00) still on the Luxury Roost Bar page, and what are its measures, glass and garnish?",
+        "askWhom": "bar",
+        "items": [
+          "Flamingo"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "gap-roost-1"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Birdcage ($31.00) still on the Luxury Roost Bar page, how is it smoked, and what are its glass and garnish?",
+        "askWhom": "bar",
+        "items": [
+          "Birdcage"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "gap-roost-1"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Spoonbill ($36.00) still on the Luxury Roost Bar page, which caviar and how much comes on the spoon, and what is the glass?",
+        "askWhom": "bar",
+        "items": [
+          "Spoonbill"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "gap-roost-1"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Thompson's Dream ($20): still poured, the measures, the Willett bottling and its proof, and whether the name honors Thompson Willett?",
+        "askWhom": "bar",
+        "items": [
+          "Thompson’s Dream"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "pdf p39; dossier-the-bar section 6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Origin Story ($40): still poured, which Dudognon expression, who barrel-ages the Peychaud's and in what cask, and the measures?",
+        "askWhom": "bar",
+        "items": [
+          "Origin Story"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "pdf p39; dossier-the-bar section 7"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Brennan's Champagne Cocktail ($20): what is the build (bitters, sugar, Cognac or not, which wine, the glass), and what else is on the bubbly cocktail list?",
+        "askWhom": "bar",
+        "items": [
+          "Brennan’s Champagne Cocktail"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "pdf p49; dossier-the-bar section 10"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Brennan's Bloody Mary ($11): is the mix the Bloody Bull's housemade mix, which vodka, and how hot is it?",
+        "askWhom": "bar",
+        "items": [
+          "Brennan’s Bloody Mary"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "pdf p39, p49; dossier-the-bar section 4"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is each coffee $11 (one $11 is printed before all three), and is the chicory coffee the Brennan's private blend from Congregation at every meal?",
+        "askWhom": "bar",
+        "items": [
+          "New Orleans-Style Coffee with Chicory",
+          "Congregation Single-Origin Coffee",
+          "Café Glacé de la Maison"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "pdf p49; dossier-the-bar section 12; gap-fill-2"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which single origin is Congregation roasting for us today? The guide printed a Papua New Guinea; read it off the coffee card.",
+        "askWhom": "bar",
+        "items": [
+          "Congregation Single-Origin Coffee"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "pdf p49; gap-sourcing-6"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Revive cold-pressed juices are in today, and is it still $10?",
+        "askWhom": "bar",
+        "items": [
+          "Revive Cold-Pressed Juice"
+        ]
+      },
+      "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
+      "source": "pdf p49"
+    },
+    {
+      "target": "term:Chicory",
+      "field": "notItems",
+      "value": [
+        "Congregation Single-Origin Coffee"
+      ],
+      "reason": "The single-origin coffee's own lines say it carries no chicory; its name is matched only because its parts say so. The chicory coffee, the Irish Coffee, the coffee cake and the Café Glacé stay linked",
+      "source": "pdf p49; review of 3 October 2026"
+    },
+    {
+      "target": "term:Peychaud's",
+      "field": "notItems",
+      "value": [
+        "Yellowstone"
+      ],
+      "reason": "The Peychaud's term is the bitters; the Yellowstone carries Peychaud's Aperitivo, a different product with its own term. Origin Story stays linked: its barrel-aged Peychaud's is the bitters",
+      "source": "bar-list-12; pdf p39; review of 3 October 2026"
+    },
+    {
+      "target": "dish:World Famous Bananas Foster",
+      "field": "parts.sides",
+      "value": "housemade vanilla ice cream, with the bananas and their sauce spooned over at the table",
+      "reason": "The guide prints the same sides for the Foster and the Cherries Jubilee, which is one drill stem with two answers; each now says what goes over the ice cream",
+      "source": "pdf p33 (the Foster menu line and parts); pdf p34"
+    },
+    {
+      "target": "dish:Cherries Jubilee",
+      "field": "parts.sides",
+      "value": "housemade vanilla ice cream, with the flamed cherries and Luxardo sauce spooned over at the table",
+      "reason": "The guide prints the same sides for the Foster and the Cherries Jubilee, which is one drill stem with two answers; each now says what goes over the ice cream",
+      "source": "pdf p34 (the Jubilee menu line and parts); pdf p33"
     }
   ]
 }

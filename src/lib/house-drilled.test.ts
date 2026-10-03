@@ -51,8 +51,14 @@ describe('markDrilled', () => {
 		const s = mapStorage();
 		expect(markDrilled('d1:lineToDish', 'met', s).ok).toBe(false);
 		expect(markDrilled('house:h1:d1', 'met', s).ok).toBe(false);
-		expect(markDrilled('house:h1:d1:lineToDish', 'close' as never, s).reason).toBe('not a verdict');
+		expect(markDrilled('house:h1:d1:lineToDish', 'maybe' as never, s).reason).toBe('not a verdict');
 		expect(readDrilled(s)).toEqual([]);
+	});
+
+	it('takes close, the graders\' middle word, as a verdict', () => {
+		const s = mapStorage();
+		expect(markDrilled('house:h1:d1:say-s20', 'close', s, 300)).toEqual({ ok: true, count: 1 });
+		expect(readDrilled(s)).toEqual([{ k: 'house:h1:d1:say-s20', v: 'close', at: 300 }]);
 	});
 
 	it('caps at HOUSE_DRILLED_CAP with the newest kept', () => {

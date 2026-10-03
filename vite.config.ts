@@ -275,6 +275,38 @@ export default defineConfig({
 							expiration: { maxEntries: 80, maxAgeSeconds: 365 * 24 * 60 * 60 }
 						}
 					},
+					/**
+					 * The house packs (static/shared/packs/*.oothouse.json, and the
+					 * site's /shared/packs/), ahead of the /shared/ route below so it
+					 * answers them first. NetworkFirst, so a republished edition is
+					 * never served stale while the network is up, with the last copy
+					 * kept for offline. Its own cache, so a pack of several hundred
+					 * kilobytes never crowds the nine shared scripts out of
+					 * oot-shared-v1's sixteen entries. Matched anywhere in the path,
+					 * because the wing build serves its copy under /table/shared/packs/.
+					 * The store's auto-load fetches with cache 'no-cache' and only
+					 * online; this route is what keeps an offline open from failing
+					 * loudly. Prefixed oot- so no sibling wing's reaper takes it.
+					 */
+					{
+						urlPattern: ({ url, sameOrigin }) => sameOrigin && /\/shared\/packs\/[^/]+$/.test(url.pathname),
+						handler: 'NetworkFirst',
+						options: {
+							cacheName: 'oot-table-packs-v1',
+							networkTimeoutSeconds: 8,
+							cacheableResponse: { statuses: [200] },
+							plugins: [
+								{
+									cacheKeyWillBeUsed: async ({ request }) => {
+										const u = new URL(request.url);
+										u.search = '';
+										return u.href;
+									}
+								}
+							],
+							expiration: { maxEntries: 8 }
+						}
+					},
 					{
 						urlPattern: ({ url, sameOrigin }) =>
 							sameOrigin && url.pathname.startsWith('/shared/'),

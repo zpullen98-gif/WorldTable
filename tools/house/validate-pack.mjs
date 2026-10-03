@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 /* validate-pack.mjs: the built Brennan's house through the engine's normaliseHouse, then
-   validateHouse(house, { sourceText: guide.txt, fatal: FATAL_CODES }); every problem printed by
+   validateHouse(house, { sourceText: guide.txt plus every snapshot in pages/, fatal: FATAL_CODES }),
+   with engine.mjs stemProblems (no shared drill stem, no filler part, no unconfirmed glass) and
+   upsellRoomProblems (every upsell poured where the guest sits) as fatal beside the engine's codes,
+   so a price the guide does not print stands on a committed page whose first line names its
+   source, by the same verbatim rule; every problem printed by
    code with the item and the field; the counts asserted; exit 1 on any fatal, any count that is
    off, or a proper-noun flag that neither the guide nor the research answers.
 
@@ -13,11 +17,11 @@
    Runs from any directory. Reads house/brennans/house.json by default (the builder's output). */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs } from './engine.mjs';
+import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs, sourceText as pageText, pageFiles, stemProblems, upsellRoomProblems } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
-	console.log(`validate-pack.mjs: normalise and validate ${REL(HOUSE_JSON)} against ${REL(GUIDE)}.
+	console.log(`validate-pack.mjs: normalise and validate ${REL(HOUSE_JSON)} against ${REL(GUIDE)} and the page snapshots beside it.
 
   --file <path>  validate another house file (a pack file is read through its house key)
   --verbose      print every advisory flag, not only the counts
@@ -40,8 +44,9 @@ const changed = report.filter((r) => r.code === 'id' || r.code === 'forbidden');
 for (const r of changed) console.error(`validate-pack: normaliser ${r.code} at ${r.path}: ${r.said}`);
 if (!lib.sameJson(house, input)) console.error('validate-pack: the normaliser changed the record (a key outside the shape, a blank mark or a stamp that was not a number)');
 
-const sourceText = fs.readFileSync(GUIDE, 'utf8');
+const sourceText = pageText(fail);
 const { problems, fatalCount } = lib.validateHouse(house, { sourceText, fatal: lib.constants.FATAL_CODES });
+console.log(`validate-pack: the price source is ${REL(GUIDE)} and ${pageFiles().length} page snapshot(s)`);
 
 const byCode = new Map();
 for (const p of problems) { if (!byCode.has(p.code)) byCode.set(p.code, []); byCode.get(p.code).push(p); }
@@ -59,7 +64,14 @@ if (names.length) {
 }
 const counts = countProblems(house);
 for (const c of counts) console.error('validate-pack: count: ' + c);
+/* The pack's own fatal rules beside the engine's: no two records share a drill stem, no filler part
+   or unconfirmed glass stands as a drill stem or answer, and no upsell sends a guest to a drink
+   that is not poured where they sit. */
+const stems = stemProblems(house);
+for (const s of stems) console.error('validate-pack: FATAL stem: ' + s);
+const rooms = upsellRoomProblems(house);
+for (const r of rooms) console.error('validate-pack: FATAL upsell-room: ' + r);
 
-const bad = fatalCount + counts.length + changed.length + unanswered.length + (lib.sameJson(house, input) ? 0 : 1);
-if (bad) fail(`${REL(FILE)}: ${fatalCount} fatal problem(s), ${counts.length} count(s) off, ${changed.length} normaliser change(s), ${unanswered.length} unanswered name(s)`);
+const bad = fatalCount + counts.length + changed.length + unanswered.length + stems.length + rooms.length + (lib.sameJson(house, input) ? 0 : 1);
+if (bad) fail(`${REL(FILE)}: ${fatalCount} fatal problem(s), ${stems.length} drill stem problem(s), ${rooms.length} upsell room problem(s), ${counts.length} count(s) off, ${changed.length} normaliser change(s), ${unanswered.length} unanswered name(s)`);
 console.log(`validate-pack: ${REL(FILE)}: 0 fatal, ${problems.length} advisory flag(s) in ${byCode.size} code(s), counts hold (${house.dishes.length} dishes, ${house.cocktails.length} cocktails, ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes)`);

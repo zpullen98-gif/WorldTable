@@ -41,7 +41,7 @@ import vm from 'node:vm';
 import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ADAPTERS, CONSTANTS, DASH, DRILLS, DRILL_CONSTANTS, LIB, MODULES, TARGET } from './port-house.mjs';
+import { ADAPTERS, CONSTANTS, DASH, DRILLS, DRILL_CONSTANTS, GRADERS, LIB, MODULES, TARGET } from './port-house.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const HOUSE = path.join(ROOT, 'src', 'lib', 'house');
@@ -344,7 +344,8 @@ function checkFile(text) {
 	if (wantLib.join(',') !== gotLib.join(',')) fail.push(`OOT.houseLib carries ${gotLib.join(', ')}; port-house.mjs promises ${wantLib.join(', ')}`);
 	const wantAdapters = Object.keys(ADAPTERS).sort().join(',');
 	if (Object.keys(OOT.houseLib.adapters).sort().join(',') !== wantAdapters) fail.push('OOT.houseLib.adapters does not carry the promised names');
-	const wantDrills = [...DRILLS, ...DRILL_CONSTANTS].sort().join(',');
+	const wantDrills = [...DRILLS, ...GRADERS, ...DRILL_CONSTANTS].sort().join(',');
+	for (const g of GRADERS) if (OOT.houseLib[g] !== OOT.houseLib.drills[g]) fail.push(`OOT.houseLib.${g} is not the same function as OOT.houseLib.drills.${g}`);
 	if (Object.keys(OOT.houseLib.drills).sort().join(',') !== wantDrills) fail.push('OOT.houseLib.drills does not carry the promised names');
 	const wantConstants = CONSTANTS.slice().sort().join(',');
 	if (Object.keys(OOT.houseLib.constants).sort().join(',') !== wantConstants) fail.push('OOT.houseLib.constants does not carry the promised names');
@@ -507,6 +508,58 @@ function checkParity(T, P) {
 		if (label === 'widened' && !dealt) fail.push('the widened house dealt no question of any kind, so the drills are not proved');
 	}
 
+	/* The offline graders, over the fixture: the kept lines word for word, a
+	   thin answer, an over cap one, an empty one, an unknown id and her
+	   unkept line, each length; the scenarios likewise; the listings. */
+	const hersOnly = clone(fixture);
+	for (const d of hersOnly.dishes) if (d.lines) d.lines.by = 'maitre';
+	for (const sc of hersOnly.scenarios) if (sc.you) sc.you.by = 'maitre';
+	const SAID = ['', 'Chicken with potatoes and gravy.', 'Half a corn fed chicken roasted over embers, rosemary gravy, leeks, crushed potatoes, smoky skin and lemon.', CAFE + ' cr' + E_GRAVE + 'me, glazed with roasting juices' + CURLY + 's.'];
+	/** @param {Engine} E */
+	const grades = (E) => {
+		const out = [];
+		for (const house of [fixture, hersOnly]) {
+			for (const id of ['d-chicken1', 'd-beetrt01', 'w-lantern1', 'b-collins1', 'd-nowhere1']) {
+				for (const len of ['s10', 's20', 's45']) {
+					const lines = (house.dishes.concat(house.wines, house.cocktails).find((/** @type {any} */ i) => i.id === id) || {}).lines;
+					for (const said of [...SAID, lines ? lines.value.s45 : '']) out.push(E.gradeSaid(house, id, len, said));
+				}
+			}
+			for (const id of ['s-hurry001', 's-nowhere1']) for (const said of [...SAID, 'Order both now and I will tell the pass.']) out.push(E.gradeScenario(house, id, said));
+			out.push(E.sayable(house), E.sayable(house, 'wine'), E.roleable(house));
+		}
+		out.push([0, 1, 12, 45, 104, 2025, 12000].map(E.numberWords));
+		return out;
+	};
+	const gradedT = grades(T);
+	same('the graders (gradeSaid, gradeScenario, sayable, roleable, numberWords)', gradedT, grades(P));
+	if (!gradedT.some((g) => g && g.verdict === 'met')) fail.push('no answer met its kept line, so the graders are not proved');
+
+	/* A newer edition over an older one, both ways of stamping, on both sides. */
+	const edition = (/** @type {any} */ h, /** @type {number} */ at, /** @type {number} */ itemTs) => {
+		const out = clone(h);
+		out.pack = { id: 'house-min', builtBy: 'the fixture', builtAt: new Date(at).toISOString(), version: 1 };
+		for (const list of T.HOUSE_LISTS) for (const r of out[list]) {
+			r.ts = itemTs;
+			for (const f of T.MARK_FIELDS[list]) if (T.isMark(r[f])) r[f].ts = at;
+		}
+		return out;
+	};
+	const ed1 = edition(fixture, NOW - 86_400_000, NOW - 2 * 86_400_000);
+	const ed2 = edition(fixture, NOW, NOW);
+	ed2.dishes[0].description = 'The second edition.';
+	ed2.dishes[0].parts.value.sauce = 'The second edition sauce';
+	ed2.dishes.push(Object.assign(clone(ed2.dishes[1]), { id: 'd-newdish1', name: 'Smoked Trout' }));
+	const touched = clone(ed1);
+	touched.dishes[0].lines = { value: { s10: 'Mine.', s20: 'Mine too.', s45: 'All mine.' }, by: 'person', ts: NOW - 1000 };
+	touched.wines[0].ts = NOW - 500;
+	touched.dishes = touched.dishes.filter((/** @type {any} */ d) => d.id !== 'd-beetrt01');
+	touched.removed = { 'd-beetrt01': NOW - 400 };
+	for (const [label, dev] of [['untouched', ed1], ['touched', touched]]) {
+		same(`editionStamp(${label})`, [T.editionStamp(dev), T.editionItemStamp(dev), T.editionBuiltAt(dev)], [P.editionStamp(dev), P.editionItemStamp(dev), P.editionBuiltAt(dev)]);
+		same(`refreshEdition(${label})`, T.refreshEdition(dev, ed2), P.refreshEdition(dev, ed2));
+	}
+
 	/* Ids. */
 	same('mintId', ['d-', 'w-', 'h-'].map((p) => T.mintId(p, new Set(['d-00000000']), seeded(5))), ['d-', 'w-', 'h-'].map((p) => P.mintId(p, new Set(['d-00000000']), seeded(5))));
 	same('isMark', MARKS.map(T.isMark), MARKS.map(P.isMark));
@@ -628,12 +681,70 @@ async function checkApi(T, P) {
 	step = 'importPack (new, same id)';
 	same(step, await apiT.importPack(packOf(clone(fixture)), { mode: 'new' }), await apiP.importPack(packOf(clone(fixture)), { mode: 'new' }));
 	dump();
+	/* The shipped pack at boot: a house the device lacks is added (current
+	   only when asked here, the device holding a house with work in it), the
+	   same edition writes nothing, a newer edition refreshes with a person's
+	   edited mark kept and a removal respected, and a refusal is a sentence. */
+	const shippedOf = (/** @type {any} */ h, /** @type {number} */ at) => {
+		const out = clone(h);
+		out.id = 'h-shipped1';
+		out.name = 'The Shipped Room';
+		out.pack = { id: 'shipped', builtBy: 'the check', builtAt: new Date(at).toISOString(), version: 1 };
+		for (const list of T.HOUSE_LISTS) for (const r of out[list]) {
+			r.ts = at;
+			if ('house' in r) r.house = out.id;
+			for (const f of T.MARK_FIELDS[list]) if (T.isMark(r[f])) r[f].ts = at;
+		}
+		return JSON.stringify(packOf(out));
+	};
+	clock = LATER + 3500;
+	step = 'ensurePack (refused)';
+	same(step, await apiT.ensurePack('{ not a pack'), await apiP.ensurePack('{ not a pack'));
+	dump();
+	step = 'ensurePack (added)';
+	const firstEdition = shippedOf(fixture, NOW - 86_400_000);
+	same(step, await apiT.ensurePack(firstEdition), await apiP.ensurePack(firstEdition));
+	dump();
+	step = 'ensurePack (current)';
+	const again = [await apiT.ensurePack(firstEdition), await apiP.ensurePack(firstEdition)];
+	same(step, again[0], again[1]);
+	if (again[0].action !== 'current') fail.push(`ensurePack with the same edition answered ${again[0].action}; it should be current and write nothing`);
+	dump();
+	step = 'switchTo the shipped house';
+	same(step, await apiT.switchTo('h-shipped1'), await apiP.switchTo('h-shipped1'));
+	dump();
+	step = 'a person edits a mark and removes an item on the shipped house';
+	const myLine = { value: { s10: 'My own line.', s20: 'My own twenty.', s45: 'My own forty five.' }, by: 'person', ts: LATER + 3600 };
+	clock = LATER + 3600;
+	same(step, [await apiT.setMark('dish', 'd-chicken1', 'lines', myLine), await apiT.removeItem('dish', 'd-beetrt01')], [await apiP.setMark('dish', 'd-chicken1', 'lines', myLine), await apiP.removeItem('dish', 'd-beetrt01')]);
+	dump();
+	step = 'ensurePack (refreshed)';
+	const nextEdition = JSON.parse(shippedOf(fixture, LATER + 4000));
+	nextEdition.house.dishes[0].lines.value.s10 = 'The edition line.';
+	nextEdition.house.dishes[0].parts.value.sauce = 'The edition sauce';
+	nextEdition.house.dishes.push(Object.assign(clone(nextEdition.house.dishes[1]), { id: 'd-newdish1', name: 'Smoked Trout' }));
+	const nextText = JSON.stringify(nextEdition);
+	clock = LATER + 5000;
+	const refreshedT = await apiT.ensurePack(nextText);
+	same(step, refreshedT, await apiP.ensurePack(nextText));
+	dump();
+	const after = apiT.current();
+	if (refreshedT.action !== 'refreshed') fail.push(`ensurePack with a newer edition answered ${refreshedT.action}; it should refresh`);
+	else if (!after) fail.push('the refresh left no current house');
+	else {
+		const chicken = after.dishes.find((/** @type {any} */ d) => d.id === 'd-chicken1');
+		if (!chicken || chicken.lines.value.s10 !== 'My own line.') fail.push('the refresh did not keep the line a person edited');
+		if (!chicken || chicken.parts.value.sauce !== 'The edition sauce') fail.push('the refresh did not bring an untouched mark up to the edition');
+		if (after.dishes.some((/** @type {any} */ d) => d.id === 'd-beetrt01')) fail.push('the refresh brought back an item a person removed');
+		if (!after.dishes.some((/** @type {any} */ d) => d.id === 'd-newdish1')) fail.push('the refresh did not add the item the edition added');
+	}
+
 	step = 'remove';
 	const second = apiT.list().find((/** @type {any} */ s) => s.name === 'Second, renamed');
 	same(step, await apiT.remove(second ? second.id : 'h-none', 'Second, renamed'), await apiP.remove(second ? second.id : 'h-none', 'Second, renamed'));
 	dump();
 	same('list at the end', apiT.list(), apiP.list());
-	said.push(`the api over a Map agrees step by step through import, mark, card, field, entry, put, sync, removeItem, pack, mint, rename, switch, merge and remove (${mapT.size} keys on the device at the end)`);
+	said.push(`the api over a Map agrees step by step through import, mark, card, field, entry, put, sync, removeItem, pack, mint, rename, switch, merge, ensurePack (refused, added, current, refreshed with an edit kept and a removal respected) and remove (${mapT.size} keys on the device at the end)`);
 }
 
 async function main() {

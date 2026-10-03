@@ -7,12 +7,15 @@
       window.OOT.houseLib (emptyHouse, mintId, stripDashes, hasDash, normaliseHouse, the constants);
    2. reads parsed.json (the parser's output), overrides.json (every departure from the guide,
       with its reason and source) and ids.ledger.json (slug to id, read before any id is minted);
-   3. builds an intermediate model: the card, 47 dishes, 20 wines, 7 cocktails (5 signature drinks
-      and the 2 spirit-free drinks as drafts), 2 tastings, the lexicon, scenarios, mix-ups,
+   3. builds an intermediate model: the card, the guide's 47 dishes, 20 wines, 7 cocktails (5
+      signature drinks and the 2 spirit-free drinks), 2 tastings, the lexicon, scenarios, mix-ups,
       must-knows, the lineup register and the disputes, with every reference still a name;
    4. applies the overrides to the model (set, replace, append, add) before any dash is touched,
       so a replace matches the guide's own text; an entry whose target or 'from' is not found
-      fails the build;
+      fails the build. An add on dish:+ or cocktail:+ files a whole item the guide prints only as
+      a price line or a must-know (the bar list, the children's menu, the Bubbles snacks, the
+      coffees), refused unless it carries the five parts, the three lines, say, guest and why,
+      and for a drink its spec and two or three upsells by name;
    5. runs every string through the spelling map (the research's British forms become the house's
       American ones, logged to house/brennans/spelling-log.json) and then the dash pass: an en dash
       a line wrap left before a space is rejoined as a hyphen (New Orleans-style), an en dash
@@ -31,6 +34,10 @@
    person's words and go in verbatim (dash-stripped only). Nothing here writes an allergen into
    a mark; the lineup register carries those questions.
 
+   The one stamp is the edition's (engine.mjs EDITION_TS, Date.parse of the pack's builtAt) on
+   every mark and every record, so keep-all and a device can tell the edition's own words from a
+   person's edit.
+
    Usage: node house/build-brennans.mjs [--mint] [--stamp <ms>]
    Runs from any directory. Exits 1 with the file and the rule on failure. */
 
@@ -38,7 +45,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
-import { americanise, checkArgs } from './engine.mjs';
+import { americanise, checkArgs, EDITION_TS } from './engine.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DIR = path.join(HERE, 'brennans');
@@ -68,7 +75,7 @@ const MINT = args.includes('--mint');
 const stampAt = args.indexOf('--stamp');
 /* Fixed by default so a rebuild is byte for byte the pack that shipped (the mirror gate holds the
    site's copy to this one): --stamp sets another, --now takes the clock for a fresh edition. */
-const BUILD_TS = stampAt >= 0 ? Number(args[stampAt + 1]) : args.includes('--now') ? Date.now() : 1790758800000;
+const BUILD_TS = stampAt >= 0 ? Number(args[stampAt + 1]) : args.includes('--now') ? Date.now() : EDITION_TS;
 if (!Number.isFinite(BUILD_TS)) fail('--stamp must be a number of milliseconds');
 
 function fail(msg) {
@@ -313,7 +320,15 @@ const ALIASES = [
 	[/auslese/i, 'Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)'], [/charles lafitte/i, 'Charles Lafitte Brut Champagne NV'], [/jadot|beaune/i, 'Louis Jadot Beaune 1er Cru 2023'],
 	[/paul hobbs/i, 'Paul Hobbs Coombsville Cabernet Sauvignon 2021'], [/fichet|mâcon-igé/i, 'Fichet ‘Château London’ Mâcon-Igé 2024'], [/châteaumar|chateaumar/i, 'Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône'],
 	[/pierre sparr|\bsparr\b/i, 'Pierre Sparr Brut Rosé Crémant d’Alsace NV'], [/minuty/i, 'Minuty ‘Prestige’ Côtes de Provence Rosé 2024'], [/damien martin|bourgogne pinot/i, 'Damien Martin Bourgogne Pinot Noir 2023'],
-	[/albariño|albarino|pazo das bruxas/i, 'Pazo das Bruxas Albariño 2025'], [/domaine durand|loire sauvignon/i, 'Domaine Durand Sauvignon Blanc 2025']
+	[/albariño|albarino|pazo das bruxas/i, 'Pazo das Bruxas Albariño 2025'], [/domaine durand|loire sauvignon/i, 'Domaine Durand Sauvignon Blanc 2025'],
+	/* The drinks, snacks and coffees the overrides file, so a scenario that names one links to it. */
+	[/yellowstone/i, 'Yellowstone'], [/miami beach/i, 'Miami Beach'], [/niagara falls/i, 'Niagara Falls'], [/\bhavana\b/i, 'Havana'], [/acapulco/i, 'Acapulco'],
+	[/flamingo/i, 'Flamingo'], [/birdcage/i, 'Birdcage'], [/spoonbill/i, 'Spoonbill'], [/thompson.s dream/i, 'Thompson’s Dream'], [/origin story/i, 'Origin Story'],
+	[/brennan.s bloody mary/i, 'Brennan’s Bloody Mary'], [/champagne cocktail/i, 'Brennan’s Champagne Cocktail'],
+	[/chicory coffee|coffee with chicory/i, 'New Orleans-Style Coffee with Chicory'], [/caf[eé] glac[eé]/i, 'Café Glacé de la Maison'],
+	[/single.origin/i, 'Congregation Single-Origin Coffee'], [/\brevive\b|cold.pressed juice/i, 'Revive Cold-Pressed Juice'],
+	[/spiced nuts/i, 'Creole Spiced Nuts'], [/meat pies?/i, 'Crawfish Meat Pies'], [/pink sauce/i, 'Fries with Pink Sauce'], [/fried pickles/i, 'Fried Pickles'],
+	[/popcorn shrimp/i, 'Popcorn Shrimp'], [/cheese board/i, 'Cheese Board'], [/roost burger/i, 'Roost Burger']
 ];
 
 /* ---------- the model ---------- */
@@ -347,6 +362,9 @@ for (const it of parsed.items) {
 		base.family = meta.family;
 		base.spirit = meta.spirit;
 		base.zeroProof = false;
+		base.glass = '';
+		base.garnish = '';
+		base.upsells = [];
 		base.note = 'A Brennan’s signature drink.';
 		model.cocktails.push(base);
 	}
@@ -356,7 +374,7 @@ for (const z of SPIRIT_FREE) {
 		name: z.name, section: 'Spirit-free', signature: false, meals: ['Breakfast & lunch', 'Dinner'], price: z.price,
 		prices: [{ meal: 'Breakfast & lunch', printed: z.price }, { meal: 'Dinner', printed: z.price }],
 		description: z.spec.join(', '), parts: z.parts, lines: null, serviceNote: '', say: '', why: '', pairs: '', origin: '', kept: [], guest: '',
-		spec: z.spec, method: z.parts.technique, family: z.family, spirit: '', zeroProof: true, note: z.note
+		spec: z.spec, method: z.parts.technique, glass: '', garnish: '', upsells: [], family: z.family, spirit: '', zeroProof: true, note: z.note
 	});
 }
 for (const w of parsed.wines) {
@@ -371,7 +389,7 @@ for (const w of parsed.wines) {
 		price: w.price || '', prices: priced ? [{ meal: 'By the glass', printed: w.price }] : [],
 		producer: meta.producer, wine: meta.wine, vintage: meta.vintage, region: meta.region, grapes: [...meta.grapes], style: meta.style, made: meta.made, taste: meta.taste,
 		glass, bottle, pours: priced ? [] : ['4 oz'],
-		profile: w.profile, sayIt: w.sayIt, goesWith: w.goesWith, serve: w.serve, firstPickFor: [...w.firstPickFor],
+		profile: w.profile, sayIt: w.sayIt, goesWith: w.goesWith, serve: w.serve, firstPickFor: [...w.firstPickFor], lines: null,
 		serviceNote: '', say: '', why: '', pairs: '', origin: '', kept: []
 	});
 }
@@ -429,7 +447,7 @@ overrides.entries.forEach((e, n) => {
 			model.terms.push({ term: v.term, say: v.say || '', toGuest: v.toGuest || '' });
 		} else if (list === 'scenarios') {
 			if (model.scenarios.some((s) => slug(s.title) === slug(v.title))) fail(`${REL(OVERRIDES)} entry ${n}: the scenario ${v.title} exists`);
-			model.scenarios.push({ title: v.title, guest: v.guest, you: v.you, principle: v.principle });
+			model.scenarios.push({ title: v.title, guest: v.guest, you: v.you, principle: v.principle, items: Array.isArray(v.items) ? [...v.items] : [] });
 		} else if (list === 'mixUps') {
 			model.mixUps.push({ a: v.a, b: v.b, difference: v.difference, ask: v.ask });
 		} else if (list === 'mustKnows') {
@@ -439,6 +457,8 @@ overrides.entries.forEach((e, n) => {
 			model.asks.push({ question: v.question, askWhom: v.askWhom || 'manager', items: v.items || [], blocksField: v.blocksField || '' });
 		} else if (list === 'disputes') {
 			model.disputes.push({ item: v.item || '', field: v.field, a: v.a, b: v.b });
+		} else if ((list === 'dishes' || list === 'cocktails') && !rec) {
+			model[list].push(newItem(list, v, n));
 		} else if (e.field === 'kept' && rec) {
 			rec.kept.push({ q: v.q, a: v.a });
 		} else fail(`${REL(OVERRIDES)} entry ${n}: add on ${e.target} ${e.field || ''} is not a list this builder adds to`);
@@ -473,6 +493,46 @@ overrides.entries.forEach((e, n) => {
 	overrideAt.set(pathOf(list, rec, e.field), n);
 	applied.push({ n, op, target: e.target, field: e.field });
 });
+
+/* A whole item filed by an override: the guide prints it only as a price line or a must-know, or
+   the house page the research read prints it. Everything a wing, a drill and Lizzy read must be
+   there, so an incomplete record fails the build here rather than shipping half a card. */
+function newItem(list, v, n) {
+	const at = `${REL(OVERRIDES)} entry ${n}`;
+	const need = (ok, what) => { if (!ok) fail(`${at}: the new ${list === 'dishes' ? 'dish' : 'drink'} ${v && v.name} lacks ${what}`); };
+	const str = (x) => typeof x === 'string' && x.trim() !== '';
+	need(v && str(v.name), 'a name');
+	for (const l of ['dishes', 'wines', 'cocktails']) if (model[l].some((r) => slug(r.name) === slug(v.name))) fail(`${at}: ${v.name} is already in the house`);
+	need(str(v.section), 'a section');
+	need(Array.isArray(v.meals) && v.meals.length, 'its meals');
+	need(str(v.price), 'a printed price');
+	need(Array.isArray(v.prices) && v.prices.length && v.prices.every((p) => str(p.meal) && str(p.printed)), 'its printed prices');
+	/* Main, technique and taste always; a sauce or sides nobody printed is left empty rather than filled
+	   with 'not printed', because each is a drill stem and an empty part is one the dealer skips. */
+	need(v.parts && ['main', 'technique', 'taste'].every((k) => str(v.parts[k])), 'its main, technique and taste');
+	need(['sauce', 'sides'].every((k) => v.parts[k] === undefined || v.parts[k] === '' || str(v.parts[k])), 'a sauce and sides that are text or empty');
+	need(v.lines && ['s10', 's20', 's45'].every((k) => str(v.lines[k])), 'all three timed lines');
+	for (const f of ['say', 'guest', 'why']) need(str(v[f]), f);
+	const base = {
+		name: v.name, section: v.section, signature: false, meals: [...v.meals], price: v.price, prices: v.prices.map((p) => ({ meal: p.meal, printed: p.printed })),
+		parts: Object.assign({}, v.parts), lines: Object.assign({}, v.lines), serviceNote: v.serviceNote || '',
+		say: v.say, guest: v.guest, why: v.why, pairs: v.pairs || '', origin: v.origin || '', kept: Array.isArray(v.kept) ? v.kept.map((k) => ({ q: k.q, a: k.a })) : []
+	};
+	if (list === 'dishes') {
+		need(str(v.description), 'its menu line');
+		base.description = v.description;
+		base.pairing = null;
+		return base;
+	}
+	need(Array.isArray(v.spec) && v.spec.length && v.spec.every(str), 'its printed spec');
+	need(str(v.family), 'a family');
+	need(typeof v.zeroProof === 'boolean', 'zeroProof, true or false');
+	need(Array.isArray(v.upsells) && v.upsells.length >= 2 && v.upsells.length <= 3, 'two or three upsells by name');
+	return Object.assign(base, {
+		description: v.spec.join(', '), spec: [...v.spec], method: v.method || '', glass: v.glass || '', garnish: v.garnish || '',
+		family: v.family, spirit: v.spirit || '', zeroProof: v.zeroProof, note: v.note || '', upsells: [...v.upsells]
+	});
+}
 
 /* The pairing principles outside the nine, mapped or dropped per overrides.principles. */
 const PMAP = overrides.principles.map;
@@ -531,6 +591,17 @@ function itemId(name, where) {
 	return id;
 }
 const zeroIds = new Map(clean.cocktails.filter((c) => c.zeroProof).map((c) => [slug(c.name), c.id]));
+/* The guide names a zero-proof pick in its own words; a pick that is not a drink's name exactly is
+   read here. The breakfast tasting's Congregation Coffee & Chicory is the house's chicory coffee
+   (the tasting page names it Brennan's Private Blend Congregation Coffee & Chicory, gap-fill-2). */
+const ZERO_ALIASES = [[/^congregation coffee (&|and) chicory$/i, 'New Orleans-Style Coffee with Chicory']];
+function zeroIdFor(text) {
+	if (!text) return '';
+	const direct = zeroIds.get(slug(text));
+	if (direct) return direct;
+	for (const [re, name] of ZERO_ALIASES) if (re.test(text.trim())) return zeroIds.get(slug(name)) || '';
+	return '';
+}
 
 /* Pronunciation: the terms whose word sits in the item's name. */
 const termList = clean.terms;
@@ -541,7 +612,7 @@ function termsIn(text) {
 		const full = ' ' + fold(t.term).replace(/[^a-z0-9']+/g, ' ') + ' ';
 		if (f.indexOf(full.trim() ? full : '\u0000') >= 0) { out.push(t); continue; }
 		const first = fold(t.term).split(/[^a-z0-9']+/)[0];
-		if (first.length >= 5 && f.indexOf(' ' + first + ' ') >= 0 && !/^(creole|grand|domaine|chateau|extra|louis|pierre|charles|paul)$/.test(first)) out.push(t);
+		if (first.length >= 5 && f.indexOf(' ' + first + ' ') >= 0 && !/^(creole|grand|domaine|chateau|extra|louis|pierre|charles|paul|bitter|uncle|peychaud's|appleton|rabbit|congregation|popcorn)$/.test(first)) out.push(t);
 	}
 	return out;
 }
@@ -588,7 +659,7 @@ for (const r of clean.dishes) {
 	put(d, 'lines', linesMark(r.lines));
 	if (r.pairing) {
 		const p = r.pairing;
-		const zp = p.zeroProof ? zeroIds.get(slug(p.zeroProof)) || '' : '';
+		const zp = zeroIdFor(p.zeroProof);
 		const zpWhy = zp ? p.zeroProofWhy || '' : (p.zeroProof ? cap(p.zeroProof) + ': ' + (p.zeroProofWhy || '') : (p.zeroProofText || ''));
 		put(d, 'pairing', mark({
 			wineId: wineId(p.wine, r.name), why: p.why || '', sayIt: p.sayIt || '', whyThisWine: p.whyThisWine || '', palate: p.palate || '',
@@ -616,6 +687,7 @@ for (const r of clean.wines) {
 	put(w, 'firstPickIds', firstIds.length ? mark(firstIds) : undefined);
 	put(w, 'serve', mark(r.serve));
 	put(w, 'parts', partsMark({ main: r.grapes.join(', ') + ' from ' + r.region, technique: r.made, sauce: r.profile.split(/(?<=[.!?])\s+/).slice(0, 2).join(' '), sides: r.goesWith, taste: r.taste }));
+	put(w, 'lines', linesMark(r.lines));
 	put(w, 'kept', keptNotes(r.kept));
 	w.serviceNote = r.serviceNote || '';
 	w.ts = BUILD_TS;
@@ -623,7 +695,7 @@ for (const r of clean.wines) {
 }
 for (const r of clean.cocktails) {
 	const c = itemBase(r, 'cocktails');
-	Object.assign(c, { spec: r.spec, method: r.method, glass: '', garnish: '', note: r.note, family: r.family, spirit: r.spirit, zeroProof: r.zeroProof });
+	Object.assign(c, { spec: r.spec, method: r.method, glass: r.glass || '', garnish: r.garnish || '', note: r.note, family: r.family, spirit: r.spirit, zeroProof: r.zeroProof });
 	put(c, 'say', mark(r.say || sayLine(r.name)));
 	if (r.guest || (r.lines && r.lines.s20)) put(c, 'guest', mark(r.guest || r.lines.s20));
 	put(c, 'why', r.why ? mark(r.why) : undefined);
@@ -632,6 +704,7 @@ for (const r of clean.cocktails) {
 	put(c, 'ingredientsNamed', mark(r.spec));
 	put(c, 'parts', partsMark(r.parts));
 	put(c, 'lines', linesMark(r.lines));
+	put(c, 'upsells', r.upsells && r.upsells.length ? mark(upsellIds(r)) : undefined);
 	put(c, 'kept', keptNotes(r.kept));
 	c.serviceNote = r.serviceNote || '';
 	c.ts = BUILD_TS;
@@ -647,6 +720,20 @@ for (const t of clean.tastings) {
 		note: t.note, ts: BUILD_TS
 	});
 }
+/* A drink's upsells, named in overrides, as the ids of other house drinks: two or three, none the
+   drink itself, none twice, every one a drink in this house. */
+function upsellIds(r) {
+	const ids = [];
+	for (const name of r.upsells) {
+		const target = clean.cocktails.find((c) => slug(c.name) === slug(name));
+		if (!target) fail(`${r.name}: the upsell ${name} is not a drink in the house`);
+		if (target.id === r.id) fail(`${r.name}: a drink cannot upsell itself`);
+		if (ids.includes(target.id)) fail(`${r.name}: the upsell ${name} is named twice`);
+		ids.push(target.id);
+	}
+	if (ids.length < 2 || ids.length > 3) fail(`${r.name}: ${ids.length} upsells; a drink carries two or three`);
+	return ids;
+}
 const allText = (r) => [r.name, r.description, r.spec ? r.spec.join(' ') : '', r.parts ? Object.values(r.parts).join(' ') : ''].join(' ');
 for (const t of clean.terms) {
 	const x = { id: idFor('lexicon', slug(t.term)), term: t.term };
@@ -657,12 +744,20 @@ for (const t of clean.terms) {
 		if (termsIn(allText(r)).some((h) => h === t)) ids.push(r.id);
 	}
 	for (const id of itemsFor(t.term)) if (!ids.includes(id)) ids.push(id);
-	x.itemIds = ids;
+	/* An item the term's words reach but whose own card the term would misdescribe (the chicory term on
+	   the coffee that has none, the bitters term on a drink that carries the aperitivo) is named in
+	   overrides as notItems and left off. */
+	const not = Array.isArray(t.notItems) ? t.notItems.map((n) => itemId(n, 'term ' + t.term + ' notItems')) : [];
+	for (const id of not) if (!ids.includes(id)) fail(`term ${t.term}: notItems names ${id}, which the term does not reach; drop the entry`);
+	x.itemIds = ids.filter((id) => !not.includes(id));
 	x.ts = BUILD_TS;
 	house.lexicon.push(x);
 }
 for (const s of clean.scenarios) {
-	house.scenarios.push({ id: idFor('scenarios', slug(s.title)), title: s.title, guest: s.guest, you: mark(s.you), principle: mark(s.principle), itemIds: itemsFor(s.title + ' ' + s.guest + ' ' + s.you), ts: BUILD_TS });
+	/* A scenario an override files may name its items, which then stand instead of the aliases' reading
+	   (the children's menu names a French toast and a popcorn shrimp the aliases would send elsewhere). */
+	const named = s.items && s.items.length ? s.items.map((n) => itemId(n, 'scenario ' + s.title)) : null;
+	house.scenarios.push({ id: idFor('scenarios', slug(s.title)), title: s.title, guest: s.guest, you: mark(s.you), principle: mark(s.principle), itemIds: named || itemsFor(s.title + ' ' + s.guest + ' ' + s.you), ts: BUILD_TS });
 }
 for (const m of clean.mixUps) {
 	house.mixUps.push({ id: idFor('mixUps', slug(m.a) + '-vs-' + slug(m.b)), aId: itemId(m.a, 'mix-up'), bId: itemId(m.b, 'mix-up'), difference: mark(m.difference), ask: mark(m.ask), ts: BUILD_TS });
@@ -708,5 +803,7 @@ if (JSON.stringify(ledger) !== ledgerBefore) {
 	fs.writeFileSync(LEDGER, JSON.stringify(sorted, null, '\t') + '\n');
 }
 const zero = house.cocktails.filter((c) => c.zeroProof).length;
+const coffeeLinks = house.dishes.filter((d) => d.pairing && d.pairing.value.zeroProofId && /coffee/i.test((house.cocktails.find((c) => c.id === d.pairing.value.zeroProofId) || {}).family || '')).length;
+console.log(`build-brennans: ${coffeeLinks} pairings take a coffee as their zero-proof pick; ${house.wines.filter((w) => w.lines).length} of ${house.wines.length} wines carry the timed lines`);
 console.log(`build-brennans: ${REL(OUT)}: ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free), ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask at lineup, ${house.disputes.length} disputes; ${overrides.entries.length} overrides applied (${applied.filter((a) => a.skipped).length} skipped), ${principleChanges.length} principles mapped, ${dashLog.length} strings dash-stripped (${dashLog.filter((d) => d.override !== undefined).length} set by an override), ${spellLog.length} strings respelled American, ${minted.length} ids minted`);
 if (principleChanges.length && args.includes('--verbose')) for (const p of principleChanges) console.log('  principle ' + p.dish + ': ' + p.from + ' to ' + p.to);

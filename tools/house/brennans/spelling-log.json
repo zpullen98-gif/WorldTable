@@ -1,6 +1,6 @@
 {
 	"about": "Every string the spelling map changed while building the Brennan's house: the research writes British English and the house is American, so each British form became its American spelling.",
-	"count": 19,
+	"count": 18,
 	"changes": [
 		{
 			"path": "model.wines[0].profile",
@@ -106,14 +106,6 @@
 			"after": "State the advisory, never decide for the guest, never moralize, have a cooked alternative ready.",
 			"words": [
 				"moralise"
-			]
-		},
-		{
-			"path": "model.scenarios[11].you",
-			"before": "We have a children’s menu, I’ll bring it over. From ours, the cheddar grits, an egg any style, bacon and the French toast are the favourites. When the Bananas Foster is lit she’ll love it from her seat; we keep little ones back from the cart.",
-			"after": "We have a children’s menu, I’ll bring it over. From ours, the cheddar grits, an egg any style, bacon and the French toast are the favorites. When the Bananas Foster is lit she’ll love it from her seat; we keep little ones back from the cart.",
-			"words": [
-				"favourites"
 			]
 		},
 		{

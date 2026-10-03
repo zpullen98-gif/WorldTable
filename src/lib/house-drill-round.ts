@@ -31,7 +31,7 @@ import { isMark } from './house/house-schema';
 import type { FormulaParts, House, HouseItem, Mark, Pairing } from './house/house-schema';
 
 /** The modes of /menu/quiz, as ?mode= names them; 'dish' is the menu quiz the page always had and the default. */
-export const QUIZ_MODES = ['dish', 'drill', 'cards', 'pair', 'say'] as const;
+export const QUIZ_MODES = ['dish', 'drill', 'cards', 'pair', 'say', 'guest'] as const;
 export type QuizMode = (typeof QUIZ_MODES)[number];
 
 export const MODE_LABELS: Readonly<Record<QuizMode, string>> = {
@@ -39,7 +39,8 @@ export const MODE_LABELS: Readonly<Record<QuizMode, string>> = {
 	drill: 'Drill the house',
 	cards: 'Flip cards',
 	pair: 'Pairings',
-	say: 'Say it back'
+	say: 'Say it back',
+	guest: 'Guest at the table'
 };
 
 /** The mode a query names, or the default when it names none or one the page does not have. */
