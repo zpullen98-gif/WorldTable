@@ -1,0 +1,231 @@
+- Which Champagne is actually poured with Eggs Hussarde on the 80 dollar breakfast tasting today: Piper-Heidsieck 'Brennan's Essential' or Charles Lafitte Brut?
+- Has the dinner tasting's duck course moved to the hazelnut-crusted, sweet potato and delicata squash version, and when did the autumn menu land?
+- Current Bubbles at Brennan's days and hours, and which bottle is sabered on Fridays at 5.
+- Who performs the tableside flambés (server or captain), and which additional tableside dishes Chef Padalino has brought back since mid-2026.
+- Who leads the Roost Bar programme today, and whether the 'Summer Vacations of 1946' list has been replaced by an autumn list.
+- Who is the floor sommelier or wine director now (Sam Bortugno or a successor), and is Braithe Tidwell still with the group.
+- The house's preferred telling of the Bananas Foster origin: Owen challenging Blangé, or Ella and Blangé adapting their mother's dish.
+- Whether staff use the turtles' names with guests and which turtle is which in the fountain.
+- Whether the house has a date for when 417 Royal first went pink, or treats it as undated.
+- Whether Pip Brennan is living, and how the house prefers staff to speak about the 2013 closure and the sons' era.
+- Whether the restaurant offers a house-history talk or printed card for guests, and what the room names are in daily use (Chanteclair, Morphy, Iberville, Wine Room, others).
+- Whether a 2025 (79th) anniversary menu ever existed, or whether the 80 dollar menus are purely a 2026 programme.
+- Louisiana Oysters: are the oysters poached in the BBQ sauce, fried, or broiled, and how many per order? What is in the house New Orleans BBQ sauce (is it the smoked chilli and lemon confit butter from the lobster, or a Worcestershire and pepper emulsion)?
+- Dinner tasting course four: is the live duck the cane-syrup peach Rohan breast (PDF, 26 September) or the Hazelnut-Crusted 14-day dry-aged Rohan with sweet potato and winter squash (indexed page)? What temperature does the kitchen serve it?
+- Dinner tasting course two pairing: Fichet Mâcon-Igé 2024 (PDF) or Domaine Matrot Meursault 2023 (indexed page)?
+- BBQ Lobster: is the lobster blanched and finished in the sauce or cooked from raw in it? Is the white bean stew made with the 'nduja rendered in, or is the 'nduja a finishing dollop?
+- Turtle Soup: is the sherry added in the kitchen, at the pass, or offered tableside? Does the restaurant kitchen follow the published recipe (beef stock, flour, hard-boiled egg) or a different house build? Current turtle supplier?
+- Seafood Gumbo: does the restaurant version include okra and tomato as the published recipe does? Is filé used? Is the seafood finished to order or held in the batch?
+- Creole Tomato Tostada: is the okra tostada masa-based (gluten-free) or wheat-based? Is the smoked tomato water poured tableside?
+- Steak Tartare Cannoli: which cut of beef, is it hand-cut to order, what seasoning goes into the tartare, and is the potato cannoli shell fried in a shared fryer?
+- Grand Isle Jewel Oysters: how many per order, and how is the Fresno chilli 'preserved' (salted, pickled, fermented)?
+- Blackberry Trifle: are the financiers almond-based (allergen), and is the trifle built to order or pre-layered?
+- Creole Caesar: does the smoked oyster dressing also contain anchovy or egg yolk? Are the oysters cold-smoked in house?
+- Crab Claws: are they Louisiana blue crab cocktail fingers, and are they warmed in the vinaigrette or served at room temperature with a warm dressing? Can the kitchen serve them chilled on request?
+- Petite Filet: raw-grated or par-cooked rösti, and what size is the tasting cut?
+- Baked Apple: which apple variety, and is the tasting portion a whole or half apple?
+- Which of these dishes did Chef Padalino write versus inherit from the Hacker or Rushing eras? Any plan to return the tartare or the oysters to tableside service?
+- Who or what is Tien Dat tofu: the maker, the neighbourhood, and whether it is sold fresh daily to the restaurant?
+- Is Eggs Owen officially named for Owen Brennan, and does the house want servers to tell that story?
+- In the Pecan Gulf Fish, is the pecan bordelaise a Creole garlic-butter sauce or a red wine based sauce tonight?
+- Is the Chateaubriand carved tableside or in the kitchen, and what is the expected cook time to quote?
+- Is the Gulf Fish en Papillote opened at the table, and by whom?
+- Is the Blackened Tofu made with oil rather than butter so it can be sold as vegan, and do the rice grits use stock?
+- Is the redfish wild or farm-raised, and from which Gulf state?
+- Are the crispy artichokes in Eggs Sardou breaded (gluten) or simply floured and fried?
+- Is the duck confit made in house, and can the foie gras butter be left off?
+- What is in the housemade Creole spice, and does the chili crisp contain soy or sesame?
+- Does Eggs Hussarde still carry any tomato or mushroom garnish from the classic build, or only what the 2026 menu prints?
+- What does 'preserved shiitake' mean in the kitchen: pickled, soy-cured, or dried and rehydrated?
+- Is the sweet tea brine made in house and how long is the hen brined?
+- What is the story behind 'Brennan's Blender's Reserve Don Q Rum': a private barrel or a custom blend?
+- Which of Chef Padalino's announced 2025 dishes (tableside soft scrambled eggs with caviar, cochon de lait with fish caramel) are currently on the menu, if any?
+- Which Luxardo product is in the Cherries Jubilee sauce (Maraschino liqueur, Sangue Morlacco or the cherry syrup), and which spirit is flamed at the table?
+- Does the tableside Bananas Foster use banana liqueur as well as rum, as Brennan's published recipe does, or rum only as the menu prints? Which rum?
+- Who performs the flambé (captain, server, both), how long is the training, and is there a sign-off before a new server may light a pan?
+- Does the house still dust cinnamon into the flame for sparks?
+- Is there a fire-marshal permit or house limit on where carts may be lit (near draperies, under sprinklers, in the courtyard)?
+- Can Cherries Jubilee be made for a single guest, and can Bananas Foster ever be made for one?
+- Which whiskey is in the bread pudding caramel, which bread is used, and does the pudding contain raisins?
+- Does the nougat ice cream in The Snickers contain tree nuts (almonds) besides the peanuts, and is the Bavarian set with gelatin?
+- Is the yuzu mousse in the Lemon Tart set with gelatin, and is the meringue Italian or Swiss?
+- Is the Pineapple Tarte Tatin baked inverted in a pan or assembled on the plate?
+- Is Maggie's Mushrooms sourced from Mushroom Maggie's Farm in St Francisville, and what are tonight's varieties and preparation (butter, stock)?
+- What meats go into the South Louisiana Rice Dressing tonight (pork, beef, chicken liver)?
+- Is the breakfast thick-cut bacon Nueske's?
+- What is in the housemade sausage patty (sage, red pepper, any filler or gluten)?
+- Are the cheddar grits stone-ground, and from which mill?
+- Does the housemade vanilla ice cream contain egg?
+- Is the breakfast creamed spinach the same preparation as under Eggs Sardou, and does it contain Parmesan or flour?
+- Is 'most-ordered item on the menu' a claim the restaurant actually makes, and where?
+- Which pronunciation does the floor use for Brabant: bra-BAHN, bra-BAHNT or bruh-BANT?
+- Does the house say TAH-so or TASS-oh for tasso?
+- Does Brennan's say hoo-SARD or hoo-ZARD for Hussarde?
+- How does the kitchen pronounce Tien Dat (the tofu maker) and Nueske's (the bacon)?
+- Does the house marchand de vin include ham, mushroom and garlic, or is it a plain shallot and red wine reduction?
+- Is the pecan bordelaise on the Pecan Gulf Fish the New Orleans garlic-butter style or the classical red wine sauce?
+- Is the Cherries Jubilee's Luxardo sauce built on maraschino liqueur, on Luxardo cherry syrup, or both?
+- Does the Bloody Bull originate at Brennan's, as is often claimed? The PDF does not say.
+- What is Brennan's Blender's Reserve Don Q rum: a private barrel selection, and what is the story the house tells?
+- What are Maggie's Mushrooms, who is Maggie, and which varieties are used tonight?
+- Where is Two Brooks Farm (believed Mississippi Delta) and is the rice-grits line meant to say Louisiana?
+- Who or what is the Jewel in Grand Isle Jewel oysters: a farm, a brand or a grade?
+- Is Charles Lafitte Brut poured à la carte or only on the tastings?
+- Who are the producers behind the Damien Martin Bourgogne Pinot Noir and the Domaine Durand Sauvignon Blanc? Not identifiable without a live check.
+- Web search was unavailable for this lens (session budget exhausted); every pronunciation verdict should be spot-checked live before it goes into Lizzy's pronunciation drill.
+- Brandy Milk Punch: which brandy, cream or half-and-half, how the vanilla bean is used (infused cream or syrup), sugar, glass, served up or on the rocks, and whether a frozen or blended version is offered.
+- Bloody Bull: is the bouillon house-made stock or a commercial base (and does it contain gluten or soy), is the drink built cold or warm, and does Brennan's claim to have originated the Bloody Bull?
+- Brennan's Bloody Mary: the housemade mix recipe, heat level, whether it contains Worcestershire (anchovy), and whether 'spicy beans' means pickled spicy green beans.
+- Classic Sazerac: sugar cube or syrup, number of Peychaud's dashes, any Angostura, lemon peel in or discarded, Herbsaint standard or Original, and the glass used.
+- Thompson's Dream: measures, whether the name honours Thompson Willett, and the Willett bottling proof the bar pours.
+- Origin Story: which Dudognon expression, who barrel-ages the Peychaud's and in what cask, and the measures.
+- Brennan's Irish Coffee: lightly whipped pourable cream floated, or a stiff whipped cap; the glass; and whether the chicory coffee is Congregation.
+- Dulce de Leche: the measures, served cold or warm, the crème de cacao (dark or white), and the Blender's Reserve story (is it a Don Q private blend selected by Brennan's, when, by whom).
+- Brennan's Champagne Cocktail: Angostura or Peychaud's, cognac or not, which Champagne, and the glass.
+- Café Brûlot: is it still made as a tableside drink on request, by whom (server or captain), and at what price?
+- Who is the current bar director or lead bartender at the Roost Bar, and are there published house recipes for the signature drinks on the restaurant's recipes page?
+- The full 'Summer Vacations of 1946' cocktail list and the date of the fall change.
+- Who performs the Friday 5 pm sabering and which bottle is used.
+- Are the heritage eye-openers (Absinthe Suissesse, Mr. Funk of New Orleans) available on request or retired?
+- What are the drinks on the Summer Vacations of 1946 list, with their specs and prices, and when does the fall list replace it?
+- What does the Luxury Roost Bar Cocktails page hold beyond Thompson's Dream ($20) and Origin Story ($40), and what does the name Thompson's Dream refer to?
+- What is the house spec for Brennan's Champagne Cocktail ($20): which bitters, sugar cube or syrup, cognac or not, which Champagne?
+- Which bubbly cocktails are on the Bubbles at Brennan's list in the $12 to 20 band?
+- What is the full Classic Sazerac build: sugar cube or syrup, dash count, glass, ice or neat, peel in or out?
+- What is in the housemade Bloody Mary mix, how is the beef bouillon prepared and held, and what is the full garnish set for the Bull and the Bloody Mary?
+- Does the bar batch the Brandy Milk Punch base, and is it heavy cream throughout or a cream and milk blend?
+- Who makes the banana rum butter sauce for the Dulce de Leche, how is it held, and is the Affogato ($16) a cocktail or a dessert?
+- What is Brennan's Blender's Reserve Don Q Rum: a private barrel, a bespoke blend, or a label?
+- Who runs the Roost Bar now (bar manager or bar director) and who performs the Friday sabering?
+- Does the house tell the Roost's name as the rooster's home, and when was the bar named?
+- Is Café Brûlot still served as a tableside drink, and if so who performs it and at what price?
+- Are the Catalina Island and Black Hills permanent spirit-free drinks or part of the themed list?
+- Which rosé bottles sit between Mirabelle and Pommery on the Bubbles list, and at what prices?
+- Is the restaurant's online cocktails page current, or does it lag the live list the way the by-the-glass page does?
+- Is 'Brennan's Essential' a bespoke Piper-Heidsieck blend for Brennan's, or the standard Essentiel Extra Brut under a Brennan's label? How is the name spelled on the bottle, and what disgorgement date is on current stock?
+- Which Rare vintage is actually open and being poured by the glass today: 2012 (live list) or 2013 (restaurant drinks page)? Does the cellar hold both?
+- Which Coravin device is used for the Rare (Coravin Sparkling stopper) and for the Leflaive (needle), and what is the house limit on days an opened Coravin bottle stays in service?
+- Which Charles Lafitte cuvée is poured on the tastings (standard Brut, Brut Prestige, or the grand cru Orgueil de France), and can it be poured à la carte and at what price?
+- What is the residual sugar, alcohol and vineyard source of the C.H. Berres 'Old Vines' Riesling 2022 in stock, and does it read dry, feinherb or off-dry today?
+- What is the appellation on the Domaine Durand Sauvignon Blanc 2025 label (Touraine, IGP Val de Loire, Sancerre, Pouilly-Fumé or other), and who is the importer?
+- Which Gainey Chardonnay tier is poured (the Sta. Rita Hills estate bottling or the Limited Selection), and what is its alcohol level?
+- Is the Leflaive pour the straight Mâcon-Verzé or the single-vineyard 'Les Chênes' cuvée, and what closure is on the bottle?
+- Is the Fichet 'Château London' available by the glass outside the dinner tasting, and is the 2024 the vintage actually in stock?
+- Which vintage of Pazo das Bruxas is actually open (2024 or 2025)?
+- Which glassware lines does the floor actually use for sparkling, Riesling and Chardonnay (tulip versus flute, Riedel or Zalto stems), so the app's service lines match the house standard?
+- Has the by-the-glass list changed since 26 September 2026? The PDF (p49) expects a fall menu change, and the restaurant's own glass page already differs from the live Binwise list.
+- Does Brennan's still hold the Wine Spectator Grand Award in 2026, and which year was it first awarded (the PDF states the award without a date)?
+- Which vintage of the Châteaumar Cuvée Vincent Côtes du Rhône is currently open for the breakfast tasting, and is it definitely the Côtes du Rhône rather than the estate's Châteauneuf-du-Pape of the same cuvée name?
+- How is the Inglenook Rubicon 2010 preserved between $70 glass pours: Coravin, stopper and refrigeration, or same-night sell-through? How far ahead is the bottle stood upright?
+- Is the Louis Jadot Beaune 1er Cru 2023 on the dinner tasting the blended 'Beaune Premier Cru' or a named climat such as Clos des Ursules, Boucherottes or Theurons?
+- Who produces and who imports the Damien Martin Bourgogne Pinot Noir 2023: is it a domaine, a négociant label or an importer exclusive?
+- Has the Minuty Prestige moved from the 2024 to the 2025 vintage since the list was read on 26 September 2026?
+- Does the cellar hold Domaine de Durban's Muscat de Beaumes-de-Venise, which would suit the Lemon Tart and the Blackberry Trifle, and at what price?
+- What is the printed 2023 blend of Moulin d'Issan (Merlot versus Cabernet Sauvignon percentages) on the back label or the château's tech sheet?
+- Is the Dr. Hermann Erdener Prälat Auslese half-bottle still the 2014, how many are in stock, and does the label carry any VDP or Grosse Lage wording?
+- Which Paul Hobbs bottling is poured: the 'Coombsville' appellation Cabernet Sauvignon or the single-vineyard 'Nathan Coombs Estate'? Is the bottle decanted at the start of service for the tasting pours?
+- Can the La Tour Vieille Banyuls Reserva be ordered by the glass outside the dinner tasting, and at what price? Is it the Reserva (oxidative) rather than the Rimage (vintage, fruit style)?
+- Does Brennan's have a written house rule on decanting, Coravin use and open-bottle life for by-the-glass reds, so Lizzy can state it for every user rather than just this one?
+- Who is the sommelier the p48 Chateaubriand script hands off to, and should Lizzy name that person or the role?
+- In which year did the reopened Brennan's receive the Wine Spectator Grand Award, and is it on the current year's list? What does Wine Spectator's listing say about selection count and strengths?
+- How many bottles and selections are in the cellar now, and what are its deepest regions beyond Burgundy and Champagne (Bordeaux verticals, Napa Cabernet, Rhone)?
+- Who is the wine director in 2026, who are the floor sommeliers, what are their titles and shifts, and how does a server summon one to a table?
+- Where is the Wine Room (ground floor, cellar level or upstairs), how many does it seat, what are the minimums, and are the bottles around it for sale?
+- Which Coravin devices are in use (standard needle, Model Six or Eleven, Coravin Sparkling), what is the logging and pour-limit procedure, and how long is an opened Rare kept?
+- Is the open Rare vintage 2012 or 2013 tonight, and is the Essential $28 or $30?
+- Is Brennan's Essential a bespoke Piper-Heidsieck blend or the Essentiel cuvee under a house label, and what is the dosage?
+- Can Charles Lafitte Brut be poured a la carte, and at what price?
+- Which Charles Lafitte cuvee is used (the Brut 1834 or another), and which bottle is sabered on Fridays, by whom, and may guests take part?
+- What does the full Binwise bottle list contain, and what is the corkage policy?
+- What does the restaurant's own 'Cocktails & Wine by the Glass' page currently show in full, and which page does management consider live?
+- Are the dinner tasting ($80) and wine pairing ($120) prices correct as printed, or transposed?
+- What is the pre-shift wine training routine (wine of the day, tasting cadence, written notes), the glassware brand and standard per category, and the decanting rule for older reds?
+- Does Ralph Brennan Restaurant Group have a written hospitality or wine-service standards document that new servers receive, and may it be used as a source for the app?
+- Is the Banyuls Reserva available a la carte and at breakfast, and at what glass price?
+- What appellation is on the current Gainey Chardonnay label, and what is the current blend of Moulin d'Issan?
+- Which producer is 'Domaine Durand' Sauvignon Blanc (appellation and village), and which 'Damien Martin' Bourgogne Pinot Noir is on the list?
+- Is the C.H. Berres Old Vines Riesling 2022 dry or off-dry? Residual sugar in g/l from the tech sheet.
+- Is the Domaine La Tour Vieille Banyuls Reserva poured à la carte, at breakfast and at dinner, and at what price per 2 to 3 oz?
+- Is the Louis Jadot Beaune 1er Cru 2023 available by the glass à la carte, and at what price?
+- Is the Dr. Hermann Erdener Prälat Auslese 2014 sold only as the $80 half-bottle, or can a single 2 to 3 oz pour be rung at a glass price?
+- Is the Inglenook Rubicon 2010 poured by Coravin or from an opened bottle, and how long is an open bottle kept on the list?
+- Which Rare vintage is actually open: 2012 (live list) or 2013 (drinks page)?
+- Is Brennan's Essential by Piper-Heidsieck the Essentiel Extra Brut cuvée under a house label, and what is its dosage and disgorgement date?
+- What is the current Piper-Heidsieck glass price: $28 (live list) or $30 (drinks page)?
+- Which Loire appellation is the Domaine Durand Sauvignon Blanc 2025 (Touraine, Sancerre, other)?
+- Is the La Tour Vieille Reserva an oxidatively aged (rancio) Banyuls or a reductive Rimage style?
+- Can Charles Lafitte Brut be poured à la carte, and what is its dosage?
+- What is the Moulin d'Issan 2023 blend (Merlot versus Cabernet share)?
+- Does the kitchen's BBQ sauce on the Louisiana BBQ Lobster carry real heat from the 'nduja, or is it mild?
+- Is tonight's pecan bordelaise garlic-butter or red-wine based (decides white versus Pinot on the Pecan Gulf Fish)?
+- Is the blackening on the tofu done with butter, and does the rice grits stock contain animal product (decides whether the Pinot pairing can be sold as vegan)?
+- Can the Traditional Breakfast's included pours be swapped for the spirit-free drinks at no charge, and may a guest decline a pour and reduce the price?
+- How sweet is the Catalina Island as built (brand of tonic, watermelon quantity), and does it suit the sweet starters as the guide implies?
+- Will the sommelier offer a red Burgundy from the cellar at a by-the-glass price for the Chateaubriand, as the p48 script promises?
+- Who performs tableside flambé (server, captain or a dedicated cart person), and is there a certification before a new server lights a pan?
+- What is Brennan's floor structure: captains, front and back servers, runners, host stand, sommelier handoff rule, section sizes?
+- What is the house's written steps-of-service standard (greet time, position numbers, marking, clearing side, crumbing, check presentation)?
+- Does Ralph Brennan Restaurant Group publish a service or hospitality standard that applies to Brennan's servers?
+- Current reservation platform, cancellation policy, card-hold rules, and the party size at which gratuity is added or the booking moves to private dining.
+- Names, capacities and minimums of the private dining rooms and the wine room.
+- Valet parking: offered at which services, at what price, and the current Royal Street pedestrian-mall hours affecting daytime drop-off.
+- The kids' menu: items, prices and age limit (the user's link exists but could not be read this session).
+- Is a single Cherries Jubilee order possible, and are the cherries pitted?
+- Does Charles Lafitte Brut pour à la carte, and does Banyuls pour at breakfast?
+- The Blender's Reserve Don Q rum: how was it selected, by whom, and is there a public story the house wants told?
+- Is Eggs Owen named for Owen Brennan?
+- Is the Blackened Tofu fully vegan (butter in the blackening, stock in the rice grits)?
+- Which Rare Champagne vintage is open on Coravin (2012 on the live list, 2013 on the restaurant's page) and the current Piper-Heidsieck glass price ($28 or $30)?
+- Chef Kris Padalino's start date and her tableside-cooking plans (the PDF says June 2025).
+- Does Brennan's currently hold the Wine Spectator Grand Award?
+- 80th-anniversary programming beyond the tasting menus: events, special menus, dates.
+- Holiday and festival hours (Mardi Gras, Jazz Fest, Christmas, New Year's Eve).
+- The courtyard turtles and the origin of the Roost name: what story does the house want servers to tell?
+- Sabering: every Friday, who performs it, and is it dependent on weather or a minimum bar crowd?
+- Who is the current executive chef, since when, and has she or he said anything on record about tableside cooking? (p49)
+- What Wine Spectator award tier does Brennan's hold this year? (p49)
+- Current hours for breakfast, lunch and dinner; is dinner really nightly 6 to 10? (p49)
+- Roost Bar and Bubbles at Brennan's hours; is Champagne sabered every Friday at 5 and who performs it? (p48, p49)
+- Current dress-code wording and how strictly it is enforced. (p50)
+- Which Rare vintage is open on Coravin: 2012 blanc, Rare Rosé 2012 or Millésime 2013? (p13, p41)
+- Is the house Champagne $28 or $30 a glass today, and is it a Brennan's-labelled Piper-Heidsieck Essentiel? (p41)
+- Is Charles Lafitte Brut pourable à la carte, and can Banyuls be poured at breakfast? (p9, p10, p42)
+- Is the Leflaive Mâcon-Verzé really $40 for a glass and not a half-bottle? (p12, p43)
+- Which Loire appellation is the Domaine Durand Sauvignon Blanc, and where is Damien Martin's domaine? (p42, p44)
+- Is the C.H. Berres Riesling dry or off-dry in the current bottle? Taste at lineup. (p16, p20, p42)
+- What does the kitchen mean by 'New Orleans BBQ sauce' on the oysters and the lobster; how are the oysters cooked and plated, and how many per order? (p6, p11)
+- Oyster count per order and whether the Fresno mignonette is mild. (p13)
+- Does the tasting breakfast's oatmeal crumble carry gluten; are the financiers almond-based? (p4, p8)
+- Does the rösti contain butter; what temperature does the kitchen take for the petite filet? (p5)
+- Duck doneness standard for the Rohan breast. (p7)
+- Is the Creole Tomato Tostada vegetarian and does the okra tostada contain gluten? (p11)
+- Steak Tartare Cannoli: gluten in the potato shell and shared fryer? (p14)
+- Turtle soup and gumbo: roux-thickened (gluten)? (p15, p16)
+- Creole Caesar dressing: raw egg and anchovy? (p17)
+- Can the kitchen poach the Hussarde eggs firmer? (p18)
+- Is Eggs Owen named for Owen Brennan? (p19)
+- Eggs Sardou: are the creamed spinach and sauce vegetarian, and are the artichokes breaded or fried? (p19)
+- Can the foie gras butter be left off the Duck Confit Waffle; does the waffle contain wheat? (p20)
+- Shrimp and grits: gluten in the fried grit cake and okra chips; how spicy is the tasso? (p21)
+- What is today's Gulf fish, and is the kitchen's 'pecan bordelaise' red-wine based or garlic-butter based? (p22, p26)
+- Chateaubriand: cooking time to set expectations, and is it carved tableside or in the kitchen? (p25)
+- Gulf Fish en Papillote: is the banana-leaf parcel opened at the table (steam warning), and is the whole dish gluten-free? (p26)
+- Poussin: gluten in the fried coating; bones in the whole bird? (p27)
+- Blackened Tofu: is the blackening done in butter (vegan?), do the rice grits use stock, is the spice blend gluten-free? (p28)
+- Dinner hanger: can the chili crisp be served on the side; does it contain soy or sesame? (p29)
+- Sausage patty: fillers, gluten and spice level; can bacon crispness be adjusted? (p29)
+- Cheddar grits: butter and preparation; Brabant potatoes: finish and fryer; creamed spinach: Parmesan and flour? (p30, p31)
+- Succotash: tonight's vegetables; Smoked Cauliflower: vegetarian? (p31, p32)
+- Maggie's Mushrooms: which mushrooms, how cooked, who Maggie is, butter or stock? (p32)
+- South Louisiana Rice Dressing: which meats, including liver? (p33)
+- Bananas Foster: the house flambé procedure, who performs it (server or captain), banana liqueur or not, does the ice cream contain egg? (p34, p49)
+- Cherries Jubilee: pitted or not; is a single-portion order allowed; which Luxardo product is in the sauce? (p34, p35, p47)
+- The Snickers: is the Bavarian cream set with gelatin? (p36)
+- Sazerac: does the bar serve it without ice and with a lemon peel; is the 'barrel-aged Peychaud's' house-aged? (p39)
+- Bloody Bull: what is in the house Bloody Mary mix (Worcestershire, anchovy)? (p39)
+- Dulce de Leche: what is the 'Brennan's Blender's Reserve' Don Q story? (p40)
+- Which by-the-glass list is current: the Binwise list or the website's Cocktails and Wine by the Glass page? (p49)
+- When does the late-summer dinner menu and the 'Summer Vacations of 1946' cocktail list change for autumn? (p49)
+- Is Bananas Foster officially 'the most-ordered item', and does the restaurant want servers to say so? (p49)
+- Which Tien Dat tofu and which oyster farm ('Grand Isle Jewel') supply the kitchen? (p12, p27)
+- Is the Congregation Coffee pour a Papua New Guinea single origin this season? (p49)

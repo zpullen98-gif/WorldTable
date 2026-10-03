@@ -1,0 +1,744 @@
+[
+ {
+  "page": "p49 (Traditional Breakfast at Brennan's)",
+  "quote": "Eggs Hussarde with Charles Lafitte Brut (4 oz)",
+  "problem": "The restaurant's own breakfast tasting page and OpenTable (search) list the Hussarde pour as 'Brennan's Essential' by Piper-Heidsieck; no search result shows Charles Lafitte at Brennan's, and the PDF itself (p48) calls Piper-Heidsieck the house Champagne.",
+  "correction": "Treat the Champagne on the Hussarde course as unconfirmed. Confirm on shift whether the pour is Piper-Heidsieck 'Brennan's Essential' or Charles Lafitte before quoting it.",
+  "confidence": "medium"
+ },
+ {
+  "page": "p6 to p7 and p49 (Dinner tasting)",
+  "quote": "Roasted Rohan Duck Breast ... Cane syrup\u2013glazed peaches, candied hazelnuts",
+  "problem": "The site's dinner tasting page (search) now describes the fourth course as Hazelnut-Crusted Duck: 14-day dry-aged Rohan duck, brown butter and sweet potato pur\u00e9e, local delicata squash, sage, duck jus. The PDF's own season note (p49) warns of a fall change.",
+  "correction": "The duck is still Rohan, but the garnish has moved to an autumn plate. Re-read the live menu and rewrite the 10/20/45-second lines and the pairing note for the squash and sweet-potato version.",
+  "confidence": "medium"
+ },
+ {
+  "page": "p49 (Bubbles at Brennan's)",
+  "quote": "Roost Bar & Courtyard, Mon\u2013Fri 2\u20136; Champagne sabering Fridays at 5",
+  "problem": "An older guest description (search, Tripadvisor) gives Tuesday to Friday 2 to 7. The PDF's reading is more recent, but the hours have clearly changed over time.",
+  "correction": "Keep the PDF hours but mark them 'confirm on shift' and date them 26 September 2026.",
+  "confidence": "low"
+ },
+ {
+  "page": "p49 (Bananas Foster)",
+  "quote": "Owen Brennan challenged chef Paul Blang\u00e9 to create a banana dessert, named for Richard Foster, Owen's friend and chairman of the New Orleans Crime Commission",
+  "problem": "Brennan's own recipe page (search) calls it the Metropolitan Crime Commission, and several sources (Wikipedia, Rouses, Biz New Orleans) credit Ella Brennan with Blang\u00e9, adapting a dish of their mother's. The PDF gives one version only.",
+  "correction": "Keep the house version for the table, and add a one-line note: 'Some accounts credit Ella Brennan alongside Blang\u00e9; the commission is also called the Metropolitan Crime Commission.'",
+  "confidence": "low"
+ },
+ {
+  "page": "p49 (Wine program)",
+  "quote": "Wine Spectator Grand Award cellar, strong in Burgundy and Champagne.",
+  "problem": "Not wrong, but it omits the story a guest hears everywhere else: Grand Award 1983 to 2005, lost after Katrina killed 35,000 bottles, regained in 2021 after rebuilding to more than 15,000 bottles (search, Wine Spectator; NPR).",
+  "correction": "Add the dates: 'Grand Award 1983 to 2005, regained 2021 after the post-Katrina rebuild; around 15,000 bottles, cellar in the old carriage house.'",
+  "confidence": "high"
+ },
+ {
+  "page": "10",
+  "quote": "a rich, buttery sauce with lots of black pepper and savory Worcestershire",
+  "problem": "States the composition of the house 'New Orleans BBQ sauce' as fact. The menu says only 'New Orleans BBQ sauce', and the house's documented BBQ lobster sauce in 2016 to 2017 was smoked chilli butter, lemon confit and thyme (search). This breaks the guide's own rule against inventing house details and could mislead on allergens.",
+  "correction": "Say: 'our New Orleans BBQ sauce, the buttery, peppery style, not a smoky one', and leave Worcestershire and pepper to the service note as 'traditionally', until the kitchen confirms the recipe.",
+  "confidence": "medium"
+ },
+ {
+  "page": "13",
+  "quote": "Grand Isle is a barrier island on Louisiana's coast, and these oysters are named for it",
+  "problem": "True but incomplete. Grand Isle Jewels is a 2025 brand of off-bottom, cage-farmed, tumbled boutique oysters launched by JEDCO with the island's farmers (search: Louisiana Radio Network, Axios, WWL-TV, grandislejewels.com).",
+  "correction": "Add: 'They are farmed in floating cages off Grand Isle and tumbled for a deep, clean cup, a Louisiana brand launched in 2025.'",
+  "confidence": "high"
+ },
+ {
+  "page": "13",
+  "quote": "A mignonette is the classic French oyster sauce, vinegar and shallot",
+  "problem": "Omits cracked pepper, which is what the word mignonette means and which every classical version includes (search: Wikipedia, Wiktionary).",
+  "correction": "'A mignonette is the classic raw-bar sauce: vinegar, shallot and cracked pepper.'",
+  "confidence": "high"
+ },
+ {
+  "page": "14",
+  "quote": "the grated egg gives it body",
+  "problem": "In a Creole turtle soup the body comes from the flour roux and the gelatin of the turtle and stock; the grated hard-boiled egg is a garnish that adds richness (expert; the house recipe thickens with flour, search).",
+  "correction": "'the grated egg adds richness, and aged Sherry brings a nutty, dry lift that cuts the richness'.",
+  "confidence": "medium"
+ },
+ {
+  "page": "7",
+  "quote": "cane syrup, Louisiana's dark, molasses-like sugarcane syrup",
+  "problem": "Cane syrup is cane juice reduced in open kettles; it is sweeter, thinner and milder than molasses (search: Wikipedia, Saveur). 'Molasses-like' overstates its darkness and bitterness.",
+  "correction": "'cane syrup, Louisiana's own sugarcane syrup, lighter and more buttery than molasses'.",
+  "confidence": "medium"
+ },
+ {
+  "page": "7",
+  "quote": "Rohan is a specialty duck breed",
+  "problem": "Rohan is a proprietary hybrid bred for D'Artagnan (Pekin and heritage Mallard cross), raised in New York State (search: Tasting Table, D'Artagnan). 'Breed' is loose.",
+  "correction": "'Rohan is a special cross bred for the D'Artagnan company, prized for rosy, mild, juicy meat.'",
+  "confidence": "high"
+ },
+ {
+  "page": "6 to 7 and 49",
+  "quote": "Roasted Rohan Duck Breast ... cane syrup-glazed peaches, candied hazelnuts",
+  "problem": "The dinner tasting page as indexed by search lists course four as Hazelnut-Crusted Duck (14-day dry-aged Rohan, brown butter and sweet potato pur\u00e9e, winter squash, sage, duck jus), offered 5 February to 30 December 2026. Either the menu changed after 26 September or the index is stale.",
+  "correction": "Mark the duck course 'confirm current version at lineup' and keep both descriptions on file.",
+  "confidence": "medium"
+ },
+ {
+  "page": "6 and 49",
+  "quote": "Fichet 'Ch\u00e2teau London' M\u00e2con-Ig\u00e9 2024",
+  "problem": "The dinner tasting page as indexed pairs the BBQ lobster with Domaine Matrot Meursault 2023.",
+  "correction": "Verify the live pairing before quoting; note both.",
+  "confidence": "medium"
+ },
+ {
+  "page": "12",
+  "quote": "sweet, delicate crab meat you pick up and eat right off the claw",
+  "problem": "Not wrong, but two published reviews (NoMenu, Tripadvisor) found the warm claws tough and the meat hard to free from the cartilage, and said the menu does not signal they are served hot.",
+  "correction": "Add to the 20-second and 45-second lines: 'served warm', and to the service note: 'use the pincer as a handle, bite and slide the cartilage out'.",
+  "confidence": "high"
+ },
+ {
+  "page": "p17 (and p2)",
+  "quote": "marchand de vin, \"wine merchant's sauce,\" a savory red wine reduction",
+  "problem": "The New Orleans marchand de vin, including Brennan's published recipe, is a roux-thickened brown sauce with ham, mushrooms, onion, garlic, stock and red wine. 'Reduction' describes the classical French version, not the house sauce.",
+  "correction": "Say 'a savoury red wine and mushroom sauce' and drop 'reduction'. The p2 wording 'a red wine and mushroom sauce' is the better one.",
+  "confidence": "high"
+ },
+ {
+  "page": "p17",
+  "quote": "Eggs Hussarde is the New Orleans cousin of Eggs Benedict, and it's the egg dish we're known for.",
+  "problem": "Search sources (Garden & Gun, TasteAtlas, Daily Meal) state the dish was invented at Brennan's; the entry never says so, although the formula on p2 asks for 'why it's special at Brennan's'.",
+  "correction": "Add 'created here at Brennan's' to the 45-second line, after confirming with management that the house tells it that way.",
+  "confidence": "medium"
+ },
+ {
+  "page": "p7",
+  "quote": "Rohan is a specialty duck breed with rich, flavorful meat",
+  "problem": "Rohan is a proprietary hybrid (Heritage Mallard and Pekin) raised for D'Artagnan in New York State; D'Artagnan describes the meat as tender, rosy and mild rather than rich.",
+  "correction": "Say 'a specialty duck raised in New York for its tender, rosy meat'.",
+  "confidence": "high"
+ },
+ {
+  "page": "p21 and p51",
+  "quote": "tasso, a smoky, spiced Cajun ham",
+  "problem": "Tasso is spiced, cured and smoked pork, usually shoulder rather than leg ham; 'ham' is colloquial shorthand.",
+  "correction": "Keep the shorthand at the table if preferred, but the glossary could read 'tasso, Cajun spiced and smoked pork, used to season the sauce'.",
+  "confidence": "medium"
+ },
+ {
+  "page": "p26",
+  "quote": "En papillote, ahn pah-pee-YOHT, means cooked sealed in a wrapper",
+  "problem": "Papillote literally means a paper wrapper; the banana leaf is Brennan's substitution for parchment.",
+  "correction": "Say 'en papillote means in paper; here we use a banana leaf instead, so the fish steams in its own juices'.",
+  "confidence": "medium"
+ },
+ {
+  "page": "p18",
+  "quote": "the name goes back to the French playwright Victorien Sardou",
+  "problem": "Correct but incomplete: the dish was created at Antoine's in 1908 and named for Sardou; the Brennan's build (fried artichokes, Parmesan, Choron) is a variation on that original.",
+  "correction": "Add 'created at Antoine's in 1908' so the server can place the dish and explain the house twist.",
+  "confidence": "medium"
+ },
+ {
+  "page": "p27",
+  "quote": "We blacken it, the Louisiana technique of coating in spices and searing in a very hot pan",
+  "problem": "Accurate, but the technique is Paul Prudhomme's invention of March 1980 at K-Paul's, not an old folk method.",
+  "correction": "Optionally add 'the technique Paul Prudhomme made famous in 1980'.",
+  "confidence": "low"
+ },
+ {
+  "page": "33 (45-second line) and 49 (must-knows)",
+  "quote": "Owen Brennan asked his chef, Paul Blang\u00e9, for a dessert with bananas, and named it for his friend Richard Foster.",
+  "problem": "Omits Ella Brennan. Brennan's own current telling (Ralph Brennan at the 6 April 2026 Bananas Foster Day party, per Axios New Orleans), Wikipedia and frenchquarter.com credit Ella Brennan working with chef Paul Blang\u00e9, with Owen setting the challenge.",
+  "correction": "Owen Brennan asked his sister Ella and chef Paul Blang\u00e9 for a banana dessert, and named it for his friend Richard Foster, chairman of the New Orleans Crime Commission. Optional hook: New Orleans was then the main port for bananas from Central America.",
+  "confidence": "high"
+ },
+ {
+  "page": "47 (No alcohol scenario)",
+  "quote": "Most of it burns off, but not all of it",
+  "problem": "Flaming removes only part of the alcohol; the USDA nutrient-retention table gives about 75 per cent retained for flamed dishes. The p34 service note (flamb\u00e9ing does not remove all the alcohol) is right; this line is too generous.",
+  "correction": "Only some of it burns off, so I would not recommend it if you avoid alcohol completely.",
+  "confidence": "medium"
+ },
+ {
+  "page": "31 (Succotash, 45-second line)",
+  "quote": "Succotash is a classic Southern side",
+  "problem": "Succotash is Native American in origin (Narragansett, New England; from msickquatash, boiled corn kernels). It is popular in the South but not Southern in origin (Wikipedia, cooksinfo, loveandlemons).",
+  "correction": "Succotash is a 400-year-old Native American dish of corn and beans that the South adopted; ours is glazed summer vegetables with Nueske's bacon.",
+  "confidence": "high"
+ },
+ {
+  "page": "32 (Maggie's Mushrooms, service note)",
+  "quote": "learn the mushroom varieties, how they're cooked, who Maggie is",
+  "problem": "Gap left open. Search points to Mushroom Maggie's Farm, St Francisville, Louisiana (Maggie Long and Cyrus Lester), which supplies New Orleans restaurants that list the add-on as 'Maggie's Mushrooms'.",
+  "correction": "Add, once the chef confirms: Maggie's Mushrooms come from Mushroom Maggie's Farm in St Francisville, a small family farm growing lion's mane, oyster and other mushrooms for south Louisiana restaurants.",
+  "confidence": "medium"
+ },
+ {
+  "page": "34 (Cherries Jubilee, 45-second line)",
+  "quote": "Cherries Jubilee is a grand old flamb\u00e9 dessert, and we make it right at your table.",
+  "problem": "No origin given, and 'Luxardo sauce' is not explained beyond naming the house. The dish is credited to Escoffier for Queen Victoria's jubilee (widely the 1897 Diamond Jubilee); the original had no ice cream and the 1903 version flames kirsch. Which Luxardo product is used and which spirit is lit is not stated.",
+  "correction": "Add: Cherries Jubilee is older than Bananas Foster; Escoffier made it for Queen Victoria's jubilee in the 1890s. At lineup, record the Luxardo product in the sauce and the spirit that is flamed, and say it.",
+  "confidence": "medium"
+ },
+ {
+  "page": "49 (Must-knows, Bananas Foster)",
+  "quote": "The restaurant calls it the most-ordered item on the menu.",
+  "problem": "Could not be verified in search. The figure that is published (frenchquarter.com, neworleans.com) is that Brennan's flamb\u00e9s about 35,000 pounds of bananas a year.",
+  "correction": "Replace with: Brennan's flamb\u00e9s about 35,000 pounds of bananas a year.",
+  "confidence": "low"
+ },
+ {
+  "page": "37 (Pineapple Tarte Tatin, 45-second line)",
+  "quote": "Tarte Tatin, tart tah-TAN, is the famous French upside-down tart",
+  "problem": "Accurate but misses the name's story: the Tatin sisters of the H\u00f4tel Tatin, Lamotte-Beuvron, 1880s; the accident story is a legend.",
+  "correction": "Optional enrichment: named for the Tatin sisters, who made it the signature of their hotel in the Loire valley in the 1880s; legend says it began as an apple tart gone wrong.",
+  "confidence": "low"
+ },
+ {
+  "page": "31 (Creamed Spinach, 45-second line)",
+  "quote": "It's the same kind of creamy spinach that sits under our Eggs Sardou",
+  "problem": "A house detail inferred rather than printed; the voice rules at p2 say not to invent house details. The service note itself says to ask whether it contains Parmesan 'like the Sardou's spinach', so the equivalence is unconfirmed.",
+  "correction": "Confirm with the kitchen that the side and the Sardou spinach are the same preparation; if not, drop the comparison.",
+  "confidence": "low"
+ },
+ {
+  "page": "32 (Shells & Cheese, 45-second line)",
+  "quote": "Mimolette, mee-mo-LET, a bright-orange French cheese that's nutty and a little sweet as it ages",
+  "problem": "Accurate but misses the hook: made around Lille in the 17th century as a French answer to Dutch Edam when Colbert banned Dutch imports, coloured with annatto, ripened with the help of cheese mites.",
+  "correction": "Optional enrichment: Mimolette was made in Lille as Louis XIV's French answer to Dutch Edam, dyed orange with annatto.",
+  "confidence": "low"
+ },
+ {
+  "page": "50",
+  "quote": "Beurre blanc | burr BLAHNK",
+  "problem": "The final c of blanc is silent in French; the K is an anglicism.",
+  "correction": "burr BLAHN, nasal, with no K. The K version is common in American kitchens and harmless, but it is not the French.",
+  "confidence": "medium"
+ },
+ {
+  "page": "50",
+  "quote": "Brabant potatoes | bra-BAHNT",
+  "problem": "A hybrid: French has a silent t (bra-BAHN), while the usual New Orleans anglicised form rhymes with ant.",
+  "correction": "Either bra-BAHN (French) or bruh-BANT (local). Ask the floor which Brennan's uses and print that one.",
+  "confidence": "medium"
+ },
+ {
+  "page": "50",
+  "quote": "Choron | shore-OHN",
+  "problem": "The syllable split moves the r; the French stresses the last syllable with the r starting it.",
+  "correction": "sho-ROHN.",
+  "confidence": "medium"
+ },
+ {
+  "page": "50",
+  "quote": "Marchand de vin | mar-SHAWN duh VAN",
+  "problem": "Minor: the second syllable is a nasal ahn, not awn.",
+  "correction": "mar-SHAHN duh VAN.",
+  "confidence": "low"
+ },
+ {
+  "page": "50",
+  "quote": "Mignonette | min-yo-NET",
+  "problem": "Minor: the first vowel is a long ee in French; min is the anglicised form.",
+  "correction": "meen-yo-NET (English min-yuh-NET is also accepted).",
+  "confidence": "low"
+ },
+ {
+  "page": "51",
+  "quote": "Tasso is a smoky, spiced Cajun ham",
+  "problem": "Tasso is made from cured pork shoulder, not a leg ham; 'ham' is trade shorthand. The pronunciation TAH-so is one of two heard in Louisiana (also TASS-oh).",
+  "correction": "A smoky, heavily spiced cured pork shoulder used as a seasoning meat. Keep TAH-so but note TASS-oh is also common; confirm the house habit.",
+  "confidence": "medium"
+ },
+ {
+  "page": "51",
+  "quote": "Herbsaint | ERB-saint",
+  "problem": "Locals usually clip the second syllable; the H must stay silent either way.",
+  "correction": "ERB-sant (ERB-saint also heard). Never sound the H.",
+  "confidence": "low"
+ },
+ {
+  "page": "39",
+  "quote": "Spirit-forward and strong \u2014 classically served up, without ice (confirm the bar's build).",
+  "problem": "'Served up' usually means a stemmed glass. The classic Sazerac is served neat in a chilled old-fashioned (rocks) glass with no ice, never in a coupe. A server reading 'up' may describe or expect the wrong glass.",
+  "correction": "Change to: 'Spirit-forward and strong. Classically served neat in a chilled rocks glass, no ice (confirm the bar's build).'",
+  "confidence": "medium"
+ },
+ {
+  "page": "39",
+  "quote": "The Sazerac is New Orleans' official cocktail: Sazerac rye whiskey and Peychaud's bitters, served in a glass rinsed with Herbsaint, our local anise liqueur \u2014 spicy, aromatic and strong.",
+  "problem": "None of the three Sazerac lines mentions sugar, and none mentions the lemon peel. The classic build (Sazerac Company spec, IBA spec, Boothby 1908) has a sugar cube or syrup and a lemon peel. The menu line as printed also omits them, so they may simply be unprinted, but a guest told 'rye, bitters and a rinse' may expect a drier drink than they get.",
+  "correction": "After confirming the bar's build, add 'a touch of sugar' and 'a lemon peel' to the 20 s and 45 s lines, for example: 'Sazerac rye and Peychaud's, stirred with a touch of sugar, poured into a Herbsaint-rinsed glass with a lemon peel.'",
+  "confidence": "medium"
+ },
+ {
+  "page": "40",
+  "quote": "Our Dulce de Leche dessert cocktail \u2014 Brennan's own Don Q rum with banana rum butter sauce, cr\u00e8me de cacao and cream.",
+  "problem": "The 10 s line says 'Brennan's own Don Q rum', which asserts a private blend the service note on the same page says must be confirmed at lineup. The two parts of the entry contradict each other.",
+  "correction": "Until the Blender's Reserve story is confirmed, soften the 10 s line to 'Don Q rum' or 'our Don Q rum selection', and keep the service note's instruction to confirm.",
+  "confidence": "medium"
+ },
+ {
+  "page": "51",
+  "quote": "Herbsaint is our local anise liqueur \u2014 just a rinse in the Sazerac glass for aroma.",
+  "problem": "Herbsaint was created in New Orleans in 1934 but is now produced by the Sazerac Company in Kentucky. 'Local' is fair as a New Orleans brand of origin, but a knowledgeable guest may push back on 'local' as a place of production.",
+  "correction": "Say 'New Orleans' own anise liqueur, created here in 1934' rather than 'our local anise liqueur'.",
+  "confidence": "low"
+ },
+ {
+  "page": "p39",
+  "quote": "Spirit-forward and strong",
+  "problem": "The service note goes on to say the Sazerac is \"classically served up, without ice\". \"Up\" normally means a stemmed glass. The classic Sazerac is served neat in a chilled rocks (old fashioned) glass with no ice, and the Ledger's own entry says chilled rocks glass. The note does hedge with \"confirm the bar's build\".",
+  "correction": "Replace \"served up\" with \"served neat in a chilled rocks glass, no ice, lemon peel expressed over the top\" and keep the instruction to confirm the house build.",
+  "confidence": "medium"
+ },
+ {
+  "page": "p39",
+  "quote": "Sazerac rye whiskey, Herbsaint rinse, Peychaud's bitters",
+  "problem": "The menu line and all three spoken lines omit sugar. Every Sazerac build includes a sugar cube or syrup, so a server telling a guest it is only rye, bitters and a rinse would be describing an unsweetened drink the bar almost certainly does not make.",
+  "correction": "Confirm the house build at lineup and add \"a little sugar\" to the 20- and 45-second lines if the bar uses it.",
+  "confidence": "low"
+ },
+ {
+  "page": "p39",
+  "quote": "Herbsaint, our local anise liqueur",
+  "problem": "Herbsaint is a New Orleans brand (created here in 1934 by J. Marion Legendre) owned by the Sazerac Company, but it is now distilled in Kentucky. \"Local\" is fair as a brand story and misleading as a place of production if a guest asks where it is made.",
+  "correction": "Say \"New Orleans' own anise liqueur, created here in 1934\" rather than \"local\".",
+  "confidence": "low"
+ },
+ {
+  "page": "p39",
+  "quote": "Tullamore Dew Irish whiskey",
+  "problem": "The brand styles itself Tullamore D.E.W. (the initials of founder Daniel E. Williams). Cosmetic, but a bartender should know the name's origin because guests ask.",
+  "correction": "Write Tullamore D.E.W. and add the one-line origin of the initials.",
+  "confidence": "low"
+ },
+ {
+  "page": "41",
+  "quote": "Extra Brut means very little added sugar: bone-dry",
+  "problem": "Extra Brut is the 0 to 6 g/L category; 'bone-dry' strictly describes Brut Nature (0 to 3 g/L, no dosage). The Piper-Heidsieck Essentiel sits around 5 g/L.",
+  "correction": "Extra Brut means very little added sugar (under 6 grams a litre): very dry, with citrus, orchard fruit, brioche and a firm chalky finish.",
+  "confidence": "medium"
+ },
+ {
+  "page": "41",
+  "quote": "Brennan's Essential by Piper-Heidsieck Extra Brut NV",
+  "problem": "Piper-Heidsieck spells its trade cuv\u00e9e 'Essentiel'. The spelling on the actual Brennan's label is unverified, and the PDF does not say whether the liquid is a bespoke blend or the standard Essentiel under a custom label.",
+  "correction": "Check the bottle: keep the label's spelling, and add one line saying whether it is Piper-Heidsieck's Essentiel Extra Brut with a Brennan's label or a bespoke blend.",
+  "confidence": "medium"
+ },
+ {
+  "page": "41",
+  "quote": "Poured with a Coravin so a single glass is possible.",
+  "problem": "The standard Coravin needle system does not work on sparkling wine; a sparkling pour uses the separate Coravin Sparkling stopper-and-CO2 device. The later Leflaive entry (p43) describes the needle method, which could lead staff to describe the wrong device for the Rare.",
+  "correction": "Poured with the Coravin Sparkling system (a stopper that re-pressurises the bottle with CO2), so a single glass is possible. Reseal immediately after each pour.",
+  "confidence": "high"
+ },
+ {
+  "page": "41",
+  "quote": "Rare began as Piper-Heidsieck's prestige cuv\u00e9e.",
+  "problem": "Accurate but dated: since 2018 Rare has been presented as its own house, Rare Champagne, within the same group, with R\u00e9gis Camus as its cellar master.",
+  "correction": "Rare began as Piper-Heidsieck's prestige cuv\u00e9e and is now run as its own house, Rare Champagne, under cellar master R\u00e9gis Camus; first vintage 1976, only about a dozen vintages ever declared.",
+  "confidence": "medium"
+ },
+ {
+  "page": "42",
+  "quote": "Domaine Durand Sauvignon Blanc 2025 ... Sauvignon Blanc \u00b7 Loire Valley, France",
+  "problem": "No appellation is given anywhere in the guide. At this price the wine is most plausibly Touraine or IGP Val de Loire, but this is unverified; without the appellation a server may wrongly call it Sancerre.",
+  "correction": "Add the appellation from the label (likely Touraine Sauvignon or IGP Val de Loire) and instruct servers to say 'Loire Sauvignon Blanc' rather than naming Sancerre until confirmed.",
+  "confidence": "low"
+ },
+ {
+  "page": "42",
+  "quote": "Pazo das Bruxas Albari\u00f1o 2025 ... Coastal Galician white",
+  "problem": "The entry omits that the wine is made by Familia Torres, which is the most recognisable producer name on the white list and a natural table hook.",
+  "correction": "Coastal Galician white from Familia Torres's R\u00edas Baixas estate (first vintage 2014; the name means 'manor of the witches').",
+  "confidence": "medium"
+ },
+ {
+  "page": "42",
+  "quote": "C.H. Berres 'Old Vines' Riesling 2022 ... Riesling \u00b7 Mosel, Germany",
+  "problem": "The village and family story are missing; the estate is in \u00dcrzig and is one of the Mosel's oldest wine families (history cited to 1510, 21st generation Markus Berres).",
+  "correction": "Riesling, \u00dcrzig, Middle Mosel, Germany; a family estate with roots to 1510, run by 21st-generation Markus Berres.",
+  "confidence": "medium"
+ },
+ {
+  "page": "43",
+  "quote": "Fichet 'Ch\u00e2teau London' M\u00e2con-Ig\u00e9 2024",
+  "problem": "'Ch\u00e2teau London' will prompt questions; it is the name of a lieu-dit (vineyard parcel) in Ig\u00e9, not a castle, and unrelated to the English city. The entry also lacks the producer note that this is Domaine Fichet of Ig\u00e9, not Jean-Philippe Fichet of Meursault.",
+  "correction": "Add: 'Ch\u00e2teau London' is a named vineyard parcel in the village of Ig\u00e9 (no castle, nothing to do with England); the wine is from Domaine Fichet of Ig\u00e9, a family estate, not the Meursault Fichet.",
+  "confidence": "medium"
+ },
+ {
+  "page": "41",
+  "quote": "Serve 43\u201346\u00b0F in a tulip or white-wine glass.",
+  "problem": "The range is at the cold end for a low-dosage Champagne; most sommeliers pour non-vintage Champagne at 46 to 50\u00b0F so the fruit and brioche show. Not an error, a preference.",
+  "correction": "Serve 45 to 50\u00b0F in a tulip or white-wine glass; if it is poured straight from deep ice, let the glass sit a minute.",
+  "confidence": "low"
+ },
+ {
+  "page": "41",
+  "quote": "Serve 46\u201350\u00b0F \u2014 a touch warmer than the house bubbles, to show vintage complexity",
+  "problem": "Prestige vintage Champagne is usually served at 50 to 54\u00b0F; 46 to 50\u00b0F is still cool for a wine with eight years on lees.",
+  "correction": "Serve 48 to 54\u00b0F, warmer than the house bubbles, so the toast, almond and saffron notes show.",
+  "confidence": "low"
+ },
+ {
+  "page": "42",
+  "quote": "Charles Lafitte Brut Champagne NV ... Champagne blend \u2014 Brut",
+  "problem": "No house story is given; Charles Lafitte is a Vranken-Pommery brand dating to 1834, Pinot Noir and Meunier-led. Servers need a line for 'who makes this?'.",
+  "correction": "Champagne blend led by Pinot Noir and Meunier with Chardonnay, Brut; a house with roots to 1834, now part of the Vranken-Pommery group.",
+  "confidence": "medium"
+ },
+ {
+  "page": "45",
+  "quote": "Cabernet Sauvignon and Merlot blend \u00b7 Bordeaux, France",
+  "problem": "(expert, medium) Moulin d'Issan, the Bordeaux Sup\u00e9rieur from Ch\u00e2teau d'Issan's palus vines, is in my experience Merlot-led (roughly two-thirds Merlot, one-third Cabernet Sauvignon). Listing Cabernet first steers the server toward 'cassis and grip' when the wine usually shows plum and softness.",
+  "correction": "Merlot-led blend with Cabernet Sauvignon \u00b7 Bordeaux Sup\u00e9rieur, France (confirm the 2023 percentages from the back label or the ch\u00e2teau's tech sheet).",
+  "confidence": "medium"
+ },
+ {
+  "page": "46",
+  "quote": "with electric acidity; a decade of age adds depth.",
+  "problem": "Arithmetic: menus were read in September 2026 and the wine is a 2014, so it is twelve years old, not ten.",
+  "correction": "with electric acidity; twelve years of age add depth.",
+  "confidence": "high"
+ },
+ {
+  "page": "46",
+  "quote": "Riesling \u2014 late-harvest, sweet \u00b7 Mosel, Germany",
+  "problem": "(expert, medium) 'Late-harvest' is the literal meaning of Sp\u00e4tlese, the Pr\u00e4dikat below Auslese. Auslese means 'selected harvest' of very ripe, often botrytised bunches. The shorthand is forgivable at the table but inaccurate for a training document.",
+  "correction": "Riesling \u00b7 Auslese (selected-harvest, a tier above late-harvest Sp\u00e4tlese), sweet \u00b7 Mosel, Germany",
+  "confidence": "medium"
+ },
+ {
+  "page": "45",
+  "quote": "Domaine de Ch\u00e2teaumar 'Cuv\u00e9e Vincent' C\u00f4tes du Rh\u00f4ne",
+  "problem": "No vintage is printed for this wine anywhere in the PDF (p45, p49), unlike every other wine on p44-46. A C\u00f4tes du Rh\u00f4ne turns over every year.",
+  "correction": "Add 'vintage not printed on the tasting menu: check the bottle before quoting a year' to the Serve line, and give the wine a verify-on-bottle flag in the app.",
+  "confidence": "high"
+ },
+ {
+  "page": "44",
+  "quote": "Premier Cru is Burgundy's second-highest vineyard tier.",
+  "problem": "(expert, high) Accurate but incomplete: the village of Beaune has no Grand Cru, so Premier Cru is the top tier in Beaune. A guest asking for 'the Grand Cru version' should hear that there is none.",
+  "correction": "Premier Cru is Burgundy's second-highest vineyard tier, and the highest in Beaune, which has no Grand Cru.",
+  "confidence": "high"
+ },
+ {
+  "page": "45",
+  "quote": "A sixteen-year-old Cabernet can throw sediment: keep the bottle upright, pour slowly and leave the last inch behind.",
+  "problem": "(expert, medium) The sediment advice is right but the note is silent on preservation between glasses. The PDF lists only the Rare Brut and the Leflaive as Coravin pours; an opened sixteen-year-old wine fades within about a day.",
+  "correction": "Add: stand the bottle upright a day ahead; pour with Coravin if the house uses it for this wine, otherwise stopper, refrigerate and sell through the same night; never decant it for more than about 30 minutes.",
+  "confidence": "medium"
+ },
+ {
+  "page": "44",
+  "quote": "Grenache blend \u00b7 Southern Rh\u00f4ne, France",
+  "problem": "(expert, low-medium) Durban's Beaumes-de-Venise rouge is Grenache with Syrah; naming the partner grape helps the server explain the pepper note the profile line already cites.",
+  "correction": "Grenache and Syrah \u00b7 Beaumes-de-Venise cru, Southern Rh\u00f4ne, France (confirm proportions from the label).",
+  "confidence": "low"
+ },
+ {
+  "page": "49",
+  "quote": "Wine Spectator Grand Award cellar, strong in Burgundy and Champagne.",
+  "problem": "The award is asserted with no year, no scale and no citation; the sources list on p51 has no Wine Spectator entry, so a server cannot say since when or whether it is current.",
+  "correction": "Add the award year, the current-year status and the Wine Spectator restaurant-awards listing as a numbered source once confirmed by the wine director.",
+  "confidence": "high"
+ },
+ {
+  "page": "51",
+  "quote": "Sources, item 10: Brennan's Wine Room (wine-room page)",
+  "problem": "The Wine Room page is cited as a source but the guide contains no Wine Room content at all: no location, seating, minimum or booking route.",
+  "correction": "Add a Wine Room entry under Must-knows with location, capacity, minimum spend, booking contact and whether cellar bottles are sold from it, or drop the source.",
+  "confidence": "high"
+ },
+ {
+  "page": "24 and 48",
+  "quote": "Or I can bring our sommelier for a red Burgundy from upstairs. (p24) / a red Burgundy from our cellar (p48)",
+  "problem": "The two scripts place the bottle collection in different parts of the building.",
+  "correction": "Confirm where the bottle list is physically kept and where the Wine Room sits, then use one phrase in both scripts.",
+  "confidence": "high"
+ },
+ {
+  "page": "41, with 13, 15, 18, 23",
+  "quote": "Rare Brut 2012 (Coravin) ... Coravin-preserved: reseal right after each pour",
+  "problem": "A needle Coravin cannot be used on Champagne; a preserved sparkling wine uses the Coravin Sparkling stopper, which means the cork has been pulled. The needle wording on p23 is for the Leflaive, but listing both wines as '(Coravin)' invites a server to say 'no cork is pulled' for the Rare.",
+  "correction": "Add one line per wine: Leflaive is poured by needle through the cork; the Rare is opened, stoppered and re-pressurised with the sparkling system. Confirm the actual device and log procedure with the bar.",
+  "confidence": "high"
+ },
+ {
+  "page": "46",
+  "quote": "A sweet, fortified red: black cherry, fig, cocoa, coffee.",
+  "problem": "La Tour Vieille's Reserva is an oxidatively aged, solera-style Banyuls; fresh black-cherry fruit describes the Rimage bottling, not the Reserva.",
+  "correction": "Describe it as dried fig, walnut, caramel, coffee and orange peel, and note that the Rimage is the fresh black-cherry style if a guest asks.",
+  "confidence": "medium"
+ },
+ {
+  "page": "45",
+  "quote": "Cabernet Sauvignon and Merlot blend, Bordeaux, France (Moulin d'Issan)",
+  "problem": "Moulin d'Issan Bordeaux Superieur is normally Merlot-led with Cabernet Sauvignon in support.",
+  "correction": "Say 'Merlot-led blend with Cabernet Sauvignon from Chateau d'Issan's vineyards outside the Margaux appellation', and confirm the blend on the current vintage's back label.",
+  "confidence": "medium"
+ },
+ {
+  "page": "49, with 6",
+  "quote": "Dinner tasting $80 ... Wine pairing supplement $120 (4 oz pours)",
+  "problem": "A pairing priced above the five-course food menu is unusual; the figures may be transposed on the page or the menu may have changed.",
+  "correction": "Re-read the live dinnertastingmenu page and confirm with the manager before the app quotes either number.",
+  "confidence": "low"
+ },
+ {
+  "page": "43",
+  "quote": "Chardonnay, Sta. Rita Hills, California (Gainey Estate Vineyards)",
+  "problem": "Gainey farms in both Santa Ynez Valley and Sta. Rita Hills and its Chardonnays have carried either appellation.",
+  "correction": "Confirm the appellation on the bottle in service; the 'Santa Barbara County' phrase in the Say it line is safe either way.",
+  "confidence": "low"
+ },
+ {
+  "page": "8",
+  "quote": "If the table is already on bubbles: the Pinot Noir ros\u00e9's berry fruit echoes the blackberries, though the sweet curds will make it taste drier and tarter.",
+  "problem": "The second choice breaks the guide's own sweetness rule on p3 and predicts its own failure in the same sentence.",
+  "correction": "Remove the Pierre Sparr as a second choice. State that no dry wine on the list beats the Auslese with berry curds, and offer the Catalina Island or coffee with chicory as the alternative.",
+  "confidence": "high"
+ },
+ {
+  "page": "9",
+  "quote": "For a guest set on bubbles: the Pinot Noir ros\u00e9's raspberry notes echo the coulis, though it will taste drier next to the mousse.",
+  "problem": "Same fault as p8: a second choice that the guide itself says will taste wrong.",
+  "correction": "Same fix as p8. If the guest insists on dry bubbles, say plainly that it will taste drier and let them choose; do not list it as a recommendation.",
+  "confidence": "high"
+ },
+ {
+  "page": "33",
+  "quote": "Dr. Hermann 'Erdener Pr\u00e4lat' Riesling Auslese 2014 (375 ml)",
+  "problem": "As the first pour for Bananas Foster: rum, butter, brown sugar and flamb\u00e9ed caramel outweigh a Riesling Auslese; the bridge principle points to a fortified wine, which the guide lists only as second choice.",
+  "correction": "Lead with Domaine La Tour Vieille Banyuls Reserva (caramel, fig, warmth that echoes the rum) and offer the Auslese second for a brighter contrast, once Banyuls is confirmed \u00e0 la carte.",
+  "confidence": "medium"
+ },
+ {
+  "page": "35",
+  "quote": "Banyuls for a darker, caramel-and-fig match.",
+  "problem": "For the Bread Pudding the darker match is the primary match: whiskey caramel, brown sugar and pecan pralines bridge to fortified wine.",
+  "correction": "Flip the order: Banyuls first, Auslese second.",
+  "confidence": "medium"
+ },
+ {
+  "page": "14",
+  "quote": "its toasty depth echoes the aged Sherry.",
+  "problem": "Overstated for an NV Extra Brut; the nutty, oxidative depth that echoes aged Sherry belongs to the Rare 2012 step up.",
+  "correction": "Rewrite the why: its dryness and bubbles keep a rich soup clean between spoonfuls. Give the Sherry echo to the Rare 2012 in the step-up line.",
+  "confidence": "medium"
+ },
+ {
+  "page": "24",
+  "quote": "Louis Jadot Beaune 1er Cru 2023",
+  "problem": "Listed as the Chateaubriand's second choice, but p44 gives it no glass price and calls it the dinner tasting's red; \u00e0 la carte availability is unconfirmed. The same wine is second choice for the Redfish on p25.",
+  "correction": "Confirm whether it is poured \u00e0 la carte and at what price. If not, replace with Moulin d'Issan for a classic at $16 and keep the line about bringing the sommelier for a red Burgundy from the cellar.",
+  "confidence": "high"
+ },
+ {
+  "page": "12",
+  "quote": "Domaine Durand Sauvignon Blanc 2025",
+  "problem": "As second choice for brown-butter crab claws, it conflicts with p10's own avoid line that lean, green whites make butter taste flat.",
+  "correction": "Second choice: Gainey Chardonnay (same creamy logic at $17) or Piper Extra Brut for bubbles against the butter.",
+  "confidence": "medium"
+ },
+ {
+  "page": "20",
+  "quote": "Taste the bottle before recommending: if it's off-dry, lead with it; if bone-dry, mention the maple may make it seem tarter.",
+  "problem": "The first pick for the Duck Confit Waffle is left conditional on the server's palate on the day; the guide's own sweetness rule makes the answer decisive.",
+  "correction": "Settle the Berres sweetness once at lineup and print it. If off-dry, keep it first. If dry, make Damien Martin Bourgogne Pinot the first pick and name the Auslese by the pour as the luxury match.",
+  "confidence": "high"
+ },
+ {
+  "page": "7",
+  "quote": "Avoid lean, high-acid whites and tart light reds: the cane-syrup glaze makes them taste sour and thin.",
+  "problem": "The second choice on the same page is a light Bourgogne Pinot Noir with bright acidity, which the avoid line appears to exclude.",
+  "correction": "Either name the Durban Beaumes-de-Venise rouge as the second choice (ripe fruit, soft tannin, matches the glaze) or narrow the avoid line to very lean, under-ripe reds.",
+  "confidence": "medium"
+ },
+ {
+  "page": "10",
+  "quote": "Banyuls is the dinner tasting's dessert pour",
+  "problem": "The coffee cake is a breakfast item and the guide offers a tasting-only wine with a confirm hedge; the same hedge appears on p35.",
+  "correction": "Record whether Banyuls is poured \u00e0 la carte, at breakfast and dinner, with a price. If not, mark the coffee cake, Cherries Jubilee and the Snickers as coffee-only and remove Banyuls from \u00e0 la carte second choices.",
+  "confidence": "high"
+ },
+ {
+  "page": "46",
+  "quote": "A sweet, fortified red: black cherry, fig, cocoa, coffee.",
+  "problem": "If the La Tour Vieille Reserva is the oxidatively aged bottling, the lead notes are dried fig, walnut, caramel and coffee rather than fresh black cherry; p34's cherry-meets-cherry line for Cherries Jubilee depends on this.",
+  "correction": "Confirm the style with the distributor. If oxidative, lead with fig, walnut and caramel, and describe the Jubilee bridge as kirsch warmth and the nutty maraschino note.",
+  "confidence": "medium"
+ },
+ {
+  "page": "45",
+  "quote": "Cabernet Sauvignon and Merlot blend",
+  "problem": "Moulin d'Issan is, to my recall, usually Merlot-led; p23 also calls it a Cabernet-Merlot Bordeaux.",
+  "correction": "Confirm the blend on the tech sheet; if Merlot-led, write Merlot and Cabernet Sauvignon blend.",
+  "confidence": "low"
+ },
+ {
+  "page": "5",
+  "quote": "Included 4 oz pour on the Traditional Breakfast; pour as the course fires.",
+  "problem": "The guide never notes that this is roughly the fourth alcoholic serving of the breakfast (milk punch, Bloody Bull, 4 oz Champagne, 4 oz red) or tells servers to offer the spirit-free swaps early.",
+  "correction": "Add a service line: watch the table's intake; offer the Catalina Island or Black Hills in place of any pour without being asked; the tasting price does not change.",
+  "confidence": "medium"
+ },
+ {
+  "page": "13",
+  "quote": "The Catalina Island: tonic's bitter lift and bubbles do for brine what Champagne does.",
+  "problem": "With a raw oyster, acid matters more than carbonation and watermelon sweetness sits oddly beside brine.",
+  "correction": "Black Hills: lime echoes the mignonette's vinegar and basil echoes the parsley. A taste judgement; test both at lineup.",
+  "confidence": "low"
+ },
+ {
+  "page": "all",
+  "quote": "Brennan's server dialogue and wine pairing guide (every page)",
+  "problem": "The PDF uses em dashes and en dashes throughout, and the receiving product rejects em dashes.",
+  "correction": "Nothing can be lifted verbatim; every line carried into the app must be rewritten with commas, colons or full stops.",
+  "confidence": "high"
+ },
+ {
+  "page": "41",
+  "quote": "Read read live online September 26, 2026.",
+  "problem": "Duplicated word in the by-the-glass list introduction.",
+  "correction": "Read live online September 26, 2026.",
+  "confidence": "high"
+ },
+ {
+  "page": "47",
+  "quote": "The Eggs Hussarde or the Duck Confit Waffle are great choices.",
+  "problem": "The shellfish-allergy answer clears two dishes before the kitchen has confirmed, and the skip list leaves out the Louisiana Oysters (p10) and the New Orleans Shrimp and Grits (p20), both shellfish dishes on the breakfast menu.",
+  "correction": "End the line with a deferral: name every dish the menu lists with shellfish (gumbo, Caesar dressing, Louisiana Oysters, Pecan Gulf Fish, Crab and Corn Omelette, Shrimp and Grits), then say the kitchen will confirm the choices and flag the ticket.",
+  "confidence": "high"
+ },
+ {
+  "page": "50",
+  "quote": "burr BLAHNK",
+  "problem": "The pronunciation given for beurre blanc adds a hard final k; the French final c in blanc is silent and the vowel is nasal.",
+  "correction": "burr BLAHN (nasal, no k sound).",
+  "confidence": "medium"
+ },
+ {
+  "page": "47",
+  "quote": "Explain the reason for the rule, then offer an alternative with the same theater",
+  "problem": "The Foster-for-one scenario offers Cherries Jubilee as the single-order alternative but p35 says the Jubilee's minimum is unconfirmed; the scenario should not imply a single Jubilee is available until lineup confirms.",
+  "correction": "Keep the line but add to the principle: confirm at lineup whether a single Cherries Jubilee is possible before offering it, and have the Dulce de Leche ready as the fallback.",
+  "confidence": "medium"
+ },
+ {
+  "page": "49",
+  "quote": "ask at training who performs it (server or captain) and learn the house procedure.",
+  "problem": "The guide leaves the flamb\u00e9 performer and the floor structure unknown, yet the Bananas Foster service note (p34) gives the server the full seven-step procedure as if the server performs it.",
+  "correction": "State the house rule once at the front of the guide: who performs tableside flamb\u00e9, and whether servers are certified before doing so.",
+  "confidence": "medium"
+ },
+ {
+  "page": "2",
+  "quote": "marchand de vin, a red wine and mushroom sauce",
+  "problem": "Inconsistent with pages 17 and 50, which call it a red wine reduction. The classical sauce has no mushrooms; Brennan's own published recipe does.",
+  "correction": "Pick one wording. If the kitchen's sauce follows the house recipe, say 'a red wine and mushroom sauce' everywhere; if not, drop 'mushroom' on page 2.",
+  "confidence": "medium"
+ },
+ {
+  "page": "41",
+  "quote": "Read read live online September 26, 2026.",
+  "problem": "Typo (doubled word).",
+  "correction": "Read live online September 26, 2026.",
+  "confidence": "high"
+ },
+ {
+  "page": "41",
+  "quote": "Brennan's Essential by Piper-Heidsieck Extra Brut NV",
+  "problem": "Piper-Heidsieck's cuv\u00e9e is spelt Essentiel. 'Carries the Brennan's name' implies a house label that is not confirmed.",
+  "correction": "Check the label; spell the cuv\u00e9e as the bottle does and confirm whether it is a Brennan's-labelled Essentiel before telling guests it carries the house name.",
+  "confidence": "medium"
+ },
+ {
+  "page": "13 and 41",
+  "quote": "Rare Brut 2012 (Coravin) $75 glass",
+  "problem": "A Rare Mill\u00e9sime 2012 blanc is not a vintage I can confirm; Rare Mill\u00e9sime 2013 and Rare Ros\u00e9 2012 exist, and the PDF itself notes the drinks page lists a 2013.",
+  "correction": "Confirm the open bottle's vintage and colour at lineup and correct both pages to match.",
+  "confidence": "medium"
+ },
+ {
+  "page": "45",
+  "quote": "Cabernet Sauvignon and Merlot blend \u00b7 Bordeaux, France",
+  "problem": "Moulin d'Issan is typically Merlot-dominant; page 23 also calls it 'a Cabernet-Merlot Bordeaux'.",
+  "correction": "Merlot and Cabernet Sauvignon blend, Merlot-led; keep the cassis and cedar descriptors.",
+  "confidence": "medium"
+ },
+ {
+  "page": "49",
+  "quote": "Chef Kris Padalino (executive chef since June 2025) has said she wants to bring back more tableside cooking",
+  "problem": "Name, date and quotation are unverified in this run.",
+  "correction": "Confirm the executive chef's name and start date with management and cite the source of the tableside remark before servers repeat it.",
+  "confidence": "low"
+ },
+ {
+  "page": "49",
+  "quote": "Wine Spectator Grand Award cellar",
+  "problem": "The award tier for the post-2014 restaurant is unverified; the pre-2013 restaurant held the Grand Award.",
+  "correction": "State the current Wine Spectator tier exactly as listed this year, or say 'a Wine Spectator-recognised cellar' until confirmed.",
+  "confidence": "low"
+ },
+ {
+  "page": "50",
+  "quote": "Brennan's opened in 1946 (at 417 Royal Street since 1956) and celebrates 80 years in 2026",
+  "problem": "Correct but materially incomplete: it implies continuity. Owen Brennan died in 1955 before the Royal Street opening; the restaurant closed in 2013 and reopened in November 2014 under Ralph Brennan and Terry White.",
+  "correction": "Add one line: 'Owen Brennan died in 1955; the family opened Royal Street in 1956. Brennan's closed in 2013 and reopened in November 2014 under Ralph Brennan and Terry White.' Verify dates with management.",
+  "confidence": "medium"
+ },
+ {
+  "page": "39 and 51",
+  "quote": "Herbsaint, our local anise liqueur",
+  "problem": "Herbsaint was created in New Orleans in 1934 and is owned by the Sazerac Company, but it is produced in Kentucky today.",
+  "correction": "'Herbsaint, the anise liqueur created in New Orleans in 1934' (drop 'local' or qualify it).",
+  "confidence": "high"
+ },
+ {
+  "page": "39",
+  "quote": "The Sazerac is New Orleans' official cocktail",
+  "problem": "Correct, but servers may hear guests say 'official cocktail of Louisiana'.",
+  "correction": "Add: 'named the official cocktail of the city by the Louisiana Legislature in 2008 (the city, not the state).'",
+  "confidence": "high"
+ },
+ {
+  "page": "47",
+  "quote": "Most of it burns off, but not all of it",
+  "problem": "Overstates how much alcohol flamb\u00e9ing removes; roughly three-quarters remains after a flame. Page 34 has the accurate wording.",
+  "correction": "'Some of it burns off, but most of it stays, so I wouldn't recommend it if you avoid alcohol completely.'",
+  "confidence": "high"
+ },
+ {
+  "page": "18",
+  "quote": "the name goes back to the French playwright Victorien Sardou",
+  "problem": "True but invites the inference that Brennan's created the dish; it was created at Antoine's.",
+  "correction": "Add: 'The dish was created at Antoine's in his honour; ours is the creamed-spinach version.'",
+  "confidence": "high"
+ },
+ {
+  "page": "17",
+  "quote": "Eggs Hussarde is the New Orleans cousin of Eggs Benedict, and it's the egg dish we're known for",
+  "problem": "Undersells a genuine Brennan's original.",
+  "correction": "If management agrees: 'Eggs Hussarde was created here at Brennan's; it's our answer to Eggs Benedict.'",
+  "confidence": "medium"
+ },
+ {
+  "page": "50",
+  "quote": "Choron \u00b7 shore-OHN",
+  "problem": "Approximate; the French is nasal and stressed on the second syllable.",
+  "correction": "sho-RAWN. Also note pralines are 'PRAH-leen' in New Orleans and Brabant is heard as 'bruh-BANT'.",
+  "confidence": "medium"
+ },
+ {
+  "page": "8",
+  "quote": "Mascarpone mousse, a light whipped Italian cream cheese",
+  "problem": "Mascarpone itself is not whipped; the mousse is.",
+  "correction": "'Mascarpone, a rich Italian cream cheese, whipped into a light mousse.'",
+  "confidence": "high"
+ }
+]
