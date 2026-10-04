@@ -61,3 +61,12 @@ describe('one service choice across Outside Of Time', () => {
     runInNewContext(source, d.context); expect(d.window.OOT.service).toBe(api);
   });
 });
+
+describe('the day and night control', () => {
+  it('draws one small corner button and no Explore and guide panel', () => {
+    expect(source).not.toMatch(/Explore/);
+    expect(source).toMatch(/position:absolute!important;top:10px!important;right:10px!important/);
+    expect(source).toMatch(/width:44px!important;height:44px!important/);
+    expect(source).toMatch(/Switch to ' \+ next \+ ' service/);
+  });
+});

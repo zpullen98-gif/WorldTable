@@ -58,12 +58,19 @@ test('the study view is what /menu opens on, short, with the first rows on the f
 	// Arm's length: at least two whole dishes on the first screen, not one cut off.
 	const second = (await rows(page).nth(1).boundingBox())!;
 	expect(second.y + second.height, 'the second row ends inside the first 844px').toBeLessThanOrEqual(844);
-	// Compact chrome must keep both appearance choices visible and tappable.
-	for (const name of ['Day service', 'Night service']) {
-		const choice = page.locator('#oot-service-toolbar').getByRole('button', { name, exact: true });
-		await expect(choice).toBeVisible();
-		expect((await choice.boundingBox())!.height).toBeGreaterThanOrEqual(44);
-	}
+	// The day and night control is one small round button in the top corner:
+	// visible, tappable, taking no room in the layout, and it switches service.
+	const choice = page.locator('#oot-service-toolbar').getByRole('button', { name: /Switch to (day|night) service/ });
+	await expect(choice).toBeVisible();
+	const box = (await choice.boundingBox())!;
+	expect(box.height).toBeGreaterThanOrEqual(44);
+	expect(box.width).toBeLessThanOrEqual(48);
+	expect(box.x + box.width).toBeGreaterThan(330);
+	await expect(page.locator('#oot-service-toolbar').getByText('Explore & guide')).toHaveCount(0);
+	const before = await page.evaluate(() => document.documentElement.getAttribute('data-service'));
+	await choice.click();
+	await expect.poll(() => page.evaluate(() => document.documentElement.getAttribute('data-service'))).not.toBe(before);
+	await choice.click();
 	await expect(page.getByRole('button', { name: 'Tasting menus 4' })).toBeVisible();
 
 	const m = await page.evaluate(() => ({ h: document.scrollingElement!.scrollHeight, w: document.scrollingElement!.scrollWidth }));
