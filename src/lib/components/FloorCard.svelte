@@ -32,6 +32,7 @@
 	import type { Snippet } from 'svelte';
 	import type { DeckCard, FloorDeck } from '$lib/types';
 	import { deckHref } from '$lib/floor-deck-core.mjs';
+	import { foliosForCard } from '$lib/teaching-folios';
 
 	let {
 		card,
@@ -169,11 +170,12 @@
 				{/if}
 			</details>
 
-			{#if card.lexiconSlug || card.recipe || plate}
+			{#if card.lexiconSlug || card.recipe || plate || foliosForCard(card.id).length}
 				<p class="links further">
 					{#if card.lexiconSlug}<a href="{base}/lexicon#{card.lexiconSlug}">The long entry in the Lexicon</a>{/if}
 					{#if card.recipe}<a href="{base}/recipe/{card.recipe}">See it made</a>{/if}
 					{#if plate}<a href="{base}/plates/{plate.slug}">On the plate: {plate.title}</a>{/if}
+					{#each foliosForCard(card.id) as folio (folio.id)}<a href="{base}/plates#folio-{folio.id}">Illustrated study: {folio.title}</a>{/each}
 				</p>
 			{/if}
 		</div>

@@ -40,6 +40,8 @@
 	import { sharedOrigin } from '$lib/desk/desk-share';
 	import StudyLinks from './StudyLinks.svelte';
 	import VideoList from './VideoList.svelte';
+	import TeachingFolio from './TeachingFolio.svelte';
+	import { foliosForDish } from '$lib/teaching-folios';
 
 	let {
 		current,
@@ -212,6 +214,10 @@
 			{#each paragraphs(notes.about.a) as para, i (i)}<p class="para">{para}</p>{/each}
 		</section>
 	{/if}
+
+	{#each foliosForDish(current.id, dish.id) as folio (folio.id)}
+		<TeachingFolio {folio} />
+	{/each}
 
 	{#if pairing && (wine || second || zero || pairing.stepUp || bottles.length)}
 		<section class="block" aria-labelledby="pour-h">

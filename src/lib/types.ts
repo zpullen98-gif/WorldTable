@@ -801,7 +801,7 @@ export interface PlateSubject {
 	/** Identifying description used by the self-check; never an archival fact. */
 	summary: string;
 	distinction: string;
-	/** Art direction retained for review, not displayed as teaching copy. */
+	/** Reviewed visual description, also used in the illustration's alternative text. */
 	image: string;
 	facts: Array<[string, string]>;
 }

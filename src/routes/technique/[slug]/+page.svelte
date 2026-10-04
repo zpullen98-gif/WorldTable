@@ -3,6 +3,8 @@
 	import { bySlug } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
 	import RecipeCard from '$lib/components/RecipeCard.svelte';
+	import TeachingFolio from '$lib/components/TeachingFolio.svelte';
+	import { foliosForTechnique } from '$lib/teaching-folios';
 
 	let { data } = $props();
 
@@ -94,6 +96,8 @@
 			</p>
 		</section>
 	{/if}
+
+	{#each foliosForTechnique(t.slug) as folio (folio.id)}<TeachingFolio {folio} />{/each}
 
 	<section class="film" data-print="hide">
 		{#if t.film}

@@ -2,6 +2,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { plateHref } from '$lib/plates';
+	import TeachingFolio from '$lib/components/TeachingFolio.svelte';
+	import { TEACHING_FOLIOS } from '$lib/teaching-folios';
 	let { data } = $props();
 	let failedImages = $state<Record<string, boolean>>({});
 	function imageStatus(node: HTMLImageElement, slug: string) {
@@ -42,6 +44,11 @@
 			</ul>
 		</section>
 	{/each}
+	<section class="kind companion-studies" aria-labelledby="companion-studies-h">
+		<h2 id="companion-studies-h">At the stove</h2>
+		<p class="secnote">Five practical companion studies for the Brennan’s menu and the wider kitchen. Open a folio to compare the artwork with its numbered key. These studies sit alongside the twenty reference plates and carry no quiz or grade.</p>
+		{#each TEACHING_FOLIOS as folio (folio.id)}<TeachingFolio {folio} />{/each}
+	</section>
 </div>
 
 <style>

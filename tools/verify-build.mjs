@@ -482,7 +482,7 @@ check('the plates ship as text in the install and as pictures on demand', () => 
 	const missing = chunks.map(rel).filter((r) => !precached.some((u) => u === '/' + r || u === r));
 	assert(!missing.length, `these hold the plates' text and are NOT in the precache: ${missing.join(', ')}`);
 	const plateData = JSON.parse(readFileSync(join(ROOT, 'src/lib/data/plates.json'), 'utf8'));
-	const pictures = files.filter((f) => rel(f).startsWith('plates/') && f.endsWith('.webp'));
+	const pictures = files.filter((f) => /^(?:plates\/|standards\/|house\/brennans\/)/.test(rel(f)) && f.endsWith('.webp'));
 	/* An archival original is a third picture, not a second teaching page.
 	   Verify the actual graph rather than dividing the file count by two. */
 	for (const plate of plateData.plates) {

@@ -132,7 +132,8 @@ export default defineConfig({
 					'**/shared/oot-quotes.js',
 					'**/shared/packs/**',
 					'**/plates/**/*.webp',
-					'**/house/*.webp'
+					'**/standards/**/*.webp',
+					'**/house/**/*.webp'
 				],
 				maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
 				/**
@@ -255,14 +256,15 @@ export default defineConfig({
 					 * the reader opens one at a
 					 * time, and none of which belongs in the install (the transcriptions
 					 * do, and those are a precached chunk). A plate opened once is kept,
-					 * so it reads again in a walk-in; eighty entries hold the twenty folios,
-					 * their thumbnails and the original archive, with room for old entries.
+					 * so it reads again in a walk-in; ninety-six entries hold the twenty
+					 * folios, their thumbnails, original archives and kitchen companions,
+					 * with room for the six independently revised editions.
 					 * A new art revision uses a new URL, so CacheFirst cannot mask a redraw.
 					 * The glob above never sees .webp, and verify-build
 					 * asserts that none of them is precached.
 					 */
 					{
-						urlPattern: ({ url, sameOrigin }) => sameOrigin && /\/plates\/(?:archive\/)?[^/]+\.webp$/.test(url.pathname),
+						urlPattern: ({ url, sameOrigin }) => sameOrigin && /\/(?:plates\/(?:archive\/)?|standards\/|house\/brennans\/)[^/]+\.webp$/.test(url.pathname),
 						handler: 'CacheFirst',
 						options: {
 							/* No oot- prefix, deliberately, like the Codex's codexmaps-v1: the
@@ -272,7 +274,7 @@ export default defineConfig({
 							   since Workbox never deletes a cache it does not own. */
 							cacheName: 'plates-v1',
 							cacheableResponse: { statuses: [0, 200] },
-							expiration: { maxEntries: 80, maxAgeSeconds: 365 * 24 * 60 * 60 }
+							expiration: { maxEntries: 96, maxAgeSeconds: 365 * 24 * 60 * 60 }
 						}
 					},
 					/**

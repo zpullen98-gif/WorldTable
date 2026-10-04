@@ -18,6 +18,8 @@
 	import { base } from '$app/paths';
 	import type { Snippet } from 'svelte';
 	import type { House } from '$lib/house/house-schema';
+	import TeachingFolio from './TeachingFolio.svelte';
+	import { BRENNANS_HOUSE_ID, TEACHING_FOLIOS } from '$lib/teaching-folios';
 	import {
 		inMeal,
 		mealsOf,
@@ -238,6 +240,12 @@
 					</li>
 				{/each}
 			</ul>
+		</section>
+	{/if}
+
+	{#if current.id === BRENNANS_HOUSE_ID}
+		<section class="teaching-library" aria-label="Illustrated kitchen studies">
+			{#each TEACHING_FOLIOS as folio (folio.id)}<TeachingFolio {folio} />{/each}
 		</section>
 	{/if}
 

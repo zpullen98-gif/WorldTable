@@ -3,6 +3,7 @@
 	import { tick } from 'svelte';
 	import PlateIllustration from '$lib/components/PlateIllustration.svelte';
 	import PlateArchive from '$lib/components/PlateArchive.svelte';
+	import { plateIllustrationAlt } from '$lib/plate-artwork';
 	import { PLATE_QUIZ_LENGTH, folioSubjectLinks, plateHref, plateQuiz, type PlateQuestion } from '$lib/plates';
 
 	let { data } = $props();
@@ -83,7 +84,7 @@
 
 	<div class="folio-spread">
 		<div class="art-column">
-			<PlateIllustration src="{base}/{plate.image.src}" title={teaching.title} width={plate.image.width} height={plate.image.height} />
+			<PlateIllustration src="{base}/{plate.image.src}" title={teaching.title} alt={plateIllustrationAlt(teaching)} width={plate.image.width} height={plate.image.height} />
 			<ol class="illustration-key" aria-label="Illustration key, read left to right from the top row">
 				{#each teaching.subjects as subject, index (subject.id)}
 					<li><a href="#subject-{subject.id}"><span aria-hidden="true">{index + 1}</span>{subject.name}</a></li>

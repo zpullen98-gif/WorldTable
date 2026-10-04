@@ -43,7 +43,8 @@ test('the wall lists every plate in its five rows, with its level and its count'
 	await goto(page, '/plates');
 	await expect(page.locator('h1')).toHaveText('The Plates');
 	await expect(page.locator('ul.wall li')).toHaveCount(PLATES.plates.length);
-	await expect(page.getByRole('heading', { level: 2 })).toHaveCount(5);
+	await expect(page.locator('.kind:not(.companion-studies) > h2')).toHaveCount(5);
+	await expect(page.getByRole('heading', { name: 'At the stove', exact: true })).toBeVisible();
 	const first = page.locator('ul.wall li').first();
 	// a level is named, never numbered
 	await expect(first.locator('.pmeta')).toHaveText(new RegExp(`^(?:${LEVELS.levels.map((l) => l.name).join('|')}) · `));
@@ -60,8 +61,11 @@ test('a plate teaches six subjects and preserves every original entry and correc
 	await goto(page, `/plates/${p.slug}`);
 	await expect(page.locator('h1')).toHaveText(p.teaching.title);
 	const img = page.locator('figure.plate img');
-	await expect(img).toHaveAttribute('alt', /six illustrated subjects/);
-	await expect(img).toHaveAttribute('src', new RegExp(`/plates/${p.slug}-v2\\.webp$`));
+	await expect(img).toHaveAttribute('alt', /Six illustrated subjects/);
+	for (const subject of p.teaching.subjects) {
+		expect(await img.getAttribute('alt')).toContain(`${subject.name}: ${subject.image}`);
+	}
+	await expect(img).toHaveAttribute('src', `/${p.image.src}`);
 	await expect(page.locator('.subjects > li')).toHaveCount(6);
 	await expect(page.locator('.illustration-key > li')).toHaveCount(6);
 	await expect(page.locator('.subject h3')).toHaveText(p.teaching.subjects.map(subject => subject.name));
@@ -89,6 +93,7 @@ test('the image viewer supports zoom keys, Escape and return focus without navig
 	await opener.click();
 	const dialog = page.getByRole('dialog');
 	await expect(dialog).toBeVisible();
+	await expect(dialog.locator('.viewer-canvas img')).toHaveAttribute('alt', (await page.locator('figure.plate img').getAttribute('alt'))!);
 	await page.keyboard.press('+');
 	await expect(dialog.locator('.zoom-value')).toHaveText('150%');
 	await page.keyboard.press('0');
@@ -133,7 +138,8 @@ test('the complete illustration and its key stay in view beside a desktop lesson
 
 test('a missing illustration leaves the teaching guide usable and the phone page inside its gutters', async ({ page }) => {
 	await page.setViewportSize({ width: 320, height: 800 });
-	await page.route('**/plates/*-v2.webp', route => route.abort());
+	const beef = PLATES.plates.find(plate => plate.slug === 'beef-cuts')!;
+	await page.route(`**/${beef.image.src}`, route => route.abort());
 	await goto(page, '/plates/beef-cuts');
 	await expect(page.locator('.image-unavailable')).toBeVisible();
 	await expect(page.getByRole('button', { name: 'Enlarge illustration' })).toBeDisabled();

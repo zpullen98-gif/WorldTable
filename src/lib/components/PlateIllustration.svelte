@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 
-	let { src, title, width, height }: { src: string; title: string; width: number; height: number } = $props();
+	let { src, title, alt, width, height, embedded = false, guideLabel = 'Follow numbers 1 to 6 in the guide.' }: { src: string; title: string; alt: string; width: number; height: number; embedded?: boolean; guideLabel?: string } = $props();
+	const uid = $props.id();
 	let failed = $state(false);
 	let zoom = $state(1);
 	let dialog: HTMLDialogElement;
@@ -51,7 +52,7 @@
 
 <svelte:window onresize={fit} />
 
-<figure class="plate teaching-illustration">
+<figure class="plate teaching-illustration" class:embedded>
 	<div class="illustration-box" style:--illustration-aspect="{width} / {height}">
 		{#if failed}
 			<div class="image-unavailable" role="status">
@@ -60,18 +61,18 @@
 				<p>The numbered guide below is complete without the picture. Reconnect to load the artwork.</p>
 			</div>
 		{:else}
-			<img use:imageStatus {src} alt="{title}: six illustrated subjects, numbered 1 to 6. Read their names and teaching notes in the numbered guide." {width} {height} decoding="async" onerror={() => failed = true} />
+			<img use:imageStatus {src} {alt} {width} {height} decoding="async" onerror={() => failed = true} />
 		{/if}
 	</div>
 	<figcaption data-print="hide">
 		<button class="chip enlarge" bind:this={opener} onclick={open} disabled={failed}>Enlarge illustration</button>
-		<span>Follow numbers 1 to 6 in the guide.</span>
+		<span>{guideLabel}</span>
 	</figcaption>
 </figure>
 
-<dialog class="plate-viewer" bind:this={dialog} onclose={closed} onkeydown={keydown} aria-labelledby="viewer-title" aria-describedby="viewer-help" data-print="hide">
+<dialog class="plate-viewer" bind:this={dialog} onclose={closed} onkeydown={keydown} aria-labelledby="{uid}-title" aria-describedby="{uid}-help" data-print="hide">
 	<div class="viewer-head">
-		<h2 id="viewer-title">{title}</h2>
+		<h2 id="{uid}-title">{title}</h2>
 		<button class="chip close-viewer" onclick={() => dialog.close()}>Close illustration</button>
 	</div>
 	<div class="viewer-tools">
@@ -81,10 +82,10 @@
 		<span class="zoom-value" aria-live="polite">{Math.round(zoom * 100)}%</span>
 		<a href={src} target="_blank" rel="noopener">Open image file<span class="sr-only"> in a new tab</span></a>
 	</div>
-	<p id="viewer-help">Use + and − to zoom, 0 to fit, and Escape to close. Scroll to explore a magnified image.</p>
+	<p class="viewer-help" id="{uid}-help">Use + and − to zoom, 0 to fit, and Escape to close. Scroll to explore a magnified image.</p>
 	<!-- svelte-ignore a11y_no_noninteractive_tabindex: the magnified image needs a keyboard-focusable scroll region. -->
 	<div class="viewer-canvas" bind:this={canvas} tabindex="0" role="region" aria-label="Scrollable illustration">
-		<img {src} alt="{title}, six numbered subjects" {width} {height} style:width="{fitWidth * zoom}px" decoding="async" />
+		<img {src} {alt} {width} {height} style:width="{fitWidth * zoom}px" decoding="async" />
 	</div>
 </dialog>
 
@@ -107,16 +108,16 @@
 	.viewer-tools button { min-width: 44px; min-height: 44px; }
 	.viewer-tools a { margin-left: auto; min-height: 44px; display: inline-flex; align-items: center; color: var(--ink); font-size: var(--t-small); }
 	.zoom-value { font-variant-numeric: tabular-nums; min-width: 4ch; color: var(--muted); font-size: var(--t-small); }
-	#viewer-help { margin: 6px 0 14px; font-size: var(--t-small); color: var(--muted); }
+	.viewer-help { margin: 6px 0 14px; font-size: var(--t-small); color: var(--muted); }
 	.viewer-canvas { height: min(72dvh, 820px); overflow: auto; background: var(--paper-raised); border: 1px solid var(--line); touch-action: pan-x pan-y pinch-zoom; }
 	.viewer-canvas img { display: block; max-width: none; height: auto; margin: 0 auto; }
 	@media screen and (min-width: 850px) {
-		.teaching-illustration { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-height: 0; }
-		.illustration-box { position: relative; height: 100%; min-height: 0; aspect-ratio: auto; place-items: center; border: 0; background: transparent; }
-		.illustration-box > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; border: 0; }
-		.image-unavailable { width: 100%; height: 100%; overflow: auto; border: 1px solid var(--house-frame); border-radius: 3px; background: var(--paper-raised); }
-		figcaption { justify-content: center; }
-		figcaption > span { display: none; }
+		.teaching-illustration:not(.embedded) { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-height: 0; }
+		.teaching-illustration:not(.embedded) .illustration-box { position: relative; height: 100%; min-height: 0; aspect-ratio: auto; place-items: center; border: 0; background: transparent; }
+		.teaching-illustration:not(.embedded) .illustration-box > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; border: 0; }
+		.teaching-illustration:not(.embedded) .image-unavailable { width: 100%; height: 100%; overflow: auto; border: 1px solid var(--house-frame); border-radius: 3px; background: var(--paper-raised); }
+		.teaching-illustration:not(.embedded) figcaption { justify-content: center; }
+		.teaching-illustration:not(.embedded) figcaption > span { display: none; }
 	}
 	@media (max-width: 520px) {
 		.plate-viewer { width: calc(100vw - 16px); max-height: calc(100dvh - 16px); padding: 12px; }

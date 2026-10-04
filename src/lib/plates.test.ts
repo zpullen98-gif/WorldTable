@@ -3,9 +3,30 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { OPTION_COUNT, PLATE_QUIZ_LENGTH, displayName, factOf, plateIndexes, plateQuiz } from './plates';
 import type { Plate, PlatesData, PlateTeaching } from './types';
-import { checkTeaching } from '../../tools/derive/plates.mjs';
+import { checkPlate, checkTeaching, plateImagePaths, readImages, readPlate } from '../../tools/derive/plates.mjs';
 
 const authored = JSON.parse(readFileSync(join(__dirname, '../../tools/derive/plates/teaching.json'), 'utf8')) as Record<string, PlateTeaching>;
+
+describe('independent folio editions', () => {
+	it('keeps v2 by default and advances only the selected folio, preserving its archive', () => {
+		expect(plateImagePaths('beef-cuts')).toEqual({ src: 'plates/beef-cuts-v2.webp', thumb: 'plates/beef-cuts-v2.thumb.webp', archive: 'plates/archive/beef-cuts.webp' });
+		expect(plateImagePaths('pacific-fish', 'v3')).toEqual({ src: 'plates/pacific-fish-v3.webp', thumb: 'plates/pacific-fish-v3.thumb.webp', archive: 'plates/archive/pacific-fish.webp' });
+		expect(plateImagePaths('beef-cuts').src).toBe('plates/beef-cuts-v2.webp');
+	});
+	it.each(['', 'v0', 'v03', '3', 'v3/other', '../v3', 'v3.webp', null, 3])('rejects an invalid revision instead of changing the path: %s', revision => {
+		expect(() => plateImagePaths('beef-cuts', revision)).toThrow('revision must be');
+	});
+	it('gates both selected files before publication instead of falling back to v2', () => {
+		const { text } = readPlate('beef-cuts');
+		const images = new Map([['beef-cuts', { width: 1024, height: 1536, revision: 'v999999' }]]);
+		const result = checkPlate('beef-cuts', text, images);
+		expect(result.plate).toBeNull();
+		expect(result.problems).toEqual([
+			'plates/beef-cuts.json: static/plates/beef-cuts-v999999.webp is missing',
+			'plates/beef-cuts.json: static/plates/beef-cuts-v999999.thumb.webp is missing'
+		]);
+	});
+});
 
 /** A deterministic generator: the quiz must be a function of its rand. */
 function seeded(seed: number) {
@@ -150,6 +171,7 @@ describe('the emitted plates', () => {
 	const data = JSON.parse(readFileSync(join(__dirname, 'data', 'plates.json'), 'utf8')) as PlatesData;
 	const deck = JSON.parse(readFileSync(join(__dirname, 'data', 'floor-deck.index.json'), 'utf8')) as { cards: Array<{ id: string }> };
 	const lexicon = JSON.parse(readFileSync(join(__dirname, 'data', 'lexicon.json'), 'utf8')) as Array<{ slug: string }>;
+	const images = new Map(readImages().map(image => [image.slug, image]));
 
 	it('holds twenty plates, versioned pictures, all 463 archival items, and links that resolve', () => {
 		const ids = new Set(deck.cards.map((c) => c.id));
@@ -158,8 +180,9 @@ describe('the emitted plates', () => {
 		expect(data.plates.reduce((sum,p)=>sum+p.count,0)).toBe(463);
 		for (const p of data.plates) {
 			expect(p.image.width).toBeGreaterThan(0);
-			expect(p.image.src).toBe(`plates/${p.slug}-v2.webp`);
-			expect(p.image.thumb).toBe(`plates/${p.slug}-v2.thumb.webp`);
+			const paths = plateImagePaths(p.slug, images.get(p.slug)?.revision);
+			expect(p.image.src).toBe(paths.src);
+			expect(p.image.thumb).toBe(paths.thumb);
 			expect(p.teaching, p.slug).toEqual(authored[p.slug]);
 			expect(p.count).toBeGreaterThanOrEqual(6);
 			expect(p.count).toBe(p.groups.reduce((n, g) => n + g.items.length, 0));

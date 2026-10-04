@@ -20,6 +20,7 @@
 	import { nav } from '$lib/stores/nav.svelte';
 	import { levels as levelStore } from '$lib/stores/levels.svelte';
 	import { lexiconCardsTarget } from '$lib/nav';
+	import { foliosForLexicon } from '$lib/teaching-folios';
 
 	let { data } = $props();
 
@@ -584,6 +585,12 @@
 							{/each}
 						</p>
 					{/if}
+					{#if foliosForLexicon(e.slug).length}
+						<p class="folioref" role="group" aria-label="Illustrated studies for {e.term}">
+							<span class="xlabel">Look closely</span>
+							{#each foliosForLexicon(e.slug) as folio (folio.id)}<a href="{base}/plates#folio-{folio.id}">{folio.title}</a>{/each}
+						</p>
+					{/if}
 				</article>
 			{/each}
 			</div>
@@ -787,12 +794,12 @@
 	.xrefs a:hover { border-color: var(--turmeric); }
 	/* The same furniture as the crosslinks, because it is the same kind of
 	   thing: a labelled row of ways out of this card. */
-	.deckref { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
-	.deckref a {
+	.deckref, .folioref { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+	.deckref a, .folioref a {
 		font-size: var(--t-small); color: var(--turmeric-deep); text-decoration: none;
 		border: 1px solid var(--line); border-radius: var(--radius); padding: 2px 8px;
 	}
-	.deckref a:hover { border-color: var(--turmeric); }
+	.deckref a:hover, .folioref a:hover { border-color: var(--turmeric); }
 
 	.deckhits { margin: 0 0 26px; }
 	.deckhead {

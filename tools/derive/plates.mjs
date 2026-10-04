@@ -82,6 +82,20 @@ export const PLATES_DIR = join(HERE, 'plates');
 export const IMAGES_DIR = join(HERE, '..', '..', 'static', 'plates');
 export const PLATE_IMAGE_REVISION = 'v2';
 
+/** Each folio may advance independently. Old URLs stay immutable for offline readers.
+ *  @param {string} slug
+ *  @param {unknown} [revision]
+ */
+export function plateImagePaths(slug, revision = PLATE_IMAGE_REVISION) {
+	if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) throw new Error('plate image: invalid slug');
+	if (typeof revision !== 'string' || !/^v[1-9]\d*$/.test(revision)) throw new Error(`plate image ${slug}: revision must be v followed by a positive integer`);
+	return {
+		src: `plates/${slug}-${revision}.webp`,
+		thumb: `plates/${slug}-${revision}.thumb.webp`,
+		archive: `plates/archive/${slug}.webp`
+	};
+}
+
 /** The kinds, and how the wall groups them, in wall order. */
 export const KINDS = [
 	{ key: 'cuts', title: 'The cuts', blurb: 'Connect familiar portions to their place on the animal and the distinctions that matter in the kitchen.' },
@@ -148,7 +162,9 @@ export function readPlate(slug) {
 	return { file, text: readFileSync(file, 'utf8') };
 }
 
-/** @returns {Array<{ slug: string, width: number, height: number, full: number, thumb: number }>} */
+/** An omitted revision retains the v2 edition; a new entry selects only that folio.
+ *  @returns {Array<{ slug: string, revision?: string, width: number, height: number, full: number, thumb: number }>}
+ */
 export function readImages() {
 	const file = join(PLATES_DIR, 'images.json');
 	if (!existsSync(file)) throw new Error(`BUILD INPUT MISSING: ${file} (run the plate encoder)`);
@@ -227,7 +243,7 @@ export function foldName(s) {
  *
  * @param {string} slug
  * @param {string} text the file's bytes
- * @param {Map<string, { width: number, height: number }>} images
+ * @param {Map<string, { width: number, height: number, revision?: string }>} images
  */
 export function checkPlate(slug, text, images) {
 	/** @type {string[]} */
@@ -331,11 +347,17 @@ export function checkPlate(slug, text, images) {
 
 	const image = images.get(slug);
 	if (!image) err('no entry in plates/images.json: run the encoder');
-	for (const f of [`${slug}-${PLATE_IMAGE_REVISION}.webp`, `${slug}-${PLATE_IMAGE_REVISION}.thumb.webp`, `archive/${slug}.webp`]) {
-		if (!existsSync(join(IMAGES_DIR, f))) err(`static/plates/${f} is missing`);
+	let paths;
+	try {
+		paths = plateImagePaths(slug, image?.revision);
+		for (const path of Object.values(paths)) {
+			if (!existsSync(join(IMAGES_DIR, '..', path))) err(`static/${path} is missing`);
+		}
+	} catch (e) {
+		err(String(/** @type {Error} */ (e).message));
 	}
 
-	if (problems.length) return { problems, notes, plate: null };
+	if (problems.length || !paths) return { problems, notes, plate: null };
 	return {
 		problems,
 		notes,
@@ -347,7 +369,7 @@ export function checkPlate(slug, text, images) {
 			kindTitle: kind?.title ?? p.kind,
 			regionLine: p.regionLine ?? null,
 			corners: p.corners,
-			image: { src: `plates/${slug}-${PLATE_IMAGE_REVISION}.webp`, thumb: `plates/${slug}-${PLATE_IMAGE_REVISION}.thumb.webp`, width: image?.width ?? 0, height: image?.height ?? 0 },
+			image: { src: paths.src, thumb: paths.thumb, width: image?.width ?? 0, height: image?.height ?? 0 },
 			groups: p.groups.map((/** @type {any} */ g) => ({
 				title: g.title.trim(),
 				note: g.note ?? null,
@@ -380,10 +402,10 @@ export function checkPlate(slug, text, images) {
 	/** @type {string[]} */
 	const notes = [];
 
-	/** @type {Map<string, { width: number, height: number }>} */
+	/** @type {Map<string, { width: number, height: number, revision?: string }>} */
 	let images = new Map();
 	try {
-		images = new Map(readImages().map((r) => [r.slug, { width: r.width, height: r.height }]));
+		images = new Map(readImages().map((r) => [r.slug, { width: r.width, height: r.height, revision: r.revision }]));
 	} catch (e) {
 		problems.push(String(/** @type {any} */ (e)?.message ?? e));
 	}

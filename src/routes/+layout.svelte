@@ -14,6 +14,7 @@
 	import { swStatus } from '$lib/stores/sw-status.svelte';
 	import TimerBar from '$lib/components/TimerBar.svelte';
 	import { bareHtmlPath } from '$lib/htmlPath';
+	import { mastheadArtworkUrl, plateArtworkUrl } from '$lib/plate-artwork';
 	import { MORE_DRAWERS } from '$lib/nav';
 	import { onMount } from 'svelte';
 
@@ -28,7 +29,6 @@
 		let warmedWorker: ServiceWorker | null = null;
 		let warmedUrls = new Set<string>();
 		const ownWorkerUrl = new URL(`${base}/sw.js`, location.href).href;
-		const plateRoot = `${base}/plates/`;
 		const keepUrl = (url: string) => {
 			const worker = navigator.serviceWorker.controller;
 			// An arrival from the hub may still be controlled by its root worker.
@@ -44,23 +44,19 @@
 				if (!response.ok) urls.delete(url);
 			}).catch(() => urls.delete(url));
 		};
-		const keepLoadedPlate = (img: HTMLImageElement) => {
+		const keepLoadedArtwork = (img: HTMLImageElement) => {
 			// Complete is also true for a failed image; naturalWidth rules that out.
 			if (!img.complete || img.naturalWidth === 0) return;
-			const url = new URL(img.currentSrc || img.src, document.baseURI);
-			if (url.origin !== location.origin || url.search || !url.pathname.startsWith(plateRoot)) return;
-			const file = url.pathname.slice(plateRoot.length);
 			// Archive art is eligible only if an actual <img> has already loaded it.
-			if (!/^(?:[a-z0-9-]+-v2(?:\.thumb)?|archive\/[a-z0-9-]+)\.webp$/.test(file)) return;
-			url.hash = '';
-			keepUrl(url.href);
+			const src = img.currentSrc || img.src;
+			const url = plateArtworkUrl(src, base, document.baseURI) || mastheadArtworkUrl(src, base, document.baseURI);
+			if (url) keepUrl(url);
 		};
 		const keepArtwork = () => {
-			keepUrl(new URL(`${base}/house/world-table-library-v1.webp`, location.href).href);
-			for (const img of document.images) keepLoadedPlate(img);
+			for (const img of document.images) keepLoadedArtwork(img);
 		};
 		const onImageLoad = (event: Event) => {
-			if (event.target instanceof HTMLImageElement) keepLoadedPlate(event.target);
+			if (event.target instanceof HTMLImageElement) keepLoadedArtwork(event.target);
 		};
 		// Image load does not bubble. Capture covers later lazy loads, images
 		// introduced by route navigation and pictures opened in the viewer.
@@ -354,6 +350,7 @@
 
 <header class="house-masthead" class:house-home={path === '/'} class:house-working={path === '/menu'}>
     <picture class="house-art" aria-hidden="true" data-print="hide">
+        <source media="(max-width: 599px)" srcset="{base}/house/world-table-library-v1.phone.webp" type="image/webp" width="768" height="512" />
         <img src="{base}/house/world-table-library-v1.webp" width="1536" height="1024" alt="" fetchpriority="high" decoding="async" />
     </picture>
 	<div class="shell head-inner">

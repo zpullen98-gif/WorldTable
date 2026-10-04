@@ -9,6 +9,7 @@ const data = JSON.parse(readFileSync(join(dirname(fileURLToPath(import.meta.url)
 const plate = data.plates.find(p => p.slug === 'beef-cuts')!;
 const currentPath = `/${plate.image.src}`;
 const oldPath = `/plates/${plate.slug}.webp`;
+const unopenedPath = `/${data.plates.find(p => p.slug === 'pork-cuts')!.image.thumb}`;
 
 async function holdFirstWorker(page: Page) {
 	// Deliberately make the image win the installation race. Holding register,
@@ -36,6 +37,30 @@ async function expectCached(page: Page) {
 	await expect.poll(() => page.evaluate(async path => !!await (await caches.open('plates-v1')).match(path), currentPath), { timeout: 40_000 }).toBe(true);
 }
 
+test('a phone keeps its lighter masthead offline without downloading the desktop rendition', async ({ page, context }) => {
+	test.setTimeout(90_000);
+	await page.setViewportSize({ width: 390, height: 844 });
+	await holdFirstWorker(page);
+	const requested: string[] = [];
+	page.on('request', request => requested.push(new URL(request.url()).pathname));
+	await goto(page, '/plates/beef-cuts');
+	const masthead = page.locator('.house-art img');
+	const phone = '/house/world-table-library-v1.phone.webp';
+	const desktop = '/house/world-table-library-v1.webp';
+	await expect.poll(() => masthead.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
+	expect(await masthead.evaluate((img: HTMLImageElement) => new URL(img.currentSrc).pathname)).toBe(phone);
+	await releaseFirstWorker(page);
+	await expect.poll(() => page.evaluate(async path => !!await (await caches.open('oot-table-art-v1')).match(path), phone), { timeout: 40_000 }).toBe(true);
+	expect(requested).not.toContain(desktop);
+	expect(await page.evaluate(async path => !!await (await caches.open('oot-table-art-v1')).match(path), desktop)).toBe(false);
+	await context.setOffline(true);
+	await page.reload();
+	await page.waitForSelector('html[data-hydrated]');
+	await expect.poll(() => masthead.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
+	expect(await masthead.evaluate((img: HTMLImageElement) => new URL(img.currentSrc).pathname)).toBe(phone);
+	await context.setOffline(false);
+});
+
 test('a first direct plate visit keeps its pre-claim illustration and reviewed lesson offline', async ({ page, context }) => {
 	test.setTimeout(90_000);
 	await holdFirstWorker(page);
@@ -46,7 +71,7 @@ test('a first direct plate visit keeps its pre-claim illustration and reviewed l
 	expect(await page.evaluate(() => navigator.serviceWorker.controller)).toBeNull();
 
 	await page.evaluate(async ({ oldPath, unopened }) => {
-		// A previous illustration cache key must not answer the new v2 URL.
+		// A previous illustration cache key must not answer the current edition.
 		const cache = await caches.open('plates-v1');
 		await cache.put(oldPath, new Response('previous illustration', { headers: { 'Content-Type': 'text/plain' } }));
 		// A real lazy image far outside the viewport must not be fetched by the
@@ -59,20 +84,20 @@ test('a first direct plate visit keeps its pre-claim illustration and reviewed l
 		lazy.style.cssText = 'position:absolute;top:100000px;left:0';
 		lazy.src = unopened;
 		document.body.append(lazy);
-	}, { oldPath, unopened: '/plates/pork-cuts-v2.thumb.webp' });
+	}, { oldPath, unopened: unopenedPath });
 	await releaseFirstWorker(page);
 	await expectCached(page);
-	const cached = await page.evaluate(async ({ currentPath, oldPath }) => {
+	const cached = await page.evaluate(async ({ currentPath, oldPath, unopenedPath }) => {
 		const cache = await caches.open('plates-v1');
 		const current = await cache.match(currentPath);
 		return {
 			old: await (await cache.match(oldPath))?.text(),
 			currentType: current?.headers.get('Content-Type'),
 			currentBytes: (await current?.arrayBuffer())?.byteLength ?? 0,
-			unopened: !!await cache.match('/plates/pork-cuts-v2.thumb.webp'),
+			unopened: !!await cache.match(unopenedPath),
 			archive: !!await cache.match('/plates/archive/beef-cuts.webp')
 		};
-	}, { currentPath, oldPath });
+	}, { currentPath, oldPath, unopenedPath });
 	expect(cached.old).toBe('previous illustration');
 	expect(cached.currentType).toContain('image/webp');
 	expect(cached.currentBytes).toBeGreaterThan(1000);
