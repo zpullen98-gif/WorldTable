@@ -6,12 +6,15 @@ test('kitchen studies stay closed until wanted, then provide a numbered key and 
 	const artRequests: string[] = [];
 	page.on('request', request => {
 		const path = new URL(request.url()).pathname;
-		if (/\/(?:standards|house\/brennans)\/|\/plates\/louisiana-larder-v/.test(path)) artRequests.push(path);
+		if (/\/(?:standards|house\/brennans)\/|\/plates\/(?:louisiana-larder|french-herbs|knife-cuts)-v/.test(path)) artRequests.push(path);
 	});
 	await goto(page, '/plates');
 	const collection = page.locator('.companion-studies');
-	await expect(collection.locator('details.teaching-folio')).toHaveCount(5);
+	await expect(collection.locator('details.teaching-folio')).toHaveCount(9);
+	await expect(collection.getByRole('heading', { level: 3 })).toHaveCount(3);
 	await expect(collection.locator('img')).toHaveCount(0);
+	await page.getByRole('link', { name: 'Explore 9 kitchen studies' }).click();
+	await expect(page).toHaveURL(/#companion-studies-h$/);
 	expect(artRequests).toEqual([]);
 	const egg = collection.locator('#folio-poached-egg-standard');
 	await egg.locator('summary').click();
@@ -28,6 +31,18 @@ test('kitchen studies stay closed until wanted, then provide a numbered key and 
 	await page.keyboard.press('Escape');
 	await expect(opener).toBeFocused();
 	expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
+});
+
+test('the new knife guide is reachable from its lesson and keeps scale guidance beside the key', async ({ page }) => {
+	await goto(page, '/technique/knife-cuts-dice-julienne-bias#folio-knife-cuts');
+	const folio = page.locator('#folio-knife-cuts');
+	await expect(folio).toHaveAttribute('open');
+	await expect(folio.locator('.folio-key > li')).toHaveCount(6);
+	await expect(folio.locator('.folio-scope')).toContainText('not actual millimetres on your screen');
+	await expect(folio.locator('.folio-key')).toContainText('3 × 3 × 3 mm');
+	await expect.poll(() => folio.locator('figure img').evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth === 1024)).toBe(true);
+	await folio.getByText('Sources and further reading', { exact: true }).click();
+	await expect(folio.getByRole('link', { name: /Rouxbe: knife-cut shapes and dimensions/ })).toBeVisible();
 });
 
 test('a linked technique opens the requested folio and its key survives a missing image', async ({ page }) => {

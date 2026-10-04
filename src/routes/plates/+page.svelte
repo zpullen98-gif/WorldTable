@@ -2,7 +2,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { plateHref } from '$lib/plates';
-	import TeachingFolio from '$lib/components/TeachingFolio.svelte';
+	import TeachingFolioCollection from '$lib/components/TeachingFolioCollection.svelte';
 	import { TEACHING_FOLIOS } from '$lib/teaching-folios';
 	let { data } = $props();
 	let failedImages = $state<Record<string, boolean>>({});
@@ -19,6 +19,7 @@
 	<h1>The Plates</h1>
 	<p class="lede">Look closely at the cuts, the fish case, the regional larder, the pantry and the board. Each plate pairs six illustrated subjects with a readable teaching guide and a quiet self-check.</p>
 	<p class="note">{data.plates.length} plates · {data.plates.reduce((n, p) => n + p.subjects, 0)} illustrated subjects · read, never graded. All {data.plates.reduce((n, p) => n + p.count, 0)} entries from the original posters remain in their archives, with the recorded corrections.</p>
+	<p class="collection-door"><a href="#companion-studies-h">Explore {TEACHING_FOLIOS.length} kitchen studies <span aria-hidden="true">↓</span></a><span>Herbs, knife work, cooking, sauces and eggs.</span></p>
 	{#each byKind as kind (kind.key)}
 		<section class="kind">
 			<h2>{kind.title}</h2>
@@ -46,8 +47,8 @@
 	{/each}
 	<section class="kind companion-studies" aria-labelledby="companion-studies-h">
 		<h2 id="companion-studies-h">At the stove</h2>
-		<p class="secnote">Five practical companion studies for the Brennan’s menu and the wider kitchen. Open a folio to compare the artwork with its numbered key. These studies sit alongside the twenty reference plates and carry no quiz or grade.</p>
-		{#each TEACHING_FOLIOS as folio (folio.id)}<TeachingFolio {folio} />{/each}
+		<p class="secnote">{TEACHING_FOLIOS.length} practical companion studies for the Brennan’s menu and the wider kitchen. Open a folio to compare the artwork with its numbered key. These studies sit alongside the twenty reference plates and carry no quiz or grade.</p>
+		<TeachingFolioCollection />
 	</section>
 </div>
 
@@ -57,6 +58,9 @@
 	h1 { font-family: var(--house-display); font-size: clamp(32px, 5vw, 52px); font-weight: 500; line-height: 1.25; margin: 8px 0 16px; }
 	.lede { font-size: var(--t-lede); color: var(--ink-soft); max-width: var(--measure); line-height: 1.6; }
 	.note { margin-top: 12px; font-size: var(--t-small); color: var(--muted); max-width: 78ch; line-height: 1.6; }
+	.collection-door { display: flex; flex-wrap: wrap; align-items: center; gap: 0 16px; margin-top: 12px; font-size: var(--t-small); color: var(--ink-soft); }
+	.collection-door a { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; color: var(--ink); }
+	.companion-studies h2 { scroll-margin-top: 24px; }
 	.kind { margin-top: 36px; padding-top: 23px; border-top: 1px solid var(--house-frame); }
 	.kind h2 { font-family: var(--house-display); font-weight: 500; font-size: 28px; margin-bottom: 8px; }
 	.secnote { color: var(--ink-soft); max-width: var(--measure); font-size: var(--t-small); margin-bottom: 18px; }
